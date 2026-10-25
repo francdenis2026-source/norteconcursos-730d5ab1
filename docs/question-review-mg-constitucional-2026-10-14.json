@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-10-14T02:36:35.900921+00:00",
+  "scope": "Dois itens constitucionais: reparos separados de proveniência e comando, com gabaritos e extração bruta preservados.",
+  "specific_prova": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+  "specific_gabarito": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+  "official_edital": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html",
+  "topics": [
+    {
+      "id": "446676e2-be44-5052-9b7c-54afb7789ff7",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direito Constitucional",
+      "topic_order": 4,
+      "topic_text": "Direitos humanos na Constituição Federal (item 4 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "55225274-83b2-5819-93ae-4db46ef82c33",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direito Constitucional",
+      "topic_order": 6,
+      "topic_text": "A Constituição brasileira e os tratados internacionais de direitos humanos (item 6 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "60fc8fa5-f499-4ac4-a00f-d7de360b88bf",
+      "item_number": 21,
+      "official_answer_preserved": "B",
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "source_page": 1,
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "gabarito_sha256": "ad51738a383b463c77d937e613b651ea4cefd9c088eaee6af079dfd4370a74e5",
+      "old_text_sha256": "7023b247d2fcc69d594f37ccbf806312ce831b07f6c4aaf6a01c18682c27a91d",
+      "new_text_sha256": "b6f91a86b561b6db0b9bba990ece7522bbe81e58e517ea0e0630b4b558e3a650",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": true,
+        "reason": "Gabarito B confirmado no art. 5º, § 1º: aplicação imediata das normas de direitos e garantias fundamentais. Isso não significa que toda norma dispense complementação legislativa; não se deve confundir aplicação imediata com eficácia plena de todas as normas.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf"
+        ]
+      }
+    },
+    {
+      "id": "0131fb24-4f6e-49c0-b8ea-fe423774d553",
+      "item_number": 22,
+      "official_answer_preserved": "A",
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "source_page": 1,
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "gabarito_sha256": "ad51738a383b463c77d937e613b651ea4cefd9c088eaee6af079dfd4370a74e5",
+      "old_text_sha256": "ba2e0dddfeeee9f27374f513e865a5fdbdd6b5d5999943aec9bef02905434259",
+      "new_text_sha256": "3547899b9e6bb26f2ecc016c68fd45a8f8940f669b37383d8644055ea5a3b172",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A confirmado no art. 5º, § 2º: o rol constitucional admite outros direitos derivados do regime, princípios e tratados. Distinguir essa abertura do rito do § 3º para equivalência a emenda constitucional; não afirmar que todo tratado recebe automaticamente hierarquia constitucional.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf"
+        ]
+      }
+    }
+  ],
+  "matrix_source_repair": {
+    "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+    "old_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+    "new_source_id": "f4405972-ed5b-4a97-ac7a-4d37a0c45e61",
+    "verified": true
+  }
+}

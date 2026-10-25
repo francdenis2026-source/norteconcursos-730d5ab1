@@ -1,0 +1,183 @@
+{
+  "checked_at": "2026-10-16T03:57:57.772Z",
+  "exam": "PC-AC 2017 Agente S01-V",
+  "scope": "20 itens trabalhados: 15 decisões finais e cinco análises pedagógicas salvas com bloqueio de contexto mantido. Não representa liberação das 20 questões.",
+  "this_batch": {
+    "final_editorial_decisions": 15,
+    "published_active": [
+      1,
+      3,
+      25,
+      42,
+      45,
+      70,
+      71,
+      72,
+      74,
+      75,
+      77,
+      79
+    ],
+    "archived_historical": [
+      13,
+      44
+    ],
+    "obsolete": [
+      78
+    ],
+    "context_repairs": [
+      1,
+      3
+    ],
+    "pending_context_analyses_saved": [
+      2,
+      6,
+      7,
+      8,
+      10
+    ],
+    "created_sources": 3,
+    "created_topics": 3
+  },
+  "canonical_exam_status": {
+    "active": 67,
+    "under_review": 5,
+    "obsolete": 3,
+    "archived": 4
+  },
+  "official_annulled_item_outside_canonical_scope": 26,
+  "cumulative_final_editorial_decisions": 74,
+  "cumulative_texts_recovered": 74,
+  "pending_in_exam": [
+    2,
+    6,
+    7,
+    8,
+    10
+  ],
+  "remaining_requirement": "Exemplar da prova fornecido pelo usuário para trabalhar integralmente com os excertos protegidos da crônica. Gabaritos e comentários dos cinco itens já conferidos; textos não foram inventados nem disponibilizados sem os trechos necessários.",
+  "validation": {
+    "verified_at": "2026-10-16T03:58:31.388Z",
+    "exam_records_compared": 158,
+    "untargeted_records_preserved": 138,
+    "original_answers_and_raw_preserved": true,
+    "context_repairs": 2,
+    "final_editorial_decisions": 15,
+    "pending_context_analyses": 5,
+    "active_eligible": 12,
+    "pending_context_blockers_preserved": 5,
+    "metadata": {
+      "content_sources": {
+        "preserved": 367,
+        "observed_new": 11,
+        "created_by_this_batch": 3,
+        "other_new_records_observed": 8
+      },
+      "syllabus_editions": {
+        "preserved": 53,
+        "observed_new": 3,
+        "created_by_this_batch": 0,
+        "other_new_records_observed": 3
+      },
+      "syllabus_topics": {
+        "preserved": 671,
+        "observed_new": 38,
+        "created_by_this_batch": 3,
+        "other_new_records_observed": 35
+      }
+    }
+  },
+  "tests": {
+    "passed": 202,
+    "failed": 0,
+    "skipped": 0
+  },
+  "global_snapshot": {
+    "checked_at": "2026-10-16T03:57:57.772Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 4006,
+        "under_review": 558,
+        "archived": 256,
+        "obsolete": 31,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 541,
+        "under_review": 506,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6371,
+      "under_review": 1064,
+      "archived": 263,
+      "obsolete": 33,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "external_changes": {
+    "board_exam_questions_active_delta": 94,
+    "board_exam_questions_under_review_delta": -94,
+    "new_metadata_not_created_by_this_batch": {
+      "content_sources": 8,
+      "syllabus_editions": 3,
+      "syllabus_topics": 35
+    }
+  },
+  "library_changes_this_batch": 0,
+  "application_changes_this_batch": 0,
+  "evidence_manifest": "docs/question-review-pcac-v-evidence-2026-10-15.json",
+  "limitations": [
+    "Arquivamentos 13 e 44 são decisões editoriais fundamentadas, não anulações oficiais. As respostas originais foram preservadas.",
+    "A questão 78 mantém o gabarito histórico D, mas está obsoleta: a OMS nega que o exame himenal comprove relação sexual.",
+    "Fontes históricas técnicas (2001, 2003, 2011 e 2012) mantêm a edição original; consulta em 2026 não equivale a atualização da edição ou certificação integral.",
+    "Na questão 45, a aplicação depende do recorte fático e do dolo cobrado; não se inferem todas as imputações apenas da gravidez. A base atual do feminicídio é o art. 121-A.",
+    "Nos itens 1 e 3, o apoio é síntese autoral identificada, não reprodução integral da crônica. Enunciados, alternativas e gabaritos preservados.",
+    "Os cinco comentários pendentes não mudaram texto, status, respostas, source_page, raw_extraction, vinculação ou context_review_required.",
+    "Foram salvos em rascunho domínios adicionais para pesquisa técnica; sua ativação depende de revisar/salvar e publicar o ambiente. As fontes efetivamente utilizadas neste lote foram obtidas com sucesso."
+  ],
+  "private_artifact_sha256": {
+    "before.json": "6c4ea78c301d0367f9f32210ed8d5ed1006f83d111fc4111839c5ff215947925",
+    "after-final.json": "02fc9fc4241713bd1670651fb6315742e792e4162ff28750e17adde0af0302ee",
+    "context-pack.json": "85f1ebac0d30433ba47c64c9a78b5f987fa2641496de992aa40044ba436b2e87",
+    "review-pack.json": "d695fa04b3e70052a2c60c87a7556ccd1b70c6a154505151e6e0e15ffecc8807",
+    "annotations-pack.json": "f2079e957127492a33054e8018a86972c9528a3ac99d35c6021cb0512e3c7b3c",
+    "validation-final.json": "d97aa070d98f8faca93746003439ee623c38fa43601687a933d48e84c0204ad2",
+    "references-pack.json": "70e7caee55a5363260c24466248b23f14b01a476e89e1d8e8dfb9dce7bb74746",
+    "legal-sources-pack.json": "e20febcef7bf45fedb48da4681e7a1e543035af1c9ca66f7976d5b3e2103fbb3",
+    "topics-pack.json": "2bf5806d847833ba270870a13f2f387330e97a3b13f04528194d41dfd99facfc",
+    "exclusions-pack.json": "3bc29cb0a4d439813bf2a8050597f74f8fb0288bcef4834443fb9d5c83a3bbf6",
+    "counts-final.json": "b6cadaec1a0aa30a6b6e671135b81e672173f146c76265cc003d8752b42543b2"
+  }
+}

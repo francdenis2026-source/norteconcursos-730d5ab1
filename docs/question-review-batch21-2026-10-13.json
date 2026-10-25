@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-10-13T23:28:18.978504+00:00",
+  "scope": "Duas retiradas pedagógicas por insuficiente delimitação de hipóteses jurídicas. Originais e gabaritos históricos intactos, sem declarar anulação da banca.",
+  "topics": [],
+  "repairs": [],
+  "items": [
+    {
+      "id": "3423bf01-8ee8-4647-ae42-0c93d2589172",
+      "item_number": 32,
+      "original_answer": "C",
+      "decision": "archived",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 29, 30, 33 e 45"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Retirada pedagógica por falta de delimitação da espécie de ação privada. Gabarito histórico C preservado: é defensável para ação exclusivamente privada, mas não pode ser ensinado como regra para toda ação de iniciativa privada. Na subsidiária da pública, o art. 29 do CPP autoriza denúncia substitutiva e retomada pelo MP. O aditamento do art. 45 não se confunde com denúncia substitutiva. O enunciado não distingue essas espécies; manter o original no histórico, sem afirmar anulação da banca.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "f126efc8-a057-49d0-855f-767cd158ec61",
+      "item_number": 39,
+      "original_answer": "A",
+      "decision": "archived",
+      "legal_basis": [
+        {
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2023/12022023-O-inquerito-policial-segundo-o-STJ-respeito-aos-direitos-e-as-garantias-fundamentais.aspx",
+          "norma": "STJ — panorama institucional do inquérito policial",
+          "artigo": "REsp 791.471; legítima defesa"
+        },
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/mantida-acao-penal-da-justica-comum-apos-arquivamento-de-inquerito-militar/",
+          "norma": "STF — HC 125.101",
+          "artigo": "excludente de ilicitude em inquérito militar; novas provas"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 18 e 127"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Retirada pedagógica por afirmação categórica em tema com distinções jurisprudenciais. Gabarito histórico A preservado. O item I reproduz o REsp 791.471/STJ, sobre arquivamento por legítima defesa, mas o comando não indica tribunal nem distingue as hipóteses de desarquivamento. No HC 125.101/STF, relativo a arquivamento militar por estrito cumprimento do dever legal, admitiu-se reabertura com novas provas. Os fundamentos e contextos devem ser expostos separadamente; não ensinar que todo arquivamento por excludente impede em absoluto novas investigações. Não há declaração de anulação formal ou alteração do gabarito.",
+        "sources": [
+          "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2023/12022023-O-inquerito-policial-segundo-o-STJ-respeito-aos-direitos-e-as-garantias-fundamentais.aspx",
+          "https://noticias.stf.jus.br/postsnoticias/mantida-acao-penal-da-justica-comum-apos-arquivamento-de-inquerito-militar/",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
+      }
+    }
+  ]
+}

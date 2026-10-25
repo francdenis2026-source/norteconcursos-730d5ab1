@@ -1,0 +1,70 @@
+{
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "batch_key": "idecan-pmsc-items46-50-ctb-v1",
+  "sql_path": "pmsc-itens46-50-ctb.sql",
+  "sql_applied": false,
+  "publication_scope": "Edição PMSC 2026, não previsão PC-AC",
+  "items": [
+    {
+      "item": 46,
+      "question_id": "851f3873-e457-48bb-9185-cc3e2b4e48c4",
+      "official_answer": "D",
+      "previous_status": "under_review",
+      "articles_checked": "CTB, art. 1º, § 3º",
+      "ctb_html_sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+      "ctb_text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_location": "Anexo II, p. 52"
+    },
+    {
+      "item": 47,
+      "question_id": "df8836a2-f755-4c4e-ac44-4f331a6a0a71",
+      "official_answer": "A",
+      "previous_status": "under_review",
+      "articles_checked": "CTB, arts. 29, XII; 33; 36; 40, II",
+      "ctb_html_sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+      "ctb_text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_location": "Anexo II, p. 52"
+    },
+    {
+      "item": 48,
+      "question_id": "54130e8b-9ef6-4755-9a53-db57d817f2a3",
+      "official_answer": "B",
+      "previous_status": "under_review",
+      "articles_checked": "CTB, arts. 80, §§ 1º e 3º; 82; 84; 86",
+      "ctb_html_sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+      "ctb_text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_location": "Anexo II, p. 52"
+    },
+    {
+      "item": 49,
+      "question_id": "d060ae9a-0469-4996-8e25-ca862b5b93aa",
+      "official_answer": "E",
+      "previous_status": "under_review",
+      "articles_checked": "CTB, arts. 119; 123, § 1º; 126; 129; 148, § 5º",
+      "ctb_html_sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+      "ctb_text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_location": "Anexo II, p. 52"
+    },
+    {
+      "item": 50,
+      "question_id": "0810d2c8-0173-4c16-98a5-db887660036c",
+      "official_answer": "C",
+      "previous_status": "under_review",
+      "articles_checked": "CTB, arts. 256; 261, § 3º; 268, § 2º; 270, § 5º; 271, § 10",
+      "ctb_html_sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+      "ctb_text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_location": "Anexo II, p. 52"
+    }
+  ]
+}

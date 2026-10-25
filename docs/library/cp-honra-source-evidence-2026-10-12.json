@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-10-12T23:30:54.209199+00:00",
+  "sources": [
+    {
+      "id": "CP",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "4aa57b9f44b3fde54e7009d761c132c987cbc313684f847fca70e894d2f99611"
+    },
+    {
+      "id": "Lei14532",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm",
+      "sha256": "3174f4332fc6c8a3bd0dd15cf9e5672ff5c9be196540383735d24b4e7af2a286"
+    },
+    {
+      "id": "Lei15123",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15123.htm",
+      "sha256": "022254d20fbe720c0e3a660965ba647e21ae652e499aa1faf212a5935f533587"
+    },
+    {
+      "id": "Lei14994",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+      "sha256": "4f9a3f3149a070aac0bef6b9d9c356256e3c92102662cec1c13385b3a45e0d68"
+    },
+    {
+      "id": "Lei14811",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm",
+      "sha256": "9cc2332f620cc8d9509ef2f790d0754bdbd5b37376f0981c18a1a8c5425830ab"
+    },
+    {
+      "id": "Lei15358",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "sha256": "578ce06691a64595e43a5d8615b55cfdbdbec672bb0548f3747091d51b5302ba"
+    },
+    {
+      "id": "Lei13344",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "sha256": "1f90f837f169787a40bcffcb90067580bab59de515a0a7c4c34d9b4a371d9587"
+    },
+    {
+      "id": "Lei6538",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6538.htm",
+      "sha256": "fcec5d14372bae91fd32a0f0bc47560b30dee893905ab5284d84bcce6863e32b"
+    },
+    {
+      "id": "Lei9472",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9472.htm",
+      "sha256": "2172cd4871bb0948e22c4bf410b0947bb82606aafe7630d6030f2452c3cf170a"
+    },
+    {
+      "id": "CF",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sha256": "d060fef7721813f7babaf0779c54a8c69e0f5d8b675cb4d02a01d914218f0edf"
+    },
+    {
+      "id": "Tema280",
+      "url": "https://noticias.stf.jus.br/postsnoticias/supremo-define-limites-para-entrada-da-policia-em-domicilio-sem-autorizacao-judicial/",
+      "sha256": "5c8c63df3862de22aad9e55cfea88e4dec37a35d3e62930cbe68bcd56ecd5075"
+    }
+  ],
+  "primary_audit": {
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "limitations": [
+    "Art.145: consulta ao PDF STF retornou403; não alegada leitura da Súmula714 ou certificação integral de legitimação concorrente, com qualificação e treino literal bloqueado.",
+    "Art.151: confrontadas leis postal/telecomunicações posteriores; não certificada toda derrogação ou jurisprudência. Não ensinar CP residual como regime universal.",
+    "Tema280: consultada notícia institucional com tese; não alegada leitura integral de todos os precedentes de busca/consentimento.",
+    "Não certificadas todas as combinações de majorantes, classificação de redes sociais ou controvérsias constitucionais da Lei15.358."
+  ]
+}

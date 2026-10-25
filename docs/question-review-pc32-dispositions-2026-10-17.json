@@ -1,0 +1,380 @@
+{
+  "checked_at": "2026-10-18T04:07:39.215Z",
+  "scope": "All32 baseline records investigated;31 editorial dispositions complete (20active,4obsolete,7editorially archived),1 remains under_review. Editorial archives are not official annulments, approval of another key, or certification that every legal controversy was resolved.",
+  "resolved": 31,
+  "published_active": 20,
+  "published_obsolete": 4,
+  "retained_under_review": 1,
+  "supplementary_amazonas_check": {
+    "capture": {
+      "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
+      "path": "outputs/pc-pending-review-2026-10-16/final32/am-7829.pdf",
+      "sha256": "e16608cb7d76e0f4dd95da0700310973c82d0f848d30c39fd4ebebed56513a07",
+      "captured_at": "2026-10-17T21:24:58.438Z"
+    },
+    "reviewed_scope": "Lei3374/2009 altera Lei3278/2008, incluindo revisão art125§1º; não altera art159 nem restaura arts36–91 da Lei2271. Não certificação integral de todos os regimes disciplinares.",
+    "court_search_limitation": "Busca de notícias STF por 3.278 Amazonas sem resultados; ausência de resultado não prova inexistência de litígio."
+  },
+  "items": [
+    {
+      "id": "04aeaabe-62e9-43dc-b843-e09efc388451",
+      "contest": "Polícia Civil do Estado do Amazonas - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 65,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "obsolete",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "041056b58fba00dcf7393ef72e79b4053ebc2d54f886276108ca509577606933"
+    },
+    {
+      "id": "12f59e04-60f5-46ff-9aeb-98ef6ac6c6b3",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "career": "Datiloscopista Policial",
+      "item_number": 92,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "d2e52eea4755818e99c65d8915b5a3cacc1f52c07d35c05a169c4b1bea3b507d"
+    },
+    {
+      "id": "34f65807-668d-4b0b-9047-03d45ca385f1",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 59,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "obsolete",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "e6b866d7e41d135cfea3a34b3e75065179accdb1b83360e6d01e6e7392b72bb0"
+    },
+    {
+      "id": "3b024557-dfed-40fe-9bba-bf3f32a02f20",
+      "contest": "Polícia Civil do Estado do Amazonas - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 80,
+      "original_answer": "E",
+      "before_status": "under_review",
+      "after_status": "obsolete",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "dac51b9eba1636cc2a8ea8cc71dfa1995f129bcbe6f450382deb615739d6f022"
+    },
+    {
+      "id": "4c8e3631-ef13-4420-b488-419e4ffedea3",
+      "contest": "Polícia Civil de Pernambuco - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 2,
+      "original_answer": "E",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "6a3a491d9a1049c9bb80afcc3890f8f281097a3aa56ce33a21f559d85358f830"
+    },
+    {
+      "id": "66a98722-e75c-49ee-9a7b-4edb99348724",
+      "contest": "Polícia Civil do Piauí – Delegado de Polícia Civil",
+      "career": "Delegado de Polícia Civil",
+      "item_number": 2,
+      "original_answer": "E",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "c0dba6e2a9f5dd21a1099ac3af121dc5a7df62ae963629dc77bab1a561a168f7"
+    },
+    {
+      "id": "6a01e7c8-7f1f-458f-8eb1-28faab1338a1",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 56,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "e7e2c8276478a5a6f233b91026ed6bd13cf47a45b6317d17b211c9e446ac2d4d"
+    },
+    {
+      "id": "6b7f5982-454d-45a1-9d8d-336110760d3a",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 14,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "f5c9123ab785a9f63ab50032607aebbe4ef6f40b00f9e71756b57411cdc9dbee"
+    },
+    {
+      "id": "6d14cb52-a716-4376-9b54-8c6326bc3b50",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 56,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "e7e2c8276478a5a6f233b91026ed6bd13cf47a45b6317d17b211c9e446ac2d4d"
+    },
+    {
+      "id": "76a0df58-50ad-465e-af73-12763e76347f",
+      "contest": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 48,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "under_review",
+      "decision": "Retained; substantive review incomplete",
+      "missing_validation": "Faltam norma/regimento atual do TCE-RJ e jurisprudência que sustentem a comunicação direta do delegado e o tratamento dos membros do MP."
+    },
+    {
+      "id": "80a4ac8d-f333-4824-b402-af0fb5b6c873",
+      "contest": "Polícia Civil do Piauí – Delegado de Polícia Civil",
+      "career": "Delegado de Polícia Civil",
+      "item_number": 4,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "f4de5aa3c5c6cb913eaf9c4cb73892fcb78c0e3d7125e8e37b22717b7e0d3f85"
+    },
+    {
+      "id": "8691e77b-0ba1-4789-ab11-13457340308d",
+      "contest": "Polícia Civil do Estado do Amazonas - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 44,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Arquivamento editorial fundamentado; não anulação da banca; gabaritoA preservado. docs/question-review-am44-editorial-disposition-2026-10-17.json",
+      "comment_sha256": "a1a43479f51ea23229a5ece34412a11a04d2906103e72d3fb632fe57eea16b68"
+    },
+    {
+      "id": "8842e03d-5136-4daa-9335-caec2e9bafad",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 60,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "fd9cf214b0d580c8cd3009b1a4c30c3a6b534b17786db1c98197abc0806209d4"
+    },
+    {
+      "id": "8eecb36b-1c60-4019-a495-f3523af08d08",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 79,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "f90fd62651f91ef98725e19c2b125c270f1689e33d4a4a544d035c02e1c1b87d"
+    },
+    {
+      "id": "90d83666-4647-4228-9c76-1c7869240968",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 78,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "d3601d591280da7766a53e8cdf5465b821657a130e579aa43c74cbd21d3c5148"
+    },
+    {
+      "id": "94a5990c-4243-42d3-a45b-e0361f65812f",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 40,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "ea75cfd02d09766a8fbdb81091f84c9135076989eda877a323cffc774a75d649"
+    },
+    {
+      "id": "9eaec00d-5904-4113-97d6-e4c217da178e",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 60,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "fd9cf214b0d580c8cd3009b1a4c30c3a6b534b17786db1c98197abc0806209d4"
+    },
+    {
+      "id": "a2ab2b89-eea8-481e-b67f-82853648c460",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 14,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por ambiguidade da alternativaE no contexto posterior ao Tema1019; A preservada, sem anulação oficial. docs/question-review-ro14-2026-10-18.json",
+      "comment_sha256": "fb29dc40750a189784e44204cef6a8a2e016f0ab39c36d3c03c19bbdb75856de"
+    },
+    {
+      "id": "b20bd1e1-8388-4069-aff1-689070b28009",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 60,
+      "original_answer": "C",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "c5f8bfc24cbbae37ef0a3705942dd014252fa53ca97635616ec0446788e46a0f"
+    },
+    {
+      "id": "b48ed163-8694-4b8b-bb8d-d4ee8a49ad02",
+      "contest": "Polícia Civil do Piauí – Delegado de Polícia Civil",
+      "career": "Delegado de Polícia Civil",
+      "item_number": 1,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "9d8c8ac88fece4a0c7baf9822ebb3ebf2a7d5962fb2a70b95a1c19a2f0a8c86c"
+    },
+    {
+      "id": "b62b8b04-1710-4baf-9a2f-27d6e9731dc8",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 58,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "0ad8c456822abe17b3716e2f07994a67990f000bb4d246f11fc184808d31ee6f"
+    },
+    {
+      "id": "b856f028-7564-4a68-ba11-b3dafa414097",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 57,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "3ca2f69d6268d802668c1252f0bcc25943afb2949a53581410f9bd65f2f0cd8b"
+    },
+    {
+      "id": "bd9495a0-e158-41eb-92e2-38ad99b635eb",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "career": "Datiloscopista Policial",
+      "item_number": 29,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Cotejo histórico e documental individual; docs/question-review-ro-history-2026-10-17.json",
+      "comment_sha256": "5f4a63c7ba2b1b50495c46d131ab2734bdb4359b9fb4de7a75f3140c8e07b704"
+    },
+    {
+      "id": "c12a8254-148f-4b63-b48c-5bfaecccdb6b",
+      "contest": "Polícia Civil do Estado do Amazonas - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 40,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "CFC oficial, chaveA reproduzida e edital real conferido; docs/question-review-am40-2026-10-18.json",
+      "comment_sha256": "0917fa734ca09b5e58e6ddc3d53d624acf3a0d5fb3dd45534ff5a3c1528508fe"
+    },
+    {
+      "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",
+      "contest": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "career": "Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "item_number": 48,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "67f513146e5046053320ec6012e60cda86989b3b21a1fc24c1b9a3ed662dafdb"
+    },
+    {
+      "id": "e837718c-b3e6-44cf-aa22-762f176e9862",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "career": "Datiloscopista Policial",
+      "item_number": 80,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "50b849d1711c15fe8816d1af2f448c2a9a7b2105f02d278ff9729bad07c43931"
+    },
+    {
+      "id": "e9685709-2891-4be5-8e0a-cfdf17dd2026",
+      "contest": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 75,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Constitutional purpose of reclamação, ADIs5526/5824/5825; limited to regular legislative review, no absolute bar. docs/question-review-rj75-2026-10-18.json",
+      "comment_sha256": "f573ef4e04a7a1264479494fe641cb1b52df5f71f27f9ac68f1a9d81a4d27bfa"
+    },
+    {
+      "id": "e96cf33a-a403-4367-872f-2bdecde623b0",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 59,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "obsolete",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "e6b866d7e41d135cfea3a34b3e75065179accdb1b83360e6d01e6e7392b72bb0"
+    },
+    {
+      "id": "eb537ad8-1fe6-41f3-99a7-5fec4a73913e",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia",
+      "career": "Escrivão de Polícia",
+      "item_number": 57,
+      "original_answer": "D",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "3ca2f69d6268d802668c1252f0bcc25943afb2949a53581410f9bd65f2f0cd8b"
+    },
+    {
+      "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "item_number": 9,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Cotejo histórico e documental individual; docs/question-review-ro-history-2026-10-17.json",
+      "comment_sha256": "5f556186b040bd3a57526c7440508920663876914b37aaffd73fc3c707d6fa78"
+    },
+    {
+      "id": "f47b64c0-e6d0-4e57-a711-bc144b132506",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 14,
+      "original_answer": "A",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published individual decision; see batch reports",
+      "comment_sha256": "f5c9123ab785a9f63ab50032607aebbe4ef6f40b00f9e71756b57411cdc9dbee"
+    },
+    {
+      "id": "fc3185a3-ee79-41e1-aa77-c9bce163b64e",
+      "contest": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia",
+      "career": "Investigador de Polícia",
+      "item_number": 58,
+      "original_answer": "B",
+      "before_status": "under_review",
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "0ad8c456822abe17b3716e2f07994a67990f000bb4d246f11fc184808d31ee6f"
+    }
+  ],
+  "last_context_reanalysis": {
+    "checked_at": "2026-10-17T22:54:52.342Z",
+    "published_transcription_repairs": 2,
+    "newly_resolved": 0,
+    "pending": 16,
+    "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
+  },
+  "archived_editorially": 7
+}

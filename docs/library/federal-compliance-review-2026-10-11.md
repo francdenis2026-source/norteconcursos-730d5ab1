@@ -1,0 +1,19 @@
+# Revisão aplicada: hediondos, identificação e prevenção
+
+Lote publicado de 110 explicações: hediondos (17), produtos químicos (23), CPF (7), identidade (13), instrumentos de menor potencial (8), lavagem de dinheiro (24), uso da força (11) e registro civil único (7). Cada item listado possui explicação objetiva, caso com variação, ressalva e exercício respondido. O readback confirma todas as alterações e preserva as 3.403 explicações não selecionadas, além das outras sete tabelas. Não foram criados materiais duplicados ou importadas questões ao treinador.
+
+## Atualizações e distinções verificadas
+
+- Hediondos: catálogo atual separado de transcrições modificadoras antigas. Os arts. 214 e 223 do CP foram revogados; a pena antiga de roubo não deve ser memorizada como atual. Regime fechado não é automático e progressão depende da LEP vigente. [CP compilado](https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm), [Lei 8.072](https://www.planalto.gov.br/ccivil_03/leis/l8072.htm).
+- Produtos químicos: a IN DG/PF 338/2026, publicada em 3 de agosto, revogou as INs 166/2020 e 211/2021. Separados procedimento, lista/concentração controlada e limites de multas. [PF, IN 338](https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf), [legislação da PF](https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao).
+- Identificação: CPF obrigatório em documento novo não equivale a senha ou obrigação geral de login por CPF. O RG antigo possui transição própria: dez anos desde a vigência do decreto, com exceção para quem já tinha sessenta anos naquele marco. Prazos de implantação de sistemas não são validade de cada documento. [Lei 14.534](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm), [Decreto da CIN, art. 25](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm).
+- Lavagem: autonomia do antecedente não elimina indícios; guarda de registros tem marco próprio; comunicação ao Coaf não autoriza aviso ao cliente. O STF declarou inconstitucional o afastamento automático pelo art. 17-D em 2020; a literalidade residual não gera exercícios automáticos. [Lei 9.613](https://www.planalto.gov.br/ccivil_03/leis/l9613.htm), [STF, ADI 4911](https://portal.stf.jus.br/noticias/vernoticiadetalhe.asp?idconteudo=456010&ori=1).
+- Coaf: vinculação administrativa atual ao Banco Central, distinta da criação histórica na Fazenda; a alteração provisória de 2023 teve vigência encerrada. [Lei 13.974, art. 2º vigente](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13974.htm).
+- Bens de lavagem: a destinação atual distingue competência federal e estadual/DF e protege direitos ressalvados. Não ensinar que toda perda beneficia indistintamente a União. [Lei 15.358/2026](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm).
+- Uso da força: menor potencial não significa risco zero; fuga simples não autoriza disparo; registros em ambiente prisional possuem hipótese que não depende de ferimento. Normas complementares precisam ser consultadas para procedimentos operacionais. [Lei 13.060](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm), [Decreto 12.341](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm).
+
+## Validação e limite
+
+268 testes e build de produção passaram. Manifestos guardam as versões anteriores e hashes das fontes; evidências brutas permanecem em outputs ignorados. Nenhuma credencial ou PDF privado integra o commit.
+
+Este lote conclui a revisão dos artigos explicitamente listados nesses oito percursos. A biblioteca possui 3.511 unidades atuais com explicações; 777 possuem metadados de revisão atual e 2.734 continuam pendentes de revisão editorial. Explicação disponível e integridade do texto oficial não equivalem a revisão completa de todos os exemplos e de toda jurisprudência.

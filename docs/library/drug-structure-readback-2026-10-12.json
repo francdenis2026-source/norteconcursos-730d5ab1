@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-12T17:01:10.427674+00:00",
+  "chapter_assignments_confirmed": 84,
+  "captions_moved": 11,
+  "source_reapprovals_confirmed": 11,
+  "current_drug_units": 84,
+  "official_blocks": 24,
+  "unchanged_other_units": 3587,
+  "unchanged_other_explanations": 3502,
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "identities_and_normative_text_preserved": true,
+  "scope": "One drug course overview, chapter metadata, eleven trailing structural captions and their explicit source-hash reapproval. No claim of complete jurisprudential coverage."
+}

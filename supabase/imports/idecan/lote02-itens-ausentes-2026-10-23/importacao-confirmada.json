@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-10-24T02:37:21.558558+00:00",
+  "applied": true,
+  "expected_candidates": 19,
+  "inserted_sources": [
+    "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+    "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+    "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd"
+  ],
+  "inserted_candidates": [
+    "aa4f0229df79e769221186e47e7300093614b6ca1007fcf179c93461975eade2",
+    "07d6175fb15cc6c4e036f0f334971375a805ebf263b1c5f241975e935ff0e3dc",
+    "54f2547854e158c14c18834fdf1ddaf7e082691f93c9d7bd7ba54da7e5624da8",
+    "b097a078a75c2e4f36bb075bd5ab148cd2e00e6fb9cd7f9d56014551f13abbfa",
+    "6d404d7247a027b67d44047ec1de5180e79aa4807b14278300532c84497b7735",
+    "8b3c7244f9d154905d8104d5dd9b65c16802e7efb36f2be0859156182baa905b",
+    "c2ef8084611f36b348532d119ee8a898dc8a4f36c813c4ba3fa3ead0bdfd06ad",
+    "aae734872b70a7e3c152431fff4be8cffaa8abf4962dfb2ccdceee7215d62985",
+    "c6913055b06c4b2a6c1d9e1db1180cd9ebd95bc2c9d717ce0cffc062af5c7754",
+    "65b23aebe0794c80496f2715f492fd444ef5e4bfa0631665a6fbd7df9b787017",
+    "22c586e787aa6d8617a8cea5093d0d25cbf9311f96d8acdeab9b8fd0bc75158f",
+    "eabbb162bc634c1dc0fc6a663ac37a65ee0345e5ad0880ce358cb6cc117227bb",
+    "733dacb986e8d6ca050b397d177ad343eecdcc79d04374e9536f6b53433b2894",
+    "68fb07a255b01364c236d46720326cef8d65a2eda3bd1f3a8cc99aea11b1e554",
+    "8f586136918ce7f2216ead4ce7f64356a4dc2caa8fb3d2d347ef66316463cf93",
+    "7d6d977d8981d9ac2bd5f21b97813f5162d02624e97252ecda8cb48674bf7200",
+    "824f5e9bb439f5afc2b186a2fb7dd95a8593a0f9ad665e41251b4b922a302dab",
+    "100035ac656ef57a4f8093b812946d41b6ab0fe49e9a72207298d07137085281",
+    "634af19e5346fcd5556d6fb39cc4d6c1c002442eb9dd860d04aee17937b599fc"
+  ],
+  "preserved_candidates": [],
+  "confirmed": [
+    {
+      "id": "07d6175fb15cc6c4e036f0f334971375a805ebf263b1c5f241975e935ff0e3dc",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 38,
+      "status": "under_review"
+    },
+    {
+      "id": "54f2547854e158c14c18834fdf1ddaf7e082691f93c9d7bd7ba54da7e5624da8",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 39,
+      "status": "under_review"
+    },
+    {
+      "id": "6d404d7247a027b67d44047ec1de5180e79aa4807b14278300532c84497b7735",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 62,
+      "status": "under_review"
+    },
+    {
+      "id": "8b3c7244f9d154905d8104d5dd9b65c16802e7efb36f2be0859156182baa905b",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 63,
+      "status": "under_review"
+    },
+    {
+      "id": "aa4f0229df79e769221186e47e7300093614b6ca1007fcf179c93461975eade2",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 37,
+      "status": "under_review"
+    },
+    {
+      "id": "b097a078a75c2e4f36bb075bd5ab148cd2e00e6fb9cd7f9d56014551f13abbfa",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 61,
+      "status": "under_review"
+    },
+    {
+      "id": "c2ef8084611f36b348532d119ee8a898dc8a4f36c813c4ba3fa3ead0bdfd06ad",
+      "corpus_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "item_number": 65,
+      "status": "under_review"
+    },
+    {
+      "id": "22c586e787aa6d8617a8cea5093d0d25cbf9311f96d8acdeab9b8fd0bc75158f",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 23,
+      "status": "under_review"
+    },
+    {
+      "id": "65b23aebe0794c80496f2715f492fd444ef5e4bfa0631665a6fbd7df9b787017",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 19,
+      "status": "under_review"
+    },
+    {
+      "id": "68fb07a255b01364c236d46720326cef8d65a2eda3bd1f3a8cc99aea11b1e554",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 26,
+      "status": "under_review"
+    },
+    {
+      "id": "733dacb986e8d6ca050b397d177ad343eecdcc79d04374e9536f6b53433b2894",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 25,
+      "status": "under_review"
+    },
+    {
+      "id": "7d6d977d8981d9ac2bd5f21b97813f5162d02624e97252ecda8cb48674bf7200",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 28,
+      "status": "under_review"
+    },
+    {
+      "id": "824f5e9bb439f5afc2b186a2fb7dd95a8593a0f9ad665e41251b4b922a302dab",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 30,
+      "status": "under_review"
+    },
+    {
+      "id": "8f586136918ce7f2216ead4ce7f64356a4dc2caa8fb3d2d347ef66316463cf93",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 27,
+      "status": "under_review"
+    },
+    {
+      "id": "aae734872b70a7e3c152431fff4be8cffaa8abf4962dfb2ccdceee7215d62985",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 1,
+      "status": "under_review"
+    },
+    {
+      "id": "c6913055b06c4b2a6c1d9e1db1180cd9ebd95bc2c9d717ce0cffc062af5c7754",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 3,
+      "status": "under_review"
+    },
+    {
+      "id": "eabbb162bc634c1dc0fc6a663ac37a65ee0345e5ad0880ce358cb6cc117227bb",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 24,
+      "status": "under_review"
+    },
+    {
+      "id": "100035ac656ef57a4f8093b812946d41b6ab0fe49e9a72207298d07137085281",
+      "corpus_id": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd",
+      "item_number": 39,
+      "status": "under_review"
+    },
+    {
+      "id": "634af19e5346fcd5556d6fb39cc4d6c1c002442eb9dd860d04aee17937b599fc",
+      "corpus_id": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd",
+      "item_number": 40,
+      "status": "under_review"
+    }
+  ],
+  "public_questions_created": 0,
+  "complete": true
+}

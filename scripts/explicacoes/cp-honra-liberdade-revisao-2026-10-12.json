@@ -1,0 +1,511 @@
+{
+  "course_slug": "codigo-penal",
+  "units": {
+    "art-137": {
+      "simples": "Participar de rixa tem detenção de quinze dias a dois meses ou multa; atuação para separar contendores é ressalvada. Morte ou lesão grave tem pena qualificada pela participação, sem apagar outros enquadramentos individuais.",
+      "pontos": [
+        "Resultado qualificado: seis meses a dois anos.",
+        "Separar não equivale a participar da luta."
+      ],
+      "atencao": [
+        "Não tratar agressão unilateral ou qualquer discussão verbal como rixa. Imputação de resultado, autoria específica e relação com participação exigem análise; não dispensar prova por estar no local."
+      ],
+      "exemplo": "Pessoa intervém apenas para separar a luta: a ressalva impede presumir participação típica. Variação: Se passa a integrar a luta, a conduta muda; ainda provar requisitos e eventual resultado qualificado.",
+      "prova": [
+        "Quem apenas separa integra necessariamente o crime? Não.",
+        "Toda discussão verbal configura rixa? Não; examinar o tipo."
+      ],
+      "termos": [
+        {
+          "termo": "Rixa",
+          "significado": "Participação na luta nas condições típicas, distinta de separar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-138": {
+      "simples": "Calúnia imputa falsamente fato definido como crime; não é apenas xingamento. Divulgar sabendo falsa a imputação é hipótese própria; calúnia contra mortos é punível. Exceção da verdade tem restrições expressas.",
+      "pontos": [
+        "Pena: seis meses a dois anos e multa.",
+        "§1º exige saber falsa; §3º lista exceções à prova da verdade."
+      ],
+      "atencao": [
+        "Não usar verdadeira informação como calúnia automática nem toda crítica como imputação criminosa. Exceção da verdade não é admitida universalmente, e crimes contra honra têm regime próprio de ação."
+      ],
+      "exemplo": "Alguém atribui falsamente um furto concreto: examinar imputação de fato criminoso e elementos do tipo. Variação: Se apenas dirige ofensa à dignidade sem fato, avaliar injúria, não calúnia por rótulo.",
+      "prova": [
+        "Toda ofensa é calúnia? Não; exige fato definido como crime.",
+        "Prova da verdade cabe sem exceções? Não; ler §3º."
+      ],
+      "termos": [
+        {
+          "termo": "Imputação criminosa",
+          "significado": "Atribuição de fato criminoso concreto, distinta de ofensa genérica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-139": {
+      "simples": "Difamação imputa fato ofensivo à reputação; não exige que o fato seja definido como crime. A verdade não exclui automaticamente todo caso: a exceção textual exige funcionário público e ligação com função.",
+      "pontos": [
+        "Pena: três meses a um ano e multa.",
+        "Exceção: funcionário público E ofensa relativa às funções."
+      ],
+      "atencao": [
+        "Distinguir fato e juízo ofensivo, contexto e direito de crítica. Não ensinar que divulgar qualquer fato verdadeiro sempre é impune nem presumir crime por crítica legítima."
+      ],
+      "exemplo": "Fato ofensivo não criminoso é divulgado sobre pessoa: examinar difamação, não calúnia automaticamente. Variação: Se o ofendido é funcionário e a ofensa se refere à função, muda a hipótese da exceção, sem dispensar os demais elementos.",
+      "prova": [
+        "O fato precisa ser crime? Não.",
+        "Toda verdade afasta automaticamente difamação? Não; a exceção tem recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Reputação",
+          "significado": "Honra objetiva relacionada à consideração social."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-140": {
+      "simples": "Injúria ofende dignidade/decoro. O §3º atual abrange religião ou condição de pessoa idosa/com deficiência; injúria racial passou à Lei 7.716, art.2º-A, após Lei 14.532 publicada e vigente em 11/1/2023.",
+      "pontos": [
+        "Caput: um a seis meses OU multa; real: três meses a um ano E multa, além da violência.",
+        "§3º: um a três anos E multa no recorte atual.",
+        "§1º admite deixar de aplicar pena nas hipóteses de provocação/retorsão imediata."
+      ],
+      "atencao": [
+        "Não copiar raça/cor/etnia/origem da redação histórica do §3º como enquadramento atual de injúria racial. Não confundir perdão judicial facultativo com direito de agredir ou imunidade geral; lei no tempo exige integração à norma especial, sem revisar novamente todo percurso Racismo."
+      ],
+      "exemplo": "Ofensa racial após a alteração de 2023 é classificada mecanicamente no antigo §3º do CP. Variação: Se a ofensa utiliza religião ou condição indicada no §3º atual, examinar este recorte e seu regime, sem equiparar automaticamente todas as hipóteses.",
+      "prova": [
+        "Raça permanece no §3º atual? Não; integrar Lei 7.716 art.2º-A.",
+        "Retorsão imediata autoriza qualquer violência? Não; observar a hipótese legal."
+      ],
+      "termos": [
+        {
+          "termo": "Honra subjetiva",
+          "significado": "Dignidade/decoro pessoais, com modalidades e disciplina especial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-141": {
+      "simples": "Crimes de honra têm aumentos por destinatário/contexto, recompensa, redes sociais e razões da condição do sexo feminino. Frações não se somam automaticamente por qualquer rótulo.",
+      "pontos": [
+        "Regra: um terço nas hipóteses dos incisos.",
+        "Paga/promessa: dobro; redes sociais: triplo.",
+        "Lei 14.994 vigente 10/10/2024: dobro na hipótese do §3º.",
+        "IncisoIV ressalva art.140§3º; função exige relação pertinente."
+      ],
+      "atencao": [
+        "Não usar aplicativo/celular como prova automática de qualquer divulgação em rede social nem duplicar a mesma condição já elementar. Conferir vigência da parte promulgada depois de veto e irretroatividade gravosa; não certificar todo concurso de majorantes neste bloco."
+      ],
+      "exemplo": "A condição etária já integra a injúria do §3º e a questão aplica também incisoIV pelo mesmo dado, ignorando ressalva. Variação: Se a hipótese não tem essa elementar, examinar o inciso com seus requisitos e regras de dosimetria, sem conclusão por etiqueta.",
+      "prova": [
+        "IncisoIV ignora §3º do 140? Não; há exceção.",
+        "Toda hipótese tem a mesma fração? Não; um terço, dobro e triplo são distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Majorantes da honra",
+          "significado": "Aumentos condicionados ao contexto e sem duplicação automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ]
+    },
+    "art-142": {
+      "simples": "As hipóteses textuais de exclusão abrangem injúria/difamação em discussão da causa, crítica pertinente ou dever funcional. Não mencionam calúnia como licença irrestrita; publicidade nos incisos I/III tem ressalva.",
+      "pontos": [
+        "Crítica: ressalva de intenção inequívoca de injuriar/difamar.",
+        "Juízo: discussão da causa, parte/procurador.",
+        "Publicidade pode gerar responsabilidade no recorte do parágrafo."
+      ],
+      "atencao": [
+        "Não transformar atuação profissional em autorização de qualquer ofensa alheia à causa ou calúnia. Garantias específicas e contexto exigem verificação; a lista não é licença universal."
+      ],
+      "exemplo": "Advogado atribui falsamente crime e invoca o art.142 como imunidade universal de calúnia. Variação: Se a fala é pertinente à discussão e se enquadra nas hipóteses de injúria/difamação, examinar limites e publicidade, sem presumir toda ofensa protegida.",
+      "prova": [
+        "O artigo exclui universalmente calúnia? Não.",
+        "Crítica com intenção inequívoca de ofender é sempre protegida peloII? Não; há ressalva."
+      ],
+      "termos": [
+        {
+          "termo": "Exclusão delimitada",
+          "significado": "Hipótese com objeto e contexto próprios, não autorização irrestrita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-143": {
+      "simples": "Retratação cabal de calúnia/difamação antes da sentença pode isentar pena. Se foi por comunicação, o ofendido pode desejar os mesmos meios. Injúria não integra automaticamente esse recorte.",
+      "pontos": [
+        "Cabal E antes da sentença.",
+        "Mesmo meio se o ofendido assim desejar."
+      ],
+      "atencao": [
+        "Não tratar desculpa vaga, negação parcial ou retratação tardia como cumprimento automático. Não confundir com perdão do ofendido ou direito de resposta de regime próprio."
+      ],
+      "exemplo": "Antes da sentença, o querelado se retrata integralmente de calúnia difundida por meio de comunicação e o ofendido deseja o mesmo meio. Variação: Se apenas reafirma a acusação com pedido genérico de desculpas, reavaliar se houve retratação cabal, sem presumir o benefício.",
+      "prova": [
+        "A regra inclui qualquer injúria? Não; calúnia/difamação.",
+        "Basta retratação parcial por etiqueta? Não; exige cabal."
+      ],
+      "termos": [
+        {
+          "termo": "Retratação cabal",
+          "significado": "Retirada integral da imputação no momento e forma pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-144": {
+      "simples": "Referências ambíguas podem motivar pedido judicial de explicações. O procedimento não transforma automaticamente silêncio em condenação: a ofensa e seus elementos dependem de análise com garantias.",
+      "pontos": [
+        "Faculdade de pedir explicações.",
+        "Resposta ou ausência exige exame do caso, não culpa presumida."
+      ],
+      "atencao": [
+        "A frase responde pela ofensa não elimina presunção de inocência ou direito ao silêncio. Pedido não substitui queixa nem se presume suspensão/reinício do prazo decadencial só por sua apresentação."
+      ],
+      "exemplo": "O interpelado não responde e a questão declara condenação automática sem provar crime. Variação: Resposta esclarecedora pode mudar a compreensão; ainda identificar elementos e via adequada, não condenar por ausência de explicação satisfatória sozinha.",
+      "prova": [
+        "Silêncio sozinho prova condenação? Não.",
+        "O pedido é sempre a própria ação penal? Não; distinguir procedimento e iniciativa."
+      ],
+      "termos": [
+        {
+          "termo": "Interpelação",
+          "significado": "Pedido de esclarecimento, sem dispensar prova e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-145": {
+      "simples": "Queixa é a regra textual no capítulo, com exceções para violência com lesão, requisição e representação. A disciplina da injúria racial posterior a 2023 é especial, não se decide pela redação histórica do CP.",
+      "pontos": [
+        "IncisoI do 141: requisição; incisoII e 140§3º: representação no texto.",
+        "Não confundir queixa, denúncia e representação."
+      ],
+      "atencao": [
+        "Não declarar exclusividade universal do MP ou da queixa em ofensa funcional por leitura isolada: legitimação concorrente e seu alcance exigem jurisprudência específica, não certificada integralmente aqui. Integrar Lei 14.532 e exceções especiais."
+      ],
+      "exemplo": "A questão atribui a todo crime de honra apenas uma mesma forma de iniciativa, sem identificar o tipo e contexto. Variação: Em ofensa funcional ou injúria racial, conferir regime integrado e legitimidade antes de usar resposta universal.",
+      "prova": [
+        "Há só uma forma de iniciativa para todo capítulo? Não.",
+        "Pode decidir injúria racial atual apenas pelo §3º antigo? Não; verificar lei especial."
+      ],
+      "termos": [
+        {
+          "termo": "Regime da ação",
+          "significado": "Titularidade e condição variam por hipótese, com integração necessária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-146": {
+      "simples": "Constranger por violência/grave ameaça ou redução da resistência a não fazer o permitido ou fazer o não mandado tem hipótese própria. Mais de três pessoas ou armas têm regra agravada; exceções médicas/suicídio são delimitadas.",
+      "pontos": [
+        "Três meses a um ano OU multa; §1º cumulativas E dobro.",
+        "Mais de três não é exatamente três.",
+        "Intervenção sem consentimento: perigo de vida IMINENTE, não conveniência geral."
+      ],
+      "atencao": [
+        "Não legitimar qualquer intervenção médica ou coação pelo simples nome de tratamento. Distinguir tipos especiais, elementos e garantias; penas da violência possuem previsão cumulativa própria."
+      ],
+      "exemplo": "Exatamente três pessoas atuam sem arma: esse número sozinho não preenche mais de três do §1º. Variação: Se há arma, a outra hipótese do §1º precisa ser examinada, sem exigir também quatro pessoas.",
+      "prova": [
+        "Exatamente três basta por número? Não.",
+        "Toda intervenção sem consentimento está excluída? Não; observar perigo iminente de vida."
+      ],
+      "termos": [
+        {
+          "termo": "Constrangimento ilegal",
+          "significado": "Restrição da liberdade por meios e finalidade previstos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-146-a": {
+      "simples": "Bullying exige intimidação intencional, sistemática e repetitiva nos meios legais. Lei 14.811, vigente 15/1/2024, prevê multa na forma comum e reclusão 2 a 4 anos e multa na virtual, subsidiariamente a crime mais grave.",
+      "pontos": [
+        "Caput e parágrafo têm penas diferentes.",
+        "Ambiente digital não dispensa repetição/intencionalidade.",
+        "Subsidiariedade nas duas hipóteses."
+      ],
+      "atencao": [
+        "Não transformar ofensa isolada em bullying automaticamente nem todo conflito em crime por opinião subjetiva. Outros tipos podem incidir; alteração penal gravosa não retroage."
+      ],
+      "exemplo": "Uma única mensagem ofensiva é chamada automaticamente de bullying por estar em rede social. Variação: Com intimidação sistemática e repetitiva comprovada em ambiente digital, examinar parágrafo e subsidiariedade, sem dispensar os demais elementos.",
+      "prova": [
+        "Digital dispensa repetição? Não.",
+        "Forma comum e virtual têm só multa? Não; a virtual tem reclusão e multa."
+      ],
+      "termos": [
+        {
+          "termo": "Intimidação sistemática",
+          "significado": "Conduta repetitiva e intencional, distinta de qualquer episódio isolado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+      ]
+    },
+    "art-147": {
+      "simples": "Ameaça exige mal injusto e grave comunicado pelos meios previstos. Lei 14.994, vigente 10/10/2024, prevê dobro na hipótese contra mulher por razões do sexo feminino e exclui essa hipótese da exigência de representação.",
+      "pontos": [
+        "Caput: um a seis meses OU multa.",
+        "§2º: representação EXCETO hipótese§1º.",
+        "Ser mulher, sozinho, não prova razões legais."
+      ],
+      "atencao": [
+        "Não ensinar representação obrigatória para toda ameaça nem aplicar dobro a qualquer vítima mulher sem elementos. Não confundir anúncio de exercício legítimo de direito com mal injusto; lei penal no tempo importa."
+      ],
+      "exemplo": "Ameaça preenchida por razões legais contra mulher sob regime atual é tratada como dependente sempre de representação. Variação: Em hipótese fora do §1º, examinar a regra geral condicionada; fato anterior exige análise temporal própria.",
+      "prova": [
+        "Toda ameaça exige representação atual? Não; há exceção.",
+        "Qualquer vítima mulher determina dobro? Não; exige razões legais."
+      ],
+      "termos": [
+        {
+          "termo": "Ameaça e ação",
+          "significado": "Mal injusto/grave e regime de iniciativa com exceção atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ]
+    },
+    "art-147-a": {
+      "simples": "Perseguição exige reiteração e afeta integridade, locomoção ou esfera de liberdade/privacidade. Pena 6 meses a 2 anos e multa; majorantes próprias e representação. A remissão a 121§2º-A é residual após feminicídio autônomo.",
+      "pontos": [
+        "Aumento METADE: hipóteses pessoais, concurso 2 ou mais OU arma.",
+        "Representação no§3º, não copiar exceção da ameaça do 147.",
+        "Integrar razões da condição do sexo feminino ao 121-A atual."
+      ],
+      "atencao": [
+        "Não reativar §2º-A revogado nem declarar revogada toda perseguição por essa remissão. Um ato isolado não prova reiteradamente, ainda que outro crime possa existir. Não presumir perseguição só por desconforto sem elementos."
+      ],
+      "exemplo": "Um contato isolado é usado para afirmar reiteração sem outros atos comprovados. Variação: Com perseguição repetida e elementos legais, examinar tipo e majorantes; ameaça concomitante tem regime próprio, não troca automática de ação.",
+      "prova": [
+        "Um episódio sozinho prova reiteração? Não.",
+        "A remissão residual revoga todo 147-A? Não; exige integração."
+      ],
+      "termos": [
+        {
+          "termo": "Reiteração persecutória",
+          "significado": "Repetição de condutas nas hipóteses de afetação da liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-147-b": {
+      "simples": "Violência psicológica contra mulher exige dano emocional e meios/finalidades descritos, subsidiariamente a crime mais grave. Lei 15.123, vigente 25/4/2025, aumenta metade quando IA ou recurso tecnológico altera imagem/som da vítima.",
+      "pontos": [
+        "Caput:6 meses a 2 anos E multa.",
+        "Aumento não é por qualquer uso de celular: alteração de imagem/som é requisito.",
+        "Dano e elementos devem ser demonstrados."
+      ],
+      "atencao": [
+        "Não diagnosticar crime por qualquer desentendimento ou presumir dano emocional apenas pelo rótulo. Não ampliar majorante a toda tecnologia sem alteração indicada; mudança gravosa não retroage."
+      ],
+      "exemplo": "Recurso de IA altera voz/imagem da vítima em conduta com dano emocional e elementos legais demonstrados. Variação: Se houve mensagem comum sem alteração de imagem/som, não aplicar automaticamente a nova majorante, embora o caput exija análise própria.",
+      "prova": [
+        "Qualquer tecnologia basta à majorante? Não.",
+        "Dispensa elementos de dano/conduta? Não; provar o tipo."
+      ],
+      "termos": [
+        {
+          "termo": "Dano emocional",
+          "significado": "Resultado e afetação previstos, distintos de rótulo genérico de conflito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15123.htm"
+      ]
+    },
+    "art-147-c": {
+      "simples": "A ameaça no contexto/finalidade legais do combate ao crime organizado tem reclusão 1 a 3 anos após Lei 15.358, vigente 25/3/2026. O tipo exige contexto ou finalidade prevista, não apenas pronunciar nome de facção.",
+      "pontos": [
+        "Mal injusto E grave.",
+        "Contexto da atuação OU consecução das condutas legais."
+      ],
+      "atencao": [
+        "Não importar automaticamente penas e condição de ação de todo 147 nem ampliar por analogia a qualquer conflito. Provar elementos e lei no tempo; controle constitucional não foi certificado integralmente."
+      ],
+      "exemplo": "Agente usa nome de facção, mas contexto/finalidade legais não estão demonstrados. Variação: Com elementos típicos e vínculo contextual provados, examinar norma especial e garantias, sem aplicar mudança gravosa a fato anterior.",
+      "prova": [
+        "Nome de facção sozinho resolve? Não.",
+        "Pena nova retroage prejudicialmente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ameaça contextual",
+          "significado": "Hipótese especial dependente do contexto/finalidade legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ]
+    },
+    "art-148": {
+      "simples": "Sequestro/cárcere priva liberdade com pena 1 a 3, qualificações 2 a 5 ou 2 a 8 e hipótese especial de 2026. Duração superior a quinze dias não é requisito de todo caput; é qualificadora indicada.",
+      "pontos": [
+        "§1º: parentesco/idade, internação, MAIS 15 dias, menor 18 ou fim libidinoso.",
+        "§2º: grave sofrimento decorrente de maus-tratos/natureza da detenção.",
+        "§3º:12 a 20, Lei 15.358 vigente 25/3/2026, integrante E contexto/finalidade."
+      ],
+      "atencao": [
+        "Não exigir quinze dias para todo crime nem confundir com extorsão mediante sequestro. Idade e finalidade têm recortes; grupo sozinho não prova §3º, e mudanças gravosas não retroagem."
+      ],
+      "exemplo": "Privação dura exatamente quinze dias: não satisfaz mais de quinze apenas pela duração, mas o caput/outros elementos seguem relevantes. Variação: Se dura dezesseis, a hipótese temporal muda, sem dispensar prova de privação e demais condições.",
+      "prova": [
+        "O caput exige sempre mais 15 dias? Não.",
+        "Exatamente 15 preenche superior 15? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Privação de liberdade",
+          "significado": "Supressão da liberdade física, com modalidades e recortes distintos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ]
+    },
+    "art-149": {
+      "simples": "Condição análoga à de escravo abrange alternativas de trabalho forçado, jornada exaustiva, condições degradantes ou restrição por dívida. Não depende sempre de correntes ou impedimento físico de sair.",
+      "pontos": [
+        "Dois a oito anos E multa, além da violência.",
+        "§1º: transporte, vigilância/documentos com fim de reter.",
+        "§2º: metade por criança/adolescente ou motivo discriminatório indicado."
+      ],
+      "atencao": [
+        "Não equiparar qualquer irregularidade trabalhista automaticamente ao tipo nem exigir restrição locomotora em todas as alternativas. Demonstrar gravidade e elementos; trabalho doméstico não é área imune ao tipo."
+      ],
+      "exemplo": "A acusação descreve condições degradantes típicas, mas o candidato exclui o crime só por não haver correntes. Variação: Mera irregularidade pontual sem elementos do tipo não prova automaticamente escravidão; examinar enquadramento e provas.",
+      "prova": [
+        "Toda hipótese exige correntes? Não.",
+        "Qualquer descumprimento trabalhista basta? Não; provar elementos."
+      ],
+      "termos": [
+        {
+          "termo": "Alternativas típicas",
+          "significado": "Formas distintas de redução, sem requisito único de restrição física."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-149-a": {
+      "simples": "Tráfico de pessoas reúne conduta, meio ilícito e finalidade listados; não exige sempre cruzar fronteira. Pena 4 a 8 e multa, aumento 1/3 até metade e redução 1 a 2 terços na hipótese legal.",
+      "pontos": [
+        "Finalidades: órgãos, trabalho análogo, servidão, adoção ilegal, exploração sexual.",
+        "Primário E não integrar organização para redução.",
+        "Lei 13.344: publicação 7/10/2016, vacância 45 dias; artigos 231/231-A revogados."
+      ],
+      "atencao": [
+        "Não criminalizar toda viagem/acolhimento sem meios e finalidade, nem ensinar transporte internacional como requisito universal. Retirada do território é majorante própria; redução exige condições cumulativas e lei no tempo."
+      ],
+      "exemplo": "Recrutamento mediante fraude para finalidade legal ocorre dentro do país: ausência de fronteira não exclui por si o tipo. Variação: Viagem regular sem meio ilícito e finalidade típica não se torna tráfico apenas por transportar pessoa.",
+      "prova": [
+        "Exige sempre sair do Brasil? Não.",
+        "Primariedade sozinha basta à redução? Não; também não integrar organização."
+      ],
+      "termos": [
+        {
+          "termo": "Tráfico de pessoas",
+          "significado": "Conduta, meio e finalidade típicos, distinta de mero deslocamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm"
+      ]
+    },
+    "art-150": {
+      "simples": "Violação de domicílio protege entrada/permanência nas condições legais e conceito de casa, inclusive compartimento profissional não aberto ao público. Exceções devem ser integradas à Constituição e fundadas razões, não licença por suspeita vaga.",
+      "pontos": [
+        "Caput: um a três meses OU multa; §1º: seis meses a dois anos mais violência.",
+        "§2º revogado pela Lei 13.869; não ensinar agravante histórica como vigente.",
+        "Quarto ocupado em habitação coletiva integra casa; área aberta não equivale a qualquer quarto."
+      ],
+      "atencao": [
+        "CF 5ºXI e Tema 280/STF: ingresso forçado sem mandado exige fundadas razões de flagrante, justificadas depois. Não usar a palavra iminência para legitimar qualquer suspeita futura ou descoberta posterior como justificativa retroativa. Consentimento e outras exceções exigem prova; não certificada toda jurisprudência de busca."
+      ],
+      "exemplo": "Há apenas suspeita genérica e o ingresso é justificado só porque depois se encontrou objeto ilícito. Variação: Com fundadas razões anteriores de flagrante demonstradas, examinar hipótese e controle; mandado judicial tem requisitos próprios, inclusive período diurno.",
+      "prova": [
+        "Qualquer suspeita basta? Não.",
+        "Quarto ocupado de hospedagem perde toda proteção por estar no hotel? Não; o§4º o contempla."
+      ],
+      "termos": [
+        {
+          "termo": "Casa constitucionalmente protegida",
+          "significado": "Espaço de intimidade nas hipóteses legais, com exceções delimitadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-define-limites-para-entrada-da-policia-em-domicilio-sem-autorizacao-judicial/"
+      ]
+    },
+    "art-151": {
+      "simples": "Comunicações têm diferentes hipóteses de violação, divulgação e interrupção. A correspondência postal deve ser integrada ao art.40 da Lei 6.538/1978; rádio/telecomunicações exigem normas posteriores, não aplicação literal universal do CP residual.",
+      "pontos": [
+        "Caput e§1ºI possuem disciplina postal posterior correspondente.",
+        "Lei 9.472, art.183: atividade clandestina de telecomunicações tem regime próprio.",
+        "Representação textual tem exceções em§1ºIV/§3º, a integrar conforme o tipo aplicável."
+      ],
+      "atencao": [
+        "Não ensinar pena do caput do CP como regime completo atual de toda correspondência postal nem rádio sem licença como sempre enquadrado no§1ºIV. Lei especial, finalidade e natureza do serviço importam; não certificada toda derrogação ou jurisprudência. Bloquear exercícios automáticos de literalidade residual."
+      ],
+      "exemplo": "Violação de correspondência fechada é resolvida apenas pela pena antiga do caput, ignorando art.40 da Lei 6.538. Variação: Se o caso é comunicação telefônica ou telecomunicação clandestina, identificar norma própria em vez de copiar a mesma resposta postal.",
+      "prova": [
+        "CP 151 sozinho resolve todo serviço postal atual? Não.",
+        "Correspondência e telecomunicação têm regime necessariamente idêntico? Não; integrar normas especiais."
+      ],
+      "termos": [
+        {
+          "termo": "Integração das comunicações",
+          "significado": "Determinação da norma aplicável conforme objeto/serviço, sem universalizar trecho residual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l6538.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9472.htm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1586 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:35:07.147454+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 26,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-425",
+        "art-426",
+        "art-427",
+        "art-428",
+        "art-429",
+        "art-430",
+        "art-431",
+        "art-432",
+        "art-433",
+        "art-434",
+        "art-435",
+        "art-436",
+        "art-437",
+        "art-438",
+        "art-439",
+        "art-440",
+        "art-441",
+        "art-442",
+        "art-443",
+        "art-444",
+        "art-445",
+        "art-446",
+        "art-447",
+        "art-448",
+        "art-449",
+        "art-450"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-425",
+      "unit_id": "4980aa5d-2e00-514d-bd2c-e3850f10fc49",
+      "content_sha256": "b66221d8bf27cb0feac42f4ebca35b18cfe7d51d6ed98505a2d286ab5b0a46df",
+      "simples": "Lista anual de jurados usa faixas populacionais e pode ser ampliada quando necessário.",
+      "pontos": [
+        "Mais de um milhão: 800–1500.",
+        "Mais de cem mil na faixa intermediária: 300–700.",
+        "Menor população: 80–400.",
+        "Pode haver aumento e lista de suplentes; indicação por núcleos comunitários."
+      ],
+      "atencao": [
+        "Não confundir lista anual com 25 sorteados ou sete no Conselho; texto usa mais de, não igual a, nos cortes populacionais."
+      ],
+      "exemplo": "Comarca de dois milhões organiza lista na faixa de 800 a 1500. Variação: Lista anual não é limitada aos sete julgadores de uma causa.",
+      "prova": [
+        "Lista anual é o Conselho de sete? Não.",
+        "Número pode aumentar onde necessário? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Alistamento anual",
+          "significado": "Formação do conjunto de cidadãos aptos a sorteio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4980aa5d-2e00-514d-bd2c-e3850f10fc49",
+        "content_sha256": "b66221d8bf27cb0feac42f4ebca35b18cfe7d51d6ed98505a2d286ab5b0a46df",
+        "simples": "Anualmente, serão alistados pelo presidente do Tribunal do Júri de 800 a 1.500 jurados nas comarcas de mais de 1.000.000 de habitantes, de 300 a 700 nas comarcas de mais de 100.000 habitantes e de 80 a 400 nas comarcas de menor população. Nas comarcas onde for necessário, poderá ser aumentado o número de jurados e organizada lista de suplentes. O juiz presidente requisitará às autoridades locais, associações, entidades culturais, instituições de ensino, universidades, sindicatos, repartições públicas e outros núcleos comunitários a indicação de pessoas que reúnam as condições para exercer a função de jurado.",
+        "pontos": [
+          "800 a 1.500 jurados em comarcas com mais de 1.000.000 de habitantes.",
+          "300 a 700 em comarcas com mais de 100.000 habitantes.",
+          "80 a 400 nas comarcas menores.",
+          "Possibilidade de aumentar o número e organizar suplentes.",
+          "Indicação de jurados por entidades da comunidade."
+        ],
+        "atencao": [
+          "Faixas conforme a população da comarca."
+        ],
+        "exemplo": "Comarca com menos de 100.000 habitantes alista de 80 a 400 jurados.",
+        "prova": [
+          "Assertiva que fixa o alistamento de 800 a 1.500 jurados para comarcas de menor população erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 426"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-426",
+      "unit_id": "6298099f-1fc7-58b1-b992-b4e9c1b9b0f5",
+      "content_sha256": "512309c7ad82fda4f69a619ebfc92741c7437dff0fffec05284c47261f6aeff2",
+      "simples": "Lista com profissões é publicada até dez de outubro; alteração até dez de novembro, quando se torna definitiva.",
+      "pontos": [
+        "Qualquer pessoa pode reclamar ao presidente no prazo.",
+        "Publicar também arts. 436–446.",
+        "Cartões iguais verificados com MP, OAB e Defensoria; guarda em urna fechada.",
+        "Excluir quem integrou Conselho nos doze meses anteriores à publicação.",
+        "Completar lista a cada ano."
+      ],
+      "atencao": [
+        "Não excluir por simplesmente ter sido convocado: §4º exige ter integrado Conselho."
+      ],
+      "exemplo": "Cidadã que participou do Conselho há seis meses é excluída da lista nas condições do §4º. Variação: Convocada que não integrou Conselho não preenche esse fundamento só pela convocação.",
+      "prova": [
+        "Lista definitiva é publicada em dez de novembro? Sim.",
+        "Mera convocação equivale à participação no Conselho? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Lista geral",
+          "significado": "Registro anual com publicidade, atualização e controles."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6298099f-1fc7-58b1-b992-b4e9c1b9b0f5",
+        "content_sha256": "512309c7ad82fda4f69a619ebfc92741c7437dff0fffec05284c47261f6aeff2",
+        "simples": "A lista geral dos jurados, com indicação das respectivas profissões, será publicada pela imprensa até o dia 10 de outubro de cada ano e divulgada em editais afixados à porta do Tribunal do Júri. A lista poderá ser alterada, de ofício ou mediante reclamação de qualquer do povo ao juiz presidente até o dia 10 de novembro, data de sua publicação definitiva. Juntamente com a lista, serão transcritos os arts. 436 a 446. Os nomes e endereços dos alistados, em cartões iguais, após serem verificados na presença do Ministério Público, de advogado indicado pela OAB e de defensor indicado pelas Defensorias Públicas, permanecerão guardados em urna fechada a chave, sob responsabilidade do juiz presidente. O jurado que tiver integrado o Conselho de Sentença nos 12 meses que antecederem à publicação da lista geral fica dela excluído. Anualmente, a lista geral de jurados será, obrigatoriamente, completada.",
+        "pontos": [
+          "Lista publicada até 10 de outubro.",
+          "Reclamações até 10 de novembro, data da publicação definitiva.",
+          "Transcrição dos arts. 436 a 446.",
+          "Cartões guardados em urna sob responsabilidade do juiz.",
+          "Excluído quem integrou o Conselho de Sentença nos 12 meses anteriores.",
+          "Lista completada anualmente."
+        ],
+        "atencao": [
+          "Datas: 10 de outubro (publicação) e 10 de novembro (definitiva).",
+          "Exclusão de quem serviu nos 12 meses anteriores."
+        ],
+        "exemplo": "Qualquer pessoa pode reclamar contra a lista até 10 de novembro.",
+        "prova": [
+          "Assertiva que fixa em 10 de dezembro a publicação definitiva da lista de jurados erra: é 10 de novembro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 425"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-427",
+      "unit_id": "86dd3dfc-ad96-505c-a5cd-e7bc1c126cf1",
+      "content_sha256": "4b7e369091e614628a4350e2ba6e4cb60b020ccf35f320e20305168baee7323f",
+      "simples": "Tribunal pode desaforar por ordem pública, dúvida de imparcialidade ou segurança do acusado, para comarca adequada da mesma região.",
+      "pontos": [
+        "Pedido: MP, assistente, querelante, acusado; representação do juiz.",
+        "Preferir comarcas próximas sem os motivos.",
+        "Distribuição imediata e preferência; suspensão fundamentada pelo relator se razões relevantes.",
+        "Ouvir presidente salvo se ele solicitou.",
+        "Restrições: recurso de pronúncia pendente ou julgamento realizado; exceção de fato durante/após julgamento anulado."
+      ],
+      "atencao": [
+        "Não transferir por simples conveniência nem tratar pedido como suspensão automática."
+      ],
+      "exemplo": "Ameaça concreta à segurança do acusado fundamenta pedido ao Tribunal. Variação: Relator examina relevância antes de suspender; requerimento sozinho não suspende.",
+      "prova": [
+        "Pedido suspende automaticamente? Não.",
+        "Comarca deve ser da mesma região nas condições do artigo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Desaforamento",
+          "significado": "Transferência excepcional do local do julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "86dd3dfc-ad96-505c-a5cd-e7bc1c126cf1",
+        "content_sha256": "4b7e369091e614628a4350e2ba6e4cb60b020ccf35f320e20305168baee7323f",
+        "simples": "Se o interesse da ordem pública o reclamar ou houver dúvida sobre a imparcialidade do júri ou a segurança pessoal do acusado, o Tribunal, a requerimento do Ministério Público, do assistente, do querelante ou do acusado, ou mediante representação do juiz competente, poderá determinar o desaforamento do julgamento para outra comarca da mesma região, onde não existam aqueles motivos. O pedido será distribuído imediatamente e terá preferência de julgamento. Sendo relevantes os motivos, o relator poderá determinar, fundamentadamente, a suspensão do julgamento pelo júri. Será ouvido o juiz presidente, quando a medida não tiver sido por ele solicitada. Na pendência de recurso contra a pronúncia ou quando efetivado o julgamento, não se admitirá o desaforamento, salvo, nesta última hipótese, quanto a fato ocorrido durante ou após julgamento anulado.",
+        "pontos": [
+          "Motivos: interesse da ordem pública, dúvida sobre a imparcialidade do júri ou sobre a segurança do acusado.",
+          "Competência: o Tribunal, a pedido de MP, assistente, querelante, acusado ou por representação do juiz.",
+          "Desaforamento para comarca da mesma região.",
+          "Preferência de julgamento e possível suspensão do júri.",
+          "Não cabe na pendência de recurso contra a pronúncia nem após o julgamento, salvo fato novo."
+        ],
+        "atencao": [
+          "Quem decide é o TRIBUNAL.",
+          "Mesma região, sem os mesmos motivos."
+        ],
+        "exemplo": "Dúvida sobre a imparcialidade do júri local leva ao desaforamento para outra comarca da mesma região.",
+        "prova": [
+          "Assertiva que atribui ao juiz presidente a decisão sobre o desaforamento erra: decide o Tribunal."
+        ],
+        "termos": [
+          {
+            "termo": "Desaforamento",
+            "significado": "Deslocamento do julgamento do Júri para outra comarca."
+          }
+        ],
+        "remissoes": [
+          "Art. 428"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-428",
+      "unit_id": "902ede5b-6ad8-5059-b68b-32381c0cfa0c",
+      "content_sha256": "8d2d96fe9966263a0424ef13cac5c995b0635187b964c9e0b8230c383cb940a5",
+      "simples": "Excesso de serviço comprovado pode motivar desaforamento se julgamento não puder ocorrer em seis meses da pronúncia transitada.",
+      "pontos": [
+        "Ouvir presidente e parte contrária.",
+        "Descontar adiamentos, diligências e incidentes de interesse da defesa.",
+        "Sem excesso nem fila além da capacidade, acusado pode pedir determinação de julgamento imediato."
+      ],
+      "atencao": [
+        "Não contar sempre seis meses corridos sem as exclusões nem presumir excesso."
+      ],
+      "exemplo": "Fila comprovadamente inviável leva à análise da transferência após prazo pertinente. Variação: Diligência de interesse defensivo não entra automaticamente na contagem do §1º.",
+      "prova": [
+        "Excesso precisa ser comprovado? Sim.",
+        "Tempo de incidente de interesse da defesa entra sempre? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Desaforamento por demora",
+          "significado": "Medida de gestão sujeita a prazo e comprovação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "902ede5b-6ad8-5059-b68b-32381c0cfa0c",
+        "content_sha256": "8d2d96fe9966263a0424ef13cac5c995b0635187b964c9e0b8230c383cb940a5",
+        "simples": "O desaforamento também poderá ser determinado, em razão do comprovado excesso de serviço, ouvidos o juiz presidente e a parte contrária, se o julgamento não puder ser realizado no prazo de 6 meses, contado do trânsito em julgado da decisão de pronúncia. Para a contagem do prazo, não se computará o tempo de adiamentos, diligências ou incidentes de interesse da defesa. Não havendo excesso de serviço ou existência de processos aguardando julgamento em quantidade que ultrapasse a possibilidade de apreciação pelo Tribunal do Júri nas reuniões periódicas, o acusado poderá requerer ao Tribunal que determine a imediata realização do julgamento.",
+        "pontos": [
+          "Desaforamento por excesso de serviço comprovado.",
+          "Prazo de 6 meses contado do trânsito em julgado da pronúncia.",
+          "Não conta o tempo de adiamentos e diligências de interesse da defesa.",
+          "Sem excesso de serviço: acusado pode requerer a imediata realização do julgamento."
+        ],
+        "atencao": [
+          "Prazo de 6 meses."
+        ],
+        "exemplo": "O julgamento não é realizado em 6 meses por excesso comprovado de serviço: cabe desaforamento.",
+        "prova": [
+          "Assertiva que fixa em 1 ano o prazo para o desaforamento por excesso de serviço erra: são 6 meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 427"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-429",
+      "unit_id": "0f4b8aba-5388-5f5b-843c-c114e5d36df2",
+      "content_sha256": "9f28a9d656012a4f6d711f7af54af4f43cde6f66138db4ae581d8a1065e54abe",
+      "simples": "Pauta prefere presos, os presos há mais tempo e, em condições iguais, os pronunciados anteriormente.",
+      "pontos": [
+        "Motivo relevante pode alterar ordem.",
+        "Lista publicada antes do primeiro julgamento da reunião.",
+        "Reservar datas para processos adiados."
+      ],
+      "atencao": [
+        "Preferência não dispensa motivação para exceção nem se resume à data da denúncia."
+      ],
+      "exemplo": "Dois presos em condições pertinentes são ordenados considerando tempo de prisão. Variação: Motivo relevante documentado pode justificar alteração da pauta.",
+      "prova": [
+        "Presos têm preferência inicial? Sim.",
+        "Ordem é absolutamente inalterável? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prioridade de pauta",
+          "significado": "Critérios legais de ordenação dos julgamentos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0f4b8aba-5388-5f5b-843c-c114e5d36df2",
+        "content_sha256": "9f28a9d656012a4f6d711f7af54af4f43cde6f66138db4ae581d8a1065e54abe",
+        "simples": "Salvo motivo relevante que autorize alteração na ordem dos julgamentos, terão preferência os acusados presos; dentre os acusados presos, aqueles que estiverem há mais tempo na prisão; e, em igualdade de condições, os precedentemente pronunciados. Antes do dia designado para o primeiro julgamento da reunião periódica, será afixada na porta do edifício do Tribunal do Júri a lista dos processos a serem julgados. O juiz presidente reservará datas na mesma reunião periódica para a inclusão de processo que tiver o julgamento adiado.",
+        "pontos": [
+          "Preferência: acusados presos.",
+          "Entre os presos, os há mais tempo na prisão.",
+          "Em igualdade, os pronunciados há mais tempo.",
+          "Lista afixada na porta do Tribunal do Júri.",
+          "Datas reservadas para processos adiados."
+        ],
+        "atencao": [
+          "Ordem de preferência: presos, presos há mais tempo, pronunciados há mais tempo."
+        ],
+        "exemplo": "Réu preso há mais tempo é julgado antes dos demais.",
+        "prova": [
+          "Assertiva que dá preferência ao acusado solto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 431"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-430",
+      "unit_id": "2c18500b-249a-5ae1-a621-b78d06de90a4",
+      "content_sha256": "39a2975083d46a094630b81992960e5e1a1c739f0522446baa2c9e293bd7884e",
+      "simples": "Assistente precisa pedir habilitação até cinco dias antes da sessão em que pretende atuar.",
+      "pontos": [
+        "Marco é sessão pretendida.",
+        "Não confundir com prazo do rol do art. 422."
+      ],
+      "atencao": [
+        "Habilitação tardia não se torna tempestiva por já haver interesse no resultado."
+      ],
+      "exemplo": "Ofendido requer habilitação com antecedência legal para atuar como assistente. Variação: Pedido somente no dia da sessão não cumpre o prazo deste artigo.",
+      "prova": [
+        "Antecedência é de cinco dias? Sim.",
+        "Interesse dispensa requerimento no prazo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Habilitação do assistente",
+          "significado": "Ingresso formal para atuação na sessão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2c18500b-249a-5ae1-a621-b78d06de90a4",
+        "content_sha256": "39a2975083d46a094630b81992960e5e1a1c739f0522446baa2c9e293bd7884e",
+        "simples": "O assistente somente será admitido se tiver requerido sua habilitação até 5 dias antes da data da sessão na qual pretenda atuar.",
+        "pontos": [
+          "Assistente deve requerer habilitação até 5 dias antes da sessão em que pretenda atuar."
+        ],
+        "atencao": [
+          "Prazo de 5 dias antes da sessão."
+        ],
+        "exemplo": "A vítima se habilita como assistente 5 dias antes do plenário.",
+        "prova": [
+          "Assertiva que permite a habilitação do assistente no dia do julgamento no plenário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-431",
+      "unit_id": "f932962f-01d9-5fdf-af68-28ad4ee629e0",
+      "content_sha256": "f24f88379d24f6a831312803b3f48acd770f42452868d128b07e3569ad89d1df",
+      "simples": "Processo em ordem exige intimação de partes, vítima se possível, testemunhas e peritos requeridos para plenário.",
+      "pontos": [
+        "Observar art. 420 no que couber.",
+        "Peritos condicionados ao requerimento pertinente."
+      ],
+      "atencao": [
+        "Não confundir estar pautado com ter todos regularmente intimados."
+      ],
+      "exemplo": "Presidente providencia comunicações necessárias antes da sessão. Variação: Laudo nos autos não significa perícia oral agendada sem requerimento.",
+      "prova": [
+        "Pauta substitui todas as intimações? Não.",
+        "Ofendido é intimado se possível? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Convocação para plenário",
+          "significado": "Comunicação dos participantes do julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f932962f-01d9-5fdf-af68-28ad4ee629e0",
+        "content_sha256": "f24f88379d24f6a831312803b3f48acd770f42452868d128b07e3569ad89d1df",
+        "simples": "Estando o processo em ordem, o juiz presidente mandará intimar as partes, o ofendido, se for possível, as testemunhas e os peritos, quando houver requerimento, para a sessão de instrução e julgamento, observando, no que couber, o disposto no art. 420.",
+        "pontos": [
+          "Intimação das partes, do ofendido (se possível), testemunhas e peritos (se requeridos).",
+          "Observa o art. 420 no que couber."
+        ],
+        "atencao": [
+          "Peritos só quando houver requerimento."
+        ],
+        "exemplo": "O juiz presidente intima as partes e testemunhas para a sessão do Júri.",
+        "prova": [
+          "Assertiva que dispensa a intimação das partes para a sessão de julgamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 420"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-432",
+      "unit_id": "2797f6ac-4c7b-5bbd-92e1-7ebe54c61f28",
+      "content_sha256": "d29fc45e2bd462c93158363f0cfd6d8d3ff745a1b5d1be617b3c0f03ecdfca36",
+      "simples": "Depois de organizar pauta, juiz intima MP, OAB e Defensoria para acompanhar sorteio dos jurados.",
+      "pontos": [
+        "Data e hora designadas.",
+        "Acompanhamento institucional do sorteio."
+      ],
+      "atencao": [
+        "Não confundir esta convocação com sorteio dos sete julgadores em plenário."
+      ],
+      "exemplo": "Instituições recebem ciência do sorteio para reunião periódica. Variação: Presença das instituições não transforma todos os sorteados em Conselho do mesmo processo.",
+      "prova": [
+        "Defensoria integra os convocados? Sim.",
+        "É já o sorteio final do Conselho de sete? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Acompanhamento do sorteio",
+          "significado": "Fiscalização institucional da seleção para a reunião."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2797f6ac-4c7b-5bbd-92e1-7ebe54c61f28",
+        "content_sha256": "d29fc45e2bd462c93158363f0cfd6d8d3ff745a1b5d1be617b3c0f03ecdfca36",
+        "simples": "Em seguida à organização da pauta, o juiz presidente determinará a intimação do Ministério Público, da Ordem dos Advogados do Brasil e da Defensoria Pública para acompanharem, em dia e hora designados, o sorteio dos jurados que atuarão na reunião periódica.",
+        "pontos": [
+          "Intimação do MP, da OAB e da Defensoria Pública para acompanhar o sorteio dos jurados."
+        ],
+        "atencao": [
+          "Fiscalização do sorteio por MP, OAB e Defensoria."
+        ],
+        "exemplo": "OAB e Defensoria acompanham o sorteio dos jurados da reunião.",
+        "prova": [
+          "Assertiva que restringe o acompanhamento do sorteio ao Ministério Público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 433"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-433",
+      "unit_id": "bddaaf1f-1870-5f9e-9a1d-4805b9b32ef8",
+      "content_sha256": "b9b95d15d89559cf39348b2bfba5d3ff066c0444010f5c83a441c326724e41fd",
+      "simples": "Sorteio público presidido pelo juiz seleciona vinte e cinco jurados para reunião periódica ou extraordinária.",
+      "pontos": [
+        "Entre décimo quinto e décimo dia útil antes da instalação.",
+        "Ausência das partes não adia sorteio.",
+        "Não sorteado pode voltar a integrar seleção futura."
+      ],
+      "atencao": [
+        "Contar dias úteis e distinguir 25 convocados de sete do Conselho."
+      ],
+      "exemplo": "Juízo sorteia 25 a portas abertas no intervalo legal. Variação: Parte ausente não impede o ato apenas por não comparecer.",
+      "prova": [
+        "Sorteio é a portas abertas? Sim.",
+        "Ausência de parte exige adiamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sorteio da reunião",
+          "significado": "Seleção pública dos cidadãos convocáveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bddaaf1f-1870-5f9e-9a1d-4805b9b32ef8",
+        "content_sha256": "b9b95d15d89559cf39348b2bfba5d3ff066c0444010f5c83a441c326724e41fd",
+        "simples": "O sorteio, presidido pelo juiz, far-se-á a portas abertas, cabendo-lhe retirar as cédulas até completar o número de 25 jurados, para a reunião periódica ou extraordinária. O sorteio será realizado entre o 15º e o 10º dia útil antecedente à instalação da reunião. A audiência de sorteio não será adiada pelo não comparecimento das partes. O jurado não sorteado poderá ter o seu nome novamente incluído para as reuniões futuras.",
+        "pontos": [
+          "Sorteio público, presidido pelo juiz.",
+          "25 jurados por reunião.",
+          "Entre o 15º e o 10º dia útil antes da reunião.",
+          "Não é adiado pela ausência das partes.",
+          "Jurado não sorteado pode ser incluído em reuniões futuras."
+        ],
+        "atencao": [
+          "25 jurados.",
+          "Do 15º ao 10º dia útil antes."
+        ],
+        "exemplo": "O juiz sorteia, a portas abertas, 25 jurados para a reunião.",
+        "prova": [
+          "Assertiva que fixa em 21 o número de jurados sorteados para a reunião erra: são 25."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 432",
+          "Art. 434"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-434",
+      "unit_id": "af3667dc-a9eb-5f21-8537-1d03fd53ecf0",
+      "content_sha256": "bba1cb8304f94f8d0c204adefb5ca5660b7691c7b54a8b259043e824c5edba99",
+      "simples": "Sorteados são convocados por correio ou outro meio hábil, com data, hora e disposições legais.",
+      "pontos": [
+        "Expediente transcreve arts. 436–446.",
+        "Forma deve ser apta à ciência."
+      ],
+      "atencao": [
+        "Convocação não pode ser presumida válida só porque nome consta de lista interna."
+      ],
+      "exemplo": "Jurado recebe comunicação idônea para comparecer. Variação: Mensagem sem dados suficientes demanda verificar regularidade antes de sancionar falta.",
+      "prova": [
+        "Correio é o único meio permitido? Não.",
+        "Convocação deve conter as disposições indicadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Meio hábil",
+          "significado": "Comunicação apta a informar o jurado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "af3667dc-a9eb-5f21-8537-1d03fd53ecf0",
+        "content_sha256": "bba1cb8304f94f8d0c204adefb5ca5660b7691c7b54a8b259043e824c5edba99",
+        "simples": "Os jurados sorteados serão convocados pelo correio ou por qualquer outro meio hábil para comparecer no dia e hora designados para a reunião, sob as penas da lei. No mesmo expediente de convocação serão transcritos os arts. 436 a 446 do Código.",
+        "pontos": [
+          "Convocação por correio ou outro meio hábil.",
+          "Sob as penas da lei.",
+          "Transcrição dos arts. 436 a 446."
+        ],
+        "atencao": [
+          "A convocação traz os deveres e as sanções."
+        ],
+        "exemplo": "Os jurados recebem convocação com a transcrição dos arts. 436 a 446.",
+        "prova": [
+          "Assertiva que dispensa a transcrição dos arts. 436 a 446 na convocação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 433",
+          "Art. 436"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-435",
+      "unit_id": "c9ae666e-e282-5c4f-bfac-78a3f585cef5",
+      "content_sha256": "29bccabe2c7132734a903d76d75fa1f232043f672acb2436b6f51f8e27b1ca44",
+      "simples": "Publicidade da reunião inclui jurados convocados, acusado, procuradores e data, hora e local das sessões.",
+      "pontos": [
+        "Relação afixada no edifício do Tribunal do Júri.",
+        "Distinguir publicidade da pauta e intimação individual."
+      ],
+      "atencao": [
+        "Afixar lista não supre indiscriminadamente toda comunicação exigida nos outros artigos."
+      ],
+      "exemplo": "Quadro oficial informa sessão e participantes indicados. Variação: Não concluir que jurado jamais comunicado faltou injustificadamente só pela lista.",
+      "prova": [
+        "Data, hora e local devem constar? Sim.",
+        "Publicidade substitui sempre intimação individual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Publicidade da sessão",
+          "significado": "Informação oficial sobre convocados e julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c9ae666e-e282-5c4f-bfac-78a3f585cef5",
+        "content_sha256": "29bccabe2c7132734a903d76d75fa1f232043f672acb2436b6f51f8e27b1ca44",
+        "simples": "Serão afixados na porta do edifício do Tribunal do Júri a relação dos jurados convocados, os nomes do acusado e dos procuradores das partes, além do dia, hora e local das sessões de instrução e julgamento.",
+        "pontos": [
+          "Afixação na porta do Tribunal do Júri: jurados convocados, acusado, procuradores, dia, hora e local."
+        ],
+        "atencao": [
+          "Publicidade da pauta e dos jurados convocados."
+        ],
+        "exemplo": "A porta do fórum exibe a lista dos jurados e os dados da sessão.",
+        "prova": [
+          "Assertiva que mantém sigilo da relação dos jurados convocados erra: ela é afixada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 434"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-436",
+      "unit_id": "c070f167-576b-52de-b1b8-9eb17b2c42d5",
+      "content_sha256": "f55b6c147b669c7973c779db0c1542ccde2ba1395483c31149fdd2f33682578c",
+      "simples": "Serviço do júri é obrigatório, com cidadãos maiores de dezoito anos de notória idoneidade e sem discriminação.",
+      "pontos": [
+        "Não excluir por raça, cor, credo, sexo, profissão, classe, origem ou instrução.",
+        "Recusa injustificada: multa de um a dez salários mínimos conforme condição econômica.",
+        "Distinguir recusa injustificada de escusa legal e convicção do art. 438."
+      ],
+      "atencao": [
+        "Não exigir diploma superior ou condição econômica elevada para alistamento."
+      ],
+      "exemplo": "Pessoa idônea sem graduação pode integrar lista, observados requisitos legais. Variação: Falta de diploma não é fundamento de exclusão; isenções próprias devem ser examinadas separadamente.",
+      "prova": [
+        "Graduação é requisito geral? Não.",
+        "Condição econômica influi na multa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Idoneidade e igualdade",
+          "significado": "Aptidão moral sem exclusões discriminatórias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c070f167-576b-52de-b1b8-9eb17b2c42d5",
+        "content_sha256": "f55b6c147b669c7973c779db0c1542ccde2ba1395483c31149fdd2f33682578c",
+        "simples": "O serviço do júri é obrigatório. O alistamento compreenderá os cidadãos maiores de 18 anos de notória idoneidade. Nenhum cidadão poderá ser excluído dos trabalhos do júri ou deixar de ser alistado em razão de cor ou etnia, raça, credo, sexo, profissão, classe social ou econômica, origem ou grau de instrução. A recusa injustificada ao serviço do júri acarretará multa no valor de 1 a 10 salários mínimos, a critério do juiz, de acordo com a condição econômica do jurado.",
+        "pontos": [
+          "Serviço do júri obrigatório.",
+          "Alistamento: maiores de 18 anos de notória idoneidade.",
+          "Vedada a exclusão por cor, etnia, raça, credo, sexo, profissão, classe social, origem ou instrução.",
+          "Recusa injustificada: multa de 1 a 10 salários mínimos."
+        ],
+        "atencao": [
+          "Multa de 1 a 10 salários mínimos.",
+          "Maioridade de 18 anos."
+        ],
+        "exemplo": "Recusa injustificada ao serviço do júri gera multa.",
+        "prova": [
+          "Assertiva que torna facultativo o serviço do júri erra: é obrigatório."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 437"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-437",
+      "unit_id": "3bf14d34-8866-52cf-9b5e-a26d81590b4f",
+      "content_sha256": "1369c08a2d1aac4239f2ce82ca66c7e2ef7c4de8750379b1058e6fc2b1fe1a93",
+      "simples": "Isenções abrangem autoridades e funções enumeradas, militares ativos, maiores de setenta que peçam dispensa e justo impedimento.",
+      "pontos": [
+        "Presidente/Ministros, Governadores/Secretários, parlamentares, prefeitos.",
+        "Magistrados, MP, Defensoria e servidores respectivos; polícia/segurança.",
+        "Militares em serviço ativo.",
+        "Maiores de setenta precisam requerer; justo impedimento deve ser demonstrado."
+      ],
+      "atencao": [
+        "Não ensinar dispensa automática de todo maior de setenta nem estender militar ativo a todo aposentado."
+      ],
+      "exemplo": "Pessoa maior de setenta requer dispensa na hipótese expressa. Variação: Alegação genérica de compromisso exige demonstrar justo impedimento, não isenção presumida.",
+      "prova": [
+        "Maior de setenta deve requerer nessa hipótese? Sim.",
+        "Militar ativo é categoria expressa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Isenção do serviço",
+          "significado": "Hipóteses legais de dispensa da obrigação geral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3bf14d34-8866-52cf-9b5e-a26d81590b4f",
+        "content_sha256": "1369c08a2d1aac4239f2ce82ca66c7e2ef7c4de8750379b1058e6fc2b1fe1a93",
+        "simples": "Estão isentos do serviço do júri o Presidente da República e os Ministros de Estado; os Governadores e seus Secretários; os membros do Congresso Nacional, das Assembleias Legislativas e das Câmaras Distrital e Municipais; os Prefeitos Municipais; os Magistrados e membros do Ministério Público e da Defensoria Pública; os servidores do Judiciário, do Ministério Público e da Defensoria; as autoridades e servidores da polícia e da segurança pública; os militares em serviço ativo; os cidadãos maiores de 70 anos que requeiram sua dispensa; e aqueles que o requererem, demonstrando justo impedimento.",
+        "pontos": [
+          "Isenção de agentes políticos, magistrados, MP, Defensoria, servidores, polícia e militares em serviço ativo.",
+          "Maiores de 70 anos: isenção se requererem.",
+          "Quem demonstrar justo impedimento."
+        ],
+        "atencao": [
+          "Maiores de 70 anos: dispensa a REQUERIMENTO."
+        ],
+        "exemplo": "Cidadão de 72 anos requer a dispensa do serviço do júri.",
+        "prova": [
+          "Assertiva que isenta automaticamente os maiores de 70 anos, sem requerimento, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 436"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-438",
+      "unit_id": "4c4aedca-0e9a-5f68-b0ff-18188cd96cc7",
+      "content_sha256": "cd941243312895d9e8b2d5a8a531ba56dbca46bf07e4c8d4eeba4b96877e9bfe",
+      "simples": "Recusa por convicção religiosa, filosófica ou política gera dever de serviço alternativo proporcional.",
+      "pontos": [
+        "Atividades administrativas, assistenciais, filantrópicas ou produtivas nos órgãos/entidades indicados.",
+        "Juiz fixa com razoabilidade e proporcionalidade.",
+        "Não prestar serviço imposto tem consequência sobre direitos políticos prevista."
+      ],
+      "atencao": [
+        "Convicção não deve ser tratada como simples recusa injustificada sem analisar prestação alternativa."
+      ],
+      "exemplo": "Cidadão invoca convicção e recebe atividade alternativa adequada. Variação: Cumprir serviço alternativo distingue-se de recusar também a obrigação substitutiva.",
+      "prova": [
+        "Convicção elimina toda obrigação? Não.",
+        "Serviço precisa ser proporcional? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Escusa de consciência",
+          "significado": "Substituição da obrigação nos termos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4c4aedca-0e9a-5f68-b0ff-18188cd96cc7",
+        "content_sha256": "cd941243312895d9e8b2d5a8a531ba56dbca46bf07e4c8d4eeba4b96877e9bfe",
+        "simples": "A recusa ao serviço do júri fundada em convicção religiosa, filosófica ou política importará no dever de prestar serviço alternativo, sob pena de suspensão dos direitos políticos, enquanto não prestar o serviço imposto. Entende-se por serviço alternativo o exercício de atividades de caráter administrativo, assistencial, filantrópico ou mesmo produtivo, no Poder Judiciário, na Defensoria Pública, no Ministério Público ou em entidade conveniada. O juiz fixará o serviço alternativo atendendo aos princípios da proporcionalidade e da razoabilidade.",
+        "pontos": [
+          "Escusa de consciência: serviço alternativo.",
+          "Sob pena de suspensão dos direitos políticos.",
+          "Serviço alternativo: atividades administrativas, assistenciais, filantrópicas ou produtivas.",
+          "Fixação com proporcionalidade e razoabilidade."
+        ],
+        "atencao": [
+          "Escusa de consciência gera serviço alternativo."
+        ],
+        "exemplo": "Jurado que recusa por convicção religiosa presta serviço alternativo definido pelo juiz.",
+        "prova": [
+          "Assertiva que isenta totalmente quem recusa por convicção religiosa erra: deve prestar serviço alternativo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 436"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-439",
+      "unit_id": "6f693163-a951-5cc3-9b07-11fde2668be6",
+      "content_sha256": "8b8e93f0cdacfc97d06c861ae90f57509f1adb23dba0fb6ea8477aee48b0ed3e",
+      "simples": "Exercício efetivo como jurado é serviço público relevante e estabelece presunção de idoneidade moral.",
+      "pontos": [
+        "Redação atual decorre de Lei 12.403/2011.",
+        "Não recuperar antigo privilégio de prisão especial.",
+        "Exercício efetivo difere de mero alistamento."
+      ],
+      "atencao": [
+        "Não apresentar função como imunidade penal ou vantagem carcerária geral."
+      ],
+      "exemplo": "Certidão de efetivo exercício demonstra serviço público relevante. Variação: Constar da lista sem exercer função não equivale automaticamente à condição exigida.",
+      "prova": [
+        "Artigo atual concede imunidade penal? Não.",
+        "Exercício precisa ser efetivo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Serviço público relevante",
+          "significado": "Reconhecimento do exercício real da função."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6f693163-a951-5cc3-9b07-11fde2668be6",
+        "content_sha256": "8b8e93f0cdacfc97d06c861ae90f57509f1adb23dba0fb6ea8477aee48b0ed3e",
+        "simples": "O exercício efetivo da função de jurado constituirá serviço público relevante e estabelecerá presunção de idoneidade moral.",
+        "pontos": [
+          "Serviço público relevante.",
+          "Presunção de idoneidade moral."
+        ],
+        "atencao": [
+          "Exercício EFETIVO da função."
+        ],
+        "exemplo": "O jurado que efetivamente atuou goza de presunção de idoneidade moral.",
+        "prova": [
+          "Assertiva que concede presunção de idoneidade a quem apenas foi alistado erra: exige exercício efetivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 440"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-440",
+      "unit_id": "d1741ddc-55b0-5569-a0b5-40f7847ef242",
+      "content_sha256": "2d55ee3cb036921fcbb0cc4589ba35ca515d46af292747b8a79c13c27bb8bb57",
+      "simples": "Jurado em efetivo exercício tem preferência em igualdade de condições nas hipóteses enumeradas.",
+      "pontos": [
+        "Licitações; concurso para cargo/função pública; promoção ou remoção voluntária.",
+        "Exigir igualdade de condições e aplicação do regime pertinente."
+      ],
+      "atencao": [
+        "Não transformar desempate em aprovação garantida, pontos automáticos ou dispensa de requisitos."
+      ],
+      "exemplo": "Candidatos em igualdade pertinente têm critério de preferência analisado. Variação: Nota inferior não se torna superior por ter sido jurado.",
+      "prova": [
+        "Preferência dispensa igualdade de condições? Não.",
+        "Garante aprovação sem requisitos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Preferência legal",
+          "significado": "Vantagem condicionada à igualdade nas hipóteses previstas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d1741ddc-55b0-5569-a0b5-40f7847ef242",
+        "content_sha256": "2d55ee3cb036921fcbb0cc4589ba35ca515d46af292747b8a79c13c27bb8bb57",
+        "simples": "Constitui também direito do jurado, na condição do art. 439, preferência, em igualdade de condições, nas licitações públicas e no provimento, mediante concurso, de cargo ou função pública, bem como nos casos de promoção funcional ou remoção voluntária.",
+        "pontos": [
+          "Preferência, em igualdade de condições, em licitações públicas.",
+          "Preferência em provimento por concurso, promoção funcional ou remoção voluntária."
+        ],
+        "atencao": [
+          "Preferência apenas em igualdade de condições."
+        ],
+        "exemplo": "Em empate num concurso, o candidato que foi jurado tem preferência.",
+        "prova": [
+          "Assertiva que dá ao jurado preferência independentemente de igualdade de condições erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 439"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-441",
+      "unit_id": "6d7c9df1-9598-5b12-86a8-3fb6948f21f7",
+      "content_sha256": "d6a9209adda2ce341d8091bfd6c777c681decaa38fe62490d9e4008f1f7aa324",
+      "simples": "Sorteado que comparece à sessão não sofre desconto de vencimentos ou salário por essa participação.",
+      "pontos": [
+        "Comparecimento é condição do texto.",
+        "Documentar participação para providências trabalhistas."
+      ],
+      "atencao": [
+        "Não estender automaticamente proteção a falta injustificada ou período estranho ao ato."
+      ],
+      "exemplo": "Empregado comprova comparecimento e salário não é descontado pela sessão. Variação: Ausência sem comparecer exige análise diversa, não declaração fictícia de exercício.",
+      "prova": [
+        "Comparecimento é relevante? Sim.",
+        "Toda ausência ganha proteção automática? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção remuneratória",
+          "significado": "Preservação da remuneração pela participação regular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6d7c9df1-9598-5b12-86a8-3fb6948f21f7",
+        "content_sha256": "d6a9209adda2ce341d8091bfd6c777c681decaa38fe62490d9e4008f1f7aa324",
+        "simples": "Nenhum desconto será feito nos vencimentos ou salário do jurado sorteado que comparecer à sessão do júri.",
+        "pontos": [
+          "Sem desconto nos vencimentos ou salário do jurado que comparecer à sessão."
+        ],
+        "atencao": [
+          "Estende-se às testemunhas a serviço do Júri (art. 459)."
+        ],
+        "exemplo": "O empregador não pode descontar o dia de trabalho do jurado que compareceu.",
+        "prova": [
+          "Assertiva que permite o desconto do dia do jurado no salário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 459"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-442",
+      "unit_id": "01093733-2ae0-5be3-85a3-f92323112a6f",
+      "content_sha256": "afc984b7b3f897dc3db1a84f2f560501ee6cd5a7c83081fd70d508346d24b557",
+      "simples": "Falta sem causa legítima ou saída antes da dispensa leva a multa de um a dez salários mínimos segundo condição econômica.",
+      "pontos": [
+        "Duas condutas: não comparecer e sair antes da liberação.",
+        "Examinar causa legítima."
+      ],
+      "atencao": [
+        "Não aplicar multa automática sem analisar motivo ou regularidade da convocação."
+      ],
+      "exemplo": "Jurado sai sem dispensa e sem causa legítima: examina-se sanção. Variação: Emergência comprovada demanda avaliação antes de tratar ausência como injustificada.",
+      "prova": [
+        "Saída antes da dispensa pode ser sancionada? Sim.",
+        "Motivo legítimo deve ser examinado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Falta ao serviço",
+          "significado": "Ausência ou abandono sem causa legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "01093733-2ae0-5be3-85a3-f92323112a6f",
+        "content_sha256": "afc984b7b3f897dc3db1a84f2f560501ee6cd5a7c83081fd70d508346d24b557",
+        "simples": "Ao jurado que, sem causa legítima, deixar de comparecer no dia marcado para a sessão ou retirar-se antes de ser dispensado pelo presidente será aplicada multa de 1 a 10 salários mínimos, a critério do juiz, de acordo com a sua condição econômica.",
+        "pontos": [
+          "Falta sem causa legítima ou saída antes da dispensa.",
+          "Multa de 1 a 10 salários mínimos, conforme a condição econômica."
+        ],
+        "atencao": [
+          "Mesma faixa de multa do art. 436, §2º."
+        ],
+        "exemplo": "O jurado se retira antes da dispensa e sofre multa.",
+        "prova": [
+          "Assertiva que fixa a multa em até 100 salários mínimos para o jurado faltoso erra: é de 1 a 10."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 436",
+          "Art. 443"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-443",
+      "unit_id": "544909b3-7c14-532c-8354-8c9260d36b1c",
+      "content_sha256": "2403836f4a9fe934cb91c6686378282c10a9cb6030cf427cfa39834d3f59d9f7",
+      "simples": "Escusa deve ter motivo relevante comprovado e ser apresentada até chamada, ressalvada força maior.",
+      "pontos": [
+        "Comprovação exigida.",
+        "Exceção temporal para força maior."
+      ],
+      "atencao": [
+        "Não recusar toda justificativa posterior sem verificar força maior nem aceitar alegação vazia como prova."
+      ],
+      "exemplo": "Jurado comprova impedimento antes da chamada. Variação: Emergência inevitável posterior exige exame da ressalva legal.",
+      "prova": [
+        "Motivo precisa ser comprovado? Sim.",
+        "Força maior admite ressalva ao marco temporal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Escusa comprovada",
+          "significado": "Justificação relevante da impossibilidade de servir."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "544909b3-7c14-532c-8354-8c9260d36b1c",
+        "content_sha256": "2403836f4a9fe934cb91c6686378282c10a9cb6030cf427cfa39834d3f59d9f7",
+        "simples": "Somente será aceita escusa fundada em motivo relevante devidamente comprovado e apresentada, ressalvadas as hipóteses de força maior, até o momento da chamada dos jurados.",
+        "pontos": [
+          "Escusa: motivo relevante, comprovado.",
+          "Apresentada até a chamada dos jurados, salvo força maior."
+        ],
+        "atencao": [
+          "Prazo: até a chamada dos jurados."
+        ],
+        "exemplo": "O jurado apresenta o atestado médico antes da chamada.",
+        "prova": [
+          "Assertiva que aceita escusa apresentada depois do julgamento, sem força maior, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 444"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-444",
+      "unit_id": "88192ba9-2c50-5682-956a-7c486673951d",
+      "content_sha256": "851c7b6027941bde1655fd755ecd87472c06be12a0d8a56bfef4f53d89700988",
+      "simples": "Dispensa do jurado depende de decisão motivada do presidente, registrada na ata.",
+      "pontos": [
+        "Não basta autorização informal sem documentação.",
+        "Examinar fundamento e registrar."
+      ],
+      "atencao": [
+        "Pedido de dispensa não equivale a decisão concedendo-a."
+      ],
+      "exemplo": "Juiz acolhe motivo comprovado e consigna dispensa na ata. Variação: Jurado não deve presumir liberação apenas porque protocolou pedido.",
+      "prova": [
+        "Dispensa deve estar na ata? Sim.",
+        "Pedido sozinho é dispensa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dispensa formal",
+          "significado": "Decisão documentada e fundamentada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "88192ba9-2c50-5682-956a-7c486673951d",
+        "content_sha256": "851c7b6027941bde1655fd755ecd87472c06be12a0d8a56bfef4f53d89700988",
+        "simples": "O jurado somente será dispensado por decisão motivada do juiz presidente, consignada na ata dos trabalhos.",
+        "pontos": [
+          "Dispensa por decisão motivada do juiz presidente.",
+          "Consignada na ata."
+        ],
+        "atencao": [
+          "Dispensa não é automática."
+        ],
+        "exemplo": "O juiz presidente dispensa o jurado por decisão motivada, registrada em ata.",
+        "prova": [
+          "Assertiva que permite ao próprio jurado dispensar-se erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 443"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-445",
+      "unit_id": "7a86758c-e7ca-5933-a2e8-e38f199a0174",
+      "content_sha256": "94cf0969f18cda49b12257a49f3ec0aa0ea4dbd150bd7e7542cc7eec8cfb8d57",
+      "simples": "Jurado responde criminalmente, no exercício ou a pretexto da função, nos termos aplicáveis ao juiz togado.",
+      "pontos": [
+        "Responsabilidade exige enquadramento e prova.",
+        "Não confundir equiparação penal com todos os direitos funcionais de magistrado."
+      ],
+      "atencao": [
+        "Votar pela absolvição ou condenação não constitui crime por simples discordância externa com veredito."
+      ],
+      "exemplo": "Recebimento ilícito ligado à função exige apuração penal própria. Variação: Resultado impopular não prova sozinho conduta criminosa do jurado.",
+      "prova": [
+        "Equiparação elimina necessidade de provar crime? Não.",
+        "Abrange conduta a pretexto da função? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade funcional penal",
+          "significado": "Tratamento criminal da atuação relacionada à função."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7a86758c-e7ca-5933-a2e8-e38f199a0174",
+        "content_sha256": "94cf0969f18cda49b12257a49f3ec0aa0ea4dbd150bd7e7542cc7eec8cfb8d57",
+        "simples": "O jurado, no exercício da função ou a pretexto de exercê-la, será responsável criminalmente nos mesmos termos em que o são os juízes togados.",
+        "pontos": [
+          "Jurado tem responsabilidade criminal equiparada à dos juízes togados."
+        ],
+        "atencao": [
+          "Equiparação para fins de responsabilidade penal."
+        ],
+        "exemplo": "O jurado que recebe vantagem para votar responde como um juiz.",
+        "prova": [
+          "Assertiva que isenta o jurado de responsabilidade criminal pelo voto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 446"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-446",
+      "unit_id": "293dfccf-2792-5725-84b4-9a0c4d5815d0",
+      "content_sha256": "6fee665dd1eb41d1b22678b9839ab35635589afbb26743e8b3a89bd6d42e0c8d",
+      "simples": "Suplente convocado segue regras de dispensas, faltas, escusas e responsabilidade penal previstas.",
+      "pontos": [
+        "Convocação é a condição expressa.",
+        "Não presumir ausência injustificada de suplente jamais convocado."
+      ],
+      "atencao": [
+        "Ser suplente na lista não equivale a receber toda convocação concreta."
+      ],
+      "exemplo": "Suplente convocado deve comparecer ou justificar regularmente. Variação: Suplente não convocado não é sancionado como faltoso só pela lista.",
+      "prova": [
+        "Convocado segue regras de escusa? Sim.",
+        "Lista sozinha prova convocação concreta? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suplente convocado",
+          "significado": "Substituto sujeito aos deveres pertinentes quando chamado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "293dfccf-2792-5725-84b4-9a0c4d5815d0",
+        "content_sha256": "6fee665dd1eb41d1b22678b9839ab35635589afbb26743e8b3a89bd6d42e0c8d",
+        "simples": "Aos suplentes, quando convocados, serão aplicáveis os dispositivos referentes às dispensas, faltas e escusas e à equiparação de responsabilidade penal prevista no art. 445.",
+        "pontos": [
+          "Suplentes convocados seguem as regras de dispensa, falta e escusa.",
+          "Responsabilidade penal equiparada à dos juízes."
+        ],
+        "atencao": [
+          "Aplica-se quando convocados."
+        ],
+        "exemplo": "O suplente convocado que falta sem causa legítima também sofre multa.",
+        "prova": [
+          "Assertiva que isenta o suplente convocado das regras de falta e escusa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 445"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-447",
+      "unit_id": "be3ecb2f-2e3e-5fc9-b350-6135f4a81325",
+      "content_sha256": "204f09dfc8770c7cab7543ec4a139a7e2d8139a8296ba3c25fd8824b70a0157a",
+      "simples": "Tribunal do Júri reúne presidente togado e vinte e cinco jurados sorteados; sete compõem Conselho em cada julgamento.",
+      "pontos": [
+        "25 para composição convocada; sete julgadores da causa.",
+        "Juiz presidente não é um dos sete jurados."
+      ],
+      "atencao": [
+        "Não confundir 25 convocados com quórum de instalação de quinze do art. 463."
+      ],
+      "exemplo": "Dentre jurados aptos presentes sorteiam-se sete para julgar a causa. Variação: Presidente dirige atos, mas não preenche um lugar do Conselho.",
+      "prova": [
+        "Conselho possui sete jurados? Sim.",
+        "Presidente integra esses sete? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Conselho de Sentença",
+          "significado": "Grupo de sete jurados que delibera no julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "be3ecb2f-2e3e-5fc9-b350-6135f4a81325",
+        "content_sha256": "204f09dfc8770c7cab7543ec4a139a7e2d8139a8296ba3c25fd8824b70a0157a",
+        "simples": "O Tribunal do Júri é composto por 1 juiz togado, seu presidente, e por 25 jurados que serão sorteados dentre os alistados, 7 dos quais constituirão o Conselho de Sentença em cada sessão de julgamento.",
+        "pontos": [
+          "1 juiz togado como presidente.",
+          "25 jurados sorteados.",
+          "7 compõem o Conselho de Sentença."
+        ],
+        "atencao": [
+          "25 sorteados; 7 julgam."
+        ],
+        "exemplo": "Dos 25 jurados sorteados, 7 compõem o Conselho de Sentença.",
+        "prova": [
+          "Assertiva que fixa em 21 o número de jurados sorteados erra: são 25."
+        ],
+        "termos": [
+          {
+            "termo": "Conselho de Sentença",
+            "significado": "Os 7 jurados que julgam o caso."
+          }
+        ],
+        "remissoes": [
+          "Art. 433",
+          "Art. 467"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-448",
+      "unit_id": "e6fda7d6-d8ea-5d51-929b-208c2a31ff82",
+      "content_sha256": "3e6267c26a5f35b3624ba9c26ebc7574a2aabe510512017308ece65aac0e1a0f",
+      "simples": "Relações familiares e convivência enumeradas impedem servir juntos no mesmo Conselho; jurados também seguem impedimentos e suspeições de juízes.",
+      "pontos": [
+        "Casal/união estável, ascendente-descendente, sogro-genro/nora.",
+        "Irmãos/cunhados durante cunhadio, tio-sobrinho, padrasto/madrasta-enteado.",
+        "Aplicar demais incompatibilidades e suspeições pertinentes."
+      ],
+      "atencao": [
+        "Não reduzir regra somente a casamento formal nem tratar todo parentesco remoto como inciso expresso."
+      ],
+      "exemplo": "Companheiros em união estável reconhecida não servem juntos no Conselho. Variação: Pessoa com relação não enumerada exige examinar eventual outro fundamento, sem inventar inciso.",
+      "prova": [
+        "União estável é abrangida? Sim.",
+        "Aplicam-se suspeições dos togados? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Impedimento conjunto",
+          "significado": "Incompatibilidade de servir juntos por vínculo legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e6fda7d6-d8ea-5d51-929b-208c2a31ff82",
+        "content_sha256": "3e6267c26a5f35b3624ba9c26ebc7574a2aabe510512017308ece65aac0e1a0f",
+        "simples": "São impedidos de servir no mesmo Conselho: marido e mulher; ascendente e descendente; sogro e genro ou nora; irmãos e cunhados, durante o cunhadio; tio e sobrinho; e padrasto, madrasta ou enteado. O mesmo impedimento ocorre em relação às pessoas que mantenham união estável reconhecida como entidade familiar. Aplica-se aos jurados o disposto sobre os impedimentos, a suspeição e as incompatibilidades dos juízes togados.",
+        "pontos": [
+          "Impedidos no mesmo Conselho: cônjuges, ascendente e descendente, sogro e genro ou nora, irmãos e cunhados, tio e sobrinho, padrasto, madrasta ou enteado.",
+          "União estável equipara-se.",
+          "Impedimentos e suspeição dos juízes aplicam-se aos jurados."
+        ],
+        "atencao": [
+          "Inclui companheiros em união estável."
+        ],
+        "exemplo": "Marido e mulher não podem compor o mesmo Conselho de Sentença.",
+        "prova": [
+          "Assertiva que exclui companheiros em união estável do impedimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 449",
+          "Art. 252"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-449",
+      "unit_id": "dbe88abf-c430-53bc-af1c-8856c07cb0ec",
+      "content_sha256": "52977ac2b5a61eccf19c686adeaed490c6d03587b0c4fbd7e5a72473f2c76d28",
+      "simples": "Não serve quem julgou antes o mesmo processo, julgou corréu no concurso de pessoas ou manifestou predisposição de condenar/absolver.",
+      "pontos": [
+        "Julgamento anterior impede independentemente da causa do novo.",
+        "Predisposição exige atenção à imparcialidade."
+      ],
+      "atencao": [
+        "Não chamar novamente jurado do julgamento anulado só porque mudaram outros integrantes."
+      ],
+      "exemplo": "Jurado que participou do primeiro julgamento não integra novo Conselho do mesmo processo. Variação: Manifestação antecipada de absolvição também impede, não só condenação.",
+      "prova": [
+        "Predisposição absolutória pode impedir? Sim.",
+        "Anulação permite reutilizar automaticamente mesmo jurado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Imparcialidade do jurado",
+          "significado": "Ausência das experiências e predisposições impeditivas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dbe88abf-c430-53bc-af1c-8856c07cb0ec",
+        "content_sha256": "52977ac2b5a61eccf19c686adeaed490c6d03587b0c4fbd7e5a72473f2c76d28",
+        "simples": "Não poderá servir o jurado que tiver funcionado em julgamento anterior do mesmo processo, independentemente da causa determinante do julgamento posterior; que, no caso de concurso de pessoas, houver integrado o Conselho de Sentença que julgou o outro acusado; ou que tiver manifestado prévia disposição para condenar ou absolver o acusado.",
+        "pontos": [
+          "I: já funcionou em julgamento anterior do mesmo processo.",
+          "II: integrou o Conselho que julgou o corréu.",
+          "III: manifestou prévia disposição para condenar ou absolver."
+        ],
+        "atencao": [
+          "Três hipóteses de incompatibilidade."
+        ],
+        "exemplo": "Quem julgou o corréu em sessão anterior não integra o Conselho que julgará o outro.",
+        "prova": [
+          "Assertiva que permite ao jurado de julgamento anterior do mesmo processo atuar no novo julgamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 448"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-450",
+      "unit_id": "158d83f1-4723-5ac1-b08b-c5ad58b5da2c",
+      "content_sha256": "4179076076e51920192852dcd01e1f7c8b7f735f90ca8f1342708c7bc4478786",
+      "simples": "Entre jurados mutuamente impedidos por parentesco/convivência, serve quem foi sorteado primeiro.",
+      "pontos": [
+        "Resolver impedimento entre os dois.",
+        "Não dispensar outros requisitos de aptidão."
+      ],
+      "atencao": [
+        "Sorteio primeiro não cura impedimento próprio contra o processo ou predisposição pessoal."
+      ],
+      "exemplo": "Dois irmãos são sorteados: prevalece o primeiro, se apto. Variação: Primeiro também impedido por julgar antes a causa não se torna apto pelo art. 450.",
+      "prova": [
+        "Primeiro sorteado prevalece entre parentes aptos? Sim.",
+        "Isso elimina todo outro impedimento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Precedência no sorteio",
+          "significado": "Critério para resolver incompatibilidade recíproca."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "158d83f1-4723-5ac1-b08b-c5ad58b5da2c",
+        "content_sha256": "4179076076e51920192852dcd01e1f7c8b7f735f90ca8f1342708c7bc4478786",
+        "simples": "Dos impedidos entre si por parentesco ou relação de convivência, servirá o que houver sido sorteado em primeiro lugar.",
+        "pontos": [
+          "Entre jurados impedidos entre si, serve o sorteado primeiro."
+        ],
+        "atencao": [
+          "Critério do primeiro sorteado."
+        ],
+        "exemplo": "Dois irmãos são sorteados, e apenas o sorteado primeiro integra o Conselho.",
+        "prova": [
+          "Assertiva que permite a ambos atuar no Conselho erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 448"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    }
+  ]
+}

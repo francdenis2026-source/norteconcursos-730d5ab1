@@ -55,8 +55,10 @@ import {
   type TimerState,
 } from "@/lib/studyTimer";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 type Search = {
+  edital?: string | undefined;
   subject?: string | undefined;
   topic?: string | undefined;
   kind?: string | undefined;
@@ -71,6 +73,7 @@ const pick = (v: unknown) =>
 
 export const Route = createFileRoute("/dashboard/study-room")({
   validateSearch: (s: Record<string, unknown>): Search => ({
+    edital: pick(s["edital"]),
     subject: pick(s["subject"]),
     topic: pick(s["topic"]),
     kind: pick(s["kind"]),
@@ -248,21 +251,21 @@ function TimerPanel({
 
         <ol className="flex gap-1" aria-label="Fases do bloco">
           {segments.map((s, i) => (
-            <li
-              key={i}
-              title={`${s.type === "focus" ? "Foco" : "Pausa"} ${s.ms / 60_000} min`}
-              className={cn(
-                "h-1.5 rounded-full",
-                i < state.seg || state.finished
-                  ? s.type === "focus"
-                    ? "bg-primary"
-                    : "bg-emerald-500"
-                  : i === state.seg
-                    ? "bg-primary/60"
-                    : "bg-muted",
-              )}
-              style={{ flexGrow: s.ms }}
-            />
+            <Hint key={i} content={`${s.type === "focus" ? "Foco" : "Pausa"} ${s.ms / 60_000} min`}>
+              <li
+                className={cn(
+                  "h-1.5 rounded-full",
+                  i < state.seg || state.finished
+                    ? s.type === "focus"
+                      ? "bg-primary"
+                      : "bg-emerald-500"
+                    : i === state.seg
+                      ? "bg-primary/60"
+                      : "bg-muted",
+                )}
+                style={{ flexGrow: s.ms }}
+              />
+            </Hint>
           ))}
         </ol>
 
@@ -434,21 +437,29 @@ function StudyRoomPage() {
       <div className="mx-auto max-w-xl space-y-4 py-10 text-center">
         <p className="text-lg font-bold">Escolha um assunto no seu cronograma.</p>
         <Button asChild>
-          <Link to="/dashboard/study-coach">Abrir o Assistente de estudos</Link>
+          <Link to="/dashboard/study-coach">Abrir a Estratégia de estudos</Link>
         </Button>
       </div>
     );
   }
 
-  const questionSearch = { area: subject, go: "1", ...(topic ? { topic } : {}) };
+  const questionSearch = sp.edital
+    ? { syllabus: sp.edital, go: "1" }
+    : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
     <div className="mx-auto max-w-6xl space-y-5">
-      <div>
+      <div className="workspace-banner workspace-banner--study-room">
         <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
-          <Link to="/dashboard/study-coach">
-            <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
-          </Link>
+          {sp.edital ? (
+            <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
+              <ArrowLeft className="h-4 w-4" /> Voltar ao assunto do edital
+            </Link>
+          ) : (
+            <Link to="/dashboard/study-coach">
+              <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
+            </Link>
+          )}
         </Button>
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline">{sp.kind ?? "Estudo"}</Badge>
@@ -825,7 +836,7 @@ function StudyRoomPage() {
                 to="/dashboard/library"
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
-                <Library className="h-4 w-4 text-violet-600" /> Biblioteca completa
+                <Library className="h-4 w-4 text-amber-600" /> Biblioteca completa
               </Link>
             </CardContent>
           </Card>

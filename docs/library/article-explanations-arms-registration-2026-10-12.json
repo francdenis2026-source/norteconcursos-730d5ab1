@@ -1,0 +1,860 @@
+{
+  "version": "2026-10-12-armas-registration-targeted",
+  "checked_at": "2026-10-12T17:11:07.776945+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "armas",
+      "title": "Lei 10.826/2003 — Estatuto do Desarmamento",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 41,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-7-a",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-11-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "source_sha256": "31c397ac2b5ec75c49ee6f587d3fac364e2a22577b19d954990d26cd1a49ba62",
+      "source_checked_at": "2026-10-12T16:18:16.577539+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "146bdd25-19b2-55de-bbe7-a25042b6110f",
+      "content_sha256": "b7ce08bef038f7ea289cd5a5e72d8c83648df9879a17bd436944008d71276242",
+      "simples": "O Sinarm é o Sistema Nacional de Armas, instituído no Ministério da Justiça, no âmbito da Polícia Federal, com circunscrição nacional.",
+      "pontos": [
+        "Órgão/sistema: Sinarm no âmbito da PF.",
+        "Circunscrição: todo o território nacional, não somente a sede administrativa."
+      ],
+      "atencao": [
+        "Não confundir Sinarm com Sigma, sistema militar, nem cadastro de arma com autorização pessoal de porte."
+      ],
+      "exemplo": "Registro sob o Sinarm integra sistema de alcance nacional. Variação: armamento de acervo militar próprio demanda observar sistema e competência específicos, não presumir que todo cadastro seja idêntico.",
+      "prova": [
+        "O Sinarm possui circunscrição apenas no DF? Não; é nacional.",
+        "Sinarm e Sigma são o mesmo sistema? Não; possuem organização e competências próprias."
+      ],
+      "termos": [
+        "Sinarm",
+        "Polícia Federal",
+        "território nacional"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "146bdd25-19b2-55de-bbe7-a25042b6110f",
+        "content_sha256": "b7ce08bef038f7ea289cd5a5e72d8c83648df9879a17bd436944008d71276242",
+        "simples": "O Sistema Nacional de Armas (Sinarm), instituído no Ministério da Justiça, no âmbito da Polícia Federal, tem circunscrição em todo o território nacional.",
+        "pontos": [
+          "Sinarm: instituído no Ministério da Justiça, no âmbito da Polícia Federal.",
+          "Circunscrição em todo o território nacional."
+        ],
+        "atencao": [
+          "O Sinarm é vinculado à POLÍCIA FEDERAL; o Exército tem o Sigma (armas de uso restrito)."
+        ],
+        "exemplo": "O cadastro de uma pistola de uso permitido é feito no Sinarm, da Polícia Federal.",
+        "prova": [
+          "Assertiva que vincula o Sinarm ao Comando do Exército erra: ele atua no âmbito da Polícia Federal."
+        ],
+        "termos": [
+          {
+            "termo": "Sinarm",
+            "significado": "Sistema Nacional de Armas."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º",
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "b931c732-4560-5fb7-b54a-d3d6c06d44e8",
+      "content_sha256": "6956adff0a13952579e0e8091a7bdc65b5944da05d1fa1a89d9540806f39d39d",
+      "simples": "O Sinarm cadastra armas e suas características, proprietários, produção/importação/venda, portes e renovações da PF, transferências e ocorrências, modificações, apreensões, armeiros e agentes comerciais. Integra acervos policiais, registra identificação balística e informa os órgãos estaduais/DF.",
+      "pontos": [
+        "Extravio, furto, roubo e fechamento de empresa podem exigir atualização do cadastro.",
+        "Identificação balística envolve cano, raiamento e microestriamento com marcação e testes do fabricante.",
+        "Armeiro precisa de cadastro e licença; cadastro comercial compreende produtores, atacadistas, varejistas, importadores e exportadores.",
+        "Exceção: armas das Forças Armadas e Auxiliares e demais de registros próprios."
+      ],
+      "atencao": [
+        "Cadastro não elimina atribuições militares específicas nem concede porte pelo simples registro."
+      ],
+      "exemplo": "Venda de arma e posterior furto exigem registros de eventos diferentes no sistema. Variação: arma de acervo próprio das Forças Armadas deve respeitar a exceção do parágrafo único.",
+      "prova": [
+        "Apreensão vinculada a processo também deve integrar cadastro? Sim; é competência prevista no inciso VII.",
+        "Cadastrar propriedade equivale a autorizar porte irrestrito? Não; são providências diferentes."
+      ],
+      "termos": [
+        "cadastro",
+        "identificação balística",
+        "registros próprios"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b931c732-4560-5fb7-b54a-d3d6c06d44e8",
+        "content_sha256": "6956adff0a13952579e0e8091a7bdc65b5944da05d1fa1a89d9540806f39d39d",
+        "simples": "Ao Sinarm compete identificar as características e a propriedade de armas de fogo, mediante cadastro; cadastrar as armas produzidas, importadas e vendidas no País; cadastrar as autorizações de porte e as renovações expedidas pela Polícia Federal; cadastrar as transferências de propriedade, extravio, furto, roubo e outras ocorrências; identificar as modificações que alterem as características ou o funcionamento; integrar no cadastro os acervos policiais; cadastrar as apreensões; cadastrar os armeiros e conceder licença para a atividade; cadastrar mediante registro produtores, atacadistas, varejistas, exportadores e importadores autorizados; cadastrar a identificação do cano e as características das impressões de raiamento e microestriamento do projétil; entre outras competências.",
+        "pontos": [
+          "Cadastro das armas produzidas, importadas e vendidas.",
+          "Cadastro das autorizações de porte e renovações.",
+          "Cadastro de ocorrências: transferência, extravio, furto, roubo, apreensões.",
+          "Licença e cadastro de armeiros.",
+          "Registro de produtores, comerciantes, exportadores e importadores.",
+          "Cadastro do cano e das características balísticas."
+        ],
+        "atencao": [
+          "O Sinarm CADASTRA e identifica; a concessão do porte é da Polícia Federal."
+        ],
+        "exemplo": "A apreensão de uma arma em operação policial é cadastrada no Sinarm.",
+        "prova": [
+          "Assertiva que atribui ao Sinarm a produção e a venda das armas erra: ele as cadastra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "f308b64c-f472-524c-9d74-c9c42ba34ffc",
+      "content_sha256": "54de582dcd3cc1a854fea98ec1c1ed44e9278846d3aa4f78c6d7adc0cc5f4a2b",
+      "simples": "É obrigatório registrar arma de fogo no órgão competente. O parágrafo único remete o registro de armas de uso restrito ao Comando do Exército, na forma do regulamento; a aplicação deve considerar acervo, categoria e competências atuais.",
+      "pontos": [
+        "Registro é obrigatório; classificar o acervo e o uso antes de definir procedimento.",
+        "Não confundir autorização de compra, certificado de registro e porte."
+      ],
+      "atencao": [
+        "Mudança administrativa de 2025: Decreto 12.345/2024 e IN DG/PF 311/2025, alterada pela 322/2025, integram o regime atual de CACs na PF. Não usar a remissão literal para afirmar que todo procedimento civil atual de CAC continua exclusivamente no Exército.",
+        "A transferência de funções não elimina os registros militares próprios nem dispensa licença ou cadastro."
+      ],
+      "exemplo": "Adquirente precisa registrar a arma no regime competente. Variação: CAC busca um serviço atual de registro; conferir Sinarm-CAC e regras de transição, em vez de usar somente o artigo antigo como mapa administrativo.",
+      "prova": [
+        "Registro é facultativo porque a arma ficou em casa? Não; o caput estabelece obrigatoriedade.",
+        "A transferência de serviços de CAC torna dispensável o registro? Não; altera o regime administrativo aplicável, não a obrigação."
+      ],
+      "termos": [
+        "registro obrigatório",
+        "órgão competente",
+        "uso restrito"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12345.htm"
+      ],
+      "expected": {
+        "unit_id": "f308b64c-f472-524c-9d74-c9c42ba34ffc",
+        "content_sha256": "54de582dcd3cc1a854fea98ec1c1ed44e9278846d3aa4f78c6d7adc0cc5f4a2b",
+        "simples": "É obrigatório o registro de arma de fogo no órgão competente. As armas de fogo de uso restrito serão registradas no Comando do Exército, na forma do regulamento da Lei.",
+        "pontos": [
+          "Registro obrigatório.",
+          "Uso permitido: Polícia Federal (Sinarm).",
+          "Uso restrito: Comando do Exército."
+        ],
+        "atencao": [
+          "Registro de arma de USO RESTRITO: Comando do Exército."
+        ],
+        "exemplo": "Um fuzil de uso restrito é registrado no Comando do Exército.",
+        "prova": [
+          "Assertiva que atribui à Polícia Federal o registro das armas de uso restrito erra: é do Comando do Exército."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "e05480c5-ca55-511e-af08-245a3b7c078b",
+      "content_sha256": "84b76ea5622f0e52a92b5313ff94cf14c4b9496dfcdb5ad89605db7eb6cefc4a",
+      "simples": "Aquisição de arma de uso permitido exige efetiva necessidade, idoneidade, ocupação lícita, residência certa, capacidade técnica e aptidão psicológica, com exceções expressas. A autorização de compra é nominal, para a arma indicada e intransferível.",
+      "pontos": [
+        "Idoneidade: certidões das Justiças Federal, Estadual, Militar e Eleitoral e não responder a inquérito/processo, conforme o texto e o regime aplicável.",
+        "Munição: calibre da arma registrada e quantidade do regulamento; não compra irrestrita.",
+        "Comerciante comunica venda, mantém documentos e cadastro; mercadorias permanecem registradas como suas até a venda.",
+        "Venda entre particulares depende de autorização do Sinarm; decidir compra em trinta dias úteis, com fundamentação em caso de recusa.",
+        "Registro precário comercial dispensa requisitos I–III; comprador já autorizado a portar arma de mesmas características pode ter dispensa do inciso III nos termos regulamentares."
+      ],
+      "atencao": [
+        "Efetiva necessidade não é mera presunção geral criada pela alegação de interesse. STF, controle dos decretos de flexibilização, exige demonstração concreta.",
+        "Trinta dias são úteis, e a autorização de compra não é porte. Não estender exceção específica a qualquer interessado."
+      ],
+      "exemplo": "Interessado demonstra necessidade e preenche requisitos para arma determinada: recebe autorização pessoal de compra. Variação: tenta repassá-la a amigo; a autorização é intransferível, e a transação entre particulares exige procedimento próprio.",
+      "prova": [
+        "A autorização de compra pode ser transferida ao amigo? Não; é nominal e intransferível.",
+        "O prazo do §6º é de trinta dias corridos? Não; são trinta dias úteis."
+      ],
+      "termos": [
+        "efetiva necessidade",
+        "intransferível",
+        "trinta dias úteis"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=5&abrirBase=CF"
+      ],
+      "expected": {
+        "unit_id": "e05480c5-ca55-511e-af08-245a3b7c078b",
+        "content_sha256": "84b76ea5622f0e52a92b5313ff94cf14c4b9496dfcdb5ad89605db7eb6cefc4a",
+        "simples": "Para adquirir arma de fogo de uso permitido, o interessado deverá, além de declarar a efetiva necessidade, comprovar idoneidade, com certidões negativas de antecedentes criminais das Justiças Federal, Estadual, Militar e Eleitoral e de não estar respondendo a inquérito policial ou processo criminal; apresentar documento comprobatório de ocupação lícita e de residência certa; e comprovar capacidade técnica e aptidão psicológica para o manuseio de arma de fogo. O Sinarm expedirá autorização de compra em nome do requerente e para a arma indicada, intransferível. A aquisição de munição só poderá ser feita no calibre correspondente à arma registrada e na quantidade estabelecida no regulamento. A empresa que comercializar arma de fogo é obrigada a comunicar a venda à autoridade competente.",
+        "pontos": [
+          "Declaração de efetiva necessidade.",
+          "Idoneidade: certidões negativas e inexistência de inquérito ou processo.",
+          "Ocupação lícita e residência certa.",
+          "Capacidade técnica e aptidão psicológica.",
+          "Autorização de compra intransferível.",
+          "Munição: calibre da arma registrada e quantidade regulamentar."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação do inciso I dada pela Lei nº 11.706, de 2008; o texto remete a ADIs sobre a aquisição de munição (ADI 6466 e ADI 6139).",
+          "A efetiva necessidade e os requisitos são cumulativos."
+        ],
+        "exemplo": "Quem responde a processo criminal não preenche o requisito de idoneidade para comprar arma.",
+        "prova": [
+          "Assertiva que dispensa a aptidão psicológica para adquirir arma de fogo de uso permitido erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º",
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "032dc830-a7ac-5ec6-ba64-8250b04fbf82",
+      "content_sha256": "23fb00195da48685012c8698d6f6205c489ab0e88e3363a36ccc1259e6ec67ce",
+      "simples": "Certificado de registro permite manter a arma na residência/domicílio e dependências ou no local de trabalho, quando o proprietário é titular ou responsável legal do estabelecimento. É expedido pela PF após autorização do Sinarm. No imóvel rural, residência abrange toda sua extensão.",
+      "pontos": [
+        "Registro possui validade territorial nacional, mas os lugares autorizados de manutenção são delimitados.",
+        "Recomprovação periódica dos requisitos do art. 4º: período não inferior a três anos, com renovação conforme o regulamento vigente.",
+        "§§3º/4º registram regras de transição de registros estaduais/DF anteriores, prazo de 2008 e certificado provisório; não são reabertura permanente."
+      ],
+      "atencao": [
+        "Validade nacional do registro não significa porte nacional. Empregado comum não recebe a condição de titular/responsável do estabelecimento só por trabalhar nele.",
+        "Não fixar validade de todo certificado em três anos com base somente no mínimo estatutário; categoria e regulamento importam.",
+        "Alteração da Lei 13.870/2019 ampliou a referência da residência rural à extensão do imóvel, sem autorizar transporte irrestrito fora dele."
+      ],
+      "exemplo": "Proprietário mantém arma registrada em sua residência; o certificado não o autoriza a caminhar armado na rua. Variação: residente rural pode mantê-la no imóvel conforme a extensão legal, sem converter isso em porte fora da propriedade.",
+      "prova": [
+        "Registro válido nacionalmente equivale a porte nacional? Não; a autorização de manutenção tem limites de local.",
+        "Qualquer empregado se equipara ao responsável legal da empresa? Não; o artigo exige titularidade ou responsabilidade legal."
+      ],
+      "termos": [
+        "exclusivamente",
+        "titular ou responsável legal",
+        "imóvel rural"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "032dc830-a7ac-5ec6-ba64-8250b04fbf82",
+        "content_sha256": "23fb00195da48685012c8698d6f6205c489ab0e88e3363a36ccc1259e6ec67ce",
+        "simples": "O certificado de Registro de Arma de Fogo, com validade em todo o território nacional, autoriza o proprietário a manter a arma de fogo exclusivamente no interior de sua residência ou domicílio, ou dependência desses, ou no seu local de trabalho, desde que seja ele o titular ou o responsável legal pelo estabelecimento ou empresa. O certificado será expedido pela Polícia Federal e precedido de autorização do Sinarm. Os requisitos dos incisos I, II e III do art. 4º devem ser comprovados periodicamente, em período não inferior a 3 anos, para a renovação do certificado. O proprietário de arma com registro estadual anterior que não optasse pela entrega espontânea deveria renová-lo no registro federal até o dia 31 de dezembro de 2008.",
+        "pontos": [
+          "Registro autoriza manter a arma NA RESIDÊNCIA ou no local de trabalho (titular ou responsável).",
+          "Expedido pela Polícia Federal, após autorização do Sinarm.",
+          "Renovação com comprovação periódica dos requisitos, em período não inferior a 3 anos.",
+          "Registro estadual antigo: renovação federal até 31 de dezembro de 2008."
+        ],
+        "atencao": [
+          "O REGISTRO não autoriza portar a arma fora de casa; isso exige o PORTE.",
+          "Renovação: não inferior a 3 anos."
+        ],
+        "exemplo": "O dono de arma registrada pode guardá-la em casa, mas não levá-la na rua sem porte.",
+        "prova": [
+          "Assertiva que permite ao titular do registro portar a arma em vias públicas erra: o registro autoriza mantê-la na residência ou no local de trabalho."
+        ],
+        "termos": [
+          {
+            "termo": "Posse",
+            "significado": "Manter a arma em casa ou no local de trabalho, com registro."
+          }
+        ],
+        "remissoes": [
+          "Art. 6º",
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "cde20122-2023-5571-87f3-895bf699901e",
+      "content_sha256": "5664de31ed5fcbc10dc694710bf8f1d6fe82c8c7c9732baa3471f3da30f5a6f4",
+      "simples": "A regra geral proíbe porte no território nacional, com exceções de legislação própria e categorias previstas no artigo. Cada hipótese tem alcance e requisitos próprios; não se concede porte a qualquer servidor ou a todo integrante de entidade pelo simples vínculo.",
+      "pontos": [
+        "Categorias incluem Forças Armadas, órgãos policiais/FNSP, guardas municipais, ABIN/GSI, polícias legislativas, agentes/guardas prisionais e escoltas/guardas portuárias, segurança privada, desporto, auditores e segurança do Judiciário/MP.",
+        "Porte fora de serviço é disciplinado nos parágrafos; para agentes/guardas prisionais do quadro efetivo, o §1º-B exige dedicação exclusiva, formação e controle interno.",
+        "Guardas municipais: formação funcional e fiscalização/controle interno continuam necessários.",
+        "Caçador de subsistência: residente rural maior de 25, necessidade alimentar familiar comprovada e arma delimitada no §5º; uso diverso pode configurar outro crime."
+      ],
+      "atencao": [
+        "ADI 5538/5948 e ADC 38/STF, 2021: restrição por população municipal foi afastada. Não restabelecer cortes de 50 mil/500 mil ou tratar tamanho da cidade como impedimento geral.",
+        "Lei 15.306/2025 ampliou o inciso VI às polícias legislativas estaduais/DF; consultar a redação nova e as condições aplicáveis.",
+        "Nem toda função de segurança é policial/prisional. A lista não confere automaticamente porte a qualquer agente socioeducativo por analogia."
+      ],
+      "exemplo": "Guarda de município pequeno requer porte: população não pode ser o impedimento afastado pelo STF, mas formação e controle devem ser cumpridos. Variação: servidor de função não listada não adquire automaticamente a mesma autorização só pela semelhança do cargo.",
+      "prova": [
+        "Município abaixo de 50 mil torna automaticamente impossível o porte da guarda? Não; o STF afastou a restrição populacional.",
+        "Qualquer servidor público tem porte por ocupar cargo? Não; verificar categoria e requisitos específicos."
+      ],
+      "termos": [
+        "salvo",
+        "fora de serviço",
+        "formação funcional",
+        "fiscalização e controle"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=461415",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15306.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao"
+      ],
+      "expected": {
+        "unit_id": "cde20122-2023-5571-87f3-895bf699901e",
+        "content_sha256": "5664de31ed5fcbc10dc694710bf8f1d6fe82c8c7c9732baa3471f3da30f5a6f4",
+        "simples": "É proibido o porte de arma de fogo em todo o território nacional, salvo para os casos previstos em legislação própria e para os integrantes das Forças Armadas; dos órgãos referidos nos incisos I a V do art. 144 da Constituição e da Força Nacional de Segurança Pública; das guardas municipais, nas condições do regulamento; dos agentes operacionais da ABIN e do Departamento de Segurança do GSI; das polícias legislativas; dos agentes e guardas prisionais, das escoltas de presos e das guardas portuárias; das empresas de segurança privada e de transporte de valores; das entidades de desporto cujas atividades demandem armas de fogo; das carreiras de Auditoria da Receita Federal e de Auditoria-Fiscal do Trabalho; e dos tribunais e Ministérios Públicos, para servidores que exerçam funções de segurança. Integrantes de certas categorias podem portar mesmo fora de serviço. A autorização para guardas municipais depende de formação funcional, fiscalização e controle interno. Residentes em áreas rurais, maiores de 25 anos, que dependam da arma para subsistência alimentar, podem obter o porte na categoria caçador para subsistência. Guardas municipais de Municípios integrantes de regiões metropolitanas têm porte quando em serviço.",
+        "pontos": [
+          "Regra: porte PROIBIDO.",
+          "Exceções: Forças Armadas, órgãos de segurança do art. 144, Força Nacional, ABIN e GSI, polícias legislativas, agentes prisionais, escoltas, guardas portuárias, empresas de segurança privada, entidades desportivas, Receita e auditores do trabalho, tribunais e MPs (segurança).",
+          "Guardas municipais: nas condições do regulamento, com formação e fiscalização.",
+          "Caçador para subsistência: rural, maior de 25 anos, arma de uso permitido, tiro simples.",
+          "Uso fora de serviço para integrantes de certas categorias."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso VI com redação da Lei nº 15.306, de 2025 (polícias legislativas); partes do dispositivo foram declaradas inconstitucionais pelo STF (ADI 5538) quanto às guardas municipais.",
+          "Porte é EXCEÇÃO à proibição geral.",
+          "O caçador para subsistência que der outro uso à arma responde por porte ilegal ou disparo."
+        ],
+        "exemplo": "O policial civil pode portar arma fora de serviço, nos termos do regulamento.",
+        "prova": [
+          "Assertiva que torna o porte de arma regra geral para qualquer cidadão com registro erra: o porte é proibido, salvo exceções legais."
+        ],
+        "termos": [
+          {
+            "termo": "Caçador para subsistência",
+            "significado": "Categoria de porte para quem depende da arma para o sustento familiar na zona rural."
+          }
+        ],
+        "remissoes": [
+          "Art. 10",
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "adc8357a-87ce-5132-b6b0-270d9ab8e3fd",
+      "content_sha256": "25c8434e7c77081d2d432487eb4f2b66c70b152880170cb996971ac7cd05ab6b",
+      "simples": "Armas usadas na segurança privada pertencem às empresas responsáveis, com guarda e responsabilidade delas, e só podem ser usadas em serviço. Registro e autorização de porte são expedidos pela PF em nome da empresa. O texto atual inclui prestadores, empresas e condomínios com serviço orgânico, conforme Lei 14.967/2024.",
+      "pontos": [
+        "Empregados devem comprovar requisitos do art. 4º; listagem atualizada semestralmente no Sinarm.",
+        "Perda/furto/roubo/extravio: responsável registra ocorrência e comunica à PF nas primeiras 24 horas, sob responsabilidade penal do art. 13, parágrafo único, além de sanções civis/administrativas.",
+        "Condições de uso e armazenagem são estabelecidas pelo órgão competente."
+      ],
+      "atencao": [
+        "Porte empresarial não é porte pessoal irrestrito do vigilante fora do serviço. Mudança de 2024 deve substituir referências que limitavam o regime apenas à formulação antiga."
+      ],
+      "exemplo": "Vigilante usa arma da empresa durante serviço e cumpre condições de guarda. Variação: pretende levá-la para uso particular na folga; a autorização empresarial não dá esse direito.",
+      "prova": [
+        "A arma do regime empresarial passa a pertencer ao empregado? Não; propriedade, responsabilidade e guarda são da empresa.",
+        "A lista de empregados é atualizada anualmente? Não; a lei exige atualização semestral."
+      ],
+      "termos": [
+        "quando em serviço",
+        "nome da empresa",
+        "24 horas",
+        "semestralmente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm"
+      ],
+      "expected": {
+        "unit_id": "adc8357a-87ce-5132-b6b0-270d9ab8e3fd",
+        "content_sha256": "25c8434e7c77081d2d432487eb4f2b66c70b152880170cb996971ac7cd05ab6b",
+        "simples": "As armas de fogo utilizadas pelos profissionais de segurança privada dos prestadores de serviços e das empresas e condomínios com serviços orgânicos de segurança privada serão de propriedade, responsabilidade e guarda das respectivas empresas, somente podendo ser utilizadas quando em serviço, observadas as condições de uso e armazenagem estabelecidas pelo órgão competente, sendo o certificado de registro e a autorização de porte expedidos pela Polícia Federal em nome da empresa. O proprietário ou diretor responsável de empresa de segurança privada e de transporte de valores responderá pelo crime do parágrafo único do art. 13, sem prejuízo das demais sanções, se deixar de registrar ocorrência e comunicar à Polícia Federal perda, furto, roubo ou outra forma de extravio de armas, acessórios e munições sob sua guarda nas primeiras 24 horas depois de ocorrido o fato.",
+        "pontos": [
+          "Armas da segurança privada pertencem às empresas e só são usadas em serviço.",
+          "Registro e porte em nome da empresa, expedidos pela Polícia Federal.",
+          "Comunicar perda, furto ou roubo à PF e à polícia em 24 horas, sob pena do art. 13, parágrafo único."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação do caput dada pela Lei nº 14.967, de 2024 (Estatuto da Segurança Privada).",
+          "Prazo de 24 horas para comunicar extravio."
+        ],
+        "exemplo": "A empresa de vigilância comunica à PF, em 24 horas, o roubo de uma arma sob sua guarda.",
+        "prova": [
+          "Assertiva que atribui ao vigilante a propriedade da arma usada em serviço erra: é da empresa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7-a",
+      "unit_id": "41a90db0-fea3-54f5-96ae-34c8290e6b40",
+      "content_sha256": "7560a43729699940064e3d2692aa1b8b36ca8978012c28d283695455ca861db6",
+      "simples": "Armas da segurança do Judiciário e MP pertencem às instituições e só são usadas em serviço, com registro e autorização da PF em nome institucional, sem taxa de porte. Designação, requisitos, formação e controles internos seguem a lei e regulamentação pertinente.",
+      "pontos": [
+        "Listagem dos servidores atualizada semestralmente no Sinarm.",
+        "Extravio: ocorrência policial e comunicação à PF nas primeiras 24 horas.",
+        "O antigo teto de 50% do §2º não deve ser ensinado como limitação atual."
+      ],
+      "atencao": [
+        "ADI 5157/STF, julgamento encerrado em dezembro/2024: declarou inconstitucional a expressão que limita a 50% dos servidores de segurança. Afastar o teto não dispensa designação, formação e outros requisitos.",
+        "Não converter porte institucional em autorização automática de uso pessoal fora de serviço."
+      ],
+      "exemplo": "Instituição designa servidores de segurança aptos e cumpre requisitos; não pode usar o antigo teto de 50% como regra vigente. Variação: um servidor sem formação não se habilita apenas porque o teto foi afastado.",
+      "prova": [
+        "O teto literal de 50% pode ser memorizado sem a decisão do STF? Não; a ADI 5157 afastou a expressão limitadora.",
+        "A decisão elimina formação e controle interno? Não; requisitos próprios permanecem."
+      ],
+      "termos": [
+        "quando em serviço",
+        "ADI 5157",
+        "semestralmente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4624175",
+        "https://www.gov.br/previdencia/pt-br/assuntos/rpps/julgamentos/adi-5157-seguranca-publica-e-limitacao-de-porte-de-armas"
+      ],
+      "expected": {
+        "unit_id": "41a90db0-fea3-54f5-96ae-34c8290e6b40",
+        "content_sha256": "7560a43729699940064e3d2692aa1b8b36ca8978012c28d283695455ca861db6",
+        "simples": "As armas de fogo utilizadas pelos servidores dos tribunais e Ministérios Públicos (instituições do inciso XI do art. 6º) serão de propriedade, responsabilidade e guarda das respectivas instituições, somente podendo ser utilizadas quando em serviço, sendo o certificado de registro e a autorização de porte expedidos pela Polícia Federal em nome da instituição. A autorização independe de pagamento de taxa. O presidente do tribunal ou o chefe do Ministério Público designará os servidores com funções de segurança que poderão portar arma, respeitado o limite máximo de 50% dos servidores que exerçam essas funções. O porte fica condicionado à comprovação dos requisitos do art. 4º, à formação funcional em estabelecimentos de ensino policial e à existência de mecanismos de fiscalização e controle interno.",
+        "pontos": [
+          "Armas pertencem às instituições e só são usadas em serviço.",
+          "Porte em nome da instituição, sem taxa.",
+          "Limite de 50% dos servidores que exerçam funções de segurança.",
+          "Condições: requisitos do art. 4º, formação policial e controle interno."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.694, de 2012; há questionamento no STF (ADI 5157).",
+          "Limite de 50% dos servidores de segurança."
+        ],
+        "exemplo": "O tribunal designa parte dos seus agentes de segurança para portar arma, respeitado o teto de 50%.",
+        "prova": [
+          "Assertiva que permite o porte de arma a todos os servidores de segurança do tribunal erra: há teto de 50%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º, XI"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "8c928ec4-cc71-515c-8d8c-244543cb72ca",
+      "content_sha256": "9a632df46cb36e804498fd9f59863ac984a2d44ad7f40557e566d765a3d29169",
+      "simples": "Armas das entidades desportivas constituídas legalmente devem cumprir condições de uso e armazenagem do órgão competente. O possuidor ou autorizado a portar é responsável pela guarda, na forma do regulamento.",
+      "pontos": [
+        "Constituição legal da entidade não elimina requisitos de armazenamento.",
+        "Responsabilidade pela guarda é do possuidor ou autorizado, conforme a atividade."
+      ],
+      "atencao": [
+        "Prática esportiva não equivale a porte de defesa pessoal irrestrito. Integrar regulamento atual e normas da PF para a categoria."
+      ],
+      "exemplo": "Entidade mantém armas em local de armazenagem conforme as regras. Variação: associado pretende usá-las fora das condições autorizadas; sua filiação esportiva não substitui a autorização pertinente.",
+      "prova": [
+        "Filiação esportiva dispensa condições de guarda? Não; o artigo exige observância do regime competente.",
+        "Prática desportiva confere automaticamente porte de defesa pessoal? Não; finalidades e autorizações são distintas."
+      ],
+      "termos": [
+        "uso e armazenagem",
+        "guarda"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "8c928ec4-cc71-515c-8d8c-244543cb72ca",
+        "content_sha256": "9a632df46cb36e804498fd9f59863ac984a2d44ad7f40557e566d765a3d29169",
+        "simples": "As armas de fogo utilizadas em entidades desportivas legalmente constituídas devem obedecer às condições de uso e de armazenagem estabelecidas pelo órgão competente, respondendo o possuidor ou o autorizado a portar a arma pela sua guarda, na forma do regulamento.",
+        "pontos": [
+          "Armas das entidades desportivas seguem as condições de uso e armazenagem do órgão competente.",
+          "O possuidor ou autorizado responde pela guarda."
+        ],
+        "atencao": [
+          "Responsabilidade pela GUARDA recai sobre o possuidor ou autorizado."
+        ],
+        "exemplo": "O clube de tiro guarda as armas conforme as normas do órgão competente.",
+        "prova": [
+          "Assertiva que isenta o possuidor da responsabilidade pela guarda da arma da entidade desportiva erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º, IX"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "6bebe369-b44b-52c4-9568-c31de5356709",
+      "content_sha256": "d26620f81ef5f0714c4a20b610f995d3e50cb5dc44bcc928868575dc08aedf42",
+      "simples": "O artigo atribui ao Ministério da Justiça autorização de porte para segurança de estrangeiros em visita ou sediados no Brasil. Conserva também remissão ao Exército para registro e porte de trânsito de CACs e representantes estrangeiros em competição oficial; sua aplicação deve integrar o regime administrativo atual.",
+      "pontos": [
+        "Porte de trânsito possui finalidade delimitada e não é porte pessoal genérico.",
+        "Categoria, finalidade e canal competente devem ser identificados."
+      ],
+      "atencao": [
+        "Decreto 12.345/2024, IN DG/PF 311/2025 e sua alteração 322/2025 integram o regime de CACs na PF. A Portaria 19.040/2025 estabeleceu cronograma de serviços. Não ensinar exclusividade administrativa do Exército só pela redação residual.",
+        "A existência da transição não elimina competências militares remanescentes ou autorização específica para estrangeiros."
+      ],
+      "exemplo": "CAC busca serviço atual relativo ao seu acervo: conferir canal e regime da PF aplicáveis. Variação: segurança de visitante estrangeiro exige autorização própria, não se confunde com trânsito esportivo.",
+      "prova": [
+        "Porte de trânsito autoriza genericamente defesa pessoal em qualquer circunstância? Não; respeitar finalidade e condições próprias.",
+        "A redação do art. 9º dispensa consulta à regulamentação atual dos CACs? Não; as mudanças administrativas devem ser consideradas."
+      ],
+      "termos": [
+        "porte de trânsito",
+        "estrangeiros",
+        "regulamento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12345.htm"
+      ],
+      "expected": {
+        "unit_id": "6bebe369-b44b-52c4-9568-c31de5356709",
+        "content_sha256": "d26620f81ef5f0714c4a20b610f995d3e50cb5dc44bcc928868575dc08aedf42",
+        "simples": "Compete ao Ministério da Justiça a autorização do porte de arma para os responsáveis pela segurança de cidadãos estrangeiros em visita ou sediados no Brasil e, ao Comando do Exército, nos termos do regulamento, o registro e a concessão de porte de trânsito de arma de fogo para colecionadores, atiradores e caçadores e de representantes estrangeiros em competição internacional oficial de tiro realizada no território nacional.",
+        "pontos": [
+          "Ministério da Justiça: porte para quem faz a segurança de estrangeiros.",
+          "Comando do Exército: registro e porte de trânsito para colecionadores, atiradores e caçadores (CAC) e competidores estrangeiros."
+        ],
+        "atencao": [
+          "Os CAC têm registro e porte de TRÂNSITO concedidos pelo EXÉRCITO."
+        ],
+        "exemplo": "O atirador desportivo obtém porte de trânsito no Comando do Exército.",
+        "prova": [
+          "Assertiva que atribui à Polícia Federal o registro dos colecionadores, atiradores e caçadores erra: é do Comando do Exército."
+        ],
+        "termos": [
+          {
+            "termo": "CAC",
+            "significado": "Colecionadores, atiradores desportivos e caçadores."
+          }
+        ],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "e5baee51-0c3d-57bd-b641-ce3b951449ee",
+      "content_sha256": "c62d2dc9f433b6d858bc007a52fd9841b6820f228bcbeffccd7905d2215022ae",
+      "simples": "Porte civil de arma de uso permitido é autorizado pela PF após autorização do Sinarm. Pode ter limites temporais e territoriais e exige necessidade por atividade profissional de risco ou ameaça, requisitos do art. 4º, propriedade e registro da arma.",
+      "pontos": [
+        "Necessidade precisa ser demonstrada; registro e propriedade são exigências adicionais.",
+        "Alcance territorial e duração podem ser limitados conforme regulamentação.",
+        "Autorização perde automaticamente eficácia se o portador for detido ou abordado embriagado ou sob efeito de substâncias químicas/alucinógenas."
+      ],
+      "atencao": [
+        "Não confundir possibilidade de porte nacional com ausência de limites em toda autorização concreta. Efetiva necessidade não se presume por simples vontade pessoal.",
+        "Não tratar perda de eficácia por embriaguez como consequência que exige necessariamente um disparo ou acidente."
+      ],
+      "exemplo": "Requerente demonstra ameaça e requisitos; PF avalia autorização com limites pertinentes. Variação: portador é abordado embriagado sem disparar; a perda de eficácia do §2º não depende de disparo.",
+      "prova": [
+        "Registro sozinho garante o porte civil? Não; atender às exigências específicas do artigo.",
+        "A perda de eficácia por embriaguez exige acidente? Não; o §2º contempla detenção ou abordagem no estado descrito."
+      ],
+      "termos": [
+        "efetiva necessidade",
+        "limitação temporária e territorial",
+        "perderá automaticamente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "e5baee51-0c3d-57bd-b641-ce3b951449ee",
+        "content_sha256": "c62d2dc9f433b6d858bc007a52fd9841b6820f228bcbeffccd7905d2215022ae",
+        "simples": "A autorização para o porte de arma de fogo de uso permitido, em todo o território nacional, é de competência da Polícia Federal e somente será concedida após autorização do Sinarm. Poderá ser concedida com eficácia temporária e territorial limitada, nos termos de atos regulamentares, e dependerá de o requerente demonstrar a sua efetiva necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física; atender às exigências do art. 4º; e apresentar documentação de propriedade da arma, bem como seu registro. A autorização perderá automaticamente sua eficácia caso o portador seja detido ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.",
+        "pontos": [
+          "Porte de arma de uso permitido: competência da Polícia Federal, após autorização do Sinarm.",
+          "Eficácia temporária e territorial limitada.",
+          "Requisitos: efetiva necessidade (atividade profissional de risco ou ameaça), requisitos do art. 4º, documentação e registro.",
+          "Perde a eficácia se o portador estiver embriagado ou sob efeito de drogas."
+        ],
+        "atencao": [
+          "Perda AUTOMÁTICA da autorização em caso de embriaguez ou drogas.",
+          "Porte é competência da POLÍCIA FEDERAL."
+        ],
+        "exemplo": "Portador de arma abordado embriagado perde automaticamente o porte.",
+        "prova": [
+          "Assertiva que exige decisão judicial para a perda da eficácia do porte em caso de embriaguez erra: a perda é automática."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º",
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "5d91ecd7-d1b2-5ce5-b580-1c2eaaf01f77",
+      "content_sha256": "86e1ddcc58dca956645bedfce31350a2adca6ac44e68fa0184bcf0b234ff927a",
+      "simples": "A lei cobra taxas pelos serviços de registro, renovação e segunda via do registro, e porte federal, sua renovação e segunda via, nos valores do anexo. Recursos custeiam atividades dos sistemas e órgãos dentro de suas responsabilidades.",
+      "pontos": [
+        "Isenções expressas: categorias dos incisos I a VII e X e §5º do art. 6º.",
+        "Segurança institucional do art. 7º-A tem previsão própria de porte sem taxa.",
+        "Consultar serviço e isenção, sem confundir taxa estatal com honorário de profissional credenciado."
+      ],
+      "atencao": [
+        "Não conceder isenção a todo servidor ou toda categoria por analogia. Valor depende do serviço, do anexo e de eventual regra aplicável."
+      ],
+      "exemplo": "Interessado identifica serviço de renovação e taxa correspondente. Variação: categoria possui isenção legal expressa; não cobrar por ignorar o §2º, mas também não estender a isenção indiscriminadamente.",
+      "prova": [
+        "Toda pessoa vinculada ao serviço público é automaticamente isenta? Não; verificar a hipótese legal.",
+        "Taxa estatal e honorário psicológico são o mesmo pagamento? Não; têm regimes e destinatários diferentes."
+      ],
+      "termos": [
+        "taxas",
+        "Anexo",
+        "isentas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5d91ecd7-d1b2-5ce5-b580-1c2eaaf01f77",
+        "content_sha256": "86e1ddcc58dca956645bedfce31350a2adca6ac44e68fa0184bcf0b234ff927a",
+        "simples": "Fica instituída a cobrança de taxas, nos valores do Anexo da Lei, pela prestação de serviços relativos ao registro de arma de fogo, à renovação de registro, à expedição de segunda via de registro, à expedição de porte federal, à renovação de porte e à expedição de segunda via de porte federal. Os valores arrecadados destinam-se ao custeio e à manutenção das atividades do Sinarm, da Polícia Federal e do Comando do Exército. São isentas as pessoas e instituições referidas nos incisos I a VII e X e no §5º do art. 6º.",
+        "pontos": [
+          "Taxas para registro, renovação, segunda via e porte federal.",
+          "Valores destinam-se ao Sinarm, à Polícia Federal e ao Comando do Exército.",
+          "Isenção para as categorias listadas do art. 6º."
+        ],
+        "atencao": [
+          "Valores no Anexo da lei."
+        ],
+        "exemplo": "O cidadão paga taxa para expedir o porte federal, enquanto as Forças Armadas são isentas.",
+        "prova": [
+          "Assertiva que cobra taxas dos integrantes das Forças Armadas na expedição do porte erra: eles são isentos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Anexo"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11-a",
+      "unit_id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+      "content_sha256": "d269b144fbfe5c3c39ca3b11b2c0c53ffbc96360b6f1424957eeb2d274c0d245",
+      "simples": "O Ministério da Justiça disciplina o credenciamento, pela PF, dos profissionais de aptidão psicológica e capacidade técnica. A lei fixa teto psicológico por referência à tabela do CFP e, para instrutor, R$ 80 mais munição. Cobrança superior aos limites implica descredenciamento pela PF.",
+      "pontos": [
+        "Teto psicológico: valor médio do item 1.16 da tabela do CFP, conforme referência legal.",
+        "Capacidade técnica: R$ 80, acrescidos da munição, para a comprovação tratada no artigo.",
+        "Credenciamento e fiscalização são próprios da atividade, não mera livre indicação do interessado."
+      ],
+      "atencao": [
+        "Não ensinar R$ 80 como preço de qualquer curso ou de qualquer avaliação: a regra se refere à comprovação técnica do artigo. Verificar também normas profissionais e de credenciamento aplicáveis.",
+        "Credenciamento profissional não equivale a autorização de porte ou a registro de arma."
+      ],
+      "exemplo": "Instrutor cobra pelo exame técnico previsto e separa custo da munição. Variação: cobra além do limite legal para esse serviço; a lei prevê descredenciamento, não só uma recomendação de preço.",
+      "prova": [
+        "O teto técnico inclui obrigatoriamente a munição dentro dos R$ 80? Não; o texto prevê acréscimo do custo da munição.",
+        "Cobrança acima dos limites tem consequência de credenciamento? Sim; a lei prevê descredenciamento pela PF."
+      ],
+      "termos": [
+        "credenciamento",
+        "R$ 80",
+        "custo da munição",
+        "descredenciamento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao"
+      ],
+      "expected": {
+        "unit_id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+        "content_sha256": "d269b144fbfe5c3c39ca3b11b2c0c53ffbc96360b6f1424957eeb2d274c0d245",
+        "simples": "O Ministério da Justiça disciplinará a forma e as condições do credenciamento de profissionais pela Polícia Federal para comprovação da aptidão psicológica e da capacidade técnica para o manuseio de arma de fogo. O valor cobrado pelo psicólogo não poderá exceder o valor médio dos honorários para avaliação psicológica da tabela do Conselho Federal de Psicologia. O valor cobrado pelo instrutor de armamento e tiro não poderá exceder R$ 80,00, acrescido do custo da munição. A cobrança de valores superiores implicará o descredenciamento do profissional pela Polícia Federal.",
+        "pontos": [
+          "Credenciamento de psicólogos e instrutores pela Polícia Federal.",
+          "Teto de honorários do psicólogo: valor médio da tabela do CFP.",
+          "Teto do instrutor: R$ 80,00, mais o custo da munição.",
+          "Cobrança acima do teto: descredenciamento."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 11.706, de 2008."
+        ],
+        "exemplo": "Instrutor que cobra acima do limite legal é descredenciado pela Polícia Federal.",
+        "prova": [
+          "Assertiva que permite ao instrutor cobrar livremente pela avaliação de capacidade técnica erra: há teto legal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    }
+  ]
+}

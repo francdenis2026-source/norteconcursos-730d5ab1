@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-10-17T23:19:12.279Z",
+  "decision": "Editorial archive of AM Delegado44, not official annulment and not substitution of answerA.",
+  "new_active_questions": 0,
+  "archived_editorially": 1,
+  "preserved_other_pc_records": 2967,
+  "all_preexisting_metadata_unchanged": true,
+  "concurrent_source_additions_preserved": [
+    {
+      "table": "content_sources",
+      "id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+      "title": "STF 2008 — Cargo 15 — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "b765bd47-0710-5426-ac2d-2f575291a92c",
+      "title": "STF 2008 — justificativas finais de alteração/anulação",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "dd05baf5-745d-57a9-9307-bffca609c204",
+      "title": "STF 2008 — Cargo 15 — gabarito oficial definitivo",
+      "our_write": false
+    }
+  ],
+  "rondonia_untouched": true,
+  "tests_passed": 11,
+  "pc_status": {
+    "active": 2627,
+    "archived": 280,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 12
+  },
+  "pending_by_state": {
+    "RO": 8,
+    "RJ": 2,
+    "AM": 1,
+    "MG": 1
+  },
+  "item": {
+    "id": "8691e77b-0ba1-4789-ab11-13457340308d",
+    "item_number": 44,
+    "career": "Delegado de Polícia",
+    "official_answer_preserved": "A",
+    "original_text_sha256": "a47bd40bc646ee39faa4c1db6333c7a35c5e730382c278cafa60f0fee04fad26",
+    "patch": {
+      "content_status": "archived",
+      "review_note": "Arquivamento editorial para impedir uso como exercício automático sem as delimitações necessárias. Não se trata de anulação oficial da questão.\n\nO gabarito definitivo da FGV, Tipo1, questão44, é A e permanece preservado. O comando cita o art.118,I, da LEP, mas a alternativa diz, de modo absoluto, que se impõe a regressão, sem discricionariedade, após falta grave apurada em PAD. O enunciado não informa o regime do apenado nem delimita a decisão judicial definitiva.\n\nProblema concreto: o STJ, no HC92.175/SP (Informativo351), registra que quem já está no regime fechado não sofre regressão porque ela é impossível. Esse recorte basta para mostrar por que não é seguro ensinar a frase como regra universal. Não se utiliza aqui a antiga fração de progressão mencionada naquele julgado como regra vigente.\n\nAlém disso, o PAD e a decisão judicial sobre regressão têm objetos e competências distintos. O Informativo532 (REsp1.378.557/RS) distingue essas etapas. Sua antiga formulação sobre obrigatoriedade de PAD não é adotada aqui como síntese atual de todas as possibilidades procedimentais. No Tema1347, julgado em12/11/2025, o STJ distingue regressão definitiva, regulada pelo art.118,I e§2º da LEP e dependente do procedimento necessário com oitiva do apenado, de regressão cautelar, provisória e fundamentada. Esse tema não autoriza transformar apuração administrativa em mudança automática de regime.\n\nExemplo: quem cumpre pena no semiaberto pode sofrer regressão, mediante decisão judicial e requisitos aplicáveis. Quem já está no fechado não pode regredir para um regime ordinário ainda mais rigoroso. A falta grave pode ter outras consequências, que exigem análise própria e não são fixadas por esta questão.\n\nDecisão editorial: conservar a prova e a letra histórica para rastreabilidade, retirar este enunciado do treino automático e não inventar outra alternativa correta. A retomada da questão exige reavaliação jurídica que resolva expressamente o alcance da alternativaA; não basta obter novamente o gabarito. Não se afirma que a banca ou algum tribunal tenha anulado a questão.\n\nFontes primárias conferidas em17/10/2026: STJ Informativos351 (HC92.175/SP),532 (REsp1.378.557/RS, exclusivamente para a distinção entre competências e procedimentos, sem reproduzir como atual sua antiga tese integral sobre PAD) e872 (Tema1347). Caderno original página11 e definitivo Tipo1 página1 já conferidos. Texto, letraA e extração bruta preservados.",
+      "verified_at": "2026-10-17T23:17:42.792382+00:00"
+    },
+    "evidence": {
+      "legal": true,
+      "reason": "Disposição editorial fundamentada, sem anulação oficial ou troca de chave: enunciado não delimita regime e formula consequência de modo absoluto; caso primário do regime fechado e competência/procedimento judicial afastam uso automático universal. Não é arquivamento por mera indisponibilidade de fonte.",
+      "sources": [
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=008455",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=014509",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=021954"
+      ],
+      "captures": [
+        {
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=008455",
+          "path": "outputs/pc-pending-review-2026-10-16/last5-stj-008455.html",
+          "sha256": "570367bddc395f6e4f5d41cf06a7b9e42b652b9b59e3c9033e95666ef21b5059",
+          "captured_at": "2026-10-17T23:16:58.023830+00:00"
+        },
+        {
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=014509",
+          "path": "outputs/pc-pending-review-2026-10-16/last5-stj-014509.html",
+          "sha256": "e085c1587bfc8849735c3c1812b6d8636167d35d964eba48f7f79cc975eb3be3",
+          "captured_at": "2026-10-17T23:16:59.393397+00:00"
+        },
+        {
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=021954",
+          "path": "outputs/pc-pending-review-2026-10-16/last5-stj-021954.html",
+          "sha256": "654447ea317818796b606f5e1ce62fa5b78bd1fd20e79c6885bdc194f9ab22de",
+          "captured_at": "2026-10-17T23:16:58.378000+00:00"
+        }
+      ],
+      "original_answer_preserved": true,
+      "paper_page": 11,
+      "key_page": 1,
+      "not_official_annulment": true,
+      "not_a_new_current_legal_answer": true
+    }
+  },
+  "limitations": [
+    "Planalto respondeu503 para Lei8625 e Lei12830 nesta rodada; nenhum texto de erro foi tratado como norma.",
+    "CPC/CFC e outros destinos técnicos bloqueados; fontes não lidas não foram consideradas verificadas.",
+    "Busca SCON redirecionou à página inicial inclusive na consulta de controle por furto; não se concluiu ausência de precedentes.",
+    "NCBI retornou verificação de navegador, sem acesso à publicação; nenhuma tentativa de contornar verificação."
+  ],
+  "remaining_excluding_ro": [
+    {
+      "id": "76a0df58-50ad-465e-af73-12763e76347f",
+      "state": "RJ",
+      "item_number": 48,
+      "career": "Delegado de Polícia"
+    },
+    {
+      "id": "c12a8254-148f-4b63-b48c-5bfaecccdb6b",
+      "state": "AM",
+      "item_number": 40,
+      "career": "Investigador de Polícia"
+    },
+    {
+      "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",
+      "state": "MG",
+      "item_number": 48,
+      "career": "Técnico-Assistente – Auxiliar de Perícia (TPAG)"
+    },
+    {
+      "id": "e9685709-2891-4be5-8e0a-cfdf17dd2026",
+      "state": "RJ",
+      "item_number": 75,
+      "career": "Delegado de Polícia"
+    }
+  ]
+}

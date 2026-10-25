@@ -1,0 +1,11 @@
+{
+  "scope": "CPP; aprovação editorial atual não equivale a cobertura de toda regulamentação e jurisprudência",
+  "reviewed": 808,
+  "total": 808,
+  "pending_count": 0,
+  "pending_units": [],
+  "next_article": null,
+  "verified_at": "2026-10-13T05:30:53.180Z",
+  "verified_snapshot": "outputs/cpp-final-2026-10-13/after",
+  "final_batch": "article-explanations-cpp-final-2026-10-13.json"
+}

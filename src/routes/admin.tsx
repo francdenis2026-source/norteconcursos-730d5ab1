@@ -50,12 +50,14 @@ function AdminLoginPage() {
       });
       if (sErr || !data.user) throw new Error("E-mail ou senha incorretos.");
       const isOwner = data.user.email?.toLowerCase() === OWNER_EMAIL.toLowerCase();
-      const { data: isAdmin } = await supabase.rpc("has_role", {
+      const { data: isAdmin, error: roleError } = await supabase.rpc("has_role", {
         _user_id: data.user.id,
         _role: "admin",
       });
+      if (!isOwner && roleError) {
+        throw new Error("Não foi possível verificar seu acesso. Tente novamente em instantes.");
+      }
       if (!isOwner && !isAdmin) {
-        await supabase.auth.signOut();
         throw new Error("Esta conta não tem acesso de administrador.");
       }
       toast.success("Bem-vindo à administração.");

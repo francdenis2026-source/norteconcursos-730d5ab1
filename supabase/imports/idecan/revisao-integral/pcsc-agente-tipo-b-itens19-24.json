@@ -1,0 +1,142 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-constitucional-19-24-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "role": "Agente de Polícia Civil",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "official_key_sequence": "EACDBE",
+  "answer_key_matches": true,
+  "official_edital": {
+    "title": "Edital nº 01/2025 — Agente de Polícia Civil",
+    "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "program_pages": "Anexo I, p. 53"
+  },
+  "program_excerpt": "NOÇÕES DE DIREITO CONSTITUCIONAL: 1. Direito Constitucional e Constituição: conceito e classificação. 2. Princípios fundamentais da Constituição da República Federativa do Brasil. 3. Direitos e garantias fundamentais. 4. Direitos individuais e coletivos. 5. Remédios constitucionais: habeas corpus, habeas data e mandado de segurança. 6. Organização político-administrativa do Estado. 7. Poder Executivo, Legislativo e Judiciário. 8. Funções essenciais à Justiça. 9. Defesa do Estado e das instituições democráticas. 10. Segurança pública e sua organização. 11. Constituição do Estado de Santa Catarina.",
+  "source_note": "Respostas cotejadas com gabarito definitivo Tipo B. Temas cobertos expressamente pelo Anexo I. Questão 19: a súmula pertinente é a 693 do STF, não a 695 (que trata de pena privativa já extinta). Estado vivo do banco ainda precisa ser verificado.",
+  "items": [
+    {
+      "id": "c6a7f2ff-fc4a-4226-873d-5bd11105b6ed",
+      "item_number": 19,
+      "subject": "Direito Constitucional",
+      "stem": "Marcos Paulo, 38 anos de idade, está sendo processado criminalmente pela suposta prática do crime X, cuja pena cominada é a de multa. Durante a tramitação do processo, algumas ilegalidades são cometidas pela Dra. Rosângela, magistrada titular da Vara Criminal na qual o processo tramita. Marcos Paulo encontra-se em liberdade. Com o escopo de afastar as ilegalidades e efetivar o princípio da ampla defesa, Marcos Paulo impetra a ação de Habeas Corpus. Com base nos fatos narrados, marque a afirmativa correta.",
+      "options": {
+        "A": "Cabe, no caso, a impetração da ação de Habeas Corpus, tendo em vista não ser cabível a impetração da ação de mandado de segurança.",
+        "B": "Cabe, no caso, a impetração da ação de Habeas Corpus, tendo em vista que há ameaça de lesão ao direito fundamental liberdade de locomoção.",
+        "C": "Não cabe, no caso, a impetração da ação de Habeas Corpus, tendo em vista que, não obstante a existência de ameaça ao direito fundamental liberdade de locomoção, Marcos Paulo encontra-se em liberdade.",
+        "D": "Cabe, no caso, a impetração da ação de Habeas Corpus, tendo em vista as ilegalidades praticadas.",
+        "E": "Não cabe, no caso, a impetração da ação de Habeas Corpus, tendo em vista que o crime supostamente praticado não possui pena privativa de liberdade."
+      },
+      "official_answer": "E",
+      "replacement_explanation": "E é correta. O habeas corpus protege a liberdade de locomoção contra coação ou ameaça ilegal, e não serve para corrigir qualquer ilegalidade processual. A Súmula 693 do STF diz que não cabe HC relativo a processo por infração cuja única pena cominada seja multa. O dado decisivo é a ausência de possibilidade legal de privação da liberdade nesse delito; estar solto, isoladamente, não impediria um HC preventivo se houvesse ameaça concreta à locomoção.\nA) e D) presumem que qualquer ilegalidade autoriza HC. B) supõe ameaça à locomoção sem base no caso. C) erra porque a liberdade atual não exclui HC preventivo; o impedimento aqui decorre da pena exclusivamente pecuniária.\nBase: CF, art. 5º, LXVIII; STF, Súmula 693.",
+      "tested_topic": "Habeas corpus e habeas data; cabimento do HC limitado à tutela da liberdade de locomoção; STF Súmula 693.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2714"
+      ]
+    },
+    {
+      "id": "12c3cacc-f118-4d6e-8807-9bae657bcfc8",
+      "item_number": 20,
+      "subject": "Direito Constitucional",
+      "stem": "O Poder Legislativo está disciplinado nos artigos 44 a 76 da Constituição da República de 1988. O artigo 59 elenca os atos normativos primários. Um dos atos normativos primários é a emenda constitucional. No tocante aos legitimados para a propositura de Projeto de Emenda Constitucional, marque a afirmativa correta.",
+      "options": {
+        "A": "Um terço, no mínimo, dos membros da Câmara dos Deputados ou do Senado Federal goza de legitimidade para a propositura de Projeto de Emenda Constitucional.",
+        "B": "Metade, no mínimo, dos membros da Câmara dos Deputados ou do Senado Federal goza de legitimidade para a propositura de Projeto de Emenda Constitucional.",
+        "C": "O Vice-Presidente da República goza de legitimidade para a propositura de Projeto de Emenda Constitucional.",
+        "D": "Mais de um terço das Assembleias Legislativas das unidades da Federação, manifestando-se cada uma delas, pela maioria relativa de seus membros goza de legitimidade para a propositura de Projeto de Emenda Constitucional.",
+        "E": "O Presidente do Supremo Tribunal Federal goza de legitimidade para a propositura de Projeto de Emenda Constitucional."
+      },
+      "official_answer": "A",
+      "replacement_explanation": "A está correta. O art. 60, I, da Constituição legitima um terço, no mínimo, dos membros da Câmara dos Deputados ou do Senado Federal a propor emenda constitucional. Também podem propor o Presidente da República e mais da metade das Assembleias Legislativas, cada qual pela maioria relativa de seus membros (art. 60, II e III).\nB) exige metade de uma Casa, quórum maior que o texto constitucional. C) o Vice-Presidente não tem legitimidade própria; pode encaminhar proposta se estiver no exercício da Presidência. D) exige mais da metade das Assembleias, não mais de um terço. E) o Presidente do STF não é legitimado.\nNão confundir iniciativa da PEC com aprovação: são necessários dois turnos em cada Casa e três quintos dos votos dos respectivos membros.\nBase: CF, art. 60, I–III e § 2º.",
+      "tested_topic": "Poder constituinte derivado reformador: legitimados e procedimento de proposta de emenda constitucional; CF, art. 60.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    {
+      "id": "81c7ccf7-43be-4dbd-acde-fd94031af772",
+      "item_number": 21,
+      "subject": "Direito Constitucional",
+      "stem": "Flávia, 37 anos de idade, após muitos desafios e obstáculos, cola grau no Curso de Direito da Universidade Federal de Santa Catarina. Flávia tem o sonho de ser juíza. Durante vários anos, Flávia trabalha nos períodos da manhã e tarde e, na parte da noite, estuda até por volta das duas horas da madrugada. No Concurso Público para Juiz do TJSC, Flávia logra êxito em ser aprovada na primeira e na segunda etapa do certame. Ocorre que, por ter diabetes no grau leve, é desclassificada antes da realização da etapa da prova oral. A prova oral será realizada dias após a publicação da desclassificação de Flávia. Com base nos fatos narrados, assinale a opção correta.",
+      "options": {
+        "A": "Impetrar a ação de Habeas Data repressivo.",
+        "B": "Impetrar a ação de Habeas Corpus preventivo.",
+        "C": "Impetrar a ação de Mandado de Segurança.",
+        "D": "Impetrar a ação de Habeas Data preventivo.",
+        "E": "Impetrar a ação de Habeas Corpus repressivo."
+      },
+      "official_answer": "C",
+      "replacement_explanation": "C é correta. O mandado de segurança protege direito líquido e certo, comprovável de plano, quando não couber habeas corpus ou habeas data (CF, art. 5º, LXIX). A desclassificação de concurso é ato que pode ser impugnado por essa via se houver direito demonstrável por prova pré-constituída e observados prazo e demais requisitos.\nA) e D) habeas data servem para conhecer ou retificar dados pessoais em registros públicos ou de caráter público, não para contestar diretamente a exclusão do concurso. B) e E) habeas corpus protegem locomoção, que não está ameaçada.\nA escolha do remédio não antecipa o mérito: a legalidade da avaliação médica dependerá do edital, das provas e da justificativa administrativa.\nBase: CF, art. 5º, LXVIII–LXIX; Lei 12.016/2009.",
+      "tested_topic": "Remédios constitucionais: mandado de segurança para direito líquido e certo e prova pré-constituída; CF, art. 5º, LXIX.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12016.htm"
+      ]
+    },
+    {
+      "id": "fdd8be65-660f-49c1-9276-22b7e656b07e",
+      "item_number": 22,
+      "subject": "Direito Constitucional",
+      "stem": "João Bosco, 32 anos de idade, está sendo investigado pela suposta prática dos crimes de tráfico de pessoas e lavagem de dinheiro. Durante o inquérito policial, a Delegada de Polícia, Dra. Marcela, representa para a decretação de busca e apreensão no domicílio de João Bosco. O magistrado, Dr. Américo, determina a realização da busca e apreensão. A Delegada de Polícia, às 23 horas, juntamente com outros policiais, comparece ao domicílio de João Bosco. O interfone é acionado, João Bosco atende e a Dra. Marcela se identifica e diz que possui mandado judicial para realizar a busca a apreensão. Joao Bosco, de modo educado, diz à Delegada que está assistindo a jogo de seu time de futebol, que não quer ser incomodado e desliga o interfone. Os policiais, ato contínuo, arrombam a porta da casa de João Bosco e cumprem o mandado de busca e apreensão. Diante do exposto, indique a opção correta.",
+      "options": {
+        "A": "A busca e apreensão realizada é lícita, tendo em vista a presença da Delegada de Polícia ao ato.",
+        "B": "A busca e apreensão realizada é lícita, tendo em vista a gravidade dos crimes praticados por João Bosco.",
+        "C": "A busca e apreensão realizada é ilícita, tendo em vista que o magistrado não estava presente no momento de seu cumprimento.",
+        "D": "A busca e apreensão realizada é ilícita, tendo em vista que foi realizada a noite e sem o consentimento de João Bosco.",
+        "E": "A busca e apreensão realizada é lícita, tendo em vista que houve autorização do Poder Judiciário."
+      },
+      "official_answer": "D",
+      "replacement_explanation": "D é correta nos fatos narrados. A casa é inviolável; ingresso por determinação judicial só pode ocorrer durante o dia. À noite, a entrada depende de consentimento do morador ou de uma das hipóteses constitucionais autônomas (flagrante delito, desastre ou prestação de socorro). Às 23h, o morador recusou a entrada e o enunciado não apresenta exceção; o mandado, sozinho, não autoriza arrombamento noturno.\nA) a presença da delegada não substitui a exigência constitucional. B) a gravidade dos crimes não cria exceção. C) o juiz não precisa acompanhar a diligência. E) autorização judicial é necessária para busca diurna, mas não afasta a limitação horária.\nBase: CF, art. 5º, XI; CPP, art. 245.",
+      "tested_topic": "Direitos e garantias individuais: inviolabilidade domiciliar e limites do cumprimento de mandado judicial à noite; CF, art. 5º, XI.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    },
+    {
+      "id": "356415ac-4904-4270-aa3d-26cc2b932d6c",
+      "item_number": 23,
+      "subject": "Direito Constitucional",
+      "stem": "O artigo 136 da Constituição da República de 1988 disciplina o Estado de Defesa. Nos termos do artigo 136, é cabível o Estado de Defesa para preservar ou prontamente restabelecer, em locais restritos e determinados, a ordem pública ou a paz social ameaçadas por grave e iminente instabilidade institucional ou atingidas por calamidades de grandes proporções da natureza. No tocante ao tema Estado de Defesa, assinale a alternativa correta.",
+      "options": {
+        "A": "O Congresso Nacional apreciará o decreto dentro de quinze dias, contados de seu recebimento, devendo continuar funcionando enquanto vigorar o Estado de Defesa.",
+        "B": "Decretado o Estado de Defesa ou a sua prorrogação, o Presidente da República, dentro de vinte e quatro horas, submeterá o ato com a respectiva justificação ao Congresso Nacional, que decidirá por maioria absoluta.",
+        "C": "Durante o Estado de Defesa é cabível a decretação da incomunicabilidade do preso.",
+        "D": "A prisão ou detenção de qualquer pessoa não poderá ser superior a quinze dias, salvo quando autorizada pelo Poder Judiciário.",
+        "E": "Se o Congresso Nacional estiver em recesso, será convocado, extraordinariamente, no prazo de dez dias."
+      },
+      "official_answer": "B",
+      "replacement_explanation": "B reproduz o art. 136, § 4º, da Constituição: decretado o estado de defesa ou sua prorrogação, o Presidente submete o ato e a justificativa ao Congresso em 24 horas; o Congresso decide por maioria absoluta.\nA) o prazo de apreciação é de dez dias, não quinze (art. 136, § 6º). C) a incomunicabilidade do preso é vedada (§ 3º, IV). D) a prisão não pode superar dez dias sem autorização judicial (§ 3º, III), não quinze. E) em recesso, o Congresso é convocado extraordinariamente em cinco dias, não dez (§ 5º).\nBase: CF, art. 136, §§ 3º–6º.",
+      "tested_topic": "Estado de defesa: controle do Congresso, prazos e limites constitucionais; CF, art. 136.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    {
+      "id": "f8a8984a-91b1-42f1-8e8b-28fc31dbace7",
+      "item_number": 24,
+      "subject": "Direito Constitucional",
+      "stem": "Nos termos do artigo 127 da Constituição da República de 1988, o Ministério Público é instituição permanente, essencial à função jurisdicional do Estado, incumbindo-lhe a defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis. Nesse contexto, marque a opção que contenha os princípios institucionais do Ministério Público.",
+      "options": {
+        "A": "Indivisibilidade, independência funcional e inamovibilidade.",
+        "B": "Unidade, irredutibilidade de subsídio e independência funcional.",
+        "C": "Independência funcional, unidade e vitaliciedade.",
+        "D": "Vitaliciedade, unidade e inamovibilidade.",
+        "E": "Independência funcional, unidade e indivisibilidade."
+      },
+      "official_answer": "E",
+      "replacement_explanation": "E está correta. O art. 127, § 1º, da Constituição prevê como princípios institucionais do Ministério Público unidade, indivisibilidade e independência funcional.\nA) troca unidade por inamovibilidade, garantia de membros da magistratura. B) mistura unidade e independência com irredutibilidade de subsídio, que é garantia remuneratória. C) vitaliciedade não é princípio institucional do MP. D) vitaliciedade e inamovibilidade são garantias dos membros, não princípios do art. 127, § 1º.\nBase: CF, art. 127, § 1º.",
+      "tested_topic": "Ministério Público: princípios institucionais da unidade, indivisibilidade e independência funcional; CF, art. 127, § 1º.",
+      "local_snapshot_status": "under_review",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    }
+  ]
+}

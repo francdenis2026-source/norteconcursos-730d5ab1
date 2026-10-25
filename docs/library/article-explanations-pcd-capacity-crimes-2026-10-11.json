@@ -1,0 +1,758 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-12T00:05:52.335549+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 14,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-81",
+        "art-83",
+        "art-84",
+        "art-85",
+        "art-86",
+        "art-87",
+        "art-88",
+        "art-89",
+        "art-90",
+        "art-91",
+        "art-92",
+        "art-93",
+        "art-94",
+        "art-95"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-81",
+      "unit_id": "6d30797f-35c4-5ec1-8e51-bb7ceac1a7e8",
+      "content_sha256": "6013efab57e2c003b4c5d6b407c351d25b3aecfe2ea8c98163cd9cddbf51ae7e",
+      "simples": "Os direitos da pessoa com deficiência são garantidos também na aplicação de sanções penais. A sanção não elimina as garantias da LBI nem afasta a necessidade de acessibilidade.",
+      "pontos": [
+        "Garantia durante a aplicação de sanções penais.",
+        "Articulação com os arts. 79 e 80."
+      ],
+      "atencao": [
+        "O dispositivo não cria isenção penal geral nem reduz automaticamente a pena por deficiência."
+      ],
+      "exemplo": "A pessoa sofre sanção penal, mas continua titular das garantias aplicáveis e do acesso acessível à justiça. Variação: A prova afirma que a deficiência elimina automaticamente qualquer sanção: o artigo não estabelece essa imunidade.",
+      "prova": [
+        "O art. 81 concede imunidade penal geral por deficiência? Não; garante direitos durante a aplicação da sanção, sem criar essa imunidade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6d30797f-35c4-5ec1-8e51-bb7ceac1a7e8",
+        "content_sha256": "6013efab57e2c003b4c5d6b407c351d25b3aecfe2ea8c98163cd9cddbf51ae7e",
+        "simples": "Os direitos da pessoa com deficiência serão garantidos por ocasião da aplicação de sanções penais.",
+        "pontos": [
+          "Direitos da pessoa com deficiência na aplicação de sanções penais."
+        ],
+        "atencao": [
+          "Cumprimento de pena com acessibilidade."
+        ],
+        "exemplo": "O presídio garante acessibilidade ao preso com deficiência.",
+        "prova": [
+          "Assertiva que afasta os direitos da pessoa com deficiência durante a pena erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-83",
+      "unit_id": "0600051b-87b4-53af-b822-d04c52db5978",
+      "content_sha256": "1c55207dff7e608b83d64863d3f97a9b61da364d735785d9e285f97d2006473b",
+      "simples": "Cartórios e registros reconhecem capacidade legal plena e asseguram acessibilidade. Não podem negar serviços, criar obstáculos ou impor condições diferenciadas por deficiência. O descumprimento constitui discriminação.",
+      "pontos": [
+        "Capacidade legal reconhecida.",
+        "Acessibilidade notarial e registral.",
+        "Vedados obstáculos e condições diferenciadas por deficiência."
+      ],
+      "atencao": [
+        "Não presuma incapacidade civil somente a partir do diagnóstico. As condições diferenciadas vedadas decorrem da deficiência, não de qualquer exigência legal comum aplicável ao ato."
+      ],
+      "exemplo": "O cartório recusa atendimento somente por deficiência do solicitante: confronte a vedação do caput. Variação: O cartório pede documentação legal comum a todo solicitante: é preciso analisar o fundamento, sem chamar qualquer requisito de discriminação automaticamente.",
+      "prova": [
+        "O descumprimento da vedação do caput constitui discriminação em razão de deficiência? Sim; o parágrafo único assim o define."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0600051b-87b4-53af-b822-d04c52db5978",
+        "content_sha256": "1c55207dff7e608b83d64863d3f97a9b61da364d735785d9e285f97d2006473b",
+        "simples": "Os serviços notariais e de registro não podem negar ou criar óbices ou condições diferenciadas à prestação de seus serviços em razão de deficiência do solicitante, devendo reconhecer sua capacidade legal plena, garantida a acessibilidade. O descumprimento constitui discriminação em razão de deficiência.",
+        "pontos": [
+          "Cartórios não podem negar serviços por causa da deficiência.",
+          "Capacidade legal plena.",
+          "Descumprimento é discriminação."
+        ],
+        "atencao": [
+          "Cartórios reconhecem a capacidade plena."
+        ],
+        "exemplo": "O cartório não pode se recusar a lavrar escritura de pessoa com deficiência.",
+        "prova": [
+          "Assertiva que permite ao cartório exigir curador de qualquer pessoa com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-84",
+      "unit_id": "07be1d1d-6fdd-5f60-9eae-c43f49033b6b",
+      "content_sha256": "f38d1f5da7f7b9d72c637500c303138ac8f0367ba8f134d88f0a26e235034f4f",
+      "simples": "A capacidade legal é exercida em igualdade. Curatela, quando necessária conforme a lei, é medida extraordinária, proporcional e de menor duração possível. A tomada de decisão apoiada é facultativa. Curadores apresentam contas anualmente ao juiz.",
+      "pontos": [
+        "Capacidade legal em igualdade.",
+        "Curatela extraordinária, proporcional e pelo menor tempo possível.",
+        "Decisão apoiada facultativa; contas anuais do curador."
+      ],
+      "atencao": [
+        "Deficiência não impõe curatela automática. Não confunda a opção por apoio com obrigatoriedade de interdição; requisitos processuais completos dependem das normas próprias."
+      ],
+      "exemplo": "A pessoa exerce sua capacidade e opta por apoio, sem pressupor incapacidade apenas pela deficiência. Variação: O caso demonstra necessidade de curatela: a medida deve ser individualizada, proporcional e durar o menor tempo possível.",
+      "prova": [
+        "A deficiência impõe automaticamente curatela em todo caso? Não; a lei a admite quando necessária e a define como extraordinária."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "07be1d1d-6fdd-5f60-9eae-c43f49033b6b",
+        "content_sha256": "f38d1f5da7f7b9d72c637500c303138ac8f0367ba8f134d88f0a26e235034f4f",
+        "simples": "A pessoa com deficiência tem assegurado o direito ao exercício de sua capacidade legal em igualdade de condições. Quando necessário, será submetida à curatela, conforme a lei. É facultado adotar o processo de tomada de decisão apoiada. A curatela é medida protetiva extraordinária, proporcional às necessidades e circunstâncias, e durará o menor tempo possível. Os curadores prestam contas anualmente ao juiz, apresentando o balanço do respectivo ano.",
+        "pontos": [
+          "Capacidade legal em igualdade de condições.",
+          "Curatela como medida extraordinária.",
+          "Tomada de decisão apoiada facultativa.",
+          "Prestação anual de contas pelo curador."
+        ],
+        "atencao": [
+          "Curatela é EXTRAORDINÁRIA, proporcional e pelo menor tempo possível.",
+          "Contas ANUAIS."
+        ],
+        "exemplo": "O curador apresenta anualmente o balanço da administração ao juiz.",
+        "prova": [
+          "Assertiva que torna a curatela a regra para pessoas com deficiência intelectual erra: ela é extraordinária."
+        ],
+        "termos": [
+          {
+            "termo": "Curatela",
+            "significado": "Encargo de administrar bens e atos patrimoniais de pessoa curatelada."
+          }
+        ],
+        "remissoes": [
+          "Art. 85"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-85",
+      "unit_id": "fc732bdd-d167-5408-8421-db1b33f9b1f6",
+      "content_sha256": "51a3cfc885e16c98ea1c3992a8264c84475fb2e0a7fb2f098a1e483ec7c1f3ff",
+      "simples": "Na redação da LBI, a curatela afeta somente atos patrimoniais e negociais. Não alcança corpo, sexualidade, matrimônio, privacidade, educação, saúde, trabalho e voto. A sentença deve motivar a medida. Em institucionalização, há preferência por curador com vínculo familiar, afetivo ou comunitário.",
+      "pontos": [
+        "Limite legal: patrimonial e negocial.",
+        "Direitos pessoais preservados.",
+        "Sentença motivada; preferência de vínculos em institucionalização."
+      ],
+      "atencao": [
+        "Separe o texto legal da análise de casos judiciais específicos: esta explicação não certifica toda jurisprudência sobre extensão excepcional de medidas protetivas."
+      ],
+      "exemplo": "A curatela alcança administração patrimonial delimitada pela decisão, sem tornar automaticamente o curador titular das escolhas pessoais do curatelado. Variação: A pessoa está institucionalizada: o juiz deve observar a preferência de vínculos descrita no §3º, e não escolher obrigatoriamente qualquer funcionário da instituição.",
+      "prova": [
+        "O texto do art. 85 exclui o voto do alcance da curatela? Sim; o §1º preserva expressamente esse direito."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fc732bdd-d167-5408-8421-db1b33f9b1f6",
+        "content_sha256": "51a3cfc885e16c98ea1c3992a8264c84475fb2e0a7fb2f098a1e483ec7c1f3ff",
+        "simples": "A curatela afetará tão somente os atos relacionados aos direitos de natureza patrimonial e negocial. A definição da curatela não alcança o direito ao próprio corpo, à sexualidade, ao matrimônio, à privacidade, à educação, à saúde, ao trabalho e ao voto. Constitui medida extraordinária, devendo constar da sentença as razões e motivações de sua definição, preservados os interesses do curatelado. Em situação de institucionalização, o juiz deve dar preferência a curador com vínculo familiar, afetivo ou comunitário.",
+        "pontos": [
+          "Curatela só afeta atos patrimoniais e negociais.",
+          "Não alcança corpo, sexualidade, casamento, privacidade, educação, saúde, trabalho e voto.",
+          "Sentença motivada.",
+          "Preferência por curador com vínculo."
+        ],
+        "atencao": [
+          "A curatela NÃO retira o direito de votar, casar ou decidir sobre o próprio corpo."
+        ],
+        "exemplo": "A pessoa curatelada continua podendo votar e se casar.",
+        "prova": [
+          "Assertiva que retira da pessoa curatelada o direito ao voto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-86",
+      "unit_id": "2160104c-ae04-59ba-ae38-c09f6f2a07f2",
+      "content_sha256": "e03c0587be8d5d389e6cfc9e755e75d944348e0f960465b593acaac133d05cbd",
+      "simples": "A emissão de documentos oficiais não exige que a pessoa com deficiência esteja em situação de curatela. A identificação e a documentação não dependem de impor essa medida protetiva.",
+      "pontos": [
+        "Documentos oficiais.",
+        "Vedada exigência de situação de curatela."
+      ],
+      "atencao": [
+        "Não transforme a curatela em requisito geral para emissão documental; isso não elimina requisitos documentais comuns do serviço."
+      ],
+      "exemplo": "A pessoa solicita documento oficial sem curatela: o serviço não pode impor essa condição apenas por deficiência. Variação: Há exigências comuns de identificação: devem ser analisadas separadamente da condição de curatela vedada.",
+      "prova": [
+        "A emissão de documento oficial exige prévia curatela de toda pessoa com deficiência? Não; o artigo afasta essa exigência."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2160104c-ae04-59ba-ae38-c09f6f2a07f2",
+        "content_sha256": "e03c0587be8d5d389e6cfc9e755e75d944348e0f960465b593acaac133d05cbd",
+        "simples": "Para emissão de documentos oficiais, não será exigida a situação de curatela da pessoa com deficiência.",
+        "pontos": [
+          "Curatela não é exigida para emitir documentos oficiais."
+        ],
+        "atencao": [
+          "Vedada a exigência de curatela para documentos."
+        ],
+        "exemplo": "A pessoa com deficiência tira o RG sem precisar de curatela.",
+        "prova": [
+          "Assertiva que exige curatela para a emissão de documentos oficiais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-87",
+      "unit_id": "628a1144-030e-51c5-b48d-a9675add5465",
+      "content_sha256": "66aa86e80b802a7938c370083a49a1a5fb0dded89f2a35f2a7d08ca21227bf83",
+      "simples": "Em relevância e urgência, para proteger interesses da pessoa em situação de curatela, o juiz pode nomear desde logo curador provisório, ouvido o MP. Pode agir de ofício ou por requerimento do interessado; aplica-se o CPC no que couber.",
+      "pontos": [
+        "Relevância e urgência.",
+        "Juiz, ouvido o Ministério Público.",
+        "De ofício ou a requerimento; CPC no que couber."
+      ],
+      "atencao": [
+        "Não confunda ouvir o MP com transferir a nomeação a ele. Esta regra não dispensa a análise das demais exigências processuais aplicáveis."
+      ],
+      "exemplo": "Há situação urgente de proteção patrimonial: o juiz, ouvido o MP, nomeia curador provisório nas condições do artigo. Variação: A medida parte de ofício do juiz: o artigo também prevê essa iniciativa, além do requerimento.",
+      "prova": [
+        "O juiz só pode nomear curador provisório se houver requerimento do interessado? Não; o artigo também admite atuação de ofício, ouvido o MP."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "628a1144-030e-51c5-b48d-a9675add5465",
+        "content_sha256": "66aa86e80b802a7938c370083a49a1a5fb0dded89f2a35f2a7d08ca21227bf83",
+        "simples": "Em casos de relevância e urgência e a fim de proteger os interesses da pessoa com deficiência em situação de curatela, será lícito ao juiz, ouvido o Ministério Público, de ofício ou a requerimento do interessado, nomear, desde logo, curador provisório, sujeito, no que couber, às disposições do Código de Processo Civil.",
+        "pontos": [
+          "Curador provisório em casos de relevância e urgência.",
+          "Ouvido o Ministério Público."
+        ],
+        "atencao": [
+          "Nomeação de ofício ou a requerimento, ouvido o MP."
+        ],
+        "exemplo": "O juiz nomeia curador provisório para proteger o patrimônio em risco.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do Ministério Público na nomeação de curador provisório erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-88",
+      "unit_id": "75f98894-73f6-5d4d-8475-b16903bae2b8",
+      "content_sha256": "5543b56f2c2cf3484cb619f42f876428bb766f5f10b219d1932e2cf2aabc7402",
+      "simples": "Praticar, induzir ou incitar discriminação por deficiência tem pena de reclusão de um a três anos e multa. Se a vítima está sob cuidado e responsabilidade do agente, há aumento de um terço. Por comunicação social ou publicação, a faixa é de dois a cinco anos e multa. O juiz pode adotar as medidas do §3º antes do inquérito; destruição do material é efeito após trânsito em julgado.",
+      "pontos": [
+        "Tipo básico: 1–3 anos e multa.",
+        "Cuidado e responsabilidade: aumento de 1/3.",
+        "Comunicação/publicação: 2–5 anos e multa.",
+        "Destruição do material: após trânsito em julgado."
+      ],
+      "atencao": [
+        "Diferencie a faixa própria do §2º da causa de aumento do §1º. Não antecipe a destruição definitiva do material para a fase anterior ao inquérito."
+      ],
+      "exemplo": "O agente publica conteúdo que incita discriminação por deficiência: analise a hipótese do §2º, com pena de dois a cinco anos e multa. Variação: A vítima está sob cuidado e responsabilidade do agente: há a circunstância de aumento do §1º, cuja aplicação exige exame do caso.",
+      "prova": [
+        "A publicação discriminatória tem a faixa própria de dois a cinco anos e multa? Sim; o §2º estabelece essa pena."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "75f98894-73f6-5d4d-8475-b16903bae2b8",
+        "content_sha256": "5543b56f2c2cf3484cb619f42f876428bb766f5f10b219d1932e2cf2aabc7402",
+        "simples": "Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência: reclusão de 1 a 3 anos e multa. Aumenta-se a pena em 1/3 se a vítima estiver sob cuidado e responsabilidade do agente. Se cometido por meios de comunicação social ou de publicação de qualquer natureza, reclusão de 2 a 5 anos e multa. Nesse caso, o juiz poderá determinar, ouvido o Ministério Público e antes do inquérito policial, sob pena de desobediência, o recolhimento ou busca e apreensão do material e a interdição de mensagens ou páginas na internet. É efeito da condenação, após o trânsito em julgado, a destruição do material apreendido.",
+        "pontos": [
+          "Praticar, induzir ou incitar discriminação: reclusão de 1 a 3 anos e multa.",
+          "Aumento de 1/3 se a vítima está sob cuidado do agente.",
+          "Meios de comunicação: reclusão de 2 a 5 anos.",
+          "Busca e apreensão e interdição de páginas, até antes do inquérito."
+        ],
+        "atencao": [
+          "Meios de comunicação social: reclusão de 2 a 5 anos."
+        ],
+        "exemplo": "Publicar na internet conteúdo discriminatório contra pessoas com deficiência agrava a pena.",
+        "prova": [
+          "Assertiva que prevê detenção para o crime de discriminação erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-89",
+      "unit_id": "4bac9ffa-1652-5b42-9d37-cfaadaedea8c",
+      "content_sha256": "8ddb21264a41674df107dd484ea5105f5f621f81976af84dca81a0dae9e9ba7e",
+      "simples": "Apropriar-se ou desviar bens, pensão, benefícios, remuneração ou outros rendimentos da pessoa com deficiência tem pena de reclusão de um a quatro anos e multa. O aumento de um terço alcança as funções enumeradas e a apropriação em razão de ofício ou profissão.",
+      "pontos": [
+        "Apropriação ou desvio.",
+        "1–4 anos de reclusão e multa.",
+        "Aumento de 1/3 nas hipóteses do parágrafo."
+      ],
+      "atencao": [
+        "Aqui o objeto é patrimônio ou rendimento. No art. 91, o objeto são meios de acesso financeiro retidos ou utilizados com finalidade de vantagem indevida."
+      ],
+      "exemplo": "O curador desvia a pensão do curatelado: analise o art. 89 e o aumento pela função exercida. Variação: Uma pessoa apenas guarda cartão em condições consentidas, sem desvio ou vantagem indevida demonstrados: não presuma o crime só pela guarda.",
+      "prova": [
+        "O desvio de pensão pelo curador pode atrair o aumento de um terço do art. 89? Sim; curador está entre as funções expressamente enumeradas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4bac9ffa-1652-5b42-9d37-cfaadaedea8c",
+        "content_sha256": "8ddb21264a41674df107dd484ea5105f5f621f81976af84dca81a0dae9e9ba7e",
+        "simples": "Apropriar-se de ou desviar bens, proventos, pensão, benefícios, remuneração ou qualquer outro rendimento de pessoa com deficiência: reclusão de 1 a 4 anos e multa. Aumenta-se a pena em 1/3 se o crime é cometido por tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial, ou por aquele que se apropriou em razão de ofício ou de profissão.",
+        "pontos": [
+          "Apropriação ou desvio de rendimentos da pessoa com deficiência.",
+          "Reclusão de 1 a 4 anos e multa.",
+          "Aumento de 1/3 para tutor, curador e quem age em razão de ofício."
+        ],
+        "atencao": [
+          "Aumento de 1/3 se o autor é curador ou tutor."
+        ],
+        "exemplo": "O curador que desvia a pensão do curatelado responde com pena aumentada de 1/3.",
+        "prova": [
+          "Assertiva que prevê detenção para esse crime erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-90",
+      "unit_id": "769fe62b-6cf9-5634-9286-74248978e5c3",
+      "content_sha256": "2d2cbdbc8717c052f97a6bf5ff1a3f72cce72bf4c27af559a7691873de960086",
+      "simples": "Abandonar pessoa com deficiência em hospital, casa de saúde, abrigo ou congênere tem pena de reclusão de dois a cinco anos e multa. Se resulta lesão grave: três a sete anos e multa; se morte: oito a quatorze anos e multa. Incorre nas mesmas penas quem não provê necessidades básicas quando obrigado por lei ou mandado.",
+      "pontos": [
+        "Básico: 2–5 anos e multa.",
+        "Lesão grave: 3–7 anos e multa.",
+        "Morte: 8–14 anos e multa.",
+        "Omissão de necessidades básicas: obrigação por lei ou mandado."
+      ],
+      "atencao": [
+        "Atualização: Lei 15.163/2025 elevou a pena básica, revogou o antigo parágrafo único e acrescentou §§1º–3º. Questão antiga com seis meses a três anos não representa a pena atual. Lei penal mais gravosa não retroage; as datas do fato e da vigência importam."
+      ],
+      "exemplo": "Após a vigência da alteração, o agente abandona a vítima em hospital e do abandono resulta lesão grave: examine a faixa de três a sete anos e multa. Variação: O fato é anterior à vigência da lei mais severa: não aplique automaticamente a pena nova retroativamente.",
+      "prova": [
+        "A pena atual do tipo básico é de dois a cinco anos e multa? Sim; essa é a redação dada pela Lei 15.163/2025, observada sua aplicação temporal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm"
+      ],
+      "expected": {
+        "unit_id": "769fe62b-6cf9-5634-9286-74248978e5c3",
+        "content_sha256": "2d2cbdbc8717c052f97a6bf5ff1a3f72cce72bf4c27af559a7691873de960086",
+        "simples": "Abandonar pessoa com deficiência em hospitais, casas de saúde, entidades de abrigamento ou congêneres: reclusão de 2 a 5 anos e multa. Se do abandono resulta lesão corporal de natureza grave, reclusão de 3 a 7 anos e multa. Se resulta morte, reclusão de 8 a 14 anos e multa. Nas mesmas penas incorre quem não prover as necessidades básicas de pessoa com deficiência quando obrigado por lei ou mandado.",
+        "pontos": [
+          "Abandono em hospitais ou entidades: reclusão de 2 a 5 anos e multa.",
+          "Lesão grave: 3 a 7 anos.",
+          "Morte: 8 a 14 anos.",
+          "Não prover necessidades básicas."
+        ],
+        "atencao": [
+          "Qualificadoras: lesão grave (3 a 7 anos) e morte (8 a 14 anos)."
+        ],
+        "exemplo": "Deixar a pessoa com deficiência em um hospital e desaparecer é abandono.",
+        "prova": [
+          "Assertiva que prevê detenção para o abandono erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-91",
+      "unit_id": "87dc8c10-4652-5d36-86c4-6e32a6fcf409",
+      "content_sha256": "f8681dcdfdb696983d671223a5b2dc4c8352d7674978f3017ae8bb1bb716598a",
+      "simples": "Reter ou utilizar cartão, meio eletrônico ou documento destinado a benefícios, rendimentos ou operações financeiras, para obter vantagem indevida própria ou alheia, tem pena de detenção de seis meses a dois anos e multa. Se cometido por tutor ou curador, aumenta-se em um terço.",
+      "pontos": [
+        "Reter OU utilizar meios financeiros descritos.",
+        "Finalidade: vantagem indevida própria ou alheia.",
+        "Detenção: 6 meses–2 anos e multa; tutor/curador: +1/3."
+      ],
+      "atencao": [
+        "Não retire a finalidade específica. Não confunda detenção deste tipo com reclusão do desvio patrimonial do art. 89."
+      ],
+      "exemplo": "O tutor retém o cartão de benefícios para obter vantagem indevida: examine o tipo e o aumento legal. Variação: O cartão é guardado sem finalidade de vantagem indevida demonstrada: a retenção isolada não permite ignorar esse elemento do tipo.",
+      "prova": [
+        "O tipo exige finalidade de obter vantagem indevida para si ou para outra pessoa? Sim; esse fim está expresso no caput."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "87dc8c10-4652-5d36-86c4-6e32a6fcf409",
+        "content_sha256": "f8681dcdfdb696983d671223a5b2dc4c8352d7674978f3017ae8bb1bb716598a",
+        "simples": "Reter ou utilizar cartão magnético, qualquer meio eletrônico ou documento de pessoa com deficiência destinados ao recebimento de benefícios, proventos, pensões ou remuneração, ou à realização de operações financeiras, com o fim de obter vantagem indevida para si ou para outrem: detenção de 6 meses a 2 anos e multa. Aumenta-se a pena em 1/3 se o crime é cometido por tutor ou curador.",
+        "pontos": [
+          "Reter ou usar cartão ou documento para obter vantagem indevida.",
+          "Detenção de 6 meses a 2 anos e multa.",
+          "Aumento de 1/3 se o autor é tutor ou curador."
+        ],
+        "atencao": [
+          "Pena de DETENÇÃO."
+        ],
+        "exemplo": "Quem retém o cartão da aposentadoria da pessoa com deficiência para se apropriar do dinheiro comete o crime.",
+        "prova": [
+          "Assertiva que prevê reclusão para esse crime erra: é detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-92",
+      "unit_id": "10f117db-6429-5b3f-b5e7-09dba4d114b0",
+      "content_sha256": "be339c0cdc265f9c6d55d4cdca3ac78bbdf054ce88d54da83042b55fef21b85c",
+      "simples": "O Cadastro-Inclusão é registro eletrônico público administrado pelo Executivo federal, com informações georreferenciadas sobre deficiência, condições socioeconômicas e barreiras. Integra dados de políticas e pesquisas. O uso limita-se a políticas públicas e estudos/pesquisas, com salvaguardas de privacidade e disseminação acessível.",
+      "pontos": [
+        "Executivo federal e integração de dados.",
+        "Políticas públicas e pesquisas como finalidades.",
+        "Privacidade, confidencialidade e formatos acessíveis."
+      ],
+      "atencao": [
+        "Registro público não significa licença para divulgar livremente dados pessoais sensíveis ou usar para qualquer finalidade comercial."
+      ],
+      "exemplo": "O gestor usa informações para identificar barreiras e avaliar políticas públicas, observando salvaguardas legais. Variação: Uma empresa pretende usar os dados para finalidade comercial genérica: essa finalidade não está na lista do §5º.",
+      "prova": [
+        "O caráter público do registro autoriza qualquer finalidade de uso dos dados? Não; o §5º limita as finalidades e o §4º exige salvaguardas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "10f117db-6429-5b3f-b5e7-09dba4d114b0",
+        "content_sha256": "be339c0cdc265f9c6d55d4cdca3ac78bbdf054ce88d54da83042b55fef21b85c",
+        "simples": "É criado o Cadastro Nacional de Inclusão da Pessoa com Deficiência (Cadastro-Inclusão), registro público eletrônico para coletar, processar, sistematizar e disseminar informações georreferenciadas que permitam a identificação e a caracterização socioeconômica da pessoa com deficiência e das barreiras que impedem a realização de seus direitos. É administrado pelo Poder Executivo federal e constituído por base de dados, instrumentos e sistemas eletrônicos, com dados obtidos pela integração dos sistemas de todas as políticas públicas e por censos e pesquisas. É facultada a celebração de convênios com instituições públicas e privadas.",
+        "pontos": [
+          "Cadastro-Inclusão: registro público eletrônico.",
+          "Informações georreferenciadas e socioeconômicas.",
+          "Administrado pelo Executivo federal.",
+          "Integração de bases e convênios."
+        ],
+        "atencao": [
+          "Administração pelo Poder Executivo FEDERAL."
+        ],
+        "exemplo": "O Cadastro-Inclusão reúne dados sobre pessoas com deficiência e barreiras.",
+        "prova": [
+          "Assertiva que atribui a administração do Cadastro-Inclusão aos Estados erra: é do Executivo federal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 93"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-93",
+      "unit_id": "a555d907-d879-56c7-a908-55e8bc0114e5",
+      "content_sha256": "558630918374209cb4c1fe723f06a5286f3ff1b3ca2dd02158ad40887ff4fab9",
+      "simples": "Inspeções e auditorias dos controles interno e externo observam o cumprimento da legislação de direitos da pessoa com deficiência e das normas vigentes de acessibilidade. A análise integra a atividade de controle, além da verificação financeira.",
+      "pontos": [
+        "Controle interno e externo.",
+        "Direitos e acessibilidade vigente."
+      ],
+      "atencao": [
+        "Não restrinja o dever a auditoria externa ou a conferência contábil; o artigo menciona os dois controles."
+      ],
+      "exemplo": "A auditoria interna verifica a acessibilidade do serviço e o cumprimento da legislação da pessoa com deficiência. Variação: A prova atribui o dever apenas ao controle externo: exclui uma categoria expressamente abrangida.",
+      "prova": [
+        "O controle interno também deve observar essas normas em suas auditorias? Sim; o artigo abrange controle interno e externo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a555d907-d879-56c7-a908-55e8bc0114e5",
+        "content_sha256": "558630918374209cb4c1fe723f06a5286f3ff1b3ca2dd02158ad40887ff4fab9",
+        "simples": "Na realização de inspeções e auditorias pelos órgãos de controle interno e externo, deve ser observado o cumprimento da legislação relativa à pessoa com deficiência e das normas de acessibilidade vigentes.",
+        "pontos": [
+          "Controle interno e externo verifica o cumprimento da legislação de acessibilidade."
+        ],
+        "atencao": [
+          "Dever dos órgãos de controle."
+        ],
+        "exemplo": "O tribunal de contas verifica a acessibilidade em obras públicas.",
+        "prova": [
+          "Assertiva que isenta os órgãos de controle de verificar a acessibilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-94",
+      "unit_id": "a9022297-3cd8-598e-ae11-3cf822ff7662",
+      "content_sha256": "f08b9a96456350c316f736e05c29347bca9143779ccf03ac532784f80a37e001",
+      "simples": "A LBI prevê auxílio-inclusão para deficiência moderada ou grave ligada ao BPC e ao ingresso em atividade remunerada, inclusive o recebimento do BPC nos cinco anos anteriores. A regulamentação legal posterior na Loas complementa os requisitos: remuneração até dois salários mínimos, vínculo ao RGPS ou RPPS, CadÚnico atualizado, CPF regular e critérios de manutenção do BPC.",
+      "pontos": [
+        "LBI: deficiência moderada ou grave e vínculo com BPC.",
+        "Loas: requisitos cumulativos e RGPS ou RPPS.",
+        "Valor: 50% do BPC; vedada acumulação com BPC e prestações enumeradas."
+      ],
+      "atencao": [
+        "Não estude somente a remissão original de 2015 ao RGPS. A Lei 14.176/2021 regulamentou na Loas; a Lei 14.441/2022 acrescentou a hipótese de concessão automática pelo INSS quando constatada acumulação com trabalho e preenchidos os demais requisitos. Essa hipótese não torna o benefício incondicionado."
+      ],
+      "exemplo": "A pessoa com deficiência moderada inicia atividade remunerada e satisfaz os requisitos cumulativos da Loas: pode ser analisado o auxílio-inclusão, com valor de metade do BPC. Variação: Ela pretende receber simultaneamente o auxílio e o BPC: a Loas art. 26-C proíbe essa acumulação de pagamentos.",
+      "prova": [
+        "A regulamentação do auxílio-inclusão exige apenas começar a trabalhar, sem outros requisitos? Não; a Loas exige condições cumulativas, disciplina valor, concessão e vedações de acumulação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm#art26a",
+        "Loas arts. 26-A a 26-E"
+      ],
+      "expected": {
+        "unit_id": "a9022297-3cd8-598e-ae11-3cf822ff7662",
+        "content_sha256": "f08b9a96456350c316f736e05c29347bca9143779ccf03ac532784f80a37e001",
+        "simples": "Terá direito a auxílio-inclusão, nos termos da lei, a pessoa com deficiência moderada ou grave que receba o benefício de prestação continuada e passe a exercer atividade remunerada que a enquadre como segurado obrigatório do RGPS; ou que tenha recebido, nos últimos 5 anos, o benefício de prestação continuada e exerça atividade remunerada que a enquadre como segurado obrigatório do RGPS.",
+        "pontos": [
+          "Auxílio-inclusão para pessoa com deficiência moderada ou grave.",
+          "Beneficiário do BPC que passa a trabalhar.",
+          "Quem recebeu o BPC nos últimos 5 anos."
+        ],
+        "atencao": [
+          "Janela de 5 anos desde o último BPC."
+        ],
+        "exemplo": "Quem recebia o BPC e consegue emprego formal pode receber o auxílio-inclusão.",
+        "prova": [
+          "Assertiva que fixa em 10 anos a janela do BPC erra: são 5 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-95",
+      "unit_id": "c4fb32cb-d782-5a9e-b892-d1b919e2f4d0",
+      "content_sha256": "b535ac5d5651c19028d5e58482fac612654f72b0a8fb1dce69453ea69d87be5c",
+      "simples": "Não se exige comparecimento a órgão público se a limitação funcional e a acessibilidade impõem ônus desproporcional e indevido. No interesse público, o agente faz contato na residência; no interesse da pessoa, ela pede atendimento domiciliar ou constitui procurador. A perícia e os serviços descritos também asseguram atendimento domiciliar nessa condição.",
+      "pontos": [
+        "Ônus desproporcional e indevido.",
+        "Interesse público: contato na residência.",
+        "Interesse da pessoa: solicitação ou procurador.",
+        "Atendimento domiciliar pelos serviços enumerados."
+      ],
+      "atencao": [
+        "A regra depende da situação concreta; não autoriza dispensar comparecimento indistintamente por qualquer deficiência. O serviço privado do parágrafo precisa integrar o SUS como contratado ou conveniado."
+      ],
+      "exemplo": "O deslocamento impõe ônus indevido em demanda do poder público: o agente promove o contato necessário na residência. Variação: A demanda é de interesse da pessoa: ela solicita atendimento domiciliar ou se representa por procurador para essa finalidade.",
+      "prova": [
+        "Quando o interesse é público e ocorre o ônus descrito, o agente deve promover contato na residência? Sim; o inciso I prevê esse procedimento."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c4fb32cb-d782-5a9e-b892-d1b919e2f4d0",
+        "content_sha256": "b535ac5d5651c19028d5e58482fac612654f72b0a8fb1dce69453ea69d87be5c",
+        "simples": "É vedado exigir o comparecimento de pessoa com deficiência perante os órgãos públicos quando seu deslocamento, em razão de sua limitação funcional e de condições de acessibilidade, imponha-lhe ônus desproporcional e indevido. Quando for de interesse do poder público, o agente promoverá o contato em sua residência; quando for de interesse da pessoa, ela apresentará solicitação de atendimento domiciliar ou fará representar-se por procurador. É assegurado atendimento domiciliar pela perícia médica e social do INSS, pelo serviço de saúde e pelas entidades do Suas, quando o deslocamento imponha ônus desproporcional.",
+        "pontos": [
+          "Vedada a exigência de comparecimento quando o deslocamento é um ônus desproporcional.",
+          "Atendimento domiciliar ou por procurador.",
+          "Perícia domiciliar do INSS."
+        ],
+        "atencao": [
+          "Perícia do INSS pode ser DOMICILIAR."
+        ],
+        "exemplo": "O perito do INSS vai à casa da pessoa que não consegue se deslocar.",
+        "prova": [
+          "Assertiva que obriga o comparecimento presencial em qualquer caso erra: pode haver atendimento domiciliar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1469 @@
+{
+  "course_slug": "lep",
+  "units": {
+    "art-50": {
+      "simples": "Comete falta grave o condenado à pena privativa de liberdade que incitar ou participar de movimento para subverter a ordem ou a disciplina; fugir; possuir indevidamente instrumento capaz de ofender a integridade física de outrem; provocar acidente de trabalho; descumprir, no regime aberto, as condições impostas; inobservar os deveres dos incisos II e V do art. 39; ter em sua posse, utilizar ou fornecer aparelho telefônico, de rádio ou similar; recusar-se ao procedimento de identificação do perfil genético; ou aproximar-se da residência ou do local de trabalho da vítima ou de seus familiares, em violação a medidas protetivas, nos casos de violência doméstica. Aplica-se, no que couber, ao preso provisório.",
+      "pontos": [
+        "Nove hipóteses de falta grave.",
+        "Fuga, subversão, posse de celular.",
+        "Recusa na coleta de DNA.",
+        "Aproximação da vítima de violência doméstica."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: incisos VII a IX incluídos por leis posteriores (celular, DNA e aproximação da vítima).",
+        "Posse de CELULAR é falta grave.",
+        "Lei 15.410 assinada em 20/5/2026, publicada e vigente em 21/5/2026; inciso IX não é original de 1984.",
+        "Aplicação ao provisório apenas NO QUE COUBER, sem transformar condenação exigida no inciso IX em requisito inexistente.",
+        "Apuração, defesa e individualização das consequências: não RDD automático para toda falta."
+      ],
+      "exemplo": "Condenado por violência doméstica, em saída autorizada e sob medida protetiva pertinente, aproxima-se do trabalho da vítima. Resposta: examinar inciso IX. Variação: A presença casual em qualquer bairro, sem os requisitos descritos, não prova automaticamente essa falta.",
+      "prova": [
+        "O inciso IX alcança qualquer condenado, sem medida protetiva? Não. Exige condenação por violência doméstica, contexto de regime/benefício e medidas do art. 22, II/III, da Maria da Penha.",
+        "Recusa de DNA autoriza coleta irrestrita de qualquer pessoa? Não. Integrar âmbito e garantias da identificação genética; previsão de falta não elimina requisitos legais."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 50",
+          "significado": "Comete falta grave o condenado à pena privativa de liberdade que incitar ou participar de movimento para subverter a ordem ou a disciplina; fugir; possuir indevidamente instrumento capaz de ofender a integridade física de outrem; provocar acidente de trabalho; descumprir, no regime aberto, as condições impostas; inobservar os deveres dos incisos II e V do art. 39; ter em sua posse, utilizar ou fornecer aparelho telefônico, de rádio ou similar; recusar-se ao procedimento de identificação do perfil genético; ou aproximar-se da residência ou do local de trabalho da vítima ou de seus familiares, em violação a medidas protetivas, nos casos de violência doméstica. Aplica-se, no que couber, ao preso provisório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 52",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm"
+      ]
+    },
+    "art-52": {
+      "simples": "Crime doloso constitui falta grave; RDD no caput exige subversão da ordem/disciplina, com decisão judicial. Há hipóteses próprias de alto risco/fundadas suspeitas (§1º) e ameaça/violência contra vítima de violência doméstica/familiares (§8º). Inicial até dois anos; prorrogação anual depende dos pressupostos do §4º. Defensor é exceção do monitoramento do inciso V, integrada às normas especiais e garantias. §6º exige autorização judicial para gravação da visita. §10 permite requerimento desde recolhimento, presentes pressupostos; não inclusão automática.",
+      "pontos": [
+        "RDD: duração máxima de até 2 anos, prorrogável por períodos de 1 ano.",
+        "Cela individual e visitas quinzenais.",
+        "Banho de sol de 2 horas em grupos de até 4 presos.",
+        "Alto risco ou suspeita de integrar organização criminosa.",
+        "Presídio federal se líder ou atuação em 2 ou mais Estados.",
+        "Aplicável ao autor de violência doméstica que ameace a vítima."
+      ],
+      "atencao": [
+        "Lei 15.407: publicada 12/5/2026, retificada 22/5; §§1º,III/IV e §9º vetados não criam requisitos atuais.",
+        "Lei 15.410: §8º atual desde 21/5/2026; veto anterior não impediu inserção posterior.",
+        "Lei Antifacção 15.358/2026 alterou §6º. ADIs 7952/7956/7957/7958: audiência pública não equivale a decisão de mérito. Não certificada solução de todo controle constitucional posterior.",
+        "Telefonema do §7º: após primeiros seis meses, sem a visita, agendado, família, duas vezes/mês, dez minutos.",
+        "Não confundir duração inicial, repetição por nova falta e prorrogações anuais fundamentadas."
+      ],
+      "exemplo": "Diretor requer RDD desde recolhimento, indicando pressupostos concretos. Resposta: pedido é possível pelo §10, mas não inclusão administrativa automática. Variação: O §8º vetado na Lei 15.407 foi posteriormente inserido pela Lei 15.410; não memorizar só o veto antigo.",
+      "prova": [
+        "Todo crime doloso gera RDD automaticamente? Não. Caput exige subversão interna para esse recorte; §§1º/8º têm pressupostos próprios e a inclusão depende do regime judicial do 54.",
+        "Toda entrevista com defensor é gravada livremente pelo inciso V? Não. O inciso excepciona defensor; integrar 41-A/B, sigilo e garantias. Não há monitoramento universal por simples condição de preso."
+      ],
+      "termos": [
+        {
+          "termo": "RDD",
+          "significado": "Regime disciplinar com pressupostos próprios e controle judicial, distinto de todo regime fechado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 54",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ]
+    },
+    "art-54": {
+      "simples": "RDD depende de decisão judicial fundamentada e requerimento circunstanciado. Lei 15.407/2026 prevê exame liminar e decisão final até quinze dias após manifestações do MP e defesa. §3º permite decidir diante de ausência de manifestação, sem autorizar supressão da oportunidade de defesa. Caput sobre sanções administrativas deve ser integrado ao art. 41, §1º, atual, que exige ato judicial motivado para restringir os direitos ali enumerados.",
+      "pontos": [
+        "Diretor aplica as sanções dos incisos I a IV.",
+        "Juiz decide o RDD.",
+        "Decisão final em até 15 dias."
+      ],
+      "atencao": [
+        "Lei 15.407 publicada/vigente em 12/5/2026, retificada 22/5. Conferência editorial em 13/10 não é data original/vigência.",
+        "Não converter silêncio em negativa de defesa ou prazo final em duração máxima de todo RDD.",
+        "Não certificada solução de todas as controvérsias constitucionais da decisão liminar/silêncio."
+      ],
+      "exemplo": "Pedido de RDD recebe exame liminar e decisão final motivada até quinze dias. Resposta: são etapas distintas, com oportunidade de manifestação do MP e defesa. Variação: Silêncio após oportunidade regular não se confunde com impedir a defesa de participar.",
+      "prova": [
+        "A falta de resposta permite nem intimar a defesa? Não. O §3º não elimina oportunidade de defesa; integra-se ao §2º e garantias. Ausência de manifestação e ausência de oportunidade são distintas.",
+        "O prazo final de quinze dias é igual ao isolamento preventivo de dez dias? Não. Art. 54 regula decisão do RDD; art. 60 tem medida preventiva própria."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 54",
+          "significado": "RDD depende de decisão judicial fundamentada e requerimento circunstanciado. Lei 15.407/2026 prevê exame liminar e decisão final até quinze dias após manifestações do MP e defesa. §3º permite decidir diante de ausência de manifestação, sem autorizar supressão da oportunidade de defesa. Caput sobre sanções administrativas deve ser integrado ao art. 41, §1º, atual, que exige ato judicial motivado para restringir os direitos ali enumerados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 52",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm"
+      ]
+    },
+    "art-96": {
+      "simples": "No Centro de Observação realizar-se-ão os exames gerais e o criminológico, cujos resultados serão encaminhados à Comissão Técnica de Classificação. No Centro poderão ser realizadas pesquisas criminológicas.",
+      "pontos": [
+        "Exames gerais e criminológico.",
+        "Resultados à Comissão Técnica.",
+        "Pesquisas criminológicas."
+      ],
+      "atencao": [
+        "Centro de Observação: exame criminológico."
+      ],
+      "exemplo": "Centro realiza exame criminológico e encaminha resultado à Comissão Técnica. Resposta: exame subsidia classificação, não concede sozinho progressão. Variação: Pesquisas criminológicas são possíveis, com requisitos éticos; não experimentação compulsória livre.",
+      "prova": [
+        "O Centro decide progressão por ter realizado exame? Não. Exames e classificação são funções distintas da decisão judicial do art. 112.",
+        "O parágrafo obriga pesquisa científica em todo preso? Não. Diz PODERÃO ser realizadas pesquisas, com garantias éticas e jurídicas aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 96",
+          "significado": "No Centro de Observação realizar-se-ão os exames gerais e o criminológico, cujos resultados serão encaminhados à Comissão Técnica de Classificação. No Centro poderão ser realizadas pesquisas criminológicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 8º"
+      ]
+    },
+    "art-97": {
+      "simples": "O Centro de Observação será instalado em unidade autônoma ou em anexo a estabelecimento penal.",
+      "pontos": [
+        "Unidade autônoma ou anexo a estabelecimento."
+      ],
+      "atencao": [
+        "Duas formas de instalação."
+      ],
+      "exemplo": "Centro funciona em anexo a estabelecimento penal. Resposta: forma expressamente permitida, além da unidade autônoma. Variação: Anexo não elimina requisitos de segurança, adequação e garantia dos exames.",
+      "prova": [
+        "A instalação deve ser necessariamente em prédio autônomo? Não. O artigo admite unidade autônoma OU anexo a estabelecimento penal.",
+        "Ser anexo autoriza dispensar exames ou estrutura necessária? Não. A forma de instalação não suprime a função do Centro nem suas exigências pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 97",
+          "significado": "O Centro de Observação será instalado em unidade autônoma ou em anexo a estabelecimento penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 96"
+      ]
+    },
+    "art-98": {
+      "simples": "Os exames poderão ser realizados pela Comissão Técnica de Classificação, na falta do Centro de Observação.",
+      "pontos": [
+        "Comissão Técnica supre a falta do Centro de Observação."
+      ],
+      "atencao": [
+        "Substituição supletiva."
+      ],
+      "exemplo": "Sem Centro de Observação, Comissão Técnica realiza exames. Resposta: substituição supletiva prevista. Variação: Não é autorização para qualquer servidor sem qualificação elaborar todos os laudos.",
+      "prova": [
+        "A inexistência do Centro torna todo exame impossível por lei? Não. A Comissão Técnica pode realizar os exames na falta dele.",
+        "A regra transfere a decisão judicial de progressão à Comissão? Não. Suprir realização de exames não equivale a conceder benefício judicial."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 98",
+          "significado": "Os exames poderão ser realizados pela Comissão Técnica de Classificação, na falta do Centro de Observação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 96"
+      ]
+    },
+    "art-99": {
+      "simples": "O Hospital de Custódia e Tratamento Psiquiátrico destina-se aos inimputáveis e semi-imputáveis referidos no art. 26 e seu parágrafo único do Código Penal. Aplica-se ao hospital, no que couber, o parágrafo único do art. 88.",
+      "pontos": [
+        "Destinado a inimputáveis e semi-imputáveis.",
+        "Aplicam-se requisitos da cela, no que couber."
+      ],
+      "atencao": [
+        "HCTP: inimputáveis e semi-imputáveis.",
+        "Integre Lei 10.216/2001 e políticas antimanicomiais atuais; não certificar implantação local ou toda regulamentação CNJ. Fonte do ato CNJ não obtida nesta coleta.",
+        "Não confundir inimputabilidade com diagnóstico isolado; CP 26 tem requisitos próprios."
+      ],
+      "exemplo": "Pessoa submetida à medida recebe avaliação individualizada de saúde. Resposta: texto do HCTP precisa ser integrado ao modelo de cuidado da Lei 10.216. Variação: Diagnóstico não implica automaticamente internação asilar ou institucionalização perpétua.",
+      "prova": [
+        "Qualquer diagnóstico obriga internação sem examinar alternativas? Não. Lei 10.216 exige insuficiência dos recursos extra-hospitalares e cuidado adequado; não basta etiqueta diagnóstica.",
+        "O artigo manda manter pessoa para sempre no hospital? Não. Destinação textual não elimina direitos, limites da medida ou avaliação de cuidado."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 99",
+          "significado": "O Hospital de Custódia e Tratamento Psiquiátrico destina-se aos inimputáveis e semi-imputáveis referidos no art. 26 e seu parágrafo único do Código Penal. Aplica-se ao hospital, no que couber, o parágrafo único do art. 88."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 100",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-100": {
+      "simples": "O exame psiquiátrico e os demais exames necessários ao tratamento são obrigatórios para todos os internados.",
+      "pontos": [
+        "Exames obrigatórios para todos os internados."
+      ],
+      "atencao": [
+        "Obrigatórios."
+      ],
+      "exemplo": "Internado recebe exame psiquiátrico e demais avaliações necessárias. Resposta: obrigatoriedade de cuidado, não permissão de qualquer procedimento invasivo. Variação: Pesquisa científica exige consentimentos e controles próprios da Lei 10.216, art. 11.",
+      "prova": [
+        "A obrigatoriedade do exame autoriza experimento compulsório irrestrito? Não. Exame necessário ao tratamento e pesquisa têm regimes e garantias distintos.",
+        "O artigo permite excluir parte dos internados de todo exame necessário? Não. O texto refere TODOS os internados, integrado a necessidades clínicas e direitos."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 100",
+          "significado": "O exame psiquiátrico e os demais exames necessários ao tratamento são obrigatórios para todos os internados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 99",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-101": {
+      "simples": "O tratamento ambulatorial, previsto no art. 97, segunda parte, do Código Penal, será realizado no Hospital de Custódia e Tratamento Psiquiátrico ou em outro local com dependência médica adequada.",
+      "pontos": [
+        "Tratamento ambulatorial no HCTP ou local com dependência médica adequada."
+      ],
+      "atencao": [
+        "Alternativa à internação."
+      ],
+      "exemplo": "Tratamento ambulatorial ocorre em serviço adequado fora do HCTP. Resposta: alternativa textual possível, integrada ao cuidado comunitário. Variação: Ambulatorial não significa internação obrigatória só porque o artigo menciona hospital.",
+      "prova": [
+        "Somente dentro do HCTP pode ocorrer tratamento ambulatorial? Não. O artigo admite outro local com dependência médica adequada, integrado ao modelo de saúde atual.",
+        "Ambulatorial e internação são modalidades idênticas? Não. A modalidade precisa ser distinguida e justificada segundo necessidades clínicas e regras aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 101",
+          "significado": "O tratamento ambulatorial, previsto no art. 97, segunda parte, do Código Penal, será realizado no Hospital de Custódia e Tratamento Psiquiátrico ou em outro local com dependência médica adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 99",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-102": {
+      "simples": "A cadeia pública destina-se ao recolhimento de presos provisórios. Essa destinação não valida a prisão por si nem dispensa título e controles judiciais; não confundir provisório com toda pessoa que simplesmente aguarda qualquer recurso.",
+      "pontos": [
+        "Cadeia pública: presos provisórios."
+      ],
+      "atencao": [
+        "Cadeia pública = PROVISÓRIOS."
+      ],
+      "exemplo": "Pessoa presa provisoriamente é recolhida conforme destinação da cadeia pública. Resposta: destinação legal, sem prejuízo da validade do título de custódia. Variação: Ter ocorrido flagrante não autoriza manter prisão indefinidamente sem controle judicial.",
+      "prova": [
+        "A destinação da cadeia pública torna legal qualquer prisão nela realizada? Não. Local adequado e título válido de custódia são requisitos distintos.",
+        "O artigo destina a cadeia a condenados definitivos do regime fechado? Não. Seu destinatário textual é o preso PROVISÓRIO, não substituição automática de penitenciária."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 102",
+          "significado": "A cadeia pública destina-se ao recolhimento de presos provisórios. Essa destinação não valida a prisão por si nem dispensa título e controles judiciais; não confundir provisório com toda pessoa que simplesmente aguarda qualquer recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 103"
+      ]
+    },
+    "art-103": {
+      "simples": "Cada comarca terá, pelo menos, 1 cadeia pública, a fim de resguardar o interesse da Administração da Justiça Criminal e a permanência do preso em local próximo ao seu meio social e familiar.",
+      "pontos": [
+        "Ao menos 1 cadeia pública por comarca.",
+        "Proximidade do meio social e familiar."
+      ],
+      "atencao": [
+        "Uma por COMARCA."
+      ],
+      "exemplo": "Comarca tem cadeia pública próxima ao meio social/familiar. Resposta: artigo prevê ao menos uma por comarca. Variação: Norma não comprova que toda comarca tem unidade instalada nem garante escolher livremente qualquer prisão.",
+      "prova": [
+        "O mínimo textual é uma por Estado? Não. É pelo menos uma por COMARCA, com finalidade social/familiar e de administração da Justiça.",
+        "A previsão comprova existência concreta em toda comarca? Não. Obrigação normativa e implantação factual são coisas diferentes; consultar situação local."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 103",
+          "significado": "Cada comarca terá, pelo menos, 1 cadeia pública, a fim de resguardar o interesse da Administração da Justiça Criminal e a permanência do preso em local próximo ao seu meio social e familiar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 102"
+      ]
+    },
+    "art-104": {
+      "simples": "O estabelecimento da cadeia pública será instalado próximo de centro urbano, observando-se na construção as exigências mínimas do art. 88 e seu parágrafo único.",
+      "pontos": [
+        "Perto do centro urbano.",
+        "Exigências mínimas da cela."
+      ],
+      "atencao": [
+        "Próxima de centro urbano."
+      ],
+      "exemplo": "Projeto de cadeia pública prevê proximidade urbana e requisitos mínimos do art. 88. Resposta: distância e salubridade devem ser integradas. Variação: Não copiar isolamento distante de penitenciária masculina para toda cadeia pública.",
+      "prova": [
+        "O artigo determina instalar cadeia pública sempre longe da cidade? Não. Prevê proximidade de centro urbano, com exigências mínimas do art. 88.",
+        "A proximidade elimina requisitos de área e salubridade? Não. O artigo exige ambos; não usar um requisito para dispensar os demais."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 104",
+          "significado": "O estabelecimento da cadeia pública será instalado próximo de centro urbano, observando-se na construção as exigências mínimas do art. 88 e seu parágrafo único."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 88"
+      ]
+    },
+    "art-105": {
+      "simples": "Transitando em julgado a sentença que aplicar pena privativa de liberdade, se o réu estiver ou vier a ser preso, o juiz ordenará a expedição de guia de recolhimento para a execução.",
+      "pontos": [
+        "Guia de recolhimento após o trânsito em julgado."
+      ],
+      "atencao": [
+        "Guia expedida pelo juiz.",
+        "Não certificar universalmente todos os casos de execução provisória/Júri apenas por este artigo; examinar disciplina e jurisprudência específicas."
+      ],
+      "exemplo": "Sentença definitiva de prisão recebe guia após trânsito e prisão no recorte legal. Resposta: guia definitiva tem marco próprio. Variação: Execução provisória para benefícios de preso cautelar e situações constitucionais específicas exigem exame próprio, não autorização geral de prisão antes do trânsito.",
+      "prova": [
+        "A guia definitiva do artigo dispensa trânsito em julgado? Não. A hipótese textual começa pelo trânsito, sem confundir guia provisória com antecipação geral da pena.",
+        "O trânsito torna obrigatória prisão imediata de toda pessoa sem examinar sentença/regime? Não. O texto também distingue réu preso ou que vier a ser preso e título aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 105",
+          "significado": "Transitando em julgado a sentença que aplicar pena privativa de liberdade, se o réu estiver ou vier a ser preso, o juiz ordenará a expedição de guia de recolhimento para a execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 106"
+      ]
+    },
+    "art-106": {
+      "simples": "A guia de recolhimento, extraída pelo escrivão, que a rubricará em todas as folhas e a assinará com o juiz, será remetida à autoridade administrativa incumbida da execução e conterá o nome do condenado; sua qualificação civil e registro geral; o inteiro teor da denúncia e da sentença e a certidão de trânsito em julgado; a informação sobre antecedentes e grau de instrução; a data da terminação da pena; e outras peças reputadas indispensáveis. Ao Ministério Público se dará ciência. A guia será retificada sempre que sobrevier modificação quanto ao início da execução ou à duração da pena. Se o condenado era funcionário da Administração da Justiça Criminal, far-se-á menção.",
+      "pontos": [
+        "Conteúdo da guia de recolhimento.",
+        "Ciência ao Ministério Público.",
+        "Retificação quando houver modificação.",
+        "Menção ao funcionário da Justiça Criminal."
+      ],
+      "atencao": [
+        "A guia é retificada sempre que mudar o início ou o tempo da pena."
+      ],
+      "exemplo": "Remição muda a data de término; a guia recebe retificação. Resposta: manter dados judiciais e ciência ao MP. Variação: Nova guia não pode manter data antiga só porque a sentença não mudou.",
+      "prova": [
+        "Alteração da duração da pena permite deixar a guia desatualizada? Não. §2º exige retificação quando houver mudança no início ou duração da execução.",
+        "A menção de funcionário vale para todo servidor público indiscriminadamente? Não. §3º refere Administração da JUSTIÇA CRIMINAL ao tempo do fato, integrada ao art. 84."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 106",
+          "significado": "A guia de recolhimento, extraída pelo escrivão, que a rubricará em todas as folhas e a assinará com o juiz, será remetida à autoridade administrativa incumbida da execução e conterá o nome do condenado; sua qualificação civil e registro geral; o inteiro teor da denúncia e da sentença e a certidão de trânsito em julgado; a informação sobre antecedentes e grau de instrução; a data da terminação da pena; e outras peças reputadas indispensáveis. Ao Ministério Público se dará ciência. A guia será retificada sempre que sobrevier modificação quanto ao início da execução ou à duração da pena. Se o condenado era funcionário da Administração da Justiça Criminal, far-se-á menção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 107"
+      ]
+    },
+    "art-107": {
+      "simples": "Ninguém será recolhido, para cumprimento de pena privativa de liberdade, sem a guia expedida pela autoridade judiciária. A autoridade administrativa passará recibo da guia, para juntá-la aos autos, e dará ciência de seus termos ao condenado. As guias serão registradas em livro especial, em ordem cronológica, e anexadas ao prontuário, aditando-se o cálculo das remições e outras retificações.",
+      "pontos": [
+        "Sem guia, ninguém é recolhido.",
+        "Recibo da guia e ciência ao condenado.",
+        "Registro em livro especial."
+      ],
+      "atencao": [
+        "O recorte PARA CUMPRIMENTO DE PENA impede slogan sobre toda prisão.",
+        "Não tratar referência a livro como vedação universal de sistemas eletrônicos oficiais."
+      ],
+      "exemplo": "Unidade recebe guia judicial para cumprimento de pena e dá ciência ao condenado. Resposta: execução tem registro e atualizações. Variação: Prisão cautelar tem título próprio; não transformar sem guia de pena em autorização de fuga ou nulidade automática de qualquer custódia.",
+      "prova": [
+        "Ninguém recolhido sem guia significa inexistência de todo flagrante? Não. O recorte é cumprimento de pena privativa, distinto de prisão cautelar legalmente fundada.",
+        "Cálculo de remição pode ser ignorado no prontuário? Não. §2º prevê aditamento das remições e retificações durante a execução."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 107",
+          "significado": "Ninguém será recolhido, para cumprimento de pena privativa de liberdade, sem a guia expedida pela autoridade judiciária. A autoridade administrativa passará recibo da guia, para juntá-la aos autos, e dará ciência de seus termos ao condenado. As guias serão registradas em livro especial, em ordem cronológica, e anexadas ao prontuário, aditando-se o cálculo das remições e outras retificações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 106"
+      ]
+    },
+    "art-108": {
+      "simples": "O condenado a quem sobrevier doença mental será internado em Hospital de Custódia e Tratamento Psiquiátrico.",
+      "pontos": [
+        "Doença mental superveniente: internação no HCTP."
+      ],
+      "atencao": [
+        "Ver também o art. 183 (substituição por medida de segurança).",
+        "Não certificada toda regulamentação antimanicomial ou implantação local; sem treino de internação automática por diagnóstico."
+      ],
+      "exemplo": "Condenado apresenta transtorno mental superveniente e recebe avaliação adequada. Resposta: cuidado exige integração clínica/jurídica, não internação asilar automática. Variação: A doença não prova sozinha inimputabilidade ao tempo do crime nem converte definitivamente a pena sem decisão.",
+      "prova": [
+        "Qualquer diagnóstico superveniente muda automaticamente a sentença para absolvição? Não. É situação da execução, distinta da capacidade ao tempo do fato e de conversão judicial do 183.",
+        "O texto permite abandonar tratamento ou internar sem necessidade clínica? Não. Integrar Lei 10.216, direitos e insuficiência dos recursos extra-hospitalares para internação."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 108",
+          "significado": "O condenado a quem sobrevier doença mental será internado em Hospital de Custódia e Tratamento Psiquiátrico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 183",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-109": {
+      "simples": "Cumprida ou extinta a pena, o condenado será posto em liberdade, mediante alvará do Juiz, se por outro motivo não estiver preso.",
+      "pontos": [
+        "Liberdade mediante alvará do juiz, se não estiver preso por outro motivo."
+      ],
+      "atencao": [
+        "Alvará de soltura do JUIZ."
+      ],
+      "exemplo": "Pena termina e não existe outro título de prisão; juiz expede alvará. Resposta: libertação no recorte, com conferência de outras ordens. Variação: Outra custódia válida não pode ser ignorada; inexistência de outro título não permite prolongar pena já extinta.",
+      "prova": [
+        "Extinção desta pena elimina qualquer outra prisão válida? Não. O artigo ressalva SE POR OUTRO MOTIVO NÃO ESTIVER PRESO; examinar outros títulos.",
+        "O diretor escolhe prolongar a pena por conveniência? Não. Cumprida/extinta, cabe providência judicial de liberdade quando não houver outra causa legal de prisão."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 109",
+          "significado": "Cumprida ou extinta a pena, o condenado será posto em liberdade, mediante alvará do Juiz, se por outro motivo não estiver preso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 110"
+      ]
+    },
+    "art-110": {
+      "simples": "O Juiz, na sentença, estabelecerá o regime no qual o condenado iniciará o cumprimento da pena privativa de liberdade, observado o art. 33 e seus parágrafos do Código Penal.",
+      "pontos": [
+        "Regime inicial fixado na sentença."
+      ],
+      "atencao": [
+        "Observa o art. 33 do Código Penal."
+      ],
+      "exemplo": "Sentença fixa regime conforme CP 33 e critérios pertinentes. Resposta: competência judicial e individualização. Variação: Não presumir fechado apenas pela gravidade abstrata ou por todo crime hediondo, sem regime constitucional aplicável.",
+      "prova": [
+        "Quem escolhe o regime inicial é necessariamente o diretor? Não. O juiz o estabelece na sentença, observado CP 33 e critérios pertinentes.",
+        "Regime inicial e progressão posterior são a mesma decisão? Não. A sentença fixa início; execução examina progressão e eventuais modificações."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 110",
+          "significado": "O Juiz, na sentença, estabelecerá o regime no qual o condenado iniciará o cumprimento da pena privativa de liberdade, observado o art. 33 e seus parágrafos do Código Penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 33",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-111": {
+      "simples": "Quando houver condenação por mais de um crime, no mesmo processo ou em processos distintos, a determinação do regime de cumprimento será feita pelo resultado da soma ou unificação das penas, observada, quando for o caso, a detração ou remição. Sobrevindo condenação no curso da execução, somar-se-á a pena ao restante da que está sendo cumprida, para determinação do regime.",
+      "pontos": [
+        "Regime pela soma ou unificação das penas.",
+        "Condenação superveniente soma-se ao restante."
+      ],
+      "atencao": [
+        "Regime definido pelo RESULTADO da soma."
+      ],
+      "exemplo": "Restam quatro anos e sobrevém pena de dois: analisar soma de seis para regime, com deduções cabíveis. Resposta: soma do RESTANTE, não repetir pena inteira cumprida. Variação: Unificar penas não prova por si falta grave ou reinício automático de todos os prazos de benefícios.",
+      "prova": [
+        "Condenação superveniente soma-se sempre à pena original inteira? Não. O parágrafo manda somar ao RESTANTE da pena em cumprimento, com cálculos pertinentes.",
+        "A soma permite ignorar remição/detração quando aplicáveis? Não. O caput exige observar essas deduções na determinação do regime."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 111",
+          "significado": "Quando houver condenação por mais de um crime, no mesmo processo ou em processos distintos, a determinação do regime de cumprimento será feita pelo resultado da soma ou unificação das penas, observada, quando for o caso, a detração ou remição. Sobrevindo condenação no curso da execução, somar-se-á a pena ao restante da que está sendo cumprida, para determinação do regime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 112"
+      ]
+    },
+    "art-112": {
+      "simples": "Progressão exige análise judicial do requisito temporal e subjetivo. Compilado atual: caput de 1/6; incisos I–III alterados pela Lei 15.402/2026, ressalvando Título XII do CP nos I/II; incisos V–VIII da Lei 15.358/2026 trazem 70%, 75%, 80% e 85% conforme hipóteses. Não aplicar tudo retroativamente nem resolver por slogan o inciso IV residual. §1º inclui resultados de exame criminológico na redação de 2024; sua incidência temporal exige jurisprudência pertinente. Progressão especial de 1/8 do §3º tem requisitos CUMULATIVOS. Tráfico privilegiado não é hediondo para este artigo. Falta grave interrompe progressão com base na pena remanescente; §7º admite recuperação de bom comportamento antes de um ano na hipótese expressa.",
+      "pontos": [
+        "Separar texto vigente e regime temporal do fato; nova fração mais gravosa não vale automaticamente para condenações antigas.",
+        "Lei 15.402 publicada/vigente em 8/5/2026; Lei 15.358 alterou hediondos em 2026.",
+        "Incisos I/II ressalvam Título XII do CP; inciso IV conserva redação anterior, sem exercício que resolva toda sobreposição por automatismo.",
+        "§1º: boa conduta e exame; §2º decisão motivada com MP e defensor.",
+        "§3º: 1/8, primária, boa conduta, sem violência, crime contra filho/dependente ou integração de organização, cumulativamente.",
+        "§6º: interrupção para progressão, base remanescente; não reinício universal de todo benefício."
+      ],
+      "atencao": [
+        "STF Tema 1408/RE 1536743: notícia de 7/7/2025 reconhece repercussão geral; não é tese de mérito certificada. Não certificada decisão posterior integral nesta revisão.",
+        "Controle da Antifacção em ADIs não declarado resolvido. Não apresentar percentuais atuais como solução judicial de todas as hipóteses.",
+        "Bom comportamento após um ano OU antes na condição do §7º; não fixar um ano invariável.",
+        "Súmulas 534/535: falta grave interrompe progressão, não prazo de indulto/comutação; cada benefício tem requisitos próprios."
+      ],
+      "exemplo": "Texto compilado atual fixa setenta por cento para hediondo primário. Resposta: é regra textual de 2026; aplicar a caso exige data do fato, lei cabível e requisitos. Variação: Para fato antigo, não impor percentual agravado de 2026 automaticamente; comparar regimes íntegros e garantias intertemporais.",
+      "prova": [
+        "Todo hediondo primário antigo passou automaticamente de quarenta para setenta por cento? Não. Lei penal mais gravosa não retroage; texto atual e regime aplicável ao fato são distintos.",
+        "Cumprir a fração torna automática a progressão sem outros requisitos? Não. Há boa conduta, exame no regime aplicável, manifestação de MP/defesa e decisão motivada, além das vedações pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Progressão de regime",
+          "significado": "Passagem para regime menos rigoroso após cumprir fração da pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Lei dos Crimes Hediondos",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=534+INPATH%28NUM%29",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=535+INPATH%28NUM%29"
+      ]
+    },
+    "art-113": {
+      "simples": "O ingresso do condenado em regime aberto supõe a aceitação de seu programa e das condições impostas pelo Juiz.",
+      "pontos": [
+        "Aceitação do programa e das condições judiciais."
+      ],
+      "atencao": [
+        "Aceitação do programa."
+      ],
+      "exemplo": "Condenado aceita programa e condições válidas do aberto. Resposta: aceitação é requisito do ingresso. Variação: Aceitar não convalida condição ilegal ou elimina o direito de impugnar decisão.",
+      "prova": [
+        "A aceitação transforma qualquer exigência ilegal em válida? Não. O programa precisa observar lei e garantias; consentimento não substitui legalidade.",
+        "O ingresso no aberto dispensa conhecer e aceitar condições? Não. O artigo supõe aceitação do programa e das condições judiciais pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 113",
+          "significado": "O ingresso do condenado em regime aberto supõe a aceitação de seu programa e das condições impostas pelo Juiz."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 114"
+      ]
+    },
+    "art-115": {
+      "simples": "O juiz poderá estabelecer condições especiais para a concessão de regime aberto, entre as quais a fiscalização por monitoramento eletrônico, sem prejuízo das condições gerais e obrigatórias: permanecer no local designado durante o repouso e nos dias de folga; sair para o trabalho e retornar nos horários fixados; não se ausentar da cidade onde reside sem autorização judicial; e comparecer a Juízo, para informar e justificar suas atividades, quando determinado.",
+      "pontos": [
+        "Condições especiais, inclusive monitoramento eletrônico.",
+        "Condições gerais obrigatórias: recolhimento, horários, não se ausentar da cidade e comparecer a Juízo."
+      ],
+      "atencao": [
+        "Quatro condições gerais e obrigatórias.",
+        "Monitoramento é hipótese possível, não obrigatório indistintamente por este artigo; há regras especiais em outras normas."
+      ],
+      "exemplo": "Juiz fixa monitoramento motivado no aberto além das quatro condições gerais. Resposta: especial e geral têm regimes distintos. Variação: Não converter pena restritiva de direitos em condição especial extra indevida do aberto; Súmula 493.",
+      "prova": [
+        "Pode impor prestação de serviços como pena substitutiva só por condição especial do aberto? Não. Súmula 493/STJ considera inadmissível pena substitutiva do CP 44 como condição especial.",
+        "Comparecimento ao juízo é necessariamente diário? Não. Inciso IV prevê quando determinado; não inventar frequência uniforme para todos."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 115",
+          "significado": "O juiz poderá estabelecer condições especiais para a concessão de regime aberto, entre as quais a fiscalização por monitoramento eletrônico, sem prejuízo das condições gerais e obrigatórias: permanecer no local designado durante o repouso e nos dias de folga; sair para o trabalho e retornar nos horários fixados; não se ausentar da cidade onde reside sem autorização judicial; e comparecer a Juízo, para informar e justificar suas atividades, quando determinado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 116",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=493+INPATH%28NUM%29"
+      ]
+    },
+    "art-116": {
+      "simples": "O Juiz poderá modificar as condições estabelecidas, de ofício, a requerimento do Ministério Público, da autoridade administrativa ou do condenado, desde que as circunstâncias assim o recomendem.",
+      "pontos": [
+        "Modificação das condições de ofício ou a requerimento."
+      ],
+      "atencao": [
+        "Legitimados: MP, autoridade administrativa e condenado."
+      ],
+      "exemplo": "Novo horário de trabalho justifica revisão motivada das condições. Resposta: condenado também pode requerer ajuste. Variação: Mudança pessoal sem decisão não equivale à alteração judicial autorizada.",
+      "prova": [
+        "Somente o Ministério Público pode pedir alteração? Não. O artigo inclui autoridade administrativa e condenado, além da iniciativa judicial no seu recorte.",
+        "O condenado pode simplesmente trocar condição válida por outra? Não. É decisão do juiz conforme circunstâncias, não alteração unilateral por preferência."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 116",
+          "significado": "O Juiz poderá modificar as condições estabelecidas, de ofício, a requerimento do Ministério Público, da autoridade administrativa ou do condenado, desde que as circunstâncias assim o recomendem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 115"
+      ]
+    },
+    "art-117": {
+      "simples": "Somente se admitirá o recolhimento do beneficiário de regime aberto em residência particular quando se tratar de condenado maior de 70 anos; condenado acometido de doença grave; condenada com filho menor ou deficiente físico ou mental; ou condenada gestante.",
+      "pontos": [
+        "Maior de 70 anos.",
+        "Doença grave.",
+        "Condenada com filho menor ou com deficiência.",
+        "Condenada gestante."
+      ],
+      "atencao": [
+        "Prisão domiciliar da LEP: maior de 70 anos, doença grave, mãe de menor ou deficiente, gestante.",
+        "Não confundir ausência de vaga, cuidado médico e domiciliar cautelar; nenhuma concessão universal automática."
+      ],
+      "exemplo": "Condenado de setenta e dois anos no aberto pede recolhimento residencial. Resposta: está no recorte etário, com exame judicial do caso. Variação: Domiciliar cautelar do CPP e soluções excepcionais de execução não são idênticas ao rol textual do 117.",
+      "prova": [
+        "A idade textual é maior de sessenta anos? Não. O inciso I diz MAIOR DE SETENTA, distinto de outros marcos legais da pessoa idosa.",
+        "O rol permite negar indistintamente toda solução excepcional fora do aberto? Não. Examinar fundamentos e jurisprudência próprios; o recorte textual não certifica todas as exceções constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 117",
+          "significado": "Somente se admitirá o recolhimento do beneficiário de regime aberto em residência particular quando se tratar de condenado maior de 70 anos; condenado acometido de doença grave; condenada com filho menor ou deficiente físico ou mental; ou condenada gestante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 114"
+      ]
+    },
+    "art-118": {
+      "simples": "A execução da pena privativa de liberdade ficará sujeita à forma regressiva, com a transferência para qualquer dos regimes mais rigorosos, quando o condenado praticar fato definido como crime doloso ou falta grave; ou sofrer condenação, por crime anterior, cuja pena, somada ao restante da pena em execução, torne incabível o regime. O condenado será transferido do regime aberto se, além disso, frustrar os fins da execução ou não pagar, podendo, a multa cumulativamente imposta. Nas hipóteses de crime doloso ou falta grave e de frustração, deverá ser ouvido previamente o condenado.",
+      "pontos": [
+        "Regressão por crime doloso ou falta grave.",
+        "Regressão por condenação que torne incabível o regime.",
+        "Do aberto: também por frustrar os fins da execução ou não pagar a multa podendo.",
+        "Oitiva prévia do condenado."
+      ],
+      "atencao": [
+        "Oitiva PRÉVIA do condenado.",
+        "Regressão pode ir a QUALQUER regime mais rigoroso.",
+        "Diferenciar tutela cautelar e regressão definitiva; não certificada integralmente jurisprudência de toda hipótese.",
+        "Não ensinar antiga multa como conversão automática em prisão."
+      ],
+      "exemplo": "Falta grave apurada leva a exame de regressão definitiva, com oitiva no recorte legal. Resposta: decisão fundamentada e defesa. Variação: Regressão cautelar e definitiva têm pressupostos/etapas distintos; não concluir pela literalidade que toda providência urgente é impossível.",
+      "prova": [
+        "A regressão é sempre somente um degrau? Não. O caput admite qualquer regime mais rigoroso nas hipóteses legais; decisão precisa de fundamento.",
+        "A falta de recursos para pagar multa autoriza prisão por dívida? Não. O texto fala podendo; integrar regime atual da multa e garantias, sem regressão automática por pobreza."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 118",
+          "significado": "A execução da pena privativa de liberdade ficará sujeita à forma regressiva, com a transferência para qualquer dos regimes mais rigorosos, quando o condenado praticar fato definido como crime doloso ou falta grave; ou sofrer condenação, por crime anterior, cuja pena, somada ao restante da pena em execução, torne incabível o regime. O condenado será transferido do regime aberto se, além disso, frustrar os fins da execução ou não pagar, podendo, a multa cumulativamente imposta. Nas hipóteses de crime doloso ou falta grave e de frustração, deverá ser ouvido previamente o condenado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 112"
+      ]
+    },
+    "art-119": {
+      "simples": "A legislação local poderá estabelecer normas complementares para o cumprimento da pena privativa de liberdade em regime aberto, nos termos do art. 36, §1º, do Código Penal.",
+      "pontos": [
+        "Normas complementares por legislação local."
+      ],
+      "atencao": [
+        "Competência complementar local."
+      ],
+      "exemplo": "Lei local disciplina aspectos complementares do aberto. Resposta: competência complementar, sem contrariar normas federais/Constituição. Variação: Complementar não permite criar nova pena criminal por norma administrativa.",
+      "prova": [
+        "Qualquer norma local pode afastar a LEP por ser complementar? Não. Complementação é subordinada ao quadro legal e constitucional pertinente.",
+        "O artigo veda toda disciplina local do regime aberto? Não. Autoriza normas complementares, sem atribuir competência ilimitada para criar sanções."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 119",
+          "significado": "A legislação local poderá estabelecer normas complementares para o cumprimento da pena privativa de liberdade em regime aberto, nos termos do art. 36, §1º, do Código Penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 115"
+      ]
+    },
+    "art-119-a": {
+      "simples": "O condenado por crimes contra a dignidade sexual somente ingressará em regime mais benéfico de cumprimento de pena ou perceberá benefício penal que autorize a saída do estabelecimento se os resultados do exame criminológico afirmarem a existência de indícios de que não voltará a cometer crimes da mesma natureza.",
+      "pontos": [
+        "Exame criminológico obrigatório para crimes sexuais.",
+        "Indícios de que não reincidirá."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Exame criminológico OBRIGATÓRIO e favorável.",
+        "Não certificada toda jurisprudência/controle posterior desse artigo; sem exercício de aplicação automática a crimes anteriores."
+      ],
+      "exemplo": "Condenado por crime contra dignidade sexual tem pedido de regime benéfico examinado à luz do exame e do regime temporal. Resposta: art. 119-A é alteração de 2025. Variação: Laudo não é garantia científica absoluta de que nunca haverá crime nem substitui os demais requisitos.",
+      "prova": [
+        "A previsão do exame permite retroagir toda exigência mais gravosa sem análise? Não. Lei 15.280/2025 precisa de integração temporal e constitucional; não requisito original de 1984.",
+        "Resultado com indícios de não repetição equivale a certeza absoluta sobre o futuro? Não. O texto fala INDÍCIOS, com avaliação técnica e decisão, não previsão infalível."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 119-a",
+          "significado": "O condenado por crimes contra a dignidade sexual somente ingressará em regime mais benéfico de cumprimento de pena ou perceberá benefício penal que autorize a saída do estabelecimento se os resultados do exame criminológico afirmarem a existência de indícios de que não voltará a cometer crimes da mesma natureza."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 112",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ]
+    },
+    "art-120": {
+      "simples": "Os condenados que cumprem pena em regime fechado ou semiaberto e os presos provisórios poderão obter permissão para sair do estabelecimento, mediante escolta, quando ocorrer falecimento ou doença grave do cônjuge, companheira, ascendente, descendente ou irmão, ou necessidade de tratamento médico. A permissão de saída será concedida pelo diretor do estabelecimento.",
+      "pontos": [
+        "Permissão de saída com escolta.",
+        "Falecimento ou doença grave de familiar; tratamento médico.",
+        "Concedida pelo diretor."
+      ],
+      "atencao": [
+        "Permissão de saída: concedida pelo DIRETOR e com ESCOLTA.",
+        "Alcança regime fechado, semiaberto e presos provisórios."
+      ],
+      "exemplo": "Preso provisório precisa de tratamento médico externo e recebe permissão com escolta. Resposta: diretor concede no recorte textual. Variação: Saída temporária sem vigilância direta é modalidade diferente; restrição de uma não revoga automaticamente toda permissão médica.",
+      "prova": [
+        "A permissão só existe para condenado no semiaberto? Não. Inclui fechado, semiaberto e provisório, com escolta e fatos enumerados.",
+        "A doença de qualquer conhecido está automaticamente no inciso I? Não. O rol indica familiares específicos; necessidade médica própria tem inciso II."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 120",
+          "significado": "Os condenados que cumprem pena em regime fechado ou semiaberto e os presos provisórios poderão obter permissão para sair do estabelecimento, mediante escolta, quando ocorrer falecimento ou doença grave do cônjuge, companheira, ascendente, descendente ou irmão, ou necessidade de tratamento médico. A permissão de saída será concedida pelo diretor do estabelecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 122"
+      ]
+    },
+    "art-121": {
+      "simples": "A permanência do preso fora do estabelecimento terá a duração necessária à finalidade da saída.",
+      "pontos": [
+        "Duração necessária à finalidade."
+      ],
+      "atencao": [
+        "Tempo limitado à finalidade."
+      ],
+      "exemplo": "Permissão para tratamento dura o necessário ao atendimento. Resposta: duração vinculada à finalidade, não prazo antigo da saidinha. Variação: Sete dias do art. 124 revogado não é prazo geral de toda permissão de saída.",
+      "prova": [
+        "O artigo fixa sete dias universais para tratamento? Não. Prevê duração necessária à finalidade da saída, integrada à autorização pertinente.",
+        "Encerrada a finalidade, a permissão autoriza permanecer fora por conveniência? Não. O tempo é limitado à finalidade e às condições da autorização."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 121",
+          "significado": "A permanência do preso fora do estabelecimento terá a duração necessária à finalidade da saída."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 120"
+      ]
+    },
+    "art-122": {
+      "simples": "Os condenados que cumprem pena em regime semiaberto poderão obter autorização para saída temporária do estabelecimento, sem vigilância direta, para frequência a curso supletivo profissionalizante, bem como de instrução do 2º grau ou superior, na Comarca do Juízo da Execução. A ausência de vigilância direta não impede o monitoramento eletrônico. Não terá direito à saída temporária ou a trabalho externo sem vigilância direta o condenado por crime hediondo ou com violência ou grave ameaça contra pessoa. Para estudo, o tempo de saída será o necessário às atividades discentes.",
+      "pontos": [
+        "Saída temporária no regime semiaberto, sem vigilância direta.",
+        "Curso supletivo profissionalizante, ensino médio ou superior.",
+        "Vedada para condenado por crime hediondo ou com violência ou grave ameaça.",
+        "Monitoramento eletrônico possível."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: os incisos I e III (visita à família e outras atividades) foram revogados; hoje a saída é para estudo.",
+        "Vedada a saída temporária ao condenado por crime hediondo ou com violência.",
+        "Lei 14.843: publicação inicial em 11/4/2024 e promulgação de partes vetadas têm marcos diferentes; a íntegra da promulgação não foi recuperada nesta consulta. Não atribuir toda revogação ao mesmo dia.",
+        "§2º veda saída/trabalho externo sem vigilância direta para hediondo ou violência/grave ameaça no regime aplicável.",
+        "§3º: duração necessária às atividades discentes; art. 124 revogado não ensina sete dias/cinco saídas como regra atual.",
+        "STF Tema 1381 consta na notícia sobre exame; não certificada tese posterior de mérito."
+      ],
+      "exemplo": "Semiaberto pede saída para curso no recorte atual e preenche condições. Resposta: examinar estudo, regime temporal e vedações. Variação: Visita familiar dos incisos revogados não é hipótese atual universal; para fato antigo, verificar irretroatividade e decisão pertinente.",
+      "prova": [
+        "A revogação das visitas permite aplicar regra mais gravosa indistintamente a fato de 2020? Não. HC 240770/STF restabeleceu benefícios no caso antigo; distinguir decisão individual de tese universal.",
+        "A saída atual para estudo é necessariamente sem nenhum monitoramento? Não. Sem vigilância direta não impede equipamento eletrônico determinado pelo juiz."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 122",
+          "significado": "Os condenados que cumprem pena em regime semiaberto poderão obter autorização para saída temporária do estabelecimento, sem vigilância direta, para frequência a curso supletivo profissionalizante, bem como de instrução do 2º grau ou superior, na Comarca do Juízo da Execução. A ausência de vigilância direta não impede o monitoramento eletrônico. Não terá direito à saída temporária ou a trabalho externo sem vigilância direta o condenado por crime hediondo ou com violência ou grave ameaça contra pessoa. Para estudo, o tempo de saída será o necessário às atividades discentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 123",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-mantem-saida-temporaria-de-condenado-por-roubo-cometido-antes-do-fim-do-beneficio/"
+      ]
+    },
+    "art-125": {
+      "simples": "O benefício da saída temporária será automaticamente revogado quando o condenado praticar fato definido como crime doloso, for punido por falta grave, desatender as condições impostas ou revelar baixo grau de aproveitamento do curso. A recuperação do direito dependerá da absolvição no processo penal, do cancelamento da punição disciplinar ou da demonstração do merecimento.",
+      "pontos": [
+        "Revogação automática por crime doloso, falta grave, descumprimento ou baixo aproveitamento.",
+        "Recuperação por absolvição, cancelamento da punição ou merecimento."
+      ],
+      "atencao": [
+        "Corrigido exercício antigo que negava indistintamente necessidade de controle judicial.",
+        "Integrar regime atual do 122; benefício revogado não restaura incisos antigos para todos."
+      ],
+      "exemplo": "Baixo aproveitamento do curso ou falta grave devidamente apurada exige tratar revogação do benefício. Resposta: consequências legais com controle e garantias. Variação: Denúncia informal de falta não dispensa apuração, nem a palavra automaticamente entrega competência irrestrita à direção.",
+      "prova": [
+        "A palavra automaticamente dispensa toda defesa e controle judicial? Não. Não substitui apuração válida dos fatos, garantias e atuação competente.",
+        "A recuperação depende exclusivamente de nova lei de indulto? Não. O parágrafo indica absolvição, cancelamento da punição OU demonstração de merecimento."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 125",
+          "significado": "O benefício da saída temporária será automaticamente revogado quando o condenado praticar fato definido como crime doloso, for punido por falta grave, desatender as condições impostas ou revelar baixo grau de aproveitamento do curso. A recuperação do direito dependerá da absolvição no processo penal, do cancelamento da punição disciplinar ou da demonstração do merecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 122"
+      ]
+    },
+    "art-126": {
+      "simples": "O condenado que cumpre a pena em regime fechado ou semiaberto poderá remir, por trabalho ou por estudo, parte do tempo de execução da pena. A contagem é feita à razão de 1 dia de pena a cada 12 horas de frequência escolar, divididas, no mínimo, em 3 dias, e de 1 dia de pena a cada 3 dias de trabalho. O estudo pode ser presencial ou a distância e deve ser certificado. As horas de trabalho e estudo são compatibilizadas para a cumulação. O preso impossibilitado por acidente continua a beneficiar-se. O tempo a remir pelo estudo é acrescido de 1/3 com a conclusão do ensino fundamental, médio ou superior. O condenado em regime aberto, semiaberto ou livramento condicional pode remir pela frequência a curso. O disposto aplica-se à prisão cautelar. A remição é declarada pelo juiz, ouvidos o MP e a defesa, e a prisão domiciliar não impede a remição.",
+      "pontos": [
+        "Remição por trabalho (3 dias = 1 dia) e por estudo (12 horas = 1 dia).",
+        "Estudo presencial ou a distância, certificado.",
+        "Acréscimo de 1/3 com a conclusão do curso.",
+        "Aplica-se à prisão cautelar.",
+        "Declarada pelo juiz, ouvidos MP e defesa."
+      ],
+      "atencao": [
+        "Trabalho: 1 dia a cada 3 dias; estudo: 1 dia a cada 12 horas.",
+        "ATUALIZAÇÃO: remição por estudo e extensão à prisão cautelar vieram de leis posteriores.",
+        "Conclusão de fundamental/médio/superior durante pena, certificada: acréscimo de um terço do tempo remido de estudo, não de toda pena.",
+        "Súmula 562 admite trabalho extramuros no fechado/semiaberto; não exigir trabalho apenas dentro da prisão.",
+        "Aberto/livramento têm recorte de estudo do §6º; não universalizar trabalho para todo regime pelo caput.",
+        "Acidente impeditivo tem §4º; não equiparar qualquer inatividade a remição automática."
+      ],
+      "exemplo": "Aluno estuda doze horas distribuídas em três dias. Resposta: um dia remido; trinta dias válidos de trabalho geram dez. Variação: Doze horas concentradas num único dia não satisfazem por si a distribuição mínima para estudo.",
+      "prova": [
+        "O estudo tem apenas quantidade total de horas, sem distribuição? Não. São doze horas divididas em NO MÍNIMO TRÊS DIAS, com comprovação e requisitos.",
+        "Prisão domiciliar exclui automaticamente toda remição? Não. §9º da Lei 15.402/2026 afasta impedimento pelo regime, sem dispensar atividade válida e prova."
+      ],
+      "termos": [
+        {
+          "termo": "Remição",
+          "significado": "Abatimento da pena por trabalho ou estudo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 127",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=562+INPATH%28NUM%29"
+      ]
+    },
+    "art-127": {
+      "simples": "Em caso de falta grave, o juiz poderá revogar até 1/3 do tempo remido, observado o disposto no art. 57, recomeçando a contagem a partir da data da infração disciplinar.",
+      "pontos": [
+        "Revogação de até 1/3 do tempo remido.",
+        "Contagem recomeça da data da infração."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: redação dada por lei posterior (antes era a perda total).",
+        "Até 1/3 do tempo remido."
+      ],
+      "exemplo": "Há trinta dias remidos e falta grave apurada. Resposta: juiz pode revogar ATÉ dez, com individualização, não necessariamente dez. Variação: Não retirar todos os trinta com regra anterior à Lei 12.433/2011.",
+      "prova": [
+        "A perda máxima de um terço é sempre perda obrigatória integral dessa fração? Não. O verbo poderá e limite ATÉ exigem decisão e individualização conforme art. 57.",
+        "A direção pode cancelar sozinha todo tempo remido? Não. A norma atribui decisão ao juiz e limita a perda, com regime de apuração/defesa."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 127",
+          "significado": "Em caso de falta grave, o juiz poderá revogar até 1/3 do tempo remido, observado o disposto no art. 57, recomeçando a contagem a partir da data da infração disciplinar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 126"
+      ]
+    },
+    "art-128": {
+      "simples": "O tempo remido será computado como pena cumprida, para todos os efeitos.",
+      "pontos": [
+        "Tempo remido é pena cumprida."
+      ],
+      "atencao": [
+        "Efeito pleno."
+      ],
+      "exemplo": "Dez dias declarados remidos entram como pena cumprida no cálculo pertinente. Resposta: não simples redução de benefício isolado. Variação: Contar os mesmos dez duas vezes em rubricas idênticas não é autorizado por para todos os efeitos.",
+      "prova": [
+        "Tempo remido só vale para saída temporária? Não. O artigo o computa como pena cumprida PARA TODOS OS EFEITOS, nos cálculos cabíveis.",
+        "A expressão autoriza duplicar o mesmo crédito no cálculo? Não. Efeito amplo não é contagem em dobro sem fundamento legal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 128",
+          "significado": "O tempo remido será computado como pena cumprida, para todos os efeitos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 126"
+      ]
+    },
+    "art-129": {
+      "simples": "A autoridade administrativa encaminhará mensalmente ao juízo da execução cópia do registro de todos os condenados que estejam trabalhando ou estudando, com informação dos dias de trabalho ou das horas de frequência escolar. O condenado autorizado a estudar fora do estabelecimento deverá comprovar mensalmente, por declaração da unidade de ensino, a frequência e o aproveitamento. Ao condenado dar-se-á a relação de seus dias remidos.",
+      "pontos": [
+        "Relatório mensal ao juízo.",
+        "Comprovação mensal da frequência escolar externa.",
+        "Relação dos dias remidos ao condenado."
+      ],
+      "atencao": [
+        "Comunicação MENSAL ao juízo da execução."
+      ],
+      "exemplo": "Direção manda registro mensal e estudante externo comprova frequência/aproveitamento mensalmente. Resposta: obrigações diferentes e cumuláveis. Variação: Enviar relatório anual não atende periodicidade mensal apenas porque ano reúne todos os meses.",
+      "prova": [
+        "A comprovação escolar externa pode ser só verbal sem declaração prevista? Não. §1º exige declaração da unidade de ensino com frequência e aproveitamento.",
+        "O condenado pode ser privado de toda relação de dias remidos? Não. §2º manda fornecer a relação, permitindo conhecimento e conferência do cálculo."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 129",
+          "significado": "A autoridade administrativa encaminhará mensalmente ao juízo da execução cópia do registro de todos os condenados que estejam trabalhando ou estudando, com informação dos dias de trabalho ou das horas de frequência escolar. O condenado autorizado a estudar fora do estabelecimento deverá comprovar mensalmente, por declaração da unidade de ensino, a frequência e o aproveitamento. Ao condenado dar-se-á a relação de seus dias remidos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 126"
+      ]
+    },
+    "art-130": {
+      "simples": "Constitui o crime do art. 299 do Código Penal declarar ou atestar falsamente prestação de serviço para fim de instruir pedido de remição.",
+      "pontos": [
+        "Falsidade ideológica em atestado para remição."
+      ],
+      "atencao": [
+        "Crime do art. 299 do Código Penal."
+      ],
+      "exemplo": "Responsável atesta conscientemente serviço não prestado para obter remição. Resposta: remissão à falsidade ideológica do CP 299. Variação: Erro corrigível sem elementos subjetivos não deve ser tratado automaticamente como crime consumado.",
+      "prova": [
+        "Toda divergência de planilha prova por si falsidade ideológica? Não. Apurar conteúdo, finalidade, autoria e elementos do CP 299, não presumir crime de qualquer erro.",
+        "O artigo prevê apenas advertência disciplinar sem remissão penal? Não. Define remissão ao crime do CP 299, com análise dos requisitos pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 130",
+          "significado": "Constitui o crime do art. 299 do Código Penal declarar ou atestar falsamente prestação de serviço para fim de instruir pedido de remição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 299",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-131": {
+      "simples": "O livramento condicional poderá ser concedido pelo Juiz da execução, presentes os requisitos do art. 83, incisos e parágrafo único, do Código Penal, ouvidos o Ministério Público e o Conselho Penitenciário.",
+      "pontos": [
+        "Concedido pelo juiz da execução.",
+        "Ouvidos o MP e o Conselho Penitenciário."
+      ],
+      "atencao": [
+        "Oitiva do Conselho Penitenciário.",
+        "Aplicar vedações atuais e regime temporal; não garantir livramento para todas as modalidades de hediondo."
+      ],
+      "exemplo": "Juiz examina livramento com requisitos CP 83 e manifestações pertinentes. Resposta: Conselho não concede sozinho o benefício. Variação: Frações da progressão não são automaticamente frações do livramento.",
+      "prova": [
+        "Pode substituir todos os requisitos do CP 83 por bom comportamento isolado? Não. Há requisito de pena, frações, reparação e demais condições/vedações pertinentes.",
+        "A remissão ao Conselho elimina manifestação da defesa prevista no 112, §2º? Não. Integrar ambos os dispositivos e garantias; não leitura isolada para suprimir defensor."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 131",
+          "significado": "O livramento condicional poderá ser concedido pelo Juiz da execução, presentes os requisitos do art. 83, incisos e parágrafo único, do Código Penal, ouvidos o Ministério Público e o Conselho Penitenciário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 83",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-132": {
+      "simples": "Deferido o pedido, o Juiz especificará as condições do livramento. Serão sempre impostas ao liberado condicional as obrigações de obter ocupação lícita, dentro de prazo razoável se for apto para o trabalho; comunicar periodicamente ao juiz sua ocupação; e não mudar do território da comarca sem prévia autorização. Poderão ainda ser impostas, entre outras, a obrigação de não mudar de residência sem comunicação, de recolher-se à habitação em hora fixada, de não frequentar determinados lugares e de utilizar equipamento de monitoração eletrônica.",
+      "pontos": [
+        "Obrigações obrigatórias: ocupação lícita, comunicação e permanência na comarca.",
+        "Obrigações facultativas: residência, recolhimento, lugares e monitoração eletrônica."
+      ],
+      "atencao": [
+        "Três obrigações SEMPRE impostas."
+      ],
+      "exemplo": "Liberado apto ao trabalho deve buscar ocupação lícita em prazo razoável e informar ao juízo. Resposta: aptidão e prazo são requisitos expressos. Variação: Mudar de residência exige comunicação no recorte facultativo; mudar de comarca exige prévia autorização na condição geral.",
+      "prova": [
+        "Obter ocupação ignora incapacidade de trabalho? Não. §1º,a, condiciona a ser APTO e concede prazo razoável; não impor emprego imediato impossível.",
+        "Toda mudança de endereço exige a mesma autorização da mudança de comarca? Não. §2º,a, fala comunicação; §1º,c, autorização prévia para território da comarca."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 132",
+          "significado": "Deferido o pedido, o Juiz especificará as condições do livramento. Serão sempre impostas ao liberado condicional as obrigações de obter ocupação lícita, dentro de prazo razoável se for apto para o trabalho; comunicar periodicamente ao juiz sua ocupação; e não mudar do território da comarca sem prévia autorização. Poderão ainda ser impostas, entre outras, a obrigação de não mudar de residência sem comunicação, de recolher-se à habitação em hora fixada, de não frequentar determinados lugares e de utilizar equipamento de monitoração eletrônica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 133",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm"
+      ]
+    },
+    "art-133": {
+      "simples": "Se for permitido ao liberado residir fora da comarca do Juízo da execução, remeter-se-á cópia da sentença do livramento ao Juízo do lugar para onde ele se houver transferido e à autoridade incumbida da observação cautelar e de proteção.",
+      "pontos": [
+        "Cópia da sentença ao juízo do novo local e à autoridade de observação."
+      ],
+      "atencao": [
+        "Comunicação ao novo local."
+      ],
+      "exemplo": "Mudança de comarca é autorizada; cópia da sentença segue ao novo juízo e autoridade de observação. Resposta: dois destinatários. Variação: Mudança física não constitui autorização judicial tácita nem dispensa a comunicação institucional.",
+      "prova": [
+        "A cópia vai apenas ao novo empregador? Não. O artigo indica juízo do lugar e autoridade de observação/proteção, no contexto autorizado.",
+        "A remessa substitui pedido de autorização para mudar? Não. Ela decorre de mudança permitida, não legaliza unilateralmente transferência indevida."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 133",
+          "significado": "Se for permitido ao liberado residir fora da comarca do Juízo da execução, remeter-se-á cópia da sentença do livramento ao Juízo do lugar para onde ele se houver transferido e à autoridade incumbida da observação cautelar e de proteção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 132"
+      ]
+    },
+    "art-134": {
+      "simples": "O liberado será advertido da obrigação de apresentar-se imediatamente às autoridades referidas no artigo anterior.",
+      "pontos": [
+        "Advertência de apresentação imediata."
+      ],
+      "atencao": [
+        "Dever de apresentação."
+      ],
+      "exemplo": "Liberado é advertido a apresentar-se imediatamente no novo local autorizado. Resposta: apresentação pessoal/institucional pertinente. Variação: Não inventar trinta dias livres para se apresentar só porque outra norma tem esse prazo.",
+      "prova": [
+        "O artigo prevê prazo universal de trinta dias? Não. Determina apresentação IMEDIATA às autoridades do artigo anterior, sem esse prazo inventado.",
+        "Enviar cópia pelo juízo elimina todo dever do liberado de apresentar-se? Não. Comunicação institucional e apresentação advertida são obrigações distintas."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 134",
+          "significado": "O liberado será advertido da obrigação de apresentar-se imediatamente às autoridades referidas no artigo anterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 133"
+      ]
+    },
+    "art-135": {
+      "simples": "Reformada a sentença denegatória do livramento, os autos baixarão ao Juízo da execução, para as providências cabíveis.",
+      "pontos": [
+        "Reforma da denegação: autos voltam ao juízo da execução."
+      ],
+      "atencao": [
+        "Providências no juízo da execução."
+      ],
+      "exemplo": "Tribunal reforma negativa de livramento; autos retornam à execução para providências. Resposta: reforma não elimina implementação do benefício. Variação: Não concluir que o diretor pode inventar condições contrárias à decisão do tribunal.",
+      "prova": [
+        "Toda providência executória fica obrigatoriamente no tribunal que reformou? Não. O artigo manda baixar os autos ao juízo da execução para providências cabíveis.",
+        "O retorno permite ignorar a reforma por simples preferência administrativa? Não. É implementação do decidido, com medidas e controles pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 135",
+          "significado": "Reformada a sentença denegatória do livramento, os autos baixarão ao Juízo da execução, para as providências cabíveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 131"
+      ]
+    },
+    "art-136": {
+      "simples": "Concedido o benefício, será expedida a carta de livramento com a cópia integral da sentença em 2 vias, remetendo-se uma à autoridade administrativa incumbida da execução e outra ao Conselho Penitenciário.",
+      "pontos": [
+        "Carta de livramento em 2 vias.",
+        "Uma para a autoridade administrativa; outra para o Conselho Penitenciário."
+      ],
+      "atencao": [
+        "Duas vias."
+      ],
+      "exemplo": "Benefício concedido; carta com sentença integral segue em duas vias para administração e Conselho. Resposta: destinatários próprios. Variação: Não confundir carta de livramento e guia definitiva de recolhimento.",
+      "prova": [
+        "Uma única via ao MP substitui os dois destinatários textuais? Não. O artigo indica duas vias, para autoridade administrativa executora e Conselho Penitenciário.",
+        "A carta decide por si conceder benefício que o juiz negou? Não. É documento decorrente da concessão, distinto da decisão de mérito."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 136",
+          "significado": "Concedido o benefício, será expedida a carta de livramento com a cópia integral da sentença em 2 vias, remetendo-se uma à autoridade administrativa incumbida da execução e outra ao Conselho Penitenciário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 137"
+      ]
+    },
+    "art-137": {
+      "simples": "A cerimônia do livramento condicional será realizada solenemente, no dia marcado pelo Presidente do Conselho Penitenciário, no estabelecimento onde se cumpre a pena. A sentença será lida ao liberando, na presença dos demais condenados, pelo Presidente do Conselho Penitenciário ou membro designado, ou, na falta, pelo juiz; a autoridade administrativa chamará a atenção para as condições; e o liberando declarará se as aceita. Lavra-se termo em livro próprio, e cópia é remetida ao juiz da execução.",
+      "pontos": [
+        "Cerimônia solene no estabelecimento.",
+        "Leitura da sentença e advertência das condições.",
+        "Declaração de aceitação pelo liberando.",
+        "Termo em livro próprio, com cópia ao juiz."
+      ],
+      "atencao": [
+        "O liberando DECLARA se aceita as condições."
+      ],
+      "exemplo": "Na cerimônia, liberando declara aceitação e termo é remetido ao juízo. Resposta: registro da ciência/aceitação. Variação: Quem não pode escrever pode ter assinatura a rogo; incapacidade de escrita não extingue acesso ao benefício.",
+      "prova": [
+        "Não saber escrever torna impossível lavrar termo válido? Não. §1º admite alguém a rogo, com formalidades pertinentes, sem excluir o beneficiário.",
+        "O termo deve ficar exclusivamente na administração sem cópia judicial? Não. §2º determina remessa de cópia ao juízo da execução."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 137",
+          "significado": "A cerimônia do livramento condicional será realizada solenemente, no dia marcado pelo Presidente do Conselho Penitenciário, no estabelecimento onde se cumpre a pena. A sentença será lida ao liberando, na presença dos demais condenados, pelo Presidente do Conselho Penitenciário ou membro designado, ou, na falta, pelo juiz; a autoridade administrativa chamará a atenção para as condições; e o liberando declarará se as aceita. Lavra-se termo em livro próprio, e cópia é remetida ao juiz da execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 136"
+      ]
+    },
+    "art-138": {
+      "simples": "Ao sair o liberado do estabelecimento, ser-lhe-á entregue, além do saldo de seu pecúlio e do que lhe pertencer, uma caderneta, que exibirá à autoridade judiciária ou administrativa quando exigida. A caderneta conterá a identificação do liberado, o texto impresso do Capítulo e as condições impostas. Na falta, será entregue um salvo-conduto com as condições. Na caderneta e no salvo-conduto haverá espaço para consignar o cumprimento das condições.",
+      "pontos": [
+        "Entrega do pecúlio e da caderneta.",
+        "Conteúdo da caderneta.",
+        "Salvo-conduto na falta da caderneta."
+      ],
+      "atencao": [
+        "Caderneta ou salvo-conduto."
+      ],
+      "exemplo": "Liberado recebe pecúlio, pertences e documento das condições. Resposta: caderneta ou salvo-conduto na falta. Variação: A falta material de caderneta não autoriza liberar sem registrar condições e identificação.",
+      "prova": [
+        "Sem caderneta, o artigo elimina todo documento substitutivo? Não. §2º prevê salvo-conduto com condições e alternativas de identificação.",
+        "O documento apenas identifica, sem espaço para cumprimento de condições? Não. §§1º/3º incluem condições e espaço de consignação do cumprimento."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 138",
+          "significado": "Ao sair o liberado do estabelecimento, ser-lhe-á entregue, além do saldo de seu pecúlio e do que lhe pertencer, uma caderneta, que exibirá à autoridade judiciária ou administrativa quando exigida. A caderneta conterá a identificação do liberado, o texto impresso do Capítulo e as condições impostas. Na falta, será entregue um salvo-conduto com as condições. Na caderneta e no salvo-conduto haverá espaço para consignar o cumprimento das condições."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 132"
+      ]
+    },
+    "art-139": {
+      "simples": "A observação cautelar e a proteção realizadas por serviço social penitenciário, Patronato ou Conselho da Comunidade terão a finalidade de fazer observar o cumprimento das condições especificadas na sentença e de proteger o beneficiário, orientando-o na execução de suas obrigações e auxiliando-o na obtenção de atividade laborativa. A entidade apresentará relatório ao Conselho Penitenciário, para efeito da representação prevista nos arts. 143 e 144.",
+      "pontos": [
+        "Fiscalizar as condições.",
+        "Proteger e orientar o beneficiário.",
+        "Relatório ao Conselho Penitenciário."
+      ],
+      "atencao": [
+        "Fiscalização E proteção."
+      ],
+      "exemplo": "Patronato acompanha condições e ajuda a conseguir atividade lícita. Resposta: fiscalização E proteção. Variação: Proteção não autoriza entidade conceder ou revogar livramento por conta própria.",
+      "prova": [
+        "A única finalidade é vigiar sem oferecer orientação? Não. Inciso II prevê proteção, orientação e auxílio na atividade laborativa.",
+        "Relatório da entidade vale como decisão judicial de revogação? Não. Subsidia representação do Conselho e procedimento competente, não sentença substitutiva."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 139",
+          "significado": "A observação cautelar e a proteção realizadas por serviço social penitenciário, Patronato ou Conselho da Comunidade terão a finalidade de fazer observar o cumprimento das condições especificadas na sentença e de proteger o beneficiário, orientando-o na execução de suas obrigações e auxiliando-o na obtenção de atividade laborativa. A entidade apresentará relatório ao Conselho Penitenciário, para efeito da representação prevista nos arts. 143 e 144."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 143"
+      ]
+    },
+    "art-140": {
+      "simples": "A revogação do livramento condicional dar-se-á nas hipóteses previstas nos arts. 86 e 87 do Código Penal. Mantido o livramento, na hipótese de revogação facultativa, o juiz deverá advertir o liberado ou agravar as condições.",
+      "pontos": [
+        "Revogação nas hipóteses dos arts. 86 e 87 do Código Penal.",
+        "Revogação facultativa: advertência ou agravamento das condições."
+      ],
+      "atencao": [
+        "Na revogação FACULTATIVA, o juiz pode apenas advertir ou agravar."
+      ],
+      "exemplo": "Hipótese de revogação facultativa é examinada; juiz mantém benefício e adverte ou agrava condições. Resposta: opção legal com consequência. Variação: Condenação definitiva a prisão por crime no benefício tem regime obrigatório do CP 86, não mera opção irrestrita.",
+      "prova": [
+        "Todo motivo torna revogação facultativa? Não. CP 86/87 distinguem hipóteses obrigatórias e facultativas, com pressupostos próprios.",
+        "Manter benefício na facultativa permite ignorar advertência/agravamento do parágrafo? Não. O texto determina advertir OU agravar, não ausência de providência por automatismo."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 140",
+          "significado": "A revogação do livramento condicional dar-se-á nas hipóteses previstas nos arts. 86 e 87 do Código Penal. Mantido o livramento, na hipótese de revogação facultativa, o juiz deverá advertir o liberado ou agravar as condições."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, arts. 86 e 87",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-141": {
+      "simples": "Se a revogação for motivada por infração penal anterior à vigência do livramento, computar-se-á como tempo de cumprimento da pena o período de prova, sendo permitida, para a concessão de novo livramento, a soma do tempo das 2 penas.",
+      "pontos": [
+        "Infração anterior ao livramento: o período de prova conta como pena cumprida.",
+        "Soma das 2 penas para novo livramento."
+      ],
+      "atencao": [
+        "Período de prova computado como cumprimento de pena."
+      ],
+      "exemplo": "Revogação decorre de infração ANTERIOR ao livramento. Resposta: período de prova computado e possível soma para novo benefício. Variação: Crime DURANTE o benefício tem tratamento distinto; não aplicar exceção de anterioridade apenas porque julgamento foi posterior.",
+      "prova": [
+        "A data decisiva é só a sentença nova, sem considerar quando ocorreu o fato? Não. O artigo diferencia infração anterior à vigência do livramento; cronologia do fato importa.",
+        "O período de prova é necessariamente desprezado nesta hipótese anterior? Não. O texto manda computar e permite soma das duas penas para análise de novo livramento."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 141",
+          "significado": "Se a revogação for motivada por infração penal anterior à vigência do livramento, computar-se-á como tempo de cumprimento da pena o período de prova, sendo permitida, para a concessão de novo livramento, a soma do tempo das 2 penas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 142"
+      ]
+    },
+    "art-142": {
+      "simples": "No caso de revogação por outro motivo, não se computará na pena o tempo em que esteve solto o liberado, e tampouco se concederá, em relação à mesma pena, novo livramento.",
+      "pontos": [
+        "Revogação por outro motivo: tempo solto não conta.",
+        "Sem novo livramento para a mesma pena."
+      ],
+      "atencao": [
+        "Perde o tempo solto e não tem novo livramento.",
+        "Integrar procedimento de revogação e Súmula 617; não retirar tempo por mera notícia de descumprimento."
+      ],
+      "exemplo": "Livramento é validamente revogado por motivo diferente da infração anterior. Resposta: art. 142 não conta tempo solto e impede novo benefício na mesma pena. Variação: Descumprimento alegado não equivale automaticamente a revogação válida, nem falta de suspensão tempestiva supera Súmula 617.",
+      "prova": [
+        "O artigo autoriza ignorar a exceção de crime anterior do 141? Não. Ele trata de OUTRO MOTIVO; a hipótese anterior tem efeito próprio.",
+        "O impedimento refere-se a toda pena futura de qualquer processo? Não. A expressão é EM RELAÇÃO À MESMA PENA, sem proibição vitalícia universal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 142",
+          "significado": "No caso de revogação por outro motivo, não se computará na pena o tempo em que esteve solto o liberado, e tampouco se concederá, em relação à mesma pena, novo livramento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 141",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=617+INPATH%28NUM%29"
+      ]
+    },
+    "art-143": {
+      "simples": "A revogação será decretada a requerimento do Ministério Público, mediante representação do Conselho Penitenciário, ou, de ofício, pelo Juiz, ouvido o liberado.",
+      "pontos": [
+        "Requerimento do MP, representação do Conselho ou de ofício.",
+        "Oitiva do liberado."
+      ],
+      "atencao": [
+        "Oitiva do liberado."
+      ],
+      "exemplo": "Juiz examina requerimento de revogação e ouve liberado. Resposta: decisão judicial, não mero ato do Conselho. Variação: Representação e requerimento não autorizam entidade revogar por conta própria.",
+      "prova": [
+        "O Conselho revoga diretamente por apresentar representação? Não. A representação provoca o procedimento; a revogação é decretada pelo juiz, ouvido o liberado.",
+        "O artigo dispensa oitiva em toda revogação definitiva? Não. Exige ouvir o liberado, com garantias e integração ao procedimento pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 143",
+          "significado": "A revogação será decretada a requerimento do Ministério Público, mediante representação do Conselho Penitenciário, ou, de ofício, pelo Juiz, ouvido o liberado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 140"
+      ]
+    },
+    "art-144": {
+      "simples": "O Juiz, de ofício, a requerimento do Ministério Público, da Defensoria Pública ou mediante representação do Conselho Penitenciário, e ouvido o liberado, poderá modificar as condições especificadas na sentença, devendo o ato decisório ser lido ao liberado por uma das autoridades indicadas no art. 137, observados os procedimentos ali previstos.",
+      "pontos": [
+        "Modificação das condições, ouvido o liberado.",
+        "Leitura da decisão ao liberado."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: a Defensoria Pública foi incluída entre os legitimados."
+      ],
+      "exemplo": "Defensoria requer ajustar condição; liberado é ouvido e decisão lida/registrada. Resposta: legitimidade e ciência. Variação: Mudar condição judicial não é alteração unilateral pelo órgão que acompanha.",
+      "prova": [
+        "A Defensoria foi excluída dos legitimados? Não. Redação da Lei 12.313/2010 a inclui expressamente entre requerentes.",
+        "A decisão pode ser comunicada sem os procedimentos referidos por simples conveniência? Não. O artigo remete à leitura e formalidades do 137 no recorte legal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 144",
+          "significado": "O Juiz, de ofício, a requerimento do Ministério Público, da Defensoria Pública ou mediante representação do Conselho Penitenciário, e ouvido o liberado, poderá modificar as condições especificadas na sentença, devendo o ato decisório ser lido ao liberado por uma das autoridades indicadas no art. 137, observados os procedimentos ali previstos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 137"
+      ]
+    },
+    "art-145": {
+      "simples": "Praticada pelo liberado outra infração penal, o Juiz poderá ordenar a sua prisão, ouvidos o Conselho Penitenciário e o Ministério Público, suspendendo o curso do livramento condicional, cuja revogação, entretanto, ficará dependendo da decisão final.",
+      "pontos": [
+        "Prisão do liberado que comete nova infração.",
+        "Suspensão do livramento.",
+        "Revogação depende da decisão final."
+      ],
+      "atencao": [
+        "Suspensão do livramento, sem revogação imediata.",
+        "Prisão exige fundamento, não automatismo pela notícia de infração."
+      ],
+      "exemplo": "Nova infração no período leva a exame judicial de suspensão, com órgãos ouvidos. Resposta: suspensão não é revogação final automática. Variação: Se não houve suspensão/revogação antes do término, integrar Súmula 617; não revogar depois só pela notícia de crime antigo.",
+      "prova": [
+        "O tipo de providência é revogação final obrigatória desde a primeira notícia? Não. O artigo prevê suspensão e possível prisão nos pressupostos legais; revogação depende da decisão final.",
+        "Uma providência posterior ao fim sempre desfaz benefício já concluído? Não. Súmula 617 exige considerar ausência de suspensão/revogação anterior ao fim do período de prova."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 145",
+          "significado": "Praticada pelo liberado outra infração penal, o Juiz poderá ordenar a sua prisão, ouvidos o Conselho Penitenciário e o Ministério Público, suspendendo o curso do livramento condicional, cuja revogação, entretanto, ficará dependendo da decisão final."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 140",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=617+INPATH%28NUM%29"
+      ]
+    },
+    "art-146": {
+      "simples": "O Juiz, de ofício, a requerimento do interessado, do Ministério Público ou mediante representação do Conselho Penitenciário, julgará extinta a pena privativa de liberdade, se expirar o prazo do livramento sem revogação.",
+      "pontos": [
+        "Extinção da pena se o prazo expirar sem revogação."
+      ],
+      "atencao": [
+        "Extinção da pena ao fim do prazo, sem revogação.",
+        "Integre CP 89/90 e procedimento; não extinção automática em qualquer processo sem conferir suspensão tempestiva."
+      ],
+      "exemplo": "Período termina sem suspensão/revogação tempestiva; examina-se extinção conforme Súmula 617. Resposta: não prorrogar indefinidamente por mera demora administrativa. Variação: Se houve suspensão tempestiva válida, não concluir extinção só porque calendário originalmente previsto chegou ao fim.",
+      "prova": [
+        "Só olhar se houve revogação basta ignorando suspensão válida? Não. Súmula 617 diferencia ausência de suspensão OU revogação anterior ao término; examinar situação concreta.",
+        "A extinção depende sempre de novo pedido pessoal? Não. O artigo admite iniciativa judicial e dos legitimados; não imposição universal de requerimento do interessado."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 146",
+          "significado": "O Juiz, de ofício, a requerimento do interessado, do Ministério Público ou mediante representação do Conselho Penitenciário, julgará extinta a pena privativa de liberdade, se expirar o prazo do livramento sem revogação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 143",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=617+INPATH%28NUM%29"
+      ]
+    },
+    "art-147": {
+      "simples": "Transitada em julgado a sentença que aplicou a pena restritiva de direitos, o Juiz da execução, de ofício ou a requerimento do Ministério Público, promoverá a execução, podendo requisitar a colaboração de entidades públicas ou solicitá-la a particulares.",
+      "pontos": [
+        "Execução da pena restritiva após o trânsito em julgado.",
+        "Colaboração de entidades públicas ou particulares."
+      ],
+      "atencao": [
+        "Trânsito em julgado é condição."
+      ],
+      "exemplo": "Após trânsito da restritiva, juiz requisita colaboração pública e solicita a particular. Resposta: verbos e destinatários distintos. Variação: Não chamar particular a prestar qualquer atividade obrigatoriamente por simples requisição deste artigo.",
+      "prova": [
+        "A execução da restritiva aqui dispensa trânsito? Não. O caput começa por sentença TRANSITADA EM JULGADO, com atuação do juízo de execução.",
+        "A colaboração de particular é descrita como requisição obrigatória igual à pública? Não. O texto distingue REQUISITAR públicas e SOLICITAR particulares."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 147",
+          "significado": "Transitada em julgado a sentença que aplicou a pena restritiva de direitos, o Juiz da execução, de ofício ou a requerimento do Ministério Público, promoverá a execução, podendo requisitar a colaboração de entidades públicas ou solicitá-la a particulares."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 148"
+      ]
+    },
+    "art-148": {
+      "simples": "Em qualquer fase da execução, poderá o Juiz, motivadamente, alterar a forma de cumprimento das penas de prestação de serviços à comunidade e de limitação de fim de semana, ajustando-as às condições pessoais do condenado e às características do estabelecimento, da entidade ou do programa.",
+      "pontos": [
+        "Alteração motivada da forma de cumprimento.",
+        "Ajuste às condições pessoais."
+      ],
+      "atencao": [
+        "Alteração motivada, em qualquer fase."
+      ],
+      "exemplo": "Mudança de jornada justifica ajustar horário de serviço comunitário motivadamente. Resposta: forma de cumprimento, não troca livre de pena. Variação: Ajustar horários não significa transformar qualquer modalidade de restritiva em outra por conveniência.",
+      "prova": [
+        "O juiz pode alterar forma apenas no primeiro dia? Não. O texto admite em QUALQUER FASE, com motivação e adequação pertinentes.",
+        "A regra permite substituir livremente toda espécie de pena restritiva? Não. Trata da FORMA de prestação de serviços e limitação de fim de semana, com os recortes legais."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 148",
+          "significado": "Em qualquer fase da execução, poderá o Juiz, motivadamente, alterar a forma de cumprimento das penas de prestação de serviços à comunidade e de limitação de fim de semana, ajustando-as às condições pessoais do condenado e às características do estabelecimento, da entidade ou do programa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 149"
+      ]
+    },
+    "art-149": {
+      "simples": "Juiz designa entidade credenciada/convencionada, intima para dias/horários e ajusta a forma à jornada. O §1º conserva oito horas semanais no texto; integrar ao CP 46, §§3º/4º, atual, que calcula uma hora de tarefa por dia de condenação e admite condições próprias de cumprimento. Não apresentar oito horas como fórmula invariável de todo caso. §2º: início no primeiro comparecimento.",
+      "pontos": [
+        "Designação da entidade pelo juiz.",
+        "Intimação do condenado.",
+        "Duração de 8 horas semanais.",
+        "Início no primeiro comparecimento."
+      ],
+      "atencao": [
+        "CP 46 foi alterado pela Lei 9.714/1998; distinguir duração total da pena, quantidade de horas e calendário semanal.",
+        "Não prejudicar jornada normal; trabalho é gratuito e conforme aptidões, sem prometer livre escolha de entidade pelo condenado."
+      ],
+      "exemplo": "Juiz organiza tarefas compatíveis com emprego e aptidões. Resposta: considerar CP 46, §3º, uma hora por dia de condenação, não fórmula universal isolada de oito horas. Variação: O texto residual de oito horas semanais da LEP não resolve sozinho duração/calendário de todas as condenações atuais.",
+      "prova": [
+        "Todo caso atual exige invariavelmente oito horas por semana pela frase antiga? Não. Integrar CP 46, §3º/§4º, vigente: uma hora por dia de condenação e possibilidades legais de cumprimento, sem prejudicar jornada.",
+        "A execução tem início só da sentença, sem primeiro comparecimento? Não. §2º do artigo fixa primeiro comparecimento no recorte, distinto do trânsito necessário à execução."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 149",
+          "significado": "Juiz designa entidade credenciada/convencionada, intima para dias/horários e ajusta a forma à jornada. O §1º conserva oito horas semanais no texto; integrar ao CP 46, §§3º/4º, atual, que calcula uma hora de tarefa por dia de condenação e admite condições próprias de cumprimento. Não apresentar oito horas como fórmula invariável de todo caso. §2º: início no primeiro comparecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 150",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}

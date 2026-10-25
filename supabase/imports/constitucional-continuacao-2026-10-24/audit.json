@@ -1,0 +1,20 @@
+{
+  "input_files": 34,
+  "input_pages": 197,
+  "existing_material_titles_checked": 174,
+  "constitutional_catalog_records_compared": 740,
+  "existing_material_quiz_records_compared": 340,
+  "new_modules": 12,
+  "updated_modules": 3,
+  "exact_duplicate_new_statements": 0,
+  "public_question_insertions": 0,
+  "source_pdf_text_republished": false,
+  "input_exercises_copied": false,
+  "all_input_files_routed_once": true,
+  "notes": [
+    "Três arquivos predominantemente em imagem receberam OCR auxiliar em inglês; a fonte normativa de publicação é o documento oficial, não a transcrição automática.",
+    "RE 466343 no paginador retornou 403 e não foi usado como documento consultado. Foram consultados os precedentes reproduzidos na página oficial da SV 25.",
+    "A EC 97 em endereço próprio expirou; não foram publicados patamares numéricos de cláusula de desempenho por ano a partir dessa tentativa.",
+    "Nenhuma banca foi atribuída aos exercícios próprios. Nenhum material privado foi copiado."
+  ]
+}

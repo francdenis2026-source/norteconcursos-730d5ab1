@@ -1,0 +1,66 @@
+[
+  {
+    "key": "acordo",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6583.htm",
+    "status": 200,
+    "sha256": "0fd82a440cbbfa361f1dde60245fe29afc226d47091e45217acab630c09fb2aa",
+    "bytes": 188111,
+    "checked_at": "2026-10-25T04:01:08.354481+00:00"
+  },
+  {
+    "key": "d9758",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9758.htm",
+    "status": 200,
+    "sha256": "4a15b20da29ae9f72c8643f768589e29352e632938981463cfee969f3823f20a",
+    "bytes": 22886,
+    "checked_at": "2026-10-25T04:01:06.961114+00:00"
+  },
+  {
+    "key": "simples",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm",
+    "status": 200,
+    "sha256": "1459d4d6cee19af3c4fcad8ffff738b2ea041c9cb306ec7f1f17c6075228d09d",
+    "bytes": 23755,
+    "checked_at": "2026-10-25T04:01:07.465040+00:00"
+  },
+  {
+    "key": "concordancia",
+    "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+    "status": 200,
+    "sha256": "0ce86a5c31bae99702af0e93eace32547442022cfd7f3a310108b4e2097a808e",
+    "bytes": 26884,
+    "checked_at": "2026-10-25T04:01:07.762667+00:00"
+  },
+  {
+    "key": "crase",
+    "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/crase",
+    "status": 200,
+    "sha256": "a68488bead83950f65170fa13713bf47a69aea64bf894b4d05262bd50e65dbe1",
+    "bytes": 24413,
+    "checked_at": "2026-10-25T04:01:07.980777+00:00"
+  },
+  {
+    "key": "virgula",
+    "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/virgula",
+    "status": 200,
+    "sha256": "149b64227e4d08c429f1ac80c58db59cc85cc545e3d5a1a7ca3fef750fa7d438",
+    "bytes": 21809,
+    "checked_at": "2026-10-25T04:01:08.198942+00:00"
+  },
+  {
+    "key": "gramatica",
+    "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos",
+    "status": 200,
+    "sha256": "c9d716829969122d7e63a48e49c127f81993a55dc2c343b0a1fb44889ccce03b",
+    "bytes": 24352,
+    "checked_at": "2026-10-25T04:01:08.466041+00:00"
+  },
+  {
+    "key": "edital",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "status": 200,
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "bytes": 1505541,
+    "checked_at": "2026-10-25T04:01:09.779988+00:00"
+  }
+]

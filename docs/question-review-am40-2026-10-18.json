@@ -1,0 +1,125 @@
+{
+  "checked_at": "2026-10-18T03:07:25.085Z",
+  "new_active": 1,
+  "preserved_other_pc_records": 2967,
+  "all_preexisting_metadata_unchanged": true,
+  "concurrent_additions_preserved": [],
+  "new_official_sources": [
+    {
+      "id": "0295fdaa-e5f5-5b78-8d1b-6ed84298fdcb",
+      "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+      "title": "NBC TG 27 (R4), revisão18 — valor depreciável e revisão da vida útil",
+      "source_type": "outro",
+      "issuer": "Conselho Federal de Contabilidade",
+      "published_on": "2017-12-22",
+      "checked_at": "2026-10-18T03:05:29.425172+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Revisão individual dos itens 50, 51, 53. Histórico SRE: norma em vigor e não revogada; alterações consideradas no PDF consolidado e Revisão NBC31 (publicação25/02/2026, efeitos para exercícios iniciados a partir de2027). Não certificação integral da norma. SHA-256 9deae26a22e7ff26ef56b7d28320393f435c2bf55e6ca1ddd5b4b52095611dda"
+    },
+    {
+      "id": "099170d5-4cd2-5065-ae03-e6a04efd3622",
+      "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+      "title": "NBC TG 23 (R2), revisão13 — mudança prospectiva de estimativa",
+      "source_type": "outro",
+      "issuer": "Conselho Federal de Contabilidade",
+      "published_on": "2017-12-22",
+      "checked_at": "2026-10-18T03:05:29.762221+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Revisão individual dos itens 36, 38. Histórico SRE: norma em vigor e não revogada; alterações consideradas no PDF consolidado e Revisão NBC31 (publicação25/02/2026, efeitos para exercícios iniciados a partir de2027). Não certificação integral da norma. SHA-256 5188086378bebdb1d2f5dc61dc5f22247709b0ca8527b0377162fe02aea4afcb"
+    }
+  ],
+  "tests_passed": 23,
+  "application_changes": true,
+  "pc_status": {
+    "active": 2629,
+    "archived": 281,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 9
+  },
+  "pending_by_state": {
+    "RO": 6,
+    "RJ": 2,
+    "MG": 1
+  },
+  "item": {
+    "id": "c12a8254-148f-4b63-b48c-5bfaecccdb6b",
+    "item_number": 40,
+    "official_answer_preserved": "A",
+    "patch": {
+      "content_status": "active",
+      "current_syllabus_topic_id": "1546e06b-39c6-5ad3-8a98-58aed8005330",
+      "legal_basis": [
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+          "title": "NBC TG 27 (R4), revisão18 — valor depreciável e revisão da vida útil"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+          "title": "NBC TG 23 (R2), revisão13 — mudança prospectiva de estimativa"
+        }
+      ],
+      "law_version_checked_at": "2026-10-18T03:06:56.652641+00:00",
+      "verified_at": "2026-10-18T03:06:56.652641+00:00",
+      "legal_audit_completed": true,
+      "legal_review_required": false,
+      "review_note": "Resposta: A — R$ 19.000 de depreciação acumulada nos dez computadores.\n\n1. Separe os computadores das licenças antivírus. O equipamento custa 10 × R$ 4.000 = R$ 40.000. As licenças foram informadas separadamente e não integram a base de depreciação dos computadores nesta questão.\n\n2. Calcule até a mudança da estimativa, em 31/03/X1: vida útil inicial de cinco anos = 60 meses; doação ao final, sem valor residual informado. Depreciação mensal = R$ 40.000 ÷ 60. De janeiro/X0 até março/X1 são 15 meses: acumulada = R$ 10.000. Valor contábil nessa data = R$ 30.000.\n\n3. A nova estimativa vale daqui para a frente. Valor residual total = 10 × R$ 900 = R$ 9.000. Base restante = R$ 30.000 − R$ 9.000 = R$ 21.000. De abril/X1 a dezembro/X2 restam 21 meses; nova depreciação = R$ 1.000 por mês.\n\n4. De abril a dezembro/X1 são nove meses: mais R$ 9.000. Total acumulado em 31/12/X1 = R$ 10.000 + R$ 9.000 = R$ 19.000. O valor contábil nessa data é R$ 21.000: não confunda valor contábil com depreciação acumulada.\n\nExemplo para fixar: por computador, o valor contábil em março é R$ 3.000; descontado o residual de R$ 900, faltam depreciar R$ 2.100 em 21 meses, ou R$ 100 por mês. Em dezembro, a depreciação acumulada individual é R$ 1.000 + R$ 900 = R$ 1.900. Multiplique por dez.\n\nVariação: a mudança da vida útil exige refazer os 15 meses anteriores? Não. É mudança de estimativa, com reconhecimento prospectivo; não é correção de erro. Também não se pode depreciar todo o custo novamente, pois R$ 10.000 já foram reconhecidos.\n\nExercício: sem outra mudança, quanto será depreciado em X2? R$ 12.000, correspondentes a 12 meses × R$ 1.000. A acumulada final será R$ 31.000 e o residual R$ 9.000, totalizando o custo original de R$ 40.000.\n\nFundamento: NBC TG 27, itens50,51 e53; NBC TG 23, itens36 e38, na redação consolidada da Revisão13. A revisão de vida útil e valor residual é mudança de estimativa. Conferidos os PDFs oficiais e o histórico SRE do CFC. A Revisão NBC31, publicada em25/02/2026, prevê aplicação das alterações aos exercícios iniciados em ou após01/01/2027; o recorte conferido não altera a regra de cálculo utilizada aqui. Não confundir publicação com início dos efeitos.\n\nCaderno oficial FGV, Investigador de Polícia do Amazonas2022, Tipo1, questão40, página8; gabarito definitivo multicargos, página5, letraA. Programa de Noções de Contabilidade conferido nas páginas48–49 do edital retificado. Gabarito, enunciado e extração original preservados."
+    },
+    "evidence": {
+      "legal": true,
+      "reason": "ChaveA reproduzida com revisão prospectiva e normas primárias oficiais CFC, histórico de alterações e transição2027; edital e fontes do próprio cargo previamente cotejados.",
+      "sources": [
+        "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+        "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+        "https://www1.cfc.org.br/sisweb/SRE/docs/RevisaoNBC31.pdf"
+      ],
+      "captures": [
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-tg27.pdf",
+          "sha256": "9deae26a22e7ff26ef56b7d28320393f435c2bf55e6ca1ddd5b4b52095611dda",
+          "captured_at": "2026-10-18T03:05:29.425172+00:00"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-tg23.pdf",
+          "sha256": "5188086378bebdb1d2f5dc61dc5f22247709b0ca8527b0377162fe02aea4afcb",
+          "captured_at": "2026-10-18T03:05:29.762221+00:00"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/detalhes_sre.aspx?codigo=2017/NBCTG27%28R4%29",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-details27.html",
+          "sha256": "5d20b26c784e131e2d05694ab3d57fdbfbac5485e8bb7824e0508896cedf4328",
+          "captured_at": "2026-10-18T03:05:30.147575+00:00"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/detalhes_sre.aspx?codigo=2017/NBCTG23%28R2%29",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-details23.html",
+          "sha256": "5185159402ad264a9ed467ad10f6c1e51725041a040988b5582aa30bebc6d095",
+          "captured_at": "2026-10-18T03:05:30.401127+00:00"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/detalhes_sre.aspx?codigo=2025/REVIS%C3%83ONBC31",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-details31.html",
+          "sha256": "cdc784feecacf615a6cdd181d884086500c409e0deea2a8a50788b344b3b324c",
+          "captured_at": "2026-10-18T03:05:30.682193+00:00"
+        },
+        {
+          "url": "https://www1.cfc.org.br/sisweb/SRE/docs/RevisaoNBC31.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/finalize-revision31.pdf",
+          "sha256": "9f663ae3959e35b508f85d831c00fdd0705a8ec05f8db3fb58e7dd2b09d1921c",
+          "captured_at": "2026-10-18T03:05:39.364693+00:00"
+        }
+      ],
+      "original_answer_preserved": true,
+      "paper_page": 8,
+      "key_page": 5
+    }
+  },
+  "guard_tests_passed": 23,
+  "application_tests_passed": 616,
+  "production_build": "passed",
+  "verification": "Real dry-run, compare-and-swap publication, full readback and application eligibility passed."
+}

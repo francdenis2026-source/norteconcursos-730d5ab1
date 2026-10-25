@@ -1,0 +1,1309 @@
+{
+  "version": "2026-10-11-lavagem-targeted",
+  "checked_at": "2026-10-12T01:45:07.959611+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "lavagem",
+      "title": "Lei 9.613/1998 — Lavagem de Dinheiro",
+      "units": 24,
+      "scope_type": "targeted_correction",
+      "course_current_units": 24,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-4",
+        "art-4-a",
+        "art-4-b",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-10-a",
+        "art-11",
+        "art-11-a",
+        "art-12",
+        "art-12-a",
+        "art-14",
+        "art-15",
+        "art-17-a",
+        "art-17-b",
+        "art-17-c",
+        "art-17-d",
+        "art-17-e",
+        "art-18"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "source_sha256": "87c039b8f6baef746a0c791592aff4287dce2caeadd4972c4ee4ed4bd39985c3",
+      "source_checked_at": "2026-10-12T00:31:29.115945+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "72a6ad91-a6e6-5caf-817f-07ce215699ef",
+      "content_sha256": "0c3f645db70be1c70d3e1454adfa80ebb044fccbf394109af1f19ae7f0615b9c",
+      "simples": "Ocultar/dissimular bens, direitos ou valores de infração penal: 3 a 10 anos e multa. Desde 2012, antecedente não se restringe a rol de crimes: pode ser infração penal. Modalidades equiparadas, tentativa, majorante de 1/3 a 2/3 por reiteração/organização/ativo virtual e colaboração espontânea têm elementos próprios. Ação controlada/infiltração são admitidas com requisitos legais.",
+      "pontos": [
+        "Antecedente amplo; uso de ativo virtual integra majorante desde 2022."
+      ],
+      "atencao": [
+        "Não exigir sempre completar três fases didáticas nem presumir lavagem por mera posse de dinheiro; examinar verbo, origem e dolo. Colaboração exige resultados, não benefício automático."
+      ],
+      "exemplo": "O autor dissimula origem criminosa mediante operações para aparentar licitude. Variação: O bem tem origem lícita: grande valor sozinho não preenche origem de infração penal.",
+      "prova": [
+        "A lei atual exige antecedente em rol fechado de crimes? Não; o caput refere-se a infração penal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ],
+      "expected": {
+        "unit_id": "72a6ad91-a6e6-5caf-817f-07ce215699ef",
+        "content_sha256": "0c3f645db70be1c70d3e1454adfa80ebb044fccbf394109af1f19ae7f0615b9c",
+        "simples": "Lavagem de dinheiro: ocultar ou dissimular a natureza, origem, localização, disposição, movimentação ou propriedade de bens, direitos ou valores provenientes, direta ou indiretamente, de infração penal. Pena: reclusão de três a dez anos e multa. Incorre na mesma pena quem, para ocultar ou dissimular a utilização desses bens, os converte em ativos lícitos; os adquire, recebe, troca, negocia, dá ou recebe em garantia, guarda, tem em depósito, movimenta ou transfere; ou importa ou exporta bens com valores não correspondentes aos verdadeiros. Também quem utiliza na atividade econômica ou financeira bens provenientes de infração penal e quem participa de grupo, associação ou escritório sabendo que sua atividade é dirigida à prática desses crimes. A tentativa é punida. A pena aumenta de 1/3 a 2/3 se os crimes forem cometidos de forma reiterada, por organização criminosa ou por meio de ativo virtual. Há delação premiada: redução, regime aberto ou semiaberto e até perdão judicial para quem colaborar espontaneamente. Admitem-se a ação controlada e a infiltração de agentes.",
+        "pontos": [
+          "Caput: ocultar ou dissimular bens, direitos ou valores provenientes de infração penal.",
+          "Reclusão de três a dez anos e multa.",
+          "§1º: conversão em ativos lícitos, aquisição, guarda, movimentação e importação ou exportação com valores falsos.",
+          "§2º: uso na atividade econômica e participação em grupo dirigido à lavagem.",
+          "§3º: tentativa punida.",
+          "§4º: aumento de 1/3 a 2/3 (reiteração, organização criminosa ou ativo virtual).",
+          "§5º: delação premiada com redução da pena, regime mais brando ou perdão judicial.",
+          "§6º: ação controlada e infiltração de agentes."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.683, de 2012, que aboliu o rol taxativo de crimes antecedentes: qualquer infração penal pode ser antecedente (inclusive contravenção).",
+          "A lei também previu o ativo virtual no §4º.",
+          "Crime acessório: depende de infração penal antecedente, mas é autônomo no processo."
+        ],
+        "exemplo": "O traficante que compra imóveis em nome de terceiros para esconder a origem do dinheiro comete lavagem.",
+        "prova": [
+          "Assertiva que restringe a lavagem a bens provenientes de um rol fechado de crimes erra: após a Lei nº 12.683, de 2012, qualquer infração penal serve."
+        ],
+        "termos": [
+          {
+            "termo": "Infração penal antecedente",
+            "significado": "Crime ou contravenção que gerou os bens lavados."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º",
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "94387394-1a1d-59a5-89f3-539b1c8ba114",
+      "content_sha256": "d8e72990bce3e808de2004cb7c6852b94edde2d9cc63c1f09cffeaa4ce2641ad",
+      "simples": "Processo da lavagem é autônomo em relação ao antecedente, inclusive estrangeiro, mas denúncia exige indícios suficientes de sua existência. Justiça Federal nas hipóteses específicas do inciso III; não toda lavagem. Autor antecedente desconhecido, isento ou punibilidade extinta não impede automaticamente. O §2º afasta CPP 366 na hipótese especial e prevê defesa dativa.",
+      "pontos": [
+        "Autonomia não dispensa indícios do antecedente nem prova dos elementos."
+      ],
+      "atencao": [
+        "Não exigir condenação prévia do antecedente nem federalizar todo processo. Compare texto especial com garantias de citação e defesa."
+      ],
+      "exemplo": "Lavagem é apurada sem condenação prévia, mas com indícios concretos da infração antecedente. Variação: Só há suspeita vaga de riqueza: autonomia não elimina suporte probatório.",
+      "prova": [
+        "É indispensável condenação anterior pelo antecedente? Não; processo e julgamento são independentes, com indícios necessários."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "94387394-1a1d-59a5-89f3-539b1c8ba114",
+        "content_sha256": "d8e72990bce3e808de2004cb7c6852b94edde2d9cc63c1f09cffeaa4ce2641ad",
+        "simples": "O processo da lavagem segue as regras descritas e independe do processo e julgamento do antecedente. A competência federal depende das hipóteses enumeradas, e a denúncia exige indícios suficientes do antecedente. O §2º contém regra especial de citação por edital, prosseguimento e defensor dativo para acusado que não comparece nem constitui advogado.",
+        "pontos": [
+          "O §2º afasta expressamente o art. 366 do CPP no processo por crime previsto nesta lei."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "Não aplique automaticamente a suspensão do processo e da prescrição do art. 366 ao cenário regido pela regra especial. O §2º tem formulação específica que deve ser estudada com seu texto completo."
+        ],
+        "exemplo": "No caso regido pelo §2º, o acusado não comparece nem constitui advogado: o texto determina prosseguimento até julgamento com defensor dativo, após citação por edital. Variação: O exercício trata de delito fora da Lei de Lavagem: não transporte a exceção especial para qualquer processo criminal.",
+        "prova": [
+          "A aplicação do art. 366 do CPP é automática no processo de lavagem? Não; o §2º deste artigo o afasta expressamente."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:04.6+00:00",
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T19:32:04.6+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "387e8f3c-a231-5967-a083-68835e99b38f",
+      "content_sha256": "9340cae5a9b31f7b4317c62bab2d71cff90c05d367786201298d03ec3cd7f705",
+      "simples": "Indícios suficientes permitem medidas assecuratórias sobre instrumentos, produtos/proveitos, inclusive de interpostas pessoas. MP é ouvido em 24h; alienação antecipada preserva valor. Licitude comprovada permite liberação, preservado necessário a reparação, prestações, multas/custas. Pedido exige comparecimento pessoal indicado.",
+      "pontos": [
+        "Cautela patrimonial não é confisco definitivo."
+      ],
+      "atencao": [
+        "A menção a iniciativa de ofício deve ser lida com estrutura acusatória, não como juiz investigador irrestrito. Alegar licitude não libera tudo sem prova."
+      ],
+      "exemplo": "Um bem deteriora e examina-se venda antecipada para preservar valor. Variação: Prova de licitude permite liberação, mas se mantém constrição suficiente às obrigações legais.",
+      "prova": [
+        "A medida assecuratória já é perda definitiva dos bens? Não; é cautelar com requisitos e destinação posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "387e8f3c-a231-5967-a083-68835e99b38f",
+        "content_sha256": "9340cae5a9b31f7b4317c62bab2d71cff90c05d367786201298d03ec3cd7f705",
+        "simples": "O juiz, de ofício, a requerimento do Ministério Público ou mediante representação do delegado de polícia, ouvido o Ministério Público em 24 horas, havendo indícios suficientes de infração penal, poderá decretar medidas assecuratórias de bens, direitos ou valores do investigado ou acusado, ou existentes em nome de interpostas pessoas, que sejam instrumento, produto ou proveito dos crimes da Lei ou das infrações antecedentes. Procede-se à alienação antecipada quando os bens estiverem sujeitos a deterioração ou depreciação ou houver dificuldade para sua manutenção. O juiz liberará os bens quando comprovada a licitude de sua origem, mantendo os necessários à reparação dos danos e ao pagamento de multas e custas. Nenhum pedido de liberação será conhecido sem o comparecimento pessoal do acusado ou de interposta pessoa.",
+        "pontos": [
+          "Medidas assecuratórias: sequestro e outras, de ofício, a pedido do MP ou por representação do delegado.",
+          "Alcança bens em nome de interpostas pessoas (laranjas).",
+          "Alienação antecipada em caso de deterioração ou dificuldade de manutenção.",
+          "Liberação se comprovada a origem lícita.",
+          "Pedido de liberação exige comparecimento pessoal do acusado.",
+          "§4º: medidas para reparar o dano ou pagar prestação pecuniária, multa e custas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.683, de 2012.",
+          "O MP é ouvido em 24 horas.",
+          "O PEDIDO DE LIBERAÇÃO exige a presença do acusado ou da interposta pessoa."
+        ],
+        "exemplo": "O juiz bloqueia imóveis registrados em nome de um laranja do investigado.",
+        "prova": [
+          "Assertiva que permite a liberação dos bens sem comparecimento pessoal erra: ele é exigido."
+        ],
+        "termos": [
+          {
+            "termo": "Interposta pessoa",
+            "significado": "Quem figura como dono dos bens para esconder o verdadeiro proprietário."
+          }
+        ],
+        "remissoes": [
+          "Art. 4º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4-a",
+      "unit_id": "cdfd1a30-eaad-536f-bebe-295afeae531f",
+      "content_sha256": "1591e9652c70a34278b1b4b29f2e359ea404729543896dccec5cc90dace70e63",
+      "simples": "Alienação antecipada ocorre em autos apartados, com avaliação e homologação judicial; preço não inferior a 75% da avaliação. Depósito e destinação distinguem competência federal, estadual e DF, atualizados pela Lei 15.358/2026. Sentença definitiva e ordem judicial governam incorporação/restituição; recursos têm apenas efeito devolutivo. Há ressalvas do lesado/terceiro e regime específico do produto de tráfico.",
+      "pontos": [
+        "75% é piso de venda, não redução da pena. Competência define ente destinatário."
+      ],
+      "atencao": [
+        "Não destinar tudo automaticamente à União após a alteração de 2026 nem tratar venda cautelar como condenação. Compare §§4º/5º/10 e direitos ressalvados."
+      ],
+      "exemplo": "Bem avaliado em R$100 mil não pode ser vendido por R$60 mil sob o piso legal; mínimo R$75 mil. Variação: O processo é estadual: examine conta/destinação do ente conforme disciplina atual, não regra federal indistinta.",
+      "prova": [
+        "O piso do leilão é de 75% da avaliação? Sim; o §3º o fixa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "cdfd1a30-eaad-536f-bebe-295afeae531f",
+        "content_sha256": "1591e9652c70a34278b1b4b29f2e359ea404729543896dccec5cc90dace70e63",
+        "simples": "A alienação antecipada para preservação de valor de bens sob constrição é decretada pelo juiz, de ofício, a requerimento do Ministério Público ou por solicitação da parte interessada, por petição autônoma, em autos apartados. O requerimento deve relacionar os bens e quem os detém. O juiz determina a avaliação, intima o Ministério Público e, por sentença, homologa o valor e manda alienar em leilão ou pregão, preferencialmente eletrônico, por valor não inferior a 75% da avaliação. A quantia é depositada em conta judicial remunerada: na Justiça Federal, na Caixa Econômica Federal ou instituição pública, com repasse à Conta Única do Tesouro em 24 horas; nos Estados e no Distrito Federal, em instituição financeira designada em lei. Após o trânsito em julgado, o valor é incorporado ao patrimônio da União ou do ente federativo (condenação) ou devolvido ao réu com a remuneração (absolvição extintiva de punibilidade). Os recursos têm apenas efeito devolutivo. Com a condenação, decreta-se a perda dos valores, da fiança, dos bens não alienados e dos bens não reclamados em 90 dias.",
+        "pontos": [
+          "Petição autônoma e autos em apartado.",
+          "Leilão por valor não inferior a 75% da avaliação.",
+          "Depósito em conta judicial remunerada.",
+          "Condenação: valor incorporado à União, Estado ou DF.",
+          "Absolvição: valor devolvido ao réu com remuneração.",
+          "Recursos só com efeito devolutivo.",
+          "Perda de bens não reclamados em 90 dias."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012.",
+          "Piso do leilão: 75% da avaliação."
+        ],
+        "exemplo": "Carros apreendidos que se deterioram são leiloados antecipadamente e o valor fica em conta judicial.",
+        "prova": [
+          "Assertiva que permite o leilão por qualquer valor erra: o piso é de 75% da avaliação."
+        ],
+        "termos": [
+          {
+            "termo": "Efeito devolutivo",
+            "significado": "O recurso devolve a matéria ao tribunal, sem suspender a decisão."
+          }
+        ],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4-b",
+      "unit_id": "b9efc10b-d81e-5486-9302-22f9c9191ac9",
+      "content_sha256": "4490112c751748863035046b3bd32f8f35250d50e3bf9ddbeca98d9c99086fb8",
+      "simples": "Juiz pode suspender execução de prisão ou medida assecuratória, ouvido MP, quando execução imediata puder comprometer investigação. Não extingue ordem nem autoriza a polícia a ignorá-la unilateralmente.",
+      "pontos": [
+        "Suspender execução por decisão judicial e finalidade investigatória."
+      ],
+      "atencao": [
+        "Distinguir adiamento controlado de revogação definitiva ou inércia injustificada."
+      ],
+      "exemplo": "O juiz, ouvido MP, adia execução para não comprometer diligência. Variação: A autoridade policial por si descumpre ordem: este artigo não lhe concede decisão unilateral.",
+      "prova": [
+        "A suspensão compete unilateralmente à polícia? Não; o artigo prevê decisão do juiz ouvido o MP."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b9efc10b-d81e-5486-9302-22f9c9191ac9",
+        "content_sha256": "4490112c751748863035046b3bd32f8f35250d50e3bf9ddbeca98d9c99086fb8",
+        "simples": "A ordem de prisão de pessoas ou as medidas assecuratórias de bens, direitos ou valores poderão ser suspensas pelo juiz, ouvido o Ministério Público, quando a sua execução imediata puder comprometer as investigações.",
+        "pontos": [
+          "Suspensão da ordem de prisão ou das medidas assecuratórias.",
+          "Quando a execução imediata puder comprometer as investigações.",
+          "Ouvido o Ministério Público."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012.",
+          "Espécie de ação controlada: retarda a execução para não frustrar a investigação."
+        ],
+        "exemplo": "O juiz adia o bloqueio de contas para não alertar a quadrilha durante a investigação.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do Ministério Público para a suspensão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "0148fb54-3615-59d0-8102-bd2223c22cc7",
+      "content_sha256": "0c5266c0eb71aedc53bf50f1e2453927a1060339fc88166d34d90f22437b473b",
+      "simples": "Juiz nomeia pessoa física ou jurídica qualificada para administrar bens quando as circunstâncias aconselharem, ouvido MP e com compromisso.",
+      "pontos": [
+        "Qualificação + MP + compromisso."
+      ],
+      "atencao": [
+        "Nomeação não transmite propriedade nem dispensa fiscalização."
+      ],
+      "exemplo": "Entidade qualificada é designada com compromisso judicial. Variação: O interessado quer ser dono por administrar: funções não se confundem.",
+      "prova": [
+        "O administrador pode ser pessoa jurídica? Sim; desde que qualificada e nomeada nos termos legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0148fb54-3615-59d0-8102-bd2223c22cc7",
+        "content_sha256": "0c5266c0eb71aedc53bf50f1e2453927a1060339fc88166d34d90f22437b473b",
+        "simples": "Quando as circunstâncias o aconselharem, o juiz, ouvido o Ministério Público, nomeará pessoa física ou jurídica qualificada para a administração dos bens, direitos ou valores sujeitos a medidas assecuratórias, mediante termo de compromisso.",
+        "pontos": [
+          "Nomeação de administrador qualificado, pessoa física ou jurídica.",
+          "Ouvido o Ministério Público.",
+          "Termo de compromisso."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.683, de 2012.",
+          "Nomeação quando as circunstâncias aconselharem."
+        ],
+        "exemplo": "O juiz nomeia uma empresa especializada para administrar uma fazenda bloqueada.",
+        "prova": [
+          "Assertiva que torna obrigatória a nomeação de administrador em todos os casos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "3c00f7d6-9841-5fa2-8cf6-86bfa6b2b0e2",
+      "content_sha256": "57fcb436d02d931e30a6cae40878d344a7266b8ab7fe0231c6945e6fad4a6645",
+      "simples": "Administrador recebe remuneração fixada judicialmente com produto dos bens e presta informações determinadas sobre situação e investimentos. MP conhece atos e pode requerer providências.",
+      "pontos": [
+        "Remuneração judicial e prestação de contas."
+      ],
+      "atencao": [
+        "Não se remunerar livremente nem investir sem controle devido."
+      ],
+      "exemplo": "O gestor informa investimentos e situação patrimonial ao juízo. Variação: Decide próprio pagamento sem fixação: não atende à regra.",
+      "prova": [
+        "O administrador fixa livremente sua remuneração? Não; ela é fixada pelo juiz."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3c00f7d6-9841-5fa2-8cf6-86bfa6b2b0e2",
+        "content_sha256": "57fcb436d02d931e30a6cae40878d344a7266b8ab7fe0231c6945e6fad4a6645",
+        "simples": "A pessoa responsável pela administração dos bens fará jus a uma remuneração, fixada pelo juiz, satisfeita com o produto dos bens administrados, e prestará, por determinação judicial, informações periódicas sobre a situação dos bens e sobre investimentos e reinvestimentos realizados. Os atos de administração serão levados ao conhecimento do Ministério Público, que requererá o que entender cabível.",
+        "pontos": [
+          "Remuneração fixada pelo juiz, paga com o produto dos bens.",
+          "Prestação de informações periódicas.",
+          "Atos levados ao conhecimento do Ministério Público."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.683, de 2012."
+        ],
+        "exemplo": "O administrador presta contas periódicas ao juiz sobre os bens bloqueados.",
+        "prova": [
+          "Assertiva que fixa a remuneração do administrador com recursos do Estado erra: ela sai dos bens administrados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "2dd947fd-c8cb-51c2-b0a4-af892392177a",
+      "content_sha256": "6aaf65300efcea7a319a8192a8636796a14a0b1c8ae8d0811039b6e5a57a52a2",
+      "simples": "Perda beneficia União ou, na competência estadual/DF, o respectivo ente, conforme Lei 15.358/2026, preservados lesado/terceiro de boa-fé. Interdição funcional e de direção nas entidades do art. 9º: dobro do tempo da pena privativa aplicada. Destinação é regulamentada no âmbito da competência; instrumentos sem valor podem ser inutilizados/conservados nas hipóteses legais.",
+      "pontos": [
+        "Competência define ente; interdição = dobro da pena aplicada."
+      ],
+      "atencao": [
+        "A ADPF 569 exige destinação legal, sem escolha livre de MP/juiz. Não aplicar União a todos os casos após alteração de 2026 nem confundir interdição com pena máxima abstrata."
+      ],
+      "exemplo": "Processo estadual leva à perda em favor do ente nos termos atuais, ressalvados direitos. Variação: A pena aplicada é quatro anos: o dobro da interdição é oito, não dobro da pena máxima abstrata.",
+      "prova": [
+        "O dobro para interdição usa a pena aplicada? Sim; é a referência expressa do inciso II."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5650503"
+      ],
+      "expected": {
+        "unit_id": "2dd947fd-c8cb-51c2-b0a4-af892392177a",
+        "content_sha256": "6aaf65300efcea7a319a8192a8636796a14a0b1c8ae8d0811039b6e5a57a52a2",
+        "simples": "São efeitos da condenação, além dos previstos no Código Penal: a perda, em favor da União (ou dos Estados e do Distrito Federal, nos casos da Justiça Estadual), de todos os bens, direitos e valores relacionados à prática dos crimes da Lei, inclusive os usados para prestar a fiança, ressalvado o direito do lesado ou de terceiro de boa-fé; e a interdição do exercício de cargo ou função pública e de diretor, membro de conselho de administração ou gerência das pessoas jurídicas do art. 9º, pelo dobro do tempo da pena privativa de liberdade aplicada. Os entes regulamentarão a destinação dos bens, assegurada a utilização pelos órgãos encarregados da prevenção e do combate. Os instrumentos do crime sem valor econômico serão inutilizados ou doados a museu criminal ou a entidade pública.",
+        "pontos": [
+          "Perda de bens, direitos e valores ligados ao crime, em favor da União, Estados ou DF.",
+          "Ressalva do lesado e do terceiro de boa-fé.",
+          "Interdição de cargo, função pública e direção de pessoas jurídicas do art. 9º pelo dobro da pena.",
+          "Destinação dos bens regulamentada pelos entes.",
+          "Instrumentos sem valor: inutilização ou doação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso I com redação da Lei nº 15.358, de 2026.",
+          "A interdição dura o DOBRO do tempo da pena privativa de liberdade."
+        ],
+        "exemplo": "O condenado por lavagem perde os imóveis ligados ao crime, e o terceiro de boa-fé é ressalvado.",
+        "prova": [
+          "Assertiva que fixa a interdição pelo mesmo tempo da pena erra: é pelo dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "1141b4e0-5d93-564c-8b43-1f73ad51248b",
+      "content_sha256": "b06c2353bad1ef4dc2aed8debc12aebc6b17d871ad7c608de828b17753bb616f",
+      "simples": "Cooperação patrimonial estrangeira: tratado/convenção ou reciprocidade oferecida. Sem tratado, bens/produto repartem-se metade por Estado, ressalvados lesado e terceiro de boa-fé.",
+      "pontos": [
+        "Tratado OU reciprocidade; divisão 1/2 na falta de tratado."
+      ],
+      "atencao": [
+        "Não impedir toda cooperação por falta de tratado nem sacrificar direitos ressalvados."
+      ],
+      "exemplo": "Autoridade estrangeira competente solicita medida com promessa de reciprocidade. Variação: Há terceiro de boa-fé: sua ressalva é examinada antes da repartição.",
+      "prova": [
+        "Sem tratado a reciprocidade pode fundamentar cooperação? Sim; o §1º a admite."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1141b4e0-5d93-564c-8b43-1f73ad51248b",
+        "content_sha256": "b06c2353bad1ef4dc2aed8debc12aebc6b17d871ad7c608de828b17753bb616f",
+        "simples": "O juiz determinará, na hipótese de existência de tratado ou convenção internacional e por solicitação de autoridade estrangeira competente, medidas assecuratórias sobre bens, direitos ou valores oriundos de crimes descritos no art. 1º praticados no estrangeiro. Aplica-se o dispositivo, independentemente de tratado, quando o governo do país solicitante prometer reciprocidade ao Brasil. Na falta de tratado ou convenção, os bens privados sujeitos a medidas assecuratórias ou os recursos da alienação serão repartidos entre o Estado requerente e o Brasil, na proporção de metade, ressalvado o direito do lesado ou de terceiro de boa-fé.",
+        "pontos": [
+          "Medidas assecuratórias a pedido de autoridade estrangeira, com tratado ou convenção.",
+          "Sem tratado, basta a promessa de reciprocidade.",
+          "Repartição de metade entre o Estado requerente e o Brasil.",
+          "Ressalva do lesado e do terceiro de boa-fé."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: caput e §2º com redação da Lei nº 12.683, de 2012.",
+          "Reciprocidade substitui o tratado."
+        ],
+        "exemplo": "O Brasil bloqueia valores a pedido de outro país que prometeu reciprocidade.",
+        "prova": [
+          "Assertiva que exige sempre tratado para a cooperação erra: basta a promessa de reciprocidade."
+        ],
+        "termos": [
+          {
+            "termo": "Reciprocidade",
+            "significado": "Promessa de tratar o outro país da mesma forma em casos semelhantes."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "234ed26a-40b1-5c82-a703-ee1303044a0e",
+      "content_sha256": "f4afe098205845ec27d04fdb84c8760f4d1ff85c65e3c161c9d5b1c15a376370",
+      "simples": "Obrigações de prevenção alcançam atividades permanentes/eventuais, principais/acessórias: setor financeiro, seguros, imóveis, bens valiosos, registros, serviços e setores enumerados. Inclui prestadoras de ativos virtuais desde Lei 14.478. Verificar enquadramento e regras do regulador; não apenas bancos.",
+      "pontos": [
+        "Atividade eventual/acessória também; ativos virtuais incluídos."
+      ],
+      "atencao": [
+        "Não presumir lavagem de toda pessoa obrigada: obrigação de prevenção é distinta de crime. Assessoria exige operações descritas, não toda atividade sem distinção."
+      ],
+      "exemplo": "Prestadora de ativos virtuais confere deveres preventivos aplicáveis. Variação: A atividade é eventual: isso sozinho não exclui enquadramento.",
+      "prova": [
+        "A atividade precisa ser sempre principal e permanente? Não; o caput abrange eventual e acessória."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ],
+      "expected": {
+        "unit_id": "234ed26a-40b1-5c82-a703-ee1303044a0e",
+        "content_sha256": "f4afe098205845ec27d04fdb84c8760f4d1ff85c65e3c161c9d5b1c15a376370",
+        "simples": "Sujeitam-se às obrigações dos arts. 10 e 11 as pessoas físicas e jurídicas que tenham, em caráter permanente ou eventual, como atividade principal ou acessória, a captação, intermediação e aplicação de recursos financeiros de terceiros; a compra e venda de moeda estrangeira ou ouro como ativo financeiro; e a custódia, emissão, distribuição, negociação ou administração de títulos ou valores mobiliários. O parágrafo único estende a obrigação a bolsas, seguradoras, administradoras de cartões e consórcios, empresas de arrendamento mercantil, factoring, e outras atividades, como promoção imobiliária, comércio de joias e bens de luxo e de arte, entre outras.",
+        "pontos": [
+          "Setor financeiro: captação, intermediação e aplicação de recursos de terceiros.",
+          "Compra e venda de moeda estrangeira ou ouro.",
+          "Custódia e negociação de valores mobiliários.",
+          "Estendido a bolsas, seguradoras, cartões, consórcios, leasing, factoring e outros setores."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.683, de 2012.",
+          "São os chamados SETORES OBRIGADOS (compliance)."
+        ],
+        "exemplo": "Uma corretora de valores é obrigada a identificar clientes e comunicar operações suspeitas.",
+        "prova": [
+          "Assertiva que restringe as obrigações aos bancos erra: abrangem vários setores."
+        ],
+        "termos": [
+          {
+            "termo": "Pessoas obrigadas",
+            "significado": "Setores sujeitos ao cadastro e à comunicação de operações ao Coaf."
+          }
+        ],
+        "remissoes": [
+          "Art. 10",
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "e175d35e-76e1-5441-8557-e43d6693132e",
+      "content_sha256": "c743d0a5d49fa10d52d796ff2e5e9caac0f96dbc0b2d39ac90d2b89121d41228",
+      "simples": "Identificar clientes/representantes/proprietários, registrar operações acima do limite, manter controles e cadastro no regulador/Coaf e atender requisições. Registros incluem ativos virtuais. Guarda mínima de cinco anos desde encerramento da conta ou conclusão da transação, ampliável. Operações agregadas do mesmo mês-calendário também contam para limite.",
+      "pontos": [
+        "5 anos mínimos do marco correto; fracionamento não elimina agregação."
+      ],
+      "atencao": [
+        "Não contar cinco anos da abertura da conta nem inventar um limite universal sem instrução do setor."
+      ],
+      "exemplo": "Operações ligadas no mesmo mês ultrapassam conjuntamente limite: examina-se registro. Variação: Conta aberta continua ativa: não se inicia a guarda final do encerramento pela abertura.",
+      "prova": [
+        "A guarda mínima se conta sempre da abertura da conta? Não; do encerramento ou conclusão da transação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ],
+      "expected": {
+        "unit_id": "e175d35e-76e1-5441-8557-e43d6693132e",
+        "content_sha256": "c743d0a5d49fa10d52d796ff2e5e9caac0f96dbc0b2d39ac90d2b89121d41228",
+        "simples": "As pessoas referidas no art. 9º identificarão seus clientes e manterão cadastro atualizado; manterão registro de toda transação em moeda nacional ou estrangeira, títulos, metais, ativos virtuais ou qualquer ativo conversível em dinheiro que ultrapasse o limite fixado pela autoridade; adotarão políticas, procedimentos e controles internos compatíveis com seu porte; cadastrar-se-ão no órgão regulador ou, na falta, no Coaf; e atenderão às requisições do Coaf, preservando o sigilo das informações.",
+        "pontos": [
+          "Identificação de clientes e cadastro atualizado.",
+          "Registro de transações acima do limite.",
+          "Políticas e controles internos.",
+          "Cadastro no órgão regulador ou no Coaf.",
+          "Atendimento às requisições do Coaf."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso II com redação da Lei nº 14.478, de 2022 (ativos virtuais); incisos III a V com redação da Lei nº 12.683, de 2012."
+        ],
+        "exemplo": "A concessionária de joias mantém cadastro de clientes e registra vendas acima do limite.",
+        "prova": [
+          "Assertiva que dispensa o registro de transações com ativos virtuais erra: foram incluídas pela Lei nº 14.478, de 2022."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º",
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10-a",
+      "unit_id": "47ccb122-6559-5905-bc37-0ad1585c8a12",
+      "content_sha256": "618f101a4344a6477bdc51f7fede86923283994883de7df9f3f8bc1249086cc6",
+      "simples": "Banco Central mantém cadastro centralizado de correntistas/clientes e procuradores. Cadastro não equivale por si a livre acesso ao extrato e conteúdo das operações.",
+      "pontos": [
+        "Cadastro de vínculos, não quebra universal de sigilo."
+      ],
+      "atencao": [
+        "Não confundir CCS com prova automática de origem ilícita."
+      ],
+      "exemplo": "A consulta identifica vínculo cadastral com instituição financeira. Variação: Quer-se extrato: examinam-se fundamento e limites de acesso próprios.",
+      "prova": [
+        "O cadastro autoriza automaticamente extratos sem requisito legal? Não; cadastro e acesso ao conteúdo são distintos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "47ccb122-6559-5905-bc37-0ad1585c8a12",
+        "content_sha256": "618f101a4344a6477bdc51f7fede86923283994883de7df9f3f8bc1249086cc6",
+        "simples": "O Banco Central manterá registro centralizado formando o cadastro geral de correntistas e clientes de instituições financeiras, bem como de seus procuradores.",
+        "pontos": [
+          "Banco Central mantém o cadastro geral de correntistas e clientes.",
+          "Inclui os procuradores."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 10.701, de 2003 (CCS)."
+        ],
+        "exemplo": "A autoridade consulta o cadastro do Banco Central para saber em que bancos o investigado tem contas.",
+        "prova": [
+          "Assertiva que atribui o cadastro geral de correntistas ao Coaf erra: é do Banco Central."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "690d4edc-b1d9-5e2f-a285-7203dde91635",
+      "content_sha256": "935b53e49f3403a1b9beabc91301185cdb28acab25884d7875228e532c1c1d69",
+      "simples": "Pessoas obrigadas dão atenção às operações suspeitas e comunicam ao Coaf em 24h as hipóteses legais, sem dar ciência a ninguém, inclusive envolvido. Não ocorrência também é informada conforme periodicidade do regulador/Coaf. Comunicação de boa-fé na forma legal não gera responsabilidade civil/administrativa.",
+      "pontos": [
+        "24h de comunicação e vedação de aviso; declaração negativa tem periodicidade própria."
+      ],
+      "atencao": [
+        "Não esperar condenação para comunicar suspeita nem aplicar 24h automaticamente à declaração negativa. Comunicação não prova culpa."
+      ],
+      "exemplo": "Operação suspeita é comunicada sem alertar o cliente. Variação: Não houve operação comunicável: consulta-se periodicidade da declaração negativa, não se presume omissão livre.",
+      "prova": [
+        "O cliente deve ser informado da comunicação ao Coaf? Não; a lei exige abstenção de dar ciência."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "690d4edc-b1d9-5e2f-a285-7203dde91635",
+        "content_sha256": "935b53e49f3403a1b9beabc91301185cdb28acab25884d7875228e532c1c1d69",
+        "simples": "As pessoas do art. 9º dispensarão especial atenção às operações que possam constituir sérios indícios dos crimes da Lei; deverão comunicar ao Coaf, abstendo-se de dar ciência a qualquer pessoa, inclusive àquela a quem se refira a informação, no prazo de 24 horas, a proposta ou realização das transações acima do limite e das operações suspeitas; e comunicarão ao órgão regulador ou ao Coaf a não ocorrência de operações passíveis de comunicação. As autoridades elaborarão relação de operações suspeitas. As comunicações de boa-fé não acarretam responsabilidade civil ou administrativa. O Coaf disponibiliza as comunicações aos órgãos reguladores.",
+        "pontos": [
+          "Atenção especial a operações suspeitas.",
+          "Comunicação ao Coaf em 24 horas, sem avisar o cliente.",
+          "Comunicação negativa quando não houver operações.",
+          "Boa-fé: sem responsabilidade civil ou administrativa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incisos II e III com redação da Lei nº 12.683, de 2012.",
+          "Prazo de 24 horas.",
+          "Sigilo: NÃO se avisa o cliente."
+        ],
+        "exemplo": "O banco comunica ao Coaf, em 24 horas, uma movimentação atípica, sem avisar o cliente.",
+        "prova": [
+          "Assertiva que obriga a avisar o cliente da comunicação ao Coaf erra: é vedado."
+        ],
+        "termos": [
+          {
+            "termo": "Coaf",
+            "significado": "Conselho de Controle de Atividades Financeiras."
+          }
+        ],
+        "remissoes": [
+          "Art. 9º",
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11-a",
+      "unit_id": "fae901d8-d400-5e49-bf57-d5f0c35dc109",
+      "content_sha256": "483c58313d0df4daa4de005032be21c94902f4a69dd337fecb28e0c44f1990ec",
+      "simples": "Transferências internacionais e saques em espécie devem ser previamente comunicados à instituição financeira nos termos, limites, prazos e condições do Banco Central.",
+      "pontos": [
+        "Prévia à instituição; condições do BC."
+      ],
+      "atencao": [
+        "Não equiparar esse aviso à comunicação sigilosa de suspeita pelo obrigado ao Coaf."
+      ],
+      "exemplo": "Cliente programa saque enquadrado e segue comunicação prévia ao banco. Variação: O banco identifica suspeita: possui dever próprio do art. 11, distinto do aviso do cliente.",
+      "prova": [
+        "Este aviso é exatamente a comunicação de suspeita ao Coaf? Não; destinatário e finalidade são distintos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fae901d8-d400-5e49-bf57-d5f0c35dc109",
+        "content_sha256": "483c58313d0df4daa4de005032be21c94902f4a69dd337fecb28e0c44f1990ec",
+        "simples": "As transferências internacionais e os saques em espécie deverão ser previamente comunicados à instituição financeira, nos termos, limites, prazos e condições fixados pelo Banco Central do Brasil.",
+        "pontos": [
+          "Transferências internacionais e saques em espécie.",
+          "Comunicação prévia à instituição financeira.",
+          "Regras fixadas pelo Banco Central."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012."
+        ],
+        "exemplo": "Quem fará um grande saque em dinheiro avisa antes a instituição financeira.",
+        "prova": [
+          "Assertiva que dispensa o aviso prévio em saques em espécie erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "f4bd8370-8592-550a-a50f-87c969cab8dc",
+      "content_sha256": "5b45bc0f7bea311dc3ce68e8a1479957fb5b0e0c5cbbf76af446366dce221f70",
+      "simples": "Descumprir arts. 10/11 gera sanções administrativas, cumuláveis ou não: advertência, multa com limites legais, inabilitação até dez anos e cassação/suspensão. Multa contempla culpa ou dolo nas hipóteses; inabilitação/cassação têm condições específicas. Não é condenação penal por lavagem.",
+      "pontos": [
+        "Multa, inabilitação e cassação possuem gradação/requisitos."
+      ],
+      "atencao": [
+        "Não exigir sempre dolo de lavagem para sanção administrativa nem tratar teto R$20 milhões como multa fixa universal."
+      ],
+      "exemplo": "Obrigada deixa de sanar irregularidade advertida e examina-se multa na hipótese. Variação: Há infração administrativa sem prova de lavagem: a distinção de esferas permanece.",
+      "prova": [
+        "O art. 12 estabelece pena penal automática de lavagem? Não; estabelece sanções administrativas por descumprimento."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f4bd8370-8592-550a-a50f-87c969cab8dc",
+        "content_sha256": "5b45bc0f7bea311dc3ce68e8a1479957fb5b0e0c5cbbf76af446366dce221f70",
+        "simples": "Às pessoas do art. 9º e a seus administradores que deixem de cumprir os arts. 10 e 11 serão aplicadas, cumulativamente ou não, as sanções de advertência; multa pecuniária variável não superior ao dobro do valor da operação, ao dobro do lucro real obtido ou que seria obtido, ou a vinte milhões de reais; inabilitação temporária, por até dez anos, para o cargo de administrador; e cassação ou suspensão da autorização para a atividade. A advertência aplica-se por irregularidade no cumprimento das instruções dos incisos I e II do art. 10. A multa será aplicada sempre que, por culpa ou dolo, deixarem de sanar irregularidades objeto de advertência, não realizarem a identificação ou o registro, deixarem de atender requisição do Coaf, ou descumprirem a vedação de comunicar o cliente. A inabilitação exige infrações graves ou reincidência específica, e a cassação exige reincidência específica.",
+        "pontos": [
+          "Sanções: advertência, multa, inabilitação e cassação.",
+          "Multa limitada pelo dobro da operação, dobro do lucro ou vinte milhões de reais.",
+          "Inabilitação de até dez anos.",
+          "Cassação da autorização em reincidência específica."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incisos II e IV com redação da Lei nº 12.683, de 2012 (multa de vinte milhões de reais).",
+          "Sanções ADMINISTRATIVAS aplicadas pelas autoridades competentes."
+        ],
+        "exemplo": "O banco que não comunica operação suspeita ao Coaf sofre multa e outras sanções administrativas.",
+        "prova": [
+          "Assertiva que trata essas sanções como penas criminais erra: são administrativas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10",
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12-a",
+      "unit_id": "cb75134e-ea3f-5b81-849e-45fb310d1159",
+      "content_sha256": "a1151843ad57f12b0a0bc18bc5ff1d871f4d676dfd8ce9fb45f61048b640f25d",
+      "simples": "Prevê regulamentação do CNPEP no Portal da Transparência, envio de dados pelos entes/Poderes e consulta pelos obrigados, sem dispensar outras diligências. PEP é condição de exposição política para controles, não culpa presumida. Não afirmar completude operacional do cadastro apenas porque foi previsto em lei.",
+      "pontos": [
+        "Prevenção: consulta + demais diligências; ausência em lista não encerra avaliação."
+      ],
+      "atencao": [
+        "TCU, deliberação de abril de 2026, recomendou concluir regulamentação. Distinguir previsão legal, implementação e dados efetivamente disponíveis; não presumir que todos os Poderes já estejam plenamente integrados."
+      ],
+      "exemplo": "Instituição consulta dados disponíveis e também faz outras diligências de enquadramento. Variação: Pessoa não aparece em lista: isso sozinho não prova ausência de exposição nem dispensa controles.",
+      "prova": [
+        "Ser PEP significa ter praticado lavagem? Não; é condição para diligências preventivas, sem culpa presumida."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm",
+        "https://btcu.apps.tcu.gov.br/api/obterDocumentoPdf/80197662"
+      ],
+      "expected": {
+        "unit_id": "cb75134e-ea3f-5b81-849e-45fb310d1159",
+        "content_sha256": "a1151843ad57f12b0a0bc18bc5ff1d871f4d676dfd8ce9fb45f61048b640f25d",
+        "simples": "Ato do Poder Executivo federal regulamentará a disciplina e o funcionamento do Cadastro Nacional de Pessoas Expostas Politicamente (CNPEP), disponibilizado pelo Portal da Transparência. Os órgãos e entidades de todos os Poderes e entes encaminharão ao gestor do cadastro informações atualizadas sobre seus integrantes classificados como pessoas expostas politicamente. As pessoas do art. 9º incluirão consulta ao CNPEP entre seus procedimentos. O órgão gestor indicará pela internet os órgãos que deixem de cumprir a obrigação.",
+        "pontos": [
+          "Cadastro Nacional de Pessoas Expostas Politicamente (CNPEP).",
+          "Órgãos públicos devem informar seus PEPs.",
+          "Setores obrigados consultam o CNPEP.",
+          "Transparência ativa sobre quem não cumprir."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.478, de 2022; o texto indica status de vigência a verificar."
+        ],
+        "exemplo": "Antes de abrir conta para um agente público, o banco consulta o CNPEP.",
+        "prova": [
+          "Assertiva que dispensa a consulta ao CNPEP pelos setores obrigados erra."
+        ],
+        "termos": [
+          {
+            "termo": "PEP",
+            "significado": "Pessoa exposta politicamente."
+          }
+        ],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "c51a0f8c-feee-52ba-b75e-9e4fa6ed60a3",
+      "content_sha256": "fdd79716a5086f8b9bc68c7dbe697a0b187cc82f497389b9e80f3a8ae84c82de",
+      "simples": "Coaf recebe/examina ocorrências suspeitas, disciplina e sanciona setores sem regulador próprio e coordena cooperação. A criação original cita Fazenda, mas estrutura atual segue Lei 13.974/2020, com autonomia técnica/operacional e vinculação administrativa ao Banco Central.",
+      "pontos": [
+        "Unidade de inteligência; competência residual onde não há regulador próprio."
+      ],
+      "atencao": [
+        "Não chamar Coaf de juiz penal nem manter vinculação ministerial histórica como estrutura atual. Requisição cadastral não significa acesso irrestrito a todo sigilo."
+      ],
+      "exemplo": "Setor sem regulador próprio segue instruções Coaf nos termos legais. Variação: Apostila situa Coaf atualmente na Fazenda só pelo texto de 1998: consulte lei de estrutura posterior.",
+      "prova": [
+        "A estrutura atual deve ser deduzida apenas da criação de 1998? Não; consulte Lei 13.974/2020."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13974.htm"
+      ],
+      "expected": {
+        "unit_id": "c51a0f8c-feee-52ba-b75e-9e4fa6ed60a3",
+        "content_sha256": "fdd79716a5086f8b9bc68c7dbe697a0b187cc82f497389b9e80f3a8ae84c82de",
+        "simples": "É criado, no âmbito do Ministério da Fazenda, o Conselho de Controle de Atividades Financeiras (Coaf), com a finalidade de disciplinar, aplicar penas administrativas, receber, examinar e identificar as ocorrências suspeitas de atividades ilícitas previstas na Lei, sem prejuízo da competência de outros órgãos. As instruções do art. 10 para as pessoas sem órgão fiscalizador próprio serão expedidas pelo Coaf. O Coaf coordenará a cooperação e a troca de informações e poderá requerer aos órgãos da Administração Pública as informações cadastrais bancárias e financeiras de pessoas envolvidas em atividades suspeitas.",
+        "pontos": [
+          "Coaf: unidade de inteligência financeira.",
+          "Disciplina, aplica penas administrativas, recebe, examina e identifica ocorrências suspeitas.",
+          "Expede instruções para quem não tem regulador próprio.",
+          "Coordena cooperação e troca de informações."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §3º incluído pela Lei nº 10.701, de 2003.",
+          "O Coaf NÃO investiga nem acusa: produz relatórios de inteligência."
+        ],
+        "exemplo": "O Coaf identifica movimentações suspeitas e comunica as autoridades competentes.",
+        "prova": [
+          "Assertiva que atribui ao Coaf a função de promover a ação penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "70a6af47-4d3a-5387-b615-123fad74c189",
+      "content_sha256": "f55787d54d78219ad29e5f72c992b7eea46bfbc1c0557bfd7a6cefbba545597c",
+      "simples": "Coaf comunica às autoridades competentes quando conclui existência de crimes, indícios fundados ou outro ilícito, para procedimentos cabíveis. Relatório não é sentença nem dispensa exame de legalidade, sigilo e corroboração.",
+      "pontos": [
+        "Inteligência → autoridades com atribuição; não condenação."
+      ],
+      "atencao": [
+        "Não presumir prova conclusiva de culpa por comunicação nem requisição ilimitada de dados protegidos."
+      ],
+      "exemplo": "Ocorrência com indícios é encaminhada para apuração competente. Variação: Pretende-se condenar só porque houve alerta: apuração e prova dos elementos permanecem.",
+      "prova": [
+        "A comunicação do Coaf equivale a sentença condenatória? Não; destina-se aos procedimentos cabíveis."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "70a6af47-4d3a-5387-b615-123fad74c189",
+        "content_sha256": "f55787d54d78219ad29e5f72c992b7eea46bfbc1c0557bfd7a6cefbba545597c",
+        "simples": "O Coaf comunicará às autoridades competentes para a instauração dos procedimentos cabíveis, quando concluir pela existência de crimes previstos na Lei, de fundados indícios de sua prática, ou de qualquer outro ilícito.",
+        "pontos": [
+          "Comunicação às autoridades competentes.",
+          "Quando houver crime, fundados indícios ou qualquer outro ilícito."
+        ],
+        "atencao": [
+          "A comunicação (relatório de inteligência financeira) não é prova em si, mas pode dar origem à investigação."
+        ],
+        "exemplo": "O Coaf envia relatório à Polícia Federal sobre movimentação atípica.",
+        "prova": [
+          "Assertiva que restringe a comunicação do Coaf aos crimes da Lei erra: vale para qualquer ilícito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-a",
+      "unit_id": "89ece92d-a2d4-57d4-a1f6-385090d519f6",
+      "content_sha256": "d8cbbf4ccc95eca1fe7b70e5cc83eaccad5a686da2e03c74792dbf1137fe20f0",
+      "simples": "CPP aplica-se subsidiariamente no que não for incompatível com a lei especial. Subsidiariedade não elimina regras específicas nem garantias constitucionais.",
+      "pontos": [
+        "Especial primeiro; CPP compatível complementa."
+      ],
+      "atencao": [
+        "Não transportar automaticamente CPP 366 ignorando art. 2º, §2º da lei."
+      ],
+      "exemplo": "Falta regra especial e aplica-se CPP compatível. Variação: Há regra especial expressa: a subsidiária não a substitui só por preferência.",
+      "prova": [
+        "O CPP substitui automaticamente toda regra especial? Não; aplica-se subsidiariamente quando compatível."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "89ece92d-a2d4-57d4-a1f6-385090d519f6",
+        "content_sha256": "d8cbbf4ccc95eca1fe7b70e5cc83eaccad5a686da2e03c74792dbf1137fe20f0",
+        "simples": "As disposições do CPP se aplicam subsidiariamente à Lei de Lavagem quando não forem incompatíveis com ela. A regra completa foi recuperada, evitando a frase truncada que omitia o diploma e a condição.",
+        "pontos": [
+          "Subsidiariedade e compatibilidade são requisitos cumulativos da remissão."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "A aplicação subsidiária não substitui regra especial contrária, como a do art. 2º, §2º."
+        ],
+        "exemplo": "Há questão processual sem disciplina específica e a norma do CPP é compatível com a lei: examina-se sua aplicação subsidiária. Variação: A norma do CPP conflita com regra expressa da Lei de Lavagem: a remissão não autoriza ignorar a incompatibilidade.",
+        "prova": [
+          "Toda regra do CPP deve prevalecer sobre a Lei de Lavagem? Não; a aplicação é subsidiária e limitada à compatibilidade."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:05.218+00:00",
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T19:32:05.218+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-b",
+      "unit_id": "8e14631f-ae7d-5eac-9712-1ae97a5fe900",
+      "content_sha256": "0ad128a3716021921771db80ae35603b47562c9ff577b89a46d02ef26bfd849f",
+      "simples": "Polícia e MP acessam sem autorização judicial exclusivamente qualificação pessoal, filiação e endereço do investigado nos detentores enumerados. Não libera transações ou conteúdo pelo simples nome de dado cadastral.",
+      "pontos": [
+        "Q-F-E; limite material expresso."
+      ],
+      "atencao": [
+        "Instituição financeira como detentora não transforma extrato em endereço cadastral."
+      ],
+      "exemplo": "Requisita-se filiação/endereço na hipótese legal. Variação: Pretende-se movimentação financeira usando só este artigo: extrapola os dados enumerados.",
+      "prova": [
+        "O artigo libera todo extrato financeiro sem ordem? Não; limita-se aos dados cadastrais especificados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8e14631f-ae7d-5eac-9712-1ae97a5fe900",
+        "content_sha256": "0ad128a3716021921771db80ae35603b47562c9ff577b89a46d02ef26bfd849f",
+        "simples": "A autoridade policial e o Ministério Público terão acesso, exclusivamente, aos dados cadastrais do investigado que informam qualificação pessoal, filiação e endereço, independentemente de autorização judicial, mantidos pela Justiça Eleitoral, pelas empresas telefônicas, pelas instituições financeiras, pelos provedores de internet e pelas administradoras de cartão de crédito.",
+        "pontos": [
+          "Acesso direto a dados cadastrais: qualificação, filiação e endereço.",
+          "Sem autorização judicial.",
+          "Dados mantidos por Justiça Eleitoral, telefônicas, bancos, provedores e administradoras de cartão."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012.",
+          "Só dados CADASTRAIS: não abrange movimentações nem conteúdo."
+        ],
+        "exemplo": "A delegada requisita ao banco o endereço do investigado, sem ordem judicial.",
+        "prova": [
+          "Assertiva que permite acesso direto aos extratos bancários sem ordem judicial erra: apenas dados cadastrais."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-c",
+      "unit_id": "bb87ff91-4ece-5801-90ff-d513e0ef7a02",
+      "content_sha256": "94779059ade52deca668a2335082edab1d9f1608cc7d01239cf0650fc0038c6f",
+      "simples": "Respostas financeiras/tributárias a ordens judiciais de quebra ou transferência de sigilo devem, quando determinado, ser digitais e migráveis aos autos sem redigitação.",
+      "pontos": [
+        "Formato eletrônico por determinação, com ordem de sigilo própria."
+      ],
+      "atencao": [
+        "Facilidade de migração não dispensa fundamento da ordem nem autoriza divulgação pública."
+      ],
+      "exemplo": "Instituição entrega arquivo migrável conforme ordem. Variação: A tecnologia existe, mas falta base para quebrar sigilo: o formato não substitui a autorização.",
+      "prova": [
+        "O formato digital dispensa ordem de acesso ao sigilo? Não; trata da resposta às ordens indicadas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "bb87ff91-4ece-5801-90ff-d513e0ef7a02",
+        "content_sha256": "94779059ade52deca668a2335082edab1d9f1608cc7d01239cf0650fc0038c6f",
+        "simples": "Os encaminhamentos das instituições financeiras e tributárias em resposta às ordens judiciais de quebra ou transferência de sigilo deverão ser, sempre que determinado, em meio informático, e apresentados em arquivos que possibilitem a migração de informações para os autos do processo sem redigitação.",
+        "pontos": [
+          "Respostas a ordens de quebra de sigilo em meio informático.",
+          "Arquivos que permitam migrar dados sem redigitação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012."
+        ],
+        "exemplo": "O banco entrega os extratos em arquivo digital que o juiz anexa ao processo.",
+        "prova": [
+          "Assertiva que exige papel na entrega de dados bancários erra: determina-se meio informático."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-d",
+      "unit_id": "cf9bf1c0-f73b-5b97-a0a6-622f7aa74778",
+      "content_sha256": "4a63ee2f3223f28709665086e08ce7109bfa652dd168cb43dbce9554a3665b79",
+      "simples": "O texto mantém afastamento automático por indiciamento, mas STF, ADI 4911, declarou o artigo inconstitucional em novembro de 2020. Não aplicar esse afastamento automático nem inferi-lo da literalidade residual. Cautelar funcional pode ter fundamento próprio, com controle e requisitos cabíveis.",
+      "pontos": [
+        "Indiciamento não determina afastamento automático por este artigo."
+      ],
+      "atencao": [
+        "Não transformar declaração de inconstitucionalidade em proibição absoluta de toda medida cautelar legal."
+      ],
+      "exemplo": "Servidor é indiciado e não se afasta automaticamente pelo art. 17-D. Variação: Há pedido de cautelar com outra base e requisitos: deve ser analisado, não recusado só porque este artigo caiu.",
+      "prova": [
+        "O indiciamento provoca afastamento automático válido pelo art. 17-D? Não; o STF declarou o dispositivo inconstitucional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/noticias/vernoticiadetalhe.asp?idconteudo=456010&ori=1"
+      ],
+      "expected": {
+        "unit_id": "cf9bf1c0-f73b-5b97-a0a6-622f7aa74778",
+        "content_sha256": "4a63ee2f3223f28709665086e08ce7109bfa652dd168cb43dbce9554a3665b79",
+        "simples": "Em caso de indiciamento de servidor público, este será afastado, sem prejuízo de remuneração e demais direitos previstos em lei, até que o juiz competente autorize, em decisão fundamentada, o seu retorno.",
+        "pontos": [
+          "Servidor indiciado é afastado.",
+          "Sem perda de remuneração e direitos.",
+          "Retorno só com autorização fundamentada do juiz."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012; o texto indica a ADI 4911 sobre o tema.",
+          "O afastamento é automático no indiciamento."
+        ],
+        "exemplo": "O servidor indiciado por lavagem é afastado do cargo, mantendo a remuneração.",
+        "prova": [
+          "Assertiva que suspende a remuneração do servidor afastado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-e",
+      "unit_id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+      "content_sha256": "e159f8c52577b780cc6cf0f63f916c5b35df3f29ffbfc2c1383efadc54ea4380",
+      "simples": "Receita conserva dados fiscais por pelo menos cinco anos desde início do exercício seguinte à declaração de renda ou pagamento do tributo. Guarda não autoriza divulgação irrestrita.",
+      "pontos": [
+        "Marco: início do exercício seguinte; mínimo 5 anos."
+      ],
+      "atencao": [
+        "Não contar automaticamente da abertura de conta nem confundir com cadastro bancário art. 10."
+      ],
+      "exemplo": "Declaração num exercício leva ao marco de contagem no início do seguinte. Variação: Quer-se acesso público aos dados porque estão guardados: guarda não extingue sigilo.",
+      "prova": [
+        "O prazo é máximo absoluto de cinco anos? Não; é mínimo, contado do marco legal."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+        "content_sha256": "e159f8c52577b780cc6cf0f63f916c5b35df3f29ffbfc2c1383efadc54ea4380",
+        "simples": "A Receita Federal conserva os dados fiscais dos contribuintes por no mínimo cinco anos. A contagem começa no início do exercício seguinte ao da declaração de renda respectiva ou ao pagamento do tributo.",
+        "pontos": [
+          "Prazo mínimo e marco inicial são elementos distintos; o caput não fixa prazo máximo."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "As notas de vigência encerrada de dispositivos posteriores não se referem ao art. 17-E. Não confunda o exercício da declaração ou pagamento com o exercício seguinte."
+        ],
+        "exemplo": "O pagamento ocorreu em 2025: o marco indicado é o início do exercício seguinte, em 2026, para contar o prazo mínimo. Variação: A questão fixa guarda máxima de cinco anos: contraria a palavra mínimo, que não proíbe conservação por mais tempo.",
+        "prova": [
+          "A conservação está limitada a exatamente cinco anos? Não; o texto estabelece no mínimo cinco anos."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:49.499+00:00",
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T20:09:49.499+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "ee504d3f-3470-58a3-b124-c9665d4e17d2",
+      "content_sha256": "25f662fef7c6c8fee91a3a1426485f6ee2fc356a8e209c1abe3bc63f12ed73cc",
+      "simples": "Lei original vigora na publicação. Reformas de 2012, 2022 e 2026 têm marcos próprios; infração antecedente, ativos virtuais e destinação de bens exigem texto/tempo corretos.",
+      "pontos": [
+        "Vigência original distinta de cada alteração."
+      ],
+      "atencao": [
+        "Não aplicar lei posterior mais gravosa retroativamente por estar hoje compilada."
+      ],
+      "exemplo": "Fato anterior é examinado pela lei temporalmente aplicável. Variação: Alteração favorece o acusado: avalie retroatividade benéfica nos requisitos próprios.",
+      "prova": [
+        "A compilação atual torna toda alteração aplicável a qualquer fato passado? Não; análise temporal permanece."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ee504d3f-3470-58a3-b124-c9665d4e17d2",
+        "content_sha256": "25f662fef7c6c8fee91a3a1426485f6ee2fc356a8e209c1abe3bc63f12ed73cc",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos imediatos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer no dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis para a Lei de Lavagem erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    }
+  ]
+}

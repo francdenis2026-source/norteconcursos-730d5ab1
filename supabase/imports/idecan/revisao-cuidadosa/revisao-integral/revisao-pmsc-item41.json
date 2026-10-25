@@ -1,0 +1,38 @@
+{
+  "item": 41,
+  "question_id": "f511027e-aa10-4dda-8736-cf7e0d0a6082",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "official_answer": {
+    "letter": "D",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 41",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Constituição Federal de 1988, texto compilado",
+    "article": "5º, XI",
+    "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "checked_at": "2026-10-23T04:06:17Z",
+    "html_sha256": "15d2ade2e9733e1bc122c439b8be0701668333a3f932ed5cec82c24b07a37389",
+    "text_sha256": "7843af35ad7fd0a06f6b2cd4bec49cab499ff6de761dc620ac78212893d77079",
+    "conclusion": "O inciso XI excepciona a inviolabilidade da casa para ingresso, a qualquer hora, em caso de flagrante delito, desastre ou prestação de socorro. Busca do suspeito exige consentimento, flagrante constitucionalmente caracterizado ou ordem judicial durante o dia."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Arts. 5º e 6º; art. 42; arts. 142 e 144.",
+    "confirmed": true
+  },
+  "explanation_note": "A explicação separa a tentativa de localizar o suspeito da hipótese autônoma de prestação de socorro, evitando sugerir que o horário das 18h, por si só, autorize ou proíba a entrada.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item41-inviolabilidade-domicilio.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

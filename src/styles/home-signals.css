@@ -1,0 +1,106 @@
+/* Small editorial markers share a brass finish; only the plan link is interactive. */
+.home {
+  --signal-ink: var(--brass-soft);
+  --signal-edge: color-mix(in srgb, var(--signal-ink) 28%, transparent);
+  --signal-fill: color-mix(in srgb, var(--card) 82%, transparent);
+}
+:root:not(.dark) .home { --signal-ink: var(--stage-amber, var(--brass-deep)); }
+:root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow, .home-testing__status) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 7px;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 26px;
+  padding: 5px 9px;
+  border: 1px solid var(--signal-edge);
+  border-left: 2px solid var(--signal-ink);
+  border-radius: 3px 8px 8px 3px;
+  background: linear-gradient(115deg, color-mix(in srgb, var(--signal-ink) 10%, transparent), transparent 78%), var(--signal-fill);
+  color: var(--signal-ink);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--signal-ink) 8%, transparent);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: normal;
+  text-wrap: pretty;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-signal.home-eyebrow { color: var(--signal-ink); }
+/* A quiet engraved notch, rather than a moving light or status pulse. */
+.home .home-signal:not(.home-testing__status)::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  flex: none;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  opacity: .75;
+}
+.home .home-hero__copy > .home-signal > span { display: none; }
+.home .home-faq__intro > .home-signal { margin: 0; }
+.home .home-testing__status { flex: 0 1 auto; }
+.home .home-testing__status strong { min-width: 0; }
+.home .home-testing__status > svg { width: 14px; height: 14px; flex: none; color: inherit; }
+:root:is(.dark, :not(.dark)) .home.home .home-testing__status strong {
+  color: inherit;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.home .home-hero__study-entry .home-testing__detail { display: none; }
+:root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing {
+  flex-wrap: nowrap;
+  gap: 4px 10px;
+  margin-bottom: 8px;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: 6px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--signal-edge);
+  border-radius: 6px;
+  background: var(--signal-fill);
+  color: var(--signal-ink);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  box-shadow: none;
+  transform: none;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link:hover {
+    background: color-mix(in srgb, var(--signal-ink) 14%, var(--card));
+    border-color: var(--signal-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link:focus-visible {
+  outline: 2px solid var(--signal-ink);
+  outline-offset: 3px;
+  transition: none;
+}
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow) { font-size: 9px; letter-spacing: .08em; padding: 5px 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link { transition: none; }
+}
+@media (forced-colors: active) {
+  .home { --signal-ink: CanvasText; --signal-fill: Canvas; --signal-edge: CanvasText; }
+  :root:not(.dark) .home { --signal-ink: CanvasText; }
+  :root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow, .home-testing__status) { box-shadow: none; background: Canvas; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link { background: Canvas; color: LinkText; }
+}

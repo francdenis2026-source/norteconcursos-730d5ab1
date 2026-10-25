@@ -1,0 +1,714 @@
+[
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Um terreno retangular de 12 m por 8 m possui área de 96 m².",
+    "claim": 96.0,
+    "expected": 96.0,
+    "expression": "12*8"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "O perímetro de um quadrado de lado 7 cm é 49 cm.",
+    "claim": 49.0,
+    "expected": 28.0,
+    "expression": "4*7"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Um triângulo com base de 10 cm e altura correspondente de 6 cm tem área de 30 cm².",
+    "claim": 30.0,
+    "expected": 30.0,
+    "expression": "10*6/2"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "O volume de uma caixa retangular com dimensões internas de 2 m, 3 m e 4 m é 24 m³.",
+    "claim": 24.0,
+    "expected": 24.0,
+    "expression": "2*3*4"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Uma área de 3 m² equivale a 300 cm².",
+    "claim": 300.0,
+    "expected": 30000.0,
+    "expression": "3*100**2"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Na escala 1:500, um segmento de 4 cm representa 20 m.",
+    "claim": 20.0,
+    "expected": 20.0,
+    "expression": "4*500/100"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Um triângulo retângulo de catetos 6 cm e 8 cm tem hipotenusa de 10 cm.",
+    "claim": 10.0,
+    "expected": 10.0,
+    "expression": "sqrt(6**2+8**2)"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Se o lado de um quadrado é dobrado, sua área é multiplicada por 2.",
+    "claim": 2.0,
+    "expected": 4.0,
+    "expression": "2**2"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Adotando π = 3,14, um círculo de raio 5 cm tem área de 78,5 cm².",
+    "claim": 78.5,
+    "expected": 78.5,
+    "expression": "3.14*5**2"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Adotando π = 3, um círculo de raio 4 cm tem comprimento de circunferência de 12 cm.",
+    "claim": 12.0,
+    "expected": 24.0,
+    "expression": "2*3*4"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Um reservatório cúbico de aresta interna 1 m comporta geometricamente 1.000 litros.",
+    "claim": 1000.0,
+    "expected": 1000.0,
+    "expression": "1**3*1000"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "q": "Um retângulo de área 60 m² e base 12 m tem altura de 6 m.",
+    "claim": 6.0,
+    "expected": 5.0,
+    "expression": "60/12"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A média aritmética dos valores 4, 6 e 11 é 7.",
+    "claim": 7.0,
+    "expected": 7.0,
+    "expression": "(4+6+11)/3"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A mediana de 2, 5, 8 e 13 é 8.",
+    "claim": 8.0,
+    "expected": 6.5,
+    "expression": "(5+8)/2"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A amplitude dos dados 3, 9, 12 e 20 é 17.",
+    "claim": 17.0,
+    "expected": 17.0,
+    "expression": "20-3"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Uma nota 6 com peso 2 e uma nota 9 com peso 1 produzem média ponderada 7.",
+    "claim": 7.0,
+    "expected": 7.0,
+    "expression": "(6*2+9)/3"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Em um grupo de 40 pessoas, 10 representam 40% do total.",
+    "claim": 40.0,
+    "expected": 25.0,
+    "expression": "10/40*100"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A moda do conjunto 1, 2, 2, 4 e 5 é 2.",
+    "claim": 2.0,
+    "expected": 2.0,
+    "expression": "2"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Se todos os três dados forem aumentados em 5, a média também aumentará em 5.",
+    "claim": 5.0,
+    "expected": 5.0,
+    "expression": "((1+5)+(4+5)+(7+5))/3-(1+4+7)/3"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A variância populacional dos valores 2 e 4 é 2.",
+    "claim": 2.0,
+    "expected": 1.0,
+    "expression": "((2-3)**2+(4-3)**2)/2"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Em uma tabela, frequências absolutas 8, 12 e 5 somam 25 observações.",
+    "claim": 25.0,
+    "expected": 25.0,
+    "expression": "8+12+5"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Se uma frequência relativa é 0,18, sua representação percentual é 1,8%.",
+    "claim": 1.8,
+    "expected": 18.0,
+    "expression": ".18*100"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "A mediana de 9, 1 e 5 é 5.",
+    "claim": 5.0,
+    "expected": 5.0,
+    "expression": "5"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "q": "Adicionar 100 ao conjunto 1, 2 e 3 mantém sua média aritmética em 2.",
+    "claim": 2.0,
+    "expected": 26.5,
+    "expression": "(1+2+3+100)/4"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Ao lançar um dado honesto de seis faces, a probabilidade de resultado par é 1/2.",
+    "claim": 0.5,
+    "expected": 0.5,
+    "expression": "3/6"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "No lançamento de duas moedas honestas independentes, a probabilidade de duas caras é 1/2.",
+    "claim": 0.5,
+    "expected": 0.25,
+    "expression": "1/4"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Escolher uma pessoa entre cinco e outra entre quatro opções independentes permite 20 pares.",
+    "claim": 20.0,
+    "expected": 20.0,
+    "expression": "5*4"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Escolher dois representantes sem ordem entre cinco pessoas permite 10 duplas.",
+    "claim": 10.0,
+    "expected": 10.0,
+    "expression": "comb(5,2)"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Uma urna com 3 bolas vermelhas e 2 azuis tem probabilidade de retirada de vermelha igual a 3/5.",
+    "claim": 0.6,
+    "expected": 0.6,
+    "expression": "3/5"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Na mesma urna, retirar duas bolas sem reposição gera probabilidade de duas vermelhas de 9/25.",
+    "claim": 0.36,
+    "expected": 0.3,
+    "expression": "3/5*2/4"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Se a probabilidade de um evento é 0,35, a de seu complemento é 0,65.",
+    "claim": 0.65,
+    "expected": 0.65,
+    "expression": "1-.35"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Permutar três objetos distintos em uma fila permite 9 ordens.",
+    "claim": 9.0,
+    "expected": 6.0,
+    "expression": "factorial(3)"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Para eventos disjuntos A e B com probabilidades 0,2 e 0,3, a probabilidade da união é 0,5.",
+    "claim": 0.5,
+    "expected": 0.5,
+    "expression": ".2+.3"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Uma senha de dois algarismos, permitindo zero inicial e repetição, possui 90 possibilidades.",
+    "claim": 90.0,
+    "expected": 100.0,
+    "expression": "10**2"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Em um dado honesto, sabendo que o resultado foi par, a probabilidade de ele ser 6 é 1/3.",
+    "claim": 0.3333333333333333,
+    "expected": 0.3333333333333333,
+    "expression": "1/3"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "q": "Distribuir primeiro e segundo lugares entre quatro pessoas distintas permite seis resultados ordenados.",
+    "claim": 6.0,
+    "expected": 12.0,
+    "expression": "4*3"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Para f(x)=3x+2, o valor de f(4) é 14.",
+    "claim": 14.0,
+    "expected": 14.0,
+    "expression": "3*4+2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "A raiz da função f(x)=2x−8 é x=8.",
+    "claim": 8.0,
+    "expected": 4.0,
+    "expression": "8/2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Um produto de R$ 200 com desconto único de 15% passa a custar R$ 170.",
+    "claim": 170.0,
+    "expected": 170.0,
+    "expression": "200*(1-.15)"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Dois aumentos sucessivos de 10% sobre R$ 100 resultam em R$ 120.",
+    "claim": 120.0,
+    "expected": 121.00000000000001,
+    "expression": "100*1.1**2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Juros simples de 2% ao mês sobre R$ 1.000 por três meses geram R$ 60 de juros.",
+    "claim": 60.0,
+    "expected": 60.0,
+    "expression": "1000*.02*3"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "No regime composto, R$ 1.000 a 10% por período durante dois períodos produzem montante de R$ 1.210.",
+    "claim": 1210.0,
+    "expected": 1210.0000000000002,
+    "expression": "1000*1.1**2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Uma tarifa de R$ 8 fixos mais R$ 3 por unidade consumida custa R$ 23 para cinco unidades.",
+    "claim": 23.0,
+    "expected": 23.0,
+    "expression": "8+3*5"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "A função f(x)=x² possui valor 9 quando x=−3.",
+    "claim": 9.0,
+    "expected": 9.0,
+    "expression": "(-3)**2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Um desconto de 20% seguido de aumento de 20% devolve um preço de R$ 100 exatamente a R$ 100.",
+    "claim": 100.0,
+    "expected": 96.0,
+    "expression": "100*.8*1.2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Para f(x)=x²−4, as raízes reais são −2 e 2, cuja soma é zero.",
+    "claim": 0.0,
+    "expected": 0.0,
+    "expression": "-2+2"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "q": "Um valor que passa de 80 para 100 teve aumento percentual de 20%.",
+    "claim": 20.0,
+    "expected": 25.0,
+    "expression": "(100-80)/80*100"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Três cadernos de mesmo preço custam R$ 24; cinco desses cadernos custam R$ 40.",
+    "claim": 40.0,
+    "expected": 40.0,
+    "expression": "24/3*5"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Mantidas as demais condições, quatro trabalhadores que concluem um serviço em seis dias indicam que oito trabalhadores o concluiriam em doze dias.",
+    "claim": 12.0,
+    "expected": 3.0,
+    "expression": "4*6/8"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Uma mistura que usa 2 partes de concentrado para 3 partes de água contém 40% de concentrado.",
+    "claim": 40.0,
+    "expected": 40.0,
+    "expression": "2/(2+3)*100"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Uma velocidade constante de 60 km/h durante 30 minutos corresponde a 30 km.",
+    "claim": 30.0,
+    "expected": 30.0,
+    "expression": "60*.5"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Uma extensão de 2,5 km equivale a 250 m.",
+    "claim": 250.0,
+    "expected": 2500.0,
+    "expression": "2.5*1000"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Dividir R$ 90 em partes proporcionais a 2 e 3 atribui R$ 36 à parte de peso 2.",
+    "claim": 36.0,
+    "expected": 36.0,
+    "expression": "90*2/5"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "O valor de 3/4 de 200 é 150.",
+    "claim": 150.0,
+    "expected": 150.0,
+    "expression": "3/4*200"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Um desconto de R$ 18 sobre R$ 120 representa redução de 18%.",
+    "claim": 18.0,
+    "expected": 15.0,
+    "expression": "18/120*100"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Na equação 3x+6=21, o valor de x é 5.",
+    "claim": 5.0,
+    "expected": 5.0,
+    "expression": "(21-6)/3"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Um consumo de 12 litros em 180 km corresponde a rendimento de 15 km por litro.",
+    "claim": 15.0,
+    "expected": 15.0,
+    "expression": "180/12"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "Se uma quantidade de 50 unidades cresce 30%, o novo total é 80 unidades.",
+    "claim": 80.0,
+    "expected": 65.0,
+    "expression": "50*1.3"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "q": "A razão entre 150 m e 0,5 km, expressa com unidades compatíveis, é 0,3.",
+    "claim": 0.3,
+    "expected": 0.3,
+    "expression": "150/500"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Um corpo que percorre 120 m em 20 s tem velocidade escalar média de 6 m/s.",
+    "claim": 6.0,
+    "expected": 6.0,
+    "expression": "120/20"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Uma velocidade de 36 km/h equivale a 36 m/s.",
+    "claim": 36.0,
+    "expected": 10.0,
+    "expression": "36/3.6"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "No modelo F=ma, uma massa de 4 kg com aceleração de 3 m/s² sofre força resultante de 12 N.",
+    "claim": 12.0,
+    "expected": 12.0,
+    "expression": "4*3"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Uma força constante de 10 N paralela ao deslocamento de 5 m realiza trabalho de 50 J.",
+    "claim": 50.0,
+    "expected": 50.0,
+    "expression": "10*5"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "A energia cinética de uma massa de 2 kg a 3 m/s é 18 J.",
+    "claim": 18.0,
+    "expected": 9.0,
+    "expression": ".5*2*3**2"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Adotando g=10 m/s², elevar uma massa de 3 kg em 2 m aumenta sua energia potencial gravitacional em 60 J.",
+    "claim": 60.0,
+    "expected": 60.0,
+    "expression": "3*10*2"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Transferir 600 J em 20 s corresponde a potência média de 30 W.",
+    "claim": 30.0,
+    "expected": 30.0,
+    "expression": "600/20"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Um aparelho que recebe 200 J e fornece 150 J de energia útil tem rendimento de 75%.",
+    "claim": 75.0,
+    "expected": 75.0,
+    "expression": "150/200*100"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Um resistor ôhmico de 6 Ω submetido a 12 V conduz corrente de 72 A.",
+    "claim": 72.0,
+    "expected": 2.0,
+    "expression": "12/6"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Dois resistores de 4 Ω e 6 Ω em série têm resistência equivalente de 10 Ω.",
+    "claim": 10.0,
+    "expected": 10.0,
+    "expression": "4+6"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Uma máquina de 1 kW ligada por duas horas consome 2 kWh de energia elétrica no modelo de potência constante.",
+    "claim": 2.0,
+    "expected": 2.0,
+    "expression": "1*2"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "q": "Uma variação de velocidade de 4 m/s em 2 s corresponde a aceleração média de 8 m/s².",
+    "claim": 8.0,
+    "expected": 2.0,
+    "expression": "4/2"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Uma solução com 10 g de soluto em volume final de 2 L tem concentração comum de 5 g/L.",
+    "claim": 5.0,
+    "expected": 5.0,
+    "expression": "10/2"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Uma amostra de 36 g de água, adotando massa molar de 18 g/mol, corresponde a 3 mol.",
+    "claim": 3.0,
+    "expected": 2.0,
+    "expression": "36/18"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Ao diluir 100 mL de uma solução de 2 mol/L para volume final de 400 mL, a concentração passa a 0,5 mol/L, sem reação ou perda de soluto.",
+    "claim": 0.5,
+    "expected": 0.5,
+    "expression": "2*100/400"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "A massa molar de CO₂, adotando C=12 e O=16 g/mol, é 44 g/mol.",
+    "claim": 44.0,
+    "expected": 44.0,
+    "expression": "12+2*16"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Uma substância de massa 40 g e volume 20 mL tem densidade de 0,5 g/mL.",
+    "claim": 0.5,
+    "expected": 2.0,
+    "expression": "40/20"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Na reação balanceada 2 H₂ + O₂ → 2 H₂O, 4 mol de H₂ em excesso de O₂ podem formar teoricamente 4 mol de H₂O.",
+    "claim": 4.0,
+    "expected": 4.0,
+    "expression": "4*2/2"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Um átomo neutro de número atômico 11 possui 11 elétrons.",
+    "claim": 11.0,
+    "expected": 11.0,
+    "expression": "11"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "q": "Um átomo com número de massa 23 e número atômico 11 possui 34 nêutrons.",
+    "claim": 34.0,
+    "expected": 12.0,
+    "expression": "23-11"
+  },
+  {
+    "slug": "rlm-proposicoes-negacao-condicionais",
+    "q": "Sendo P falsa e Q falsa, a condicional P → Q é falsa.",
+    "truth": {
+      "p": false,
+      "q": false,
+      "op": "implies",
+      "claim": false
+    }
+  },
+  {
+    "slug": "rlm-proposicoes-negacao-condicionais",
+    "q": "Sendo P falsa e Q verdadeira, a condicional P → Q é verdadeira.",
+    "truth": {
+      "p": false,
+      "q": true,
+      "op": "implies",
+      "claim": true
+    }
+  },
+  {
+    "slug": "rlm-proposicoes-negacao-condicionais",
+    "q": "Sendo P verdadeira e Q falsa, a condicional P → Q é verdadeira.",
+    "truth": {
+      "p": true,
+      "q": false,
+      "op": "implies",
+      "claim": true
+    }
+  },
+  {
+    "slug": "rlm-proposicoes-negacao-condicionais",
+    "q": "Sendo P verdadeira e Q verdadeira, a condicional P → Q é verdadeira.",
+    "truth": {
+      "p": true,
+      "q": true,
+      "op": "implies",
+      "claim": true
+    }
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "q": "Se A tem 12 elementos, B tem 9 e a interseção tem 4, a união tem 17 elementos.",
+    "claim": 17.0,
+    "expected": 17.0,
+    "expression": "12+9-4"
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "q": "Um conjunto de 4 elementos possui 8 subconjuntos.",
+    "claim": 8.0,
+    "expected": 16.0,
+    "expression": "2**4"
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "q": "Em uma turma de 30 pessoas, 18 pertencem a A; o complemento de A na turma tem 12 pessoas.",
+    "claim": 12.0,
+    "expected": 12.0,
+    "expression": "30-18"
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "q": "Se 20 pessoas estudam A, 15 estudam B e 8 estudam ambas, exatamente 12 estudam A e não B.",
+    "claim": 12.0,
+    "expected": 12.0,
+    "expression": "20-8"
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "q": "Em um universo de 50 pessoas, se a união de A e B tem 35, há 25 fora de ambos.",
+    "claim": 25.0,
+    "expected": 15.0,
+    "expression": "50-35"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma escolha entre 3 camisas e 4 calças independentes permite 12 combinações de uma peça de cada tipo.",
+    "claim": 12.0,
+    "expected": 12.0,
+    "expression": "3*4"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Escolher um representante entre 6 pessoas e um suplente distinto permite 15 resultados ordenados.",
+    "claim": 15.0,
+    "expected": 30.0,
+    "expression": "6*5"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Um comitê de três pessoas escolhido entre seis, sem distinção de cargos, pode ser formado de 20 maneiras.",
+    "claim": 20.0,
+    "expected": 20.0,
+    "expression": "comb(6,3)"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma fila de quatro pessoas distintas admite 24 ordenações.",
+    "claim": 24.0,
+    "expected": 24.0,
+    "expression": "factorial(4)"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma moeda honesta lançada três vezes apresenta três caras com probabilidade 1/6.",
+    "claim": 0.16666666666666666,
+    "expected": 0.125,
+    "expression": "1/8"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Ao retirar uma carta numerada de 1 a 10 com chances iguais, a probabilidade de número maior que 7 é 3/10.",
+    "claim": 0.3,
+    "expected": 0.3,
+    "expression": "3/10"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "O complemento de um evento com probabilidade 0,72 tem probabilidade 0,28.",
+    "claim": 0.28,
+    "expected": 0.28,
+    "expression": "1-.72"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma senha de três letras escolhidas entre cinco opções, com repetição permitida, tem 15 possibilidades.",
+    "claim": 15.0,
+    "expected": 125.0,
+    "expression": "5**3"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Sortear dois objetos sem reposição entre quatro distintos, considerando a ordem, permite 12 pares.",
+    "claim": 12.0,
+    "expected": 12.0,
+    "expression": "4*3"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma urna com 2 bolas verdes e 3 pretas, após retirada de uma verde sem reposição, passa a ter probabilidade 1/4 de verde no próximo sorteio.",
+    "claim": 0.25,
+    "expected": 0.25,
+    "expression": "1/4"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Se dois eventos independentes têm probabilidades 1/2 e 1/3, a interseção tem probabilidade 1/5.",
+    "claim": 0.2,
+    "expected": 0.16666666666666666,
+    "expression": "1/2*1/3"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "q": "Uma escolha entre dois caminhos alternativos exclusivos com 4 e 3 opções, respectivamente, oferece 7 opções totais.",
+    "claim": 7.0,
+    "expected": 7.0,
+    "expression": "4+3"
+  }
+]

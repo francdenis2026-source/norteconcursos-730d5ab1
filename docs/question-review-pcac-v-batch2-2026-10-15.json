@@ -1,0 +1,421 @@
+{
+  "scope": "PC-AC 2017 S01-V — lote 2 e fechamento do conjunto de 50 decisões",
+  "verified_at": "2026-10-16T02:10:25.679Z",
+  "published_batch2": {
+    "editorial_decisions": 15,
+    "activated": 15,
+    "syllabus_topics_created": 2
+  },
+  "cumulative": {
+    "context_recovered": 69,
+    "editorial_decisions": 50,
+    "active": 47,
+    "archived_historical": 1,
+    "obsolete": 2,
+    "syllabus_exclusions": 3
+  },
+  "validation": {
+    "mode": "published",
+    "verified_at": "2026-10-16T02:10:25.679Z",
+    "context_repairs_verified": 69,
+    "complete_exam_records_compared": 158,
+    "original_answers_and_raw_preserved": true,
+    "untargeted_records_preserved": 89,
+    "editorial_decisions_checked": 50,
+    "active_eligible": 47,
+    "formula_and_math_checks": true
+  },
+  "tests": {
+    "passed": 191,
+    "failed": 0,
+    "skipped": 0,
+    "application_build_run": false,
+    "application_changes": false
+  },
+  "counts": {
+    "checked_at": "2026-10-16T02:08:26.737Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 4078,
+        "under_review": 601,
+        "archived": 142,
+        "obsolete": 30,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 447,
+        "under_review": 600,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6349,
+      "under_review": 1201,
+      "archived": 149,
+      "obsolete": 32,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "pending_pcac": [
+    {
+      "id": "bcede7d3-1ddb-4381-aa3e-fd74111493ab",
+      "item_number": 1,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "7b15942e-bb7c-45d6-89a9-72011e786b2f",
+      "item_number": 2,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "4223018d-ec2e-482f-839d-0001ea3b9571",
+      "item_number": 3,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "210c0723-8a35-4371-b71d-6c1c70b088e0",
+      "item_number": 4,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "d079b276-c2ed-4152-ba50-ae2baef95934",
+      "item_number": 5,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "4abc9f90-3be4-456c-8abc-55af10173cc0",
+      "item_number": 6,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "17f66796-9cd7-4bd7-b654-c155e2c9d99a",
+      "item_number": 7,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "0fafe473-bf17-4404-aa85-da05dedb7b42",
+      "item_number": 8,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "de16f3e6-9fb9-4f90-9908-578571e18164",
+      "item_number": 9,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "bcff53ca-0e23-4953-9b4e-18b0184614e3",
+      "item_number": 10,
+      "context_recovered": false,
+      "reason": "Texto de apoio completo ainda pendente de tratamento."
+    },
+    {
+      "id": "ca249aef-1bb0-4113-89f3-1e8b6021af1f",
+      "item_number": 13,
+      "context_recovered": true,
+      "reason": "Conferir generalizações de custo/acesso à nuvem com fonte técnica atual."
+    },
+    {
+      "id": "77131d9a-d291-4885-9391-b279b02696d6",
+      "item_number": 25,
+      "context_recovered": true,
+      "reason": "Validar a classificação doutrinária de tutela extraordinária e as alternativas."
+    },
+    {
+      "id": "af86b931-4fc2-4863-9c5d-ed601118cbea",
+      "item_number": 39,
+      "context_recovered": true,
+      "reason": "Confrontar todas as alternativas com a interpretação atual de segurança pública e atribuições policiais."
+    },
+    {
+      "id": "e970bb1c-693c-4ef5-890a-6427f2a9b5e2",
+      "item_number": 42,
+      "context_recovered": true,
+      "reason": "Examinar dolo, culpa e enquadramentos das alternativas de lesão em contexto doméstico."
+    },
+    {
+      "id": "e289c28a-0c7a-4ac9-aa37-b8e9a341b51e",
+      "item_number": 44,
+      "context_recovered": true,
+      "reason": "Examinar a distinção entre liame subjetivo e acordo de vontades nas alternativas A/D."
+    },
+    {
+      "id": "bd8138b4-2fd0-44ca-a97d-5aca7d86e9d4",
+      "item_number": 45,
+      "context_recovered": true,
+      "reason": "Conferir erro na execução e feminicídio autônomo após a reforma de 2024, sem alterar o gabarito histórico."
+    },
+    {
+      "id": "4bd2ffab-1f12-4dd5-9027-108addc58f82",
+      "item_number": 48,
+      "context_recovered": true,
+      "reason": "Conferir enquadramento de injúria/desacato em comunicação remota, com jurisprudência pertinente."
+    },
+    {
+      "id": "2d6c3682-7ca6-449e-ad0d-1d4f3dd73298",
+      "item_number": 69,
+      "context_recovered": true,
+      "reason": "Concluir revisão da Lei 5.553/1968 e registro de fonte/vínculo atual específico."
+    },
+    {
+      "id": "f80084c3-ee29-47ad-ad90-8878d6fbe421",
+      "item_number": 70,
+      "context_recovered": true,
+      "reason": "Conferir CDC atual, fonte registrada e vínculo específico."
+    },
+    {
+      "id": "a5cc49da-112f-459a-93b0-b6db90004564",
+      "item_number": 71,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "db100780-c2ae-4452-b044-6fa1b78ff21e",
+      "item_number": 72,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "7b79876e-7387-4c09-b54f-1041821a1cdc",
+      "item_number": 73,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "8fbf1cdf-74ec-43fc-a249-c0ee26ab9cac",
+      "item_number": 74,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "22c0b6f2-4c09-4dad-9549-78bd696c3c93",
+      "item_number": 75,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "0cc4b0bb-d3ce-40ec-9477-15d6d0816213",
+      "item_number": 76,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "5f3f5824-95d0-40d2-b335-ba79f1fa0db7",
+      "item_number": 77,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "2597eb9f-e3da-415b-ba50-d51c3ff4c494",
+      "item_number": 78,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "686f16dd-f4e9-4125-b571-3846a1bc6503",
+      "item_number": 79,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    },
+    {
+      "id": "d6765437-76e4-403a-aae9-183c783ca059",
+      "item_number": 80,
+      "context_recovered": true,
+      "reason": "Exige validação médico-legal contemporânea; não liberar apenas pelo gabarito de 2017."
+    }
+  ],
+  "topics": [
+    {
+      "id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "block_name": "Prova objetiva (P1)",
+      "discipline": "Direito Constitucional",
+      "topic_order": 2,
+      "topic_text": "PCDF Delegado 2026: organização dos poderes; CPIs; Poder Legislativo e processo legislativo; Poder Executivo; Poder Judiciário e funções essenciais à justiça.",
+      "content_status": "current",
+      "official_pdf_page": 80,
+      "official_reference": "Direito Constitucional, itens 9 a 12"
+    },
+    {
+      "id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "block_name": "Prova objetiva (P1)",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 2,
+      "topic_text": "PCDF Delegado 2026: ação penal — conceito, características, espécies e condições; jurisdição e competência; conexão e continência.",
+      "content_status": "current",
+      "official_pdf_page": 83,
+      "official_reference": "Direito Processual Penal, itens 3, 4 e 21"
+    }
+  ],
+  "items": [
+    {
+      "id": "53a301fe-03d5-415a-9c65-8178db216a70",
+      "item_number": 31,
+      "official_answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc",
+      "patch_sha256": "72371fcec8ced04d9ad97384f1376a6cf94daf22124accbc42cb7a4c35f9e08b"
+    },
+    {
+      "id": "dac3a671-8e8f-4cc0-a163-c3b26c9fed27",
+      "item_number": 33,
+      "official_answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "patch_sha256": "d4ea9be3516ee1a885bc476b92713be2ec7337ed3a95bbfe8ea58c2e18c6eda2"
+    },
+    {
+      "id": "d80c8941-02c6-47d7-bfb4-8e2b19e00c4d",
+      "item_number": 34,
+      "official_answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "patch_sha256": "95b7daab5ccc829fa7b8792a7c9229540670567e52fc6f556eccf78990e0aa1d"
+    },
+    {
+      "id": "935dc0b0-33e8-432c-8bcf-737cf8883381",
+      "item_number": 35,
+      "official_answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "patch_sha256": "d221bb2e3f718557188420662b738b3088a366a3db08db217a5090c54a4b7432"
+    },
+    {
+      "id": "ebf76004-7bb8-40da-b658-6475ba61ef28",
+      "item_number": 37,
+      "official_answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "patch_sha256": "fc6ef8f24991eb2536b7a88b923966a9217ea6c4d0d8dc0393355a079f797ad2"
+    },
+    {
+      "id": "82d940a7-a3c4-467d-8174-36f06bcc690b",
+      "item_number": 46,
+      "official_answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "patch_sha256": "2a459a359a74cf2eb972bed25055464b0a2410eddad095023334007a08ceb735"
+    },
+    {
+      "id": "98e90e03-71dd-4b24-b7f0-cf036d4d8ac3",
+      "item_number": 49,
+      "official_answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "patch_sha256": "bc77bceaddffd8d50ce5e09b29b1204e6f9e5d3c7c30ae600b5234f4c3789c78"
+    },
+    {
+      "id": "d2c92785-efe0-4bad-bb04-746da4106548",
+      "item_number": 53,
+      "official_answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "patch_sha256": "4a0bfb22d22d86fe876035452442c25f3cd882b454f2debe68d43a4f1df0f889"
+    },
+    {
+      "id": "d3c6db47-209b-4c1f-aebc-4972c3206e1c",
+      "item_number": 54,
+      "official_answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "patch_sha256": "b457d451a99462e33f69a94409fe898db20494dac8746660b3a44b6d337951f6"
+    },
+    {
+      "id": "0ef7b31a-007b-4279-971e-e97c1ecfd8de",
+      "item_number": 56,
+      "official_answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "patch_sha256": "b79456070b822bece4d4b99430b0a2f52d09ed0b88d73b52cbbfbe174e94cfc2"
+    },
+    {
+      "id": "e0020de6-74c0-4f89-875f-fb6c402a6810",
+      "item_number": 57,
+      "official_answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9",
+      "patch_sha256": "b0a0c764736e67fc208599b23e05786ed650532c45b9c375e5742ce5cef639e5"
+    },
+    {
+      "id": "ecbe63ae-4fdf-420c-b9ec-db0efcdfbe21",
+      "item_number": 60,
+      "official_answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "patch_sha256": "a921b622203d164a6d2ea13a368d2c5fb287cb111d74d31e0a6cdd111b0d6d06"
+    },
+    {
+      "id": "7f673ff3-f01a-4deb-8774-8ecbd59b825d",
+      "item_number": 63,
+      "official_answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "patch_sha256": "6a8017808c954a3abd48452d0cc5fdb59e43ba69a8ed91b0d4559f92743c5b2d"
+    },
+    {
+      "id": "3d399da8-071c-402a-83c8-be7089d0e73b",
+      "item_number": 64,
+      "official_answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "patch_sha256": "2768de633acfc8ce91ed68f509ba4a2b3425f0b91bf2734b78ff0fee1e0ee855"
+    },
+    {
+      "id": "af37645b-c06d-4ab3-8eec-e2a2b930f909",
+      "item_number": 66,
+      "official_answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "0d4c34ba-0268-4d36-8882-0c0139af75e3",
+      "patch_sha256": "53081490ede001892715cd3abc77fefbfe2bacb9610143341349d759e48860e5"
+    }
+  ],
+  "private_artifact_hashes": {
+    "review-pack-batch2.json": "317d4a7ca2e09855224eb56a1b22909f70267b194c5b4fb1ebb4097c10abdaf4",
+    "review-published-after-batch2.json": "80f64485cd82336b1fc97f6bfe232fef59d7d5adf13b4147c7530c2692a74174",
+    "combined-review-pack.json": "b364de92d1a732ce92cd1cf2da0dbfa7c22865e1c9fb7cdff822f914fe98fc7e",
+    "validation-final.json": "8adb6f419cf22d81d9c347f922998d191f071ebf140639e715eb9c662c15851a",
+    "editorial-evidence-batch2.json": "d4a0fb89a9e0d41e42c87eff8a7ba784f7cb8b13551b1bcc47b77ca305751414",
+    "topics-pack.json": "0ef71e9d425cc79358afcf2afb9fc231282c9d3f4a5650750c1edebcdea0d782",
+    "topics-published-batch2.json": "a9dc2849ddf2387cf33dda02eb597a35ab5a53f7d7fbb247c10b958dadf3a2f8",
+    "tests-batch2.log": "f7137329b67dcd3dcc38b46ebf55e1ddf1ea4d9d1dcc0870ef539b55b369eeb7"
+  }
+}

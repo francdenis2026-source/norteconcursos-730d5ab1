@@ -1,0 +1,148 @@
+.workspace-fullscreen-trigger, .workspace-focus-controls button {
+  display: grid; place-items: center; flex: none; width: 44px; height: 44px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--card);
+  color: var(--foreground); cursor: pointer;
+}
+.workspace-fullscreen-trigger svg, .workspace-focus-controls svg { width: 18px; height: 18px; }
+.workspace-focus-entry { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 44px; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--muted); color: var(--foreground); font-size: 12px; font-weight: 600; }
+.workspace-focus-entry svg { width: 17px; height: 17px; }
+.workspace-focus-controls { display: flex; justify-content: flex-end; gap: 6px; flex: none; padding: calc(6px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right)) 6px max(12px, env(safe-area-inset-left)); background: var(--card); border-bottom: 1px solid var(--border); }
+.workspace-focus-controls button:hover, .workspace-fullscreen-trigger:hover { background: var(--muted); border-color: var(--ring); }
+:is(.workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+html[data-workspace-focus="true"], html[data-workspace-focus="true"] body { scrollbar-gutter: auto; overflow: hidden; overscroll-behavior: none; }
+/* position:fixed + inset:0 já prendem as quatro bordas à viewport, então a caixa não precisa de
+   width/height explícitos. Um 100dvh aqui seria recalculado a cada quadro da animação nativa de
+   entrada/saída da tela cheia (o navegador redimensiona a janela de forma gradual), o que fazia
+   o layout piscar durante a transição. */
+.app-shell.navigation-v2[data-focus-mode="true"] {
+  position: fixed; inset: 0; z-index: 40; display: grid;
+  grid-template-columns: minmax(0, 1fr); min-height: 0; overflow: hidden;
+}
+/* Enquanto a tela cheia nativa ainda está entrando/saindo (ver useWorkspaceFullscreen), congela
+   transições e desfoque: evita o "piscar" causado pelo backdrop-filter sendo repintado a cada
+   quadro do redimensionamento animado do navegador. */
+html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
+  transition: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .app-main { display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+.app-shell.navigation-v2[data-focus-mode="true"] :is(.app-topbar, .workspace-section-nav, .app-bottom-nav, .app-footer, .app-focus-return) { display: none; }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content {
+  position: relative; flex: 1 1 0%; min-height: 0; width: 100%; overflow-y: auto;
+  overscroll-behavior-y: contain; padding-bottom: max(88px, calc(56px + env(safe-area-inset-bottom)));
+}
+/* A faixa cria um acabamento visual no rodapé do modo foco. Ela fica fora do
+   fluxo e não captura o mouse, então a página pode continuar rolando sob o
+   vidro sem produzir repinturas intermitentes. */
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content::after {
+  content: ""; position: fixed; z-index: 5; left: 0; right: 0; bottom: 0;
+  height: 58px; pointer-events: none;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--background) 82%, transparent));
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.focus-study-footer { position: fixed !important; z-index: 100 !important; left: 0; right: 0; bottom: 0; display: flex !important; align-items: center; justify-content: center; gap: 10px; min-height: 34px; padding: 6px 12px; background: rgb(17 24 39 / 94%); border-top: 1px solid rgb(255 255 255 / 22%); color: rgb(226 232 240); font-size: 11px; line-height: 1.2; visibility: visible !important; opacity: 1 !important; }
+.focus-study-footer span { color: rgb(148 163 184); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.focus-study-footer strong { color: #fff; font-weight: 800; }
+.focus-study-bar { background: rgb(10 28 48 / 92%) !important; border-bottom: 1px solid rgb(255 255 255 / 16%); -webkit-backdrop-filter: blur(18px) saturate(130%); backdrop-filter: blur(18px) saturate(130%); }
+html[data-reading-scrolling="true"] .focus-study-bar { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: rgb(10 28 48 / 98%) !important; }
+html[data-reading-pointer="true"] .focus-study-container *,
+html[data-reading-pointer="true"] .focus-study-bar { transition: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+.focus-study-bar > div { min-height: 42px; padding-top: 4px !important; padding-bottom: 4px !important; }
+.focus-study-container { scroll-padding-top: 60px; }
+/* Leitura cronometrada usa a viewport inteira: controles ficam acessíveis pelo
+   teclado (Esc) e o cronômetro continua ativo sem ocupar a área de texto. */
+html[data-reading-focus="true"] .focus-study-footer,
+html[data-reading-focus="true"] .workspace-focus-controls { display: none !important; }
+html[data-reading-focus="true"] .focus-study-container { padding-top: 24px; padding-bottom: 24px; }
+/* No estudo cronometrado a barra já identifica disciplina e assunto. A hero
+   duplicada do material sai do fluxo para devolver altura ao conteúdo. */
+html[data-reading-focus="true"] .focus-study-container .library-header { display: none !important; }
+html[data-reading-focus="true"] .focus-study-container > .library-header + * { margin-top: 0 !important; }
+html[data-reading-focus="true"] .focus-study-container .workspace-banner { box-shadow: none; }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content__inner { max-width: none; }
+.app-shell.navigation-v2[data-focus-mode="true"] > .app-sidebar { display: none; }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 0; }
+/* Reading has its own timer and controls; keep a single toolbar and the entire viewport. */
+html[data-reading-focus="true"] .workspace-focus-controls { display: none; }
+html[data-reading-focus="true"] .focus-study-container { width: 100%; max-width: none; padding-inline: clamp(12px, 2vw, 32px); padding-top: env(safe-area-inset-top); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+html[data-reading-focus="true"] .focus-study-container > :not(aside) { max-width: none; width: 100%; }
+html[data-reading-focus="true"] .focus-study-bar { top: 0; }
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell .workspace-fullscreen-trigger { display: none; }
+  .app-shell.navigation-v2[data-focus-mode="true"] { grid-template-columns: minmax(0, 1fr); top: var(--app-viewport-top, 0px); height: var(--app-viewport-height, 100dvh); }
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: none; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 0; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-content { padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right)); }
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after { left: 0; height: 52px; }
+  .workspace-focus-footer { left: 0; }
+}
+@media (forced-colors: active) {
+  .workspace-focus-controls, .workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+@media print { .workspace-focus-controls { display: none; } .app-shell.navigation-v2[data-focus-mode="true"] { position: static; height: auto; display: block; overflow: visible; } }
+
+/* Sessão de foco: o cronômetro vira a área principal quando o aluno inicia um ciclo. */
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page {
+  width: min(1180px, 100%);
+  max-width: none;
+  min-height: 100%;
+  margin-inline: auto;
+  padding: clamp(18px, 4vw, 52px) clamp(14px, 4vw, 64px) 72px;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page > :not(.focus-session-card) { display: none !important; }
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page .focus-session-card {
+  min-height: min(720px, calc(100dvh - 120px));
+  border-color: rgb(244 183 76 / 48%);
+  background: linear-gradient(135deg, rgb(22 25 30 / 98%), rgb(17 23 31 / 96%));
+  box-shadow: 0 24px 80px rgb(0 0 0 / 35%), 0 0 0 1px rgb(244 183 76 / 10%);
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card > div { min-height: inherit; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-session-heading { align-items: flex-start; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-session-kicker { color: #f4b74c; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-timer-panel { min-height: 100%; }
+
+.focus-session-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.focus-session-kicker { display: block; margin-bottom: 5px; color: hsl(var(--muted-foreground)); font-size: 10px; font-weight: 800; letter-spacing: .14em; }
+.focus-history-card { border-color: rgb(148 163 184 / 24%); }
+.focus-history-list { display: grid; gap: 8px; }
+.focus-history-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid rgb(148 163 184 / 18%); border-radius: 11px; background: rgb(15 23 42 / 28%); }
+.focus-history-row > div:first-child { display: grid; min-width: 0; gap: 2px; }
+.focus-history-row strong, .focus-history-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.focus-history-row strong { font-size: 13px; }
+.focus-history-row span, .focus-history-meta time { color: hsl(var(--muted-foreground)); font-size: 11px; }
+.focus-history-meta { display: grid; flex: none; justify-items: end; gap: 2px; }
+.focus-history-meta b { color: #f4b74c; font-size: 12px; }
+.focus-progress { width: min(100%, 360px); display: grid; gap: 6px; }
+.focus-progress__label, .focus-progress__meta { display: flex; justify-content: space-between; gap: 12px; color: hsl(var(--muted-foreground)); font-size: 11px; }
+.focus-progress__label strong { color: hsl(var(--foreground)); font-variant-numeric: tabular-nums; }
+.focus-progress__track { height: 7px; overflow: hidden; border-radius: 999px; background: rgb(148 163 184 / 18%); }
+.focus-progress__track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #f4b74c, #f59e0b); transition: width .25s ease; }
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page { padding: 14px 10px 60px; }
+  .focus-session-heading { align-items: flex-start; flex-direction: column; }
+  .focus-session-heading > button { width: 100%; }
+}
+
+/* Question trainer on phones: keep the question paper readable and remove
+   setup chrome once the session starts. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell {
+    width: min(100%, 920px);
+    margin-inline: auto;
+    padding: 12px 10px 72px;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell > :not(.trainer-session-layout) {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell > .trainer-session-layout {
+    display: block;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-overview { display: none; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-column { width: 100%; max-width: 900px; margin-inline: auto; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-column .question-window { min-height: calc(100dvh - 98px); border-radius: 14px; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-content { padding: 20px 16px 24px; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-stem { font-size: 17px; line-height: 1.75; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-option { min-height: 54px; padding: 14px 12px; font-size: 15px; line-height: 1.6; }
+}

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-23T04:47:08.508150+00:00",
+  "board_states": {
+    "active": 131,
+    "under_review": 141,
+    "obsolete": 1
+  },
+  "curated_states": {
+    "active": 10
+  },
+  "corpus_states": {
+    "reviewed": 192,
+    "rejected": 3,
+    "obsolete": 5
+  },
+  "pending_private": 182,
+  "pending_board": 141,
+  "pending_release_total": 323,
+  "active_board_without_explanation": 91,
+  "logical_positions": 473,
+  "note": "As 10 publicações do corpus são representações públicas de posições já contadas; não somar como novas questões distintas."
+}

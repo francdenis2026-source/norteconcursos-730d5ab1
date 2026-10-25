@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-24T22:05:35.592181+00:00",
+  "file": "02-publish-reviewed-didactic-questions.sql",
+  "sha256": "db6b0f64382c8c38b880a5a4380c1ef1de8dae520739797f64bbc69696f39a2c",
+  "result": [
+    {
+      "review_status": "duplicate_reused",
+      "count": 3
+    },
+    {
+      "review_status": "needs_review",
+      "count": 25
+    },
+    {
+      "review_status": "published",
+      "count": 164
+    }
+  ]
+}

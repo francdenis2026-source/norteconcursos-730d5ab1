@@ -1,0 +1,347 @@
+{
+  "checked_at": "2026-10-18T02:18:28.784Z",
+  "reviewed_dispositions": 2,
+  "new_active": 1,
+  "editorial_archive": 1,
+  "not_official_annulment": true,
+  "preserved_other_pc_records": 2966,
+  "verified_metadata_changes": [
+    {
+      "table": "content_sources",
+      "id": "cbeab311-96df-5967-8d6b-bf36d71752b2"
+    },
+    {
+      "table": "content_sources",
+      "id": "f6e090bb-5351-5494-8c10-5466905a01df"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "46101561-3041-5784-b373-70c7862d87ba"
+    }
+  ],
+  "concurrent_metadata_additions_preserved": [
+    {
+      "table": "content_sources",
+      "id": "13e943a4-af35-5470-8224-c250a7bc72b4",
+      "title": "STJ2004:cargo9:verde — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "142fd3f2-625e-5ca8-b531-b1fbbcf51dd8",
+      "title": "STM2004:cargo5 — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "274d46dc-1b25-583d-ab4e-9a99ff18dfa9",
+      "title": "PMVV2007:cargo16:q — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "293a1b6d-01cf-59ae-9f10-d9f5d2557250",
+      "title": "STM2004:cargo5 — justificativas oficiais",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "31b6c50d-1277-512a-8ae5-2941179922d4",
+      "title": "PMVV2007:cargo16:q — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "3de93296-0f68-5052-8247-27c901178b5b",
+      "title": "SEFAZ_AL2002:fiscal — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "4f4673ce-ed30-5a04-bba4-e3902ad251e1",
+      "title": "SGAAC2006:fiscal:caderno1 — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "54dc77fa-feb1-5aba-862f-9cf91adba3f6",
+      "title": "DPFAGENTE2009:agente — justificativas oficiais",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "553d3f9c-26fe-5aa5-8e78-158273ba4d77",
+      "title": "DPFAGENTE2009:agente — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "58b238e9-db68-5b7c-8409-18a8fdfc5aee",
+      "title": "TRT17REGIAO2009:cargo12:lua — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "7dfe9b18-75ae-55f7-be25-388db1a2afd6",
+      "title": "PMVV2007:cargo16:q — justificativas oficiais",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "847abbb2-5cab-58cc-a136-ded56095c295",
+      "title": "STJ2008:cargo4 — justificativas oficiais",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "904c4455-2bd6-57e9-a00d-0c6acdaafbd6",
+      "title": "STJ2008:cargo4 — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+      "title": "DPF_2004_NAC:cargo19:azul — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "9f424550-3746-567e-b201-0dd55e3c99aa",
+      "title": "SEFAZ_AL2002:fiscal — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a2af2f4b-9811-5b53-bd1a-543b16a94164",
+      "title": "STJ2008:cargo4 — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a38ab3a9-c93f-583f-ab08-7b6155e0373d",
+      "title": "TST2007:cargo8 — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a4535714-575b-5368-80ed-b854948d187c",
+      "title": "TST2007:cargo8 — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a4dae868-e6bc-5b89-a6a5-8e024b753b76",
+      "title": "STM2004:cargo5 — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a9f44192-37b8-5710-b3fa-42a5c2a5eaa8",
+      "title": "STJ2004:cargo9:verde — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "b6ace9ed-e021-5cd0-8f96-c741216031d3",
+      "title": "TRT17REGIAO2009:cargo12:lua — justificativas oficiais",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "c2228cf1-a43c-5c70-b9bc-9c6be95dddd6",
+      "title": "TRT17REGIAO2009:cargo12:lua — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "d71aa3ba-435e-530f-a52f-1f512afad0c6",
+      "title": "DPFAGENTE2009:agente — gabarito definitivo",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+      "title": "DPF_2004_NAC:cargo19:azul — caderno oficial",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "f544d2aa-8945-5971-8c01-e8da9802996f",
+      "title": "TST2007:cargo8 — justificativas oficiais",
+      "our_write": false
+    }
+  ],
+  "all_preexisting_metadata_unchanged": true,
+  "tests_passed": 33,
+  "application_changes": false,
+  "pc_status": {
+    "active": 2628,
+    "archived": 281,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 10
+  },
+  "pending_by_state": {
+    "RO": 6,
+    "RJ": 2,
+    "AM": 1,
+    "MG": 1
+  },
+  "items": [
+    {
+      "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
+      "item_number": 9,
+      "career": "Delegado de Polícia",
+      "patch": {
+        "content_status": "active",
+        "subject": "História e Geografia de Rondônia",
+        "current_syllabus_topic_id": "46101561-3041-5784-b373-70c7862d87ba",
+        "review_note": "Resposta: B — abertura da BR-029 (atual BR-364) e avanço da fronteira agrícola.\n\nA questão relaciona dois momentos, não um único ato: a abertura da ligação rodoviária no governo Juscelino Kubitschek e o processo posterior de migração, ocupação e expansão agropecuária. O Governo de Rondônia documenta a articulação de Paulo Leal com JK e a Caravana Ford de1960; outra publicação descreve a ocupação agrícola, a criação de municípios e a distribuição de lotes pelo Incra nos anos1970.\n\nExemplo: abrir uma estrada facilita a chegada de pessoas e mercadorias, mas a formação de uma área agrícola depende também de ocupação, colonização e produção ao longo dos anos. Não confunda a abertura no períodoJK com todo o processo agrícola concluído naquele mesmo governo.\n\nA alternativaA desloca a maior concentração populacional para a navegação portuguesa colonial; o crescimento migratório e a ocupação moderna retratados nas fontes pertencem a etapas posteriores. C também não descreve o grande movimento migratório associado à ocupação moderna: a atuação missionária não substitui essa cronologia. D mistura o eixo da Madeira-Mamoré com a ocupação da chapada dos Parecis. E reúne processos e datas distintos, atribuindo à Marcha para o Oeste, no primeiro governoVargas, a sequência posterior de descoberta/exploração de cassiterita e migração.\n\nComo fixar: organize uma linha do tempo com expansão colonial, ciclos extrativos, ligação rodoviária e colonização agrícola. Questões costumam trocar os agentes, lugares e períodos desses processos.\n\nExercício: a abertura de uma rodovia e o crescimento da ocupação agrícola precisam ocorrer integralmente no mesmo ano? Não. O primeiro processo pode criar condições para o segundo, que se desenvolve posteriormente.\n\nConferência: caderno oficialCG2, questão9, página2; definitivo do cargo de Delegado, página1, letraB. As alternativasA/B estavam invertidas na importação e foram restauradas conforme o caderno, preservando a extração bruta. Fontes históricas: Governo de Rondônia, publicações de17/12/2018 e04/01/2021, consultadas nesta revisão. Programa do cargo conferido no item23.2.3 do edital, página54. Não usar dados populacionais apresentados nas notícias históricas como números demográficos atuais.",
+        "verified_at": "2026-10-18T02:17:12.049900+00:00",
+        "context_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo de fontes oficiais históricas, próprio caderno e definitivoCG2; reparo separado de fontes e ordenação, tópico real do edital.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_CG2_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_CG2_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://rondonia.ro.gov.br/historia-de-rondonia-governador-paulo-leal-inspirou-jk-para-abrir-a-rodovia-br-29-depois-364/",
+          "https://rondonia.ro.gov.br/estado-de-rondonia-completa-39-anos-concretizando-sonhos-acalentados-desde-1960/"
+        ],
+        "captures": [
+          {
+            "url": "https://rondonia.ro.gov.br/historia-de-rondonia-governador-paulo-leal-inspirou-jk-para-abrir-a-rodovia-br-29-depois-364/",
+            "path": "outputs/pc-pending-review-2026-10-16/final12-ro-jk.html",
+            "sha256": "f5aa9326de27736364e0ec28f38ebe5b592e9e0c2a955553c7d49e92eb840cef",
+            "captured_at": "2026-10-18T02:15:30.510047+00:00"
+          },
+          {
+            "url": "https://rondonia.ro.gov.br/estado-de-rondonia-completa-39-anos-concretizando-sonhos-acalentados-desde-1960/",
+            "path": "outputs/pc-pending-review-2026-10-16/final12-ro-ocupacao.html",
+            "sha256": "cc599e162c14bb8c6035579027e13ebcf6204d817c24673151d4a1084eec29c1",
+            "captured_at": "2026-10-18T02:15:30.644439+00:00"
+          }
+        ],
+        "paper_page": 2,
+        "key_page": 1,
+        "edital_page": 54,
+        "original_answer_preserved": true,
+        "classification_reviewed": true,
+        "classification_reason": "História e Geografia de Rondônia, conteúdo de ocupação e colonização, conforme item23.2.3 do edital, página54; tópico verificado criado separadamente."
+      }
+    },
+    {
+      "id": "bd9495a0-e158-41eb-92e2-38ad99b635eb",
+      "item_number": 29,
+      "career": "Datiloscopista Policial",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-18T02:17:12.049900+00:00",
+        "review_note": "Arquivamento editorial por divergência documental, sem anulação oficial e sem trocar a letraD.\n\nNo cadernoCG1 de Datiloscopista, questão29, página5, a alternativaA descreve a abertura da BR-029/BR-364 no governoJK e a formação da fronteira agrícola; o definitivo do cargo registraD. No cadernoCG2 de Delegado, questão9, página2, o mesmo conteúdo aparece como alternativaB, e o definitivo desse cargo registraB. As demais proposições, inclusive a ferrovia/chapa dos Parecis da alternativaD, mantêm o mesmo conteúdo nos dois cadernos. Não é seguro transpor a letra de um cargo ao outro.\n\nAs publicações históricas do Governo de Rondônia corroboram a abertura da rodovia no governoJK e a ocupação/expansão agrícola posterior. Portanto, há fundamento documental concreto para a proposiçãoA do cadernoCG1, incompatível com tratar a chaveD desse caderno como solução única confiável no treino automático.\n\nExemplo pedagógico: se uma mesma proposição muda de posição entre cadernos, a letra correta precisa acompanhar o conteúdo. A simples cópia de letra ou ordenação entre cargos produz erro, mesmo quando o enunciado parece igual.\n\nMantidos integralmente enunciado, alternativas, extração, fontes e gabarito oficialD do registro. A questão não foi marcada como anulada pela banca. Sua reativação exige esclarecimento documental ou nova revisão que resolva a divergência, e não a mudança silenciosa da chave paraA. Cotejo visual dos dois cadernos e dos dois definitivos; fontes históricas de17/12/2018 e04/01/2021, sem apresentar suas estatísticas como atuais."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Discrepância entre proposição e chaves de dois cadernos oficiais, corroborada por duas fontes históricas do governo; não arquivamento por falta de acesso nem declaração de anulação da banca.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_CG2_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_CG2_01.PDF",
+          "https://rondonia.ro.gov.br/historia-de-rondonia-governador-paulo-leal-inspirou-jk-para-abrir-a-rodovia-br-29-depois-364/",
+          "https://rondonia.ro.gov.br/estado-de-rondonia-completa-39-anos-concretizando-sonhos-acalentados-desde-1960/"
+        ],
+        "captures": [
+          {
+            "url": "https://rondonia.ro.gov.br/historia-de-rondonia-governador-paulo-leal-inspirou-jk-para-abrir-a-rodovia-br-29-depois-364/",
+            "path": "outputs/pc-pending-review-2026-10-16/final12-ro-jk.html",
+            "sha256": "f5aa9326de27736364e0ec28f38ebe5b592e9e0c2a955553c7d49e92eb840cef",
+            "captured_at": "2026-10-18T02:15:30.510047+00:00"
+          },
+          {
+            "url": "https://rondonia.ro.gov.br/estado-de-rondonia-completa-39-anos-concretizando-sonhos-acalentados-desde-1960/",
+            "path": "outputs/pc-pending-review-2026-10-16/final12-ro-ocupacao.html",
+            "sha256": "cc599e162c14bb8c6035579027e13ebcf6204d817c24673151d4a1084eec29c1",
+            "captured_at": "2026-10-18T02:15:30.644439+00:00"
+          }
+        ],
+        "paper_page": 5,
+        "key_page": 1,
+        "original_answer_preserved": true,
+        "not_official_annulment": true
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
+      "patch": {
+        "question_source_id": "f6e090bb-5351-5494-8c10-5466905a01df",
+        "answer_key_source_id": "cbeab311-96df-5967-8d6b-bf36d71752b2",
+        "source_page": 2,
+        "verified_at": "2026-10-18T02:17:12.049900+00:00",
+        "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).; Auditoria 04/10/2026: texto incompleto, transcrição não confirmada ou cópia com gabarito divergente. Retirado do treino até confronto individual com caderno e gabarito oficiais. O gabarito histórico foi preservado. | Revisão 17/10/2026, retida: História de Rondônia: sem fonte oficial (governo/IBGE) conferida para a afirmação.\nCaderno CG2 e definitivo do próprio cargo conferidos; item9 página2, letraB. Links de repositório anteriores preservados nos metadados, sem sobrescrita."
+      },
+      "evidence": {
+        "reason": "Cotejo visual do item9 e chaveB no blocoCG2 específico de Delegado.",
+        "visually_verified": true,
+        "item_number": 9,
+        "official_answer": "B",
+        "page": 2,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_CG2_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS GERAIS PARA O CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_CG2_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_CG2_01.PDF",
+          "sha256": "981349bada6149e2601a6056da247e177274964fa42a207803ce1156b72ef290",
+          "captured_at": "2026-10-16T20:36:46.730Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_CG2_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS GERAIS PARA O CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_CG2_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_CG2_01.PDF",
+          "sha256": "c0853bfa80c3012b6379f5f4a4ecef11a57844b6e09f6c0a1c687f1f58b4b009",
+          "captured_at": "2026-10-16T20:36:45.155Z"
+        }
+      }
+    }
+  ],
+  "context_repairs": [
+    {
+      "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
+      "patch": {
+        "question_text": "Em relação ao desbravamento e à efetiva ocupação de Rondônia, assinale a opção correta.\n(A) A maior densidade demográfica de Rondônia aconteceu à época em que os portugueses navegaram os rios Madeira e Mamoré em direção ao arraial de Bom Jesus.\n(B) A chamada nova fronteira agrícola formou-se a partir da abertura da então BR-029 (atual BR-364), iniciada no governo de Juscelino Kubitschek.\n(C) O primeiro grande movimento migratório para Rondônia se deu pela chegada dos missionários jesuítas ao Guaporé, para catequização dos indígenas.\n(D) O traçado norte-sul da ferrovia Madeira-Mamoré, no território rondoniense, facilitou a formação de vários núcleos urbanos na chapada dos Parecis.\n(E) A Marcha para o Oeste, empreendida no primeiro governo de Getúlio Vargas, levou à descoberta da cassiterita e a intensa migração para Rondônia.",
+        "context_review_required": false,
+        "verified_at": "2026-10-18T02:17:12.049900+00:00",
+        "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).; Auditoria 04/10/2026: texto incompleto, transcrição não confirmada ou cópia com gabarito divergente. Retirado do treino até confronto individual com caderno e gabarito oficiais. O gabarito histórico foi preservado. | Revisão 17/10/2026, retida: História de Rondônia: sem fonte oficial (governo/IBGE) conferida para a afirmação.\nCaderno CG2 e definitivo do próprio cargo conferidos; item9 página2, letraB. Links de repositório anteriores preservados nos metadados, sem sobrescrita.\nCorrigida inversão das alternativasA/B na importação por confronto visual com CG2 página2; conteúdo, cinco alternativas, gabaritoB e extração bruta preservados."
+      },
+      "evidence": {
+        "reason": "A/B do blocoCG1 foram usados indevidamente no registroCG2; restaurada a ordenação do próprio caderno, sem mudar a chave.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/732_PCRO_CG2_01.PDF",
+        "pdf_sha256": "981349bada6149e2601a6056da247e177274964fa42a207803ce1156b72ef290",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_CG2_01.PDF",
+        "page": 2
+      }
+    }
+  ]
+}

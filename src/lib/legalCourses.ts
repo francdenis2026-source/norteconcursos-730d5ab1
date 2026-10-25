@@ -35,7 +35,7 @@ export function useLegalUnits(courseId?: string, userId?: string) {
     queryFn: async () => {
       const rows: LegalUnit[] = [];
       for (let start = 0; ; start += 200) {
-        const { data, error } = await supabase.from("legal_course_units").select("*").eq("course_id", courseId!).order("position").range(start, start + 199);
+        const { data, error } = await supabase.from("legal_course_units").select("*").eq("course_id", courseId!).order("position").order("unit_key").range(start, start + 199);
         if (error) throw error;
         rows.push(...(data ?? []) as LegalUnit[]);
         if (!data?.length) break;
@@ -47,7 +47,11 @@ export function useLegalUnits(courseId?: string, userId?: string) {
           start -= 200 - data.length;
         }
       }
-      return rows;
+      // Recovered articles can share the next article's legacy position.
+      // Stable server ordering prevents page duplication; numeric ordering
+      // here places e.g. Art. 1 before Art. 2 without changing learner IDs.
+      const collator = new Intl.Collator("pt-BR", { numeric: true });
+      return rows.sort((a,b) => a.position-b.position || collator.compare(a.unit_key,b.unit_key));
     }, staleTime: 5 * 60 * 1000 });
 }
 export function useLegalProgress(userId?: string) {
@@ -68,6 +72,7 @@ export type LegalExplanation = {
   unit_id: string; content_sha256: string; simples: string; pontos: string[]; atencao: string[]; exemplo: string;
   prova: string[]; termos: { termo: string; significado: string }[]; remissoes: string[];
   status: "under_review" | "published";
+  reviewed_by?: string | null; reviewed_at?: string | null; updated_at?: string;
 };
 /** Explicação didática do artigo (RLS: aluno só vê publicada e com o texto oficial inalterado; admin vê também em revisão). */
 export function useLegalExplanation(unitId?: string, userId?: string) {

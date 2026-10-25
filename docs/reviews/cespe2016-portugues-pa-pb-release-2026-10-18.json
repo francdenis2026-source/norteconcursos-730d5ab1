@@ -1,0 +1,1538 @@
+{
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "current_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+  "current_edital_source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+  "pf_syllabus_evidence": {
+    "file": "PF_25_edital_atualizado.pdf",
+    "path": "/workspace/cespe7000-audit/official-exams-check/PF_25_edital_atualizado.pdf",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "final_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "captured_at": "2026-10-17T23:07:12.549045+00:00",
+    "bytes": 1505541
+  },
+  "batch_id": "cespe2016-portugues-pa-pb-original-release-2026-10-18",
+  "checked_at": "2026-10-18T03:37:05.326119+00:00",
+  "groups": [
+    {
+      "code": "PCPA2006:cargo2:caderno1",
+      "paper": {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_002_1.PDF",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PCPA_002_1.PDF",
+        "sha256": "f248aa21751848a8b15d42200c0b112b6df3f1c6b99c97783ce23b764d31e5ab",
+        "pages": 12,
+        "first_text": "\nUnB / CESPE – PCPA / Nome do candidato:\n– 1 –\nCargo 2: Escrivão de Polícia Civil \nÉ permitida a reprodução apenas para fins didáticos, desde que citada a fonte.\n•\nNas questões de "
+      },
+      "key": {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+        "sha256": "ced7f5612a1dc742d45a64a200fe68ddfbec50fd4cd01bdde3ac7cc5bf5f7cad",
+        "pages": 1,
+        "first_text": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\nD\nC\nD\nA\nB\nA\nC\nC\nC\nD\nC\nB\nA\nD\nD\nA\nB\nC\nB\nD\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\nC\nB\nX\nB\nD\nD\nX\nB\nX\nC\nA\nA\nB\nA\nD"
+      },
+      "changes": {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_JUSTIFICATIVAS_DE_ALTERACAO_DE_GABARITO.PDF",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PCPA_JUSTIFICATIVAS_DE_ALTERACAO_DE_GABARITO.PDF",
+        "sha256": "7be529ea1bf5bb6f246e53f418a334f660947cb05c0febe9532042fc1bb4776d",
+        "pages": 2,
+        "first_text": "Coordenadoria Acadêmica\nGOVERNO DO ESTADO DO PARÁ \nSECRETARIA EXECUTIVA DE ESTADO DE ADMINISTRAÇÃO (SEAD) \nCONCURSO PÚBLICO PARA PROVIMENTO DE VAGAS EM CARGOS DE NÍVEL \nSUPERIOR DA"
+      },
+      "catalog": {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/0bd20bdd00.html",
+        "sha256": "29e46b88d3fa225e0894b5847b3cda0378e70015e841b3d4aa6a4c03b96b2286"
+      },
+      "contest_name": "Polícia Civil do Pará",
+      "career_name": "Escrivão de Polícia Civil",
+      "exam_year": 2006,
+      "exam_date": "2006-04-02",
+      "exam_type": "Cargo 2 — Caderno 1",
+      "key_total": 40,
+      "key_width": 20,
+      "visually_verified": true
+    },
+    {
+      "code": "PCPB2008:agente-escrivao:modelo7.12",
+      "paper": {
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_007_12.pdf",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PCPB08_007_12.pdf",
+        "sha256": "685e0ba83b6f2c2d8dec9f7e5285449f7ae9642dfd019609f68cbac05260b54d",
+        "pages": 20,
+        "first_text": "\nUnB/CESPE – SEAD/SEDS/PCPB\nCargos: Agente de Investigação e Escrivão de Polícia\n– 1 –\n•\nNas questões de 1 a 80, marque, para cada uma, a única opção correta, de acordo com o respe"
+      },
+      "key": {
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_Gab_definitivo_007_12.PDF",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PCPB08_Gab_definitivo_007_12.PDF",
+        "sha256": "4e82b48e815f4607414469309742ff5a1cc777a5ad5ffda08098561457829c5f",
+        "pages": 1,
+        "first_text": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\nD\nE\nB\nD\nX\nE\nD\nE\nE\nE\nB\nA\nC\nE\nD\nB\nD\nE\nC\nA\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\nA\nB\nC\nD\nE\nE\nB\nC\nD\nA\nA\nB\nA\nC\nB"
+      },
+      "changes": {
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PC_PB_2008_JUSTIFICATIVAS_DE_ALTERAO_DE_GABARITO.PDF",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/PC_PB_2008_JUSTIFICATIVAS_DE_ALTERAO_DE_GABARITO.PDF",
+        "sha256": "94663e2f2668ccff0b5d88f14f6c6b88d8d797435bed085dbcc8762ee7454154",
+        "pages": 3,
+        "first_text": "Gerência de Recursos e Avaliações\nGOVERNO DO ESTADO DA PARAÍBA \nSECRETARIA DE ESTADO DA ADMINISTRAÇÃO \nSECRETARIA DE ESTADO DA SEGURANÇA E DA DEFESA SOCIAL \nCOMISSÃO DO CONCURSO PÚ"
+      },
+      "catalog": {
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/",
+        "path": "/workspace/cespe7000-audit/portugues-review-04/f438c3f4d6.html",
+        "sha256": "bccb5c139b801293c4654b75eaf8f01312715ea5bf0569bc5c06f61460e12b5f"
+      },
+      "contest_name": "Polícia Civil da Paraíba",
+      "career_name": "Agente de Investigação e Escrivão de Polícia",
+      "exam_year": 2009,
+      "exam_date": "2009-03-29",
+      "exam_type": "Modelo 7.12 — Edital 01/2008",
+      "key_total": 80,
+      "key_width": 20,
+      "visually_verified": true
+    }
+  ],
+  "items": [
+    {
+      "origin_candidate_id": "b472b8a45042c7fc650caab6c0bccb953468ed41fbf53e708c0c1533a43a0d4c",
+      "source_item_index_zero_based": 96,
+      "original_item_number": 1,
+      "source_page": 2,
+      "group_code": "PCPA2006:cargo2:caderno1",
+      "support_original": "É voz corrente que a humanidade está vivendo um momento de crise. A excessiva exaltação dos objetivos econômicos, com a eleição dos índices de crescimento como o padrão de sucesso ou fracasso dos governos, estimulou a valorização exagerada da busca de bens materiais. Isso foi agravado pela utilização dos avanços tecnológicos para estimular o consumismo e apresentar maliciosamente a posse de bens materiais supérfluos como padrão de sucesso individual. A conseqüência última desse processo foi a implantação do materialismo e do egoísmo na convivência humana, sufocando-se os valores espirituais, a ética e a solidariedade. Dalmo Dallari. Internet: <dhnet.org.br/direitos/sos/discrim/preconceito/policiais.html>.",
+      "explanation": "O texto apresenta a valorização exagerada de bens como parte de um processo que agrava egoísmo e materialismo e sufoca solidariedade. A alternativa D afirma que esse processo atenua o egoísmo, invertendo o efeito descrito. Como o comando pede a opção em desacordo, essa inversão fundamenta a resposta D, confirmada no definitivo oficial.",
+      "example": "Se um texto afirma que determinada prática intensifica o isolamento, uma alternativa que diga que ela reduz o isolamento contraria o argumento.",
+      "row": {
+        "id": "8519b2a6-170b-5e52-acdf-b00673590424",
+        "board": "CEBRASPE",
+        "contest_name": "Polícia Civil do Pará",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2006,
+        "exam_date": "2006-04-02",
+        "exam_type": "Cargo 2 — Caderno 1",
+        "item_number": 1,
+        "subject": "Língua Portuguesa",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "support_text": "[Texto e contexto históricos de 2006. Exercício de interpretação; não certifica dados históricos nem normas como atuais.]\n\nÉ voz corrente que a humanidade está vivendo um momento de crise. A excessiva exaltação dos objetivos econômicos, com a eleição dos índices de crescimento como o padrão de sucesso ou fracasso dos governos, estimulou a valorização exagerada da busca de bens materiais. Isso foi agravado pela utilização dos avanços tecnológicos para estimular o consumismo e apresentar maliciosamente a posse de bens materiais supérfluos como padrão de sucesso individual. A conseqüência última desse processo foi a implantação do materialismo e do egoísmo na convivência humana, sufocando-se os valores espirituais, a ética e a solidariedade. Dalmo Dallari. Internet: <dhnet.org.br/direitos/sos/discrim/preconceito/policiais.html>.",
+        "stem": "Assinale a opção que não está de acordo com as idéias do texto acima.",
+        "options": {
+          "A": "A crise que a humanidade está vivendo envolve o abafamento de valores espirituais, da ética e da solidariedade.",
+          "B": "A busca de bens materiais provém da excessiva valorização dos índices de crescimento como padrão de sucesso das nações.",
+          "C": "O consumismo foi estimulado por meio dos avanços tecnológicos que apresentam os bens materiais como forma de sucesso individual.",
+          "D": "O processo de valorização exagerada dos bens materiais atenua a manifestação do egoísmo na convivência entre as pessoas."
+        },
+        "official_answer": "D",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "legal_basis": [],
+        "explanation": "O texto apresenta a valorização exagerada de bens como parte de um processo que agrava egoísmo e materialismo e sufoca solidariedade. A alternativa D afirma que esse processo atenua o egoísmo, invertendo o efeito descrito. Como o comando pede a opção em desacordo, essa inversão fundamenta a resposta D, confirmada no definitivo oficial.\n\nExemplo: Se um texto afirma que determinada prática intensifica o isolamento, uma alternativa que diga que ela reduz o isolamento contraria o argumento.",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_002_1.PDF",
+        "answer_key_url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+        "content_status": "active",
+        "review_note": "Caderno, cargo/modelo, gabarito definitivo e comunicações de anulação conferidos individualmente. Página física 2. Texto e contexto históricos de 2006. Exercício de interpretação; não certifica dados históricos nem normas como atuais.",
+        "verified_at": "2026-10-18T03:37:05.326119+00:00"
+      }
+    },
+    {
+      "origin_candidate_id": "95151bdd0057a058ff634105fc9392750348e00273e84d8319dad15e6a610415",
+      "source_item_index_zero_based": 97,
+      "original_item_number": 7,
+      "source_page": 3,
+      "group_code": "PCPA2006:cargo2:caderno1",
+      "support_original": "A dimensão social da democracia marcou o primeiro grande salto na conceituação dos direitos humanos. A afirmação dos direitos sociais surgiu da constatação da fragilidade dos direitos liberais, no sentido de que o homem, a favor do qual se proclamavam liberdades políticas, não satisfez ainda necessidades primárias: alimentar-se, vestir-se, morar, ter condições de saúde, ter segurança diante da doença, da velhice, do desemprego e de outros percalços da vida. Idem, ibidem (com adaptações).",
+      "explanation": "O trecho relaciona a afirmação dos direitos sociais à insuficiência das liberdades políticas para satisfazer necessidades básicas. A alternativa C preserva essa origem argumentativa. As outras opções confundem causa e característica ou acrescentam uma primazia histórica não afirmada. Esta é uma leitura do trecho, sem certificação da cronologia jurídica como fato atual.",
+      "example": "Um texto pode justificar novas medidas pela insuficiência das anteriores; a paráfrase correta mantém essa relação, sem dizer que as medidas novas foram as primeiras da história.",
+      "row": {
+        "id": "f318a5b3-9e78-5fa8-94c2-bd48d99327e9",
+        "board": "CEBRASPE",
+        "contest_name": "Polícia Civil do Pará",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2006,
+        "exam_date": "2006-04-02",
+        "exam_type": "Cargo 2 — Caderno 1",
+        "item_number": 7,
+        "subject": "Língua Portuguesa",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "support_text": "[Texto e contexto históricos de 2006. Exercício de interpretação; não certifica dados históricos nem normas como atuais.]\n\nA dimensão social da democracia marcou o primeiro grande salto na conceituação dos direitos humanos. A afirmação dos direitos sociais surgiu da constatação da fragilidade dos direitos liberais, no sentido de que o homem, a favor do qual se proclamavam liberdades políticas, não satisfez ainda necessidades primárias: alimentar-se, vestir-se, morar, ter condições de saúde, ter segurança diante da doença, da velhice, do desemprego e de outros percalços da vida. Idem, ibidem (com adaptações).",
+        "stem": "Assinale a opção que está de acordo com as idéias do texto acima.",
+        "options": {
+          "A": "Do primeiro salto na definição dos direitos humanos decorre o caráter social da democracia.",
+          "B": "A fragilidade dos direitos liberais constitui a dimensão social da democracia.",
+          "C": "A afirmação dos direitos sociais proveio da constatação de que o homem, para o qual se propunha o direito à liberdade, ainda não havia conquistado suas necessidades primárias.",
+          "D": "Alimentar-se, vestir-se, morar, ter saúde, ter segurança diante dos percalços da vida foram os primeiros direitos humanos a serem requeridos na história."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "legal_basis": [],
+        "explanation": "O trecho relaciona a afirmação dos direitos sociais à insuficiência das liberdades políticas para satisfazer necessidades básicas. A alternativa C preserva essa origem argumentativa. As outras opções confundem causa e característica ou acrescentam uma primazia histórica não afirmada. Esta é uma leitura do trecho, sem certificação da cronologia jurídica como fato atual.\n\nExemplo: Um texto pode justificar novas medidas pela insuficiência das anteriores; a paráfrase correta mantém essa relação, sem dizer que as medidas novas foram as primeiras da história.",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_002_1.PDF",
+        "answer_key_url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+        "content_status": "active",
+        "review_note": "Caderno, cargo/modelo, gabarito definitivo e comunicações de anulação conferidos individualmente. Página física 3. Texto e contexto históricos de 2006. Exercício de interpretação; não certifica dados históricos nem normas como atuais.",
+        "verified_at": "2026-10-18T03:37:05.326119+00:00"
+      }
+    },
+    {
+      "origin_candidate_id": "1c3bc04d289270246da746fa7ca4646284d130634525732db642e7ca7660ae7b",
+      "source_item_index_zero_based": 98,
+      "original_item_number": 1,
+      "source_page": 2,
+      "group_code": "PCPB2008:agente-escrivao:modelo7.12",
+      "support_original": "As mudanças e transformações globais nas estruturas políticas e econômicas no mundo contemporâneo colocam em relevo as questões de identidade e as lutas pela afirmação e manutenção das identidades nacionais e étnicas. Mesmo que o passado que as identidades atuais reconstroem seja, sempre, apenas imaginado, ele proporciona alguma certeza em um clima que é de mudança, fluidez e crescente incerteza. As identidades em conflito estão localizadas no interior de mudanças sociais, políticas e econômicas, mudanças para as quais elas contribuem. Tomaz Tadeu da Silva (Org.). Stuart Hall e Kathryn Woodward. Identidade e diferença — A perspectiva dos estudos culturais. Petrópolis: Vozes, 2004, p. 24-5 (com adaptações).",
+      "explanation": "O texto situa as identidades dentro de mudanças sociais e políticas e afirma que elas também contribuem para essas mudanças. A alternativa D resume essa relação dinâmica. Não cabe transformar o passado imaginado em prova de inexistência das identidades nem apresentar conflitos como causa exclusiva de todas as transformações globais.",
+      "example": "Uma identidade cultural pode mudar com as relações sociais e também influenciá-las; reconhecer essa interação não equivale a reduzir toda mudança a um conflito identitário.",
+      "row": {
+        "id": "87c399f3-41ad-5fae-8359-0608d799e303",
+        "board": "CEBRASPE",
+        "contest_name": "Polícia Civil da Paraíba",
+        "career_name": "Agente de Investigação e Escrivão de Polícia",
+        "exam_year": 2009,
+        "exam_date": "2009-03-29",
+        "exam_type": "Modelo 7.12 — Edital 01/2008",
+        "item_number": 1,
+        "subject": "Língua Portuguesa",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "support_text": "[Texto e contexto históricos de 2009. Concurso do edital 01/2008, aplicado em 29/03/2009; a apostila usa o ano do edital. Exercício de interpretação; não certifica dados históricos nem normas como atuais.]\n\nAs mudanças e transformações globais nas estruturas políticas e econômicas no mundo contemporâneo colocam em relevo as questões de identidade e as lutas pela afirmação e manutenção das identidades nacionais e étnicas. Mesmo que o passado que as identidades atuais reconstroem seja, sempre, apenas imaginado, ele proporciona alguma certeza em um clima que é de mudança, fluidez e crescente incerteza. As identidades em conflito estão localizadas no interior de mudanças sociais, políticas e econômicas, mudanças para as quais elas contribuem. Tomaz Tadeu da Silva (Org.). Stuart Hall e Kathryn Woodward. Identidade e diferença — A perspectiva dos estudos culturais. Petrópolis: Vozes, 2004, p. 24-5 (com adaptações).",
+        "stem": "A argumentação textual se apoia na ideia de que",
+        "options": {
+          "A": "as transformações globais decorrem de conflitos de identidades nacionais e étnicas.",
+          "B": "as lutas pela afirmação e manutenção das estruturas globais são necessárias.",
+          "C": "as identidades atuais padecem de incerteza porque são apenas imaginadas.",
+          "D": "as identidades não são fixas e integram as mudanças sociais e políticas.",
+          "E": "as lutas pelas transformações sociais são o conflito de identidades."
+        },
+        "official_answer": "D",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "legal_basis": [],
+        "explanation": "O texto situa as identidades dentro de mudanças sociais e políticas e afirma que elas também contribuem para essas mudanças. A alternativa D resume essa relação dinâmica. Não cabe transformar o passado imaginado em prova de inexistência das identidades nem apresentar conflitos como causa exclusiva de todas as transformações globais.\n\nExemplo: Uma identidade cultural pode mudar com as relações sociais e também influenciá-las; reconhecer essa interação não equivale a reduzir toda mudança a um conflito identitário.",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_007_12.pdf",
+        "answer_key_url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_Gab_definitivo_007_12.PDF",
+        "content_status": "active",
+        "review_note": "Caderno, cargo/modelo, gabarito definitivo e comunicações de anulação conferidos individualmente. Página física 2. Texto e contexto históricos de 2009. Concurso do edital 01/2008, aplicado em 29/03/2009; a apostila usa o ano do edital. Exercício de interpretação; não certifica dados históricos nem normas como atuais.",
+        "verified_at": "2026-10-18T03:37:05.326119+00:00"
+      }
+    },
+    {
+      "origin_candidate_id": "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d",
+      "source_item_index_zero_based": 99,
+      "original_item_number": 4,
+      "source_page": 2,
+      "group_code": "PCPB2008:agente-escrivao:modelo7.12",
+      "support_original": "As mudanças na economia global têm produzido uma dispersão das demandas ao redor do mundo. Isso ocorre não apenas em termos de bens e serviços, mas também de mercados de trabalho. A migração dos trabalhadores não é, obviamente, nova, mas a globalização está estreitamente associada à aceleração da migração. E a migração produz identidades plurais, mas também identidades contestadas, em um processo que é caracterizado por grandes desigualdades em termos de desenvolvimento. Nesse processo, o fator de expulsão dos países pobres é mais forte que o fator de atração das sociedades pós-industriais e tecnologicamente avançadas. Idem, ibidem, p. 21 (com adaptações).",
+      "explanation": "A alternativa D preserva a cadeia argumentativa: a dispersão internacional das demandas de trabalho acelera a migração, que produz identidades plurais. A alternativa A desloca a aceleração para os movimentos de globalização; o trecho a atribui à migração. B acrescenta resistência, C apresenta a migração como causa das desigualdades e do confronto, e E confunde fatores distintos de expulsão e atração. O definitivo oficial confirma D; os dados e avaliações pertencem ao texto histórico.",
+      "example": "Se a expansão de um mercado intensifica deslocamentos e esses deslocamentos diversificam grupos, a síntese deve preservar essa ordem, sem transferir a intensificação para a própria expansão.",
+      "row": {
+        "id": "ade1523d-7356-5a06-99fb-709c3d967683",
+        "board": "CEBRASPE",
+        "contest_name": "Polícia Civil da Paraíba",
+        "career_name": "Agente de Investigação e Escrivão de Polícia",
+        "exam_year": 2009,
+        "exam_date": "2009-03-29",
+        "exam_type": "Modelo 7.12 — Edital 01/2008",
+        "item_number": 4,
+        "subject": "Língua Portuguesa",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "support_text": "[Texto e contexto históricos de 2009. Concurso do edital 01/2008, aplicado em 29/03/2009; a apostila usa o ano do edital. Exercício de interpretação; não certifica dados históricos nem normas como atuais.]\n\nAs mudanças na economia global têm produzido uma dispersão das demandas ao redor do mundo. Isso ocorre não apenas em termos de bens e serviços, mas também de mercados de trabalho. A migração dos trabalhadores não é, obviamente, nova, mas a globalização está estreitamente associada à aceleração da migração. E a migração produz identidades plurais, mas também identidades contestadas, em um processo que é caracterizado por grandes desigualdades em termos de desenvolvimento. Nesse processo, o fator de expulsão dos países pobres é mais forte que o fator de atração das sociedades pós-industriais e tecnologicamente avançadas. Idem, ibidem, p. 21 (com adaptações).",
+        "stem": "Assinale a opção correspondente a relação de causa e efeito que se depreende da argumentação do texto.",
+        "options": {
+          "A": "A migração dos trabalhadores tem como causa a aceleração dos movimentos de globalização.",
+          "B": "A formação de identidades plurais provoca mais resistência dos trabalhadores às mudanças na economia global.",
+          "C": "A migração gera desigualdade de desenvolvimento e confronto entre países pobres e ricos.",
+          "D": "A dispersão das demandas ao redor do mundo acelera a migração e a constituição de identidades plurais.",
+          "E": "A atração que sociedades tecnologicamente avançadas exercem sobre os migrantes acarreta a expulsão de trabalhadores dos países pobres."
+        },
+        "official_answer": "D",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "legal_basis": [],
+        "explanation": "A alternativa D preserva a cadeia argumentativa: a dispersão internacional das demandas de trabalho acelera a migração, que produz identidades plurais. A alternativa A desloca a aceleração para os movimentos de globalização; o trecho a atribui à migração. B acrescenta resistência, C apresenta a migração como causa das desigualdades e do confronto, e E confunde fatores distintos de expulsão e atração. O definitivo oficial confirma D; os dados e avaliações pertencem ao texto histórico.\n\nExemplo: Se a expansão de um mercado intensifica deslocamentos e esses deslocamentos diversificam grupos, a síntese deve preservar essa ordem, sem transferir a intensificação para a própria expansão.",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_007_12.pdf",
+        "answer_key_url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_Gab_definitivo_007_12.PDF",
+        "content_status": "active",
+        "review_note": "Caderno, cargo/modelo, gabarito definitivo e comunicações de anulação conferidos individualmente. Página física 2. Texto e contexto históricos de 2009. Concurso do edital 01/2008, aplicado em 29/03/2009; a apostila usa o ano do edital. Exercício de interpretação; não certifica dados históricos nem normas como atuais.",
+        "verified_at": "2026-10-18T03:37:05.326119+00:00"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "row": {
+        "id": "98d8b359-6a24-5a56-9004-8475a7b81d39",
+        "source_type": "outro",
+        "title": "PCPA2006:cargo2:caderno1 — caderno oficial",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_002_1.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 f248aa21751848a8b15d42200c0b112b6df3f1c6b99c97783ce23b764d31e5ab"
+      }
+    },
+    {
+      "row": {
+        "id": "72f88d40-b9ae-540f-9d3b-ee8459f602fd",
+        "source_type": "outro",
+        "title": "PCPA2006:cargo2:caderno1 — gabarito definitivo",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 ced7f5612a1dc742d45a64a200fe68ddfbec50fd4cd01bdde3ac7cc5bf5f7cad"
+      }
+    },
+    {
+      "row": {
+        "id": "bce28d6f-18b7-553f-8e96-d5db1d2620a3",
+        "source_type": "outro",
+        "title": "PCPA2006:cargo2:caderno1 — alterações e anulações",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/arquivos/PCPA_JUSTIFICATIVAS_DE_ALTERACAO_DE_GABARITO.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 7be529ea1bf5bb6f246e53f418a334f660947cb05c0febe9532042fc1bb4776d"
+      }
+    },
+    {
+      "row": {
+        "id": "55fd449a-5ea5-5f3f-8698-36f57a8b5c5d",
+        "source_type": "outro",
+        "title": "PCPB2008:agente-escrivao:modelo7.12 — caderno oficial",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_007_12.pdf",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 685e0ba83b6f2c2d8dec9f7e5285449f7ae9642dfd019609f68cbac05260b54d"
+      }
+    },
+    {
+      "row": {
+        "id": "c000c72b-87f5-5b17-aaaf-fc078d1ad7d2",
+        "source_type": "outro",
+        "title": "PCPB2008:agente-escrivao:modelo7.12 — gabarito definitivo",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PCPB08_Gab_definitivo_007_12.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 4e82b48e815f4607414469309742ff5a1cc777a5ad5ffda08098561457829c5f"
+      }
+    },
+    {
+      "row": {
+        "id": "48ba35c5-264c-5d07-a757-b3e43936ffed",
+        "source_type": "outro",
+        "title": "PCPB2008:agente-escrivao:modelo7.12 — alterações e anulações",
+        "issuer": "CESPE/UnB",
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/arquivos/PC_PB_2008_JUSTIFICATIVAS_DE_ALTERAO_DE_GABARITO.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Documento histórico, não fonte de vigência normativa. SHA256 94663e2f2668ccff0b5d88f14f6c6b88d8d797435bed085dbcc8762ee7454154"
+      }
+    }
+  ],
+  "applied": {
+    "batch_id": "cespe2016-portugues-pa-pb-original-release-2026-10-18",
+    "apply": true,
+    "complete": true,
+    "approved": 4,
+    "compared_counts": {
+      "official_exam_questions": 5126,
+      "board_exam_questions": 1114,
+      "curated_question_catalog": 2031,
+      "question_corpus_candidates": 4982
+    },
+    "private_refined_ids": [
+      "b472b8a45042c7fc650caab6c0bccb953468ed41fbf53e708c0c1533a43a0d4c",
+      "95151bdd0057a058ff634105fc9392750348e00273e84d8319dad15e6a610415",
+      "1c3bc04d289270246da746fa7ca4646284d130634525732db642e7ca7660ae7b",
+      "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d"
+    ],
+    "published_ids": [
+      "8519b2a6-170b-5e52-acdf-b00673590424",
+      "f318a5b3-9e78-5fa8-94c2-bd48d99327e9",
+      "87c399f3-41ad-5fae-8359-0608d799e303",
+      "ade1523d-7356-5a06-99fb-709c3d967683"
+    ],
+    "annulled_by_group": {
+      "PCPA2006:cargo2:caderno1": [
+        23,
+        27,
+        29
+      ],
+      "PCPB2008:agente-escrivao:modelo7.12": [
+        5,
+        46
+      ]
+    }
+  },
+  "technical_review": {
+    "batch_id": "cespe2016-portugues-held-review-04-2026-10-18",
+    "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+    "checked_at": "2026-10-18T03:34:37.463540+00:00",
+    "publications": 0,
+    "official_final_keys_confirmed": 0,
+    "scope": "50 individual technical reviews; official exam release audit pending",
+    "source_item_range_zero_based": [
+      76,
+      99
+    ],
+    "official_catalog_research": [
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2000/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2002/",
+        "error": "HTTP Error 500: Internal Server Error"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF2002/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF2000/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2000/dpf/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2002/dpf/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2002/DPF2002/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/PCPB2008/",
+        "status": 200,
+        "file": "f438c3f4d6.html",
+        "sha256": "bccb5c139b801293c4654b75eaf8f01312715ea5bf0569bc5c06f61460e12b5f",
+        "links": [
+          "../../stiles/EstiloWeb.css",
+          "https://www.security.cespe.unb.br/oportunidade/oportunidade.asp",
+          "http://www.cespe.unb.br/colaboradores",
+          "../../cespe",
+          "../../concursos",
+          "../../eventos",
+          "../../interacao",
+          "../../pas",
+          "../../vestibular",
+          "http://www.unb.br",
+          "../../",
+          "../_antigos/default.asp",
+          "../cursos.asp",
+          "../concursos",
+          "../provas.htm",
+          "../../faq",
+          "http://www.cespe.unb.br/concursos/seguranca.htm",
+          "https://www.security.cespe.unb.br/Acompanhamento",
+          "https://security.cebraspe.org.br/Pc_pb_08/RecursoTitulo/Recurso",
+          "./arquivos/EDITAL_48_2014_POLICIA_CIVIL___CONVOCACAO_PARA_MATRICULA_NO_CURSO_DE_FORMACAO___PUBLICADO_DOE_28_06___REPUBLICADO_POR_ERRO_GRAFICO_DOE_29_06_14.PDF",
+          "./arquivos/EDITAL_47_2011_POLCIA_CIVIL___RETIFICAO_INCLUSO_DE_CANDIDATO.PDF",
+          "./arquivos/EDITAL_46_2010_POLICIA_CIVIL___HOMOLOGACAO_DE_MATRICULA___2_LIMINAR___29.10.2010.PDF",
+          "./arquivos/EDITAL_45_2010_POLICIA_CIVIL___CONVOCACAO_PARA_MATRICULA_NO_CURSO_DE_FORMACAO__2_LIMINAR.PDF",
+          "./arquivos/EDITAL_44_2010_CONVOCACAO_EM_SUBSTITUICAO_AOS_FALTOSOS_NA_MATRICULA.PDF",
+          "./arquivos/EDITAL_43_2010_POLICIA_CIVIL___HOMOLOGACAO_DA_MATRICULA_NO_CURSO_DE_FORMACAO___DOE_16_10_2010.PDF",
+          "./arquivos/EDITAL_42_2010_CONVOCACAO_DE_CANDIDATO_SUB_JUDICE_PARA_O_CURSO_DE_FORMACAO_POR_FORCA_DE_LIMINAR___DOE_15_10_2010.PDF",
+          "./arquivos/EDITAL_41_2010_CONVOCACAO_EM_SUBSTITUICAO_AOS_FALTOSOS_NA_MATRICULA___DOE_09_10_2010.PDF",
+          "./arquivos/EDITAL_40_2010_CONVOCACAO_DE_CANDIDATO_SUB_JUDICE_PARA_O_CURSO_DE_FORMACAO_POR_FORCA_DE_LIMINAR.PDF",
+          "./arquivos/EDITAL_39_2010_CONVOCACAO.PDF",
+          "./arquivos/EDITAL_38_2010_CONVOCACAO_EM_SUBSTITUICAO_AOS_FALTOSOS_NA_MATRICULA___DOE_06_10_2010.PDF",
+          "./arquivos/EDITAL_37_2010_C_ONVOCACAO_EM_SUBSTITUICAO_AOS_FALTOSOS.PDF",
+          "./arquivos/EDITAL_36_2010_POLICIA_CIVIL___ANULACAO_DE_CONVOCACAO_E_REVALIDACAO_DE_MATRICULA_NO_CURSO_DE_FORMACAO_DE_PATRICIO_EDUARDO____24.09.2010.PDF",
+          "./arquivos/EDITAL_35_2010_POLICIA_CIVIL___CONVOCACAO_EM_SUBSTITUICAO_AOS_FALTOSOS_PARA_MATRICULA_NO_CURSO_DE_FORMACAO.PDF",
+          "./arquivos/EDITAL_33_2010_POLICIA_CIVIL___CONVOCACAO_PARA_MATRICULA_NO_CURSO_DE_FORMACAO___23_08_10.PDF",
+          "./arquivos/EDITAL_32_2010_PCPB_24.06.2010_VFINAL.PDF",
+          "./arquivos/EDITAL_31___CORRE____O_DO_RESULTADO_PNES.PDF",
+          "./arquivos/PCPB_INCLUSO_NA_RELAO_DOS_CANDIDATOS_PORTADORES_DE_DEFICINCIA___04.05.2010.PDF",
+          "./arquivos/EDITAL_30_2010_PCPB_RES_FINAL_NA_AV_TIT_E_PERICIA.PDF",
+          "./arquivos/EDITAL_29_2010_RESULTADO_PROVISORIO_NA_AVALIACAO_DE_TITULOS___ESCRIVAO.PDF",
+          "./arquivos/EDITAL_28_202010___RETIFICACAO_DO_RESULTADO_FINAL_DA_AVALIACAO_DE_TITULOS.PDF",
+          "./arquivos/EDITAL_27_2010_RESULTADO_FINAL_DIGITACAO_E_CONVOCA_TITULOS_ESCRIVAO_E_FINAL_TITULOS_E_CONVOCA_PERICIA_DEMAIS_CARGOS___D.O_09_03_2010.PDF",
+          "./arquivos/EDITAL_24_2010___RELACAO_PROVISORIA_NA_PERICIA_MEDICA_NIVEL_MEDIO_REPUBLICACAO___D.O_09_03_2010.PDF",
+          "./arquivos/EDITAL_26___2010___CONVOCACAO_PRATICA_DE_DIGITACAO_E_AVALIACAO_DE_TITULOS___SUB_JUDICE__2_.PDF",
+          "./arquivos/EDITAL_25_2010_RESULTADO_PROVISORIO_NA_PROVA_PRATICA_DE_DIGITACAO_E_NA_AVALIACAO_DE_TITULOS.PDF",
+          "./arquivos/EDITAL_24_2010_PC_PB_RELACAO_PROVISORIA_NA_PERICIA_MEDICA_NIVEL_MEDIO.PDF",
+          "./arquivos/EDITAL_22_2009_PC_PB_RET.PDF",
+          "./arquivos/EDITAL_22_2010_PC_PB_CONVOCA_AVALIACAO_PSICOLOGICA_SUB_JUDICE_EMANUEL.PDF",
+          "./arquivos/EDITAL_21_2009_PC_PB_RESULTADO_FINAL_AVALIACAO_PSICOLOGICA_E_CONVOCACOES_ALTERADO.PDF",
+          "./arquivos/COMUNICADO_PCPB_PREVISAO_DE_RESULTADO.PDF",
+          "./arquivos/EDITAL_PCPB_2009___RESULTADO_FINAL_CAPACIDADE_FISICA_SUB_JUDICE_E_PROVISORIO_PSICOLOGICA.PDF",
+          "./arquivos/COMUNICADO_PCPB_RESULTADO_SUB_JUDICE_E_PSICOLOGICA.PDF",
+          "./arquivos/COMUNICADO_PCPB_MANUTENO_DA_AVALIAAO_PSICOLOGICA.PDF",
+          "./arquivos/EDITAL_19_2009_PC_PB_RESULTADO_FINAL_CAPACIDADE_FISICA_E_CONV_AV_PSI.PDF",
+          "./arquivos/EDITAL_18_2009___RESULTADO_PROVISORIO_CAPACIDADE_FISICA_30.09.2009.PDF",
+          "./arquivos/EDITAL_17_2009_PC_PB_CONVOCA_CAPACIDADE_FISICA_PNE_NOVO___D.O_13_09_2009.PDF",
+          "./arquivos/COMUNICADO_PCPB_RESULTADO_PROVA_DE_CAPACIDADE_FISICA_28_8.PDF",
+          "./arquivos/EDITAL_16_2009_PC_PB_CONVOCA_CAPACIDADE_FISICA_PNE.PDF",
+          "./arquivos/EDITAL_N15_2009__CONVOCAO_DOS_CANDIDATOS_SUBJUDECE.PDF",
+          "./arquivos/COMUNICADO_PCPB_CONVOCAO_DOS_PORTADORES_DE_DEF.PDF",
+          "./arquivos/EDITAL_14_2009___RESULTADO_FINAL_DOS_EXAMES_MEDICOS__E_CONVOCACAO_CAPACIDADE_FISICA.PDF",
+          "./arquivos/COMUNICADO_PCPB_RESULTADO_EXAMES_CONVOCACAO_28.PDF",
+          "./arquivos/EDITAL_N12_2009__CONVOCAO_DOS_CANDIDATOS_SUBJUDECE.PDF",
+          "./arquivos/EDITAL_11_2009_PC_PB_RES_PROVISORIO_EXAMES_MEDICOS.PDF",
+          "./arquivos/COMUNICADO_PCPB_RESULTADO_EXAMES.PDF",
+          "./arquivos/EDITAL_10_2009_PC_PB_RES_FINAL_DISCURSIVA_E_CONVOCA_EXAMES_MEDICOS.PDF",
+          "./arquivos/COMUNICADO_RES_FINAL_DISCURSIVA_E_CONVOCA_EXAMES_MEDICOS.PDF",
+          "./arquivos/PC_PB_2008_JUSTIFICATIVAS_DE_ALTERAO_DE_GABARITO.PDF",
+          "./arquivos/EDITAL_09__SEAD_SEDS___RESULTADO_FINAL_PROVA_OBJETIVA_E_PROVISRIO_DISCURSIVA.PDF",
+          "./arquivos/COMUNICADO_PCPB_RECURSO.PDF",
+          "./arquivos/PC_PB_08_LISTA_ATENDIMENTO_ESPECIAL.PDF",
+          "./arquivos/PC_PB_08_LISTA_DEFISICO.PDF",
+          "./arquivos/EDITAL_08___2009_SEAD_SEDS___LOCAIS_E_HORARIO_DAS_PROVAS_OBJETIVAS.PDF",
+          "./arquivos/EDITAL_07_2008_SEAD_SEDS___NOVAS_DATAS_DE_PROVAS___D_O_10_12.PDF",
+          "./arquivos/EDITAL_06_2008_SEAD_SEDS___ADIAMENTO_DO_PERDO_DE_PROVAS.PDF",
+          "./arquivos/EDITAL_05_2008_SEAD_SEDS_POLCIA_CIVIL___REABERTURA.PDF",
+          "./arquivos/EDITAL_04_2008___POLICIA_CIVIL___MUDANA_DE_CONTEDOS_D.O_07_11.PDF",
+          "./arquivos/EDITAL_03_2008___REPUBLICADO___POLICIA_CIVIL____D.O_31_10.PDF",
+          "./arquivos/ED_2008_PC_PB_ISENCAO.PDF",
+          "./arquivos/EDITAL_02_2008_POLICIA_CIVIL___D_O.PDF",
+          "./arquivos/EDITAL_01_2008___POLICIA_CIVIL___REPUBLICAO_POR_INCORREO.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_001_1.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_002_4.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_003_6.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_004_7.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_005_8.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_007_12.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_008_13.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_010_15.PDF",
+          "./arquivos/PCPB08_Gab_definitivo_011_16.PDF",
+          "./arquivos/PCPB08_001_1.pdf",
+          "./arquivos/PCPB08_002_4.pdf",
+          "./arquivos/PCPB08_003_6.pdf",
+          "./arquivos/PCPB08_004_7.pdf",
+          "./arquivos/PCPB08_005_8.pdf",
+          "./arquivos/PCPB08_007_12.pdf",
+          "./arquivos/PCPB08_008_13.pdf",
+          "./arquivos/PCPB08_010_15.pdf",
+          "./arquivos/PCPB08_011_16.pdf",
+          "mailto:sac@cespe.unb.br",
+          "http://www.adobe.com.br/products/acrobat/readstep.html"
+        ]
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2006/PCPA2006/",
+        "status": 200,
+        "file": "0bd20bdd00.html",
+        "sha256": "29e46b88d3fa225e0894b5847b3cda0378e70015e841b3d4aa6a4c03b96b2286",
+        "links": [
+          "../../stiles/EstiloWeb.css",
+          "https://www.security.cespe.unb.br/oportunidade/oportunidade.asp",
+          "https://www.security.cespe.unb.br/oportunidadecespe/oportunidade.asp",
+          "../../cespe",
+          "../../concursos",
+          "../../eventos",
+          "../../interacao",
+          "../../pas",
+          "../../vestibular",
+          "http://www.unb.br",
+          "../../",
+          "../_antigos/default.asp",
+          "../cursos.asp",
+          "../concursos",
+          "../provas.htm",
+          "../../faq",
+          "http://www.cespe.unb.br/concursos/seguranca.htm",
+          "https://www.security.cespe.unb.br/Acompanhamento",
+          "./arquivos/ED_24_2007_PC_PA_RES_FIN.PDF",
+          "./arquivos/ED_2007_PC_PA_RES_PROV_INVESTIGACAO.PDF",
+          "./arquivos/ED_2007_PC_PA_CONVOCACAO_PARA_DESEMPATE.PDF",
+          "./arquivos/ED_21_2007_PC_PA_RET.PDF",
+          "./arquivos/ED_2007_19_PC_PA_RES_FIN_PRIMEIRA_ETAPA_E_CONV_CF.PDF",
+          "./arquivos/ED_18_2007_PC_PA_RES_FIN_ORAL_SIND_CONV_DES.PDF",
+          "./arquivos/EDITAL_N17_DE_22.03.PDF",
+          "./arquivos/COMUNICADO_RESULTADO.PDF",
+          "./arquivos/COMUNICADO_RECURSOS_PROVA_ORAL.PDF",
+          "./arquivos/ED_2006_PC_PA_16_RES_PROV_DA_PROVA_ORAL.PDF",
+          "./arquivos/ED_2006_PC_PA_15_RES_FIN_PRAT_DIG__ESCR__E_CONV_PROV_ORAL.PDF",
+          "./arquivos/COMUNICADO_RECURSOS_DIGITACAO.PDF",
+          "./arquivos/ED_2006_PC_PA_14_RES_FIN_PROV_PRAT_DIG__ESCR_.PDF",
+          "./arquivos/ED_2006_PC_PA_13_RES_FIN_EX_PSIC_E_CONV_PROV_PRAT_DIG__ESCR_.PDF",
+          "./arquivos/ED_2006_PC_PA_12_RES_PROV_EX_PSIC.PDF",
+          "./arquivos/ED_2006_PC_PA_11_RET.PDF",
+          "./arquivos/MODELO_FIC.DOC",
+          "./arquivos/ED_2006_PC_PA_10_RES_FIN_EX_MED_E_CONV_EX_PSIC.PDF",
+          "./arquivos/CAPA_DE_RECURSO.RTF",
+          "./arquivos/ED_2006_PC_PA_9_RES_PROV_EX_MED.PDF",
+          "./arquivos/ED_2006_PC_PA_8_RET.PDF",
+          "./arquivos/COMUNICADO_NOVAS_DATAS_EXAMES_MEDICOS.PDF",
+          "./arquivos/COMUNICADO_REC_CAP_FIS.PDF",
+          "./arquivos/ED_2006_PC_PA_7_RES_FIN_CAP_FIS_E_CONV_EX_MED.PDF",
+          "./arquivos/ED_2006_PC_PA_6_RES_PROV_CAP_FIS.PDF",
+          "./arquivos/PCPA_JUSTIFICATIVAS_DE_ALTERACAO_DE_GABARITO.PDF",
+          "./arquivos/ED_2006_PC_PA_5_RES_FIN_OBJ_CONV_CAP_FIS.PDF",
+          "./arquivos/PC_PA_06_DEMANDA.PDF",
+          "./arquivos/ED_2006_PC_PA_4_LOCAIS_DE_PROVAS.PDF",
+          "./arquivos/ED_2006_PC_PA_3_PRORROG_INSCRICOES.PDF",
+          "./arquivos/ED_2006_PC_PA_2_RET.PDF",
+          "./arquivos/Solicitação de at_esp_ PCPA.PDF",
+          "./arquivos/ED_2006_PC_PA_ABT_FINAL.PDF",
+          "./arquivos/PCPA_Gab_Definitivo_PAPILOSCOPISTA_1.PDF",
+          "./arquivos/PCPA_Gab_Definitivo_INVESTIGADOR_1.PDF",
+          "./arquivos/PCPA_Gab_Definitivo_ESCRIVÃO_1.PDF",
+          "./arquivos/PCPA_Gab_Definitivo_DELEGADO_1.PDF",
+          "./arquivos/PCPA_004_1.PDF",
+          "./arquivos/PCPA_003_1.PDF",
+          "./arquivos/PCPA_002_1.PDF",
+          "./arquivos/PCPA_001_1.PDF",
+          "mailto:sac@cespe.unb.br",
+          "http://www.adobe.com.br/products/acrobat/readstep.html"
+        ]
+      }
+    ],
+    "downloaded_official_documents": [],
+    "items": [
+      {
+        "candidate_id": "00dd5455f8918df7b60b26ff54fc7bc3cf769366048c715956f3977d0033df51",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 15,
+        "source_item_index_zero_based": 76,
+        "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+        "question_text_candidate": "Muitos acreditam que a censura aos meios de comunica-\nção seria uma forma de reduzir a violência entre jovens.",
+        "shared_instruction_candidate": "Acerca das ideias do\ntexto acima , julgue os seguintes itens.",
+        "exam_metadata_candidate": "Escrivão de Polícia Federal – 2002 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": null,
+        "technical_focus": "inferência adicional sobre censura não expressa",
+        "explanation": "O texto relata que muitos comentários atribuem a violência ao cinema e à televisão, mas não menciona expressamente a censura como solução. Passar da atribuição de culpa à defesa de censura exige uma inferência adicional. Sem o caderno e o definitivo, a resposta editorial C não deve ser certificada como se a proposta estivesse explícita.",
+        "example": "Atribuir um problema à televisão não significa, por si só, defender sua proibição; a pessoa pode propor classificação indicativa ou educação para a mídia.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Divergência ou ambiguidade técnica: inferência adicional sobre censura não expressa. Não adotar automaticamente a resposta editorial.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 15,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 15,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "52f081d760d2cf50a0ca8812f9d824cf01f6b4890393a7f80a84b0e4c9df6da9",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 15,
+        "source_item_index_zero_based": 77,
+        "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+        "question_text_candidate": "A argumentação do texto põe em confronto atitudes possí-\nveis: uma que se caracteriza por passividade e impotência,\noutra, por resistência criativa.",
+        "shared_instruction_candidate": "Acerca das ideias do\ntexto acima , julgue os seguintes itens.",
+        "exam_metadata_candidate": "Escrivão de Polícia Federal – 2002 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "contraste argumentativo",
+        "explanation": "O primeiro movimento do texto apresenta uma sociedade que desestimula a participação, a imaginação e a solidariedade. O segundo destaca a capacidade de criar, doar e transformar como alternativa à reação violenta. O contraste entre impotência e ação criativa estrutura a argumentação, sem exigir aceitar como atuais as afirmações sociológicas do autor.",
+        "example": "Um argumento pode contrapor a frase 'nada podemos mudar' a exemplos de participação comunitária para defender uma atitude ativa.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 15,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 15,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "705ee4660e7ce61348e3653893ff953a582a5b4e89d35c84fc995ca5980965e9",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 15,
+        "source_item_index_zero_based": 78,
+        "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+        "question_text_candidate": "O trecho “Não podemos (...) dinheiro” ( .7-14) apresenta\nexemplificações que funcionam como argumentos para a\nafirmação do período que o antecede.",
+        "shared_instruction_candidate": "Acerca das ideias do\ntexto acima , julgue os seguintes itens.",
+        "exam_metadata_candidate": "Escrivão de Polícia Federal – 2002 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "exemplificação; conferir linhas no original",
+        "explanation": "As construções repetidas com Não podemos concretizam o diagnóstico anterior de passividade e sentimento de nulidade. Os exemplos mostram campos em que as pessoas são desencorajadas a agir e funcionam como sustentação da avaliação geral. As referências de linha precisam ser conferidas no original, pois pertencem à diagramação da prova.",
+        "example": "Depois de afirmar que uma instituição desestimula iniciativas, o autor pode citar entraves a projetos, reuniões e propostas como argumentos exemplificativos.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 15,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 15,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "f8b83ca52f99ef9d41a24c2ef918e65e9f646b4d5da73729a82bccf9f68182f6",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 15,
+        "source_item_index_zero_based": 79,
+        "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+        "question_text_candidate": "Infere-se do texto que o autor culpa a violência do cinema e\nda televisão pela disseminação da violência nos dias atuais.",
+        "shared_instruction_candidate": "Acerca das ideias do\ntexto acima , julgue os seguintes itens.",
+        "exam_metadata_candidate": "Escrivão de Polícia Federal – 2002 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "distinção entre tese e opinião relatada",
+        "explanation": "A abertura relata uma explicação recorrente sobre a influência dos meios de comunicação para, em seguida, deslocar o foco à passividade social e à falta de realização criativa. Atribuir ao autor a culpa que ele apresenta como opinião de muitos confunde a posição relatada com a tese efetivamente desenvolvida no texto.",
+        "example": "Quando um artigo diz 'muitos culpam a internet, mas precisamos examinar a escola', não é correto resumir sua posição como uma acusação à internet.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 15,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 15,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "dc12c38a5fb4b73875d6f9e3bf408acc4965b54cbe76897a970b0331ce0bd96c",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 15,
+        "source_item_index_zero_based": 80,
+        "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+        "question_text_candidate": "De acordo com as ideias defendidas no texto, as formas\npositivas de dar sentido à vida e experimentar a sensação\nde poder vinculam-se à maneira como se usa a capacidade\nde doação e de transformação.",
+        "shared_instruction_candidate": "Acerca das ideias do\ntexto acima , julgue os seguintes itens.",
+        "exam_metadata_candidate": "Escrivão de Polícia Federal – 2002 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "síntese do argumento; evitar universalização factual",
+        "explanation": "O fecho relaciona a capacidade de doar, transformar e imprimir uma marca à vida a formas de sentir potência sem recorrer à violência física. A questão resume essa relação entre ação criativa e realização pessoal. A interpretação se limita ao argumento do texto e não demonstra causalidade científica universal sobre prevenção da violência.",
+        "example": "Organizar uma ação solidária pode ilustrar o uso construtivo de uma capacidade de transformação que o texto contrapõe à agressão física.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 15,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 15,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "675771af1b4f3df4b9bb021e7029ddb17aabe5ed15ab104c0d1bb1c576a09ca8",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 81,
+        "expected_raw_text_sha256": "8b87fdb15edc67de4fd35a1848d9c4861e1bdb802a42bc90ed73909498e83ef1",
+        "question_text_candidate": "O autor considera que o modelo de democracia do Brasil\nnão resolverá os problemas políticos do país.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "negação indevida de possibilidade",
+        "explanation": "O autor conclui que é necessário prosseguir na democratização e afirma que o país reúne mais condições de enfrentar seus problemas do que antes. Reconhecer limites do estágio existente não equivale a negar a possibilidade de enfrentar os desafios por meio desse processo. A avaliação se refere ao momento histórico de redação do ensaio.",
+        "example": "Dizer que uma política precisa avançar não equivale a afirmar que ela seja incapaz de contribuir para resolver os problemas que enfrenta.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "15cfb5659a4209fc74947cafcff6375445861353fb8a9bf5bc58534d5c92e9c9",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 82,
+        "expected_raw_text_sha256": "8b87fdb15edc67de4fd35a1848d9c4861e1bdb802a42bc90ed73909498e83ef1",
+        "question_text_candidate": "Um regime democrático caracteriza-se pela existência de\num processo contínuo de busca pela legitimidade, justiça,\nrepresentatividade e inclusão.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "processo contínuo e enumeração de objetivos",
+        "explanation": "O texto rejeita a democracia como ponto final de satisfação e apresenta a democratização como avanço rumo à inclusão, à representatividade, à justiça e à legitimidade. A assertiva resume o caráter contínuo atribuído a esse processo. Trata-se da concepção defendida pelo autor, não de uma definição jurídica formal de regime democrático.",
+        "example": "Uma instituição que busca ampliar continuamente a participação ilustra a ideia de aperfeiçoamento, em vez de realização definitiva e acabada.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "9e23ac0fd2805525c011fe8368c929127e0b0ece088aa8dfed8c879887a134fe",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 83,
+        "expected_raw_text_sha256": "8b87fdb15edc67de4fd35a1848d9c4861e1bdb802a42bc90ed73909498e83ef1",
+        "question_text_candidate": "Democracia é uma das condições de sustentação do\ndesenvolvimento, mas não a única.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": null,
+        "technical_focus": "possível inversão de relação e antecedente pronominal",
+        "explanation": "O trecho relaciona desenvolvimento e democracia e enumera fatores que sustentam a democratização. A assertiva, porém, fala em democracia como condição de sustentação do desenvolvimento, podendo inverter a direção argumentativa. A referência pronominal e a redação integral devem ser conferidas antes de aceitar o C editorial; correlação não estabelece automaticamente condição causal recíproca.",
+        "example": "A associação entre escolaridade e renda não autoriza trocar sem exame a afirmação de que uma sustenta a outra em qualquer direção.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Divergência ou ambiguidade técnica: possível inversão de relação e antecedente pronominal. Não adotar automaticamente a resposta editorial.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "5f1785f11af8fcc59f010e421e95d7fac92c9a5764878c46fc294589eacb7cfb",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 84,
+        "expected_raw_text_sha256": "8b87fdb15edc67de4fd35a1848d9c4861e1bdb802a42bc90ed73909498e83ef1",
+        "question_text_candidate": "Enquanto não houver mecanismos acessíveis de reclama-\nção e desagravo, as relações entre poder público e cidadãos\nnão serão regidas por meio de regras claras.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": null,
+        "technical_focus": "condição necessária acrescentada ao texto",
+        "explanation": "O fecho aproxima a falta de regras claras e a ausência de mecanismos acessíveis de reclamação. A assertiva transforma essa aproximação numa condição temporal necessária, formulada por Enquanto não houver. A passagem não basta, sozinha, para demonstrar a impossibilidade de regras claras antes da criação desses mecanismos; é preciso conferir o original e o definitivo.",
+        "example": "Informar que faltam iluminação e sinalização numa via não prova que uma só possa existir depois da outra; a relação necessária precisa estar demonstrada.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Divergência ou ambiguidade técnica: condição necessária acrescentada ao texto. Não adotar automaticamente a resposta editorial.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "b305e45887d3a23d9bcfc0c780ef27cc915aa4290d99c213076fe0beed55e65b",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 85,
+        "expected_raw_text_sha256": "8b87fdb15edc67de4fd35a1848d9c4861e1bdb802a42bc90ed73909498e83ef1",
+        "question_text_candidate": "De acordo com o desenvolvimento da argumentação, o\npedido estabelecido no primeiro período do texto, e que\ndeu origem ao ensaio, não pode ser atendido, razão pela\nqual o texto não é conclusivo.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "introdução problematizadora e conclusão",
+        "explanation": "O ensaio apresenta expressamente uma síntese de suas conclusões e propõe a continuidade da democratização. A dúvida inicial sobre a novidade dos desafios serve de ponto de partida para a reflexão, não como declaração de impossibilidade de responder ao pedido. A assertiva ignora o encaminhamento conclusivo efetivamente oferecido.",
+        "example": "Um autor pode reformular uma pergunta e ainda respondê-la com uma conclusão; questionar a premissa não torna o texto inconclusivo.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 15,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "c372ab9ebbac94bec75d9cb11245cbe42ea4fd549cc3bc10dd3f168bf3bbaeab",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 86,
+        "expected_raw_text_sha256": "2ff38ec18f49312a4bcd76c74264250badc6962d592e81d5c694e99dfa87b663",
+        "question_text_candidate": "A decretação do “fim da política” (l. 9) traria, como con-\nsequência, a satisfação dos praticantes da democracia\n– representantes e representados.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "hipótese negada tomada como tese",
+        "explanation": "A ideia de fim da política integra uma representação de democracia acabada que o autor rejeita ao afirmar que tal ponto final não existe. A questão trata essa hipótese negada como consequência aceita pelo autor. É necessário acompanhar o alcance da negação e preservar a relação com o processo contínuo de democratização.",
+        "example": "Na frase 'não existe uma solução definitiva que dispense novos cuidados', não se pode atribuir ao autor a defesa de dispensar cuidados após essa solução.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "006f8766abb5226569ad5851da3bd4b2ad814b7771cc0975dd86556e35bb9668",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 87,
+        "expected_raw_text_sha256": "2ff38ec18f49312a4bcd76c74264250badc6962d592e81d5c694e99dfa87b663",
+        "question_text_candidate": "A ideia de “democracia” está para um produto acabado\nassim como “democratização” está para um processo.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "oposição conceitual construída no texto",
+        "explanation": "No contraste construído pelo ensaio, democracia como ponto final é contraposta à democratização como movimento contínuo. A assertiva reconhece essa oposição específica entre estado acabado e processo. Isso não significa que a palavra democracia tenha sempre, em qualquer contexto, o significado de produto finalizado.",
+        "example": "Em um texto que opõe uma fotografia a uma trajetória, a primeira pode representar um estado e a segunda um processo, sem fixar sentidos universais dessas palavras.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "2a723739b76e386a66ef41f47d5449ab1ec162b5f2468b99c45bc8456bc43005",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 88,
+        "expected_raw_text_sha256": "2ff38ec18f49312a4bcd76c74264250badc6962d592e81d5c694e99dfa87b663",
+        "question_text_candidate": "Relações entre poder público e cidadãos incluem-se no\nprocesso de aprofundamento e legitimação da democracia.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "inclusão temática explicitada",
+        "explanation": "A passagem introduz as relações rotineiras entre cidadãos e poder público como parte importante do aprofundamento e da legitimação democrática. A assertiva retoma essa inclusão temática. O argumento deve ser lido como avaliação histórica do ensaio, sem usar exemplos da época para certificar o funcionamento atual dos serviços públicos.",
+        "example": "Se um texto inclui o atendimento ao cidadão entre as dimensões da participação pública, é correto reconhecê-lo como parte do processo discutido.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "ca50585b2cc63355ae810079a3dd0355bc717482c4768942f0c5a4ad7c2e4e3b",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 89,
+        "expected_raw_text_sha256": "2ff38ec18f49312a4bcd76c74264250badc6962d592e81d5c694e99dfa87b663",
+        "question_text_candidate": "Cenas explícitas de desrespeito aos cidadãos têm como\ncausa imediata a emergência de nossa democracia histórica.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "causalidade indevidamente inferida",
+        "explanation": "O texto apresenta cenas de desrespeito no relacionamento cotidiano, mas não atribui como causa imediata a emergência da democracia. A referência ao caráter emergente contextualiza a discussão da legitimidade; a assertiva cria uma causalidade direta que não está formulada. Proximidade entre informações não basta para estabelecer causa e efeito.",
+        "example": "Mencionar trânsito intenso e acidentes no mesmo relato não prova que a causa imediata de cada acidente seja o crescimento da cidade.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "7b24989fc11271d0ee21aea06bba8eed724c1204ff8bdd9efe7173a7decd39c2",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 90,
+        "expected_raw_text_sha256": "2ff38ec18f49312a4bcd76c74264250badc6962d592e81d5c694e99dfa87b663",
+        "question_text_candidate": "Não havendo busca do conhecimento como sustentação\nhistórica, não há democracia e, consequentemente, não há\npolítica.",
+        "shared_instruction_candidate": "Com relação às ideias\ndo texto, julgue os seguintes itens.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "analogia transformada em implicação necessária",
+        "explanation": "A menção a Kant funciona como comparação entre busca incessante de conhecimento e democratização contínua. A assertiva converte essa aproximação numa cadeia de condições que negaria democracia e política na ausência de busca do conhecimento. Esse encadeamento necessário não decorre da comparação apresentada no texto.",
+        "example": "Comparar aprender e aperfeiçoar uma instituição não demonstra que uma instituição deixe de existir sempre que alguém interrompa os estudos.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 16,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "ff9b9fcf36bbed00e4f304e18729c7a4f54f6c5008ab6422b69ac066ef924eb5",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 91,
+        "expected_raw_text_sha256": "13c59d7c60f75dd02c2bdb5f6b5966d263b5eb5c2a412af4a9540d379fdece33",
+        "question_text_candidate": "O conceito de “liberdade” é tomado como sinônimo de\nconsumo e de eficiência no domínio e na transformação\nda natureza em bens e serviços.",
+        "shared_instruction_candidate": "Julgue os itens abaixo,\nrelativos às ideias do texto acima.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "sentido contextual e perspectiva crítica",
+        "explanation": "No primeiro parágrafo, o autor descreve historicamente a identificação de liberdade com eficiência no domínio da natureza e com consumo. A assertiva retoma esse emprego no argumento, não recomenda adotar tal identificação como definição atual de liberdade. O comentário deve preservar que se trata da exposição crítica de uma concepção.",
+        "example": "Um ensaio pode dizer que uma sociedade confunde sucesso com riqueza para criticar essa associação, sem apresentá-la como definição correta de sucesso.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "dacf715e67affd2fd86a4c4d1da223989f9804c931382742cb18a20c37f9c497",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 92,
+        "expected_raw_text_sha256": "13c59d7c60f75dd02c2bdb5f6b5966d263b5eb5c2a412af4a9540d379fdece33",
+        "question_text_candidate": "O autor sugere que o sistema capitalista apresenta a\nseguinte correlação: quanto mais tempo livre, mais con-\nsumo, mais lazer e menos opressão.",
+        "shared_instruction_candidate": "Julgue os itens abaixo,\nrelativos às ideias do texto acima.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "potencial versus realização efetiva",
+        "explanation": "O texto diz que o avanço técnico reduziu o tempo necessário à produção, mas que a reorganização social ampliou o consumo e produziu uma estrutura opressiva. A assertiva acrescenta mais lazer e menos opressão, contrariando esse desenvolvimento crítico. Potencial de liberdade não equivale à realização efetiva dessa liberdade.",
+        "example": "Uma máquina pode permitir terminar um trabalho antes sem garantir que o tempo economizado seja destinado a descanso, se forem acrescentadas novas tarefas.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "623824d8dc5e0ab24410bd878763e5e43b50d6bf3a25665c6beb59e8526fd804",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 93,
+        "expected_raw_text_sha256": "13c59d7c60f75dd02c2bdb5f6b5966d263b5eb5c2a412af4a9540d379fdece33",
+        "question_text_candidate": "Depreende-se do primeiro parágrafo que a ética foi abolida\na partir do século XIX.",
+        "shared_instruction_candidate": "Julgue os itens abaixo,\nrelativos às ideias do texto acima.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "E",
+        "technical_answer_candidate": "E",
+        "technical_focus": "intensificação semântica indevida",
+        "explanation": "Relegar a preocupação ética indica perda de prioridade, não abolição ou desaparecimento da ética. O item transforma uma mudança de importância em supressão absoluta. A leitura correta deve respeitar a intensidade das expressões do autor e manter a referência histórica ao século XIX como parte do ensaio, não como prova de um fato universal.",
+        "example": "A afirmação de que a leitura perdeu espaço na rotina não significa que as pessoas tenham deixado inteiramente de ler.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "d7faba186e01513a42331a53251867bb88c8fa8fa1864ec1bafb12349b21f32a",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 94,
+        "expected_raw_text_sha256": "13c59d7c60f75dd02c2bdb5f6b5966d263b5eb5c2a412af4a9540d379fdece33",
+        "question_text_candidate": "No segundo parágrafo, a expressão “Essa ruptura” retoma\ne resume a ideia central do parágrafo anterior.",
+        "shared_instruction_candidate": "Julgue os itens abaixo,\nrelativos às ideias do texto acima.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "retomada anafórica de conteúdo proposicional",
+        "explanation": "A expressão Essa ruptura retoma a dissociação entre o pensamento científico e tecnológico e o humanista, exposta na abertura. O demonstrativo organiza a progressão textual ao recuperar essa ideia para apresentar seus efeitos. A referência não se reduz ao substantivo mais próximo: depende da unidade argumentativa do parágrafo anterior.",
+        "example": "Depois de descrever a separação entre dois grupos, a frase 'essa ruptura trouxe consequências' pode retomar a separação inteira, não apenas a última palavra citada.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "ecf4c3faf9ba3ae1953cc29713cce1d14cf2232d336a18e4717dfe9c5141fccc",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 16,
+        "source_item_index_zero_based": 95,
+        "expected_raw_text_sha256": "13c59d7c60f75dd02c2bdb5f6b5966d263b5eb5c2a412af4a9540d379fdece33",
+        "question_text_candidate": "O emprego da expressão “as vésperas da liberdade” (l. 29)\nsugere que a humanidade ainda não atingiu a liberdade\ndesejada.",
+        "shared_instruction_candidate": "Julgue os itens abaixo,\nrelativos às ideias do texto acima.",
+        "exam_metadata_candidate": "Agente de Polícia Federal – 2000 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "metáfora temporal; preservar referência de 1989",
+        "explanation": "A imagem de estar às vésperas da liberdade situa a realização da liberdade como algo ainda não plenamente alcançado. O fecho contrapõe o potencial oferecido pela técnica à dificuldade de utilizá-lo efetivamente. A interpretação é metafórica e vinculada ao horizonte histórico do ensaio de 1989, sem atualizar sua previsão para o presente.",
+        "example": "Estar às portas de uma conquista sugere proximidade e possibilidade, mas não afirma que a conquista já se realizou.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 16,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 16,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "b472b8a45042c7fc650caab6c0bccb953468ed41fbf53e708c0c1533a43a0d4c",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 17,
+        "source_item_index_zero_based": 96,
+        "expected_raw_text_sha256": "41d446a8613c5638bf5db1eaad5b1951206435750a840dc5a6c30768502d9f7b",
+        "question_text_candidate": "Assinale a opção que não\nestá de acordo com as ideias do texto acima.\n(A)\t A crise que a humanidade está vivendo envolve o abafa-\nmento de valores espirituais, da ética e da solidariedade.\n(B)\t A busca de bens materiais provém da excessiva valorização\ndos índices de crescimento como padrão de sucesso das\nnações.\n(C)\t O consumismo foi estimulado por meio dos avanços tec-\nnológicos que apresentam os bens materiais como forma\nde sucesso individual.\n(D)\t O processo de valorização exagerada dos bens materiais\natenua a manifestação do egoísmo na convivência entre\nas pessoas.",
+        "shared_instruction_candidate": "",
+        "exam_metadata_candidate": "Escrivão de Polícia/PA – 2006 – CESPE",
+        "publisher_answer_candidate": "D",
+        "technical_answer_candidate": "D",
+        "technical_focus": "comando negativo e inversão de efeito",
+        "explanation": "O texto apresenta a valorização exagerada de bens como parte de um processo que agrava egoísmo e materialismo e sufoca solidariedade. A alternativa D afirma que esse processo atenua o egoísmo, invertendo o efeito descrito. Como o comando pede a opção em desacordo, essa inversão fundamenta a hipótese D, sujeita ao definitivo oficial.",
+        "example": "Se um texto afirma que determinada prática intensifica o isolamento, uma alternativa que diga que ela reduz o isolamento contraria o argumento.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 17,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 17,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "95151bdd0057a058ff634105fc9392750348e00273e84d8319dad15e6a610415",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 17,
+        "source_item_index_zero_based": 97,
+        "expected_raw_text_sha256": "fcd0d8632e62eba14dab985cdd1386092c476a78ad6ab21088cd873bcbbca829",
+        "question_text_candidate": "A dimensão social da\ndemocracia marcou o primeiro grande salto na conceituação\ndos direitos humanos. A afirmação dos direitos sociais surgiu\nda constatação da fragilidade dos direitos liberais, no sentido\nde que o homem, a favor do qual se proclamavam liberdades\npolíticas, não satisfez ainda necessidades primárias: alimentar-\n-se, vestir-se, morar, ter condições de saúde, ter segurança\ndiante da doença, da velhice, do desemprego e de outros\npercalços da vida.\nIdem, ibidem (com adaptações).\nAssinale a opção que está de acordo com as ideias do texto\nacima.\n(A)\t Do primeiro salto na definição dos direitos humanos decorre\no caráter social da democracia.\n(B)\t A fragilidade dos direitos liberais constitui a dimensão social\nda democracia.\n(C)\t A afirmação dos direitos sociais proveio da constatação\nde que o homem, para o qual se propunha o direito à\nliberdade, ainda não havia conquistado suas necessidades\nprimárias.\n(D)\t Alimentar-se, vestir-se, morar, ter saúde, ter segurança\ndiante dos percalços da vida foram os primeiros direitos\nhumanos a serem requeridos na história.",
+        "shared_instruction_candidate": "",
+        "exam_metadata_candidate": "Escrivão de Polícia/PA – 2006 – CESPE",
+        "publisher_answer_candidate": "C",
+        "technical_answer_candidate": "C",
+        "technical_focus": "paráfrase de relação explicativa; contexto jurídico exige cuidado",
+        "explanation": "O trecho relaciona a afirmação dos direitos sociais à insuficiência das liberdades políticas para satisfazer necessidades básicas. A alternativa C preserva essa origem argumentativa. As outras opções confundem causa e característica ou acrescentam uma primazia histórica não afirmada. Esta é uma leitura do trecho, sem certificação da cronologia jurídica como fato atual.",
+        "example": "Um texto pode justificar novas medidas pela insuficiência das anteriores; a paráfrase correta mantém essa relação, sem dizer que as medidas novas foram as primeiras da história.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Conteúdo constitucional ou penal: confrontar a norma aplicável com fonte oficial vigente; preservar contexto histórico sem ensinar regra superada.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 17,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 17,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "1c3bc04d289270246da746fa7ca4646284d130634525732db642e7ca7660ae7b",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 17,
+        "source_item_index_zero_based": 98,
+        "expected_raw_text_sha256": "b2699f780faa2322d7f8aaa45697e7c80c008bd28db3b58b652b8ae48e9444ae",
+        "question_text_candidate": "A argumentação\ntextual se apoia na ideia de que\n(A)\t as transformações globais decorrem de conflitos de identi-\ndades nacionais e étnicas.\n(B)\t as lutas pela afirmação e manutenção das estruturas globais\nsão necessárias.\n(C)\t as identidades atuais padecem de incerteza porque são\napenas imaginadas.\n(D)\t as identidades não são fixas e integram as mudanças sociais\ne políticas.\n(E)\t as lutas pelas transformações sociais são o conflito de\nidentidades.",
+        "shared_instruction_candidate": "",
+        "exam_metadata_candidate": "Agente e Escrivão de Polícia/PB – 2008 – CESPE",
+        "publisher_answer_candidate": "D",
+        "technical_answer_candidate": "D",
+        "technical_focus": "síntese de interação entre identidades e transformações",
+        "explanation": "O texto situa as identidades dentro de mudanças sociais e políticas e afirma que elas também contribuem para essas mudanças. A alternativa D resume essa relação dinâmica. Não cabe transformar o passado imaginado em prova de inexistência das identidades nem apresentar conflitos como causa exclusiva de todas as transformações globais.",
+        "example": "Uma identidade cultural pode mudar com as relações sociais e também influenciá-las; reconhecer essa interação não equivale a reduzir toda mudança a um conflito identitário.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+        ],
+        "support_reference": {
+          "context_start_page": 17,
+          "source_end_page": 17,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 17,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      },
+      {
+        "candidate_id": "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d",
+        "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 18,
+        "source_item_index_zero_based": 99,
+        "expected_raw_text_sha256": "f446bae38d37709b9b95a669826a8922f6aeaecb509e945d0dd48a393da27cdf",
+        "question_text_candidate": "Assinale a opção\ncorrespondente a relação de causa e efeito que se depreende\nda argumentação do texto acima.\n(A)\t A migração dos trabalhadores tem como causa a aceleração\ndos movimentos de globalização.\n(B)\t A formação de identidades plurais provoca mais resistência\ndos trabalhadores às mudanças na economia global.\n(C)\t A migração gera desigualdade de desenvolvimento e con-\nfronto entre países pobres e ricos.\n(D)\t A dispersão das demandas ao redor do mundo acelera a\nmigração e a constituição de identidades plurais.\nTexto para as três questões seguintes.\nBrinkmanship\n(E)\t A atração que sociedades tecnologicamente avançadas\nexercem sobre os migrantes acarreta a expulsão de traba-\nlhadores dos países pobres.",
+        "shared_instruction_candidate": "",
+        "exam_metadata_candidate": "Agente e Escrivão de Polícia/PB – 2008 – CESPE",
+        "publisher_answer_candidate": "D",
+        "technical_answer_candidate": null,
+        "technical_focus": "alternativas próximas e contaminação por bloco seguinte",
+        "explanation": "O texto aproxima mudanças econômicas, dispersão de demandas, migração e identidades plurais. A alternativa D segue essa cadeia, mas o cotejo com A exige examinar o alcance da relação causal proposta e o comando original. Além disso, a extração inclui Texto para as três questões seguintes e Brinkmanship dentro de D: essa contaminação deve ser corrigida a partir da prova, sem apagar o bruto privado.",
+        "example": "Ao comparar duas explicações causais parecidas, é necessário observar se uma delas confunde associação, aceleração e origem do fenômeno, em vez de escolher só por palavras coincidentes.",
+        "remaining_blockers": [
+          "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+          "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+          "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+          "Divergência ou ambiguidade técnica: alternativas próximas e contaminação por bloco seguinte. Não adotar automaticamente a resposta editorial.",
+          "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual.",
+          "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+        ],
+        "support_reference": {
+          "context_start_page": 17,
+          "source_end_page": 18,
+          "official_context_verified": false
+        },
+        "source_evidence": {
+          "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+          "source_page": 18,
+          "is_official_exam_key": false,
+          "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+        }
+      }
+    ]
+  },
+  "technical_review_applied": {
+    "batch_id": "cespe2016-portugues-held-review-04-2026-10-18",
+    "apply": true,
+    "complete": true,
+    "updated": [
+      "00dd5455f8918df7b60b26ff54fc7bc3cf769366048c715956f3977d0033df51",
+      "52f081d760d2cf50a0ca8812f9d824cf01f6b4890393a7f80a84b0e4c9df6da9",
+      "705ee4660e7ce61348e3653893ff953a582a5b4e89d35c84fc995ca5980965e9",
+      "f8b83ca52f99ef9d41a24c2ef918e65e9f646b4d5da73729a82bccf9f68182f6",
+      "dc12c38a5fb4b73875d6f9e3bf408acc4965b54cbe76897a970b0331ce0bd96c",
+      "675771af1b4f3df4b9bb021e7029ddb17aabe5ed15ab104c0d1bb1c576a09ca8",
+      "15cfb5659a4209fc74947cafcff6375445861353fb8a9bf5bc58534d5c92e9c9",
+      "9e23ac0fd2805525c011fe8368c929127e0b0ece088aa8dfed8c879887a134fe",
+      "5f1785f11af8fcc59f010e421e95d7fac92c9a5764878c46fc294589eacb7cfb",
+      "b305e45887d3a23d9bcfc0c780ef27cc915aa4290d99c213076fe0beed55e65b",
+      "c372ab9ebbac94bec75d9cb11245cbe42ea4fd549cc3bc10dd3f168bf3bbaeab",
+      "006f8766abb5226569ad5851da3bd4b2ad814b7771cc0975dd86556e35bb9668",
+      "2a723739b76e386a66ef41f47d5449ab1ec162b5f2468b99c45bc8456bc43005",
+      "ca50585b2cc63355ae810079a3dd0355bc717482c4768942f0c5a4ad7c2e4e3b",
+      "7b24989fc11271d0ee21aea06bba8eed724c1204ff8bdd9efe7173a7decd39c2",
+      "ff9b9fcf36bbed00e4f304e18729c7a4f54f6c5008ab6422b69ac066ef924eb5",
+      "dacf715e67affd2fd86a4c4d1da223989f9804c931382742cb18a20c37f9c497",
+      "623824d8dc5e0ab24410bd878763e5e43b50d6bf3a25665c6beb59e8526fd804",
+      "d7faba186e01513a42331a53251867bb88c8fa8fa1864ec1bafb12349b21f32a",
+      "ecf4c3faf9ba3ae1953cc29713cce1d14cf2232d336a18e4717dfe9c5141fccc",
+      "b472b8a45042c7fc650caab6c0bccb953468ed41fbf53e708c0c1533a43a0d4c",
+      "95151bdd0057a058ff634105fc9392750348e00273e84d8319dad15e6a610415",
+      "1c3bc04d289270246da746fa7ca4646284d130634525732db642e7ca7660ae7b",
+      "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d"
+    ],
+    "preserved": [],
+    "detailed_reviews": 24,
+    "publications": 0,
+    "official_final_keys_confirmed": 0,
+    "publication_approved": false
+  },
+  "decision_order": "The 24 private technical reviews precede the four subsequent official publication refinements; earlier blockers are historical, not the final publication decision.",
+  "retained_source_indices_zero_based": [
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "retained_technical_answer_deferred": [
+    76,
+    83,
+    84
+  ],
+  "current_corpus_counts": {
+    "checked_at": "2026-10-18T03:40:40.232095+00:00",
+    "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+    "total": 3256,
+    "statuses": {
+      "under_review": 2886,
+      "reviewed": 369,
+      "duplicate": 1
+    },
+    "subjects": {
+      "Contabilidade": {
+        "total": 284,
+        "status_under_review": 284,
+        "pending": 284,
+        "without_completed_review": 284
+      },
+      "Direito Processual Civil": {
+        "total": 655,
+        "status_under_review": 386,
+        "pending": 655,
+        "without_completed_review": 386,
+        "status_reviewed": 269,
+        "partial_review": 269
+      },
+      "Economia": {
+        "total": 103,
+        "status_under_review": 103,
+        "pending": 103,
+        "without_completed_review": 103
+      },
+      "Geografia": {
+        "total": 155,
+        "status_under_review": 155,
+        "pending": 155,
+        "without_completed_review": 155
+      },
+      "História Mundial": {
+        "total": 239,
+        "status_under_review": 239,
+        "pending": 239,
+        "without_completed_review": 239
+      },
+      "História do Brasil": {
+        "total": 245,
+        "status_under_review": 245,
+        "pending": 245,
+        "without_completed_review": 245
+      },
+      "Legislação Institucional": {
+        "total": 355,
+        "status_under_review": 354,
+        "pending": 354,
+        "without_completed_review": 354,
+        "status_duplicate": 1,
+        "excluded": 1
+      },
+      "Legislação da Pessoa Idosa": {
+        "total": 44,
+        "status_under_review": 44,
+        "pending": 44,
+        "without_completed_review": 44
+      },
+      "Legislação da Pessoa com Deficiência": {
+        "total": 25,
+        "status_under_review": 25,
+        "pending": 25,
+        "without_completed_review": 25
+      },
+      "Legislação de Trânsito": {
+        "total": 134,
+        "status_under_review": 134,
+        "pending": 134,
+        "without_completed_review": 134
+      },
+      "Língua Espanhola": {
+        "total": 34,
+        "status_under_review": 34,
+        "pending": 34,
+        "without_completed_review": 34
+      },
+      "Língua Inglesa": {
+        "total": 260,
+        "status_under_review": 260,
+        "pending": 260,
+        "without_completed_review": 260
+      },
+      "Língua Portuguesa": {
+        "total": 357,
+        "status_reviewed": 100,
+        "pending": 304,
+        "partial_review": 47,
+        "status_under_review": 257,
+        "without_completed_review": 257,
+        "approved_original": 53
+      },
+      "Política Internacional": {
+        "total": 266,
+        "status_under_review": 266,
+        "pending": 266,
+        "without_completed_review": 266
+      },
+      "Ética Profissional": {
+        "total": 100,
+        "status_under_review": 100,
+        "pending": 100,
+        "without_completed_review": 100
+      }
+    },
+    "scope": "Current remaining imported candidates only; removed obsolete records and separate adapted questions excluded",
+    "pending_total": 3202,
+    "approved_originals": 53,
+    "excluded_total": 1
+  }
+}

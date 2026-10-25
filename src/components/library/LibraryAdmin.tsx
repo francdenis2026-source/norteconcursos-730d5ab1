@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDateKey } from "@/lib/acreTime";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -16,6 +18,7 @@ import {
 import { Markdown } from "@/components/library/Markdown";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Hint } from "@/components/ui/hint";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -162,7 +165,7 @@ export function LibraryAdmin() {
           : null,
         content_status: status,
         reviewed_by: publishing ? user?.id : null,
-        reviewed_at: publishing ? new Date().toISOString() : null,
+        reviewed_at: publishing ? platformDate().toISOString() : null,
       };
       const query = d.id
         ? supabase.from("study_materials").update(payload).eq("id", d.id)
@@ -280,26 +283,28 @@ export function LibraryAdmin() {
                   )}
                 </Button>
                 {item.content_status === "active" && (
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    aria-label="Voltar para revisão"
-                    title="Voltar para revisão"
-                    onClick={() => setStatus.mutate({ id: item.id, status: "under_review" })}
-                  >
-                    <Undo2 className="h-4 w-4" />
-                  </Button>
+                  <Hint content="Voltar para revisão">
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      aria-label="Voltar para revisão"
+                      onClick={() => setStatus.mutate({ id: item.id, status: "under_review" })}
+                    >
+                      <Undo2 className="h-4 w-4" />
+                    </Button>
+                  </Hint>
                 )}
                 {item.content_status !== "archived" && (
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    aria-label="Arquivar"
-                    title="Arquivar"
-                    onClick={() => setStatus.mutate({ id: item.id, status: "archived" })}
-                  >
-                    <Archive className="h-4 w-4" />
-                  </Button>
+                  <Hint content="Arquivar">
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      aria-label="Arquivar"
+                      onClick={() => setStatus.mutate({ id: item.id, status: "archived" })}
+                    >
+                      <Archive className="h-4 w-4" />
+                    </Button>
+                  </Hint>
                 )}
               </div>
             </li>
@@ -410,7 +415,7 @@ export function LibraryAdmin() {
                   <Field label="Fontes conferidas em">
                     <DatePicker
                       value={draft.law_version_checked_at}
-                      max={new Date().toISOString().slice(0, 10)}
+                      max={acreDateKey()}
                       onChange={(v) => update({ law_version_checked_at: v })}
                     />
                   </Field>

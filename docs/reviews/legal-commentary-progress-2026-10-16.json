@@ -1,0 +1,4067 @@
+{
+  "checked_on": "2026-10-16",
+  "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
+  "count": 504,
+  "fields_read": [
+    "simples",
+    "pontos",
+    "atencao",
+    "exemplo",
+    "prova"
+  ],
+  "reports": [
+    "legal-commentary-audit-2026-10-16.md",
+    "legal-commentary-block-3-2026-10-16.md",
+    "legal-commentary-block-4-2026-10-16.md",
+    "legal-commentary-block-5-2026-10-16.md",
+    "legal-commentary-block-6-2026-10-16.md",
+    "legal-commentary-block-7-2026-10-16.md",
+    "legal-commentary-block-8-2026-10-16.md",
+    "legal-commentary-block-9-2026-10-16.md",
+    "legal-commentary-block-10-2026-10-16.md",
+    "legal-commentary-block-11-2026-10-16.md",
+    "legal-commentary-block-12-2026-10-16.md",
+    "legal-commentary-block-13-2026-10-16.md",
+    "legal-commentary-block-14-2026-10-16.md",
+    "legal-commentary-block-15-2026-10-16.md",
+    "legal-commentary-block-16-2026-10-16.md",
+    "legal-commentary-block-17-2026-10-16.md",
+    "legal-commentary-block-18-2026-10-16.md",
+    "legal-commentary-block-19-2026-10-16.md"
+  ],
+  "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 5–10: leitura preliminar ainda sem fechamento.",
+  "units": [
+    {
+      "course": "abuso",
+      "unit_key": "art-1",
+      "unit_id": "fb2304a8-b1f8-53a0-92ff-f64ecf9739ff",
+      "content_sha256": "19819193196ee499df17652d5cbc656f3055f689f05e50ef3eab032b90e819a4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-10",
+      "unit_id": "3c670d54-69e4-5dda-8dd4-5295d7e9207d",
+      "content_sha256": "4b4b3f2a6a63f80b8ef8e005cc1551bdfa572e700477cb62ec59d8fde12992b8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-12",
+      "unit_id": "e57cb90c-6f93-5ddd-96dd-8c1db8731197",
+      "content_sha256": "ca32d6abcae0dc4e23bfbba41bee55c6b499c04171f32024ec515e3e703d3486",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-13",
+      "unit_id": "7101aec4-b723-5781-a910-17c4630b9644",
+      "content_sha256": "7166e99a291ba98819d0f668147717876c86322a98b015ed61eab918317bc58a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-15",
+      "unit_id": "0bd106b0-b8a4-519e-a5c3-c5662fc802bd",
+      "content_sha256": "af21f539cb3d80f2212df6e1bf97cc6688306e16b4b75bc5b99a0e67ea6a3dd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-15-a",
+      "unit_id": "253278c0-7ad2-568a-a8d4-aa0458f51894",
+      "content_sha256": "57817db60b2b0b49e71e57b1abf9bbb2e5ceedf151c94c1daa2f54107152d30e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-16",
+      "unit_id": "442fd600-1b8b-5b23-b00d-37c4875d0ab1",
+      "content_sha256": "7cd3f5a8b7c072db028e12c5cc30e527f2db699cbb58dccf0bff66852da3548b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-18",
+      "unit_id": "3b3446ad-7999-5487-8749-09c247d0051c",
+      "content_sha256": "ef44a8c271f03a443061b257d3dd09abd506cc2b124ae80ce426f92957df68d6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-19",
+      "unit_id": "01bdce89-0576-530a-9993-bf6a39194c62",
+      "content_sha256": "0bb3c8cab803aa0eeca117dcdb98832462e1fcaafe765bb51c3a55821e083893",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-2",
+      "unit_id": "eb911c53-91a0-5525-bfb3-0a2f3ed15f52",
+      "content_sha256": "97e24c6a133e97debccf7d34c7563fb055625882311e15a561b9f088990aa519",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-20",
+      "unit_id": "be568fd0-19c5-5487-9374-5beffbcbbac4",
+      "content_sha256": "730d0a0d599f69df6acbf3e7461f2cdb911cf477f41dab1a73f59ea2bded9042",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-21",
+      "unit_id": "20ec9373-e3f8-5424-be7b-b34138349d6f",
+      "content_sha256": "e2098a5efd10e3014eb2bf9b6f237762fedafb28b01e9f94741b0da72730e0c3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-22",
+      "unit_id": "109c3f88-c8e6-5c08-8701-ffe73245f126",
+      "content_sha256": "19ada4544ac5e46c26b633b6ab840facde48bb16ff23310885fd120ccc9ef4da",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-23",
+      "unit_id": "5bc4ba6a-9246-5337-8372-55e69267ce0d",
+      "content_sha256": "8f4241ed8a82b95b355ab94bf3e99fc6725e7ddc7bf5eb7b2d338569bb5c6ed3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-24",
+      "unit_id": "dcd0b00a-9534-52c6-b76b-6b2294974074",
+      "content_sha256": "0a6564c8fff41630fef1a8b06065c386f9bba326d3ac6639f0c58fc1c641fac9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-25",
+      "unit_id": "d81ac0cf-e2e7-54f9-8e72-8d2c54fd626a",
+      "content_sha256": "947ccc2e2c0ee79cfa92312c669d32ba634efead0c9dad5ede2fb7624bd10ff5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-27",
+      "unit_id": "16a0e7cb-d24e-5d12-a26e-2926c2b73b0d",
+      "content_sha256": "d16a768d7ce6d96c29bdcac7098ee7424bea50ec5f606ea403e7ec3300efb849",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-28",
+      "unit_id": "ec21a74d-761f-5e7e-8994-aee637322fb6",
+      "content_sha256": "a3b6d694742a96af4d4b8ac4089b3179c713b5b6e0e5b500be8e4f6b2bb60a1b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-29",
+      "unit_id": "d522b95c-e24c-523b-80bb-5207f9a8ff66",
+      "content_sha256": "70e96541dbc8861c5a10adcb3a16279f00d7c3ab33f0ce7d67b13bd3883210a0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-3",
+      "unit_id": "5089dcf1-4222-5f65-bbb1-e92d6b3cad24",
+      "content_sha256": "7f0f3fa3002440902ed4fd9d71e7089a8be64c0b5f765da751c2ff26ec0c3200",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-30",
+      "unit_id": "0637683a-4203-5c41-b629-38d86c695e1f",
+      "content_sha256": "056f1c37adff17c081e3140cec9ac55a22811a7d46b7996d8064028918e79737",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-31",
+      "unit_id": "8c726752-3c36-52bf-b12f-305e0a0661dc",
+      "content_sha256": "a36e5aead65b70a407fb89666decfda6fac430c9e705d28dde4fa64609ab7a25",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-32",
+      "unit_id": "376c0575-558a-52d9-b22f-98dcd430f3e4",
+      "content_sha256": "52bc18476d287bae3a99ad697704bbb008bb7bd7a2e6e76fc34743de179acf2c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-33",
+      "unit_id": "6af93b9b-b7c5-56d1-8675-00fbc0e26995",
+      "content_sha256": "2fdaa21724984cfc09f4f71dfd999e499d480814d0b50568798a44ca51b1f229",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-36",
+      "unit_id": "45ef0648-9cc1-5969-b3c8-d718bf59f0ea",
+      "content_sha256": "75c79204c0793783713bfd1b5d769eb54484caacbd6f7f921031c6214d7ab6ad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-37",
+      "unit_id": "7d2dfe3e-75c1-5554-a9f9-263004c7f15b",
+      "content_sha256": "9237816fdf631adf3e605021583d7093bdbfc57bba6edfac904f240751e12aed",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-38",
+      "unit_id": "b9ddc625-aced-5ee4-b446-90bc50c494d7",
+      "content_sha256": "7437700518f02b5c6e6763063188ebd54b1a48faa080f34d3353ecdb8813bd55",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-39",
+      "unit_id": "9c3f4cd4-8c8a-5985-998d-6dc2a9766cdb",
+      "content_sha256": "f58387aa5432af53d66312713b6e8fed3e7c2b44b5e07adf5f1a146beafd692b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-4",
+      "unit_id": "0379516c-acce-5c62-b3bd-67c55057fd22",
+      "content_sha256": "27f1b81fad25eec2788d94f58d4b30cad45f896becc17cb1172d6f8497510296",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-40",
+      "unit_id": "516f313f-f29f-54dc-ad4b-19e7130cc875",
+      "content_sha256": "240c27eb35f55c0e7d58f35b9e19fa440da48fd23a814632897ef3f56e2b5f22",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-41",
+      "unit_id": "29fcef80-67fb-5fc5-ac7f-680bce6ee202",
+      "content_sha256": "c8f0ad98a6a02f7d7f9ec75c97897ca9e4183fdeac245ea0b83c144d727e82f5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-42",
+      "unit_id": "0b25493a-4ba8-5b4c-926d-dd06f00044a5",
+      "content_sha256": "9bf0ccbd4f361c6944c7a5135a806da3e8956803da6813fb5f974e46293e8687",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-43",
+      "unit_id": "1f1cf46b-0926-598a-8181-4b872811fd62",
+      "content_sha256": "3caf5ac937aaf8662ebc54479e92255ce67ad1b5470bd593b1baf4d35ff40539",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-44",
+      "unit_id": "9b04b2db-dfc3-5f2a-97cc-2b2eae02de86",
+      "content_sha256": "2e6fe8e58907b957d75de20ba61d5f25b8edac3a5e3d4758187ef64a9869dd9f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-45",
+      "unit_id": "4eff134e-7977-5db7-9384-b324c8792025",
+      "content_sha256": "a29c2422cb89b2f2689f37101195d4a9c564161b1016c6ff6d3ecc9621f58c84",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-5",
+      "unit_id": "a4c94931-2525-5b20-89ad-b8e8f26100d6",
+      "content_sha256": "85d1bf4a09a38bb3139d123b81c0431dec4a8f62a0181378a762441ee6b48358",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-6",
+      "unit_id": "570d5122-c93d-5aba-8bd1-8ce82287a958",
+      "content_sha256": "6de020dd2acbe2e6a72dbb5bb6bc158e211871a04f166da087d5c2f88d56be0d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-7",
+      "unit_id": "1084470e-e723-5a5e-bf6b-25da8fdc2921",
+      "content_sha256": "4ac2a0213d3b88394891fa678367fe29841f3ea0ecaa611e7d2dc668cdf20128",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-8",
+      "unit_id": "f89c6b4c-687a-5573-bad7-2305e3a2c0cc",
+      "content_sha256": "067da5a314ed6377224a17f8aa17ca0aae85d47c8b8199cca3dadaf3acc4458a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-9",
+      "unit_id": "262c9e27-26e7-526d-a4af-f6804d616a29",
+      "content_sha256": "e96d01bfe34ef157b00db4f2c6fad75c4ca66d8a827ac75431e8515d257abc87",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "anexo-1",
+      "unit_id": "7c07ea11-c3a6-55cf-a968-6f795770b828",
+      "content_sha256": "57af2c235552431e72bd25b8214d160b0cf7d9d425ce612987dbd0dab9a46faf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-1",
+      "unit_id": "146bdd25-19b2-55de-bbe7-a25042b6110f",
+      "content_sha256": "b7ce08bef038f7ea289cd5a5e72d8c83648df9879a17bd436944008d71276242",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-10",
+      "unit_id": "e5baee51-0c3d-57bd-b641-ce3b951449ee",
+      "content_sha256": "c62d2dc9f433b6d858bc007a52fd9841b6820f228bcbeffccd7905d2215022ae",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-11",
+      "unit_id": "5d91ecd7-d1b2-5ce5-b580-1c2eaaf01f77",
+      "content_sha256": "86e1ddcc58dca956645bedfce31350a2adca6ac44e68fa0184bcf0b234ff927a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-11-a",
+      "unit_id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+      "content_sha256": "3f1eb5cf7dfcebacc8287f165ce2123962c00ddcf0fc908333f4545b0421c7f8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-12",
+      "unit_id": "9953bcf2-6e4f-5893-a4fc-d43bec22e5fe",
+      "content_sha256": "df1e3c49c43d7a47917c31d7ebae99c1b4afd4891b033474961f1ba89b931897",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-13",
+      "unit_id": "ddb93966-82d9-5a41-8caf-dd2924bd654a",
+      "content_sha256": "defa5fb0f9a6021ee291fa8af8a59743b26662df5ac141dee67f7a8770b82aa4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-14",
+      "unit_id": "ebc3d845-be44-5c85-91ae-589fd26bfe41",
+      "content_sha256": "5bb9a2ea685fdaab43f231cfc5f2f6394ea9fb11f2d8c2f9510116a88c7ecd43",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-15",
+      "unit_id": "0bc33e91-0f13-5d01-814e-51c2a0604703",
+      "content_sha256": "096913a6fd5c2264e1414e7539baa376efe8a79cb74381ace8671fcbed12f1ff",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-16",
+      "unit_id": "ee6032ce-5da9-51d4-a687-8eb88dc12619",
+      "content_sha256": "4af4e6f7ba02f31aebd014da7d6da2327d6df471ddffc501168bfad969025818",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-17",
+      "unit_id": "8e91c8ce-d0ed-508f-8027-c56dc49650fd",
+      "content_sha256": "daccff5881a871120a362edea4094abab57ba28e4e789eeb66d9c1bddee92bf9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-18",
+      "unit_id": "e2bdc4be-22c9-5715-9b06-3caee294f99e",
+      "content_sha256": "1b26fdc4e95c559a4c7243895009fd2407d8718a0759fb936304f43e9982583b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-19",
+      "unit_id": "ef990cbc-a1fc-590d-9b89-6b4b07365ef8",
+      "content_sha256": "2816ee7bde40a8f4dc783c17af13a27fa771c7dc81ea201cbc65e17b16ede792",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-2",
+      "unit_id": "b931c732-4560-5fb7-b54a-d3d6c06d44e8",
+      "content_sha256": "6956adff0a13952579e0e8091a7bdc65b5944da05d1fa1a89d9540806f39d39d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-20",
+      "unit_id": "ac5702d8-2189-5120-807c-3645179a6e5d",
+      "content_sha256": "6ba2c501172aa053920de1378f3948d1de46fc29091a5590cc5c1ec81045deef",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-21",
+      "unit_id": "7ba48946-d640-54c6-93b1-774e8a61c89b",
+      "content_sha256": "986b2e9b9f9b52d707e36a4c4cae32b15ea9781d0ed017bbfde881603004be7f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-21-a",
+      "unit_id": "1283fdac-3626-5f83-b29f-3e7b22a36ec0",
+      "content_sha256": "38c1283df08811091e0c872fccf7565f044ed0dc8c2d580cedeadf4876d7955b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-22",
+      "unit_id": "be0a18de-0e40-5f8b-ad9d-6ec78982a95c",
+      "content_sha256": "4f3564d2c4fb70c749c936b3ee576bfb886b670d9dbae1467e2cb9989ba40850",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-23",
+      "unit_id": "ff1cd561-5c46-5929-bfaf-e88eeeb25931",
+      "content_sha256": "866b53a47f560b9c057b8c425c0efadce543fa72d357b5d8822cb51cf74ed736",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-24",
+      "unit_id": "60460b2c-f7a0-5d55-b04f-ec1e1c9f6cfa",
+      "content_sha256": "39628a1cf27b1cf8d439f03a0a058a0af2b5b9079e7ab1632e535e604adbd275",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-25",
+      "unit_id": "9df12527-a021-5155-9810-c1ccefb9a982",
+      "content_sha256": "07cfec443b75c6960b6da2e6593dff600b2b77b9443c43374dd574b602bdf13e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-26",
+      "unit_id": "1b4c6cf9-9146-573a-957d-64e64d70eaa0",
+      "content_sha256": "8d4f87586df90c3bfd0d94420ecc2f29569df11719ff9ee5a1239fd4c15fb117",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-27",
+      "unit_id": "9a04ea28-f2c0-59a0-b171-0b6ea01421ed",
+      "content_sha256": "e6e6b1ec30b9e3eadd99706c550307de39759b302e2e001e962e2e380d8b477e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-28",
+      "unit_id": "a800433b-b250-51cc-9321-834e2ac17efc",
+      "content_sha256": "14e9267f2d223b14e8f6fd08d78af6517ebf617b0d453655c7ad6ef7e030a551",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-29",
+      "unit_id": "d6e60196-7950-5c92-afe5-fd1151bb34b0",
+      "content_sha256": "11e1a224274e1785c7effaa645a59c260a0559598d2e7719a7341ddbfe10e57e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-3",
+      "unit_id": "f308b64c-f472-524c-9d74-c9c42ba34ffc",
+      "content_sha256": "54de582dcd3cc1a854fea98ec1c1ed44e9278846d3aa4f78c6d7adc0cc5f4a2b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-30",
+      "unit_id": "94ec926a-e96a-5fae-90d9-e7fbe2a83fdb",
+      "content_sha256": "5c6ec2760c744c9059c834a8719006139a928d643426e6d337869d544b28224e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-31",
+      "unit_id": "b4626c87-442c-5baa-bc73-00a06c54b3eb",
+      "content_sha256": "b48711500741340cddb2d18946a2d170595cecd355e160505c550663079473de",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-32",
+      "unit_id": "d3b69083-4034-5ee9-a4a6-90e70fffa5f6",
+      "content_sha256": "9765a601c646ef91ca30221c9e147394e5ff3db0a49121c26fba5abf934dc865",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-33",
+      "unit_id": "02ab6f6f-8ce1-5695-9c19-b2aee6a425b7",
+      "content_sha256": "ade8cde1364cecdf46cd8d149fa0d2339c81fec36bccd47a799822a0e0f4f0fc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-34",
+      "unit_id": "1dd1d9b3-e110-539d-b65b-50d7606eaa6b",
+      "content_sha256": "2eb370d9e98bc5c2decb2fff8eca03a95be9be4dc041c818c1e9c7ad8211f319",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-34-a",
+      "unit_id": "fc1e600a-3826-5385-970c-256a2cc83035",
+      "content_sha256": "b755672d954c539d37a3d6451982e3701a6adda8c44d5578cde4fe52a9063392",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-35",
+      "unit_id": "0f83f6a8-94b8-510d-86ed-0801555f5148",
+      "content_sha256": "56283ec8d6a9eb0a8dbc5f180a82701d0a2bec4b315064636c57a8a6a94b37dd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-37",
+      "unit_id": "b55aec10-a11c-53a2-bdb3-9ce56e7f7897",
+      "content_sha256": "3b0c52eb2708f84dcac10d05c3f5902b459d7d5217db0072aa37f0200f638c08",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-4",
+      "unit_id": "e05480c5-ca55-511e-af08-245a3b7c078b",
+      "content_sha256": "84b76ea5622f0e52a92b5313ff94cf14c4b9496dfcdb5ad89605db7eb6cefc4a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-5",
+      "unit_id": "032dc830-a7ac-5ec6-ba64-8250b04fbf82",
+      "content_sha256": "23fb00195da48685012c8698d6f6205c489ab0e88e3363a36ccc1259e6ec67ce",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-6",
+      "unit_id": "cde20122-2023-5571-87f3-895bf699901e",
+      "content_sha256": "5664de31ed5fcbc10dc694710bf8f1d6fe82c8c7c9732baa3471f3da30f5a6f4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-7",
+      "unit_id": "adc8357a-87ce-5132-b6b0-270d9ab8e3fd",
+      "content_sha256": "25c8434e7c77081d2d432487eb4f2b66c70b152880170cb996971ac7cd05ab6b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-7-a",
+      "unit_id": "41a90db0-fea3-54f5-96ae-34c8290e6b40",
+      "content_sha256": "7560a43729699940064e3d2692aa1b8b36ca8978012c28d283695455ca861db6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-8",
+      "unit_id": "8c928ec4-cc71-515c-8d8c-244543cb72ca",
+      "content_sha256": "9a632df46cb36e804498fd9f59863ac984a2d44ad7f40557e566d765a3d29169",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "armas",
+      "unit_key": "art-9",
+      "unit_id": "6bebe369-b44b-52c4-9568-c31de5356709",
+      "content_sha256": "d26620f81ef5f0714c4a20b610f995d3e50cb5dc44bcc928868575dc08aedf42",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-1",
+      "unit_id": "ec32ba62-a5f7-5b1a-85b5-30f04e94804e",
+      "content_sha256": "00c58201e6f772ff44c3d3b8acbb2cf56d525c211dbd1914f51f53e3ff5afb98",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-2",
+      "unit_id": "afdc4ffb-e26e-54e4-aff4-6611bb8a719b",
+      "content_sha256": "63866ef4faffddf61d95282eb0cdb057806dc1dd4b2a58ed3e214aeccc3bdc36",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-3",
+      "unit_id": "0c8bcf1f-f63d-5539-9936-86dcc03ebc60",
+      "content_sha256": "5b523fe710921342c04a2708bfd5da23b13fdaaede763c431ea11ac57d97c567",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-1",
+      "unit_id": "02676f00-b199-5ccb-919f-fe9a4d6d0714",
+      "content_sha256": "e60cad43be9e2ea1afdcd501f282611ef8479521c2e3ec2ea7387acd8cc6005c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-10",
+      "unit_id": "2634c975-670d-5335-8adf-1abccf47f121",
+      "content_sha256": "158a0bf9ca87725bc98de0eae98ff969337c5c69cae0707eaf33ce59b951e6f4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-11",
+      "unit_id": "3bc5ddad-5eab-5b0a-aabf-9f6ad19e7479",
+      "content_sha256": "190ad3919bbf51569f7758686fa9ec1628d94394ebb71ab5de1fc89f06ddc18f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-12",
+      "unit_id": "66ac26a2-a6d7-5ea4-aa99-09ba3ce0317c",
+      "content_sha256": "c70e9838fc8694299c4ce4f7312e6f83cabe487b72f7d2bfed6df7215646ca01",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-13",
+      "unit_id": "42297de5-9078-573a-a01f-676640b33b48",
+      "content_sha256": "7e7a91bdc9a39d8b02f4bd9a91d33ed9921f65ae5415d03832b3cea9a91b9447",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-14",
+      "unit_id": "e08faa8f-f010-532f-9145-38464103186e",
+      "content_sha256": "73b0c589ef263f8854f7c3c7e31f44e823f7910110d575f9501852a621ddc3f9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-15",
+      "unit_id": "5fc3e923-ffa4-5940-80f7-dc9e65b7ec3d",
+      "content_sha256": "9abea6b5704b4b21d805f44bc2fd071c483e3a250f840c8fcf5b694457f72b86",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-16",
+      "unit_id": "7e917c19-a74d-5a56-ada6-e3747a515edc",
+      "content_sha256": "adfccceacb23be156dfa3d7e2efd791c90160ad1ac8595c9b849a36c9cd20f52",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-17",
+      "unit_id": "5ccda841-a85b-5821-9d90-6e9f454d5ef2",
+      "content_sha256": "54784fefeea4bc8a4a981f179eac8930f784970a9870fdc97a806a22f4c124df",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-19",
+      "unit_id": "171ded57-3abe-5593-a23c-b929e09144a2",
+      "content_sha256": "9738081fdf11158474ef8ed73d2b318d1178906e222a00b6bc2a1c4078ff07c0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-2",
+      "unit_id": "0aaaa4ba-f80d-59cc-b47a-824adae73f47",
+      "content_sha256": "f60f3f205571601cbb101990f92693df9e83b1189776b53c3adb845e6a9a140a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-20",
+      "unit_id": "aa17106a-951d-5d8c-9a23-5943a45688b1",
+      "content_sha256": "316ab8add62d9193a0b0177ef58980f1c0ab7c19efc90ed831c940987e432c79",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-21",
+      "unit_id": "afce68cb-8d78-5ce8-8261-4c2ac9f64e60",
+      "content_sha256": "b450b487727d85d7a7d2119d3fee8eb23869a8f513b029f67fd3d4be44f9f9a7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-22",
+      "unit_id": "a4b96f81-551f-5712-a130-ac3f5ce76cd1",
+      "content_sha256": "ad73f9a0a98aea6fbb7c5d3541e1c45cd7d78c89e4e756cc86ef371ea0936cd0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-23",
+      "unit_id": "72a8f39d-d7de-564b-81b3-ffe75ae38ec9",
+      "content_sha256": "d9df4b827341470306b46929dca62482417038da2ab9090666893eaf158ae941",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-24",
+      "unit_id": "df8c1005-8781-527c-aa8d-480d6cd93484",
+      "content_sha256": "b547e5a1909d8edc42340590d319ddb39272e5f80e4889b3c77bcbf5423285ef",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-25",
+      "unit_id": "40c734d4-743a-5de0-811c-d46590daad42",
+      "content_sha256": "8fd9ec062c35d4d97fcf5f406df045b6da812d33e5093feb9becebfcd01a9d29",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-26",
+      "unit_id": "184ae041-e0fc-556e-baf7-2dbd1802e506",
+      "content_sha256": "b8ec68115fe34818075533d47cd9b23e2db2b976b554aa8a5a98de9e43b9abc5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-27",
+      "unit_id": "d916aa9a-9373-566e-980a-0ddd96cd4d2a",
+      "content_sha256": "dfd15f3940b503c4bd2237e0bbe1712af7e54d3be3c5656281904b79e2f0bb4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-28",
+      "unit_id": "9ace6a06-5f4b-5d1b-83b0-e5c590251326",
+      "content_sha256": "5df29bf5ebeacd0c5c739ae7d11343da67f0e78bb2275969046345276e9aac30",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-3",
+      "unit_id": "8fc853ba-19b4-5429-be82-a901b94e5626",
+      "content_sha256": "8fec3037b148479c7a9e5870878ec9ad101e9e9a2519316edb947fb2e0408812",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-4",
+      "unit_id": "86eb5055-7dbc-5d6c-a6b0-c02d7e3cccc3",
+      "content_sha256": "727420ce204e1ff212b26cfe8464dc5be354074bcadc86b7f2ca50d5bfababd5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-5",
+      "unit_id": "c1b3bbb3-a1f2-56c8-b9fe-90b590104a68",
+      "content_sha256": "dcf9bd6ac04c65df2bd29fff38608795db3b54e0d60d1d6b71e73ad3103ebfcb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-6",
+      "unit_id": "ae0bf553-ed01-56de-a679-abf8cc960d7f",
+      "content_sha256": "8893e3a7d90b05617d63bbe6cc1170e7508b7e0e795d8a42c42e2c6294bfa8a0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-7",
+      "unit_id": "765c04f9-ac50-57d1-95e3-7ab2af966d3b",
+      "content_sha256": "e6d92cebb9bb4549421f4dfb9f9f6b6a23067d64b096df3365e811506282e470",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-8",
+      "unit_id": "bc924f5c-92a2-5ab3-aca5-2ef9739f35d5",
+      "content_sha256": "e203e337445544d5f5d1fb134218ef35f129b226dc02e8ec8591b7cf034228b2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-9",
+      "unit_id": "6bcda3ca-153f-55bc-a436-8989ca0aa64b",
+      "content_sha256": "13f3f8622e430d43793ece63a3239eb09b5de0f08286239d73986aa1a2d8bba9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-1",
+      "unit_id": "d8bd4c6c-892f-5bf8-bfe6-826012c95fab",
+      "content_sha256": "5f3728702ff8d9e4676a2c1cb9d438cf8e03676706aa5c83fa083865e1ad5cbe",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-2",
+      "unit_id": "666eda4a-354c-5cf4-b3c7-754578779b32",
+      "content_sha256": "a85aafb372dc3771b9a5566e07435b7d232ba8d7b830d1c04d82844679fc10a5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-3",
+      "unit_id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+      "content_sha256": "b99a3a1c2753d0f0ff37952880ad10b509058e46ad931bfafceaf20f0bafec21",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-4",
+      "unit_id": "302ec3b5-be62-59e2-90c9-db208ffe1524",
+      "content_sha256": "65bd0eaa1171e3fe676889bd3441442db0520b8aead7a53f7abefb34657d6047",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "deepened"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-1",
+      "unit_id": "9ae86aee-8008-56d9-941f-59f4941ffd4f",
+      "content_sha256": "f90fbb0520c729856a2c5b492e078b52b1142ebdc69e45919e622612f8291c0a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-2",
+      "unit_id": "380bec3a-3486-5650-845c-dca912b8144b",
+      "content_sha256": "251d6ec25c8e8a743b5d71af0998694e4974ba4a70672e4910ac1eddf8c8dc5c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-3",
+      "unit_id": "59606a2d-0717-564f-b320-0a3bc8277367",
+      "content_sha256": "26272ed245450375cd1ba12c0fdfde1b76dbb28f9806b89ef06e37eb7545fe3d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-4",
+      "unit_id": "7da76918-9aa2-58af-88c4-c6a00efd503c",
+      "content_sha256": "a984ff53d2314292c16f6a9e8da6645836fb213f8fb874a0fa7937f19a77bd80",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-5",
+      "unit_id": "69971e54-8672-5c88-9c20-13afc0f204fa",
+      "content_sha256": "c546342a18c6452e067827b86c11fdd45f6701343ec6881d6cd5262007f11aad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-8",
+      "unit_id": "e6e905b3-9bc1-5464-9e65-352a63485be8",
+      "content_sha256": "a1e3b90e790bf31e42585ede65de406265b76c3d5aa09455678acef890b2f36e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cpf",
+      "unit_key": "art-9",
+      "unit_id": "5b775e76-2367-5d06-a79c-c49e2fde5064",
+      "content_sha256": "349b29e669d808ae8832762de3ec49101a9469a703336111101d1e93826c9a55",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "delegado",
+      "unit_key": "art-1",
+      "unit_id": "56361a2d-9539-5b2c-98ad-a04564694810",
+      "content_sha256": "773661bd1d5eaa3a46d3ea6297d703c6445f7ad5ef2292d2e593941b59c64110",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "delegado",
+      "unit_key": "art-2",
+      "unit_id": "ab295e8e-995b-503c-ac0e-cd3a246f8f9e",
+      "content_sha256": "5b2898b85ce012c518dfb8dce970bf156ce3a4f9f39e891345a39a4914ab23db",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "delegado",
+      "unit_key": "art-3",
+      "unit_id": "734e43b2-dfec-58b2-8302-cbcfe8a2e774",
+      "content_sha256": "ec3933873a18b194d8b0af6a3c95a59555d1460c42eb145079ce1e1737cadbc1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "delegado",
+      "unit_key": "art-4",
+      "unit_id": "e80ef30a-d205-5bb1-9004-7e90dbb5eef3",
+      "content_sha256": "2f4d3a28266b5bd41f54fcbaeff64f075e960cbaa2f4ddc0dbab8f0d383ee466",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-1",
+      "unit_id": "6570f8b4-c3c6-58c1-af18-3083bc174d83",
+      "content_sha256": "646dcd71464c299a169001e9638bf5e85984889eeaba1d631fc6dd7a34332ddf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-10",
+      "unit_id": "9715e0aa-536f-561d-a728-75cdf06c1b68",
+      "content_sha256": "72276dd85798c646857911dfc82cfb52d47ce77ec065b17263c10a889ece9472",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-12",
+      "unit_id": "79ed83fd-ee5b-57d6-a6f1-366fa5bc3847",
+      "content_sha256": "7537699a66f3a24dc60562276c7af168bf7571ac16b228c0585327d6d2f521f7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-13",
+      "unit_id": "d1c3a6ea-9e23-5dc5-b76e-1b5de2d295a8",
+      "content_sha256": "9ba5091e95b4a04c723beecf9149673286050f830375a68532511661cfe1460d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-159",
+      "unit_id": "3545bc81-fe20-560c-9db5-e18672485ab6",
+      "content_sha256": "8d170bc105add8b3b1cc93dd241a89d25b84b32330c32dd814253823cdb11b2d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-2",
+      "unit_id": "7d540f8d-7610-5836-8dd0-67743176ad70",
+      "content_sha256": "26db3ce460b2d40681912575db696e3bce3d8bbe38752f4a6b2ae9a614ea90e5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-213",
+      "unit_id": "dd5e668a-95fa-566c-951b-1e8e27cfbc31",
+      "content_sha256": "b410b0dd55cab4ff7d1a913f5d2a54b8e60370356270955f8cbfbc34c84e5a07",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-214",
+      "unit_id": "e299187c-f5c3-59ac-9395-a554f50c4bab",
+      "content_sha256": "570645413e3e6e6659f6112690984879e4fc52c038973074a2e08f06d8db5b1d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-223",
+      "unit_id": "db3eb08b-a715-5735-b291-93eb43153504",
+      "content_sha256": "4a266e0eb19b4278b5c1e0948d7d758b4a50793227c67094cbcad7ab556569d5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-267",
+      "unit_id": "f69e00d7-4c55-5c40-be2b-958e53158ae5",
+      "content_sha256": "f7aeb76c11fe0d0973ab4a7eb4bb797810030236b8892fcfa6c38ef9aac94506",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-270",
+      "unit_id": "05af805c-3ccc-5cc3-9ece-103f0101440d",
+      "content_sha256": "e409524d06902bf4f3cc97f13758c0a2627a4d36162ac2a23417eb6313ba95e6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-3",
+      "unit_id": "66a393e2-94fd-55e3-afb1-8947c86bfbf4",
+      "content_sha256": "7e77c136e9439f2583e381fb7ce9843e6a65ba999c2f2bee97d1950dfc73d3cd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-5",
+      "unit_id": "e8f61c7e-4c1a-5161-b3c4-3283cfa38959",
+      "content_sha256": "bfc021223bd27198d792cd0b8aff214a965308af6c71e4a341baef841b6f5cd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-6",
+      "unit_id": "5056b600-da25-53cb-a934-0f5ac70fab30",
+      "content_sha256": "6dca8c136f254b98b2d25e4bbfa89f81bee68b44f33c18a7c3872c6a1ea1d403",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-7",
+      "unit_id": "60391cab-03f1-5e69-86ff-94d4a78d5072",
+      "content_sha256": "ce7bfcdbab2e3764cce3887db37b9d8240babbb0dc659c8f92cf23d66164b4e6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-8",
+      "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+      "content_sha256": "9c937bbc86358cf7c3dd06be4e23c17b8f410b2860bf79711784e34eea0b963d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "corrected"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-9",
+      "unit_id": "f4f988a6-91fb-54ae-996d-9b0870551ba6",
+      "content_sha256": "d2a49a2073f3ce3e0da9688c7e1e9509929b00640b36ec60e404be1e4d3a6115",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-1",
+      "unit_id": "0f186384-f484-5089-94ad-47bdcc4c6500",
+      "content_sha256": "6b335231d60e2cdaf9523efa01273fb36000bcf45b0a68c777c90c1a15d1f6cd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-10",
+      "unit_id": "9dc7c653-d2de-5965-bf77-3039b9a5a00f",
+      "content_sha256": "e9462ec684e056a4505df6b4ac60295b53d69c535263afa859ed6fd8f5a439c0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-11",
+      "unit_id": "f2c970b7-a2e0-51f9-86ea-cfe8374dd689",
+      "content_sha256": "d77649c4e7a329a51fe713a1cbd5a22c254fc4254c337002652df035dd449a81",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-12",
+      "unit_id": "109b9922-79d7-57ff-bb27-7a6c1617af2b",
+      "content_sha256": "fd996c62d9f737a2268862c9fa841097b101d868d8126a8ad016e843f1ecc445",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-13",
+      "unit_id": "a9d2df21-03ae-59fa-8119-2ca8e9271e2c",
+      "content_sha256": "f781a8ce334835723c652efab5830bc3d1a2a3c443a0655113086a150c9fe311",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-14",
+      "unit_id": "f2a4621f-c707-5b81-89da-211a429cd716",
+      "content_sha256": "734d5a5b4def81e481d1e9ef877992ac882f742327221c1a2b5e8d23a6e0479d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-15",
+      "unit_id": "aa573e25-baa4-58eb-950f-610db22645eb",
+      "content_sha256": "468867fc8cde0d2ed7b3552aec339e71d4fed50950409a7498a1891a9c057906",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-16",
+      "unit_id": "a0e6b46f-bbc2-561d-bf6a-f24d4e402639",
+      "content_sha256": "5db7f5ff61e28e3a133f36dad863717289f641dec17f16ddd474f88af349e01a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-17",
+      "unit_id": "4dac8825-35c0-5db8-92e7-36d40ed9ef45",
+      "content_sha256": "6d0558d53eff0bc49001ec4708ebe82b634d8188a4b212bba45dd7d3a3e294c2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-18",
+      "unit_id": "34124215-89c8-5e5e-a795-8ffd93d376cf",
+      "content_sha256": "db15eae36150267447ada0e7da92853263cf01176d6f32e3fbe61dbca5bd84d3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-19",
+      "unit_id": "8f0cc0b3-53cd-5e73-848a-c12dd147220c",
+      "content_sha256": "8e3bcdce4957c214520f141b186f4b054de50f5588527750626dd5678d4d0248",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-2",
+      "unit_id": "790db9fa-3a50-5db4-9c2d-52c63d2a3326",
+      "content_sha256": "d1081852ad2986e7e1e887460a0d5a95cf99d5358bc51a4641bb400ad70133cc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-20",
+      "unit_id": "71308b4b-6fe7-5bf2-bc24-a76d93f8547c",
+      "content_sha256": "ac19c37f3157e4f936298b912e557b8581390275ebb00f476d75a8273a256144",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-21",
+      "unit_id": "9bc1fd99-71db-5c87-81ce-5417985dfc1c",
+      "content_sha256": "efb11627055eb6fecc4a8db92ba13cfd2b9792d1c8d7d4f8bce98d6e7c0654c4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-22",
+      "unit_id": "a8d38eb3-70f5-5326-ac34-e74ef2297718",
+      "content_sha256": "963f6f31f5cf4900b5cffed76b893c658d8bca0bacca88777bb665608f57060c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-23",
+      "unit_id": "e514029c-bf3b-516c-bbdc-6485dd3d6fbd",
+      "content_sha256": "2e6418c784bbed051524c2523674b91f63e265f327a393bb5f2da5c94a2ea195",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-24",
+      "unit_id": "58d0da0a-f0ad-53b0-afe6-2897df1fcb60",
+      "content_sha256": "9ad9172dd3829f5108fb572131ada6adbec53961aa8238fae232c593a4dacda2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-25",
+      "unit_id": "0d84a25a-153f-50bf-ac64-14bc5c81f532",
+      "content_sha256": "7ad6fe63fff568748fdaa48c26840b627d668a476b94fd7de9d21dcf832302e4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-26",
+      "unit_id": "616dedf5-9b75-5125-b7ca-37e6b72c5b06",
+      "content_sha256": "ef4b79485e1f4a32966848b0909f1d67c4ddca1d6a51e0702ba0acee8cd190f8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-27",
+      "unit_id": "5bcc45a1-3afa-5a0c-9fcc-020cf265f400",
+      "content_sha256": "78c597e62c9d7e48cd73de689102fe67d329f129addbde9bef5785941b7b633a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-28",
+      "unit_id": "c07e32f4-3860-55b2-aca2-7b53e5b702b3",
+      "content_sha256": "006518070df0a8edb3999e16d90c74a306a00731302bc900f1461dced83e1f13",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-29",
+      "unit_id": "a41e09df-5a8c-50f3-a37d-102979ef0e8b",
+      "content_sha256": "edebe7a9bb5dc52b7d22a459afba00121a80949f147a4684739e53a1d562e43a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-3",
+      "unit_id": "5ec9630b-6ec9-5674-b8bf-66b1718a0d53",
+      "content_sha256": "f1b2f42a248f4b95262ebe92ac2c4a97d43bd3c28e49bac838e7c934f6942926",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-30",
+      "unit_id": "96125cd8-0974-50ca-98ee-fa80093f4d76",
+      "content_sha256": "ca8120c3a539b3d2618863fa9be9739cf24dd17c1779ceb59d0cb147cc3c023c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-31",
+      "unit_id": "e1f546bf-6fea-5d13-a9be-bf842de125c1",
+      "content_sha256": "3bc5bd99308f3a6ddab35f91b546138ebb145d09932aeee2a78ca4598f9bb24b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-32",
+      "unit_id": "99991865-6519-5509-bfb3-8c310d477c08",
+      "content_sha256": "7f290701c8ab4d6e3aceb53f7e470295338a23b053b7cfaad5346545488d0788",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-33",
+      "unit_id": "c07c7410-75cf-5687-824a-73f3c3f73700",
+      "content_sha256": "f15f1ab3e405d4a8265fe5efc2c04f7754e708d97d40b4c5dab2c25865aacdbb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-34",
+      "unit_id": "516f37d9-ce5c-5ef9-a4eb-5ffe0c8ca2ed",
+      "content_sha256": "bbc3c937e19069bcb6fe1fe053183999a15273f2fa376745880b0252b5451bb5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-4",
+      "unit_id": "2c872803-e5aa-5585-82ad-91154b8dcc74",
+      "content_sha256": "49bcb3e5b6ff20fe479c9ffb75df3e05d32d387df03856d6d08135e0c58dec62",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-5",
+      "unit_id": "a42800b2-6942-5b9d-9a1d-c27bf82ef7da",
+      "content_sha256": "0082caa048e258362fc18169976a9466639008b701e8a131bed192a3a5324a1f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-6",
+      "unit_id": "4e391654-9f4c-5f06-b5d4-34aa5dbc2d0c",
+      "content_sha256": "33cb7ea6231242383d29e87728942e6ceb692e02ae464dbc4dd42fbd00841f95",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-7",
+      "unit_id": "a1edb285-3d21-5e73-a7ed-c809127484f4",
+      "content_sha256": "2e23e0a5168db1d9802cac12e07d8b50231558d4a8aee9f285af34058ce8472a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-8",
+      "unit_id": "f63d95ec-0d2c-582f-ba43-2acf98184897",
+      "content_sha256": "5d95a45c57244e5e8d60c55d6bbbb78282c1871bd744f9e0192720c6b20feda1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-9",
+      "unit_id": "9163b84e-b469-508e-a0b5-c3c788dbb7a7",
+      "content_sha256": "344515913e3bf8de5edb419ba06f692f6527becf9f76f906d148ea8577988015",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-1",
+      "unit_id": "c3d18f9e-1d89-57df-9368-5531d505eb04",
+      "content_sha256": "9ee0b9c1f1685f9aa32ceb04dcae0d2b445c05e707dadcf7a94c35ef115519f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-10",
+      "unit_id": "fcc4a598-85fb-55e3-9e71-d780009c42fa",
+      "content_sha256": "4f63596175467f3cdb5a5cd9e35a6928cfa869617c6a7b030d258b9fba23438c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-11",
+      "unit_id": "bdb11ec7-b981-5171-af9d-73c7b76b2f6f",
+      "content_sha256": "6b4bc55838378f1410f94824681bebaf118d197cac10b4e1f2196e2a52af7587",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-12",
+      "unit_id": "ccc1b13d-342e-56d3-9e54-739a98326188",
+      "content_sha256": "d0dd467c99d9eb921281d48bc98808f5e13c93e508da29efdbdda3aa39fd3ec9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-13",
+      "unit_id": "cf8cb891-901c-5342-ade4-b3057c6d5471",
+      "content_sha256": "5d1b9e645a936516513120f48b5ae2797b65bb5c5e4ee5c6fc5f88f869ff882d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-2",
+      "unit_id": "8844deae-051a-5b4f-9029-09aae8c277dd",
+      "content_sha256": "ff1d9c8fe4c6da8fedf356bcda0f354c2f4769ce147f90d089680e1f7a8987bb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-3",
+      "unit_id": "c5486582-2725-5c80-acce-29b63ba8a5cf",
+      "content_sha256": "6f9a7facccc3e01c0d04a0ef4e9d39ccbbfb999bb20c846aad8de8fe4d51c906",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-4",
+      "unit_id": "33c4af71-cd9e-5e32-90a1-4511d2bf19c5",
+      "content_sha256": "eed6d34b80fa4793e057e0d0a6771b565df6f74775e39954fefd43d7a53bd87e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-5",
+      "unit_id": "454936a7-f7df-5903-9171-682d8f3df3cf",
+      "content_sha256": "24b698915c0861c0a4b69a49bb809272f859cbcbee684b0b454cb7764263b71c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-6",
+      "unit_id": "f6fc0e5f-244b-541c-a5c5-ee890f6af017",
+      "content_sha256": "9f598b47db7d01c7bd77d9f3b05fae439901bfff44fcae9b70bb9c2e27fedded",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-7",
+      "unit_id": "601daa33-c3d6-5d56-815d-46d015bf6738",
+      "content_sha256": "894574a61b003530fcf389ee3f6e36f369d28ba8a7dc09627073d42578a65a5f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-8",
+      "unit_id": "4de77538-9b2b-5bc7-ae1f-239f073510dc",
+      "content_sha256": "61657342a5cdbe173eef638776e22ec5607d9d713448013d1e27e97fa0819caf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "icn",
+      "unit_key": "art-9",
+      "unit_id": "8200ddd8-9f92-5eef-adfa-5e44f1d71aa2",
+      "content_sha256": "132eb59a9bf2d666df1665adb62bea7c68a5f047df71c57e708fe28663977072",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-1",
+      "unit_id": "75676f56-cea8-5293-9d85-3ba69ceb5cc4",
+      "content_sha256": "63643f88468bddce3cb491f94f1ef28739d8471468f42ff7cdf15b7dac613ce2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-10",
+      "unit_id": "62b1cba4-d600-507b-9c26-991d15a89195",
+      "content_sha256": "178d19c074ee7b51d4eb0299a2d496169ea651af881318d47ed93236bc242de0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-11",
+      "unit_id": "7f54a579-6387-503c-87ed-f9eaa4af29ae",
+      "content_sha256": "74f108847dee776f54d7e3c4c13a122e84fa1492532fe6aef075afacb176ec68",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-12",
+      "unit_id": "44cbce51-b15b-5681-99fc-00fc67062933",
+      "content_sha256": "56737f4a8cc7e7a002ee7d802f11c51b0d3b00e2c99ba8162f2b22af23a94707",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-13",
+      "unit_id": "a2286e74-0942-534b-9ed3-436aebd699d2",
+      "content_sha256": "1808cd6dbf2a021a264144bafa7b69a9f62965f017ed51e555a3217bb32fcf3f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-2",
+      "unit_id": "04faf4bb-eab8-599f-874e-00bf9e0b5b7e",
+      "content_sha256": "8169b72814b630243b27b8281b96b3cab67a36c41aae33f505f218aea5952542",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-3",
+      "unit_id": "1fb57aa7-86d2-5029-9d47-f96096458026",
+      "content_sha256": "411685ce97cfe5cb773d8697f5bed16c9cf70e099cb51f3d330dc3f70019ed71",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-4",
+      "unit_id": "77c0b911-eb48-54e3-9459-38b3bb14d0a8",
+      "content_sha256": "87f8aa383a0318ac288bef51273b331b457bc10503ea703fa83a0d9f864028a4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-5",
+      "unit_id": "baf0151a-cb62-5b14-a948-109657181a6f",
+      "content_sha256": "58ce735195bb16955f746c1bfa42e28da1dd942e3a58804a85d0905d539cf150",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-6",
+      "unit_id": "703aa541-285a-5416-bf94-961f548b22b1",
+      "content_sha256": "a6fd87674650166c8bbed0a6fe9d3bdf5707eab5f422eba38a81e9e4a18fcfd5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-7",
+      "unit_id": "15d7542c-6bba-5fc2-8122-5c187a076b1f",
+      "content_sha256": "9dd25d2bb1b3949d8d7ee1e9656e5f0a32aa2b16c7c20f1bb021d785a5a3bf9d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-8",
+      "unit_id": "2d2bf652-029d-5a1e-877e-4e337aa556d1",
+      "content_sha256": "beec7bd9992754a606a31af679cf77d598b36dfb3aa199fd7e59c54a6b6be82d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identidade",
+      "unit_key": "art-9",
+      "unit_id": "20c53946-05d0-55a3-885f-c5eed17e2eb3",
+      "content_sha256": "2453ad54e714f7c9d0b96fb119d78224e72d1f1dc849048ed19e777151470e32",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-1",
+      "unit_id": "d2893a7b-1ea6-5f1b-8a20-abda8dc78786",
+      "content_sha256": "a0aa074ad7c88842b2ddbc75490fd1480354a9e048d218fe5cb313986630a298",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-2",
+      "unit_id": "f9f12570-a841-59a0-b686-ec1fc8001429",
+      "content_sha256": "28bbee80fad9b111c1cbdc7eaf34902d28df335a5f47012239b20afae9b7753e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-3",
+      "unit_id": "1cfc49df-c6d4-5b54-870d-7a685c9e9365",
+      "content_sha256": "3a215deaf280bd74fa826c55bda59541f952164886f4a8fdc8816363621ea769",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-4",
+      "unit_id": "1d6b1146-3586-57f9-80c0-fcbad71a163c",
+      "content_sha256": "6adf4ff40259b96c63cccafa9861f27ab64d7cd2ec29aaf0410d4173dfd36da6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-5",
+      "unit_id": "995102db-207c-5fc4-98cb-651e22995488",
+      "content_sha256": "acf447c7c08eb7efa4ea479cd8de82f9744b970b1cef87f88d365dda19438bbc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-5-a",
+      "unit_id": "91464c23-f942-5996-b516-8f8504d40910",
+      "content_sha256": "1a71d6f38512186a2beb5275e47de4541e2b551b423bc159981fa76e9a539399",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-6",
+      "unit_id": "e436df62-90df-5234-a26b-e8d231d0a3a6",
+      "content_sha256": "e5184ef10beba5c77887fa83958249ef23f52432acdfd890b5b68e00dcfb0561",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-7",
+      "unit_id": "08ed37be-1e93-52f0-aad0-74b0131736f6",
+      "content_sha256": "4d3966b96da82ce0c81dc7eaaec33a992f828e5c1a69836238b67ed6dd540050",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-7-a",
+      "unit_id": "553c1472-e625-50f4-b9bd-cb3090380b1a",
+      "content_sha256": "0b9b8810f28cfdd36b8129d6db6a26f1aad0a8398fb7a8073b3dcc7809eb4298",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-7-b",
+      "unit_id": "d49636f8-33b4-5a08-9e1e-fb76a5f98e07",
+      "content_sha256": "9897b30e3776d878cae63b35f7fee0366cc9d591ff36fcc67ab3a5e2bf503c74",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-7-c",
+      "unit_id": "0b42ce26-fc10-5015-8038-48c93c616c62",
+      "content_sha256": "e786284fa21f913395197449798a8f172905a046cb199213008740a3339cefb1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-8",
+      "unit_id": "6c16b1c7-946d-5a0b-970d-69393f51de85",
+      "content_sha256": "208be7c917197704a6f5e880d3d2574f4f067b3b9793e4972a0271b8ff081cb0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "identificacao-criminal",
+      "unit_key": "art-9",
+      "unit_id": "5078d89c-b1e1-5cb2-8759-656028247af9",
+      "content_sha256": "fa3167937e76e2865d211267bb2002de14259e405c101ec50863f77b862f06d3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-1",
+      "unit_id": "6d69863c-3a20-590f-9610-c954759e6a45",
+      "content_sha256": "6d113c73c8e728a5a23479139433bbb06039ad3ee36d94f8494bc71bdd87e1d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-10",
+      "unit_id": "ce3d5078-d1ef-5192-a579-e27cb5b0ab76",
+      "content_sha256": "228326af31489d80ed2bb39bb93c2a169df08097409fcfa10728dc8410ba98b7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-10-a",
+      "unit_id": "022bcd8d-93e3-52e0-aa85-45655b33fd48",
+      "content_sha256": "59042cd295a82efad909efe760de37aab690be826b0ea375edaddefe04656f3a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-11",
+      "unit_id": "802efa36-16a0-5aa7-97a0-c92c6cb96547",
+      "content_sha256": "cdd6037568529e71e49f25f3453a857b94471b476fe8914d407c2af12fcc3c51",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-12",
+      "unit_id": "5afe3738-01c3-597c-80b7-2cf4490da553",
+      "content_sha256": "9f22c926db70c9c488b862138e8503e4216ecbba459ee2373415f90462a16b47",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-2",
+      "unit_id": "cfcd48f7-a3fc-59ef-b02b-381d7ec8be79",
+      "content_sha256": "ff250a164f504ed624c3115cfd7337d05ab05d742957cb100499bbdac4628d0a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-3",
+      "unit_id": "28fff9a0-e925-5f21-a1d3-b8d0c35dc767",
+      "content_sha256": "703651c9e228e783e9f5e176d85e43e636e9f87c7177f470b3680a56b891caf4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-4",
+      "unit_id": "456f0b11-1216-5325-a850-6760b3b6364b",
+      "content_sha256": "79b25cc0cf65e2c345164ffb0287f4435150600e67b9c1ebc1e516e73a9fed6d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-5",
+      "unit_id": "2aa42c5f-0970-510c-a468-4c8b63087242",
+      "content_sha256": "3f29d22025c853a2a337b118434b1caefddc070b0a2cfc4a482d3905ed3f0916",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-6",
+      "unit_id": "827ffe9b-676f-5804-b895-c20defb534d7",
+      "content_sha256": "747e89e4bb9fa8757d2e8dc8a92905a5504b85373874cb0c6aca2a46af1aa373",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-7",
+      "unit_id": "ab9d7a48-fed7-5cf6-817e-68528f7c7619",
+      "content_sha256": "be4e3a08cabbb79cc8dd735971010f4b85296aca00e6dee2d596f64e25ea298d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-8",
+      "unit_id": "93c8406d-1fd2-5898-9ce8-dd3a41bbe31a",
+      "content_sha256": "e047bfa28d61f96f53fcbd6f04dc741ff2f9e8700bac990e35c77291fc1b51b4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-8-a",
+      "unit_id": "c3ba9349-ec58-5e0e-86cb-b26a8c9bc1af",
+      "content_sha256": "ad3a1a9546c8be75c0194b3f8b1cd440c929c232c609cbd1fbbbac41633e55c0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "interceptacao",
+      "unit_key": "art-9",
+      "unit_id": "ed5da308-8174-5ecd-9106-44999e6766e9",
+      "content_sha256": "e687c04e0c8c822ae405086a582f617cc3e80eda0a3e1d860f9a18b30baf365c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-1",
+      "unit_id": "72a6ad91-a6e6-5caf-817f-07ce215699ef",
+      "content_sha256": "0c3f645db70be1c70d3e1454adfa80ebb044fccbf394109af1f19ae7f0615b9c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-10",
+      "unit_id": "e175d35e-76e1-5441-8557-e43d6693132e",
+      "content_sha256": "c743d0a5d49fa10d52d796ff2e5e9caac0f96dbc0b2d39ac90d2b89121d41228",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-10-a",
+      "unit_id": "47ccb122-6559-5905-bc37-0ad1585c8a12",
+      "content_sha256": "618f101a4344a6477bdc51f7fede86923283994883de7df9f3f8bc1249086cc6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-11",
+      "unit_id": "690d4edc-b1d9-5e2f-a285-7203dde91635",
+      "content_sha256": "935b53e49f3403a1b9beabc91301185cdb28acab25884d7875228e532c1c1d69",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-11-a",
+      "unit_id": "fae901d8-d400-5e49-bf57-d5f0c35dc109",
+      "content_sha256": "483c58313d0df4daa4de005032be21c94902f4a69dd337fecb28e0c44f1990ec",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-12",
+      "unit_id": "f4bd8370-8592-550a-a50f-87c969cab8dc",
+      "content_sha256": "5b45bc0f7bea311dc3ce68e8a1479957fb5b0e0c5cbbf76af446366dce221f70",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-12-a",
+      "unit_id": "cb75134e-ea3f-5b81-849e-45fb310d1159",
+      "content_sha256": "a1151843ad57f12b0a0bc18bc5ff1d871f4d676dfd8ce9fb45f61048b640f25d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-14",
+      "unit_id": "c51a0f8c-feee-52ba-b75e-9e4fa6ed60a3",
+      "content_sha256": "fdd79716a5086f8b9bc68c7dbe697a0b187cc82f497389b9e80f3a8ae84c82de",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-15",
+      "unit_id": "70a6af47-4d3a-5387-b615-123fad74c189",
+      "content_sha256": "f55787d54d78219ad29e5f72c992b7eea46bfbc1c0557bfd7a6cefbba545597c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-17-a",
+      "unit_id": "89ece92d-a2d4-57d4-a1f6-385090d519f6",
+      "content_sha256": "d8cbbf4ccc95eca1fe7b70e5cc83eaccad5a686da2e03c74792dbf1137fe20f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-17-b",
+      "unit_id": "8e14631f-ae7d-5eac-9712-1ae97a5fe900",
+      "content_sha256": "0ad128a3716021921771db80ae35603b47562c9ff577b89a46d02ef26bfd849f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-17-c",
+      "unit_id": "bb87ff91-4ece-5801-90ff-d513e0ef7a02",
+      "content_sha256": "94779059ade52deca668a2335082edab1d9f1608cc7d01239cf0650fc0038c6f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-17-d",
+      "unit_id": "cf9bf1c0-f73b-5b97-a0a6-622f7aa74778",
+      "content_sha256": "4a63ee2f3223f28709665086e08ce7109bfa652dd168cb43dbce9554a3665b79",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-17-e",
+      "unit_id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+      "content_sha256": "e159f8c52577b780cc6cf0f63f916c5b35df3f29ffbfc2c1383efadc54ea4380",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-18",
+      "unit_id": "ee504d3f-3470-58a3-b124-c9665d4e17d2",
+      "content_sha256": "25f662fef7c6c8fee91a3a1426485f6ee2fc356a8e209c1abe3bc63f12ed73cc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-2",
+      "unit_id": "94387394-1a1d-59a5-89f3-539b1c8ba114",
+      "content_sha256": "d8e72990bce3e808de2004cb7c6852b94edde2d9cc63c1f09cffeaa4ce2641ad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-4",
+      "unit_id": "387e8f3c-a231-5967-a083-68835e99b38f",
+      "content_sha256": "9340cae5a9b31f7b4317c62bab2d71cff90c05d367786201298d03ec3cd7f705",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-4-a",
+      "unit_id": "cdfd1a30-eaad-536f-bebe-295afeae531f",
+      "content_sha256": "1591e9652c70a34278b1b4b29f2e359ea404729543896dccec5cc90dace70e63",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-4-b",
+      "unit_id": "b9efc10b-d81e-5486-9302-22f9c9191ac9",
+      "content_sha256": "4490112c751748863035046b3bd32f8f35250d50e3bf9ddbeca98d9c99086fb8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-5",
+      "unit_id": "0148fb54-3615-59d0-8102-bd2223c22cc7",
+      "content_sha256": "0c5266c0eb71aedc53bf50f1e2453927a1060339fc88166d34d90f22437b473b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-6",
+      "unit_id": "3c00f7d6-9841-5fa2-8cf6-86bfa6b2b0e2",
+      "content_sha256": "57fcb436d02d931e30a6cae40878d344a7266b8ab7fe0231c6945e6fad4a6645",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-7",
+      "unit_id": "2dd947fd-c8cb-51c2-b0a4-af892392177a",
+      "content_sha256": "6aaf65300efcea7a319a8192a8636796a14a0b1c8ae8d0811039b6e5a57a52a2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-8",
+      "unit_id": "1141b4e0-5d93-564c-8b43-1f73ad51248b",
+      "content_sha256": "b06c2353bad1ef4dc2aed8debc12aebc6b17d871ad7c608de828b17753bb616f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lavagem",
+      "unit_key": "art-9",
+      "unit_id": "234ed26a-40b1-5c82-a703-ee1303044a0e",
+      "content_sha256": "f4afe098205845ec27d04fdb84c8760f4d1ff85c65e3c161c9d5b1c15a376370",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "lep",
+      "unit_key": "art-122",
+      "unit_id": "bbc98275-a676-5a23-bd15-c6321e5b05cf",
+      "content_sha256": "363adc6155e03d87e19d771a288c1d1084345bd889ce5012c29806c1e971f154",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "result": "corrected"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-1",
+      "unit_id": "9e88a238-bda7-51cc-b43c-fcfd174627ce",
+      "content_sha256": "20d0b5dce8ba5794bee87647500bb70bd11e0534235dffb4c8ce1e31ad26f455",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-10",
+      "unit_id": "3cfc53ff-2c1e-522f-8aae-fc4a679c4f41",
+      "content_sha256": "538384392b765b58e6d9cc18a6e9b82e9cf1c08b17232b80d3f4fba8e76a9b70",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-10-a",
+      "unit_id": "4ab5b054-fc92-5418-8811-1c872b049c8d",
+      "content_sha256": "4d7d0aefe8fb0a35b2eaef276091420aac56fea523f05768894550e9d7428777",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-11",
+      "unit_id": "eb192041-8f9d-5133-9237-1915cf47dd45",
+      "content_sha256": "25f3b0e6c84b393d7af8d1f3950f918b5979798d81f1794eeb3b6f8f4f2a1714",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12",
+      "unit_id": "bd82798c-2969-58aa-9726-ec2cc2fa8962",
+      "content_sha256": "2c8f6638ef2c6714cd850a7f4e2bea1570d956ee0bb52ece96be5bd3790873f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-a",
+      "unit_id": "386513d2-8efb-566b-ba9d-fb236eb3c845",
+      "content_sha256": "ec8cadd4419a62b84a418206e8c3087d5cdad96a728307ced2e7d1111151530a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-c",
+      "unit_id": "a9e3b77e-c95f-5356-a46f-5f6f0a46e6e9",
+      "content_sha256": "00b8802d26727644970f6080fa7c68be5625de8b88b5d41c7d03eb55036cf2fa",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-d",
+      "unit_id": "ba58c930-64ae-519f-bf54-e95797be1723",
+      "content_sha256": "27c9ab8a5dda33b361ef87f04ba80561b7fcb32f692eebc16233c62b1e299181",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-13",
+      "unit_id": "675d9d8a-179d-5921-9456-d501d68e21f5",
+      "content_sha256": "9f24616d4a9635a2d42f7b945333688a1e702acf94931556107ce854e37299b1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-14",
+      "unit_id": "215670ac-8d62-554d-b16a-05749899c5e0",
+      "content_sha256": "9815d653fd9075f588ee1ca21759ab0b10908c7a2817b58c61766ce56df7aa70",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-14-a",
+      "unit_id": "5c02d9b5-aed2-59f7-8aef-84195e61c5c8",
+      "content_sha256": "d6362fb0fcb26ca4dcdd4bf17be76b4927b7836bdbe5840619201a70cb69071f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-15",
+      "unit_id": "801003a5-eaac-5e6e-b717-28081b8a07a2",
+      "content_sha256": "0c415919dfc3d5106d27510c1ae7664b37b670b80217f1acae1bf22a630973d5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-16",
+      "unit_id": "b76b33d6-91a8-5e05-b452-292aa16ddda4",
+      "content_sha256": "51c05e6f2d915ddc6e034b37010089572e461cef0cedfdc5cd8c9c5426f951dc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "corrected"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-16-a",
+      "unit_id": "e78086f6-4f2a-5ebf-95ae-1484ca1e07a6",
+      "content_sha256": "5b927bbe9cc705ad8d22132b36c22b379c3154e26dc7544ed95bf7f2e3dc5635",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-17",
+      "unit_id": "57a76532-7ea6-55f3-b365-6a5684a81aa6",
+      "content_sha256": "f70fa09a3dad17be0d1e41c3f9a15cbdeb0c5befc688cead1ae43d767c842b86",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-17-a",
+      "unit_id": "bc006104-a091-5721-9a2c-fc0291fe3170",
+      "content_sha256": "73b4ff7fe232e4774b0d22113dce208c59de63a498c2e8cdf1f9738517e3ae74",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-18",
+      "unit_id": "3392ea58-c0b0-5269-9cc5-a0fd82d2a283",
+      "content_sha256": "baa7b2859f3c51938eb1314fa6c2c61f690da40af5edd78354f961d2f884820b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-19",
+      "unit_id": "b5b6ce03-e78e-5635-a26d-944d27452834",
+      "content_sha256": "b3a6e2d193d57f381c8f6d4e98fa62c052870832a40a4f57454f7574c8db129a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-2",
+      "unit_id": "410b9b84-f828-5f82-9fca-4acd76e98d39",
+      "content_sha256": "38604e70b0bd254b38bb9842f42a5622e5be6d1524090795550c82c3475153e4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-20",
+      "unit_id": "1a2fa4f8-9774-5072-848f-99afac82dd39",
+      "content_sha256": "0f22be1f6a91be584bdcf9bf81158c8b54faa4b13adfb536d0e6e1ee0de62d59",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-21",
+      "unit_id": "bc196173-8880-56f6-8b97-4a4a0e161f1f",
+      "content_sha256": "f8b489fa368328d6a4b29e420304bcfbd7b69b432e05578db5c19dd93ef0c621",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-22",
+      "unit_id": "20304c1d-7cb5-5e56-9218-977f903c2495",
+      "content_sha256": "6c67fe76fcad025964573de118854e0d2a7797ea29c0258c7003242ad155608a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-23",
+      "unit_id": "f3dc334e-60c0-5e5f-b701-fd9b4fe21d45",
+      "content_sha256": "9b340db8b783c095ab6ce2a03853cb878c1ccb3090b34faf4fefa01f5570a186",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-24",
+      "unit_id": "d52a6d32-4604-55f8-aece-1cd440f6e504",
+      "content_sha256": "eaba0353e16438bdecf3c8993d4d19e1e58e32b69e4e5cc4a683f80b78dc5cc7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-24-a",
+      "unit_id": "55d49c2a-43d4-53f2-b49d-f40afe6994ba",
+      "content_sha256": "399a1095322d31c77af7588ec06660b97c7bb41af2a24217ecdbdd23182b3f22",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-25",
+      "unit_id": "82056158-4f1c-5ea3-b1b7-73f800a5d995",
+      "content_sha256": "2eaa9c54e60c4b8b98d3d91853916dca4f761f3f8c69466ca99a63edd9e51d3b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-26",
+      "unit_id": "48229982-ba1e-501c-ba20-ebfc716f9600",
+      "content_sha256": "127b89533e6e3b4a8419036743a8bb4c3e7651ca43cdb2a4bd0610026f3a9ebd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-27",
+      "unit_id": "423f6166-b856-5cf3-b292-1d2258958cb8",
+      "content_sha256": "24b3e6d4e34f57466b754948c2fa85b0eb45487ad80ec77f0628c0616ef0323d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-28",
+      "unit_id": "206e05b3-6d2e-52bb-921d-9b37a85f9c94",
+      "content_sha256": "7d240dbcf7096f7469dd032d43da8012b9f0aa489eb26877b145d829ad1144bf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-29",
+      "unit_id": "30ca5a1e-4be2-58dc-98d4-256c21df6c96",
+      "content_sha256": "2efa7404b5fc42c992e12699007c79c9a0d2928da1c2ffac05eebdad4354f4a7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-3",
+      "unit_id": "34b54df2-5d36-5e91-9312-9fa47a571842",
+      "content_sha256": "62de027e7377489acc36154ae5690da5df750ac2fd2c863e38db0e6d26ffd466",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-30",
+      "unit_id": "2423bdec-db6f-593c-994c-cb773706b453",
+      "content_sha256": "d1ba88edb06deae35b51540d01200d93245fbb99efe745f2d15a5773f8369c55",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-31",
+      "unit_id": "fefb9932-2f09-5753-ba74-b93d9aefef6f",
+      "content_sha256": "8ebe21a952717ab525fb07480a2c92fc5c42d7e66af7fcc535167f79fe3e43b2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-32",
+      "unit_id": "e08dd47b-7c52-5b7e-b883-0a6d2b1fed4e",
+      "content_sha256": "beb7c0c8a92672992be48ef634c5c95134b3bf2bfaf7162f72a55e57d2600665",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-33",
+      "unit_id": "44e68548-1d31-5da1-911b-3ae456338411",
+      "content_sha256": "87c3e7de05692ff8edf49e5bea91f3a8e4e006b88e9c345b781b6df47fd9d6f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-34",
+      "unit_id": "ed495d3c-f3ac-5535-afaf-8eecd46640ff",
+      "content_sha256": "2ea6c3c5cc5bc139e9950fa0dbae2e9dfaecb17f1bc2194f6835b86fdd7f8128",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-35",
+      "unit_id": "dc53f041-3b8a-5f54-9f3d-c21daa839455",
+      "content_sha256": "1808141759f78ba7348e8caba9e286305b8358087d42645b2708693925aba370",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-36",
+      "unit_id": "08d72967-5be6-532d-9c58-9eaec191def2",
+      "content_sha256": "1a7176fee719883e50adeb79542b3199bf5b023ebedbff7db34434beea05a35e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-37",
+      "unit_id": "58132585-3812-52a3-ba15-abb344bdd9eb",
+      "content_sha256": "021712f9facc01cbab8b69b5ed67a30f0751bc24f79701f11988c898eb69117b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-38",
+      "unit_id": "580ca45d-f324-56b6-ae08-277ece8492aa",
+      "content_sha256": "f0c4037cacc8019da2765a8f74adc8eed03a50ef08c076a0afde28e8be65317f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-38-a",
+      "unit_id": "9f203628-d8a6-5169-bb9b-93782faf2e28",
+      "content_sha256": "6f5e42579ba983063f727267c9dd862ac0d0f634ae79c364a092f1932048cb72",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-39",
+      "unit_id": "53fcd2d9-b3fc-5cde-8eb9-93ea07526cae",
+      "content_sha256": "d582b7efca5f3a54c67a19297db7e17f99a4807fc2fd4d2d2ddd17d4d7c03286",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-4",
+      "unit_id": "0961ca54-c52d-5b02-b5cb-794a77372c96",
+      "content_sha256": "f2b37bc223df2a3b12946705bd5be7470f5503167b66d163ab9fa2fac50fdc75",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-40",
+      "unit_id": "47350586-eeca-5942-a797-a6fb71b8bd9f",
+      "content_sha256": "3bcf2a037a923a8c8ef22f3f6f493fabda6309f0b9889781628959f734c9a2c2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-40-a",
+      "unit_id": "cd790ba2-a053-547a-9bec-a5f006332c86",
+      "content_sha256": "e9ab0b42c1cdcc5d09334bf521737eabb73de83c1b94e4a10b433bfc4dd4b114",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-41",
+      "unit_id": "5344253b-ec9b-5f6b-ac64-5ae0faac5023",
+      "content_sha256": "01d28a03f7b52b679410c9cde30b3da0f67e919c35ee5abef4c567abe74ef6ef",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-42",
+      "unit_id": "8d6b0f78-15ce-5031-8d42-65291adb6941",
+      "content_sha256": "2275aaf644964d5e58975dcfc0449e7b78695d6926e7a9607261c4d7accc3aab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-43",
+      "unit_id": "a25b8e15-ddf6-5248-b725-5cfa00d1f958",
+      "content_sha256": "3906d12e5334eef5bfa9a58bc1af2a1f08611e8dee7990f556e1e6dbce9ec523",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-44",
+      "unit_id": "9882f379-1c69-51c0-8afd-ccf08028c1a3",
+      "content_sha256": "734e2ca9c2866aab3e8e8dfef244f9fcfbf1c82713bebabf49cdf5095aca4fc2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-45",
+      "unit_id": "c36571f8-112e-5f5e-a602-adebbdbc42b5",
+      "content_sha256": "c88a122397b23c5b671d7679960ef94333feb03f1c7cae1bbf00ffa63764701b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-46",
+      "unit_id": "c22cf3b2-434d-58fc-938a-ee0a950b629f",
+      "content_sha256": "72a229a6f00e4b7be0245161361a1b8fef7873785572a0746a18d9e4140a2ca6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-5",
+      "unit_id": "52ccbbf8-39ca-57ac-823a-23b791a1cabf",
+      "content_sha256": "b93c8840d29312b2bb0f36cf8ddca7a0fbe99e98e23b2c2d77f6cbcb4e6da6d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-6",
+      "unit_id": "bf193a34-2dc9-5c7f-aff0-1b9880467025",
+      "content_sha256": "4c228430771280fb2f2eebddb7c37aae50fe021ce2360805dfe0e00b71aea0bd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-7",
+      "unit_id": "6524002f-57e6-53de-b9d9-7502493de36a",
+      "content_sha256": "feb7d7316070b26f8a0fa8ba5b140be559c7f771f05364d4be00a124142cee4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-8",
+      "unit_id": "a2501606-af92-561b-a946-290107094bd3",
+      "content_sha256": "af55169bafb4b39b07954fd15647a85336cc9f8672af5fce9a58290f5f5e733d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-9",
+      "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+      "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "deepened"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-1",
+      "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+      "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-2",
+      "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+      "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-3",
+      "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+      "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-4",
+      "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+      "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-5",
+      "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+      "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-6",
+      "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+      "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-7",
+      "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+      "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-8",
+      "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+      "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-1",
+      "unit_id": "743ebcd9-7239-5880-82a4-21b777d4a0d1",
+      "content_sha256": "95c033703c1342b4d23b4780cabf9935edad58192ba50be0661611b78293762b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-10",
+      "unit_id": "535e0fc8-f916-529a-b090-27e2b33ea1c7",
+      "content_sha256": "6f70b3d508a535b1d14d5c26278503c3d38c1ec9baac0593a5923018f79cc7b8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-11",
+      "unit_id": "72154b20-8a62-5fb6-a331-4f9327995d5f",
+      "content_sha256": "ad17cced1b9f47d0a02393406ac877da94147ae514095c30ca8f33f9d0051de7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-12",
+      "unit_id": "a5d85413-a5f2-5688-9e99-8aa37cb514b5",
+      "content_sha256": "5e4043dca9ab052558f977cb8e6b495494b54eb29621dc17579f2bd44e70ec25",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-13",
+      "unit_id": "29efedf2-7fa6-553b-bea8-fee1446934bd",
+      "content_sha256": "bdd3e1cb2e00613f794761c66998c48ce41822b9f0b7c6581901a043f8a940b3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-14",
+      "unit_id": "91ccd39a-f5a5-5086-adfb-106776b3abf1",
+      "content_sha256": "c6652d2f5c75d8605fea564076c979e2f311493529a25259864724167e0575f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-15",
+      "unit_id": "23481fc6-1a3e-5b88-a342-7882165b369d",
+      "content_sha256": "4b0e71136627cf5897756bb7689453e85bb298ff1b8326d1db486dbf7ce48005",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-16",
+      "unit_id": "efacae4d-5b7b-5123-bb1c-5b384840df62",
+      "content_sha256": "12df09e431df8f6eb0f030018aed75187999327e9bdc00a12113cecc177ed51e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-17",
+      "unit_id": "4b0ca10d-d910-5ee8-b12f-1e74591e3943",
+      "content_sha256": "4169dbadd74329544f8eb89abdfc128e93b6df63cef7bc2a25aeaafa711ec648",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-18",
+      "unit_id": "69a78ae0-0653-59da-9097-e968081a0e6d",
+      "content_sha256": "1646a2f2611560126a7645281071b2bf296c7d61fcf3950ef73c9b30fb68cef6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-19",
+      "unit_id": "c373c70e-fd9b-5e6c-bb16-8c8772750848",
+      "content_sha256": "ad69dbac06e3266fc2559390fef6061dad87eb4d267b26454c9b8b703f20ae69",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-2",
+      "unit_id": "d146e51f-31df-5d48-9bf6-8f925c8a416c",
+      "content_sha256": "4f30dc9b47b0c602598851a12b0ff8b9cb318aafc09e0f5a80d221f82ebf5b32",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-20",
+      "unit_id": "681d73b7-5560-583f-9114-8db5b2948390",
+      "content_sha256": "33a235f7c3d11973dcab0b7965daaeb3c9089fc5b2ab03376e724aa3d7b9d6a3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-21",
+      "unit_id": "fa3df2ca-238b-5e95-bc11-1da324f76a05",
+      "content_sha256": "f986af0ce05979c950ef71ce89c2b9e99ccc0ee491f2c78b8f9e350b03686d45",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-22",
+      "unit_id": "934c493e-5bdc-5698-b3e8-05016873840c",
+      "content_sha256": "97429a654af1d05f368395d773b53985ae26c276f703a66833715d79154c8e5d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-3",
+      "unit_id": "2fc602fd-c4bc-54bb-b453-ad142b9d57da",
+      "content_sha256": "a1e61cc3c5077d03a8a7a9ebe63f518fa9d34670a0766102ef3c1cd84a14e80e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-4",
+      "unit_id": "0d2ba006-b198-52bc-ab52-6c7ff8a01231",
+      "content_sha256": "b38e03e7d987c5fb5dd34f6244ebbd84f3ee69651938b5a93c9e15ae4aa56ddf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-5",
+      "unit_id": "e75f289c-b206-50af-88e5-fa33eab2ffff",
+      "content_sha256": "721771055b73d7414957c62115f9fbd3cfdb1f159b0d5b202667be64d8e00203",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-6",
+      "unit_id": "481fe6c7-c7ce-58f6-94db-426635f281e7",
+      "content_sha256": "eefee7876aa7b98c5d6eb8ce8dc88bfb5a4249d7f74a7579dbd05353c64814ca",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-7",
+      "unit_id": "56a4c186-e99d-529a-90f0-f6ca2b130d40",
+      "content_sha256": "17749c377b48ab7d3426b91be3d4e1cc1504847c15ceb4fce118d596a7f2d673",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-8",
+      "unit_id": "863cdc25-8b15-5756-9932-7d696fb91426",
+      "content_sha256": "90678ffc575aa3f589db08d7d9b0f657494625623e7095c2a1bd78beaf2e3efb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-9",
+      "unit_id": "7b6d7837-66ec-5261-b152-3cc6f28f0e68",
+      "content_sha256": "f335c383f3d74f736a093b1300cd9882f9b750a2899ec87791c335fbf7d15192",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pf-interestadual",
+      "unit_key": "art-1",
+      "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
+      "content_sha256": "352eed28acede3992c8b680aeab77f4778bc76e66797440fa48bb9a29553aab0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pf-interestadual",
+      "unit_key": "art-2",
+      "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
+      "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-1",
+      "unit_id": "33e87330-80dc-5539-8685-fc3e40024b63",
+      "content_sha256": "b4d912427753672d56df0363f49a8a0355d081613ddb174079f8e2d69825c1d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-10",
+      "unit_id": "72766b98-fe32-5c12-8029-c491c2d031b4",
+      "content_sha256": "64025b2a1beb426544b0ccebb5d7ada5fffa351fb67acbe774b7d769b7463bc0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-11",
+      "unit_id": "8a956aa2-4758-5728-9964-54ae8b646669",
+      "content_sha256": "78df2355a41e1a893fce78a2ce0e1db73f50d340fba8ef7b4c0908cc5d08c0fa",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-12",
+      "unit_id": "4ed0c4a9-c1e3-5fb9-aa5f-8a2d0d00ae16",
+      "content_sha256": "1a6ccdd6e7b64211f14b7d373fe1b7e6257cfa93a43b506d0f557334a25076fd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-13",
+      "unit_id": "308a7610-5384-5b86-a59b-c1abb9debad9",
+      "content_sha256": "d35af23e06de4c011c52ae0fbfa41ffd012a5b0f643ec5a7e13baa260fb7ad0c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-14",
+      "unit_id": "df797309-7258-5415-b3ec-235092cce794",
+      "content_sha256": "86f4f5d9e0cd6cccc520e2333f71a1654c8d360501ea1d9b44e36619c6ed5b34",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-15",
+      "unit_id": "1ae66c03-4af0-58fa-b186-84028e942fc8",
+      "content_sha256": "de430c5e43d1dd4bfea1235d6adfc593c04515779034a5911897f3759ca45df3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-16",
+      "unit_id": "03cec783-7c6c-502c-9f77-f2f34a82242d",
+      "content_sha256": "bbf0a679fd3be484dae902aecce9a29df0499c264f683f98eaea5a9d4579a845",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-17",
+      "unit_id": "1d83fab6-0b5a-5fc1-8f2e-ac66e5ac2e8f",
+      "content_sha256": "45951ad7301613e9a1511f395582eaf966ba8e7d499aee4a2008c28cf63667d7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-18",
+      "unit_id": "50bd3f69-7e2b-5d89-b5ca-c32c9f5550f1",
+      "content_sha256": "df010a0a38e2f5ac35c4358deb6d373154dd655d73e1f89bf5694669ef6185d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-19",
+      "unit_id": "7c10a734-46b4-5b52-ab08-ff4bc8045c0c",
+      "content_sha256": "10d20af3e6bfbeefb274c899261a2e3bf662a49a9f82e4f35731321f02ce3998",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-2",
+      "unit_id": "e0b21790-196d-56d1-b4a4-38a5e4f5e669",
+      "content_sha256": "1d786a0dad2923a636612fd95b05facc2f837269c8139ad3854091a7b6f5b0d1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-20",
+      "unit_id": "090dca7a-295b-5254-b326-376874122ce1",
+      "content_sha256": "81491a05873aebdb2d918e2f059a9c215eca9525063c9e599449a60ded086752",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-21",
+      "unit_id": "db52a2bf-6410-543a-838d-7386d2c8c70f",
+      "content_sha256": "1c935104c08648096f6a77ed7b465424ecb10bc32caeea87d50d7dd10286b475",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-22",
+      "unit_id": "572abc63-3df1-566e-bbf4-e9a7f1e953df",
+      "content_sha256": "aeaadba8b7316682cfecc3ac1f715d53192897e28de1098220557cab5238d448",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-23",
+      "unit_id": "2db14133-8c90-5210-a480-10cd98f3f265",
+      "content_sha256": "02182cef7095c5a50f45bfbd26356d2523a25e2feee26c7cf3dfbe4d4f19b651",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-3",
+      "unit_id": "647054c4-2aa0-5250-9a1c-d64f8f90eca3",
+      "content_sha256": "90517c6ccf67463cad1027c411968fe614f0ad35f39b37b0b9d1d0ee0b110ce3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-4",
+      "unit_id": "08abaa99-9f4c-5859-8202-f2399b6700ca",
+      "content_sha256": "dc8045c2fe8206857f1141c6a46b8c93215dba2fe976a51adc8997fd9a18f551",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-5",
+      "unit_id": "052bca08-42b3-577b-b392-13f50cfb3211",
+      "content_sha256": "58ef2053c8d797760cc4bf7007d0b4d4f1d642d2e0ff013c4a32a01af9629312",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-6",
+      "unit_id": "4921648d-df82-5085-8eb0-47f060ff5359",
+      "content_sha256": "bb662fa1d2cb057cee11de575fb7282cc253bad2c15087df7d720db656184a21",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-7",
+      "unit_id": "65d8f6d5-5085-502a-9e69-8c4c4e46547d",
+      "content_sha256": "6ecd2dbd1b2bde4148e561ce3a6d23a335a442882d535d750c258ff6373acde2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-8",
+      "unit_id": "d21ff4e7-afd4-5e56-958d-a9afffda0f20",
+      "content_sha256": "8af2f1e56c054c046b132516f8f442b777ff3f0b44659230ae6d839730ea9aa6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "quimicos",
+      "unit_key": "art-9",
+      "unit_id": "1d98b141-51dc-5763-8c8c-417f6d71a986",
+      "content_sha256": "bda793054185016e3d807f3a23b06346383ac8fe53499b5e3834dfd516336e7a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-1",
+      "unit_id": "c3a9a7df-b933-5f4a-8a9d-c19df8b5d33a",
+      "content_sha256": "77506387d0338c45112eb5fe4785c8223d7b72e015f1714058215a5f17e0602c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-10",
+      "unit_id": "a28935ea-b85f-504b-8527-b5a263d1ea5d",
+      "content_sha256": "6d1752fede10b39f492daa2be133f8c476ac566af3f81c5bde9f988f8db68dfa",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-11",
+      "unit_id": "407cbb3f-0973-505d-98d5-2fd3097c0837",
+      "content_sha256": "70e63cd06f7daaebed0ce1f1605619e42f76727ac2768b7a85fc7b27d4abd72f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-12",
+      "unit_id": "30587138-3234-5eb7-82b3-da0d147e22ef",
+      "content_sha256": "be7f538705ba5daecf63df1b0f693d84f075f5ceb4ad0b9344524449d22e4b3f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-13",
+      "unit_id": "c1f62444-5e22-53ef-a778-2147d6c9cd1c",
+      "content_sha256": "97d3f629b479a3f66809d5d3cde70ed773e6bc81a3488e0ea3930571783d6099",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-14",
+      "unit_id": "0e5477f9-5881-55ac-a836-4484e467cb93",
+      "content_sha256": "bdae00406bb43e017b9ba6808526276006bca28f36464a163a7341134c2a7cd6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-16",
+      "unit_id": "14e4b4e8-8595-5f62-b10d-ae354c3a7657",
+      "content_sha256": "00985fd0075d3de595912f9dd6254d22251195b33438bb0ebe125465448f3b78",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-18",
+      "unit_id": "f4cf8c75-79c9-58e8-94bd-63b291d0772c",
+      "content_sha256": "e746f32f86dd97e02414cf155e8e578369e546c927623aa28853524c4b05a62f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-2-a",
+      "unit_id": "22ed7b8e-57ab-58b4-9ce7-b717aa3ccec1",
+      "content_sha256": "5b87b874e75f2db416b9f5e538aeb07314897aaa5e8827ff33ba812dbafeaade",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20",
+      "unit_id": "a03b0a35-21dd-5567-b960-f55b25b23256",
+      "content_sha256": "c038a1ac299f1616d34c6faa619a2d4ab6a0f460299e08391a85301302971192",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-a",
+      "unit_id": "d0c66208-ccd6-590e-bf15-1ea4318a3197",
+      "content_sha256": "25304412a5fe7dbfb722d5ffb9579a5bfac3e20a92c5d1abc91ff26ed45004b7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-b",
+      "unit_id": "0a29959c-efd4-55ae-b7c4-db83dd40df2a",
+      "content_sha256": "8e7e8a7d609a4d176a788b224391a0a13320b8ab23fda7ea10f4246b48896e97",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-c",
+      "unit_id": "ffe154ff-849e-5e58-af6b-f89d3201976f",
+      "content_sha256": "b2779c57626d37c53b04aa3c28e4029214956c9016a65dc9d7cb61f9b0ab9b68",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-d",
+      "unit_id": "374831f6-d91b-5159-8381-b927f91c3338",
+      "content_sha256": "3977fb2cea02fc76d634738de162b9ba221a660cbc8d2546e1918ef2fd798b81",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-21",
+      "unit_id": "0446b679-1060-512e-a66c-3a3753e87daf",
+      "content_sha256": "e9199a89c04a947954f5520e239519d59b55622861971bedf1d0dd09658ac964",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-22",
+      "unit_id": "4a764bc9-bb72-568d-9957-465348795c3a",
+      "content_sha256": "e7955e16161fdfe9d86c5560234672c751a1d4b6e3fe3b8d0d7969c279452559",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-3",
+      "unit_id": "0a2b7402-ebfe-509a-bb1f-5a5863939436",
+      "content_sha256": "76c18f812e8d4ec21a7382eae5867f12fef853a5f620b4892948b20158a87ffe",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-4",
+      "unit_id": "07a4d064-2a7b-5367-b89e-7abc5f0b33c1",
+      "content_sha256": "278e5f0cfeaa4f6be0deffb7977e1ddcae29c492c9068b5ce94ebdf492d734d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-5",
+      "unit_id": "7dc34855-b76c-537f-b9d2-24f358497b0c",
+      "content_sha256": "9942d389b5e4f0a82e57a6b41b8f8c06d412b59d2d59b10cb13ba2d1e28576d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-6",
+      "unit_id": "be6c3154-fef7-5b84-aab3-f3a1257f4340",
+      "content_sha256": "0399c69b7647a22201473032ac851fafdd4d603a75d34bc534cbf34345b2a00a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-7",
+      "unit_id": "2f78f2a5-aa5b-55a3-9a85-30598f554c77",
+      "content_sha256": "245c18abedaf3ecd8e44bb3d2a1b7906ab1ccea5a7b73961ff546a7eec1578ac",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-8",
+      "unit_id": "f68f9ff8-ca74-5eb2-91eb-4e7a139f0eba",
+      "content_sha256": "a70cbf249288a73686516b404d9fbc73468bc551b7ddcb7420e0ab58cee5e312",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-9",
+      "unit_id": "172c07a6-eadf-5b1e-a534-243a8a6c027b",
+      "content_sha256": "63125cc06ec915e61b430401394eb131fd5b652bb466a8480369c7940e7dd770",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-1",
+      "unit_id": "039ebe7d-b2b0-591c-a58c-6d3fb4fc792b",
+      "content_sha256": "d0667d4a6722f947e93b12bf0a33895d9a50dda3afe48210a1a1cbb7899e1296",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-2",
+      "unit_id": "b3c96b35-1fc7-53ea-9922-601bc808ac2a",
+      "content_sha256": "f89e572152f6498ef018c43dcf2e168ec36383d9ea44369e87e9a9592b25167b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-3",
+      "unit_id": "69ab257d-5d03-562f-b2c4-fa9021703f8e",
+      "content_sha256": "57bc1c135d7ece6b16a492ca751d8102b821a8c96d55a611094761154ae7ea44",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-4",
+      "unit_id": "169c5373-7f06-5971-9b60-1496a611ed45",
+      "content_sha256": "ebd7eedeea248a94f5736fe7b3d372b4ebc5a5e6834bd2d8ad80d2efd4d13725",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-5",
+      "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+      "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-7",
+      "unit_id": "177224d3-a968-5923-bf86-9a4d63279d1e",
+      "content_sha256": "7f0ace71f32e64b020d5db883464095c5b0776931c92ab094368c80f9cc361b3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-8",
+      "unit_id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
+      "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-1",
+      "unit_id": "b4f660bb-43ca-5695-a05d-0f2fdead2144",
+      "content_sha256": "4ea1f555d76d9bc5398354946eedd02f76e1265c6169b3b7106ac8a5a840a24e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-10",
+      "unit_id": "46b96c19-e088-528f-9824-5c2f42fbd94d",
+      "content_sha256": "48bc255a2182b61591103277762a9a10a91c61ae38535bc94833e2db642b5aba",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-11",
+      "unit_id": "2d379d06-0556-5856-93e0-7f8a32fb34d7",
+      "content_sha256": "b22158854d7668b1ceb54949e39415010351b5ba71c827b0ecdcb75f80688df2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-12",
+      "unit_id": "5b7c45cb-c72c-58fa-8dd9-7d08887fca94",
+      "content_sha256": "2b7927bce0e64d1a2a7379487f2ef7fa89842e61fcf3a4ebb3ad5830896a986b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-13",
+      "unit_id": "cb99be89-5ee9-5514-a629-5aa0faf18005",
+      "content_sha256": "04568692d643003b8a56b8bec8ddcfc9f1e98bdfb18f4c246eae36da3586a5e9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-14",
+      "unit_id": "297b96fe-f6e9-513f-b49e-8eb84490c137",
+      "content_sha256": "11a59eff182b7ea933279bf5256c14b86bffaae95bfb6420853d7b267eb28155",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-15",
+      "unit_id": "bb26357d-fe21-5c2b-bd14-a99e4423ae94",
+      "content_sha256": "12821de4a895ef2f5b7b12c0e990d8fb446921dce6fd9869486bedfb1fee2bf2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-16",
+      "unit_id": "7ad77cf7-554d-5843-9ab4-503b6646c392",
+      "content_sha256": "def2d5de31817b819ca2143d9736537ad72d3185cc34cbab82d8d87f1777fa10",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-17",
+      "unit_id": "74d7a1bf-904a-5403-bc1d-260a6ce6ec50",
+      "content_sha256": "f15d3727c0adf69369165b6b96632716b8b4a77588d262b268f702fa0b77363d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-18",
+      "unit_id": "f70c58d9-b5f9-5077-b2d4-ac0e2041c8db",
+      "content_sha256": "99841f31aa8bbea8996d3827f53b5c3b339a2c0af77460a51468907919973af8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-19",
+      "unit_id": "8a35b7e6-b329-5b14-8a5a-ebdb682f9648",
+      "content_sha256": "3fba354c543afd2dc2d31beb7ae9b0492b791fe8ec3e535c3ae1b7fa95521a0e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-2",
+      "unit_id": "515966e5-4480-5357-843e-61ac1392ff34",
+      "content_sha256": "676663e89950a1fe33cad630ec535dbb0ec6b086e17c8be082c6daf6ba571251",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-20",
+      "unit_id": "b30d838d-9071-506a-aa41-48526ecf14fd",
+      "content_sha256": "941f3d9b82627736c2780161b62b469b89fc34967d2efcc0e321d223d4007637",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-21",
+      "unit_id": "86b1e58f-8367-5553-9e36-8e50a6e29f3d",
+      "content_sha256": "63bc27c144d0cd5c47c923112d0f12c0e89a62eea60728e6d6de3ad15568e686",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-22",
+      "unit_id": "d00d20aa-2818-5a36-83e5-6228b45bf9a5",
+      "content_sha256": "d0e9bf78cd68b8e267928ab748bd0beb8543c51b7fb2c467f012cbbf7421f764",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-23",
+      "unit_id": "cf8d8e03-ecdd-5bdc-b24f-199881307b4a",
+      "content_sha256": "013cda585d14e5dd8e27d1813d8ab4cf5f3cbff1ee24bbbbfcc9524186023386",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-24",
+      "unit_id": "ddd9bcdb-ccf9-5955-9c72-7a7337632228",
+      "content_sha256": "b144d4710e8ea28fd73cbfbbbd055d8359ed9a30574c7fd2e4a84add1fdf2066",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-25",
+      "unit_id": "f17bcb04-58ed-54b9-9761-a01fed5bcd82",
+      "content_sha256": "7f2be2238bf944ef5e3c7eb1c6fb5cb978bea852c94f52ea480ff3be397aa3f6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-26",
+      "unit_id": "44ea24af-1f5f-5fd6-b2e5-6fd81bacae6a",
+      "content_sha256": "0d3e750b6421fc1408d203bfcd68f710fcfd7fbe9976b16de7156e4334ca5460",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-27",
+      "unit_id": "f6ae4f31-b5b8-5ff5-b1c2-c4403f0c9b8a",
+      "content_sha256": "11b96a005c1612f705a9398c95af2d1abb179e39261fe4d5cbe998eccc1e768b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-28",
+      "unit_id": "b982bd25-02c9-53ae-bb69-5dbef60f1392",
+      "content_sha256": "2a204a0de01cf5a678e42491c284b30bb6e6cbbfd01b8c33553348b41657fa4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-29",
+      "unit_id": "e6d48f66-277f-5d0f-aa14-15bb466652d8",
+      "content_sha256": "5982255905f5b6380063d540ab92d4a53129464eba47edc45e6ac9f92b69e81c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-3",
+      "unit_id": "f53b9b41-4ae8-5a0a-987d-cacb9592816d",
+      "content_sha256": "72189785508575e52a70ee55470d690b6cf6c7d92e240e1dfc32137751707f0d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-4",
+      "unit_id": "53b1621f-8369-56c0-bed2-0fc6029ffb04",
+      "content_sha256": "9ee7f9c8b389a30f4649c0f5ae7bd6040f0772c40d3aab492cee7e30ca83e2ba",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-5",
+      "unit_id": "1d88adb4-aac8-5137-b47c-f99fcf128b57",
+      "content_sha256": "7f84d0f328dd778f07f60fd607374945649b35773522b43af48e80231497c9d7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-6",
+      "unit_id": "d825510d-c705-5e6d-8116-87a9d58ab32a",
+      "content_sha256": "baa17848a1004fca023438bb93b6299231e1d5848e933517109445efd293dd50",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-7",
+      "unit_id": "f0ff2fd7-5eb2-5723-9c8a-cb26928b4a28",
+      "content_sha256": "2de2bdc7e3c55d46118636fbefaf455b70d6789ff4f5c5d6bc006d647decab1c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-8",
+      "unit_id": "d2d2a3f6-37b5-576e-bfd0-79adc401e954",
+      "content_sha256": "e195e5533a0d5fd2375214a8994dfc3811a251dcd9f653a5322775a6b83bf66f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-9",
+      "unit_id": "6c12c78f-1911-577f-a3bb-f68924ca6215",
+      "content_sha256": "35e2eb84f67cce083aa95036b3a2e97d15c31cb571b6ece9dcbae1832d8d3e46",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-1",
+      "unit_id": "7e2919d5-a21a-5470-b555-a12604d040fb",
+      "content_sha256": "ba0239b656fb277d390dab5be792b13f91863f8babeff49f1aaa52b4c0b56b9b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-2",
+      "unit_id": "d20a035a-1d9f-5d2c-aca1-794bd2b11e5d",
+      "content_sha256": "f69cfa67995d998725753a1ffb75cc89765d8325788d0e1bc6ec3af21b746f9a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-3",
+      "unit_id": "c9b6d578-9ebb-563f-ac4e-bc7ad2c5a922",
+      "content_sha256": "6adc769dcdcfb67eefbd99dc0d4f9de94b88e97f2ef1f93354b3febed57673bc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-4",
+      "unit_id": "d070c0bd-2226-5b13-bd0b-a72b73daf730",
+      "content_sha256": "2d81067857fccf201628dd6f8dfe25533a3ce17548a94d3442b15cf3237306e9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-5",
+      "unit_id": "3cd6296b-7b50-545b-9e2f-cafe5453cfbd",
+      "content_sha256": "3c843290160f646081b39d7e411fcf54d0a3e0c1531234d3023b2a86a5eb1687",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-6",
+      "unit_id": "fa3463da-9083-533a-8436-3ad3589a0c71",
+      "content_sha256": "07ae326f3bcda8526ff6baf4243fd974b29cf5ce62dfdcb256547518f214b790",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "temporaria",
+      "unit_key": "art-7",
+      "unit_id": "03e6b9b3-97ab-53a8-a430-883361bb42d9",
+      "content_sha256": "6e88e88b1a0e3bd66799665543a7bc49b18e55e7e71b66c30d670312be4db91d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-1",
+      "unit_id": "bb7d62b5-b624-5046-ba49-c7522dd07e63",
+      "content_sha256": "9c75849bdcc85ebdc49e70b0eca9951c692d934709f87d258299929ec21eb977",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-10",
+      "unit_id": "2bcd0d73-fbb9-5fda-8b49-183f696e58bf",
+      "content_sha256": "0a0f0f27dbdf388a3339c9c77aeb1b6de17e4da3f8646241bc23cf873883700f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-11",
+      "unit_id": "047fdae5-d024-5961-8979-2f76f0026e00",
+      "content_sha256": "d5fdeb253ee7468891180498682c7a232aade465eb1636c9a2a7ef88d3a35b10",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-12",
+      "unit_id": "f332a0c8-d4ae-534e-aa35-e106a9d79bfa",
+      "content_sha256": "a36b918419a218a9a4677a4b4a69693c5147809466cb2c986d8de8697c259f5f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-13",
+      "unit_id": "6d4a790b-44f5-54e4-99c4-7ff8857fb412",
+      "content_sha256": "6c64350ce8b699c82d6086c12572ff2972f2893bbedd068c17cef40d093263d5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-14",
+      "unit_id": "cb4c76fd-d5e0-51cc-8be1-d0e8cf9d30ab",
+      "content_sha256": "a511bb85e47aa4524f7fee5a16dcd9f061f210f0fc41f9eb6b34a543ea2cd0c6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-15",
+      "unit_id": "0f4baba4-0f6d-52bd-b4fe-81f642388c5e",
+      "content_sha256": "6a944face589b064cedad5e984322208b97d220c4a446925e456dcb18c0aa353",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-16",
+      "unit_id": "4e50656a-549e-549a-8680-ce1db82dcf28",
+      "content_sha256": "d346a77235d38d5e6d3319237ec8b4f4e63800c6567a7d0b5b1a0812cca0d297",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-17",
+      "unit_id": "38cd0e07-57ce-5a29-9a41-b9993f8d3440",
+      "content_sha256": "af59fbfaebef1dc8a6f02799b03b64c12819c4dac0347c0801ad6a0a1d4453ac",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-18",
+      "unit_id": "44d871c6-3aca-54ef-b4f2-1aed20c3b4bc",
+      "content_sha256": "74893c91db9e379818cd1fb423c8c5c7e186a9572bfa5f06981fdb583d455555",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-19",
+      "unit_id": "af930a0b-bc9c-5415-ae0b-3acbb9febbf6",
+      "content_sha256": "a95dbb7fe4eecc0b643fda885a04b63af24ff8faf6bf627b3507145dea715acb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-2",
+      "unit_id": "1c7ecb66-3c62-5184-8519-bd51b76464ca",
+      "content_sha256": "c3d3b7756fc23e6d07183c1e33baeedf08e6df973f7d69900fb62a0360018453",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-20",
+      "unit_id": "7929ba4e-deda-5a50-9fe3-9b137a4cea70",
+      "content_sha256": "f8780e91fb6914edf2209528f7414503773616d7ae778c9ef4de4ce9d695d129",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-3",
+      "unit_id": "d65f1bf9-87a3-58e5-8d61-8272cbfd1e8b",
+      "content_sha256": "0bc0f817816e68d4f71b18ff16e2e0e6c6a02cac67714f727d8846616f43c094",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-5",
+      "unit_id": "6056e621-ff9a-5a6f-8735-ae5ff8d9d547",
+      "content_sha256": "4d342251f525016dccde95017fac3f5c50c80056add15c8513934c9dc2bc7405",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-6",
+      "unit_id": "02344771-976d-5440-b16c-ec8f718812e8",
+      "content_sha256": "8a6d82ff46acc3ffc740b0fd63d41648de08e34665cf477350c5abbbbf6a6a68",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "terrorismo",
+      "unit_key": "art-7",
+      "unit_id": "524b5f27-2045-5ecc-8f44-d23e15656636",
+      "content_sha256": "8aa4050f2f17f3936ab50fd4cdbf08f4f44cd56e34ecf46a4bd7352d90fa8ddf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-1",
+      "unit_id": "9b6403fa-7d7d-5009-b54c-b5e99539b003",
+      "content_sha256": "a7fc8e1be419b570eee08a336dec52dc5af1fe6b0018ccb48e89091340d1b719",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-10",
+      "unit_id": "99553458-ef8c-5865-b8a4-4ba28e4e1081",
+      "content_sha256": "f462e4074c37d770eed0ca03f1c900e7d42b69999ab494ff85e6fc5fa8e544b0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-11",
+      "unit_id": "d4f5ab9d-91b8-5eb0-9e07-b302ee30d97c",
+      "content_sha256": "beb87f19f8578aa4321179221ce8943a7d2cac391d671177009dcef2f008d020",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-12",
+      "unit_id": "6be28b8a-5204-5130-bb47-0258baa9bac6",
+      "content_sha256": "4581181cd2b516728cb34634f83a4b54e1980503b83e808ba215cf31edb645d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-13",
+      "unit_id": "47f4abb8-1547-552d-8d70-6d33f18b1750",
+      "content_sha256": "26af1f4f3625e92b1c18f248933e8737f164bad9ea736d031219b2012d8e271a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-14",
+      "unit_id": "aef3621a-5e8b-58bb-a1a3-4a0cc89a6243",
+      "content_sha256": "68e812dfc939bb363978899d98e44228494f879126e3404bb7bc762334bb0bc9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-15",
+      "unit_id": "01ff161b-8ba2-5734-9f26-cf372eff0f2f",
+      "content_sha256": "4b0f411f1071cf8f1f4b8a994cedfc1ad201f239e9ebbc47a02a9ed9413e60f7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-16",
+      "unit_id": "1dd184b2-bd59-54ce-81fa-a76bf152a66c",
+      "content_sha256": "cb722b8c1ccf28cb020efe9bb4f5357817f93962687def12f95ab3ea3ba413a3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-17",
+      "unit_id": "ba469acd-e040-5bfd-ae94-dc48a38ded67",
+      "content_sha256": "8194a17b1e3811a5b8440e9002995d189972558c7915146314b9fe7e9367bd23",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-18",
+      "unit_id": "c5a77e3e-d978-5e77-866a-35ba2982dc24",
+      "content_sha256": "7e36115aaa7713f5cd450aa4cf5b6e8858921f723000cd5487c31f93ae71d8ab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-19",
+      "unit_id": "971cbdb8-b4be-5efc-b937-6f024bb38529",
+      "content_sha256": "7899a41eef2b0feaf01c7ce7d63adb41bcd2bbde51a90471548e440429a9b656",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-19-a",
+      "unit_id": "28388a10-1335-552b-af52-617befd4d71e",
+      "content_sha256": "0d07d8339155f50844d8cffe66175d6dca65287e4b9d2ad84592bc61a603ca6d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-2",
+      "unit_id": "9a70beba-7d54-573d-af6e-b8e0d5652159",
+      "content_sha256": "56fb63060e0a1e303056909ca3e1773894561303ebb59717ac1f847ef1709f3c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "deepened"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-20",
+      "unit_id": "c48143a1-85b4-5aec-99b5-2ec4c9952476",
+      "content_sha256": "15ed1f68d526b6fbedfdaec40ce8e911aef0a385250f80db5099e212a099bdff",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-21",
+      "unit_id": "8b22cf52-7f7a-549a-8b3e-fbc8b4efd9d9",
+      "content_sha256": "ddb686eefe727fb4ee86eb5c5ef1a89ca5fe01e43a15b543d15eb65710dc3228",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-3",
+      "unit_id": "3055491b-35bb-526e-bb41-d633eb9b31a8",
+      "content_sha256": "27a85dca60d69ae18b6e4c97f1f5d9612dcc4c67059f74a36612988e9462ac95",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-4",
+      "unit_id": "06d8e512-4905-5b35-bb41-3486050450dd",
+      "content_sha256": "313a3cde37ef7337a35be249df4c6765f27e4590c352c40d1128602a14b6c595",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-5",
+      "unit_id": "7c7e845d-a18d-5d48-b0d2-5c55cdf78d47",
+      "content_sha256": "577bb7b4c699eed2362f81d530ec6b8864426d32ddfccee4be61124d165ff43f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-6",
+      "unit_id": "8f685115-e9bb-5d4f-9ffc-8e5a383285c3",
+      "content_sha256": "0e8475e6c1144955b985ab6d1aceb4ea081b0cf0f23e027539943faea031419c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-7",
+      "unit_id": "2e9d1450-162f-5a0d-b997-642381b2ccc6",
+      "content_sha256": "8b316771662b802da5d6765575e6f419522b8e8e5586e658415a99bb9f6e7f80",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-8",
+      "unit_id": "265958dc-58a1-50a8-b327-93fceb4f4539",
+      "content_sha256": "f9bd4f22a65723da731b1809982afd984ffd38a120db111de81a7e1f1c29fcea",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-9",
+      "unit_id": "5c5ef639-f337-5f78-b74e-b96ee3dbb86a",
+      "content_sha256": "16fee39c17eadc9e4ee05145856de39316f07d6705be0f44536528204ec2f52e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "tortura",
+      "unit_key": "art-1",
+      "unit_id": "dadf4020-8f29-5aea-ad02-d55948459441",
+      "content_sha256": "99973903941e33281476709e2dffbf3b8419f8a14c835422515d00ddefa25bb9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "tortura",
+      "unit_key": "art-2",
+      "unit_id": "cdebd957-a710-5c0d-8a2c-2b21e53d073a",
+      "content_sha256": "e1cd312b892ce9843d3a29e2d137a5c154adaaca3500a5c6a6d9fd830d68e73f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "tortura",
+      "unit_key": "art-3",
+      "unit_id": "ef672a8d-080a-5074-b7c0-c36a1b86f05c",
+      "content_sha256": "beb64cfe34bd57e4a185559dd41f05d6400cffd658a6d0ef86b6716821283271",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "tortura",
+      "unit_key": "art-4",
+      "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
+      "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-1",
+      "unit_id": "57eef774-1c77-5f0f-a30b-434b02d460c1",
+      "content_sha256": "0ead09283a07810ad872852d000b2fb0471384fc071af11f20186ccba88490b0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-10",
+      "unit_id": "38b2aaf4-74f6-54d0-8df9-05617a986fd2",
+      "content_sha256": "3ece4593659faf07e5f16f61e846b4e738dd861cdc5f2cb0b42e75386175a08b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-11",
+      "unit_id": "38d130c8-296b-5015-b879-d93fa8fd0848",
+      "content_sha256": "4c4bfe20a7fecc19d5dcc1f28dbccb4fd0fa6c9093c4c724f0417e831b5d618d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-12",
+      "unit_id": "85a46cc1-9f0a-551e-ba62-2cf9bf3373f6",
+      "content_sha256": "3bbe4ddf7ef0d601c6a56f97cfcff504afe6e470f4a1456e2a19cb55cd0d6f94",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-13",
+      "unit_id": "d11c7281-17e5-51f8-aa23-cf677374d8e5",
+      "content_sha256": "b4c0382d668191b22c830c3094a26b27f379ff22cf58d21b84cb410d445c0f83",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-14",
+      "unit_id": "b3ca9e10-932a-528e-859b-db72e477297a",
+      "content_sha256": "8f1bb3a5084d13ea83b8b7d98486e4a76ed360d150062345996f913a53768f66",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-149-a",
+      "unit_id": "8d40c392-2961-561c-8e44-7a20093853e9",
+      "content_sha256": "fe382f9bbeefe923995b84df90d7c3c43ad71073cfb7b11b1feb53978953e75d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-15",
+      "unit_id": "7567eab5-f05c-588b-87cd-e0d5fc09eb79",
+      "content_sha256": "6ce9c9a781b11952109f11e707a37f23e32ec2ea474b16a1d87bffd975a80876",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-16",
+      "unit_id": "deb81809-1477-5eea-8f42-62f8d501bd30",
+      "content_sha256": "c0d9038ac95a76c57cf9e49a59c7f1711cf395003c5cb5c05b886ef18ab0d242",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-17",
+      "unit_id": "d24c2746-8b2c-5b4e-82db-b1f3e482d1f1",
+      "content_sha256": "0d07c380eb22629ff82df40263568ce576d88e9a88f076c4e8d9ef599a5b8ae5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-2",
+      "unit_id": "ed4d1805-e91a-5ff8-97e3-588a9ec22ae2",
+      "content_sha256": "6b4a9581c6553624ef77033cc2898a1125560f66882018b7403853497548786d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-3",
+      "unit_id": "27d74a53-b52f-5022-a361-0cb2a607ecc4",
+      "content_sha256": "c09984574e4d9030d2360177048b2d44c8d042c529e6965aa9ff28f207f20c99",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-4",
+      "unit_id": "4c765c11-382c-5741-a012-040fdb66503a",
+      "content_sha256": "b10b62c12df4b112c81c12d04639367ad29a1936ad43bb204c3802b289733fad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-5",
+      "unit_id": "4057ba81-5077-5b47-bbee-395a0f652476",
+      "content_sha256": "34fbd1ca96f68a53eab7f6a1c854215ed54735924e1e57090e6eedf3a1ad2c1c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-6",
+      "unit_id": "2e829eb4-d323-5a18-9fc7-9bc7e2ce6751",
+      "content_sha256": "dabdb2e8b93eb57b14b60b167ffaeff7aea598676286c5bbe2ab8ca51d25fb65",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-7",
+      "unit_id": "d0fa077e-7b30-5e04-a63d-b9318d236885",
+      "content_sha256": "8a83973989af0450ca646fec688ba2333480aca847934f0d33b93f9bbef03091",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-8",
+      "unit_id": "502d045a-4e67-59cc-b9f6-b990ef4af03d",
+      "content_sha256": "99725a5bd4d8fb49e0a543f926cee9d37e42b1630e7c7028424896abf04b9fbc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-9",
+      "unit_id": "a6207df8-450a-59c8-bbab-d0a577c7c75d",
+      "content_sha256": "a003c99ebbb79475c01bf830004fe9524f7630dc10052e3ea7f9a680fa19252d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-1",
+      "unit_id": "bfaf454b-0e7b-58b1-85b9-652a1db6ee3e",
+      "content_sha256": "8c57e53766964ae2b709074ab18ba1cb36930b6a9efe59bb4e795be31a1f25ab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-10",
+      "unit_id": "72f68e20-2e4f-536b-96d6-1e37a70d4b91",
+      "content_sha256": "14ba87793a5bbc4332db3475feba53beef775b43c3abd784f3ab2fcf9dd15682",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-11",
+      "unit_id": "15329da6-21cc-5eda-82d1-501be8af3e4b",
+      "content_sha256": "8fa70b154e94b2c59c3be4c039296a0d44c16c03332a9d32230f8427ea07fadf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-2",
+      "unit_id": "9960f2a1-746d-56c0-a1fa-a5dfd703338a",
+      "content_sha256": "6931d5972431e3ef48a62abf7c44c4e1fcaff0537124243d65227bb41bc07b9b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-3",
+      "unit_id": "c703ca84-9852-55b8-a27b-c901a0258b2d",
+      "content_sha256": "4b26f50ff2bd60e896785ffc3432ba259b7cab4180e318a7fb54813c2ce28a90",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-4",
+      "unit_id": "173109a7-d494-5b82-9224-d79984620ce8",
+      "content_sha256": "1024fd80b19fc54cf6ca295994d73994d2efa9be969af084ab1c02a1003133f1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-5",
+      "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+      "content_sha256": "7bad4d150e240ffdbfdaacabbd7eae45046ac0a56210cdd14b3957a285388737",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-6",
+      "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+      "content_sha256": "981243095a0561374a5b855bd4dc18719e7e3e643c702332b58871c3a6018ed9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-7",
+      "unit_id": "d4701703-179c-5c48-b2d4-fd4212037cf3",
+      "content_sha256": "7db5cd7c47e2d3269b3547f99b579b080b77d6ae9d6768696d1ed78db1d0ee58",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-8",
+      "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+      "content_sha256": "49747d8a39511af36847036eb11277c28c3133447c96c2794e1b630a56a164bc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-9",
+      "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+      "content_sha256": "b321fd39073dfd006b1db59831c1c512a11dc553bf2ab5fdd698801e349beae4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    }
+  ]
+}

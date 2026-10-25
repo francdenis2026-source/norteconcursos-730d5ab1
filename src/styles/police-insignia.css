@@ -1,0 +1,21 @@
+:root {
+  --police-insignia-art: url('/media/brand/norte-identity/emblema.svg');
+  --police-insignia-aspect: 1 / 1;
+}
+:root.dark {
+  --police-insignia-art: url('/media/brand/norte-identity/emblema-premium.webp');
+  --police-insignia-aspect: 1 / 1;
+}
+.police-insignia { object-fit: contain; }
+.session-access__badge.police-insignia { max-height: 140px; object-fit: contain; }
+
+/* No fades or React source updates: theme and artwork change in one style pass. */
+:root:not(.dark) .police-insignia[data-insignia-theme="dark"],
+:root.dark .police-insignia[data-insignia-theme="light"] { display: none !important; }
+/* Keep both hero surfaces painted and decoded within their existing absolute layers. */
+:root:not(.dark) .hero-badge .police-insignia[data-insignia-theme="dark"],
+:root.dark .hero-badge .police-insignia[data-insignia-theme="light"] {
+  display: block !important;
+  visibility: hidden;
+}
+.hero-badge .police-insignia { transition: none; }

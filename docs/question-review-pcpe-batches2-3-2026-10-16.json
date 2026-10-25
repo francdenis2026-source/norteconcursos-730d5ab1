@@ -1,0 +1,660 @@
+{
+  "scope": "Nine individually reviewed PCPE questions, eight text/context repairs and three restored official figures; original answers, raw extractions and source IDs preserved.",
+  "checked_at": "2026-10-17T01:39:35.185Z",
+  "publication": [
+    {
+      "dry_run": false,
+      "reviewed": 6,
+      "updated": [
+        "1063a267-00e7-4a43-9aed-91c832c9d4ab",
+        "5bda79c1-7010-4096-864a-6dc50341dc49",
+        "66295578-cd41-4720-81b2-827652677bc7",
+        "a8ddba50-f05b-4c25-bba3-e73b37611d09",
+        "df198fb1-059c-4c01-a145-fa34ef3079f3",
+        "ec034e47-3bcb-4125-bbee-8d6e80d4159d"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-17T01:37:54.828Z"
+    },
+    {
+      "dry_run": false,
+      "reviewed": 3,
+      "updated": [
+        "00d49651-5895-4b4f-b0a5-2932181911c2",
+        "22deafcf-e0b9-45db-8d13-1edeec2e745b",
+        "8cc6229d-1bd0-49bf-a194-f661cf8616e0"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-17T01:39:14.985Z"
+    }
+  ],
+  "validation": {
+    "checked_at": "2026-10-17T01:39:35.185Z",
+    "reviewed": 9,
+    "published_active": 9,
+    "contexts_restored": 8,
+    "figures_restored": 3,
+    "preserved_other_pc_records": 2959,
+    "concurrent_changes": [],
+    "metadata_concurrent_changes": [],
+    "new_topics": 1,
+    "pc_status": {
+      "active": 2598,
+      "archived": 212,
+      "under_review": 114,
+      "annulled": 37,
+      "obsolete": 7
+    },
+    "pending_by_contest": {
+      "Polícia Civil de Pernambuco - Escrivão de Polícia": 9,
+      "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+      "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+      "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+      "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+      "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+      "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+      "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+      "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+      "Polícia Civil de Minas Gerais": 2,
+      "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+      "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+      "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+      "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+      "Polícia Civil de Pernambuco - Agente de Polícia": 3
+    }
+  },
+  "topic": {
+    "expected_edition": {
+      "id": "8be33110-f277-4e57-bf0d-d86f535bde40",
+      "contest_name": "Polícia Civil de Pernambuco",
+      "role_name": "Agente de Polícia",
+      "contest_year": 2024,
+      "exam_board": "Cebraspe",
+      "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+      "status": "active",
+      "created_at": "2026-10-14T00:45:28.883945+00:00"
+    },
+    "expected_source": {
+      "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+      "source_type": "edital",
+      "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+      "issuer": "SAD/SDS Pernambuco / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "published_on": "2023-12-21",
+      "checked_at": "2026-10-16T22:08:51.908Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+    },
+    "evidence": {
+      "visually_verified": true,
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "sha256": "eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8",
+      "scope": "Recortes específicos do programa da versão atualizada; sem certificar vigência de todas as normas mencionadas."
+    },
+    "items": [
+      {
+        "row": {
+          "id": "b53fcdf4-f994-5a96-8b44-7275f14e15cd",
+          "edition_id": "8be33110-f277-4e57-bf0d-d86f535bde40",
+          "block_name": "Edital PCPE 1/2023 — recorte conferido em 16/10/2026",
+          "discipline": "Estatística",
+          "topic_order": 33,
+          "topic_text": "1 Estatística descritiva e análise exploratória de dados: gráficos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose). 2 Probabilidade. 2.1 Definições básicas e axiomas. 2.2 Probabilidade condicional e independência. 3 Técnicas de amostragem: amostragem aleatória simples, estratificada, sistemática e por conglomerados. 3.1 Tamanho amostral.",
+          "content_status": "current"
+        },
+        "page": 62,
+        "reference": "Cargo 2 — Agente de Polícia, ESTATÍSTICA: 2 Probabilidade; 2.2 Probabilidade condicional e independência."
+      }
+    ]
+  },
+  "topic_publication": {
+    "reviewed": 1,
+    "created": 1,
+    "preserved": 0
+  },
+  "figures": [
+    {
+      "number": 37,
+      "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-37-7114e93d6d68c01d4b8fb32535382a6c333fa67b0d8b923e97d5680f34fd3089.png",
+      "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-37.png",
+      "sha256": "7114e93d6d68c01d4b8fb32535382a6c333fa67b0d8b923e97d5680f34fd3089",
+      "verified_at": "2026-10-17T01:38:19.759Z"
+    },
+    {
+      "number": 55,
+      "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-55-dea6ccba1b940faf3e4ebe4224e66b940c145f25655ed9aa6c944718428caae2.png",
+      "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-55.png",
+      "sha256": "dea6ccba1b940faf3e4ebe4224e66b940c145f25655ed9aa6c944718428caae2",
+      "verified_at": "2026-10-17T01:38:24.075Z"
+    },
+    {
+      "number": 59,
+      "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-59-edd56d6091b713d3cf3783850b82976749fade6b447698a09bc7d5ed4959f87e.png",
+      "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-59.png",
+      "sha256": "edd56d6091b713d3cf3783850b82976749fade6b447698a09bc7d5ed4959f87e",
+      "verified_at": "2026-10-17T01:38:26.181Z"
+    }
+  ],
+  "tests": {
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "Publisher, context restoration, syllabus registration and question media. No application changes; build not rerun."
+  },
+  "items": [
+    {
+      "id": "1063a267-00e7-4a43-9aed-91c832c9d4ab",
+      "career": "Agente de Polícia",
+      "item_number": 21,
+      "official_answer": "A",
+      "original_sha256": "8867640cccf887ceefa0cb3e99c743bd92aad887a0044945490067851637d39d",
+      "prepublication_sha256": "2d3f87283d25b40fbebcfff6fd0563ef95581038a7be01f20795273b41aab5b4",
+      "final_sha256": "9ea1858e21e8f4772c3b25d8b964858a219703f730b4eebdd16f3e0396971fd7",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "9ad4a801-10da-534b-bc79-a979f58b5f36",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nA inferência parte da presença das famílias em casa durante o isolamento: isso dificultou roubos e invasões de residências. A alternativa A é compatível com essa relação. O percentual de 37% vem de estudo de 27 cidades em 23 países; não representa, por si só, o Brasil nem apenas crimes patrimoniais. A queda de alguns indicadores não elimina a preocupação com outras modalidades.\nExemplo: Mais tempo de moradores em casa dificulta a ação do invasor; não se pode transformar um dado internacional em estatística exclusivamente brasileira.\nTeste rápido — A pesquisa de 37% trata somente de cidades brasileiras? Não."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 1,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "5bda79c1-7010-4096-864a-6dc50341dc49",
+      "career": "Agente de Polícia",
+      "item_number": 57,
+      "official_answer": "B",
+      "original_sha256": "99c3a711a0f1e71ebb32957c943aca6b1b229d8b8f35782c89cf44e75237c23f",
+      "prepublication_sha256": "0d53f4616108f93cb44e687a3a29104462676e7efc2545c08e7b1e66656b1562",
+      "final_sha256": "5fcd823e11f15e2a5011a956dcf6566fccbb615343af1c78cdd87f0765a926c6",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "b53fcdf4-f994-5a96-8b44-7275f14e15cd",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nA INDEPENDÊNCIA COLETIVA permite multiplicar as quatro probabilidades: P(A ∩ B ∩ C ∩ D) = 0,4 × 0,3 × 0,2 × 0,1 = 0,0024, alternativa B. Isso equivale a 0,24%, e não 2,4%. A interseção significa que os quatro eventos ocorrem juntos; soma não calcula essa ocorrência simultânea.\nExemplo: Dois lançamentos independentes com chances 0,4 e 0,3 produzem interseção 0,12; acrescentar eventos independentes com chances 0,2 e 0,1 reduz o resultado para 0,0024.\nTeste rápido — Independência apenas dois a dois basta sempre para multiplicar quatro eventos? Não; aqui o enunciado assegura independência coletiva."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 16,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "66295578-cd41-4720-81b2-827652677bc7",
+      "career": "Agente de Polícia",
+      "item_number": 28,
+      "official_answer": "C",
+      "original_sha256": "b7b427d2fe77447d5698537d53548a0ef40a02ab07c90e59e0b4ea0665f5c452",
+      "prepublication_sha256": "503d74334c8485ac38a18e2c9bf6d0a3c6966b20be5eded2d705193daadc2b29",
+      "final_sha256": "c77f5bab7b232f7d284465b88076d0458e39ef45842c92fb775cba1881fd68a8",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "9ad4a801-10da-534b-bc79-a979f58b5f36",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nPANORÂMICA significa AMPLA no contexto: o autor passa da primeira leitura favorável para uma visão mais abrangente dos movimentos criminais. Não significa necessariamente rápida, resumida ou superficial. O sentido deve ser confirmado pelo encadeamento do parágrafo.\nExemplo: Uma visão panorâmica da cidade alcança um conjunto amplo; uma leitura panorâmica do cenário considera mais aspectos do conjunto.\nTeste rápido — Panorâmica significa superficial neste trecho? Não: ampla."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 4,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "a8ddba50-f05b-4c25-bba3-e73b37611d09",
+      "career": "Escrivão de Polícia",
+      "item_number": 30,
+      "official_answer": "B",
+      "original_sha256": "5a2b99785c313d7166717df6fa93e06a3fd7990ecbb997061f50995de0a72eae",
+      "prepublication_sha256": "5a2b99785c313d7166717df6fa93e06a3fd7990ecbb997061f50995de0a72eae",
+      "final_sha256": "d1fa3098c465a345d836943a9c3f0fc6e30b40b00567c993cc8acbfec25f40df",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "478d9113-450a-5a82-af26-79702a52a93d",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nEm PARECIAM-ME, o pronome ME indica a pessoa cujo ponto de vista é expresso. Pode ser retirado com o hífen sem erro gramatical: as roupas pareciam luxuosas. Isso não obriga a preservar toda a nuance de sentido: a referência pessoal deixa de ser explícita. Em A, o sujeito das formas sentavam e acocoravam é o pronome relativo QUE em cada oração. Em C, a palavra elíptica é GIBÃO. Em D, a crase resulta da preposição A exigida por comparadas com o artigo A de chita. Em E, o pronome O retoma o PAI, que poderia ser abandonado pelo poder.\nExemplo: As roupas pareciam-me caras → As roupas pareciam caras: ambas são gramaticais; a primeira explicita a avaliação do narrador.\nTeste rápido — Retirar o pronome preserva obrigatoriamente o mesmo ponto de vista explícito? Não; o item pergunta sobre correção gramatical."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "captured_at": "2026-10-16T22:08:53.366Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "captured_at": "2026-10-16T22:08:52.491Z"
+        },
+        "official_pdf_page": 5,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "df198fb1-059c-4c01-a145-fa34ef3079f3",
+      "career": "Agente de Polícia",
+      "item_number": 56,
+      "official_answer": "C",
+      "original_sha256": "7f4ee1aa1471a0e97bdd2ee0907f01581f8c3ff96d0a788e89ad8b2227102502",
+      "prepublication_sha256": "72b551ce4d6c02241a18c507fa450d4153a9c82e0a4156d846c95f1360699915",
+      "final_sha256": "626245051a075e28c53d0079a03d25b9e5f3392e725d9c57706995cad888a8f9",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "b53fcdf4-f994-5a96-8b44-7275f14e15cd",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nDefina x = P(E₁). Como E₁ ∩ E₂ está contido em E₁, P(E₁ ∩ E₂ | E₁) = P(E₁ ∩ E₂)/x = 0,3; logo, a interseção vale 0,3x. Da segunda condição, 0,3x/P(E₂) = 0,4, resulta P(E₂) = 0,75x. Na união: x + 0,75x − 0,3x = 0,87. Assim, 1,45x = 0,87 e x = 0,6, alternativa C. Não foi afirmada nem necessária a independência dos eventos.\nExemplo: Confira: P(E₁)=0,6, P(E₂)=0,45 e interseção=0,18. A união é 0,6+0,45−0,18=0,87.\nTeste rápido — É correto multiplicar as probabilidades como se os eventos fossem independentes? Não: use as condicionais fornecidas."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 16,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "ec034e47-3bcb-4125-bbee-8d6e80d4159d",
+      "career": "Agente de Polícia",
+      "item_number": 27,
+      "official_answer": "B",
+      "original_sha256": "523ca57d79acf1a074927946abacfe747a1fc869ed11b96b75606e12a3b571b5",
+      "prepublication_sha256": "1de8a564aaea6fe474b8039339bb55cfb4867e3b65e4c2ddf9c3a05841b3f432",
+      "final_sha256": "01758f38d6a20a22b91e402ad4d74cb2a56e40c3bb67a768a28b8acba7a6bc27",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "9ad4a801-10da-534b-bc79-a979f58b5f36",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:36:43.573094+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nMESMO QUE introduz CONCESSÃO: admite uma circunstância que poderia contrariar a expectativa, mas não impede a afirmação anterior. A tendência de queda foi mantida, apesar da desaceleração. Causa explica o motivo; condição estabelece uma hipótese necessária; consequência apresenta um resultado.\nExemplo: Mesmo que chova, estudarei: a chuva é um obstáculo admitido que não impede estudar. Se chover, estudarei: há uma condição, outra relação.\nTeste rápido — Mesmo que equivale, neste contexto, a embora? Sim: concessão."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Texto, alternativas e gabarito confrontados com caderno definitivo do próprio cargo; interpretação e cálculos resolvidos independentemente, com explicação e exercício de fixação. Trecho citado em Escrivão 30 já contém o suporte suficiente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 4,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "00d49651-5895-4b4f-b0a5-2932181911c2",
+      "career": "Agente de Polícia",
+      "item_number": 55,
+      "official_answer": "E",
+      "original_sha256": "1a89bcc5493b287e6d2aab3f561696a4ee43f05f7ac6a7f73beadd5e57a13d79",
+      "prepublication_sha256": "3556cf8b579d96c99d8369c2efdc751c266a72fd97ac931ac0a34f96f2578b35",
+      "final_sha256": "7b8f26085f0521a14d2944c0b35e1d89b8a6a0ff57502a44bd838a8df1cac605",
+      "patch": {
+        "content_status": "active",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "current_syllabus_topic_id": "b53fcdf4-f994-5a96-8b44-7275f14e15cd",
+        "verified_at": "2026-10-17T01:38:46.607218+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa E. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nAMPLITUDE AMOSTRAL é a diferença entre o maior e o menor valor observado: 57 − 34 = 23 por 100 mil habitantes, alternativa E. Desvio padrão e variância dependem do conjunto de desvios; intervalo interquartil é Q3 − Q1; curtose caracteriza a forma da distribuição. Trata-se de uma série histórica do exercício, não de taxa criminal atual ou previsão.\nExemplo: Na série 4, 6 e 9, a amplitude é 9 − 4 = 5; não é a média nem o número de observações.\nTeste rápido — Subtrair o menor valor do maior fornece variância? Não: amplitude."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo com caderno e gabarito definitivos; figura original restituída, cálculo e operação resolvidos independentemente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "figures": [
+          {
+            "number": 55,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-55-dea6ccba1b940faf3e4ebe4224e66b940c145f25655ed9aa6c944718428caae2.png",
+            "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-55.png",
+            "sha256": "dea6ccba1b940faf3e4ebe4224e66b940c145f25655ed9aa6c944718428caae2",
+            "verified_at": "2026-10-17T01:38:24.075Z"
+          }
+        ],
+        "official_pdf_page": 16,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "22deafcf-e0b9-45db-8d13-1edeec2e745b",
+      "career": "Agente de Polícia",
+      "item_number": 37,
+      "official_answer": "B",
+      "original_sha256": "a5f06b6559512ab9aa4735384ad05c4ce2d82cc171d180f431e4e835f23dfe2f",
+      "prepublication_sha256": "c9209542c99d329b527a3a971da745fe18ee04aaee905351a99aa030a35e75d1",
+      "final_sha256": "026bdc7c196178ff4a585c71c86777940dc2def6edf898987e2cf82451e01c68",
+      "patch": {
+        "content_status": "active",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "current_syllabus_topic_id": "2ecbe729-f51c-55c4-9b13-fcba8257aba8",
+        "verified_at": "2026-10-17T01:38:46.607218+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nTRANSPOR troca linhas por colunas: A1:B7, com sete linhas e duas colunas, passa a duas linhas e sete colunas. Copie o intervalo e use a opção de colagem Transpor. Classificar muda a ordem; mesclar une células; formatar números não faz a transposição.\nExemplo: Uma lista vertical de nomes vira uma linha de nomes; os números da coluna B tornam-se a segunda linha.\nTeste rápido — Ordenar de A a Z transforma automaticamente linhas em colunas? Não."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo com caderno e gabarito definitivos; figura original restituída, cálculo e operação resolvidos independentemente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "figures": [
+          {
+            "number": 37,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-37-7114e93d6d68c01d4b8fb32535382a6c333fa67b0d8b923e97d5680f34fd3089.png",
+            "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-37.png",
+            "sha256": "7114e93d6d68c01d4b8fb32535382a6c333fa67b0d8b923e97d5680f34fd3089",
+            "verified_at": "2026-10-17T01:38:19.759Z"
+          }
+        ],
+        "official_pdf_page": 8,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "8cc6229d-1bd0-49bf-a194-f661cf8616e0",
+      "career": "Agente de Polícia",
+      "item_number": 59,
+      "official_answer": "C",
+      "original_sha256": "58c65c701b3bf8a99a51936272fb27c319c36363048826441028293e253f56e9",
+      "prepublication_sha256": "9350f71df184521d0ce36743192c4b50a1b4af643f2436b6541dc181b8512277",
+      "final_sha256": "e4e9424c9c48e62460ecf033bbb49535124c1c886ee73176b3f3fb77bd62ae68",
+      "patch": {
+        "content_status": "active",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "current_syllabus_topic_id": "b53fcdf4-f994-5a96-8b44-7275f14e15cd",
+        "verified_at": "2026-10-17T01:38:46.607218+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nNa alocação ótima de NEYMAN do modelo clássico, o tamanho amostral de cada estrato é proporcional a Nₕ × σₕ. Os produtos são I: 250.000; II: 320.000; III: 360.000; IV: 320.000; V: 190.000. O maior produto é o do estrato III, alternativa C. Não basta escolher a maior população: a dispersão também pesa. Para custos de observação diferentes entre estratos, a alocação ótima precisa considerar essa diferença.\nExemplo: O estrato V tem mais pessoas, mas seu desvio padrão é 1; o III, menos populoso, tem dispersão 3 e recebe maior parcela na alocação de Neyman.\nTeste rápido — A alocação de Neyman é sempre proporcional apenas à população? Não: pondera também a dispersão."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo com caderno e gabarito definitivos; figura original restituída, cálculo e operação resolvidos independentemente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "figures": [
+          {
+            "number": 59,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcpe-agente-59-edd56d6091b713d3cf3783850b82976749fade6b447698a09bc7d5ed4959f87e.png",
+            "path": "outputs/pc-pending-review-2026-10-16/pe/figure-agente-59.png",
+            "sha256": "edd56d6091b713d3cf3783850b82976749fade6b447698a09bc7d5ed4959f87e",
+            "verified_at": "2026-10-17T01:38:26.181Z"
+          }
+        ],
+        "official_pdf_page": 17,
+        "original_answer_preserved": true
+      }
+    }
+  ]
+}

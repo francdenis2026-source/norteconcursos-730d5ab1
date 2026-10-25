@@ -6,6 +6,7 @@ import { youtubeEmbedUrl } from "@/data/mediaCatalog";
 import { isPlaylistId } from "@/lib/arsenal";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { cn } from "@/lib/utils";
+import { enemVideoSelection } from "@/lib/enemScope";
 
 /** Videoaulas gratuitas de ENEM por matéria e assunto (catálogo da Central de mídia). */
 export function EnemVideos({
@@ -25,16 +26,12 @@ export function EnemVideos({
   const setT = onTopic ?? setLocalTopic;
   const [playing, setPlaying] = React.useState<string | null>(null);
 
-  const subjects = ENEM_VIDEO_SUBJECTS.filter(
-    (s) => Object.keys(catalog.topicVideos[s.key] ?? {}).length > 0,
-  );
-  const cur = subjects.find((s) => s.name === subject) ?? subjects[0];
-  const byTopic = cur ? (catalog.topicVideos[cur.key] ?? {}) : {};
-  const topics = Object.keys(byTopic).filter((k) => k !== "*");
-  const list =
-    t === "all"
-      ? [...(byTopic["*"] ?? []), ...topics.flatMap((k) => byTopic[k] ?? [])]
-      : (byTopic[t] ?? []);
+  const subjects = ENEM_VIDEO_SUBJECTS;
+  const {
+    current: cur,
+    topics,
+    videos: list,
+  } = enemVideoSelection(catalog.topicVideos, subject, t);
   const video = list.find((x) => x.id === playing) ?? list[0];
 
   return (
@@ -52,7 +49,7 @@ export function EnemVideos({
               setPlaying(null);
             }}
             className={cn(
-              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:-translate-y-px hover:shadow-sm",
+              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-[border-color,transform,box-shadow] hover:-translate-y-px hover:shadow-sm",
               cur?.name === s.name
                 ? "border-primary bg-primary text-primary-foreground"
                 : "hover:border-primary/50",
@@ -98,18 +95,24 @@ export function EnemVideos({
           <div className="space-y-2">
             <div className="overflow-hidden rounded-2xl border bg-black shadow-lg">
               <div className="aspect-video w-full">
-                <iframe
-                  key={video.id}
-                  title={video.title}
-                  className="h-full w-full"
-                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                  allowFullScreen
-                  src={
-                    isPlaylistId(video.id)
-                      ? youtubeEmbedUrl(video.id)
-                      : `https://www.youtube-nocookie.com/embed/${video.id}?rel=0`
-                  }
-                />
+                {video.embeddable === false ? (
+                  <p className="p-6 text-sm text-white">
+                    Esta aula está disponível pelo botão “Abrir no YouTube”.
+                  </p>
+                ) : (
+                  <iframe
+                    key={`${subject}:${t}:${video.id}`}
+                    title={video.title}
+                    className="h-full w-full"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowFullScreen
+                    src={
+                      isPlaylistId(video.id)
+                        ? youtubeEmbedUrl(video.id)
+                        : `https://www.youtube-nocookie.com/embed/${video.id}?rel=0&enablejsapi=1`
+                    }
+                  />
+                )}
               </div>
             </div>
             <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
@@ -159,7 +162,8 @@ export function EnemVideos({
         </div>
       ) : (
         <p className="text-sm text-muted-foreground">
-          Nenhuma videoaula cadastrada para esta matéria ainda.
+          Nenhuma videoaula cadastrada para {subject}
+          {t === "all" ? "" : ` — ${t}`} ainda.
         </p>
       )}
       <p className="text-xs text-muted-foreground">

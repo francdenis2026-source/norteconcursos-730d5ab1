@@ -1,0 +1,637 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T01:43:00.671782+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 10,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-145",
+        "art-146",
+        "art-147",
+        "art-148",
+        "art-149",
+        "art-150",
+        "art-151",
+        "art-152",
+        "art-153",
+        "art-154"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-145",
+      "unit_id": "6af04cdb-15a9-51f7-b915-0b0c4fda2b5d",
+      "content_sha256": "81b53e5b06adb8d5513167ffaecc8545e58b306b2d36ea7f414b7ab584fa38c3",
+      "simples": "Falsidade de documento dos autos é arguida por escrito em incidente separado, com contraditório, prova e decisão sobre sua permanência no processo.",
+      "pontos": [
+        "Parte contrária responde em 48 horas.",
+        "Cada parte tem três dias sucessivos para provar; juiz pode ordenar diligências necessárias.",
+        "Falsidade reconhecida por decisão irrecorrível: retirar documento e enviar com incidente ao MP."
+      ],
+      "atencao": [
+        "Incidente não é condenação automática pelo crime de falsidade. Não confundir 48 horas da resposta com três dias sucessivos de prova."
+      ],
+      "exemplo": "Parte aponta falsidade de recibo por escrito; outra responde e ambas produzem prova nos prazos próprios. Variação: Após reconhecimento definitivo, documento é retirado e MP recebe o incidente para atuação cabível, sem condenação criminal automática.",
+      "prova": [
+        "Prazo da resposta é 48 horas? Sim.",
+        "Decisão do incidente condena automaticamente por falsidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Desentranhamento",
+          "significado": "Retirada do documento dos autos pela decisão pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6af04cdb-15a9-51f7-b915-0b0c4fda2b5d",
+        "content_sha256": "81b53e5b06adb8d5513167ffaecc8545e58b306b2d36ea7f414b7ab584fa38c3",
+        "simples": "Arguida, por escrito, a falsidade de documento constante dos autos, o juiz observará o seguinte processo: autua em apartado a impugnação e ouve a parte contrária, que responde em 48 horas; assina três dias, sucessivamente, a cada parte, para prova de suas alegações; conclusos os autos, pode ordenar diligências; e, se reconhecida a falsidade por decisão irrecorrível, manda desentranhar o documento e remetê-lo, com os autos do incidente, ao Ministério Público.",
+        "pontos": [
+          "Arguição de falsidade por escrito.",
+          "Autuação em apartado; resposta da parte contrária em 48 horas.",
+          "Três dias sucessivos para prova.",
+          "Diligências pelo juiz.",
+          "Falsidade reconhecida por decisão irrecorrível: desentranhamento e remessa ao MP."
+        ],
+        "atencao": [
+          "Prazos: 48 horas para a resposta e três dias para a prova."
+        ],
+        "exemplo": "A defesa argui por escrito a falsidade de um documento dos autos, e o incidente tramita em apartado.",
+        "prova": [
+          "Assertiva que permite arguir a falsidade apenas oralmente erra: a arguição é escrita."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 146",
+          "Art. 147",
+          "Art. 148"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-146",
+      "unit_id": "e7d61178-fa89-52ea-9dee-691a74fe1cc1",
+      "content_sha256": "d1e2fecd4126d74e5a316fc715265a95c3ef3c97a5fddac04c6f314be4b89df5",
+      "simples": "Procurador que suscita falsidade documental precisa de poderes especiais para essa arguição.",
+      "pontos": [
+        "Exigência ligada à atuação por procurador.",
+        "Procuração geral não substitui autorização específica prevista.",
+        "Distinguir arguição pela própria parte."
+      ],
+      "atencao": [
+        "Não estender automaticamente poderes gerais do mandato à arguição de falsidade."
+      ],
+      "exemplo": "Advogado apresenta procuração com poderes especiais para suscitar o incidente documental. Variação: Mandato apenas geral exige verificar a autorização específica, em vez de presumir preenchimento.",
+      "prova": [
+        "Poderes gerais são o requisito textual? Não; especiais.",
+        "A exigência é dirigida à arguição por procurador? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Mandato especial",
+          "significado": "Autorização específica para a arguição de falsidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e7d61178-fa89-52ea-9dee-691a74fe1cc1",
+        "content_sha256": "d1e2fecd4126d74e5a316fc715265a95c3ef3c97a5fddac04c6f314be4b89df5",
+        "simples": "A arguição de falsidade, feita por procurador, exige poderes especiais.",
+        "pontos": [
+          "Procurador precisa de poderes especiais para arguir a falsidade."
+        ],
+        "atencao": [
+          "Poderes especiais."
+        ],
+        "exemplo": "Advogado sem poderes especiais não pode arguir a falsidade em nome da parte.",
+        "prova": [
+          "Assertiva que dispensa poderes especiais do procurador para arguir falsidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-147",
+      "unit_id": "109daf9d-04c1-59b4-83c3-c17da2cd892f",
+      "content_sha256": "3ad1a5a484b2d831c996f3827e2ae344092da810c3bf4ac4ca776fb57f979c26",
+      "simples": "Juiz pode verificar de ofício a falsidade do documento no processo, observando o incidente e garantias pertinentes.",
+      "pontos": [
+        "Iniciativa incidental não depende de pedido da parte.",
+        "Preservar contraditório e prova.",
+        "Não autoriza assumir investigação criminal autônoma contra possível falsificador."
+      ],
+      "atencao": [
+        "Separar controle do documento utilizado no processo de substituição da atuação acusatória pelo juiz."
+      ],
+      "exemplo": "Magistrado identifica sinais de alteração no documento e determina sua verificação incidental. Variação: Apuração penal de eventual falsificação seguirá órgãos e procedimento próprios, sem o juiz transformar-se em acusador.",
+      "prova": [
+        "A verificação depende sempre de pedido? Não.",
+        "O artigo autoriza juiz a substituir acusação em outro processo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Verificação incidental",
+          "significado": "Exame da autenticidade documental para os fins do processo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "109daf9d-04c1-59b4-83c3-c17da2cd892f",
+        "content_sha256": "3ad1a5a484b2d831c996f3827e2ae344092da810c3bf4ac4ca776fb57f979c26",
+        "simples": "O juiz poderá, de ofício, proceder à verificação da falsidade.",
+        "pontos": [
+          "Verificação da falsidade pode ser de ofício."
+        ],
+        "atencao": [
+          "Iniciativa oficial do juiz."
+        ],
+        "exemplo": "Juiz desconfia da autenticidade de um documento e determina sua verificação.",
+        "prova": [
+          "Assertiva que exige provocação da parte para o juiz verificar a falsidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-148",
+      "unit_id": "2280406c-85bc-5db6-a419-cd44cb84c86f",
+      "content_sha256": "d239a9aa69aedf1ae2342cb592078ab0420324fd6d410792c790c6fe2f6b2758",
+      "simples": "Decisão sobre falsidade no incidente não produz coisa julgada em prejuízo de posterior processo penal ou civil.",
+      "pontos": [
+        "Qualquer que seja o resultado do incidente.",
+        "Efeito documental no processo não encerra toda controvérsia externa.",
+        "Posterior causa tem contraditório e requisitos próprios."
+      ],
+      "atencao": [
+        "Não tratar reconhecimento incidental como condenação penal definitiva, nem negativa como imunidade civil absoluta."
+      ],
+      "exemplo": "Documento é retirado após o incidente; investigação e eventual processo pela falsificação seguem próprios requisitos. Variação: Negativa incidental não impede automaticamente toda ação civil posterior sobre a autenticidade e seus efeitos.",
+      "prova": [
+        "A decisão impede toda causa posterior? Não.",
+        "Ela pode afetar o uso do documento no processo atual? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Limite da decisão incidental",
+          "significado": "Ausência de coisa julgada prejudicial sobre a ulterior causa penal ou civil."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2280406c-85bc-5db6-a419-cd44cb84c86f",
+        "content_sha256": "d239a9aa69aedf1ae2342cb592078ab0420324fd6d410792c790c6fe2f6b2758",
+        "simples": "Qualquer que seja a decisão sobre o incidente de falsidade, não fará coisa julgada em prejuízo de ulterior processo penal ou civil.",
+        "pontos": [
+          "A decisão do incidente de falsidade não faz coisa julgada em processo penal ou civil posterior."
+        ],
+        "atencao": [
+          "Efeito restrito ao processo em que foi proferida."
+        ],
+        "exemplo": "Reconhecida a falsidade no incidente, o autor ainda pode ser processado, com ampla prova no novo processo.",
+        "prova": [
+          "Assertiva que atribui coisa julgada à decisão do incidente de falsidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-149",
+      "unit_id": "7a9833ed-adc5-56d1-aa69-5c843718a3a9",
+      "content_sha256": "b94e3ce7580867fabab752b0a1ba42ae50208056cceea0d6423d4e11efcedc71",
+      "simples": "Dúvida sobre integridade mental leva a exame médico-legal determinado pelo juiz, com curador e suspensão da ação já iniciada, ressalvadas diligências urgentes.",
+      "pontos": [
+        "Pode haver iniciativa do juiz, MP, defensor, curador, ascendente, descendente, irmão ou cônjuge.",
+        "No inquérito, autoridade policial representa ao juiz; não ordena sozinha o incidente judicial.",
+        "Curador é nomeado ao determinar exame; diligências prejudicadas pelo adiamento podem prosseguir."
+      ],
+      "atencao": [
+        "Deficiência ou diagnóstico, por si, não significa inimputabilidade automática. O exame esclarece a questão no contexto legal."
+      ],
+      "exemplo": "Há dúvida fundada e defensor pede exame; juiz determina, nomeia curador e suspende a ação, preservando prova urgente. Variação: Durante inquérito, delegado encaminha representação ao juiz competente em vez de decretar por conta própria o incidente.",
+      "prova": [
+        "Toda deficiência torna automaticamente inimputável? Não.",
+        "Provas urgentes podem ser realizadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Incidente de avaliação mental",
+          "significado": "Procedimento para esclarecer dúvida relevante com perícia e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7a9833ed-adc5-56d1-aa69-5c843718a3a9",
+        "content_sha256": "b94e3ce7580867fabab752b0a1ba42ae50208056cceea0d6423d4e11efcedc71",
+        "simples": "Quando houver dúvida sobre a integridade mental do acusado, o juiz ordenará, de ofício ou a requerimento do Ministério Público, do defensor, do curador, do ascendente, descendente, irmão ou cônjuge do acusado, que seja submetido a exame médico-legal. O exame poderá ser ordenado ainda na fase do inquérito, mediante representação da autoridade policial ao juiz competente. O juiz nomeará curador ao acusado quando determinar o exame, ficando suspenso o processo, se já iniciada a ação penal, salvo quanto às diligências que possam ser prejudicadas pelo adiamento.",
+        "pontos": [
+          "Dúvida sobre a integridade mental: exame médico-legal.",
+          "Determinado de ofício ou a requerimento do MP, defensor, curador ou familiares.",
+          "Pode ser ordenado no inquérito, por representação policial.",
+          "Juiz nomeia curador e suspende o processo, salvo diligências urgentes."
+        ],
+        "atencao": [
+          "Instaura-se o incidente de insanidade mental."
+        ],
+        "exemplo": "Defensor pede exame de sanidade mental do acusado, e o juiz nomeia curador.",
+        "prova": [
+          "Assertiva que dispensa curador no incidente de insanidade mental erra."
+        ],
+        "termos": [
+          {
+            "termo": "Incidente de insanidade mental",
+            "significado": "Procedimento para avaliar a integridade mental do acusado."
+          }
+        ],
+        "remissoes": [
+          "Art. 150",
+          "Art. 152"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-150",
+      "unit_id": "b1fc01d5-59ac-5caa-a0f1-452f10485585",
+      "content_sha256": "162d0894d610a352686ec0bf7db3e71f04199a7e8c0a4f61505cd2cdbbbd191c",
+      "simples": "O exame tem prazo ordinário máximo de 45 dias, prorrogável por necessidade demonstrada pelos peritos. A referência histórica a manicômio deve ser integrada à proteção atual em saúde mental.",
+      "pontos": [
+        "Maior prazo exige demonstração pericial, não adiamento arbitrário.",
+        "Autos podem ir aos peritos se não houver prejuízo à marcha.",
+        "Lei 10.216: cuidado digno, comunitário preferencial; internação exige insuficiência de recursos extra-hospitalares e laudo motivado.",
+        "CNJ orienta leitura dos códigos à luz da lei de saúde mental e da Convenção sobre deficiência; não certificar prazo uniforme de implementação local."
+      ],
+      "atencao": [
+        "Estar preso não basta para ensinar internação asilar automática. Preservar texto histórico separado da aplicação atual; exame e tratamento não são conceitos idênticos."
+      ],
+      "exemplo": "Peritos explicam necessidade de prolongar exame além de 45 dias e o juiz analisa a justificativa. Variação: Diagnóstico não autoriza recolhimento asilar automático; cuidado segue fundamentos clínicos, direitos e rede adequada.",
+      "prova": [
+        "45 dias podem ser prorrogados sem justificativa pericial? Não.",
+        "Prisão, sozinha, impõe tratamento asilar automático? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Avaliação médico-legal",
+          "significado": "Exame técnico, distinto de internação terapêutica ou medida de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.cnj.jus.br/perguntas-frequentes-sobre-a-politica-antimanicomial-do-poder-judiciario/"
+      ],
+      "expected": {
+        "unit_id": "b1fc01d5-59ac-5caa-a0f1-452f10485585",
+        "content_sha256": "162d0894d610a352686ec0bf7db3e71f04199a7e8c0a4f61505cd2cdbbbd191c",
+        "simples": "Para o efeito do exame, o acusado, se estiver preso, será internado em manicômio judiciário, onde houver, ou, se estiver solto e o requererem os peritos, em estabelecimento adequado que o juiz designar. O exame não durará mais de quarenta e cinco dias, salvo se os peritos demonstrarem a necessidade de maior prazo. Se não houver prejuízo para a marcha do processo, o juiz pode autorizar que os autos sejam entregues aos peritos.",
+        "pontos": [
+          "Acusado preso: internado em manicômio judiciário, se houver.",
+          "Acusado solto: estabelecimento adequado, se os peritos requererem.",
+          "Exame em até quarenta e cinco dias, prorrogável se demonstrada a necessidade.",
+          "Autos podem ser entregues aos peritos."
+        ],
+        "atencao": [
+          "Prazo do exame: quarenta e cinco dias."
+        ],
+        "exemplo": "Perito pede mais tempo para concluir o exame de sanidade, demonstrando a necessidade.",
+        "prova": [
+          "Assertiva que fixa em trinta dias o prazo do exame de insanidade erra: são quarenta e cinco dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-151",
+      "unit_id": "0ddaf025-11cb-5d15-97db-f7a5f3af277b",
+      "content_sha256": "010f1421e148981c6fce96a9eb39df0774ad66618a3a9a178dff2688af791c04",
+      "simples": "Se o exame aponta inimputabilidade ao tempo do fato, o processo prossegue com curador; a remissão histórica ao CP 22 deve ser integrada ao atual CP 26.",
+      "pontos": [
+        "Avaliar capacidade no momento da ação ou omissão.",
+        "Processo continua com curador; exame não determina arquivamento automático.",
+        "Medida de segurança exige decisão e pressupostos próprios, inclusive apuração do fato."
+      ],
+      "atencao": [
+        "CP 22 atual trata de coação e ordem, não é a regra atual de inimputabilidade. Não impor medida automaticamente só por laudo."
+      ],
+      "exemplo": "Perícia examina capacidade ao tempo do delito e conclui pela hipótese do CP 26; processo segue com curador e apuração de mérito. Variação: Se o fato imputado não foi demonstrado, o laudo não cria crime nem condenação por presunção.",
+      "prova": [
+        "O processo para definitivamente só pelo laudo? Não.",
+        "A regra atual a integrar é CP 26? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Inimputabilidade ao fato",
+          "significado": "Condição juridicamente avaliada no momento da conduta, não presumida por diagnóstico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0ddaf025-11cb-5d15-97db-f7a5f3af277b",
+        "content_sha256": "010f1421e148981c6fce96a9eb39df0774ad66618a3a9a178dff2688af791c04",
+        "simples": "Se os peritos concluírem que o acusado era, ao tempo da infração, irresponsável nos termos do art. 22 do Código Penal, o processo prosseguirá com a presença do curador.",
+        "pontos": [
+          "Irresponsabilidade ao tempo da infração: processo prossegue.",
+          "Presença do curador."
+        ],
+        "atencao": [
+          "Possível absolvição imprópria com medida de segurança."
+        ],
+        "exemplo": "Perícia conclui que o acusado era inimputável ao tempo do fato, e o processo continua com curador.",
+        "prova": [
+          "Assertiva que extingue o processo com a conclusão pericial de inimputabilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149",
+          "Art. 152"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-152",
+      "unit_id": "94941dd6-a8b7-56a5-b1a1-a9114011233d",
+      "content_sha256": "7b756fef49da969f69f793d44f23194899fdb08c0cf2b4981250a122a9f7bec9",
+      "simples": "Transtorno mental superveniente à infração suspende o processo até recuperação, salvo diligências urgentes; ao retornar, acusado pode reinquirir testemunhas ouvidas sem sua presença.",
+      "pontos": [
+        "Distinguir condição ao tempo do fato do art. 151 e superveniência.",
+        "Preservação de prova urgente conforme art. 149, §2º.",
+        "Eventual internação exige integração com cuidados e requisitos atuais de saúde; não é punição automática.",
+        "Restabelecimento retoma o curso e preserva a reinquirição prevista."
+      ],
+      "atencao": [
+        "Não prosseguir o mérito apenas com curador em toda doença posterior. Também não tratar a expressão histórica manicômio como internação asilar obrigatória."
+      ],
+      "exemplo": "Após o fato, acusado apresenta quadro que exige suspensão nos termos do incidente; prova urgente é preservada. Variação: Restabelecido, poderá reinquirir testemunhas ouvidas sem presença, observadas garantias e rito.",
+      "prova": [
+        "Art. 151 e 152 examinam o mesmo momento? Não.",
+        "Há faculdade de reinquirição após recuperação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Superveniência clínica",
+          "significado": "Condição surgida após a infração, com efeitos processuais próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.cnj.jus.br/perguntas-frequentes-sobre-a-politica-antimanicomial-do-poder-judiciario/"
+      ],
+      "expected": {
+        "unit_id": "94941dd6-a8b7-56a5-b1a1-a9114011233d",
+        "content_sha256": "7b756fef49da969f69f793d44f23194899fdb08c0cf2b4981250a122a9f7bec9",
+        "simples": "Se se verificar que a doença mental sobreveio à infração, o processo continuará suspenso até que o acusado se restabeleça, observado o §2º do art. 149. O juiz poderá ordenar a internação do acusado em manicômio judiciário ou outro estabelecimento adequado. O processo retomará seu curso desde que o acusado se restabeleça, ficando-lhe assegurada a faculdade de reinquirir as testemunhas que houverem prestado depoimento sem a sua presença.",
+        "pontos": [
+          "Doença mental superveniente à infração: processo suspenso até o restabelecimento.",
+          "Internação possível.",
+          "Retomada do processo: o acusado pode reinquirir testemunhas ouvidas na sua ausência."
+        ],
+        "atencao": [
+          "Doença posterior à infração suspende o processo; anterior, o processo segue com curador."
+        ],
+        "exemplo": "Acusado adoece mentalmente durante o processo, que fica suspenso até o restabelecimento.",
+        "prova": [
+          "Assertiva que prossegue o processo normalmente com doença mental superveniente erra: fica suspenso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149",
+          "Art. 151"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-153",
+      "unit_id": "82648f00-a518-52d3-b354-6887961d1081",
+      "content_sha256": "220678d44f98dbc0fae68b780213628c703d01bfac5a2bc5383a6dd8db60a5a6",
+      "simples": "O incidente de avaliação mental tramita em apartado e só é apensado ao principal depois da apresentação do laudo.",
+      "pontos": [
+        "Apartado durante a perícia.",
+        "Laudo precede apensamento.",
+        "Resultado técnico não dispensa decisão judicial própria."
+      ],
+      "atencao": [
+        "Não confundir a organização dos autos com suspensão absoluta de todas as diligências urgentes."
+      ],
+      "exemplo": "Autos do incidente são mantidos separados durante o exame e apensados após o laudo. Variação: Enquanto isso, diligência que seria prejudicada pelo adiamento pode ser preservada conforme art. 149.",
+      "prova": [
+        "Apensamento ocorre antes do laudo? Não.",
+        "O laudo substitui toda decisão judicial? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apensamento",
+          "significado": "Vinculação dos autos do incidente ao processo principal após a etapa prevista."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "82648f00-a518-52d3-b354-6887961d1081",
+        "content_sha256": "220678d44f98dbc0fae68b780213628c703d01bfac5a2bc5383a6dd8db60a5a6",
+        "simples": "O incidente da insanidade mental processar-se-á em autos apartados, que só depois da apresentação do laudo serão apensados ao processo principal.",
+        "pontos": [
+          "Incidente em autos apartados.",
+          "Apensação ao principal somente após o laudo."
+        ],
+        "atencao": [
+          "Autos apartados até o laudo."
+        ],
+        "exemplo": "O incidente de sanidade corre em apenso e é juntado ao principal só com o laudo.",
+        "prova": [
+          "Assertiva que determina que o incidente tramite nos próprios autos do processo principal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-154",
+      "unit_id": "4713e807-9d58-5328-9664-a0126e92bbae",
+      "content_sha256": "fbc9b4407296391fb47783155257c6883e55ebc5a882dc6f38ba4aaa669839da",
+      "simples": "Condição mental surgida na execução exige regime de execução e saúde atuais, sem depender exclusivamente da antiga remissão ao art. 682.",
+      "pontos": [
+        "Integrar LEP 108 e 183, CP e Lei 10.216, distinguindo tratamento e eventual substituição da pena.",
+        "LEP 183 prevê possível substituição por medida de segurança por decisão judicial, incluindo provocação da Defensoria.",
+        "Internação não pode ser punição administrativa automática; exige pressupostos legais e clínicos e direitos.",
+        "Não confundir superveniência na execução com incapacidade ao tempo do fato."
+      ],
+      "atencao": [
+        "A remissão antiga não basta para ensinar envio automático e indefinido a manicômio. Não declarar revogação textual dos dispositivos sem base."
+      ],
+      "exemplo": "Durante cumprimento da pena surge condição mental; juízo da execução examina assistência e eventual medida juridicamente cabível. Variação: Equipe clínica e assistência adequadas são relevantes; autoridade administrativa não converte pena indefinidamente por sua própria ordem.",
+      "prova": [
+        "Só o art. 682 resolve atualmente toda a matéria? Não.",
+        "A conversão prevista na LEP é administrativa automática? Não; judicial e condicionada."
+      ],
+      "termos": [
+        {
+          "termo": "Superveniência na execução",
+          "significado": "Alteração de saúde durante cumprimento da pena, submetida a regime próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.cnj.jus.br/perguntas-frequentes-sobre-a-politica-antimanicomial-do-poder-judiciario/"
+      ],
+      "expected": {
+        "unit_id": "4713e807-9d58-5328-9664-a0126e92bbae",
+        "content_sha256": "fbc9b4407296391fb47783155257c6883e55ebc5a882dc6f38ba4aaa669839da",
+        "simples": "Se a insanidade mental sobrevier no curso da execução da pena, observar-se-á o disposto no art. 682.",
+        "pontos": [
+          "Insanidade superveniente na execução da pena segue o art. 682."
+        ],
+        "atencao": [
+          "Remissão ao Livro da execução."
+        ],
+        "exemplo": "Condenado apresenta insanidade durante o cumprimento da pena: aplica-se o art. 682.",
+        "prova": [
+          "Assertiva que aplica o incidente dos arts. 149 a 153 à execução da pena erra: aplica-se o art. 682."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 682"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    }
+  ]
+}

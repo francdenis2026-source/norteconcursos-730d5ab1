@@ -5,6 +5,7 @@ import {
   questionAnswers,
   questionAnswerLabel,
   isLegallyVerified,
+  isOfficialUrl,
   isEligibleQuestion,
 } from "../src/lib/questionFormat.ts";
 import { fetchAllRows } from "../src/lib/catalog.ts";
@@ -103,4 +104,38 @@ test("pagination does not silently accept failed requests", async () => {
     fetchAllRows(() => Promise.resolve({ data: null, error: new Error("offline") })),
     /offline/,
   );
+});
+
+test('reviewed ALEPE norms pass legal eligibility while search pages and lookalike hosts stay blocked', () => {
+  const url = 'https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO';
+  assert.equal(isOfficialUrl(url), true);
+  assert.equal(isOfficialUrl(url.replace('TEXTOATUALIZADO', 'TEXTOORIGINAL')), true);
+  const row = {content_status:'active', official_answer:'C', subject:'Legislação Estadual de Pernambuco', legal_review_required:true, legal_audit_completed:true, context_review_required:false, legal_basis:[{url}], law_version_checked_at:'2026-10-16T00:00:00Z'};
+  assert.equal(isEligibleQuestion(row), true);
+  assert.equal(isEligibleQuestion({...row, legal_audit_completed:false}), false);
+  assert.equal(isEligibleQuestion({...row, law_version_checked_at:null}), false);
+  for (const invalid of ['https://legis.alepe.pe.gov.br/pesquisaAvancada.aspx', url.replace('https:', 'http:'), url.replace('legis.alepe.pe.gov.br', 'legis.alepe.pe.gov.br.evil.example'), url.replace('4937', 'not-a-norm'), url.replace('TEXTOATUALIZADO', 'SEARCH'), url.replace('https://', 'https://user:password@')]) {
+    assert.equal(isOfficialUrl(invalid), false);
+    assert.equal(isEligibleQuestion({...row, legal_basis:[{url:invalid}]}), false);
+  }
+});
+test('ALE-RO constitutional compilation is accepted without opening generic legislature pages',()=>{
+ const url='https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia';assert.equal(isOfficialUrl(url),true);
+ for(const wrong of ['https://www.al.ro.leg.br/','https://www.al.ro.leg.br/noticias/lei',url+'?redirect=elsewhere',url.replace('https:','http:'),url.replace('www.al.ro.leg.br','www.al.ro.leg.br.evil.example')])assert.equal(isOfficialUrl(wrong),false);
+});
+
+test('reviewed biosafety source accepts only the exact Ministry of Health RDC capture',()=>{
+ const url='https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf';
+ assert.equal(isLegallyVerified([{url}],'2026-10-15T00:00:00Z',true),true);
+ for(const wrong of [url.replace('https:','http:'),url+'?preview=1',url.replace('2018.pdf','2019.pdf'),url.replace('bvsms.saude.gov.br','bvsms.saude.gov.br.evil.test'),'https://bvsms.saude.gov.br/'])assert.equal(isOfficialUrl(wrong),false);
+ assert.equal(isLegallyVerified([{url}],null,true),false);
+});
+
+test('MPRJ LC106 gate accepts only the reviewed official PDF and retains legal/date/context safeguards', () => {
+  const url='https://www.mprj.mp.br/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80?t=1764846735952';
+  assert.equal(isOfficialUrl(url),true);
+  for(const invalid of ['https://www.mprj.mp.br/',url.replace('106_2003','999_2026'),url.replace('www.mprj.mp.br','www.mprj.mp.br.evil.test'),url.replace('https:','http:'),url+'&old=1',url.split('?')[0]])assert.equal(isOfficialUrl(invalid),false);
+  const row={content_status:'active',official_answer:'A',subject:'Direito Administrativo',legal_review_required:false,legal_audit_completed:true,context_review_required:false,legal_basis:[{url},{url:'https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm'}],law_version_checked_at:'2026-10-19T19:00:00Z'};
+  assert.equal(isEligibleQuestion(row),true);
+  for(const patch of [{content_status:'under_review'},{context_review_required:true},{law_version_checked_at:null},{law_version_checked_at:'2999-01-01'},{legal_basis:[{url:'https://www.mprj.mp.br/'}]}])assert.equal(isEligibleQuestion({...row,...patch}),false);
 });

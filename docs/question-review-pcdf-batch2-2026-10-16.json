@@ -1,0 +1,849 @@
+{
+  "scope": "PCDF/2026 — complemento de 14 revisões, acumulado 64",
+  "checked_at": "2026-10-16T16:06:55.936Z",
+  "validation": {
+    "checked_at": "2026-10-16T16:06:00.288Z",
+    "audited": 64,
+    "eligible_audited": 64,
+    "other_pc_rows_preserved": 2904,
+    "concurrent_unrelated_pc_rows": [],
+    "missing_pc_rows": [],
+    "original_texts_answers_sources_subjects_statuses_preserved": true,
+    "items": [
+      {
+        "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+        "item_number": 46,
+        "eligible": true
+      },
+      {
+        "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+        "item_number": 15,
+        "eligible": true
+      },
+      {
+        "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+        "item_number": 27,
+        "eligible": true
+      },
+      {
+        "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+        "item_number": 12,
+        "eligible": true
+      },
+      {
+        "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+        "item_number": 68,
+        "eligible": true
+      },
+      {
+        "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+        "item_number": 111,
+        "eligible": true
+      },
+      {
+        "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+        "item_number": 103,
+        "eligible": true
+      },
+      {
+        "id": "23409872-85b9-4547-9d76-ee840c996f70",
+        "item_number": 40,
+        "eligible": true
+      },
+      {
+        "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+        "item_number": 77,
+        "eligible": true
+      },
+      {
+        "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+        "item_number": 33,
+        "eligible": true
+      },
+      {
+        "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+        "item_number": 39,
+        "eligible": true
+      },
+      {
+        "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+        "item_number": 43,
+        "eligible": true
+      },
+      {
+        "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+        "item_number": 63,
+        "eligible": true
+      },
+      {
+        "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+        "item_number": 42,
+        "eligible": true
+      },
+      {
+        "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+        "item_number": 97,
+        "eligible": true
+      },
+      {
+        "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+        "item_number": 96,
+        "eligible": true
+      },
+      {
+        "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+        "item_number": 78,
+        "eligible": true
+      },
+      {
+        "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+        "item_number": 13,
+        "eligible": true
+      },
+      {
+        "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+        "item_number": 36,
+        "eligible": true
+      },
+      {
+        "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+        "item_number": 8,
+        "eligible": true
+      },
+      {
+        "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+        "item_number": 64,
+        "eligible": true
+      },
+      {
+        "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+        "item_number": 92,
+        "eligible": true
+      },
+      {
+        "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+        "item_number": 76,
+        "eligible": true
+      },
+      {
+        "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+        "item_number": 100,
+        "eligible": true
+      },
+      {
+        "id": "74436292-ad87-456d-870a-f8702db04364",
+        "item_number": 102,
+        "eligible": true
+      },
+      {
+        "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+        "item_number": 106,
+        "eligible": true
+      },
+      {
+        "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+        "item_number": 52,
+        "eligible": true
+      },
+      {
+        "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+        "item_number": 49,
+        "eligible": true
+      },
+      {
+        "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+        "item_number": 11,
+        "eligible": true
+      },
+      {
+        "id": "a1db110e-599c-4503-886b-a2483ac92082",
+        "item_number": 53,
+        "eligible": true
+      },
+      {
+        "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+        "item_number": 44,
+        "eligible": true
+      },
+      {
+        "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+        "item_number": 99,
+        "eligible": true
+      },
+      {
+        "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+        "item_number": 66,
+        "eligible": true
+      },
+      {
+        "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+        "item_number": 26,
+        "eligible": true
+      },
+      {
+        "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+        "item_number": 93,
+        "eligible": true
+      },
+      {
+        "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+        "item_number": 38,
+        "eligible": true
+      },
+      {
+        "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+        "item_number": 47,
+        "eligible": true
+      },
+      {
+        "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+        "item_number": 35,
+        "eligible": true
+      },
+      {
+        "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+        "item_number": 1,
+        "eligible": true
+      },
+      {
+        "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+        "item_number": 101,
+        "eligible": true
+      },
+      {
+        "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+        "item_number": 37,
+        "eligible": true
+      },
+      {
+        "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+        "item_number": 95,
+        "eligible": true
+      },
+      {
+        "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+        "item_number": 110,
+        "eligible": true
+      },
+      {
+        "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+        "item_number": 50,
+        "eligible": true
+      },
+      {
+        "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+        "item_number": 54,
+        "eligible": true
+      },
+      {
+        "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+        "item_number": 98,
+        "eligible": true
+      },
+      {
+        "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+        "item_number": 94,
+        "eligible": true
+      },
+      {
+        "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+        "item_number": 70,
+        "eligible": true
+      },
+      {
+        "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+        "item_number": 25,
+        "eligible": true
+      },
+      {
+        "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+        "item_number": 34,
+        "eligible": true
+      },
+      {
+        "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+        "item_number": 85,
+        "eligible": true
+      },
+      {
+        "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+        "item_number": 115,
+        "eligible": true
+      },
+      {
+        "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+        "item_number": 105,
+        "eligible": true
+      },
+      {
+        "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+        "item_number": 3,
+        "eligible": true
+      },
+      {
+        "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+        "item_number": 48,
+        "eligible": true
+      },
+      {
+        "id": "40aec608-f805-49af-a971-537ab56d2449",
+        "item_number": 113,
+        "eligible": true
+      },
+      {
+        "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+        "item_number": 7,
+        "eligible": true
+      },
+      {
+        "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+        "item_number": 87,
+        "eligible": true
+      },
+      {
+        "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+        "item_number": 45,
+        "eligible": true
+      },
+      {
+        "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+        "item_number": 112,
+        "eligible": true
+      },
+      {
+        "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+        "item_number": 81,
+        "eligible": true
+      },
+      {
+        "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+        "item_number": 88,
+        "eligible": true
+      },
+      {
+        "id": "ef3167f7-b998-406f-b567-e722bc835087",
+        "item_number": 114,
+        "eligible": true
+      },
+      {
+        "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+        "item_number": 41,
+        "eligible": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+      "item_number": 85,
+      "previous_row_sha256": "9e4e079e2018aea1119e552c3dd859663f2319ad54f67d171634ff9af9b29ab4",
+      "published_row_sha256": "f16dbf8932cf6a599cf2940a870af42e3083055c3a17db315dedd27891298971",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nInfanticídio é tipo penal próprio: matar o próprio filho, durante o parto ou logo após, sob influência do estado puerperal. Não se trata simplesmente de atenuante ou causa geral de diminuição do homicídio. Gabarito definitivo E preservado. A justificativa do caderno preliminar começa por Certo, divergência que não autoriza trocar a letra definitiva.\nExemplo: Com os requisitos do art. 123, examina-se infanticídio. Morte do filho sem influência puerperal exige outro enquadramento, conforme os fatos.\nTeste rápido — O estado puerperal é sempre uma atenuante genérica do homicídio? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "123",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 9
+      }
+    },
+    {
+      "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+      "item_number": 115,
+      "previous_row_sha256": "4354ef3d3a05a6ae03102169654653362afb7c3db444d9b8fbdc36281174244d",
+      "published_row_sha256": "40e4abc56cbfc6852e625c2eb5cc8dba2b162dc0aff5574eec8ad14451850c3d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO decreto prevê financiamento dos programas prioritários com recursos da União, dos orçamentos do DF, de Goiás, Minas Gerais e municípios abrangidos, além de operações de crédito externas e internas. Não exige financiamento exclusivo por um dos entes.\nExemplo: Projeto de infraestrutura pode combinar recursos orçamentários e crédito nos termos legais. A participação na RIDE não dispensa autorizações e regras orçamentárias.\nTeste rápido — O financiamento é necessariamente exclusivo do orçamento da União? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "artigo": "9",
+            "title": "Decreto 7.469/2011"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ride.html",
+            "sha256": "ae5df5b96f14e6aebe9c47d45f84575fb98532ed15abea3d0df5a1a33c16262a",
+            "captured_at": "2026-10-16T15:57:01.406Z"
+          }
+        ],
+        "official_pdf_page": 15
+      }
+    },
+    {
+      "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+      "item_number": 105,
+      "previous_row_sha256": "487cb465b653e0b79ad66077f9aeb68fbb920acef0e772ce1cd8bf8babfeab83",
+      "published_row_sha256": "1f6b97df9be52b06cf33db96f88760108efbfbb1f2fedc92ac6194ad9444e6bf",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNa modalidade indireta de conversão, o art. 143, § 2º, III, prevê desconto de 60% se o pedido acompanhar a defesa. Na modalidade direta, a mesma fase tem desconto de 40%. O prazo de 20 dias, isoladamente, não é o critério do desconto: importam modalidade, momento processual e demais requisitos, inclusive o deferimento da conversão.\nExemplo: Multa de R$ 10 mil com conversão indireta deferida no momento legal de 60% resulta em valor convertido de R$ 4 mil. Em conversão direta nessa fase, seriam R$ 6 mil.\nTeste rápido — Toda conversão tem desconto de 60%? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm",
+            "artigo": "142-A",
+            "title": "Decreto 6.514/2008"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm",
+            "artigo": "143",
+            "title": "Decreto 6.514/2008"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/infrac.html",
+            "sha256": "d17d3668bdcc66b43df125c26c0404d23097e17c1ec02921a8bd00d8f6ab7d93",
+            "captured_at": "2026-10-16T15:57:03.068Z"
+          }
+        ],
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+      "item_number": 3,
+      "previous_row_sha256": "f31b1c060af20268f7ff2870b33373ad5e8425526b105d2a494b053d8cc88ded",
+      "published_row_sha256": "db0f87902e3767b89c1af1174426a9034195fd793e2f568157af2b483a86fce9",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nDivulgar sem autorização informação restrita conhecida pela função policial, ou propiciar sua divulgação, em prejuízo do serviço, é infração punível com suspensão de 31 a 45 dias no art. 12, I, da Lei 15.047/2024. Não é a demissão afirmada neste item. Não confundir infrações de gravidades distintas do mesmo estatuto.\nExemplo: O enquadramento descrito no inciso I deve usar a faixa de suspensão correspondente, sem transplantar automaticamente a pena de outra infração.\nTeste rápido — A pena indicada nesse dispositivo é demissão? Não: suspensão de 31 a 45 dias.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15047.htm",
+            "artigo": "12",
+            "title": "Lei 15.047/2024"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15047.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15047.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/dfdisc.html",
+            "sha256": "6ee379cc85abe6c65cef7d83b2538ad1d6d420f5c4d3855302d8ff359098b405",
+            "captured_at": "2026-10-16T15:57:02.385Z"
+          }
+        ],
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+      "item_number": 48,
+      "previous_row_sha256": "02b13af8d2b75ef64e89749cd6fa2530cae006aa6976c7d8f04cc49e59247c6a",
+      "published_row_sha256": "a0c00ad432200eee046cf45d5eab10ed68d5c02974be845043990e83d3f5a806",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA ausência de registro formal não confere imunidade absoluta a sócio oculto. Devem ser analisados a forma societária, a atuação concreta e os requisitos de responsabilidade. O art. 50 admite atingir sócio beneficiado pelo abuso; no modelo de sociedade em conta de participação, o art. 993 também disciplina a intervenção do participante perante terceiros. Não se presume responsabilidade só por benefício econômico regular.\nExemplo: Sócio não registrado que participa de fraude não pode invocar apenas a falta do nome no contrato como imunidade. Isso difere de imputar automaticamente toda dívida a qualquer beneficiário.\nTeste rápido — Não constar formalmente impede qualquer responsabilização? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "50",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "993",
+            "title": "Código Civil — alimentos e revisão"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "40aec608-f805-49af-a971-537ab56d2449",
+      "item_number": 113,
+      "previous_row_sha256": "c2c9346a4751c86de3cb18fb5323604c379018099f18f3994646f21788043508",
+      "published_row_sha256": "34d8efccecffbcc927fd98ef94a7ca0ea2f86b3a4ab7707532866e7686beeb05",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO COARIDE coordena atividades da RIDE e harmoniza ações dos entes integrantes. O texto compilado vincula-o ao Ministério da Integração e do Desenvolvimento Regional, conforme a alteração de 2024. Coordenação não significa substituir automaticamente todas as competências dos governos participantes.\nExemplo: Plano integrado pode reunir ações da União, DF, estados e municípios; cada ente mantém suas competências legais.\nTeste rápido — O Conselho coordena ações para a RIDE? Sim.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "artigo": "2",
+            "title": "Decreto 7.469/2011"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "artigo": "3",
+            "title": "Decreto 7.469/2011"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ride.html",
+            "sha256": "ae5df5b96f14e6aebe9c47d45f84575fb98532ed15abea3d0df5a1a33c16262a",
+            "captured_at": "2026-10-16T15:57:01.406Z"
+          }
+        ],
+        "official_pdf_page": 14
+      }
+    },
+    {
+      "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+      "item_number": 7,
+      "previous_row_sha256": "33204846078a0daf361edbda55725e8cef81324e7f973aec1ac07b9c62a221fa",
+      "published_row_sha256": "ce03ce0f2b5e17c20ab9e0db04d59eaa8754c83e0175e58c32e189b7a6120366",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nÓrgão público integra uma pessoa jurídica, mas não recebe personalidade jurídica própria apenas por ser independente. A Súmula 525/STJ distingue personalidade jurídica de personalidade judiciária: Câmara de Vereadores pode defender em juízo seus direitos institucionais, sem se tornar pessoa jurídica autônoma.\nExemplo: A Câmara pode defender suas prerrogativas institucionais; isso não a equipara ao município como pessoa jurídica.\nTeste rápido — Poder atuar em juízo prova personalidade jurídica própria? Não.\nFonte judicial conferida: Súmula 525/STJ, coletânea oficial de enunciados.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "18",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Verbetes/VerbetesSTJ.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 1,
+        "judicial_pdf_sha256": "285883a43a2c71356668162f799f0c90ca2870dfbf71a33220fdb11ff67d0c3d"
+      }
+    },
+    {
+      "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+      "item_number": 87,
+      "previous_row_sha256": "24784736389a4432bfb1a1ff85ec429f5f205d58a40fc946fcdabbd996a474d8",
+      "published_row_sha256": "2ff58a84d4cc24bfd669c49a6f2f72159cac64b1eae47d3cded3611049cfb53e",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO juiz não está vinculado ao laudo pericial, mas deve fundamentar adequadamente a decisão de acolhê-lo ou afastá-lo. Livre apreciação não permite rejeição arbitrária de prova técnica central. A redação que admite motivação apenas implícita e parcial não satisfaz, por si, o dever de fundamentação pertinente ao caso.\nExemplo: Juiz pode afastar conclusão pericial se explicar razões probatórias idôneas; dizer apenas que discorda sem enfrentar o laudo é situação diferente.\nTeste rápido — Não estar vinculado ao perito dispensa motivação adequada? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "155",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "182",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "93",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 10
+      }
+    },
+    {
+      "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+      "item_number": 45,
+      "previous_row_sha256": "3211ae368ffbea466a6bc9b717a4739251b76911b41cb299cdb5eeb1ea3626ee",
+      "published_row_sha256": "621ff90447dc19ddf802b57e56858e8e09322165fbd6386a2844e8e3d0d9b8b1",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nEm regra, a tradição por quem não é proprietário não transfere a propriedade. A boa-fé, isoladamente, não sana a falta de titularidade do transmitente; o art. 1.268 contém hipóteses legais excepcionais que exigem seus próprios requisitos.\nExemplo: Comprar veículo de quem não era seu proprietário não torna a aquisição válida apenas pela alegação de boa-fé. Exceção legal deve ser demonstrada, não presumida.\nTeste rápido — Boa-fé basta sozinha para superar toda aquisição de não proprietário? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1268",
+            "title": "Código Civil — alimentos e revisão"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+      "item_number": 112,
+      "previous_row_sha256": "78ee548ac1b02d92937373ada3b8a18dc6d150b470c95546adf39fed92f7bdd9",
+      "published_row_sha256": "8efe9a48262471610b0cbecb8bdff2307dfbd3b753e0d9e946557c1ef213176d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA RIDE articula serviços públicos e ações de entes distintos em áreas como infraestrutura, empregos, saneamento, educação e segurança. O art. 3º descreve competências de coordenação e harmonização justamente porque interesses comuns atravessam limites administrativos. Não se cria um novo ente federativo nem se elimina a autonomia dos participantes.\nExemplo: Transporte e saneamento de municípios vizinhos ao DF exigem coordenação entre administrações; uma política isolada pode não resolver o problema compartilhado.\nTeste rápido — A RIDE transforma seus integrantes em um único ente federativo? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "artigo": "3",
+            "title": "Decreto 7.469/2011"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ride.html",
+            "sha256": "ae5df5b96f14e6aebe9c47d45f84575fb98532ed15abea3d0df5a1a33c16262a",
+            "captured_at": "2026-10-16T15:57:01.406Z"
+          }
+        ],
+        "official_pdf_page": 14
+      }
+    },
+    {
+      "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+      "item_number": 81,
+      "previous_row_sha256": "918a0e9b02186db82cf28a1081f4bcfe99d761360bf862f3ed5e1de6644272ef",
+      "published_row_sha256": "d6f02856dfa35c31fcf88b1a3a99741c916a32da44875200dd63c229f410d57c",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nEstupro não se restringe à conjunção carnal: o art. 213 abrange também constranger, mediante violência ou grave ameaça, a praticar ou permitir outro ato libidinoso. Essa unificação decorre da Lei 12.015/2009.\nExemplo: Violência para impor ato libidinoso diverso da penetração vaginal pode preencher o tipo; a ausência dessa penetração não exclui o crime por si só.\nTeste rápido — Sem conjunção carnal nunca há estupro? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "213",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 9
+      }
+    },
+    {
+      "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+      "item_number": 88,
+      "previous_row_sha256": "d35eef1f8849859952235dcee509a5f5cf7a9a225c32bc9732dd4eb18fa9bee4",
+      "published_row_sha256": "da56247611c7f6792722b6c56f1eb20686d1b98a02ab2a70b9d4a946b590a3d2",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA regra exclui provas derivadas das ilícitas; o art. 157, §§ 1º e 2º, ressalva a ausência de nexo causal ou obtenção por fonte independente, definida em relação aos trâmites típicos e regulares de investigação ou instrução. Não basta imaginar que alguma prova poderia aparecer no futuro.\nExemplo: Elementos obtidos por caminho lícito autônomo podem ser preservados; repetir a prova contaminada com nova aparência não cria independência.\nTeste rápido — Uma hipótese abstrata de descoberta futura é suficiente? Não: a exceção exige demonstração.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "157",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "official_pdf_page": 10
+      }
+    },
+    {
+      "id": "ef3167f7-b998-406f-b567-e722bc835087",
+      "item_number": 114,
+      "previous_row_sha256": "fbc0df257061a4f11dce92e60b3fff0999e73726c89d7e9350b3695cec401445",
+      "published_row_sha256": "d48e29be55c695cbd6d3d683d57298f458bb480d948c4fb6c79fee002897b9e6",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO programa especial estabelece critérios para tarifas, crédito e incentivos mediante os instrumentos legais. O art. 8º, III, fala em isenções e incentivos fiscais de caráter temporário. A expressão em caráter definitivo torna o item errado.\nExemplo: Incentivo temporário para fomentar atividade produtiva não equivale a isenção perpétua assegurada pela participação na RIDE.\nTeste rápido — A lei autoriza tratar os incentivos do dispositivo como definitivos? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "artigo": "8",
+            "title": "Decreto 7.469/2011"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7469.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ride.html",
+            "sha256": "ae5df5b96f14e6aebe9c47d45f84575fb98532ed15abea3d0df5a1a33c16262a",
+            "captured_at": "2026-10-16T15:57:01.406Z"
+          }
+        ],
+        "official_pdf_page": 14
+      }
+    },
+    {
+      "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+      "item_number": 41,
+      "previous_row_sha256": "74275f30c4b0b468cd56b4039788fb75da0b3d1bc206e1ee9d1df55dda3fc3ac",
+      "published_row_sha256": "7ef3dade8fab1af1abb210d27514d88417b16216931722431a225ce33a520472",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA Súmula 403/STJ dispensa prova do prejuízo na publicação não autorizada de imagem com finalidade econômica ou comercial. É hipótese específica: não se deve generalizar para toda publicação jornalística, atividade artística ou qualquer utilização de imagem, que pode exigir ponderação distinta.\nExemplo: Imagem de alguém é usada sem autorização em anúncio comercial: não é necessário provar prejuízo concreto para a indenização na hipótese sumulada.\nTeste rápido — A dispensa de prova deve ser aplicada indiscriminadamente a toda publicação? Não.\nFonte judicial conferida: Súmula 403/STJ, coletânea oficial de enunciados.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "20",
+            "title": "Código Civil — alimentos e revisão"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:59:54.979273+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual com o caderno e a letra definitiva, dispositivos oficiais e, quando indicado, enunciado do STJ; comentário não replica automaticamente a justificativa preliminar.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Verbetes/VerbetesSTJ.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4,
+        "judicial_pdf_sha256": "285883a43a2c71356668162f799f0c90ca2870dfbf71a33220fdb11ff67d0c3d"
+      }
+    }
+  ]
+}

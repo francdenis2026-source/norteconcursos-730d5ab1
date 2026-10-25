@@ -1,0 +1,1173 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:29:31.569671+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 19,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-406",
+        "art-407",
+        "art-408",
+        "art-409",
+        "art-410",
+        "art-411",
+        "art-412",
+        "art-413",
+        "art-414",
+        "art-415",
+        "art-416",
+        "art-417",
+        "art-418",
+        "art-419",
+        "art-420",
+        "art-421",
+        "art-422",
+        "art-423",
+        "art-424"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-406",
+      "unit_id": "c452434e-ebb0-5183-8dff-4590d009a933",
+      "content_sha256": "0901ef3bc9e787161085f25d8016f917b28aa30258460e757f0eee1090e1a2a6",
+      "simples": "Na primeira fase do júri, recebida acusação, há citação para resposta escrita em dez dias.",
+      "pontos": [
+        "Prazo desde efetivo cumprimento do mandado; em citação inválida/edital, comparecimento do acusado ou defensor constituído.",
+        "Acusação arrola até oito na denúncia/queixa.",
+        "Defesa pode apresentar preliminares, documentos, provas e até oito testemunhas qualificadas."
+      ],
+      "atencao": [
+        "Não confundir oito testemunhas desta fase com cinco para plenário."
+      ],
+      "exemplo": "Defesa responde após citação efetiva e indica rol pertinente à primeira fase. Variação: No preparo do plenário o limite é o do art. 422, não oito por repetição automática.",
+      "prova": [
+        "Primeira fase permite até oito no rol de defesa? Sim.",
+        "Cumprimento do mandado importa no início do prazo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Resposta no júri",
+          "significado": "Defesa técnica inicial do procedimento bifásico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c452434e-ebb0-5183-8dff-4590d009a933",
+        "content_sha256": "0901ef3bc9e787161085f25d8016f917b28aa30258460e757f0eee1090e1a2a6",
+        "simples": "No procedimento do Júri, o juiz, ao receber a denúncia ou queixa, ordenará a citação do acusado para responder à acusação, por escrito, no prazo de 10 dias. O prazo será contado a partir do efetivo cumprimento do mandado ou do comparecimento, em juízo, do acusado ou de defensor constituído, no caso de citação inválida ou por edital. A acusação deverá arrolar testemunhas, até o máximo de 8, na denúncia ou queixa. Na resposta, o acusado poderá arguir preliminares, alegar tudo que interesse à sua defesa, oferecer documentos, especificar provas e arrolar testemunhas, até o máximo de 8.",
+        "pontos": [
+          "Citação para resposta escrita em 10 dias.",
+          "Prazo conta do cumprimento do mandado ou do comparecimento (se inválida ou por edital).",
+          "Acusação arrola até 8 testemunhas na denúncia ou queixa.",
+          "Defesa arrola até 8 na resposta."
+        ],
+        "atencao": [
+          "Primeira fase do Júri (judicium accusationis): 8 testemunhas por parte."
+        ],
+        "exemplo": "Na primeira fase do Júri, a defesa responde por escrito em 10 dias e arrola até 8 testemunhas.",
+        "prova": [
+          "Assertiva que limita a 5 testemunhas por parte na primeira fase do Júri erra: são 8 (5 é o limite do plenário)."
+        ],
+        "termos": [
+          {
+            "termo": "Sumário da culpa",
+            "significado": "Primeira fase do Júri, até a pronúncia."
+          }
+        ],
+        "remissoes": [
+          "Art. 422"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-407",
+      "unit_id": "35a08b30-8ed8-50ff-a28f-dd59f506974c",
+      "content_sha256": "ff227e71d57243dc97bb86d13d4cc497ce2ccb92e740046b1bded037d34b6e52",
+      "simples": "Exceções na primeira fase do júri seguem processamento apartado, conforme arts. 95–112.",
+      "pontos": [
+        "Separar incidente e mérito da imputação.",
+        "Aplicar requisitos da exceção pertinente."
+      ],
+      "atencao": [
+        "Preliminar não vira automaticamente exceção com procedimento próprio sem identificar sua natureza."
+      ],
+      "exemplo": "Suspeição é processada pelo incidente adequado. Variação: Argumento de mérito sobre autoria continua defesa da imputação, não exceção genérica.",
+      "prova": [
+        "As exceções seguem em apartado? Sim.",
+        "Toda tese de mérito é exceção? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incidente apartado",
+          "significado": "Processamento separado da questão específica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "35a08b30-8ed8-50ff-a28f-dd59f506974c",
+        "content_sha256": "ff227e71d57243dc97bb86d13d4cc497ce2ccb92e740046b1bded037d34b6e52",
+        "simples": "As exceções serão processadas em apartado, nos termos dos arts. 95 a 112 do Código.",
+        "pontos": [
+          "Exceções no Júri tramitam em apartado, pelos arts. 95 a 112."
+        ],
+        "atencao": [
+          "Rito idêntico ao das exceções gerais."
+        ],
+        "exemplo": "A exceção de suspeição do juiz é processada em apartado na primeira fase do Júri.",
+        "prova": [
+          "Assertiva que cria rito próprio das exceções no Júri erra: segue os arts. 95 a 112."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 95"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-408",
+      "unit_id": "f0a83a7e-e5ee-50b7-a546-b724b00ce408",
+      "content_sha256": "8dcac0e9bb5ff6ffa4a42c5ca9db444e3cde481235c703c20baeb5de21580ac9",
+      "simples": "Sem resposta no prazo, juiz nomeia defensor com vista para oferecê-la em até dez dias.",
+      "pontos": [
+        "Não dispensar resposta técnica por inércia pessoal.",
+        "Assegurar acesso efetivo aos autos."
+      ],
+      "atencao": [
+        "Silêncio do acusado não autoriza seguir sem defesa nem presumir culpa."
+      ],
+      "exemplo": "Após falta de resposta, defensor nomeado recebe vista e prazo. Variação: Nomear sem disponibilizar autos não assegura preparação efetiva.",
+      "prova": [
+        "Inércia elimina defesa técnica? Não.",
+        "Nomeado recebe vista dos autos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Garantia de resposta",
+          "significado": "Defesa técnica preservada diante da omissão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f0a83a7e-e5ee-50b7-a546-b724b00ce408",
+        "content_sha256": "8dcac0e9bb5ff6ffa4a42c5ca9db444e3cde481235c703c20baeb5de21580ac9",
+        "simples": "Não apresentada a resposta no prazo legal, o juiz nomeará defensor para oferecê-la em até 10 dias, concedendo-lhe vista dos autos.",
+        "pontos": [
+          "Sem resposta no prazo: juiz nomeia defensor.",
+          "Defensor oferece a resposta em até 10 dias, com vista dos autos."
+        ],
+        "atencao": [
+          "Mesmo prazo de 10 dias."
+        ],
+        "exemplo": "O acusado não responde, e o juiz nomeia defensor para oferecer a resposta.",
+        "prova": [
+          "Assertiva que dispensa a nomeação de defensor se não houver resposta erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 396-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-409",
+      "unit_id": "6f569aac-be8a-5e05-b973-2982084a0b33",
+      "content_sha256": "301aa2d350a9dbe66ec96b174d988ce31aacc42a0d4a3ede32f95f7fa0054d4a",
+      "simples": "Após resposta, MP ou querelante é ouvido sobre preliminares e documentos em cinco dias.",
+      "pontos": [
+        "Objeto específico: questões e documentos defensivos.",
+        "Não confundir com prazo de dez dias da resposta."
+      ],
+      "atencao": [
+        "Prazo dessa manifestação não substitui instrução nem resposta inicial."
+      ],
+      "exemplo": "Defesa junta documento relevante e acusação tem oportunidade de manifestação. Variação: Sem documento ou preliminar controvertida, não inventar conteúdo acusatório novo pelo artigo.",
+      "prova": [
+        "Prazo desta manifestação é cinco dias? Sim.",
+        "É a resposta inicial do acusado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Contraditório sobre a resposta",
+          "significado": "Manifestação da acusação sobre pontos defensivos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6f569aac-be8a-5e05-b973-2982084a0b33",
+        "content_sha256": "301aa2d350a9dbe66ec96b174d988ce31aacc42a0d4a3ede32f95f7fa0054d4a",
+        "simples": "Apresentada a defesa, o juiz ouvirá o Ministério Público ou o querelante sobre preliminares e documentos, em 5 dias.",
+        "pontos": [
+          "Juiz ouve o MP ou o querelante sobre preliminares e documentos.",
+          "Prazo de 5 dias."
+        ],
+        "atencao": [
+          "Contraditório sobre as preliminares da defesa."
+        ],
+        "exemplo": "A defesa apresenta preliminares, e o MP se manifesta em 5 dias.",
+        "prova": [
+          "Assertiva que fixa em 10 dias a manifestação do MP sobre as preliminares erra: são 5 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 410"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-410",
+      "unit_id": "177cec85-41fd-5c8d-9a8a-a606f4c082ca",
+      "content_sha256": "6f3e10d4163f0e47662515f05f68c47af5cfcda032141a3a5b447db0277766e1",
+      "simples": "Juiz determina testemunhas e diligências requeridas pelas partes no prazo máximo legal de dez dias.",
+      "pontos": [
+        "Preparação da instrução da primeira fase.",
+        "Examinar pertinência e providências de intimação."
+      ],
+      "atencao": [
+        "Não confundir dez dias deste ato preparatório com noventa de conclusão da fase."
+      ],
+      "exemplo": "Juízo organiza produção da prova requerida após as manifestações. Variação: Requerimento sem pertinência não elimina controle judicial fundamentado.",
+      "prova": [
+        "Este prazo é o de conclusão de toda a fase? Não.",
+        "Há providências de produção de prova? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Preparação probatória",
+          "significado": "Organização das diligências e oitivas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "177cec85-41fd-5c8d-9a8a-a606f4c082ca",
+        "content_sha256": "6f3e10d4163f0e47662515f05f68c47af5cfcda032141a3a5b447db0277766e1",
+        "simples": "O juiz determinará a inquirição das testemunhas e a realização das diligências requeridas pelas partes, no prazo máximo de 10 dias.",
+        "pontos": [
+          "Inquirição de testemunhas e diligências em até 10 dias."
+        ],
+        "atencao": [
+          "Prazo de 10 dias para a determinação."
+        ],
+        "exemplo": "Em até 10 dias, o juiz determina a inquirição das testemunhas.",
+        "prova": [
+          "Assertiva que fixa em 30 dias esse prazo erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 409",
+          "Art. 411"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-411",
+      "unit_id": "343420ae-b705-5741-a805-91f39960dd1c",
+      "content_sha256": "889a533b6e723b4a6676f15e4fb51e172eb67e2e8b6a6e6a71963dfc5fe71f1c",
+      "simples": "Audiência da primeira fase reúne prova, interrogatório ao final e debates, com decisão imediata ou em dez dias.",
+      "pontos": [
+        "Ofendido se possível; testemunhas acusação e defesa; demais provas; acusado.",
+        "Peritos: requerimento prévio e deferimento.",
+        "Pode haver mutatio conforme art. 384.",
+        "Vinte minutos, prorrogáveis por dez; tempo individual de acusação e defesa por acusado.",
+        "Assistente: dez minutos e igual acréscimo defensivo.",
+        "Adiamento só por prova imprescindível; testemunha presente é ouvida, observada ordem."
+      ],
+      "atencao": [
+        "Condução referida no §7º não autoriza obrigar réu a interrogatório: integrar ADPFs 395/444."
+      ],
+      "exemplo": "Testemunha presente depõe respeitada ordem e acusado é interrogado após prova. Variação: Ausência do acusado não legitima conduzi-lo coercitivamente para interrogatório.",
+      "prova": [
+        "Tempo individual inclui acusação e defesa por acusado? Sim.",
+        "§7º autoriza forçar interrogatório do réu? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução preliminar do júri",
+          "significado": "Prova e debates antes da decisão de admissibilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADPF&numeroProcesso=395"
+      ],
+      "expected": {
+        "unit_id": "343420ae-b705-5741-a805-91f39960dd1c",
+        "content_sha256": "889a533b6e723b4a6676f15e4fb51e172eb67e2e8b6a6e6a71963dfc5fe71f1c",
+        "simples": "Na audiência de instrução do Júri, proceder-se-á à tomada de declarações do ofendido, se possível, à inquirição das testemunhas arroladas pela acusação e pela defesa, nesta ordem, bem como aos esclarecimentos dos peritos, às acareações e ao reconhecimento de pessoas e coisas, interrogando-se, em seguida, o acusado e procedendo-se o debate. Os esclarecimentos dos peritos dependerão de prévio requerimento e deferimento pelo juiz. As provas serão produzidas em uma só audiência. Encerrada a instrução, observar-se-á, se for o caso, o art. 384. As alegações serão orais, concedendo-se a palavra à acusação e à defesa pelo prazo de 20 minutos, prorrogáveis por mais 10. Havendo mais de 1 acusado, o tempo é individual. Ao assistente do MP serão concedidos 10 minutos, entre outras disposições do dispositivo.",
+        "pontos": [
+          "Ordem da prova: ofendido, testemunhas (acusação e defesa), peritos, acareações, reconhecimentos, interrogatório, debate.",
+          "Peritos: esclarecimentos dependem de requerimento e deferimento.",
+          "Provas em uma só audiência.",
+          "Art. 384 se necessário (mutatio libelli).",
+          "Alegações orais: 20 minutos, prorrogáveis por mais 10.",
+          "Mais de um acusado: tempo individual."
+        ],
+        "atencao": [
+          "Mesmo desenho da audiência do rito ordinário.",
+          "Fecha com debate oral."
+        ],
+        "exemplo": "Na primeira fase do Júri, o acusado é interrogado por último e as partes debatem oralmente.",
+        "prova": [
+          "Assertiva que fixa em 10 minutos o tempo básico das alegações orais na primeira fase do Júri erra: são 20, prorrogáveis por mais 10."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 400",
+          "Art. 384"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-412",
+      "unit_id": "3f5992bd-54bd-57da-9c74-1c8030070a9a",
+      "content_sha256": "f0bc506c67eba039fcf1287c90b9940b4ee3ba00391ad6cda33293a17ed78e9c",
+      "simples": "A primeira fase do procedimento do júri tem prazo máximo legal de noventa dias.",
+      "pontos": [
+        "Não confundir com sessenta da audiência ordinária.",
+        "Excesso deve ser analisado concretamente, sem automatismo isolado."
+      ],
+      "atencao": [
+        "Noventa dias não é duração máxima de todo o procedimento até veredito nem causa automática de absolvição."
+      ],
+      "exemplo": "Acompanhamento verifica prazo da fase e justificativas de demora. Variação: Necessidade concreta de diligência exige análise, não declaração mecânica de culpa ou inocência por calendário.",
+      "prova": [
+        "Prazo é de noventa dias? Sim.",
+        "Abrange necessariamente julgamento final em plenário? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo da primeira fase",
+          "significado": "Referência temporal para conclusão da instrução preliminar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3f5992bd-54bd-57da-9c74-1c8030070a9a",
+        "content_sha256": "f0bc506c67eba039fcf1287c90b9940b4ee3ba00391ad6cda33293a17ed78e9c",
+        "simples": "O procedimento da primeira fase do Júri será concluído no prazo máximo de 90 dias.",
+        "pontos": [
+          "Prazo máximo de 90 dias para concluir a primeira fase."
+        ],
+        "atencao": [
+          "Prazo impróprio, mas parâmetro de duração razoável."
+        ],
+        "exemplo": "A primeira fase do procedimento do Júri deve terminar em até 90 dias.",
+        "prova": [
+          "Assertiva que fixa em 60 dias o prazo máximo da primeira fase do Júri erra: são 90 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 411"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-413",
+      "unit_id": "38401c8e-ee2f-5d71-80fc-2040893b845c",
+      "content_sha256": "c68e48a852bcd069265cecbe4876b1645236082fbdc6e1adb980c0f263fafbab",
+      "simples": "Pronúncia exige materialidade e indícios suficientes de autoria/participação, com motivação limitada e decisão cautelar própria.",
+      "pontos": [
+        "Indicar enquadramento, qualificadoras e aumentos sem linguagem de condenação.",
+        "Tema 1260/STJ, setembro de 2026: inquérito sozinho não basta, ressalvadas provas cautelares, irrepetíveis e antecipadas.",
+        "Relato indireto é admissível, mas isolado é insuficiente; relato qualificado em intimidação objetiva exige controle estrito e defesa.",
+        "Fiança e cautelares dependem de requisitos específicos, não automatismo."
+      ],
+      "atencao": [
+        "Não substituir suporte probatório por in dubio pro societate nem tratar pronúncia como condenação."
+      ],
+      "exemplo": "Prova judicial consistente de materialidade e indícios autoriza exame de submissão ao júri. Variação: Boato isolado não basta; intimidação comprovada exige avaliar qualificação do relato e garantias, não presumir exceção.",
+      "prova": [
+        "Pronúncia é condenação? Não.",
+        "Ouvir dizer isolado basta? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Pronúncia",
+          "significado": "Juízo fundamentado de admissibilidade da acusação para plenário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/16092026-Terceira-Secao-fixa-teses-repetitivas-sobre-uso-de-provas-do-inquerito-e-validade-do-testemunho-indireto-na.aspx"
+      ],
+      "expected": {
+        "unit_id": "38401c8e-ee2f-5d71-80fc-2040893b845c",
+        "content_sha256": "c68e48a852bcd069265cecbe4876b1645236082fbdc6e1adb980c0f263fafbab",
+        "simples": "O juiz, fundamentadamente, pronunciará o acusado, se convencido da materialidade do fato e da existência de indícios suficientes de autoria ou de participação. A fundamentação da pronúncia limitar-se-á à indicação da materialidade do fato e da existência de indícios suficientes de autoria ou de participação, devendo o juiz declarar o dispositivo legal em que julgar incurso o acusado e especificar as circunstâncias qualificadoras e as causas de aumento de pena. Se o crime for afiançável, o juiz arbitrará o valor da fiança para a concessão ou manutenção da liberdade provisória. O juiz decidirá, motivadamente, sobre a manutenção, revogação ou substituição da prisão ou medida restritiva de liberdade anteriormente decretada e, tratando-se de acusado solto, sobre a necessidade da prisão ou das medidas do Título IX do Livro I.",
+        "pontos": [
+          "Pronúncia: materialidade do fato e indícios suficientes de autoria ou participação.",
+          "Fundamentação limitada a esses pontos (sem juízo de mérito aprofundado).",
+          "Declara o dispositivo legal e especifica qualificadoras e causas de aumento.",
+          "Fiança, se afiançável.",
+          "Decide sobre prisão e medidas cautelares."
+        ],
+        "atencao": [
+          "Na pronúncia vale 'in dubio pro societate' (indícios suficientes, e não prova plena).",
+          "Qualificadoras devem ser especificadas."
+        ],
+        "exemplo": "O juiz pronuncia o acusado, apontando a materialidade e os indícios de autoria.",
+        "prova": [
+          "Assertiva que exige prova plena da autoria para a pronúncia erra: bastam indícios suficientes."
+        ],
+        "termos": [
+          {
+            "termo": "Pronúncia",
+            "significado": "Decisão que envia o acusado a julgamento pelo Júri."
+          }
+        ],
+        "remissoes": [
+          "Art. 414",
+          "Art. 415"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-414",
+      "unit_id": "f4b94793-8cdb-5a01-8a13-96f30a22ae6e",
+      "content_sha256": "f36778f76771fa8ed0ad7e593581cb5df6d42e9a415a323bb803f2d03b8a8ad9",
+      "simples": "Impronúncia ocorre sem convencimento sobre materialidade ou indícios suficientes de autoria/participação.",
+      "pontos": [
+        "Fundamentação necessária.",
+        "Nova acusação possível com prova nova enquanto punibilidade não extinta.",
+        "Não equivale a condenação nem absolvição sumária de mérito."
+      ],
+      "atencao": [
+        "Não reenviar a mesma acusação sem prova nova para contornar insuficiência reconhecida."
+      ],
+      "exemplo": "Indícios insuficientes resultam em impronúncia. Variação: Prova realmente nova pode permitir nova acusação antes de extinta punibilidade.",
+      "prova": [
+        "Prova nova pode permitir nova denúncia? Sim, nas condições legais.",
+        "Impronúncia equivale a condenação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Impronúncia",
+          "significado": "Inadmissibilidade da acusação por insuficiência dos requisitos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f4b94793-8cdb-5a01-8a13-96f30a22ae6e",
+        "content_sha256": "f36778f76771fa8ed0ad7e593581cb5df6d42e9a415a323bb803f2d03b8a8ad9",
+        "simples": "Não se convencendo da materialidade do fato ou da existência de indícios suficientes de autoria ou de participação, o juiz, fundamentadamente, impronunciará o acusado. Enquanto não ocorrer a extinção da punibilidade, poderá ser formulada nova denúncia ou queixa se houver prova nova.",
+        "pontos": [
+          "Impronúncia: ausência de materialidade ou de indícios suficientes de autoria.",
+          "Nova denúncia possível com prova nova, enquanto não extinta a punibilidade."
+        ],
+        "atencao": [
+          "Impronúncia não faz coisa julgada material: pode haver nova denúncia com prova nova."
+        ],
+        "exemplo": "Não há indício suficiente de autoria: o juiz impronuncia o acusado.",
+        "prova": [
+          "Assertiva que impede nova denúncia após a impronúncia, mesmo com prova nova, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 413",
+          "Art. 416"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-415",
+      "unit_id": "86566208-32b4-571a-97c1-05a9aa56af77",
+      "content_sha256": "800c9a5099a2ce010bed7347f75a5b5296d5e074b147162f0ed304b6b1b5b7e1",
+      "simples": "Absolvição sumária no júri exige hipótese demonstrada: inexistência, não autoria, atipicidade ou exclusão/isenção.",
+      "pontos": [
+        "Inexistência e não participação devem estar provadas.",
+        "Inimputabilidade não permite aplicar inciso IV salvo se única tese defensiva.",
+        "Distinguir hipótese provada de simples insuficiência que leva à impronúncia."
+      ],
+      "atencao": [
+        "Não ignorar defesa de inocência para impor medida de segurança por inimputabilidade quando não é a única tese."
+      ],
+      "exemplo": "Prova demonstra acusado não participou: absolvição sumária pertinente. Variação: Inimputabilidade e negativa de autoria coexistem: respeitar ressalva do parágrafo único.",
+      "prova": [
+        "Inimputabilidade sempre permite absolvição sumária? Não.",
+        "Ausência de prova é igual a não autoria provada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Absolvição sumária no júri",
+          "significado": "Decisão de mérito nas hipóteses demonstradas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "86566208-32b4-571a-97c1-05a9aa56af77",
+        "content_sha256": "800c9a5099a2ce010bed7347f75a5b5296d5e074b147162f0ed304b6b1b5b7e1",
+        "simples": "O juiz, fundamentadamente, absolverá desde logo o acusado quando provada a inexistência do fato; provado não ser ele autor ou partícipe do fato; o fato não constituir infração penal; ou demonstrada causa de isenção de pena ou de exclusão do crime. Não se aplica o inciso IV ao caso de inimputabilidade do caput do art. 26 do Código Penal, salvo quando esta for a única tese defensiva.",
+        "pontos": [
+          "I: inexistência do fato provada.",
+          "II: provado que não é autor ou partícipe.",
+          "III: fato não constitui infração penal.",
+          "IV: isenção de pena ou exclusão do crime demonstrada.",
+          "Parágrafo único: inimputabilidade só absolve sumariamente se for a única tese defensiva."
+        ],
+        "atencao": [
+          "Absolvição sumária no Júri (diferente da impronúncia).",
+          "Inimputabilidade é exceção, salvo se for a única tese."
+        ],
+        "exemplo": "Provado que o acusado não foi o autor, o juiz o absolve sumariamente.",
+        "prova": [
+          "Assertiva que sempre permite a absolvição sumária por inimputabilidade erra, ela só cabe se for a única tese defensiva."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 397",
+          "Art. 416"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-416",
+      "unit_id": "250a942b-f649-5a5a-8f6e-7c3e121eb868",
+      "content_sha256": "2d8e334ea8573de859ff0529f9e84dc5c31aa396dca82ca0749643ab249ff89f",
+      "simples": "Impronúncia e absolvição sumária são impugnáveis por apelação.",
+      "pontos": [
+        "Não confundir com recurso da pronúncia.",
+        "Identificar decisão recorrida antes de escolher instrumento."
+      ],
+      "atencao": [
+        "Semelhança de nomes não torna idêntica a via recursal de todas as decisões da fase."
+      ],
+      "exemplo": "Acusação recorre por apelação de absolvição sumária. Variação: Pronúncia exige examinar recurso em sentido estrito do art. 581, IV.",
+      "prova": [
+        "Impronúncia admite apelação? Sim.",
+        "Pronúncia usa necessariamente mesma via? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apelação da fase preliminar",
+          "significado": "Recurso previsto para as duas decisões do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "250a942b-f649-5a5a-8f6e-7c3e121eb868",
+        "content_sha256": "2d8e334ea8573de859ff0529f9e84dc5c31aa396dca82ca0749643ab249ff89f",
+        "simples": "Contra a sentença de impronúncia ou de absolvição sumária caberá apelação.",
+        "pontos": [
+          "Impronúncia e absolvição sumária: apelação."
+        ],
+        "atencao": [
+          "Contra a pronúncia, o recurso é o RESE (art. 581, IV)."
+        ],
+        "exemplo": "Impronunciado o acusado, o Ministério Público pode apelar.",
+        "prova": [
+          "Assertiva que prevê recurso em sentido estrito contra a impronúncia erra: cabe apelação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 414",
+          "Art. 415"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-417",
+      "unit_id": "e4f787ad-7c91-5c99-9afe-326ee2c67306",
+      "content_sha256": "1c312973eb9561dfa20ecfbdb366ad0fe5832dee7f0e54717bb8d67c34f384bf",
+      "simples": "Indícios de participação de pessoa não acusada levam à remessa ao MP por quinze dias ao pronunciar ou impronunciar.",
+      "pontos": [
+        "Não incluir acusado novo por iniciativa condenatória do juiz.",
+        "Aplicar separação do art. 80 no que couber."
+      ],
+      "atencao": [
+        "Indício sobre terceiro não dispensa acusação regular, citação e defesa."
+      ],
+      "exemplo": "Prova aponta terceiro e autos retornam ao MP para providências pertinentes. Variação: Juiz não condena terceiro estranho ao processo apenas por constar depoimento.",
+      "prova": [
+        "Prazo de remessa é quinze dias? Sim.",
+        "Terceiro pode ser condenado sem acusação regular? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Participante não acusado",
+          "significado": "Indícios que exigem atuação acusatória e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e4f787ad-7c91-5c99-9afe-326ee2c67306",
+        "content_sha256": "1c312973eb9561dfa20ecfbdb366ad0fe5832dee7f0e54717bb8d67c34f384bf",
+        "simples": "Se houver indícios de autoria ou de participação de outras pessoas não incluídas na acusação, o juiz, ao pronunciar ou impronunciar o acusado, determinará o retorno dos autos ao Ministério Público, por 15 dias, aplicável, no que couber, o art. 80.",
+        "pontos": [
+          "Indícios de outros envolvidos: juiz devolve os autos ao MP.",
+          "Prazo de 15 dias.",
+          "Aplica-se, no que couber, o art. 80 (separação dos processos)."
+        ],
+        "atencao": [
+          "Prazo de 15 dias."
+        ],
+        "exemplo": "O juiz percebe indícios contra um terceiro e devolve os autos ao MP por 15 dias.",
+        "prova": [
+          "Assertiva que fixa em 5 dias o prazo de retorno dos autos ao MP erra: são 15 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-418",
+      "unit_id": "2d1f5025-b6e0-5806-997a-7f54fd120d17",
+      "content_sha256": "943a34d5a679c8e29c8ec14b8179a47df1a12e756efdf897f9b847a451e95049",
+      "simples": "Juiz pode dar definição jurídica diversa ao fato na decisão da fase, inclusive com consequência penal mais grave.",
+      "pontos": [
+        "Classificação jurídica não autoriza criar fatos.",
+        "Novo elemento ausente da acusação exige regime pertinente de aditamento."
+      ],
+      "atencao": [
+        "Integrar correlação e art. 384; não ocultar mudança factual sob rótulo de classificação."
+      ],
+      "exemplo": "Mesma narrativa recebe enquadramento juridicamente adequado. Variação: Circunstância nova não descrita demanda contraditório e procedimento próprio.",
+      "prova": [
+        "Artigo permite criar fato acusatório? Não.",
+        "Nova definição pode ser mais grave? Sim, respeitados limites."
+      ],
+      "termos": [
+        {
+          "termo": "Reclassificação no júri",
+          "significado": "Definição jurídica diversa dentro dos limites da imputação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2d1f5025-b6e0-5806-997a-7f54fd120d17",
+        "content_sha256": "943a34d5a679c8e29c8ec14b8179a47df1a12e756efdf897f9b847a451e95049",
+        "simples": "O juiz poderá dar ao fato definição jurídica diversa da constante da acusação, embora o acusado fique sujeito a pena mais grave.",
+        "pontos": [
+          "Na pronúncia, o juiz pode alterar a definição jurídica do fato.",
+          "Ainda que implique pena mais grave."
+        ],
+        "atencao": [
+          "Emendatio libelli na pronúncia."
+        ],
+        "exemplo": "O juiz pronuncia o acusado por homicídio qualificado quando a denúncia o capitulava como simples, sem alterar os fatos.",
+        "prova": [
+          "Assertiva que proíbe a pronúncia com definição jurídica diversa e pena mais grave erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 383"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-419",
+      "unit_id": "b6813b1c-1049-5b16-8a9f-507bfef27fc3",
+      "content_sha256": "c8bbe95d97a9ca3fed73e3327ea23215ebed26026106d8e81f91b184196332f1",
+      "simples": "Reconhecido crime fora da competência do júri e sem competência do juiz, autos seguem ao juízo competente.",
+      "pontos": [
+        "Acusado preso fica à disposição do novo juízo.",
+        "Não é absolvição automática.",
+        "Custódia exige fundamentos atuais próprios."
+      ],
+      "atencao": [
+        "Remessa não legitima manutenção eterna da prisão nem condena pelo novo crime."
+      ],
+      "exemplo": "Juízo reconhece crime não doloso contra vida e remete ao competente. Variação: Novo órgão avalia processo e legalidade da cautelar, não presume sentença já proferida.",
+      "prova": [
+        "Desclassificação significa absolvição sempre? Não.",
+        "Preso fica à disposição do novo juízo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Desclassificação e remessa",
+          "significado": "Mudança da competência por definição do crime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b6813b1c-1049-5b16-8a9f-507bfef27fc3",
+        "content_sha256": "c8bbe95d97a9ca3fed73e3327ea23215ebed26026106d8e81f91b184196332f1",
+        "simples": "Quando o juiz se convencer, em discordância com a acusação, da existência de crime diverso dos referidos no §1º do art. 74 e não for competente para o julgamento, remeterá os autos ao juiz que o seja. Remetidos os autos a outro juiz, à disposição deste ficará o acusado preso.",
+        "pontos": [
+          "Crime diverso dos dolosos contra a vida: remessa ao juiz competente.",
+          "Acusado preso fica à disposição do novo juiz."
+        ],
+        "atencao": [
+          "Desclassificação na primeira fase."
+        ],
+        "exemplo": "O juiz entende que o crime não é doloso contra a vida e remete os autos ao juízo competente.",
+        "prova": [
+          "Assertiva que mantém o processo no juízo do Júri após a desclassificação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-420",
+      "unit_id": "571062c0-dddc-5eb3-8585-a4fd781a993c",
+      "content_sha256": "7a027f46a87a149bd7b68ed0f8e4f93c682b2e083b625e6f6cdbc7159c029172",
+      "simples": "Pronúncia é intimada pessoalmente ao acusado, defensor nomeado e MP; demais sujeitos seguem publicação do regime indicado.",
+      "pontos": [
+        "Constituído, querelante e assistente: art. 370, §1º.",
+        "Acusado solto não encontrado: edital.",
+        "Distinguir pronúncia de intimação da sentença final."
+      ],
+      "atencao": [
+        "Edital do solto não localizado não dispensa a ciência regular da defesa."
+      ],
+      "exemplo": "Defensor nomeado recebe ciência pessoal da pronúncia. Variação: Acusado solto não localizado é intimado por edital na hipótese própria.",
+      "prova": [
+        "Nomeado recebe intimação pessoal? Sim.",
+        "Solto não encontrado tem hipótese de edital? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ciência da pronúncia",
+          "significado": "Comunicação diferenciada conforme sujeito processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "571062c0-dddc-5eb3-8585-a4fd781a993c",
+        "content_sha256": "7a027f46a87a149bd7b68ed0f8e4f93c682b2e083b625e6f6cdbc7159c029172",
+        "simples": "A intimação da decisão de pronúncia será feita pessoalmente ao acusado, ao defensor nomeado e ao Ministério Público; ao defensor constituído, ao querelante e ao assistente do MP, na forma do §1º do art. 370. Será intimado por edital o acusado solto que não for encontrado.",
+        "pontos": [
+          "Intimação pessoal: acusado, defensor nomeado e MP.",
+          "Defensor constituído, querelante e assistente: por publicação (art. 370, §1º).",
+          "Acusado solto não encontrado: edital."
+        ],
+        "atencao": [
+          "Edital só para acusado SOLTO."
+        ],
+        "exemplo": "O acusado preso é intimado pessoalmente da pronúncia.",
+        "prova": [
+          "Assertiva que admite a intimação por edital do acusado preso, da pronúncia, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 370"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-421",
+      "unit_id": "724b3595-b724-5882-b8fc-04bbac71c41c",
+      "content_sha256": "c16eedc1938822cb29f43f690abaeb2eb54dfa343a77fecd7d9f98ce9c06c2f2",
+      "simples": "Após preclusão da pronúncia, autos vão ao presidente do júri; circunstância superveniente relevante pode alterar classificação.",
+      "pontos": [
+        "Superveniência leva à remessa ao MP e posterior decisão judicial.",
+        "Não confundir preclusão da fase com condenação definitiva."
+      ],
+      "atencao": [
+        "Juiz não ignora mudança superveniente nem transforma encaminhamento em veredito."
+      ],
+      "exemplo": "Pronúncia estabilizada segue ao preparo de plenário. Variação: Circunstância nova que altera classificação demanda providência acusatória e decisão apropriada.",
+      "prova": [
+        "Preclusão da pronúncia é condenação final? Não.",
+        "Circunstância superveniente pode exigir remessa ao MP? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Preclusão da pronúncia",
+          "significado": "Estabilização da decisão para prosseguimento, com ressalva legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "724b3595-b724-5882-b8fc-04bbac71c41c",
+        "content_sha256": "c16eedc1938822cb29f43f690abaeb2eb54dfa343a77fecd7d9f98ce9c06c2f2",
+        "simples": "Preclusa a decisão de pronúncia, os autos serão encaminhados ao juiz presidente do Tribunal do Júri. Ainda que preclusa a pronúncia, havendo circunstância superveniente que altere a classificação do crime, o juiz ordenará a remessa dos autos ao Ministério Público. Em seguida, os autos serão conclusos ao juiz para decisão.",
+        "pontos": [
+          "Preclusa a pronúncia: autos ao juiz presidente do Júri.",
+          "Circunstância superveniente que altera a classificação: remessa ao MP.",
+          "Depois, autos conclusos ao juiz."
+        ],
+        "atencao": [
+          "Remessa ao MP em caso de circunstância superveniente."
+        ],
+        "exemplo": "A vítima morre depois da pronúncia, mudando a classificação do crime, e os autos vão ao MP.",
+        "prova": [
+          "Assertiva que impede qualquer alteração da classificação após a preclusão da pronúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 413",
+          "Art. 422"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-422",
+      "unit_id": "0f21332c-c0b8-5eb6-bd36-1ccb9b5afb08",
+      "content_sha256": "0d1252580d3790979088c610a372ebda9d7958125337a67d84bd59f5961a8ac7",
+      "simples": "No preparo do plenário, acusação e defesa têm cinco dias para rol de até cinco testemunhas, documentos e diligências.",
+      "pontos": [
+        "MP ou querelante no caso de queixa e defensor são intimados.",
+        "Rol desta etapa é distinto do inicial de oito.",
+        "Verificar requisitos adicionais de comparecimento no plenário."
+      ],
+      "atencao": [
+        "Não usar limite inicial de oito para testemunhas que deporão no plenário."
+      ],
+      "exemplo": "Defesa indica cinco testemunhas de plenário no prazo. Variação: Testemunha essencial exige também observar providências específicas de intimação, não só nome no rol.",
+      "prova": [
+        "Rol de plenário tem até cinco? Sim.",
+        "Prazo deste preparo é dez dias? Não, cinco."
+      ],
+      "termos": [
+        {
+          "termo": "Rol de plenário",
+          "significado": "Indicação específica para julgamento perante jurados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0f21332c-c0b8-5eb6-bd36-1ccb9b5afb08",
+        "content_sha256": "0d1252580d3790979088c610a372ebda9d7958125337a67d84bd59f5961a8ac7",
+        "simples": "Ao receber os autos, o presidente do Tribunal do Júri determinará a intimação do Ministério Público ou do querelante, no caso de queixa, e do defensor, para, no prazo de 5 dias, apresentarem rol de testemunhas que irão depor em plenário, até o máximo de 5, oportunidade em que poderão juntar documentos e requerer diligência.",
+        "pontos": [
+          "Fase de preparação do plenário.",
+          "Prazo de 5 dias para o rol de testemunhas.",
+          "Máximo de 5 testemunhas em plenário.",
+          "Possibilidade de juntar documentos e requerer diligência."
+        ],
+        "atencao": [
+          "No plenário: até 5 testemunhas por parte (na primeira fase, até 8)."
+        ],
+        "exemplo": "Preclusa a pronúncia, as partes têm 5 dias para apresentar o rol de até 5 testemunhas.",
+        "prova": [
+          "Assertiva que fixa em 8 testemunhas o limite do rol para o plenário erra: são 5."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 406",
+          "Art. 423"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-423",
+      "unit_id": "a846200a-e34d-5963-9926-f0f5d0f6b6ed",
+      "content_sha256": "ffa34c6f9584f2667e477be6323779eff4716d358ae56616ea9197c1aa3983ad",
+      "simples": "Presidente decide pedidos, promove diligências úteis e elabora relatório sucinto para pautar julgamento.",
+      "pontos": [
+        "Sanar nulidade ou esclarecer fato pertinente.",
+        "Relatório não é antecipação do veredito.",
+        "Providências devem respeitar contraditório."
+      ],
+      "atencao": [
+        "Resumo deve informar o processo sem afirmar culpa como decisão já tomada."
+      ],
+      "exemplo": "Juiz organiza prova e relata andamento de forma sucinta. Variação: Diligência relevante não autoriza opinião condenatória no relatório aos jurados.",
+      "prova": [
+        "Relatório deve antecipar condenação? Não.",
+        "Pode haver diligência para sanar nulidade? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Preparo pelo presidente",
+          "significado": "Organização do julgamento e relatório processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a846200a-e34d-5963-9926-f0f5d0f6b6ed",
+        "content_sha256": "ffa34c6f9584f2667e477be6323779eff4716d358ae56616ea9197c1aa3983ad",
+        "simples": "Deliberando sobre os requerimentos de provas a serem produzidas ou exibidas no plenário do júri, e adotadas as providências devidas, o juiz presidente ordenará as diligências necessárias para sanar qualquer nulidade ou esclarecer fato que interesse ao julgamento da causa, e fará relatório sucinto do processo, determinando sua inclusão em pauta da reunião do Tribunal do Júri.",
+        "pontos": [
+          "Juiz presidente delibera sobre as provas requeridas.",
+          "Ordena diligências para sanar nulidades e esclarecer fatos.",
+          "Faz relatório sucinto e inclui o processo em pauta."
+        ],
+        "atencao": [
+          "Relatório sucinto, que será lido em plenário (art. 472)."
+        ],
+        "exemplo": "O juiz presidente faz o relatório e inclui o processo na pauta da reunião.",
+        "prova": [
+          "Assertiva que dispensa o relatório sucinto do processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 422"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-424",
+      "unit_id": "f4743219-be32-5b3b-8306-9afa1b3e0512",
+      "content_sha256": "3bbb9aa240d87a0d9be4a3ec98784dfaf746bb4e037a8d973e521637602cb0f9",
+      "simples": "Se organização judiciária local atribui preparo a outro juiz, processo preparado é remetido até cinco dias antes do sorteio do art. 433.",
+      "pontos": [
+        "Também remeter os preparados até encerramento da reunião para julgamento.",
+        "Distinguir preparo e presidência conforme lei local."
+      ],
+      "atencao": [
+        "Os cinco dias são anteriores ao sorteio referido, não prazo universal contado do veredito."
+      ],
+      "exemplo": "Juiz responsável envia processo preparado em tempo para organização do júri. Variação: Competência do preparo depende da lei local, não sempre do mesmo órgão.",
+      "prova": [
+        "Marco é o sorteio do art. 433? Sim.",
+        "A lei local pode separar preparo e presidência? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Remessa do processo preparado",
+          "significado": "Encaminhamento organizado segundo atribuições locais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f4743219-be32-5b3b-8306-9afa1b3e0512",
+        "content_sha256": "3bbb9aa240d87a0d9be4a3ec98784dfaf746bb4e037a8d973e521637602cb0f9",
+        "simples": "Quando a lei local de organização judiciária não atribuir ao presidente do Tribunal do Júri o preparo para julgamento, o juiz competente remeter-lhe-á os autos do processo preparado até 5 dias antes do sorteio a que se refere o art. 433. Deverão ser remetidos também os processos preparados até o encerramento da reunião, para a realização de julgamento.",
+        "pontos": [
+          "Juiz do preparo remete os autos ao presidente do Júri até 5 dias antes do sorteio.",
+          "Remessa também dos processos preparados até o fim da reunião."
+        ],
+        "atencao": [
+          "Prazo de 5 dias antes do sorteio."
+        ],
+        "exemplo": "O juiz do preparo remete os autos ao presidente do Júri 5 dias antes do sorteio.",
+        "prova": [
+          "Assertiva que fixa em 15 dias antes do sorteio o prazo de remessa erra: são 5 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 433"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    }
+  ]
+}

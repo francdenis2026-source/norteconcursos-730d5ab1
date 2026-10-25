@@ -1,0 +1,1810 @@
+{
+  "checked_at": "2026-10-17T16:32:49.456Z",
+  "scope": "22 individually published decisions not yet documented on main; 15 from preceding continuation and 7 from this resumption. Not a complete audit of the corpus.",
+  "reviewed": 22,
+  "published_active": 19,
+  "published_archived": 3,
+  "this_resumption_reviewed": 7,
+  "preserved_other_pc_records_this_resumption": 2961,
+  "concurrent_changes": [],
+  "related_records_preserved": [
+    "2caf944f-b3c1-4c98-b6d8-7388b8b96880",
+    "8a757559-fcba-41a7-b42a-3695a9bf868b"
+  ],
+  "pc_status": {
+    "active": 2662,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 46,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+    "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "items": [
+    {
+      "id": "365406d4-9757-4db6-9b36-76df89589452",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "item_number": 87,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 9,
+      "eligible": true,
+      "before_sha256": "f5409a97b68dfe80c0c231ed52c1403ef042c89c8c1bc078f08d1a6eb0919cf3",
+      "after_sha256": "2374dd42d4de6d2ac61c0e490aa9f6a35ddfc5357b2e0714ffebbd137cee454d",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "artigo": "5",
+            "title": "Decreto-Lei nº 200/1967 – Organização da Administração Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nO comando reproduz o art. 5º, IV, do Decreto-Lei 200/1967: FUNDAÇÃO PÚBLICA de direito privado, sem fins lucrativos, com autonomia e patrimônio próprio. A personalidade da fundação descrita é adquirida com a inscrição de sua escritura pública de constituição no registro competente, conforme § 3º. Não se conclui que TODA fundação estatal seja de direito privado: há fundações públicas de direito público, de regime autárquico.\nExemplo: A presença de patrimônio próprio e finalidade sem lucro não transforma automaticamente uma entidade em empresa pública. Observe a forma jurídica especificada.\nTeste rápido — A definição do inciso IV elimina a existência de fundação pública de direito público? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "42a8d806-75a3-50e5-9bd9-180a3c686be3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/dl200.html",
+            "sha256": "7eaa1c1ab42e7682ce85d05c5e881332f79480fffbc2d01f27ba332c65b470ca",
+            "captured_at": "2026-10-16T20:42:32.708Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+          "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+          "captured_at": "2026-10-16T20:36:47.102Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+          "captured_at": "2026-10-16T20:36:45.743Z"
+        },
+        "official_pdf_page": 9,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-732_PCRO_001_01.PDF-9.png",
+          "sha256": "58a77c31a437ae1b5d6b2bbd7fc0a4f35a7681be6cd4fcca7cd0e3d5a81c773c"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "432ccd18-0c2d-4989-9d44-3c4bd808a81a",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil",
+      "item_number": 94,
+      "status": "active",
+      "original_answer": "C",
+      "source_page": 8,
+      "eligible": true,
+      "before_sha256": "a3e1723b7da452c60862658859fcafcceace4950ae9a97880832512c69773e20",
+      "after_sha256": "ceb92abc2310d01fd8f49ac577b223b53e27e371b48e852c978ce413a646ba87",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "artigo": "4",
+            "title": "Decreto-Lei nº 200/1967 – Organização da Administração Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nA TEORIA DO ÓRGÃO explica a manifestação da vontade do Estado por órgãos e agentes: a atuação funcional é imputada à pessoa jurídica, nos limites legais. É a alternativa C. Teoria da representação ou de um mandato entre Estado e servidor não é o modelo pedido. Trata-se de categoria doutrinária; os dispositivos citados dão o quadro de organização e responsabilidade, não uma fórmula literal da Constituição.\nExemplo: Um ato praticado por servidor competente no exercício da função é atribuído à pessoa jurídica administrativa, não a uma pessoa jurídica independente chamada órgão.\nTeste rápido — Órgão é necessariamente uma pessoa jurídica distinta do Estado? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "feaa0bf1-0105-57d7-84ab-445a74ecdd03"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/dl200.html",
+            "sha256": "7eaa1c1ab42e7682ce85d05c5e881332f79480fffbc2d01f27ba332c65b470ca",
+            "captured_at": "2026-10-16T20:42:32.708Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 8,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_001_01.PDF-8.png",
+          "sha256": "6f777001bf8258d0d162ee79f87efea88f5fac9901f11827a162dc8358dbbd8f"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "50d28351-f633-4234-8b47-3d682189060b",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil",
+      "item_number": 55,
+      "status": "archived",
+      "original_answer": "D",
+      "source_page": 3,
+      "eligible": false,
+      "before_sha256": "4246c657fe7a92c283682c4c93b33948dd3a614bf64ceae2948d767b3f7c7da2",
+      "after_sha256": "c42483d22dd8e18a9bd87764b7e65677b2a033d242b736395c64e03783693488",
+      "patch": {
+        "content_status": "archived",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "92",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "125",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nARQUIVAMENTO EDITORIAL POR INCONSISTÊNCIA DO ITEM III, com gabarito oficial D preservado, sem declarar anulação pela banca. O caderno original efetivamente menciona órgãos do PODER JUDICIÁRIO DOS ESTADOS E MUNICÍPIOS, e D considera III correto. A CF organiza o Judiciário e a Justiça dos Estados nos arts. 92 e 125; não há Poder Judiciário municipal. Não se corrige silenciosamente Judiciário para Legislativo nem se ensina que existe Judiciário municipal para defender a chave. Esta decisão não atribui nova alternativa correta nem substitui o confronto integral de todas as regras da Lei 14.133/2021.\nExemplo: Câmara Municipal é Poder Legislativo municipal; fórum da Justiça estadual situado num município não se torna Poder Judiciário daquele município.\nTeste rápido — Ter fórum na cidade cria Poder Judiciário municipal? Não."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 3,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_001_01.PDF-3.png",
+          "sha256": "06abc0753b423aeb8d9a30fd0b31f4ea7fe846710b423226e7a62f461116022e"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "61acfb4e-1c44-41e2-8642-6469f27ba52c",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "item_number": 95,
+      "status": "active",
+      "original_answer": "E",
+      "source_page": 10,
+      "eligible": true,
+      "before_sha256": "f7d66cbb3c02945d6bc948819700cd5e06116d2c8c671b3bffb221b76f7e37d9",
+      "after_sha256": "1999ffa557e277194acad4ff3f8ed02773e457a123c0c5c46a0b277bfe2b2fce",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "artigo": "4",
+            "title": "Decreto-Lei nº 200/1967 – Organização da Administração Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa E. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nIMPUTAÇÃO VOLITIVA é o princípio associado à teoria do órgão: o agir funcional de seus agentes/órgãos é imputado à pessoa jurídica. A alternativa E é a categoria cobrada. A formulação do enunciado não deve ser lida para atribuir personalidade jurídica própria a cada órgão. Trata-se de construção doutrinária de organização administrativa, distinta da representação por procuração de direito privado.\nExemplo: A assinatura de uma autoridade, dentro de sua competência, exterioriza vontade administrativa atribuída à pessoa jurídica correspondente.\nTeste rápido — Órgão precisa ter personalidade jurídica própria para exteriorizar vontade administrativa? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "42a8d806-75a3-50e5-9bd9-180a3c686be3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/dl200.html",
+            "sha256": "7eaa1c1ab42e7682ce85d05c5e881332f79480fffbc2d01f27ba332c65b470ca",
+            "captured_at": "2026-10-16T20:42:32.708Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+          "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+          "captured_at": "2026-10-16T20:36:47.102Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+          "captured_at": "2026-10-16T20:36:45.743Z"
+        },
+        "official_pdf_page": 10,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-732_PCRO_001_01.PDF-10.png",
+          "sha256": "bd90d6e267b63293397a03717818303cfbfd1d41dc26138670a521214dcbf91e"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "78acf389-b24c-4406-893a-8fbf052f8529",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "item_number": 90,
+      "status": "active",
+      "original_answer": "B",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "392ac31535167b373fa263ec413d657a83df13226500a36d15a930f467dd01f7",
+      "after_sha256": "020c4dc7e0f85ef12b7bded4bdfd3df5e7f27f87f555f87fc8d8a2f264e654dc",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "2",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "50",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nMOTIVAÇÃO consiste em explicitar os fundamentos de FATO e de DIREITO da decisão: alternativa B. O art. 50, § 1º, da Lei 9.784/1999 exige motivação explícita, clara e congruente nas hipóteses legais. O MOTIVO é a situação de fato e de direito; a MOTIVAÇÃO é sua exposição. O diploma é referência federal do princípio, sem substituir automaticamente o regime processual estadual em casos concretos.\nExemplo: Não basta escrever indefiro: a decisão precisa indicar as razões pertinentes que sustentam a conclusão na hipótese em que a motivação é exigida.\nTeste rápido — Motivo e motivação são exatamente a mesma coisa? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "b64aaf0a-c99d-5c95-8e47-a39130972c5a"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_002_01.PDF-7.png",
+          "sha256": "67e040658ecbf95bc903050d4cf46deec4829de97d642174a2b21250b6255eb2"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "84223c0b-0693-4ce2-8ebe-2016a5e500ce",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "item_number": 94,
+      "status": "active",
+      "original_answer": "C",
+      "source_page": 10,
+      "eligible": true,
+      "before_sha256": "b8d4e628d70272d196c044d8bdc98697a85dacdba58f4f9071e1615870332b50",
+      "after_sha256": "c086f05f6598f7269fff5364b56ebce0f6421d8ddd726c2c3d43a9038e61e86a",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nNa classificação DOUTRINÁRIA do exercício, permanecer trabalhando após o término do vínculo caracteriza FUNÇÃO DE FATO, alternativa C. O caso é de exercício sem título atual suficiente, após relação anterior; não se deve presumir automaticamente o crime de usurpação de função nem uma renovação válida do contrato. A legalidade da contratação temporária permanece sujeita ao art. 37, IX, e ao regime aplicável. A classificação não regulariza por si só o vínculo.\nExemplo: Continuar atendendo no mesmo posto após o término contratual não cria, por simples continuidade, novo contrato público válido.\nTeste rápido — A expressão função de fato significa que o contrato foi automaticamente prorrogado? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "42a8d806-75a3-50e5-9bd9-180a3c686be3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+          "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+          "captured_at": "2026-10-16T20:36:47.102Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+          "captured_at": "2026-10-16T20:36:45.743Z"
+        },
+        "official_pdf_page": 10,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-732_PCRO_001_01.PDF-10.png",
+          "sha256": "bd90d6e267b63293397a03717818303cfbfd1d41dc26138670a521214dcbf91e"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "ad7c204d-a276-4c16-ae0e-f8df63ee1dbd",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "item_number": 93,
+      "status": "active",
+      "original_answer": "C",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "5f6e5f620be19e1cde829370c0f5d0c8e49e486e66bc9c419686cedf6b45cf65",
+      "after_sha256": "ae08a09c55f7e621996015ebaec972bcc90582c3458f721cc7ee3187334c24ff",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "2",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nNa classificação CLÁSSICA cobrada, LICENÇA é ato UNILATERAL, VINCULADO e DECLARATÓRIO: I, II e IV, alternativa C. Preenchidos os requisitos legais, reconhece-se o direito de exercer a atividade; não se escolhe livremente conceder ou negar por mera preferência. Não se confunde com autorização discricionária. A resposta não afirma que todo instrumento chamado licença em qualquer legislação setorial tenha regime absolutamente idêntico; licenciamento ambiental e outras disciplinas especiais exigem regras próprias.\nExemplo: Licença de uma atividade, no modelo vinculado, exige conferir requisitos, não selecionar livremente quem a autoridade prefere autorizar.\nTeste rápido — No modelo clássico do exercício, a licença é simultaneamente vinculada e discricionária? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "b64aaf0a-c99d-5c95-8e47-a39130972c5a"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_002_01.PDF-7.png",
+          "sha256": "67e040658ecbf95bc903050d4cf46deec4829de97d642174a2b21250b6255eb2"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "b7619442-2cdd-4739-95ef-abb87ff86a43",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "item_number": 94,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "9d246756d2c966eaa1f309583bbe93e49c45443113b2d6220e308c86c1f5413a",
+      "after_sha256": "ce728117b1bc2d3de83eb6133855a2c2bd35f48257cfca4b50eed7baf31aca31",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "2",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "50",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nPODER DISCRICIONÁRIO, alternativa A, é a margem de escolha entre opções permitidas pela lei segundo conveniência e oportunidade do interesse público. Não é arbitrariedade nem dispensa de finalidade, proporcionalidade, motivação ou controle de legalidade. A referência à Lei 9.784/1999 é federal; a categoria doutrinária cobrada não substitui o regime estadual próprio.\nExemplo: Se a lei permite escolher entre duas soluções adequadas, a autoridade deve justificar a escolha pertinente; não pode inventar uma terceira proibida.\nTeste rápido — Discricionariedade autoriza decidir contra a lei por conveniência? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "b64aaf0a-c99d-5c95-8e47-a39130972c5a"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_002_01.PDF-7.png",
+          "sha256": "67e040658ecbf95bc903050d4cf46deec4829de97d642174a2b21250b6255eb2"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "b8852489-1742-443d-9fa2-9869cec5c77b",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "item_number": 95,
+      "status": "active",
+      "original_answer": "B",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "1539551e395250d96546684379024032b7dde419d71699e3af9a5ce8d1376c77",
+      "after_sha256": "796cda265aa6bf1b39f8d68ff876a03785ec3832009bb2bd1c23896b6073e120",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "39",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nA CF, art. 39, § 1º, II, inclui os REQUISITOS PARA A INVESTIDURA NO CARGO na fixação dos padrões de vencimento e demais componentes remuneratórios: alternativa B. O § 1º também menciona natureza, grau de responsabilidade e complexidade dos cargos, e peculiaridades dos cargos. Não se substitui o critério constitucional pela formação pessoal isolada do servidor. Alterações sobre regime jurídico do caput não apagam automaticamente esse § 1º.\nExemplo: Exigência legal de investidura do cargo é critério constitucional; possuir curso extra, por si só, não garante qualquer aumento automático.\nTeste rápido — A formação individual mencionada em A substitui a exigência do cargo em B? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "b64aaf0a-c99d-5c95-8e47-a39130972c5a"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_002_01.PDF-7.png",
+          "sha256": "67e040658ecbf95bc903050d4cf46deec4829de97d642174a2b21250b6255eb2"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "bbc98157-1569-4e13-9cde-ee9a2a0f7612",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "item_number": 92,
+      "status": "active",
+      "original_answer": "D",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "a9751380ad61e883d513adc74526837e1bdc9cfcf17794f80afe59f8d3566513",
+      "after_sha256": "2cdec248a866673a7de4e746aa70d449403571cedb122684d70b01a0e736308c",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "2",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "11",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nHá EXCESSO DE PODER, alternativa D: a autoridade possui função pública, mas ultrapassa os limites de sua competência ao aplicar suspensão quando só podia advertir. Desvio de poder diz respeito ao uso da competência para finalidade diferente da legal. A identificação do vício administrativo não prova automaticamente crime de abuso de autoridade, que exige os elementos específicos da lei penal. O art. 11 da Lei 9.784/1999 é referência federal da competência, não transferência automática de seu regime ao estado.\nExemplo: Quem só pode aplicar advertência não recebe poder de suspender por considerar o fato grave; deve encaminhar à autoridade competente.\nTeste rápido — Basta identificar excesso administrativo para afirmar crime penal sem examinar seus requisitos? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "b64aaf0a-c99d-5c95-8e47-a39130972c5a"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_002_01.PDF-7.png",
+          "sha256": "67e040658ecbf95bc903050d4cf46deec4829de97d642174a2b21250b6255eb2"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "cf16371d-e54d-4a73-8450-a10a3bab5283",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil",
+      "item_number": 89,
+      "status": "active",
+      "original_answer": "D",
+      "source_page": 7,
+      "eligible": true,
+      "before_sha256": "4d3b5e70933a8d6cf8768bdb07aa4ab506f369945d60755732a09303099080ba",
+      "after_sha256": "7abf8b071598a695a30158cce3832d285bb020795cdf0bca2c769142f587bae3",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "artigo": "4",
+            "title": "Decreto-Lei nº 200/1967 – Organização da Administração Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "artigo": "5",
+            "title": "Decreto-Lei nº 200/1967 – Organização da Administração Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nNa classificação DOUTRINÁRIA cobrada, ESPECIALIDADE é a vinculação da entidade descentralizada às finalidades e atividades que justificaram sua criação legal. A exigência de indicação da atividade em lei se relaciona à legalidade, mas o foco do comando é a destinação específica: alternativa D. Não se confunde com impessoalidade ou mera supervisão. A CF, art. 37, XIX, e o DL 200 fornecem o quadro normativo de organização; não são uma definição literal de toda a doutrina.\nExemplo: Autarquia criada para uma finalidade não pode abandonar seu campo legal de atuação e assumir qualquer negócio por conveniência.\nTeste rápido — Ter personalidade própria autoriza a entidade a ignorar suas finalidades legais? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "feaa0bf1-0105-57d7-84ab-445a74ecdd03"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/dl200.html",
+            "sha256": "7eaa1c1ab42e7682ce85d05c5e881332f79480fffbc2d01f27ba332c65b470ca",
+            "captured_at": "2026-10-16T20:42:32.708Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-733_PCROAGENTE_001_01.PDF-7.png",
+          "sha256": "e85a23114f0a84a159d9b4d3fe4592db35d7a01903598f4e0989ffbe01611eea"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "ddef9c7c-932e-4aa7-bca5-f9d7ad889dda",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "item_number": 93,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 10,
+      "eligible": true,
+      "before_sha256": "167d870c227f4258dd7b3d473d1771ec9b10fef36c2066a33f3818c2af24982d",
+      "after_sha256": "db83d11e7a02e1b38bf9d235d46e506a6ebfd3f4058e12ca75f2101612b107bd",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "artigo": "2",
+            "title": "LINDB"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "53",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:11:26.310022+00:00",
+        "verified_at": "2026-10-17T02:11:26.310022+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCRO 2022; cotejo individual em 17/10/2026.\nCADUCIDADE, no sentido doutrinário de extinção do ato administrativo, decorre de norma superveniente incompatível com a manutenção de seus efeitos. Alternativa A. Anulação decorre de ilegalidade; revogação, de conveniência e oportunidade de ato válido. Não confunda esta acepção com caducidade de concessão por inadimplemento, que possui disciplina própria. LINDB e art. 53 da Lei 9.784/1999 são referências gerais de sucessão normativa e distinção de anulação/revogação; não definem literalmente todas as espécies de extinção.\nExemplo: Uma lei nova deixa de permitir a situação que sustentava o ato anterior: essa incompatibilidade é diferente de descobrir que o ato já nasceu ilegal.\nTeste rápido — Caducidade neste enunciado é simples mudança de conveniência da autoridade? Não.",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "42a8d806-75a3-50e5-9bd9-180a3c686be3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Comando, cinco alternativas e letra definitiva cotejados visualmente; conceitos doutrinários expressamente identificados como tais, com limites normativos e sem aplicar automaticamente legislação federal de processo administrativo ao estado. Proveniência e página corrigidas em fluxo separado. Um item arquivado por erro material original, sem mudar a chave.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/lindb.html",
+            "sha256": "d2069962122cf29fd4df4b8850eac717dd280967bc722a308183065bdeba6320",
+            "captured_at": "2026-10-16T20:42:28.382Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+          "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+          "captured_at": "2026-10-16T20:36:47.102Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+          "captured_at": "2026-10-16T20:36:45.743Z"
+        },
+        "official_pdf_page": 10,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-732_PCRO_001_01.PDF-10.png",
+          "sha256": "bd90d6e267b63293397a03717818303cfbfd1d41dc26138670a521214dcbf91e"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "7340d049-a5eb-491b-8b69-1d725bcc799a",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial",
+      "item_number": 85,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 9,
+      "eligible": true,
+      "before_sha256": "697f9048da19b0339a24fa4c435df13c04e32f07c222a5713ad5c3050d7acb10",
+      "after_sha256": "20a6af19156204cfe9f6752b455ec08561b644790c7fdb7ffdf6f282b91faf58",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "f317d78c-953d-51b0-a2bd-43af1ed84b99",
+        "legal_basis": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "artigo": "1",
+            "title": "Constituição de Rondônia — recortes dos arts. 1º, 22 e 144 — EC 179/2026"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "8",
+            "title": "Constituição Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "14",
+            "title": "Constituição Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "17",
+            "title": "Constituição Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:26:05.153223+00:00",
+        "verified_at": "2026-10-17T02:26:05.153223+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCRO 2022; conferência individual em 17/10/2026.\nSomente I está correto, alternativa A. A defesa dos direitos e interesses coletivos ou individuais da categoria, inclusive judicial e administrativa, compete ao SINDICATO (CF, art. 8º, III). A facultatividade eleitoral por idade não começa aos 65 anos: observe o art. 14, § 1º, II. Os partidos registram seus estatutos no TSE, não no TRE, após adquirirem personalidade na forma civil, conforme art. 17, § 2º. O art. 1º estadual exige observância dos princípios federais; não se inventa redação estadual que altere esses marcos.\nExemplo: Ter 66 anos não torna o voto facultativo apenas pela idade. E o registro partidário nacional não se confunde com ato de tribunal regional.\nTeste rápido — A troca de TSE por TRE preserva a regra de registro dos estatutos partidários? Não."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Recortes específicos da compilação oficial estadual EC 179/2026 e CF conferidos, distinguindo passagens históricas/riscadas. Precedente específico de jornada foi consultado e ressalvado expressamente.",
+        "sources": [
+          "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "path": "outputs/pc-pending-review-2026-10-16/verify112-ro-ce.html",
+            "sha256": "4cafbde5037938c268aa369f2289d2e4f4b71bdb61f9d4aea6902f9e25158718",
+            "captured_at": "2026-10-17T02:26:05.153223+00:00",
+            "reviewed": true,
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "1",
+              "22",
+              "144"
+            ],
+            "compilation": "EC 179/2026",
+            "format": "pdf"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+          "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+          "captured_at": "2026-10-16T20:36:47.102Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+          "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+          "captured_at": "2026-10-16T20:36:45.743Z"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "755689bb-3a86-40d1-bb85-9b3e2e0d5bdd",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "item_number": 18,
+      "status": "active",
+      "original_answer": "C",
+      "source_page": 1,
+      "eligible": true,
+      "before_sha256": "6ee61d65c6cec277b23cb42ce780daf9c6fb39acc2c1b40e63d06fa6dd41e7d6",
+      "after_sha256": "a0b41d1a26d35a464e1db7f16133e8742118276ac732769ade41c338b63d8e38",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "73ad486f-79b4-50fa-9d8f-58555a8d5e58",
+        "legal_basis": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "artigo": "22",
+            "title": "Constituição de Rondônia — recortes dos arts. 1º, 22 e 144 — EC 179/2026"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:26:05.153223+00:00",
+        "verified_at": "2026-10-17T02:26:05.153223+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCRO 2022; conferência individual em 17/10/2026.\nO gabarito C corresponde à literalidade do art. 22, § 2º, da Constituição de RO: a redução perdura enquanto permanecer a necessidade de assistência e a dependência econômica. O caput assegura redução de 50% sem perda da remuneração, independentemente de tratamento terapêutico. No § 3º, deficiência irreversível leva à concessão definitiva, com comprovação ANUAL da dependência econômica, não semestral. A EC 164/2023 atualizou a redação, sem tornar correta a faixa etária restrita de D. RESSALVA CONSTITUCIONAL: essa resposta literal não autoriza impor dependência econômica como requisito universal de toda redução de jornada. O STF, Tema 1097 (RE 1237867, 2022), aplica aos servidores estaduais e municipais, para todos os efeitos, o art. 98, §§ 2º e 3º, da Lei 8.112/1990. Pedidos concretos exigem observar esse precedente e o regime do benefício, não indeferimento automático por leitura isolada da frase estadual. Fonte judicial: https://noticias.stf.jus.br/postsnoticias/servidor-estadual-e-municipal-responsavel-por-pessoa-com-deficiencia-tem-direito-a-jornada-reduzida/\nExemplo: Necessidade de assistência e autonomia da pessoa com deficiência devem ser avaliadas concretamente; uma regra local de comprovação anual não se transforma em exigência semestral nem dispensa o confronto com o Tema 1097.\nTeste rápido — A questão permite negar qualquer jornada especial a quem não demonstre dependência econômica, sem analisar o precedente do STF? Não."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Recortes específicos da compilação oficial estadual EC 179/2026 e CF conferidos, distinguindo passagens históricas/riscadas. Precedente específico de jornada foi consultado e ressalvado expressamente.",
+        "sources": [
+          "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/servidor-estadual-e-municipal-responsavel-por-pessoa-com-deficiencia-tem-direito-a-jornada-reduzida/",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "path": "outputs/pc-pending-review-2026-10-16/verify112-ro-ce.html",
+            "sha256": "4cafbde5037938c268aa369f2289d2e4f4b71bdb61f9d4aea6902f9e25158718",
+            "captured_at": "2026-10-17T02:26:05.153223+00:00",
+            "reviewed": true,
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "1",
+              "22",
+              "144"
+            ],
+            "compilation": "EC 179/2026",
+            "format": "pdf"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/servidor-estadual-e-municipal-responsavel-por-pessoa-com-deficiencia-tem-direito-a-jornada-reduzida/",
+            "path": "outputs/pc-pending-review-2026-10-16/verify112-jornada.html",
+            "sha256": "82ce4d594f5ebccd8a60e1d4428084a63f41c467f5f644084f667d1da76736c1"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "bb2dd49a-6082-4eec-92aa-18168b7a6ae8",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "item_number": 19,
+      "status": "active",
+      "original_answer": "C",
+      "source_page": 2,
+      "eligible": true,
+      "before_sha256": "31a770b8efe402c2acb40092257640f7cf0032a56c774bdfb562bd9de8e55c49",
+      "after_sha256": "f749e1dd202079b076de331e949ed961cfada5ac0ba71feafbdc1018b0d844c4",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "73ad486f-79b4-50fa-9d8f-58555a8d5e58",
+        "legal_basis": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "artigo": "144",
+            "title": "Constituição de Rondônia — recortes dos arts. 1º, 22 e 144 — EC 179/2026"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "24, XVI e 144",
+            "title": "Constituição Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:26:05.153223+00:00",
+        "verified_at": "2026-10-17T02:26:05.153223+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCRO 2022; conferência individual em 17/10/2026.\nA alternativa C corresponde ao art. 144 estadual: legislação especial disciplina atividades e atuação harmônica, respeitando a Constituição estadual e a legislação federal e, NO QUE COUBER, o Estatuto dos Servidores. Isso não atribui ao estado competência privativa irrestrita para todas as normas de garantias e deveres da PC: a CF, art. 24, XVI, trata de competência concorrente. Polícia ostensiva e preservação da ordem pública não são a atribuição precípua da PC. A compilação também contém passagens riscadas do art. 146, marcadas como inconstitucionais na ADI 5573; elas não foram tomadas como fundamento vigente.\nExemplo: No que couber é uma cláusula de compatibilidade: não permite transferir toda regra genérica do estatuto para uma carreira especial sem verificar seu regime.\nTeste rápido — O item garante ao governador poder ilimitado para organizar qualquer aspecto das polícias por decreto? Não."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Recortes específicos da compilação oficial estadual EC 179/2026 e CF conferidos, distinguindo passagens históricas/riscadas. Precedente específico de jornada foi consultado e ressalvado expressamente.",
+        "sources": [
+          "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia",
+            "path": "outputs/pc-pending-review-2026-10-16/verify112-ro-ce.html",
+            "sha256": "4cafbde5037938c268aa369f2289d2e4f4b71bdb61f9d4aea6902f9e25158718",
+            "captured_at": "2026-10-17T02:26:05.153223+00:00",
+            "reviewed": true,
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "1",
+              "22",
+              "144"
+            ],
+            "compilation": "EC 179/2026",
+            "format": "pdf"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "39157b2c-3558-4364-af05-da62549ee00e",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil de Minas Gerais",
+      "item_number": 12,
+      "status": "archived",
+      "original_answer": "C",
+      "source_page": 1,
+      "eligible": false,
+      "before_sha256": "06ba219fb4898c760b15d67dd238010c092c4824209b75e436e4748e1328f25e",
+      "after_sha256": "55c6645ca0d2521fa3fb726a7f8e9223e791c461919f2ef4e09decb9d06cff7a",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-17T02:29:11.228591+00:00",
+        "review_note": "Transcrição verbatim do caderno de provas PCMG 2025 TPAG (Eixo Geral, fileId 1gwS_Lo5uF3rZXygH-L-0cxhHKAv8DXiR); gabarito conferido em Gabarito definitivo Eixo Geral (fileId 16WodS26L8GuJnsGBIkaK-hI29mCO87B6).; Auditoria 04/10/2026: texto incompleto, transcrição não confirmada ou cópia com gabarito divergente. Retirado do treino até confronto individual com caderno e gabarito oficiais. O gabarito histórico foi preservado. | Revisão 17/10/2026, retida: Recontagem: diagonais 2, 20, 9, 35, 20 correspondem a polígonos de 4, 8, 6, 10, 8 lados (+4/−2); a 7ª cena teria 10 lados (decágono, B), mas a chave oficial é C. Texto possivelmente incompleto ou alterado; conferir com o caderno.\n\nCONCLUSÃO DA REVISÃO COM FONTES OFICIAIS:\nARQUIVAMENTO DE IMPORTAÇÃO LEGADA INCONSISTENTE. O registro armazenava C, mas o gabarito definitivo oficial da prova aplicada em 29/03/2026 traz B no item 12. A chave incorreta deste registro foi preservada somente como histórico INATIVO; não é apresentada como gabarito oficial. Caderno e chave foram cotejados visualmente. Há registro relacionado com B já arquivado após revisão matemática por imprecisão da regra: as diferenças dos números de diagonais não são constantes. Não se reativa esse item nem se troca a formulação do original.\nRegistro relacionado: 2caf944f-b3c1-4c98-b6d8-7388b8b96880.\nFonte do gabarito: https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf\nExemplo: não use uma importação antiga com letra divergente para substituir uma versão já conferida.\nTeste rápido — A chave guardada neste registro foi certificada como correta? Não; o registro fica fora do treino."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Chave armazenada diverge do PDF definitivo do próprio cargo; importação legada inconsistente arquivada, sem inventar resposta, criar duplicata ou desfazer a revisão do registro relacionado.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "02/04/2026 19:00",
+          "nomeArquivo": "31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "descricaoArquivo": "PROVA OBJETIVA – EIXO GERAL",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-02T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b",
+          "captured_at": "2026-10-17T02:14:51.998Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "28/04/2026 10:35",
+          "nomeArquivo": "C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "descricaoArquivo": "GABARITO DEFINITIVO – EIXO GERAL",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-28T10:35:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "sha256": "f79b75c73d2a5814eaa6702d57b215d83fea9c1e6fcb20602cfadeb27d7c2561",
+          "captured_at": "2026-10-17T02:14:52.029Z"
+        },
+        "verified_official_answer": "B",
+        "preserved_inactive_stored_answer": "C",
+        "related_record_id": "2caf944f-b3c1-4c98-b6d8-7388b8b96880"
+      }
+    },
+    {
+      "id": "ae005e4f-ba5f-488e-aba4-a46cd5260be0",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "item_number": 51,
+      "status": "active",
+      "original_answer": "D",
+      "source_page": 4,
+      "eligible": true,
+      "before_sha256": "36a2f096ef797a4c68fc06c59633943bdbfc1e30bfd7c4d011b4a47150fc1a08",
+      "after_sha256": "29bd6359abd35cc41f6f84888550eb662a63fbfdbe856934d8d6cce59539495a",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "a9058de7-29c0-5177-86b9-7eae53764fe2",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T02:29:11.228591+00:00",
+        "review_note": "Importada do caderno oficial (Tipo 1) e conferida com o gabarito definitivo em 27/09/2026; aguardando revisão de conteúdo.\r\nRetida em 14/10/2026 para restaurar comando incorporado à alternativa A e conferir a fonte específica.\r\nProveniência corrigida do eixo geral para o eixo específico (31–60), com chave definitiva do próprio cargo e página real; chave e extração bruta preservadas. | Revisão 17/10/2026, retida: Comando restaurado (estava colado à alternativa A). Retida: falta fonte oficial (NR-1/NR-32, Ministério da Saúde) conferida para os conceitos de biossegurança.\n\nCONCLUSÃO DA REVISÃO COM FONTES OFICIAIS:\nGabarito definitivo oficial: alternativa D. PCMG TPAG, prova de 29/03/2026; revisão individual em 17/10/2026.\nA AVALIAÇÃO DE RISCO considera agente, atividade, vias de exposição e condições do ambiente: alternativa D. A OMS recomenda avaliação antes das atividades e escolha de controles a partir do risco identificado. Biossegurança reduz riscos, sem prometer risco zero; EPI não é a única nem sempre a primeira medida de controle. Precaução não exige esperar prova de dano consumado, e a responsabilidade não é exclusiva de um trabalhador.\nExemplo: O mesmo agente pode exigir medidas diferentes quando a atividade produz aerossóis ou envolve perfurocortantes; avaliam-se também processo e ambiente.\nTeste rápido — Basta saber o nome do agente para dispensar análise da atividade e da exposição? Não."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Conteúdo técnico conferido individualmente no caderno e chave do eixo específico; programa atualizado do cargo, página 30, e tópicos já existentes reutilizados. Operações distintas corrigiram proveniência e comando; quatro alternativas preservadas.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/6DCA6B8C8E2589F81E87C75800D8AACB64F97F77C9B26095C5F8D62BDDBB0B80.pdf",
+          "https://iris.who.int/server/api/core/bitstreams/41034b03-94b4-4fd6-9c6b-7662117127ac/content"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "02/04/2026 19:00",
+          "nomeArquivo": "8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "descricaoArquivo": "PROVA OBJETIVA – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-02T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "sha256": "114d5b94dbc7bf7e5a43627e1e61e5f92c431716dcfc822bd43bbc9e59984716",
+          "captured_at": "2026-10-17T02:14:52.076Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "28/04/2026 10:35",
+          "nomeArquivo": "D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "descricaoArquivo": "GABARITO DEFINITIVO – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-28T10:35:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "sha256": "edfd5f570aa2d9cc325f1f029f36c55d8a25083397ff84a1735ea3dd3a55979a",
+          "captured_at": "2026-10-17T02:14:51.625Z"
+        },
+        "technical_captures": [
+          {
+            "url": "https://iris.who.int/server/api/core/bitstreams/41034b03-94b4-4fd6-9c6b-7662117127ac/content",
+            "path": "outputs/pc-pending-review-2026-10-16/mg112/who-lbm4.pdf",
+            "sha256": "dc0dfd4e65a0dc87410aa73280fe12bfe412df3affd97bd27dc8a4e733379fba"
+          }
+        ],
+        "official_pdf_page": 4,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "fa47a5f7-0690-4611-9257-2bcfbaa3e735",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil de Minas Gerais",
+      "item_number": 13,
+      "status": "archived",
+      "original_answer": "B",
+      "source_page": 1,
+      "eligible": false,
+      "before_sha256": "c9143df35df224ce221435ab95badaf7a8b45187535e7b2fd647be5d1fe20799",
+      "after_sha256": "573e5b2e563d619586bf80135e842d5867583d2de76ca19860cf4e97ee8d431b",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-17T02:29:11.228591+00:00",
+        "review_note": "Transcrição verbatim do caderno de provas PCMG 2025 TPAG (Eixo Geral, fileId 1gwS_Lo5uF3rZXygH-L-0cxhHKAv8DXiR); gabarito conferido em Gabarito definitivo Eixo Geral (fileId 16WodS26L8GuJnsGBIkaK-hI29mCO87B6).; Auditoria 04/10/2026: texto incompleto, transcrição não confirmada ou cópia com gabarito divergente. Retirado do treino até confronto individual com caderno e gabarito oficiais. O gabarito histórico foi preservado. | Revisão 17/10/2026, retida: Recálculo: 4 peritos produzem 2 relatórios/h, logo 26 relatórios levam 13 h (A); a chave oficial é B (10 h), que corresponderia a 20 relatórios. Provável erro de transcrição do enunciado; conferir com o caderno.\n\nCONCLUSÃO DA REVISÃO COM FONTES OFICIAIS:\nARQUIVAMENTO DE IMPORTAÇÃO LEGADA INCONSISTENTE. O registro armazenava B, mas o gabarito definitivo oficial da prova aplicada em 29/03/2026 traz A no item 13. A chave incorreta deste registro foi preservada somente como histórico INATIVO; não é apresentada como gabarito oficial. Caderno e chave foram cotejados visualmente. Há registro relacionado ativo e correto, com A. A produtividade é 20/(5 × 8)=0,5 relatório por perito-hora; quatro peritos produzem dois por hora, e 26/2=13 horas. Esse registro correto não foi duplicado nem substituído.\nRegistro relacionado: 8a757559-fcba-41a7-b42a-3695a9bf868b.\nFonte do gabarito: https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf\nExemplo: não use uma importação antiga com letra divergente para substituir uma versão já conferida.\nTeste rápido — A chave guardada neste registro foi certificada como correta? Não; o registro fica fora do treino."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Chave armazenada diverge do PDF definitivo do próprio cargo; importação legada inconsistente arquivada, sem inventar resposta, criar duplicata ou desfazer a revisão do registro relacionado.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "02/04/2026 19:00",
+          "nomeArquivo": "31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "descricaoArquivo": "PROVA OBJETIVA – EIXO GERAL",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-02T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b",
+          "captured_at": "2026-10-17T02:14:51.998Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "28/04/2026 10:35",
+          "nomeArquivo": "C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "descricaoArquivo": "GABARITO DEFINITIVO – EIXO GERAL",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-28T10:35:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "sha256": "f79b75c73d2a5814eaa6702d57b215d83fea9c1e6fcb20602cfadeb27d7c2561",
+          "captured_at": "2026-10-17T02:14:52.029Z"
+        },
+        "verified_official_answer": "A",
+        "preserved_inactive_stored_answer": "B",
+        "related_record_id": "8a757559-fcba-41a7-b42a-3695a9bf868b"
+      }
+    },
+    {
+      "id": "8c1d8792-4c82-415b-b5b2-1f81a81f3bd5",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "item_number": 47,
+      "status": "active",
+      "original_answer": "B",
+      "source_page": 6,
+      "eligible": true,
+      "before_sha256": "6f217975b96357e8f1003dd62afe43b73a7dbccf837d59cd54337850cdb70e1c",
+      "after_sha256": "cd6dc3e090d2de0daee42a065b04ed0977b7aca1394c22b8781aab82c3dc5d8a",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "d24db1cb-d91c-5d6f-b3b9-9d96ae9f1469",
+        "review_note": "Gabarito definitivo: B. A parte não pode provocar ou aceitar estrategicamente um vício para pedir depois a anulação em seu próprio benefício. O CPP, art. 565, veda arguir nulidade a que a parte deu causa ou para a qual concorreu; o art. 563 exige prejuízo. No AgRg no HC 732.642/SP (STJ, Quinta Turma, 24/05/2022, Informativo 741), a defesa não pode guardar nulidade relativa conhecida para alegá-la apenas em revisão criminal. Isso não significa que toda nulidade seja sanável nem dispensa examinar a natureza do vício.\nA: a regra geral do processo penal não é contagem em dias úteis do CPC (CPP, art. 798). C: incompetência territorial é relativa; não se pode afirmar automaticamente ausência de interrupção. D: a proibição absoluta de prova suplementar ignora o CPP, art. 156, II, que deve ser aplicado nos limites do sistema acusatório. E: o CPP, art. 383, admite definição jurídica diversa sem mudar os fatos imputados; é diferente de acrescentar fato novo.\nExemplo: a defesa acompanha uma oitiva, conhece um vício relativo e nada alega oportunamente; não pode guardá-lo como uma carta para usar apenas se perder.\nTeste rápido — Boa-fé impede a defesa de apontar imediatamente um vício real? Não. Impede a utilização estratégica e desleal da própria irregularidade.",
+        "verified_at": "2026-10-17T16:27:27.733395+00:00",
+        "law_version_checked_at": "2026-10-17T16:27:27.733395+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "title": "CPP, arts. 156, II, 383, 563, 565 e 798 — recortes conferidos"
+          }
+        ]
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Letra oficial B mantida; conteúdo individual confrontado com CPP/CF compilados e decisões identificadas no próprio tribunal. Tópico existente da disciplina e edital ativo do cargo reutilizados.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=019141",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ],
+        "captures": [
+          "resume-stj-algibeira.html"
+        ],
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "b9c3807b-146f-445b-afc6-4145a5a7d12b",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "item_number": 68,
+      "status": "active",
+      "original_answer": "B",
+      "source_page": 9,
+      "eligible": true,
+      "before_sha256": "b52bd1c27df8fca529921ddb7a39879d290f9b57357174bf51fcbe7d5721be12",
+      "after_sha256": "06f3eb4ff9b0a4ca6258b8301bfaf097becc730bbd2a7be3b38e74b7bf9a6da0",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "d1aff554-a0a2-50f0-881f-270a7d8f106f",
+        "review_note": "Gabarito definitivo: B — apenas o item III está correto. I é falso: novas vagas ou novo concurso NÃO geram automaticamente nomeação de aprovado fora das vagas. No Tema 784 (RE 837.311), o STF ressalva preterição arbitrária e imotivada demonstrada cabalmente; aprovação dentro das vagas e quebra da ordem de classificação também são hipóteses próprias de direito à nomeação. II é falso: o Tema 667 (RE 642.895) considera inconstitucional aglutinar cargos diversos numa carreira de atribuições e responsabilidades diferentes, dispensando concurso público. III é verdadeiro: no Tema 454 (RE 629.392), nomeação judicial tardia com eficácia retroativa não gera as promoções ou progressões que seriam alcançadas por nomeação na data original; há outros requisitos de carreira, como estágio probatório.\nExemplo: surgiu uma vaga enquanto seu concurso ainda vale. Só esse fato não garante a convocação de quem ficou fora das vagas; é preciso examinar os pressupostos reconhecidos pelo STF. Nomeado depois por decisão judicial, o servidor não recebe automaticamente todas as progressões fictícias do período anterior.\nTeste rápido — Toda reestruturação de carreira é proibida? Não. A tese trata de cargos diversos com novas atribuições e responsabilidades e dispensa indevida de concurso.",
+        "verified_at": "2026-10-17T16:27:27.733395+00:00",
+        "law_version_checked_at": "2026-10-17T16:27:27.733395+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "title": "Constituição Federal, art. 37, II e IV; aplicação dos Temas STF 784, 667 e 454"
+          }
+        ]
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Letra oficial B mantida; conteúdo individual confrontado com CPP/CF compilados e decisões identificadas no próprio tribunal. Tópico existente da disciplina e edital ativo do cargo reutilizados.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://noticias.stf.jus.br/postsnoticias/fixada-tese-de-repercussao-geral-em-recurso-sobre-nomeacao-de-candidatos-fora-das-vagas-de-edital/",
+          "https://noticias.stf.jus.br/postsnoticias/plenario-e-turmas-julgam-438-processos-em-sessao-virtual-realizada-entre-8-e-14-5/",
+          "https://noticias.stf.jus.br/postsnoticias/vedada-promocao-funcional-retroativa-nas-nomeacoes-por-decisao-judicial-decide-plenario/",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "captures": [
+          "resume-stf-vagas-decision.html",
+          "resume-stf-cargos-decision.html",
+          "resume-stf-progressao-decision.html"
+        ],
+        "official_pdf_page": 9
+      }
+    },
+    {
+      "id": "04d6fa08-b1ee-4f65-9343-a265c89e5545",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "item_number": 44,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 3,
+      "eligible": true,
+      "before_sha256": "61b9c5de84a778844f319f04af901d20da47a3b24b5f07bf41b1b804dd245e8c",
+      "after_sha256": "75ca9d1f5cc57a5db48f1a52288461087259dafb2fe134f8034f8b10fea03e44",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "39b59c97-d64b-54d9-8a53-f0feabe48242",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T16:31:41.335389+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. PCMG TPAG, prova de 29/03/2026; revisão individual em 17/10/2026.\nFIXAÇÃO conserva as estruturas celulares e teciduais para exame histopatológico, alternativa A. O fixador estabiliza componentes do tecido e limita autólise e putrefação; não é utilizado para acelerar decomposição ou para tornar o material apropriado à reconstrução facial. Fixar não é sinônimo de ESTERILIZAR: a alternativa D promete eliminação completa de todos os microrganismos, o que não decorre dessa finalidade.\nExemplo: Uma peça preservada para histologia mantém estruturas para análise; isso não permite tratá-la como material totalmente livre de risco biológico.\nTeste rápido — Fixação e esterilização significam a mesma coisa? Não.\nFonte técnica oficial: MJ/SENASP, POP Perícia Criminal (2013), seção 5.3, páginas PDF 158 e 160: formol a 10% para fixação de vísceras e exame histopatológico. O manual não foi tratado como atualização normativa de 2026 nem como validação integral de seus outros capítulos."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Conteúdo técnico conferido individualmente no caderno e chave do eixo específico; programa atualizado do cargo, página 30, e tópicos já existentes reutilizados. Operações distintas corrigiram proveniência e comando; quatro alternativas preservadas.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/6DCA6B8C8E2589F81E87C75800D8AACB64F97F77C9B26095C5F8D62BDDBB0B80.pdf",
+          "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/analise-e-pesquisa/download/pop/procedimento_operacional_padrao-pericia_criminal.pdf"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "02/04/2026 19:00",
+          "nomeArquivo": "8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "descricaoArquivo": "PROVA OBJETIVA – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-02T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "sha256": "114d5b94dbc7bf7e5a43627e1e61e5f92c431716dcfc822bd43bbc9e59984716",
+          "captured_at": "2026-10-17T02:14:52.076Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "28/04/2026 10:35",
+          "nomeArquivo": "D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "descricaoArquivo": "GABARITO DEFINITIVO – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-28T10:35:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "sha256": "edfd5f570aa2d9cc325f1f029f36c55d8a25083397ff84a1735ea3dd3a55979a",
+          "captured_at": "2026-10-17T02:14:51.625Z"
+        },
+        "technical_captures": [
+          {
+            "url": "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/analise-e-pesquisa/download/pop/procedimento_operacional_padrao-pericia_criminal.pdf",
+            "path": "outputs/pcac-evidence-2026-10-16/pericia.pdf",
+            "sha256": "1c18a20c0f57c320bbc38ebc5d6a698b50f129213c8bd4661c987135a54ccadb",
+            "reviewed_pages": [
+              158,
+              160
+            ],
+            "publication_year": 2013
+          }
+        ],
+        "official_pdf_page": 3,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "95b6c4cc-ed89-477b-aa3c-e2035aa2c3de",
+      "table": "official_exam_questions",
+      "contest": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "item_number": 56,
+      "status": "active",
+      "original_answer": "A",
+      "source_page": 4,
+      "eligible": true,
+      "before_sha256": "c4d27cc8de7e2b274097be79ba79d15788efbb03d147647b4568c81e786afb92",
+      "after_sha256": "83b74d58f944d5966382d0e7002d25434bfbbabe20471b781c928168185f8a34",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "9d9b6123-5bcb-52a9-99dc-b2c8d6349858",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "verified_at": "2026-10-17T16:31:03.276412+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. PCMG TPAG, prova de 29/03/2026; revisão individual em 17/10/2026.\nACONDICIONAMENTO adequado previne vazamentos, acidentes e contaminações: alternativa A. A segregação é feita no momento da geração, e o recipiente deve ser compatível com o resíduo e com sua segurança de manejo. Não é correto afirmar que todo resíduo infectante tenha obrigatoriamente tratamento no próprio local gerador; há hipóteses de tratamento externo e regras específicas por grupo. Gestão inadequada pode prejudicar várias etapas, não só a destinação final. O confronto da RDC 222/2018 abrange os princípios de segregação e acondicionamento dos arts. 11 e 13, sem certificar todo o regulamento.\nExemplo: Misturar resíduos incompatíveis e tentar separá-los depois aumenta exposição; acondicionar corretamente começa onde eles são gerados.\nTeste rápido — Separar o resíduo só em outro local atende à regra geral de segregação na geração? Não.\nFonte oficial: https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf (conferidos os arts. 11, 13 e 43; sem certificação integral da RDC).",
+        "law_version_checked_at": "2026-10-17T16:29:57.313Z",
+        "legal_basis": [
+          {
+            "url": "https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf",
+            "title": "ANVISA — RDC 222/2018 — recortes dos arts. 11, 13 e 43"
+          }
+        ]
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conteúdo técnico conferido individualmente no caderno e chave do eixo específico; programa atualizado do cargo, página 30, e tópicos já existentes reutilizados. Operações distintas corrigiram proveniência e comando; quatro alternativas preservadas. Correção do vínculo ao programa oficial já recuperado; base normativa indicada pela BVS/MS, com registro separado do recorte conferido.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/6DCA6B8C8E2589F81E87C75800D8AACB64F97F77C9B26095C5F8D62BDDBB0B80.pdf",
+          "https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "02/04/2026 19:00",
+          "nomeArquivo": "8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "descricaoArquivo": "PROVA OBJETIVA – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-02T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "sha256": "114d5b94dbc7bf7e5a43627e1e61e5f92c431716dcfc822bd43bbc9e59984716",
+          "captured_at": "2026-10-17T02:14:52.076Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_.pdf",
+          "dataArquivo": "28/04/2026 10:35",
+          "nomeArquivo": "D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "descricaoArquivo": "GABARITO DEFINITIVO – EIXO ESPECÍFICO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2026-04-28T10:35:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/mg112/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "sha256": "edfd5f570aa2d9cc325f1f029f36c55d8a25083397ff84a1735ea3dd3a55979a",
+          "captured_at": "2026-10-17T02:14:51.625Z"
+        },
+        "technical_captures": [
+          {
+            "url": "https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/mg112/resume-rdc222.pdf",
+            "sha256": "53f132e66154b858d47d93a7f376b8efc50c1b6bcc5e0ca12ad1d50627e43a96",
+            "captured_at": "2026-10-17T16:29:57.313Z"
+          }
+        ],
+        "official_pdf_page": 4,
+        "original_answer_preserved": true
+      }
+    }
+  ],
+  "metadata_during_resumption": {
+    "content_sources": {
+      "existing_changed": [],
+      "inserted": [
+        "f092ad8b-30d5-5f2e-afba-2d0598443130"
+      ],
+      "removed": []
+    },
+    "syllabus_editions": {
+      "existing_changed": [],
+      "inserted": [],
+      "removed": []
+    },
+    "syllabus_topics": {
+      "existing_changed": [],
+      "inserted": [],
+      "removed": []
+    }
+  },
+  "tests": {
+    "application_passed": 602,
+    "review_guard_tests_passed": 43,
+    "source_and_question_gate_tests_passed": 20,
+    "production_build_passed": true,
+    "build_in_temporary_copy": true
+  },
+  "scope_note": "15 preceding RO decisions plus 7 resumption decisions. Other-session activations are reflected in the live inventory but not claimed as our editorial work.",
+  "official_documents_recovered_without_user_uploads": [
+    {
+      "file": "resume-mt-edital-0.pdf",
+      "sha256": "34c3ec622ca116b11b3299719ef3cf9adc2f8c838aa0e5c9fe6a88d40f16352c",
+      "editorially_approved_by_download": false
+    },
+    {
+      "file": "resume-mt-edital-1.pdf",
+      "sha256": "9ba63a8c44de9822bc3765d2c6fa83bda8171e78a1ce1b4623834b72d492d341",
+      "editorially_approved_by_download": false
+    },
+    {
+      "file": "resume-mt-edital-2.pdf",
+      "sha256": "e02216325e27d5803442fc03d75caa609cccf3e68e59261db68f87012f9ebd39",
+      "editorially_approved_by_download": false
+    },
+    {
+      "file": "verify112-pjc-pdf.html",
+      "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+      "editorially_approved_by_download": false
+    },
+    {
+      "file": "verify112-pjc-key.pdf",
+      "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+      "editorially_approved_by_download": false
+    },
+    {
+      "file": "resume-mt-key-alterations.pdf",
+      "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+      "editorially_approved_by_download": false
+    }
+  ]
+}

@@ -1,7 +1,11 @@
+import { plannedPractice } from "@/lib/plannedStudy";
+import { platformDate } from "@/lib/platformClock";
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
+import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
+  ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Lock, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -14,14 +18,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
   canonicalDiscipline, accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
-import { acreDateKey } from "@/lib/acreTime";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { DayRun } from "@/components/cronograma/DayRun";
 import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
 import { useQuery } from "@tanstack/react-query";
@@ -68,8 +73,10 @@ const CATALOGO = (() => {
 })();
 
 function CronogramaPage() {
-  const { user, isLoading } = useAuthStatus();
+  const { user, isLoading, isAdmin } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
+  // Criar cronograma é do Essencial para cima; no Gratuito os cronogramas já criados continuam abertos para leitura.
+  const canCreate = isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "cronograma").included;
   const [plans, setPlans] = React.useState<Plan[] | null>(null);
   const [openId, setOpenId] = React.useState<string | "new" | null>(null);
   const { plano, painel } = Route.useSearch();
@@ -93,28 +100,67 @@ function CronogramaPage() {
   if (isLoading || (real && !plans))
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
   if (!real)
-    return <LockedState image="study-desk" title={<>Meu <em>cronograma</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
+    return <LockedState image="journey" title={<>Agenda <em>por edital</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
 
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="study-desk" size="sm" kicker="Hoje" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
-        description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
-      {openId === "new" ? (
+      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Agenda <em>por edital</em></>}
+        description="Organize e execute os tópicos do edital por dia. Esta agenda acompanha o conteúdo concluído; a configuração da semana e a análise de resultados ficam nas etapas ao lado.">
+        <div className="page-hero__stats">
+          <HeroStat icon={NotebookPen} label="Cronogramas" value={plans?.length ?? 0} />
+          <HeroStat
+            icon={Target}
+            label="Dias p/ a mais próxima"
+            value={(() => {
+              const dates = (plans ?? [])
+                .map((p) => p.exam_date)
+                .filter((d): d is string => !!d)
+                .map((d) => Math.ceil((new Date(d).getTime() - platformDate().getTime()) / 86400000))
+                .filter((d) => d >= 0);
+              return dates.length ? Math.min(...dates) : "—";
+            })()}
+          />
+        </div>
+      </PageHero>
+      <StudyPlanningNav active="schedule" />
+      {openId === "new" && !canCreate ? (
+        <CreateLocked onBack={() => setOpenId(null)} />
+      ) : openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
       ) : open ? (
         <PlanView key={open.id} plan={open} userId={user!.id} autoRun={painel === "1" && open.id === plano} onBack={() => setOpenId(null)}
           onChange={(p) => setPlans((all) => all!.map((x) => (x.id === p.id ? p : x)))}
           onDeleted={async () => { setOpenId(null); await load(); }} />
       ) : (
-        <PlanList plans={plans!} onOpen={setOpenId} />
+        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} />
       )}
     </div>
   );
 }
 
-function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new") => void }) {
+function CreateLocked({ onBack }: { onBack: () => void }) {
   return (
+    <div className="space-y-4 rounded-xl border bg-card p-6">
+      <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Voltar</Button>
+      <p className="font-bold">Montar cronograma por edital é do plano Essencial em diante</p>
+      <p className="text-sm text-muted-foreground">
+        Seus cronogramas já criados continuam disponíveis para consulta. Para criar um novo, conheça os planos.
+      </p>
+      <Button asChild><Link to="/dashboard/subscriptions">Ver planos</Link></Button>
+    </div>
+  );
+}
+
+function PlanList({ plans, onOpen, canCreate }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean }) {
+  return (
+    <div className="space-y-3">
+      {plans.length === 0 && (
+        <p className="rounded-xl border bg-card p-4 text-sm text-muted-foreground">
+          Você ainda não tem cronograma. Escolha o modelo do edital do seu concurso: ele já traz as
+          disciplinas e os tópicos, e a semana se ajusta ao que você estuda.
+        </p>
+      )}
     <div className="grid gap-3 sm:grid-cols-2">
       {plans.map((p) => (
         <button key={p.id} type="button" onClick={() => onOpen(p.id)} className="rounded-xl border bg-card p-4 text-left transition hover:border-primary">
@@ -126,8 +172,9 @@ function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new
         </button>
       ))}
       <button type="button" onClick={() => onOpen("new")} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary">
-        <Plus className="h-4 w-4" /> Novo cronograma
+        {canCreate ? <Plus className="h-4 w-4" /> : <Lock className="h-4 w-4" />} Novo cronograma
       </button>
+    </div>
     </div>
   );
 }
@@ -274,7 +321,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const theoryIndex = React.useMemo(() => buildTheoryIndex(materials.data ?? [], syllabus.data ?? []), [materials.data, syllabus.data]);
   const backUrl = `/dashboard/cronograma?plano=${plan.id}&painel=1`;
   const theoryOf = React.useCallback(
-    (nome: string, topic: string) => theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl),
+    (nome: string, topic: string) => { const target = theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl); return target.direct ? target : { ...target, search: { ...target.search, discipline: nome, collection: libraryCollection({slug: "", discipline: nome}) === "subjects" ? "subjects" : "laws" } }; },
     [theoryIndex, backUrl],
   );
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
@@ -290,7 +337,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         };
       setProgress(m);
     });
-    const since = new Date(Date.now() - 6 * 864e5).toISOString().slice(0, 10);
+    const since = acreDaysAgoKey(6);
     void supabase.from("study_sessions").select("active_seconds").eq("user_id", userId).gte("study_date", since)
       .then(({ data }) => setStudiedMin(Math.round(((data ?? []) as { active_seconds: number }[]).reduce((s, r) => s + r.active_seconds, 0) / 60)));
     return () => Object.values(timers.current).forEach(clearTimeout);
@@ -307,7 +354,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       timers.current[topicId] = setTimeout(() => {
         void supabase.from("cronograma_progress").upsert({
           plan_id: plan.id, user_id: userId, topic_id: topicId, video: p.video, pdf: p.pdf, podcast: p.podcast,
-          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: new Date().toISOString(),
+          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: platformDate().toISOString(),
         }).then(({ error }) => error && toast.error("Não foi possível salvar o progresso."));
       }, 500);
       return next;
@@ -318,7 +365,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
     const next = { ...plan, ...patch };
     onChange(next);
     const { error } = await supabase.from("cronograma_plans").update({
-      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: new Date().toISOString(),
+      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: platformDate().toISOString(),
     }).eq("id", plan.id);
     if (error) toast.error("Não foi possível salvar as alterações.");
   };
@@ -355,7 +402,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
       })
     : [];
-  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00`).getTime() - Date.now()) / 864e5) : null;
+  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 864e5) : null;
 
   return (
     <div className="space-y-4">
@@ -363,12 +410,12 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Meus cronogramas</Button>
         <Button variant="ghost" size="sm" className="text-destructive" onClick={remove}><Trash2 className="mr-1 h-4 w-4" /> Excluir</Button>
       </div>
-      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lg">
+      <div className="rounded-2xl border bg-card p-4">
         <div className="grid gap-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
           <div>
-            <p className="text-xl font-black">{plan.name}</p>
-            <div className="mt-3 flex items-center gap-2"><div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/25"><div className="h-full rounded-full bg-white transition-all" style={{ width: `${pct}%` }} /></div><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
-            <p className="mt-1 text-xs text-white/80">{done} de {total} conteúdos concluídos</p>
+            <p className="text-lg font-black">{plan.name}</p>
+            <div className="mt-2 flex items-center gap-2"><Progress value={pct} className="h-2.5 flex-1" /><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
+            <p className="mt-1 text-xs text-muted-foreground">{done} de {total} conteúdos concluídos</p>
           </div>
           <Stat label="Estudado (7 dias)" value={studiedMin === null ? "…" : fmtH(studiedMin)} sub={`meta ${cfg.weeklyHours} h`} />
           <Stat label="Prova" value={daysLeft === null ? "—" : daysLeft >= 0 ? `${daysLeft} dias` : "passou"} sub={plan.exam_date ? plan.exam_date.split("-").reverse().join("/") : "sem data"} />
@@ -395,14 +442,14 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       </div>
       {running && <DayRun planId={plan.id} dateKey={dateKey} title={plan.name} cfg={cfg} steps={todaySteps} progress={progress} setTopic={setTopic} theoryOf={theoryOf} onClose={() => setRunning(false)} />}
       {next && (
-        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-indigo-50 p-3 text-sm dark:from-sky-950/30 dark:to-indigo-950/30">
+        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-amber-50 p-3 text-sm dark:from-sky-950/30 dark:to-amber-950/30">
           <Target className="h-4 w-4 text-sky-600" />
           <span className="min-w-0 flex-1"><b>Próximo passo:</b> {next.d.nome} — {next.t.t}</span>
-          <ToolLinks nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />
+          <ToolLinks topic={next.t.t} nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />
         </div>
       )}
       <Tabs defaultValue="semana">
-        <TabsList className="grid h-auto w-full grid-cols-3 bg-gradient-to-r from-indigo-100 via-violet-100 to-fuchsia-100 p-1 dark:from-indigo-950/40 dark:via-violet-950/40 dark:to-fuchsia-950/40"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
+        <TabsList className="grid h-auto w-full grid-cols-3 bg-slate-100 p-1 dark:bg-slate-900/70"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
 
         <TabsContent value="semana" className="space-y-3">
           <p className="text-xs text-muted-foreground">Tempo por disciplina = peso × o que falta × reforço para desempenho abaixo de 70%. Mude o progresso e a semana se reorganiza.</p>
@@ -415,7 +462,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
                     <span className={cn("absolute inset-y-0 left-0 w-1.5", discColor(cfg, b.discId).bar)} aria-hidden="true" />
                     <span className="w-28 shrink-0 font-mono text-xs text-muted-foreground">{b.start} – {b.end}</span>
                     <span className="min-w-0 flex-1 font-semibold">{b.nome}{b.first && <Badge className="ml-2 bg-amber-400 text-amber-950 hover:bg-amber-400">1ª vez</Badge>}</span>
-                    <ToolLinks nome={b.nome} theory={(() => { const nt = cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id])); return nt ? theoryOf(b.nome, nt.t) : undefined; })()} />
+                    <ToolLinks topic={cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id]))?.t} nome={b.nome} theory={(() => { const nt = cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id])); return nt ? theoryOf(b.nome, nt.t) : undefined; })()} />
                   </div>
                 ))}
               </CardContent>
@@ -436,7 +483,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
                 <div className="space-y-1.5"><Label>Data da prova</Label><Input type="date" value={plan.exam_date ?? ""} onChange={(e) => void save({ exam_date: e.target.value || null })} /></div>
               </div>
               <SettingsFields cfg={cfg} onChange={setCfg} />
-              <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-fuchsia-50 p-3 dark:from-amber-950/20 dark:to-fuchsia-950/20">
+              <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-sky-50 p-3 dark:from-amber-950/20 dark:to-sky-950/20">
                 <p className="text-sm font-bold">Extras no painel do dia</p>
                 <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.simulado} onCheckedChange={(v) => setCfg({ simulado: !!v })} />🏆 Simulado de 1 h no último dia de estudo da semana</label>
                 <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.essay} onCheckedChange={(v) => setCfg({ essay: !!v })} />✍️ Redação de 40 min no penúltimo dia de estudo</label>
@@ -498,16 +545,16 @@ function CustomEditor({ cfg, setCfg }: { cfg: CronoConfig; setCfg: (p: Partial<C
   };
   return (
     <div className="space-y-3 border-t pt-3">
-      <div className="flex gap-2">
-        <Input list="cronograma-catalogo" placeholder="Adicionar disciplina (ex.: Direito Penal)" value={disc} onChange={(e) => setDisc(e.target.value)} />
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <Input className="min-w-0 flex-1" list="cronograma-catalogo" placeholder="Adicionar disciplina (ex.: Direito Penal)" value={disc} onChange={(e) => setDisc(e.target.value)} />
         <datalist id="cronograma-catalogo">{CATALOGO.map((c) => <option key={c.nome} value={c.nome} />)}</datalist>
         <Button variant="outline" onClick={addDisc}><Plus className="h-4 w-4" /></Button>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <select aria-label="Disciplina do conteúdo" className="h-10 rounded-md border bg-background px-2 text-sm" value={topicDisc || cfg.discs[0]?.id || ""} onChange={(e) => setTopicDisc(e.target.value)}>
+      <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+        <select aria-label="Disciplina do conteúdo" className="h-10 min-w-0 rounded-md border bg-background px-2 text-sm sm:max-w-[18rem]" value={topicDisc || cfg.discs[0]?.id || ""} onChange={(e) => setTopicDisc(e.target.value)}>
           {cfg.discs.map((d) => <option key={d.id} value={d.id}>{d.nome}</option>)}
         </select>
-        <Input className="min-w-48 flex-1" placeholder="Adicionar conteúdo" value={topic} onChange={(e) => setTopic(e.target.value)} />
+        <Input className="min-w-0 flex-1" placeholder="Adicionar conteúdo" value={topic} onChange={(e) => setTopic(e.target.value)} />
         <Button variant="outline" onClick={addTopic}><Plus className="h-4 w-4" /></Button>
       </div>
     </div>
@@ -516,25 +563,25 @@ function CustomEditor({ cfg, setCfg }: { cfg: CronoConfig; setCfg: (p: Partial<C
 
 function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
-    <div className="rounded-xl bg-white/15 px-4 py-2 text-center backdrop-blur">
-      <p className="text-[11px] uppercase tracking-wide text-white/80">{label}</p>
+    <div className="rounded-xl bg-muted/50 px-4 py-2 text-center">
+      <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
       <p className="text-xl font-black tabular-nums">{value}</p>
-      <p className="text-[11px] text-white/80">{sub}</p>
+      <p className="text-[11px] text-muted-foreground">{sub}</p>
     </div>
   );
 }
 
 /** Atalhos para as ferramentas da plataforma já filtradas pela disciplina. */
-function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | undefined }) {
-  const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold hover:bg-primary hover:text-primary-foreground";
+function ToolLinks({ nome, topic, theory }: { nome: string; topic?: string | undefined; theory?: TheoryTarget | undefined }) {
+  const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold transition-[background-color,color,transform] duration-150 hover:bg-primary hover:text-primary-foreground active:scale-95 motion-reduce:active:scale-100";
   return (
     <span className="flex flex-wrap gap-1.5">
-      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
-      <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" }} className={cls}><Target className="h-3 w-3" />Questões</Link>
-      <Link to="/dashboard/flashcards" search={{ subject: nome }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
-      <Link to="/dashboard/media" className={cls}><Mic className="h-3 w-3" />Podcast</Link>
-      <Link to="/dashboard/errors" className={cls}><NotebookPen className="h-3 w-3" />Erros</Link>
-      <Link to="/dashboard/mock-exams" className={cls}><Trophy className="h-3 w-3" />Simulado</Link>
+      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws", discipline: nome, q: topic }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
+      <Link to="/dashboard/question-trainer" search={plannedPractice(nome, topic)} className={cls}><Target className="h-3 w-3" />Questões</Link>
+      <Link to="/dashboard/flashcards" search={{ subject: nome, topic, planned: "1" }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
+      <Link to="/dashboard/media" search={{ subject: nome, topic }} className={cls}><Mic className="h-3 w-3" />Podcast</Link>
+      <Link to="/dashboard/errors" search={{ subject: nome, topic }} className={cls}><NotebookPen className="h-3 w-3" />Erros</Link>
+      <Link to="/dashboard/mock-exams" search={plannedPractice(nome, topic)} className={cls}><Trophy className="h-3 w-3" />Simulado</Link>
     </span>
   );
 }

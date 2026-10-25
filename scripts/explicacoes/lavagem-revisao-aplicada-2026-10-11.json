@@ -1,0 +1,389 @@
+{
+  "course_slug": "lavagem",
+  "units": {
+    "art-1": {
+      "simples": "Ocultar/dissimular bens, direitos ou valores de infração penal: 3 a 10 anos e multa. Desde 2012, antecedente não se restringe a rol de crimes: pode ser infração penal. Modalidades equiparadas, tentativa, majorante de 1/3 a 2/3 por reiteração/organização/ativo virtual e colaboração espontânea têm elementos próprios. Ação controlada/infiltração são admitidas com requisitos legais.",
+      "pontos": [
+        "Antecedente amplo; uso de ativo virtual integra majorante desde 2022."
+      ],
+      "atencao": [
+        "Não exigir sempre completar três fases didáticas nem presumir lavagem por mera posse de dinheiro; examinar verbo, origem e dolo. Colaboração exige resultados, não benefício automático."
+      ],
+      "exemplo": "O autor dissimula origem criminosa mediante operações para aparentar licitude. Variação: O bem tem origem lícita: grande valor sozinho não preenche origem de infração penal.",
+      "prova": [
+        "A lei atual exige antecedente em rol fechado de crimes? Não; o caput refere-se a infração penal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Processo da lavagem é autônomo em relação ao antecedente, inclusive estrangeiro, mas denúncia exige indícios suficientes de sua existência. Justiça Federal nas hipóteses específicas do inciso III; não toda lavagem. Autor antecedente desconhecido, isento ou punibilidade extinta não impede automaticamente. O §2º afasta CPP 366 na hipótese especial e prevê defesa dativa.",
+      "pontos": [
+        "Autonomia não dispensa indícios do antecedente nem prova dos elementos."
+      ],
+      "atencao": [
+        "Não exigir condenação prévia do antecedente nem federalizar todo processo. Compare texto especial com garantias de citação e defesa."
+      ],
+      "exemplo": "Lavagem é apurada sem condenação prévia, mas com indícios concretos da infração antecedente. Variação: Só há suspeita vaga de riqueza: autonomia não elimina suporte probatório.",
+      "prova": [
+        "É indispensável condenação anterior pelo antecedente? Não; processo e julgamento são independentes, com indícios necessários."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Indícios suficientes permitem medidas assecuratórias sobre instrumentos, produtos/proveitos, inclusive de interpostas pessoas. MP é ouvido em 24h; alienação antecipada preserva valor. Licitude comprovada permite liberação, preservado necessário a reparação, prestações, multas/custas. Pedido exige comparecimento pessoal indicado.",
+      "pontos": [
+        "Cautela patrimonial não é confisco definitivo."
+      ],
+      "atencao": [
+        "A menção a iniciativa de ofício deve ser lida com estrutura acusatória, não como juiz investigador irrestrito. Alegar licitude não libera tudo sem prova."
+      ],
+      "exemplo": "Um bem deteriora e examina-se venda antecipada para preservar valor. Variação: Prova de licitude permite liberação, mas se mantém constrição suficiente às obrigações legais.",
+      "prova": [
+        "A medida assecuratória já é perda definitiva dos bens? Não; é cautelar com requisitos e destinação posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-4-a": {
+      "simples": "Alienação antecipada ocorre em autos apartados, com avaliação e homologação judicial; preço não inferior a 75% da avaliação. Depósito e destinação distinguem competência federal, estadual e DF, atualizados pela Lei 15.358/2026. Sentença definitiva e ordem judicial governam incorporação/restituição; recursos têm apenas efeito devolutivo. Há ressalvas do lesado/terceiro e regime específico do produto de tráfico.",
+      "pontos": [
+        "75% é piso de venda, não redução da pena. Competência define ente destinatário."
+      ],
+      "atencao": [
+        "Não destinar tudo automaticamente à União após a alteração de 2026 nem tratar venda cautelar como condenação. Compare §§4º/5º/10 e direitos ressalvados."
+      ],
+      "exemplo": "Bem avaliado em R$100 mil não pode ser vendido por R$60 mil sob o piso legal; mínimo R$75 mil. Variação: O processo é estadual: examine conta/destinação do ente conforme disciplina atual, não regra federal indistinta.",
+      "prova": [
+        "O piso do leilão é de 75% da avaliação? Sim; o §3º o fixa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ]
+    },
+    "art-4-b": {
+      "simples": "Juiz pode suspender execução de prisão ou medida assecuratória, ouvido MP, quando execução imediata puder comprometer investigação. Não extingue ordem nem autoriza a polícia a ignorá-la unilateralmente.",
+      "pontos": [
+        "Suspender execução por decisão judicial e finalidade investigatória."
+      ],
+      "atencao": [
+        "Distinguir adiamento controlado de revogação definitiva ou inércia injustificada."
+      ],
+      "exemplo": "O juiz, ouvido MP, adia execução para não comprometer diligência. Variação: A autoridade policial por si descumpre ordem: este artigo não lhe concede decisão unilateral.",
+      "prova": [
+        "A suspensão compete unilateralmente à polícia? Não; o artigo prevê decisão do juiz ouvido o MP."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Juiz nomeia pessoa física ou jurídica qualificada para administrar bens quando as circunstâncias aconselharem, ouvido MP e com compromisso.",
+      "pontos": [
+        "Qualificação + MP + compromisso."
+      ],
+      "atencao": [
+        "Nomeação não transmite propriedade nem dispensa fiscalização."
+      ],
+      "exemplo": "Entidade qualificada é designada com compromisso judicial. Variação: O interessado quer ser dono por administrar: funções não se confundem.",
+      "prova": [
+        "O administrador pode ser pessoa jurídica? Sim; desde que qualificada e nomeada nos termos legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "Administrador recebe remuneração fixada judicialmente com produto dos bens e presta informações determinadas sobre situação e investimentos. MP conhece atos e pode requerer providências.",
+      "pontos": [
+        "Remuneração judicial e prestação de contas."
+      ],
+      "atencao": [
+        "Não se remunerar livremente nem investir sem controle devido."
+      ],
+      "exemplo": "O gestor informa investimentos e situação patrimonial ao juízo. Variação: Decide próprio pagamento sem fixação: não atende à regra.",
+      "prova": [
+        "O administrador fixa livremente sua remuneração? Não; ela é fixada pelo juiz."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Perda beneficia União ou, na competência estadual/DF, o respectivo ente, conforme Lei 15.358/2026, preservados lesado/terceiro de boa-fé. Interdição funcional e de direção nas entidades do art. 9º: dobro do tempo da pena privativa aplicada. Destinação é regulamentada no âmbito da competência; instrumentos sem valor podem ser inutilizados/conservados nas hipóteses legais.",
+      "pontos": [
+        "Competência define ente; interdição = dobro da pena aplicada."
+      ],
+      "atencao": [
+        "A ADPF 569 exige destinação legal, sem escolha livre de MP/juiz. Não aplicar União a todos os casos após alteração de 2026 nem confundir interdição com pena máxima abstrata."
+      ],
+      "exemplo": "Processo estadual leva à perda em favor do ente nos termos atuais, ressalvados direitos. Variação: A pena aplicada é quatro anos: o dobro da interdição é oito, não dobro da pena máxima abstrata.",
+      "prova": [
+        "O dobro para interdição usa a pena aplicada? Sim; é a referência expressa do inciso II."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5650503"
+      ]
+    },
+    "art-8": {
+      "simples": "Cooperação patrimonial estrangeira: tratado/convenção ou reciprocidade oferecida. Sem tratado, bens/produto repartem-se metade por Estado, ressalvados lesado e terceiro de boa-fé.",
+      "pontos": [
+        "Tratado OU reciprocidade; divisão 1/2 na falta de tratado."
+      ],
+      "atencao": [
+        "Não impedir toda cooperação por falta de tratado nem sacrificar direitos ressalvados."
+      ],
+      "exemplo": "Autoridade estrangeira competente solicita medida com promessa de reciprocidade. Variação: Há terceiro de boa-fé: sua ressalva é examinada antes da repartição.",
+      "prova": [
+        "Sem tratado a reciprocidade pode fundamentar cooperação? Sim; o §1º a admite."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Obrigações de prevenção alcançam atividades permanentes/eventuais, principais/acessórias: setor financeiro, seguros, imóveis, bens valiosos, registros, serviços e setores enumerados. Inclui prestadoras de ativos virtuais desde Lei 14.478. Verificar enquadramento e regras do regulador; não apenas bancos.",
+      "pontos": [
+        "Atividade eventual/acessória também; ativos virtuais incluídos."
+      ],
+      "atencao": [
+        "Não presumir lavagem de toda pessoa obrigada: obrigação de prevenção é distinta de crime. Assessoria exige operações descritas, não toda atividade sem distinção."
+      ],
+      "exemplo": "Prestadora de ativos virtuais confere deveres preventivos aplicáveis. Variação: A atividade é eventual: isso sozinho não exclui enquadramento.",
+      "prova": [
+        "A atividade precisa ser sempre principal e permanente? Não; o caput abrange eventual e acessória."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ]
+    },
+    "art-10": {
+      "simples": "Identificar clientes/representantes/proprietários, registrar operações acima do limite, manter controles e cadastro no regulador/Coaf e atender requisições. Registros incluem ativos virtuais. Guarda mínima de cinco anos desde encerramento da conta ou conclusão da transação, ampliável. Operações agregadas do mesmo mês-calendário também contam para limite.",
+      "pontos": [
+        "5 anos mínimos do marco correto; fracionamento não elimina agregação."
+      ],
+      "atencao": [
+        "Não contar cinco anos da abertura da conta nem inventar um limite universal sem instrução do setor."
+      ],
+      "exemplo": "Operações ligadas no mesmo mês ultrapassam conjuntamente limite: examina-se registro. Variação: Conta aberta continua ativa: não se inicia a guarda final do encerramento pela abertura.",
+      "prova": [
+        "A guarda mínima se conta sempre da abertura da conta? Não; do encerramento ou conclusão da transação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+      ]
+    },
+    "art-10-a": {
+      "simples": "Banco Central mantém cadastro centralizado de correntistas/clientes e procuradores. Cadastro não equivale por si a livre acesso ao extrato e conteúdo das operações.",
+      "pontos": [
+        "Cadastro de vínculos, não quebra universal de sigilo."
+      ],
+      "atencao": [
+        "Não confundir CCS com prova automática de origem ilícita."
+      ],
+      "exemplo": "A consulta identifica vínculo cadastral com instituição financeira. Variação: Quer-se extrato: examinam-se fundamento e limites de acesso próprios.",
+      "prova": [
+        "O cadastro autoriza automaticamente extratos sem requisito legal? Não; cadastro e acesso ao conteúdo são distintos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Pessoas obrigadas dão atenção às operações suspeitas e comunicam ao Coaf em 24h as hipóteses legais, sem dar ciência a ninguém, inclusive envolvido. Não ocorrência também é informada conforme periodicidade do regulador/Coaf. Comunicação de boa-fé na forma legal não gera responsabilidade civil/administrativa.",
+      "pontos": [
+        "24h de comunicação e vedação de aviso; declaração negativa tem periodicidade própria."
+      ],
+      "atencao": [
+        "Não esperar condenação para comunicar suspeita nem aplicar 24h automaticamente à declaração negativa. Comunicação não prova culpa."
+      ],
+      "exemplo": "Operação suspeita é comunicada sem alertar o cliente. Variação: Não houve operação comunicável: consulta-se periodicidade da declaração negativa, não se presume omissão livre.",
+      "prova": [
+        "O cliente deve ser informado da comunicação ao Coaf? Não; a lei exige abstenção de dar ciência."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11-a": {
+      "simples": "Transferências internacionais e saques em espécie devem ser previamente comunicados à instituição financeira nos termos, limites, prazos e condições do Banco Central.",
+      "pontos": [
+        "Prévia à instituição; condições do BC."
+      ],
+      "atencao": [
+        "Não equiparar esse aviso à comunicação sigilosa de suspeita pelo obrigado ao Coaf."
+      ],
+      "exemplo": "Cliente programa saque enquadrado e segue comunicação prévia ao banco. Variação: O banco identifica suspeita: possui dever próprio do art. 11, distinto do aviso do cliente.",
+      "prova": [
+        "Este aviso é exatamente a comunicação de suspeita ao Coaf? Não; destinatário e finalidade são distintos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Descumprir arts. 10/11 gera sanções administrativas, cumuláveis ou não: advertência, multa com limites legais, inabilitação até dez anos e cassação/suspensão. Multa contempla culpa ou dolo nas hipóteses; inabilitação/cassação têm condições específicas. Não é condenação penal por lavagem.",
+      "pontos": [
+        "Multa, inabilitação e cassação possuem gradação/requisitos."
+      ],
+      "atencao": [
+        "Não exigir sempre dolo de lavagem para sanção administrativa nem tratar teto R$20 milhões como multa fixa universal."
+      ],
+      "exemplo": "Obrigada deixa de sanar irregularidade advertida e examina-se multa na hipótese. Variação: Há infração administrativa sem prova de lavagem: a distinção de esferas permanece.",
+      "prova": [
+        "O art. 12 estabelece pena penal automática de lavagem? Não; estabelece sanções administrativas por descumprimento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12-a": {
+      "simples": "Prevê regulamentação do CNPEP no Portal da Transparência, envio de dados pelos entes/Poderes e consulta pelos obrigados, sem dispensar outras diligências. PEP é condição de exposição política para controles, não culpa presumida. Não afirmar completude operacional do cadastro apenas porque foi previsto em lei.",
+      "pontos": [
+        "Prevenção: consulta + demais diligências; ausência em lista não encerra avaliação."
+      ],
+      "atencao": [
+        "TCU, deliberação de abril de 2026, recomendou concluir regulamentação. Distinguir previsão legal, implementação e dados efetivamente disponíveis; não presumir que todos os Poderes já estejam plenamente integrados."
+      ],
+      "exemplo": "Instituição consulta dados disponíveis e também faz outras diligências de enquadramento. Variação: Pessoa não aparece em lista: isso sozinho não prova ausência de exposição nem dispensa controles.",
+      "prova": [
+        "Ser PEP significa ter praticado lavagem? Não; é condição para diligências preventivas, sem culpa presumida."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm",
+        "https://btcu.apps.tcu.gov.br/api/obterDocumentoPdf/80197662"
+      ]
+    },
+    "art-14": {
+      "simples": "Coaf recebe/examina ocorrências suspeitas, disciplina e sanciona setores sem regulador próprio e coordena cooperação. A criação original cita Fazenda, mas estrutura atual segue Lei 13.974/2020, com autonomia técnica/operacional e vinculação administrativa ao Banco Central.",
+      "pontos": [
+        "Unidade de inteligência; competência residual onde não há regulador próprio."
+      ],
+      "atencao": [
+        "Não chamar Coaf de juiz penal nem manter vinculação ministerial histórica como estrutura atual. Requisição cadastral não significa acesso irrestrito a todo sigilo."
+      ],
+      "exemplo": "Setor sem regulador próprio segue instruções Coaf nos termos legais. Variação: Apostila situa Coaf atualmente na Fazenda só pelo texto de 1998: consulte lei de estrutura posterior.",
+      "prova": [
+        "A estrutura atual deve ser deduzida apenas da criação de 1998? Não; consulte Lei 13.974/2020."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13974.htm"
+      ]
+    },
+    "art-15": {
+      "simples": "Coaf comunica às autoridades competentes quando conclui existência de crimes, indícios fundados ou outro ilícito, para procedimentos cabíveis. Relatório não é sentença nem dispensa exame de legalidade, sigilo e corroboração.",
+      "pontos": [
+        "Inteligência → autoridades com atribuição; não condenação."
+      ],
+      "atencao": [
+        "Não presumir prova conclusiva de culpa por comunicação nem requisição ilimitada de dados protegidos."
+      ],
+      "exemplo": "Ocorrência com indícios é encaminhada para apuração competente. Variação: Pretende-se condenar só porque houve alerta: apuração e prova dos elementos permanecem.",
+      "prova": [
+        "A comunicação do Coaf equivale a sentença condenatória? Não; destina-se aos procedimentos cabíveis."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17-a": {
+      "simples": "CPP aplica-se subsidiariamente no que não for incompatível com a lei especial. Subsidiariedade não elimina regras específicas nem garantias constitucionais.",
+      "pontos": [
+        "Especial primeiro; CPP compatível complementa."
+      ],
+      "atencao": [
+        "Não transportar automaticamente CPP 366 ignorando art. 2º, §2º da lei."
+      ],
+      "exemplo": "Falta regra especial e aplica-se CPP compatível. Variação: Há regra especial expressa: a subsidiária não a substitui só por preferência.",
+      "prova": [
+        "O CPP substitui automaticamente toda regra especial? Não; aplica-se subsidiariamente quando compatível."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-17-b": {
+      "simples": "Polícia e MP acessam sem autorização judicial exclusivamente qualificação pessoal, filiação e endereço do investigado nos detentores enumerados. Não libera transações ou conteúdo pelo simples nome de dado cadastral.",
+      "pontos": [
+        "Q-F-E; limite material expresso."
+      ],
+      "atencao": [
+        "Instituição financeira como detentora não transforma extrato em endereço cadastral."
+      ],
+      "exemplo": "Requisita-se filiação/endereço na hipótese legal. Variação: Pretende-se movimentação financeira usando só este artigo: extrapola os dados enumerados.",
+      "prova": [
+        "O artigo libera todo extrato financeiro sem ordem? Não; limita-se aos dados cadastrais especificados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17-c": {
+      "simples": "Respostas financeiras/tributárias a ordens judiciais de quebra ou transferência de sigilo devem, quando determinado, ser digitais e migráveis aos autos sem redigitação.",
+      "pontos": [
+        "Formato eletrônico por determinação, com ordem de sigilo própria."
+      ],
+      "atencao": [
+        "Facilidade de migração não dispensa fundamento da ordem nem autoriza divulgação pública."
+      ],
+      "exemplo": "Instituição entrega arquivo migrável conforme ordem. Variação: A tecnologia existe, mas falta base para quebrar sigilo: o formato não substitui a autorização.",
+      "prova": [
+        "O formato digital dispensa ordem de acesso ao sigilo? Não; trata da resposta às ordens indicadas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17-d": {
+      "simples": "O texto mantém afastamento automático por indiciamento, mas STF, ADI 4911, declarou o artigo inconstitucional em novembro de 2020. Não aplicar esse afastamento automático nem inferi-lo da literalidade residual. Cautelar funcional pode ter fundamento próprio, com controle e requisitos cabíveis.",
+      "pontos": [
+        "Indiciamento não determina afastamento automático por este artigo."
+      ],
+      "atencao": [
+        "Não transformar declaração de inconstitucionalidade em proibição absoluta de toda medida cautelar legal."
+      ],
+      "exemplo": "Servidor é indiciado e não se afasta automaticamente pelo art. 17-D. Variação: Há pedido de cautelar com outra base e requisitos: deve ser analisado, não recusado só porque este artigo caiu.",
+      "prova": [
+        "O indiciamento provoca afastamento automático válido pelo art. 17-D? Não; o STF declarou o dispositivo inconstitucional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/noticias/vernoticiadetalhe.asp?idconteudo=456010&ori=1"
+      ]
+    },
+    "art-17-e": {
+      "simples": "Receita conserva dados fiscais por pelo menos cinco anos desde início do exercício seguinte à declaração de renda ou pagamento do tributo. Guarda não autoriza divulgação irrestrita.",
+      "pontos": [
+        "Marco: início do exercício seguinte; mínimo 5 anos."
+      ],
+      "atencao": [
+        "Não contar automaticamente da abertura de conta nem confundir com cadastro bancário art. 10."
+      ],
+      "exemplo": "Declaração num exercício leva ao marco de contagem no início do seguinte. Variação: Quer-se acesso público aos dados porque estão guardados: guarda não extingue sigilo.",
+      "prova": [
+        "O prazo é máximo absoluto de cinco anos? Não; é mínimo, contado do marco legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-18": {
+      "simples": "Lei original vigora na publicação. Reformas de 2012, 2022 e 2026 têm marcos próprios; infração antecedente, ativos virtuais e destinação de bens exigem texto/tempo corretos.",
+      "pontos": [
+        "Vigência original distinta de cada alteração."
+      ],
+      "atencao": [
+        "Não aplicar lei posterior mais gravosa retroativamente por estar hoje compilada."
+      ],
+      "exemplo": "Fato anterior é examinado pela lei temporalmente aplicável. Variação: Alteração favorece o acusado: avalie retroatividade benéfica nos requisitos próprios.",
+      "prova": [
+        "A compilação atual torna toda alteração aplicável a qualquer fato passado? Não; análise temporal permanece."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

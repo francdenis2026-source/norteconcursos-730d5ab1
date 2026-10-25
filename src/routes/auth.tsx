@@ -1,3 +1,5 @@
+import "@/styles/auth-art.css";
+import authComposition from "@/assets/auth/carreiras-composicao.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PasswordRecovery } from "@/components/PasswordRecovery";
 import { Input } from "@/components/ui/input";
@@ -5,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   AlertCircle,
-  ArrowLeft,
+  Home,
   ArrowRight,
   Eye,
   EyeOff,
@@ -20,10 +22,12 @@ import {
   Trophy,
 } from "lucide-react";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase, isEmailRecoveryPending, completeEmailAuthCallback } from "@/integrations/supabase/client";
+import { callbackErrorMessage, type CallbackError } from "@/lib/authCallback";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { normalizeUppercase, validateCPF } from "@/lib/utils";
+import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
@@ -45,9 +49,11 @@ function friendlyAuthError(error: unknown) {
 export const Route = createFileRoute("/auth")({
   validateSearch: (
     search: Record<string, unknown>,
-  ): { mode?: "register" | undefined; recovery?: boolean } => ({
+  ): { mode?: "register" | undefined; recovery?: boolean; callbackError?: CallbackError | undefined; reason?: "inactive" | "another-device" | undefined } => ({
     mode: search["mode"] === "register" ? "register" : undefined,
     recovery: search["recovery"] === true || search["recovery"] === "true",
+    callbackError: ["expired", "invalid", "failed"].includes(String(search["callbackError"])) ? search["callbackError"] as CallbackError : undefined,
+    reason: search["reason"] === "inactive" || search["reason"] === "another-device" ? search["reason"] : undefined,
   }),
   component: AuthPage,
   head: () => ({
@@ -93,11 +99,15 @@ function AuthPage() {
   // Entrada automática: ao confirmar o e-mail (link volta para /auth ou outra aba confirma),
   // a sessão chega aqui e o aluno é levado direto ao painel.
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      if (routeSearch.recovery) {
+    let active = true;
+    void completeEmailAuthCallback().then(({ session, error, recovery }) => {
+      if (!active) return;
+      const failure = routeSearch.callbackError ?? error;
+      if (failure) { setFormError(callbackErrorMessage(failure)); return; }
+      if (routeSearch.recovery || recovery) {
         setMode("reset");
-        setRecoverySession(!!data.session);
-      } else if (data.session) navigate({ to: "/dashboard" });
+        setRecoverySession(!!session);
+      } else if (session) navigate({ to: "/dashboard", replace: true });
     });
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "PASSWORD_RECOVERY" && session) {
@@ -105,20 +115,25 @@ function AuthPage() {
         setMode("reset");
         return;
       }
-      if (routeSearch.recovery) return;
+      if (routeSearch.recovery || isEmailRecoveryPending() || routeSearch.callbackError) return;
       if (event === "SIGNED_IN" && session) {
         // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
         if (!manualAuth.current) {
-          toast.success("E-mail confirmado", {
+          toast.success("E-mail confirmado com sucesso!", {
             id: "auth-welcome",
-            description: "Sua conta está ativa. Boa preparação!",
+            description: "Seu acesso está liberado. Bem-vindo à sua área de estudos da Norte Concurso.",
+            duration: 7000,
           });
         }
         navigate({ to: "/dashboard" });
       }
     });
-    return () => sub.subscription.unsubscribe();
-  }, [navigate, routeSearch.recovery]);
+    return () => { active = false; sub.subscription.unsubscribe(); };
+  }, [navigate, routeSearch.recovery, routeSearch.callbackError]);
+  useEffect(() => {
+    if (routeSearch.reason === "inactive") toast.message("Sessão encerrada por inatividade", { id: "auth-reason", description: "Passaram-se mais de 5 minutos sem interação. Entre novamente para continuar de onde parou." });
+    if (routeSearch.reason === "another-device") toast.message("Sessão encerrada", { id: "auth-reason", description: "Sua conta foi aberta em outro aparelho." });
+  }, [routeSearch.reason]);
 
   useEffect(() => {
     if (cooldown <= 0) return;
@@ -218,20 +233,23 @@ function AuthPage() {
   };
 
   return (
-    <main className="auth">
+    <main className="auth" data-auth-mode={mode}>
       <section className="auth-visual">
         <Link to="/" aria-label="Norte Concurso — início" className="w-fit">
           <NorteBrand light />
         </Link>
-        <div>
+        <figure className="auth-artwork">
+          <img src={authComposition} alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
+        </figure>
+        <div className="auth-visual-copy">
           <span className="chip-brass">
             <Sparkles /> Preparação para carreiras policiais
           </span>
           <h1>
-            Entre em operação com <em>um plano claro.</em>
+            Sua próxima conquista.<br /><em>Um passo por dia.</em>
           </h1>
           <p>
-            Acesse o ambiente que transforma questões, simulados e desempenho em decisões de estudo.
+            Questões, simulados e um caminho de estudo para a carreira que você escolheu.
           </p>
         </div>
         <div className="auth-benefits">
@@ -254,17 +272,19 @@ function AuthPage() {
       </section>
 
       <section className="auth-panel">
-        <Link to="/" className="auth-back">
-          <ArrowLeft /> Voltar para o início
-        </Link>
+        <nav className="auth-access-nav" aria-label="Navegação de acesso">
+          <Link to="/" className="auth-back"><Home aria-hidden="true" /> Página inicial</Link>
+        </nav>
         <div className="auth-card">
-          <img
-            src="/media/hero/auth-seguranca.jpg"
-            alt="Policiais e bombeiro da segurança pública"
-            className="auth-photo"
-            width={1600}
-            height={1200}
-          />
+          <div className="auth-identity">
+            <img className="auth-identity__scene" src={authComposition} alt="" aria-hidden="true"
+              width={1440} height={600} decoding="async" />
+            <div className="auth-identity__copy">
+              <span>NORTE CONCURSOS</span>
+              <strong>Seu objetivo<br />tem um norte.</strong>
+              <span className="auth-identity__career">CARREIRAS POLICIAIS</span>
+            </div>
+          </div>
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
@@ -284,18 +304,21 @@ function AuthPage() {
                 <Mail className="h-7 w-7" />
               </div>
               <div className="auth-heading">
-                <h2>Bem-vindo à Norte Concurso!</h2>
+                <h2>Falta só confirmar seu e-mail</h2>
                 <p>
-                  Sua conta foi criada. Enviamos um link de confirmação para{" "}
-                  <strong className="text-foreground">{pendingEmail}</strong>. Clique no link para
-                  ativar o acesso — você entrará automaticamente.
+                  Cadastro realizado! Enviamos as instruções para{" "}
+                  <strong className="break-all text-foreground">{pendingEmail}</strong>.
                 </p>
               </div>
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Loader2 className="h-4 w-4 animate-spin" /> Aguardando confirmação do e-mail…
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-left text-sm text-foreground">
+                <ol className="list-decimal space-y-3 pl-5">
+                  <li>Abra sua <strong>caixa de entrada</strong> e procure o e-mail de confirmação da Norte Concurso.</li>
+                  <li>Não encontrou? Confira também <strong>Spam, Lixo eletrônico e Promoções</strong>. A mensagem pode levar alguns minutos para chegar.</li>
+                  <li>Clique no <strong>link de confirmação</strong> para ativar sua conta e acessar a plataforma.</li>
+                </ol>
               </div>
-              <p className="text-xs text-muted-foreground">
-                Não encontrou? Verifique a caixa de spam ou promoções.
+              <p className="text-sm text-muted-foreground">
+                Após confirmar, você será direcionado à sua área de estudos. Se o acesso não abrir automaticamente, volte aqui e entre com seu e-mail e senha.
               </p>
               <button
                 type="button"
@@ -343,13 +366,21 @@ function AuthPage() {
                 </button>
               </div>
               <div className="auth-heading">
-                <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
+                <h2>{mode === "login" ? "Continue sua preparação" : "Crie sua conta gratuita"}</h2>
                 <p>
                   {mode === "login"
-                    ? "Entre com seu e-mail e continue de onde parou."
-                    : "Leva menos de dois minutos para começar."}
+                    ? "Seu próximo passo começa aqui."
+                    : "Organize seus estudos e acompanhe sua evolução."}
                 </p>
               </div>
+              {mode === "register" && TESTING_PHASE && (
+                <p className="auth-trial" role="note">
+                  <Sparkles aria-hidden="true" />
+                  <span>
+                    <strong>{TESTING_DAYS} dias de Plus grátis.</strong> Sem cartão; depois, plano Gratuito.
+                  </span>
+                </p>
+              )}
               <form onSubmit={handleAuth} className="auth-form">
                 {mode === "register" && (
                   <div className="auth-field">
@@ -499,9 +530,9 @@ function AuthPage() {
           )}
           <div className="auth-security">
             <ShieldCheck />
-            <span>Conexão protegida · acesso individual à sua conta</span>
+            <span>Conexão segura · sua conta, seu progresso</span>
           </div>
-          <p className="auth-dev-signature">Dev. Franc D'nis · Feijó-AC, Brasil</p>
+          <p className="auth-dev-signature">Desenvolvido por Franc Denis · Feijó, Acre, Brasil</p>
         </div>
       </section>
     </main>

@@ -1,0 +1,433 @@
+{
+  "version": "2026-10-11-menor-potencial-ofensivo-targeted",
+  "checked_at": "2026-10-12T01:35:59.346747+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "menor-potencial-ofensivo",
+      "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+      "units": 8,
+      "scope_type": "targeted_correction",
+      "course_current_units": 8,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "source_sha256": "0dd588a7754e4f849aed996c411a988b8d35497b218ce8ca5f8fecf3c3434598",
+      "source_checked_at": "2026-10-12T00:31:32.660893+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+      "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+      "simples": "Disciplina instrumentos de menor potencial ofensivo por agentes de segurança pública em todo país. Regulamentação atual inclui Decreto 12.341/2024.",
+      "pontos": [
+        "Âmbito nacional; lei e regulamento."
+      ],
+      "atencao": [
+        "Não confundir esta lei com infrações de menor potencial ofensivo dos Juizados: mesma expressão não significa mesma matéria."
+      ],
+      "exemplo": "O agente estuda instrumentos de uso da força pela Lei 13.060. Variação: A questão versa transação penal: deve consultar Lei 9.099, não confundir os títulos.",
+      "prova": [
+        "Esta lei define infrações de menor potencial dos Juizados? Não; trata de instrumentos de uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+        "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+        "simples": "Esta Lei disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional.",
+        "pontos": [
+          "Disciplina o uso dos instrumentos de menor potencial ofensivo.",
+          "Aplica-se em todo o território nacional."
+        ],
+        "atencao": [
+          "Abrangência nacional."
+        ],
+        "exemplo": "A Lei vale para as polícias de todos os Estados.",
+        "prova": [
+          "Assertiva que restringe a Lei à Polícia Federal erra: aplica-se a todos os agentes de segurança pública."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+      "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+      "simples": "Prioriza menor potencial quando não põe em risco integridade física/psíquica policial, com legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo disparar contra fugitivo desarmado ou sem risco imediato, nem veículo que desrespeita bloqueio salvo risco de morte/lesão indicado.",
+      "pontos": [
+        "Não existe autorização automática de disparo por fuga ou bloqueio."
+      ],
+      "atencao": [
+        "Não trocar a condição de risco por desobediência simples. Prioridade não obriga instrumento inadequado que coloque policial em risco."
+      ],
+      "exemplo": "Veículo apenas evade bloqueio sem risco de morte/lesão: isso não autoriza arma de fogo pela lei. Variação: Há risco concreto nos termos da exceção: ainda examine necessidade e proporcionalidade, sem disparo automático.",
+      "prova": [
+        "A mera fuga de veículo autoriza disparo automaticamente? Não; a lei condiciona a exceção ao risco indicado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+        "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+        "simples": "Os órgãos de segurança pública deverão priorizar a utilização dos instrumentos de menor potencial ofensivo, desde que seu uso não coloque em risco a integridade física ou psíquica dos policiais, e obedecer aos princípios da legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo o uso de arma de fogo contra pessoa em fuga desarmada ou que não represente risco imediato de morte ou de lesão aos agentes ou a terceiros, nem contra veículo que desrespeite bloqueio policial em via pública, exceto quando o ato represente risco de morte ou lesão.",
+        "pontos": [
+          "Priorizar instrumentos de menor potencial ofensivo, sem pôr em risco o policial.",
+          "Princípios: legalidade, necessidade, razoabilidade e proporcionalidade.",
+          "Vedado atirar em fugitivo desarmado que não ofereça risco imediato.",
+          "Vedado atirar contra veículo que fure bloqueio, salvo risco de morte ou lesão."
+        ],
+        "atencao": [
+          "Veículo que fura bloqueio: arma de fogo só se houver risco de morte ou lesão.",
+          "A prioridade não obriga o policial a se expor a risco."
+        ],
+        "exemplo": "O policial usa dispositivo de choque em vez de arma de fogo ao conter pessoa agressiva que não porta arma.",
+        "prova": [
+          "Assertiva que autoriza o disparo contra qualquer veículo que desrespeite o bloqueio erra: exige risco de morte ou lesão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Decreto do Uso da Força"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+      "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+      "simples": "Formação/capacitação deve incluir conteúdo habilitante para instrumentos não letais. A denominação legal não significa risco zero: leia a definição de baixa probabilidade no art. 4º.",
+      "pontos": [
+        "Capacitação prática e legal; não letal não é inofensivo."
+      ],
+      "atencao": [
+        "Não dispensar treino pelo rótulo do equipamento."
+      ],
+      "exemplo": "Curso inclui habilitação no instrumento e seus limites. Variação: Entrega-se equipamento sem treinamento: a disponibilização não substitui capacitação.",
+      "prova": [
+        "O rótulo não letal dispensa capacitação? Não; o artigo exige conteúdo habilitante."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+        "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+        "simples": "Os cursos de formação e capacitação dos agentes de segurança pública deverão incluir conteúdo programático que os habilite ao uso dos instrumentos não letais.",
+        "pontos": [
+          "Formação e capacitação incluem o uso de instrumentos não letais."
+        ],
+        "atencao": [
+          "Dever de capacitação nos cursos de formação."
+        ],
+        "exemplo": "O curso de formação policial inclui treinamento com instrumentos não letais.",
+        "prova": [
+          "Assertiva que dispensa o treinamento em instrumentos não letais nos cursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+      "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+      "simples": "Instrumentos são projetados para conter, debilitar ou incapacitar temporariamente com baixa probabilidade de morte/lesão permanente. Baixa probabilidade não é impossibilidade absoluta de dano.",
+      "pontos": [
+        "Temporário e baixo risco, não risco zero."
+      ],
+      "atencao": [
+        "Uso indevido pode causar lesão grave e continua sujeito aos limites e responsabilidade."
+      ],
+      "exemplo": "O agente escolhe instrumento adequado ao objetivo de contenção temporária. Variação: É utilizado indevidamente e provoca dano: o rótulo não elimina análise da conduta.",
+      "prova": [
+        "Menor potencial significa impossibilidade de morte ou lesão permanente? Não; o texto diz baixa probabilidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+        "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+        "simples": "Consideram-se instrumentos de menor potencial ofensivo aqueles projetados especificamente para, com baixa probabilidade de causar mortes ou lesões permanentes, conter, debilitar ou incapacitar temporariamente pessoas.",
+        "pontos": [
+          "Projetados para conter, debilitar ou incapacitar temporariamente.",
+          "Baixa probabilidade de causar morte ou lesões permanentes."
+        ],
+        "atencao": [
+          "Baixa probabilidade, e não ausência, de risco de morte."
+        ],
+        "exemplo": "Spray de pimenta e arma de choque são instrumentos de menor potencial ofensivo.",
+        "prova": [
+          "Assertiva que afirma que esses instrumentos nunca causam morte erra: a definição fala em baixa probabilidade."
+        ],
+        "termos": [
+          {
+            "termo": "Instrumento não letal",
+            "significado": "Equipamento concebido para reduzir o risco de morte."
+          }
+        ],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+      "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+      "simples": "Poder público deve fornecer a todo agente de segurança instrumentos de menor potencial para uso racional da força.",
+      "pontos": [
+        "Dever de fornecimento; uso racional continua exigido."
+      ],
+      "atencao": [
+        "Disponibilizar não autoriza uso indiscriminado nem substitui formação."
+      ],
+      "exemplo": "A instituição fornece equipamentos adequados e organiza treinamento. Variação: O equipamento existe, mas o caso não exige força: o fornecimento não cria necessidade de usar.",
+      "prova": [
+        "O dever de fornecer elimina requisitos de necessidade no uso? Não; instrumentos se destinam ao uso racional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+        "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+        "simples": "O poder público tem o dever de fornecer a todo agente de segurança pública instrumentos de menor potencial ofensivo para o uso racional da força.",
+        "pontos": [
+          "Dever do poder público de fornecer os instrumentos.",
+          "Para todo agente de segurança pública.",
+          "Finalidade: uso racional da força."
+        ],
+        "atencao": [
+          "O dever é do PODER PÚBLICO, e não do agente."
+        ],
+        "exemplo": "A corporação fornece spray de pimenta e arma de choque aos policiais.",
+        "prova": [
+          "Assertiva que obriga o agente a comprar o próprio equipamento erra: o dever de fornecer é do poder público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+      "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+      "simples": "Ferimentos decorrentes de uso da força exigem assistência/socorro médico imediato e comunicação à família ou pessoa indicada. Dever independe de o instrumento ser menor potencial.",
+      "pontos": [
+        "Socorro imediato + comunicação."
+      ],
+      "atencao": [
+        "Não aguardar encerramento de burocracia para prestar assistência nem negar por imputação ao ferido."
+      ],
+      "exemplo": "Pessoa ferida recebe socorro imediato e comunicação ao contato indicado. Variação: O instrumento era classificado não letal: a ocorrência de ferimento mantém o dever.",
+      "prova": [
+        "Ferimento por instrumento de menor potencial afasta dever de socorro? Não; o artigo alcança ferimentos decorrentes do uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+        "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+        "simples": "Sempre que do uso da força praticada pelos agentes de segurança pública decorrerem ferimentos em pessoas, deverá ser assegurada a imediata prestação de assistência e socorro médico aos feridos, bem como a comunicação do ocorrido à família ou à pessoa por eles indicada.",
+        "pontos": [
+          "Assistência e socorro médico imediatos aos feridos.",
+          "Comunicação à família ou à pessoa indicada."
+        ],
+        "atencao": [
+          "Dever de socorro e de comunicação."
+        ],
+        "exemplo": "Após ferir alguém na ação, a polícia presta socorro e avisa a família.",
+        "prova": [
+          "Assertiva que dispensa a comunicação à família erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+      "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+      "simples": "Executivo regulamenta classificação e utilização. Decreto 12.341/2024 é fonte atual complementar, sem alterar por si o texto legal nem criar uso irrestrito.",
+      "pontos": [
+        "Consultar regulamento junto da lei."
+      ],
+      "atencao": [
+        "Não considerar instrução informal como substituto de classificação e limites normativos."
+      ],
+      "exemplo": "O candidato compara instrumento e procedimento com o decreto vigente. Variação: A prática interna diverge da norma: não se presume válida apenas por costume.",
+      "prova": [
+        "A classificação e utilização têm regulamentação executiva prevista? Sim; o art. 7º a determina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+        "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+        "simples": "O Poder Executivo editará regulamento classificando e disciplinando a utilização dos instrumentos não letais.",
+        "pontos": [
+          "Regulamento do Executivo classifica e disciplina os instrumentos."
+        ],
+        "atencao": [
+          "A classificação é regulamentar."
+        ],
+        "exemplo": "Um decreto lista os instrumentos não letais e regras de uso.",
+        "prova": [
+          "Assertiva que fixa na lei a classificação dos instrumentos erra: é por regulamento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+      "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+      "simples": "A Lei 13.060 vigora na publicação. A regulamentação posterior tem marco próprio; sua data não deve ser confundida com a da lei.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Não presumir que a lei só nasceu em 2024 porque o decreto atual é daquele ano."
+      ],
+      "exemplo": "A questão cobra a vigência original de 2014. Variação: Cobra o regulamento de 2024: consulte seu marco próprio.",
+      "prova": [
+        "A lei só passou a existir com o decreto de 2024? Não; vigora desde a publicação da própria lei."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+        "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    }
+  ]
+}

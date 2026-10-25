@@ -1,0 +1,60 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-institucional-37-39-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "items": [
+    {
+      "item_number": 37,
+      "official_answer": "B",
+      "stem": "À luz do disposto na Lei nº 6.843/1986, assinale a alternativa que indica corretamente um dos requisitos para ingresso nas carreiras da Polícia Civil.",
+      "options": {
+        "A": "Possuir Carteira Nacional de Habilitação (CNH), categoria “D”, no mínimo.",
+        "B": "Estar em gozo dos direitos políticos.",
+        "C": "Ter, no mínimo, 24 (vinte e quatro) anos.",
+        "D": "Estar quite com as obrigações militares, sendo dispensadas as obrigações eleitorais.",
+        "E": "Ter aptidão física parcial."
+      },
+      "explanation": "B é correta. O art. 15, V, da Lei estadual 6.843/1986, em sua redação vigente, exige estar em gozo dos direitos políticos para ingresso nas carreiras da Polícia Civil.\nA) a CNH mínima é categoria B, não D (art. 15, IX). C) a idade mínima é 18 anos (II). D) a lei exige quitação eleitoral e, se homem, também militar (III). E) exige aptidão física plena, além de capacidade física e aptidão psicológica compatíveis (VII e VIII).\nBase: Lei estadual 6.843/1986, art. 15, redação dada pela Lei 18.281/2021.",
+      "law_source": {
+        "url": "https://leis.alesc.sc.gov.br/html/1986/6843_1986_Lei.html",
+        "sha256": "317b4c924f1d55ad2f29e6e909fcafe7e4d51ba04302a8c9646e3dff5c06bb4e"
+      }
+    },
+    {
+      "item_number": 38,
+      "official_answer": "D",
+      "stem": "À luz da Lei Complementar nº 453/2009, que institui Plano de Carreira do Grupo Segurança Pública - Polícia Civil, e adota outras providências, marque a alternativa que indica corretamente ao menos uma das prerrogativas inerentes aos policiais civis.",
+      "options": {
+        "A": "Ter a sua prisão comunicada ao Delegado Geral de Polícia após 24 (vinte e quatro) horas.",
+        "B": "Porte de arma com validade apenas na região onde atua.",
+        "C": "Livre acesso, mesmo que fora de serviço, aos locais sujeitos à fiscalização policial.",
+        "D": "Documento de identidade funcional com validade em todo território nacional e padronizado pelo Poder Executivo Federal.",
+        "E": "Prioridade nos serviços de transporte, não se estendendo tal prerrogativa aos serviços de saúde e comunicação."
+      },
+      "explanation": "D reproduz o art. 81, I, da Lei Complementar estadual 453/2009: identidade funcional com validade em todo o território nacional e padronizada pelo Poder Executivo Federal.\nA) a comunicação da prisão ao Delegado-Geral deve ser imediata (art. 81, VII), não após 24 horas. B) o porte previsto no inciso II tem validade nacional. C) o livre acesso é em razão do serviço (III), não indistintamente fora de serviço. E) a prioridade inclui transporte, saúde e comunicação em missão emergencial (V).\nBase: LC estadual 453/2009, art. 81, redação consolidada vigente.",
+      "law_source": {
+        "url": "https://leis.alesc.sc.gov.br/html/2009/453_2009_Lei_complementar.html",
+        "sha256": "132c0a38433f3c46da6f441bc1200ef9998a98c57afda6b211b652a1fa422a77"
+      }
+    },
+    {
+      "item_number": 39,
+      "official_answer": "C",
+      "stem": "Nos termos da Lei Estadual nº 16.774/2015, que dispõe sobre as formas de cumprimento da jornada de trabalho e o banco de horas no âmbito da Polícia Civil do Estado de Santa Catarina, indique a alternativa correta.",
+      "options": {
+        "A": "Na lei não há previsão de regime de sobreaviso para contagem das horas de trabalho do policial civil.",
+        "B": "A lei estabelece que a jornada de trabalho do policial civil deve ser cumprida exclusivamente em regime de sobreaviso, salvo autorização superior.",
+        "C": "A jornada de trabalho do policial civil poderá ser cumprida sob a forma de escalas de plantão, expediente administrativo ou regime de sobreaviso.",
+        "D": "É vedado o emprego de escalas de plantão para o cumprimento da jornada de trabalho do policial civil em quaisquer hipóteses.",
+        "E": "A jornada de trabalho do policial civil deverá ser cumprida em expediente administrativo durante todos os finais de semana e feriados, independentemente de necessidade."
+      },
+      "explanation": "C reproduz o art. 2º da Lei estadual 16.774/2015: a jornada do policial civil pode ser cumprida por escalas de plantão, expediente administrativo ou regime de sobreaviso.\nA) a lei prevê expressamente sobreaviso (inciso III). B) sobreaviso é uma das formas, não a única. D) plantões estão previstos no inciso I e disciplinados no art. 3º. E) expediente em fins de semana e feriados não é obrigatório em todos os casos; a lei prevê diferentes escalas e organização conforme o serviço.\nBase: Lei estadual 16.774/2015, arts. 2º–5º, texto consolidado vigente.",
+      "law_source": {
+        "url": "https://leis.alesc.sc.gov.br/html/2015/16774_2015_Lei.html",
+        "sha256": "6962b22880cfc6585b19a0d3ce6910485c719a8812030ec51d74b9df6b711588"
+      }
+    }
+  ],
+  "source_note": "Itens 37–39 constam no caderno Tipo B oficial, mas estavam ausentes em board_exam_questions. Gabarito definitivo conferido B/D/C. Legislação conferida no repositório oficial ALESC em 24/10/2026."
+}

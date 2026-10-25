@@ -1,0 +1,2748 @@
+{
+  "version": "2026-10-11-lep-targeted",
+  "checked_at": "2026-10-13T04:06:18.951447+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "lep",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 215,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-18-a",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-21-a",
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-25",
+        "art-26",
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-39",
+        "art-40",
+        "art-41",
+        "art-41-a",
+        "art-41-b",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45",
+        "art-46",
+        "art-47"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "4f2c70bd250307fd0c2575eedbceb12bd47bc4426cf85ec57ce1df783ebbe5ac",
+      "source_checked_at": "2026-10-12T03:15:19.191370+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-1",
+      "unit_id": "ac891bd9-588c-58d1-a707-8e7d0a53f071",
+      "content_sha256": "446e0c23344123a03ce90ecf84afa58b71d18c629d37b76cda8c9d44e720e76b",
+      "simples": "A execução penal tem por objetivo efetivar as disposições de sentença ou decisão criminal e proporcionar condições para a harmônica integração social do condenado e do internado.",
+      "pontos": [
+        "Efetivar a sentença ou decisão criminal.",
+        "Proporcionar a harmônica integração social do condenado e do internado."
+      ],
+      "atencao": [
+        "Dupla finalidade: punitiva (cumprir a sentença) e ressocializadora (integração social)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3º"
+      ],
+      "exemplo": "Execução cumpre a decisão criminal e organiza condições de reintegração. Variação: Isolamento sem assistência não realiza automaticamente a segunda finalidade.",
+      "prova": [
+        "A lei tem finalidade exclusivamente retributiva? Não.",
+        "Internado está incluído? Sim."
+      ],
+      "expected": {
+        "unit_id": "ac891bd9-588c-58d1-a707-8e7d0a53f071",
+        "content_sha256": "446e0c23344123a03ce90ecf84afa58b71d18c629d37b76cda8c9d44e720e76b",
+        "simples": "A execução penal tem por objetivo efetivar as disposições de sentença ou decisão criminal e proporcionar condições para a harmônica integração social do condenado e do internado.",
+        "pontos": [
+          "Efetivar a sentença ou decisão criminal.",
+          "Proporcionar a harmônica integração social do condenado e do internado."
+        ],
+        "atencao": [
+          "Dupla finalidade: punitiva (cumprir a sentença) e ressocializadora (integração social)."
+        ],
+        "exemplo": "A execução da pena busca cumprir a sentença e preparar o condenado para voltar à sociedade.",
+        "prova": [
+          "Assertiva que atribui à execução penal apenas a finalidade de punir erra: ela também busca a integração social."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-2",
+      "unit_id": "1a876454-ffe5-599f-abfa-3c345531e0b9",
+      "content_sha256": "0aa057e8a98df6c13c653443a3d720aad13869d3f4bdbf8069275dca43c0e7e2",
+      "simples": "A jurisdição penal dos juízes ou tribunais da justiça ordinária, em todo o território nacional, será exercida, no processo de execução, na conformidade da Lei de Execução Penal e do Código de Processo Penal. A Lei aplica-se igualmente ao preso provisório e ao condenado pela Justiça Eleitoral ou Militar, quando recolhido a estabelecimento sujeito à jurisdição ordinária.",
+      "pontos": [
+        "Jurisdição da justiça ordinária.",
+        "Aplica-se ao preso provisório.",
+        "Aplica-se ao condenado pela Justiça Eleitoral ou Militar recolhido em estabelecimento comum."
+      ],
+      "atencao": [
+        "A LEP também alcança o PRESO PROVISÓRIO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 42"
+      ],
+      "exemplo": "Preso provisório recebe assistência nos termos da LEP. Variação: Condenado militar em unidade sujeita à jurisdição ordinária tem recorte expresso; não importar toda execução militar automaticamente.",
+      "prova": [
+        "A LEP só vale após condenação definitiva? Não.",
+        "Local/jurisdição importa na extensão a condenação militar? Sim."
+      ],
+      "expected": {
+        "unit_id": "1a876454-ffe5-599f-abfa-3c345531e0b9",
+        "content_sha256": "0aa057e8a98df6c13c653443a3d720aad13869d3f4bdbf8069275dca43c0e7e2",
+        "simples": "A jurisdição penal dos juízes ou tribunais da justiça ordinária, em todo o território nacional, será exercida, no processo de execução, na conformidade da Lei de Execução Penal e do Código de Processo Penal. A Lei aplica-se igualmente ao preso provisório e ao condenado pela Justiça Eleitoral ou Militar, quando recolhido a estabelecimento sujeito à jurisdição ordinária.",
+        "pontos": [
+          "Jurisdição da justiça ordinária.",
+          "Aplica-se ao preso provisório.",
+          "Aplica-se ao condenado pela Justiça Eleitoral ou Militar recolhido em estabelecimento comum."
+        ],
+        "atencao": [
+          "A LEP também alcança o PRESO PROVISÓRIO."
+        ],
+        "exemplo": "O preso provisório tem os direitos da LEP, no que couber.",
+        "prova": [
+          "Assertiva que afasta a LEP do preso provisório erra: ela se aplica igualmente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-3",
+      "unit_id": "50219eea-6103-5113-b854-ca4dbd8148d0",
+      "content_sha256": "a0e5bb7dfa568a03f24b1e84c5b7ac14102dda768754c121762649fad9c2ae04",
+      "simples": "Ao condenado e ao internado serão assegurados todos os direitos não atingidos pela sentença ou pela lei. Não haverá qualquer distinção de natureza racial, social, religiosa ou política.",
+      "pontos": [
+        "Todos os direitos não atingidos pela sentença ou pela lei.",
+        "Vedada a distinção racial, social, religiosa ou política."
+      ],
+      "atencao": [
+        "O condenado só perde os direitos restringidos pela sentença ou pela lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 41"
+      ],
+      "exemplo": "Preso mantém direitos não atingidos pela sentença ou lei. Variação: Prisão não autoriza discriminação racial,religiosa ou política.",
+      "prova": [
+        "Sentença retira todos os direitos? Não.",
+        "Distinção racial é autorizada pela classificação? Não."
+      ],
+      "expected": {
+        "unit_id": "50219eea-6103-5113-b854-ca4dbd8148d0",
+        "content_sha256": "a0e5bb7dfa568a03f24b1e84c5b7ac14102dda768754c121762649fad9c2ae04",
+        "simples": "Ao condenado e ao internado serão assegurados todos os direitos não atingidos pela sentença ou pela lei. Não haverá qualquer distinção de natureza racial, social, religiosa ou política.",
+        "pontos": [
+          "Todos os direitos não atingidos pela sentença ou pela lei.",
+          "Vedada a distinção racial, social, religiosa ou política."
+        ],
+        "atencao": [
+          "O condenado só perde os direitos restringidos pela sentença ou pela lei."
+        ],
+        "exemplo": "O preso mantém o direito à integridade física, que a pena não retira.",
+        "prova": [
+          "Assertiva que retira do condenado todos os direitos fundamentais erra: só os atingidos pela sentença ou pela lei."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-4",
+      "unit_id": "acd16490-da7b-529a-a415-62e90dcd0138",
+      "content_sha256": "8a4c8ccbe80817609fb3e3b7250e3a653c0a92afc52e233ab2710d5e2fe1ccef",
+      "simples": "O Estado deverá recorrer à cooperação da comunidade nas atividades de execução da pena e da medida de segurança.",
+      "pontos": [
+        "Cooperação da comunidade na execução."
+      ],
+      "atencao": [
+        "Base do Conselho da Comunidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 80"
+      ],
+      "exemplo": "Comunidade coopera em projeto de reintegração sob responsabilidade pública. Variação: Cooperar não transfere competência judicial para voluntários.",
+      "prova": [
+        "Alcança medida de segurança? Sim.",
+        "Cooperação elimina dever estatal? Não."
+      ],
+      "expected": {
+        "unit_id": "acd16490-da7b-529a-a415-62e90dcd0138",
+        "content_sha256": "8a4c8ccbe80817609fb3e3b7250e3a653c0a92afc52e233ab2710d5e2fe1ccef",
+        "simples": "O Estado deverá recorrer à cooperação da comunidade nas atividades de execução da pena e da medida de segurança.",
+        "pontos": [
+          "Cooperação da comunidade na execução."
+        ],
+        "atencao": [
+          "Base do Conselho da Comunidade."
+        ],
+        "exemplo": "Entidades locais colaboram com a assistência ao preso.",
+        "prova": [
+          "Assertiva que exclui a comunidade da execução da pena erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-5",
+      "unit_id": "0cfc323e-3ca4-5266-a290-c092bf6b3498",
+      "content_sha256": "7393437d56c94edbf96ecb1b4f29ea3f906d4100e21b3bb7279c1fba4d5b575f",
+      "simples": "Os condenados serão classificados, segundo os seus antecedentes e personalidade, para orientar a individualização da execução penal.",
+      "pontos": [
+        "Classificação conforme antecedentes e personalidade.",
+        "Individualização da execução."
+      ],
+      "atencao": [
+        "Individualização da pena na fase de execução."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 6º"
+      ],
+      "exemplo": "Classificação orienta programa individualizado segundo dados pertinentes. Variação: Não usar estereótipo racial ou social como prova de personalidade.",
+      "prova": [
+        "É finalidade de individualização? Sim.",
+        "Classificar autoriza discriminação proibida pelo 3? Não."
+      ],
+      "expected": {
+        "unit_id": "0cfc323e-3ca4-5266-a290-c092bf6b3498",
+        "content_sha256": "7393437d56c94edbf96ecb1b4f29ea3f906d4100e21b3bb7279c1fba4d5b575f",
+        "simples": "Os condenados serão classificados, segundo os seus antecedentes e personalidade, para orientar a individualização da execução penal.",
+        "pontos": [
+          "Classificação conforme antecedentes e personalidade.",
+          "Individualização da execução."
+        ],
+        "atencao": [
+          "Individualização da pena na fase de execução."
+        ],
+        "exemplo": "O condenado é classificado para receber o programa mais adequado.",
+        "prova": [
+          "Assertiva que dispensa a classificação dos condenados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-6",
+      "unit_id": "284b4f6b-42b3-5395-8835-0a62d764caf1",
+      "content_sha256": "aee9731b09e554cf9530ff470f36601ea7fbe6a86ad44a3b2c139f67b6dd8156",
+      "simples": "A classificação será feita por Comissão Técnica de Classificação, que elaborará o programa individualizador da pena privativa de liberdade adequada ao condenado ou preso provisório.",
+      "pontos": [
+        "Comissão Técnica de Classificação.",
+        "Programa individualizador da pena."
+      ],
+      "atencao": [
+        "Alcança também o preso provisório."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 7º"
+      ],
+      "exemplo": "Comissão Técnica prepara programa adequado inclusive ao preso provisório. Variação: Não confundir classificação com decisão judicial sobre progressão.",
+      "prova": [
+        "Programa cabe à Comissão Técnica? Sim.",
+        "Comissão substitui juiz na progressão? Não."
+      ],
+      "expected": {
+        "unit_id": "284b4f6b-42b3-5395-8835-0a62d764caf1",
+        "content_sha256": "aee9731b09e554cf9530ff470f36601ea7fbe6a86ad44a3b2c139f67b6dd8156",
+        "simples": "A classificação será feita por Comissão Técnica de Classificação, que elaborará o programa individualizador da pena privativa de liberdade adequada ao condenado ou preso provisório.",
+        "pontos": [
+          "Comissão Técnica de Classificação.",
+          "Programa individualizador da pena."
+        ],
+        "atencao": [
+          "Alcança também o preso provisório."
+        ],
+        "exemplo": "A Comissão elabora o programa individualizador de um preso recém-chegado.",
+        "prova": [
+          "Assertiva que atribui a classificação ao juiz da execução erra: é da Comissão Técnica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-7",
+      "unit_id": "998f40cc-c941-5524-b168-f7ab5f1e4c2b",
+      "content_sha256": "fc2b7903a1a1ddf006e5b4755f0daf5fec30c7887c9819b26aa154f2372f0039",
+      "simples": "A Comissão Técnica de Classificação, existente em cada estabelecimento, será presidida pelo Diretor e composta, no mínimo, por dois chefes de serviço, um psiquiatra, um psicólogo e um assistente social, quando se tratar de condenado à pena privativa de liberdade. Nos demais casos, atuará junto ao Juízo da Execução e será integrada por fiscais do Serviço Social.",
+      "pontos": [
+        "Presidida pelo Diretor.",
+        "Dois chefes de serviço, um psiquiatra, um psicólogo e um assistente social.",
+        "Demais casos: junto ao Juízo da Execução, com fiscais do Serviço Social."
+      ],
+      "atencao": [
+        "Composição mínima: dois chefes de serviço, psiquiatra, psicólogo e assistente social."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 6º"
+      ],
+      "exemplo": "Comissão para condenado à pena privativa tem Diretor e composição mínima legal. Variação: Nos demais casos há atuação junto ao juízo com fiscais do Serviço Social.",
+      "prova": [
+        "Dois chefes de serviço são previstos? Sim.",
+        "Diretor pode substituir toda equipe sozinho? Não."
+      ],
+      "expected": {
+        "unit_id": "998f40cc-c941-5524-b168-f7ab5f1e4c2b",
+        "content_sha256": "fc2b7903a1a1ddf006e5b4755f0daf5fec30c7887c9819b26aa154f2372f0039",
+        "simples": "A Comissão Técnica de Classificação, existente em cada estabelecimento, será presidida pelo Diretor e composta, no mínimo, por dois chefes de serviço, um psiquiatra, um psicólogo e um assistente social, quando se tratar de condenado à pena privativa de liberdade. Nos demais casos, atuará junto ao Juízo da Execução e será integrada por fiscais do Serviço Social.",
+        "pontos": [
+          "Presidida pelo Diretor.",
+          "Dois chefes de serviço, um psiquiatra, um psicólogo e um assistente social.",
+          "Demais casos: junto ao Juízo da Execução, com fiscais do Serviço Social."
+        ],
+        "atencao": [
+          "Composição mínima: dois chefes de serviço, psiquiatra, psicólogo e assistente social."
+        ],
+        "exemplo": "O diretor preside a Comissão composta por psicólogo, psiquiatra e assistente social.",
+        "prova": [
+          "Assertiva que dispensa psiquiatra e psicólogo na Comissão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-8",
+      "unit_id": "9a196bc9-8629-5ef2-a179-26132a0792a4",
+      "content_sha256": "c5fb465b96d7c34ee0df70d40b149ad1a96ae06c05d97e454116992d55a6ffa3",
+      "simples": "O condenado ao cumprimento de pena privativa de liberdade, em regime fechado, será submetido a exame criminológico para a obtenção dos elementos necessários a uma adequada classificação e com vistas à individualização da execução. Ao exame poderá ser submetido o condenado em regime semiaberto.",
+      "pontos": [
+        "Exame criminológico obrigatório no regime fechado.",
+        "Facultativo no semiaberto."
+      ],
+      "atencao": [
+        "Obrigatório no FECHADO; facultativo no SEMIABERTO.",
+        "Exame inicial de classificação não se confunde com exame para progressão,alterado por Lei 14.843/2024 e sujeito à jurisprudência/irretroatividade aplicáveis. Não certificada aqui toda decisão posterior sobre 112; sem exercício literal universal de progressão."
+      ],
+      "termos": [
+        {
+          "termo": "Exame criminológico de classificação",
+          "significado": "Avaliação técnica prevista neste artigo para individualização; não decisão automática de periculosidade,culpa ou progressão."
+        }
+      ],
+      "remissoes": [
+        "Art. 9º"
+      ],
+      "exemplo": "Exame inicial de classificação no fechado fornece elementos para individualizar execução. Variação: Progressão tem regime próprio do 112; não copiar automaticamente facultatividade do semiaberto para toda progressão.",
+      "prova": [
+        "O exame deste artigo é de classificação? Sim.",
+        "Ele resolve sozinho exigência atual de progressão? Não."
+      ],
+      "expected": {
+        "unit_id": "9a196bc9-8629-5ef2-a179-26132a0792a4",
+        "content_sha256": "c5fb465b96d7c34ee0df70d40b149ad1a96ae06c05d97e454116992d55a6ffa3",
+        "simples": "O condenado ao cumprimento de pena privativa de liberdade, em regime fechado, será submetido a exame criminológico para a obtenção dos elementos necessários a uma adequada classificação e com vistas à individualização da execução. Ao exame poderá ser submetido o condenado em regime semiaberto.",
+        "pontos": [
+          "Exame criminológico obrigatório no regime fechado.",
+          "Facultativo no semiaberto."
+        ],
+        "atencao": [
+          "Obrigatório no FECHADO; facultativo no SEMIABERTO."
+        ],
+        "exemplo": "O condenado em regime fechado é submetido ao exame criminológico no início da pena.",
+        "prova": [
+          "Assertiva que torna obrigatório o exame criminológico no regime semiaberto erra: é facultativo."
+        ],
+        "termos": [
+          {
+            "termo": "Exame criminológico",
+            "significado": "Avaliação técnica da personalidade e da periculosidade do condenado."
+          }
+        ],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-9",
+      "unit_id": "15c3774a-4d15-5283-ac45-c984f90f878c",
+      "content_sha256": "cc92ceb1f0956ceef755dc3d1adcda5503d63b143db50e6f6f9aff8d4eb2bc5b",
+      "simples": "A Comissão, no exame para obtenção de dados reveladores da personalidade, observando a ética profissional e tendo sempre presentes peças ou informações do processo, poderá entrevistar pessoas; requisitar, de repartições ou estabelecimentos privados, dados e informações sobre o condenado; e realizar outras diligências e exames necessários.",
+      "pontos": [
+        "Entrevistar pessoas.",
+        "Requisitar dados e informações.",
+        "Outras diligências e exames."
+      ],
+      "atencao": [
+        "Observância da ética profissional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º"
+      ],
+      "exemplo": "Comissão requisita informações pertinentes observando ética e peças do processo. Variação: Diligências necessárias não autorizam investigação arbitrária sem limites.",
+      "prova": [
+        "Pode entrevistar pessoas? Sim.",
+        "Ética profissional é dispensável? Não."
+      ],
+      "expected": {
+        "unit_id": "15c3774a-4d15-5283-ac45-c984f90f878c",
+        "content_sha256": "cc92ceb1f0956ceef755dc3d1adcda5503d63b143db50e6f6f9aff8d4eb2bc5b",
+        "simples": "A Comissão, no exame para obtenção de dados reveladores da personalidade, observando a ética profissional e tendo sempre presentes peças ou informações do processo, poderá entrevistar pessoas; requisitar, de repartições ou estabelecimentos privados, dados e informações sobre o condenado; e realizar outras diligências e exames necessários.",
+        "pontos": [
+          "Entrevistar pessoas.",
+          "Requisitar dados e informações.",
+          "Outras diligências e exames."
+        ],
+        "atencao": [
+          "Observância da ética profissional."
+        ],
+        "exemplo": "A Comissão entrevista familiares e requisita informações do condenado.",
+        "prova": [
+          "Assertiva que impede a Comissão de requisitar dados a estabelecimentos privados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-10",
+      "unit_id": "e46533c5-45f6-55a1-8b57-4b8458f22508",
+      "content_sha256": "4f32f9d1099966c6034a78fd4bd09515108c1071de35f0523680957c40a255c3",
+      "simples": "A assistência ao preso e ao internado é dever do Estado, objetivando prevenir o crime e orientar o retorno à convivência em sociedade. A assistência estende-se ao egresso.",
+      "pontos": [
+        "Dever do Estado.",
+        "Prevenir o crime e orientar o retorno à sociedade.",
+        "Estende-se ao egresso."
+      ],
+      "atencao": [
+        "Alcança o EGRESSO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 25"
+      ],
+      "exemplo": "Estado oferece assistência e apoio ao retorno social do egresso. Variação: Libertação não exclui imediatamente toda assistência prevista para egresso.",
+      "prova": [
+        "É dever estatal? Sim.",
+        "Alcança egresso? Sim."
+      ],
+      "expected": {
+        "unit_id": "e46533c5-45f6-55a1-8b57-4b8458f22508",
+        "content_sha256": "4f32f9d1099966c6034a78fd4bd09515108c1071de35f0523680957c40a255c3",
+        "simples": "A assistência ao preso e ao internado é dever do Estado, objetivando prevenir o crime e orientar o retorno à convivência em sociedade. A assistência estende-se ao egresso.",
+        "pontos": [
+          "Dever do Estado.",
+          "Prevenir o crime e orientar o retorno à sociedade.",
+          "Estende-se ao egresso."
+        ],
+        "atencao": [
+          "Alcança o EGRESSO."
+        ],
+        "exemplo": "O egresso continua recebendo orientação do Estado.",
+        "prova": [
+          "Assertiva que encerra a assistência com a saída da prisão erra: ela se estende ao egresso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-11",
+      "unit_id": "6d41bd3d-2e4a-5ff4-bc4a-69bae0db6a09",
+      "content_sha256": "e56c53803bfccc72f05f65bd8eefea5b3bca0e3a7a31d39af5a54ec7805a4597",
+      "simples": "A assistência será material, à saúde, jurídica, educacional, social e religiosa.",
+      "pontos": [
+        "Seis espécies de assistência."
+      ],
+      "atencao": [
+        "Material, saúde, jurídica, educacional, social e religiosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 12"
+      ],
+      "exemplo": "Plano inclui assistência material,saúde,jurídica,educacional,social e religiosa. Variação: Só alimentação não substitui as outras cinco vertentes.",
+      "prova": [
+        "Há seis espécies no rol? Sim.",
+        "Religiosa é a única forma de reintegração prevista? Não."
+      ],
+      "expected": {
+        "unit_id": "6d41bd3d-2e4a-5ff4-bc4a-69bae0db6a09",
+        "content_sha256": "e56c53803bfccc72f05f65bd8eefea5b3bca0e3a7a31d39af5a54ec7805a4597",
+        "simples": "A assistência será material, à saúde, jurídica, educacional, social e religiosa.",
+        "pontos": [
+          "Seis espécies de assistência."
+        ],
+        "atencao": [
+          "Material, saúde, jurídica, educacional, social e religiosa."
+        ],
+        "exemplo": "O preso recebe assistência religiosa e jurídica.",
+        "prova": [
+          "Assertiva que inclui a assistência financeira entre as espécies erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-12",
+      "unit_id": "c7a988b1-2f16-5ea2-8904-a271201f90e6",
+      "content_sha256": "803461cff1a9be5c0d68287de057f8e595a267b865dbe8840c99f9ed55d60ffc",
+      "simples": "A assistência material ao preso e ao internado consistirá no fornecimento de alimentação, vestuário e instalações higiênicas.",
+      "pontos": [
+        "Alimentação, vestuário e instalações higiênicas."
+      ],
+      "atencao": [
+        "Assistência material básica."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 13"
+      ],
+      "exemplo": "Administração fornece alimentação,vestuário e instalações higiênicas. Variação: Compra eventual na cantina não substitui assistência básica estatal.",
+      "prova": [
+        "Instalações higiênicas integram assistência material? Sim.",
+        "Só roupa integra o rol? Não."
+      ],
+      "expected": {
+        "unit_id": "c7a988b1-2f16-5ea2-8904-a271201f90e6",
+        "content_sha256": "803461cff1a9be5c0d68287de057f8e595a267b865dbe8840c99f9ed55d60ffc",
+        "simples": "A assistência material ao preso e ao internado consistirá no fornecimento de alimentação, vestuário e instalações higiênicas.",
+        "pontos": [
+          "Alimentação, vestuário e instalações higiênicas."
+        ],
+        "atencao": [
+          "Assistência material básica."
+        ],
+        "exemplo": "O Estado fornece alimentação e vestuário ao preso.",
+        "prova": [
+          "Assertiva que obriga o preso a custear a alimentação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-13",
+      "unit_id": "e6113d50-4b45-5b98-83f7-b56b070e9b62",
+      "content_sha256": "ec39ab552981cbb44f2ed8a4f20e740df271e45e910a8642dbbc1683b3aaa492",
+      "simples": "O estabelecimento disporá de instalações e serviços que atendam aos presos nas suas necessidades pessoais, além de locais destinados à venda de produtos e objetos permitidos e não fornecidos pela Administração.",
+      "pontos": [
+        "Serviços para necessidades pessoais.",
+        "Locais de venda de produtos permitidos."
+      ],
+      "atencao": [
+        "Cantina no estabelecimento."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 12"
+      ],
+      "exemplo": "Unidade mantém serviços pessoais e venda de produtos permitidos não fornecidos. Variação: Comercialização de produto proibido não é autorizada pelo artigo.",
+      "prova": [
+        "Permissão do objeto importa? Sim.",
+        "Cantina elimina o dever de alimentação? Não."
+      ],
+      "expected": {
+        "unit_id": "e6113d50-4b45-5b98-83f7-b56b070e9b62",
+        "content_sha256": "ec39ab552981cbb44f2ed8a4f20e740df271e45e910a8642dbbc1683b3aaa492",
+        "simples": "O estabelecimento disporá de instalações e serviços que atendam aos presos nas suas necessidades pessoais, além de locais destinados à venda de produtos e objetos permitidos e não fornecidos pela Administração.",
+        "pontos": [
+          "Serviços para necessidades pessoais.",
+          "Locais de venda de produtos permitidos."
+        ],
+        "atencao": [
+          "Cantina no estabelecimento."
+        ],
+        "exemplo": "O preso compra produtos de higiene permitidos na cantina da unidade.",
+        "prova": [
+          "Assertiva que proíbe a venda de produtos no estabelecimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-14",
+      "unit_id": "3d18ebd0-86bb-5f89-8b77-ce2eb53d541a",
+      "content_sha256": "42f632e9e7dd67be986ee9cf4f88be62c5aa3a5ba8b12376dd4e0b84cad47f99",
+      "simples": "A assistência à saúde do preso e do internado, de caráter preventivo e curativo, compreenderá atendimento médico, farmacêutico e odontológico. Quando o estabelecimento não estiver aparelhado, a assistência será prestada em outro local, mediante autorização da direção. Será assegurado acompanhamento médico à mulher, principalmente no pré-natal e no pós-parto, extensivo ao recém-nascido, e tratamento humanitário à gestante durante os atos médico-hospitalares do parto e no puerpério, cabendo ao poder público a assistência integral à sua saúde e à do recém-nascido.",
+      "pontos": [
+        "Atendimento médico, farmacêutico e odontológico.",
+        "Atendimento externo se a unidade não tiver estrutura.",
+        "Pré-natal, pós-parto e recém-nascido.",
+        "Tratamento humanitário no parto e no puerpério."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o §4º (tratamento humanitário no parto) foi incluído por lei posterior.",
+        "Saúde com caráter PREVENTIVO e CURATIVO.",
+        "§4º incluído pela Lei 14.326/2022: distinguir alteração normativa,data original da LEP e data de conferência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 11"
+      ],
+      "exemplo": "Unidade sem estrutura providencia assistência médica em outro local com autorização da direção. Variação: Gestação,pós-parto,puerpério e recém-nascido têm proteção específica,sem condicioná-la a favor disciplinar.",
+      "prova": [
+        "Saúde é apenas curativa? Não;preventiva também.",
+        "Só médico,sem atendimento farmacêutico/odontológico,esgota rol? Não."
+      ],
+      "expected": {
+        "unit_id": "3d18ebd0-86bb-5f89-8b77-ce2eb53d541a",
+        "content_sha256": "42f632e9e7dd67be986ee9cf4f88be62c5aa3a5ba8b12376dd4e0b84cad47f99",
+        "simples": "A assistência à saúde do preso e do internado, de caráter preventivo e curativo, compreenderá atendimento médico, farmacêutico e odontológico. Quando o estabelecimento não estiver aparelhado, a assistência será prestada em outro local, mediante autorização da direção. Será assegurado acompanhamento médico à mulher, principalmente no pré-natal e no pós-parto, extensivo ao recém-nascido, e tratamento humanitário à gestante durante os atos médico-hospitalares do parto e no puerpério, cabendo ao poder público a assistência integral à sua saúde e à do recém-nascido.",
+        "pontos": [
+          "Atendimento médico, farmacêutico e odontológico.",
+          "Atendimento externo se a unidade não tiver estrutura.",
+          "Pré-natal, pós-parto e recém-nascido.",
+          "Tratamento humanitário no parto e no puerpério."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §4º (tratamento humanitário no parto) foi incluído por lei posterior.",
+          "Saúde com caráter PREVENTIVO e CURATIVO."
+        ],
+        "exemplo": "A presa gestante tem acompanhamento no pré-natal e tratamento humanitário no parto.",
+        "prova": [
+          "Assertiva que restringe a assistência à saúde ao caráter curativo erra: é preventiva e curativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-15",
+      "unit_id": "4ec17c1b-dc29-5b88-acec-e6aea9084190",
+      "content_sha256": "37d9cebebfa217ae5cf2e96da7735177ec0eb05ab81fa323419e0e1fd211108c",
+      "simples": "A assistência jurídica é destinada aos presos e aos internados sem recursos financeiros para constituir advogado.",
+      "pontos": [
+        "Destinada a quem não pode pagar advogado."
+      ],
+      "atencao": [
+        "Gratuita para os hipossuficientes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 16"
+      ],
+      "exemplo": "Internado sem recursos recebe assistência jurídica. Variação: Esse critério não equivale a negar defesa a quem tenha capacidade econômica; distinguir meios de defesa.",
+      "prova": [
+        "Hipossuficiência é recorte da assistência? Sim.",
+        "Assistência jurídica se limita a presos condenados? Não;internados também."
+      ],
+      "expected": {
+        "unit_id": "4ec17c1b-dc29-5b88-acec-e6aea9084190",
+        "content_sha256": "37d9cebebfa217ae5cf2e96da7735177ec0eb05ab81fa323419e0e1fd211108c",
+        "simples": "A assistência jurídica é destinada aos presos e aos internados sem recursos financeiros para constituir advogado.",
+        "pontos": [
+          "Destinada a quem não pode pagar advogado."
+        ],
+        "atencao": [
+          "Gratuita para os hipossuficientes."
+        ],
+        "exemplo": "O preso sem recursos é atendido pela Defensoria Pública.",
+        "prova": [
+          "Assertiva que estende a assistência jurídica gratuita a todos os presos erra: ela é para os sem recursos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-16",
+      "unit_id": "86f122e7-1654-537a-952d-2c167c0f75ca",
+      "content_sha256": "c7ba9f2a778fe73fcb2f623f5e11e10db742becbfd6206f8feb49c1e8c35593a",
+      "simples": "As Unidades da Federação deverão ter serviços de assistência jurídica, integral e gratuita, pela Defensoria Pública, dentro e fora dos estabelecimentos penais, prestando-lhe auxílio estrutural, pessoal e material. Em todos os estabelecimentos haverá local apropriado para o atendimento pelo Defensor Público. Fora dos estabelecimentos serão implementados Núcleos Especializados da Defensoria Pública para assistência integral e gratuita aos réus, sentenciados em liberdade, egressos e seus familiares sem recursos.",
+      "pontos": [
+        "Defensoria Pública presta a assistência jurídica integral e gratuita.",
+        "Local apropriado em todos os estabelecimentos.",
+        "Núcleos Especializados fora das unidades."
+      ],
+      "atencao": [
+        "Alcança réus, sentenciados em liberdade, egressos e seus familiares."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 15"
+      ],
+      "exemplo": "Defensoria atende dentro da unidade e núcleo externo auxilia egresso hipossuficiente. Variação: Familiares sem recursos também entram no§3º; não reduzir serviço às celas.",
+      "prova": [
+        "Há local apropriado em todos os estabelecimentos? Sim.",
+        "Auxílio estrutural estatal é previsto? Sim."
+      ],
+      "expected": {
+        "unit_id": "86f122e7-1654-537a-952d-2c167c0f75ca",
+        "content_sha256": "c7ba9f2a778fe73fcb2f623f5e11e10db742becbfd6206f8feb49c1e8c35593a",
+        "simples": "As Unidades da Federação deverão ter serviços de assistência jurídica, integral e gratuita, pela Defensoria Pública, dentro e fora dos estabelecimentos penais, prestando-lhe auxílio estrutural, pessoal e material. Em todos os estabelecimentos haverá local apropriado para o atendimento pelo Defensor Público. Fora dos estabelecimentos serão implementados Núcleos Especializados da Defensoria Pública para assistência integral e gratuita aos réus, sentenciados em liberdade, egressos e seus familiares sem recursos.",
+        "pontos": [
+          "Defensoria Pública presta a assistência jurídica integral e gratuita.",
+          "Local apropriado em todos os estabelecimentos.",
+          "Núcleos Especializados fora das unidades."
+        ],
+        "atencao": [
+          "Alcança réus, sentenciados em liberdade, egressos e seus familiares."
+        ],
+        "exemplo": "A unidade prisional tem sala para o atendimento do Defensor Público.",
+        "prova": [
+          "Assertiva que restringe a Defensoria ao atendimento dentro das unidades prisionais erra: há Núcleos Especializados fora delas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-17",
+      "unit_id": "0f5e2889-39e8-582b-91a4-300c7feb5da6",
+      "content_sha256": "e576e15566ce63eb06dae1495ae5a997f34b7ab9a52716abda1a1edb76dff376",
+      "simples": "A assistência educacional compreenderá a instrução escolar e a formação profissional do preso e do internado.",
+      "pontos": [
+        "Instrução escolar.",
+        "Formação profissional."
+      ],
+      "atencao": [
+        "Duas vertentes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 18"
+      ],
+      "exemplo": "Preso recebe instrução escolar e formação profissional. Variação: Curso profissional sozinho não esgota a instrução escolar.",
+      "prova": [
+        "Internado também está incluído? Sim.",
+        "Educação é apenas alfabetização? Não."
+      ],
+      "expected": {
+        "unit_id": "0f5e2889-39e8-582b-91a4-300c7feb5da6",
+        "content_sha256": "e576e15566ce63eb06dae1495ae5a997f34b7ab9a52716abda1a1edb76dff376",
+        "simples": "A assistência educacional compreenderá a instrução escolar e a formação profissional do preso e do internado.",
+        "pontos": [
+          "Instrução escolar.",
+          "Formação profissional."
+        ],
+        "atencao": [
+          "Duas vertentes."
+        ],
+        "exemplo": "O preso frequenta aulas e curso profissionalizante.",
+        "prova": [
+          "Assertiva que limita a assistência educacional à instrução escolar erra: inclui a formação profissional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-18",
+      "unit_id": "6db1e7a8-cf85-5448-81d4-41de56b0f30a",
+      "content_sha256": "242d48a6c18d3abfe49aabfb6aca076ad200d2b2637bb84df393e9ceac43bd04",
+      "simples": "O ensino de primeiro grau será obrigatório, integrando-se no sistema escolar da unidade federativa.",
+      "pontos": [
+        "Ensino de primeiro grau obrigatório."
+      ],
+      "atencao": [
+        "Obrigatoriedade do ensino fundamental."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 18-A"
+      ],
+      "exemplo": "Ensino fundamental é organizado no sistema escolar estadual aplicável. Variação: Expressão histórica primeiro grau não cria nível escolar atual distinto.",
+      "prova": [
+        "Ensino mencionado é obrigatório? Sim.",
+        "Terminologia antiga substitui estrutura educacional vigente? Não."
+      ],
+      "expected": {
+        "unit_id": "6db1e7a8-cf85-5448-81d4-41de56b0f30a",
+        "content_sha256": "242d48a6c18d3abfe49aabfb6aca076ad200d2b2637bb84df393e9ceac43bd04",
+        "simples": "O ensino de primeiro grau será obrigatório, integrando-se no sistema escolar da unidade federativa.",
+        "pontos": [
+          "Ensino de primeiro grau obrigatório."
+        ],
+        "atencao": [
+          "Obrigatoriedade do ensino fundamental."
+        ],
+        "exemplo": "O preso sem ensino fundamental é matriculado em curso regular.",
+        "prova": [
+          "Assertiva que torna facultativo o ensino de primeiro grau erra: é obrigatório."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-18-a",
+      "unit_id": "71e1d210-d11a-5412-816a-03560ac9ccd8",
+      "content_sha256": "bbade1d5b1ac96ac96357186baa92509f2dcebfc6566ea1f86f78a03a9758f2b",
+      "simples": "O ensino médio, regular ou supletivo, com formação geral ou educação profissional de nível médio, será implantado nos presídios, em obediência ao preceito constitucional de sua universalização. O ensino integrar-se-á ao sistema estadual e municipal e será mantido com o apoio da União. Os sistemas de ensino oferecerão cursos supletivos de educação de jovens e adultos, e os entes incluirão em seus programas de educação a distância e novas tecnologias o atendimento aos presos.",
+      "pontos": [
+        "Ensino médio nos presídios.",
+        "Integração ao sistema estadual e municipal, com apoio da União.",
+        "Educação de jovens e adultos e educação a distância."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Incluído pela Lei 13.163/2015,não dispositivo original de 1984. O número isolado 7.627 encontrado no compilado junto ao 18-A não foi tratado como requisito normativo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 18"
+      ],
+      "exemplo": "Presídio implanta ensino médio e oferta educação de jovens/adultos no regime legal. Variação: Ensino a distância e tecnologias também devem incluir presos; não dispensar qualidade/integração escolar.",
+      "prova": [
+        "A União pode apoiar financiamento? Sim.",
+        "O artigo só prevê ensino fundamental? Não."
+      ],
+      "expected": {
+        "unit_id": "71e1d210-d11a-5412-816a-03560ac9ccd8",
+        "content_sha256": "bbade1d5b1ac96ac96357186baa92509f2dcebfc6566ea1f86f78a03a9758f2b",
+        "simples": "O ensino médio, regular ou supletivo, com formação geral ou educação profissional de nível médio, será implantado nos presídios, em obediência ao preceito constitucional de sua universalização. O ensino integrar-se-á ao sistema estadual e municipal e será mantido com o apoio da União. Os sistemas de ensino oferecerão cursos supletivos de educação de jovens e adultos, e os entes incluirão em seus programas de educação a distância e novas tecnologias o atendimento aos presos.",
+        "pontos": [
+          "Ensino médio nos presídios.",
+          "Integração ao sistema estadual e municipal, com apoio da União.",
+          "Educação de jovens e adultos e educação a distância."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "O presídio oferece ensino médio supletivo.",
+        "prova": [
+          "Assertiva que exclui o ensino médio dos presídios erra: ele deve ser implantado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-19",
+      "unit_id": "78acbf1a-8b17-5e59-9e89-45051d3de7b9",
+      "content_sha256": "e5fbe1130edbeeed1bcd914cd7e58c0d5c329ffe1cd8a56386cff4500c0d5e1e",
+      "simples": "O ensino profissional será ministrado em nível de iniciação ou de aperfeiçoamento técnico. A mulher condenada terá ensino profissional adequado à sua condição.",
+      "pontos": [
+        "Iniciação ou aperfeiçoamento técnico.",
+        "Ensino adequado à condição da mulher."
+      ],
+      "atencao": [
+        "Ensino profissional adequado à mulher condenada.",
+        "Adequação não autoriza discriminação de gênero ou restringir formação por estereótipo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 17"
+      ],
+      "exemplo": "Formação profissional oferece iniciação ou aperfeiçoamento técnico. Variação: Adequação à condição da mulher não autoriza restringir profissão por estereótipo.",
+      "prova": [
+        "Há duas modalidades expressas? Sim.",
+        "Adequar equivale a excluir mulheres de formação técnica? Não."
+      ],
+      "expected": {
+        "unit_id": "78acbf1a-8b17-5e59-9e89-45051d3de7b9",
+        "content_sha256": "e5fbe1130edbeeed1bcd914cd7e58c0d5c329ffe1cd8a56386cff4500c0d5e1e",
+        "simples": "O ensino profissional será ministrado em nível de iniciação ou de aperfeiçoamento técnico. A mulher condenada terá ensino profissional adequado à sua condição.",
+        "pontos": [
+          "Iniciação ou aperfeiçoamento técnico.",
+          "Ensino adequado à condição da mulher."
+        ],
+        "atencao": [
+          "Ensino profissional adequado à mulher condenada."
+        ],
+        "exemplo": "A presa recebe curso profissionalizante adequado à sua condição.",
+        "prova": [
+          "Assertiva que dispensa adaptação do ensino profissional à mulher condenada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-20",
+      "unit_id": "0a9e50fe-52cd-5d23-9f7e-bcdaf0e659fe",
+      "content_sha256": "c9fd5045f07d82daa4f447cbbd5ee91659dbffe67a73a89819c9f688c6c45601",
+      "simples": "As atividades educacionais podem ser objeto de convênio com entidades públicas ou particulares, que instalem escolas ou ofereçam cursos especializados.",
+      "pontos": [
+        "Convênios com entidades públicas ou particulares."
+      ],
+      "atencao": [
+        "Parcerias com entidades externas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 17"
+      ],
+      "exemplo": "Entidade particular conveniada oferece curso especializado. Variação: Convênio não elimina responsabilidade estatal pela assistência educacional.",
+      "prova": [
+        "Entidades públicas também podem conveniar? Sim.",
+        "Só particulares são admitidos? Não."
+      ],
+      "expected": {
+        "unit_id": "0a9e50fe-52cd-5d23-9f7e-bcdaf0e659fe",
+        "content_sha256": "c9fd5045f07d82daa4f447cbbd5ee91659dbffe67a73a89819c9f688c6c45601",
+        "simples": "As atividades educacionais podem ser objeto de convênio com entidades públicas ou particulares, que instalem escolas ou ofereçam cursos especializados.",
+        "pontos": [
+          "Convênios com entidades públicas ou particulares."
+        ],
+        "atencao": [
+          "Parcerias com entidades externas."
+        ],
+        "exemplo": "A unidade firma convênio com uma escola técnica.",
+        "prova": [
+          "Assertiva que proíbe convênios com entidades particulares erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-21",
+      "unit_id": "e249a98b-cfce-5a09-8f30-7e8ce13d1f4b",
+      "content_sha256": "0611d4906f85d490e9cf0a3374c9e133b4bdc8eee48a3ea3cd4498b0b7315d05",
+      "simples": "Em atendimento às condições locais, dotar-se-á cada estabelecimento de uma biblioteca, para uso de todas as categorias de reclusos, provida de livros instrutivos, recreativos e didáticos.",
+      "pontos": [
+        "Biblioteca em cada estabelecimento."
+      ],
+      "atencao": [
+        "Livros instrutivos, recreativos e didáticos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 21-A"
+      ],
+      "exemplo": "Biblioteca dispõe de livros instrutivos,recreativos e didáticos para todas as categorias. Variação: Excluir uma categoria só por conveniência não realiza a abrangência prevista.",
+      "prova": [
+        "Livros recreativos estão incluídos? Sim.",
+        "Biblioteca se destina apenas a condenados definitivos? Não;texto diz todas as categorias de reclusos."
+      ],
+      "expected": {
+        "unit_id": "e249a98b-cfce-5a09-8f30-7e8ce13d1f4b",
+        "content_sha256": "0611d4906f85d490e9cf0a3374c9e133b4bdc8eee48a3ea3cd4498b0b7315d05",
+        "simples": "Em atendimento às condições locais, dotar-se-á cada estabelecimento de uma biblioteca, para uso de todas as categorias de reclusos, provida de livros instrutivos, recreativos e didáticos.",
+        "pontos": [
+          "Biblioteca em cada estabelecimento."
+        ],
+        "atencao": [
+          "Livros instrutivos, recreativos e didáticos."
+        ],
+        "exemplo": "Cada unidade mantém uma biblioteca para os presos.",
+        "prova": [
+          "Assertiva que dispensa a biblioteca nos estabelecimentos penais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-21-a",
+      "unit_id": "89cb0551-cab2-5eb1-bdaf-2da7bac630df",
+      "content_sha256": "fd3dfc5a3f7fdaf8b91efdcee7a6ab0bac3134f05d7655301e00096f8a952505",
+      "simples": "O censo penitenciário deverá apurar o nível de escolaridade dos presos e das presas; a existência de cursos fundamentais e médios e o número de atendidos; a implementação de cursos profissionais e o número de atendidos; a existência de bibliotecas e as condições de seu acervo; e outros dados relevantes para o aprimoramento educacional.",
+      "pontos": [
+        "Escolaridade dos presos.",
+        "Cursos fundamentais, médios e profissionais.",
+        "Bibliotecas e acervos."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Incluído pela Lei 13.163/2015,não dispositivo original de 1984. O número isolado 7.627 encontrado no compilado junto ao 18-A não foi tratado como requisito normativo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 21"
+      ],
+      "exemplo": "Censo registra escolaridade,cursos,atendidos e condição do acervo. Variação: Contar matrículas sem examinar bibliotecas não esgota o rol.",
+      "prova": [
+        "Cursos profissionais entram? Sim.",
+        "Rol impede outros dados relevantes? Não;incisoV."
+      ],
+      "expected": {
+        "unit_id": "89cb0551-cab2-5eb1-bdaf-2da7bac630df",
+        "content_sha256": "fd3dfc5a3f7fdaf8b91efdcee7a6ab0bac3134f05d7655301e00096f8a952505",
+        "simples": "O censo penitenciário deverá apurar o nível de escolaridade dos presos e das presas; a existência de cursos fundamentais e médios e o número de atendidos; a implementação de cursos profissionais e o número de atendidos; a existência de bibliotecas e as condições de seu acervo; e outros dados relevantes para o aprimoramento educacional.",
+        "pontos": [
+          "Escolaridade dos presos.",
+          "Cursos fundamentais, médios e profissionais.",
+          "Bibliotecas e acervos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "O censo apura quantos presos frequentam cursos.",
+        "prova": [
+          "Assertiva que exclui as bibliotecas do censo penitenciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-22",
+      "unit_id": "f296913e-15aa-5bc8-81ea-cc96233f5726",
+      "content_sha256": "b2e48b0e3fb608d3589c2b19d9f3a824472ec1dbbeed3c3313b5c050b67fa79c",
+      "simples": "A assistência social tem por finalidade amparar o preso e o internado e prepará-los para o retorno à liberdade.",
+      "pontos": [
+        "Amparar o preso e preparar o retorno à liberdade."
+      ],
+      "atencao": [
+        "Dupla finalidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 23"
+      ],
+      "exemplo": "Assistência social prepara internado para retorno à liberdade. Variação: Só administrar disciplina não substitui amparo social.",
+      "prova": [
+        "Amparo e preparação são finalidades? Sim.",
+        "Internado fica fora? Não."
+      ],
+      "expected": {
+        "unit_id": "f296913e-15aa-5bc8-81ea-cc96233f5726",
+        "content_sha256": "b2e48b0e3fb608d3589c2b19d9f3a824472ec1dbbeed3c3313b5c050b67fa79c",
+        "simples": "A assistência social tem por finalidade amparar o preso e o internado e prepará-los para o retorno à liberdade.",
+        "pontos": [
+          "Amparar o preso e preparar o retorno à liberdade."
+        ],
+        "atencao": [
+          "Dupla finalidade."
+        ],
+        "exemplo": "O assistente social prepara o preso para a liberdade.",
+        "prova": [
+          "Assertiva que limita a assistência social à época de soltura erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-23",
+      "unit_id": "15b69796-ec4e-517a-918e-e73b9fe63aff",
+      "content_sha256": "9de89e009007a13b7d42352683fc5c50800e7ab7d87c81342fd5c5db0a3f0007",
+      "simples": "Incumbe ao serviço de assistência social conhecer os resultados dos diagnósticos ou exames; relatar por escrito ao diretor os problemas do assistido; acompanhar o resultado das permissões de saídas e saídas temporárias; promover a recreação; orientar o assistido na fase final da pena e o liberando; providenciar documentos, benefícios previdenciários e seguro por acidente no trabalho; e orientar e amparar a família do preso, do internado e da vítima.",
+      "pontos": [
+        "Acompanhar saídas temporárias.",
+        "Promover recreação.",
+        "Orientar na fase final da pena.",
+        "Providenciar documentos e benefícios.",
+        "Amparar a família do preso e da vítima."
+      ],
+      "atencao": [
+        "Também ampara a família da VÍTIMA.",
+        "Saídas dependem do regime atual de cada modalidade; acompanhamento social não revive hipótese revogada nem concede benefício por si."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ],
+      "exemplo": "Serviço social orienta família da vítima quando necessário e acompanha resultados de saídas legais. Variação: Acompanhamento não concede saída por si nem restaura modalidade revogada.",
+      "prova": [
+        "Família da vítima está prevista? Sim.",
+        "Assistente social substitui juiz na autorização de saída? Não."
+      ],
+      "expected": {
+        "unit_id": "15b69796-ec4e-517a-918e-e73b9fe63aff",
+        "content_sha256": "9de89e009007a13b7d42352683fc5c50800e7ab7d87c81342fd5c5db0a3f0007",
+        "simples": "Incumbe ao serviço de assistência social conhecer os resultados dos diagnósticos ou exames; relatar por escrito ao diretor os problemas do assistido; acompanhar o resultado das permissões de saídas e saídas temporárias; promover a recreação; orientar o assistido na fase final da pena e o liberando; providenciar documentos, benefícios previdenciários e seguro por acidente no trabalho; e orientar e amparar a família do preso, do internado e da vítima.",
+        "pontos": [
+          "Acompanhar saídas temporárias.",
+          "Promover recreação.",
+          "Orientar na fase final da pena.",
+          "Providenciar documentos e benefícios.",
+          "Amparar a família do preso e da vítima."
+        ],
+        "atencao": [
+          "Também ampara a família da VÍTIMA."
+        ],
+        "exemplo": "O assistente social providencia os documentos do preso que está para ser solto.",
+        "prova": [
+          "Assertiva que exclui o amparo à família da vítima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-24",
+      "unit_id": "7fc44a63-a09b-5167-8352-81e8bbec5c8b",
+      "content_sha256": "111889a65b2331c0c6e3b86dacc6a5ab656dd72ef411ce78bdd363e065933f39",
+      "simples": "A assistência religiosa, com liberdade de culto, será prestada aos presos e aos internados, permitindo-se-lhes a participação nos serviços organizados no estabelecimento e a posse de livros de instrução religiosa. No estabelecimento haverá local apropriado para os cultos. Nenhum preso ou internado poderá ser obrigado a participar de atividade religiosa.",
+      "pontos": [
+        "Liberdade de culto.",
+        "Local apropriado para cultos.",
+        "Vedada a obrigatoriedade."
+      ],
+      "atencao": [
+        "Nenhum preso é OBRIGADO a participar."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 11"
+      ],
+      "exemplo": "Preso pode participar de culto ou recusar atividade religiosa. Variação: Participação não pode ser condição coercitiva de benefício disciplinar.",
+      "prova": [
+        "Existe liberdade de culto? Sim.",
+        "Pode obrigar quem recusa? Não."
+      ],
+      "expected": {
+        "unit_id": "7fc44a63-a09b-5167-8352-81e8bbec5c8b",
+        "content_sha256": "111889a65b2331c0c6e3b86dacc6a5ab656dd72ef411ce78bdd363e065933f39",
+        "simples": "A assistência religiosa, com liberdade de culto, será prestada aos presos e aos internados, permitindo-se-lhes a participação nos serviços organizados no estabelecimento e a posse de livros de instrução religiosa. No estabelecimento haverá local apropriado para os cultos. Nenhum preso ou internado poderá ser obrigado a participar de atividade religiosa.",
+        "pontos": [
+          "Liberdade de culto.",
+          "Local apropriado para cultos.",
+          "Vedada a obrigatoriedade."
+        ],
+        "atencao": [
+          "Nenhum preso é OBRIGADO a participar."
+        ],
+        "exemplo": "O preso participa do culto de sua religião, por vontade própria.",
+        "prova": [
+          "Assertiva que obriga o preso a participar de atividade religiosa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-25",
+      "unit_id": "24e31af5-3310-5cf9-a92b-4aba8986f1fb",
+      "content_sha256": "f55ce3d98b4986a792d64b882adefcf66fd595e2154ea48baa8b0a71414fdc18",
+      "simples": "A assistência ao egresso consiste na orientação e apoio para reintegrá-lo à vida em liberdade e na concessão, se necessário, de alojamento e alimentação, em estabelecimento adequado, pelo prazo de dois meses. O prazo poderá ser prorrogado uma única vez, comprovado, por declaração do assistente social, o empenho na obtenção de emprego.",
+      "pontos": [
+        "Orientação e apoio.",
+        "Alojamento e alimentação por dois meses.",
+        "Prorrogação por uma única vez."
+      ],
+      "atencao": [
+        "Dois meses, prorrogáveis UMA vez."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 26"
+      ],
+      "exemplo": "Egresso necessitado recebe alojamento e alimentação por dois meses. Variação: Prorrogação única exige declaração do assistente social sobre empenho em obter emprego; não benefício indefinido.",
+      "prova": [
+        "A concessão material depende de necessidade? Sim.",
+        "Há prorrogações ilimitadas? Não."
+      ],
+      "expected": {
+        "unit_id": "24e31af5-3310-5cf9-a92b-4aba8986f1fb",
+        "content_sha256": "f55ce3d98b4986a792d64b882adefcf66fd595e2154ea48baa8b0a71414fdc18",
+        "simples": "A assistência ao egresso consiste na orientação e apoio para reintegrá-lo à vida em liberdade e na concessão, se necessário, de alojamento e alimentação, em estabelecimento adequado, pelo prazo de dois meses. O prazo poderá ser prorrogado uma única vez, comprovado, por declaração do assistente social, o empenho na obtenção de emprego.",
+        "pontos": [
+          "Orientação e apoio.",
+          "Alojamento e alimentação por dois meses.",
+          "Prorrogação por uma única vez."
+        ],
+        "atencao": [
+          "Dois meses, prorrogáveis UMA vez."
+        ],
+        "exemplo": "O egresso recebe alojamento por dois meses e, se estiver buscando emprego, mais um período.",
+        "prova": [
+          "Assertiva que permite prorrogações sucessivas do alojamento erra: é uma única vez."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 26"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-26",
+      "unit_id": "cd544df6-8937-5464-a657-da7386f4fb42",
+      "content_sha256": "27d793b01dcb4a317ff9fb5b99141a9489014d6e7a1ac785c41ee4299c2c2ea9",
+      "simples": "Considera-se egresso para os efeitos da Lei o liberado definitivo, pelo prazo de um ano a contar da saída do estabelecimento, e o liberado condicional, durante o período de prova.",
+      "pontos": [
+        "Liberado definitivo: um ano.",
+        "Liberado condicional: durante o período de prova."
+      ],
+      "atencao": [
+        "Egresso definitivo: UM ANO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 25"
+      ],
+      "exemplo": "Liberado definitivo permanece egresso por um ano desde a saída. Variação: Liberado condicional tem condição durante período de prova,sem copiar prazo de um ano.",
+      "prova": [
+        "Os dois prazos são idênticos? Não.",
+        "Um ano começa na sentença? Não;na saída do estabelecimento."
+      ],
+      "expected": {
+        "unit_id": "cd544df6-8937-5464-a657-da7386f4fb42",
+        "content_sha256": "27d793b01dcb4a317ff9fb5b99141a9489014d6e7a1ac785c41ee4299c2c2ea9",
+        "simples": "Considera-se egresso para os efeitos da Lei o liberado definitivo, pelo prazo de um ano a contar da saída do estabelecimento, e o liberado condicional, durante o período de prova.",
+        "pontos": [
+          "Liberado definitivo: um ano.",
+          "Liberado condicional: durante o período de prova."
+        ],
+        "atencao": [
+          "Egresso definitivo: UM ANO."
+        ],
+        "exemplo": "Quem cumpriu a pena e saiu há seis meses ainda é egresso.",
+        "prova": [
+          "Assertiva que fixa em dois anos o prazo de egresso do liberado definitivo erra: é um ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-27",
+      "unit_id": "9e1d1d47-2342-50a3-971c-9bb778508794",
+      "content_sha256": "d44b6d0fb0f7d9e30a8da2a2d11847a181c7d02a8d24eb1fa3fb2dad1ad14b9c",
+      "simples": "O serviço de assistência social colaborará com o egresso para a obtenção de trabalho.",
+      "pontos": [
+        "Colaboração na obtenção de trabalho."
+      ],
+      "atencao": [
+        "Apoio à inserção laboral."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 25"
+      ],
+      "exemplo": "Serviço social colabora para obtenção de trabalho pelo egresso. Variação: Colaboração não equivale a garantia automática de cargo público ou contratação.",
+      "prova": [
+        "Há apoio à inserção laboral? Sim.",
+        "Lei exige empregador contratar toda pessoa indicada? Não."
+      ],
+      "expected": {
+        "unit_id": "9e1d1d47-2342-50a3-971c-9bb778508794",
+        "content_sha256": "d44b6d0fb0f7d9e30a8da2a2d11847a181c7d02a8d24eb1fa3fb2dad1ad14b9c",
+        "simples": "O serviço de assistência social colaborará com o egresso para a obtenção de trabalho.",
+        "pontos": [
+          "Colaboração na obtenção de trabalho."
+        ],
+        "atencao": [
+          "Apoio à inserção laboral."
+        ],
+        "exemplo": "O serviço social indica vagas ao egresso.",
+        "prova": [
+          "Assertiva que dispensa a ajuda do serviço social na obtenção de trabalho erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-28",
+      "unit_id": "89d0644f-13ce-510f-b272-15baf601bcc0",
+      "content_sha256": "b95850ac13a3c9063e5b799671cf16f954b81924342c12c0e50128183bad48f6",
+      "simples": "O trabalho do condenado, como dever social e condição de dignidade humana, terá finalidade educativa e produtiva. Aplicam-se à organização e aos métodos de trabalho as precauções relativas à segurança e à higiene. O trabalho do preso não está sujeito ao regime da Consolidação das Leis do Trabalho.",
+      "pontos": [
+        "Dever social e condição de dignidade.",
+        "Finalidade educativa e produtiva.",
+        "Não se sujeita à CLT."
+      ],
+      "atencao": [
+        "O trabalho do preso NÃO está sob a CLT."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 29"
+      ],
+      "exemplo": "Trabalho prisional tem finalidade educativa/produtiva e segurança/higiene. Variação: Exclusão da CLT não autoriza trabalho sem proteção ou sem dignidade.",
+      "prova": [
+        "Métodos devem observar segurança? Sim.",
+        "Ausência de vínculo CLT retira toda proteção? Não."
+      ],
+      "expected": {
+        "unit_id": "89d0644f-13ce-510f-b272-15baf601bcc0",
+        "content_sha256": "b95850ac13a3c9063e5b799671cf16f954b81924342c12c0e50128183bad48f6",
+        "simples": "O trabalho do condenado, como dever social e condição de dignidade humana, terá finalidade educativa e produtiva. Aplicam-se à organização e aos métodos de trabalho as precauções relativas à segurança e à higiene. O trabalho do preso não está sujeito ao regime da Consolidação das Leis do Trabalho.",
+        "pontos": [
+          "Dever social e condição de dignidade.",
+          "Finalidade educativa e produtiva.",
+          "Não se sujeita à CLT."
+        ],
+        "atencao": [
+          "O trabalho do preso NÃO está sob a CLT."
+        ],
+        "exemplo": "O preso que trabalha na oficina da unidade não tem vínculo celetista.",
+        "prova": [
+          "Assertiva que submete o trabalho do preso à CLT erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-29",
+      "unit_id": "d14506f6-e595-5a26-b520-baf047b870c5",
+      "content_sha256": "162d0911b531b4d2e41d4ff00766acd232eb1d9cc8656ce246fe454fd49f9076",
+      "simples": "O trabalho do preso será remunerado, mediante prévia tabela, não podendo ser inferior a três quartos do salário mínimo. O produto da remuneração deverá atender à indenização dos danos causados pelo crime, desde que determinados judicialmente e não reparados por outros meios; à assistência à família; a pequenas despesas pessoais; e ao ressarcimento ao Estado das despesas com a manutenção do condenado. A parte restante será depositada para constituição do pecúlio, em caderneta de poupança, entregue ao condenado quando posto em liberdade.",
+      "pontos": [
+        "Remuneração por tabela,não inferior a 3/4 do salário mínimo no texto.",
+        "Indenização judicialmente determinada e ainda não reparada,família,despesas pessoais.",
+        "Ressarcimento estatal proporcional sem prejudicar destinações anteriores.",
+        "Saldo para pecúlio,ressalvadas outras aplicações legais."
+      ],
+      "atencao": [
+        "Mínimo de TRÊS QUARTOS do salário mínimo.",
+        "Piso textual de 3/4 não permite ressarcimento estatal prejudicando destinações anteriores do§1º; cálculo de remuneração e aplicações legais exigem caso concreto.",
+        "ADPF 336: notícia oficial STF de 8/3/2021 registra improcedência e recepção do piso de 3/4 do salário mínimo. É mínimo,não teto; não autoriza remuneração zero em trabalho prisional remunerável."
+      ],
+      "termos": [
+        {
+          "termo": "Pecúlio",
+          "significado": "Reserva de dinheiro do preso, entregue na liberdade."
+        }
+      ],
+      "remissoes": [
+        "Art. 28",
+        "https://noticias.stf.jus.br/postsnoticias/mantida-regra-que-permite-remuneracao-de-presos-em-3-4-do-salario-minimo/"
+      ],
+      "exemplo": "Remuneração observa tabela,piso legal e destinações protegidas antes do pecúlio. Variação: Ressarcimento estatal não pode consumir valores prejudicando destinações anteriores.",
+      "prova": [
+        "Dano precisa ser judicialmente determinado e não reparado? Sim.",
+        "Todo valor vai diretamente ao Estado? Não."
+      ],
+      "expected": {
+        "unit_id": "d14506f6-e595-5a26-b520-baf047b870c5",
+        "content_sha256": "162d0911b531b4d2e41d4ff00766acd232eb1d9cc8656ce246fe454fd49f9076",
+        "simples": "O trabalho do preso será remunerado, mediante prévia tabela, não podendo ser inferior a três quartos do salário mínimo. O produto da remuneração deverá atender à indenização dos danos causados pelo crime, desde que determinados judicialmente e não reparados por outros meios; à assistência à família; a pequenas despesas pessoais; e ao ressarcimento ao Estado das despesas com a manutenção do condenado. A parte restante será depositada para constituição do pecúlio, em caderneta de poupança, entregue ao condenado quando posto em liberdade.",
+        "pontos": [
+          "Remuneração não inferior a três quartos do salário mínimo.",
+          "Destinação: indenização, família, despesas pessoais e ressarcimento ao Estado.",
+          "Pecúlio em caderneta de poupança."
+        ],
+        "atencao": [
+          "Mínimo de TRÊS QUARTOS do salário mínimo."
+        ],
+        "exemplo": "Parte do salário do preso vai para o pecúlio, entregue na soltura.",
+        "prova": [
+          "Assertiva que fixa o mínimo em um salário mínimo erra: são três quartos."
+        ],
+        "termos": [
+          {
+            "termo": "Pecúlio",
+            "significado": "Reserva de dinheiro do preso, entregue na liberdade."
+          }
+        ],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-30",
+      "unit_id": "ae7e9ab2-1351-5ead-8fc6-ada69135d9f9",
+      "content_sha256": "4a453c27a4accd43a9190c2848e05b024f7057be58d44c1837680f40593322a4",
+      "simples": "As tarefas executadas como prestação de serviço à comunidade não serão remuneradas.",
+      "pontos": [
+        "Prestação de serviço à comunidade não é remunerada."
+      ],
+      "atencao": [
+        "Gratuita por natureza."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 29"
+      ],
+      "exemplo": "Prestação de serviços à comunidade não gera remuneração pelas tarefas. Variação: Não transportar essa gratuidade para todo trabalho prisional do 29.",
+      "prova": [
+        "As tarefas deste artigo são remuneradas? Não.",
+        "Todo trabalho do condenado é gratuito? Não."
+      ],
+      "expected": {
+        "unit_id": "ae7e9ab2-1351-5ead-8fc6-ada69135d9f9",
+        "content_sha256": "4a453c27a4accd43a9190c2848e05b024f7057be58d44c1837680f40593322a4",
+        "simples": "As tarefas executadas como prestação de serviço à comunidade não serão remuneradas.",
+        "pontos": [
+          "Prestação de serviço à comunidade não é remunerada."
+        ],
+        "atencao": [
+          "Gratuita por natureza."
+        ],
+        "exemplo": "O condenado que presta serviços à comunidade não recebe salário.",
+        "prova": [
+          "Assertiva que prevê remuneração para a prestação de serviço à comunidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-31",
+      "unit_id": "c191722c-373c-5a4d-9477-abc2e0993bbb",
+      "content_sha256": "5dede06c097f585ce295d64b4f564e463802214c4e579d9108bf6e26f7c9aba3",
+      "simples": "O condenado à pena privativa de liberdade está obrigado ao trabalho na medida de suas aptidões e capacidade. Para o preso provisório, o trabalho não é obrigatório e só poderá ser executado no interior do estabelecimento.",
+      "pontos": [
+        "Trabalho obrigatório para o condenado.",
+        "Preso provisório: facultativo e só interno."
+      ],
+      "atencao": [
+        "Preso PROVISÓRIO: trabalho facultativo e apenas interno."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 32"
+      ],
+      "exemplo": "Condenado trabalha conforme aptidão e capacidade. Variação: Preso provisório não é obrigado e seu trabalho tem recorte interno.",
+      "prova": [
+        "Trabalho provisório é obrigatório? Não.",
+        "Obrigatoriedade dispensa capacidade/aptidão? Não."
+      ],
+      "expected": {
+        "unit_id": "c191722c-373c-5a4d-9477-abc2e0993bbb",
+        "content_sha256": "5dede06c097f585ce295d64b4f564e463802214c4e579d9108bf6e26f7c9aba3",
+        "simples": "O condenado à pena privativa de liberdade está obrigado ao trabalho na medida de suas aptidões e capacidade. Para o preso provisório, o trabalho não é obrigatório e só poderá ser executado no interior do estabelecimento.",
+        "pontos": [
+          "Trabalho obrigatório para o condenado.",
+          "Preso provisório: facultativo e só interno."
+        ],
+        "atencao": [
+          "Preso PROVISÓRIO: trabalho facultativo e apenas interno."
+        ],
+        "exemplo": "O preso provisório pode optar por trabalhar dentro da unidade.",
+        "prova": [
+          "Assertiva que obriga o preso provisório a trabalhar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-32",
+      "unit_id": "e051afbf-b226-549b-9a36-53e5e64cec27",
+      "content_sha256": "f37d78c108deb29d87af12f4e9a35394f33aa6c2244e0942cbaf22d6c1af2896",
+      "simples": "Na atribuição do trabalho deverão ser levadas em conta a habilitação, a condição pessoal e as necessidades futuras do preso, bem como as oportunidades do mercado. Deverá ser limitado o artesanato sem expressão econômica, salvo nas regiões de turismo. Os maiores de sessenta anos poderão solicitar ocupação adequada à sua idade, e os doentes ou deficientes físicos somente exercerão atividades apropriadas ao seu estado.",
+      "pontos": [
+        "Habilitação, condição pessoal e mercado.",
+        "Artesanato sem expressão econômica é limitado.",
+        "Maiores de 60 anos: ocupação adequada.",
+        "Doentes e deficientes: atividades apropriadas."
+      ],
+      "atencao": [
+        "Maiores de sessenta anos podem SOLICITAR ocupação adequada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 31"
+      ],
+      "exemplo": "Pessoa com limitação física recebe atividade apropriada ao seu estado. Variação: Maior de sessenta pode solicitar adequação; não excluir automaticamente toda capacidade laboral.",
+      "prova": [
+        "O mercado e necessidades futuras importam? Sim.",
+        "Toda atividade manual é proibida? Não;artesanato tem recorte e ressalva turística."
+      ],
+      "expected": {
+        "unit_id": "e051afbf-b226-549b-9a36-53e5e64cec27",
+        "content_sha256": "f37d78c108deb29d87af12f4e9a35394f33aa6c2244e0942cbaf22d6c1af2896",
+        "simples": "Na atribuição do trabalho deverão ser levadas em conta a habilitação, a condição pessoal e as necessidades futuras do preso, bem como as oportunidades do mercado. Deverá ser limitado o artesanato sem expressão econômica, salvo nas regiões de turismo. Os maiores de sessenta anos poderão solicitar ocupação adequada à sua idade, e os doentes ou deficientes físicos somente exercerão atividades apropriadas ao seu estado.",
+        "pontos": [
+          "Habilitação, condição pessoal e mercado.",
+          "Artesanato sem expressão econômica é limitado.",
+          "Maiores de 60 anos: ocupação adequada.",
+          "Doentes e deficientes: atividades apropriadas."
+        ],
+        "atencao": [
+          "Maiores de sessenta anos podem SOLICITAR ocupação adequada."
+        ],
+        "exemplo": "O preso idoso solicita uma função leve.",
+        "prova": [
+          "Assertiva que obriga a mesma atividade a todos os presos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 31"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-33",
+      "unit_id": "a44f1f85-6121-523d-9d02-f06aeb5790ed",
+      "content_sha256": "357deb5d3561c0b1c213e2ae12ca00a034506f035e786e61bc7da8047a270489",
+      "simples": "A jornada normal de trabalho não será inferior a seis, nem superior a oito horas, com descanso nos domingos e feriados. Poderá ser atribuído horário especial aos presos designados para os serviços de conservação e manutenção do estabelecimento penal.",
+      "pontos": [
+        "Jornada de seis a oito horas.",
+        "Descanso nos domingos e feriados.",
+        "Horário especial para serviços de manutenção."
+      ],
+      "atencao": [
+        "Mínimo de seis e máximo de oito horas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 28"
+      ],
+      "exemplo": "Jornada normal é de seis a oito horas,com descanso em domingos/feriados. Variação: Conservação/manutenção pode ter horário especial; não universalizar exceção para qualquer função.",
+      "prova": [
+        "Oito horas é mínimo? Não;máximo normal.",
+        "Horário especial tem hipótese expressa? Sim."
+      ],
+      "expected": {
+        "unit_id": "a44f1f85-6121-523d-9d02-f06aeb5790ed",
+        "content_sha256": "357deb5d3561c0b1c213e2ae12ca00a034506f035e786e61bc7da8047a270489",
+        "simples": "A jornada normal de trabalho não será inferior a seis, nem superior a oito horas, com descanso nos domingos e feriados. Poderá ser atribuído horário especial aos presos designados para os serviços de conservação e manutenção do estabelecimento penal.",
+        "pontos": [
+          "Jornada de seis a oito horas.",
+          "Descanso nos domingos e feriados.",
+          "Horário especial para serviços de manutenção."
+        ],
+        "atencao": [
+          "Mínimo de seis e máximo de oito horas."
+        ],
+        "exemplo": "A jornada do preso é de, no mínimo, seis e, no máximo, oito horas.",
+        "prova": [
+          "Assertiva que fixa a jornada máxima em dez horas erra: são oito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-35",
+      "unit_id": "f57e1937-6e32-5abf-9489-114c8e7940ed",
+      "content_sha256": "c4f1ac600e3f3580ef38807380a4b76d8935eb145df6ead32353388057e74918",
+      "simples": "Os órgãos da administração direta ou indireta da União, Estados, Territórios, Distrito Federal e Municípios adquirirão, com dispensa de concorrência pública, os bens ou produtos do trabalho prisional, sempre que não for possível ou recomendável a venda a particulares. As importâncias arrecadadas revertem em favor da fundação ou empresa pública gerenciadora ou, na falta, do estabelecimento penal.",
+      "pontos": [
+        "Aquisição pública de produto prisional nas condições textuais de impossibilidade/inconveniência da venda particular.",
+        "Remissão a dispensa de concorrência exige confronto com regime atual de contratação,não dispensa irrestrita.",
+        "Receitas para fundação/empresa pública gerenciadora;na falta,estabelecimento."
+      ],
+      "atencao": [
+        "Dispensa de CONCORRÊNCIA PÚBLICA."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 34"
+      ],
+      "exemplo": "Produto prisional tem aquisição pública nas condições textuais quando venda particular não é possível/recomendável. Variação: Não ensinar dispensa irrestrita de todo procedimento de contratação; integrar regime atual aplicável.",
+      "prova": [
+        "Receita tem destinação vinculada? Sim.",
+        "Qualquer aquisição pública é dispensada por este artigo? Não."
+      ],
+      "expected": {
+        "unit_id": "f57e1937-6e32-5abf-9489-114c8e7940ed",
+        "content_sha256": "c4f1ac600e3f3580ef38807380a4b76d8935eb145df6ead32353388057e74918",
+        "simples": "Os órgãos da administração direta ou indireta da União, Estados, Territórios, Distrito Federal e Municípios adquirirão, com dispensa de concorrência pública, os bens ou produtos do trabalho prisional, sempre que não for possível ou recomendável a venda a particulares. As importâncias arrecadadas revertem em favor da fundação ou empresa pública gerenciadora ou, na falta, do estabelecimento penal.",
+        "pontos": [
+          "Compra pública sem licitação dos produtos do trabalho prisional.",
+          "Receitas revertem à fundação ou ao estabelecimento."
+        ],
+        "atencao": [
+          "Dispensa de CONCORRÊNCIA PÚBLICA."
+        ],
+        "exemplo": "A prefeitura compra as carteiras escolares produzidas pelos presos sem licitação.",
+        "prova": [
+          "Assertiva que exige licitação para a compra dos produtos do trabalho prisional erra: há dispensa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-36",
+      "unit_id": "2034a921-db96-5f07-926b-a0bcf3107be7",
+      "content_sha256": "52689baa128bcad45a6e2fc5b08cb1530130e2967de4267d75b2e0002791db66",
+      "simples": "O trabalho externo será admissível para os presos em regime fechado somente em serviço ou obras públicas realizados por órgãos da administração direta ou indireta, ou entidades privadas, desde que tomadas as cautelas contra a fuga e em favor da disciplina. O limite máximo do número de presos será de dez por cento do total de empregados na obra. A remuneração cabe ao órgão, à entidade ou à empresa empreiteira. A prestação de trabalho a entidade privada depende do consentimento expresso do preso.",
+      "pontos": [
+        "Trabalho externo no regime fechado: serviço ou obra pública.",
+        "Limite de dez por cento dos empregados.",
+        "Remuneração pela contratante.",
+        "Entidade privada: consentimento expresso do preso."
+      ],
+      "atencao": [
+        "Teto de 10% do total de empregados da obra."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 37"
+      ],
+      "exemplo": "Preso do fechado presta trabalho externo em obra pública com cautelas pertinentes. Variação: Obra privada comum não se torna pública só porque emprega preso; serviço a entidade privada exige consentimento expresso.",
+      "prova": [
+        "Teto é 10% dos empregados da obra? Sim.",
+        "Consentimento expresso é previsto para entidade privada? Sim."
+      ],
+      "expected": {
+        "unit_id": "2034a921-db96-5f07-926b-a0bcf3107be7",
+        "content_sha256": "52689baa128bcad45a6e2fc5b08cb1530130e2967de4267d75b2e0002791db66",
+        "simples": "O trabalho externo será admissível para os presos em regime fechado somente em serviço ou obras públicas realizados por órgãos da administração direta ou indireta, ou entidades privadas, desde que tomadas as cautelas contra a fuga e em favor da disciplina. O limite máximo do número de presos será de dez por cento do total de empregados na obra. A remuneração cabe ao órgão, à entidade ou à empresa empreiteira. A prestação de trabalho a entidade privada depende do consentimento expresso do preso.",
+        "pontos": [
+          "Trabalho externo no regime fechado: serviço ou obra pública.",
+          "Limite de dez por cento dos empregados.",
+          "Remuneração pela contratante.",
+          "Entidade privada: consentimento expresso do preso."
+        ],
+        "atencao": [
+          "Teto de 10% do total de empregados da obra."
+        ],
+        "exemplo": "Em uma obra pública com cem empregados, no máximo dez presos do regime fechado trabalham.",
+        "prova": [
+          "Assertiva que dispensa o consentimento do preso para trabalhar em entidade privada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 37"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-37",
+      "unit_id": "2b2a9c83-5633-576f-a965-4e60652a662a",
+      "content_sha256": "69222b40a806a72a083428ab44b4199d3d2112cdbc985dfe559ac86be7567854",
+      "simples": "No recorte textual do 37,o trabalho externo depende de autorização da direção,aptidão,disciplina,responsabilidade e lapso de 1/6. Regime e jurisprudência aplicáveis precisam ser distinguidos; não converter a fração em fórmula universal do semiaberto ou progressão. Há hipóteses próprias de revogação.",
+      "pontos": [
+        "Autoridade administrativa e requisitos do recorte legal.",
+        "Lapso textual de 1/6 exige integração ao regime/jurisprudência; não aplicação universal automática.",
+        "Crime,falta grave ou comportamento contrário aos requisitos têm disciplina própria de revogação."
+      ],
+      "atencao": [
+        "Distinguir fechado,semiaberto e progressão. Não certificado neste lote todo precedente de dispensa/cômputo do lapso; sem exercício literal universal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 36"
+      ],
+      "exemplo": "Direção examina aptidão,disciplina e responsabilidade para trabalho externo. Variação: O lapso textual de 1/6 exige distinguir regime e jurisprudência; não fórmula universal para todo semiaberto/progressão.",
+      "prova": [
+        "Autorização é administrativa neste recorte? Sim.",
+        "Artigo dá autorização automática ao completar fração? Não."
+      ],
+      "expected": {
+        "unit_id": "2b2a9c83-5633-576f-a965-4e60652a662a",
+        "content_sha256": "69222b40a806a72a083428ab44b4199d3d2112cdbc985dfe559ac86be7567854",
+        "simples": "A prestação de trabalho externo, a ser autorizada pela direção do estabelecimento, dependerá de aptidão, disciplina e responsabilidade, além do cumprimento mínimo de um sexto da pena. Revogar-se-á a autorização ao preso que praticar crime, for punido por falta grave ou tiver comportamento contrário aos requisitos.",
+        "pontos": [
+          "Autorização da direção.",
+          "Aptidão, disciplina e responsabilidade.",
+          "Cumprimento mínimo de um sexto da pena.",
+          "Revogação por crime ou falta grave."
+        ],
+        "atencao": [
+          "Mínimo de UM SEXTO da pena."
+        ],
+        "exemplo": "O preso só obtém o trabalho externo após cumprir um sexto da pena.",
+        "prova": [
+          "Assertiva que fixa em dois quintos o mínimo de pena para o trabalho externo erra: é um sexto."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 36"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-38",
+      "unit_id": "5e3566db-e889-5623-9f2e-2dfb1333d32e",
+      "content_sha256": "d3db26f537e0962d2aef491bd5f480bf54b78d45a9ba9002b716029c025b18fa",
+      "simples": "Cumpre ao condenado, além das obrigações legais inerentes ao seu estado, submeter-se às normas de execução da pena.",
+      "pontos": [
+        "Submissão às normas de execução."
+      ],
+      "atencao": [
+        "Dever de obediência às normas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 39"
+      ],
+      "exemplo": "Condenado cumpre normas legais de execução. Variação: Obediência não legitima ordem ilícita nem sanção sem base anterior.",
+      "prova": [
+        "Há deveres de execução além de outras obrigações legais? Sim.",
+        "Pode inventar obrigação incompatível com lei? Não."
+      ],
+      "expected": {
+        "unit_id": "5e3566db-e889-5623-9f2e-2dfb1333d32e",
+        "content_sha256": "d3db26f537e0962d2aef491bd5f480bf54b78d45a9ba9002b716029c025b18fa",
+        "simples": "Cumpre ao condenado, além das obrigações legais inerentes ao seu estado, submeter-se às normas de execução da pena.",
+        "pontos": [
+          "Submissão às normas de execução."
+        ],
+        "atencao": [
+          "Dever de obediência às normas."
+        ],
+        "exemplo": "O condenado deve seguir as regras da unidade.",
+        "prova": [
+          "Assertiva que isenta o condenado das normas de execução erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 39"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-39",
+      "unit_id": "a34422cf-a077-5caa-87ae-2696e547e058",
+      "content_sha256": "8f4b746cd88d006eaee33c898b7947110273965a8d807c59bdacdf85857530e3",
+      "simples": "Deveres abrangem disciplina,respeito,trabalho compatível,indenização,higiene e conservação. Ressarcimento estatal: quando possível e com desconto proporcional da remuneração. Ao preso provisório aplicam-se no que couber,sem tornar obrigatório trabalho facultativo do 31.",
+      "pontos": [
+        "Disciplina e cumprimento da sentença.",
+        "Respeito e urbanidade.",
+        "Trabalho e submissão à sanção.",
+        "Indenização à vítima e ao Estado.",
+        "Higiene e conservação de objetos."
+      ],
+      "atencao": [
+        "Os incisos II e V são ligados à falta grave (art. 50, VI)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 50"
+      ],
+      "exemplo": "Dever de indenizar Estado tem condição quando possível e desconto proporcional. Variação: Ao provisório aplica-se no que couber; não tornar trabalho obrigatório por essa extensão.",
+      "prova": [
+        "Condicionalidade econômica importa? Sim.",
+        "No que couber torna idênticos todos os deveres? Não."
+      ],
+      "expected": {
+        "unit_id": "a34422cf-a077-5caa-87ae-2696e547e058",
+        "content_sha256": "8f4b746cd88d006eaee33c898b7947110273965a8d807c59bdacdf85857530e3",
+        "simples": "Constituem deveres do condenado: comportamento disciplinado e cumprimento fiel da sentença; obediência ao servidor e respeito a qualquer pessoa; urbanidade com os demais condenados; conduta oposta a movimentos de fuga ou subversão; execução do trabalho, tarefas e ordens recebidas; submissão à sanção disciplinar; indenização à vítima ou sucessores; indenização ao Estado das despesas com sua manutenção, mediante desconto proporcional da remuneração; higiene pessoal e asseio da cela; e conservação dos objetos de uso pessoal. Aplica-se ao preso provisório, no que couber.",
+        "pontos": [
+          "Disciplina e cumprimento da sentença.",
+          "Respeito e urbanidade.",
+          "Trabalho e submissão à sanção.",
+          "Indenização à vítima e ao Estado.",
+          "Higiene e conservação de objetos."
+        ],
+        "atencao": [
+          "Os incisos II e V são ligados à falta grave (art. 50, VI)."
+        ],
+        "exemplo": "O condenado deve manter a cela limpa e respeitar os agentes.",
+        "prova": [
+          "Assertiva que isenta o preso provisório de todos os deveres do art. 39 erra: aplicam-se, no que couber."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-40",
+      "unit_id": "1a339019-7ded-59c9-b494-a4940ade1640",
+      "content_sha256": "aac2dfc76c50a9fec09a823b1ebd47d0ab5133b5a4878f1b074febfed7d8c97e",
+      "simples": "Impõe-se a todas as autoridades o respeito à integridade física e moral dos condenados e dos presos provisórios.",
+      "pontos": [
+        "Respeito à integridade física e moral."
+      ],
+      "atencao": [
+        "Alcança condenados e presos provisórios."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 41"
+      ],
+      "exemplo": "Autoridades preservam integridade física e moral do provisório. Variação: Sanção disciplinar não autoriza tortura ou degradação.",
+      "prova": [
+        "Proteção inclui provisório? Sim.",
+        "Disciplina dispensa integridade moral? Não."
+      ],
+      "expected": {
+        "unit_id": "1a339019-7ded-59c9-b494-a4940ade1640",
+        "content_sha256": "aac2dfc76c50a9fec09a823b1ebd47d0ab5133b5a4878f1b074febfed7d8c97e",
+        "simples": "Impõe-se a todas as autoridades o respeito à integridade física e moral dos condenados e dos presos provisórios.",
+        "pontos": [
+          "Respeito à integridade física e moral."
+        ],
+        "atencao": [
+          "Alcança condenados e presos provisórios."
+        ],
+        "exemplo": "Nenhum agente pode agredir o preso.",
+        "prova": [
+          "Assertiva que limita o respeito à integridade aos condenados erra: abrange os presos provisórios."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-41",
+      "unit_id": "dda6c3a2-2cae-5210-b5b0-b94e282b1463",
+      "content_sha256": "c4d3e4b3807d19f046704f0fc44fda52eccda509482762f179c6e12e94fb3843",
+      "simples": "Constituem direitos do preso: alimentação suficiente e vestuário; trabalho e remuneração; previdência social; pecúlio; proporcionalidade na distribuição do tempo para trabalho, descanso e recreação; exercício das atividades anteriores compatíveis; assistência material, à saúde, jurídica, educacional, social e religiosa; proteção contra o sensacionalismo; entrevista pessoal e reservada com o advogado; visita do cônjuge, companheira, parentes e amigos em dias determinados; chamamento nominal; igualdade de tratamento; audiência com o diretor; representação e petição a qualquer autoridade; contato com o mundo exterior por correspondência e leitura; e atestado de pena a cumprir, emitido anualmente. Os direitos dos incisos V, X e XV podem ser suspensos ou restringidos por ato motivado do juiz da execução. O preso condenado por crime contra a mulher por razões da condição do sexo feminino não poderá usufruir da visita íntima ou conjugal.",
+      "pontos": [
+        "Rol de direitos do preso.",
+        "Entrevista pessoal e reservada com o advogado.",
+        "Atestado de pena a cumprir anual.",
+        "Suspensão de direitos dos incisos V, X e XV por ato motivado do juiz.",
+        "Sem visita íntima para condenado por crime contra a mulher por razões do sexo feminino."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o §2º (sem visita íntima, em crime contra a mulher) foi incluído por lei posterior.",
+        "Só o JUIZ pode suspender os direitos dos incisos V, X e XV.",
+        "Lei 14.994 publicada/vigente em 10/10/2024 atribuiu restrição dos incisosV,X,XV ao juiz e inseriu§2º; distinguir visita íntima/conjugal de toda visita. Não certificada toda controvérsia constitucional posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3º"
+      ],
+      "exemplo": "Restrição dos incisosV,X,XV requer ato motivado do juiz no texto atual. Variação: Direção não deve copiar competência antiga; visita íntima/conjugal tem restrição específica do§2º,sem vedar toda visita familiar.",
+      "prova": [
+        "Atestado de pena é anual? Sim.",
+        "§2º proíbe automaticamente qualquer visita de familiar? Não."
+      ],
+      "expected": {
+        "unit_id": "dda6c3a2-2cae-5210-b5b0-b94e282b1463",
+        "content_sha256": "c4d3e4b3807d19f046704f0fc44fda52eccda509482762f179c6e12e94fb3843",
+        "simples": "Constituem direitos do preso: alimentação suficiente e vestuário; trabalho e remuneração; previdência social; pecúlio; proporcionalidade na distribuição do tempo para trabalho, descanso e recreação; exercício das atividades anteriores compatíveis; assistência material, à saúde, jurídica, educacional, social e religiosa; proteção contra o sensacionalismo; entrevista pessoal e reservada com o advogado; visita do cônjuge, companheira, parentes e amigos em dias determinados; chamamento nominal; igualdade de tratamento; audiência com o diretor; representação e petição a qualquer autoridade; contato com o mundo exterior por correspondência e leitura; e atestado de pena a cumprir, emitido anualmente. Os direitos dos incisos V, X e XV podem ser suspensos ou restringidos por ato motivado do juiz da execução. O preso condenado por crime contra a mulher por razões da condição do sexo feminino não poderá usufruir da visita íntima ou conjugal.",
+        "pontos": [
+          "Rol de direitos do preso.",
+          "Entrevista pessoal e reservada com o advogado.",
+          "Atestado de pena a cumprir anual.",
+          "Suspensão de direitos dos incisos V, X e XV por ato motivado do juiz.",
+          "Sem visita íntima para condenado por crime contra a mulher por razões do sexo feminino."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §2º (sem visita íntima, em crime contra a mulher) foi incluído por lei posterior.",
+          "Só o JUIZ pode suspender os direitos dos incisos V, X e XV."
+        ],
+        "exemplo": "O preso recebe o atestado de pena a cumprir uma vez por ano.",
+        "prova": [
+          "Assertiva que permite ao diretor suspender a visita por ato próprio erra: depende de ato motivado do juiz da execução."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-41-a",
+      "unit_id": "912e749d-a18c-548d-a357-6d1441e4ae39",
+      "content_sha256": "a9918daa44fbb7231bcf5a97f0497e1956bc2d64413b5c053132fd639183bfe8",
+      "simples": "Os encontros no parlatório ou por meio virtual entre presos provisórios ou condenados vinculados a organizações criminosas ultraviolentas, grupos paramilitares ou milícias privadas e seus visitantes poderão ser monitorados por captação audiovisual e gravação. O monitoramento poderá ser requerido pelo delegado, pelo Ministério Público ou pela administração penitenciária. A visitação e o monitoramento nos estabelecimentos federais de segurança máxima sujeitam-se às regras especiais da Lei nº 11.671, de 8 de maio de 2008.",
+      "pontos": [
+        "Vínculo com grupos expressamente indicados precisa de prova,não apenas número de pessoas ou prisão.",
+        "Captação audiovisual/gravação de encontro do parlatório/virtual no recorte legal.",
+        "Requerentes e regras especiais federais expressos; integrar 41-B em comunicação de defesa."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção.",
+        "Lei 15.358 publicada/vigente em 25/3/2026. Controle constitucional da Antifacção não tratado como resolvido; previsão textual não autoriza monitoramento universal ou acesso automático ao sigilo profissional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Lei Antifacção"
+      ],
+      "exemplo": "Encontro de visitante com preso vinculado aos grupos expressos tem previsão específica de monitoramento. Variação: Mera prisão não demonstra vínculo; comunicação com defensor exige 41-B e proteção do sigilo.",
+      "prova": [
+        "Requerimento equivale a autorização geral sem limites? Não.",
+        "Presídio federal tem regras especiais? Sim."
+      ],
+      "expected": {
+        "unit_id": "912e749d-a18c-548d-a357-6d1441e4ae39",
+        "content_sha256": "a9918daa44fbb7231bcf5a97f0497e1956bc2d64413b5c053132fd639183bfe8",
+        "simples": "Os encontros no parlatório ou por meio virtual entre presos provisórios ou condenados vinculados a organizações criminosas ultraviolentas, grupos paramilitares ou milícias privadas e seus visitantes poderão ser monitorados por captação audiovisual e gravação. O monitoramento poderá ser requerido pelo delegado, pelo Ministério Público ou pela administração penitenciária. A visitação e o monitoramento nos estabelecimentos federais de segurança máxima sujeitam-se às regras especiais da Lei nº 11.671, de 8 de maio de 2008.",
+        "pontos": [
+          "Monitoramento audiovisual dos encontros de presos de facções.",
+          "Requerimento do delegado, MP ou administração penitenciária.",
+          "Regras especiais nos presídios federais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção."
+        ],
+        "exemplo": "A visita ao líder de uma facção pode ser gravada.",
+        "prova": [
+          "Assertiva que veda o monitoramento das visitas a presos de facções erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei Antifacção"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-41-b",
+      "unit_id": "c3c337cf-8298-556a-bd74-1ce93832915d",
+      "content_sha256": "2db648e65b4a553237d9e7a137ec264f5baca81c05c041d8050c27b03098a70d",
+      "simples": "O conteúdo das comunicações monitoradas entre advogado e cliente, quando o monitoramento houver sido autorizado por razões fundadas de conluio criminoso reconhecidas judicialmente, será submetido à análise exclusiva do juízo competente para o controle da legalidade da investigação, distinto do juízo da instrução e do julgamento. O juízo de controle decide sobre a licitude, a pertinência e a necessidade da prova e sua eventual inutilização, antes de qualquer remessa ao juízo da instrução. As gravações que não interessarem à prova serão inutilizadas. O conteúdo das comunicações indeferidas ou declaradas ilícitas não pode ser acessado pelo juízo da instrução.",
+      "pontos": [
+        "Análise por juízo de controle distinto do da instrução.",
+        "Decisão sobre licitude, pertinência e necessidade.",
+        "Inutilização do que não interessa à prova.",
+        "Vedado o acesso do juízo da instrução ao conteúdo ilícito."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção.",
+        "Juízo de controle DISTINTO do juízo da instrução.",
+        "Lei 15.358 publicada/vigente em 25/3/2026. Controle constitucional da Antifacção não tratado como resolvido; previsão textual não autoriza monitoramento universal ou acesso automático ao sigilo profissional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 41-A"
+      ],
+      "exemplo": "Conluio criminoso fundadamente reconhecido judicialmente exige controle por juízo distinto antes de remessa. Variação: Juízo de instrução não acessa direta/indiretamente comunicação ilícita ou indeferida.",
+      "prova": [
+        "Pode monitorar todo advogado pela profissão? Não.",
+        "Inutilização exige decisão fundamentada no recorte? Sim."
+      ],
+      "expected": {
+        "unit_id": "c3c337cf-8298-556a-bd74-1ce93832915d",
+        "content_sha256": "2db648e65b4a553237d9e7a137ec264f5baca81c05c041d8050c27b03098a70d",
+        "simples": "O conteúdo das comunicações monitoradas entre advogado e cliente, quando o monitoramento houver sido autorizado por razões fundadas de conluio criminoso reconhecidas judicialmente, será submetido à análise exclusiva do juízo competente para o controle da legalidade da investigação, distinto do juízo da instrução e do julgamento. O juízo de controle decide sobre a licitude, a pertinência e a necessidade da prova e sua eventual inutilização, antes de qualquer remessa ao juízo da instrução. As gravações que não interessarem à prova serão inutilizadas. O conteúdo das comunicações indeferidas ou declaradas ilícitas não pode ser acessado pelo juízo da instrução.",
+        "pontos": [
+          "Análise por juízo de controle distinto do da instrução.",
+          "Decisão sobre licitude, pertinência e necessidade.",
+          "Inutilização do que não interessa à prova.",
+          "Vedado o acesso do juízo da instrução ao conteúdo ilícito."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção.",
+          "Juízo de controle DISTINTO do juízo da instrução."
+        ],
+        "exemplo": "Um juiz diferente do que vai julgar o caso analisa as conversas entre advogado e cliente monitoradas.",
+        "prova": [
+          "Assertiva que permite ao juiz da instrução acessar as comunicações declaradas ilícitas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-42",
+      "unit_id": "e57000c0-524c-5207-b036-7b3f50a09ae6",
+      "content_sha256": "299cf0ae35e5a56971dd9a7f364e34e0b82c6c34beae3f396e02e1f50dc27fe4",
+      "simples": "Aplica-se ao preso provisório e ao submetido à medida de segurança, no que couber, o disposto nesta Seção.",
+      "pontos": [
+        "Direitos e deveres também ao preso provisório e ao submetido a medida de segurança."
+      ],
+      "atencao": [
+        "Extensão 'no que couber'."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 41"
+      ],
+      "exemplo": "Direitos/deveres da seção alcançam provisório e medida de segurança no que couber. Variação: Compatibilidade exige exame,não cópia automática de toda regra do condenado.",
+      "prova": [
+        "Há ressalva de compatibilidade? Sim.",
+        "Todo direito é eliminado pela provisoriedade? Não."
+      ],
+      "expected": {
+        "unit_id": "e57000c0-524c-5207-b036-7b3f50a09ae6",
+        "content_sha256": "299cf0ae35e5a56971dd9a7f364e34e0b82c6c34beae3f396e02e1f50dc27fe4",
+        "simples": "Aplica-se ao preso provisório e ao submetido à medida de segurança, no que couber, o disposto nesta Seção.",
+        "pontos": [
+          "Direitos e deveres também ao preso provisório e ao submetido a medida de segurança."
+        ],
+        "atencao": [
+          "Extensão 'no que couber'."
+        ],
+        "exemplo": "O preso provisório tem os mesmos direitos de visita do condenado.",
+        "prova": [
+          "Assertiva que exclui o submetido a medida de segurança da Seção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-43",
+      "unit_id": "0abe275d-31ba-5984-8b65-240f85dcfdc7",
+      "content_sha256": "7c34a647ec0f29a92bb6d18f2b574dd8d11caa9841161c9b3b0cc6563b58cbfe",
+      "simples": "É garantida a liberdade de contratar médico de confiança pessoal do internado ou do submetido a tratamento ambulatorial, por seus familiares ou dependentes, a fim de orientar e acompanhar o tratamento. As divergências entre o médico oficial e o particular serão resolvidas pelo juiz de execução.",
+      "pontos": [
+        "Médico de confiança pessoal.",
+        "Divergências resolvidas pelo juiz da execução."
+      ],
+      "atencao": [
+        "Quem decide a divergência é o JUIZ DA EXECUÇÃO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 14"
+      ],
+      "exemplo": "Família contrata médico de confiança para acompanhar internado. Variação: Divergência com médico oficial é resolvida pelo juiz,não pelo particular sozinho.",
+      "prova": [
+        "Tratamento ambulatorial também está previsto? Sim.",
+        "Médico particular substitui automaticamente decisão judicial? Não."
+      ],
+      "expected": {
+        "unit_id": "0abe275d-31ba-5984-8b65-240f85dcfdc7",
+        "content_sha256": "7c34a647ec0f29a92bb6d18f2b574dd8d11caa9841161c9b3b0cc6563b58cbfe",
+        "simples": "É garantida a liberdade de contratar médico de confiança pessoal do internado ou do submetido a tratamento ambulatorial, por seus familiares ou dependentes, a fim de orientar e acompanhar o tratamento. As divergências entre o médico oficial e o particular serão resolvidas pelo juiz de execução.",
+        "pontos": [
+          "Médico de confiança pessoal.",
+          "Divergências resolvidas pelo juiz da execução."
+        ],
+        "atencao": [
+          "Quem decide a divergência é o JUIZ DA EXECUÇÃO."
+        ],
+        "exemplo": "A família contrata um médico particular para acompanhar o internado.",
+        "prova": [
+          "Assertiva que atribui ao diretor a solução das divergências entre médicos erra: é do juiz da execução."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-44",
+      "unit_id": "7d98e6f0-aef2-529e-8d9b-d2ccdf874deb",
+      "content_sha256": "4c7ea1a96ba1a4578325f5c526a194d9883991f3b3d9e501dcd7b58699dd8f47",
+      "simples": "A disciplina consiste na colaboração com a ordem, na obediência às determinações das autoridades e seus agentes e no desempenho do trabalho. Estão sujeitos à disciplina o condenado à pena privativa de liberdade ou restritiva de direitos e o preso provisório.",
+      "pontos": [
+        "Colaboração com a ordem, obediência e trabalho.",
+        "Sujeitos: condenados e preso provisório."
+      ],
+      "atencao": [
+        "Alcança também as penas restritivas de direitos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 45"
+      ],
+      "exemplo": "Condenado à restritiva também está sujeito à disciplina compatível. Variação: Não importar disciplina carcerária inteira sem considerar pena/regime e direitos.",
+      "prova": [
+        "Preso provisório está incluído? Sim.",
+        "Só condenado à privativa tem disciplina? Não."
+      ],
+      "expected": {
+        "unit_id": "7d98e6f0-aef2-529e-8d9b-d2ccdf874deb",
+        "content_sha256": "4c7ea1a96ba1a4578325f5c526a194d9883991f3b3d9e501dcd7b58699dd8f47",
+        "simples": "A disciplina consiste na colaboração com a ordem, na obediência às determinações das autoridades e seus agentes e no desempenho do trabalho. Estão sujeitos à disciplina o condenado à pena privativa de liberdade ou restritiva de direitos e o preso provisório.",
+        "pontos": [
+          "Colaboração com a ordem, obediência e trabalho.",
+          "Sujeitos: condenados e preso provisório."
+        ],
+        "atencao": [
+          "Alcança também as penas restritivas de direitos."
+        ],
+        "exemplo": "O condenado a pena restritiva também se sujeita à disciplina.",
+        "prova": [
+          "Assertiva que isenta o preso provisório da disciplina erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-45",
+      "unit_id": "2bffa2f8-c6bc-53dc-8bca-e6b0d1a4caef",
+      "content_sha256": "8ddecbbb61550fa7baadfa783b4eb080730caee8d464a024f3fa0794488383c8",
+      "simples": "Não haverá falta nem sanção disciplinar sem expressa e anterior previsão legal ou regulamentar. As sanções não poderão colocar em perigo a integridade física e moral do condenado. É vedado o emprego de cela escura. São vedadas as sanções coletivas.",
+      "pontos": [
+        "Legalidade das faltas e sanções.",
+        "Vedadas sanções que ameacem a integridade.",
+        "Vedada a cela escura.",
+        "Vedadas as sanções coletivas."
+      ],
+      "atencao": [
+        "Vedadas: CELA ESCURA e SANÇÕES COLETIVAS."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 53"
+      ],
+      "exemplo": "Sanção precisa de previsão anterior e não pode ameaçar integridade. Variação: Ainda que haja infração,sanção coletiva e cela escura são vedadas.",
+      "prova": [
+        "Pode criar punição depois do fato? Não.",
+        "Disciplina autoriza sanção coletiva? Não."
+      ],
+      "expected": {
+        "unit_id": "2bffa2f8-c6bc-53dc-8bca-e6b0d1a4caef",
+        "content_sha256": "8ddecbbb61550fa7baadfa783b4eb080730caee8d464a024f3fa0794488383c8",
+        "simples": "Não haverá falta nem sanção disciplinar sem expressa e anterior previsão legal ou regulamentar. As sanções não poderão colocar em perigo a integridade física e moral do condenado. É vedado o emprego de cela escura. São vedadas as sanções coletivas.",
+        "pontos": [
+          "Legalidade das faltas e sanções.",
+          "Vedadas sanções que ameacem a integridade.",
+          "Vedada a cela escura.",
+          "Vedadas as sanções coletivas."
+        ],
+        "atencao": [
+          "Vedadas: CELA ESCURA e SANÇÕES COLETIVAS."
+        ],
+        "exemplo": "A unidade não pode punir todos os presos de uma ala pela falta de um só.",
+        "prova": [
+          "Assertiva que admite sanção coletiva erra: é vedada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 53"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-46",
+      "unit_id": "f09f3a7f-f8a0-5c1e-8188-b0191aac9b74",
+      "content_sha256": "d0788835ac5df3a5f8a4f393490e900acc23685ae846b7bc8025648f8f6bb699",
+      "simples": "O condenado ou denunciado, no início da execução da pena ou da prisão, será cientificado das normas disciplinares.",
+      "pontos": [
+        "Ciência das normas disciplinares no início da execução."
+      ],
+      "atencao": [
+        "Dever de informação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 45"
+      ],
+      "exemplo": "Normas disciplinares são comunicadas no início da prisão/execução. Variação: Informação não permite criar norma retroativa ou sanção ilegal.",
+      "prova": [
+        "Denunciado também está no texto? Sim.",
+        "Só se comunica após primeira falta? Não."
+      ],
+      "expected": {
+        "unit_id": "f09f3a7f-f8a0-5c1e-8188-b0191aac9b74",
+        "content_sha256": "d0788835ac5df3a5f8a4f393490e900acc23685ae846b7bc8025648f8f6bb699",
+        "simples": "O condenado ou denunciado, no início da execução da pena ou da prisão, será cientificado das normas disciplinares.",
+        "pontos": [
+          "Ciência das normas disciplinares no início da execução."
+        ],
+        "atencao": [
+          "Dever de informação."
+        ],
+        "exemplo": "O preso recebe as regras disciplinares ao ingressar.",
+        "prova": [
+          "Assertiva que dispensa a ciência das normas disciplinares erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-47",
+      "unit_id": "6d51876e-bcdc-5e71-a5ad-e6755b703424",
+      "content_sha256": "43937d09ee54d844e13ff42a3ff1160efe0fb161e0abdea165f080e71a8924b0",
+      "simples": "O poder disciplinar, na execução da pena privativa de liberdade, será exercido pela autoridade administrativa conforme as disposições regulamentares.",
+      "pontos": [
+        "Poder disciplinar exercido pela autoridade administrativa."
+      ],
+      "atencao": [
+        "Autoridade ADMINISTRATIVA."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 54"
+      ],
+      "exemplo": "Autoridade administrativa exerce disciplina da pena privativa conforme regulamento. Variação: Não confundir com a competência judicial específica de restrição do 41 ou RDD.",
+      "prova": [
+        "Todo ato disciplinar pertence exclusivamente ao juiz? Não.",
+        "Poder administrativo autoriza afastar regras judiciais específicas? Não."
+      ],
+      "expected": {
+        "unit_id": "6d51876e-bcdc-5e71-a5ad-e6755b703424",
+        "content_sha256": "43937d09ee54d844e13ff42a3ff1160efe0fb161e0abdea165f080e71a8924b0",
+        "simples": "O poder disciplinar, na execução da pena privativa de liberdade, será exercido pela autoridade administrativa conforme as disposições regulamentares.",
+        "pontos": [
+          "Poder disciplinar exercido pela autoridade administrativa."
+        ],
+        "atencao": [
+          "Autoridade ADMINISTRATIVA."
+        ],
+        "exemplo": "O diretor aplica a sanção disciplinar prevista no regulamento.",
+        "prova": [
+          "Assertiva que atribui ao juiz o poder disciplinar na pena privativa erra: é da autoridade administrativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    }
+  ]
+}

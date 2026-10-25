@@ -1,0 +1,54 @@
+{
+  "verified_at": "2026-10-13T23:23:44.455963+00:00",
+  "scope": "Duas retiradas pedagógicas fundamentadas; originais e gabaritos preservados, sem atribuição de anulação à banca.",
+  "topics": [],
+  "repairs": [],
+  "items": [
+    {
+      "id": "0b5c2c94-3c4e-4d6a-b241-d35a18799103",
+      "item_number": 75,
+      "original_answer": "D",
+      "decision": "archived",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "norma": "Código Civil",
+          "artigo": "arts. 893, 897, parágrafo único, e 903"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7357.htm",
+          "norma": "Lei 7.357/1985",
+          "artigo": "art. 29"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Retirada pedagógica por ambiguidade de regime, sem declarar anulação da banca. Gabarito histórico D preservado: CC art. 893. O comando não restringe a análise ao Código Civil. A vedação de aval parcial do art. 897, parágrafo único, cede à lei especial por força do art. 903; o art. 29 da Lei do Cheque permite aval no todo ou em parte. A alternativa E pode ser válida nesse regime especial. Não ensinar vedação universal de aval parcial.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l7357.htm"
+        ]
+      }
+    },
+    {
+      "id": "91b5bb6e-165b-41bf-836a-3728734d5e73",
+      "item_number": 44,
+      "original_answer": "D",
+      "decision": "archived",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+          "norma": "Código de Trânsito Brasileiro",
+          "artigo": "art. 291, caput, §§ 1º e 2º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Retirada pedagógica por alcance excessivo do comando, sem declarar anulação da banca. Gabarito histórico D preservado. As exceções dos incisos I a III do art. 291, § 1º, do CTB tratam especificamente da lesão corporal culposa; o enunciado generaliza para todos os crimes de trânsito com pena até dois anos. A regra não pode ser apresentada ao aluno como impedimento universal à transação penal em qualquer crime de trânsito.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+        ]
+      }
+    }
+  ]
+}

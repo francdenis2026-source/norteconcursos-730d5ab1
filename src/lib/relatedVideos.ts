@@ -31,10 +31,14 @@ export function relatedVideos(
   discipline: string,
   topicLabel: string,
   limit = 4,
+  context: "general" | "enem" = "general",
 ): RelatedVideo[] {
-  const matchingSubjects = Object.keys(catalog.topicVideos).filter((subject) =>
-    correlates(subject, discipline),
-  );
+  const matchingSubjects = Object.keys(catalog.topicVideos).filter((subject) => {
+    const isEnem = /^enem\s*[—–-]/i.test(subject.trim());
+    if (isEnem !== (context === "enem")) return false;
+    const scopedSubject = isEnem ? subject.replace(/^enem\s*[—–-]\s*/i, "") : subject;
+    return correlates(scopedSubject, discipline);
+  });
   if (matchingSubjects.length === 0) return [];
 
   const bySpecificTopic: RelatedVideo[] = [];
@@ -48,4 +52,39 @@ export function relatedVideos(
     }
   }
   return [...bySpecificTopic, ...general].slice(0, limit);
+}
+
+/** Leis do percurso de estudo → matéria e assuntos do catálogo de vídeo-aulas (null = todos os assuntos da matéria). */
+const LAW_VIDEO_MAP: Record<string, { subject: string; topics: string[] | null }> = {
+  "codigo-penal": { subject: "Direito Penal", topics: null },
+  "codigo-processo-penal": { subject: "Direito Processual Penal", topics: null },
+  transito: { subject: "Legislação de Trânsito", topics: null },
+  drogas: { subject: "Legislação Especial e Direitos Humanos", topics: ["drogas"] },
+  abuso: { subject: "Legislação Especial e Direitos Humanos", topics: ["abuso de autoridade"] },
+  organizacoes: {
+    subject: "Legislação Especial e Direitos Humanos",
+    topics: ["organizacoes criminosas"],
+  },
+  eca: { subject: "Legislação Especial e Direitos Humanos", topics: ["crianca e do adolescente"] },
+  migracao: { subject: "Legislação Especial e Direitos Humanos", topics: ["migracao"] },
+  armas: { subject: "Legislação Especial e Direitos Humanos", topics: ["desarmamento"] },
+  hediondos: { subject: "Legislação Especial e Direitos Humanos", topics: ["hediondos"] },
+  tortura: { subject: "Legislação Especial e Direitos Humanos", topics: ["tortura"] },
+  "maria-penha": { subject: "Legislação Especial e Direitos Humanos", topics: ["maria da penha"] },
+  interceptacao: { subject: "Legislação Especial e Direitos Humanos", topics: ["interceptacao"] },
+  lavagem: { subject: "Legislação Especial e Direitos Humanos", topics: ["lavagem"] },
+};
+
+/** Vídeo-aulas da Central de mídia para uma lei do percurso de estudo (só o que realmente trata dela). */
+export function lawVideos(catalog: MediaCatalog, lawSlug: string, limit = 12): RelatedVideo[] {
+  const rule = LAW_VIDEO_MAP[lawSlug];
+  if (!rule) return [];
+  const byTopic = catalog.topicVideos[rule.subject] ?? {};
+  const out: RelatedVideo[] = [];
+  for (const [topic, videos] of Object.entries(byTopic)) {
+    if (topic === "*") continue;
+    if (rule.topics && !rule.topics.some((key) => normalize(topic).includes(key))) continue;
+    for (const video of videos) out.push({ ...video, subject: rule.subject, topic });
+  }
+  return out.slice(0, limit);
 }

@@ -1,0 +1,136 @@
+{
+  "version": "2026-10-11-pf-interestadual-targeted",
+  "checked_at": "2026-10-12T00:36:33.070457+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pf-interestadual",
+      "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 2,
+      "target_unit_keys": [
+        "art-1",
+        "art-2"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "source_sha256": "5fb4c0ed93e9e7275ed0b7458746a147ca6307a3862ca45d34b452ae39423d98",
+      "source_checked_at": "2026-10-12T00:31:20.266142+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pf-interestadual",
+      "course_id": "49804a78-208e-5414-a7ca-d26eaf5b5421",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
+      "content_sha256": "352eed28acede3992c8b680aeab77f4778bc76e66797440fa48bb9a29553aab0",
+      "simples": "A PF pode investigar as infrações indicadas quando há repercussão interestadual ou internacional que exija repressão uniforme, sem excluir a responsabilidade dos demais órgãos de segurança. A lista abrange sequestros com motivação política/função da vítima, cartel, violações de direitos humanos de tratados, cargas, produtos medicinais, instituições financeiras, misoginia pela internet e transporte de valores. Outros casos exigem os pressupostos do caput e autorização ou determinação ministerial.",
+      "pontos": [
+        "Caput: repercussão + necessidade de repressão uniforme; responsabilidades dos demais órgãos preservadas.",
+        "Cargas: transporte interestadual/internacional + indícios de grupo em mais de um Estado.",
+        "Instituições financeiras: indícios de associação em mais de um Estado.",
+        "Lei 14.967/2024: produtos controlados nas cargas e empresas de transporte de valores no inciso VIII."
+      ],
+      "atencao": [
+        "PF investigar não é regra automática de deslocamento de competência judicial.",
+        "Não elimine as condições específicas dos incisos IV e VI.",
+        "A referência antiga de cartel deve ser lida com a lei penal atual; não restaura incisos revogados da Lei 8.137."
+      ],
+      "exemplo": "Há roubo de cargas interestaduais e indícios de grupo em dois Estados, com necessidade de repressão uniforme: a hipótese deve ser examinada pela PF sem excluir órgãos estaduais. Variação: Um roubo isolado a instituição privada, sem indícios interestaduais nem os pressupostos gerais, não se enquadra automaticamente só por envolver dinheiro.",
+      "prova": [
+        "A atuação da PF exclui automaticamente as polícias estaduais? Não; o caput preserva suas responsabilidades.",
+        "O inciso VIII inclui empresas especializadas em transporte de valores? Sim; foi acrescentado pela Lei 14.967/2024.",
+        "A investigação de outros casos dispensa autorização/determinação ministerial? Não; o parágrafo único a exige, além dos pressupostos do caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm"
+      ],
+      "expected": {
+        "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
+        "content_sha256": "352eed28acede3992c8b680aeab77f4778bc76e66797440fa48bb9a29553aab0",
+        "simples": "Na forma do inciso I do §1º do art. 144 da Constituição, quando houver repercussão interestadual ou internacional que exija repressão uniforme, poderá a Polícia Federal, sem prejuízo da responsabilidade dos demais órgãos de segurança pública, em especial das Polícias Militares e Civis dos Estados, investigar, entre outras, infrações como: sequestro, cárcere privado e extorsão mediante sequestro, se o agente foi impelido por motivação política ou em razão da função pública exercida pela vítima; formação de cartel; violações a direitos humanos que o Brasil se comprometeu a reprimir por tratados; furto, roubo ou receptação de cargas, inclusive produtos controlados como pólvoras e explosivos, em operação interestadual ou internacional, com indícios de quadrilha em mais de um Estado; falsificação, adulteração e venda de produtos terapêuticos ou medicinais; furto, roubo ou dano contra instituições financeiras, com indícios de associação criminosa em mais de um Estado; crimes na internet que difundam conteúdo misógino; e furto, roubo ou dano contra empresas de transporte de valores. Atendidos os pressupostos, a PF apurará outros casos autorizados ou determinados pelo Ministro da Justiça.",
+        "pontos": [
+          "Exige repercussão interestadual ou internacional e necessidade de repressão uniforme.",
+          "Atribuição concorrente: não exclui as polícias estaduais.",
+          "Rol de infrações (incisos I a VIII).",
+          "Outros casos podem ser autorizados ou determinados pelo Ministro da Justiça."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incisos acrescidos por leis posteriores (por exemplo, o inciso VII sobre conteúdo misógino na internet e o inciso VIII sobre transporte de valores).",
+          "A atribuição é CONCORRENTE com as polícias estaduais."
+        ],
+        "exemplo": "Roubo de cargas por quadrilha que atua em mais de um Estado pode ser investigado pela Polícia Federal.",
+        "prova": [
+          "Assertiva que afasta a atribuição das Polícias Civis nesses casos erra: a PF atua sem prejuízo dos demais órgãos."
+        ],
+        "termos": [
+          {
+            "termo": "Repressão uniforme",
+            "significado": "Atuação coordenada em mais de um Estado ou país."
+          }
+        ],
+        "remissoes": [
+          "Constituição, art. 144, §1º, I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "pf-interestadual",
+      "course_id": "49804a78-208e-5414-a7ca-d26eaf5b5421",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
+      "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
+      "simples": "A vigência original foi fixada para a publicação. Alterações do rol, como a Lei 14.967/2024, precisam ser lidas no ato modificador e não retroagem automaticamente para tornar ilícita uma conduta anterior.",
+      "pontos": [
+        "Vigência: publicação; atribuição investigatória não cria, sozinha, novo crime."
+      ],
+      "atencao": [
+        "Não confunda ampliar investigação com criar tipo penal ou pena."
+      ],
+      "exemplo": "O aluno identifica a regra de vigência da Lei 10.446: publicação. Variação: A questão atribui uma nova pena à ampliação do inciso VIII: esse artigo não cria tal sanção.",
+      "prova": [
+        "O art. 2º fixa vacância de 45 dias? Não; a vigência é na publicação.",
+        "A ampliação do rol investigatório cria, por si, uma nova pena? Não; atribuição investigatória e tipificação penal são distintas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
+        "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    }
+  ]
+}

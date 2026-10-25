@@ -1,0 +1,225 @@
+{
+  "verified_at": "2026-10-13T05:30:53.180Z",
+  "scope": "33 dispositivos finais: arts. 780–811 e 798-A; as 775 aprovações anteriores foram preservadas, sem nova certificação de todo seu conteúdo.",
+  "target_keys": [
+    "art-780",
+    "art-781",
+    "art-782",
+    "art-783",
+    "art-784",
+    "art-785",
+    "art-786",
+    "art-787",
+    "art-788",
+    "art-789",
+    "art-790",
+    "art-791",
+    "art-792",
+    "art-793",
+    "art-794",
+    "art-795",
+    "art-796",
+    "art-797",
+    "art-798",
+    "art-798-a",
+    "art-799",
+    "art-800",
+    "art-801",
+    "art-802",
+    "art-803",
+    "art-804",
+    "art-805",
+    "art-806",
+    "art-807",
+    "art-808",
+    "art-809",
+    "art-810",
+    "art-811"
+  ],
+  "publication": {
+    "version": "2026-10-11-codigo-processo-penal-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 33,
+    "published": 33,
+    "improved": 33,
+    "preserved": 0,
+    "verified_at": "2026-10-13T05:29:39.296Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T05:30:52.479627+00:00",
+    "course_slug": "codigo-processo-penal",
+    "published_units": 33,
+    "target_keys": [
+      "art-780",
+      "art-781",
+      "art-782",
+      "art-783",
+      "art-784",
+      "art-785",
+      "art-786",
+      "art-787",
+      "art-788",
+      "art-789",
+      "art-790",
+      "art-791",
+      "art-792",
+      "art-793",
+      "art-794",
+      "art-795",
+      "art-796",
+      "art-797",
+      "art-798",
+      "art-798-a",
+      "art-799",
+      "art-800",
+      "art-801",
+      "art-802",
+      "art-803",
+      "art-804",
+      "art-805",
+      "art-806",
+      "art-807",
+      "art-808",
+      "art-809",
+      "art-810",
+      "art-811"
+    ],
+    "all_authored_fields_match": true,
+    "cpp_structure_preserved": true,
+    "untargeted_cpp_explanations_preserved": 813,
+    "concurrent_other_changes": []
+  },
+  "preservation": {
+    "verified_at": "2026-10-13T05:30:52.895233+00:00",
+    "authored_explanations_confirmed": 33,
+    "untargeted_explanations_preserved": 3480,
+    "untargeted_course_explanations_preserved": 775,
+    "prior_revisions_retained_in_manifest": 33,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "syllabus_editions",
+      "content_sources"
+    ],
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability."
+  },
+  "cpp": {
+    "slug": "codigo-processo-penal",
+    "current": 808,
+    "review_metadata": 808,
+    "pending": 0
+  },
+  "library_totals": {
+    "current_units": 3511,
+    "current_review_metadata": 2460,
+    "pending_current_review_metadata": 1051
+  },
+  "source_audit": {
+    "current_cpp_units": 808,
+    "text_differences": 0,
+    "missing_current_units": 0,
+    "unexpected_current_units": 0,
+    "method": "HTML5 repair and comparison with current database; reused official raw with original collection timestamp."
+  },
+  "sources": [
+    {
+      "file": "codigo-processo-penal.html",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "sha256": "6f5bdd2bba16060b80b305d4c19014b7b16ecd3781bf48df1e2649611f8be34e",
+      "acquisition_timestamp": "2026-10-12T03:15:23.450687+00:00",
+      "acquisition_date": "2026-10-12",
+      "reused_official_raw": true,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "codigo-penal.html",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "acquisition_timestamp": "2026-10-12T23:38:16.494220+00:00",
+      "acquisition_date": "2026-10-12",
+      "reused_official_raw": true,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "constituicao.html",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sha256": "d060fef7721813f7babaf0779c54a8c69e0f5d8b675cb4d02a01d914218f0edf",
+      "acquisition_timestamp": null,
+      "acquisition_date": null,
+      "reused_official_raw": true,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "stj-institucional-homologacao.html",
+      "url": "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+      "sha256": "f3debcc16c9b3aab03fcd7c982edd334f55a18847d7bef7f232e034a016cab61",
+      "acquisition_timestamp": null,
+      "acquisition_date": "2026-10-13",
+      "reused_official_raw": false,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "mj-cooperacao.html",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal",
+      "sha256": "d26538d1a2cf7e5792f7cb430f0a2d81c3570cb63b7c963620af2340c36e1c19",
+      "acquisition_timestamp": null,
+      "acquisition_date": "2026-10-13",
+      "reused_official_raw": false,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "stf-oab-decision.html",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-que-revogou-direitos-dos-advogados-por-erro-legislativo/",
+      "sha256": "443b3937d5f414b8ce914a09db52ef3c944045fe27f0ac736e1569cafc18b188",
+      "acquisition_timestamp": "2026-10-13T05:20:48.088Z",
+      "acquisition_date": "2026-10-13",
+      "reused_official_raw": false,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    },
+    {
+      "file": "stj-regimento-page.html",
+      "url": "https://www.stj.jus.br/sites/portalp/Leis-e-normas/Regimento-Interno",
+      "sha256": "7e09678b8c503e9143237dc68d9bf9e70cad9cc8a9f4b8f85a3ab508db34057d",
+      "acquisition_timestamp": "2026-10-13T05:20:48.021Z",
+      "acquisition_date": "2026-10-13",
+      "reused_official_raw": false,
+      "reread_at": "2026-10-13T05:29:32.445346+00:00"
+    }
+  ],
+  "source_limits": [
+    "A nova requisição ao CPP no Planalto retornou 503; a cópia oficial obtida nesta sessão em 12/10 foi reutilizada com sua data e hash originais, sem fingir uma nova coleta.",
+    "As fontes oficiais institucionais do STJ/MJ e notícia do STF foram consultadas em 13/10. A página do STJ encaminha ao RISTJ; o PDF integral do regimento não ficou acessível. Não foram certificados todos os prazos, tratados, tabelas locais ou hipóteses de dispensa.",
+    "A cópia bruta oficial da Constituição foi relida nesta sessão, mas seu instante original de aquisição não consta do índice deste lote. Ele permanece nulo no relatório.",
+    "A ADI 7231 registrada na notícia oficial diz respeito à revogação indevida de garantias da advocacia; não foi tratada como declaração de invalidade do CPP 798-A."
+  ],
+  "validation": {
+    "tests": 408,
+    "typecheck": "passed",
+    "production_build": "passed",
+    "dry_run": {
+      "version": "2026-10-11-codigo-processo-penal-targeted",
+      "dry_run": true,
+      "laws": 1,
+      "explanations": 33,
+      "published": 0,
+      "improved": 0,
+      "preserved": 0
+    }
+  },
+  "search_deployment": {
+    "url": "https://norteconcursos.xyz/assets/legal-course._slug-DHTBHON_.js",
+    "status": 200,
+    "checked_at": "2026-10-13T05:30:15.742Z",
+    "sha256": "4583bfd5ab923dacaf347b3d13447cac6e7b7474ca10b984ea4bd6360f747552",
+    "hasMatchingExcerpt": true,
+    "hasClearSearch": true,
+    "hasNoMatchesState": true
+  },
+  "private_evidence": "Raw official sources and snapshots are kept only in ignored outputs, outside Git."
+}

@@ -1,0 +1,733 @@
+{
+  "course_slug": "codigo-penal",
+  "units": {
+    "art-2": {
+      "simples": "A lei posterior que deixa de considerar o fato crime encerra execução e efeitos penais da condenação. A lei posterior mais favorável também alcança fatos anteriores, mesmo após trânsito em julgado. Distinguir descriminalização, redução de pena e efeitos civis.",
+      "pontos": [
+        "Abolitio criminis: cessa execução e efeitos PENAIS.",
+        "Lei favorável retroage mesmo com condenação definitiva."
+      ],
+      "atencao": [
+        "Não confundir revogação de um número de artigo com descriminalização quando a conduta permanece incriminada em outro tipo. A redação não elimina automaticamente todo efeito civil."
+      ],
+      "exemplo": "Após a condenação definitiva, lei nova deixa de considerar crime a conduta, sem mantê-la em outro tipo. Variação: Se a lei nova apenas agrava a pena, não se aplica retroativamente para piorar esse fato anterior.",
+      "prova": [
+        "O trânsito em julgado impede a lei penal favorável? Não; o parágrafo expressamente alcança decisões definitivas.",
+        "A cessação dos efeitos penais apaga automaticamente reparação civil? Não; o artigo delimita os efeitos penais."
+      ],
+      "termos": [
+        {
+          "termo": "Abolitio criminis",
+          "significado": "Lei posterior deixa de considerar crime a conduta, respeitada a análise de continuidade normativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-3": {
+      "simples": "A lei excepcional ou temporária continua aplicável aos fatos praticados durante sua vigência, mesmo após terminar o período ou cessar a circunstância excepcional. Essa ultratividade evita transformar o término programado em descriminalização automática.",
+      "pontos": [
+        "A data do fato precisa estar dentro da vigência.",
+        "Cessação da duração ou circunstância não impede a aplicação ao fato anterior abrangido."
+      ],
+      "atencao": [
+        "Não confundir simples término da lei temporária com toda lei posterior favorável; sucessões legislativas exigem identificar o que efetivamente mudou."
+      ],
+      "exemplo": "Uma lei temporária tem duração até 30 de junho e o fato abrangido ocorre em 10 de junho. Variação: Se a conduta ocorre apenas depois do término, o art. 3º não cria por si vigência para incriminar esse fato novo.",
+      "prova": [
+        "O término programado apaga automaticamente o fato da vigência? Não; há ultratividade.",
+        "O artigo alcança qualquer fato futuro depois do prazo? Não; exige fato praticado durante a vigência."
+      ],
+      "termos": [
+        {
+          "termo": "Ultratividade",
+          "significado": "Aplicação da lei ao fato de sua vigência mesmo depois de encerrada sua duração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Para o tempo do crime, o Código adota o momento da ação ou omissão, ainda que o resultado aconteça depois. A data do resultado não substitui automaticamente a data da conduta para essa regra.",
+      "pontos": [
+        "Teoria da atividade: momento da ação OU omissão.",
+        "Tempo do crime e lugar do crime têm regras diferentes."
+      ],
+      "atencao": [
+        "Não usar a regra temporal para resolver automaticamente prescrição, crimes permanentes ou continuidade: esses temas têm normas específicas."
+      ],
+      "exemplo": "A conduta ocorre em um dia e o resultado somente no dia seguinte; a questão pede o tempo do crime pelo art. 4º. Variação: Se a pergunta é o lugar do crime, consultar o art. 6º: nele o resultado também é relevante.",
+      "prova": [
+        "A data do resultado é sempre o tempo do crime? Não; a regra usa a ação ou omissão.",
+        "Tempo e lugar seguem a mesma teoria? Não; atividade no art. 4º e ubiquidade no art. 6º."
+      ],
+      "termos": [
+        {
+          "termo": "Teoria da atividade",
+          "significado": "Regra que localiza temporalmente o crime no momento da ação ou omissão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-5": {
+      "simples": "A lei brasileira alcança crime no território nacional, respeitadas convenções, tratados e regras internacionais. Embarcações e aeronaves têm critérios distintos conforme nacionalidade, natureza pública/privada e localização.",
+      "pontos": [
+        "Públicas ou a serviço do governo brasileiro: extensão territorial onde estiverem.",
+        "Privadas/mercantes brasileiras: observar o espaço aéreo correspondente ou alto-mar.",
+        "Estrangeiras privadas: o §2º delimita pouso, espaço aéreo, porto e mar territorial brasileiros."
+      ],
+      "atencao": [
+        "Não afirmar que toda embarcação brasileira privada é território por extensão em qualquer porto estrangeiro. Territorialidade não decide sozinha competência, imunidades ou extradição."
+      ],
+      "exemplo": "O fato ocorre em embarcação brasileira de natureza pública no exterior; a questão pede a extensão territorial penal do §1º. Variação: Em embarcação brasileira privada num porto estrangeiro, não repetir automaticamente a regra das públicas; examinar o regime pertinente e eventual art. 7º.",
+      "prova": [
+        "Embarcação pública e privada seguem sempre o mesmo recorte? Não; o §1º diferencia natureza e localização.",
+        "O caput ignora tratados? Não; expressamente ressalva convenções, tratados e direito internacional."
+      ],
+      "termos": [
+        {
+          "termo": "Territorialidade temperada",
+          "significado": "Aplicação territorial com ressalvas de convenções, tratados e regras internacionais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "O lugar do crime inclui onde a ação ou omissão ocorreu, integral ou parcialmente, e onde o resultado ocorreu ou deveria ocorrer. Essa ubiquidade é diferente da regra de tempo e não substitui automaticamente normas processuais de competência.",
+      "pontos": [
+        "Conduta no todo OU em parte e resultado efetivo OU esperado.",
+        "Lugar penal não se confunde com regra processual de foro."
+      ],
+      "atencao": [
+        "Não ensinar este artigo como único critério para distribuir competência entre juízos. Normas processuais e situações especiais precisam de análise própria."
+      ],
+      "exemplo": "Uma conduta começa num país e o resultado deveria produzir-se no Brasil. Variação: Se a pergunta exige o tempo do crime, o art. 4º utiliza ação/omissão, não a mesma enumeração espacial.",
+      "prova": [
+        "O resultado esperado também consta? Sim; o texto inclui onde deveria produzir-se.",
+        "Ubiquidade resolve sozinha o foro de todo processo? Não; competência processual tem disciplina própria."
+      ],
+      "termos": [
+        {
+          "termo": "Ubiquidade",
+          "significado": "Consideração dos lugares da conduta e do resultado, efetivo ou esperado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-7": {
+      "simples": "A extraterritorialidade alcança hipóteses distintas de crimes no exterior. O inciso I tem regime próprio; o inciso II exige condições cumulativas, e o §3º acrescenta condições para crime de estrangeiro contra brasileiro fora do país.",
+      "pontos": [
+        "§2º: entrada no Brasil, dupla punibilidade, possibilidade de extradição e condições sobre julgamento, pena, perdão ou extinção.",
+        "§3º: acrescenta ausência/negativa de extradição e requisição do Ministro da Justiça.",
+        "Não confundir hipótese de inciso I com as condicionadas do inciso II."
+      ],
+      "atencao": [
+        "Ser brasileiro não elimina as condições do §2º. Não afirmar autorização universal de novo julgamento sem distinguir a hipótese legal e os tratados pertinentes."
+      ],
+      "exemplo": "Crime no exterior praticado por brasileiro é analisado sob o inciso II, b, mas falta uma condição cumulativa do §2º. Variação: Para estrangeiro contra brasileiro no exterior, além das condições do §2º, verificar os requisitos adicionais do §3º.",
+      "prova": [
+        "Basta nacionalidade brasileira em toda hipótese do inciso II? Não; as condições do §2º são cumulativas.",
+        "O §3º exige apenas as mesmas condições, sem acréscimos? Não; adiciona os dois requisitos de suas alíneas."
+      ],
+      "termos": [
+        {
+          "termo": "Extraterritorialidade condicionada",
+          "significado": "Incidência da lei brasileira no exterior dependente das condições legais da hipótese."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Pena efetivamente cumprida no exterior pelo mesmo crime repercute na pena imposta no Brasil. Se as penas são idênticas, há cômputo; se diversas, há atenuação. Não se trata de somar integralmente duas execuções sem essa regra.",
+      "pontos": [
+        "Penas idênticas: computar a pena cumprida.",
+        "Penas diversas: atenuar a pena brasileira."
+      ],
+      "atencao": [
+        "A regra exige pena cumprida pelo mesmo crime; não apagar a análise de extraterritorialidade nem inventar fórmula matemática única de equivalência entre sanções diferentes."
+      ],
+      "exemplo": "Pena de prisão já cumprida no exterior é da mesma natureza da pena brasileira pelo mesmo crime. Variação: Se as penas forem diversas, a redação determina atenuação, não o mesmo cômputo automático de penas idênticas.",
+      "prova": [
+        "O dispositivo ignora a pena já cumprida? Não; manda computar ou atenuar conforme o caso.",
+        "Condenação estrangeira sem pena cumprida equivale automaticamente à hipótese? Não; o artigo indica pena cumprida."
+      ],
+      "termos": [
+        {
+          "termo": "Cômputo da pena estrangeira",
+          "significado": "Consideração da pena já cumprida quando idêntica à brasileira pelo mesmo crime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-9": {
+      "simples": "A sentença estrangeira pode ser homologada para efeitos civis ou medida de segurança nas condições do artigo. A reparação depende de pedido da parte interessada; outros efeitos têm condição de tratado ou requisição. A competência constitucional atual deve ser conferida no STJ.",
+      "pontos": [
+        "Efeitos civis: reparação, restituições e outros efeitos, com pedido da parte.",
+        "Medida de segurança: observar a condição do parágrafo, b.",
+        "Homologação não significa execução automática de toda pena estrangeira por esta regra."
+      ],
+      "atencao": [
+        "Não copiar a antiga competência do STF: a Constituição atribui homologação de decisões estrangeiras ao STJ. Não ampliar os efeitos deste artigo sem a disciplina específica."
+      ],
+      "exemplo": "A parte interessada pede homologação para reparação civil, preenchidas as condições pertinentes. Variação: Se o objetivo é sujeitar a medida de segurança, aplicar os requisitos da alínea b, não apenas o pedido civil da alínea a.",
+      "prova": [
+        "Reparação e medida de segurança têm requisitos idênticos? Não; o parágrafo distingue as hipóteses.",
+        "O artigo homologa automaticamente qualquer sentença? Não; indica possibilidades condicionadas e exige procedimento competente."
+      ],
+      "termos": [
+        {
+          "termo": "Homologação",
+          "significado": "Reconhecimento da decisão estrangeira no procedimento e para os efeitos legalmente pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-10": {
+      "simples": "Na contagem penal indicada neste artigo, o dia do começo é incluído. Dias, meses e anos seguem o calendário comum. O candidato deve distinguir essa regra da contagem processual penal para não transportar automaticamente o marco inicial.",
+      "pontos": [
+        "Inclui-se o dia do começo.",
+        "Meses e anos seguem calendário comum, não equivalem sempre a blocos de 30 ou 365 dias."
+      ],
+      "atencao": [
+        "Identificar se o prazo é penal material ou processual. O art. 798 do CPP tem regra própria; não usar o art. 10 para toda intimação processual."
+      ],
+      "exemplo": "Em prazo penal material iniciado no dia 10, esse dia é considerado o primeiro na regra do art. 10. Variação: Se a questão trata de prazo processual após intimação, conferir o CPP antes de repetir a inclusão do dia inicial.",
+      "prova": [
+        "O dia inicial é excluído por esta regra? Não; ele é incluído.",
+        "Todo mês deve ser convertido em 30 dias? Não; usa-se calendário comum."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo penal material",
+          "significado": "Prazo sujeito à regra penal de contagem, distinto da contagem processual pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-11": {
+      "simples": "O artigo manda desprezar frações de dia em penas privativas de liberdade e restritivas de direitos. Na multa, a compilação conserva referência monetária histórica a cruzeiro, que não deve ser aprendida como moeda atual.",
+      "pontos": [
+        "Privação/restrição de direitos: desprezar frações de dia.",
+        "A redação monetária é histórica e precisa ser integrada ao regime atual de multa e moeda."
+      ],
+      "atencao": [
+        "Cruzeiro não é moeda vigente. Não gerar exercício automático para memorizar essa expressão como unidade atual nem inventar conversão monetária sem base."
+      ],
+      "exemplo": "O cálculo de pena privativa de liberdade termina em certo número de dias e uma fração de dia. Variação: Se a pergunta é de multa atual, não tratar o cruzeiro residual como moeda vigente; consultar as regras próprias e a moeda atual.",
+      "prova": [
+        "A fração de dia é arredondada para acrescentar um dia pelo artigo? Não; a redação determina desprezá-la.",
+        "A palavra cruzeiro na compilação prova que essa moeda vigora hoje? Não; é referência histórica residual."
+      ],
+      "termos": [
+        {
+          "termo": "Fração de dia",
+          "significado": "Parte inferior a um dia que o artigo manda desprezar nas penas indicadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-12": {
+      "simples": "As regras gerais do Código Penal também se aplicam aos fatos previstos em leis especiais, salvo quando a lei especial dispuser de modo diferente. A solução exige identificar regra específica antes de importar automaticamente a regra geral.",
+      "pontos": [
+        "Aplicação subsidiária das regras gerais.",
+        "Disposição diversa da lei especial prevalece no ponto que regula."
+      ],
+      "atencao": [
+        "Não aplicar indistintamente penas, prazos ou exceções de uma lei a outra. Regra especial precisa ser efetivamente identificada, não presumida pela existência de uma lei com outro nome."
+      ],
+      "exemplo": "Uma lei especial não disciplina determinado aspecto coberto por regra geral do CP. Variação: Se a lei especial traz disciplina diferente para esse mesmo ponto, não substituir sua regra pela geral sem examinar validade e âmbito.",
+      "prova": [
+        "A existência de lei especial sempre afasta todo o CP? Não; o artigo admite aplicação das regras gerais.",
+        "A ressalva depende de disposição diferente? Sim; não da simples denominação de lei especial."
+      ],
+      "termos": [
+        {
+          "termo": "Subsidiariedade",
+          "significado": "Aplicação da regra geral quando o regime especial não dispõe de modo diverso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-13": {
+      "simples": "O resultado depende de nexo com a ação ou omissão sem a qual não teria ocorrido. A causa superveniente relativamente independente rompe a imputação desse resultado quando o produz por si; omissão relevante exige dever e possibilidade de agir.",
+      "pontos": [
+        "§1º: causa relativamente independente superveniente precisa produzir por si o resultado.",
+        "§2º: o agente devia E podia agir; dever por lei, assunção de responsabilidade ou criação anterior do risco."
+      ],
+      "atencao": [
+        "Causalidade sozinha não prova todos os elementos da responsabilidade penal. Dever de agir não dispensa possibilidade concreta, e a causa superveniente não apaga os fatos anteriores imputáveis."
+      ],
+      "exemplo": "Responsável que assumiu proteção podia agir para evitar o resultado e se omite, presentes os demais elementos. Variação: Se a atuação era concretamente impossível, não presumir a relevância da omissão só pela existência abstrata do dever.",
+      "prova": [
+        "Basta o omitente ter dever, mesmo sem poder agir? Não; o §2º exige ambos.",
+        "A causa superveniente apaga todos os atos anteriores? Não; o §1º preserva a imputação dos fatos anteriores."
+      ],
+      "termos": [
+        {
+          "termo": "Posição de garantidor",
+          "significado": "Dever de agir nas hipóteses do §2º, acompanhado de possibilidade concreta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-14": {
+      "simples": "Consumação reúne todos os elementos do tipo. Tentativa exige execução iniciada e ausência de consumação por circunstâncias alheias à vontade. A redução da tentativa tem ressalva legal e não se confunde com desistência voluntária.",
+      "pontos": [
+        "Tentativa: início de execução, não mera preparação.",
+        "Regra de redução: 1/3 a 2/3, salvo disposição em contrário."
+      ],
+      "atencao": [
+        "Não declarar que todo crime admite tentativa. O tipo e sua estrutura precisam ser examinados, e uma interrupção voluntária remete ao art. 15."
+      ],
+      "exemplo": "A execução é iniciada e interrompida por intervenção externa antes de consumar o crime. Variação: Se o agente voluntariamente desiste quando podia prosseguir, reavaliar pelo art. 15, não repetir automaticamente a tentativa.",
+      "prova": [
+        "Mera preparação sempre basta? Não; a definição exige início de execução.",
+        "A redução da tentativa é sempre metade? Não; varia de um a dois terços, ressalvadas regras especiais."
+      ],
+      "termos": [
+        {
+          "termo": "Tentativa",
+          "significado": "Execução iniciada sem consumação por circunstâncias alheias à vontade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-15": {
+      "simples": "Na desistência voluntária, o agente para a execução por sua vontade; no arrependimento eficaz, impede o resultado. Em ambas as hipóteses do artigo, responde pelos atos já praticados que forem penalmente relevantes, não por tentativa automaticamente.",
+      "pontos": [
+        "Desistir voluntariamente OU impedir a produção do resultado.",
+        "Persistem responsabilidades pelos atos já praticados."
+      ],
+      "atencao": [
+        "A medida impeditiva precisa evitar o resultado para a hipótese descrita. Não confundir com simples reparação depois da consumação do art. 16."
+      ],
+      "exemplo": "O agente, podendo continuar, voluntariamente para a execução antes da consumação. Variação: Se para apenas porque uma intervenção externa torna impossível continuar, a conclusão exige examinar tentativa, e não supor voluntariedade.",
+      "prova": [
+        "O artigo apaga todo delito anterior já praticado? Não; responde pelos atos já praticados.",
+        "Só tentar impedir o resultado, sem efetivamente evitá-lo, satisfaz sempre a hipótese? Não; o texto exige impedir sua produção."
+      ],
+      "termos": [
+        {
+          "termo": "Arrependimento eficaz",
+          "significado": "Atuação que efetivamente impede o resultado, distinta da reparação posterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-16": {
+      "simples": "O arrependimento posterior reduz a pena em crimes sem violência ou grave ameaça à pessoa quando o dano é reparado ou a coisa restituída por ato voluntário até o recebimento da denúncia ou queixa. Não desfaz automaticamente a consumação.",
+      "pontos": [
+        "Sem violência ou grave ameaça À PESSOA.",
+        "Reparação/restituição voluntária até o RECEBIMENTO da denúncia/queixa.",
+        "Redução de 1/3 a 2/3."
+      ],
+      "atencao": [
+        "Não trocar recebimento por oferecimento. A suficiência da reparação e a incidência concreta precisam ser avaliadas; não prometer extinção da punibilidade por toda devolução."
+      ],
+      "exemplo": "Em crime abrangido, a restituição voluntária ocorre antes do recebimento da denúncia. Variação: Depois do recebimento, não afirmar a mesma incidência do art. 16; eventuais efeitos em outras regras devem ser analisados separadamente.",
+      "prova": [
+        "A devolução sempre elimina o crime? Não; o artigo prevê redução condicionada.",
+        "O marco é necessariamente o oferecimento? Não; é o recebimento da denúncia ou queixa."
+      ],
+      "termos": [
+        {
+          "termo": "Arrependimento posterior",
+          "significado": "Causa de redução condicionada após a consumação, nos requisitos do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-17": {
+      "simples": "A tentativa não é punida quando o meio é absolutamente ineficaz ou o objeto absolutamente impróprio, tornando impossível a consumação. A impossibilidade absoluta precisa ser distinguida de dificuldade ou ineficácia apenas relativa.",
+      "pontos": [
+        "Ineficácia ABSOLUTA do meio OU impropriedade ABSOLUTA do objeto.",
+        "Falha relativa não se converte automaticamente em crime impossível."
+      ],
+      "atencao": [
+        "Não tratar toda vigilância, monitoramento ou chance pequena como impossibilidade absoluta. Elementos concretos e jurisprudência pertinente precisam ser identificados."
+      ],
+      "exemplo": "O meio é demonstradamente incapaz, de forma absoluta, de produzir o resultado pretendido. Variação: Se o meio apenas falha naquele emprego, mas era apto, reavaliar tentativa em vez de presumir impossibilidade absoluta.",
+      "prova": [
+        "Qualquer fracasso caracteriza crime impossível? Não; o artigo exige impossibilidade absoluta pelas razões indicadas.",
+        "Objeto relativamente inadequado basta pela redação? Não; ela exige absoluta impropriedade."
+      ],
+      "termos": [
+        {
+          "termo": "Impossibilidade absoluta",
+          "significado": "Inaptidão do meio ou do objeto que torna impossível a consumação nos termos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-18": {
+      "simples": "Dolo abrange querer o resultado ou assumir o risco de produzi-lo; culpa envolve imprudência, negligência ou imperícia. A punição culposa depende de previsão legal expressa, não sendo criada só pela gravidade do dano.",
+      "pontos": [
+        "Dolo direto e assunção do risco têm recortes distintos.",
+        "Culpa exige previsão expressa para o fato."
+      ],
+      "atencao": [
+        "Resultado grave não prova automaticamente dolo eventual. A atitude em relação ao risco e os elementos do caso precisam ser demonstrados."
+      ],
+      "exemplo": "O agente age negligentemente e causa resultado, mas o tipo examinado não prevê modalidade culposa. Variação: Se houver previsão culposa e seus pressupostos, a punição pode ser examinada; assumir conscientemente o risco é análise diferente de simples negligência.",
+      "prova": [
+        "A lei pune culposamente qualquer crime? Não; exige os casos expressos.",
+        "Todo resultado grave prova dolo? Não; o elemento subjetivo não se deduz apenas da gravidade."
+      ],
+      "termos": [
+        {
+          "termo": "Dolo eventual",
+          "significado": "Assunção do risco de produzir o resultado, cuja demonstração exige análise concreta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-19": {
+      "simples": "O resultado que agrava especialmente a pena só é imputado ao agente quando causado ao menos culposamente. A regra afasta atribuição penal automática de um resultado agravador sem o vínculo subjetivo mínimo exigido.",
+      "pontos": [
+        "Culpa é o mínimo para o resultado agravador.",
+        "O artigo não autoriza responsabilidade penal puramente objetiva."
+      ],
+      "atencao": [
+        "Não presumir culpa só pela existência do resultado. Examinar nexo e elemento subjetivo, sem dispensar os requisitos do crime-base."
+      ],
+      "exemplo": "Um resultado agravador ocorre, mas não há demonstração nem de dolo nem de culpa quanto a ele. Variação: Com culpa efetivamente demonstrada em relação ao resultado e os demais pressupostos, a imputação do agravador pode ser analisada.",
+      "prova": [
+        "O agravador exige sempre intenção direta? Não; a redação admite ao menos culpa.",
+        "É suficiente o resultado acontecer? Não; é necessário o vínculo subjetivo mínimo."
+      ],
+      "termos": [
+        {
+          "termo": "Resultado agravador",
+          "significado": "Resultado que eleva especialmente a pena e exige imputação ao menos culposa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-20": {
+      "simples": "Erro sobre elemento do tipo exclui dolo, permitindo culpa apenas se legalmente prevista. O artigo distingue descriminante putativa fática, erro provocado por terceiro e erro sobre a identidade da vítima.",
+      "pontos": [
+        "Erro de tipo exclui dolo; culpa depende de previsão.",
+        "Erro sobre pessoa não isenta por si: considerar condições da vítima pretendida.",
+        "Descriminante putativa: analisar justificabilidade do erro e modalidade culposa prevista."
+      ],
+      "atencao": [
+        "Não confundir erro de fato com erro sobre a ilicitude do art. 21. A identidade equivocada da vítima não apaga automaticamente o crime."
+      ],
+      "exemplo": "O agente, por erro sobre elemento do tipo, atua sem dolo; a hipótese não prevê crime culposo. Variação: Se a lei prevê culpa e o erro dela deriva, analisar essa possibilidade em vez de concluir isenção universal.",
+      "prova": [
+        "Erro de tipo permite criar culpa não prevista? Não; a previsão legal é necessária.",
+        "Erro sobre pessoa isenta sempre? Não; o §3º estabelece disciplina própria."
+      ],
+      "termos": [
+        {
+          "termo": "Erro de tipo",
+          "significado": "Erro relativo a elemento constitutivo do tipo legal, com os efeitos previstos no artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-21": {
+      "simples": "O erro sobre ilicitude, quando inevitável, isenta de pena; quando evitável, pode reduzi-la. A lei distingue essa situação do simples desconhecimento da lei, declarado inescusável.",
+      "pontos": [
+        "Inevitável: isenção; evitável: possível redução de 1/6 a 1/3.",
+        "Evitação é analisada nas circunstâncias concretas de alcançar consciência da ilicitude."
+      ],
+      "atencao": [
+        "Não usar a frase desconhecimento é inescusável para eliminar a hipótese legal de erro de proibição inevitável. Também não presumir inevitabilidade pelo simples relato do agente."
+      ],
+      "exemplo": "O erro sobre ilicitude é demonstrado como inevitável nas circunstâncias relevantes. Variação: Se era possível alcançar consciência da ilicitude, analisar erro evitável e sua possível redução, não a mesma isenção.",
+      "prova": [
+        "O erro inevitável tem a mesma resposta do evitável? Não; isenção e possível redução são efeitos diferentes.",
+        "A redução legal é metade fixa? Não; é de um sexto a um terço."
+      ],
+      "termos": [
+        {
+          "termo": "Erro de proibição",
+          "significado": "Erro sobre a ilicitude do fato, diferenciado do erro sobre elemento do tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-22": {
+      "simples": "Coação irresistível e estrita obediência a ordem de superior hierárquico não manifestamente ilegal têm a disciplina do artigo. As condições são essenciais: pressão resistível ou ordem manifestamente ilegal não recebem automaticamente a mesma resposta.",
+      "pontos": [
+        "Coação precisa ser irresistível na hipótese examinada.",
+        "Obediência: ordem de superior, não manifestamente ilegal, e execução estrita."
+      ],
+      "atencao": [
+        "Não equiparar toda relação de emprego à hierarquia do dispositivo nem transformar ordens manifestamente criminosas em justificativa. O contexto e a forma de coação importam."
+      ],
+      "exemplo": "O agente executa estritamente ordem de superior hierárquico não manifestamente ilegal nas condições que preenchem o artigo. Variação: Se a ilegalidade é manifesta, a obediência não concede automaticamente a exclusão descrita.",
+      "prova": [
+        "Toda ordem superior elimina a responsabilidade? Não; há requisitos expressos.",
+        "Pressão apenas resistível equivale automaticamente à coação irresistível? Não; é necessário o requisito da hipótese."
+      ],
+      "termos": [
+        {
+          "termo": "Ordem não manifestamente ilegal",
+          "significado": "Condição legal da obediência hierárquica, distinta de autorização geral para cumprir ordem criminosa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-23": {
+      "simples": "O artigo enumera estado de necessidade, legítima defesa, estrito cumprimento de dever legal e exercício regular de direito como hipóteses de exclusão de ilicitude. Em qualquer delas, o excesso doloso ou culposo recebe análise própria.",
+      "pontos": [
+        "Excludentes exigem seus requisitos, não simples declaração do agente.",
+        "Responsabilidade pelo excesso doloso OU culposo."
+      ],
+      "atencao": [
+        "Não apresentar atividade policial ou direito de defesa como imunidade irrestrita. A chamada defesa da honra não é legítima defesa constitucionalmente admitida."
+      ],
+      "exemplo": "A atuação começa dentro dos requisitos de uma excludente, mas passa a exceder seus limites. Variação: Se a conduta permanece integralmente nos requisitos, a análise da excludente é diferente; a existência inicial dela não dispensa examinar o excesso.",
+      "prova": [
+        "O excesso só é punível quando doloso? Não; o parágrafo também indica culposo, observados seus pressupostos.",
+        "Invocar um direito dispensa seus limites? Não; exercício regular e abuso são situações diferentes."
+      ],
+      "termos": [
+        {
+          "termo": "Excesso punível",
+          "significado": "Ultrapassagem dos limites da hipótese justificante, dolosa ou culposa nos termos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-24": {
+      "simples": "O estado de necessidade exige perigo atual, não provocado por vontade do agente, sem outro modo de evitar, e proteção de direito cujo sacrifício não era razoável exigir. O dever legal de enfrentar o perigo e a possibilidade de redução têm disciplina própria.",
+      "pontos": [
+        "Direito próprio OU alheio; perigo atual e inevitabilidade pelos demais meios.",
+        "Dever legal de enfrentar impede a alegação na hipótese do §1º.",
+        "Sacrifício razoavelmente exigível: possível redução de 1/3 a 2/3 no §2º."
+      ],
+      "atencao": [
+        "Não presumir necessidade em qualquer conveniência ou perigo remoto. A razoabilidade do sacrifício e as alternativas concretas são requisitos."
+      ],
+      "exemplo": "Para salvar direito de perigo atual, sem alternativa e nos requisitos do artigo, o agente pratica o fato. Variação: Se era razoável exigir o sacrifício do direito ameaçado, o §2º trata de possível redução, não da mesma exclusão automática.",
+      "prova": [
+        "Só pode proteger direito próprio? Não; também direito alheio.",
+        "Perigo futuro meramente remoto satisfaz necessariamente a atualidade? Não; o texto exige perigo atual."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo atual",
+          "significado": "Perigo presente relevante à hipótese, que não se confunde com conveniência ou conjectura remota."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-25": {
+      "simples": "Legítima defesa é reação moderada, pelos meios necessários, contra agressão injusta atual ou iminente a direito próprio ou alheio. O parágrafo sobre segurança pública preserva esses requisitos, sem criar autorização geral de força.",
+      "pontos": [
+        "Agressão injusta, atual OU iminente.",
+        "Meios necessários usados moderadamente.",
+        "Proteção de refém por agente de segurança exige observar o caput."
+      ],
+      "atencao": [
+        "Vingança posterior e a chamada defesa da honra não são essa justificante. O vínculo ou cargo policial não dispensa proporcionalidade fática e requisitos legais."
+      ],
+      "exemplo": "Uma agressão injusta iminente é repelida com os meios necessários usados moderadamente. Variação: Depois de cessada a agressão, a represália por vingança não se transforma em legítima defesa só porque houve agressão anterior.",
+      "prova": [
+        "A condição policial dispensa o caput? Não; o parágrafo expressamente o preserva.",
+        "Agressão iminente está abrangida? Sim; não se exige aguardar o resultado lesivo consumado."
+      ],
+      "termos": [
+        {
+          "termo": "Moderação",
+          "significado": "Limite no emprego dos meios necessários para repelir a agressão, sem autorização irrestrita de força."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-26": {
+      "simples": "A inimputabilidade do artigo exige causa indicada e inteira incapacidade de compreensão ou autodeterminação no momento da ação ou omissão. Capacidade diminuída tem hipótese própria de possível redução, não isenção automática.",
+      "pontos": [
+        "Incapacidade inteira no momento do fato: hipótese do caput.",
+        "Capacidade não inteira: possível redução de 1/3 a 2/3 no parágrafo.",
+        "Compreensão OU autodeterminação podem ser os eixos afetados."
+      ],
+      "atencao": [
+        "Diagnóstico isolado não comprova incapacidade penal no tempo do fato. Usar linguagem respeitosa e distinguir termos históricos do texto de avaliação técnica atual e garantias da pessoa."
+      ],
+      "exemplo": "A avaliação demonstra inteira incapacidade no momento da conduta por causa abrangida pelo artigo. Variação: Se a capacidade é apenas diminuída, examinar o parágrafo e seus requisitos, não repetir automaticamente a isenção do caput.",
+      "prova": [
+        "Diagnóstico por si basta para toda isenção? Não; a incapacidade e seu momento precisam ser demonstrados.",
+        "Capacidade reduzida equivale necessariamente à incapacidade inteira? Não; o artigo distingue os regimes."
+      ],
+      "termos": [
+        {
+          "termo": "Critério biopsicológico",
+          "significado": "Conjugação da causa pertinente e da incapacidade de compreensão/autodeterminação ao tempo do fato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-27": {
+      "simples": "Menores de dezoito anos são penalmente inimputáveis e estão sujeitos à legislação especial. A referência é a idade ao tempo do fato, em conjunto com a regra temporal, e não uma presunção de ausência de toda consequência jurídica.",
+      "pontos": [
+        "Menos de 18 anos: regime especial.",
+        "Não confundir inimputabilidade penal com impunidade ou aplicação automática da pena adulta."
+      ],
+      "atencao": [
+        "Medidas e garantias de adolescentes dependem do ECA; este artigo não fixa suas durações ou autoriza tratar adolescente como adulto só pela gravidade do fato."
+      ],
+      "exemplo": "A conduta ocorre antes do aniversário de 18 anos e o resultado somente depois. Variação: Se a ação ocorre já após completar 18, a regra de inimputabilidade por idade não se aplica só porque era adolescente no passado.",
+      "prova": [
+        "O resultado posterior aos 18 muda automaticamente a idade da ação? Não; considerar o tempo da conduta.",
+        "O artigo exclui toda consequência da legislação especial? Não; expressamente remete a ela."
+      ],
+      "termos": [
+        {
+          "termo": "Inimputabilidade etária",
+          "significado": "Regime de menores de dezoito anos, sujeito à legislação especial pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-28": {
+      "simples": "Emoção, paixão e embriaguez voluntária ou culposa não excluem por si imputabilidade. Embriaguez por caso fortuito ou força maior tem regimes distintos conforme a incapacidade completa ou a capacidade diminuída no momento da conduta.",
+      "pontos": [
+        "Embriaguez voluntária/culposa não é a hipótese automática de isenção.",
+        "Fortuito/força maior e incapacidade inteira: §1º; capacidade não plena: possível redução de 1/3 a 2/3 no §2º."
+      ],
+      "atencao": [
+        "Intoxicação alegada não prova automaticamente seus requisitos. Não confundir embriaguez acidental com voluntária nem apresentar paixão como justificativa de violência."
+      ],
+      "exemplo": "O agente se embriaga voluntariamente e alega que isso, por si, o torna inimputável. Variação: Embriaguez completa fortuita com inteira incapacidade ao tempo da ação exige a análise diferente do §1º.",
+      "prova": [
+        "Paixão exclui imputabilidade por si? Não; o inciso I diz que não.",
+        "Embriaguez fortuita parcial e completa têm sempre o mesmo efeito? Não; os parágrafos distinguem suas condições e efeitos."
+      ],
+      "termos": [
+        {
+          "termo": "Embriaguez acidental",
+          "significado": "Embriaguez proveniente de caso fortuito ou força maior, com requisitos de capacidade a verificar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-29": {
+      "simples": "Quem concorre para o crime responde na medida de sua culpabilidade. Participação de menor importância e intenção de participar de crime menos grave têm regras diferentes, que não autorizam pena idêntica obrigatória para todos os envolvidos.",
+      "pontos": [
+        "Menor importância: possível redução de 1/6 a 1/3.",
+        "Crime menos grave pretendido: pena dele; aumento até metade se o resultado mais grave era previsível."
+      ],
+      "atencao": [
+        "Mera presença não prova concurso de pessoas. Identificar contribuição e elemento subjetivo; menor importância não se aplica automaticamente a toda pessoa com papel secundário alegado."
+      ],
+      "exemplo": "A participação de menor importância é demonstrada na contribuição para o delito. Variação: Se a hipótese é intenção de participar de crime menos grave, usar o §2º e a previsibilidade, não a mesma redução do §1º.",
+      "prova": [
+        "Todos necessariamente recebem pena idêntica? Não; o caput exige medida de culpabilidade.",
+        "Menor importância e crime menos grave são a mesma regra? Não; têm pressupostos e efeitos distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Cooperação dolosamente distinta",
+          "significado": "Hipótese de intenção de participar de crime menos grave, com a regra de previsibilidade do §2º."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-30": {
+      "simples": "Circunstâncias e condições pessoais não se comunicam entre concorrentes, salvo quando constituem elementares do crime. A classificação da condição como elementar ou circunstância influencia a análise, que não dispensa os demais requisitos da participação.",
+      "pontos": [
+        "Regra: incomunicabilidade pessoal.",
+        "Exceção: condição ou circunstância que seja elementar do crime."
+      ],
+      "atencao": [
+        "Não transmitir automaticamente reincidência ou qualidades pessoais a todos. A exceção não dispensa analisar conhecimento e participação no tipo concreto."
+      ],
+      "exemplo": "Um participante é reincidente e a questão pretende tratar os demais como reincidentes só por concorrerem no fato. Variação: Se a qualidade é elementar do tipo, examinar a exceção do artigo e os pressupostos concretos, em vez de aplicar incomunicabilidade absoluta.",
+      "prova": [
+        "Toda condição pessoal é sempre incomunicável? Não; há exceção para elementares.",
+        "Participar com reincidente torna todos reincidentes automaticamente? Não; essa condição pessoal não se transmite dessa forma."
+      ],
+      "termos": [
+        {
+          "termo": "Elementar",
+          "significado": "Elemento da definição do crime, distinto de circunstância pessoal que não integra o tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-31": {
+      "simples": "Ajuste, determinação, instigação e auxílio não são punidos por essa regra se o crime não chega ao menos à tentativa, salvo disposição expressa em contrário. A ressalva impede transformar a regra em imunidade de todo ato preparatório.",
+      "pontos": [
+        "Regra vinculada ao crime chegar, pelo menos, à tentativa.",
+        "Disposição expressa em contrário pode incriminar conduta autônoma."
+      ],
+      "atencao": [
+        "Não concluir que associação, organização ou outro delito autônomo é impunível só porque o crime planejado não foi tentado. Conferir o tipo específico, sem criminalizar toda conversa por analogia."
+      ],
+      "exemplo": "Há instigação, mas o crime não chega à tentativa e não se identifica disposição expressa em contrário para o caso. Variação: Se os fatos preenchem delito autônomo expressamente previsto, a ressalva exige analisá-lo, não apagar esse tipo pela regra geral.",
+      "prova": [
+        "O artigo proíbe qualquer punição de conduta preparatória autônoma? Não; ressalva disposição expressa em contrário.",
+        "A simples instigação sempre equivale a tentativa do crime principal? Não; a regra exige o crime chegar ao menos à tentativa."
+      ],
+      "termos": [
+        {
+          "termo": "Ressalva expressa",
+          "significado": "Previsão legal específica que excepciona a regra de impunibilidade do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "course_slug": "budapeste",
+  "law": "Convenção de Budapeste sobre o Crime Cibernético (Decreto de promulgação) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Fica promulgada a Convenção sobre o Crime Cibernético, firmada em Budapeste, em 23 de novembro de 2001, anexa ao Decreto.",
+      "pontos": ["Promulga a Convenção de Budapeste.", "Assinada em 23 de novembro de 2001."],
+      "atencao": ["A promulgação por decreto integra o tratado ao direito interno brasileiro."],
+      "exemplo": "A Convenção passa a valer no Brasil depois de promulgada pelo decreto.",
+      "prova": ["Assertiva que dispensa a promulgação para a vigência interna do tratado erra."],
+      "termos": [{ "termo": "Promulgação", "significado": "Ato que dá validade interna ao tratado ratificado." }],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "São sujeitos à aprovação do Congresso Nacional os atos que possam resultar em revisão da Convenção e ajustes complementares que acarretem encargos ou compromissos gravosos ao patrimônio nacional, nos termos do inciso I do caput do art. 49 da Constituição.",
+      "pontos": ["Atos de revisão da Convenção dependem do Congresso.", "Ajustes complementares gravosos ao patrimônio nacional também.", "Base: art. 49, I, da Constituição."],
+      "atencao": ["Competência do Congresso para resolver sobre tratados (art. 49, I)."],
+      "exemplo": "Uma revisão da Convenção precisa passar pelo Congresso Nacional.",
+      "prova": ["Assertiva que dispensa o Congresso nos ajustes gravosos ao patrimônio nacional erra."],
+      "termos": [],
+      "remissoes": ["Constituição, art. 49, I"]
+    },
+    "art-3": {
+      "simples": "Este Decreto entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "O Decreto passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "conven-o-artigo-1": {
+      "simples": "Definições: sistema de computador é qualquer aparelho ou conjunto interconectado que processa dados eletronicamente por um programa; dado de computador é qualquer representação de fatos, informações ou conceitos adequada ao processamento; provedor de serviços é qualquer entidade que permite aos usuários se comunicarem por sistema de computador, ou que processa ou armazena dados em nome desses serviços; e dados de tráfego são os dados de uma comunicação que indicam origem, destino, caminho, hora, data, extensão, duração ou tipo de serviço.",
+      "pontos": ["Sistema de computador.", "Dado de computador.", "Provedor de serviços (comunicação ou processamento e armazenamento).", "Dados de tráfego: origem, destino, caminho, hora, data, extensão, duração e tipo de serviço."],
+      "atencao": ["Dados de tráfego NÃO incluem o conteúdo da comunicação."],
+      "exemplo": "Os registros de data, hora e origem de um e-mail são dados de tráfego.",
+      "prova": ["Assertiva que inclui o conteúdo da mensagem nos dados de tráfego erra."],
+      "termos": [{ "termo": "Dados de tráfego", "significado": "Metadados da comunicação, como origem, destino e horário." }],
+      "remissoes": ["Artigo 16", "Artigo 20"]
+    },
+    "conven-o-artigo-2": {
+      "simples": "Acesso ilegal: cada Parte tipificará como crime o acesso doloso e não autorizado a um sistema de computador, no todo ou em parte. Qualquer Parte pode exigir, para a tipificação, que haja violação de medidas de segurança, o fim de obter dados ou outro objetivo fraudulento, ou que o sistema esteja conectado a outro sistema.",
+      "pontos": ["Acesso doloso e não autorizado a sistema de computador.", "A Parte pode exigir violação de medidas de segurança, fim de obter dados ou fraudulento, ou conexão a outro sistema."],
+      "atencao": ["Requisitos adicionais são opcionais para cada Parte."],
+      "exemplo": "Invadir um servidor sem autorização é acesso ilegal.",
+      "prova": ["Assertiva que exige sempre violação de medidas de segurança erra: é opcional para as Partes."],
+      "termos": [],
+      "remissoes": ["Artigo 11"]
+    },
+    "conven-o-artigo-3": {
+      "simples": "Interceptação ilícita: cada Parte tipificará como crime a interceptação ilegal e intencional, por meios técnicos, de transmissões não públicas de dados de computador, para um sistema, a partir dele ou dentro dele, inclusive das emissões eletromagnéticas. Qualquer Parte pode exigir o objetivo fraudulento ou que o crime seja praticado contra sistema conectado a outro.",
+      "pontos": ["Interceptação ilegal e intencional de transmissões não públicas.", "Inclui emissões eletromagnéticas.", "A Parte pode exigir objetivo fraudulento ou conexão a outro sistema."],
+      "atencao": ["Alcança transmissões NÃO PÚBLICAS."],
+      "exemplo": "Capturar clandestinamente o tráfego de uma rede privada é interceptação ilícita.",
+      "prova": ["Assertiva que alcança também transmissões públicas abertas erra: o tipo é de transmissões não públicas."],
+      "termos": [],
+      "remissoes": ["Lei de Interceptação Telefônica"]
+    },
+    "conven-o-artigo-4": {
+      "simples": "Violação de dados: cada Parte tipificará como crimes a danificação, eliminação, deterioração, alteração ou supressão dolosas e não autorizadas de dados de computador. Qualquer Parte pode reservar-se o direito de exigir que da conduta resulte sério dano para a vítima.",
+      "pontos": ["Danificar, eliminar, deteriorar, alterar ou suprimir dados.", "Dolosa e não autorizada.", "Reserva possível: exigir sério dano."],
+      "atencao": ["Reserva admitida: sério dano para a vítima."],
+      "exemplo": "Apagar sem autorização os arquivos de um servidor configura violação de dados.",
+      "prova": ["Assertiva que torna crime a violação culposa de dados erra: o tipo é doloso."],
+      "termos": [],
+      "remissoes": ["Artigo 5"]
+    },
+    "conven-o-artigo-5": {
+      "simples": "Interferência em sistema: cada Parte tipificará como crime qualquer grave obstrução ou impedimento, dolosos e não autorizados, do funcionamento de um sistema de computador por meio da inserção, transmissão, danificação, apagamento, deterioração, alteração ou supressão de dados.",
+      "pontos": ["Grave obstrução do funcionamento do sistema.", "Meios: inserção, transmissão, dano, apagamento, deterioração, alteração ou supressão de dados.", "Doloso e não autorizado."],
+      "atencao": ["A obstrução deve ser GRAVE."],
+      "exemplo": "Um ataque que derruba o site de um órgão público interfere no sistema.",
+      "prova": ["Assertiva que alcança qualquer lentidão mínima como crime erra: exige grave obstrução."],
+      "termos": [],
+      "remissoes": ["Artigo 4"]
+    },
+    "conven-o-artigo-6": {
+      "simples": "Uso indevido de aparelhagem: cada Parte tipificará, quando dolosas e não autorizadas, a produção, venda, aquisição para uso, importação, distribuição ou disponibilização de aparelho ou programa desenvolvido para cometer os crimes dos artigos 2 a 5, e de senhas ou códigos de acesso para esse fim; e a posse desses instrumentos com a intenção de usá-los. A Parte pode exigir um número mínimo de instrumentos. Não há crime quando a conduta não se destina a esses crimes, como em testes autorizados ou proteção de sistema. Cada Parte pode reservar-se o direito de não aplicar o parágrafo 1, mas não quanto à venda ou distribuição de senhas e códigos de acesso.",
+      "pontos": ["Aparelho ou programa desenvolvido para cometer crimes dos artigos 2 a 5.", "Senhas e códigos de acesso para esse fim.", "Posse com intenção de uso.", "Exclusão: testes autorizados e proteção de sistemas.", "Reserva possível, exceto para venda e distribuição de senhas."],
+      "atencao": ["Testes autorizados (pentest) NÃO são crime."],
+      "exemplo": "Vender um programa feito para invadir sistemas é uso indevido de aparelhagem.",
+      "prova": ["Assertiva que criminaliza o teste autorizado de segurança erra: o parágrafo 2 o exclui."],
+      "termos": [],
+      "remissoes": ["Artigos 2 a 5"]
+    },
+    "conven-o-artigo-7": {
+      "simples": "Falsificação informática: cada Parte tipificará como crimes a inserção, alteração, apagamento ou supressão, dolosos e não autorizados, de dados de computador, de que resultem dados inautênticos, com o fim de que sejam tidos como legais ou tenham esse efeito, como se autênticos fossem, mesmo que não sejam diretamente legíveis. Qualquer Parte pode exigir a intenção de defraudar ou outro objetivo fraudulento.",
+      "pontos": ["Inserção, alteração, apagamento ou supressão de dados que resultem em dados inautênticos.", "Fim de serem tidos como autênticos.", "A Parte pode exigir a intenção de defraudar."],
+      "atencao": ["Independe de os dados serem legíveis diretamente."],
+      "exemplo": "Alterar o banco de dados para forjar um registro oficial é falsificação informática.",
+      "prova": ["Assertiva que exige que os dados sejam legíveis por pessoas erra: é irrelevante."],
+      "termos": [],
+      "remissoes": ["Artigo 8"]
+    },
+    "conven-o-artigo-8": {
+      "simples": "Fraude informática: cada Parte tipificará como crime a conduta de quem causar, de forma dolosa e não autorizada, prejuízo patrimonial a outrem por meio de qualquer inserção, alteração, apagamento ou supressão de dados, ou de qualquer interferência no funcionamento de um computador ou sistema, com a intenção fraudulenta de obter, para si ou para outrem, vantagem econômica ilícita.",
+      "pontos": ["Prejuízo patrimonial a outrem.", "Meios: manipulação de dados ou interferência no sistema.", "Intenção fraudulenta de vantagem econômica ilícita."],
+      "atencao": ["Exige o PREJUÍZO patrimonial e a intenção de vantagem ilícita."],
+      "exemplo": "Alterar saldos bancários para desviar dinheiro é fraude informática.",
+      "prova": ["Assertiva que dispensa o prejuízo patrimonial erra."],
+      "termos": [],
+      "remissoes": ["Artigo 7"]
+    },
+    "conven-o-artigo-9": {
+      "simples": "Pornografia infantil: cada Parte tipificará, quando cometidas dolosamente e de forma não autorizada, as condutas de produzir pornografia infantil para distribuição por sistema de computador; oferecer ou disponibilizar; distribuir ou transmitir; adquirir para si ou para outrem; e possuir em sistema ou dispositivo de armazenamento. Inclui material que represente um menor, uma pessoa que pareça menor ou imagens realísticas de menor em conduta sexual explícita. Menor é quem tem menos de 18 anos, mas a Parte pode adotar limite diverso, não inferior a 16 anos. A Parte pode reservar-se o direito de não aplicar algumas alíneas.",
+      "pontos": ["Produzir, oferecer, distribuir, adquirir e possuir pornografia infantil.", "Inclui quem pareça menor e imagens realísticas.", "Menor: menos de 18 anos, com limite possível não inferior a 16 anos.", "Reservas possíveis para aquisição, posse e algumas definições."],
+      "atencao": ["Limite de idade: 18 anos, podendo ser reduzido a não menos de 16 anos pela Parte."],
+      "exemplo": "Distribuir imagens de menores em conduta sexual explícita pela internet é crime segundo a Convenção.",
+      "prova": ["Assertiva que permite fixar o limite de idade em 14 anos erra: o limite não pode ser inferior a 16 anos."],
+      "termos": [],
+      "remissoes": ["Estatuto da Criança e do Adolescente (crimes sexuais contra criança)"]
+    },
+    "conven-o-artigo-10": {
+      "simples": "Violação de direitos autorais e correlatos: cada Parte tipificará como crimes a violação de direitos autorais e de direitos correlatos, conforme as obrigações assumidas nos tratados internacionais indicados, com exceção dos direitos morais, quando cometida intencionalmente, em escala comercial e por meio de um sistema de computador. A Parte pode reservar-se o direito de não impor responsabilidade criminal em circunstâncias limitadas, desde que haja outros remédios jurídicos eficazes e que a reserva não prejudique suas obrigações internacionais.",
+      "pontos": ["Violação de direitos autorais e correlatos.", "Intencional, em escala comercial e por sistema de computador.", "Exclui direitos morais.", "Reserva em circunstâncias limitadas."],
+      "atencao": ["Exige ESCALA COMERCIAL e meio informático."],
+      "exemplo": "Vender cópias piratas de software pela internet em larga escala é violação punível.",
+      "prova": ["Assertiva que criminaliza qualquer cópia privada de baixa escala erra: exige escala comercial."],
+      "termos": [],
+      "remissoes": ["Lei de Direitos Autorais"]
+    },
+    "conven-o-artigo-11": {
+      "simples": "Tentativa, auxílio ou instigação: cada Parte tipificará o auxílio, a instigação ou a incitação dolosos à prática dos crimes dos artigos 2 a 10, quando o favorecedor tenha a intenção de que sejam cometidos, e a tentativa dolosa dos crimes dos artigos 3 a 5, 7, 8 e do parágrafo 1, alíneas a e c, do artigo 9. A Parte pode reservar-se o direito de não aplicar a punição da tentativa.",
+      "pontos": ["Auxílio, instigação ou incitação dolosos aos crimes dos artigos 2 a 10.", "Tentativa de alguns crimes.", "Reserva para a tentativa."],
+      "atencao": ["A tentativa não é exigida para todos os crimes."],
+      "exemplo": "Quem instiga outra pessoa a invadir um sistema pratica a conduta do artigo 11.",
+      "prova": ["Assertiva que obriga punir a tentativa de todos os crimes da Convenção erra."],
+      "termos": [],
+      "remissoes": ["Artigos 2 a 10"]
+    },
+    "conven-o-artigo-12": {
+      "simples": "Responsabilidade da pessoa jurídica: cada Parte assegurará que pessoas jurídicas possam ser responsabilizadas pelos crimes da Convenção cometidos em seu benefício por pessoa física em posição de direção, com base no poder de representação, na autoridade de decidir em nome da empresa ou de exercer controle interno. Também responde a empresa quando a falta de supervisão ou controle possibilitar o crime por pessoa sob sua autoridade. A responsabilidade pode ser civil, criminal ou administrativa, e não exclui a responsabilidade criminal das pessoas naturais.",
+      "pontos": ["Responsabilidade por crimes em benefício da pessoa jurídica.", "Pessoa em posição de direção.", "Falta de supervisão também gera responsabilidade.", "Civil, criminal ou administrativa.", "Sem prejuízo da pessoa natural."],
+      "atencao": ["A responsabilidade da empresa pode ser civil, criminal OU administrativa."],
+      "exemplo": "A empresa responde quando o diretor comanda uma fraude informática em seu benefício.",
+      "prova": ["Assertiva que exclui a responsabilidade da pessoa natural quando a empresa responde erra."],
+      "termos": [],
+      "remissoes": ["Artigo 13"]
+    },
+    "conven-o-artigo-13": {
+      "simples": "Sanções e medidas: cada Parte assegurará que os crimes dos artigos 2 a 11 sejam punidos por sanções criminais eficazes, adequadas e dissuasivas, que incluam a privação de liberdade. As pessoas jurídicas responsáveis estarão sujeitas a sanções penais ou não penais eficazes, proporcionais e dissuasivas, inclusive penas pecuniárias.",
+      "pontos": ["Sanções eficazes, adequadas e dissuasivas.", "Inclui privação de liberdade para pessoas físicas.", "Pessoas jurídicas: sanções penais ou não penais, inclusive multa."],
+      "atencao": ["Pessoa jurídica: sanções proporcionais, incluindo pecuniárias."],
+      "exemplo": "A lei prevê prisão para o hacker e multa para a empresa responsável.",
+      "prova": ["Assertiva que dispensa a privação de liberdade para as pessoas físicas erra."],
+      "termos": [],
+      "remissoes": ["Artigo 12"]
+    },
+    "conven-o-artigo-14": {
+      "simples": "Âmbito dos dispositivos processuais: cada Parte adotará as medidas para estabelecer os poderes e procedimentos desta seção com o fim de promover investigações ou processos criminais. Salvo previsão específica, os poderes se aplicam aos crimes dos artigos 2 a 11, a outros crimes cometidos por meio de sistema de computador e à coleta de provas eletrônicas de qualquer crime. A Parte pode reservar-se o direito de aplicar algumas medidas só a certos crimes, e de excluir comunicações de sistemas fechados de grupo restrito, sem rede pública.",
+      "pontos": ["Poderes e procedimentos para investigações e processos criminais.", "Aplicam-se aos crimes dos artigos 2 a 11, a outros crimes informáticos e à prova eletrônica.", "Reservas possíveis."],
+      "atencao": ["Alcança também a coleta de provas eletrônicas de QUALQUER crime."],
+      "exemplo": "Os poderes processuais valem para obter prova digital de um homicídio.",
+      "prova": ["Assertiva que restringe os poderes processuais aos crimes dos artigos 2 a 11 erra."],
+      "termos": [{ "termo": "Prova eletrônica", "significado": "Prova obtida em meio digital." }],
+      "remissoes": ["Artigo 15"]
+    },
+    "conven-o-artigo-15": {
+      "simples": "Condições e garantias: os poderes e procedimentos desta seção sujeitam-se às condições e garantias da legislação interna, com proteção adequada aos direitos humanos e às liberdades públicas, inclusive os decorrentes de tratados de direitos humanos, e incorporarão o princípio da proporcionalidade. Incluem, quando apropriado, controle judicial ou supervisão independente, fundamentação, e limitação do âmbito e da duração. Cada Parte levará em conta o impacto sobre os direitos e legítimos interesses de terceiros.",
+      "pontos": ["Proteção dos direitos humanos e das liberdades públicas.", "Proporcionalidade.", "Controle judicial ou supervisão independente.", "Fundamentação e limites de âmbito e duração.", "Impacto sobre terceiros."],
+      "atencao": ["Salvaguardas obrigatórias aos poderes investigativos."],
+      "exemplo": "A quebra de sigilo digital exige fundamentação e limites de duração.",
+      "prova": ["Assertiva que dispensa o princípio da proporcionalidade nos poderes processuais erra."],
+      "termos": [],
+      "remissoes": ["Artigo 14"]
+    },
+    "conven-o-artigo-16": {
+      "simples": "Preservação expedita de dados de computador: cada Parte permitirá que a autoridade competente ordene ou obtenha a rápida preservação de dados especificados, incluindo dados de tráfego, armazenados em sistema de computador, especialmente quando houver risco de perda ou modificação. A ordem a uma pessoa para preservar dados obriga a mantê-los íntegros pelo tempo necessário, até o máximo de 90 dias, para permitir à autoridade buscar sua revelação, podendo a Parte prever renovação. O detentor deve manter em sigilo o início do procedimento investigativo. Aplicam-se os Artigos 14 e 15.",
+      "pontos": ["Preservação rápida de dados específicos, inclusive de tráfego.", "Prazo máximo de 90 dias, com possível renovação.", "Sigilo do procedimento.", "Sujeita às garantias dos Artigos 14 e 15."],
+      "atencao": ["Preservação por até 90 dias; NÃO é revelação do conteúdo."],
+      "exemplo": "A autoridade ordena ao provedor que preserve os registros por noventa dias, até obter a ordem de revelação.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo máximo de preservação erra: são 90 dias."],
+      "termos": [],
+      "remissoes": ["Artigo 17"]
+    },
+    "conven-o-artigo-17": {
+      "simples": "Preservação expedita e revelação parcial de dados de tráfego: cada Parte assegurará que a rápida preservação de dados de tráfego seja possível independentemente do número de provedores envolvidos na transmissão, e a rápida revelação à autoridade competente de dados de tráfego suficientes para identificar os provedores e o caminho da comunicação. Sujeito aos Artigos 14 e 15.",
+      "pontos": ["Preservação independentemente do número de provedores.", "Revelação rápida de dados suficientes para identificar provedores e caminho."],
+      "atencao": ["Revelação PARCIAL: só o necessário para identificar provedores e caminho."],
+      "exemplo": "A autoridade descobre por quais provedores passou a comunicação.",
+      "prova": ["Assertiva que obriga a revelar todo o conteúdo da comunicação erra: a revelação é de dados de tráfego suficientes."],
+      "termos": [],
+      "remissoes": ["Artigo 16"]
+    },
+    "conven-o-artigo-18": {
+      "simples": "Ordem de exibição: cada Parte dará poderes às autoridades para ordenar a qualquer pessoa residente em seu território que entregue dados de computador especificados sob seu controle, e a qualquer provedor de serviço que atue em seu território que entregue informações cadastrais de assinantes. Informações cadastrais do assinante são as informações em poder do provedor, exceto dados de tráfego e conteúdo, que revelem o tipo de serviço, a identidade, o endereço, o telefone, os dados de pagamento e o local de instalação do equipamento. Sujeito aos Artigos 14 e 15.",
+      "pontos": ["Ordem a pessoa residente para entregar dados especificados.", "Ordem ao provedor para entregar informações cadastrais de assinantes.", "Informações cadastrais excluem dados de tráfego e conteúdo."],
+      "atencao": ["Dados CADASTRAIS: não incluem tráfego nem conteúdo."],
+      "exemplo": "A autoridade pede ao provedor o nome e o endereço do assinante de um endereço de rede.",
+      "prova": ["Assertiva que inclui o conteúdo das mensagens nas informações cadastrais erra."],
+      "termos": [],
+      "remissoes": ["Artigo 1"]
+    },
+    "conven-o-artigo-19": {
+      "simples": "Busca e apreensão de dados de computador: cada Parte dará poderes às autoridades para buscar ou investigar, em seu território, qualquer sistema de computador ou parte dele e os dados nele armazenados, e qualquer meio de armazenamento de dados. Se houver fundadas razões para supor que os dados estão em outro sistema do território, acessível a partir do primeiro, a autoridade poderá estender prontamente a busca. As Partes dão poderes para apreender ou proteger sistemas e meios de armazenamento, fazer e guardar cópia dos dados, manter a integridade e tornar os dados inacessíveis ou removê-los, e para determinar que quem conheça o funcionamento do sistema forneça as informações necessárias.",
+      "pontos": ["Busca em sistemas e meios de armazenamento no território.", "Extensão da busca a outro sistema acessível.", "Apreensão, cópia, integridade e remoção de dados.", "Colaboração de quem conhece o sistema."],
+      "atencao": ["A extensão da busca exige fundadas razões e acesso legal a partir do sistema inicial."],
+      "exemplo": "A polícia busca o computador do investigado e estende a busca ao armazenamento em nuvem acessível dele.",
+      "prova": ["Assertiva que proíbe a cópia dos dados apreendidos erra: a Convenção autoriza fazer e guardar cópia."],
+      "termos": [],
+      "remissoes": ["Artigo 15"]
+    },
+    "conven-o-artigo-20": {
+      "simples": "Obtenção de dados de tráfego em tempo real: cada Parte dará poderes às autoridades para coletar ou gravar, por meios técnicos, dados de tráfego em tempo real vinculados a comunicações específicas ocorridas em seu território, e para obrigar o provedor, nos limites de sua capacidade técnica, a reunir e gravar esses dados ou a cooperar com as autoridades. Quando a Parte, por princípios de seu sistema jurídico, não puder adotar a coleta direta, poderá substituí-la por medidas que assegurem a obtenção em tempo real por meios técnicos em seu território. O provedor mantém sigilo da operação. Aplicam-se os Artigos 14 e 15.",
+      "pontos": ["Coleta de dados de tráfego em tempo real.", "Obrigação de cooperação do provedor.", "Substituição possível por outras medidas.", "Sigilo do provedor."],
+      "atencao": ["Aqui são dados de TRÁFEGO, e não de conteúdo (conteúdo: Artigo 21)."],
+      "exemplo": "A autoridade acompanha em tempo real os horários e destinos das comunicações do investigado.",
+      "prova": ["Assertiva que autoriza, pelo Artigo 20, o acesso ao conteúdo das comunicações erra: ele trata de dados de tráfego."],
+      "termos": [],
+      "remissoes": ["Artigo 21"]
+    },
+    "conven-o-artigo-21": {
+      "simples": "Interceptação de dados de conteúdo: cada Parte, em relação a um conjunto de crimes graves a serem especificados pela legislação interna, dará poderes às autoridades para coletar ou gravar, em tempo real, o conteúdo de comunicações específicas ocorridas em seu território por sistema de computador, e para compelir o provedor, nos limites de sua capacidade técnica, a coletar, gravar ou cooperar. Quando a Parte não puder adotar a coleta direta, poderá substituí-la por medidas equivalentes. O provedor mantém sigilo. Aplicam-se os Artigos 14 e 15.",
+      "pontos": ["Interceptação do conteúdo em tempo real.", "Apenas para crimes graves especificados em lei interna.", "Cooperação e sigilo do provedor."],
+      "atencao": ["Conteúdo: só para CRIMES GRAVES definidos na lei interna."],
+      "exemplo": "A autoridade, com ordem legal, intercepta o conteúdo das mensagens em crime grave.",
+      "prova": ["Assertiva que permite interceptar o conteúdo para qualquer infração erra: restringe-se a crimes graves."],
+      "termos": [],
+      "remissoes": ["Artigo 20"]
+    },
+    "conven-o-artigo-22": {
+      "simples": "Jurisdição: cada Parte estabelecerá jurisdição sobre os crimes dos artigos 2 a 11 quando cometidos no seu território, a bordo de embarcação de sua bandeira, a bordo de aeronave registrada conforme suas leis, ou por um nacional seu, se o crime for punível no local do fato ou cometido fora da jurisdição de qualquer Parte. Pode reservar-se o direito de não aplicar os critérios de embarcação, aeronave e nacionalidade. A Parte também estabelece jurisdição quando um suspeito está em seu território e ela não o extradita apenas por sua nacionalidade. A Convenção não exclui outras jurisdições criminais. Havendo mais de uma Parte com jurisdição, devem consultar-se para determinar a mais adequada.",
+      "pontos": ["Território, embarcação, aeronave e nacionalidade.", "Reserva possível para embarcação, aeronave e nacionalidade.", "Aut dedere aut judicare: jurisdição se não extradita nacional.", "Consulta entre as Partes em caso de conflito."],
+      "atencao": ["Quem não extradita por nacionalidade deve ter jurisdição para processar."],
+      "exemplo": "O Brasil julga o brasileiro que cometeu crime cibernético no exterior, se o fato for punível lá.",
+      "prova": ["Assertiva que exclui a jurisdição pelo critério da nacionalidade do agente erra."],
+      "termos": [],
+      "remissoes": ["Artigo 24"]
+    },
+    "conven-o-artigo-23": {
+      "simples": "Princípios gerais da cooperação internacional: as Partes cooperarão entre si, o mais possível, por meio de instrumentos internacionais de cooperação em assuntos penais, de ajustes baseados em legislação uniforme ou de reciprocidade e da legislação interna, para investigações ou procedimentos acerca de crimes de computador, ou para a coleta de provas eletrônicas desses crimes.",
+      "pontos": ["Cooperação o mais ampla possível.", "Instrumentos de cooperação penal, legislação uniforme ou reciprocidade e lei interna.", "Foco em crimes de computador e prova eletrônica."],
+      "atencao": ["Cooperação ampla, mas conforme os instrumentos e a lei interna."],
+      "exemplo": "Dois países cooperam para obter provas digitais de uma fraude.",
+      "prova": ["Assertiva que limita a cooperação aos Estados membros do Conselho da Europa erra."],
+      "termos": [],
+      "remissoes": ["Artigo 25"]
+    },
+    "conven-o-artigo-24": {
+      "simples": "Extradição: aplica-se aos crimes dos artigos 2 a 11, desde que puníveis nas leis das duas Partes com pena privativa de liberdade máxima de pelo menos um ano, ou mais severa, salvo pena mínima diferente em tratado. Os crimes serão considerados extraditáveis em qualquer tratado existente ou futuro entre as Partes. A Parte que condiciona a extradição a tratado pode usar a Convenção como base legal, e as que não condicionam reconhecerão os crimes como extraditáveis. A extradição sujeita-se às condições da lei da Parte requerida e aos tratados aplicáveis. Se a extradição for recusada somente pela nacionalidade, a Parte requerida deve submeter o caso às suas autoridades para processo.",
+      "pontos": ["Pena máxima de pelo menos um ano nas duas legislações.", "Crimes extraditáveis em tratados existentes e futuros.", "A Convenção pode servir de base legal para a extradição.", "Recusa por nacionalidade: processar o suspeito."],
+      "atencao": ["Dupla tipicidade com pena máxima de pelo menos um ano."],
+      "exemplo": "O crime é extraditável se punido, nos dois países, com pena máxima de pelo menos um ano.",
+      "prova": ["Assertiva que dispensa a dupla incriminação para a extradição erra: o crime deve ser punível nas duas Partes."],
+      "termos": [],
+      "remissoes": ["Artigo 22"]
+    },
+    "conven-o-artigo-25": {
+      "simples": "Princípios gerais da assistência mútua: as Partes prestarão assistência umas às outras o mais possível, para investigações relacionadas a crimes de computador e para obter provas eletrônicas. Cada Parte adotará as medidas para cumprir as obrigações dos Artigos 27 a 35. Em casos urgentes, a assistência pode ser solicitada por meios rápidos, como fax ou e-mail, com segurança e autenticidade, e confirmação formal se exigida. Salvo disposição contrária, a assistência sujeita-se às condições da lei da Parte requerida, mas não se recusa em relação aos crimes dos artigos 2 a 11 apenas por se tratar de simples delito financeiro. A dupla tipicidade considera-se atendida se a conduta é crime nas duas Partes, independentemente da denominação.",
+      "pontos": ["Assistência mútua o mais ampla possível.", "Pedidos urgentes por meios rápidos, com confirmação formal.", "Não se recusa a assistência por mero delito financeiro.", "Dupla tipicidade pela conduta, e não pelo nome do crime."],
+      "atencao": ["Dupla tipicidade avaliada pela CONDUTA."],
+      "exemplo": "Um pedido urgente é feito por e-mail seguro e depois confirmado formalmente.",
+      "prova": ["Assertiva que exige a mesma denominação do crime nos dois países erra: basta a mesma conduta."],
+      "termos": [{ "termo": "Dupla tipicidade", "significado": "O fato deve ser crime nos dois países." }],
+      "remissoes": ["Artigo 27"]
+    },
+    "conven-o-artigo-26": {
+      "simples": "Informação espontânea: qualquer Parte pode, nos limites de sua legislação interna e de ofício, transmitir a outra informações obtidas por sua própria investigação, quando considerar que podem ajudar a Parte destinatária a iniciar ou levar adiante investigações dos crimes da Convenção ou levar a um pedido de cooperação. Antes de fornecer, a Parte remetente pode pedir sigilo ou uso condicional. Se a destinatária não puder atender, deve notificá-la, que decidirá se fornece mesmo assim. Aceitas as condições, a destinatária é obrigada a cumpri-las.",
+      "pontos": ["Transmissão de ofício de informações úteis a outra Parte.", "Sigilo ou uso condicional podem ser pedidos.", "Condições aceitas obrigam a destinatária."],
+      "atencao": ["Iniciativa da Parte que possui a informação, sem pedido prévio."],
+      "exemplo": "A polícia brasileira repassa a outro país indícios de um ataque que o afeta.",
+      "prova": ["Assertiva que exige pedido formal prévio para a informação espontânea erra."],
+      "termos": [],
+      "remissoes": ["Artigo 25"]
+    },
+    "conven-o-artigo-27": {
+      "simples": "Procedimentos relativos a pedidos de assistência mútua na falta de acordos internacionais aplicáveis: quando não houver tratados ou acordos entre as Partes, aplicam-se as regras deste artigo. Cada Parte indicará uma autoridade central para enviar e responder pedidos, que se comunicarão diretamente, e informará seus nomes e endereços ao Secretário-Geral do Conselho da Europa, que mantém o cadastro atualizado. Os pedidos serão executados conforme os procedimentos da Parte requerente, salvo incompatibilidade com a lei da requerida. A Parte requerida pode recusar a assistência, entre outras causas, se o pedido se referir a delito político.",
+      "pontos": ["Aplica-se na falta de tratados ou acordos.", "Autoridade central de cada Parte.", "Comunicação direta entre autoridades centrais.", "Cadastro mantido pelo Secretário-Geral do Conselho da Europa.", "Execução conforme procedimentos da requerente, salvo incompatibilidade."],
+      "atencao": ["Regra subsidiária: só se aplica se não houver tratado ou acordo."],
+      "exemplo": "As autoridades centrais dos dois países trocam diretamente os pedidos de assistência.",
+      "prova": ["Assertiva que obriga a passar sempre pelo canal diplomático erra: as autoridades centrais se comunicam diretamente."],
+      "termos": [{ "termo": "Autoridade central", "significado": "Órgão designado para enviar e receber pedidos de cooperação." }],
+      "remissoes": ["Artigo 25"]
+    },
+    "conven-o-artigo-28": {
+      "simples": "Confidencialidade e limitações de uso: na falta de tratado ou acordo entre as Partes, a Parte requerida pode condicionar o fornecimento de informação ou dados à sua manutenção em sigilo ou à sua não utilização para investigações diversas das indicadas no pedido. Se a Parte requerente não puder cumprir as condições, informará à outra, que decidirá se fornece ainda assim. Aceitas as condições, a requerente é obrigada a atendê-las, e a fornecedora pode exigir esclarecimentos sobre o uso feito.",
+      "pontos": ["Condição de sigilo ou de uso limitado ao pedido.", "Aviso se a requerente não puder cumprir.", "Condição aceita obriga a requerente.", "Esclarecimentos sobre o uso."],
+      "atencao": ["Princípio da especialidade: uso limitado à finalidade do pedido."],
+      "exemplo": "O país que fornece dados exige que só sejam usados na investigação indicada.",
+      "prova": ["Assertiva que permite usar livremente os dados recebidos em outras investigações erra: pode haver condição de não utilização."],
+      "termos": [],
+      "remissoes": ["Artigo 27"]
+    },
+    "conven-o-artigo-29": {
+      "simples": "Conservação expedita de dados armazenados em computador: qualquer Parte pode pedir a outra que obtenha a rápida conservação de dados armazenados em sistema no território desta, em relação aos quais pretende apresentar pedido de assistência para busca, apreensão ou revelação. O pedido deve especificar a autoridade, o crime e um breve resumo dos fatos, os dados e sua relação com o crime, as informações sobre o detentor ou o local, a necessidade de conservação e a intenção de pedir assistência. A Parte requerida adotará as medidas para conservar os dados com presteza, sem exigir dupla tipicidade como condição para a conservação.",
+      "pontos": ["Pedido de conservação rápida de dados em outro país.", "Requisitos do pedido: autoridade, crime, dados, detentor, necessidade e intenção de pedir assistência.", "Dupla tipicidade não é exigida para conservar."],
+      "atencao": ["Conservação NÃO exige dupla tipicidade."],
+      "exemplo": "O Brasil pede a outro país que preserve os registros de um servidor enquanto formaliza o pedido de acesso.",
+      "prova": ["Assertiva que exige dupla tipicidade para a conservação de dados erra."],
+      "termos": [],
+      "remissoes": ["Artigo 16"]
+    },
+    "conven-o-artigo-30": {
+      "simples": "Revelação expedita de dados de tráfego conservados: quando, ao executar pedido de conservação, a Parte requerida descobrir que provedor de outro Estado participou da transmissão, entregará rapidamente à requerente dados de tráfego suficientes para identificar o provedor e o caminho da comunicação. A revelação só pode ser recusada se o pedido se referir a crime político ou conexo, ou se puder prejudicar a soberania, a segurança, a ordem pública ou outros interesses essenciais.",
+      "pontos": ["Revelação rápida de dados suficientes para identificar o provedor e o caminho.", "Recusa só por crime político ou prejuízo à soberania, segurança ou ordem pública."],
+      "atencao": ["Hipóteses de recusa são restritas."],
+      "exemplo": "A Parte requerida informa qual provedor de outro país transmitiu a comunicação.",
+      "prova": ["Assertiva que permite recusar a revelação por qualquer motivo erra: as hipóteses são restritas."],
+      "termos": [],
+      "remissoes": ["Artigo 29"]
+    },
+    "conven-o-artigo-31": {
+      "simples": "Assistência mútua em relação ao acesso a dados armazenados: qualquer Parte pode pedir a outra que realize busca, acesso, apreensão, guarda ou revelação de dados armazenados em sistema de computador no território desta, inclusive dados conservados. A Parte requerida responderá pelos instrumentos, acordos e leis internacionais aplicáveis. O pedido receberá resposta rápida se houver motivos para supor que dados importantes estão especialmente vulneráveis a perda ou modificação, ou se os instrumentos dispuserem de forma diferente quanto à cooperação expedita.",
+      "pontos": ["Pedido de busca, acesso, apreensão ou revelação de dados.", "Resposta rápida se os dados estão vulneráveis.", "Segue os instrumentos internacionais aplicáveis."],
+      "atencao": ["Resposta rápida quando há risco de perda ou modificação."],
+      "exemplo": "O Brasil pede a outro país a apreensão de dados de um servidor que podem ser apagados.",
+      "prova": ["Assertiva que fixa resposta sempre lenta, sem prioridade para dados vulneráveis, erra."],
+      "termos": [],
+      "remissoes": ["Artigo 29"]
+    },
+    "conven-o-artigo-32": {
+      "simples": "Acesso transfronteiriço a dados armazenados mediante consentimento ou em sistema de acesso público: uma Parte poderá, sem a autorização de outra, acessar dados de computador disponíveis ao público (fonte aberta), onde quer que estejam; ou acessar ou receber, por sistema em seu território, dados armazenados no território de outra Parte, se obtiver o consentimento legítimo e voluntário de pessoa com autoridade legal para revelá-los.",
+      "pontos": ["Acesso a fontes abertas sem autorização.", "Acesso a dados em outra Parte com consentimento legítimo e voluntário de quem tem autoridade para revelar."],
+      "atencao": ["Sem autorização do outro Estado só em fonte aberta ou com consentimento voluntário."],
+      "exemplo": "A polícia acessa uma página pública hospedada no exterior sem pedir autorização ao outro país.",
+      "prova": ["Assertiva que permite acessar dados privados de outro país sem qualquer consentimento erra."],
+      "termos": [{ "termo": "Fonte aberta", "significado": "Informação disponível ao público." }],
+      "remissoes": ["Artigo 31"]
+    },
+    "conven-o-artigo-33": {
+      "simples": "Assistência mútua na interceptação de dados de tráfego em tempo real: as Partes se concederão assistência na interceptação, em tempo real, de dados de tráfego vinculados a comunicação específica transmitida em seu território por sistema de computador, conforme as condições e procedimentos da legislação interna. Cada Parte prestará essa assistência pelo menos em relação aos crimes para os quais a interceptação de dados em tempo real seria possível em fatos similares de jurisdição nacional.",
+      "pontos": ["Assistência na interceptação de dados de tráfego em tempo real.", "Regida pela lei interna.", "Ao menos para crimes que admitiriam a medida em caso nacional similar."],
+      "atencao": ["Dados de TRÁFEGO (o conteúdo está no Artigo 34)."],
+      "exemplo": "Um país ajuda outro a acompanhar em tempo real os dados de tráfego de uma comunicação específica.",
+      "prova": ["Assertiva que obriga a assistência para qualquer crime erra: vale ao menos para crimes que admitiriam a medida no direito interno."],
+      "termos": [],
+      "remissoes": ["Artigo 34"]
+    },
+    "conven-o-artigo-34": {
+      "simples": "Assistência mútua em relação à interceptação do conteúdo de comunicações: as Partes se concederão assistência na interceptação ou gravação, em tempo real, do conteúdo de comunicações específicas transmitidas por sistema de computador, nas mesmas hipóteses permitidas pelos tratados aplicáveis e pelas respectivas legislações internas.",
+      "pontos": ["Assistência na interceptação do conteúdo em tempo real.", "Mesmas hipóteses dos tratados e da lei interna."],
+      "atencao": ["Conteúdo: depende dos tratados e das leis internas."],
+      "exemplo": "Um país auxilia outro a gravar o conteúdo de uma comunicação específica, quando as leis permitem.",
+      "prova": ["Assertiva que dispensa os limites da lei interna na interceptação de conteúdo erra."],
+      "termos": [],
+      "remissoes": ["Artigo 33"]
+    },
+    "conven-o-artigo-35": {
+      "simples": "Sistema de plantão 24 por 7: cada Parte indicará um órgão de contato disponível 24 horas por dia, 7 dias por semana, para assegurar assistência imediata em investigações de crimes de computador e na obtenção de provas eletrônicas, incluindo o suporte técnico, a conservação de dados e a coleta de provas, informação jurídica e localização de suspeitos. O órgão de contato deve se comunicar rapidamente com o de outra Parte e coordenar-se com as autoridades de assistência mútua e extradição. Cada Parte assegurará pessoal treinado e bem equipado.",
+      "pontos": ["Ponto de contato 24 horas por dia, 7 dias por semana.", "Suporte técnico, conservação de dados, coleta de provas e localização de suspeitos.", "Comunicação rápida com outras Partes.", "Pessoal treinado e equipado."],
+      "atencao": ["Plantão 24/7."],
+      "exemplo": "A polícia estrangeira aciona o ponto de contato brasileiro de madrugada para preservar dados.",
+      "prova": ["Assertiva que limita o ponto de contato ao horário comercial erra: é 24 horas por dia, 7 dias por semana."],
+      "termos": [],
+      "remissoes": ["Artigos 29 e 30"]
+    },
+    "conven-o-artigo-36": {
+      "simples": "Assinatura e vigência: a Convenção está aberta à assinatura dos Estados membros do Conselho da Europa e dos não membros que participaram de sua elaboração, sujeita à ratificação, aceitação ou aprovação, com depósito junto ao Secretário-Geral. Entra em vigor no primeiro dia do mês seguinte a três meses da data em que cinco Estados, incluindo pelo menos três membros do Conselho da Europa, tiverem expressado sua vontade de se obrigar. Para os demais signatários, entra em vigor no primeiro dia do mês seguinte a três meses da expressão de vontade.",
+      "pontos": ["Assinatura aberta a membros e a não membros que participaram da elaboração.", "Ratificação, aceitação ou aprovação.", "Vigência após cinco Estados, com pelo menos três membros do Conselho da Europa.", "Três meses para os demais."],
+      "atencao": ["Cinco Estados, entre eles três membros do Conselho da Europa."],
+      "exemplo": "A Convenção só passou a vigorar com cinco Estados, incluindo três membros do Conselho.",
+      "prova": ["Assertiva que fixa em dez Estados o número mínimo para a vigência erra: são cinco."],
+      "termos": [],
+      "remissoes": ["Artigo 37"]
+    },
+    "conven-o-artigo-37": {
+      "simples": "Adesão à Convenção: depois da vigência, o Conselho de Ministros do Conselho da Europa, após consulta e com o consentimento unânime dos Estados signatários, pode convidar Estado não membro que não tenha participado da elaboração para aderir. Para os Estados que aderirem, a Convenção entra em vigor no primeiro dia do mês seguinte a três meses do depósito do instrumento de adesão.",
+      "pontos": ["Convite pelo Conselho de Ministros.", "Consentimento unânime dos Estados signatários.", "Vigência após três meses do depósito."],
+      "atencao": ["Convite exige consentimento unânime dos signatários."],
+      "exemplo": "O Brasil aderiu à Convenção após convite formal do Conselho de Ministros.",
+      "prova": ["Assertiva que permite a adesão de qualquer Estado sem convite erra."],
+      "termos": [],
+      "remissoes": ["Artigo 36"]
+    },
+    "conven-o-artigo-38": {
+      "simples": "Aplicação territorial: qualquer Estado pode, ao assinar ou depositar o instrumento, especificar os territórios em que a Convenção será aplicável. Pode, posteriormente, por declaração ao Secretário-Geral, estendê-la a outro território, que entra em vigor no primeiro dia do mês seguinte a três meses do recebimento. A declaração pode ser retirada por notificação, com eficácia no primeiro dia do mês seguinte a três meses do recebimento.",
+      "pontos": ["Especificação do território na assinatura ou depósito.", "Extensão posterior por declaração.", "Retirada por notificação, com prazo de três meses."],
+      "atencao": ["Três meses de prazo para extensão e retirada."],
+      "exemplo": "Um Estado estende a Convenção a um território ultramarino por declaração.",
+      "prova": ["Assertiva que torna a extensão territorial imediata erra: depende de prazo de três meses."],
+      "termos": [],
+      "remissoes": ["Artigo 36"]
+    },
+    "conven-o-artigo-39": {
+      "simples": "Efeitos da Convenção: o objetivo é complementar os tratados e acordos bilaterais ou multilaterais aplicáveis entre as Partes, incluindo as convenções europeias sobre extradição e assistência mútua em assuntos penais. Se duas ou mais Partes já tiverem acordo sobre esses assuntos, podem aplicá-lo, mas de forma compatível com os objetivos e princípios da Convenção. Nenhum artigo afetará outros direitos, restrições, obrigações e responsabilidades de uma Parte.",
+      "pontos": ["A Convenção complementa outros tratados.", "Acordos anteriores podem ser aplicados, de forma compatível com a Convenção.", "Não afeta outros direitos e obrigações da Parte."],
+      "atencao": ["Natureza COMPLEMENTAR."],
+      "exemplo": "Países com tratado de assistência mútua mantêm o acordo, sem contrariar a Convenção.",
+      "prova": ["Assertiva que revoga os tratados anteriores sobre o tema erra: a Convenção os complementa."],
+      "termos": [],
+      "remissoes": ["Artigo 24"]
+    },
+    "conven-o-artigo-40": {
+      "simples": "Declarações: por notificação escrita ao Secretário-Geral do Conselho da Europa, qualquer Estado pode, ao assinar ou depositar o instrumento, declarar que se valerá da faculdade de exigir elementos complementares, como previsto nos artigos 2, 3, 6 parágrafo 1.b, 7, 9 parágrafo 3 e 27 parágrafo 9.e.",
+      "pontos": ["Declaração de exigência de elementos complementares.", "Aplicável a artigos específicos."],
+      "atencao": ["Declarações são distintas de reservas."],
+      "exemplo": "Um Estado declara que exigirá violação de medidas de segurança no acesso ilegal.",
+      "prova": ["Assertiva que permite declarações sobre qualquer artigo erra: apenas os indicados."],
+      "termos": [],
+      "remissoes": ["Artigo 42"]
+    },
+    "conven-o-artigo-41": {
+      "simples": "Cláusula federativa: um Estado federal pode reservar-se o direito de assumir as obrigações do capítulo II conforme os princípios fundamentais de suas relações entre o governo central e as unidades constitutivas, desde que possa cooperar nos termos do capítulo III. Essa reserva não pode excluir ou diminuir substancialmente suas obrigações de dispor sobre as medidas do capítulo II, e o Estado deve prever amplo sistema de persecução criminal. Quanto às matérias de competência dos Estados federados, o governo federal informará suas autoridades, dará opinião favorável e as encorajará a dar efeito às disposições.",
+      "pontos": ["Reserva própria dos Estados federais.", "Não pode esvaziar as obrigações do capítulo II.", "Governo federal incentiva os entes federados."],
+      "atencao": ["Cláusula aplicável a Estados federais, como o Brasil."],
+      "exemplo": "Um Estado federal adapta as obrigações à repartição de competências, sem esvaziá-las.",
+      "prova": ["Assertiva que permite ao Estado federal excluir totalmente as obrigações do capítulo II erra."],
+      "termos": [],
+      "remissoes": ["Artigo 42"]
+    },
+    "conven-o-artigo-42": {
+      "simples": "Reservas: por notificação escrita ao Secretário-Geral, qualquer Estado poderá, ao assinar ou depositar o instrumento, declarar que se valerá das reservas previstas no Artigo 4 parágrafo 2, Artigo 6 parágrafo 3, Artigo 9 parágrafo 4, Artigo 10 parágrafo 3, Artigo 11 parágrafo 3, Artigo 14 parágrafo 3, Artigo 22 parágrafo 2, Artigo 29 parágrafo 4 e Artigo 41 parágrafo 1. Nenhuma outra reserva poderá ser apresentada.",
+      "pontos": ["Lista fechada de reservas.", "Nenhuma outra reserva é admitida."],
+      "atencao": ["Rol TAXATIVO de reservas."],
+      "exemplo": "O Estado só pode fazer as reservas expressamente listadas.",
+      "prova": ["Assertiva que permite reservas livres erra: nenhuma outra reserva é admitida."],
+      "termos": [{ "termo": "Reserva", "significado": "Declaração que exclui ou modifica o efeito de certa disposição do tratado." }],
+      "remissoes": ["Artigo 43"]
+    },
+    "conven-o-artigo-43": {
+      "simples": "Status e retirada de reservas: a Parte que tenha apresentado reserva pode retirá-la no todo ou em parte por notificação ao Secretário-Geral, com efeito na data indicada, se posterior ao recebimento. Deverá retirá-la assim que as circunstâncias permitirem. O Secretário-Geral pode periodicamente entrevistar-se com as Partes que tenham reservas, tendo em vista sua retirada.",
+      "pontos": ["Retirada total ou parcial por notificação.", "Dever de retirar quando as circunstâncias permitirem.", "Consultas periódicas do Secretário-Geral."],
+      "atencao": ["Retirada pode ter efeito em data posterior."],
+      "exemplo": "O Estado retira sua reserva por notificação ao Secretário-Geral.",
+      "prova": ["Assertiva que torna as reservas permanentes erra: devem ser retiradas quando as circunstâncias permitirem."],
+      "termos": [],
+      "remissoes": ["Artigo 42"]
+    },
+    "conven-o-artigo-44": {
+      "simples": "Emendas: podem ser propostas por qualquer Parte, e o Secretário-Geral as leva ao conhecimento dos Estados membros do Conselho da Europa, dos não membros que participaram da elaboração e dos aderentes. A proposta é submetida ao Comitê Europeu para os Problemas Criminais (CDPC), que emite parecer, e ao Conselho de Ministros, que pode adotá-la após consultar os Estados não membros que sejam Partes. A emenda adotada é encaminhada às Partes para aceitação e entra em vigor 30 dias depois de todas informarem sua aceitação.",
+      "pontos": ["Qualquer Parte pode propor.", "Parecer do CDPC e decisão do Conselho de Ministros.", "Aceitação pelas Partes.", "Vigência 30 dias após a aceitação de todas."],
+      "atencao": ["A emenda só vale após a aceitação de TODAS as Partes."],
+      "exemplo": "Uma emenda só entra em vigor depois que todas as Partes a aceitam.",
+      "prova": ["Assertiva que permite a vigência da emenda com aceitação da maioria das Partes erra: exige todas."],
+      "termos": [],
+      "remissoes": ["Artigo 46"]
+    },
+    "conven-o-artigo-45": {
+      "simples": "Solução de controvérsias: o Comitê Europeu para os Problemas Criminais (CDPC) será informado das interpretações e da aplicação da Convenção. Em controvérsias entre Partes sobre sua interpretação ou aplicação, estas buscarão a composição por negociação ou outro meio pacífico à sua escolha, inclusive submeter ao CDPC, a tribunal arbitral cujas decisões sejam imperativas ou à Corte Internacional de Justiça, como combinado pelas Partes.",
+      "pontos": ["CDPC é informado da aplicação.", "Negociação ou outro meio pacífico.", "Possibilidade de CDPC, arbitragem ou Corte Internacional de Justiça."],
+      "atencao": ["Meios pacíficos, à escolha das Partes."],
+      "exemplo": "Dois Estados em disputa submetem o caso à arbitragem, se concordarem.",
+      "prova": ["Assertiva que impõe a jurisdição obrigatória da Corte Internacional de Justiça erra: depende do que as Partes combinarem."],
+      "termos": [],
+      "remissoes": ["Artigo 46"]
+    },
+    "conven-o-artigo-46": {
+      "simples": "Consultas entre as Partes: as Partes, quando conveniente, se consultarão periodicamente para facilitar a utilização e a implementação eficientes da Convenção, a troca de informações sobre inovações jurídicas, políticas ou tecnológicas relativas a crimes cibernéticos e à prova eletrônica e a apreciação de possíveis emendas. O CDPC é informado dos resultados e facilita as consultas, e três anos depois da vigência fará, com as Partes, uma revisão de todas as disposições, propondo emendas se necessário. As despesas são suportadas pelas Partes, salvo se assumidas pelo Conselho da Europa, e o Secretariado as auxilia.",
+      "pontos": ["Consultas periódicas.", "Troca de informações sobre inovações.", "Revisão pelo CDPC três anos após a vigência.", "Despesas suportadas pelas Partes."],
+      "atencao": ["Revisão geral três anos após a entrada em vigor."],
+      "exemplo": "As Partes se reúnem para discutir novas tecnologias e propor emendas.",
+      "prova": ["Assertiva que fixa a revisão geral em dez anos erra: são três anos após a vigência."],
+      "termos": [],
+      "remissoes": ["Artigo 44"]
+    },
+    "conven-o-artigo-47": {
+      "simples": "Denúncia: qualquer Parte poderá, a qualquer tempo, denunciar a Convenção por notificação ao Secretário-Geral do Conselho da Europa. A denúncia torna-se eficaz no primeiro dia do mês seguinte à expiração de três meses da recepção da notificação.",
+      "pontos": ["Denúncia a qualquer tempo.", "Eficácia após três meses."],
+      "atencao": ["Prazo de três meses."],
+      "exemplo": "O Estado que denuncia a Convenção deixa de ser Parte após três meses.",
+      "prova": ["Assertiva que impede a denúncia antes de certo prazo de vigência erra: pode ocorrer a qualquer tempo."],
+      "termos": [{ "termo": "Denúncia", "significado": "Ato pelo qual um Estado se retira de um tratado." }],
+      "remissoes": ["Artigo 36"]
+    },
+    "conven-o-artigo-48": {
+      "simples": "Notificação: o Secretário-Geral do Conselho da Europa notificará os Estados membros, os não membros que participaram da elaboração e os aderentes ou convidados a aderir das assinaturas, do depósito dos instrumentos, das datas de entrada em vigor, das declarações e reservas e de qualquer outro ato relativo à Convenção. O texto foi feito em Budapeste, em 23 de novembro de 2001, em inglês e francês, em textos igualmente autênticos, e uma única via depositada nos arquivos do Conselho da Europa.",
+      "pontos": ["Notificações do Secretário-Geral.", "Textos em inglês e francês igualmente autênticos.", "Depósito nos arquivos do Conselho da Europa."],
+      "atencao": ["Línguas autênticas: inglês e francês."],
+      "exemplo": "O Secretário-Geral comunica às Partes cada nova ratificação.",
+      "prova": ["Assertiva que considera autêntico apenas o texto em inglês erra: inglês e francês são igualmente autênticos."],
+      "termos": [],
+      "remissoes": ["Artigo 36"]
+    }
+  }
+}

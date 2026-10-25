@@ -1,0 +1,181 @@
+{
+  "checked_at": "2026-10-18T04:07:39.215Z",
+  "new_active": 0,
+  "editorial_archives": 3,
+  "not_official_annulments": true,
+  "not_approval_of_alternative_answers": true,
+  "legal_controversies_not_claimed_resolved": true,
+  "preserved_other_pc_records": 2969,
+  "all_preexisting_metadata_unchanged": true,
+  "concurrent_additions_preserved": [],
+  "source_hashes_verified": true,
+  "tests_passed": 11,
+  "application_changes": false,
+  "pc_status": {
+    "active": 2636,
+    "archived": 286,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 1
+  },
+  "pending": [
+    {
+      "id": "76a0df58-50ad-465e-af73-12763e76347f",
+      "state": "RJ",
+      "item_number": 48,
+      "career": "Delegado de Polícia"
+    }
+  ],
+  "items": [
+    {
+      "id": "94a5990c-4243-42d3-a45b-e0361f65812f",
+      "item_number": 40,
+      "career": "Delegado de Polícia",
+      "original_answer_preserved": "D",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-18T04:07:23.214802+00:00",
+        "review_note": "Arquivamento editorial para treino atual, sem anulação oficial e sem trocar a letraD da banca.\n\nA soluçãoD pode ser sustentada pela persistência concreta dos motivos da preventiva, inclusive risco de reiteração. O problema é descartarC de modo que ensine prisão automática: C afirma que o descumprimento de cautelar, isoladamente, não demonstra adequação da preventiva para a conveniência da instrução criminal.\n\nO CPP, art312,§1º, admite preventiva em caso de descumprimento, mas isso não equivale a dispensar necessidade, adequação e fundamentação. O art282,§4º, prevê substituição, cumulação ou, em último caso, preventiva; o §6º exige justificar individualmente a insuficiência de outras cautelares. O art312,§2º, exige perigo concreto e fatos novos ou contemporâneos. O §4º, incluído pela Lei15.272/2025, reforça a demonstração concreta dos riscos, inclusive à instrução. Não é seguro apresentar a fraseC como falsa apenas porque houve descumprimento.\n\nA questão é de2022. O reforço legislativo de2025 é identificado como posterior; não se declara retroativamente inválida a prova por uma lei que ainda não existia. A decisão editorial refere-se ao uso atual como exercício de resposta única.\n\nA gravidez também não gera direito automático à domiciliar na situação de crime cometido com violência contra pessoa: conferir o art318-A,I. Primariedade e residência fixa não revogam, por si, preventiva concretamente justificada. A atuação de organização criminosa pode fundamentar proteção da ordem pública quando demonstrado o risco concreto, sem prisão automática pela mera imputação.\n\nExemplo: descumprir uma obrigação cautelar pode justificar reavaliação das medidas. Para prender, porém, o juiz precisa fundamentar a necessidade e a insuficiência de alternativas; se invocar risco à instrução, deve demonstrar esse risco. Não se substitui essa análise por uma fórmula abstrata.\n\nExercício: todo descumprimento impõe imediatamente preventiva? Não. Permitir a medida, em condições legais, não significa torná-la obrigatória ou dispensar motivação.\n\nPreservados caderno, enunciado, cinco alternativas, extração e gabaritoD. Caderno oficial de Delegado PCRO2022, questão40, página5, cotejado visualmente; confronto com CPP compilado obtido diretamente no Planalto nesta rodada. A reativação exige resolver expressamente a concorrência interpretativaC/D, sem ensinar preventiva automática. Não se trata de anulação da banca nem de adoção deC como novo gabarito."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Confronto do distratorC com exigências de motivação, necessidade e alternativas dos arts282/312 CPP, sem converter descumprimento em prisão automática.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3689Compilado.htm"
+        ],
+        "captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3689Compilado.htm",
+            "resolved_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "status": 200,
+            "captured_at": "2026-10-18T03:58:44.738912+00:00",
+            "sha256": "7a7ccced5bb3416287c8935ff1a89fc1009e53d6318c8a77beedb5ef1a99afb6",
+            "path": "outputs/pc-pending-review-2026-10-16/planalto-access-recheck/cpp.html",
+            "encoding": "latin1"
+          }
+        ],
+        "paper_page": 5,
+        "original_answer_preserved": true,
+        "not_official_annulment": true,
+        "not_approval_of_another_answer": true
+      }
+    },
+    {
+      "id": "b20bd1e1-8388-4069-aff1-689070b28009",
+      "item_number": 60,
+      "career": "Delegado de Polícia",
+      "original_answer_preserved": "C",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-18T04:07:23.214802+00:00",
+        "review_note": "Arquivamento editorial por formulação insegura das alternativasB/C, sem anulação oficial e sem trocar a letraC.\n\nO art1º da Lei das Contravenções Penais prevê aplicação subsidiária das regras gerais do Código Penal quando a própria LCP não dispuser diversamente. Há, portanto, fundamento para a opçãoC. Isso não autoriza considerar falsa, em termos gerais, a culpabilidade mencionada emB.\n\nO art3º da LCP utiliza a expressão ação ou omissão voluntária e trata dos efeitos de dolo ou culpa. Não se deve converter esse texto em autorização geral para responsabilidade penal objetiva, nem confundir dolo/culpa, voluntariedade e culpabilidade como se fossem a mesma categoria. A aplicação das regras gerais do CP inclui institutos de imputabilidade e de responsabilização pessoal; por exemplo, o art26 trata da isenção de pena por incapacidade de entendimento ou determinação nas condições legais.\n\nComo apoio concreto, no Tema857/ARE901623, sobre o art19 da LCP, o STF determinou consideração das circunstâncias do caso e, inclusive, do elemento subjetivo do agente. Esse precedente não julgou a questão60 nem fixou uma tese geral sobre todas as contravenções. Também não se usa elemento subjetivo como sinônimo de culpabilidade analítica. Ele impede, porém, ensinar a aplicação automática de sanção apenas porque houve uma conduta material.\n\nAs demais proposições precisam ser lidas no texto atual: art2º da LCP limita sua aplicação territorial; art4º não pune tentativa. O dispositivo antigo de conversão de multa em prisão simples, art11, está revogado; não pode ser apresentado como vigente. Não se criam exercícios de aplicação desse trecho histórico.\n\nExemplo: o fato de a infração ser uma contravenção não permite ignorar a imputabilidade do agente ou concluir que qualquer resultado gera pena automaticamente. A subsidiariedade das regras do CP e a análise da responsabilidade pessoal são questões diferentes.\n\nExercício: subsidiariedade da LCP significa que todo princípio de culpabilidade fica afastado? Não. A aplicação supletiva de regras gerais não produz essa consequência.\n\nA formulação amplaB não pode ser descartada por uma regra de responsabilidade objetiva que não foi demonstrada. Por segurança pedagógica, o item não permanece como exercício atual de resposta única. Mantidos enunciado, alternativas, extração e letraC. Caderno oficial de Delegado PCRO2022, questão60, página8, cotejado visualmente; fontes primárias atuais: LCP e CP compilados no Planalto, com apoio específico e delimitado do Tema857/STF. Arquivamento editorial não é anulação oficial nem substituição porB."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "B/C não permitem resposta única segura sem ensino de responsabilidade penal objetiva; LCP1/3 e CP26, com apoio delimitado do Tema857.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3688.htm",
+          "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848compilado.htm",
+          "https://noticias.stf.jus.br/postsnoticias/stf-valida-punicao-para-porte-de-armas-brancas-prevista-na-lei-de-contravencoes-penais/"
+        ],
+        "captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3688.htm",
+            "resolved_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+            "status": 200,
+            "captured_at": "2026-10-18T03:58:40.923454+00:00",
+            "sha256": "a57eea5f8ce07cbbd61b0503f8a97c0e97849cee5906d7470b1c5588fb5f145b",
+            "path": "outputs/pc-pending-review-2026-10-16/planalto-access-recheck/contravencoes.html",
+            "encoding": "latin1"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848compilado.htm",
+            "resolved_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "status": 200,
+            "captured_at": "2026-10-18T03:58:42.229944+00:00",
+            "sha256": "aebb4fed0b437ee6eb7586f158c8f2613a3679d83dd17cf5829c3c1032ae8998",
+            "path": "outputs/pc-pending-review-2026-10-16/planalto-access-recheck/codigo-penal.html",
+            "encoding": "latin1"
+          },
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-punicao-para-porte-de-armas-brancas-prevista-na-lei-de-contravencoes-penais/",
+            "resolved_url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-punicao-para-porte-de-armas-brancas-prevista-na-lei-de-contravencoes-penais/",
+            "path": "outputs/pc-pending-review-2026-10-16/last4-tema857.html",
+            "sha256": "9a793bc030adfa2951e5f97cebd447fcaa8479654ca42ccae674125bfff47b01",
+            "captured_at": "2026-10-18T04:02:06.132456+00:00"
+          }
+        ],
+        "paper_page": 8,
+        "original_answer_preserved": true,
+        "not_official_annulment": true,
+        "not_approval_of_another_answer": true
+      }
+    },
+    {
+      "id": "e837718c-b3e6-44cf-aa22-762f176e9862",
+      "item_number": 80,
+      "career": "Datiloscopista Policial",
+      "original_answer_preserved": "A",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-18T04:07:23.214802+00:00",
+        "review_note": "Arquivamento editorial por conflito interpretativoA/E, sem anulação oficial e sem trocar a letraA da banca.\n\nOs textos primários foram obtidos e confrontados. O CP, art342, tipifica afirmação falsa por testemunha ou perito nos procedimentos descritos; o §1º prevê aumento quando praticada mediante suborno e nas demais hipóteses ali expressas. O §2º afasta a punibilidade na retratação ou declaração da verdade antes da sentença no processo em que ocorreu o ilícito. O terceiro que dá, oferece ou promete vantagem responde pelo tipo próprio do art343. Não confundir essas condutas com fraude processual do art347.\n\nA corresponde à solução oficial de excluir prova ilícita, conforme o CPP, art157. A regra legal se refere à prova obtida em violação de norma constitucional ou legal: não se deve ensinar que uma simples alegação de falsidade ou qualquer divergência técnica autoriza automaticamente desentranhamento. O reconhecimento da ilicitude precisa ser fundamentado.\n\nA dificuldade concreta está emE: o enunciado já descreve vantagem prometida para a falsidade, enquanto E afirma agravamento pelo recebimento de vantagem. O art342,§1º, efetivamente contempla o suborno. A ausência da palavra recebimento no parágrafo não demonstra, sozinha, que suborno pago não possa gerar o aumento; tampouco o pagamento posterior cria, por si, novo aumento autônomo. A extensão da referência a vantagem não pecuniária e o contraste comA não ficaram resolvidos por uma justificativa primária específica da banca ou de tribunal.\n\nNão se inventa, para excluirE, uma regra universal de que vantagem não pecuniária jamais importa, nem uma regra de que todo recebimento seja agravante autônoma. Essa ambiguidade afeta a segurança do item como exercício automático de resposta única; o arquivamento é a disposição editorial, sem declarar resolvida toda controvérsia jurídica.\n\nExemplo: o perito aceita promessa de pagamento para mentir e depois recebe o valor. É necessário enquadrar a conduta e a hipótese de aumento; não se conta automaticamente uma majorante pelo suborno e outra pelo simples recebimento. Se houver apenas uma acusação de mentira, sem reconhecimento da ilicitude da prova, não se presume seu desentranhamento.\n\nExercício: a retratação tempestiva do art342,§2º, é apenas redução de pena? Não. O texto prevê que o fato deixa de ser punível, nas condições estabelecidas.\n\nPreservados integralmente enunciado, alternativas, extração, fontes e gabaritoA. Caderno oficial de Datiloscopista PCRO2022, questão80, página8, cotejado visualmente; CP e CPP compilados obtidos diretamente no Planalto nesta rodada. A reativação exige justificativa específica que resolvaA/E; este arquivamento não significa anulação da banca, aprovação deE ou revisão jurídica integral de todas as hipóteses de suborno."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conflito de formulaçãoA/E em face do CPP157 e CP342§1; disposição editorial por insegurança pedagógica, sem declarar resolvida a extensão da vantagem não pecuniária.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3689Compilado.htm"
+        ],
+        "captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848compilado.htm",
+            "resolved_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "status": 200,
+            "captured_at": "2026-10-18T03:58:42.229944+00:00",
+            "sha256": "aebb4fed0b437ee6eb7586f158c8f2613a3679d83dd17cf5829c3c1032ae8998",
+            "path": "outputs/pc-pending-review-2026-10-16/planalto-access-recheck/codigo-penal.html",
+            "encoding": "latin1"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del3689Compilado.htm",
+            "resolved_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "status": 200,
+            "captured_at": "2026-10-18T03:58:44.738912+00:00",
+            "sha256": "7a7ccced5bb3416287c8935ff1a89fc1009e53d6318c8a77beedb5ef1a99afb6",
+            "path": "outputs/pc-pending-review-2026-10-16/planalto-access-recheck/cpp.html",
+            "encoding": "latin1"
+          }
+        ],
+        "paper_page": 8,
+        "original_answer_preserved": true,
+        "not_official_annulment": true,
+        "not_approval_of_another_answer": true
+      }
+    }
+  ],
+  "remaining_blocker": {
+    "question": "RJ Delegado48",
+    "specific_need": "Confronto com regime estadual do MP-RJ e alcance da regra de encaminhamento via PGJ ao TCE, sem equiparar automaticamente órgão e seus membros.",
+    "federal_sources_read": [
+      "Lei8625/1993 art26§1",
+      "Lei12830/2013 art2§2"
+    ],
+    "access_results": {
+      "ALERJ": "503",
+      "TCE_RJ": "503",
+      "MPRJ": "CONNECT403"
+    },
+    "mprj_network_draft": {
+      "saved": true,
+      "requires_publish": true,
+      "runtime_change_verified": false,
+      "domains_added": [
+        "www.mprj.mp.br",
+        "mprj.mp.br"
+      ],
+      "existing_custom_domains_preserved": true
+    }
+  }
+}

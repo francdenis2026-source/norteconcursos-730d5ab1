@@ -1,0 +1,1336 @@
+{
+  "course_slug": "transito",
+  "units": {
+    "art-193": {
+      "simples": "Transitar com o veículo em calçadas, passeios, passarelas, ciclovias, ciclofaixas, ilhas, refúgios, ajardinamentos, canteiros centrais e divisores de pista, acostamentos, marcas de canalização, gramados e jardins públicos é infração gravíssima, com multa (três vezes).",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa (três vezes)."
+      ],
+      "atencao": [
+        "Multa TRÊS vezes.",
+        "Não impor automaticamente art. 193 à bicicleta em passeio autorizado, nem à transposição regular para acesso ao imóvel."
+      ],
+      "exemplo": "Um carro circula pelo passeio para escapar da fila. Resposta: o recorte é gravíssima com multa três vezes. Variação: Cruzar o passeio para ingressar legitimamente no imóvel tem regra específica do art. 29, V; não equiparar toda transposição necessária à circulação indevida.",
+      "prova": [
+        "O inciso pune com multa simples toda circulação descrita? Não. O art. 193 prevê gravíssima com multa TRÊS vezes, sem suspensão expressa neste tipo.",
+        "Cruzar passeio para ingresso regular em imóvel é automaticamente dirigir pelo passeio em qualquer hipótese? Não. Integrar art. 29, V, segurança e finalidade; não suprimir a hipótese legítima."
+      ],
+      "termos": [
+        {
+          "termo": "Circulação indevida",
+          "significado": "Trânsito por áreas protegidas, distinto do ingresso permitido em imóvel."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 181"
+      ]
+    },
+    "art-194": {
+      "simples": "Transitar em marcha à ré, salvo na distância necessária a pequenas manobras e de forma a não causar riscos à segurança, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Exceção: pequenas manobras seguras."
+      ],
+      "atencao": [
+        "Permitido apenas em pequenas manobras seguras.",
+        "O exemplo anterior de vários metros não deve ser interpretado como número legal único; a avaliação é contextual."
+      ],
+      "exemplo": "Motorista faz ré apenas na distância necessária para estacionar, sem risco. Resposta: examinar exceção de pequena manobra segura. Variação: Usar ré para percorrer longa extensão até uma saída não vira pequena manobra apenas por ir devagar.",
+      "prova": [
+        "Toda marcha à ré é infração sem exceção? Não. O texto permite distância necessária a pequenas manobras e execução sem risco à segurança.",
+        "O artigo fixa exatamente cinco metros como limite universal? Não. Não traz metragem; analisar necessidade, pequena manobra e segurança no caso."
+      ],
+      "termos": [
+        {
+          "termo": "Pequena manobra",
+          "significado": "Deslocamento necessário e seguro, distinto de circulação prolongada em ré."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 28"
+      ]
+    },
+    "art-195": {
+      "simples": "Desobedecer às ordens emanadas da autoridade competente de trânsito ou de seus agentes é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Ordens da autoridade ou de seus agentes."
+      ],
+      "atencao": [
+        "Ordens do agente prevalecem sobre sinais.",
+        "Não presumir crime do art. 330 por toda irregularidade administrativa; hipóteses e jurisprudência precisam de exame específico."
+      ],
+      "exemplo": "Agente competente ordena parada e o condutor desobedece. Resposta: examinar hipótese administrativa grave, com multa. Variação: Ordem de pessoa sem competência não é automaticamente ordem da autoridade de trânsito; enquadramento requer origem legal adequada.",
+      "prova": [
+        "A classe do art. 195 é média? Não. A desobediência descrita é GRAVE, com multa, quando emanada da autoridade competente ou agentes.",
+        "Toda autuação do art. 195 prova automaticamente crime de desobediência? Não. Esferas e requisitos são distintos; examinar finalidade da ordem e regime penal aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Ordem competente",
+          "significado": "Comando oriundo da autoridade/agente com atribuição, distinto de pedido informal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 89"
+      ]
+    },
+    "art-196": {
+      "simples": "Deixar de indicar com antecedência, por gesto regulamentar de braço ou luz indicadora de direção, o início da marcha, a manobra de parar o veículo, a mudança de direção ou de faixa de circulação é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Seta ou gesto de braço."
+      ],
+      "atencao": [
+        "Grave.",
+        "Abrange início da marcha, parada, direção e mudança de faixa, não apenas conversão."
+      ],
+      "exemplo": "O condutor liga a seta só depois de começar a trocar de faixa. Resposta: falta a antecedência exigida, apesar de o dispositivo funcionar. Variação: Gesto regulamentar de braço é alternativa textual, mas não transforma manobra perigosa em permitida nem concede preferência.",
+      "prova": [
+        "Só luz indicadora pode atender à indicação textual? Não. O artigo admite gesto regulamentar de braço OU luz indicadora, sempre com antecedência.",
+        "Sinalizar dispensa avaliar segurança e preferência? Não. Sinal comunica intenção, sem autorização automática para manobra proibida ou para cortar usuários com prioridade."
+      ],
+      "termos": [
+        {
+          "termo": "Indicação antecedente",
+          "significado": "Aviso anterior ao movimento, distinto de acionar sinal depois da manobra."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 35"
+      ]
+    },
+    "art-197": {
+      "simples": "Deixar de deslocar, com antecedência, o veículo para a faixa mais à esquerda ou mais à direita, dentro da respectiva mão de direção, quando for manobrar para um desses lados, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Posicionar-se antes de converter."
+      ],
+      "atencao": [
+        "Média.",
+        "Não confundir média por posicionamento e grave por omitir indicação antecedente."
+      ],
+      "exemplo": "Condutora pretende converter à direita e não se posiciona com antecedência na faixa pertinente. Resposta: o tipo de posicionamento é média. Variação: Emitir a seta não substitui posicionar; a falta de sinalização tem descrição própria do art. 196.",
+      "prova": [
+        "Posicionamento e sinalização da manobra são exatamente a mesma obrigação? Não. Arts. 197 e 196 têm condutas e classes próprias, sem absorção automática de qualquer fato.",
+        "A faixa a escolher pode ser na contramão para facilitar conversão? Não. O texto exige deslocamento dentro da respectiva mão de direção."
+      ],
+      "termos": [
+        {
+          "termo": "Posicionamento prévio",
+          "significado": "Escolha antecipada da faixa pertinente na própria mão, integrada à manobra segura."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 38"
+      ]
+    },
+    "art-198": {
+      "simples": "Deixar de dar passagem pela esquerda, quando solicitado, é infração média, com multa.",
+      "pontos": [
+        "Infração média."
+      ],
+      "atencao": [
+        "Média.",
+        "Não confundir com prioridade de ambulância do art. 189."
+      ],
+      "exemplo": "Condutor recebe solicitação para passagem pela esquerda e não cede de modo regular. Resposta: o art. 198 prevê média com multa. Variação: Ceder passagem não exige acelerar acima do limite nem realizar deslocamento perigoso; integrar regras do art. 30.",
+      "prova": [
+        "O pedido de passagem autoriza exigir velocidade ilegal de quem vai à frente? Não. O dever de permitir ultrapassagem deve respeitar segurança e limites, sem obrigar acelerar irregularmente.",
+        "A recusa descrita no art. 198 é leve? Não. A classe legal é MÉDIA, distinta de outras condutas de faixa ou urgência."
+      ],
+      "termos": [
+        {
+          "termo": "Passagem solicitada",
+          "significado": "Dever de facilitar a ultrapassagem no regime legal, sem impor risco ou velocidade ilícita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 30"
+      ]
+    },
+    "art-199": {
+      "simples": "Ultrapassar pela direita, salvo quando o veículo da frente estiver colocado na faixa apropriada e der sinal de que vai entrar à esquerda, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Exceção: veículo da frente sinalizando conversão à esquerda."
+      ],
+      "atencao": [
+        "Média; a exceção exige que o da frente esteja na faixa apropriada e sinalize.",
+        "Não copiar essa exceção para a ultrapassagem de coletivo/escolar parado no art. 200 sem examinar o requisito próprio."
+      ],
+      "exemplo": "Veículo dianteiro está na faixa apropriada e sinaliza entrada à esquerda. Resposta: examinar a exceção à ultrapassagem pela direita, com segurança. Variação: A seta isolada, sem faixa apropriada ou condições seguras, não é licença irrestrita para passar por qualquer área.",
+      "prova": [
+        "A exceção exige apenas que o veículo dianteiro esteja parado? Não. Exige posição na faixa apropriada E sinal de entrada à esquerda, nos termos do artigo.",
+        "A exceção elimina todas as proibições de circulação pelo acostamento? Não. Integra a ultrapassagem regular sem autorizar áreas ou manobras proibidas por outros tipos."
+      ],
+      "termos": [
+        {
+          "termo": "Ultrapassagem excepcional",
+          "significado": "Passagem pela direita sob posição e sinal específicos do veículo da frente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 30"
+      ]
+    },
+    "art-200": {
+      "simples": "Ultrapassar pela direita veículo de transporte coletivo ou de escolares, parado para embarque ou desembarque de passageiros, salvo quando houver refúgio de segurança para o pedestre, é infração gravíssima, com multa.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Exceção: refúgio de segurança para o pedestre."
+      ],
+      "atencao": [
+        "Gravíssima.",
+        "Não generalizar todo ônibus parado, independentemente de finalidade ou refúgio, como a descrição completa."
+      ],
+      "exemplo": "Carro ultrapassa pela direita ônibus escolar parado para desembarque, sem refúgio para pedestres. Resposta: gravíssima com multa. Variação: Há refúgio de segurança no recorte do artigo: a exceção precisa ser considerada, mantendo cuidado com passageiros.",
+      "prova": [
+        "A proibição do artigo se limita a ônibus urbano? Não. Abrange transporte coletivo e de escolares parados para embarque/desembarque.",
+        "Refúgio torna livre qualquer manobra sem cautela? Não. É exceção ao tipo descrito, sem afastar segurança, preferências e demais regras aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Refúgio de segurança",
+          "significado": "Proteção do pedestre que fundamenta a exceção específica da ultrapassagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 31"
+      ]
+    },
+    "art-201": {
+      "simples": "Deixar de guardar a distância lateral de um metro e cinquenta centímetros ao passar ou ultrapassar bicicleta é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Distância lateral de um metro e cinquenta centímetros."
+      ],
+      "atencao": [
+        "Um metro e cinquenta centímetros de distância lateral.",
+        "Não ampliar essa metragem como único padrão para todos os veículos e todo art. 192."
+      ],
+      "exemplo": "Ao passar por bicicleta, o motorista deixa só um metro de afastamento lateral. Resposta: falta a distância legal de um metro e cinquenta, infração média. Variação: Manter 1,5 m não dispensa reduzir velocidade ao ultrapassar o ciclista, obrigação própria do art. 220, XIII.",
+      "prova": [
+        "A distância de 1,5 m se aplica apenas a ultrapassar e nunca a passar bicicleta? Não. O artigo usa passar OU ultrapassar, abrangendo ambas as situações.",
+        "Respeitar distância elimina o dever de reduzir velocidade? Não. Distância lateral e velocidade compatível são obrigações distintas e integradas."
+      ],
+      "termos": [
+        {
+          "termo": "Afastamento lateral",
+          "significado": "Espaço de 1,5 m ao passar/ultrapassar bicicleta, diferente da distância frontal geral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 58"
+      ]
+    },
+    "art-202": {
+      "simples": "Ultrapassar outro veículo pelo acostamento ou em interseções e passagens de nível é infração gravíssima, com multa (cinco vezes).",
+      "pontos": [
+        "Acostamento, interseções e passagens de nível.",
+        "Multa (cinco vezes)."
+      ],
+      "atencao": [
+        "Multa CINCO vezes.",
+        "Distinguir artigos 193, 202 e 211 sem somar ou escolher consequências por automatismo."
+      ],
+      "exemplo": "Um veículo ultrapassa outro pelo acostamento. Resposta: a conduta específica é gravíssima com multa cinco vezes, não usar três vezes do trânsito geral pelo acostamento. Variação: Em interseção ou passagem de nível, a ultrapassagem também entra no rol do artigo.",
+      "prova": [
+        "Circular pelo acostamento e ultrapassar por ele têm sempre o mesmo multiplicador? Não. Art. 193 tem três vezes; a ultrapassagem específica do 202 tem cinco vezes.",
+        "O art. 202 enumera suspensão automática na primeira ocorrência? Não. Neste artigo a penalidade textual é multa cinco vezes; não copiar a suspensão de outro tipo."
+      ],
+      "termos": [
+        {
+          "termo": "Ultrapassagem específica",
+          "significado": "Manobra com sanção própria, distinta de toda circulação por área protegida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 33"
+      ]
+    },
+    "art-203": {
+      "simples": "Ultrapassar pela contramão outro veículo nas curvas, aclives e declives sem visibilidade suficiente, nas faixas de pedestre, nas pontes, viadutos ou túneis, quando parado em fila junto a sinais luminosos, porteiras, cancelas ou cruzamentos, ou onde houver marcação longitudinal de linha dupla contínua ou simples contínua amarela, é infração gravíssima, com multa (cinco vezes). A multa é em dobro na reincidência em até doze meses.",
+      "pontos": [
+        "Cinco situações de ultrapassagem proibida pela contramão.",
+        "Multa (cinco vezes), dobro na reincidência."
+      ],
+      "atencao": [
+        "Linha dupla contínua ou simples contínua amarela proíbe ultrapassar.",
+        "Multa CINCO vezes.",
+        "Reincidência até doze meses: multa em dobro. Não confundir linha branca de mesmo fluxo com a descrição do inciso V."
+      ],
+      "exemplo": "Condutor ultrapassa pela contramão onde a divisão de fluxos é linha simples contínua amarela. Resposta: gravíssima com multa cinco vezes. Variação: Em curva, aclive ou declive, o inciso I exige falta de visibilidade suficiente; não omitir esse elemento ao resumir.",
+      "prova": [
+        "Só linha dupla contínua amarela torna a hipótese do inciso V aplicável? Não. O inciso também inclui linha simples contínua amarela de divisão de fluxos opostos.",
+        "A reincidência dobra automaticamente toda suspensão de CNH pelo artigo? Não. O parágrafo dobra a multa e este artigo não enumera suspensão, ao contrário do art. 191."
+      ],
+      "termos": [
+        {
+          "termo": "Fluxos opostos",
+          "significado": "Sentidos contrários separados pela marcação, no recorte da ultrapassagem vedada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 32"
+      ]
+    },
+    "art-204": {
+      "simples": "Deixar de parar o veículo no acostamento à direita, para aguardar a oportunidade de cruzar a pista ou entrar à esquerda, onde não houver local apropriado para operação de retorno, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Aguardar no acostamento à direita."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não generalizar art. 204 para manobra ou via sem examinar condições e art. 37."
+      ],
+      "exemplo": "Sem local apropriado de retorno, o condutor quer cruzar a pista ou entrar à esquerda e não aguarda no acostamento direito conforme a situação legal. Resposta: examinar infração grave. Variação: Onde existe local próprio, não aplicar indistintamente esse recorte; integrar sinalização e art. 37.",
+      "prova": [
+        "O artigo obriga parar em qualquer acostamento para toda conversão urbana? Não. A hipótese liga espera para cruzar/entrar à esquerda à falta de local apropriado de retorno.",
+        "O dever permite circular longo trecho pelo acostamento? Não. Trata de parada de espera segura no recorte, não autorização geral de circulação por essa área."
+      ],
+      "termos": [
+        {
+          "termo": "Espera para cruzamento",
+          "significado": "Parada de oportunidade no regime pertinente, distinta de circular pelo acostamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 37"
+      ]
+    },
+    "art-205": {
+      "simples": "Ultrapassar veículo em movimento que integre cortejo, préstito, desfile e formações militares, salvo com autorização da autoridade de trânsito ou de seus agentes, é infração leve, com multa.",
+      "pontos": [
+        "Infração leve.",
+        "Exceção: autorização da autoridade."
+      ],
+      "atencao": [
+        "Leve.",
+        "Não confundir ultrapassagem de agrupamento em movimento e deixar de parar quando a marcha é interceptada."
+      ],
+      "exemplo": "Condutor ultrapassa veículo em movimento de cortejo sem autorização. Resposta: o artigo prevê infração leve. Variação: Com autorização da autoridade/agente, aplica-se a exceção; se agrupamento intercepta a marcha, art. 213 tem hipóteses distintas.",
+      "prova": [
+        "O tipo do art. 205 descreve apenas veículo parado? Não. Descreve veículo EM MOVIMENTO integrante de cortejo, préstito, desfile ou formação militar.",
+        "A classe leve do 205 deve ser copiada a furar passeata de pessoas? Não. O art. 213 distingue interceptação por pessoas e veículos, com classes diferentes."
+      ],
+      "termos": [
+        {
+          "termo": "Cortejo em movimento",
+          "significado": "Agrupamento cuja ultrapassagem tem regime próprio, distinto da interceptação da marcha."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 213"
+      ]
+    },
+    "art-206": {
+      "simples": "Executar operação de retorno em locais proibidos pela sinalização; nas curvas, aclives, declives, pontes, viadutos e túneis; passando por cima de calçada, passeio, ilhas, canteiros, refúgios e faixas de pedestres; nas interseções, entrando na contramão da via transversal; ou com prejuízo da livre circulação ou da segurança, ainda que em locais permitidos, é infração gravíssima, com multa.",
+      "pontos": [
+        "Cinco situações de retorno irregular.",
+        "Infração gravíssima."
+      ],
+      "atencao": [
+        "Gravíssima, mesmo em local permitido, se prejudicar a segurança.",
+        "Distinguir retorno e conversão, sem eliminar o inciso V."
+      ],
+      "exemplo": "Há local formalmente permitido para retornar, mas a manobra prejudica segurança e circulação. Resposta: o inciso V ainda prevê gravíssima. Variação: Sinal permissivo não autoriza retorno atravessando área protegida ou entrando na contramão da transversal nas hipóteses vedadas.",
+      "prova": [
+        "Estar em local permitido afasta qualquer infração de retorno? Não. O inciso V alcança prejuízo de segurança/circulação mesmo em locais permitidos.",
+        "Retorno proibido e conversão proibida têm mesma classe geral? Não. Art. 206 é gravíssima; art. 207 descreve conversão sinalizadamente proibida como grave."
+      ],
+      "termos": [
+        {
+          "termo": "Retorno seguro",
+          "significado": "Mudança de sentido sujeita a permissões e condições reais de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 39"
+      ]
+    },
+    "art-207": {
+      "simples": "Executar operação de conversão à direita ou à esquerda em locais proibidos pela sinalização é infração grave, com multa.",
+      "pontos": [
+        "Infração grave."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não converter qualquer irregularidade de manobra automaticamente em art. 207."
+      ],
+      "exemplo": "A condutora converte à esquerda em ponto proibido por sinalização. Resposta: hipótese grave com multa. Variação: Conversão em ponto permitido continua sujeita a posicionamento, indicação e preferência; este tipo não esgota toda manobra irregular.",
+      "prova": [
+        "Art. 207 exige proibição sinalizada no local? Sim. O texto descreve conversão à direita/esquerda em locais proibidos pela sinalização.",
+        "A ausência de proibição sinalizada permite toda manobra perigosa? Não. Outras regras de segurança e tipos pertinentes continuam aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Conversão proibida",
+          "significado": "Mudança de direção no local vedado pelo sinal, distinta de retorno."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 206"
+      ]
+    },
+    "art-208": {
+      "simples": "Avançar o sinal vermelho do semáforo ou o de parada obrigatória, exceto onde houver sinalização que permita a livre conversão à direita prevista no art. 44-A, é infração gravíssima, com multa.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Exceção: conversão à direita sinalizada."
+      ],
+      "atencao": [
+        "Gravíssima; a exceção exige sinalização que permita a conversão à direita.",
+        "Lei 14.071/2020: não copiar permissões estrangeiras gerais nem omitir sinalização."
+      ],
+      "exemplo": "Há placa permitindo conversão à direita no vermelho e pedestre em travessia protegida. Resposta: a autorização não dispensa ceder e observar arts. 44, 45 e 70. Variação: Sem sinalização permissiva, rua vazia não cria a exceção de livre conversão.",
+      "prova": [
+        "Qualquer conversão à direita no vermelho foi liberada? Não. A exceção depende de sinalização e do art. 44-A, integrado às regras de cautela e preferência.",
+        "Avançar parada obrigatória é sempre apenas infração grave? Não. O art. 208 prevê gravíssima para avanço de vermelho ou parada obrigatória, ressalvada a exceção legal pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Conversão sinalizada",
+          "significado": "Permissão condicionada no vermelho, sem prioridade absoluta sobre pedestres."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 44-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ]
+    },
+    "art-209": {
+      "simples": "Transpor, sem autorização, bloqueio viário com ou sem sinalização ou dispositivos auxiliares, ou deixar de adentrar as áreas destinadas à pesagem de veículos, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Bloqueio viário e áreas de pesagem."
+      ],
+      "atencao": [
+        "Diferente do bloqueio policial (art. 210), que é gravíssima.",
+        "Lei 14.157/2021 separou regime da cobrança no art. 209-A; não misturar os tipos."
+      ],
+      "exemplo": "Um motorista transpõe sem autorização bloqueio viário de obra. Resposta: a hipótese é grave; bloqueio policial tem descrição específica do art. 210. Variação: Deixar de entrar na área destinada à pesagem também é alternativa do artigo, mesmo sem transpor um bloqueio de obra.",
+      "prova": [
+        "Todo bloqueio viário é automaticamente bloqueio policial do art. 210? Não. Distinguir os fundamentos e a natureza do bloqueio; o 209 tem classe grave.",
+        "A multa do art. 209 só existe se houver placa ou dispositivo auxiliar? Não. A descrição inclui bloqueio com OU sem sinalização/dispositivos, mantendo ausência de autorização."
+      ],
+      "termos": [
+        {
+          "termo": "Bloqueio viário",
+          "significado": "Restrição de circulação distinta da hipótese policial e da evasão de pedágio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 210"
+      ]
+    },
+    "art-209-a": {
+      "simples": "O art. 209-A classifica como grave evadir cobrança ou não pagar na forma estabelecida. Para FREE FLOW, integrar Resolução 1013/2024 e Deliberação 277/2026: prazo ordinário de trinta dias da confirmação do processamento; transição de duzentos dias contados da publicação de 29/4/2026, ainda em curso em 13/10. Durante o período e no recorte do ato, não configura infração por deixar de pagar, há suspensão de procedimentos/pontos e possibilidade de cancelamento com pagamento regularizador. Não ensinar autuação imediata por atraso nem gratuidade permanente ou dispensa geral da evasão por cancela.",
+      "pontos": [
+        "Regra legal: GRAVE com multa; cobrança em rodovias e vias urbanas.",
+        "Deliberação 277/2026 publicada em 29/4: duzentos dias para regularizar tarifas do free flow.",
+        "Passagens durante transição: fim do prazo excepcional OU prazo ordinário, prevalecendo o mais favorável ao usuário.",
+        "Prazo ordinário atual: trinta dias da CONFIRMAÇÃO DO PROCESSAMENTO do registro, não repetir automaticamente data da passagem.",
+        "No recorte excepcional: sem autos/notificações/pontos; prazos processuais suspensos.",
+        "Pagamento até fim do prazo: cancelamento de processos/penalidades/restrições e exclusão de pontos nos termos do art. 3º; multa já paga pode gerar pedido de revisão/restituição conforme requisitos."
+      ],
+      "atencao": [
+        "Situação conferida em 13/10/2026: prazo excepcional ainda em curso. Reavaliar após seu término, sem perpetuar a suspensão.",
+        "A Deliberação tem discrepância entre data indicada no cabeçalho e remissão interna; o prazo é contado da PUBLICAÇÃO comprovada em 29/4/2026.",
+        "Não certificada toda discussão constitucional ou contratual do regime de transição. Não misturar suspensão de autuação, obrigação da tarifa e cancelamento condicionado ao pagamento.",
+        "Deliberação 277 aprovada pela Resolução 1028/2026, publicada/vigente em 25/8/2026. Aprovação consultada: não presumir vigência indefinida de ato ad referendum sem conferir o referendo."
+      ],
+      "exemplo": "Em 13/10/2026, há tarifa de free flow pendente no regime excepcional da Deliberação 277. Resposta: não ensinar multa automática pelo mero atraso nesse período; o ato prevê duzentos dias desde sua publicação de 29/4/2026 e suspensão da configuração/procedimentos no recorte específico. Variação: Isso não torna toda evasão por cancela física livre nem perdoa a tarifa. Após a transição, o regime ordinário e os marcos mais favoráveis continuam relevantes.",
+      "prova": [
+        "O prazo ordinário de free flow ainda é contado sempre da passagem física? Não. A Deliberação 277 alterou o art. 7º da Resolução 1013 para trinta dias da confirmação do processamento do registro junto ao máximo executivo federal.",
+        "O regime excepcional dispensa definitivamente pagar o pedágio? Não. É regularização e transição; o pagamento tempestivo pode cancelar processos no recorte, mas não transforma a tarifa em gratuita."
+      ],
+      "termos": [
+        {
+          "termo": "Free flow em transição",
+          "significado": "Cobrança eletrônica sem cancela sob regime excepcional específico de 2026."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 209",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10132024.pdf",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2772026.pdf",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10282026.pdf"
+      ]
+    },
+    "art-211": {
+      "simples": "Ultrapassar veículos em fila, parados em razão de sinal luminoso, cancela, bloqueio viário parcial ou qualquer outro obstáculo, com exceção dos veículos não motorizados, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Exceção: veículos não motorizados."
+      ],
+      "atencao": [
+        "Exceção de não motorizados não libera toda circulação em área protegida.",
+        "Parágrafo vetado não cria regra; distinguir veículo não motorizado e elétrico equiparado conforme norma própria."
+      ],
+      "exemplo": "Um automotor ultrapassa fila parada por obstáculo sem preencher hipótese regular. Resposta: o tipo geral é grave, mas outra descrição específica pode incidir conforme a manobra. Variação: Ultrapassar pelo acostamento tem art. 202, gravíssima cinco vezes; não usar o exemplo antigo para ensinar sempre grave nessa situação.",
+      "prova": [
+        "A exceção inclui todo veículo pequeno motorizado? Não. O texto excepciona veículos NÃO motorizados, sem equiparar ciclomotor ou motocicleta pelo tamanho.",
+        "Ultrapassagem pelo acostamento deve ser classificada sempre só como art. 211 grave? Não. Há tipo específico do art. 202; examinar a manobra e evitar o exemplo genérico contraditório."
+      ],
+      "termos": [
+        {
+          "termo": "Fila parada",
+          "significado": "Condição de imobilização por obstáculo, com tipos específicos conforme a ultrapassagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 202"
+      ]
+    },
+    "art-212": {
+      "simples": "Deixar de parar o veículo antes de transpor linha férrea é infração gravíssima, com multa.",
+      "pontos": [
+        "Infração gravíssima."
+      ],
+      "atencao": [
+        "Gravíssima; parar antes da linha férrea.",
+        "Não confundir parada anterior à linha e ultrapassagem em passagem de nível proibida pelo art. 202."
+      ],
+      "exemplo": "O motorista se aproxima de linha férrea sem trem visível e passa sem parar. Resposta: o texto exige parada antes de transpor, gravíssima. Variação: A parada precisa ser segura antes da linha, sem parar sobre os trilhos como cumprimento aparente da obrigação.",
+      "prova": [
+        "Só há dever de parar se o trem já for visível? Não. O artigo exige parar ANTES de transpor a linha férrea, sem essa condição adicional.",
+        "Parar sobre os trilhos cumpre o dever de parada antes de transpor? Não. A posição de segurança e o marco anterior à linha são essenciais à conduta regular."
+      ],
+      "termos": [
+        {
+          "termo": "Passagem de nível",
+          "significado": "Cruzamento viário com linha férrea, que exige cautela e parada pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 32"
+      ]
+    },
+    "art-213": {
+      "simples": "Deixar de parar o veículo sempre que a respectiva marcha for interceptada por agrupamento de pessoas, como préstitos, passeatas e desfiles, é infração gravíssima, com multa; se interceptada por agrupamento de veículos, como cortejos e formações militares, é infração grave, com multa.",
+      "pontos": [
+        "Agrupamento de pessoas: gravíssima.",
+        "Agrupamento de veículos: grave."
+      ],
+      "atencao": [
+        "Pessoas = GRAVÍSSIMA; veículos = GRAVE.",
+        "Pessoas e veículos têm classes diferentes; não confundir os artigos 205 e 213."
+      ],
+      "exemplo": "Uma passeata de pessoas intercepta a marcha e o condutor deixa de parar. Resposta: inciso I, gravíssima. Variação: Um cortejo de veículos intercepta a marcha: inciso II, grave; ultrapassagem de cortejo em movimento tem art. 205.",
+      "prova": [
+        "Agrupamento de veículos interceptando marcha tem classe gravíssima do inciso I? Não. O inciso II é GRAVE; pessoas no inciso I, gravíssima.",
+        "O artigo pune todo agrupamento distante sem interceptar a marcha? Não. O caput vincula o dever à marcha interceptada, sem dispensar outras cautelas de aproximação."
+      ],
+      "termos": [
+        {
+          "termo": "Marcha interceptada",
+          "significado": "Trajeto obstado pelo agrupamento, distinto de ultrapassá-lo em movimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 205"
+      ]
+    },
+    "art-214": {
+      "simples": "É infração gravíssima, com multa, deixar de dar preferência de passagem a pedestre e a veículo não motorizado que se encontre na faixa a ele destinada, que não tenha concluído a travessia mesmo que ocorra sinal verde para o veículo, ou que seja portador de deficiência física, criança, idoso ou gestante. É infração grave, com multa, não dar preferência a quem tenha iniciado a travessia mesmo sem sinalização para ele ou a quem esteja atravessando a via transversal para onde se dirige o veículo.",
+      "pontos": [
+        "Gravíssima: pedestre na faixa, que não concluiu a travessia e grupos vulneráveis.",
+        "Grave: iniciou a travessia sem sinalização e via transversal."
+      ],
+      "atencao": [
+        "Pedestre na faixa: GRAVÍSSIMA.",
+        "Via transversal e travessia sem sinalização: GRAVE.",
+        "Usar linguagem atual pessoa com deficiência na explicação, preservando transcrição oficial histórica."
+      ],
+      "exemplo": "O sinal dos carros abre, mas um pedestre ainda conclui travessia. Resposta: não dar preferência é gravíssima no inciso II. Variação: Quem começou travessia sem sinalização tem inciso IV grave, mas condições de pessoa vulnerável podem exigir análise própria do inciso III.",
+      "prova": [
+        "Toda falta de preferência do art. 214 tem classe idêntica? Não. Incisos I/II/III: gravíssima; IV/V: grave, conforme a descrição efetiva.",
+        "Sinal verde elimina preferência de quem ainda não terminou? Não. O inciso II preserva essa situação, integrado ao art. 70, parágrafo."
+      ],
+      "termos": [
+        {
+          "termo": "Preferência da travessia",
+          "significado": "Proteção segundo posição e condições do usuário, sem uma classe universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 70"
+      ]
+    },
+    "art-215": {
+      "simples": "Deixar de dar preferência de passagem em interseção não sinalizada a veículo que estiver circulando por rodovia ou rotatória e a veículo que vier da direita, bem como nas interseções com sinalização de regulamentação de Dê a Preferência, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Interseção não sinalizada: rodovia, rotatória e veículo da direita.",
+        "Sinal de Dê a Preferência."
+      ],
+      "atencao": [
+        "Não repetir sem sinalização sempre direita. Integrar art. 29 e prudência do art. 44."
+      ],
+      "exemplo": "Em interseção sem sinalização, um veículo já circula na rotatória. Resposta: tem preferência no recorte, não aplicar a direita ignorando rotatória/rodovia. Variação: Em demais situações do art. 29, III, aplica-se quem vem da direita; uma placa de Dê a Preferência tem regra própria.",
+      "prova": [
+        "Direita prevalece universalmente em qualquer interseção sem placa? Não. Integrar preferências de rodovia e rotatória; a direita é critério dos demais casos pertinentes.",
+        "A infração do art. 215 é média porque só versa preferência? Não. A classe é GRAVE, nas hipóteses dos incisos."
+      ],
+      "termos": [
+        {
+          "termo": "Preferência contextual",
+          "significado": "Critério definido por rodovia, rotatória, direita e sinalização pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 29"
+      ]
+    },
+    "art-216": {
+      "simples": "Entrar ou sair de áreas lindeiras sem estar adequadamente posicionado para ingresso na via e sem as precauções com a segurança de pedestres e de outros veículos é infração média, com multa.",
+      "pontos": [
+        "Infração média."
+      ],
+      "atencao": [
+        "Média.",
+        "Não confundir ingresso na via e livre circulação sobre passeio para fugir do trânsito."
+      ],
+      "exemplo": "Veículo sai de área lindeira mal posicionado e sem cuidado com pedestres. Resposta: a descrição é média com multa. Variação: Sinalizar a intenção não concede preferência a quem ingressa na via; art. 36 protege demais usuários.",
+      "prova": [
+        "A saída de imóvel tem preferência automática por ser acesso particular? Não. O condutor deve posicionar-se e tomar precauções, integrando o dever de ceder.",
+        "A classe textual é gravíssima como falsa declaração de domicílio? Não. São condutas diferentes; o art. 216 é MÉDIA."
+      ],
+      "termos": [
+        {
+          "termo": "Área lindeira",
+          "significado": "Imóvel/área junto à via cuja entrada e saída exigem posição e cautela."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 36"
+      ]
+    },
+    "art-217": {
+      "simples": "Entrar ou sair de fila de veículos estacionados sem dar preferência de passagem a pedestres e a outros veículos é infração média, com multa.",
+      "pontos": [
+        "Infração média."
+      ],
+      "atencao": [
+        "Média.",
+        "Distinguir fila de estacionados e fila de veículos imobilizados por semáforo."
+      ],
+      "exemplo": "Condutor sai da fila de estacionados sem ceder ao pedestre e ao veículo em circulação. Resposta: o art. 217 é média. Variação: Acionar a seta não transfere preferência automaticamente a quem sai da vaga.",
+      "prova": [
+        "O dever de preferência inclui apenas outros carros? Não. O texto protege pedestres E outros veículos na entrada ou saída da fila de estacionados.",
+        "Sinalizar a saída torna dispensável ceder passagem? Não. Indicação de intenção e preferência são obrigações distintas que devem ser cumpridas juntas."
+      ],
+      "termos": [
+        {
+          "termo": "Saída da fila",
+          "significado": "Manobra sujeita a prioridade dos usuários que circulam, mesmo com sinal ligado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 216"
+      ]
+    },
+    "art-218": {
+      "simples": "Transitar em velocidade superior à máxima permitida para o local, medida por instrumento ou equipamento hábil, é infração média quando a velocidade for superior à máxima em até 20%, grave quando for superior em mais de 20% até 50%, e gravíssima, com multa (três vezes) e suspensão do direito de dirigir, quando for superior em mais de 50%.",
+      "pontos": [
+        "Até 20% acima: média.",
+        "De mais de 20% até 50% acima: grave.",
+        "Mais de 50% acima: gravíssima, multa três vezes e suspensão."
+      ],
+      "atencao": [
+        "Limiares inclusivos: até 20% média; mais de 20% até 50% grave; MAIS DE 50% gravíssima.",
+        "ADI 3951/STF de 2020 tratou da redação antiga com imediata/apreensão do documento. Lei 14.071/2020 depois alterou o inciso III: não restaurar automaticamente expressões antigas por notícia histórica.",
+        "Não presumir sanção definitiva sem processo nem certificar aqui todo estudo técnico/local de radar."
+      ],
+      "exemplo": "Numa via com máxima 60 km/h, a velocidade CONSIDERADA é 90 km/h. Resposta: excesso de exatamente 50%, inciso II, grave, não mais de 50% do III. Variação: Se a velocidade considerada for 91 km/h, supera 50%: gravíssima, multa três vezes e suspensão, com procedimento legal.",
+      "prova": [
+        "Velocidade considerada de 72 em limite 60 pertence ao inciso II? Não. É exatamente 20% e entra no I, média; o II exige mais de 20% até 50%.",
+        "O enquadramento usa qualquer leitura bruta sem desconto metrológico? Não. Resolução 798, art. 8º: usar velocidade considerada após subtrair erro máximo admitido, conforme regime metrológico."
+      ],
+      "termos": [
+        {
+          "termo": "Velocidade considerada",
+          "significado": "Valor após tratamento metrológico, usado para comparar percentuais de excesso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 61",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao7982020.pdf",
+        "https://noticias.stf.jus.br/postsnoticias/suspensao-imediata-do-direito-de-dirigir-em-caso-de-excesso-de-velocidade-superior-a-50-e-constitucional/",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ]
+    },
+    "art-219": {
+      "simples": "Transitar com o veículo em velocidade inferior à metade da velocidade máxima estabelecida para a via, retardando ou obstruindo o trânsito, a menos que as condições de tráfego e meteorológicas não o permitam, salvo se estiver na faixa da direita, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Velocidade inferior à metade da máxima.",
+        "Exceção: faixa da direita."
+      ],
+      "atencao": [
+        "Média; exceção para a faixa da direita.",
+        "Não eliminar ressalvas nem usar exemplo da faixa esquerda como autuação automática em qualquer clima."
+      ],
+      "exemplo": "Na faixa esquerda e em condições normais, veículo anda abaixo da metade da máxima e obstrui o trânsito. Resposta: média no recorte do artigo. Variação: Chuva intensa exige velocidade inferior: a ressalva meteorológica impede ensinar autuação automática só pelo valor baixo.",
+      "prova": [
+        "Basta velocidade abaixo da metade, sem retardar ou obstruir, para completar toda descrição? Não. O artigo reúne elementos e ressalvas, incluindo faixa direita e condições de tráfego/clima.",
+        "A metade da máxima é proibição absoluta mesmo no congestionamento? Não. As condições de tráfego e meteorológicas são ressalvas expressas, integradas ao art. 62."
+      ],
+      "termos": [
+        {
+          "termo": "Lentidão indevida",
+          "significado": "Baixa velocidade com interferência no fluxo e sem ressalva aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 62"
+      ]
+    },
+    "art-220": {
+      "simples": "Deixar de reduzir a velocidade do veículo de forma compatível com a segurança do trânsito é infração gravíssima quando ao aproximar-se de passeatas, aglomerações, cortejos, préstitos e desfiles, ao ultrapassar ciclista e nas proximidades de escolas, hospitais, estações de embarque e desembarque ou onde haja intensa movimentação de pedestres. É infração grave nas demais hipóteses, como onde o trânsito é controlado pelo agente, ao aproximar-se do meio-fio, de interseção não sinalizada, em curvas fechadas, em obras, sob chuva ou neblina, com má visibilidade, pavimento escorregadio, animais na pista ou em declive.",
+      "pontos": [
+        "Gravíssima: aglomerações, ultrapassagem de ciclista e proximidades de escolas e hospitais.",
+        "Grave: chuva, neblina, curva, obras, declive e outras hipóteses."
+      ],
+      "atencao": [
+        "Lei 14.071/2020 alterou a classificação de XIII, que já existia; não afirmar inclusão originária do inciso por essa lei.",
+        "Não inventar uma velocidade fixa única perto de toda escola/hospital neste dispositivo."
+      ],
+      "exemplo": "Ao ultrapassar ciclista, motorista deixa de reduzir velocidade de forma segura. Resposta: inciso XIII atual, gravíssima, mesmo que mantenha distância lateral. Variação: Sob chuva/neblina, a falta de redução tem classe grave na faixa de incisos II–XII, não copiar sempre gravíssima.",
+      "prova": [
+        "Distância lateral correta elimina a redução exigida ao ultrapassar ciclista? Não. Arts. 201 e 220 têm obrigações distintas; o XIII do 220 é gravíssima.",
+        "Todo inciso do 220 foi atualizado para gravíssima? Não. I, XIII e XIV são gravíssima; II–XII, grave, respeitados os requisitos de cada hipótese."
+      ],
+      "termos": [
+        {
+          "termo": "Redução compatível",
+          "significado": "Adequação de velocidade ao risco, diferente de só cumprir limite máximo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 43",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ]
+    },
+    "art-221": {
+      "simples": "Portar no veículo placas de identificação em desacordo com as especificações e modelos do Contran é infração média, com multa e a medida administrativa de retenção do veículo para regularização e apreensão das placas irregulares. Incide na mesma penalidade quem confecciona, distribui ou coloca placas não autorizadas.",
+      "pontos": [
+        "Infração média.",
+        "Retenção do veículo e apreensão das placas.",
+        "Atinge quem confecciona, distribui ou coloca placas irregulares."
+      ],
+      "atencao": [
+        "Alcança também quem fabrica ou coloca a placa irregular.",
+        "Não generalizar falta de especificação e adulteração deliberada como a mesma hipótese."
+      ],
+      "exemplo": "Empresa coloca placa não autorizada em veículo de terceiro. Resposta: o parágrafo alcança quem confecciona, distribui ou coloca, com mesma penalidade. Variação: Placa deliberadamente adulterada tem outros tipos e possíveis consequências penais; não reduzir qualquer adulteração a média por padrão.",
+      "prova": [
+        "O art. 221 só pune o condutor e nunca o fabricante da placa? Não. O parágrafo inclui confeccionador, distribuidor e quem coloca em veículo próprio ou de terceiro.",
+        "Apreensão das placas equivale à penalidade antiga de apreensão do veículo? Não. São objetos e regimes distintos; a revogação da pena do veículo não elimina automaticamente a medida das placas."
+      ],
+      "termos": [
+        {
+          "termo": "Placa irregular",
+          "significado": "Identificação fora de especificações, distinta de toda adulteração/falsificação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 115"
+      ]
+    },
+    "art-222": {
+      "simples": "Deixar de manter ligado, nas situações de atendimento de emergência, o sistema de iluminação intermitente dos veículos de polícia, de socorro de incêndio e salvamento, de fiscalização de trânsito e das ambulâncias, ainda que parados, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Luz intermitente ligada em emergência."
+      ],
+      "atencao": [
+        "Dever dos veículos de emergência, mesmo parados.",
+        "Lei 14.440/2022: não recuperar texto restrito a veículo em deslocamento nem misturar requisitos distintos de prioridade."
+      ],
+      "exemplo": "Ambulância permanece parada no atendimento de emergência. Resposta: deve manter iluminação intermitente ligada, pois o artigo inclui ainda que parados. Variação: Não copiar para esse dever sirene contínua como condição textual: o artigo menciona sistema luminoso e atendimento de emergência.",
+      "prova": [
+        "Parar no local de emergência dispensa automaticamente iluminação? Não. O caput inclui expressamente ainda que parados, com classe média para a omissão.",
+        "O art. 222 exige sirene ligada incessantemente como o mesmo comando? Não. A descrição é do sistema de iluminação intermitente, com integração às demais regras de uso dos dispositivos."
+      ],
+      "termos": [
+        {
+          "termo": "Iluminação de emergência",
+          "significado": "Identificação luminosa que continua pertinente durante o atendimento parado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 189"
+      ]
+    },
+    "art-223": {
+      "simples": "Transitar com o farol desregulado ou com o facho de luz alta de forma a perturbar a visão de outro condutor é infração grave, com multa e a medida administrativa de retenção do veículo para regularização.",
+      "pontos": [
+        "Infração grave.",
+        "Retenção para regularização."
+      ],
+      "atencao": [
+        "Grave, com retenção.",
+        "Separar regulagem do equipamento, uso do facho e requisitos do caso."
+      ],
+      "exemplo": "O facho alto perturba a visão de outro condutor. Resposta: a hipótese do art. 223 é grave, com retenção para regularizar. Variação: Usar luz alta em via iluminada tem também descrição do art. 224 leve; não classificar toda perturbação apenas pela presença de iluminação pública.",
+      "prova": [
+        "Perturbar visão pelo facho alto é sempre a mesma classe leve do 224? Não. O 223 é GRAVE; o 224 descreve uso em via com iluminação pública como leve.",
+        "A medida textual do 223 é só recolher documento? Não. Prevê retenção do veículo para regularização, além de multa."
+      ],
+      "termos": [
+        {
+          "termo": "Ofuscamento",
+          "significado": "Perturbação visual pelo farol, distinta de qualquer uso de luz alta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 40"
+      ]
+    },
+    "art-224": {
+      "simples": "Fazer uso do facho de luz alta dos faróis em vias providas de iluminação pública é infração leve, com multa.",
+      "pontos": [
+        "Infração leve."
+      ],
+      "atencao": [
+        "Leve.",
+        "Não confundir facho alto contínuo e troca breve regulamentar de advertência."
+      ],
+      "exemplo": "Condutor usa facho alto em via dotada de iluminação pública. Resposta: o recorte do 224 é leve com multa. Variação: Se perturba outro condutor, analisar descrição específica do 223; troca breve para advertência tem regime próprio do art. 40.",
+      "prova": [
+        "Art. 224 prevê retenção expressa para regularização? Não. Lista infração leve e multa, sem enumerar essa medida no próprio artigo.",
+        "O uso de alto em via não iluminada dispensa exceções ao cruzar ou seguir veículo? Não. Art. 40, II, ressalva essas situações; o 224 não esgota todos os deveres de luz."
+      ],
+      "termos": [
+        {
+          "termo": "Luz alta contextual",
+          "significado": "Uso sujeito à iluminação da via e às condições de proteção dos demais usuários."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 40"
+      ]
+    },
+    "art-225": {
+      "simples": "Deixar de sinalizar a via, de forma a prevenir os demais condutores e, à noite, não manter acesas as luzes externas ou omitir-se quanto a providências necessárias para tornar visível o local, quando tiver de remover o veículo da pista de rolamento ou permanecer no acostamento, ou quando a carga for derramada sobre a via e não puder ser retirada imediatamente, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Veículo parado no acostamento ou carga derramada."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não substituir dever de sinalizar por distância inventada; não resumir a apenas ligar luzes."
+      ],
+      "exemplo": "Carga derrama na via e não pode ser retirada imediatamente. Resposta: deve haver sinalização e providências de visibilidade no recorte, infração grave se omitidas. Variação: À noite, manter luzes externas e demais providências não elimina a necessidade de sinalizar o risco de forma adequada.",
+      "prova": [
+        "O dever se limita a veículo no acostamento e exclui carga derramada? Não. O inciso II inclui carga que não pode ser retirada imediatamente.",
+        "O artigo define sozinho metragem universal de triângulo para toda situação? Não. Descreve sinalização/visibilidade; requisitos específicos devem ser conferidos no regime regulamentar."
+      ],
+      "termos": [
+        {
+          "termo": "Visibilidade do risco",
+          "significado": "Advertência para prevenir outros condutores, integrada ao cenário e à sinalização adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 46"
+      ]
+    },
+    "art-226": {
+      "simples": "Deixar de retirar todo e qualquer objeto que tenha sido utilizado para sinalização temporária da via é infração média, com multa.",
+      "pontos": [
+        "Infração média."
+      ],
+      "atencao": [
+        "Média.",
+        "Distinguir retirada necessária no fim da intervenção e eliminação prematura da proteção."
+      ],
+      "exemplo": "Terminada a intervenção, o responsável deixa os objetos de sinalização temporária na via. Resposta: omissão de retirada descrita é média. Variação: A retirada deve respeitar a persistência do risco: não ensinar remover sinalização enquanto a obra ou perigo ainda exige proteção.",
+      "prova": [
+        "O artigo obriga abandonar cones porque já foram usados legitimamente? Não. Prevê retirar os objetos de sinalização temporária no momento pertinente.",
+        "Sua aplicação permite retirar proteção enquanto persiste perigo? Não. Integrar os deveres de sinalização dos arts. 94/95/225; cessação da necessidade e segurança devem ser consideradas."
+      ],
+      "termos": [
+        {
+          "termo": "Sinalização temporária",
+          "significado": "Proteção de duração vinculada à intervenção/risco, sem abandono após necessidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 95"
+      ]
+    },
+    "art-227": {
+      "simples": "Usar buzina em situação que não seja o simples toque breve como advertência, de forma prolongada e sucessiva a qualquer pretexto, entre as vinte e duas e as seis horas, em locais e horários proibidos pela sinalização ou em desacordo com os padrões do Contran é infração leve, com multa.",
+      "pontos": [
+        "Infração leve.",
+        "Buzina fora do toque breve, prolongada, à noite ou em locais proibidos."
+      ],
+      "atencao": [
+        "Entre as vinte e duas e as seis horas.",
+        "Não confundir buzina de advertência de ultrapassagem fora de área urbana e troca de luzes do art. 40."
+      ],
+      "exemplo": "Condutor usa buzina prolongada para comemorar. Resposta: o inciso II prevê leve com multa, sem transformar comemoração em exceção. Variação: Toque breve para advertir risco tem art. 41, mas horários e locais do 227 precisam de integração; não uso livre por qualquer motivo.",
+      "prova": [
+        "A proibição horária textual é de meia-noite a cinco horas? Não. O inciso III usa VINTE E DUAS a SEIS horas, sem trocar os limites.",
+        "Usar toque breve dispensa observar local sinalizado como proibido? Não. O artigo tem hipóteses independentes de duração, horário, local e padrões."
+      ],
+      "termos": [
+        {
+          "termo": "Buzina regulamentada",
+          "significado": "Advertência sonora com limites de duração, horário, local e padrão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 41"
+      ]
+    },
+    "art-228": {
+      "simples": "Usar no veículo equipamento com som em volume ou frequência que não sejam autorizados pelo Contran é infração grave, com multa e a medida administrativa de retenção do veículo para regularização.",
+      "pontos": [
+        "Infração grave.",
+        "Retenção para regularização."
+      ],
+      "atencao": [
+        "Grave, com retenção.",
+        "Não certificar neste lote todas as exceções do regulamento de som nem criar exercício com decibel não conferido."
+      ],
+      "exemplo": "Equipamento de som do veículo é usado em volume/frequência não autorizados pelo Contran. Resposta: grave, multa e retenção para regularizar. Variação: Não presumir que só um nível arbitrário de decibéis inventado pelo resumo completa o tipo; verificar norma e exceções vigentes.",
+      "prova": [
+        "O artigo traz um único número de decibéis como limite expresso? Não. Remete volume e frequência à autorização do Contran; o número não está neste dispositivo.",
+        "Infração de som autoriza automaticamente condenação criminal por perturbação? Não. Esferas administrativas e penais têm requisitos próprios que exigem exame."
+      ],
+      "termos": [
+        {
+          "termo": "Som regulamentado",
+          "significado": "Uso sujeito a parâmetros e exceções pertinentes, sem limiar numérico inventado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 229"
+      ]
+    },
+    "art-231": {
+      "simples": "O art. 231 distingue dano/derramamento (gravíssima), fumaça/dimensões sem autorização (grave), peso (média com acréscimo), AET irregular/vencida (grave), lotação/transporte remunerado irregular (gravíssima, com ressalvas), declive desengrenado (média) e CMT (média a gravíssima). ALERTA: a penalidade de apreensão ainda transcrita no VI não deve ser ensinada como atual: foi revogada no regime geral pela Lei 13.281/2016; preservar distinção de remoção/retenção/transbordo.",
+      "pontos": [
+        "Gravíssima: danificar a via e derramar carga ou combustível; transporte remunerado sem licença.",
+        "Grave: fumaça acima do limite e dimensões excedentes sem autorização.",
+        "Média: excesso de peso, desengrenado em declive.",
+        "Excesso de peso com acréscimo por faixa de duzentos quilogramas.",
+        "VIII: força maior OU permissão da autoridade são ressalvas, não obrigação irrestrita de qualquer transporte.",
+        "V: acréscimo por cada 200 kg OU FRAÇÃO, com faixa de excesso e tolerância aplicável; não apenas um valor fixo por viagem.",
+        "VI: texto residual de pena de apreensão não restaura art. 256, IV; remoção é medida distinta."
+      ],
+      "atencao": [
+        "Lei 13.281/2016, arts. 6º/7º: revogação da pena de apreensão e art. 262 após vacância de 180 dias, já transcorrida.",
+        "Não ensinar capacidade de tração e peso como mesma classe ou reutilizar tarifa/tabela sem identificar excesso, tolerância e faixa.",
+        "Não certificada integralmente toda especificação técnica da Resolução 882 e seus atos modificadores."
+      ],
+      "exemplo": "O caminhão tem AET vencida para dimensões excedentes. Resposta: inciso VI, grave; a antiga penalidade de apreensão ainda transcrita exige ressalva da revogação de 2016, sem apagar a remoção pertinente. Variação: Excesso de peso, lotação excedente e capacidade de tração são hipóteses diferentes; transporte remunerado tem exceções próprias de força maior ou permissão.",
+      "prova": [
+        "A apreensão como penalidade no inciso VI continua autônoma porque aparece no texto residual? Não. Lei 13.281/2016 revogou art. 256, IV, e art. 262; não gerar exercício ensinando essa pena antiga vigente.",
+        "Excesso de peso e capacidade máxima de tração têm sempre classe média idêntica? Não. V é média com cálculo de acréscimo; X varia de média a gravíssima conforme regime de relação do excesso e CMT."
+      ],
+      "termos": [
+        {
+          "termo": "Excesso por hipótese",
+          "significado": "Peso, dimensão, lotação e tração têm enquadramentos próprios e não são sinônimos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 99",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13281.htm"
+      ]
+    },
+    "art-232": {
+      "simples": "Conduzir veículo sem os documentos de porte obrigatório referidos no Código é infração leve, com multa e a medida administrativa de retenção do veículo até a apresentação do documento.",
+      "pontos": [
+        "Infração leve.",
+        "Retenção do veículo até apresentar o documento."
+      ],
+      "atencao": [
+        "Leve, mas com retenção até a apresentação do documento.",
+        "Não gera pontuação no prontuário, conforme o art. 259.",
+        "Não confundir falta de porte, falta de habilitação, suspensão e irregularidade do veículo."
+      ],
+      "exemplo": "O agente consegue verificar no sistema o licenciamento no momento da fiscalização. Resposta: art. 133 dispensa porte, não autuar automaticamente por ausência de papel. Variação: Não portar documento e não ser habilitado são hipóteses distintas; consulta impossível e documento realmente obrigatório exigem outro exame.",
+      "prova": [
+        "Esquecer documento físico sempre gera art. 232, mesmo com dispensa legal? Não. Integrar porte digital e dispensa de consulta ao devido sistema nos arts. 133/159.",
+        "A classe leve gera sempre três pontos nesta hipótese? Não. Art. 259, §4º, excepciona pontuação do art. 232; não confundir multa e pontos."
+      ],
+      "termos": [
+        {
+          "termo": "Porte obrigatório",
+          "significado": "Apresentação exigível conforme regime atual, distinta da existência da habilitação/licenciamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 133"
+      ]
+    },
+    "art-233": {
+      "simples": "Deixar de efetuar o registro de veículo no prazo de trinta dias junto ao órgão executivo de trânsito, ocorridas as hipóteses do art. 123, é infração média, com multa e a medida administrativa de remoção do veículo.",
+      "pontos": [
+        "Infração média.",
+        "Prazo de trinta dias.",
+        "Remoção do veículo."
+      ],
+      "atencao": [
+        "Trinta dias, como no art. 123.",
+        "Art. 259, §4º, também excepciona pontuação do 233. Não aplicar remoção ou outro efeito por automatismo sem procedimento e regime vigentes."
+      ],
+      "exemplo": "Comprador deixa de providenciar registro após trinta dias da transferência. Resposta: a redação atual é média com multa e medida textual de remoção. Variação: O art. 123 dá providências imediatas a outras hipóteses e trata mudança no mesmo município de modo distinto; não dizer todo prazo do 123 é trinta dias.",
+      "prova": [
+        "A infração do 233 continua grave na redação atual? Não. Lei 14.071/2020 a tornou MÉDIA, preservando multa e medida textual própria.",
+        "O prazo de sessenta dias do vendedor substitui o de trinta do comprador? Não. São deveres de sujeitos e marcos distintos nos arts. 123/134."
+      ],
+      "termos": [
+        {
+          "termo": "Registro tempestivo",
+          "significado": "Providência do adquirente no prazo pertinente, distinta da comunicação pelo vendedor."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 123",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ]
+    },
+    "art-235": {
+      "simples": "Conduzir pessoas, animais ou carga nas partes externas do veículo, salvo nos casos devidamente autorizados, é infração grave, com multa e retenção do veículo para transbordo.",
+      "pontos": [
+        "Infração grave.",
+        "Retenção para transbordo."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não transformar autorização específica em dispensa geral de segurança ou identificação da placa."
+      ],
+      "exemplo": "Pessoas são levadas na parte externa sem hipótese autorizada. Resposta: a descrição é grave e retenção para transbordo. Variação: Carga em dispositivo externo devidamente autorizado não se torna sempre infração por estar fora da carroçaria; integrar norma aplicável.",
+      "prova": [
+        "O artigo proíbe absolutamente qualquer carga externa sem exceção? Não. O caput ressalva casos devidamente autorizados, sem permitir transporte livre.",
+        "A medida textual é remover qualquer veículo ao depósito obrigatoriamente? Não. Prevê retenção para transbordo; outras providências dependem do regime e do caso."
+      ],
+      "termos": [
+        {
+          "termo": "Transbordo",
+          "significado": "Transferência para regularizar transporte, distinta de antiga penalidade de apreensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 109"
+      ]
+    },
+    "art-236": {
+      "simples": "Rebocar outro veículo com cabo flexível ou corda, salvo em casos de emergência, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Exceção: emergência."
+      ],
+      "atencao": [
+        "Média, com exceção para emergência.",
+        "Não transportar automaticamente essa exceção ao reboque por motocicleta, que tem regime próprio do art. 244."
+      ],
+      "exemplo": "Sem emergência, o motorista reboca outro veículo por corda. Resposta: a hipótese é média com multa. Variação: Em emergência, a exceção deve ser considerada, mas não elimina cuidados e regras de segurança.",
+      "prova": [
+        "O artigo veda corda até em emergência sem qualquer ressalva? Não. A ressalva de emergência é expressa e deve ser integrada ao caso.",
+        "A exceção libera usar qualquer corda e direção perigosa por mera preferência? Não. Requer emergência e mantém os demais deveres de segurança, sem autorização irrestrita."
+      ],
+      "termos": [
+        {
+          "termo": "Reboque emergencial",
+          "significado": "Hipótese excepcional, diferente de transporte habitual com cabo flexível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 235"
+      ]
+    },
+    "art-237": {
+      "simples": "Transitar com o veículo em desacordo com as especificações e com falta de inscrição e simbologia necessárias à sua identificação, quando exigidas pela legislação, é infração grave, com multa e retenção do veículo para regularização.",
+      "pontos": [
+        "Infração grave.",
+        "Retenção para regularização."
+      ],
+      "atencao": [
+        "Grave.",
+        "Distinguir identificação obrigatória, placa irregular e falta de dados técnicos, examinando descrição concreta."
+      ],
+      "exemplo": "Veículo transita em desacordo com especificações e falta inscrição/simbologia exigida para identificação. Resposta: examinar descrição grave, com retenção para regularização. Variação: O aluno não pode inventar símbolo obrigatório inexistente na legislação para completar o tipo.",
+      "prova": [
+        "Qualquer inscrição que o fiscal prefira pode ser exigida pelo 237? Não. A descrição remete às inscrições e simbologia exigidas pela legislação.",
+        "A medida textual regularizadora é equivalente a cancelar definitivamente o registro? Não. O artigo prevê retenção para regularização, além de multa."
+      ],
+      "termos": [
+        {
+          "termo": "Simbologia exigida",
+          "significado": "Identificação fundada em norma, não preferência pessoal da autoridade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 117"
+      ]
+    },
+    "art-240": {
+      "simples": "Deixar o responsável de promover a baixa do registro de veículo irrecuperável ou definitivamente desmontado é infração grave, com multa e recolhimento do Certificado de Registro e do Certificado de Licenciamento Anual.",
+      "pontos": [
+        "Infração grave.",
+        "Recolhimento do CRV e do CRLV."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não equiparar perda total econômica e irrecuperabilidade técnica sem verificar a classificação."
+      ],
+      "exemplo": "Responsável por veículo irrecuperável omite baixa. Resposta: grave com multa e recolhimento dos certificados descritos. Variação: Seguradora/adquirente que sucede ao proprietário pode assumir o dever pelo art. 126; não atribuir sempre a mesma pessoa em todos os casos.",
+      "prova": [
+        "A existência de multa impede pedir baixa e justifica automaticamente a omissão? Não. Art. 126, §2º, permite baixa apesar de débitos, sem extingui-los.",
+        "O recolhimento textual equivale à antiga penalidade de apreensão do veículo? Não. O artigo especifica CRV e certificado anual, não restaura pena do veículo revogada."
+      ],
+      "termos": [
+        {
+          "termo": "Responsável pela baixa",
+          "significado": "Pessoa com dever conforme sucessão e regime do art. 126, não proprietário original universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 126"
+      ]
+    },
+    "art-241": {
+      "simples": "Deixar de atualizar o cadastro de registro do veículo ou de habilitação do condutor é infração leve, com multa.",
+      "pontos": [
+        "Infração leve."
+      ],
+      "atencao": [
+        "Leve.",
+        "Art. 259, §4º, excepciona pontos do 241; não presumir ausência de multa pela ausência de pontos."
+      ],
+      "exemplo": "Condutor muda de endereço e omite atualização do cadastro. Resposta: o tipo é leve, observados obrigação e prazo pertinentes. Variação: Declarar endereço falso é outra conduta, gravíssima no art. 242, não simples omissão leve de atualização.",
+      "prova": [
+        "Falsa declaração e falta de atualizar são sempre a mesma classe? Não. Art. 241 é LEVE; 242 descreve declaração falsa como gravíssima.",
+        "O artigo se limita ao cadastro do veículo? Não. Abrange registro do veículo OU habilitação do condutor, com seus regimes próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Atualização cadastral",
+          "significado": "Manutenção de dados verdadeiros e atuais, distinta de declaração deliberadamente falsa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 123"
+      ]
+    },
+    "art-242": {
+      "simples": "Fazer falsa declaração de domicílio para fins de registro, licenciamento ou habilitação é infração gravíssima, com multa.",
+      "pontos": [
+        "Infração gravíssima."
+      ],
+      "atencao": [
+        "Gravíssima.",
+        "Não presumir fraude de toda mudança de endereço nem criminalizar automaticamente erro material."
+      ],
+      "exemplo": "O requerente faz falsa declaração de domicílio para registro do veículo. Resposta: o art. 242 é gravíssima com multa. Variação: Uma divergência cadastral sem prova da falsidade descrita não deve ser tratada automaticamente como esse tipo; analisar erro e atualização pertinentes.",
+      "prova": [
+        "O artigo só se aplica ao licenciamento e exclui habilitação? Não. Abrange fins de registro, licenciamento OU habilitação.",
+        "Toda autuação administrativa prova automaticamente falsidade ideológica penal? Não. O tipo penal tem requisitos próprios; a classe administrativa não substitui sua demonstração."
+      ],
+      "termos": [
+        {
+          "termo": "Domicílio declarado",
+          "significado": "Informação exigida para os atos legais, sujeita a análise da falsidade efetiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 120"
+      ]
+    },
+    "art-243": {
+      "simples": "Deixar a empresa seguradora de comunicar ao órgão executivo de trânsito competente a ocorrência de perda total do veículo e de lhe devolver as respectivas placas e documentos é infração grave, com multa e recolhimento das placas e documentos.",
+      "pontos": [
+        "Infração grave.",
+        "Obrigação da seguradora."
+      ],
+      "atencao": [
+        "Dever da SEGURADORA.",
+        "Não converter recolhimento de placas/documentos em antiga pena de apreensão do veículo."
+      ],
+      "exemplo": "A seguradora reconhece perda total e deixa de comunicar ao executivo competente e devolver placas/documentos. Resposta: a descrição é grave e tem recolhimento das placas/documentos. Variação: O dever específico da seguradora não elimina outras obrigações da baixa por sucessão no art. 126.",
+      "prova": [
+        "O sujeito textual do art. 243 é qualquer pedestre que presenciou o sinistro? Não. É a EMPRESA SEGURADORA, no dever de comunicar perda total e devolver elementos.",
+        "Só comunicar dispensa sempre devolver placas/documentos previstos? Não. O texto reúne deveres; o cumprimento deve ser analisado integralmente no regime aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação da seguradora",
+          "significado": "Obrigação específica relativa à perda total, distinta de toda comunicação de sinistro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 126"
+      ]
+    },
+    "art-244": {
+      "simples": "I/II/III/V: gravíssima com multa e suspensão; IV revogado. V protege menor de dez OU criança sem condições de cuidar da segurança. VI–IX: grave, com exceções de indicação eventual de manobra no VII e semirreboque projetado/homologado no §3º. X/XI: viseira/óculos em desacordo, média com retenção. A expressão residual apreensão do veículo para regularização em VI–IX não deve ser convertida na antiga pena autônoma do art. 256, IV; integrar procedimento atual e distinção de retenção/remoção. Ciclos e ciclomotores têm recortes próprios nos parágrafos.",
+      "pontos": [
+        "V: MENOR DE DEZ OU sem condição de cuidar da própria segurança.",
+        "VII: duas mãos, salvo eventualmente para INDICAR MANOBRA.",
+        "§3º: motocicleta/motoneta tracionando semirreboque especialmente projetado e homologado tem exceção ao VI.",
+        "X/XI: viseira/óculos, MÉDIA; não confundir com ausência de capacete nos I/II.",
+        "§1º: ciclos têm condições próprias, sem copiar automaticamente idade do caput a qualquer bicicleta.",
+        "IX integra art. 139-A atual: MP 1360 encerrou vigência em 15/9/2026; não perpetuar sua dispensa de requisitos."
+      ],
+      "atencao": [
+        "Resolução 940/2022 distingue ausência de capacete, fixação, especificação e viseira; não ensinar todo defeito como sem capacete.",
+        "A palavra apreensão na medida antiga VI–IX exige integração ao regime atual; não restaurar a penalidade autônoma de apreensão revogada em 2016. Não certificada toda ficha regulamentar neste lote.",
+        "Confrontar §2º e regras atuais de circulação de ciclomotores com o art. 57, sem proibição genérica de toda situação autorizada."
+      ],
+      "exemplo": "Um passageiro de onze anos não tem condições de cuidar da própria segurança na moto. Resposta: o inciso V usa menor de dez OU falta de condições, não apenas limite etário. Variação: O motociclista retira eventualmente uma mão para indicar manobra: é ressalva do VII, não infração universal por qualquer retirada momentânea.",
+      "prova": [
+        "Todo defeito de capacete/viseira tem a mesma classe gravíssima? Não. Sem capacete tem regime I/II; viseira/óculos nos X/XI é média; fixação e demais defeitos têm distinções da Resolução 940.",
+        "O limite do inciso V exige menor de dez E falta de condições cumulativamente? Não. Usa OU: cada hipótese pode preencher a descrição, sem excluir criança maior sem segurança."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção por hipótese",
+          "significado": "Capacete, viseira, idade, segurança e transporte têm tipos e classes diferentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 54",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9402022.pdf",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13281.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm"
+      ]
+    },
+    "art-245": {
+      "simples": "Utilizar a via para depósito de mercadorias, materiais ou equipamentos, sem autorização do órgão ou entidade de trânsito com circunscrição sobre a via, é infração grave, com multa e remoção da mercadoria ou do material. A penalidade e a medida administrativa incidem sobre a pessoa física ou jurídica responsável.",
+      "pontos": [
+        "Infração grave.",
+        "Remoção do material.",
+        "Responsável: pessoa física ou jurídica."
+      ],
+      "atencao": [
+        "Incide sobre o responsável pelo depósito.",
+        "Não excluir o responsável jurídico nem trocar o objeto da remoção."
+      ],
+      "exemplo": "Construtora deposita materiais na via sem autorização do órgão competente. Resposta: grave com multa e remoção da mercadoria/material. Variação: A autorização não transforma todo depósito em seguro automaticamente nem elimina dever de sinalizar obstáculo.",
+      "prova": [
+        "A medida textual consiste necessariamente em remover um veículo? Não. O objeto é mercadoria ou material; não confundir com remoção veicular.",
+        "A penalidade só pode incidir em pessoa física? Não. O parágrafo alcança pessoa física OU jurídica responsável pelo depósito."
+      ],
+      "termos": [
+        {
+          "termo": "Depósito autorizado",
+          "significado": "Uso da via sujeito a controle competente, segurança e responsabilidade própria."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 246"
+      ]
+    },
+    "art-246": {
+      "simples": "Deixar de sinalizar qualquer obstáculo à livre circulação, à segurança de veículo e pedestres, tanto no leito da via como na calçada, ou obstaculizar a via indevidamente é infração gravíssima, com multa agravada em até cinco vezes, a critério da autoridade, conforme o risco à segurança. A penalidade é aplicada à pessoa física ou jurídica responsável pela obstrução, e a autoridade providencia a sinalização de emergência às expensas do responsável.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa agravada em até cinco vezes.",
+        "Responsável pela obstrução."
+      ],
+      "atencao": [
+        "Multa agravada em até CINCO vezes.",
+        "Não limitar obstáculo à pista: caput também inclui calçada e proteção de pedestres."
+      ],
+      "exemplo": "Empresa obstrui calçada e deixa obstáculo sem sinalização. Resposta: gravíssima com possibilidade de agravar multa até cinco vezes, conforme risco. Variação: Não há multiplicação obrigatória por cinco em todo caso; a autoridade deve considerar risco no regime legal.",
+      "prova": [
+        "Toda infração recebe necessariamente multiplicador máximo de cinco? Não. O texto diz agravada EM ATÉ cinco vezes a critério da autoridade conforme risco.",
+        "O órgão pode simplesmente deixar o obstáculo perigoso sem providência de emergência? Não. O parágrafo prevê sinalização de emergência às expensas do responsável ou desobstrução, se possível."
+      ],
+      "termos": [
+        {
+          "termo": "Agravamento condicionado",
+          "significado": "Majoração até o teto legal conforme risco, distinta de multiplicador fixo obrigatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 94"
+      ]
+    },
+    "art-247": {
+      "simples": "Deixar de conduzir pelo bordo da pista de rolamento, em fila única, os veículos de tração ou propulsão humana e os de tração animal, sempre que não houver acostamento ou faixa a eles destinados, é infração média, com multa.",
+      "pontos": [
+        "Infração média.",
+        "Fila única pelo bordo da pista."
+      ],
+      "atencao": [
+        "Média.",
+        "Não confundir veículo de tração animal e animal isolado conduzido por guia do art. 53."
+      ],
+      "exemplo": "Sem acostamento ou faixa destinada, veículos de tração animal não seguem bordo em fila única. Resposta: examinar art. 247, média. Variação: Se existe espaço próprio destinado, não ignorar essa condição para impor sempre a posição subsidiária da pista.",
+      "prova": [
+        "A fila única pelo bordo é exigida indistintamente mesmo com faixa própria? Não. O texto vincula o recorte à ausência de acostamento ou faixa destinada.",
+        "O artigo trata de todo automóvel particular com motor? Não. O rol é de tração/propulsão humana e tração animal, com regimes específicos para outros veículos."
+      ],
+      "termos": [
+        {
+          "termo": "Circulação pelo bordo",
+          "significado": "Posição subsidiária desses veículos na ausência de espaço destinado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 52"
+      ]
+    }
+  }
+}

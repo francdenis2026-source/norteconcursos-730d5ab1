@@ -1,0 +1,929 @@
+{
+  "batch_id": "cespe2016-adapted-cpc-publication-02-2026-10-17",
+  "checked_at": "2026-10-17T21:53:58.071321+00:00",
+  "original_exam_items_published": 0,
+  "primary_evidence": {
+    "cpc": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "sha256": "d3967a559c7eacc4d5279c780b8cf639160b6d0014e7d9073def5e42b94d4faa",
+      "checked_at": "2026-10-17T17:43:25.133377+00:00",
+      "status": 200,
+      "cache_reused": true,
+      "checked_at_source_capture": "2026-10-17T17:43:25.133377+00:00",
+      "path": "/workspace/cespe7000-audit/batch-04/cpc.html"
+    },
+    "edital": {
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf",
+      "sha256": "af5cd9c5b324c6abc53954bc43c313b056cdf53b0e48257b9a8089bea0020f40",
+      "bytes": 584448,
+      "captured_at": "2026-10-17T21:36:38.896058+00:00",
+      "path": "/workspace/cespe7000-audit/publication-01/edital.pdf"
+    }
+  },
+  "items": [
+    {
+      "origin_candidate_id": "37c69bfef126a32ffc08cefb15c6747b02f89e618d13b0936277b298623a0eb5",
+      "origin_page": 282,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "6a79b52a-7e01-5cc8-a1ac-3aa1a7577a8d",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:37c69bfef126a32ffc08cefb15c6747b02f89e618d13b0936277b298623a0eb5",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Competência absoluta e convenção",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nAs partes podem, por acordo escrito, alterar a competência determinada em razão da matéria.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 62 do CPC estabelece que a competência determinada em razão da matéria, da pessoa ou da função é inderrogável por convenção das partes. Um acordo escrito não afasta essa limitação. A possibilidade de eleição de foro não autoriza as partes a escolher livremente qualquer órgão judicial com competência material distinta.\n\nExemplo prático: Duas empresas não podem atribuir a uma vara com competência material inadequada o julgamento de uma causa apenas porque inseriram essa escolha em um contrato.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "62",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Competência absoluta e convenção"
+      }
+    },
+    {
+      "origin_candidate_id": "06b9320c5d12cbf2442ba2a99c68eddbe8bfdacce83af701ebe0ee7dcdd9c378",
+      "origin_page": 278,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "e24e1941-9139-5469-b164-fbe595b4d3e5",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:06b9320c5d12cbf2442ba2a99c68eddbe8bfdacce83af701ebe0ee7dcdd9c378",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Conexão e processo sentenciado",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nMesmo quando um dos processos de ações conexas já foi sentenciado, o CPC exige sua reunião ao outro para decisão conjunta.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 55, § 1º, prevê a reunião dos processos de ações conexas para decisão conjunta, mas ressalva expressamente a hipótese em que um deles já houver sido sentenciado. A conexão não impõe essa reunião nessa situação. O enunciado transforma a regra de reunião em uma obrigação sem a exceção prevista no próprio texto legal.\n\nExemplo prático: Duas ações decorrem do mesmo contrato. Se uma delas já recebeu sentença, a identificação da conexão não torna obrigatória sua reunião com a outra para um novo julgamento conjunto.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "55",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Conexão e processo sentenciado"
+      }
+    },
+    {
+      "origin_candidate_id": "e6b38d92e36d1a190a30903dec69ecc1781f353cb7e7b371064c859089725284",
+      "origin_page": 283,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "aedeb4b4-9e5b-550d-83a6-4b279dad5bb0",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:e6b38d92e36d1a190a30903dec69ecc1781f353cb7e7b371064c859089725284",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Prorrogação da competência relativa",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSegundo a regra do CPC, prorroga-se a competência relativa se o réu não alegar a incompetência em preliminar de contestação.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 65 estabelece essa consequência para a competência relativa. Seu parágrafo único permite ao Ministério Público alegá-la nas causas em que atuar. A regra não transforma a competência absoluta em relativa e deve ser aplicada sem afastar as normas especiais sobre abusividade da eleição de foro e ajuizamento em juízo aleatório.\n\nExemplo prático: Um réu pretende questionar a competência territorial relativa em uma situação comum, sem hipótese especial de controle de ofício. Se não o fizer na preliminar de contestação, incide a regra de prorrogação.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "65",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Prorrogação da competência relativa"
+      }
+    },
+    {
+      "origin_candidate_id": "d99b3d8eb1c82df57b58825adb393c2033271887229260304b801f3056ca8f59",
+      "origin_page": 283,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "139a120c-5340-5203-b268-81ccb373b4a9",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:d99b3d8eb1c82df57b58825adb393c2033271887229260304b801f3056ca8f59",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Ação estrangeira e litispendência",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nRessalvadas disposições contrárias de tratados e acordos bilaterais em vigor no Brasil, uma ação proposta perante tribunal estrangeiro não induz litispendência perante a jurisdição brasileira.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 24 do CPC afasta, como regra, a litispendência decorrente de ação proposta perante tribunal estrangeiro. A ressalva relativa aos tratados internacionais e acordos bilaterais deve ser preservada. Isso não cria competência brasileira quando ela não existir: o dispositivo trata do efeito da ação estrangeira sobre uma causa que a autoridade brasileira possa conhecer.\n\nExemplo prático: Uma demanda também tramita no exterior. Havendo competência brasileira e inexistindo disposição convencional em contrário, essa pendência estrangeira, por si só, não impede o conhecimento da causa no Brasil.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "24",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Ação estrangeira e litispendência"
+      }
+    },
+    {
+      "origin_candidate_id": "2f6c051817439f46a70a05e66d0ded8740b70b90efb753b3a4c22489a7bcae17",
+      "origin_page": 285,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "fda59433-4708-5ccc-b401-77dba04597e6",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:2f6c051817439f46a70a05e66d0ded8740b70b90efb753b3a4c22489a7bcae17",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Foro do inventário e local do óbito",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSe o autor da herança possuía domicílio certo no Brasil, o fato de ter falecido no exterior não afasta, por si só, a regra que atribui o inventário ao foro desse domicílio.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 48 do CPC fixa o foro de domicílio do autor da herança no Brasil para o inventário e outros procedimentos ali enumerados, ainda que o óbito tenha ocorrido no estrangeiro. Não se deve confundir o local da morte com o critério territorial adotado nessa regra. O parágrafo único disciplina as situações em que não havia domicílio certo.\n\nExemplo prático: Uma pessoa domiciliada em Fortaleza falece durante viagem ao exterior. A viagem e o local do falecimento não substituem automaticamente o foro de seu domicílio brasileiro para fins da regra do inventário.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "48",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Foro do inventário e local do óbito"
+      }
+    },
+    {
+      "origin_candidate_id": "13970f06a21a295ffe9e179cd3932315205fe3fe4f3a9307b5b20426fa4e9cb1",
+      "origin_page": 285,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "c25ecb07-5d9b-5826-a630-a2fbd9cbd49c",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:13970f06a21a295ffe9e179cd3932315205fe3fe4f3a9307b5b20426fa4e9cb1",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Continência e ordem de ajuizamento",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nHavendo continência, se a ação continente tiver sido proposta antes da ação contida, o processo relativo à ação contida será encerrado por sentença sem resolução de mérito.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 57 diferencia o tratamento da continência segundo a ordem de propositura das ações. Se a continente foi proposta anteriormente, a ação contida recebe sentença sem resolução de mérito. Caso contrário, as ações devem ser reunidas. A reunião, portanto, não é a única consequência prevista para todas as hipóteses de continência.\n\nExemplo prático: Primeiro é ajuizada uma demanda mais ampla. Depois surge outra, contida na primeira, com os requisitos da continência. Nessa sequência, aplica-se à ação contida a extinção sem resolução de mérito prevista no art. 57.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "57",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Continência e ordem de ajuizamento"
+      }
+    },
+    {
+      "origin_candidate_id": "37cc2491951f3677e5b243d537aa74fc2c045d920fb91c419271ddf1329299ea",
+      "origin_page": 282,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "5ff15afb-cebb-5863-8578-a469b20d5c0a",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:37cc2491951f3677e5b243d537aa74fc2c045d920fb91c419271ddf1329299ea",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Ação possessória imobiliária",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA ação possessória imobiliária deve ser proposta no foro de situação da coisa, e a competência desse juízo é absoluta.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 47, § 2º, do CPC enuncia uma regra específica para a ação possessória imobiliária: foro de situação da coisa e competência absoluta. Não se deve transportá-la indistintamente para toda demanda que tenha alguma relação com um imóvel, nem confundi-la com as possibilidades de escolha admitidas no § 1º para outros litígios.\n\nExemplo prático: Em uma ação possessória sobre um terreno situado em Sobral, a regra específica aponta para o foro onde está o imóvel. O simples domicílio das partes em outra cidade não altera essa competência absoluta.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "47",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Ação possessória imobiliária"
+      }
+    },
+    {
+      "origin_candidate_id": "bdabeeded4fb97330c1a267b6d230b437de7cdfe08fc3a8c513dc7366ea8b6d1",
+      "origin_page": 278,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "a8ac083f-7871-5c8c-90a6-eac4ce9c81e4",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:bdabeeded4fb97330c1a267b6d230b437de7cdfe08fc3a8c513dc7366ea8b6d1",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Eleição de foro após a Lei 14.879/2024",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSegundo a redação vigente do CPC, basta que a eleição de foro conste de instrumento escrito e se refira a determinado negócio jurídico; é irrelevante qualquer vínculo do foro com as partes ou com a obrigação.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 63, § 1º, na redação da Lei 14.879/2024, exige instrumento escrito, referência expressa a determinado negócio jurídico e pertinência com o domicílio ou residência de uma das partes ou com o local da obrigação. O dispositivo ressalva a pactuação consumerista quando favorável ao consumidor. O enunciado omite um requisito vigente e não pode ser julgado apenas pela redação anterior.\n\nExemplo prático: Duas empresas escolhem no contrato uma comarca sem relação com suas sedes, residências ou obrigação contratual. A existência de cláusula escrita, sozinha, não preenche os requisitos atuais da eleição de foro.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "63",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Eleição de foro após a Lei 14.879/2024"
+      }
+    },
+    {
+      "origin_candidate_id": "bd85f04445c577ced775b09f4e35f3228ee7d788de0b3e82093f06d046d8e9e3",
+      "origin_page": 262,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "45dc616a-a27e-52cc-8679-f651f9d62e4e",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:bd85f04445c577ced775b09f4e35f3228ee7d788de0b3e82093f06d046d8e9e3",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Fundamentação da valoração probatória",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO juiz pode apreciar as provas dos autos, mas deve indicar na decisão as razões que formaram seu convencimento.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 371 do CPC exige a indicação das razões da formação do convencimento judicial a partir da prova constante dos autos. A apreciação da prova não equivale a uma decisão baseada em convicção íntima dispensada de justificativa. A obrigação de motivar permite compreender por que os elementos probatórios sustentam a conclusão adotada.\n\nExemplo prático: Se duas testemunhas apresentam relatos divergentes, o juiz deve explicar a avaliação que fez dos elementos relevantes. Não basta afirmar que acreditou em uma delas sem apresentar as razões da conclusão.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "371",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Fundamentação da valoração probatória"
+      }
+    },
+    {
+      "origin_candidate_id": "619de27a1aa3b52645a8358e28774111b16fc620a478efc0a42d1419a36fa7ec",
+      "origin_page": 299,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "3f37ba61-0f73-550d-890c-8969241816e7",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:619de27a1aa3b52645a8358e28774111b16fc620a478efc0a42d1419a36fa7ec",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Depoimento pessoal e pena de confesso",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nPara a aplicação da pena de confesso por ausência ao depoimento pessoal, basta a intimação do advogado da parte, sendo dispensadas a intimação pessoal e a advertência à própria parte.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 385, § 1º, exige que a parte seja pessoalmente intimada para prestar depoimento pessoal e advertida da pena de confesso. Nessas condições, o não comparecimento ou a recusa de depor permite a aplicação da pena prevista. O item dispensa justamente requisitos expressos do dispositivo e confunde intimação pessoal com ciência exclusiva do advogado.\n\nExemplo prático: Uma parte é chamada a prestar depoimento pessoal. Antes de aplicar a sanção por sua ausência, deve ser verificado se ela própria recebeu a intimação com a advertência exigida, e não apenas se seu advogado foi comunicado.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "385",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Depoimento pessoal e pena de confesso"
+      }
+    },
+    {
+      "origin_candidate_id": "e3fd7e15ba9f8614a4afda7bb5684c997423f795f71af2f8b244e3eac7b202ba",
+      "origin_page": 300,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "d236ece7-2bab-58b6-afd0-ce13d926056c",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:e3fd7e15ba9f8614a4afda7bb5684c997423f795f71af2f8b244e3eac7b202ba",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Admissibilidade da prova testemunhal",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO CPC estabelece que a prova testemunhal é admissível, salvo disposição legal em sentido diverso, sem fixar no art. 442 um limite geral de dez salários mínimos para essa admissão.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 442 dispõe que a prova testemunhal é sempre admissível, não dispondo a lei de modo diverso. A regra deve ser lida com as limitações legais específicas, mas o dispositivo não mantém um teto geral de dez salários mínimos como condição de admissibilidade. A resposta não autoriza ignorar hipóteses em que a lei exige outro meio de prova.\n\nExemplo prático: Em uma controvérsia contratual, não se deve rejeitar automaticamente a oitiva de testemunhas apenas porque o valor supera dez salários mínimos. É preciso verificar as regras legais aplicáveis à prova daquele fato.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "442",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Admissibilidade da prova testemunhal"
+      }
+    },
+    {
+      "origin_candidate_id": "96ddeaba6e88d217b92ce35e8047597aee5fcd8570ef5f245bf8b8d7f1381857",
+      "origin_page": 346,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "82177766-b57f-5fb6-9e44-d5a56d3f2d2d",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:96ddeaba6e88d217b92ce35e8047597aee5fcd8570ef5f245bf8b8d7f1381857",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Exibição de documento ou coisa",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO CPC permite ao juiz ordenar que uma parte exiba documento ou coisa que se encontre em seu poder.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 396 prevê expressamente a ordem de exibição de documento ou coisa em poder da parte. A possibilidade legal não dispensa o atendimento aos requisitos e ao procedimento próprios da exibição, nem elimina a apreciação das causas de recusa previstas em lei. O item cobra a existência desse poder processual, sem afirmar que toda exibição deva ser deferida automaticamente.\n\nExemplo prático: Uma das partes afirma que o contrato relevante está em poder da adversária. O juiz pode examinar o pedido de exibição e, observados os requisitos legais, ordenar sua apresentação.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "396",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Exibição de documento ou coisa"
+      }
+    },
+    {
+      "origin_candidate_id": "f562285c86e7fb913e38767245a7731844782c3c414ab6d57c34814827ffd3da",
+      "origin_page": 300,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "d120374c-3922-516a-a708-87c41fa28530",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:f562285c86e7fb913e38767245a7731844782c3c414ab6d57c34814827ffd3da",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Fatos que independem de prova",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSegundo o CPC, os fatos admitidos no processo como incontroversos não dependem de prova.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 374, III, inclui os fatos admitidos no processo como incontroversos entre aqueles que não dependem de prova. Isso não significa que qualquer alegação unilateral seja automaticamente incontroversa. A análise pressupõe o contexto processual e não elimina as regras especiais que restringem os efeitos da falta de impugnação ou da confissão.\n\nExemplo prático: Se as partes admitem de modo válido que o contrato foi assinado em certa data, esse fato incontroverso não precisa ser demonstrado novamente apenas por formalidade. A divergência pode se concentrar nos efeitos do contrato.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "374",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Fatos que independem de prova"
+      }
+    },
+    {
+      "origin_candidate_id": "1c59cfc38ad3da6c0818af6bfb73b74063cb27d0e4839c1d6807ba7d4365b52e",
+      "origin_page": 297,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "b4c6fc93-35a0-5f8c-bda5-37e69a35ef21",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:1c59cfc38ad3da6c0818af6bfb73b74063cb27d0e4839c1d6807ba7d4365b52e",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Meios de prova típicos e atípicos",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nAs partes podem utilizar meios de prova legais e moralmente legítimos, ainda que não especificados no CPC.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 369 assegura o emprego dos meios legais e moralmente legítimos, mesmo que não especificados no Código, para provar a verdade dos fatos e influir eficazmente na convicção do juiz. A enumeração dos meios de prova no CPC não é fechada. A abertura não autoriza prova ilícita nem dispensa a avaliação de legitimidade do meio utilizado.\n\nExemplo prático: Uma forma de registro de informação não descrita nominalmente no CPC pode ser proposta como prova. Sua admissibilidade depende de licitude e legitimidade, não apenas da existência de um capítulo com seu nome no Código.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "369",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Meios de prova típicos e atípicos"
+      }
+    },
+    {
+      "origin_candidate_id": "0b29ea7c2e570b97eb3f373a3b9a9d382a9dd39c63f5aacbaabbf21d404760b1",
+      "origin_page": 292,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "19db8b55-843f-5e04-8584-7c7e32738b1f",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:0b29ea7c2e570b97eb3f373a3b9a9d382a9dd39c63f5aacbaabbf21d404760b1",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Tutela antecedente e incidental",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA tutela provisória de urgência, cautelar ou antecipada, pode ser concedida em caráter antecedente ou incidental.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O parágrafo único do art. 294 admite as duas formas de requerimento da tutela provisória de urgência, tanto cautelar quanto antecipada: antecedente ou incidental. Não é correto afirmar que toda tutela urgente depende de já existir um processo com pedido principal integralmente desenvolvido. Cada forma, entretanto, observa seus requisitos e seu procedimento próprios.\n\nExemplo prático: Uma necessidade urgente pode justificar o uso do procedimento antecedente previsto em lei. Já uma urgência surgida durante um processo em andamento pode ser apresentada incidentalmente.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "294",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Tutela antecedente e incidental"
+      }
+    },
+    {
+      "origin_candidate_id": "b5a93afc69f321f77de98e9a97c268255d874f03d64dc3bd20e9e2a57034d700",
+      "origin_page": 310,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "32c2631d-6155-5a2d-81dc-f4f3ba67ea97",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:b5a93afc69f321f77de98e9a97c268255d874f03d64dc3bd20e9e2a57034d700",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Medidas de efetivação da tutela cautelar",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA tutela de urgência cautelar somente pode ser efetivada por arresto ou sequestro, sendo proibida qualquer outra medida de asseguração do direito.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 301 enumera arresto, sequestro, arrolamento de bens e registro de protesto contra alienação de bem, mas também admite qualquer outra medida idônea para a asseguração do direito. O rol não se limita aos dois meios citados no item. A adequação da providência continua sujeita à análise judicial no caso concreto.\n\nExemplo prático: Se uma medida idônea de preservação do direito não recebe o nome de arresto ou sequestro, isso não a torna automaticamente proibida. É necessário avaliar sua função cautelar e adequação à situação.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "301",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Medidas de efetivação da tutela cautelar"
+      }
+    },
+    {
+      "origin_candidate_id": "c58770259114c70215a1bb07d4ca8b646dcbedfca077e0f99f6fd3029efcf3cb",
+      "origin_page": 344,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "44681e6a-c41c-5dd5-9840-fa8068a730ff",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:c58770259114c70215a1bb07d4ca8b646dcbedfca077e0f99f6fd3029efcf3cb",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Renovação de pedido cautelar",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSe cessar a eficácia de uma tutela cautelar, a parte pode renovar livremente o mesmo pedido, ainda que não apresente fundamento novo.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O parágrafo único do art. 309 veda a renovação do pedido de tutela cautelar cuja eficácia tenha cessado, salvo sob novo fundamento. O item elimina essa exigência e trata a repetição como irrestrita. A perda de eficácia da medida também não deve ser confundida, sem exame próprio, com uma decisão definitiva sobre o direito material discutido.\n\nExemplo prático: Uma cautelar perdeu a eficácia. Reapresentar o mesmo pedido apenas repetindo a fundamentação anterior não atende à ressalva legal; a renovação exige um novo fundamento.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "309",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Renovação de pedido cautelar"
+      }
+    },
+    {
+      "origin_candidate_id": "eeb9fe10b940cd27dd714b5d15d342d56c1025afa48c74dbf70392f28e26830e",
+      "origin_page": 294,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "85ecd505-22da-5a0c-a569-674ecf546a0a",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:eeb9fe10b940cd27dd714b5d15d342d56c1025afa48c74dbf70392f28e26830e",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Custas da tutela incidental",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA tutela provisória requerida em caráter incidental depende sempre do recolhimento de novas custas específicas.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 295 do CPC estabelece que a tutela provisória requerida em caráter incidental independe do pagamento de custas. Essa dispensa é a regra específica cobrada no item. Ela não equivale a afirmar que toda ação judicial seja gratuita ou que os demais atos e encargos do processo estejam automaticamente dispensados.\n\nExemplo prático: No curso de uma demanda já em andamento, a parte apresenta pedido incidental de tutela provisória. O art. 295 não condiciona esse requerimento ao recolhimento de novas custas pela tutela incidental.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "295",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Custas da tutela incidental"
+      }
+    },
+    {
+      "origin_candidate_id": "c5657804c7fc7473e14d97c66d11b9fda4483dbd8e07fb5c809b3968c73bed99",
+      "origin_page": 294,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "73cb3e15-ad95-515e-baa4-42b26edb248a",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:c5657804c7fc7473e14d97c66d11b9fda4483dbd8e07fb5c809b3968c73bed99",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Caução na tutela de urgência",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nNa tutela de urgência, o juiz pode exigir caução para ressarcir os danos que a outra parte possa sofrer, podendo dispensá-la quando a parte economicamente hipossuficiente não puder oferecê-la.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 300, § 1º, autoriza a exigência de caução real ou fidejussória idônea, conforme o caso, para ressarcir os danos que a outra parte possa vir a sofrer. O próprio dispositivo permite a dispensa quando a parte economicamente hipossuficiente não puder prestá-la. A caução não é uma exigência invariável em toda tutela de urgência.\n\nExemplo prático: Ao examinar uma tutela urgente, o juiz avalia a necessidade de garantia para eventuais danos. Se o requerente hipossuficiente não puder oferecer a caução, a lei admite que ela seja dispensada.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "300",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Caução na tutela de urgência"
+      }
+    },
+    {
+      "origin_candidate_id": "3413e23b23e8a14c154b8be4a61b2fca74a294581ee3a124c1ef38f677d4b467",
+      "origin_page": 293,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "977c06d7-4f7a-5429-a4f2-6e4bf62972da",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:3413e23b23e8a14c154b8be4a61b2fca74a294581ee3a124c1ef38f677d4b467",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Fundamentação da decisão sobre tutela provisória",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO juiz deve motivar seu convencimento de modo claro e preciso ao conceder, negar, modificar ou revogar tutela provisória.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 298 exige motivação clara e precisa nas quatro situações: concessão, negativa, modificação e revogação da tutela provisória. A obrigação de fundamentar não se restringe às decisões que concedem a medida. Também a rejeição ou a alteração de uma tutela deve permitir a compreensão das razões adotadas.\n\nExemplo prático: Ao negar um pedido urgente, o juiz deve explicar por que os requisitos não foram reconhecidos. Uma resposta genérica, sem análise dos elementos relevantes do caso, não satisfaz a exigência de motivação clara e precisa.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "artigo": "298",
+            "lei": "Lei nº 13.105/2015",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "checked_at": "2026-10-17T21:53:58.071321+00:00"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:53:58.071321+00:00",
+        "verified_at": "2026-10-17T21:53:58.071321+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Fundamentação da decisão sobre tutela provisória"
+      }
+    }
+  ],
+  "article_review": [
+    {
+      "article": "24",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "fcf9fd3220f8c6b1867383b1c43f22b4e468e52f61fcef949b915ee1a0bb3c70"
+    },
+    {
+      "article": "47",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "46c23dec83f6c8fc058ed5549ed604ff3546114eaface6699fc9a29eb1eb1b23"
+    },
+    {
+      "article": "48",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "aa736a37cb9cc0f0b9c1b054b38fc998aecc2256353c0d1c1d4f220bf4dce9c7"
+    },
+    {
+      "article": "55",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "8be4a5e19c143cc6f02eba0ae3508a46b6ade3f229c0a3954c54d95326e47f8b"
+    },
+    {
+      "article": "57",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "f2b9aed9faa72c54f80c27be466355bc457cd1a849ca51f7ea8822eaf5e1439e"
+    },
+    {
+      "article": "62",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "b69bfe2fa72e16e59cf6c2e69aeea7929f01357be0df1bfaccc81ef8794e6668"
+    },
+    {
+      "article": "63",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "2066a7f7c2f79202856c51ab013cdc3821ef99648375494f706bbbdc136aec49"
+    },
+    {
+      "article": "65",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "4b7a8982adebc8ec2de66e9e859ff5e0977f42160dcd0a56be7170db3c80658b"
+    },
+    {
+      "article": "294",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "06f9e99d7287b7b585ee4505fb80d3173a5d9c2d9209ca21f50bafe575514366"
+    },
+    {
+      "article": "295",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "a2c6d586685cc7931596e91e7c3bc1f5e768bd5ce2fb2be7feedd99c31dc955f"
+    },
+    {
+      "article": "298",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "9b1f69fa5ccde6604ae0f22a753329c06ca4d9543d08473c0bc09501bf4d34a0"
+    },
+    {
+      "article": "300",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "5b1ae84b9ddef308528962ff771401fb97b5fc8444235a518047987399ba952c"
+    },
+    {
+      "article": "301",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "5756bdab2e7aa1c268405f33c219d9e1bb47571c201c5042a36e223b0a3014fe"
+    },
+    {
+      "article": "309",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "2ee81448394cbc09127f86e821607107b4e0af5ec6ab16b4e8ba09df53ac5fea"
+    },
+    {
+      "article": "369",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "00eb35f57aa6190a6450db89804a7158dce84bf3c49d400e997c85cf41ffe1eb"
+    },
+    {
+      "article": "371",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "d364f6200c20c269df81e9ae90435894451e3af6e5c11300913b9a419e1cd5bb"
+    },
+    {
+      "article": "374",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "84b60dd71a167f2547cb915b118bb8215824a58eab88a52f1f703a187a59a434"
+    },
+    {
+      "article": "385",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "ea26843e66c8827bb8fc4f023c6a12f9a0f6cc9cb3c79cadc455dcf7e92da9c9"
+    },
+    {
+      "article": "396",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "8617afee161d60f238c90d1d874fd42d0ae09fa2f92000d85e510b92b632e835"
+    },
+    {
+      "article": "442",
+      "checked_against_official_capture": true,
+      "excerpt_sha256": "77f35c7ea0ef9ea46eac371e82d15ae10f67f71b28d827cead05f0adb2ff74fb"
+    }
+  ],
+  "duplicate_review": {
+    "prior_cpc_records_compared": 28,
+    "highest_token_similarity": 0.4,
+    "semantic_comparison_scope": "Previously captured public catalog CPC rows plus the 10 published adaptations; fresh whole-catalog exact comparison is performed by the publisher"
+  },
+  "publication_result": {
+    "batch_id": "cespe2016-adapted-cpc-publication-02-2026-10-17",
+    "applied": true,
+    "inserted_ids": [
+      "6a79b52a-7e01-5cc8-a1ac-3aa1a7577a8d",
+      "e24e1941-9139-5469-b164-fbe595b4d3e5",
+      "aedeb4b4-9e5b-550d-83a6-4b279dad5bb0",
+      "139a120c-5340-5203-b268-81ccb373b4a9",
+      "fda59433-4708-5ccc-b401-77dba04597e6",
+      "c25ecb07-5d9b-5826-a630-a2fbd9cbd49c",
+      "5ff15afb-cebb-5863-8578-a469b20d5c0a",
+      "a8ac083f-7871-5c8c-90a6-eac4ce9c81e4",
+      "45dc616a-a27e-52cc-8679-f651f9d62e4e",
+      "3f37ba61-0f73-550d-890c-8969241816e7",
+      "d236ece7-2bab-58b6-afd0-ce13d926056c",
+      "82177766-b57f-5fb6-9e44-d5a56d3f2d2d",
+      "d120374c-3922-516a-a708-87c41fa28530",
+      "b4c6fc93-35a0-5f8c-bda5-37e69a35ef21",
+      "19db8b55-843f-5e04-8584-7c7e32738b1f",
+      "32c2631d-6155-5a2d-81dc-f4f3ba67ea97",
+      "44681e6a-c41c-5dd5-9840-fa8068a730ff",
+      "85ecd505-22da-5a0c-a569-674ecf546a0a",
+      "73cb3e15-ad95-515e-baa4-42b26edb248a",
+      "977c06d7-4f7a-5429-a4f2-6e4bf62972da"
+    ],
+    "preserved_ids": [],
+    "original_exam_items_published": 0,
+    "original_rows_modified": 0,
+    "verified": true,
+    "compared_counts": {
+      "official_exam_questions": 4888,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 2002
+    },
+    "checked_at": "2026-10-17T21:55:05.304536+00:00"
+  }
+}

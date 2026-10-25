@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-13T02:41:46.768971+00:00",
+  "authored_explanations_confirmed": 50,
+  "untargeted_explanations_preserved": 3463,
+  "untargeted_cp_explanations_preserved": 351,
+  "prior_revisions_retained_in_manifest": 50,
+  "timestamp_only_changes": [],
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "legal_courses",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "cp_units_unchanged": true,
+  "concurrent_other_course_changes": [
+    {
+      "table": "legal_course_units",
+      "unit_id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-3",
+      "fields": [
+        "body_text",
+        "content_sha256"
+      ],
+      "before_sha256": "a7403dbca862a058fe378066ca16d3e73d0914342a22012773e731a02544c0f2",
+      "after_sha256": "27f476717117750df79ab1bdebfe01d32bcadf55bf54c808b86b02877df82be5"
+    }
+  ],
+  "note": "CP alvos e não alvos verificados estritamente; mudanças fora do CP identificadas como concorrentes, sem escrever sobre elas ou declarar toda tabela global imutável."
+}

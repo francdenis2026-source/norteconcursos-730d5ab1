@@ -1,0 +1,1839 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T01:39:31.570272+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 30,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-118",
+        "art-119",
+        "art-120",
+        "art-121",
+        "art-122",
+        "art-123",
+        "art-124",
+        "art-124-a",
+        "art-125",
+        "art-126",
+        "art-127",
+        "art-128",
+        "art-129",
+        "art-130",
+        "art-131",
+        "art-132",
+        "art-133",
+        "art-133-a",
+        "art-134",
+        "art-135",
+        "art-136",
+        "art-137",
+        "art-138",
+        "art-139",
+        "art-140",
+        "art-141",
+        "art-142",
+        "art-143",
+        "art-144",
+        "art-144-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-118",
+      "unit_id": "93013833-2cc4-506d-8410-f62baab9e0a3",
+      "content_sha256": "bf7f9aebcf4f891d84fe8be9b03bc41e76bb009c0eb8d54b439969dd85182c96",
+      "simples": "Antes da decisão final definitiva, a coisa apreendida não será devolvida enquanto interessar ao processo.",
+      "pontos": [
+        "O impedimento depende de interesse processual.",
+        "Não impõe espera obrigatória pelo trânsito para toda restituição.",
+        "Mesmo sem interesse probatório, conferir impedimentos e titularidade dos artigos seguintes."
+      ],
+      "atencao": [
+        "Não ensinar que toda apreensão só termina depois do trânsito. A restituição antecipada pode ser cabível sem interesse e sem outro impedimento."
+      ],
+      "exemplo": "Celular apreendido ainda precisa de exame pertinente: mantém-se a apreensão enquanto houver interesse processual. Variação: Perícia acabou e o bem lícito não interessa mais: examinar restituição, titularidade e outros obstáculos, sem espera automática.",
+      "prova": [
+        "Restituição antes do trânsito é sempre proibida? Não.",
+        "Interesse atual ao processo impede devolução? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Interesse processual",
+          "significado": "Necessidade da coisa para os fins legítimos do processo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "93013833-2cc4-506d-8410-f62baab9e0a3",
+        "content_sha256": "bf7f9aebcf4f891d84fe8be9b03bc41e76bb009c0eb8d54b439969dd85182c96",
+        "simples": "Antes de transitar em julgado a sentença final, as coisas apreendidas não poderão ser restituídas enquanto interessarem ao processo.",
+        "pontos": [
+          "Coisas apreendidas não são restituídas antes do trânsito, enquanto interessarem ao processo."
+        ],
+        "atencao": [
+          "Critério: interesse para o processo."
+        ],
+        "exemplo": "A arma usada no crime fica apreendida até o fim do processo.",
+        "prova": [
+          "Assertiva que determina a restituição imediata das coisas apreendidas erra: elas ficam retidas enquanto interessarem ao processo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 119",
+          "Art. 120"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-119",
+      "unit_id": "5e791113-b846-585e-b3e0-ab30165468d3",
+      "content_sha256": "7549bd9aa40ce7c0c05a1f7206c22ec1e1363d8e9e340de7905b0871a59a8ec3",
+      "simples": "Bens sujeitos ao regime legal de perda não são restituídos apenas porque a sentença transitou; preservar o direito do lesado e do terceiro de boa-fé.",
+      "pontos": [
+        "Arts. 74 e 100 do CP são remissões históricas; integrar CP 91 e hipóteses legais atuais.",
+        "Nem todo objeto usado no delito é instrumento confiscável: conferir requisitos legais.",
+        "Lesado e terceiro de boa-fé têm ressalva expressa."
+      ],
+      "atencao": [
+        "Não usar a atual numeração do CP 74/100 como se fosse a disciplina antiga de confisco, nem equiparar todo bem apreendido a coisa perdida."
+      ],
+      "exemplo": "Bem sujeito a perda é reivindicado por terceiro que demonstra boa-fé: sua ressalva deve ser examinada. Variação: Propriedade do acusado e utilização no fato, por si, não substituem os requisitos legais de perda do instrumento.",
+      "prova": [
+        "Trânsito elimina todo impedimento de restituição? Não.",
+        "Direito do terceiro de boa-fé é ressalvado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Perdimento",
+          "significado": "Perda juridicamente decretada nos pressupostos legais, distinta da mera apreensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5e791113-b846-585e-b3e0-ab30165468d3",
+        "content_sha256": "7549bd9aa40ce7c0c05a1f7206c22ec1e1363d8e9e340de7905b0871a59a8ec3",
+        "simples": "As coisas a que se referem os arts. 74 e 100 do Código Penal não podem ser restituídas, mesmo depois de transitar em julgado a sentença final, salvo se pertencerem ao lesado ou a terceiro de boa-fé.",
+        "pontos": [
+          "Instrumentos e produtos do crime perdidos em favor da União não são restituídos.",
+          "Exceção: pertencentes ao lesado ou a terceiro de boa-fé."
+        ],
+        "atencao": [
+          "Efeito da condenação: perda de instrumentos e produto do crime."
+        ],
+        "exemplo": "Instrumento ilícito do crime não é devolvido ao autor após a condenação.",
+        "prova": [
+          "Assertiva que determina a restituição ao réu dos instrumentos do crime após o trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 118"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-120",
+      "unit_id": "1babf78d-2a16-5872-a873-e6b5dab39127",
+      "content_sha256": "a09ebeea2f55208dbe6b3d72aafffbe946ca2e3e0b71e776042c83c3d08fada5",
+      "simples": "Restituição sem dúvida sobre o direito pode ser ordenada por polícia ou juiz; controvérsia ou posse de terceiro de boa-fé exige incidente judicial.",
+      "pontos": [
+        "Dúvida: apartado, cinco dias para provar o direito; decisão apenas judicial.",
+        "Terceiro de boa-fé: cinco dias sucessivos de prova e dois dias para cada um arrazoar.",
+        "MP sempre ouvido; dúvida sobre dono leva ao cível com depósito.",
+        "Perecíveis: avaliação e leilão com depósito ou entrega a terceiro idôneo com responsabilidade."
+      ],
+      "atencao": [
+        "A polícia não decide disputa de titularidade no rito reservado ao juiz. Perecibilidade não autoriza doação informal."
+      ],
+      "exemplo": "Dono documentado pede bem lícito sem disputa: examinam-se cabimento e termo de restituição, ouvido MP. Variação: Terceiro de boa-fé disputa propriedade: incidente separado, prova e decisão judicial; dúvida de dono pode ir ao cível.",
+      "prova": [
+        "MP deve ser ouvido em todo pedido? Sim.",
+        "Polícia pode decidir o incidente de titularidade duvidosa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Restituição litigiosa",
+          "significado": "Pedido com controvérsia de direito que exige decisão judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1babf78d-2a16-5872-a873-e6b5dab39127",
+        "content_sha256": "a09ebeea2f55208dbe6b3d72aafffbe946ca2e3e0b71e776042c83c3d08fada5",
+        "simples": "A restituição, quando cabível, pode ser ordenada pela autoridade policial ou pelo juiz, mediante termo nos autos, desde que não exista dúvida quanto ao direito do reclamante. Se duvidoso o direito, o pedido autua-se em apartado, com prazo de cinco dias para a prova ao requerente, e só o juiz criminal decide. Se as coisas forem apreendidas em poder de terceiro de boa-fé, o incidente é autuado em apartado e só a autoridade judicial o resolve, com intimação do terceiro, em prazo igual e sucessivo, e dois dias para arrazoar. Sempre será ouvido o Ministério Público. Em dúvida sobre o verdadeiro dono, o juiz remete as partes ao juízo cível e ordena o depósito. Coisas facilmente deterioráveis serão avaliadas e levadas a leilão, ou entregues ao terceiro idôneo mediante termo de responsabilidade.",
+        "pontos": [
+          "Sem dúvida sobre o direito: restituição pela autoridade policial ou pelo juiz, mediante termo.",
+          "Direito duvidoso: autuação em apartado e prazo de cinco dias para a prova; só o juiz decide.",
+          "Coisa em poder de terceiro de boa-fé: só a autoridade judicial; prazo de dois dias para arrazoar.",
+          "Ministério Público sempre ouvido.",
+          "Dúvida sobre o dono: remessa ao juízo cível e depósito.",
+          "Coisas deterioráveis: avaliação e leilão ou entrega ao terceiro idôneo."
+        ],
+        "atencao": [
+          "A autoridade policial pode restituir apenas quando NÃO há dúvida."
+        ],
+        "exemplo": "Veículo apreendido, sem dúvida sobre a propriedade, é restituído mediante termo.",
+        "prova": [
+          "Assertiva que permite à autoridade policial decidir restituição com direito duvidoso erra: só o juiz criminal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 118",
+          "Art. 119"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-121",
+      "unit_id": "21812a33-d7ff-5000-b591-30dafe0e38ea",
+      "content_sha256": "4829f5f0dda1e322cd41646f6b54ef2e52d26adafabe96acaa531f70d589e9ff",
+      "simples": "Coisa adquirida com proventos da infração segue a disciplina de avaliação e venda do art. 133, integrada à redação atual.",
+      "pontos": [
+        "Apreensão não equivale por si a perdimento definitivo.",
+        "Art. 133 atual tem §§1º e 2º: lesado, terceiro de boa-fé e destinação.",
+        "Não confundir provento do crime com bem lícito sem esse vínculo."
+      ],
+      "atencao": [
+        "A referência singular a parágrafo é histórica; usar os parágrafos atuais e requisitos da venda."
+      ],
+      "exemplo": "Imóvel adquirido com ganho do delito é submetido à disciplina patrimonial própria, preservados direitos de terceiros. Variação: Bem de origem lícita não vira provento apenas por pertencer ao investigado.",
+      "prova": [
+        "Todo patrimônio do investigado é provento? Não.",
+        "É preciso integrar art. 133 atual? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Provento da infração",
+          "significado": "Vantagem patrimonial originada do delito ou convertida em bens."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "21812a33-d7ff-5000-b591-30dafe0e38ea",
+        "content_sha256": "4829f5f0dda1e322cd41646f6b54ef2e52d26adafabe96acaa531f70d589e9ff",
+        "simples": "No caso de apreensão de coisa adquirida com os proventos da infração, aplica-se o disposto no art. 133 e seu parágrafo.",
+        "pontos": [
+          "Bem adquirido com proventos da infração: aplica-se o art. 133 (avaliação e venda em leilão)."
+        ],
+        "atencao": [
+          "Remissão ao art. 133."
+        ],
+        "exemplo": "Imóvel comprado com dinheiro do crime segue o procedimento de leilão do art. 133.",
+        "prova": [
+          "Assertiva que determina a restituição ao réu da coisa adquirida com os proventos do crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-122",
+      "unit_id": "e88b40b6-b5b3-5aa6-82aa-733b30503f0f",
+      "content_sha256": "598be618c0384d3235b02e2556ac2b4ce392fd37bee842102065537a7678cae1",
+      "simples": "A alienação das coisas apreendidas remete ao art. 133 sem prejudicar restituição do art. 120; redação atual resulta do Pacote Anticrime.",
+      "pontos": [
+        "Lei 13.964/2019 alterou o caput.",
+        "Parágrafo único foi revogado.",
+        "Aplicar requisitos atuais do art. 133 e preservar restituição cabível."
+      ],
+      "atencao": [
+        "Não ressuscitar o parágrafo revogado ou vender toda apreensão imediatamente sem o regime legal."
+      ],
+      "exemplo": "Decretado perdimento após condenação definitiva, a venda segue art. 133. Variação: Bem cuja restituição é devida deve ser examinado pelo art. 120, não vendido só porque foi apreendido.",
+      "prova": [
+        "O parágrafo antigo continua ativo? Não.",
+        "O art. 120 é preservado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Alienação",
+          "significado": "Venda conforme pressupostos legais, diferente da simples constrição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e88b40b6-b5b3-5aa6-82aa-733b30503f0f",
+        "content_sha256": "598be618c0384d3235b02e2556ac2b4ce392fd37bee842102065537a7678cae1",
+        "simples": "Sem prejuízo do disposto no art. 120, as coisas apreendidas serão alienadas nos termos do art. 133 do Código. O parágrafo único foi revogado.",
+        "pontos": [
+          "Coisas apreendidas são alienadas nos termos do art. 133.",
+          "Sem prejuízo da restituição do art. 120."
+        ],
+        "atencao": [
+          "Redação dada pela Lei nº 13.964, de 2019."
+        ],
+        "exemplo": "Bem apreendido sem dono reclamante é alienado em leilão conforme o art. 133.",
+        "prova": [
+          "Assertiva que mantém o parágrafo único do art. 122 em vigor erra: foi revogado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 120",
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-123",
+      "unit_id": "34656432-3883-5fea-9d8a-586131e6554b",
+      "content_sha256": "6ff6b3c51b777310f09a26d96a0840e1610d1eb0832829d069009909f203e7b6",
+      "simples": "Fora das hipóteses anteriores, o texto prevê leilão se em 90 dias do trânsito final os objetos não forem reclamados ou não pertencerem ao réu, com saldo ao juízo de ausentes.",
+      "pontos": [
+        "Prazo contado do trânsito da sentença final, condenatória ou absolutória.",
+        "Regra residual; conferir primeiro arts. 118–122.",
+        "Saldo depositado à disposição do juízo de ausentes."
+      ],
+      "atencao": [
+        "Não contar os 90 dias da apreensão, nem aplicar automaticamente a bem com restituição devida ou destinação especial."
+      ],
+      "exemplo": "Objeto residual não reclamado depois de 90 dias do trânsito é avaliado para o leilão legal, com saldo depositado. Variação: Uma semana após apreensão ainda não há termo inicial deste artigo, mesmo se o bem não foi reclamado.",
+      "prova": [
+        "O prazo começa na apreensão? Não; no trânsito final.",
+        "Pode haver sentença absolutória como termo inicial? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação residual",
+          "significado": "Tratamento dos objetos fora das hipóteses patrimoniais anteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "34656432-3883-5fea-9d8a-586131e6554b",
+        "content_sha256": "6ff6b3c51b777310f09a26d96a0840e1610d1eb0832829d069009909f203e7b6",
+        "simples": "Fora dos casos dos artigos anteriores, se dentro do prazo de 90 dias, a contar do trânsito em julgado da sentença final, condenatória ou absolutória, os objetos apreendidos não forem reclamados ou não pertencerem ao réu, serão vendidos em leilão, depositando-se o saldo à disposição do juízo de ausentes.",
+        "pontos": [
+          "Prazo de 90 dias do trânsito em julgado.",
+          "Objetos não reclamados ou que não pertencem ao réu: leilão.",
+          "Saldo depositado à disposição do juízo de ausentes."
+        ],
+        "atencao": [
+          "Prazo de 90 dias."
+        ],
+        "exemplo": "Objeto não reclamado em 90 dias após o trânsito vai a leilão.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo para reclamar os objetos apreendidos erra: são 90 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-124",
+      "unit_id": "76b49920-d862-5f53-84bf-0238003a7a0c",
+      "content_sha256": "83f398c3ecd3852aef0a3e7d613db70d6d1ae0d725cf3ea10d49719418579bc7",
+      "simples": "Instrumentos com perda decretada e coisas confiscadas têm inutilização ou recolhimento a museu criminal quando houver interesse de conservação, observadas normas atuais e especiais.",
+      "pontos": [
+        "Exige perda ou confisco legal, não mera apreensão.",
+        "Remissão ao CP 100 é histórica; integrar regime atual de efeitos da condenação.",
+        "Obras e bens culturais têm hipótese especial no art. 124-A."
+      ],
+      "atencao": [
+        "Não destruir automaticamente qualquer objeto usado em crime nem ignorar destinação especial vigente."
+      ],
+      "exemplo": "Objeto ilicitamente destinado ao delito tem perdimento decretado; autoridade observa a destinação legal. Variação: Obra de valor cultural pode receber destinação do art. 124-A quando preenchidos seus pressupostos.",
+      "prova": [
+        "Apreensão equivale a perda decretada? Não.",
+        "Bens culturais exigem verificar art. 124-A? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação do instrumento",
+          "significado": "Tratamento posterior ao perdimento juridicamente determinado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "76b49920-d862-5f53-84bf-0238003a7a0c",
+        "content_sha256": "83f398c3ecd3852aef0a3e7d613db70d6d1ae0d725cf3ea10d49719418579bc7",
+        "simples": "Os instrumentos do crime, cuja perda em favor da União for decretada, e as coisas confiscadas nos termos do art. 100 do Código Penal serão inutilizados ou recolhidos a museu criminal, se houver interesse na sua conservação.",
+        "pontos": [
+          "Instrumentos do crime perdidos em favor da União: inutilização ou museu criminal.",
+          "Museu somente se houver interesse na conservação."
+        ],
+        "atencao": [
+          "Destino dos instrumentos confiscados."
+        ],
+        "exemplo": "Arma confiscada e sem interesse de conservação é inutilizada.",
+        "prova": [
+          "Assertiva que determina a venda em leilão dos instrumentos ilícitos do crime, nos termos do art. 124, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 119"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-124-a",
+      "unit_id": "60ad6482-da18-56a4-9779-13f1390a18e6",
+      "content_sha256": "247f10b796d0d8fb50b50ca9d480e95659d282e4428cccc74f0821fe49a420a4",
+      "simples": "Obra de arte ou bem cultural de relevante valor, com perdimento decretado e crime sem vítima determinada, pode ser destinado a museu público.",
+      "pontos": [
+        "Incluído pela Lei 13.964/2019.",
+        "Relevante valor cultural ou artístico e ausência de vítima determinada.",
+        "Destinação é possibilidade, não transferência automática de toda obra apreendida."
+      ],
+      "atencao": [
+        "Não afastar direito de vítima identificada apenas para enriquecer acervo público."
+      ],
+      "exemplo": "Obra com perda decretada em delito sem vítima determinada pode ir a museu público. Variação: Obra furtada de vítima identificada exige preservar sua restituição, em vez de aplicar esta hipótese como regra geral.",
+      "prova": [
+        "Toda obra apreendida vai a museu público? Não.",
+        "A ausência de vítima determinada é requisito? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Valor cultural",
+          "significado": "Relevância artística ou cultural que fundamenta a destinação especial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "60ad6482-da18-56a4-9779-13f1390a18e6",
+        "content_sha256": "247f10b796d0d8fb50b50ca9d480e95659d282e4428cccc74f0821fe49a420a4",
+        "simples": "Na hipótese de decretação de perdimento de obras de arte ou de outros bens de relevante valor cultural ou artístico, se o crime não tiver vítima determinada, poderá haver destinação dos bens a museus públicos.",
+        "pontos": [
+          "Perdimento de obras de arte ou bens de valor cultural ou artístico.",
+          "Crime sem vítima determinada: destinação possível a museus públicos."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 13.964, de 2019."
+        ],
+        "exemplo": "Obra de arte confiscada em crime sem vítima determinada é destinada a museu público.",
+        "prova": [
+          "Assertiva que obriga a destinação a museus em qualquer crime erra: é possibilidade, quando não há vítima determinada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 124"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-125",
+      "unit_id": "e0deb8b1-58cb-562d-a417-3d6d2aefdf01",
+      "content_sha256": "2a777efe65822357ed6d98bec9118c16feada02d5afa3b9c27643cfcf5beeb3f",
+      "simples": "Sequestro de imóvel adquirido com proventos do delito pode alcançar bem já transferido a terceiro, com as defesas legais preservadas.",
+      "pontos": [
+        "Vínculo de aquisição com proventos da infração.",
+        "Transferência posterior não impede por si a medida.",
+        "Defesas dos arts. 129–130 e direitos de terceiro de boa-fé."
+      ],
+      "atencao": [
+        "Não confundir sequestro de origem ilícita com hipoteca para garantir reparação sobre patrimônio lícito."
+      ],
+      "exemplo": "Investigado compra imóvel com ganho criminoso e depois transfere-o: o bem ainda pode sofrer sequestro. Variação: Imóvel comprado com renda lícita não satisfaz automaticamente este fundamento; outra garantia tem requisitos próprios.",
+      "prova": [
+        "Transferência a terceiro bloqueia sempre sequestro? Não.",
+        "Sequestro e hipoteca possuem idêntico fundamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sequestro patrimonial",
+          "significado": "Constrição de bem ligado a proventos ilícitos, no regime legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e0deb8b1-58cb-562d-a417-3d6d2aefdf01",
+        "content_sha256": "2a777efe65822357ed6d98bec9118c16feada02d5afa3b9c27643cfcf5beeb3f",
+        "simples": "Caberá o sequestro dos bens imóveis adquiridos pelo indiciado com os proventos da infração, ainda que já tenham sido transferidos a terceiro.",
+        "pontos": [
+          "Sequestro de imóveis adquiridos com proventos do crime.",
+          "Cabe mesmo que transferidos a terceiro."
+        ],
+        "atencao": [
+          "Medida assecuratória sobre bens imóveis."
+        ],
+        "exemplo": "Imóvel comprado com dinheiro do crime e passado a um parente pode ser sequestrado.",
+        "prova": [
+          "Assertiva que impede o sequestro de imóvel já transferido a terceiro erra."
+        ],
+        "termos": [
+          {
+            "termo": "Sequestro",
+            "significado": "Medida cautelar que retém bens adquiridos com proventos do crime."
+          }
+        ],
+        "remissoes": [
+          "Art. 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-126",
+      "unit_id": "39c328a4-d367-517c-a00e-44e35905be2e",
+      "content_sha256": "b61d88863f2845baa022dfccc50bb0e5fc07edebcf1265f7a6af2bf239ea96a4",
+      "simples": "Indícios veementes de origem ilícita dos bens bastam ao pressuposto probatório do sequestro; não se exige condenação definitiva nessa fase.",
+      "pontos": [
+        "Intensidade dos indícios deve ser fundamentada.",
+        "Não basta suspeita vaga sobre riqueza.",
+        "Cautelar não é declaração definitiva de culpabilidade."
+      ],
+      "atencao": [
+        "Indícios veementes não equivalem a qualquer rumor nem eliminam defesa e controle da medida."
+      ],
+      "exemplo": "Rastreio documental liga aquisição do imóvel ao ganho do delito e fundamenta a medida cautelar. Variação: Patrimônio elevado sem demonstração de proveniência ilícita não substitui o pressuposto.",
+      "prova": [
+        "Condenação definitiva é requisito desta fase? Não.",
+        "Rumor sem suporte equivale a indícios veementes? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Indícios veementes",
+          "significado": "Elementos robustos que sustentam a origem ilícita alegada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "39c328a4-d367-517c-a00e-44e35905be2e",
+        "content_sha256": "b61d88863f2845baa022dfccc50bb0e5fc07edebcf1265f7a6af2bf239ea96a4",
+        "simples": "Para a decretação do sequestro, basta a existência de indícios veementes da proveniência ilícita dos bens.",
+        "pontos": [
+          "Basta indício veemente da proveniência ilícita dos bens."
+        ],
+        "atencao": [
+          "Exigência menor do que a certeza."
+        ],
+        "exemplo": "Há indícios veementes de que o carro foi comprado com dinheiro do crime: cabe o sequestro.",
+        "prova": [
+          "Assertiva que exige prova plena da origem ilícita para o sequestro erra: bastam indícios veementes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-127",
+      "unit_id": "6cb65d33-2c0b-593c-aeb8-1c103d1b4fca",
+      "content_sha256": "6350ff77c20503446cef3d4e04822f79e455041fd5e4780c07ff326ddc3fdd03",
+      "simples": "O juiz ordena sequestro por provocação do MP, ofendido ou representação policial; o texto também conserva iniciativa de ofício, que deve ser integrada ao sistema acusatório.",
+      "pontos": [
+        "Pode ocorrer antes da denúncia ou queixa e durante o processo.",
+        "Indícios veementes do art. 126 continuam exigidos.",
+        "Art. 3º-A e imparcialidade impedem transformar o juiz em investigador da acusação."
+      ],
+      "atencao": [
+        "Não afirmar revogação textual inexistente, mas também não tratar de ofício como licença irrestrita para investigação judicial. Cabimento concreto exige integração constitucional."
+      ],
+      "exemplo": "Polícia representa com indícios de compra ilícita; juiz fundamenta a decisão sobre o sequestro. Variação: Ausência de denúncia não impede a medida; ausência de indícios não é suprida pela vontade do juiz.",
+      "prova": [
+        "Pode ocorrer antes da denúncia? Sim.",
+        "A iniciativa elimina necessidade de indícios? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Representação patrimonial",
+          "significado": "Provocação policial para decisão judicial cautelar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "6cb65d33-2c0b-593c-aeb8-1c103d1b4fca",
+        "content_sha256": "6350ff77c20503446cef3d4e04822f79e455041fd5e4780c07ff326ddc3fdd03",
+        "simples": "O juiz, de ofício, a requerimento do Ministério Público ou do ofendido, ou mediante representação da autoridade policial, poderá ordenar o sequestro, em qualquer fase do processo ou ainda antes de oferecida a denúncia ou queixa.",
+        "pontos": [
+          "Sequestro ordenado de ofício, por requerimento do MP ou do ofendido, ou por representação policial.",
+          "Em qualquer fase do processo ou antes da denúncia."
+        ],
+        "atencao": [
+          "Pode ser decretado antes da denúncia."
+        ],
+        "exemplo": "Na fase de inquérito, o juiz sequestra bens por representação do delegado.",
+        "prova": [
+          "Assertiva que exige denúncia já oferecida para decretar o sequestro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-128",
+      "unit_id": "244591ff-b0fc-5923-9bae-cafef41ef123",
+      "content_sha256": "0a1d0ae821a6847533d7bdb714c642614b36e6df16b6b60b16c0e22dee87f0d4",
+      "simples": "Realizado sequestro de imóvel, juiz determina inscrição no Registro de Imóveis para dar publicidade à constrição.",
+      "pontos": [
+        "Inscrição após a realização do sequestro.",
+        "Não transfere propriedade ao Estado.",
+        "Distinguir publicidade registral de condenação ou perdimento."
+      ],
+      "atencao": [
+        "Registro da medida não equivale a confisco definitivo."
+      ],
+      "exemplo": "Após sequestrar imóvel, juiz ordena inscrição da constrição na matrícula. Variação: A inscrição não autoriza vender como bem já definitivamente público sem requisitos posteriores.",
+      "prova": [
+        "Inscrição transfere domínio ao Estado? Não.",
+        "É determinada pelo juiz? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Publicidade registral",
+          "significado": "Registro da restrição para conhecimento jurídico de terceiros."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "244591ff-b0fc-5923-9bae-cafef41ef123",
+        "content_sha256": "0a1d0ae821a6847533d7bdb714c642614b36e6df16b6b60b16c0e22dee87f0d4",
+        "simples": "Realizado o sequestro, o juiz ordenará a sua inscrição no Registro de Imóveis.",
+        "pontos": [
+          "Sequestro de imóvel: inscrição no Registro de Imóveis."
+        ],
+        "atencao": [
+          "Dá publicidade à constrição."
+        ],
+        "exemplo": "Depois de sequestrar o imóvel, o juiz determina o registro da medida na matrícula.",
+        "prova": [
+          "Assertiva que dispensa a inscrição do sequestro no Registro de Imóveis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 129"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-129",
+      "unit_id": "8e5b4521-8ab5-596c-bf11-505d8c331f42",
+      "content_sha256": "e9a943aa4319bc93f49ce1f431ad02c1f056802ff75573452ee6dd5a3eb9413c",
+      "simples": "Sequestro tramita em apartado e admite embargos de terceiro, garantindo via de defesa patrimonial.",
+      "pontos": [
+        "Autuação separada.",
+        "Terceiro pode defender direito próprio.",
+        "Art. 130 disciplina fundamentos específicos adicionais; não confundir todos os incidentes."
+      ],
+      "atencao": [
+        "Ser terceiro não torna a constrição incontestável nem garante sua retirada automática."
+      ],
+      "exemplo": "Proprietário alheio à acusação apresenta embargos para provar direito sobre o bem constrito. Variação: A apresentação, por si, não elimina sequestro sem exame dos fundamentos e provas.",
+      "prova": [
+        "Admite defesa de terceiro? Sim.",
+        "Embargos levantam medida automaticamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Embargos de terceiro",
+          "significado": "Instrumento de defesa de direito patrimonial de terceiro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8e5b4521-8ab5-596c-bf11-505d8c331f42",
+        "content_sha256": "e9a943aa4319bc93f49ce1f431ad02c1f056802ff75573452ee6dd5a3eb9413c",
+        "simples": "O sequestro autuar-se-á em apartado e admitirá embargos de terceiro.",
+        "pontos": [
+          "Sequestro tramita em autos apartados.",
+          "Admite embargos de terceiro."
+        ],
+        "atencao": [
+          "Autos apartados."
+        ],
+        "exemplo": "Terceiro de boa-fé opõe embargos contra o sequestro de seu imóvel.",
+        "prova": [
+          "Assertiva que veda embargos de terceiro contra o sequestro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 130"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-130",
+      "unit_id": "1f87a7ce-c25d-5c72-af78-c956fcacf2b5",
+      "content_sha256": "285f110fc06907928f80cfd6fc92564a21f1ddb95dfa1b4cefb1688132db688b",
+      "simples": "Acusado pode embargar negando aquisição com proventos; terceiro adquirente oneroso pode invocar boa-fé. O texto limita decisão nesses embargos ao trânsito da condenação.",
+      "pontos": [
+        "Acusado: contestação da origem em proventos.",
+        "Terceiro: transferência onerosa e aquisição de boa-fé.",
+        "Parágrafo refere-se a esses embargos; distinguir outras vias e pedidos de levantamento."
+      ],
+      "atencao": [
+        "Não converter a regra do parágrafo em impossibilidade de todo controle cautelar antes da condenação, nem confundir com qualquer embargo do art. 129."
+      ],
+      "exemplo": "Acusado mostra origem lícita da compra; adquirente oneroso apresenta elementos de boa-fé em sua defesa. Variação: Pedido de levantamento por pressuposto cautelar inexistente exige análise própria, sem dizer que toda defesa deve esperar condenação.",
+      "prova": [
+        "Boa-fé e onerosidade são fundamentos do terceiro no inciso II? Sim.",
+        "O artigo elimina todo controle cautelar anterior? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Aquisição onerosa de boa-fé",
+          "significado": "Transferência mediante contraprestação sem conhecimento da origem ilícita alegada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1f87a7ce-c25d-5c72-af78-c956fcacf2b5",
+        "content_sha256": "285f110fc06907928f80cfd6fc92564a21f1ddb95dfa1b4cefb1688132db688b",
+        "simples": "O sequestro poderá ainda ser embargado pelo acusado, sob o fundamento de não terem os bens sido adquiridos com os proventos da infração, e pelo terceiro a quem houverem sido transferidos os bens a título oneroso, sob o fundamento de tê-los adquirido de boa-fé. Não poderá ser pronunciada decisão nesses embargos antes de passar em julgado a sentença condenatória.",
+        "pontos": [
+          "Embargos do acusado: bens não adquiridos com proventos da infração.",
+          "Embargos do terceiro: aquisição onerosa de boa-fé.",
+          "Decisão só depois do trânsito em julgado da sentença condenatória."
+        ],
+        "atencao": [
+          "A decisão dos embargos fica DIFERIDA até o trânsito em julgado."
+        ],
+        "exemplo": "Terceiro comprador de boa-fé embarga o sequestro, mas a decisão só vem após o trânsito.",
+        "prova": [
+          "Assertiva que permite decidir os embargos antes do trânsito da condenação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 129"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-131",
+      "unit_id": "eeb62def-4f49-5ba6-9e41-bc55be8966da",
+      "content_sha256": "de2ddbee96d32794cd867e8c6809d9e421b7ebdc0e11fbfaa42243490752e25d",
+      "simples": "O texto prevê levantamento por falta de ação em 60 dias da diligência concluída, caução de terceiro ou absolvição/extinção definitivas, com integração jurisprudencial do prazo.",
+      "pontos": [
+        "Sessenta dias da conclusão da diligência, não da simples notícia do crime.",
+        "STJ, AgRg Pet 16291, 14/6/2024: prazo não peremptório, avaliado no caso concreto.",
+        "Absolvição ou extinção exige trânsito; caução assegura efeitos legais, com remissão histórica integrada ao CP atual."
+      ],
+      "atencao": [
+        "Nem levantamento mecânico no 61º dia, nem retenção indefinida sem fundamento. O precedente não dispensa exame concreto de duração e necessidade."
+      ],
+      "exemplo": "Defesa pede levantamento após 60 dias; juiz examina conclusão da diligência, duração e fundamentos conforme o caso concreto. Variação: Absolvição definitiva enquadra a hipótese legal de levantamento, sem exigir declaração de inocência em novo processo.",
+      "prova": [
+        "Os 60 dias são peremptórios segundo o STJ citado? Não.",
+        "O prazo autoriza retenção sem limites e sem fundamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Levantamento",
+          "significado": "Retirada da constrição patrimonial nas hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=14%2F06%2F2024&num_registro=202303951093",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "eeb62def-4f49-5ba6-9e41-bc55be8966da",
+        "content_sha256": "de2ddbee96d32794cd867e8c6809d9e421b7ebdc0e11fbfaa42243490752e25d",
+        "simples": "O sequestro será levantado se a ação penal não for intentada no prazo de sessenta dias, contado da data em que ficar concluída a diligência; se o terceiro, a quem tiverem sido transferidos os bens, prestar caução que assegure a aplicação do disposto no art. 74, II, b, segunda parte, do Código Penal; ou se for julgada extinta a punibilidade ou absolvido o réu, por sentença transitada em julgado.",
+        "pontos": [
+          "I: ação penal não intentada em sessenta dias da diligência.",
+          "II: terceiro presta caução.",
+          "III: extinção da punibilidade ou absolvição transitada em julgado."
+        ],
+        "atencao": [
+          "Prazo de sessenta dias para a ação penal."
+        ],
+        "exemplo": "Passados sessenta dias sem ação penal, o sequestro é levantado.",
+        "prova": [
+          "Assertiva que mantém o sequestro após a absolvição transitada em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-132",
+      "unit_id": "029e2746-97f8-59ae-b678-8d6e0ad6021a",
+      "content_sha256": "bcc7eece1345f354d4422c48fc995aa2163920a617c97fbfa1ce5dd76d85089a",
+      "simples": "Móveis podem sofrer sequestro com indícios veementes se não couber a medida do capítulo de restituição das coisas apreendidas.",
+      "pontos": [
+        "Aplica requisitos do art. 126.",
+        "Subsidiariedade perante o regime de apreensão/restituição indicado.",
+        "Distinguir móvel ilícito de garantia reparatória sobre móvel lícito."
+      ],
+      "atencao": [
+        "Não sequestrar qualquer móvel só porque o acusado não tem imóvel: esse é outro fundamento, do arresto."
+      ],
+      "exemplo": "Bem móvel adquirido com ganho ilícito tem suporte probatório e hipótese adequada ao sequestro. Variação: Móvel lícito arrestado para reparação segue art. 137, não vira produto do crime por ficção.",
+      "prova": [
+        "Exige condições do art. 126? Sim.",
+        "Ausência de imóvel basta para este sequestro? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sequestro de móvel",
+          "significado": "Constrição móvel vinculada à origem ilícita e à subsidiariedade legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "029e2746-97f8-59ae-b678-8d6e0ad6021a",
+        "content_sha256": "bcc7eece1345f354d4422c48fc995aa2163920a617c97fbfa1ce5dd76d85089a",
+        "simples": "Procede-se ao sequestro dos bens móveis se, verificadas as condições previstas no art. 126, não for cabível a medida de busca e apreensão regulada no Capítulo XI do Título VII deste Livro.",
+        "pontos": [
+          "Sequestro de bens móveis, quando preenchidas as condições do art. 126.",
+          "Subsidiário à busca e apreensão."
+        ],
+        "atencao": [
+          "Subsidiariedade: só se não couber busca e apreensão."
+        ],
+        "exemplo": "Bem móvel obtido com proventos do crime e que não comporta busca e apreensão é sequestrado.",
+        "prova": [
+          "Assertiva que torna o sequestro de bens móveis preferencial à busca e apreensão erra: é subsidiário."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-133",
+      "unit_id": "405357ca-41b5-5080-b964-f3b53d0ed816",
+      "content_sha256": "794d9162135803dcf6664f006e57cc72e17e35a1249d20dea4d46d9a0a14a4b2",
+      "simples": "Depois de condenação definitiva e perdimento decretado, juiz determina avaliação e leilão; preserva lesado/terceiro de boa-fé e destina saldo ao FUNPEN, salvo lei especial.",
+      "pontos": [
+        "Não basta trânsito sem decreto de perdimento do bem.",
+        "Iniciativa judicial, interessado ou MP.",
+        "Direitos do lesado e terceiro precedem recolhimento público; FUNPEN ressalva lei especial."
+      ],
+      "atencao": [
+        "Não confundir essa venda definitiva com alienação antecipada para preservar valor do art. 144-A."
+      ],
+      "exemplo": "Bem perdido por condenação definitiva é leiloado e valores devidos à vítima são separados antes do saldo público. Variação: Se não houve perdimento decretado, não aplicar a venda deste artigo apenas pela condenação da pessoa.",
+      "prova": [
+        "Todo saldo vai sempre ao FUNPEN sem exceção? Não; lei especial pode dispor diferente.",
+        "É preciso perdimento decretado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Leilão após perdimento",
+          "significado": "Venda definitiva do bem legalmente perdido após o trânsito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "405357ca-41b5-5080-b964-f3b53d0ed816",
+        "content_sha256": "794d9162135803dcf6664f006e57cc72e17e35a1249d20dea4d46d9a0a14a4b2",
+        "simples": "Transitada em julgado a sentença condenatória, o juiz, de ofício ou a requerimento do interessado ou do Ministério Público, determinará a avaliação e a venda dos bens em leilão público cujo perdimento tenha sido decretado. Do dinheiro apurado, será recolhido aos cofres públicos o que não couber ao lesado ou a terceiro de boa-fé. O valor apurado deverá ser recolhido ao Fundo Penitenciário Nacional, exceto se houver previsão diversa em lei especial.",
+        "pontos": [
+          "Após o trânsito da condenação: avaliação e leilão dos bens com perdimento decretado.",
+          "Pode ser de ofício ou a requerimento.",
+          "O que não couber ao lesado ou terceiro de boa-fé vai aos cofres públicos.",
+          "Valor ao Fundo Penitenciário Nacional, salvo lei especial."
+        ],
+        "atencao": [
+          "Destino: Fundo Penitenciário Nacional."
+        ],
+        "exemplo": "Imóvel com perdimento decretado é leiloado e o valor vai ao Fundo Penitenciário Nacional.",
+        "prova": [
+          "Assertiva que destina o valor apurado ao Tesouro estadual erra: vai ao Fundo Penitenciário Nacional, salvo lei especial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 122"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-133-a",
+      "unit_id": "9696767f-5443-5e82-ae82-eb26b7cc901c",
+      "content_sha256": "c17155b67de36fcf9214b773c808529f6b5c5fdab86e80139889e41cc84df6c7",
+      "simples": "Uso público de bem constrito exige interesse público e autorização judicial; transferência definitiva depende de condenação final com perdimento e direitos ressalvados.",
+      "pontos": [
+        "Abrange segurança do CF 144, prisional, socioeducativo, Força Nacional e perícia; investigador tem prioridade.",
+        "Outros órgãos públicos podem receber uso com interesse demonstrado.",
+        "Veículo, embarcação e aeronave: registro provisório; débitos anteriores continuam exigíveis do responsável.",
+        "Transferência final pode ocorrer após condenação e perdimento, resguardados lesado e terceiro de boa-fé."
+      ],
+      "atencao": [
+        "Uso cautelar não é domínio definitivo, e isenção do órgão usuário não apaga multas e tributos anteriores do antigo responsável."
+      ],
+      "exemplo": "Juiz autoriza veículo à polícia com interesse público e prioridade da unidade investigadora, em licenciamento provisório. Variação: Se ainda não houve condenação definitiva com perdimento, não registrar transferência definitiva por simples utilização.",
+      "prova": [
+        "Uso autorizado equivale a propriedade definitiva? Não.",
+        "Débitos anteriores deixam de ser cobrados do responsável? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Uso cautelar público",
+          "significado": "Utilização institucional autorizada de bem ainda submetido à constrição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "9696767f-5443-5e82-ae82-eb26b7cc901c",
+        "content_sha256": "c17155b67de36fcf9214b773c808529f6b5c5fdab86e80139889e41cc84df6c7",
+        "simples": "O juiz poderá autorizar, constatado o interesse público, a utilização de bem sequestrado, apreendido ou sujeito a qualquer medida assecuratória pelos órgãos de segurança pública do art. 144 da Constituição, do sistema prisional, do sistema socioeducativo, da Força Nacional de Segurança Pública e do Instituto Geral de Perícia, para o desempenho de suas atividades. O órgão participante das ações de investigação ou repressão da infração que ensejou a constrição do bem tem prioridade. Fora dessas hipóteses, demonstrado o interesse público, o juiz pode autorizar o uso pelos demais órgãos públicos. Se o bem for veículo, embarcação ou aeronave, o juiz ordenará à autoridade de trânsito ou ao órgão de registro a expedição de certificado provisório de registro e licenciamento em favor do órgão beneficiário, isento de multas, encargos e tributos anteriores à disponibilização do bem, que serão cobrados do responsável.",
+        "pontos": [
+          "Uso de bem constrito por órgãos de segurança pública, sistema prisional e socioeducativo, Força Nacional e perícia.",
+          "Prioridade do órgão que participou da investigação.",
+          "Demais órgãos públicos: uso autorizado por interesse público.",
+          "Veículos, embarcações e aeronaves: certificado provisório e isenção de encargos anteriores."
+        ],
+        "atencao": [
+          "Exige interesse público e autorização judicial."
+        ],
+        "exemplo": "Viatura apreendida é cedida à polícia que participou da investigação, com certificado provisório.",
+        "prova": [
+          "Assertiva que dispensa autorização judicial para a utilização do bem apreendido erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-134",
+      "unit_id": "50bd1887-e4dc-5e88-85f6-58ef1dfdb1c0",
+      "content_sha256": "07d3f916e2c4fc4e94e315607c70289887f4c178c220aa00cadf3b1b2c0e4c3d",
+      "simples": "Hipoteca legal garante reparação sobre imóveis do indiciado, por pedido do ofendido, com certeza da infração e indícios suficientes de autoria.",
+      "pontos": [
+        "Qualquer fase do processo, conforme o artigo.",
+        "Não exige origem ilícita do imóvel.",
+        "Certeza da infração e indícios suficientes de autoria são distintos."
+      ],
+      "atencao": [
+        "Sequestro olha proventos ilícitos; hipoteca pode garantir reparação com patrimônio lícito. Não trocar os requisitos."
+      ],
+      "exemplo": "Ofendido pede hipoteca de imóvel licitamente adquirido para assegurar futura reparação, demonstrando pressupostos. Variação: Origem lícita impede chamá-lo de provento, mas não afasta por si esta garantia reparatória.",
+      "prova": [
+        "Hipoteca exige compra com dinheiro do crime? Não.",
+        "Só suspeita vaga da existência da infração basta? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Hipoteca legal",
+          "significado": "Garantia imobiliária de responsabilidade civil, com requisitos próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "50bd1887-e4dc-5e88-85f6-58ef1dfdb1c0",
+        "content_sha256": "07d3f916e2c4fc4e94e315607c70289887f4c178c220aa00cadf3b1b2c0e4c3d",
+        "simples": "A hipoteca legal sobre os imóveis do indiciado poderá ser requerida pelo ofendido em qualquer fase do processo, desde que haja certeza da infração e indícios suficientes da autoria.",
+        "pontos": [
+          "Hipoteca legal sobre imóveis do indiciado, requerida pelo ofendido.",
+          "Em qualquer fase do processo.",
+          "Exige certeza da infração e indícios suficientes da autoria."
+        ],
+        "atencao": [
+          "Exigência: certeza da infração e indícios suficientes de autoria (diferente do sequestro)."
+        ],
+        "exemplo": "Ofendido requer a hipoteca legal sobre imóvel do acusado para garantir a reparação.",
+        "prova": [
+          "Assertiva que admite a hipoteca legal com simples suspeita da infração erra."
+        ],
+        "termos": [
+          {
+            "termo": "Hipoteca legal",
+            "significado": "Garantia sobre imóveis do indiciado para assegurar a reparação do dano."
+          }
+        ],
+        "remissoes": [
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-135",
+      "unit_id": "630f942a-96ae-5ee9-bab5-823291a69a3c",
+      "content_sha256": "eab326bb34e621e6d38e4f5e673bc9dc24156d31cb2ba8b00de4434f1b0f6341",
+      "simples": "Especialização define o valor reparatório e os imóveis necessários à hipoteca, com prova, avaliação, manifestação das partes e possibilidade de caução suficiente.",
+      "pontos": [
+        "Pedido estima responsabilidade, imóveis e domínio; juntar prova ou sua indicação e relação patrimonial.",
+        "Perito avalia onde não houver avaliador judicial; partes ouvidas em dois dias permitem correção.",
+        "Inscrever apenas imóveis necessários; liquidação definitiva após condenação, com possível novo arbitramento.",
+        "Caução suficiente em dinheiro ou dívida pública pela cotação pode dispensar inscrição."
+      ],
+      "atencao": [
+        "Não hipotecar todo patrimônio sem proporção ao valor estimado nem tratar avaliação inicial como liquidação definitiva imutável."
+      ],
+      "exemplo": "Dano estimado em R$ 30 mil leva à avaliação de garantia suficiente, ouvindo-se as partes em dois dias. Variação: Caução suficiente oferecida nos termos do §6º pode evitar inscrição, sem supor aceitação automática de qualquer bem.",
+      "prova": [
+        "Partes são ouvidas em dois dias? Sim.",
+        "Devem ser hipotecados todos os imóveis independentemente do necessário? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Especialização",
+          "significado": "Individualização da responsabilidade e da garantia imobiliária correspondente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "630f942a-96ae-5ee9-bab5-823291a69a3c",
+        "content_sha256": "eab326bb34e621e6d38e4f5e673bc9dc24156d31cb2ba8b00de4434f1b0f6341",
+        "simples": "Pedida a especialização mediante requerimento, em que a parte estimará o valor da responsabilidade civil e designará e estimará o imóvel ou imóveis que ficarão especialmente hipotecados, o juiz mandará proceder ao arbitramento do valor da responsabilidade e à avaliação dos imóveis. A petição é instruída com as provas da estimação, com a relação dos imóveis do responsável e com os documentos do domínio. O arbitramento e a avaliação são feitos por perito nomeado pelo juiz, onde não houver avaliador judicial. O juiz, ouvidas as partes em dois dias, pode corrigir o arbitramento. Autorizará somente a inscrição da hipoteca dos imóveis necessários à garantia. O valor da responsabilidade será liquidado definitivamente após a condenação, podendo ser requerido novo arbitramento.",
+        "pontos": [
+          "Requerimento estima o valor da responsabilidade civil e indica os imóveis.",
+          "Arbitramento e avaliação por perito.",
+          "Partes ouvidas em dois dias; juiz pode corrigir o valor.",
+          "Hipoteca somente dos imóveis necessários.",
+          "Liquidação definitiva após a condenação."
+        ],
+        "atencao": [
+          "Hipoteca limitada aos imóveis necessários à garantia."
+        ],
+        "exemplo": "Juiz autoriza a hipoteca de apenas um imóvel, suficiente para garantir o valor arbitrado.",
+        "prova": [
+          "Assertiva que autoriza a hipoteca de todos os imóveis do acusado independentemente do valor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 134"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-136",
+      "unit_id": "bb75028c-cadb-5e5f-a8d4-9c8ad07177fb",
+      "content_sha256": "879367022d93e6f6c7cb9b6f6545a8bb3f49ab4c2e0e0b56c2374468fb8f13c5",
+      "simples": "Arresto inicial de imóvel antecede a hipoteca, mas deve ser revogado se sua inscrição não for promovida em 15 dias.",
+      "pontos": [
+        "Redação da Lei 11.435/2006.",
+        "Arresto preparatório imobiliário.",
+        "Quinze dias para promover o processo de inscrição, não para concluir toda reparação."
+      ],
+      "atencao": [
+        "Não confundir os 15 dias com prazo geral do sequestro de proventos."
+      ],
+      "exemplo": "Imóvel é arrestado de início e a parte promove em 15 dias o processo de inscrição hipotecária. Variação: Sem promoção nesse prazo, aplica-se a revogação prevista, em vez de manter garantia preparatória sem providência.",
+      "prova": [
+        "Prazo é de 15 dias? Sim.",
+        "Exige conclusão de toda a indenização em 15 dias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Arresto preparatório",
+          "significado": "Constrição inicial destinada à posterior inscrição da hipoteca."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bb75028c-cadb-5e5f-a8d4-9c8ad07177fb",
+        "content_sha256": "879367022d93e6f6c7cb9b6f6545a8bb3f49ab4c2e0e0b56c2374468fb8f13c5",
+        "simples": "O arresto do imóvel poderá ser decretado de início, revogando-se, porém, se no prazo de 15 dias não for promovido o processo de inscrição da hipoteca legal.",
+        "pontos": [
+          "Arresto do imóvel decretado desde logo.",
+          "Revogado se, em 15 dias, a hipoteca legal não for promovida."
+        ],
+        "atencao": [
+          "Prazo de 15 dias."
+        ],
+        "exemplo": "Imóvel arrestado cautelarmente: a medida cai se a hipoteca não for requerida em 15 dias.",
+        "prova": [
+          "Assertiva que fixa em 60 dias o prazo para promover a hipoteca legal após o arresto erra: são 15 dias."
+        ],
+        "termos": [
+          {
+            "termo": "Arresto",
+            "significado": "Medida cautelar prévia que garante o bem até a hipoteca legal."
+          }
+        ],
+        "remissoes": [
+          "Art. 134"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-137",
+      "unit_id": "ea44ef31-768f-5ca6-aed9-2c6563d84fae",
+      "content_sha256": "a062c7d4c86e789e3c1b3f3f0d684071b5641a0ca20c3e5818dfade19163a727",
+      "simples": "Sem imóveis ou com imóveis insuficientes, arresto reparatório pode alcançar móveis penhoráveis; fungíveis deterioráveis e rendas têm tratamento próprio.",
+      "pontos": [
+        "Móveis devem ser suscetíveis de penhora.",
+        "Fungíveis facilmente deterioráveis seguem art. 120, §5º.",
+        "Juiz pode arbitrar recursos das rendas à manutenção do indiciado e família."
+      ],
+      "atencao": [
+        "Insuficiência de imóveis não autoriza ignorar impenhorabilidade nem presumir que móveis são ilícitos."
+      ],
+      "exemplo": "Patrimônio imobiliário insuficiente justifica examinar móveis penhoráveis para garantir reparação. Variação: Rendas do bem podem sustentar indiciado e família em valor arbitrado, não confiscado automaticamente.",
+      "prova": [
+        "Todo móvel é arrestável sem verificar penhora? Não.",
+        "Rendas podem manter família por arbitramento judicial? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Arresto reparatório",
+          "significado": "Constrição de patrimônio para assegurar responsabilidade, distinta de sequestro de proventos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "ea44ef31-768f-5ca6-aed9-2c6563d84fae",
+        "content_sha256": "a062c7d4c86e789e3c1b3f3f0d684071b5641a0ca20c3e5818dfade19163a727",
+        "simples": "Se o responsável não possuir bens imóveis ou os possuir de valor insuficiente, poderão ser arrestados bens móveis suscetíveis de penhora, nos termos em que é facultada a hipoteca legal dos imóveis. Se forem coisas fungíveis e facilmente deterioráveis, procede-se na forma do § 5º do art. 120. Das rendas dos bens móveis poderão ser fornecidos recursos arbitrados pelo juiz para a manutenção do indiciado e de sua família.",
+        "pontos": [
+          "Sem imóveis ou com valor insuficiente: arresto de bens móveis penhoráveis.",
+          "Coisas fungíveis e deterioráveis: procedimento do art. 120, §5º.",
+          "Rendas podem manter o indiciado e sua família, conforme arbitramento."
+        ],
+        "atencao": [
+          "O juiz pode arbitrar recursos para a subsistência do indiciado e da família."
+        ],
+        "exemplo": "Réu sem imóveis tem bens móveis penhoráveis arrestados.",
+        "prova": [
+          "Assertiva que impede o fornecimento de recursos ao indiciado e à família das rendas dos bens arrestados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 120",
+          "Art. 136"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-138",
+      "unit_id": "0b15115a-3307-5e10-b242-7d8e588e1150",
+      "content_sha256": "5121c776a0fdcb535c35793d43d872e9a37bb0650bb37f2aeb97ce59a70c7c71",
+      "simples": "Especialização da hipoteca e arresto tramitam em autos apartados, pela redação de 2006.",
+      "pontos": [
+        "Autuação separada do principal.",
+        "Abrange ambas as garantias.",
+        "Separação organizacional não encerra a persecução penal."
+      ],
+      "atencao": [
+        "Não confundir autos apartados com independência total dos pressupostos penais da medida."
+      ],
+      "exemplo": "Pedido de especialização recebe autuação própria para prova e avaliação da garantia. Variação: O processo principal continua seu rito; o apartado não equivale a absolvição ou julgamento da reparação.",
+      "prova": [
+        "Hipoteca e arresto vão em apartado? Sim.",
+        "A autuação encerra o principal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Autuação patrimonial apartada",
+          "significado": "Organização separada dos procedimentos de garantia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0b15115a-3307-5e10-b242-7d8e588e1150",
+        "content_sha256": "5121c776a0fdcb535c35793d43d872e9a37bb0650bb37f2aeb97ce59a70c7c71",
+        "simples": "O processo de especialização da hipoteca e do arresto correrá em autos apartados.",
+        "pontos": [
+          "Hipoteca e arresto em autos apartados."
+        ],
+        "atencao": [
+          "Apartados do processo principal."
+        ],
+        "exemplo": "A hipoteca legal tramita em apenso, sem tumultuar a ação penal.",
+        "prova": [
+          "Assertiva que determina a tramitação da hipoteca nos próprios autos da ação penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-139",
+      "unit_id": "ad4731eb-3877-5e21-8eeb-a6bd70323254",
+      "content_sha256": "64843a6bcd54b468872dd82bf840908cb5d28f18bfa46f821d8b762ef0ac9a58",
+      "simples": "Depósito e administração do bem arrestado seguem regime do processo civil, integrado ao CPC vigente.",
+      "pontos": [
+        "Distinguir administração e destinação definitiva.",
+        "Responsabilidade do depositário segue normas aplicáveis.",
+        "Remissão é ao regime civil atual, não licença para gestão informal."
+      ],
+      "atencao": [
+        "Depositário não se torna dono nem pode usar livremente o patrimônio."
+      ],
+      "exemplo": "Bem arrestado é mantido sob depósito e administração conforme as normas civis aplicáveis. Variação: O administrador não pode vender para si por conveniência; alienação exige hipótese e procedimento legais.",
+      "prova": [
+        "Depositário adquire propriedade? Não.",
+        "Administração segue regime civil? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Depósito judicial",
+          "significado": "Custódia juridicamente regulada, sem transferência de domínio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "ad4731eb-3877-5e21-8eeb-a6bd70323254",
+        "content_sha256": "64843a6bcd54b468872dd82bf840908cb5d28f18bfa46f821d8b762ef0ac9a58",
+        "simples": "O depósito e a administração dos bens arrestados ficarão sujeitos ao regime do processo civil.",
+        "pontos": [
+          "Depósito e administração dos bens arrestados seguem o processo civil."
+        ],
+        "atencao": [
+          "Aplicação supletiva do processo civil."
+        ],
+        "exemplo": "A administração do bem arrestado segue as regras do depósito do processo civil.",
+        "prova": [
+          "Assertiva que cria regime próprio do processo penal para depósito e administração dos bens arrestados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 137"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-140",
+      "unit_id": "d559820a-6f5f-5ff3-98d5-38ba690b81db",
+      "content_sha256": "f6cd238a6b6b1a3892d25ac20d613ab69e651b2f78a08f8ed954b979df4f358b",
+      "simples": "Garantias alcançam reparação, despesas processuais e penas pecuniárias; reparação ao ofendido tem preferência sobre estas.",
+      "pontos": [
+        "Não se destinam exclusivamente à multa.",
+        "Preferência da reparação do dano.",
+        "Distinguir credor vítima e destinação estatal."
+      ],
+      "atencao": [
+        "Não pagar multa prioritariamente ignorando a preferência reparatória expressa."
+      ],
+      "exemplo": "Garantia insuficiente para todas as obrigações exige observar primeiro a preferência legal da vítima. Variação: Ausência de dano não cria reparação fictícia, mas as demais obrigações seguem seu fundamento.",
+      "prova": [
+        "A multa tem preferência sobre reparação? Não.",
+        "Despesas processuais também são abrangidas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Preferência reparatória",
+          "significado": "Prioridade da indenização ao ofendido perante as obrigações indicadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d559820a-6f5f-5ff3-98d5-38ba690b81db",
+        "content_sha256": "f6cd238a6b6b1a3892d25ac20d613ab69e651b2f78a08f8ed954b979df4f358b",
+        "simples": "As garantias do ressarcimento do dano alcançarão também as despesas processuais e as penas pecuniárias, tendo preferência sobre estas a reparação do dano ao ofendido.",
+        "pontos": [
+          "As garantias abrangem despesas processuais e penas pecuniárias.",
+          "A reparação do dano ao ofendido tem preferência."
+        ],
+        "atencao": [
+          "Preferência: primeiro a vítima."
+        ],
+        "exemplo": "Com patrimônio limitado, a reparação à vítima é satisfeita antes da multa.",
+        "prova": [
+          "Assertiva que dá preferência às penas pecuniárias sobre a reparação do dano erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 134"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-141",
+      "unit_id": "d26fc39e-c565-5b67-9d0e-48553437a52a",
+      "content_sha256": "741d77820b46404b8f7c41b95eb3758a679fa3b41b79a9195f596b9ad8c5efd1",
+      "simples": "Absolvição ou extinção da punibilidade por sentença irrecorrível leva ao levantamento do arresto ou cancelamento da hipoteca, no regime deste artigo.",
+      "pontos": [
+        "Exige decisão definitiva.",
+        "Distinguir arresto/hipoteca do sequestro com disciplina própria.",
+        "A retirada da garantia penal não decide automaticamente toda ação civil autônoma."
+      ],
+      "atencao": [
+        "Não presumir que qualquer decisão recorrível cancela imediatamente a garantia ou que extinção penal elimina toda responsabilidade civil."
+      ],
+      "exemplo": "Sentença absolutória torna-se irrecorrível e determina-se levantamento do arresto legal. Variação: A responsabilidade civil eventualmente subsistente é examinada na via e com os requisitos próprios.",
+      "prova": [
+        "Sentença recorrível já preenche o requisito? Não.",
+        "Cancelamento decide necessariamente toda obrigação civil? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cancelamento da garantia",
+          "significado": "Retirada da garantia nas hipóteses definitivas do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d26fc39e-c565-5b67-9d0e-48553437a52a",
+        "content_sha256": "741d77820b46404b8f7c41b95eb3758a679fa3b41b79a9195f596b9ad8c5efd1",
+        "simples": "O arresto será levantado ou cancelada a hipoteca se, por sentença irrecorrível, o réu for absolvido ou julgada extinta a punibilidade.",
+        "pontos": [
+          "Absolvição irrecorrível: levanta-se o arresto ou cancela-se a hipoteca.",
+          "Extinção da punibilidade irrecorrível produz o mesmo efeito."
+        ],
+        "atencao": [
+          "Exige sentença IRRECORRÍVEL."
+        ],
+        "exemplo": "Réu absolvido em decisão definitiva tem o imóvel liberado da hipoteca legal.",
+        "prova": [
+          "Assertiva que mantém o arresto após a absolvição transitada em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 136",
+          "Art. 143"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-142",
+      "unit_id": "5a79434c-dda0-5967-b7c9-fdeaf87c91ec",
+      "content_sha256": "f56c056c0ff52db65026c818ffc4cb7c694a83e0f3046a266547419d5cc3fa67",
+      "simples": "MP promove as garantias indicadas se houver interesse da Fazenda Pública ou pedido do ofendido pobre; esta última hipótese exige integração com Defensoria e atribuições atuais.",
+      "pontos": [
+        "Medidas referidas: arts. 134 e 137.",
+        "Interesse fazendário é hipótese distinta.",
+        "Não usar pobreza para tornar MP advogado reparatório universal; integrar a leitura institucional do art. 68."
+      ],
+      "atencao": [
+        "Verificar organização e atribuição da Defensoria na assistência ao ofendido, sem negar o texto nem generalizar a substituição ministerial."
+      ],
+      "exemplo": "Há interesse da Fazenda na garantia patrimonial e MP provoca as medidas cabíveis. Variação: Ofendido vulnerável pede atuação: verificar assistência e atribuições institucionais, sem afastar Defensoria organizada.",
+      "prova": [
+        "Interesse da Fazenda também é hipótese? Sim.",
+        "Pobreza torna MP advogado civil universal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Provocação ministerial patrimonial",
+          "significado": "Atuação do MP nas hipóteses e limites institucionais pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270592%27.cod."
+      ],
+      "expected": {
+        "unit_id": "5a79434c-dda0-5967-b7c9-fdeaf87c91ec",
+        "content_sha256": "f56c056c0ff52db65026c818ffc4cb7c694a83e0f3046a266547419d5cc3fa67",
+        "simples": "Caberá ao Ministério Público promover as medidas estabelecidas nos arts. 134 e 137 (hipoteca legal e arresto de bens móveis), se houver interesse da Fazenda Pública ou se o ofendido for pobre e o requerer.",
+        "pontos": [
+          "MP promove hipoteca legal e arresto de bens móveis.",
+          "Quando há interesse da Fazenda Pública ou o ofendido pobre requer."
+        ],
+        "atencao": [
+          "Legitimidade do MP é excepcional (interesse da Fazenda ou vítima pobre)."
+        ],
+        "exemplo": "Vítima pobre pede ao MP que requeira a hipoteca legal dos bens do réu.",
+        "prova": [
+          "Assertiva que atribui ao MP a legitimidade ampla para a hipoteca legal em qualquer caso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 134",
+          "Art. 137"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-143",
+      "unit_id": "be75c540-d964-5e2b-af61-0b01169437ea",
+      "content_sha256": "c29983c046d6b1f56cccb9f4ca300e256e3f23c8511c8cd36725716b08a6a2e4",
+      "simples": "Condenação transitada remete os autos de hipoteca ou arresto ao juízo cível para o desdobramento reparatório, integrado ao art. 63.",
+      "pontos": [
+        "Remessa depois do trânsito condenatório.",
+        "Garantia não substitui liquidação e execução pertinentes.",
+        "Distinguir de venda criminal de bem perdido do art. 133."
+      ],
+      "atencao": [
+        "Não tratar toda hipoteca reparatória como perdimento em favor do Estado."
+      ],
+      "exemplo": "Condenação definitiva leva o apartado hipotecário ao juiz cível para a reparação. Variação: Bem de origem lícita garantidor não vira confiscado apenas porque houve condenação.",
+      "prova": [
+        "Autos seguem ao cível depois do trânsito? Sim.",
+        "Hipoteca equivale a perda estatal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Remessa reparatória",
+          "significado": "Encaminhamento das garantias à esfera civil após a condenação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "be75c540-d964-5e2b-af61-0b01169437ea",
+        "content_sha256": "c29983c046d6b1f56cccb9f4ca300e256e3f23c8511c8cd36725716b08a6a2e4",
+        "simples": "Passando em julgado a sentença condenatória, serão os autos de hipoteca ou arresto remetidos ao juiz do cível.",
+        "pontos": [
+          "Condenação transitada em julgado: autos de hipoteca ou arresto vão ao juízo cível."
+        ],
+        "atencao": [
+          "Execução da reparação ocorre no cível (art. 63)."
+        ],
+        "exemplo": "Após o trânsito da condenação, o juízo cível passa a cuidar da hipoteca.",
+        "prova": [
+          "Assertiva que mantém os autos de hipoteca no juízo criminal após o trânsito da condenação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-144",
+      "unit_id": "cd9733a5-879c-5545-9c7b-82fcc813c367",
+      "content_sha256": "51623a2c2bff05d269b25a29bb8bfaace5c8a7db2cf8be3a3c7221999090a142",
+      "simples": "Interessados, ou MP nas hipóteses do art. 142, podem pedir no cível as garantias indicadas contra responsável civil.",
+      "pontos": [
+        "Medidas dos arts. 134, 136 e 137.",
+        "Responsabilidade civil do terceiro exige fundamento legal próprio.",
+        "Não confundir responsável civil com acusado penal obrigatório."
+      ],
+      "atencao": [
+        "Parentesco ou vínculo empregatício mencionado sem pressupostos civis não basta para constrição automática de terceiro."
+      ],
+      "exemplo": "Vítima formula no cível pedido fundamentado de garantia contra quem responde civilmente pelo dano. Variação: Mero conhecido do acusado não se torna responsável patrimonial por proximidade.",
+      "prova": [
+        "Responsável civil precisa sempre ser acusado penal? Não.",
+        "A obrigação do terceiro exige fundamento? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Responsável civil",
+          "significado": "Sujeito obrigado ao ressarcimento por fundamento civil próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cd9733a5-879c-5545-9c7b-82fcc813c367",
+        "content_sha256": "51623a2c2bff05d269b25a29bb8bfaace5c8a7db2cf8be3a3c7221999090a142",
+        "simples": "Os interessados ou, nos casos do art. 142, o Ministério Público poderão requerer no juízo cível, contra o responsável civil, as medidas previstas nos arts. 134, 136 e 137.",
+        "pontos": [
+          "As medidas assecuratórias podem ser requeridas no juízo cível contra o responsável civil."
+        ],
+        "atencao": [
+          "Pode alcançar o RESPONSÁVEL CIVIL (por exemplo, empregador)."
+        ],
+        "exemplo": "Vítima requer no cível hipoteca legal contra o responsável civil pelo ato do preposto.",
+        "prova": [
+          "Assertiva que limita as medidas assecuratórias ao autor do crime erra: alcançam o responsável civil."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 142"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-144-a",
+      "unit_id": "4220fb81-6b8f-5df1-b945-034b6426a943",
+      "content_sha256": "8e53b23175348ae3641975ef23fbf9d5648fe412a3738dc3341e1bf8d61cc22c",
+      "simples": "Alienação antecipada preserva valor diante de deterioração, depreciação ou dificuldade de manutenção; não representa condenação antecipada.",
+      "pontos": [
+        "Leilão preferencialmente eletrônico; primeira venda pela avaliação ou valor maior.",
+        "Segundo leilão em até dez dias; piso de 80% da avaliação.",
+        "Produto em conta vinculada até decisão final; observar condenação/absolvição e direitos próprios.",
+        "Numerário convertido em moeda nacional; títulos negociados pela cotação oficial do dia.",
+        "Arrematante de veículo/embarcação/aeronave não paga encargos anteriores; cobrança fiscal pode alcançar antigo dono.",
+        "§7º vetado não contém regra material vigente."
+      ],
+      "atencao": [
+        "Não confundir preservação do valor com perda definitiva nem apagar dívidas anteriores do responsável. Garantir direitos de lesado e terceiro conforme regime pertinente."
+      ],
+      "exemplo": "Veículo se deprecia e custa manter: venda judicial preserva valor em depósito, sem declarar culpabilidade. Variação: Primeiro leilão fracassa: novo em até dez dias pode alcançar 80% da avaliação, nunca valor inferior por simples conveniência.",
+      "prova": [
+        "Segunda venda pode ser inferior a 80% por este artigo? Não.",
+        "Venda antecipada equivale a condenação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Alienação antecipada",
+          "significado": "Conversão cautelar do bem em valor depositado para evitar perda econômica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4220fb81-6b8f-5df1-b945-034b6426a943",
+        "content_sha256": "8e53b23175348ae3641975ef23fbf9d5648fe412a3738dc3341e1bf8d61cc22c",
+        "simples": "O juiz determinará a alienação antecipada para preservação do valor dos bens sempre que estiverem sujeitos a qualquer grau de deterioração ou depreciação, ou quando houver dificuldade para sua manutenção. O leilão será preferencialmente eletrônico. Os bens serão vendidos pelo valor da avaliação judicial ou por valor maior; se não alcançado, haverá novo leilão em até 10 dias, podendo os bens ser alienados por valor não inferior a 80% da avaliação. O produto da alienação fica depositado em conta vinculada ao juízo até a decisão final, convertendo-se em renda para a União, Estado ou Distrito Federal no caso de condenação ou sendo devolvido ao acusado no caso de absolvição. Quando a indisponibilidade recair sobre dinheiro, moeda estrangeira, títulos, valores mobiliários ou cheques, o juízo determina a conversão em moeda nacional corrente e o depósito em conta judicial, entre outras providências do dispositivo.",
+        "pontos": [
+          "Alienação antecipada para preservar o valor de bens sujeitos a deterioração ou de difícil manutenção.",
+          "Leilão preferencialmente eletrônico.",
+          "Venda pelo valor da avaliação ou superior; novo leilão em até 10 dias, com piso de 80% da avaliação.",
+          "Produto depositado em conta vinculada ao juízo até a decisão final.",
+          "Condenação: conversão em renda do ente; absolvição: devolução ao acusado."
+        ],
+        "atencao": [
+          "Segundo leilão: até 10 dias e valor mínimo de 80% da avaliação."
+        ],
+        "exemplo": "Veículo apreendido que se deprecia é leiloado antecipadamente, e o dinheiro fica depositado.",
+        "prova": [
+          "Assertiva que fixa o valor mínimo do segundo leilão em 50% da avaliação erra: é 80%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    }
+  ]
+}

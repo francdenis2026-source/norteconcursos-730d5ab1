@@ -1,0 +1,260 @@
+{
+  "date": "2026-10-14",
+  "scope": "ENEM — materiais, quatro áreas de questões e simulador",
+  "materials": {
+    "validated": 13,
+    "inserted": 13,
+    "preserved": 0,
+    "dry_run": false
+  },
+  "questions": {
+    "dry_run": false,
+    "questions": 14,
+    "inserted": {
+      "content_sources": 4,
+      "syllabus_editions": 1,
+      "syllabus_topics": 13,
+      "official_exam_questions": 14
+    },
+    "preserved": {
+      "content_sources": 0,
+      "syllabus_editions": 0,
+      "syllabus_topics": 0,
+      "official_exam_questions": 0
+    }
+  },
+  "practice": {
+    "flashcards": 52,
+    "authorial_true_false": 104
+  },
+  "limitations": [
+    "Os guias não representam cobertura integral das disciplinas ou de todas as habilidades da matriz.",
+    "Foram incorporadas 53 questões oficiais de 2025, sem alegação de importação integral das provas.",
+    "Resultados de simulados são acertos/erros; não são estimativas da nota TRI.",
+    "O simulador respeita as permissões dos planos existentes.",
+    "Prazos e estatísticas históricos permanecem identificados no contexto da fonte."
+  ],
+  "verification": [
+    "Enunciados e gabaritos confrontados com PDFs oficiais do Inep; páginas revisadas registradas por lote.",
+    "53 itens passaram pelo mesmo parser e pelas checagens de contexto e elegibilidade do treinador.",
+    "19 testes de ENEM, filtros e importação passaram; typecheck, build e lint dos arquivos alterados passaram.",
+    "Componentes reais conferidos em prévia local com os materiais publicados: filtro Natureza retornou 3; busca fisica retornou apenas Física.",
+    "Tela estreita sem rolagem horizontal: largura do conteúdo igual à largura disponível.",
+    "A prévia local usa dados públicos do pacote publicado; não equivale a validação do deploy em produção."
+  ],
+  "totals": {
+    "active_official_questions": 53,
+    "active_study_materials": 18,
+    "flashcards": 72,
+    "authorial_true_false_exercises": 144,
+    "worked_examples": 36
+  },
+  "question_batches": [
+    {
+      "dry_run": false,
+      "questions": 12,
+      "inserted": {
+        "content_sources": 0,
+        "syllabus_editions": 0,
+        "syllabus_topics": 0,
+        "official_exam_questions": 12
+      },
+      "preserved": {
+        "content_sources": 4,
+        "syllabus_editions": 1,
+        "syllabus_topics": 13,
+        "official_exam_questions": 0
+      }
+    },
+    {
+      "dry_run": false,
+      "questions": 27,
+      "inserted": {
+        "content_sources": 2,
+        "syllabus_editions": 0,
+        "syllabus_topics": 0,
+        "official_exam_questions": 27
+      },
+      "preserved": {
+        "content_sources": 4,
+        "syllabus_editions": 1,
+        "syllabus_topics": 13,
+        "official_exam_questions": 0
+      }
+    }
+  ],
+  "additional_materials": {
+    "validated": 5,
+    "inserted": 5,
+    "preserved": 0,
+    "dry_run": false
+  },
+  "support_text_correction": {
+    "count": 27,
+    "method": "Comparação integral de cada registro antes da alteração, em uma transação; somente question_text alterado. Gabarito, fontes e revisão preservados.",
+    "items": [
+      {
+        "id": "7f8e2d16-c7cc-530c-aac3-13c92da53e51",
+        "item": 12,
+        "before_sha256": "3c7ca0acc754140a7850a37458108c40312d1e32e08c5c831eef96667cbc651b",
+        "after_sha256": "57cc709db594e40eb00358319e4fb65656639c0bb78d4108dba107f1e8fa6a15"
+      },
+      {
+        "id": "eba9c2bb-187e-599f-972c-3ad79047617c",
+        "item": 18,
+        "before_sha256": "fec0b850932c53dd5d0304db319b64291088a623277e7ca710a7770b2d97276d",
+        "after_sha256": "0519f37d4dbe16b5ccc7cbb4b23573e7defc1275508bf4c51ff40f5ca2d71f6d"
+      },
+      {
+        "id": "76ab1779-0975-5fdd-ac50-06efe3c22291",
+        "item": 19,
+        "before_sha256": "5c469945f1eae9a7ac6f34fb41be5c753aebffca0282567b83f55f2d133e3c00",
+        "after_sha256": "59ebc51d2c8c4594ffbe418358d736c3b6a4bde805f6a04b51047f7e129bff71"
+      },
+      {
+        "id": "dd891db2-0a61-53d8-be55-eec2189a3946",
+        "item": 20,
+        "before_sha256": "4f49c830925dff13f68863a798341b14e5fc6bee3a10cafd53eec4f2634cb174",
+        "after_sha256": "3c6567a50485016a1dc87aa8bdfb62cf12d180c84b4e5898e20aaaf3fa5a5001"
+      },
+      {
+        "id": "a5822c8c-3b44-5c23-a226-5f62f925d363",
+        "item": 27,
+        "before_sha256": "96a3a3e6bc3dab3fcbaabc3d38abde33cda1d4961bd000b49c3cb2b96daa714b",
+        "after_sha256": "009f2a5a8aeb13757c0fd230643ea2b8cb43297be21257382261452fa49069fe"
+      },
+      {
+        "id": "6f120af3-ea2c-5e86-8d7a-0175b84b0115",
+        "item": 36,
+        "before_sha256": "304cce23ba1961aedb2897743843f0e75492a54dfad3b4a4d513a0f64b0cdb70",
+        "after_sha256": "12a6a1b0298d2f2133b207b96fa5fae5760ac70d6dd8fa20a46b8421cd27401e"
+      },
+      {
+        "id": "0a970f06-1756-5534-afda-d8879462b28e",
+        "item": 43,
+        "before_sha256": "d76aa6d113a7ef3de602f0903f232e0789c878dbc94d62cd626216a0ab3a1ab2",
+        "after_sha256": "1841b9efd1e7f0595f2ec9f7a77463755b3b087bb3d6235c8c015267f8d7e9b2"
+      },
+      {
+        "id": "b9dedfb4-c34e-5cda-bf4a-941a0d747604",
+        "item": 44,
+        "before_sha256": "2b8c953e59522c0c2feac13b79a713f856e7b971a81502c67710360d64c996a8",
+        "after_sha256": "0989f4948b175ff9fc84e9489832a342f90af51eaf6e965ec09ba9a29b5e485f"
+      },
+      {
+        "id": "ca64f12b-4bd2-5139-9f74-5dfbf8ce13d0",
+        "item": 52,
+        "before_sha256": "7e7bcb1a4f192af429043d5eaa0b1874e7ed0853c37899913d9121707a45b274",
+        "after_sha256": "cfb5fd279b5880a5e3096a1dd4dd196df8c51416991ac0e021f26ed5843a3389"
+      },
+      {
+        "id": "059c15fd-09fe-526c-ab5a-7159bcf5519e",
+        "item": 53,
+        "before_sha256": "e84714026589f4850a7e673d0dc5c0a1162c1059fbd4eee10f0275b116726cf2",
+        "after_sha256": "da2a80effc23cbc9fc375a270c6a71288818b4a0a2748c014650d7724e1ac3d9"
+      },
+      {
+        "id": "7860d6d9-06de-5804-8edc-48ad3b848d91",
+        "item": 54,
+        "before_sha256": "7a9719bf91502d8a20b284e34081c870b32b942d7bbccd88faff493267394eae",
+        "after_sha256": "f5cc8bb0cacd650bb7692f1fd7bbac8ceef03b65b06ea2de78a99ac4ec35ff38"
+      },
+      {
+        "id": "71579f09-c74f-5a17-ae61-cb9f30d9be6b",
+        "item": 55,
+        "before_sha256": "2da49c72f2c83d563c742e7666597af0b09d2356b2bdc580b582ac64e3fe5e7e",
+        "after_sha256": "e770b7a3adefb1f3d41b18b25d4a272e85c21729afd58bd0d996e98dbc193c0c"
+      },
+      {
+        "id": "db8d21c3-d8df-56ed-95de-d393935e0630",
+        "item": 57,
+        "before_sha256": "ca30dcfa22a0dedb97988c49eb3cec11065411ad8588c3bd6ffe867fdf2ba91d",
+        "after_sha256": "3e01c6c4ed02e8311eb47e6dc428f6167e812e9169ca3770a15ad6930ab704dd"
+      },
+      {
+        "id": "686e32f6-7141-57bf-b254-f2a813eedd31",
+        "item": 59,
+        "before_sha256": "2e259dd13718c5eb7d1bbee59581da949e1f5eee3c812516254b0d9427d2e872",
+        "after_sha256": "99119dcc000f2f5ac829a22fa95003b22a5ac283da24edb96612fd6e54fdcb07"
+      },
+      {
+        "id": "35674fc0-0872-534a-b7f1-1329e3585dbc",
+        "item": 60,
+        "before_sha256": "10dbdfe2a23758c13f974066cb5d8c1e61dd01f9606eef5c90c4653195881a50",
+        "after_sha256": "3f3aa2b2c9ffb21a5a6e0e51547b2b2704c0825f94707051b2235e9f766ddcc2"
+      },
+      {
+        "id": "7bbac449-f505-5180-816f-6b50596ac5a9",
+        "item": 66,
+        "before_sha256": "fa6a9dbe719a02560c925cf64ad08f63f51b7e33347d636d03e5df956a5c9b87",
+        "after_sha256": "1cb419091744728690a4513ce4079153c240e666f2928f5a03731c1393fd8215"
+      },
+      {
+        "id": "ee81eda4-5a70-5402-a034-20673f2cbc21",
+        "item": 70,
+        "before_sha256": "1167eb7493466395257ecdbf883650ca7bfcc5601253571e21c8319a95715f97",
+        "after_sha256": "1f0589ff7c6a88593dceb92267d35f5e352b492cb2631efc82b97ec966c1c9af"
+      },
+      {
+        "id": "72fbf7fa-686b-5ff5-986a-a371297820ec",
+        "item": 71,
+        "before_sha256": "7f3dacfd53eb4d659e883dec971365cd91bd6f50d362a31fe13b324f803bc8b9",
+        "after_sha256": "b734143c6cfb50adce8047565db7e4d0380e8ef8278d3c6bbf8529c1eec9f91c"
+      },
+      {
+        "id": "d5c386e6-6a3a-54cf-9598-198a6aed6919",
+        "item": 73,
+        "before_sha256": "3fda8594e7ddb3486e8e487f2d9366a24ca613d802f3157a4fc3b9b58bb085d4",
+        "after_sha256": "21e8ee2f9596198f4d4fb43cd19b0184c422b0055fa4a9fc8078acc75b333601"
+      },
+      {
+        "id": "b598ccca-235f-5d33-a775-15164c3a4c58",
+        "item": 74,
+        "before_sha256": "af4d7405367c8de1aa5aff8fa8b8724b4d6a3a5312408616a14a376b3624476b",
+        "after_sha256": "261c3e5ed1c2f050ccd4a4b9ff6d84dde5f5e75a2aea145a5edd3e157c967eae"
+      },
+      {
+        "id": "2d391a67-0361-5ecd-acda-f657d14af9b4",
+        "item": 75,
+        "before_sha256": "592e4b9e8d9ac2b7b254e9e43bca3035e47cdd502c52e439a5e3f246ee13cb79",
+        "after_sha256": "44cd2da95e346ba0c7e45551a1e80ecaaf619c72b3a1fc37da04a5e18cd0bfeb"
+      },
+      {
+        "id": "41d8d397-77a9-556d-92d7-cc41ff1b3d7b",
+        "item": 78,
+        "before_sha256": "ef7bc21d0850c77862df4000e71056d5a15c2f1fb0c62d266ad3c22975437536",
+        "after_sha256": "ca910bfa42c8c128aa74c3021d8087b6bb1720ac8ce2d7a8adece55785f27092"
+      },
+      {
+        "id": "5a74fba6-cc23-5752-ad3e-a5ff8b1df4fd",
+        "item": 79,
+        "before_sha256": "8e155361ab492abca3924d30d22fba80c22c26b6eaab18d40cd2e5ea1d618763",
+        "after_sha256": "fadc17d84a724de01f922ddf4c231ae151cfe0871eefe3b31593a0fb97b09b9e"
+      },
+      {
+        "id": "07da60e0-6db4-578d-80a6-586cb5b23fbb",
+        "item": 80,
+        "before_sha256": "55ee8be7f91084fdfd1ec395d6a7500fb9f2dc9e8156336fc1e05c25c6078422",
+        "after_sha256": "61c63b4ed30de3d33c9a822681c23b7a4aa4d276c4da385e1cd046691913a178"
+      },
+      {
+        "id": "72d7f1cd-3364-5cab-90ac-a3ee99e11d79",
+        "item": 82,
+        "before_sha256": "44b1ad59b59ac2fe704c5c5b3844000d477f21e060b5511af55fcf72f8f0f423",
+        "after_sha256": "071f53edeb744338fb95f1c3a4dc7539279854fd745c3d67ee39a4a1adae5e14"
+      },
+      {
+        "id": "5a3baad5-a7f7-56f8-882a-150055f620ca",
+        "item": 83,
+        "before_sha256": "0d4fe127d5fdb8b6e328dc1501b7803c0bf1b14b83d6b1ac891640bb322516aa",
+        "after_sha256": "dcdab782d0db054077a4d907f75efd72ebb3d8ccafefbd054b328bc7b774a048"
+      },
+      {
+        "id": "b7265c14-9616-523e-a572-9d306cfa0f50",
+        "item": 84,
+        "before_sha256": "c6f86435f226c6c6afb44f45fbb5dadba35ebd6ea4774c89f883136d694e5a4c",
+        "after_sha256": "e9a3b5f68ecde7573ee8e70f9d9f8764a427ab441b31251309ebe16dfdea25ea"
+      }
+    ]
+  }
+}

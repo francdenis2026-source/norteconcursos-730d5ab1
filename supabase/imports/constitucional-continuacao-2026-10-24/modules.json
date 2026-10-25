@@ -1,0 +1,174 @@
+[
+  {
+    "key": "direitos-fundamentais-teoria-geral",
+    "slug": "constitucional-direitos-fundamentais-teoria-geral",
+    "title": "Direitos fundamentais: teoria, eficácia e tratados",
+    "topic_label": "Teoria geral dos direitos fundamentais",
+    "articles": [
+      "Art. 5º, §§ 1º a 4º",
+      "Art. 60, § 4º"
+    ],
+    "input_prefixes": [
+      "02-01",
+      "02-02"
+    ]
+  },
+  {
+    "key": "vida-igualdade",
+    "slug": "constitucional-vida-igualdade",
+    "title": "Vida e igualdade: leitura constitucional aplicada",
+    "topic_label": "Vida e igualdade",
+    "articles": [
+      "Art. 5º, caput, I, III e XLVII",
+      "Art. 37, VIII"
+    ],
+    "input_prefixes": [
+      "02-03"
+    ]
+  },
+  {
+    "key": "liberdades-constitucionais",
+    "slug": "constitucional-liberdades-constitucionais",
+    "title": "Liberdades: expressão, crença, reunião, associação e profissão",
+    "topic_label": "Liberdades constitucionais",
+    "articles": [
+      "Art. 5º, II, IV a IX e XIII a XXI",
+      "Art. 19, I"
+    ],
+    "input_prefixes": [
+      "02-04",
+      "02-05"
+    ]
+  },
+  {
+    "key": "propriedade-funcao-social",
+    "slug": "constitucional-propriedade-funcao-social",
+    "title": "Propriedade: função social, desapropriação e requisição",
+    "topic_label": "Propriedade e função social",
+    "articles": [
+      "Art. 5º, XXII a XXXI",
+      "Art. 182, § 4º",
+      "Art. 184",
+      "Art. 243"
+    ],
+    "input_prefixes": [
+      "03-01"
+    ]
+  },
+  {
+    "key": "seguranca-juridica-processo",
+    "slug": "constitucional-seguranca-juridica-processo",
+    "title": "Segurança jurídica: domicílio, defesa, processo e sanções",
+    "topic_label": "Segurança jurídica e garantias processuais",
+    "articles": [
+      "Art. 5º, X a XII, XXXIII a XL e LIII a LXXVIII"
+    ],
+    "input_prefixes": [
+      "03-02",
+      "03-03",
+      "03-04"
+    ]
+  },
+  {
+    "key": "remedios-constitucionais",
+    "slug": "constitucional-remedios-constitucionais",
+    "title": "Remédios constitucionais: escolha, requisitos e limites",
+    "topic_label": "Remédios constitucionais",
+    "articles": [
+      "Art. 5º, LXVIII a LXXIII e LXXVII"
+    ],
+    "input_prefixes": [
+      "03-05"
+    ]
+  },
+  {
+    "key": "direitos-sociais-trabalho",
+    "slug": "constitucional-direitos-sociais-trabalho",
+    "title": "Direitos sociais e trabalhistas: Constituição atual",
+    "topic_label": "Proteção social e direitos dos trabalhadores",
+    "articles": [
+      "Art. 6º",
+      "Art. 7º",
+      "Art. 8º",
+      "Art. 9º",
+      "Art. 10",
+      "Art. 11"
+    ],
+    "input_prefixes": [
+      "04-01",
+      "04-02"
+    ]
+  },
+  {
+    "key": "organizacao-estado-competencias",
+    "slug": "constitucional-organizacao-estado-competencias",
+    "title": "Organização do Estado: entes, bens e competências",
+    "topic_label": "Organização do Estado",
+    "articles": [
+      "Art. 18 a 36"
+    ],
+    "input_prefixes": [
+      "05-03",
+      "05-04",
+      "06-01",
+      "06-02",
+      "06-03"
+    ]
+  },
+  {
+    "key": "administracao-publica-constituicao",
+    "slug": "constitucional-administracao-publica-constituicao",
+    "title": "Administração pública na Constituição: princípios, ingresso e vínculos",
+    "topic_label": "Administração pública constitucional",
+    "articles": [
+      "Art. 37 a 41"
+    ],
+    "input_prefixes": [
+      "07-01",
+      "07-02",
+      "07-03",
+      "07-04",
+      "07-05"
+    ]
+  },
+  {
+    "key": "judiciario-garantias-carreira",
+    "slug": "constitucional-judiciario-garantias-carreira",
+    "title": "Judiciário: estrutura, garantias e carreira",
+    "topic_label": "Judiciário: garantias e carreira",
+    "articles": [
+      "Art. 92 a 100",
+      "Art. 103-A"
+    ],
+    "input_prefixes": [
+      "08-01",
+      "08-02"
+    ]
+  },
+  {
+    "key": "tribunais-competencias-cnj",
+    "slug": "constitucional-tribunais-competencias-cnj",
+    "title": "Tribunais e CNJ: composição, competências e controle",
+    "topic_label": "Tribunais: composição e competências",
+    "articles": [
+      "Art. 101 a 125",
+      "Art. 103-B"
+    ],
+    "input_prefixes": [
+      "08-03",
+      "08-04"
+    ]
+  },
+  {
+    "key": "funcoes-essenciais-justica",
+    "slug": "constitucional-funcoes-essenciais-justica",
+    "title": "Funções essenciais à Justiça: MP, advocacias e Defensoria",
+    "topic_label": "Funções essenciais à Justiça",
+    "articles": [
+      "Art. 127 a 135"
+    ],
+    "input_prefixes": [
+      "08-05"
+    ]
+  }
+]

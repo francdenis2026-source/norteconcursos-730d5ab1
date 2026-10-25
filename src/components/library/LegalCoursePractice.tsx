@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -31,7 +32,7 @@ export function LegalCoursePractice({ courseId, userId, material }: { courseId: 
   }
   const latest = history.data?.[0];
   return <div className="space-y-3">
-    {latest && <p className="rounded-xl border p-3 text-sm">Último resultado salvo: <strong>{latest.correct_count}/{latest.question_count}</strong> · {new Date(latest.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}. {history.data!.length} tentativas recentes disponíveis.</p>}
+    {latest && <p className="rounded-xl border p-3 text-sm">Último resultado salvo: <strong>{latest.correct_count}/{latest.question_count}</strong> · {acreDate(latest.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}. {history.data!.length} tentativas recentes disponíveis.</p>}
     {history.isError && <p role="alert" className="text-sm">Não foi possível carregar o histórico. <button className="underline" onClick={() => void history.refetch()}>Tentar novamente</button></p>}
     <fieldset disabled={busy}><StudyPractice quiz={material.quiz ?? []} flashcards={material.flashcards ?? []} slug={material.slug} subject={material.discipline} topic={material.topic_label} onQuizComplete={answers => { const attempt = { id: crypto.randomUUID(), answers }; setPending(attempt); void save(attempt); }} /></fieldset>
     {busy && <p role="status" className="text-sm">Salvando resultado…</p>}

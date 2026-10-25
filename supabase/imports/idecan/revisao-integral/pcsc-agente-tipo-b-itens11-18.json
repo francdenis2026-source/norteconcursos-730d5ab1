@@ -1,0 +1,205 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-processual-11-18-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "role": "Agente de Polícia Civil",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "official_key_sequence": "DEACDEBA",
+  "expected_official_key_sequence": "DEACDEBA",
+  "key_matches": true,
+  "official_edital": {
+    "title": "Edital nº 01/2025 — Agente de Polícia Civil",
+    "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "program_pages": "Anexo I, pp. 53–54"
+  },
+  "source_note": "Os temas 11–18 estão no conteúdo de Direito Processual Penal do Anexo I: princípios, ação penal, provas (CPP arts. 155–239) e prisão. Revisão jurídica preparada; estado vivo da base ainda precisa ser confirmado antes de gerar SQL.",
+  "items": [
+    {
+      "id": "b3359c7d-a2ab-4815-9372-ef0dbe324f59",
+      "item_number": 11,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "O artigo 158-A, do Código de Processo Penal, conceitua cadeia de custódia como sendo o conjunto de todos os procedimentos utilizados para manter e documentar a história cronológica do vestígio coletado em locais ou em vítimas de crimes, para rastrear sua posse e manuseio a partir de seu reconhecimento até o descarte. Com base no tema cadeia de custódia e no Código de Processo Penal, marque a afirmativa correta.",
+      "options": {
+        "A": "Reconhecimento é o procedimento referente à liberação, respeitando a legislação vigente e, quando pertinente, mediante autorização judicial.",
+        "B": "Fixação é o ato de recolher o vestígio que será submetido à análise pericial, respeitando suas características e natureza.",
+        "C": "Armazenamento é o ato formal de transferência da posse do vestígio, que deve ser documentado com, no mínimo, informações ao número de procedimento e unidade de polícia judiciária relacionada, local de origem, nome de quem transportou o vestígio, código de rastreamento, natureza do exame, tipo do vestígio, protocolo, assinatura e identificação de quem o recebeu.",
+        "D": "Isolamento é ato de evitar que se altere o estado das coisas, devendo isolar e preservar o ambiente imediato, mediato e relacionado aos vestígios e local de crime.",
+        "E": "Descarte é o procedimento referente à guarda, em condições adequadas, do material a ser processado, guardado para realização de contraperícia, descartado ou transportado, com vinculação ao número do laudo correspondente."
+      },
+      "official_answer": "D",
+      "replacement_explanation": "D está correta. O art. 158-B, II, do CPP define isolamento como impedir que o estado das coisas se altere, preservando o ambiente imediato, mediato e relacionado aos vestígios e ao local do crime.\nA) descreve descarte. B) descreve coleta. C) descreve recebimento, não armazenamento. E) descreve armazenamento. O art. 158-B diferencia cada etapa para documentar a cadeia de custódia.\nBase: CPP, arts. 158-A e 158-B, II, IV, VII, IX e X.",
+      "tested_topic": "Cadeia de custódia da prova: isolamento e etapas do art. 158-B do CPP.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    },
+    {
+      "id": "7a651cd9-4234-4506-bed4-166533994e1a",
+      "item_number": 12,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "João Américo, 43 anos de idade, primário, é processado criminalmente pela suposta prática do delito de roubo em concurso de pessoas. Ao final da audiência de instrução e julgamento, a magistrada profere sentença condenatória e condena o réu a uma pena de reclusão de cinco anos. Inconformado com a condenação, João Américo interpõe recurso de apelação e requer a invalidação da sentença sob o fundamento de que teria havido cerceamento de defesa na instrução processual. O Ministério Público não interpõe recurso. O Tribunal de Justiça, ao julgar o recurso da defesa, nega provimento ao pedido e, por entender desproporcional a pena aplicada em decorrência da gravidade do crime praticado, aumenta a pena para seis anos de reclusão. Com base nos fatos narrados e no Código de Processo de Penal, marque a opção correta.",
+      "options": {
+        "A": "O Tribunal de Justiça, com base no princípio da paridade de armas, poderia ter aumentado a pena.",
+        "B": "O Tribunal de Justiça, com base no princípio da busca pela justiça real, poderia ter aumentado a pena.",
+        "C": "O Tribunal de Justiça, com base no princípio do juízo natural, poderia ter aumentado a pena.",
+        "D": "O Tribunal de Justiça, com base no princípio da vedação de bis in idem, não poderia ter aumentado a pena.",
+        "E": "O Tribunal de Justiça, com base no princípio da vedação da reformatio in pejus, não poderia ter aumentado a pena."
+      },
+      "official_answer": "E",
+      "replacement_explanation": "E é correta. Como somente a defesa apelou, o tribunal não pode aumentar a pena de cinco para seis anos. É vedada a reformatio in pejus, expressamente prevista no art. 617 do CPP. O tribunal pode examinar as questões devolvidas pelo recurso, mas não piorar a situação do réu quando não há recurso da acusação.\nA), B) e C) invocam princípios que não afastam esse limite. D) bis in idem trata de dupla punição pelo mesmo fato e não é a regra específica aplicada.\nBase: CPP, art. 617.",
+      "tested_topic": "Princípios do processo penal: vedação da reformatio in pejus; CPP, art. 617.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    },
+    {
+      "id": "62a81c2f-f001-403d-87cb-8dd6e4cdedc9",
+      "item_number": 13,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "Inquérito Policial pode ser conceituado como sendo um procedimento administrativo, persecutório, instaurado e presidido por Delegado de Polícia, consistente em um conjunto de diligências com o objetivo de identificar meios de prova, produzir elementos de informação para que o titular da iniciativa da ação penal forme o seu convencimento no sentido de deflagrar a ação penal em juízo ou não e para subsidiar o magistrado em eventual pedido de medida cautelar. Tratando-se de crime de ação penal pública condicionada à representação do ofendido ou de seu representante legal, o inquérito policial não poderá ser instaurado sem representação. No tocante à representação e conforme o Código de Processo Penal, assinale a afirmativa correta.",
+      "options": {
+        "A": "A representação é irretratável após o oferecimento da denúncia.",
+        "B": "A representação é retratável até o recebimento da denúncia.",
+        "C": "A representação é retratável até a sentença penal irrecorrível.",
+        "D": "A representação tem a natureza de condição de punibilidade.",
+        "E": "A representação tem a natureza de condição de recorribilidade."
+      },
+      "official_answer": "A",
+      "replacement_explanation": "A está correta. A representação, nos crimes de ação pública condicionada, é irretratável depois de oferecida a denúncia (CPP, art. 25). Oferecimento é o ato do Ministério Público de apresentar a peça; recebimento é decisão judicial posterior.\nB) usa o recebimento como marco e, portanto, posterga a irretratabilidade. C) permite retratação além do marco legal. D) a representação é condição de procedibilidade, não condição de punibilidade. E) não é condição de recorribilidade.\nA lei prevê regimes especiais, mas o enunciado pergunta a regra geral do CPP e não apresenta hipótese especial.\nBase: CPP, arts. 24 e 25.",
+      "tested_topic": "Ação penal pública condicionada: representação e irretratabilidade após oferecimento da denúncia.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    },
+    {
+      "id": "28f98e98-214b-4d42-a594-6bafe0e7a43c",
+      "item_number": 14,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "Mário Lúcio, 54 anos de idade, casado com Simone, 48 anos de idade, após acalorada discussão no almoço de domingo, por motivo de ciúmes, na residência da família, agride fisicamente a mulher causando-lhe lesão corporal leve. Após a conclusão do inquérito policial, o Ministério oferece denúncia em face de Mário Lúcio imputando-lhe a prática do crime de lesão corporal leve. A magistrada, Dra. Maria Vitória, rejeita a inicial acusatória, sob o fundamento da ausência da condição específica da ação penal representação da vítima. Com base nos fatos narrados e no entendimento dos tribunais superiores, marque a afirmativa correta.",
+      "options": {
+        "A": "A magistrada agiu equivocadamente, tendo em vista tratarse de crime de ação penal privada subsidiária da pública.",
+        "B": "A magistrada agiu corretamente, tendo em vista tratar-se de crime de ação penal pública condicionada.",
+        "C": "A magistrada agiu equivocadamente, tendo em vista tratarse de crime de ação penal pública incondicionada.",
+        "D": "A magistrada agiu equivocadamente, tendo em vista tratarse de crime de iniciativa privada.",
+        "E": "A magistrada agiu corretamente, tendo em vista tratar-se de crime de ação penal pública condicionada à requisição do Ministro da Justiça."
+      },
+      "official_answer": "C",
+      "replacement_explanation": "C é correta. A lesão corporal leve praticada contra mulher em contexto de violência doméstica é ação penal pública incondicionada, conforme a interpretação do STF na ADI 4.424 e a Súmula 542 do STJ. A denúncia não depende de representação da vítima.\nA) não é ação privada subsidiária; B) erra ao exigir representação; D) não é ação privada; E) requisição do Ministro da Justiça não se aplica.\nEsse entendimento específico não deve ser generalizado para todos os crimes em contexto doméstico: o item trata de lesão corporal.\nBase: Lei 11.340/2006, art. 41; STF, ADI 4.424; STJ, Súmula 542.",
+      "tested_topic": "Ação penal em lesão corporal leve no contexto de violência doméstica contra a mulher; ADI 4.424 e Súmula 542/STJ.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l11340.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=3897992",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    },
+    {
+      "id": "bdaceb4b-fb6a-4769-8f66-6e39f27f5e80",
+      "item_number": 15,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "Pedro Henrique, 46 anos de idade, está sendo processado, criminalmente, pela suposta prática de crimes de estelionato (Pena: reclusão de 1 a 5 anos e multa). Durante a tramitação do processo, o Ministério Público requer a interceptação das ligações telefônicas de Pedro Henrique. A Dra. Cristina, magistrada titular do juízo criminal competente, por entender presentes os requisitos autorizadores, decreta a interceptação nos exatos termos do requerimento do Ministério Público. Com base nos fatos narrados e na Lei nº 9296/96, marque a afirmativa correta.",
+      "options": {
+        "A": "A magistrada agiu equivocadamente, pois não é cabível interceptação das ligações telefônicas no caso de crime punido com pena de reclusão.",
+        "B": "A magistrada agiu equivocadamente, pois não é cabível a interceptação das ligações telefônicas em virtude da pena mínima cominada ao crime ser inferior a quatro anos.",
+        "C": "A magistrada agiu equivocadamente, pois não é cabível interceptação das ligações telefônicas na fase processual.",
+        "D": "A magistrada agiu corretamente, pois o crime de estelionato é punido com pena de reclusão e é cabível a interceptação das ligações telefônicas na fase processual.",
+        "E": "A magistrada agiu corretamente, pois somente é cabível interceptação das ligações telefônicas na fase processual."
+      },
+      "official_answer": "D",
+      "replacement_explanation": "D é correta nos fatos descritos. A Lei 9.296/1996 admite interceptação para investigação criminal e instrução processual penal, mediante ordem judicial e quando houver indícios razoáveis de autoria/participação, a prova não puder ser obtida por outros meios disponíveis e o fato investigado for punido com reclusão. O enunciado diz que a juíza reconheceu os requisitos e o estelionato é punido com reclusão.\nA) erra: a pena de reclusão não impede a medida; é requisito de admissibilidade. B) a lei não fixa pena mínima de quatro anos. C) a interceptação também pode ocorrer durante o processo. E) erra ao restringi-la à fase processual.\nBase: Lei 9.296/1996, arts. 1º e 2º.",
+      "tested_topic": "Provas e meios de obtenção: interceptação telefônica na investigação e na instrução processual; Lei 9.296/1996.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm"
+      ]
+    },
+    {
+      "id": "ab9c3387-4fad-44a8-b5f8-77b840d14512",
+      "item_number": 16,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "João Marcelo, 34 anos de idade, primário, está sendo processado, criminalmente, pela suposta prática do crime de homicídio culposo no trânsito. João Marcelo, conduzindo seu veículo Porsche, de modo imprudente, perdeu o controle do automóvel e atropelou Maria Helena, 59 anos de idade, que, em virtude das lesões sofridas, não resistiu e veio a óbito. O caso gerou grande repercussão social. Durante o inquérito policial e em virtude da gravidade do resultado e da repercussão social do caso, a Delegada de Polícia, Dra. Patrícia, representa pela decretação da prisão preventiva de João Marcelo. O magistrado do juízo criminal competente decreta a prisão preventiva. Com base nos fatos narrados e no Código de Processo Penal, assinale a afirmativa correta.",
+      "options": {
+        "A": "É cabível, no caso, a decretação da prisão preventiva, tendo em vista a idade avançada da vítima.",
+        "B": "É cabível, no caso, a decretação da prisão preventiva, tendo em vista a gravidade do resultado e a repercussão social do caso.",
+        "C": "Não é cabível, no caso, a decretação da prisão preventiva, tendo em vista que a prisão preventiva somente é cabível na fase processual.",
+        "D": "É cabível, no caso, a decretação da prisão preventiva, tendo em vista tratar-se de crime culposo com resultado morte.",
+        "E": "Não é cabível, no caso, a decretação da prisão preventiva, tendo em vista a ausência de previsão legal do cabimento em caso de crime culposo."
+      },
+      "official_answer": "E",
+      "replacement_explanation": "E é a resposta para o caso concreto. A preventiva exige os fundamentos do art. 312 e ao menos uma hipótese de admissibilidade do art. 313 do CPP. João é primário e responde por homicídio culposo no trânsito; o enunciado não aponta condenação anterior por crime doloso, violência doméstica com medida protetiva, identidade incerta ou outra hipótese legal aplicável. Gravidade do resultado e repercussão social, sozinhas, não bastam.\nA), B) e D) apresentam motivos que não suprem os requisitos legais. C) erra porque a preventiva pode ser decretada também durante a investigação, quando cabível. A formulação de E não deve ser generalizada: há hipóteses legais específicas em que a preventiva pode caber mesmo que o fato atual seja culposo, como a do art. 313, II, se presentes seus requisitos. Elas não aparecem neste caso.\nBase: CPP, arts. 312 e 313, texto vigente consultado em 2026.",
+      "tested_topic": "Prisão cautelar: requisitos e hipóteses de admissibilidade da prisão preventiva; CPP, arts. 312–313.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    },
+    {
+      "id": "8337ba09-070e-40e4-a7ff-274b30d26efc",
+      "item_number": 17,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "Gabriel Leite, 42 anos de idade, primário, está sendo investigado em inquérito policial pela suposta prática do crime de estupro de vulnerável. O magistrado, Dr. Guilherme, ao ter contato com a investigação criminal, por entender tratar-se de crime extremamente grave, decreta de ofício a prisão temporária de Gabriel. Com base nos fatos narrados e na Lei nº 7960/89, marque a afirmativa correta.",
+      "options": {
+        "A": "É cabível a decretação da prisão temporária de ofício, desde que o crime tenha pena privativa de liberdade de reclusão máxima superior a 4 anos.",
+        "B": "Não é cabível a decretação da prisão temporária de ofício.",
+        "C": "Não é cabível a decretação da prisão temporária durante a investigação criminal.",
+        "D": "É cabível a decretação da prisão temporária de ofício, tendo em vista a gravidade do crime praticado.",
+        "E": "Não é cabível a decretação da prisão temporária na hipótese de investigado primário."
+      },
+      "official_answer": "B",
+      "replacement_explanation": "B é correta. A prisão temporária exige representação da autoridade policial ou requerimento do Ministério Público; o juiz não pode decretá-la de ofício. A gravidade abstrata do estupro de vulnerável não supre essa exigência nem a necessidade de fundamentação concreta.\nA) e D) autorizam iniciativa judicial que a lei não prevê. C) erra: a temporária é medida voltada à investigação. E) erra: primariedade, por si só, não impede a medida se os requisitos estiverem presentes.\nBase: Lei 7.960/1989, arts. 1º e 2º; STF, ADIs 3.360 e 4.109.",
+      "tested_topic": "Prisão temporária: legitimidade para requerer/representar e vedação de decretação de ofício.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm"
+      ]
+    },
+    {
+      "id": "04424404-8805-4d3a-b2d6-14ad660d1116",
+      "item_number": 18,
+      "exam_type": "Tipo B",
+      "subject": "Direito Processual Penal",
+      "stem": "Milena, 32 anos de idade, comete um crime que deixa vestígios (crime não transeunte). Instaurado inquérito policial para elucidar os fatos, a Delegada de Polícia identifica que os vestígios já teriam desaparecidos. Várias testemunhas foram ouvidas durante a investigação criminal. Nos termos do artigo 158 do Código de Processo Penal, quando a infração deixar vestígios, será indispensável o exame de corpo de delito, direto ou indireto, não podendo supri-lo a confissão do acusado. Ao relatar o inquérito policial, a Delegada de Polícia destaca que a prova testemunhal poderá suprir a falta do exame de corpo de delito. Com base nos fatos narrados e no Código de Processo Penal, marque a opção correta.",
+      "options": {
+        "A": "Desaparecidos os vestígios, a prova testemunhal poderá suprir-lhe a falta.",
+        "B": "A prova testemunhal não pode suprir a falta do exame de corpo delito.",
+        "C": "A prova documental poderá suprir a falta do exame de corpo de delito.",
+        "D": "O exame de corpo de delito, ainda que desaparecidos os vestígios, é indispensável.",
+        "E": "A prova pericial deverá ser realizada por dois peritos oficiais, portadores de diploma de curso superior."
+      },
+      "official_answer": "A",
+      "replacement_explanation": "A é correta. O art. 167 do CPP permite que a prova testemunhal supra a falta do exame de corpo de delito quando o exame não for possível porque os vestígios desapareceram. A regra do art. 158 torna o exame indispensável quando há vestígios, mas prevê essa exceção legal.\nB) ignora o art. 167. C) não corresponde à exceção expressa. D) transforma a regra em absoluta, mesmo quando os vestígios desapareceram. E) erra: o art. 159 prevê, como regra, um perito oficial com diploma de curso superior, não dois.\nBase: CPP, arts. 158, 159 e 167.",
+      "tested_topic": "Exame de corpo de delito; desaparecimento de vestígios e prova testemunhal supletiva, CPP, arts. 158 e 167.",
+      "local_snapshot_status": "under_review",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+      ]
+    }
+  ],
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "all_items_active": true,
+    "all_answers_match": true,
+    "all_syllabus_topic_id_null": true,
+    "evidence": "Consulta SQL enviada pelo usuário."
+  }
+}

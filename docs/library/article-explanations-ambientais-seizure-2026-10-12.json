@@ -1,0 +1,143 @@
+{
+  "version": "2026-10-12-ambientais-seizure",
+  "checked_at": "2026-10-12T20:18:07.709149+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-24",
+        "art-25"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-24",
+      "unit_id": "9a6d490c-21b7-53f5-9df6-1a85b68a4ba1",
+      "content_sha256": "55cd16d6b2e07c32e4731f5d2ff6be6049263b9f1464ebfe4d8b1f2ad48794e0",
+      "simples": "Liquidação forçada exige pessoa jurídica constituída ou utilizada preponderantemente para permitir, facilitar ou ocultar crime desta lei; não decorre de qualquer irregularidade isolada.",
+      "pontos": [
+        "Destinação predominante ao crime é elemento expresso; art. 3 continua referência para responsabilidade da entidade.",
+        "Patrimônio é considerado instrumento e perdido em favor do Fundo Penitenciário Nacional nas condições do dispositivo."
+      ],
+      "atencao": [
+        "Não confundir liquidação penal excepcional e desconsideração patrimonial do art. 4; condenação da empresa não exige automaticamente sua extinção.",
+        "Fragmento de título de capítulo foi retirado do corpo, preservando todo texto normativo."
+      ],
+      "exemplo": "Sociedade usada predominantemente para facilitar crimes ambientais demanda exame da liquidação legal. Variação: infração isolada de empresa legítima não prova por si só finalidade predominante nem exige extinção automática.",
+      "prova": [
+        "Qualquer infração isolada obriga liquidar a empresa? Não; verificar uso ou constituição preponderante para crime e demais requisitos.",
+        "Desconsideração do art. 4 e liquidação do art. 24 são idênticas? Não; pressupostos e efeitos são distintos."
+      ],
+      "termos": [
+        "preponderantemente",
+        "liquidação forçada",
+        "Fundo Penitenciário Nacional"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "9a6d490c-21b7-53f5-9df6-1a85b68a4ba1",
+        "content_sha256": "8fc79f28216f9287400f1ccbfcabf6348daf19ae63e9733bf52aef1511f430a4",
+        "simples": "A pessoa jurídica constituída ou utilizada, preponderantemente, com o fim de permitir, facilitar ou ocultar a prática de crime definido na Lei terá decretada sua liquidação forçada, e seu patrimônio será considerado instrumento do crime e perdido em favor do Fundo Penitenciário Nacional.",
+        "pontos": [
+          "Liquidação forçada da empresa de fachada.",
+          "Patrimônio perdido em favor do Fundo Penitenciário Nacional."
+        ],
+        "atencao": [
+          "Destino: Fundo Penitenciário Nacional."
+        ],
+        "exemplo": "A empresa criada só para acobertar o tráfico de madeira é liquidada.",
+        "prova": [
+          "Assertiva que destina o patrimônio ao Fundo Nacional do Meio Ambiente erra: é ao Fundo Penitenciário Nacional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-25",
+      "unit_id": "a492c59c-17b0-5468-9cf3-c6178128ab1c",
+      "content_sha256": "22bb29e9648ca91089bf3edb280878d9e904fe40902c9855790e560a6bcab55e",
+      "simples": "Apreensão de produtos e instrumentos exige autos e destinação legal; animais têm prioridade de retorno ao habitat quando viável e cuidados adequados, sem abate por simples situação de maus-tratos.",
+      "pontos": [
+        "Lei 13.052/2014: libertação prioritária no habitat, ou guarda por instituições adequadas quando inviável ou sanitariamente não recomendável; técnicos habilitados e bem-estar no transporte/acondicionamento.",
+        "Perecíveis/madeira: avaliação e doação nas condições do §3; produtos não perecíveis da fauna têm destino próprio do §4; instrumentos são vendidos com descaracterização por reciclagem pelo §5.",
+        "ADPF 640/STF veda interpretação que autorize abate de animais apreendidos em situação de maus-tratos; falta de estrutura não legitima sacrifício automático."
+      ],
+      "atencao": [
+        "Não ensinar que todo animal apreendido deve ser destruído como se fosse produto não perecível; distinguir animais vivos e produtos/subprodutos.",
+        "Nota Prejudicada da MP 62/2002 foi separada; não reinserir leilão antigo de madeira como texto vigente do §3 nem declarar que a decisão impede todo manejo sanitário em qualquer situação diversa."
+      ],
+      "exemplo": "Galos apreendidos em maus-tratos exigem guarda adequada e destinação protegida; insuficiência de estrutura não autoriza abate automático. Variação: madeira apreendida tem regime de avaliação/doação próprio, diferente de libertar animal no habitat.",
+      "prova": [
+        "Todo animal apreendido deve ser destruído pelo §4? Não; distinguir animais vivos e produtos/subprodutos e observar ADPF 640.",
+        "Habitat é retorno obrigatório mesmo quando sanitariamente não recomendável? Não; lei prevê alternativa de guarda e cuidados adequados."
+      ],
+      "termos": [
+        "prioritariamente",
+        "técnicos habilitados",
+        "bem-estar físico",
+        "ADPF 640"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5836739"
+      ],
+      "expected": {
+        "unit_id": "a492c59c-17b0-5468-9cf3-c6178128ab1c",
+        "content_sha256": "79184bcc9b14cc43c282642a50db33ad40349823d663bcfcf4457859ef414242",
+        "simples": "Verificada a infração, serão apreendidos seus produtos e instrumentos, lavrando-se os autos. Os animais serão prioritariamente libertados em seu habitat ou, sendo inviável por questões sanitárias, entregues a zoológicos, fundações ou entidades semelhantes. Até a entrega, o órgão autuante zelará por condições adequadas de acondicionamento e transporte. Produtos perecíveis e madeiras serão avaliados e doados a instituições científicas, hospitalares, penais e beneficentes. Produtos e subprodutos da fauna não perecíveis serão destruídos ou doados a instituições científicas, culturais ou educacionais. Os instrumentos serão vendidos, garantida a descaracterização por reciclagem.",
+        "pontos": [
+          "Apreensão de produtos e instrumentos.",
+          "Animais libertados em seu habitat, prioritariamente.",
+          "Perecíveis e madeiras doados.",
+          "Instrumentos vendidos, com descaracterização."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafos alterados e renumerados pela Lei nº 13.052, de 2014.",
+          "Soltura no habitat é a prioridade."
+        ],
+        "exemplo": "A ave apreendida é solta na natureza, se possível.",
+        "prova": [
+          "Assertiva que manda destruir os animais apreendidos erra: a prioridade é a soltura no habitat."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}

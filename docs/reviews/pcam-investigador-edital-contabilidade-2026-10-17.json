@@ -1,0 +1,263 @@
+{
+  "checked_at": "2026-10-17T23:10:13.438Z",
+  "purpose": "Verified official Investigador AM edital and narrow accounting topic registration, without activating item40.",
+  "question_records_unchanged": 2968,
+  "rondonia_unchanged": true,
+  "metadata_changes": [
+    {
+      "table": "content_sources",
+      "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+      "change": "update"
+    },
+    {
+      "table": "content_sources",
+      "id": "2eee668c-e460-5dfa-85a1-144bd1eb97a7",
+      "change": "insert"
+    },
+    {
+      "table": "content_sources",
+      "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+      "change": "update"
+    },
+    {
+      "table": "syllabus_editions",
+      "id": "e4e5d4ab-1d25-4dda-9031-4f3628264063",
+      "change": "update"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "1546e06b-39c6-5ad3-8a98-58aed8005330",
+      "change": "insert"
+    }
+  ],
+  "newly_activated": 0,
+  "pending_under_review_all_pc": 13,
+  "pending_under_review_excluding_ro": 5,
+  "reason_item40_still_retained": "Cálculo e vínculo ao edital confirmados; fonte CPC27/CPC23 ainda sem acesso direto conferido. Não removida a trava jurídica ou a base normativa para contornar o bloqueio.",
+  "program_evidence": {
+    "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_9_demais_cargos.pdf",
+    "pdf_path": "outputs/pc-pending-review-2026-10-16/nonro8-am-inv-edital.pdf",
+    "sha256": "0b0a2a75cafa456e93f124d3dd2e96a6f18d69460ff22da127c5f78b09f8ed31",
+    "visually_verified": true
+  },
+  "topic": {
+    "id": "1546e06b-39c6-5ad3-8a98-58aed8005330",
+    "edition_id": "e4e5d4ab-1d25-4dda-9031-4f3628264063",
+    "block_name": "Anexo I — Investigador — Contabilidade",
+    "discipline": "Noções de Contabilidade",
+    "topic_order": 61,
+    "topic_text": "Contabilização de operações contábeis diversas: depreciações e baixa de bens. Lei nº6.404/1976 e suas alterações, legislação complementar e pronunciamentos do Comitê de Pronunciamentos Contábeis (CPC). Recorte do programa de Noções de Contabilidade do Investigador, páginas48–49 do edital retificado em30/09/2022.",
+    "content_status": "current"
+  },
+  "source_operations": {
+    "sources": [
+      {
+        "kind": "prova",
+        "expected": {
+          "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (Tipo 1, branca) do concurso da Polícia Civil do Amazonas, aplicado em 03/04/2022; publicado pela FGV.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+        },
+        "row": {
+          "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (Tipo 1, branca) do concurso da Polícia Civil do Amazonas, aplicado em 03/04/2022; publicado pela FGV.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+        },
+        "evidence": {
+          "catalog_url": "https://conhecimento.fgv.br/concursos/pcam21/02",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/am-invest-catalog.html",
+          "catalog_sha256": "d13991cb304669a6aeb46c78148de01511dfbff149790c6991d422f21e8991d4",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/final32/inv-paper.pdf",
+          "sha256": "fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": {
+          "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+        },
+        "row": {
+          "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+        },
+        "evidence": {
+          "catalog_url": "https://conhecimento.fgv.br/concursos/pcam21/02",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/am-invest-catalog.html",
+          "catalog_sha256": "d13991cb304669a6aeb46c78148de01511dfbff149790c6991d422f21e8991d4",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/final32/inv-key.pdf",
+          "sha256": "a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+        }
+      },
+      {
+        "kind": "edital",
+        "expected": null,
+        "row": {
+          "id": "2eee668c-e460-5dfa-85a1-144bd1eb97a7",
+          "source_type": "edital",
+          "title": "PCAM Edital02/2021 — demais cargos — versão retificada em30/09/2022",
+          "issuer": "Polícia Civil do Amazonas / FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_9_demais_cargos.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Edital02/2021 com última retificação indicada no catálogo consultado,30/09/2022. Programa de Contabilidade do Investigador conferido individualmente nas páginas48–49, incluindo depreciação e CPC. Não certificação integral de todas as normas ou cargos. SHA-256 0b0a2a75cafa456e93f124d3dd2e96a6f18d69460ff22da127c5f78b09f8ed31"
+        },
+        "evidence": {
+          "catalog_url": "https://conhecimento.fgv.br/concursos/pcam21/02",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/am-invest-catalog.html",
+          "catalog_sha256": "d13991cb304669a6aeb46c78148de01511dfbff149790c6991d422f21e8991d4",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/nonro8-am-inv-edital.pdf",
+          "sha256": "0b0a2a75cafa456e93f124d3dd2e96a6f18d69460ff22da127c5f78b09f8ed31"
+        }
+      }
+    ],
+    "edition": {
+      "expected": {
+        "id": "e4e5d4ab-1d25-4dda-9031-4f3628264063",
+        "contest_name": "Polícia Civil do Estado do Amazonas",
+        "role_name": "Investigador de Polícia",
+        "contest_year": 2022,
+        "exam_board": "FGV",
+        "source_id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+        "status": "active",
+        "created_at": "2026-10-13T23:09:21.069912+00:00"
+      },
+      "source_id": "2eee668c-e460-5dfa-85a1-144bd1eb97a7"
+    }
+  },
+  "refresh_operations": {
+    "purpose": "official-exam-evidence-refresh",
+    "items": [
+      {
+        "kind": "prova",
+        "expected": {
+          "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-13T23:09:20.540158+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (Tipo 1, branca) do concurso da Polícia Civil do Amazonas, aplicado em 03/04/2022; publicado pela FGV."
+        },
+        "row": {
+          "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (Tipo 1, branca) do concurso da Polícia Civil do Amazonas, aplicado em 03/04/2022; publicado pela FGV.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+        },
+        "evidence": {
+          "catalog_url": "https://conhecimento.fgv.br/concursos/pcam21/02",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/am-invest-catalog.html",
+          "catalog_sha256": "d13991cb304669a6aeb46c78148de01511dfbff149790c6991d422f21e8991d4",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/final32/inv-paper.pdf",
+          "sha256": "fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": {
+          "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-13T23:09:16.61843+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada."
+        },
+        "row": {
+          "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+          "issuer": "FGV",
+          "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-17T23:09:21.273862+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência visual individual da questão40 do Investigador Tipo1, caderno página8 e chave definitiva página5 (arquivo multicargos), letraA. Não certificação integral. SHA-256 a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+        },
+        "evidence": {
+          "catalog_url": "https://conhecimento.fgv.br/concursos/pcam21/02",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/am-invest-catalog.html",
+          "catalog_sha256": "d13991cb304669a6aeb46c78148de01511dfbff149790c6991d422f21e8991d4",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/final32/inv-key.pdf",
+          "sha256": "a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+        }
+      }
+    ]
+  },
+  "additional_research": [
+    {
+      "item": "RJ48",
+      "paper_page": 14,
+      "key": "A",
+      "result": "Texto e letra conferem com caderno oficial e definitivo. Norma/requisição TCE-RJ ainda sem validação suficiente."
+    },
+    {
+      "item": "RJ75",
+      "paper_page": 23,
+      "key": "D",
+      "result": "Texto e letra confirmados; formulação sobre reclamação não foi reescrita por conjectura. ADIs5824/5825 confirmam simetria, mas isso não resolve sozinho o cabimento de reclamação na hipótese."
+    },
+    {
+      "item": "AM44",
+      "paper_page": 11,
+      "key": "A",
+      "result": "Caderno e definitivo confirmados; não usado Tema1347, que trata de regressão cautelar, para declarar resolvida a afirmativa absoluta sobre regressão definitiva."
+    },
+    {
+      "item": "MG48",
+      "key": "B",
+      "result": "Fonte OMS digitalizada em árabe e manual SENASP não forneceram comprovação específica suficiente; sem liberação só pelo gabarito."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "item": 31,
+  "question_id": "e96037e7-0551-41a3-8fd9-91fc6781df08",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-24",
+  "official_answer": {
+    "letter": "A",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 31",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Código Penal — Decreto-Lei nº 2.848/1940, texto compilado",
+    "article": "218-C, caput e § 1º",
+    "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "html_sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "current_text": "O art. 218-C tipifica oferecer, trocar, disponibilizar, transmitir, vender, distribuir, publicar ou divulgar registro audiovisual de cena de estupro ou de estupro de vulnerável, apologia ou indução à prática, ou, sem consentimento, cena de sexo, nudez ou pornografia.",
+    "currency_note": "A Lei nº 15.280/2025 alterou a pena do caput. O texto compilado mantém a descrição da conduta cobrada; o § 1º prevê aumento de 1/3 a 2/3 se houver relação íntima de afeto ou finalidade de vingança ou humilhação.",
+    "conclusion": "A alternativa A descreve o tipo do art. 218-C e é compatível com a redação vigente."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Parte Especial: art. 121 ao 180-A; arts. 213 a 218-C.",
+    "confirmed": true
+  },
+  "explanation": "A alternativa A descreve o crime do art. 218-C do Código Penal. B corresponde ao art. 216-B (registro não autorizado da intimidade sexual); C ao art. 217-A (estupro de vulnerável); D ao art. 227 (mediação para servir à lascívia de outrem); E ao art. 215 (violação sexual mediante fraude). A Lei 15.280/2025 mudou a pena, mas não a descrição do caput cobrada aqui. O § 1º aumenta a pena em 1/3 a 2/3 se o agente mantém ou manteve relação íntima de afeto com a vítima ou age para vingança ou humilhação.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item31-art218c.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

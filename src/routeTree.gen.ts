@@ -18,7 +18,10 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiCancellationEmailRouteImport } from './routes/api/cancellation-email'
 import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
+import { Route as ApiVoiceSpeechRouteImport } from './routes/api/voice-speech'
+import { Route as ApiVoiceStudioAdminRouteImport } from './routes/api/voice-studio-admin'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
@@ -31,9 +34,14 @@ import { Route as DashboardAdminQuestionsRouteImport } from './routes/dashboard/
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
 import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
+import { Route as DashboardAdminVoiceStudioRouteImport } from './routes/dashboard/admin-voice-studio'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
+import { Route as DashboardCalculadoraPenalRouteImport } from './routes/dashboard/calculadora-penal'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardCronogramaRouteImport } from './routes/dashboard/cronograma'
+import { Route as DashboardCtbRouteImport } from './routes/dashboard/ctb'
+import { Route as DashboardDicionarioRouteImport } from './routes/dashboard/dicionario'
+import { Route as DashboardDisciplinasRouteImport } from './routes/dashboard/disciplinas'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
 import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
@@ -42,12 +50,16 @@ import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
+import { Route as DashboardInteligenciaIdecanRouteImport } from './routes/dashboard/inteligencia-idecan'
+import { Route as DashboardLeisRouteImport } from './routes/dashboard/leis'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
+import { Route as DashboardMaterialRouteImport } from './routes/dashboard/material'
 import { Route as DashboardMedalsRouteImport } from './routes/dashboard/medals'
 import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
+import { Route as DashboardPerfilBancasRouteImport } from './routes/dashboard/perfil-bancas'
 import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
 import { Route as DashboardQuestionBankRouteImport } from './routes/dashboard/question-bank'
@@ -61,8 +73,10 @@ import { Route as DashboardStudyRoomRouteImport } from './routes/dashboard/study
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
 import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
+import { Route as DashboardTrilhasRouteImport } from './routes/dashboard/trilhas'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
+import { Route as DashboardCancellationReceiptIdRouteImport } from './routes/dashboard/cancellation-receipt.$id'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
 import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
 import { Route as DashboardLegalCourseSlugRouteImport } from './routes/dashboard/legal-course.$slug'
@@ -114,9 +128,24 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCancellationEmailRoute = ApiCancellationEmailRouteImport.update({
+  id: '/api/cancellation-email',
+  path: '/api/cancellation-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiSolveQuestionRoute = ApiSolveQuestionRouteImport.update({
   id: '/api/solve-question',
   path: '/api/solve-question',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiVoiceSpeechRoute = ApiVoiceSpeechRouteImport.update({
+  id: '/api/voice-speech',
+  path: '/api/voice-speech',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiVoiceStudioAdminRoute = ApiVoiceStudioAdminRouteImport.update({
+  id: '/api/voice-studio-admin',
+  path: '/api/voice-studio-admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutPlanIdRoute = CheckoutPlanIdRouteImport.update({
@@ -180,11 +209,23 @@ const DashboardAdminSupportRoute = DashboardAdminSupportRouteImport.update({
   path: '/admin-support',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminVoiceStudioRoute =
+  DashboardAdminVoiceStudioRouteImport.update({
+    id: '/admin-voice-studio',
+    path: '/admin-voice-studio',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
   id: '/ai-solver',
   path: '/ai-solver',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardCalculadoraPenalRoute =
+  DashboardCalculadoraPenalRouteImport.update({
+    id: '/calculadora-penal',
+    path: '/calculadora-penal',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
   id: '/careers',
   path: '/careers',
@@ -193,6 +234,21 @@ const DashboardCareersRoute = DashboardCareersRouteImport.update({
 const DashboardCronogramaRoute = DashboardCronogramaRouteImport.update({
   id: '/cronograma',
   path: '/cronograma',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardCtbRoute = DashboardCtbRouteImport.update({
+  id: '/ctb',
+  path: '/ctb',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardDicionarioRoute = DashboardDicionarioRouteImport.update({
+  id: '/dicionario',
+  path: '/dicionario',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardDisciplinasRoute = DashboardDisciplinasRouteImport.update({
+  id: '/disciplinas',
+  path: '/disciplinas',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardEditalRoute = DashboardEditalRouteImport.update({
@@ -235,9 +291,25 @@ const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
   path: '/history',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardInteligenciaIdecanRoute =
+  DashboardInteligenciaIdecanRouteImport.update({
+    id: '/inteligencia-idecan',
+    path: '/inteligencia-idecan',
+    getParentRoute: () => DashboardRoute,
+  } as any)
+const DashboardLeisRoute = DashboardLeisRouteImport.update({
+  id: '/leis',
+  path: '/leis',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardLibraryRoute = DashboardLibraryRouteImport.update({
   id: '/library',
   path: '/library',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardMaterialRoute = DashboardMaterialRouteImport.update({
+  id: '/material',
+  path: '/material',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardMedalsRoute = DashboardMedalsRouteImport.update({
@@ -263,6 +335,11 @@ const DashboardMyContestRoute = DashboardMyContestRouteImport.update({
 const DashboardNotebooksRoute = DashboardNotebooksRouteImport.update({
   id: '/notebooks',
   path: '/notebooks',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardPerfilBancasRoute = DashboardPerfilBancasRouteImport.update({
+  id: '/perfil-bancas',
+  path: '/perfil-bancas',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardPerformanceRoute = DashboardPerformanceRouteImport.update({
@@ -331,6 +408,11 @@ const DashboardTimerRoute = DashboardTimerRouteImport.update({
   path: '/timer',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardTrilhasRoute = DashboardTrilhasRouteImport.update({
+  id: '/trilhas',
+  path: '/trilhas',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   id: '/api/public/stripe-webhook',
   path: '/api/public/stripe-webhook',
@@ -341,6 +423,12 @@ const DashboardAdminStudentIdRoute = DashboardAdminStudentIdRouteImport.update({
   path: '/admin-student/$id',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardCancellationReceiptIdRoute =
+  DashboardCancellationReceiptIdRouteImport.update({
+    id: '/cancellation-receipt/$id',
+    path: '/cancellation-receipt/$id',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardEditalIndexRoute = DashboardEditalIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -378,7 +466,10 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -390,9 +481,14 @@ export interface FileRoutesByFullPath {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
+  '/dashboard/ctb': typeof DashboardCtbRoute
+  '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -401,12 +497,16 @@ export interface FileRoutesByFullPath {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
+  '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -420,9 +520,11 @@ export interface FileRoutesByFullPath {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -438,7 +540,10 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -450,9 +555,14 @@ export interface FileRoutesByTo {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
+  '/dashboard/ctb': typeof DashboardCtbRoute
+  '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
@@ -460,11 +570,15 @@ export interface FileRoutesByTo {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
+  '/dashboard/leis': typeof DashboardLeisRoute
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -478,9 +592,11 @@ export interface FileRoutesByTo {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -498,7 +614,10 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -510,9 +629,14 @@ export interface FileRoutesById {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
+  '/dashboard/ctb': typeof DashboardCtbRoute
+  '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -521,12 +645,16 @@ export interface FileRoutesById {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
+  '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -540,9 +668,11 @@ export interface FileRoutesById {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -561,7 +691,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -573,9 +706,14 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
+    | '/dashboard/ctb'
+    | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -584,12 +722,16 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
+    | '/dashboard/leis'
     | '/dashboard/library'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -603,9 +745,11 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -621,7 +765,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -633,9 +780,14 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
+    | '/dashboard/ctb'
+    | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
     | '/dashboard/errors'
@@ -643,11 +795,15 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
+    | '/dashboard/leis'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -661,9 +817,11 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -680,7 +838,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -692,9 +853,14 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
+    | '/dashboard/ctb'
+    | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -703,12 +869,16 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
+    | '/dashboard/leis'
     | '/dashboard/library'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -722,9 +892,11 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -742,7 +914,10 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
+  ApiCancellationEmailRoute: typeof ApiCancellationEmailRoute
   ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
+  ApiVoiceSpeechRoute: typeof ApiVoiceSpeechRoute
+  ApiVoiceStudioAdminRoute: typeof ApiVoiceStudioAdminRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -812,11 +987,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cancellation-email': {
+      id: '/api/cancellation-email'
+      path: '/api/cancellation-email'
+      fullPath: '/api/cancellation-email'
+      preLoaderRoute: typeof ApiCancellationEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/solve-question': {
       id: '/api/solve-question'
       path: '/api/solve-question'
       fullPath: '/api/solve-question'
       preLoaderRoute: typeof ApiSolveQuestionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/voice-speech': {
+      id: '/api/voice-speech'
+      path: '/api/voice-speech'
+      fullPath: '/api/voice-speech'
+      preLoaderRoute: typeof ApiVoiceSpeechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/voice-studio-admin': {
+      id: '/api/voice-studio-admin'
+      path: '/api/voice-studio-admin'
+      fullPath: '/api/voice-studio-admin'
+      preLoaderRoute: typeof ApiVoiceStudioAdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout/$planId': {
@@ -903,11 +1099,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminSupportRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/admin-voice-studio': {
+      id: '/dashboard/admin-voice-studio'
+      path: '/admin-voice-studio'
+      fullPath: '/dashboard/admin-voice-studio'
+      preLoaderRoute: typeof DashboardAdminVoiceStudioRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/ai-solver': {
       id: '/dashboard/ai-solver'
       path: '/ai-solver'
       fullPath: '/dashboard/ai-solver'
       preLoaderRoute: typeof DashboardAiSolverRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/calculadora-penal': {
+      id: '/dashboard/calculadora-penal'
+      path: '/calculadora-penal'
+      fullPath: '/dashboard/calculadora-penal'
+      preLoaderRoute: typeof DashboardCalculadoraPenalRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/careers': {
@@ -922,6 +1132,27 @@ declare module '@tanstack/react-router' {
       path: '/cronograma'
       fullPath: '/dashboard/cronograma'
       preLoaderRoute: typeof DashboardCronogramaRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/ctb': {
+      id: '/dashboard/ctb'
+      path: '/ctb'
+      fullPath: '/dashboard/ctb'
+      preLoaderRoute: typeof DashboardCtbRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/dicionario': {
+      id: '/dashboard/dicionario'
+      path: '/dicionario'
+      fullPath: '/dashboard/dicionario'
+      preLoaderRoute: typeof DashboardDicionarioRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/disciplinas': {
+      id: '/dashboard/disciplinas'
+      path: '/disciplinas'
+      fullPath: '/dashboard/disciplinas'
+      preLoaderRoute: typeof DashboardDisciplinasRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/edital': {
@@ -980,11 +1211,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardHistoryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/inteligencia-idecan': {
+      id: '/dashboard/inteligencia-idecan'
+      path: '/inteligencia-idecan'
+      fullPath: '/dashboard/inteligencia-idecan'
+      preLoaderRoute: typeof DashboardInteligenciaIdecanRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/leis': {
+      id: '/dashboard/leis'
+      path: '/leis'
+      fullPath: '/dashboard/leis'
+      preLoaderRoute: typeof DashboardLeisRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/library': {
       id: '/dashboard/library'
       path: '/library'
       fullPath: '/dashboard/library'
       preLoaderRoute: typeof DashboardLibraryRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/material': {
+      id: '/dashboard/material'
+      path: '/material'
+      fullPath: '/dashboard/material'
+      preLoaderRoute: typeof DashboardMaterialRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/medals': {
@@ -1020,6 +1272,13 @@ declare module '@tanstack/react-router' {
       path: '/notebooks'
       fullPath: '/dashboard/notebooks'
       preLoaderRoute: typeof DashboardNotebooksRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/perfil-bancas': {
+      id: '/dashboard/perfil-bancas'
+      path: '/perfil-bancas'
+      fullPath: '/dashboard/perfil-bancas'
+      preLoaderRoute: typeof DashboardPerfilBancasRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/performance': {
@@ -1113,6 +1372,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardTimerRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/trilhas': {
+      id: '/dashboard/trilhas'
+      path: '/trilhas'
+      fullPath: '/dashboard/trilhas'
+      preLoaderRoute: typeof DashboardTrilhasRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/api/public/stripe-webhook': {
       id: '/api/public/stripe-webhook'
       path: '/api/public/stripe-webhook'
@@ -1125,6 +1391,13 @@ declare module '@tanstack/react-router' {
       path: '/admin-student/$id'
       fullPath: '/dashboard/admin-student/$id'
       preLoaderRoute: typeof DashboardAdminStudentIdRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/cancellation-receipt/$id': {
+      id: '/dashboard/cancellation-receipt/$id'
+      path: '/cancellation-receipt/$id'
+      fullPath: '/dashboard/cancellation-receipt/$id'
+      preLoaderRoute: typeof DashboardCancellationReceiptIdRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/edital/': {
@@ -1203,9 +1476,14 @@ interface DashboardRouteChildren {
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
   DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
+  DashboardAdminVoiceStudioRoute: typeof DashboardAdminVoiceStudioRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
+  DashboardCalculadoraPenalRoute: typeof DashboardCalculadoraPenalRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardCronogramaRoute: typeof DashboardCronogramaRoute
+  DashboardCtbRoute: typeof DashboardCtbRoute
+  DashboardDicionarioRoute: typeof DashboardDicionarioRoute
+  DashboardDisciplinasRoute: typeof DashboardDisciplinasRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
   DashboardEnemRoute: typeof DashboardEnemRoute
@@ -1214,12 +1492,16 @@ interface DashboardRouteChildren {
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
+  DashboardInteligenciaIdecanRoute: typeof DashboardInteligenciaIdecanRoute
+  DashboardLeisRoute: typeof DashboardLeisRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
+  DashboardMaterialRoute: typeof DashboardMaterialRoute
   DashboardMedalsRoute: typeof DashboardMedalsRoute
   DashboardMediaRoute: typeof DashboardMediaRoute
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
+  DashboardPerfilBancasRoute: typeof DashboardPerfilBancasRoute
   DashboardPerformanceRoute: typeof DashboardPerformanceRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
   DashboardQuestionBankRoute: typeof DashboardQuestionBankRoute
@@ -1233,8 +1515,10 @@ interface DashboardRouteChildren {
   DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
   DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
+  DashboardTrilhasRoute: typeof DashboardTrilhasRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   DashboardAdminStudentIdRoute: typeof DashboardAdminStudentIdRoute
+  DashboardCancellationReceiptIdRoute: typeof DashboardCancellationReceiptIdRoute
   DashboardLegalCourseSlugRoute: typeof DashboardLegalCourseSlugRoute
 }
 
@@ -1249,9 +1533,14 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
   DashboardAdminSupportRoute: DashboardAdminSupportRoute,
+  DashboardAdminVoiceStudioRoute: DashboardAdminVoiceStudioRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
+  DashboardCalculadoraPenalRoute: DashboardCalculadoraPenalRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardCronogramaRoute: DashboardCronogramaRoute,
+  DashboardCtbRoute: DashboardCtbRoute,
+  DashboardDicionarioRoute: DashboardDicionarioRoute,
+  DashboardDisciplinasRoute: DashboardDisciplinasRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
   DashboardEnemRoute: DashboardEnemRoute,
@@ -1260,12 +1549,16 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
+  DashboardInteligenciaIdecanRoute: DashboardInteligenciaIdecanRoute,
+  DashboardLeisRoute: DashboardLeisRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
+  DashboardMaterialRoute: DashboardMaterialRoute,
   DashboardMedalsRoute: DashboardMedalsRoute,
   DashboardMediaRoute: DashboardMediaRoute,
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,
+  DashboardPerfilBancasRoute: DashboardPerfilBancasRoute,
   DashboardPerformanceRoute: DashboardPerformanceRoute,
   DashboardProfileRoute: DashboardProfileRoute,
   DashboardQuestionBankRoute: DashboardQuestionBankRoute,
@@ -1279,8 +1572,10 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardStudyToolsRoute: DashboardStudyToolsRoute,
   DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
+  DashboardTrilhasRoute: DashboardTrilhasRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardAdminStudentIdRoute: DashboardAdminStudentIdRoute,
+  DashboardCancellationReceiptIdRoute: DashboardCancellationReceiptIdRoute,
   DashboardLegalCourseSlugRoute: DashboardLegalCourseSlugRoute,
 }
 
@@ -1298,7 +1593,10 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
+  ApiCancellationEmailRoute: ApiCancellationEmailRoute,
   ApiSolveQuestionRoute: ApiSolveQuestionRoute,
+  ApiVoiceSpeechRoute: ApiVoiceSpeechRoute,
+  ApiVoiceStudioAdminRoute: ApiVoiceStudioAdminRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }

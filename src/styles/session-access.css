@@ -1,0 +1,137 @@
+/* The photographic stage retains its original colors in both themes. */
+.session-access {
+  --access-gold: #e8bd70;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 100svh;
+  overflow: clip;
+  background: #0c0e10;
+  color: #f7f2e8;
+}
+.session-access__home { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; width: 100%; margin-top: 8px; border: 1px solid #e8bd7040; border-radius: 12px; color: #f7f2e8; font-size: 13px; font-weight: 600; text-decoration: none; }
+.session-access__home:focus-visible { outline: 2px solid #e8bd70; outline-offset: 2px; }
+.session-access__scene {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(0deg, #090b0ef0 0%, transparent 40%, #090b0e45 100%),
+    linear-gradient(90deg, #090b0e18 0%, #090b0e18 30%, #090b0ea8 63%, #090b0e 100%),
+    url('../assets/auth/carreiras-composicao.webp') 35% center / cover no-repeat;
+}
+.session-access__layout {
+  width: min(100%, 1280px);
+  margin: auto;
+  padding: clamp(24px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  gap: clamp(32px, 6vw, 96px);
+}
+.session-access__editorial { display: flex; flex-direction: column; justify-content: space-between; gap: 240px; }
+.session-access__eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #e3d2b3;
+}
+.session-access__signature { padding-bottom: 12px; text-shadow: 0 2px 20px #000; }
+.session-access__rule { display: block; width: 44px; height: 2px; background: var(--access-gold); margin-bottom: 18px; }
+.session-access__signature p { font-family: 'Norte Insignia', Georgia, serif; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.2; margin: 0 0 12px; }
+.session-access__signature > span:last-child { color: #c4c1b9; font-size: 12px; letter-spacing: .035em; }
+.session-access__card {
+  --access-ink: #f7f2e8;
+  --access-muted: #bdbdb9;
+  position: relative;
+  align-self: center;
+  padding: 28px 32px 22px;
+  border: 1px solid #e8bd7036;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #262826e8, #121719ed);
+  box-shadow: 0 32px 90px #0007, inset 0 1px 0 #fff1;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  color: var(--access-ink);
+}
+.session-access__card::before { content: ''; position: absolute; top: -1px; left: 20%; right: 20%; height: 1px; background: linear-gradient(90deg, transparent, #f4d69c, transparent); }
+.session-access__brand { color: var(--access-ink); }
+.session-access .session-access__brand .norte-brand__type span { color: var(--access-gold); }
+.session-access__emblem { position: relative; display: grid; place-items: center; height: 154px; margin: 8px 0 10px; perspective: 700px; }
+.session-access__halo { position: absolute; width: 180px; height: 140px; border-radius: 50%; background: radial-gradient(ellipse, #d4a4542b, transparent 68%); }
+.session-access__badge {
+  position: relative;
+  z-index: 1;
+  width: 132px;
+  height: auto;
+  filter: drop-shadow(1px 1px 0 #b69a68) drop-shadow(2px 3px 0 #493a24) drop-shadow(0 12px 12px #0007);
+  transform-style: preserve-3d;
+  animation: access-emblem-float 9s ease-in-out infinite;
+}
+.session-access__badge-shadow { position: absolute; bottom: 1px; width: 90px; height: 10px; border-radius: 50%; background: #0005; filter: blur(6px); animation: access-emblem-shadow 9s ease-in-out infinite; }
+.session-access__status { display: flex; align-items: center; gap: 7px; color: var(--access-gold); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 12px; }
+.session-access__message h1 { color: var(--access-ink); font-size: clamp(23px, 2.2vw, 28px); line-height: 1.18; font-weight: 700; letter-spacing: -.035em; margin: 0; text-wrap: balance; }
+.session-access__message p { color: var(--access-muted); font-size: 13px; line-height: 1.75; margin: 16px 0 22px; }
+.session-access .session-access__retry { width: 100%; height: 46px; display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid #f6d18f; border-radius: 12px; background: linear-gradient(110deg, #f4d393, #dca74e); color: #221b0e; font-size: 13px; font-weight: 700; box-shadow: 0 6px 22px #d8a04b15; transition: box-shadow .2s, filter .2s; }
+.session-access .session-access__retry:hover { filter: brightness(1.06); box-shadow: 0 8px 26px #d8a04b30; }
+.session-access .session-access__retry:focus-visible { outline: 2px solid var(--access-gold); outline-offset: 4px; }
+.session-access__footer { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 16px; color: var(--access-muted); font-size: 10px; }
+:root:not(.dark) .session-access__card { --access-ink: #262820; --access-muted: #565b52; --access-gold: #795516; border-color: #f7e5c47a; background: linear-gradient(145deg, #fffaf0f5, #e9e7dded); box-shadow: 0 32px 90px #0006, inset 0 1px 0 #fff; }
+@keyframes access-emblem-float {
+  0%, 100% { transform: translateY(2px) rotateX(3deg) rotateY(-9deg) rotateZ(-1deg); }
+  50% { transform: translateY(-6px) rotateX(-3deg) rotateY(9deg) rotateZ(1deg); }
+}
+@keyframes access-emblem-shadow { 0%, 100% { transform: scaleX(1); opacity: .65; } 50% { transform: scaleX(.8); opacity: .35; } }
+@media (max-width: 760px) {
+  .session-access__layout { grid-template-columns: minmax(0, 440px); justify-content: center; padding: 24px 18px; gap: 0; }
+  .session-access__editorial { display: none; }
+  .session-access__scene { background: linear-gradient(0deg, #090b0ee0, #090b0e65 65%, #090b0e35), url('../assets/auth/carreiras-composicao.webp') center top / auto 100svh no-repeat; }
+  .session-access__card { padding: 24px; border-radius: 22px; }
+  .session-access__emblem { height: 140px; }
+  .session-access__badge { width: 120px; }
+}
+@media (max-height: 650px) and (min-width: 761px) {
+  .session-access__layout { padding-block: 20px; }
+  .session-access__card { padding-top: 22px; }
+  .session-access__emblem { height: 126px; margin-block: 4px; }
+  .session-access__badge { width: 112px; }
+}
+@media (max-height: 650px) and (max-width: 760px) {
+  .session-access__layout { padding-block: 16px; }
+  .session-access__card { padding: 20px; }
+  .session-access__brand .norte-brand__type { --brand-size: 19px; }
+  .session-access__emblem { height: 96px; margin-block: 6px; }
+  .session-access__badge { width: 88px; }
+  .session-access__message p { margin-block: 12px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .session-access__badge, .session-access__badge-shadow { animation: none; }
+  .session-access__retry { transition: none !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .session-access__card { backdrop-filter: none; -webkit-backdrop-filter: none; background: #191d1e; }
+  :root:not(.dark) .session-access__card { background: #f5f0e6; }
+}
+@media (forced-colors: active) {
+  .session-access { background: Canvas; color: CanvasText; }
+  .session-access__scene, .session-access__emblem, .session-access__editorial { display: none; }
+  .session-access__card { background: Canvas !important; border: 1px solid CanvasText; color: CanvasText; --access-ink: CanvasText !important; --access-muted: CanvasText !important; --access-gold: CanvasText !important; }
+  .session-access .session-access__retry { background: ButtonFace; color: ButtonText; border-color: ButtonText; }
+}
+
+/* Keep the tactical composition visible while device ownership is verified. */
+.session-access--verification .session-access__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); }
+.session-access--verification .session-access__editorial { gap: clamp(140px, 28vh, 260px); }
+.session-access__verification-status { margin-top: 36px; }
+.session-access__spinner { animation: access-session-spin 1.2s linear infinite; }
+@keyframes access-session-spin { to { transform: rotate(360deg); } }
+@media (max-width: 760px) {
+  .session-access--verification .session-access__layout { grid-template-columns: minmax(0, 420px); padding-top: clamp(180px, 32svh, 300px); }
+  .session-access--verification .session-access__scene { background: linear-gradient(0deg, #090b0ef0, #090b0e45 70%, #090b0e15), url('../assets/auth/carreiras-composicao.webp') center top / auto 64svh no-repeat; }
+  .session-access__verification-status { margin-top: 26px; }
+}
+@media (max-width: 760px) and (max-height: 600px) {
+  .session-access--verification .session-access__layout { padding-top: 20px; }
+  .session-access--verification .session-access__scene { background-size: auto 100svh; }
+}
+@media (prefers-reduced-motion: reduce) { .session-access__spinner { animation: none; } }

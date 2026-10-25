@@ -47,10 +47,6 @@ export function DailyChallengeBadge() {
     return () => window.clearInterval(id);
   }, []);
 
-  // Quem já tem conta não precisa do convite "sem cadastro". Aparece de imediato para
-  // visitantes (sem esperar a checagem de login), para não empurrar o texto da hero.
-  if (isAuthenticated) return null;
-
   const left = remaining ?? GUEST_DAILY_LIMIT;
   const used = GUEST_DAILY_LIMIT - left;
   const done = remaining !== null && remaining <= 0;
@@ -61,10 +57,12 @@ export function DailyChallengeBadge() {
     ? "Desafio de hoje concluído"
     : started
       ? `Faltam ${left} de ${GUEST_DAILY_LIMIT} questões hoje`
-      : `${GUEST_DAILY_LIMIT} questões oficiais grátis hoje`;
+      : `${GUEST_DAILY_LIMIT} questões de certo ou errado grátis hoje`;
   const hint = done
     ? "Nova rodada à meia-noite do Acre"
-    : "Sem cadastro · renova todo dia, horário do Acre";
+    : isAuthenticated
+      ? "Segurança pública · pratique agora · renova no horário do Acre"
+      : "Segurança pública · sem cadastro · renova no horário do Acre";
 
   const content = (
     <>
@@ -100,14 +98,12 @@ export function DailyChallengeBadge() {
     </>
   );
 
-  const label = `${title}. ${hint}.`;
-
   return done ? (
-    <Link to="/auth" search={{ mode: "register" }} className="daily-badge" aria-label={label}>
+    <Link to="/auth" search={{ mode: "register" }} className="daily-badge daily-badge--featured">
       {content}
     </Link>
   ) : (
-    <Link to="/desafio-diario" className="daily-badge" aria-label={label}>
+    <Link to="/desafio-diario" className="daily-badge daily-badge--featured">
       {content}
     </Link>
   );

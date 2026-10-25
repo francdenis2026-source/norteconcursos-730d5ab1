@@ -1,4 +1,4 @@
-import { SubscriptionTier } from "../types";
+import type { SubscriptionTier } from "../types";
 
 export interface TierFeature {
   name: string;
@@ -9,11 +9,25 @@ export interface TierFeature {
 export interface TierPlan {
   id: SubscriptionTier;
   name: string;
+  /** Preço mensal em reais. */
   price: number;
+  /** Preço do plano anual (2 meses grátis). Só informativo enquanto os pagamentos estão desligados. */
+  annualPrice?: number;
   description: string;
   features: Record<string, TierFeature>;
   isPopular?: boolean;
 }
+
+/** Limite diário de questões do plano Gratuito (renova à meia-noite do Acre). */
+export const FREE_DAILY_QUESTIONS = 20;
+/** Materiais da Biblioteca e do percurso de leis que o plano Gratuito abre por dia. */
+export const FREE_DAILY_LIBRARY = 3;
+/** Simulados por mês (mês do Acre) do Gratuito e do Essencial; o Gratuito faz só simulados curtos. */
+export const FREE_MONTHLY_MOCKS = 1;
+export const ESSENTIAL_MONTHLY_MOCKS = 2;
+/** Simulados por mês do Plus; somente o Premium não tem limite. */
+export const PLUS_MONTHLY_MOCKS = 4;
+export const FREE_MOCK_MAX_QUESTIONS = 20;
 
 export const SUBSCRIPTION_PLANS: TierPlan[] = [
   {
@@ -23,11 +37,20 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     description: "Para quem está começando a jornada.",
     features: {
       aiSolver: { name: "Resoluções com IA", included: false },
-      questions: { name: "Questões por dia", included: true, limit: 10 },
-      mockExams: { name: "Simulados completos", included: false },
+      questions: { name: "Questões por dia", included: true, limit: FREE_DAILY_QUESTIONS },
+      mockExams: { name: "Simulado curto por mês", included: true, limit: FREE_MONTHLY_MOCKS },
       performanceAnalytics: { name: "Análise básica", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos", included: false },
+      cronograma: { name: "Cronograma por edital", included: false },
+      notebooks: { name: "Cadernos de estudo", included: false },
+      flashcards: { name: "Flashcards", included: false },
+      library: { name: "Biblioteca e leis (por dia)", included: true, limit: FREE_DAILY_LIBRARY },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: false },
+      bankProfile: { name: "Perfil das bancas", included: false },
+      currencyFilter: { name: "Filtro Atual: conteúdo novo e em alta", included: false },
+      essays: { name: "Redação para concursos", included: false },
+      voiceReading: { name: "Leitura com voz do navegador", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
@@ -35,30 +58,50 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     id: "essential",
     name: "Essencial",
     price: 19.9,
+    annualPrice: 199,
     description: "Foco total em resolução de questões.",
     features: {
-      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 15 },
-      questions: { name: "Questões por dia", included: true, limit: 100 },
-      mockExams: { name: "Simulados completos", included: true, limit: 2 },
+      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 10 },
+      questions: { name: "Questões por dia", included: true, limit: 60 },
+      mockExams: { name: "Simulados por mês", included: true, limit: ESSENTIAL_MONTHLY_MOCKS },
       performanceAnalytics: { name: "Análise detalhada", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos", included: true },
+      cronograma: { name: "Cronograma por edital", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      bankProfile: { name: "Perfil das bancas", included: false },
+      currencyFilter: { name: "Filtro Atual: conteúdo novo e em alta", included: true },
+      essays: { name: "Redação para concursos", included: true },
+      voiceReading: { name: "Leitura com voz do navegador", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
   {
     id: "plus",
     name: "Plus",
-    price: 29.9,
+    price: 34.9,
+    annualPrice: 349,
     description: "O melhor custo-benefício para sua aprovação.",
     isPopular: true,
     features: {
-      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 50 },
-      questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
-      mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
+      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 30 },
+      questions: { name: "Questões por dia", included: true, limit: 180 },
+      mockExams: { name: "Simulados por mês", included: true, limit: PLUS_MONTHLY_MOCKS },
       performanceAnalytics: { name: "Análise avançada", included: true },
       timer: { name: "Cronômetro", included: true },
-      studyPlan: { name: "Plano de Estudos adaptativo", included: true },
+      studyPlan: { name: "Plano de Estudos", included: true },
+      cronograma: { name: "Cronograma por edital", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      bankProfile: { name: "Perfil das bancas", included: true },
+      currencyFilter: { name: "Filtro Atual: conteúdo novo e em alta", included: true },
+      essays: { name: "Redação para concursos", included: true },
+      voiceReading: { name: "Leitura com voz do navegador", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
@@ -66,16 +109,26 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     id: "premium",
     name: "Premium",
     price: 49.9,
+    annualPrice: 499,
     description: "Acompanhamento completo e ferramentas exclusivas.",
     features: {
-      aiSolver: { name: "Resoluções com IA ilimitadas", included: true, limit: "unlimited" },
+      aiSolver: { name: "Resoluções com IA", included: true, limit: "unlimited" },
       questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
       mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
       performanceAnalytics: { name: "Relatórios consolidados", included: true },
       timer: { name: "Cronômetro", included: true },
-      studyPlan: { name: "Plano de Estudos personalizado", included: true },
+      studyPlan: { name: "Plano de Estudos", included: true },
+      cronograma: { name: "Cronograma por edital", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      bankProfile: { name: "Perfil das bancas", included: true },
+      currencyFilter: { name: "Filtro Atual: conteúdo novo e em alta", included: true },
+      essays: { name: "Redação para concursos", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: true },
-      prioritySupport: { name: "Suporte Prioritário", included: true },
+      prioritySupport: { name: "Suporte com resposta em até 1 dia útil", included: true },
+      voiceReading: { name: "Leitura com voz do navegador", included: true },
     },
   },
 ];

@@ -1,0 +1,3105 @@
+{
+  "version": "2026-10-11-transito-targeted",
+  "checked_at": "2026-10-13T07:30:26.794292+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-48",
+        "art-49",
+        "art-50",
+        "art-51",
+        "art-52",
+        "art-53",
+        "art-54",
+        "art-55",
+        "art-57",
+        "art-58",
+        "art-59",
+        "art-60",
+        "art-61",
+        "art-62",
+        "art-64",
+        "art-65",
+        "art-67",
+        "art-67-a",
+        "art-67-c",
+        "art-67-e",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-76",
+        "art-77",
+        "art-77-a",
+        "art-77-b",
+        "art-77-c",
+        "art-77-d",
+        "art-77-e",
+        "art-78",
+        "art-79",
+        "art-80",
+        "art-81",
+        "art-82",
+        "art-83",
+        "art-84",
+        "art-85",
+        "art-86",
+        "art-86-a",
+        "art-87",
+        "art-88",
+        "art-89",
+        "art-90",
+        "art-91"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-48",
+      "unit_id": "61df0b5f-51c2-5767-b45c-58f417c8292d",
+      "content_sha256": "bed1a882d2f95942c6971a8f4a33fe116797de1a2197c66bba9813771f0bbcc1",
+      "simples": "Nas paradas, operações de carga ou descarga e estacionamentos, o veículo deve ser posicionado no sentido do fluxo, paralelo ao bordo da pista de rolamento e junto à guia da calçada (meio-fio), admitidas as exceções sinalizadas. Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga devem estar fora da pista de rolamento.",
+      "pontos": [
+        "Sentido do fluxo, paralelo e junto ao meio-fio.",
+        "Exceções sinalizadas.",
+        "Acostamento: fora da pista de rolamento.",
+        "DUAS RODAS MOTORIZADAS: perpendicular e junto à guia, salvo outra sinalização.",
+        "Permanecer no veículo não afasta restrições de estacionamento."
+      ],
+      "atencao": [
+        "Posição: no sentido do fluxo e junto ao meio-fio."
+      ],
+      "exemplo": "Uma motocicleta estaciona perpendicularmente e junto ao meio-fio, sem sinalização diversa. Resposta: aplica-se a regra especial do §2º para veículo motorizado de duas rodas. Variação: O motorista fica dentro do carro em local vedado: permanecer ao volante não libera estacionamento, conforme §3º.",
+      "prova": [
+        "A regra de estacionamento paralelo ao meio-fio é idêntica para todo veículo? Não. O §2º prevê posição perpendicular para motorizados de duas rodas, salvo sinalização diversa.",
+        "Manter o condutor dentro do veículo permite estacionar em qualquer local? Não. O §3º mantém a exigência de local previsto no CTB ou regulamentado por sinalização específica."
+      ],
+      "termos": [
+        {
+          "termo": "Posição de estacionamento",
+          "significado": "Orientação do veículo que distingue regra geral e exceção para duas rodas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 47"
+      ],
+      "expected": {
+        "unit_id": "61df0b5f-51c2-5767-b45c-58f417c8292d",
+        "content_sha256": "bed1a882d2f95942c6971a8f4a33fe116797de1a2197c66bba9813771f0bbcc1",
+        "simples": "Nas paradas, operações de carga ou descarga e estacionamentos, o veículo deve ser posicionado no sentido do fluxo, paralelo ao bordo da pista de rolamento e junto à guia da calçada (meio-fio), admitidas as exceções sinalizadas. Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga devem estar fora da pista de rolamento.",
+        "pontos": [
+          "Sentido do fluxo, paralelo e junto ao meio-fio.",
+          "Exceções sinalizadas.",
+          "Acostamento: fora da pista de rolamento."
+        ],
+        "atencao": [
+          "Posição: no sentido do fluxo e junto ao meio-fio."
+        ],
+        "exemplo": "O veículo estaciona paralelo à guia, no sentido do fluxo.",
+        "prova": [
+          "Assertiva que permite estacionar em sentido contrário ao fluxo sem sinalização erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-49",
+      "unit_id": "e8706a00-234b-56ae-919e-4ef690155a9a",
+      "content_sha256": "e2d188d28c99a4bfa1ab4c573bb07332151e7269b44fafcaa05a1b13e6eeff59",
+      "simples": "O condutor e os passageiros não devem abrir a porta do veículo, deixá-la aberta ou descer do veículo sem antes se certificarem de que isso não constitui perigo para eles e para outros usuários da via. O embarque e o desembarque devem ocorrer sempre do lado da calçada, exceto para o condutor.",
+      "pontos": [
+        "Certificar-se antes de abrir a porta.",
+        "Embarque e desembarque do lado da calçada."
+      ],
+      "atencao": [
+        "Exceção do lado da calçada: o condutor.",
+        "Distinguir exceção do lado da calçada e dever de verificar perigo; a exceção não remove esse dever."
+      ],
+      "exemplo": "Uma passageira abre a porta sem observar a aproximação de um ciclista. Resposta: deve antes certificar-se de que não cria perigo para si ou outros usuários. Variação: O condutor desembarca pelo lado da pista: a exceção relativa ao lado não dispensa conferir a segurança.",
+      "prova": [
+        "A exceção do condutor permite descer sem olhar o trânsito? Não. Excepciona o lado obrigatório de embarque/desembarque, mantendo o dever geral de segurança.",
+        "Só quem dirige deve conferir antes de abrir a porta? Não. O caput impõe o dever ao condutor e aos passageiros, inclusive para deixá-la aberta."
+      ],
+      "termos": [
+        {
+          "termo": "Abertura segura",
+          "significado": "Verificação prévia de risco, também para passageiros e ciclistas que passam."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 48"
+      ],
+      "expected": {
+        "unit_id": "e8706a00-234b-56ae-919e-4ef690155a9a",
+        "content_sha256": "e2d188d28c99a4bfa1ab4c573bb07332151e7269b44fafcaa05a1b13e6eeff59",
+        "simples": "O condutor e os passageiros não devem abrir a porta do veículo, deixá-la aberta ou descer do veículo sem antes se certificarem de que isso não constitui perigo para eles e para outros usuários da via. O embarque e o desembarque devem ocorrer sempre do lado da calçada, exceto para o condutor.",
+        "pontos": [
+          "Certificar-se antes de abrir a porta.",
+          "Embarque e desembarque do lado da calçada."
+        ],
+        "atencao": [
+          "Exceção do lado da calçada: o condutor."
+        ],
+        "exemplo": "Antes de abrir a porta, confere-se se vem ciclista.",
+        "prova": [
+          "Assertiva que manda o passageiro desembarcar sempre pelo lado da pista erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-50",
+      "unit_id": "64ac6764-7067-506e-866d-b0f697f371e5",
+      "content_sha256": "ce925c16dadc87f7f2c987036a6924f8157ffed0b3649314341e7f15153f5a54",
+      "simples": "O uso de faixas laterais de domínio e das áreas adjacentes às estradas e rodovias obedece às condições de segurança do trânsito estabelecidas pelo órgão ou entidade com circunscrição sobre a via.",
+      "pontos": [
+        "Faixas de domínio e áreas adjacentes.",
+        "Condições definidas pelo órgão com circunscrição."
+      ],
+      "atencao": [
+        "Quem define é o órgão com circunscrição sobre a via.",
+        "Não confundir faixa de domínio com faixa não edificável nem inventar largura ou afastamento neste artigo."
+      ],
+      "exemplo": "O proprietário pretende usar a área junto à rodovia para acesso ao seu empreendimento. Resposta: esse uso precisa observar as condições de segurança do órgão com circunscrição sobre a via. Variação: A propriedade do imóvel adjacente não torna irrelevante a segurança de quem circula na rodovia.",
+      "prova": [
+        "A faixa lateral de domínio pode ser usada sem observar a segurança viária? Não. O artigo vincula o uso às condições estabelecidas pelo órgão com circunscrição.",
+        "O art. 50 define sozinho uma distância universal para toda construção? Não. Trata das condições de segurança; não fixa neste dispositivo uma metragem única de afastamento."
+      ],
+      "termos": [
+        {
+          "termo": "Faixa de domínio",
+          "significado": "Área lateral da infraestrutura rodoviária, cujo uso se submete às regras competentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 21"
+      ],
+      "expected": {
+        "unit_id": "64ac6764-7067-506e-866d-b0f697f371e5",
+        "content_sha256": "ce925c16dadc87f7f2c987036a6924f8157ffed0b3649314341e7f15153f5a54",
+        "simples": "O uso de faixas laterais de domínio e das áreas adjacentes às estradas e rodovias obedece às condições de segurança do trânsito estabelecidas pelo órgão ou entidade com circunscrição sobre a via.",
+        "pontos": [
+          "Faixas de domínio e áreas adjacentes.",
+          "Condições definidas pelo órgão com circunscrição."
+        ],
+        "atencao": [
+          "Quem define é o órgão com circunscrição sobre a via."
+        ],
+        "exemplo": "O uso da faixa de domínio depende de autorização e regras do órgão rodoviário.",
+        "prova": [
+          "Assertiva que libera o uso das faixas de domínio sem condições de segurança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-51",
+      "unit_id": "fe5e69f4-b108-597c-b816-9eb60b7b7518",
+      "content_sha256": "16747134d75ca15db9fa54dc983564f294bd79b364af580d19519d724704ea0b",
+      "simples": "Nas vias internas pertencentes a condomínios constituídos por unidades autônomas, a sinalização de regulamentação da via é implantada e mantida às expensas do condomínio, após aprovação dos projetos pelo órgão ou entidade com circunscrição sobre a via.",
+      "pontos": [
+        "Sinalização às expensas do condomínio.",
+        "Aprovação dos projetos pelo órgão de trânsito."
+      ],
+      "atencao": [
+        "Condomínio paga, mas o órgão aprova o projeto.",
+        "Integrar art. 2º: vias internas de condomínios de unidades autônomas integram o alcance do CTB."
+      ],
+      "exemplo": "O condomínio pretende implantar placas nas vias internas. Resposta: paga a implantação e a manutenção, mas deve obter aprovação prévia dos projetos pelo órgão com circunscrição. Variação: A aprovação pública do projeto não transfere automaticamente as despesas de manutenção ao poder público.",
+      "prova": [
+        "Quem paga a sinalização regulamentadora nas vias internas do condomínio? O condomínio, inclusive a manutenção, conforme o recorte expresso do artigo.",
+        "A aprovação dos projetos pode ser omitida porque a via é interna? Não. O CTB condiciona implantação e manutenção à aprovação pelo órgão com circunscrição."
+      ],
+      "termos": [
+        {
+          "termo": "Às expensas",
+          "significado": "Custeado pelo condomínio; aprovação pública não elimina esse encargo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 2º"
+      ],
+      "expected": {
+        "unit_id": "fe5e69f4-b108-597c-b816-9eb60b7b7518",
+        "content_sha256": "16747134d75ca15db9fa54dc983564f294bd79b364af580d19519d724704ea0b",
+        "simples": "Nas vias internas pertencentes a condomínios constituídos por unidades autônomas, a sinalização de regulamentação da via é implantada e mantida às expensas do condomínio, após aprovação dos projetos pelo órgão ou entidade com circunscrição sobre a via.",
+        "pontos": [
+          "Sinalização às expensas do condomínio.",
+          "Aprovação dos projetos pelo órgão de trânsito."
+        ],
+        "atencao": [
+          "Condomínio paga, mas o órgão aprova o projeto."
+        ],
+        "exemplo": "O condomínio instala as placas após aprovação do projeto pelo órgão.",
+        "prova": [
+          "Assertiva que isenta o condomínio da sinalização de suas vias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-52",
+      "unit_id": "8ee9770a-9735-5c68-8b8e-00b121e51485",
+      "content_sha256": "1c66de92c26e8ab9d4bbaf3ab681ad5127ca181c6f236ee49af59c17ef2f7f91",
+      "simples": "Os veículos de tração animal são conduzidos pela direita da pista, junto à guia da calçada (meio-fio) ou acostamento, sempre que não houver faixa especial a eles destinada, devendo seus condutores obedecer, no que couber, às normas de circulação do Código e às fixadas pelo órgão com circunscrição sobre a via.",
+      "pontos": [
+        "Circulam pela direita, junto ao meio-fio ou acostamento.",
+        "Obedecem às normas de circulação, no que couber."
+      ],
+      "atencao": [
+        "Sem faixa especial, pela direita.",
+        "Não confundir veículo de tração animal com animal isolado, disciplinado pelo art. 53."
+      ],
+      "exemplo": "Uma carroça circula numa via sem faixa especial. Resposta: segue pela direita, junto ao meio-fio ou acostamento, obedecendo às normas de circulação aplicáveis. Variação: Se houver faixa especial destinada a esses veículos, não se aplica indiscriminadamente a posição subsidiária da pista.",
+      "prova": [
+        "Veículo de tração animal está livre das normas do CTB? Não. Seu condutor deve observá-las no que couber, além das normas do órgão competente.",
+        "A regra pela direita ignora a existência de faixa especial? Não. O artigo a vincula à ausência de faixa especial destinada aos veículos de tração animal."
+      ],
+      "termos": [
+        {
+          "termo": "Tração animal",
+          "significado": "Propulsão por animal, com regras próprias sem exclusão geral do CTB."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 53"
+      ],
+      "expected": {
+        "unit_id": "8ee9770a-9735-5c68-8b8e-00b121e51485",
+        "content_sha256": "1c66de92c26e8ab9d4bbaf3ab681ad5127ca181c6f236ee49af59c17ef2f7f91",
+        "simples": "Os veículos de tração animal são conduzidos pela direita da pista, junto à guia da calçada (meio-fio) ou acostamento, sempre que não houver faixa especial a eles destinada, devendo seus condutores obedecer, no que couber, às normas de circulação do Código e às fixadas pelo órgão com circunscrição sobre a via.",
+        "pontos": [
+          "Circulam pela direita, junto ao meio-fio ou acostamento.",
+          "Obedecem às normas de circulação, no que couber."
+        ],
+        "atencao": [
+          "Sem faixa especial, pela direita."
+        ],
+        "exemplo": "A carroça trafega junto ao acostamento.",
+        "prova": [
+          "Assertiva que isenta veículos de tração animal das normas de circulação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 53"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-53",
+      "unit_id": "e7ee2a4a-0fc2-5a36-9fd3-a1afa5896f01",
+      "content_sha256": "03027439399dc2a8c491ed0b475e24fb3f81f67981009d73e6a98c2c6e11f1f7",
+      "simples": "Os animais isolados ou em grupos só podem circular nas vias quando conduzidos por um guia. Para facilitar os deslocamentos, os rebanhos devem ser divididos em grupos de tamanho moderado e separados uns dos outros por espaços suficientes para não obstruir o trânsito; e os animais que circularem pela pista de rolamento devem ser mantidos junto ao bordo da pista.",
+      "pontos": [
+        "Animais só com guia.",
+        "Rebanhos divididos em grupos moderados.",
+        "Junto ao bordo da pista."
+      ],
+      "atencao": [
+        "Sem guia, o animal não pode circular na via.",
+        "Não inventar quantidade máxima por grupo nem confundir guia de condução com meio-fio."
+      ],
+      "exemplo": "Um guia conduz rebanho dividido em grupos moderados, separados para permitir passagem. Resposta: atende ao dever de não obstruir o trânsito, mantendo animais junto ao bordo quando na pista. Variação: Dividir o rebanho não dispensa guia; o requisito também alcança um único animal em circulação.",
+      "prova": [
+        "A exigência de guia vale só para rebanhos grandes? Não. O caput alcança animais isolados ou em grupos, sem fixar quantidade mínima.",
+        "O CTB define um número exato de animais por grupo neste artigo? Não. Exige tamanho moderado e separação suficiente para não obstruir, sem número universal."
+      ],
+      "termos": [
+        {
+          "termo": "Guia do animal",
+          "significado": "Pessoa que conduz a circulação dos animais, distinta de guia física da calçada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 52"
+      ],
+      "expected": {
+        "unit_id": "e7ee2a4a-0fc2-5a36-9fd3-a1afa5896f01",
+        "content_sha256": "03027439399dc2a8c491ed0b475e24fb3f81f67981009d73e6a98c2c6e11f1f7",
+        "simples": "Os animais isolados ou em grupos só podem circular nas vias quando conduzidos por um guia. Para facilitar os deslocamentos, os rebanhos devem ser divididos em grupos de tamanho moderado e separados uns dos outros por espaços suficientes para não obstruir o trânsito; e os animais que circularem pela pista de rolamento devem ser mantidos junto ao bordo da pista.",
+        "pontos": [
+          "Animais só com guia.",
+          "Rebanhos divididos em grupos moderados.",
+          "Junto ao bordo da pista."
+        ],
+        "atencao": [
+          "Sem guia, o animal não pode circular na via."
+        ],
+        "exemplo": "O vaqueiro conduz o gado dividido em grupos.",
+        "prova": [
+          "Assertiva que permite animais soltos na via erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-54",
+      "unit_id": "275a14a6-af54-5fc5-8698-d09f8f76a10d",
+      "content_sha256": "10582e69f171269d877036d8e7e89808664c4dbec153eb419ac80261eb84887d",
+      "simples": "Os condutores de motocicletas, motonetas e ciclomotores só podem circular nas vias utilizando capacete de segurança com viseira ou óculos protetores, segurando o guidom com as duas mãos e usando vestuário de proteção de acordo com as especificações do Contran.",
+      "pontos": [
+        "Capacete com viseira ou óculos.",
+        "Guidom com as duas mãos.",
+        "Vestuário de proteção conforme o Contran."
+      ],
+      "atencao": [
+        "Vestuário de proteção depende de regulamentação do Contran.",
+        "Três exigências cumulativas.",
+        "Resolução 940/2022 em vigor desde 1º/4/2022; revogou 453/2013, 680/2017 e 846/2021.",
+        "Integrar art. 244, VII: a retirada de uma mão para indicar manobra é exceção específica; não gerar assertiva universal contraditória."
+      ],
+      "exemplo": "O motociclista usa capacete, mas apenas óculos de sol comuns. Resposta: a Resolução 940/2022 não aceita óculos de sol isolados como substituto dos óculos de proteção. Variação: A viseira pode ser levantada com o veículo imobilizado, devendo voltar à proteção dos olhos quando entrar em movimento.",
+      "prova": [
+        "Óculos de sol isolados substituem os protetores exigidos? Não. A Resolução 940, art. 4º, §2º, proíbe essa substituição, inclusive por óculos corretivos isolados.",
+        "Usar capacete basta para dispensar as demais condições do art. 54? Não. O artigo também exige condução com as duas mãos e vestuário conforme especificações do Contran, com integração das regras específicas."
+      ],
+      "termos": [
+        {
+          "termo": "Óculos de proteção",
+          "significado": "Equipamento próprio de proteção dos olhos, diferente de óculos comuns usados isoladamente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 244",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9402022.pdf"
+      ],
+      "expected": {
+        "unit_id": "275a14a6-af54-5fc5-8698-d09f8f76a10d",
+        "content_sha256": "10582e69f171269d877036d8e7e89808664c4dbec153eb419ac80261eb84887d",
+        "simples": "Os condutores de motocicletas, motonetas e ciclomotores só podem circular nas vias utilizando capacete de segurança com viseira ou óculos protetores, segurando o guidom com as duas mãos e usando vestuário de proteção de acordo com as especificações do Contran.",
+        "pontos": [
+          "Capacete com viseira ou óculos.",
+          "Guidom com as duas mãos.",
+          "Vestuário de proteção conforme o Contran."
+        ],
+        "atencao": [
+          "Vestuário de proteção depende de regulamentação do Contran.",
+          "Três exigências cumulativas."
+        ],
+        "exemplo": "O motociclista usa capacete e segura o guidom com as duas mãos.",
+        "prova": [
+          "Assertiva que dispensa o capacete em trajetos curtos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 244"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-55",
+      "unit_id": "79ec99bd-fe0b-534b-8afa-17bbda8809ea",
+      "content_sha256": "3432acdca57ef27b4f84aba039b8bd87c4d9c6eac6ceed2c5beb5c1b326b8c15",
+      "simples": "Os passageiros de motocicletas, motonetas e ciclomotores só podem ser transportados utilizando capacete de segurança, em carro lateral acoplado ao veículo ou em assento suplementar atrás do condutor, e usando vestuário de proteção de acordo com as especificações do Contran.",
+      "pontos": [
+        "Capacete.",
+        "Carro lateral ou assento suplementar atrás do condutor.",
+        "Vestuário de proteção conforme o Contran."
+      ],
+      "atencao": [
+        "O passageiro também usa capacete.",
+        "Não ensinar dispensa de proteção dos olhos do passageiro pela ausência de repetição literal no inciso I; integrar Resolução 940/2022.",
+        "Limite etário e capacidade de cuidar da própria segurança têm disciplina própria no art. 244, V."
+      ],
+      "exemplo": "Uma passageira leva o capacete no braço durante o trajeto. Resposta: não cumpre o requisito; deve usá-lo devidamente fixado à cabeça, conforme Resolução 940. Variação: Viajar no carro lateral acoplado é posição expressamente prevista, mas não dispensa capacete nem demais requisitos.",
+      "prova": [
+        "O passageiro pode ser transportado sobre o tanque da motocicleta? Não. O art. 55 prevê carro lateral acoplado ou assento suplementar atrás do condutor.",
+        "A exigência regulamentar de viseira ou proteção ocular alcança passageiros? Sim. A Resolução 940, art. 4º, aplica-se ao condutor e ao passageiro dos veículos abrangidos."
+      ],
+      "termos": [
+        {
+          "termo": "Assento suplementar",
+          "significado": "Posição prevista atrás do condutor, diferente de transporte improvisado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 54",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9402022.pdf"
+      ],
+      "expected": {
+        "unit_id": "79ec99bd-fe0b-534b-8afa-17bbda8809ea",
+        "content_sha256": "3432acdca57ef27b4f84aba039b8bd87c4d9c6eac6ceed2c5beb5c1b326b8c15",
+        "simples": "Os passageiros de motocicletas, motonetas e ciclomotores só podem ser transportados utilizando capacete de segurança, em carro lateral acoplado ao veículo ou em assento suplementar atrás do condutor, e usando vestuário de proteção de acordo com as especificações do Contran.",
+        "pontos": [
+          "Capacete.",
+          "Carro lateral ou assento suplementar atrás do condutor.",
+          "Vestuário de proteção conforme o Contran."
+        ],
+        "atencao": [
+          "O passageiro também usa capacete."
+        ],
+        "exemplo": "O passageiro da moto usa capacete e viaja no assento atrás do condutor.",
+        "prova": [
+          "Assertiva que dispensa o capacete do passageiro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-57",
+      "unit_id": "d9a89f33-251d-5485-81d9-d6f898031620",
+      "content_sha256": "c36ee3c79aa9307124acb1997ca2bbd4b0f891ce3ee54dda7896a5d9f62000de",
+      "simples": "Os ciclomotores são conduzidos pela direita da pista de rolamento, preferencialmente no centro da faixa mais à direita ou no bordo direito da pista, quando não houver acostamento ou faixa própria a eles destinada. É proibida a circulação de ciclomotores nas vias de trânsito rápido e sobre as calçadas das vias urbanas. Se a faixa da direita for de uso exclusivo de outro tipo de veículo, circulam pela faixa adjacente.",
+      "pontos": [
+        "Circulação pela direita da pista.",
+        "Proibidos em vias de trânsito rápido.",
+        "Proibidos sobre calçadas urbanas."
+      ],
+      "atencao": [
+        "Vedados nas vias de trânsito rápido e nas calçadas.",
+        "Não tratar todo veículo elétrico ou bicicleta elétrica como ciclomotor; enquadramento depende das definições e da regulamentação própria."
+      ],
+      "exemplo": "A faixa da direita é exclusiva de ônibus e existem outras faixas. Resposta: o ciclomotor usa a faixa adjacente à da direita, conforme o parágrafo único. Variação: A falta de espaço no trânsito não permite subir na calçada urbana nem ingressar em via de trânsito rápido.",
+      "prova": [
+        "Ciclomotor pode circular em qualquer via urbana? Não. O caput proíbe via de trânsito rápido e circulação sobre calçadas urbanas.",
+        "Deve invadir a faixa da direita reservada exclusivamente a ônibus? Não. Quando há duas ou mais faixas, o parágrafo manda usar a faixa adjacente à da direita."
+      ],
+      "termos": [
+        {
+          "termo": "Faixa adjacente",
+          "significado": "Faixa ao lado da direita quando esta é exclusiva de outro tipo de veículo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 60"
+      ],
+      "expected": {
+        "unit_id": "d9a89f33-251d-5485-81d9-d6f898031620",
+        "content_sha256": "c36ee3c79aa9307124acb1997ca2bbd4b0f891ce3ee54dda7896a5d9f62000de",
+        "simples": "Os ciclomotores são conduzidos pela direita da pista de rolamento, preferencialmente no centro da faixa mais à direita ou no bordo direito da pista, quando não houver acostamento ou faixa própria a eles destinada. É proibida a circulação de ciclomotores nas vias de trânsito rápido e sobre as calçadas das vias urbanas. Se a faixa da direita for de uso exclusivo de outro tipo de veículo, circulam pela faixa adjacente.",
+        "pontos": [
+          "Circulação pela direita da pista.",
+          "Proibidos em vias de trânsito rápido.",
+          "Proibidos sobre calçadas urbanas."
+        ],
+        "atencao": [
+          "Vedados nas vias de trânsito rápido e nas calçadas."
+        ],
+        "exemplo": "O ciclomotor não pode subir na calçada para fugir do congestionamento.",
+        "prova": [
+          "Assertiva que permite ciclomotores nas vias de trânsito rápido erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-58",
+      "unit_id": "8c3a024b-4c3e-50b0-a793-69ad6a7ebbf7",
+      "content_sha256": "77034911e71db277c2ba4649c7bd23ce0de29c198f91d89fa9182a00cb501d4f",
+      "simples": "Nas vias urbanas e nas rurais de pista dupla, a circulação de bicicletas deve ocorrer, quando não houver ciclovia, ciclofaixa ou acostamento, ou quando não for possível usá-los, nos bordos da pista de rolamento, no mesmo sentido da via, com preferência sobre os veículos automotores. A autoridade de trânsito pode autorizar a circulação de bicicletas em sentido contrário ao fluxo, se o trecho tiver ciclofaixa.",
+      "pontos": [
+        "Bordos da pista, no mesmo sentido.",
+        "Preferência sobre veículos automotores.",
+        "Sentido contrário só com ciclofaixa e autorização."
+      ],
+      "atencao": [
+        "A bicicleta tem preferência sobre os automotores.",
+        "Preferência não dispensa cautela; não ampliar o âmbito rural do caput nem retirar a condição de autorização do parágrafo."
+      ],
+      "exemplo": "Numa via urbana sem ciclovia, ciclofaixa ou acostamento utilizáveis, o ciclista segue junto ao bordo no sentido da via. Resposta: tem preferência sobre automotores nesse recorte. Variação: Uma ciclofaixa existe, mas o contrafluxo não foi autorizado: a mera presença da faixa não dispensa autorização da autoridade competente.",
+      "prova": [
+        "O caput menciona indistintamente toda via rural? Não. O recorte textual é vias urbanas e rurais de pista dupla, sem ampliar automaticamente para qualquer via rural.",
+        "A autoridade pode autorizar contrafluxo em trecho sem ciclofaixa? Não pela exceção do parágrafo. Exige autorização e trecho dotado de ciclofaixa."
+      ],
+      "termos": [
+        {
+          "termo": "Contrafluxo autorizado",
+          "significado": "Circulação contrária ao fluxo automotor condicionada à ciclofaixa e autorização."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 59"
+      ],
+      "expected": {
+        "unit_id": "8c3a024b-4c3e-50b0-a793-69ad6a7ebbf7",
+        "content_sha256": "77034911e71db277c2ba4649c7bd23ce0de29c198f91d89fa9182a00cb501d4f",
+        "simples": "Nas vias urbanas e nas rurais de pista dupla, a circulação de bicicletas deve ocorrer, quando não houver ciclovia, ciclofaixa ou acostamento, ou quando não for possível usá-los, nos bordos da pista de rolamento, no mesmo sentido da via, com preferência sobre os veículos automotores. A autoridade de trânsito pode autorizar a circulação de bicicletas em sentido contrário ao fluxo, se o trecho tiver ciclofaixa.",
+        "pontos": [
+          "Bordos da pista, no mesmo sentido.",
+          "Preferência sobre veículos automotores.",
+          "Sentido contrário só com ciclofaixa e autorização."
+        ],
+        "atencao": [
+          "A bicicleta tem preferência sobre os automotores."
+        ],
+        "exemplo": "Sem ciclovia, o ciclista trafega junto ao bordo da pista, no sentido da via.",
+        "prova": [
+          "Assertiva que dá preferência aos automotores sobre as bicicletas nos bordos da pista erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 59"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-59",
+      "unit_id": "6fb135c2-0c21-5b17-9274-10897e9f7c34",
+      "content_sha256": "65dacad7a735df8f15b0936d1ba4590b1854e185351875b1effb9680a4c59d24",
+      "simples": "Desde que autorizado e devidamente sinalizado pelo órgão ou entidade com circunscrição sobre a via, é permitida a circulação de bicicletas nos passeios.",
+      "pontos": [
+        "Circulação nos passeios só com autorização e sinalização."
+      ],
+      "atencao": [
+        "Sem autorização e sinalização, o passeio é do pedestre.",
+        "Distinguir bicicleta conduzida montada e desmontada; não negar a equiparação legal ao pedestre."
+      ],
+      "exemplo": "O órgão autoriza e sinaliza passeio compartilhado para bicicletas. Resposta: há permissão no recorte do artigo, preservando a segurança dos usuários. Variação: Se o ciclista desmonta e empurra a bicicleta, aplica-se a equiparação ao pedestre do art. 68, §1º, situação distinta de pedalar no passeio.",
+      "prova": [
+        "Apenas vontade do ciclista permite pedalar no passeio? Não. A circulação depende de autorização e sinalização pelo órgão com circunscrição.",
+        "Empurrar a bicicleta desmontado é igual a pedalar sem autorização? Não. O art. 68, §1º, equipara o ciclista desmontado empurrando a bicicleta ao pedestre."
+      ],
+      "termos": [
+        {
+          "termo": "Passeio autorizado",
+          "significado": "Espaço de circulação cujo uso montado por bicicleta depende das condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 58"
+      ],
+      "expected": {
+        "unit_id": "6fb135c2-0c21-5b17-9274-10897e9f7c34",
+        "content_sha256": "65dacad7a735df8f15b0936d1ba4590b1854e185351875b1effb9680a4c59d24",
+        "simples": "Desde que autorizado e devidamente sinalizado pelo órgão ou entidade com circunscrição sobre a via, é permitida a circulação de bicicletas nos passeios.",
+        "pontos": [
+          "Circulação nos passeios só com autorização e sinalização."
+        ],
+        "atencao": [
+          "Sem autorização e sinalização, o passeio é do pedestre."
+        ],
+        "exemplo": "A prefeitura sinaliza trecho de calçada compartilhada com bicicletas.",
+        "prova": [
+          "Assertiva que permite bicicleta em qualquer calçada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 58"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-60",
+      "unit_id": "49ae53de-ae0a-5ade-a59b-768f5752d4c4",
+      "content_sha256": "ff7c889b71d42a57924f1d5795da370e715b9419e2222eacca0920d7dbbb06ff",
+      "simples": "As vias abertas à circulação classificam-se, de acordo com sua utilização, em vias urbanas, que podem ser de trânsito rápido, arteriais, coletoras ou locais, e vias rurais, que são as rodovias e as estradas.",
+      "pontos": [
+        "Vias urbanas: trânsito rápido, arterial, coletora e local.",
+        "Vias rurais: rodovias e estradas."
+      ],
+      "atencao": [
+        "Quatro tipos de vias urbanas e dois de vias rurais.",
+        "O exemplo anterior não deve afirmar que toda avenida de ligação entre bairros é automaticamente arterial; conferir definição e características efetivas."
+      ],
+      "exemplo": "Uma prova lista trânsito rápido, arterial, coletora e local como categorias urbanas. Resposta: o rol está correto; rodovias e estradas integram as rurais. Variação: chamar uma avenida de rápida no uso cotidiano não certifica sua classificação técnica.",
+      "prova": [
+        "Rodovia é categoria urbana do art. 60? Não. O inciso II classifica rodovias e estradas como vias rurais.",
+        "Nome popular de avenida basta para fixar a classificação da via? Não. É preciso examinar utilização e conceitos do Anexo I, sem deduzir toda categoria pelo nome."
+      ],
+      "termos": [
+        {
+          "termo": "Classificação da via",
+          "significado": "Categoria legal ligada à utilização, distinta do nome cotidiano do logradouro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 61"
+      ],
+      "expected": {
+        "unit_id": "49ae53de-ae0a-5ade-a59b-768f5752d4c4",
+        "content_sha256": "ff7c889b71d42a57924f1d5795da370e715b9419e2222eacca0920d7dbbb06ff",
+        "simples": "As vias abertas à circulação classificam-se, de acordo com sua utilização, em vias urbanas, que podem ser de trânsito rápido, arteriais, coletoras ou locais, e vias rurais, que são as rodovias e as estradas.",
+        "pontos": [
+          "Vias urbanas: trânsito rápido, arterial, coletora e local.",
+          "Vias rurais: rodovias e estradas."
+        ],
+        "atencao": [
+          "Quatro tipos de vias urbanas e dois de vias rurais."
+        ],
+        "exemplo": "A avenida de ligação entre bairros é via arterial.",
+        "prova": [
+          "Assertiva que inclui a via rápida como via rural erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-61",
+      "unit_id": "95bde9a2-bcff-5b19-bccb-73703d7e008c",
+      "content_sha256": "a558443b3c1821a8131950562baeea36c90277f7f52bcd43be56c1d2460e5ad5",
+      "simples": "A velocidade máxima permitida para a via é indicada por sinalização. Onde não houver sinalização regulamentadora, é de oitenta quilômetros por hora nas vias de trânsito rápido, sessenta nas arteriais, quarenta nas coletoras e trinta nas locais. Nas vias rurais: em rodovias de pista dupla, 110 km/h para automóveis, camionetas, caminhonetes e motocicletas e 90 km/h para os demais veículos; em rodovias de pista simples, 100 km/h para automóveis, camionetas, caminhonetes e motocicletas e 90 km/h para os demais; e nas estradas, 60 km/h. O órgão com circunscrição pode regulamentar, por sinalização, velocidades superiores ou inferiores.",
+      "pontos": [
+        "Urbanas: oitenta, sessenta, quarenta e trinta quilômetros por hora.",
+        "Rodovias de pista dupla: 110 km/h e 90 km/h.",
+        "Rodovias de pista simples: 100 km/h e 90 km/h.",
+        "Estradas: 60 km/h.",
+        "Regulamentação por sinalização prevalece."
+      ],
+      "atencao": [
+        "Lei 14.440/2022 incluiu motocicletas no grupo de 110/100 km/h; não repetir quadro antigo de 90 km/h para todas as motos.",
+        "Urbanas sem sinalização: 80/60/40/30; estradas: 60. Velocidade compatível pode precisar ser menor por segurança."
+      ],
+      "exemplo": "Uma motocicleta circula em rodovia de pista dupla sem sinalização de velocidade. Resposta: integra o grupo de 110 km/h na redação da Lei 14.440/2022. Variação: No mesmo tipo de rodovia existe placa regulamentando 80 km/h: não usar 110 como autorização para ignorar a placa.",
+      "prova": [
+        "Motocicleta sem placa em rodovia de pista simples tem limite geral de 90 km/h? Não. A redação atual a inclui no grupo de 100 km/h; 90 é para os demais veículos.",
+        "Os limites do §1º impedem sinalização de velocidade superior ou inferior? Não. O §2º autoriza regulamentação pelo órgão competente conforme as condições da via."
+      ],
+      "termos": [
+        {
+          "termo": "Limite subsidiário",
+          "significado": "Valor aplicável na ausência de sinalização regulamentadora, distinto do limite sinalizado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 218",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm"
+      ],
+      "expected": {
+        "unit_id": "95bde9a2-bcff-5b19-bccb-73703d7e008c",
+        "content_sha256": "a558443b3c1821a8131950562baeea36c90277f7f52bcd43be56c1d2460e5ad5",
+        "simples": "A velocidade máxima permitida para a via é indicada por sinalização. Onde não houver sinalização regulamentadora, é de oitenta quilômetros por hora nas vias de trânsito rápido, sessenta nas arteriais, quarenta nas coletoras e trinta nas locais. Nas vias rurais: em rodovias de pista dupla, 110 km/h para automóveis, camionetas, caminhonetes e motocicletas e 90 km/h para os demais veículos; em rodovias de pista simples, 100 km/h para automóveis, camionetas, caminhonetes e motocicletas e 90 km/h para os demais; e nas estradas, 60 km/h. O órgão com circunscrição pode regulamentar, por sinalização, velocidades superiores ou inferiores.",
+        "pontos": [
+          "Urbanas: oitenta, sessenta, quarenta e trinta quilômetros por hora.",
+          "Rodovias de pista dupla: 110 km/h e 90 km/h.",
+          "Rodovias de pista simples: 100 km/h e 90 km/h.",
+          "Estradas: 60 km/h.",
+          "Regulamentação por sinalização prevalece."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: os limites das rodovias foram alterados por lei posterior.",
+          "Esses valores valem onde NÃO houver sinalização regulamentadora."
+        ],
+        "exemplo": "Na via local sem placa, o limite é de trinta quilômetros por hora.",
+        "prova": [
+          "Assertiva que fixa em sessenta quilômetros por hora o limite das vias locais sem sinalização erra: são trinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-62",
+      "unit_id": "83facff9-2f57-5d87-8bfc-f35d5603bfa5",
+      "content_sha256": "6f804be9cf1d97aac1311fe65073b42cba3afba9cf3a6250dde7c0801a60e271",
+      "simples": "A velocidade mínima não pode ser inferior à metade da velocidade máxima estabelecida, respeitadas as condições operacionais de trânsito e da via.",
+      "pontos": [
+        "Mínimo: metade da velocidade máxima.",
+        "Respeitadas as condições operacionais."
+      ],
+      "atencao": [
+        "Metade da máxima, não um valor fixo.",
+        "Não transformar o cálculo em proibição absoluta durante congestionamento, chuva ou outras condições operacionais relevantes."
+      ],
+      "exemplo": "Numa via com máxima de 80 km/h e condições normais, metade corresponde a 40 km/h. Resposta: esse cálculo deve ser integrado às condições operacionais previstas no artigo. Variação: Congestionamento impede 40 km/h: a ressalva operacional evita ensinar obrigação de manter velocidade incompatível com o trânsito.",
+      "prova": [
+        "A mínima é sempre 40 km/h em qualquer via? Não. O parâmetro é metade da máxima estabelecida, respeitadas condições operacionais.",
+        "Toda velocidade inferior à metade gera automaticamente infração? Não. Integrar condições da via e trânsito e o art. 219, que tem requisitos e exceções próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Metade condicionada",
+          "significado": "Referência relativa à máxima, com ressalva operacional e sem autuação automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 61"
+      ],
+      "expected": {
+        "unit_id": "83facff9-2f57-5d87-8bfc-f35d5603bfa5",
+        "content_sha256": "6f804be9cf1d97aac1311fe65073b42cba3afba9cf3a6250dde7c0801a60e271",
+        "simples": "A velocidade mínima não pode ser inferior à metade da velocidade máxima estabelecida, respeitadas as condições operacionais de trânsito e da via.",
+        "pontos": [
+          "Mínimo: metade da velocidade máxima.",
+          "Respeitadas as condições operacionais."
+        ],
+        "atencao": [
+          "Metade da máxima, não um valor fixo."
+        ],
+        "exemplo": "Na via com limite de oitenta, a mínima é quarenta, salvo condições operacionais.",
+        "prova": [
+          "Assertiva que fixa a velocidade mínima em um terço da máxima erra: é a metade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-64",
+      "unit_id": "6e0a878e-a58c-5376-8679-c1a9ca054913",
+      "content_sha256": "af96bdfb1299ae23230019c237e7be52baef27a622c78dd1ee2c7778aed639ab",
+      "simples": "As crianças com idade inferior a dez anos que não tenham atingido 1,45 m de altura devem ser transportadas nos bancos traseiros, em dispositivo de retenção adequado para cada idade, peso e altura, salvo exceções relacionadas a tipos específicos de veículos regulamentadas pelo Contran. O Contran disciplina o uso excepcional de dispositivos de retenção no banco dianteiro e suas especificações técnicas.",
+      "pontos": [
+        "Menores de dez anos que não tenham atingido 1,45 m.",
+        "Banco traseiro.",
+        "Dispositivo de retenção adequado.",
+        "Exceções regulamentadas pelo Contran."
+      ],
+      "atencao": [
+        "Lei 14.071/2020: idade inferior a 10 anos E altura ainda inferior a 1,45 m, com remissão ao Contran.",
+        "Resolução 819/2021 vigente desde 12/4/2021. Exceções de veículo e banco dianteiro não são dispensa geral de segurança.",
+        "Transporte remunerado individual: a isenção específica do art. 2º, §§2º/3º, aplica-se durante a efetiva prestação do serviço; não autoriza dispensa permanente do veículo."
+      ],
+      "exemplo": "Uma criança de oito anos e 1,30 m vai num automóvel particular. Resposta: deve ir atrás; pela Resolução 819, nessa faixa de idade pode usar o cinto previsto no anexo, não afirmar cadeirinha obrigatória para toda criança abaixo de dez anos. Variação: Uma criança de oito anos já atingiu 1,45 m: não satisfaz a condição cumulativa de idade e altura do caput; conferir a regulamentação do banco dianteiro e demais cuidados.",
+      "prova": [
+        "Idade menor de dez anos, isoladamente, completa o requisito do caput? Não. A redação exige também que a criança não tenha atingido 1,45 m, com exceções regulamentadas.",
+        "Toda criança menor de dez anos deve usar cadeirinha, sem exceção? Não. A Resolução 819 distingue bebê conforto, cadeirinha, assento de elevação e cinto, considerando idade, peso, altura e limites do fabricante."
+      ],
+      "termos": [
+        {
+          "termo": "Retenção adequada",
+          "significado": "Sistema correspondente às condições da criança e do veículo, não cadeirinha universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 168",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao8192021.pdf"
+      ],
+      "expected": {
+        "unit_id": "6e0a878e-a58c-5376-8679-c1a9ca054913",
+        "content_sha256": "af96bdfb1299ae23230019c237e7be52baef27a622c78dd1ee2c7778aed639ab",
+        "simples": "As crianças com idade inferior a dez anos que não tenham atingido 1,45 m de altura devem ser transportadas nos bancos traseiros, em dispositivo de retenção adequado para cada idade, peso e altura, salvo exceções relacionadas a tipos específicos de veículos regulamentadas pelo Contran. O Contran disciplina o uso excepcional de dispositivos de retenção no banco dianteiro e suas especificações técnicas.",
+        "pontos": [
+          "Menores de dez anos que não tenham atingido 1,45 m.",
+          "Banco traseiro.",
+          "Dispositivo de retenção adequado.",
+          "Exceções regulamentadas pelo Contran."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a regra de idade e altura veio de lei posterior.",
+          "O requisito é idade menor que dez anos E altura menor que 1,45 m."
+        ],
+        "exemplo": "A criança de oito anos com 1,30 m viaja no banco traseiro com dispositivo de retenção.",
+        "prova": [
+          "Assertiva que dispensa o dispositivo de retenção para criança de sete anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 168"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-65",
+      "unit_id": "b2ae9699-5e36-520d-bba7-136a6f962588",
+      "content_sha256": "60952e7f297324306d5e68cc1f4285b4ba7e41b29f2c71bd903bba5889fd61aa",
+      "simples": "É obrigatório o uso do cinto de segurança para condutor e passageiros em todas as vias do território nacional, salvo em situações regulamentadas pelo Contran.",
+      "pontos": [
+        "Cinto obrigatório para condutor e passageiros.",
+        "Em todas as vias do país.",
+        "Exceções regulamentadas pelo Contran."
+      ],
+      "atencao": [
+        "Vale para condutor E passageiros, em TODAS as vias.",
+        "Não omitir a ressalva regulamentar nem inventar exceção para trajetos curtos."
+      ],
+      "exemplo": "Num trajeto curto dentro da cidade, passageiro do banco traseiro deixa de usar cinto. Resposta: curta duração e posição traseira não são exceções criadas pelo artigo. Variação: Uma hipótese específica regulamentada pelo Contran deve ser analisada nos seus requisitos, sem presumir dispensa para qualquer passageiro.",
+      "prova": [
+        "O cinto é obrigatório só em rodovias? Não. O artigo abrange todas as vias do território nacional, para condutor e passageiros.",
+        "O art. 65 permite qualquer exceção escolhida pelo motorista? Não. A ressalva depende de situação regulamentada pelo Contran, não de preferência pessoal."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção regulamentada",
+          "significado": "Hipótese definida pela autoridade competente, distinta de dispensa informal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 167"
+      ],
+      "expected": {
+        "unit_id": "b2ae9699-5e36-520d-bba7-136a6f962588",
+        "content_sha256": "60952e7f297324306d5e68cc1f4285b4ba7e41b29f2c71bd903bba5889fd61aa",
+        "simples": "É obrigatório o uso do cinto de segurança para condutor e passageiros em todas as vias do território nacional, salvo em situações regulamentadas pelo Contran.",
+        "pontos": [
+          "Cinto obrigatório para condutor e passageiros.",
+          "Em todas as vias do país.",
+          "Exceções regulamentadas pelo Contran."
+        ],
+        "atencao": [
+          "Vale para condutor E passageiros, em TODAS as vias."
+        ],
+        "exemplo": "O passageiro do banco traseiro também usa cinto.",
+        "prova": [
+          "Assertiva que dispensa o cinto dos passageiros do banco traseiro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 167"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67",
+      "unit_id": "5f270db3-70bf-5d72-9cb4-86de3bb00292",
+      "content_sha256": "4cc4fcc680b15db88089200f475b906e443725f12756e44595cd6ec5fcb317b4",
+      "simples": "As provas ou competições desportivas, inclusive seus ensaios, em via aberta à circulação, só podem ser realizadas mediante prévia permissão da autoridade de trânsito e dependem de autorização expressa da confederação desportiva ou entidades estaduais filiadas, caução ou fiança para cobrir possíveis danos à via, contrato de seguro contra riscos e sinistros em favor de terceiros e prévio recolhimento dos custos operacionais.",
+      "pontos": [
+        "Prévia permissão da autoridade de trânsito.",
+        "Autorização da confederação desportiva.",
+        "Caução ou fiança.",
+        "Seguro em favor de terceiros.",
+        "Recolhimento dos custos operacionais."
+      ],
+      "atencao": [
+        "Quatro condições além da permissão prévia.",
+        "Lei 14.599/2023 substituiu a expressão por riscos e sinistros no inciso III, sem eliminar o seguro nem as demais condições."
+      ],
+      "exemplo": "Os organizadores obtêm autorização da confederação para competir em via aberta. Resposta: ainda precisam da prévia permissão da autoridade com circunscrição e das outras condições legais. Variação: Realizar apenas um ensaio da competição não dispensa o regime do caput.",
+      "prova": [
+        "Caução para dano à via substitui seguro em favor de terceiros? Não. Os incisos II e III têm objetos distintos e integram o conjunto de requisitos.",
+        "Os custos operacionais só podem ser recolhidos depois da prova? Não. O inciso IV exige prévio recolhimento, e o artigo também abrange os ensaios."
+      ],
+      "termos": [
+        {
+          "termo": "Caução ou fiança",
+          "significado": "Garantia de possíveis danos materiais à via, diferente do seguro para terceiros."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 173",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "5f270db3-70bf-5d72-9cb4-86de3bb00292",
+        "content_sha256": "4cc4fcc680b15db88089200f475b906e443725f12756e44595cd6ec5fcb317b4",
+        "simples": "As provas ou competições desportivas, inclusive seus ensaios, em via aberta à circulação, só podem ser realizadas mediante prévia permissão da autoridade de trânsito e dependem de autorização expressa da confederação desportiva ou entidades estaduais filiadas, caução ou fiança para cobrir possíveis danos à via, contrato de seguro contra riscos e sinistros em favor de terceiros e prévio recolhimento dos custos operacionais.",
+        "pontos": [
+          "Prévia permissão da autoridade de trânsito.",
+          "Autorização da confederação desportiva.",
+          "Caução ou fiança.",
+          "Seguro em favor de terceiros.",
+          "Recolhimento dos custos operacionais."
+        ],
+        "atencao": [
+          "Quatro condições além da permissão prévia."
+        ],
+        "exemplo": "A corrida de rua exige permissão da autoridade, seguro e caução.",
+        "prova": [
+          "Assertiva que dispensa o seguro em favor de terceiros nas competições em via aberta erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 173"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67-a",
+      "unit_id": "61ff1705-6689-5fcf-9aab-b742a3f3a030",
+      "content_sha256": "ab7dd512a6605c8a47857a8f2018a61a1331fd7b4c3376fa08d71c64e4304ec1",
+      "simples": "As regras do capítulo sobre jornada de direção aplicam-se aos motoristas profissionais de transporte rodoviário coletivo de passageiros e de transporte rodoviário de cargas.",
+      "pontos": [
+        "Aplicação aos motoristas de passageiros e de cargas."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído pela Lei do Motorista.",
+        "Alcança passageiros E cargas.",
+        "Redação e estrutura reorganizadas pela Lei 13.103/2015; ressalvar ADI 5322 nas regras de descanso do capítulo."
+      ],
+      "exemplo": "Uma motorista profissional transporta passageiros em ônibus rodoviário. Resposta: integra o alcance do capítulo, assim como motorista profissional de cargas. Variação: A definição do público abrangido não resolve sozinha todas as regras da jornada trabalhista; distinguir condução efetiva e tempo à disposição.",
+      "prova": [
+        "O capítulo alcança somente motorista de caminhão? Não. O rol inclui transporte rodoviário coletivo de passageiros e transporte rodoviário de cargas.",
+        "Os §§1º a 7º revogados ainda criam deveres neste artigo? Não. São marcações históricas de revogação; o §8º vetado também não cria regra vigente."
+      ],
+      "termos": [
+        {
+          "termo": "Tempo de condução",
+          "significado": "Período efetivamente ao volante, conceito que não esgota toda jornada de trabalho."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 67-C",
+        "https://noticias.stf.jus.br/postsnoticias/stf-invalida-dispositivos-da-lei-dos-caminhoneiros-sobre-tempo-de-espera-jornada-e-descanso/"
+      ],
+      "expected": {
+        "unit_id": "61ff1705-6689-5fcf-9aab-b742a3f3a030",
+        "content_sha256": "ab7dd512a6605c8a47857a8f2018a61a1331fd7b4c3376fa08d71c64e4304ec1",
+        "simples": "As regras do capítulo sobre jornada de direção aplicam-se aos motoristas profissionais de transporte rodoviário coletivo de passageiros e de transporte rodoviário de cargas.",
+        "pontos": [
+          "Aplicação aos motoristas de passageiros e de cargas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído pela Lei do Motorista.",
+          "Alcança passageiros E cargas."
+        ],
+        "exemplo": "O motorista de ônibus interestadual e o de caminhão submetem-se às regras de descanso.",
+        "prova": [
+          "Assertiva que exclui os motoristas de cargas das regras de descanso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67-c",
+      "unit_id": "3abf5456-c212-5ce4-a321-d4eb1d748149",
+      "content_sha256": "adb8d9296781a045231887e7fb218699ba1d1601a33ecacce633210f4bcea651",
+      "simples": "O caput limita a condução contínua a cinco horas e meia. Cargas: 30 minutos de descanso dentro de seis horas; passageiros: 30 minutos a cada quatro horas. As pausas têm recortes próprios. No descanso diário de onze horas em 24 horas, NÃO reproduzir como autorização vigente o fracionamento/compensação residual do §3º: a ADI 5322 invalidou essa flexibilização. Condução efetiva não se confunde com toda jornada. Exceções de segurança e de pontos de parada exigem análise de seus requisitos.",
+      "pontos": [
+        "CONDUÇÃO CONTÍNUA: limite de 5h30.",
+        "CARGAS: 30 minutos dentro de 6 horas; PASSAGEIROS: 30 minutos a cada 4 horas, com regras próprias de pausa.",
+        "DESCANSO DIÁRIO: onze horas; ADI 5322 impede ensinar fracionamento entre jornadas e coincidência com paradas obrigatórias como autorização vigente.",
+        "§2º: situação excepcional justificada e registrada, tempo apenas necessário para local seguro, SEM comprometimento da segurança.",
+        "§§8º/9º: regulamentação sobre falta de pontos/vagas e publicação periódica de relação de espaços; não dispensa genérica."
+      ],
+      "atencao": [
+        "INTERPRETAÇÃO/CONTROLE: notícia oficial STF de 5/7/2023, julgamento concluído em 30/6/2023, ADI 5322. O compilado conserva trecho com remissão à decisão; reprodução literal isolada induz erro.",
+        "Distinguir pausas ao volante, descanso entre jornadas e descanso semanal; não transformar tempo de espera em período universalmente fora da jornada.",
+        "Efeitos temporais e decisões posteriores devem ser consultados no processo; não aplicar a fatos antigos por automatismo nem certificar todas as hipóteses trabalhistas."
+      ],
+      "exemplo": "Uma transportadora pretende dar oito horas de descanso contínuo e três em parcelas com base no §3º ainda exibido no compilado. Resposta: não ensinar essa autorização residual como vigente; o STF invalidou o fracionamento do descanso entre jornadas e sua coincidência com paradas obrigatórias na ADI 5322. Variação: As pausas de 30 minutos na condução de carga ou passageiros têm recortes próprios nos §§1º/1º-A; não concluir que o STF aboliu toda pausa ou todo fracionamento desses intervalos.",
+      "prova": [
+        "É correto reproduzir como vigente o descanso diário de oito horas mais três fracionadas? Não. A ADI 5322 atingiu essa flexibilização; manter onze horas de descanso diário sem a autorização invalidada.",
+        "Cinco horas e meia ao volante equivalem ao limite total de toda jornada trabalhista? Não. O artigo trata de condução; jornada, espera e outras atividades precisam de integração ao regime trabalhista e à decisão."
+      ],
+      "termos": [
+        {
+          "termo": "Descanso entre jornadas",
+          "significado": "Repouso diário de onze horas, distinto das pausas de condução e da redação residual invalidada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 67-E",
+        "https://noticias.stf.jus.br/postsnoticias/stf-invalida-dispositivos-da-lei-dos-caminhoneiros-sobre-tempo-de-espera-jornada-e-descanso/",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "3abf5456-c212-5ce4-a321-d4eb1d748149",
+        "content_sha256": "adb8d9296781a045231887e7fb218699ba1d1601a33ecacce633210f4bcea651",
+        "simples": "É vedado ao motorista profissional dirigir por mais de cinco horas e meia ininterruptas veículos de transporte rodoviário coletivo de passageiros ou de cargas. Observam-se 30 minutos de descanso dentro de cada 6 horas na condução de veículo de carga, e 30 minutos a cada 4 horas no transporte rodoviário de passageiros, facultado o fracionamento. O condutor deve observar, em 24 horas, no mínimo 11 horas de descanso, com 8 horas ininterruptas no primeiro período. Tempo de direção é apenas o período efetivamente ao volante. O condutor só inicia a viagem após cumprir integralmente o intervalo de descanso. Em situações excepcionais justificadas, o tempo pode ser elevado.",
+        "pontos": [
+          "Máximo de cinco horas e meia ininterruptas ao volante.",
+          "Descanso de 30 minutos: a cada 6 horas (carga) e a cada 4 horas (passageiros).",
+          "Mínimo de 11 horas de descanso em 24 horas, sendo 8 ininterruptas.",
+          "Situações excepcionais justificadas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a Lei do Motorista alterou o regime de jornada e descanso; confira o texto vigente.",
+          "Cinco horas e meia ininterruptas; descanso diário de 11 horas."
+        ],
+        "exemplo": "O caminhoneiro para por 30 minutos antes de completar 6 horas de condução.",
+        "prova": [
+          "Assertiva que permite dirigir por 8 horas ininterruptas erra: o máximo é cinco horas e meia."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67-E"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67-e",
+      "unit_id": "b6be3ead-9d79-5ebc-afe2-f4ccef3cad07",
+      "content_sha256": "ffe92d844d2edd408ae9810162a6849ca5d089ce29d12477895724be0de44c24",
+      "simples": "O motorista profissional é responsável por controlar e registrar o tempo de condução, com vistas à estrita observância do art. 67-C. A inobservância dos períodos de descanso o sujeita às penalidades do Código, salvo a situação excepcional dos transportadores de cargas. O tempo é controlado por registrador instantâneo inalterável de velocidade e tempo, diário de bordo, papeleta, ficha de trabalho externo ou meios eletrônicos, conforme norma do Contran. O equipamento funciona de forma independente do condutor, que é responsável pela guarda, preservação e exatidão das informações.",
+      "pontos": [
+        "Controle e registro pelo motorista.",
+        "Penalidades pela inobservância do descanso.",
+        "Registro por tacógrafo, diário de bordo ou meios eletrônicos.",
+        "Condutor responde pela guarda e exatidão dos dados."
+      ],
+      "atencao": [
+        "§1º-A incluído pela Lei 14.440/2022: exceção específica de cargas, integrada ao §8º atual do art. 67-C.",
+        "Não tratar indisponibilidade de vaga como salvo-conduto universal; não recuperar automaticamente a redação de 2022 substituída em 2023.",
+        "Integrar ADI 5322 ao descanso; registrar dados não torna válida a autorização residual de fracionamento entre jornadas."
+      ],
+      "exemplo": "O motorista registra a condução e preserva os dados do registrador. Resposta: o dever de controle e a responsabilidade pela guarda e exatidão são do condutor. Variação: Uma empresa alega que qualquer falta de vaga dispensa punição em todo transporte: a exceção do §1º-A é específica para cargas e remete ao art. 67-C, §8º, com regulamentação.",
+      "prova": [
+        "O art. 67-E exige apenas tacógrafo em toda hipótese de controle? Não. O §2º também prevê diário de bordo, papeleta, ficha ou meios eletrônicos conforme norma do Contran.",
+        "O condutor pode alterar livremente os dados registrados? Não. O §3º exige funcionamento independente de sua interferência e o §4º lhe atribui guarda, preservação e exatidão."
+      ],
+      "termos": [
+        {
+          "termo": "Registro de condução",
+          "significado": "Controle do tempo ao volante, com meios legais e dados íntegros."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 67-C",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-invalida-dispositivos-da-lei-dos-caminhoneiros-sobre-tempo-de-espera-jornada-e-descanso/"
+      ],
+      "expected": {
+        "unit_id": "b6be3ead-9d79-5ebc-afe2-f4ccef3cad07",
+        "content_sha256": "ffe92d844d2edd408ae9810162a6849ca5d089ce29d12477895724be0de44c24",
+        "simples": "O motorista profissional é responsável por controlar e registrar o tempo de condução, com vistas à estrita observância do art. 67-C. A inobservância dos períodos de descanso o sujeita às penalidades do Código, salvo a situação excepcional dos transportadores de cargas. O tempo é controlado por registrador instantâneo inalterável de velocidade e tempo, diário de bordo, papeleta, ficha de trabalho externo ou meios eletrônicos, conforme norma do Contran. O equipamento funciona de forma independente do condutor, que é responsável pela guarda, preservação e exatidão das informações.",
+        "pontos": [
+          "Controle e registro pelo motorista.",
+          "Penalidades pela inobservância do descanso.",
+          "Registro por tacógrafo, diário de bordo ou meios eletrônicos.",
+          "Condutor responde pela guarda e exatidão dos dados."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a Lei do Motorista criou exceção de penalidades para situações excepcionais no transporte de cargas.",
+          "O condutor é responsável pelo equipamento registrador."
+        ],
+        "exemplo": "O motorista guarda o disco do tacógrafo e responde por sua exatidão.",
+        "prova": [
+          "Assertiva que transfere ao embarcador a responsabilidade pela exatidão do registrador erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-68",
+      "unit_id": "54f1c252-fd19-57fd-bcc4-d30640071ff8",
+      "content_sha256": "c248ea6d1098611630ed7c5a9971eaf0818abd93bcac3c53c6fd413030b45bb8",
+      "simples": "O pedestre usa passeios/passagens urbanas e acostamentos rurais. Sem espaço utilizável, pode usar os bordos da pista em fila única e com prioridade, respeitando proibição sinalizada e segurança. Nas vias RURAIS, segue em sentido CONTRÁRIO aos veículos. Ciclista desmontado empurrando bicicleta equivale ao pedestre. Obstruções exigem sinalização e proteção pelo órgão competente.",
+      "pontos": [
+        "Passeios, passagens e acostamentos para pedestres.",
+        "Ciclista desmontado equipara-se a pedestre.",
+        "Sem passeio: bordos da pista, em fila única, com prioridade.",
+        "RURAL sem acostamento: sentido CONTRÁRIO aos veículos; não transportar automaticamente ao §2º urbano.",
+        "§5º: prever passeio nos trechos urbanos de vias rurais e nas obras de arte a construir; nessas condições, não usar acostamento.",
+        "§6º: órgão assegura sinalização e proteção diante de obstrução."
+      ],
+      "atencao": [
+        "Ciclista desmontado = pedestre."
+      ],
+      "exemplo": "Sem acostamento utilizável numa via rural, pedestres andam pelos bordos em fila única, no sentido contrário aos veículos. Resposta: é o recorte do §3º, com prioridade e ressalvas de sinalização e segurança. Variação: Na área urbana sem passeio, o §2º não repete a exigência rural de sentido contrário; não copiar essa condição para todo caso urbano.",
+      "prova": [
+        "O ciclista montado se equipara ao pedestre pelo §1º? Não. A equiparação exige estar desmontado e empurrando a bicicleta.",
+        "A prioridade autoriza andar na pista mesmo se a segurança ficar comprometida? Não. Os §§2º/3º ressalvam tanto locais proibidos pela sinalização quanto situações de segurança comprometida."
+      ],
+      "termos": [
+        {
+          "termo": "Equiparação ao pedestre",
+          "significado": "Direitos e deveres de quem desmonta e empurra a bicicleta, sem dispensar cautela."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 69"
+      ],
+      "expected": {
+        "unit_id": "54f1c252-fd19-57fd-bcc4-d30640071ff8",
+        "content_sha256": "c248ea6d1098611630ed7c5a9971eaf0818abd93bcac3c53c6fd413030b45bb8",
+        "simples": "É assegurada ao pedestre a utilização dos passeios ou passagens apropriadas das vias urbanas e dos acostamentos das vias rurais para circulação, podendo a autoridade permitir a utilização de parte da calçada para outros fins, se não prejudicar o fluxo de pedestres. O ciclista desmontado empurrando a bicicleta equipara-se ao pedestre. Na falta de passeios, o pedestre circula na pista pelos bordos, em fila única, com prioridade sobre os veículos, exceto em locais proibidos.",
+        "pontos": [
+          "Passeios, passagens e acostamentos para pedestres.",
+          "Ciclista desmontado equipara-se a pedestre.",
+          "Sem passeio: bordos da pista, em fila única, com prioridade."
+        ],
+        "atencao": [
+          "Ciclista desmontado = pedestre."
+        ],
+        "exemplo": "O ciclista que empurra a bicicleta pela calçada tem direitos de pedestre.",
+        "prova": [
+          "Assertiva que trata o ciclista desmontado como condutor de veículo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-69",
+      "unit_id": "28f10569-613d-5b20-aca0-f7eabf3bbb13",
+      "content_sha256": "e8f89cb1f1cef920e6cb4fccdb15cae81ec412600a03282d487372fa3553e4df",
+      "simples": "Para cruzar a pista de rolamento, o pedestre toma precauções de segurança, considerando a visibilidade, a distância e a velocidade dos veículos, usando sempre as faixas ou passagens destinadas a ele, quando existirem a até cinquenta metros. Onde não houver faixa, cruza em sentido perpendicular ao eixo da via. Em passagem sinalizada, obedece ao foco de pedestres ou aguarda que o semáforo ou o agente interrompa o fluxo. Nas interseções sem faixa, atravessa na continuação da calçada, sem obstruir o trânsito e sem demorar-se ou parar na pista.",
+      "pontos": [
+        "Usar faixas existentes até cinquenta metros.",
+        "Cruzamento perpendicular quando não há faixa.",
+        "Obedecer ao foco de pedestres.",
+        "Não demorar ou parar na pista."
+      ],
+      "atencao": [
+        "Distância de até cinquenta metros para a obrigação de usar a faixa.",
+        "Não retirar a expressão sem necessidade da proibição de parar; segurança continua relevante."
+      ],
+      "exemplo": "Há faixa de travessia a exatamente cinquenta metros do pedestre. Resposta: deve utilizá-la, tomando precauções de visibilidade, distância e velocidade. Variação: Iniciada a travessia, surge necessidade real de parar para evitar perigo: o inciso III proíbe demora ou parada SEM necessidade, não obriga continuar sob risco.",
+      "prova": [
+        "A distância de até cinquenta metros inclui exatamente cinquenta? Sim. O caput usa até, sem exigir que a faixa esteja a menos de cinquenta metros.",
+        "Nas interseções sem faixa, é permitido ampliar o percurso e demorar por vontade própria? Não. A travessia ocorre na continuação da calçada e não deve ser aumentada, demorada ou interrompida sem necessidade."
+      ],
+      "termos": [
+        {
+          "termo": "Travessia segura",
+          "significado": "Uso da passagem pertinente, integrado à sinalização e às precauções do pedestre."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 70"
+      ],
+      "expected": {
+        "unit_id": "28f10569-613d-5b20-aca0-f7eabf3bbb13",
+        "content_sha256": "e8f89cb1f1cef920e6cb4fccdb15cae81ec412600a03282d487372fa3553e4df",
+        "simples": "Para cruzar a pista de rolamento, o pedestre toma precauções de segurança, considerando a visibilidade, a distância e a velocidade dos veículos, usando sempre as faixas ou passagens destinadas a ele, quando existirem a até cinquenta metros. Onde não houver faixa, cruza em sentido perpendicular ao eixo da via. Em passagem sinalizada, obedece ao foco de pedestres ou aguarda que o semáforo ou o agente interrompa o fluxo. Nas interseções sem faixa, atravessa na continuação da calçada, sem obstruir o trânsito e sem demorar-se ou parar na pista.",
+        "pontos": [
+          "Usar faixas existentes até cinquenta metros.",
+          "Cruzamento perpendicular quando não há faixa.",
+          "Obedecer ao foco de pedestres.",
+          "Não demorar ou parar na pista."
+        ],
+        "atencao": [
+          "Distância de até cinquenta metros para a obrigação de usar a faixa."
+        ],
+        "exemplo": "Se há faixa a trinta metros, o pedestre deve usá-la para atravessar.",
+        "prova": [
+          "Assertiva que fixa em cem metros a distância para o uso obrigatório da faixa erra: são até cinquenta metros."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-70",
+      "unit_id": "c4e2afa6-213b-579e-be9d-91e8cae8bfd2",
+      "content_sha256": "e30169b9ffa78cb6644a325d79cf98878d32de6dbce1384e1dbb9b61eaaf1e8d",
+      "simples": "Os pedestres que atravessam a via sobre as faixas delimitadas para esse fim têm prioridade de passagem, exceto nos locais com sinalização semafórica, onde devem ser respeitadas as disposições do Código. Onde houver semáforo de controle de passagem, é dada preferência aos pedestres que não tenham concluído a travessia, mesmo que o semáforo libere a passagem dos veículos.",
+      "pontos": [
+        "Prioridade do pedestre sobre a faixa.",
+        "Exceção nos locais com semáforo.",
+        "Preferência ao pedestre que não concluiu a travessia."
+      ],
+      "atencao": [
+        "Mesmo com a mudança do semáforo, quem ainda atravessa tem preferência.",
+        "Distinguir início conforme sinalização e preferência de conclusão; conversão à direita no vermelho não elimina a proteção do pedestre."
+      ],
+      "exemplo": "O sinal muda liberando os carros enquanto uma pedestre ainda conclui a travessia. Resposta: mantém-se a preferência de quem ainda não terminou, conforme parágrafo único. Variação: Pedestre que vai iniciar travessia em local semaforizado deve observar as indicações pertinentes; preferência de conclusão não significa livre início no vermelho.",
+      "prova": [
+        "A abertura do sinal dos veículos elimina a preferência de quem já atravessa? Não. O parágrafo único preserva a preferência até a conclusão da travessia.",
+        "A existência de faixa permite ignorar o semáforo em toda hipótese? Não. O caput ressalva locais semaforizados e manda observar as disposições do CTB."
+      ],
+      "termos": [
+        {
+          "termo": "Conclusão da travessia",
+          "significado": "Situação protegida mesmo com mudança do semáforo, distinta de iniciar passagem irregular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 214"
+      ],
+      "expected": {
+        "unit_id": "c4e2afa6-213b-579e-be9d-91e8cae8bfd2",
+        "content_sha256": "e30169b9ffa78cb6644a325d79cf98878d32de6dbce1384e1dbb9b61eaaf1e8d",
+        "simples": "Os pedestres que atravessam a via sobre as faixas delimitadas para esse fim têm prioridade de passagem, exceto nos locais com sinalização semafórica, onde devem ser respeitadas as disposições do Código. Onde houver semáforo de controle de passagem, é dada preferência aos pedestres que não tenham concluído a travessia, mesmo que o semáforo libere a passagem dos veículos.",
+        "pontos": [
+          "Prioridade do pedestre sobre a faixa.",
+          "Exceção nos locais com semáforo.",
+          "Preferência ao pedestre que não concluiu a travessia."
+        ],
+        "atencao": [
+          "Mesmo com a mudança do semáforo, quem ainda atravessa tem preferência."
+        ],
+        "exemplo": "O veículo espera o pedestre terminar de atravessar, ainda que o sinal já esteja verde.",
+        "prova": [
+          "Assertiva que dá preferência ao veículo assim que o semáforo abre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 214"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-71",
+      "unit_id": "94452a41-b858-5749-8652-f61b7e6f3ae3",
+      "content_sha256": "20a15897b8b37a8fd423ace754322e8ab4b0569db79c466f6218d81e9657fd43",
+      "simples": "O órgão ou entidade com circunscrição sobre a via mantém, obrigatoriamente, as faixas e passagens de pedestres em boas condições de visibilidade, higiene, segurança e sinalização.",
+      "pontos": [
+        "Manutenção obrigatória das faixas de pedestres."
+      ],
+      "atencao": [
+        "Dever do órgão com circunscrição.",
+        "Não presumir competência municipal para toda rodovia apenas por existir travessia; examinar circunscrição."
+      ],
+      "exemplo": "Uma faixa fica apagada e sem visibilidade adequada. Resposta: o órgão com circunscrição tem dever de manutenção, não mera faculdade de repintar quando quiser. Variação: A manutenção também abrange higiene e segurança das passagens, não apenas a tinta da faixa.",
+      "prova": [
+        "O dever do art. 71 se limita à pintura? Não. O texto reúne visibilidade, higiene, segurança e sinalização de faixas e passagens.",
+        "Qualquer órgão responde indistintamente pela manutenção de toda via? Não. O artigo identifica o órgão ou entidade com circunscrição sobre a via."
+      ],
+      "termos": [
+        {
+          "termo": "Manutenção da passagem",
+          "significado": "Dever que inclui condições de uso seguro, visibilidade, higiene e sinalização."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 85"
+      ],
+      "expected": {
+        "unit_id": "94452a41-b858-5749-8652-f61b7e6f3ae3",
+        "content_sha256": "20a15897b8b37a8fd423ace754322e8ab4b0569db79c466f6218d81e9657fd43",
+        "simples": "O órgão ou entidade com circunscrição sobre a via mantém, obrigatoriamente, as faixas e passagens de pedestres em boas condições de visibilidade, higiene, segurança e sinalização.",
+        "pontos": [
+          "Manutenção obrigatória das faixas de pedestres."
+        ],
+        "atencao": [
+          "Dever do órgão com circunscrição."
+        ],
+        "exemplo": "A prefeitura repinta as faixas apagadas.",
+        "prova": [
+          "Assertiva que transfere ao pedestre a manutenção da faixa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 85"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-72",
+      "unit_id": "124103e9-7016-57a6-89ed-5dbb4142dfba",
+      "content_sha256": "c61cc5e2d350856d4425018c7d85daf77475b57d586d4ac3109e8af84517fde3",
+      "simples": "Todo cidadão ou entidade civil tem o direito de solicitar, por escrito, aos órgãos do Sistema Nacional de Trânsito, sinalização, fiscalização e implantação de equipamentos de segurança, bem como sugerir alterações em normas, legislação e outros assuntos pertinentes ao Código.",
+      "pontos": [
+        "Solicitação por escrito.",
+        "Sinalização, fiscalização e equipamentos.",
+        "Sugestão de alterações normativas."
+      ],
+      "atencao": [
+        "Direito de qualquer cidadão ou entidade civil.",
+        "Evitar transformar direito de pedir em aprovação obrigatória da proposta."
+      ],
+      "exemplo": "Uma cidadã protocola por escrito pedido de fiscalização perto de uma escola. Resposta: exerce direito próprio, sem depender de representar associação. Variação: Sugerir mudança na lei não equivale a alterá-la por meio do pedido nem assegura deferimento automático.",
+      "prova": [
+        "Só entidade civil pode solicitar sinalização ou fiscalização? Não. Todo cidadão também possui o direito previsto, exercido por escrito.",
+        "O pedido obriga implantar exatamente a solução escolhida pelo requerente? Não. Há direito de solicitação e análise, integrado ao dever de resposta do art. 73."
+      ],
+      "termos": [
+        {
+          "termo": "Solicitação escrita",
+          "significado": "Forma do pedido legal, com direito à análise e resposta, sem deferimento automático."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 73"
+      ],
+      "expected": {
+        "unit_id": "124103e9-7016-57a6-89ed-5dbb4142dfba",
+        "content_sha256": "c61cc5e2d350856d4425018c7d85daf77475b57d586d4ac3109e8af84517fde3",
+        "simples": "Todo cidadão ou entidade civil tem o direito de solicitar, por escrito, aos órgãos do Sistema Nacional de Trânsito, sinalização, fiscalização e implantação de equipamentos de segurança, bem como sugerir alterações em normas, legislação e outros assuntos pertinentes ao Código.",
+        "pontos": [
+          "Solicitação por escrito.",
+          "Sinalização, fiscalização e equipamentos.",
+          "Sugestão de alterações normativas."
+        ],
+        "atencao": [
+          "Direito de qualquer cidadão ou entidade civil."
+        ],
+        "exemplo": "A associação de moradores pede por escrito a instalação de lombada.",
+        "prova": [
+          "Assertiva que restringe o direito de solicitar a entidades públicas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 73"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-73",
+      "unit_id": "d6bfded0-07f8-501f-8fbd-37583cb32b20",
+      "content_sha256": "a34deb1586fdcf3e8072ace2577e6688d3c844473bdb97cdf4a4f5d597914170",
+      "simples": "Os órgãos do Sistema Nacional de Trânsito têm o dever de analisar as solicitações e responder, por escrito, dentro de prazos mínimos, sobre a possibilidade ou não de atendimento, justificando a análise e, se pertinente, informando quando o evento ocorrerá. As campanhas de trânsito devem esclarecer as atribuições dos órgãos e como proceder a tais solicitações.",
+      "pontos": [
+        "Dever de analisar e responder por escrito.",
+        "Justificar a análise.",
+        "Campanhas esclarecem como solicitar."
+      ],
+      "atencao": [
+        "Resposta por escrito e justificada.",
+        "A literalidade prazos mínimos não contém quantidade; verificar regime administrativo aplicável antes de ensinar prazo fechado."
+      ],
+      "exemplo": "O órgão recebe pedido de sinalização e conclui tecnicamente pela impossibilidade. Resposta: deve responder por escrito, esclarecendo ou justificando a análise. Variação: Se for pertinente informar quando a solução ocorrerá, a resposta inclui essa previsão; não cabe ignorar o requerente.",
+      "prova": [
+        "O art. 73 fixa expressamente prazo de trinta dias para todos os pedidos? Não. O texto usa prazos mínimos, sem número universal neste artigo; não inventar prazo.",
+        "Uma resposta negativa dispensa justificativa? Não. Deve esclarecer ou justificar a análise da possibilidade de atendimento, conforme o caput."
+      ],
+      "termos": [
+        {
+          "termo": "Resposta motivada",
+          "significado": "Comunicação escrita que explica a análise, inclusive quando não há atendimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 72"
+      ],
+      "expected": {
+        "unit_id": "d6bfded0-07f8-501f-8fbd-37583cb32b20",
+        "content_sha256": "a34deb1586fdcf3e8072ace2577e6688d3c844473bdb97cdf4a4f5d597914170",
+        "simples": "Os órgãos do Sistema Nacional de Trânsito têm o dever de analisar as solicitações e responder, por escrito, dentro de prazos mínimos, sobre a possibilidade ou não de atendimento, justificando a análise e, se pertinente, informando quando o evento ocorrerá. As campanhas de trânsito devem esclarecer as atribuições dos órgãos e como proceder a tais solicitações.",
+        "pontos": [
+          "Dever de analisar e responder por escrito.",
+          "Justificar a análise.",
+          "Campanhas esclarecem como solicitar."
+        ],
+        "atencao": [
+          "Resposta por escrito e justificada."
+        ],
+        "exemplo": "O órgão responde por escrito que a lombada será instalada ou justifica por que não.",
+        "prova": [
+          "Assertiva que permite ao órgão ignorar as solicitações erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-74",
+      "unit_id": "73e538ff-3248-547f-b9dc-6fc85c612e81",
+      "content_sha256": "ba5242e437449d38e8763b73fac84a26f2a7545674a93fab5199b221a5c4be94",
+      "simples": "A educação para o trânsito é direito de todos e dever prioritário dos componentes do Sistema Nacional de Trânsito. É obrigatória a existência de coordenação educacional em cada órgão ou entidade do Sistema, e os órgãos executivos devem promover o funcionamento de Escolas Públicas de Trânsito, nos moldes do Contran.",
+      "pontos": [
+        "Direito de todos.",
+        "Coordenação educacional obrigatória.",
+        "Escolas Públicas de Trânsito.",
+        "Escolas Públicas: órgãos EXECUTIVOS, estrutura própria OU convênio; não trocar com faculdade de coordenação."
+      ],
+      "atencao": [
+        "Dever PRIORITÁRIO do sistema."
+      ],
+      "exemplo": "Um órgão do SNT declara facultativa sua coordenação educacional. Resposta: o §1º determina existência obrigatória em cada órgão ou entidade. Variação: O executivo promove Escola Pública de Trânsito mediante convênio: é modalidade admitida, não precisa ser exclusivamente dentro da estrutura.",
+      "prova": [
+        "Educação para o trânsito é dever secundário do SNT? Não. O caput a declara direito de todos e dever prioritário dos componentes.",
+        "O funcionamento das Escolas Públicas só pode ocorrer por estrutura própria? Não. O §2º admite estrutura organizacional ou convênio, conforme moldes e padrões do Contran."
+      ],
+      "termos": [
+        {
+          "termo": "Dever prioritário",
+          "significado": "Educação como obrigação central do sistema, com coordenação obrigatória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 75"
+      ],
+      "expected": {
+        "unit_id": "73e538ff-3248-547f-b9dc-6fc85c612e81",
+        "content_sha256": "ba5242e437449d38e8763b73fac84a26f2a7545674a93fab5199b221a5c4be94",
+        "simples": "A educação para o trânsito é direito de todos e dever prioritário dos componentes do Sistema Nacional de Trânsito. É obrigatória a existência de coordenação educacional em cada órgão ou entidade do Sistema, e os órgãos executivos devem promover o funcionamento de Escolas Públicas de Trânsito, nos moldes do Contran.",
+        "pontos": [
+          "Direito de todos.",
+          "Coordenação educacional obrigatória.",
+          "Escolas Públicas de Trânsito."
+        ],
+        "atencao": [
+          "Dever PRIORITÁRIO do sistema."
+        ],
+        "exemplo": "O Detran mantém a Escola Pública de Trânsito.",
+        "prova": [
+          "Assertiva que torna facultativa a coordenação educacional nos órgãos do sistema erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-75",
+      "unit_id": "f7a400ea-57e7-5ac4-8a7c-04ee260e8e2d",
+      "content_sha256": "4d942d35608fe11940504d1a0f9f9b3e4378099f46592b8e6aadd3472f2eb409",
+      "simples": "O Contran estabelece, anualmente, os temas e cronogramas das campanhas de âmbito nacional promovidas por todos os órgãos do Sistema, em especial nas férias escolares, feriados prolongados e na Semana Nacional de Trânsito. Os órgãos promovem outras campanhas em sua circunscrição, de caráter permanente, e os serviços de rádio e difusão de sons e imagens explorados pelo poder público são obrigados a difundi-las gratuitamente.",
+      "pontos": [
+        "Campanhas nacionais definidas anualmente pelo Contran.",
+        "Campanhas locais.",
+        "Caráter permanente e difusão gratuita pelo poder público."
+      ],
+      "atencao": [
+        "Quem fixa os temas nacionais é o Contran.",
+        "Não ampliar obrigação do §2º para todo veículo privado de comunicação; distinguir definição anual e permanência."
+      ],
+      "exemplo": "O Contran define os temas anuais e o órgão local promove campanha adicional adequada à região. Resposta: campanhas nacionais e locais coexistem; a local não substitui o cronograma nacional. Variação: A obrigação textual de difusão gratuita refere-se aos serviços explorados pelo poder público, não presumir imposição idêntica a toda emissora privada por este parágrafo.",
+      "prova": [
+        "Anualidade dos temas torna as campanhas apenas ocasionais? Não. O §2º atribui caráter permanente, com atenção especial aos períodos indicados.",
+        "O §2º menciona toda emissora privada como obrigada à difusão gratuita? Não. O recorte expresso é serviço de rádio e difusão de sons/imagens explorado pelo poder público."
+      ],
+      "termos": [
+        {
+          "termo": "Campanha permanente",
+          "significado": "Atuação continuada, compatível com definição anual de temas e cronogramas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 76"
+      ],
+      "expected": {
+        "unit_id": "f7a400ea-57e7-5ac4-8a7c-04ee260e8e2d",
+        "content_sha256": "4d942d35608fe11940504d1a0f9f9b3e4378099f46592b8e6aadd3472f2eb409",
+        "simples": "O Contran estabelece, anualmente, os temas e cronogramas das campanhas de âmbito nacional promovidas por todos os órgãos do Sistema, em especial nas férias escolares, feriados prolongados e na Semana Nacional de Trânsito. Os órgãos promovem outras campanhas em sua circunscrição, de caráter permanente, e os serviços de rádio e difusão de sons e imagens explorados pelo poder público são obrigados a difundi-las gratuitamente.",
+        "pontos": [
+          "Campanhas nacionais definidas anualmente pelo Contran.",
+          "Campanhas locais.",
+          "Caráter permanente e difusão gratuita pelo poder público."
+        ],
+        "atencao": [
+          "Quem fixa os temas nacionais é o Contran."
+        ],
+        "exemplo": "A campanha do feriado prolongado segue o tema fixado pelo Contran.",
+        "prova": [
+          "Assertiva que atribui ao Detran a fixação dos temas nacionais erra: é do Contran."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-76",
+      "unit_id": "5c1af847-5cce-530c-9e02-252b80a7d611",
+      "content_sha256": "fe953125db8538e6687acfb187096eb1679fedc9a55191bf90ddf6520e8d1930",
+      "simples": "Educação para o trânsito ocorre nos níveis citados no caput mediante ações coordenadas. O Ministério da Educação, por proposta do Contran e do Conselho de Reitores, promove currículo interdisciplinar, conteúdo e treinamento para formação docente, corpos técnicos interprofissionais de análise estatística e planos de redução de sinistros com núcleos universitários. Não atribuir ao texto criação obrigatória de cursos de especialização.",
+      "pontos": [
+        "Educação em todos os níveis de ensino.",
+        "Coordenação entre trânsito e educação.",
+        "Currículo interdisciplinar proposto com o Contran."
+      ],
+      "atencao": [
+        "Lei 14.599/2023 atualizou o parágrafo e o inciso IV, usando sinistros. A nomenclatura de graus do caput é histórica, mas a abrangência não se restringe ao superior."
+      ],
+      "exemplo": "Uma universidade coordena plano de redução de sinistros com seu núcleo interdisciplinar. Resposta: corresponde ao inciso IV, integrado à cooperação entre educação e trânsito. Variação: Uma escola de formação de professores inclui conteúdos e treinamento: é hipótese do inciso II, não exigência textual de criar curso de especialização.",
+      "prova": [
+        "O art. 76 limita a educação de trânsito ao ensino superior? Não. O caput abrange pré-escola e os graus de ensino que nomeia, com coordenação entre sistemas.",
+        "O inciso IV atual manda criar cursos de especialização? Não. Prevê planos de redução de sinistros com núcleos universitários; não inserir obrigação que esse texto não contém."
+      ],
+      "termos": [
+        {
+          "termo": "Interdisciplinaridade",
+          "significado": "Integração de áreas do ensino e da sociedade na educação e prevenção viária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 74",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "5c1af847-5cce-530c-9e02-252b80a7d611",
+        "content_sha256": "fe953125db8538e6687acfb187096eb1679fedc9a55191bf90ddf6520e8d1930",
+        "simples": "A educação para o trânsito é promovida na pré-escola e nas escolas de 1º, 2º e 3º graus, com planejamento e ações coordenadas entre os órgãos de trânsito e de educação da União, dos Estados, do Distrito Federal e dos Municípios. O Ministério da Educação, mediante proposta do Contran e do Conselho de Reitores, promove a adoção de um currículo interdisciplinar sobre segurança de trânsito, a adaptação de conteúdos e a criação de corpos técnicos e cursos de especialização.",
+        "pontos": [
+          "Educação em todos os níveis de ensino.",
+          "Coordenação entre trânsito e educação.",
+          "Currículo interdisciplinar proposto com o Contran."
+        ],
+        "atencao": [
+          "Texto usa a nomenclatura antiga dos graus de ensino."
+        ],
+        "exemplo": "A escola inclui conteúdo de segurança no trânsito no currículo.",
+        "prova": [
+          "Assertiva que restringe a educação para o trânsito ao ensino superior erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77",
+      "unit_id": "2d43b2b0-8b50-561b-8ffe-cd726cf788ce",
+      "content_sha256": "73b68df62542fc547b5c371f5ca1feee207a410acde84096ef40d953b8e682d8",
+      "simples": "No âmbito da educação para o trânsito, cabe ao Ministério da Saúde, mediante proposta do Contran, estabelecer campanha nacional para esclarecer condutas a serem seguidas nos primeiros socorros em caso de sinistros. As campanhas têm caráter permanente por intermédio do SUS, intensificadas nos períodos do art. 76.",
+      "pontos": [
+        "Campanha nacional de primeiros socorros.",
+        "Caráter permanente pelo SUS."
+      ],
+      "atencao": [
+        "Competência do Ministério da Saúde, com proposta do Contran.",
+        "Lei 14.599/2023 atualizou a redação para sinistros. Preservar a remissão literal do parágrafo ao art. 76, sem reescrevê-la como se o compilado apontasse outro número."
+      ],
+      "exemplo": "O Ministério da Saúde estabelece, por proposta do Contran, campanha sobre primeiros socorros após sinistros. Resposta: é a competência do caput, com caráter permanente pelo SUS. Variação: Estudar a competência da campanha não autoriza ensinar técnica médica improvisada nem impor intervenção perigosa ao candidato.",
+      "prova": [
+        "O Contran sozinho ocupa o lugar do Ministério da Saúde nesta campanha? Não. Sua função textual é de proposta; a instituição da campanha cabe ao Ministério da Saúde.",
+        "O caráter permanente dispensa qualquer intensificação? Não. O parágrafo prevê intensificação nos períodos e forma da remissão legal."
+      ],
+      "termos": [
+        {
+          "termo": "Campanha de primeiros socorros",
+          "significado": "Educação pública sob competência da Saúde, por proposta do Contran."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 76",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "2d43b2b0-8b50-561b-8ffe-cd726cf788ce",
+        "content_sha256": "73b68df62542fc547b5c371f5ca1feee207a410acde84096ef40d953b8e682d8",
+        "simples": "No âmbito da educação para o trânsito, cabe ao Ministério da Saúde, mediante proposta do Contran, estabelecer campanha nacional para esclarecer condutas a serem seguidas nos primeiros socorros em caso de sinistros. As campanhas têm caráter permanente por intermédio do SUS, intensificadas nos períodos do art. 76.",
+        "pontos": [
+          "Campanha nacional de primeiros socorros.",
+          "Caráter permanente pelo SUS."
+        ],
+        "atencao": [
+          "Competência do Ministério da Saúde, com proposta do Contran."
+        ],
+        "exemplo": "Campanha orienta o que fazer até a chegada do socorro.",
+        "prova": [
+          "Assertiva que atribui ao Ministério dos Transportes a campanha de primeiros socorros erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77-a",
+      "unit_id": "4ed45be8-15f9-593d-8e8e-18f850ab3bcf",
+      "content_sha256": "fa36a4de72072b66384564157197123a3e6b1c8f2ed407911dd130142fb03047",
+      "simples": "São assegurados aos órgãos do Sistema Nacional de Trânsito os mecanismos dos arts. 77-B a 77-E para a veiculação de mensagens educativas de trânsito em todo o território nacional, em caráter suplementar às campanhas dos arts. 75 e 77.",
+      "pontos": [
+        "Mecanismos suplementares de mensagens educativas."
+      ],
+      "atencao": [
+        "Suplementar às campanhas oficiais.",
+        "Incluído pela Lei 12.006/2009; distinguir norma original de 1997 e mecanismo posterior."
+      ],
+      "exemplo": "Uma peça publicitária contém mensagem educativa. Resposta: integra mecanismo suplementar às campanhas oficiais, não substitui programas do SNT. Variação: Mesmo com divulgação comercial educativa, os deveres de campanhas dos arts. 75 e 77 continuam.",
+      "prova": [
+        "Mensagem em publicidade substitui as campanhas oficiais? Não. O art. 77-A assegura mecanismos em caráter suplementar às campanhas dos arts. 75 e 77.",
+        "O artigo exige atuação restrita a uma cidade? Não. O caput menciona veiculação em todo território nacional pelos mecanismos dos arts. 77-B a 77-E."
+      ],
+      "termos": [
+        {
+          "termo": "Suplementar",
+          "significado": "Que acrescenta instrumento às campanhas existentes, sem eliminar seus deveres."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 77-B"
+      ],
+      "expected": {
+        "unit_id": "4ed45be8-15f9-593d-8e8e-18f850ab3bcf",
+        "content_sha256": "fa36a4de72072b66384564157197123a3e6b1c8f2ed407911dd130142fb03047",
+        "simples": "São assegurados aos órgãos do Sistema Nacional de Trânsito os mecanismos dos arts. 77-B a 77-E para a veiculação de mensagens educativas de trânsito em todo o território nacional, em caráter suplementar às campanhas dos arts. 75 e 77.",
+        "pontos": [
+          "Mecanismos suplementares de mensagens educativas."
+        ],
+        "atencao": [
+          "Suplementar às campanhas oficiais."
+        ],
+        "exemplo": "A publicidade de veículos traz mensagem educativa.",
+        "prova": [
+          "Assertiva que torna os mecanismos substitutivos das campanhas oficiais erra: são suplementares."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77-b",
+      "unit_id": "8954daa4-bb93-5e6a-b9bd-d84ef2b38605",
+      "content_sha256": "c85affe0120a62c370199fdc7b07a713108a9543e66311fbe0fb599b862b4b41",
+      "simples": "Publicidade de produtos da indústria automobilística ou afim deve incluir mensagem educativa conjuntamente veiculada. O rol abrange veículos rodoviários automotores, peças, componentes e acessórios. O §2º especifica propaganda comercial do fabricante em rádio, TV, jornal, revista e outdoor; o §3º equipara montador, encarroçador, importador e revendedor autorizado. Não ampliar automaticamente esses recortes a qualquer anunciante ou meio.",
+      "pontos": [
+        "Mensagem educativa obrigatória na publicidade automotiva.",
+        "Veículos, peças e acessórios."
+      ],
+      "atencao": [
+        "Não confundir o recorte do §2º com a extensão específica de outdoors à margem de rodovia do art. 77-C.",
+        "Inclusão pela Lei 12.006/2009; o artigo não autoriza cada anunciante a escolher livremente o padrão da mensagem."
+      ],
+      "exemplo": "Um revendedor autorizado promove comercial televisivo de veículo. Resposta: é equiparado ao fabricante pelo §3º e deve integrar mensagem educativa no recorte do artigo. Variação: A venda de peças e acessórios também integra o rol de produtos; não reduzir a obrigação apenas ao anúncio do veículo completo.",
+      "prova": [
+        "Só o fabricante original é alcançado pelo §2º? Não. O §3º equipara montador, encarroçador, importador e revendedor autorizado dos produtos abrangidos.",
+        "O §2º enuncia qualquer anúncio de qualquer produto em qualquer mídia? Não. Especifica propaganda comercial por iniciativa do fabricante/equiparados e rádio, televisão, jornal, revista ou outdoor; o art. 77-C tem extensão própria."
+      ],
+      "termos": [
+        {
+          "termo": "Fabricante equiparado",
+          "significado": "Sujeito que recebe o mesmo tratamento do fabricante no recorte do §3º."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 77-E"
+      ],
+      "expected": {
+        "unit_id": "8954daa4-bb93-5e6a-b9bd-d84ef2b38605",
+        "content_sha256": "c85affe0120a62c370199fdc7b07a713108a9543e66311fbe0fb599b862b4b41",
+        "simples": "Toda peça publicitária destinada à divulgação ou promoção, nos meios de comunicação social, de produto da indústria automobilística ou afim deve incluir obrigatoriamente mensagem educativa de trânsito conjuntamente veiculada. Consideram-se produtos os veículos rodoviários automotores de qualquer espécie e seus componentes, peças e acessórios. A obrigação se aplica à propaganda comercial de qualquer natureza.",
+        "pontos": [
+          "Mensagem educativa obrigatória na publicidade automotiva.",
+          "Veículos, peças e acessórios."
+        ],
+        "atencao": [
+          "Obrigatória em toda peça publicitária do setor."
+        ],
+        "exemplo": "O comercial de carro termina com mensagem educativa de trânsito.",
+        "prova": [
+          "Assertiva que dispensa a mensagem educativa na publicidade de peças e acessórios erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77-E"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77-c",
+      "unit_id": "3be9f325-755f-5ced-bacf-a0aeac18fa98",
+      "content_sha256": "791881459a3ae2228e0641f4b472e647f8f898df327a96f45016aaeb996d29c1",
+      "simples": "Quando se tratar de publicidade em outdoor instalado à margem de rodovia, dentro ou fora da faixa de domínio, a obrigação do art. 77-B estende-se à propaganda de qualquer tipo de produto e anunciante, inclusive institucional ou eleitoral.",
+      "pontos": [
+        "Outdoor à margem de rodovia.",
+        "Vale para qualquer produto, inclusive institucional e eleitoral."
+      ],
+      "atencao": [
+        "Abrange até a propaganda eleitoral.",
+        "Não ampliar essa extensão específica para toda mídia ou localização sem confrontar o art. 77-B."
+      ],
+      "exemplo": "Um outdoor de campanha eleitoral fica à margem de rodovia, fora da faixa de domínio. Resposta: a extensão do artigo ainda exige mensagem educativa. Variação: A regra não exige que o anúncio seja de automóvel nem que esteja dentro da faixa de domínio.",
+      "prova": [
+        "Outdoor rodoviário eleitoral está excluído porque não vende carro? Não. A extensão alcança qualquer produto e anunciante, inclusive publicidade institucional ou eleitoral.",
+        "Estar fora da faixa de domínio elimina a obrigação deste artigo? Não. O caput expressamente abrange instalação dentro ou fora dessa faixa, à margem de rodovia."
+      ],
+      "termos": [
+        {
+          "termo": "Extensão rodoviária",
+          "significado": "Ampliação da mensagem educativa para outdoors à margem de rodovia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 77-B"
+      ],
+      "expected": {
+        "unit_id": "3be9f325-755f-5ced-bacf-a0aeac18fa98",
+        "content_sha256": "791881459a3ae2228e0641f4b472e647f8f898df327a96f45016aaeb996d29c1",
+        "simples": "Quando se tratar de publicidade em outdoor instalado à margem de rodovia, dentro ou fora da faixa de domínio, a obrigação do art. 77-B estende-se à propaganda de qualquer tipo de produto e anunciante, inclusive institucional ou eleitoral.",
+        "pontos": [
+          "Outdoor à margem de rodovia.",
+          "Vale para qualquer produto, inclusive institucional e eleitoral."
+        ],
+        "atencao": [
+          "Abrange até a propaganda eleitoral."
+        ],
+        "exemplo": "O outdoor de qualquer anunciante na beira da rodovia traz a mensagem de trânsito.",
+        "prova": [
+          "Assertiva que restringe a obrigação a anúncios de veículos nos outdoors de rodovia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77-d",
+      "unit_id": "ecf0840d-ec01-5fc8-9b10-a9c309a59fa7",
+      "content_sha256": "a6a66d41464cb63300ed80391ae51b55a4fb3340a9630bca9150826b3eea5491",
+      "simples": "O Contran especifica o conteúdo e o padrão de apresentação das mensagens educativas, bem como os procedimentos de sua veiculação, em conformidade com as diretrizes das campanhas educativas de trânsito do art. 75.",
+      "pontos": [
+        "Contran define conteúdo, padrão e procedimentos."
+      ],
+      "atencao": [
+        "Competência do Contran.",
+        "Não inventar neste artigo uma frase anual ou dimensão obrigatória sem conferir a resolução específica."
+      ],
+      "exemplo": "Um anunciante quer usar qualquer frase e tamanho sem observar o padrão competente. Resposta: conteúdo, apresentação e procedimentos são especificados pelo Contran. Variação: A autonomia de uma campanha local não elimina as diretrizes nacionais do art. 75 para essas mensagens.",
+      "prova": [
+        "Cada anunciante define sozinho o padrão jurídico da mensagem? Não. O artigo atribui ao Contran especificar conteúdo, padrão e procedimentos de veiculação.",
+        "A atribuição dispensa observar as diretrizes das campanhas do art. 75? Não. O próprio caput exige conformidade com essas diretrizes."
+      ],
+      "termos": [
+        {
+          "termo": "Padrão de apresentação",
+          "significado": "Forma regulamentada da mensagem educativa, distinta de livre escolha do anunciante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 75"
+      ],
+      "expected": {
+        "unit_id": "ecf0840d-ec01-5fc8-9b10-a9c309a59fa7",
+        "content_sha256": "a6a66d41464cb63300ed80391ae51b55a4fb3340a9630bca9150826b3eea5491",
+        "simples": "O Contran especifica o conteúdo e o padrão de apresentação das mensagens educativas, bem como os procedimentos de sua veiculação, em conformidade com as diretrizes das campanhas educativas de trânsito do art. 75.",
+        "pontos": [
+          "Contran define conteúdo, padrão e procedimentos."
+        ],
+        "atencao": [
+          "Competência do Contran."
+        ],
+        "exemplo": "O Contran estabelece o formato da mensagem nas propagandas.",
+        "prova": [
+          "Assertiva que atribui a cada anunciante a definição do conteúdo da mensagem erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77-e",
+      "unit_id": "21bbf28c-18d5-5816-897d-05489566fa51",
+      "content_sha256": "8d428d3f0e462b7a1dc1f44b7552c6d2473309f6f45e8cdfa252a7859a931ef9",
+      "simples": "A veiculação de publicidade em desacordo com as condições dos arts. 77-A a 77-D é infração punível com advertência por escrito, suspensão de qualquer outra propaganda do produto nos veículos de divulgação por até sessenta dias e multa de R$ 1.627,00 a R$ 8.135,00, cobrada do dobro até o quíntuplo em caso de reincidência. As sanções são aplicadas isolada ou cumulativamente, e qualquer infração acarreta a imediata suspensão da veiculação da peça até o cumprimento das exigências.",
+      "pontos": [
+        "Advertência por escrito.",
+        "Inciso II: suspensão de OUTRA propaganda do produto nos veículos de divulgação, até 60 dias.",
+        "Multa textual: R$ 1.627 a R$ 8.135; reincidência: dobro até quíntuplo.",
+        "§1º: isoladas OU cumulativas, conforme regulamento.",
+        "§2º: imediata suspensão da peça irregular ATÉ adequação."
+      ],
+      "atencao": [
+        "Multa do dobro ao quíntuplo na reincidência.",
+        "Valores em reais fixados no texto legal; confira eventual atualização.",
+        "Não trocar suspensão da peça e suspensão de outras propagandas nem afirmar cumulação obrigatória."
+      ],
+      "exemplo": "Uma peça irregular é imediatamente suspensa até cumprir as exigências. Resposta: essa medida do §2º não se confunde com a suspensão de outras propagandas do produto, de até sessenta dias, no inciso II. Variação: Reincidência pode multiplicar a multa do dobro ao quíntuplo, mas não obriga automaticamente aplicar juntas todas as sanções.",
+      "prova": [
+        "A suspensão de até sessenta dias é a única consequência de qualquer publicidade irregular? Não. O §2º ainda determina suspensão imediata da peça até regularização, distinta da sanção do inciso II.",
+        "O texto obriga aplicação cumulativa de todas as sanções? Não. O §1º permite isolada ou cumulativamente conforme regulamento; a multa textual vai de R$ 1.627 a R$ 8.135."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão da peça",
+          "significado": "Cessação imediata até adequação, distinta da suspensão sancionatória de outras propagandas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 77-B"
+      ],
+      "expected": {
+        "unit_id": "21bbf28c-18d5-5816-897d-05489566fa51",
+        "content_sha256": "8d428d3f0e462b7a1dc1f44b7552c6d2473309f6f45e8cdfa252a7859a931ef9",
+        "simples": "A veiculação de publicidade em desacordo com as condições dos arts. 77-A a 77-D é infração punível com advertência por escrito, suspensão de qualquer outra propaganda do produto nos veículos de divulgação por até sessenta dias e multa de R$ 1.627,00 a R$ 8.135,00, cobrada do dobro até o quíntuplo em caso de reincidência. As sanções são aplicadas isolada ou cumulativamente, e qualquer infração acarreta a imediata suspensão da veiculação da peça até o cumprimento das exigências.",
+        "pontos": [
+          "Advertência por escrito.",
+          "Suspensão da propaganda por até sessenta dias.",
+          "Multa de R$ 1.627,00 a R$ 8.135,00.",
+          "Sanções isoladas ou cumulativas."
+        ],
+        "atencao": [
+          "Multa do dobro ao quíntuplo na reincidência.",
+          "Valores em reais fixados no texto legal; confira eventual atualização."
+        ],
+        "exemplo": "A emissora exibe propaganda sem mensagem e a peça é suspensa até a regularização.",
+        "prova": [
+          "Assertiva que impede a cumulação das sanções erra: podem ser aplicadas cumulativamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-78",
+      "unit_id": "ceeee06e-b16d-5ff9-b7ac-e491a3e9fc9a",
+      "content_sha256": "3124cd6d36e31eea06ab85935801c941b3c88ab90c4ed12e542bfb943ea5bc5c",
+      "simples": "O caput prevê programas de prevenção de sinistros pelos ministérios indicados, por intermédio do Contran. O parágrafo conserva referência a repasse mensal de até 5% de valores destinados à Seguridade Social dos prêmios do SPVAT, inserida pela LC 207/2024. ALERTA: a LC 211/2024 revogou a LC 207, vigente essa revogação desde 31/12/2024. Não usar o trecho residual para afirmar cobrança ou arrecadação atual do SPVAT, nem retorno automático do DPVAT.",
+      "pontos": [
+        "Caput: Saúde, Educação, Trabalho e Emprego, Transportes e Justiça e Segurança Pública, por intermédio do Contran.",
+        "Parágrafo textual: até 5% dos valores destinados à Seguridade Social dos PRÊMIOS do SPVAT; não 5% de toda arrecadação de trânsito.",
+        "LC 207/2024 instituidora REVOGADA pela LC 211/2024, art. 4º, desde publicação em 31/12/2024.",
+        "Distinguir referência residual, regime de seguro, programas preventivos e eventual direito relativo a eventos históricos."
+      ],
+      "atencao": [
+        "Não criar exercício que pressuponha arrecadação atual de SPVAT apenas porque o parágrafo permanece no compilado.",
+        "A revogação da lei modificadora não equivale automaticamente a retirar toda redação incorporada nem a restaurar a lei antiga; distinguir regime material extinto e texto residual.",
+        "Não certificadas todas as regras de indenizações relativas a sinistros históricos."
+      ],
+      "exemplo": "Uma candidata lê a referência ao SPVAT no parágrafo e conclui que o seguro está sendo cobrado hoje. Resposta: essa conclusão é indevida; a LC 211/2024 revogou a LC 207 que o instituiu, com vigência na publicação de 31/12/2024. Variação: O caput sobre programas de prevenção de sinistros permanece estudável; a ressalva financeira não elimina toda atuação preventiva dos ministérios.",
+      "prova": [
+        "A menção residual ao SPVAT prova obrigação atual de pagar esse seguro? Não. Deve ser integrada à revogação da LC 207 pela LC 211, sem criar cobrança atual pela leitura isolada.",
+        "Revogar o regime do SPVAT restaura automaticamente o regime antigo do DPVAT? Não. A revogação não provoca repristinação automática; não ensinar retorno obrigatório do antigo seguro sem norma específica."
+      ],
+      "termos": [
+        {
+          "termo": "Texto residual",
+          "significado": "Referência ainda exibida no compilado que exige integração ao regime revogado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 75",
+        "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp211.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp207.htm"
+      ],
+      "expected": {
+        "unit_id": "ceeee06e-b16d-5ff9-b7ac-e491a3e9fc9a",
+        "content_sha256": "3124cd6d36e31eea06ab85935801c941b3c88ab90c4ed12e542bfb943ea5bc5c",
+        "simples": "Os Ministérios da Saúde, da Educação, do Trabalho e Emprego, dos Transportes e da Justiça e Segurança Pública, por intermédio do Contran, desenvolvem e implementam programas destinados à prevenção de sinistros. É repassado mensalmente ao Coordenador do Sistema Nacional de Trânsito o montante equivalente a até 5% do total dos valores arrecadados destinados à Seguridade Social dos prêmios do seguro obrigatório, para aplicação nos programas e na divulgação.",
+        "pontos": [
+          "Programas de prevenção de sinistros.",
+          "Repasse mensal de até 5% da arrecadação do seguro obrigatório."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a redação do parágrafo único mudou conforme a legislação do seguro obrigatório; confira o texto vigente.",
+          "Repasse de até 5%."
+        ],
+        "exemplo": "Parte da arrecadação do seguro financia campanhas de prevenção.",
+        "prova": [
+          "Assertiva que fixa em 10% o repasse erra: são até 5%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-79",
+      "unit_id": "c6710608-b8b6-57ef-98a7-1412894e6eb1",
+      "content_sha256": "753365a595bebb770af6bb8fac2cb4dcf87620ba3b450b6b589652cd365ca029",
+      "simples": "Os órgãos e entidades executivos de trânsito podem firmar convênio com os órgãos de educação da União, dos Estados, do Distrito Federal e dos Municípios, objetivando o cumprimento das obrigações do capítulo sobre educação para o trânsito.",
+      "pontos": [
+        "Convênio com órgãos de educação."
+      ],
+      "atencao": [
+        "Faculdade, por meio de convênio.",
+        "Distinguir faculdade de celebrar convênio e obrigatoriedade das tarefas educacionais."
+      ],
+      "exemplo": "O Detran firma convênio com a secretaria estadual de educação para desenvolver formação. Resposta: é instrumento facultativo para cumprir obrigações educacionais. Variação: O órgão não firma convênio: isso não transforma o dever prioritário de educação em facultativo.",
+      "prova": [
+        "Poderão firmar convênio torna toda educação de trânsito opcional? Não. A faculdade é do instrumento cooperativo; os deveres do capítulo continuam.",
+        "O convênio está limitado à educação federal? Não. O artigo menciona órgãos de educação da União, Estados, Distrito Federal e Municípios."
+      ],
+      "termos": [
+        {
+          "termo": "Instrumento facultativo",
+          "significado": "Opção de cooperação para cumprir um dever que não se torna opcional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 76"
+      ],
+      "expected": {
+        "unit_id": "c6710608-b8b6-57ef-98a7-1412894e6eb1",
+        "content_sha256": "753365a595bebb770af6bb8fac2cb4dcf87620ba3b450b6b589652cd365ca029",
+        "simples": "Os órgãos e entidades executivos de trânsito podem firmar convênio com os órgãos de educação da União, dos Estados, do Distrito Federal e dos Municípios, objetivando o cumprimento das obrigações do capítulo sobre educação para o trânsito.",
+        "pontos": [
+          "Convênio com órgãos de educação."
+        ],
+        "atencao": [
+          "Faculdade, por meio de convênio."
+        ],
+        "exemplo": "O Detran firma convênio com a secretaria de educação.",
+        "prova": [
+          "Assertiva que torna obrigatório o convênio com os órgãos de educação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-80",
+      "unit_id": "a0d1c747-3f44-5741-93b4-bd1a2160464c",
+      "content_sha256": "691b45676d9784207d05c6b7b100ae634f79c1e5c9dd69631f17637c537a2bf4",
+      "simples": "Sempre que necessário, é colocada ao longo da via a sinalização prevista no Código e em legislação complementar, destinada a condutores e pedestres, vedada a utilização de qualquer outra. A sinalização deve ficar em posição e condições que a tornem perfeitamente visível e legível, de dia e de noite, em distância compatível com a segurança, conforme normas do Contran. O órgão máximo executivo de trânsito da União pode autorizar, em caráter experimental e por período prefixado, sinalização e equipamentos não previstos no Código.",
+      "pontos": [
+        "Só a sinalização prevista em lei.",
+        "Visível e legível de dia e de noite.",
+        "Uso experimental autorizado pelo órgão máximo executivo da União.",
+        "§3º: instalação em condomínio e estabelecimento privado coletivo é responsabilidade do proprietário."
+      ],
+      "atencao": [
+        "A vedação geral deve ser lida com a exceção EXPERIMENTAL autorizada e de período PREFIXADO.",
+        "Lei 14.599/2023 atualizou o §2º; não atribuir autorização experimental indistintamente ao órgão local ou ao Contran."
+      ],
+      "exemplo": "Um município quer testar sinal inédito sem autorização federal. Resposta: o §2º atribui autorização experimental ao órgão máximo executivo da União, por período prefixado. Variação: O supermercado de uso coletivo instala sinalização: o §3º atribui a responsabilidade ao proprietário, sem excluir condições de aprovação pertinentes.",
+      "prova": [
+        "Contran e órgão máximo executivo da União exercem a mesma função neste artigo? Não. O Contran fixa normas e especificações; a autorização experimental é do órgão máximo executivo federal.",
+        "A obrigação de instalar sinalização exclui áreas privadas de uso coletivo? Não. O §3º inclui vias de condomínios e vias/estacionamentos privados coletivos, sob responsabilidade do proprietário."
+      ],
+      "termos": [
+        {
+          "termo": "Experimento prefixado",
+          "significado": "Uso excepcional autorizado com duração definida, distinto de liberdade municipal para inventar sinais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 90",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "a0d1c747-3f44-5741-93b4-bd1a2160464c",
+        "content_sha256": "691b45676d9784207d05c6b7b100ae634f79c1e5c9dd69631f17637c537a2bf4",
+        "simples": "Sempre que necessário, é colocada ao longo da via a sinalização prevista no Código e em legislação complementar, destinada a condutores e pedestres, vedada a utilização de qualquer outra. A sinalização deve ficar em posição e condições que a tornem perfeitamente visível e legível, de dia e de noite, em distância compatível com a segurança, conforme normas do Contran. O órgão máximo executivo de trânsito da União pode autorizar, em caráter experimental e por período prefixado, sinalização e equipamentos não previstos no Código.",
+        "pontos": [
+          "Só a sinalização prevista em lei.",
+          "Visível e legível de dia e de noite.",
+          "Uso experimental autorizado pelo órgão máximo executivo da União."
+        ],
+        "atencao": [
+          "Vedada outra sinalização não prevista."
+        ],
+        "exemplo": "Placa não prevista só é usada em caráter experimental autorizado.",
+        "prova": [
+          "Assertiva que permite qualquer sinalização à escolha do município erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 90"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-81",
+      "unit_id": "2aa474a9-a28d-5361-962a-9c1d7f2246a7",
+      "content_sha256": "46895099c0fad60c9f8a8b5d428bb146f35004f3bc613d2d7d986f97be19d8c9",
+      "simples": "Nas vias públicas e nos imóveis é proibido colocar luzes, publicidade, inscrições, vegetação e mobiliário que possam gerar confusão, interferir na visibilidade da sinalização e comprometer a segurança do trânsito.",
+      "pontos": [
+        "Proibição de elementos que confundam ou prejudiquem a sinalização."
+      ],
+      "atencao": [
+        "Alcança vias públicas E imóveis.",
+        "Não converter o artigo em proibição geral de toda publicidade ou vegetação independentemente do risco descrito."
+      ],
+      "exemplo": "Um anúncio instalado em imóvel privado esconde a placa de parada obrigatória. Resposta: a proibição também alcança imóveis quando compromete visibilidade e segurança. Variação: A propriedade privada não afasta o dever, mas o texto não proíbe toda vegetação ou toda publicidade sem considerar seu efeito na segurança viária.",
+      "prova": [
+        "A proibição só alcança elementos colocados na via pública? Não. O caput abrange vias públicas e imóveis no recorte de confusão, visibilidade e segurança.",
+        "Toda árvore ao lado de via é proibida só por existir? Não. Deve ser examinada a aptidão para gerar confusão, prejudicar sinalização e comprometer segurança, sem proibição universal de vegetação."
+      ],
+      "termos": [
+        {
+          "termo": "Interferência visual",
+          "significado": "Prejuízo à percepção da sinalização e à segurança por elementos externos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 84"
+      ],
+      "expected": {
+        "unit_id": "2aa474a9-a28d-5361-962a-9c1d7f2246a7",
+        "content_sha256": "46895099c0fad60c9f8a8b5d428bb146f35004f3bc613d2d7d986f97be19d8c9",
+        "simples": "Nas vias públicas e nos imóveis é proibido colocar luzes, publicidade, inscrições, vegetação e mobiliário que possam gerar confusão, interferir na visibilidade da sinalização e comprometer a segurança do trânsito.",
+        "pontos": [
+          "Proibição de elementos que confundam ou prejudiquem a sinalização."
+        ],
+        "atencao": [
+          "Alcança vias públicas E imóveis."
+        ],
+        "exemplo": "Árvore que esconde a placa de pare fere a regra.",
+        "prova": [
+          "Assertiva que restringe a proibição às vias públicas erra: alcança também imóveis."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-82",
+      "unit_id": "c2a01574-037c-5065-ad9f-86f14d9ff9fc",
+      "content_sha256": "930052e9a0d49f7d593cb30a3b7f4591ba4f68b8c432a1642cdc4c576c901f99",
+      "simples": "É proibido afixar sobre a sinalização de trânsito e respectivos suportes, ou junto a ambos, qualquer tipo de publicidade, inscrições, legendas e símbolos que não se relacionem com a mensagem da sinalização.",
+      "pontos": [
+        "Proibida publicidade na sinalização e em seus suportes."
+      ],
+      "atencao": [
+        "Vale para os suportes também.",
+        "Preservar o requisito que não se relacionem com a mensagem; não excluir suportes da proteção."
+      ],
+      "exemplo": "Uma pessoa cola propaganda comercial no suporte de uma placa. Resposta: a vedação alcança sinalização, suportes e proximidade, não apenas a face da placa. Variação: A indicação relacionada à própria mensagem da sinalização não se confunde com anúncio estranho afixado no suporte.",
+      "prova": [
+        "Publicidade no poste da placa está liberada porque não cobre a placa? Não. O artigo inclui respectivos suportes e elementos junto a ambos.",
+        "O artigo proíbe qualquer símbolo integrante da mensagem de trânsito? Não. A vedação recai em publicidade, inscrições, legendas e símbolos que não se relacionem com essa mensagem."
+      ],
+      "termos": [
+        {
+          "termo": "Mensagem da sinalização",
+          "significado": "Conteúdo pertinente ao sinal, distinto de propaganda estranha nele ou em seu suporte."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 81"
+      ],
+      "expected": {
+        "unit_id": "c2a01574-037c-5065-ad9f-86f14d9ff9fc",
+        "content_sha256": "930052e9a0d49f7d593cb30a3b7f4591ba4f68b8c432a1642cdc4c576c901f99",
+        "simples": "É proibido afixar sobre a sinalização de trânsito e respectivos suportes, ou junto a ambos, qualquer tipo de publicidade, inscrições, legendas e símbolos que não se relacionem com a mensagem da sinalização.",
+        "pontos": [
+          "Proibida publicidade na sinalização e em seus suportes."
+        ],
+        "atencao": [
+          "Vale para os suportes também."
+        ],
+        "exemplo": "Colar anúncio no poste da placa de trânsito é proibido.",
+        "prova": [
+          "Assertiva que permite publicidade nos suportes das placas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-83",
+      "unit_id": "0a27864d-2dfc-5904-8e34-3a1032d03788",
+      "content_sha256": "d7ca8ada99942e7dac4b3f395a3be3d38ff9c44843d2e9ee2e2ce99dd7e81db7",
+      "simples": "A afixação de publicidade ou de quaisquer legendas ou símbolos ao longo das vias condiciona-se à prévia aprovação do órgão ou entidade com circunscrição sobre a via.",
+      "pontos": [
+        "Prévia aprovação do órgão com circunscrição."
+      ],
+      "atencao": [
+        "Aprovação PRÉVIA.",
+        "Não tratar aprovação como licença absoluta para interferir na sinalização."
+      ],
+      "exemplo": "Um anunciante instala painel ao longo da via e busca autorização depois. Resposta: o artigo exige aprovação PRÉVIA pelo órgão com circunscrição. Variação: Mesmo aprovado, o painel não ganha licença para ocultar sinalização ou comprometer segurança: integrar arts. 81 e 84.",
+      "prova": [
+        "A aprovação pode ser substituída por mera comunicação posterior? Não. O texto condiciona a afixação à prévia aprovação do órgão competente.",
+        "A aprovação afasta automaticamente a possibilidade de retirada por risco? Não. A segurança e a visibilidade continuam exigíveis, integrando os arts. 81 e 84."
+      ],
+      "termos": [
+        {
+          "termo": "Aprovação prévia",
+          "significado": "Controle anterior à afixação, sem imunidade diante de risco posterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 82"
+      ],
+      "expected": {
+        "unit_id": "0a27864d-2dfc-5904-8e34-3a1032d03788",
+        "content_sha256": "d7ca8ada99942e7dac4b3f395a3be3d38ff9c44843d2e9ee2e2ce99dd7e81db7",
+        "simples": "A afixação de publicidade ou de quaisquer legendas ou símbolos ao longo das vias condiciona-se à prévia aprovação do órgão ou entidade com circunscrição sobre a via.",
+        "pontos": [
+          "Prévia aprovação do órgão com circunscrição."
+        ],
+        "atencao": [
+          "Aprovação PRÉVIA."
+        ],
+        "exemplo": "O anunciante pede aprovação antes de instalar o painel à margem da via.",
+        "prova": [
+          "Assertiva que dispensa a aprovação prévia da publicidade ao longo das vias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 82"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-84",
+      "unit_id": "8d20c302-e851-5e05-8fe1-732235e00459",
+      "content_sha256": "85f63c1cdb6640f4734ca5a18511302e0553d91c4546dde6b3cc17987c59d46e",
+      "simples": "O órgão ou entidade de trânsito com circunscrição sobre a via pode retirar ou determinar a imediata retirada de qualquer elemento que prejudique a visibilidade da sinalização viária e a segurança do trânsito, com ônus para quem o tenha colocado.",
+      "pontos": [
+        "Retirada imediata de elementos prejudiciais.",
+        "Ônus para quem colocou."
+      ],
+      "atencao": [
+        "Custo recai sobre quem colocou o elemento.",
+        "O artigo não fixa valor de multa nem confere competência indistinta a órgão sem circunscrição."
+      ],
+      "exemplo": "Um painel prejudica a visibilidade da sinalização e a segurança. Resposta: o órgão pode retirar ou determinar retirada imediata, com ônus para quem o colocou. Variação: Não confundir retirada do elemento obstrutivo com remoção de veículo nem criar neste artigo valor fixo de multa.",
+      "prova": [
+        "Somente quem instalou pode fisicamente retirar o obstáculo? Não. O órgão pode retirar diretamente ou determinar a retirada, conforme o caput.",
+        "O custo é necessariamente suportado pelo poder público? Não. O ônus recai sobre quem colocou o elemento prejudicial, segundo a regra textual."
+      ],
+      "termos": [
+        {
+          "termo": "Ônus da retirada",
+          "significado": "Encargo atribuído ao responsável que colocou o elemento prejudicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 81"
+      ],
+      "expected": {
+        "unit_id": "8d20c302-e851-5e05-8fe1-732235e00459",
+        "content_sha256": "85f63c1cdb6640f4734ca5a18511302e0553d91c4546dde6b3cc17987c59d46e",
+        "simples": "O órgão ou entidade de trânsito com circunscrição sobre a via pode retirar ou determinar a imediata retirada de qualquer elemento que prejudique a visibilidade da sinalização viária e a segurança do trânsito, com ônus para quem o tenha colocado.",
+        "pontos": [
+          "Retirada imediata de elementos prejudiciais.",
+          "Ônus para quem colocou."
+        ],
+        "atencao": [
+          "Custo recai sobre quem colocou o elemento."
+        ],
+        "exemplo": "O órgão retira o painel que esconde a sinalização e cobra o custo do responsável.",
+        "prova": [
+          "Assertiva que obriga o órgão a arcar com o custo da retirada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-85",
+      "unit_id": "8ae0c068-76fc-5b03-b5c7-6db8826a5c5d",
+      "content_sha256": "8468c39514848a10a3833bc14a25620549e5265c9b6cd318b429fac02c6f9f40",
+      "simples": "Os locais destinados pelo órgão ou entidade de trânsito com circunscrição sobre a via à travessia de pedestres devem ser sinalizados com faixas pintadas ou demarcadas no leito da via.",
+      "pontos": [
+        "Travessias sinalizadas com faixas pintadas ou demarcadas."
+      ],
+      "atencao": [
+        "Dever de sinalizar a travessia.",
+        "Não confundir sinalização inicial com dispensa do dever posterior de manutenção."
+      ],
+      "exemplo": "O órgão destina um ponto da via à travessia de pedestres. Resposta: deve sinalizá-lo com faixas pintadas ou demarcadas no leito da via. Variação: Após a demarcação, o dever de manutenção de visibilidade e segurança do art. 71 continua.",
+      "prova": [
+        "Basta designar administrativamente a travessia, sem demarcar? Não. O artigo exige sinalização com faixas pintadas ou demarcadas no leito da via.",
+        "A sinalização inicial dispensa manter a faixa visível? Não. Integrar o dever permanente de manutenção do art. 71, para conservar condições adequadas."
+      ],
+      "termos": [
+        {
+          "termo": "Demarcação da travessia",
+          "significado": "Indicação no leito da via da passagem destinada pelo órgão competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 71"
+      ],
+      "expected": {
+        "unit_id": "8ae0c068-76fc-5b03-b5c7-6db8826a5c5d",
+        "content_sha256": "8468c39514848a10a3833bc14a25620549e5265c9b6cd318b429fac02c6f9f40",
+        "simples": "Os locais destinados pelo órgão ou entidade de trânsito com circunscrição sobre a via à travessia de pedestres devem ser sinalizados com faixas pintadas ou demarcadas no leito da via.",
+        "pontos": [
+          "Travessias sinalizadas com faixas pintadas ou demarcadas."
+        ],
+        "atencao": [
+          "Dever de sinalizar a travessia."
+        ],
+        "exemplo": "A faixa de pedestres é pintada no leito da via.",
+        "prova": [
+          "Assertiva que dispensa a demarcação da travessia de pedestres erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-86",
+      "unit_id": "fa5d79be-73c9-562d-9923-2b0ac9656d7f",
+      "content_sha256": "3e2a2fb0c625337d40ec31299546103579c6cfcf42891c86d685d99949180680",
+      "simples": "Os locais destinados a postos de gasolina, oficinas, estacionamentos ou garagens de uso coletivo devem ter suas entradas e saídas devidamente identificadas, na forma regulamentada pelo Contran.",
+      "pontos": [
+        "Identificação de entradas e saídas.",
+        "Forma regulamentada pelo Contran."
+      ],
+      "atencao": [
+        "Regra do Contran.",
+        "Não atribuir preferência automática ao veículo que sai do imóvel só porque o acesso está identificado."
+      ],
+      "exemplo": "Uma garagem de uso coletivo abre saída para a via sem identificação. Resposta: entradas e saídas precisam ser identificadas conforme regulamentação do Contran. Variação: O artigo trata da identificação dos acessos; não concede preferência absoluta a quem sai da garagem.",
+      "prova": [
+        "Postos de gasolina e oficinas estão fora do rol? Não. O caput os inclui junto a estacionamentos e garagens de uso coletivo.",
+        "Identificar a saída elimina o dever de ceder aos demais usuários ao ingressar na via? Não. A identificação não afasta as regras de manobra e preferência aplicáveis, incluindo o art. 36."
+      ],
+      "termos": [
+        {
+          "termo": "Identificação do acesso",
+          "significado": "Indicação de entradas e saídas, distinta de regra de prioridade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "fa5d79be-73c9-562d-9923-2b0ac9656d7f",
+        "content_sha256": "3e2a2fb0c625337d40ec31299546103579c6cfcf42891c86d685d99949180680",
+        "simples": "Os locais destinados a postos de gasolina, oficinas, estacionamentos ou garagens de uso coletivo devem ter suas entradas e saídas devidamente identificadas, na forma regulamentada pelo Contran.",
+        "pontos": [
+          "Identificação de entradas e saídas.",
+          "Forma regulamentada pelo Contran."
+        ],
+        "atencao": [
+          "Regra do Contran."
+        ],
+        "exemplo": "O posto sinaliza claramente onde entram e saem os veículos.",
+        "prova": [
+          "Assertiva que dispensa a identificação das entradas de estacionamentos coletivos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-86-a",
+      "unit_id": "3ad459c5-f330-5bc5-9af9-49d860521a5b",
+      "content_sha256": "6404565856c671debc51b0b423ef52147b749b504d66c791970f42b56df31ad3",
+      "simples": "Vagas de estacionamento regulamentado referidas ao art. 181, XVII, exigem sinalização de destinação e informação sobre a infração por uso indevido. Não restringir todo inciso XVII a vagas de idosos ou pessoas com deficiência: a hipótese específica sem credencial consta atualmente do inciso XX do art. 181.",
+      "pontos": [
+        "Destinação da vaga sinalizada.",
+        "Informação sobre infração por estacionamento indevido.",
+        "Art. 181, XVII: estacionamento regulamentado; art. 181, XX: hipótese específica de vaga reservada sem credencial."
+      ],
+      "atencao": [
+        "Incluído pela Lei 13.146/2015; integrar o inciso XX acrescentado pela Lei 13.281/2016. Não atualizar silenciosamente a remissão literal do art. 86-A nem ensinar enquadramento desatualizado."
+      ],
+      "exemplo": "Uma vaga com estacionamento regulamentado tem placa de destinação, mas omite informação sobre a infração por uso indevido. Resposta: o art. 86-A exige ambas as informações no seu recorte. Variação: Vaga reservada a pessoa com deficiência ou idoso sem credencial exige integrar o inciso XX atual do art. 181; não chamar o inciso XVII de exclusivo das vagas especiais.",
+      "prova": [
+        "O inciso XVII do art. 181 refere-se exclusivamente a vagas de idosos e pessoas com deficiência? Não. Trata de desacordo com estacionamento regulamentado; o inciso XX atual tem a hipótese específica de vaga reservada sem credencial.",
+        "Basta informar a destinação, sem dados da infração por estacionamento indevido? Não. O art. 86-A exige placas de destinação e placas informando os dados sobre a infração."
+      ],
+      "termos": [
+        {
+          "termo": "Estacionamento regulamentado",
+          "significado": "Uso condicionado pela sinalização, distinto de uma única modalidade de vaga reservada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 181"
+      ],
+      "expected": {
+        "unit_id": "3ad459c5-f330-5bc5-9af9-49d860521a5b",
+        "content_sha256": "6404565856c671debc51b0b423ef52147b749b504d66c791970f42b56df31ad3",
+        "simples": "As vagas de estacionamento regulamentado de que trata o inciso XVII do art. 181 (vagas para idosos e pessoas com deficiência) devem ser sinalizadas com as respectivas placas indicativas de destinação e com placas informando os dados sobre a infração por estacionamento indevido.",
+        "pontos": [
+          "Vagas especiais sinalizadas.",
+          "Placas informando a infração por uso indevido."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "A vaga para idoso traz placa com a informação da multa.",
+        "prova": [
+          "Assertiva que dispensa a placa informativa sobre a infração nas vagas especiais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 181"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-87",
+      "unit_id": "74f8e820-fcd1-59f1-bd4e-2c01083d59f3",
+      "content_sha256": "6e04ecf8a8ddcbab44fec189174578d52f987fd99617f0829b45f579d3a1cb4c",
+      "simples": "Os sinais de trânsito classificam-se em verticais, horizontais, dispositivos de sinalização auxiliar, luminosos, sonoros e gestos do agente de trânsito e do condutor.",
+      "pontos": [
+        "Seis categorias de sinais."
+      ],
+      "atencao": [
+        "Seis categorias.",
+        "Distinguir classificação do art. 87 e hierarquia do art. 89."
+      ],
+      "exemplo": "Uma placa, uma faixa pintada e um semáforo são apresentados numa questão. Resposta: pertencem, respectivamente, aos sinais verticais, horizontais e luminosos. Variação: Gestos do condutor também entram no inciso VI; a categoria não se limita ao agente de trânsito.",
+      "prova": [
+        "Há seis incisos e o último se limita a gestos do agente? Não. Existem seis categorias, mas o inciso VI inclui gestos do agente e do condutor.",
+        "A classificação do art. 87 fixa sozinha a ordem de prevalência? Não. Categoriza sinais; a hierarquia entre ordens, semáforos, sinais e normas está no art. 89."
+      ],
+      "termos": [
+        {
+          "termo": "Categoria de sinal",
+          "significado": "Tipo de comunicação viária, distinto da sua posição de prevalência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 89"
+      ],
+      "expected": {
+        "unit_id": "74f8e820-fcd1-59f1-bd4e-2c01083d59f3",
+        "content_sha256": "6e04ecf8a8ddcbab44fec189174578d52f987fd99617f0829b45f579d3a1cb4c",
+        "simples": "Os sinais de trânsito classificam-se em verticais, horizontais, dispositivos de sinalização auxiliar, luminosos, sonoros e gestos do agente de trânsito e do condutor.",
+        "pontos": [
+          "Seis categorias de sinais."
+        ],
+        "atencao": [
+          "Seis categorias."
+        ],
+        "exemplo": "Placa, faixa pintada no chão e semáforo são sinais de categorias diferentes.",
+        "prova": [
+          "Assertiva que exclui os gestos do agente da classificação dos sinais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-88",
+      "unit_id": "f8f59b43-ea5a-5016-ac05-7e3aa1b57865",
+      "content_sha256": "312fba9b3999a4e0cf5e4754f9be15ac181be76bd3bf18f1e099ca940169d2cf",
+      "simples": "Nenhuma via pavimentada pode ser entregue após sua construção, ou reaberta ao trânsito após obras ou manutenção, enquanto não estiver devidamente sinalizada, vertical e horizontalmente, de forma a garantir condições adequadas de segurança. Nas vias ou trechos em obras deve ser afixada sinalização específica e adequada.",
+      "pontos": [
+        "Sinalização vertical e horizontal antes da entrega.",
+        "Sinalização específica em obras."
+      ],
+      "atencao": [
+        "Sem sinalização, a via não pode ser aberta.",
+        "O caput trata de via PAVIMENTADA e de entrega/reabertura; não retirar esses recortes nem a obrigação durante obras."
+      ],
+      "exemplo": "Após recapeamento, uma via pavimentada está sem sinalização horizontal adequada. Resposta: não pode ser reaberta até estar devidamente sinalizada vertical e horizontalmente. Variação: Durante as obras, a sinalização específica adequada também é obrigatória, não só na futura entrega.",
+      "prova": [
+        "Basta sinalização vertical para reabrir via pavimentada após manutenção? Não. O caput exige vertical e horizontal, com condições adequadas de segurança.",
+        "O parágrafo dispensa sinais enquanto a obra ainda ocorre? Não. Determina sinalização específica e adequada nas vias ou trechos em obras."
+      ],
+      "termos": [
+        {
+          "termo": "Entrega segura",
+          "significado": "Liberação condicionada à sinalização adequada, distinta da proteção durante obras."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 90"
+      ],
+      "expected": {
+        "unit_id": "f8f59b43-ea5a-5016-ac05-7e3aa1b57865",
+        "content_sha256": "312fba9b3999a4e0cf5e4754f9be15ac181be76bd3bf18f1e099ca940169d2cf",
+        "simples": "Nenhuma via pavimentada pode ser entregue após sua construção, ou reaberta ao trânsito após obras ou manutenção, enquanto não estiver devidamente sinalizada, vertical e horizontalmente, de forma a garantir condições adequadas de segurança. Nas vias ou trechos em obras deve ser afixada sinalização específica e adequada.",
+        "pontos": [
+          "Sinalização vertical e horizontal antes da entrega.",
+          "Sinalização específica em obras."
+        ],
+        "atencao": [
+          "Sem sinalização, a via não pode ser aberta."
+        ],
+        "exemplo": "A via recapeada só é liberada após a pintura das faixas.",
+        "prova": [
+          "Assertiva que permite abrir a via ao trânsito antes de sinalizá-la erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 90"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-89",
+      "unit_id": "37a42f66-2ea1-5e77-a963-ace21e3bce09",
+      "content_sha256": "984c9572380d9fd8e4bf6dc3e4f4c2dd2dbe9f6974fc864d5c22ea4dc40f154e",
+      "simples": "A sinalização tem a seguinte ordem de prevalência: as ordens do agente de trânsito prevalecem sobre as normas de circulação e outros sinais; as indicações do semáforo prevalecem sobre os demais sinais; e as indicações dos sinais prevalecem sobre as demais normas de trânsito.",
+      "pontos": [
+        "Agente de trânsito.",
+        "Semáforo.",
+        "Sinais.",
+        "Normas de circulação."
+      ],
+      "atencao": [
+        "Ordem: agente, semáforo, sinais, normas.",
+        "Ordem de estudo: agente → semáforo → sinais → normas; não confundir com categorias do art. 87."
+      ],
+      "exemplo": "O semáforo está verde, mas o agente manda parar. Resposta: prevalece a ordem do agente sobre semáforo e outras normas ou sinais. Variação: Sem agente ou semáforo determinando de outra forma, as indicações dos sinais prevalecem sobre normas gerais; segurança continua exigível.",
+      "prova": [
+        "Semáforo verde supera ordem expressa de parada do agente? Não. O inciso I coloca a ordem do agente acima das normas de circulação e outros sinais.",
+        "A prevalência permite atravessar de modo perigoso sem observar os demais usuários? Não. Resolve conflito de orientação, sem afastar o dever geral de cuidado e segurança."
+      ],
+      "termos": [
+        {
+          "termo": "Prevalência",
+          "significado": "Ordem legal para resolver orientações conflitantes na circulação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 87"
+      ],
+      "expected": {
+        "unit_id": "37a42f66-2ea1-5e77-a963-ace21e3bce09",
+        "content_sha256": "984c9572380d9fd8e4bf6dc3e4f4c2dd2dbe9f6974fc864d5c22ea4dc40f154e",
+        "simples": "A sinalização tem a seguinte ordem de prevalência: as ordens do agente de trânsito prevalecem sobre as normas de circulação e outros sinais; as indicações do semáforo prevalecem sobre os demais sinais; e as indicações dos sinais prevalecem sobre as demais normas de trânsito.",
+        "pontos": [
+          "Agente de trânsito.",
+          "Semáforo.",
+          "Sinais.",
+          "Normas de circulação."
+        ],
+        "atencao": [
+          "Ordem: agente, semáforo, sinais, normas."
+        ],
+        "exemplo": "O agente manda avançar no sinal vermelho; prevalece a ordem do agente.",
+        "prova": [
+          "Assertiva que coloca o semáforo acima das ordens do agente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-90",
+      "unit_id": "383826d9-cf60-504c-9187-0467feaae6f9",
+      "content_sha256": "d57b03f08e0661c81664a6397c7d3af8fc1cf305150f5a7d82874f0ee40989ff",
+      "simples": "Não são aplicadas as sanções do Código por inobservância à sinalização quando esta for insuficiente ou incorreta. O órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização, respondendo pela falta, insuficiência ou incorreta colocação. O Contran edita normas complementares sobre interpretação, colocação e uso da sinalização.",
+      "pontos": [
+        "Sinalização insuficiente ou incorreta afasta a sanção.",
+        "Responsabilidade do órgão pela sinalização."
+      ],
+      "atencao": [
+        "Não ensinar sinalização deficiente = nenhuma sanção por qualquer conduta. O nexo com a inobservância da sinalização é essencial.",
+        "Falta ou defeito de placa não autoriza embriaguez, falta de cinto ou outras condutas independentes."
+      ],
+      "exemplo": "A placa necessária para estabelecer uma restrição está incorreta e fundamenta autuação por desrespeito àquela sinalização. Resposta: o art. 90 afasta a sanção por essa inobservância no recorte descrito. Variação: A mesma deficiência de placa não libera conduzir alcoolizado ou sem cinto: infrações independentes têm seus próprios requisitos.",
+      "prova": [
+        "Qualquer falha de sinalização elimina toda multa ocorrida na via? Não. O artigo trata de sanções por inobservância à sinalização insuficiente ou incorreta, não de imunidade geral.",
+        "Quem responde pela implantação e sua falta ou colocação incorreta? O órgão ou entidade com circunscrição sobre a via, conforme §1º, sem dispensar examinar responsabilidade concreta."
+      ],
+      "termos": [
+        {
+          "termo": "Inobservância da sinalização",
+          "significado": "Conduta cuja restrição depende do sinal, distinta de toda infração de trânsito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 80"
+      ],
+      "expected": {
+        "unit_id": "383826d9-cf60-504c-9187-0467feaae6f9",
+        "content_sha256": "d57b03f08e0661c81664a6397c7d3af8fc1cf305150f5a7d82874f0ee40989ff",
+        "simples": "Não são aplicadas as sanções do Código por inobservância à sinalização quando esta for insuficiente ou incorreta. O órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização, respondendo pela falta, insuficiência ou incorreta colocação. O Contran edita normas complementares sobre interpretação, colocação e uso da sinalização.",
+        "pontos": [
+          "Sinalização insuficiente ou incorreta afasta a sanção.",
+          "Responsabilidade do órgão pela sinalização."
+        ],
+        "atencao": [
+          "Sinalização deficiente = sem sanção ao condutor."
+        ],
+        "exemplo": "A multa por placa ausente ou incorreta não pode ser aplicada.",
+        "prova": [
+          "Assertiva que mantém a sanção mesmo com sinalização insuficiente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-91",
+      "unit_id": "d9d99f3b-940b-5d75-9a90-83ff76698ccd",
+      "content_sha256": "8733eb2d299805808acfe88216d0665ea75033c3b46343a37bacb0650a861394",
+      "simples": "O Contran estabelece as normas e regulamentos a serem adotados em todo o território nacional na implementação das soluções da Engenharia de Tráfego, assim como os padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito.",
+      "pontos": [
+        "Normas nacionais de engenharia de tráfego.",
+        "Padrões para todos os órgãos."
+      ],
+      "atencao": [
+        "Padronização nacional pelo Contran.",
+        "Distinguir padronização normativa e execução local competente."
+      ],
+      "exemplo": "Dois órgãos adotam soluções de engenharia de tráfego. Resposta: devem observar normas e padrões nacionais estabelecidos pelo Contran. Variação: A padronização não torna idênticas todas as condições locais nem elimina análise técnica da via na execução.",
+      "prova": [
+        "Cada município pode dispensar livremente os padrões nacionais? Não. O caput prevê normas e padrões para todos os órgãos e entidades do SNT.",
+        "Estabelecer normas de engenharia torna o Contran executor direto de toda obra? Não. O artigo atribui função normativa; execução e circunscrição têm distribuição própria."
+      ],
+      "termos": [
+        {
+          "termo": "Padrão nacional",
+          "significado": "Referência comum do Contran para soluções de engenharia de tráfego."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "d9d99f3b-940b-5d75-9a90-83ff76698ccd",
+        "content_sha256": "8733eb2d299805808acfe88216d0665ea75033c3b46343a37bacb0650a861394",
+        "simples": "O Contran estabelece as normas e regulamentos a serem adotados em todo o território nacional na implementação das soluções da Engenharia de Tráfego, assim como os padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito.",
+        "pontos": [
+          "Normas nacionais de engenharia de tráfego.",
+          "Padrões para todos os órgãos."
+        ],
+        "atencao": [
+          "Padronização nacional pelo Contran."
+        ],
+        "exemplo": "A mesma regra de projeto de sinalização vale em todo o país.",
+        "prova": [
+          "Assertiva que deixa a engenharia de tráfego sem padronização nacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    }
+  ]
+}

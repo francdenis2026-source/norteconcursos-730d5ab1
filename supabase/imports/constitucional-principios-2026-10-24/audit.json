@@ -1,0 +1,160 @@
+{
+  "input_file": "01-01_AlfaCon--principios-fundamentais-parte-1.pdf",
+  "input_sha256": "5be3631357032a9261538c3a2b1f7d3f675101eefc4005680056a571430edf43",
+  "pages": 4,
+  "exercise_count_in_input": 3,
+  "discipline": "Direito Constitucional",
+  "catalog_records_compared": 740,
+  "existing_constitutional_materials": [
+    {
+      "slug": "constitucional-nacionalidade-medidas-retirada",
+      "title": "Nacionalidade: brasileiros natos e naturalizados"
+    },
+    {
+      "slug": "constitucional-direitos-politicos-elegibilidade",
+      "title": "Direitos políticos, elegibilidade e partidos políticos"
+    },
+    {
+      "slug": "constitucional-privacidade-dados",
+      "title": "Privacidade e dados pessoais: proteção constitucional"
+    },
+    {
+      "slug": "constitucional-acumulacao-ec138-casos",
+      "title": "Constituição — acumulação de cargos: atualização da EC 138/2025"
+    }
+  ],
+  "copied_publisher_text": false,
+  "copied_pdf_questions": false,
+  "public_catalog_insertions": 0,
+  "local_authored_exercises": 20,
+  "worked_cases": 4,
+  "duplicate_exact_statements": 0,
+  "similarity_checks": [
+    {
+      "question": "Uma comissão propõe chamar de “soberania municipal” a competência de um município para elaborar sua lei orgânica. Essa denominação descreve corretamente o vínculo constitucional do município.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Em uma ficha de revisão, a linha “distribuição territorial do poder político” deve ser associada à Federação, enquanto a linha “forma de governo brasileira” deve ser associada à República.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Dois estados pretendem incorporar-se entre si. Como a Constituição afirma que a Federação é indissolúvel, qualquer incorporação interna é proibida, mesmo quando cumpridas as condições constitucionais.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Um plebiscito local favorável basta para que um estado deixe o Brasil e se torne país independente, pois autonomia inclui direito unilateral de secessão.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Ao revisar um organograma, a estudante retira “Territórios Federais” da lista de entes autônomos e os posiciona como integrantes da União. A correção corresponde ao art. 18.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Um projeto prevê dividir o Distrito Federal em municípios, justificando que isso seria simples exercício de sua autonomia. A justificativa afasta a vedação constitucional.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Uma constituição estadual pode organizar o estado, mas não pode afastar os princípios impostos pela Constituição Federal sob o argumento de que ambos os textos têm a mesma liberdade de criação.",
+      "closest_source": "official_exam_questions",
+      "closest_id": "4ac7a848-4893-475e-9961-6bd2f9312c9a",
+      "five_word_jaccard": 0.0061
+    },
+    {
+      "question": "Para demonstrar autonomia municipal, o enunciado afirma que o município deve se reger por uma constituição municipal promulgada pelo governador. A descrição está correta.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Em um resumo, a União aparece como um ente da organização político-administrativa, e não como sinônimo de toda a República Federativa do Brasil. Essa distinção evita confundir organização interna e Estado brasileiro.",
+      "closest_source": "board_exam_questions",
+      "closest_id": "4a8bf129-740c-4cc5-ae79-4d31980015f6",
+      "five_word_jaccard": 0.0085
+    },
+    {
+      "question": "Uma proposta declara expressamente extinguir a forma federativa. Se atingir três quintos dos votos em dois turnos de cada Casa, o quórum supera a limitação material constitucional.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "A proteção da forma federativa não permite concluir que toda alteração pontual de competência entre entes seja automaticamente proibida. É preciso examinar se a proposta tende a abolir essa forma de Estado.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Ao constatar que “forma republicana” não está escrita literalmente no rol do § 4º, um candidato conclui que uma emenda pode, sem examinar mais nada, eliminar eleições periódicas e instituir cargo político hereditário.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Para explicar a relação entre república e controle, um quadro associa a forma republicana à prestação de contas da administração, ambas protegidas no art. 34, VII.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Um governante afirma que vencer uma eleição elimina qualquer responsabilidade por atos que atentem contra a Constituição. Essa consequência decorre do princípio republicano.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Um material que explique a origem popular do poder somente pela eleição de representantes está incompleto se excluir toda possibilidade de exercício direto prevista na Constituição.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Em uma tabela, “presidencialismo” é indicado como forma de Estado e “Federação” como sistema de governo. As duas classificações estão corretas.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "Um esquema que apresenta Legislativo, Executivo e Judiciário como independentes e harmônicos não autoriza concluir que um deles pode eliminar os outros por decisão unilateral.",
+      "closest_source": "official_exam_questions",
+      "closest_id": "d9ec7b5e-bff5-413d-a5a0-1cd827ef4f63",
+      "five_word_jaccard": 0.003
+    },
+    {
+      "question": "A Constituição trataria a forma republicana como assunto sem proteção específica, pois o art. 34, VII, somente se refere a questões financeiras.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    },
+    {
+      "question": "O Distrito Federal acumula competências legislativas reservadas aos estados e aos municípios, sem que isso o transforme em dois entes separados ou permita sua divisão municipal.",
+      "closest_source": "official_exam_questions",
+      "closest_id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+      "five_word_jaccard": 0.069
+    },
+    {
+      "question": "Uma emenda deve ser examinada quanto ao conteúdo protegido mesmo quando mantém o nome “Federação”: o rótulo, isoladamente, não comprova respeito à forma federativa nem ao voto periódico.",
+      "closest_source": "curated_question_catalog",
+      "closest_id": "b959be08-aec9-4b13-b740-c14136b339c1",
+      "five_word_jaccard": 0.0
+    }
+  ],
+  "notes": [
+    "Arquivo enviado utilizado apenas para identificação temática; não foi redistribuído.",
+    "Não foi identificada banca/prova oficial para os três exercícios do arquivo.",
+    "Conteúdo de nacionalidade, direitos políticos e lei penal no espaço referenciado por links para evitar repetir os módulos existentes.",
+    "Os 740 registros incluem estados de revisão e acervo privado, utilizados exclusivamente para deduplicação; nada foi copiado do acervo privado."
+  ]
+}

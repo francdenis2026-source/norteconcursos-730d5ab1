@@ -1,0 +1,390 @@
+/* Daily training is a self-contained viewport, never a long marketing page. */
+body:has(.daily-page) { overflow: hidden; }
+.daily-page {
+  --daily-edge: color-mix(in srgb, var(--foreground) 13%, transparent);
+  --daily-glass: color-mix(in srgb, var(--card) 88%, transparent);
+  --daily-accent: var(--brass-deep);
+  --daily-veil: color-mix(in srgb, var(--background) 94%, transparent);
+  position: relative;
+  isolation: isolate;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  padding: max(16px, env(safe-area-inset-top)) 36px max(16px, env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-rows: 40px minmax(0, 1fr);
+  gap: 16px;
+  color: var(--foreground);
+  background: var(--background);
+}
+.dark .daily-page {
+  --daily-accent: var(--brass-soft);
+  --daily-veil: color-mix(in srgb, var(--background) 76%, transparent);
+  --daily-glass: color-mix(in srgb, var(--card) 82%, transparent);
+}
+.daily-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse 65% 75% at 22% 48%, var(--daily-veil) 0%, transparent 72%),
+    linear-gradient(110deg, var(--daily-veil) 15%, transparent 150%),
+    url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
+  filter: saturate(.82) brightness(.92);
+}
+.daily-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .13;
+  background: repeating-linear-gradient(90deg, transparent 0 79px, var(--daily-edge) 79px 80px),
+    repeating-linear-gradient(0deg, transparent 0 79px, var(--daily-edge) 79px 80px);
+}
+.daily-controls, .daily-main { width: 100%; max-width: 1480px; margin-inline: auto; min-width: 0; min-height: 0; }
+.daily-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.daily-identity { display: flex; align-items: center; gap: 9px; color: var(--daily-accent); }
+.daily-identity > svg { width: 24px; height: 24px; }
+.daily-identity > span { font-size: 15px; letter-spacing: .2em; font-weight: 800; line-height: 1.2; }
+.daily-identity small { display: block; font-size: 8px; letter-spacing: .16em; font-weight: 500; margin-top: 3px; color: var(--muted-foreground); }
+.daily-exit { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; gap: 8px; padding: 8px 14px; font-size: 12px; border: 1px solid var(--daily-edge); border-radius: 10px; background: var(--daily-glass); }
+.daily-exit svg { width: 15px; height: 15px; }
+.daily-exit:hover { border-color: var(--daily-accent); color: var(--daily-accent); }
+.daily-main { overflow: auto; scrollbar-width: thin; scrollbar-color: var(--daily-edge) transparent; }
+.daily-main > .flex { height: 100%; min-height: 0; padding: 24px; }
+.daily-eyebrow { color: var(--daily-accent); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.daily-overview { height: 100%; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .8fr); gap: 24px; }
+.daily-cover { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; padding: clamp(24px, 4vw, 64px); border: 1px solid var(--daily-edge); border-radius: 24px; background: linear-gradient(125deg, var(--daily-glass), transparent); min-height: 0; }
+.daily-cover__content { max-width: 670px; }
+.daily-cover__badge { display: inline-flex; align-items: center; gap: 6px; color: var(--daily-accent); font-size: 10px; letter-spacing: .1em; }
+.daily-cover h1 { font-family: var(--font-insignia); font-size: clamp(32px, 4.7vw, 70px); line-height: 1.09; letter-spacing: -.045em; margin: 18px 0; text-wrap: balance; }
+.daily-cover h1 em { font-style: normal; color: var(--daily-accent); }
+.daily-cover__content > p { font-size: 14px; line-height: 1.8; max-width: 45ch; color: var(--muted-foreground); }
+.daily-start { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 12px 22px; margin-top: 24px; border: 1px solid var(--brass); border-radius: 10px; background: var(--brass-soft); color: var(--ink); font-size: 14px; font-weight: 750; cursor: pointer; box-shadow: 0 12px 28px -20px var(--brass); }
+.daily-start:hover { transform: translateY(-2px); }
+.daily-cover__note { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--muted-foreground); margin-top: 14px; }
+.daily-protocol { display: flex; gap: 28px; border-top: 1px solid var(--daily-edge); padding-top: 16px; color: var(--daily-accent); font-size: 10px; letter-spacing: .08em; }
+.daily-protocol b { color: var(--muted-foreground); font-weight: 500; margin-left: 8px; }
+.daily-round { min-height: 0; overflow-y: auto; scrollbar-width: thin; padding: clamp(20px, 2.5vw, 36px); border: 1px solid var(--daily-edge); border-radius: 24px; background: var(--daily-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); display: flex; flex-direction: column; }
+.daily-round__heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.daily-round__tag { font-size: 10px; color: var(--daily-accent); }
+.daily-round__tag::before { content: ''; display: inline-block; width: 5px; height: 5px; margin-right: 6px; border-radius: 50%; background: currentColor; }
+.daily-round h2 { font-size: clamp(18px, 2vw, 25px); font-weight: 700; letter-spacing: -.03em; margin-top: 20px; }
+.daily-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-block: 24px; margin-block: 16px; border-block: 1px solid var(--daily-edge); }
+.daily-metrics strong { display: block; font-size: clamp(32px, 4vw, 56px); line-height: 1; font-weight: 750; letter-spacing: -.05em; }
+.daily-metrics span { display: block; margin-top: 8px; font-size: 11px; color: var(--muted-foreground); }
+.daily-briefing-subjects { font-size: 12px; }
+.daily-briefing-subjects__label { min-height: 28px; display: flex; align-items: center; gap: 8px; color: var(--muted-foreground); font-weight: 600; }
+.daily-briefing-subjects__label svg { color: var(--daily-accent); flex-shrink: 0; }
+.daily-subjects { padding: 10px 0 0; margin: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.daily-subjects li { padding: 5px 8px; border: 1px solid var(--daily-edge); border-radius: 6px; font-size: 10px; color: var(--muted-foreground); }
+.daily-round__renewal { display: flex; gap: 10px; margin-top: auto; padding-top: 24px; }
+.daily-round__renewal svg { color: var(--daily-accent); flex-shrink: 0; }
+.daily-round__renewal strong { font-size: 12px; display: block; font-weight: 650; }
+.daily-round__renewal p > span { font-size: 11px; color: var(--muted-foreground); line-height: 1.7; display: block; margin-top: 6px; }
+.daily-register { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 11px; color: var(--daily-accent); padding-top: 20px; margin-top: 20px; border-top: 1px solid var(--daily-edge); }
+.daily-workspace { height: 100%; }
+.daily-workspace[hidden], .daily-result[hidden] { display: none; }
+.daily-player { height: 100%; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 20px; }
+.daily-session { min-height: 0; overflow: auto; scrollbar-width: thin; border: 1px solid var(--daily-edge); border-radius: 18px; padding: 22px; background: var(--daily-glass); }
+.daily-session h1 { font-family: var(--font-insignia); font-size: 25px; line-height: 1.2; margin: 12px 0 20px; }
+.daily-session > .rounded-xl { margin-block: 20px; padding: 16px 0; background: transparent; border: 0; border-top: 1px solid var(--daily-edge); border-radius: 0; }
+.daily-session__scores { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-block: 1px solid var(--daily-edge); padding-block: 18px; }
+.daily-session__scores strong { font-size: 28px; display: block; }
+.daily-session__scores span { font-size: 10px; color: var(--muted-foreground); }
+.daily-session__tip { display: flex; gap: 8px; font-size: 11px; line-height: 1.8; color: var(--muted-foreground); margin-top: 20px; }
+.daily-session__tip svg { flex-shrink: 0; color: var(--daily-accent); }
+.daily-session__renewal { font-size: 10px; color: var(--muted-foreground); margin-top: 20px; }
+.daily-question-column { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; border: 1px solid var(--daily-edge); border-radius: 18px; overflow: hidden; background: var(--daily-glass); }
+.daily-reading { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; padding: clamp(14px, 2vw, 24px); }
+.daily-reading:focus-visible { outline: 2px solid var(--daily-accent); outline-offset: -4px; }
+.daily-question-card { background: transparent; border: 0; box-shadow: none; border-radius: 0; gap: 0; padding: 0; overflow: visible; }
+.daily-question-card > div { padding: 0; }
+.daily-question-heading { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.daily-question-heading h2 { font-size: 22px; font-weight: 700; margin-top: 2px; }
+.daily-question-heading h2 > span { font-size: 14px; font-weight: 400; color: var(--muted-foreground); }
+.daily-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.daily-reading > :not(:first-child) { margin-top: 10px; }
+.daily-toolbar-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.daily-question-code { margin: 0; flex: 0 1 auto; }
+.daily-answer-dock { position: relative; display: grid; grid-template-columns: auto minmax(180px, 1fr) auto; align-items: center; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--daily-edge); background: var(--card); }
+.daily-answer-dock > p { margin: 0; font-size: 10px; max-width: 50px; line-height: 1.6; }
+.daily-answer-dock > .grid { margin: 0; gap: 10px; }
+.daily-answer-dock > .flex { margin: 0; }
+.daily-answer { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 48px; padding: 8px 12px; border-width: 1px; border-radius: 10px; font-size: 13px; }
+.daily-answer-selected { border-color: var(--daily-accent); background: var(--brass-soft); color: var(--ink); }
+.daily-answer__outcome { display: flex; align-items: center; gap: 4px; font-size: 9px; }
+.daily-result { max-width: 820px; height: 100%; margin-inline: auto; overflow: auto; scrollbar-width: thin; }
+.daily-result > div { box-shadow: none; }
+.daily-page :is(a, button, summary):focus-visible { outline: 2px solid var(--daily-accent); outline-offset: 3px; }
+@media (max-width: 1000px) {
+  .daily-page { padding-inline: 20px; }
+  .daily-overview { grid-template-columns: 1.2fr 1fr; gap: 16px; }
+  .daily-cover { padding: 24px; }
+  .daily-cover h1 { font-size: clamp(32px, 4.8vw, 48px); }
+  .daily-player { grid-template-columns: 180px minmax(0, 1fr); gap: 12px; }
+  .daily-session { padding: 16px; }
+  .daily-answer-dock { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 12px 16px; }
+  .daily-answer-dock > p { display: none; }
+}
+@media (max-width: 700px) {
+  .daily-page { padding: max(12px, env(safe-area-inset-top)) 16px max(12px, env(safe-area-inset-bottom)); gap: 12px; }
+  .daily-overview { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1.3fr) minmax(0, 1fr); gap: 12px; }
+  .daily-cover { padding: 20px; gap: 12px; border-radius: 16px; overflow-y: auto; }
+  .daily-cover > .daily-eyebrow { font-size: 8px; }
+  .daily-cover h1 { font-size: clamp(29px, 6.8vw, 40px); margin-block: 12px; }
+  .daily-cover__content > p { font-size: 12px; line-height: 1.65; }
+  .daily-cover__badge { font-size: 8px; }
+  .daily-start { min-height: 44px; font-size: 12px; margin-top: 16px; padding: 10px 16px; }
+  .daily-cover__note { font-size: 9px; margin-top: 10px; }
+  .daily-protocol { display: none; }
+  .daily-round { padding: 16px 20px; border-radius: 16px; }
+  .daily-round h2 { display: none; }
+  .daily-metrics { padding-block: 12px; margin-block: 10px; }
+  .daily-metrics strong { font-size: 30px; }
+  .daily-metrics span { font-size: 10px; margin-top: 4px; }
+  .daily-briefing-subjects__label { min-height: 22px; font-size: 11px; }
+  .daily-round__renewal { padding-top: 10px; }
+  .daily-round__renewal strong { font-size: 11px; }
+  .daily-round__renewal p > span { font-size: 10px; margin-top: 2px; }
+  .daily-register { margin-top: 10px; padding-top: 10px; }
+  .daily-player { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); gap: 10px; }
+  .daily-session { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 12px; overflow: hidden; }
+  .daily-session > :is(.daily-eyebrow, h1, .flex, .daily-session__tip, .daily-session__renewal) { display: none; }
+  .daily-session > .rounded-xl { margin: 0; padding: 0; border: 0; flex: 1; }
+  .daily-session__scores { display: flex; padding: 0 0 0 14px; border: 0; border-left: 1px solid var(--daily-edge); gap: 14px; }
+  .daily-session__scores strong { font-size: 18px; }
+  .daily-session__scores span { font-size: 8px; }
+  .daily-question-heading h2 { font-size: 21px; }
+  .daily-question-heading > div > .daily-eyebrow { display: none; }
+  .daily-question-column { border-radius: 12px; }
+  .daily-question-meta > :nth-child(n+4) { font-size: 9px; }
+  .daily-answer-dock { grid-template-columns: 1fr; gap: 8px; padding: 10px 14px; }
+  .daily-answer-dock > .flex > button, .daily-answer-dock > button { width: 100%; min-height: 42px; }
+  .daily-answer { min-height: 42px; }
+  .daily-art img:first-child { width: 90vw; right: -25%; top: 16%; }
+}
+@media (max-height: 700px) {
+  .daily-cover { gap: 12px; padding: 20px; }
+  .daily-cover h1 { font-size: clamp(28px, 4vw, 46px); margin-block: 12px; }
+  .daily-cover__note { display: none; }
+  .daily-start { margin-top: 14px; min-height: 44px; }
+  .daily-round { padding: 20px; }
+  .daily-metrics { margin-block: 12px; padding-block: 14px; }
+  .daily-round__renewal { padding-top: 16px; }
+}
+@media (max-width: 700px) and (max-height: 740px) {
+  .daily-overview { grid-template-rows: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .daily-cover { padding: 16px; }
+  .daily-cover > .daily-eyebrow, .daily-cover__content > p, .daily-cover__note { display: none; }
+  .daily-cover h1 { font-size: 32px; }
+  .daily-round { padding: 14px 16px; }
+  .daily-round__renewal strong { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .daily-page * { transition: none !important; scroll-behavior: auto !important; } .daily-start:hover { transform: none; } }
+@media (prefers-reduced-transparency: reduce) { .daily-page { --daily-glass: var(--card); } .daily-round { backdrop-filter: none; -webkit-backdrop-filter: none; } }
+@media (forced-colors: active) { .daily-art { display: none; } .daily-page { --daily-edge: CanvasText; --daily-glass: Canvas; --daily-accent: LinkText; } }
+.daily-empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 24px; text-align: center; }
+.daily-empty > svg { color: var(--daily-accent); }
+.daily-empty h1 { font-family: var(--font-insignia); font-size: clamp(32px, 5vw, 60px); line-height: 1.12; }
+.daily-empty h1 em { font-style: normal; color: var(--daily-accent); }
+.daily-empty > p { max-width: 46ch; color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
+.daily-result > div { background: var(--daily-glass); border-color: var(--daily-edge); }
+.daily-result .tactical-feature-hero { background: transparent; color: var(--foreground); border-bottom: 1px solid var(--daily-edge); }
+.daily-result .tactical-feature-hero :is(p, svg) { color: var(--daily-accent); }
+.daily-result .tactical-feature-hero h1 { font-family: var(--font-insignia); }
+
+/* A quieter reading surface and an optional study extension keep attention on the item. */
+.daily-question-column { background: color-mix(in srgb, var(--card) 95%, transparent); }
+.daily-answer-dock > button, .daily-answer-dock > .flex > button {
+  background: var(--brass-soft);
+  color: var(--ink);
+}
+.daily-start { box-shadow: 0 5px 14px -10px rgb(0 0 0 / 35%); transition: transform 180ms ease; }
+.daily-study-extra { border-top: 1px solid var(--daily-edge); padding-top: 12px; }
+.daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
+
+/* A medallion that floats over the heading, big enough to show the engraved art, without
+   taking part in the row's own layout — the header, filters and stem keep their height. */
+.daily-question-heading .question-timing-row {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  flex-shrink: 0;
+}
+.daily-question-heading .tactical-clock--compact { gap: 12px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 76px; }
+/* This badge carries the new "Carreiras Policiais" artwork: let it show at full strength
+   instead of the muted watermark treatment used for the generic insignia elsewhere. */
+.daily-question-heading .tactical-clock--compact .tactical-clock__engraving {
+  opacity: 1;
+  inset: 8%;
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__engraving img {
+  filter: saturate(1) contrast(1.05);
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__face {
+  box-shadow:
+    0 4px 14px -4px #000a,
+    0 0 0 1px #0006,
+    inset 0 1px 2px #fff3;
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 23px; font-weight: 800; color: var(--foreground); }
+.daily-question-heading .tactical-clock--compact .tactical-clock__status { font-size: 10px; }
+@media (max-width: 1000px) {
+  .daily-question-heading .tactical-clock--compact .tactical-clock__status { display: none; }
+}
+@media (max-width: 700px) {
+  .daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 52px; }
+  .daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 17px; }
+}
+
+
+/* Desktop sidebar viewport fit: keep the briefing/progress inside the available
+   panel height without showing a redundant nested scrollbar. */
+@media (min-width: 701px) and (min-height: 680px) {
+  .daily-page { gap: 12px; padding-block: 12px; }
+  .daily-overview, .daily-player { min-height: 0; }
+  .daily-round {
+    min-width: 0;
+    overflow-y: hidden;
+    padding: clamp(14px, 1.7vw, 24px);
+  }
+  .daily-round h2 { margin-top: 10px; font-size: clamp(18px, 1.5vw, 22px); }
+  .daily-metrics {
+    margin-block: 10px;
+    padding-block: 12px;
+    gap: 10px;
+  }
+  .daily-metrics strong { font-size: clamp(30px, 3vw, 44px); }
+  .daily-metrics span { margin-top: 5px; }
+  .daily-subjects { padding-top: 7px; gap: 5px; }
+  .daily-subjects li { padding: 4px 6px; line-height: 1.25; }
+  .daily-round__renewal { margin-top: auto; padding-top: 12px; }
+  .daily-round__renewal p > span { line-height: 1.45; margin-top: 3px; }
+  .daily-register { margin-top: 12px; padding-top: 12px; min-height: 32px; }
+  .daily-session {
+    min-width: 0;
+    overflow: hidden;
+    padding: clamp(13px, 1.5vw, 19px);
+  }
+  .daily-session h1 { margin: 8px 0 12px; font-size: 22px; }
+  .daily-session > .rounded-xl { margin-block: 12px; padding-block: 10px; }
+  .daily-session__scores { padding-block: 12px; gap: 8px; }
+  .daily-session__scores strong { font-size: 26px; }
+  .daily-session__tip { margin-top: 12px; line-height: 1.5; }
+  .daily-session__renewal { margin-top: 12px; }
+}
+/* Briefings can contain an arbitrary number of subjects. On exceptionally
+   short windows preserve every item instead of clipping inaccessible text. */
+@media (min-width: 701px) and (max-height: 679px) {
+  .daily-page { gap: 10px; padding-block: 10px; }
+  .daily-round, .daily-session { padding: 12px; }
+  .daily-round h2 { margin-top: 8px; font-size: 18px; }
+  .daily-metrics { margin-block: 8px; padding-block: 8px; }
+  .daily-metrics strong { font-size: 30px; }
+  .daily-round__renewal { padding-top: 8px; }
+  .daily-register { padding-top: 8px; margin-top: 8px; }
+  .daily-session h1 { font-size: 20px; margin-block: 6px 10px; }
+  .daily-session > .rounded-xl { margin-block: 8px; padding-block: 8px; }
+  .daily-session__scores { padding-block: 8px; }
+  .daily-session__tip, .daily-session__renewal { margin-top: 8px; }
+}
+
+
+/* Desafio Diario / initial briefing only: the panoramic clock photograph
+   must never be blown up to cover a tall viewport. Contain and center it;
+   preserve both panels inside the actual viewport without distorting art. */
+.daily-page[data-step="intro"] .daily-art {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 65% 75% at 22% 48%, var(--daily-veil) 0%, transparent 72%),
+    linear-gradient(110deg, var(--daily-veil) 15%, transparent 150%),
+    url('/media/hero/home-bg-texture.webp');
+  background-size: 100% 100%, 100% 100%, min(100vw, 1600px) auto;
+  background-position: center, center, center 44%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 701px) {
+  .daily-page[data-step="intro"] .daily-main {
+    overflow-x: hidden;
+    min-height: 0;
+  }
+  .daily-page[data-step="intro"] .daily-overview {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, .82fr);
+    align-items: stretch;
+    gap: clamp(12px, 1.6vw, 24px);
+  }
+  .daily-page[data-step="intro"] .daily-cover {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    padding: clamp(20px, 3vw, 42px);
+    gap: clamp(10px, 2vh, 20px);
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .daily-page[data-step="intro"] .daily-cover__content {
+    min-width: 0;
+    width: 100%;
+    max-width: 620px;
+  }
+  .daily-page[data-step="intro"] .daily-cover h1 {
+    font-size: clamp(31px, min(4.2vw, 6.3vh), 60px);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    margin-block: clamp(10px, 2vh, 18px);
+    overflow-wrap: break-word;
+  }
+  .daily-page[data-step="intro"] .daily-cover__content > p {
+    max-width: 44ch;
+    line-height: 1.55;
+  }
+  .daily-page[data-step="intro"] .daily-start {
+    max-width: 100%;
+    margin-top: clamp(12px, 2.2vh, 22px);
+    gap: 12px;
+  }
+  .daily-page[data-step="intro"] .daily-protocol {
+    flex-wrap: wrap;
+    gap: 8px clamp(12px, 2vw, 28px);
+    padding-top: 12px;
+  }
+  .daily-page[data-step="intro"] .daily-round {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+/* Very short landscape screens: allow natural scrolling rather than
+   clipping the heading, primary action, or protocol. */
+@media (min-width: 701px) and (max-height: 610px) {
+  .daily-page[data-step="intro"] .daily-main {
+    overflow-y: auto;
+  }
+  .daily-page[data-step="intro"] .daily-overview {
+    min-height: 480px;
+    height: auto;
+  }
+  .daily-page[data-step="intro"] .daily-cover {
+    overflow: visible;
+  }
+}
+@media (max-width: 700px) {
+  .daily-page[data-step="intro"] .daily-art {
+    background-size: 100% 100%, 100% 100%, 100% auto;
+    background-position: center, center, center 35%;
+  }
+  .daily-page[data-step="intro"] .daily-overview,
+  .daily-page[data-step="intro"] .daily-cover,
+  .daily-page[data-step="intro"] .daily-round {
+    min-width: 0;
+  }
+}

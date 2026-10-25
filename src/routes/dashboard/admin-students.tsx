@@ -1,3 +1,14 @@
+import {
+  activeSeconds,
+  activityDuration,
+  lastStudentAccess,
+  sortStudents,
+  type StudentActivity,
+  type StudentSort,
+  type ActivityPeriod,
+} from "@/lib/adminStudentActivity";
+import { acreDateKey } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -65,6 +76,8 @@ interface StudentRow {
   created_at: string | null;
   last_sign_in_at: string | null;
   online: boolean;
+  activity: StudentActivity | null;
+  lastAccess: string | null;
 }
 interface ExamRow {
   id: string;
@@ -76,7 +89,7 @@ interface ExamRow {
   created_at: string;
 }
 
-const todayIso = () => new Date().toISOString().slice(0, 10);
+const todayIso = () => acreDateKey();
 
 function AdminStudentsPage() {
   const { user, isAdmin } = useAuthStatus();
@@ -91,6 +104,8 @@ function AdminStudentsPage() {
   const [rows, setRows] = useState<StudentRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [sort, setSort] = useState<StudentSort>("activity");
+  const [period, setPeriod] = useState<ActivityPeriod>("today");
   const [filter, setFilter] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
   const [exams, setExams] = useState<ExamRow[]>([]);
@@ -99,15 +114,40 @@ function AdminStudentsPage() {
   const [detailsId, setDetailsId] = useState<string | null>(null);
 
   const load = useCallback(async () => {
+    if (!isAdmin) return;
     setLoading(true);
     setError(null);
     try {
-      const { data: profiles, error: pErr } = await supabase
-        .from("profiles")
-        .select("id, full_name, email, subscription_tier, created_at")
-        .order("created_at", { ascending: false })
-        .limit(500);
-      if (pErr) throw pErr;
+      const profiles: {
+        id: string;
+        full_name: string | null;
+        email: string | null;
+        subscription_tier: string | null;
+        created_at: string | null;
+      }[] = [];
+      for (let offset = 0; ; offset += 500) {
+        const { data, error } = await supabase
+          .from("profiles")
+          .select("id, full_name, email, subscription_tier, created_at")
+          .order("id")
+          .range(offset, offset + 499);
+        if (error) throw error;
+        profiles.push(...(data ?? []));
+        if (!data || data.length < 500) break;
+      }
+      const activity = new Map<string, StudentActivity>();
+      let cursor = 0;
+      // Existing administrator-only RPC; bounded concurrency avoids a request burst.
+      const loadActivity = async () => {
+        while (cursor < profiles.length) {
+          const profile = profiles[cursor++];
+          if (!profile) break;
+          const { data, error } = await supabase.rpc("admin_student_time", {
+            _user_id: profile.id,
+          });
+          if (!error && data) activity.set(profile.id, data as unknown as StudentActivity);
+        }
+      };
       const [usage, docs, roles, access, onlineRes] = await Promise.all([
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(10000),
         supabase.from("student_exam_documents").select("user_id").limit(10000),
@@ -115,6 +155,7 @@ function AdminStudentsPage() {
         supabase.rpc("admin_students_access"),
         supabase.rpc("admin_students_online"),
       ]);
+      await Promise.all(Array.from({ length: Math.min(6, profiles.length) }, loadActivity));
       const onlineIds = new Set((onlineRes.data ?? []).map((o: { user_id: string }) => o.user_id));
       const lastLogin = new Map<string, string | null>(
         (access.data ?? []).map(
@@ -136,11 +177,22 @@ function AdminStudentsPage() {
             isAdmin: adminIds.has(p.id),
             last_sign_in_at: lastLogin.get(p.id) ?? null,
             online: onlineIds.has(p.id),
+            activity: activity.get(p.id) ?? null,
+            lastAccess: lastStudentAccess(lastLogin.get(p.id) ?? null, activity.get(p.id) ?? null),
           };
         }),
       );
-      if (usage.error)
-        setError("Uso de IA indisponível: rode o arquivo ADMIN_ALUNOS_USO_IA.sql no banco.");
+      const warnings = [];
+      if (activity.size !== profiles.length)
+        warnings.push(
+          "Atividade indisponível para alguns alunos; esses registros ficam no fim da ordenação por atividade.",
+        );
+      if (access.error)
+        warnings.push("Datas de login indisponíveis; exibindo as atividades registradas.");
+      if (onlineRes.error) warnings.push("Presença online indisponível.");
+      if (usage.error || docs.error || roles.error)
+        warnings.push("Alguns dados complementares não puderam ser carregados.");
+      setError(warnings.join(" ") || null);
     } catch {
       setError(
         "Não foi possível ler os alunos do banco. Verifique a conexão e se você entrou como administrador.",
@@ -148,16 +200,35 @@ function AdminStudentsPage() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [isAdmin]);
 
   useEffect(() => {
     void load();
+    // A presença expira após 90 s; atualizar periodicamente mantém entrada e saída
+    // refletidas no painel sem exigir que o administrador recarregue a página.
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") void load();
+    }, 15000);
+    return () => window.clearInterval(timer);
   }, [load]);
 
   const visible = useMemo(() => {
     const q = filter.toLowerCase().trim();
-    return q ? rows.filter((r) => `${r.full_name} ${r.email}`.toLowerCase().includes(q)) : rows;
-  }, [rows, filter]);
+    return sortStudents(
+      q ? rows.filter((r) => `${r.full_name} ${r.email}`.toLowerCase().includes(q)) : rows,
+      sort,
+      period,
+    );
+  }, [rows, filter, sort, period]);
+  const leaders = useMemo(
+    () =>
+      sortStudents(
+        rows.filter((r) => !r.isAdmin && (activeSeconds(r.activity, period) ?? 0) > 0),
+        "activity",
+        period,
+      ).slice(0, 3),
+    [rows, period],
+  );
 
   function askPlanChange(s: StudentRow, tier: string) {
     if (tier === s.subscription_tier) return;
@@ -322,13 +393,54 @@ function AdminStudentsPage() {
         </div>
       </PageHero>
 
+      <Card>
+        <CardHeader>
+          <CardTitle>Alunos mais ativos {period === "today" ? "hoje" : "no total"}</CardTitle>
+          <CardDescription>
+            Classificação pelo tempo ativo registrado, somando as sessões. Horários e dia de
+            referência: Acre. Administradores não entram neste destaque.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-3 sm:grid-cols-3">
+          {loading ? (
+            <p className="text-sm text-muted-foreground">Carregando atividade…</p>
+          ) : leaders.length ? (
+            leaders.map((s, i) => (
+              <button
+                key={s.id}
+                onClick={() => setDetailsId(s.id)}
+                className="min-w-0 rounded-xl border bg-muted/30 p-4 text-left hover:bg-muted focus-visible:outline-2 focus-visible:outline-primary"
+              >
+                <p className="text-xs font-semibold text-muted-foreground">
+                  {i + 1}º em tempo ativo
+                </p>
+                <p className="mt-2 truncate font-semibold">
+                  {s.full_name || s.email || "Sem nome"}
+                </p>
+                <p className="mt-1 text-xl font-bold">
+                  {activityDuration(activeSeconds(s.activity, period))}
+                </p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Último acesso: {fmtDateTime(s.lastAccess)}
+                </p>
+              </button>
+            ))
+          ) : (
+            <p className="text-sm text-muted-foreground sm:col-span-3">
+              Sem atividade registrada disponível para este período.
+            </p>
+          )}
+        </CardContent>
+      </Card>
       <NewStudentForm onCreated={() => void load()} />
 
       <Card>
         <CardHeader className="gap-3 md:flex-row md:items-center md:justify-between">
           <div>
             <CardTitle>Alunos cadastrados</CardTitle>
-            <CardDescription>Uso de IA hoje / total, provas enviadas e plano.</CardDescription>
+            <CardDescription>
+              {visible.length} alunos · acesso, tempo ativo, provas e plano. Horário do Acre.
+            </CardDescription>
           </div>
           <Input
             aria-label="Buscar aluno"
@@ -339,6 +451,31 @@ function AdminStudentsPage() {
           />
         </CardHeader>
         <CardContent className="space-y-3">
+          <div className="flex flex-wrap gap-3">
+            <label className="grid gap-1 text-sm font-medium">
+              Ordenar alunos
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as StudentSort)}
+                className="h-10 rounded-md border bg-background px-3"
+              >
+                <option value="activity">Mais ativos — tempo de uso</option>
+                <option value="access">Último acesso — mais recentes</option>
+                <option value="name">Nome — A a Z</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-sm font-medium">
+              Período de atividade
+              <select
+                value={period}
+                onChange={(e) => setPeriod(e.target.value as ActivityPeriod)}
+                className="h-10 rounded-md border bg-background px-3"
+              >
+                <option value="today">Hoje (Acre)</option>
+                <option value="total">Todo o período registrado</option>
+              </select>
+            </label>
+          </div>
           {error && (
             <p className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
               {error}
@@ -358,8 +495,8 @@ function AdminStudentsPage() {
           ) : (
             visible.map((s) => (
               <div key={s.id} className="rounded-lg border border-border bg-card p-3">
-                <div className="flex items-start gap-3">
-                  <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-start gap-3">
+                  <div className="min-w-0 flex-1 basis-56">
                     {editId === s.id ? (
                       <form
                         className="flex gap-2"
@@ -395,9 +532,16 @@ function AdminStudentsPage() {
                     <p className="truncate text-xs text-muted-foreground" title={s.email ?? ""}>
                       {s.email}
                     </p>
-                    <p className="truncate text-[0.7rem] text-muted-foreground">
+                    <p className="text-xs leading-6 text-muted-foreground">
                       Cadastro {fmtDateTime(s.created_at)} · Último login{" "}
                       {fmtDateTime(s.last_sign_in_at)}
+                    </p>
+                    <p className="mt-1 text-sm font-medium">
+                      Último acesso: {s.lastAccess ? fmtDateTime(s.lastAccess) : "Sem registro"}
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Tempo ativo hoje: {activityDuration(activeSeconds(s.activity, "today"))} ·
+                      Total: {activityDuration(activeSeconds(s.activity, "total"))}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-wrap items-center justify-end gap-2">
@@ -477,7 +621,9 @@ function AdminStudentsPage() {
                           <span className="text-muted-foreground">
                             {ex.score_net != null
                               ? `Nota ${ex.score_net}`
-                              : new Date(ex.created_at).toLocaleDateString("pt-BR")}
+                              : acreDate(ex.created_at).toLocaleDateString("pt-BR", {
+                                  timeZone: "America/Rio_Branco",
+                                })}
                           </span>
                         </li>
                       ))

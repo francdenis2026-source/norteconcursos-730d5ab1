@@ -1,0 +1,194 @@
+{
+  "scope": "PC-AC 2017 S01-V; lote 2, cotejo com PCDF Delegado 2026",
+  "active": [
+    {
+      "item_number": 31,
+      "answer": "E",
+      "topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc",
+      "matrix": "pcdf_matrix",
+      "norm": "cf",
+      "reference": "arts. 24, §§ 1º a 4º, e 30, II",
+      "explanation": "Resposta: E.\nMunicípios podem suplementar a legislação federal e estadual no que couber. No regime concorrente, a União edita normas gerais; a falta delas permite competência legislativa plena dos Estados para atender suas peculiaridades. Norma geral federal posterior suspende a eficácia da norma estadual contrária, não a revoga.\nExemplo: Se uma lei estadual regula a matéria na ausência de norma geral federal, a edição posterior desta suspende a eficácia do trecho estadual incompatível. Variação: suplementação municipal não transforma o Município em integrante do rol do caput do art. 24.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 33,
+      "answer": "B",
+      "topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "matrix": "pcdf_matrix",
+      "norm": "cf",
+      "reference": "arts. 5º, LXI, e 58, § 3º",
+      "explanation": "Resposta: B.\nCPI tem poderes de investigação, não poder geral de cautela judicial. Não pode decretar prisão preventiva nem interceptação telefônica. A prisão em flagrante tem regime próprio. Pode determinar quebra fundamentada de sigilos bancário e fiscal, respeitando direitos. A criação exige fato determinado, prazo certo e um terço dos membros: considerando as 513 cadeiras no contexto da prova, são 171 assinaturas; a alternativa C erra ao falar em três quintos.\nExemplo: Uma CPI pode encaminhar elementos ao órgão competente para pedir uma cautelar; não pode substituir o juiz e decretar preventiva. Variação: obter registros protegidos não equivale a interceptar o conteúdo de comunicações futuras.",
+      "extra_sources": [
+        "stf_cpi"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 34,
+      "answer": "E",
+      "topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "matrix": "pcdf_matrix",
+      "norm": "cf",
+      "reference": "arts. 47, 49, V, 63, I, 64, 66, § 4º, e 69",
+      "explanation": "Resposta: E.\nAdmite-se emenda parlamentar em projeto de iniciativa reservada, respeitando pertinência temática e a vedação de aumento de despesa, com as ressalvas constitucionais para matéria orçamentária. O STF reafirmou esses limites na ADI 4570. As outras alternativas trocam quóruns, a Casa inicial ou o modo de apreciação do veto: lei complementar exige maioria absoluta; veto é apreciado em sessão conjunta.\nExemplo: Um projeto reservado não pode ser usado para inserir aumento de pessoal estranho ao seu objeto. Variação: o art. 63 contém ressalvas constitucionais; não transforme a regra da alternativa em proibição absoluta de toda emenda orçamentária.",
+      "extra_sources": [
+        "stf_emendas"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 35,
+      "answer": "A",
+      "topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "matrix": "pcdf_matrix",
+      "norm": "cf",
+      "reference": "art. 52, II",
+      "explanation": "Resposta: A.\nCompete privativamente ao Senado processar e julgar o Advogado-Geral da União por crime de responsabilidade. O núcleo da cobrança é distinguir essa competência das hipóteses de julgamento de infrações penais comuns. Fixe a autoridade e a natureza da infração antes de escolher o órgão competente.\nExemplo: Se o enunciado afirma crime de responsabilidade praticado pelo AGU, a resposta é Senado Federal. Variação: trocar essa expressão por crime comum exige outra análise; não transporte automaticamente a competência do impeachment para qualquer acusação.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 37,
+      "answer": "E",
+      "topic_id": "74ed7f54-1572-5ee8-ad74-fc75cadcffaf",
+      "matrix": "pcdf_matrix",
+      "norm": "cf",
+      "reference": "arts. 52, II, 92, I-A, 93, VIII, 95, I, e 102, I",
+      "explanation": "Resposta: E.\nMinistro do STF pode perder o cargo por condenação em crime de responsabilidade no Senado. O CNJ integra o Poder Judiciário. A vitaliciedade após dois anos é a regra do primeiro grau, não a forma de aquisição nos tribunais. Remoção por interesse público não se decide por mera maioria simples. A alternativa A também erra ao atribuir genericamente ao STJ o julgamento comum de ministros de Estado.\nExemplo: A garantia de permanência no cargo não torna um ministro imune ao processo de responsabilidade previsto na Constituição. Variação: controle administrativo exercido pelo CNJ não o coloca fora da estrutura do Judiciário.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 46,
+      "answer": "C",
+      "topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "matrix": "pcdf_matrix",
+      "norm": "cp",
+      "reference": "arts. 111, IV, e 242",
+      "explanation": "Resposta: C.\nRegistrar como seu o filho de outrem é tratado como falsidade ideológica em modalidade especial do art. 242, não aplicação automática do tipo genérico do art. 299. A ciência da falsificação pelo próprio registrado não é o marco exclusivo de prescrição: o art. 111, IV, fala em quando o fato se tornou conhecido. Existe forma privilegiada com disciplina própria, afastando o nunca da alternativa D.\nExemplo: Inserir conscientemente declaração falsa de filiação fora das vias legais pode configurar o tipo. Variação: reconhecimento socioafetivo juridicamente admitido e adoção regular não se confundem com declaração falsa; não use a explicação para criminalizar automaticamente toda filiação não biológica.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 49,
+      "answer": "E",
+      "topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "matrix": "pcdf_matrix",
+      "norm": "cp",
+      "reference": "art. 217-A",
+      "explanation": "Resposta: E.\nO tipo abrange conjunção carnal OU outro ato libidinoso. Não exige vítima mulher nem, nas hipóteses de vulnerabilidade legal, violência ou grave ameaça como meio de execução. Também não é lenocínio. As penas foram alteradas depois de 2017, inclusive em 2025; a questão cobra a estrutura do tipo, não autoriza copiar a pena antiga.\nExemplo: Um ato libidinoso nas condições legais de vulnerabilidade pode configurar o delito mesmo sem conjunção carnal. Variação: a ausência de violência física não afasta, por si só, a incidência do art. 217-A; os elementos do caso devem ser demonstrados.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 53,
+      "answer": "D",
+      "topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "matrix": "pcdf_matrix",
+      "norm": "cpp",
+      "reference": "arts. 24 e 29 a 31; CP, art. 236, parágrafo único",
+      "explanation": "Resposta: D.\nEntre as espécies de ação privada estão a comum ou exclusiva, a personalíssima e a subsidiária da pública. Personalíssima tem titularidade estrita, como a queixa do contraente enganado no art. 236 do CP. Subsidiária cabe diante da inércia do MP no prazo legal; não converte toda ação pública em privada. Representação e requisição são condições de certas ações públicas, não espécies de ação privada.\nExemplo: A queixa subsidiária permite reagir à inércia ministerial no prazo, com os poderes de intervenção previstos ao MP. Variação: discordar de uma atuação regular do Ministério Público não equivale, automaticamente, à inércia exigida.",
+      "extra_sources": [],
+      "additional_basis": [
+        {
+          "norm": "cp",
+          "reference": "art. 236, parágrafo único"
+        }
+      ]
+    },
+    {
+      "item_number": 54,
+      "answer": "C",
+      "topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "matrix": "pcdf_matrix",
+      "norm": "cpp",
+      "reference": "arts. 5º, § 4º, 25 e 29",
+      "explanation": "Resposta: C.\nRepresentação é condição específica de procedibilidade quando a lei a exige. Na regra geral do CPP, torna-se irretratável depois do OFERECIMENTO da denúncia, não apenas de seu recebimento. A lesão corporal em violência doméstica contra a mulher é de ação pública incondicionada, conforme ADI 4424. Na subsidiária, a negligência do querelante permite retomada pelo MP.\nExemplo: Um crime que exige representação não pode ser tratado como incondicionado por mera conveniência. Variação: o art. 16 da Maria da Penha tem disciplina própria para ações efetivamente condicionadas, antes do recebimento; isso não permite desistir de representação em lesão cuja ação já é incondicionada.",
+      "extra_sources": [
+        "stf_adi4424_specific"
+      ],
+      "additional_basis": [
+        {
+          "norm": "mariapenha",
+          "reference": "art. 16, disciplina especial das ações condicionadas"
+        }
+      ]
+    },
+    {
+      "item_number": 56,
+      "answer": "C",
+      "topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "matrix": "pcdf_matrix",
+      "norm": "jec",
+      "reference": "art. 69, caput e parágrafo único",
+      "explanation": "Resposta: C.\nNa infração de menor potencial ofensivo, a autoridade competente lavra o termo circunstanciado e encaminha o caso ao Juizado, com os envolvidos, na forma legal. Se o autor é imediatamente encaminhado ou assume compromisso de comparecer, não se impõe prisão em flagrante nem se exige fiança. Não confunda esse rito com a instauração automática de inquérito ou pedido de preventiva.\nExemplo: Para uma infração sujeita à Lei 9.099/1995, o compromisso de comparecimento tem a consequência prevista no art. 69. Variação: crimes de violência doméstica e familiar contra a mulher submetidos à Lei Maria da Penha são excluídos do rito pela regra do seu art. 41.",
+      "extra_sources": [],
+      "additional_basis": [
+        {
+          "norm": "mariapenha",
+          "reference": "art. 41"
+        }
+      ]
+    },
+    {
+      "item_number": 57,
+      "answer": "C",
+      "topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9",
+      "matrix": "pcdf_matrix",
+      "norm": "mariapenha",
+      "reference": "art. 5º, III e parágrafo único, e art. 40-A",
+      "explanation": "Resposta: C.\nRelação íntima de afeto não exige coabitação, e a orientação sexual não exclui a proteção. O art. 40-A impede criar requisitos adicionais ligados à causa ou motivação dos atos e à condição das partes. Atenção à atualização judicial: no MI 7452, o STF estendeu a proteção a casais homoafetivos masculinos em situação de subordinação e a travestis e mulheres transexuais nos termos do julgamento. Isso não autoriza criar por analogia novos crimes que pressuponham vítima mulher.\nExemplo: Uma mulher ameaçada por ex-companheira não perde a proteção só porque nunca moraram juntas. Variação: não se deve concluir da prova de 2017 que toda violência sofrida por um homem está necessariamente fora da proteção reconhecida pelo STF, nem que qualquer conflito entre homens se enquadra automaticamente.",
+      "extra_sources": [
+        "stf_mi7452"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 60,
+      "answer": "B",
+      "topic_id": "0a3b8f9a-1000-5fae-82a7-18342716e0b8",
+      "matrix": "pcdf_matrix",
+      "norm": "cpp",
+      "reference": "arts. 76, I, e 77",
+      "explanation": "Resposta: B.\nA alternativa B reproduz hipótese de conexão intersubjetiva: várias infrações praticadas por pessoas reunidas, em concurso ou umas contra as outras, nas condições do art. 76, I. Continência é outra categoria: duas ou mais pessoas acusadas da mesma infração, por exemplo, está no art. 77. Conexão não dispensa observar exceções e regras específicas de competência.\nExemplo: Infrações recíprocas em uma ocorrência podem ligar os processos por conexão, conforme os fatos. Variação: duas pessoas acusadas de um único crime ilustram continência; a pluralidade de acusados não transforma automaticamente a hipótese em conexão.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 63,
+      "answer": "B",
+      "topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "matrix": "pcdf_matrix",
+      "norm": "interceptacao",
+      "reference": "arts. 2º, III, 4º, § 2º, e 5º",
+      "explanation": "Resposta: B.\nNão se autoriza interceptação telefônica quando o fato investigado é punido, no máximo, com detenção. A alternativa A troca o prazo legal de 15 dias por dez; C troca o prazo de decisão de 24 horas por 48. A medida exige os pressupostos legais, decisão fundamentada e sigilo; não é uma autorização genérica para invadir comunicações.\nExemplo: Investigar apenas infração punida no máximo com detenção não satisfaz o requisito do art. 2º, III. Variação: o prazo de 15 dias da diligência não é o prazo de 24 horas para decidir o pedido; renovação exige demonstração da indispensabilidade.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 64,
+      "answer": "A",
+      "topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "matrix": "pcdf_matrix",
+      "norm": "organizacoes",
+      "reference": "arts. 10, 12 e 13",
+      "explanation": "Resposta: A.\nA lei prevê inexigibilidade de conduta diversa na hipótese delimitada do agente infiltrado. Não é imunidade geral: ele responde por excessos e deve observar proporcionalidade, finalidade da investigação e limites da autorização. A infiltração depende de autorização judicial motivada e dos requisitos próprios; não se admite dispensá-los só porque o caso envolve organização criminosa.\nExemplo: Durante infiltração regularmente autorizada, a eventual incidência da excludente exige examinar as circunstâncias concretas. Variação: praticar excessos sem relação proporcional com a finalidade investigativa não fica automaticamente protegido. Não confunda as regras da infiltração presencial com as da virtual.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 66,
+      "answer": "C",
+      "topic_id": "0d4c34ba-0268-4d36-8882-0c0139af75e3",
+      "matrix": "pcdf_matrix",
+      "norm": "lavagem",
+      "reference": "art. 1º, § 5º",
+      "explanation": "Resposta: C.\nA redução prevista é de UM A DOIS TERÇOS, com possibilidade de cumprimento em regime aberto ou semiaberto, nos termos do dispositivo. A colaboração espontânea deve produzir um dos resultados legais: apuração das infrações, identificação dos envolvidos ou localização dos bens, direitos ou valores. A lei prevê outras possibilidades judiciais; benefício não significa imunidade automática por qualquer declaração.\nExemplo: Esclarecimentos que efetivamente permitam localizar valores ocultados podem atender a uma das hipóteses legais. Variação: uma declaração vaga, sem o resultado exigido, não se equipara automaticamente à colaboração tratada no § 5º.",
+      "extra_sources": [],
+      "additional_basis": []
+    }
+  ],
+  "historical": []
+}

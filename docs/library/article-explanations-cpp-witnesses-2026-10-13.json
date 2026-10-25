@@ -1,0 +1,1619 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:04:51.865907+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 26,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-201",
+        "art-202",
+        "art-203",
+        "art-204",
+        "art-205",
+        "art-206",
+        "art-207",
+        "art-208",
+        "art-209",
+        "art-210",
+        "art-211",
+        "art-212",
+        "art-213",
+        "art-214",
+        "art-215",
+        "art-216",
+        "art-217",
+        "art-218",
+        "art-219",
+        "art-220",
+        "art-221",
+        "art-222",
+        "art-222-a",
+        "art-223",
+        "art-224",
+        "art-225"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-201",
+      "unit_id": "71ed8e16-d28c-59af-b474-1543f347d0ab",
+      "content_sha256": "ae6060909341840c603e09872c029fb723291df543453ff05d64de7b8bb30ed4",
+      "simples": "Ofendido é ouvido quando possível, recebe informações processuais e proteção de intimidade; não se confunde com testemunha compromissada.",
+      "pontos": [
+        "Declara circunstâncias, autoria que conheça ou presuma e provas; ausência injustificada após intimação permite condução nos termos legais.",
+        "Informar ingresso/saída de prisão, audiência, sentença e acórdãos; meio eletrônico por opção.",
+        "Espaço separado e eventual atendimento multidisciplinar; custeio legal pelo ofensor ou Estado.",
+        "Proteger dados, honra e imagem, com sigilo pertinente; integrar proteção especial da vítima criança."
+      ],
+      "atencao": [
+        "Presumir autor não equivale a reconhecer autoria definitivamente. Sigilo de dados deve preservar garantias de defesa sem exposição pública indevida."
+      ],
+      "exemplo": "Vítima indica provas e endereço para comunicações; recebe notícia da audiência e proteção de seus dados. Variação: Se criança vítima de violência, aplica-se depoimento especial cabível, em vez de repetir o relato de forma revitimizadora.",
+      "prova": [
+        "Ofendido tem direito a comunicações previstas? Sim.",
+        "Toda vítima é testemunha sob compromisso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção do ofendido",
+          "significado": "Informação, atendimento e preservação da intimidade no procedimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ],
+      "expected": {
+        "unit_id": "71ed8e16-d28c-59af-b474-1543f347d0ab",
+        "content_sha256": "ae6060909341840c603e09872c029fb723291df543453ff05d64de7b8bb30ed4",
+        "simples": "Sempre que possível, o ofendido será qualificado e perguntado sobre as circunstâncias da infração, quem seja ou presuma ser o seu autor e as provas que possa indicar, tomando-se por termo as suas declarações. Se, intimado, deixar de comparecer sem motivo justo, poderá ser conduzido à presença da autoridade. Será comunicado dos atos processuais relativos ao ingresso e à saída do acusado da prisão, à designação de data para audiência e à sentença e acórdãos que a mantenham ou modifiquem, no endereço indicado ou por meio eletrônico, por opção sua. Antes do início da audiência e durante sua realização, será reservado espaço separado para o ofendido. O juiz poderá encaminhá-lo para atendimento multidisciplinar (psicossocial, assistência jurídica e saúde), a expensas do ofensor ou do Estado, e tomará providências para preservar a intimidade, vida privada, honra e imagem do ofendido.",
+        "pontos": [
+          "Declarações do ofendido tomadas por termo.",
+          "Condução coercitiva se faltar sem motivo justo.",
+          "Comunicação dos atos processuais ao ofendido (prisão, audiência, sentença e acórdãos).",
+          "Espaço separado na audiência.",
+          "Atendimento multidisciplinar, a expensas do ofensor ou do Estado.",
+          "Preservação da intimidade e da imagem."
+        ],
+        "atencao": [
+          "O ofendido NÃO é testemunha e não presta compromisso."
+        ],
+        "exemplo": "A vítima é comunicada da saída do acusado da prisão.",
+        "prova": [
+          "Assertiva que obriga o ofendido a prestar compromisso de dizer a verdade como as testemunhas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-202",
+      "unit_id": "eea6ffd5-f500-54e5-a28c-c46d03f9880d",
+      "content_sha256": "a4c9a0f0a0d586fc093ddebed2dfe2c0963ccfb0184aa1a490923cc00fabd8cd",
+      "simples": "Toda pessoa pode ser testemunha; impedimentos, dispensas e ausência de compromisso são analisados nas regras específicas.",
+      "pontos": [
+        "Capacidade de depor não depende de condição social.",
+        "Não excluir criança ou pessoa com deficiência só por essa condição.",
+        "Integrar acessibilidade e os arts. 206–208."
+      ],
+      "atencao": [
+        "Pode depor não significa que todos sempre prestam compromisso ou que nenhum sigilo limita o depoimento."
+      ],
+      "exemplo": "Pessoa com deficiência relata fato com apoio acessível adequado. Variação: Criança pode ser ouvida no procedimento pertinente, sem aplicar compromisso incompatível com a idade.",
+      "prova": [
+        "Deficiência impede automaticamente testemunhar? Não.",
+        "Toda pessoa presta sempre compromisso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Aptidão testemunhal",
+          "significado": "Possibilidade de relatar conhecimento, com regras específicas e acessibilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ],
+      "expected": {
+        "unit_id": "eea6ffd5-f500-54e5-a28c-c46d03f9880d",
+        "content_sha256": "a4c9a0f0a0d586fc093ddebed2dfe2c0963ccfb0184aa1a490923cc00fabd8cd",
+        "simples": "Toda pessoa poderá ser testemunha, salvo as exceções legais: quem pode recusar-se a depor e quem é proibido de fazê-lo.",
+        "pontos": [
+          "Qualquer pessoa pode ser testemunha."
+        ],
+        "atencao": [
+          "Ressalvas: pessoas proibidas de depor (art. 207) e dispensadas (art. 206)."
+        ],
+        "exemplo": "Um vizinho que presenciou o fato pode ser testemunha.",
+        "prova": [
+          "Assertiva que restringe a testemunha a maiores de 18 anos erra: toda pessoa pode ser testemunha."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 206",
+          "Art. 207"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-203",
+      "unit_id": "9619ee46-4f49-5f65-a7a4-4a9c5277256f",
+      "content_sha256": "eda2615e4bd7d9f119f8f404c7639786354c1173f7ae9543253376d4592f3fb1",
+      "simples": "Testemunha promete verdade, identifica-se, informa relação com as partes e explica como sabe o que relata.",
+      "pontos": [
+        "Qualificação pessoal e profissional.",
+        "Parentesco ou outras relações devem ser esclarecidos.",
+        "Razões da ciência permitem avaliar credibilidade; observar exceções ao compromisso."
+      ],
+      "atencao": [
+        "Dizer ouvi falar não é igual a presenciar: registrar a origem do conhecimento, sem atribuir percepção inexistente."
+      ],
+      "exemplo": "Testemunha explica que viu o fato e informa relação com a vítima. Variação: Se apenas recebeu relato alheio, deve indicar essa origem, sem convertê-lo em observação direta.",
+      "prova": [
+        "Deve explicar como sabe o fato? Sim.",
+        "Parentesco pode ser ocultado por conveniência? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Razão de ciência",
+          "significado": "Origem do conhecimento relatado ao juízo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9619ee46-4f49-5f65-a7a4-4a9c5277256f",
+        "content_sha256": "eda2615e4bd7d9f119f8f404c7639786354c1173f7ae9543253376d4592f3fb1",
+        "simples": "A testemunha fará, sob palavra de honra, a promessa de dizer a verdade do que souber e lhe for perguntado, devendo declarar seu nome, idade, estado, residência, profissão, lugar onde exerce sua atividade, se é parente, e em que grau, de alguma das partes, ou quais suas relações com qualquer delas, e relatar o que souber, explicando sempre as razões de sua ciência ou as circunstâncias pelas quais possa avaliar-se sua credibilidade.",
+        "pontos": [
+          "Promessa de dizer a verdade sob palavra de honra.",
+          "Qualificação e declaração de relações com as partes.",
+          "Relata o que sabe e explica a razão de sua ciência."
+        ],
+        "atencao": [
+          "Explicar a razão da ciência."
+        ],
+        "exemplo": "A testemunha informa se é parente do acusado antes de depor.",
+        "prova": [
+          "Assertiva que dispensa a testemunha de explicar a razão de sua ciência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 208"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-204",
+      "unit_id": "1f625687-dd52-547b-a95b-44820ccc10f0",
+      "content_sha256": "324d298aa6170e599627fb123fac6730e1ff6d15a976576e763c54fefd2e90c3",
+      "simples": "Depoimento é oral, sem texto pronto trazido para substituí-lo; breve consulta a apontamentos é permitida.",
+      "pontos": [
+        "Oralidade é regra.",
+        "Apontamento breve não é leitura integral de depoimento escrito.",
+        "Integrar recursos de acessibilidade e exceções legais próprias."
+      ],
+      "atencao": [
+        "Não proibir toda consulta breve, nem admitir narrativa previamente redigida como substituto comum da oitiva."
+      ],
+      "exemplo": "Testemunha consulta nota breve para lembrar data e depois responde oralmente. Variação: Leitura de texto inteiro preparado não se enquadra na simples consulta permitida.",
+      "prova": [
+        "Breve consulta é vedada? Não.",
+        "Pode substituir o depoimento por texto pronto como regra? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Oralidade testemunhal",
+          "significado": "Prestação por respostas orais, com consulta breve permitida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1f625687-dd52-547b-a95b-44820ccc10f0",
+        "content_sha256": "324d298aa6170e599627fb123fac6730e1ff6d15a976576e763c54fefd2e90c3",
+        "simples": "O depoimento será prestado oralmente, não sendo permitido à testemunha trazê-lo por escrito. Não será vedada à testemunha, entretanto, breve consulta a apontamentos.",
+        "pontos": [
+          "Depoimento oral.",
+          "Vedado trazê-lo por escrito.",
+          "Breve consulta a apontamentos é permitida."
+        ],
+        "atencao": [
+          "Oralidade com breve consulta."
+        ],
+        "exemplo": "A testemunha consulta rapidamente uma anotação com datas.",
+        "prova": [
+          "Assertiva que permite à testemunha depor lendo texto escrito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-205",
+      "unit_id": "74558c3f-0169-5a4c-b88f-34d25bea4755",
+      "content_sha256": "239f38622ca559ede70d84b2e99a109ca219995e117c7a2a75ce2fa41f67229c",
+      "simples": "Dúvida sobre identidade da testemunha leva a verificação pelos meios disponíveis, sem necessariamente impedir o depoimento desde logo.",
+      "pontos": [
+        "Juiz verifica identificação.",
+        "Pode colher o relato enquanto esclarece identidade.",
+        "Não ignorar a dúvida nem dispensar registro."
+      ],
+      "atencao": [
+        "Documento divergente não exige automaticamente descartar todo o relato antes da verificação."
+      ],
+      "exemplo": "Nome apresenta divergência e juiz verifica dados, podendo ouvir a pessoa desde logo. Variação: Se identidade continuar incerta, a questão precisa ser esclarecida e valorada, não escondida.",
+      "prova": [
+        "Dúvida impede sempre ouvir imediatamente? Não.",
+        "Verificação é dispensável? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Verificação de identidade",
+          "significado": "Esclarecimento da identificação de quem depõe."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "74558c3f-0169-5a4c-b88f-34d25bea4755",
+        "content_sha256": "239f38622ca559ede70d84b2e99a109ca219995e117c7a2a75ce2fa41f67229c",
+        "simples": "Se ocorrer dúvida sobre a identidade da testemunha, o juiz procederá à verificação pelos meios ao seu alcance, podendo, entretanto, tomar-lhe o depoimento desde logo.",
+        "pontos": [
+          "Dúvida sobre a identidade: o juiz verifica pelos meios ao seu alcance.",
+          "Pode tomar o depoimento desde logo."
+        ],
+        "atencao": [
+          "Não impede o depoimento imediato."
+        ],
+        "exemplo": "Juiz colhe o depoimento enquanto confirma a identidade da testemunha.",
+        "prova": [
+          "Assertiva que impede o depoimento até a confirmação da identidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-206",
+      "unit_id": "0607c20f-29c7-5676-807d-d0ad81889804",
+      "content_sha256": "870cfbb82af721ad1774540d365f250d0e6449fcb78243dd18b73e5b4acdd1f5",
+      "simples": "Há dever geral de depor, mas familiares enumerados podem recusar, salvo impossibilidade de obter ou integrar a prova por outro modo.",
+      "pontos": [
+        "Ascendente, descendente, afim reto, cônjuge mesmo separado na terminologia histórica, irmão e vínculos adotivos enumerados.",
+        "Dispensa não é absoluta: exceção de prova insubstituível.",
+        "Integrar ausência de compromisso do art. 208 e proteção contra autoincriminação."
+      ],
+      "atencao": [
+        "Não confundir direito familiar de recusa com proibição profissional de sigilo ou obrigação de se incriminar."
+      ],
+      "exemplo": "Irmão do acusado pode recusar depoimento quando a prova pode ser obtida por outras fontes. Variação: Prova insubstituível exige examinar ressalva legal, sem impor autoincriminação contra garantia constitucional.",
+      "prova": [
+        "A recusa familiar é absoluta em todos os casos? Não.",
+        "É idêntica ao sigilo profissional? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dispensa familiar",
+          "significado": "Faculdade legal de recusar depoimento, com ressalva expressa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "0607c20f-29c7-5676-807d-d0ad81889804",
+        "content_sha256": "870cfbb82af721ad1774540d365f250d0e6449fcb78243dd18b73e5b4acdd1f5",
+        "simples": "A testemunha não poderá eximir-se da obrigação de depor. Poderão, entretanto, recusar-se a fazê-lo o ascendente ou descendente, o afim em linha reta, o cônjuge (ainda que desquitado), o irmão e o pai, a mãe ou o filho adotivo do acusado, salvo quando não for possível, por outro modo, obter-se ou integrar-se a prova do fato e de suas circunstâncias.",
+        "pontos": [
+          "Regra: dever de depor.",
+          "Podem recusar-se: ascendente, descendente, afim em linha reta, cônjuge, irmão, pais ou filho adotivo do acusado.",
+          "Exceção: quando não for possível obter a prova de outro modo."
+        ],
+        "atencao": [
+          "Os parentes podem recusar-se, mas, se não houver outro meio de prova, devem depor (sem compromisso)."
+        ],
+        "exemplo": "Irmão do acusado pode se recusar a depor, salvo se não houver outro modo de provar o fato.",
+        "prova": [
+          "Assertiva que obriga o cônjuge do acusado a depor em qualquer hipótese erra: ele pode se recusar, salvo quando a prova não puder ser obtida por outro modo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 208"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-207",
+      "unit_id": "840e224a-7fef-5ce9-af30-9987d6e4af28",
+      "content_sha256": "402762fdd879b2da7e172efc7c1a1189c9aa89e45bc1f6ed715393087902db37",
+      "simples": "Dever de segredo por função, ministério, ofício ou profissão impede depoimento; exceção exige desobrigação pela parte interessada e vontade de depor.",
+      "pontos": [
+        "Sigilo profissional não é mera preferência.",
+        "Desobrigação e vontade são requisitos cumulativos do texto.",
+        "Integrar normas profissionais especiais, sem presumir renúncia a todo segredo."
+      ],
+      "atencao": [
+        "Liberação da parte não força o profissional a testemunhar; vontade isolada não elimina segredo."
+      ],
+      "exemplo": "Profissional vinculado a segredo não relata informações protegidas só porque foi convocado. Variação: Parte interessada desobriga e profissional quer depor: examina-se cabimento e limites especiais aplicáveis.",
+      "prova": [
+        "Desobrigação sozinha obriga depoimento? Não.",
+        "Vontade sem desobrigação supera o segredo por este artigo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Segredo profissional",
+          "significado": "Proteção de informações vinculada à função ou atividade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "840e224a-7fef-5ce9-af30-9987d6e4af28",
+        "content_sha256": "402762fdd879b2da7e172efc7c1a1189c9aa89e45bc1f6ed715393087902db37",
+        "simples": "São proibidas de depor as pessoas que, em razão de função, ministério, ofício ou profissão, devam guardar segredo, salvo se, desobrigadas pela parte interessada, quiserem dar o seu testemunho.",
+        "pontos": [
+          "Proibição de depor para quem tem dever de sigilo profissional.",
+          "Exceção: desobrigadas pela parte interessada e dispostas a depor."
+        ],
+        "atencao": [
+          "Sigilo profissional (advogado, médico, sacerdote etc.).",
+          "Mesmo desobrigada, a pessoa só depõe se QUISER."
+        ],
+        "exemplo": "Advogado não pode depor sobre segredo de seu cliente, salvo desobrigado por este e querendo depor.",
+        "prova": [
+          "Assertiva que obriga a pessoa desobrigada pela parte a depor erra: ela depõe se quiser."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 214"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-208",
+      "unit_id": "648df494-6107-5d98-83b9-361f05b181d1",
+      "content_sha256": "a5a4ec7d815ad1ef4ad08658c4387003a07a3253aee2a8b6949899fa87c09b16",
+      "simples": "O texto exclui compromisso para menores de 14 anos, familiares do art. 206 e hipóteses mentais descritas historicamente; isso não significa exclusão automática da oitiva.",
+      "pontos": [
+        "Menor de 14 não presta compromisso; completar 14 não mantém essa dispensa por idade.",
+        "Familiares do art. 206 ficam sem compromisso na hipótese pertinente.",
+        "Deficiência não equivale a incapacidade civil nem falta de credibilidade; integrar acessibilidade e avaliação concreta.",
+        "Criança vítima/testemunha de violência tem depoimento especial próprio."
+      ],
+      "atencao": [
+        "Não usar terminologia histórica para excluir toda pessoa com deficiência ou presumir mentira. Ausência de compromisso não é proibição de ouvir."
+      ],
+      "exemplo": "Criança de 13 anos relata fato sem compromisso, no procedimento protetivo aplicável. Variação: Testemunha com deficiência recebe recursos acessíveis; não é descartada apenas por diagnóstico.",
+      "prova": [
+        "Sem compromisso significa proibido depor? Não.",
+        "Deficiência torna relato automaticamente falso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Oitiva sem compromisso",
+          "significado": "Depoimento nas hipóteses de dispensa da promessa formal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ],
+      "expected": {
+        "unit_id": "648df494-6107-5d98-83b9-361f05b181d1",
+        "content_sha256": "a5a4ec7d815ad1ef4ad08658c4387003a07a3253aee2a8b6949899fa87c09b16",
+        "simples": "Não se deferirá o compromisso a que alude o art. 203 aos doentes e deficientes mentais e aos menores de 14 anos, nem às pessoas a que se refere o art. 206.",
+        "pontos": [
+          "Sem compromisso: doentes e deficientes mentais, menores de 14 anos e parentes do art. 206."
+        ],
+        "atencao": [
+          "Quem depõe sem compromisso não comete falso testemunho."
+        ],
+        "exemplo": "Criança de 10 anos depõe sem prestar compromisso.",
+        "prova": [
+          "Assertiva que exige compromisso do menor de 14 anos erra."
+        ],
+        "termos": [
+          {
+            "termo": "Informante",
+            "significado": "Quem depõe sem compromisso de dizer a verdade."
+          }
+        ],
+        "remissoes": [
+          "Art. 203",
+          "Art. 206"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-209",
+      "unit_id": "b1a9150e-2288-5122-ad29-26c1c8e69d23",
+      "content_sha256": "4dbc83bf8e749000a9a7ba804d199271df83e6805d1498b04a3e554be849b4cb",
+      "simples": "Juiz pode ouvir testemunhas adicionais necessárias e pessoas referidas nos relatos; quem nada sabe de relevante não conta como testemunha.",
+      "pontos": [
+        "Relevância e necessidade justificam complementação.",
+        "Pessoas referidas podem esclarecer o fato.",
+        "Não substituir investigação acusatória irrestritamente."
+      ],
+      "atencao": [
+        "Testemunha do juízo não dispensa imparcialidade ou contraditório."
+      ],
+      "exemplo": "Depoente aponta pessoa que presenciou detalhe relevante; juiz avalia sua oitiva. Variação: Pessoa sem qualquer conhecimento útil não é computada na forma do §2º.",
+      "prova": [
+        "Pessoa referida pode ser ouvida? Sim.",
+        "Quem nada sabe relevante deve contar necessariamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Testemunha referida",
+          "significado": "Pessoa mencionada cuja ciência pode justificar oitiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b1a9150e-2288-5122-ad29-26c1c8e69d23",
+        "content_sha256": "4dbc83bf8e749000a9a7ba804d199271df83e6805d1498b04a3e554be849b4cb",
+        "simples": "O juiz, quando julgar necessário, poderá ouvir outras testemunhas, além das indicadas pelas partes. Se ao juiz parecer conveniente, serão ouvidas as pessoas a que as testemunhas se referirem. Não será computada como testemunha a pessoa que nada souber que interesse à decisão da causa.",
+        "pontos": [
+          "Juiz pode ouvir outras testemunhas além das indicadas.",
+          "Pessoas mencionadas pelas testemunhas podem ser ouvidas.",
+          "Quem nada sabe de interesse não é computada como testemunha."
+        ],
+        "atencao": [
+          "Testemunhas do juízo e referidas."
+        ],
+        "exemplo": "Juiz ouve pessoa referida por uma testemunha como conhecedora do fato.",
+        "prova": [
+          "Assertiva que restringe a oitiva às testemunhas indicadas pelas partes erra."
+        ],
+        "termos": [
+          {
+            "termo": "Testemunha referida",
+            "significado": "Pessoa mencionada no depoimento de outra testemunha."
+          }
+        ],
+        "remissoes": [
+          "Art. 202"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-210",
+      "unit_id": "962ee066-9e73-534b-ae22-5e0f4bc7f26a",
+      "content_sha256": "612db4c34ce8010a58c8e3ca941b964a1b9e3ec04541383e5d9143c26b099098",
+      "simples": "Testemunhas são ouvidas separadamente e não devem saber ou ouvir os relatos umas das outras; há advertência e espaços para incomunicabilidade.",
+      "pontos": [
+        "Separação antes e durante audiência.",
+        "Advertir sobre falso testemunho nos termos cabíveis.",
+        "Oitiva remota também precisa controle para evitar interferência."
+      ],
+      "atencao": [
+        "Não permitir acompanhar respostas anteriores para ajustar versão."
+      ],
+      "exemplo": "Testemunhas aguardam em espaços separados e entram individualmente. Variação: Em vídeo, verificar que não acompanham ou recebem orientações sobre relatos anteriores.",
+      "prova": [
+        "Podem ouvir umas às outras como regra? Não.",
+        "Separação começa só depois de depor? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incomunicabilidade",
+          "significado": "Controle para que relatos não sejam contaminados por oitiva de outros."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "962ee066-9e73-534b-ae22-5e0f4bc7f26a",
+        "content_sha256": "612db4c34ce8010a58c8e3ca941b964a1b9e3ec04541383e5d9143c26b099098",
+        "simples": "As testemunhas serão inquiridas cada uma de per si, de modo que umas não saibam nem ouçam os depoimentos das outras, devendo o juiz adverti-las das penas cominadas ao falso testemunho. Antes do início da audiência e durante a sua realização, serão reservados espaços separados para a garantia da incomunicabilidade das testemunhas.",
+        "pontos": [
+          "Inquirição individual e incomunicável.",
+          "Juiz adverte sobre as penas do falso testemunho.",
+          "Espaços separados antes e durante a audiência."
+        ],
+        "atencao": [
+          "Incomunicabilidade das testemunhas."
+        ],
+        "exemplo": "Testemunhas aguardam em salas separadas até serem chamadas.",
+        "prova": [
+          "Assertiva que permite que uma testemunha ouça o depoimento da outra erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 211"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-211",
+      "unit_id": "be90ceef-b8b5-5ffd-9811-c4e4c144dba8",
+      "content_sha256": "8af17305ff9d6a702099f5977b9c28e95749c3997cb76729923906884e711b26",
+      "simples": "Ao reconhecer possível falso testemunho na sentença, juiz remete cópia para apuração policial; hipóteses de apresentação imediata exigem integração com o procedimento atual.",
+      "pontos": [
+        "Afirmação falsa, silêncio ou negativa sobre verdade relevante.",
+        "Encaminhamento não é condenação automática.",
+        "Parágrafo usa remissões históricas; não importar rito antigo de plenário sem conferência atual."
+      ],
+      "atencao": [
+        "Contradição ou memória imprecisa não equivalem sempre a falsidade dolosa; apuração exige requisitos do crime."
+      ],
+      "exemplo": "Sentença aponta indícios de falsidade e encaminha cópia à polícia para investigar. Variação: Testemunha confundiu data sem demonstração de dolo: não decretar culpa automaticamente pela divergência.",
+      "prova": [
+        "Remessa condena imediatamente? Não.",
+        "Toda imprecisão prova crime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apuração de falso testemunho",
+          "significado": "Investigação própria do possível delito, separada da valoração do depoimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "be90ceef-b8b5-5ffd-9811-c4e4c144dba8",
+        "content_sha256": "8af17305ff9d6a702099f5977b9c28e95749c3997cb76729923906884e711b26",
+        "simples": "Se o juiz, ao pronunciar sentença final, reconhecer que alguma testemunha fez afirmação falsa, calou ou negou a verdade, remeterá cópia do depoimento à autoridade policial para a instauração de inquérito. Tendo o depoimento sido prestado em plenário de julgamento, o juiz, o tribunal ou o conselho de sentença, após a votação dos quesitos, poderão fazer apresentar imediatamente a testemunha à autoridade policial.",
+        "pontos": [
+          "Falso testemunho reconhecido na sentença: cópia do depoimento à autoridade policial.",
+          "Depoimento em plenário: a testemunha pode ser apresentada de imediato à autoridade policial."
+        ],
+        "atencao": [
+          "Apresentação imediata no plenário do Júri."
+        ],
+        "exemplo": "Após a sentença, o juiz envia à polícia cópia do depoimento falso para investigar.",
+        "prova": [
+          "Assertiva que determina que o próprio juiz instaure inquérito nesses casos erra: remete cópia à autoridade policial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 342 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-212",
+      "unit_id": "984d698f-8184-59c5-83bd-6005aab74dcc",
+      "content_sha256": "914b8c07d21be71d0feb23a026ce4a735ad1480622c2fbd9716da9bb6d7dbddb",
+      "simples": "Partes perguntam diretamente à testemunha; juiz afasta indução, irrelevância e repetição, podendo complementar pontos não esclarecidos.",
+      "pontos": [
+        "Modelo de perguntas diretas pelas partes.",
+        "Juiz controla pertinência e forma.",
+        "Complementação judicial é subsidiária sobre pontos obscuros."
+      ],
+      "atencao": [
+        "Não confundir rito testemunhal com o interrogatório do art. 188 nem fazer o juiz substituir sistematicamente a acusação."
+      ],
+      "exemplo": "Acusação e defesa perguntam; juiz rejeita questão que já sugere a resposta. Variação: Ponto relevante permanece sem esclarecimento: juiz pode complementar nos limites do artigo.",
+      "prova": [
+        "Todas as perguntas passam obrigatoriamente pela voz do juiz? Não.",
+        "Pergunta que induz resposta pode ser afastada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Pergunta direta",
+          "significado": "Questão formulada pela parte ao depoente com controle judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "984d698f-8184-59c5-83bd-6005aab74dcc",
+        "content_sha256": "914b8c07d21be71d0feb23a026ce4a735ad1480622c2fbd9716da9bb6d7dbddb",
+        "simples": "As perguntas serão formuladas pelas partes diretamente à testemunha, não admitindo o juiz aquelas que puderem induzir a resposta, não tiverem relação com a causa ou importarem na repetição de outra já respondida. Sobre os pontos não esclarecidos, o juiz poderá complementar a inquirição.",
+        "pontos": [
+          "Perguntas feitas diretamente pelas partes à testemunha (sistema presidencialista abandonado).",
+          "Indeferidas as que induzem a resposta, sem relação com a causa ou repetitivas.",
+          "Juiz complementa a inquirição."
+        ],
+        "atencao": [
+          "Sistema do exame direto (cross examination): partes perguntam diretamente.",
+          "Juiz complementa, e não inicia a inquirição."
+        ],
+        "exemplo": "A defesa pergunta diretamente à testemunha, e o juiz indefere pergunta indutiva.",
+        "prova": [
+          "Assertiva que determina que as partes perguntem por intermédio do juiz erra: perguntam diretamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 188"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-213",
+      "unit_id": "3ea056da-f029-5cf2-a90a-a438636425db",
+      "content_sha256": "22393eab9c018bd49113e9d92286004647e03c5df002ba7fef50134814af6e23",
+      "simples": "Testemunha relata fatos, sem apreciações pessoais desvinculadas; opiniões inseparáveis da narrativa podem ser admitidas.",
+      "pontos": [
+        "Distinguir percepção factual de julgamento moral.",
+        "Exceção de inseparabilidade.",
+        "Não reduzir toda descrição cotidiana a opinião proibida."
+      ],
+      "atencao": [
+        "Dizer pareceu embriagado pode integrar percepção descrita, mas exige base; insulto ou julgamento alheio não substitui fato."
+      ],
+      "exemplo": "Depoente descreve fala arrastada e desequilíbrio, explicando sua percepção. Variação: Afirmar pessoa é má sem fato pertinente deve ser controlado como apreciação desvinculada.",
+      "prova": [
+        "Toda percepção inseparável é proibida? Não.",
+        "Julgamento moral substitui relato de fatos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apreciação inseparável",
+          "significado": "Percepção que integra a narrativa sem virar opinião gratuita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3ea056da-f029-5cf2-a90a-a438636425db",
+        "content_sha256": "22393eab9c018bd49113e9d92286004647e03c5df002ba7fef50134814af6e23",
+        "simples": "O juiz não permitirá que a testemunha manifeste suas apreciações pessoais, salvo quando inseparáveis da narrativa do fato.",
+        "pontos": [
+          "Testemunha não manifesta apreciações pessoais.",
+          "Exceção: se inseparáveis da narrativa do fato."
+        ],
+        "atencao": [
+          "Testemunha relata fatos, não opiniões."
+        ],
+        "exemplo": "O juiz impede a testemunha de opinar sobre a culpa do acusado.",
+        "prova": [
+          "Assertiva que permite sempre à testemunha emitir opiniões erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-214",
+      "unit_id": "763f26d8-dc39-58b8-9603-e72f7a305f96",
+      "content_sha256": "2190f81e454e0fc6d9ea4ba52afebf8492d00e77f62db4804987c5547945b441",
+      "simples": "Contradita ocorre antes do depoimento; juiz registra alegação e resposta e só exclui ou dispensa compromisso nas hipóteses dos arts. 207–208.",
+      "pontos": [
+        "Momento anterior à oitiva.",
+        "Parcialidade pode afetar valoração sem exclusão automática.",
+        "Registrar contradita e resposta."
+      ],
+      "atencao": [
+        "Conhecer uma parte não leva por si à exclusão; distinguir credibilidade, sigilo e ausência de compromisso."
+      ],
+      "exemplo": "Defesa contradita antes do relato apontando relação e juiz registra a resposta. Variação: Relação não enquadrada em impedimento pode ser valorada, sem impedir ouvir automaticamente.",
+      "prova": [
+        "Toda contradita exclui testemunha? Não.",
+        "Resposta precisa registro? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Contradita",
+          "significado": "Objeção prévia às condições ou credibilidade da testemunha."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "763f26d8-dc39-58b8-9603-e72f7a305f96",
+        "content_sha256": "2190f81e454e0fc6d9ea4ba52afebf8492d00e77f62db4804987c5547945b441",
+        "simples": "Antes de iniciado o depoimento, as partes poderão contraditar a testemunha ou arguir circunstâncias ou defeitos que a tornem suspeita de parcialidade ou indigna de fé. O juiz fará consignar a contradita ou arguição e a resposta da testemunha, mas só excluirá a testemunha ou não lhe deferirá compromisso nos casos previstos nos arts. 207 e 208.",
+        "pontos": [
+          "Contradita antes do depoimento.",
+          "Juiz registra a contradita e a resposta.",
+          "Exclusão da testemunha só nos casos dos arts. 207 e 208."
+        ],
+        "atencao": [
+          "Contradita registrada não exclui a testemunha, salvo hipóteses legais."
+        ],
+        "exemplo": "A defesa contradita a testemunha que é inimiga do acusado; o juiz registra e, em regra, mantém o depoimento.",
+        "prova": [
+          "Assertiva que obriga o juiz a excluir toda testemunha contraditada erra."
+        ],
+        "termos": [
+          {
+            "termo": "Contradita",
+            "significado": "Impugnação da testemunha antes de depor."
+          }
+        ],
+        "remissoes": [
+          "Art. 207",
+          "Art. 208"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-215",
+      "unit_id": "edacdba4-22d3-50eb-bf5d-6267f89d5926",
+      "content_sha256": "4a377c5362bede460c944b6323c57487292398407377785a7b90cc810a7c84de",
+      "simples": "Registro do depoimento deve preservar tanto quanto possível as expressões e frases efetivamente usadas.",
+      "pontos": [
+        "Fidelidade ao sentido e às palavras.",
+        "Não substituir relato por conclusão do redator.",
+        "Integrar documentação audiovisual atual quando cabível."
+      ],
+      "atencao": [
+        "Resumo não deve converter incerteza em certeza ou relato indireto em percepção direta."
+      ],
+      "exemplo": "Testemunha diz acho que era azul e o registro mantém a dúvida expressa. Variação: Não registrar tenho certeza se isso nunca foi afirmado.",
+      "prova": [
+        "Pode transformar dúvida em certeza? Não.",
+        "Expressões reais devem ser preservadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fidelidade documental",
+          "significado": "Registro sem alteração indevida do significado do depoimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "edacdba4-22d3-50eb-bf5d-6267f89d5926",
+        "content_sha256": "4a377c5362bede460c944b6323c57487292398407377785a7b90cc810a7c84de",
+        "simples": "Na redação do depoimento, o juiz deverá cingir-se, tanto quanto possível, às expressões usadas pelas testemunhas, reproduzindo fielmente as suas frases.",
+        "pontos": [
+          "Registro fiel das expressões usadas pelas testemunhas."
+        ],
+        "atencao": [
+          "Fidelidade ao depoimento."
+        ],
+        "exemplo": "O termo reproduz as frases da testemunha, e não uma versão resumida do juiz.",
+        "prova": [
+          "Assertiva que autoriza o juiz a parafrasear livremente o depoimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 216"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-216",
+      "unit_id": "bf27e72f-9cb6-52ce-9217-295005b8951a",
+      "content_sha256": "6e8d25fedbd3aaf096993aa405cce26e504d9053ad38c962228411667e67ad96",
+      "simples": "Depoimento reduzido a termo tem assinaturas previstas; se testemunha não pode ou não sabe assinar, alguém assina por ela após leitura na presença de ambos.",
+      "pontos": [
+        "Assinatura da testemunha, juiz e partes no modelo textual.",
+        "Leitura antecede assinatura por terceiro.",
+        "Integrar formas digitais e registro audiovisual legalmente cabíveis, sem inventar autoria."
+      ],
+      "atencao": [
+        "Não atribuir assinatura própria a quem não a fez nem dispensar compreensão do termo."
+      ],
+      "exemplo": "Testemunha não sabe assinar; termo é lido com ela e a pessoa que assinará a seu pedido. Variação: Registro eletrônico precisa autenticidade no regime aplicável, não assinatura fictícia.",
+      "prova": [
+        "Terceiro pode assinar na hipótese prevista? Sim.",
+        "Leitura é dispensável nesse caso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Assinatura a pedido",
+          "significado": "Subscrição por outra pessoa após leitura nas condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bf27e72f-9cb6-52ce-9217-295005b8951a",
+        "content_sha256": "6e8d25fedbd3aaf096993aa405cce26e504d9053ad38c962228411667e67ad96",
+        "simples": "O depoimento da testemunha será reduzido a termo, assinado por ela, pelo juiz e pelas partes. Se a testemunha não souber assinar, ou não puder fazê-lo, pedirá a alguém que o faça por ela, depois de lido na presença de ambos.",
+        "pontos": [
+          "Depoimento reduzido a termo.",
+          "Assinado pela testemunha, juiz e partes.",
+          "Se não souber ou não puder assinar, outra pessoa assina por ela, após a leitura."
+        ],
+        "atencao": [
+          "Hoje, o registro pode ser audiovisual (art. 405)."
+        ],
+        "exemplo": "Testemunha analfabeta pede a alguém que assine por ela, depois da leitura.",
+        "prova": [
+          "Assertiva que dispensa a assinatura do juiz no termo do depoimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 215",
+          "Art. 405"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-217",
+      "unit_id": "4816f62f-fa35-57d8-b52d-784e9b692579",
+      "content_sha256": "b6ba6803efdb0c2e7d49eb4f290e5c02f85dfff68af604aa7d457cc8a4d4f738",
+      "simples": "Se presença do réu prejudica depoimento por humilhação, temor ou grave constrangimento, primeiro usar videoconferência; retirada só se vídeo for impossível, com defensor.",
+      "pontos": [
+        "Impacto na verdade do relato precisa verificação.",
+        "Motivos e providência constam do termo.",
+        "Proteção da criança integra legislação especial."
+      ],
+      "atencao": [
+        "Não retirar automaticamente réu por simples preferência sem motivo, nem afastar também seu defensor."
+      ],
+      "exemplo": "Testemunha teme seriamente depor diante do réu; juiz fundamenta vídeo. Variação: Vídeo inviável permite retirada motivada, mantendo defensor e registro dos fundamentos.",
+      "prova": [
+        "Retirada é sempre primeira opção? Não.",
+        "Defensor permanece? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção na oitiva",
+          "significado": "Medida motivada que preserva depoente e contraditório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ],
+      "expected": {
+        "unit_id": "4816f62f-fa35-57d8-b52d-784e9b692579",
+        "content_sha256": "b6ba6803efdb0c2e7d49eb4f290e5c02f85dfff68af604aa7d457cc8a4d4f738",
+        "simples": "Se o juiz verificar que a presença do réu poderá causar humilhação, temor ou sério constrangimento à testemunha ou ao ofendido, de modo que prejudique a verdade do depoimento, fará a inquirição por videoconferência e, somente na impossibilidade dessa forma, determinará a retirada do réu, prosseguindo na inquirição com a presença do defensor. A adoção de qualquer dessas medidas deverá constar do termo, com os motivos.",
+        "pontos": [
+          "Presença do réu que cause constrangimento à testemunha ou ao ofendido, a ponto de prejudicar a verdade do depoimento.",
+          "Preferência: videoconferência.",
+          "Só se impossível: retirada do réu, com o defensor presente.",
+          "Medida e motivos constam do termo."
+        ],
+        "atencao": [
+          "Ordem: primeiro videoconferência; depois, retirada do réu.",
+          "O defensor permanece."
+        ],
+        "exemplo": "Vítima de ameaça tem medo do réu; o juiz a ouve por videoconferência.",
+        "prova": [
+          "Assertiva que determina a retirada do réu como primeira providência, antes da videoconferência, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 210"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-218",
+      "unit_id": "cfa0caab-a475-5919-9f5d-5a4e807d3c47",
+      "content_sha256": "a4c3296dec9f3e386c020a1184f9adbd45d412e31053416f8c353aa0cd18f0fa",
+      "simples": "Testemunha regularmente intimada que falta sem justificativa pode ser apresentada por polícia ou conduzida por oficial com auxílio público.",
+      "pontos": [
+        "Intimação regular e ausência injustificada.",
+        "Providência judicial, não punição arbitrária.",
+        "Distinguir testemunha de acusado que exerce silêncio."
+      ],
+      "atencao": [
+        "Não aplicar esta regra como autorização genérica de conduzir acusado para interrogatório."
+      ],
+      "exemplo": "Testemunha intimada não comparece sem motivo e juiz determina apresentação. Variação: Ausência justificada exige analisar causa, sem presumir desobediência automaticamente.",
+      "prova": [
+        "A falta justificada preenche o requisito? Não.",
+        "A regra é de testemunha? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Apresentação de testemunha",
+          "significado": "Providência judicial na ausência injustificada após intimação regular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cfa0caab-a475-5919-9f5d-5a4e807d3c47",
+        "content_sha256": "a4c3296dec9f3e386c020a1184f9adbd45d412e31053416f8c353aa0cd18f0fa",
+        "simples": "Se, regularmente intimada, a testemunha deixar de comparecer sem motivo justificado, o juiz poderá requisitar à autoridade policial a sua apresentação ou determinar seja conduzida por oficial de justiça, que poderá solicitar o auxílio da força pública.",
+        "pontos": [
+          "Testemunha regularmente intimada que falta sem motivo justificado.",
+          "Juiz requisita à polícia sua apresentação ou determina a condução por oficial de justiça.",
+          "Oficial pode pedir auxílio da força pública."
+        ],
+        "atencao": [
+          "Condução coercitiva da TESTEMUNHA faltosa (permitida).",
+          "Para o investigado, a condução coercitiva para interrogatório é vedada pelo STF (ADPF 444)."
+        ],
+        "exemplo": "A testemunha, regularmente intimada, não comparece e é conduzida pelo oficial de justiça.",
+        "prova": [
+          "Assertiva que veda a condução coercitiva da testemunha faltosa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 219"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-219",
+      "unit_id": "25bc4954-8139-599b-a28f-9c81c922a16e",
+      "content_sha256": "197444602b6c6afdc0e0e5ec24690f6f44023f06a7b6f94a287295f1302bd044",
+      "simples": "Testemunha faltosa pode sofrer sanção e custas previstas, sem prejuízo de apuração de desobediência; a remissão ao antigo art. 453 exige integração atual.",
+      "pontos": [
+        "Multa é faculdade judicial nas condições legais.",
+        "Não confundir sanção processual com condenação criminal imediata.",
+        "Conferir regras atuais da multa e procedimento; não usar conteúdo atual do art. 453 como se fosse a faixa antiga."
+      ],
+      "atencao": [
+        "Não inventar valor em reais a partir da remissão histórica nem afirmar crime automático por toda ausência."
+      ],
+      "exemplo": "Falta injustificada é apreciada para sanção e custos da diligência, com fundamento legal e defesa. Variação: Justificativa válida afasta tratar o fato como ausência injustificada, exigindo apreciação própria.",
+      "prova": [
+        "Toda falta condena automaticamente por desobediência? Não.",
+        "Remissão histórica dispensa conferir regime atual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sanção por falta",
+          "significado": "Consequência processual distinta da apuração de eventual delito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "25bc4954-8139-599b-a28f-9c81c922a16e",
+        "content_sha256": "197444602b6c6afdc0e0e5ec24690f6f44023f06a7b6f94a287295f1302bd044",
+        "simples": "O juiz poderá aplicar à testemunha faltosa a multa prevista no art. 453, sem prejuízo do processo penal por crime de desobediência, e condená-la ao pagamento das custas da diligência.",
+        "pontos": [
+          "Multa à testemunha faltosa.",
+          "Sem prejuízo do processo por desobediência.",
+          "Pagamento das custas da diligência."
+        ],
+        "atencao": [
+          "As sanções se acumulam."
+        ],
+        "exemplo": "A testemunha faltosa paga multa e as custas da condução.",
+        "prova": [
+          "Assertiva que impede a multa se houver processo por desobediência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-220",
+      "unit_id": "b3aa1b16-5052-5188-ae32-63f25fd916b4",
+      "content_sha256": "688c5748835f55df6e5fd02cdad98d467323ac041f6ef864e8401a439ee53220",
+      "simples": "Quem não pode comparecer por enfermidade ou velhice será ouvido onde estiver, com avaliação da impossibilidade.",
+      "pontos": [
+        "Idade por si não prova impossibilidade.",
+        "Preservar condições de participação e defesa.",
+        "Não confundir com antecipação por risco de perda do depoimento."
+      ],
+      "atencao": [
+        "Local especial não transforma o relato em ato sem contraditório."
+      ],
+      "exemplo": "Enfermidade impede deslocamento e oitiva ocorre no local em que a testemunha se encontra. Variação: Pessoa idosa apta a comparecer não recebe impossibilidade fictícia só por idade.",
+      "prova": [
+        "Enfermidade pode justificar oitiva no local? Sim.",
+        "Toda idade avançada prova impossibilidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Oitiva fora da sede",
+          "significado": "Depoimento no local da pessoa efetivamente impossibilitada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b3aa1b16-5052-5188-ae32-63f25fd916b4",
+        "content_sha256": "688c5748835f55df6e5fd02cdad98d467323ac041f6ef864e8401a439ee53220",
+        "simples": "As pessoas impossibilitadas, por enfermidade ou por velhice, de comparecer para depor, serão inquiridas onde estiverem.",
+        "pontos": [
+          "Testemunhas impossibilitadas por doença ou velhice são ouvidas no local onde estiverem."
+        ],
+        "atencao": [
+          "Inquirição no local em que se encontram."
+        ],
+        "exemplo": "Idoso acamado é ouvido em sua residência.",
+        "prova": [
+          "Assertiva que obriga a testemunha enferma a comparecer à sede do juízo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 221"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-221",
+      "unit_id": "4a0a4afa-03c8-5d16-a7e4-96ccd6df8b59",
+      "content_sha256": "204f1090e072a7e7362d5c6735284ef77c231c3644cf34fca69bc6b83f1e0199",
+      "simples": "Autoridades enumeradas ajustam local e momento como testemunhas; somente grupo restrito pode optar por escrito. Militares e servidores têm comunicações próprias.",
+      "pontos": [
+        "Escrito: Presidente/Vice da República e presidentes do Senado, Câmara e STF.",
+        "Perguntas das partes deferidas pelo juiz seguem ofício.",
+        "Militar requisitado ao superior; mandado a servidor comunicado imediatamente ao chefe com dia e hora.",
+        "Lista conserva nomes institucionais históricos; integrar cargos atuais sem ampliar privilégio."
+      ],
+      "atencao": [
+        "Não atribuir depoimento escrito a toda autoridade da lista, nem confundir prerrogativa testemunhal com foro penal de acusado."
+      ],
+      "exemplo": "Governador ouvido como testemunha ajusta local e horário, sem adquirir opção escrita apenas pelo caput. Variação: Presidente do Senado pode optar por respostas escritas no rito previsto, com perguntas deferidas.",
+      "prova": [
+        "Todo listado pode optar por escrito? Não.",
+        "Servidor tem comunicação ao chefe? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prerrogativa testemunhal",
+          "significado": "Tratamento da oitiva de certas funções, distinto de competência penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a0a4afa-03c8-5d16-a7e4-96ccd6df8b59",
+        "content_sha256": "204f1090e072a7e7362d5c6735284ef77c231c3644cf34fca69bc6b83f1e0199",
+        "simples": "Algumas autoridades têm a prerrogativa de serem inquiridas em local, dia e hora previamente ajustados com o juiz: o Presidente e o Vice-Presidente da República, senadores e deputados federais, ministros de Estado, governadores, secretários de Estado, prefeitos, deputados estaduais, membros do Poder Judiciário, ministros e juízes dos Tribunais de Contas, entre outros. O Presidente e o Vice-Presidente da República e os presidentes do Senado Federal, da Câmara dos Deputados e do Supremo Tribunal Federal podem optar por depoimento por escrito, com perguntas formuladas pelas partes e deferidas pelo juiz, transmitidas por ofício. Os militares são requisitados à autoridade superior. Aos funcionários públicos aplica-se o art. 218, comunicando-se imediatamente ao chefe da repartição a expedição do mandado, com indicação do dia e da hora.",
+        "pontos": [
+          "Altas autoridades têm prerrogativa de combinar dia, hora e local do depoimento.",
+          "Presidente, Vice-Presidente e presidentes do Senado, da Câmara e do STF podem depor por escrito.",
+          "Militares são requisitados à autoridade superior.",
+          "Funcionários públicos: condução do art. 218, com comunicação ao chefe da repartição."
+        ],
+        "atencao": [
+          "A prerrogativa é de ajustar data e local, e não de dispensa do depoimento."
+        ],
+        "exemplo": "O governador é ouvido como testemunha em dia e hora previamente ajustados com o juiz.",
+        "prova": [
+          "Assertiva que dispensa as altas autoridades do dever de depor erra: elas têm a prerrogativa de ajustar dia, hora e local."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-222",
+      "unit_id": "f0ec72d8-8773-5822-a1e5-0710640c7e81",
+      "content_sha256": "6bd8b51047bdce5fca01cff8009e0934bf5d7a52cd199fb1ee0774d2dcac98bd",
+      "simples": "Testemunha fora da jurisdição é ouvida por precatória ao juiz da residência ou por vídeo nos termos legais; carta não suspende a instrução.",
+      "pontos": [
+        "Prazo razoável e partes intimadas.",
+        "Após prazo, julgamento pode ocorrer; carta devolvida é juntada a qualquer tempo.",
+        "Vídeo pode ocorrer na audiência com participação defensiva; integrar interrogatório final e contraditório atuais."
+      ],
+      "atencao": [
+        "Não confundir continuidade da instrução com licença para eliminar defesa relevante ou fazer interrogatório em ordem indevida sem análise."
+      ],
+      "exemplo": "Testemunha de outra comarca é ouvida pelo destinatário, com ciência das partes, enquanto atos locais avançam. Variação: Videoconferência pode permitir relato na audiência, sem carta exigir suspensão automática.",
+      "prova": [
+        "Precatória suspende automaticamente instrução? Não.",
+        "Carta devolvida depois pode ser juntada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Precatória de oitiva",
+          "significado": "Pedido judicial interno para colher relato fora da jurisdição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f0ec72d8-8773-5822-a1e5-0710640c7e81",
+        "content_sha256": "6bd8b51047bdce5fca01cff8009e0934bf5d7a52cd199fb1ee0774d2dcac98bd",
+        "simples": "A testemunha que morar fora da jurisdição do juiz será inquirida pelo juiz do lugar de sua residência, expedindo-se carta precatória com prazo razoável, intimadas as partes. A expedição da precatória não suspende a instrução criminal. Findo o prazo marcado, poderá realizar-se o julgamento, mas a precatória, uma vez devolvida, será junta aos autos a todo tempo. A oitiva poderá ser feita por videoconferência ou outro recurso tecnológico de transmissão de sons e imagens em tempo real, permitida a presença do defensor, inclusive durante a audiência de instrução e julgamento.",
+        "pontos": [
+          "Testemunha de outra jurisdição: ouvida pelo juiz do lugar de sua residência (precatória).",
+          "Partes são intimadas da expedição.",
+          "A precatória não suspende a instrução.",
+          "Findo o prazo, o julgamento pode ocorrer; a precatória é juntada quando devolvida.",
+          "Videoconferência admitida, com possibilidade de o defensor estar presente."
+        ],
+        "atencao": [
+          "Precatória NÃO suspende a instrução."
+        ],
+        "exemplo": "Testemunha em outra comarca é ouvida por videoconferência durante a audiência.",
+        "prova": [
+          "Assertiva que suspende a instrução criminal até a devolução da precatória erra."
+        ],
+        "termos": [
+          {
+            "termo": "Carta precatória",
+            "significado": "Pedido de um juízo a outro para praticar ato em sua jurisdição."
+          }
+        ],
+        "remissoes": [
+          "Art. 222-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-222-a",
+      "unit_id": "c8e852a5-a7aa-50cd-b5c0-f8b467d9e592",
+      "content_sha256": "659da245c8a2be53aaeb3cf6a1fdb8f7269c0828896e7c5b0e3b467d2e2e9bce",
+      "simples": "Rogatória exige demonstração prévia de imprescindibilidade e custos pela parte requerente, observadas garantias e regimes especiais aplicáveis.",
+      "pontos": [
+        "Diligência internacional, distinta de precatória interna.",
+        "Aplicam-se não suspensão e regra de devolução do art. 222, §§1º–2º.",
+        "Não presumir indispensável só por testemunha morar no exterior."
+      ],
+      "atencao": [
+        "Não confundir custos da rogatória com eliminação automática da assistência jurídica devida; conferir situação concreta e normas especiais."
+      ],
+      "exemplo": "Parte demonstra necessidade indispensável de oitiva externa antes da expedição. Variação: Diligência sem relevância essencial pode não satisfazer o requisito apenas por conveniência.",
+      "prova": [
+        "Exige imprescindibilidade prévia? Sim.",
+        "É idêntica à precatória entre comarcas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Carta rogatória",
+          "significado": "Instrumento de cooperação internacional para diligência juridicamente cabível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c8e852a5-a7aa-50cd-b5c0-f8b467d9e592",
+        "content_sha256": "659da245c8a2be53aaeb3cf6a1fdb8f7269c0828896e7c5b0e3b467d2e2e9bce",
+        "simples": "As cartas rogatórias só serão expedidas se demonstrada previamente a sua imprescindibilidade, arcando a parte requerente com os custos de envio. Aplica-se às cartas rogatórias o disposto nos §§ 1º e 2º do art. 222.",
+        "pontos": [
+          "Carta rogatória só se demonstrada previamente a imprescindibilidade.",
+          "Custos de envio pela parte requerente.",
+          "Aplicam-se os §§ 1º e 2º do art. 222 (não suspende a instrução; julgamento após o prazo)."
+        ],
+        "atencao": [
+          "Carta rogatória é dirigida à autoridade estrangeira."
+        ],
+        "exemplo": "Para ouvir testemunha no exterior, a parte demonstra a imprescindibilidade e paga o envio.",
+        "prova": [
+          "Assertiva que dispensa a demonstração prévia da imprescindibilidade da carta rogatória erra."
+        ],
+        "termos": [
+          {
+            "termo": "Carta rogatória",
+            "significado": "Pedido de cooperação a autoridade estrangeira."
+          }
+        ],
+        "remissoes": [
+          "Art. 222"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-223",
+      "unit_id": "442a698d-a0e2-5b57-84cc-4d558df686a7",
+      "content_sha256": "677c8350f7a8bf9860aca15f89621ef855bae3d8c54ed38fe3f70c6d946b804f",
+      "simples": "Testemunha sem domínio do português precisa de intérprete; dificuldades de fala ou audição exigem meios acessíveis integrados ao art. 192 e LBI.",
+      "pontos": [
+        "Tradução de perguntas e respostas.",
+        "Não presumir comunicação idêntica em todas as deficiências.",
+        "Recursos devem assegurar compreensão e expressão."
+      ],
+      "atencao": [
+        "Intérprete não deve substituir o relato por opinião pessoal nem excluir pessoa por deficiência."
+      ],
+      "exemplo": "Testemunha estrangeira presta relato com perguntas e respostas interpretadas. Variação: Usuário de Libras tem suporte compatível, não perguntas escritas inacessíveis por mera presunção.",
+      "prova": [
+        "A testemunha precisa compreender perguntas? Sim.",
+        "Deficiência impede automaticamente ouvir? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Interpretação testemunhal",
+          "significado": "Apoio linguístico ou acessível sem alterar a autoria do relato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+      ],
+      "expected": {
+        "unit_id": "442a698d-a0e2-5b57-84cc-4d558df686a7",
+        "content_sha256": "677c8350f7a8bf9860aca15f89621ef855bae3d8c54ed38fe3f70c6d946b804f",
+        "simples": "Quando a testemunha não conhecer a língua nacional, será nomeado intérprete para traduzir as perguntas e respostas. Tratando-se de mudo, surdo ou surdo-mudo, procede-se conforme o art. 192.",
+        "pontos": [
+          "Testemunha que não fala o idioma nacional: intérprete.",
+          "Mudo, surdo ou surdo-mudo: forma do art. 192."
+        ],
+        "atencao": [
+          "Mesma sistemática do interrogatório."
+        ],
+        "exemplo": "Testemunha estrangeira depõe com a ajuda de intérprete nomeado.",
+        "prova": [
+          "Assertiva que dispensa intérprete para testemunha que não conhece a língua nacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 192",
+          "Art. 193"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-224",
+      "unit_id": "59379469-9c2e-5cd2-b039-f59f9163c50f",
+      "content_sha256": "4a8a9be080976615e4e89618242b3e146933ebb483e713d1887dccdddc8052d9",
+      "simples": "Testemunha comunica ao juiz mudança de residência durante um ano, sob consequências previstas para omissão.",
+      "pontos": [
+        "Prazo de um ano.",
+        "Não depende de nova pergunta judicial para informar mudança.",
+        "Preservar sigilo pertinente de endereço e distinguir dever de publicidade geral."
+      ],
+      "atencao": [
+        "Comunicar ao juiz não significa publicar endereço para qualquer interessado."
+      ],
+      "exemplo": "Testemunha muda de residência dentro do período e informa o juízo para futura intimação. Variação: Endereço protegido deve ser tratado com segurança; dever de informar não autoriza exposição pública.",
+      "prova": [
+        "O prazo textual é um ano? Sim.",
+        "Comunicação exige divulgação pública irrestrita? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Atualização de endereço",
+          "significado": "Informação ao juízo para viabilizar comunicação no período legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "59379469-9c2e-5cd2-b039-f59f9163c50f",
+        "content_sha256": "4a8a9be080976615e4e89618242b3e146933ebb483e713d1887dccdddc8052d9",
+        "simples": "As testemunhas comunicarão ao juiz, dentro de um ano, qualquer mudança de residência, sujeitando-se, pela simples omissão, às penas do não comparecimento.",
+        "pontos": [
+          "Testemunha comunica ao juiz, em um ano, mudança de residência.",
+          "A omissão sujeita às penas do não comparecimento."
+        ],
+        "atencao": [
+          "Prazo de um ano."
+        ],
+        "exemplo": "Testemunha muda de endereço e deixa de avisar o juízo: sujeita-se às penas da falta.",
+        "prova": [
+          "Assertiva que dispensa a comunicação de mudança de residência pela testemunha erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 219"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-225",
+      "unit_id": "71acdfa0-c3a7-5698-9608-19a2379c8588",
+      "content_sha256": "0c723694cc9be67a2192857556619d07fe072c0311b4f789411d3c5d05469b16",
+      "simples": "Risco concreto de perder o depoimento por ausência, enfermidade ou velhice pode justificar oitiva antecipada, com garantias e regime especial pertinente.",
+      "pontos": [
+        "Receio de indisponibilidade na instrução deve ser fundamentado.",
+        "Pedido de qualquer parte ou iniciativa prevista, integrada ao sistema acusatório.",
+        "Criança vítima/testemunha de violência: Lei 13.431 tem protocolos e hipóteses próprias de antecipação."
+      ],
+      "atencao": [
+        "Velhice isolada não torna automática toda antecipação; não colher sem defesa por simples pressa."
+      ],
+      "exemplo": "Doença grave ameaça possibilidade de oitiva futura e juiz fundamenta antecipação com participação das partes. Variação: Criança em hipótese especial segue rito protetivo, sem repetir desnecessariamente relato ou afastar ampla defesa.",
+      "prova": [
+        "A antecipação dispensa fundamento de risco? Não.",
+        "Há lei especial para depoimento de criança vítima de violência? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Depoimento antecipado",
+          "significado": "Produção preservadora do relato sob fundamento e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ],
+      "expected": {
+        "unit_id": "71acdfa0-c3a7-5698-9608-19a2379c8588",
+        "content_sha256": "0c723694cc9be67a2192857556619d07fe072c0311b4f789411d3c5d05469b16",
+        "simples": "Se qualquer testemunha houver de ausentar-se, ou, por enfermidade ou por velhice, inspirar receio de que ao tempo da instrução criminal já não exista, o juiz poderá, de ofício ou a requerimento de qualquer das partes, tomar-lhe antecipadamente o depoimento.",
+        "pontos": [
+          "Testemunha que vai se ausentar ou corre risco de não existir ao tempo da instrução.",
+          "Juiz colhe o depoimento antecipadamente, de ofício ou a requerimento."
+        ],
+        "atencao": [
+          "Produção antecipada de prova testemunhal."
+        ],
+        "exemplo": "Testemunha idosa e muito doente é ouvida antecipadamente.",
+        "prova": [
+          "Assertiva que exige requerimento das partes para a oitiva antecipada erra: pode ser de ofício."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 156"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    }
+  ]
+}

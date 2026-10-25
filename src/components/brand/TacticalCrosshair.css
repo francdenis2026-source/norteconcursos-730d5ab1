@@ -1,0 +1,184 @@
+.tactical-crosshair {
+  --aim-gold: #eac77e;
+  --aim-lock: #ff5a45;
+  --aim-hit: #3ddc8c;
+  --aim-miss: #ff5a45;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 5;
+}
+:root:not(.dark) .tactical-crosshair {
+  --aim-gold: #b6893f;
+  --aim-lock: #d8402c;
+  --aim-hit: #1f9d63;
+  --aim-miss: #d8402c;
+}
+
+.tactical-crosshair__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, width, height;
+  transition:
+    transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 160ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tactical-crosshair__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.tactical-crosshair__scale {
+  fill: none;
+  stroke: var(--aim-gold);
+  stroke-width: 1;
+  stroke-opacity: 0.55;
+  stroke-dasharray: 2.5 5.5;
+  transform-origin: 50px 50px;
+  animation: tactical-crosshair-spin 14s linear infinite;
+}
+.tactical-crosshair__dial {
+  fill: none;
+  stroke: var(--aim-gold);
+  stroke-width: 1.1;
+  stroke-opacity: 0.85;
+  filter: drop-shadow(0 0 2px color-mix(in srgb, var(--aim-gold) 70%, transparent));
+}
+.tactical-crosshair__tick {
+  stroke: var(--aim-gold);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+.tactical-crosshair__pip {
+  fill: var(--aim-gold);
+  filter: drop-shadow(0 0 2px color-mix(in srgb, var(--aim-gold) 80%, transparent));
+}
+
+.tactical-crosshair__bracket {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--aim-gold);
+  opacity: 0.9;
+  transition: border-color 140ms ease, opacity 140ms ease;
+}
+.tactical-crosshair__bracket--tl {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+}
+.tactical-crosshair__bracket--tr {
+  top: -2px;
+  right: -2px;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 4px;
+}
+.tactical-crosshair__bracket--bl {
+  bottom: -2px;
+  left: -2px;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+}
+.tactical-crosshair__bracket--br {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 4px;
+}
+
+.tactical-crosshair__tag {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 700 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 2px;
+  color: var(--aim-lock);
+  white-space: nowrap;
+  text-shadow: 0 1px 2px #0008;
+}
+
+.tactical-crosshair[data-locked] .tactical-crosshair__dial,
+.tactical-crosshair[data-locked] .tactical-crosshair__tick,
+.tactical-crosshair[data-locked] .tactical-crosshair__pip {
+  stroke: var(--aim-lock);
+  fill: var(--aim-lock);
+}
+.tactical-crosshair[data-locked] .tactical-crosshair__scale {
+  stroke: var(--aim-lock);
+  animation-duration: 3.5s;
+}
+.tactical-crosshair[data-locked] .tactical-crosshair__bracket {
+  border-color: var(--aim-lock);
+  opacity: 1;
+}
+.tactical-crosshair:not([data-locked]) .tactical-crosshair__tag {
+  display: none;
+}
+
+.tactical-crosshair__flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  border-radius: 999px;
+  pointer-events: none;
+  animation: tactical-crosshair-flash 700ms ease-out forwards;
+}
+.tactical-crosshair__flash--hit {
+  box-shadow: 0 0 0 2px var(--aim-hit) inset, 0 0 32px color-mix(in srgb, var(--aim-hit) 60%, transparent);
+}
+.tactical-crosshair__flash--miss {
+  box-shadow: 0 0 0 2px var(--aim-miss) inset, 0 0 32px color-mix(in srgb, var(--aim-miss) 60%, transparent);
+}
+
+@keyframes tactical-crosshair-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tactical-crosshair-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tactical-crosshair * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .tactical-crosshair__frame {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .tactical-crosshair {
+    display: none;
+  }
+}

@@ -5,6 +5,7 @@ import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 
 const icons = { all: BookOpen, legislation: ShieldCheck, law: Scale, general: Shapes };
 type Props = {
+  focused?: boolean;
   items: StudyMaterialSummary[];
   area: LibraryArea;
   onArea: (area: LibraryArea) => void;
@@ -16,12 +17,16 @@ type Props = {
   topic: string;
   onTopic: (value: string) => void;
   topics: string[];
+  law?: string;
+  onLaw?: ((value: string) => void) | undefined;
+  laws?: { slug: string; title: string }[];
   contest: string;
   onContest: (value: string) => void;
   contests: string[];
   count: number;
   searchingContent: boolean;
   onReset: () => void;
+  collection?: "laws" | "subjects";
 };
 export function LibraryNavigation(p: Props) {
   const filtered =
@@ -29,47 +34,59 @@ export function LibraryNavigation(p: Props) {
     p.query.trim() !== "" ||
     p.discipline !== "all" ||
     p.topic !== "all" ||
+    (p.law ?? "all") !== "all" ||
     p.contest !== "all";
   return (
     <section className="library-navigator" aria-label="Pesquisar e organizar a biblioteca">
       <header className="library-navigator__heading">
         <div>
-          <p className="library-eyebrow">SEU ACERVO DE ESTUDO</p>
-          <h2>Encontre seu próximo assunto</h2>
-          <p>Escolha uma área e refine por disciplina. Cada conteúdo no seu lugar.</p>
+          {!p.focused && <p className="library-eyebrow">Seu acervo de estudo</p>}
+          <h2>
+            {p.focused ? "Encontre um assunto nesta matéria" : "Encontre seu próximo assunto"}
+          </h2>
+          {!p.focused && (
+            <p>Escolha uma área e refine por disciplina. Cada conteúdo no seu lugar.</p>
+          )}
         </div>
         <span className="library-total">
           <BookOpen aria-hidden="true" size={16} />
           {p.items.length} materiais
         </span>
       </header>
-      <div className="library-area-grid" role="group" aria-label="Áreas de estudo">
-        {LIBRARY_AREAS.map((a) => {
-          const Icon = icons[a.id];
-          const count =
-            a.id === "all"
-              ? p.items.length
-              : p.items.filter((item) => libraryArea(item) === a.id).length;
-          return (
-            <button
-              key={a.id}
-              type="button"
-              aria-pressed={p.area === a.id}
-              onClick={() => p.onArea(a.id)}
-              className={`library-area library-tone-${a.tone}`}
-            >
-              <span className="library-area__icon">
-                <Icon aria-hidden="true" size={21} />
-              </span>
-              <span className="library-area__content">
-                <strong>{a.title}</strong>
-                <span>{a.description}</span>
-              </span>
-              <span className="library-area__count">{count}</span>
-            </button>
-          );
-        })}
-      </div>
+      {!p.focused && (
+        <div className="library-area-grid" role="group" aria-label="Áreas de estudo">
+          {LIBRARY_AREAS.filter(
+            (a) =>
+              !p.collection ||
+              a.id === "all" ||
+              (p.collection === "laws" ? a.id !== "general" : a.id === "general"),
+          ).map((a) => {
+            const Icon = icons[a.id];
+            const count =
+              a.id === "all"
+                ? p.items.length
+                : p.items.filter((item) => libraryArea(item) === a.id).length;
+            return (
+              <button
+                key={a.id}
+                type="button"
+                aria-pressed={p.area === a.id}
+                onClick={() => p.onArea(a.id)}
+                className={`library-area library-tone-${a.tone}`}
+              >
+                <span className="library-area__icon">
+                  <Icon aria-hidden="true" size={21} />
+                </span>
+                <span className="library-area__content">
+                  <strong>{a.title}</strong>
+                  <span>{a.description}</span>
+                </span>
+                <span className="library-area__count">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
       <div className="library-searchbar">
         <Search aria-hidden="true" size={20} />
         <label className="sr-only" htmlFor="library-search">
@@ -80,7 +97,13 @@ export function LibraryNavigation(p: Props) {
           type="search"
           value={p.query}
           onChange={(e) => p.onQuery(e.target.value)}
-          placeholder="Busque um assunto ou lei: CPP, Maria da Penha, 11.340…"
+          placeholder={
+            p.focused
+              ? `Buscar em ${p.discipline}…`
+              : p.collection === "subjects"
+                ? "Busque nesta coleção de disciplinas…"
+                : "Busque um termo nas leis ou refine pelos filtros…"
+          }
         />
         {p.query && (
           <button type="button" onClick={() => p.onQuery("")} aria-label="Limpar busca">
@@ -104,6 +127,19 @@ export function LibraryNavigation(p: Props) {
             ))}
           </select>
         </label>
+        {p.onLaw && (!p.focused || (p.laws?.length ?? 0) > 1 || (p.law ?? "all") !== "all") && (
+          <label>
+            Lei
+            <select value={p.law ?? "all"} onChange={(e) => p.onLaw?.(e.target.value)}>
+              <option value="all">Todas as leis da seleção</option>
+              {(p.laws ?? []).map((law) => (
+                <option key={law.slug} value={law.slug}>
+                  {law.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <label>
           Assunto
           <select value={p.topic} onChange={(e) => p.onTopic(e.target.value)}>
@@ -138,7 +174,7 @@ export function LibraryNavigation(p: Props) {
         {filtered ? (
           <button type="button" onClick={p.onReset}>
             <X aria-hidden="true" size={14} />
-            Limpar filtros
+            {p.focused ? "Limpar busca e filtros" : "Limpar filtros"}
           </button>
         ) : (
           <span>Busca por nome ou número, com ou sem acentos</span>

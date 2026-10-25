@@ -1,0 +1,38 @@
+[
+  {
+    "id": "403197e7-dc38-53f2-ab0d-04914e3ac255",
+    "source_type": "lei",
+    "title": "Lei 10.637/2002 — PIS/Pasep — texto compilado",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm",
+    "published_on": "2002-12-30",
+    "checked_at": "2026-10-11T19:41:09.958491+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte oficial obtida diretamente; SHA-256 44da13dcd16acd7db50fd0e73ed13cf7258923e743ce48313ade6c9d26c45066. A lei possui produção de efeitos escalonada; conferir a data específica, não antecipar revogações futuras."
+  },
+  {
+    "id": "59fc0d3e-c6f8-5ba6-86cc-9c363486555f",
+    "source_type": "lei",
+    "title": "Lei 10.833/2003 — Cofins — texto compilado",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm",
+    "published_on": "2003-12-29",
+    "checked_at": "2026-10-11T19:41:18.953954+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte oficial obtida diretamente; SHA-256 77e767c1ecdfbd7aa93367d25be829607c341fdd9b67f3bccf5c687ac22cd278. A lei possui produção de efeitos escalonada; conferir a data específica, não antecipar revogações futuras."
+  },
+  {
+    "id": "67c6ed30-1025-53f1-8fad-df7e91a2962e",
+    "source_type": "lei",
+    "title": "LC 214/2025 — reforma tributária — texto compilado",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "published_on": "2025-01-16",
+    "checked_at": "2026-10-11T19:42:05.912812+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte oficial obtida diretamente; SHA-256 596ca4c8299b4a0c0422a06f7b8335a1b1f4159f7d0551b44612305f5857a2a2. A lei possui produção de efeitos escalonada; conferir a data específica, não antecipar revogações futuras."
+  }
+]

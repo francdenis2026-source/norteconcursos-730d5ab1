@@ -1,0 +1,182 @@
+{
+  "batch_id": "cespe2016-cpc-recursos-01-2026-10-17",
+  "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "scope": "Auditoria normativa limitada; zero publicações e gabaritos históricos não certificados.",
+  "source_artifact": {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+    "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+    "fetched_at": "2026-10-17T17:00:19.175832+00:00",
+    "status": 200
+  },
+  "items": [
+    {
+      "candidate_id": "35db4a3e263b89c2ee53ab45b2511b468c408b9cc36b0632d19e5a303697c5b2",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 322,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "1ba782dde6603bb0e31f2e180370b3d1be61701dc044d8ae5baa9f0fd90bc11f",
+      "raw_text_sha256": "e7421b162e907fab1af31b6e447fb84aa289ee56fcc108ee1e9d6bd610302784",
+      "next_status": "obsolete",
+      "focus": "Agravo retido e recebimento da apelação",
+      "reason": "Alternativas e resposta editorial organizadas pelo regime do CPC/1973, sem agravo retido no sistema atual.",
+      "explanation": "Esta questão deve permanecer histórica. Ela combina agravo retido e controle dos efeitos do recebimento da apelação pelo juiz, estrutura própria do CPC anterior. O CPC/2015 não inclui agravo retido na enumeração do art. 994. As interlocutórias que não comportam agravo de instrumento podem ser suscitadas na forma do art. 1.009, § 1º; o agravo de instrumento tem disciplina própria no art. 1.015. Além disso, o art. 1.010, § 3º, determina a remessa da apelação ao tribunal independentemente de juízo de admissibilidade na origem. Não se deve ensinar a alternativa editorial D como regra atual nem escolher outra opção sem reconstruir integralmente a questão. A referência histórica e a resposta da apostila foram preservadas, sem certificação do gabarito definitivo da banca.",
+      "example": "Exemplo atual: uma apelação regular é encaminhada pelo juízo de origem ao tribunal depois das contrarrazões, sem juízo de admissibilidade na origem. Isso não cria um agravo retido contra o recebimento da apelação. A impugnação adequada depende da decisão concreta e do regime atual.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 994, 1.009, § 1º, 1.010, § 3º, 1.015 e 1.046"
+        }
+      ]
+    },
+    {
+      "candidate_id": "916b7cb0f6d5e32b3be18d6adb3c586b0b79d2068aa4adbfcb703d9f83d2fae8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 326,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "66167a6d58bee4542c320195fdd63aab49f60442c5eefd4395b4475975d15740",
+      "raw_text_sha256": "8edadc6c89a680009b77230fc0e91a1f71a5182ab4082ee165cb2f6449d979ef",
+      "next_status": "obsolete",
+      "focus": "Embargos infringentes após apelação por maioria",
+      "reason": "O recurso apontado como resposta editorial não integra o sistema recursal atual do CPC.",
+      "explanation": "O caso foi construído para escolher embargos infringentes como recurso contra um julgamento por maioria. Esse recurso autônomo não integra o art. 994 do CPC/2015. Para a apelação não unânime, o art. 942 prevê uma técnica de prosseguimento do julgamento com ampliação do colegiado, observadas suas hipóteses e exceções; ela não é um novo recurso que a parte deva interpor no lugar da apelação. Por isso, a resposta editorial B não pode ser apresentada como orientação processual vigente. O destino é obsoleto para o treino atual, preservando-se o enunciado e o gabarito de origem como memória histórica. Não foi declarada anulação da prova nem alterada a pontuação de qualquer questão já respondida.",
+      "example": "Exemplo atual: em julgamento de apelação que se enquadre no art. 942, o resultado inicial é de dois votos contra um. O julgamento prossegue com os julgadores adicionais previstos pela técnica legal; a parte não precisa interpor embargos infringentes para provocar esse prosseguimento.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 942, caput e §§ 1º a 4º, 994 e 1.046"
+        }
+      ]
+    },
+    {
+      "candidate_id": "0afa629627b1ffe0bd237bfe6ca21aca04c953c578d9327f43c446b8bd87cb41",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 326,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "78b9789d1b5ba92161e5f8fb9e24f28e1eccdaa08bf234b4717db50745470aa3",
+      "raw_text_sha256": "93277a09aa4bdf122e112fa430cd285611a5e0c4bb23bf9786244e5147e93f9f",
+      "next_status": "obsolete",
+      "focus": "Agravo contra inadmissão de recurso especial e prazo antigo",
+      "reason": "A questão emprega agravo de instrumento em dez dias, regime incompatível com o tratamento atual examinado.",
+      "explanation": "A formulação mistura uma classificação recursal antiga com prazo de dez dias. No CPC/2015, o agravo contra a inadmissão de recurso especial ou extraordinário é disciplinado pelo art. 1.042, e o prazo recursal geral do art. 1.003, § 5º, é de quinze dias, salvo a exceção legal dos embargos de declaração. O cabimento concreto também depende do fundamento da decisão de inadmissão e das ressalvas legais, não bastando a expressão genérica jurisprudência dominante. Não é seguro substituir apenas o número dez por quinze e manter todo o resto: o comando e o fundamento da inadmissão precisam ser reescritos e revisados. A questão permanece fora do treino vigente; a resposta editorial não foi promovida a gabarito oficial.",
+      "example": "Exemplo atual: ao receber decisão de inadmissão de recurso especial, o advogado identifica primeiro o fundamento utilizado, para definir a impugnação cabível. Quando cabível o agravo do art. 1.042, a regra de prazo decorre do art. 1.003, § 5º; não se aplica automaticamente o antigo prazo de dez dias.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 1.003, § 5º, 1.042 e 1.046"
+        }
+      ]
+    },
+    {
+      "candidate_id": "c72f6996f7e7f6c5eaebdb50f2228614125ccbbf529e8a8ee05933bcecae3e4c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 329,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "29495e905618a9109a92ef8902632dc1c951b28825b522a0cbd035a5e356b3f2",
+      "raw_text_sha256": "15d88796d1291003930ed5b9e859a48bdf2a69917fe38c4a3046805b29513a03",
+      "next_status": "obsolete",
+      "focus": "Recurso especial retido e destrancamento por cautelar",
+      "reason": "O enunciado depende da antiga forma retida do recurso especial, não transportável automaticamente ao CPC/2015.",
+      "explanation": "O ponto central é o recurso especial pela forma retida e seu destrancamento por ação cautelar. Essa construção pertence ao regime processual anterior e não pode ser ensinada como procedimento ordinário do CPC/2015. O art. 1.029 disciplina a interposição do recurso especial e o pedido de efeito suspensivo; o art. 995, parágrafo único, explicita os pressupostos para suspensão da eficácia da decisão recorrida. Esses instrumentos não autorizam chamar qualquer medida urgente de destrancamento de recurso especial retido. A análise de um caso atual exige identificar o recurso efetivamente cabível e a autoridade competente para a tutela. O item é conservado como histórico obsoleto, sem reescrever o texto nem certificar a resposta original.",
+      "example": "Exemplo atual: uma parte pretende suspender os efeitos da decisão enquanto seu recurso especial é processado. O pedido deve observar o art. 1.029, § 5º, e os pressupostos de urgência pertinentes; não se presume existir um recurso especial retido a ser destrancado por uma cautelar autônoma.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 995, parágrafo único, 1.029, especialmente § 5º, e 1.046"
+        }
+      ]
+    },
+    {
+      "candidate_id": "6f547d74304108acdbb8c52f2efc0534b8eab4cf17077bb1a522f06556170493",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 333,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "500ea013623f0f021100e6d6db8a19ffebae77f91bf7846d1bf864f3b7064db3",
+      "raw_text_sha256": "848fa35bccdbe1998ee92286d6f30efbc6722fe364294a5bab08f2570ba1cf9a",
+      "next_status": "reviewed",
+      "focus": "Juízo de retratação após distribuição do agravo",
+      "reason": "Há fundamento legal atual para comentar o item; faltam prova, gabarito definitivo e contexto para publicar.",
+      "explanation": "A distribuição do agravo de instrumento não torna o juiz absolutamente impedido de reconsiderar a decisão agravada. O art. 1.018, § 1º, prevê que, se o juiz comunicar a reforma integral da decisão, o relator considerará prejudicado o agravo. Assim, a afirmação categórica de que o magistrado não mais pode reformar sua decisão não corresponde à regra legal atual. A reforma integral é relevante: a consequência prevista no dispositivo não deve ser aplicada automaticamente a uma retratação apenas parcial. Esta conferência sustenta um comentário sobre o direito vigente, mas não certifica o gabarito histórico da banca nem resolve eventuais falhas de contexto e extração. O item fica revisado e retido, sem publicação.",
+      "example": "Exemplo: após o agravo ser distribuído, o juiz reforma integralmente a decisão que havia motivado a impugnação e comunica o tribunal. Nessa hipótese, o relator considera o agravo prejudicado, conforme o art. 1.018, § 1º. A distribuição, por si só, não impediu a retratação.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "art. 1.018, § 1º"
+        }
+      ]
+    },
+    {
+      "candidate_id": "fcee98437e9c34bc6bba036b6179afb58647926004f35c21ab63a3f9d2bfe663",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 333,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "97998ecfc4846992fba4bc26ac9b443e69aca2f46e541d237c9c9a2122e823f5",
+      "raw_text_sha256": "848fa35bccdbe1998ee92286d6f30efbc6722fe364294a5bab08f2570ba1cf9a",
+      "next_status": "reviewed",
+      "focus": "Comunicação do agravo em três dias e condições da inadmissibilidade",
+      "reason": "A regra atual exige condições omitidas na proposição genérica; manter retido até confirmar prova e gabarito.",
+      "explanation": "O CPC/2015 exige separar duas situações. Não sendo eletrônicos os autos, o § 2º do art. 1.018 impõe a providência de comunicação ao juízo de origem em três dias. O § 3º condiciona a inadmissibilidade ao descumprimento dessa exigência, desde que arguido e provado pelo agravado. Logo, não se deve ensinar uma inadmissibilidade automática, em qualquer processo, só porque passaram três dias sem a juntada. Em autos eletrônicos, a obrigação específica do § 2º não incide da mesma maneira. O comentário explica o regime vigente e suas condições, preservando a resposta editorial e o texto histórico. A conferência do gabarito definitivo, do contexto original e do edital continua pendente; o estado revisado não autoriza exibição aos alunos.",
+      "example": "Exemplo: em autos físicos, o agravante deixa de realizar a providência do art. 1.018, § 2º. Se o agravado alega e prova o descumprimento, aplica-se a consequência do § 3º. Não se transporta essa conclusão, sem verificar seus requisitos, para um processo eletrônico.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "art. 1.018, caput e §§ 2º e 3º"
+        }
+      ]
+    },
+    {
+      "candidate_id": "e4e115c5dda3e4cf860cd982cc2a5c9d40f99be813fd50d2ad3ba3232647ec5d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 333,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "68e5bb382ebd5fcf25cc9b467987d76067468d127d7e270791c345a8c6941211",
+      "raw_text_sha256": "591bea805a625de0a4a5663032fa30fa768c91208ddc73468db55048e7c64380",
+      "next_status": "reviewed",
+      "focus": "Ação rescisória improcedente por maioria",
+      "reason": "A negação do cabimento pode continuar correta, mas exige comentário atual e não mera rejeição por palavra-chave.",
+      "explanation": "O CPC/2015 não contempla embargos infringentes no rol do art. 994. O julgamento ampliado do art. 942 é técnica distinta de um recurso autônomo; na ação rescisória, o § 3º, I, vincula sua aplicação ao resultado de rescisão da sentença. Por isso, a simples improcedência por maioria não permite afirmar o cabimento do antigo recurso descrito no enunciado. A presença da expressão embargos infringentes em uma proposição negativa ou em questão de julgamento não torna automaticamente a resposta materialmente ultrapassada: é necessário ler o que se afirma. Este item recebe comentário atual e fica retido, pois ainda faltam gabarito definitivo oficial, contexto e vínculo individual com edital antes de eventual aproveitamento.",
+      "example": "Exemplo: uma ação rescisória termina, por maioria, com a manutenção do julgado rescindendo. A parte não adquire, só por essa divergência, um direito de interpor embargos infringentes. Também não se confunde esse resultado com a hipótese de rescisão mencionada no art. 942, § 3º, I.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 942, § 3º, I, e 994"
+        }
+      ]
+    },
+    {
+      "candidate_id": "a1b3e58a52ba7abbd86aa21dc85bae50d2d764d9fdeb38580671b78b02874c22",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 333,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "095c594d113fba49c96ff3e0a16ce5fe7b5708b1842c40bf5ab7eff76e07560b",
+      "raw_text_sha256": "4c781c258a9887255b51a3fbc5d692cbb4c43d4989f9a4fc402fdee1f9b48ec6",
+      "next_status": "reviewed",
+      "focus": "Enunciado de cabimento de embargos infringentes",
+      "reason": "É possível explicar por que a proposição não corresponde ao CPC atual, sem alterar a chave histórica não verificada.",
+      "explanation": "A proposição reúne hipóteses do antigo recurso de embargos infringentes. No CPC/2015, esse recurso não aparece no art. 994; o art. 942 trata do prosseguimento do julgamento com composição ampliada. Há diferença entre um recurso que depende de interposição e uma técnica de julgamento aplicável nas condições legais. Na ação rescisória, a referência expressa do § 3º, I, é ao resultado de rescisão, não à mera improcedência. Portanto, a frase não deve ser apresentada como descrição afirmativa do sistema atual. O comentário atualiza a explicação sem substituir o texto original ou declarar que a chave editorial é a chave definitiva oficial. O candidato permanece revisado, mas sem autorização de publicação.",
+      "example": "Exemplo: uma apelação apresenta resultado inicial não unânime e preenche os pressupostos do art. 942. O julgamento pode prosseguir pela técnica legal de ampliação do colegiado; isso não significa que surgiu um recurso denominado embargos infringentes no rol do CPC/2015.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "f73932fb77ec6f6d8aadf4c2debbbb8d9b9f5c3963375b37065a3c885c654548",
+          "checked_at": "2026-10-17T17:00:19.175832+00:00",
+          "reference": "arts. 942, caput e § 3º, I, e 994"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "version": "2026-10-12-ambientais-captions",
+  "checked_at": "2026-10-12T20:16:31.130852+00:00",
+  "scope": "Separar dois resíduos não normativos: fragmento de cabeçalho e indicação de MP prejudicada. Nenhuma pena ou regra vigente removida.",
+  "laws": [
+    {
+      "expected": {
+        "id": "cbe217be-51a1-57de-a669-64c14199c75f",
+        "slug": "ambientais",
+        "title": "Lei 9.605/1998 — Crimes Ambientais",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "source_sha256": "0c03b41acf28185c782343aca17d013684eb5e18b8992ba51aa7b379b4c1f89b",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-ambientais-revisao",
+        "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+        "overview": {
+          "intro": "A responsabilidade ambiental pode alcançar pessoas físicas e jurídicas, respeitados os requisitos legais. Não confunda responsabilidade civil, administrativa e penal nem suas sanções.",
+          "alerts": "Foi utilizado o texto atual do Planalto. O módulo cobre regras gerais; a alteração de penas de crimes específicos exige leitura do artigo correspondente. Não trata a responsabilidade penal como objetiva nem faz a responsabilização da entidade depender automaticamente da condenação de pessoa física.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 3,
+              "title": "CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 19,
+              "title": "CAPÍTULO II — DA APLICAÇÃO DA PENA"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO III — DA APREENSÃO DO PRODUTO E DO INSTRUMENTO DE INFRAÇÃO"
+            },
+            {
+              "count": 3,
+              "title": "CAPÍTULO IV — DA AÇÃO E DO PROCESSO PENAL"
+            },
+            {
+              "count": 9,
+              "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção I — Dos Crimes contra a Fauna"
+            },
+            {
+              "count": 16,
+              "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção II — Dos Crimes contra a Flora"
+            },
+            {
+              "count": 6,
+              "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção III — Da Poluição e outros Crimes Ambientais"
+            },
+            {
+              "count": 4,
+              "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção IV — Dos Crimes contra o Ordenamento Urbano e o Patrimônio Cultural"
+            },
+            {
+              "count": 5,
+              "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção V — Dos Crimes contra a Administração Ambiental"
+            },
+            {
+              "count": 7,
+              "title": "CAPÍTULO VI — DA INFRAÇÃO ADMINISTRATIVA"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO VII — DA COOPERAÇÃO INTERNACIONAL PARA A PRESERVAÇÃO DO MEIO AMBIENTE"
+            },
+            {
+              "count": 4,
+              "title": "CAPÍTULO VIII — DISPOSIÇÕES FINAIS"
+            }
+          ],
+          "objectives": [
+            "Distinguir responsabilidade individual e da pessoa jurídica, penas e benefícios.",
+            "Comparar crimes contra fauna, flora, poluição, ordenamento e administração ambiental.",
+            "Estudar infrações administrativas, apuração, ação penal e cooperação."
+          ],
+          "current_units": 79,
+          "jurisprudence": [],
+          "excluded_units": 7,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15355.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.355/2026",
+              "summary": "Institui a Política de Acolhimento e Manejo de Animais Resgatados (Amar); e altera as Leis nºs 9.605, de 12 de fevereiro de 1998, 12.334, de 20 de setembro de 2010, e 12.340, de 1º de dezembro de 2010.",
+              "vigency": "Art. 21. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 32"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15299.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.299/2025",
+              "summary": "LEI Nº 15.299/2025",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 49"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15190.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.190/2025",
+              "summary": "Dispõe sobre o licenciamento ambiental; regulamenta o inciso IV do § 1º do art. 225 da Constituição Federal; altera as Leis nºs 9.605, de 12 de fevereiro de 1998 (Lei dos Crimes Ambientais), 9.985, de 18 de julho de 2000, e 6.938, de 31 de agosto de 1981; revoga dispositivos das Leis nºs 7.661, de 16 de maio de 1988, e 11.428, de 22 de dezembro de 2006; e dá outras providências.",
+              "vigency": "Art. 67. Esta Lei entra em vigor após decorridos 180 (cento e oitenta) dias de sua publicação oficial. Publicação: 08/12/2025. Entrada em vigor calculada pelo prazo legal: 06/06/2026.",
+              "articles": [
+                "Art. 60",
+                "Art. 67"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15150.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.150/2025",
+              "summary": "LEI Nº 15.150/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 32"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+              "title": "Lei 9.605/1998 — Crimes Ambientais — texto oficial conferido",
+              "sha256": "0c03b41acf28185c782343aca17d013684eb5e18b8992ba51aa7b379b4c1f89b"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "ambientais"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "ambientais",
+      "expected": {
+        "id": "9a6d490c-21b7-53f5-9df6-1a85b68a4ba1",
+        "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+        "unit_key": "art-24",
+        "label": "Art. 24",
+        "chapter": "CAPÍTULO II — DA APLICAÇÃO DA PENA",
+        "position": 22,
+        "body_text": "Art. 24. A pessoa jurídica constituída ou utilizada, preponderantemente, com o fim de permitir, facilitar ou ocultar a prática de crime definido nesta Lei terá decretada sua liquidação forçada, seu patrimônio será considerado instrumento do crime e como tal perdido em favor do Fundo Penitenciário Nacional.\n\nADMINISTRATIVA OU DE CRIME",
+        "content_sha256": "8fc79f28216f9287400f1ccbfcabf6348daf19ae63e9733bf52aef1511f430a4",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 24. A pessoa jurídica constituída ou utilizada, preponderantemente, com o fim de permitir, facilitar ou ocultar a prática de crime definido nesta Lei terá decretada sua liquidação forçada, seu patrimônio será considerado instrumento do crime e como tal perdido em favor do Fundo Penitenciário Nacional.",
+      "content_sha256": "55cd16d6b2e07c32e4731f5d2ff6be6049263b9f1464ebfe4d8b1f2ad48794e0",
+      "moved_captions": [
+        "ADMINISTRATIVA OU DE CRIME"
+      ]
+    },
+    {
+      "course_slug": "ambientais",
+      "expected": {
+        "id": "a492c59c-17b0-5468-9cf3-c6178128ab1c",
+        "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+        "unit_key": "art-25",
+        "label": "Art. 25",
+        "chapter": "CAPÍTULO III — DA APREENSÃO DO PRODUTO E DO INSTRUMENTO DE INFRAÇÃO",
+        "position": 23,
+        "body_text": "Art. 25. Verificada a infração, serão apreendidos seus produtos e instrumentos, lavrando-se os respectivos autos. (Vide ADPF 640)\n\n§ 1o Os animais serão prioritariamente libertados em seu habitat ou, sendo tal medida inviável ou não recomendável por questões sanitárias, entregues a jardins zoológicos, fundações ou entidades assemelhadas, para guarda e cuidados sob a responsabilidade de técnicos habilitados. (Redação dada pela Lei nº 13.052, de 2014)\n\n§ 2o Até que os animais sejam entregues às instituições mencionadas no § 1o deste artigo, o órgão autuante zelará para que eles sejam mantidos em condições adequadas de acondicionamento e transporte que garantam o seu bem-estar físico. (Redação dada pela Lei nº 13.052, de 2014) (Vide ADPF 640)\n\n§ 3º Tratando-se de produtos perecíveis ou madeiras, serão estes avaliados e doados a instituições científicas, hospitalares, penais e outras com fins beneficentes. (Renumerando do §2º para §3º pela Lei nº 13.052, de 2014)\n\n§ 4° Os produtos e subprodutos da fauna não perecíveis serão destruídos ou doados a instituições científicas, culturais ou educacionais. (Renumerando do §3º para §4º pela Lei nº 13.052, de 2014)\n\n§ 5º Os instrumentos utilizados na prática da infração serão vendidos, garantida a sua descaracterização por meio da reciclagem. (Renumerando do §4º para §5º pela Lei nº 13.052, de 2014)\n\nPrejudicada",
+        "content_sha256": "79184bcc9b14cc43c282642a50db33ad40349823d663bcfcf4457859ef414242",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 25. Verificada a infração, serão apreendidos seus produtos e instrumentos, lavrando-se os respectivos autos. (Vide ADPF 640)\n\n§ 1o Os animais serão prioritariamente libertados em seu habitat ou, sendo tal medida inviável ou não recomendável por questões sanitárias, entregues a jardins zoológicos, fundações ou entidades assemelhadas, para guarda e cuidados sob a responsabilidade de técnicos habilitados. (Redação dada pela Lei nº 13.052, de 2014)\n\n§ 2o Até que os animais sejam entregues às instituições mencionadas no § 1o deste artigo, o órgão autuante zelará para que eles sejam mantidos em condições adequadas de acondicionamento e transporte que garantam o seu bem-estar físico. (Redação dada pela Lei nº 13.052, de 2014) (Vide ADPF 640)\n\n§ 3º Tratando-se de produtos perecíveis ou madeiras, serão estes avaliados e doados a instituições científicas, hospitalares, penais e outras com fins beneficentes. (Renumerando do §2º para §3º pela Lei nº 13.052, de 2014)\n\n§ 4° Os produtos e subprodutos da fauna não perecíveis serão destruídos ou doados a instituições científicas, culturais ou educacionais. (Renumerando do §3º para §4º pela Lei nº 13.052, de 2014)\n\n§ 5º Os instrumentos utilizados na prática da infração serão vendidos, garantida a sua descaracterização por meio da reciclagem. (Renumerando do §4º para §5º pela Lei nº 13.052, de 2014)",
+      "content_sha256": "22bb29e9648ca91089bf3edb280878d9e904fe40902c9855790e560a6bcab55e",
+      "moved_captions": [
+        "Prejudicada"
+      ]
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

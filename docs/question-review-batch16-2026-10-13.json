@@ -1,0 +1,144 @@
+{
+  "verified_at": "2026-10-13T23:06:43.806704+00:00",
+  "scope": "Revisões individuais; catálogo ainda incompleto.",
+  "topics": [
+    {
+      "id": "4525e2cb-66e0-560b-8513-04bcff5621fe",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 62,
+      "topic_text": "Fato gerador e hipótese de incidência (item 6.2 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "e19db6a6-4fce-520f-a3d5-62625620da5d",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 92,
+      "topic_text": "Limitações constitucionais ao poder de tributar e imunidades (item 9.2 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "88b0318b-f886-4737-92dd-1f511638e986",
+      "item_number": 86,
+      "page": 15,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "2cfe989e23aae7c84d23a132621f0c1759f9f1d129b61c57754f5e6bd4cc0c10",
+      "new_text_sha256": "1560eeca25fa1df112c75ac2612b9add794b009687cd1eae36a21ee3f4a54471",
+      "answer_preserved": true,
+      "raw_preserved": true
+    },
+    {
+      "id": "ee6a167d-091d-4348-ab66-b90b19b4a687",
+      "item_number": 87,
+      "page": 15,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "2eb795cb73a4c1007eaeb98269136540e40f9254c21265f3d0ddfe1b843b46bc",
+      "new_text_sha256": "7112162b31ef8b2b2792bbe313ab6545e51e8c0e7483bf079380ebce1149745c",
+      "answer_preserved": true,
+      "raw_preserved": true
+    }
+  ],
+  "items": [
+    {
+      "id": "88b0318b-f886-4737-92dd-1f511638e986",
+      "item_number": 86,
+      "original_answer": "A",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "CTN",
+          "artigo": "arts. 114 a 118; art. 116, parágrafo único"
+        },
+        {
+          "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=485260",
+          "norma": "STF — ADI 2446",
+          "artigo": "decisão e limites da desconsideração"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. O art. 116, parágrafo único, permite desconsiderar atos que dissimulem fato gerador efetivamente ocorrido, observados procedimentos estabelecidos em lei ordinária; a ADI 2446 preservou a constitucionalidade da norma. Não autoriza tributar por analogia fato gerador inexistente nem proíbe planejamento tributário lícito. A obrigação acessória pode impor prática ou abstenção; a situação jurídica configura-se quando definitivamente constituída; a hipótese principal exige lei (arts. 114 a 118). A redação do dispositivo cobrado continua vigente após a LC 236/2026.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=485260"
+        ]
+      }
+    },
+    {
+      "id": "ee6a167d-091d-4348-ab66-b90b19b4a687",
+      "item_number": 87,
+      "original_answer": "E",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "CTN",
+          "artigo": "arts. 3º e 118"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0037.htm",
+          "norma": "Decreto-Lei 37/1966",
+          "artigo": "art. 1º, § 4º, III"
+        },
+        {
+          "url": "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-2009_213_capJurisprudencia.pdf",
+          "norma": "STJ — REsp 984.607/PR",
+          "artigo": "RSTJ 213: non olet e perdimento; páginas PDF 211 a 218"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "E. Os três itens expressam o non olet e a distinção do precedente REsp 984.607/PR: tributa-se renda ilícita quando realizada a hipótese legal, não se tributa o delito como sanção. No perdimento aduaneiro, o DL 37/1966, art. 1º, § 4º, III, afasta imposto de importação sobre a mercadoria objeto da pena. Ressalva essencial: a lei excepciona mercadoria não localizada, consumida ou revendida; não generalizar a ausência do imposto a qualquer importação irregular. A hipótese III deve ser entendida como mercadoria efetivamente alcançada pelo perdimento, não como sanção pecuniária substitutiva em qualquer situação. Texto legal atual e fundamento do STJ confrontados, sem presumir que toda a coletânea de 2009 esteja vigente.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0037.htm",
+          "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-2009_213_capJurisprudencia.pdf"
+        ]
+      }
+    },
+    {
+      "id": "6a35a8f1-c3fe-44fb-8900-81850935f7b5",
+      "item_number": 90,
+      "original_answer": "D",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 150, VI, b, d e e, e § 4º"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=5966",
+          "norma": "Súmula Vinculante 57/STF",
+          "artigo": "enunciado e âmbito de aplicação"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=1083",
+          "norma": "Tema 1083/STF",
+          "artigo": "tese sobre suportes musicais importados"
+        },
+        {
+          "url": "https://www.gov.br/pgfn/pt-br/cidadania-tributaria/por-assunto/limitacoes-ao-poder-de-tributar-1/imunidade-livros-jornais-e-similares",
+          "norma": "PGFN — aplicação de teses do STF",
+          "artigo": "Temas 1083 e 593, com referência à coisa julgada"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. II e III estão corretos. O Tema 1083 do STF exclui a imunidade de suportes materiais musicais produzidos no exterior, mesmo com obra de artista brasileiro. Livros eletrônicos e leitores exclusivamente destinados a eles, inclusive com funções acessórias, são alcançados pela SV 57; não presumir imunidade de todo equipamento multifuncional. A CF, art. 150, VI, b, e § 4º, protege patrimônio, renda e serviços vinculados às finalidades essenciais das entidades religiosas e templos, incluindo organizações assistenciais e beneficentes na redação da EC 132/2023. A questão aborda imunidade de impostos; não confundir automaticamente com exoneração de todos os tributos nem com ausência de deveres acessórios.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=5966",
+          "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=1083",
+          "https://www.gov.br/pgfn/pt-br/cidadania-tributaria/por-assunto/limitacoes-ao-poder-de-tributar-1/imunidade-livros-jornais-e-similares"
+        ]
+      }
+    }
+  ]
+}

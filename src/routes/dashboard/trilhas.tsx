@@ -1,0 +1,481 @@
+import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
+import { MaterialPractice } from "@/components/library/MaterialPractice";
+import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
+import React from "react";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
+import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { PageHero } from "@/components/dashboard/PageHero";
+import { GlossaryText } from "@/components/library/GlossaryText";
+import { HighlightToggle } from "@/components/library/StudyText";
+import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
+import { cn } from "@/lib/utils";
+import { useFocusMode } from "@/hooks/useFocusMode";
+import { toolsAreaFor } from "@/components/study/StudyTools";
+import { TRACK_SUBJECT } from "@/lib/practiceLink";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
+import {
+  materialsForTrackLesson,
+  isIntegratedTrackLesson,
+  TRACK_MATERIALS,
+} from "@/lib/trackMaterials";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
+
+export const Route = createFileRoute("/dashboard/trilhas")({
+  component: TracksPage,
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { t?: string | undefined; l?: string | undefined } => ({
+    t: typeof s["t"] === "string" ? s["t"] : undefined,
+    l: typeof s["l"] === "string" ? s["l"] : undefined,
+  }),
+  head: () => ({ meta: [{ title: "Roteiro de estudo | Norte Concursos" }] }),
+});
+
+const storeKey = (slug: string) => `trilha-feitas:${slug}`;
+function loadDone(slug: string): string[] {
+  try {
+    return JSON.parse(localStorage.getItem(storeKey(slug)) ?? "[]") as string[];
+  } catch {
+    return [];
+  }
+}
+function saveDone(slug: string, ids: string[]) {
+  try {
+    localStorage.setItem(storeKey(slug), JSON.stringify(ids));
+  } catch {
+    /* sem armazenamento: o progresso só vale nesta visita */
+  }
+}
+
+function Quiz({ lesson }: { lesson: TrackLesson }) {
+  const [picked, setPicked] = React.useState<Record<number, boolean>>({});
+  return (
+    <section aria-label="Teste rápido" className="space-y-3">
+      <h3 className="text-base font-semibold">Teste rápido: certo ou errado?</h3>
+      {lesson.quiz.map((item, i) => {
+        const p = picked[i];
+        return (
+          <div key={item.q} className="rounded-lg border p-3 text-sm">
+            <p className="leading-6">
+              <GlossaryText text={item.q} />
+            </p>
+            <div className="mt-2 flex gap-2">
+              {([true, false] as const).map((v) => (
+                <button
+                  key={String(v)}
+                  type="button"
+                  disabled={p !== undefined}
+                  onClick={() => setPicked((s) => ({ ...s, [i]: v }))}
+                  className={cn(
+                    "rounded-md border px-3 py-1.5 text-sm",
+                    p === v &&
+                      (v === item.a
+                        ? "border-emerald-500 bg-emerald-500/10"
+                        : "border-rose-500 bg-rose-500/10"),
+                  )}
+                >
+                  {v ? "Certo" : "Errado"}
+                </button>
+              ))}
+            </div>
+            {p !== undefined && (
+              <p className="mt-2 rounded-md bg-muted p-2 text-xs leading-5" role="status">
+                <strong>{p === item.a ? "Acertou." : "Não foi dessa vez."}</strong> A afirmação está{" "}
+                {item.a ? "certa" : "errada"}. {item.why}
+              </p>
+            )}
+          </div>
+        );
+      })}
+    </section>
+  );
+}
+
+/** Matérias cujo conteúdo está na Biblioteca de leis; nas demais, buscar artigos de lei não faz sentido. */
+const LAW_TRACKS = new Set(["constitucional", "administrativo", "direitos-humanos"]);
+
+/** Liga a aula ao restante da plataforma; artigos de lei só aparecem nas matérias de direito. */
+function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: string }) {
+  const { user } = useAuthStatus();
+  const isLaw = LAW_TRACKS.has(trackSlug);
+  const query = lesson.title.replace(/\s*\(.*?\)\s*/g, " ").trim();
+  const chip = "rounded-md border px-3 py-1.5 hover:bg-muted/50";
+  return (
+    <section className="space-y-3" aria-label="Material complementar">
+      <h3 className="text-base font-semibold">Aprofunde na plataforma</h3>
+      <div className="flex flex-wrap gap-2 text-sm">
+        {isLaw && (
+          <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>
+            Biblioteca de leis
+          </Link>
+        )}
+        <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>
+          Dicionário
+        </Link>
+        <Link
+          to="/dashboard/question-trainer"
+          search={
+            materialPracticeSearch({
+              subject: TRACK_SUBJECT[trackSlug] ?? lesson.title,
+              topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? lesson.title, lesson.title),
+            }) as never
+          }
+          className="rounded-md border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-semibold text-white hover:bg-emerald-700"
+        >
+          Treinar questões deste assunto
+        </Link>
+      </div>
+      {isLaw && user && user.id !== "demo-user" && (
+        <ContentSearchResults query={query} userId={user.id} hideEmpty />
+      )}
+    </section>
+  );
+}
+
+type LessonProps = {
+  focus?: boolean;
+  trackSlug: string;
+  materials: StudyMaterialSummary[];
+  lesson: TrackLesson;
+  done: boolean;
+  toggleDone: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
+};
+
+function Lesson({
+  focus = false,
+  trackSlug,
+  materials,
+  lesson,
+  onNext,
+  onPrev,
+  done,
+  toggleDone,
+}: LessonProps) {
+  const { user } = useAuthStatus();
+  const linked = materialsForTrackLesson(trackSlug, lesson.id, materials);
+  const integrated = linked.length > 0 && isIntegratedTrackLesson(trackSlug, lesson.id);
+  return (
+    <article className={cn("surface-card space-y-5 p-5 sm:p-7", focus && "text-[17px] leading-8")}>
+      <header className="border-b pb-4">
+        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          {lesson.group}
+        </p>
+        <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Tópico de estudo: {lesson.edital}</p>
+        {!integrated && (
+          <div className="mt-3">
+            <HighlightToggle legend={LAW_TRACKS.has(trackSlug)} />
+          </div>
+        )}
+      </header>
+      {linked.length > 0 && (
+        <section
+          className="space-y-3"
+          aria-label={integrated ? "Materiais deste passo" : "Leituras complementares"}
+        >
+          <p className="text-sm text-muted-foreground">
+            {integrated
+              ? "Estude este passo no material principal, com texto, explicações e prática no mesmo lugar. O roteiro mantém a sequência e suas marcações."
+              : "Estas leituras complementam parte do assunto. A aula abaixo continua disponível para os demais tópicos."}
+          </p>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {linked.map((material) => (
+              <li key={material.slug} className="min-w-0">
+                <Link
+                  to="/dashboard/library/$slug"
+                  params={{ slug: material.slug }}
+                  className="material-card h-full"
+                >
+                  <span className="material-card__icon" data-tone="subject">
+                    <GraduationCap aria-hidden="true" />
+                  </span>
+                  <span className="material-card__body min-w-0">
+                    <strong>{material.title}</strong>
+                    <span>Abrir material e praticar →</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {!integrated && (
+        <MaterialStudyTabs
+          key={`${trackSlug}:${lesson.id}`}
+          textLabel="Teoria"
+          text={
+            <>
+              <section className="space-y-2">
+                <h3 className="font-semibold">Conteúdo do assunto</h3>
+                <ul className="list-disc space-y-2 pl-5 leading-7">
+                  {lesson.pontos.map((p) => (
+                    <li key={p}>
+                      <GlossaryText text={p} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <Complement lesson={lesson} trackSlug={trackSlug} />
+            </>
+          }
+          explanation={
+            <>
+              <section className="space-y-2">
+                <h3 className="font-semibold">Em palavras simples</h3>
+                <p className="leading-7">
+                  <GlossaryText text={lesson.simples} />
+                </p>
+              </section>
+              <section className="rounded-xl border-l-2 border-emerald-500 bg-emerald-500/5 p-4">
+                <h3 className="font-semibold">Exemplo prático</h3>
+                <p className="mt-2 leading-7">
+                  <GlossaryText text={lesson.exemplo} />
+                </p>
+              </section>
+              <section className="rounded-xl border-l-2 border-amber-500 bg-amber-500/5 p-4">
+                <h3 className="font-semibold">Pontos de atenção</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-7">
+                  {lesson.atencao.map((p) => (
+                    <li key={p}>
+                      <GlossaryText text={p} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </>
+          }
+          practice={
+            <>
+              {user && (
+                <MaterialPractice
+                  key={`${trackSlug}:${lesson.id}`}
+                  userId={user.id}
+                  authoredQuiz={lesson.quiz}
+                  authoredKey={`${trackSlug}:${lesson.id}`}
+                  label={lesson.title}
+                  scope={{
+                    subject: TRACK_SUBJECT[trackSlug] ?? trackSlug,
+                    topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? trackSlug, lesson.title),
+                  }}
+                />
+              )}
+              <details className="rounded-xl border p-3">
+                <summary className="cursor-pointer font-semibold">
+                  Teste rápido da aula ({lesson.quiz.length} itens)
+                </summary>
+                <div className="mt-3">
+                  <Quiz lesson={lesson} key={`q-${lesson.id}`} />
+                </div>
+              </details>
+            </>
+          }
+        />
+      )}
+      <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
+        <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
+          <CheckCircle2 className="mr-1 h-4 w-4" />
+          {done ? "Aula concluída" : "Marcar como concluída"}
+        </Button>
+        <span className="ml-auto flex gap-2">
+          {onPrev && (
+            <Button variant="ghost" onClick={onPrev}>
+              <ChevronLeft className="h-4 w-4" />
+              Anterior
+            </Button>
+          )}
+          {onNext && (
+            <Button variant="outline" onClick={onNext}>
+              Próxima
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          )}
+        </span>
+      </footer>
+    </article>
+  );
+}
+
+function TracksPage() {
+  const { t, l } = Route.useSearch();
+  const { user } = useAuthStatus();
+  const signedIn = !!user && user.id !== "demo-user";
+  const catalog = useStudyMaterialList(signedIn);
+  const navigate = useNavigate({ from: "/dashboard/trilhas" });
+  const track: Track = TRACKS.find((x) => x.slug === t) ?? TRACKS[0]!;
+  const [done, setDone] = React.useState<string[]>([]);
+  React.useEffect(() => setDone(loadDone(track.slug)), [track.slug]);
+  const index = Math.max(
+    0,
+    track.lessons.findIndex((x) => x.id === l),
+  );
+  const lesson = track.lessons[index]!;
+  const go = (i: number) =>
+    void navigate({ search: { t: track.slug, l: track.lessons[i]!.id }, replace: true });
+  const toggle = () => {
+    const next = done.includes(lesson.id)
+      ? done.filter((x) => x !== lesson.id)
+      : [...done, lesson.id];
+    setDone(next);
+    saveDone(track.slug, next);
+  };
+  const fm = useFocusMode();
+  const groups = [...new Set(track.lessons.map((x) => x.group))];
+  const pct = Math.round((done.length / track.lessons.length) * 100);
+  const lessonView =
+    signedIn && catalog.isPending ? (
+      <Skeleton className="h-56 rounded-xl" aria-label="Carregando materiais do roteiro" />
+    ) : catalog.isError && TRACK_MATERIALS[track.slug]?.[lesson.id] ? (
+      <section className="surface-card space-y-3 p-5" role="alert">
+        <p>Não foi possível consultar o material deste passo. Tente carregar novamente.</p>
+        <Button variant="outline" onClick={() => void catalog.refetch()}>
+          Tentar novamente
+        </Button>
+      </section>
+    ) : (
+      <Lesson
+        focus={fm.focus}
+        trackSlug={track.slug}
+        materials={catalog.data ?? []}
+        key={lesson.id}
+        lesson={lesson}
+        done={done.includes(lesson.id)}
+        toggleDone={toggle}
+        {...(index < track.lessons.length - 1 ? { onNext: () => go(index + 1) } : {})}
+        {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
+      />
+    );
+  return (
+    <div className={fm.focus ? fm.containerClass : "space-y-5 pb-8"}>
+      {fm.bar({
+        kicker: track.title,
+        title: lesson.title,
+        position: `aula ${index + 1} de ${track.lessons.length}`,
+        progress: pct,
+        onPrev: index > 0 ? () => go(index - 1) : undefined,
+        onNext: index < track.lessons.length - 1 ? () => go(index + 1) : undefined,
+        prevLabel: "Aula anterior",
+        nextLabel: "Próxima aula",
+        tools: toolsAreaFor(track.title),
+        notesKey: `curso:${track.slug}`,
+        extra: (
+          <Link
+            to="/dashboard/question-trainer"
+            search={
+              materialPracticeSearch({
+                subject: TRACK_SUBJECT[track.slug] ?? lesson.title,
+                topic: materialTopic(TRACK_SUBJECT[track.slug] ?? lesson.title, lesson.title),
+              }) as never
+            }
+            className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300"
+          >
+            Questões
+          </Link>
+        ),
+      })}
+      {!fm.focus && (
+        <Link
+          to={LAW_TRACKS.has(track.slug) ? "/dashboard/library" : "/dashboard/disciplinas"}
+          search={
+            (LAW_TRACKS.has(track.slug)
+              ? {
+                  collection: "laws",
+                  ...(track.slug !== "direitos-humanos" ? { discipline: track.title } : {}),
+                }
+              : { d: track.title }) as never
+          }
+          className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-primary"
+        >
+          <ChevronLeft className="h-4 w-4" /> Voltar aos materiais da disciplina
+        </Link>
+      )}
+      {!fm.focus && (
+        <PageHero
+          image="study-desk"
+          kicker="Material didático"
+          icon={GraduationCap}
+          title={track.title}
+          description={`${track.source}. Roteiro que reúne os materiais principais e as aulas complementares, sem repetir o estudo em áreas diferentes.`}
+        />
+      )}
+      {!fm.focus && (
+        <div className="flex flex-wrap items-center gap-2">
+          {TRACKS.map((x) => (
+            <Button
+              key={x.slug}
+              size="sm"
+              variant={x.slug === track.slug ? "default" : "outline"}
+              onClick={() => void navigate({ search: { t: x.slug }, replace: true })}
+            >
+              {x.discipline}
+            </Button>
+          ))}
+          <span className="ml-auto">{fm.button}</span>
+          <Badge variant="secondary">
+            {done.length}/{track.lessons.length} aulas · {pct}%
+          </Badge>
+        </div>
+      )}
+      <div className={fm.focus ? "" : "grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]"}>
+        {!fm.focus && (
+          <aside
+            className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto"
+            aria-label="Aulas da trilha"
+          >
+            {groups.map((g) => (
+              <div key={g}>
+                <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  {g}
+                </p>
+                <ul className="space-y-1">
+                  {track.lessons.map(
+                    (x, i) =>
+                      x.group === g && (
+                        <li key={x.id}>
+                          <button
+                            type="button"
+                            onClick={() => go(i)}
+                            aria-current={i === index ? "true" : undefined}
+                            className={cn(
+                              "flex w-full items-start gap-2 rounded-lg border p-2 text-left text-sm",
+                              i === index ? "border-primary bg-primary/5" : "hover:bg-muted/50",
+                            )}
+                          >
+                            <CheckCircle2
+                              className={cn(
+                                "mt-0.5 h-4 w-4 shrink-0",
+                                done.includes(x.id)
+                                  ? "text-emerald-600"
+                                  : "text-muted-foreground/40",
+                              )}
+                              aria-hidden
+                            />
+                            <span>{x.title}</span>
+                          </button>
+                        </li>
+                      ),
+                  )}
+                </ul>
+              </div>
+            ))}
+          </aside>
+        )}
+        {lessonView}
+      </div>
+      {!fm.focus && (
+        <Card>
+          <CardContent className="p-4 text-xs text-muted-foreground">
+            Material de estudo elaborado a partir do conteúdo programático oficial. Em caso de
+            dúvida, confira a norma ou o pronunciamento citado.
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+}

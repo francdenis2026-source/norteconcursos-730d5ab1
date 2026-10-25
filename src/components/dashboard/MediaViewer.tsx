@@ -39,7 +39,7 @@ export function MediaViewer({ type, url, title, triggerLabel, className }: Media
       // Handle YouTube and other embeds if needed, for now simple iframe
       const embedUrl =
         url.includes("youtube.com") || url.includes("youtu.be")
-          ? url.replace("watch?v=", "embed/").split("&")[0]
+          ? `${url.replace("watch?v=", "embed/").split("&")[0]}${url.includes("?") && !url.includes("watch?v=") ? "&" : "?"}enablejsapi=1`
           : url;
 
       return (

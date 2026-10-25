@@ -1,0 +1,177 @@
+{
+  "verified_at": "2026-10-13T21:29:38.292806+00:00",
+  "scope": "Quatro questões individuais; não declara conclusão do catálogo.",
+  "topics": [
+    {
+      "id": "eb31d0ad-1952-5212-992d-8132e1c017ee",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 67,
+      "topic_text": "Imputação objetiva (item 6.7 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "f0d8c8f1-7b02-508c-b383-b4ff7827791a",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 57,
+      "topic_text": "Concurso aparente de normas (item 5.7 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "57ecef51-e255-5ff1-a19e-b1272be88e7c",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 4,
+      "topic_text": "Competência: critérios de determinação e modificação, conexão e continência (item 4 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "b2ac3794-a2c6-5778-be78-3f37c671aaaf",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 11,
+      "topic_text": "Crimes eleitorais — Leis 4.737/1965, 6.091/1974 e 9.504/1997 (item 11 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "sources": [
+    {
+      "id": "597f92c9-a0e0-5c25-b2f8-8f1d3e5bd4aa",
+      "source_type": "jurisprudencia",
+      "title": "HC 704718/SP — imputação objetiva",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-2023_270_2_capSextaTurma.pdf",
+      "checked_at": "2026-10-13T21:29:38.292806+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026; aplicação restrita aos itens deste lote."
+    },
+    {
+      "id": "5de3ed23-144f-523f-9ea7-db06cc13d1b4",
+      "source_type": "jurisprudencia",
+      "title": "AgRg no REsp 2038926/PR — alternatividade",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=08%2F09%2F2025&num_registro=202203631893",
+      "checked_at": "2026-10-13T21:29:38.292806+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026; aplicação restrita aos itens deste lote."
+    },
+    {
+      "id": "84d1cef1-c293-503c-a3b4-eeba07693331",
+      "source_type": "jurisprudencia",
+      "title": "Súmula 147",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=%22147%22+INPATH%28NUM%29",
+      "checked_at": "2026-10-13T21:29:38.292806+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026; aplicação restrita aos itens deste lote."
+    },
+    {
+      "id": "fac647f3-f1f9-50fa-9f8b-28f390eca43b",
+      "source_type": "jurisprudencia",
+      "title": "Súmula 209",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=%22209%22+INPATH%28NUM%29",
+      "checked_at": "2026-10-13T21:29:38.292806+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026; aplicação restrita aos itens deste lote."
+    },
+    {
+      "id": "29dd762e-9a0b-5053-ada0-8264cd24e983",
+      "source_type": "lei",
+      "title": "Código Eleitoral compilado",
+      "issuer": "Presidência da República",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm",
+      "checked_at": "2026-10-13T21:29:38.292806+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026; aplicação restrita aos itens deste lote."
+    }
+  ],
+  "items": [
+    {
+      "id": "69fffb54-2188-4770-900a-4f23cc680ae7",
+      "item": 21,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 13"
+        },
+        {
+          "url": "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-2023_270_2_capSextaTurma.pdf",
+          "norma": "STJ — HC 704.718/SP",
+          "artigo": "RSTJ 270, p. 978 e 990; páginas 48 e 60 do PDF"
+        }
+      ],
+      "reason": "D. A imputação objetiva exige risco não permitido e concretização no resultado típico; não basta nexo causal naturalístico. O risco permitido importa e a teoria não exclui crimes culposos. A leitura normativa complementa, sem abolir, a causalidade legal."
+    },
+    {
+      "id": "876cd8a6-2470-41f3-88a6-44be8bf9bb28",
+      "item": 25,
+      "answer": "C",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+          "norma": "Lei 11.343/2006",
+          "artigo": "art. 33, caput — exemplo de tipo misto alternativo"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=08%2F09%2F2025&num_registro=202203631893",
+          "norma": "STJ — AgRg no REsp 2.038.926/PR",
+          "artigo": "páginas 23–25 do PDF"
+        }
+      ],
+      "reason": "C. Alternatividade admite crime único para vários verbos do mesmo tipo no mesmo contexto fático. Especialidade não é aplicação automática de pena menor; subsidiariedade pode ser tácita; consunção resolve relação instrumental mesmo com bens jurídicos distintos. Não unificar eventos independentes só por integrarem a mesma investigação."
+    },
+    {
+      "id": "fa82a953-28e8-41c8-84a7-9268476174a7",
+      "item": 40,
+      "answer": "B",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "arts. 5º, XXXVIII, 109, IV, e 121"
+        },
+        {
+          "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=%22147%22+INPATH%28NUM%29",
+          "norma": "STJ — Súmula 147",
+          "artigo": "enunciado"
+        },
+        {
+          "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=%22209%22+INPATH%28NUM%29",
+          "norma": "STJ — Súmula 209",
+          "artigo": "enunciado"
+        }
+      ],
+      "reason": "B. I: homicídio para impedir atribuições federais envolve serviço/interesse federal e júri federal. III: verba incorporada ao patrimônio municipal sujeita-se à justiça estadual. II: lei ordinária/CPP não cria prerrogativa constitucional de foro; IV omite justiça eleitoral. Não confundir incorporação com recursos sujeitos à prestação de contas federal, que têm tratamento distinto."
+    },
+    {
+      "id": "33315dde-cdd1-463e-b30f-44f37f20c502",
+      "item": 43,
+      "answer": "C",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm",
+          "norma": "Código Eleitoral (Lei 4.737/1965)",
+          "artigo": "arts. 326, § 1º, II, 326-B, parágrafo único, e 327, IV"
+        }
+      ],
+      "reason": "C. Menosprezo ou discriminação à condição de mulher é causa de aumento para os três crimes contra a honra eleitoral. Idade superior a 60 é majorante específica do art. 326-B, não o rol comum do art. 327; retorsão imediata pode permitir perdão judicial da injúria, não agravação. Não misturar disposições do Código Penal com a norma eleitoral."
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+.tactical-clock {
+  --clock-gold: #eac77e;
+  --clock-pointer: #ff5a45;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  gap: 8px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.tactical-clock__face {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 34px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 35% 20%, #4b473d, #191d1e 55%, #090c0d);
+  box-shadow:
+    0 2px 5px #0005,
+    inset 0 1px 2px #fff3;
+}
+.tactical-clock__engraving {
+  position: absolute;
+  inset: 27%;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.tactical-clock__engraving img {
+  position: absolute;
+  width: 170%;
+  max-width: none;
+  height: 170%;
+  left: -35%;
+  top: -35%;
+  object-fit: contain;
+  filter: saturate(0.55) contrast(1.15);
+}
+/* Override workspace icon sizing only for the clock's full dial. */
+.tactical-clock .tactical-clock__face > svg.tactical-clock__dial {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--clock-gold);
+  overflow: visible;
+}
+.tactical-clock__rim {
+  stroke: #b69b62;
+  stroke-width: 4;
+}
+.tactical-clock__track {
+  stroke: #f1dab2;
+  stroke-opacity: 0.14;
+  stroke-width: 3;
+}
+.tactical-clock__arc {
+  stroke: var(--clock-gold);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.tactical-clock__major {
+  stroke: #f5dfac;
+  stroke-width: 2;
+}
+.tactical-clock__minor {
+  stroke: #b6ac93;
+  stroke-width: 1;
+  opacity: 0.6;
+}
+.tactical-clock__hand {
+  fill: var(--clock-pointer);
+  filter: drop-shadow(0 0 4px var(--clock-pointer)) drop-shadow(0 0 1px #000a);
+}
+/* A thin full-length needle from the center, in the pointer color, so the sweep
+   reads clearly as "this is the moving hand" against the busy engraved art. */
+.tactical-clock__needle {
+  stroke: var(--clock-pointer);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 3px var(--clock-pointer));
+}
+.tactical-clock__pivot {
+  fill: var(--clock-pointer);
+  stroke: #1a1a1a;
+  stroke-width: 1.5;
+}
+.tactical-clock__bezel {
+  fill: #ecd6a4;
+  font: 700 10px sans-serif;
+  letter-spacing: 1.5px;
+}
+.tactical-clock__display {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.tactical-clock__time {
+  font-variant-numeric: tabular-nums;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-weight: 750;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+.tactical-clock__label {
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 650;
+}
+.tactical-clock__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 9px;
+  line-height: 1.8;
+  color: #d8d1bd;
+}
+.tactical-clock__status i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--clock-gold);
+}
+.tactical-clock__signature {
+  position: absolute;
+  bottom: 13%;
+  width: 100%;
+  text-align: center;
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: #c7b88e;
+}
+.tactical-clock--compact .tactical-clock__bezel {
+  display: none;
+}
+.tactical-clock--question,
+.tactical-clock--focus {
+  display: flex;
+  justify-content: center;
+  width: 116px;
+}
+.tactical-clock--question .tactical-clock__face,
+.tactical-clock--focus .tactical-clock__face {
+  width: 100%;
+}
+.tactical-clock--question .tactical-clock__engraving,
+.tactical-clock--focus .tactical-clock__engraving {
+  inset: 29% 25% 25%;
+  opacity: 0.65;
+}
+/* The question timer always carries the "Carreiras Policiais" artwork now — show it at
+   full strength instead of the muted watermark treatment the generic insignia uses. */
+.tactical-clock--question .tactical-clock__engraving {
+  inset: 16% 18% 20%;
+  opacity: 1;
+}
+.tactical-clock--question .tactical-clock__engraving img {
+  filter: saturate(1) contrast(1.05);
+}
+.tactical-clock--question .tactical-clock__display,
+.tactical-clock--focus .tactical-clock__display {
+  position: absolute;
+  top: 57%;
+  left: 12%;
+  right: 12%;
+  text-align: center;
+  background: linear-gradient(#202829, #0a1011);
+  border: 1px solid #ab945d;
+  border-radius: 6px;
+  padding: 4px 2px;
+  color: #fff2d4;
+  box-shadow:
+    0 2px 6px #0008,
+    inset 0 1px 2px #ffffff1a;
+}
+.tactical-clock--question .tactical-clock__time {
+  font-size: 19px;
+  letter-spacing: -0.7px;
+}
+.tactical-clock--question .tactical-clock__label {
+  font-size: 8px;
+  color: #dbcba9;
+}
+.tactical-clock--question .tactical-clock__signature {
+  display: none;
+}
+.tactical-clock--focus {
+  width: min(280px, 100%);
+}
+.tactical-clock--focus .tactical-clock__display {
+  top: 56%;
+  left: 17%;
+  right: 17%;
+  padding: 8px 3px;
+}
+.tactical-clock--focus .tactical-clock__time {
+  font-size: clamp(32px, 8vw, 43px);
+  letter-spacing: -2px;
+}
+.tactical-clock--focus .tactical-clock__label {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #e2c891;
+}
+.tactical-clock--focus .tactical-clock__status {
+  font-size: 10px;
+}
+.tactical-clock[data-paused] .tactical-clock__arc {
+  opacity: 0.6;
+}
+.tactical-clock[data-completed] {
+  --clock-gold: #9bd6bd;
+}
+.tactical-clock[data-urgent] {
+  --clock-gold: #ff8c83;
+}
+.tactical-clock[data-urgent] .tactical-clock__time {
+  color: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tactical-clock * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (forced-colors: active) {
+  .tactical-clock__face,
+  .tactical-clock__display {
+    border: 1px solid CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+  .tactical-clock__engraving {
+    display: none;
+  }
+  .tactical-clock__major,
+  .tactical-clock__minor,
+  .tactical-clock__arc,
+  .tactical-clock__rim {
+    stroke: CanvasText;
+  }
+  .tactical-clock__hand {
+    fill: CanvasText;
+  }
+}
+.app-shell.navigation-v2[data-area] .app-topbar .app-streak .tactical-clock__dial {
+  width: 100%;
+  height: 100%;
+  color: var(--clock-gold);
+}
+/* Reserve the digital plaque's full height so the next question content cannot overlap it. */
+.tactical-clock--question {
+  padding-bottom: 16px;
+}
+.tactical-clock--question .tactical-clock__display {
+  top: auto;
+  bottom: 0;
+}

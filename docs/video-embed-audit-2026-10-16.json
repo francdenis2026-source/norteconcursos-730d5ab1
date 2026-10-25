@@ -1,0 +1,654 @@
+{
+ "data": "2026-10-16",
+ "metodo": "oEmbed (200=embed permitido; 401/403=bloqueado/privado; 404=removido) + playabilityStatus da página de watch",
+ "total_auditado_linhas": {
+  "Concursos": 519,
+  "ENEM": 90
+ },
+ "nao_conferidos_playableInEmbed": "63 reconferidos no navegador: todos OK e incorporáveis",
+ "desativados": [
+  {
+   "id": "38f5e46b-59e5-4660-addf-f668a451c809",
+   "subject": "Língua Portuguesa",
+   "topic": "Ortografia e acentuação gráfica",
+   "youtube_id": "hgF5_RC6H8M",
+   "title": "Regras de acentuação — aula grátis de Português",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "7bf341c0-892d-488e-a63f-bf0e42a9d97f",
+   "subject": "Raciocínio Lógico",
+   "topic": "Conjuntos",
+   "youtube_id": "I7i8zX7GtxQ",
+   "title": "Questão de conjuntos — raciocínio lógico matemático",
+   "channel": "PetroDicas",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "ed9b734e-33da-4290-9065-ab1cdda0974a",
+   "subject": "Direito Constitucional",
+   "topic": "Organização do Estado",
+   "youtube_id": "ueknASmy38M",
+   "title": "AGU Explica — competências legislativas",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "e111b8d8-e7cb-47ec-b6fd-61c0b0b50215",
+   "subject": "Direito Administrativo",
+   "topic": "Licitações e contratos",
+   "youtube_id": "WAB3R1BTZfE",
+   "title": "Nova Lei de Licitações e Contratos",
+   "channel": "Professor Leandro Campos",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "b2553a39-22a8-4fe9-ad8a-5cccc4d3a960",
+   "subject": "Direito Administrativo",
+   "topic": "Improbidade administrativa (Lei 8.429/1992)",
+   "youtube_id": "EbZWtU4L0Yo",
+   "title": "Lei 8.429 de 1992 — improbidade administrativa I — Profª Paula Bidoia",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "503c8655-3033-4291-a403-4ed59464b6d3",
+   "subject": "Direito Penal",
+   "topic": "Princípios e aplicação da lei penal",
+   "youtube_id": "dzMlHeJHf5U",
+   "title": "Aplicação da lei penal no espaço — aula 03",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "21fc50db-4ba6-48c1-902b-7f8f619736eb",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Lei de Migração (Lei 13.445/2017)",
+   "youtube_id": "gxRwjeEtASo",
+   "title": "Lei de Migração (13.445/2017) — resumo + questões comentadas",
+   "channel": "Canal Conta que eu te Conto!",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "3c4edb7a-b82e-4cff-a8a6-2d8ff130d79f",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Estatuto do Desarmamento (Lei 10.826/2003)",
+   "youtube_id": "mXMn167FFfs",
+   "title": "Lei 10.826 de 2003 — Estatuto do Desarmamento",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "3dc2c356-e2a8-4c58-95f0-47d4da7ab30e",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Tortura (Lei 9.455/1997)",
+   "youtube_id": "gr7tf8O8O6M",
+   "title": "Lei 9.455/97 — Lei de Tortura, teoria + questões",
+   "channel": "Nathy Bueno",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "1b33f52b-9052-4604-a60a-b935acef114a",
+   "subject": "Informática",
+   "topic": "Sistemas operacionais (Windows e Linux)",
+   "youtube_id": "2jeYg8HDWQg",
+   "title": "Noções de sistema operacional Windows 10",
+   "channel": "ROMILTON JÚNIOR",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "89c7d5c2-3b2f-4d93-83a6-741d2764fdf3",
+   "subject": "Contabilidade",
+   "topic": "Balancete de verificação",
+   "youtube_id": "4gcMUmI4IcI",
+   "title": "Aula de balancete de verificação (Contabilidade Geral)",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "8afbf97d-a494-4eaa-83a3-9e9b93e031e4",
+   "subject": "Contabilidade",
+   "topic": "DRE e demais demonstrações",
+   "youtube_id": "Xub5yWJKvXg",
+   "title": "Demonstrações contábeis: BP, DRE, DFC, DLPA, DMPL",
+   "channel": null,
+   "motivo": "oembed-404",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "63ec2962-38e6-4462-bd03-2c27e2b99863",
+   "subject": "Contabilidade",
+   "topic": "DRE e demais demonstrações",
+   "youtube_id": "EDj1kBdRpZc",
+   "title": "Curso de contabilidade grátis — DRE, aula 14",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "4f44da52-45e1-4e3f-8096-d514f8aab341",
+   "subject": "Contabilidade",
+   "topic": "Regimes de caixa e competência",
+   "youtube_id": "07sA7BIcsPY",
+   "title": "Aula de regimes contábeis: competência, caixa e misto",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "699e6168-921d-41e6-a4d3-fe8e7c5ea8ce",
+   "subject": "Contabilidade",
+   "topic": "Atos e fatos contábeis",
+   "youtube_id": "UrFg3kWayB0",
+   "title": "Aula de atos e fatos contábeis (Contabilidade Geral)",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "fc7e8f46-5165-42b4-8d6a-bceb0b5a0e42",
+   "subject": "Estatística",
+   "topic": "*",
+   "youtube_id": "RgvHY-SY1mQ",
+   "title": "Resolva questões de estatística para a Polícia Federal: dicas e estratégias",
+   "channel": "Jhoni Zini",
+   "motivo": "status-UNPLAYABLE",
+   "prev": {
+    "active": true,
+    "status": "ok",
+    "embeddable": true
+   }
+  },
+  {
+   "id": "b129b9af-f367-483a-beeb-950cd929ce6e",
+   "subject": "Estatística",
+   "topic": "*",
+   "youtube_id": "nBHQToeEaLo",
+   "title": "Missão Polícia Federal — questões de estatística",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "175581b4-e030-462d-a6ce-80a6209b5db3",
+   "subject": "Legislação de Trânsito",
+   "topic": "*",
+   "youtube_id": "Lbt8095ZDjY",
+   "title": "Concurso PRF 2026 — começando do zero: legislação de trânsito",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "c01fa236-f004-46ce-a708-28c52cafeb10",
+   "subject": "Medicina Legal e Criminalística",
+   "topic": "Sexologia forense",
+   "youtube_id": "oZecsJYH-1g",
+   "title": "Perícia criminal — Medicina Legal: sexologia forense (Prof. Nelson, aula 03)",
+   "channel": null,
+   "motivo": "oembed-401",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  },
+  {
+   "id": "ec2ca65d-0ee6-4072-9b27-44328e669f69",
+   "subject": "Geopolítica e Língua Estrangeira",
+   "topic": "Geopolítica brasileira e fronteiras",
+   "youtube_id": "btEEogItU9I",
+   "title": "Aulão especial PRF — geopolítica brasileira",
+   "channel": null,
+   "motivo": "oembed-403",
+   "prev": {
+    "active": true,
+    "status": "blocked",
+    "embeddable": false
+   }
+  }
+ ],
+ "reverter": "update media_videos set active=true,status='ok',embeddable=true where id in (ids acima)",
+ "substitutos_sugeridos": [
+  {
+   "substitui": "hgF5_RC6H8M",
+   "subject": "Língua Portuguesa",
+   "topic": "Ortografia e acentuação gráfica",
+   "candidatos": [
+    {
+     "id": "Ytw1SjnqEJ8",
+     "title": "ACENTUAÇÃO GRÁFICA: Aprenda ACENTUAÇÃO com FACILIDADE! (CONCURSOS E VESTIBULARES)",
+     "channel": "Português sem Enrolação - Professora Lis"
+    },
+    {
+     "id": "nWQVPQmxWTk",
+     "title": "ACENTUAÇÃO para CONCURSO: Oxítona, Paroxítona, Proparoxítona, etc",
+     "channel": "Prof. Álvaro Ferreira"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "I7i8zX7GtxQ",
+   "subject": "Raciocínio Lógico",
+   "topic": "Conjuntos",
+   "candidatos": [
+    {
+     "id": "FZkAkOZ2VGI",
+     "title": "Curso completo - Conjuntos para concursos - Aula 1",
+     "channel": "Felippe Loureiro"
+    },
+    {
+     "id": "s5Xv1SIQnQE",
+     "title": "CONJUNTOS NUMÉRICOS | RÁPIDO e FÁCIL",
+     "channel": "Dicasdemat Sandro Curió"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "ueknASmy38M",
+   "subject": "Direito Constitucional",
+   "topic": "Organização do Estado",
+   "candidatos": [
+    {
+     "id": "8HDmbYeUuaY",
+     "title": "Organização do Estado em Direito Constitucional (Atualizado em 2025) - Resumo Completo",
+     "channel": "Direito Desenhado"
+    },
+    {
+     "id": "pg9SorCGwGI",
+     "title": "Organização do Estado Brasileiro | Aula Completa para Concursos",
+     "channel": "Adriane Fauth"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "WAB3R1BTZfE",
+   "subject": "Direito Administrativo",
+   "topic": "Licitações e contratos",
+   "candidatos": [
+    {
+     "id": "A_Q1o_m0IRk",
+     "title": "NOVA LEI DE LICITAÇÕES E CONTRATOS ADMINISTRATIVOS - Resumo da Lei 14.133/2021 para Concursos",
+     "channel": "Me Julga - Cíntia Brunelli"
+    },
+    {
+     "id": "TGKWT0Cdm-M",
+     "title": "NOVA LEI DE LICITAÇÕES E CONTRATOS ADMINISTRATIVOS - Resumo da Lei 14.133/2021 para Concursos",
+     "channel": "Fórmula da Aprovação - Prof. Gabriela Xavier"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "EbZWtU4L0Yo",
+   "subject": "Direito Administrativo",
+   "topic": "Improbidade administrativa (Lei 8.429/1992)",
+   "candidatos": [
+    {
+     "id": "zHeWj-GwiWc",
+     "title": "“Nova” Lei de IMPROBIDADE ADMINISTRATIVA (RESUMO) - Lei 8.429/92 ATUALIZADA (após mudanças)",
+     "channel": "Me Julga - Cíntia Brunelli"
+    },
+    {
+     "id": "PXFfF_cVUUk",
+     "title": "“Nova” Lei de IMPROBIDADE ADMINISTRATIVA (RESUMO) - Lei 8.429/92 ATUALIZADA",
+     "channel": "Nathy Bueno"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "dzMlHeJHf5U",
+   "subject": "Direito Penal",
+   "topic": "Princípios e aplicação da lei penal",
+   "candidatos": [
+    {
+     "id": "hJOE3MXTdcI",
+     "title": "DIREITO PENAL - Aplicação da Lei Penal (Tempo e Espaço) - Resumo fácil para iniciantes",
+     "channel": "Me Julga - Cíntia Brunelli"
+    },
+    {
+     "id": "UaVCArd3Gtg",
+     "title": "Direito Penal do Zero: Aplicação da Lei Penal - Parte 01 (Aula Completa)",
+     "channel": "Monster Concursos"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "gxRwjeEtASo",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Lei de Migração (Lei 13.445/2017)",
+   "candidatos": [
+    {
+     "id": "kmNCNUyApJ0",
+     "title": "Concurso PF 2024 - Aula de Lei 13.445/17 Legislação Especial - AlfaCon",
+     "channel": "AlfaCon"
+    },
+    {
+     "id": "oD56bjXzviI",
+     "title": "Lei no 13.445/2017 Comentada (Lei de Migração)",
+     "channel": "Estratégia Carreira Jurídica"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "mXMn167FFfs",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Estatuto do Desarmamento (Lei 10.826/2003)",
+   "candidatos": [
+    {
+     "id": "ZpWpXJXB4fA",
+     "title": "[AULA 01] ESTATUTO DO DESARMAMENTO - LEI 10.826/03 | PARA GUARDA MUNICIPAL",
+     "channel": "FZ Concursos"
+    },
+    {
+     "id": "t1Nl13-Acmw",
+     "title": "ESTATUTO DO DESARMAMENTO ATUALIZADO para Concursos Públicos. LEI 10826/2003",
+     "channel": "Nathy Bueno"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "gr7tf8O8O6M",
+   "subject": "Legislação Especial e Direitos Humanos",
+   "topic": "Tortura (Lei 9.455/1997)",
+   "candidatos": [
+    {
+     "id": "6gKhpDK6KG4",
+     "title": "[AULA 01] LEI DE TORTURA - 9.455/97 | PARA GUARDA MUNICIPAL | 2024",
+     "channel": "FZ Concursos"
+    },
+    {
+     "id": "smXQ18blQW4",
+     "title": "LEI DE TORTURA - Lei 9.455/97 (Resumo)",
+     "channel": "Me Julga - Cíntia Brunelli"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "2jeYg8HDWQg",
+   "subject": "Informática",
+   "topic": "Sistemas operacionais (Windows e Linux)",
+   "candidatos": [
+    {
+     "id": "SdgTMUWRuO0",
+     "title": "AULA - SISTEMA OPERACIONAL WINDOWS | INFORMÁTICA PARA CONCURSOS",
+     "channel": "Prof. Marcelo Narciso"
+    },
+    {
+     "id": "MkVvtFSxpNg",
+     "title": "Resumo DIRETO AO PONTO - Sistema Operacional Windows - Informática Concursos (Prof Danilo Vilanova)",
+     "channel": "Professor Danilo Vilanova | Informática Concursos"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "4gcMUmI4IcI",
+   "subject": "Contabilidade",
+   "topic": "Balancete de verificação",
+   "candidatos": [
+    {
+     "id": "TUbI98U7hRo",
+     "title": "O que é BALANCETE de VERIFICAÇÃO - Contabilidade Básica - Balancete Contábil",
+     "channel": "GCoelho"
+    },
+    {
+     "id": "Su9ZmQc3vHg",
+     "title": "RAZONETES e BALANCETE DE VERIFICAÇÃO - Balanço Patrimonial e DRE (Método das Partidas Dobradas)",
+     "channel": "GCoelho"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "Xub5yWJKvXg",
+   "subject": "Contabilidade",
+   "topic": "DRE e demais demonstrações",
+   "candidatos": [
+    {
+     "id": "Sm5jALppTLE",
+     "title": "Demonstrações contábeis. Demonstrações financeiras. BP, DRE, DFC, DMPL, DLPA, DVA. Notas de rodapé.",
+     "channel": "Professor Quintino"
+    },
+    {
+     "id": "EkNJ8v6T6bQ",
+     "title": "BALANÇO PATRIMONIAL E DEMONSTRAÇÃO RESULTADO-Conceitos Básicos em 10 min! Demonstrações Financeiras",
+     "channel": "GCoelho"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "EDj1kBdRpZc",
+   "subject": "Contabilidade",
+   "topic": "DRE e demais demonstrações",
+   "candidatos": [
+    {
+     "id": "Sm5jALppTLE",
+     "title": "Demonstrações contábeis. Demonstrações financeiras. BP, DRE, DFC, DMPL, DLPA, DVA. Notas de rodapé.",
+     "channel": "Professor Quintino"
+    },
+    {
+     "id": "EkNJ8v6T6bQ",
+     "title": "BALANÇO PATRIMONIAL E DEMONSTRAÇÃO RESULTADO-Conceitos Básicos em 10 min! Demonstrações Financeiras",
+     "channel": "GCoelho"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "07sA7BIcsPY",
+   "subject": "Contabilidade",
+   "topic": "Regimes de caixa e competência",
+   "candidatos": [
+    {
+     "id": "dbBXzcNkrYY",
+     "title": "REGIME DE CAIXA E REGIME DE COMPETÊNCIA - CONTABILIDADE",
+     "channel": "GCoelho"
+    },
+    {
+     "id": "JhAHv_K1x3M",
+     "title": "Regime de Competência e Regime de Caixa - [GUIA COMPLETO]",
+     "channel": "CFC Academy"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "UrFg3kWayB0",
+   "subject": "Contabilidade",
+   "topic": "Atos e fatos contábeis",
+   "candidatos": [
+    {
+     "id": "U0N4zRo7zAI",
+     "title": "ATOS E FATOS CONTÁBEIS",
+     "channel": "GCoelho"
+    },
+    {
+     "id": "j_CQGZZ1mVQ",
+     "title": "Aprenda de forma rápida e definitiva os Atos e Fatos Administrativos e a relação com a contabilidade",
+     "channel": "Prof Fábio Araújo"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "RgvHY-SY1mQ",
+   "subject": "Estatística",
+   "topic": "*",
+   "candidatos": [
+    {
+     "id": "3KeVuWj4kCU",
+     "title": "Operação Polícia Federal: Aula de Estatística | com Prof. Rodrigo Mendonça!",
+     "channel": "DSO Concursos"
+    },
+    {
+     "id": "-N0ID7HFWco",
+     "title": "Estatística para iniciantes - Começando do Zero - Edital PF - AlfaCon",
+     "channel": "AlfaCon"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "nBHQToeEaLo",
+   "subject": "Estatística",
+   "topic": "*",
+   "candidatos": [
+    {
+     "id": "3KeVuWj4kCU",
+     "title": "Operação Polícia Federal: Aula de Estatística | com Prof. Rodrigo Mendonça!",
+     "channel": "DSO Concursos"
+    },
+    {
+     "id": "-N0ID7HFWco",
+     "title": "Estatística para iniciantes - Começando do Zero - Edital PF - AlfaCon",
+     "channel": "AlfaCon"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "Lbt8095ZDjY",
+   "subject": "Legislação de Trânsito",
+   "topic": "*",
+   "candidatos": [
+    {
+     "id": "9WDzTnWFlmY",
+     "title": "Concurso PRF 2024 - Aula de Legislação de Trânsito - AlfaCon",
+     "channel": "AlfaCon"
+    },
+    {
+     "id": "XcgesILw5vU",
+     "title": "Aprenda a Estudar para a PRF | Trânsito: CTB com Canezin - AlfaCon",
+     "channel": "AlfaCon"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "oZecsJYH-1g",
+   "subject": "Medicina Legal e Criminalística",
+   "topic": "Sexologia forense",
+   "candidatos": [
+    {
+     "id": "x_6r6J_EokU",
+     "title": "Sexologia Forense - Medicina Legal - 12/19",
+     "channel": "Lac Concursos - Principal"
+    },
+    {
+     "id": "q1zAUdiw1Lg",
+     "title": "SEXOLOGIA FORENSE: GRAVIDEZ, PARTO, PUERPÉRIO E ABORTO | Prof.ª Luciana Gazzola",
+     "channel": "Supremo"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  },
+  {
+   "substitui": "btEEogItU9I",
+   "subject": "Geopolítica e Língua Estrangeira",
+   "topic": "Geopolítica brasileira e fronteiras",
+   "candidatos": [
+    {
+     "id": "WCbEPLjFlBU",
+     "title": "Como Gabaritar Geopolítica na PRF: Formação Territorial e Fronteiras",
+     "channel": "Serei Nomeado"
+    },
+    {
+     "id": "UO7tZsk6aPM",
+     "title": "EDITAL CESPE PRF 2020 | AULA DE GEOPOLÍTICA BRASILEIRA",
+     "channel": "Prof Silvester Geografia"
+    }
+   ],
+   "verificacao": "oEmbed 200 + playabilityStatus OK + playableInEmbed true (navegador logado, 16/10/2026)"
+  }
+ ]
+}

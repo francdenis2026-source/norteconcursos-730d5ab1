@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BarChart3, ChevronDown, FileText, Layers, Loader2, Scale } from "lucide-react";
@@ -6,8 +7,8 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
-import { canonicalCareerName, canonicalSubject } from "@/lib/subjects";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { canonicalSubject } from "@/lib/subjects";
 import {
   analyzeEditals,
   TIER_LABEL,
@@ -17,19 +18,31 @@ import {
 } from "@/lib/editalRadar";
 import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
+import { PcAcreStudyOutlook } from "@/components/dashboard/PcAcreStudyOutlook";
+import { pcAcreRole, type PcAcreRole } from "@/lib/pcAcreOutlook";
+import {
+  normalizePanoramaRow,
+  panoramaCareer,
+  panoramaFilterState,
+  filterPanoramaRows,
+  matchesPanoramaFilter,
+  emptyPanoramaFilters,
+  type PanoramaRow,
+  type PanoramaFilters,
+} from "@/lib/panoramaFilters";
 
-export const Route = createFileRoute("/dashboard/exam-panorama")({ component: ExamPanoramaPage });
+export const Route = createFileRoute("/dashboard/exam-panorama")({
+  validateSearch: (search: Record<string, unknown>): { pcCargo?: PcAcreRole | undefined } => ({
+    pcCargo: search["pcCargo"] ? pcAcreRole(search["pcCargo"]) : undefined,
+  }),
+  component: () => (
+    <PlanGate feature="editalRadar" title="Panorama das provas">
+      <ExamPanoramaPage />
+    </PlanGate>
+  ),
+});
 
-interface Row {
-  contest_name: string;
-  exam_year: number;
-  career_name: string;
-  exam_board: string;
-  subject: string;
-  items: number;
-  scope: "federal" | "estadual" | "municipal";
-  family: string;
-}
+type Row = PanoramaRow;
 
 const SCOPES: [string, string][] = [
   ["all", "Todas as esferas"],
@@ -57,13 +70,12 @@ function Pills<T extends string>({
   label: string;
 }) {
   return (
-    <div className="flex flex-wrap gap-1.5" role="tablist" aria-label={label}>
+    <div className="flex flex-wrap gap-1.5" role="group" aria-label={label}>
       {options.map(([id, text]) => (
         <button
           key={id}
           type="button"
-          role="tab"
-          aria-selected={value === id}
+          aria-pressed={value === id}
           onClick={() => onChange(id)}
           className={cn(
             "rounded-full border px-3 py-1 text-xs font-semibold transition-colors",
@@ -80,12 +92,18 @@ function Pills<T extends string>({
 }
 
 function ExamPanoramaPage() {
+  const search = Route.useSearch();
+  const navigate = Route.useNavigate();
   const { user, isLoading: authLoading } = useAuthStatus();
   const [rows, setRows] = React.useState<Row[] | null>(null);
   const [error, setError] = React.useState(false);
-  const [scope, setScope] = React.useState("all");
-  const [family, setFamily] = React.useState("all");
-  const [role, setRole] = React.useState("all");
+  const [filters, setFilters] = React.useState<PanoramaFilters>(emptyPanoramaFilters);
+  const facets = React.useMemo(() => panoramaFilterState(rows ?? [], filters), [rows, filters]);
+  const { scope, family, role } = facets.filters;
+  React.useEffect(() => {
+    if (rows && (scope !== filters.scope || family !== filters.family || role !== filters.role))
+      setFilters({ scope, family, role });
+  }, [rows, scope, family, role, filters]);
   const [radarData, setRadarData] = React.useState<RadarData | null>(null);
   const real = !!user && user.id !== "demo-user";
 
@@ -93,14 +111,7 @@ function ExamPanoramaPage() {
     if (authLoading || !real) return;
     void supabase.rpc("exam_panorama").then(({ data, error: e }) => {
       if (e) setError(true);
-      else
-        setRows(
-          ((data as Row[]) ?? []).map((r) => ({
-            ...r,
-            subject: canonicalSubject(r.subject),
-            career_name: canonicalCareerName(r.career_name),
-          })),
-        );
+      else setRows(((data as Row[]) ?? []).map(normalizePanoramaRow));
     });
   }, [authLoading, real]);
 
@@ -117,33 +128,17 @@ function ExamPanoramaPage() {
     };
   }, [authLoading, real]);
 
-  const families = React.useMemo(() => {
-    const set = new Set(
-      (rows ?? []).filter((r) => scope === "all" || r.scope === scope).map((r) => r.family),
-    );
-    return ["all", ...[...set].sort()];
-  }, [rows, scope]);
-
-  const roles = React.useMemo(() => {
-    const set = new Set(
-      (rows ?? [])
-        .filter(
-          (r) =>
-            (scope === "all" || r.scope === scope) && (family === "all" || r.family === family),
-        )
-        .map((r) => r.career_name),
-    );
-    return ["all", ...[...set].sort((a, b) => a.localeCompare(b, "pt-BR"))];
-  }, [rows, scope, family]);
+  const { families, roles } = facets;
 
   // Esfera e carreira/órgão de cada (concurso, cargo, ano) já vêm prontas da exam_panorama; reaproveita
   // aqui para filtrar as mesmas questões, agora com o assunto do edital, sem duplicar a classificação.
   const examMeta = React.useMemo(() => {
-    const map = new Map<string, { scope: string; family: string }>();
+    const map = new Map<string, { scope: string; family: string; career: string }>();
     for (const r of rows ?? [])
-      map.set(`${r.contest_name}|${r.career_name}|${r.exam_year}`, {
+      map.set(`${r.contest_name}|${r.raw_career_name ?? r.career_name}|${r.exam_year}`, {
         scope: r.scope,
         family: r.family,
+        career: r.career_name,
       });
     return map;
   }, [rows]);
@@ -153,29 +148,24 @@ function ExamPanoramaPage() {
     // Canonicaliza o cargo dos dois lados (questões e edições) antes de cruzar, senão uma prova
     // cujo career_name tinha a grafia antiga "perde" o vínculo com o próprio edital dela.
     const selected = radarData.questions
-      .map((q) => ({ ...q, career: canonicalCareerName(q.career) }))
       .filter((q) => {
         const meta = examMeta.get(`${q.contest}|${q.career}|${q.year}`);
         if (!meta) return false;
-        if (scope !== "all" && meta.scope !== scope) return false;
-        if (family !== "all" && meta.family !== family) return false;
-        if (role !== "all" && q.career !== role) return false;
+        if (!matchesPanoramaFilter(scope, meta.scope)) return false;
+        if (!matchesPanoramaFilter(family, meta.family)) return false;
+        if (!matchesPanoramaFilter(role, meta.career)) return false;
         return true;
-      });
+      })
+      .map((q) => ({ ...q, career: panoramaCareer(q.career, q.contest, q.year) }));
     const editions = radarData.editions.map((e) => ({
       ...e,
-      role: canonicalCareerName(e.role),
+      role: panoramaCareer(e.role, e.contest, e.year),
     }));
     return analyzeEditals(selected, radarData.topics, editions);
   }, [radarData, examMeta, scope, family, role]);
 
   const view = React.useMemo(() => {
-    const list = (rows ?? []).filter(
-      (r) =>
-        (scope === "all" || r.scope === scope) &&
-        (family === "all" || r.family === family) &&
-        (role === "all" || r.career_name === role),
-    );
+    const list = filterPanoramaRows(rows ?? [], { scope, family, role });
     const exams = new Map<string, { row: Row; items: number; subjects: Set<string> }>();
     const subjects = new Map<string, { items: number; exams: Set<string> }>();
     for (const r of list) {
@@ -220,7 +210,7 @@ function ExamPanoramaPage() {
   if (!real) {
     return (
       <LockedState
-        image="exam-hall"
+        image="field-map"
         title={
           <>
             Panorama das <em>provas</em>
@@ -237,19 +227,38 @@ function ExamPanoramaPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero
-        image="exam-hall"
+        image="field-map"
         size="sm"
-        kicker="Objetivo"
+        kicker="Meu concurso"
         icon={BarChart3}
         title={
           <>
-            Panorama das <em>provas</em>
+            Panorama e <em>tendências</em>
           </>
         }
-        description="O que mais caiu nas provas oficiais já analisadas pela plataforma. A mesma informação para todos os alunos, como norte para escolher o que estudar."
+        description="Explore o histórico de provas e encontre prioridades para organizar seu estudo por cargo."
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={FileText} label="Provas analisadas" value={view.n} />
+          <HeroStat icon={Layers} label="Disciplinas" value={view.table.length} />
+        </div>
+      </PageHero>
+
+      <PcAcreStudyOutlook
+        role={pcAcreRole(search.pcCargo)}
+        onRoleChange={(pcCargo) => {
+          void navigate({ search: { pcCargo }, replace: true });
+        }}
       />
 
-      <Card>
+      <div id="panorama-geral" className="scroll-mt-24">
+        <h2 className="text-xl font-bold">Panorama geral do acervo</h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Os filtros abaixo exploram outras provas e carreiras.
+        </p>
+      </div>
+
+      <Card id="panorama-filtros">
         <CardContent className="space-y-3 pt-6">
           <div className="space-y-1.5">
             <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
@@ -258,11 +267,9 @@ function ExamPanoramaPage() {
             <Pills
               label="Esfera"
               value={scope}
-              options={SCOPES}
+              options={SCOPES.filter(([id]) => facets.scopes.includes(id))}
               onChange={(v) => {
-                setScope(v);
-                setFamily("all");
-                setRole("all");
+                setFilters({ scope: v, family: "all", role: "all" });
               }}
             />
           </div>
@@ -274,38 +281,44 @@ function ExamPanoramaPage() {
               label="Carreira"
               value={family}
               onChange={(v) => {
-                setFamily(v);
-                setRole("all");
+                setFilters({ scope, family: v, role: "all" });
               }}
               options={families.map((f) => [f, f === "all" ? "Todas" : f] as [string, string])}
             />
           </div>
-          {roles.length > 2 && (
-            <div className="space-y-1.5">
-              {/* career_name já vem normalizado por canonicalCareerName() (src/lib/subjects.ts),
-                  que junta grafias diferentes do MESMO cargo entre estados/bancas (ex.: nome da
-                  instituição gravado por engano no lugar do cargo; "Delegado de Polícia" x
-                  "Delegado de Polícia Civil" x "Delegado de Polícia Substituto"; "Oficial
-                  Investigador" x "Oficial Investigador de Polícia"). Cargos com nomes parecidos
-                  mas que são funções realmente distintas continuam separados. */}
-              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                Cargo
-              </p>
-              <Pills
-                label="Cargo"
-                value={role}
-                onChange={setRole}
-                options={roles.map((r) => [r, r === "all" ? "Todos" : r] as [string, string])}
-              />
-            </div>
-          )}
+          <div className="space-y-1.5">
+            <label
+              htmlFor="panorama-cargo"
+              className="block text-xs font-bold uppercase tracking-wide text-muted-foreground"
+            >
+              Cargo
+            </label>
+            <select
+              id="panorama-cargo"
+              className="h-10 w-full rounded-lg border bg-background px-3 text-sm sm:max-w-md"
+              value={role}
+              disabled={!rows || roles.length < 2}
+              onChange={(event) => setFilters({ scope, family, role: event.target.value })}
+            >
+              {roles.map((r) => (
+                <option key={r} value={r}>
+                  {r === "all" ? "Todos os cargos disponíveis" : r}
+                </option>
+              ))}
+            </select>
+            <p className="text-xs text-muted-foreground">
+              {family === "all"
+                ? "Escolha o órgão para reduzir a lista de cargos."
+                : "Cargos disponíveis no órgão e na esfera selecionados."}
+            </p>
+          </div>
         </CardContent>
       </Card>
 
       {error && (
         <p className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
-          Não foi possível carregar o panorama. Confirme que a migration exam_panorama foi aplicada
-          no banco.
+          Não foi possível carregar o panorama geral. A análise da PC do Acre continua disponível.
+          Tente atualizar a página.
         </p>
       )}
       {!rows && !error && (

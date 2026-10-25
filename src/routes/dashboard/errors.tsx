@@ -1,8 +1,18 @@
+import { matchesMaterialScope, materialTopic } from "@/lib/materialPractice";
+import "@/styles/question-workspace.css";
+import { questionIdentity } from "@/lib/questionIdentity";
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 // Caderno de erros: toda questão que o aluno errou no Treinador entra aqui
 // automaticamente (vem de question_training_responses, a mesma fonte de
 // verdade do Treinador — nada de mock). O aluno não responde de novo aqui;
 // ele revisa e marca o progresso (pendente/revisado/dominado) pra focar no
 // que ainda precisa estudar.
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
+import { questionCode } from "@/lib/questionIdentity";
+import { MissingTextNotice } from "@/components/library/MissingTextNotice";
+import { needsMissingSupportText } from "@/lib/questionText";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,10 +29,9 @@ import {
 import {
   AlertCircle,
   BookOpenCheck,
-  Check,
   ExternalLink,
-  History,
   Filter,
+  History,
   Loader2,
   Play,
   Sparkles,
@@ -42,7 +51,7 @@ import {
   splitExplanation,
   type Question,
 } from "@/lib/questionFormat";
-import { PageHero, LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { toast } from "sonner";
 import {
   Select,
@@ -61,6 +70,12 @@ import { relatedVideos } from "@/lib/relatedVideos";
 
 export const Route = createFileRoute("/dashboard/errors")({
   component: ErrorsPage,
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { subject?: string | undefined; topic?: string | undefined } => ({
+    subject: typeof s["subject"] === "string" ? s["subject"] : undefined,
+    topic: typeof s["topic"] === "string" ? s["topic"] : undefined,
+  }),
 });
 
 type ReviewStatus = "pendente" | "revisado" | "dominado";
@@ -112,6 +127,11 @@ function ErrorArsenal({
           </p>
           <p className="text-sm leading-6">{explanation.example}</p>
         </div>
+      )}
+      {question.preliminaryKey && (
+        <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+          Gabarito preliminar da banca: pode mudar após recursos. Confira o definitivo quando sair.
+        </p>
       )}
       {question.checkedAt && question.legalBasis.length > 0 && (
         <p className="text-xs text-muted-foreground">
@@ -167,13 +187,59 @@ function ErrorArsenal({
           </details>
         </div>
       )}
+      <Button asChild className="w-full gap-2">
+        <Link
+          to="/dashboard/question-trainer"
+          search={{ subject: question.subject, go: "1", mode: "reforco" }}
+        >
+          <Target className="h-4 w-4" /> Refazer meus erros
+        </Link>
+      </Button>
       <Button asChild variant="outline" className="w-full gap-2">
         <Link
           to="/dashboard/question-trainer"
           search={{ subject: question.subject, go: "1", reinforce: "1" }}
         >
-          <Target className="h-4 w-4" /> Praticar mais questões de {question.subject}
+          <Target className="h-4 w-4" /> Treinar esta disciplina
         </Link>
+      </Button>
+    </div>
+  );
+}
+
+/** As três decisões possíveis ao revisar um erro, lado a lado; a atual fica desativada. */
+function ReviewActions({
+  status,
+  onChange,
+}: {
+  status: ReviewStatus;
+  onChange: (status: ReviewStatus) => void;
+}) {
+  return (
+    <div className="grid grid-cols-1 gap-2 border-t pt-4 sm:grid-cols-3">
+      <Button
+        variant="outline"
+        disabled={status === "dominado"}
+        className="justify-center hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700"
+        onClick={() => onChange("dominado")}
+      >
+        Dominado
+      </Button>
+      <Button
+        variant="outline"
+        disabled={status === "revisado"}
+        className="justify-center hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        onClick={() => onChange("revisado")}
+      >
+        Revisado, manter para reforço
+      </Button>
+      <Button
+        variant="outline"
+        disabled={status === "pendente"}
+        className="justify-center hover:border-amber-200 hover:bg-amber-50 hover:text-amber-700"
+        onClick={() => onChange("pendente")}
+      >
+        Ainda tenho dúvida
       </Button>
     </div>
   );
@@ -184,7 +250,7 @@ function ErrorsPage() {
   const real = !!user && user.id !== "demo-user";
   const userId = real ? user?.id : undefined;
   const { catalog, loading: catalogLoading } = useQuestionCatalog(userId, real);
-  const { locked, loading: lockedLoading } = useLockedAnswers(userId, real);
+  const { locked, loading: lockedLoading } = useLockedAnswers(userId, real, catalog);
   const { data: libraryMaterials } = useStudyMaterialList(real);
   const { catalog: mediaCatalog } = useMediaCatalog();
   const libraryByDiscipline = useMemo(() => {
@@ -200,7 +266,9 @@ function ErrorsPage() {
 
   const [reviewStatus, setReviewStatus] = useState<Record<string, ReviewStatus>>({});
   const [statusLoading, setStatusLoading] = useState(true);
-  const [filterSubject, setFilterSubject] = useState("all");
+  const [filterSubject, setFilterSubject] = useState(
+    Route.useSearch().subject ? canonicalSubject(Route.useSearch().subject) : "all",
+  );
   const [detail, setDetail] = useState<Question | null>(null);
   const [revisionMode, setRevisionMode] = useState(false);
   const [revisionIndex, setRevisionIndex] = useState(0);
@@ -234,7 +302,7 @@ function ErrorsPage() {
 
   const catalogById = useMemo(() => {
     const map = new Map<string, Question>();
-    for (const question of catalog) map.set(`${question.source}:${question.id}`, question);
+    for (const question of catalog) map.set(questionIdentity(question), question);
     return map;
   }, [catalog]);
 
@@ -244,7 +312,10 @@ function ErrorsPage() {
       if (answer.isCorrect) continue;
       const question = catalogById.get(key);
       if (!question) continue; // questão saiu de circulação (inativada) desde o erro
-      entries.push({ question, status: reviewStatus[key] ?? "pendente" });
+      entries.push({
+        question,
+        status: reviewStatus[`${question.source}:${question.id}`] ?? "pendente",
+      });
     }
     return entries;
   }, [locked, catalogById, reviewStatus]);
@@ -256,12 +327,24 @@ function ErrorsPage() {
       ),
     [allErrors],
   );
+  const plannedSearch = Route.useSearch();
+  useEffect(
+    () => setFilterSubject(plannedSearch.subject ? canonicalSubject(plannedSearch.subject) : "all"),
+    [plannedSearch.subject],
+  );
+  const plannedTopic = plannedSearch.topic
+    ? materialTopic(plannedSearch.subject ?? filterSubject, plannedSearch.topic)
+    : undefined;
   const visibleErrors = useMemo(
     () =>
       allErrors
-        .filter((e) => filterSubject === "all" || e.question.subject === filterSubject)
+        .filter(
+          (e) =>
+            (filterSubject === "all" || e.question.subject === filterSubject) &&
+            matchesMaterialScope(e.question, { topic: plannedTopic }),
+        )
         .sort((a, b) => a.question.subject.localeCompare(b.question.subject, "pt-BR")),
-    [allErrors, filterSubject],
+    [allErrors, filterSubject, plannedTopic],
   );
   const reviewQueue = useMemo(
     () => visibleErrors.filter((e) => e.status !== "dominado"),
@@ -293,7 +376,7 @@ function ErrorsPage() {
   if (!authLoading && !real)
     return (
       <LockedState
-        image="study-desk"
+        image="trainer"
         title={
           <>
             Caderno de <em>erros</em>
@@ -324,7 +407,7 @@ function ErrorsPage() {
         )
       : [];
     return (
-      <div className="mx-auto max-w-2xl space-y-6">
+      <div className="question-workspace question-errors question-errors--review mx-auto max-w-2xl">
         <div className="flex items-center justify-between">
           <Button variant="ghost" onClick={() => setRevisionMode(false)}>
             Voltar ao caderno
@@ -335,6 +418,7 @@ function ErrorsPage() {
         </div>
         <Card className="border-2 border-primary/20">
           <CardContent className="space-y-4 pt-6">
+            {needsMissingSupportText(question) && <MissingTextNotice />}
             <div className="flex flex-wrap gap-1.5">
               <Badge variant="outline">{question.subject}</Badge>
               <Badge variant="outline">{question.board}</Badge>
@@ -344,8 +428,9 @@ function ErrorsPage() {
               >
                 {DIFFICULTY_LABEL[question.difficulty]}
               </Badge>
+              <QuestionCode question={question} />
             </div>
-            <p className="whitespace-pre-line text-base leading-6">{parsed.stem}</p>
+            <QuestionProse text={parsed.stem} className="text-base" />
             <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
               <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
                 Resposta correta
@@ -354,41 +439,14 @@ function ErrorsPage() {
               {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
             </div>
             <ErrorArsenal question={question} relatedMaterial={relatedMaterial} videos={videos} />
-            <div className="grid grid-cols-1 gap-2 pt-2">
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200"
-                onClick={async () => {
-                  await updateStatus(question, "dominado");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Dominado (sair da revisão)
-              </Button>
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200"
-                onClick={async () => {
-                  await updateStatus(question, "revisado");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Revisado (manter para reforço)
-              </Button>
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-amber-50 hover:text-amber-700 hover:border-amber-200"
-                onClick={async () => {
-                  await updateStatus(question, "pendente");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Ainda tenho dúvida (prioridade)
-              </Button>
-            </div>
+            <ReviewActions
+              status={reviewQueue[revisionIndex]!.status}
+              onChange={async (next) => {
+                await updateStatus(question, next);
+                if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
+                else setRevisionMode(false);
+              }}
+            />
           </CardContent>
         </Card>
       </div>
@@ -396,47 +454,50 @@ function ErrorsPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="question-workspace question-errors">
       <PageHero
-        image="study-desk"
-        kicker="Treinamento"
+        image="trainer"
+        kicker="Questões"
         icon={AlertCircle}
         title={
           <>
             Caderno de <em>erros</em>
           </>
         }
-        description="Cada falha do Treinador vira uma ordem de revisão clara. Você revisa o gabarito e marca o que já domina; não é possível responder de novo a uma questão já respondida."
-        actions={
-          <>
-            <Select value={filterSubject} onValueChange={setFilterSubject}>
-              <SelectTrigger className="hero-btn-ghost w-[190px]">
-                <Filter className="mr-2 h-4 w-4" />
-                <SelectValue placeholder="Disciplina" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Todas as disciplinas</SelectItem>
-                {subjects.map((subject) => (
-                  <SelectItem key={subject} value={subject}>
-                    {subject}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <Button
-              className="hero-btn-primary gap-2"
-              disabled={reviewQueue.length === 0}
-              onClick={() => {
-                setRevisionIndex(0);
-                setRevisionMode(true);
-                toast.success("Revisão guiada iniciada");
-              }}
-            >
-              <Play className="h-4 w-4" /> Revisão sequencial
-            </Button>
-          </>
-        }
-      />
+        description="Revise as questões que você errou e acompanhe o que já dominou."
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={AlertCircle} label="No caderno" value={allErrors.length} />
+          <HeroStat icon={History} label="Para revisar" value={reviewQueue.length} />
+        </div>
+      </PageHero>
+      <div className="question-workspace__toolbar" aria-label="Filtrar e revisar erros">
+        <Select value={filterSubject} onValueChange={setFilterSubject}>
+          <SelectTrigger className="w-full sm:w-[210px]">
+            <Filter className="mr-2 h-4 w-4" />
+            <SelectValue placeholder="Disciplina" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Todas as disciplinas</SelectItem>
+            {subjects.map((subject) => (
+              <SelectItem key={subject} value={subject}>
+                {subject}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Button
+          className="question-workspace__primary gap-2"
+          disabled={reviewQueue.length === 0}
+          onClick={() => {
+            setRevisionIndex(0);
+            setRevisionMode(true);
+            toast.success("Revisão guiada iniciada");
+          }}
+        >
+          <Play className="h-4 w-4" /> Revisão sequencial
+        </Button>
+      </div>
 
       {visibleErrors.length > 0 && (
         <div className="flex flex-wrap gap-3 text-sm">
@@ -456,7 +517,7 @@ function ErrorsPage() {
         {visibleErrors.length > 0 ? (
           visibleErrors.map(({ question, status }) => (
             <Card
-              key={`${question.source}:${question.id}`}
+              key={questionIdentity(question)}
               className="hover:border-primary/50 transition-colors"
             >
               <CardContent className="pt-6">
@@ -467,31 +528,20 @@ function ErrorsPage() {
                     </Badge>
                     <Badge variant="outline">{question.subject}</Badge>
                     <Badge variant="outline">{question.board}</Badge>
+                    <QuestionCode question={question} />
                   </div>
-                  <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                     {question.contest} · {question.year}
                   </span>
                 </div>
                 <p className="mb-4 line-clamp-3 font-medium">{parseQuestion(question.text).stem}</p>
                 <div className="flex flex-wrap items-center justify-between gap-2 border-t pt-4 text-sm">
-                  <span className="flex items-center gap-1 text-muted-foreground">
-                    <History className="h-3 w-3" /> {DIFFICULTY_LABEL[question.difficulty]}
+                  <span className="text-muted-foreground">
+                    {DIFFICULTY_LABEL[question.difficulty]}
                   </span>
-                  <div className="flex flex-wrap gap-2">
-                    <Button variant="outline" size="sm" onClick={() => setDetail(question)}>
-                      Revisar
-                    </Button>
-                    {status !== "dominado" && (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200"
-                        onClick={() => updateStatus(question, "dominado")}
-                      >
-                        <Check className="mr-1 h-3.5 w-3.5" /> Marcar dominada
-                      </Button>
-                    )}
-                  </div>
+                  <Button variant="outline" onClick={() => setDetail(question)}>
+                    Revisar
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -533,9 +583,13 @@ function ErrorsPage() {
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4">
-                    <p className="whitespace-pre-line text-sm leading-6">
-                      {parseQuestion(detail.text).stem}
-                    </p>
+                    {needsMissingSupportText(detail) && <MissingTextNotice />}
+                    <QuestionProse text={parseQuestion(detail.text).stem} className="text-sm" />
+                    <QuestionCode question={detail} />
+                    <QuestionFigures
+                      urls={detail.figures}
+                      illustrations={parseQuestion(detail.text).illustrations}
+                    />
                     <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
                       <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
                         Resposta correta
@@ -558,9 +612,18 @@ function ErrorsPage() {
                       relatedMaterial={detailRelatedMaterial}
                       videos={detailVideos}
                     />
+                    <ReviewActions
+                      status={reviewStatus[`${detail.source}:${detail.id}`] ?? "pendente"}
+                      onChange={async (next) => {
+                        await updateStatus(detail, next);
+                        setDetail(null);
+                      }}
+                    />
                   </div>
                   <DialogFooter>
-                    <Button onClick={() => setDetail(null)}>Fechar</Button>
+                    <Button variant="ghost" onClick={() => setDetail(null)}>
+                      Fechar
+                    </Button>
                   </DialogFooter>
                 </>
               );

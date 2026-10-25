@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-10-24T22:31:32.749724+00:00",
+  "project_ref": "gkwphadbveiyjcwiiizw",
+  "materials_verified": 9,
+  "new_materials": 2,
+  "updated_materials": 7,
+  "local_exercises": 180,
+  "new_local_exercises": 40,
+  "repaired_practice_reviews": 7,
+  "clarified_existing_items": 8,
+  "active_case_versions": 9,
+  "new_cases": 9,
+  "active_catalog_questions": 69,
+  "audit_rows": 159,
+  "question_classifications": {
+    "published": 69,
+    "needs_review": 78,
+    "obsolete": 12
+  },
+  "all_fields_match": true,
+  "active_official_syllabus_verified": true,
+  "materials": [
+    {
+      "slug": "administrativo-atos-administrativos-requisitos-atributos",
+      "title": "Atos administrativos: requisitos, atributos, espécies e extinção",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-controle-da-administracao-publica",
+      "title": "Controle da Administração Pública",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-fundamentos-fontes-regime-juridico",
+      "title": "Fundamentos: fontes, regime jurídico e interesse público",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-licitacoes-lei-14133-modalidades",
+      "title": "Licitações: princípios, modalidades e inexigibilidade na Lei nº 14.133/2021",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-organizacao-direta-indireta-orgaos",
+      "title": "Organização administrativa: direta, indireta e órgãos públicos",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-poderes-vinculado-discricionario-hierarquico",
+      "title": "Poderes vinculado, discricionário, hierárquico, disciplinar e regulamentar",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-processo-administrativo-lei-9784",
+      "title": "Processo administrativo federal (Lei nº 9.784/1999)",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "administrativo-responsabilidade-civil-do-estado",
+      "title": "Responsabilidade civil do Estado",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao",
+      "title": "Lei nº 8.112/1990: posse, exercício, vacância, remoção e redistribuição",
+      "discipline": "Direito Administrativo",
+      "status": "active",
+      "local_exercises": 20
+    }
+  ]
+}

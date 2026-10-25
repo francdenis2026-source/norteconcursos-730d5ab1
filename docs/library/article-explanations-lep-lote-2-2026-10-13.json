@@ -1,0 +1,2617 @@
+{
+  "version": "2026-10-11-lep-targeted",
+  "checked_at": "2026-10-13T04:34:14.330557+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "lep",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal",
+      "units": 47,
+      "scope_type": "targeted_correction",
+      "course_current_units": 215,
+      "target_unit_keys": [
+        "art-48",
+        "art-49",
+        "art-51",
+        "art-53",
+        "art-55",
+        "art-56",
+        "art-57",
+        "art-58",
+        "art-59",
+        "art-60",
+        "art-61",
+        "art-62",
+        "art-63",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-76",
+        "art-77",
+        "art-78",
+        "art-79",
+        "art-80",
+        "art-81",
+        "art-81-a",
+        "art-81-b",
+        "art-82",
+        "art-83",
+        "art-84",
+        "art-85",
+        "art-86",
+        "art-87",
+        "art-88",
+        "art-89",
+        "art-90",
+        "art-91",
+        "art-92",
+        "art-93",
+        "art-94",
+        "art-95"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "4f2c70bd250307fd0c2575eedbceb12bd47bc4426cf85ec57ce1df783ebbe5ac",
+      "source_checked_at": "2026-10-12T03:15:19.191370+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-48",
+      "unit_id": "b53f0fba-a037-52a4-a437-d13448b0489d",
+      "content_sha256": "5c403ac03286face3c02000dc5a1ccb59602c52cefeda0d4210cf755927c2585",
+      "simples": "Na execução das penas restritivas de direitos, o poder disciplinar será exercido pela autoridade administrativa a que estiver sujeito o condenado. Nas faltas graves, a autoridade representará ao juiz da execução para os fins dos artigos 118, inciso I, 125, 127, 181, §§ 1º, letra d, e 2º da Lei.",
+      "pontos": [
+        "Poder disciplinar pela autoridade administrativa.",
+        "Faltas graves: representação ao juiz."
+      ],
+      "atencao": [
+        "Nas faltas graves, quem decide as consequências é o JUIZ."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 118"
+      ],
+      "exemplo": "Autoridade da restritiva representa ao juiz por falta grave. Variação: Representar não equivale a decretar automaticamente conversão,regressão ou perda de remição.",
+      "prova": [
+        "Administração decide sozinha todas as consequências judiciais? Não.",
+        "Poder disciplinar administrativo está previsto? Sim."
+      ],
+      "expected": {
+        "unit_id": "b53f0fba-a037-52a4-a437-d13448b0489d",
+        "content_sha256": "5c403ac03286face3c02000dc5a1ccb59602c52cefeda0d4210cf755927c2585",
+        "simples": "Na execução das penas restritivas de direitos, o poder disciplinar será exercido pela autoridade administrativa a que estiver sujeito o condenado. Nas faltas graves, a autoridade representará ao juiz da execução para os fins dos artigos 118, inciso I, 125, 127, 181, §§ 1º, letra d, e 2º da Lei.",
+        "pontos": [
+          "Poder disciplinar pela autoridade administrativa.",
+          "Faltas graves: representação ao juiz."
+        ],
+        "atencao": [
+          "Nas faltas graves, quem decide as consequências é o JUIZ."
+        ],
+        "exemplo": "A falta grave do condenado a pena restritiva é comunicada ao juiz.",
+        "prova": [
+          "Assertiva que permite à autoridade administrativa converter a pena sozinha erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 118"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-49",
+      "unit_id": "8defe6f4-fe9f-528b-a8d2-d71355d9fa9a",
+      "content_sha256": "0544f668c3916004ccdfe719edf41984f412561f08f6cc3152d5cbf5f6706dbb",
+      "simples": "As faltas disciplinares classificam-se em leves, médias e graves. A legislação local especificará as leves e médias, bem assim as respectivas sanções. Pune-se a tentativa com a sanção correspondente à falta consumada.",
+      "pontos": [
+        "Faltas leves, médias e graves.",
+        "Leves e médias: legislação local.",
+        "Tentativa punida como falta consumada."
+      ],
+      "atencao": [
+        "As faltas GRAVES estão na lei federal; leves e médias, na legislação local."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 50"
+      ],
+      "exemplo": "Norma local especifica falta leve e sua sanção anterior ao fato. Variação: Não pode criar falta grave federal por analogia; tentativa recebe disciplina expressa.",
+      "prova": [
+        "A tentativa tem sanção da consumada? Sim.",
+        "Legislação local define livremente toda falta grave? Não."
+      ],
+      "expected": {
+        "unit_id": "8defe6f4-fe9f-528b-a8d2-d71355d9fa9a",
+        "content_sha256": "0544f668c3916004ccdfe719edf41984f412561f08f6cc3152d5cbf5f6706dbb",
+        "simples": "As faltas disciplinares classificam-se em leves, médias e graves. A legislação local especificará as leves e médias, bem assim as respectivas sanções. Pune-se a tentativa com a sanção correspondente à falta consumada.",
+        "pontos": [
+          "Faltas leves, médias e graves.",
+          "Leves e médias: legislação local.",
+          "Tentativa punida como falta consumada."
+        ],
+        "atencao": [
+          "As faltas GRAVES estão na lei federal; leves e médias, na legislação local."
+        ],
+        "exemplo": "A tentativa de fuga é punida como a fuga.",
+        "prova": [
+          "Assertiva que não pune a tentativa de falta disciplinar erra: pune-se como a falta consumada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-51",
+      "unit_id": "be6d9cae-4f7f-5b5b-863d-eb904e68f4e1",
+      "content_sha256": "14189a921ad7374598939c06532a35291940558a98a0e98aefa558783031e452",
+      "simples": "Comete falta grave o condenado à pena restritiva de direitos que descumprir, injustificadamente, a restrição imposta; retardar, injustificadamente, o cumprimento da obrigação imposta; ou inobservar os deveres previstos nos incisos II e V do art. 39.",
+      "pontos": [
+        "Descumprir ou retardar INJUSTIFICADAMENTE nos incisos I/II.",
+        "Inobservância dos deveres II/V do 39 tem recorte próprio.",
+        "Não presumir falta grave por qualquer atraso sem apuração."
+      ],
+      "atencao": [
+        "Falta grave específica das penas restritivas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 50"
+      ],
+      "exemplo": "Condenado injustificadamente retarda cumprimento de obrigação restritiva. Variação: Impossibilidade comprovada não pode ser ignorada ao examinar injustificadamente.",
+      "prova": [
+        "Qualquer atraso basta por si? Não.",
+        "Há remissão aos deveresII/V do 39? Sim."
+      ],
+      "expected": {
+        "unit_id": "be6d9cae-4f7f-5b5b-863d-eb904e68f4e1",
+        "content_sha256": "14189a921ad7374598939c06532a35291940558a98a0e98aefa558783031e452",
+        "simples": "Comete falta grave o condenado à pena restritiva de direitos que descumprir, injustificadamente, a restrição imposta; retardar, injustificadamente, o cumprimento da obrigação imposta; ou inobservar os deveres previstos nos incisos II e V do art. 39.",
+        "pontos": [
+          "Descumprir a restrição.",
+          "Retardar a obrigação.",
+          "Inobservar deveres dos incisos II e V do art. 39."
+        ],
+        "atencao": [
+          "Falta grave específica das penas restritivas."
+        ],
+        "exemplo": "Quem não comparece ao serviço comunitário sem justificativa comete falta grave.",
+        "prova": [
+          "Assertiva que exige conduta violenta para a falta grave do art. 51 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-53",
+      "unit_id": "d8c588d9-d2f4-5590-9a5e-88d3d03f2106",
+      "content_sha256": "8b9e638753e4954b08c1e9d74c2787c3dc0b233a099a697726df0a590b2ab1e4",
+      "simples": "Constituem sanções disciplinares a advertência verbal; a repreensão; a suspensão ou restrição de direitos; o isolamento na própria cela ou em local adequado, nos estabelecimentos com alojamento coletivo; e a inclusão no regime disciplinar diferenciado.",
+      "pontos": [
+        "Advertência verbal.",
+        "Repreensão.",
+        "Suspensão ou restrição de direitos.",
+        "Isolamento.",
+        "Regime disciplinar diferenciado."
+      ],
+      "atencao": [
+        "Cinco sanções disciplinares.",
+        "Remissão ao antigo parágrafo único do 41 deve ser integrada ao§1º atual. Não atribuir ao diretor autorização universal para restringir V/X/XV,cuja redação atual exige ato motivado judicial."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 54"
+      ],
+      "exemplo": "Sanção escolhida é isolamento ou advertência entre modalidades legais. Variação: Rol não autoriza cela escura,sanção coletiva ou dispensar competência adequada.",
+      "prova": [
+        "São cinco modalidades expressas? Sim.",
+        "RDD é simples isolamento administrativo comum? Não."
+      ],
+      "expected": {
+        "unit_id": "d8c588d9-d2f4-5590-9a5e-88d3d03f2106",
+        "content_sha256": "8b9e638753e4954b08c1e9d74c2787c3dc0b233a099a697726df0a590b2ab1e4",
+        "simples": "Constituem sanções disciplinares a advertência verbal; a repreensão; a suspensão ou restrição de direitos; o isolamento na própria cela ou em local adequado, nos estabelecimentos com alojamento coletivo; e a inclusão no regime disciplinar diferenciado.",
+        "pontos": [
+          "Advertência verbal.",
+          "Repreensão.",
+          "Suspensão ou restrição de direitos.",
+          "Isolamento.",
+          "Regime disciplinar diferenciado."
+        ],
+        "atencao": [
+          "Cinco sanções disciplinares."
+        ],
+        "exemplo": "O preso recebe advertência verbal por falta leve.",
+        "prova": [
+          "Assertiva que inclui a cela escura entre as sanções erra: é vedada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-55",
+      "unit_id": "a4f1847b-bf01-5a5a-8b3d-d348dfbc5067",
+      "content_sha256": "416dfb81cb298e56fbc91afb7f8cfbb168b7c083534c27b5f2267ea2f152a743",
+      "simples": "As recompensas têm em vista o bom comportamento reconhecido em favor do condenado, de sua colaboração com a disciplina e de sua dedicação ao trabalho.",
+      "pontos": [
+        "Recompensas por bom comportamento, colaboração e trabalho."
+      ],
+      "atencao": [
+        "Reconhecem o mérito do condenado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 56"
+      ],
+      "exemplo": "Bom comportamento e dedicação ao trabalho fundamentam recompensa. Variação: Recompensa não se confunde com direito fundamental que independe de favor.",
+      "prova": [
+        "Colaboração com disciplina importa? Sim.",
+        "Saúde básica pode ser retirada por falta de recompensa? Não."
+      ],
+      "expected": {
+        "unit_id": "a4f1847b-bf01-5a5a-8b3d-d348dfbc5067",
+        "content_sha256": "416dfb81cb298e56fbc91afb7f8cfbb168b7c083534c27b5f2267ea2f152a743",
+        "simples": "As recompensas têm em vista o bom comportamento reconhecido em favor do condenado, de sua colaboração com a disciplina e de sua dedicação ao trabalho.",
+        "pontos": [
+          "Recompensas por bom comportamento, colaboração e trabalho."
+        ],
+        "atencao": [
+          "Reconhecem o mérito do condenado."
+        ],
+        "exemplo": "O preso que trabalha com dedicação recebe elogio.",
+        "prova": [
+          "Assertiva que prevê recompensa apenas para quem tem bom comportamento sem considerar o trabalho erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-56",
+      "unit_id": "8e8da192-c67d-5fa7-9128-a9845ffa38bd",
+      "content_sha256": "575d11494fe980d07d757e893fcc4ac844ded5cb6be0f2c635fc5130a3192830",
+      "simples": "São recompensas o elogio e a concessão de regalias. A legislação local e os regulamentos estabelecerão a natureza e a forma de concessão de regalias.",
+      "pontos": [
+        "Elogio.",
+        "Concessão de regalias."
+      ],
+      "atencao": [
+        "Regalias definidas pela legislação local."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 55"
+      ],
+      "exemplo": "Elogio ou regalia é concedido sob regras locais aplicáveis. Variação: Não confundir regalia com direito que a Administração não pode suprimir arbitrariamente.",
+      "prova": [
+        "Regulamento/local definem forma da regalia? Sim.",
+        "Qualquer prêmio elimina requisito legal de benefício judicial? Não."
+      ],
+      "expected": {
+        "unit_id": "8e8da192-c67d-5fa7-9128-a9845ffa38bd",
+        "content_sha256": "575d11494fe980d07d757e893fcc4ac844ded5cb6be0f2c635fc5130a3192830",
+        "simples": "São recompensas o elogio e a concessão de regalias. A legislação local e os regulamentos estabelecerão a natureza e a forma de concessão de regalias.",
+        "pontos": [
+          "Elogio.",
+          "Concessão de regalias."
+        ],
+        "atencao": [
+          "Regalias definidas pela legislação local."
+        ],
+        "exemplo": "O preso recebe elogio por seu bom comportamento.",
+        "prova": [
+          "Assertiva que prevê a redução automática da pena como recompensa do art. 56 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-57",
+      "unit_id": "75971be2-b9d1-55c0-bb8e-8206835e56df",
+      "content_sha256": "2482d9c13ef6c068eb4026027260a59fa74e9b59bf4ea7c0c9e56cab67ee55fc",
+      "simples": "Na aplicação das sanções disciplinares, levar-se-ão em conta a natureza, os motivos, as circunstâncias e as consequências do fato, bem como a pessoa do faltoso e seu tempo de prisão. Nas faltas graves, aplicam-se as sanções dos incisos III a V do art. 53.",
+      "pontos": [
+        "Critérios de aplicação das sanções.",
+        "Faltas graves: suspensão, isolamento ou RDD."
+      ],
+      "atencao": [
+        "Faltas graves levam às sanções dos incisos III a V.",
+        "RDD tem pressupostos/competência próprios; gravidade não autoriza incluí-lo por automatismo ou somar indistintamente todas as sanções."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 53"
+      ],
+      "exemplo": "Sanção é individualizada considerando circunstâncias e consequências da falta. Variação: Falta grave não impõe automaticamente RDD sem seus requisitos próprios.",
+      "prova": [
+        "Tempo de prisão é critério previsto? Sim.",
+        "Gravidade dispensa motivação? Não."
+      ],
+      "expected": {
+        "unit_id": "75971be2-b9d1-55c0-bb8e-8206835e56df",
+        "content_sha256": "2482d9c13ef6c068eb4026027260a59fa74e9b59bf4ea7c0c9e56cab67ee55fc",
+        "simples": "Na aplicação das sanções disciplinares, levar-se-ão em conta a natureza, os motivos, as circunstâncias e as consequências do fato, bem como a pessoa do faltoso e seu tempo de prisão. Nas faltas graves, aplicam-se as sanções dos incisos III a V do art. 53.",
+        "pontos": [
+          "Critérios de aplicação das sanções.",
+          "Faltas graves: suspensão, isolamento ou RDD."
+        ],
+        "atencao": [
+          "Faltas graves levam às sanções dos incisos III a V."
+        ],
+        "exemplo": "A sanção considera o motivo, as circunstâncias e o tempo de prisão do faltoso.",
+        "prova": [
+          "Assertiva que permite a advertência verbal como sanção da falta grave erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 53"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-58",
+      "unit_id": "dc764966-f237-5e35-a6f7-05e352b7f526",
+      "content_sha256": "f148e83a8445d2f445a588cf01f5a3ab13952cb30d77b9a5768c6775f21c858e",
+      "simples": "O isolamento, a suspensão e a restrição de direitos não poderão exceder a trinta dias, ressalvada a hipótese do regime disciplinar diferenciado. O isolamento será sempre comunicado ao juiz da execução.",
+      "pontos": [
+        "Limite de trinta dias.",
+        "Exceção: RDD.",
+        "Comunicação do isolamento ao juiz."
+      ],
+      "atencao": [
+        "Limite de TRINTA dias, exceto no RDD."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 52"
+      ],
+      "exemplo": "Isolamento disciplinar ordinário respeita limite de trinta dias e comunicação judicial. Variação: RDD tem ressalva legal própria,não o mesmo limite universal.",
+      "prova": [
+        "Isolamento deve sempre ser comunicado ao juiz? Sim.",
+        "Toda suspensão pode durar indefinidamente? Não."
+      ],
+      "expected": {
+        "unit_id": "dc764966-f237-5e35-a6f7-05e352b7f526",
+        "content_sha256": "f148e83a8445d2f445a588cf01f5a3ab13952cb30d77b9a5768c6775f21c858e",
+        "simples": "O isolamento, a suspensão e a restrição de direitos não poderão exceder a trinta dias, ressalvada a hipótese do regime disciplinar diferenciado. O isolamento será sempre comunicado ao juiz da execução.",
+        "pontos": [
+          "Limite de trinta dias.",
+          "Exceção: RDD.",
+          "Comunicação do isolamento ao juiz."
+        ],
+        "atencao": [
+          "Limite de TRINTA dias, exceto no RDD."
+        ],
+        "exemplo": "O isolamento por falta disciplinar não passa de trinta dias.",
+        "prova": [
+          "Assertiva que fixa em sessenta dias o limite do isolamento erra: são trinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-59",
+      "unit_id": "8b1b3940-1a9f-5402-8966-d597efb12eed",
+      "content_sha256": "74247e514e6147b3d4d42082db92d4dcdd4c9cea615ac7da92ddcde10b527fd1",
+      "simples": "Apuração de falta exige defesa e decisão motivada. Integrar Súmula 533/STJ com RE 972598/STF: oitiva judicial com defensor e MP no recorte reconhecido afasta PAD prévio e supre deficiência de defesa técnica administrativa; não elimina garantias.",
+      "pontos": [
+        "Defesa técnica,contraditório e motivação permanecem.",
+        "PAD é regra administrativa,mas não exigência universal apesar de audiência judicial adequada segundo STF.",
+        "Tema 758/STF dispensa trânsito criminal para falta por crime doloso,sob devido processo."
+      ],
+      "atencao": [
+        "Não exigir PAD em toda situação nem dispensar defesa. A notícia oficial STF de 7/12/2020 identifica os julgados; não certificada toda hipótese ou decisão posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://noticias.stf.jus.br/postsnoticias/reconhecimento-de-falta-grave-por-crime-doloso-durante-a-execucao-dispensa-transito-em-julgado/"
+      ],
+      "exemplo": "Condenado é ouvido em audiência judicial com defensor e MP para apurar falta. Variação: RE 972598 admite dispensa do PAD prévio nesse recorte; não dispensa defesa nem apuração.",
+      "prova": [
+        "PAD é universalmente indispensável mesmo com audiência adequada? Não.",
+        "Dispensar PAD permite sanção sem contraditório? Não."
+      ],
+      "expected": {
+        "unit_id": "8b1b3940-1a9f-5402-8966-d597efb12eed",
+        "content_sha256": "74247e514e6147b3d4d42082db92d4dcdd4c9cea615ac7da92ddcde10b527fd1",
+        "simples": "Praticada a falta disciplinar, deverá ser instaurado o procedimento para sua apuração, conforme regulamento, assegurado o direito de defesa. A decisão será motivada.",
+        "pontos": [
+          "Procedimento de apuração.",
+          "Direito de defesa.",
+          "Decisão motivada."
+        ],
+        "atencao": [
+          "Defesa e motivação são obrigatórias."
+        ],
+        "exemplo": "O preso se defende antes de ser punido.",
+        "prova": [
+          "Assertiva que dispensa a defesa na apuração da falta disciplinar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-60",
+      "unit_id": "7c312e59-e35e-59f9-89b5-20dca6e6248d",
+      "content_sha256": "f221919b17a1bf936053c83fae3e5adde5c97833968239b1fe246c8f158e849d",
+      "simples": "A autoridade administrativa poderá decretar o isolamento preventivo do faltoso pelo prazo de até dez dias. A inclusão do preso no regime disciplinar diferenciado, no interesse da disciplina e da averiguação do fato, dependerá de despacho do juiz competente. O tempo de isolamento ou inclusão preventiva no RDD será computado no período de cumprimento da sanção disciplinar.",
+      "pontos": [
+        "Isolamento preventivo de até dez dias.",
+        "RDD preventivo depende do juiz.",
+        "Detração do tempo de isolamento preventivo."
+      ],
+      "atencao": [
+        "Isolamento preventivo: até DEZ dias.",
+        "Prazo de dez dias do isolamento preventivo não é o prazo da decisão final RDD do 54 nem elimina controle/garantias judiciais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 58"
+      ],
+      "exemplo": "Administração determina isolamento preventivo de até dez dias nos pressupostos legais. Variação: Inclusão preventiva em RDD depende de juiz; tempo preventivo conta na sanção.",
+      "prova": [
+        "Dez dias é o limite deste isolamento preventivo? Sim.",
+        "É possível desprezar tempo preventivo ao contar a sanção? Não."
+      ],
+      "expected": {
+        "unit_id": "7c312e59-e35e-59f9-89b5-20dca6e6248d",
+        "content_sha256": "f221919b17a1bf936053c83fae3e5adde5c97833968239b1fe246c8f158e849d",
+        "simples": "A autoridade administrativa poderá decretar o isolamento preventivo do faltoso pelo prazo de até dez dias. A inclusão do preso no regime disciplinar diferenciado, no interesse da disciplina e da averiguação do fato, dependerá de despacho do juiz competente. O tempo de isolamento ou inclusão preventiva no RDD será computado no período de cumprimento da sanção disciplinar.",
+        "pontos": [
+          "Isolamento preventivo de até dez dias.",
+          "RDD preventivo depende do juiz.",
+          "Detração do tempo de isolamento preventivo."
+        ],
+        "atencao": [
+          "Isolamento preventivo: até DEZ dias."
+        ],
+        "exemplo": "O diretor isola preventivamente o preso por até dez dias.",
+        "prova": [
+          "Assertiva que fixa em trinta dias o isolamento preventivo erra: são dez."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 58"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-61",
+      "unit_id": "999b1c0c-98bf-50b3-afcd-c64f1d08a010",
+      "content_sha256": "beb16eeaf03a746e72fb65e1cc05ef66826cfd43e1c767dc47671b23ecb616b2",
+      "simples": "São órgãos da execução penal o Conselho Nacional de Política Criminal e Penitenciária; o Juízo da Execução; o Ministério Público; o Conselho Penitenciário; os Departamentos Penitenciários; o Patronato; o Conselho da Comunidade; e a Defensoria Pública.",
+      "pontos": [
+        "Oito órgãos da execução penal."
+      ],
+      "atencao": [
+        "A Defensoria Pública é órgão da execução (inciso VIII)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 81-A"
+      ],
+      "exemplo": "Defensoria atua como órgão da execução,além do juiz e MP. Variação: Conselho Nacional,Conselho Penitenciário e Comunidade são órgãos distintos.",
+      "prova": [
+        "Defensoria integra o rol? Sim.",
+        "Os três conselhos são a mesma instituição? Não."
+      ],
+      "expected": {
+        "unit_id": "999b1c0c-98bf-50b3-afcd-c64f1d08a010",
+        "content_sha256": "beb16eeaf03a746e72fb65e1cc05ef66826cfd43e1c767dc47671b23ecb616b2",
+        "simples": "São órgãos da execução penal o Conselho Nacional de Política Criminal e Penitenciária; o Juízo da Execução; o Ministério Público; o Conselho Penitenciário; os Departamentos Penitenciários; o Patronato; o Conselho da Comunidade; e a Defensoria Pública.",
+        "pontos": [
+          "Oito órgãos da execução penal."
+        ],
+        "atencao": [
+          "A Defensoria Pública é órgão da execução (inciso VIII)."
+        ],
+        "exemplo": "A Defensoria Pública atua como órgão da execução penal.",
+        "prova": [
+          "Assertiva que exclui a Defensoria Pública dos órgãos da execução erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-62",
+      "unit_id": "f5a09e11-ada1-556f-a48c-4c5451fcfc51",
+      "content_sha256": "aa0052af1473884e08326d0460ab2ffffd938ddcb758e7ca15de66c48cb6bfe6",
+      "simples": "O Conselho Nacional de Política Criminal e Penitenciária, com sede na Capital da República, é subordinado ao Ministério da Justiça.",
+      "pontos": [
+        "Sede na Capital da República.",
+        "Subordinado ao Ministério da Justiça."
+      ],
+      "atencao": [
+        "Subordinado ao Ministério da Justiça."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 63"
+      ],
+      "exemplo": "CNPCP tem sede na Capital da República e vínculo ministerial textual. Variação: Conselho estadual não se torna CNPCP pela atuação na mesma área.",
+      "prova": [
+        "Sede nacional é prevista? Sim.",
+        "Este artigo fixa sede obrigatória de todo conselho local? Não."
+      ],
+      "expected": {
+        "unit_id": "f5a09e11-ada1-556f-a48c-4c5451fcfc51",
+        "content_sha256": "aa0052af1473884e08326d0460ab2ffffd938ddcb758e7ca15de66c48cb6bfe6",
+        "simples": "O Conselho Nacional de Política Criminal e Penitenciária, com sede na Capital da República, é subordinado ao Ministério da Justiça.",
+        "pontos": [
+          "Sede na Capital da República.",
+          "Subordinado ao Ministério da Justiça."
+        ],
+        "atencao": [
+          "Subordinado ao Ministério da Justiça."
+        ],
+        "exemplo": "O Conselho Nacional funciona em Brasília, ligado ao Ministério da Justiça.",
+        "prova": [
+          "Assertiva que subordina o Conselho ao Poder Judiciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-63",
+      "unit_id": "bb32512d-b011-5d0c-bbea-af72d7dbd434",
+      "content_sha256": "d5886fcc648ac97ac63dd91b4ac096695c8892ed13f0b7eba4d80c645aea96b9",
+      "simples": "O Conselho Nacional de Política Criminal e Penitenciária será integrado por 13 membros designados por ato do Ministério da Justiça, dentre professores e profissionais da área do Direito Penal, Processual Penal, Penitenciário e ciências correlatas, bem como por representantes da comunidade e dos Ministérios da área social. O mandato dos membros tem duração de 2 anos, renovado 1/3 em cada ano.",
+      "pontos": [
+        "13 membros.",
+        "Mandato de 2 anos.",
+        "Renovação de 1/3 por ano."
+      ],
+      "atencao": [
+        "13 membros; mandato de 2 anos; renovação de 1/3 ao ano."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 64"
+      ],
+      "exemplo": "Membro do CNPCP tem mandato textual de dois anos. Variação: Conselho Penitenciário do 69 tem quatro anos; não copiar os prazos.",
+      "prova": [
+        "Composição textual é 13 membros? Sim.",
+        "Renovação anual é total? Não;texto indica um terço."
+      ],
+      "expected": {
+        "unit_id": "bb32512d-b011-5d0c-bbea-af72d7dbd434",
+        "content_sha256": "d5886fcc648ac97ac63dd91b4ac096695c8892ed13f0b7eba4d80c645aea96b9",
+        "simples": "O Conselho Nacional de Política Criminal e Penitenciária será integrado por 13 membros designados por ato do Ministério da Justiça, dentre professores e profissionais da área do Direito Penal, Processual Penal, Penitenciário e ciências correlatas, bem como por representantes da comunidade e dos Ministérios da área social. O mandato dos membros tem duração de 2 anos, renovado 1/3 em cada ano.",
+        "pontos": [
+          "13 membros.",
+          "Mandato de 2 anos.",
+          "Renovação de 1/3 por ano."
+        ],
+        "atencao": [
+          "13 membros; mandato de 2 anos; renovação de 1/3 ao ano."
+        ],
+        "exemplo": "A cada ano, um terço dos membros do Conselho Nacional é renovado.",
+        "prova": [
+          "Assertiva que fixa em 4 anos o mandato dos membros do Conselho Nacional erra: são 2 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-64",
+      "unit_id": "65636a05-afae-532a-a519-fe007c2ab6d8",
+      "content_sha256": "fe44386252f721e58b135c93938ed4e1ab54dbf14fae337c9a9f7379d6a02c1c",
+      "simples": "Ao Conselho Nacional de Política Criminal e Penitenciária incumbe propor diretrizes da política criminal; contribuir na elaboração de planos nacionais de desenvolvimento; promover a avaliação periódica do sistema criminal; estimular a pesquisa criminológica; elaborar programa nacional de formação do servidor; estabelecer regras sobre a arquitetura de estabelecimentos penais; estabelecer critérios para a estatística criminal; inspecionar e fiscalizar os estabelecimentos penais; representar ao juiz ou à autoridade administrativa para instauração de sindicância; e representar à autoridade competente para a interdição de estabelecimento penal.",
+      "pontos": [
+        "Diretrizes de política criminal.",
+        "Pesquisa criminológica e estatística criminal.",
+        "Inspeção e fiscalização dos estabelecimentos.",
+        "Representar pela interdição de estabelecimento."
+      ],
+      "atencao": [
+        "O Conselho Nacional REPRESENTA pela interdição; quem interdita é o juiz."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 66, VIII"
+      ],
+      "exemplo": "CNPCP representa por interdição e propõe diretrizes. Variação: Representação não é ordem judicial de interdição nem julgamento de progressão.",
+      "prova": [
+        "Pesquisa criminológica está entre atribuições? Sim.",
+        "Pode substituir automaticamente o juiz na interdição? Não."
+      ],
+      "expected": {
+        "unit_id": "65636a05-afae-532a-a519-fe007c2ab6d8",
+        "content_sha256": "fe44386252f721e58b135c93938ed4e1ab54dbf14fae337c9a9f7379d6a02c1c",
+        "simples": "Ao Conselho Nacional de Política Criminal e Penitenciária incumbe propor diretrizes da política criminal; contribuir na elaboração de planos nacionais de desenvolvimento; promover a avaliação periódica do sistema criminal; estimular a pesquisa criminológica; elaborar programa nacional de formação do servidor; estabelecer regras sobre a arquitetura de estabelecimentos penais; estabelecer critérios para a estatística criminal; inspecionar e fiscalizar os estabelecimentos penais; representar ao juiz ou à autoridade administrativa para instauração de sindicância; e representar à autoridade competente para a interdição de estabelecimento penal.",
+        "pontos": [
+          "Diretrizes de política criminal.",
+          "Pesquisa criminológica e estatística criminal.",
+          "Inspeção e fiscalização dos estabelecimentos.",
+          "Representar pela interdição de estabelecimento."
+        ],
+        "atencao": [
+          "O Conselho Nacional REPRESENTA pela interdição; quem interdita é o juiz."
+        ],
+        "exemplo": "O Conselho Nacional representa ao juiz para a interdição de um presídio inadequado.",
+        "prova": [
+          "Assertiva que permite ao Conselho Nacional interditar diretamente o estabelecimento erra: ele representa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66, VIII"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-65",
+      "unit_id": "dfc9d62e-478c-54d7-b04e-c5eb571bd79c",
+      "content_sha256": "081fcbd7c39200dc24e830bfbd9150c5971116683aed979165d276d0ec5454c3",
+      "simples": "A execução penal competirá ao Juiz indicado na lei local de organização judiciária e, na sua ausência, ao da sentença.",
+      "pontos": [
+        "Juiz indicado na lei local.",
+        "Na falta, o juiz da sentença."
+      ],
+      "atencao": [
+        "Subsidiariedade: o juiz da sentença."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 66"
+      ],
+      "exemplo": "Lei local identifica juiz competente para execução. Variação: Na falta da indicação,há regra subsidiária do juiz da sentença; regras especiais de competência continuam a exigir exame.",
+      "prova": [
+        "Regra subsidiária é incondicional em toda execução? Não.",
+        "A organização judiciária local é referência expressa? Sim."
+      ],
+      "expected": {
+        "unit_id": "dfc9d62e-478c-54d7-b04e-c5eb571bd79c",
+        "content_sha256": "081fcbd7c39200dc24e830bfbd9150c5971116683aed979165d276d0ec5454c3",
+        "simples": "A execução penal competirá ao Juiz indicado na lei local de organização judiciária e, na sua ausência, ao da sentença.",
+        "pontos": [
+          "Juiz indicado na lei local.",
+          "Na falta, o juiz da sentença."
+        ],
+        "atencao": [
+          "Subsidiariedade: o juiz da sentença."
+        ],
+        "exemplo": "Na comarca sem vara de execuções, o juiz da sentença conduz a execução.",
+        "prova": [
+          "Assertiva que atribui sempre a execução ao juiz da sentença erra: primeiro é o juiz indicado na lei local."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-66",
+      "unit_id": "c7df1f7e-c5df-51df-b5dd-24567c5967f1",
+      "content_sha256": "0a001da3aef479eef61e1650a35c500691550f3a6a3a564c073cf4ff4e293ee7",
+      "simples": "Compete ao Juiz da execução aplicar aos casos julgados lei posterior que favoreça o condenado; declarar extinta a punibilidade; decidir sobre soma ou unificação de penas, progressão ou regressão de regimes, detração e remição, suspensão condicional da pena, livramento condicional e incidentes da execução; autorizar saídas temporárias; determinar a forma de cumprimento da pena restritiva de direitos, as conversões de penas, a medida de segurança, a desinternação, o cumprimento em outra comarca e a remoção do condenado; decidir sobre a monitoração eletrônica; zelar pelo correto cumprimento da pena; inspecionar mensalmente os estabelecimentos penais; interditar, no todo ou em parte, estabelecimento em condições inadequadas; compor e instalar o Conselho da Comunidade; e emitir anualmente atestado de pena a cumprir.",
+      "pontos": [
+        "Aplicar lei posterior favorável; decidir benefícios/incidentes e extinção nos pressupostos legais.",
+        "Inspeção mensal e atestado anual têm periodicidades distintas.",
+        "Alínea Vb tem referência residual à multa: integrar CP 51,sem prisão automática por inadimplemento."
+      ],
+      "atencao": [
+        "Não ensinar conversão de multa em prisão como regra atual por dívida. Competências não dispensam requisitos vigentes de saídas,benefícios ou monitoração."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 65"
+      ],
+      "exemplo": "Juiz decide remição e aplica lei posterior favorável ao caso julgado. Variação: Remissão antiga à conversão de multa não permite prisão só por inadimplemento; integrar CP 51 atual.",
+      "prova": [
+        "Inspeção é mensal? Sim.",
+        "Multa inadimplida vira automaticamente prisão? Não."
+      ],
+      "expected": {
+        "unit_id": "c7df1f7e-c5df-51df-b5dd-24567c5967f1",
+        "content_sha256": "0a001da3aef479eef61e1650a35c500691550f3a6a3a564c073cf4ff4e293ee7",
+        "simples": "Compete ao Juiz da execução aplicar aos casos julgados lei posterior que favoreça o condenado; declarar extinta a punibilidade; decidir sobre soma ou unificação de penas, progressão ou regressão de regimes, detração e remição, suspensão condicional da pena, livramento condicional e incidentes da execução; autorizar saídas temporárias; determinar a forma de cumprimento da pena restritiva de direitos, as conversões de penas, a medida de segurança, a desinternação, o cumprimento em outra comarca e a remoção do condenado; decidir sobre a monitoração eletrônica; zelar pelo correto cumprimento da pena; inspecionar mensalmente os estabelecimentos penais; interditar, no todo ou em parte, estabelecimento em condições inadequadas; compor e instalar o Conselho da Comunidade; e emitir anualmente atestado de pena a cumprir.",
+        "pontos": [
+          "Lei posterior mais benéfica.",
+          "Extinção da punibilidade.",
+          "Progressão, regressão, detração, remição, livramento condicional.",
+          "Saídas temporárias.",
+          "Inspeção mensal e interdição de estabelecimentos.",
+          "Atestado de pena a cumprir anual."
+        ],
+        "atencao": [
+          "O juiz inspeciona MENSALMENTE os estabelecimentos.",
+          "ATUALIZAÇÃO: o inciso X (atestado de pena a cumprir) foi incluído por lei posterior."
+        ],
+        "exemplo": "O juiz da execução decide a progressão de regime e autoriza a saída temporária.",
+        "prova": [
+          "Assertiva que atribui ao diretor a decisão sobre progressão de regime erra: é do juiz da execução."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-67",
+      "unit_id": "c4ce0726-e67b-5550-aa52-453786065179",
+      "content_sha256": "5019a581a37ae802a0ae3f9d4394ae8dbcf234c0b6e417b2720ecbf0f4b29a0a",
+      "simples": "O Ministério Público fiscalizará a execução da pena e da medida de segurança, oficiando no processo executivo e nos incidentes da execução.",
+      "pontos": [
+        "Fiscalização da execução.",
+        "Atuação no processo executivo e nos incidentes."
+      ],
+      "atencao": [
+        "Atua como fiscal da execução."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 68"
+      ],
+      "exemplo": "MP fiscaliza execução e atua no incidente. Variação: Fiscalizar não transforma todo requerimento em decisão judicial.",
+      "prova": [
+        "Medida de segurança também está incluída? Sim.",
+        "O MP substitui juiz nas decisões de progressão? Não."
+      ],
+      "expected": {
+        "unit_id": "c4ce0726-e67b-5550-aa52-453786065179",
+        "content_sha256": "5019a581a37ae802a0ae3f9d4394ae8dbcf234c0b6e417b2720ecbf0f4b29a0a",
+        "simples": "O Ministério Público fiscalizará a execução da pena e da medida de segurança, oficiando no processo executivo e nos incidentes da execução.",
+        "pontos": [
+          "Fiscalização da execução.",
+          "Atuação no processo executivo e nos incidentes."
+        ],
+        "atencao": [
+          "Atua como fiscal da execução."
+        ],
+        "exemplo": "O Promotor acompanha os incidentes da execução.",
+        "prova": [
+          "Assertiva que exclui o Ministério Público da execução penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 68"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-68",
+      "unit_id": "e21bbcf0-473f-5741-a3f9-c224baa3da66",
+      "content_sha256": "417e40bda33dbbc6f871e4aa40dd6035af5227d4166433a17be5885f05405c59",
+      "simples": "Incumbe ainda ao Ministério Público fiscalizar a regularidade formal das guias de recolhimento e de internamento; requerer providências para o desenvolvimento do processo executivo, a instauração dos incidentes de excesso ou desvio de execução, a aplicação, a substituição e a revogação de medida de segurança, a conversão de penas, a progressão ou regressão e a revogação da suspensão condicional e do livramento condicional, e a internação e a desinternação; e interpor recursos de decisões proferidas durante a execução. O órgão visitará mensalmente os estabelecimentos penais, registrando sua presença em livro próprio.",
+      "pontos": [
+        "Fiscalizar as guias.",
+        "Requerer incidentes e conversões.",
+        "Interpor recursos.",
+        "Visita mensal aos estabelecimentos."
+      ],
+      "atencao": [
+        "Visita MENSAL do MP aos estabelecimentos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 67"
+      ],
+      "exemplo": "MP visita unidade mensalmente e requer incidente de desvio. Variação: Periodicidade não deve ser copiada para toda atuação de outros órgãos.",
+      "prova": [
+        "Presença é registrada em livro próprio? Sim.",
+        "MP decide sozinho a conversão ao requerê-la? Não."
+      ],
+      "expected": {
+        "unit_id": "e21bbcf0-473f-5741-a3f9-c224baa3da66",
+        "content_sha256": "417e40bda33dbbc6f871e4aa40dd6035af5227d4166433a17be5885f05405c59",
+        "simples": "Incumbe ainda ao Ministério Público fiscalizar a regularidade formal das guias de recolhimento e de internamento; requerer providências para o desenvolvimento do processo executivo, a instauração dos incidentes de excesso ou desvio de execução, a aplicação, a substituição e a revogação de medida de segurança, a conversão de penas, a progressão ou regressão e a revogação da suspensão condicional e do livramento condicional, e a internação e a desinternação; e interpor recursos de decisões proferidas durante a execução. O órgão visitará mensalmente os estabelecimentos penais, registrando sua presença em livro próprio.",
+        "pontos": [
+          "Fiscalizar as guias.",
+          "Requerer incidentes e conversões.",
+          "Interpor recursos.",
+          "Visita mensal aos estabelecimentos."
+        ],
+        "atencao": [
+          "Visita MENSAL do MP aos estabelecimentos."
+        ],
+        "exemplo": "O Promotor visita mensalmente o presídio e registra a presença no livro.",
+        "prova": [
+          "Assertiva que dispensa a visita mensal do Ministério Público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-69",
+      "unit_id": "965fa22a-1a55-563d-be4f-a1f65e393966",
+      "content_sha256": "bf79ee86afd3bc79c6e0e2ef7c9afa3f4d9771aacb2aa3eb99b02b3096d30fd6",
+      "simples": "O Conselho Penitenciário é órgão consultivo e fiscalizador da execução da pena. É integrado por membros nomeados pelo Governador do Estado, do Distrito Federal e dos Territórios, dentre professores e profissionais da área do Direito Penal, Processual Penal, Penitenciário e ciências correlatas, bem como por representantes da comunidade. O mandato dos membros tem a duração de 4 anos.",
+      "pontos": [
+        "Órgão consultivo e fiscalizador.",
+        "Membros nomeados pelo Governador.",
+        "Mandato de 4 anos."
+      ],
+      "atencao": [
+        "Mandato de 4 anos (o do Conselho Nacional é de 2)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 70"
+      ],
+      "exemplo": "Conselho Penitenciário fiscaliza e emite parecer,com membros nomeados pelo governador. Variação: Não confundir mandato de quatro anos com dois anos do CNPCP.",
+      "prova": [
+        "É órgão consultivo? Sim.",
+        "É o próprio juiz da execução? Não."
+      ],
+      "expected": {
+        "unit_id": "965fa22a-1a55-563d-be4f-a1f65e393966",
+        "content_sha256": "bf79ee86afd3bc79c6e0e2ef7c9afa3f4d9771aacb2aa3eb99b02b3096d30fd6",
+        "simples": "O Conselho Penitenciário é órgão consultivo e fiscalizador da execução da pena. É integrado por membros nomeados pelo Governador do Estado, do Distrito Federal e dos Territórios, dentre professores e profissionais da área do Direito Penal, Processual Penal, Penitenciário e ciências correlatas, bem como por representantes da comunidade. O mandato dos membros tem a duração de 4 anos.",
+        "pontos": [
+          "Órgão consultivo e fiscalizador.",
+          "Membros nomeados pelo Governador.",
+          "Mandato de 4 anos."
+        ],
+        "atencao": [
+          "Mandato de 4 anos (o do Conselho Nacional é de 2)."
+        ],
+        "exemplo": "O Governador nomeia os membros do Conselho Penitenciário estadual.",
+        "prova": [
+          "Assertiva que fixa em 2 anos o mandato do Conselho Penitenciário erra: são 4 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-70",
+      "unit_id": "cbd46230-e416-58c0-97d8-b9622be453de",
+      "content_sha256": "510184411f5f3adb6babd754bf838be82f5f8c610d4b2389dcdb14b0f45ba211",
+      "simples": "Incumbe ao Conselho Penitenciário emitir parecer sobre indulto e comutação de pena, excetuada a hipótese de pedido de indulto com base no estado de saúde do preso; inspecionar os estabelecimentos e serviços penais; apresentar, no 1º trimestre de cada ano, ao Conselho Nacional de Política Criminal e Penitenciária relatório dos trabalhos do exercício anterior; e supervisionar os patronatos e a assistência aos egressos.",
+      "pontos": [
+        "Parecer sobre indulto e comutação, salvo indulto por saúde.",
+        "Inspeção de estabelecimentos.",
+        "Relatório anual no 1º trimestre.",
+        "Supervisão dos patronatos."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o parecer sobre indulto por saúde é dispensado pela redação vigente.",
+        "Relatório no PRIMEIRO trimestre de cada ano."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 69"
+      ],
+      "exemplo": "Conselho apresenta relatório do exercício anterior no primeiro trimestre. Variação: Parecer do indulto tem ressalva expressa para pedido baseado na saúde; emissão não é concessão do indulto.",
+      "prova": [
+        "Supervisiona patronatos? Sim.",
+        "Emite o decreto presidencial de indulto? Não."
+      ],
+      "expected": {
+        "unit_id": "cbd46230-e416-58c0-97d8-b9622be453de",
+        "content_sha256": "510184411f5f3adb6babd754bf838be82f5f8c610d4b2389dcdb14b0f45ba211",
+        "simples": "Incumbe ao Conselho Penitenciário emitir parecer sobre indulto e comutação de pena, excetuada a hipótese de pedido de indulto com base no estado de saúde do preso; inspecionar os estabelecimentos e serviços penais; apresentar, no 1º trimestre de cada ano, ao Conselho Nacional de Política Criminal e Penitenciária relatório dos trabalhos do exercício anterior; e supervisionar os patronatos e a assistência aos egressos.",
+        "pontos": [
+          "Parecer sobre indulto e comutação, salvo indulto por saúde.",
+          "Inspeção de estabelecimentos.",
+          "Relatório anual no 1º trimestre.",
+          "Supervisão dos patronatos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o parecer sobre indulto por saúde é dispensado pela redação vigente.",
+          "Relatório no PRIMEIRO trimestre de cada ano."
+        ],
+        "exemplo": "O Conselho Penitenciário opina sobre o decreto de indulto.",
+        "prova": [
+          "Assertiva que exige parecer do Conselho Penitenciário também no indulto por estado de saúde erra: é a exceção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-71",
+      "unit_id": "f979e3c8-9984-5b93-aca1-7b66007660ba",
+      "content_sha256": "9b9cdb3074ba849c1d6852b3b56243a0b7697af910fdf9243cb2b6f0929bf245",
+      "simples": "No texto da LEP,DEPEN é órgão executivo penitenciário nacional com apoio ao CNPCP. A organização administrativa atual deve ser distinguida: portal oficial apresenta Senappen(Secretaria Nacional de Políticas Penais),sem reescrever o texto compilado como se o nome antigo bastasse à estrutura atual.",
+      "pontos": [
+        "Órgão executivo da política penitenciária.",
+        "Apoio ao Conselho Nacional."
+      ],
+      "atencao": [
+        "DEPEN: órgão EXECUTIVO.",
+        "LEP mantém designação DEPEN; portal oficial atual identifica Secretaria Nacional de Políticas Penais(Senappen). Distinguir texto legal histórico e estrutura administrativa atual; não certificadas todas as atribuições regulamentares posteriores."
+      ],
+      "termos": [
+        {
+          "termo": "DEPEN/Senappen",
+          "significado": "Designação constante do texto legal e identificação institucional atual,que não devem ser confundidas."
+        }
+      ],
+      "remissoes": [
+        "Art. 72",
+        "https://www.gov.br/senappen/pt-br/acesso-a-informacao/institucional"
+      ],
+      "exemplo": "Texto legal usa DEPEN para órgão executivo penitenciário nacional. Variação: Portal institucional atual identifica Senappen; nome histórico não descreve sozinho a estrutura administrativa atual.",
+      "prova": [
+        "Órgão nacional tem função executiva no texto? Sim.",
+        "Nome histórico dispensa conferir organização atual? Não."
+      ],
+      "expected": {
+        "unit_id": "f979e3c8-9984-5b93-aca1-7b66007660ba",
+        "content_sha256": "9b9cdb3074ba849c1d6852b3b56243a0b7697af910fdf9243cb2b6f0929bf245",
+        "simples": "O Departamento Penitenciário Nacional, subordinado ao Ministério da Justiça, é órgão executivo da Política Penitenciária Nacional e de apoio administrativo e financeiro do Conselho Nacional de Política Criminal e Penitenciária.",
+        "pontos": [
+          "Órgão executivo da política penitenciária.",
+          "Apoio ao Conselho Nacional."
+        ],
+        "atencao": [
+          "DEPEN: órgão EXECUTIVO."
+        ],
+        "exemplo": "O Depen executa a política penitenciária nacional.",
+        "prova": [
+          "Assertiva que atribui ao Depen a função consultiva erra: é executiva."
+        ],
+        "termos": [
+          {
+            "termo": "Depen",
+            "significado": "Departamento Penitenciário Nacional."
+          }
+        ],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-72",
+      "unit_id": "cbe58f14-79b5-5e66-9011-e49db20ac6a3",
+      "content_sha256": "49344a825f22fe2fc0278066792d08e1404d0a05b6f2c964e54b8b76adf7ef8c",
+      "simples": "São atribuições do Departamento Penitenciário Nacional acompanhar a aplicação das normas de execução penal em todo o território; inspecionar e fiscalizar os estabelecimentos; assistir tecnicamente as Unidades Federativas; colaborar, por convênios, na implantação de estabelecimentos; colaborar na formação de pessoal penitenciário; estabelecer o cadastro nacional de vagas para cumprimento de pena aplicada por outra unidade federativa, especialmente para presos em regime disciplinar; e acompanhar a execução da pena das mulheres beneficiadas pela progressão especial do art. 112, §3º, monitorando sua integração social e a reincidência. Também coordena e supervisiona os estabelecimentos penais e de internamento federais.",
+      "pontos": [
+        "Acompanhar a execução penal no país.",
+        "Inspeção e fiscalização.",
+        "Apoio técnico e convênios.",
+        "Cadastro nacional de vagas.",
+        "Acompanhamento da progressão especial das mulheres.",
+        "Supervisão dos estabelecimentos federais."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o inciso VII (progressão especial das mulheres) foi incluído por lei posterior.",
+        "LEP mantém designação DEPEN; portal oficial atual identifica Secretaria Nacional de Políticas Penais(Senappen). Distinguir texto legal histórico e estrutura administrativa atual; não certificadas todas as atribuições regulamentares posteriores."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 71",
+        "https://www.gov.br/senappen/pt-br/acesso-a-informacao/institucional"
+      ],
+      "exemplo": "Órgão nacional fiscaliza e acompanha execução/progressão especial das mulheres. Variação: Dados estatísticos não concedem automaticamente progressão nem eliminam regime fechado por si.",
+      "prova": [
+        "Coordenação de estabelecimentos federais está prevista? Sim.",
+        "Relatório de avaliação substitui requisitos judiciais da progressão? Não."
+      ],
+      "expected": {
+        "unit_id": "cbe58f14-79b5-5e66-9011-e49db20ac6a3",
+        "content_sha256": "49344a825f22fe2fc0278066792d08e1404d0a05b6f2c964e54b8b76adf7ef8c",
+        "simples": "São atribuições do Departamento Penitenciário Nacional acompanhar a aplicação das normas de execução penal em todo o território; inspecionar e fiscalizar os estabelecimentos; assistir tecnicamente as Unidades Federativas; colaborar, por convênios, na implantação de estabelecimentos; colaborar na formação de pessoal penitenciário; estabelecer o cadastro nacional de vagas para cumprimento de pena aplicada por outra unidade federativa, especialmente para presos em regime disciplinar; e acompanhar a execução da pena das mulheres beneficiadas pela progressão especial do art. 112, §3º, monitorando sua integração social e a reincidência. Também coordena e supervisiona os estabelecimentos penais e de internamento federais.",
+        "pontos": [
+          "Acompanhar a execução penal no país.",
+          "Inspeção e fiscalização.",
+          "Apoio técnico e convênios.",
+          "Cadastro nacional de vagas.",
+          "Acompanhamento da progressão especial das mulheres.",
+          "Supervisão dos estabelecimentos federais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso VII (progressão especial das mulheres) foi incluído por lei posterior."
+        ],
+        "exemplo": "O Depen mantém o cadastro nacional de vagas prisionais.",
+        "prova": [
+          "Assertiva que atribui ao Depen apenas a gestão dos presídios estaduais erra: coordena os federais e apoia os estaduais."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-73",
+      "unit_id": "6df9791e-38f6-5260-ad75-e207d500238a",
+      "content_sha256": "3ae10e683c9fb84769503f8733f3f339ce30597c9cb8ab47bb0d6e8412cc8114",
+      "simples": "A legislação local poderá criar Departamento Penitenciário ou órgão similar, com as atribuições que estabelecer.",
+      "pontos": [
+        "Departamento Penitenciário local por lei local."
+      ],
+      "atencao": [
+        "Faculdade da legislação local."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 74"
+      ],
+      "exemplo": "Lei local cria órgão penitenciário ou similar. Variação: Artigo não obriga todo estado a usar exatamente a sigla federal.",
+      "prova": [
+        "Legislação local tem faculdade de criação? Sim.",
+        "O artigo cria diretamente cada cargo local? Não."
+      ],
+      "expected": {
+        "unit_id": "6df9791e-38f6-5260-ad75-e207d500238a",
+        "content_sha256": "3ae10e683c9fb84769503f8733f3f339ce30597c9cb8ab47bb0d6e8412cc8114",
+        "simples": "A legislação local poderá criar Departamento Penitenciário ou órgão similar, com as atribuições que estabelecer.",
+        "pontos": [
+          "Departamento Penitenciário local por lei local."
+        ],
+        "atencao": [
+          "Faculdade da legislação local."
+        ],
+        "exemplo": "O Estado cria por lei seu Departamento Penitenciário.",
+        "prova": [
+          "Assertiva que obriga todos os Estados a criar o Departamento erra: é possibilidade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-74",
+      "unit_id": "1c87c817-2d55-512a-978a-60e20abe0042",
+      "content_sha256": "053dea22cac3ab65d42a4f35c84d54bc11a257705c2211042e22b63383332817",
+      "simples": "O Departamento Penitenciário local, ou órgão similar, tem por finalidade supervisionar e coordenar os estabelecimentos penais da Unidade da Federação a que pertencer. Os órgãos realizarão o acompanhamento da progressão especial das mulheres e encaminharão ao Depen os resultados.",
+      "pontos": [
+        "Supervisionar e coordenar os estabelecimentos do Estado.",
+        "Acompanhamento da progressão especial e envio ao Depen."
+      ],
+      "atencao": [
+        "Âmbito estadual.",
+        "LEP mantém designação DEPEN; portal oficial atual identifica Secretaria Nacional de Políticas Penais(Senappen). Distinguir texto legal histórico e estrutura administrativa atual; não certificadas todas as atribuições regulamentares posteriores."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 73",
+        "https://www.gov.br/senappen/pt-br/acesso-a-informacao/institucional"
+      ],
+      "exemplo": "Órgão local supervisiona unidades e encaminha resultados do acompanhamento pertinente. Variação: Competência local não significa coordenar sozinho todo sistema federal.",
+      "prova": [
+        "Há remissão ao acompanhamento das mulheres do 72? Sim.",
+        "A remissão dá benefício automático a toda mulher presa? Não."
+      ],
+      "expected": {
+        "unit_id": "1c87c817-2d55-512a-978a-60e20abe0042",
+        "content_sha256": "053dea22cac3ab65d42a4f35c84d54bc11a257705c2211042e22b63383332817",
+        "simples": "O Departamento Penitenciário local, ou órgão similar, tem por finalidade supervisionar e coordenar os estabelecimentos penais da Unidade da Federação a que pertencer. Os órgãos realizarão o acompanhamento da progressão especial das mulheres e encaminharão ao Depen os resultados.",
+        "pontos": [
+          "Supervisionar e coordenar os estabelecimentos do Estado.",
+          "Acompanhamento da progressão especial e envio ao Depen."
+        ],
+        "atencao": [
+          "Âmbito estadual."
+        ],
+        "exemplo": "O departamento estadual coordena as unidades do Estado.",
+        "prova": [
+          "Assertiva que atribui ao departamento local a coordenação dos presídios federais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 73"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-75",
+      "unit_id": "19ec2ec7-a836-53bc-9bf7-b0bb00177a4a",
+      "content_sha256": "07073d71c1d189051a987c69742ca9d6b41ba31570529186d37073026189acd1",
+      "simples": "O ocupante do cargo de diretor de estabelecimento deverá ser portador de diploma de nível superior de Direito, Psicologia, Ciências Sociais, Pedagogia ou Serviços Sociais; possuir experiência administrativa na área; e ter idoneidade moral e reconhecida aptidão. O diretor deverá residir no estabelecimento, ou nas proximidades, e dedicará tempo integral à sua função.",
+      "pontos": [
+        "Nível superior em Direito, Psicologia, Ciências Sociais, Pedagogia ou Serviços Sociais.",
+        "Experiência administrativa.",
+        "Idoneidade moral.",
+        "Residência no estabelecimento ou nas proximidades e tempo integral."
+      ],
+      "atencao": [
+        "Dedicação em TEMPO INTEGRAL."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 76"
+      ],
+      "exemplo": "Diretor atende formação prevista,experiência e aptidão,idoneidade e dedicação integral. Variação: Diploma sozinho não esgota requisitos; residência próxima é alternativa à residência na unidade.",
+      "prova": [
+        "Residir obrigatoriamente dentro da cela é requisito? Não.",
+        "Experiência administrativa é expressa? Sim."
+      ],
+      "expected": {
+        "unit_id": "19ec2ec7-a836-53bc-9bf7-b0bb00177a4a",
+        "content_sha256": "07073d71c1d189051a987c69742ca9d6b41ba31570529186d37073026189acd1",
+        "simples": "O ocupante do cargo de diretor de estabelecimento deverá ser portador de diploma de nível superior de Direito, Psicologia, Ciências Sociais, Pedagogia ou Serviços Sociais; possuir experiência administrativa na área; e ter idoneidade moral e reconhecida aptidão. O diretor deverá residir no estabelecimento, ou nas proximidades, e dedicará tempo integral à sua função.",
+        "pontos": [
+          "Nível superior em Direito, Psicologia, Ciências Sociais, Pedagogia ou Serviços Sociais.",
+          "Experiência administrativa.",
+          "Idoneidade moral.",
+          "Residência no estabelecimento ou nas proximidades e tempo integral."
+        ],
+        "atencao": [
+          "Dedicação em TEMPO INTEGRAL."
+        ],
+        "exemplo": "O diretor com diploma em Pedagogia e experiência administrativa pode assumir a unidade.",
+        "prova": [
+          "Assertiva que exige diploma apenas em Direito para o diretor erra: há outras formações."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-76",
+      "unit_id": "775cd11e-8fe7-5133-b42f-47c018823590",
+      "content_sha256": "9a0cecac92440dc214bbbf5018def454c3d94285507cd22f2d4d9d2ccd32752a",
+      "simples": "O Quadro do Pessoal Penitenciário será organizado em diferentes categorias funcionais, segundo as necessidades do serviço, com especificação de atribuições relativas às funções de direção, chefia e assessoramento do estabelecimento e às demais funções.",
+      "pontos": [
+        "Quadro de pessoal em categorias funcionais."
+      ],
+      "atencao": [
+        "Organização conforme as necessidades do serviço."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 77"
+      ],
+      "exemplo": "Categorias funcionais são organizadas com atribuições especificadas. Variação: Definir quadro não permite investidura arbitrária ou confusão entre direção e assessoramento.",
+      "prova": [
+        "Necessidades do serviço orientam organização? Sim.",
+        "Todo servidor tem as mesmas atribuições por este artigo? Não."
+      ],
+      "expected": {
+        "unit_id": "775cd11e-8fe7-5133-b42f-47c018823590",
+        "content_sha256": "9a0cecac92440dc214bbbf5018def454c3d94285507cd22f2d4d9d2ccd32752a",
+        "simples": "O Quadro do Pessoal Penitenciário será organizado em diferentes categorias funcionais, segundo as necessidades do serviço, com especificação de atribuições relativas às funções de direção, chefia e assessoramento do estabelecimento e às demais funções.",
+        "pontos": [
+          "Quadro de pessoal em categorias funcionais."
+        ],
+        "atencao": [
+          "Organização conforme as necessidades do serviço."
+        ],
+        "exemplo": "O quadro separa funções de direção, chefia e vigilância.",
+        "prova": [
+          "Assertiva que prevê categoria funcional única para o pessoal penitenciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-77",
+      "unit_id": "9fae9061-91f6-59c7-ba4f-02af35ba7624",
+      "content_sha256": "37332a62d3a5e2008ad47a760da33f977d49cfc91a3b82ec1a0fbf7a7cc5c4ce",
+      "simples": "A escolha do pessoal administrativo, especializado, de instrução técnica e de vigilância atenderá a vocação, preparação profissional e antecedentes pessoais do candidato. O ingresso, a progressão ou a ascensão funcional dependerão de cursos específicos de formação, procedendo-se à reciclagem periódica. No estabelecimento para mulheres somente se permitirá o trabalho de pessoal do sexo feminino, salvo quando se tratar de pessoal técnico especializado.",
+      "pontos": [
+        "Seleção conforme vocação e antecedentes.",
+        "Cursos de formação e reciclagem.",
+        "Estabelecimento feminino: pessoal feminino, salvo técnico especializado."
+      ],
+      "atencao": [
+        "Pessoal FEMININO nos presídios femininos, salvo técnico especializado.",
+        "Referência à ascensão funcional não autoriza provimento de cargo de carreira diversa sem concurso e regime constitucional aplicável. Formação/reciclagem e ingresso são questões distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 76"
+      ],
+      "exemplo": "Pessoal recebe formação específica e reciclagem periódica. Variação: Formação não autoriza ascender a outra carreira dispensando concurso; exceção técnica do§2º não é vedação universal de profissional masculino.",
+      "prova": [
+        "Há exceção para pessoal técnico especializado? Sim.",
+        "Curso sozinho autoriza qualquer provimento funcional? Não."
+      ],
+      "expected": {
+        "unit_id": "9fae9061-91f6-59c7-ba4f-02af35ba7624",
+        "content_sha256": "37332a62d3a5e2008ad47a760da33f977d49cfc91a3b82ec1a0fbf7a7cc5c4ce",
+        "simples": "A escolha do pessoal administrativo, especializado, de instrução técnica e de vigilância atenderá a vocação, preparação profissional e antecedentes pessoais do candidato. O ingresso, a progressão ou a ascensão funcional dependerão de cursos específicos de formação, procedendo-se à reciclagem periódica. No estabelecimento para mulheres somente se permitirá o trabalho de pessoal do sexo feminino, salvo quando se tratar de pessoal técnico especializado.",
+        "pontos": [
+          "Seleção conforme vocação e antecedentes.",
+          "Cursos de formação e reciclagem.",
+          "Estabelecimento feminino: pessoal feminino, salvo técnico especializado."
+        ],
+        "atencao": [
+          "Pessoal FEMININO nos presídios femininos, salvo técnico especializado."
+        ],
+        "exemplo": "A vigilância do presídio feminino é feita por agentes mulheres.",
+        "prova": [
+          "Assertiva que permite agentes de ambos os sexos na vigilância do presídio feminino erra, salvo o pessoal técnico especializado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-78",
+      "unit_id": "62e39f4f-8c91-5bcc-9066-0049b15bf97b",
+      "content_sha256": "63a255690748aee8715c7a02fdd5d39bda496afc25621b53ee18e5e405b74cf4",
+      "simples": "O Patronato público ou particular destina-se a prestar assistência aos albergados e aos egressos.",
+      "pontos": [
+        "Patronato presta assistência a albergados e egressos."
+      ],
+      "atencao": [
+        "Pode ser público ou particular."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 79"
+      ],
+      "exemplo": "Patronato particular assiste egresso e albergado. Variação: Não confundirpatronato com órgão judicial que concede livramento.",
+      "prova": [
+        "Pode ser público? Sim.",
+        "Beneficiários são só internos em regime fechado? Não."
+      ],
+      "expected": {
+        "unit_id": "62e39f4f-8c91-5bcc-9066-0049b15bf97b",
+        "content_sha256": "63a255690748aee8715c7a02fdd5d39bda496afc25621b53ee18e5e405b74cf4",
+        "simples": "O Patronato público ou particular destina-se a prestar assistência aos albergados e aos egressos.",
+        "pontos": [
+          "Patronato presta assistência a albergados e egressos."
+        ],
+        "atencao": [
+          "Pode ser público ou particular."
+        ],
+        "exemplo": "O Patronato apoia o egresso na busca por emprego.",
+        "prova": [
+          "Assertiva que restringe o Patronato aos presos do regime fechado erra: atende albergados e egressos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-79",
+      "unit_id": "8c4ced1a-1794-5c0b-adf1-708fde7b5a0b",
+      "content_sha256": "cc3addd97413314b3cfd5e62290b3f38d925b0abd83a0bf5d86b1b9152e47ab3",
+      "simples": "Incumbe também ao Patronato orientar os condenados à pena restritiva de direitos; fiscalizar o cumprimento das penas de prestação de serviço à comunidade e de limitação de fim de semana; e colaborar na fiscalização do cumprimento das condições da suspensão e do livramento condicional.",
+      "pontos": [
+        "Orientar condenados a penas restritivas.",
+        "Fiscalizar prestação de serviço e limitação de fim de semana.",
+        "Colaborar na fiscalização do sursis e do livramento condicional."
+      ],
+      "atencao": [
+        "Fiscaliza serviço à comunidade e limitação de fim de semana."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 78"
+      ],
+      "exemplo": "Patronato fiscaliza prestação de serviço e limitação de fim de semana. Variação: Colaborar na fiscalização do livramento não significa concedê-lo ou revogá-lo sozinho.",
+      "prova": [
+        "Orienta condenado à restritiva? Sim.",
+        "Toda fiscalização equivale a decisão judicial? Não."
+      ],
+      "expected": {
+        "unit_id": "8c4ced1a-1794-5c0b-adf1-708fde7b5a0b",
+        "content_sha256": "cc3addd97413314b3cfd5e62290b3f38d925b0abd83a0bf5d86b1b9152e47ab3",
+        "simples": "Incumbe também ao Patronato orientar os condenados à pena restritiva de direitos; fiscalizar o cumprimento das penas de prestação de serviço à comunidade e de limitação de fim de semana; e colaborar na fiscalização do cumprimento das condições da suspensão e do livramento condicional.",
+        "pontos": [
+          "Orientar condenados a penas restritivas.",
+          "Fiscalizar prestação de serviço e limitação de fim de semana.",
+          "Colaborar na fiscalização do sursis e do livramento condicional."
+        ],
+        "atencao": [
+          "Fiscaliza serviço à comunidade e limitação de fim de semana."
+        ],
+        "exemplo": "O Patronato fiscaliza a frequência do condenado ao serviço comunitário.",
+        "prova": [
+          "Assertiva que isenta o Patronato da fiscalização do livramento condicional erra: ele colabora."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-80",
+      "unit_id": "d152a76b-0a01-53a3-bc13-a1d699e4dcad",
+      "content_sha256": "dc22f73801cc566953c7ba1f3c387b794cbd0edb7b8dd7f61c7fe217c4832e0f",
+      "simples": "Haverá, em cada comarca, um Conselho da Comunidade composto, no mínimo, por 1 representante de associação comercial ou industrial, 1 advogado indicado pela Seção da Ordem dos Advogados do Brasil, 1 Defensor Público indicado pelo Defensor Público Geral e 1 assistente social escolhido pela Delegacia Seccional do Conselho Nacional de Assistentes Sociais. Na falta da representação, a escolha dos integrantes fica a critério do Juiz da execução.",
+      "pontos": [
+        "Um Conselho da Comunidade por comarca.",
+        "Composição mínima: representante comercial ou industrial, advogado, defensor público e assistente social.",
+        "Falta de representação: escolha do juiz."
+      ],
+      "atencao": [
+        "Composição mínima de QUATRO membros.",
+        "Expressões de órgãos de indicação no texto precisam de integração à representação profissional atual. Não certificada toda regulamentação de composição local ou equiparação automática de órgãos históricos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 81"
+      ],
+      "exemplo": "Conselho da Comunidade reúne representações mínimas em cada comarca. Variação: Falta de representação ativa escolha judicial subsidiária; consultar órgãos atuais de indicação sem presumir existência atual de toda designação histórica.",
+      "prova": [
+        "Defensor Público integra composição textual? Sim.",
+        "Composição é necessariamente um único integrante? Não."
+      ],
+      "expected": {
+        "unit_id": "d152a76b-0a01-53a3-bc13-a1d699e4dcad",
+        "content_sha256": "dc22f73801cc566953c7ba1f3c387b794cbd0edb7b8dd7f61c7fe217c4832e0f",
+        "simples": "Haverá, em cada comarca, um Conselho da Comunidade composto, no mínimo, por 1 representante de associação comercial ou industrial, 1 advogado indicado pela Seção da Ordem dos Advogados do Brasil, 1 Defensor Público indicado pelo Defensor Público Geral e 1 assistente social escolhido pela Delegacia Seccional do Conselho Nacional de Assistentes Sociais. Na falta da representação, a escolha dos integrantes fica a critério do Juiz da execução.",
+        "pontos": [
+          "Um Conselho da Comunidade por comarca.",
+          "Composição mínima: representante comercial ou industrial, advogado, defensor público e assistente social.",
+          "Falta de representação: escolha do juiz."
+        ],
+        "atencao": [
+          "Composição mínima de QUATRO membros."
+        ],
+        "exemplo": "O Conselho da Comunidade tem representante da OAB e da Defensoria.",
+        "prova": [
+          "Assertiva que dispensa o assistente social na composição mínima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:21.554131+00:00",
+        "updated_at": "2026-10-11T21:59:21.554131+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-81",
+      "unit_id": "0130386b-64aa-5c3f-bb58-402e22a4c5ad",
+      "content_sha256": "6f65d8b4a173361a20548aeba2387d5a7d8a965d8d22eccbf1299aadf9a9c43d",
+      "simples": "Incumbe ao Conselho da Comunidade visitar, pelo menos mensalmente, os estabelecimentos penais da comarca; entrevistar presos; apresentar relatórios mensais ao Juiz da execução e ao Conselho Penitenciário; e diligenciar a obtenção de recursos materiais e humanos para melhor assistência ao preso ou internado, em harmonia com a direção do estabelecimento.",
+      "pontos": [
+        "Visita mensal.",
+        "Entrevista de presos.",
+        "Relatórios mensais ao juiz e ao Conselho Penitenciário.",
+        "Busca de recursos."
+      ],
+      "atencao": [
+        "Visita e relatório MENSAIS."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 80"
+      ],
+      "exemplo": "Conselho visita pelo menos mensalmente e entrega relatórios ao juiz e Conselho Penitenciário. Variação: Obter recursos deve ocorrer em harmonia com direção,não usurpação de competências.",
+      "prova": [
+        "Entrevistar presos está previsto? Sim.",
+        "Relatório vai só ao Ministério da Justiça? Não."
+      ],
+      "expected": {
+        "unit_id": "0130386b-64aa-5c3f-bb58-402e22a4c5ad",
+        "content_sha256": "6f65d8b4a173361a20548aeba2387d5a7d8a965d8d22eccbf1299aadf9a9c43d",
+        "simples": "Incumbe ao Conselho da Comunidade visitar, pelo menos mensalmente, os estabelecimentos penais da comarca; entrevistar presos; apresentar relatórios mensais ao Juiz da execução e ao Conselho Penitenciário; e diligenciar a obtenção de recursos materiais e humanos para melhor assistência ao preso ou internado, em harmonia com a direção do estabelecimento.",
+        "pontos": [
+          "Visita mensal.",
+          "Entrevista de presos.",
+          "Relatórios mensais ao juiz e ao Conselho Penitenciário.",
+          "Busca de recursos."
+        ],
+        "atencao": [
+          "Visita e relatório MENSAIS."
+        ],
+        "exemplo": "O Conselho da Comunidade entrega relatório mensal ao juiz da execução.",
+        "prova": [
+          "Assertiva que fixa visitas trimestrais ao Conselho da Comunidade erra: são, no mínimo, mensais."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-81-a",
+      "unit_id": "35f1dabc-06f3-595d-abd6-b00697a76704",
+      "content_sha256": "bdb7710a43343abc740d282f110ff1104b26eee959d85ef73eea497f8247a9b1",
+      "simples": "A Defensoria Pública velará pela regular execução da pena e da medida de segurança, oficiando, no processo executivo e nos incidentes da execução, para a defesa dos necessitados em todos os graus e instâncias, de forma individual e coletiva.",
+      "pontos": [
+        "Fiscaliza a execução.",
+        "Defesa dos necessitados, individual e coletiva."
+      ],
+      "atencao": [
+        "Atuação individual E coletiva."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 81-B"
+      ],
+      "exemplo": "Defensoria defende necessitados coletivamente em incidente de execução. Variação: Não é restrita à primeira instância ou a demandas individuais.",
+      "prova": [
+        "Atuação alcança todos os graus? Sim.",
+        "Defesa coletiva está excluída? Não."
+      ],
+      "expected": {
+        "unit_id": "35f1dabc-06f3-595d-abd6-b00697a76704",
+        "content_sha256": "bdb7710a43343abc740d282f110ff1104b26eee959d85ef73eea497f8247a9b1",
+        "simples": "A Defensoria Pública velará pela regular execução da pena e da medida de segurança, oficiando, no processo executivo e nos incidentes da execução, para a defesa dos necessitados em todos os graus e instâncias, de forma individual e coletiva.",
+        "pontos": [
+          "Fiscaliza a execução.",
+          "Defesa dos necessitados, individual e coletiva."
+        ],
+        "atencao": [
+          "Atuação individual E coletiva."
+        ],
+        "exemplo": "A Defensoria defende o preso hipossuficiente e também age em favor de grupos de presos.",
+        "prova": [
+          "Assertiva que limita a Defensoria à defesa individual erra: também atua coletivamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-81-b",
+      "unit_id": "7d7d0637-26a8-5ce6-b913-4af579951d7e",
+      "content_sha256": "e858dd8c19fa871da140b40ab49a245cec60779721772be7b213e29306c4c468",
+      "simples": "Incumbe ainda à Defensoria Pública requerer as providências necessárias ao processo executivo; a aplicação de lei posterior mais benéfica; a extinção da punibilidade; a unificação de penas; a detração e a remição; os incidentes de excesso ou desvio de execução; a medida de segurança e sua revogação; a conversão de penas, a progressão, a suspensão condicional, o livramento condicional, a comutação e o indulto; as saídas temporárias; a internação e a desinternação; o cumprimento em outra comarca; e outras medidas em favor do assistido.",
+      "pontos": [
+        "Requerer progressão, livramento, remição e detração.",
+        "Indulto, comutação e saídas temporárias.",
+        "Incidentes de excesso ou desvio."
+      ],
+      "atencao": [
+        "Rol de requerimentos da Defensoria em favor do assistido.",
+        "Competência de requerer,recorrer e fiscalizar não equivale a julgar/interditar diretamente. Visita textual periódica não pode virar mensal universal por cópia do 68."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 81-A"
+      ],
+      "exemplo": "Defensoria requer remição,recorre e visita periodicamente. Variação: Pedido de interdição não é interdição direta; norma fala periodicamente,sem copiar prazo mensal do MP.",
+      "prova": [
+        "Pode recorrer de decisão administrativa no recorte? Sim.",
+        "A periodicidade textual é necessariamente mensal? Não."
+      ],
+      "expected": {
+        "unit_id": "7d7d0637-26a8-5ce6-b913-4af579951d7e",
+        "content_sha256": "e858dd8c19fa871da140b40ab49a245cec60779721772be7b213e29306c4c468",
+        "simples": "Incumbe ainda à Defensoria Pública requerer as providências necessárias ao processo executivo; a aplicação de lei posterior mais benéfica; a extinção da punibilidade; a unificação de penas; a detração e a remição; os incidentes de excesso ou desvio de execução; a medida de segurança e sua revogação; a conversão de penas, a progressão, a suspensão condicional, o livramento condicional, a comutação e o indulto; as saídas temporárias; a internação e a desinternação; o cumprimento em outra comarca; e outras medidas em favor do assistido.",
+        "pontos": [
+          "Requerer progressão, livramento, remição e detração.",
+          "Indulto, comutação e saídas temporárias.",
+          "Incidentes de excesso ou desvio."
+        ],
+        "atencao": [
+          "Rol de requerimentos da Defensoria em favor do assistido."
+        ],
+        "exemplo": "A Defensoria requer a progressão de regime do assistido.",
+        "prova": [
+          "Assertiva que impede a Defensoria de requerer indulto e comutação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 81-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-82",
+      "unit_id": "7ab0a5fe-3187-5b7f-a528-9b29f98b6e31",
+      "content_sha256": "ec076681f31cccbf15647981cd83fad3fbc6ef0416668d5cff4cb639d32714c0",
+      "simples": "Os estabelecimentos penais destinam-se ao condenado, ao submetido à medida de segurança, ao preso provisório e ao egresso. A mulher e o maior de sessenta anos, separadamente, serão recolhidos a estabelecimento próprio e adequado à sua condição pessoal. O mesmo conjunto arquitetônico poderá abrigar estabelecimentos de destinação diversa, desde que devidamente isolados.",
+      "pontos": [
+        "Destinatários: condenado, internado, preso provisório e egresso.",
+        "Mulher e maior de 60 anos em estabelecimento próprio.",
+        "Estabelecimentos diversos no mesmo conjunto, se isolados."
+      ],
+      "atencao": [
+        "Mulher e maior de sessenta anos: estabelecimentos SEPARADOS e próprios."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 83"
+      ],
+      "exemplo": "Conjunto arquitetônico comporta destinações distintas devidamente isoladas. Variação: Compartilhar terreno não autoriza misturar todas as categorias de presos.",
+      "prova": [
+        "Egresso está entre destinatários? Sim.",
+        "A palavra separadamente permite reunir mulheres e idosos sem distinção? Não."
+      ],
+      "expected": {
+        "unit_id": "7ab0a5fe-3187-5b7f-a528-9b29f98b6e31",
+        "content_sha256": "ec076681f31cccbf15647981cd83fad3fbc6ef0416668d5cff4cb639d32714c0",
+        "simples": "Os estabelecimentos penais destinam-se ao condenado, ao submetido à medida de segurança, ao preso provisório e ao egresso. A mulher e o maior de sessenta anos, separadamente, serão recolhidos a estabelecimento próprio e adequado à sua condição pessoal. O mesmo conjunto arquitetônico poderá abrigar estabelecimentos de destinação diversa, desde que devidamente isolados.",
+        "pontos": [
+          "Destinatários: condenado, internado, preso provisório e egresso.",
+          "Mulher e maior de 60 anos em estabelecimento próprio.",
+          "Estabelecimentos diversos no mesmo conjunto, se isolados."
+        ],
+        "atencao": [
+          "Mulher e maior de sessenta anos: estabelecimentos SEPARADOS e próprios."
+        ],
+        "exemplo": "A mulher presa é recolhida em unidade feminina.",
+        "prova": [
+          "Assertiva que permite recolher a mulher e o idoso em qualquer estabelecimento comum erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-83",
+      "unit_id": "dae94cab-2b0a-5e8f-9bd0-1352740e7d78",
+      "content_sha256": "0904419c250b751498a838f81467851546ee57cf548ec59c3ce99ed25599785d",
+      "simples": "O estabelecimento penal, conforme a sua natureza, deverá contar com áreas e serviços destinados a dar assistência, educação, trabalho, recreação e prática esportiva. Haverá instalação destinada a estágio de estudantes universitários. Os estabelecimentos femininos serão dotados de berçário, onde as condenadas possam cuidar de seus filhos e amamentá-los, no mínimo, até 6 meses de idade, e possuirão exclusivamente agentes do sexo feminino na segurança das dependências internas. Serão instaladas salas de aula e haverá instalação destinada à Defensoria Pública.",
+      "pontos": [
+        "Assistência,educação,trabalho,recreação/esporte conforme natureza.",
+        "Berçário: no mínimo até seis meses;não teto automático.",
+        "Segurança das dependências internas femininas: agentes do sexo feminino no recorte expresso.",
+        "Salas de aula,estágio e Defensoria previstos."
+      ],
+      "atencao": [
+        "Berçário: no mínimo até 6 meses de idade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 89"
+      ],
+      "exemplo": "Berçário assegura cuidado e amamentação no mínimo até seis meses. Variação: Segurança interna feminina é recorte específico,não proibição de todo técnico de outro sexo.",
+      "prova": [
+        "Seis meses é teto absoluto do cuidado? Não;é mínimo textual.",
+        "Há instalação para Defensoria? Sim."
+      ],
+      "expected": {
+        "unit_id": "dae94cab-2b0a-5e8f-9bd0-1352740e7d78",
+        "content_sha256": "0904419c250b751498a838f81467851546ee57cf548ec59c3ce99ed25599785d",
+        "simples": "O estabelecimento penal, conforme a sua natureza, deverá contar com áreas e serviços destinados a dar assistência, educação, trabalho, recreação e prática esportiva. Haverá instalação destinada a estágio de estudantes universitários. Os estabelecimentos femininos serão dotados de berçário, onde as condenadas possam cuidar de seus filhos e amamentá-los, no mínimo, até 6 meses de idade, e possuirão exclusivamente agentes do sexo feminino na segurança das dependências internas. Serão instaladas salas de aula e haverá instalação destinada à Defensoria Pública.",
+        "pontos": [
+          "Áreas de assistência, educação, trabalho, recreação e esporte.",
+          "Instalação para estágio universitário.",
+          "Berçário até, no mínimo, 6 meses.",
+          "Agentes exclusivamente femininos.",
+          "Salas de aula e instalação da Defensoria."
+        ],
+        "atencao": [
+          "Berçário: no mínimo até 6 meses de idade."
+        ],
+        "exemplo": "O presídio feminino tem berçário para a mãe amamentar.",
+        "prova": [
+          "Assertiva que dispensa o berçário nos presídios femininos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-84",
+      "unit_id": "8be1ec3d-349f-596d-9cbd-433221a5645b",
+      "content_sha256": "9ca7b283c63f8a05480f8e82d8159c63657dbf95fbbe0ea4d8f3d5cee5104f78",
+      "simples": "O preso provisório ficará separado do condenado por sentença transitada em julgado. Os provisórios são separados conforme os acusados de crimes hediondos ou equiparados; de crimes com violência ou grave ameaça; e de outros crimes ou contravenções. O preso que, ao tempo do fato, era funcionário da Administração da Justiça Criminal ficará em dependência separada. Os condenados são separados em condenados por crimes hediondos ou equiparados; reincidentes por crimes com violência ou grave ameaça; primários por esses crimes; e demais condenados. O preso com integridade ameaçada pela convivência ficará segregado em local próprio.",
+      "pontos": [
+        "Separação do provisório e do condenado definitivo.",
+        "Critérios de separação dos provisórios e dos condenados.",
+        "Funcionário da Justiça Criminal em dependência separada.",
+        "Segregação do preso ameaçado."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: critérios de separação ampliados por lei posterior.",
+        "Provisório SEPARADO do condenado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 102"
+      ],
+      "exemplo": "Provisório é separado de condenado definitivo e pessoa ameaçada recebe local próprio. Variação: Segregação protetiva não se confunde automaticamente com sanção RDD.",
+      "prova": [
+        "Critérios de provisórios e definitivos são idênticos? Não.",
+        "Toda condição de funcionário público garante separação do§2º? Não;recorte da Administração da Justiça Criminal."
+      ],
+      "expected": {
+        "unit_id": "8be1ec3d-349f-596d-9cbd-433221a5645b",
+        "content_sha256": "9ca7b283c63f8a05480f8e82d8159c63657dbf95fbbe0ea4d8f3d5cee5104f78",
+        "simples": "O preso provisório ficará separado do condenado por sentença transitada em julgado. Os provisórios são separados conforme os acusados de crimes hediondos ou equiparados; de crimes com violência ou grave ameaça; e de outros crimes ou contravenções. O preso que, ao tempo do fato, era funcionário da Administração da Justiça Criminal ficará em dependência separada. Os condenados são separados em condenados por crimes hediondos ou equiparados; reincidentes por crimes com violência ou grave ameaça; primários por esses crimes; e demais condenados. O preso com integridade ameaçada pela convivência ficará segregado em local próprio.",
+        "pontos": [
+          "Separação do provisório e do condenado definitivo.",
+          "Critérios de separação dos provisórios e dos condenados.",
+          "Funcionário da Justiça Criminal em dependência separada.",
+          "Segregação do preso ameaçado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: critérios de separação ampliados por lei posterior.",
+          "Provisório SEPARADO do condenado."
+        ],
+        "exemplo": "O ex-policial preso fica em dependência separada.",
+        "prova": [
+          "Assertiva que permite misturar presos provisórios e condenados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 102"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-85",
+      "unit_id": "08affd4e-8779-5400-b10a-0545923acdc5",
+      "content_sha256": "3c13b88a3889f4bfa627d9253fa6c6cd48272868fcbde4aef002d5a02a6e2148",
+      "simples": "O estabelecimento penal deverá ter lotação compatível com a sua estrutura e finalidade. O Conselho Nacional de Política Criminal e Penitenciária determinará o limite máximo de capacidade do estabelecimento, atendendo a sua natureza e peculiaridades.",
+      "pontos": [
+        "Lotação compatível com a estrutura.",
+        "Limite máximo definido pelo Conselho Nacional."
+      ],
+      "atencao": [
+        "Quem fixa o limite de capacidade é o Conselho NACIONAL."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 64"
+      ],
+      "exemplo": "Capacidade atende estrutura e finalidade do estabelecimento. Variação: Lotação física aparente não autoriza ignorar individualização/salubridade.",
+      "prova": [
+        "Conselho Nacional tem atribuição textual de limite máximo? Sim.",
+        "O artigo autoriza superlotação indefinida? Não."
+      ],
+      "expected": {
+        "unit_id": "08affd4e-8779-5400-b10a-0545923acdc5",
+        "content_sha256": "3c13b88a3889f4bfa627d9253fa6c6cd48272868fcbde4aef002d5a02a6e2148",
+        "simples": "O estabelecimento penal deverá ter lotação compatível com a sua estrutura e finalidade. O Conselho Nacional de Política Criminal e Penitenciária determinará o limite máximo de capacidade do estabelecimento, atendendo a sua natureza e peculiaridades.",
+        "pontos": [
+          "Lotação compatível com a estrutura.",
+          "Limite máximo definido pelo Conselho Nacional."
+        ],
+        "atencao": [
+          "Quem fixa o limite de capacidade é o Conselho NACIONAL."
+        ],
+        "exemplo": "O Conselho Nacional define a capacidade máxima de cada unidade.",
+        "prova": [
+          "Assertiva que atribui ao diretor a fixação da capacidade máxima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-86",
+      "unit_id": "583ef8f0-1e25-5952-b440-6c8e456782ae",
+      "content_sha256": "d1e171a03bc7387436a55d38fa8483d339cda5d74d15fc3ebef5e8e6a77b818d",
+      "simples": "As penas privativas de liberdade aplicadas pela Justiça de uma Unidade Federativa podem ser executadas em outra unidade, em estabelecimento local ou da União. A União poderá construir estabelecimento penal em local distante da condenação, quando a medida se justifique no interesse da segurança pública ou do próprio condenado. Caberá ao juiz competente, no prazo de 24 horas, a requerimento da administração penitenciária, definir o estabelecimento adequado. Será transferido para outra unidade federativa o condenado ou provisório que, tendo cometido violência doméstica contra a mulher, ameace ou pratique violência contra a vítima ou familiares. Em risco iminente e grave, a administração poderá transferir presos em caráter excepcional, comunicando ao juiz.",
+      "pontos": [
+        "Execução pode ocorrer em outra UF ou estabelecimento da União.",
+        "§3º: decisão judicial em 24 horas sob requerimento e requisitos.",
+        "§5º: risco iminente/grave,transferência excepcional,comunicação imediata e decisão judicial em 24 horas.",
+        "§4º contém alteração de Lei 15.410/2026; não certificado todo controle/efeito temporal dessa hipótese."
+      ],
+      "atencao": [
+        "Não generalizar urgência a qualquer transferência ou apresentar decisão judicial como facultativa em toda hipótese. Lei 15.410: consulta suplementar retornou 503/403; não gerados exercícios de aplicação automática do§4º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 87"
+      ],
+      "exemplo": "Juiz define destino adequado em 24 horas no recorte do§3º. Variação: Transferência administrativa excepcional por risco iminente/grave exige comunicação imediata e decisão em 24 horas; não carta branca nem prazo indefinido.",
+      "prova": [
+        "Prisão de outraUF pode ser executada em unidade daUnião? Sim.",
+        "Toda transferência dispensa juiz? Não."
+      ],
+      "expected": {
+        "unit_id": "583ef8f0-1e25-5952-b440-6c8e456782ae",
+        "content_sha256": "d1e171a03bc7387436a55d38fa8483d339cda5d74d15fc3ebef5e8e6a77b818d",
+        "simples": "As penas privativas de liberdade aplicadas pela Justiça de uma Unidade Federativa podem ser executadas em outra unidade, em estabelecimento local ou da União. A União poderá construir estabelecimento penal em local distante da condenação, quando a medida se justifique no interesse da segurança pública ou do próprio condenado. Caberá ao juiz competente, no prazo de 24 horas, a requerimento da administração penitenciária, definir o estabelecimento adequado. Será transferido para outra unidade federativa o condenado ou provisório que, tendo cometido violência doméstica contra a mulher, ameace ou pratique violência contra a vítima ou familiares. Em risco iminente e grave, a administração poderá transferir presos em caráter excepcional, comunicando ao juiz.",
+        "pontos": [
+          "Execução em outra unidade federativa ou da União.",
+          "Juiz define o estabelecimento em 24 horas.",
+          "Transferência do agressor que ameace a vítima.",
+          "Transferência excepcional em risco iminente."
+        ],
+        "atencao": [
+          "Juiz define o estabelecimento em 24 horas.",
+          "ATUALIZAÇÃO: §§3º a 5º incluídos por leis posteriores."
+        ],
+        "exemplo": "Em uma rebelião, a administração transfere presos e comunica o juiz.",
+        "prova": [
+          "Assertiva que fixa em 48 horas o prazo do juiz para definir o estabelecimento erra: são 24 horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-87",
+      "unit_id": "78bb8bfa-20e0-5c49-9b8a-18114b572370",
+      "content_sha256": "bef6d4e1f771031df960eb91b13aa8caab60a072271391da3eeacd438591cf59",
+      "simples": "A penitenciária destina-se ao condenado à pena de reclusão, em regime fechado. A União, os Estados, o Distrito Federal e os Territórios poderão construir penitenciárias destinadas exclusivamente aos presos provisórios e condenados em regime fechado sujeitos ao regime disciplinar diferenciado.",
+      "pontos": [
+        "Penitenciária: reclusão em regime fechado.",
+        "Penitenciárias exclusivas para presos no RDD."
+      ],
+      "atencao": [
+        "Penitenciária = regime FECHADO.",
+        "Destinação legal de unidade não autoriza manter preso em regime mais gravoso só por falta de vaga. Aplicação concreta depende de decisão e parâmetros constitucionais pertinentes; sem fórmula universal de prisão domiciliar."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 91"
+      ],
+      "exemplo": "Penitenciária se destina a condenado à reclusão no fechado. Variação: Parágrafo tem recorte próprio de unidades para RDD,inclusive provisório,não converter todo estabelecimento em penitenciária comum.",
+      "prova": [
+        "Colônia agrícola é o mesmo regime típico? Não.",
+        "Parágrafo exclui sempre presos provisórios? Não."
+      ],
+      "expected": {
+        "unit_id": "78bb8bfa-20e0-5c49-9b8a-18114b572370",
+        "content_sha256": "bef6d4e1f771031df960eb91b13aa8caab60a072271391da3eeacd438591cf59",
+        "simples": "A penitenciária destina-se ao condenado à pena de reclusão, em regime fechado. A União, os Estados, o Distrito Federal e os Territórios poderão construir penitenciárias destinadas exclusivamente aos presos provisórios e condenados em regime fechado sujeitos ao regime disciplinar diferenciado.",
+        "pontos": [
+          "Penitenciária: reclusão em regime fechado.",
+          "Penitenciárias exclusivas para presos no RDD."
+        ],
+        "atencao": [
+          "Penitenciária = regime FECHADO."
+        ],
+        "exemplo": "O condenado à reclusão em regime fechado cumpre pena na penitenciária.",
+        "prova": [
+          "Assertiva que destina a penitenciária ao regime semiaberto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-88",
+      "unit_id": "95774a61-a20c-56f2-afce-eb130ded5173",
+      "content_sha256": "7cf2dd065a11fc48f4a8faee930a1cc952d6ae726cbe2f25846eec71a1c17ca7",
+      "simples": "O condenado será alojado em cela individual que conterá dormitório, aparelho sanitário e lavatório. São requisitos básicos da unidade celular a salubridade do ambiente, pela concorrência dos fatores de aeração, insolação e condicionamento térmico adequado, e a área mínima de 6,00 m².",
+      "pontos": [
+        "Cela individual.",
+        "Salubridade.",
+        "Área mínima de 6,00 m²."
+      ],
+      "atencao": [
+        "Área mínima de 6 metros quadrados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 92"
+      ],
+      "exemplo": "Cela individual tem dormitório,sanitário,lavatório e área mínima de seis metros quadrados. Variação: Metragem sozinha não supre salubridade,aeração econdicionamento térmico.",
+      "prova": [
+        "Seis metros quadrados é área máxima? Não;mínima.",
+        "Basta metragem dispensando higiene/ventilação? Não."
+      ],
+      "expected": {
+        "unit_id": "95774a61-a20c-56f2-afce-eb130ded5173",
+        "content_sha256": "7cf2dd065a11fc48f4a8faee930a1cc952d6ae726cbe2f25846eec71a1c17ca7",
+        "simples": "O condenado será alojado em cela individual que conterá dormitório, aparelho sanitário e lavatório. São requisitos básicos da unidade celular a salubridade do ambiente, pela concorrência dos fatores de aeração, insolação e condicionamento térmico adequado, e a área mínima de 6,00 m².",
+        "pontos": [
+          "Cela individual.",
+          "Salubridade.",
+          "Área mínima de 6,00 m²."
+        ],
+        "atencao": [
+          "Área mínima de 6 metros quadrados."
+        ],
+        "exemplo": "A cela individual deve ter pelo menos 6 m².",
+        "prova": [
+          "Assertiva que fixa em 3 m² a área mínima da cela erra: são 6,00 m²."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-89",
+      "unit_id": "c33792b6-9a45-5a54-a5b4-84708cdde4c9",
+      "content_sha256": "7dd47817605e1d9bcb453b122b81e6b9b9cdeb1e46cfdac36aa9936c9d435356",
+      "simples": "Além dos requisitos do art. 88, a penitenciária de mulheres será dotada de seção para gestante e parturiente e de creche para abrigar crianças maiores de 6 meses e menores de 7 anos, com a finalidade de assistir a criança desamparada cuja responsável estiver presa. A seção e a creche exigem atendimento por pessoal qualificado, em unidades autônomas, e horário de funcionamento que garanta a melhor assistência à criança e à sua responsável.",
+      "pontos": [
+        "Seção para gestante e parturiente.",
+        "Creche para crianças maiores de 6 meses e menores de 7 anos.",
+        "Pessoal qualificado e unidades autônomas."
+      ],
+      "atencao": [
+        "Creche: maiores de 6 meses e menores de 7 anos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 83"
+      ],
+      "exemplo": "Creche atende criança desamparada maior de seis meses e menor de sete anos no recorte legal. Variação: Não confundir essa faixa com berçário do 83 nem apresentar permanência como punição da criança.",
+      "prova": [
+        "Pessoal qualificado é requisito? Sim.",
+        "Sete anos completos está dentro da expressão menor de sete? Não."
+      ],
+      "expected": {
+        "unit_id": "c33792b6-9a45-5a54-a5b4-84708cdde4c9",
+        "content_sha256": "7dd47817605e1d9bcb453b122b81e6b9b9cdeb1e46cfdac36aa9936c9d435356",
+        "simples": "Além dos requisitos do art. 88, a penitenciária de mulheres será dotada de seção para gestante e parturiente e de creche para abrigar crianças maiores de 6 meses e menores de 7 anos, com a finalidade de assistir a criança desamparada cuja responsável estiver presa. A seção e a creche exigem atendimento por pessoal qualificado, em unidades autônomas, e horário de funcionamento que garanta a melhor assistência à criança e à sua responsável.",
+        "pontos": [
+          "Seção para gestante e parturiente.",
+          "Creche para crianças maiores de 6 meses e menores de 7 anos.",
+          "Pessoal qualificado e unidades autônomas."
+        ],
+        "atencao": [
+          "Creche: maiores de 6 meses e menores de 7 anos."
+        ],
+        "exemplo": "A penitenciária feminina mantém creche para filhos de presas com mais de 6 meses.",
+        "prova": [
+          "Assertiva que fixa a creche para crianças de até 12 anos erra: são menores de 7 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-90",
+      "unit_id": "fd90a400-95b3-5008-81cb-62c35ecaa4e3",
+      "content_sha256": "a753865c5a481b6ee5ebe434d9e1739dd23414ff8fb2fe64bdbe7028df46e9d1",
+      "simples": "A penitenciária de homens será construída em local afastado do centro urbano, a distância que não restrinja a visitação.",
+      "pontos": [
+        "Local afastado do centro urbano.",
+        "Distância que não restrinja a visitação."
+      ],
+      "atencao": [
+        "Afastada, mas que permita visitas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 87"
+      ],
+      "exemplo": "Penitenciária masculina se afasta do centro sem impedir visitação. Variação: Distância extrema que impossibilita visita não atende ressalva do artigo.",
+      "prova": [
+        "Visitação deve ser preservada no recorte? Sim.",
+        "Todo estabelecimento tem a mesma regra de localização? Não;Casa do Albergado difere."
+      ],
+      "expected": {
+        "unit_id": "fd90a400-95b3-5008-81cb-62c35ecaa4e3",
+        "content_sha256": "a753865c5a481b6ee5ebe434d9e1739dd23414ff8fb2fe64bdbe7028df46e9d1",
+        "simples": "A penitenciária de homens será construída em local afastado do centro urbano, a distância que não restrinja a visitação.",
+        "pontos": [
+          "Local afastado do centro urbano.",
+          "Distância que não restrinja a visitação."
+        ],
+        "atencao": [
+          "Afastada, mas que permita visitas."
+        ],
+        "exemplo": "A penitenciária fica fora da cidade, em local de acesso viável aos visitantes.",
+        "prova": [
+          "Assertiva que manda construir a penitenciária no centro urbano erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-91",
+      "unit_id": "50c35eaa-3c4b-51a5-af5d-b2965521724d",
+      "content_sha256": "3fce04b4fdf0f398c620742247042e73f1cbaa9b777c9a17f7050b57c7c097a5",
+      "simples": "A Colônia Agrícola, Industrial ou Similar destina-se ao cumprimento da pena em regime semiaberto.",
+      "pontos": [
+        "Colônia agrícola ou industrial: regime semiaberto."
+      ],
+      "atencao": [
+        "Colônia = SEMIABERTO.",
+        "Destinação legal de unidade não autoriza manter preso em regime mais gravoso só por falta de vaga. Aplicação concreta depende de decisão e parâmetros constitucionais pertinentes; sem fórmula universal de prisão domiciliar."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 92"
+      ],
+      "exemplo": "Colônia agrícola destina-se ao semiaberto. Variação: Falta de vaga não autoriza manter regime mais gravoso automaticamente; observar Súmula Vinculante 56 e decisão judicial aplicável.",
+      "prova": [
+        "Colônia industrial também é prevista? Sim.",
+        "Esse artigo sozinho resolve alternativas por falta de vaga? Não."
+      ],
+      "expected": {
+        "unit_id": "50c35eaa-3c4b-51a5-af5d-b2965521724d",
+        "content_sha256": "3fce04b4fdf0f398c620742247042e73f1cbaa9b777c9a17f7050b57c7c097a5",
+        "simples": "A Colônia Agrícola, Industrial ou Similar destina-se ao cumprimento da pena em regime semiaberto.",
+        "pontos": [
+          "Colônia agrícola ou industrial: regime semiaberto."
+        ],
+        "atencao": [
+          "Colônia = SEMIABERTO."
+        ],
+        "exemplo": "O condenado em regime semiaberto cumpre pena em colônia agrícola.",
+        "prova": [
+          "Assertiva que destina a colônia agrícola ao regime fechado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-92",
+      "unit_id": "556a0f6c-3d0a-5e69-b483-f2250beb3cf6",
+      "content_sha256": "7375fcee1787e633a1b6fdb2f0ae296207d7308d3e4b76a86516a7ddd2c8b2bf",
+      "simples": "O condenado poderá ser alojado em compartimento coletivo, observados os requisitos de salubridade do art. 88. São também requisitos básicos das dependências coletivas a seleção adequada dos presos e o limite de capacidade máxima que atenda os objetivos de individualização da pena.",
+      "pontos": [
+        "Alojamento coletivo permitido.",
+        "Seleção adequada dos presos.",
+        "Limite de capacidade que atenda à individualização."
+      ],
+      "atencao": [
+        "Alojamento coletivo é típico do semiaberto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 88"
+      ],
+      "exemplo": "Alojamento coletivo tem seleção adequada e capacidade compatível com individualização. Variação: Não importar automaticamente área da cela individual como única regra de todo compartimento coletivo.",
+      "prova": [
+        "Salubridade do 88 é remetida? Sim.",
+        "Alojamento coletivo é autorização para misturar presos indiscriminadamente? Não."
+      ],
+      "expected": {
+        "unit_id": "556a0f6c-3d0a-5e69-b483-f2250beb3cf6",
+        "content_sha256": "7375fcee1787e633a1b6fdb2f0ae296207d7308d3e4b76a86516a7ddd2c8b2bf",
+        "simples": "O condenado poderá ser alojado em compartimento coletivo, observados os requisitos de salubridade do art. 88. São também requisitos básicos das dependências coletivas a seleção adequada dos presos e o limite de capacidade máxima que atenda os objetivos de individualização da pena.",
+        "pontos": [
+          "Alojamento coletivo permitido.",
+          "Seleção adequada dos presos.",
+          "Limite de capacidade que atenda à individualização."
+        ],
+        "atencao": [
+          "Alojamento coletivo é típico do semiaberto."
+        ],
+        "exemplo": "Na colônia, os presos ficam em alojamento coletivo selecionado.",
+        "prova": [
+          "Assertiva que dispensa a seleção dos presos nas dependências coletivas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 88"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-93",
+      "unit_id": "4e7d8339-690a-57a6-bbbc-899e661291aa",
+      "content_sha256": "da7951b45c8f03e5fd1a5b2820a52a3788b2e1fed9a83fe84f21df3fcdc65fee",
+      "simples": "A Casa do Albergado destina-se ao cumprimento de pena privativa de liberdade, em regime aberto, e da pena de limitação de fim de semana.",
+      "pontos": [
+        "Regime aberto.",
+        "Limitação de fim de semana."
+      ],
+      "atencao": [
+        "Casa do Albergado = ABERTO e limitação de fim de semana.",
+        "Destinação legal de unidade não autoriza manter preso em regime mais gravoso só por falta de vaga. Aplicação concreta depende de decisão e parâmetros constitucionais pertinentes; sem fórmula universal de prisão domiciliar."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 94"
+      ],
+      "exemplo": "Casa do Albergado atende aberto e limitação de fim de semana. Variação: Não reduzir estabelecimento apenas ao aberto nem transformar falta de vaga em regressão automática.",
+      "prova": [
+        "Limitação de fim de semana é expressa? Sim.",
+        "Penitenciária do fechado é equivalente por este artigo? Não."
+      ],
+      "expected": {
+        "unit_id": "4e7d8339-690a-57a6-bbbc-899e661291aa",
+        "content_sha256": "da7951b45c8f03e5fd1a5b2820a52a3788b2e1fed9a83fe84f21df3fcdc65fee",
+        "simples": "A Casa do Albergado destina-se ao cumprimento de pena privativa de liberdade, em regime aberto, e da pena de limitação de fim de semana.",
+        "pontos": [
+          "Regime aberto.",
+          "Limitação de fim de semana."
+        ],
+        "atencao": [
+          "Casa do Albergado = ABERTO e limitação de fim de semana."
+        ],
+        "exemplo": "O condenado em regime aberto se recolhe na Casa do Albergado à noite.",
+        "prova": [
+          "Assertiva que destina a Casa do Albergado ao regime semiaberto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-94",
+      "unit_id": "6d7362a0-0791-578a-9071-0198119d92b8",
+      "content_sha256": "4662baf1b294bf8a7f21e86fc3c4d4236c004ee7ace7665717875c196a818c0f",
+      "simples": "O prédio da Casa do Albergado deverá situar-se em centro urbano, separado dos demais estabelecimentos, e caracterizar-se pela ausência de obstáculos físicos contra a fuga.",
+      "pontos": [
+        "Centro urbano.",
+        "Separado dos demais estabelecimentos.",
+        "Sem obstáculos físicos contra a fuga."
+      ],
+      "atencao": [
+        "Sem obstáculos contra a fuga: baseia-se na autodisciplina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 93"
+      ],
+      "exemplo": "Casa do Albergado fica no centro urbano e sem obstáculos físicos contra fuga. Variação: Ausência de barreira não elimina condições judiciais nem obrigações do regime.",
+      "prova": [
+        "Fica separada dos demais estabelecimentos? Sim.",
+        "Ausência de muro dispensa disciplina? Não."
+      ],
+      "expected": {
+        "unit_id": "6d7362a0-0791-578a-9071-0198119d92b8",
+        "content_sha256": "4662baf1b294bf8a7f21e86fc3c4d4236c004ee7ace7665717875c196a818c0f",
+        "simples": "O prédio da Casa do Albergado deverá situar-se em centro urbano, separado dos demais estabelecimentos, e caracterizar-se pela ausência de obstáculos físicos contra a fuga.",
+        "pontos": [
+          "Centro urbano.",
+          "Separado dos demais estabelecimentos.",
+          "Sem obstáculos físicos contra a fuga."
+        ],
+        "atencao": [
+          "Sem obstáculos contra a fuga: baseia-se na autodisciplina."
+        ],
+        "exemplo": "A Casa do Albergado não tem muros altos nem grades de segurança.",
+        "prova": [
+          "Assertiva que exige obstáculos físicos contra a fuga na Casa do Albergado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 93"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-95",
+      "unit_id": "2f714423-311e-53af-810b-7fe5b81f5f31",
+      "content_sha256": "3e930b66bbcaffd25b3491ad47950e9d5d78112586981c93b2487cf61d143420",
+      "simples": "Em cada região haverá, pelo menos, uma Casa do Albergado, que deverá conter, além dos aposentos para acomodar os presos, local adequado para cursos e palestras. O estabelecimento terá instalações para os serviços de fiscalização e orientação dos condenados.",
+      "pontos": [
+        "Pelo menos uma Casa do Albergado por região.",
+        "Local para cursos e palestras.",
+        "Instalações de fiscalização e orientação."
+      ],
+      "atencao": [
+        "Pelo menos UMA por região."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 93"
+      ],
+      "exemplo": "Região dispõe de pelo menos uma Casa do Albergado com cursos e serviços de orientação. Variação: Mínimo de uma não é limite máximo nem substitui estrutura adequada.",
+      "prova": [
+        "Palestras têm local previsto? Sim.",
+        "O artigo fixa necessariamente uma por município? Não;texto fala região."
+      ],
+      "expected": {
+        "unit_id": "2f714423-311e-53af-810b-7fe5b81f5f31",
+        "content_sha256": "3e930b66bbcaffd25b3491ad47950e9d5d78112586981c93b2487cf61d143420",
+        "simples": "Em cada região haverá, pelo menos, uma Casa do Albergado, que deverá conter, além dos aposentos para acomodar os presos, local adequado para cursos e palestras. O estabelecimento terá instalações para os serviços de fiscalização e orientação dos condenados.",
+        "pontos": [
+          "Pelo menos uma Casa do Albergado por região.",
+          "Local para cursos e palestras.",
+          "Instalações de fiscalização e orientação."
+        ],
+        "atencao": [
+          "Pelo menos UMA por região."
+        ],
+        "exemplo": "Cada região tem ao menos uma Casa do Albergado.",
+        "prova": [
+          "Assertiva que prevê uma Casa do Albergado por município erra: é, pelo menos, uma por região."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 93"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:59:50.704098+00:00",
+        "updated_at": "2026-10-11T21:59:50.704098+00:00"
+      }
+    }
+  ]
+}

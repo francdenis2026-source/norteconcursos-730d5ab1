@@ -1,0 +1,58 @@
+[
+  {
+    "career": "administrador",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/62182/idecan-2019-if-pb-administrador-prova.pdf",
+    "kind": "booklet",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-administrador",
+    "source_host_type": "mirror",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "career": "administrador",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/62182/idecan-2019-if-pb-administrador-gabarito.pdf",
+    "kind": "answer_key",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-administrador",
+    "source_host_type": "mirror",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "career": "pedagogo",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/62188/idecan-2019-if-pb-pedagogo-prova.pdf",
+    "kind": "booklet",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-pedagogo",
+    "source_host_type": "mirror",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "career": "pedagogo",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/62188/idecan-2019-if-pb-pedagogo-gabarito.pdf",
+    "kind": "answer_key",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-pedagogo",
+    "source_host_type": "mirror",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "career": "nutricionista",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/62187/idecan-2019-if-pb-nutricionista-prova.pdf",
+    "kind": "booklet",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-nutricionista",
+    "source_host_type": "mirror",
+    "status": "downloaded_valid_pdf",
+    "sha256": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+    "bytes": 1451012,
+    "file": "/tmp/idecan-lote03/nutricionista-booklet.pdf",
+    "pdfinfo": "Producer:        FPDF 1.86\nCreationDate:    Wed Mar 18 22:18:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       595.32 x 842.04 pts (A4)\nPage rot:        0\nFile size:       1451012 bytes\nOptimized:       no\nPDF version:     1.5\n"
+  },
+  {
+    "career": "nutricionista",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/62187/idecan-2019-if-pb-nutricionista-gabarito.pdf",
+    "kind": "answer_key",
+    "listing_url": "https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2019-if-pb-nutricionista",
+    "source_host_type": "mirror",
+    "status": "downloaded_valid_pdf",
+    "sha256": "47de22e33c048cef3415b18f1df66c6237a58caf66aabafd43b99f9496b0c622",
+    "bytes": 357149,
+    "file": "/tmp/idecan-lote03/nutricionista-answer_key.pdf",
+    "pdfinfo": "Producer:        FPDF 1.86\nCreationDate:    Wed Mar 18 22:18:22 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           7\nEncrypted:       no\nPage size:       841.92 x 595.32 pts (A4)\nPage rot:        0\nFile size:       357149 bytes\nOptimized:       no\nPDF version:     1.5\n"
+  }
+]

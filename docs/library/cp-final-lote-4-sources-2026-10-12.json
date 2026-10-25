@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-13T03:05:59.711326+00:00",
+  "sources": [
+    {
+      "id": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06"
+    },
+    {
+      "id": "lcp225",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp225.htm",
+      "sha256": "d5a9b7129228edcea442e4d78e016d7fc76242db792593808f3d87526816bf9f"
+    },
+    {
+      "id": "l10684",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.684.htm",
+      "sha256": "9bd3de7d9cfce6039ce9d5ea33153d4d615e68f441d86ea3c1cbc57933629285"
+    },
+    {
+      "id": "l15280",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm",
+      "sha256": "e9356adcc12ea5e46c951714e1c9212809ccd1b6843a5431c86c7dc02b463702"
+    }
+  ],
+  "limitations": [
+    "Tipos atuais de licitações conferidos no CP compilado oficial; acesso suplementar à íntegra de Leis14.133/13.869 retornou503, não computado como consulta concluída.",
+    "Textos residuais326/335/322 não certificados como enquadramento/pena universais atuais; treino literal bloqueado.",
+    "Não certificadas todas as exceções financeiras,insignificância,ADPF881/496 ou especialidade das medidas protetivas."
+  ]
+}

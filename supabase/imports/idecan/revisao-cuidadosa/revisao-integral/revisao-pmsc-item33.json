@@ -1,0 +1,39 @@
+{
+  "item": 33,
+  "question_id": "edbc9ab4-9ced-418a-a0d9-cbf53006ce74",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "official_answer": {
+    "letter": "B",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 33",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Código Penal — Decreto-Lei nº 2.848/1940, texto compilado",
+    "article": "121, § 2º, incisos I, IV e VIII",
+    "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "html_sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "conclusion": "A alternativa B reúne três qualificadoras expressas no § 2º: traição/emboscada ou recurso que dificulte a defesa (IV), arma de fogo de uso restrito ou proibido (VIII) e paga/promessa ou motivo torpe (I).",
+    "current_law_note": "A compilação atual contém alterações posteriores à prova, incluindo homicídio em instituição de ensino (inciso X), causas de aumento específicas (§§ 2º-B e 2º-C) e hipótese própria no § 2º-D. A explicação distingue esses dispositivos das qualificadoras gerais do § 2º e registra que tais mudanças não tornam os conjuntos A, C, D ou E inteiramente corretos."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Parte Especial: art. 121 ao 180-A.",
+    "confirmed": true
+  },
+  "explanation": "A alternativa B é a única que reúne hipóteses qualificadoras do art. 121, § 2º: traição/emboscada ou recurso que dificulte a defesa (IV), emprego de arma de fogo de uso restrito ou proibido (VIII) e paga/promessa ou motivo torpe (I). A) Só o meio cruel do inciso III se encaixa; deficiência e milícia dependem de hipóteses legais específicas que não são qualificadoras gerais do § 2º. C) Motivo fútil e finalidade de assegurar outro crime são qualificadoras, mas violenta emoção logo após provocação injusta é causa de diminuição do § 1º. D) Homicídio em instituição de ensino é qualificadora, mas os demais elementos não são qualificadoras gerais do § 2º. E) A qualificadora etária é contra menor de 14 anos, não todo menor; a proteção a agentes públicos depende de nexo funcional. As alterações posteriores do Código foram conferidas no texto compilado e estão separadas da regra cobrada.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item33-homicidio-qualificado.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

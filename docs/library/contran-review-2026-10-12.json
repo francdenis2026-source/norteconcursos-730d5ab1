@@ -1,0 +1,498 @@
+{
+  "checked_at": "2026-10-12T06:29:20.002351+00:00",
+  "official_index": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes-contran",
+  "official_index_sha256": "c41a0334e9f9d2f35a82ae6f64d1e13166577efc80369876ea0225de6eae494a",
+  "catalog_rows": 1033,
+  "batch_resolutions": 50,
+  "current_guides": 42,
+  "historical_guides_excluded": [
+    1029,
+    1014,
+    1011,
+    1002,
+    992,
+    981,
+    979,
+    972
+  ],
+  "scope": "Objetos e aplicações temáticas dos atos listados; não revisão integral de todas as fichas/anexos ou de todas as resoluções do catálogo.",
+  "evidence": [
+    {
+      "number": 1031,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+      "sha256": "9f6d8d8c6e7b7996fce21326a229c9b262d45178907fff7bd9dd159ca5ba9b5a",
+      "checked_at": "2026-10-12T05:41:00.354827+00:00",
+      "characters": 22787,
+      "ok": true
+    },
+    {
+      "number": 1030,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10302026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10302026.pdf",
+      "sha256": "859f258a9fb32876ae829523a7fa6695928cffbfb7797a947c3a22faebe342f9",
+      "checked_at": "2026-10-12T05:40:50.807393+00:00",
+      "characters": 3704,
+      "ok": true
+    },
+    {
+      "number": 1029,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10292026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10292026.pdf",
+      "sha256": "bd55657e2beeb92e7a1e47e27213df7fb06fa5d0471bb5d479da47f2ba662b11",
+      "checked_at": "2026-10-12T05:40:50.178957+00:00",
+      "characters": 4080,
+      "ok": true
+    },
+    {
+      "number": 1028,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10282026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10282026.pdf",
+      "sha256": "cd3ca7475c7a2bfbbe7307e3838fadddf3068df48335a7dc93c16d72b252f10f",
+      "checked_at": "2026-10-12T05:40:51.957700+00:00",
+      "characters": 8775,
+      "ok": true
+    },
+    {
+      "number": 1027,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10272026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10272026.pdf",
+      "sha256": "ff396591cb2c185ba6e918241799cf84e2b78269094a7a5228222282b27efc75",
+      "checked_at": "2026-10-12T05:40:53.622054+00:00",
+      "characters": 110209,
+      "ok": true
+    },
+    {
+      "number": 1026,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10262026n.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10262026n.pdf",
+      "sha256": "ecf1e0b3a0ac10fda53170ff8db2acfc25aca4e613d2fbfe9af2089865f274ea",
+      "checked_at": "2026-10-12T05:40:53.912355+00:00",
+      "characters": 60496,
+      "ok": true
+    },
+    {
+      "number": 1025,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10252026c.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10252026c.pdf",
+      "sha256": "fa6ffc0346400e0ac5760bc663e0d6efc5e466dfc5819701f772db1754c09f9c",
+      "checked_at": "2026-10-12T05:40:54.055519+00:00",
+      "characters": 48486,
+      "ok": true
+    },
+    {
+      "number": 1024,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10242026c.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10242026c.pdf",
+      "sha256": "b79ac6eb4b82407b4cf7b881c3736e81b0e2480ef975eca7fbb4b9b7010337b7",
+      "checked_at": "2026-10-12T05:40:54.200777+00:00",
+      "characters": 5264,
+      "ok": true
+    },
+    {
+      "number": 1023,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+      "sha256": "24f8d7ad7cd934041db4b1f1d7a2c9c97880f1a525378cf150285831c6c3f89d",
+      "checked_at": "2026-10-12T05:41:02.973168+00:00",
+      "characters": 23375,
+      "ok": true
+    },
+    {
+      "number": 1022,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10222026c.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10222026c.pdf",
+      "sha256": "2547703494199728cee582c9f5717d83599c8ed610494f5c3942cea23779a7d2",
+      "checked_at": "2026-10-12T05:40:56.520516+00:00",
+      "characters": 28668,
+      "ok": true
+    },
+    {
+      "number": 1021,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10212026.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10212026.pdf",
+      "sha256": "066b2d37c42826a88da8605c347ceb1647a8f182110dc759d43e02b1af5fe9de",
+      "checked_at": "2026-10-12T05:40:55.608104+00:00",
+      "characters": 6987,
+      "ok": true
+    },
+    {
+      "number": 1020,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf",
+      "sha256": "b2bf0e60ba7e04b15adbc0199ad44cda4c089fec37bfbcf24f8874e61d7c65c0",
+      "checked_at": "2026-10-12T05:40:58.363261+00:00",
+      "characters": 151000,
+      "ok": true
+    },
+    {
+      "number": 1019,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10192025.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10192025.pdf",
+      "sha256": "1ba39e773e92eb205e0b0b2ef73d0d09830d006a77f2feade0b5e4560c2e4c3c",
+      "checked_at": "2026-10-12T05:40:58.653486+00:00",
+      "characters": 32346,
+      "ok": true
+    },
+    {
+      "number": 1018,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10182025.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10182025.pdf",
+      "sha256": "bb12c6512203b0bffdd4bd083e98bfcec135a8cdae23bbf85572aff8b674824b",
+      "checked_at": "2026-10-12T05:40:58.926565+00:00",
+      "characters": 22535,
+      "ok": true
+    },
+    {
+      "number": 1017,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10172024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10172024.pdf",
+      "sha256": "e5b45f660c1ef3f396d9ef91dbed06ffe735dcf0a45934844973e1b7d53d2ab5",
+      "checked_at": "2026-10-12T05:41:01.399546+00:00",
+      "characters": 33531,
+      "ok": true
+    },
+    {
+      "number": 1016,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10162024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10162024.pdf",
+      "sha256": "5a4f814731bc8a5ef82fd070094550d3bb9e7cedfa0d996462b63ffd664005a2",
+      "checked_at": "2026-10-12T05:41:00.575341+00:00",
+      "characters": 20589,
+      "ok": true
+    },
+    {
+      "number": 1015,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10152024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10152024.pdf",
+      "sha256": "bd7b0f6ce3d20cf067a3ceacbdafe8a66e4d6032b9348bcb728722cf9eec788a",
+      "checked_at": "2026-10-12T05:41:00.666434+00:00",
+      "characters": 6254,
+      "ok": true
+    },
+    {
+      "number": 1014,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10142024R.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10142024R.pdf",
+      "sha256": "538aaafa99ea31b2dbb354a3d148adb19d8660f92df20ef14c4f47a83307607f",
+      "checked_at": "2026-10-12T05:41:04.195631+00:00",
+      "characters": 43867,
+      "ok": true
+    },
+    {
+      "number": 1013,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10132024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10132024.pdf",
+      "sha256": "520d69ed12c645de1793e84651906059544d08a264181de8380ff0bacd246ca8",
+      "checked_at": "2026-10-12T05:41:09.914379+00:00",
+      "characters": 20040,
+      "ok": true
+    },
+    {
+      "number": 1012,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf",
+      "sha256": "d6ff6c688bdc5126ca8644f3dfe80181c36f8b310ae53808c1102abc1e71715b",
+      "checked_at": "2026-10-12T05:41:20.671793+00:00",
+      "characters": 9184,
+      "ok": true
+    },
+    {
+      "number": 1011,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10112024R2.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10112024R2.pdf",
+      "sha256": "d708cbdc808bc7aebd7587d6473feb15b15f6996c7576c2f858e0b53d8cae9c7",
+      "checked_at": "2026-10-12T05:41:03.366505+00:00",
+      "characters": 10023,
+      "ok": true
+    },
+    {
+      "number": 1010,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10102024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10102024.pdf",
+      "sha256": "12eb4684a6886b63584ccb3609ff890b3bc8a07a67646afb59d1786f67683fb6",
+      "checked_at": "2026-10-12T05:41:03.955950+00:00",
+      "characters": 3152,
+      "ok": true
+    },
+    {
+      "number": 1009,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+      "sha256": "2c19112a82bf6357dc8710dd5c00401b721a70022e7dd8386a264814e261a9a1",
+      "checked_at": "2026-10-12T05:41:06.117585+00:00",
+      "characters": 9684,
+      "ok": true
+    },
+    {
+      "number": 1007,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10072024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10072024.pdf",
+      "sha256": "57f980f5f150c46574db974e252b79d37fa1e5b31703e7fdce19f96c2da78d95",
+      "checked_at": "2026-10-12T05:41:04.636096+00:00",
+      "characters": 4832,
+      "ok": true
+    },
+    {
+      "number": 1006,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10062024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10062024.pdf",
+      "sha256": "cf1f0062b96826ddd5d8dc01896c48f707acaa66ed1f12ad60f5750b591e61ca",
+      "checked_at": "2026-10-12T05:41:05.234233+00:00",
+      "characters": 4677,
+      "ok": true
+    },
+    {
+      "number": 1005,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10052024.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10052024.pdf",
+      "sha256": "f6ca91db8cab012af92eceaff37a88070a754c51892ed063f2d9fa73c1bf7b35",
+      "checked_at": "2026-10-12T05:41:05.724766+00:00",
+      "characters": 4555,
+      "ok": true
+    },
+    {
+      "number": 1004,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10042023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10042023.pdf",
+      "sha256": "3939f616980d22d996b54159e4bd3696f688231d97e63df132b3bfda7ca8f7ff",
+      "checked_at": "2026-10-12T05:41:06.618141+00:00",
+      "characters": 8824,
+      "ok": true
+    },
+    {
+      "number": 1003,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10032023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10032023.pdf",
+      "sha256": "8e1c0e18924680565fff17585acda791d88607d46193227175be18d37950640d",
+      "checked_at": "2026-10-12T05:41:08.300695+00:00",
+      "characters": 2960,
+      "ok": true
+    },
+    {
+      "number": 1002,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10022023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10022023.pdf",
+      "sha256": "f678a7469c32e4ed5d8143717e85c77026477bcdbad04fa61902c06d139a1207",
+      "checked_at": "2026-10-12T05:41:07.187029+00:00",
+      "characters": 3512,
+      "ok": true
+    },
+    {
+      "number": 998,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9982023n.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9982023n.pdf",
+      "sha256": "5080daf230f28436c50efa1fd3c410a94bd4c890265b563fefa14fff6db8b43d",
+      "checked_at": "2026-10-12T05:41:07.583167+00:00",
+      "characters": 4986,
+      "ok": true
+    },
+    {
+      "number": 997,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9972023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9972023.pdf",
+      "sha256": "1dea17df18181cdd3f5b5e3e89d810424cd4dcfae453d5a3cd5ecbf64307af58",
+      "checked_at": "2026-10-12T05:41:08.264981+00:00",
+      "characters": 8139,
+      "ok": true
+    },
+    {
+      "number": 996,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf",
+      "sha256": "85d42b1b8697086ceab8a24ec018d97d0de4ace82bf94def86a9b8d267a39d9f",
+      "checked_at": "2026-10-12T05:41:08.623752+00:00",
+      "characters": 17593,
+      "ok": true
+    },
+    {
+      "number": 994,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9942023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9942023.pdf",
+      "sha256": "239ecdb10b99bc9d3740d72213b18e0b1c8ec3757a6961e1adf72a8c919af105",
+      "checked_at": "2026-10-12T05:41:08.698325+00:00",
+      "characters": 4328,
+      "ok": true
+    },
+    {
+      "number": 993,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023.pdf",
+      "sha256": "9e135fddd4fa3b6f897ec7836b9fdf991a5803770fc3b504bebfcecebb4d465f",
+      "checked_at": "2026-10-12T05:41:08.983122+00:00",
+      "characters": 5267,
+      "ok": true
+    },
+    {
+      "number": 992,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9922023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9922023.pdf",
+      "sha256": "bcabdc9e0bafd386714cc8163047738c9939580a27c50ef51c26f933b579d24e",
+      "checked_at": "2026-10-12T05:41:09.263173+00:00",
+      "characters": 4552,
+      "ok": true
+    },
+    {
+      "number": 991,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9912023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9912023.pdf",
+      "sha256": "d4c401bd5602309a0b90dbdbc3f3062a299ab4a375ec9961fc2f46373d87dcb8",
+      "checked_at": "2026-10-12T05:41:09.347609+00:00",
+      "characters": 5021,
+      "ok": true
+    },
+    {
+      "number": 990,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9902023.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9902023.pdf",
+      "sha256": "94cf746bcd6a20cf2702629c8174540d0a7874a2a86086d05604d50fbe2d5ec2",
+      "checked_at": "2026-10-12T05:41:09.662005+00:00",
+      "characters": 5720,
+      "ok": true
+    },
+    {
+      "number": 989,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9892022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9892022.pdf",
+      "sha256": "55a4e87fe08690f6e072143a978697661a48251ba2bcaaf1239a1683a70e4ab5",
+      "checked_at": "2026-10-12T05:41:09.842848+00:00",
+      "characters": 4403,
+      "ok": true
+    },
+    {
+      "number": 988,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9882022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9882022.pdf",
+      "sha256": "952301d5caa7b06d4870f51d171cb350c6de8b07e4c252fc948bb15c6fe36e3f",
+      "checked_at": "2026-10-12T05:41:10.073008+00:00",
+      "characters": 3896,
+      "ok": true
+    },
+    {
+      "number": 987,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9872022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9872022.pdf",
+      "sha256": "60b580906be5409fcb028401b1562a9dba177f9cbf05e74b376a3052ff993fa0",
+      "checked_at": "2026-10-12T05:41:10.633662+00:00",
+      "characters": 4498,
+      "ok": true
+    },
+    {
+      "number": 986,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9862022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9862022.pdf",
+      "sha256": "14c0219a48e40d9f4da31516d90f7c2b674722dada537f72a2fb77a792ab9f07",
+      "checked_at": "2026-10-12T05:41:10.795231+00:00",
+      "characters": 4746,
+      "ok": true
+    },
+    {
+      "number": 985,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf",
+      "sha256": "4b763952f62acd73f811ffe4084127b37502516ade23d90dca94e594af50c851",
+      "checked_at": "2026-10-12T05:41:11.217530+00:00",
+      "characters": 2850,
+      "ok": true
+    },
+    {
+      "number": 981,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9812022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9812022.pdf",
+      "sha256": "1f18cc908e2e3d44a79998a3ee87aac637d996fecba5a59235e20a5303ea8f58",
+      "checked_at": "2026-10-12T05:41:11.939703+00:00",
+      "characters": 3388,
+      "ok": true
+    },
+    {
+      "number": 979,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9792022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9792022.pdf",
+      "sha256": "8adb6d4cbc2ae5748867a7a9621c329afa143266acb371a75736f3ab41a0f526",
+      "checked_at": "2026-10-12T05:41:11.135799+00:00",
+      "characters": 7159,
+      "ok": true
+    },
+    {
+      "number": 977,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9772022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9772022.pdf",
+      "sha256": "ae80d5eb5663cf8187b8e05620365a6779389c7cebfad3e0406ba663bcf9f045",
+      "checked_at": "2026-10-12T05:41:12.739937+00:00",
+      "characters": 6543,
+      "ok": true
+    },
+    {
+      "number": 976,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9762022n2.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9762022n2.pdf",
+      "sha256": "6429055b83dd5eb5aa42fb0644bffc27db4467252085f785cf582e09b96c7d27",
+      "checked_at": "2026-10-12T05:41:11.537997+00:00",
+      "characters": 3092,
+      "ok": true
+    },
+    {
+      "number": 975,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9752022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9752022.pdf",
+      "sha256": "4b2b95a90325bdbbe42be07276ae16552e76a61344d822c4c8a41469253db61f",
+      "checked_at": "2026-10-12T05:41:12.511934+00:00",
+      "characters": 7404,
+      "ok": true
+    },
+    {
+      "number": 974,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9742022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9742022.pdf",
+      "sha256": "52314a5f0fc67d365c7afbd2dc06d38f11d0adc3953995c1383235c844018a5c",
+      "checked_at": "2026-10-12T05:41:13.268727+00:00",
+      "characters": 5269,
+      "ok": true
+    },
+    {
+      "number": 973,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9732022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9732022.pdf",
+      "sha256": "f4715ed8295b23030fb73c00a8c66675ab1321f28cdcd1c926260799e824eaaf",
+      "checked_at": "2026-10-12T05:41:13.150232+00:00",
+      "characters": 10618,
+      "ok": true
+    },
+    {
+      "number": 972,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9722022.pdf",
+      "fetched_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9722022.pdf",
+      "sha256": "1e95c5567469df1168a7b95afc2d19dc82716e8094a580356b09d2671e6173e3",
+      "checked_at": "2026-10-12T05:41:13.840259+00:00",
+      "characters": 12136,
+      "ok": true
+    }
+  ],
+  "supplementary_evidence": [
+    {
+      "id": "del277",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2772026.pdf",
+      "sha256": "82fa8136486e71b81bb652b355bb6297290fcb8a38bb41f1b28df230f6b92793",
+      "checked_at": "2026-10-12T05:49:00.013053+00:00"
+    },
+    {
+      "id": "ret1026",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10262026R.pdf",
+      "sha256": "60b60e60e50afff0d108d3a8f68171c1cd1782c7f2deebb6df84daed6b5b8fa3",
+      "checked_at": "2026-10-12T05:49:02.440039+00:00"
+    },
+    {
+      "id": "ret1021",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resoluo10212026R.pdf",
+      "sha256": "48a3587b86be62f56b21449a2065bf3eaf4983355c39c021650aa39b522acab7",
+      "checked_at": "2026-10-12T05:48:59.785416+00:00"
+    },
+    {
+      "id": "circular1026",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/circular022026.pdf",
+      "sha256": "3519f0ae4b168fdf39c528a1d8acc56dafbc6c1976d9909067623cfaff3486e0",
+      "checked_at": "2026-10-12T05:49:00.546732+00:00"
+    }
+  ],
+  "remaining_catalog_not_in_batch": 983
+}

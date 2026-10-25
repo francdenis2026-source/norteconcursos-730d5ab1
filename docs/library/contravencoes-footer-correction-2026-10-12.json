@@ -1,0 +1,135 @@
+{
+  "version": "2026-10-12-contravencoes-publication-footer",
+  "checked_at": "2026-10-12T19:53:47.987327+00:00",
+  "scope": "Separar exclusivamente local/data de assinatura e signatários anexados ao art. 72. Preservar integralmente regra de vigência e demais registros.",
+  "laws": [
+    {
+      "expected": {
+        "id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "slug": "contravencoes",
+        "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "source_sha256": "9210d2f83f90e6aa1ed2403fe963a916ec589c3963548ce0fa3db3751cd3c7da",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-contravencoes-revisao",
+        "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+        "overview": {
+          "intro": "Contravenção é uma espécie de infração penal com regras próprias. Compare território, tentativa e espécies de pena com o regime dos crimes.",
+          "alerts": "As regras gerais indicadas foram conferidas no texto atual. Alguns tipos da parte especial foram revogados ou substituídos ao longo do tempo; o módulo não republica contravenções antigas nem valida todo o catálogo original de 1941.",
+          "contest": "PCDF — Delegado — Edital 2026",
+          "chapters": [
+            {
+              "count": 17,
+              "title": "PARTE GERAL"
+            },
+            {
+              "count": 6,
+              "title": "PARTE ESPECIAL / CAPÍTULO I — DAS CONTRAVENÇÕES REFERENTES À PESSOA"
+            },
+            {
+              "count": 3,
+              "title": "PARTE ESPECIAL / CAPÍTULO II — DAS CONTRAVENÇÕES REFERENTES AO PATRIMÔNIO"
+            },
+            {
+              "count": 11,
+              "title": "PARTE ESPECIAL / CAPÍTULO III — DAS CONTRAVENÇÕES REFERENTES À INCOLUMIDADE PÚBLICA"
+            },
+            {
+              "count": 3,
+              "title": "PARTE ESPECIAL / CAPíTULO IV — DAS CONTRAVENÇÕES REFERENTES À PAZ PÚBLICA"
+            },
+            {
+              "count": 4,
+              "title": "PARTE ESPECIAL / CAPÍTULO V — DAS CONTRAVENÇÕES REFERENTES À FÉ PÚBLICA"
+            },
+            {
+              "count": 3,
+              "title": "PARTE ESPECIAL / CAPÍTULO VI — DAS CONTRAVENÇÕES RELATIVAS À ORGANIZAÇÃO DO TRABALHO"
+            },
+            {
+              "count": 13,
+              "title": "PARTE ESPECIAL / CAPÍTULO VII — DAS CONTRAVENÇÕES RELATIVAS À POLÍCIA DE COSTUMES"
+            },
+            {
+              "count": 4,
+              "title": "PARTE ESPECIAL / CAPÍTULO VIII — DAS CONTRAVENÇÕES REFERENTES À ADMINISTRAÇÃO PÚBLICA"
+            },
+            {
+              "count": 2,
+              "title": "DISPOSIÇÕES FINAIS"
+            }
+          ],
+          "objectives": [
+            "Separar regras gerais, territorialidade, tentativa e prisão simples.",
+            "Comparar todas as contravenções com redação ativa e seus elementos.",
+            "Identificar tipos revogados e diferenças frente aos crimes de legislação posterior."
+          ],
+          "current_units": 66,
+          "jurisprudence": [],
+          "excluded_units": 6,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+              "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais — texto oficial conferido",
+              "sha256": "9210d2f83f90e6aa1ed2403fe963a916ec589c3963548ce0fa3db3751cd3c7da"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "contravencoes"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "2e94194ce818853cd12d7053747be20073903a0230868d2970f288e37320d835",
+      "source_checked_at": "2026-10-12T16:18:18.943244+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "423b1e23-7f50-5e81-91af-e710bbecb88b",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-72",
+        "label": "Art. 72",
+        "chapter": "DISPOSIÇÕES FINAIS",
+        "position": 65,
+        "body_text": "Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.\n\nRio de Janeiro, 3 de outubro de 1941; 120º da Independência e 58º da República.\n\nGETULIO VARGAS.\n\nFrancisco Campos.",
+        "content_sha256": "916fecbfd58b36ddd465619b61fea1eddd85ea1fb34d266d2e546e41f51d4bb0",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.",
+      "content_sha256": "949acf27e94930bf15b6deeef82915ff41114d3ecce848efcb17af3a99adf852",
+      "moved_captions": [
+        "Rio de Janeiro, 3 de outubro de 1941; 120º da Independência e 58º da República.",
+        "GETULIO VARGAS.",
+        "Francisco Campos."
+      ]
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

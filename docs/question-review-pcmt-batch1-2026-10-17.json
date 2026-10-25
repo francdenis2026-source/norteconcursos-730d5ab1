@@ -1,0 +1,874 @@
+{
+  "checked_at": "2026-10-17T16:50:37.706Z",
+  "scope": "Six PCMT records, three physical questions (7,19,45) shared by two careers; not certification of the entire exam or historical syllabus.",
+  "reviewed_records": 6,
+  "unique_questions": 3,
+  "published_active": 6,
+  "preserved_other_pc_records": 2962,
+  "concurrent_changes": [],
+  "metadata": [
+    {
+      "table": "content_sources",
+      "planned_created": [
+        "5980a42c-020b-5b97-9e4e-418c39fa7c47"
+      ],
+      "planned_updated": [
+        "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "35c523d9-d59e-478d-b975-83b755bb639d"
+      ],
+      "concurrent_unrelated_changes": []
+    },
+    {
+      "table": "syllabus_editions",
+      "planned_created": [],
+      "planned_updated": [
+        "04dc75bb-eefe-44ca-99f6-a5c78bac332d",
+        "cc62e866-9796-47f5-a8b9-3fbaf86031af"
+      ],
+      "concurrent_unrelated_changes": []
+    },
+    {
+      "table": "syllabus_topics",
+      "planned_created": [
+        "1281d202-3241-5a5a-861c-195357c3ce25",
+        "f7c3488f-1d44-50bf-a4b7-06d8ea890749",
+        "6b2ca36b-726a-54ab-8e52-512524eaa14b",
+        "6ecfcba0-f520-586c-8f6e-4fb6ff06f5ed",
+        "4dfa4659-e9ed-5e63-8317-37f00585b1bf",
+        "840ac8d1-78d2-516d-ab91-c761af8444b8"
+      ],
+      "planned_updated": [],
+      "concurrent_unrelated_changes": []
+    }
+  ],
+  "original_figures_referenced": [
+    {
+      "number": 7,
+      "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+      "path": "outputs/pc-pending-review-2026-10-16/mt-next-charge7.png",
+      "sha256": "bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76",
+      "verified_at": "2026-10-17T16:45:06.519Z"
+    },
+    {
+      "number": 19,
+      "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+      "path": "outputs/pc-pending-review-2026-10-16/mt-next-diagrams19.png",
+      "sha256": "414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957",
+      "verified_at": "2026-10-17T16:45:08.986Z"
+    }
+  ],
+  "tests": {
+    "application_passed": 602,
+    "review_guards_passed": 44,
+    "source_workflow_passed": 10
+  },
+  "pc_status": {
+    "active": 2668,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 40,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+    "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "items": [
+    {
+      "id": "51cf6fce-fc77-4fb0-bb94-393a2a6efe08",
+      "item_number": 7,
+      "career": "Escrivão de Polícia",
+      "status": "active",
+      "answer": "C",
+      "source_page": 5,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [
+        {
+          "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+          "description": "Charge original: rede social em casa — questão 7"
+        }
+      ],
+      "before_sha256": "ce97a31b00587a08d486783e0335742dfdc8aab57947a4c86783445746d6f927",
+      "after_sha256": "6ecfd987c62693e1dcbb8f006e4abdbd1ade9e08adc9694382de5cd6c49baf50",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "4dfa4659-e9ed-5e63-8317-37f00585b1bf",
+        "review_note": "Gabarito definitivo: C. Em “o policial deteve o suspeito em SUA CASA”, o possessivo não identifica claramente o proprietário: a casa pode ser do policial ou do suspeito. A informação de que era tarde da noite não resolve essa referência. A charge usa outro duplo sentido: “rede social” pode lembrar plataformas digitais ou, no desenho, uma rede de descanso compartilhada pela família. O contexto visual seleciona o segundo sentido e produz humor.\nPara eliminar a ambiguidade da alternativa C: “o policial deteve o suspeito na residência do suspeito” ou “na residência do próprio policial”, conforme o sentido pretendido. A alternativa D usa vírgulas para localizar o ato de falar no refeitório; em E, “dele” retoma o policial, contrastando com a noiva.\nExemplo: “João encontrou Pedro em seu escritório” deixa a posse indefinida. “João encontrou Pedro no escritório de Pedro” esclarece o referente.\nTeste rápido — Acrescentar “ontem” à frase de João resolve de quem é o escritório? Não. O problema é a referência do possessivo, não a data.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual de comando, imagem e alternativas com PDF original, chave C confirmada com comunicado e programa do cargo. Figuras restauradas e verificadas no fluxo separado de contexto.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf"
+        ],
+        "figures": [
+          {
+            "number": 7,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-charge7.png",
+            "sha256": "bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76",
+            "verified_at": "2026-10-17T16:45:06.519Z"
+          }
+        ],
+        "original_answer_preserved": true,
+        "paper_page": 5,
+        "topic_page": 37
+      }
+    },
+    {
+      "id": "64ff2abd-5465-491f-b5fe-a38fa5fbe8db",
+      "item_number": 19,
+      "career": "Investigador de Polícia",
+      "status": "active",
+      "answer": "C",
+      "source_page": 10,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [
+        {
+          "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+          "description": "Diagramas originais A, B, C, D e E — questão 19"
+        }
+      ],
+      "before_sha256": "c898c31c3fc5c0d4913a57fa884aa0dfe8b78e8d6d75f84e6782342a4e526c44",
+      "after_sha256": "a8db33228d57a7deac73c9a1e1cb9fc9bfc8984188cc31cf489494ff65d80901",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "6b2ca36b-726a-54ab-8e52-512524eaa14b",
+        "review_note": "Gabarito definitivo: C. Todo delegado é bacharel: o conjunto D (delegados) está contido em B (bacharéis em Direito). Alguns delegados são políticos: existe pelo menos um elemento em D e P (políticos). Como esse elemento de D também está em B, conclui-se que algum bacharel é político. No diagrama C, o círculo menor dos delegados fica dentro do círculo dos bacharéis e intercepta o dos políticos.\nAs figuras A e E separam conjuntos que precisam ter interseção; B e D não representam a inclusão integral dos delegados entre os bacharéis. “Alguns” significa PELO MENOS UM: não autoriza concluir que todos os delegados são políticos, nem exige que existam delegados fora da política. Uma região desenhada sem marca de existência não prova que haja alguém nela. Também não se pode inverter “todo delegado é bacharel” para “todo bacharel é delegado”.\nExemplo: todos os gatos são mamíferos; alguns gatos são pretos. Logo, alguns mamíferos são pretos. Isso não afirma que todos os mamíferos sejam gatos.\nTeste rápido — Se todo D pertence a B e existe alguém em D e P, pode B e P ser vazio? Não; a mesma pessoa pertence a ambos.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual de comando, imagem e alternativas com PDF original, chave C confirmada com comunicado e programa do cargo. Figuras restauradas e verificadas no fluxo separado de contexto.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf"
+        ],
+        "figures": [
+          {
+            "number": 19,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-diagrams19.png",
+            "sha256": "414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957",
+            "verified_at": "2026-10-17T16:45:08.986Z"
+          }
+        ],
+        "original_answer_preserved": true,
+        "paper_page": 10,
+        "topic_page": 38
+      }
+    },
+    {
+      "id": "8d72d3f8-ab97-40fb-aaac-a49ec0ee539e",
+      "item_number": 45,
+      "career": "Investigador de Polícia",
+      "status": "active",
+      "answer": "A",
+      "source_page": 19,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [],
+      "before_sha256": "402c0e4fa27ef87509b7afdfc4e085e9ef8bf95e1f1d79a4de9ec0ea1c9b3fdb",
+      "after_sha256": "58ee1320976bd729d313085b7b526f9eebe98d5501738ac7737d2e087bd7ac31",
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo: A — assédio sexual. O ponto decisivo é o uso da ASCENDÊNCIA da função de professor para obter vantagem ou favorecimento sexual. No REsp 1.759.135/SP (Sexta Turma, julgamento em 13/08/2019; Informativo STJ 658), o STJ reconheceu que essa ascendência pode existir na relação professor-aluno; não se exige que a vítima seja empregada do agente. O poder de avaliar e interferir nas notas explica a relação de ascendência no caso narrado. Isso não significa que qualquer contato entre professor e aluno configure automaticamente o delito: devem existir os requisitos do art. 216-A do CP, inclusive o intuito sexual e o prevalecimento da função.\nB: importunação sexual não descreve o fundamento específico de ascendência funcional destacado pelo comando. C: sedução, antigo art. 217 do CP, foi revogado em 2005; não é resposta atual. D: não se deve inferir corrupção de menores apenas porque a vítima é adolescente. E: o comando descreve constrangimento com aproveitamento da função, não simplesmente ato obsceno em local público. Não há idade exata da vítima no enunciado para presumir automaticamente o requisito etário do estupro de vulnerável.\nExemplo: professor que se vale do poder de atribuir notas para exigir vantagem sexual pode praticar assédio sexual mesmo sem relação de emprego com a aluna. Em contraste, a simples existência da relação docente não dispensa provar os elementos da conduta.\nTeste rápido — Só chefes de empregados podem praticar o art. 216-A? Não. A ascendência inerente à função pode abranger a relação docente, conforme o julgado identificado do STJ.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "title": "CP compilado — art. 216-A; distinção do art. 215-A e revogação do antigo art. 217"
+          }
+        ],
+        "current_syllabus_topic_id": "1281d202-3241-5a5a-861c-195357c3ce25",
+        "legal_audit_completed": true,
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-17T16:42:50.873778+00:00",
+        "verified_at": "2026-10-17T16:42:50.873778+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Resposta A mantida com cotejo individual do caderno, definitivo composto, programa do cargo e REsp 1.759.135/SP no tribunal; não se infere idade inferior a 14 anos do simples termo adolescente.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=017243",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=017243",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-stj.html",
+            "sha256": "e4a9c5a206490aa05ca11285e89a1181f4b3d95c945ce9fe3d2768cdd4324f1e",
+            "captured_at": "2026-10-17T16:41:20.993Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          }
+        ],
+        "current_capture_limitation": "Nova tentativa do Planalto em 17/10 retornou 503; releitura do recorte na captura oficial de 16/10, cujo hash foi preservado. Não se declara nova captura bem-sucedida.",
+        "original_answer_preserved": true,
+        "full_edital_pages": [
+          38,
+          39
+        ],
+        "paper_page": 19,
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "b2bb7c7c-e1f4-4122-aa5c-88b1f91f828f",
+      "item_number": 19,
+      "career": "Escrivão de Polícia",
+      "status": "active",
+      "answer": "C",
+      "source_page": 10,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [
+        {
+          "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+          "description": "Diagramas originais A, B, C, D e E — questão 19"
+        }
+      ],
+      "before_sha256": "fcf16f05d4bc272eea2b9d6755db6ecce3bcb1890963fd7147b9ceca1d2e1953",
+      "after_sha256": "83321111366f1a62a9e79555f20bf1d27be4a7e51c128ba25b80e99717352804",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "840ac8d1-78d2-516d-ab91-c761af8444b8",
+        "review_note": "Gabarito definitivo: C. Todo delegado é bacharel: o conjunto D (delegados) está contido em B (bacharéis em Direito). Alguns delegados são políticos: existe pelo menos um elemento em D e P (políticos). Como esse elemento de D também está em B, conclui-se que algum bacharel é político. No diagrama C, o círculo menor dos delegados fica dentro do círculo dos bacharéis e intercepta o dos políticos.\nAs figuras A e E separam conjuntos que precisam ter interseção; B e D não representam a inclusão integral dos delegados entre os bacharéis. “Alguns” significa PELO MENOS UM: não autoriza concluir que todos os delegados são políticos, nem exige que existam delegados fora da política. Uma região desenhada sem marca de existência não prova que haja alguém nela. Também não se pode inverter “todo delegado é bacharel” para “todo bacharel é delegado”.\nExemplo: todos os gatos são mamíferos; alguns gatos são pretos. Logo, alguns mamíferos são pretos. Isso não afirma que todos os mamíferos sejam gatos.\nTeste rápido — Se todo D pertence a B e existe alguém em D e P, pode B e P ser vazio? Não; a mesma pessoa pertence a ambos.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual de comando, imagem e alternativas com PDF original, chave C confirmada com comunicado e programa do cargo. Figuras restauradas e verificadas no fluxo separado de contexto.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf"
+        ],
+        "figures": [
+          {
+            "number": 19,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-diagrams19.png",
+            "sha256": "414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957",
+            "verified_at": "2026-10-17T16:45:08.986Z"
+          }
+        ],
+        "original_answer_preserved": true,
+        "paper_page": 10,
+        "topic_page": 38
+      }
+    },
+    {
+      "id": "b33c4b54-c70c-4eaa-a794-d3b051de3059",
+      "item_number": 45,
+      "career": "Escrivão de Polícia",
+      "status": "active",
+      "answer": "A",
+      "source_page": 19,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [],
+      "before_sha256": "f8a6249ae94bc259a4b1c343ae5a019c0e6e935a3f3ce2f17ce437e51039af32",
+      "after_sha256": "a7739896fc553f76e698a6c5285eb5ce4b841de6156509e05193d2cf2f984254",
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo: A — assédio sexual. O ponto decisivo é o uso da ASCENDÊNCIA da função de professor para obter vantagem ou favorecimento sexual. No REsp 1.759.135/SP (Sexta Turma, julgamento em 13/08/2019; Informativo STJ 658), o STJ reconheceu que essa ascendência pode existir na relação professor-aluno; não se exige que a vítima seja empregada do agente. O poder de avaliar e interferir nas notas explica a relação de ascendência no caso narrado. Isso não significa que qualquer contato entre professor e aluno configure automaticamente o delito: devem existir os requisitos do art. 216-A do CP, inclusive o intuito sexual e o prevalecimento da função.\nB: importunação sexual não descreve o fundamento específico de ascendência funcional destacado pelo comando. C: sedução, antigo art. 217 do CP, foi revogado em 2005; não é resposta atual. D: não se deve inferir corrupção de menores apenas porque a vítima é adolescente. E: o comando descreve constrangimento com aproveitamento da função, não simplesmente ato obsceno em local público. Não há idade exata da vítima no enunciado para presumir automaticamente o requisito etário do estupro de vulnerável.\nExemplo: professor que se vale do poder de atribuir notas para exigir vantagem sexual pode praticar assédio sexual mesmo sem relação de emprego com a aluna. Em contraste, a simples existência da relação docente não dispensa provar os elementos da conduta.\nTeste rápido — Só chefes de empregados podem praticar o art. 216-A? Não. A ascendência inerente à função pode abranger a relação docente, conforme o julgado identificado do STJ.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "title": "CP compilado — art. 216-A; distinção do art. 215-A e revogação do antigo art. 217"
+          }
+        ],
+        "current_syllabus_topic_id": "6ecfcba0-f520-586c-8f6e-4fb6ff06f5ed",
+        "legal_audit_completed": true,
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-17T16:42:50.873778+00:00",
+        "verified_at": "2026-10-17T16:42:50.873778+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Resposta A mantida com cotejo individual do caderno, definitivo composto, programa do cargo e REsp 1.759.135/SP no tribunal; não se infere idade inferior a 14 anos do simples termo adolescente.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=017243",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=017243",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-stj.html",
+            "sha256": "e4a9c5a206490aa05ca11285e89a1181f4b3d95c945ce9fe3d2768cdd4324f1e",
+            "captured_at": "2026-10-17T16:41:20.993Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          }
+        ],
+        "current_capture_limitation": "Nova tentativa do Planalto em 17/10 retornou 503; releitura do recorte na captura oficial de 16/10, cujo hash foi preservado. Não se declara nova captura bem-sucedida.",
+        "original_answer_preserved": true,
+        "full_edital_pages": [
+          38,
+          39
+        ],
+        "paper_page": 19,
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "cdb8ef00-416e-42fd-a09e-528ff5f28d9e",
+      "item_number": 7,
+      "career": "Investigador de Polícia",
+      "status": "active",
+      "answer": "C",
+      "source_page": 5,
+      "eligible": true,
+      "alternatives": 5,
+      "figures": [
+        {
+          "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+          "description": "Charge original: rede social em casa — questão 7"
+        }
+      ],
+      "before_sha256": "2eb06f9aa042f15e65728f28b0d602f16ecc9936b5744f5c92203565f7fac8eb",
+      "after_sha256": "30c531282ffe3efce0e63525efcd97c50914a9013f6db67e153a91965fddb226",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "f7c3488f-1d44-50bf-a4b7-06d8ea890749",
+        "review_note": "Gabarito definitivo: C. Em “o policial deteve o suspeito em SUA CASA”, o possessivo não identifica claramente o proprietário: a casa pode ser do policial ou do suspeito. A informação de que era tarde da noite não resolve essa referência. A charge usa outro duplo sentido: “rede social” pode lembrar plataformas digitais ou, no desenho, uma rede de descanso compartilhada pela família. O contexto visual seleciona o segundo sentido e produz humor.\nPara eliminar a ambiguidade da alternativa C: “o policial deteve o suspeito na residência do suspeito” ou “na residência do próprio policial”, conforme o sentido pretendido. A alternativa D usa vírgulas para localizar o ato de falar no refeitório; em E, “dele” retoma o policial, contrastando com a noiva.\nExemplo: “João encontrou Pedro em seu escritório” deixa a posse indefinida. “João encontrou Pedro no escritório de Pedro” esclarece o referente.\nTeste rápido — Acrescentar “ontem” à frase de João resolve de quem é o escritório? Não. O problema é a referência do possessivo, não a data.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual de comando, imagem e alternativas com PDF original, chave C confirmada com comunicado e programa do cargo. Figuras restauradas e verificadas no fluxo separado de contexto.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf"
+        ],
+        "figures": [
+          {
+            "number": 7,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-charge7.png",
+            "sha256": "bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76",
+            "verified_at": "2026-10-17T16:45:06.519Z"
+          }
+        ],
+        "original_answer_preserved": true,
+        "paper_page": 5,
+        "topic_page": 37
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "8d72d3f8-ab97-40fb-aaac-a49ec0ee539e",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 19,
+        "verified_at": "2026-10-17T16:42:50.873778+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: a chave (assédio sexual) não pôde ser conferida: o enunciado completo e o julgado de referência não foram verificados contra o texto atual do Código Penal. | Revisão 17/10/2026, retida: Chave 'assédio sexual' (CP, art. 216-A) depende do julgado do STJ citado, não identificado nem conferido no tribunal.\nPágina física PDF 19 e chave A conferidas visualmente com caderno e gabarito UFMT composto com comunicado de 02/03/2022; resposta e extração bruta preservadas."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 45,
+        "official_answer": "A",
+        "page": 19,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "b33c4b54-c70c-4eaa-a794-d3b051de3059",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 19,
+        "verified_at": "2026-10-17T16:42:50.873778+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: a chave (assédio sexual) não pôde ser conferida: o enunciado completo e o julgado de referência não foram verificados contra o texto atual do Código Penal. | Revisão 17/10/2026, retida: Chave 'assédio sexual' (CP, art. 216-A) depende do julgado do STJ citado, não identificado nem conferido no tribunal.\nPágina física PDF 19 e chave A conferidas visualmente com caderno e gabarito UFMT composto com comunicado de 02/03/2022; resposta e extração bruta preservadas."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 45,
+        "official_answer": "A",
+        "page": 19,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "cdb8ef00-416e-42fd-a09e-528ff5f28d9e",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 5,
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de uma charge (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de charge (imagem) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 7,
+        "official_answer": "C",
+        "page": 5,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "64ff2abd-5465-491f-b5fe-a38fa5fbe8db",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 10,
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: as alternativas são diagramas (imagens) que o PDF não traz em texto. | Revisão 17/10/2026, retida: As alternativas são diagramas (imagens) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 19,
+        "official_answer": "C",
+        "page": 10,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "51cf6fce-fc77-4fb0-bb94-393a2a6efe08",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 5,
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de uma charge (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de charge (imagem) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 7,
+        "official_answer": "C",
+        "page": 5,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "b2bb7c7c-e1f4-4122-aa5c-88b1f91f828f",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 10,
+        "verified_at": "2026-10-17T16:46:11.958152+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: as alternativas são diagramas (imagens) que o PDF não traz em texto. | Revisão 17/10/2026, retida: As alternativas são diagramas (imagens) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada."
+      },
+      "evidence": {
+        "reason": "Página e resposta do próprio caderno comum aos cargos cotejadas visualmente; definitivo composto com comunicado que anula somente 2 e 10.",
+        "visually_verified": true,
+        "item_number": 19,
+        "official_answer": "C",
+        "page": 10,
+        "prova": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf"
+        },
+        "gabarito": {
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    }
+  ],
+  "visual_context_repairs": [
+    {
+      "id": "cdb8ef00-416e-42fd-a09e-528ff5f28d9e",
+      "patch": {
+        "question_text": "A ambiguidade é um recurso muito usado na linguagem poética e em textos publicitários para garantir maior expressividade ou humor. É um uso intencional. Na charge abaixo, o contexto desfaz a ambiguidade, criando uma situação humorística. (Disponível em: https://www.bing.com/images/search?q=ambiguidade. Acesso em: 10/12/21.) \n![Charge original: rede social em casa — questão 7](https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png)\n\nNa linguagem do dia a dia, é muito comum o uso de duplo sentido, o que prejudica o entendimento. Assinale a frase em que a ambiguidade NÃO foi desfeita.\n(A) Com febre e mal-estar, o soldado solicitou dispensa ao superior.\n(B) A ajudante de cozinha auxiliou o cozinheiro com a apresentação do prato.\n(C) Por ser tarde da noite, o policial deteve o suspeito em sua casa.\n(D) O comandante falou, no refeitório, que todos gozariam férias em janeiro.\n(E) O policial pediu à noiva que apanhasse o celular dele no carro.",
+        "context_review_required": false,
+        "source_page": 5,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de uma charge (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de charge (imagem) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada.\nContexto visual original restaurado, sem redesenho das figuras e sem mudança da resposta.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00"
+      },
+      "evidence": {
+        "reason": "Figura extraída do PDF oficial, revista visualmente e publicada com hash; alternativas da questão 19 referem-se aos diagramas originais identificados pelas letras.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 5,
+        "figures": [
+          {
+            "number": 7,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-charge7.png",
+            "sha256": "bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76",
+            "verified_at": "2026-10-17T16:45:06.519Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "64ff2abd-5465-491f-b5fe-a38fa5fbe8db",
+      "patch": {
+        "question_text": "Considere o seguinte argumento: Todo delegado é bacharel em direito. Alguns delegados são políticos. Portanto, algum bacharel em direito é político. Assinale a alternativa que apresenta o diagrama que melhor representa a relação entre as proposições desse argumento.\n![Diagramas originais A, B, C, D e E — questão 19](https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png)\n\n(A) Diagrama A da figura original acima.\n(B) Diagrama B da figura original acima.\n(C) Diagrama C da figura original acima.\n(D) Diagrama D da figura original acima.\n(E) Diagrama E da figura original acima.",
+        "context_review_required": false,
+        "source_page": 10,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: as alternativas são diagramas (imagens) que o PDF não traz em texto. | Revisão 17/10/2026, retida: As alternativas são diagramas (imagens) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada.\nContexto visual original restaurado, sem redesenho das figuras e sem mudança da resposta.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00"
+      },
+      "evidence": {
+        "reason": "Figura extraída do PDF oficial, revista visualmente e publicada com hash; alternativas da questão 19 referem-se aos diagramas originais identificados pelas letras.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 10,
+        "figures": [
+          {
+            "number": 19,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-diagrams19.png",
+            "sha256": "414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957",
+            "verified_at": "2026-10-17T16:45:08.986Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "51cf6fce-fc77-4fb0-bb94-393a2a6efe08",
+      "patch": {
+        "question_text": "A ambiguidade é um recurso muito usado na linguagem poética e em textos publicitários para garantir maior expressividade ou humor. É um uso intencional. Na charge abaixo, o contexto desfaz a ambiguidade, criando uma situação humorística. (Disponível em: https://www.bing.com/images/search?q=ambiguidade. Acesso em: 10/12/21.) \n![Charge original: rede social em casa — questão 7](https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png)\n\nNa linguagem do dia a dia, é muito comum o uso de duplo sentido, o que prejudica o entendimento. Assinale a frase em que a ambiguidade NÃO foi desfeita.\n(A) Com febre e mal-estar, o soldado solicitou dispensa ao superior.\n(B) A ajudante de cozinha auxiliou o cozinheiro com a apresentação do prato.\n(C) Por ser tarde da noite, o policial deteve o suspeito em sua casa.\n(D) O comandante falou, no refeitório, que todos gozariam férias em janeiro.\n(E) O policial pediu à noiva que apanhasse o celular dele no carro.",
+        "context_review_required": false,
+        "source_page": 5,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de uma charge (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de charge (imagem) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada.\nContexto visual original restaurado, sem redesenho das figuras e sem mudança da resposta.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00"
+      },
+      "evidence": {
+        "reason": "Figura extraída do PDF oficial, revista visualmente e publicada com hash; alternativas da questão 19 referem-se aos diagramas originais identificados pelas letras.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 5,
+        "figures": [
+          {
+            "number": 7,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-7-bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-charge7.png",
+            "sha256": "bab5ec2d8fa76a3c56aeaf15401ae2738a5319cdcbbac58d67126048cbec4d76",
+            "verified_at": "2026-10-17T16:45:06.519Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b2bb7c7c-e1f4-4122-aa5c-88b1f91f828f",
+      "patch": {
+        "question_text": "Considere o seguinte argumento: Todo delegado é bacharel em direito. Alguns delegados são políticos. Portanto, algum bacharel em direito é político. Assinale a alternativa que apresenta o diagrama que melhor representa a relação entre as proposições desse argumento.\n![Diagramas originais A, B, C, D e E — questão 19](https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png)\n\n(A) Diagrama A da figura original acima.\n(B) Diagrama B da figura original acima.\n(C) Diagrama C da figura original acima.\n(D) Diagrama D da figura original acima.\n(E) Diagrama E da figura original acima.",
+        "context_review_required": false,
+        "source_page": 10,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: as alternativas são diagramas (imagens) que o PDF não traz em texto. | Revisão 17/10/2026, retida: As alternativas são diagramas (imagens) sem transcrição visual conferida.\nPágina física e chave C cotejadas com documentos primários da UFMT, incluindo comunicado de 02/03/2022. Figura original recuperada em operação separada.\nContexto visual original restaurado, sem redesenho das figuras e sem mudança da resposta.",
+        "verified_at": "2026-10-17T16:46:11.958152+00:00"
+      },
+      "evidence": {
+        "reason": "Figura extraída do PDF oficial, revista visualmente e publicada com hash; alternativas da questão 19 referem-se aos diagramas originais identificados pelas letras.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 10,
+        "figures": [
+          {
+            "number": 19,
+            "url": "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/review-2026-10-16/pcmt-19-414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957.png",
+            "path": "outputs/pc-pending-review-2026-10-16/mt-next-diagrams19.png",
+            "sha256": "414e4ec0d5f521d88ba2258ab1cd659f9c3b22e1f6f97c3125faec237fbc0957",
+            "verified_at": "2026-10-17T16:45:08.986Z"
+          }
+        ]
+      }
+    }
+  ],
+  "source_workflow_scope": "Exact UFMT PJC2022 PDF routes and captured notice links, not a generic .gov/.edu approval. Final key requires separately reviewed 02/03/2022 notice annulling 2 and 10. Other providers retain their previous guards.",
+  "source_capture_limitations": "STJ recaptured on 17/10. New Planalto request returned 503; CP excerpts reread from hashed official 16/10 capture. No claim of a successful new Planalto capture or whole-Code certification.",
+  "application_changes": false,
+  "build": "No application change; production build had passed in the preceding main commit. Application tests repeated (602 passed); 44 review workflow tests passed, including the 10 source preparation/refresh tests.",
+  "edital_source": {
+    "kind": "edital",
+    "row": {
+      "id": "5980a42c-020b-5b97-9e4e-418c39fa7c47",
+      "source_type": "edital",
+      "title": "Edital nº 001/2022-SEPLAG/SESP/MT — Escrivão e Investigador — programa oficial",
+      "issuer": "SESP/MT / UFMT",
+      "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+      "published_on": "2022-01-05",
+      "checked_at": "2026-10-17T16:42:50.873778+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte documental histórica do programa dos dois cargos, não prova de vigência atual de toda a legislação. Recorte Direito Penal conferido nas páginas PDF 38–39; retificação 001/2022, página PDF 12, altera Legislação Penal Especial, não este recorte. SHA-256 34c3ec622ca116b11b3299719ef3cf9adc2f8c838aa0e5c9fe6a88d40f16352c. Retificação SHA-256 9ba63a8c44de9822bc3765d2c6fa83bda8171e78a1ce1b4623834b72d492d341."
+    },
+    "evidence": {
+      "pdf_path": "outputs/pc-pending-review-2026-10-16/resume-mt-edital-0.pdf",
+      "sha256": "34c3ec622ca116b11b3299719ef3cf9adc2f8c838aa0e5c9fe6a88d40f16352c",
+      "visually_verified": true,
+      "catalog_url": "https://www.concursos.ufmt.br/Portal/noticias.asp?NOTICIA=4864",
+      "catalog_path": "outputs/pc-pending-review-2026-10-16/resume-mt-news-opening.html",
+      "catalog_sha256": "0aa551ceb653ad7dfdc0c03b8092673efc874db9840e0d37abb06e449181bcb1"
+    }
+  },
+  "source_metadata_refresh": [
+    {
+      "kind": "prova",
+      "expected": {
+        "id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "source_type": "outro",
+        "title": "Prova objetiva - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "issuer": "UFMT",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "published_on": null,
+        "checked_at": "2026-10-14T00:28:05.091824+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Caderno oficial único (Escrivão e Investigador) do Edital 001/2022-SEPLAG/SESP/MT, publicado pela UFMT em 20/02/2022; gabarito definitivo = preliminar com as questões 2 e 10 anuladas."
+      },
+      "row": {
+        "id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "source_type": "outro",
+        "title": "Prova objetiva - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "issuer": "UFMT",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "published_on": null,
+        "checked_at": "2026-10-17T16:42:50.873778+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Caderno oficial único (Escrivão e Investigador) do Edital 001/2022-SEPLAG/SESP/MT, publicado pela UFMT em 20/02/2022; gabarito definitivo = preliminar com as questões 2 e 10 anuladas.\nReleitura individual em 17/10/2026 das capturas oficiais UFMT; SHA-256 b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78. Caderno único dos dois cargos. Página PDF 19 (página impressa 17) e resposta A do item 45 cotejadas visualmente."
+      },
+      "evidence": {
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "visually_verified": true,
+        "catalog_url": "https://www.concursos.ufmt.br/Portal/noticias.asp?NOTICIA=5064",
+        "catalog_path": "outputs/pc-pending-review-2026-10-16/resume-ufmt-news5064.html",
+        "catalog_sha256": "151bf846c02c9905f64705ccc19bdd8f89a1dd6e783f278133fdfce3b4facce2"
+      }
+    },
+    {
+      "kind": "gabarito",
+      "expected": {
+        "id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_type": "outro",
+        "title": "Gabarito oficial definitivo - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "issuer": "UFMT",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+        "published_on": null,
+        "checked_at": "2026-10-14T00:28:05.506306+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Gabarito definitivo publicado pela banca; X = questão anulada."
+      },
+      "row": {
+        "id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_type": "outro",
+        "title": "Gabarito oficial definitivo - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "issuer": "UFMT",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+        "published_on": null,
+        "checked_at": "2026-10-17T16:42:50.873778+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nReleitura individual em 17/10/2026 das capturas oficiais UFMT; SHA-256 cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58. Caderno único dos dois cargos. Página PDF 19 (página impressa 17) e resposta A do item 45 cotejadas visualmente. O PDF da URL é PRELIMINAR. O definitivo resulta de sua leitura conjunta com o comunicado oficial de 02/03/2022, que anula 2 e 10, mantendo as demais letras; item 45 não alterado. Confirmação SHA-256 1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774."
+      },
+      "evidence": {
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+        "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58",
+        "visually_verified": true,
+        "catalog_url": "https://www.concursos.ufmt.br/Portal/noticias.asp?NOTICIA=5064",
+        "catalog_path": "outputs/pc-pending-review-2026-10-16/resume-ufmt-news5064.html",
+        "catalog_sha256": "151bf846c02c9905f64705ccc19bdd8f89a1dd6e783f278133fdfce3b4facce2",
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    }
+  ]
+}

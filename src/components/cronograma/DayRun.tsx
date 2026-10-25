@@ -1,3 +1,5 @@
+import { platformNow } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
 import { Check, ExternalLink, FastForward, Pause, Play, Plus, SkipForward, X } from "lucide-react";
@@ -100,7 +102,7 @@ export function DayRun({
     }
     return initial(steps);
   });
-  const [now, setNow] = React.useState(() => Date.now());
+  const [now, setNow] = React.useState(() => platformNow());
   const [logging, setLogging] = React.useState(false);
   const [qtde, setQtde] = React.useState("");
   const [acertos, setAcertos] = React.useState("");
@@ -114,7 +116,7 @@ export function DayRun({
     }
   }, [key, run]);
   React.useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 250);
+    const id = setInterval(() => setNow(platformNow()), 250);
     return () => clearInterval(id);
   }, []);
 
@@ -155,13 +157,13 @@ export function DayRun({
     } catch {
       /* ignora */
     }
-    setRun((r) => ({ ...r, endsAt: Date.now() + r.left * 1000 }));
+    setRun((r) => ({ ...r, endsAt: platformNow() + r.left * 1000 }));
   };
   const pause = () =>
     setRun((r) => ({
       ...r,
       endsAt: null,
-      left: Math.max(0, Math.ceil(((r.endsAt ?? Date.now()) - Date.now()) / 1000)),
+      left: Math.max(0, Math.ceil(((r.endsAt ?? platformNow()) - platformNow()) / 1000)),
     }));
   const add5 = () =>
     setRun((r) => (r.endsAt ? { ...r, endsAt: r.endsAt + 300_000 } : { ...r, left: r.left + 300 }));
@@ -210,13 +212,13 @@ export function DayRun({
     "simulado",
     "redacao",
   ]);
-  const clock = new Date(now).toLocaleTimeString("pt-BR", {
+  const clock = acreDate(now).toLocaleTimeString("pt-BR", {
     timeZone: "America/Rio_Branco",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
   });
-  const weekday = new Date(`${dateKey}T12:00:00Z`).toLocaleDateString("pt-BR", {
+  const weekday = acreDate(`${dateKey}T12:00:00Z`).toLocaleDateString("pt-BR", {
     weekday: "long",
     day: "2-digit",
     month: "long",
@@ -267,7 +269,7 @@ export function DayRun({
             </span>
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/25">
               <div
-                className="h-full rounded-full bg-white transition-all"
+                className="h-full rounded-full bg-white transition-[width]"
                 style={{ width: `${studySteps ? (100 * doneSteps) / studySteps : 0}%` }}
               />
             </div>
@@ -335,7 +337,7 @@ export function DayRun({
                     {step.topic && (
                       <p
                         className={cn(
-                          "rounded-lg border-l-4 bg-muted/50 p-3 text-sm font-semibold",
+                          "rounded-lg border-l bg-muted/50 p-3 text-sm font-semibold",
                           dc?.border,
                         )}
                       >

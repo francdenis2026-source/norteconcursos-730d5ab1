@@ -1,0 +1,960 @@
+{
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "profile": "vertical-bands-and-columns-v2",
+  "pages": 510,
+  "recovered_candidates": 64,
+  "recovered_by_subject": {
+    "Língua Portuguesa": 8,
+    "História do Brasil": 1,
+    "História Mundial": 1,
+    "Política Internacional": 20,
+    "Direito Processual Civil": 1,
+    "Língua Inglesa": 6,
+    "Economia": 3,
+    "Contabilidade": 24
+  },
+  "items": [
+    {
+      "id": "63053ccb4bc180af8fd4aa11d045dc2327a5060bd54dc1c5bea6e8ac16b7755f",
+      "source_key": "p22:c1:line2408:item2",
+      "source_page": 22,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "00a47b88294ab8d422d39a0c92e6718dba25b5d5269e328e31e3255725b5846b",
+      "source_key": "p22:c1:line2408:item3",
+      "source_page": 22,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "faecdeea016f4375b82ba31f6389f6720473967f114b6b2ac515cd21a7af4bd6",
+      "source_key": "p22:c1:line2408:item4",
+      "source_page": 22,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "64be0e6239c501dd09a8cbe64c9fa41ac8a1b997fbff6b013068ae19870a5c3e",
+      "source_key": "p49:c2:line6085:item1",
+      "source_page": 49,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "9011eca08ffc0f829f1218957a3d06da7edcc083e9a707d65809412113ff2bf4",
+      "source_key": "p49:c2:line6085:item2",
+      "source_page": 49,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "80b32f8d0820e8e013899aba69c8ca75de716c05132775a1ae5da22b2f8685a1",
+      "source_key": "p49:c2:line6085:item3",
+      "source_page": 49,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "aee55ee28eb89a0c6ff0ac160547bb318b221cebd72102a3b2741abc7830a02f",
+      "source_key": "p49:c2:line6085:item4",
+      "source_page": 49,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "a01bc4bd68f5eea197a0fe2783a8112d3301a3d6135c2ab16e1eafd96211c22e",
+      "source_key": "p49:c2:line6085:item5",
+      "source_page": 49,
+      "discipline": "Língua Portuguesa"
+    },
+    {
+      "id": "f2d76c7ed4bb5d6dce665628d6c6f8c2f4983b62ffe19b3d98f05a238472d25a",
+      "source_key": "p91:c1:line11075:itemsingle",
+      "source_page": 91,
+      "discipline": "História do Brasil"
+    },
+    {
+      "id": "94946134cf0cb48f7e4bb1248376f66b88a81c56e3bab818395980dbf2c58065",
+      "source_key": "p133:c1:line16971:itemsingle",
+      "source_page": 133,
+      "discipline": "História Mundial"
+    },
+    {
+      "id": "633917139937c468130afe01c82512737eabbbadc7e523f81ace5ef9c611c05a",
+      "source_key": "p184:c2:line24135:item1",
+      "source_page": 184,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "86a90201749166883bdcce63f120567500f43c64ec07ffa828b4e21554fe62b3",
+      "source_key": "p184:c2:line24135:item2",
+      "source_page": 184,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "f76d60db9a4ddd60439a48cff20170dd89c25fb930b6b164d3711d65db8e805d",
+      "source_key": "p184:c2:line24135:item3",
+      "source_page": 184,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "04d71af16d9aae72d961d691832d75dc684ba392ac1f1af5ba7e2a590e2deec8",
+      "source_key": "p184:c2:line24135:item4",
+      "source_page": 184,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "d343141c811f2b5b8b5746134890ea8f4f12723b3cbbf0da8327433e31052dad",
+      "source_key": "p204:c2:line27012:item1",
+      "source_page": 204,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "420890e62adf87bcf270fe8e4e0b12d2fdd18f4170b48e1d345b2af7dcf831b4",
+      "source_key": "p204:c2:line27012:item2",
+      "source_page": 204,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "a3bdeb5f15606dc0ca1e6e29d612c648f41b8903384754ad5fa750cf994a6044",
+      "source_key": "p204:c2:line27012:item3",
+      "source_page": 204,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "23acc0a8fec39a7aff89f700c287cc142fcbae10317210586a637277f68bc01e",
+      "source_key": "p206:c2:line27289:item1",
+      "source_page": 206,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "09a3bc02391ad23d8ef437fe0810494ecdb038022ce990cf0e74b61f58d571f1",
+      "source_key": "p206:c2:line27289:item2",
+      "source_page": 206,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "1013c334b9384b22403581069d58f4f593eac473a9c8029ac001e2496029b401",
+      "source_key": "p206:c2:line27289:item3",
+      "source_page": 206,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "1d2556b487685499d6c9cd976c7412c39ab4b14bf517f252c976d6419589c97d",
+      "source_key": "p209:c2:line27751:item1",
+      "source_page": 209,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "9397f86060b6e6963a1b338b9c16d72517467d74a35df769535612c94288a35e",
+      "source_key": "p209:c2:line27751:item2",
+      "source_page": 209,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "666207a5d0b461fbd5a9f666adb47741097910c94be9bb87f935a8bf43c070bd",
+      "source_key": "p209:c2:line27751:item3",
+      "source_page": 209,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "97d6f175bab453d92d058a62e00d6e2a830b10ad948966c6ee4cdf34bbeda006",
+      "source_key": "p209:c2:line27751:item4",
+      "source_page": 209,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "583ab160aceba38b2e37343c7f8674ea77f4373b9cc11268246115c20c16fb1c",
+      "source_key": "p211:c2:line28045:item1",
+      "source_page": 211,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "8eb943026969b113d4ad102ff01cee5b4e13cf7ef2024b9348e29fa4f3eb6e11",
+      "source_key": "p211:c2:line28045:item2",
+      "source_page": 211,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "160f72c55229684ddf767ca038ab976c0f2b449ccf9b4d311a21a69119b45616",
+      "source_key": "p211:c2:line28045:item3",
+      "source_page": 211,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "c5d3c25028f2e0c73cb2cca61a375a5df90796a9184bd8f3233a769ef845ffb4",
+      "source_key": "p215:c2:line28600:item1",
+      "source_page": 215,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "4c73774a195382dc64ed149075c6687e10132776d05017eaf0e64f7b37bd9052",
+      "source_key": "p215:c2:line28600:item2",
+      "source_page": 215,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "7f990003eb27e31e896ba3b87e185bdf8b97d74b565873ea98918268b2e38c4e",
+      "source_key": "p215:c2:line28600:item3",
+      "source_page": 215,
+      "discipline": "Política Internacional"
+    },
+    {
+      "id": "be14fea9b1de08d0f58bf93115662138021479e5c72b34591889d7835ea5e1ce",
+      "source_key": "p306:c2:line40945:itemsingle",
+      "source_page": 306,
+      "discipline": "Direito Processual Civil"
+    },
+    {
+      "id": "d69187ae045000032395c8e68502fd38af9d2418623219c510396bc050584400",
+      "source_key": "p385:c1:line51745:item5",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "b0aa829495220f0558e2c299e1adc32810a0dcf0cc6bb346df65781181a9b315",
+      "source_key": "p385:c1:line51745:item6",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "35ab6ab2a96c83fdec060bb6dbf931a51fe7d4f51765020cbefc2ed3effa6776",
+      "source_key": "p385:c1:line51745:item7",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "54a8147d1cb21e9c540269f8af76126309933bbcd4913ad53839b98984dabd41",
+      "source_key": "p385:c1:line51745:item8",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "23a8ec5d483c21f0c93b17a80c3fae7ab46ffa91eafbaeaff351acbae852f78c",
+      "source_key": "p385:c1:line51745:item9",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "0c2795ae128623746b5bba0d9422c4a062646865f709bd6fcef51f3132aa28cf",
+      "source_key": "p385:c1:line51745:item10",
+      "source_page": 385,
+      "discipline": "Língua Inglesa"
+    },
+    {
+      "id": "5ae5f3dda226b0de7c397d9679e48777a7806983ea1c24528fcb81c2d4762811",
+      "source_key": "p408:c2:line54524:item1",
+      "source_page": 408,
+      "discipline": "Economia"
+    },
+    {
+      "id": "5a3a66ef010203840eb7819ca43f411984972d2c84bfdc47a8907db1779603df",
+      "source_key": "p408:c2:line54524:item2",
+      "source_page": 408,
+      "discipline": "Economia"
+    },
+    {
+      "id": "fad18cd57658d680c29ff507c87ac59b4b4d863d5a73fe606e330ee9935e1dae",
+      "source_key": "p408:c2:line54524:item3",
+      "source_page": 408,
+      "discipline": "Economia"
+    },
+    {
+      "id": "6fe913c8c97b07b9aed6e3f88f1f35f65a72d323e605a7d35bc36930d72cb9d6",
+      "source_key": "p422:c1:line56271:item2",
+      "source_page": 422,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "730cffd3468dc0ee81d840e7c0473f3c7e1e8bb8d737508dfea41296b4a5a03e",
+      "source_key": "p422:c1:line56271:item3",
+      "source_page": 422,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "379bff3e87d0346a330f9099ec9908e369002af71192e30896359ed6b7f5f8f8",
+      "source_key": "p429:c2:line57128:item1",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "b200daff8719d6f513604148c9d479d3e136e5280e9bc586108309f8900f1814",
+      "source_key": "p429:c2:line57128:item2",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "468607b46dfab72f797fea6ce5246a37041cec6f341e01641abd0761c3dd3dae",
+      "source_key": "p429:c2:line57128:item3",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "91938f3a35e4c722596fb58ffccf93467d1ba62f20b24f86849daba1f829fabe",
+      "source_key": "p429:c2:line57128:item4",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "8c3b92e5d9dfaaff2b354c4a82a145317b7be74cc5bd8689df7f068e175b3713",
+      "source_key": "p429:c2:line57128:item5",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "a8e91954284ea31dd67d419d8fcaac224972e71351abb168f9af5213db1ab758",
+      "source_key": "p429:c2:line57128:item6",
+      "source_page": 429,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "048eba5048b6fa527d78b878475be2e8c0729ee81c9c1d120a529ed7d038e8ec",
+      "source_key": "p432:c1:line57435:item1",
+      "source_page": 432,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "7d4dc3b2eec2810a364eaf8646865cdef33efe148b26d91d9d620ec35b7811e5",
+      "source_key": "p432:c1:line57435:item2",
+      "source_page": 432,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "226d7e4fa437349290612f33f77dabe8b566c40cdfcf397a46a8de35b8163e8e",
+      "source_key": "p432:c1:line57435:item3",
+      "source_page": 432,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "a93b22192e3a74aac38fd7a9f25ec7985a831ace05a817b5d3e1530187a4736a",
+      "source_key": "p432:c1:line57435:item4",
+      "source_page": 432,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "060ec1965040db9257be06a74a0d5f74e9092d6ff9d50c4ea31d9f09b0a1ca4a",
+      "source_key": "p441:c1:line58511:item2",
+      "source_page": 441,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "0e9f823fca77b6d57ac4d8e43011b23696331621a23f8106ecc2891111be9e3e",
+      "source_key": "p441:c1:line58511:item3",
+      "source_page": 441,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "3d0e7fe6149bc8a5ffa87485cb7cc2d962d1ded8fb9d8fc0f9deb1bd89cb2d39",
+      "source_key": "p454:c1:line60168:item1",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "e9b52b8734129c8d77994cf75d676521c5c681865c42ced2264bbcb54f7ec959",
+      "source_key": "p454:c1:line60168:item2",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "2d0530d57429ccc1d50ef5d6d53f4a9a46f3c8efaa489f8300eea8ff56e0feec",
+      "source_key": "p454:c1:line60168:item3",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "d31c2c25ecceeb87d9b7037369fafd9ab3d66d537a027475d20b3533cc2a9225",
+      "source_key": "p454:c1:line60168:item4",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "e9e5e196f55f8bd471ede76e149de15dba2ae61c2ab1ff1f11bab9a0472ca955",
+      "source_key": "p454:c1:line60168:item5",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "ac0b136c71fc6f11b2183c8bf4c4fcdd9747f01be199b2b5db63fd2e16726a57",
+      "source_key": "p454:c1:line60168:item6",
+      "source_page": 454,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "5dc0db9f48b4de14f2a6aeaa37305331af9e5d63b1e41420341a07ee58402457",
+      "source_key": "p457:c1:line60507:item1",
+      "source_page": 457,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "8190c11f7e7c930666625ba4298a2db4492ceaad7d616e1627e5060e388f43de",
+      "source_key": "p457:c1:line60507:item2",
+      "source_page": 457,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "613899c1c8817b4b9635ac7025c3506fbc1bc6b2e12fca25aa475a54527b0a45",
+      "source_key": "p460:c1:line60994:item3",
+      "source_page": 460,
+      "discipline": "Contabilidade"
+    },
+    {
+      "id": "cd2e9afa1ab012a4f864bbf3ca7e2ed128c68faebfe997b25820415c31c0fed1",
+      "source_key": "p460:c1:line60994:item4",
+      "source_page": 460,
+      "discipline": "Contabilidade"
+    }
+  ],
+  "existing_text_diagnostics": [
+    {
+      "candidate_id": "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d",
+      "source_page": 18,
+      "source_key": "p18:c1:line1825:itemsingle"
+    },
+    {
+      "candidate_id": "f0b3e67b2fc6011db3f8d376530610158c930a666a524a06fdc60f42ef8c10fd",
+      "source_page": 255,
+      "source_key": "p255:c2:line33908:item4"
+    },
+    {
+      "candidate_id": "654a51d53e7f0e90d3e4f5311deec89490cd6ee42a0f745f698ae6c6c8341f88",
+      "source_page": 260,
+      "source_key": "p260:c1:line34526:item1"
+    },
+    {
+      "candidate_id": "3b6b7b73d8ef9ea58df2e348f4300ed7c93b2195f498a63bbee8afc683ce9472",
+      "source_page": 380,
+      "source_key": "p380:c1:line51074:item3"
+    },
+    {
+      "candidate_id": "45368699089922e889c09c578b0835b5f2165e43efb9623c48cde70c09aeb9a1",
+      "source_page": 385,
+      "source_key": "p385:c1:line51745:item4"
+    },
+    {
+      "candidate_id": "4e8d108cd6217326c60e0b739abdbc30e3cd78560b6aa9a98aaa90126ce2246d",
+      "source_page": 391,
+      "source_key": "p391:c1:line52413:item2"
+    },
+    {
+      "candidate_id": "1668b6b48d96cbd202316972f80339294ace5f47d632019f297925d94b645448",
+      "source_page": 397,
+      "source_key": "p397:c2:line53185:itemsingle"
+    },
+    {
+      "candidate_id": "7d00d02ac68190f6bf617cd7a36aad7d6f74e8f39241cad5f43d398214e7af44",
+      "source_page": 451,
+      "source_key": "p451:c1:line59922:item2"
+    }
+  ],
+  "answer_key_diagnostics": [
+    {
+      "candidate_id": "3f7a7ea7ce791d8961fe1991028a4165e512623bebc90d7c5134acb47e8c49d4",
+      "source_page": 5,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"E\""
+    },
+    {
+      "candidate_id": "4410679921a9d6a6dbeba3e96d3e0420b40f55e23831a1f90aabe58ce013f378",
+      "source_page": 14,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"E\""
+    },
+    {
+      "candidate_id": "bd296a692ade246a701ba96847edaa2395fd3095756ce40c4c2e8cc564ce6705",
+      "source_page": 14,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"E\""
+    },
+    {
+      "candidate_id": "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d",
+      "source_page": 18,
+      "old_answer": null,
+      "new_answer": "D",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"D\""
+    },
+    {
+      "candidate_id": "f3abba6e67c53df961573e20a8aafa725e137ac477600a471166d1d3f71234ef",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "64631f55a453816f414a193eb6cb973f689539e2ee227b57d6b576e8fc1a42ee",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "6322eb3bd426e15a9c23a021430867151ceac90d88d2f48f551fa624f8187f63",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "a83284bcb27d629c937ea61e5a24edcc0045c0eda67036d10b2c25c6d064049b",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "42646667c9c1f23d7b13ca5475a072ae1533779ca5102ff83c0f89e84f37120a",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "148d2f826967ba3b031a87bd8696a58a641848cf514b8827a6674cc190097484",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "7499bdb22e4eed2067e6adb872e79110781443473d9fc0218e81969d64f91566",
+      "source_page": 22,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3C, 4E, 5C, 6C, 7E"
+    },
+    {
+      "candidate_id": "7eee0b9a3aa0464f0730496d9249dc13ae652e38704dd09ba1400b230c62eb48",
+      "source_page": 32,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2 Anulada, 3E, 4C"
+    },
+    {
+      "candidate_id": "e545db407febdbf61c2dc67df5bc5c3a4a66ce3b0b29fb0942d06152b511fd50",
+      "source_page": 82,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"E”."
+    },
+    {
+      "candidate_id": "cbf4d046a4ca4b31340abaadcf433a88b6d880b6bc4575b9579deadbfbfb0699",
+      "source_page": 83,
+      "old_answer": "E",
+      "new_answer": "A",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito \"A”"
+    },
+    {
+      "candidate_id": "71976060c74bab42c33378c68598ee60f17ab929261515fbf01328d0ac46a2fb",
+      "source_page": 106,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1 Anulada, 2E, 3C, 4E"
+    },
+    {
+      "candidate_id": "39b324e2df814197d81e294bdbd40fc25f01becf9c9285217e5e8d756eae7b77",
+      "source_page": 132,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4E"
+    },
+    {
+      "candidate_id": "06fb07c5d61dee69169ac97e4580702efdfbe13c3e795153ec15c7193b979648",
+      "source_page": 132,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4E"
+    },
+    {
+      "candidate_id": "433b508c13404d3916b591f385b88cbca037949b5da26cdd15e0c4c4f7ce3130",
+      "source_page": 132,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4E"
+    },
+    {
+      "candidate_id": "6968164680c6c7b35f25ef36c8d40a0c7a51ba33f8ea92016f62425e50d86948",
+      "source_page": 132,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4E"
+    },
+    {
+      "candidate_id": "a9365652c68a4d7db9371976e74ba97be10f83d9e3c9363164c148c7716edebf",
+      "source_page": 146,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3ANULADA, 4E"
+    },
+    {
+      "candidate_id": "b4b54aeb96cf8ced8b89a0c06859faaa8d553785afc45be57d645574526a50b0",
+      "source_page": 146,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3ANULADA, 4E"
+    },
+    {
+      "candidate_id": "6bad35cf6e2b6c88011c51ebc7851c570fc5f0cbc8694794498079d526728f3f",
+      "source_page": 175,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2E, 3E, 4E, 5ANULADA"
+    },
+    {
+      "candidate_id": "da8770e8ad16ce61644dbb1bfba6731142c9f64cc3fd0432b87cbbc1a8676e56",
+      "source_page": 179,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2C, 3ANULADA, 4C, 5C"
+    },
+    {
+      "candidate_id": "18d46c96380a70fdf9f753925db9355d31e81912f68dd7dd45abf4e04aba8f06",
+      "source_page": 180,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1, 2, 3 e 4 ANULADAS"
+    },
+    {
+      "candidate_id": "2b7a9ad7a155bc9d1aa6d3d32fb0a662dae58b74ce7ae99d45bbc150efc5127f",
+      "source_page": 187,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2E, 3ANULADA, 4E"
+    },
+    {
+      "candidate_id": "2affababc9b2a520c0b94ac86a76f4c47317ecb1daffdda5c680829f838ae769",
+      "source_page": 201,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "43f9f2c14bff051f36e4f39744cdff46ed18e041637693fe80e09d3535950744",
+      "source_page": 201,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "07c7d3a2c87c26bcb57d2cd130c99108395f371f59f2712ba5343de7a8ca72a6",
+      "source_page": 201,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "c9586728d1fccfe32fb73d8279839bcc3e079cd354c4b2ecb859565d51644bab",
+      "source_page": 201,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "4c9b3b6919f2a42d7837d92701b466a88c0a04df9ed0e0e8a4ab699f8cf4f293",
+      "source_page": 203,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "e14f7d09bd7e3fc0b253aca087140b1c71829fb4c8024d131403d99b1cd36848",
+      "source_page": 213,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1C, 2ANULADA, 3C, 4E"
+    },
+    {
+      "candidate_id": "b468fbaed819d6cbb55bb095d183e304c62fe420f1c203760868cbbc36653262",
+      "source_page": 299,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2 ANULADA, 3E, 4E"
+    },
+    {
+      "candidate_id": "e5f8e8e135719615b950ce0eb5878ef9333497c0cb67e0fb5bfe68514965811b",
+      "source_page": 303,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1C, 2ANULADA, 3E"
+    },
+    {
+      "candidate_id": "57fc0e8187d8a6c30dc2bc6772a717504bb17088217ce4baf1f62d5ee8ba7aed",
+      "source_page": 306,
+      "old_answer": "A",
+      "new_answer": null,
+      "publisher_claim_annulled": false,
+      "new_key_line": null
+    },
+    {
+      "candidate_id": "9a0cdc73c8cdd9a94daf98a7d2230de37b2fbb142ff07bd281a1cab4023e1ad0",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2C, 3E, 4E, 5C, 6E"
+    },
+    {
+      "candidate_id": "d063cd4b012ad303d1ebcdfc4f503fa297699ea9de3fba7bc618e0d5c73e8a21",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2C, 3E, 4E, 5C, 6E"
+    },
+    {
+      "candidate_id": "3b6b7b73d8ef9ea58df2e348f4300ed7c93b2195f498a63bbee8afc683ce9472",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1E, 2C, 3E, 4E, 5C, 6E"
+    },
+    {
+      "candidate_id": "a93a0fd7c13a3ffe607b0aa5eb33228a74734485c6577fe5240b7f64502057c1",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2C, 3E, 4E, 5E, 6ANULADA, 7E"
+    },
+    {
+      "candidate_id": "bd36f49174895fb61f6ba10de805f0f45bcc928f5c5732dbc00a7d05d9761657",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2C, 3E, 4E, 5E, 6ANULADA, 7E"
+    },
+    {
+      "candidate_id": "e6af8233547f4c39938925fb0ab50e8535b0bc19974cfe24e19cde537ee819b3",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2C, 3E, 4E, 5E, 6ANULADA, 7E"
+    },
+    {
+      "candidate_id": "5febfee0431cb58068c3d8eb9f4a8b46f3db5deff15fa8e3a938c11e14aeb1ad",
+      "source_page": 380,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2C, 3E, 4E, 5E, 6ANULADA, 7E"
+    },
+    {
+      "candidate_id": "80427b817805a2d0e993af1a3594b8f5e51b3408b2bad4739a54b53f975131a4",
+      "source_page": 382,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4C, 5C, 6ANULADA"
+    },
+    {
+      "candidate_id": "ebc4672c79655817784eae922b3d485f2a70fe11564c243baf9b220c2e7781c9",
+      "source_page": 382,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1ANULADA, 2E, 3E, 4C, 5C, 6ANULADA"
+    },
+    {
+      "candidate_id": "a4725d70ad05762f653838b54bb7504dc241677ef2e15caa414fd986375f7877",
+      "source_page": 385,
+      "old_answer": null,
+      "new_answer": "C",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3E, 4E, 5E, 6C, 7C, 8C, 9C, 10C"
+    },
+    {
+      "candidate_id": "f06b3fc61d4ed5211516c9d969b48ff7eadb6c1ea1794e533ca6039585eb259f",
+      "source_page": 385,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3E, 4E, 5E, 6C, 7C, 8C, 9C, 10C"
+    },
+    {
+      "candidate_id": "c67843afe1cfd2b9603db0f7cf5510157165f8adea77b4371961173e660a8930",
+      "source_page": 385,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3E, 4E, 5E, 6C, 7C, 8C, 9C, 10C"
+    },
+    {
+      "candidate_id": "45368699089922e889c09c578b0835b5f2165e43efb9623c48cde70c09aeb9a1",
+      "source_page": 385,
+      "old_answer": null,
+      "new_answer": "E",
+      "publisher_claim_annulled": false,
+      "new_key_line": "Gabarito 1C, 2E, 3E, 4E, 5E, 6C, 7C, 8C, 9C, 10C"
+    },
+    {
+      "candidate_id": "38521ca9c7ce32b5429889b726b06c1fd9a21b11b8fe68e62e5a7aee8be698a1",
+      "source_page": 397,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2C, 3 ANULADA, 4E"
+    },
+    {
+      "candidate_id": "91e79af7eaf8bf39c78f68f11778c3e6d2c698347281fc4264ac5c2a2be5354d",
+      "source_page": 403,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2C, 3ANULADA, 4C"
+    },
+    {
+      "candidate_id": "d8b29e22fefbc1222bbcf45cc7aa63d6f60f2dff1475d7b39481d3763ec942c5",
+      "source_page": 406,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1C, 2ANULADA, 3E, 4C"
+    },
+    {
+      "candidate_id": "c0bad17237e62650eb5184e73819564259adff2de902ca3180ce8374760cf816",
+      "source_page": 410,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1E, 2ANULADA, 3E, 4C, 5C"
+    },
+    {
+      "candidate_id": "00b2bc0b0ef806970d2149cd0df53e5b30397bfb2ebe7bb4efc8be93aa5b019d",
+      "source_page": 447,
+      "old_answer": null,
+      "new_answer": null,
+      "publisher_claim_annulled": true,
+      "new_key_line": "Gabarito 1 ANULADA, 2C, 3C, 4C, 5C"
+    }
+  ],
+  "unmatched_legacy_ids": [
+    "09aa2c287aca3f5e81ab9f526196b3dedfab5c9a97fd502ac888af2f2f4c5af4",
+    "a2059b5e7415b0b24e3cc50f60ff114f08bc7b3ba5cf6633aeceb83995bd82f1",
+    "ac86bce8a4a91c1e5a8d94e32f405b84ba99686bd40b07ba2739ec84f2903b53",
+    "d54174d7520afe8758f6a2fbc05cd47969ca39104aafefa37dccf69300929833",
+    "e5ea718e27a506394540e7d9e67ac0d32c36c58f82ab99d11495b125f01d1723",
+    "efc6fe1641a5250b2aabe94c8756e51782dc9dd5fdf89b5691a1d09f8ec0bad9"
+  ],
+  "advertised_7000_count_verified": false,
+  "segmentation_coverage_complete": false,
+  "publications": 0,
+  "live_import": {
+    "checked_at": "2026-10-17T21:26:48.750386+00:00",
+    "snapshot_counts": {
+      "official_exam_questions": 4888,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 1992,
+      "question_corpus_candidates": 4918
+    },
+    "matching_scope": "Normalized exact question text; semantic and table-context review still pending",
+    "applied": true,
+    "verified": true,
+    "inserted_ids": [
+      "63053ccb4bc180af8fd4aa11d045dc2327a5060bd54dc1c5bea6e8ac16b7755f",
+      "00a47b88294ab8d422d39a0c92e6718dba25b5d5269e328e31e3255725b5846b",
+      "faecdeea016f4375b82ba31f6389f6720473967f114b6b2ac515cd21a7af4bd6",
+      "64be0e6239c501dd09a8cbe64c9fa41ac8a1b997fbff6b013068ae19870a5c3e",
+      "9011eca08ffc0f829f1218957a3d06da7edcc083e9a707d65809412113ff2bf4",
+      "80b32f8d0820e8e013899aba69c8ca75de716c05132775a1ae5da22b2f8685a1",
+      "aee55ee28eb89a0c6ff0ac160547bb318b221cebd72102a3b2741abc7830a02f",
+      "a01bc4bd68f5eea197a0fe2783a8112d3301a3d6135c2ab16e1eafd96211c22e",
+      "f2d76c7ed4bb5d6dce665628d6c6f8c2f4983b62ffe19b3d98f05a238472d25a",
+      "94946134cf0cb48f7e4bb1248376f66b88a81c56e3bab818395980dbf2c58065",
+      "633917139937c468130afe01c82512737eabbbadc7e523f81ace5ef9c611c05a",
+      "86a90201749166883bdcce63f120567500f43c64ec07ffa828b4e21554fe62b3",
+      "f76d60db9a4ddd60439a48cff20170dd89c25fb930b6b164d3711d65db8e805d",
+      "04d71af16d9aae72d961d691832d75dc684ba392ac1f1af5ba7e2a590e2deec8",
+      "d343141c811f2b5b8b5746134890ea8f4f12723b3cbbf0da8327433e31052dad",
+      "420890e62adf87bcf270fe8e4e0b12d2fdd18f4170b48e1d345b2af7dcf831b4",
+      "a3bdeb5f15606dc0ca1e6e29d612c648f41b8903384754ad5fa750cf994a6044",
+      "23acc0a8fec39a7aff89f700c287cc142fcbae10317210586a637277f68bc01e",
+      "09a3bc02391ad23d8ef437fe0810494ecdb038022ce990cf0e74b61f58d571f1",
+      "1013c334b9384b22403581069d58f4f593eac473a9c8029ac001e2496029b401",
+      "1d2556b487685499d6c9cd976c7412c39ab4b14bf517f252c976d6419589c97d",
+      "9397f86060b6e6963a1b338b9c16d72517467d74a35df769535612c94288a35e",
+      "666207a5d0b461fbd5a9f666adb47741097910c94be9bb87f935a8bf43c070bd",
+      "97d6f175bab453d92d058a62e00d6e2a830b10ad948966c6ee4cdf34bbeda006",
+      "583ab160aceba38b2e37343c7f8674ea77f4373b9cc11268246115c20c16fb1c",
+      "8eb943026969b113d4ad102ff01cee5b4e13cf7ef2024b9348e29fa4f3eb6e11",
+      "160f72c55229684ddf767ca038ab976c0f2b449ccf9b4d311a21a69119b45616",
+      "c5d3c25028f2e0c73cb2cca61a375a5df90796a9184bd8f3233a769ef845ffb4",
+      "4c73774a195382dc64ed149075c6687e10132776d05017eaf0e64f7b37bd9052",
+      "7f990003eb27e31e896ba3b87e185bdf8b97d74b565873ea98918268b2e38c4e",
+      "be14fea9b1de08d0f58bf93115662138021479e5c72b34591889d7835ea5e1ce",
+      "d69187ae045000032395c8e68502fd38af9d2418623219c510396bc050584400",
+      "b0aa829495220f0558e2c299e1adc32810a0dcf0cc6bb346df65781181a9b315",
+      "35ab6ab2a96c83fdec060bb6dbf931a51fe7d4f51765020cbefc2ed3effa6776",
+      "54a8147d1cb21e9c540269f8af76126309933bbcd4913ad53839b98984dabd41",
+      "23a8ec5d483c21f0c93b17a80c3fae7ab46ffa91eafbaeaff351acbae852f78c",
+      "0c2795ae128623746b5bba0d9422c4a062646865f709bd6fcef51f3132aa28cf",
+      "5ae5f3dda226b0de7c397d9679e48777a7806983ea1c24528fcb81c2d4762811",
+      "5a3a66ef010203840eb7819ca43f411984972d2c84bfdc47a8907db1779603df",
+      "fad18cd57658d680c29ff507c87ac59b4b4d863d5a73fe606e330ee9935e1dae",
+      "6fe913c8c97b07b9aed6e3f88f1f35f65a72d323e605a7d35bc36930d72cb9d6",
+      "730cffd3468dc0ee81d840e7c0473f3c7e1e8bb8d737508dfea41296b4a5a03e",
+      "379bff3e87d0346a330f9099ec9908e369002af71192e30896359ed6b7f5f8f8",
+      "b200daff8719d6f513604148c9d479d3e136e5280e9bc586108309f8900f1814",
+      "468607b46dfab72f797fea6ce5246a37041cec6f341e01641abd0761c3dd3dae",
+      "91938f3a35e4c722596fb58ffccf93467d1ba62f20b24f86849daba1f829fabe",
+      "8c3b92e5d9dfaaff2b354c4a82a145317b7be74cc5bd8689df7f068e175b3713",
+      "a8e91954284ea31dd67d419d8fcaac224972e71351abb168f9af5213db1ab758",
+      "048eba5048b6fa527d78b878475be2e8c0729ee81c9c1d120a529ed7d038e8ec",
+      "7d4dc3b2eec2810a364eaf8646865cdef33efe148b26d91d9d620ec35b7811e5",
+      "226d7e4fa437349290612f33f77dabe8b566c40cdfcf397a46a8de35b8163e8e",
+      "a93b22192e3a74aac38fd7a9f25ec7985a831ace05a817b5d3e1530187a4736a",
+      "060ec1965040db9257be06a74a0d5f74e9092d6ff9d50c4ea31d9f09b0a1ca4a",
+      "0e9f823fca77b6d57ac4d8e43011b23696331621a23f8106ecc2891111be9e3e",
+      "3d0e7fe6149bc8a5ffa87485cb7cc2d962d1ded8fb9d8fc0f9deb1bd89cb2d39",
+      "e9b52b8734129c8d77994cf75d676521c5c681865c42ced2264bbcb54f7ec959",
+      "2d0530d57429ccc1d50ef5d6d53f4a9a46f3c8efaa489f8300eea8ff56e0feec",
+      "d31c2c25ecceeb87d9b7037369fafd9ab3d66d537a027475d20b3533cc2a9225",
+      "e9e5e196f55f8bd471ede76e149de15dba2ae61c2ab1ff1f11bab9a0472ca955",
+      "ac0b136c71fc6f11b2183c8bf4c4fcdd9747f01be199b2b5db63fd2e16726a57",
+      "5dc0db9f48b4de14f2a6aeaa37305331af9e5d63b1e41420341a07ee58402457",
+      "8190c11f7e7c930666625ba4298a2db4492ceaad7d616e1627e5060e388f43de",
+      "613899c1c8817b4b9635ac7025c3506fbc1bc6b2e12fca25aa475a54527b0a45",
+      "cd2e9afa1ab012a4f864bbf3ca7e2ed128c68faebfe997b25820415c31c0fed1"
+    ],
+    "source_status_counts": {
+      "under_review": 2986,
+      "reviewed": 269,
+      "duplicate": 1
+    },
+    "existing_rows_modified": 0,
+    "publications": 0,
+    "exact_text_matches": 0,
+    "private_report_sha256": "1db8f4d238049bf4eebb1c818a06bb29aad39230f5f1452b87c260fed7d18ba3"
+  }
+}

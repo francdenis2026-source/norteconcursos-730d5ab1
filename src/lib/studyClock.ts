@@ -1,114 +1,130 @@
-/**
- * Relógio de tempo na plataforma. Vive FORA do React: trocar de seção, de aba do navegador ou
- * recarregar a página não zera nada. O total do dia (fuso do Acre) fica no localStorage e é
- * somado ao que o servidor já registrou; os segundos ainda não enviados também ficam guardados.
- */
+/** Accumulates active usage across logins, keeping pending sends until server acknowledgement. */
 import { supabase } from "@/integrations/supabase/client";
 import { acreDateKey } from "@/lib/acreTime";
+import { platformNow } from "@/lib/platformClock";
+import { idleSeconds, IDLE_PAUSE_SECONDS } from "@/lib/activity";
 
-interface State {
-  day: string;
-  /** Segundos de hoje (servidor + local). */
-  today: number;
-  /** Segundos contados que o servidor ainda não recebeu. */
-  unsent: number;
-}
-
+type Pending = { id: string; day: string; seconds: number };
+interface State { day: string; today: number; unsent: number; pending: Pending[]; lastTick: number }
 const BEAT_MS = 30_000;
 const listeners = new Set<() => void>();
-let uid = "";
-let sid = "";
+const memory = new Map<string, State>();
+const flushing = new Map<string, Promise<void>>();
+let uid = "", sid = "", sessionDay = "";
 let timers: number[] = [];
 let snapshot = 0;
+const key = (user = uid) => `norte_clock_v2:${user}`;
 
-const key = () => `norte_clock_v2:${uid}`;
-
-function read(): State {
-  const fresh: State = { day: acreDateKey(), today: 0, unsent: 0 };
-  try {
-    const saved = JSON.parse(localStorage.getItem(key()) ?? "null") as State | null;
-    if (!saved) return fresh;
-    // Virou o dia (meia-noite do Acre): zera o total do dia, mas não perde o que falta enviar.
-    return saved.day === fresh.day ? saved : { ...fresh, unsent: saved.unsent || 0 };
-  } catch {
-    return fresh;
-  }
+function read(user = uid): State {
+  const day = acreDateKey();
+  let saved: Partial<State> | null = memory.get(user) ?? null;
+  try { saved = JSON.parse(localStorage.getItem(key(user)) ?? "null") ?? saved; } catch { /* memory fallback */ }
+  const pending = saved?.pending ?? (saved?.unsent ? [{ id: sid, day: saved.day ?? day, seconds: saved.unsent }] : []);
+  return { day, today: saved?.day === day ? saved.today ?? 0 : 0, pending, unsent: pending.reduce((sum, batch) => sum + batch.seconds, 0), lastTick: saved?.lastTick ?? platformNow() };
 }
-function write(s: State) {
-  snapshot = s.today;
-  try {
-    localStorage.setItem(key(), JSON.stringify(s));
-  } catch {
-    /* storage indisponível: segue só em memória */
-  }
-  listeners.forEach((l) => l());
+function write(state: State, user = uid) {
+  const next = { ...state, unsent: state.pending.reduce((sum, batch) => sum + batch.seconds, 0) };
+  memory.set(user, next);
+  try { localStorage.setItem(key(user), JSON.stringify(next)); } catch { /* memory fallback */ }
+  if (user === uid) { snapshot = next.today; listeners.forEach(listener => listener()); }
 }
-
-function sessionId() {
+function sessionId(user: string, day: string) {
+  const sessionKey = `norte_study_session:${user}:${day}`;
   try {
-    const saved = sessionStorage.getItem("norte_study_session");
+    const saved = sessionStorage.getItem(sessionKey);
     if (saved) return saved;
-    const id = crypto.randomUUID();
-    sessionStorage.setItem("norte_study_session", id);
-    return id;
-  } catch {
-    return crypto.randomUUID();
-  }
+    const id = crypto.randomUUID(); sessionStorage.setItem(sessionKey, id); return id;
+  } catch { return crypto.randomUUID(); }
 }
-
-export async function flushStudyClock() {
-  if (!uid) return;
-  const s = read();
-  if (s.unsent <= 0) return;
-  write({ ...s, unsent: 0 });
-  const { error } = await supabase.rpc("study_heartbeat", { _id: sid, _seconds: s.unsent });
-  if (error) write({ ...read(), unsent: read().unsent + s.unsent }); // tenta de novo no próximo batimento
+async function withLock(user: string, run: () => Promise<void>, kind = "state") {
+  if (typeof navigator !== "undefined" && navigator.locks) return navigator.locks.request(`norte-clock:${kind}:${user}`, run);
+  return run();
 }
-
+export function flushStudyClock(): Promise<void> {
+  const user = uid;
+  if (!user) return Promise.resolve();
+  const existing = flushing.get(user);
+  if (existing) return existing;
+  const job = withLock(user, async () => {
+    // Drain only the backlog present at entry; new active seconds wait for the next beat.
+    let budget = read(user).unsent;
+    while (budget > 0) {
+      if (uid !== user) return;
+      const batch = read(user).pending.find(item => item.seconds > 0);
+      if (!batch) break;
+      const seconds = Math.min(120, batch.seconds, budget);
+      try {
+        const { error } = await supabase.rpc("study_heartbeat", { _id: batch.id, _seconds: seconds });
+        if (error) return;
+      } catch { return; }
+      await withLock(user, async () => {
+        const state = read(user);
+        write({ ...state, pending: state.pending.map(item => item.id === batch.id ? { ...item, seconds: Math.max(0, item.seconds - seconds) } : item).filter(item => item.seconds > 0) }, user);
+      });
+      budget -= seconds;
+    }
+  }, "flush").finally(() => { flushing.delete(user); });
+  flushing.set(user, job);
+  return job;
+}
+function rotateSession() {
+  const day = acreDateKey();
+  if (day === sessionDay) return;
+  sessionDay = day; sid = sessionId(uid, day);
+  // Establish the row on its own Acre day, before deferred heartbeats.
+  void supabase.rpc("study_heartbeat", { _id: sid, _seconds: 0 }).then(() => {});
+  const user = uid;
+  void supabase.rpc("study_time_today").then(({ data }) => {
+    if (uid !== user || sessionDay !== day || typeof data !== "number") return;
+    const state = read(user);
+    const pendingToday = state.pending.filter(batch => batch.day === day).reduce((sum, batch) => sum + batch.seconds, 0);
+    write({ ...state, today: Math.max(state.today, data + pendingToday) }, user);
+  });
+}
 export function startStudyClock(userId: string) {
   if (uid === userId && timers.length) return;
-  stopStudyClock();
-  uid = userId;
-  sid = sessionId();
-  write(read());
-
-  // Reconcilia com o que o servidor já tem hoje (outro aparelho/aba, ou dados locais apagados).
-  void supabase.rpc("study_time_today").then(({ data }) => {
-    if (uid !== userId || typeof data !== "number") return;
-    const s = read();
-    write({ ...s, today: Math.max(s.today, data + s.unsent) });
-  });
-
-  timers = [
-    window.setInterval(() => {
-      if (document.visibilityState !== "visible") return;
-      const s = read();
-      write({ ...s, today: s.today + 1, unsent: s.unsent + 1 });
-    }, 1000),
-    window.setInterval(() => void flushStudyClock(), BEAT_MS),
-  ];
-  document.addEventListener("visibilitychange", onHide);
+  stopStudyClock(); uid = userId; sessionDay = "";
+  rotateSession(); write({ ...read(), lastTick: platformNow() });
+  timers = [window.setInterval(() => {
+    const user = uid;
+    if (!user || document.visibilityState !== "visible") return;
+    void withLock(user, async () => {
+      if (uid !== user) return;
+      rotateSession();
+      const state = read(user), now = platformNow();
+      // Shared tick prevents two visible windows counting the same second twice.
+      const delta = Math.floor((now - state.lastTick) / 1000);
+      if (delta <= 0) return;
+      const active = document.visibilityState === "visible" && idleSeconds() < IDLE_PAUSE_SECONDS;
+      const seconds = active ? Math.min(delta, 5) : 0;
+      const pending = state.pending.map(batch => ({ ...batch }));
+      if (seconds) {
+        const batch = pending.find(item => item.id === sid);
+        if (batch) batch.seconds += seconds;
+        else pending.push({ id: sid, day: state.day, seconds });
+      }
+      write({ ...state, lastTick: now, today: state.today + seconds, pending }, user);
+    });
+  }, 1000), window.setInterval(() => void flushStudyClock(), BEAT_MS)];
+  document.addEventListener("visibilitychange", onVisibility);
   window.addEventListener("pagehide", onPageHide);
   window.addEventListener("storage", onStorage);
+  void flushStudyClock();
 }
-
 export function stopStudyClock() {
-  timers.forEach((t) => window.clearInterval(t));
-  timers = [];
-  document.removeEventListener("visibilitychange", onHide);
+  timers.forEach(timer => window.clearInterval(timer)); timers = [];
+  document.removeEventListener("visibilitychange", onVisibility);
   window.removeEventListener("pagehide", onPageHide);
   window.removeEventListener("storage", onStorage);
-  uid = "";
+  uid = ""; snapshot = 0; listeners.forEach(listener => listener());
 }
-
-const onHide = () => document.visibilityState === "hidden" && void flushStudyClock();
+const onVisibility = () => {
+  if (document.visibilityState === "hidden") void flushStudyClock();
+  else if (uid) { rotateSession(); write({ ...read(), lastTick: platformNow() }); }
+};
 const onPageHide = () => void flushStudyClock();
-// Outra aba atualizou o total: acompanha.
-const onStorage = (e: StorageEvent) => {
-  if (e.key === key()) {
-    snapshot = read().today;
-    listeners.forEach((l) => l());
-  }
+const onStorage = (event: StorageEvent) => {
+  if (uid && event.key === key()) { snapshot = read().today; listeners.forEach(listener => listener()); }
 };
 
 export const subscribeStudyClock = (cb: () => void) => {

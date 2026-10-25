@@ -1,0 +1,173 @@
+{
+  "scope": "24 fontes oficiais lidas para conferir remissões dos artigos finais da LBI. Não certifica integralmente todos os artigos desses outros diplomas.",
+  "sources": [
+    {
+      "slug": "eleitoral",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm",
+      "sha256": "ac06daab64c1330ad7a7242086ed5b2a811c68e0570761458ddba18d0fd983b3",
+      "bytes": 447168,
+      "checked_at": "2026-10-12T00:15:25.678160+00:00"
+    },
+    {
+      "slug": "clt",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "sha256": "43427258c1f4608551af2723038d5d3f133578229b505c26334df688646a7682",
+      "bytes": 1532358,
+      "checked_at": "2026-10-12T00:15:36.549422+00:00"
+    },
+    {
+      "slug": "apoio",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7853.htm",
+      "sha256": "80e77f2cc77342f2e5eac3de090565c3647bb1e3c79cc1f14e123ec5807c34ad",
+      "bytes": 57716,
+      "checked_at": "2026-10-12T00:15:24.534723+00:00"
+    },
+    {
+      "slug": "fgts",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8036consol.htm",
+      "sha256": "e65a6d616681f53a5f0fabdcd82502e4c29db52aa5e5c9c9f8d5ae45b2c9b033",
+      "bytes": 424914,
+      "checked_at": "2026-10-12T00:15:26.100248+00:00"
+    },
+    {
+      "slug": "cdc",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+      "sha256": "b8899b4bcbdd6cfef45a79982ac2ebbefb4403c9ca5fcb94f26b10218f173e67",
+      "bytes": 170425,
+      "checked_at": "2026-10-12T00:15:26.268307+00:00"
+    },
+    {
+      "slug": "previdencia",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "sha256": "882503b02625525202c41c08fa6d2fada02116f9f63d41c2d81856511ed4fa81",
+      "bytes": 755476,
+      "checked_at": "2026-10-12T00:15:27.976598+00:00"
+    },
+    {
+      "slug": "rouanet",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm",
+      "sha256": "126bd44618d21421f0e97643bb8a25bb84aff36d82cd5a21e2bc2a781acb3a1c",
+      "bytes": 84758,
+      "checked_at": "2026-10-12T00:15:26.989733+00:00"
+    },
+    {
+      "slug": "improbidade",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "sha256": "71bdbd69fec74bc3b6aa69a1251c1fc8a8f2aa87022c954357f5587bb15b188b",
+      "bytes": 210250,
+      "checked_at": "2026-10-12T00:15:28.051941+00:00"
+    },
+    {
+      "slug": "licitacao-antiga",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm",
+      "sha256": "b00718497908aa695abd88ca8755e04218e015839f7033c67f34057305263fcf",
+      "bytes": 438481,
+      "checked_at": "2026-10-12T00:15:28.930836+00:00"
+    },
+    {
+      "slug": "licitacao",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+      "sha256": "aa12ac03ea9fde8e63302d95ee3f92f0da28844e73753b85e2cc4557294b9e14",
+      "bytes": 649705,
+      "checked_at": "2026-10-12T00:15:30.276156+00:00"
+    },
+    {
+      "slug": "loas",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+      "sha256": "08a9b8804f70eed5316e6ce20de1c4a16e19bb3a305ae20d7a2bffd96265fca0",
+      "bytes": 228460,
+      "checked_at": "2026-10-12T00:15:29.417152+00:00"
+    },
+    {
+      "slug": "trabalho",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9029.htm",
+      "sha256": "5716d5ff8c1d573e39d0d438221df06b9707de6a30beb2676d437c37e9e84c7f",
+      "bytes": 12009,
+      "checked_at": "2026-10-12T00:15:29.859455+00:00"
+    },
+    {
+      "slug": "ir",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9250.htm",
+      "sha256": "a8823f16c9d6cfd901f1b241dbf608c99cda443dc2a636de476ddf6f78658c53",
+      "bytes": 269117,
+      "checked_at": "2026-10-12T00:15:30.813504+00:00"
+    },
+    {
+      "slug": "esporte",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9615consol.htm",
+      "sha256": "bf6ea929122d3bb8e1d596b835284998406487da8e7cc4be60575ac6ef4a1e42",
+      "bytes": 617763,
+      "checked_at": "2026-10-12T00:15:32.833584+00:00"
+    },
+    {
+      "slug": "loterias",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13756.htm",
+      "sha256": "a0fd3791514c8784a246041cba852811e362e8000633c2f427a7ff778bba2b6d",
+      "bytes": 446636,
+      "checked_at": "2026-10-12T00:15:32.696106+00:00"
+    },
+    {
+      "slug": "prioridade",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+      "sha256": "821d5ee17f37417c786066c55678714c1763e7ed7fb12d81ca66919cc1b4fa8f",
+      "bytes": 15440,
+      "checked_at": "2026-10-12T00:15:31.883997+00:00"
+    },
+    {
+      "slug": "acessibilidade",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l10098.htm",
+      "sha256": "b263a70771919bfd3fc0f99f0f6d33881ac64fe03f1cfde050e500c7e22730a9",
+      "bytes": 47957,
+      "checked_at": "2026-10-12T00:15:33.509951+00:00"
+    },
+    {
+      "slug": "cidade",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10257.htm",
+      "sha256": "c84af1767903bdeeb6da1676b709dd35355ad161232e075bf18ca7c8ec335956",
+      "bytes": 123344,
+      "checked_at": "2026-10-12T00:15:33.981004+00:00"
+    },
+    {
+      "slug": "civil",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "sha256": "f14ce1f95f072ad2fca8f616a43799e876eb5282b2d2cc997b3431bc86790df3",
+      "bytes": 923899,
+      "checked_at": "2026-10-12T00:15:37.042566+00:00"
+    },
+    {
+      "slug": "processual",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "sha256": "c8a9f82c3d1fd11432509648802bea07e159988c19b0d3c5bb5371b11558ec6f",
+      "bytes": 1691185,
+      "checked_at": "2026-10-12T00:15:40.257174+00:00"
+    },
+    {
+      "slug": "caoguia",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11126.htm",
+      "sha256": "e539c44148c8c6612291c7b009c2de82abff69dbc3cfcf029e1e534eb9d97ae4",
+      "bytes": 7337,
+      "checked_at": "2026-10-12T00:15:35.782908+00:00"
+    },
+    {
+      "slug": "museus",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11904.htm",
+      "sha256": "fbc0aa22c01965b8a14670ed0cc7757bba3b192071d64a269396a50da520eb2b",
+      "bytes": 63279,
+      "checked_at": "2026-10-12T00:15:37.109736+00:00"
+    },
+    {
+      "slug": "mobilidade",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12587.htm",
+      "sha256": "cc902f03a182f5e5dd4e91cdc180fe4b41c40b1d768795918472f9612f87b362",
+      "bytes": 94953,
+      "checked_at": "2026-10-12T00:15:37.779698+00:00"
+    },
+    {
+      "slug": "ipi",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8989.htm",
+      "sha256": "42a5230a2dacabbc4e3406e8778a781e6975fc40b31a5de123d996b2ea2b56f1",
+      "bytes": 39320,
+      "checked_at": "2026-10-12T00:15:37.867585+00:00"
+    }
+  ]
+}

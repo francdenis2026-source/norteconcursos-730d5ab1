@@ -1,0 +1,211 @@
+{
+  "batch_key": "idecan-cbmmg-itens31-38-parecer-v1",
+  "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+  "booklet": "Tipo A",
+  "reviewed_at": "2026-10-24",
+  "official_key": {
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+    "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
+    "notice": "Aviso nº 279/2026-CBMMG/ABM/CSE, Ato nº 12.448/2026, de 03/08/2026"
+  },
+  "release_status": "reviewed_active_syllabus_link_confirmed",
+  "hold_reason": "A consulta confirmou todos os itens active e syllabus_topic_id nulo. Edital IDECAN nº 09/2026 e retificação Ato CBMMG nº 5.446/2026 conferidos: Anexo II inclui os oito tópicos. Foi preparado SQL guardado para cadastrar a edição e vincular os itens sem alterar status nem explicações.",
+  "items": [
+    {
+      "id": "7dfe5bfd-73a0-4de7-b9d3-2d6c35116971",
+      "item_number": 31,
+      "answer": "D",
+      "topic": "Declaração Universal dos Direitos Humanos: natureza e relevância",
+      "sources": [
+        "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
+        "https://www.ohchr.org/en/human-rights/universal-declaration/translations/portuguese"
+      ],
+      "explanation": "A alternativa D é a correta. A Declaração Universal dos Direitos Humanos (DUDH) foi proclamada pela Assembleia Geral da ONU em 1948 como declaração, não como tratado internacional. Ela enuncia um padrão comum de proteção e influenciou tratados, constituições e a interpretação dos direitos humanos. Isso não significa que suas disposições sejam juridicamente irrelevantes: algumas correspondem a normas consuetudinárias ou foram incorporadas em instrumentos vinculantes.\n\nA) Incorreta: a DUDH não é, por si, tratado cuja força obrigatória decorra da ratificação. B) Incorreta: sua influência normativa e interpretativa é ampla. C) Incorreta: é universal, adotada no âmbito da ONU, não instrumento regional da OEA.\n\nBase: preâmbulo e estrutura da DUDH; resolução 217 A (III) da Assembleia Geral da ONU. Gabarito definitivo IDECAN: D.",
+      "stem": "A Declaração Universal dos Direitos Humanos, adotada pela Assembleia Geral das Nações Unidas em 10 de dezembro de 1948, constitui marco fundamental na consolidação da proteção internacional da dignidade da pessoa humana. À luz de suas disposições e de sua função no sistema internacional, assinale a alternativa que apresenta corretamente sua natureza e relevância.",
+      "options": {
+        "A": "Tratado internacional com força vinculante obrigatória aos Estados que participaram de sua aprovação.",
+        "B": "Instrumento jurídico de aplicação facultativa, sem qualquer impacto na formação de normas internas dos Estados.",
+        "C": "Norma regional aplicável exclusivamente aos países integrantes da Organização dos Estados Americanos.",
+        "D": "Documento internacional que, embora não possua natureza de tratado, orienta a interpretação e a formulação de normas de direitos humanos."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. A Declaração Universal de 1948 é uma resolução da Assembleia Geral da ONU, e não um tratado internacional ratificado pelos Estados. Mesmo sem a forma de tratado, tornou-se referência central para interpretar a dignidade humana e inspirar constituições, leis e tratados posteriores.",
+      "official_tested_topic": "Declaração Universal dos Direitos Humanos: natureza, função e marco de 10 de dezembro de 1948."
+    },
+    {
+      "id": "7ced0a3d-5659-43f8-8cd0-53f51e978b32",
+      "item_number": 32,
+      "answer": "C",
+      "topic": "PIDCP: liberdade e segurança pessoal",
+      "sources": [
+        "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights",
+        "https://www.planalto.gov.br/ccivil_03/decreto/1990-1994/d0592.htm"
+      ],
+      "explanation": "A alternativa C corresponde ao art. 9 do Pacto Internacional sobre Direitos Civis e Políticos (PIDCP): ninguém pode ser submetido a prisão ou detenção arbitrária; a pessoa presa deve ser informada dos motivos e pode levar a legalidade da custódia a um tribunal. O Pacto não proíbe toda prisão, mas exige fundamento legal, ausência de arbitrariedade e controle.\n\nA) Incorreta: conveniência administrativa, isoladamente, não justifica privação arbitrária da liberdade. B) Incorreta: eventual derrogação em emergência é excepcional, limitada e sujeita às condições do art. 4; não há suspensão irrestrita. D) Incorreta: o Pacto cria obrigações internacionais para os Estados-partes.\n\nBase: PIDCP, arts. 4 e 9, promulgado no Brasil pelo Decreto nº 592/1992. Gabarito definitivo IDECAN: C.",
+      "stem": "O Pacto Internacional dos Direitos Civis e Políticos estabelece garantias fundamentais relacionadas à liberdade individual e à proteção contra arbitrariedades estatais, constituindo instrumento central do sistema global de proteção dos direitos humanos. À luz de suas disposições, assinale a alternativa que reflete corretamente uma das garantias nele previstas.",
+      "options": {
+        "A": "Admissão de restrição da liberdade pessoal por mera conveniência administrativa, desde que prevista em ato estatal.",
+        "B": "Autorização para suspensão geral e sem limites de direitos civis em toda hipótese de emergência nacional.",
+        "C": "Proteção contra prisão ou detenção arbitrária, assegurado o direito de controle judicial da legalidade da detenção.",
+        "D": "Subordinação integral dos direitos individuais ao direito interno, sem incidência de mecanismos internacionais de proteção."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa C está correta. O Pacto Internacional dos Direitos Civis e Políticos protege contra prisão ou detenção arbitrária e assegura que a pessoa privada de liberdade possa questionar judicialmente a legalidade da detenção. A emergência não autoriza suspensão ilimitada de direitos.",
+      "official_tested_topic": "Pacto Internacional dos Direitos Civis e Políticos (PIDCP): liberdade e segurança pessoal, art. 9; garantias em emergência, art. 4."
+    },
+    {
+      "id": "472a03f7-e91e-4ad9-badb-18d5ba5389d5",
+      "item_number": 33,
+      "answer": "C",
+      "topic": "Conselho de Direitos Humanos da ONU: Revisão Periódica Universal",
+      "sources": [
+        "https://www.ohchr.org/en/hr-bodies/upr/basic-facts",
+        "https://www.ohchr.org/en/hr-bodies/hrc/about-council"
+      ],
+      "explanation": "A alternativa C descreve a Revisão Periódica Universal (RPU), mecanismo pelo qual a situação de direitos humanos de todos os Estados-membros da ONU é examinada periodicamente pelo Conselho de Direitos Humanos. A revisão se baseia, entre outros elementos, nas obrigações internacionais assumidas pelo Estado e em informações apresentadas por diferentes atores.\n\nA) Incorreta: o Conselho não é corte para julgar casos individuais com decisões contenciosas vinculantes. B) Incorreta: não fiscaliza o processo legislativo nacional com poder de anular leis. D) Incorreta: não executa diretamente sanções econômicas; isso não é competência da RPU.\n\nBase: Resolução 60/251 da Assembleia Geral da ONU e procedimento da RPU. Gabarito definitivo IDECAN: C.",
+      "stem": "No âmbito do sistema global de proteção aos direitos humanos, o Conselho de Direitos Humanos da ONU desempenha funções específicas relacionadas à promoção e ao monitoramento desses direitos. Considerando suas atribuições institucionais, assinale a alternativa que descreve corretamente uma competência do Conselho de Direitos Humanos.",
+      "options": {
+        "A": "Julgamento contencioso de violações individuais com decisões vinculantes aos Estados.",
+        "B": "Fiscalização legislativa interna dos Estados-membros com poder de anulação de leis nacionais.",
+        "C": "Realização de revisões periódicas universais sobre a situação de direitos humanos nos Estados.",
+        "D": "Execução direta de sanções econômicas em casos de violações graves de direitos humanos."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa C está correta. O Conselho de Direitos Humanos da ONU realiza a Revisão Periódica Universal, mecanismo que examina a situação dos direitos humanos em todos os Estados-membros. Ele não funciona como tribunal para julgar individualmente violações nem anula leis nacionais.",
+      "official_tested_topic": "Sistema das Nações Unidas e direitos humanos; papel do Conselho de Direitos Humanos da ONU e Revisão Periódica Universal."
+    },
+    {
+      "id": "c8e33e60-b292-4a8d-8e88-32956b1cfda1",
+      "item_number": 34,
+      "answer": "A",
+      "topic": "Características dos direitos humanos: universalidade",
+      "sources": [
+        "https://www.ohchr.org/en/what-are-human-rights/international-bill-human-rights"
+      ],
+      "explanation": "A alternativa A está correta: universalidade significa que os direitos humanos pertencem a todas as pessoas, sem discriminação por nacionalidade, origem, condição ou outra situação. Universalidade não elimina debates sobre alcance e aplicação, nem torna todos os direitos absolutos; direitos podem admitir limites previstos em lei e compatíveis com os tratados, enquanto alguns são inderrogáveis.\n\nB) Incorreta: relatividade não é absoluta nem autoriza restrição ilimitada. C) Incorreta: a proteção internacional não depende exclusivamente de lei interna. D) Incorreta: direitos humanos não se limitam a contextos culturais previamente escolhidos.\n\nBase: Declaração e Programa de Ação de Viena (1993), § 5º. Gabarito definitivo IDECAN: A.",
+      "stem": "Os direitos humanos constituem um conjunto de garantias reconhecidas historicamente, vinculadas à dignidade da pessoa humana e à limitação do poder estatal. Identifique a alternativa que expressa corretamente uma característica essencial dos direitos humanos.",
+      "options": {
+        "A": "Universalidade, com reconhecimento aplicável a todas as pessoas independentemente de condição.",
+        "B": "Relatividade absoluta, permitindo sua restrição ilimitada pelos Estados.",
+        "C": "Dependência exclusiva da legislação interna para sua existência jurídica.",
+        "D": "Aplicação restrita a contextos culturais específicos previamente definidos."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa A está correta. A universalidade significa que os direitos humanos pertencem a todas as pessoas, sem discriminação por nacionalidade, origem, sexo, raça ou qualquer outra condição. Isso não impede limitações legais proporcionais em situações específicas.",
+      "official_tested_topic": "Definição, conceito e características dos direitos humanos, especialmente a universalidade."
+    },
+    {
+      "id": "482329fd-f9c4-4a6d-aef8-13cb95b4ad82",
+      "item_number": 35,
+      "answer": "B",
+      "topic": "Convenção Americana: jurisdição da Corte Interamericana",
+      "sources": [
+        "https://www.oas.org/dil/treaties_b-32_american_convention_on_human_rights.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm"
+      ],
+      "explanation": "A alternativa B é a correta no sentido do art. 62 da Convenção Americana sobre Direitos Humanos (CADH): a Corte Interamericana exerce jurisdição contenciosa sobre Estados-partes que reconheçam essa competência, nos termos e condições previstos no tratado. A Corte julga responsabilidade internacional do Estado; não julga pessoas como tribunal penal.\n\nA) Incorreta: a CADH protege principalmente direitos civis e políticos e prevê também desenvolvimento progressivo em seu art. 26. C) Incorreta: sua aplicação não se limita a conflitos armados. D) Incorreta: petições à Comissão Interamericana em regra estão sujeitas ao esgotamento dos recursos internos, ressalvadas as exceções do art. 46(2).\n\nBase: CADH, arts. 44, 46 e 62; promulgada no Brasil pelo Decreto nº 678/1992. Gabarito definitivo IDECAN: B.",
+      "stem": "A Convenção Americana sobre Direitos Humanos integra o sistema interamericano e estabelece mecanismos de proteção e responsabilização internacional dos Estados. Com base em suas disposições, identifique a alternativa correta.",
+      "options": {
+        "A": "Prevê apenas direitos econômicos e sociais, excluindo direitos civis e políticos.",
+        "B": "Estabelece a competência da Corte Interamericana para julgar Estados que reconheçam sua jurisdição.",
+        "C": "Limita sua aplicação exclusivamente a situações de conflito armado internacional.",
+        "D": "Dispensa a necessidade de esgotamento de recursos internos para análise de casos individuais."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa B está correta. A Convenção Americana prevê a Corte Interamericana de Direitos Humanos e sua jurisdição contenciosa depende do reconhecimento pelo Estado. O tratado protege direitos civis e políticos e, em regra, exige o esgotamento dos recursos internos, salvo exceções.",
+      "official_tested_topic": "Convenção Americana sobre Direitos Humanos: sistema interamericano, petições e jurisdição da Corte Interamericana."
+    },
+    {
+      "id": "70087036-b55c-4304-bc60-5503af33aa95",
+      "item_number": 36,
+      "answer": "D",
+      "topic": "Constituição Federal, art. 5º, § 1º: aplicação imediata",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "explanation": "A alternativa D reproduz o art. 5º, § 1º, da Constituição: as normas definidoras dos direitos e garantias fundamentais têm aplicação imediata. Isso orienta a interpretação e a atuação estatal; não quer dizer que todas as normas tenham idêntica estrutura ou que toda prestação prescinda de regulamentação para sua plena concretização.\n\nA) Incorreta: nega a regra constitucional de aplicação imediata. B) Incorreta: o caput do art. 5º assegura direitos a brasileiros e estrangeiros residentes no País, sem prejuízo da interpretação jurisprudencial sobre proteção de outras pessoas sob jurisdição brasileira. C) Incorreta: direitos fundamentais também limitam e vinculam o Estado, não se restringindo às relações privadas.\n\nBase: Constituição Federal, art. 5º, caput e § 1º. Gabarito definitivo IDECAN: D.",
+      "stem": "Os direitos fundamentais previstos na Constituição Federal possuem eficácia e aplicabilidade que orientam a atuação estatal. Assinale a alternativa que expressa corretamente sua aplicabilidade.",
+      "options": {
+        "A": "Dependem integralmente de regulamentação infraconstitucional para produzir efeitos.",
+        "B": "São restritos aos cidadãos brasileiros natos.",
+        "C": "Aplicam-se exclusivamente às relações entre particulares.",
+        "D": "Possuem aplicabilidade imediata, nos termos da Constituição."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. O art. 5º, § 1º, da Constituição determina que as normas definidoras dos direitos e garantias fundamentais têm aplicação imediata. Isso não significa que toda regra dispense regulamentação, mas impede tratar os direitos como meras promessas sem eficácia.",
+      "official_tested_topic": "Constituição Federal de 1988: direitos fundamentais e direitos e deveres individuais e coletivos; art. 5º, § 1º."
+    },
+    {
+      "id": "c0d42a5e-c8a2-4a69-b5fd-b1794a2be167",
+      "item_number": 37,
+      "answer": "D",
+      "topic": "LINDB, art. 2º, § 3º: repristinação",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm"
+      ],
+      "explanation": "A alternativa D aplica o art. 2º, § 3º, da LINDB: salvo disposição em contrário, a lei revogada não se restaura pelo fato de a lei revogadora perder vigência. Portanto, a repristinação não é automática; pode ocorrer se houver previsão expressa nesse sentido.\n\nA), B) e C) estão erradas porque admitem retorno automático por interpretação judicial, perda de vigência da lei revogadora ou existência de lacuna. A regra exige disposição expressa em contrário.\n\nBase: LINDB, art. 2º, § 3º. Gabarito definitivo IDECAN: D.",
+      "stem": "A sucessão de leis no tempo pode gerar situações em que uma norma revogada por lei posterior tenha sua revogadora posteriormente retirada do ordenamento jurídico. Nessa hipótese, discute-se a possibilidade de restauração automática da lei originariamente revogada. À luz da disciplina normativa aplicável, indique a alternativa correta.",
+      "options": {
+        "A": "A lei revogada readquire eficácia mediante interpretação judicial integrativa.",
+        "B": "A lei revogada recupera automaticamente sua vigência com a perda de eficácia da lei revogadora.",
+        "C": "A lei revogada retorna à vigência sempre que houver lacuna normativa relevante.",
+        "D": "A lei revogada volta a vigorar somente se houver disposição expressa nesse sentido."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. Pela regra da LINDB, a lei revogada não volta automaticamente a vigorar quando a lei revogadora perde eficácia. A repristinação somente ocorre se houver disposição expressa determinando o retorno da lei anterior.",
+      "official_tested_topic": "Lei de Introdução às Normas do Direito Brasileiro (LINDB), arts. 1º ao 6º: art. 2º, § 3º (repristinação)."
+    },
+    {
+      "id": "b0880a41-4442-4564-b116-35266f3f7caa",
+      "item_number": 38,
+      "answer": "A",
+      "topic": "LINDB, art. 4º: integração diante de omissão",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "explanation": "A alternativa A reproduz a ordem de integração do art. 4º da LINDB: quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito. O CPC, art. 140, também veda que o juiz deixe de decidir alegando lacuna ou obscuridade.\n\nB) Incorreta: precedentes e regulamentos não substituem a sequência expressa do art. 4º como resposta geral à omissão. C) Incorreta: equidade e interpretação extensiva não são os critérios enumerados nesse dispositivo. D) Incorreta: jurisprudência e doutrina não aparecem nessa ordem legal de integração.\n\nBase: LINDB, art. 4º; CPC, art. 140. Gabarito definitivo IDECAN: A.",
+      "stem": "No exercício da jurisdição, a ausência de previsão normativa específica não autoriza a abstenção do julgador, impondo a utilização de mecanismos jurídicos previamente estabelecidos para solução do caso concreto. Em determinada situação, reconhecida a omissão legislativa, o magistrado deve recorrer a instrumentos de integração normativa, observando os critérios legalmente previstos no ordenamento jurídico. Considerando essa disciplina, indique a alternativa que expressa corretamente os critérios aplicáveis à integração da norma em caso de omissão.",
+      "options": {
+        "A": "A solução deve observar a analogia como parâmetro, podendo ser complementada pelos costumes e pelos princípios gerais de direito.",
+        "B": "A omissão legal autoriza a construção da decisão com base em precedentes vinculantes e regulamentos administrativos.",
+        "C": "A integração normativa deve ser realizada com base na equidade e na interpretação extensiva, independentemente de outros critérios.",
+        "D": "A decisão deve ser fundamentada prioritariamente na jurisprudência consolidada, seguida da doutrina majoritária e, subsidiariamente, na equidade."
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa A está correta. Diante de lacuna, a Lei de Introdução às Normas do Direito Brasileiro orienta o julgador a decidir por analogia, costumes e princípios gerais de direito. Esses instrumentos integram o sistema e não autorizam o juiz a deixar de decidir.",
+      "official_tested_topic": "Lei de Introdução às Normas do Direito Brasileiro (LINDB), arts. 1º ao 6º: art. 4º (integração diante de omissão)."
+    }
+  ],
+  "database_state_verified_at": "2026-10-24",
+  "official_syllabus": {
+    "title": "Edital nº 09, de 16 de março de 2026 — CFO BM 2027, conforme retificação do Ato nº 5.446/2026",
+    "initial_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=PBJ7U4UHNTI43VG93VV1VAH6W9Q2JVIXFJSNXGW2TOPC7994PHN10O0GH1UL7NQO371FB8WY7BVRX07T6979.pdf",
+    "initial_sha256": "e4f65a7355dc9abe0c78c9bd5bd4034300a9c10a7404e12c9b33defcced4a4d1",
+    "retification_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=YTA9XW6CMCPI4320DNO8IUDOQIKV4RWLSF7GJI8MDAEVJA4TPSLIHF50106NYS54SR135DPVIA4JAPR57385.pdf",
+    "retification_sha256": "4fe622494764cd8f71f22f40d376d222f6ebb34a43f80d03db8d0a1577f1b5ec",
+    "official_page": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=224",
+    "official_program_pages": "Edital Anexo II, p. 57; retificação Ato 5.446/2026, pp. 2–3",
+    "retification_effect": "A retificação amplia os artigos do Estatuto dos Militares de MG de 15 e 25 para arts. 8–13, 15 e 25; não altera os tópicos cobrados nos itens 31–38.",
+    "program_excerpt": "NOÇÕES DE DIREITOS HUMANOS E LEGISLAÇÃO: Definição e conceito de direitos humanos. História dos direitos humanos. Pacto Internacional dos Direitos Civis e Políticos (PIDCP). Pacto Internacional dos Direitos Econômicos, Sociais e Culturais (PIDESC). Sistema das Nações Unidas e os direitos humanos. O papel do Conselho de Direitos Humanos da ONU. Declaração Universal dos Direitos Humanos – adotada pela Assembleia Geral das Nações Unidas em 10 de dezembro de 1948. Convenção Americana sobre Direitos Humanos – assinada na Conferência Especializada Interamericana sobre Direitos Humanos (San José da Costa Rica), em 22 de novembro de 1969. Lei Estadual n. 5.301, de 16 de outubro de 1969 - Estatuto dos Militares do Estado de Minas Gerais (art. 8º ao 13; arts. 15 e 25). Constituição Federal de 1988 (Direitos Fundamentais. Direitos e deveres individuais e coletivos. Administração pública. Militares dos Estados e do Distrito Federal. Organização judiciária militar dos estados. Forças armadas. Segurança pública). Constituição do Estado de Minas Gerais (Militares do estado. Segurança pública. Subordinação do Corpo de Bombeiros ao Governador do Estado. Arts. 137, 142 e 143). Lei n. 4657, de 04 de setembro de 1942 – Lei de Introdução às Normas do Direito Brasileiro (arts. 1º ao 6º)."
+  },
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "syllabus_topic_id": "80d1bf70-916c-4593-a341-4fb26435021b",
+    "discipline": "Noções de Direitos Humanos e Legislação",
+    "all_items_active": true,
+    "answers_match_definitive_key": true,
+    "all_items_linked_to_same_current_topic": true,
+    "items_confirmed": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "evidence": "Saída SQL enviada pelo usuário; cada item retornou content_status=active, gabarito definitivo esperado, syllabus_topic_id comum, disciplina e tested_topic específico."
+  }
+}

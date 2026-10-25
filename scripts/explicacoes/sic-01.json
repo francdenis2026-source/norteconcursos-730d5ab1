@@ -1,0 +1,267 @@
+{
+  "course_slug": "sic",
+  "law": "Decreto do Serviço de Identificação do Cidadão — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Este Decreto dispõe sobre o Serviço de Identificação do Cidadão, institui a Câmara-Executiva Federal de Identificação do Cidadão (Cefic) e dispõe sobre a governança da identificação das pessoas naturais no âmbito da administração pública federal direta, autárquica e fundacional.",
+      "pontos": ["Serviço de Identificação do Cidadão.", "Cria a Cefic.", "Governança da identificação na administração federal direta, autárquica e fundacional."],
+      "atencao": ["Alcance: administração FEDERAL direta, autárquica e fundacional."],
+      "exemplo": "O Decreto organiza como o governo federal identifica as pessoas.",
+      "prova": ["Assertiva que estende a governança a empresas privadas erra: é a administração federal."],
+      "termos": [{ "termo": "Cefic", "significado": "Câmara-Executiva Federal de Identificação do Cidadão." }],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-2": {
+      "simples": "O Serviço de Identificação do Cidadão é o conjunto de procedimentos e operações de gestão e verificação da identidade das pessoas naturais, por meio dos dados de identificação e dos dados cadastrais, perante a administração pública federal direta, autárquica e fundacional. Ele será utilizado para a expedição da Carteira de Identidade pelos órgãos de identificação dos Estados e do Distrito Federal.",
+      "pontos": ["Conjunto de procedimentos de gestão e verificação da identidade.", "Usado para expedir a Carteira de Identidade pelos Estados e pelo DF."],
+      "atencao": ["Serve também à expedição da Carteira de Identidade pelos Estados."],
+      "exemplo": "O Serviço confere a identidade do requerente na expedição da carteira.",
+      "prova": ["Assertiva que restringe o Serviço aos órgãos federais, sem relação com os Estados, erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-3": {
+      "simples": "O Serviço de Identificação do Cidadão é de uso facultativo para a identificação criminal e para procedimentos de identificação em sistemas relacionados à defesa nacional e à segurança do Estado, e obrigatório nas demais hipóteses, inclusive nos processos de composição de dados no modelo da Carteira de Identidade. Terá interface eletrônica com os dados da declaração de nascido vivo e da declaração de óbito, do registro civil e da Identificação Civil Nacional.",
+      "pontos": ["Facultativo: identificação criminal e defesa nacional e segurança do Estado.", "Obrigatório nas demais hipóteses.", "Interface com nascido vivo, óbito, registro civil e ICN."],
+      "atencao": ["Facultativo: identificação criminal e defesa nacional; no mais, obrigatório."],
+      "exemplo": "A polícia pode, mas não precisa, usar o Serviço na identificação criminal.",
+      "prova": ["Assertiva que torna obrigatório o uso na identificação criminal erra: é facultativo."],
+      "termos": [],
+      "remissoes": ["Lei da Identificação Criminal"]
+    },
+    "art-4": {
+      "simples": "O Serviço de Identificação do Cidadão não utilizará dados protegidos por sigilo legal e observará a Lei Geral de Proteção de Dados e as normas da Autoridade Nacional de Proteção de Dados (ANPD), para assegurar a privacidade e a proteção dos dados pessoais.",
+      "pontos": ["Não usa dados protegidos por sigilo legal.", "Observa a LGPD e as normas da ANPD."],
+      "atencao": ["Proteção de dados pessoais obrigatória."],
+      "exemplo": "Dados sigilosos por lei ficam fora do Serviço.",
+      "prova": ["Assertiva que dispensa a LGPD no Serviço erra."],
+      "termos": [{ "termo": "ANPD", "significado": "Autoridade Nacional de Proteção de Dados." }],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-5": {
+      "simples": "O número de inscrição no CPF é a chave de vinculação dos dados da pessoa natural no Serviço de Identificação do Cidadão. O Serviço abrangerá as funcionalidades de inscrever, alterar e cancelar por motivo de óbito o número de inscrição no CPF.",
+      "pontos": ["CPF como chave de vinculação dos dados.", "Funcionalidades: inscrever, alterar e cancelar por óbito."],
+      "atencao": ["O CPF é a CHAVE do sistema."],
+      "exemplo": "Todos os dados da pessoa se ligam ao CPF.",
+      "prova": ["Assertiva que adota o número do RG como chave erra: é o CPF."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-6": {
+      "simples": "O Serviço de Identificação do Cidadão possui as finalidades de possibilitar o acesso aos dados das bases biográficas e biométricas aprovadas pela Cefic; autenticar os dados de identificação e cadastrais da pessoa natural; e viabilizar meio unificado de identificação e atualização de dados de identificação nos cadastros administrativos.",
+      "pontos": ["Acesso às bases biográficas e biométricas aprovadas pela Cefic.", "Autenticação dos dados.", "Meio unificado de identificação e atualização."],
+      "atencao": ["Três finalidades."],
+      "exemplo": "O cadastro de um órgão atualiza o nome do cidadão a partir do Serviço.",
+      "prova": ["Assertiva que lista apenas duas finalidades erra: são três."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-7": {
+      "simples": "O compartilhamento de dados pessoais entre órgãos e entidades da administração federal direta, autárquica e fundacional no âmbito do Serviço observará orientações como: finalidades legítimas, específicas e explícitas; compatibilidade entre o tratamento e as finalidades; limitação do compartilhamento ao mínimo necessário; cumprimento integral dos requisitos da LGPD no que for compatível com o setor público; publicidade do compartilhamento no sítio da Cefic e do órgão controlador; e mecanismos de controle de acesso com auditoria e rastreamento.",
+      "pontos": ["Finalidade legítima, específica e explícita.", "Compatibilidade e mínimo necessário.", "Cumprimento da LGPD.", "Publicidade do compartilhamento.", "Controle de acesso com auditoria e rastreamento."],
+      "atencao": ["Segue os princípios da LGPD: finalidade, adequação e necessidade."],
+      "exemplo": "O órgão só recebe os dados necessários à sua finalidade.",
+      "prova": ["Assertiva que autoriza o compartilhamento amplo de dados sem finalidade definida erra."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-8": {
+      "simples": "Os cadastros administrativos existentes na administração federal direta, autárquica e fundacional deverão obter obrigatoriamente do Serviço de Identificação do Cidadão os dados de identificação: nome, nome social, data de nascimento, filiação, naturalidade, nacionalidade, sexo, número do CPF, CPF da filiação, data de óbito e imagem da face do titular. Se a inscrição no CPF estiver suspensa, cancelada ou nula, ou indicar titular falecido, o Serviço informará a situação e os motivos. Os dados não listados obtidos nos cadastros serão disponibilizados ao Serviço. Não será necessário criar novos campos nos cadastros que não os tenham.",
+      "pontos": ["Onze dados de identificação obtidos obrigatoriamente do Serviço.", "Informação sobre a situação cadastral do CPF.", "Dados não listados são disponibilizados ao Serviço.", "Sem obrigação de criar novos campos."],
+      "atencao": ["Os cadastros administrativos devem obter os dados do SERVIÇO."],
+      "exemplo": "O cadastro do órgão obtém do Serviço a data de óbito do titular.",
+      "prova": ["Assertiva que obriga a criação de novos campos em todos os cadastros erra: não é necessário."],
+      "termos": [],
+      "remissoes": ["Art. 27"]
+    },
+    "art-9": {
+      "simples": "A Cefic atuará na governança da identificação da pessoa natural no âmbito da administração pública federal direta, autárquica e fundacional e da expedição da Carteira de Identidade junto aos Estados e ao Distrito Federal.",
+      "pontos": ["Governança da identificação na administração federal.", "Governança da expedição da Carteira de Identidade com Estados e DF."],
+      "atencao": ["Dupla frente da Cefic."],
+      "exemplo": "A Cefic edita normas para a expedição da carteira nos Estados.",
+      "prova": ["Assertiva que restringe a Cefic à administração federal erra: ela atua também junto aos Estados."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-10": {
+      "simples": "Compete à Cefic editar normas sobre o aprimoramento da identificação das pessoas naturais; o uso do Serviço, observados o sigilo legal e a proteção de dados; a cooperação com o Tribunal Superior Eleitoral, em matéria de Identificação Civil Nacional, e com o Conselho Nacional de Justiça, em registro civil; os padrões técnicos das bases e dados de identificação; os padrões de documentos de segurança; a cooperação com entidades públicas e privadas; a transparência e a proteção de dados; e a Carteira de Identidade, como padrões de expedição, procedimentos de verificação, requisitos de segurança, padrões biométricos e informações de saúde.",
+      "pontos": ["Normas de identificação, uso do Serviço e proteção de dados.", "Cooperação com TSE (ICN) e CNJ (registro civil).", "Padrões técnicos de bases e documentos de segurança.", "Normas sobre a Carteira de Identidade."],
+      "atencao": ["Cefic COOPERA com TSE e CNJ conforme a matéria."],
+      "exemplo": "A Cefic fixa o padrão biométrico da carteira.",
+      "prova": ["Assertiva que exclui a Cefic da edição de normas sobre a Carteira de Identidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-11": {
+      "simples": "A Cefic é composta por representantes da Casa Civil da Presidência da República, que a coordena; da Secretaria Especial da Receita Federal; da Secretaria de Governo Digital do Ministério da Gestão e da Inovação em Serviços Públicos; do Ministério da Justiça e Segurança Pública; e do Ministério da Saúde. Cada membro terá um suplente. Os membros e suplentes serão indicados pelos titulares dos órgãos e designados por ato do Secretário de Governo Digital, e deverão ocupar Cargo Comissionado Executivo de nível 15 ou superior. O Coordenador poderá convidar outros participantes, sem direito a voto.",
+      "pontos": ["Casa Civil coordena.", "Receita Federal, Governo Digital, Justiça e Segurança Pública e Saúde.", "Cada membro com suplente.", "Cargo Comissionado Executivo de nível 15 ou superior.", "Convidados sem voto."],
+      "atencao": ["Quem coordena a Cefic é a CASA CIVIL."],
+      "exemplo": "O Coordenador convida um pesquisador para uma reunião, sem direito a voto.",
+      "prova": ["Assertiva que atribui a coordenação ao Ministério da Justiça erra: é da Casa Civil."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-12": {
+      "simples": "A Cefic se reunirá, em caráter ordinário, mensalmente, e, em caráter extraordinário, quando convocada por seu Coordenador. O quórum de reunião é de maioria absoluta e o de aprovação é de maioria simples. O Coordenador poderá cancelar as reuniões ordinárias quando não houver matéria a deliberar.",
+      "pontos": ["Reunião ordinária mensal.", "Extraordinária por convocação do Coordenador.", "Quórum de reunião: maioria absoluta; de aprovação: maioria simples.", "Cancelamento sem matéria."],
+      "atencao": ["Quórum de reunião ABSOLUTA; de aprovação SIMPLES."],
+      "exemplo": "A reunião só começa com a maioria absoluta dos membros.",
+      "prova": ["Assertiva que exige maioria absoluta para aprovar as matérias erra: é maioria simples."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    },
+    "art-13": {
+      "simples": "As resoluções da Cefic que tratarem de compartilhamento de dados, no âmbito da proteção e privacidade de dados da pessoa natural, serão objeto de consulta pública.",
+      "pontos": ["Resoluções sobre compartilhamento de dados passam por consulta pública."],
+      "atencao": ["Consulta pública obrigatória nessa matéria."],
+      "exemplo": "A norma de compartilhamento de dados é submetida à consulta pública.",
+      "prova": ["Assertiva que dispensa a consulta pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-14": {
+      "simples": "A Cefic poderá instituir grupos técnicos com o objetivo de assessorá-la em questões específicas.",
+      "pontos": ["Grupos técnicos de assessoramento."],
+      "atencao": ["Faculdade ('poderá')."],
+      "exemplo": "A Cefic cria grupo técnico para estudar biometria.",
+      "prova": ["Assertiva que obriga a criação de grupos técnicos erra: é faculdade."],
+      "termos": [],
+      "remissoes": ["Art. 15"]
+    },
+    "art-15": {
+      "simples": "Os grupos técnicos da Cefic serão instituídos e compostos por ato da Cefic; terão no máximo seis membros; serão temporários, com duração não superior a um ano; e estarão limitados a, no máximo, três em operação simultânea. Poderão ser convidados representantes de outros órgãos e entidades, pesquisadores e representantes da sociedade civil.",
+      "pontos": ["No máximo seis membros.", "Duração não superior a um ano.", "No máximo três grupos simultâneos.", "Convidados da sociedade civil."],
+      "atencao": ["Limites: seis membros, um ano e três grupos."],
+      "exemplo": "A Cefic não pode manter quatro grupos técnicos ao mesmo tempo.",
+      "prova": ["Assertiva que permite grupos técnicos permanentes erra: são temporários, com até um ano."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-16": {
+      "simples": "A Secretaria-Executiva da Cefic será exercida pela Secretaria de Governo Digital do Ministério da Gestão e da Inovação em Serviços Públicos.",
+      "pontos": ["Secretaria-Executiva: Secretaria de Governo Digital."],
+      "atencao": ["A Secretaria-Executiva é do Governo Digital."],
+      "exemplo": "O Governo Digital organiza as reuniões e documentos da Cefic.",
+      "prova": ["Assertiva que atribui a Secretaria-Executiva à Casa Civil erra: é da Secretaria de Governo Digital."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    },
+    "art-17": {
+      "simples": "Os membros da Cefic e dos grupos técnicos que se encontrarem no Distrito Federal se reunirão presencialmente ou por videoconferência, e os membros que se encontrarem em outros entes federativos participarão por videoconferência.",
+      "pontos": ["No Distrito Federal: presencial ou videoconferência.", "Em outros entes: videoconferência."],
+      "atencao": ["Quem está fora do DF participa por videoconferência."],
+      "exemplo": "O membro que mora em outro Estado participa por videoconferência.",
+      "prova": ["Assertiva que exige presença física de todos erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-18": {
+      "simples": "A participação na Cefic e nos grupos técnicos será considerada prestação de serviço público relevante, não remunerada.",
+      "pontos": ["Serviço público relevante.", "Não remunerado."],
+      "atencao": ["Sem remuneração."],
+      "exemplo": "Os membros da Cefic não recebem pagamento adicional.",
+      "prova": ["Assertiva que prevê remuneração pela participação erra."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    },
+    "art-19": {
+      "simples": "Compete ao Ministério da Gestão e da Inovação em Serviços Públicos a gestão e a articulação técnica, operacional e procedimental dos órgãos e entidades públicos e privados, de outros Poderes e dos entes federativos, para aprimorar a identificação das pessoas naturais e implementar o Serviço; e a implementação, gestão e sustentação operacional e tecnológica da Plataforma gov.br e da Carteira de Identidade em formato digital.",
+      "pontos": ["Articulação para implementar o Serviço.", "Gestão da Plataforma gov.br.", "Gestão da Carteira de Identidade em formato digital."],
+      "atencao": ["gov.br e carteira digital: Ministério da Gestão."],
+      "exemplo": "O Ministério da Gestão mantém a carteira digital no gov.br.",
+      "prova": ["Assertiva que atribui a gov.br ao Ministério da Justiça erra: é do Ministério da Gestão."],
+      "termos": [],
+      "remissoes": ["Art. 21"]
+    },
+    "art-20": {
+      "simples": "Compete ao Instituto Nacional de Tecnologia da Informação propor à Cefic a regulamentação dos processos de credenciamento, homologação, auditoria e fiscalização de sistemas biométricos, de personalização e de gráficas na expedição da Carteira de Identidade; operacionalizar esses processos; disponibilizar infraestrutura para integração de dados biométricos e biográficos; monitorar e dar suporte técnico; propor estudos sobre tecnologias de identificação; e operacionalizar outras demandas.",
+      "pontos": ["Credenciamento, homologação, auditoria e fiscalização de sistemas biométricos e gráficas.", "Infraestrutura para integração de dados.", "Suporte técnico e estudos."],
+      "atencao": ["Quem credencia e fiscaliza sistemas biométricos e gráficas: ITI."],
+      "exemplo": "O ITI homologa a gráfica que produz as carteiras.",
+      "prova": ["Assertiva que atribui ao ITI a coordenação da Cefic erra."],
+      "termos": [{ "termo": "ITI", "significado": "Instituto Nacional de Tecnologia da Informação." }],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-21": {
+      "simples": "Compete ao Ministério da Justiça e Segurança Pública a implementação, gestão e sustentação da base de dados de identificação e cadastrais obtidos dos órgãos de identificação dos entes federativos e da administração federal; a implementação, gestão e sustentação na confecção e leitura do QR code e dos formulários dos modelos físicos da carteira; e a coordenação, por meio da Secretaria Nacional de Segurança Pública, com auxílio da Cefic, da aquisição dos objetos necessários junto aos entes federativos, com recursos do Fundo Nacional de Segurança Pública ou de outras fontes. A tecnologia do QR code poderá ser usada por outras entidades.",
+      "pontos": ["Base de dados de identificação e cadastrais.", "QR code e formulários físicos.", "Aquisição de objetos junto aos entes com recursos do Fundo Nacional de Segurança Pública."],
+      "atencao": ["Aquisição coordenada pela Secretaria Nacional de Segurança Pública."],
+      "exemplo": "O Ministério da Justiça coordena a compra de insumos da carteira com recursos do Fundo Nacional de Segurança Pública.",
+      "prova": ["Assertiva que atribui ao Ministério da Gestão a base de dados de identificação erra: é do Ministério da Justiça."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-22": {
+      "simples": "Compete à Polícia Federal, no âmbito do Serviço, propor à Cefic padrões técnicos das bases e dos dados biométricos, padrões de documentos de segurança e a regulamentação do procedimento em caso de divergência na verificação dos dados; assessorar na definição de padrões de componentes eletrônicos e aplicativos de identificação digital; subsidiar técnica e operacionalmente a identificação inequívoca nos bancos biométricos; disponibilizar subsídios para acesso à sua base biométrica; e apoiar tecnicamente a auditoria e a fiscalização dos sistemas biométricos.",
+      "pontos": ["Propõe padrões biométricos e de documentos de segurança.", "Assessora identificação digital.", "Subsidia identificação inequívoca.", "Disponibiliza acesso à base biométrica.", "Apoia auditoria dos sistemas biométricos."],
+      "atencao": ["A PF PROPÕE e apoia; quem edita as normas é a Cefic."],
+      "exemplo": "A PF propõe o padrão técnico dos dados biométricos.",
+      "prova": ["Assertiva que atribui à PF a edição final das normas erra: ela propõe à Cefic."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-23": {
+      "simples": "Compete à Receita Federal gerir, disciplinar, monitorar e estabelecer padrões, critérios e normas para os atos cadastrais do CPF por meio do Serviço: inscrição, alteração de dados, suspensão, regularização, cancelamento, anulação e demais atos de integração com outras administrações tributárias e organismos internacionais. Assessora tecnicamente a Cefic nas questões do CPF, analisa e decide divergências nos dados cadastrais da base do CPF e responde pela integração dos dados para emissão da carteira com os da inscrição no CPF.",
+      "pontos": ["Atos cadastrais do CPF: inscrição, alteração, suspensão, regularização, cancelamento e anulação.", "Assessoria técnica à Cefic.", "Decide divergências na base do CPF.", "Integração dos dados da carteira com o CPF."],
+      "atencao": ["Quem decide divergências no CPF é a Receita Federal."],
+      "exemplo": "A Receita decide o conflito entre dois cadastros do mesmo CPF.",
+      "prova": ["Assertiva que atribui à Polícia Federal a gestão do CPF erra: é da Receita Federal."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-24": {
+      "simples": "O artigo altera o Decreto que regulamenta a Carteira de Identidade, em especial os arts. 3º, 20, 21, 22 e 24, para prever a inscrição de ofício no CPF, a condição de integração com o Serviço, o acesso ao banco do CPF sem convênio, a substituição do sistema nacional anterior pelo Serviço e a obrigatoriedade dos padrões a partir de janeiro de 2024.",
+      "pontos": ["Altera o Decreto da Carteira de Identidade.", "Inscrição de ofício no CPF.", "Acesso ao CPF sem convênio.", "Serviço substitui o sistema nacional anterior.", "Padrões obrigatórios a partir de janeiro de 2024."],
+      "atencao": ["ATUALIZAÇÃO: este dispositivo modifica o Decreto da CIN; confira a redação vigente."],
+      "exemplo": "A obrigação de seguir os padrões nacionais passa a valer em janeiro de 2024.",
+      "prova": ["Assertiva que mantém inalterado o Decreto da Carteira de Identidade erra: ele foi alterado."],
+      "termos": [],
+      "remissoes": ["Decreto da CIN"]
+    },
+    "art-25": {
+      "simples": "Os documentos de identificação de pessoas naturais expedidos em formato digital pela administração pública federal direta, autárquica e fundacional serão disponibilizados na Plataforma gov.br.",
+      "pontos": ["Documentos digitais federais disponibilizados no gov.br."],
+      "atencao": ["Plataforma única: gov.br."],
+      "exemplo": "A carteira digital federal fica disponível no gov.br.",
+      "prova": ["Assertiva que dispersa os documentos digitais por vários portais erra: ficam no gov.br."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-26": {
+      "simples": "Os novos acordos ou prorrogações entre os órgãos e entidades da administração federal direta, autárquica e fundacional e o Tribunal Superior Eleitoral referentes à Identificação Civil Nacional serão submetidos à Cefic para avaliação e ratificação, a partir da vigência do Decreto.",
+      "pontos": ["Acordos com o TSE sobre ICN passam pela Cefic.", "Avaliação e ratificação."],
+      "atencao": ["Cefic ratifica os acordos com o TSE."],
+      "exemplo": "Um novo acordo com o TSE só vale após a ratificação pela Cefic.",
+      "prova": ["Assertiva que dispensa a Cefic nos acordos com o TSE erra."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-27": {
+      "simples": "Será observado o prazo de vinte e quatro meses para o cumprimento do disposto no art. 8º, contado da data de entrada em vigor do Decreto.",
+      "pontos": ["Vinte e quatro meses para cumprir o art. 8º."],
+      "atencao": ["Prazo de vinte e quatro meses."],
+      "exemplo": "Os cadastros têm dois anos para adotar os dados do Serviço.",
+      "prova": ["Assertiva que fixa em doze meses o prazo do art. 8º erra: são vinte e quatro meses."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-28": {
+      "simples": "Ficam revogados o Decreto de 17 de dezembro de 2021, o art. 18 do Decreto que regulamenta a Carteira de Identidade e o Decreto de 3 de março de 2023.",
+      "pontos": ["Revoga decretos anteriores e o art. 18 do Decreto da CIN."],
+      "atencao": ["Dispositivo de revogação."],
+      "exemplo": "Os decretos anteriores sobre o tema deixam de valer.",
+      "prova": ["Assertiva que mantém em vigor os decretos revogados erra."],
+      "termos": [],
+      "remissoes": ["Art. 29"]
+    },
+    "art-29": {
+      "simples": "Este Decreto entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "O Decreto passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-12T00:08:30.797128+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-62-a",
+        "art-73-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-62-a",
+      "unit_id": "70d4ed59-75a2-526f-ae89-2ba92fe4b6a3",
+      "content_sha256": "88979eaba7c2a6a71f512a5d8bd832643b8b2108992c3c0b45348bf4143fb53f",
+      "simples": "O poder público instala placas de comunicação aumentativa e alternativa em praças, parques e demais espaços públicos coletivos para atender necessidades complexas de comunicação. Usam pranchas de baixa tecnologia com pictogramas, adequadas ao contexto e resistentes ao clima e ao uso externo.",
+      "pontos": [
+        "Praças, parques e demais espaços públicos coletivos.",
+        "Pranchas de baixa tecnologia com pictogramas.",
+        "Adaptação ao contexto e resistência ambiental."
+      ],
+      "atencao": [
+        "Incluído pela Lei 15.249/2025. Não reduza comunicação acessível a aplicativos digitais: o dispositivo exige recursos de baixa tecnologia. Placas genéricas sem adequação ao contexto não atendem integralmente ao parágrafo."
+      ],
+      "exemplo": "Uma praça instala prancha com pictogramas adequados às atividades do local para facilitar a interação. Variação: a prancha se deteriora rapidamente na chuva: o parágrafo também exige material adequado ao ambiente externo.",
+      "prova": [
+        "O artigo exige apenas ferramentas digitais, excluindo pranchas de baixa tecnologia? Não; prevê expressamente pranchas de baixa tecnologia com pictogramas e adequação ao contexto."
+      ],
+      "termos": [
+        {
+          "termo": "Pictograma",
+          "significado": "Representação gráfica utilizada para comunicar uma mensagem."
+        }
+      ],
+      "remissoes": [
+        "LBI art. 3º, XV",
+        "LBI art. 42, §3º"
+      ],
+      "expected": {
+        "unit_id": "70d4ed59-75a2-526f-ae89-2ba92fe4b6a3",
+        "content_sha256": "88979eaba7c2a6a71f512a5d8bd832643b8b2108992c3c0b45348bf4143fb53f",
+        "simples": "Com a finalidade de atender pessoas com necessidades complexas de comunicação, o poder público instalará, em praças, parques e demais espaços públicos de uso coletivo, placas com sistemas de comunicação aumentativa e alternativa, compostas de pranchas de baixa tecnologia com pictogramas. As placas deverão ser adaptadas aos contextos comunicativos e confeccionadas em materiais resistentes às condições climáticas.",
+        "pontos": [
+          "Placas de comunicação aumentativa e alternativa em espaços públicos.",
+          "Pictogramas e materiais resistentes."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "A praça tem placas com pictogramas para facilitar a comunicação.",
+        "prova": [
+          "Assertiva que restringe essas placas a hospitais erra: são para espaços públicos de uso coletivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-73-a",
+      "unit_id": "8d7e17e6-b7d6-57e4-b89b-a2bc87343a19",
+      "content_sha256": "c64480037b0f1d5011e653da69d4afb8a7aef66fbddfe2e931f198e2404e8342",
+      "simples": "Campanhas sociais, preventivas e educativas devem ser acessíveis à pessoa com deficiência. A obrigação alcança as três categorias de campanha e não se limita ao conteúdo de uma única disciplina ou a um formato visual.",
+      "pontos": [
+        "Campanhas sociais.",
+        "Campanhas preventivas.",
+        "Campanhas educativas acessíveis."
+      ],
+      "atencao": [
+        "Incluído pela Lei 14.863/2024. O texto não restringe a exigência às campanhas educativas nem define um único recurso técnico para todos os casos."
+      ],
+      "exemplo": "Uma campanha de prevenção oferece comunicação acessível para que pessoas com deficiência compreendam a orientação. Variação: a campanha é social, e não preventiva: continua incluída na enumeração do artigo.",
+      "prova": [
+        "As campanhas sociais também estão abrangidas pelo dever de acessibilidade? Sim; o artigo menciona campanhas sociais, preventivas e educativas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "LBI art. 67"
+      ],
+      "expected": {
+        "unit_id": "8d7e17e6-b7d6-57e4-b89b-a2bc87343a19",
+        "content_sha256": "c64480037b0f1d5011e653da69d4afb8a7aef66fbddfe2e931f198e2404e8342",
+        "simples": "As campanhas sociais, preventivas e educativas devem ser acessíveis à pessoa com deficiência.",
+        "pontos": [
+          "Campanhas acessíveis."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "A campanha de vacinação tem versão em Libras e audiodescrição.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade das campanhas educativas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    }
+  ]
+}

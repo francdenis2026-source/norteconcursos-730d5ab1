@@ -1,0 +1,158 @@
+{
+  "version": "2026-10-11-antifaccao-targeted",
+  "checked_at": "2026-10-12T01:57:51.274699+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "antifaccao",
+      "title": "Lei antifacção — leitura integral",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 43,
+      "target_unit_keys": [
+        "art-1",
+        "art-2"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "source_sha256": "62f7695eb98a84dfb4ecb04195226c97a22137b1398de51a75b466255e62b4db",
+      "source_checked_at": "2026-10-12T00:31:22.521806+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "antifaccao",
+      "course_id": "6161fee3-ff6a-57e5-92e1-7da300670b95",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "217a354e-df1f-5eac-90da-df87327db8d1",
+      "content_sha256": "979098210b5fcc73d66fcc8dbe9e5bd9039f80eb8ef46cf550a6b3faa9a7ce22",
+      "simples": "A Lei 15.358/2026 trata de organizações criminosas ultraviolentas, grupos paramilitares e milícias que atentem por violência/grave ameaça contra paz, coletividade ou instituições. Cria domínio social estruturado e favorecimento, além de alterar vários diplomas. Não substitui automaticamente os crimes associativos anteriores nem transforma todo concurso de pessoas em facção.",
+      "pontos": [
+        "Identifique conduta, vínculo e contexto; não apenas o nome popular do grupo."
+      ],
+      "atencao": [
+        "É lei de 2026: examinar tempo do fato e proibição de retroatividade mais gravosa. Dispositivos são objeto de controle constitucional nas ADIs 7952, 7956, 7957 e 7958; consultar andamento e decisões pertinentes antes de afirmar tese consolidada. Este lote não certifica todos os dispositivos ou resultados dessas ações."
+      ],
+      "exemplo": "Três pessoas mantêm grupo estável para fraudes sem os elementos de domínio/ultraviolência do regime novo: o número, sozinho, não o converte em facção. Variação: emprego de grave ameaça para impor controle territorial exige exame da definição e da conduta específica do art. 2º.",
+      "prova": [
+        "Toda associação de três pessoas é automaticamente facção da lei nova? Não; o número não dispensa os elementos materiais da definição e da conduta."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7576278"
+      ],
+      "expected": {
+        "unit_id": "217a354e-df1f-5eac-90da-df87327db8d1",
+        "content_sha256": "979098210b5fcc73d66fcc8dbe9e5bd9039f80eb8ef46cf550a6b3faa9a7ce22",
+        "simples": "A Lei institui o marco legal do combate ao crime organizado no Brasil, para definir e punir as condutas de organizações criminosas ultraviolentas, grupos paramilitares ou milícias privadas que, mediante violência ou grave ameaça, atentem contra a paz pública, a segurança da coletividade ou o funcionamento de instituições públicas ou privadas. Tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado e altera o Código Penal, o Código de Processo Penal, a Lei dos Crimes Hediondos, a Lei de Execução Penal, a Lei de Drogas, o Estatuto do Desarmamento, a Lei de Lavagem e o Código Eleitoral, entre outras.",
+        "pontos": [
+          "Marco legal do combate ao crime organizado.",
+          "Alvos: organizações criminosas ultraviolentas, grupos paramilitares e milícias privadas.",
+          "Cria os crimes de domínio social estruturado e de favorecimento a ele.",
+          "Altera várias leis penais e processuais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: lei recente e que altera outras normas; confira a redação atual das leis modificadas e a regulamentação.",
+          "Aplica-se a quem usa violência ou grave ameaça para controle territorial ou social."
+        ],
+        "exemplo": "Uma facção que impõe controle sobre um bairro por meio de ameaças se enquadra no âmbito da Lei.",
+        "prova": [
+          "Assertiva que restringe a Lei ao tráfico de drogas erra: ela trata de organizações ultraviolentas, grupos paramilitares e milícias em geral."
+        ],
+        "termos": [
+          {
+            "termo": "Domínio social estruturado",
+            "significado": "Controle de territórios ou comunidades por violência organizada."
+          }
+        ],
+        "remissoes": [
+          "Lei de Organizações Criminosas"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "antifaccao",
+      "course_id": "6161fee3-ff6a-57e5-92e1-7da300670b95",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "53b78bd7-054e-53ef-a4c5-d9ad027deea0",
+      "content_sha256": "823ec93a50324bfed8ebc647b8df8d56b3d6b892194fa5abd0f2f2f3ecda57cb",
+      "simples": "Domínio social estruturado exige integrante do agrupamento definido e uma das condutas dos incisos I–X. Pena literal: 20 a 40 anos, sem prejuízo das sanções indicadas. O §2º define facção como agrupamento de três ou mais com os elementos de violência/grave ameaça/coação e controle, intimidação, ataque a serviços ou atos destinados aos crimes desta lei. Isso não se confunde com associação criminosa, associação para tráfico ou organização da Lei 12.850.",
+      "pontos": [
+        "Memória: TRÁFICO começa em 2; ASSOCIAÇÃO e FACÇÃO em 3; ORGANIZAÇÃO geral em 4. O número é só a primeira pergunta, nunca a resposta completa.",
+        "CP 288: três ou mais, finalidade específica de crimes e vínculo estável/permanente; pena básica 1–3 anos. §1º majorante e §2º sobre solicitar/contratar crime, incluído em 2025, exigem leitura própria.",
+        "Drogas 35: duas ou mais, finalidade dos arts. 33 caput/§1º e 34; vínculo estável/permanente segundo STJ mesmo com a expressão reiteradamente ou não. Pena 3–10 e 700–1.200 dias-multa. Não presumir associação por presença em território de facção.",
+        "Lei 12.850 art. 1º §1º: quatro ou mais, estrutura ordenada e divisão de tarefas, ainda que informal, vantagem de qualquer natureza mediante infrações com pena máxima superior a quatro anos OU caráter transnacional.",
+        "Facção da Lei 15.358: três ou mais e elementos ultraviolentos da definição. A participação e a conduta concreta precisam ser demonstradas; não usar o mínimo de quatro do conceito geral automaticamente."
+      ],
+      "atencao": [
+        "A comparação não determina cumulação automática de crimes pelo mesmo fato: examinar elementos, especialidade/concurso e evitar dupla valoração. Não confundir definições associativas com concurso eventual para um delito isolado.",
+        "O artigo possui outros parágrafos sobre majorantes, preparatórios, benefícios, custódia e competência; sua literalidade não certifica constitucionalidade ou prisão automática. O §9º deve ser confrontado com Constituição, decisão judicial fundamentada e regime cautelar do CPP. As ADIs indicadas precisam ser acompanhadas; este aprofundamento se limita às definições e comparação, não resolve todo o controle judicial."
+      ],
+      "exemplo": "Dois agentes mantêm vínculo estável e permanente para os crimes de drogas especificados: examina-se art. 35, mesmo sem atingir três. Três associados estáveis para crimes patrimoniais, sem elementos de ultraviolência/domínio da lei nova: examina-se CP 288. Variação: quatro pessoas com estrutura, tarefas e finalidade que satisfaçam a Lei 12.850 podem formar organização geral. Já três pessoas que imponham controle territorial por grave ameaça exigem exame da definição de facção e da conduta do art. 2º; a contagem isolada não basta. Duas pessoas reunidas ocasionalmente para um delito não preenchem automaticamente o vínculo estável do art. 35.",
+      "prova": [
+        "Duas pessoas com vínculo estável para os crimes de drogas indicados podem preencher art. 35? Sim; o mínimo é dois, com os demais elementos.",
+        "Três pessoas são suficientes por si para provar facção? Não; precisam dos elementos materiais da definição e da conduta examinada.",
+        "O mínimo da organização geral da Lei 12.850 é quatro? Sim; juntamente com estrutura, tarefas e finalidade legal.",
+        "A expressão reiteradamente ou não do art. 35 dispensa vínculo estável segundo STJ? Não; a jurisprudência exige estabilidade e permanência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=22%2F04%2F2026&num_registro=202504764515",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7576278"
+      ],
+      "expected": {
+        "unit_id": "53b78bd7-054e-53ef-a4c5-d9ad027deea0",
+        "content_sha256": "823ec93a50324bfed8ebc647b8df8d56b3d6b892194fa5abd0f2f2f3ecda57cb",
+        "simples": "Domínio social estruturado: constitui crime, independentemente de suas razões ou motivações, a prática, por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, de condutas como usar violência ou grave ameaça para intimidar a população ou agentes públicos e impor controle sobre territórios; empregar ou ameaçar com armas de fogo, explosivos ou agentes químicos; obstruir a atuação policial com barricadas e bloqueios; impor controle social sobre atividades econômicas; usar explosivos contra instituições financeiras ou interromper fluxos de transporte; atacar presídios; apoderar-se de meios de transporte ou aeronaves; tomar ou sabotar portos, aeroportos, hospitais, escolas, estádios e instalações essenciais; e interromper bancos de dados ou serviços de comunicação governamentais. Pena: reclusão de vinte a quarenta anos, sem prejuízo das penas dos demais crimes. A pena aumenta de 2/3 ao dobro em hipóteses como comando da facção, financiamento, vítimas autoridades, crianças ou vulneráveis, envolvimento de funcionário público, arma de uso restrito, participação de criança ou adolescente, relações transnacionais, exploração ilegal de recursos minerais e uso de tecnologia sofisticada. Considera-se facção o agrupamento de três ou mais pessoas que emprega violência, grave ameaça ou coação para impor controle territorial ou social. Os crimes são insuscetíveis de anistia, graça, indulto, fiança e livramento condicional. Atos preparatórios com propósito inequívoco de consumar são punidos com a pena do crime consumado reduzida de 1/3 até a metade. Veda-se o auxílio-reclusão. Líderes cumprem pena em presídio federal de segurança máxima. Homicídios conexos são julgados por Varas Criminais Colegiadas. A prática é causa suficiente para a prisão preventiva.",
+        "pontos": [
+          "Rol de condutas (incisos I a X) praticadas por integrante de facção, grupo paramilitar ou milícia.",
+          "Reclusão de vinte a quarenta anos.",
+          "§1º: aumento de 2/3 ao dobro (comando, financiamento, vítimas especiais, arma de uso restrito, criança ou adolescente, drones e tecnologia, entre outros).",
+          "§2º: facção é o agrupamento de três ou mais pessoas com violência para controle territorial ou social.",
+          "§4º: insuscetível de anistia, graça, indulto, fiança e livramento condicional.",
+          "§5º: atos preparatórios punidos com redução de 1/3 até a metade.",
+          "§§6º a 9º: sem auxílio-reclusão, presídio federal de segurança máxima para líderes, Varas Colegiadas e prisão preventiva."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: lei recente; o §3º foi vetado.",
+          "Crime HEDIONDO (art. 4º), no caput e nos §§1º e 3º.",
+          "Atos preparatórios são punidos como o crime consumado, com redução."
+        ],
+        "exemplo": "Integrante de facção que bloqueia vias com barricadas e ameaça a população para dominar um bairro responde por domínio social estruturado.",
+        "prova": [
+          "Assertiva que permite fiança e livramento condicional para o crime do art. 2º erra: são vedados."
+        ],
+        "termos": [
+          {
+            "termo": "Organização criminosa ultraviolenta",
+            "significado": "Facção de três ou mais pessoas que usa violência para controle territorial ou social."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º",
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    }
+  ]
+}

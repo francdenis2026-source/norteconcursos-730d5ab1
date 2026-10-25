@@ -1,0 +1,156 @@
+{
+  "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "authorization": "Solicitação expressa do usuário: remover do banco os obsoletos identificados nesta apostila.",
+  "items": [
+    {
+      "candidate_id": "3785f40fea09b82a543b2b51850c36514cfbdf189c286df6017292e6fca30b0f",
+      "source_page": 472,
+      "decision_source": "importacao-inicial-CTB-UFIR"
+    },
+    {
+      "candidate_id": "fbd885d04be7758ac8041073124d0a1b832659d2681c8e46eefd6f9f9e528ab9",
+      "source_page": 472,
+      "decision_source": "importacao-inicial-CTB-UFIR"
+    },
+    {
+      "candidate_id": "6d8dcd40868f03c4abf7cfada24621a8278afc262b2dce919e5131d95cc7a6bc",
+      "source_page": 262,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "b5d39a8f34bc193ab86a5c6166139fa8a5464675b055e94829094503d05f2032",
+      "source_page": 262,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "d56d50bc268bbe9aa3f38ff53da60b904cf946e9228450909f548e1c8e1ae3f4",
+      "source_page": 270,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "5bc9b1baf2852cdf94ab1bf620d2eaa72acba71f5f707c91e1b62171358d6bcc",
+      "source_page": 275,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "1e99e28312f8706d6ab1f25da2e55514b67f316e0f5a70926489dcf6b4a2cf67",
+      "source_page": 277,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "57689f8fe1748272d8d4c9cf51aeff515c96061ffbfe9627a6b6199fe409d699",
+      "source_page": 283,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "b3c279601a884a186c8343226a940f68a7b4301c39038b90c8f88d590625b983",
+      "source_page": 285,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "ec908aa9076405b7cee1db415bd1928bcba347ce74f8b2ba4979c3db5d05ccae",
+      "source_page": 292,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "6cea34067039fb9ad41009b1845028d2efea095f92a4e16b1e8c99c16911cb9d",
+      "source_page": 297,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "10fd89cc0b86b8a549ee4b7b7f003f9a772568b23dc4c3b9b9ac4554059c58a9",
+      "source_page": 297,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "2098a8fb1827376e3534516b41d57a1dfcc8d953f5849bb018f6de50ac3c4dd8",
+      "source_page": 277,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-02-2026-10-17.json"
+    },
+    {
+      "candidate_id": "354213ac1632c4aae63a0924a70e00791fe5184714daae5c76f67f97b59c5e52",
+      "source_page": 297,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "83aee1ff671bb5413d1acf6c9b2fa2e6eff08f144c4d33370c16435f776c6c92",
+      "source_page": 298,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "0dab2599fd7d8b1563f6919873f07ecfb1a62e5d7dabf0db1011d54f788c6620",
+      "source_page": 300,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "73806177db0a0ad8b62a50c63f5a8bd46898deaf84c0ef4f0db7ffcf9d99eea1",
+      "source_page": 300,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "0153c0a7a31ceb528ba2d93a07368692ba2c4dc372234efc1c681ed997d4743b",
+      "source_page": 303,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "ce46813274a674747c205aa1a30d8356573d5b73c6bf6fc0cf5025e91ee85810",
+      "source_page": 308,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "c011b1925b9f8db7806f43c0084d9accfe9ee0150f7058f7c6b8bb9f86f54d2d",
+      "source_page": 308,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "925f0ce1d29f4af5c3cc90395484891097395f715ab503a82a512a6dc71d7f8c",
+      "source_page": 310,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "b181762f5678cf37ed5901ba052cc04eed7be7f2e943a538357f5ef0c65358b5",
+      "source_page": 312,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "590dc64dc4779f8f0e1cf0a76961ba17a59259e4688f1a8af7536c493cd0dfee",
+      "source_page": 312,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "f3a167d13c0283516cb32bf920a156f0675de535996582222ddc42a8a282b4d1",
+      "source_page": 323,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "cc94de060f056dc46888c5d55692c0f401218f8a38d570ac86abb1273d3844ca",
+      "source_page": 323,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "b0a2955cf40b5743272cca43cf0379c0f0897ada2acd2ecba533b226ed6db087",
+      "source_page": 332,
+      "decision_source": "docs/reviews/cespe2016-cpc-lote100-03-2026-10-17.json"
+    },
+    {
+      "candidate_id": "35db4a3e263b89c2ee53ab45b2511b468c408b9cc36b0632d19e5a303697c5b2",
+      "source_page": 322,
+      "decision_source": "docs/reviews/cespe2016-cpc-recursos-01-2026-10-17.json"
+    },
+    {
+      "candidate_id": "916b7cb0f6d5e32b3be18d6adb3c586b0b79d2068aa4adbfcb703d9f83d2fae8",
+      "source_page": 326,
+      "decision_source": "docs/reviews/cespe2016-cpc-recursos-01-2026-10-17.json"
+    },
+    {
+      "candidate_id": "0afa629627b1ffe0bd237bfe6ca21aca04c953c578d9327f43c446b8bd87cb41",
+      "source_page": 326,
+      "decision_source": "docs/reviews/cespe2016-cpc-recursos-01-2026-10-17.json"
+    },
+    {
+      "candidate_id": "c72f6996f7e7f6c5eaebdb50f2228614125ccbbf529e8a8ee05933bcecae3e4c",
+      "source_page": 329,
+      "decision_source": "docs/reviews/cespe2016-cpc-recursos-01-2026-10-17.json"
+    }
+  ]
+}

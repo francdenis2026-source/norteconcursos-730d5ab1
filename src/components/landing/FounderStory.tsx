@@ -36,14 +36,18 @@ export function FounderStory({ full = false }: { full?: boolean }) {
         <div className="founder-grid">
           <div className="founder-identity">
             <span className="lp-kicker">Nossa origem · Feijó, Acre</span>
-            <img
-              className="founder-portrait"
-              src="/media/franc-denis-retrato-v1.webp"
-              alt="Franc Denis, com camisa azul e colete, em composição com fundo escuro"
-              width={1086}
-              height={1448}
-              decoding="async"
-            />
+            <figure className="founder-portrait-frame">
+              <img
+                className="founder-portrait"
+                src="/media/franc-denis-recorte.webp"
+                alt="Franc Denis, com camisa azul e colete, diante da composição de distintivos da Norte Concursos"
+                width={1086}
+                height={1448}
+                loading="lazy"
+                decoding="async"
+              />
+
+            </figure>
             <span className="founder-location">
               <MapPin size={15} /> Feijó · Acre · Brasil
             </span>

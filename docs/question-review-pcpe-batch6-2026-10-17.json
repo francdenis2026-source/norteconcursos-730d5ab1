@@ -1,0 +1,2080 @@
+{
+  "scope": "Fifteen PCPE individual decisions, fourteen activated and one obsolete; seven basic-block provenance repairs. One remaining PE item held for constitutional review of disciplinary sanctions for expression.",
+  "checked_at": "2026-10-17T02:06:08.160Z",
+  "publication": {
+    "dry_run": false,
+    "reviewed": 15,
+    "updated": [
+      "0761babe-e407-488e-916d-0eb7bebc154a",
+      "092b6a72-c3ee-49ed-b5e1-d2581900f249",
+      "1aaefaf4-75de-4c76-b8e3-518f86070229",
+      "2886ca5f-31ed-4abe-9376-2b4557672546",
+      "29ab5ec5-51a0-461d-b71b-19a592afe60d",
+      "4bc4f0f0-2601-4cb2-9d44-2c3c40acf3fd",
+      "4d55fab4-c4c5-4b2e-a24c-00d876d7862b",
+      "778be6a5-6394-4936-9ca9-a9d66503ab5a",
+      "909e6401-a89c-409e-b436-b9e34f24a098",
+      "9f760351-81f2-48b4-8c0f-214621158af3",
+      "b8e117bb-4003-4685-851d-f5afbd5f9621",
+      "ded23962-f41c-49eb-be25-fdc4ed0a814a",
+      "e30078ea-84a5-45e9-a573-8d94d8c02f61",
+      "eed8da0a-5f84-4ac1-80bb-394c12029286",
+      "f6830126-f347-4f28-a1e9-c0c2c7e35e9c"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-17T02:05:43.447Z"
+  },
+  "validation": {
+    "checked_at": "2026-10-17T02:06:08.160Z",
+    "reviewed": 15,
+    "published_active": 14,
+    "published_obsolete": 1,
+    "provenance_repaired": 7,
+    "preserved_other_pc_records": 2953,
+    "concurrent_changes": [],
+    "metadata_concurrent_changes": [],
+    "new_topics": 4,
+    "new_sources": 10,
+    "pc_status": {
+      "active": 2614,
+      "archived": 212,
+      "annulled": 37,
+      "under_review": 97,
+      "obsolete": 8
+    },
+    "pending_by_contest": {
+      "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+      "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+      "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+      "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+      "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+      "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+      "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+      "Polícia Civil de Minas Gerais": 2,
+      "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+      "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+      "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+      "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+      "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+    }
+  },
+  "legal_sources": {
+    "jurisdiction": "PE",
+    "items": [
+      {
+        "row": {
+          "id": "f86f3b09-fe13-5eed-bc46-1efcf5c11761",
+          "source_type": "constituicao",
+          "title": "Constituição de Pernambuco — recorte de segurança pública",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+          "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "105-A"
+          ]
+        }
+      },
+      {
+        "row": {
+          "id": "578f989d-c03d-50ad-82f0-d784bbe33aee",
+          "source_type": "lei",
+          "title": "Lei PE 6.123/1968 — recortes de promoção e reintegração",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 8ed2f1e93767cba350888f26235221f9f65420de34cd79197dfbe5fd97bf4225"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-6123.html",
+          "sha256": "8ed2f1e93767cba350888f26235221f9f65420de34cd79197dfbe5fd97bf4225",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "59",
+            "61",
+            "66"
+          ]
+        }
+      },
+      {
+        "row": {
+          "id": "01045580-edb1-5310-bf75-4f74a9b335b4",
+          "source_type": "lei",
+          "title": "Lei PE 6.425/1972 — recortes de remoção e disciplina",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 a3ca152b7459f9fdf51eb396908f8f45a61e34cb5c0ffd0f26e226754d150156"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-6425.html",
+          "sha256": "a3ca152b7459f9fdf51eb396908f8f45a61e34cb5c0ffd0f26e226754d150156",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "14",
+            "31",
+            "37",
+            "49"
+          ]
+        }
+      },
+      {
+        "row": {
+          "id": "140740e3-3811-5949-a80a-736cafda7a18",
+          "source_type": "lei",
+          "title": "LC PE 137/2008 — recortes do PCCV policial",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 6c93bcd7f8e37b3a9927f9d30442affca0e48279d2e2996f023d6586929579d9"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-137.html",
+          "sha256": "6c93bcd7f8e37b3a9927f9d30442affca0e48279d2e2996f023d6586929579d9",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "2",
+            "5",
+            "15",
+            "20"
+          ]
+        }
+      },
+      {
+        "row": {
+          "id": "86609123-a624-5bb5-95fd-f16bf76c7492",
+          "source_type": "lei",
+          "title": "LC PE 317/2015 — funções, ingresso e remoção do delegado",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 e587194b7e605b3a17fcd5696b558e8e383e35a102b1fec38f3e67ce1f05feaf"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-317-original.html",
+          "sha256": "e587194b7e605b3a17fcd5696b558e8e383e35a102b1fec38f3e67ce1f05feaf",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "1",
+            "2",
+            "3"
+          ],
+          "reference_capture": {
+            "url": "https://legis.alepe.pe.gov.br/dadosReferenciais.aspx?id=17817",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-317-references.html",
+            "sha256": "7a5585b999786ef4e9d47a4320f4475945ce787de3d12ca506686b8cc95e5239"
+          }
+        }
+      },
+      {
+        "row": {
+          "id": "8f492e3c-7ede-5e68-a778-d577ebb84f91",
+          "source_type": "lei",
+          "title": "Lei PE 15.529/2015 — gestão documental, art. 6º",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10983&tipo=TEXTOORIGINAL",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 550be9afd69e761906976ad412fa2e1c5cdcc132918d3088cc0e2104c0ee9fb0"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10983&tipo=TEXTOORIGINAL",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-15529-original.html",
+          "sha256": "550be9afd69e761906976ad412fa2e1c5cdcc132918d3088cc0e2104c0ee9fb0",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "6"
+          ],
+          "reference_capture": {
+            "url": "https://legis.alepe.pe.gov.br/dadosReferenciais.aspx?id=10983",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-15529-references.html",
+            "sha256": "bf3ee3fbc795f93b1c25fc72a5a3f340272f9f7d1c0108e4791313988cffe4be"
+          }
+        }
+      },
+      {
+        "row": {
+          "id": "d3a73869-4f01-515f-8fbc-30bc1e6743fa",
+          "source_type": "lei",
+          "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 2969cce867772293a34e8c484eb0cf69ce30f97d837211d3bc4d9fcaf12224d2"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-14804.html",
+          "sha256": "2969cce867772293a34e8c484eb0cf69ce30f97d837211d3bc4d9fcaf12224d2",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "1",
+            "2",
+            "4",
+            "8",
+            "9"
+          ]
+        }
+      },
+      {
+        "row": {
+          "id": "c5e81b1a-d7d4-5241-98e6-71d8bcd8cc70",
+          "source_type": "decreto",
+          "title": "Decreto PE 38.787/2012 — transparência e recursos",
+          "issuer": "Assembleia Legislativa de Pernambuco — ALEPE",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência individual dos recortes indicados, não certificação de toda a norma ou de toda jurisprudência. Data de origem distinta da conferência. SHA-256 b74c4cd7b5c4eb2493ad6d11b18507ddf369ed59d5e736affc5f4f06cea2943a"
+        },
+        "evidence": {
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+          "path": "outputs/pc-pending-review-2026-10-16/alepe-38787.html",
+          "sha256": "b74c4cd7b5c4eb2493ad6d11b18507ddf369ed59d5e736affc5f4f06cea2943a",
+          "reviewed": true,
+          "captured_at": "2026-10-17T02:00:54.798422+00:00",
+          "current_effect_reviewed": true,
+          "reviewed_articles": [
+            "7",
+            "20",
+            "21"
+          ]
+        }
+      }
+    ]
+  },
+  "legal_source_publication": [
+    {
+      "name": "legal-sources",
+      "result": {
+        "reviewed": 8,
+        "created": 8,
+        "preserved": 0
+      }
+    }
+  ],
+  "basic_sources": {
+    "sources": [
+      {
+        "kind": "edital",
+        "expected": {
+          "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+          "source_type": "edital",
+          "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+          "issuer": "SAD/SDS Pernambuco / Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "published_on": "2023-12-21",
+          "checked_at": "2026-10-16T22:08:51.908+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+        },
+        "row": {
+          "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+          "source_type": "edital",
+          "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+          "issuer": "SAD/SDS Pernambuco / Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "published_on": "2023-12-21",
+          "checked_at": "2026-10-16T22:08:51.908+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "sha256": "eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "prova",
+        "expected": null,
+        "row": {
+          "id": "4b1d30b8-d46a-5acd-bebf-a584e8fe44c2",
+          "source_type": "outro",
+          "title": "Prova objetiva — PCPE Agente 2024 — conhecimentos básicos (itens 1 a 20)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Bloco básico do próprio cargo identificado no catálogo PC_PE_23; itens 1 a 3 e chaves definitivas cotejados visualmente. Não certificação integral dos demais itens. SHA-256 82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": null,
+        "row": {
+          "id": "500634c6-8a6b-5f11-8bcd-fb87a5e6ecac",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo — PCPE Agente 2024 — conhecimentos básicos (itens 1 a 20)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-17T02:00:54.798422+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Bloco básico do próprio cargo identificado no catálogo PC_PE_23; itens 1 a 3 e chaves definitivas cotejados visualmente. Não certificação integral dos demais itens. SHA-256 7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "visually_verified": true
+        }
+      }
+    ],
+    "edition": {
+      "expected": {
+        "id": "8be33110-f277-4e57-bf0d-d86f535bde40",
+        "contest_name": "Polícia Civil de Pernambuco",
+        "role_name": "Agente de Polícia",
+        "contest_year": 2024,
+        "exam_board": "Cebraspe",
+        "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+        "status": "active",
+        "created_at": "2026-10-14T00:45:28.883945+00:00"
+      },
+      "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+    }
+  },
+  "basic_source_publication": [
+    {
+      "name": "basic-sources",
+      "result": {
+        "dry_run": false,
+        "createdSources": [
+          "4b1d30b8-d46a-5acd-bebf-a584e8fe44c2",
+          "500634c6-8a6b-5f11-8bcd-fb87a5e6ecac"
+        ],
+        "editionSource": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+      }
+    }
+  ],
+  "topic_publication": [
+    {
+      "name": "agente-topics",
+      "result": {
+        "reviewed": 1,
+        "created": 1,
+        "preserved": 0
+      }
+    },
+    {
+      "name": "escrivao-topics",
+      "result": {
+        "reviewed": 2,
+        "created": 2,
+        "preserved": 0
+      }
+    },
+    {
+      "name": "delegado-topics",
+      "result": {
+        "reviewed": 1,
+        "created": 1,
+        "preserved": 0
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "0761babe-e407-488e-916d-0eb7bebc154a",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 1,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB2 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 1,
+        "official_answer": "C",
+        "page": 1,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    },
+    {
+      "id": "092b6a72-c3ee-49ed-b5e1-d2581900f249",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 4,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB2 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 7,
+        "official_answer": "D",
+        "page": 4,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    },
+    {
+      "id": "1aaefaf4-75de-4c76-b8e3-518f86070229",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 3,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB2 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 4,
+        "official_answer": "D",
+        "page": 3,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    },
+    {
+      "id": "909e6401-a89c-409e-b436-b9e34f24a098",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 2,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB2 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 3,
+        "official_answer": "B",
+        "page": 2,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    },
+    {
+      "id": "ded23962-f41c-49eb-be25-fdc4ed0a814a",
+      "patch": {
+        "question_source_id": "4b1d30b8-d46a-5acd-bebf-a584e8fe44c2",
+        "answer_key_source_id": "500634c6-8a6b-5f11-8bcd-fb87a5e6ecac",
+        "source_page": 1,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB1 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 1,
+        "official_answer": "E",
+        "page": 1,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        }
+      }
+    },
+    {
+      "id": "eed8da0a-5f84-4ac1-80bb-394c12029286",
+      "patch": {
+        "question_source_id": "4b1d30b8-d46a-5acd-bebf-a584e8fe44c2",
+        "answer_key_source_id": "500634c6-8a6b-5f11-8bcd-fb87a5e6ecac",
+        "source_page": 1,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB1 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 2,
+        "official_answer": "C",
+        "page": 1,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        }
+      }
+    },
+    {
+      "id": "f6830126-f347-4f28-a1e9-c0c2c7e35e9c",
+      "patch": {
+        "question_source_id": "4b1d30b8-d46a-5acd-bebf-a584e8fe44c2",
+        "answer_key_source_id": "500634c6-8a6b-5f11-8bcd-fb87a5e6ecac",
+        "source_page": 2,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial.\nVínculos corrigidos para o caderno básico PECB1 e sua chave definitiva do próprio cargo. Texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T02:00:54.798422+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual de caderno e chave do bloco básico do próprio cargo.",
+        "visually_verified": true,
+        "item_number": 3,
+        "official_answer": "D",
+        "page": 2,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        }
+      }
+    }
+  ],
+  "verification": {
+    "application_tests_passed": 600,
+    "application_tests_failed": 0,
+    "review_guard_tests_passed": 42,
+    "review_guard_tests_failed": 0,
+    "production_build": "passed in isolated temporary copy; checkout version stamps preserved"
+  },
+  "items": [
+    {
+      "id": "0761babe-e407-488e-916d-0eb7bebc154a",
+      "career": "Escrivão de Polícia",
+      "item_number": 1,
+      "official_answer": "C",
+      "original_sha256": "4c45bcbc7927834288defeb3bec7c386dfd247673a67639eb9e9389e4ff01fc7",
+      "prepublication_sha256": "9541c63ae29a280b65360963c155cb9ce9ee783785575a331b679e359b06d0cb",
+      "final_sha256": "db5a2e36dd1194ce479fd80a4cd0a65f2fa8dd31a4f17b4af45863da6334f14a",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "101",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "102",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nO art. 102 distingue VINCULAÇÃO ADMINISTRATIVA de participação na segurança pública. Polícia Civil, Polícia Militar e Corpo de Bombeiros Militar integram a Secretaria responsável pela defesa social; Polícia Penal vincula-se ao órgão administrador do sistema penal. Por isso C, e não A. ATUALIZAÇÃO: o art. 101 também inclui guardas municipais pela EC 70/2026 e órgãos executivos de trânsito pela EC 71/2026; a lista de 2024 não esgota o texto atual. Essas inclusões não alteraram a distinção de vinculação do art. 102 cobrada aqui.\nExemplo: Fazer parte da segurança pública não significa que todos os órgãos tenham a mesma vinculação administrativa.\nTeste rápido — A Polícia Penal deve ser incluída automaticamente no mesmo grupo de vinculação do art. 102? Não.",
+        "current_syllabus_topic_id": "d638054b-316a-51bc-8554-811060d39a7e",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+            "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "105-A"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "092b6a72-c3ee-49ed-b5e1-d2581900f249",
+      "career": "Escrivão de Polícia",
+      "item_number": 7,
+      "official_answer": "D",
+      "original_sha256": "f2b158c373f9883ad6deeb14960b368e508e6be60ad26bca8f4e18394e0c7bfe",
+      "prepublication_sha256": "0924bde0f10f402b9013abf10b66fbb10a87aac7886ea3695a899ce1fe891e6d",
+      "final_sha256": "d43971293a927a2ae5cd839f1f5c7b0409e58dc5e72f3e00e96c823962f00a69",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "103",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nO art. 103 atribui privativamente à Polícia Civil, ressalvada a competência da União, polícia judiciária e apuração de infrações penais, EXCETO MILITARES, sob direção de delegado ocupante do ÚLTIMO NÍVEL DA CARREIRA. Não exige nessa frase cinco ou dez anos de exercício. A alternativa D reúne as condições do texto. O § 1º distingue órgãos técnicos especializados, sem converter toda atividade pericial em atribuição indiferenciada do dirigente da PC.\nExemplo: Cinco anos de serviço e último nível da carreira são critérios diferentes: não se pode trocar um pelo outro na leitura do artigo.\nTeste rápido — A apuração privativa descrita inclui crimes militares sem ressalva? Não.",
+        "current_syllabus_topic_id": "bbebace7-eae3-4bce-a3b5-34de203ed0b0",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+            "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "105-A"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "1aaefaf4-75de-4c76-b8e3-518f86070229",
+      "career": "Escrivão de Polícia",
+      "item_number": 4,
+      "official_answer": "D",
+      "original_sha256": "cbd8072dfd511f313eb9312ba59d7be29a8f7a5e11e2f2d30f9474d4402a5ca0",
+      "prepublication_sha256": "4035dccdae4b3b6a0ca24f16c4d3edc07e99d61118414ff71645aebb2612d3a1",
+      "final_sha256": "a12d2bb1e40fdba3033b1b27cef685cbcfa94f08877a7eb66a81cd6c4163c790",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "artigo": "5",
+            "title": "LC PE 137/2008 — recortes do PCCV policial"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nMATRIZ, art. 5º, X, é o conjunto de classes e faixas salariais sequenciadas, estruturadas segundo formação, habilitação, titulação ou qualificação, com valores de vencimento base. Alternativa D. GRADE é conjunto de matrizes; FAIXA é divisão de uma classe em escalas de vencimento; GRUPO OCUPACIONAL agrega cargos de atividades correlatas.\nExemplo: Faixas integram a organização da matriz; várias matrizes compõem a grade. Trocar esses níveis muda a resposta.\nTeste rápido — Grade e matriz são sinônimos legais neste PCCV? Não.",
+        "current_syllabus_topic_id": "d638054b-316a-51bc-8554-811060d39a7e",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-137.html",
+            "sha256": "6c93bcd7f8e37b3a9927f9d30442affca0e48279d2e2996f023d6586929579d9",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "2",
+              "5",
+              "15",
+              "20"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "2886ca5f-31ed-4abe-9376-2b4557672546",
+      "career": "Delegado de Polícia",
+      "item_number": 63,
+      "official_answer": "A",
+      "original_sha256": "b74781c6c120d2f67763834118b4fdd05777fb5abcc52c95d602b53f5fefec43",
+      "prepublication_sha256": "b74781c6c120d2f67763834118b4fdd05777fb5abcc52c95d602b53f5fefec43",
+      "final_sha256": "58ab34269d49e55349361a34ef05bab90af8b3101dbdd2e3033c3a0d9b1796de",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "103",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "104",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "105",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nO inciso II do art. 103 atribui à POLÍCIA CIVIL a repressão da criminalidade no recorte literal solicitado, ressalvada a competência da União: apenas I, alternativa A. O texto distingue Polícia Militar na polícia ostensiva e preservação da ordem pública, Polícia Penal na segurança de estabelecimentos penais e Bombeiros na defesa civil. Essa distribuição textual não proíbe atuação legal em flagrante dos demais órgãos nem autoriza afirmar que a PM nunca reprime um crime em curso.\nExemplo: Atribuição de investigação e repressão pela PC no artigo não se confunde com negar à PM atuação imediata durante crime em via pública.\nTeste rápido — O item permite concluir que só a PC pode realizar prisão em flagrante? Não.",
+        "current_syllabus_topic_id": "db53285e-7e10-5c93-8144-a1e0da359c2c",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+            "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "105-A"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 47
+      }
+    },
+    {
+      "id": "29ab5ec5-51a0-461d-b71b-19a592afe60d",
+      "career": "Delegado de Polícia",
+      "item_number": 65,
+      "official_answer": "C",
+      "original_sha256": "50a41c4e65d0949c2d5ac47f82ede27f4f9f4ad78cfaa181c48f9a7ccb18b39a",
+      "prepublication_sha256": "50a41c4e65d0949c2d5ac47f82ede27f4f9f4ad78cfaa181c48f9a7ccb18b39a",
+      "final_sha256": "4c529dea8924c898892f080ee5d741d9171c960c9ecf02abd3ded76a78e00ced",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "artigo": "61",
+            "title": "Lei PE 6.123/1968 — recortes de promoção e reintegração"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nNo desempate da antiguidade NA CLASSE, o art. 61, § 5º, I, dá preferência primeiro ao maior tempo de serviço público prestado ao ESTADO E RESPECTIVAS AUTARQUIAS: alternativa C. Depois vêm substituição não remunerada, tempo de serviço público, prole e idade. Não comece a sequência pela idade nem por qualquer tempo de serviço público. O § 6º contém regra própria de classe inicial, que deve ser distinguida.\nExemplo: Dois servidores empatam na classe; antes de comparar suas idades, compare o critério estadual e autárquico indicado no inciso I.\nTeste rápido — Maior idade é o primeiro desempate geral desse parágrafo? Não.",
+        "current_syllabus_topic_id": "db53285e-7e10-5c93-8144-a1e0da359c2c",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-6123.html",
+            "sha256": "8ed2f1e93767cba350888f26235221f9f65420de34cd79197dfbe5fd97bf4225",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "59",
+              "61",
+              "66"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 48
+      }
+    },
+    {
+      "id": "4bc4f0f0-2601-4cb2-9d44-2c3c40acf3fd",
+      "career": "Delegado de Polícia",
+      "item_number": 66,
+      "official_answer": "B",
+      "original_sha256": "2c865986ef9d27bbc118e2bbcec60b242bf6bb8a3c8c5f32b57a4a47beb31cfb",
+      "prepublication_sha256": "2c865986ef9d27bbc118e2bbcec60b242bf6bb8a3c8c5f32b57a4a47beb31cfb",
+      "final_sha256": "839fd03c5c3c4570d5e1998848f7e740721bcd4afb9f2907483faa278e891223",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "artigo": "2",
+            "title": "LC PE 137/2008 — recortes do PCCV policial"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "artigo": "15",
+            "title": "LC PE 137/2008 — recortes do PCCV policial"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "artigo": "20",
+            "title": "LC PE 137/2008 — recortes do PCCV policial"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nSomente III é correto, alternativa B. Em I, a lei usa AUTONOMIA E INTERDEPENDÊNCIA FUNCIONAL, não independência funcional. Em II, a cessão admitida pelo art. 20 depende de anuência prévia do SECRETÁRIO DE DEFESA SOCIAL, e não do CSPP, observado o limite legal de 5%. Em III, o art. 15, V e parágrafo único, exige cumprimento da pena criminal ou suspensão disciplinar para voltar a concorrer, observados os demais requisitos. Essa leitura da lei não autoriza interferência arbitrária na análise técnico-jurídica de investigação.\nExemplo: Trocar interdependência por independência e Secretário por Conselho altera dois requisitos expressos, mesmo quando o restante da frase parece familiar.\nTeste rápido — Cumprir a suspensão dispensa automaticamente todos os outros requisitos de progressão? Não.",
+        "current_syllabus_topic_id": "db53285e-7e10-5c93-8144-a1e0da359c2c",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=822&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-137.html",
+            "sha256": "6c93bcd7f8e37b3a9927f9d30442affca0e48279d2e2996f023d6586929579d9",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "2",
+              "5",
+              "15",
+              "20"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 48
+      }
+    },
+    {
+      "id": "4d55fab4-c4c5-4b2e-a24c-00d876d7862b",
+      "career": "Delegado de Polícia",
+      "item_number": 67,
+      "official_answer": "D",
+      "original_sha256": "cafb9feba90482227d84c6d8bf421e956d063ebec5977dfe000cc956ba68cd5c",
+      "prepublication_sha256": "cafb9feba90482227d84c6d8bf421e956d063ebec5977dfe000cc956ba68cd5c",
+      "final_sha256": "ddce2bc1a14121c0750e0f2afa5c51a14fa1b4420ad131fbbc4174e47dc28fa6",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+            "artigo": "1",
+            "title": "LC PE 317/2015 — funções, ingresso e remoção do delegado"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+            "artigo": "2",
+            "title": "LC PE 317/2015 — funções, ingresso e remoção do delegado"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+            "artigo": "3",
+            "title": "LC PE 317/2015 — funções, ingresso e remoção do delegado"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nSomente II e III são corretos, alternativa D. A LC PE 317/2015 qualifica o cargo e as funções como de natureza JURÍDICA E POLICIAL, essenciais e exclusivas de Estado; I acrescenta administrativa ao enunciado literal e não corresponde ao art. 1º. O art. 2º exige bacharelado e três anos de atividade jurídica ou policial, comprovados NA POSSE; seu parágrafo único ressalva concursos iniciados antes da lei. O art. 3º exige ato FUNDAMENTADO para remoção. A exigência de motivação não equivale a proibição de toda remoção.\nExemplo: Experiência jurídica ou policial não se transforma em exigência cumulativa de três anos de cada; e a prova exigida é no ato da posse.\nTeste rápido — Natureza jurídica e policial equivale a natureza administrativa, jurídica e policial no texto cobrado? Não.",
+        "current_syllabus_topic_id": "db53285e-7e10-5c93-8144-a1e0da359c2c",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=17817&tipo=TEXTOORIGINAL",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-317-original.html",
+            "sha256": "e587194b7e605b3a17fcd5696b558e8e383e35a102b1fec38f3e67ce1f05feaf",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "1",
+              "2",
+              "3"
+            ],
+            "reference_capture": {
+              "url": "https://legis.alepe.pe.gov.br/dadosReferenciais.aspx?id=17817",
+              "path": "outputs/pc-pending-review-2026-10-16/alepe-317-references.html",
+              "sha256": "7a5585b999786ef4e9d47a4320f4475945ce787de3d12ca506686b8cc95e5239"
+            }
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 49
+      }
+    },
+    {
+      "id": "778be6a5-6394-4936-9ca9-a9d66503ab5a",
+      "career": "Escrivão de Polícia",
+      "item_number": 58,
+      "official_answer": "D",
+      "original_sha256": "8096c843167591a7d4cc5732b3e098061a7ed64288c3e487c29607ea3c0e8f2a",
+      "prepublication_sha256": "8096c843167591a7d4cc5732b3e098061a7ed64288c3e487c29607ea3c0e8f2a",
+      "final_sha256": "673f966c2b7acfa1e78a16ed6322054173f99f2daa1d76cd95b5f934a979919b",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "artigo": "1",
+            "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "artigo": "2",
+            "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "artigo": "4",
+            "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "artigo": "8",
+            "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "artigo": "9",
+            "title": "Lei PE 14.804/2012 — acesso à informação, arts. 1º a 9º"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+            "artigo": "7",
+            "title": "Decreto PE 38.787/2012 — transparência e recursos"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+            "artigo": "20",
+            "title": "Decreto PE 38.787/2012 — transparência e recursos"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+            "artigo": "21",
+            "title": "Decreto PE 38.787/2012 — transparência e recursos"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nCabe RECURSO contra indeferimento de acesso: art. 8º da Lei PE 14.804/2012 fixa DEZ DIAS a contar da ciência, dirigido à autoridade hierarquicamente superior, com manifestação em cinco dias. O Decreto 38.787/2012 disciplina os recursos executivos nos arts. 20 e 21. A alternativa D é correta. Transparência ATIVA é divulgação sem requerimento; atender um pedido é acesso provocado. Não se incluem indistintamente todas as sociedades anônimas privadas no mesmo regime dos órgãos públicos; entidades privadas sem fins lucrativos têm o recorte específico da lei. Calamidade pública não é autorização genérica para suspender pedidos de informação.\nExemplo: Se o pedido é negado hoje, o interessado pode recorrer na forma e no prazo legais; não precisa aceitar uma negativa sem justificativa e sem via recursal.\nTeste rápido — Publicar informações de interesse coletivo sem pedido é transparência passiva? Não: ativa.",
+        "current_syllabus_topic_id": "9343f2f4-1eb7-5c6c-a5f8-ccce9eb4d848",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=1605&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-14804.html",
+            "sha256": "2969cce867772293a34e8c484eb0cf69ce30f97d837211d3bc4d9fcaf12224d2",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "1",
+              "2",
+              "4",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=2576&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-38787.html",
+            "sha256": "b74c4cd7b5c4eb2493ad6d11b18507ddf369ed59d5e736affc5f4f06cea2943a",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "7",
+              "20",
+              "21"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "captured_at": "2026-10-16T22:08:53.366Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "captured_at": "2026-10-16T22:08:52.491Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 15
+      }
+    },
+    {
+      "id": "909e6401-a89c-409e-b436-b9e34f24a098",
+      "career": "Escrivão de Polícia",
+      "item_number": 3,
+      "official_answer": "B",
+      "original_sha256": "1d88a991f923eea9a3f729c1b696db206b1ce8cfe91e2430e32e402301f7d934",
+      "prepublication_sha256": "11f80f664632c35f250cacc9019fecaef899246478b160094871a6005b1bae1f",
+      "final_sha256": "55e7a876b346482118a273b44bbe5f092eae003f0dd5dba14aa66fc6af9b9af6",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "artigo": "59",
+            "title": "Lei PE 6.123/1968 — recortes de promoção e reintegração"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "38",
+            "title": "Constituição Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nPelo recorte LITERAL do art. 59 pedido na prova, ficam impedidos de promoção por merecimento Frederico, João e Ana, alternativa B. Sandro está na exceção do inciso IV para exercício de chefia na administração direta ou indireta do Estado. Não confunda promoção por merecimento com toda progressão funcional. O inciso II e o III também mencionam os dois semestres anteriores. A redação histórica menciona a funcionária que acompanha o marido; não se usa isso como autorização para discriminação. A aplicação concreta do regime deve respeitar a Constituição, inclusive as condições de afastamento de mandato eletivo do art. 38; o item não resolve todas as situações de acumulação compatível.\nExemplo: Cessão para chefia na administração estadual não se iguala automaticamente a uma colocação à disposição sem a exceção legal.\nTeste rápido — A alternativa correta impede toda promoção de qualquer servidor cedido? Não: observe a modalidade e a exceção.",
+        "current_syllabus_topic_id": "d638054b-316a-51bc-8554-811060d39a7e",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-6123.html",
+            "sha256": "8ed2f1e93767cba350888f26235221f9f65420de34cd79197dfbe5fd97bf4225",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "59",
+              "61",
+              "66"
+            ]
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "9f760351-81f2-48b4-8c0f-214621158af3",
+      "career": "Delegado de Polícia",
+      "item_number": 64,
+      "official_answer": "B",
+      "original_sha256": "8d1018456e3b450733f74f43417cd222aff48ea962ec13f8d08438471e04fbb0",
+      "prepublication_sha256": "8d1018456e3b450733f74f43417cd222aff48ea962ec13f8d08438471e04fbb0",
+      "final_sha256": "830387ccd93127f14db054342d7f882f9c9515333f08c0c4feb79d21a0191368",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "artigo": "14",
+            "title": "Lei PE 6.425/1972 — recortes de remoção e disciplina"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nA remoção por CONVENIÊNCIA DA DISCIPLINA deve ser expressamente JUSTIFICADA PELO CHEFE DO SERVIÇO em que o funcionário estiver lotado, conforme art. 14 da Lei PE 6.425/1972. Alternativa B. A pergunta trata da autoridade que justifica essa modalidade, não de competência geral para nomear, punir ou praticar qualquer ato de lotação. Motivação e controle de legalidade continuam necessários.\nExemplo: Assinar a justificativa disciplinar não equivale a receber competência irrestrita para impor qualquer sanção.\nTeste rápido — A regra permite remover sem indicar fundamento concreto? Não.",
+        "current_syllabus_topic_id": "db53285e-7e10-5c93-8144-a1e0da359c2c",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-6425.html",
+            "sha256": "a3ca152b7459f9fdf51eb396908f8f45a61e34cb5c0ffd0f26e226754d150156",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "14",
+              "31",
+              "37",
+              "49"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 47
+      }
+    },
+    {
+      "id": "b8e117bb-4003-4685-851d-f5afbd5f9621",
+      "career": "Escrivão de Polícia",
+      "item_number": 52,
+      "official_answer": "B",
+      "original_sha256": "09af458ca06bd82a227620ffc73fe62009de1e940c2d08e32f7da25321b752ef",
+      "prepublication_sha256": "09af458ca06bd82a227620ffc73fe62009de1e940c2d08e32f7da25321b752ef",
+      "final_sha256": "3823eb08e8452a65d6eb2c87d0589029d2fd51674d7d2c9bf8e86e9be578e26b",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10983&tipo=TEXTOORIGINAL",
+            "artigo": "6",
+            "title": "Lei PE 15.529/2015 — gestão documental, art. 6º"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nA CEPE exerce, em caráter exclusivo e sob SUPERVISÃO do APEJE, a gestão operacional de digitalização e arquivamento digital de documentos permanentes: art. 6º, parágrafo único, I. Por isso B. Ao APEJE cabem implementação, acompanhamento e supervisão da gestão, além da guarda e arquivamento FÍSICO dos permanentes. A lei também prevê competências operacionais da CEPE sobre documentos intermediários; não se ensina que sua atuação se resume a uma única categoria.\nExemplo: Digitalizar acervo permanente é tarefa operacional da CEPE sob supervisão; preservar fisicamente o original permanente não se transfere automaticamente por causa da digitalização.\nTeste rápido — Competência operacional de digitalização equivale à supervisão de toda a política documental? Não.",
+        "current_syllabus_topic_id": "9343f2f4-1eb7-5c6c-a5f8-ccce9eb4d848",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=10983&tipo=TEXTOORIGINAL",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10983&tipo=TEXTOORIGINAL",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-15529-original.html",
+            "sha256": "550be9afd69e761906976ad412fa2e1c5cdcc132918d3088cc0e2104c0ee9fb0",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "6"
+            ],
+            "reference_capture": {
+              "url": "https://legis.alepe.pe.gov.br/dadosReferenciais.aspx?id=10983",
+              "path": "outputs/pc-pending-review-2026-10-16/alepe-15529-references.html",
+              "sha256": "bf3ee3fbc795f93b1c25fc72a5a3f340272f9f7d1c0108e4791313988cffe4be"
+            }
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "captured_at": "2026-10-16T22:08:53.366Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "captured_at": "2026-10-16T22:08:52.491Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "ded23962-f41c-49eb-be25-fdc4ed0a814a",
+      "career": "Agente de Polícia",
+      "item_number": 1,
+      "official_answer": "E",
+      "original_sha256": "450c431b52b3db1265c1a4bc9a8a88e7356091aa9d886212664ffba5030affd4",
+      "prepublication_sha256": "1635235c5a3eb9379cd03f7f6adae83256e4b702a58499cbd13b734f853f8337",
+      "final_sha256": "ef6b12b432972f192c5f266589e0a71586ad031f52c7015988cd4b20ace84318",
+      "patch": {
+        "content_status": "obsolete",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "101",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "105-A",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa E. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nRETIRADA DO TREINO ATUAL COMO OBSOLETA, mantendo E como gabarito definitivo histórico. O art. 105-A diz que os municípios PODERÃO constituir guardas para prevenção, proteção e preservação de seus bens, serviços e instalações; não torna a criação obrigatória. Contudo, não é correto hoje tratar a alternativa D como materialmente impossível por negar às guardas atuação na segurança urbana. No RE 608588, Tema 656, julgado em 20/02/2025, o STF admitiu ações de segurança urbana, inclusive policiamento ostensivo comunitário, respeitadas as competências dos demais órgãos e excluída polícia judiciária. Além disso, a EC estadual 70, de 13/05/2026, incluiu guardas no art. 101. O comentário antigo da banca deve ser contextualizado; não se inventa novo gabarito D nem anulação oficial.\nExemplo: Proteção de uma escola municipal e atuação de segurança urbana não são competências mutuamente excludentes. Isso não transforma a guarda em Polícia Civil nem torna obrigatória sua criação.\nTeste rápido — A guarda só pode proteger prédios e nunca atuar no policiamento urbano? Não, conforme Tema 656."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-podem-fazer-policiamento-urbano-decide-stf/",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+            "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "105-A"
+            ]
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-podem-fazer-policiamento-urbano-decide-stf/",
+            "path": "outputs/pc-pending-review-2026-10-16/stf-pe-guardas-decisao.html",
+            "sha256": "1b03edc07a5b2334c24347b932800004293311990b44cfbc72804d8b66371ada"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "e30078ea-84a5-45e9-a573-8d94d8c02f61",
+      "career": "Delegado de Polícia",
+      "item_number": 12,
+      "official_answer": "A",
+      "original_sha256": "528f80da95fb4ea93be0ef733d85ab58108e2b317162a763e3c7fdfef562bf9a",
+      "prepublication_sha256": "528f80da95fb4ea93be0ef733d85ab58108e2b317162a763e3c7fdfef562bf9a",
+      "final_sha256": "2846c7612a0b0817fd2a85f60acf7bbfe177a1ea4dc448b211090bd613f6363e",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "101",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "102",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "103",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "104",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "artigo": "105",
+            "title": "Constituição de Pernambuco — recorte de segurança pública"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nNo recorte do art. 102, os estatutos das polícias e dos bombeiros estruturam seus integrantes em CARREIRA, com HIERARQUIA e DISCIPLINA: alternativa A. A segurança pública não tem só uma finalidade nem se limita aos três órgãos de B. O art. 101 já incluía Polícia Penal e recebeu em 2026 guardas municipais (EC 70) e órgãos executivos de trânsito (EC 71). O § 2º do art. 103 trata da chefia técnica por médico-legista ou perito-criminal; o art. 104 atribui à Polícia Penal segurança dos estabelecimentos penais. Não se apaga a atualização de 2026 para repetir a lista histórica.\nExemplo: Pertencer a uma carreira hierarquizada não significa que todos os órgãos exerçam a mesma função ou que perícia deva ser chefiada por delegado.\nTeste rápido — A lista constitucional atual termina em Polícia Civil, Militar e Bombeiros? Não.",
+        "current_syllabus_topic_id": "df93826a-3dea-46a4-946c-84f6ab222afa",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-ce.html",
+            "sha256": "5974b396b3eb7cea5e44219148805e488a1fa3758617e0df71bc2da7c1a9de31",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "105-A"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 10
+      }
+    },
+    {
+      "id": "eed8da0a-5f84-4ac1-80bb-394c12029286",
+      "career": "Agente de Polícia",
+      "item_number": 2,
+      "official_answer": "C",
+      "original_sha256": "bedcdd074397156d9f729b2cf00f5ddbddca0fc4a9e79cfbe5e73aa72fb48f04",
+      "prepublication_sha256": "705e8270afd4a735d181694be41360e775bc5e87eb5a2317349db4c9dadb57d2",
+      "final_sha256": "99c9cd03b3110fe906d8d9a7cc784775b9b1e4c5601d873d161043865612f60d",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "artigo": "31",
+            "title": "Lei PE 6.425/1972 — recortes de remoção e disciplina"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "artigo": "37",
+            "title": "Lei PE 6.425/1972 — recortes de remoção e disciplina"
+          },
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "artigo": "49",
+            "title": "Lei PE 6.425/1972 — recortes de remoção e disciplina"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nA demissão corresponde a CARLOS e GABRIEL, alternativa C: abandono de cargo, art. 49, III, e aplicação irregular de dinheiro público, inciso VI. Não é necessária reincidência nessas hipóteses legais. Não se transforma toda outra conduta em demissão só porque o procedimento é disciplinar. A referência histórica a manifestação não autoriza punir automaticamente crítica legítima ou exercício regular da liberdade de expressão; esse tema exige controle constitucional próprio. A conclusão do exercício limita-se às hipóteses expressas de demissão narradas, com devido processo.\nExemplo: Aplicar irregularmente dinheiro público não passa a ser falta leve pela primariedade disciplinar; o enquadramento da lei é específico.\nTeste rápido — Toda infração precisa de reincidência para admitir demissão? Não: existem hipóteses autônomas.",
+        "current_syllabus_topic_id": "e0813b29-cccf-551f-b87f-92ea64ccc04e",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-6425.html",
+            "sha256": "a3ca152b7459f9fdf51eb396908f8f45a61e34cb5c0ffd0f26e226754d150156",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "14",
+              "31",
+              "37",
+              "49"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "f6830126-f347-4f28-a1e9-c0c2c7e35e9c",
+      "career": "Agente de Polícia",
+      "item_number": 3,
+      "official_answer": "D",
+      "original_sha256": "8ce4e972de30f5f6384a05d6958bf484a1bdfef62f6ababdc31acb3e8eb30788",
+      "prepublication_sha256": "6e4883d41bb35ec66ec5e4fa0303dc66d3e9e9240e789f83446975de98b3da48",
+      "final_sha256": "eb09dd66e60550300f39c5bc42d6cf3f5e5d606f6b62b4fc88285dbd84c19740",
+      "patch": {
+        "content_status": "active",
+        "verified_at": "2026-10-17T02:03:00.066975+00:00",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "artigo": "66",
+            "title": "Lei PE 6.123/1968 — recortes de promoção e reintegração"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T02:03:00.066975+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; revisão individual em 17/10/2026.\nREINTEGRAÇÃO é o reingresso do funcionário demitido ou exonerado ilegalmente, com ressarcimento das vantagens ligadas ao cargo, conforme art. 66 da Lei PE 6.123/1968. A alternativa D reúne nome e consequência. Recondução, reversão e aproveitamento designam institutos diferentes. A apuração concreta das parcelas depende do regime aplicável e da decisão, não de valor fixo presumido.\nExemplo: Anulada judicialmente uma demissão ilegal, o retorno é reintegração; não se chama reversão apenas porque alguém voltou ao serviço.\nTeste rápido — Reintegração significa retorno sem qualquer ressarcimento previsto em lei? Não.",
+        "current_syllabus_topic_id": "e0813b29-cccf-551f-b87f-92ea64ccc04e",
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da literalidade estadual atual, histórico de atualização, caderno e chave definitivos do próprio cargo. Notas distinguem recorte de prova histórica, atualização de 2026 e interpretação judicial. Não certifica toda a lei nem resolve controvérsias não examinadas.",
+        "sources": [
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=10727&tipo=TEXTOATUALIZADO",
+            "path": "outputs/pc-pending-review-2026-10-16/alepe-6123.html",
+            "sha256": "8ed2f1e93767cba350888f26235221f9f65420de34cd79197dfbe5fd97bf4225",
+            "reviewed": true,
+            "captured_at": "2026-10-17T02:00:54.798422+00:00",
+            "current_effect_reviewed": true,
+            "reviewed_articles": [
+              "59",
+              "61",
+              "66"
+            ]
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB1_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "82d56359296a4a453b49dc5a6526f97df04378984a1634043309c5aa60992751",
+          "captured_at": "2026-10-16T22:08:53.014Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB1_00.PDF",
+          "sha256": "7cbddd7987643b798a8b827cc1db5d0443630a607944073ee1dc0148dbc5ab95",
+          "captured_at": "2026-10-16T22:08:51.331Z"
+        },
+        "original_answer_preserved": true,
+        "official_pdf_page": 2
+      }
+    }
+  ]
+}

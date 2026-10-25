@@ -1,0 +1,202 @@
+{
+  "scope": "PC-AC S01-V: quinze decisões com fontes oficiais; cinco itens dependentes de contexto textual integral permanecem bloqueados",
+  "active": [
+    {
+      "item_number": 1,
+      "answer": "C",
+      "topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+      "matrix": "matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: C — I, apenas.\nO propósito predominante é apresentar uma posição e provocar reflexão, não narrar uma sequência histórica de acontecimentos. A menção ao colonizador sustenta uma crítica da autora; a afirmativa II acrescenta uma finalidade que não corresponde ao eixo argumentativo. A III confunde episódios usados como argumentos com o gênero predominante. A síntese de apoio é autoral e está identificada; o enunciado e as alternativas são da prova.\nExemplo: Um artigo pode mencionar um fato passado para defender uma opinião e continuar predominantemente argumentativo. Variação: uma narrativa histórica se organiza principalmente para contar acontecimentos; uma opinião não se converte nisso apenas por conter referências temporais.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 3,
+      "answer": "C",
+      "topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+      "matrix": "matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: C.\nO conector adversativo estabelece oposição à ideia anterior. A defesa da valorização do mestiço no texto não depende de uma dose de mistura; a pergunta sobre pureza contesta uma classificação rígida. Também não há equivalência plena entre os pares de identidades apresentados. A expressão de contaminação racial é reproduzida no desenvolvimento da crítica, não deve ser tomada como afirmação científica da plataforma.\nExemplo: Em “Ela discordou; mas mantive meu entendimento”, mas introduz posição contrastante. Variação: em “Ela discordou; portanto, reexaminei o argumento”, a relação é conclusiva, não adversativa. Analise a relação entre as ideias, sem pressupor que toda palavra conserva o mesmo valor em qualquer contexto.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 25,
+      "answer": "E",
+      "topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "matrix": "matrix",
+      "norm": "dl20016",
+      "reference": "arts. 19, 20 e 26",
+      "explanation": "Resposta: E.\nVinculação e supervisão administrativa não equivalem a hierarquia entre pessoas jurídicas distintas. No recorte doutrinário da prova, a referência à tutela extraordinária assinala uma modalidade excepcional de controle, não autorização irrestrita para o ministério substituir a entidade. No âmbito federal, o Decreto-Lei 200 disciplina a supervisão e exige que ela também preserve a autonomia da entidade; seu art. 26, parágrafo único, inclui intervenção por interesse público. O rótulo doutrinário não deve ser confundido com uma expressão literalmente definida nesse artigo. A erra porque o recurso do interessado é forma de controle; B situa indevidamente o Tribunal de Contas no Executivo; C transforma controle de legalidade em substituição geral do mérito; D nega o controle legislativo previsto na Constituição.\nExemplo: O órgão supervisor pode exercer os instrumentos de fiscalização previstos no regime aplicável, sem adquirir hierarquia sobre toda decisão da autarquia. Variação: a mera preferência do supervisor por outra solução não cria competência para avocar ou invalidar qualquer ato da entidade. Respeite a lei e a competência de cada ente.",
+      "extra_sources": [],
+      "additional_basis": [
+        {
+          "norm": "cf16",
+          "reference": "arts. 37, 49, X, 70 e 71"
+        }
+      ]
+    },
+    {
+      "item_number": 42,
+      "answer": "B",
+      "topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "matrix": "pcdf_matrix",
+      "norm": "cp16",
+      "reference": "arts. 15, 18 e 129, §§ 1º, III, 6º, 9º e 10",
+      "explanation": "Resposta: B.\nA agressão deliberada contra o filho, com lesões leves, apresenta o dolo de lesionar e a relação familiar prevista no art. 129, § 9º. Não é necessário um propósito especial adicional ao dolo de lesionar, nem vítima mulher. A debilidade permanente de função da alternativa A reclama o exame da lesão grave e do regime doméstico correspondente; não é a simples lesão leve do § 9º. A hipótese C é descrita expressamente como culposa. Na D, o enunciado afasta a intenção do resultado; isso não autoriza ensinar que todo empurrão seguido de lesão é necessariamente culposo: o dolo eventual depende dos fatos demonstrados. Na E, há desistência voluntária narrada, não lesão consumada; eventual responsabilidade por atos já praticados deve ser examinada separadamente.\nExemplo: Um pai que decide bater no filho adulto e causa lesão leve pode incidir no § 9º. Variação: um objeto que cai por imprudência não se transforma automaticamente em lesão dolosa apenas porque a vítima é familiar. A pena do § 9º mudou após 2017: esta questão não deve ser usada para memorizar a pena antiga.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 45,
+      "answer": "B",
+      "topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "matrix": "pcdf_matrix",
+      "norm": "cp16",
+      "reference": "arts. 14, II, 20, § 3º, 73, 121-A, §§ 1º e 2º, I, e 125",
+      "explanation": "Resposta: B, no enquadramento dos fatos e do dolo cobrado pela banca.\nHá erro na execução: o disparo se dirige à esposa, mas atinge terceiro. O art. 73 determina a imputação como se o agente tivesse atingido a pessoa visada, observadas as qualidades dela conforme o art. 20, § 3º. Portanto, atingir um homem por erro não converte automaticamente o fato em mero homicídio culposo. A gestação perceptível integra o recorte do enunciado usado para a majorante e para a tentativa de aborto sem consentimento; a morte do feto não ocorreu. É indispensável demonstrar o conhecimento e o alcance do dolo: gravidez, sozinha, não prova toda imputação em qualquer caso concreto. Após a Lei 14.994/2024, feminicídio é crime autônomo do art. 121-A, não a antiga qualificadora do art. 121; a gestação está no § 2º, I. O nome usado na alternativa continua aplicável, mas sua base normativa deve ser atualizada.\nExemplo: No erro de pontaria, a análise considera a pessoa que se pretendia atingir, e não simplesmente as características de quem foi atingido. Variação: se também fosse atingida a vítima pretendida, o próprio art. 73 remete à regra do art. 70; seria outro quadro fático. Não transporte a solução do item para caso sem prova do dolo, do motivo de gênero ou da ciência da gestação.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 70,
+      "answer": "B",
+      "topic_id": "98931ae3-a3cf-53f1-887d-efc13b327c10",
+      "matrix": "pcdf_matrix",
+      "norm": "cdc16",
+      "reference": "art. 76, II, IV, b, e V",
+      "explanation": "Resposta: B.\nO art. 76, V, do CDC agrava os crimes da lei quando praticados em operações envolvendo alimentos, medicamentos ou outros produtos ou serviços essenciais. A erra ao acrescentar dano médio: o inciso II fala em grave dano. C muda a referência etária do inciso IV, b; D acrescenta gestantes como se fossem hipótese expressa desse artigo; E troca grave crise econômica ou calamidade por estabilidade econômica. A leitura é do dispositivo especial cobrado; não se deve concluir que outras circunstâncias jamais possam ter relevância em qualquer regime penal.\nExemplo: Uma conduta que efetivamente constitua crime do CDC e envolva medicamento pode atrair a agravante específica. Variação: a existência de medicamento na operação não dispensa demonstrar o crime e seus elementos; a agravante não cria, sozinha, uma infração penal.",
+      "extra_sources": [],
+      "additional_basis": []
+    },
+    {
+      "item_number": 71,
+      "answer": "C",
+      "topic_id": "3eb73f67-d7c0-5e31-a1bb-03ac47df09aa",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: C — energia mecânica.\nNa precipitação, a queda e o impacto contra a superfície produzem traumatismos pela ação mecânica. A categoria não se altera porque a lesão pode ser interna ou externa. Não é necessário recorrer a agente químico, eletricidade ou radiação para explicar o mecanismo descrito. O edital médico-legal atual distingue energias mecânicas de energias físicas não mecânicas, como a ação térmica e elétrica.\nExemplo: Uma queda de altura com impacto contra o solo produz lesões por mecanismo mecânico. Variação: lesão pela passagem de corrente elétrica pertence a outra classificação, embora a vítima possa sofrer também uma queda. Em casos reais, mecanismos podem coexistir e devem ser examinados separadamente.",
+      "extra_sources": [
+        "firstaid",
+        "pericia_mj"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 72,
+      "answer": "D",
+      "topic_id": "3eb73f67-d7c0-5e31-a1bb-03ac47df09aa",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: D — perfurocontusa.\nO projétil de arma de fogo atua como instrumento perfurocontundente: penetra e produz trauma nos tecidos. A distância e o ângulo influenciam sinais e formato da ferida, mas não transformam a categoria cobrada em lesão incisa ou cortocontusa. A curta distância podem existir efeitos secundários do disparo; cada sinal requer descrição e avaliação próprias.\nExemplo: Um orifício de entrada por projétil é analisado dentro do mecanismo perfurocontundente, com descrição de suas características. Variação: uma lesão cortante por gume tem mecanismo diferente. A classificação geral não autoriza concluir distância exata, posição do atirador ou trajeto apenas pelo nome da lesão.",
+      "extra_sources": [
+        "firstaid",
+        "pericia_mj"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 74,
+      "answer": "D",
+      "topic_id": "3eb73f67-d7c0-5e31-a1bb-03ac47df09aa",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: D — queimadura.\nO calor agindo diretamente sobre a pele pode danificar os tecidos e produzir queimadura. A cartilha oficial do Ministério da Saúde descreve esse mecanismo térmico. Geladura se relaciona ao frio; blast se refere aos efeitos de explosão, e uma fratura é lesão óssea. O item não fornece dados para classificar profundidade ou extensão da queimadura.\nExemplo: O contato com uma superfície quente pode causar queimadura térmica. Variação: uma queimadura também pode ter origem química ou elétrica; o nome da lesão não prova, por si só, que houve contato com chama. Não deduza o grau apenas da causa mencionada.",
+      "extra_sources": [
+        "burn"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 75,
+      "answer": "B",
+      "topic_id": "b3960b6f-e747-5736-bca2-c10fe1cf2471",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: B — soterramento, entre as alternativas fornecidas.\nMaterial sólido compatível com escombros no interior da árvore respiratória orienta a hipótese de asfixia relacionada ao soterramento. O manual oficial de primeiros socorros inclui soterramento entre as situações de bloqueio da passagem de ar. Na perícia real, não basta localizar um resíduo para certificar a causa da morte: é preciso avaliar se houve aspiração em vida, a cena, outros vestígios e hipóteses concorrentes.\nExemplo: Em vítima de desabamento, resíduos nas vias respiratórias são achados relevantes para investigar o mecanismo asfíxico. Variação: poeira apenas sobre a roupa ou depositada no corpo depois da morte não comprova aspiração vital. O gabarito é a melhor hipótese no recorte do item, não uma regra de diagnóstico por vestígio isolado.",
+      "extra_sources": [
+        "firstaid",
+        "pericia_mj"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 77,
+      "answer": "D",
+      "topic_id": "b3960b6f-e747-5736-bca2-c10fe1cf2471",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: D — suspeita de afogamento.\nA OMS define afogamento pela ocorrência de comprometimento respiratório por submersão ou imersão em líquido. Uma lâmina rasa não afasta essa possibilidade se a pessoa não consegue manter as vias respiratórias livres. O conjunto descrito orienta a hipótese da banca, mas espuma, pele anserina e maceração não são provas exclusivas de afogamento nem dispensam necropsia e análise da cena. “Presumir” no item não significa certificar a causa por um único sinal.\nExemplo: Uma pessoa incapacitada de levantar o rosto pode ter as vias respiratórias comprometidas mesmo em água rasa. Variação: encontrar um cadáver na água não demonstra, por si só, que a morte ocorreu por afogamento; é preciso investigar a sequência dos acontecimentos.",
+      "extra_sources": [
+        "drowning",
+        "pericia_mj"
+      ],
+      "additional_basis": []
+    },
+    {
+      "item_number": 79,
+      "answer": "A",
+      "topic_id": "3eb73f67-d7c0-5e31-a1bb-03ac47df09aa",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "reference": "",
+      "explanation": "Resposta: A — risco de barotrauma.\nA mudança rápida de pressão na subida pode produzir lesões relacionadas ao desequilíbrio de pressões. O manual oficial de doenças relacionadas ao trabalho descreve barotrauma de ouvido médio inclusive após vir à tona rapidamente. Isso não torna barotrauma sinônimo de toda doença descompressiva: esta pode envolver mecanismos distintos, como formação de bolhas por gases dissolvidos. O enunciado descreve risco, não um diagnóstico clínico completo.\nExemplo: Uma alteração brusca de pressão sem equalização adequada pode lesar estruturas do ouvido. Variação: manifestação relacionada a bolhas de gás após descompressão exige análise própria; não se conclui que todos os acidentes de mergulho sejam a mesma doença. O item não autoriza prescrever conduta ou tratamento de um caso real.",
+      "extra_sources": [
+        "work_diseases"
+      ],
+      "additional_basis": []
+    }
+  ],
+  "historical": [
+    {
+      "item_number": 13,
+      "answer": "A",
+      "norm": null,
+      "status": "archived",
+      "exclusion_source": "nist",
+      "exclusion_type": "time_bound",
+      "reference": "",
+      "reason": "Afirmativas II e III generalizam Internet e nuvem; NIST SP 800-145 descreve acesso em rede e nuvem privada. Gabarito original preservado, sem ativação como definição técnica universal.",
+      "extra_sources": [
+        "nist"
+      ],
+      "explanation": "Gabarito histórico: A. Item arquivado por generalizações técnicas.\nO NIST define nuvem por acesso em rede, não pela exigência universal de Internet pública. Admite nuvem privada, inclusive nas instalações da organização. Custo depende do modelo de uso, dimensionamento e gestão; não é correto ensinar que ele será sempre vantagem ou sempre desvantagem. A alternativa oficial é preservada como registro da prova, sem convertê-la em regra geral atual.\nExemplo: Uma organização pode disponibilizar serviços de nuvem privada em sua rede interna. Variação: um serviço público de nuvem normalmente depende de conectividade com o provedor; isso não prova que qualquer implementação de nuvem exija Internet pública."
+    },
+    {
+      "item_number": 44,
+      "answer": "A",
+      "norm": "cp16",
+      "status": "archived",
+      "exclusion_source": "cp16",
+      "exclusion_type": "time_bound",
+      "reference": "art. 29",
+      "reason": "Alternativas A e D aproximam expressões sobre o vínculo subjetivo; D não exige expressamente acordo prévio. Evitar treino de seleção única baseado em distinção acrescentada pelo comentário, e não pelo texto do item.",
+      "extra_sources": [
+        "cp16"
+      ],
+      "explanation": "Gabarito histórico: A. Item arquivado por risco de ambiguidade nas alternativas.\nLiame subjetivo e relevância causal são pontos centrais da análise do concurso de pessoas. O problema editorial é usar a alternativa D para ensinar que qualquer acordo de vontades seria incompatível com o liame: ela não traz o qualificativo “prévio”, e a formulação pode ser lida como convergência de vontades. Não é seguro eliminar a alternativa apenas por uma palavra que não foi escrita. O arquivamento preserva o gabarito e não declara anulação oficial ou a correção necessária de todas as alternativas.\nExemplo: Uma contribuição causal conscientemente dirigida à mesma infração exige análise do vínculo subjetivo e do papel de cada agente. Variação: simultaneidade de condutas sem vínculo subjetivo não se confunde automaticamente com concurso de pessoas. A revisão não transforma a questão em tese geral sobre todas as formas de participação."
+    },
+    {
+      "item_number": 78,
+      "answer": "D",
+      "norm": null,
+      "status": "obsolete",
+      "exclusion_source": "who_hymen",
+      "exclusion_type": "obsolete",
+      "reference": "",
+      "reason": "Afirmação categórica de certeza de conjunção carnal pelo hímen contradiz a orientação científica oficial OMS/ONU. Gabarito D preservado somente como histórico.",
+      "extra_sources": [
+        "who_hymen"
+      ],
+      "explanation": "Gabarito histórico: D. Conteúdo cientificamente superado; não apresentar como exercício ativo.\nA OMS, a ONU Mulheres e o órgão de direitos humanos da ONU esclarecem que o aspecto do hímen, inclusive a inspeção de rupturas, não comprova se houve relação vaginal. Assim, a afirmação categórica da alternativa D não pode ser ensinada como certeza científica. Isso não elimina a importância de uma perícia de violência sexual baseada em história, consentimento para o exame, vestígios, avaliação contextual e demais elementos pertinentes. Não se altera silenciosamente o gabarito da prova nem se cria outra alternativa como se fosse oficial.\nExemplo: Uma alteração himenal isolada não autoriza concluir que houve relação sexual, muito menos violência ou falta de consentimento. Variação: ausência de lesão também não exclui a ocorrência de violência sexual. A investigação pericial não se confunde com teste de virgindade."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "verified_at": "2026-10-13T03:18:04.703465+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 14,
+  "target_keys": [
+    "art-394",
+    "art-394-a",
+    "art-395",
+    "art-396",
+    "art-396-a",
+    "art-397",
+    "art-399",
+    "art-400",
+    "art-400-a",
+    "art-401",
+    "art-402",
+    "art-403",
+    "art-404",
+    "art-405"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 832,
+  "concurrent_other_changes": [
+    {
+      "table": "legal_unit_explanations",
+      "changed_ids": [
+        "20875583-fee0-5ca4-a6e7-f8d60f72d281",
+        "6999bdd4-a9ed-5cc6-85f6-e8389f3d7234",
+        "d2d66bbd-c3f6-5dff-9fa5-0b4bb8d37b68",
+        "ef595100-e3cc-59dc-87e0-28636584f87a",
+        "d8ec92a0-2be9-5d14-a1fa-075286500b5d",
+        "3a46f2c2-d6e1-5931-b41f-7a90cd27ae33",
+        "c6d5c6e0-08f1-5f09-8710-442e7cc67c7e",
+        "87fbb195-f90a-5318-8361-9d56e8cb78e9",
+        "687c7f14-3b19-5cb9-b727-d591c1789e14",
+        "3933654a-f46a-5b54-ad1d-294cbcff7220",
+        "a81acb2d-ddab-537e-9d36-eec1600e7c83",
+        "e016e661-8e38-58c2-8d04-2511a886d4b2",
+        "61c80db7-19e0-5dd8-9518-b44411354018",
+        "a641398c-d254-55c6-a8b1-04ce5fde4c38",
+        "8e437c5d-01cf-5cde-b895-e6bed7cdde65",
+        "39a305d6-3c79-5925-bc35-1e56be6939aa",
+        "956336eb-65b5-594b-8635-b730a0cdba57",
+        "410a735f-a5de-576e-9ffe-115e79e7a77f",
+        "e7c48881-3bb2-52e6-a36a-4999b0fa041b",
+        "04ee5bfb-c31a-5d0e-91c7-6a8252fd2d5a",
+        "66a1b1a3-d524-5e99-8b8a-52921c26ad85",
+        "9d0537ff-f3fc-5cb1-b5a2-3c4f7edaac62",
+        "bcc205c8-e233-5b6b-80fe-a5f33fbb4e0a",
+        "82f73b6e-339f-50ea-9a27-b537b74f597e",
+        "e9c5e293-bf27-5309-ba78-33c042fdb5a5",
+        "04e225f4-49af-5fb6-8e62-0a5f48b512c0",
+        "4c18dc79-d0f5-576a-9fbe-de28f43b87c5",
+        "37497201-0d1b-5c56-9836-505e2e96813b",
+        "ad8306cb-11e3-507f-a899-69f16ff8752a",
+        "ab75053f-8333-5729-998d-3b7c63f21a0a",
+        "3bfe99db-e8b0-5ad6-a321-4dbc6005c46e"
+      ],
+      "origin": "Concurrent external edits observed; this importer writes only the listed CPP explanations."
+    }
+  ]
+}

@@ -1,0 +1,1041 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T23:23:24.602106+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 15,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-121",
+        "art-121-a",
+        "art-121-b",
+        "art-122",
+        "art-127",
+        "art-128",
+        "art-129",
+        "art-130",
+        "art-131",
+        "art-132",
+        "art-133",
+        "art-134",
+        "art-135",
+        "art-135-a",
+        "art-136"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "4aa57b9f44b3fde54e7009d761c132c987cbc313684f847fca70e894d2f99611",
+      "source_checked_at": "2026-10-12T23:12:14.957804+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-121",
+      "unit_id": "dca7660c-0404-5a82-9b4d-d7af995de2f7",
+      "content_sha256": "0acbd1d7e318895bab4a3c1681f0835bb67e932a6883f6db232a6c08769af9bc",
+      "simples": "Homicídio simples pune matar alguém com reclusão de 6 a 20 anos. O artigo diferencia privilégio, qualificadoras, forma culposa e aumentos; o contexto de organização ultraviolenta/milícia tem redação especial de 2026, e feminicídio passou ao art. 121-A.",
+      "pontos": [
+        "Privilégio: 1/6 a 1/3; relevante valor OU domínio de emoção logo após provocação injusta, não mera influência.",
+        "Qualificado: 12 a 30; identificar motivo, meio, defesa dificultada, conexão, função, arma restrita/proibida, menor 14 e instituição de ensino.",
+        "Lei 15.134: função e familiares com recortes distintos, vigente em 7/5/2025. Lei 15.159: hipótese escolar, vigente em 4/7/2025.",
+        "§2º-D: 20 a 40, Lei 15.358 vigente em 25/3/2026, exige integrante E contexto/finalidade legais.",
+        "Culposo: detenção 1 a 3; §4º separa culpa e dolo; §5º perdão na hipótese culposa; §6º milícia/extermínio tem recorte próprio.",
+        "Menor 14: integrar §2º-B; instituição escolar: §2º-C. Não duplicar o mesmo fundamento."
+      ],
+      "atencao": [
+        "Não ressuscitar incisoVI/§§2º-A/7º revogados como feminicídio atual. Não aplicar aumento por menor 14 junto da qualificadora pelo mesmo dado sem enfrentar bis in idem. Pertencer a grupo sozinho não satisfaz contexto/finalidade do §2º-D; mudança gravosa não retroage e controle constitucional não foi certificado integralmente. Privilégio/qualificadoras exigem análise própria, não solução universal."
+      ],
+      "exemplo": "Professor mata aluno nas dependências da escola: a hipótese escolar e o vínculo específico devem ser analisados, sem presumir também toda qualificadora por profissão. Variação: Se o fato ocorreu antes das alterações agravadoras, analisar lei no tempo; se ocorreu fora de instituição, falta o pressuposto escolar, ainda que o autor seja professor.",
+      "prova": [
+        "Toda emoção basta para o privilégio? Não; domínio, provocação injusta e sequência imediata são requisitos.",
+        "Membro de facção sozinho prova §2º-D? Não; exige a qualidade legal e o contexto/finalidade.",
+        "Feminicídio atual permanece no incisoVI? Não; artigo autônomo desde 2024."
+      ],
+      "termos": [
+        {
+          "termo": "Qualificadora e majorante",
+          "significado": "Mudanças na espécie ou no aumento da pena, com pressupostos próprios e vedação de dupla contagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15134.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "dca7660c-0404-5a82-9b4d-d7af995de2f7",
+        "content_sha256": "0acbd1d7e318895bab4a3c1681f0835bb67e932a6883f6db232a6c08769af9bc",
+        "simples": "Homicídio: matar alguém, com pena de reclusão de 6 a 20 anos. Há formas privilegiada (redução de um sexto a um terço se o agente age por relevante valor social ou moral, ou sob violenta emoção logo em seguida a injusta provocação da vítima), qualificada (reclusão de 12 a 30 anos, nos casos do §2º), culposa (detenção de 1 a 3 anos) e várias causas de aumento. Nas qualificadoras estão: paga, promessa de recompensa ou outro motivo torpe; motivo fútil; veneno, fogo, explosivo, asfixia, tortura ou meio insidioso, cruel ou de perigo comum; traição, emboscada, dissimulação ou recurso que dificulte ou impossibilite a defesa; para assegurar execução, ocultação, impunidade ou vantagem de outro crime; contra autoridades e agentes de segurança pública, do sistema prisional, membros do Judiciário, MP, Defensoria, Advocacia Pública e oficial de justiça (e seus familiares) em razão da função; arma de fogo de uso restrito ou proibido; contra menor de 14 anos; e nas dependências de instituição de ensino.",
+        "pontos": [
+          "Caput: reclusão de 6 a 20 anos.",
+          "§1º (privilégio): relevante valor social ou moral, ou violenta emoção logo após injusta provocação: redução de um sexto a um terço.",
+          "§2º (qualificado): reclusão de 12 a 30 anos. Incisos I a V (motivos e meios) e VII a X (vítimas e circunstâncias especiais); o inciso VI foi revogado (feminicídio agora no art. 121-A).",
+          "§2º-B e §2º-C: causas de aumento para homicídio contra menor de 14 anos e nas dependências de instituição de ensino.",
+          "§2º-D: homicídio doloso por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada: reclusão de 20 a 40 anos (texto atual).",
+          "§3º: homicídio culposo: detenção de 1 a 3 anos.",
+          "§4º: culposo, aumento de 1/3 se inobservância de regra técnica, ou se o agente deixa de prestar socorro, não procura diminuir as consequências ou foge; doloso: aumento de 1/3 se a vítima é menor de 14 ou maior de 60 anos.",
+          "§5º: no culposo, perdão judicial se as consequências atingirem o próprio agente de modo grave.",
+          "§6º: aumento de 1/3 até a metade se praticado por milícia privada sob pretexto de segurança ou por grupo de extermínio."
+        ],
+        "atencao": [
+          "Homicídio qualificado É crime hediondo (regra da lei especial); privilegiado e qualificado podem coexistir se as qualificadoras forem objetivas (tema de doutrina e jurisprudência).",
+          "O privilégio é causa de DIMINUIÇÃO de pena (1/6 a 1/3), e o homicídio qualificado tem pena de 12 a 30 anos.",
+          "As causas do §4º se dividem: culposo (inobservância de regra técnica, omissão de socorro, fuga) e doloso (vítima menor de 14 ou maior de 60).",
+          "Confira no texto as redações recentes (leis de 2024 e 2026) dos incisos VII a X e dos parágrafos 2º-B a 2º-D."
+        ],
+        "exemplo": "Matar alguém por motivo fútil, como uma discussão de trânsito banal, é homicídio qualificado (pena de 12 a 30 anos).",
+        "prova": [
+          "Assertiva que fixa a pena do homicídio simples em 12 a 30 anos confunde com a forma qualificada: o caput prevê reclusão de 6 a 20 anos.",
+          "Assertiva que dispensa a vítima ser maior de 60 anos para o aumento do §4º, parte final, erra: o aumento exige vítima menor de 14 ou maior de 60 anos no homicídio doloso."
+        ],
+        "termos": [
+          {
+            "termo": "Dolo e culpa",
+            "significado": "No homicídio doloso o agente quer ou assume o risco do resultado; no culposo, dá causa por imprudência, negligência ou imperícia."
+          },
+          {
+            "termo": "Meio insidioso",
+            "significado": "Meio disfarçado, que surpreende a vítima, como o veneno."
+          }
+        ],
+        "remissoes": [
+          "Art. 121-A (feminicídio)",
+          "Art. 18 (dolo e culpa)",
+          "Art. 61 (agravantes)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-121-a",
+      "unit_id": "8e22d09d-c519-503a-a6bf-bb98437aa829",
+      "content_sha256": "a4ed6d08f6aa0db86cc9c3adf9f34cf4d26b23396888348135709485243966ce",
+      "simples": "Feminicídio é matar mulher por razões da condição do sexo feminino: violência doméstica/familiar OU menosprezo/discriminação. Lei 14.994 criou o tipo autônomo de 20 a 40 anos, publicada e vigente em 10/10/2024.",
+      "pontos": [
+        "§2º: aumento de 1/3 até metade nas hipóteses legais, não dobro universal.",
+        "Gestação,3 meses pós-parto OU mãe/responsável por criança/adolescente/pessoa com deficiência; não limitar esta última situação a 3 meses.",
+        "Presença física OU virtual de descendente/ascendente; idade, deficiência/doença e medidas protetivas têm recortes próprios.",
+        "§2ºV remete a meios/defesa/arma do art.121; §3º comunica as elementares pessoais do §1º ao coautor/partícipe."
+      ],
+      "atencao": [
+        "Ser mulher, sozinho, não prova as razões legais. Não generalizar qualquer presença de testemunha como ascendente/descendente nem duplicar o mesmo fundamento. A pena nova mais gravosa não retroage; coautoria exige elementos e conhecimento pertinentes, não responsabilidade automática por proximidade."
+      ],
+      "exemplo": "Ascendente da vítima acompanha por videochamada o fato configurado como feminicídio: examinar presença virtual expressamente prevista. Variação: Se a pessoa presente é apenas vizinho, essa hipótese de parentesco não está demonstrada; outros elementos precisam de análise própria.",
+      "prova": [
+        "Toda morte de mulher é automaticamente feminicídio? Não; exige razões legais.",
+        "A presença deve ser só física? Não; o texto inclui virtual."
+      ],
+      "termos": [
+        {
+          "termo": "Razões da condição do sexo feminino",
+          "significado": "Elementares previstas no §1º, não rótulo presumido por sexo da vítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ],
+      "expected": {
+        "unit_id": "8e22d09d-c519-503a-a6bf-bb98437aa829",
+        "content_sha256": "a4ed6d08f6aa0db86cc9c3adf9f34cf4d26b23396888348135709485243966ce",
+        "simples": "Feminicídio: matar mulher por razões da condição do sexo feminino, com reclusão de 20 a 40 anos. Há razões da condição do sexo feminino quando o crime envolve violência doméstica e familiar ou menosprezo ou discriminação à condição de mulher. A pena aumenta de 1/3 até a metade em situações como gestação ou até 3 meses após o parto, vítima mãe ou responsável por criança, adolescente ou pessoa com deficiência, vítima menor de 14, maior de 60 ou com deficiência ou doença degenerativa, presença física ou virtual de descendente ou ascendente, descumprimento de medidas protetivas e nas circunstâncias dos incisos III, IV e VIII do §2º do art. 121. As circunstâncias pessoais elementares do §1º comunicam-se ao coautor ou partícipe.",
+        "pontos": [
+          "Caput: reclusão de 20 a 40 anos.",
+          "§1º: razões da condição do sexo feminino: I – violência doméstica e familiar; II – menosprezo ou discriminação à condição de mulher.",
+          "§2º: aumento de 1/3 até a metade em cinco hipóteses (gestação ou 3 meses pós-parto etc.; vulnerabilidades da vítima; presença de descendente ou ascendente; descumprimento de medidas protetivas; circunstâncias de III, IV e VIII do §2º do art. 121).",
+          "§3º: as circunstâncias pessoais elementares do §1º se comunicam ao coautor ou partícipe."
+        ],
+        "atencao": [
+          "O feminicídio agora é crime autônomo (art. 121-A), com pena de 20 a 40 anos.",
+          "A mulher deve ser vítima por razões da condição do sexo feminino (violência doméstica ou menosprezo/discriminação).",
+          "O aumento vai de 1/3 até a metade."
+        ],
+        "exemplo": "Marido mata a esposa no contexto de violência doméstica e familiar: feminicídio (pena de 20 a 40 anos).",
+        "prova": [
+          "Assertiva que trata o feminicídio como qualificadora do art. 121 desatualiza a norma: hoje é o crime autônomo do art. 121-A."
+        ],
+        "termos": [
+          {
+            "termo": "Razões da condição do sexo feminino",
+            "significado": "Violência doméstica e familiar, ou menosprezo ou discriminação à condição de mulher."
+          }
+        ],
+        "remissoes": [
+          "Art. 121",
+          "Art. 92, II"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-121-b",
+      "unit_id": "013ecde6-7221-5387-b85f-ae9fdee1f504",
+      "content_sha256": "39a8156f050889ba1b4cd8e5d95203fb615d3052b35e61d29f02efa8e17a5568",
+      "simples": "Vicaricídio pune matar pessoa indicada vinculada à mulher com finalidade específica de causar-lhe sofrimento, punição ou controle em violência doméstica/familiar. Lei 15.384:20 a 40 anos, vigente em 10/4/2026, texto retificado em 15/4/2026.",
+      "pontos": [
+        "Vítima direta: descendente, ascendente, dependente, enteado ou pessoa sob guarda/responsabilidade direta.",
+        "Aumento 1/3 até metade: presença da mulher, vítima com qualidades indicadas ou descumprimento de medida protetiva.",
+        "A definição de violência vicária na Maria da Penha é mais ampla que o tipo de matar."
+      ],
+      "atencao": [
+        "Não equiparar toda violência vicária a homicídio nem ampliar vítimas penais por analogia prejudicial a toda rede de apoio. Finalidade específica e contexto exigem prova. Novo tipo/pena gravosos não retroagem; não certificar todo controle constitucional por existir texto publicado."
+      ],
+      "exemplo": "Agente mata descendente da mulher para puni-la no contexto doméstico: examinar todos os elementos do art.121-B. Variação: Violência contra alguém da rede de apoio, sem matar ou sem o vínculo penal listado, não permite afirmar automaticamente este tipo; examinar outros enquadramentos.",
+      "prova": [
+        "Qualquer violência vicária configura art.121-B? Não; exige matar e elementos específicos.",
+        "Todo amigo da rede de apoio consta do rol penal? Não; não ampliar por analogia."
+      ],
+      "termos": [
+        {
+          "termo": "Finalidade vicária",
+          "significado": "Propósito específico de atingir a mulher por vítima vinculada, no contexto legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm"
+      ],
+      "expected": {
+        "unit_id": "013ecde6-7221-5387-b85f-ae9fdee1f504",
+        "content_sha256": "39a8156f050889ba1b4cd8e5d95203fb615d3052b35e61d29f02efa8e17a5568",
+        "simples": "Vicaricídio: matar descendente, ascendente, dependente, enteado ou pessoa sob guarda ou responsabilidade direta da mulher, com o fim específico de causar-lhe sofrimento, punição ou controle, no contexto de violência doméstica e familiar. Pena: reclusão de 20 a 40 anos, aumentada de 1/3 até a metade se praticado na presença da mulher visada, contra criança, adolescente, pessoa idosa ou com deficiência, ou em descumprimento de medida protetiva de urgência.",
+        "pontos": [
+          "Matar parente, dependente ou pessoa sob guarda da mulher, para causar-lhe sofrimento, punição ou controle.",
+          "Contexto de violência doméstica e familiar.",
+          "Reclusão de 20 a 40 anos.",
+          "Aumento de 1/3 até a metade: na presença da mulher; contra criança, adolescente, idoso ou pessoa com deficiência; descumprimento de medida protetiva."
+        ],
+        "atencao": [
+          "Exige FIM ESPECÍFICO (sofrimento, punição ou controle da mulher).",
+          "A vítima direta é terceiro ligado à mulher, não a mulher."
+        ],
+        "exemplo": "O agressor mata o filho da ex-companheira para fazê-la sofrer: vicaricídio.",
+        "prova": [
+          "Assertiva que dispensa o fim específico de causar sofrimento, punição ou controle contraria o caput."
+        ],
+        "termos": [
+          {
+            "termo": "Vicaricídio",
+            "significado": "Nome dado ao crime de matar pessoa próxima à mulher para atingi-la."
+          }
+        ],
+        "remissoes": [
+          "Art. 121-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-122",
+      "unit_id": "8de6a6d2-4ccd-5d4f-898e-d362548b69db",
+      "content_sha256": "7e62233f06437fb7fb33b8ade486d16950809558e0b85e64b2e00061d4ad00cc",
+      "simples": "Induzir, instigar ou auxiliar materialmente suicídio/automutilação tem pena-base de 6 meses a 2 anos e resultados qualificados. A redação de 2019 não depende sempre de morte; vítimas especialmente vulneráveis e meios virtuais mudam a análise.",
+      "pontos": [
+        "Lesão grave/gravíssima:1 a 3; morte:2 a 6 na hipótese própria.",
+        "§3º duplica por motivo ou vulnerabilidade indicados; §4º meio virtual aumenta ATÉ dobro.",
+        "§5º líder/coordenador/administrador/responsável: dobro, redação Lei 14.811 vigente em 15/1/2024.",
+        "§6º: gravíssima e vítima indicada remetem a 129§2º; §7º: morte e vulnerabilidade indicada remetem a 121."
+      ],
+      "atencao": [
+        "Não reproduzir regra antiga que só punia havendo resultado grave/morte, nem tratar todo usuário de rede como administrador. Até o dobro não é dobro obrigatório. Remissões dos §§6º/7º exigem resultado e qualidades específicas; não deixar enquadramento no art.122 por automatismo."
+      ],
+      "exemplo": "Administrador de grupo virtual realiza a conduta típica: examinar o §5º e prova de sua atuação, sem atribuir o mesmo papel a todos os integrantes. Variação: Se há morte de vítima menor 14 na hipótese do §7º, analisar homicídio em vez de apenas repetir a faixa geral do §2º.",
+      "prova": [
+        "Todo usuário de rede é administrador? Não.",
+        "Até o dobro equivale a dobro obrigatório? Não; distinguir §§4º/5º."
+      ],
+      "termos": [
+        {
+          "termo": "Induzir e instigar",
+          "significado": "Criar ou reforçar decisão alheia nas condutas típicas, distinto de execução direta do resultado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+      ],
+      "expected": {
+        "unit_id": "8de6a6d2-4ccd-5d4f-898e-d362548b69db",
+        "content_sha256": "7e62233f06437fb7fb33b8ade486d16950809558e0b85e64b2e00061d4ad00cc",
+        "simples": "Induzimento, instigação ou auxílio a suicídio ou a automutilação: induzir ou instigar alguém a suicidar-se ou a praticar automutilação, ou prestar auxílio material para que o faça. Pena base: reclusão de 6 meses a 2 anos. Se resulta lesão grave ou gravíssima: reclusão de 1 a 3 anos; se o suicídio se consuma ou da automutilação resulta morte: reclusão de 2 a 6 anos. A pena é duplicada por motivo egoístico, torpe ou fútil ou se a vítima é menor ou tem diminuída a capacidade de resistência; aumentada até o dobro se por rede de computadores, rede social ou transmissão em tempo real; e em dobro se o autor é líder, coordenador ou administrador de grupo, comunidade ou rede virtual. Casos de menor de 14 anos ou sem discernimento remetem a lesão gravíssima ou homicídio.",
+        "pontos": [
+          "Condutas: induzir, instigar ou auxiliar materialmente.",
+          "Caput: reclusão de 6 meses a 2 anos.",
+          "§1º: lesão grave ou gravíssima: 1 a 3 anos.",
+          "§2º: suicídio consumado ou morte pela automutilação: 2 a 6 anos.",
+          "§3º: pena duplicada por motivo egoístico, torpe ou fútil, ou vítima menor ou com resistência diminuída.",
+          "§4º: aumentada até o dobro por meio de rede de computadores, rede social ou transmissão em tempo real.",
+          "§5º: pena em dobro se o autor é líder, coordenador ou administrador de grupo ou rede virtual.",
+          "§6º e §7º: vítima menor de 14 anos ou sem discernimento: responde por lesão gravíssima (art. 129, §2º) ou homicídio (art. 121)."
+        ],
+        "atencao": [
+          "O crime só se consuma nas formas dos §§1º e 2º se houver resultado (lesão grave ou morte); o caput pune a conduta em si.",
+          "Confira os §§6º e 7º: contra menor de 14 anos ou sem discernimento, desloca-se para lesão gravíssima ou homicídio."
+        ],
+        "exemplo": "O líder de um grupo em rede social instiga participantes ao suicídio: aplica-se a pena em dobro (§5º) e pode haver aumento pelo meio (§4º).",
+        "prova": [
+          "Assertiva que trata o induzimento ao suicídio como crime impunível se não há resultado erra: o caput pune a conduta."
+        ],
+        "termos": [
+          {
+            "termo": "Automutilação",
+            "significado": "Lesão que a pessoa causa a si mesma."
+          }
+        ],
+        "remissoes": [
+          "Art. 121 (homicídio)",
+          "Art. 129 (lesão corporal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-127",
+      "unit_id": "48e6a679-a3c9-5d99-9c05-07e6a49cc7cc",
+      "content_sha256": "16cdb5e3765f341878eba4bfa2cb1e7b8360b173cfaafe10922563d33c7caaee",
+      "simples": "Resultados na gestante qualificam as penas dos arts.125/126: aumento de 1/3 por lesão grave e duplicação por morte decorrentes do aborto ou meios empregados. Não é regra de duplicação de todo autoaborto.",
+      "pontos": [
+        "Remissão aos DOIS artigos anteriores:125 e 126.",
+        "Nexo com aborto OU meios utilizados."
+      ],
+      "atencao": [
+        "Não aplicar ao art.124 apenas pela proximidade no capítulo nem imputar resultado sem nexo e elemento subjetivo exigível; integrar art.19. Consentimento não elimina automaticamente as consequências do resultado na hipótese legal."
+      ],
+      "exemplo": "Aborto provocado por terceiro na hipótese de 125/126 causa lesão grave na gestante: examinar aumento de 1/3 e requisitos. Variação: Se resulta morte da gestante no mesmo nexo legal, a regra prevista é duplicação, não repetir a fração da lesão.",
+      "prova": [
+        "A remissão inclui automaticamente art.124? Não; são 125/126.",
+        "Lesão grave e morte têm mesma fração? Não; um terço versus dobro."
+      ],
+      "termos": [
+        {
+          "termo": "Resultado agravador",
+          "significado": "Consequência ligada ao fato/meios, com requisito de imputação e aumento próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "48e6a679-a3c9-5d99-9c05-07e6a49cc7cc",
+        "content_sha256": "16cdb5e3765f341878eba4bfa2cb1e7b8360b173cfaafe10922563d33c7caaee",
+        "simples": "Forma qualificada: as penas dos dois artigos anteriores são aumentadas de um terço se, em consequência do aborto ou dos meios empregados, a gestante sofre lesão corporal de natureza grave, e duplicadas se lhe sobrevém a morte.",
+        "pontos": [
+          "Lesão grave na gestante: aumento de um terço.",
+          "Morte da gestante: pena duplicada.",
+          "Vale para os crimes dos arts. 125 e 126 (terceiro)."
+        ],
+        "atencao": [
+          "Aumenta 1/3 (lesão grave) ou duplica (morte)."
+        ],
+        "exemplo": "Procedimento de aborto clandestino causa a morte da gestante: pena duplicada.",
+        "prova": [
+          "Assertiva que aplica o art. 127 ao autoaborto da gestante (art. 124) erra: refere-se aos arts. 125 e 126."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 125 e 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-128",
+      "unit_id": "8fffb3f9-f25f-528a-beae-6a49bbbf2aea",
+      "content_sha256": "75cd5fcf3d82a7ff3a8842bbd36a2ead1dfe492b2ac309b538e89d6694554d53",
+      "simples": "O CP prevê hipóteses de aborto praticado por médico: ausência de outro meio de salvar a vida da gestante e gravidez resultante de estupro com consentimento pertinente. ADPF 54 afasta criminalização da interrupção por anencefalia diagnosticada, como interpretação judicial própria.",
+      "pontos": [
+        "IncisoI: não há outro meio de salvar a VIDA, não qualquer risco genérico.",
+        "IncisoII: consentimento da gestante ou representante quando incapaz.",
+        "ADPF 54, julgamento de 2012: decisão da gestante e diagnóstico, sem generalizar a qualquer malformação.",
+        "ADPFs 989/1207: notícia de 27/10/2025 relata não referendo da liminar de 17/10, não decisão definitiva de todo mérito."
+      ],
+      "atencao": [
+        "Não dizer que remissão MC no compilado prova liminar vigente: STF não a referendou em 24/10/2025. Não certificada aqui inexistência de decisões posteriores ou todo mérito até 2026; não usar a cautelar superada como autorização atual universal de atuação da enfermagem. Urgência, consentimento e regulamentação assistencial exigem avaliação própria, sem inventar autorização judicial universal ou permissão geral a qualquer pessoa."
+      ],
+      "exemplo": "Diagnóstico médico de anencefalia e escolha da gestante exigem analisar ADPF 54; não restringir toda hipótese jurídica aos dois incisos literais. Variação: Se a questão usa a liminar isolada das ADPFs 989/1207 para afirmar autorização atual ampla à enfermagem, confrontar não referendo e reconferir eventual andamento posterior.",
+      "prova": [
+        "Apenas remissão MC comprova vigência da liminar? Não.",
+        "Anencefalia equivale a qualquer malformação? Não; a decisão tem recorte próprio.",
+        "Não referendo da cautelar encerra necessariamente todo mérito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Texto e decisão judicial",
+          "significado": "Fontes distintas que devem ser integradas com alcance e estado processual explicitados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/mes-da-mulher-ha-onze-anos-stf-descriminalizou-a-interrupcao-da-gravidez-de-fetos-anencefalos/",
+        "https://noticias.stf.jus.br/postsnoticias/stf-derruba-liminar-que-autorizou-profissionais-de-enfermagem-a-realizar-aborto-legal/"
+      ],
+      "expected": {
+        "unit_id": "8fffb3f9-f25f-528a-beae-6a49bbbf2aea",
+        "content_sha256": "75cd5fcf3d82a7ff3a8842bbd36a2ead1dfe492b2ac309b538e89d6694554d53",
+        "simples": "Aborto legal: não se pune o aborto praticado por médico se não há outro meio de salvar a vida da gestante (aborto necessário) ou se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante ou, quando incapaz, de seu representante legal (aborto sentimental). O texto traz as indicações 'Vide ADPF 54' e 'Vide ADPF 1207 MC/DF': confira as decisões do STF.",
+        "pontos": [
+          "Só o MÉDICO pratica o aborto legal.",
+          "I – aborto necessário: não há outro meio de salvar a vida da gestante.",
+          "II – gravidez resultante de estupro, com consentimento da gestante (ou do representante legal, se incapaz)."
+        ],
+        "atencao": [
+          "No inciso I não se exige consentimento (nem autorização judicial); no II exige-se consentimento da gestante.",
+          "O art. 128 afasta a PUNIÇÃO (não é causa de justificação de qualquer pessoa: é para o médico).",
+          "Confira as ADPFs citadas no texto."
+        ],
+        "exemplo": "Médico realiza aborto porque a gravidez coloca em risco a vida da gestante e não há outro meio de salvá-la: não se pune.",
+        "prova": [
+          "Assertiva que exige autorização judicial para o aborto necessário erra: o texto não a exige.",
+          "Assertiva que permite que enfermeira realize o aborto do art. 128 contraria o caput (aborto praticado por médico)."
+        ],
+        "termos": [
+          {
+            "termo": "Aborto necessário",
+            "significado": "Aborto para salvar a vida da gestante."
+          }
+        ],
+        "remissoes": [
+          "Arts. 124 a 127"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-129",
+      "unit_id": "591ebe27-d049-58bf-a7c6-9a3ff3f39364",
+      "content_sha256": "cfc73d887390eb02d27fe43a1e114c82a4dedd3f67098aefaa717d69fe07218c",
+      "simples": "Lesão corporal ofende integridade ou saúde e tem modalidades conforme resultado e contexto. Leve:3 meses a 1 ano; grave:1 a 5; gravíssima:2 a 8; seguida de morte:4 a 12, sem dolo/assunção do risco de matar. Alterações de 2024–2026 têm disciplina própria.",
+      "pontos": [
+        "Grave: ocupações habituais MAIS de 30 dias, perigo de vida, debilidade ou aceleração do parto.",
+        "Gravíssima: incapacidade permanente para trabalho, enfermidade incurável, perda/inutilização, deformidade ou aborto.",
+        "Privilégio 1/6 a 1/3; culpa 2 meses a 1 ano; §5º contém moeda histórica, não tabela monetária atual.",
+        "§§9º/13:2 a 5 após Lei 14.994, vigente 10/10/2024; Lei 15.455 vigente 2/7/2026 inclui relação de trabalho doméstico no §9º.",
+        "§12 escolar/função: frações e pressupostos próprios, Lei 15.159 vigente 4/7/2025.",
+        "Lei 15.358 vigente 25/3/2026: §3º-A 20 a 40; §8º-A 2/3 com EXCEÇÃO do §3º-A; §§10/11 e remissões§§7º/8º exigem integração."
+      ],
+      "atencao": [
+        "Não confundir preterdolo com dolo eventual de matar nem aplicar todas as frações cumulativamente pelo mesmo fundamento. Não usar mil-réis como moeda atual ou duplicar fundamento de menor 14 nas remissões. Súmula 542/STJ: lesão em violência doméstica contra mulher tem ação pública incondicionada; não impor representação pelo novo prazo geral doméstico. Mudanças gravosas não retroagem."
+      ],
+      "exemplo": "A vítima fica incapaz de ocupações habituais por exatamente 30 dias: esse dado não satisfaz MAIS de 30, mas outros resultados graves devem ser verificados. Variação: Se o agente quis matar ou assumiu o risco, examinar homicídio; não enquadrar sempre como lesão seguida de morte só por haver lesões anteriores.",
+      "prova": [
+        "Exatamente 30 dias basta nesse inciso? Não.",
+        "§8º-A aplica automaticamente também ao §3º-A? Não; há exceção expressa.",
+        "A vítima de lesão doméstica contra mulher precisa sempre representar? Não; Súmula 542."
+      ],
+      "termos": [
+        {
+          "termo": "Resultados da lesão",
+          "significado": "Consequências e contextos distintos, com classificação e penas próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "591ebe27-d049-58bf-a7c6-9a3ff3f39364",
+        "content_sha256": "cfc73d887390eb02d27fe43a1e114c82a4dedd3f67098aefaa717d69fe07218c",
+        "simples": "Lesão corporal: ofender a integridade corporal ou a saúde de outrem, com detenção de 3 meses a 1 ano (lesão leve). Lesão grave (§1º): incapacidade para as ocupações habituais por mais de 30 dias, perigo de vida, debilidade permanente de membro, sentido ou função, ou aceleração de parto: reclusão de 1 a 5 anos. Lesão gravíssima (§2º): incapacidade permanente para o trabalho, enfermidade incurável, perda ou inutilização de membro, sentido ou função, deformidade permanente ou aborto: reclusão de 2 a 8 anos. Lesão seguida de morte (§3º): reclusão de 4 a 12 anos. Há ainda diminuição de pena (§4º), substituição por multa (§5º), forma culposa (§6º, detenção de 2 meses a 1 ano), aumentos (§§7º a 8º-A), violência doméstica (§9º, reclusão de 2 a 5 anos) e aumentos específicos (§§10 a 12).",
+        "pontos": [
+          "Caput: detenção de 3 meses a 1 ano.",
+          "§1º: grave (incapacidade por mais de 30 dias; perigo de vida; debilidade permanente; aceleração de parto): reclusão de 1 a 5 anos.",
+          "§2º: gravíssima (incapacidade permanente; enfermidade incurável; perda ou inutilização; deformidade permanente; aborto): reclusão de 2 a 8 anos.",
+          "§3º: lesão seguida de morte, sem dolo quanto à morte: reclusão de 4 a 12 anos.",
+          "§4º: redução de um sexto a um terço (valor social ou moral, ou violenta emoção).",
+          "§5º: se as lesões não são graves, o juiz pode substituir a detenção por multa (nas hipóteses do §4º ou lesões recíprocas).",
+          "§6º: culposa: detenção de 2 meses a 1 ano.",
+          "§9º: violência doméstica (ascendente, descendente, irmão, cônjuge, companheiro, convivência, relações domésticas): reclusão de 2 a 5 anos.",
+          "§§10 a 12: aumentos de um terço (violência doméstica nos §§1º a 3º, vítima com deficiência) e de 1/3 a 2/3 contra agentes públicos listados e seus familiares."
+        ],
+        "atencao": [
+          "Grave: incapacidade por MAIS de 30 dias; gravíssima: incapacidade PERMANENTE para o trabalho.",
+          "A lesão seguida de morte (§3º) é preterdolosa: dolo na lesão, culpa na morte.",
+          "O §9º trata de violência doméstica e exige a relação descrita no texto atual."
+        ],
+        "exemplo": "Uma agressão que deixa a vítima impossibilitada de suas atividades por 40 dias é lesão grave (§1º, I).",
+        "prova": [
+          "Assertiva que classifica a incapacidade por 20 dias como lesão grave erra: exige mais de 30 dias.",
+          "Assertiva que atribui à lesão seguida de morte pena de detenção erra: é reclusão de 4 a 12 anos."
+        ],
+        "termos": [
+          {
+            "termo": "Preterdolo",
+            "significado": "Dolo no resultado inicial (lesão) e culpa no resultado mais grave (morte)."
+          }
+        ],
+        "remissoes": [
+          "Art. 121, §§4º e 5º",
+          "Art. 19 (agravação pelo resultado)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-130",
+      "unit_id": "5b0f9dba-1fd1-5f8d-9ccf-586f6af4b29c",
+      "content_sha256": "5111409e00011a1f56f80ab6000ef75601765d73d69468092e42cef8cfb6bcf2",
+      "simples": "Perigo de contágio venéreo exige exposição por relação sexual/ato libidinoso e conhecimento indicado da contaminação. A hipótese de intenção de transmitir tem pena própria; o artigo exige representação.",
+      "pontos": [
+        "Caput:3 meses a 1 ano OU multa.",
+        "Intenção de transmitir:1 a 4 E multa.",
+        "Representação:§2º."
+      ],
+      "atencao": [
+        "Diagnóstico sozinho não prova exposição, conhecimento ou finalidade. Não estigmatizar toda doença ou importar representação do art.130 para todo delito de contágio; tipo, prova e regime específico importam."
+      ],
+      "exemplo": "Há contaminação conhecida, mas nenhum ato sexual/libidinoso de exposição demonstrado: não presumir consumação só pelo diagnóstico. Variação: Se a exposição e intenção específica são provadas na hipótese legal, analisar §1º sem tratar o caput como pena universal.",
+      "prova": [
+        "Diagnóstico sozinho basta? Não.",
+        "As penas usam sempre multa cumulativa? Não; caput alternativa e §1º cumulativa."
+      ],
+      "termos": [
+        {
+          "termo": "Exposição ao contágio",
+          "significado": "Conduta de perigo com meio e elementos próprios, não mera condição de saúde."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5b0f9dba-1fd1-5f8d-9ccf-586f6af4b29c",
+        "content_sha256": "5111409e00011a1f56f80ab6000ef75601765d73d69468092e42cef8cfb6bcf2",
+        "simples": "Perigo de contágio venéreo: expor alguém, por meio de relações sexuais ou qualquer ato libidinoso, a contágio de moléstia venérea de que sabe ou deve saber que está contaminado. Pena: detenção de 3 meses a 1 ano, ou multa. Se a intenção é transmitir a moléstia: reclusão de 1 a 4 anos e multa. Somente se procede mediante representação.",
+        "pontos": [
+          "Expor a contágio por ato sexual ou libidinoso, sabendo ou devendo saber estar contaminado.",
+          "Caput: detenção de 3 meses a 1 ano, ou multa.",
+          "§1º: intenção de transmitir: reclusão de 1 a 4 anos e multa.",
+          "§2º: ação penal condicionada à representação."
+        ],
+        "atencao": [
+          "Ação penal pública CONDICIONADA à representação (§2º)."
+        ],
+        "exemplo": "Pessoa que sabe estar contaminada pratica relação sexual sem informar o parceiro, expondo-o a contágio.",
+        "prova": [
+          "Assertiva que torna incondicionada a ação do art. 130 contraria o §2º."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 131"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-131",
+      "unit_id": "392e84a9-9047-5a5a-a733-13db3cb8268d",
+      "content_sha256": "7bfc76a670305b5f6fa30041addc8b106546481f18e2f457299e2a1df95bde05",
+      "simples": "Praticar ato capaz de produzir contágio de moléstia grave de que está contaminado, com finalidade de transmiti-la, tem reclusão de 1 a 4 anos e multa. Diferentemente do art.130, não se limita ao meio sexual.",
+      "pontos": [
+        "Fim de transmitir E ato capaz.",
+        "Não importar condição de representação do art.130."
+      ],
+      "atencao": [
+        "Não presumir dolo específico por doença ou contato social comum nem universalizar enquadramento de toda enfermidade sem verificar elementos e jurisprudência pertinente. Transmissão efetiva não é requisito textual de todo fato de perigo."
+      ],
+      "exemplo": "Pessoa conhece a contaminação, mas não há ato capaz nem finalidade de transmitir demonstrados. Variação: Com ato capaz e finalidade legal comprovados, examinar o tipo sem exigir sempre resultado de contágio como único fundamento.",
+      "prova": [
+        "Qualquer contato com pessoa doente basta? Não.",
+        "O texto exige finalidade? Sim; com o fim de transmitir."
+      ],
+      "termos": [
+        {
+          "termo": "Fim de transmissão",
+          "significado": "Elemento específico de propósito, diferente de mera ciência da doença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "392e84a9-9047-5a5a-a733-13db3cb8268d",
+        "content_sha256": "7bfc76a670305b5f6fa30041addc8b106546481f18e2f457299e2a1df95bde05",
+        "simples": "Perigo de contágio de moléstia grave: praticar, com o fim de transmitir a outrem moléstia grave de que está contaminado, ato capaz de produzir o contágio. Pena: reclusão de 1 a 4 anos e multa.",
+        "pontos": [
+          "Exige fim de transmitir moléstia grave.",
+          "Ato capaz de produzir o contágio.",
+          "Reclusão de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Exige DOLO ESPECÍFICO: fim de transmitir.",
+          "Se há transmissão e resultado mais grave, pode responder por lesão ou homicídio, conforme o caso."
+        ],
+        "exemplo": "Quem sabe estar contaminado pratica ato com o fim de transmitir a doença grave a outra pessoa.",
+        "prova": [
+          "Assertiva que dispensa o fim de transmitir no art. 131 erra: ele é elementar do tipo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 130"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-132",
+      "unit_id": "ea3506e7-018a-5684-a490-28225cff2d91",
+      "content_sha256": "56c51e1ddcc3974d86692e3e6974c09f79f342fea74af5d7711d7c491aae5a03",
+      "simples": "Expor vida/saúde a perigo direto e iminente tem detenção de 3 meses a 1 ano se não houver crime mais grave. Transporte irregular de pessoas para serviços tem aumento próprio; perigo não é presumido por toda irregularidade.",
+      "pontos": [
+        "Subsidiariedade expressa.",
+        "Transporte para serviços: aumento 1/6 a 1/3 com hipótese específica."
+      ],
+      "atencao": [
+        "Não confundir risco genérico/abstrato com perigo direto e iminente nem usar irregularidade administrativa isolada como prova automática do crime. Crime mais grave e resultado exigem enquadramento próprio."
+      ],
+      "exemplo": "O transporte viola norma, mas a questão presume o delito sem demonstrar perigo direto e iminente. Variação: Se a exposição típica é provada no transporte para serviços, examinar parágrafo e subsidiariedade, sem somar automaticamente todo enquadramento.",
+      "prova": [
+        "Basta risco remoto genérico? Não; direto e iminente.",
+        "Se há crime mais grave ignora-se a subsidiariedade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo concreto",
+          "significado": "Exposição direta e iminente nas condições do tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ea3506e7-018a-5684-a490-28225cff2d91",
+        "content_sha256": "56c51e1ddcc3974d86692e3e6974c09f79f342fea74af5d7711d7c491aae5a03",
+        "simples": "Perigo para a vida ou saúde de outrem: expor a vida ou a saúde de outrem a perigo direto e iminente. Pena: detenção de 3 meses a 1 ano, se o fato não constitui crime mais grave (crime subsidiário). A pena aumenta de um sexto a um terço se a exposição decorre do transporte de pessoas para a prestação de serviços em estabelecimentos de qualquer natureza, em desacordo com as normas legais.",
+        "pontos": [
+          "Perigo DIRETO e IMINENTE.",
+          "Detenção de 3 meses a 1 ano.",
+          "Subsidiário: só se não há crime mais grave.",
+          "Aumento de 1/6 a 1/3 no transporte de pessoas para prestar serviços em desacordo com as normas."
+        ],
+        "atencao": [
+          "Crime de perigo concreto (perigo direto e iminente).",
+          "Subsidiariedade expressa: 'se o fato não constitui crime mais grave'."
+        ],
+        "exemplo": "Transportar trabalhadores em veículo inadequado, em desacordo com as normas, expondo-os a perigo: pena aumentada.",
+        "prova": [
+          "Assertiva que aplica o art. 132 mesmo havendo crime mais grave erra: o tipo é subsidiário."
+        ],
+        "termos": [
+          {
+            "termo": "Crime subsidiário",
+            "significado": "Crime que só se aplica se o fato não constituir crime mais grave."
+          }
+        ],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-133",
+      "unit_id": "0fd0eb4c-dc33-5324-9850-97b63769d01d",
+      "content_sha256": "404875c001589383af3223adc21f96eb33f93276bb8bf9da8760f808cfea07da",
+      "simples": "Abandonar pessoa sob cuidado/guarda/vigilância/autoridade incapaz de defender-se dos riscos tem penas ampliadas pela Lei 15.163, publicada e vigente em 4/7/2025. Incapacidade pode ter qualquer causa relevante, não apenas idade.",
+      "pontos": [
+        "Caput 2 a 5; lesão grave 3 a 7; morte 8 a 14 anos de reclusão.",
+        "Aumento 1/3: lugar ermo, vínculo legal ou vítima maior 60.",
+        "Exige relação especial e incapacidade de defesa dos riscos."
+      ],
+      "atencao": [
+        "Não usar penas antigas como atuais nem aplicá-las de forma gravosa retroativa. Não presumir incapacidade apenas por rótulo ou abandono típico por qualquer afastamento; verificar riscos e elementos. Resultado agravador exige imputação, não mero evento casual."
+      ],
+      "exemplo": "Responsável deixa pessoa incapaz de defender-se exposta aos riscos do abandono, preenchidos os elementos legais. Variação: Se não existe a relação especial nem incapacidade indicada, reavaliar enquadramento, inclusive eventual socorro, sem impor automaticamente art.133.",
+      "prova": [
+        "Só crianças podem ser vítimas? Não; incapacidade pode decorrer de outras causas.",
+        "Penas ampliadas retroagem prejudicialmente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incapacidade no abandono",
+          "significado": "Inaptidão de defesa diante dos riscos, ligada à relação especial do autor."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm"
+      ],
+      "expected": {
+        "unit_id": "0fd0eb4c-dc33-5324-9850-97b63769d01d",
+        "content_sha256": "404875c001589383af3223adc21f96eb33f93276bb8bf9da8760f808cfea07da",
+        "simples": "Abandono de incapaz: abandonar pessoa que está sob seu cuidado, guarda, vigilância ou autoridade e que, por qualquer motivo, é incapaz de defender-se dos riscos do abandono. Pena: reclusão de 2 a 5 anos. Se resulta lesão grave: 3 a 7 anos; se resulta morte: 8 a 14 anos. As penas aumentam-se de um terço se o abandono ocorre em lugar ermo, se o agente é ascendente, descendente, cônjuge, irmão, tutor ou curador da vítima, ou se a vítima é maior de 60 anos.",
+        "pontos": [
+          "Abandonar pessoa sob cuidado, guarda, vigilância ou autoridade, incapaz de se defender.",
+          "Caput: reclusão de 2 a 5 anos.",
+          "§1º: lesão grave: 3 a 7 anos.",
+          "§2º: morte: 8 a 14 anos.",
+          "§3º: aumento de 1/3 se lugar ermo; se o agente é ascendente, descendente, cônjuge, irmão, tutor ou curador; ou vítima maior de 60 anos."
+        ],
+        "atencao": [
+          "Penas e aumentos seguem a redação atual do texto (pena de 2 a 5 anos no caput).",
+          "Exige relação de cuidado, guarda, vigilância ou autoridade."
+        ],
+        "exemplo": "Cuidador abandona idoso acamado em local isolado: abandono de incapaz, com aumento por lugar ermo e vítima idosa.",
+        "prova": [
+          "Assertiva que aplica o art. 133 a qualquer pessoa que encontre incapaz em perigo erra: exige a relação de cuidado, guarda, vigilância ou autoridade (para o simples encontro, veja a omissão de socorro, art. 135)."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 134",
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-134",
+      "unit_id": "ddd6a177-d203-5ee9-94ca-12bc4502c347",
+      "content_sha256": "fd0721a565a0a43b0a95b8017120f06bf4137fbe27394204f73dfd8a26ccc76f",
+      "simples": "Expor/abandonar recém-nascido para ocultar desonra própria tem finalidade específica e resultados qualificados. A expressão histórica não legitima violência, culpa da vítima ou qualquer tese de defesa da honra.",
+      "pontos": [
+        "Caput 6 meses a 2; lesão grave 1 a 3; morte 2 a 6, detenção.",
+        "Recém-nascido e finalidade específica são requisitos."
+      ],
+      "atencao": [
+        "Não confundir com infanticídio, que exige matar e hipótese de estado puerperal, nem com qualquer abandono do art.133. Não presumir desonra ou a finalidade por estereótipo; resultado e elemento subjetivo exigem análise."
+      ],
+      "exemplo": "O recém-nascido é exposto com finalidade específica demonstrada de ocultar desonra própria, no recorte textual. Variação: Se não há essa finalidade, examinar outro enquadramento em vez de forçar art.134 por toda exposição de bebê.",
+      "prova": [
+        "Qualquer abandono de bebê é sempre art.134? Não.",
+        "A expressão justifica violência pela honra? Não; é requisito a examinar, não excludente."
+      ],
+      "termos": [
+        {
+          "termo": "Finalidade especial",
+          "significado": "Propósito exigido pelo tipo, sem legitimar preconceito ou violência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ddd6a177-d203-5ee9-94ca-12bc4502c347",
+        "content_sha256": "fd0721a565a0a43b0a95b8017120f06bf4137fbe27394204f73dfd8a26ccc76f",
+        "simples": "Exposição ou abandono de recém-nascido: expor ou abandonar recém-nascido para ocultar desonra própria. Pena: detenção de 6 meses a 2 anos. Se resulta lesão grave: detenção de 1 a 3 anos; se resulta morte: detenção de 2 a 6 anos.",
+        "pontos": [
+          "Fim especial: ocultar desonra própria.",
+          "Caput: detenção de 6 meses a 2 anos.",
+          "§1º: lesão grave: 1 a 3 anos.",
+          "§2º: morte: 2 a 6 anos."
+        ],
+        "atencao": [
+          "Exige a finalidade de ocultar desonra PRÓPRIA.",
+          "As penas são de detenção."
+        ],
+        "exemplo": "Mãe abandona o recém-nascido para esconder a gravidez: art. 134.",
+        "prova": [
+          "Assertiva que dispensa o fim de ocultar desonra própria erra: é elementar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-135",
+      "unit_id": "c943e69b-0afc-55ac-9f21-0468084fbf99",
+      "content_sha256": "ea55ed94a2dfd1b01e51b34c8a01668d4f7d594a3b06b0e5c81af9ed89aade90",
+      "simples": "Omissão de socorro abrange falta de assistência possível sem risco pessoal nas hipóteses legais ou falta de pedido de socorro público. Não exige heroísmo, mas risco para assistência direta não elimina automaticamente possibilidade segura de acionar ajuda.",
+      "pontos": [
+        "Caput 1 a 6 meses OU multa.",
+        "Lesão grave: aumenta METADE; morte: TRIPLICA se resultar da omissão."
+      ],
+      "atencao": [
+        "Não exigir assistência que exponha a risco pessoal nem ignorar alternativa de pedir socorro. Resultado precisa decorrer da omissão; não multiplicar pena só porque o desfecho ocorreu sem nexo relevante."
+      ],
+      "exemplo": "Há risco pessoal em entrar no local, mas é possível acionar socorro com segurança: distinguir assistência direta e pedido de ajuda. Variação: Se a pessoa pode ajudar diretamente sem risco, a análise do dever muda, preservadas as hipóteses e elementos legais.",
+      "prova": [
+        "Risco na assistência direta dispensa sempre pedir ajuda segura? Não.",
+        "Toda morte no local triplica sem nexo com omissão? Não; o texto exige resultar dela."
+      ],
+      "termos": [
+        {
+          "termo": "Socorro possível",
+          "significado": "Assistência ou acionamento de ajuda nas condições legais, sem heroísmo obrigatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c943e69b-0afc-55ac-9f21-0468084fbf99",
+        "content_sha256": "ea55ed94a2dfd1b01e51b34c8a01668d4f7d594a3b06b0e5c81af9ed89aade90",
+        "simples": "Omissão de socorro: deixar de prestar assistência, quando possível fazê-lo sem risco pessoal, à criança abandonada ou extraviada, ou à pessoa inválida ou ferida, ao desamparo ou em grave e iminente perigo; ou não pedir, nesses casos, o socorro da autoridade pública. Pena: detenção de 1 a 6 meses, ou multa. A pena é aumentada de metade se da omissão resulta lesão corporal grave, e triplicada se resulta a morte.",
+        "pontos": [
+          "Deixar de prestar assistência, sem risco pessoal, à criança abandonada ou extraviada, pessoa inválida ou ferida, ao desamparo ou em grave e iminente perigo.",
+          "Ou não pedir o socorro da autoridade pública.",
+          "Pena: detenção de 1 a 6 meses, ou multa.",
+          "Aumento de metade (lesão grave) e triplicação (morte)."
+        ],
+        "atencao": [
+          "Só há omissão de socorro se for POSSÍVEL ajudar SEM RISCO PESSOAL.",
+          "Alternativas: prestar assistência OU pedir socorro à autoridade.",
+          "Aumento de metade na lesão grave; pena triplicada na morte."
+        ],
+        "exemplo": "Motorista vê uma pessoa ferida na estrada, nada faz e nem chama o socorro: omissão de socorro.",
+        "prova": [
+          "Assertiva que exige que o omitente assuma risco pessoal para prestar socorro erra: o tipo ressalva o risco pessoal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13, §2º (omissão relevante)",
+          "Art. 135-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-135-a",
+      "unit_id": "89363d51-fdba-5ec2-a127-11da3066d6ce",
+      "content_sha256": "7dad4728693b52f5b5aea46ad9607942b2a85a2e7a37bb4dfd89b0b9a1c35a91",
+      "simples": "Condicionar atendimento médico-hospitalar emergencial a garantia ou prévio formulário administrativo configura hipótese legal própria. Não se confunde com cobrança legítima posterior ou qualquer cadastro sem atraso do atendimento.",
+      "pontos": [
+        "Cheque-caução, promissória OU qualquer garantia; formulário prévio como condição.",
+        "Caput 3 meses a 1 ano E multa.",
+        "Negativa com lesão grave:ATÉ dobro; morte:ATÉ triplo."
+      ],
+      "atencao": [
+        "Não exigir resultado grave para reconhecer o caput nem converter até o triplo em triplicação obrigatória, como no art.135. Verificar condição imposta, negativa, resultado e nexo no enquadramento aplicável."
+      ],
+      "exemplo": "Emergência só seria atendida após entrega de cheque-caução: identificar condicionamento, não exigir morte como requisito do caput. Variação: Cadastro realizado depois, sem condicionar emergência, não é o mesmo fato; cobrança e regras assistenciais têm análise própria.",
+      "prova": [
+        "O caput exige sempre morte? Não.",
+        "Até o triplo é triplo obrigatório? Não; distinguir da redação do art.135."
+      ],
+      "termos": [
+        {
+          "termo": "Condicionamento emergencial",
+          "significado": "Exigência como barreira ao atendimento urgente, com regime penal próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "89363d51-fdba-5ec2-a127-11da3066d6ce",
+        "content_sha256": "7dad4728693b52f5b5aea46ad9607942b2a85a2e7a37bb4dfd89b0b9a1c35a91",
+        "simples": "Condicionamento de atendimento médico-hospitalar emergencial: exigir cheque-caução, nota promissória ou qualquer garantia, bem como o preenchimento prévio de formulários administrativos, como condição para o atendimento médico-hospitalar emergencial. Pena: detenção de 3 meses a 1 ano e multa. A pena aumenta até o dobro se da negativa de atendimento resulta lesão grave, e até o triplo se resulta morte.",
+        "pontos": [
+          "Exigir garantia ou formulário prévio como condição para atendimento de emergência.",
+          "Detenção de 3 meses a 1 ano e multa.",
+          "Aumento: até o dobro (lesão grave) e até o triplo (morte)."
+        ],
+        "atencao": [
+          "Protege o atendimento EMERGENCIAL.",
+          "Aumentos: até o dobro e até o triplo (diferente da omissão de socorro, que aumenta de metade e tripla)."
+        ],
+        "exemplo": "O hospital exige cheque-caução antes de atender paciente em emergência: art. 135-A.",
+        "prova": [
+          "Assertiva que aplica o art. 135-A ao atendimento eletivo erra: trata de atendimento médico-hospitalar emergencial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-136",
+      "unit_id": "afd1012d-5de2-51fc-91ad-156783abce8d",
+      "content_sha256": "7c965882b204b05533cb3e30c4e537ef4cf94e0535c1eec33b6a005440df9c74",
+      "simples": "Maus-tratos expõem a perigo pessoa sob autoridade/guarda/vigilância para educação, ensino, tratamento ou custódia, pelos meios descritos. Lei 15.163, vigente em 4/7/2025, ampliou penas; educação não autoriza castigo físico em criança/adolescente.",
+      "pontos": [
+        "Caput 2 a 5; lesão grave 3 a 7; morte 8 a 14 anos de reclusão.",
+        "Menor 14: aumenta 1/3; exatamente 14 não é menor 14.",
+        "Privação de cuidados, trabalho excessivo/inadequado e abuso de correção são hipóteses; integrar ECA 18-A."
+      ],
+      "atencao": [
+        "Não usar abuso de correção como autorização geral de castigo físico moderado. ECA 18-A protege contra castigo físico e tratamento cruel/degradante; responsabilidade e distinção de tortura exigem elementos próprios. Mudanças penais gravosas não retroagem; resultado agravador depende de imputação."
+      ],
+      "exemplo": "Responsável priva criança de alimentação indispensável sob pretexto educativo, expondo-a ao perigo nas condições legais. Variação: Se há elementos de outro crime mais grave, como tortura, avaliar tipo próprio; chamar o ato de educação não o torna lícito.",
+      "prova": [
+        "Educação autoriza castigo físico contra criança? Não; integrar ECA 18-A.",
+        "Vítima exatamente 14 preenche menor 14? Não; a expressão é estrita."
+      ],
+      "termos": [
+        {
+          "termo": "Maus-tratos e educação",
+          "significado": "Perigo em relação especial, sem transformar disciplina em licença de violência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ],
+      "expected": {
+        "unit_id": "afd1012d-5de2-51fc-91ad-156783abce8d",
+        "content_sha256": "7c965882b204b05533cb3e30c4e537ef4cf94e0535c1eec33b6a005440df9c74",
+        "simples": "Maus-tratos: expor a perigo a vida ou a saúde de pessoa sob sua autoridade, guarda ou vigilância, para fim de educação, ensino, tratamento ou custódia, privando-a de alimentação ou cuidados indispensáveis, sujeitando-a a trabalho excessivo ou inadequado ou abusando de meios de correção ou disciplina. Pena: reclusão de 2 a 5 anos. Lesão grave: 3 a 7 anos; morte: 8 a 14 anos. Aumenta-se um terço se a vítima é menor de 14 anos.",
+        "pontos": [
+          "Vítima sob autoridade, guarda ou vigilância, para educação, ensino, tratamento ou custódia.",
+          "Modos: privar de alimentação ou cuidados, trabalho excessivo ou inadequado, abuso de correção ou disciplina.",
+          "Caput: reclusão de 2 a 5 anos.",
+          "§1º: lesão grave: 3 a 7 anos. §2º: morte: 8 a 14 anos.",
+          "§3º: aumento de 1/3 se a vítima é menor de 14 anos."
+        ],
+        "atencao": [
+          "O fim deve ser educação, ensino, tratamento ou custódia (relação de autoridade, guarda ou vigilância).",
+          "O abuso dos meios de correção é conduta típica; o uso moderado não."
+        ],
+        "exemplo": "Responsável priva de alimentação criança sob seus cuidados como castigo: maus-tratos.",
+        "prova": [
+          "Assertiva que aplica o art. 136 a qualquer pessoa sem relação de autoridade, guarda ou vigilância erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 133 (abandono de incapaz)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    }
+  ]
+}

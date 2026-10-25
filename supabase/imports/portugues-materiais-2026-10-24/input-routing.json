@@ -1,0 +1,594 @@
+[
+  {
+    "document_index": 0,
+    "document_name": "01-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "78a8c2238bfe60f9d02b2814e927cdafcbc17e61326bb2c131b3b1c3bbd88c56",
+    "pages": 5,
+    "material_slug": "portugues-leitura-interpretacao-tipologia",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 1,
+    "document_name": "01-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "4a29922ccfae3a39ed19ae8125d8d07b649a5ce0eeb0cda92dfbeb034a04b504",
+    "pages": 5,
+    "material_slug": "portugues-semantica-figuras-linguagem",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 2,
+    "document_name": "01-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "2eaeace0fab913e2fba6fcebd71f97b8064b4d3d017f6751f8b5379b4648f017",
+    "pages": 5,
+    "material_slug": "portugues-leitura-interpretacao-tipologia",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 3,
+    "document_name": "01-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "f17f0c03e9004108db558337fda61666ecba4e6a086b26292b150e449cf95193",
+    "pages": 6,
+    "material_slug": "portugues-coesao-reescrita-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 4,
+    "document_name": "02-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "4af3f9897bfc3c4a0701eac1367d5623e1b7723211e8d74bc2b879575606d7f9",
+    "pages": 4,
+    "material_slug": "portugues-coesao-reescrita-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 5,
+    "document_name": "01-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "8ba857310a4eda3f2acf2422096936959b15a959dea7d8ffec767bd97e6520b8",
+    "pages": 9,
+    "material_slug": "portugues-semantica-figuras-linguagem",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 6,
+    "document_name": "02-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "95a6527fc9ff1accc6dcfa86b037b6cea29a737bf99a0329ef863972c6733924",
+    "pages": 6,
+    "material_slug": "portugues-ortografia-acentuacao-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 7,
+    "document_name": "02-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "8f94cef1afd5c90de1e6147df865f8f61e15aefa43ca35a29db90542efd3871a",
+    "pages": 10,
+    "material_slug": "portugues-ortografia-acentuacao-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 8,
+    "document_name": "02-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "d52cf40569db37ee02d2dbd3d49d321cfe3127cf8d23f7c908d49ec11159b698",
+    "pages": 4,
+    "material_slug": "portugues-coesao-reescrita-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 9,
+    "document_name": "03-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "78a8c2238bfe60f9d02b2814e927cdafcbc17e61326bb2c131b3b1c3bbd88c56",
+    "pages": 5,
+    "material_slug": "portugues-leitura-interpretacao-tipologia",
+    "duplicate_of": 0
+  },
+  {
+    "document_index": 10,
+    "document_name": "02-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "1246899ce140d6a73b6cabd371a5a5c396d552262b453a3f5c7841568e6f1f46",
+    "pages": 7,
+    "material_slug": "portugues-ortografia-acentuacao-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 11,
+    "document_name": "03-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "46ccd313583044155a758bb37cc2eacbd277a178b8fa61c3aa2295ef3a13dae1",
+    "pages": 3,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 12,
+    "document_name": "03-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "f0066404f5dfdd71dd5091ffbd64e1b6c28655ed7061bd361291bdcafc467a77",
+    "pages": 9,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 13,
+    "document_name": "03-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "7a8d2dbae0812f4b266fb56c8bb7fff0f31b5b5d317783065b863bf2c29474a5",
+    "pages": 5,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 14,
+    "document_name": "04-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "e34db28a208fbcdcf3e345474595fa69edf5d989f6b7ecb8067fc332f7cce5a6",
+    "pages": 7,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 15,
+    "document_name": "04-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "b7afb2a34783ecef5f2c72f5b3b22313af9f788f32f4207bb9bd7e8b7ce1afa5",
+    "pages": 6,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 16,
+    "document_name": "04-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "4a1d0f9144e971cf515847ce0ab4f5ec6671d2a3b414ccc9eee3a1db65d63f1b",
+    "pages": 3,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 17,
+    "document_name": "04-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "2a53959abced1ba666927a84618a104d7f0f1bc351ae7df7936d25cbd7900b32",
+    "pages": 6,
+    "material_slug": "portugues-classes-palavras-contexto",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 18,
+    "document_name": "04-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "ea504c8a94e24d8498438e25dbe6d2862c3a76d4283c425b3fb9444ca0ec7fba",
+    "pages": 6,
+    "material_slug": "portugues-pronomes-referentes-relativos",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 19,
+    "document_name": "05-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "638a3235127e2d141fb7db5ae0a698fefcaf2302aa871fb6a84e81420299f612",
+    "pages": 4,
+    "material_slug": "portugues-pronomes-referentes-relativos",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 20,
+    "document_name": "05-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "fc0b1b90a60cea2a640592ee0de7b4ca48602603a940e6354d5c7701c43f228f",
+    "pages": 3,
+    "material_slug": "portugues-pronomes-referentes-relativos",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 21,
+    "document_name": "05-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "9c02b70e029326521bd57f287a20b15bf0b7ccdf192eec2edb143aa3c15c44a5",
+    "pages": 4,
+    "material_slug": "portugues-pronomes-referentes-relativos",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 22,
+    "document_name": "06-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "dda484e3d2c79488f78a39cf451c79fc6002896121373b94260e7388dfa847b8",
+    "pages": 4,
+    "material_slug": "portugues-coordenacao-subordinacao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 23,
+    "document_name": "05-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "b673927d831ae4b5fe579fbf50d20202a5d287b97f09bd12e14c7ce68c9f5656",
+    "pages": 4,
+    "material_slug": "portugues-pronomes-referentes-relativos",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 24,
+    "document_name": "05-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "93c3010e643a4687522d91a837e11ffd4e9f0e7ac7f3cd6df3ebf31fb8cc4d8b",
+    "pages": 4,
+    "material_slug": "portugues-coordenacao-subordinacao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 25,
+    "document_name": "06-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "13d58e007a5198860ba390966366cb81de4fcecfb297436ec81b41a7a7d0bf13",
+    "pages": 4,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 26,
+    "document_name": "06-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "d37be858ad2c47d225fb688de952b5442955c8078d31d75facfadff71ca936fa",
+    "pages": 5,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 27,
+    "document_name": "06-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "774f3066a98a749e6cbfbd6525f1086f9b9c49c1ca97fef9964f5b26edbc2773",
+    "pages": 3,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 28,
+    "document_name": "06-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "35092daae994095ab229f1434ed6eb34f7767de9253a23007b67f531148b1143",
+    "pages": 3,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 29,
+    "document_name": "07-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "5b9e518f6c422b5ea2d2e6991f5fbb529e9cbcfbf3749a2853c7ffbc3f1ea246",
+    "pages": 3,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 30,
+    "document_name": "07-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "1adaa6561eed1ba71d64af1ef9ff7bb9feb90350ae0c289057f3075ece6b7675",
+    "pages": 3,
+    "material_slug": "portugues-verbos-tempos-vozes",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 31,
+    "document_name": "07-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "ca4619e892053a39ec67684aac8e43685e528cf01b5cd19e9492cee1d96cd0d7",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 32,
+    "document_name": "07-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "6a998e9d4b28ea0a00994b3d5e79facab782295b0ead4c9aff1dd3679b59b034",
+    "pages": 5,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 33,
+    "document_name": "07-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "4169c38d65a3b85e11bcaa067a631e8381bcb88744ba1459dd928ada0e7553fc",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 34,
+    "document_name": "08-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "d249fe38cb0ebe0b71cb183563d6998c7e2610696af52b7a68986b125436a2ab",
+    "pages": 4,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 35,
+    "document_name": "08-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "d384b7f56fac6c479511f9a1ff52e744588afa2d98b9898919d7bdc72992a00c",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 36,
+    "document_name": "08-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "e2b9ed02865f2c72914889ab247539af4bd39e4725cd4a04f45371e36808f986",
+    "pages": 5,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 37,
+    "document_name": "08-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "2b4a211ac40bbc39cffb649b24922672db6f4caf07a6fbc7941d7ab4893c98bd",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 38,
+    "document_name": "08-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "cbe42549bd03725aa04169967071e82617da8a2d891b2029f47d192b1613a15b",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 39,
+    "document_name": "09-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "0651ae790e580b01c201a2a5b10de5064d23805ec836e5f720ad41e52573fc5c",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 40,
+    "document_name": "09-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "6217f82b77ba4df286a266469668d7a90797a407a7c29a811d9b4b9dbcbadde2",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 41,
+    "document_name": "09-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "b742d5dcbeb269e835a9549ddb23dc984122d9d022b06eb99568a598dade97b9",
+    "pages": 4,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 42,
+    "document_name": "09-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "7765e5bcd4c2c3feb68e78f5c605b2af85a2a0fe79c105dca7a53cd1972560ad",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 43,
+    "document_name": "09-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "52c9e12e5ca9a1f2fe19e22659bfed632bae2448cf91d707db22b94ece8ac22d",
+    "pages": 4,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 44,
+    "document_name": "10-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "cfb1f2b1a2dea315d7ee9c520db17ca190d829b33f11293cb4554f552df6d359",
+    "pages": 3,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 45,
+    "document_name": "10-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "248ef06173fe4dd6c6a8161bded22fe63734a449511c6edc0aae18c2ca95d040",
+    "pages": 3,
+    "material_slug": "portugues-adjetivas-substantivas-pontuacao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 46,
+    "document_name": "10-02_lingua_portuguesa_giancarla_bombonato (1).pdf",
+    "document_sha256": "020d45c85c7a446d96dcc75505d4e0e0044a195cb31930250041cb6dc6b4d68f",
+    "pages": 4,
+    "material_slug": "portugues-oracoes-adverbiais-conectores",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 47,
+    "document_name": "10-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "10948c24a17e9184da19df27bb39fcc62d4369452eddb55311e35518cc12ea64",
+    "pages": 4,
+    "material_slug": "portugues-adjetivas-substantivas-pontuacao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 48,
+    "document_name": "10-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "8bd9ab8d099477323f63bfd2493b1de91c0aa9645ca2a8d967eaf82ecc7d055a",
+    "pages": 6,
+    "material_slug": "portugues-adjetivas-substantivas-pontuacao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 49,
+    "document_name": "11-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "ad0bcf9efb6911636adfb494f7809f84f3ecd110c6cea7fd2840d4dfb1546f50",
+    "pages": 5,
+    "material_slug": "portugues-colocacao-pronominal",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 50,
+    "document_name": "11-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "f905b209e4413fd120a4cddeba266e0ab1957bedec6b44b8d13622afe9043abc",
+    "pages": 4,
+    "material_slug": "portugues-concordancia-verbal-nominal",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 51,
+    "document_name": "11-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "87366c504dcef6918118d3d67e994d7f61263073d38b4937c1ab1acf21fb0721",
+    "pages": 4,
+    "material_slug": "portugues-concordancia-verbal-nominal",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 52,
+    "document_name": "11-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "622a5b257e395d4509090dab3d3071927bdb98f4d9c411ad413fc6ca1d83ed7e",
+    "pages": 5,
+    "material_slug": "portugues-concordancia-verbal-nominal",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 53,
+    "document_name": "11-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "7c664993ced09a3f01d7034ed40ff76ce505065c0545d389eca6a2149101faea",
+    "pages": 4,
+    "material_slug": "portugues-concordancia-verbal-nominal",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 54,
+    "document_name": "12-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "0c32b951d0aefedd29a7302bf3312225c2af62c92ec0d8ab7e1e84c3da4a3752",
+    "pages": 5,
+    "material_slug": "portugues-regencia-crase",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 55,
+    "document_name": "12-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "3e8198c4d0cda3487219301eef31455de1318fc0872415e892d9800e7084feba",
+    "pages": 7,
+    "material_slug": "portugues-regencia-crase",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 56,
+    "document_name": "12-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "ab4c99104c3359eb63ac78984c24d75be4e967a7f75e5b46f855efbdb1078a88",
+    "pages": 5,
+    "material_slug": "portugues-regencia-crase",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 57,
+    "document_name": "12-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "49731cfb6bfccde985deb7c5f0d1c3c3c762bc7a5853b1a684a0098b0b5153de",
+    "pages": 4,
+    "material_slug": "portugues-regencia-crase",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 58,
+    "document_name": "12-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "06d7c6b284e24e6fc23d68fabbcb93f9baba461c68a308e2f2b995501da7dd1d",
+    "pages": 4,
+    "material_slug": "portugues-regencia-crase",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 59,
+    "document_name": "13-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "ffbebbd2446c3968eb0d495e0f0459d39e139999f1294c3c5763d9bd9593ea1e",
+    "pages": 4,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 60,
+    "document_name": "13-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "f02fab243641c8285c0957a12516eefae50e3e1745f1de39e84d6722a53432a7",
+    "pages": 4,
+    "material_slug": "portugues-sintaxe-termos-oracao",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 61,
+    "document_name": "13-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "4df6286c047476603ee403db1a4364e0946f4510f8ebb4f09d04e206481abf49",
+    "pages": 5,
+    "material_slug": "portugues-pontuacao-estrutura-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 62,
+    "document_name": "13-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "7716fb583d4d7a7084100cbf67b9a4aa7fb6432ed7430fc8348bfa42f4b6d579",
+    "pages": 4,
+    "material_slug": "portugues-pontuacao-estrutura-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 63,
+    "document_name": "13-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "1bf019389b8233d34e1a0fa0ca8f6254a4a0c569ee36afb6958f9d57d4b592fd",
+    "pages": 4,
+    "material_slug": "portugues-pontuacao-estrutura-sentido",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 64,
+    "document_name": "14-01_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "c7136686fabc967f6ae0096e69d5e959792fcdcfd2e42d3f326bcb4a16de90ca",
+    "pages": 4,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 65,
+    "document_name": "14-03_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "3b4461b6afcf4d6f151c10f5e793f3251fcd03aed45599598d1c98ddff10798a",
+    "pages": 6,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 66,
+    "document_name": "14-02_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "e3b01f3bf80c184927556bacd5f44fa4bf07dc18395578015ce3581311097c47",
+    "pages": 6,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 67,
+    "document_name": "14-04_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "52250b9f30f1b0f0b9d713767ca62d72559cecb5b02072ef4de414d7988b1c1c",
+    "pages": 7,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 68,
+    "document_name": "14-05_lingua_portuguesa_giancarla_bombonato.pdf",
+    "document_sha256": "1d18edd0c95786f58ab4209d10d6b9dfcae23fc867d340061b91c2bba5b049a6",
+    "pages": 5,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 69,
+    "document_name": "15-01_gb_lin_por.pdf",
+    "document_sha256": "60b838ccb731c40c48732b05c36a92064d0e6275dcb8e13057cf53c28151463a",
+    "pages": 6,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 70,
+    "document_name": "15-02_gb_lin_por.pdf",
+    "document_sha256": "c12747ebe3908dd4fac99a98a77af826f6151040625ebc870575cf8db1b802a7",
+    "pages": 6,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 71,
+    "document_name": "15-03_gb_lin_por.pdf",
+    "document_sha256": "aa4699466bdbe7a632d6012daddd907f589aefe1d6098dc6ba548f30b4c3065a",
+    "pages": 5,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 72,
+    "document_name": "15-04_gb_lin_por.pdf",
+    "document_sha256": "3840ec6968ddce33bdb0bce917a97e45ec7e3502b385dfe2b50e4af82a484743",
+    "pages": 10,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  },
+  {
+    "document_index": 73,
+    "document_name": "15-05_gb_lin_por.pdf",
+    "document_sha256": "74ceaa8a81e1c9520dffba4e729d3444abf3b95be6790e192ae46f651ee49fbd",
+    "pages": 5,
+    "material_slug": "portugues-redacao-oficial-atual",
+    "duplicate_of": null
+  }
+]

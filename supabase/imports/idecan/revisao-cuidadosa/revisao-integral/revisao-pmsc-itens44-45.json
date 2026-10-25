@@ -1,0 +1,42 @@
+{
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "batch_key": "idecan-pmsc-items44-45-cf-v1",
+  "sql_path": "pmsc-itens44-45-constituicao.sql",
+  "sql_applied": false,
+  "publication_scope": "Edição PMSC 2026, não previsão PC-AC",
+  "items": [
+    {
+      "item": 44,
+      "question_id": "14e26087-a260-4c44-a0da-71686b877083",
+      "official_answer": "C",
+      "expected_answer": "C",
+      "previous_status": "under_review",
+      "law_article": "CF, art. 142, § 3º, V",
+      "conclusion": "Membros das Forças Armadas denominam-se militares e não podem filiar-se a partidos políticos enquanto em serviço ativo. A opção também foi conferida contra o caput e §§ 1º e 3º do art. 142.",
+      "law_checked": "Constituição compilada no Planalto em 2026-10-23",
+      "official_law_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "cf_html_sha256": "15d2ade2e9733e1bc122c439b8be0701668333a3f932ed5cec82c24b07a37389",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_excerpt": "Arts. 5º e 6º; art. 42; arts. 142 e 144.",
+      "syllabus_location": "Anexo II, p. 52"
+    },
+    {
+      "item": 45,
+      "question_id": "948cdeca-cf4e-4fac-abbd-8b38e63fc373",
+      "official_answer": "E",
+      "expected_answer": "E",
+      "previous_status": "under_review",
+      "law_article": "CF, art. 144, § 5º-A; EC 104/2019",
+      "conclusion": "A EC 104/2019 acrescentou polícias penais federal, estaduais e distrital, vinculadas ao órgão administrador do sistema penal da respectiva unidade federativa.",
+      "law_checked": "Constituição compilada no Planalto em 2026-10-23",
+      "official_law_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "cf_html_sha256": "15d2ade2e9733e1bc122c439b8be0701668333a3f932ed5cec82c24b07a37389",
+      "official_syllabus_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+      "syllabus_sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+      "syllabus_excerpt": "Arts. 5º e 6º; art. 42; arts. 142 e 144.",
+      "syllabus_location": "Anexo II, p. 52"
+    }
+  ]
+}

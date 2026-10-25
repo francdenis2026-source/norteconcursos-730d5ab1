@@ -1,0 +1,145 @@
+{
+  "verified_at": "2026-10-13T22:06:25.649642+00:00",
+  "scope": "Quatro questões individuais, sem declaração de conclusão do catálogo.",
+  "topics": [
+    {
+      "id": "e0603a43-e711-51f9-8ebd-ee8363ba7b14",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 18,
+      "topic_text": "Processo administrativo e Lei 9.784/1999; poder disciplinar (itens 18, 18.1 e 5.2 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "5a8f7830-5b3d-4f77-816e-a6539bb332ea",
+      "item_number": 12,
+      "page": 2,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "470859a8297a9d252053042f6dfae7ba6a9f37d3d2411e9c26a55cc23ea040f1",
+      "new_text_sha256": "ee245651a07fee4176c2327f868fa6ef09559d6af7569be61c9d61de28225066",
+      "answer_preserved": true,
+      "raw_preserved": true
+    },
+    {
+      "id": "6e921b3c-4c51-4f7f-ad48-248799298a04",
+      "item_number": 7,
+      "page": 2,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "3d58e407889504d45560549d2d0bdd8a4d0f0b34031527b183b8dfb0b9b5d9ca",
+      "new_text_sha256": "25511f12523bcb28753672dab964bb35e30187c3c132bf4cedd9a6032d15129b",
+      "answer_preserved": true,
+      "raw_preserved": true
+    }
+  ],
+  "items": [
+    {
+      "id": "5a8f7830-5b3d-4f77-816e-a6539bb332ea",
+      "item_number": 12,
+      "official_answer": "D",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 5º, LV"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "norma": "Lei 9.784/1999",
+          "artigo": "arts. 3º, IV, e 69"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1199",
+          "norma": "Súmula Vinculante 5/STF",
+          "artigo": "enunciado e limites de aplicação"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. A ausência de advogado, por si só, não invalida o PAD de servidor público (Súmula Vinculante 5). Permanecem obrigatórios informação, manifestação, consideração dos argumentos e ampla defesa efetiva. Não estender essa dispensa ao procedimento de falta grave na execução penal, que exige defesa técnica, nem a hipóteses em que lei específica exige representação.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1199"
+        ]
+      }
+    },
+    {
+      "id": "80c67b14-af6a-48d3-9755-9317a2440ea5",
+      "item_number": 13,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "norma": "Lei 9.784/1999",
+          "artigo": "art. 49-A, caput, I, II e §§ 1º, 4º e 6º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. Relevância da matéria e discordância que prejudique a celeridade são cumulativas (art. 49-A, I e II). O caput exige participação de três ou mais setores, órgãos ou entidades. A coordenação simplifica, inclui a instrução técnico-jurídica e preserva a responsabilidade originária. Não se aplica a licitações, poder sancionador ou autoridades de Poderes distintos. Atualização cobrada: mecanismo inserido pela Lei 14.210/2021.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
+        ]
+      }
+    },
+    {
+      "id": "d9445ec9-3a49-45aa-9cab-4f1c3ec73583",
+      "item_number": 14,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "norma": "Lei 9.784/1999",
+          "artigo": "art. 69-A, I, II, IV e §§ 1º e 2º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. Deferida a prioridade, os autos devem ter identificação própria (art. 69-A, § 2º). O interessado requer e comprova a condição; a autoridade determina as providências. Incluem-se idade igual ou superior a 60 anos, deficiência e doenças graves, mesmo contraídas após o início do processo. O texto legal cita síndrome de imunodeficiência adquirida; não confundir automaticamente infecção por HIV com essa síndrome. A exceção temporal inventada na alternativa C é incorreta.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
+        ]
+      }
+    },
+    {
+      "id": "6e921b3c-4c51-4f7f-ad48-248799298a04",
+      "item_number": 7,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 5º, LXX, b"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12016.htm",
+          "norma": "Lei 12.016/2009",
+          "artigo": "art. 21"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2826",
+          "norma": "Súmula 629/STF",
+          "artigo": "enunciado e jurisprudência"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2828",
+          "norma": "Súmula 630/STF",
+          "artigo": "enunciado e jurisprudência"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. No mandado de segurança coletivo, a entidade de classe substitui processualmente os membros: dispensa autorização individual ou assemblear (Súmula 629/STF). Pode defender apenas parte da categoria (Súmula 630). Não confundir com ação coletiva ordinária fundada no art. 5º, XXI, da Constituição, em que a representação associativa exige autorização. A exigência de funcionamento por um ano refere-se às associações, não aos sindicatos e entidades de classe.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12016.htm",
+          "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2826",
+          "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2828"
+        ]
+      }
+    }
+  ]
+}

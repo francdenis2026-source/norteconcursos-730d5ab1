@@ -1,0 +1,1330 @@
+{
+  "version": "2026-10-12-contravencoes-general-targeted",
+  "checked_at": "2026-10-12T19:40:09.573841+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "contravencoes",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+      "units": 22,
+      "scope_type": "targeted_correction",
+      "course_current_units": 66,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-26",
+        "art-68",
+        "art-59",
+        "art-38",
+        "art-64"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "2e94194ce818853cd12d7053747be20073903a0230868d2970f288e37320d835",
+      "source_checked_at": "2026-10-12T16:18:18.943244+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "048ce28d-fd9d-5aeb-951e-8b243f05f2d3",
+      "content_sha256": "5d33c3ed90cc25065c812392738908929abc9026b19807e15957d8d7af36a791",
+      "simples": "Regras gerais do CP complementam as contravenções, salvo disciplina diversa da própria LCP.",
+      "pontos": [
+        "Especialidade prevalece quando há regra específica incompatível.",
+        "Integrar Código Penal atual, não sua parte geral anterior à reforma de 1984."
+      ],
+      "atencao": [
+        "Não importar automaticamente tentativa punível, extraterritorialidade ou reclusão: a LCP tem regras próprias."
+      ],
+      "exemplo": "Candidato aplica regra geral compatível do CP à contravenção. Variação: para tentativa, usa art. 4º/LCP, que afasta punição, em vez de importar redução de pena do CP.",
+      "prova": [
+        "Toda regra do CP prevalece sobre a LCP? Não; observar disposição especial diversa.",
+        "A referência permite usar qualquer texto antigo do CP como atual? Não; conferir compilação vigente."
+      ],
+      "termos": [
+        "sempre que",
+        "modo diverso",
+        "especialidade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "048ce28d-fd9d-5aeb-951e-8b243f05f2d3",
+        "content_sha256": "0b035a80a094a3707bcfaeefc4ff709d11776ab04c149020ceed21e5ac6c965b",
+        "simples": "Aplicam-se às contravenções as regras gerais do Código Penal, sempre que a Lei das Contravenções Penais não disponha de modo diverso.",
+        "pontos": [
+          "Regras gerais do Código Penal se aplicam às contravenções.",
+          "A Lei especial prevalece quando dispuser de forma diferente."
+        ],
+        "atencao": [
+          "Contravenção é infração penal de menor gravidade; o Código Penal vale subsidiariamente."
+        ],
+        "exemplo": "Na falta de regra própria, a prescrição da contravenção segue o Código Penal.",
+        "prova": [
+          "Assertiva que afasta qualquer regra geral do Código Penal das contravenções erra: ela vale quando a lei não dispuser de modo diverso."
+        ],
+        "termos": [
+          {
+            "termo": "Contravenção",
+            "significado": "Infração penal menos grave que o crime, punida com prisão simples ou multa."
+          }
+        ],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "c66ad0be-9c5d-599d-9de8-e6c989c21a78",
+      "content_sha256": "e3410e07ff5406c5905f7b3d121b229852dd1e00c937448ce6eed1750122180d",
+      "simples": "A lei brasileira só se aplica à contravenção praticada no território nacional; não há extraterritorialidade contravencional nos moldes do CP 7º.",
+      "pontos": [
+        "Distinguir extensão do território brasileiro do fato efetivamente praticado fora dele.",
+        "Nacionalidade do autor não substitui requisito territorial."
+      ],
+      "atencao": [
+        "Não concluir que crime e contravenção possuem as mesmas hipóteses de incidência extraterritorial."
+      ],
+      "exemplo": "Brasileiro pratica no exterior conduta descrita apenas como contravenção brasileira: a nacionalidade não torna aplicável automaticamente a LCP. Variação: fato em extensão legal do território exige analisar conceito territorial, não presumir exterior por simples localização geográfica.",
+      "prova": [
+        "A LCP aplica-se a qualquer fato no exterior cometido por brasileiro? Não; art. 2º restringe territorialidade.",
+        "Território nacional dispensa exame das extensões legais? Não; distinguir território juridicamente considerado e exterior."
+      ],
+      "termos": [
+        "só",
+        "território nacional"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c66ad0be-9c5d-599d-9de8-e6c989c21a78",
+        "content_sha256": "37e42fbe17c9e660d91f706f7328e048da7ec0f99b0d623e3b8fbc3b810bca63",
+        "simples": "A lei brasileira só é aplicável à contravenção praticada no território nacional.",
+        "pontos": [
+          "Territorialidade estrita.",
+          "Sem extraterritorialidade para contravenções."
+        ],
+        "atencao": [
+          "Diferente dos crimes, não há extraterritorialidade para contravenções."
+        ],
+        "exemplo": "Uma contravenção praticada por brasileiro no exterior não é punida pela lei brasileira.",
+        "prova": [
+          "Assertiva que estende a lei brasileira às contravenções praticadas no exterior erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal, art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "a453d7a0-de77-5f8b-81c9-17f665c74a95",
+      "content_sha256": "4a80d1a2bc1a6b3be0f909baefd8b324e035358d9d59232d2498f0b6c906663a",
+      "simples": "O texto prevê ação/omissão voluntária e consideração de dolo ou culpa quando a lei faz depender deles efeito jurídico. Deve ser integrado à culpabilidade e ao CP atual, sem responsabilidade objetiva.",
+      "pontos": [
+        "Voluntariedade é diferente de ocorrência física de resultado.",
+        "Identificar elementos subjetivos e dever de cuidado conforme tipo e regime aplicável."
+      ],
+      "atencao": [
+        "Não ensinar que todo acidente involuntário gera contravenção nem que culpabilidade e análise de dolo/culpa desaparecem."
+      ],
+      "exemplo": "Pessoa produz evento sem comportamento voluntário demonstrado; não basta o resultado para imputar contravenção. Variação: ação voluntária exige ainda examinar elementos do tipo e responsabilidade subjetiva pertinente.",
+      "prova": [
+        "O resultado isolado autoriza responsabilidade objetiva? Não; voluntariedade e regime de culpabilidade devem ser observados.",
+        "O texto elimina toda relevância de dolo/culpa? Não; expressamente admite efeitos dependentes deles."
+      ],
+      "termos": [
+        "ação ou omissão voluntária",
+        "dolo ou culpa",
+        "efeito jurídico"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a453d7a0-de77-5f8b-81c9-17f665c74a95",
+        "content_sha256": "4bcc1be9c13ad31372af6debb23a9072be5978cd05f3348d67ff58313018e7fb",
+        "simples": "Para a existência da contravenção, basta a ação ou omissão voluntária. Deve-se, porém, ter em conta o dolo ou a culpa, se a lei fizer depender de um ou de outra qualquer efeito jurídico.",
+        "pontos": [
+          "Basta a ação ou omissão voluntária.",
+          "Dolo ou culpa só importam quando a lei lhes atribuir efeito."
+        ],
+        "atencao": [
+          "Em regra, a contravenção dispensa a análise de dolo ou culpa."
+        ],
+        "exemplo": "Quem solta balão aceso em área urbana responde pela ação voluntária, ainda que sem querer o dano.",
+        "prova": [
+          "Assertiva que exige sempre dolo específico nas contravenções erra: basta a conduta voluntária."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "dce753c8-8006-5f33-9196-36a5f2050893",
+      "content_sha256": "20b23b38dea47b6a3676f401475db78b79dcc906d3a081a6dea75ad462e3bbac",
+      "simples": "A tentativa de contravenção não é punível, ao contrário da regra geral de tentativa do crime.",
+      "pontos": [
+        "Não punir tentativa não equivale a afirmar que início de execução jamais ocorre.",
+        "Outra infração consumada eventualmente praticada exige enquadramento próprio."
+      ],
+      "atencao": [
+        "Não aplicar automaticamente redução de um a dois terços do CP à tentativa contravencional."
+      ],
+      "exemplo": "Enunciado descreve apenas tentativa de uma contravenção, sem consumação: não há pena pela tentativa. Variação: se os atos configuram outro crime consumado, ele exige análise própria.",
+      "prova": [
+        "A tentativa recebe pena reduzida pelo CP automaticamente? Não; a LCP afasta punição.",
+        "A regra elimina responsabilização por qualquer outro crime consumado nos atos? Não; cada infração tem enquadramento próprio."
+      ],
+      "termos": [
+        "não é punível",
+        "tentativa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dce753c8-8006-5f33-9196-36a5f2050893",
+        "content_sha256": "341b0cc64c88ea059db154748c5a8fe2758bc9b1087c02628fc28280b721442d",
+        "simples": "Não é punível a tentativa de contravenção: só a contravenção consumada gera pena.",
+        "pontos": [
+          "Tentativa de contravenção não é punida."
+        ],
+        "atencao": [
+          "Só a contravenção consumada é punida."
+        ],
+        "exemplo": "Quem começa a praticar uma contravenção e é impedido não é punido.",
+        "prova": [
+          "Assertiva que pune a tentativa de contravenção erra: ela não é punível."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "9d2f05cc-387f-59d9-b400-edc46a1163f3",
+      "content_sha256": "7b80b5b5462f74c4960920aa67ea06df17762c233873750516d9aa4768b0f9f8",
+      "simples": "Penas principais da LCP são prisão simples e multa; não confundir prisão simples com reclusão ou detenção.",
+      "pontos": [
+        "A escolha/cumulação segue a sanção do tipo, não mera preferência do aplicador.",
+        "Distinguir pena privativa de liberdade, pena pecuniária e requisitos de eventual substituição."
+      ],
+      "atencao": [
+        "Valores monetários históricos da compilação não devem ser convertidos numericamente em reais sem base legal."
+      ],
+      "exemplo": "Questão pede espécie de pena privativa de liberdade contravencional: prisão simples. Variação: dizer detenção só porque o tempo é curto confunde espécies de pena.",
+      "prova": [
+        "A espécie típica privativa de liberdade da LCP é reclusão? Não; é prisão simples.",
+        "Prisão simples e multa são penas principais? Sim; ambas estão no art. 5º."
+      ],
+      "termos": [
+        "prisão simples",
+        "multa",
+        "penas principais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "9d2f05cc-387f-59d9-b400-edc46a1163f3",
+        "content_sha256": "35113c8e553a6b5fba8e37c7553f909e568ef25bcf8fb4e719b61f28c2d9519f",
+        "simples": "As penas principais das contravenções são a prisão simples e a multa.",
+        "pontos": [
+          "Prisão simples.",
+          "Multa."
+        ],
+        "atencao": [
+          "Não existe reclusão nem detenção para contravenções."
+        ],
+        "exemplo": "A pena de uma contravenção pode ser apenas a multa.",
+        "prova": [
+          "Assertiva que prevê reclusão para contravenções erra: as penas são prisão simples e multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "a22c635e-a5cd-59d3-9caa-8b4303fdbda9",
+      "content_sha256": "d704f107f8f5687331764ca62b35e639b0a429c10fa792814c21fe637be81b1f",
+      "simples": "Prisão simples é cumprida sem rigor penitenciário, em estabelecimento/seção especial, em regime semiaberto ou aberto; condenados ficam separados dos de reclusão/detenção.",
+      "pontos": [
+        "Regime fechado não está no rol da prisão simples.",
+        "Trabalho é facultativo quando a pena aplicada não excede quinze dias: inclui exatamente quinze."
+      ],
+      "atencao": [
+        "Não converter quinze dias em limite exclusivo nem chamar prisão simples de detenção.",
+        "A ausência de rigor penitenciário não significa descumprimento livre da execução."
+      ],
+      "exemplo": "Condenado a exatamente quinze dias de prisão simples tem trabalho facultativo. Variação: dezesseis dias não satisfaz o requisito especial de facultatividade deste parágrafo.",
+      "prova": [
+        "Exatamente quinze dias permite trabalho facultativo? Sim; o texto usa não excede.",
+        "O artigo prevê regime fechado para prisão simples? Não; prevê semiaberto ou aberto."
+      ],
+      "termos": [
+        "sem rigor penitenciário",
+        "sempre separado",
+        "não excede quinze dias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "a22c635e-a5cd-59d3-9caa-8b4303fdbda9",
+        "content_sha256": "52756c39290953baa668d6b07ae458434be1938eb534972473cc379af7fb3698",
+        "simples": "A pena de prisão simples deve ser cumprida, sem rigor penitenciário, em estabelecimento especial ou seção especial de prisão comum, em regime semiaberto ou aberto. O condenado fica sempre separado dos condenados a reclusão ou detenção. O trabalho é facultativo se a pena aplicada não exceder quinze dias.",
+        "pontos": [
+          "Sem rigor penitenciário.",
+          "Regime semiaberto ou aberto.",
+          "Separação dos condenados a reclusão ou detenção.",
+          "Trabalho facultativo se a pena não exceder quinze dias."
+        ],
+        "atencao": [
+          "Prisão simples NUNCA vai ao regime fechado."
+        ],
+        "exemplo": "O condenado por contravenção cumpre pena em seção separada dos condenados por crime.",
+        "prova": [
+          "Assertiva que admite regime fechado para a prisão simples erra: apenas semiaberto ou aberto."
+        ],
+        "termos": [
+          {
+            "termo": "Prisão simples",
+            "significado": "Pena das contravenções, cumprida sem rigor penitenciário."
+          }
+        ],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "7aa8430a-3a7c-58af-88c7-8a0333903509",
+      "content_sha256": "580fbb3f803e2df932fb36fd6024cb5f02493ba87f42a7e9648e3bdbcb94a511",
+      "simples": "Nova contravenção após trânsito de condenação por crime no Brasil/exterior, ou por contravenção no Brasil, pode caracterizar reincidência conforme requisitos legais.",
+      "pontos": [
+        "Condenação estrangeira por contravenção não integra esta previsão.",
+        "Crime novo segue CP 63: condenação anterior só por contravenção não equivale automaticamente à condenação anterior por crime.",
+        "Prazo depurador e condições gerais devem ser examinados com CP 64."
+      ],
+      "atencao": [
+        "Não afirmar que toda condenação anterior no exterior gera reincidência nem omitir trânsito em julgado."
+      ],
+      "exemplo": "Após condenação definitiva por crime no exterior, agente pratica contravenção no Brasil: examinar reincidência da LCP. Variação: antecedente estrangeiro apenas contravencional não satisfaz esse rol.",
+      "prova": [
+        "Contravenção anterior no exterior basta por este artigo? Não; o texto inclui contravenção anterior no Brasil.",
+        "O trânsito em julgado deve anteceder a nova conduta? Sim; exigência expressa."
+      ],
+      "termos": [
+        "passar em julgado",
+        "por qualquer crime",
+        "no Brasil"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7aa8430a-3a7c-58af-88c7-8a0333903509",
+        "content_sha256": "c7b1c644f622e7ad3fa3283a91646bada9edec403555295b8679cad518fef3e0",
+        "simples": "Verifica-se a reincidência quando o agente pratica uma contravenção depois de passar em julgado a sentença que o tenha condenado, no Brasil ou no estrangeiro, por qualquer crime, ou, no Brasil, por motivo de contravenção.",
+        "pontos": [
+          "Contravenção após condenação anterior por crime, no Brasil ou no exterior.",
+          "Ou após condenação por contravenção no Brasil."
+        ],
+        "atencao": [
+          "Crime anterior (qualquer, inclusive no exterior) + contravenção nova = reincidência.",
+          "Contravenção anterior só conta se for no Brasil."
+        ],
+        "exemplo": "Quem foi condenado por furto e depois comete contravenção é reincidente.",
+        "prova": [
+          "Assertiva que não considera reincidente quem comete contravenção após condenação por crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal, art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "db4e5ead-f6f8-5bb5-b0f4-c023d5153686",
+      "content_sha256": "2835455e58ab77d7e41807073cb416ee3153ee8b61413f7dbcaad112174ff2c7",
+      "simples": "Ignorância ou compreensão errada da lei, quando escusáveis, podem levar a não aplicação da pena na previsão especial; analisar também erro de proibição do CP 21.",
+      "pontos": [
+        "Não desconhecimento genérico, mas escusabilidade no caso.",
+        "Desconhecimento da lei e erro sobre ilicitude não são sinônimos automáticos."
+      ],
+      "atencao": [
+        "O texto não autoriza dizer que qualquer alegação de ignorância elimina responsabilidade.",
+        "Distinguir erro de tipo e erro de proibição antes de aplicar consequências."
+      ],
+      "exemplo": "Candidato examina erro efetivamente escusável e a regra especial. Variação: autor apenas afirma nunca ter lido a lei, sem demonstrar escusabilidade; a alegação isolada não basta.",
+      "prova": [
+        "Toda ignorância da lei dispensa pena? Não; a previsão exige erro escusável.",
+        "Erro sobre fato e erro sobre proibição são indistintos? Não; têm regimes próprios."
+      ],
+      "termos": [
+        "quando escusáveis",
+        "pode deixar de ser aplicada"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "db4e5ead-f6f8-5bb5-b0f4-c023d5153686",
+        "content_sha256": "3fe09cf5b8fc8afef94121c5169b9d5a8b995b07442ed52bde569425b73bb9d8",
+        "simples": "No caso de ignorância ou de errada compreensão da lei, quando escusáveis, a pena pode deixar de ser aplicada.",
+        "pontos": [
+          "Erro de direito escusável pode afastar a pena."
+        ],
+        "atencao": [
+          "Diferente do Código Penal, aqui o erro de direito pode isentar a pena."
+        ],
+        "exemplo": "Quem ignora, de modo desculpável, a regra da contravenção pode ficar sem pena.",
+        "prova": [
+          "Assertiva que nega qualquer relevância ao erro de direito na contravenção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal, art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "f56a1962-2316-54fc-bf0a-ba8abd12d00b",
+      "content_sha256": "02aa7f2fb2acf1e3e4607d099f73411f78a2c8c227bde19159f1218ab1fae6ca",
+      "simples": "A compilação conserva conversão histórica da multa em prisão simples. A disciplina atual do CP 51, após Lei 9.268/1996 e alterações posteriores, trata multa como dívida de valor; inadimplemento não autoriza essa conversão.",
+      "pontos": [
+        "Preservar texto oficial não equivale a validar consequência antiga.",
+        "Consultar CP 51 compilado para execução da multa e regras atuais; multa mantém natureza penal conforme jurisprudência própria."
+      ],
+      "atencao": [
+        "Não ensinar quinze dias a três meses de prisão como sanção atual automática pelo não pagamento.",
+        "Dívida de valor não transforma por si a multa em pena inteiramente civil."
+      ],
+      "exemplo": "Condenado não paga multa: examinar execução pecuniária atual, sem convertê-la em prisão simples com base no art. 9º antigo. Variação: nova infração exige fundamento próprio, não prisão por dívida penal.",
+      "prova": [
+        "Não pagar multa permite automaticamente conversão em prisão simples? Não; a disciplina atual afasta esse mecanismo.",
+        "A remissão antiga substitui CP 51 atual? Não; integrar a legislação posterior."
+      ],
+      "termos": [
+        "texto histórico",
+        "dívida de valor",
+        "sem conversão"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9268.htm"
+      ],
+      "expected": {
+        "unit_id": "f56a1962-2316-54fc-bf0a-ba8abd12d00b",
+        "content_sha256": "abbfb84a14122113d1987a198817a45149164047924c4371d0b63d641b498be3",
+        "simples": "A multa converte-se em prisão simples, conforme o Código Penal sobre conversão de multa em detenção. Se a multa é a única pena cominada, a conversão em prisão simples faz-se entre os limites de quinze dias e três meses.",
+        "pontos": [
+          "Multa convertida em prisão simples.",
+          "Multa como única pena: conversão entre quinze dias e três meses."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: lei posterior do Código Penal vedou a conversão da multa em prisão; consulte a vigência desta regra."
+        ],
+        "exemplo": "A regra original previa converter a multa não paga em prisão simples.",
+        "prova": [
+          "Assertiva que mantém hoje a conversão da multa em prisão simples sem ressalvas erra: houve alteração legislativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "d3d5f44e-0673-5ac3-ab1a-dd5d9e34d9a2",
+      "content_sha256": "b47d79fb3f5ea73396cafb18735ffb1e5c25c2feaa7019231660b342f98cb8e8",
+      "simples": "A duração da prisão simples não pode superar cinco anos. O valor de cinquenta contos é denominação histórica, que não equivale diretamente a cinquenta reais ou tabela atual.",
+      "pontos": [
+        "Limite de execução contravencional não deve ser trocado pelo limite geral de quarenta anos do CP para outras penas.",
+        "Distinguir soma das penas impostas e limite de cumprimento."
+      ],
+      "atencao": [
+        "Não converter moeda extinta com mera troca do nome; consultar regime da multa e valor legal aplicável."
+      ],
+      "exemplo": "Soma de condenações contravencionais ultrapassa cinco anos: analisar limite de cumprimento da prisão simples. Variação: não copiar limite de quarenta anos do CP para apagar a regra especial.",
+      "prova": [
+        "O teto textual da prisão simples é cinco anos? Sim; art. 10.",
+        "Cinquenta contos equivalem automaticamente a cinquenta reais? Não; moeda histórica não admite essa troca."
+      ],
+      "termos": [
+        "em caso algum",
+        "cinco anos",
+        "moeda histórica"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d3d5f44e-0673-5ac3-ab1a-dd5d9e34d9a2",
+        "content_sha256": "4d749b18dbf1549f03cceeed9b65260b905793f8f48c1dd980ecfc01f6edc30f",
+        "simples": "A duração da pena de prisão simples não pode, em caso algum, ser superior a cinco anos, nem a importância das multas ultrapassar cinquenta contos.",
+        "pontos": [
+          "Limite da prisão simples: cinco anos.",
+          "Limite histórico das multas expresso em contos de réis."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o limite geral de cumprimento de pena é de quarenta anos no Código Penal; confira os limites aplicáveis."
+        ],
+        "exemplo": "Nenhuma prisão simples pode passar de cinco anos.",
+        "prova": [
+          "Assertiva que fixa em dez anos o limite da prisão simples erra: são cinco anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "725d3738-17ae-52c8-83ec-756046be296b",
+      "content_sha256": "06ff179bb434eebd8758ee5ea379a2ad409427c23b33def17990d0a89f8b566a",
+      "simples": "Reunidos os requisitos legais, juiz pode suspender execução da prisão simples por período de um a três anos e conceder livramento condicional.",
+      "pontos": [
+        "Suspensão da execução da pena difere de suspensão condicional do processo.",
+        "Requisitos e condições devem ser examinados no regime atual compatível do CP e da execução."
+      ],
+      "atencao": [
+        "Não afirmar benefício automático para qualquer condenado nem importar suspensão do processo em violência doméstica vedada pela Súmula 536."
+      ],
+      "exemplo": "Condenado que preenche requisitos recebe suspensão da execução pelo período legal. Variação: pedido de suspensão do processo é instituto distinto; não se resolve só por este artigo.",
+      "prova": [
+        "O período especial da suspensão é um a três anos? Sim; texto do art. 11.",
+        "A regra concede automaticamente benefício sem requisitos? Não; exige condições legais."
+      ],
+      "termos": [
+        "condições legais",
+        "um a três anos",
+        "execução"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "725d3738-17ae-52c8-83ec-756046be296b",
+        "content_sha256": "a094fb11a4cbc5b4aa1b33f6f7427bbb5f2f4dc62b3ff1ad8b9bec7d67857f8a",
+        "simples": "Desde que reunidas as condições legais, o juiz pode suspender, por tempo não inferior a um ano nem superior a três, a execução da pena de prisão simples, bem como conceder livramento condicional.",
+        "pontos": [
+          "Suspensão condicional (sursis) por um a três anos.",
+          "Livramento condicional."
+        ],
+        "atencao": [
+          "Sursis da contravenção: de um a três anos."
+        ],
+        "exemplo": "O juiz suspende a pena de prisão simples por dois anos, mediante condições.",
+        "prova": [
+          "Assertiva que proíbe o sursis nas contravenções erra."
+        ],
+        "termos": [
+          {
+            "termo": "Sursis",
+            "significado": "Suspensão condicional da execução da pena."
+          }
+        ],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "302835c2-378c-5b95-9749-72685e10edb5",
+      "content_sha256": "dc5cc77746d45275d26ca3834122caab5502dd644312f82e273f8b4ec814e6f7",
+      "simples": "O texto conserva o antigo modelo de penas acessórias. Para aplicação atual, integrar reforma da parte geral do CP, efeitos da condenação e suspensão constitucional de direitos políticos, sem transpor automaticamente a categoria histórica.",
+      "pontos": [
+        "CP atual separa penas e efeitos da condenação; não ensinar publicação da sentença como pena acessória atual universal.",
+        "CF 15, III relaciona suspensão dos direitos políticos à condenação criminal transitada em julgado enquanto durarem seus efeitos.",
+        "Incapacidade profissional demanda fundamento legal e decisão pertinente, não analogia pela redação antiga."
+      ],
+      "atencao": [
+        "Não confundir pena restritiva de direitos, efeito da condenação e suspensão constitucional.",
+        "Os prazos históricos do artigo não são tabela universal atual para qualquer condenação."
+      ],
+      "exemplo": "Questão atual sobre direitos políticos exige consultar CF 15, III e trânsito em julgado. Variação: copiar automaticamente o antigo rol de penas acessórias ignora a reorganização penal de 1984.",
+      "prova": [
+        "Categorias de pena, efeito e suspensão política são idênticas? Não; possuem fundamentos próprios.",
+        "Publicação da sentença é pena acessória universal atual por este texto isolado? Não; integrar a reforma e legislação atual."
+      ],
+      "termos": [
+        "modelo histórico",
+        "efeitos da condenação",
+        "trânsito em julgado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7209.htm"
+      ],
+      "expected": {
+        "unit_id": "302835c2-378c-5b95-9749-72685e10edb5",
+        "content_sha256": "2bf0db6f4220fdc302966f6acd4fa4ce8138fae04af188771067eaf93d2e5773",
+        "simples": "As penas acessórias são a publicação da sentença e as interdições de direitos: a incapacidade temporária para profissão ou atividade que dependa de habilitação, licença ou autorização do poder público, e a suspensão dos direitos políticos. Incorre na primeira, por um mês a dois anos, o condenado por contravenção cometida com abuso de profissão ou atividade, ou com infração de dever a ela inerente. Incorre na segunda o condenado a pena privativa de liberdade, enquanto dure a execução da pena ou da medida de segurança detentiva.",
+        "pontos": [
+          "Publicação da sentença.",
+          "Incapacidade temporária para profissão: um mês a dois anos.",
+          "Suspensão dos direitos políticos durante a pena privativa de liberdade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o sistema de penas acessórias foi reformado pela reforma da Parte Geral do Código Penal; verifique a vigência."
+        ],
+        "exemplo": "O profissional que comete contravenção com abuso da profissão pode ficar um mês a dois anos impedido de exercê-la.",
+        "prova": [
+          "Assertiva que prevê a perda definitiva da profissão como pena acessória erra: a interdição é de um mês a dois anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "5a1c136e-b8df-5216-adc5-5f7cc19e7a77",
+      "content_sha256": "cc7eefd849fdab92e9d24461e2a0fec392d72e2bb1f4957c6b474fa4083113c2",
+      "simples": "A remissão a medidas de segurança deve ser integrada ao CP atual e à política de saúde mental. O exílio local é referência histórica, não opção atual de tratamento.",
+      "pontos": [
+        "CP 96–98 diferencia internação e tratamento ambulatorial conforme requisitos legais.",
+        "Sistema atual não permite dupla aplicação de pena e medida de segurança a imputável por mera periculosidade; reforma de 1984 e jurisprudência devem orientar."
+      ],
+      "atencao": [
+        "Não impor medida por pobreza, diagnóstico isolado ou rótulo social.",
+        "Lei 10.216/2001 e Resolução CNJ 487/2023 exigem atenção ao cuidado e às garantias, sem substituir análise judicial da hipótese penal."
+      ],
+      "exemplo": "Juízo examina imputabilidade e tratamento adequado conforme prova e regime atual. Variação: considerar pessoa perigosa apenas por estar desempregada não autoriza medida de segurança.",
+      "prova": [
+        "Exílio local é modalidade atual do CP 96? Não; integrar modalidades atuais.",
+        "Diagnóstico isolado autoriza automaticamente medida de segurança? Não; exige pressupostos legais e avaliação adequada."
+      ],
+      "termos": [
+        "CP atual",
+        "tratamento ambulatorial",
+        "pressupostos legais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.cnj.jus.br/perguntas-frequentes-sobre-a-politica-antimanicomial-do-poder-judiciario/",
+        "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20160315&formato=HTML&nreg=201302714478&salvar=false&seq=1494855&tipo=0"
+      ],
+      "expected": {
+        "unit_id": "5a1c136e-b8df-5216-adc5-5f7cc19e7a77",
+        "content_sha256": "0efbb8cca78638d6e1b209b1473fee93d3dbef287edddee8be13f4dd154644d7",
+        "simples": "Aplicam-se, por motivo de contravenção, as medidas de segurança estabelecidas no Código Penal, à exceção do exílio local.",
+        "pontos": [
+          "Medidas de segurança do Código Penal se aplicam.",
+          "Exceção: exílio local."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o regime de medidas de segurança foi reformado pela reforma da Parte Geral do Código Penal; o exílio local não existe mais."
+        ],
+        "exemplo": "A medida de segurança pode ser aplicada ao autor de contravenção.",
+        "prova": [
+          "Assertiva que inclui o exílio local entre as medidas aplicáveis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "48cb0351-4194-5e2b-9d01-3618cfd546bc",
+      "content_sha256": "4bb1d259b63054a60dc3b6b8f3b61755b2bf2d79b373d31d509357696f92ab31",
+      "simples": "A compilação preserva presunções antigas de periculosidade e remissão ao antigo CP 78. O regime atual da reforma de 1984 exige pressupostos e avaliação, sem tratar embriaguez habitual, pobreza ou condenação como presunção automática para medida de segurança.",
+      "pontos": [
+        "CP 78 atual disciplina suspensão da pena; não é o rol antigo referido pela LCP.",
+        "Incisos III e IV da LCP foram expressamente revogados em 1977; mendicância foi revogada como contravenção em 2009.",
+        "Precedente do STJ registra inexistência da antiga periculosidade presumida desde a reforma penal."
+      ],
+      "atencao": [
+        "A permanência gráfica da redação antiga não restabelece sistema duplo-binário ou internação de imputável por rótulo social.",
+        "Não apresentar art. 14 como autorização atual de internação automática por alcoolismo."
+      ],
+      "exemplo": "Pessoa com histórico de álcool demanda avaliação e enquadramento atual; o rótulo não basta para medida de segurança. Variação: aplicar o antigo CP 78 como rol de pessoas presumidas perigosas ignora sua substituição legislativa.",
+      "prova": [
+        "O CP 78 atual mantém o rol antigo de periculosidade referido aqui? Não; atualmente trata condições do sursis.",
+        "Mendicância continua contravenção por força deste artigo? Não; foi revogada em 2009."
+      ],
+      "termos": [
+        "remissão histórica",
+        "avaliação concreta",
+        "sem presunção automática"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11983.htm",
+        "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-1989_04_capJurisprudencia.pdf"
+      ],
+      "expected": {
+        "unit_id": "48cb0351-4194-5e2b-9d01-3618cfd546bc",
+        "content_sha256": "afa899ab9ffcc4b196953cac76e2d8062d3f2d4ca89bbcd65b7532fda67643bb",
+        "simples": "Presumem-se perigosos, além dos indivíduos a que se referem os incisos I e II do art. 78 do Código Penal, o condenado por contravenção cometida em estado de embriaguez habitual pelo álcool ou substância análoga, e o condenado por vadiagem ou mendicância.",
+        "pontos": [
+          "Presunção de periculosidade do embriagado habitual.",
+          "Presunção para o condenado por vadiagem ou mendicância."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a periculosidade presumida foi extinta pela reforma da Parte Geral do Código Penal; dispositivo sem aplicação."
+        ],
+        "exemplo": "Antes da reforma, o embriagado habitual era presumido perigoso.",
+        "prova": [
+          "Assertiva que mantém a presunção de periculosidade vigente erra: ela foi extinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "7de3cb5d-618e-5de4-bbfc-433cc7285acf",
+      "content_sha256": "c0b14bfd0c8b3f7a4188bcd5aa9743d580a2f90182a84237bf5dc8763400232e",
+      "simples": "O antigo modelo de internação por vadiagem/mendicância deve ser confrontado com reforma penal, direitos fundamentais e legislação posterior. Mendicância foi expressamente revogada em 2009; não ensinar internação automática atual por pobreza.",
+      "pontos": [
+        "Antiga referência a colônia agrícola/instituto de trabalho não equivale ao regime atual das medidas de segurança.",
+        "Imputabilidade, periculosidade avaliada e cuidado adequado devem seguir CP e regime de saúde mental.",
+        "ADPF 976/STF protege população em situação de rua contra remoção/transporte compulsório e recolhimento forçado de pertences nas condições da decisão."
+      ],
+      "atencao": [
+        "A ADPF 976 não deve ser apresentada sem fundamento como decisão expressa de revogação de todo o art. 59; tampouco pobreza autoriza punição ou internação automática.",
+        "Não usar o antigo prazo mínimo de um ano como autorização atual genérica de segregação de pessoa em situação de rua."
+      ],
+      "exemplo": "Pessoa pede ajuda financeira na rua; mendicância revogada não autoriza internação contravencional automática. Variação: caso de sofrimento mental exige cuidado e avaliação própria, não punição por condição social.",
+      "prova": [
+        "Pedir ajuda permite internar automaticamente pela contravenção de mendicância? Não; contravenção revogada e garantias atuais impedem essa conclusão.",
+        "A redação histórica basta para dispensar avaliação e defesa? Não; aplicar regime atual e direitos fundamentais."
+      ],
+      "termos": [
+        "modelo histórico",
+        "mendicância revogada",
+        "dignidade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11983.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512659&tip=UN"
+      ],
+      "expected": {
+        "unit_id": "7de3cb5d-618e-5de4-bbfc-433cc7285acf",
+        "content_sha256": "6207f3805d59ed8efa704303dead0f246cbf174a999fe7ec49404dd957785230",
+        "simples": "São internados em colônia agrícola ou em instituto de trabalho, de reeducação ou de ensino profissional, pelo prazo mínimo de um ano, o condenado por vadiagem e o condenado por mendicância.",
+        "pontos": [
+          "Internação em colônia agrícola ou instituto de trabalho.",
+          "Prazo mínimo de um ano.",
+          "Para vadiagem e mendicância."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: dispositivo ligado ao sistema antigo de medidas de segurança, sem aplicação prática."
+        ],
+        "exemplo": "A regra antiga previa internação mínima de um ano.",
+        "prova": [
+          "Assertiva que fixa o prazo mínimo em seis meses erra: era um ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 59"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "7d97840d-aa00-5f00-92d8-4aa3d06f5108",
+      "content_sha256": "c160585ca966ccf7899d491600475e02613875db0f84f97124f6c626249918f7",
+      "simples": "O prazo histórico de seis meses e a liberdade vigiada precisam ser integrados ao sistema atual de medidas de segurança, à Lei 10.216/2001 e à política antimanicomial; não são regra universal atual para toda internação.",
+      "pontos": [
+        "CP 97 atual disciplina duração, avaliação e cessação da periculosidade nas hipóteses penais; não copiar o prazo histórico como único parâmetro.",
+        "Tratamento ambulatorial não se confunde automaticamente com a categoria histórica de liberdade vigiada.",
+        "Avaliação de saúde e decisão judicial têm papéis que devem ser analisados no regime próprio."
+      ],
+      "atencao": [
+        "Não ensinar alta automática no sexto mês nem internação indefinida sem controle.",
+        "Resolução CNJ 487/2023 integra direitos, cuidado em saúde e diretrizes de execução; não elimina análise de pressupostos do CP."
+      ],
+      "exemplo": "Questão atual exige estudar CP 97 e regime de cuidado para duração/reavaliação. Variação: usar somente seis meses ou converter diagnóstico em internação sem requisitos produz conclusão inadequada.",
+      "prova": [
+        "Toda internação atual tem automaticamente mínimo de seis meses por esta transcrição? Não; integrar regime atual.",
+        "Liberdade vigiada histórica e tratamento ambulatorial são categorias automaticamente idênticas? Não; examinar fundamentos legais próprios."
+      ],
+      "termos": [
+        "regime atual",
+        "avaliação",
+        "tratamento adequado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.cnj.jus.br/perguntas-frequentes-sobre-a-politica-antimanicomial-do-poder-judiciario/"
+      ],
+      "expected": {
+        "unit_id": "7d97840d-aa00-5f00-92d8-4aa3d06f5108",
+        "content_sha256": "f2037518326874cf305432edfb89ae7674514f0aaf03f4db6c17bc874a579fde",
+        "simples": "O prazo mínimo de duração da internação em manicômio judiciário ou em casa de custódia e tratamento é de seis meses. O juiz pode, porém, em vez de decretar a internação, submeter o indivíduo a liberdade vigiada.",
+        "pontos": [
+          "Prazo mínimo de seis meses.",
+          "Alternativa: liberdade vigiada."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: sistema antigo de medidas de segurança, reformado pela reforma da Parte Geral do Código Penal."
+        ],
+        "exemplo": "A regra antiga previa seis meses de internação, com opção pela liberdade vigiada.",
+        "prova": [
+          "Assertiva que fixa o prazo mínimo em um ano erra: eram seis meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17",
+      "unit_id": "aafd7112-b91a-5e04-beca-c997b9a552c1",
+      "content_sha256": "e9f6dc19f8a769595a469c2aaddeb84cb5b1c05cccb440a28d8348656aed120e",
+      "simples": "A ação penal contravencional é pública incondicionada. Proceder de ofício no texto não autoriza o juiz a acusar ou decretar preventiva sem provocação válida no CPP atual.",
+      "pontos": [
+        "Não exigir representação da vítima como regra contravencional geral.",
+        "Benefícios/procedimento da Lei 9.099 exigem examinar contexto: violência doméstica tem exclusões próprias.",
+        "Distinguir iniciativa de persecução pela autoridade competente e sistema acusatório judicial."
+      ],
+      "atencao": [
+        "Autoridade proceder de ofício não significa que qualquer instituição pode acumular acusação e julgamento.",
+        "Não aplicar art. 88/Lei 9.099 automaticamente para tornar vias de fato ação condicionada."
+      ],
+      "exemplo": "Vias de fato pode ser apurada sem representação, observados elementos e contexto. Variação: dizer de ofício não permite ao juiz iniciar prisão preventiva ignorando CPP 311.",
+      "prova": [
+        "A ação contravencional exige sempre representação? Não; é pública incondicionada.",
+        "A expressão autoriza preventiva judicial sem pedido por si? Não; integrar CPP atual."
+      ],
+      "termos": [
+        "ação pública",
+        "incondicionada",
+        "sistema acusatório"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm"
+      ],
+      "expected": {
+        "unit_id": "aafd7112-b91a-5e04-beca-c997b9a552c1",
+        "content_sha256": "53c2c9d24bb6af9af8112d48ccfc05e437a95b128f588d4230c046fa20d42bb6",
+        "simples": "A ação penal por contravenção é pública, devendo a autoridade proceder de ofício.",
+        "pontos": [
+          "Ação penal pública.",
+          "A autoridade procede de ofício."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a Constituição atual atribui ao Ministério Público a ação penal pública, e o procedimento segue a Lei dos Juizados Especiais; a atuação de ofício da autoridade não prevalece."
+        ],
+        "exemplo": "A contravenção é processada em ação penal pública.",
+        "prova": [
+          "Assertiva que torna a ação penal das contravenções privada erra: é pública."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei dos Juizados Especiais"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "618ae013-1ed6-5fa7-bc46-c16094b664b5",
+      "content_sha256": "37ef0fc1f3b4fc19dab51fec7754a8ace060699ed8060bbf71111995c26987d3",
+      "simples": "O serralheiro ou profissional análogo que abre fechadura ou aparelho de proteção a pedido de alguém sem antes certificar-se da legitimidade do pedido pratica a conduta descrita no artigo. A pena textual é prisão simples de quinze dias a três meses ou multa.",
+      "pontos": [
+        "Exercício profissional e falta de verificação prévia da legitimidade são elementos da descrição."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não basta dizer que a porta foi aberta: identifique o profissional e a ausência de verificação. Valores em mil-réis são históricos; não os converta automaticamente em reais."
+      ],
+      "exemplo": "O chaveiro abre a fechadura a pedido de desconhecido sem verificar sua legitimidade: os fatos correspondem à descrição legal. Variação: Antes da abertura, ele verifica adequadamente a legitimidade: falta o elemento específico de não ter-se certificado previamente.",
+      "prova": [
+        "A pena privativa de liberdade descrita é detenção? Não; é prisão simples de quinze dias a três meses, alternativa à multa.",
+        "Verificar previamente a legitimidade muda o enquadramento? Sim; elimina o elemento específico de falta de certificação prévia."
+      ],
+      "termos": [
+        "certificado previamente",
+        "exercício de profissão"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "618ae013-1ed6-5fa7-bc46-c16094b664b5",
+        "content_sha256": "7e9ea640d35ef3731ed23adcd9a9ec21adc3ee713d61c0a21fa8276f03e18a40",
+        "simples": "O serralheiro ou profissional análogo que abre fechadura ou aparelho de proteção a pedido de alguém sem antes certificar-se da legitimidade do pedido pratica a conduta descrita no artigo. A pena textual é prisão simples de quinze dias a três meses ou multa.",
+        "pontos": [
+          "Exercício profissional e falta de verificação prévia da legitimidade são elementos da descrição."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Não basta dizer que a porta foi aberta: identifique o profissional e a ausência de verificação. Valores em mil-réis são históricos; não os converta automaticamente em reais."
+        ],
+        "exemplo": "O chaveiro abre a fechadura a pedido de desconhecido sem verificar sua legitimidade: os fatos correspondem à descrição legal. Variação: Antes da abertura, ele verifica adequadamente a legitimidade: falta o elemento específico de não ter-se certificado previamente.",
+        "prova": [
+          "A pena privativa de liberdade descrita é detenção? Não; é prisão simples de quinze dias a três meses, alternativa à multa."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:45.508+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T20:09:45.508+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-68",
+      "unit_id": "93281adb-7fff-54de-8cad-132f909d123a",
+      "content_sha256": "3f571820b392d722b9660bd7c371456afab256193e8a629ece0a22b950a85e59",
+      "simples": "O caput pune com multa a recusa de dados próprios quando a autoridade os solicita ou exige justificadamente. O parágrafo único prevê prisão simples de um a seis meses e multa para declarações inverídicas, se não houver infração penal mais grave.",
+      "pontos": [
+        "Recusa e declaração falsa têm penas diferentes; há cláusula expressa de subsidiariedade."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não enquadre todo nome falso automaticamente como contravenção: confira o art. 307 do CP, que exige finalidade de obter vantagem ou causar dano. Não confunda identificação com confissão de crime."
+      ],
+      "exemplo": "A questão informa solicitação justificada de dados próprios e recusa: a comparação inicial é com o caput e sua multa. Variação: O agente atribui-se identidade falsa para obter vantagem: é preciso confrontar o art. 307 do CP antes de concluir pelo parágrafo único.",
+      "prova": [
+        "Uma infração penal mais grave afasta a aplicação subsidiária do parágrafo único? Sim; essa ressalva consta expressamente do texto.",
+        "Recusa de identificação é idêntica a exercício do silêncio sobre o crime? Não; distinguir identificação justificada e direito à não autoincriminação."
+      ],
+      "termos": [
+        "justificadamente",
+        "se não constitui infração penal mais grave"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "93281adb-7fff-54de-8cad-132f909d123a",
+        "content_sha256": "f0ca62d724ff32ce95eb4b0a8c6160ade19b42f6f6bd9acca2cecde077b0d969",
+        "simples": "O caput pune com multa a recusa de dados próprios quando a autoridade os solicita ou exige justificadamente. O parágrafo único prevê prisão simples de um a seis meses e multa para declarações inverídicas, se não houver infração penal mais grave.",
+        "pontos": [
+          "Recusa e declaração falsa têm penas diferentes; há cláusula expressa de subsidiariedade."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Não enquadre todo nome falso automaticamente como contravenção: confira o art. 307 do CP, que exige finalidade de obter vantagem ou causar dano. Não confunda identificação com confissão de crime."
+        ],
+        "exemplo": "A questão informa solicitação justificada de dados próprios e recusa: a comparação inicial é com o caput e sua multa. Variação: O agente atribui-se identidade falsa para obter vantagem: é preciso confrontar o art. 307 do CP antes de concluir pelo parágrafo único.",
+        "prova": [
+          "Uma infração penal mais grave afasta a aplicação subsidiária do parágrafo único? Sim; essa ressalva consta expressamente do texto."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:45.948+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T20:09:45.948+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-59",
+      "unit_id": "95ba5079-122d-5b15-98f6-35e883e6d37b",
+      "content_sha256": "a647af5247aabb4bf92b1f085c2fe0963932296122698bac8ead4a11acd06c95",
+      "simples": "O texto compilado descreve ociosidade habitual de pessoa apta ao trabalho, sem renda suficiente, ou subsistência por ocupação ilícita, com prisão simples de quinze dias a três meses. A renda superveniente suficiente extingue a pena.",
+      "pontos": [
+        "Habitualidade, aptidão e insuficiência de renda integram a primeira hipótese textual."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Desemprego ou pobreza, por si, não demonstram os elementos descritos. A reprodução do texto compilado não resolve controvérsias constitucionais de aplicação; não confunda este artigo com mendicância, cuja revogação estava anexada por erro.",
+        "ADPF 976/STF protege contra remoção/transporte compulsório e recolhimento forçado de pertences; não atribuir ao julgamento revogação expressa de todo o art. 59 sem fundamento."
+      ],
+      "exemplo": "No exercício de leitura, o enunciado informa renda superveniente suficiente para subsistência: o parágrafo único determina extinção da pena. Variação: A renda nova ainda é insuficiente: não se demonstrou a condição do parágrafo único.",
+      "prova": [
+        "Qual efeito textual tem a aquisição superveniente de renda suficiente? Extingue a pena, conforme o parágrafo único.",
+        "Desemprego isolado autoriza punir ou remover compulsoriamente? Não; não comprova elementos nem afasta garantias constitucionais."
+      ],
+      "termos": [
+        "habitualmente",
+        "apto para trabalho",
+        "renda suficiente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512659&tip=UN"
+      ],
+      "expected": {
+        "unit_id": "95ba5079-122d-5b15-98f6-35e883e6d37b",
+        "content_sha256": "3430717048ca6b99ebc789e4d6bf6cce590b404fd21f8ed7a717e304623b5a5d",
+        "simples": "O texto compilado descreve ociosidade habitual de pessoa apta ao trabalho, sem renda suficiente, ou subsistência por ocupação ilícita, com prisão simples de quinze dias a três meses. A renda superveniente suficiente extingue a pena.",
+        "pontos": [
+          "Habitualidade, aptidão e insuficiência de renda integram a primeira hipótese textual."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Desemprego ou pobreza, por si, não demonstram os elementos descritos. A reprodução do texto compilado não resolve controvérsias constitucionais de aplicação; não confunda este artigo com mendicância, cuja revogação estava anexada por erro."
+        ],
+        "exemplo": "No exercício de leitura, o enunciado informa renda superveniente suficiente para subsistência: o parágrafo único determina extinção da pena. Variação: A renda nova ainda é insuficiente: não se demonstrou a condição do parágrafo único.",
+        "prova": [
+          "Qual efeito textual tem a aquisição superveniente de renda suficiente? Extingue a pena, conforme o parágrafo único."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:46.377+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T20:09:46.377+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "9e841a37-7a45-5cad-a11e-e8d488946386",
+      "content_sha256": "0610cfa55830966b2a2daced74bf00f1d6fbc3c3e0549793a598bf4efe72dc6a",
+      "simples": "Provocar abusivamente emissão de fumaça, vapor ou gás que possa ofender ou molestar alguém tem previsão de multa no texto compilado. A emissão deve ser abusiva e apta a ofender ou molestar.",
+      "pontos": [
+        "O caput usa possibilidade de ofensa ou incômodo; não exige ali resultado de lesão grave."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Uma ocorrência ambiental também exige exame da Lei 9.605/1998. Não conclua pela contravenção sem comparar o tipo ambiental aplicável nem confunda este artigo com associação secreta, revogada no seguinte."
+      ],
+      "exemplo": "Uma questão descreve emissão abusiva de fumaça capaz de molestar vizinhos: compare com os elementos do art. 38 e com a legislação ambiental aplicável. Variação: A emissão não é abusiva nem apta a ofender ou molestar: esses elementos do caput não foram demonstrados.",
+      "prova": [
+        "O art. 38 prevê prisão simples? Não; sua sanção textual é multa.",
+        "A sanção deste artigo substitui automaticamente o crime de poluição? Não; confrontar requisitos do art. 54 da Lei 9.605 e contexto concreto."
+      ],
+      "termos": [
+        "abusivamente",
+        "possa ofender ou molestar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "9e841a37-7a45-5cad-a11e-e8d488946386",
+        "content_sha256": "f861600229ce4d4a7a066b54d59f314240baac1d0dd970e5bab4baea6005955d",
+        "simples": "Provocar abusivamente emissão de fumaça, vapor ou gás que possa ofender ou molestar alguém tem previsão de multa no texto compilado. A emissão deve ser abusiva e apta a ofender ou molestar.",
+        "pontos": [
+          "O caput usa possibilidade de ofensa ou incômodo; não exige ali resultado de lesão grave."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Uma ocorrência ambiental também exige exame da Lei 9.605/1998. Não conclua pela contravenção sem comparar o tipo ambiental aplicável nem confunda este artigo com associação secreta, revogada no seguinte."
+        ],
+        "exemplo": "Uma questão descreve emissão abusiva de fumaça capaz de molestar vizinhos: compare com os elementos do art. 38 e com a legislação ambiental aplicável. Variação: A emissão não é abusiva nem apta a ofender ou molestar: esses elementos do caput não foram demonstrados.",
+        "prova": [
+          "O art. 38 prevê prisão simples? Não; sua sanção textual é multa."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:46.778+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T20:09:46.778+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-64",
+      "unit_id": "fa583bf6-f17d-5328-99d8-3cbe903437d2",
+      "content_sha256": "9cfd3eb71803836c6b179dd0e592512c4e92a31d5f24cc651b22f0f9bc3d1e49",
+      "simples": "O texto compilado conserva a descrição histórica de crueldade ou trabalho excessivo em animais, experiências cruéis em público e aumento de metade em espetáculo público. A aplicação atual deve ser confrontada com o crime ambiental do art. 32 da Lei 9.605/1998.",
+      "pontos": [
+        "A sanção textual antiga é prisão simples de dez dias a um mês ou multa; isso não é a pena atual do crime ambiental."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não use este texto como regra atual exclusiva sobre maus-tratos. Confira o art. 32, suas formas e alterações vigentes, inclusive a proteção específica de cães e gatos. A revogação anexada era do art. 65, não uma nota expressa sobre o art. 64."
+      ],
+      "exemplo": "O caso descreve maus-tratos a cão: a primeira consulta atual é ao art. 32 da Lei de Crimes Ambientais, não à pena histórica deste dispositivo. Variação: O exercício pergunta apenas qual aumento constava do §2º desta descrição: a resposta textual é metade, sem transportá-lo à lei ambiental.",
+      "prova": [
+        "A pena textual antiga pode ser copiada como pena atual de maus-tratos a cães? Não; é preciso aplicar a disciplina vigente do art. 32 da Lei 9.605/1998.",
+        "O aumento textual de metade pode ser transferido automaticamente a qualquer crime ambiental? Não; a lei ambiental tem regras próprias."
+      ],
+      "termos": [
+        "texto histórico",
+        "crime ambiental"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "fa583bf6-f17d-5328-99d8-3cbe903437d2",
+        "content_sha256": "3a2d8d9a8511f0de11b765fc5853b9e4968056ea3f65b7b2ed42f332b33af321",
+        "simples": "O texto compilado conserva a descrição histórica de crueldade ou trabalho excessivo em animais, experiências cruéis em público e aumento de metade em espetáculo público. A aplicação atual deve ser confrontada com o crime ambiental do art. 32 da Lei 9.605/1998.",
+        "pontos": [
+          "A sanção textual antiga é prisão simples de dez dias a um mês ou multa; isso não é a pena atual do crime ambiental."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Não use este texto como regra atual exclusiva sobre maus-tratos. Confira o art. 32, suas formas e alterações vigentes, inclusive a proteção específica de cães e gatos. A revogação anexada era do art. 65, não uma nota expressa sobre o art. 64."
+        ],
+        "exemplo": "O caso descreve maus-tratos a cão: a primeira consulta atual é ao art. 32 da Lei de Crimes Ambientais, não à pena histórica deste dispositivo. Variação: O exercício pergunta apenas qual aumento constava do §2º desta descrição: a resposta textual é metade, sem transportá-lo à lei ambiental.",
+        "prova": [
+          "A pena textual antiga pode ser copiada como pena atual de maus-tratos a cães? Não; é preciso aplicar a disciplina vigente do art. 32 da Lei 9.605/1998."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:47.242+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T20:09:47.242+00:00"
+      }
+    }
+  ]
+}

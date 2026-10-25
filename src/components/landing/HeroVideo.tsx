@@ -1,69 +1,227 @@
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import { createPortal } from "react-dom";
+import introArtwork from "@/assets/auth/carreiras-composicao.webp";
+const introBadge = "/media/brand/norte-identity/emblema-premium.webp";
+import { claimDocumentIntro } from "@/lib/documentIntro";
+import { documentStartup } from "@/lib/startupSequence";
+import "@/styles/intro-frame.css";
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Abertura em vídeo da hero (≈0,25 MB): toca inteira a cada visita/recarga (também no
- * celular, na íntegra, sem corte) e, ao terminar, desfaz o fade para a imagem fixa de
- * fundo — é aí que o `onDone` avisa o componente pai para revelar os textos da hero.
- * Com economia de dados ou com "reduzir movimento" o vídeo nem baixa: fica só a imagem,
- * e os textos aparecem imediatamente.
- */
-export function HeroVideo({ onDone }: { onDone?: () => void }) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const [done, setDone] = useState(false);
+const SKIP_INTRO_KEY = "norte-concursos:skip-intro";
 
-  const finish = () => {
-    setDone(true);
-    onDone?.();
-  };
+function introDisabled(): boolean {
+  try { return window.localStorage.getItem(SKIP_INTRO_KEY) === "true"; }
+  catch { return false; }
+}
+
+function rememberIntroChoice(disabled: boolean): boolean {
+  try {
+    if (disabled) window.localStorage.setItem(SKIP_INTRO_KEY, "true");
+    else window.localStorage.removeItem(SKIP_INTRO_KEY);
+    return true;
+  } catch { return false; }
+}
+
+
+/** The optional film belongs to the startup stage, before the homepage is revealed. */
+export function HeroVideo({
+  onIntroChange,
+  onIntroSettled,
+}: {
+  onIntroChange: (playing: boolean) => void;
+  /** A introdução acabou, foi pulada ou nem vai tocar: a hero está pronta para o que entra depois dela. */
+  onIntroSettled?: () => void;
+}) {
+  const video = useRef<HTMLVideoElement>(null);
+  const [loadVideo, setLoadVideo] = useState(false);
+  const [dontShowAgain, setDontShowAgain] = useState(false);
+  // Touch layouts use the lighter video inside the same startup frame.
+  const [compact, setCompact] = useState(false);
+  const [phase, setPhase] = useState<"image" | "playing" | "fading">("image");
+  const finishRef = useRef<() => void>(() => {});
+  const eligible = useRef<boolean | null>(null);
 
   useEffect(() => {
-    const el = ref.current;
-    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
-      ?.saveData;
-    if (!el || saveData || matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      finish();
+    if (eligible.current === null) {
+      const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+      eligible.current = claimDocumentIntro(document.documentElement, navigation?.name ?? window.location.href);
+    }
+    // Read the saved preference before preparing or loading the film.
+    if (!eligible.current || introDisabled()) {
+      documentStartup().settleIntro();
+      onIntroSettled?.();
       return;
     }
-    let loaded = document.readyState === "complete";
-    // AbortError = o navegador pausou por economia de energia; o observador retoma quando a hero aparecer.
-    const play = () =>
-      void el.play().catch((e: unknown) => (e as Error).name !== "AbortError" && finish());
-    const onLoad = () => {
-      loaded = true;
-      play();
-    };
-    let timer = 0;
-    if (loaded) timer = window.setTimeout(play, 150);
-    else window.addEventListener("load", onLoad, { once: true });
-    // Pausa fora da tela e retoma ao voltar (até terminar).
-    const io = new IntersectionObserver(([e]) => {
-      if (!loaded || el.ended) return;
-      if (e?.isIntersecting) play();
-      else el.pause();
-    });
-    io.observe(el);
-    return () => {
-      window.clearTimeout(timer);
-      window.removeEventListener("load", onLoad);
-      io.disconnect();
-    };
+
+    const connection = (
+      navigator as Navigator & {
+        connection?: { saveData?: boolean; effectiveType?: string; downlink?: number };
+      }
+    ).connection;
+    // Conexão claramente lenta: a introdução chegaria tarde demais e "apareceria" por cima da página
+    // já lida, então ela nem começa (a hero aparece de imediato).
+    const slow =
+      /(^|-)2g$/.test(connection?.effectiveType ?? "") ||
+      (connection?.downlink !== undefined && connection.downlink > 0 && connection.downlink < 0.7);
+    // Plays on phones and tablets too; only data saver, slow networks and reduced motion keep the still image.
+    if (!connection?.saveData && !slow && !matchMedia("(prefers-reduced-motion: reduce)").matches && documentStartup().prepareIntro()) {
+      setCompact(matchMedia("(max-width: 1100px)").matches);
+      setLoadVideo(true);
+    } else {
+      documentStartup().settleIntro();
+      onIntroSettled?.();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (!loadVideo) return;
+    const element = video.current;
+    if (!element) return;
+    let active = true;
+    let finished = false;
+    let shown = false;
+    let fadeTimer = 0;
+    let playbackTimer = 0;
+    const removeFilm = () => {
+      fadeTimer = window.setTimeout(() => {
+        if (active) { setPhase("image"); setLoadVideo(false); }
+      }, 280);
+    };
+    const finish = () => {
+      if (!active || finished) return;
+      finished = true;
+      window.clearTimeout(loadTimer);
+      window.clearTimeout(playbackTimer);
+      element.pause();
+      if (shown) setPhase("fading");
+      else { setPhase("image"); setLoadVideo(false); }
+      onIntroChange(false);
+      onIntroSettled?.();
+      documentStartup().settleIntro();
+      if (shown) {
+        if (document.documentElement.dataset['norteBoot'] === 'ready') removeFilm();
+        else window.addEventListener('norte:boot-ready', removeFilm, { once: true });
+      }
+    };
+    finishRef.current = finish;
+    const started = () => {
+      if (finished) { element.pause(); return; }
+      if (!documentStartup().showIntro()) { finish(); return; }
+      shown = true;
+      window.clearTimeout(loadTimer);
+      setPhase("playing");
+      onIntroChange(true);
+      // Never leave the visitor behind an intro stalled by the connection.
+      if (!playbackTimer) playbackTimer = window.setTimeout(finish, 9000);
+    };
+    const loadTimer = window.setTimeout(finish, 4000);
+    element.addEventListener("playing", started);
+    element.addEventListener("ended", finish);
+    element.addEventListener("error", finish);
+    // Safari/iPad needs the DOM properties set before play, not only React's attribute.
+    element.muted = true;
+    element.defaultMuted = true;
+    element.playsInline = true;
+    element.setAttribute("webkit-playsinline", "");
+    const play = () => {
+      if (!active || finished) return;
+      void element.play().catch(() => {
+        if (!active || finished) return;
+        finish();
+      });
+    };
+    element.load();
+    play();
+    return () => {
+      active = false;
+      window.clearTimeout(loadTimer);
+      window.clearTimeout(playbackTimer);
+      window.clearTimeout(fadeTimer);
+      window.removeEventListener('norte:boot-ready', removeFilm);
+      element.removeEventListener("playing", started);
+      element.removeEventListener("ended", finish);
+      element.removeEventListener("error", finish);
+      element.pause();
+      finishRef.current = () => {};
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loadVideo, onIntroChange]);
+
   return (
-    <video
-      ref={ref}
-      className="lp-hero__video"
-      data-done={done}
-      poster="/media/hero/hero-intro-poster.webp"
-      muted
-      playsInline
-      preload="none"
-      aria-hidden="true"
-      onEnded={finish}
-      onError={finish}
-    >
-      <source src="/media/hero/hero-intro.webm" type="video/webm" />
-      <source src="/media/hero/hero-intro.mp4" type="video/mp4" />
-    </video>
+    <>
+      <img
+        className="home-hero__image"
+        src="/media/hero/hero-norte-recorte.webp"
+        alt=""
+        aria-hidden="true"
+        width={1208}
+        height={1302}
+        fetchPriority="high"
+      />
+      {loadVideo && typeof document !== 'undefined' && document.getElementById('norte-initial-loading') && createPortal(
+        <div className="home-intro tactical-intro startup-intro" data-phase={phase} aria-label="Introdução Norte Concursos">
+          <div className="tactical-intro__frame">
+            <img className="tactical-intro__art" src={introArtwork} alt="" aria-hidden="true" width={1440} height={600} />
+            <header className="tactical-intro__heading">
+              <span className="tactical-intro__brand">NORTE <span>CONCURSOS</span></span>
+              <span className="tactical-intro__edition"><ShieldCheck size={13} aria-hidden="true" /> Carreiras policiais</span>
+            </header>
+            <div className="tactical-intro__body">
+              <aside className="tactical-intro__identity" aria-hidden="true">
+                <img src={introBadge} alt="" width={768} height={768} />
+                <span>Direção. Disciplina. Conquista.</span>
+              </aside>
+              <div className="tactical-intro__screen">
+                <div className="tactical-intro__side tactical-intro__side--left" aria-hidden="true">
+                  <img src={introBadge} alt="" width={768} height={768} />
+                </div>
+                <div className="tactical-intro__side tactical-intro__side--right" aria-hidden="true">
+                  <img src={introBadge} alt="" width={768} height={768} />
+                </div>
+                <video
+                  ref={video}
+                  muted
+                  playsInline
+                  preload="auto"
+                  disablePictureInPicture
+                  aria-hidden="true"
+                >
+                  <source
+                    src={`/media/hero/hero-intro${compact ? "-mobile" : ""}.mp4`}
+                    type="video/mp4"
+                  />
+                  <source
+                    src={`/media/hero/hero-intro${compact ? "-mobile" : ""}.webm`}
+                    type="video/webm"
+                  />
+                </video>
+              </div>
+            </div>
+            <footer className="tactical-intro__footer">
+              <span className="tactical-intro__caption">Sua preparação tem um norte.</span>
+              {phase === "playing" && (
+                <div className="tactical-intro__footer-actions">
+                  <label className="tactical-intro__remember">
+                    <input
+                      type="checkbox"
+                      checked={dontShowAgain}
+                      onChange={(event) => {
+                        const checked = event.currentTarget.checked;
+                        if (rememberIntroChoice(checked)) setDontShowAgain(checked);
+                      }}
+                    />
+                    <span>Não mostrar este vídeo novamente</span>
+                  </label>
+                  <button type="button" onClick={() => finishRef.current()}>
+                    Pular introdução <ArrowRight size={14} aria-hidden="true" />
+                  </button>
+                </div>
+              )}
+            </footer>
+          </div>
+        </div>, document.getElementById('norte-initial-loading')!,
+      )}
+    </>
   );
 }

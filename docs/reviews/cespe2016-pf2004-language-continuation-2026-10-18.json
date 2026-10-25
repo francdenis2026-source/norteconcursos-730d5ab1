@@ -1,0 +1,553 @@
+{
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "current_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+  "current_edital_source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+  "pf_syllabus_evidence": {
+    "file": "PF_25_edital_atualizado.pdf",
+    "path": "/workspace/cespe7000-audit/official-exams-check/PF_25_edital_atualizado.pdf",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "final_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "captured_at": "2026-10-17T23:07:12.549045+00:00",
+    "bytes": 1505541
+  },
+  "official_archive_evidence": {
+    "url": "https://cdn.cebraspe.org.br/concursos/_antigos/",
+    "path": "/workspace/cespe7000-audit/official-exams-check/other-exam-4.html",
+    "sha256": "d2a6e028358cbc040b5a17aef406ec8187e445da18e6ae6b971b195becac455e",
+    "title": "Índice oficial de concursos históricos; comprova a localização dos eventos, não seus gabaritos"
+  },
+  "batch_id": "cespe2016-pf2004-language-continuation-2026-10-18",
+  "checked_at": "2026-10-18T03:22:50.162555+00:00",
+  "exam_groups": [
+    {
+      "code": "DPF_2004_NAC:cargo19:azul",
+      "contest_name": "Polícia Federal",
+      "exam_year": 2004,
+      "career_name": "Agente de Polícia Federal",
+      "question": {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+        "path": "/workspace/cespe7000-audit/held-conference-01/bc4ecb9092-CARGO_19_AGENTE_AZUL.PDF",
+        "sha256": "b956742f363ac8d807ed6f834df8aa9c54f3bc66ac0dab6e23c481e9adc1f035",
+        "status": 200,
+        "pages": 12
+      },
+      "answer_key": {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "path": "/workspace/cespe7000-audit/held-conference-01/81b96c6b60-GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "sha256": "f910a618f278ee60b97e4a32d14bbef3ef4dadf00e59ec20fda33a56c04be3db",
+        "status": 200,
+        "pages": 5
+      },
+      "key_section_start": "CARGO 19: AGENTE DE POLÍCIA FEDERAL – CADERNO DE  PROVAS  AZUL",
+      "key_section_end": "CARGO 19: AGENTE DE POLÍCIA FEDERAL –  CADERNO DE PROVAS BRANCO",
+      "key_width": 30,
+      "key_total": 120,
+      "key_header": "DEFINITIVOS",
+      "visually_verified": true,
+      "catalog": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+      "catalog_evidence": {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+        "path": "/workspace/cespe7000-audit/portugues-review-02/DPF_2004_NAC.html",
+        "sha256": "3faf949e884cb5bfcabbcc4a6e93a3d09a347f9c14709c26f0b2a4b06f81b4d0"
+      },
+      "key_identity_words": [
+        "CARGO 19:",
+        "AZUL"
+      ]
+    }
+  ],
+  "supports": [
+    {
+      "id": "8b992bd1-6425-51c5-b751-a6b6d74dbd98",
+      "label": "Texto para os itens 14 a 18 — valor da vida — Polícia Federal/2004; contexto e referências temporais do texto são históricos",
+      "body": "O valor da vida é de tal magnitude que, até mesmo nos momentos mais graves, quando tudo parece perdido dadas as condições mais excepcionais e precárias — como nos conflitos internacionais, na hora em que o direito da força se instala negando o próprio Direito, e quando tudo é paradoxal e inconcebível —, ainda assim a intuição humana tenta protegê-lo contra a insânia coletiva, criando regras que impeçam a prática de crueldades inúteis. Quando a paz passa a ser apenas um instante entre dois tumultos, o homem tenta encontrar nos céus do amanhã uma aurora de salvação. A ciência, de forma desesperada, convoca os cientistas a se debruçarem sobre as mesas de seus laboratórios, na procura de meios salvadores da vida. Nas salas de conversação internacionais, mesmo entre intrigas e astúcias, os líderes do mundo inteiro tentam se reencontrar com a mais irrecusável de suas normas: o respeito pela vida humana. Assim, no âmago de todos os valores, está o mais indeclinável de todos eles: a vida humana. Sem ela, não existe a pessoa humana, não existe a base de sua identidade. Mesmo diante da proletária tragédia de cada homem e de cada mulher, quase naufragados na luta desesperada pela sobrevivência do dia-a-dia, ninguém abre mão do seu direito de viver. Essa consciência é que faz a vida mais que um bem: um valor. A partir dessa concepção, hoje, mais ainda, a vida passa a ser respeitada e protegida não só como um bem afetivo ou patrimonial, mas pelo valor ético de que ela se reveste. Não se constitui apenas de um meio de continuidade biológica, mas de uma qualidade e de uma dignidade que faz com que cada um realize seu destino de criatura humana. Internet: <http://www.dhnet.org.br>. Acesso em ago./2004 (com adaptações).",
+      "contest_name": "Polícia Federal",
+      "exam_year": 2004,
+      "exam_board": "CEBRASPE",
+      "source_note": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF — texto de apoio integral da prova; exercício de leitura, sem validação de dados históricos como atuais."
+    },
+    {
+      "id": "b01ac963-30cf-5dc1-a522-c5f4a2cbb222",
+      "label": "Texto para os itens 19 a 24 — Os novos sherlocks — Polícia Federal/2004; contexto e referências temporais do texto são históricos",
+      "body": "Os novos sherlocks Dividida basicamente em dois campos, criminalística e medicina legal, a área de perícia nunca esteve tão na moda. Seus especialistas volta e meia estão no noticiário, levados pela profusão de casos que requerem algum tipo de tecnologia na investigação. Também viraram heróis de seriados policiais campeões de audiência. Nos EUA, maior produtor de programas desse tipo, o sucesso é tão grande que o horário nobre, chamado de prime time, ganhou o apelido de crime time. Seis das dez séries de maior audiência na TV norte-americana fazem parte desse filão. Pena que a vida de perito não seja tão fácil e glamorosa como se vê na TV. Nem todos utilizam aquelas lanternas com raios ultravioleta para rastrear fluidos do corpo humano nem as canetas com raio laser que traçam a trajetória da bala. “Com o avanço tecnológico, as provas técnicas vêm ampliando seu espaço no direito brasileiro, principalmente na área criminal”, declara o presidente da OAB/SP, mas, antes disso, já havia peritos que recorriam às mais diversas ciências para tentar solucionar um crime. Na divisão da polícia brasileira, o pontapé inicial da investigação é dado pelo perito, sem a companhia de legistas, como ocorre nos seriados norte-americanos. Cabe a ele examinar o local do crime, fazer o exame externo da vítima, coletar qualquer tipo de vestígio, inclusive impressões digitais, pegadas e objetos do cenário, e levar as evidências para análise nos laboratórios forenses. Pedro Azevedo. Folha Imagem, ago./2004 (com adaptações).",
+      "contest_name": "Polícia Federal",
+      "exam_year": 2004,
+      "exam_board": "CEBRASPE",
+      "source_note": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF — texto integral histórico, sem validar procedimentos periciais atuais."
+    }
+  ],
+  "sources": [
+    {
+      "kind": "question",
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "row": {
+        "id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "source_type": "outro",
+        "title": "DPF_2004_NAC:cargo19:azul — caderno oficial",
+        "issuer": "CESPE/UnB — Polícia Federal",
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "checked_at": "2026-10-18T00:12:51.750098+00:00",
+        "notes": "Documento histórico de prova, não fonte de vigência normativa. SHA-256 b956742f363ac8d807ed6f834df8aa9c54f3bc66ac0dab6e23c481e9adc1f035"
+      },
+      "evidence": {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+        "path": "/workspace/cespe7000-audit/held-conference-01/bc4ecb9092-CARGO_19_AGENTE_AZUL.PDF",
+        "sha256": "b956742f363ac8d807ed6f834df8aa9c54f3bc66ac0dab6e23c481e9adc1f035",
+        "status": 200,
+        "pages": 12,
+        "catalog_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+        "visually_verified": true,
+        "catalog_evidence": {
+          "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+          "path": "/workspace/cespe7000-audit/portugues-review-02/DPF_2004_NAC.html",
+          "sha256": "3faf949e884cb5bfcabbcc4a6e93a3d09a347f9c14709c26f0b2a4b06f81b4d0"
+        }
+      }
+    },
+    {
+      "kind": "answer_key",
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "row": {
+        "id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "source_type": "outro",
+        "title": "DPF_2004_NAC:cargo19:azul — gabarito definitivo",
+        "issuer": "CESPE/UnB — Polícia Federal",
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "checked_at": "2026-10-18T00:12:51.750098+00:00",
+        "notes": "Documento histórico de prova, não fonte de vigência normativa. SHA-256 f910a618f278ee60b97e4a32d14bbef3ef4dadf00e59ec20fda33a56c04be3db"
+      },
+      "evidence": {
+        "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "path": "/workspace/cespe7000-audit/held-conference-01/81b96c6b60-GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "sha256": "f910a618f278ee60b97e4a32d14bbef3ef4dadf00e59ec20fda33a56c04be3db",
+        "status": 200,
+        "pages": 5,
+        "catalog_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+        "visually_verified": true,
+        "catalog_evidence": {
+          "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+          "path": "/workspace/cespe7000-audit/portugues-review-02/DPF_2004_NAC.html",
+          "sha256": "3faf949e884cb5bfcabbcc4a6e93a3d09a347f9c14709c26f0b2a4b06f81b4d0"
+        }
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "origin_candidate_id": "42b59ff6ba12c4244fe723afdb9a8a15708f5a17fb19f67e0bcb6f82f5aad401",
+      "source_item_index_zero_based": 70,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 15,
+      "official_answer": "C",
+      "official_statement": "O primeiro parágrafo discorre acerca da valorização da existência e da necessidade de proteção da vida contra a insânia coletiva, por intermédio de normas de convivência que impeçam a prática de crueldades inúteis, principalmente em épocas de graves conflitos internacionais, quando o direito da força contrapõe-se à força do Direito e quando a situação se apresenta paradoxal e inconcebível.",
+      "original_instruction": "Com base no texto acima, julgue os itens a seguir.",
+      "source_page": 3,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "2b38af8b-6695-59d6-8416-db01a3586159",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 15,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com base no texto acima, julgue os itens a seguir.\n\nO primeiro parágrafo discorre acerca da valorização da existência e da necessidade de proteção da vida contra a insânia coletiva, por intermédio de normas de convivência que impeçam a prática de crueldades inúteis, principalmente em épocas de graves conflitos internacionais, quando o direito da força contrapõe-se à força do Direito e quando a situação se apresenta paradoxal e inconcebível.",
+        "raw_extraction": "O primeiro parágrafo discorre acerca da valorização da existência e da necessidade de proteção da vida contra a insânia coletiva, por intermédio de normas de convivência que impeçam a prática de crueldades inúteis, principalmente em épocas de graves conflitos internacionais, quando o direito da força contrapõe-se à força do Direito e quando a situação se apresenta paradoxal e inconcebível.",
+        "official_answer": "C",
+        "source_page": 3,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Certo. O primeiro parágrafo afirma que, mesmo em conflitos e condições extremas, a intuição humana procura proteger a vida mediante regras contrárias à crueldade. A assertiva reúne essas informações sem atribuir ao autor uma norma jurídica específica. Trata-se de interpretação do texto histórico de 2004, não de auditoria de legislação atual.\n\nExemplo: Um texto que defende proteger pessoas mesmo durante uma guerra sustenta a necessidade de limites à violência também em situações extremas.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "8b992bd1-6425-51c5-b751-a6b6d74dbd98",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    },
+    {
+      "origin_candidate_id": "ba804e855c95fe5893a7f2eb2e93df23e1047c375014cbcf36c6d867e01b3155",
+      "source_item_index_zero_based": 71,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 16,
+      "official_answer": "E",
+      "official_statement": "No segundo parágrafo, estão presentes as idéias de que a paz é ilusória, não passando de um instante apenas de trégua entre dois tumultos, e de que, para mantê-la, os cientistas se desdobram à procura de fórmulas salvadoras da humanidade e os líderes mundiais se encontram para preservar o respeito recíproco.",
+      "original_instruction": "Com base no texto acima, julgue os itens a seguir.",
+      "source_page": 3,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "26b4f26a-0468-56e9-8c23-26b3064767c0",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 16,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com base no texto acima, julgue os itens a seguir.\n\nNo segundo parágrafo, estão presentes as idéias de que a paz é ilusória, não passando de um instante apenas de trégua entre dois tumultos, e de que, para mantê-la, os cientistas se desdobram à procura de fórmulas salvadoras da humanidade e os líderes mundiais se encontram para preservar o respeito recíproco.",
+        "raw_extraction": "No segundo parágrafo, estão presentes as idéias de que a paz é ilusória, não passando de um instante apenas de trégua entre dois tumultos, e de que, para mantê-la, os cientistas se desdobram à procura de fórmulas salvadoras da humanidade e os líderes mundiais se encontram para preservar o respeito recíproco.",
+        "official_answer": "E",
+        "source_page": 3,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O parágrafo descreve uma situação em que a paz se torna um intervalo entre tumultos; não afirma de modo geral que toda paz seja ilusória. Além disso, o objetivo explicitamente atribuído aos líderes é reencontrar o respeito pela vida humana, e não simplesmente preservar o respeito recíproco entre eles. O item altera o alcance e o objeto do argumento.\n\nExemplo: Defender que governantes protejam a vida das pessoas não equivale a dizer apenas que eles devem respeitar uns aos outros.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "8b992bd1-6425-51c5-b751-a6b6d74dbd98",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    },
+    {
+      "origin_candidate_id": "b78de4ab48702a38f3ff81969e3d1e1bd6e95c1e879985015f24615085903567",
+      "source_item_index_zero_based": 72,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 17,
+      "official_answer": "C",
+      "official_statement": "No penúltimo parágrafo, encontra-se uma redundância: a afirmação de que o soberano dos valores é a vida humana, sem a qual não existe a pessoa humana, sequer a sua identidade.",
+      "original_instruction": "Com base no texto acima, julgue os itens a seguir.",
+      "source_page": 3,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "934c5e8e-89f5-5772-abe1-188627dc399e",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 17,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com base no texto acima, julgue os itens a seguir.\n\nNo penúltimo parágrafo, encontra-se uma redundância: a afirmação de que o soberano dos valores é a vida humana, sem a qual não existe a pessoa humana, sequer a sua identidade.",
+        "raw_extraction": "No penúltimo parágrafo, encontra-se uma redundância: a afirmação de que o soberano dos valores é a vida humana, sem a qual não existe a pessoa humana, sequer a sua identidade.",
+        "official_answer": "C",
+        "source_page": 3,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Certo. O penúltimo parágrafo insiste no caráter fundamental da vida e reitera que, sem ela, não existem a pessoa nem a base de sua identidade. Nesse contexto, a redundância é uma retomada enfática que reforça a tese central, e não um defeito que invalida o argumento. A resposta C foi conferida no definitivo do caderno azul, item 17.\n\nExemplo: Em 'a vida é essencial; sem ela, ninguém existe', a segunda formulação retoma a primeira para intensificar sua força argumentativa.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "8b992bd1-6425-51c5-b751-a6b6d74dbd98",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    },
+    {
+      "origin_candidate_id": "a979b30bfcc2286bf60aad99a103cc296d58d78980529bddf05cddb10df4e8d3",
+      "source_item_index_zero_based": 73,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 18,
+      "official_answer": "E",
+      "official_statement": "O comprometimento ético para com a humanidade é defendido no último parágrafo do texto, que discorre acerca da vida não só como um meio de continuidade biológica, mas como a responsável pelo destino da criatura humana.",
+      "original_instruction": "Com base no texto acima, julgue os itens a seguir.",
+      "source_page": 3,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "25275c47-6ab4-52a5-9954-7045f625cd59",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 18,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com base no texto acima, julgue os itens a seguir.\n\nO comprometimento ético para com a humanidade é defendido no último parágrafo do texto, que discorre acerca da vida não só como um meio de continuidade biológica, mas como a responsável pelo destino da criatura humana.",
+        "raw_extraction": "O comprometimento ético para com a humanidade é defendido no último parágrafo do texto, que discorre acerca da vida não só como um meio de continuidade biológica, mas como a responsável pelo destino da criatura humana.",
+        "official_answer": "E",
+        "source_page": 3,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O fecho valoriza a vida como qualidade e dignidade que permite a cada pessoa realizar seu destino. A assertiva troca essa condição de realização pela ideia de que a vida seria responsável pelo destino da criatura, criando uma relação que o texto não formula. A aproximação temática com ética não torna correta essa alteração do predicado.\n\nExemplo: Dizer que a educação permite realizar um projeto não significa afirmar que ela determina ou assume a responsabilidade pelo destino de alguém.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "8b992bd1-6425-51c5-b751-a6b6d74dbd98",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    },
+    {
+      "origin_candidate_id": "488bcd4001fd1eb4b69e347529712f4ffbe49555a3847a0830bd7bb110ea5e1d",
+      "source_item_index_zero_based": 74,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 21,
+      "official_answer": "E",
+      "official_statement": "De acordo com o presidente da OAB/SP, as provas técnicas têm sido ampliadas, principalmente na área criminal, com o avanço tecnológico no espaço do direito brasileiro.",
+      "original_instruction": "A respeito do texto acima, julgue os itens subseqüentes.",
+      "source_page": 4,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "6d1e160a-a011-5165-b76c-bd13afe5f816",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 21,
+        "subject": "Língua Portuguesa",
+        "question_text": "A respeito do texto acima, julgue os itens subseqüentes.\n\nDe acordo com o presidente da OAB/SP, as provas técnicas têm sido ampliadas, principalmente na área criminal, com o avanço tecnológico no espaço do direito brasileiro.",
+        "raw_extraction": "De acordo com o presidente da OAB/SP, as provas técnicas têm sido ampliadas, principalmente na área criminal, com o avanço tecnológico no espaço do direito brasileiro.",
+        "official_answer": "E",
+        "source_page": 4,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. A fala citada afirma que as provas técnicas vêm ampliando seu espaço no direito brasileiro. O que aumenta é sua participação ou relevância nesse campo. A paráfrase do item afirma que as próprias provas têm sido ampliadas, deslocando o processo para um objeto diferente e deixando de preservar a relação expressa na passagem original.\n\nExemplo: A frase 'as bibliotecas ampliaram seu espaço no debate público' não equivale a afirmar que os prédios das bibliotecas foram ampliados.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "b01ac963-30cf-5dc1-a522-c5f4a2cbb222",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    },
+    {
+      "origin_candidate_id": "91aa58dea6a83ad21621f3f825a8d975fb5e60cc001f129cc624a4bc870a99ac",
+      "source_item_index_zero_based": 75,
+      "exam_code": "DPF_2004_NAC:cargo19:azul",
+      "original_item_number": 24,
+      "official_answer": "E",
+      "official_statement": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
+      "original_instruction": "A respeito do texto acima, julgue os itens subseqüentes.",
+      "source_page": 4,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "question_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+      "answer_key_source_url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+      "row": {
+        "id": "24ee0a8c-0c42-5976-92dc-0953cf83801a",
+        "question_source_id": "eaef062c-0d43-5d9d-8478-63253e3c3401",
+        "answer_key_source_id": "966c83c8-fa0c-54d9-9395-79a5c1d8fbf2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "exam_year": 2004,
+        "career_name": "Agente de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "item_number": 24,
+        "subject": "Língua Portuguesa",
+        "question_text": "A respeito do texto acima, julgue os itens subseqüentes.\n\nEstá explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
+        "raw_extraction": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
+        "official_answer": "E",
+        "source_page": 4,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O último parágrafo enumera tarefas atribuídas ao perito: examinar o local, realizar o exame externo, recolher vestígios e levar evidências ao laboratório. Não estabelece explicitamente que todas as primeiras tarefas ocorram porque é necessário transportar evidências. O item transforma uma enumeração em relação causal expressa, que não consta da redação.\n\nExemplo: A lista 'registrar pedidos, separar produtos e organizar entregas' enumera atividades; não afirma que registrar pedidos ocorra porque é preciso organizar entregas.",
+        "verified_at": "2026-10-18T03:22:50.162555+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "b01ac963-30cf-5dc1-a522-c5f4a2cbb222",
+        "tested_topic": "Compreensão e interpretação textual; contexto histórico de 2004"
+      }
+    }
+  ],
+  "applied": {
+    "batch_id": "cespe2016-pf2004-language-continuation-2026-10-18",
+    "apply": true,
+    "complete": true,
+    "decisions": 6,
+    "official_keys_confirmed": 6,
+    "approved": 6,
+    "retained": 0,
+    "compared_counts": {
+      "official_exam_questions": 5040,
+      "board_exam_questions": 1114,
+      "curated_question_catalog": 2031,
+      "question_corpus_candidates": 4982
+    },
+    "annulled_by_exam": {
+      "DPF_2004_NAC:cargo19:azul": [
+        60,
+        63,
+        103
+      ]
+    },
+    "private_refined_ids": [
+      "42b59ff6ba12c4244fe723afdb9a8a15708f5a17fb19f67e0bcb6f82f5aad401",
+      "ba804e855c95fe5893a7f2eb2e93df23e1047c375014cbcf36c6d867e01b3155",
+      "b78de4ab48702a38f3ff81969e3d1e1bd6e95c1e879985015f24615085903567",
+      "a979b30bfcc2286bf60aad99a103cc296d58d78980529bddf05cddb10df4e8d3",
+      "488bcd4001fd1eb4b69e347529712f4ffbe49555a3847a0830bd7bb110ea5e1d",
+      "91aa58dea6a83ad21621f3f825a8d975fb5e60cc001f129cc624a4bc870a99ac"
+    ],
+    "published_ids": [
+      "2b38af8b-6695-59d6-8416-db01a3586159",
+      "26b4f26a-0468-56e9-8c23-26b3064767c0",
+      "934c5e8e-89f5-5772-abe1-188627dc399e",
+      "25275c47-6ab4-52a5-9954-7045f625cd59",
+      "6d1e160a-a011-5165-b76c-bd13afe5f816",
+      "24ee0a8c-0c42-5976-92dc-0953cf83801a"
+    ]
+  },
+  "final_verification": {
+    "batch_id": "cespe2016-pf2004-language-continuation-2026-10-18",
+    "confirmed": 6,
+    "all_active": true,
+    "checks": [
+      {
+        "item_number": 15,
+        "public_id": "2b38af8b-6695-59d6-8416-db01a3586159",
+        "active": true,
+        "raw_sha256": "38e6ae0d8b9f2f8798e72e10d9b1077c09bff00b0c628aaab813ac448a806279",
+        "original_preserved": true
+      },
+      {
+        "item_number": 16,
+        "public_id": "26b4f26a-0468-56e9-8c23-26b3064767c0",
+        "active": true,
+        "raw_sha256": "38e6ae0d8b9f2f8798e72e10d9b1077c09bff00b0c628aaab813ac448a806279",
+        "original_preserved": true
+      },
+      {
+        "item_number": 17,
+        "public_id": "934c5e8e-89f5-5772-abe1-188627dc399e",
+        "active": true,
+        "raw_sha256": "38e6ae0d8b9f2f8798e72e10d9b1077c09bff00b0c628aaab813ac448a806279",
+        "original_preserved": true
+      },
+      {
+        "item_number": 18,
+        "public_id": "25275c47-6ab4-52a5-9954-7045f625cd59",
+        "active": true,
+        "raw_sha256": "38e6ae0d8b9f2f8798e72e10d9b1077c09bff00b0c628aaab813ac448a806279",
+        "original_preserved": true
+      },
+      {
+        "item_number": 21,
+        "public_id": "6d1e160a-a011-5165-b76c-bd13afe5f816",
+        "active": true,
+        "raw_sha256": "337ed847ebd1cd03036553274f6841c2a254829c11754827eed6d38f8ef93af7",
+        "original_preserved": true
+      },
+      {
+        "item_number": 24,
+        "public_id": "24ee0a8c-0c42-5976-92dc-0953cf83801a",
+        "active": true,
+        "raw_sha256": "337ed847ebd1cd03036553274f6841c2a254829c11754827eed6d38f8ef93af7",
+        "original_preserved": true
+      }
+    ]
+  },
+  "boundary_correction": {
+    "item_number": 24,
+    "reason": "Comando dos itens 25–28 anexado indevidamente ao final do item 24; limite corrigido conforme original.",
+    "official_answer_changed": false,
+    "original_private_extraction_changed": false,
+    "status": "corrected_and_readback_confirmed",
+    "verification": {
+      "checked_at": "2026-10-18T03:27:27.754943+00:00",
+      "corrected_item": 24,
+      "answer_unchanged": true,
+      "private_original_preserved": true,
+      "checks": [
+        {
+          "item_number": 15,
+          "active": true,
+          "answer": "C",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 16,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 17,
+          "active": true,
+          "answer": "C",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 18,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 21,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 24,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        }
+      ],
+      "active_syllabus_confirmed": true,
+      "legal_currency_audit_applicable": false,
+      "historical_context_required": true
+    }
+  }
+}

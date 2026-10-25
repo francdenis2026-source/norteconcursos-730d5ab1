@@ -1,0 +1,233 @@
+{
+  "checked_at": "2026-10-18T03:52:26.155Z",
+  "new_active": 1,
+  "preserved_other_pc_records": 2971,
+  "original_identity_preserved": true,
+  "concurrent_additions_preserved": [
+    {
+      "table": "content_sources",
+      "id": "d0856078-882e-5ffb-b631-d47c02fa62b7",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "e734671e-f6dc-5261-be90-25c19fa6578f",
+      "our_write": false
+    }
+  ],
+  "tests_passed": 23,
+  "application_changes": false,
+  "build_not_rerun": "Only content and metadata; previous application build unchanged.",
+  "pc_status": {
+    "active": 2636,
+    "archived": 283,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 4
+  },
+  "pending": [
+    {
+      "id": "76a0df58-50ad-465e-af73-12763e76347f",
+      "state": "RJ",
+      "item_number": 48,
+      "career": "Delegado de Polícia"
+    },
+    {
+      "id": "94a5990c-4243-42d3-a45b-e0361f65812f",
+      "state": "RO",
+      "item_number": 40,
+      "career": "Delegado de Polícia"
+    },
+    {
+      "id": "b20bd1e1-8388-4069-aff1-689070b28009",
+      "state": "RO",
+      "item_number": 60,
+      "career": "Delegado de Polícia"
+    },
+    {
+      "id": "e837718c-b3e6-44cf-aa22-762f176e9862",
+      "state": "RO",
+      "item_number": 80,
+      "career": "Datiloscopista Policial"
+    }
+  ],
+  "question": {
+    "id": "e9685709-2891-4be5-8e0a-cfdf17dd2026",
+    "item_number": 75,
+    "state": "RJ",
+    "original_answer": "D",
+    "patch": {
+      "content_status": "active",
+      "current_syllabus_topic_id": "ebe6bc21-f2ab-4b3e-9932-1ade1655fbbe",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "title": "Constituição Federal — arts27§1º,53 e102,I,l"
+        }
+      ],
+      "law_version_checked_at": "2026-10-18T03:52:12.279347+00:00",
+      "verified_at": "2026-10-18T03:50:52.150244+00:00",
+      "legal_audit_completed": true,
+      "review_note": "Resposta: D, compreendida no contexto da revogação regular da cautelar pela Assembleia. Isso não significa que toda e qualquer decisão de uma Assembleia esteja imune à reclamação.\n\nO Judiciário pode impor medidas cautelares a parlamentares. Quando a medida impossibilita, direta ou indiretamente, o exercício regular do mandato, incide o controle da Casa Legislativa previsto no regime constitucional das imunidades. O art.27,§1º, da Constituição estende aos deputados estaduais o regime das imunidades parlamentares; o STF confirmou a observância desse regime nas ADIs5824/5825, cujo mérito foi julgado em16/12/2022. Não se deve ler esse entendimento como proibição de investigação ou de qualquer cautelar.\n\nA reclamação ao STF não é um recurso automático contra o resultado desfavorável a quem pediu a prisão ou a suspensão. O art.102,I,l, da Constituição a destina à preservação da competência do STF e à garantia da autoridade de suas decisões. O simples fato de a Assembleia exercer regularmente a atribuição constitucional de rever a medida não demonstra, por si só, usurpação de competência ou descumprimento de decisão do Supremo.\n\nA redação deD menciona a “autoridade do parlamentar”. Essa expressão não define a finalidade da reclamação: o parâmetro jurídico é a autoridade das decisões do STF, não a autoridade política de um parlamentar. A soluçãoD é adotada para a hipótese descrita, sem ensinar inexistência geral de precedentes ou impossibilidade absoluta de reclamação.\n\nA está errada ao apresentar cabimento automático decorrente da revogação, sem demonstrar violação da competência ou da autoridade do STF. B dispensa o controle da Casa mesmo no caso de medida que interfere no mandato. C ignora a extensão constitucional das imunidades. E elimina indevidamente a possibilidade de cautelar judicial.\n\nExemplo: o Judiciário suspende o exercício do mandato e a Assembleia, dentro do procedimento constitucional aplicável, decide sustar a medida. Essa decisão, por si só, não autoriza concluir que houve desobediência ao STF. É diferente de um ato que efetivamente desrespeite decisão vinculante ou usurpe sua competência: nesse outro caso, o cabimento de reclamação deve ser examinado segundo seus requisitos próprios.\n\nExercício: basta discordar da deliberação da Assembleia para ter direito a reclamação no STF? Não. É necessário demonstrar fundamento próprio desse instrumento. A imunidade formal também não significa ausência de responsabilização penal.\n\nTambém conferida diretamente a ADI5526: o STF reconheceu a competência judicial para cautelares do art319 do CPP e determinou remessa em24horas à Casa Legislativa quando a medida dificulte ou impeça, direta ou indiretamente, o exercício regular do mandato. Esse controle não se aplica indistintamente a toda cautelar.\n\nFontes: ADI5526, notícia oficial STF sobre aplicação de cautelares a parlamentares; Constituição, arts27,§1º,53 e102,I,l; STF, ADIs5824/5825, notícia oficial de02/01/2023 sobre o julgamento do mérito. A notícia das ADIs fundamenta a extensão das imunidades, não é apresentada como julgamento específico desta reclamação hipotética. A explicação do cabimento é análise do caso à luz da finalidade constitucional do instrumento. Texto constitucional consultado na captura oficial de16/10/2026, com data da captura preservada; notícia STF novamente obtida nesta conferência. Caderno PCRJ Delegado, questão75, página23; definitivo, página1, letraD. Programa de Direito Constitucional, páginas74–75 do edital histórico de origem. Não se alteraram a redação oficial ou a letra da banca."
+    },
+    "evidence": {
+      "legal": true,
+      "reason": "Cabimento analisado pela finalidade constitucional da reclamação e pelo exercício regular da competência da Assembleia; extensão de imunidades confirmada nas ADIs5824/5825. Não se atribui às ADIs julgamento específico de reclamação ou imunidade absoluta a atos legislativos.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/normas-do-rj-e-de-mt-podem-estender-imunidade-de-parlamentares-federais-aos-estaduais/",
+        "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/ED_1_PCRJ_ABT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF"
+      ],
+      "captures": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+          "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+          "captured_at": "2026-10-16T15:47:33.224Z"
+        },
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/normas-do-rj-e-de-mt-podem-estender-imunidade-de-parlamentares-federais-aos-estaduais/",
+          "path": "outputs/pc-pending-review-2026-10-16/five-fast-stf-adi.html",
+          "sha256": "be63be3917d28ab7aab869d8c638a3fd7a0938bbe0aa93a20ca8d7f19547c00f",
+          "captured_at": "2026-10-18T03:48:39.051783+00:00"
+        },
+        {
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/ED_1_PCRJ_ABT.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/five-fast-rj-edital.pdf",
+          "sha256": "2a850b854502276947bab5b712b51e9aaa72804bfee12b6540a7f5019fb8a2d8",
+          "captured_at": "2026-10-18T03:48:38.986772+00:00"
+        }
+      ],
+      "constitutional_capture_date_preserved": true,
+      "original_answer_preserved": true,
+      "paper_page": 23,
+      "key_page": 1,
+      "scope": "Revogação regular na hipótese descrita, sem regra de impossibilidade absoluta de reclamação."
+    },
+    "supplement": {
+      "legal": false,
+      "reason": "Acrescenta a fonte primária ADI5526 que fundamenta o controle da Casa sobre cautelares que interferem no mandato; status, vínculos, base constitucional e aprovação preservados.",
+      "sources": [
+        "https://noticias.stf.jus.br/postsnoticias/stf-define-aplicacao-de-medidas-cautelares-do-cpp-a-parlamentares/"
+      ],
+      "capture": {
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-aplicacao-de-medidas-cautelares-do-cpp-a-parlamentares/",
+        "path": "outputs/pc-pending-review-2026-10-16/five-fast-adi5526.html",
+        "sha256": "806e21df6669da7378fb50385e5d563371da55e0d61d1c29f625fea7ad3779a5",
+        "captured_at": "2026-10-18T03:51:38.156455+00:00"
+      }
+    }
+  },
+  "metadata": {
+    "sources": [
+      {
+        "kind": "prova",
+        "row": {
+          "id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-18T03:51:10.548342+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (XIII Concurso, Delegado de Polícia 3ª Classe) aplicado em 13/03/2022; publicado pela banca.\nCotejo individual questão75, caderno página23 e definitivo página1, letraD. Não revisão integral. SHA-256 1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1"
+        }
+      },
+      {
+        "kind": "gabarito",
+        "row": {
+          "id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-18T03:51:10.548362+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nCotejo individual questão75, caderno página23 e definitivo página1, letraD. Não revisão integral. SHA-256 b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648"
+        }
+      },
+      {
+        "kind": "edital",
+        "row": {
+          "id": "b0fe87a8-c1c6-586d-80f6-96a983c184d7",
+          "source_type": "edital",
+          "title": "Edital nº1 — PCRJ Delegado — abertura do concurso2021/2022",
+          "issuer": "PCERJ / Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/ED_1_PCRJ_ABT.PDF",
+          "published_on": "2021-09-13",
+          "checked_at": "2026-10-18T03:48:38.986772+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Edital histórico de origem, não abertura nova em2026. Recorte de Direito Constitucional nas páginas74–75: Poder Legislativo, separação de poderes, Congresso, organização do Judiciário e controle de constitucionalidade. Conferência individual do vínculo da questão75; não revisão integral do edital ou de todas as questões. SHA-256 2a850b854502276947bab5b712b51e9aaa72804bfee12b6540a7f5019fb8a2d8"
+        }
+      }
+    ],
+    "edition": {
+      "expected": {
+        "id": "5457e548-388c-4b4a-a2ac-a99c820e88f1",
+        "contest_name": "Polícia Civil do Estado do Rio de Janeiro",
+        "role_name": "Delegado de Polícia",
+        "contest_year": 2022,
+        "exam_board": "Cebraspe",
+        "source_id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+        "status": "active",
+        "created_at": "2026-10-13T21:54:08.866904+00:00"
+      },
+      "source_id": "b0fe87a8-c1c6-586d-80f6-96a983c184d7"
+    },
+    "refresh": [
+      {
+        "id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+        "row": {
+          "id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-18T03:51:10.548342+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Caderno oficial (XIII Concurso, Delegado de Polícia 3ª Classe) aplicado em 13/03/2022; publicado pela banca.\nCotejo individual questão75, caderno página23 e definitivo página1, letraD. Não revisão integral. SHA-256 1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_rj_21_delegado",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/nonro8-rj-catalog.json",
+          "catalog_sha256": "971f302fe831db37d2781c74b6482b769147a54ffa86879f8879036d5d414708",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/nonro8-rj-paper.pdf",
+          "sha256": "1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1"
+        }
+      },
+      {
+        "id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+        "row": {
+          "id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-18T03:51:10.548362+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nCotejo individual questão75, caderno página23 e definitivo página1, letraD. Não revisão integral. SHA-256 b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_rj_21_delegado",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/nonro8-rj-catalog.json",
+          "catalog_sha256": "971f302fe831db37d2781c74b6482b769147a54ffa86879f8879036d5d414708",
+          "visually_verified": true,
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/nonro8-rj-key.pdf",
+          "sha256": "b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648"
+        }
+      }
+    ]
+  }
+}

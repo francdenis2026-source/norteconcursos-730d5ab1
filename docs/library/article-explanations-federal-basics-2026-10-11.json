@@ -1,0 +1,2691 @@
+{
+  "version": "2026-10-11-federal-basics",
+  "checked_at": "2026-10-12T01:35:59.346747+00:00",
+  "scope": "51 unidades explicitamente revistas, sem certificar as demais.",
+  "laws": [
+    {
+      "slug": "quimicos",
+      "title": "Lei 10.357/2001 — Controle de Produtos Químicos",
+      "units": 23,
+      "scope_type": "targeted_correction",
+      "course_current_units": 23,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "source_sha256": "0480e98c91b2612148982a7f30afb1893d4849cc3d64c0caf5b3f11b56e56798",
+      "source_checked_at": "2026-10-12T00:31:20.144410+00:00"
+    },
+    {
+      "slug": "cpf",
+      "title": "Lei 14.534/2023 — CPF como identificador único",
+      "units": 7,
+      "scope_type": "targeted_correction",
+      "course_current_units": 7,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-8",
+        "art-9"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "source_sha256": "ea2acd23920ade87062012fcd17c6bb194103065f1f0f46890dc453c96c5d9f9",
+      "source_checked_at": "2026-10-12T00:31:35.101743+00:00"
+    },
+    {
+      "slug": "identidade",
+      "title": "Lei 7.116/1983 — Carteira de Identidade",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 13,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "source_sha256": "37a0b7999247aa64b286f82a6f8b964ee4dcf2c1eeb1b5bc8bff994be93bdfd8",
+      "source_checked_at": "2026-10-12T00:31:33.621193+00:00"
+    },
+    {
+      "slug": "menor-potencial-ofensivo",
+      "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+      "units": 8,
+      "scope_type": "targeted_correction",
+      "course_current_units": 8,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "source_sha256": "0dd588a7754e4f849aed996c411a988b8d35497b218ce8ca5f8fecf3c3434598",
+      "source_checked_at": "2026-10-12T00:31:32.660893+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "33e87330-80dc-5539-8685-fc3e40024b63",
+      "content_sha256": "b4d912427753672d56df0363f49a8a0355d081613ddb174079f8e2d69825c1d2",
+      "simples": "Controle alcança múltiplas operações com insumos para drogas e formulações nas concentrações regulamentares, em qualquer estado físico, independentemente do nome fantasia ou uso lícito. As substâncias do §1º são as não controladas pelo órgão competente da Saúde.",
+      "pontos": [
+        "Produto, concentração e operação, não nome comercial."
+      ],
+      "atencao": [
+        "Uso industrial lícito não exclui automaticamente controle. Não incluir toda substância sem consultar listas e concentração atuais."
+      ],
+      "exemplo": "Empresa vende formulação sob marca própria, mas o insumo/concentração está controlado: examine o regime. Variação: O nome muda sem mudar composição: isso não afasta controle.",
+      "prova": [
+        "O nome fantasia afasta o controle do produto? Não; composição e critérios regulamentares prevalecem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "33e87330-80dc-5539-8685-fc3e40024b63",
+        "content_sha256": "b4d912427753672d56df0363f49a8a0355d081613ddb174079f8e2d69825c1d2",
+        "simples": "Estão sujeitos a controle e fiscalização, em todas as etapas (fabricação, armazenamento, compra, venda, posse, transporte, importação, exportação, utilização, entre outras), todos os produtos químicos que possam ser utilizados como insumo na elaboração de substâncias entorpecentes, psicotrópicas ou que determinem dependência física ou psíquica. O controle aplica-se também a essas substâncias quando não estiverem sob controle do Ministério da Saúde. Considera-se produto químico a substância química e as formulações que a contenham, nas concentrações estabelecidas em portaria, em qualquer estado físico, independentemente do nome fantasia e do uso lícito a que se destina.",
+        "pontos": [
+          "Controle de todos os produtos químicos usados como insumo de drogas.",
+          "Abrange todas as etapas, da fabricação à utilização.",
+          "Aplica-se a substâncias sem controle do Ministério da Saúde.",
+          "Conceito de produto químico por concentração em portaria."
+        ],
+        "atencao": [
+          "O controle vale mesmo para uso LÍCITO e independe do nome fantasia."
+        ],
+        "exemplo": "Um solvente usado na indústria também se sujeita ao controle se puder servir de insumo para drogas.",
+        "prova": [
+          "Assertiva que dispensa o controle quando o produto tem uso lícito erra."
+        ],
+        "termos": [
+          {
+            "termo": "Insumo",
+            "significado": "Produto usado como matéria-prima na fabricação de outro."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "e0b21790-196d-56d1-b4a4-38a5e4f5e669",
+      "content_sha256": "1d786a0dad2923a636612fd95b05facc2f837269c8139ad3854091a7b6f5b0d1",
+      "simples": "Ministro da Justiça define e atualiza produtos, critérios e formas em portaria, de ofício ou por proposta dos órgãos enumerados. Consulta deve alcançar regulamentação atual, não lista congelada em apostila.",
+      "pontos": [
+        "Portaria controla lista/concentração; instruções complementam procedimentos."
+      ],
+      "atencao": [
+        "Atualização de 2026: IN DG/PF 338 substituiu INs 166/2020 e 211/2021 desde publicação em 03/08/2026. Ela não deve ser confundida com ato ministerial que define lista."
+      ],
+      "exemplo": "O produto é comparado à lista ministerial e o procedimento à instrução vigente. Variação: Manual usa só a IN 166: consulte a norma substitutiva de 2026.",
+      "prova": [
+        "A lista pode ser atualizada por portaria? Sim; o artigo prevê inclusão e exclusão de produtos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ],
+      "expected": {
+        "unit_id": "e0b21790-196d-56d1-b4a4-38a5e4f5e669",
+        "content_sha256": "1d786a0dad2923a636612fd95b05facc2f837269c8139ad3854091a7b6f5b0d1",
+        "simples": "O Ministro de Estado da Justiça, de ofício ou por proposta do Departamento de Polícia Federal, da Secretaria Nacional Antidrogas ou da Anvisa, definirá, em portaria, os produtos químicos a serem controlados e, quando necessário, promoverá sua atualização, incluindo ou excluindo produtos, bem como estabelecerá os critérios e as formas de controle.",
+        "pontos": [
+          "Lista de produtos controlados definida por portaria do Ministro da Justiça.",
+          "Pode agir de ofício ou por proposta da PF, da Secretaria Nacional Antidrogas ou da Anvisa.",
+          "Atualização para incluir ou excluir produtos."
+        ],
+        "atencao": [
+          "A lista é infralegal (portaria), e não da lei."
+        ],
+        "exemplo": "Uma portaria inclui novo produto na lista de controlados.",
+        "prova": [
+          "Assertiva que fixa a lista de produtos na própria lei erra: ela é por portaria."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "647054c4-2aa0-5250-9a1c-d64f8f90eca3",
+      "content_sha256": "90517c6ccf67463cad1027c411968fe614f0ad35f39b37b0b9d1d0ee0b110ce3",
+      "simples": "Cabe à PF controlar/fiscalizar produtos da lei e aplicar sanções administrativas. Outras atribuições legais permanecem, inclusive autoridades de saúde.",
+      "pontos": [
+        "PF: fiscalização e sanção administrativa."
+      ],
+      "atencao": [
+        "Sanção administrativa não equivale à condenação penal pela própria autoridade policial."
+      ],
+      "exemplo": "PF fiscaliza atividade controlada e instaura apuração administrativa cabível. Variação: O fiscal aplica multa: isso não substitui julgamento penal de eventual outro crime.",
+      "prova": [
+        "A competência inclui sanções administrativas? Sim; o art. 3º as atribui à PF."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "647054c4-2aa0-5250-9a1c-d64f8f90eca3",
+        "content_sha256": "90517c6ccf67463cad1027c411968fe614f0ad35f39b37b0b9d1d0ee0b110ce3",
+        "simples": "Compete ao Departamento de Polícia Federal o controle e a fiscalização dos produtos químicos a que se refere o art. 1º e a aplicação das sanções administrativas decorrentes.",
+        "pontos": [
+          "Controle e fiscalização pela Polícia Federal.",
+          "Aplicação das sanções administrativas."
+        ],
+        "atencao": [
+          "Quem fiscaliza produtos químicos controlados é a POLÍCIA FEDERAL (e não o Exército)."
+        ],
+        "exemplo": "A PF fiscaliza o depósito de produtos químicos controlados.",
+        "prova": [
+          "Assertiva que atribui ao Exército a fiscalização dos produtos químicos desta Lei erra: é da Polícia Federal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "08abaa99-9f4c-5859-8202-f2399b6700ca",
+      "content_sha256": "dc8045c2fe8206857f1141c6a46b8c93215dba2fe976a51adc8997fd9a18f551",
+      "simples": "Atividade controlada exige cadastro e licença da PF, conforme regulamentação, sem dispensar demais exigências. Atividade eventual exige cadastro e autorização especial; pessoas jurídicas cadastradas têm previsão de recadastramento regulamentar.",
+      "pontos": [
+        "Rotina: licença; eventual: autorização especial, com cadastro."
+      ],
+      "atencao": [
+        "Eventual não significa livre de autorização nem substitui exigências dos outros órgãos."
+      ],
+      "exemplo": "Pessoa precisa realizar operação eventual e requer autorização especial. Variação: Pretende operar habitualmente sob autorização pontual: compare licença exigida para atividade regular.",
+      "prova": [
+        "A operação eventual dispensa cadastro e autorização? Não; o §2º exige ambos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "08abaa99-9f4c-5859-8202-f2399b6700ca",
+        "content_sha256": "dc8045c2fe8206857f1141c6a46b8c93215dba2fe976a51adc8997fd9a18f551",
+        "simples": "Para exercer qualquer atividade sujeita a controle e fiscalização, a pessoa física ou jurídica deverá se cadastrar e requerer licença de funcionamento ao Departamento de Polícia Federal, nos termos da portaria do art. 2º, independentemente de outras exigências legais. As pessoas jurídicas já cadastradas providenciarão o recadastramento. Quem exercer a atividade de modo eventual deverá se cadastrar e requerer autorização especial para suas operações.",
+        "pontos": [
+          "Cadastro e licença de funcionamento na PF.",
+          "Recadastramento das já cadastradas.",
+          "Atividade eventual: cadastro e autorização especial."
+        ],
+        "atencao": [
+          "Licença para atividade REGULAR; autorização especial para atividade EVENTUAL."
+        ],
+        "exemplo": "A empresa que revende solventes controlados exige licença de funcionamento da PF.",
+        "prova": [
+          "Assertiva que dispensa o cadastro de quem exerce a atividade apenas eventualmente erra: exige autorização especial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "052bca08-42b3-577b-b392-13f50cfb3211",
+      "content_sha256": "58ef2053c8d797760cc4bf7007d0b4d4f1d642d2e0ff013c4a32a01af9629312",
+      "simples": "A pessoa jurídica abrangida deve pedir anualmente renovação da licença para prosseguir. Procedimento eletrônico e condições devem ser conferidos na regulamentação PF vigente.",
+      "pontos": [
+        "Renovação anual; não licença permanente."
+      ],
+      "atencao": [
+        "Não presumir renovação automática sem requerimento nem aplicar manual de IN substituída."
+      ],
+      "exemplo": "A empresa prepara renovação anual dentro do procedimento. Variação: Apenas mantém o cadastro antigo sem renovar: cadastro não substitui licença válida.",
+      "prova": [
+        "A pessoa jurídica pode prosseguir indefinidamente sem renovar licença? Não; o art. 5º exige renovação anual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ],
+      "expected": {
+        "unit_id": "052bca08-42b3-577b-b392-13f50cfb3211",
+        "content_sha256": "58ef2053c8d797760cc4bf7007d0b4d4f1d642d2e0ff013c4a32a01af9629312",
+        "simples": "A pessoa jurídica referida no caput do art. 4º deverá requerer, anualmente, a renovação da licença de funcionamento para o prosseguimento de suas atividades.",
+        "pontos": [
+          "Renovação anual da licença de funcionamento."
+        ],
+        "atencao": [
+          "Periodicidade ANUAL."
+        ],
+        "exemplo": "A empresa renova sua licença da PF todo ano.",
+        "prova": [
+          "Assertiva que fixa a renovação a cada cinco anos erra: é anual."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "4921648d-df82-5085-8eb0-47f060ff5359",
+      "content_sha256": "bb662fa1d2cb057cee11de575fb7282cc253bad2c15087df7d720db656184a21",
+      "simples": "Todas as partes envolvidas devem possuir licença, salvo quantidades abaixo dos limites estabelecidos em portaria. A dispensa depende da hipótese concreta de produto e quantidade.",
+      "pontos": [
+        "Limites regulamentares, não isenção universal."
+      ],
+      "atencao": [
+        "Ser quantidade pequena sem comparar limite aplicável não basta. Não presumir que uma parte licenciada regulariza todas."
+      ],
+      "exemplo": "Comprador e vendedor conferem licenças e eventual exceção quantitativa. Variação: Só o fornecedor está regular: examine também a exigência da outra parte.",
+      "prova": [
+        "Uma parte licenciada dispensa automaticamente licença das demais? Não; a regra alcança todas as partes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "4921648d-df82-5085-8eb0-47f060ff5359",
+        "content_sha256": "bb662fa1d2cb057cee11de575fb7282cc253bad2c15087df7d720db656184a21",
+        "simples": "Todas as partes envolvidas deverão possuir licença de funcionamento, exceto quando se tratar de quantidades de produtos químicos inferiores aos limites a serem estabelecidos em portaria do Ministro da Justiça.",
+        "pontos": [
+          "Todas as partes da operação devem ter licença.",
+          "Exceção: quantidades inferiores aos limites da portaria."
+        ],
+        "atencao": [
+          "Vendedor e comprador precisam estar licenciados."
+        ],
+        "exemplo": "Quem compra de fornecedor sem licença descumpre a Lei, salvo quantidade abaixo do limite.",
+        "prova": [
+          "Assertiva que exige licença apenas do vendedor erra: todas as partes devem tê-la."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "65d8f6d5-5085-502a-9e69-8c4c4e46547d",
+      "content_sha256": "6ecd2dbd1b2bde4148e561ce3a6d23a335a442882d535d750c258ff6373acde2",
+      "simples": "Importação, exportação ou reexportação controlada requer autorização prévia PF nos casos da portaria, sem dispensar licenças e procedimentos dos outros órgãos.",
+      "pontos": [
+        "Prévia; as três operações internacionais."
+      ],
+      "atencao": [
+        "Não pedir autorização somente depois da operação nem presumir que licença interna basta."
+      ],
+      "exemplo": "A empresa prepara reexportação e obtém autorização prévia cabível. Variação: Tem licença de funcionamento, mas não autorização internacional exigida: uma não substitui automaticamente a outra.",
+      "prova": [
+        "A regra também alcança reexportação? Sim; é expressamente enumerada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "65d8f6d5-5085-502a-9e69-8c4c4e46547d",
+        "content_sha256": "6ecd2dbd1b2bde4148e561ce3a6d23a335a442882d535d750c258ff6373acde2",
+        "simples": "Para importar, exportar ou reexportar os produtos químicos controlados é necessária autorização prévia do Departamento de Polícia Federal, nos casos previstos em portaria, sem prejuízo da exigência de licença às partes e dos procedimentos de outros órgãos competentes.",
+        "pontos": [
+          "Autorização prévia da PF para importar, exportar e reexportar.",
+          "Nos casos previstos em portaria."
+        ],
+        "atencao": [
+          "Autorização PRÉVIA."
+        ],
+        "exemplo": "A empresa solicita à PF a autorização antes de importar o produto controlado.",
+        "prova": [
+          "Assertiva que dispensa a autorização prévia na importação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "d21ff4e7-afd4-5e56-958d-a9afffda0f20",
+      "content_sha256": "8af2f1e56c054c046b132516f8f442b777ff3f0b44659230ae6d839730ea9aa6",
+      "simples": "Pessoa jurídica fornece periodicamente informações de operações à PF. Documentos de suporte são guardados cinco anos e apresentados quando requisitados.",
+      "pontos": [
+        "Informação periódica + arquivo por 5 anos."
+      ],
+      "atencao": [
+        "Não confundir guarda de documentos com autorização de operar nem prazo de comunicação emergencial."
+      ],
+      "exemplo": "Empresa informa operações e mantém documentos comprobatórios cinco anos. Variação: Envia mapa e descarta notas imediatamente: informar não dispensa arquivar.",
+      "prova": [
+        "O envio das informações dispensa guardar documentos? Não; o parágrafo exige arquivo por cinco anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d21ff4e7-afd4-5e56-958d-a9afffda0f20",
+        "content_sha256": "8af2f1e56c054c046b132516f8f442b777ff3f0b44659230ae6d839730ea9aa6",
+        "simples": "A pessoa jurídica que realizar qualquer das atividades do art. 1º é obrigada a fornecer ao Departamento de Polícia Federal, periodicamente, informações sobre suas operações. Os documentos que consubstanciam essas informações deverão ser arquivados pelo prazo de cinco anos e apresentados à PF quando solicitados.",
+        "pontos": [
+          "Informações periódicas à PF.",
+          "Arquivo dos documentos por cinco anos."
+        ],
+        "atencao": [
+          "Guarda por CINCO anos."
+        ],
+        "exemplo": "A empresa envia à PF mapas periódicos de suas operações e guarda os documentos.",
+        "prova": [
+          "Assertiva que fixa em dois anos a guarda dos documentos erra: são cinco anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "1d98b141-51dc-5763-8c8c-417f6d71a986",
+      "content_sha256": "bda793054185016e3d807f3a23b06346383ac8fe53499b5e3834dfd516336e7a",
+      "simples": "Modelos de mapas/formulários são publicados em portaria ministerial. Uso operacional segue os instrumentos eletrônicos e normas atuais disponíveis na PF.",
+      "pontos": [
+        "Modelo oficial e fluxo atualizado."
+      ],
+      "atencao": [
+        "Não recriar formulário antigo como garantia de aceitação no sistema atual."
+      ],
+      "exemplo": "O responsável utiliza o modelo/fluxo oficial para prestar informações. Variação: Apostila mostra tela antiga: consulte a documentação vigente antes de tratá-la como exigência atual.",
+      "prova": [
+        "Os modelos são definidos livremente por cada empresa? Não; o artigo prevê publicação ministerial."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "1d98b141-51dc-5763-8c8c-417f6d71a986",
+        "content_sha256": "bda793054185016e3d807f3a23b06346383ac8fe53499b5e3834dfd516336e7a",
+        "simples": "Os modelos de mapas e formulários necessários à implementação das normas dos artigos anteriores serão publicados em portaria ministerial.",
+        "pontos": [
+          "Modelos de mapas e formulários por portaria ministerial."
+        ],
+        "atencao": [
+          "Matéria regulamentar."
+        ],
+        "exemplo": "A portaria fixa o formulário de prestação de informações.",
+        "prova": [
+          "Assertiva que prevê a edição dos modelos por lei erra: é por portaria."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "72766b98-fe32-5c12-8029-c491c2d031b4",
+      "content_sha256": "64025b2a1beb426544b0ccebb5d7ada5fffa351fb67acbe774b7d769b7463bc0",
+      "simples": "Suspensão ou mudança de atividade controlada deve ser comunicada à PF em trinta dias contados do evento.",
+      "pontos": [
+        "30 dias da suspensão/mudança."
+      ],
+      "atencao": [
+        "Não contar da próxima renovação anual nem confundir com 24h para suspeita de desvio."
+      ],
+      "exemplo": "A empresa interrompe atividade e comunica dentro de trinta dias. Variação: Aguarda o ano seguinte para renovar: isso não cumpre a comunicação do evento.",
+      "prova": [
+        "O prazo começa apenas na renovação anual? Não; começa na suspensão ou mudança."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "72766b98-fe32-5c12-8029-c491c2d031b4",
+        "content_sha256": "64025b2a1beb426544b0ccebb5d7ada5fffa351fb67acbe774b7d769b7463bc0",
+        "simples": "A pessoa física ou jurídica que, por qualquer motivo, suspender o exercício de atividade sujeita a controle e fiscalização ou mudar de atividade controlada deverá comunicar a paralisação ou alteração à Polícia Federal no prazo de trinta dias da suspensão ou mudança.",
+        "pontos": [
+          "Comunicação de suspensão ou mudança de atividade.",
+          "Prazo de trinta dias."
+        ],
+        "atencao": [
+          "Prazo de TRINTA dias."
+        ],
+        "exemplo": "A empresa que para de revender o produto controlado avisa a PF em trinta dias.",
+        "prova": [
+          "Assertiva que fixa em vinte e quatro horas o prazo para comunicar a suspensão erra: são trinta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "8a956aa2-4758-5728-9964-54ae8b646669",
+      "content_sha256": "78df2355a41e1a893fce78a2ce0e1db73f50d340fba8ef7b4c0908cc5d08c0fa",
+      "simples": "Qualquer suspeita de desvio de produto controlado deve ser informada à PF no máximo em 24 horas. Não se exige esperar confirmação do crime.",
+      "pontos": [
+        "Suspeita: 24h."
+      ],
+      "atencao": [
+        "Furto/roubo/extravio têm hipótese específica de 48h no art. 12, XII; não trocar os eventos."
+      ],
+      "exemplo": "Surge suspeita de desvio e o responsável comunica em até 24h. Variação: Espera prova definitiva para informar: o dever legal já nasce da suspeita.",
+      "prova": [
+        "É preciso confirmar o desvio para só então informar? Não; a lei exige informar qualquer suspeita."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8a956aa2-4758-5728-9964-54ae8b646669",
+        "content_sha256": "78df2355a41e1a893fce78a2ce0e1db73f50d340fba8ef7b4c0908cc5d08c0fa",
+        "simples": "A pessoa física ou jurídica que exerça atividade sujeita a controle e fiscalização deverá informar à Polícia Federal, no prazo máximo de vinte e quatro horas, qualquer suspeita de desvio de produto químico a que se refere a Lei.",
+        "pontos": [
+          "Comunicação de suspeita de desvio.",
+          "Prazo máximo de vinte e quatro horas."
+        ],
+        "atencao": [
+          "Prazo curto para suspeita de desvio: vinte e quatro horas."
+        ],
+        "exemplo": "A distribuidora avisa a PF no mesmo dia de uma compra suspeita de grande volume.",
+        "prova": [
+          "Assertiva que fixa em trinta dias o prazo para informar suspeita de desvio erra: são vinte e quatro horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-12",
+      "unit_id": "4ed0c4a9-c1e3-5fb9-aa5f-8a2d0d00ae16",
+      "content_sha256": "1a6ccdd6e7b64211f14b7d373fe1b7e6257cfa93a43b506d0f557334a25076fd",
+      "simples": "Lista infrações administrativas: cadastro/licença, alteração comunicada em 30 dias, informação/documentos, operação irregular e contraparte irregular, desvio, autorização internacional, composição e concentração, fraude documental e obstrução. Furto, roubo ou extravio de produto/documento devem ser comunicados em 48h. IN 338/2026 atualiza enquadramento procedimental e faixas administrativas.",
+      "pontos": [
+        "Memória de prazos: alterações 30 dias; suspeita 24h; furto/roubo/extravio 48h."
+      ],
+      "atencao": [
+        "A lista é administrativa; eventual crime requer tipo penal próprio. Não equiparar alteração de composição previamente comunicada à fraude automaticamente."
+      ],
+      "exemplo": "O responsável conhece furto de produto e omite comunicação além de 48h: examine inciso XII. Variação: É suspeita de desvio: compare o prazo menor de 24h, sem transplantar 48h.",
+      "prova": [
+        "O prazo para comunicar furto, roubo ou extravio é de 48 horas? Sim; o inciso XII o prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ],
+      "expected": {
+        "unit_id": "4ed0c4a9-c1e3-5fb9-aa5f-8a2d0d00ae16",
+        "content_sha256": "1a6ccdd6e7b64211f14b7d373fe1b7e6257cfa93a43b506d0f557334a25076fd",
+        "simples": "Constitui infração administrativa: deixar de cadastrar-se ou licenciar-se no prazo legal; deixar de comunicar à PF, em trinta dias, qualquer alteração cadastral ou estatutária, bem como a suspensão ou mudança de atividade; omitir informações ou prestá-las incompletas ou inexatas; não apresentar documentos de controle quando solicitado; exercer a atividade sem licença ou autorização especial; exercer a atividade com pessoa não autorizada ou irregular; deixar de informar suspeita de desvio; importar, exportar ou reexportar sem autorização prévia; alterar a composição de produto controlado sem comunicação; adulterar laudos, notas fiscais, rótulos e embalagens; deixar de informar a concentração do produto na embalagem ou rótulo; deixar de comunicar à PF furto, roubo ou extravio em quarenta e oito horas; e dificultar a ação do órgão de controle.",
+        "pontos": [
+          "Treze hipóteses de infração administrativa.",
+          "Falta de cadastro ou licença.",
+          "Omissão ou inexatidão de informações.",
+          "Adulteração de laudos, notas e rótulos.",
+          "Furto, roubo ou extravio: comunicar em quarenta e oito horas.",
+          "Dificultar a fiscalização."
+        ],
+        "atencao": [
+          "Prazos distintos: trinta dias (alteração), vinte e quatro horas (suspeita de desvio, art. 11) e quarenta e oito horas (furto, roubo ou extravio)."
+        ],
+        "exemplo": "Empresa que perde um lote e não avisa a PF em quarenta e oito horas comete infração administrativa.",
+        "prova": [
+          "Assertiva que fixa em vinte e quatro horas o prazo para comunicar furto ou extravio erra: são quarenta e oito horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-13",
+      "unit_id": "308a7610-5384-5b86-a59b-c1abb9debad9",
+      "content_sha256": "d35af23e06de4c011c52ae0fbfa41ffd012a5b0f643ec5a7e13baa260fb7ad0c",
+      "simples": "A fiscalização deve ser formalizada em documento próprio. IN 338/2026 disciplina fiscalização e processo eletrônico, sem transformar toda fiscalização sem irregularidade em infração.",
+      "pontos": [
+        "Documentar fiscalização; distinguir constatação e punição."
+      ],
+      "atencao": [
+        "A visita de fiscalização não prova automaticamente irregularidade."
+      ],
+      "exemplo": "A equipe documenta o ato e seus achados. Variação: Não encontra infração: não se presume necessidade de processo punitivo só pela visita.",
+      "prova": [
+        "A fiscalização precisa de formalização documental? Sim; o artigo exige documento próprio."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ],
+      "expected": {
+        "unit_id": "308a7610-5384-5b86-a59b-c1abb9debad9",
+        "content_sha256": "d35af23e06de4c011c52ae0fbfa41ffd012a5b0f643ec5a7e13baa260fb7ad0c",
+        "simples": "Os procedimentos realizados no exercício da fiscalização deverão ser formalizados mediante a elaboração de documento próprio.",
+        "pontos": [
+          "Formalização por documento próprio."
+        ],
+        "atencao": [
+          "Exigência formal da fiscalização."
+        ],
+        "exemplo": "O agente da PF lavra termo de fiscalização.",
+        "prova": [
+          "Assertiva que dispensa a formalização da fiscalização erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-14",
+      "unit_id": "df797309-7258-5415-b3ec-235092cce794",
+      "content_sha256": "86f4f5d9e0cd6cccc520e2333f71a1654c8d360501ea1d9b44e36619c6ed5b34",
+      "simples": "Medidas administrativas podem ser isoladas/cumulativas: advertência, apreensão irregular, suspensão/cancelamento da licença, revogação da autorização e multa de R$2.128,20 a R$1.064.100,00. Dosimetria considera fatores legais; multa pode ser parcelada até cinco meses a critério da autoridade. Recurso ao diretor-geral segue regulamento; IN 338/2026 prevê prazo de 15 dias da ciência no PAI.",
+      "pontos": [
+        "Não confundir suspensão/cancelamento de licença com revogação de autorização especial."
+      ],
+      "atencao": [
+        "Parcelamento não é direito automático; sanção não elimina responsabilidade penal. Faixa global da lei não substitui dosimetria e faixas da IN vigente."
+      ],
+      "exemplo": "A autoridade fundamenta multa considerando reincidência, quantidade e contexto. Variação: Concede parcelamento em até cinco parcelas: isso não revoga a sanção nem garante todo pedido.",
+      "prova": [
+        "O parcelamento é automaticamente obrigatório a pedido do infrator? Não; fica a critério da autoridade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ],
+      "expected": {
+        "unit_id": "df797309-7258-5415-b3ec-235092cce794",
+        "content_sha256": "86f4f5d9e0cd6cccc520e2333f71a1654c8d360501ea1d9b44e36619c6ed5b34",
+        "simples": "O descumprimento das normas da Lei, independentemente de responsabilidade penal, sujeitará os infratores, cumulativa ou isoladamente, a advertência formal; apreensão do produto químico em situação irregular; suspensão ou cancelamento de licença de funcionamento; revogação da autorização especial; e multa de R$ 2.128,20 a R$ 1.064.100,00. Na dosimetria consideram-se a situação econômica, a conduta, a reincidência, a natureza da infração, a quantidade dos produtos e as circunstâncias. A multa poderá ser paga em até cinco parcelas mensais. Cabe recurso ao Diretor-Geral da Polícia Federal.",
+        "pontos": [
+          "Medidas: advertência, apreensão, suspensão ou cancelamento de licença, revogação de autorização especial e multa.",
+          "Aplicadas cumulativa ou isoladamente.",
+          "Multa de R$ 2.128,20 a R$ 1.064.100,00.",
+          "Parcelamento da multa em até cinco parcelas.",
+          "Recurso ao Diretor-Geral da PF."
+        ],
+        "atencao": [
+          "As medidas administrativas independem de responsabilidade penal."
+        ],
+        "exemplo": "Empresa reincidente na omissão de informações recebe multa e suspensão da licença.",
+        "prova": [
+          "Assertiva que condiciona as medidas à condenação penal erra: elas independem da esfera penal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-15",
+      "unit_id": "1ae66c03-4af0-58fa-b186-84028e942fc8",
+      "content_sha256": "de430c5e43d1dd4bfea1235d6adfc593c04515779034a5911897f3759ca45df3",
+      "simples": "Irregularidades devem ser sanadas em trinta dias da fiscalização, sem excluir medidas administrativas. Regularização permite devolução ao legítimo titular; destinação definitiva de não regularizados observa decisão administrativa final. Risco iminente à saúde/ambiente admite destinação imediata.",
+      "pontos": [
+        "30 dias para sanar; risco iminente é exceção de destinação."
+      ],
+      "atencao": [
+        "Não considerar regularização perdão automático de sanções nem destruir livremente antes da decisão fora da hipótese excepcional."
+      ],
+      "exemplo": "Regulariza produto e requer devolução, sem apagar necessariamente sanção. Variação: Há risco iminente à saúde: examina-se destinação imediata do §3º.",
+      "prova": [
+        "Sanar em trinta dias afasta automaticamente toda medida administrativa? Não; o caput ressalva sua aplicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1ae66c03-4af0-58fa-b186-84028e942fc8",
+        "content_sha256": "de430c5e43d1dd4bfea1235d6adfc593c04515779034a5911897f3759ca45df3",
+        "simples": "Quem cometer qualquer infração terá prazo de trinta dias, a contar da fiscalização, para sanar as irregularidades, sem prejuízo das medidas do art. 14. Sanadas, os produtos apreendidos serão devolvidos ao proprietário. Os produtos não regularizados serão destruídos, alienados ou doados pela PF a instituições de ensino, pesquisa ou saúde pública, após o trânsito em julgado da decisão no processo administrativo. Em caso de risco iminente à saúde pública ou ao meio ambiente, o órgão fiscalizador poderá dar destinação imediata aos produtos apreendidos.",
+        "pontos": [
+          "Trinta dias para sanar as irregularidades.",
+          "Devolução dos produtos após a regularização.",
+          "Destruição, alienação ou doação dos não regularizados.",
+          "Destinação imediata em caso de risco iminente."
+        ],
+        "atencao": [
+          "Trinta dias contados da FISCALIZAÇÃO."
+        ],
+        "exemplo": "A empresa regulariza a licença no prazo e recupera o produto apreendido.",
+        "prova": [
+          "Assertiva que fixa em quinze dias o prazo para sanar as irregularidades erra: são trinta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-16",
+      "unit_id": "03cec783-7c6c-502c-9f77-f2f34a82242d",
+      "content_sha256": "bbf0a679fd3be484dae902aecce9a29df0499c264f683f98eaea5a9d4579a845",
+      "simples": "A taxa tem fato gerador no exercício do poder de polícia PF de controle/fiscalização das atividades da lei. Não é multa por conduta ilícita.",
+      "pontos": [
+        "Taxa ≠ sanção."
+      ],
+      "atencao": [
+        "Exercício regular sujeito à taxa não implica que houve infração."
+      ],
+      "exemplo": "Empresa regular solicita ato sujeito à taxa. Variação: Também sofre multa por irregularidade: cobrança e sanção têm fundamentos distintos.",
+      "prova": [
+        "O pagamento da taxa é necessariamente punição por infração? Não; decorre do poder de polícia."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "03cec783-7c6c-502c-9f77-f2f34a82242d",
+        "content_sha256": "bbf0a679fd3be484dae902aecce9a29df0499c264f683f98eaea5a9d4579a845",
+        "simples": "Fica instituída a Taxa de Controle e Fiscalização de Produtos Químicos, cujo fato gerador é o exercício do poder de polícia conferido ao Departamento de Polícia Federal para controle e fiscalização das atividades do art. 1º.",
+        "pontos": [
+          "Taxa de Controle e Fiscalização de Produtos Químicos.",
+          "Fato gerador: exercício do poder de polícia da PF."
+        ],
+        "atencao": [
+          "É uma TAXA (tributo), cobrada pelo poder de polícia."
+        ],
+        "exemplo": "A empresa paga taxa pela fiscalização da PF sobre seus produtos controlados.",
+        "prova": [
+          "Assertiva que classifica a cobrança como imposto erra: é taxa."
+        ],
+        "termos": [
+          {
+            "termo": "Poder de polícia",
+            "significado": "Atividade estatal que limita direitos em prol do interesse público."
+          }
+        ],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-17",
+      "unit_id": "1d83fab6-0b5a-5fc1-8f2e-ac66e5ac2e8f",
+      "content_sha256": "45951ad7301613e9a1511f395582eaf966ba8e7d499aee4a2008c28cf63667d7",
+      "simples": "Sujeitos passivos são pessoas físicas e jurídicas que exercem atividades controladas. As isenções do art. 18 precisam ser verificadas separadamente.",
+      "pontos": [
+        "Pessoa física também pode ser contribuinte."
+      ],
+      "atencao": [
+        "Não restringir taxa a grandes empresas nem presumir isenção de qualquer entidade sem lucro sem comprovação."
+      ],
+      "exemplo": "Pessoa física exerce atividade controlada e examina obrigação tributária. Variação: A entidade invoca isenção: deve preencher hipótese e comprovação aplicáveis.",
+      "prova": [
+        "A taxa alcança somente pessoas jurídicas? Não; o artigo inclui pessoas físicas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1d83fab6-0b5a-5fc1-8f2e-ac66e5ac2e8f",
+        "content_sha256": "45951ad7301613e9a1511f395582eaf966ba8e7d499aee4a2008c28cf63667d7",
+        "simples": "São sujeitos passivos da Taxa de Controle e Fiscalização de Produtos Químicos as pessoas físicas e jurídicas que exerçam qualquer das atividades sujeitas a controle e fiscalização de que trata o art. 1º.",
+        "pontos": [
+          "Sujeito passivo: quem exerce as atividades controladas."
+        ],
+        "atencao": [
+          "Alcança pessoas físicas e jurídicas."
+        ],
+        "exemplo": "A distribuidora e o importador pagam a taxa.",
+        "prova": [
+          "Assertiva que limita a taxa a pessoas jurídicas erra: inclui as físicas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-18",
+      "unit_id": "50bd3f69-7e2b-5d89-b5ca-c32c9f5550f1",
+      "content_sha256": "df010a0a38e2f5ac35c4358deb6d373154dd655d73e1f89bf5694669ef6185d2",
+      "simples": "Isentos: administração direta federal/estadual/municipal, instituições públicas de ensino/pesquisa/saúde e entidades assistenciais/filantrópicas sem fins lucrativos comprovadas. Isenção da taxa não afasta outros deveres de controle.",
+      "pontos": [
+        "Isenção tributária, não liberação de fiscalização."
+      ],
+      "atencao": [
+        "Não estender automaticamente a toda entidade da administração indireta apenas por vínculo público."
+      ],
+      "exemplo": "Instituição pública de pesquisa preenche hipótese de isenção, mas mantém deveres legais. Variação: Deixa de informar operações por ser isenta: a isenção não elimina o dever.",
+      "prova": [
+        "A isenção da taxa dispensa as demais obrigações da lei? Não; o caput as preserva."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "50bd3f69-7e2b-5d89-b5ca-c32c9f5550f1",
+        "content_sha256": "df010a0a38e2f5ac35c4358deb6d373154dd655d73e1f89bf5694669ef6185d2",
+        "simples": "São isentos da taxa, sem prejuízo das demais obrigações da Lei, os órgãos da Administração Pública direta federal, estadual e municipal; as instituições públicas de ensino, pesquisa e saúde; e as entidades particulares de caráter assistencial, filantrópico e sem fins lucrativos que comprovem essa condição na forma da lei.",
+        "pontos": [
+          "Isenção para órgãos da Administração direta.",
+          "Isenção para instituições públicas de ensino, pesquisa e saúde.",
+          "Isenção para entidades assistenciais e filantrópicas comprovadas."
+        ],
+        "atencao": [
+          "A isenção é da TAXA; as demais obrigações permanecem."
+        ],
+        "exemplo": "A universidade pública não paga a taxa, mas continua obrigada a se licenciar.",
+        "prova": [
+          "Assertiva que dispensa as isentas das obrigações de controle erra: a isenção é só da taxa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-19",
+      "unit_id": "7c10a734-46b4-5b52-ab08-ff4bc8045c0c",
+      "content_sha256": "10d20af3e6bfbeefb274c899261a2e3bf662a49a9f82e4f35731321f02ce3998",
+      "simples": "Valores legais: registro/cópia/alteração R$500; licença/cópia/renovação R$1.000; autorização especial/cópia R$50. Reduções dos incisos I/II: EPP 40%, filial já cadastrada 50%, microempresa 70%. Não se estendem automaticamente à autorização especial.",
+      "pontos": [
+        "Redução significa subtrair percentual: ME paga 30% da base indicada."
+      ],
+      "atencao": [
+        "Não somar descontos nem aplicá-los ao inciso III sem previsão. Operação real exige conferir instruções de recolhimento PF."
+      ],
+      "exemplo": "Microempresa aplica 70% de redução na licença de base R$1.000: resultado legal R$300. Variação: É autorização especial de R$50: a redução dos incisos I/II não incide automaticamente.",
+      "prova": [
+        "As reduções do parágrafo abrangem automaticamente a autorização especial? Não; o texto as limita aos incisos I e II."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7c10a734-46b4-5b52-ab08-ff4bc8045c0c",
+        "content_sha256": "10d20af3e6bfbeefb274c899261a2e3bf662a49a9f82e4f35731321f02ce3998",
+        "simples": "A Taxa é devida pela prática dos atos de controle e fiscalização: R$ 500,00 para emissão e alteração do Certificado de Registro Cadastral e para segunda via; R$ 1.000,00 para emissão, segunda via e renovação do Certificado de Licença de Funcionamento; e R$ 50,00 para emissão e segunda via da Autorização Especial. Os valores dos dois primeiros grupos são reduzidos em quarenta por cento para empresa de pequeno porte, cinquenta por cento para filial de empresa já cadastrada e setenta por cento para microempresa.",
+        "pontos": [
+          "Registro cadastral: R$ 500,00.",
+          "Licença de funcionamento: R$ 1.000,00.",
+          "Autorização especial: R$ 50,00.",
+          "Reduções de quarenta, cinquenta e setenta por cento para empresa de pequeno porte, filial e microempresa."
+        ],
+        "atencao": [
+          "Reduções não se aplicam à autorização especial (apenas aos grupos I e II)."
+        ],
+        "exemplo": "A microempresa paga o valor do registro com redução de setenta por cento.",
+        "prova": [
+          "Assertiva que aplica as reduções à autorização especial erra: valem só para os grupos I e II."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-20",
+      "unit_id": "090dca7a-295b-5254-b326-376874122ce1",
+      "content_sha256": "81491a05873aebdb2d918e2f059a9c215eca9525063c9e599449a60ded086752",
+      "simples": "Recolhimento da taxa segue prazos/condições estabelecidos em ato PF. O artigo não fixa prazo universal igual ao da comunicação de desvio.",
+      "pontos": [
+        "Pagamento: ato regulamentar próprio."
+      ],
+      "atencao": [
+        "Não inventar prazo de 24h/48h para toda taxa nem usar guia antiga sem conferir o serviço oficial."
+      ],
+      "exemplo": "O solicitante consulta orientação PF de recolhimento do ato solicitado. Variação: Confunde comunicação de ocorrência com vencimento da taxa: são obrigações distintas.",
+      "prova": [
+        "O artigo fixa prazo único de 24 horas para toda taxa? Não; remete aos prazos e condições do ato PF."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ],
+      "expected": {
+        "unit_id": "090dca7a-295b-5254-b326-376874122ce1",
+        "content_sha256": "81491a05873aebdb2d918e2f059a9c215eca9525063c9e599449a60ded086752",
+        "simples": "A Taxa será recolhida nos prazos e nas condições estabelecidos em ato do Departamento de Polícia Federal.",
+        "pontos": [
+          "Prazos e condições de recolhimento definidos pela PF."
+        ],
+        "atencao": [
+          "Matéria regulamentar."
+        ],
+        "exemplo": "A PF fixa o prazo para pagamento da taxa.",
+        "prova": [
+          "Assertiva que fixa o prazo de recolhimento em lei erra: é por ato da PF."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-21",
+      "unit_id": "db52a2bf-6410-543a-838d-7386d2c8c70f",
+      "content_sha256": "1c935104c08648096f6a77ed7b465424ecb10bc32caeea87d50d7dd10286b475",
+      "simples": "Taxa, multa e alienação de produtos constituem receita FUNAD. O parágrafo prevê destinar 80% desses recursos à PF para reaparelhamento/custeio de controle e repressão ao tráfico.",
+      "pontos": [
+        "80% do conjunto de receitas enumeradas, não de todo recurso público."
+      ],
+      "atencao": [
+        "Não confundir com honorário individual do fiscal nem destinação discricionária a qualquer órgão."
+      ],
+      "exemplo": "A receita de taxa indicada integra FUNAD e segue a destinação legal. Variação: Pergunta-se sobre fonte fora do caput: não aplicar automaticamente o mesmo percentual.",
+      "prova": [
+        "O percentual legal indicado para a PF é de 80%? Sim; sobre os recursos enumerados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "db52a2bf-6410-543a-838d-7386d2c8c70f",
+        "content_sha256": "1c935104c08648096f6a77ed7b465424ecb10bc32caeea87d50d7dd10286b475",
+        "simples": "Os recursos da Taxa, da aplicação de multa e da alienação de produtos químicos constituem receita do Fundo Nacional Antidrogas (Funad). O Funad destinará oitenta por cento desses recursos ao Departamento de Polícia Federal, para o reaparelhamento e custeio das atividades de controle e fiscalização de produtos químicos e de repressão ao tráfico ilícito de drogas.",
+        "pontos": [
+          "Receita do Fundo Nacional Antidrogas.",
+          "Oitenta por cento destinados à Polícia Federal."
+        ],
+        "atencao": [
+          "Oitenta por cento para a PF."
+        ],
+        "exemplo": "A multa aplicada a uma empresa vai para o Funad.",
+        "prova": [
+          "Assertiva que destina cem por cento dos recursos à PF erra: são oitenta por cento."
+        ],
+        "termos": [
+          {
+            "termo": "Funad",
+            "significado": "Fundo Nacional Antidrogas."
+          }
+        ],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-22",
+      "unit_id": "572abc63-3df1-566e-bbf4-e9a7f1e953df",
+      "content_sha256": "aeaadba8b7316682cfecc3ac1f715d53192897e28de1098220557cab5238d448",
+      "simples": "Lei original entrou em vigor na publicação. Regulamentação posterior, inclusive IN 338/2026, tem marcos próprios.",
+      "pontos": [
+        "Vigência na publicação, não renovação anual."
+      ],
+      "atencao": [
+        "Não confundir início da lei com entrada em vigor de instrução posterior."
+      ],
+      "exemplo": "A pergunta cobra vacância original: não há prazo de espera no artigo. Variação: Cobra procedimento em 2026: consulte o ato regulamentar atual.",
+      "prova": [
+        "A lei original previu vacância de 120 dias? Não; entrou em vigor na publicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "572abc63-3df1-566e-bbf4-e9a7f1e953df",
+        "content_sha256": "aeaadba8b7316682cfecc3ac1f715d53192897e28de1098220557cab5238d448",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "quimicos",
+      "course_id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+      "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-23",
+      "unit_id": "2db14133-8c90-5210-a480-10cd98f3f265",
+      "content_sha256": "02182cef7095c5a50f45bfbd26356d2523a25e2feee26c7cf3dfbe4d4f19b651",
+      "simples": "Revogou especificamente arts. 1º a 13 e 18 da Lei 9.017/1995. Não revogou integralmente todo diploma nem elimina normas regulamentares posteriores válidas.",
+      "pontos": [
+        "Revogação delimitada por artigos."
+      ],
+      "atencao": [
+        "Não afirmar revogação total da Lei 9.017 por esta cláusula."
+      ],
+      "exemplo": "Apostila usa um artigo no conjunto revogado como base vigente: confira norma sucessora. Variação: Cita dispositivo não enumerado: este artigo sozinho não prova sua revogação.",
+      "prova": [
+        "A cláusula revoga todos os artigos da Lei 9.017 indistintamente? Não; enumera artigos específicos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2db14133-8c90-5210-a480-10cd98f3f265",
+        "content_sha256": "02182cef7095c5a50f45bfbd26356d2523a25e2feee26c7cf3dfbe4d4f19b651",
+        "simples": "Ficam revogados os arts. 1º a 13 e 18 da Lei nº 9.017, de 30 de março de 1995, que tratavam do controle dos produtos químicos antes desta Lei.",
+        "pontos": [
+          "Revoga dispositivos da lei anterior."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A nova lei substituiu o regime anterior.",
+        "prova": [
+          "Assertiva que mantém em vigor os dispositivos da lei anterior erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "9ae86aee-8008-56d9-941f-59f4941ffd4f",
+      "content_sha256": "f90fbb0520c729856a2c5b492e078b52b1142ebdc69e45919e622612f8291c0a",
+      "simples": "CPF é identificador único e suficiente nos bancos de serviços públicos e deve constar dos documentos/cadastros enumerados. Documentos novos ou reemitidos pelos órgãos/conselhos usam esse número.",
+      "pontos": [
+        "Identificador nos serviços públicos; não senha de autenticação."
+      ],
+      "atencao": [
+        "Número identifica, mas não prova sozinho identidade de quem o informa. Não concluir que a lei exige CPF para login de toda plataforma privada."
+      ],
+      "exemplo": "Serviço público usa CPF para localizar o cadastro do cidadão. Variação: Alguém sabe o número de terceiro: isso não autentica sua identidade nem autoriza acesso à conta.",
+      "prova": [
+        "Conhecer o CPF basta como prova de autenticação? Não; identificador e autenticação são diferentes."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "9ae86aee-8008-56d9-941f-59f4941ffd4f",
+        "content_sha256": "f90fbb0520c729856a2c5b492e078b52b1142ebdc69e45919e622612f8291c0a",
+        "simples": "Fica estabelecido o número de inscrição no Cadastro de Pessoas Físicas (CPF) como número único e suficiente para identificação do cidadão nos bancos de dados de serviços públicos. O CPF deverá constar dos cadastros e documentos de órgãos públicos, do registro civil de pessoas naturais e dos conselhos profissionais, em especial na certidão de nascimento, casamento e óbito; no Documento Nacional de Identificação; no NIT; no PIS ou Pasep; no Cartão Nacional de Saúde; no título de eleitor; na CTPS; na CNH; no certificado militar; na carteira profissional dos conselhos; e em outros registros de bases públicas. O número de identificação de novos documentos emitidos ou reemitidos por órgãos públicos ou conselhos profissionais será o CPF.",
+        "pontos": [
+          "CPF como número único e suficiente de identificação nos serviços públicos.",
+          "Deve constar de certidões, DNI, NIT, PIS, Pasep, título, CTPS, CNH, certificado militar e carteiras profissionais.",
+          "Novos documentos usam o CPF como número de identificação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: lei recente que unifica a identificação em torno do CPF.",
+          "O CPF é 'único e suficiente': não se exige outro número para identificar o cidadão."
+        ],
+        "exemplo": "O novo título de eleitor passa a trazer o CPF como número de identificação.",
+        "prova": [
+          "Assertiva que exige vários números de identificação para o mesmo cidadão nos serviços públicos erra: o CPF é suficiente."
+        ],
+        "termos": [
+          {
+            "termo": "CPF",
+            "significado": "Cadastro de Pessoas Físicas da Receita Federal."
+          }
+        ],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "380bec3a-3486-5650-845c-dca912b8144b",
+      "content_sha256": "251d6ec25c8e8a743b5d71af0998694e4974ba4a70672e4910ac1eddf8c8dc5c",
+      "simples": "Alterou a Lei 7.116: novos documentos usam CPF como registro geral; emissor pesquisa integridade na base e compartilha dados cadastrais/biométricos com Receita na hipótese prevista. Se não houver inscrição, órgão de identificação a realiza.",
+      "pontos": [
+        "CPF no registro geral; cadastro prévio ausente é providenciado pelo emissor."
+      ],
+      "atencao": [
+        "Não recusar definitivamente emissão só porque requerente não tem CPF nem estender compartilhamento específico a qualquer terceiro."
+      ],
+      "exemplo": "O requerente sem CPF é inscrito pelo órgão de identificação. Variação: Empresa privada pede todo dado biométrico com base no artigo: a autorização específica não é acesso irrestrito.",
+      "prova": [
+        "A falta de CPF autoriza simplesmente negar emissão? Não; o §3º prevê inscrição pelo órgão de identificação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm"
+      ],
+      "expected": {
+        "unit_id": "380bec3a-3486-5650-845c-dca912b8144b",
+        "content_sha256": "251d6ec25c8e8a743b5d71af0998694e4974ba4a70672e4910ac1eddf8c8dc5c",
+        "simples": "O art. 3º da Lei da Carteira de Identidade passa a determinar que o órgão emissor use, na emissão de novos documentos, o número do CPF como número de registro geral; que os órgãos emissores pesquisem a base do CPF para verificar a integridade das informações e disponibilizem dados cadastrais e biométricos à Receita Federal; e que, se o requerente não estiver inscrito no CPF, o órgão de identificação fará a inscrição.",
+        "pontos": [
+          "CPF como número de registro geral na Carteira de Identidade.",
+          "Pesquisa na base do CPF e compartilhamento de dados com a Receita.",
+          "Inscrição no CPF feita pelo órgão de identificação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei da Carteira de Identidade."
+        ],
+        "exemplo": "Ao emitir a identidade, o órgão inscreve no CPF quem ainda não tem o número.",
+        "prova": [
+          "Assertiva que mantém um número de RG distinto do CPF nos novos documentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei da Carteira de Identidade"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "59606a2d-0717-564f-b320-0a3bc8277367",
+      "content_sha256": "26272ed245450375cd1ba12c0fdfde1b76dbb28f9806b89ef06e37eb7545fe3d",
+      "simples": "Adicionou à Lei 9.454 uso de CPF nos documentos novos e unicidade/definitividade do número para cada pessoa.",
+      "pontos": [
+        "Um número para cada pessoa; documento novo não gera novo CPF."
+      ],
+      "atencao": [
+        "Não confundir número permanente com documento físico sem prazo de validade."
+      ],
+      "exemplo": "Cidadão renova documento e conserva seu número CPF. Variação: Muda de estado: não se cria outro CPF por essa mudança.",
+      "prova": [
+        "A renovação documental exige gerar outro CPF? Não; o número é único e definitivo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm"
+      ],
+      "expected": {
+        "unit_id": "59606a2d-0717-564f-b320-0a3bc8277367",
+        "content_sha256": "26272ed245450375cd1ba12c0fdfde1b76dbb28f9806b89ef06e37eb7545fe3d",
+        "simples": "O art. 1º da Lei do Registro de Identidade Civil passa a prever que será adotado, nos documentos novos, o número de inscrição no CPF como número único, e que o número do CPF é único e definitivo para cada pessoa física.",
+        "pontos": [
+          "CPF como número único do RIC nos documentos novos.",
+          "CPF único e definitivo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei do Registro de Identidade Civil."
+        ],
+        "exemplo": "O número único do RIC é o CPF.",
+        "prova": [
+          "Assertiva que prevê troca do CPF a cada novo documento erra: ele é definitivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei do RIC"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "7da76918-9aa2-58af-88c4-c6a00efd503c",
+      "content_sha256": "a984ff53d2314292c16f6a9e8da6645836fb213f8fb874a0fa7937f19a77bd80",
+      "simples": "Novos DNIs usam CPF como número único, conforme acréscimo à Lei 13.444. DNI/ICN e CIN possuem instrumentos e regras próprios apesar do número comum.",
+      "pontos": [
+        "Número comum não torna documentos/sistemas sinônimos."
+      ],
+      "atencao": [
+        "Não confundir compartilhamento biométrico da ICN com divulgação irrestrita nem troca de siglas."
+      ],
+      "exemplo": "A questão cobra número de novo DNI: CPF. Variação: Cobra validade da CIN: consultar o decreto próprio, não deduzi-la desta alteração.",
+      "prova": [
+        "O número único previsto para novo DNI é o CPF? Sim; o §6º acrescido assim determina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm"
+      ],
+      "expected": {
+        "unit_id": "7da76918-9aa2-58af-88c4-c6a00efd503c",
+        "content_sha256": "a984ff53d2314292c16f6a9e8da6645836fb213f8fb874a0fa7937f19a77bd80",
+        "simples": "O art. 8º da Lei do Documento Nacional de Identificação passa a prever que, na emissão dos novos DNIs, será adotado o número de inscrição no CPF como número único.",
+        "pontos": [
+          "CPF como número único dos novos DNIs."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a lei do Documento Nacional de Identificação."
+        ],
+        "exemplo": "O novo DNI traz o CPF como número único.",
+        "prova": [
+          "Assertiva que cria numeração própria para o DNI erra: o número único é o CPF."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "69971e54-8672-5c88-9c20-13afc0f204fa",
+      "content_sha256": "c546342a18c6452e067827b86c11fdd45f6701343ec6881d6cd5262007f11aad",
+      "simples": "Serviços públicos disponibilizam campo CPF obrigatório para identificação e não exigem outro número para esse mesmo fim. Isso não elimina prova de requisitos substantivos do serviço ou autenticação adequada.",
+      "pontos": [
+        "Suficiência como número identificador, não dispensa universal de documentos."
+      ],
+      "atencao": [
+        "Não transformar regra em acesso ao serviço sem demonstrar direito/materialidade nem criar exigência legal genérica de CPF em todo site privado."
+      ],
+      "exemplo": "O formulário identifica o cidadão pelo CPF sem exigir segundo número cadastral. Variação: Benefício exige prova de condição legal: essa comprovação não é automaticamente proibida pela suficiência do identificador.",
+      "prova": [
+        "A suficiência do CPF elimina toda prova de requisitos do benefício? Não; trata do número de identificação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm"
+      ],
+      "expected": {
+        "unit_id": "69971e54-8672-5c88-9c20-13afc0f204fa",
+        "content_sha256": "c546342a18c6452e067827b86c11fdd45f6701343ec6881d6cd5262007f11aad",
+        "simples": "A Lei de Direitos dos Usuários de Serviços Públicos passa a prever que cadastros, formulários e sistemas exigidos dos usuários deverão disponibilizar campo para registro do número de inscrição no CPF, de preenchimento obrigatório, que será suficiente para a identificação, vedada a exigência de qualquer outro número para esse fim.",
+        "pontos": [
+          "Campo obrigatório para o CPF nos cadastros e sistemas.",
+          "CPF suficiente para identificação.",
+          "Vedada a exigência de outro número."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a lei de proteção e defesa do usuário de serviços públicos."
+        ],
+        "exemplo": "O sistema do órgão público não pode exigir RG além do CPF para identificar o usuário.",
+        "prova": [
+          "Assertiva que permite exigir outro número de identificação além do CPF erra: é vedado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "e6e905b3-9bc1-5464-9e65-352a63485be8",
+      "content_sha256": "a1e3b90e790bf31e42585ede65de406265b76c3d5aa09455678acef890b2f36e",
+      "simples": "Revogou Lei 13.444, art. 5º, §2º, I, b; inciso II vetado não fornece revogação válida. A cláusula não extingue a ICN inteira.",
+      "pontos": [
+        "Revogação pontual; veto não cria comando."
+      ],
+      "atencao": [
+        "Não ensinar revogação integral da Lei 13.444."
+      ],
+      "exemplo": "A questão pede dispositivo revogado: identifica-se a referência precisa. Variação: Afirma que toda ICN deixou de existir: não decorre desta cláusula.",
+      "prova": [
+        "Este artigo revogou integralmente a Lei 13.444? Não; a revogação é de dispositivo específico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm"
+      ],
+      "expected": {
+        "unit_id": "e6e905b3-9bc1-5464-9e65-352a63485be8",
+        "content_sha256": "a1e3b90e790bf31e42585ede65de406265b76c3d5aa09455678acef890b2f36e",
+        "simples": "Fica revogada a alínea b do inciso I do §2º do art. 5º da Lei do Documento Nacional de Identificação; o outro inciso do artigo foi vetado.",
+        "pontos": [
+          "Revoga dispositivo da lei do DNI."
+        ],
+        "atencao": [
+          "Dispositivo de revogação; um inciso foi vetado."
+        ],
+        "exemplo": "A alínea b da lei anterior deixou de existir.",
+        "prova": [
+          "Assertiva que mantém em vigor a alínea b revogada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "cpf",
+      "course_id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "5b775e76-2367-5d06-a79c-c49e2fde5064",
+      "content_sha256": "349b29e669d808ae8832762de3ec49101a9469a703336111101d1e93826c9a55",
+      "simples": "Vigência na publicação; órgãos tiveram 12 meses para adaptar sistemas/atendimento e 24 para interoperabilidade dos cadastros. Os prazos são de implantação, já transcorridos em 2026, não validade de CPF ou prazo renovado a cada emissão.",
+      "pontos": [
+        "12 meses adaptação; 24 interoperabilidade."
+      ],
+      "atencao": [
+        "Não converter prazos de implantação em expiração do número nem presumir que cumprimento técnico foi automaticamente constatado em todos os órgãos."
+      ],
+      "exemplo": "O aluno diferencia implantação institucional da validade do documento. Variação: Um documento é emitido hoje: os prazos não recomeçam por essa emissão.",
+      "prova": [
+        "Os 24 meses são prazo de validade do CPF? Não; referem-se à interoperabilidade institucional."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5b775e76-2367-5d06-a79c-c49e2fde5064",
+        "content_sha256": "349b29e669d808ae8832762de3ec49101a9469a703336111101d1e93826c9a55",
+        "simples": "A Lei entra em vigor na data de sua publicação e fixa prazos: 12 meses para que órgãos e entidades adequem seus sistemas e procedimentos de atendimento para adotar o CPF como número de identificação, e 24 meses para que tenham a interoperabilidade entre os cadastros e bases de dados a partir do CPF.",
+        "pontos": [
+          "Vigência imediata.",
+          "Doze meses para adequação dos sistemas.",
+          "Vinte e quatro meses para a interoperabilidade das bases."
+        ],
+        "atencao": [
+          "Dois prazos: 12 meses (adequação) e 24 meses (interoperabilidade)."
+        ],
+        "exemplo": "Os órgãos têm doze meses para ajustar os sistemas e vinte e quatro para integrar as bases.",
+        "prova": [
+          "Assertiva que fixa em 24 meses o prazo de adequação dos sistemas erra: são 12 meses."
+        ],
+        "termos": [
+          {
+            "termo": "Interoperabilidade",
+            "significado": "Capacidade de sistemas trocarem dados entre si."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "75676f56-cea8-5293-9d85-3ba69ceb5cc4",
+      "content_sha256": "63643f88468bddce3cb491f94f1ef28739d8471468f42ff7cdf15b7dac613ce2",
+      "simples": "Carteira expedida pelos órgãos estaduais/DF/territórios tem fé pública e validade nacional. Mudança de estado não impõe novo identificador; documentos novos usam CPF conforme 2023.",
+      "pontos": [
+        "Validade nacional, não limitada ao estado emissor."
+      ],
+      "atencao": [
+        "Não confundir validade territorial com validade temporal indeterminada de toda carteira."
+      ],
+      "exemplo": "Carteira de um estado é apresentada em outro para identificação. Variação: O documento apresenta problema temporal/material: validade territorial não dispensa as regras próprias.",
+      "prova": [
+        "A carteira vale somente no estado emissor? Não; tem validade em todo território nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "75676f56-cea8-5293-9d85-3ba69ceb5cc4",
+        "content_sha256": "63643f88468bddce3cb491f94f1ef28739d8471468f42ff7cdf15b7dac613ce2",
+        "simples": "A Carteira de Identidade emitida por órgãos de Identificação dos Estados, do Distrito Federal e dos Territórios tem fé pública e validade em todo o território nacional.",
+        "pontos": [
+          "Emitida pelos órgãos de identificação estaduais, distritais e territoriais.",
+          "Tem fé pública.",
+          "Validade em todo o território nacional."
+        ],
+        "atencao": [
+          "A validade nacional independe do Estado emissor."
+        ],
+        "exemplo": "A identidade emitida em um Estado vale em qualquer outro.",
+        "prova": [
+          "Assertiva que restringe a validade da identidade ao Estado emissor erra: vale em todo o território nacional."
+        ],
+        "termos": [
+          {
+            "termo": "Fé pública",
+            "significado": "Presunção de veracidade do documento."
+          }
+        ],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "04faf4bb-eab8-599f-874e-00bf9e0b5b7e",
+      "content_sha256": "8169b72814b630243b27b8281b96b3cab67a36c41aae33f505f218aea5952542",
+      "simples": "Documentação-base: nascimento ou casamento, com hipóteses específicas de nome alterado e naturalização. Primeira emissão é gratuita. Leia com regras atuais da CIN e inscrição no CPF providenciada pelo emissor quando ausente.",
+      "pontos": [
+        "Primeira emissão gratuita; CPF ausente tem procedimento próprio."
+      ],
+      "atencao": [
+        "Não afirmar gratuidade universal de toda segunda via nem dispensar atualização do registro civil quando necessária."
+      ],
+      "exemplo": "Pessoa solicita primeira emissão e não se cobra a taxa própria dessa emissão. Variação: Solicita segunda via: gratuidade da primeira não garante universalmente gratuidade dessa situação.",
+      "prova": [
+        "A primeira emissão é gratuita por lei? Sim; o §3º a assegura."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "04faf4bb-eab8-599f-874e-00bf9e0b5b7e",
+        "content_sha256": "8169b72814b630243b27b8281b96b3cab67a36c41aae33f505f218aea5952542",
+        "simples": "Para a expedição da Carteira de Identidade não será exigida do interessado a apresentação de qualquer outro documento, além da certidão de nascimento ou de casamento. A requerente do sexo feminino apresentará obrigatoriamente a certidão de casamento, caso seu nome de solteira tenha sido alterado em consequência do matrimônio. O brasileiro naturalizado apresentará o Certificado de Naturalização. A primeira emissão da Carteira de Identidade é gratuita.",
+        "pontos": [
+          "Basta a certidão de nascimento ou de casamento.",
+          "Quem mudou o nome pelo casamento apresenta a certidão de casamento.",
+          "Naturalizado apresenta o Certificado de Naturalização.",
+          "Primeira emissão gratuita."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §3º (gratuidade da primeira emissão) foi incluído por lei posterior.",
+          "Nenhum outro documento pode ser exigido."
+        ],
+        "exemplo": "O cidadão obtém a primeira identidade sem pagar taxa, apresentando a certidão de nascimento.",
+        "prova": [
+          "Assertiva que cobra taxa da primeira emissão da identidade erra: ela é gratuita."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "1fb57aa7-86d2-5029-9d47-f96096458026",
+      "content_sha256": "411685ce97cfe5cb773d8697f5bed16c9cf70e099cb51f3d330dc3f70019ed71",
+      "simples": "Lista elementos de identificação e CPF obrigatório nas emissões novas como número geral, desde 2023. Emissor verifica base CPF e providencia inscrição se ausente. Modelo/biometria atuais também são regulamentados pelo Decreto 10.977.",
+      "pontos": [
+        "CPF atual como RG; coleta e modelo seguem regulamentação."
+      ],
+      "atencao": [
+        "Não tratar formato fotográfico histórico isolado como todas as exigências operacionais atuais nem permitir compartilhamento para qualquer finalidade."
+      ],
+      "exemplo": "Órgão consulta integridade e emite carteira nova com CPF como número. Variação: A apostila diz que cada estado necessariamente cria um novo RG: compare regra vigente de unicidade.",
+      "prova": [
+        "Documento novo deve usar CPF como número geral? Sim; o §1º atual o exige."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "1fb57aa7-86d2-5029-9d47-f96096458026",
+        "content_sha256": "411685ce97cfe5cb773d8697f5bed16c9cf70e099cb51f3d330dc3f70019ed71",
+        "simples": "A Carteira de Identidade conterá as Armas da República e a inscrição República Federativa do Brasil; o nome da Unidade da Federação; a identificação do órgão expedidor; o registro geral, local e data da expedição; nome, filiação, local e data de nascimento e dados resumidos do registro de nascimento; fotografia 3 x 4, assinatura e impressão digital do polegar direito; assinatura do dirigente do órgão; e o número do CPF. Na emissão de novos documentos, o órgão deve usar o número do CPF como número de registro geral, pesquisar a base do CPF para verificar a integridade das informações e disponibilizar dados cadastrais e biométricos à Receita Federal. Se o requerente não tiver CPF, o órgão fará a inscrição.",
+        "pontos": [
+          "Elementos obrigatórios do documento.",
+          "Fotografia 3 x 4, assinatura e impressão digital do polegar direito.",
+          "Número do CPF.",
+          "CPF como número de registro geral nos novos documentos.",
+          "Órgão inscreve no CPF quem ainda não tiver."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: CPF como registro geral e a Carteira de Identidade Nacional decorrem de alterações recentes.",
+          "Impressão digital do polegar DIREITO."
+        ],
+        "exemplo": "A nova identidade traz o CPF como número de registro geral.",
+        "prova": [
+          "Assertiva que prevê a impressão digital do polegar esquerdo erra: é do polegar direito."
+        ],
+        "termos": [
+          {
+            "termo": "Registro geral",
+            "significado": "Número de cadastro do cidadão no órgão emissor (RG)."
+          }
+        ],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "77c0b911-eb48-54e3-9459-38b3bb14d0a8",
+      "content_sha256": "87f8aa383a0318ac288bef51273b331b457bc10503ea703fa83a0d9f864028a4",
+      "simples": "Permite inclusão de dados opcionais solicitados/comprovados, como PIS/Pasep. A antiga menção ao CPF facultativo precisa ser lida com art. 3º atual: CPF tornou-se elemento obrigatório e número do novo documento.",
+      "pontos": [
+        "PIS/Pasep opcionais; CPF obrigatório nas regras posteriores."
+      ],
+      "atencao": [
+        "Não ensinar CPF facultativo apenas porque aparece no texto antigo deste artigo."
+      ],
+      "exemplo": "Titular pede inclusão de dado opcional e apresenta comprovação. Variação: Não pede CPF: isso não afasta a obrigatoriedade prevista no art. 3º atual.",
+      "prova": [
+        "O CPF pode ser omitido em documento novo apenas por falta de pedido? Não; a disciplina posterior o tornou obrigatório."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "77c0b911-eb48-54e3-9459-38b3bb14d0a8",
+        "content_sha256": "87f8aa383a0318ac288bef51273b331b457bc10503ea703fa83a0d9f864028a4",
+        "simples": "Desde que o interessado o solicite, a Carteira de Identidade conterá, além dos elementos do art. 3º, os números de inscrição do titular no PIS ou no PASEP e no CPF. O Poder Executivo Federal poderá aprovar a inclusão de outros dados opcionais. A inclusão poderá ser parcial e dependerá exclusivamente da apresentação dos respectivos documentos comprobatórios.",
+        "pontos": [
+          "PIS ou PASEP e CPF, a pedido do interessado.",
+          "Outros dados opcionais, por aprovação do Executivo.",
+          "Inclusão parcial e mediante documentos comprobatórios."
+        ],
+        "atencao": [
+          "Dados OPCIONAIS dependem de pedido do titular."
+        ],
+        "exemplo": "O cidadão pede que o número do PIS conste na sua identidade.",
+        "prova": [
+          "Assertiva que torna obrigatória a inclusão do PIS na identidade erra: depende de solicitação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "baf0151a-cb62-5b14-a948-109657181a6f",
+      "content_sha256": "58ce735195bb16955f746c1bfa42e28da1dd942e3a58804a85d0905d539cf150",
+      "simples": "Trata da carteira de português beneficiado pela igualdade e referência à nacionalidade/convenção histórica. Não concede automaticamente igualdade a qualquer português; aplicação atual deve observar o tratado promulgado pelo Decreto 3.927/2001 e reconhecimento cabível.",
+      "pontos": [
+        "Português beneficiado, não todo residente por mera nacionalidade."
+      ],
+      "atencao": [
+        "Remissão à convenção de 1972 é histórica; não dispense requisitos atuais do regime de igualdade."
+      ],
+      "exemplo": "Português com reconhecimento de igualdade solicita documento no regime aplicável. Variação: Apenas tem nacionalidade portuguesa: não se presume o benefício sem requisitos.",
+      "prova": [
+        "A nacionalidade portuguesa sozinha basta para presumir estatuto de igualdade? Não; o artigo refere-se ao beneficiado pelo regime."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto/2001/d3927.htm"
+      ],
+      "expected": {
+        "unit_id": "baf0151a-cb62-5b14-a948-109657181a6f",
+        "content_sha256": "58ce735195bb16955f746c1bfa42e28da1dd942e3a58804a85d0905d539cf150",
+        "simples": "A Carteira de Identidade do português beneficiado pelo Estatuto da Igualdade será expedida conforme esta Lei, devendo constar referência à sua nacionalidade e à Convenção promulgada pelo Decreto nº 70.391, de 12 de abril de 1972.",
+        "pontos": [
+          "Identidade do português beneficiado pelo Estatuto da Igualdade.",
+          "Constam a nacionalidade e a referência à Convenção."
+        ],
+        "atencao": [
+          "Regra especial para portugueses sob o Estatuto da Igualdade."
+        ],
+        "exemplo": "O português com igualdade de direitos recebe identidade com menção à sua nacionalidade.",
+        "prova": [
+          "Assertiva que dispensa menção à nacionalidade na identidade do português erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "703aa541-285a-5416-bf94-961f548b22b1",
+      "content_sha256": "a6fd87674650166c8bbed0a6fe9d3bdf5707eab5f422eba38a81e9e4a18fcfd5",
+      "simples": "A carteira prova os dados nela incluídos, dispensando documentos que originaram ou nela foram mencionados. Isso não significa prova de fatos/condições ausentes nem autenticidade de documento materialmente inválido.",
+      "pontos": [
+        "Dispensa relacionada a dados incluídos, não todos os documentos possíveis."
+      ],
+      "atencao": [
+        "Não presumir renda, habilitação profissional ou condição atual que não conste do documento."
+      ],
+      "exemplo": "O dado de nascimento consta na carteira e se observa a dispensa legal. Variação: O serviço exige comprovação de requisito que não está nela: o artigo não prova esse requisito automaticamente.",
+      "prova": [
+        "A carteira dispensa comprovação de qualquer fato não registrado nela? Não; a dispensa relaciona-se aos dados incluídos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "703aa541-285a-5416-bf94-961f548b22b1",
+        "content_sha256": "a6fd87674650166c8bbed0a6fe9d3bdf5707eab5f422eba38a81e9e4a18fcfd5",
+        "simples": "A Carteira de Identidade fará prova de todos os dados nela incluídos, dispensando a apresentação dos documentos que lhe deram origem ou que nela tenham sido mencionados.",
+        "pontos": [
+          "Faz prova de todos os dados nela incluídos.",
+          "Dispensa os documentos de origem."
+        ],
+        "atencao": [
+          "Efeito probatório amplo do documento."
+        ],
+        "exemplo": "Quem apresenta a identidade não precisa exibir também a certidão de nascimento para comprovar a filiação.",
+        "prova": [
+          "Assertiva que exige a certidão de nascimento junto com a identidade para provar a filiação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "15d7542c-6bba-5fc2-8122-5c187a076b1f",
+      "content_sha256": "9dd25d2bb1b3949d8d7ee1e9656e5f0a32aa2b16c7c20f1bb021d785a5a3bf9d",
+      "simples": "Segunda via mediante solicitação, com documentação do art. 2º. Deve ser lida com emissão atual da CIN, cadastro e requisitos legais; não exige provar um motivo especial além das condições previstas.",
+      "pontos": [
+        "Solicitação de segunda via; documentação legal."
+      ],
+      "atencao": [
+        "Não confundir ausência de justificativa adicional com gratuidade universal ou dispensa de identificar requerente."
+      ],
+      "exemplo": "Titular pede segunda via com documentação legal. Variação: O atendente exige narrativa pessoal não prevista como condição geral: confira os limites do artigo.",
+      "prova": [
+        "O artigo exige sempre prova de motivo especial para a segunda via? Não; prevê simples solicitação com a documentação legal."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "15d7542c-6bba-5fc2-8122-5c187a076b1f",
+        "content_sha256": "9dd25d2bb1b3949d8d7ee1e9656e5f0a32aa2b16c7c20f1bb021d785a5a3bf9d",
+        "simples": "A expedição de segunda via da Carteira de Identidade será efetuada mediante simples solicitação do interessado, vedada qualquer outra exigência, além daquela prevista no art. 2º.",
+        "pontos": [
+          "Segunda via a simples pedido.",
+          "Vedadas outras exigências."
+        ],
+        "atencao": [
+          "Só a exigência do art. 2º é admitida."
+        ],
+        "exemplo": "O cidadão que perdeu o documento pede a segunda via sem apresentar outros papéis.",
+        "prova": [
+          "Assertiva que permite exigir comprovantes adicionais para a segunda via erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "2d2bf652-029d-5a1e-877e-4e337aa556d1",
+      "content_sha256": "beec7bd9992754a606a31af679cf77d598b36dfb3aa199fd7e59c54a6b6be82d",
+      "simples": "A expedição baseia-se em identificação datiloscópica; a CIN atual possui regras complementares de coleta/segurança. A coleta não autoriza divulgar biometria indiscriminadamente.",
+      "pontos": [
+        "Datiloscopia é identificação por impressões digitais."
+      ],
+      "atencao": [
+        "Não confundir cadastro civil com autorização irrestrita para qualquer banco de investigação ou divulgação pública."
+      ],
+      "exemplo": "O órgão coleta impressões no procedimento de identificação. Variação: Terceiro pretende publicar a base biométrica: a coleta não cria essa permissão.",
+      "prova": [
+        "Identificação datiloscópica envolve impressões digitais? Sim; é a técnica indicada pelo artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2d2bf652-029d-5a1e-877e-4e337aa556d1",
+        "content_sha256": "beec7bd9992754a606a31af679cf77d598b36dfb3aa199fd7e59c54a6b6be82d",
+        "simples": "A Carteira de Identidade será expedida com base no processo de identificação datiloscópica.",
+        "pontos": [
+          "Base: identificação datiloscópica (impressões digitais)."
+        ],
+        "atencao": [
+          "Datiloscopia é a base da emissão."
+        ],
+        "exemplo": "A coleta das digitais subsidia a emissão do documento.",
+        "prova": [
+          "Assertiva que dispensa a datiloscopia na emissão erra."
+        ],
+        "termos": [
+          {
+            "termo": "Datiloscopia",
+            "significado": "Identificação por impressões digitais."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "20c53946-05d0-55a3-885f-c5eed17e2eb3",
+      "content_sha256": "2453ad54e714f7c9d0b96fb119d78224e72d1f1dc849048ed19e777151470e32",
+      "simples": "Nascimento/casamento/documentos do art. 2º podem ser apresentados por cópia regularmente autenticada. Leia com legislação posterior de desburocratização e conferência administrativa aplicável; não impor cartório universal a toda cópia.",
+      "pontos": [
+        "Cópia autenticada admitida; requisitos posteriores também importam."
+      ],
+      "atencao": [
+        "Lei 13.726 permite formas de dispensa/conferência no âmbito indicado; a admissão da cópia não obriga autenticação cartorial em toda situação."
+      ],
+      "exemplo": "Apresenta-se cópia regularmente autenticada no procedimento. Variação: Órgão pode conferir cópia e original pela regra posterior aplicável: não se exige cartório universal pela redação antiga.",
+      "prova": [
+        "A regra torna autenticação cartorial universalmente obrigatória para toda cópia? Não; admissão da cópia deve ser lida com legislação posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13726.htm"
+      ],
+      "expected": {
+        "unit_id": "20c53946-05d0-55a3-885f-c5eed17e2eb3",
+        "content_sha256": "2453ad54e714f7c9d0b96fb119d78224e72d1f1dc849048ed19e777151470e32",
+        "simples": "A apresentação dos documentos a que se refere o art. 2º poderá ser feita por cópia regularmente autenticada.",
+        "pontos": [
+          "Cópia autenticada é aceita."
+        ],
+        "atencao": [
+          "A cópia deve ser regularmente autenticada."
+        ],
+        "exemplo": "O cidadão apresenta cópia autenticada da certidão de nascimento.",
+        "prova": [
+          "Assertiva que exige sempre o documento original erra: basta cópia autenticada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "62b1cba4-d600-507b-9c26-991d15a89195",
+      "content_sha256": "178d19c074ee7b51d4eb0299a2d496169ea651af881318d47ed93236bc242de0",
+      "simples": "Executivo federal aprova modelo e normas complementares. O modelo atual está no Decreto 10.977/2022 e alterações, não só no padrão antigo de apostila.",
+      "pontos": [
+        "Lei + decreto atual para modelo e validade."
+      ],
+      "atencao": [
+        "Não criar modelo ou prazo pela imaginação nem deduzir validade pelo formato histórico."
+      ],
+      "exemplo": "O candidato consulta decreto atual para os padrões da CIN. Variação: Apostila traz modelo anterior: ele não esgota a regulamentação vigente.",
+      "prova": [
+        "As normas complementares são aprovadas pelo Executivo federal? Sim; o artigo prevê essa competência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "62b1cba4-d600-507b-9c26-991d15a89195",
+        "content_sha256": "178d19c074ee7b51d4eb0299a2d496169ea651af881318d47ed93236bc242de0",
+        "simples": "O Poder Executivo Federal aprovará o modelo da Carteira de Identidade e expedirá as normas complementares que se fizerem necessárias ao cumprimento da Lei.",
+        "pontos": [
+          "Executivo federal aprova o modelo.",
+          "Edita normas complementares."
+        ],
+        "atencao": [
+          "O modelo é definido pelo Executivo federal."
+        ],
+        "exemplo": "Um decreto define o modelo nacional do documento.",
+        "prova": [
+          "Assertiva que atribui a cada Estado a definição do modelo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "7f54a579-6387-503c-87ed-f9eaa4af29ae",
+      "content_sha256": "74f108847dee776f54d7e3c4c13a122e84fa1492532fe6aef075afacb176ec68",
+      "simples": "Preserva carteiras emitidas antes da lei original; para transição atual, consulte Decreto 10.977, art. 25: documentos de padrão anterior permanecem por dez anos desde a vigência do decreto, com validade indeterminada para quem tinha a partir de 60 anos naquele marco. Não são dez anos da emissão de cada RG.",
+      "pontos": [
+        "Transição atual e exceção etária no marco do decreto."
+      ],
+      "atencao": [
+        "Não declarar todo RG antigo inválido já nem todo RG eterno. CIN nova tem validade própria, diferente da transição."
+      ],
+      "exemplo": "Titular tinha 60 anos no marco do decreto e se examina a exceção do documento anterior. Variação: Atinge 60 só depois: não se presume a mesma exceção temporal do art. 25.",
+      "prova": [
+        "Os dez anos de transição contam da emissão individual do RG? Não; contam da entrada em vigor do decreto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "7f54a579-6387-503c-87ed-f9eaa4af29ae",
+        "content_sha256": "74f108847dee776f54d7e3c4c13a122e84fa1492532fe6aef075afacb176ec68",
+        "simples": "As Carteiras de Identidade emitidas anteriormente à vigência desta Lei continuarão válidas em todo o território nacional.",
+        "pontos": [
+          "Documentos antigos continuam válidos."
+        ],
+        "atencao": [
+          "Dispositivo de transição."
+        ],
+        "exemplo": "A identidade antiga permanece válida em todo o país.",
+        "prova": [
+          "Assertiva que invalida as identidades anteriores à Lei erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-12",
+      "unit_id": "44cbce51-b15b-5681-99fc-00fc67062933",
+      "content_sha256": "56737f4a8cc7e7a002ee7d802f11c51b0d3b00e2c99ba8162f2b22af23a94707",
+      "simples": "A lei original vigora na publicação. Gratuidade, CPF e regras da CIN foram introduzidos depois e possuem marcos próprios.",
+      "pontos": [
+        "Vigência original distinta das alterações."
+      ],
+      "atencao": [
+        "Não situar obrigatoriedade atual do CPF já no texto original de 1983."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: É a regra de 2023: consulte o ato modificador próprio.",
+      "prova": [
+        "O artigo original prevê espera de 120 dias? Não; vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "44cbce51-b15b-5681-99fc-00fc67062933",
+        "content_sha256": "56737f4a8cc7e7a002ee7d802f11c51b0d3b00e2c99ba8162f2b22af23a94707",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-13",
+      "unit_id": "a2286e74-0942-534b-9ed3-436aebd699d2",
+      "content_sha256": "1808cd6dbf2a021a264144bafa7b69a9f62965f017ed51e555a3217bb32fcf3f",
+      "simples": "Revoga disposições contrárias à lei original; não impede alterações posteriores nem dispensa consultar a regulamentação atual.",
+      "pontos": [
+        "Cláusula geral, sem apagar automaticamente leis posteriores."
+      ],
+      "atencao": [
+        "Não concluir que o decreto da CIN foi revogado por cláusula anterior a ele."
+      ],
+      "exemplo": "A lei é lida com os acréscimos posteriores e normas atuais. Variação: Apostila usa a cláusula para rejeitar CPF/CIN: ela não produz essa conclusão.",
+      "prova": [
+        "Esta cláusula torna inaplicáveis todas as normas posteriores da CIN? Não; são normas posteriores a conferir no conjunto vigente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a2286e74-0942-534b-9ed3-436aebd699d2",
+        "content_sha256": "1808cd6dbf2a021a264144bafa7b69a9f62965f017ed51e555a3217bb32fcf3f",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Normas incompatíveis foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+      "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+      "simples": "Disciplina instrumentos de menor potencial ofensivo por agentes de segurança pública em todo país. Regulamentação atual inclui Decreto 12.341/2024.",
+      "pontos": [
+        "Âmbito nacional; lei e regulamento."
+      ],
+      "atencao": [
+        "Não confundir esta lei com infrações de menor potencial ofensivo dos Juizados: mesma expressão não significa mesma matéria."
+      ],
+      "exemplo": "O agente estuda instrumentos de uso da força pela Lei 13.060. Variação: A questão versa transação penal: deve consultar Lei 9.099, não confundir os títulos.",
+      "prova": [
+        "Esta lei define infrações de menor potencial dos Juizados? Não; trata de instrumentos de uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+        "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+        "simples": "Esta Lei disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional.",
+        "pontos": [
+          "Disciplina o uso dos instrumentos de menor potencial ofensivo.",
+          "Aplica-se em todo o território nacional."
+        ],
+        "atencao": [
+          "Abrangência nacional."
+        ],
+        "exemplo": "A Lei vale para as polícias de todos os Estados.",
+        "prova": [
+          "Assertiva que restringe a Lei à Polícia Federal erra: aplica-se a todos os agentes de segurança pública."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+      "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+      "simples": "Prioriza menor potencial quando não põe em risco integridade física/psíquica policial, com legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo disparar contra fugitivo desarmado ou sem risco imediato, nem veículo que desrespeita bloqueio salvo risco de morte/lesão indicado.",
+      "pontos": [
+        "Não existe autorização automática de disparo por fuga ou bloqueio."
+      ],
+      "atencao": [
+        "Não trocar a condição de risco por desobediência simples. Prioridade não obriga instrumento inadequado que coloque policial em risco."
+      ],
+      "exemplo": "Veículo apenas evade bloqueio sem risco de morte/lesão: isso não autoriza arma de fogo pela lei. Variação: Há risco concreto nos termos da exceção: ainda examine necessidade e proporcionalidade, sem disparo automático.",
+      "prova": [
+        "A mera fuga de veículo autoriza disparo automaticamente? Não; a lei condiciona a exceção ao risco indicado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+        "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+        "simples": "Os órgãos de segurança pública deverão priorizar a utilização dos instrumentos de menor potencial ofensivo, desde que seu uso não coloque em risco a integridade física ou psíquica dos policiais, e obedecer aos princípios da legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo o uso de arma de fogo contra pessoa em fuga desarmada ou que não represente risco imediato de morte ou de lesão aos agentes ou a terceiros, nem contra veículo que desrespeite bloqueio policial em via pública, exceto quando o ato represente risco de morte ou lesão.",
+        "pontos": [
+          "Priorizar instrumentos de menor potencial ofensivo, sem pôr em risco o policial.",
+          "Princípios: legalidade, necessidade, razoabilidade e proporcionalidade.",
+          "Vedado atirar em fugitivo desarmado que não ofereça risco imediato.",
+          "Vedado atirar contra veículo que fure bloqueio, salvo risco de morte ou lesão."
+        ],
+        "atencao": [
+          "Veículo que fura bloqueio: arma de fogo só se houver risco de morte ou lesão.",
+          "A prioridade não obriga o policial a se expor a risco."
+        ],
+        "exemplo": "O policial usa dispositivo de choque em vez de arma de fogo ao conter pessoa agressiva que não porta arma.",
+        "prova": [
+          "Assertiva que autoriza o disparo contra qualquer veículo que desrespeite o bloqueio erra: exige risco de morte ou lesão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Decreto do Uso da Força"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+      "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+      "simples": "Formação/capacitação deve incluir conteúdo habilitante para instrumentos não letais. A denominação legal não significa risco zero: leia a definição de baixa probabilidade no art. 4º.",
+      "pontos": [
+        "Capacitação prática e legal; não letal não é inofensivo."
+      ],
+      "atencao": [
+        "Não dispensar treino pelo rótulo do equipamento."
+      ],
+      "exemplo": "Curso inclui habilitação no instrumento e seus limites. Variação: Entrega-se equipamento sem treinamento: a disponibilização não substitui capacitação.",
+      "prova": [
+        "O rótulo não letal dispensa capacitação? Não; o artigo exige conteúdo habilitante."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+        "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+        "simples": "Os cursos de formação e capacitação dos agentes de segurança pública deverão incluir conteúdo programático que os habilite ao uso dos instrumentos não letais.",
+        "pontos": [
+          "Formação e capacitação incluem o uso de instrumentos não letais."
+        ],
+        "atencao": [
+          "Dever de capacitação nos cursos de formação."
+        ],
+        "exemplo": "O curso de formação policial inclui treinamento com instrumentos não letais.",
+        "prova": [
+          "Assertiva que dispensa o treinamento em instrumentos não letais nos cursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+      "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+      "simples": "Instrumentos são projetados para conter, debilitar ou incapacitar temporariamente com baixa probabilidade de morte/lesão permanente. Baixa probabilidade não é impossibilidade absoluta de dano.",
+      "pontos": [
+        "Temporário e baixo risco, não risco zero."
+      ],
+      "atencao": [
+        "Uso indevido pode causar lesão grave e continua sujeito aos limites e responsabilidade."
+      ],
+      "exemplo": "O agente escolhe instrumento adequado ao objetivo de contenção temporária. Variação: É utilizado indevidamente e provoca dano: o rótulo não elimina análise da conduta.",
+      "prova": [
+        "Menor potencial significa impossibilidade de morte ou lesão permanente? Não; o texto diz baixa probabilidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+        "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+        "simples": "Consideram-se instrumentos de menor potencial ofensivo aqueles projetados especificamente para, com baixa probabilidade de causar mortes ou lesões permanentes, conter, debilitar ou incapacitar temporariamente pessoas.",
+        "pontos": [
+          "Projetados para conter, debilitar ou incapacitar temporariamente.",
+          "Baixa probabilidade de causar morte ou lesões permanentes."
+        ],
+        "atencao": [
+          "Baixa probabilidade, e não ausência, de risco de morte."
+        ],
+        "exemplo": "Spray de pimenta e arma de choque são instrumentos de menor potencial ofensivo.",
+        "prova": [
+          "Assertiva que afirma que esses instrumentos nunca causam morte erra: a definição fala em baixa probabilidade."
+        ],
+        "termos": [
+          {
+            "termo": "Instrumento não letal",
+            "significado": "Equipamento concebido para reduzir o risco de morte."
+          }
+        ],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+      "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+      "simples": "Poder público deve fornecer a todo agente de segurança instrumentos de menor potencial para uso racional da força.",
+      "pontos": [
+        "Dever de fornecimento; uso racional continua exigido."
+      ],
+      "atencao": [
+        "Disponibilizar não autoriza uso indiscriminado nem substitui formação."
+      ],
+      "exemplo": "A instituição fornece equipamentos adequados e organiza treinamento. Variação: O equipamento existe, mas o caso não exige força: o fornecimento não cria necessidade de usar.",
+      "prova": [
+        "O dever de fornecer elimina requisitos de necessidade no uso? Não; instrumentos se destinam ao uso racional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+        "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+        "simples": "O poder público tem o dever de fornecer a todo agente de segurança pública instrumentos de menor potencial ofensivo para o uso racional da força.",
+        "pontos": [
+          "Dever do poder público de fornecer os instrumentos.",
+          "Para todo agente de segurança pública.",
+          "Finalidade: uso racional da força."
+        ],
+        "atencao": [
+          "O dever é do PODER PÚBLICO, e não do agente."
+        ],
+        "exemplo": "A corporação fornece spray de pimenta e arma de choque aos policiais.",
+        "prova": [
+          "Assertiva que obriga o agente a comprar o próprio equipamento erra: o dever de fornecer é do poder público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+      "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+      "simples": "Ferimentos decorrentes de uso da força exigem assistência/socorro médico imediato e comunicação à família ou pessoa indicada. Dever independe de o instrumento ser menor potencial.",
+      "pontos": [
+        "Socorro imediato + comunicação."
+      ],
+      "atencao": [
+        "Não aguardar encerramento de burocracia para prestar assistência nem negar por imputação ao ferido."
+      ],
+      "exemplo": "Pessoa ferida recebe socorro imediato e comunicação ao contato indicado. Variação: O instrumento era classificado não letal: a ocorrência de ferimento mantém o dever.",
+      "prova": [
+        "Ferimento por instrumento de menor potencial afasta dever de socorro? Não; o artigo alcança ferimentos decorrentes do uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+        "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+        "simples": "Sempre que do uso da força praticada pelos agentes de segurança pública decorrerem ferimentos em pessoas, deverá ser assegurada a imediata prestação de assistência e socorro médico aos feridos, bem como a comunicação do ocorrido à família ou à pessoa por eles indicada.",
+        "pontos": [
+          "Assistência e socorro médico imediatos aos feridos.",
+          "Comunicação à família ou à pessoa indicada."
+        ],
+        "atencao": [
+          "Dever de socorro e de comunicação."
+        ],
+        "exemplo": "Após ferir alguém na ação, a polícia presta socorro e avisa a família.",
+        "prova": [
+          "Assertiva que dispensa a comunicação à família erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+      "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+      "simples": "Executivo regulamenta classificação e utilização. Decreto 12.341/2024 é fonte atual complementar, sem alterar por si o texto legal nem criar uso irrestrito.",
+      "pontos": [
+        "Consultar regulamento junto da lei."
+      ],
+      "atencao": [
+        "Não considerar instrução informal como substituto de classificação e limites normativos."
+      ],
+      "exemplo": "O candidato compara instrumento e procedimento com o decreto vigente. Variação: A prática interna diverge da norma: não se presume válida apenas por costume.",
+      "prova": [
+        "A classificação e utilização têm regulamentação executiva prevista? Sim; o art. 7º a determina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ],
+      "expected": {
+        "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+        "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+        "simples": "O Poder Executivo editará regulamento classificando e disciplinando a utilização dos instrumentos não letais.",
+        "pontos": [
+          "Regulamento do Executivo classifica e disciplina os instrumentos."
+        ],
+        "atencao": [
+          "A classificação é regulamentar."
+        ],
+        "exemplo": "Um decreto lista os instrumentos não letais e regras de uso.",
+        "prova": [
+          "Assertiva que fixa na lei a classificação dos instrumentos erra: é por regulamento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "menor-potencial-ofensivo",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+      "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+      "simples": "A Lei 13.060 vigora na publicação. A regulamentação posterior tem marco próprio; sua data não deve ser confundida com a da lei.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Não presumir que a lei só nasceu em 2024 porque o decreto atual é daquele ano."
+      ],
+      "exemplo": "A questão cobra a vigência original de 2014. Variação: Cobra o regulamento de 2024: consulte seu marco próprio.",
+      "prova": [
+        "A lei só passou a existir com o decreto de 2024? Não; vigora desde a publicação da própria lei."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+        "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    }
+  ]
+}

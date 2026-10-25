@@ -1,0 +1,76 @@
+{
+  "verified_at": "2026-10-19T18:19:17.787273+00:00",
+  "scope": "PF 2025 – Perito Criminal Federal – Área 1: Contábil-Financeira; Língua Portuguesa; itens 1–7 do caderno básico comum.",
+  "published_count": 7,
+  "readback_confirmed": true,
+  "text_answer_support_sources_syllabus_preserved": true,
+  "duplicate_check": "Complete stem comparison across official, curated and board catalogs before insert; no other matching rows.",
+  "items": [
+    {
+      "id": "be5a8ec7-9660-5021-b13c-48fa0db0966f",
+      "item_number": 1,
+      "official_answer": "C",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "70670e9e-3165-54d4-ae6e-7eefec0c2d8a",
+      "item_number": 2,
+      "official_answer": "E",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "2989d5a8-1835-5419-9f1f-8109326f4507",
+      "item_number": 3,
+      "official_answer": "C",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "174fd499-5030-52be-ae4f-67fa529d7d5d",
+      "item_number": 4,
+      "official_answer": "E",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "e3a684b1-a185-5135-a594-a4fc9c9fade7",
+      "item_number": 5,
+      "official_answer": "E",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "10989f39-aea2-571e-a436-864eeed7ffea",
+      "item_number": 6,
+      "official_answer": "C",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    },
+    {
+      "id": "4ee59e2c-fb20-5ebf-a949-7a84aa0a5d4f",
+      "item_number": 7,
+      "official_answer": "E",
+      "content_status": "active",
+      "syllabus_topic_id": "7eb2db90-bab6-5019-93e8-d454bc62fa00"
+    }
+  ],
+  "other_extracted_questions_published": false,
+  "publisher_result": {
+    "dry_run": false,
+    "reviewed": 7,
+    "updated": [
+      "be5a8ec7-9660-5021-b13c-48fa0db0966f",
+      "70670e9e-3165-54d4-ae6e-7eefec0c2d8a",
+      "2989d5a8-1835-5419-9f1f-8109326f4507",
+      "174fd499-5030-52be-ae4f-67fa529d7d5d",
+      "e3a684b1-a185-5135-a594-a4fc9c9fade7",
+      "10989f39-aea2-571e-a436-864eeed7ffea",
+      "4ee59e2c-fb20-5ebf-a949-7a84aa0a5d4f"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-19T18:19:17.481Z"
+  },
+  "dry_run_passed": true
+}

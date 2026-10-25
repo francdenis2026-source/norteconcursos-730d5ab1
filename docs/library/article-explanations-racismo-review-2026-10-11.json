@@ -1,0 +1,1187 @@
+{
+  "version": "2026-10-11-racismo-targeted",
+  "checked_at": "2026-10-12T01:21:03.722727+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "racismo",
+      "title": "Lei 7.716/1989 — Crimes de Racismo e Preconceito",
+      "units": 23,
+      "scope_type": "targeted_correction",
+      "course_current_units": 23,
+      "target_unit_keys": [
+        "art-1",
+        "art-2-a",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-16",
+        "art-18",
+        "art-20",
+        "art-20-a",
+        "art-20-b",
+        "art-20-c",
+        "art-20-d",
+        "art-21",
+        "art-22"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "source_sha256": "c8a6748257b510ffd438be81d2e5704778faf137b97f8216727f4c921fe7e01b",
+      "source_checked_at": "2026-10-12T00:31:25.346453+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "c3a9a7df-b933-5f4a-8a9d-c19df8b5d33a",
+      "content_sha256": "77506387d0338c45112eb5fe4785c8223d7b72e015f1714058215a5f17e0602c",
+      "simples": "A lei abrange crimes resultantes de discriminação/preconceito de raça, cor, etnia, religião ou procedência nacional. STF, ADO 26 e MI 4733: homotransfobia enquadrada no tratamento do racismo enquanto não houver lei específica; embargos de 2023 também alcançam ofensas individuais nos termos decididos.",
+      "pontos": [
+        "Rol literal e aplicação constitucional devem ser distinguidos."
+      ],
+      "atencao": [
+        "Não limitar racismo à cor nem equiparar qualquer desavença pessoal ao tipo, sem elementos discriminatórios. A proteção da liberdade religiosa não autoriza discurso de ódio."
+      ],
+      "exemplo": "Um grupo é discriminado por origem nacional: examine a modalidade legal pertinente. Variação: É ofensa por orientação sexual: consulte a interpretação do STF, não apenas a literalidade do rol.",
+      "prova": [
+        "A lei literal limita-se a raça e cor? Não; inclui etnia, religião e procedência nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADO&numeroProcesso=26",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512663"
+      ],
+      "expected": {
+        "unit_id": "c3a9a7df-b933-5f4a-8a9d-c19df8b5d33a",
+        "content_sha256": "77506387d0338c45112eb5fe4785c8223d7b72e015f1714058215a5f17e0602c",
+        "simples": "Serão punidos, na forma desta Lei, os crimes resultantes de discriminação ou preconceito de raça, cor, etnia, religião ou procedência nacional.",
+        "pontos": [
+          "Define o alcance da lei: raça, cor, etnia, religião ou procedência nacional.",
+          "Abrange discriminação e preconceito."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 9.459, de 15/05/97 (incluiu etnia, religião e procedência nacional).",
+          "Crime de racismo: inafiançável e imprescritível (Constituição, art. 5º, XLII)."
+        ],
+        "exemplo": "Recusar atendimento a alguém por causa da cor da pele é crime previsto nesta lei.",
+        "prova": [
+          "Assertiva que limita a lei à discriminação de cor erra: abrange raça, cor, etnia, religião e procedência nacional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2-a",
+      "unit_id": "22ed7b8e-57ab-58b4-9ce7-b717aa3ccec1",
+      "content_sha256": "5b87b874e75f2db416b9f5e538aeb07314897aaa5e8827ff33ba812dbafeaade",
+      "simples": "Desde a Lei 14.532/2023, injúria em razão de raça, cor, etnia ou procedência nacional está nesta lei: reclusão de 2 a 5 anos e multa. Concurso de duas ou mais pessoas aumenta metade. Não se confunde com injúria qualificada religiosa/idoso/deficiência que permanece no CP 140, §3º. STF reconhece injúria racial como racismo imprescritível; regime atual é de ação pública incondicionada.",
+      "pontos": [
+        "Ofensa à pessoa: 2–5 anos e multa; concurso 2+: +1/2."
+      ],
+      "atencao": [
+        "Não ensinar faixa antiga de 1–3 anos nem exigir representação para o art. 2º-A atual. Fato anterior exige análise temporal; pena nova mais gravosa não retroage."
+      ],
+      "exemplo": "Duas pessoas ofendem a dignidade de uma vítima por sua raça: examina-se a majorante de metade. Variação: A ofensa usa condição de idoso sem motivo racial: consulte CP 140, §3º, não aplique automaticamente art. 2º-A.",
+      "prova": [
+        "Toda injúria baseada em religião ou deficiência migrou ao art. 2º-A? Não; CP 140, §3º mantém essas hipóteses próprias.",
+        "O art. 2º-A atual exige representação da vítima? Não; integra o regime de ação penal pública incondicionada da lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=475646",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512663",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=23%2F03%2F2026&num_registro=202400258788"
+      ],
+      "expected": {
+        "unit_id": "22ed7b8e-57ab-58b4-9ce7-b717aa3ccec1",
+        "content_sha256": "5b87b874e75f2db416b9f5e538aeb07314897aaa5e8827ff33ba812dbafeaade",
+        "simples": "Injúria racial: injuriar alguém, ofendendo-lhe a dignidade ou o decoro, em razão de raça, cor, etnia ou procedência nacional. Pena: reclusão de dois a cinco anos e multa. A pena é aumentada de metade se o crime for cometido mediante concurso de duas ou mais pessoas.",
+        "pontos": [
+          "Ofensa à dignidade ou ao decoro por motivo de raça, cor, etnia ou procedência nacional.",
+          "Reclusão de dois a cinco anos e multa.",
+          "Aumento de metade se houver concurso de duas ou mais pessoas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.532, de 2023; a injúria racial deixou o Código Penal e passou a ser crime de racismo.",
+          "Por ser racismo, é inafiançável e imprescritível.",
+          "O tipo não inclui religião."
+        ],
+        "exemplo": "Chamar alguém de forma ofensiva por causa da cor da pele é injúria racial.",
+        "prova": [
+          "Assertiva que trata a injúria racial como crime prescritível e afiançável erra: é equiparada ao racismo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Injúria (Código Penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "0a2b7402-ebfe-509a-bb1f-5a5863939436",
+      "content_sha256": "76c18f812e8d4ec21a7382eae5867f12fef853a5f620b4892948b20158a87ffe",
+      "simples": "Impedir acesso de habilitado a cargo da administração direta/indireta ou concessionária, por motivo abrangido na lei: reclusão de 2 a 5 anos. A discriminação na promoção funcional também é alcançada.",
+      "pontos": [
+        "Acesso público e promoção; 2–5 anos."
+      ],
+      "atencao": [
+        "Não classificar reprovação legítima por falta de requisito como discriminação automática."
+      ],
+      "exemplo": "Candidato habilitado é barrado por sua etnia na admissão pública. Variação: Não atende a requisito legal objetivo aplicado igualmente: isso não prova motivo discriminatório.",
+      "prova": [
+        "O artigo também alcança promoção funcional discriminatória? Sim; o parágrafo único a prevê."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0a2b7402-ebfe-509a-bb1f-5a5863939436",
+        "content_sha256": "76c18f812e8d4ec21a7382eae5867f12fef853a5f620b4892948b20158a87ffe",
+        "simples": "Impedir ou obstar o acesso de alguém, devidamente habilitado, a qualquer cargo da Administração Direta ou Indireta, bem como das concessionárias de serviços públicos. Pena: reclusão de dois a cinco anos. Incorre na mesma pena quem, por motivo de discriminação, obstar a promoção funcional.",
+        "pontos": [
+          "Impedir acesso a cargo público ou de concessionária, estando a pessoa habilitada.",
+          "Reclusão de dois a cinco anos.",
+          "Mesma pena para quem obstar a promoção funcional por discriminação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafo único incluído pela Lei nº 12.288, de 2010 (Estatuto da Igualdade Racial).",
+          "A vítima precisa estar devidamente habilitada."
+        ],
+        "exemplo": "Comissão impede candidato aprovado de assumir o cargo por causa da cor.",
+        "prova": [
+          "Assertiva que dispensa a habilitação da vítima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "07a4d064-2a7b-5367-b89e-7abc5f0b33c1",
+      "content_sha256": "278e5f0cfeaa4f6be0deffb7977e1ddcae29c492c9068b5ce94ebdf492d734d2",
+      "simples": "Negar/obstar emprego privado por discriminação: reclusão 2 a 5 anos. Inclui equipamentos, ascensão/benefícios e tratamento, especialmente salário. Recrutamento com exigência racial/étnica de aparência injustificada recebe multa e serviços comunitários nos termos do §2º.",
+      "pontos": [
+        "Emprego, condições e salário; anúncio tem sanção específica."
+      ],
+      "atencao": [
+        "Não atribuir indistintamente pena 2–5 ao anúncio do §2º nem admitir seleção racial arbitrária por preferência comercial."
+      ],
+      "exemplo": "Empregador nega equipamento necessário a empregado por origem étnica, ao contrário dos demais. Variação: O caso é anúncio com aparência racial injustificada: compare a sanção própria de multa e serviços.",
+      "prova": [
+        "O §2º prevê a mesma pena privativa de liberdade do caput para anúncio? Não; prevê multa e prestação de serviços."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "07a4d064-2a7b-5367-b89e-7abc5f0b33c1",
+        "content_sha256": "278e5f0cfeaa4f6be0deffb7977e1ddcae29c492c9068b5ce94ebdf492d734d2",
+        "simples": "Negar ou obstar emprego em empresa privada. Pena: reclusão de dois a cinco anos. Incorre na mesma pena quem, por discriminação, deixar de conceder equipamentos em igualdade de condições, impedir a ascensão funcional ou dar tratamento diferenciado no ambiente de trabalho, especialmente quanto ao salário. Quem exigir, em anúncios de emprego, aspectos de aparência próprios de raça ou etnia que a atividade não justifique fica sujeito a multa e prestação de serviços à comunidade.",
+        "pontos": [
+          "Negar emprego em empresa privada: reclusão de dois a cinco anos.",
+          "§1º: equipamentos, ascensão funcional e tratamento diferenciado.",
+          "§2º: exigência de aparência racial em anúncios, com multa e prestação de serviços à comunidade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafos incluídos pela Lei nº 12.288, de 2010.",
+          "O §2º tem multa e prestação de serviços, não reclusão."
+        ],
+        "exemplo": "Empresa recusa contratar candidato por causa da cor da pele.",
+        "prova": [
+          "Assertiva que aplica reclusão ao §2º erra: são multa e prestação de serviços."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "7dc34855-b76c-537f-b9d2-24f358497b0c",
+      "content_sha256": "9942d389b5e4f0a82e57a6b41b8f8c06d412b59d2d59b10cb13ba2d1e28576d8",
+      "simples": "Negar servir, atender ou receber cliente no comércio por discriminação abrangida na lei: reclusão de 1 a 3 anos.",
+      "pontos": [
+        "Comércio: 1–3 anos."
+      ],
+      "atencao": [
+        "Não confundir recusa fundada em motivo legítimo comprovado com discriminação, nem supor que justificativa aparente afasta prova de preconceito."
+      ],
+      "exemplo": "Cliente é recusado no balcão unicamente por sua raça. Variação: A loja alega regra neutra, mas a aplica só ao grupo: investigue o motivo real e tratamento.",
+      "prova": [
+        "O tipo alcança negar atendimento ao cliente? Sim; o caput enumera servir, atender e receber."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7dc34855-b76c-537f-b9d2-24f358497b0c",
+        "content_sha256": "9942d389b5e4f0a82e57a6b41b8f8c06d412b59d2d59b10cb13ba2d1e28576d8",
+        "simples": "Recusar ou impedir acesso a estabelecimento comercial, negando-se a servir, atender ou receber cliente ou comprador. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Recusar servir ou atender cliente em estabelecimento comercial.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "Pena menor que a dos crimes de acesso a escola e hotel."
+        ],
+        "exemplo": "Loja se nega a atender cliente por sua origem étnica.",
+        "prova": [
+          "Assertiva que fixa pena de dois a cinco anos erra: é de um a três."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "be6c3154-fef7-5b84-aab3-f3a1257f4340",
+      "content_sha256": "0399c69b7647a22201473032ac851fafdd4d603a75d34bc534cbf34345b2a00a",
+      "simples": "Recusar, negar ou impedir matrícula/ingresso de aluno por discriminação: reclusão 3 a 5 anos, em ensino público ou privado de qualquer grau. Contra menor de 18, aumento de um terço.",
+      "pontos": [
+        "Ensino: 3–5; vítima menor de 18: +1/3."
+      ],
+      "atencao": [
+        "Não limitar a escola pública nem considerar exatamente 18 como menor de 18."
+      ],
+      "exemplo": "Aluno de 17 anos é impedido de matricular-se por origem nacional: examina-se aumento. Variação: Tem 18 anos completos: o tipo pode existir, mas essa majorante etária não é automática.",
+      "prova": [
+        "A majorante etária alcança quem tem exatamente 18 anos? Não; o texto exige menor de dezoito."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "be6c3154-fef7-5b84-aab3-f3a1257f4340",
+        "content_sha256": "0399c69b7647a22201473032ac851fafdd4d603a75d34bc534cbf34345b2a00a",
+        "simples": "Recusar, negar ou impedir a inscrição ou ingresso de aluno em estabelecimento de ensino público ou privado de qualquer grau. Pena: reclusão de três a cinco anos. Se o crime for praticado contra menor de dezoito anos, a pena é agravada de um terço.",
+        "pontos": [
+          "Recusar matrícula em escola pública ou privada de qualquer grau.",
+          "Reclusão de três a cinco anos.",
+          "Aumento de um terço se a vítima for menor de dezoito anos."
+        ],
+        "atencao": [
+          "Aumento de um terço se a vítima for menor de dezoito anos."
+        ],
+        "exemplo": "Escola recusa matrícula de criança por causa de sua cor.",
+        "prova": [
+          "Assertiva que fixa pena de um a três anos erra: é de três a cinco."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "2f78f2a5-aa5b-55a3-9a85-30598f554c77",
+      "content_sha256": "245c18abedaf3ecd8e44bb3d2a1b7906ab1ccea5a7b73961ff546a7eec1578ac",
+      "simples": "Negar acesso/hospedagem em hotel, pensão, estalagem ou similar por discriminação: reclusão 3 a 5 anos.",
+      "pontos": [
+        "Hospedagem: 3–5, diferente de atendimento comercial geral."
+      ],
+      "atencao": [
+        "Não usar indiscriminadamente a faixa 1–3 do comércio quando a hipótese é hospedagem."
+      ],
+      "exemplo": "Há vaga, mas o hotel recusa hospedar alguém por sua etnia. Variação: O estabelecimento está sem vagas para todos: a indisponibilidade objetiva, sozinha, não prova preconceito.",
+      "prova": [
+        "A pena de recusa discriminatória de hospedagem é de três a cinco anos? Sim; é a faixa do art. 7º."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2f78f2a5-aa5b-55a3-9a85-30598f554c77",
+        "content_sha256": "245c18abedaf3ecd8e44bb3d2a1b7906ab1ccea5a7b73961ff546a7eec1578ac",
+        "simples": "Impedir o acesso ou recusar hospedagem em hotel, pensão, estalagem, ou qualquer estabelecimento similar. Pena: reclusão de três a cinco anos.",
+        "pontos": [
+          "Impedir acesso ou recusar hospedagem.",
+          "Reclusão de três a cinco anos."
+        ],
+        "atencao": [
+          "Pena maior que a de restaurantes e bares."
+        ],
+        "exemplo": "Hotel recusa hóspede por causa de sua etnia.",
+        "prova": [
+          "Assertiva que fixa pena de um a três anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "f68f9ff8-ca74-5eb2-91eb-4e7a139f0eba",
+      "content_sha256": "a70cbf249288a73686516b404d9fbc73468bc551b7ddcb7420e0ab58cee5e312",
+      "simples": "Negar acesso/atendimento em restaurante, bar, confeitaria ou similar aberto ao público por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Alimentação e locais semelhantes abertos ao público."
+      ],
+      "atencao": [
+        "Não confundir com hotel nem transformar motivo legítimo indistinto em crime presumido."
+      ],
+      "exemplo": "O bar atende os demais, mas recusa cliente por religião. Variação: O local está fechado para todos: fechamento comum não demonstra motivo discriminatório.",
+      "prova": [
+        "O artigo abrange bares abertos ao público? Sim; estão expressamente enumerados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f68f9ff8-ca74-5eb2-91eb-4e7a139f0eba",
+        "content_sha256": "a70cbf249288a73686516b404d9fbc73468bc551b7ddcb7420e0ab58cee5e312",
+        "simples": "Impedir o acesso ou recusar atendimento em restaurantes, bares, confeitarias, ou locais semelhantes abertos ao público. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Recusar atendimento em restaurantes, bares e similares.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "O local deve ser aberto ao público."
+        ],
+        "exemplo": "Bar nega mesa a cliente por causa da cor.",
+        "prova": [
+          "Assertiva que fixa pena de três a cinco anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "172c07a6-eadf-5b1e-a534-243a8a6c027b",
+      "content_sha256": "63125cc06ec915e61b430401394eb131fd5b652bb466a8480369c7940e7dd770",
+      "simples": "Negar acesso/atendimento em estabelecimentos esportivos, diversão ou clubes sociais abertos ao público por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Acesso discriminatório em clube/esporte/diversão."
+      ],
+      "atencao": [
+        "Distinguir recusa de entrada do art. 9º da prática/incitação em evento público do art. 20, §2º-A."
+      ],
+      "exemplo": "Clube aberto ao público barra cliente por cor. Variação: O fato é incitação racista durante evento: examine o tipo e a pena próprios do art. 20.",
+      "prova": [
+        "O contexto esportivo elimina a distinção entre recusa de entrada e incitação? Não; são hipóteses legais diferentes."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "172c07a6-eadf-5b1e-a534-243a8a6c027b",
+        "content_sha256": "63125cc06ec915e61b430401394eb131fd5b652bb466a8480369c7940e7dd770",
+        "simples": "Impedir o acesso ou recusar atendimento em estabelecimentos esportivos, casas de diversões, ou clubes sociais abertos ao público. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Recusar acesso em estabelecimentos esportivos, casas de diversões ou clubes sociais abertos ao público.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "Clube fechado a sócios não é aberto ao público."
+        ],
+        "exemplo": "Casa de shows barra a entrada de pessoa por causa da cor.",
+        "prova": [
+          "Assertiva que dispensa que o local seja aberto ao público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "a28935ea-b85f-504b-8527-b5a263d1ea5d",
+      "content_sha256": "6d1752fede10b39f492daa2be133f8c476ac566af3f81c5bde9f988f8db68dfa",
+      "simples": "Negar acesso/atendimento em cabeleireiro, barbearia, termas, massagem ou similar por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Serviços pessoais; 1–3 anos."
+      ],
+      "atencao": [
+        "Preferência do prestador não legitima recusa racial."
+      ],
+      "exemplo": "Barbearia recusa atendimento por origem étnica. Variação: Cliente não tem agendamento e a regra é indistinta: examine os elementos, não conclua preconceito só pela espera.",
+      "prova": [
+        "A lei abrange barbearias e estabelecimentos de finalidade semelhante? Sim; o art. 10 os inclui."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a28935ea-b85f-504b-8527-b5a263d1ea5d",
+        "content_sha256": "6d1752fede10b39f492daa2be133f8c476ac566af3f81c5bde9f988f8db68dfa",
+        "simples": "Impedir o acesso ou recusar atendimento em salões de cabeleireiros, barbearias, termas ou casas de massagem ou estabelecimento com as mesmas finalidades. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Salões, barbearias, termas e casas de massagem.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "Rol exemplificativo, pela expressão estabelecimento com as mesmas finalidades."
+        ],
+        "exemplo": "Salão de beleza recusa cliente por causa de sua cor.",
+        "prova": [
+          "Assertiva que fixa pena de dois a cinco anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "407cbb3f-0973-505d-98d5-2fd3097c0837",
+      "content_sha256": "70e63cd06f7daaebed0ce1f1605619e42f76727ac2768b7a85fc7b27d4abd72f",
+      "simples": "Impedir acesso às entradas sociais de edifícios públicos ou residenciais e elevadores/escadas por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Entrada social e circulação; edifício público ou residencial."
+      ],
+      "atencao": [
+        "Não reduzir o tipo ao comércio nem justificar segregação racial pela existência de entrada de serviço."
+      ],
+      "exemplo": "A pessoa é enviada à entrada de serviço apenas por sua cor. Variação: Há organização objetiva sem discriminação: deve-se examinar o motivo real e a aplicação da regra.",
+      "prova": [
+        "O tipo também alcança edifícios residenciais? Sim; o texto os menciona."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "407cbb3f-0973-505d-98d5-2fd3097c0837",
+        "content_sha256": "70e63cd06f7daaebed0ce1f1605619e42f76727ac2768b7a85fc7b27d4abd72f",
+        "simples": "Impedir o acesso às entradas sociais em edifícios públicos ou residenciais e elevadores ou escada de acesso aos mesmos. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Impedir acesso às entradas sociais, elevadores ou escadas.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "Vale para edifícios públicos ou residenciais."
+        ],
+        "exemplo": "Condomínio obriga empregado negro a usar só a entrada de serviço.",
+        "prova": [
+          "Assertiva que restringe o crime a edifícios residenciais erra: inclui os públicos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "30587138-3234-5eb7-82b3-da0d147e22ef",
+      "content_sha256": "be7f538705ba5daecf63df1b0f693d84f075f5ceb4ad0b9344524449d22e4b3f",
+      "simples": "Impedir acesso/uso de transporte público ou concedido por discriminação: reclusão 1 a 3 anos. A lista de meios é exemplificativa e inclui aéreo, aquaviário e terrestre.",
+      "pontos": [
+        "Acesso ou uso; transportes concedidos também."
+      ],
+      "atencao": [
+        "Não limitar ao ônibus nem ignorar caráter público/concedido por ser empresa privada."
+      ],
+      "exemplo": "Passageiro é impedido de usar serviço concedido por origem nacional. Variação: A empresa alega ser privada: isso não afasta o tipo de transporte concedido.",
+      "prova": [
+        "A exploração por concessionária exclui automaticamente a hipótese? Não; o artigo inclui transporte concedido."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "30587138-3234-5eb7-82b3-da0d147e22ef",
+        "content_sha256": "be7f538705ba5daecf63df1b0f693d84f075f5ceb4ad0b9344524449d22e4b3f",
+        "simples": "Impedir o acesso ou uso de transportes públicos, como aviões, navios barcas, barcos, ônibus, trens, metrô ou qualquer outro meio de transporte concedido. Pena: reclusão de um a três anos.",
+        "pontos": [
+          "Impedir acesso ou uso de transporte público.",
+          "Reclusão de um a três anos."
+        ],
+        "atencao": [
+          "Qualquer meio de transporte concedido."
+        ],
+        "exemplo": "Motorista de ônibus impede o embarque de passageiro por sua cor.",
+        "prova": [
+          "Assertiva que restringe o crime a ônibus erra: abrange aviões, navios, trens e metrô."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "c1f62444-5e22-53ef-a778-2147d6c9cd1c",
+      "content_sha256": "97d3f629b479a3f66809d5d3cde70ed773e6bc81a3488e0ea3930571783d6099",
+      "simples": "Impedir acesso ao serviço em qualquer ramo das Forças Armadas por discriminação abrangida na lei: reclusão 2 a 4 anos.",
+      "pontos": [
+        "Forças Armadas; 2–4 anos."
+      ],
+      "atencao": [
+        "Não substituir requisito legal legítimo de ingresso por juízo automático de preconceito."
+      ],
+      "exemplo": "Candidato habilitado é barrado no serviço por etnia. Variação: O impedimento decorre de requisito objetivo legítimo não atendido: examine motivo e igualdade de aplicação.",
+      "prova": [
+        "A hipótese limita-se a um ramo das Forças Armadas? Não; refere-se a qualquer ramo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c1f62444-5e22-53ef-a778-2147d6c9cd1c",
+        "content_sha256": "97d3f629b479a3f66809d5d3cde70ed773e6bc81a3488e0ea3930571783d6099",
+        "simples": "Impedir ou obstar o acesso de alguém ao serviço em qualquer ramo das Forças Armadas. Pena: reclusão de dois a quatro anos.",
+        "pontos": [
+          "Obstar o acesso ao serviço em qualquer ramo das Forças Armadas.",
+          "Reclusão de dois a quatro anos."
+        ],
+        "atencao": [
+          "Pena de dois a quatro anos."
+        ],
+        "exemplo": "Comissão veta o alistamento de candidato por causa da cor.",
+        "prova": [
+          "Assertiva que fixa pena de um a três anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "0e5477f9-5881-55ac-a836-4484e467cb93",
+      "content_sha256": "bdae00406bb43e017b9ba6808526276006bca28f36464a163a7341134c2a7cd6",
+      "simples": "Impedir casamento ou convivência familiar/social por qualquer meio, por discriminação abrangida na lei: reclusão 2 a 4 anos.",
+      "pontos": [
+        "Casamento e convivência; não apenas impedimento registral."
+      ],
+      "atencao": [
+        "Não reduzir o tipo a negativa de cartório, nem presumir crime em qualquer desacordo familiar sem motivo típico."
+      ],
+      "exemplo": "Um agente impede convívio social exclusivamente pela etnia de uma pessoa. Variação: Há desavença pessoal sem elemento discriminatório demonstrado: não basta o conflito para o tipo.",
+      "prova": [
+        "O artigo limita-se ao casamento formal? Não; também protege convivência familiar e social."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0e5477f9-5881-55ac-a836-4484e467cb93",
+        "content_sha256": "bdae00406bb43e017b9ba6808526276006bca28f36464a163a7341134c2a7cd6",
+        "simples": "Impedir ou obstar, por qualquer meio ou forma, o casamento ou convivência familiar e social. Pena: reclusão de dois a quatro anos.",
+        "pontos": [
+          "Impedir o casamento ou a convivência familiar e social.",
+          "Reclusão de dois a quatro anos."
+        ],
+        "atencao": [
+          "Qualquer meio ou forma."
+        ],
+        "exemplo": "Família impede o casamento do filho por preconceito racial contra a noiva.",
+        "prova": [
+          "Assertiva que limita o crime ao casamento erra: inclui convivência familiar e social."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "14e4b4e8-8595-5f62-b10d-ae354c3a7657",
+      "content_sha256": "00985fd0075d3de595912f9dd6254d22251195b33438bb0ebe125465448f3b78",
+      "simples": "Efeitos: servidor perde cargo/função e estabelecimento particular pode ter funcionamento suspenso por até três meses. Pelo art. 18, os efeitos não são automáticos e exigem declaração motivada.",
+      "pontos": [
+        "Suspensão de funcionamento: até 3 meses; motivação no art. 18."
+      ],
+      "atencao": [
+        "Não confundir suspensão de estabelecimento com fechamento definitivo nem perda automática do cargo."
+      ],
+      "exemplo": "A sentença fundamenta suspensão do estabelecimento por período dentro do limite. Variação: Impõe suspensão de seis meses por este artigo: excede o teto de três.",
+      "prova": [
+        "O art. 16 permite suspensão de seis meses? Não; o teto é de três meses."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "14e4b4e8-8595-5f62-b10d-ae354c3a7657",
+        "content_sha256": "00985fd0075d3de595912f9dd6254d22251195b33438bb0ebe125465448f3b78",
+        "simples": "Constitui efeito da condenação a perda do cargo ou função pública, para o servidor público, e a suspensão do funcionamento do estabelecimento particular por prazo não superior a três meses.",
+        "pontos": [
+          "Perda do cargo ou função pública para o servidor.",
+          "Suspensão do estabelecimento particular por até três meses."
+        ],
+        "atencao": [
+          "Efeitos não automáticos (art. 18)."
+        ],
+        "exemplo": "Servidor condenado pode perder o cargo, se o juiz declarar na sentença.",
+        "prova": [
+          "Assertiva que torna automática a perda do cargo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "f4cf8c75-79c9-58e8-94bd-63b291d0772c",
+      "content_sha256": "e746f32f86dd97e02414cf155e8e578369e546c927623aa28853524c4b05a62f",
+      "simples": "Os efeitos referidos não são automáticos e devem ser motivadamente declarados na sentença. A remissão ao art. 17 é histórica: esse artigo aparece vetado, sem fornecer efeito vigente autônomo.",
+      "pontos": [
+        "Efeitos com motivação; art. 17 vetado."
+      ],
+      "atencao": [
+        "Não preencher o artigo vetado por imaginação nem aplicar efeitos do art. 16 sem fundamentação."
+      ],
+      "exemplo": "Há condenação e o juiz fundamenta o efeito concretamente aplicável do art. 16. Variação: A sentença presume perda funcional automática: não atende ao art. 18.",
+      "prova": [
+        "A condenação torna automaticamente aplicáveis os efeitos do art. 16? Não; devem ser declarados motivadamente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f4cf8c75-79c9-58e8-94bd-63b291d0772c",
+        "content_sha256": "e746f32f86dd97e02414cf155e8e578369e546c927623aa28853524c4b05a62f",
+        "simples": "Os efeitos de que tratam os arts. 16 e 17 não são automáticos, devendo ser motivadamente declarados na sentença.",
+        "pontos": [
+          "Efeitos da condenação não são automáticos.",
+          "Exigem motivação expressa na sentença."
+        ],
+        "atencao": [
+          "A perda do cargo exige declaração motivada."
+        ],
+        "exemplo": "A sentença deve fundamentar a perda do cargo.",
+        "prova": [
+          "Assertiva que considera automáticos os efeitos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "a03b0a35-21dd-5567-b960-f55b25b23256",
+      "content_sha256": "c038a1ac299f1616d34c6faa619a2d4ab6a0f460299e08391a85301302971192",
+      "simples": "Praticar, induzir ou incitar discriminação: reclusão 1 a 3 anos e multa. Divulgação do nazismo com os símbolos indicados: 2 a 5 e multa. Comunicação/redes/publicação: 2 a 5 e multa. Evento público esportivo, religioso, artístico/cultural: 2 a 5 e proibição de frequência por três anos nos locais descritos. Obstar práticas religiosas tem pena do caput, além da violência. Medidas sobre material/publicação têm controle judicial nos §§3º/4º.",
+      "pontos": [
+        "Caput 1–3; hipóteses especiais 2–5; evento tem proibição específica."
+      ],
+      "atencao": [
+        "Não exigir coletividade da vítima em toda aplicação nem confundir divulgação nazista com todo uso histórico/didático da suástica, que exige finalidade de divulgação do nazismo. Distinguir caput da injúria pessoal do art. 2º-A."
+      ],
+      "exemplo": "O autor incita discriminação racial por rede social: examine a faixa do §2º. Variação: É representação acadêmica sem finalidade de divulgar nazismo: não presuma a finalidade típica só pelo símbolo.",
+      "prova": [
+        "A propaganda nazista do §1º exige finalidade de divulgação do nazismo? Sim; o tipo a exige expressamente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "a03b0a35-21dd-5567-b960-f55b25b23256",
+        "content_sha256": "c038a1ac299f1616d34c6faa619a2d4ab6a0f460299e08391a85301302971192",
+        "simples": "Praticar, induzir ou incitar a discriminação ou preconceito de raça, cor, etnia, religião ou procedência nacional. Pena: reclusão de um a três anos e multa. Fabricar, comercializar, distribuir ou veicular símbolos que utilizem a cruz suástica para divulgação do nazismo: reclusão de dois a cinco anos e multa. Se cometido por meios de comunicação social, redes sociais ou internet: reclusão de dois a cinco anos e multa. Se cometido em atividades esportivas, religiosas, artísticas ou culturais destinadas ao público: reclusão de dois a cinco anos e proibição de frequência, por três anos, a locais dessas práticas.",
+        "pontos": [
+          "Caput: praticar, induzir ou incitar (um a três anos e multa).",
+          "§1º: símbolos nazistas (dois a cinco anos e multa).",
+          "§2º: meios de comunicação, redes sociais e internet (dois a cinco anos).",
+          "§2º-A: contexto esportivo, religioso, artístico ou cultural, com proibição de frequência por três anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §2º com redação da Lei nº 14.532, de 2023; §2º-A incluído pela mesma lei.",
+          "Crime de racismo: inafiançável e imprescritível.",
+          "Abrange religião, que a injúria racial do art. 2º-A não inclui."
+        ],
+        "exemplo": "Publicar em rede social mensagem que incita ódio contra um grupo étnico gera pena de dois a cinco anos.",
+        "prova": [
+          "Assertiva que aplica ao caput pena de dois a cinco anos erra: é de um a três."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º-A",
+          "Art. 20-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20-a",
+      "unit_id": "d0c66208-ccd6-590e-bf15-1ea4318a3197",
+      "content_sha256": "25304412a5fe7dbfb722d5ffb9579a5bfac3e20a92c5d1abc91ff26ed45004b7",
+      "simples": "Crimes da lei em contexto ou com intuito de descontração, diversão ou recreação têm aumento de 1/3 até metade. A majorante foi incluída em 2023.",
+      "pontos": [
+        "Racismo recreativo agrava; não é excludente por ser brincadeira."
+      ],
+      "atencao": [
+        "Não admitir que humor apaga automaticamente elementos discriminatórios; tampouco dispensar análise do tipo."
+      ],
+      "exemplo": "A ofensa racista é usada para diversão dos presentes: examine tipo e majorante. Variação: O autor alega brincadeira: esse contexto não é autorização para discriminar.",
+      "prova": [
+        "A intenção recreativa afasta automaticamente a pena? Não; a lei prevê aumento nesse contexto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "d0c66208-ccd6-590e-bf15-1ea4318a3197",
+        "content_sha256": "25304412a5fe7dbfb722d5ffb9579a5bfac3e20a92c5d1abc91ff26ed45004b7",
+        "simples": "Os crimes previstos nesta Lei terão as penas aumentadas de um terço até a metade quando ocorrerem em contexto ou com intuito de descontração, diversão ou recreação.",
+        "pontos": [
+          "Aumento de um terço até a metade.",
+          "Contexto ou intuito de descontração, diversão ou recreação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.532, de 2023.",
+          "Afasta a tese de brincadeira."
+        ],
+        "exemplo": "Racismo disfarçado de piada tem a pena aumentada.",
+        "prova": [
+          "Assertiva que trata a brincadeira como excludente de crime erra: ela aumenta a pena."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20-b",
+      "unit_id": "0a29959c-efd4-55ae-b7c4-db83dd40df2a",
+      "content_sha256": "8e7e8a7d609a4d176a788b224391a0a13320b8ab23fda7ea10f4246b48896e97",
+      "simples": "Penas dos arts. 2º-A e 20 aumentam de 1/3 até metade se praticados por funcionário público, na definição penal, no exercício ou a pretexto da função.",
+      "pontos": [
+        "Só arts. 2º-A/20; vínculo funcional na conduta."
+      ],
+      "atencao": [
+        "Não estender automaticamente esta majorante a todo artigo da lei nem bastar ser servidor em situação inteiramente particular."
+      ],
+      "exemplo": "O servidor usa a função para praticar injúria racial contra usuário do serviço. Variação: O crime cobrado é outro artigo: examine sua disciplina sem transpor automaticamente art. 20-B.",
+      "prova": [
+        "A majorante do art. 20-B vale indistintamente para todos os crimes da lei? Não; o texto indica arts. 2º-A e 20."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "0a29959c-efd4-55ae-b7c4-db83dd40df2a",
+        "content_sha256": "8e7e8a7d609a4d176a788b224391a0a13320b8ab23fda7ea10f4246b48896e97",
+        "simples": "Os crimes previstos nos arts. 2º-A e 20 terão as penas aumentadas de um terço até a metade quando praticados por funcionário público, no exercício de suas funções ou a pretexto de exercê-las.",
+        "pontos": [
+          "Aplica-se aos arts. 2º-A e 20.",
+          "Aumento de um terço até a metade.",
+          "Funcionário público no exercício da função ou a pretexto dela."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.532, de 2023."
+        ],
+        "exemplo": "Policial que pratica injúria racial durante abordagem tem a pena aumentada.",
+        "prova": [
+          "Assertiva que estende o aumento a todos os crimes da lei erra: vale para os arts. 2º-A e 20."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20-c",
+      "unit_id": "ffe154ff-849e-5e58-af6b-f89d3201976f",
+      "content_sha256": "b2779c57626d37c53b04aa3c28e4029214956c9016a65dc9d7cb61f9b0ab9b68",
+      "simples": "A interpretação considera tratamento discriminatório que cause constrangimento, humilhação, vergonha, medo ou exposição indevida não usualmente dirigido a outros grupos em razão dos motivos previstos. Regra interpretativa não é tipo com pena autônoma.",
+      "pontos": [
+        "Comparar tratamento e motivo, sem substituir requisitos do crime."
+      ],
+      "atencao": [
+        "Não usar desconforto isolado para dispensar conduta e elementos discriminatórios do tipo pertinente."
+      ],
+      "exemplo": "Só pessoas de determinada etnia recebem revista humilhante, enquanto as demais são tratadas de outro modo. Variação: Há tratamento indistinto legítimo: analise contexto antes de atribuir discriminação por mera impressão.",
+      "prova": [
+        "O art. 20-C cria pena autônoma para qualquer desconforto? Não; estabelece critério interpretativo da lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "ffe154ff-849e-5e58-af6b-f89d3201976f",
+        "content_sha256": "b2779c57626d37c53b04aa3c28e4029214956c9016a65dc9d7cb61f9b0ab9b68",
+        "simples": "Na interpretação desta Lei, o juiz deve considerar como discriminatória qualquer atitude ou tratamento dado à pessoa ou a grupos minoritários que cause constrangimento, humilhação, vergonha, medo ou exposição indevida, e que usualmente não se dispensaria a outros grupos em razão da cor, etnia, religião ou procedência.",
+        "pontos": [
+          "Diretriz de interpretação para o juiz.",
+          "Considera discriminatório o tratamento que causa constrangimento, humilhação, vergonha, medo ou exposição indevida."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.532, de 2023."
+        ],
+        "exemplo": "Tratamento humilhante dado apenas a um grupo minoritário é considerado discriminatório.",
+        "prova": [
+          "Assertiva que ignora o critério do tratamento que não se dispensaria a outros grupos erra a lógica do dispositivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20-d",
+      "unit_id": "374831f6-d91b-5159-8381-b927f91c3338",
+      "content_sha256": "3977fb2cea02fc76d634738de162b9ba221a660cbc8d2546e1918ef2fd798b81",
+      "simples": "Vítima de racismo deve ser acompanhada de advogado ou defensor público em todos os atos processuais, cíveis e criminais. Proteção incluída em 2023.",
+      "pontos": [
+        "Acompanhamento processual cível e criminal."
+      ],
+      "atencao": [
+        "Não converter essa assistência em ação privada nem dispensar atribuições do MP na ação pública."
+      ],
+      "exemplo": "A vítima recebe assistência da Defensoria em ato processual criminal. Variação: O processo é cível: o artigo também o inclui, sem alterar natureza da ação penal.",
+      "prova": [
+        "A assistência limita-se aos atos criminais? Não; inclui atos cíveis e criminais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "374831f6-d91b-5159-8381-b927f91c3338",
+        "content_sha256": "3977fb2cea02fc76d634738de162b9ba221a660cbc8d2546e1918ef2fd798b81",
+        "simples": "Em todos os atos processuais, cíveis e criminais, a vítima dos crimes de racismo deverá estar acompanhada de advogado ou defensor público.",
+        "pontos": [
+          "Vítima acompanhada de advogado ou defensor público.",
+          "Vale para atos cíveis e criminais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.532, de 2023."
+        ],
+        "exemplo": "Na audiência, a vítima de racismo deve ter advogado ou defensor.",
+        "prova": [
+          "Assertiva que torna facultativo o acompanhamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "0446b679-1060-512e-a66c-3a3753e87daf",
+      "content_sha256": "e9199a89c04a947954f5520e239519d59b55622861971bedf1d0dd09658ac964",
+      "simples": "A lei original entrou em vigor na publicação. O artigo foi renumerado em 1990; as alterações posteriores, incluindo 2023, possuem marcos próprios e análise temporal.",
+      "pontos": [
+        "Publicação original; renumeração não reabre vigência."
+      ],
+      "atencao": [
+        "Não aplicar retroativamente pena mais gravosa de 2023 a fatos anteriores."
+      ],
+      "exemplo": "A questão pergunta a vacância original: vigência na publicação. Variação: Pergunta pena de fato anterior à alteração: analise a sucessão temporal.",
+      "prova": [
+        "A renumeração de 1990 reabre automaticamente a vigência original? Não; não cria por si nova vacância."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "0446b679-1060-512e-a66c-3a3753e87daf",
+        "content_sha256": "e9199a89c04a947954f5520e239519d59b55622861971bedf1d0dd09658ac964",
+        "simples": "Esta Lei entra em vigor na data de sua publicação.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "racismo",
+      "course_id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "4a764bc9-bb72-568d-9957-465348795c3a",
+      "content_sha256": "e7955e16161fdfe9d86c5560234672c751a1d4b6e3fe3b8d0d7969c279452559",
+      "simples": "Revogação de disposições contrárias encerra o diploma. Não permite presumir que toda norma correlata foi revogada nem usar este artigo para apagar alterações posteriores.",
+      "pontos": [
+        "Revogação exige incompatibilidade ou previsão específica; consulte compilação."
+      ],
+      "atencao": [
+        "Não afirmar que o CP 140, §3º foi totalmente revogado: suas hipóteses atuais próprias permanecem."
+      ],
+      "exemplo": "O aluno confere CP 140, §3º atual para injúria religiosa/idoso/deficiência. Variação: A apostila diz que toda injúria qualificada desapareceu: compare as hipóteses legais atuais.",
+      "prova": [
+        "A Lei 14.532 eliminou toda hipótese atual do CP 140, §3º? Não; o dispositivo conserva hipóteses específicas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a764bc9-bb72-568d-9957-465348795c3a",
+        "content_sha256": "e7955e16161fdfe9d86c5560234672c751a1d4b6e3fe3b8d0d7969c279452559",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Normas incompatíveis com a lei foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    }
+  ]
+}

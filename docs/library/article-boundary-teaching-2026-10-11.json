@@ -1,0 +1,684 @@
+{
+  "version": "2026-10-11",
+  "checked_at": "2026-10-11T20:08:54.729105+00:00",
+  "laws": [
+    {
+      "slug": "cin",
+      "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-17"
+      ],
+      "course_current_units": 30,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "source_sha256": "8a8133a72b1c53c256743b780c1630bf887b33afd384d175d6d465e46e7443b9",
+      "source_checked_at": "2026-10-11T18:39:25.901340+00:00",
+      "additional_sources": [
+        {
+          "title": "Constituição Federal — art. 12, §4º, redação da EC 131/2023",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "sha256": "249bc8f42e023faf2d7e70152e8f01fe06166ec28b6e2b75cd27c5e1a8e664ef",
+          "checked_at": "2026-10-11T18:56:23.073566+00:00"
+        }
+      ],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "lep",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-123"
+      ],
+      "course_current_units": 215,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "fff708f29f1e99c2cd87ad5babab7b8607220dc0d83ae0248a2572344ae6e549",
+      "source_checked_at": "2026-10-11T18:39:28.622733+00:00",
+      "additional_sources": [],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "idosa",
+      "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-50",
+        "art-100"
+      ],
+      "course_current_units": 117,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "source_sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5",
+      "source_checked_at": "2026-10-11T18:39:29.554167+00:00",
+      "additional_sources": [],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "contravencoes",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+      "units": 5,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-26",
+        "art-68",
+        "art-59",
+        "art-38",
+        "art-64"
+      ],
+      "course_current_units": 66,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032",
+      "source_checked_at": "2026-10-11T18:39:29.583665+00:00",
+      "additional_sources": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff",
+          "checked_at": "2026-10-11T18:39:29.583665+00:00"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "sha256": "ac810c001de6a2b8750f188d9885971e958e4acb94600dddb58606409c3ae66c",
+          "checked_at": "2026-10-11T18:39:29.583665+00:00"
+        }
+      ],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "eca",
+      "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+      "units": 3,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-232",
+        "art-239",
+        "art-247"
+      ],
+      "course_current_units": 326,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "source_sha256": "b43295cb76828f625682bd4b142739269747189b3065725ba6402951b9dc6e0e",
+      "source_checked_at": "2026-10-11T18:39:33.277470+00:00",
+      "additional_sources": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "sha256": "dde1996257896984a2789c926f6936732209dda9cb6e73313f917870550ac53e",
+          "checked_at": "2026-10-11T18:39:33.277470+00:00"
+        }
+      ],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "ric",
+      "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-5"
+      ],
+      "course_current_units": 7,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "source_sha256": "f9ba0a13573f7a7664da260c432a221ea44d938da9a9df47dc86062addc31bba",
+      "source_checked_at": "2026-10-11T18:39:32.184912+00:00",
+      "additional_sources": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+          "sha256": "8a8133a72b1c53c256743b780c1630bf887b33afd384d175d6d465e46e7443b9",
+          "checked_at": "2026-10-11T18:39:32.184912+00:00"
+        }
+      ],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    },
+    {
+      "slug": "lavagem",
+      "title": "Lei 9.613/1998 — Lavagem de Dinheiro",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-17-e"
+      ],
+      "course_current_units": 24,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "source_sha256": "c73ac4ccad1d9a771934f78c127a4562d93918d16b5ec0413d6fce16d31e4f3a",
+      "source_checked_at": "2026-10-11T18:39:34.504923+00:00",
+      "additional_sources": [],
+      "scope": "Correção de dispositivos específicos; não declara concluídos todos os artigos deste percurso."
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "cin",
+      "course_id": "01439ef7-5c42-5de3-a83a-cda0ad2d3cd8",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-17",
+      "unit_id": "5ccda841-a85b-5821-9d90-6e9f454d5ef2",
+      "content_sha256": "54784fefeea4bc8a4a981f179eac8930f784970a9870fdc97a806a22f4c124df",
+      "simples": "A PF recolhe a carteira e a encaminha ao órgão expedidor para cancelamento quando o português perde a condição constitucional de igualdade ou quando o brasileiro perde a nacionalidade nas hipóteses constitucionais aplicáveis.",
+      "pontos": [
+        "Recolher e encaminhar é atribuição da PF; cancelar cabe ao órgão expedidor."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "A EC 131/2023 alterou a disciplina constitucional. Adquirir outra nacionalidade não significa perda automática da brasileira. A anotação de revogação do artigo seguinte não revoga este."
+      ],
+      "exemplo": "Foi reconhecida a perda de nacionalidade na hipótese constitucional aplicável: a PF recolhe e encaminha a carteira ao expedidor. Variação: Há apenas aquisição de outra nacionalidade, sem hipótese constitucional de perda reconhecida: não conclua automaticamente pelo recolhimento.",
+      "prova": [
+        "A PF é responsável pelo cancelamento definitivo? O artigo atribui à PF recolhimento e encaminhamento ao expedidor para cancelamento."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5ccda841-a85b-5821-9d90-6e9f454d5ef2",
+        "content_sha256": "05842904b16347a78ff4df2fab7e1f8859a5762694d119b34ce89662b82f4d81",
+        "simples": "Quando o português perde a condição constitucional de igualdade de direitos, ou o brasileiro perde a nacionalidade nas hipóteses constitucionais, a PF recolhe a carteira e a envia ao emissor para cancelamento.",
+        "pontos": [
+          "PF faz recolhimento e encaminhamento.",
+          "Cancelamento pelo órgão expedidor.",
+          "Pressupostos dependem da Constituição vigente."
+        ],
+        "atencao": [
+          "Não afirme que adquirir outra nacionalidade causa perda automática da brasileira: a Constituição tem disciplina própria, alterada pela EC 131/2023."
+        ],
+        "exemplo": "A perda da nacionalidade foi reconhecida na hipótese constitucional aplicável. A PF recolhe e encaminha o documento ao emissor. Variação: existe apenas notícia de obtenção de outra nacionalidade; não se conclui automaticamente pela perda nem pelo cancelamento.",
+        "prova": [
+          "A PF é indicada como órgão que recolhe e encaminha? Sim; não confunda esses atos com o cancelamento pelo emissor."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:01:13.61+00:00",
+        "created_at": "2026-10-11T18:40:53.041061+00:00",
+        "updated_at": "2026-10-11T19:01:13.61+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-123",
+      "unit_id": "c65ddc4f-4ae2-5616-a777-735ddeb07a06",
+      "content_sha256": "5055c0af6b2c81cee15ef2364bf993c8a3e80808bef7c92a957147e7da9f86ea",
+      "simples": "A autorização de saída temporária depende de decisão motivada do juiz da execução, com oitiva do Ministério Público e da administração penitenciária. Exige comportamento adequado, cumprimento mínimo de um sexto da pena para primário ou um quarto para reincidente e compatibilidade com os objetivos da pena.",
+      "pontos": [
+        "Os três requisitos são cumulativos; fração cumprida não basta."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "As hipóteses e vedações de saída estão no art. 122. O art. 124 foi revogado pela Lei 14.843/2024; isso não revoga o art. 123. Lei penal no tempo deve ser examinada no caso, sem aplicação automática de regra posterior mais gravosa."
+      ],
+      "exemplo": "Um primário cumpriu um sexto, mas tem comportamento inadequado: a fração isolada não satisfaz este artigo. Variação: Um reincidente cumpriu um sexto: o mínimo textual para ele é um quarto, além das demais condições.",
+      "prova": [
+        "Cumprir a fração mínima assegura automaticamente autorização? Não; são necessários os demais requisitos e ato motivado do juiz, com as oitivas previstas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-50",
+      "unit_id": "716ceda9-7018-5352-976f-9fd91d578ff6",
+      "content_sha256": "99c991088be31d956857a7c0f0a39924f8270c4abc65ba1a55c1dd0c6580ef7f",
+      "simples": "As entidades de atendimento têm dezessete obrigações, desde contrato escrito, garantia de direitos e atendimento personalizado até preservação familiar, saúde, lazer, religião facultativa, documentação, registro dos pertences e profissionais com formação específica.",
+      "pontos": [
+        "Vestuário adequado é exigido se a entidade for pública; alimentação suficiente integra o inciso III. Doença infectocontagiosa é comunicada à autoridade de saúde e abandono familiar ao Ministério Público."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não confunda destinatários das comunicações. A assistência religiosa respeita a vontade e a crença da pessoa. O contrato informa preços, se for o caso; este artigo não torna todo serviço necessariamente gratuito."
+      ],
+      "exemplo": "A entidade recebe bens móveis de uma residente: deve fornecer comprovante e manter os registros individualizados previstos. Variação: Há abandono material pela família: a comunicação prevista vai ao Ministério Público, não apenas à autoridade sanitária.",
+      "prova": [
+        "A assistência religiosa pode ser imposta? Não; o inciso X a oferece a quem desejar, de acordo com suas crenças."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-100",
+      "unit_id": "debda221-c294-5085-a94d-b7b59f7d9377",
+      "content_sha256": "7568eb98fefbbf0cf607724b10d30c20a58623a2951befd4ec61e30e8173a57c",
+      "simples": "O artigo reúne cinco condutas criminosas: impedir cargo público ou emprego por idade; dificultar saúde sem justa causa; descumprir ordem judicial sem justo motivo na ação civil prevista; e omitir dados técnicos indispensáveis requisitados pelo Ministério Público. A pena é reclusão de seis meses a um ano e multa.",
+      "pontos": [
+        "Idade é o motivo nos incisos I e II; os incisos III e IV contêm ressalvas de justa causa ou justo motivo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não troque reclusão por detenção. O trecho do art. 101 que ficou anexado ao fim foi separado; crimes próximos devem ser lidos em suas unidades."
+      ],
+      "exemplo": "O responsável omite dados técnicos indispensáveis à ação civil, requisitados pelo Ministério Público: confronte o caso com o inciso V. Variação: O atraso no atendimento tem justa causa demonstrada: o inciso III expressamente exige ausência de justa causa.",
+      "prova": [
+        "Qual é a pena do art. 100? Reclusão de seis meses a um ano e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "618ae013-1ed6-5fa7-bc46-c16094b664b5",
+      "content_sha256": "7e9ea640d35ef3731ed23adcd9a9ec21adc3ee713d61c0a21fa8276f03e18a40",
+      "simples": "O serralheiro ou profissional análogo que abre fechadura ou aparelho de proteção a pedido de alguém sem antes certificar-se da legitimidade do pedido pratica a conduta descrita no artigo. A pena textual é prisão simples de quinze dias a três meses ou multa.",
+      "pontos": [
+        "Exercício profissional e falta de verificação prévia da legitimidade são elementos da descrição."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não basta dizer que a porta foi aberta: identifique o profissional e a ausência de verificação. Valores em mil-réis são históricos; não os converta automaticamente em reais."
+      ],
+      "exemplo": "O chaveiro abre a fechadura a pedido de desconhecido sem verificar sua legitimidade: os fatos correspondem à descrição legal. Variação: Antes da abertura, ele verifica adequadamente a legitimidade: falta o elemento específico de não ter-se certificado previamente.",
+      "prova": [
+        "A pena privativa de liberdade descrita é detenção? Não; é prisão simples de quinze dias a três meses, alternativa à multa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "618ae013-1ed6-5fa7-bc46-c16094b664b5",
+        "content_sha256": "c15c9e942cbf306c79cc32edab99c9301aa99a42037c1b8ca429337cdf79355f",
+        "simples": "Abrir alguém, no exercício de profissão de serralheiro ou ofício análogo, a pedido de pessoa de cuja legitimidade não se tenha certificado previamente, fechadura ou aparelho destinado à defesa de lugar ou objeto: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Serralheiro que abre fechadura sem verificar a legitimidade do pedido.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Dever de cautela do profissional."
+        ],
+        "exemplo": "O chaveiro que abre uma porta sem conferir se o pedinte é o morador comete a contravenção.",
+        "prova": [
+          "Assertiva que isenta o profissional que não verifica a legitimidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-68",
+      "unit_id": "93281adb-7fff-54de-8cad-132f909d123a",
+      "content_sha256": "f0ca62d724ff32ce95eb4b0a8c6160ade19b42f6f6bd9acca2cecde077b0d969",
+      "simples": "O caput pune com multa a recusa de dados próprios quando a autoridade os solicita ou exige justificadamente. O parágrafo único prevê prisão simples de um a seis meses e multa para declarações inverídicas, se não houver infração penal mais grave.",
+      "pontos": [
+        "Recusa e declaração falsa têm penas diferentes; há cláusula expressa de subsidiariedade."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não enquadre todo nome falso automaticamente como contravenção: confira o art. 307 do CP, que exige finalidade de obter vantagem ou causar dano. Não confunda identificação com confissão de crime."
+      ],
+      "exemplo": "A questão informa solicitação justificada de dados próprios e recusa: a comparação inicial é com o caput e sua multa. Variação: O agente atribui-se identidade falsa para obter vantagem: é preciso confrontar o art. 307 do CP antes de concluir pelo parágrafo único.",
+      "prova": [
+        "Uma infração penal mais grave afasta a aplicação subsidiária do parágrafo único? Sim; essa ressalva consta expressamente do texto."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "93281adb-7fff-54de-8cad-132f909d123a",
+        "content_sha256": "db0688e88d73fea03310320fdbc2317514ce74f40703d74962911a70a5cad04c",
+        "simples": "Recusar à autoridade, quando por esta justificadamente solicitados ou exigidos, dados ou indicações concernentes à própria identidade, estado, profissão, domicílio e residência: multa. Incorre em prisão simples de um a seis meses, e multa, se o fato não constitui infração penal mais grave, quem, nas mesmas circunstâncias, faz declarações inverídicas a respeito de sua identidade pessoal, estado, profissão, domicílio e residência.",
+        "pontos": [
+          "Recusar dados sobre a própria identidade: multa.",
+          "Falsas declarações sobre a identidade: prisão simples e multa."
+        ],
+        "atencao": [
+          "Declarar falsamente é mais grave do que apenas recusar.",
+          "O STF reconhece o direito ao silêncio, mas não a falsa identidade."
+        ],
+        "exemplo": "Dar nome falso à autoridade que o abordou legitimamente é contravenção.",
+        "prova": [
+          "Assertiva que pune com a mesma pena a recusa e a falsa declaração erra: a falsa declaração é mais grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal (falsa identidade)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-59",
+      "unit_id": "95ba5079-122d-5b15-98f6-35e883e6d37b",
+      "content_sha256": "3430717048ca6b99ebc789e4d6bf6cce590b404fd21f8ed7a717e304623b5a5d",
+      "simples": "O texto compilado descreve ociosidade habitual de pessoa apta ao trabalho, sem renda suficiente, ou subsistência por ocupação ilícita, com prisão simples de quinze dias a três meses. A renda superveniente suficiente extingue a pena.",
+      "pontos": [
+        "Habitualidade, aptidão e insuficiência de renda integram a primeira hipótese textual."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Desemprego ou pobreza, por si, não demonstram os elementos descritos. A reprodução do texto compilado não resolve controvérsias constitucionais de aplicação; não confunda este artigo com mendicância, cuja revogação estava anexada por erro."
+      ],
+      "exemplo": "No exercício de leitura, o enunciado informa renda superveniente suficiente para subsistência: o parágrafo único determina extinção da pena. Variação: A renda nova ainda é insuficiente: não se demonstrou a condição do parágrafo único.",
+      "prova": [
+        "Qual efeito textual tem a aquisição superveniente de renda suficiente? Extingue a pena, conforme o parágrafo único."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "95ba5079-122d-5b15-98f6-35e883e6d37b",
+        "content_sha256": "5be01a71ebc7bd0f5555123158372a5bb4a1dccf7681fa32f4ae12ff1762f6c0",
+        "simples": "Vadiagem: entregar-se alguém habitualmente à ociosidade, sendo válido para o trabalho, sem ter renda que lhe assegure meios bastantes de subsistência, ou prover à própria subsistência mediante ocupação ilícita: prisão simples de quinze dias a três meses. A aquisição superveniente de renda que assegure meios bastantes de subsistência extingue a pena.",
+        "pontos": [
+          "Ociosidade habitual por quem pode trabalhar e não tem renda.",
+          "Subsistência por ocupação ilícita.",
+          "Renda superveniente extingue a pena."
+        ],
+        "atencao": [
+          "Dispositivo muito criticado; a doutrina questiona sua recepção pela Constituição atual por criminalizar a condição do agente."
+        ],
+        "exemplo": "A lei punia quem vivia ocioso, sem renda, embora apto ao trabalho.",
+        "prova": [
+          "Assertiva que mantém a pena mesmo após a aquisição de renda suficiente erra: a renda superveniente extingue a pena."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "9e841a37-7a45-5cad-a11e-e8d488946386",
+      "content_sha256": "f861600229ce4d4a7a066b54d59f314240baac1d0dd970e5bab4baea6005955d",
+      "simples": "Provocar abusivamente emissão de fumaça, vapor ou gás que possa ofender ou molestar alguém tem previsão de multa no texto compilado. A emissão deve ser abusiva e apta a ofender ou molestar.",
+      "pontos": [
+        "O caput usa possibilidade de ofensa ou incômodo; não exige ali resultado de lesão grave."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Uma ocorrência ambiental também exige exame da Lei 9.605/1998. Não conclua pela contravenção sem comparar o tipo ambiental aplicável nem confunda este artigo com associação secreta, revogada no seguinte."
+      ],
+      "exemplo": "Uma questão descreve emissão abusiva de fumaça capaz de molestar vizinhos: compare com os elementos do art. 38 e com a legislação ambiental aplicável. Variação: A emissão não é abusiva nem apta a ofender ou molestar: esses elementos do caput não foram demonstrados.",
+      "prova": [
+        "O art. 38 prevê prisão simples? Não; sua sanção textual é multa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "9e841a37-7a45-5cad-a11e-e8d488946386",
+        "content_sha256": "ca9af75c5ea80b78ce63d39125a1dc96c2e721ba27c88f12ab1d9f8f986f5249",
+        "simples": "Provocar, abusivamente, emissão de fumaça, vapor ou gás que possa ofender ou molestar alguém: multa.",
+        "pontos": [
+          "Emissão abusiva de fumaça, vapor ou gás.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a poluição ambiental hoje é regulada pela Lei de Crimes Ambientais."
+        ],
+        "exemplo": "Soltar fumaça densa de modo abusivo, incomodando vizinhos, é contravenção.",
+        "prova": [
+          "Assertiva que exige dano grave à saúde para essa contravenção erra: basta ofender ou molestar alguém."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Crimes Ambientais"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-64",
+      "unit_id": "fa583bf6-f17d-5328-99d8-3cbe903437d2",
+      "content_sha256": "3a2d8d9a8511f0de11b765fc5853b9e4968056ea3f65b7b2ed42f332b33af321",
+      "simples": "O texto compilado conserva a descrição histórica de crueldade ou trabalho excessivo em animais, experiências cruéis em público e aumento de metade em espetáculo público. A aplicação atual deve ser confrontada com o crime ambiental do art. 32 da Lei 9.605/1998.",
+      "pontos": [
+        "A sanção textual antiga é prisão simples de dez dias a um mês ou multa; isso não é a pena atual do crime ambiental."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não use este texto como regra atual exclusiva sobre maus-tratos. Confira o art. 32, suas formas e alterações vigentes, inclusive a proteção específica de cães e gatos. A revogação anexada era do art. 65, não uma nota expressa sobre o art. 64."
+      ],
+      "exemplo": "O caso descreve maus-tratos a cão: a primeira consulta atual é ao art. 32 da Lei de Crimes Ambientais, não à pena histórica deste dispositivo. Variação: O exercício pergunta apenas qual aumento constava do §2º desta descrição: a resposta textual é metade, sem transportá-lo à lei ambiental.",
+      "prova": [
+        "A pena textual antiga pode ser copiada como pena atual de maus-tratos a cães? Não; é preciso aplicar a disciplina vigente do art. 32 da Lei 9.605/1998."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fa583bf6-f17d-5328-99d8-3cbe903437d2",
+        "content_sha256": "e4b519a0ecd320b301c74fdb705691a5c46c1f1f4fcf059bc578389e0455a97e",
+        "simples": "Crueldade contra animais: tratar animal com crueldade ou submetê-lo a trabalho excessivo: prisão simples de dez dias a um mês, ou multa. Na mesma pena quem, ainda que para fins didáticos ou científicos, realiza em lugar público ou exposto ao público experiência dolorosa ou cruel em animal vivo. A pena aumenta de metade se o animal é submetido a trabalho excessivo ou tratado com crueldade em exibição ou espetáculo público.",
+        "pontos": [
+          "Crueldade ou trabalho excessivo contra animal.",
+          "Experiência dolorosa em público, mesmo didática.",
+          "Aumento de metade em espetáculo público."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: os maus-tratos a animais são hoje crime da Lei de Crimes Ambientais, e o art. 64 está superado."
+        ],
+        "exemplo": "Expor animal a experiência cruel em local público era contravenção.",
+        "prova": [
+          "Assertiva que mantém o art. 64 como regra atual contra maus-tratos a animais erra: há crime ambiental específico."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Crimes Ambientais"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "eca",
+      "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-232",
+      "unit_id": "2ff468da-601d-5b35-a66c-be6bc0103f23",
+      "content_sha256": "7378844b0fd40f58be832fd0dd48ee32b8dfda00cd9fb18e70f797b9061ff642",
+      "simples": "Submeter criança ou adolescente sob sua autoridade, guarda ou vigilância a vexame ou constrangimento é a conduta do art. 232, com detenção de seis meses a dois anos. Este artigo permanece vigente no texto oficial.",
+      "pontos": [
+        "A relação de autoridade, guarda ou vigilância integra o tipo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "A Lei 9.455/1997 revogou o art. 233, não o art. 232. Tortura tem requisitos próprios: não transforme automaticamente qualquer constrangimento no crime da Lei de Tortura."
+      ],
+      "exemplo": "Um responsável submete adolescente sob sua guarda a situação vexatória: examine os elementos do art. 232, sem pressupor os requisitos de outro tipo. Variação: O enunciado descreve tortura com os requisitos específicos da Lei 9.455: compare os tipos em suas fontes, sem afirmar que o art. 232 foi revogado.",
+      "prova": [
+        "A Lei de Tortura revogou o art. 232? Não; seu art. 4º revogou o art. 233 do ECA. O art. 232 continua no texto vigente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "eca",
+      "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-239",
+      "unit_id": "4624a2ee-dc73-5094-a532-764203fe6284",
+      "content_sha256": "c7251a7166c320eca8965348a2487ff08b6a41002145bac7038c866bf69ca532",
+      "simples": "Promover ou auxiliar ato destinado ao envio de criança ou adolescente ao exterior sem formalidades legais ou com intuito de lucro tem pena de reclusão de quatro a seis anos e multa. Com violência, grave ameaça ou fraude, a pena passa a seis a oito anos, além da correspondente à violência.",
+      "pontos": [
+        "A falta de formalidades e o intuito de lucro são alternativas do caput."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não confunda a pena do caput com a do parágrafo único nem importe a pena do art. 240."
+      ],
+      "exemplo": "O enunciado descreve auxílio ao envio ao exterior com intuito de lucro: o caput precisa ser examinado. Variação: Acrescenta grave ameaça: a comparação passa ao parágrafo único, com seis a oito anos.",
+      "prova": [
+        "A forma com violência absorve toda pena da violência? Não; o texto acrescenta a pena correspondente à violência."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "eca",
+      "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-247",
+      "unit_id": "2f915949-a28f-5d78-b654-942686ab8271",
+      "content_sha256": "7212f8b0af0b11bca83aa401e131f1233bfef38a7d2c60da2cf051eb4d6206f2",
+      "simples": "Divulgar sem autorização devida dados de procedimento relativo a criança ou adolescente a quem se atribui ato infracional tem sanção administrativa de multa. O §1º, alterado em 2024, inclui imagem, vídeo ou corrente de vídeo que permita sua identificação.",
+      "pontos": [
+        "Multa de três a vinte salários de referência; dobro na reincidência. Não é pena de detenção."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "O §1º também menciona outro ato ilícito atribuído. A anotação de ADI 869 deve ser lida com o julgamento: não recomponha a sanção de suspensão de programação ou de publicação declarada inconstitucional, nem conclua que todo o art. 247 foi revogado. A revogação seguinte refere-se ao art. 248."
+      ],
+      "exemplo": "Um vídeo de adolescente envolvido em ato infracional permite identificá-lo: a hipótese deve ser confrontada com o §1º. Variação: A questão fala de divulgação sem autorização do documento do procedimento: o caput também abrange essa conduta.",
+      "prova": [
+        "O §1º está limitado a fotografia? Não; a redação de 2024 inclui imagem, vídeo e corrente de vídeo que permitam identificação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+      "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc",
+      "simples": "A Lei 9.454 fixou ao Poder Executivo cento e oitenta dias para regulamentação e trezentos e sessenta dias para início de implementação. São prazos da implantação prevista naquela lei, não prazos renovados a cada carteira emitida.",
+      "pontos": [
+        "Regulamentar e iniciar implementação têm prazos diferentes."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Este dispositivo transitório não deve ser confundido com o funcionamento atual da CIN regulado pelo Decreto 10.977/2022. A lei-fonte é parcialmente revogada; isso não transforma todo artigo remanescente em revogado."
+      ],
+      "exemplo": "A questão histórica pergunta o prazo legal de regulamentação: são cento e oitenta dias. Variação: Pergunta o início da implementação: são trezentos e sessenta dias, não o mesmo prazo.",
+      "prova": [
+        "Esses prazos começam novamente a cada emissão de documento? Não; o artigo disciplina a implantação prevista na lei, não a validade individual de carteiras."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+        "content_sha256": "e30b7dd5be1e8050c34fce1419a137473b5f61eb84cece8fa21ea211cc898e9e",
+        "simples": "O Poder Executivo providenciará, no prazo de cento e oitenta dias, a regulamentação desta Lei e, no prazo de trezentos e sessenta dias, o início de sua implementação.",
+        "pontos": [
+          "Regulamentação em cento e oitenta dias.",
+          "Início da implementação em trezentos e sessenta dias."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "A lei fixou prazos para regulamentar e iniciar o sistema.",
+        "prova": [
+          "Assertiva que fixa em noventa dias o prazo de regulamentação erra: são cento e oitenta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-e",
+      "unit_id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+      "content_sha256": "e159f8c52577b780cc6cf0f63f916c5b35df3f29ffbfc2c1383efadc54ea4380",
+      "simples": "A Receita Federal conserva os dados fiscais dos contribuintes por no mínimo cinco anos. A contagem começa no início do exercício seguinte ao da declaração de renda respectiva ou ao pagamento do tributo.",
+      "pontos": [
+        "Prazo mínimo e marco inicial são elementos distintos; o caput não fixa prazo máximo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "As notas de vigência encerrada de dispositivos posteriores não se referem ao art. 17-E. Não confunda o exercício da declaração ou pagamento com o exercício seguinte."
+      ],
+      "exemplo": "O pagamento ocorreu em 2025: o marco indicado é o início do exercício seguinte, em 2026, para contar o prazo mínimo. Variação: A questão fixa guarda máxima de cinco anos: contraria a palavra mínimo, que não proíbe conservação por mais tempo.",
+      "prova": [
+        "A conservação está limitada a exatamente cinco anos? Não; o texto estabelece no mínimo cinco anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+        "content_sha256": "9cdd58789d0d326d46ffdedfa1dabcfdff7050cdbc5c4c1950bad23290cd84ef",
+        "simples": "A Secretaria da Receita Federal do Brasil conservará os dados fiscais dos contribuintes pelo prazo mínimo de 5 anos, contado a partir do início do exercício seguinte ao da declaração de renda respectiva ou ao do pagamento do tributo.",
+        "pontos": [
+          "Receita conserva dados fiscais por no mínimo 5 anos.",
+          "Contagem a partir do início do exercício seguinte à declaração ou ao pagamento."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012; o texto indica que a vigência foi encerrada."
+        ],
+        "exemplo": "A Receita guarda os dados fiscais para eventual investigação.",
+        "prova": [
+          "Assertiva que fixa em 2 anos a guarda dos dados fiscais erra: o prazo mínimo é de 5."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    }
+  ]
+}

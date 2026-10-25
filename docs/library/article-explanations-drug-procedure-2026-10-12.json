@@ -1,0 +1,838 @@
+{
+  "version": "2026-10-12-drogas-procedure-targeted",
+  "checked_at": "2026-10-12T16:36:22.885102+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "drogas",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 84,
+      "target_unit_keys": [
+        "art-48",
+        "art-49",
+        "art-50",
+        "art-50-a",
+        "art-51",
+        "art-52",
+        "art-53",
+        "art-54",
+        "art-55",
+        "art-56",
+        "art-57",
+        "art-58",
+        "art-59"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "6f6763a224e2dda8310d3bd971c6314d795c5fc5ffb73137953eeefe47647e98",
+      "source_checked_at": "2026-10-12T16:18:25.227571+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-48",
+      "unit_id": "a735ed4a-766d-57b0-9410-438de8b7c91a",
+      "content_sha256": "87d47b2cf02bbda50223695a5dab0909b00b315431fea4c29916d28982b7ccae",
+      "simples": "O rito especial da Lei de Drogas recebe aplicação subsidiária do CPP e da LEP. Para o art. 28, o texto remete aos Juizados, salvo concurso com os arts. 33 a 37, e veda prisão em flagrante e detenção.",
+      "pontos": [
+        "Autor do fato é encaminhado ao juízo ou assume compromisso de comparecer; lavrar termo e requisitar perícias.",
+        "Na ausência judicial, autoridade policial toma imediatamente as providências; não deter o agente.",
+        "Exame de corpo de delito se requerido ou considerado conveniente, seguido de liberação. O texto também prevê proposta do MP segundo a Lei 9.099."
+      ],
+      "atencao": [
+        "Cannabis pessoal: Tema 506/STF afastou natureza penal; não aplicar transação penal ou criar antecedentes criminais a essa hipótese como se a remissão histórica fosse plena.",
+        "Não transferir a vedação de flagrante do art. 28 ao tráfico do art. 33."
+      ],
+      "exemplo": "Pessoa encontrada com droga destinada ao consumo pessoal não deve ser presa em flagrante pelo art. 28. Variação: identificados elementos de tráfico, o enquadramento exige análise própria; cannabis pessoal continua sujeita à orientação não penal.",
+      "prova": [
+        "O art. 28 autoriza detenção só porque falta juiz no local? Não; o §3º a veda.",
+        "A vedação específica de flagrante elimina todo flagrante por tráfico? Não; são condutas e regimes diferentes."
+      ],
+      "termos": [
+        "subsidiariamente",
+        "vedada a detenção",
+        "termo circunstanciado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506"
+      ],
+      "expected": {
+        "unit_id": "a735ed4a-766d-57b0-9410-438de8b7c91a",
+        "content_sha256": "87d47b2cf02bbda50223695a5dab0909b00b315431fea4c29916d28982b7ccae",
+        "simples": "O procedimento dos processos por crimes da Lei rege-se pelo seu Capítulo, aplicando-se subsidiariamente o Código de Processo Penal e a Lei de Execução Penal. O agente das condutas do art. 28 (uso), salvo concurso com os crimes dos arts. 33 a 37, será processado e julgado na forma dos arts. 60 e seguintes da Lei dos Juizados Especiais. Na conduta do art. 28, não se imporá prisão em flagrante, devendo o autor ser imediatamente encaminhado ao juízo ou assumir o compromisso de comparecer, lavrando-se termo circunstanciado. Se ausente a autoridade judicial, as providências serão tomadas de imediato pela autoridade policial, no local, vedada a detenção do agente. Concluídos os procedimentos, o agente será submetido a exame de corpo de delito, se o requerer ou se a autoridade entender conveniente, e em seguida liberado.",
+        "pontos": [
+          "Rito da própria lei; CPP e LEP subsidiários.",
+          "Art. 28: processado pelos Juizados Especiais (arts. 60 e seguintes da Lei 9.099).",
+          "Art. 28: sem prisão em flagrante; termo circunstanciado e liberação.",
+          "Vedada a detenção do usuário."
+        ],
+        "atencao": [
+          "Usuário NÃO é preso em flagrante.",
+          "Com concurso de tráfico, o rito é o da Lei de Drogas."
+        ],
+        "exemplo": "O usuário flagrado com droga para consumo é encaminhado ao juizado, lavra-se termo circunstanciado e ele é liberado.",
+        "prova": [
+          "Assertiva que permite a prisão em flagrante do usuário do art. 28 erra: o autor é encaminhado ao juízo ou assume o compromisso de comparecer."
+        ],
+        "termos": [
+          {
+            "termo": "Termo circunstanciado",
+            "significado": "Registro simplificado de infração de menor potencial ofensivo."
+          }
+        ],
+        "remissoes": [
+          "Art. 28",
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-49",
+      "unit_id": "80b322f3-aece-5949-8774-588df567612d",
+      "content_sha256": "c1deb2f985ae8555088c37c2a2dfaa2e10dc392ec69962bb9c41eaeb63883571",
+      "simples": "Nos crimes do art. 33, caput e §1º, e dos arts. 34 a 37, o juiz emprega instrumentos de proteção a colaboradores e testemunhas da Lei 9.807/1999 quando as circunstâncias o recomendarem.",
+      "pontos": [
+        "Proteção depende das circunstâncias; não é concessão indiferenciada.",
+        "Remissão é à proteção da Lei 9.807, não à criação de nova causa de redução de pena."
+      ],
+      "atencao": [
+        "Distinguir proteção pessoal de prêmio por colaboração. A proteção não garante automaticamente o redutor do art. 41."
+      ],
+      "exemplo": "Testemunha ameaçada em processo de tráfico demanda exame das medidas protetivas. Variação: receber proteção não significa que o colaborador obteve automaticamente redução da condenação.",
+      "prova": [
+        "Proteção e redução de pena são equivalentes? Não; possuem requisitos e finalidades próprios.",
+        "O juiz deve considerar as circunstâncias? Sim; é condição expressa do artigo."
+      ],
+      "termos": [
+        "instrumentos protetivos",
+        "colaboradores e testemunhas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm"
+      ],
+      "expected": {
+        "unit_id": "80b322f3-aece-5949-8774-588df567612d",
+        "content_sha256": "c1deb2f985ae8555088c37c2a2dfaa2e10dc392ec69962bb9c41eaeb63883571",
+        "simples": "Tratando-se de condutas tipificadas nos arts. 33, caput e §1º, e 34 a 37, o juiz, sempre que as circunstâncias o recomendem, empregará os instrumentos protetivos de colaboradores e testemunhas previstos na Lei nº 9.807, de 1999.",
+        "pontos": [
+          "Nos crimes dos arts. 33, 34, 35, 36 e 37, o juiz emprega os instrumentos protetivos da Lei nº 9.807, de 1999.",
+          "Quando as circunstâncias recomendarem."
+        ],
+        "atencao": [
+          "Proteção a colaboradores e testemunhas."
+        ],
+        "exemplo": "Testemunha ameaçada em processo de tráfico é incluída em programa de proteção.",
+        "prova": [
+          "Assertiva que torna obrigatória a proteção em todos os casos erra: depende das circunstâncias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-50",
+      "unit_id": "8425bc48-7eb1-5791-a40b-0c1b96a86820",
+      "content_sha256": "1cdcfd543d732b906f27cf4ee8f56dda5df5638bf196c6bcf213af35adc068e8",
+      "simples": "No flagrante, comunicar imediatamente o juiz e remeter o auto, com vista ao MP em 24 horas. Laudo de constatação da natureza e quantidade é suficiente para lavrar o flagrante; o mesmo perito pode participar do laudo definitivo.",
+      "pontos": [
+        "Constatação: perito oficial ou, na falta, pessoa idônea.",
+        "Juiz verifica regularidade formal e determina destruição em dez dias, preservando amostra.",
+        "Delegado executa em quinze dias, na presença do MP e da autoridade sanitária; vistoria antes e depois e auto circunstanciado."
+      ],
+      "atencao": [
+        "Suficiência para o flagrante não é dispensa geral do laudo definitivo na condenação. STJ admite substituição excepcional por laudo oficial de certeza equivalente, não por qualquer documento provisório.",
+        "Não trocar o prazo judicial de dez dias pelo de execução de quinze dias."
+      ],
+      "exemplo": "Constatação oficial permite lavrar o flagrante; amostra fica preservada para exame definitivo. Variação: na sentença falta laudo definitivo; conferir a excepcional equivalência pericial, sem supor que todo laudo preliminar basta.",
+      "prova": [
+        "O perito do laudo provisório está automaticamente impedido de fazer o definitivo? Não; o §2º afasta esse impedimento.",
+        "Os prazos de dez e quinze dias têm o mesmo responsável? Não; correspondem à providência judicial e à execução pelo delegado."
+      ],
+      "termos": [
+        "24 horas",
+        "dez dias",
+        "quinze dias",
+        "amostra"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=03%2F03%2F2026&num_registro=202503473800"
+      ],
+      "expected": {
+        "unit_id": "8425bc48-7eb1-5791-a40b-0c1b96a86820",
+        "content_sha256": "1cdcfd543d732b906f27cf4ee8f56dda5df5638bf196c6bcf213af35adc068e8",
+        "simples": "Ocorrendo prisão em flagrante, a autoridade de polícia judiciária fará, imediatamente, comunicação ao juiz competente, remetendo-lhe cópia do auto, do qual será dada vista ao Ministério Público em 24 horas. Para a lavratura do auto e estabelecimento da materialidade, é suficiente o laudo de constatação da natureza e quantidade da droga, firmado por perito oficial ou, na falta deste, por pessoa idônea. O perito que subscrever o laudo preliminar não fica impedido de participar do laudo definitivo. Recebida a cópia do auto, o juiz, no prazo de 10 dias, certificará a regularidade formal do laudo de constatação e determinará a destruição das drogas apreendidas, guardando amostra para o laudo definitivo. A destruição será executada pelo delegado de polícia no prazo de 15 dias, na presença do Ministério Público e da autoridade sanitária.",
+        "pontos": [
+          "Comunicação imediata ao juiz; vista ao MP em 24 horas.",
+          "Laudo de constatação (preliminar) basta para o flagrante e a materialidade.",
+          "Mesmo perito pode fazer o laudo definitivo.",
+          "Juiz, em 10 dias, certifica o laudo e determina a destruição, guardando amostra.",
+          "Destruição pelo delegado em 15 dias, com MP e autoridade sanitária."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§ 3º e 4º incluídos pela Lei nº 12.961, de 2014 (destruição de drogas).",
+          "Prazos: 24 horas (vista ao MP), 10 dias (juiz) e 15 dias (destruição)."
+        ],
+        "exemplo": "Com o laudo de constatação, o delegado lavra o flagrante, e a droga é destruída em 15 dias, guardada a amostra.",
+        "prova": [
+          "Assertiva que exige o laudo definitivo para a lavratura do flagrante erra: basta o laudo de constatação."
+        ],
+        "termos": [
+          {
+            "termo": "Laudo de constatação",
+            "significado": "Laudo preliminar da natureza e quantidade da droga."
+          }
+        ],
+        "remissoes": [
+          "Art. 50-A",
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-50-a",
+      "unit_id": "4a1c1208-da96-548b-8756-bb652e8ac1c6",
+      "content_sha256": "6f0544a459fae54df6ed12ab63ef99e05a2180a490c008bea0d2c3555d035fbd",
+      "simples": "Sem prisão em flagrante, as drogas apreendidas são incineradas em até trinta dias contados da apreensão, preservada amostra necessária ao laudo definitivo.",
+      "pontos": [
+        "Prazo de trinta dias tem marco na apreensão.",
+        "Preservação da amostra continua obrigatória.",
+        "Redação atual: Lei 13.840/2019."
+      ],
+      "atencao": [
+        "Não importar a sequência de dez e quinze dias do art. 50, própria da hipótese com flagrante."
+      ],
+      "exemplo": "Droga é apreendida sem prisão em flagrante: aplicar prazo máximo de trinta dias desde a apreensão. Variação: havendo flagrante, estudar o procedimento do art. 50, com seus responsáveis e prazos.",
+      "prova": [
+        "O prazo conta da sentença? Não; conta da apreensão.",
+        "A incineração permite dispensar a amostra? Não; preservar a necessária ao laudo definitivo."
+      ],
+      "termos": [
+        "sem prisão em flagrante",
+        "trinta dias",
+        "data da apreensão"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a1c1208-da96-548b-8756-bb652e8ac1c6",
+        "content_sha256": "6f0544a459fae54df6ed12ab63ef99e05a2180a490c008bea0d2c3555d035fbd",
+        "simples": "A destruição das drogas apreendidas sem a ocorrência de prisão em flagrante será feita por incineração, no prazo máximo de 30 dias contados da data da apreensão, guardando-se amostra necessária à realização do laudo definitivo.",
+        "pontos": [
+          "Drogas apreendidas sem flagrante: destruição por incineração.",
+          "Prazo máximo de 30 dias da apreensão.",
+          "Guarda de amostra para o laudo definitivo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.840, de 2019.",
+          "Com flagrante, o prazo é de 15 dias (art. 50, §4º); sem flagrante, 30 dias."
+        ],
+        "exemplo": "Droga apreendida em busca, sem prisão em flagrante, é incinerada em até 30 dias.",
+        "prova": [
+          "Assertiva que fixa em 15 dias a incineração das drogas apreendidas sem flagrante erra: são 30 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-51",
+      "unit_id": "db8881ec-68f6-5ad3-9498-3723d75e4169",
+      "content_sha256": "f9e6061c9531dd4b8d42ecc23fd6a1796ab941b7144d5ed24429154796029b09",
+      "simples": "O inquérito tem prazo de trinta dias com indiciado preso e noventa quando solto. O juiz pode duplicá-los, ouvido o MP, mediante pedido justificado da autoridade policial.",
+      "pontos": [
+        "Preso: 30; solto: 90.",
+        "Duplicação é judicial: pode resultar em 60 ou 180 dias, respectivamente.",
+        "Necessários pedido justificado e oitiva do MP."
+      ],
+      "atencao": [
+        "Prazo do inquérito não é autorização de prisão automática durante todo o período nem prazo de audiência ou sentença. Custódia e excesso de prazo demandam análise própria."
+      ],
+      "exemplo": "Delegado pede extensão fundamentada de inquérito com indiciado preso: juiz ouve o MP e decide sobre duplicação. Variação: delegado não pode prorrogar sozinho por simples despacho seu.",
+      "prova": [
+        "O delegado duplica sozinho o prazo? Não; cabe ao juiz, ouvido o MP, diante de pedido justificado.",
+        "Noventa dias é o prazo inicial para indiciado solto? Sim; trinta é a regra inicial para preso."
+      ],
+      "termos": [
+        "trinta dias",
+        "noventa dias",
+        "duplicados pelo juiz"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "db8881ec-68f6-5ad3-9498-3723d75e4169",
+        "content_sha256": "f9e6061c9531dd4b8d42ecc23fd6a1796ab941b7144d5ed24429154796029b09",
+        "simples": "O inquérito policial será concluído no prazo de 30 dias, se o indiciado estiver preso, e de 90 dias, quando solto. Os prazos podem ser duplicados pelo juiz, ouvido o Ministério Público, mediante pedido justificado da autoridade de polícia judiciária.",
+        "pontos": [
+          "Preso: 30 dias.",
+          "Solto: 90 dias.",
+          "Prazos duplicáveis pelo juiz, ouvido o MP, a pedido justificado da polícia."
+        ],
+        "atencao": [
+          "Prazos próprios da Lei de Drogas, diferentes do CPP (10 e 30 dias).",
+          "Duplicação depende de pedido justificado."
+        ],
+        "exemplo": "Indiciado preso por tráfico: inquérito em 30 dias, duplicáveis.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o inquérito de preso por tráfico erra: a Lei de Drogas prevê 30 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52",
+          "Art. 10 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-52",
+      "unit_id": "50a1cc86-a395-5b25-a12c-000cf4257d2d",
+      "content_sha256": "3d1528660f194ff4dece9f10002a32501a43497708b9c879ce915734e8d46b21",
+      "simples": "Ao fim dos prazos, a polícia remete o inquérito com relatório e razões da classificação do delito ou pede devolução para diligências necessárias. Diligências complementares sobre fatos ou patrimônio podem continuar, com resultados enviados até três dias antes da audiência.",
+      "pontos": [
+        "Relatório inclui natureza/quantidade, local, condições, prisão, conduta, qualificação e antecedentes.",
+        "Diligências complementares abrangem esclarecimento dos fatos e bens/direitos/valores.",
+        "Resultado até três dias antes da audiência, não depois."
+      ],
+      "atencao": [
+        "Classificação policial deve ser fundamentada; não vincula automaticamente a acusação ou a sentença. Remessa não elimina possibilidade de complementação prevista."
+      ],
+      "exemplo": "Relatório explica os elementos usados para distinguir consumo e tráfico. Variação: pesquisa patrimonial complementa o inquérito e deve respeitar o marco de três dias antes da audiência.",
+      "prova": [
+        "A remessa impede qualquer diligência complementar? Não; o parágrafo único a admite.",
+        "O resultado pode ser enviado indistintamente depois da audiência? Não; o texto estabelece até três dias antes."
+      ],
+      "termos": [
+        "razões da classificação",
+        "diligências complementares",
+        "três dias antes"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "50a1cc86-a395-5b25-a12c-000cf4257d2d",
+        "content_sha256": "3d1528660f194ff4dece9f10002a32501a43497708b9c879ce915734e8d46b21",
+        "simples": "Findos os prazos do art. 51, a autoridade de polícia judiciária, remetendo os autos do inquérito ao juízo, relatará sumariamente as circunstâncias do fato, justificando as razões da classificação do delito, indicando a quantidade e natureza da substância, o local e as condições da ação, as circunstâncias da prisão, a conduta, a qualificação e os antecedentes do agente; ou requererá sua devolução para diligências necessárias. A remessa far-se-á sem prejuízo de diligências complementares necessárias ou úteis à elucidação do fato e à indicação dos bens, direitos e valores do agente, com resultado encaminhado ao juízo até 3 dias antes da audiência de instrução e julgamento.",
+        "pontos": [
+          "Relatório sumário com circunstâncias, quantidade e natureza da droga, conduta e antecedentes.",
+          "Ou pedido de devolução para diligências.",
+          "Diligências complementares: resultado até 3 dias antes da audiência."
+        ],
+        "atencao": [
+          "Prazo de 3 dias antes da audiência para as diligências complementares."
+        ],
+        "exemplo": "O delegado remete o inquérito com relatório sumário e continua diligenciando os bens do investigado.",
+        "prova": [
+          "Assertiva que impede diligências complementares após a remessa do inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-53",
+      "unit_id": "f8a8fa53-bb6b-56a7-a755-c674f7c39606",
+      "content_sha256": "0e532489325bbe8a42d57df13b6cb57e6c2229de91801191810e5686e38175f1",
+      "simples": "Em qualquer fase da persecução, o artigo admite infiltração policial e não atuação sobre portadores no território brasileiro, para identificar mais integrantes, mediante autorização judicial e oitiva do MP. Para não atuação, conhecer itinerário provável e identificar agentes ou colaboradores.",
+      "pontos": [
+        "Infiltração por agentes policiais em tarefas de investigação.",
+        "Não atuação tem finalidade investigativa delimitada, sem afastar a ação penal cabível.",
+        "Distinguir esta autorização da disciplina própria da Lei 12.850."
+      ],
+      "atencao": [
+        "STJ diferencia simples observação/monitoramento de ação controlada: nem toda espera para confirmar o crime é retardamento deliberado de flagrante já conhecido.",
+        "Não tratar não atuação como permissão genérica de omissão policial."
+      ],
+      "exemplo": "Para retardar atuação sobre portadores já identificados, a polícia apresenta itinerário e pede autorização judicial. Variação: observar movimentação suspeita para confirmar a ocorrência do delito não é automaticamente ação controlada.",
+      "prova": [
+        "O art. 53 dispensa autorização judicial para suas técnicas especiais? Não; o caput a exige, com oitiva do MP.",
+        "Toda observação de suspeito configura ação controlada? Não; o STJ distingue monitoramento e retardamento investigativo especial."
+      ],
+      "termos": [
+        "autorização judicial",
+        "ouvido o Ministério Público",
+        "itinerário provável"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=848&pesquisaPorNumero=S"
+      ],
+      "expected": {
+        "unit_id": "f8a8fa53-bb6b-56a7-a755-c674f7c39606",
+        "content_sha256": "0e532489325bbe8a42d57df13b6cb57e6c2229de91801191810e5686e38175f1",
+        "simples": "Em qualquer fase da persecução criminal relativa aos crimes previstos na Lei, são permitidos, além dos previstos em lei, mediante autorização judicial e ouvido o Ministério Público, a infiltração por agentes de polícia, em tarefas de investigação, constituída pelos órgãos especializados; e a não atuação policial sobre os portadores de drogas, seus precursores químicos ou outros produtos utilizados na produção, que se encontrem no território brasileiro, com a finalidade de identificar e responsabilizar maior número de integrantes do tráfico, sem prejuízo da ação penal cabível. Na não atuação policial (ação controlada), a autorização será concedida desde que sejam conhecidos o itinerário provável e a identificação dos agentes ou colaboradores.",
+        "pontos": [
+          "Infiltração de agentes de polícia, com autorização judicial e oitiva do MP.",
+          "Ação controlada (não atuação policial) para identificar mais integrantes.",
+          "Exige itinerário provável e identificação dos agentes ou colaboradores."
+        ],
+        "atencao": [
+          "Autorização JUDICIAL e oitiva do MP em ambos os casos."
+        ],
+        "exemplo": "A polícia acompanha o transporte da droga até o destino para prender toda a cadeia do tráfico.",
+        "prova": [
+          "Assertiva que dispensa autorização judicial para a infiltração policial no tráfico erra."
+        ],
+        "termos": [
+          {
+            "termo": "Ação controlada",
+            "significado": "Retardamento da intervenção policial para obter melhor resultado investigativo."
+          }
+        ],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-54",
+      "unit_id": "2505f345-05fe-5218-921d-fa15c19a52ef",
+      "content_sha256": "bb24515b2aadd7b001679ded976f29b2f2a2af2ee63b2e9a0bf45ff9d249a868",
+      "simples": "Com os autos ou informações recebidos, o MP tem dez dias para adotar a providência pertinente: arquivamento, diligências necessárias ou denúncia, com até cinco testemunhas e demais provas.",
+      "pontos": [
+        "Fontes podem ser inquérito policial, CPI ou peças de informação.",
+        "Dez dias para a providência; até cinco testemunhas na denúncia.",
+        "Arquivamento deve observar o regime atual do CPP 28 e suas garantias de revisão."
+      ],
+      "atencao": [
+        "Não usar a redação antiga isoladamente para atribuir ao juiz iniciativa acusatória ou substituir o procedimento atual de arquivamento.",
+        "Dez dias aqui são do MP; não confundir com defesa prévia do art. 55."
+      ],
+      "exemplo": "MP recebe peças suficientes e oferece denúncia com quatro testemunhas dentro do prazo. Variação: decide por arquivamento; seguir também o regime atual de comunicação e revisão do CPP, sem transformar o juiz em acusador.",
+      "prova": [
+        "O MP precisa sempre denunciar ao receber os autos? Não; há alternativas legalmente previstas.",
+        "O limite indicado para testemunhas na denúncia é cinco? Sim; conforme inciso III."
+      ],
+      "termos": [
+        "dez dias",
+        "até cinco testemunhas",
+        "arquivamento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2505f345-05fe-5218-921d-fa15c19a52ef",
+        "content_sha256": "bb24515b2aadd7b001679ded976f29b2f2a2af2ee63b2e9a0bf45ff9d249a868",
+        "simples": "Recebidos em juízo os autos do inquérito policial, de Comissão Parlamentar de Inquérito ou peças de informação, dar-se-á vista ao Ministério Público para, no prazo de 10 dias, requerer o arquivamento; requisitar as diligências que entender necessárias; ou oferecer denúncia, arrolar até 5 testemunhas e requerer as demais provas pertinentes.",
+        "pontos": [
+          "Vista ao MP por 10 dias.",
+          "Opções: arquivar, requisitar diligências ou denunciar.",
+          "Denúncia: até 5 testemunhas."
+        ],
+        "atencao": [
+          "Prazo do MP: 10 dias.",
+          "Até 5 testemunhas (no ordinário do CPP, 8)."
+        ],
+        "exemplo": "O MP oferece denúncia por tráfico, arrolando 5 testemunhas, em 10 dias.",
+        "prova": [
+          "Assertiva que fixa em 8 testemunhas o limite da denúncia na Lei de Drogas erra: são 5."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-55",
+      "unit_id": "5d407e34-7354-5a87-ac62-65bfd5c7914b",
+      "content_sha256": "e57633b5b79e32122508caf6261d567abbf9395e876cc09f9bf8244863a94e88",
+      "simples": "Depois de oferecida a denúncia, o acusado é notificado para defesa prévia escrita em dez dias. Pode arguir preliminares, razões de defesa, documentos, justificações, provas e até cinco testemunhas; exceções correm em separado.",
+      "pontos": [
+        "Sem resposta no prazo, nomear defensor, com vista dos autos e dez dias para defesa.",
+        "Após defesa, juiz decide em cinco dias.",
+        "Se imprescindível, diligências, perícias ou apresentação do preso em prazo máximo de dez dias."
+      ],
+      "atencao": [
+        "Defesa preliminar antecede o recebimento: não confundir notificação deste artigo com a citação pessoal do art. 56. Ausência de resposta não autoriza suprimir defesa."
+      ],
+      "exemplo": "Acusado não apresenta defesa: juiz nomeia defensor e concede dez dias com vista dos autos. Variação: a resposta chega regularmente; juiz decide em cinco dias, sem transformar a fase em condenação automática.",
+      "prova": [
+        "A falta de resposta permite prosseguir sem defensor? Não; deve nomear defensor e assegurar prazo de defesa.",
+        "O limite de testemunhas na resposta é cinco? Sim; o §1º o prevê."
+      ],
+      "termos": [
+        "defesa prévia",
+        "dez dias",
+        "cinco dias",
+        "em apartado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5d407e34-7354-5a87-ac62-65bfd5c7914b",
+        "content_sha256": "e57633b5b79e32122508caf6261d567abbf9395e876cc09f9bf8244863a94e88",
+        "simples": "Oferecida a denúncia, o juiz ordenará a notificação do acusado para oferecer defesa prévia, por escrito, no prazo de 10 dias. Na resposta, consistente em defesa preliminar e exceções, o acusado poderá arguir preliminares e invocar todas as razões de defesa, oferecer documentos e justificações, especificar as provas e arrolar testemunhas, até o número de 5. As exceções serão processadas em apartado. Se a resposta não for apresentada no prazo, o juiz nomeará defensor para oferecê-la em 10 dias. Apresentada a defesa, o juiz decidirá em 5 dias. Se entender imprescindível, o juiz, no prazo máximo de 10 dias, determinará a apresentação do preso, a realização de diligências, exames e perícias.",
+        "pontos": [
+          "Notificação do acusado para defesa prévia em 10 dias, ANTES do recebimento da denúncia.",
+          "Até 5 testemunhas.",
+          "Exceções em apartado.",
+          "Sem defesa: defensor nomeado, 10 dias.",
+          "Juiz decide em 5 dias."
+        ],
+        "atencao": [
+          "Defesa prévia ANTES do recebimento da denúncia (rito próprio da Lei de Drogas).",
+          "Prazos: 10, 5 e 10 dias."
+        ],
+        "exemplo": "O acusado apresenta defesa prévia em 10 dias, e o juiz decide em 5 dias se recebe a denúncia.",
+        "prova": [
+          "Assertiva que manda citar o acusado após o recebimento da denúncia, na Lei de Drogas, sem defesa prévia, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-56",
+      "unit_id": "8e6d3f53-1019-5119-aab7-cbb39bedf4b7",
+      "content_sha256": "afbe1696f15bdd8760635b2a7c6dd9322fbcd6b16c292d668212b07886f637da",
+      "simples": "Recebida a denúncia, o juiz designa audiência, ordena citação pessoal, intima MP e assistente e requisita laudos. A audiência ocorre em trinta dias, ou noventa quando determinada avaliação de dependência.",
+      "pontos": [
+        "Citação ocorre depois do recebimento, diferentemente da notificação para defesa preliminar.",
+        "Funcionário público denunciado pelos tipos indicados pode sofrer afastamento cautelar das atividades, com comunicação ao órgão.",
+        "30 dias: regra; 90: avaliação de dependência."
+      ],
+      "atencao": [
+        "Afastamento cautelar não equivale a perda definitiva do cargo, pena automática ou declaração antecipada de culpa. Exige análise e fundamentação da medida."
+      ],
+      "exemplo": "Denúncia recebida e avaliação de dependência determinada: observar prazo diferenciado de noventa dias. Variação: servidor denunciado pode ter afastamento cautelar fundamentado, sem confundi-lo com demissão definitiva.",
+      "prova": [
+        "Recebimento torna automática a perda do cargo? Não; o artigo prevê possibilidade de afastamento cautelar.",
+        "Noventa dias é a regra de toda audiência? Não; refere-se à hipótese de avaliação de dependência."
+      ],
+      "termos": [
+        "citação pessoal",
+        "afastamento cautelar",
+        "trinta dias",
+        "noventa dias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8e6d3f53-1019-5119-aab7-cbb39bedf4b7",
+        "content_sha256": "afbe1696f15bdd8760635b2a7c6dd9322fbcd6b16c292d668212b07886f637da",
+        "simples": "Recebida a denúncia, o juiz designará dia e hora para a audiência de instrução e julgamento, ordenará a citação pessoal do acusado, a intimação do Ministério Público, do assistente, se for o caso, e requisitará os laudos periciais. Nas condutas dos arts. 33, caput e §1º, e 34 a 37, o juiz, ao receber a denúncia, poderá decretar o afastamento cautelar do denunciado de suas atividades, se for funcionário público, comunicando o órgão respectivo. A audiência será realizada dentro dos 30 dias seguintes ao recebimento da denúncia, salvo se determinada avaliação para atestar dependência de drogas, quando será realizada em 90 dias.",
+        "pontos": [
+          "Recebimento da denúncia, audiência designada e citação pessoal.",
+          "Afastamento cautelar do funcionário público denunciado por tráfico.",
+          "Audiência em 30 dias; em 90 dias se houver avaliação de dependência."
+        ],
+        "atencao": [
+          "Prazos: 30 dias (regra) e 90 dias (avaliação de dependência)."
+        ],
+        "exemplo": "O juiz recebe a denúncia contra um servidor por tráfico e o afasta cautelarmente.",
+        "prova": [
+          "Assertiva que fixa em 60 dias a audiência após o recebimento da denúncia, sem exceção, erra: são 30 dias (ou 90 com avaliação de dependência)."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-57",
+      "unit_id": "691c01f1-5f86-5e6a-aa8c-34a87660d95a",
+      "content_sha256": "9342894e5e05e38c493c176dbb3296a4969e89af0e6b4c09c0676d5e59d2bb7e",
+      "simples": "Debates orais seguem a instrução: MP fala primeiro, defesa depois; vinte minutos cada, prorrogáveis por dez a critério judicial. A ordem literal de interrogatório no início não deve ser ensinada como regra atual.",
+      "pontos": [
+        "STF, HC 127900 e HC 162650: interrogatório ao final da instrução, conforme CPP 400, inclusive Lei de Drogas.",
+        "Ordem dos debates preserva fala da defesa depois da acusação.",
+        "Esclarecimentos de fatos devem respeitar pertinência, relevância e garantias do interrogatório."
+      ],
+      "atencao": [
+        "Distinguir transcrição legislativa e aplicação constitucional. Não criar lacuna automática afirmando que o interrogatório deve ocorrer antes de todas as testemunhas.",
+        "O HC 127900 fixou marco temporal para processos cuja instrução não estava encerrada; nulidade exige examinar situação processual e jurisprudência aplicável."
+      ],
+      "exemplo": "Depois das testemunhas, acusado é interrogado e seguem debates, acusação antes da defesa. Variação: roteiro baseado somente no texto residual coloca o interrogatório antes das testemunhas; corrigir conforme a orientação constitucional indicada.",
+      "prova": [
+        "A literalidade do art. 57 resolve sozinha a ordem atual do interrogatório? Não; considerar CPP 400 e a orientação do STF.",
+        "A defesa fala depois do MP nos debates? Sim; vinte minutos, prorrogáveis por dez a critério do juiz."
+      ],
+      "termos": [
+        "interrogatório ao final",
+        "vinte minutos",
+        "mais dez"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=430484",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=311303"
+      ],
+      "expected": {
+        "unit_id": "691c01f1-5f86-5e6a-aa8c-34a87660d95a",
+        "content_sha256": "9342894e5e05e38c493c176dbb3296a4969e89af0e6b4c09c0676d5e59d2bb7e",
+        "simples": "Na audiência de instrução e julgamento, após o interrogatório do acusado e a inquirição das testemunhas, será dada a palavra, sucessivamente, ao representante do Ministério Público e ao defensor do acusado, para sustentação oral, pelo prazo de 20 minutos para cada um, prorrogável por mais 10, a critério do juiz. Após proceder ao interrogatório, o juiz indagará das partes se restou algum fato para ser esclarecido, formulando as perguntas correspondentes se o entender pertinente e relevante.",
+        "pontos": [
+          "Ordem prevista na lei: interrogatório e, depois, testemunhas.",
+          "Sustentação oral: 20 minutos para cada parte, prorrogáveis por 10.",
+          "Juiz pergunta se resta fato a esclarecer."
+        ],
+        "atencao": [
+          "Segundo o STF, o interrogatório deve ser o último ato, mesmo no rito da Lei de Drogas."
+        ],
+        "exemplo": "MP e defesa fazem sustentação oral de 20 minutos cada, prorrogáveis por mais 10.",
+        "prova": [
+          "Assertiva que fixa em 15 minutos a sustentação oral na Lei de Drogas erra: são 20, prorrogáveis por 10."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 400 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-58",
+      "unit_id": "568a4e25-74aa-5082-8e66-86662e3ea8ae",
+      "content_sha256": "d459a8f737e24d84978c7b5da52738b6d8415eb46dc2b10aabdab442f625ee4f",
+      "simples": "Encerrados os debates, o juiz profere sentença imediatamente ou em dez dias, determinando conclusão dos autos. Os antigos §§1º e 2º foram revogados em 2014.",
+      "pontos": [
+        "Duas possibilidades: imediata ou em dez dias.",
+        "Revogação dos parágrafos pela Lei 12.961/2014; não recuperá-los em exercícios."
+      ],
+      "atencao": [
+        "Prazo de sentença não é prazo de destruição das drogas, do inquérito ou de apresentação de defesa, mesmo quando os números coincidirem."
+      ],
+      "exemplo": "Juiz encerra debates e decide imediatamente. Variação: necessita conclusão dos autos para sentença em dez dias; essa alternativa está expressamente prevista.",
+      "prova": [
+        "A sentença deve obrigatoriamente sair no mesmo ato? Não; pode ser proferida em dez dias.",
+        "Os §§1º e 2º são regras atuais? Não; foram revogados."
+      ],
+      "termos": [
+        "de imediato",
+        "dez dias",
+        "conclusos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "568a4e25-74aa-5082-8e66-86662e3ea8ae",
+        "content_sha256": "d459a8f737e24d84978c7b5da52738b6d8415eb46dc2b10aabdab442f625ee4f",
+        "simples": "Encerrados os debates, proferirá o juiz sentença de imediato, ou o fará em 10 dias, ordenando que os autos para isso lhe sejam conclusos. Os §§ 1º e 2º foram revogados.",
+        "pontos": [
+          "Sentença de imediato ou em 10 dias."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§ 1º e 2º revogados pela Lei nº 12.961, de 2014."
+        ],
+        "exemplo": "Terminados os debates, o juiz sentencia na própria audiência ou em até 10 dias.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo da sentença na Lei de Drogas erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 57"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-59",
+      "unit_id": "418b567b-2874-5bb8-bcfd-e675f554611b",
+      "content_sha256": "252157c86af0b9d949334eefe912680abd2513dafd9f7c7a295bb96b2caeaa93",
+      "simples": "O texto residual condiciona apelação ao recolhimento à prisão, com exceção para primário de bons antecedentes. A regra atual deve respeitar a Súmula 347/STJ: o conhecimento da apelação independe da prisão.",
+      "pontos": [
+        "Direito de recorrer e requisitos de prisão cautelar são questões distintas.",
+        "Não exigir recolhimento como condição de admissibilidade do recurso.",
+        "Eventual cautelar exige fundamentação própria, conforme CPP 312 e 387, §1º."
+      ],
+      "atencao": [
+        "Não ensinar que somente primários podem recorrer soltos. Também não interpretar independência da apelação como revogação automática de toda prisão cautelar regularmente fundamentada."
+      ],
+      "exemplo": "Condenado apela sem se recolher: o recurso não é inadmissível por isso. Variação: há cautelar fundamentada por requisitos próprios; o direito de recorrer não elimina automaticamente essa decisão.",
+      "prova": [
+        "A apelação só pode ser conhecida depois da prisão? Não; a Súmula 347 afasta essa condição.",
+        "Conhecer a apelação elimina qualquer prisão cautelar? Não; custódia depende de fundamento próprio."
+      ],
+      "termos": [
+        "conhecimento da apelação",
+        "independe da prisão",
+        "prisão cautelar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&livre=%22347%22+INPATH%28NUM%29&operador=AND&ordenacao=-%40NUM&p=false"
+      ],
+      "expected": {
+        "unit_id": "418b567b-2874-5bb8-bcfd-e675f554611b",
+        "content_sha256": "252157c86af0b9d949334eefe912680abd2513dafd9f7c7a295bb96b2caeaa93",
+        "simples": "Nos crimes previstos nos arts. 33, caput e §1º, e 34 a 37, o réu não poderá apelar sem recolher-se à prisão, salvo se for primário e de bons antecedentes, assim reconhecido na sentença condenatória.",
+        "pontos": [
+          "Réu não pode apelar sem se recolher à prisão.",
+          "Exceção: primário e de bons antecedentes, reconhecido na sentença."
+        ],
+        "atencao": [
+          "Dispositivo considerado incompatível com a presunção de inocência: prevalece o direito de recorrer em liberdade, salvo prisão cautelar fundamentada."
+        ],
+        "exemplo": "Texto legal que exigia a prisão do réu para apelar, hoje de aplicação restrita pela jurisprudência.",
+        "prova": [
+          "Assertiva que aplica automaticamente a exigência de prisão para apelar no tráfico erra, à luz da presunção de inocência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    }
+  ]
+}

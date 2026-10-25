@@ -1,3 +1,6 @@
+import type { DidacticProvenance } from "./didacticQuestion";
+import { extractQuestionIllustrations, type QuestionIllustration } from "@/lib/questionMedia";
+import { acreDate } from "@/lib/acreTime";
 // Tipos e helpers de formatação de questão compartilhados entre o Treinador
 // de Questões (área logada, /dashboard/question-trainer) e o Desafio Diário
 // público (visitante sem cadastro, /desafio-diario) — extraídos pra um só
@@ -15,7 +18,11 @@ export type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: 
 export type Question = {
   id: string;
   source: Source;
+  /** Proveniência explícita para exibir "Questão autoral" no painel do aluno. */
+  isOriginal?: boolean;
+  didacticProvenance?: DidacticProvenance | undefined;
   table?: QuestionTable;
+  syllabusTopicId?: string | null;
   contest: string;
   year: string;
   career: string;
@@ -31,7 +38,17 @@ export type Question = {
   state: string;
   category: string;
   kind?: "true_false" | "multiple_choice";
+  preliminaryKey?: boolean;
+  itemNumber?: number | undefined;
+  testedTopic?: string | null;
+  figures?: string[] | undefined;
+  /** Etiquetas do filtro "Atual" (conteúdo novo ou cobrado recentemente), vindas de question_currency. */
+  currencyTags?: string[] | undefined;
+  currencyNote?: string | undefined;
 };
+
+// review_note começa com esta marca enquanto o gabarito é o preliminar da banca; remover a marca ao conferir o definitivo.
+export const PRELIMINARY_KEY_MARK = "Gabarito PRELIMINAR";
 
 export const normalizeDifficulty = (value: unknown): Difficulty => {
   const text = String(value ?? "").toLowerCase();
@@ -72,10 +89,112 @@ export const basisHref = (basis: LegalBasis) => {
 // Assembleia Geral da ONU) são verificados diretamente nas fontes primárias
 // dos organismos que os custodiam.
 const OFFICIAL_SOURCE =
-  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
+  /(^|\.)(planalto\.gov\.br|sinj\.df\.gov\.br|legislacao\.pr\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|oas\.org|corteidh\.or\.cr|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
 export const isOfficialUrl = (url?: string) => {
   try {
-    return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
+    if (!url) return false;
+    const parsed = new URL(String(url));
+    // Compilação da LC 106/2003 conferida no catálogo oficial do MPRJ.
+    // Não autoriza páginas genéricas do portal nem outros documentos.
+    if (parsed.hostname === "www.mprj.mp.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname ===
+          "/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80" &&
+        /^\d+$/.test(parsed.searchParams.get("t") ?? "") &&
+        [...parsed.searchParams].length === 1
+      );
+    }
+    // Recortes de responsabilidade da LC68: compilação oficial e atos posteriores conferidos.
+    if (parsed.hostname === "sapl.al.ro.leg.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        parsed.pathname ===
+          "/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx"
+      );
+    }
+    // Normas contábeis primárias conferidas no CFC, incluindo a transição NBC31.
+    if (parsed.hostname === "www1.cfc.org.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        [
+          "/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+          "/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+        ].includes(parsed.pathname)
+      );
+    }
+    // Recortes da LC407 confrontados com os atos modificadores até 17/10/2026.
+    if (parsed.hostname === "www.al.mt.gov.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname ===
+          "/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado" &&
+        parsed.searchParams.get("exibirAnotacao") === "1" &&
+        parsed.searchParams.get("marcoHistorico") === "2026-10-17" &&
+        [...parsed.searchParams].length === 2
+      );
+    }
+    // Somente os recortes da LC 37/2004 conferidos na compilação da ALEPI.
+    if (parsed.hostname === "sapl.al.pi.leg.br") {
+      return (
+        parsed.protocol === "https:" &&
+        parsed.pathname === "/ta/59/text" &&
+        !parsed.search &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port
+      );
+    }
+    // Recorte da RDC 222/2018 conferido na Biblioteca Virtual do Ministério
+    // da Saúde. Não libera páginas genéricas nem outras normas desse domínio.
+    if (parsed.hostname === "bvsms.saude.gov.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf" &&
+        !parsed.search
+      );
+    }
+    if (parsed.hostname === "www.al.ro.leg.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/downloads/constituicao-do-estado-de-rondonia" &&
+        !parsed.search
+      );
+    }
+    // Normas estaduais conferidas na ALEPE: reconhecer a página da norma,
+    // sem liberar buscas, páginas pessoais ou qualquer domínio .gov.br.
+    if (parsed.hostname === "legis.alepe.pe.gov.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/texto.aspx" &&
+        /^\d+$/.test(parsed.searchParams.get("id") ?? "") &&
+        ["TEXTOATUALIZADO", "TEXTOORIGINAL"].includes(parsed.searchParams.get("tipo") ?? "")
+      );
+    }
+    return OFFICIAL_SOURCE.test(parsed.hostname + "/");
   } catch {
     return false;
   }
@@ -109,7 +228,7 @@ export function splitExplanation(text: string) {
   return { main: text.slice(0, match.index).trim(), example: (match[1] ?? "").trim() };
 }
 export const formatDate = (value: string | null) =>
-  value ? new Date(value).toLocaleDateString("pt-BR") : "";
+  value ? acreDate(value).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "";
 // Alguns itens ainda em fase de importação têm review_note preenchido só com
 // metadado de auditoria ("Importado do caderno oficial...", "aguardando
 // revisão de conteúdo...") em vez de uma explicação de verdade escrita pra
@@ -161,6 +280,7 @@ export function shuffled<T>(items: T[]) {
 }
 
 export type ParsedQuestion = {
+  illustrations?: QuestionIllustration[];
   baseLabel: string;
   base: string;
   stem: string;
@@ -170,13 +290,25 @@ export type ParsedQuestion = {
 // question_text guarda tudo num campo só: "Texto-base:\n…\n\n<enunciado>\n(A) …\n(B) …" (ou
 // "Comando:\n…\n\nItem: …" nos itens Certo/Errado). Separamos texto de apoio, enunciado e alternativas.
 export function parseQuestion(raw: string): ParsedQuestion {
+  const { text, illustrations } = extractQuestionIllustrations(raw);
+  const parsed = parseQuestionContent(text);
+  return illustrations.length ? { ...parsed, illustrations } : parsed;
+}
+
+function parseQuestionContent(raw: string): ParsedQuestion {
   let text = raw.replace(/\r/g, "").trim();
   let base = "";
   let baseLabel = "Texto de apoio";
-  const head = text.match(/^(Texto-base|Comando):\n([\s\S]*?)\n\n(?=\S)/);
+  // "Texto-base [Texto 1]:" (rótulo opcional). Quando o texto tem parágrafos separados por linha em branco,
+  // o fim do texto vem marcado com "[[/texto-base]]" numa linha própria, para não confundir o 1º parágrafo com o enunciado.
+  const marked = text.match(
+    /^(Texto-base)(?: \[([^\]]+)\])?:\n([\s\S]*)\n\n\[\[\/texto-base\]\]\n/,
+  );
+  const head =
+    marked ?? text.match(/^(Texto-base|Comando)(?: \[([^\]]+)\])?:\n([\s\S]*?)\n\n(?=\S)/);
   if (head) {
-    baseLabel = head[1] === "Comando" ? "Comando da questão" : "Texto de apoio";
-    base = (head[2] ?? "").trim();
+    baseLabel = head[1] === "Comando" ? "Comando da questão" : head[2] ? head[2] : "Texto de apoio";
+    base = (head[3] ?? "").trim();
     text = text.slice(head[0].length).trim();
   }
   text = text.replace(/^Item:\s*/, "");

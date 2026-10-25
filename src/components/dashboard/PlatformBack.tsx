@@ -1,7 +1,9 @@
-import { useLocation, useRouter } from "@tanstack/react-router";
+import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { dashboardHref } from "@/lib/internalNavigation";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Hint } from "@/components/ui/hint";
 
 /** The dashboard layout persists between sections, so only known internal history is used. */
 export function PlatformBack() {
@@ -14,17 +16,26 @@ export function PlatformBack() {
     visited.current.set(index, location.href);
     setPrevious(dashboardHref(visited.current.get(index - 1) ?? ""));
   }, [index, location.href]);
-  if (!previous || previous === location.href) return null;
+  if (!previous || previous === location.href) return (
+    <Hint content={location.pathname === '/dashboard' ? 'Página inicial' : 'Área do aluno'} side="bottom">
+      <Link to={location.pathname === '/dashboard' ? '/' : '/dashboard'} className="app-top-btn platform-back no-print" aria-label={location.pathname === '/dashboard' ? 'Ir para a página inicial' : 'Voltar à área do aluno'}><ArrowLeft aria-hidden="true" /></Link>
+    </Hint>
+  );
   return (
-    <button
-      type="button"
-      onClick={() => {
-        if (dashboardHref(visited.current.get(index - 1) ?? "")) router.history.back();
-      }}
-      className="no-print mb-4 inline-flex cursor-pointer items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
-      aria-label="Voltar à seção anterior da plataforma"
-    >
-      <ArrowLeft aria-hidden="true" className="h-4 w-4" /> Voltar à seção anterior
-    </button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <button
+          type="button"
+          onClick={() => {
+            if (dashboardHref(visited.current.get(index - 1) ?? "")) router.history.back();
+          }}
+          className="app-top-btn platform-back no-print cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          aria-label="Voltar à seção anterior da plataforma"
+        >
+          <ArrowLeft aria-hidden="true" />
+        </button>
+      </TooltipTrigger>
+      <TooltipContent side="bottom">Voltar à seção anterior</TooltipContent>
+    </Tooltip>
   );
 }

@@ -1,0 +1,89 @@
+{
+  "version": "2026-10-12-contravencoes-official-link",
+  "checked_at": "2026-10-12T19:49:49.020968+00:00",
+  "scope": "Corrigir exclusivamente URL oficial da Lei 6.734/1979; conteúdo pedagógico e fonte do artigo preservados.",
+  "laws": [
+    {
+      "slug": "contravencoes",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "course_current_units": 66,
+      "target_unit_keys": [
+        "art-20"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "2e94194ce818853cd12d7053747be20073903a0230868d2970f288e37320d835",
+      "source_checked_at": "2026-10-12T16:18:18.943244+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "a437e2c6-8da2-554d-8710-529dd2137df6",
+      "content_sha256": "3536d7dda4bc682c76f7bf365e0512ee95699fec1a81b36f621a1f222c2d829b",
+      "simples": "O tipo atual descreve anúncio de processo, substância ou objeto destinado a provocar aborto. A redação de 1979 retirou evitar gravidez; não confundir propaganda de contraceptivo com a antiga descrição.",
+      "pontos": [
+        "Pena textual é multa, em denominação histórica de cruzeiros.",
+        "Anúncio de meio abortivo e prática de aborto são condutas distintas."
+      ],
+      "atencao": [
+        "Não criminalizar informação de contracepção apenas com rubrica antiga meio anticoncepcional.",
+        "Casos de aborto permitido e comunicação de saúde exigem exame jurídico próprio; não inferir proibição de todo atendimento lícito."
+      ],
+      "exemplo": "Questão descreve anúncio de objeto destinado a provocar aborto: analisar tipo e contexto. Variação: anúncio de método contraceptivo não é automaticamente incluído só pela rubrica antiga.",
+      "prova": [
+        "Evitar gravidez continua no texto do tipo após 1979? Não; foi retirado.",
+        "O artigo prevê automaticamente pena de reclusão? Não; sua sanção textual é multa."
+      ],
+      "termos": [
+        "destinado a provocar aborto",
+        "anunciar",
+        "multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l6734.htm"
+      ],
+      "expected": {
+        "unit_id": "a437e2c6-8da2-554d-8710-529dd2137df6",
+        "content_sha256": "3536d7dda4bc682c76f7bf365e0512ee95699fec1a81b36f621a1f222c2d829b",
+        "simples": "O tipo atual descreve anúncio de processo, substância ou objeto destinado a provocar aborto. A redação de 1979 retirou evitar gravidez; não confundir propaganda de contraceptivo com a antiga descrição.",
+        "pontos": [
+          "Pena textual é multa, em denominação histórica de cruzeiros.",
+          "Anúncio de meio abortivo e prática de aborto são condutas distintas."
+        ],
+        "atencao": [
+          "Não criminalizar informação de contracepção apenas com rubrica antiga meio anticoncepcional.",
+          "Casos de aborto permitido e comunicação de saúde exigem exame jurídico próprio; não inferir proibição de todo atendimento lícito."
+        ],
+        "exemplo": "Questão descreve anúncio de objeto destinado a provocar aborto: analisar tipo e contexto. Variação: anúncio de método contraceptivo não é automaticamente incluído só pela rubrica antiga.",
+        "prova": [
+          "Evitar gravidez continua no texto do tipo após 1979? Não; foi retirado.",
+          "O artigo prevê automaticamente pena de reclusão? Não; sua sanção textual é multa."
+        ],
+        "termos": [
+          "destinado a provocar aborto",
+          "anunciar",
+          "multa"
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/l6734.htm"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T19:48:18.605+00:00",
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-12T19:48:18.605+00:00"
+      }
+    }
+  ]
+}

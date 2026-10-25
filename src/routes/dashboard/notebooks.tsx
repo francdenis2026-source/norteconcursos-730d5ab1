@@ -1,25 +1,34 @@
+import "@/styles/question-workspace.css";
+import { PlanGate } from "@/components/dashboard/PlanGate";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { StudyLaterNotebook } from "@/components/dashboard/StudyLaterNotebook";
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import {
   Plus,
   BookOpen,
-  Trash2,
-  Edit3,
   MoreVertical,
   FileText,
   Search,
   Filter,
   CheckCircle2,
-  XCircle,
-  Download,
   Printer,
-  Eye,
 } from "lucide-react";
-import { MediaViewer } from "@/components/dashboard/MediaViewer";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { AiResolutionsSection } from "@/components/dashboard/AiResolutionsSection";
 import {
   DropdownMenu,
@@ -33,40 +42,46 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 
 export const Route = createFileRoute("/dashboard/notebooks")({
-  component: NotebooksPage,
+  component: () => (
+    <PlanGate feature="notebooks" title="Cadernos de estudo">
+      <NotebooksPage />
+    </PlanGate>
+  ),
 });
 
 function NotebooksPage() {
+  const { user, isLoading: authLoading } = useAuthStatus();
+  const owner = user?.id && user.id !== "demo-user" ? user.id : null;
+  const notebookStorageKey = owner ? `norte_notebooks:${owner}` : null;
+  const [editor, setEditor] = useState<Notebook | null>(null);
+  const [editorName, setEditorName] = useState("");
+  const [editorDescription, setEditorDescription] = useState("");
+  const [editorError, setEditorError] = useState("");
   const [notebooks, setNotebooks] = useState<Notebook[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [disciplineFilter, setDisciplineFilter] = useState<string>("all");
-  const [statusFilter, setStatusFilter] = useState<"all" | "favorited" | "marked">("all");
   const [sortBy, setSortBy] = useState<"name" | "date" | "questions">("date");
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
-    loadData();
-  }, []);
+    setNotebooks([]);
+    if (!owner || authLoading) return;
+    void loadData();
+  }, [owner, authLoading]);
 
   const loadData = async () => {
     setIsLoading(true);
     // Load Notebooks
-    const storedNbs = localStorage.getItem("norte_notebooks");
+    if (!notebookStorageKey) return;
+    const storedNbs = localStorage.getItem(notebookStorageKey);
     if (storedNbs) {
-      setNotebooks(JSON.parse(storedNbs));
+      try {
+        setNotebooks(JSON.parse(storedNbs));
+      } catch {
+        toast.error("Não foi possível ler os cadernos deste navegador.");
+      }
     } else {
-      const initial: Notebook[] = [
-        {
-          id: "nb-1",
-          name: "Revisão Português - Sintaxe",
-          description: "Questões focadas em análise sintática para o concurso da PF",
-          questionIds: ["q1", "q3", "q5"],
-          createdAt: new Date().toISOString(),
-        },
-      ];
-      setNotebooks(initial);
-      localStorage.setItem("norte_notebooks", JSON.stringify(initial));
+      setNotebooks([]);
     }
 
     // Load All Questions for searching context
@@ -76,22 +91,43 @@ function NotebooksPage() {
     setIsLoading(false);
   };
 
-  const handleCreateNotebook = () => {
-    const newNb: Notebook = {
-      id: "nb-" + Date.now(),
-      name: "Novo Caderno",
-      description: "Descrição do caderno",
+  const openNotebook = (notebook?: Notebook) => {
+    const item = notebook ?? {
+      id: crypto.randomUUID(),
+      name: "",
+      description: "",
       questionIds: [],
-      createdAt: new Date().toISOString(),
+      createdAt: platformDate().toISOString(),
     };
-    const updated = [...notebooks, newNb];
-    setNotebooks(updated);
-    localStorage.setItem("norte_notebooks", JSON.stringify(updated));
-    toast.success("Caderno criado com sucesso!");
-    loadData();
+    setEditor(item);
+    setEditorName(item.name);
+    setEditorDescription(item.description ?? "");
+    setEditorError("");
+  };
+  const saveNotebook = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!editor || !notebookStorageKey || !editorName.trim()) return;
+    const saved = { ...editor, name: editorName.trim(), description: editorDescription.trim() };
+    const updated = notebooks.some((item) => item.id === saved.id)
+      ? notebooks.map((item) => (item.id === saved.id ? saved : item))
+      : [...notebooks, saved];
+    try {
+      localStorage.setItem(notebookStorageKey, JSON.stringify(updated));
+      setNotebooks(updated);
+      setEditor(null);
+      toast.success("Coleção salva neste navegador.");
+    } catch {
+      setEditorError("Não foi possível salvar neste navegador. Seus registros foram preservados.");
+    }
   };
 
   const handleExportPDF = (notebook: Notebook) => {
+    const escapePrint = (value: unknown) =>
+      String(value ?? "").replace(
+        /[&<>"']/g,
+        (character) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]!,
+      );
     toast.success(`Gerando PDF do caderno: ${notebook.name}`);
 
     // Create a temporary print stylesheet for cleaner PDF
@@ -124,9 +160,9 @@ function NotebooksPage() {
     printDiv.id = "print-section";
     printDiv.innerHTML = `
       <div style="border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px;">
-        <h1 style="font-size: 24px; font-bold; color: #1e293b;">${notebook.name}</h1>
-        <p style="color: #64748b;">${notebook.description || ""}</p>
-        <p style="font-size: 12px;">Gerado em: ${new Date().toLocaleDateString()}</p>
+        <h1 style="font-size: 24px; font-bold; color: #1e293b;">${escapePrint(notebook.name)}</h1>
+        <p style="color: #64748b;">${escapePrint(notebook.description)}</p>
+        <p style="font-size: 12px;">Gerado em: ${acreDate().toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>
       </div>
       
       <div style="margin-bottom: 30px; background: #f8fafc; padding: 15px; border-radius: 8px;">
@@ -134,7 +170,7 @@ function NotebooksPage() {
         <p>Total de Questões: <strong>${notebookQuestions.length}</strong></p>
         <ul style="font-size: 14px;">
           ${Object.entries(subjectsCount)
-            .map(([subId, count]) => `<li>Assunto ${subId}: ${count} questões</li>`)
+            .map(([subId, count]) => `<li>Assunto ${escapePrint(subId)}: ${count} questões</li>`)
             .join("")}
         </ul>
       </div>
@@ -144,10 +180,10 @@ function NotebooksPage() {
           .map(
             (q, i) => `
           <div style="margin-bottom: 40px; page-break-inside: avoid; border-left: 4px solid #e2e8f0; padding-left: 15px;">
-            <p style="font-weight: bold;">Questão ${i + 1} - ${q.difficulty}</p>
-            <div style="margin: 10px 0;">${q.text}</div>
+            <p style="font-weight: bold;">Questão ${i + 1} - ${escapePrint(q.difficulty)}</p>
+            <div style="margin: 10px 0;">${escapePrint(q.text)}</div>
             <div style="margin-top: 10px; font-style: italic; font-size: 12px; color: #64748b;">
-              Assunto: ${q.subjectId} | Disciplina: ${q.disciplineId}
+              Assunto: ${escapePrint(q.subjectId)} | Disciplina: ${escapePrint(q.disciplineId)}
             </div>
           </div>
         `,
@@ -177,23 +213,34 @@ function NotebooksPage() {
     });
 
   return (
-    <div className="space-y-6">
+    <div className="question-workspace question-collections">
       <PageHero
-        image="trainer"
-        kicker="Treinamento"
+        image="study-desk"
+        kicker="Questões"
         icon={BookOpen}
         title={
           <>
-            Meus <em>cadernos</em>
+            Coleções de <em>questões</em>
           </>
         }
-        description="Organize suas questões favoritas em coleções para revisão personalizada."
+        description="Organize suas questões em coleções e retome cada seleção quando precisar."
         actions={
-          <Button onClick={handleCreateNotebook} className="hero-btn-primary gap-2">
+          <Button onClick={() => openNotebook()} className="hero-btn-primary gap-2">
             <Plus className="h-4 w-4" /> Criar caderno
           </Button>
         }
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={BookOpen} label="Cadernos" value={notebooks.length} />
+          <HeroStat
+            icon={Plus}
+            label="Questões salvas"
+            value={notebooks.reduce((sum, nb) => sum + nb.questionIds.length, 0)}
+          />
+        </div>
+      </PageHero>
+
+      {owner && <StudyLaterNotebook key={owner} userId={owner} />}
 
       <AiResolutionsSection />
 
@@ -201,7 +248,8 @@ function NotebooksPage() {
         <div className="relative flex-1 w-full">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Buscar por nome ou assunto..."
+            placeholder="Buscar por nome ou descrição…"
+            aria-label="Buscar coleções"
             className="pl-9"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -220,28 +268,6 @@ function NotebooksPage() {
               <DropdownMenuItem onClick={() => setSortBy("name")}>Nome (A-Z)</DropdownMenuItem>
               <DropdownMenuItem onClick={() => setSortBy("questions")}>
                 Qtd. de Questões
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2 shrink-0">
-                Status:{" "}
-                {statusFilter === "all"
-                  ? "Todos"
-                  : statusFilter === "favorited"
-                    ? "Favoritos"
-                    : "Marcados"}
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem onClick={() => setStatusFilter("all")}>Todos</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("favorited")}>
-                Apenas Favoritos
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("marked")}>
-                Apenas Marcados
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -278,7 +304,7 @@ function NotebooksPage() {
           {filteredNotebooks.map((nb) => (
             <Card
               key={nb.id}
-              className="hover:border-secondary/50 transition-all group shadow-sm hover:shadow-md"
+              className="group shadow-sm transition-[border-color,box-shadow] hover:border-secondary/50 hover:shadow-md"
             >
               <CardHeader className="pb-2 flex flex-row items-start justify-between space-y-0">
                 <div className="flex items-center gap-3">
@@ -286,15 +312,24 @@ function NotebooksPage() {
                     <FileText className="h-5 w-5" />
                   </div>
                   <div className="overflow-hidden">
-                    <CardTitle className="text-base truncate max-w-[150px]">{nb.name}</CardTitle>
-                    <CardDescription className="text-xs line-clamp-1">
-                      {nb.description}
-                    </CardDescription>
+                    <CardTitle title={nb.name} className="text-sm line-clamp-2 break-words">
+                      {nb.name}
+                    </CardTitle>
+                    {nb.description && (
+                      <CardDescription className="text-xs line-clamp-1">
+                        {nb.description}
+                      </CardDescription>
+                    )}
                   </div>
                 </div>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 -mr-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-[44px] w-[44px] -mr-2"
+                      aria-label={`Ações do caderno ${nb.name}`}
+                    >
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
@@ -302,43 +337,10 @@ function NotebooksPage() {
                     <DropdownMenuItem className="gap-2" onClick={() => handleExportPDF(nb)}>
                       <Printer className="h-4 w-4" /> Imprimir / PDF
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2">
-                      <Edit3 className="h-4 w-4" /> Renomear
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2 text-destructive focus:text-destructive">
-                      <Trash2 className="h-4 w-4" /> Excluir
-                    </DropdownMenuItem>
-                    <div className="border-t my-1" />
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="video"
-                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        title="Aula Inaugural: Como usar os Cadernos"
-                        triggerLabel="Ver Vídeo Aula"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="pdf"
-                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                        title="Teoria: Guia de Estudos"
-                        triggerLabel="Baixar Guia (PDF)"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
-                    </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </CardHeader>
               <CardContent className="pt-2">
-                <div className="flex flex-wrap gap-1 mb-4">
-                  <Badge variant="outline" className="text-[9px] uppercase tracking-tighter py-0">
-                    Sintaxe
-                  </Badge>
-                  <Badge variant="outline" className="text-[9px] uppercase tracking-tighter py-0">
-                    PF
-                  </Badge>
-                </div>
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] text-muted-foreground font-medium flex items-center gap-1">
                     <CheckCircle2 className="h-3 w-3 text-emerald-500" />
@@ -347,9 +349,10 @@ function NotebooksPage() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-8 text-xs font-black uppercase tracking-widest text-secondary hover:text-secondary hover:bg-secondary/10"
+                    className="min-h-11 text-xs text-secondary hover:text-secondary hover:bg-secondary/10"
+                    onClick={() => openNotebook(nb)}
                   >
-                    Estudar
+                    Editar coleção
                   </Button>
                 </div>
               </CardContent>
@@ -357,6 +360,56 @@ function NotebooksPage() {
           ))}
         </div>
       )}
+      <Dialog open={editor !== null} onOpenChange={(open) => !open && setEditor(null)}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>
+              {notebooks.some((item) => item.id === editor?.id)
+                ? "Editar coleção"
+                : "Criar coleção"}
+            </DialogTitle>
+            <DialogDescription>
+              Nome e descrição ficam salvos neste navegador. Questões guardadas no treinador
+              aparecem em Estudar depois.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={saveNotebook} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="collection-name">Nome da coleção</Label>
+              <Input
+                id="collection-name"
+                required
+                maxLength={100}
+                value={editorName}
+                onChange={(event) => setEditorName(event.target.value)}
+                placeholder="Ex.: Revisão para a prova"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="collection-description">Descrição (opcional)</Label>
+              <Input
+                id="collection-description"
+                maxLength={240}
+                value={editorDescription}
+                onChange={(event) => setEditorDescription(event.target.value)}
+              />
+            </div>
+            {editorError && (
+              <p role="alert" className="text-sm text-destructive">
+                {editorError}
+              </p>
+            )}
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setEditor(null)}>
+                Cancelar
+              </Button>
+              <Button type="submit" disabled={!editorName.trim()}>
+                Salvar coleção
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

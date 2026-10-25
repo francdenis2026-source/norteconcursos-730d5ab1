@@ -1,0 +1,60 @@
+/* An ownership imprint on the page edge, outside reading and touch targets. */
+.platform-signature {
+  position: fixed;
+  z-index: 3;
+  inset: 50% 7px auto auto;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  writing-mode: vertical-rl;
+  color: color-mix(in srgb, var(--foreground) 52%, transparent);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.platform-signature::before,
+.platform-signature::after {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(transparent, currentColor, transparent);
+}
+.platform-signature__mark {
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  padding: 6px 3px;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+.platform-signature__origin {
+  font-size: 7px;
+  letter-spacing: .12em;
+}
+@media (max-width: 760px) {
+  .platform-signature {
+    right: 3px;
+    gap: 12px;
+    font-size: 7px;
+    letter-spacing: .1em;
+  }
+  .platform-signature__mark { font-size: 7px; padding: 4px 1px; }
+  .platform-signature__origin { font-size: 6px; }
+  .platform-signature::before, .platform-signature::after { height: 20px; }
+}
+@media (max-height: 540px) {
+  .platform-signature__origin,
+  .platform-signature::before,
+  .platform-signature::after { display: none; }
+}
+@media print {
+  .platform-signature { display: none; }
+}
+@media (forced-colors: active) {
+  .platform-signature { display: none; }
+}

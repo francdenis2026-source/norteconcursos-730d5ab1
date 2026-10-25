@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { Link } from "@tanstack/react-router";
 import { ExternalLink, History } from "lucide-react";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -7,7 +8,7 @@ export type LegalReview = {
   checked_at: string;
   scope: string;
   course_slug?: string | null | undefined;
-  corrections: string[];
+  corrections?: string[] | undefined;
   sources: { title: string; url: string; sha256?: string }[];
   changes: {
     title: string;
@@ -21,9 +22,15 @@ export type LegalReview = {
 
 const STATE_LABEL = {
   effective: "Em vigor",
-  future: "Vigência futura",
+  future: "Efeito futuro",
   reference: "Conferir no caso concreto",
   expired: "Vigência encerrada",
+} as const;
+const STATE_TONE = {
+  effective: "border-emerald-300 bg-emerald-50/70 dark:border-emerald-500/30 dark:bg-emerald-950/20",
+  future: "border-amber-300 bg-amber-50/80 dark:border-amber-500/30 dark:bg-amber-950/20",
+  reference: "border-sky-300 bg-sky-50/70 dark:border-sky-500/30 dark:bg-sky-950/20",
+  expired: "border-slate-300 bg-slate-100/70 dark:border-slate-500/30 dark:bg-slate-900/40",
 } as const;
 
 function UpdateRow({
@@ -33,6 +40,7 @@ function UpdateRow({
   where,
   since,
   url,
+  state = "reference",
 }: {
   title: string;
   badge?: string | undefined;
@@ -40,9 +48,10 @@ function UpdateRow({
   where?: string | undefined;
   since?: string | undefined;
   url?: string | undefined;
+  state?: LegalReview["changes"][number]["state"] | undefined;
 }) {
   return (
-    <li className="rounded-lg border p-3 text-sm">
+    <li className={`rounded-lg border p-3 text-sm ${STATE_TONE[state]}`}>
       <div className="flex flex-wrap items-center gap-2">
         <strong>{title}</strong>
         {badge && <span className="rounded-full bg-muted px-2 py-0.5 text-xs">{badge}</span>}
@@ -87,10 +96,10 @@ export function LegalUpdateNotice({
   const curated = slug ? (CURATED_LEGAL_UPDATES[slug] ?? []) : [];
   if (!review && !curated.length) return null;
   const date = review
-    ? new Date(review.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
+    ? acreDate(review.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
     : null;
   const others = review?.changes ?? [];
-  const total = curated.length || others.length;
+  const total = curated.length + others.length;
   return (
     <details className="surface-card p-4 sm:p-5" aria-label="Atualização legislativa">
       <summary className="flex cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 font-semibold">
@@ -100,9 +109,6 @@ export function LegalUpdateNotice({
         <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
           {total} {total === 1 ? "mudança" : "mudanças"}
         </span>
-        {date && (
-          <span className="text-xs font-normal text-muted-foreground">conferida em {date}</span>
-        )}
       </summary>
       <div className="mt-4 space-y-4">
         {!!curated.length && (
@@ -112,6 +118,7 @@ export function LegalUpdateNotice({
                 key={item.title}
                 title={item.title}
                 badge="Em vigor"
+                state="effective"
                 what={item.what}
                 where={item.where}
                 since={item.since}
@@ -132,6 +139,7 @@ export function LegalUpdateNotice({
                     key={`${change.url}-${index}`}
                     title={change.title}
                     badge={STATE_LABEL[change.state]}
+                    state={change.state}
                     what={change.summary}
                     where={change.articles.join(", ")}
                     since={change.vigency}
@@ -147,6 +155,7 @@ export function LegalUpdateNotice({
                   key={`${change.url}-${index}`}
                   title={change.title}
                   badge={STATE_LABEL[change.state]}
+                  state={change.state}
                   what={change.summary}
                   where={change.articles.join(", ")}
                   since={change.vigency}
@@ -160,11 +169,11 @@ export function LegalUpdateNotice({
             <summary className="cursor-pointer text-sm font-medium">Sobre esta conferência</summary>
             <div className="mt-3 space-y-3 text-sm">
               <p className="text-muted-foreground">{review.scope}</p>
-              {!!review.corrections.length && (
+              {!!review.corrections?.length && (
                 <div>
                   <p className="font-medium">O que foi corrigido neste material</p>
                   <ul className="mt-1 list-disc space-y-1 pl-5">
-                    {review.corrections.map((text) => (
+                    {(review.corrections ?? []).map((text) => (
                       <li key={text}>{text}</li>
                     ))}
                   </ul>
@@ -173,7 +182,7 @@ export function LegalUpdateNotice({
               <div>
                 <p className="font-medium">Fontes oficiais</p>
                 <ul className="mt-1 space-y-1">
-                  {review.sources.map((source) => (
+                  {(review.sources ?? []).map((source) => (
                     <li key={source.url}>
                       {isStudySourceUrl(source.url) ? (
                         <a

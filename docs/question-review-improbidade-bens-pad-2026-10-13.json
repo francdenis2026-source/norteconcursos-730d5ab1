@@ -1,0 +1,113 @@
+{
+  "verified_at": "2026-10-13T22:13:41.457278+00:00",
+  "scope": "Três questões individuais; item 16 continua retido para delimitar limitação administrativa versus desapropriação indireta.",
+  "topics": [
+    {
+      "id": "df600821-bba6-5172-9c25-f8be8f8d9a0a",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 12,
+      "topic_text": "Controle e responsabilização da administração; responsabilidade civil, penal e administrativa dos agentes (itens 12 e 13.4 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "353c9a13-2dcb-5316-87f5-eec0179d76d1",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 8,
+      "topic_text": "Bens públicos: regime jurídico e formas de utilização pelos particulares (itens 8, 8.1 e 8.3 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "8a1a9587-09c8-4a08-9122-b0d110846291",
+      "item_number": 15,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+          "norma": "Lei 8.429/1992",
+          "artigo": "arts. 1º, §§ 1º a 3º; 10; e 23"
+        },
+        {
+          "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=4652910&numeroTema=1199",
+          "norma": "Tema 1199/STF",
+          "artigo": "teses 1 a 4; ARE 843989"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. Apenas II está correto. Culpa, mesmo gravíssima, não equivale a dolo para improbidade. O Tema 1199 admite aplicação da revogação da modalidade culposa aos fatos anteriores sem condenação transitada em julgado, cabendo ao juiz verificar eventual dolo; não há absolvição automática de toda imputação. A coisa julgada não é desfeita por essa tese. O novo regime prescricional é irretroativo e seus novos marcos contam a partir da publicação da Lei 14.230/2021, não de forma retroativa e indiscriminada como propõe III. O art. 23 vigente mantém prazo de oito anos; distinguir prescrição sancionatória de ressarcimento por ato doloso.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+          "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=4652910&numeroTema=1199"
+        ]
+      }
+    },
+    {
+      "id": "63a22cf6-acf2-4fc4-9fff-24536609b910",
+      "item_number": 17,
+      "official_answer": "E",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "arts. 183, § 3º, e 191, parágrafo único"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "norma": "Código Civil",
+          "artigo": "arts. 102 e 2.038"
+        },
+        {
+          "url": "https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%20124%20-%20Bens%20Publicos.pdf",
+          "norma": "Jurisprudência em Teses 124/STJ",
+          "artigo": "tese 4"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=24%2F11%2F2025&num_registro=202203606956",
+          "norma": "Acórdão STJ publicado em 24/11/2025",
+          "artigo": "exame do domínio útil e preservação do domínio direto"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "E. É possível adquirir por usucapião o domínio útil anteriormente titularizado por particular em enfiteuse já existente, preservando integralmente o domínio direto público. Não significa adquirir a propriedade pública, em regra insuscetível de usucapião (CF, arts. 183, § 3º, e 191, parágrafo único; CC, art. 102). O CC, art. 2.038, proíbe novas enfiteuses civis, mantém as antigas e ressalva regime especial de terrenos de marinha. Jurisprudência em Teses 124, tese 4; distinção também examinada no acórdão publicado em 24/11/2025. Exige demonstração dos requisitos de usucapião e titularidade particular do domínio útil, não simples ocupação de terra pública.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%20124%20-%20Bens%20Publicos.pdf",
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=24%2F11%2F2025&num_registro=202203606956"
+        ]
+      }
+    },
+    {
+      "id": "e944ff68-9e24-411c-91b8-77d9e03c825a",
+      "item_number": 19,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "norma": "Lei 8.112/1990",
+          "artigo": "arts. 156 a 159: paradigma federal, sem atribuir automática aplicação ao servidor estadual"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=19%2F09%2F2024&num_registro=201803339005",
+          "norma": "AREsp 1.417.207/MG/STJ",
+          "artigo": "fundamentos sobre ausência injustificada do interrogatório; publicação 19/09/2024"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. O investigado regularmente intimado que injustificadamente provoca a ausência de seu interrogatório não pode beneficiar-se dessa nulidade. Não se trata de autorização geral para omitir interrogatório: intimação regular, oportunidade efetiva de defesa e responsabilidade do próprio interessado são pressupostos. O AREsp 1.417.207/MG, publicado em 19/09/2024, reafirma a distinção. Não confundir PAD de servidor com ação penal nem com falta grave de execução penal, que têm garantias específicas.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=19%2F09%2F2024&num_registro=201803339005"
+        ]
+      }
+    }
+  ]
+}

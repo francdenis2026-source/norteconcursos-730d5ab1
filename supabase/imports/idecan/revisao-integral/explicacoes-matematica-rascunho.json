@@ -1,0 +1,348 @@
+[
+  {
+    "local_index": 77,
+    "solution": "Em cada ronda, a chance de não encontrar veículo suspeito é 1−0,15=0,85. Como as rondas são independentes, multiplique: 0,85³=0,614125, aproximadamente 61,4%. Alternativa E.",
+    "common_error": "Somar 85% três vezes ou calcular 0,15³ responde a eventos diferentes.",
+    "practical_example": "Em duas rondas independentes com chance de achado de 20%, a chance de nenhum achado é 0,8²=64%.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 78,
+    "solution": "Os cargos são diferentes: há 8 escolhas para coordenador, 7 para relator e 6 para auxiliar. Logo, 8×7×6=336, alternativa B.",
+    "common_error": "Usar C(8,3)=56 escolhe apenas o grupo, sem atribuir funções.",
+    "practical_example": "Com quatro pessoas e dois cargos distintos, há 4×3=12 designações.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 79,
+    "solution": "Multiplique cada nota pelo peso: 8,5×4+9×3+7×1=68. A soma dos pesos é 8; a média é 68/8=8,5. Alternativa A.",
+    "common_error": "Dividir por três ignora os pesos; o divisor correto é a soma dos pesos.",
+    "practical_example": "Notas 6 e 10, com pesos 3 e 1, dão média (18+10)/4=7.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 80,
+    "solution": "Na PG, a5/a3=q²=320000/80000=4. Assim, a1=a3/q²=80000/4=20000 reais. Alternativa E. O crescimento anual permite adotar q=2.",
+    "common_error": "Confundir a razão entre anos consecutivos com a razão entre o terceiro e o quinto ano.",
+    "practical_example": "Se o valor dobra por ano, 10, 20, 40 são os três primeiros valores.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 81,
+    "solution": "Após recuperar as expressões do PDF, os índices são A=0,85; B=√0,64=0,8; C=0,805; D=8/9≈0,8889; E=(√0,81)²=0,81. O menor é B, indicado na alternativa C.",
+    "common_error": "0,805 é maior que 0,800. Não compare apenas a quantidade de casas decimais.",
+    "practical_example": "Escrever 0,8 como 0,800 facilita compará-lo com 0,805.",
+    "editorial_issues": [
+      "enunciado_local_perdeu_raizes_fracao_e_potencia_recuperados_visualmente_pagina_21"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 82,
+    "solution": "“Existe” pede ∃x; o mesmo indivíduo deve ser suspeito e não ter antecedentes: ∃x(P(x)∧¬Q(x)). Alternativa C.",
+    "common_error": "A negação de Q recai sobre ter antecedentes, não sobre a existência de suspeitos.",
+    "practical_example": "“Existe servidor que não dirige” vira ∃x(Servidor(x)∧¬Dirige(x)).",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 83,
+    "solution": "As diferenças são 2, 4, 8, 16 e 32. Logo, X=23+16=39 e 39+32=71, confirmando o padrão proposto. Alternativa D.",
+    "common_error": "Somar sempre o mesmo número não reproduz os termos dados.",
+    "practical_example": "Na sequência 3, 5, 9, 17, as diferenças 2,4,8 sugerem o próximo termo 33.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 84,
+    "solution": "Se os lados medem x e x+3, então 2x+2(x+3)=30. Daí 4x=24, x=6 e o outro lado mede 9. A área é 6×9=54 m². Alternativa D.",
+    "common_error": "Perímetro mede contorno; área é o produto dos lados, não 30².",
+    "practical_example": "Retângulo de lados 4 e 7 tem perímetro 22 e área 28.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 85,
+    "solution": "AGENTE tem seis letras, com dois E iguais. Há 6!/2!=360 anagramas. Com os E juntos, o bloco EE e as outras quatro letras geram 5!=120. Restam 360−120=240. Alternativa A.",
+    "common_error": "Só os E são as duas vogais iguais; o A não entra no bloco de repetição.",
+    "practical_example": "Em AAB, há 3!/2!=3 palavras distintas: AAB, ABA e BAA.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 86,
+    "solution": "Suponha Alexandre culpado: sua acusação de Bruno é falsa; Bruno nega culpa corretamente; Cleber diz corretamente que Alexandre mente; Douglas e Edson também dizem a verdade. As cinco falas são compatíveis. Se Bruno fosse culpado, Alexandre diria a verdade, mas Cleber mentiria mesmo sendo inocente. As outras hipóteses igualmente deixam Alexandre mentir sendo inocente. Alternativa E.",
+    "common_error": "Verificar só duas falas não basta: apenas o culpado pode mentir.",
+    "practical_example": "Teste cada suspeito como culpado e confira todas as falas, sem decidir por intuição.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 87,
+    "solution": "Sem reposição: a chance de furtado no primeiro sorteio é 10/16 e, após esse sucesso, no segundo é 9/15. O produto é 90/240=37,5%. Alternativa B.",
+    "common_error": "Usar 10/16 duas vezes ignora a retirada do primeiro veículo.",
+    "practical_example": "De três bolas vermelhas e duas azuis, tirar duas vermelhas sem reposição tem chance (3/5)(2/4)=30%.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 88,
+    "solution": "A primeira tarefa usa 4×6×10=240 horas de trabalho de um analista para 120 GB: 0,5 GB por hora de analista. Na nova equipe, 3×9×0,5=13,5 GB/dia. Então 270/13,5=20 dias. Alternativa A.",
+    "common_error": "Mais dados aumentam o prazo; mais analistas e mais horas diárias o reduzem.",
+    "practical_example": "Se uma equipe processa 10 GB/dia, 50 GB exigem cinco dias.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 89,
+    "solution": "Depreciação de 15% deixa 85% do valor a cada ano: 180000×0,85²=130050 reais. Alternativa B.",
+    "common_error": "Subtrair 30% do preço inicial faz depreciação linear, diferente da redução composta pedida.",
+    "practical_example": "Um bem de 100 que cai 10% ao ano vale 90 após um ano e 81 após dois.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 90,
+    "solution": "Apenas AF: 47−10−8+3=32. Apenas PN: 30−10−5+3=18. Apenas AR: 20−8−5+3=10. A soma é 60. Alternativa D.",
+    "common_error": "As interseções duplas incluem os três eventos. Some a interseção tripla ao recuperar cada região exclusiva.",
+    "practical_example": "Quem tem só A é |A|−|A∩B|−|A∩C|+|A∩B∩C|.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 91,
+    "solution": "Uma condicional P→Q é falsa apenas quando P é verdadeiro e Q é falso. Sua negação é P∧¬Q: o suspeito foi encontrado e não foi interrogado. Alternativa C.",
+    "common_error": "Trocar antecedente e consequente produz a recíproca, não a negação.",
+    "practical_example": "Negar “se chover, levo guarda-chuva” é afirmar “choveu e não levei guarda-chuva”.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 97,
+    "solution": "O pronome “ele” não identifica uma pessoa no enunciado. Sem fixar esse referente, não se atribui um valor lógico à afirmação. É a interpretação de sentença aberta adotada na alternativa D.",
+    "common_error": "Não ter conectivos não torna uma sentença aberta: “2 é par” é uma proposição fechada.",
+    "practical_example": "“x cometeu o fato” torna-se uma afirmação determinada quando se identifica x.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 98,
+    "solution": "Armas: 500×0,4=200. Com numeração raspada: 200×0,75=150. Não armas: 300; entorpecentes: 300×0,2=60. A diferença é 150−60=90. Alternativa A.",
+    "common_error": "Os 20% têm como base os 300 itens que não são armas, não os 500 apreendidos.",
+    "practical_example": "20% de uma metade de 100 corresponde a 10, não a 20.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 99,
+    "solution": "A união é 40%+30%+20%−10%−5%−8%+2%=69%. Fora dos três conjuntos ficam 31% dos 2000: 620 detentos. Alternativa B.",
+    "common_error": "Somar as três porcentagens conta algumas pessoas repetidamente.",
+    "practical_example": "Se 60% estão em A ou B, os outros 40% não pertencem a nenhum dos dois.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 100,
+    "solution": "Cada uma das quatro proposições assume V ou F. Todas as combinações formam 2⁴=16 linhas. Alternativa E.",
+    "common_error": "Quatro proposições não significam quatro linhas: a contagem é exponencial.",
+    "practical_example": "Com duas proposições, as linhas são VV, VF, FV e FF.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 134,
+    "solution": "Os três postos são distintos: 10 opções para o primeiro, 9 para o segundo e 8 para o terceiro. Total: 10×9×8=720. Alternativa D.",
+    "common_error": "Escolher só um conjunto de três militares não define quem ocupa cada posto.",
+    "practical_example": "Cinco pessoas para dois postos distintos geram 5×4=20 escalas.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 135,
+    "solution": "A PA tem primeiro termo 20, razão 5 e oitavo termo 20+7×5=55. A soma é 8(20+55)/2=300 kits. Alternativa A.",
+    "common_error": "O oitavo termo tem sete incrementos, não oito.",
+    "practical_example": "Os termos 2,4,6,8 somam 4(2+8)/2=20.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 136,
+    "solution": "Completando quadrados: (x−5)²−25+(y+2)²−4−20=0. Logo, (x−5)²+(y+2)²=49: centro (5,−2), raio 7. Alternativa B.",
+    "common_error": "Na equação reduzida, o centro tem os sinais opostos aos que aparecem dentro dos parênteses.",
+    "practical_example": "(x−3)²+(y+1)²=16 tem centro (3,−1) e raio 4.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 137,
+    "solution": "O semiperímetro da base é (13+14+15)/2=21. Por Heron, área=√[21×8×7×6]=84 m². O prisma tem volume 84×10=840 m³. Alternativa B.",
+    "common_error": "Não use 13×14/2 sem provar que esses lados são perpendiculares.",
+    "practical_example": "Prisma com base de 6 m² e altura 4 m tem volume 24 m³.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 138,
+    "solution": "Após o aumento: 2400×1,10=2640. O desconto de 12% incide sobre esse novo bruto: 2640×0,88=2323,20 reais. Alternativa C.",
+    "common_error": "A base do desconto é o salário reajustado, não o salário antigo.",
+    "practical_example": "100 com aumento de 10% e desconto de 10% resulta em 99, não em 100.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 139,
+    "solution": "O novo encontro ocorre no mínimo múltiplo comum: 12=2²×3 e 18=2×3². Assim, MMC=2²×3²=36 dias. Alternativa A.",
+    "common_error": "O máximo divisor comum mede outra relação; não determina a primeira coincidência de ciclos.",
+    "practical_example": "Ciclos de quatro e seis dias coincidem novamente após 12 dias.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 140,
+    "solution": "Carlos deve estar imediatamente atrás de Bruno. O par pode ser BC nas posições 1 e 2 ou nas posições 2 e 3. A segunda hipótese põe Arthur em primeiro, o que é proibido. Portanto: Bruno, Carlos, Arthur. Alternativa C.",
+    "common_error": "Estar atrás não basta; o enunciado exige posição imediatamente posterior.",
+    "practical_example": "Trate duas pessoas consecutivas como um bloco e depois aplique as demais restrições.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 141,
+    "solution": "Como os alarmes são independentes, a chance de ambos funcionarem é 0,95×0,90=0,855, ou 85,5%. Alternativa D.",
+    "common_error": "Somar probabilidades não calcula o evento simultâneo de dois sucessos independentes.",
+    "practical_example": "Dois equipamentos independentes com confiabilidade 0,8 têm chance conjunta de 0,64.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 262,
+    "solution": "Resolver o primeiro tem chance 0,6; não resolver o segundo tem chance 1−0,8=0,2. Pela independência: 0,6×0,2=0,12=12%. Alternativa D.",
+    "common_error": "Usar 0,6×0,8 calcula ambos solucionados, contrariando a segunda condição.",
+    "practical_example": "Para sucesso em A e falha em B, multiplique P(A) por 1−P(B), se independentes.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 263,
+    "solution": "As vagas dentro de cada categoria não têm funções distintas. Escolha 4 dos 10 agentes e 2 dos 7 escrivães: C(10,4)×C(7,2)=210×21=4410. Alternativa A.",
+    "common_error": "Permutar as quatro vagas de agente conta repetidamente a mesma equipe.",
+    "practical_example": "Escolher duas pessoas entre cinco produz dez duplas; inverter a ordem não cria nova dupla.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 264,
+    "solution": "A média é (5+5+10+15+15)/5=10. Os desvios quadráticos somam 25+25+0+25+25=100. Como o desvio é amostral, a variância é 100/(5−1)=25 e o desvio é √25=5. Alternativa B.",
+    "common_error": "Dividir por cinco calcula variância populacional; a questão pede desvio amostral.",
+    "practical_example": "Uma amostra com três valores usa divisor dois na variância amostral.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 265,
+    "solution": "As cinco parcelas são 160,180,200,220,240. Somando pela PA: 5(160+240)/2=1000 reais. Alternativa E.",
+    "common_error": "O aumento de 20 ocorre quatro vezes entre a primeira e a quinta parcela.",
+    "practical_example": "Três parcelas de 100,120,140 custam 360 no total.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 266,
+    "solution": "Pela lei de De Morgan, ¬(P∧Q)=¬P∨¬Q. Basta faltar uma das duas condições para negar que rádio e bateria estejam simultaneamente em boas condições. Alternativa E.",
+    "common_error": "Usar ¬P∧¬Q exige duas falhas e é uma condição mais restrita que a negação pedida.",
+    "practical_example": "Negar “tenho documento e ingresso” é “não tenho documento ou não tenho ingresso”.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 267,
+    "solution": "A área antiga é 9×4=36 m². Para o quadrado de igual área, l²=36, logo l=6 m. Alternativa D.",
+    "common_error": "Não se conserva o perímetro: a grandeza mantida é a área.",
+    "practical_example": "Um quadrado de área 25 m² tem lado 5 m.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 268,
+    "solution": "O ângulo interno regular é 180(n−2)/n. Igualando a 108: 180n−360=108n; 72n=360; n=5. Alternativa A.",
+    "common_error": "108° é um ângulo interno; o externo correspondente é 72°, e 360/72 também dá cinco.",
+    "practical_example": "Um hexágono regular tem ângulo externo de 60° e interno de 120°.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 269,
+    "solution": "Só D=30−10−12+5=13; só N=25−10−8+5=12; só C=35−12−8+5=20. Total com exatamente um indício: 13+12+20=45. Alternativa B.",
+    "common_error": "A união contém também cenas com dois ou três indícios e não responde a “apenas um”.",
+    "practical_example": "Separe o diagrama em regiões exclusivas antes de somá-las.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 270,
+    "solution": "A primeira tarefa usa 4×6×5=120 horas de perito para 50 amostras: 2,4 horas de perito por amostra. Para 150 amostras são 360 horas de perito. Seis peritos por oito horas fornecem 48 horas de perito/dia: 360/48=7,5 jornadas. O trabalho termina durante o oitavo dia; isso explica a alternativa A (8).",
+    "common_error": "Não arredonde 7,5 para 8 sem explicar a unidade: o prazo exato são 7,5 jornadas, e a conclusão ocorre no oitavo dia de expediente.",
+    "practical_example": "Uma tarefa que exige 12 horas, em jornadas de oito horas, termina no segundo dia, após 1,5 jornada.",
+    "editorial_issues": [
+      "redacao_dias_inteiros_versus_jornadas_fracionarias_exige_decisao_editorial"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 271,
+    "solution": "As diferenças são 3,5,7; mantendo o padrão dos ímpares consecutivos, maio tem 27+9=36 e junho 36+11=47. Alternativa C.",
+    "common_error": "Somar nove diretamente a abril responde a maio, não a junho.",
+    "practical_example": "Na sequência 1,4,9,16, as diferenças 3,5,7 levam a 25.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 272,
+    "solution": "A ordem ∃x∀y diz: há um mesmo agente x que interrogou todo suspeito y. Alternativa B.",
+    "common_error": "∀y∃x permitiria agentes diferentes para suspeitos diferentes; inverter quantificadores altera a afirmação.",
+    "practical_example": "“Há um professor que ensina todos os alunos” exige o mesmo professor para todos.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  }
+]

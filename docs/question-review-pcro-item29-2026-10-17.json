@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-17T17:52:45.507Z",
+  "scope": "PCRO Delegado item 29: LEP and item 8.13 of official program confirmed; key D preserved.",
+  "reviewed": 1,
+  "published_active": 1,
+  "preserved_other_pc_records": 2967,
+  "concurrent_changes": [],
+  "metadata_changes": [],
+  "pc_status": {
+    "active": 2674,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 34,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 6,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "tests": {
+    "provenance_and_publication": 15
+  },
+  "application_changes": false,
+  "items": [
+    {
+      "id": "334c9933-b800-4d25-b01e-24d80bd4b0ef",
+      "item_number": 29,
+      "answer": "D",
+      "status": "active",
+      "source_page": 3,
+      "eligible": true,
+      "before_sha256": "00557ad55a39ef4fb33ef7540c9e77bd0f07d0deca543f95d14c3eedf1fa89dd",
+      "after_sha256": "43a2c270aa904bc07ed1e9bc10a71c11a5633d93c2e7c284e10576d8b5d89c5a",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "dbbb14d6-e5ad-5a81-87a3-09efbda3833b",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "title": "LEP, arts. 50, III; 53, IV; 54; 57; 58 e 59 — recortes vigentes, excluídas redações históricas riscadas"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T17:52:16.715232+00:00",
+        "verified_at": "2026-10-17T17:52:16.715232+00:00",
+        "review_note": "Gabarito definitivo: D. Possuir INDEVIDAMENTE instrumento capaz de ofender a integridade física de outra pessoa é FALTA GRAVE (LEP, art. 50, III). Não é necessário que uma lesão efetivamente aconteça para a conduta disciplinar descrita no inciso. O isolamento na própria cela é uma das sanções legalmente previstas (art. 53, IV) e pode ser aplicado por ATO MOTIVADO do diretor do estabelecimento (art. 54).\nIsso NÃO significa punição automática ou sem defesa: a falta deve ser apurada em procedimento que assegure defesa, com decisão motivada (art. 59). A aplicação considera natureza, motivos, circunstâncias e consequências do fato, pessoa do faltoso e tempo de prisão (art. 57). O isolamento comum não pode exceder TRINTA DIAS e deve ser comunicado ao juiz da execução (art. 58). Não confunda essa competência administrativa com inclusão no regime disciplinar diferenciado, que exige decisão judicial nos termos próprios da lei.\nA e E erram ao atribuir ao juiz as sanções administrativas indicadas; B e C erram ao classificar o fato como falta média. A pergunta diz que ele PODE sofrer isolamento: não impõe a mesma medida em todo caso nem dispensa o procedimento legal.\nExemplo: o condenado guarda indevidamente uma lâmina capaz de ferir outra pessoa. A conduta pode configurar a falta grave mesmo sem ataque consumado; uma eventual sanção exige apuração e defesa. Variação: o simples encontro de um objeto com outro preso não permite punir Gustavo sem demonstrar sua responsabilidade; a sanção é individual.\nTeste rápido — O diretor pode aplicar isolamento como sanção sem motivação e sem defesa? Resposta: não. A competência do diretor não elimina as garantias do procedimento nem a comunicação ao juiz."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caderno página 3 e definitivo D cotejados visualmente. O suposto impedimento por ausência da LEP foi afastado: item 8.13 Execução penal consta literalmente do programa de Direito Penal do cargo, página 59. Reutilizado tópico real existente, sem criar duplicatas.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+        ],
+        "federal_capture": {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "path": "outputs/pc-pending-review-2026-10-16/morelaws/lep.html",
+          "sha256": "6c1bd2c3a51916cee40f371ae79537301146e24058d62ef935960904d3a8f8ae",
+          "captured_at": "2026-10-16T21:58:00.730Z",
+          "registered": true
+        },
+        "paper_page": 3,
+        "key_page": 1,
+        "edital_page": 59,
+        "original_answer_preserved": true,
+        "capture_limitation": "LEP relida em captura oficial de 16/10 com hash preservado; não se alega nova captura em 17/10. Redações revogadas riscadas não foram usadas como regra atual."
+      }
+    }
+  ],
+  "verified_original_fields_preserved": [
+    "question_text",
+    "raw_extraction",
+    "official_answer",
+    "subject",
+    "career_name",
+    "contest_name"
+  ],
+  "provenance_operation": {
+    "question_source_id": "8c82ad79-7d5d-58cc-b716-0e6096fd04cd",
+    "answer_key_source_id": "3250d046-3bd8-5789-a75c-924e6df54eca",
+    "source_page": 3,
+    "verified_at": "2026-10-17T17:52:16.715232+00:00",
+    "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO). | Revisão 17/10/2026: Chave D confere com a LEP: possuir instrumento capaz de ofender a integridade física é falta grave (art. 50, III) e o isolamento na própria cela (art. 53, IV) é aplicado pelo diretor (art. 54). Mas a LEP não consta do conteúdo programático do cargo no Edital 02/2022. Pendente: cotejo do assunto com o edital do cargo; depois disso pode ser ativada.\nPágina PDF 3 e letra D verificadas visualmente no caderno oficial e chave definitiva de Delegado; fonte migrada da cópia Drive para o original oficial, sem alterar texto, letra ou extração bruta."
+  },
+  "closing_reason": "User reported 9% remaining credit; new research stopped and verified work published before closing. Credit balance is not exposed to this session."
+}

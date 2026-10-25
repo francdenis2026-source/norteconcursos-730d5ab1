@@ -1,0 +1,80 @@
+{
+  "scope": "PC-AC S01-V: três contextos recuperados, seis ativações e uma decisão histórica fundamentada",
+  "active": [
+    {
+      "item_number": 5,
+      "answer": "E",
+      "topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+      "matrix": "matrix",
+      "norm": null,
+      "explanation": "Resposta: E.\nO “se” introduz uma oração subordinada substantiva objetiva direta: ela completa o verbo indagar. Quem indaga, indaga algo. A pergunta indireta apresenta o conteúdo da indagação, não uma condição. Substituir a oração por “isso” ajuda a identificar o objeto direto. O “se” não é reflexivo e a oração não completa um nome.\nExemplo: Em “O candidato perguntou se haveria recurso”, aquilo que foi perguntado é o objeto direto de perguntou. Variação: em “Se houver recurso, vou apresentá-lo”, a oração estabelece uma condição para a ação principal; a função é outra. Fixação: pergunte primeiro se o trecho completa o verbo ou condiciona o acontecimento.",
+      "extra_sources": []
+    },
+    {
+      "item_number": 9,
+      "answer": "A",
+      "topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+      "matrix": "matrix",
+      "norm": null,
+      "explanation": "Resposta: A — modo.\nNos fragmentos fornecidos pelo próprio item, os advérbios caracterizam como se realiza ou se apresenta aquilo a que se ligam. O primeiro modifica o ato de dizer; o segundo qualifica o sentido de pureza referido no texto. Não indicam quando, com qual instrumento ou com que intensidade o fato ocorre. A classificação é contextual: nem toda palavra terminada em -mente expressa modo. A análise gramatical não endossa as classificações raciais históricas reproduzidas pela prova.\nExemplo: Em “A candidata respondeu calmamente”, o advérbio indica como respondeu. Variação: em “Recentemente, ela revisou o conteúdo”, o advérbio tem valor temporal, apesar de também terminar em -mente. Fixação: procure a relação de sentido no trecho, não apenas a terminação da palavra.",
+      "extra_sources": []
+    },
+    {
+      "item_number": 73,
+      "answer": "E",
+      "topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "explanation": "Resposta: E — relatório médico-legal, entre as opções desta prova.\nO item usa a classificação didática de documento detalhado do trabalho pericial. Não se trata de simples atestado de uma condição, de prontuário assistencial, de notificação ou de depoimento oral. Na prática pericial, o manual oficial da SENASP organiza o resultado como laudo, contendo preâmbulo, quesitos, histórico, descrição dos achados, discussão, conclusão e respostas. A terminologia da prova histórica não autoriza tratar todo relatório médico assistencial como se fosse um laudo pericial.\nExemplo: Para esclarecer uma lesão, o perito descreve o que encontrou, discute sua relação com o evento e responde aos quesitos; apenas escrever que a pessoa foi examinada é insuficiente. Variação: o prontuário acompanha o atendimento clínico e pode fornecer informações à perícia, mas não substitui automaticamente o documento pericial. Fonte técnica: SENASP, POP Perícia Criminal, edição 2013, seção 5.1, estrutura básica do laudo, páginas impressas 133–134.",
+      "extra_sources": [
+        "pericia_mj"
+      ]
+    },
+    {
+      "item_number": 76,
+      "answer": "A",
+      "topic_id": "942b627d-bf61-55df-bb90-eb565d758221",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "explanation": "Resposta: A.\nA putrefação é transformação destrutiva do cadáver: envolve decomposição e não simples redução transitória de sensibilidade. Por isso é sinal de certeza da morte. Mumificação e corificação também pertencem aos fenômenos transformativos, não são apenas sinais de probabilidade. A rigidez cadavérica é fenômeno abiótico consecutivo; a alternativa D erra ao apresentá-la como sinal apenas provável. Não confunda a certeza da morte com a possibilidade de determinar sua hora exata.\nExemplo: Encontrar decomposição putrefativa permite reconhecer a morte; o achado isolado não autoriza fixar um horário exato do óbito. Variação: perda de sensibilidade isolada pode ocorrer em pessoa viva e não comprova morte. O manual oficial destaca que a duração da putrefação varia conforme as condições do corpo e do meio. Fonte técnica: SENASP, POP Perícia Criminal, edição 2013, glossário de papiloscopia, páginas impressas 218–219.",
+      "extra_sources": [
+        "pericia_mj"
+      ]
+    },
+    {
+      "item_number": 80,
+      "answer": "D",
+      "topic_id": "94c16e0a-fd80-5a3a-a345-54b9cf0550f1",
+      "matrix": "pcdf_matrix",
+      "norm": null,
+      "explanation": "Resposta: D — manifestações compatíveis com embriaguez.\nO conjunto descrito — alteração da marcha, hálito alcoólico e outros achados clínicos — corresponde à alternativa indicada pela banca. Os sinais devem ser avaliados em conjunto: não são exclusivos do consumo de álcool e não permitem calcular uma concentração sanguínea. A referência atual do CONTRAN inclui odor de álcool no hálito, olhos vermelhos e dificuldade de equilíbrio entre os sinais observáveis; isso não torna todos os sinais da questão uma lista obrigatória nem dispensa avaliação pericial de outras causas.\nExemplo: Um examinado com dificuldade para caminhar e odor alcoólico exige avaliação do conjunto e registro objetivo dos achados. Variação: taquicardia ou olhos vermelhos isolados podem ter outras causas; não provam, por si sós, embriaguez nem um valor numérico de alcoolemia. A questão cobra reconhecimento de manifestações, não a conclusão automática de infração ou crime de trânsito. Referência técnica atual: Resolução CONTRAN 1.031/2026, Anexo II; a Resolução 432/2013 foi revogada.",
+      "extra_sources": [
+        "contran1031"
+      ]
+    },
+    {
+      "item_number": 4,
+      "answer": "A",
+      "norm": null,
+      "topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+      "matrix": "matrix",
+      "explanation": "Resposta: A — argumento de autoridade.\nA autora convoca o nome e a lição de um escritor reconhecido para reforçar seu ponto de vista. O apoio decorre da autoridade intelectual citada, não de uma relação de proporção ou de uma cadeia de causas. O pequeno fragmento de apoio permite identificar esse recurso sem depender da reprodução integral da crônica. Reconhecer a estratégia argumentativa não significa aceitar uma tese como cientificamente verdadeira apenas por ter sido atribuída a uma pessoa famosa.\nExemplo: Um texto que invoca a avaliação de uma pesquisadora reconhecida na área para sustentar uma tese emprega argumento de autoridade. Variação: informar apenas que um fato ocorreu antes de outro não é, por si só, argumento de autoridade. Na leitura crítica, verifique também a pertinência da competência da pessoa citada e a qualidade da evidência."
+    }
+  ],
+  "historical": [
+    {
+      "item_number": 39,
+      "answer": "C",
+      "norm": "cf",
+      "status": "archived",
+      "exclusion_type": "time_bound",
+      "reference": "art. 144, §§ 1º, III, 4º a 6º; jurisprudência posterior sobre TCO",
+      "reason": "Questão histórica de 2017 com alternativa B sensível à jurisprudência posterior. ADI 5637 (2022) e ADIs 6245/6264 (2023) reconhecem a possibilidade de PM/PRF lavrarem TCO e distinguem esse registro de inquérito. Preservar gabarito C como histórico, sem ensinar exclusividade da polícia judiciária para TCO nem usar o item para seleção única atual sem ressalvas.",
+      "extra_sources": [
+        "stf_tco_pm",
+        "stf_tco_prf"
+      ],
+      "explanation": "Gabarito histórico: C. Item arquivado para uso como repertório, sem participação no treino atual.\nA submissão das leis e da atuação policial à Constituição continua correta. Porém, não é seguro usar a alternativa B da prova de 2017 para ensinar que a PM não pode lavrar termo circunstanciado. Na ADI 5637, o STF reconheceu essa possibilidade em lei estadual: TCO não é atividade investigativa nem função privativa da polícia judiciária. Nas ADIs 6245 e 6264, o Tribunal confirmou essa distinção ao tratar da PRF. Isso não confere à PM ou à PRF a presidência de inquérito policial comum. A expressão “atribuição constitucional” usada pela alternativa exige cuidado; o arquivo é uma decisão editorial preventiva, não declaração de anulação oficial da questão. A Constituição também passou a prever polícias penais após 2017 (EC 104/2019).\nExemplo: Registrar ocorrência de menor potencial ofensivo por TCO não equivale a instaurar e presidir inquérito com diligências investigativas. Variação: a competência para apurar infrações penais militares tem regime próprio; não deve ser transportada automaticamente para a investigação de crime comum."
+    }
+  ]
+}

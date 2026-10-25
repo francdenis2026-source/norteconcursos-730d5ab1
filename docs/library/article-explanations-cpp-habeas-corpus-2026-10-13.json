@@ -1,0 +1,1938 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:26:36.708910+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 32,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-637",
+        "art-638",
+        "art-639",
+        "art-640",
+        "art-641",
+        "art-642",
+        "art-643",
+        "art-644",
+        "art-645",
+        "art-646",
+        "art-647",
+        "art-647-a",
+        "art-648",
+        "art-649",
+        "art-650",
+        "art-651",
+        "art-652",
+        "art-653",
+        "art-654",
+        "art-655",
+        "art-656",
+        "art-657",
+        "art-658",
+        "art-659",
+        "art-660",
+        "art-661",
+        "art-662",
+        "art-663",
+        "art-664",
+        "art-665",
+        "art-666",
+        "art-667"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-637",
+      "unit_id": "a6df4c7f-fcdc-55f8-b797-ac654b3dbe5b",
+      "content_sha256": "7dd78e0f78b254dfa1daddadb35732a49c112f8ee97897ecd6e83523054b6c68",
+      "simples": "Ausência de efeito suspensivo do recurso extraordinário não autoriza, isoladamente, execução automática de toda condenação.",
+      "pontos": [
+        "Integrar CPP283 e presunção de inocência.",
+        "Separar prisão cautelar fundamentada e regime específico do júri."
+      ],
+      "atencao": [
+        "A antiga previsão de baixar autos para execução não afasta as garantias atuais; júri exige leitura própria do Tema1068."
+      ],
+      "exemplo": "Réu condenado fora do júri interpõe recurso excepcional; isso, sozinho, não cria mandado de prisão. Variação: Preventiva válida pode persistir por fundamento cautelar próprio, não como execução antecipada genérica.",
+      "prova": [
+        "RE sem efeito suspensivo basta para prender todo condenado? Não.",
+        "Prisão cautelar possui fundamento próprio? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito suspensivo",
+          "significado": "Efeito recursal distinto dos pressupostos da prisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "a6df4c7f-fcdc-55f8-b797-ac654b3dbe5b",
+        "content_sha256": "7dd78e0f78b254dfa1daddadb35732a49c112f8ee97897ecd6e83523054b6c68",
+        "simples": "O recurso extraordinário não tem efeito suspensivo, e uma vez arrazoados pelo recorrido os autos do traslado, os originais baixarão à primeira instância, para a execução da sentença.",
+        "pontos": [
+          "Recurso extraordinário sem efeito suspensivo.",
+          "Após as razões do recorrido, os originais baixam à primeira instância para execução."
+        ],
+        "atencao": [
+          "Sem efeito suspensivo: a execução não depende do julgamento do extraordinário."
+        ],
+        "exemplo": "Interposto o recurso extraordinário, a sentença pode ser executada.",
+        "prova": [
+          "Assertiva que atribui efeito suspensivo ao recurso extraordinário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 638"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-638",
+      "unit_id": "6a2f6ff2-561a-5899-ac24-929d451dbcf2",
+      "content_sha256": "9c03a8e6c2a64e17f2ce4506f04472b4d8735b3b86ad126902e663609fbf3c64",
+      "simples": "Recursos extraordinário e especial seguem leis específicas, legislação processual civil e regimentos de STF e STJ.",
+      "pontos": [
+        "Redação de2019 inclui expressamente recurso especial.",
+        "Verificar espécie, admissibilidade e regime pertinente."
+      ],
+      "atencao": [
+        "Não usar procedimentos históricos seguintes para substituir automaticamente o regime atual dos recursos excepcionais."
+      ],
+      "exemplo": "Questão constitucional é examinada na via extraordinária quando preenchidos requisitos. Variação: Questão de lei federal pode exigir recurso especial, sem transformar STF em revisor de qualquer erro.",
+      "prova": [
+        "O dispositivo inclui recurso especial? Sim.",
+        "Regimento dispensa pressupostos legais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Recursos excepcionais",
+          "significado": "Vias aos tribunais superiores com requisitos próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "6a2f6ff2-561a-5899-ac24-929d451dbcf2",
+        "content_sha256": "9c03a8e6c2a64e17f2ce4506f04472b4d8735b3b86ad126902e663609fbf3c64",
+        "simples": "O recurso extraordinário e o recurso especial serão processados e julgados no Supremo Tribunal Federal e no Superior Tribunal de Justiça na forma estabelecida por leis especiais, pela lei processual civil e pelos respectivos regimentos internos.",
+        "pontos": [
+          "Extraordinário (STF) e especial (STJ) seguem leis especiais, a lei processual civil e os regimentos internos."
+        ],
+        "atencao": [
+          "Processamento fora do CPP, por lei especial e CPC."
+        ],
+        "exemplo": "O recurso especial segue o rito previsto na lei processual civil e no regimento do STJ.",
+        "prova": [
+          "Assertiva que submete o recurso especial exclusivamente ao rito do CPP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 637"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-639",
+      "unit_id": "d9aa9beb-2eb6-5a13-9aa9-063d2920bc61",
+      "content_sha256": "a57077568c4b46bcd5dbbf0fd86e3ea8498b9afac2a9098089a1f73d74d28272",
+      "simples": "Carta testemunhável protege processamento de recurso denegado ou obstado após admissão, quando não houver via própria adequada.",
+      "pontos": [
+        "Instrumento de caráter residual.",
+        "Distinguir denegação e impedimento de seguimento."
+      ],
+      "atencao": [
+        "Não confundir com RESE contra denegação de apelação nem agravos próprios dos recursos excepcionais."
+      ],
+      "exemplo": "Recurso cabível tem seguimento bloqueado e não existe impugnação específica; examina-se carta. Variação: Inadmissão de RE ou REsp exige identificar a hipótese do CPC, não recorrer sempre por carta.",
+      "prova": [
+        "Carta substitui toda impugnação específica? Não.",
+        "Pode enfrentar obstáculo posterior à admissão? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Carta testemunhável",
+          "significado": "Instrumento residual de proteção do trânsito recursal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "d9aa9beb-2eb6-5a13-9aa9-063d2920bc61",
+        "content_sha256": "a57077568c4b46bcd5dbbf0fd86e3ea8498b9afac2a9098089a1f73d74d28272",
+        "simples": "Dar-se-á carta testemunhável da decisão que denegar o recurso, e da que, admitindo embora o recurso, obstar à sua expedição e seguimento para o juízo ad quem.",
+        "pontos": [
+          "Carta testemunhável contra a decisão que denega recurso.",
+          "Também contra a que obsta a sua expedição e seguimento."
+        ],
+        "atencao": [
+          "Instrumento para destrancar recurso."
+        ],
+        "exemplo": "O juiz nega seguimento ao recurso, e a parte interpõe carta testemunhável.",
+        "prova": [
+          "Assertiva que usa a carta testemunhável para impugnar o mérito da sentença erra."
+        ],
+        "termos": [
+          {
+            "termo": "Carta testemunhável",
+            "significado": "Recurso contra a denegação ou o trancamento de outro recurso."
+          }
+        ],
+        "remissoes": [
+          "Art. 640"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-640",
+      "unit_id": "a408cfe4-0766-5414-84d9-ead3fab4a1a0",
+      "content_sha256": "3247ee85cdf8bd9a5392e7dd0979364dd1c1903f8912cf6fdd7380641cf941dc",
+      "simples": "Carta é requerida ao escrivão ou secretário em quarenta e oito horas da decisão denegatória, com indicação das peças.",
+      "pontos": [
+        "Selecionar documentos suficientes ao exame.",
+        "Distinguir requerimento e entrega do instrumento."
+      ],
+      "atencao": [
+        "Não confundir48 horas do pedido com cinco dias de entrega em hipótese de RESE."
+      ],
+      "exemplo": "Defesa indica decisão, recurso e peças essenciais ao pedir o instrumento no prazo. Variação: Pedido sem peças necessárias pode comprometer compreensão; não basta apenas citar nome do recurso.",
+      "prova": [
+        "Prazo textual do requerimento é48 horas? Sim.",
+        "Peças devem ser indicadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Instrumentação",
+          "significado": "Reunião dos elementos necessários à carta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a408cfe4-0766-5414-84d9-ead3fab4a1a0",
+        "content_sha256": "3247ee85cdf8bd9a5392e7dd0979364dd1c1903f8912cf6fdd7380641cf941dc",
+        "simples": "A carta testemunhável será requerida ao escrivão ou ao secretário do tribunal, conforme o caso, nas quarenta e oito horas seguintes ao despacho que denegar o recurso, indicando o requerente as peças do processo que deverão ser trasladadas.",
+        "pontos": [
+          "Requerida ao escrivão ou ao secretário do tribunal.",
+          "Prazo de quarenta e oito horas do despacho que denegou o recurso.",
+          "Indicação das peças a trasladar."
+        ],
+        "atencao": [
+          "Prazo de 48 horas."
+        ],
+        "exemplo": "A parte requer a carta testemunhável em 48 horas e indica as peças.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo da carta testemunhável erra: são quarenta e oito horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 639"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-641",
+      "unit_id": "8e22df3f-105b-56e8-bd92-c2bff213c2ea",
+      "content_sha256": "bdaa32d0962c207047253cf51412318a74f1f0f91ab74fd68b30ba6b10cb6af0",
+      "simples": "Serventia dá recibo e entrega a carta no prazo textual de cinco dias quando relacionada a recurso em sentido estrito.",
+      "pontos": [
+        "Recibo documenta requerimento.",
+        "Previsão de sessenta dias para extraordinário é histórica."
+      ],
+      "atencao": [
+        "Não ensinar sessenta dias como prazo atual geral para impugnar inadmissão de RE: aplicar regime do CPC."
+      ],
+      "exemplo": "Pedido relativo a RESE recebe recibo e processamento pertinente em cinco dias. Variação: RE inadmitido segue impugnação específica, não o prazo antigo de entrega da carta.",
+      "prova": [
+        "Cinco dias referem-se à entrega na hipótese de RESE? Sim.",
+        "Sessenta dias são prazo atual universal do RE? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Recibo da carta",
+          "significado": "Prova do requerimento e controle de entrega."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "8e22df3f-105b-56e8-bd92-c2bff213c2ea",
+        "content_sha256": "bdaa32d0962c207047253cf51412318a74f1f0f91ab74fd68b30ba6b10cb6af0",
+        "simples": "O escrivão ou o secretário do tribunal dará recibo da petição à parte e, no prazo máximo de cinco dias, no caso de recurso em sentido estrito, ou de sessenta dias, no caso de recurso extraordinário, fará entrega da carta, devidamente conferida e concertada.",
+        "pontos": [
+          "Recibo da petição à parte.",
+          "Entrega da carta em cinco dias (sentido estrito) ou sessenta dias (extraordinário)."
+        ],
+        "atencao": [
+          "Cinco dias e sessenta dias."
+        ],
+        "exemplo": "O escrivão entrega a carta em até cinco dias, no caso de recurso em sentido estrito.",
+        "prova": [
+          "Assertiva que fixa em trinta dias o prazo de entrega da carta no recurso extraordinário erra: são sessenta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 640"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-642",
+      "unit_id": "340dd929-40db-5912-bf43-007bbe8481f2",
+      "content_sha256": "3bc9ea3ca4dfdf6fe18932c60479bc11f02c2db486589af4e061788ff9bff126",
+      "simples": "Obstáculo da serventia à entrega da carta pode ser representado para assegurar o instrumento e apurar responsabilidade.",
+      "pontos": [
+        "Texto prevê substituição e reclamação ao órgão superior.",
+        "Integrar apuração disciplinar ao devido processo."
+      ],
+      "atencao": [
+        "Não prometer sanção administrativa sumária automática: competência, defesa e regime funcional precisam ser respeitados."
+      ],
+      "exemplo": "Serventia se recusa a entregar; parte documenta fato e provoca autoridade competente. Variação: Dificuldade justificada é apurada, sem presumir falta funcional pela simples demora.",
+      "prova": [
+        "A parte pode reagir à recusa da serventia? Sim.",
+        "Defesa disciplinar pode ser ignorada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção do processamento",
+          "significado": "Providências contra obstrução indevida do instrumento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "340dd929-40db-5912-bf43-007bbe8481f2",
+        "content_sha256": "3bc9ea3ca4dfdf6fe18932c60479bc11f02c2db486589af4e061788ff9bff126",
+        "simples": "O escrivão ou o secretário do tribunal que se negar a dar o recibo, ou deixar de entregar, sob qualquer pretexto, o instrumento, será suspenso por trinta dias. O juiz ou o presidente do Tribunal de Apelação, em face de representação do testemunhante, imporá a pena e mandará que seja extraído o instrumento, sob a mesma sanção, pelo substituto do escrivão ou do secretário.",
+        "pontos": [
+          "Recusa de recibo ou de entrega: suspensão do escrivão ou secretário por trinta dias.",
+          "O juiz ou presidente impõe a pena e manda extrair o instrumento pelo substituto."
+        ],
+        "atencao": [
+          "Suspensão de trinta dias."
+        ],
+        "exemplo": "O escrivão se recusa a dar recibo e sofre suspensão de trinta dias.",
+        "prova": [
+          "Assertiva que fixa a suspensão em dez dias erra: são trinta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 641"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-643",
+      "unit_id": "657b2999-529b-54d5-b087-bd86124daa97",
+      "content_sha256": "0cc63134d3eacb2813615a68554a33eb69b64a6fb8ffd130402b950ed6a20a8d",
+      "simples": "Carta relacionada a RESE observa processamento pertinente desse recurso; remissão histórica ao extraordinário exige integração atual.",
+      "pontos": [
+        "Considerar artigos588 a592 na hipótese aplicável.",
+        "Regime excepcional atual decorre também do638."
+      ],
+      "atencao": [
+        "Não restaurar carta como sucedâneo universal do agravo em RE/REsp."
+      ],
+      "exemplo": "Instrumento de RESE segue exame e encaminhamento adequados. Variação: Denegação de recurso excepcional exige primeiro identificar a decisão e o agravo próprio.",
+      "prova": [
+        "RESE orienta o processamento da carta correspondente? Sim.",
+        "Remissão antiga afasta CPC atual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Rito do instrumento",
+          "significado": "Processamento conforme recurso e regime atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "657b2999-529b-54d5-b087-bd86124daa97",
+        "content_sha256": "0cc63134d3eacb2813615a68554a33eb69b64a6fb8ffd130402b950ed6a20a8d",
+        "simples": "Extraído e autuado o instrumento, observar-se-á o disposto nos arts. 588 a 592, no caso de recurso em sentido estrito, ou o processo estabelecido para o recurso extraordinário, se deste se tratar.",
+        "pontos": [
+          "Instrumento extraído e autuado: arts. 588 a 592 (recurso em sentido estrito).",
+          "Ou o processo do recurso extraordinário."
+        ],
+        "atencao": [
+          "Segue o rito do recurso denegado."
+        ],
+        "exemplo": "O instrumento da carta testemunhável segue os arts. 588 a 592.",
+        "prova": [
+          "Assertiva que cria rito próprio para a carta testemunhável erra: segue o do recurso denegado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 588"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-644",
+      "unit_id": "f717a4b4-1649-5690-a0c1-a5f650918c9f",
+      "content_sha256": "81bbf4e3a763ebade703ea1efa816dac299f270f60e6e1811d1135fb6aeb161c",
+      "simples": "Recebida a carta, tribunal pode mandar processar o recurso ou julgar seu mérito se o instrumento estiver suficientemente instruído.",
+      "pontos": [
+        "Determinar processamento não equivale a prover mérito.",
+        "Julgamento direto depende da suficiência das peças."
+      ],
+      "atencao": [
+        "Admissão da carta não significa absolvição ou provimento automático do recurso original."
+      ],
+      "exemplo": "Faltam peças para mérito, mas obstáculo é indevido; tribunal ordena processamento. Variação: Instrumento completo permite examinar desde logo questão recursal pertinente.",
+      "prova": [
+        "Pode haver julgamento direto com instrução suficiente? Sim.",
+        "Carta admitida garante provimento do recurso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suficiência do instrumento",
+          "significado": "Elementos que permitem exame direto do recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f717a4b4-1649-5690-a0c1-a5f650918c9f",
+        "content_sha256": "81bbf4e3a763ebade703ea1efa816dac299f270f60e6e1811d1135fb6aeb161c",
+        "simples": "O tribunal, câmara ou turma a que competir o julgamento da carta, se desta tomar conhecimento, mandará processar o recurso ou, se estiver suficientemente instruída, decidirá logo, de meritis.",
+        "pontos": [
+          "Conhecida a carta, o tribunal manda processar o recurso.",
+          "Ou, se bem instruída, decide logo o mérito."
+        ],
+        "atencao": [
+          "Possibilidade de julgar o mérito direto."
+        ],
+        "exemplo": "Carta bem instruída permite ao tribunal julgar desde logo o mérito.",
+        "prova": [
+          "Assertiva que impede o tribunal de julgar o mérito pela carta testemunhável erra, se suficientemente instruída."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 639"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-645",
+      "unit_id": "48aa9769-b97e-5f1a-a36a-9092976c2f27",
+      "content_sha256": "fa6de9b44fd631b1c41ae29fa37352c0b0f988a09d121fd20a977c5e49ffe9f7",
+      "simples": "No tribunal, carta segue procedimento compatível com o recurso denegado e seu regime atual.",
+      "pontos": [
+        "A espécie recursal orienta tramitação.",
+        "Integrar competência e regimento."
+      ],
+      "atencao": [
+        "Carta não cria rito único indiferente ao recurso ou órgão competente."
+      ],
+      "exemplo": "Instrumento relativo a RESE é distribuído segundo regras aplicáveis. Variação: Nome antigo de órgão não autoriza remessa a tribunal extinto.",
+      "prova": [
+        "Recurso denegado orienta procedimento? Sim.",
+        "Carta elimina regras de competência? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Correspondência procedimental",
+          "significado": "Tramitação vinculada à espécie recursal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "48aa9769-b97e-5f1a-a36a-9092976c2f27",
+        "content_sha256": "fa6de9b44fd631b1c41ae29fa37352c0b0f988a09d121fd20a977c5e49ffe9f7",
+        "simples": "O processo da carta testemunhável na instância superior seguirá o processo do recurso denegado.",
+        "pontos": [
+          "Na instância superior, a carta segue o processo do recurso denegado."
+        ],
+        "atencao": [
+          "Rito do recurso denegado."
+        ],
+        "exemplo": "A carta contra a denegação de recurso em sentido estrito segue o rito desse recurso.",
+        "prova": [
+          "Assertiva que cria rito autônomo para a carta na instância superior erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 643"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-646",
+      "unit_id": "d3bf392e-1ef4-52da-a587-7c26d6443509",
+      "content_sha256": "05e6de7710a2c957f9bedd117ac6a99b3d8bc805383655d3f1570c728fd530c3",
+      "simples": "Carta testemunhável não possui efeito suspensivo por si.",
+      "pontos": [
+        "Distinguir instrumento e efeito do recurso original.",
+        "Medida urgente depende de fundamento próprio."
+      ],
+      "atencao": [
+        "Não concluir que ausência de suspensão autoriza prisão sem os pressupostos atuais."
+      ],
+      "exemplo": "Carta questiona obstáculo recursal, mas não suspende automaticamente a decisão. Variação: Tutela urgente pertinente exige pedido e exame próprios, não simples nome do instrumento.",
+      "prova": [
+        "Carta suspende automaticamente a decisão? Não.",
+        "Efeito do recurso original é questão distinta? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito da carta",
+          "significado": "Ausência de suspensão automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d3bf392e-1ef4-52da-a587-7c26d6443509",
+        "content_sha256": "05e6de7710a2c957f9bedd117ac6a99b3d8bc805383655d3f1570c728fd530c3",
+        "simples": "A carta testemunhável não terá efeito suspensivo, de modo que a decisão impugnada continua a produzir efeitos enquanto ela é julgada.",
+        "pontos": [
+          "Carta testemunhável sem efeito suspensivo."
+        ],
+        "atencao": [
+          "Não suspende a decisão impugnada."
+        ],
+        "exemplo": "A decisão continua a produzir efeitos durante a carta testemunhável.",
+        "prova": [
+          "Assertiva que atribui efeito suspensivo à carta testemunhável erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 639"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-647",
+      "unit_id": "dac72867-0401-5fcf-91b9-770874d46a27",
+      "content_sha256": "8a6c0fa32f5db08d133712b8232762787be92262febf46663497cdb97b007ddf",
+      "simples": "Habeas corpus tutela liberdade de locomoção diante de coação ilegal atual ou ameaçada.",
+      "pontos": [
+        "Distinguir HC liberatório e preventivo.",
+        "Restrição disciplinar militar não impede todo controle de legalidade."
+      ],
+      "atencao": [
+        "STF distingue mérito da punição militar e seus pressupostos legais; não ensinar imunidade absoluta ao controle judicial nem revisão irrestrita do mérito."
+      ],
+      "exemplo": "Prisão sem justa causa pode justificar HC liberatório. Variação: Punição militar exige distinguir exame da legalidade e reavaliação do mérito disciplinar.",
+      "prova": [
+        "Ameaça ilegal à locomoção pode justificar HC? Sim.",
+        "Exceção militar elimina qualquer controle de legalidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Liberdade de locomoção",
+          "significado": "Bem protegido pelo habeas corpus."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=142&abrirBase=CF"
+      ],
+      "expected": {
+        "unit_id": "dac72867-0401-5fcf-91b9-770874d46a27",
+        "content_sha256": "8a6c0fa32f5db08d133712b8232762787be92262febf46663497cdb97b007ddf",
+        "simples": "Dar-se-á habeas corpus sempre que alguém sofrer ou se achar na iminência de sofrer violência ou coação ilegal na sua liberdade de ir e vir, salvo nos casos de punição disciplinar.",
+        "pontos": [
+          "Habeas corpus contra violência ou coação ilegal à liberdade de locomoção.",
+          "Cabe também quando há iminência (habeas corpus preventivo).",
+          "Exceção: punição disciplinar (militar)."
+        ],
+        "atencao": [
+          "Habeas corpus preventivo (iminência) e liberatório (já preso).",
+          "A punição disciplinar militar: só quanto a ilegalidades formais (Constituição)."
+        ],
+        "exemplo": "Pessoa ameaçada de prisão ilegal impetra habeas corpus preventivo.",
+        "prova": [
+          "Assertiva que restringe o habeas corpus a quem já está preso erra: cabe também na iminência de coação."
+        ],
+        "termos": [
+          {
+            "termo": "Habeas corpus preventivo",
+            "significado": "Impetrado contra ameaça de coação ilegal."
+          }
+        ],
+        "remissoes": [
+          "Art. 648"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-647-a",
+      "unit_id": "7e00dff8-3f57-5b7f-b943-709dc8c7db51",
+      "content_sha256": "32f8e65cb47c8215e586728fca32f311b6bd38a41cfcdbeb250a4b7c66ffc744",
+      "simples": "Lei14.836/2024 permite HC de ofício, individual ou coletivo, dentro da competência judicial.",
+      "pontos": [
+        "Pode surgir em qualquer processo judicial.",
+        "Pode ser concedido mesmo sem conhecimento da ação ou recurso.",
+        "Competência jurisdicional continua necessária."
+      ],
+      "atencao": [
+        "Não confundir concessão de ofício com competência universal de qualquer juiz."
+      ],
+      "exemplo": "Tribunal não conhece recurso, mas constata coação ilegal e examina HC de ofício em sua competência. Variação: Violação comum a grupo pode fundamentar ordem coletiva, delimitados sujeitos e pressupostos.",
+      "prova": [
+        "Ordem pode ser coletiva? Sim.",
+        "Não conhecimento do recurso impede necessariamente HC de ofício? Não."
+      ],
+      "termos": [
+        {
+          "termo": "HC de ofício",
+          "significado": "Tutela judicial da liberdade sem depender de pedido formal conhecido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14836.htm"
+      ],
+      "expected": {
+        "unit_id": "7e00dff8-3f57-5b7f-b943-709dc8c7db51",
+        "content_sha256": "32f8e65cb47c8215e586728fca32f311b6bd38a41cfcdbeb250a4b7c66ffc744",
+        "simples": "No âmbito de sua competência jurisdicional, qualquer autoridade judicial poderá expedir de ofício ordem de habeas corpus, individual ou coletivo, quando, no curso de qualquer processo judicial, verificar que, por violação ao ordenamento jurídico, alguém sofre ou se acha ameaçado de sofrer violência ou coação em sua liberdade de locomoção. A ordem de habeas corpus poderá ser concedida de ofício pelo juiz ou pelo tribunal em processo de competência originária ou recursal, ainda que não conhecidos a ação ou o recurso em que veiculado o pedido de cessação de coação ilegal.",
+        "pontos": [
+          "Qualquer autoridade judicial pode expedir habeas corpus de ofício, individual ou coletivo.",
+          "Quando verificar, em qualquer processo, coação ilegal à liberdade.",
+          "Pode ser concedido mesmo sem conhecer a ação ou o recurso."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 14.836, de 2024.",
+          "Habeas corpus de ofício, individual ou coletivo."
+        ],
+        "exemplo": "O tribunal, ao analisar um recurso, concede habeas corpus de ofício diante de coação ilegal.",
+        "prova": [
+          "Assertiva que condiciona o habeas corpus de ofício ao conhecimento do recurso erra: pode ser concedido ainda que a ação ou o recurso não seja conhecido."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 647"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-648",
+      "unit_id": "7264f441-1e1a-52e1-8764-8b48d252766e",
+      "content_sha256": "e09454ed0565171b62130d43222e7772284c534e00095c2727b93c95e9a715d6",
+      "simples": "Artigo enumera hipóteses de coação ilegal, como falta de justa causa, excesso de prazo e autoridade incompetente.",
+      "pontos": [
+        "Também cessação do motivo, recusa ilegal de fiança, nulidade manifesta e extinção da punibilidade.",
+        "Relacionar fundamento e providência adequada."
+      ],
+      "atencao": [
+        "Excesso de prazo não deve ser calculado mecanicamente sem examinar regime, circunstâncias e responsabilidade pela demora."
+      ],
+      "exemplo": "Prisão continua depois de extinta punibilidade; examina-se cessação da coação. Variação: Recusa de fiança só entra na hipótese se a lei a admitir no caso.",
+      "prova": [
+        "Falta de justa causa é hipótese expressa? Sim.",
+        "Toda recusa de fiança é ilegal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Coação ilegal",
+          "significado": "Restrição ou ameaça incompatível com o ordenamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7264f441-1e1a-52e1-8764-8b48d252766e",
+        "content_sha256": "e09454ed0565171b62130d43222e7772284c534e00095c2727b93c95e9a715d6",
+        "simples": "A coação considerar-se-á ilegal quando não houver justa causa; quando alguém estiver preso por mais tempo do que determina a lei; quando quem ordenar a coação não tiver competência para fazê-lo; quando houver cessado o motivo que a autorizou; quando não for alguém admitido a prestar fiança, nos casos em que a lei a autoriza; quando o processo for manifestamente nulo; e quando extinta a punibilidade.",
+        "pontos": [
+          "I: falta de justa causa.",
+          "II: prisão por mais tempo que o legal.",
+          "III: autoridade incompetente.",
+          "IV: cessou o motivo da coação.",
+          "V: negada fiança cabível.",
+          "VI: processo manifestamente nulo.",
+          "VII: punibilidade extinta."
+        ],
+        "atencao": [
+          "Rol de hipóteses de coação ilegal."
+        ],
+        "exemplo": "Preso por mais tempo que a lei determina: coação ilegal.",
+        "prova": [
+          "Assertiva que exclui a extinção da punibilidade das hipóteses de coação ilegal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 647"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-649",
+      "unit_id": "75b8165a-16bf-59c0-b8bd-b62a77e69d73",
+      "content_sha256": "2280171665ae2f6161c0cd2642cae1ce74aba1232b86b21584734d57cb995fc5",
+      "simples": "Juiz ou tribunal competente deve conceder imediatamente ordem cabível, qualquer que seja o agente da coação.",
+      "pontos": [
+        "Urgência da proteção.",
+        "Competência precisa ser observada."
+      ],
+      "atencao": [
+        "Qualquer coator não significa qualquer juiz competente para qualquer autoridade."
+      ],
+      "exemplo": "Juízo competente identifica coação ilegal praticada por particular e determina proteção. Variação: Autoridade sujeita a tribunal superior exige análise de competência própria.",
+      "prova": [
+        "Coator pode não ser autoridade pública? Sim.",
+        "Competência é dispensável? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Agente da coação",
+          "significado": "Quem produz a restrição ilegal, respeitada competência judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "75b8165a-16bf-59c0-b8bd-b62a77e69d73",
+        "content_sha256": "2280171665ae2f6161c0cd2642cae1ce74aba1232b86b21584734d57cb995fc5",
+        "simples": "O juiz ou o tribunal, dentro dos limites da sua jurisdição, fará passar imediatamente a ordem impetrada, nos casos em que tenha cabimento, seja qual for a autoridade coatora.",
+        "pontos": [
+          "Juiz ou tribunal expede imediatamente a ordem de habeas corpus, nos limites da sua jurisdição.",
+          "Independe da autoridade coatora."
+        ],
+        "atencao": [
+          "Imediatidade e independência da autoridade coatora."
+        ],
+        "exemplo": "O tribunal concede imediatamente a ordem, qualquer que seja a autoridade coatora.",
+        "prova": [
+          "Assertiva que condiciona a expedição da ordem à identidade da autoridade coatora erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 650"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-650",
+      "unit_id": "2b1943e9-7c8e-51f4-a873-8ca029780217",
+      "content_sha256": "fdbbb4ecd31ec428db8414989ebc1dc96734c00b6f334a4442ff3eeab0dff932",
+      "simples": "Competência de habeas corpus deve ser lida pela Constituição e organização judiciária atuais.",
+      "pontos": [
+        "Órgãos e referências constitucionais antigos não bastam.",
+        "Parágrafo sobre prisão por obrigações fazendárias exige controle constitucional.",
+        "SV25 afasta prisão civil do depositário infiel."
+      ],
+      "atencao": [
+        "Não restaurar competência histórica nem prisão administrativa genérica por dívida; separar exceção constitucional alimentar."
+      ],
+      "exemplo": "HC envolvendo autoridade com foro competente é encaminhado ao órgão constitucional adequado. Variação: Dívida perante Fazenda não autoriza, por si, prisão administrativa fundada na redação antiga.",
+      "prova": [
+        "Referência constitucional antiga resolve toda competência atual? Não.",
+        "Dívida fazendária permite prisão administrativa genérica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Competência constitucional",
+          "significado": "Distribuição atual do controle judicial da coação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1268"
+      ],
+      "expected": {
+        "unit_id": "2b1943e9-7c8e-51f4-a873-8ca029780217",
+        "content_sha256": "fdbbb4ecd31ec428db8414989ebc1dc96734c00b6f334a4442ff3eeab0dff932",
+        "simples": "Compete conhecer, originariamente, do pedido de habeas corpus ao Supremo Tribunal Federal, nos casos previstos na Constituição, e aos Tribunais de Apelação, sempre que os atos de violência ou coação forem atribuídos aos governadores ou interventores dos Estados ou Territórios e ao prefeito do Distrito Federal, ou a seus secretários, ou aos chefes de Polícia. A competência do juiz cessará sempre que a violência ou coação provier de autoridade judiciária de igual ou superior jurisdição. Não cabe habeas corpus contra a prisão administrativa, atual ou iminente, dos responsáveis por dinheiro ou valor pertencente à Fazenda Pública, alcançados ou omissos em fazer o seu recolhimento nos prazos legais, salvo se o pedido for acompanhado de prova de quitação ou de depósito, ou se a prisão exceder o prazo legal.",
+        "pontos": [
+          "STF e Tribunais de Apelação têm competência originária.",
+          "Juiz não conhece de coação de autoridade judiciária de igual ou superior jurisdição.",
+          "Não cabe contra a prisão administrativa de responsáveis por dinheiro público, salvo exceções."
+        ],
+        "atencao": [
+          "Texto histórico: a competência atual está na Constituição.",
+          "A prisão administrativa foi extinta pela ordem constitucional atual."
+        ],
+        "exemplo": "O habeas corpus contra ato de um tribunal é impetrado em tribunal superior.",
+        "prova": [
+          "Assertiva que permite ao juiz de primeira instância julgar habeas corpus contra ato de tribunal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 647"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-651",
+      "unit_id": "7dc3d9f1-2b6a-5d45-b969-02cc419f00c6",
+      "content_sha256": "2c36eccabb14cdd5671bc69fcfd8afb2afd958bb8bb80ce120911465ad45c584",
+      "simples": "Concessão de HC não impede necessariamente continuação do processo, se o fundamento for compatível com seu prosseguimento.",
+      "pontos": [
+        "Liberdade e encerramento da ação são efeitos distintos.",
+        "Motivo da ordem delimita consequências."
+      ],
+      "atencao": [
+        "Não tratar todo HC liberatório como absolvição ou trancamento."
+      ],
+      "exemplo": "Preventiva é revogada por falta de fundamento, mas ação válida pode continuar. Variação: Reconhecimento de causa que impede a própria persecução pode exigir resultado diverso.",
+      "prova": [
+        "Soltura por HC sempre encerra ação? Não.",
+        "Fundamento da concessão importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito delimitado",
+          "significado": "Consequência ajustada à ilegalidade reconhecida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7dc3d9f1-2b6a-5d45-b969-02cc419f00c6",
+        "content_sha256": "2c36eccabb14cdd5671bc69fcfd8afb2afd958bb8bb80ce120911465ad45c584",
+        "simples": "A concessão do habeas corpus não obstará, nem porá termo ao processo, desde que este não esteja em conflito com os fundamentos daquela.",
+        "pontos": [
+          "Concessão do habeas corpus não encerra o processo.",
+          "Desde que o processo não conflite com os fundamentos da ordem."
+        ],
+        "atencao": [
+          "Não extingue, por si, a ação penal."
+        ],
+        "exemplo": "A ordem concedida para soltar o réu não impede o prosseguimento do processo.",
+        "prova": [
+          "Assertiva que extingue o processo com a concessão do habeas corpus, em qualquer caso, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 652"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-652",
+      "unit_id": "62173a8d-f909-5ab9-9364-f981488b491c",
+      "content_sha256": "e93e36fe4540e533aecd96a3ade619012b3a737a0faa0d17a0ec271790d4a8eb",
+      "simples": "Quando HC reconhece nulidade, processo deve ser renovado nos limites compatíveis com a decisão e o regime atual.",
+      "pontos": [
+        "Identificar atos atingidos e dependentes.",
+        "Não ignorar outras causas que impeçam nova persecução."
+      ],
+      "atencao": [
+        "Nulidade não autoriza repetição ilimitada de ação já vedada por fundamento autônomo."
+      ],
+      "exemplo": "Citação inválida exige renovar atos atingidos com defesa regular. Variação: Extinção da punibilidade não vira mera oportunidade de refazer instrução.",
+      "prova": [
+        "Nulidade pode exigir renovação de atos? Sim.",
+        "Renovação afasta extinção da punibilidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Renovação processual",
+          "significado": "Reconstituição dos atos afetados pela nulidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "62173a8d-f909-5ab9-9364-f981488b491c",
+        "content_sha256": "e93e36fe4540e533aecd96a3ade619012b3a737a0faa0d17a0ec271790d4a8eb",
+        "simples": "Se o habeas corpus for concedido em virtude de nulidade do processo, este será renovado.",
+        "pontos": [
+          "Habeas corpus por nulidade do processo: o processo é renovado."
+        ],
+        "atencao": [
+          "Renovação dos atos nulos."
+        ],
+        "exemplo": "Concedido o habeas corpus por nulidade, os atos viciados são refeitos.",
+        "prova": [
+          "Assertiva que arquiva o processo definitivamente após habeas corpus por nulidade erra: ele é renovado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 573"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-653",
+      "unit_id": "f65f07ce-6c72-5ab7-9fa6-27105e2798e6",
+      "content_sha256": "81e5888268b722c851fb9e914690571b8c53338664db11a9f775dccb7772a33e",
+      "simples": "Má-fé ou abuso de poder do responsável pela coação pode gerar custas e envio de peças ao MP para responsabilidade.",
+      "pontos": [
+        "Reconhecimento exige fundamento.",
+        "Remessa de peças não equivale a condenação criminal."
+      ],
+      "atencao": [
+        "Procedência do HC não prova automaticamente má-fé de todo coator."
+      ],
+      "exemplo": "Decisão identifica abuso e remete elementos para apuração adequada. Variação: Erro reconhecido sem prova de má-fé não dispensa exame dos pressupostos de responsabilidade.",
+      "prova": [
+        "Todo HC procedente prova má-fé? Não.",
+        "Peças podem ser encaminhadas ao MP? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade do coator",
+          "significado": "Apuração das consequências do abuso comprovado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f65f07ce-6c72-5ab7-9fa6-27105e2798e6",
+        "content_sha256": "81e5888268b722c851fb9e914690571b8c53338664db11a9f775dccb7772a33e",
+        "simples": "Ordenada a soltura do paciente em virtude de habeas corpus, será condenada nas custas a autoridade que, por má-fé ou evidente abuso de poder, tiver determinado a coação. Neste caso, será remetida ao Ministério Público cópia das peças necessárias para ser promovida a responsabilidade da autoridade.",
+        "pontos": [
+          "Autoridade que agiu com má-fé ou abuso de poder paga as custas.",
+          "Cópia das peças ao MP para apurar a responsabilidade."
+        ],
+        "atencao": [
+          "Responsabilização da autoridade coatora."
+        ],
+        "exemplo": "Soltura por habeas corpus decorrente de abuso evidente: a autoridade paga as custas.",
+        "prova": [
+          "Assertiva que isenta a autoridade que agiu com abuso de poder das custas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 654"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-654",
+      "unit_id": "826a1c1f-295c-575a-80c2-00be67d903bc",
+      "content_sha256": "9540198a1b60a1474cc43ca5bfa511a9bf138d8d182ecc70b7bfecd293e34df0",
+      "simples": "Qualquer pessoa pode impetrar HC em favor próprio ou alheio; Ministério Público também pode fazê-lo.",
+      "pontos": [
+        "Identificar paciente, coator e constrangimento ou ameaça.",
+        "Petição tem assinatura ou assinatura a rogo e elementos previstos.",
+        "Ofício integra também647-A."
+      ],
+      "atencao": [
+        "Não exigir advogado como requisito universal de impetração nem confundir impetrante e paciente."
+      ],
+      "exemplo": "Familiar relata prisão ilegal de terceiro e identifica agente e circunstâncias. Variação: Paciente pode ser a própria pessoa que assina o pedido.",
+      "prova": [
+        "Impetrante precisa sempre ser advogado? Não.",
+        "MP pode impetrar HC? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Paciente",
+          "significado": "Pessoa cuja liberdade é protegida no pedido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14836.htm"
+      ],
+      "expected": {
+        "unit_id": "826a1c1f-295c-575a-80c2-00be67d903bc",
+        "content_sha256": "9540198a1b60a1474cc43ca5bfa511a9bf138d8d182ecc70b7bfecd293e34df0",
+        "simples": "O habeas corpus poderá ser impetrado por qualquer pessoa, em seu favor ou de outrem, bem como pelo Ministério Público. A petição conterá o nome da pessoa que sofre ou está ameaçada de sofrer violência ou coação e o de quem exercer a violência, coação ou ameaça; a declaração da espécie de constrangimento ou, em caso de simples ameaça, as razões em que funda o seu temor; e a assinatura do impetrante, ou de alguém a seu rogo, e a designação das respectivas residências. Os juízes e os tribunais têm competência para expedir de ofício ordem de habeas corpus, quando no curso de processo verificarem que alguém sofre ou está na iminência de sofrer coação ilegal.",
+        "pontos": [
+          "Impetrado por qualquer pessoa, em favor próprio ou alheio, ou pelo MP.",
+          "Petição: paciente, coator, espécie de constrangimento ou razões do temor, assinatura.",
+          "Habeas corpus de ofício por juízes e tribunais."
+        ],
+        "atencao": [
+          "Não exige advogado nem capacidade postulatória.",
+          "Impetrante e paciente podem ser pessoas diferentes."
+        ],
+        "exemplo": "Qualquer pessoa pode impetrar habeas corpus em favor de um preso.",
+        "prova": [
+          "Assertiva que exige advogado para impetrar habeas corpus erra."
+        ],
+        "termos": [
+          {
+            "termo": "Paciente",
+            "significado": "A pessoa que sofre ou ameaça sofrer a coação."
+          }
+        ],
+        "remissoes": [
+          "Art. 647-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-655",
+      "unit_id": "c243602b-ece9-5f40-9e71-ca8c74f0de4f",
+      "content_sha256": "37420902320b5df375996efc20fbc47a62bc5debf64e906dfb007479674ae5aa",
+      "simples": "Dispositivo histórico responsabiliza quem embaraça tramitação, informações, apresentação ou soltura em HC.",
+      "pontos": [
+        "Referência monetária a mil-réis é histórica.",
+        "Sanção atual exige base legal e procedimento próprios."
+      ],
+      "atencao": [
+        "Não converter quantias antigas em multa atual automática ou gerar exercício numérico com moeda extinta."
+      ],
+      "exemplo": "Obstrução injustificada de soltura é comunicada para providências legais cabíveis. Variação: Falha material deve ser esclarecida antes de atribuir responsabilidade pessoal.",
+      "prova": [
+        "Mil-réis são parâmetro atual automático de multa? Não.",
+        "Obstrução indevida exige providência adequada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Obstrução da ordem",
+          "significado": "Conduta que impede efetividade da proteção judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "c243602b-ece9-5f40-9e71-ca8c74f0de4f",
+        "content_sha256": "37420902320b5df375996efc20fbc47a62bc5debf64e906dfb007479674ae5aa",
+        "simples": "O carcereiro ou o diretor da prisão, o escrivão, o oficial de justiça ou a autoridade judiciária ou policial que embaraçar ou procrastinar a expedição de ordem de habeas corpus, as informações sobre a causa da prisão, a condução e apresentação do paciente, ou a sua soltura, será multado, sem prejuízo da responsabilidade criminal.",
+        "pontos": [
+          "Quem embaraça ou procrastina a expedição da ordem, informações, apresentação ou soltura é multado.",
+          "Alcança carcereiro, diretor, escrivão, oficial de justiça e autoridades."
+        ],
+        "atencao": [
+          "Sanção para quem retarda o habeas corpus."
+        ],
+        "exemplo": "O diretor da prisão retarda a soltura determinada e é multado.",
+        "prova": [
+          "Assertiva que isenta o oficial de justiça de multa por procrastinar a ordem erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 656"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-656",
+      "unit_id": "e5a02917-7365-587b-bb8b-938955a3b468",
+      "content_sha256": "47d16a74e54929c1e8a4d032205aad8200582da21d90a99553f77f9d216b369c",
+      "simples": "Quando necessário, juiz pode determinar apresentação imediata do paciente preso para examinar coação.",
+      "pontos": [
+        "Necessidade deve ser avaliada.",
+        "Recusa do detentor tem consequências previstas, integradas às garantias atuais."
+      ],
+      "atencao": [
+        "Não equiparar impossibilidade justificada a desobediência nem decretar prisão punitiva automática sem requisitos."
+      ],
+      "exemplo": "Apresentação permite verificar condições e ouvir pessoa detida. Variação: Doença grave documentada exige examinar exceção e providência alternativa do657.",
+      "prova": [
+        "Apresentação é determinada quando necessária? Sim.",
+        "Toda impossibilidade equivale automaticamente a crime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apresentação do paciente",
+          "significado": "Providência para exame direto da situação de custódia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e5a02917-7365-587b-bb8b-938955a3b468",
+        "content_sha256": "47d16a74e54929c1e8a4d032205aad8200582da21d90a99553f77f9d216b369c",
+        "simples": "Recebida a petição de habeas corpus, o juiz, se julgar necessário, e estando preso o paciente, mandará que este lhe seja imediatamente apresentado em dia e hora que designar. Em caso de desobediência, será expedido mandado de prisão contra o detentor, que será processado na forma da lei, e o juiz providenciará para que o paciente seja tirado da prisão e apresentado em juízo.",
+        "pontos": [
+          "Apresentação imediata do paciente preso, se necessária.",
+          "Desobediência: prisão do detentor.",
+          "Juiz providencia a retirada do paciente da prisão."
+        ],
+        "atencao": [
+          "Apresentação do paciente em juízo."
+        ],
+        "exemplo": "O juiz determina que o preso seja apresentado em audiência.",
+        "prova": [
+          "Assertiva que dispensa a apresentação do paciente preso quando o juiz a julga necessária erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 657"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-657",
+      "unit_id": "ee95c8bd-0f91-593b-8848-4e11102aa433",
+      "content_sha256": "88d37ea5e8496aeb20bc866e4868fcac12909e036d8c4900395e2f09a8843b15",
+      "simples": "Doença grave, falta de custódia e ausência de ordem de apresentação são hipóteses textuais relacionadas à apresentação do preso.",
+      "pontos": [
+        "Doença pode exigir visita judicial.",
+        "Justificativa não torna prisão automaticamente legal."
+      ],
+      "atencao": [
+        "Separar impossibilidade de transportar paciente e mérito da coação."
+      ],
+      "exemplo": "Preso gravemente enfermo não pode ser transportado; juiz examina situação onde ele se encontra. Variação: Pessoa já não está sob poder do detentor exige esclarecer localização e eventual coação restante.",
+      "prova": [
+        "Doença grave pode impedir transporte? Sim.",
+        "Isso elimina exame da ilegalidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção de apresentação",
+          "significado": "Ajuste da providência à situação concreta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ee95c8bd-0f91-593b-8848-4e11102aa433",
+        "content_sha256": "88d37ea5e8496aeb20bc866e4868fcac12909e036d8c4900395e2f09a8843b15",
+        "simples": "Se o paciente estiver preso, nenhum motivo escusará a sua apresentação, salvo grave enfermidade do paciente; não estar ele sob a guarda da pessoa a quem se atribui a detenção; ou se o comparecimento não tiver sido determinado pelo juiz ou pelo tribunal. O juiz poderá ir ao local em que o paciente se encontrar, se este não puder ser apresentado por motivo de doença.",
+        "pontos": [
+          "Regra: nenhum motivo escusa a apresentação do preso.",
+          "Exceções: grave enfermidade; paciente não está sob a guarda do detentor; comparecimento não determinado.",
+          "O juiz pode ir ao local, se o paciente estiver doente."
+        ],
+        "atencao": [
+          "Exceções restritas à apresentação."
+        ],
+        "exemplo": "Paciente gravemente enfermo não é apresentado, e o juiz vai até ele.",
+        "prova": [
+          "Assertiva que escusa a apresentação por qualquer inconveniente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 656"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-658",
+      "unit_id": "4781e7a2-b811-5bbb-8e9e-9593355b4e21",
+      "content_sha256": "e7bac1134424a21cf40ab051e98ea92a0f5ca3953095b416b2d06a8c67c1d1f1",
+      "simples": "Detentor deve declarar à ordem de quem o paciente está preso.",
+      "pontos": [
+        "Identificar título e responsável.",
+        "Subsidiar competência e legalidade."
+      ],
+      "atencao": [
+        "Nome do responsável não substitui demonstração de fundamento válido da prisão."
+      ],
+      "exemplo": "Unidade informa que custódia decorre de mandado de determinado juízo. Variação: Ausência de ordem identificável exige apuração da legalidade, não mero silêncio.",
+      "prova": [
+        "Detentor informa a autoridade da ordem? Sim.",
+        "Informação dispensa controle do título? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Identificação da custódia",
+          "significado": "Esclarecimento da origem e responsabilidade pela restrição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4781e7a2-b811-5bbb-8e9e-9593355b4e21",
+        "content_sha256": "e7bac1134424a21cf40ab051e98ea92a0f5ca3953095b416b2d06a8c67c1d1f1",
+        "simples": "O detentor declarará à ordem de quem o paciente estiver preso.",
+        "pontos": [
+          "O detentor declara à ordem de quem o paciente está preso."
+        ],
+        "atencao": [
+          "Declaração do detentor."
+        ],
+        "exemplo": "O diretor informa que o paciente está preso à ordem de determinado juiz.",
+        "prova": [
+          "Assertiva que dispensa a declaração do detentor sobre a ordem de prisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 656"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-659",
+      "unit_id": "d46f374f-a594-5191-ab2a-f39c69f6dc16",
+      "content_sha256": "fcbb9b4503e6814c8e0004d06d09e74707f8c0585ef4ca065dc279ef4834a9d4",
+      "simples": "Se realmente cessou a violência ou coação ilegal, pedido pode ser julgado prejudicado.",
+      "pontos": [
+        "Verificar desaparecimento efetivo da restrição.",
+        "Não basta mudança formal de documento."
+      ],
+      "atencao": [
+        "Novo título que mantém a mesma ilegalidade exige exame pertinente; não presumir perda do objeto só por substituição nominal."
+      ],
+      "exemplo": "Pessoa é liberada e ameaça combatida deixa de existir. Variação: Nova ordem mantém vício alegado; situação concreta precisa ser examinada.",
+      "prova": [
+        "Cessação efetiva pode prejudicar pedido? Sim.",
+        "Troca nominal do título prova sempre cessação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perda do objeto",
+          "significado": "Desaparecimento real da coação discutida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d46f374f-a594-5191-ab2a-f39c69f6dc16",
+        "content_sha256": "fcbb9b4503e6814c8e0004d06d09e74707f8c0585ef4ca065dc279ef4834a9d4",
+        "simples": "Se o juiz ou o tribunal verificar que já cessou a violência ou coação ilegal, julgará prejudicado o pedido.",
+        "pontos": [
+          "Cessada a coação ilegal, o pedido é julgado prejudicado."
+        ],
+        "atencao": [
+          "Perda do objeto."
+        ],
+        "exemplo": "O paciente já foi solto, e o habeas corpus é julgado prejudicado.",
+        "prova": [
+          "Assertiva que concede a ordem mesmo após a cessação da coação erra: o pedido fica prejudicado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 660"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-660",
+      "unit_id": "330c41fa-eb5d-5306-8d91-33a649a3bab1",
+      "content_sha256": "559d8b1822d498f2615f07dee78ee60e58b072921fd1c9535370fa6bcd829096",
+      "simples": "Após diligências e oitiva pertinente, decisão fundamentada observa prazo textual de vinte e quatro horas, sem impedir tutela imediata.",
+      "pontos": [
+        "Documentos que evidenciam ilegalidade permitem cessação imediata.",
+        "Soltura ressalva outro título válido; fiança pode ser arbitrada se cabível.",
+        "HC preventivo pode resultar em salvo-conduto.",
+        "Comunicação deve ser célere e autenticada."
+      ],
+      "atencao": [
+        "Não esperar24 horas diante de ilegalidade já comprovada nem restaurar medida provisória histórica; salvo-conduto não é imunidade para novos crimes."
+      ],
+      "exemplo": "Documentos demonstram prisão ilegal; juiz ordena cessação de imediato. Variação: Outro mandado válido exige análise própria antes de liberdade física; ameaça ilegal pode pedir salvo-conduto.",
+      "prova": [
+        "É obrigatório esperar24 horas com ilegalidade evidente? Não.",
+        "HC preventivo pode gerar salvo-conduto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Salvo-conduto",
+          "significado": "Proteção contra ameaça ilegal delimitada pela decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "330c41fa-eb5d-5306-8d91-33a649a3bab1",
+        "content_sha256": "559d8b1822d498f2615f07dee78ee60e58b072921fd1c9535370fa6bcd829096",
+        "simples": "Efetuadas as diligências, e interrogado o paciente, o juiz decidirá, fundamentadamente, dentro de 24 horas. Se a decisão for favorável ao paciente, será logo posto em liberdade, salvo se por outro motivo dever ser mantido na prisão. Se os documentos que instruírem a petição evidenciarem a ilegalidade da coação, o juiz ou o tribunal ordenará que cesse imediatamente o constrangimento. Se a ilegalidade decorrer do fato de não ter sido o paciente admitido a prestar fiança, o juiz arbitrará o valor desta. Se a ordem for concedida para evitar ameaça de violência ou coação ilegal, dar-se-á ao paciente salvo-conduto assinado pelo juiz. Será incontinenti enviada cópia da decisão à autoridade que tiver ordenado a prisão.",
+        "pontos": [
+          "Decisão fundamentada em 24 horas.",
+          "Decisão favorável: soltura imediata, salvo outra causa.",
+          "Ilegalidade evidente: cessa imediatamente o constrangimento.",
+          "Fiança negada ilegalmente: juiz arbitra o valor.",
+          "Habeas corpus preventivo: salvo-conduto.",
+          "Cópia da decisão à autoridade coatora."
+        ],
+        "atencao": [
+          "Salvo-conduto no habeas corpus preventivo.",
+          "Prazo de 24 horas."
+        ],
+        "exemplo": "O juiz concede habeas corpus preventivo e entrega ao paciente um salvo-conduto.",
+        "prova": [
+          "Assertiva que fixa em 48 horas o prazo para o juiz decidir o habeas corpus erra: são 24 horas."
+        ],
+        "termos": [
+          {
+            "termo": "Salvo-conduto",
+            "significado": "Documento que protege contra a prisão ilegal no habeas corpus preventivo."
+          }
+        ],
+        "remissoes": [
+          "Art. 647"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-661",
+      "unit_id": "1c9f9e82-2397-5634-9c62-3209689df459",
+      "content_sha256": "523cf1289ead6890915877456770173d43a5a67b66b519e534a765201093af2e",
+      "simples": "HC originário de tribunal segue recebimento e encaminhamento pelo órgão competente, integrado à organização e regimento atuais.",
+      "pontos": [
+        "Distinguir competência originária e recursal.",
+        "Preservar prioridade da tutela de liberdade."
+      ],
+      "atencao": [
+        "Não encaminhar pedido a qualquer tribunal apenas porque se chama HC."
+      ],
+      "exemplo": "Secretaria encaminha pedido originário ao órgão definido pelas normas atuais. Variação: Caso de competência de primeiro grau exige exame da via apropriada.",
+      "prova": [
+        "Competência originária precisa existir? Sim.",
+        "Nome do pedido permite escolher qualquer tribunal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "HC originário",
+          "significado": "Pedido submetido diretamente ao órgão competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "1c9f9e82-2397-5634-9c62-3209689df459",
+        "content_sha256": "523cf1289ead6890915877456770173d43a5a67b66b519e534a765201093af2e",
+        "simples": "Em caso de competência originária do Tribunal de Apelação, a petição de habeas corpus será apresentada ao secretário, que a enviará imediatamente ao presidente do tribunal, ou da câmara criminal, ou da turma, que estiver reunida, ou primeiro tiver de reunir-se.",
+        "pontos": [
+          "Petição apresentada ao secretário do tribunal.",
+          "Enviada de imediato ao presidente do tribunal, da câmara ou da turma."
+        ],
+        "atencao": [
+          "Tramitação rápida na competência originária do tribunal."
+        ],
+        "exemplo": "A petição vai imediatamente ao presidente da câmara criminal.",
+        "prova": [
+          "Assertiva que retarda o envio ao presidente para a próxima sessão ordinária erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 662"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-662",
+      "unit_id": "2b74d447-6031-595d-9ef6-974146bded4c",
+      "content_sha256": "39dc49eed1cbab1581910a6d753ffab77c15fc78a138bc9f368c98b106ae76ea",
+      "simples": "Verificados requisitos, tribunal pode pedir informações necessárias e suprir omissões pertinentes ao julgamento.",
+      "pontos": [
+        "Informações são instrumentais.",
+        "Não transformar formalidade em demora injustificada diante da urgência."
+      ],
+      "atencao": [
+        "A falta de um dado pode exigir esclarecimento, sem negar automaticamente proteção evidenciada por outros elementos."
+      ],
+      "exemplo": "Relator solicita ordem prisional para esclarecer fundamento da coação. Variação: Documentação suficiente demonstra ilegalidade e permite examinar medida urgente sem espera burocrática.",
+      "prova": [
+        "Informações servem ao exame do pedido? Sim.",
+        "Pedido de informações justifica qualquer demora? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução do HC",
+          "significado": "Elementos necessários à decisão sobre liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2b74d447-6031-595d-9ef6-974146bded4c",
+        "content_sha256": "39dc49eed1cbab1581910a6d753ffab77c15fc78a138bc9f368c98b106ae76ea",
+        "simples": "Se a petição contiver os requisitos do art. 654, §1º, o presidente, se necessário, requisitará da autoridade indicada como coatora informações por escrito. Faltando, porém, qualquer daqueles requisitos, o presidente mandará preenchê-lo, logo que lhe for apresentada a petição.",
+        "pontos": [
+          "Petição regular: o presidente requisita informações da autoridade coatora, se necessário.",
+          "Faltando requisito: manda preenchê-lo."
+        ],
+        "atencao": [
+          "Informalismo: o vício é sanado, e não rejeitado de plano."
+        ],
+        "exemplo": "Faltou indicar a residência do impetrante: o presidente manda completar.",
+        "prova": [
+          "Assertiva que rejeita a petição incompleta sem oportunidade de correção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 654"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-663",
+      "unit_id": "ea39a30b-3c8f-5bdb-9e08-9e3c5a572272",
+      "content_sha256": "16a5fc056730a42fcff13810b99953fc283d7eee616c5c26dbcccab1b03c1182",
+      "simples": "Texto prevê submissão à deliberação do tribunal quando não há indeferimento liminar, com integração às normas atuais.",
+      "pontos": [
+        "Considerar atribuições de relator e colegiado.",
+        "Distinguir informações e admissibilidade."
+      ],
+      "atencao": [
+        "Não extrair do texto antigo proibição universal de decisões previstas em regimento válido ou eliminação de impugnação cabível."
+      ],
+      "exemplo": "Pedido apto segue exame pelo órgão competente conforme tramitação aplicável. Variação: Indeferimento exige fundamento e exame das vias pertinentes, não fechamento automático de toda revisão.",
+      "prova": [
+        "Deliberação segue competência e regras atuais? Sim.",
+        "Indeferimento dispensa motivação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Deliberação do HC",
+          "significado": "Exame decisório conforme lei e organização atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "ea39a30b-3c8f-5bdb-9e08-9e3c5a572272",
+        "content_sha256": "16a5fc056730a42fcff13810b99953fc283d7eee616c5c26dbcccab1b03c1182",
+        "simples": "As diligências do artigo anterior não serão ordenadas, se o presidente entender que o habeas corpus deva ser indeferido in limine. Nesse caso, levará a petição ao tribunal, câmara ou turma, para que delibere a respeito.",
+        "pontos": [
+          "Indeferimento liminar dispensa as diligências.",
+          "O presidente leva a petição ao órgão colegiado para deliberar."
+        ],
+        "atencao": [
+          "A decisão final cabe ao colegiado."
+        ],
+        "exemplo": "O presidente entende ser caso de indeferimento liminar e leva a petição ao órgão colegiado.",
+        "prova": [
+          "Assertiva que permite ao presidente indeferir sozinho, sem levar a petição ao colegiado, erra, segundo a letra do art. 663."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 662"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-664",
+      "unit_id": "c473c8f0-0dd9-5447-a17e-1132fe0f45df",
+      "content_sha256": "78902a4b6f9153b0173fb19bcd760c813ea4f7b9dadbf01b498f0bf4d04372d7",
+      "simples": "HC tem julgamento prioritário; empate deve seguir regra atual favorável ao imputado do615§1, alterado em2024.",
+      "pontos": [
+        "Primeira sessão, com eventual adiamento para a seguinte no texto.",
+        "Não restaurar voto presidencial desfavorável de desempate.",
+        "Nova regra alcança matéria penal e processual penal colegiada."
+      ],
+      "atencao": [
+        "Ler apenas o parágrafo antigo produz resposta errada sobre desempate após Lei14.836/2024."
+      ],
+      "exemplo": "Dois votos concedem e dois negam HC; prevalece resultado favorável ao imputado. Variação: Composição incompleta não elimina a regra nas hipóteses legais.",
+      "prova": [
+        "Empate permite negar HC só por voto presidencial antigo? Não.",
+        "Regra de2024 favorece imediatamente imputado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Empate favorável",
+          "significado": "Resultado protetivo imposto pelo regime atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14836.htm"
+      ],
+      "expected": {
+        "unit_id": "c473c8f0-0dd9-5447-a17e-1132fe0f45df",
+        "content_sha256": "78902a4b6f9153b0173fb19bcd760c813ea4f7b9dadbf01b498f0bf4d04372d7",
+        "simples": "Recebidas as informações, ou dispensadas, o habeas corpus será julgado na primeira sessão, podendo, entretanto, adiar-se o julgamento para a sessão seguinte. A decisão será tomada por maioria de votos. Havendo empate, se o presidente não tiver tomado parte na votação, proferirá voto de desempate; no caso contrário, prevalecerá a decisão mais favorável ao paciente.",
+        "pontos": [
+          "Julgamento na primeira sessão, com adiamento possível para a seguinte.",
+          "Decisão por maioria.",
+          "Empate: voto de desempate do presidente se não votou; senão, a decisão mais favorável ao paciente."
+        ],
+        "atencao": [
+          "Empate favorece o paciente (art. 615, §1º)."
+        ],
+        "exemplo": "O julgamento empata e prevalece a decisão mais favorável ao paciente.",
+        "prova": [
+          "Assertiva que resolve o empate contra o paciente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 615"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-665",
+      "unit_id": "9fee59e4-6218-574b-99de-4abdf9e6e54e",
+      "content_sha256": "763ab5b15327cc79d613e422f0a1fc8d9a7229450456ac3c3d03a833e339d57a",
+      "simples": "Ordem concedida deve chegar prontamente ao detentor ou coator por comunicação oficial adequada.",
+      "pontos": [
+        "Texto menciona secretário, assinatura presidencial e telegrama.",
+        "Integrar meios oficiais atuais e autenticação."
+      ],
+      "atencao": [
+        "Telegrama histórico não torna inválida toda comunicação eletrônica oficial nem permite mensagem sem autenticidade."
+      ],
+      "exemplo": "Secretaria transmite ordem judicial autenticada para cumprimento. Variação: Captura de tela não verificada exige confirmação oficial, sem criar demora arbitrária à soltura.",
+      "prova": [
+        "Comunicação precisa ser oficial e autêntica? Sim.",
+        "Somente telegrama é meio possível hoje? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação da ordem",
+          "significado": "Transmissão confiável para efetivar proteção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9fee59e4-6218-574b-99de-4abdf9e6e54e",
+        "content_sha256": "763ab5b15327cc79d613e422f0a1fc8d9a7229450456ac3c3d03a833e339d57a",
+        "simples": "O secretário do tribunal lavrará a ordem que, assinada pelo presidente do tribunal, câmara ou turma, será dirigida, por ofício ou telegrama, ao detentor, ao carcereiro ou autoridade que exercer ou ameaçar exercer o constrangimento. A ordem transmitida por telegrama obedecerá ao disposto no art. 289, parágrafo único, in fine.",
+        "pontos": [
+          "Secretário lavra a ordem, assinada pelo presidente.",
+          "Dirigida por ofício ou telegrama ao detentor ou autoridade coatora."
+        ],
+        "atencao": [
+          "Hoje se usam meios eletrônicos."
+        ],
+        "exemplo": "A ordem é enviada ao diretor do presídio para a soltura.",
+        "prova": [
+          "Assertiva que dispensa a assinatura do presidente na ordem de habeas corpus erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 289"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-666",
+      "unit_id": "b03f7a76-b755-552e-8b38-45697f931887",
+      "content_sha256": "c348be264314283a246acf362685b11ed7236f16dfa3f37b0b8e29a70f2d175c",
+      "simples": "Regimentos complementam processo e julgamento de HC originário nos tribunais, respeitadas normas superiores.",
+      "pontos": [
+        "Organizar distribuição, sessão e atos internos.",
+        "Não alterar competência constitucional por conveniência."
+      ],
+      "atencao": [
+        "Regimento não pode suprimir garantia legal de proteção da liberdade."
+      ],
+      "exemplo": "Norma interna identifica órgão julgador competente. Variação: Regra interna incompatível com Constituição não prevalece só por ser específica.",
+      "prova": [
+        "Regimento complementa procedimento? Sim.",
+        "Pode afastar Constituição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Complemento regimental",
+          "significado": "Organização do tribunal subordinada ao ordenamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "b03f7a76-b755-552e-8b38-45697f931887",
+        "content_sha256": "c348be264314283a246acf362685b11ed7236f16dfa3f37b0b8e29a70f2d175c",
+        "simples": "Os regimentos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento do pedido de habeas corpus de sua competência originária.",
+        "pontos": [
+          "Regimentos dos tribunais complementam o processo do habeas corpus de competência originária."
+        ],
+        "atencao": [
+          "Normas regimentais complementares."
+        ],
+        "exemplo": "O regimento interno regula detalhes do julgamento do habeas corpus no tribunal.",
+        "prova": [
+          "Assertiva que veda ao regimento complementar o rito do habeas corpus erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 667"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-667",
+      "unit_id": "bd08ea2a-256f-560f-b768-a6fbbb78622a",
+      "content_sha256": "2cbeb902f8d098407a5112f2fa282f310a7236a6afda081c16705332fa770296",
+      "simples": "HC perante STF, originário ou recursal, segue competência constitucional e regimento, com aplicação compatível das regras antecedentes.",
+      "pontos": [
+        "Distinguir pedido originário e recurso cabível.",
+        "Não presumir acesso direto universal ao Supremo."
+      ],
+      "atencao": [
+        "Todo HC não é automaticamente matéria originária do STF; respeitar autoridade coatora e via constitucional."
+      ],
+      "exemplo": "Caso constitucionalmente atribuído ao STF segue seu processamento próprio. Variação: Pedido fora da competência não ganha admissibilidade só por alegar urgência, sem prejuízo de tutela cabível no órgão adequado.",
+      "prova": [
+        "STF tem competência universal para todo HC? Não.",
+        "Regras antecedentes aplicam-se quando compatíveis? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "HC no STF",
+          "significado": "Tutela constitucional conforme competência e via adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "bd08ea2a-256f-560f-b768-a6fbbb78622a",
+        "content_sha256": "2cbeb902f8d098407a5112f2fa282f310a7236a6afda081c16705332fa770296",
+        "simples": "No processo e julgamento do habeas corpus de competência originária do Supremo Tribunal Federal, bem como nos de recurso das decisões de última ou única instância denegatórias de habeas corpus, observar-se-á, no que lhes for aplicável, o disposto nos artigos anteriores, devendo o regimento interno do tribunal estabelecer as normas complementares.",
+        "pontos": [
+          "Habeas corpus originário do STF e recursos contra a denegação: aplicam-se, no que couber, as regras anteriores.",
+          "Regimento interno completa."
+        ],
+        "atencao": [
+          "Remissão ao rito geral."
+        ],
+        "exemplo": "O STF aplica o rito geral do habeas corpus, complementado pelo regimento interno.",
+        "prova": [
+          "Assertiva que afasta as regras gerais do habeas corpus no STF erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 666"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    }
+  ]
+}

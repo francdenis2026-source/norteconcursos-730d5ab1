@@ -1,0 +1,276 @@
+{
+  "course_slug": "cin",
+  "law": "Decreto da Carteira de Identidade Nacional (CIN) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Este Decreto regulamenta a Lei da Carteira de Identidade, para estabelecer os procedimentos e requisitos de expedição da Carteira de Identidade pelos órgãos de identificação dos Estados e do Distrito Federal, e a Lei do Registro de Identidade Civil, para estabelecer o Serviço de Identificação do Cidadão como o Sistema Nacional de Registro de Identificação Civil.",
+      "pontos": ["Regulamenta a Lei nº 7.116, de 29 de agosto de 1983.", "Regulamenta a Lei nº 9.454, de 7 de abril de 1997.", "Serviço de Identificação do Cidadão como sistema nacional."],
+      "atencao": ["ATUALIZAÇÃO: a menção ao Serviço de Identificação do Cidadão como sistema nacional foi ajustada pelo Decreto nº 11.797, de 2023.", "É um DECRETO regulamentar."],
+      "exemplo": "O Decreto detalha como os Estados expedem a nova carteira de identidade.",
+      "prova": ["Assertiva que trata o Decreto como lei ordinária erra: ele regulamenta as leis."],
+      "termos": [],
+      "remissoes": ["Lei da Carteira de Identidade"]
+    },
+    "art-2": {
+      "simples": "A Carteira de Identidade tem fé pública, validade em todo o território nacional e constitui documento de identidade válido para todos os fins legais. Ela é única em âmbito nacional, e sua expedição em ente federativo distinto do local da primeira via será considerada segunda via do documento.",
+      "pontos": ["Fé pública e validade nacional.", "Documento válido para todos os fins legais.", "Única em âmbito nacional.", "Expedição em outro ente é segunda via."],
+      "atencao": ["Mudar de Estado e pedir nova identidade gera SEGUNDA VIA."],
+      "exemplo": "Quem muda de Estado e emite a identidade lá recebe segunda via do mesmo documento.",
+      "prova": ["Assertiva que considera nova primeira via a emissão em outro Estado erra: é segunda via."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-3": {
+      "simples": "A Carteira de Identidade adota o número de inscrição no CPF como registro geral nacional. Se o requerente não estiver inscrito no CPF, o órgão de identificação fará, de ofício, a inscrição, conforme as normas da Receita Federal.",
+      "pontos": ["CPF como registro geral nacional.", "Inscrição de ofício no CPF pelo órgão de identificação."],
+      "atencao": ["ATUALIZAÇÃO: o parágrafo único foi incluído pelo Decreto nº 11.797, de 2023.", "O CPF substitui o antigo número de RG."],
+      "exemplo": "O órgão inscreve no CPF quem ainda não tem o número.",
+      "prova": ["Assertiva que mantém o RG como número distinto do CPF erra: o CPF é o registro geral."],
+      "termos": [],
+      "remissoes": ["Lei do CPF"]
+    },
+    "art-4": {
+      "simples": "Para expedir a Carteira de Identidade, somente será exigida a certidão de nascimento ou de casamento, em formato físico ou digital. Em dúvida fundamentada sobre a autenticidade, o órgão poderá exigir certidão expedida nos últimos seis meses ou documento de identificação civil. Na alteração de dados biográficos, o requerente apresenta certidão que a comprove. O naturalizado apresenta o certificado de naturalização e o português com igualdade de direitos apresenta o ato de outorga. A expedição depende de solicitação e de atualização e conferência dos dados biométricos. A documentação é registrada pelo órgão. O requerente pode pedir a inclusão de informações de saúde. É vedada a formulação de exigências não previstas no Decreto.",
+      "pontos": ["Somente a certidão de nascimento ou de casamento.", "Dúvida fundamentada: certidão recente ou outro documento civil.", "Naturalizado e português com igualdade têm documentos próprios.", "Dados biométricos atualizados e conferidos.", "Vedadas exigências não previstas."],
+      "atencao": ["Proibição de exigências ADICIONAIS."],
+      "exemplo": "O órgão não pode exigir comprovante de residência para emitir a identidade.",
+      "prova": ["Assertiva que permite exigir comprovante de residência erra: o §8º veda exigências não previstas."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-5": {
+      "simples": "A Carteira de Identidade será expedida em papel de segurança ou em cartão de policarbonato, e em formato digital, conforme os modelos dos Anexos I, II e III. A versão digital é expedida no mesmo processo de identificação e gerada após a entrega do documento em formato físico.",
+      "pontos": ["Formatos: papel de segurança, cartão de policarbonato e digital.", "Modelos nos Anexos I, II e III.", "A versão digital nasce no mesmo processo, após o documento físico."],
+      "atencao": ["Versão digital depois da física."],
+      "exemplo": "O cidadão recebe o cartão e, em seguida, a versão digital.",
+      "prova": ["Assertiva que dispensa o documento físico para gerar o digital erra."],
+      "termos": [],
+      "remissoes": ["Anexos I a III"]
+    },
+    "art-6": {
+      "simples": "Os órgãos de identificação seguirão integralmente os padrões da Carteira de Identidade estabelecidos neste Decreto.",
+      "pontos": ["Observância integral dos padrões do Decreto."],
+      "atencao": ["Padronização nacional obrigatória."],
+      "exemplo": "Todos os Estados seguem o mesmo modelo de carteira.",
+      "prova": ["Assertiva que permite a cada Estado criar modelo próprio erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-7": {
+      "simples": "O Ministério da Justiça e Segurança Pública manterá em grau de sigilo os detalhes das especificações de segurança dos modelos. O acesso será concedido, mediante compromisso de sigilo, aos órgãos de identificação ou a outros órgãos públicos sempre que necessário para expedir o documento ou aferir sua autenticidade.",
+      "pontos": ["Especificações de segurança em sigilo.", "Acesso mediante compromisso de sigilo."],
+      "atencao": ["Sigilo mantido pelo Ministério da Justiça e Segurança Pública."],
+      "exemplo": "A polícia acessa os detalhes de segurança para verificar documento suspeito, com compromisso de sigilo.",
+      "prova": ["Assertiva que torna públicos todos os detalhes de segurança erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-8": {
+      "simples": "A Carteira de Identidade atenderá aos requisitos de segurança, integridade e interoperabilidade estabelecidos pela Câmara-Executiva Federal de Identificação do Cidadão (Cefic).",
+      "pontos": ["Requisitos de segurança, integridade e interoperabilidade.", "Definidos pela Cefic."],
+      "atencao": ["Quem estabelece os requisitos é a Cefic."],
+      "exemplo": "A Cefic fixa o padrão de segurança da carteira digital.",
+      "prova": ["Assertiva que atribui a definição dos requisitos a cada Estado erra: é da Cefic."],
+      "termos": [{ "termo": "Cefic", "significado": "Câmara-Executiva Federal de Identificação do Cidadão." }],
+      "remissoes": ["Decreto do Serviço de Identificação do Cidadão"]
+    },
+    "art-9": {
+      "simples": "As renovações da Carteira de Identidade por decurso de prazo de validade serão realizadas para a atualização dos dados cadastrais e biométricos do titular e consideradas continuidade da primeira expedição. A expedição para alteração ou inclusão de dados biográficos ou biométricos, a pedido do titular, será considerada segunda via.",
+      "pontos": ["Renovação por validade: continuidade da primeira expedição.", "Alteração de dados a pedido do titular: segunda via."],
+      "atencao": ["Renovação por prazo NÃO é segunda via; alteração a pedido É segunda via."],
+      "exemplo": "Quem muda o nome e emite nova identidade recebe segunda via.",
+      "prova": ["Assertiva que considera segunda via toda renovação por prazo erra: ela é continuidade da primeira."],
+      "termos": [],
+      "remissoes": ["Art. 15"]
+    },
+    "art-10": {
+      "simples": "A Carteira de Identidade em formato digital será integrada ao Serviço de Identificação do Cidadão. Isso não impede o ente federativo de disponibilizar, em paralelo e por meios próprios, a carteira em formato digital.",
+      "pontos": ["Carteira digital integrada ao Serviço de Identificação do Cidadão.", "Estados podem oferecer também sua versão digital própria."],
+      "atencao": ["A integração não proíbe versões digitais estaduais paralelas."],
+      "exemplo": "O Estado mantém seu aplicativo além do federal.",
+      "prova": ["Assertiva que proíbe versões digitais estaduais erra: elas podem coexistir."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-11": {
+      "simples": "A Carteira de Identidade conterá as Armas da República e as inscrições República Federativa do Brasil e Governo Federal; a identificação do ente e do órgão expedidor; o número do registro geral nacional; nome, filiação, sexo, nacionalidade, local e data de nascimento; o número único da matrícula de nascimento ou casamento; a fotografia no formato 3x4 cm, no padrão da OACI, a assinatura e a impressão digital do polegar direito; a assinatura do dirigente do órgão; a expressão Válida em todo o território nacional; a data de validade, local e data de expedição; o QR code; e a zona de leitura mecânica. Essas informações constarão do documento digital.",
+      "pontos": ["Elementos obrigatórios (incisos I a XII).", "Foto 3x4 cm no padrão da OACI.", "Impressão digital do polegar direito.", "QR code e zona de leitura mecânica.", "Constam também do documento digital."],
+      "atencao": ["Impressão do polegar DIREITO.", "QR code e zona de leitura mecânica seguem padrões internacionais."],
+      "exemplo": "O QR code permite verificar a autenticidade da carteira.",
+      "prova": ["Assertiva que prevê a impressão do polegar esquerdo erra: é do polegar direito."],
+      "termos": [{ "termo": "OACI", "significado": "Organização da Aviação Civil Internacional." }],
+      "remissoes": ["Art. 12"]
+    },
+    "art-12": {
+      "simples": "Na expedição da Carteira de Identidade, será realizada a consulta biométrica no Serviço de Identificação do Cidadão.",
+      "pontos": ["Consulta biométrica no Serviço de Identificação do Cidadão na expedição."],
+      "atencao": ["A aplicação depende da integração (art. 20)."],
+      "exemplo": "A impressão digital do requerente é conferida na base nacional.",
+      "prova": ["Assertiva que dispensa a consulta biométrica na expedição erra."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-13": {
+      "simples": "O nome social será incluído mediante requerimento, nos termos do decreto específico. A inclusão ocorre mediante requerimento escrito e assinado, com a expressão nome social, sem prejuízo da menção ao nome do registro civil e sem exigência de documentação comprobatória. O nome social poderá ser excluído por requerimento escrito. Os requerimentos serão arquivados no órgão expedidor com o histórico de alterações.",
+      "pontos": ["Inclusão do nome social por requerimento escrito.", "Sem exigência de documentos comprobatórios.", "Mantém o nome do registro civil.", "Exclusão por requerimento escrito.", "Arquivamento e histórico no órgão expedidor."],
+      "atencao": ["Não se exige documentação para incluir o nome social."],
+      "exemplo": "A pessoa trans inclui o nome social na identidade apenas com requerimento.",
+      "prova": ["Assertiva que exige laudo para incluir o nome social erra: não há exigência de comprovação."],
+      "termos": [{ "termo": "Nome social", "significado": "Nome pelo qual a pessoa se identifica socialmente." }],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-14": {
+      "simples": "O titular poderá requerer a inclusão, na carteira digital, das informações constantes dos documentos de que trata a Lei nº 9.049, de 18 de maio de 1995, com consulta por QR code. Poderá também requerer a inclusão de tipo sanguíneo e fator RH, disposição de doar órgãos em caso de morte e condições específicas de saúde cuja divulgação possa contribuir para preservar sua saúde ou salvar sua vida.",
+      "pontos": ["Inclusão opcional de documentos e informações na carteira digital.", "Tipo sanguíneo e fator RH.", "Disposição de doar órgãos.", "Condições de saúde relevantes."],
+      "atencao": ["Inclusão opcional, a pedido do titular."],
+      "exemplo": "O titular inclui o tipo sanguíneo na identidade para emergências.",
+      "prova": ["Assertiva que torna obrigatória a inclusão do tipo sanguíneo erra: é a pedido do titular."],
+      "termos": [],
+      "remissoes": ["Art. 4º, §7º"]
+    },
+    "art-15": {
+      "simples": "O prazo de validade da Carteira de Identidade será estabelecido de acordo com a idade do titular no momento da expedição: cinco anos para pessoas de zero a onze anos; dez anos para pessoas de doze anos completos a cinquenta e nove anos; e validade indeterminada para pessoas a partir de sessenta anos.",
+      "pontos": ["Zero a onze anos: cinco anos de validade.", "Doze a cinquenta e nove anos: dez anos de validade.", "Sessenta anos ou mais: validade indeterminada."],
+      "atencao": ["Faixas: cinco, dez anos e indeterminada."],
+      "exemplo": "A identidade de uma pessoa de trinta anos vale dez anos.",
+      "prova": ["Assertiva que fixa validade de dez anos para quem tem sessenta anos erra: é indeterminada."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-16": {
+      "simples": "A Carteira de Identidade poderá ter a validade negada em razão da alteração dos dados nela contidos, no ponto específico; da existência de danos no meio físico que comprometam a verificação da autenticidade; da alteração de características físicas do titular que suscitem dúvidas fundadas sobre sua identidade; ou da mudança significativa no gesto gráfico da assinatura. A validade não poderá ser negada pelos dois últimos motivos quando o titular for pessoa enferma ou tiver idade a partir de sessenta anos.",
+      "pontos": ["Alteração dos dados.", "Danos que comprometam a autenticidade.", "Mudança física que gere dúvida.", "Mudança na assinatura.", "Proteção a enfermos e a quem tem sessenta anos ou mais."],
+      "atencao": ["Enfermos e pessoas com sessenta anos ou mais: não se nega a validade por mudança física ou da assinatura."],
+      "exemplo": "A identidade de um idoso não perde validade por mudança na assinatura.",
+      "prova": ["Assertiva que permite negar a validade da identidade do idoso por mudança na assinatura erra."],
+      "termos": [],
+      "remissoes": ["Art. 15"]
+    },
+    "art-17": {
+      "simples": "O português com igualdade de direitos que perder essa condição e o brasileiro que perder a nacionalidade, conforme a Constituição, terão a Carteira de Identidade recolhida pela Polícia Federal e encaminhada ao órgão expedidor para cancelamento.",
+      "pontos": ["Perda da condição de português com igualdade ou da nacionalidade brasileira.", "Carteira recolhida pela Polícia Federal.", "Encaminhada ao órgão expedidor para cancelamento."],
+      "atencao": ["Quem recolhe é a Polícia Federal."],
+      "exemplo": "Brasileiro que perde a nacionalidade tem a carteira recolhida pela PF.",
+      "prova": ["Assertiva que atribui o recolhimento à Polícia Civil erra: é da Polícia Federal."],
+      "termos": [],
+      "remissoes": ["Constituição, art. 12"]
+    },
+    "art-19": {
+      "simples": "As disposições para operacionalização das medidas necessárias à expedição da Carteira de Identidade e à aplicação do Decreto caberão ao ente federativo correspondente, respeitadas as competências da Cefic.",
+      "pontos": ["Operacionalização pelo ente federativo.", "Respeita as competências da Cefic."],
+      "atencao": ["Estados e Distrito Federal operam a expedição."],
+      "exemplo": "O Estado organiza o atendimento para emitir a nova identidade.",
+      "prova": ["Assertiva que centraliza a operação na União erra: cabe ao ente federativo."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-20": {
+      "simples": "A aplicação do §5º do art. 11 e do art. 12 fica condicionada à existência de integração entre os processos de expedição da Carteira de Identidade e o Serviço de Identificação do Cidadão, observado o decreto que o instituiu.",
+      "pontos": ["Aplicação do §5º do art. 11 e do art. 12 depende da integração com o Serviço de Identificação do Cidadão."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pelo Decreto nº 11.797, de 27 de novembro de 2023."],
+      "exemplo": "A consulta biométrica só vale quando o Estado estiver integrado ao Serviço.",
+      "prova": ["Assertiva que dispensa a integração para aplicar o art. 12 erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-21": {
+      "simples": "O acesso dos órgãos de identificação ao banco de dados do CPF será efetuado a pedido do ente federativo, dispensada a celebração de convênio, e operacionalizado por solução tecnológica disponibilizada pelo Governo federal, observadas as normas de segurança da informação da Receita Federal.",
+      "pontos": ["Acesso ao CPF a pedido do ente federativo.", "Sem convênio.", "Solução tecnológica do Governo federal."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pelo Decreto nº 11.797, de 2023.", "Dispensa de convênio."],
+      "exemplo": "O Estado pede acesso à base do CPF sem firmar convênio.",
+      "prova": ["Assertiva que exige convênio para o acesso ao CPF erra: é dispensado."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-22": {
+      "simples": "Para os fins do Decreto, o Serviço de Identificação do Cidadão, instituído pelo Decreto nº 11.797, de 2023, substituirá o Sistema Nacional de Registro de Identificação Civil.",
+      "pontos": ["Serviço de Identificação do Cidadão substitui o Sistema Nacional de Registro de Identificação Civil."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pelo Decreto nº 11.797, de 2023."],
+      "exemplo": "O novo serviço assume o papel do sistema anterior.",
+      "prova": ["Assertiva que mantém os dois sistemas em paralelo erra: um substitui o outro."],
+      "termos": [],
+      "remissoes": ["Decreto do Serviço de Identificação do Cidadão"]
+    },
+    "art-23": {
+      "simples": "O Governo federal disponibilizará ferramentas para a validação eletrônica da Carteira de Identidade, observado o prazo do art. 24.",
+      "pontos": ["Ferramentas federais de validação eletrônica.", "Prazo do art. 24."],
+      "atencao": ["Validação eletrônica fornecida pelo Governo federal."],
+      "exemplo": "Um aplicativo valida a carteira lendo o QR code.",
+      "prova": ["Assertiva que atribui a validação eletrônica aos Estados erra: é disponibilizada pelo Governo federal."],
+      "termos": [],
+      "remissoes": ["Art. 24"]
+    },
+    "art-24": {
+      "simples": "A partir de 11 de janeiro de 2024, em acordo com a Lei nº 14.534, de 11 de janeiro de 2023, os órgãos expedidores ficarão obrigados a adotar os padrões da Carteira de Identidade estabelecidos neste Decreto.",
+      "pontos": ["Padrões obrigatórios a partir de 11 de janeiro de 2024."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pelo Decreto nº 11.797, de 2023."],
+      "exemplo": "Desde janeiro de 2024 os Estados devem seguir o padrão nacional.",
+      "prova": ["Assertiva que adia a obrigação para 2032 erra: a obrigação começou em 11 de janeiro de 2024."],
+      "termos": [],
+      "remissoes": ["Art. 25"]
+    },
+    "art-25": {
+      "simples": "As carteiras expedidas de acordo com padrões anteriores permanecerão válidas pelo prazo de dez anos, contado da data de entrada em vigor do Decreto. A carteira de quem tinha idade a partir de sessenta anos na data de entrada em vigor terá validade indeterminada.",
+      "pontos": ["Carteiras antigas valem por dez anos a partir da vigência do Decreto.", "Quem tinha sessenta anos ou mais: validade indeterminada."],
+      "atencao": ["Dez anos de transição."],
+      "exemplo": "A identidade antiga continua válida durante a transição.",
+      "prova": ["Assertiva que invalida de imediato as carteiras antigas erra: valem por dez anos."],
+      "termos": [],
+      "remissoes": ["Art. 26"]
+    },
+    "art-26": {
+      "simples": "A expedição em papel de segurança será permitida até 1º de março de 2032. Até essa data, a carteira poderá ser expedida em papel ou em cartão de policarbonato, a critério do titular, conforme a disponibilidade no ente federativo. A renovação será para o modelo em papel, salvo se o ente encerrar antes. O ente poderá encerrar a expedição em papel em prazo anterior. A emissão para quem já possui o documento em formato anterior é considerada primeira emissão.",
+      "pontos": ["Papel de segurança permitido até 1º de março de 2032.", "Titular escolhe entre papel e policarbonato, conforme disponibilidade.", "Ente pode encerrar o papel antes.", "Emissão para quem já tem documento antigo é primeira emissão."],
+      "atencao": ["Prazo final do papel: 1º de março de 2032."],
+      "exemplo": "Até 2032 o titular pode optar entre papel e cartão, se o Estado oferecer.",
+      "prova": ["Assertiva que proíbe o papel de segurança desde 2024 erra: ele é permitido até 1º de março de 2032."],
+      "termos": [],
+      "remissoes": ["Art. 25"]
+    },
+    "art-27": {
+      "simples": "Ficam revogados os decretos anteriores que tratavam da identidade, entre eles o de 2010, o de 2018 (dois), o de 2021 e o art. 26 de outro decreto de 2021.",
+      "pontos": ["Revoga decretos anteriores sobre a Carteira de Identidade."],
+      "atencao": ["Dispositivo de revogação."],
+      "exemplo": "O novo Decreto substitui o regime anterior.",
+      "prova": ["Assertiva que mantém em vigor os decretos revogados erra."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-28": {
+      "simples": "Este Decreto entra em vigor em 1º de março de 2022.",
+      "pontos": ["Vigência em 1º de março de 2022."],
+      "atencao": ["Vigência em 1º de março de 2022."],
+      "exemplo": "O Decreto começou a valer em março de 2022.",
+      "prova": ["Assertiva que prevê vigência na data da publicação erra: é 1º de março de 2022."],
+      "termos": [],
+      "remissoes": ["Art. 27"]
+    },
+    "anexo-1": {
+      "simples": "O Anexo I traz o modelo da Carteira de Identidade em papel de segurança: dimensões de 170x60mm aberta e 85x60mm fechada, papel com marca d'água exclusiva, calcografia, ofsete de segurança, tintas especiais, numeração sequencial, QR code, película de proteção e zona de leitura mecânica. O QR code permite consultar a validade, e as fotografias e assinaturas são integradas, vedadas fotografias coladas.",
+      "pontos": ["Dimensões: 170x60mm (aberta) e 85x60mm (fechada).", "Marca d'água, calcografia e tintas especiais.", "QR code e zona de leitura mecânica.", "Vedadas fotografias coladas."],
+      "atencao": ["Vedada fotografia colada."],
+      "exemplo": "O QR code do documento em papel permite verificar a validade.",
+      "prova": ["Assertiva que permite fotografia colada na carteira em papel erra: é vedada."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "anexo-2": {
+      "simples": "O Anexo II traz o modelo em cartão de policarbonato: dimensões de 85,6x53,98mm, com polímero de segurança, ofsete de segurança, tintas especiais, relevo tátil, gravação a laser dos dados biográficos e biométricos, QR code e zona de leitura mecânica, conforme as figuras do anverso e do reverso.",
+      "pontos": ["Dimensões do cartão de policarbonato.", "Polímero de segurança e relevo tátil.", "Gravação a laser de dados biográficos e biométricos.", "QR code e zona de leitura mecânica."],
+      "atencao": ["Relevo tátil e gravação a laser."],
+      "exemplo": "O cartão de policarbonato é parecido com um cartão bancário.",
+      "prova": ["Assertiva que dispensa o QR code no cartão erra: ele integra o modelo."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "anexo-3": {
+      "simples": "O Anexo III traz o modelo da carteira em formato digital, que atenderá aos requisitos de segurança, integridade, padronização, validade jurídica e interoperabilidade, conforme a Cefic. Terá assinatura digital, QR code homologado, integração com a base do Serviço de Identificação do Cidadão, verificação com e sem internet, associação biométrica do dispositivo com senha, comparação facial com prova de vida, bloqueio de captura de tela e exportação para formato portátil de documento.",
+      "pontos": ["Assinatura digital e QR code homologado.", "Integração com a base do Serviço de Identificação do Cidadão.", "Verificação com e sem conexão à internet.", "Biometria, senha e prova de vida.", "Bloqueio de captura de tela."],
+      "atencao": ["Segurança em múltiplos fatores."],
+      "exemplo": "A carteira digital só abre com biometria e senha.",
+      "prova": ["Assertiva que permite capturar a tela do documento digital erra: há mecanismo de bloqueio."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    }
+  }
+}

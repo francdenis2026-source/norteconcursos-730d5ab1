@@ -1,4 +1,10 @@
 import { canonicalBoard, canonicalCareerName, canonicalSubject } from "./subjects";
+import {
+  questionContestLabel,
+  questionCareerLabel,
+  matchesQuestionContest,
+  matchesQuestionCareer,
+} from "./questionFilterIdentity";
 export const METADATA_FILTER_KEYS = [
   "contest",
   "board",
@@ -18,12 +24,27 @@ const valueOf = (row: Metadata, key: Key) =>
     : key === "board"
       ? canonicalBoard(row.board)
       : key === "career"
-        ? canonicalCareerName(row.career)
-        : row[key];
+        ? questionCareerLabel(row.career, row.contest, row.year)
+        : key === "contest"
+          ? questionContestLabel(row.contest)
+          : row[key];
 export function filterCatalogMetadata<T extends Metadata>(rows: T[], filters: MetadataFilters) {
   return rows.filter((row) =>
     METADATA_FILTER_KEYS.every(
-      (key) => filters[key] === "all" || valueOf(row, key) === valueOf(filters, key),
+      (key) =>
+        filters[key] === "all" ||
+        (key === "contest"
+          ? matchesQuestionContest(row.contest, filters.contest)
+          : key === "career"
+            ? matchesQuestionCareer(
+                row.career,
+                row.contest,
+                row.year,
+                filters.career,
+                filters.contest,
+                filters.year,
+              )
+            : valueOf(row, key) === valueOf(filters, key)),
     ),
   );
 }

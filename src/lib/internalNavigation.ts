@@ -37,13 +37,21 @@ export const trainerFilterKeys = [
 ] as const;
 export type TrainerBookmark = {
   version: 1;
+  practiceMode?: "new" | "wrong" | "all" | "catalog";
+  sessionAttempts?: {
+    index: number;
+    selected: "A" | "B" | "C" | "D" | "E";
+    isCorrect: boolean;
+    seconds?: number;
+  }[];
+  questionSeconds?: number;
   savedAt: number;
   route: string;
   questions: { id: string; source: string; table?: string | undefined }[];
   index: number;
   selected: string | null;
   struck: string[];
-  results: ("ok" | "err")[];
+  results: ("ok" | "err" | "skipped")[];
   startedAt: number;
   filters: Record<(typeof trainerFilterKeys)[number], string>;
 };
@@ -64,19 +72,20 @@ export function restoreTrainerBookmark<
     b.route !== route ||
     !Number.isFinite(b.savedAt) ||
     b.savedAt > now ||
-    now - b.savedAt > 4 * 60 * 60 * 1000
+    (b.questionSeconds !== undefined &&
+      (!Number.isFinite(b.questionSeconds) || b.questionSeconds < 0))
   )
     return null;
   if (
     !Array.isArray(b.questions) ||
     !b.questions.length ||
-    b.questions.length > 500 ||
+    b.questions.length > catalog.length ||
     !Number.isInteger(b.index) ||
     b.index < 0 ||
     b.index > b.questions.length ||
     !Array.isArray(b.results) ||
     b.results.length > b.questions.length ||
-    b.results.some((r) => r !== null && r !== "ok" && r !== "err") ||
+    b.results.some((r) => r !== null && r !== "ok" && r !== "err" && r !== "skipped") ||
     !Array.isArray(b.struck) ||
     b.struck.some((r) => !["A", "B", "C", "D", "E"].includes(r)) ||
     (b.selected !== null && !["A", "B", "C", "D", "E"].includes(b.selected)) ||
@@ -86,14 +95,34 @@ export function restoreTrainerBookmark<
     trainerFilterKeys.some((k) => typeof b.filters[k] !== "string")
   )
     return null;
+  if (b.practiceMode !== undefined && !["new", "wrong", "all", "catalog"].includes(b.practiceMode))
+    return null;
+  if (
+    b.sessionAttempts !== undefined &&
+    (!Array.isArray(b.sessionAttempts) ||
+      b.sessionAttempts.length > b.questions.length ||
+      new Set(b.sessionAttempts.map((a) => a?.index)).size !== b.sessionAttempts.length ||
+      b.sessionAttempts.some(
+        (a) =>
+          !a ||
+          !Number.isInteger(a.index) ||
+          a.index < 0 ||
+          a.index >= b.questions.length ||
+          !["A", "B", "C", "D", "E"].includes(a.selected) ||
+          typeof a.isCorrect !== "boolean" ||
+          (a.seconds !== undefined && (!Number.isFinite(a.seconds) || a.seconds < 0)) ||
+          b.results[a.index] !== (a.isCorrect ? "ok" : "err"),
+      ))
+  )
+    return null;
   const key = (q: { id: string; source: string; table?: string | undefined }) =>
     `${q.table ?? q.source}:${q.id}`;
   const byId = new Map(catalog.map((q) => [key(q), q]));
   if (b.questions.some((q) => !q || typeof q.id !== "string" || !byId.has(key(q)))) return null;
   if (new Set(b.questions.map(key)).size !== b.questions.length) return null;
-  const results: ("ok" | "err")[] = [];
+  const results: ("ok" | "err" | "skipped")[] = [];
   b.results.forEach((r, i) => {
-    if (r === "ok" || r === "err") results[i] = r;
+    if (r === "ok" || r === "err" || r === "skipped") results[i] = r;
   });
   return { bookmark: { ...b, results }, questions: b.questions.map((q) => byId.get(key(q))!) };
 }

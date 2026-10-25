@@ -1,0 +1,133 @@
+{
+  "verified_at": "2026-10-13T23:39:40.196608+00:00",
+  "scope": "Cinco itens de dois cargos, revisados com legislação estadual consolidada, mudança de junho de 2026 e precedente oficial. Textos e gabaritos preservados.",
+  "items": [
+    {
+      "id": "430be2f9-51fc-49ea-9bfd-1c51892e1aed",
+      "item_number": 32,
+      "career": "Escrivão de Polícia",
+      "page": 1,
+      "original_answer": "E",
+      "decision": "active",
+      "pdf_sha256": "055ebcb79b6cc53afefa2d76ce25d774f3603410ee5d40a90192c2b0e5d3fdc6",
+      "legal_basis": [
+        {
+          "url": "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l41331999.html",
+          "norma": "Lei estadual SE 4.133/1999",
+          "artigo": "arts. 34-A, 35 e 38-C, §§ 1º a 3º"
+        },
+        {
+          "url": "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/L99862026.HTML",
+          "norma": "Lei estadual SE 9.986/2026",
+          "artigo": "alteração da comissão de avaliação; art. 34-A"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito E confirmado. Para a carreira policial civil, o estágio probatório é de 36 meses, e a avaliação/exoneração segue procedimento administrativo com defesa e recurso; não depende de confirmação judicial obrigatória, sem excluir controle judicial. Atualização relevante: Lei estadual 9.986/2026 reorganizou a Comissão Permanente de Avaliação Especial de Desempenho, inserindo art. 34-A na Lei 4.133/1999. Não usar a redação revogada do antigo parágrafo único do art. 34.",
+        "sources": [
+          "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l41331999.html",
+          "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/L99862026.HTML"
+        ]
+      }
+    },
+    {
+      "id": "77356eb8-f02d-4f43-9922-65400f8d5622",
+      "item_number": 34,
+      "career": "Agente de Polícia Judiciária",
+      "page": 1,
+      "original_answer": "E",
+      "decision": "active",
+      "pdf_sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f",
+      "legal_basis": [
+        {
+          "url": "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l41331999.html",
+          "norma": "Lei estadual SE 4.133/1999",
+          "artigo": "arts. 34-A, 35 e 38-C, §§ 1º a 3º"
+        },
+        {
+          "url": "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/L99862026.HTML",
+          "norma": "Lei estadual SE 9.986/2026",
+          "artigo": "alteração da comissão de avaliação; art. 34-A"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito E confirmado. Para a carreira policial civil, o estágio probatório é de 36 meses, e a avaliação/exoneração segue procedimento administrativo com defesa e recurso; não depende de confirmação judicial obrigatória, sem excluir controle judicial. Atualização relevante: Lei estadual 9.986/2026 reorganizou a Comissão Permanente de Avaliação Especial de Desempenho, inserindo art. 34-A na Lei 4.133/1999. Não usar a redação revogada do antigo parágrafo único do art. 34.",
+        "sources": [
+          "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l41331999.html",
+          "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/L99862026.HTML"
+        ]
+      }
+    },
+    {
+      "id": "88092354-6426-4df8-91e3-7fb349cbb8ca",
+      "item_number": 31,
+      "career": "Escrivão de Polícia",
+      "page": 1,
+      "original_answer": "C",
+      "decision": "active",
+      "pdf_sha256": "055ebcb79b6cc53afefa2d76ce25d774f3603410ee5d40a90192c2b0e5d3fdc6",
+      "legal_basis": [
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F06%2F2023&num_registro=202300055965",
+          "norma": "STJ — AREsp 2.300.223/SP",
+          "artigo": "ementa XIII; publicação 09/06/2023"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito C confirmado. A presunção de legitimidade e veracidade do ato administrativo é relativa e admite prova em contrário; isso não impede controle da legalidade. A nomeação não se torna imune à anulação por ter sido precedida de concurso.",
+        "sources": [
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F06%2F2023&num_registro=202300055965"
+        ]
+      }
+    },
+    {
+      "id": "98836372-bfa5-45a9-8596-809456601544",
+      "item_number": 32,
+      "career": "Agente de Polícia Judiciária",
+      "page": 1,
+      "original_answer": "E",
+      "decision": "active",
+      "pdf_sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f",
+      "legal_basis": [
+        {
+          "url": "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l21481977.html",
+          "norma": "Lei estadual SE 2.148/1977",
+          "artigo": "arts. 38 e 41"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito E confirmado. A posse tem prazo de 30 dias contado da publicação do provimento; para nomeação, o exercício tem prazo de 15 dias contado da posse. São marcos distintos, com hipóteses legais de prorrogação; não há prazo único de quinze dias para ambos desde o provimento.",
+        "sources": [
+          "https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/l21481977.html"
+        ]
+      }
+    },
+    {
+      "id": "f2df9ca7-6926-422e-bdf6-95823c15dae9",
+      "item_number": 33,
+      "career": "Agente de Polícia Judiciária",
+      "page": 1,
+      "original_answer": "C",
+      "decision": "active",
+      "pdf_sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f",
+      "legal_basis": [
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F06%2F2023&num_registro=202300055965",
+          "norma": "STJ — AREsp 2.300.223/SP",
+          "artigo": "ementa XIII; publicação 09/06/2023"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito C confirmado. A presunção de legitimidade e veracidade do ato administrativo é relativa e admite prova em contrário; isso não impede controle da legalidade. A nomeação não se torna imune à anulação por ter sido precedida de concurso.",
+        "sources": [
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F06%2F2023&num_registro=202300055965"
+        ]
+      }
+    }
+  ]
+}

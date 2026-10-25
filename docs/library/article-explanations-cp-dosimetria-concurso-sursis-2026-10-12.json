@@ -1,0 +1,1606 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T21:57:38.447643+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 25,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-55",
+        "art-56",
+        "art-57",
+        "art-58",
+        "art-59",
+        "art-60",
+        "art-61",
+        "art-62",
+        "art-63",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-76",
+        "art-77",
+        "art-78",
+        "art-79"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "7bac399f268c13eeeb6c782dc650c90a51aa8456db903a1186b2124745afc8ff",
+      "source_checked_at": "2026-10-12T21:50:35.586189+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-55",
+      "unit_id": "3cb8a47b-f4c0-5819-ad58-a37299e14a2b",
+      "content_sha256": "8938254bd5570744fd275928fa50d63b3cfddde56b56b597d3c95008aa1703f4",
+      "simples": "As restritivas enumeradas no artigo seguem a duração da pena privativa substituída, com a ressalva de cumprimento abreviado dos serviços comunitários. A regra não transforma prestação pecuniária em obrigação de dias equivalentes.",
+      "pontos": [
+        "Mesma duração para as espécies dos incisos III–VI do art. 43.",
+        "Ressalva expressa do art. 46, §4º."
+      ],
+      "atencao": [
+        "Não ignorar a ressalva nem converter automaticamente toda restritiva em tempo de prisão. Requisitos de substituição continuam pertinentes."
+      ],
+      "exemplo": "A limitação de fim de semana substitui pena privativa nos requisitos legais; a questão pede sua duração pela regra geral. Variação: Para serviços comunitários na hipótese do art. 46, §4º, analisar a possibilidade de menor tempo e seu limite.",
+      "prova": [
+        "Toda restritiva é medida temporal idêntica? Não; o artigo delimita as espécies.",
+        "A regra tem ressalva? Sim; remete ao art. 46, §4º."
+      ],
+      "termos": [
+        {
+          "termo": "Duração substitutiva",
+          "significado": "Tempo da restritiva nas espécies indicadas, com exceção expressa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3cb8a47b-f4c0-5819-ad58-a37299e14a2b",
+        "content_sha256": "8938254bd5570744fd275928fa50d63b3cfddde56b56b597d3c95008aa1703f4",
+        "simples": "As penas restritivas de direitos dos incisos III, IV, V e VI do art. 43 têm a mesma duração da pena privativa de liberdade substituída, ressalvado o disposto no §4º do art. 46.",
+        "pontos": [
+          "Mesma duração da pena privativa substituída.",
+          "Ressalva: o cumprimento em menor tempo do §4º do art. 46."
+        ],
+        "atencao": [
+          "A ressalva do art. 46, §4º, permite cumprir em menor tempo, nunca inferior à metade."
+        ],
+        "exemplo": "Pena de 1 ano substituída por prestação de serviços tem, em regra, duração de 1 ano.",
+        "prova": [
+          "Assertiva que fixa duração menor da pena restritiva sem a ressalva do art. 46, §4º, contraria o art. 55."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 46, §4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-56",
+      "unit_id": "d329e345-1fc1-54d3-9940-1e26811c7ad9",
+      "content_sha256": "b9f567f5507de071104d66c65024757c077057a4937dd0ddc192c03a0e5e3035",
+      "simples": "Interdições profissionais e funcionais dependem de crime cometido no exercício da atividade com violação dos deveres inerentes. A profissão não é motivo suficiente para proibir o exercício sem identificar esse vínculo.",
+      "pontos": [
+        "Remissão ao art. 47, I e II.",
+        "Crime no exercício E violação de dever inerente."
+      ],
+      "atencao": [
+        "Não impor perda definitiva de cargo por esta frase sobre interdição temporária. Diferenciar espécie de pena e efeitos da condenação do art. 92."
+      ],
+      "exemplo": "Crime ocorre no exercício da profissão e viola dever inerente, atendidos os demais requisitos. Variação: Em crime sem vínculo com o exercício, a mera profissão não preenche os dois requisitos do artigo.",
+      "prova": [
+        "Basta o réu ter profissão? Não; exige vínculo e violação.",
+        "Interdição temporária é perda definitiva automática? Não; são institutos diferentes."
+      ],
+      "termos": [
+        {
+          "termo": "Dever inerente",
+          "significado": "Dever ligado ao exercício da profissão, atividade ou função."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d329e345-1fc1-54d3-9940-1e26811c7ad9",
+        "content_sha256": "b9f567f5507de071104d66c65024757c077057a4937dd0ddc192c03a0e5e3035",
+        "simples": "As penas de interdição previstas nos incisos I e II do art. 47 aplicam-se para todo crime cometido no exercício de profissão, atividade, ofício, cargo ou função, sempre que houver violação dos deveres que lhes são inerentes.",
+        "pontos": [
+          "Interdições dos incisos I e II do art. 47.",
+          "Para crimes cometidos no exercício de profissão, atividade, ofício, cargo ou função.",
+          "Quando há violação dos deveres inerentes."
+        ],
+        "atencao": [
+          "Exige o crime ligado ao exercício da atividade e violação de seus deveres."
+        ],
+        "exemplo": "Médico que comete crime violando os deveres da profissão pode ser proibido de exercê-la por um período.",
+        "prova": [
+          "Assertiva que aplica a interdição a qualquer crime, mesmo sem relação com a atividade, contraria o art. 56."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47, I e II"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-57",
+      "unit_id": "0a53c36b-e0c4-5026-86a2-2fe24de9ebf0",
+      "content_sha256": "e106a3c1554bf89388e472563acdf324d632bd04552108bca643d20d6d0fa3a0",
+      "simples": "O artigo remete à interdição de dirigir do art. 47, III para crimes culposos de trânsito. O regime deve ser integrado ao CTB atual, que tem sanções e regras próprias; não se usa a remissão como código completo de trânsito.",
+      "pontos": [
+        "Crimes culposos de trânsito são o recorte expresso.",
+        "Interdição temporária não é qualquer multa administrativa."
+      ],
+      "atencao": [
+        "Não copiar automaticamente prazo ou forma do CP para todo caso do CTB. Identificar o tipo e a disciplina especial vigente, sem inventar suspensão universal."
+      ],
+      "exemplo": "A questão trata de crime culposo de trânsito e pede a interdição a que remete o CP. Variação: Se o fato é apenas infração administrativa, a sanção precisa ser examinada no regime administrativo, sem presumir crime ou esta pena.",
+      "prova": [
+        "O recorte textual é de crimes culposos? Sim.",
+        "Toda infração administrativa é essa pena criminal? Não; distinguir os regimes."
+      ],
+      "termos": [
+        {
+          "termo": "Interdição temporária",
+          "significado": "Espécie de restritiva no recorte legal, integrada à legislação de trânsito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0a53c36b-e0c4-5026-86a2-2fe24de9ebf0",
+        "content_sha256": "e106a3c1554bf89388e472563acdf324d632bd04552108bca643d20d6d0fa3a0",
+        "simples": "A pena de interdição do inciso III do art. 47 (suspensão de autorização ou habilitação para dirigir veículo) aplica-se aos crimes culposos de trânsito.",
+        "pontos": [
+          "Suspensão de habilitação para dirigir: crimes CULPOSOS de trânsito."
+        ],
+        "atencao": [
+          "O art. 57 trata dos crimes culposos de trânsito; para crimes específicos de trânsito há legislação própria."
+        ],
+        "exemplo": "Motorista condenado por homicídio culposo na direção de veículo pode ter a habilitação suspensa.",
+        "prova": [
+          "Assertiva que aplica a suspensão do art. 47, III, a qualquer crime doloso contraria o art. 57."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47, III"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-58",
+      "unit_id": "75fcaf7e-e265-51ca-85d5-bcb1639e3eba",
+      "content_sha256": "90ef6cd5cc9be388287660ee3b7fee1397e0dbb903a63cb639dc7f3b96695523",
+      "simples": "A multa criminal ordinária remete ao regime do art. 49. O parágrafo admite multa substitutiva sem cominação expressa na Parte Especial, mas sua referência antiga ao parágrafo único do art. 44 deve ser integrada à redação atual.",
+      "pontos": [
+        "Regime geral de dias-multa e valor do dia do art. 49.",
+        "Multa substitutiva não depende sempre de previsão em cada tipo."
+      ],
+      "atencao": [
+        "O art. 44 hoje possui vários parágrafos, não o antigo parágrafo único. Não criar regra pelo texto residual nem ignorar disciplina especial de multa."
+      ],
+      "exemplo": "A questão exige que cada tipo mencione multa para permitir qualquer substituição legal. Variação: Em multa ordinária com previsão específica de lei especial, conferir seu regime em vez de importar todos os limites gerais.",
+      "prova": [
+        "O parágrafo antigo do art. 44 é nomenclatura atual? Não; integrar a redação vigente.",
+        "Limites gerais afastam toda regra especial? Não; identificar disciplina diversa."
+      ],
+      "termos": [
+        {
+          "termo": "Multa substitutiva",
+          "significado": "Substituição na hipótese legal, diferente de multa originalmente cominada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "75fcaf7e-e265-51ca-85d5-bcb1639e3eba",
+        "content_sha256": "90ef6cd5cc9be388287660ee3b7fee1397e0dbb903a63cb639dc7f3b96695523",
+        "simples": "A multa prevista em cada tipo legal de crime tem os limites fixados no art. 49 e seus parágrafos. A multa do parágrafo único do art. 44 e do §2º do art. 60 aplica-se independentemente de cominação na parte especial.",
+        "pontos": [
+          "Limites da multa: art. 49 e parágrafos.",
+          "Multa substitutiva (art. 44, parágrafo único e art. 60, §2º): aplicável mesmo sem previsão no tipo."
+        ],
+        "atencao": [
+          "A multa substitutiva não depende de estar prevista no crime."
+        ],
+        "exemplo": "Pena de até 6 meses pode ser substituída por multa mesmo que o crime não preveja multa.",
+        "prova": [
+          "Assertiva que exige previsão de multa no tipo para a multa substitutiva contraria o parágrafo único."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 49 e 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-59",
+      "unit_id": "59e768b7-28b6-5dfe-aad6-cc82fe55b5e4",
+      "content_sha256": "359bbabad3b246d09659031428e67f36f543515f4f23d4d72fe08ad2df2d7799",
+      "simples": "O juiz fundamenta pena-base e outras decisões nos critérios legais de individualização. Os oito vetores não autorizam pena automática por estereótipos; antecedentes, conduta social e comportamento da vítima têm limites e funções distintos.",
+      "pontos": [
+        "Pena, quantidade, regime e substituição são decisões indicadas.",
+        "Súmula 444/STJ: inquéritos e ações em curso não agravam pena-base.",
+        "Súmula 241: não usar a mesma reincidência também como circunstância judicial."
+      ],
+      "atencao": [
+        "Não desqualificar vítima por vida sexual ou estilo de vida para culpá-la por violência. ADPF 1107 exige respeito à dignidade; valoração concreta não dispensa fundamentação e proibição de dupla contagem."
+      ],
+      "exemplo": "A pena-base é elevada apenas porque existe inquérito ainda em curso. Variação: Condenação definitiva exige análise própria; não permite automaticamente repetir o mesmo fundamento em várias fases.",
+      "prova": [
+        "Inquérito em curso basta para maus antecedentes? Não, conforme Súmula 444.",
+        "O mesmo dado de reincidência pode ser contado nas duas fases? A Súmula 241 veda essa dupla valoração."
+      ],
+      "termos": [
+        {
+          "termo": "Circunstâncias judiciais",
+          "significado": "Vetores de individualização com fundamentos concretos e limites próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+        "https://noticias.stf.jus.br/postsnoticias/provas-em-processo-de-crime-sexual-em-que-houver-constrangimento-a-vitima-sao-nulas-decide-stf/"
+      ],
+      "expected": {
+        "unit_id": "59e768b7-28b6-5dfe-aad6-cc82fe55b5e4",
+        "content_sha256": "359bbabad3b246d09659031428e67f36f543515f4f23d4d72fe08ad2df2d7799",
+        "simples": "Fixação da pena (primeira fase): o juiz, atendendo à culpabilidade, aos antecedentes, à conduta social, à personalidade do agente, aos motivos, às circunstâncias e consequências do crime e ao comportamento da vítima, estabelece, conforme seja necessário e suficiente para reprovação e prevenção do crime: as penas aplicáveis dentre as cominadas, a quantidade de pena dentro dos limites, o regime inicial de cumprimento e a substituição da pena privativa por outra espécie, se cabível. O texto traz 'Vide ADPF 1107': confira a decisão do STF.",
+        "pontos": [
+          "Circunstâncias judiciais: culpabilidade, antecedentes, conduta social, personalidade, motivos, circunstâncias, consequências do crime e comportamento da vítima.",
+          "Critério: necessário e suficiente para reprovação e prevenção do crime.",
+          "I – penas aplicáveis dentre as cominadas; II – quantidade de pena; III – regime inicial; IV – substituição, se cabível."
+        ],
+        "atencao": [
+          "São oito circunstâncias judiciais; o comportamento da VÍTIMA está entre elas.",
+          "O art. 59 define o regime inicial junto com o art. 33, §3º."
+        ],
+        "exemplo": "O juiz analisa os antecedentes e a personalidade do réu para fixar a pena-base acima ou abaixo do mínimo.",
+        "prova": [
+          "Assertiva que exclui o comportamento da vítima das circunstâncias do art. 59 contraria o caput."
+        ],
+        "termos": [
+          {
+            "termo": "Pena-base",
+            "significado": "Pena fixada na primeira fase, a partir das circunstâncias judiciais."
+          }
+        ],
+        "remissoes": [
+          "Art. 33, §3º",
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-60",
+      "unit_id": "63eafcfd-d5e2-518d-ab5b-a25644265a7f",
+      "content_sha256": "b18b171a00302fda2d1f64d7bd3e4468c623af42a9790df398440c47e80d7e34",
+      "simples": "A situação econômica é critério principal na multa. A lei admite aumento até o triplo quando a multa máxima seria ineficaz diante dessa situação, e mantém hipótese de multa substitutiva a integrar com o art. 44 atual.",
+      "pontos": [
+        "Situação econômica do réu é critério principal.",
+        "Aumento ATÉ o triplo é condicionado à ineficácia mesmo no máximo."
+      ],
+      "atencao": [
+        "Não triplicar toda multa automaticamente. A referência a até seis meses no §2º não deve ser usada como veto universal às possibilidades posteriores do art. 44."
+      ],
+      "exemplo": "A decisão demonstra que mesmo a multa máxima é ineficaz pela situação econômica e examina o aumento. Variação: Sem demonstração dessa condição, não impor triplo só por chamar o condenado de rico.",
+      "prova": [
+        "O triplo é obrigatório em toda condenação? Não; há condição e limite máximo.",
+        "O critério é somente a pena de prisão? Não; o caput indica principalmente a situação econômica."
+      ],
+      "termos": [
+        {
+          "termo": "Ineficácia econômica",
+          "significado": "Condição concreta que fundamenta o aumento excepcional da multa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "63eafcfd-d5e2-518d-ab5b-a25644265a7f",
+        "content_sha256": "b18b171a00302fda2d1f64d7bd3e4468c623af42a9790df398440c47e80d7e34",
+        "simples": "Na fixação da pena de multa o juiz deve atender, principalmente, à situação econômica do réu. A multa pode ser aumentada até o triplo se, por essa situação, for ineficaz mesmo aplicada no máximo. A pena privativa de liberdade aplicada, não superior a 6 meses, pode ser substituída pela de multa, observados os critérios dos incisos II e III do art. 44.",
+        "pontos": [
+          "Critério principal: situação econômica do réu.",
+          "§1º: aumento da multa até o triplo se ineficaz mesmo no máximo.",
+          "§2º: pena privativa não superior a 6 meses pode ser substituída por multa (critérios do art. 44, II e III)."
+        ],
+        "atencao": [
+          "O aumento é até o TRIPLO e só se a multa for ineficaz no máximo.",
+          "Substituição por multa: pena de até 6 meses."
+        ],
+        "exemplo": "Réu muito rico condenado ao máximo de dias-multa pode ter o valor aumentado até o triplo.",
+        "prova": [
+          "Assertiva que permite substituir por multa pena de 1 ano erra: o §2º trata de pena não superior a 6 meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 49",
+          "Art. 44, II e III"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-61",
+      "unit_id": "c0fdd59b-189c-5841-acb7-69df599f7f7e",
+      "content_sha256": "f63c0f16811cd4bd5bc4d2bf5328ab55f095ff118fb8d753957165ef87c062be",
+      "simples": "Agravantes legais atuam quando a circunstância não constitui nem qualifica o crime. O rol inclui reincidência e motivos, meios e contextos específicos; em 2025 foi acrescentada a prática nas dependências de instituição de ensino.",
+      "pontos": [
+        "Não duplicar elementar/qualificadora como agravante.",
+        "Alínea m: instituição de ensino, Lei 15.159/2025, publicada e vigente em 4/7/2025.",
+        "Embriaguez preordenada não é sinônimo de toda embriaguez."
+      ],
+      "atencao": [
+        "Não presumir circunstância por rótulo genérico nem criar fração fixa inexistente no artigo. Cada agravante exige seus pressupostos."
+      ],
+      "exemplo": "A mesma circunstância já qualifica o crime e é novamente usada como agravante. Variação: Se é circunstância autônoma que não constitui nem qualifica o tipo, examinar sua incidência e fundamentação.",
+      "prova": [
+        "Pode duplicar qualificadora pela mesma razão? Não; o caput ressalva esse uso.",
+        "A agravante escolar é apenas projeto de lei? Não; foi incluída na redação legal de 2025."
+      ],
+      "termos": [
+        {
+          "termo": "Agravante",
+          "significado": "Circunstância legal da segunda fase, com vedação da dupla valoração do mesmo elemento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm"
+      ],
+      "expected": {
+        "unit_id": "c0fdd59b-189c-5841-acb7-69df599f7f7e",
+        "content_sha256": "f63c0f16811cd4bd5bc4d2bf5328ab55f095ff118fb8d753957165ef87c062be",
+        "simples": "Lista as agravantes genéricas: circunstâncias que SEMPRE agravam a pena, quando não constituem nem qualificam o crime. São a reincidência e, no inciso II, motivos e modos de agir que tornam o fato mais reprovável: motivo fútil ou torpe; conexão com outro crime; traição, emboscada ou dissimulação; veneno, fogo, explosivo, tortura ou meio insidioso ou cruel; crime contra ascendente, descendente, irmão ou cônjuge; abuso de autoridade ou de relações domésticas, de coabitação ou hospitalidade, ou violência contra a mulher na forma da lei específica; abuso de poder ou violação de dever do cargo, ofício, ministério ou profissão; crime contra criança, maior de 60 anos, enfermo ou mulher grávida; ofendido sob proteção imediata da autoridade; e outras hipóteses do inciso II (confira o texto completo, que inclui a ocasião de calamidade).",
+        "pontos": [
+          "Só agravam quando NÃO constituem nem qualificam o crime (para evitar dupla valoração).",
+          "I – reincidência.",
+          "II, a: motivo fútil ou torpe.",
+          "II, b: para facilitar ou assegurar execução, ocultação, impunidade ou vantagem de outro crime.",
+          "II, c: traição, emboscada, dissimulação ou recurso que dificultou a defesa.",
+          "II, d: veneno, fogo, explosivo, tortura ou meio insidioso, cruel ou de perigo comum.",
+          "II, e: contra ascendente, descendente, irmão ou cônjuge.",
+          "II, f: abuso de autoridade, relações domésticas, coabitação ou hospitalidade, ou violência contra a mulher.",
+          "II, g: abuso de poder ou violação de dever inerente ao cargo, ofício, ministério ou profissão.",
+          "II, h: contra criança, maior de 60 anos, enfermo ou mulher grávida.",
+          "II, i: ofendido sob imediata proteção da autoridade."
+        ],
+        "atencao": [
+          "Se a circunstância já qualifica o crime (ex.: motivo torpe no homicídio qualificado), não pode agravar de novo.",
+          "As agravantes SEMPRE agravam, mas a lei não fixa o quanto: o juiz define."
+        ],
+        "exemplo": "O crime cometido contra o próprio irmão ou contra pessoa maior de 60 anos tem a pena agravada na segunda fase da dosimetria.",
+        "prova": [
+          "Assertiva que aplica agravante que já é qualificadora do crime erra: o artigo só vale quando a circunstância não constitui nem qualifica o crime."
+        ],
+        "termos": [
+          {
+            "termo": "Agravante genérica",
+            "significado": "Circunstância legal que aumenta a pena em qualquer crime, na segunda fase."
+          }
+        ],
+        "remissoes": [
+          "Art. 62",
+          "Art. 63 (reincidência)",
+          "Art. 68 (cálculo da pena)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-62",
+      "unit_id": "03a32d9d-44c7-59d2-ad6c-f48e4e609d26",
+      "content_sha256": "bbb985ae6f648cd5a6767d9d39d8a906a7b00010e8b7e5c0fb9576c561567b83",
+      "simples": "No concurso de pessoas, organização, coação/indução e execução mediante paga têm agravantes próprias. A posição de cada agente e sua conduta precisam ser identificadas; estar no grupo não prova todas as hipóteses.",
+      "pontos": [
+        "Organizar/dirigir cooperação é hipótese do inciso I.",
+        "Executar ou participar mediante paga/promessa está no IV."
+      ],
+      "atencao": [
+        "Não agravar indiscriminadamente todos pela atividade específica de um participante. Concurso exige contribuição e responsabilidade individual."
+      ],
+      "exemplo": "Um agente dirige a atividade dos demais e a hipótese legal é demonstrada. Variação: Outro participante sem essa direção não recebe a mesma agravante automaticamente só por estar no concurso.",
+      "prova": [
+        "Todo participante necessariamente organiza? Não; identificar o papel.",
+        "Promessa de recompensa consta do texto? Sim; no inciso IV."
+      ],
+      "termos": [
+        {
+          "termo": "Agravante individual",
+          "significado": "Incidência ligada à atuação do agente, não transmitida automaticamente a todos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "03a32d9d-44c7-59d2-ad6c-f48e4e609d26",
+        "content_sha256": "bbb985ae6f648cd5a6767d9d39d8a906a7b00010e8b7e5c0fb9576c561567b83",
+        "simples": "Agravantes no concurso de pessoas: a pena é ainda agravada para o agente que promove ou organiza a cooperação no crime ou dirige a atividade dos demais; coage ou induz outrem à execução material do crime; instiga ou determina a cometer o crime alguém sujeito à sua autoridade ou não punível em virtude de condição ou qualidade pessoal; ou executa o crime, ou nele participa, mediante paga ou promessa de recompensa.",
+        "pontos": [
+          "I – promove ou organiza a cooperação ou dirige os demais.",
+          "II – coage ou induz outrem à execução material.",
+          "III – instiga ou determina a cometer o crime alguém sujeito à sua autoridade ou não punível por condição pessoal.",
+          "IV – executa ou participa mediante paga ou promessa de recompensa."
+        ],
+        "atencao": [
+          "Voltadas ao concurso de pessoas: ligam-se ao papel de cada agente."
+        ],
+        "exemplo": "O chefe que organiza o grupo e dirige os demais tem a pena agravada (inciso I).",
+        "prova": [
+          "Assertiva que aplica o art. 62 a quem comete o crime sozinho erra: pressupõe concurso de agentes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61",
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63",
+      "unit_id": "0a59dd7c-945b-5c59-8522-0991b670bc2f",
+      "content_sha256": "7a33baad36013a4cd3a08d06b7bb5467e9164b370d52920f0e6d4a6fd311c083",
+      "simples": "Reincidência exige novo crime depois do trânsito em julgado de condenação por crime anterior, no Brasil ou exterior. A ordem dos eventos é essencial; processo em curso não equivale a condenação definitiva.",
+      "pontos": [
+        "Trânsito anterior ao novo crime.",
+        "Condenação brasileira OU estrangeira, respeitados os demais requisitos."
+      ],
+      "atencao": [
+        "Não usar condenação que só se tornou definitiva depois do novo fato para afirmar este requisito. Examinar também art. 64 e regime pertinente."
+      ],
+      "exemplo": "O novo crime ocorre antes do trânsito em julgado da condenação anterior. Variação: Se ocorre depois do trânsito, esse requisito temporal muda, sem dispensar os demais.",
+      "prova": [
+        "Basta processo anterior aberto? Não; exige condenação transitada.",
+        "A data da sentença posterior substitui a data do novo crime? Não; a ordem exigida usa os eventos indicados."
+      ],
+      "termos": [
+        {
+          "termo": "Reincidência",
+          "significado": "Novo crime após condenação anterior definitiva, nas condições pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0a59dd7c-945b-5c59-8522-0991b670bc2f",
+        "content_sha256": "7a33baad36013a4cd3a08d06b7bb5467e9164b370d52920f0e6d4a6fd311c083",
+        "simples": "Reincidência: verifica-se quando o agente comete novo crime depois de transitar em julgado a sentença que, no País ou no estrangeiro, o tenha condenado por crime anterior.",
+        "pontos": [
+          "Novo crime depois do trânsito em julgado de sentença condenatória por crime anterior.",
+          "A condenação anterior pode ser no País ou no estrangeiro."
+        ],
+        "atencao": [
+          "O marco é o TRÂNSITO EM JULGADO da condenação anterior.",
+          "Conta condenação no estrangeiro."
+        ],
+        "exemplo": "Quem, depois de condenação definitiva por furto, comete roubo é reincidente.",
+        "prova": [
+          "Assertiva que considera reincidente quem comete novo crime com condenação anterior ainda recorrível erra: exige trânsito em julgado."
+        ],
+        "termos": [
+          {
+            "termo": "Reincidente",
+            "significado": "Quem comete novo crime após condenação definitiva por crime anterior."
+          }
+        ],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-64",
+      "unit_id": "b4c5c82d-3f37-57d1-98a7-9625fc3d68ea",
+      "content_sha256": "a6bcccdaf7e56d5f9854e70ca7f5b3adc880eb61a4c80873a480bfa65a7ec165",
+      "simples": "O período depurador de reincidência é contado do cumprimento ou extinção da pena até a infração posterior, com regra de cômputo do período de prova sem revogação. Crimes militares próprios e políticos têm ressalva específica.",
+      "pontos": [
+        "Período SUPERIOR a 5 anos, não exatamente cinco.",
+        "Marco não é automaticamente o trânsito da condenação.",
+        "Não confundir reincidência com toda análise de antecedentes."
+      ],
+      "atencao": [
+        "O artigo não apaga automaticamente todos os dados históricos após cinco anos. Antecedentes e limites jurisprudenciais exigem análise própria; crime militar próprio não é qualquer crime de militar."
+      ],
+      "exemplo": "A questão conta os cinco anos somente desde o trânsito, ignorando o cumprimento ou extinção. Variação: Com o marco correto, ainda verificar se o período é superior a cinco e o cômputo de prova sem revogação.",
+      "prova": [
+        "O marco legal é sempre o trânsito? Não; cumprimento ou extinção.",
+        "Exatamente cinco é superior a cinco? Não; observar a expressão do inciso."
+      ],
+      "termos": [
+        {
+          "termo": "Período depurador",
+          "significado": "Intervalo relevante à reincidência, com marcos legais específicos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b4c5c82d-3f37-57d1-98a7-9625fc3d68ea",
+        "content_sha256": "a6bcccdaf7e56d5f9854e70ca7f5b3adc880eb61a4c80873a480bfa65a7ec165",
+        "simples": "Efeitos da reincidência: não prevalece a condenação anterior se, entre a data do cumprimento ou extinção da pena e a infração posterior, tiver decorrido período superior a 5 anos, computado o período de prova da suspensão ou do livramento condicional, se não ocorrer revogação (período depurador). Não se consideram os crimes militares próprios e políticos.",
+        "pontos": [
+          "Prazo depurador: mais de 5 anos entre cumprimento ou extinção da pena e a nova infração.",
+          "Computa-se o período de prova da suspensão ou do livramento, se não houve revogação.",
+          "Não se consideram crimes militares próprios e políticos."
+        ],
+        "atencao": [
+          "Superado o prazo de 5 anos, o agente volta a ser primário para fins de reincidência (mas os antecedentes podem ser tema à parte).",
+          "Crimes militares próprios e políticos não geram reincidência."
+        ],
+        "exemplo": "Quem terminou de cumprir pena há mais de 5 anos e comete novo crime não é reincidente.",
+        "prova": [
+          "Assertiva que fixa o prazo depurador em 10 anos erra: o texto fala em mais de 5 anos."
+        ],
+        "termos": [
+          {
+            "termo": "Período depurador",
+            "significado": "Tempo após o qual a condenação anterior deixa de gerar reincidência."
+          }
+        ],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-65",
+      "unit_id": "3fcf3193-624b-5092-8d3c-c9750dd72ffa",
+      "content_sha256": "ffaa008ce2847c0f88c510a7efb7423a7551b8ea060ebaf092cb6e48c7ef97bb",
+      "simples": "Atenuantes têm requisitos próprios. A Lei 15.160/2025 alterou a regra etária: menor de 21 no fato ou maior de 70 na sentença, com exceção para crime envolvendo violência sexual contra mulher. Outras atenuantes não são isenção automática.",
+      "pontos": [
+        "Idades em momentos diferentes: FATO e SENTENÇA.",
+        "Exceção etária expressa para violência sexual contra mulher; Lei 15.160 publicada e vigente em 4/7/2025.",
+        "Súmula 231/STJ distingue atenuante da causa de diminuição."
+      ],
+      "atencao": [
+        "Mudança prejudicial exige lei penal no tempo. Súmula 545 revisada em 10/9/2025, DJEN 2/12/2025: a confissão possibilita atenuação independentemente de uso no convencimento. O PDF geral ainda contém a versão antiga; utilizar o enunciado atualizado consultado no SCON. Não se certificam aqui todas as modalidades de confissão e teses do Tema 1194."
+      ],
+      "exemplo": "A questão pede a redação etária atual e ignora a exceção expressa para violência sexual contra mulher. Variação: Em fato anterior à mudança, analisar irretroatividade prejudicial; não aplicar a exceção nova só por constar no compilado de hoje.",
+      "prova": [
+        "As duas idades são aferidas na mesma data? Não; fato para 21 e sentença para 70.",
+        "A atenuante de confissão depende sempre de uso pelo julgador? Não; a Súmula 545 revisada afasta essa exigência, sem dispensar análise dos demais requisitos."
+      ],
+      "termos": [
+        {
+          "termo": "Atenuante etária",
+          "significado": "Benefício ligado à idade em marcos distintos e à exceção atual, com análise temporal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15160.htm",
+        "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=545&tipo_visualizacao=RESUMO"
+      ],
+      "expected": {
+        "unit_id": "3fcf3193-624b-5092-8d3c-c9750dd72ffa",
+        "content_sha256": "ffaa008ce2847c0f88c510a7efb7423a7551b8ea060ebaf092cb6e48c7ef97bb",
+        "simples": "Atenuantes genéricas: circunstâncias que SEMPRE atenuam a pena. Incluem ser o agente menor de 21 anos na data do fato ou maior de 70 na data da sentença (salvo crime com violência sexual contra a mulher, conforme a redação do texto); o desconhecimento da lei; ter o agente cometido o crime por relevante valor social ou moral; ter procurado, espontaneamente e com eficiência, logo após o crime, evitar ou minorar as consequências ou reparado o dano antes do julgamento; coação resistível, cumprimento de ordem de autoridade superior ou violenta emoção provocada por ato injusto da vítima; confissão espontânea perante a autoridade; e influência de multidão em tumulto, se não a provocou.",
+        "pontos": [
+          "I – menor de 21 anos na data do fato ou maior de 70 na data da sentença (com a ressalva do texto).",
+          "II – desconhecimento da lei.",
+          "III, a: relevante valor social ou moral.",
+          "III, b: evitar ou minorar consequências ou reparar o dano antes do julgamento.",
+          "III, c: coação resistível, ordem de autoridade superior ou violenta emoção por ato injusto da vítima.",
+          "III, d: confissão espontânea da autoria perante a autoridade.",
+          "III, e: influência de multidão em tumulto, se não a provocou."
+        ],
+        "atencao": [
+          "Menor de 21: na data do FATO; maior de 70: na data da SENTENÇA.",
+          "Confissão deve ser ESPONTÂNEA e perante a autoridade.",
+          "A reparação do dano precisa ocorrer ANTES do julgamento (diferente do arrependimento posterior, até o recebimento da denúncia)."
+        ],
+        "exemplo": "O réu confessa espontaneamente a autoria diante do delegado: incide a atenuante do inciso III, d.",
+        "prova": [
+          "Assertiva que considera a idade do agente na data da sentença para a atenuante da menoridade erra: é a data do fato."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66",
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-66",
+      "unit_id": "ce591c2b-f4bb-5039-8c80-fe96eecfeb45",
+      "content_sha256": "5329627ee4791fecde0c2df11340738944997b709873a3fd151478b301b673c1",
+      "simples": "Circunstância relevante anterior ou posterior pode atenuar a pena mesmo sem previsão expressa específica. A regra exige fundamentação e não é autorização para criar causa de diminuição ou afastar os limites da fase intermediária.",
+      "pontos": [
+        "Circunstância relevante pode ser anterior OU posterior.",
+        "Atenuação é possibilidade fundamentada."
+      ],
+      "atencao": [
+        "Não confundir atenuante inominada com fração obrigatória de diminuição. A Súmula 231/STJ qualifica o mínimo legal na segunda fase."
+      ],
+      "exemplo": "Uma circunstância relevante é demonstrada e fundamentada para exame da atenuação. Variação: Alegação genérica sem suporte não autoriza redução automática nem percentual inventado.",
+      "prova": [
+        "Exige que a circunstância conste de rol específico? Não; o artigo admite não prevista expressamente.",
+        "O artigo fixa metade obrigatória? Não; não contém tal fração."
+      ],
+      "termos": [
+        {
+          "termo": "Atenuante inominada",
+          "significado": "Circunstância relevante fora do rol específico, a valorar fundamentadamente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ce591c2b-f4bb-5039-8c80-fe96eecfeb45",
+        "content_sha256": "5329627ee4791fecde0c2df11340738944997b709873a3fd151478b301b673c1",
+        "simples": "Atenuante inominada: a pena pode ainda ser atenuada em razão de circunstância relevante, anterior ou posterior ao crime, embora não prevista expressamente em lei.",
+        "pontos": [
+          "Circunstância relevante, anterior ou posterior ao crime.",
+          "Mesmo sem previsão expressa em lei.",
+          "É faculdade do juiz ('poderá')."
+        ],
+        "atencao": [
+          "Diferente do art. 65 ('sempre atenuam'): aqui a atenuação é facultativa e aberta."
+        ],
+        "exemplo": "O juiz reconhece como relevante o fato de o réu ter prestado socorro à vítima, ainda que isso não esteja listado no art. 65.",
+        "prova": [
+          "Assertiva que restringe as atenuantes ao rol do art. 65 erra: o art. 66 admite circunstância relevante não prevista."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-67",
+      "unit_id": "2d6447a7-5599-53e4-ab6e-7b36a3746144",
+      "content_sha256": "89cf01e265aea67cf9413f3d4dbe67de4357c037f1f76767758d165284d93954",
+      "simples": "No concurso de agravantes e atenuantes, a pena se aproxima do limite indicado pelas preponderantes. A lista textual inclui motivos, personalidade e reincidência; a aplicação concreta não é contagem mecânica de sinais positivos e negativos.",
+      "pontos": [
+        "Identificar natureza e preponderância, não apenas quantidade.",
+        "Fundamentar o concurso e evitar duplicação de fatos."
+      ],
+      "atencao": [
+        "O artigo não contém fórmula universal de compensação para toda confissão e reincidência. A Súmula 545 revisada afasta a exigência de uso da confissão no convencimento, mas não resolve sozinha a compensação nem todas as teses do Tema 1194."
+      ],
+      "exemplo": "A decisão apenas conta duas atenuantes e uma agravante, sem examinar sua natureza. Variação: Com fundamentação sobre preponderância e teses aplicáveis, a análise deixa de ser simples soma aritmética.",
+      "prova": [
+        "Basta contar o número de circunstâncias? Não; o texto trata de preponderância.",
+        "O artigo fixa fração única de compensação? Não; não apresenta essa fórmula."
+      ],
+      "termos": [
+        {
+          "termo": "Preponderância",
+          "significado": "Peso jurídico da circunstância no concurso, distinto de mera contagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2d6447a7-5599-53e4-ab6e-7b36a3746144",
+        "content_sha256": "89cf01e265aea67cf9413f3d4dbe67de4357c037f1f76767758d165284d93954",
+        "simples": "Concurso de agravantes e atenuantes: a pena deve aproximar-se do limite indicado pelas circunstâncias preponderantes, entendendo-se como tais as que resultam dos motivos determinantes do crime, da personalidade do agente e da reincidência.",
+        "pontos": [
+          "Prevalecem as circunstâncias preponderantes.",
+          "Preponderantes: motivos determinantes, personalidade do agente e reincidência."
+        ],
+        "atencao": [
+          "A reincidência está entre as preponderantes."
+        ],
+        "exemplo": "Havendo confissão (atenuante) e reincidência (agravante), a reincidência pesa mais por ser preponderante.",
+        "prova": [
+          "Assertiva que exclui a reincidência das circunstâncias preponderantes contraria o art. 67."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 61 a 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-68",
+      "unit_id": "65bff919-10b4-5cff-9a99-dada357a5949",
+      "content_sha256": "360d421cd57e31b48b1fe3e0412df5403763bef723570da4422c5c3f5b369ced",
+      "simples": "A dosimetria segue três fases: pena-base pelos critérios judiciais, agravantes/atenuantes e causas de aumento/diminuição. O parágrafo tem regra específica para concurso de causas da Parte Especial, sem permitir ignorar todas as majorantes indiscriminadamente.",
+      "pontos": [
+        "1ª: art. 59; 2ª: agravantes/atenuantes; 3ª: causas de aumento/diminuição.",
+        "Parágrafo: faculdade no concurso de causas da Parte Especial, com prevalência da que mais altera."
+      ],
+      "atencao": [
+        "Súmula 231 trata de atenuante na segunda fase, não proibição universal de diminuir abaixo do mínimo em toda terceira fase. Não valorar o mesmo fato duas vezes."
+      ],
+      "exemplo": "A causa de diminuição é tratada como simples atenuante e colocada na segunda fase. Variação: Reconhecida sua natureza de causa, examinar a terceira fase e seus requisitos, não os mesmos limites da atenuante.",
+      "prova": [
+        "Agravantes vêm antes da pena-base? Não; a ordem é trifásica.",
+        "Atenuante e causa de diminuição são equivalentes? Não; ocupam fases e regimes distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Sistema trifásico",
+          "significado": "Sequência legal das três etapas de cálculo da pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "65bff919-10b4-5cff-9a99-dada357a5949",
+        "content_sha256": "360d421cd57e31b48b1fe3e0412df5403763bef723570da4422c5c3f5b369ced",
+        "simples": "Cálculo da pena (critério trifásico): primeiro fixa-se a pena-base pelo art. 59; depois consideram-se as circunstâncias atenuantes e agravantes; por último, as causas de diminuição e de aumento. No concurso de causas de aumento ou diminuição da parte especial, o juiz pode limitar-se a um só aumento ou a uma só diminuição, prevalecendo a que mais aumente ou diminua.",
+        "pontos": [
+          "1ª fase: pena-base (art. 59).",
+          "2ª fase: atenuantes e agravantes.",
+          "3ª fase: causas de diminuição e de aumento.",
+          "Parágrafo único: concurso de causas da parte especial: pode aplicar só uma, prevalecendo a que mais aumente ou diminua."
+        ],
+        "atencao": [
+          "Ordem das fases: pena-base, atenuantes/agravantes, causas de aumento/diminuição.",
+          "O parágrafo único vale para causas da PARTE ESPECIAL."
+        ],
+        "exemplo": "O juiz fixa a pena-base, aplica a atenuante da confissão e, por fim, aumenta pela causa de aumento prevista no tipo.",
+        "prova": [
+          "Assertiva que inverte a ordem, aplicando as causas de aumento antes das agravantes, contraria o art. 68."
+        ],
+        "termos": [
+          {
+            "termo": "Sistema trifásico",
+            "significado": "Método de cálculo da pena em três fases sucessivas."
+          }
+        ],
+        "remissoes": [
+          "Art. 59",
+          "Arts. 61 a 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-69",
+      "unit_id": "36aa5438-160f-5e7f-ab6a-e6064b7f4284",
+      "content_sha256": "efd147b19b643eb2e821bb7581ac5f6fbb03625500f48ec122e8efeaddb8ec67",
+      "simples": "Mais de uma ação ou omissão produzindo dois ou mais crimes tem regra de cumulação. Reclusão é executada antes da detenção quando cumuladas; restritivas compatíveis podem ser cumpridas simultaneamente, e as demais sucessivamente.",
+      "pontos": [
+        "Mais de uma conduta; cumulação das penas privativas.",
+        "Compatibilidade orienta simultaneidade das restritivas."
+      ],
+      "atencao": [
+        "Não presumir concurso material em toda pluralidade de crimes: examinar também formal e continuidade. O §1º impõe condição própria à substituição."
+      ],
+      "exemplo": "Duas ações autônomas preenchem crimes distintos sem configuração de continuidade. Variação: Se há uma só ação, reavaliar o art. 70, sem somar automaticamente pela regra material.",
+      "prova": [
+        "Quantidade de crimes resolve sozinha o tipo de concurso? Não; considerar condutas e requisitos.",
+        "Restritivas incompatíveis são sempre simultâneas? Não; o §2º prevê sucessividade."
+      ],
+      "termos": [
+        {
+          "termo": "Concurso material",
+          "significado": "Pluralidade de condutas com a cumulação nas condições do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "36aa5438-160f-5e7f-ab6a-e6064b7f4284",
+        "content_sha256": "efd147b19b643eb2e821bb7581ac5f6fbb03625500f48ec122e8efeaddb8ec67",
+        "simples": "Concurso material: quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplicam-se cumulativamente as penas privativas de liberdade. Se há reclusão e detenção, executa-se primeiro a reclusão. Se foi aplicada pena privativa de liberdade, não suspensa, por um dos crimes, é incabível a substituição do art. 44 para os demais. Penas restritivas de direitos compatíveis cumprem-se simultaneamente; as demais, sucessivamente.",
+        "pontos": [
+          "Mais de uma ação ou omissão, dois ou mais crimes: penas somadas.",
+          "Reclusão cumpre-se antes da detenção.",
+          "§1º: pena privativa não suspensa em um crime impede a substituição nos demais.",
+          "§2º: restritivas compatíveis: simultâneas; as demais: sucessivas."
+        ],
+        "atencao": [
+          "Concurso MATERIAL = pluralidade de condutas, penas somadas (cúmulo material).",
+          "A reclusão é executada primeiro."
+        ],
+        "exemplo": "Em dias diferentes, o agente comete um roubo e uma extorsão: as penas são somadas.",
+        "prova": [
+          "Assertiva que aplica o cúmulo material a uma única ação com dois resultados erra: isso é concurso formal (art. 70)."
+        ],
+        "termos": [
+          {
+            "termo": "Cúmulo material",
+            "significado": "Soma das penas de cada crime."
+          }
+        ],
+        "remissoes": [
+          "Art. 70",
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-70",
+      "unit_id": "9a20a4d3-30fd-565d-b43d-8186d99ed278",
+      "content_sha256": "2ba46c97f0e04e25509a6d7ce892443b2cd91c10295d208d517af1a597d13d59",
+      "simples": "Uma ação ou omissão com dois ou mais crimes tem regra de exasperação, mas dolo e desígnios autônomos levam à cumulação prevista. A pena pela regra favorável não deve superar a soma cabível no concurso material.",
+      "pontos": [
+        "Regra: pena mais grave ou uma igual, com 1/6 até metade.",
+        "Desígnios autônomos na hipótese dolosa: cumulação.",
+        "Parágrafo limita pelo concurso material."
+      ],
+      "atencao": [
+        "Não atribuir desígnios autônomos apenas pela pluralidade de vítimas. Demonstrar o elemento necessário e comparar o resultado das regras."
+      ],
+      "exemplo": "Uma só conduta produz crimes na hipótese de concurso formal sem desígnios autônomos. Variação: Se a conduta dolosa tem desígnios autônomos demonstrados, a resposta passa à cumulação.",
+      "prova": [
+        "Toda ação única garante exasperação? Não; há hipótese de cumulação.",
+        "Pode superar a soma material pela regra do parágrafo? Não; esse é o limite comparativo."
+      ],
+      "termos": [
+        {
+          "termo": "Concurso formal",
+          "significado": "Pluralidade de crimes numa conduta, com regimes diferentes conforme os requisitos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9a20a4d3-30fd-565d-b43d-8186d99ed278",
+        "content_sha256": "2ba46c97f0e04e25509a6d7ce892443b2cd91c10295d208d517af1a597d13d59",
+        "simples": "Concurso formal: quando o agente, mediante uma só ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplica-se a mais grave das penas, ou, se iguais, só uma, aumentada de um sexto até metade. As penas se somam, porém, se a ação ou omissão é dolosa e os crimes resultam de desígnios autônomos (concurso formal impróprio). A pena não pode exceder a que seria cabível pela regra do concurso material.",
+        "pontos": [
+          "Uma só ação ou omissão, dois ou mais crimes.",
+          "Pena: a mais grave (ou uma delas, se iguais) aumentada de um sexto até metade (exasperação).",
+          "Se dolosa e de desígnios autônomos: penas somadas (cúmulo).",
+          "Parágrafo único: limite — não pode exceder o que seria no concurso material."
+        ],
+        "atencao": [
+          "Concurso formal próprio: exasperação de 1/6 até a metade; impróprio (desígnios autônomos): cúmulo material.",
+          "A regra do art. 69 funciona como teto (parágrafo único)."
+        ],
+        "exemplo": "Com uma só explosão, o agente causa a morte de duas pessoas sem querer ambas as mortes: concurso formal.",
+        "prova": [
+          "Assertiva que fixa o aumento do concurso formal em até dois terços erra: é de um sexto até a metade."
+        ],
+        "termos": [
+          {
+            "termo": "Desígnios autônomos",
+            "significado": "Propósitos distintos do agente para cada resultado."
+          }
+        ],
+        "remissoes": [
+          "Art. 69",
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-71",
+      "unit_id": "30011d5e-bbc4-532a-af34-999e84effa56",
+      "content_sha256": "936a4245255f269f99c7d0b27ab8b125e07e853dafc86f97f6a775fab0893bd4",
+      "simples": "Continuidade exige crimes da mesma espécie e conexão nas condições que permitem considerar os seguintes continuação do primeiro. O parágrafo qualifica crimes dolosos com violência/ameaça e vítimas diferentes; não basta proximidade temporal isolada.",
+      "pontos": [
+        "Regra: aumento de 1/6 a 2/3.",
+        "Hipótese qualificada: até o triplo, com critérios e limites remissivos.",
+        "Tempo, lugar, modo e outras condições são relevantes."
+      ],
+      "atencao": [
+        "Não prometer continuidade automática por repetir um delito. A análise concreta e os requisitos jurisprudenciais precisam de verificação; até o triplo não é triplo obrigatório."
+      ],
+      "exemplo": "A questão conclui continuidade apenas porque dois fatos ocorreram na mesma semana. Variação: Se todos os vínculos pertinentes são demonstrados, a conclusão pode mudar; ainda identificar regra comum ou qualificada.",
+      "prova": [
+        "Proximidade temporal sozinha resolve? Não; a redação exige conjunto de condições.",
+        "O parágrafo determina sempre triplicar? Não; prevê até o triplo com os critérios."
+      ],
+      "termos": [
+        {
+          "termo": "Continuidade delitiva",
+          "significado": "Tratamento unitário condicionado de crimes sucessivos, distinto de repetição automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "30011d5e-bbc4-532a-af34-999e84effa56",
+        "content_sha256": "936a4245255f269f99c7d0b27ab8b125e07e853dafc86f97f6a775fab0893bd4",
+        "simples": "Crime continuado: quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes da mesma espécie e, pelas condições de tempo, lugar, maneira de execução e outras semelhantes, os subsequentes devem ser havidos como continuação do primeiro, aplica-se a pena de um só dos crimes, se idênticas, ou a mais grave, se diversas, aumentada de um sexto a dois terços. O parágrafo único trata dos crimes dolosos contra vítimas diferentes, com violência ou grave ameaça, em que o juiz pode aumentar a pena até o triplo, respeitados os limites dos arts. 70, parágrafo único e 75.",
+        "pontos": [
+          "Dois ou mais crimes da mesma espécie, em condições semelhantes de tempo, lugar e modo de execução.",
+          "Pena de um só dos crimes (ou o mais grave), aumentada de um sexto a dois terços.",
+          "Parágrafo único: dolosos, vítimas diferentes, com violência ou grave ameaça: aumento até o triplo, observados os arts. 70 e 75."
+        ],
+        "atencao": [
+          "Aumento comum: de 1/6 a 2/3; no parágrafo único: até o TRIPLO.",
+          "Crimes da MESMA espécie (e condições semelhantes)."
+        ],
+        "exemplo": "Funcionário desvia pequenas quantias da empresa toda semana pelo mesmo método: crime continuado.",
+        "prova": [
+          "Assertiva que aplica a mesma pena aumentada até a metade no crime continuado simples erra: é de um sexto a dois terços."
+        ],
+        "termos": [
+          {
+            "termo": "Crime continuado",
+            "significado": "Ficção legal que trata várias condutas semelhantes como um só crime para fins de pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 70",
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-72",
+      "unit_id": "796ee9d3-aeb6-5364-a7c7-bad53d90ca18",
+      "content_sha256": "40a220f32d42d47d088bd786bd96b2440efef209dd1bf3cf2826b4a3228ccfe7",
+      "simples": "O texto prevê multas distintas e integrais no concurso de crimes. A interpretação do regime de continuidade exige cuidado específico; não se usa uma frase geral para certificar toda combinação de penas e benefícios.",
+      "pontos": [
+        "Multas e penas privativas têm regras que devem ser distinguidas.",
+        "Identificar material, formal ou continuidade antes do cálculo."
+      ],
+      "atencao": [
+        "Este bloco não certifica todas as teses de multa no crime continuado. Não gerar exercício automático que transforme a literalidade em resposta universal para qualquer continuidade."
+      ],
+      "exemplo": "A questão mistura a redução de uma pena privativa com cancelamento automático de todas as multas. Variação: Se a hipótese é continuidade, exigir a interpretação pertinente antes de aplicar mecanicamente regra de outro concurso.",
+      "prova": [
+        "Exasperação da prisão apaga toda multa automaticamente? Não; é preciso analisar o regime da multa.",
+        "A literalidade certifica toda continuidade? Não; há integração interpretativa específica."
+      ],
+      "termos": [
+        {
+          "termo": "Multa no concurso",
+          "significado": "Sanção pecuniária com análise própria conforme o tipo de concurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "796ee9d3-aeb6-5364-a7c7-bad53d90ca18",
+        "content_sha256": "40a220f32d42d47d088bd786bd96b2440efef209dd1bf3cf2826b4a3228ccfe7",
+        "simples": "No concurso de crimes, as penas de multa são aplicadas distinta e integralmente, isto é, somam-se sem exasperação.",
+        "pontos": [
+          "Multas aplicadas de forma distinta e integral em cada crime."
+        ],
+        "atencao": [
+          "Mesmo no concurso formal ou no crime continuado, a multa é aplicada integralmente em cada crime."
+        ],
+        "exemplo": "Em dois crimes, cada multa é calculada separadamente e ambas são cobradas.",
+        "prova": [
+          "Assertiva que aplica só uma multa aumentada no concurso de crimes contraria o art. 72."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 69 a 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-73",
+      "unit_id": "929f1775-f1fb-5813-9afb-73cf8f187cfd",
+      "content_sha256": "95820171b4ecd05c8363de9224fa1f7184bdc2b19c831d6464bea6fe0cd5786d",
+      "simples": "Erro na execução atinge pessoa diversa da pretendida e remete às condições da vítima visada. Se a vítima pretendida também é atingida, há remissão ao concurso formal. É diferente de erro sobre identidade antes da execução.",
+      "pontos": [
+        "Considerar art. 20, §3º quanto às qualidades da vítima pretendida.",
+        "Se ambas são atingidas, remissão ao art. 70."
+      ],
+      "atencao": [
+        "Não aplicar o mesmo cálculo a todo erro ou pluralidade de resultados sem seus elementos. Distinguir erro de execução e erro sobre pessoa."
+      ],
+      "exemplo": "O meio se desvia e atinge pessoa diversa daquela contra quem o agente pretendia atuar. Variação: Se também atinge a pretendida, reavaliar a hipótese final e o art. 70, não repetir a resposta de vítima única.",
+      "prova": [
+        "O erro sempre isenta? Não; há disciplina de imputação própria.",
+        "A pessoa pretendida também atingida é irrelevante? Não; muda a remissão prevista."
+      ],
+      "termos": [
+        {
+          "termo": "Aberratio ictus",
+          "significado": "Erro na execução que desvia a ofensa para pessoa diferente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "929f1775-f1fb-5813-9afb-73cf8f187cfd",
+        "content_sha256": "95820171b4ecd05c8363de9224fa1f7184bdc2b19c831d6464bea6fe0cd5786d",
+        "simples": "Erro na execução (aberratio ictus com unidade simples): quando, por acidente ou erro no uso dos meios de execução, o agente, em vez de atingir a pessoa que pretendia ofender, atinge pessoa diversa, responde como se tivesse praticado o crime contra aquela, atendendo ao §3º do art. 20. Se também atinge a pessoa pretendida, aplica-se o concurso formal do art. 70.",
+        "pontos": [
+          "Atinge pessoa diversa da pretendida: responde como se tivesse atingido a visada.",
+          "Consideram-se as condições da pessoa visada (art. 20, §3º).",
+          "Se atinge também a pretendida: regra do art. 70."
+        ],
+        "atencao": [
+          "Vítima diversa: responde pelo crime como se tivesse atingido quem queria atingir.",
+          "Se atinge as duas pessoas: concurso formal."
+        ],
+        "exemplo": "O agente atira para matar o desafeto, mas acerta um transeunte: responde como se tivesse matado o desafeto.",
+        "prova": [
+          "Assertiva que isenta o agente de pena quando atinge pessoa diversa da pretendida erra: responde como se tivesse atingido a pretendida."
+        ],
+        "termos": [
+          {
+            "termo": "Aberratio ictus",
+            "significado": "Erro na execução: o golpe atinge pessoa ou coisa diversa da pretendida."
+          }
+        ],
+        "remissoes": [
+          "Art. 20, §3º",
+          "Art. 70",
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-74",
+      "unit_id": "377a9cba-e797-5eb7-8ad7-0eccf7a3f77c",
+      "content_sha256": "3df7fd63fc3358578ba6bb3705438fd3195bda5be2571510868f4d55eb4b1904",
+      "simples": "Resultado diferente do pretendido, fora do erro contra pessoa do artigo anterior, tem imputação culposa se o fato admite culpa. Se o resultado pretendido também ocorre, remete ao concurso formal; não se cria crime culposo sem previsão.",
+      "pontos": [
+        "Resultado diverso: culpa apenas se prevista para o fato.",
+        "Ocorrência conjunta do resultado pretendido: art. 70."
+      ],
+      "atencao": [
+        "Não tratar todo desvio como art. 73 nem inventar modalidade culposa em tipo que não a admite. Analisar nexo e elementos."
+      ],
+      "exemplo": "Sobrevém resultado diverso e o tipo correspondente não prevê culpa, na hipótese restrita do artigo. Variação: Se há previsão culposa e seus pressupostos, a possibilidade de imputação muda.",
+      "prova": [
+        "O artigo cria culpa para qualquer delito? Não; condiciona à previsão de crime culposo.",
+        "Resultado pretendido também ocorrido dispensa concurso? Não; o texto remete ao art. 70."
+      ],
+      "termos": [
+        {
+          "termo": "Resultado diverso",
+          "significado": "Desvio do resultado na hipótese legal, distinto de apenas trocar a pessoa atingida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "377a9cba-e797-5eb7-8ad7-0eccf7a3f77c",
+        "content_sha256": "3df7fd63fc3358578ba6bb3705438fd3195bda5be2571510868f4d55eb4b1904",
+        "simples": "Resultado diverso do pretendido (aberratio criminis): fora dos casos do art. 73, quando por acidente ou erro na execução sobrevém resultado diverso do pretendido, o agente responde por culpa, se o fato é previsto como crime culposo; se ocorre também o resultado pretendido, aplica-se a regra do concurso formal do art. 70.",
+        "pontos": [
+          "Resultado diverso do pretendido: responde por culpa, se o fato é previsto como crime culposo.",
+          "Se ocorre também o resultado pretendido: art. 70."
+        ],
+        "atencao": [
+          "Só há punição se o fato diverso for previsto como crime CULPOSO.",
+          "Diferente do art. 73, em que a pessoa atingida é diversa; aqui o resultado é diverso."
+        ],
+        "exemplo": "O agente quer apenas quebrar a vidraça de uma casa com uma pedra, mas ela atinge e fere um morador: o resultado (lesão) é diverso do pretendido (dano); responde por lesão corporal culposa, se prevista como crime culposo.",
+        "prova": [
+          "Assertiva que pune sempre a título de dolo o resultado diverso do pretendido erra: a regra é a culpa, se prevista."
+        ],
+        "termos": [
+          {
+            "termo": "Aberratio criminis",
+            "significado": "Resultado diverso do pretendido por erro na execução."
+          }
+        ],
+        "remissoes": [
+          "Art. 73",
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-75",
+      "unit_id": "338fae92-3621-5c51-9cf8-2706530f03de",
+      "content_sha256": "5876d34906e972a7a730617870377d186af84f4b6a1418e11cdf47ece49e1166",
+      "simples": "O limite atual de cumprimento de penas privativas é quarenta anos, com unificação quando a soma excede esse teto. Não é limite universal da pena total da sentença nem base automática para todos os benefícios.",
+      "pontos": [
+        "Redação de 2019: 40 anos, não o antigo teto de 30.",
+        "Nova condenação por fato posterior ao início tem regra do §2º."
+      ],
+      "atencao": [
+        "Mudança mais gravosa exige lei penal no tempo. Não recalcular automaticamente progressão e benefícios usando apenas o teto unificado; não impor quarenta anos retroativamente por ser texto atual."
+      ],
+      "exemplo": "Uma questão chama quarenta anos de teto obrigatório da soma de todas as penas da sentença. Variação: Se pede tempo de cumprimento na hipótese atual, analisar a unificação e suas condições, distinguindo soma e execução.",
+      "prova": [
+        "Soma da sentença e teto de cumprimento são idênticos? Não; o limite se refere ao cumprimento.",
+        "A alteração autoriza retroatividade prejudicial? Não; observar a lei penal no tempo."
+      ],
+      "termos": [
+        {
+          "termo": "Unificação",
+          "significado": "Ajuste para o limite de cumprimento, sem equiparar todos os cálculos e benefícios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "338fae92-3621-5c51-9cf8-2706530f03de",
+        "content_sha256": "5876d34906e972a7a730617870377d186af84f4b6a1418e11cdf47ece49e1166",
+        "simples": "Limite das penas: o tempo de cumprimento das penas privativas de liberdade não pode ser superior a 40 anos. Se a soma das penas for superior a 40 anos, elas são unificadas para atender ao limite. Sobrevindo condenação por fato posterior ao início do cumprimento, faz-se nova unificação, desprezando o período já cumprido.",
+        "pontos": [
+          "Limite de 40 anos de cumprimento.",
+          "Penas somadas acima de 40 anos são unificadas para atender ao limite.",
+          "Condenação por fato posterior: nova unificação, desprezando o período já cumprido."
+        ],
+        "atencao": [
+          "O limite é de 40 anos (alterado pela Lei 13.964/2019; antes era 30).",
+          "Na nova unificação, desconsidera-se o tempo já cumprido."
+        ],
+        "exemplo": "Condenado a 100 anos de soma de penas cumpre no máximo 40 anos, salvo nova condenação por fato posterior.",
+        "prova": [
+          "Assertiva que fixa o limite máximo de cumprimento em 30 anos contraria o art. 75 atual."
+        ],
+        "termos": [
+          {
+            "termo": "Unificação das penas",
+            "significado": "Redução da soma das penas ao limite máximo de cumprimento."
+          }
+        ],
+        "remissoes": [
+          "Art. 71, parágrafo único"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-76",
+      "unit_id": "3f34e716-e656-5a33-aacc-6906c410d3a0",
+      "content_sha256": "1dbaf70b1592199f7532ea4ff720dd49a28468d858581e6d53fbf080d665ad82",
+      "simples": "No concurso de infrações, a execução começa pela pena mais grave. O dispositivo organiza prioridade de cumprimento, sem apagar as demais penas ou substituir o cálculo das regras de concurso.",
+      "pontos": [
+        "Primeiramente a mais grave.",
+        "Ordem de execução é diferente de quantidade total."
+      ],
+      "atencao": [
+        "Não deduzir que executar primeiro uma pena extingue todas as outras. A espécie e o regime de execução devem ser considerados."
+      ],
+      "exemplo": "O candidato lê prioridade da pena mais grave como cancelamento das demais. Variação: Se a questão apenas pede qual vem primeiro, a resposta usa a prioridade sem afirmar extinção.",
+      "prova": [
+        "As demais penas desaparecem pelo artigo? Não; ele dispõe sobre ordem.",
+        "O artigo resolve sozinho a dosimetria do concurso? Não; é regra de execução prioritária."
+      ],
+      "termos": [
+        {
+          "termo": "Prioridade de execução",
+          "significado": "Ordem de cumprimento, distinta de exclusão de outras sanções."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3f34e716-e656-5a33-aacc-6906c410d3a0",
+        "content_sha256": "1dbaf70b1592199f7532ea4ff720dd49a28468d858581e6d53fbf080d665ad82",
+        "simples": "No concurso de infrações, executa-se primeiramente a pena mais grave.",
+        "pontos": [
+          "Executa-se primeiro a pena mais grave."
+        ],
+        "atencao": [
+          "Ordem de execução: a mais grave vem primeiro."
+        ],
+        "exemplo": "Com condenações de reclusão e de detenção, cumpre-se antes a mais grave.",
+        "prova": [
+          "Assertiva que determina a execução primeiro da pena mais leve erra: o art. 76 manda executar a mais grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-77",
+      "unit_id": "80e6b2dc-ac4d-577a-b321-c4945f6efe03",
+      "content_sha256": "e7336ae379bfef31872325f68b56e53845852b1746a54b35d8ce4abd4cf81f90",
+      "simples": "Sursis suspende condicionalmente execução da pena privativa, com limites, período de prova e requisitos. É subsidiário à substituição cabível do art. 44 e diferente da suspensão condicional do processo.",
+      "pontos": [
+        "Regra: pena até 2 anos; prova de 2 a 4.",
+        "Hipótese etária/saúde: pena até 4; prova de 4 a 6.",
+        "Multa anterior não impede por si; observar requisitos cumulativos."
+      ],
+      "atencao": [
+        "Não transferir o limite de um ano da suspensão do processo para o sursis penal. Pena curta não garante automaticamente benefício; não confundir com absolvição ou extinção imediata."
+      ],
+      "exemplo": "Pena de dois anos é analisada com os requisitos do sursis e sem substituição indicada/cabível. Variação: Se a substituição do art. 44 é cabível e indicada, a condição do inciso III muda a análise.",
+      "prova": [
+        "Sursis penal e suspensão do processo são iguais? Não; têm objetos e requisitos distintos.",
+        "Até dois anos, sozinho, assegura sursis? Não; observar os demais requisitos."
+      ],
+      "termos": [
+        {
+          "termo": "Sursis penal",
+          "significado": "Suspensão condicionada da execução da pena, não do processo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "80e6b2dc-ac4d-577a-b321-c4945f6efe03",
+        "content_sha256": "e7336ae379bfef31872325f68b56e53845852b1746a54b35d8ce4abd4cf81f90",
+        "simples": "Suspensão condicional da pena (sursis): a execução da pena privativa de liberdade não superior a 2 anos pode ser suspensa, por 2 a 4 anos, desde que o condenado não seja reincidente em crime doloso, a culpabilidade, os antecedentes, a conduta social e a personalidade, bem como os motivos e circunstâncias, autorizem o benefício, e não seja indicada ou cabível a substituição do art. 44. A condenação anterior a multa não impede o benefício. O sursis etário ou humanitário permite suspender, por 4 a 6 anos, pena não superior a 4 anos para maior de 70 anos ou por razões de saúde.",
+        "pontos": [
+          "Pena privativa não superior a 2 anos; suspensão por 2 a 4 anos.",
+          "I – não reincidente em crime doloso.",
+          "II – culpabilidade, antecedentes, conduta social, personalidade, motivos e circunstâncias autorizam.",
+          "III – não seja indicada ou cabível a substituição do art. 44.",
+          "§1º: condenação anterior a multa não impede.",
+          "§2º: pena não superior a 4 anos, maior de 70 anos ou razões de saúde: suspensão por 4 a 6 anos."
+        ],
+        "atencao": [
+          "Sursis comum: pena até 2 anos, prazo de 2 a 4 anos; etário/humanitário: pena até 4 anos, prazo de 4 a 6 anos.",
+          "A reincidência impeditiva é em crime DOLOSO."
+        ],
+        "exemplo": "Réu primário condenado a 1 ano e 6 meses, sem cabimento de substituição, pode ter a pena suspensa por 2 a 4 anos.",
+        "prova": [
+          "Assertiva que permite sursis a reincidente em crime doloso contraria o inciso I."
+        ],
+        "termos": [
+          {
+            "termo": "Sursis",
+            "significado": "Suspensão condicional da pena, mediante condições."
+          }
+        ],
+        "remissoes": [
+          "Art. 78",
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-78",
+      "unit_id": "82914f26-3f86-5625-9472-3ff6ff8e0d43",
+      "content_sha256": "3f5aa1a3f0c0c3d37fff64ae62a97de5bdee2a071036cb362ea181e83ea72a0d",
+      "simples": "Durante o sursis há condições de observação. No primeiro ano a regra prevê serviços ou limitação de fim de semana; a hipótese especial exige reparação ressalvada impossibilidade e circunstâncias inteiramente favoráveis, com condições cumulativas.",
+      "pontos": [
+        "Primeiro ano e período total de prova são distintos.",
+        "Especial: as três condições do §2º são cumulativas."
+      ],
+      "atencao": [
+        "Não exigir reparação impossível como se o texto não tivesse ressalva. A possibilidade de condições especiais não significa ausência de deveres."
+      ],
+      "exemplo": "O caso preenche os requisitos do §2º, mas a questão manda escolher só uma de suas três condições. Variação: Se faltam circunstâncias inteiramente favoráveis, não presumir a mesma substituição das condições do primeiro ano.",
+      "prova": [
+        "As condições especiais são alternativas? Não; são aplicadas cumulativamente.",
+        "O artigo ignora impossibilidade de reparar? Não; expressamente a ressalva."
+      ],
+      "termos": [
+        {
+          "termo": "Sursis especial",
+          "significado": "Hipótese de condições substitutivas com requisitos e deveres cumulativos próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "82914f26-3f86-5625-9472-3ff6ff8e0d43",
+        "content_sha256": "3f5aa1a3f0c0c3d37fff64ae62a97de5bdee2a071036cb362ea181e83ea72a0d",
+        "simples": "Durante o prazo da suspensão, o condenado fica sujeito à observação e ao cumprimento das condições do juiz. No primeiro ano do prazo, deve prestar serviços à comunidade ou submeter-se à limitação de fim de semana. Se reparou o dano, salvo impossibilidade, e as circunstâncias do art. 59 lhe forem inteiramente favoráveis, o juiz pode substituir essa exigência por condições cumulativas: proibição de frequentar determinados lugares, de ausentar-se da comarca sem autorização e comparecimento mensal a juízo para informar e justificar suas atividades.",
+        "pontos": [
+          "Sujeição à observação e às condições fixadas pelo juiz.",
+          "§1º: no 1º ano: prestação de serviços à comunidade ou limitação de fim de semana.",
+          "§2º: com dano reparado e circunstâncias do art. 59 inteiramente favoráveis: proibição de frequentar lugares, de ausentar-se da comarca sem autorização e comparecimento mensal a juízo (cumulativas)."
+        ],
+        "atencao": [
+          "As três condições do §2º são aplicadas CUMULATIVAMENTE.",
+          "A substituição do §2º exige reparação do dano (salvo impossibilidade) e circunstâncias INTEIRAMENTE favoráveis."
+        ],
+        "exemplo": "Com o dano reparado, o juiz pode trocar os serviços do primeiro ano por comparecimento mensal e proibição de sair da comarca.",
+        "prova": [
+          "Assertiva que torna alternativas as condições do §2º erra: são cumulativas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77",
+          "Arts. 46 e 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-79",
+      "unit_id": "7e7fe6bf-33ea-5cf4-b0ce-e9bd6b2be5c1",
+      "content_sha256": "33f5ee20d4ece0435b6200ee5193b69effee8e631f53c5db2f4ae7b973e4f745",
+      "simples": "A sentença pode acrescentar condições ao sursis quando adequadas ao fato e à situação pessoal. Essa faculdade não é autorização para impor condições arbitrárias ou impossíveis, nem elimina as regras do benefício.",
+      "pontos": [
+        "Adequação ao fato E à situação pessoal.",
+        "Condições devem ser especificadas na sentença."
+      ],
+      "atencao": [
+        "Não inventar sanção autônoma com base na faculdade. Avaliar motivação, possibilidade e direitos, sem prometer que qualquer condição é válida."
+      ],
+      "exemplo": "A condição é imposta sem considerar a situação pessoal e o fato. Variação: Com adequação e fundamentação pertinentes, a faculdade pode ser examinada, sem dispensar os limites legais.",
+      "prova": [
+        "Qualquer condição arbitrária é permitida? Não; o texto exige adequação.",
+        "A faculdade apaga o art. 78? Não; complementa o regime sem substituí-lo irrestritamente."
+      ],
+      "termos": [
+        {
+          "termo": "Condição adequada",
+          "significado": "Dever compatível com fato e situação pessoal, nos limites do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7e7fe6bf-33ea-5cf4-b0ce-e9bd6b2be5c1",
+        "content_sha256": "33f5ee20d4ece0435b6200ee5193b69effee8e631f53c5db2f4ae7b973e4f745",
+        "simples": "A sentença pode especificar outras condições a que fica subordinada a suspensão, desde que adequadas ao fato e à situação pessoal do condenado.",
+        "pontos": [
+          "Outras condições podem ser fixadas na sentença.",
+          "Devem ser adequadas ao fato e à situação pessoal do condenado."
+        ],
+        "atencao": [
+          "As condições adicionais devem ser adequadas (não arbitrárias)."
+        ],
+        "exemplo": "O juiz acrescenta a obrigação de frequentar curso relacionado ao crime cometido.",
+        "prova": [
+          "Assertiva que permite condições sem relação com o fato ou a pessoa do condenado contraria o art. 79."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    }
+  ]
+}

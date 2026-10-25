@@ -1,3 +1,4 @@
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -16,6 +17,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Hint } from "@/components/ui/hint";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { canonicalBoard } from "@/lib/subjects";
@@ -55,13 +57,11 @@ interface Raw {
 /** Últimos N dias em ISO (yyyy-mm-dd), do mais antigo ao mais recente. */
 const lastDays = (n: number) =>
   Array.from({ length: n }, (_, i) => {
-    const d = new Date();
-    d.setDate(d.getDate() - (n - 1 - i));
-    return d.toISOString().slice(0, 10);
+    return acreDaysAgoKey(n - 1 - i);
   });
 
 function AdminMetricsPage() {
-  const { isAdmin } = useAuthStatus();
+  const { isAdmin, user } = useAuthStatus();
   const [raw, setRaw] = useState<Raw | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -154,15 +154,15 @@ function AdminMetricsPage() {
     const byDay = days.map((day) => ({
       day,
       ai: raw.usage.filter((x) => x.used_on === day).length,
-      exams: raw.results.filter((r) => r.created_at.slice(0, 10) === day).length,
-      signups: raw.profiles.filter((p) => p.created_at.slice(0, 10) === day).length,
+      exams: raw.results.filter((r) => acreDateKey(new Date(r.created_at)) === day).length,
+      signups: raw.profiles.filter((p) => acreDateKey(new Date(p.created_at)) === day).length,
     }));
     // Aluno ativo = usou IA ou concluiu simulado nos últimos 7 dias.
     const since = lastDays(7)[0] ?? "";
     const active = new Set(
       [
         ...raw.usage.filter((x) => x.used_on >= since).map((x) => x.user_id),
-        ...raw.results.filter((r) => r.created_at.slice(0, 10) >= since).map((r) => r.user_id),
+        ...raw.results.filter((r) => acreDateKey(new Date(r.created_at)) >= since).map((r) => r.user_id),
       ].filter((id) => kind.get(id) === "student"),
     ).size;
     return { byPlan, byDay, active, totals, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
@@ -285,7 +285,7 @@ function AdminMetricsPage() {
         </div>
       )}
 
-      <QuestionTotals enabled={isAdmin} />
+      <QuestionTotals enabled={isAdmin} userId={user?.id} />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
@@ -306,11 +306,11 @@ function AdminMetricsPage() {
                 <thead>
                   <tr className="text-left text-xs text-muted-foreground [&>th]:px-2 [&>th]:py-2 [&>th]:font-medium">
                     <th className="pl-0">Disciplina</th>
-                    <th title="Todas as cadastradas">Total</th>
-                    <th title="Liberadas para treino dos alunos">No treino</th>
-                    <th title="Com explicação e fonte verificadas">Revisadas</th>
-                    <th title="De provas reais">Oficiais</th>
-                    <th title="Criadas pela plataforma">Autorais</th>
+                    <Hint content="Todas as cadastradas"><th>Total</th></Hint>
+                    <Hint content="Liberadas para treino dos alunos"><th>No treino</th></Hint>
+                    <Hint content="Com explicação e fonte verificadas"><th>Revisadas</th></Hint>
+                    <Hint content="De provas reais"><th>Oficiais</th></Hint>
+                    <Hint content="Criadas pela plataforma"><th>Autorais</th></Hint>
                   </tr>
                 </thead>
                 <tbody>

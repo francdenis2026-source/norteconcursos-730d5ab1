@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "slug": "lep",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "fetched_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "sha256": "4f2c70bd250307fd0c2575eedbceb12bd47bc4426cf85ec57ce1df783ebbe5ac",
+      "checked_at": "2026-10-12T03:15:19.191370+00:00",
+      "status": 200
+    },
+    {
+      "id": "stf-remuneracao",
+      "url": "https://noticias.stf.jus.br/postsnoticias/mantida-regra-que-permite-remuneracao-de-presos-em-3-4-do-salario-minimo/",
+      "sha256": "d5c643d5c6a56e31d9ebcc92412634df9516fc7acec23e0269c2a61d6eb86940",
+      "checked_at": "2026-10-13T04:07:00.051594+00:00"
+    },
+    {
+      "id": "stf-antifaccao",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-reune-ministerio-publico-e-defensorias-publicas-para-discutir-lei-antifaccao/",
+      "sha256": "9398f2d76ce5f1536c0969eddf4faf0888e1ac7116d2421b164a30014665a1b9",
+      "checked_at": "2026-10-13T04:07:00.051814+00:00"
+    }
+  ],
+  "text_comparison": {
+    "current": 215,
+    "differences": 0
+  },
+  "limitations": [
+    "Compilado oficial LEP reutilizado da coleta12/10/2026 03:15UTC desta sessão; tentativas novas retornaram503,não atualizada artificialmente data da fonte.",
+    "ADPF336: notícia registra improcedência/recepção do piso; não certificada toda jurisprudência posterior de remuneração.",
+    "Antifacção: notícia26/8/2026 registraADIs7952/7956/7957/7958 e debate; não certificada solução de mérito posterior nem autorização universal de monitoramento.",
+    "Não certificada toda jurisprudência de progressão/trabalho externo; exercício literal amplo bloqueado nos pontos indicados."
+  ]
+}

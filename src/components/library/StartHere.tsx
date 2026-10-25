@@ -25,9 +25,9 @@ export function StartHere({ userId }: { userId: string }) {
   });
   if (!last && !top.length) return null;
   return (
-    <section aria-label="Comece por aqui" className="space-y-3 rounded-3xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-white to-sky-50 p-5 dark:border-indigo-500/30 dark:from-indigo-950/30 dark:via-transparent dark:to-sky-950/20">
+    <section aria-label="Comece por aqui" className="space-y-3 rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-slate-50 via-white to-sky-50 p-5 dark:border-slate-700 dark:from-slate-950/50 dark:via-transparent dark:to-sky-950/20">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-indigo-700 dark:text-indigo-300">Comece por aqui</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300">Comece por aqui</p>
         <h2 className="text-xl font-black">O que estudar agora</h2>
       </div>
       {last && (
@@ -46,7 +46,7 @@ export function StartHere({ userId }: { userId: string }) {
               <li key={c.slug}>
                 <Link to="/dashboard/legal-course/$slug" params={{ slug: c.slug }}
                   className="flex h-full items-center gap-3 rounded-xl border bg-card p-3 transition hover:border-primary hover:shadow">
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-indigo-600 text-xs font-black text-white">{i + 1}</span>
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-600 text-xs font-black text-white">{i + 1}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-sm font-bold">{c.title.replace(/ — leitura atualizada$/, "")}</span>
                     <span className="block text-xs text-muted-foreground">{cov && cov.explained > 0 ? `💡 ${cov.explained} de ${cov.total_units} artigos explicados` : cov ? `${cov.total_units} dispositivos · leitura oficial` : "Abrir"}</span>

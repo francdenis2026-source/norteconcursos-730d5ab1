@@ -1,0 +1,699 @@
+{
+  "version": "2026-10-11-identidade-targeted",
+  "checked_at": "2026-10-12T01:35:59.090321+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "identidade",
+      "title": "Lei 7.116/1983 — Carteira de Identidade",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 13,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "source_sha256": "37a0b7999247aa64b286f82a6f8b964ee4dcf2c1eeb1b5bc8bff994be93bdfd8",
+      "source_checked_at": "2026-10-12T00:31:33.621193+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "75676f56-cea8-5293-9d85-3ba69ceb5cc4",
+      "content_sha256": "63643f88468bddce3cb491f94f1ef28739d8471468f42ff7cdf15b7dac613ce2",
+      "simples": "Carteira expedida pelos órgãos estaduais/DF/territórios tem fé pública e validade nacional. Mudança de estado não impõe novo identificador; documentos novos usam CPF conforme 2023.",
+      "pontos": [
+        "Validade nacional, não limitada ao estado emissor."
+      ],
+      "atencao": [
+        "Não confundir validade territorial com validade temporal indeterminada de toda carteira."
+      ],
+      "exemplo": "Carteira de um estado é apresentada em outro para identificação. Variação: O documento apresenta problema temporal/material: validade territorial não dispensa as regras próprias.",
+      "prova": [
+        "A carteira vale somente no estado emissor? Não; tem validade em todo território nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "75676f56-cea8-5293-9d85-3ba69ceb5cc4",
+        "content_sha256": "63643f88468bddce3cb491f94f1ef28739d8471468f42ff7cdf15b7dac613ce2",
+        "simples": "A Carteira de Identidade emitida por órgãos de Identificação dos Estados, do Distrito Federal e dos Territórios tem fé pública e validade em todo o território nacional.",
+        "pontos": [
+          "Emitida pelos órgãos de identificação estaduais, distritais e territoriais.",
+          "Tem fé pública.",
+          "Validade em todo o território nacional."
+        ],
+        "atencao": [
+          "A validade nacional independe do Estado emissor."
+        ],
+        "exemplo": "A identidade emitida em um Estado vale em qualquer outro.",
+        "prova": [
+          "Assertiva que restringe a validade da identidade ao Estado emissor erra: vale em todo o território nacional."
+        ],
+        "termos": [
+          {
+            "termo": "Fé pública",
+            "significado": "Presunção de veracidade do documento."
+          }
+        ],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "04faf4bb-eab8-599f-874e-00bf9e0b5b7e",
+      "content_sha256": "8169b72814b630243b27b8281b96b3cab67a36c41aae33f505f218aea5952542",
+      "simples": "Documentação-base: nascimento ou casamento, com hipóteses específicas de nome alterado e naturalização. Primeira emissão é gratuita. Leia com regras atuais da CIN e inscrição no CPF providenciada pelo emissor quando ausente.",
+      "pontos": [
+        "Primeira emissão gratuita; CPF ausente tem procedimento próprio."
+      ],
+      "atencao": [
+        "Não afirmar gratuidade universal de toda segunda via nem dispensar atualização do registro civil quando necessária."
+      ],
+      "exemplo": "Pessoa solicita primeira emissão e não se cobra a taxa própria dessa emissão. Variação: Solicita segunda via: gratuidade da primeira não garante universalmente gratuidade dessa situação.",
+      "prova": [
+        "A primeira emissão é gratuita por lei? Sim; o §3º a assegura."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "04faf4bb-eab8-599f-874e-00bf9e0b5b7e",
+        "content_sha256": "8169b72814b630243b27b8281b96b3cab67a36c41aae33f505f218aea5952542",
+        "simples": "Para a expedição da Carteira de Identidade não será exigida do interessado a apresentação de qualquer outro documento, além da certidão de nascimento ou de casamento. A requerente do sexo feminino apresentará obrigatoriamente a certidão de casamento, caso seu nome de solteira tenha sido alterado em consequência do matrimônio. O brasileiro naturalizado apresentará o Certificado de Naturalização. A primeira emissão da Carteira de Identidade é gratuita.",
+        "pontos": [
+          "Basta a certidão de nascimento ou de casamento.",
+          "Quem mudou o nome pelo casamento apresenta a certidão de casamento.",
+          "Naturalizado apresenta o Certificado de Naturalização.",
+          "Primeira emissão gratuita."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §3º (gratuidade da primeira emissão) foi incluído por lei posterior.",
+          "Nenhum outro documento pode ser exigido."
+        ],
+        "exemplo": "O cidadão obtém a primeira identidade sem pagar taxa, apresentando a certidão de nascimento.",
+        "prova": [
+          "Assertiva que cobra taxa da primeira emissão da identidade erra: ela é gratuita."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "1fb57aa7-86d2-5029-9d47-f96096458026",
+      "content_sha256": "411685ce97cfe5cb773d8697f5bed16c9cf70e099cb51f3d330dc3f70019ed71",
+      "simples": "Lista elementos de identificação e CPF obrigatório nas emissões novas como número geral, desde 2023. Emissor verifica base CPF e providencia inscrição se ausente. Modelo/biometria atuais também são regulamentados pelo Decreto 10.977.",
+      "pontos": [
+        "CPF atual como RG; coleta e modelo seguem regulamentação."
+      ],
+      "atencao": [
+        "Não tratar formato fotográfico histórico isolado como todas as exigências operacionais atuais nem permitir compartilhamento para qualquer finalidade."
+      ],
+      "exemplo": "Órgão consulta integridade e emite carteira nova com CPF como número. Variação: A apostila diz que cada estado necessariamente cria um novo RG: compare regra vigente de unicidade.",
+      "prova": [
+        "Documento novo deve usar CPF como número geral? Sim; o §1º atual o exige."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "1fb57aa7-86d2-5029-9d47-f96096458026",
+        "content_sha256": "411685ce97cfe5cb773d8697f5bed16c9cf70e099cb51f3d330dc3f70019ed71",
+        "simples": "A Carteira de Identidade conterá as Armas da República e a inscrição República Federativa do Brasil; o nome da Unidade da Federação; a identificação do órgão expedidor; o registro geral, local e data da expedição; nome, filiação, local e data de nascimento e dados resumidos do registro de nascimento; fotografia 3 x 4, assinatura e impressão digital do polegar direito; assinatura do dirigente do órgão; e o número do CPF. Na emissão de novos documentos, o órgão deve usar o número do CPF como número de registro geral, pesquisar a base do CPF para verificar a integridade das informações e disponibilizar dados cadastrais e biométricos à Receita Federal. Se o requerente não tiver CPF, o órgão fará a inscrição.",
+        "pontos": [
+          "Elementos obrigatórios do documento.",
+          "Fotografia 3 x 4, assinatura e impressão digital do polegar direito.",
+          "Número do CPF.",
+          "CPF como número de registro geral nos novos documentos.",
+          "Órgão inscreve no CPF quem ainda não tiver."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: CPF como registro geral e a Carteira de Identidade Nacional decorrem de alterações recentes.",
+          "Impressão digital do polegar DIREITO."
+        ],
+        "exemplo": "A nova identidade traz o CPF como número de registro geral.",
+        "prova": [
+          "Assertiva que prevê a impressão digital do polegar esquerdo erra: é do polegar direito."
+        ],
+        "termos": [
+          {
+            "termo": "Registro geral",
+            "significado": "Número de cadastro do cidadão no órgão emissor (RG)."
+          }
+        ],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "77c0b911-eb48-54e3-9459-38b3bb14d0a8",
+      "content_sha256": "87f8aa383a0318ac288bef51273b331b457bc10503ea703fa83a0d9f864028a4",
+      "simples": "Permite inclusão de dados opcionais solicitados/comprovados, como PIS/Pasep. A antiga menção ao CPF facultativo precisa ser lida com art. 3º atual: CPF tornou-se elemento obrigatório e número do novo documento.",
+      "pontos": [
+        "PIS/Pasep opcionais; CPF obrigatório nas regras posteriores."
+      ],
+      "atencao": [
+        "Não ensinar CPF facultativo apenas porque aparece no texto antigo deste artigo."
+      ],
+      "exemplo": "Titular pede inclusão de dado opcional e apresenta comprovação. Variação: Não pede CPF: isso não afasta a obrigatoriedade prevista no art. 3º atual.",
+      "prova": [
+        "O CPF pode ser omitido em documento novo apenas por falta de pedido? Não; a disciplina posterior o tornou obrigatório."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "77c0b911-eb48-54e3-9459-38b3bb14d0a8",
+        "content_sha256": "87f8aa383a0318ac288bef51273b331b457bc10503ea703fa83a0d9f864028a4",
+        "simples": "Desde que o interessado o solicite, a Carteira de Identidade conterá, além dos elementos do art. 3º, os números de inscrição do titular no PIS ou no PASEP e no CPF. O Poder Executivo Federal poderá aprovar a inclusão de outros dados opcionais. A inclusão poderá ser parcial e dependerá exclusivamente da apresentação dos respectivos documentos comprobatórios.",
+        "pontos": [
+          "PIS ou PASEP e CPF, a pedido do interessado.",
+          "Outros dados opcionais, por aprovação do Executivo.",
+          "Inclusão parcial e mediante documentos comprobatórios."
+        ],
+        "atencao": [
+          "Dados OPCIONAIS dependem de pedido do titular."
+        ],
+        "exemplo": "O cidadão pede que o número do PIS conste na sua identidade.",
+        "prova": [
+          "Assertiva que torna obrigatória a inclusão do PIS na identidade erra: depende de solicitação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "baf0151a-cb62-5b14-a948-109657181a6f",
+      "content_sha256": "58ce735195bb16955f746c1bfa42e28da1dd942e3a58804a85d0905d539cf150",
+      "simples": "Trata da carteira de português beneficiado pela igualdade e referência à nacionalidade/convenção histórica. Não concede automaticamente igualdade a qualquer português; aplicação atual deve observar o tratado promulgado pelo Decreto 3.927/2001 e reconhecimento cabível.",
+      "pontos": [
+        "Português beneficiado, não todo residente por mera nacionalidade."
+      ],
+      "atencao": [
+        "Remissão à convenção de 1972 é histórica; não dispense requisitos atuais do regime de igualdade."
+      ],
+      "exemplo": "Português com reconhecimento de igualdade solicita documento no regime aplicável. Variação: Apenas tem nacionalidade portuguesa: não se presume o benefício sem requisitos.",
+      "prova": [
+        "A nacionalidade portuguesa sozinha basta para presumir estatuto de igualdade? Não; o artigo refere-se ao beneficiado pelo regime."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto/2001/d3927.htm"
+      ],
+      "expected": {
+        "unit_id": "baf0151a-cb62-5b14-a948-109657181a6f",
+        "content_sha256": "58ce735195bb16955f746c1bfa42e28da1dd942e3a58804a85d0905d539cf150",
+        "simples": "A Carteira de Identidade do português beneficiado pelo Estatuto da Igualdade será expedida conforme esta Lei, devendo constar referência à sua nacionalidade e à Convenção promulgada pelo Decreto nº 70.391, de 12 de abril de 1972.",
+        "pontos": [
+          "Identidade do português beneficiado pelo Estatuto da Igualdade.",
+          "Constam a nacionalidade e a referência à Convenção."
+        ],
+        "atencao": [
+          "Regra especial para portugueses sob o Estatuto da Igualdade."
+        ],
+        "exemplo": "O português com igualdade de direitos recebe identidade com menção à sua nacionalidade.",
+        "prova": [
+          "Assertiva que dispensa menção à nacionalidade na identidade do português erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "703aa541-285a-5416-bf94-961f548b22b1",
+      "content_sha256": "a6fd87674650166c8bbed0a6fe9d3bdf5707eab5f422eba38a81e9e4a18fcfd5",
+      "simples": "A carteira prova os dados nela incluídos, dispensando documentos que originaram ou nela foram mencionados. Isso não significa prova de fatos/condições ausentes nem autenticidade de documento materialmente inválido.",
+      "pontos": [
+        "Dispensa relacionada a dados incluídos, não todos os documentos possíveis."
+      ],
+      "atencao": [
+        "Não presumir renda, habilitação profissional ou condição atual que não conste do documento."
+      ],
+      "exemplo": "O dado de nascimento consta na carteira e se observa a dispensa legal. Variação: O serviço exige comprovação de requisito que não está nela: o artigo não prova esse requisito automaticamente.",
+      "prova": [
+        "A carteira dispensa comprovação de qualquer fato não registrado nela? Não; a dispensa relaciona-se aos dados incluídos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "703aa541-285a-5416-bf94-961f548b22b1",
+        "content_sha256": "a6fd87674650166c8bbed0a6fe9d3bdf5707eab5f422eba38a81e9e4a18fcfd5",
+        "simples": "A Carteira de Identidade fará prova de todos os dados nela incluídos, dispensando a apresentação dos documentos que lhe deram origem ou que nela tenham sido mencionados.",
+        "pontos": [
+          "Faz prova de todos os dados nela incluídos.",
+          "Dispensa os documentos de origem."
+        ],
+        "atencao": [
+          "Efeito probatório amplo do documento."
+        ],
+        "exemplo": "Quem apresenta a identidade não precisa exibir também a certidão de nascimento para comprovar a filiação.",
+        "prova": [
+          "Assertiva que exige a certidão de nascimento junto com a identidade para provar a filiação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "15d7542c-6bba-5fc2-8122-5c187a076b1f",
+      "content_sha256": "9dd25d2bb1b3949d8d7ee1e9656e5f0a32aa2b16c7c20f1bb021d785a5a3bf9d",
+      "simples": "Segunda via mediante solicitação, com documentação do art. 2º. Deve ser lida com emissão atual da CIN, cadastro e requisitos legais; não exige provar um motivo especial além das condições previstas.",
+      "pontos": [
+        "Solicitação de segunda via; documentação legal."
+      ],
+      "atencao": [
+        "Não confundir ausência de justificativa adicional com gratuidade universal ou dispensa de identificar requerente."
+      ],
+      "exemplo": "Titular pede segunda via com documentação legal. Variação: O atendente exige narrativa pessoal não prevista como condição geral: confira os limites do artigo.",
+      "prova": [
+        "O artigo exige sempre prova de motivo especial para a segunda via? Não; prevê simples solicitação com a documentação legal."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "15d7542c-6bba-5fc2-8122-5c187a076b1f",
+        "content_sha256": "9dd25d2bb1b3949d8d7ee1e9656e5f0a32aa2b16c7c20f1bb021d785a5a3bf9d",
+        "simples": "A expedição de segunda via da Carteira de Identidade será efetuada mediante simples solicitação do interessado, vedada qualquer outra exigência, além daquela prevista no art. 2º.",
+        "pontos": [
+          "Segunda via a simples pedido.",
+          "Vedadas outras exigências."
+        ],
+        "atencao": [
+          "Só a exigência do art. 2º é admitida."
+        ],
+        "exemplo": "O cidadão que perdeu o documento pede a segunda via sem apresentar outros papéis.",
+        "prova": [
+          "Assertiva que permite exigir comprovantes adicionais para a segunda via erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "2d2bf652-029d-5a1e-877e-4e337aa556d1",
+      "content_sha256": "beec7bd9992754a606a31af679cf77d598b36dfb3aa199fd7e59c54a6b6be82d",
+      "simples": "A expedição baseia-se em identificação datiloscópica; a CIN atual possui regras complementares de coleta/segurança. A coleta não autoriza divulgar biometria indiscriminadamente.",
+      "pontos": [
+        "Datiloscopia é identificação por impressões digitais."
+      ],
+      "atencao": [
+        "Não confundir cadastro civil com autorização irrestrita para qualquer banco de investigação ou divulgação pública."
+      ],
+      "exemplo": "O órgão coleta impressões no procedimento de identificação. Variação: Terceiro pretende publicar a base biométrica: a coleta não cria essa permissão.",
+      "prova": [
+        "Identificação datiloscópica envolve impressões digitais? Sim; é a técnica indicada pelo artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2d2bf652-029d-5a1e-877e-4e337aa556d1",
+        "content_sha256": "beec7bd9992754a606a31af679cf77d598b36dfb3aa199fd7e59c54a6b6be82d",
+        "simples": "A Carteira de Identidade será expedida com base no processo de identificação datiloscópica.",
+        "pontos": [
+          "Base: identificação datiloscópica (impressões digitais)."
+        ],
+        "atencao": [
+          "Datiloscopia é a base da emissão."
+        ],
+        "exemplo": "A coleta das digitais subsidia a emissão do documento.",
+        "prova": [
+          "Assertiva que dispensa a datiloscopia na emissão erra."
+        ],
+        "termos": [
+          {
+            "termo": "Datiloscopia",
+            "significado": "Identificação por impressões digitais."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "20c53946-05d0-55a3-885f-c5eed17e2eb3",
+      "content_sha256": "2453ad54e714f7c9d0b96fb119d78224e72d1f1dc849048ed19e777151470e32",
+      "simples": "Nascimento/casamento/documentos do art. 2º podem ser apresentados por cópia regularmente autenticada. Leia com legislação posterior de desburocratização e conferência administrativa aplicável; não impor cartório universal a toda cópia.",
+      "pontos": [
+        "Cópia autenticada admitida; requisitos posteriores também importam."
+      ],
+      "atencao": [
+        "Lei 13.726 permite formas de dispensa/conferência no âmbito indicado; a admissão da cópia não obriga autenticação cartorial em toda situação."
+      ],
+      "exemplo": "Apresenta-se cópia regularmente autenticada no procedimento. Variação: Órgão pode conferir cópia e original pela regra posterior aplicável: não se exige cartório universal pela redação antiga.",
+      "prova": [
+        "A regra torna autenticação cartorial universalmente obrigatória para toda cópia? Não; admissão da cópia deve ser lida com legislação posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13726.htm"
+      ],
+      "expected": {
+        "unit_id": "20c53946-05d0-55a3-885f-c5eed17e2eb3",
+        "content_sha256": "2453ad54e714f7c9d0b96fb119d78224e72d1f1dc849048ed19e777151470e32",
+        "simples": "A apresentação dos documentos a que se refere o art. 2º poderá ser feita por cópia regularmente autenticada.",
+        "pontos": [
+          "Cópia autenticada é aceita."
+        ],
+        "atencao": [
+          "A cópia deve ser regularmente autenticada."
+        ],
+        "exemplo": "O cidadão apresenta cópia autenticada da certidão de nascimento.",
+        "prova": [
+          "Assertiva que exige sempre o documento original erra: basta cópia autenticada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "62b1cba4-d600-507b-9c26-991d15a89195",
+      "content_sha256": "178d19c074ee7b51d4eb0299a2d496169ea651af881318d47ed93236bc242de0",
+      "simples": "Executivo federal aprova modelo e normas complementares. O modelo atual está no Decreto 10.977/2022 e alterações, não só no padrão antigo de apostila.",
+      "pontos": [
+        "Lei + decreto atual para modelo e validade."
+      ],
+      "atencao": [
+        "Não criar modelo ou prazo pela imaginação nem deduzir validade pelo formato histórico."
+      ],
+      "exemplo": "O candidato consulta decreto atual para os padrões da CIN. Variação: Apostila traz modelo anterior: ele não esgota a regulamentação vigente.",
+      "prova": [
+        "As normas complementares são aprovadas pelo Executivo federal? Sim; o artigo prevê essa competência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "62b1cba4-d600-507b-9c26-991d15a89195",
+        "content_sha256": "178d19c074ee7b51d4eb0299a2d496169ea651af881318d47ed93236bc242de0",
+        "simples": "O Poder Executivo Federal aprovará o modelo da Carteira de Identidade e expedirá as normas complementares que se fizerem necessárias ao cumprimento da Lei.",
+        "pontos": [
+          "Executivo federal aprova o modelo.",
+          "Edita normas complementares."
+        ],
+        "atencao": [
+          "O modelo é definido pelo Executivo federal."
+        ],
+        "exemplo": "Um decreto define o modelo nacional do documento.",
+        "prova": [
+          "Assertiva que atribui a cada Estado a definição do modelo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "7f54a579-6387-503c-87ed-f9eaa4af29ae",
+      "content_sha256": "74f108847dee776f54d7e3c4c13a122e84fa1492532fe6aef075afacb176ec68",
+      "simples": "Preserva carteiras emitidas antes da lei original; para transição atual, consulte Decreto 10.977, art. 25: documentos de padrão anterior permanecem por dez anos desde a vigência do decreto, com validade indeterminada para quem tinha a partir de 60 anos naquele marco. Não são dez anos da emissão de cada RG.",
+      "pontos": [
+        "Transição atual e exceção etária no marco do decreto."
+      ],
+      "atencao": [
+        "Não declarar todo RG antigo inválido já nem todo RG eterno. CIN nova tem validade própria, diferente da transição."
+      ],
+      "exemplo": "Titular tinha 60 anos no marco do decreto e se examina a exceção do documento anterior. Variação: Atinge 60 só depois: não se presume a mesma exceção temporal do art. 25.",
+      "prova": [
+        "Os dez anos de transição contam da emissão individual do RG? Não; contam da entrada em vigor do decreto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "7f54a579-6387-503c-87ed-f9eaa4af29ae",
+        "content_sha256": "74f108847dee776f54d7e3c4c13a122e84fa1492532fe6aef075afacb176ec68",
+        "simples": "As Carteiras de Identidade emitidas anteriormente à vigência desta Lei continuarão válidas em todo o território nacional.",
+        "pontos": [
+          "Documentos antigos continuam válidos."
+        ],
+        "atencao": [
+          "Dispositivo de transição."
+        ],
+        "exemplo": "A identidade antiga permanece válida em todo o país.",
+        "prova": [
+          "Assertiva que invalida as identidades anteriores à Lei erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-12",
+      "unit_id": "44cbce51-b15b-5681-99fc-00fc67062933",
+      "content_sha256": "56737f4a8cc7e7a002ee7d802f11c51b0d3b00e2c99ba8162f2b22af23a94707",
+      "simples": "A lei original vigora na publicação. Gratuidade, CPF e regras da CIN foram introduzidos depois e possuem marcos próprios.",
+      "pontos": [
+        "Vigência original distinta das alterações."
+      ],
+      "atencao": [
+        "Não situar obrigatoriedade atual do CPF já no texto original de 1983."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: É a regra de 2023: consulte o ato modificador próprio.",
+      "prova": [
+        "O artigo original prevê espera de 120 dias? Não; vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "44cbce51-b15b-5681-99fc-00fc67062933",
+        "content_sha256": "56737f4a8cc7e7a002ee7d802f11c51b0d3b00e2c99ba8162f2b22af23a94707",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identidade",
+      "course_id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-13",
+      "unit_id": "a2286e74-0942-534b-9ed3-436aebd699d2",
+      "content_sha256": "1808cd6dbf2a021a264144bafa7b69a9f62965f017ed51e555a3217bb32fcf3f",
+      "simples": "Revoga disposições contrárias à lei original; não impede alterações posteriores nem dispensa consultar a regulamentação atual.",
+      "pontos": [
+        "Cláusula geral, sem apagar automaticamente leis posteriores."
+      ],
+      "atencao": [
+        "Não concluir que o decreto da CIN foi revogado por cláusula anterior a ele."
+      ],
+      "exemplo": "A lei é lida com os acréscimos posteriores e normas atuais. Variação: Apostila usa a cláusula para rejeitar CPF/CIN: ela não produz essa conclusão.",
+      "prova": [
+        "Esta cláusula torna inaplicáveis todas as normas posteriores da CIN? Não; são normas posteriores a conferir no conjunto vigente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a2286e74-0942-534b-9ed3-436aebd699d2",
+        "content_sha256": "1808cd6dbf2a021a264144bafa7b69a9f62965f017ed51e555a3217bb32fcf3f",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Normas incompatíveis foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2607 @@
+{
+  "batch_id": "cespe2016-cpc-lote100-02-2026-10-17",
+  "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "scope": "100 conferências normativas privadas, sem certificação de gabarito oficial e sem publicação.",
+  "source_artifacts": {
+    "cpc": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+      "checked_at": "2026-10-17T17:24:04.520187+00:00",
+      "status": 200
+    },
+    "cf": {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+      "checked_at": "2026-10-17T17:24:00.256849+00:00",
+      "status": 200
+    },
+    "fax": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9800.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9800.htm",
+      "sha256": "2a24af600c21cc95ee5bf30f58a3febd0ae08fd16c3bf54f29385fc212bc725f",
+      "checked_at": "2026-10-17T17:23:53.148794+00:00",
+      "status": 200
+    },
+    "cc": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "sha256": "a7af08d4351ab9593b1474a53e67e6ecae507be7c642c9cfb1e43d0e71400082",
+      "checked_at": "2026-10-17T17:26:58.740680+00:00",
+      "status": 200
+    },
+    "jef": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10259.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10259.htm",
+      "sha256": "ccc97e029d6ed89de56cf39b16c485cc5886d65027eff889b9070f88ba8ef31e",
+      "checked_at": "2026-10-17T17:26:56.273317+00:00",
+      "status": 200
+    },
+    "locacao": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+      "sha256": "cac3e78fd2b393d68866e98b25725279df8093f78f00d90a2fbbdfde2472ca5a",
+      "checked_at": "2026-10-17T17:26:57.334620+00:00",
+      "status": 200
+    }
+  },
+  "items": [
+    {
+      "candidate_id": "9ca46f82649f9349bd53d5876218a91ac9e9d32ef684716023c515e9d37be1d9",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 260,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "387dfb59737aeeff404f4c9da08ee9acf9e08b6033a9a64d5c2ec88830831c6b",
+      "raw_text_sha256": "437293b034f0b57c34bd73dbb168dbddcd288955fc90964466da879310aa8e07",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Lacuna ou obscuridade do ordenamento não autorizam o juiz a se eximir de decidir",
+      "explanation": "Lacuna ou obscuridade do ordenamento não autorizam o juiz a se eximir de decidir. O art. 140 exige uma decisão; improcedência é conclusão de mérito, não sanção automática pela ausência de uma regra expressa. A equidade depende de autorização legal. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a falta de artigo que descreva literalmente o conflito não dispensa o julgamento; o juiz deve fundamentar a solução jurídica, sem presumir improcedência.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 140",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "7acb2571af0ce8cf08fe3d11536121dcf92a82562599c8b96e14f098750cdb57",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 260,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "3da2fad544467a6171c09f9aa15016d582edc5946db270298f9d9ba550af92de",
+      "raw_text_sha256": "437293b034f0b57c34bd73dbb168dbddcd288955fc90964466da879310aa8e07",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O interesse processual diz respeito à utilidade e à necessidade da tutela postulada, e não se confunde com a própria existência do direito material",
+      "explanation": "O interesse processual diz respeito à utilidade e à necessidade da tutela postulada, e não se confunde com a própria existência do direito material. O art. 17 exige interesse e legitimidade para postular; vencer no mérito é questão posterior. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: ter um crédito não significa que qualquer providência judicial seja útil; o pedido deve oferecer tutela adequada à situação concretamente apresentada.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 17",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "79dc7f1e6622f8f092129d53e5929cc4edca741d100646ae11fe2dc32b867710",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "20f0584e46fdb1dfc61b6a139b00a08d0be9f29aff4f890e9115d5f0c5a0ac4c",
+      "raw_text_sha256": "fc09e57d9eede46e954970cdef2c12a0d51f8b99517c516070b95f8699a1b476",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Localizar no STJ o precedente indicado no comando e conferir sua vigência e aplicação à audiência.",
+      "focus": "A Defensoria tem intimação pessoal, que pode ocorrer por carga, remessa ou meio eletrônico",
+      "explanation": "A Defensoria tem intimação pessoal, que pode ocorrer por carga, remessa ou meio eletrônico. A afirmação sobre presença em audiência e exigência exclusiva de entrega física dos autos reproduz discussão jurisprudencial específica. O CPC sozinho não certifica o precedente citado no comando da prova; é preciso verificar a decisão do STJ e o regime de comunicação do caso. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a comunicação pessoal eletrônica à Defensoria não deve ser tratada como inexistente apenas porque não houve remessa de autos físicos; o marco concreto precisa ser conferido.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 186, § 1º, 183, § 1º, e 1.003, § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Localizar no STJ o precedente indicado no comando e conferir sua vigência e aplicação à audiência."
+      ]
+    },
+    {
+      "candidate_id": "7cc6bb660d79be2ec9a54a98fb6713cda045bb543b63b12304beba1aa2eda6ac",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "7cdd958b53fdcb61e10f331fe222fb2abd8c1082a2828c997711f770f8956086",
+      "raw_text_sha256": "fc09e57d9eede46e954970cdef2c12a0d51f8b99517c516070b95f8699a1b476",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir o precedente original do STJ e a modalidade de intimação, sem generalizar a regra de autos físicos.",
+      "focus": "O início dos prazos do MP e da Defensoria depende de intimação pessoal; carga, remessa e meio eletrônico são modalidades legalmente previstas",
+      "explanation": "O início dos prazos do MP e da Defensoria depende de intimação pessoal; carga, remessa e meio eletrônico são modalidades legalmente previstas. Não é seguro transformar a data de recebimento físico dos autos em critério único para qualquer processo atual. O comando original exige jurisprudência, ainda não verificada na autoridade competente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: se a intimação pessoal é feita pelo sistema eletrônico, deve ser apurado o marco previsto para essa comunicação, sem inventar uma futura data de recebimento de autos físicos.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 180, 183, § 1º, 186, § 1º, e 231",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir o precedente original do STJ e a modalidade de intimação, sem generalizar a regra de autos físicos."
+      ]
+    },
+    {
+      "candidate_id": "6d8dcd40868f03c4abf7cfada24621a8278afc262b2dce919e5131d95cc7a6bc",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "212182114c3694a288e13b80988bd03594dbca3faf998ee01f89336f213621db",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O CPC atual determina que o Ministério Público intervenha como fiscal da ordem jurídica no procedimento de interdição",
+      "explanation": "O CPC atual determina que o Ministério Público intervenha como fiscal da ordem jurídica no procedimento de interdição. A defesa do interditando e a eventual curadoria especial são tratadas separadamente no § 2º. O comentário histórico que generaliza o MP como representante do interditando não deve orientar o estudo atual dessa hipótese. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o interditando não constitui advogado. O juiz deve observar a nomeação de curador especial, sem simplesmente atribuir sua defesa ao MP que atua como fiscal da ordem jurídica.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 752, §§ 1º e 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "1b6bb1977e942f3c1cde6f8adc0945e59ede30811d54f4ae980f64761fe5c8dd",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "51ede24c0efef3bd3d0874bb1a45ffe424d5128027ce33da3a7392e420cc602a",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O dever de velar pela duração razoável do processo abrange a solução integral e a atividade satisfativa",
+      "explanation": "O dever de velar pela duração razoável do processo abrange a solução integral e a atividade satisfativa. Celeridade não elimina contraditório ou fundamentação: a direção eficiente do processo deve conviver com as demais garantias processuais. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o juiz combate adiamentos inúteis e organiza a prova, mas não pode encerrar a instrução apenas para cumprir uma meta se houver prova relevante ainda necessária.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 4º e 139, II",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "0577d95ae3b39cafeffdf9feec0e2c1e82ce9256388db92e5d04eabfe6fb8bf6",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b0b7f1baeba47d56b3957aa1f5db85265ca143c9e582eea969cf29d8cb520ceb",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A responsabilidade civil e regressiva do oficial de justiça não está restrita ao ato nulo doloso: o inciso II inclui dolo ou culpa",
+      "explanation": "A responsabilidade civil e regressiva do oficial de justiça não está restrita ao ato nulo doloso: o inciso II inclui dolo ou culpa. O inciso I também prevê a recusa injustificada de cumprir atos no prazo. Não se deve reduzir todas as hipóteses legais à palavra somente usada na proposição. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um ato nulo praticado culposamente pelo oficial não é excluído do art. 155, II, só porque não houve intenção deliberada de causar a nulidade.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 155, I e II",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "d0e6066b8c79453ab76f0da39fdb61c02b98f43a67a8b8fb16589025d62e17bf",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "5408b442922c36050cf43aa6b4b8a7895d14f756c20b0406821deca2032d0a8a",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A preclusão consumativa está ligada ao exercício da faculdade processual",
+      "explanation": "A preclusão consumativa está ligada ao exercício da faculdade processual. Entretanto, dizer que nenhum ato já praticado pode ser corrigido em situação alguma seria excessivo: o ordenamento prevê emendas e saneamento em hipóteses próprias. É preciso delimitar o ato e a faculdade efetivamente consumada. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a apresentação de uma manifestação não cria direito de reapresentá-la livremente, mas uma determinação legal de correção do vício deve ser observada pelo juízo.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 200 e 507",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "b5d39a8f34bc193ab86a5c6166139fa8a5464675b055e94829094503d05f2032",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "ef4798abfb20e79ab52d2de588d9f9accd18bc12ec203706bc2e6afc12a52f44",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O texto atual inclui expressamente sábados, domingos e dias sem expediente forense entre os feriados para efeito forense, além dos declarados em lei",
+      "explanation": "O texto atual inclui expressamente sábados, domingos e dias sem expediente forense entre os feriados para efeito forense, além dos declarados em lei. A chave editorial negativa, acompanhada de comentário com base no CPC anterior, não pode ser transportada automaticamente ao art. 216 do CPC/2015. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um sábado é feriado para efeito forense pelo próprio art. 216, sem necessidade de uma lei municipal que o declare como feriado civil.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 216",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "d4cb05c3f860df3206cff2c0962d96f21a276be21c65688ea93ad30ac4b4d50f",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 262,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "66f1f98dfd9cffb868fd423bda55d1cdb716b93c084cd5ed6659785fd6982c68",
+      "raw_text_sha256": "cb27ffa31bc7987a27c66d03cbef85fc789f3cabbf71af3d19d48d59f70db8a9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A sucessão voluntária das partes depende de hipótese expressamente prevista em lei",
+      "explanation": "A sucessão voluntária das partes depende de hipótese expressamente prevista em lei. O consentimento da parte contrária é requisito específico, por exemplo, para a sucessão pelo adquirente da coisa litigiosa; não é autorização geral para qualquer troca de partes. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o réu concorda que outra pessoa passe a ocupar o polo ativo. Antes de admitir a substituição, o juiz deve verificar a hipótese legal de sucessão aplicável.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 108 e 109, § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "6c5fb7893ff2ec2f50ef9747dc5f6c726e2869797012ce713ebb463bf034e592",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "a161b17612bca075cc2f68e04cf6a35de13e5404d294c5697d00b969c869f971",
+      "raw_text_sha256": "aa3c51e94f7e12b133a238f2e210d2fc834c239611df7033c2658e27cfb62b07",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A procuração geral para o foro não abrange automaticamente receber citação ou reconhecer a procedência do pedido",
+      "explanation": "A procuração geral para o foro não abrange automaticamente receber citação ou reconhecer a procedência do pedido. O art. 105 exige cláusula específica para esses atos. A possibilidade de receber intimações ordinárias não torna todos os poderes especiais presumidos. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma procuração com poderes apenas gerais não basta para que o advogado reconheça a procedência do pedido em nome do réu; deve existir o poder específico correspondente.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 105",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "96c5fa1844b5bebc9e5d15b6ed9624d05b6fadcffbafe439eafe3f64adff1698",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "be77a075f1fd4f6ec769c8a67f3d29e6b3e1962c2a78d6ddd4c91c6c7447d81e",
+      "raw_text_sha256": "aa3c51e94f7e12b133a238f2e210d2fc834c239611df7033c2658e27cfb62b07",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O art",
+      "explanation": "O art. 73 diferencia consentimento para a propositura e citação de ambos os cônjuges no polo passivo, com ressalva da separação absoluta. As ações possessórias possuem regra própria de composse ou ato de ambos. A formulação histórica não deve ser lida como universal, sem regime de bens e natureza da demanda. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: em ação real imobiliária, deve-se verificar o regime de bens antes de exigir participação conjugal; nas possessórias, a análise inclui composse ou ato praticado pelo casal.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 73, caput e §§ 1º e 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "99b868c017c5273cdf91aff2febaf42fcc1c79f5026f78bec264971b62fe62fa",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "08f6b13c1604f5ac2d61f25ee95e1288c934fc210342eee0bae18ad5d64591c5",
+      "raw_text_sha256": "aa3c51e94f7e12b133a238f2e210d2fc834c239611df7033c2658e27cfb62b07",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir a diligência original e, se necessário, a jurisprudência oficial sobre representação e teoria da aparência.",
+      "focus": "A citação da pessoa jurídica exige análise do destinatário e da forma de realização",
+      "explanation": "A citação da pessoa jurídica exige análise do destinatário e da forma de realização. A regra do art. 248, § 2º, trata expressamente da entrega postal e não deve ser aplicada mecanicamente a qualquer diligência do oficial. A exigência indiscriminada de prova documental de representação não pode ser resolvida apenas por confundir modalidades diferentes. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o funcionário que recebe correspondência de uma empresa aparece no art. 248, § 2º. Isso não dispensa examinar os requisitos de um mandado cumprido por oficial em situação distinta.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 242, 248, § 2º, e 251",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir a diligência original e, se necessário, a jurisprudência oficial sobre representação e teoria da aparência."
+      ]
+    },
+    {
+      "candidate_id": "b1e5c44fe7d78268202731aa00f7a7f8f1c1cf6fedc448c1bea8670a3af0d3f1",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0de02530d1bd3efbc9756fb47faacc4ea6830002f4784a3f200324f06240da00",
+      "raw_text_sha256": "4e9f460cbcde78c9b65775072518f135adf434f474fc69abe950078857008c6d",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Ser sócio ou membro da direção ou administração de pessoa jurídica parte no processo é hipótese de impedimento do juiz",
+      "explanation": "Ser sócio ou membro da direção ou administração de pessoa jurídica parte no processo é hipótese de impedimento do juiz. O CPC não cria imunidade geral ao impedimento porque o procedimento foi classificado como jurisdição voluntária. A imparcialidade continua sendo requisito. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o magistrado integra a administração da pessoa jurídica interessada no procedimento. A ausência de uma disputa contenciosa típica não afasta automaticamente o impedimento previsto em lei.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 144, V, e 148",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "ee6e4cb9cd4543d9f6f2ef73d48b72c31cd5360064121c46d109999bc9c40c9d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "873d08d728469c249ccc4daf022014faa395dbd967a8c05d2eb8efc5d10e6f88",
+      "raw_text_sha256": "4e9f460cbcde78c9b65775072518f135adf434f474fc69abe950078857008c6d",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Identificar a causa e eventual lei especial que torne obrigatória a intervenção do Ministério Público.",
+      "focus": "A intervenção do MP não decorre automaticamente de toda referência ao estado de uma pessoa",
+      "explanation": "A intervenção do MP não decorre automaticamente de toda referência ao estado de uma pessoa. O CPC atual exige hipótese legal ou constitucional, interesse público ou social, interesse de incapaz ou a outra situação tipificada. A generalização do comentário antigo precisa ser delimitada pelo objeto e pelos sujeitos do caso. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: numa questão de estado que envolva incapaz, há fundamento específico para intervenção do MP. Não se deve inferir a mesma obrigatoriedade apenas do rótulo estado da pessoa em outro caso.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 178",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Identificar a causa e eventual lei especial que torne obrigatória a intervenção do Ministério Público."
+      ]
+    },
+    {
+      "candidate_id": "17b66dd0c124085df94b3e177fe858dd21c974693a907008fb256622ce0c4071",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "4aa9f7c6ec3ce27e7416b498d64048263b56d824682e24446a82b615c87017db",
+      "raw_text_sha256": "4e9f460cbcde78c9b65775072518f135adf434f474fc69abe950078857008c6d",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir a referência doutrinária da formulação substancial antes de certificar a questão original.",
+      "focus": "O devido processo legal tem base constitucional, e o art",
+      "explanation": "O devido processo legal tem base constitucional, e o art. 8º exige proporcionalidade e razoabilidade na aplicação do ordenamento. Isso fundamenta a análise da adequação das medidas processuais, mas não certifica, por si só, toda a classificação doutrinária reproduzida no enunciado. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma exigência processual desnecessária e desproporcional não se torna adequada apenas porque economiza trabalho do juízo; deve respeitar o devido processo e a razoabilidade.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 8º",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "art. 5º, LIV e LV",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir a referência doutrinária da formulação substancial antes de certificar a questão original."
+      ]
+    },
+    {
+      "candidate_id": "0204e6d57cbc35e3a51a3b2b423ca7421f0604ac63c25d850a92d876de6789ef",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "63640428604abd74fdd505eee1a9cd65c96202283adef85295257975b92e3214",
+      "raw_text_sha256": "962ccc8647ccbb16cb358b084343a1da59d340a4c5d0d80643aded603047d7d7",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Os motivos de impedimento e suspeição alcançam os auxiliares da justiça",
+      "explanation": "Os motivos de impedimento e suspeição alcançam os auxiliares da justiça. A condição de parte no processo não se transforma em situação regular pela falta de impugnação do adversário. Deve-se distinguir a existência do impedimento do procedimento para sua arguição e reconhecimento. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um serventuário é parte na demanda em que deveria atuar como auxiliar. O silêncio do outro litigante não elimina a incompatibilidade funcional prevista no CPC.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 144, IV, e 148, II",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "18e6dcc996f699fcf555baf956663bd63a2354fc90aed698a445d1424d55df2b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "36f405b0655795760bab6833a65d560b6a25071d3bdb7b529b73dcdd44a0e15f",
+      "raw_text_sha256": "962ccc8647ccbb16cb358b084343a1da59d340a4c5d0d80643aded603047d7d7",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Capacidade para estar em juízo e capacidade postulatória são planos diferentes",
+      "explanation": "Capacidade para estar em juízo e capacidade postulatória são planos diferentes. O CPC disciplina a integração da capacidade do incapaz e, em regra, exige advogado regularmente inscrito. A habilitação legal para postular em causa própria também tem previsão, sem tornar os conceitos equivalentes. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma pessoa adulta e capaz pode ser parte e praticar atos da vida civil, mas a atuação técnica em juízo continua sujeita à regra de representação por advogado e às exceções legais.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 70, 71 e 103",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "f040a534452015a41f0f93a38ac36a1e0650b968d3fc1c85b802d435a1d800bc",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "cda50aef1f4117fa081bc80c4e00fd41aa1c6b409079120ce869a93b1bf2edc3",
+      "raw_text_sha256": "5eabc2e94f529f472fc6cfe928fd8945a3f1069b86c89fbcf906f1be5d6cb0b2",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Verificar a distinção doutrinária entre integração da capacidade e representação orgânica de pessoa jurídica.",
+      "focus": "A representação ou assistência do incapaz deve ser separada da representação orgânica de uma pessoa jurídica",
+      "explanation": "A representação ou assistência do incapaz deve ser separada da representação orgânica de uma pessoa jurídica. O art. 75 prevê representantes de pessoas jurídicas; isso não significa que todas sejam incapazes nem resolve sozinho a terminologia doutrinária de integração da capacidade processual. A chave editorial não foi certificada. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um menor atua representado por responsável legal, enquanto uma sociedade atua pela pessoa designada em seus atos constitutivos. Os dois fenômenos exigem análise conceitual distinta.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 71 e 75, VIII",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Verificar a distinção doutrinária entre integração da capacidade e representação orgânica de pessoa jurídica."
+      ]
+    },
+    {
+      "candidate_id": "c82f7eb34eb95d1e8db73b0a3beee922e35bbdbbb05d7e1b5617399e3f0e480e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 266,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0f4aab9683cde9c0b7ff43f5b64c6ae60625ceeb29e23bd7cd1e68419ad5f8ec",
+      "raw_text_sha256": "5eabc2e94f529f472fc6cfe928fd8945a3f1069b86c89fbcf906f1be5d6cb0b2",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O CPC prevê expressamente que, havendo substituição processual, o substituído pode intervir como assistente litisconsorcial",
+      "explanation": "O CPC prevê expressamente que, havendo substituição processual, o substituído pode intervir como assistente litisconsorcial. Portanto, a referência genérica a assistência simples não descreve a regra textual atual dessa hipótese. Não se deve confundir o substituído com qualquer terceiro de interesse apenas reflexo. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: quando o ordenamento permite que alguém pleiteie em nome próprio direito de outra pessoa, esta pode ingressar como assistente litisconsorcial, nos termos do art. 18.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 18, parágrafo único",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "fa21e4e4e6c820c69e8a590a101e155ec4dabb1678fafbfc12ef6e96bb89b7d7",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "fc5e0a8b63578baac1935c0aba969754e0e9432aa6aefa914302e44ec76b49ed",
+      "raw_text_sha256": "a2cb2e78f74a957429cbdf6f82fd78a2cbedfd2c87e2a9439ba154436d8d432f",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A escolha da forma de intimação não é indiferente ao destinatário",
+      "explanation": "A escolha da forma de intimação não é indiferente ao destinatário. MP, Defensoria e Advocacia Pública têm regras de intimação pessoal, inclusive eletrônica. A enumeração de meios de comunicação não autoriza substituir livremente uma prerrogativa de intimação pessoal por edital ou por publicação ordinária. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a existência de publicação no diário não permite presumir cumprida uma intimação pessoal exigida para o órgão; é necessário conferir o canal e a regra legal aplicável.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 180, 183, § 1º, 186, 270 e 272",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "c77daf78e34df5e33d8f1246485e0e3a134d2c3a12e86ed191c5b31fe23cf6c0",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b76ae3b51f30007d63316bdc8a1bef48aebcf8a37e58eaf6a10b1fe2477afae0",
+      "raw_text_sha256": "a2cb2e78f74a957429cbdf6f82fd78a2cbedfd2c87e2a9439ba154436d8d432f",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Há dever de manter o endereço atualizado",
+      "explanation": "Há dever de manter o endereço atualizado. A presunção de validade do art. 274 incide sobre intimações nas condições descritas, não sobre qualquer comunicação judicial sem restrição. Ela não elimina os requisitos próprios da citação e deve ser aplicada ao evento processual correto. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a parte muda de endereço sem informar ao juízo e uma intimação é dirigida ao endereço constante dos autos. Deve-se examinar a presunção do art. 274, sem confundi-la com citação inicial.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 77, V, e 274, parágrafo único",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "e59b9bb9640bc810517c30a107b44590c6311101977a3cd74156e9aba5832dc5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "08a02150712cda10d90233e7245bb684418c1aaf52bf0d659dfa32a83e9d4746",
+      "raw_text_sha256": "a2cb2e78f74a957429cbdf6f82fd78a2cbedfd2c87e2a9439ba154436d8d432f",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O CPC admite citação pessoal na pessoa do representante legal ou do procurador nas hipóteses próprias",
+      "explanation": "O CPC admite citação pessoal na pessoa do representante legal ou do procurador nas hipóteses próprias. A situação do incapaz exige distinguir representação de assistência, e a curadoria especial depende das condições do art. 72, não de uma escolha informal de quem realizar a diligência. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um adolescente relativamente incapaz é assistido na forma legal; não se trata automaticamente de situação idêntica à representação de criança ou à nomeação de curador especial.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 71, 72 e 242",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "d56d50bc268bbe9aa3f38ff53da60b904cf946e9228450909f548e1c8e1ae3f4",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "bf667a2e6e6d19fb20e294977dd2ea146e8badbec1eff7e94c9da9d8dc39b83d",
+      "raw_text_sha256": "ff0217e6dd25a02d0fce577a11e150e0b121021d6b58d0ec703434ee337065c3",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O CPC/2015 admite a denunciação ao alienante imediato, mas preserva expressamente a ação autônoma de regresso quando a denunciação não foi promovida, foi indeferida ou não foi permitida",
+      "explanation": "O CPC/2015 admite a denunciação ao alienante imediato, mas preserva expressamente a ação autônoma de regresso quando a denunciação não foi promovida, foi indeferida ou não foi permitida. O dever apresentado como condição necessária para conservar o ressarcimento não corresponde ao regime atual. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o adquirente deixa de denunciar o alienante na disputa sobre a coisa. Isso não elimina, por esse simples fato, a ação regressiva preservada pelo art. 125, § 1º.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 125, I e § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "f733ab7c041fa85a24d5b834ecbdaa849ec3c23d2fc5ccd81f6a626bbc58be3d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "6d8ebbede686bf6ef478d1684d1b210ec1c0d9f0860dd8a8ef161148c0f67f77",
+      "raw_text_sha256": "ff0217e6dd25a02d0fce577a11e150e0b121021d6b58d0ec703434ee337065c3",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A nulidade deve ser arguida na primeira oportunidade de falar nos autos, mas o parágrafo único ressalva nulidades de conhecimento de ofício e legítimo impedimento",
+      "explanation": "A nulidade deve ser arguida na primeira oportunidade de falar nos autos, mas o parágrafo único ressalva nulidades de conhecimento de ofício e legítimo impedimento. A análise precisa identificar se o vício é sujeito à preclusão, sem declarar sanado indistintamente qualquer defeito. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a parte demonstra impedimento legítimo para suscitar o vício antes. O juiz deve examinar essa justificativa, em vez de aplicar a preclusão de maneira automática.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 278",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "3b769182eea019ee552db6cb657471a15edfa43d920c78a708a520ce6cd0f562",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0b15d23555018a56e81bdb89e1632985cd556308c47e2c5173b60d6648e64663",
+      "raw_text_sha256": "ff0217e6dd25a02d0fce577a11e150e0b121021d6b58d0ec703434ee337065c3",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Solidariedade obrigacional não determina, por si só, que o mérito tenha solução uniforme para todos os litigantes",
+      "explanation": "Solidariedade obrigacional não determina, por si só, que o mérito tenha solução uniforme para todos os litigantes. O litisconsórcio unitário depende da natureza da relação e da necessidade de decisão uniforme. A possibilidade de defesas pessoais evidencia a importância de não igualar as classificações. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: dois devedores podem integrar o processo e um deles apresentar defesa pessoal que não beneficie o outro. A solidariedade, isoladamente, não prova unitariedade.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 113, 116 e 117",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "6297ee23cebf74d27c8a94c0951dc3fdfbf7c0a794ef8c56200664ef2cc4d3fa",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 270,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "1eeca27f22917efdefafe2d8b3d1a4fdaf88c57868cc9852306661271ecdae7c",
+      "raw_text_sha256": "ff0217e6dd25a02d0fce577a11e150e0b121021d6b58d0ec703434ee337065c3",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir causa de invalidade e legitimidade do MP no caso original, além da classificação processual.",
+      "focus": "Necessidade de presença de todos e uniformidade da decisão são critérios distintos",
+      "explanation": "Necessidade de presença de todos e uniformidade da decisão são critérios distintos. Uma demanda que desconstitua o mesmo vínculo conjugal exige examinar a eficácia para ambos os cônjuges. A legitimidade concreta do MP e a causa de invalidação também precisam de fundamento próprio, não inferido apenas da classificação do litisconsórcio. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: antes de desconstituir judicialmente o vínculo entre duas pessoas, o juízo deve verificar quem precisa participar e se a decisão pode produzir efeitos diferentes sobre esse mesmo vínculo.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 114 e 116",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir causa de invalidade e legitimidade do MP no caso original, além da classificação processual."
+      ]
+    },
+    {
+      "candidate_id": "8575905c636a0892f981fd2744f999697bc71ad94f503e1ce3446abb029f8155",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "8d93b84782cf8ea21dd915ad8cc20f4afc740d949a2163689686e6f3a176fcb6",
+      "raw_text_sha256": "c56f9e0896ed952785b5a335251ad23c050fe444325e486b96b967224692bcca",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O decurso do prazo extingue a faculdade de praticar ou emendar o ato independentemente de declaração judicial, ressalvada a prova de justa causa",
+      "explanation": "O decurso do prazo extingue a faculdade de praticar ou emendar o ato independentemente de declaração judicial, ressalvada a prova de justa causa. A decisão que reconhece o efeito não se confunde com uma exigência constitutiva de pronunciamento para toda preclusão temporal. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: encerrado o prazo sem manifestação, a parte não ganha prazo adicional só porque o juiz ainda não registrou o decurso. A alegação de justa causa exige demonstração própria.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 223",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "5f8dd19deeead0fd19dba5f5391b40e988dd175f165cfe5e61283ba6c3a655f2",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "709c55fb5b4a52b16ab9b24f32ae82d3de37918e4a9541d7bd4b6dc842af1f80",
+      "raw_text_sha256": "c56f9e0896ed952785b5a335251ad23c050fe444325e486b96b967224692bcca",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A proteção do art",
+      "explanation": "A proteção do art. 244, II, envolve cônjuge, companheiro e os parentes indicados até o segundo grau colateral, no dia do falecimento e nos sete dias seguintes, salvo perecimento do direito. Primo não integra esse grau colateral, e a regra não estabelece dez dias para essa situação. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: falecimento de irmão e falecimento de primo não devem ser tratados como hipóteses automaticamente idênticas para o impedimento temporário de citação.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 244, II",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "5f3a9f2d12f13c8d851f1ee6780e321ad123bbf6667b32980c3e91ccdea4be7c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b5944d50f6eb68dd5a11a637875dd3d049adfe73266935f1ffa2312001a20dc4",
+      "raw_text_sha256": "c56f9e0896ed952785b5a335251ad23c050fe444325e486b96b967224692bcca",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O oficial deve procurar o citando e cumprir o mandado onde o encontre, observadas as regras e os limites territoriais da diligência",
+      "explanation": "O oficial deve procurar o citando e cumprir o mandado onde o encontre, observadas as regras e os limites territoriais da diligência. O endereço indicado na inicial não autoriza ignorar informação útil de localização, mas tampouco cria atuação nacional irrestrita do oficial. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o citando é encontrado em outro endereço dentro do âmbito de atuação permitido. O oficial não precisa presumir frustrada a citação somente porque não o encontrou no endereço inicialmente informado.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 251 e 255",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "a9899f67892cceb25dd0d2848f692a616d52d27bf99b4967bf341495a10707e8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "1cc09f268793dce82d78dd61a936061a9f56054c1b31a456e4d1b598b74d52f6",
+      "raw_text_sha256": "c56f9e0896ed952785b5a335251ad23c050fe444325e486b96b967224692bcca",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O aproveitamento do ato e a verificação do prejuízo integram o sistema de nulidades",
+      "explanation": "O aproveitamento do ato e a verificação do prejuízo integram o sistema de nulidades. O CPC evita repetir ato cuja falta não prejudique a parte e admite aproveitamento quando a finalidade foi atingida. Isso não autoriza dispensar garantias fundamentais ou requisitos cuja inobservância tenha causado prejuízo efetivo. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um defeito meramente formal não exige refazer toda a marcha processual se o ato alcançou sua finalidade e não prejudicou a defesa; o prejuízo concreto deve ser examinado.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 277, 282, § 1º, e 283",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "91bdd8bfa244a2f99f8684a0a4cbcd419fcaaf51d89c9785e795a7344d2e43df",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "a7db3832f6c3b9143433a4a7a7e7ab939db3fde76d404c3217d516e360682c9b",
+      "raw_text_sha256": "c56f9e0896ed952785b5a335251ad23c050fe444325e486b96b967224692bcca",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir o alcance da expressão sempre e a classificação do prazo no enunciado e gabarito oficiais.",
+      "focus": "Se a lei é omissa, o juiz fixa prazo considerando a complexidade do ato",
+      "explanation": "Se a lei é omissa, o juiz fixa prazo considerando a complexidade do ato. O dispositivo não autoriza substituir prazos legais pelo que parecer mais conveniente nem resolve automaticamente toda formulação doutrinária que mencione também a complexidade da causa. É preciso identificar a espécie de prazo discutida. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: para uma diligência sem prazo previsto em lei, o juiz avalia o trabalho necessário para o ato. Já o prazo legal de recurso não pode ser trocado livremente por outro número.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 218, § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir o alcance da expressão sempre e a classificação do prazo no enunciado e gabarito oficiais."
+      ]
+    },
+    {
+      "candidate_id": "03d64fcf8ad28bafc78e6049bd3aa2dfd5cb5c326d0667748cc38b6181d49f1d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "a9630123a43f776ef20e41c2d0ff04c2e719bd26e2b305460c0070721f919790",
+      "raw_text_sha256": "2b8a9401e2cab4a7de908f4e56f81b987a234e56bf5fbe97736fe6bbfe719731",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Suspensão não equivale a interrupção",
+      "explanation": "Suspensão não equivale a interrupção. A retomada se dá, em regra, pelo tempo que faltava, e o CPC disciplina período específico de suspensão entre dezembro e janeiro. Férias individuais não autorizam generalização de que todo prazo sempre recomeça integralmente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: se cinco dias úteis de um prazo já transcorreram antes de uma suspensão aplicável, a retomada não apaga automaticamente esses cinco dias para conceder novo prazo integral.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 220 e 221",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "086e8e2b6aa9ecc69156256084e7d9420f4ccb9ab22249ca35b8a746eea6f0a8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "239a088d22a733f46754d5336b8d50a67b82a6acbd48e36603d3eabdd7d67f8e",
+      "raw_text_sha256": "2b8a9401e2cab4a7de908f4e56f81b987a234e56bf5fbe97736fe6bbfe719731",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O ato de convocação inicial para integrar a relação processual é a citação, não uma intimação indiferenciada",
+      "explanation": "O ato de convocação inicial para integrar a relação processual é a citação, não uma intimação indiferenciada. A prevenção decorre do registro ou da distribuição da inicial no regime atual; os efeitos da citação, inclusive quanto à prescrição, precisam ser tratados em seus dispositivos próprios. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o simples recebimento de uma intimação não pode ser usado para presumir que houve citação válida e que o juízo ficou prevento pela mesma regra.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 59, 239 e 240",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "865fc2d8b350f8f086eaf450dbb15d24349e7dc445eaf1a9dae52a1dae4abd0c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "17b0012684e7d7113a7544a867caa3260bc0ab2f732f7cb93d55bbcf28135ced",
+      "raw_text_sha256": "2b8a9401e2cab4a7de908f4e56f81b987a234e56bf5fbe97736fe6bbfe719731",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Publicidade é a regra, com hipóteses de segredo de justiça",
+      "explanation": "Publicidade é a regra, com hipóteses de segredo de justiça. A forma determinada não é exigência geral e absoluta para todos os atos: o art. 188 permite considerar válido o ato que, realizado de outra maneira, alcance sua finalidade essencial, ressalvadas exigências legais. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o juízo deve verificar finalidade e previsão legal antes de anular um ato apenas por diferença de forma; também não pode abrir publicamente autos sujeitos a sigilo legal.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 188 e 189",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "a32c4bbdbbae1c367eb46a7100563b1cb39af9a6fb84cb2857af2b0eda6c9580",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "1f69bddbb99ae4e4f0d24ffe5c9e18c693da4081763dd9a3ae139fd19f3c000a",
+      "raw_text_sha256": "0ae94ce37964655f58f37c0a89934554cd1adc6572e18dda6988036e6aee400b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A Lei 9",
+      "explanation": "A Lei 9.800 mantém a transmissão de dados e imagens e disciplina apresentação ou encaminhamento dos originais em cinco dias, com regra específica para atos sem prazo. Houve alteração em 2022. É preciso separar esse regime do peticionamento eletrônico comum e das regras de cada sistema judicial. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma petição transmitida por fac-símile sujeita à Lei 9.800 não deve ser confundida com documento protocolado diretamente em processo eletrônico; o tratamento dos originais depende da modalidade.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 193",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9800.htm",
+          "sha256": "2a24af600c21cc95ee5bf30f58a3febd0ae08fd16c3bf54f29385fc212bc725f",
+          "checked_at": "2026-10-17T17:23:53.148794+00:00",
+          "reference": "arts. 1º, 2º, 4º e 5º",
+          "title": "Lei 9.800/1999 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "84f209e9eee9a9c559cdeaa5c06bebad8e57012b9a87bbfeeac28fb7f177e094",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "82fe780e6343aeb981852a4b2b9cfd9bf522bb4e94b4c957af603432b4276789",
+      "raw_text_sha256": "0ae94ce37964655f58f37c0a89934554cd1adc6572e18dda6988036e6aee400b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A instrumentalidade das formas permite o aproveitamento quando o ato atinge a finalidade legal",
+      "explanation": "A instrumentalidade das formas permite o aproveitamento quando o ato atinge a finalidade legal. Não se trata de uma licença para descumprir qualquer requisito: o julgador precisa conferir finalidade, garantia protegida e eventual prejuízo ao contraditório. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a falta de uma formalidade sem impacto na identificação do ato e na defesa deve ser examinada pela finalidade alcançada, em vez de gerar nulidade automática.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 188 e 277",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "726f7b7cd9ec4d6a4e5ba49786c82e20feeb6e123c8bf87296ec9c179b4c0015",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "c7cda663165dcb40a5c726da45ade90e010c29ef239b7eed3f0915a70a0f5a93",
+      "raw_text_sha256": "0ae94ce37964655f58f37c0a89934554cd1adc6572e18dda6988036e6aee400b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Sigilo dos autos e regularidade da publicação não são a mesma questão",
+      "explanation": "Sigilo dos autos e regularidade da publicação não são a mesma questão. O CPC exige identificação adequada de advogados, com nome completo e inscrição, sem autorizar que a preservação da intimidade dispense indistintamente tais requisitos. Medidas de proteção de dados das partes devem respeitar o regime próprio. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: substituir também o nome do advogado por iniciais pode impedir a identificação da intimação. É necessário proteger a intimidade sem presumir que qualquer abreviação torne a comunicação regular.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 189 e 272, §§ 2º a 4º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "a5015b3eafc4478629f239942ea9ee9839c83541f4b8e62ec23927e539d380fb",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "5fe83f0c46fe5e95519b6ed06792a573a78e66a04bd60e1e1a8fabc14c7f7586",
+      "raw_text_sha256": "0ae94ce37964655f58f37c0a89934554cd1adc6572e18dda6988036e6aee400b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O advogado pode examinar autos mesmo sem procuração, ressalvados os sujeitos a segredo de justiça",
+      "explanation": "O advogado pode examinar autos mesmo sem procuração, ressalvados os sujeitos a segredo de justiça. O direito também alcança processos eletrônicos nos termos legais. Não há proibição geral de acesso a quaisquer autos pela simples ausência de instrumento procuratório. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: advogado sem procuração consulta processo não sigiloso. A situação é diferente do pedido de acesso a autos em segredo de justiça, que exige verificar a autorização pertinente.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 107, I e § 5º, e 189, § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "b6425e9be3596714957e5e7fe761633ef9148eba126f9c71831c48a70d368df8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 271,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "a47d4d387c9b8e9954b981154bff82d53e11f291ae2a0eb07c4e09cc6d468cd0",
+      "raw_text_sha256": "0ae94ce37964655f58f37c0a89934554cd1adc6572e18dda6988036e6aee400b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A desistência da ação depende de homologação para produzir efeitos",
+      "explanation": "A desistência da ação depende de homologação para produzir efeitos. Oferecida contestação, há ainda a exigência de consentimento do réu, na forma legal. Não se confunde desistir da ação com renunciar ao direito material, e a extinção não decorre de uma comunicação unilateral sem controle judicial. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: depois da contestação, o autor apresenta pedido de desistência. O juiz precisa examinar o consentimento exigido e homologar a desistência para extinguir o processo nessa base.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 200, parágrafo único, e 485, VIII e § 4º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "a59f48a6ad388fd270908a1593e98cfd32f9620bd6d6361e1939ab0c8374972a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 275,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "ef27ea03c5de11321d2d226d82b3c43b736cea3d5f7460ff4f1ec83a42be4ed5",
+      "raw_text_sha256": "34d0326e2a318ca31ed5bd2d3a2b374da1e7651f9f4e8d738171870c436bbee8",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A denunciação depende de vínculo legal ou contratual de garantia e de sua adequação ao caso",
+      "explanation": "A denunciação depende de vínculo legal ou contratual de garantia e de sua adequação ao caso. A falta de denunciação não elimina automaticamente o regresso, que o § 1º preserva em ação autônoma. Não basta existir locação para presumir qualquer direito indenizatório do locador contra o locatário. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a parte alega que terceiro deve ressarcir seu eventual prejuízo. Deve demonstrar o vínculo de garantia, e a ausência de denunciação não transforma, por si só, esse direito em perdido.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 125, II e § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "00782586be01ebf71e01a7d96bc714eab6c14f97269ba936ea2bb951cb04a565",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 275,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "be0b5679edce5551fbf081162d1784917f260a66798013ea76b1700975f73194",
+      "raw_text_sha256": "43f7ce582b2c5ddb61e56bfdcf945b4aaec7ca223460e438c4d0a0d93f48c305",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A limitação numérica prevista no art",
+      "explanation": "A limitação numérica prevista no art. 113 refere-se ao litisconsórcio facultativo. A dificuldade de tramitação não autoriza excluir livremente participantes cuja presença seja necessária para a eficácia da sentença. É indispensável conferir a classificação antes de aplicar a limitação. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o juízo pode analisar a separação de um litisconsórcio facultativo multitudinário, mas não simplesmente retirar um sujeito indispensável à validade ou eficácia da solução.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 113, §§ 1º e 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "5bc9b1baf2852cdf94ab1bf620d2eaa72acba71f5f707c91e1b62171358d6bcc",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 275,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "2a29ecd0f8c824897735c01b3f79ec8663caa62fe60cc904c4ad7b9a50970d72",
+      "raw_text_sha256": "43f7ce582b2c5ddb61e56bfdcf945b4aaec7ca223460e438c4d0a0d93f48c305",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "A redação atual exige procuradores de escritórios distintos, contém exceção para autos eletrônicos e disciplina a cessação do benefício em hipótese própria",
+      "explanation": "A redação atual exige procuradores de escritórios distintos, contém exceção para autos eletrônicos e disciplina a cessação do benefício em hipótese própria. A frase editorial que apresenta diferentes procuradores como condição suficiente para prazo em dobro é incompleta para o regime vigente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: dois litisconsortes representados por escritórios distintos num processo eletrônico não obtêm prazo em dobro apenas por essa circunstância, diante da ressalva do art. 229, § 2º.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 229, caput e §§ 1º e 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "86e9aa615e154ae6b80dea9de95f1d3cebb259709fa7d1553013e1a264557bf5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 275,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "67f9527d981febe08ed972517d874963872e226a5b2c4e55dd49542126780b85",
+      "raw_text_sha256": "43f7ce582b2c5ddb61e56bfdcf945b4aaec7ca223460e438c4d0a0d93f48c305",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O chamamento ao processo é requerido pelo réu nas hipóteses tipificadas, não indistintamente pelo autor ou pelo réu",
+      "explanation": "O chamamento ao processo é requerido pelo réu nas hipóteses tipificadas, não indistintamente pelo autor ou pelo réu. O instituto tem requisitos próprios e não pode ser usado como qualquer forma genérica de exercício do regresso. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: demandado um devedor solidário, ele pode examinar o chamamento dos demais nas condições do art. 130. Isso não cria para o autor a mesma modalidade de intervenção por simples opção.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 130",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "1e99e28312f8706d6ab1f25da2e55514b67f316e0f5a70926489dcf6b4a2cf67",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "e7daae0ec3b5fe7966fb296dae6e60e59e05c9be7bce259a3591fca9113f123a",
+      "raw_text_sha256": "cfb7e92da2d21488e35e2be7927506f8126ac19012a43be6b30f6bb8af961c91",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O incidente autônomo de nomeação à autoria é estrutura do CPC anterior",
+      "explanation": "O incidente autônomo de nomeação à autoria é estrutura do CPC anterior. O CPC/2015 disciplina a alegação de ilegitimidade e a indicação do sujeito passivo com oportunidade de alteração da inicial, sem transformar o indicado em autor pela regra descrita. O procedimento histórico não deve ser ensinado como vigente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o réu indica quem entende ser o sujeito passivo correto. O autor recebe a oportunidade legal de alterar a inicial; não ocorre a automática inclusão do indicado como autor da demanda.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 338 e 339",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "54148500933f4357ecc728e1d1f8a46a93a5c1067ab6828714bf691dc0eb4551",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "dfe50fe5e60c799d92549e2a2c6826571861fd83e3fe3bdfb97d2b38d667ec39",
+      "raw_text_sha256": "cfb7e92da2d21488e35e2be7927506f8126ac19012a43be6b30f6bb8af961c91",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O chamamento permite integrar as pessoas indicadas no art",
+      "explanation": "O chamamento permite integrar as pessoas indicadas no art. 130 à demanda, a requerimento do réu. A sentença de procedência pode servir de título para o réu que satisfizer a dívida buscar o devedor principal ou quotas dos codevedores. As hipóteses legais não abrangem qualquer terceiro remotamente interessado. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um codevedor solidário demandado requer o chamamento dos demais; se pagar a dívida, a utilidade do título do art. 132 precisa ser apurada conforme a responsabilidade de cada um.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 130 e 132",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "e63dafeb7542a08132c45c5af99d9f23ac314672a7dedf069ac53cdc73f73278",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0abbe156402f6762edaea92d11ecc60aca65a9d404c99afc38c6549f236f17cc",
+      "raw_text_sha256": "568d62e21055aa50dcf585c50c59ee8ae6e0653755b0d33aa63e13d10253f3c6",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Necessário e unitário não são sinônimos",
+      "explanation": "Necessário e unitário não são sinônimos. A lei pode exigir a presença de vários sujeitos sem impor que todas as situações individuais sejam decididas de maneira uniforme. A natureza da relação jurídica, e não só o número de litigantes, define a unitariedade. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a lei exige que determinados interessados participem do processo, mas uma defesa pessoal de um deles pode levar a resultado distinto sem contradizer o vínculo que os reúne.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 114 e 116",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "91338086df4bcbbe30f971b08058aba2ff2ad871f006373c2a370668b296c321",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b42403247b2236a34baf08005ed500e30c0338748050acb02f0de6bac5b1d454",
+      "raw_text_sha256": "568d62e21055aa50dcf585c50c59ee8ae6e0653755b0d33aa63e13d10253f3c6",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O sublocatário tem previsão específica de intervenção como assistente na ação de despejo",
+      "explanation": "O sublocatário tem previsão específica de intervenção como assistente na ação de despejo. A classificação como simples ou litisconsorcial exige verificar o vínculo afetado e o art. 124, sem supor que interesse econômico indireto seja suficiente para assistência litisconsorcial. A chave de origem permanece não certificada. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o sublocatário quer evitar o despejo do locatário. Seu pedido de assistência deve ser examinado à luz da lei da locação e do tipo de relação jurídica atingida pela sentença.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 119 e 124",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+          "sha256": "cac3e78fd2b393d68866e98b25725279df8093f78f00d90a2fbbdfde2472ca5a",
+          "checked_at": "2026-10-17T17:26:57.334620+00:00",
+          "reference": "art. 59, § 2º",
+          "title": "Lei 8.245/1991 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "91c8b701f88074e1d531d92963d9bd7104c9a0c6cdbed0f12e274bd0414f1e61",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "3c159e0de9f2002d1d98c75dfaba555a1d789d5bc5f0611a448902ae847b5c4c",
+      "raw_text_sha256": "e5c195ef9cb97313899a48c80f29672b1a1061b273bb88d4109027f9616f7d1e",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A oposição é dirigida contra autor e réu da demanda originária",
+      "explanation": "A oposição é dirigida contra autor e réu da demanda originária. O CPC/2015 a regula como procedimento especial, com citação dos opostos e possibilidade de prosseguimento contra um deles se o outro reconhecer o pedido. Não se deve confundir a exigência de ambos com uniformidade absoluta de todas as defesas. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um terceiro afirma que a coisa disputada por autor e réu lhe pertence. A oposição é oferecida contra ambos, conforme o art. 682, e não apenas contra aquele que parecer mais conveniente.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 682 a 684",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "6b49e8a5e03b2e249af60fe7912fc4dc0bac919cf3adfdd7f515dc8b3a1f9252",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "373cc99942f121d11b2b89bbcdc1d6227013e32ea0528991d4f02a6936383f53",
+      "raw_text_sha256": "e5c195ef9cb97313899a48c80f29672b1a1061b273bb88d4109027f9616f7d1e",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Demanda de garantia e chamamento são institutos distintos",
+      "explanation": "Demanda de garantia e chamamento são institutos distintos. A denunciação do art. 125, II, pressupõe obrigação de indenizar em regresso; o chamamento do art. 130 envolve as pessoas ali tipificadas e produz a utilidade executiva do art. 132. A descrição não pode trocar os requisitos dos dois mecanismos. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: chamar os outros devedores solidários de uma dívida comum é situação diferente de denunciar quem, por contrato de garantia, deve indenizar a parte se ela perder a causa.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 125, II, 130 e 132",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "588ccf211734e973bcd9d59035f6c5a1bcce70bba306eadb554a9f05763349c2",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "489edf53bb43cb1ad893abfcd9a6cd3a0a3254dba66c1d3b22c790d358bdcacc",
+      "raw_text_sha256": "e5c195ef9cb97313899a48c80f29672b1a1061b273bb88d4109027f9616f7d1e",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A classificação do litisconsórcio exige considerar a eficácia da sentença sobre o vínculo jurídico controvertido",
+      "explanation": "A classificação do litisconsórcio exige considerar a eficácia da sentença sobre o vínculo jurídico controvertido. A demanda de invalidação de um mesmo casamento não pode ser tratada automaticamente como reunião facultativa, pois é necessário verificar a participação de ambos os integrantes do vínculo. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: pretende-se desconstituir um único vínculo conjugal. A análise deve perguntar quem será necessariamente alcançado pela decisão, antes de aceitar que a formação do polo passivo é opcional.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 114 e 116",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "06b9320c5d12cbf2442ba2a99c68eddbe8bfdacce83af701ebe0ee7dcdd9c378",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 278,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "72effbf3f9f51919a226a5d557820017d0de1b71b85fe5e3a677b3325f375dd5",
+      "raw_text_sha256": "9a7fdd3643cb4963c7350a88a34f7bf8450358f88bac3a26fae93218e91e0d1c",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O CPC ressalva a reunião de processos conexos quando um deles já tiver sido sentenciado",
+      "explanation": "O CPC ressalva a reunião de processos conexos quando um deles já tiver sido sentenciado. A busca por coerência das decisões não permite ignorar esse limite textual e reunir indistintamente causas depois da sentença. Outros efeitos e impugnações dependem de fundamento próprio. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma das ações conexas já recebeu sentença. O juiz não pode invocar apenas conexão para determinar o julgamento conjunto como se ambas ainda aguardassem decisão inicial.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 55, § 1º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "bdabeeded4fb97330c1a267b6d230b437de7cdfe08fc3a8c513dc7366ea8b6d1",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 278,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "e97dc6ff7030bfdf25e5159f7904b983d84415dc775fdd743a24d2d61bfdd00c",
+      "raw_text_sha256": "9a7fdd3643cb4963c7350a88a34f7bf8450358f88bac3a26fae93218e91e0d1c",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A eleição de foro exige instrumento escrito e negócio jurídico determinado, vinculando herdeiros e sucessores",
+      "explanation": "A eleição de foro exige instrumento escrito e negócio jurídico determinado, vinculando herdeiros e sucessores. A redação de 2024 acrescenta pertinência com as partes ou obrigação e combate o juízo aleatório, com ressalva consumerista favorável ao consumidor. Não é autorização irrestrita para escolher qualquer foro. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o contrato escolhe cidade sem ligação com as partes ou a obrigação. A cláusula não deve ser validada apenas por estar escrita; aplicam-se os requisitos atuais do art. 63.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 63, caput e §§ 1º a 5º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "d8e954fdef2b1eaa408be4504927b34f3d6cb7afec870ae03a409abb0bd30b33",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 280,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "21d99dbdbe5de40b35f6b1251bbd19f2fae51c522cf51722a3505ab0e0d07b00",
+      "raw_text_sha256": "6446f949567202924c633d2569037e99f665a2f1e8e713c7923f06f6fd680634",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Inafastabilidade é a garantia de apreciação jurisdicional de lesão ou ameaça a direito, não o nome de um estado de sujeição das partes ao processo",
+      "explanation": "Inafastabilidade é a garantia de apreciação jurisdicional de lesão ou ameaça a direito, não o nome de um estado de sujeição das partes ao processo. A existência de meios adequados de autocomposição ou arbitragem também precisa ser compreendida sem confundir as categorias. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma ameaça concreta a direito pode ser levada ao Judiciário. Isso explica a garantia de acesso, mas não é uma definição de vinculação obrigatória das partes aos efeitos de toda decisão.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 3º",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "art. 5º, XXXV",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "37c69bfef126a32ffc08cefb15c6747b02f89e618d13b0936277b298623a0eb5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 282,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "ec943d62b5e723dc7bb335eb9b407244df9ca479e9c1f1ca3c932dbd56ff6e36",
+      "raw_text_sha256": "8c7ed422c8b3fd880f900dd98e3168fbebf9f6783a4e72e6dbd885f0d4ff111a",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O regime de competência precisa considerar leis especiais",
+      "explanation": "O regime de competência precisa considerar leis especiais. A Lei 10.259 combina limite de valor e competência absoluta no foro onde instalado o Juizado Especial Federal, observadas suas exclusões. Portanto, não se pode transformar o valor da causa em critério sempre livremente modificável por acordo. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: preenchidas as hipóteses legais de competência do JEF no foro em que instalado, não basta uma cláusula contratual para afastar o caráter absoluto previsto na lei especial.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 44, 62 e 63",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10259.htm",
+          "sha256": "ccc97e029d6ed89de56cf39b16c485cc5886d65027eff889b9070f88ba8ef31e",
+          "checked_at": "2026-10-17T17:26:56.273317+00:00",
+          "reference": "art. 3º, caput e § 3º",
+          "title": "Lei 10.259/2001 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "0754dbaadc8c05d720f60691e5d7561d2ee9b184bfeb8227753d7630042af3fb",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 282,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "80e3b4961eecd0d839aac04f67780ebcdbf134b2f2d614379fdb00ded7a4b9f3",
+      "raw_text_sha256": "8c7ed422c8b3fd880f900dd98e3168fbebf9f6783a4e72e6dbd885f0d4ff111a",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Localizar a norma estadual e a orientação oficial do tribunal competente sobre vara privativa e competência territorial.",
+      "focus": "A organização de varas especializadas e a competência territorial são planos distintos",
+      "explanation": "A organização de varas especializadas e a competência territorial são planos distintos. As regras gerais do CPC ajudam a delimitar o problema, mas a afirmação sobre alcance de vara privativa exige conferir a organização judiciária local e a jurisprudência oficial pertinente. Não se presumiu essa prova a partir do título da vara. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: antes de deslocar uma causa da comarca do interessado para a capital, devem ser identificados o foro legal, a norma de organização e os limites territoriais da especialização.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 44 e 52",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Localizar a norma estadual e a orientação oficial do tribunal competente sobre vara privativa e competência territorial."
+      ]
+    },
+    {
+      "candidate_id": "37cc2491951f3677e5b243d537aa74fc2c045d920fb91c419271ddf1329299ea",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 282,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "9faec7c9be5b3ac84136e4b88bd92530354b0c457f03432211ae6b119bcba1a5",
+      "raw_text_sha256": "8c7ed422c8b3fd880f900dd98e3168fbebf9f6783a4e72e6dbd885f0d4ff111a",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir a caracterização da ação estimatória e o contexto do contrato na prova original.",
+      "focus": "O fato de um contrato envolver imóvel não basta para qualificar toda demanda como fundada em direito real imobiliário",
+      "explanation": "O fato de um contrato envolver imóvel não basta para qualificar toda demanda como fundada em direito real imobiliário. A natureza do pedido de abatimento do preço e da causa de pedir precisa ser delimitada. A distinção legal entre ação pessoal e real foi conferida, mas não resolve automaticamente o caso concreto sem seu fundamento material. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: discutir obrigação contratual de devolver parte do preço não é, só por envolver imóvel, o mesmo que reivindicar a propriedade. O foro depende da natureza concreta da pretensão.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 46 e 47",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir a caracterização da ação estimatória e o contexto do contrato na prova original."
+      ]
+    },
+    {
+      "candidate_id": "57689f8fe1748272d8d4c9cf51aeff515c96061ffbfe9627a6b6199fe409d699",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 283,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b500f5da5bba8a2f27583d7a159545c2cc1b09a731db65b0874d9163e206469f",
+      "raw_text_sha256": "788818caf3027cbe4769931a2d2be8a3ac5183486f61bc91740ac57ca4d7ac54",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O CPC/2015 qualifica o assistente como substituto processual quando o assistido for revel ou de outro modo omisso",
+      "explanation": "O CPC/2015 qualifica o assistente como substituto processual quando o assistido for revel ou de outro modo omisso. A expressão gestor de negócios reproduz o regime anterior e não deve ser apresentada como a redação vigente do dispositivo. Preserva-se a resposta editorial como dado histórico. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o assistido torna-se revel. Para explicar a posição do assistente sob o CPC atual, utiliza-se a qualificação legal de substituto processual, sem copiar a fórmula do código revogado.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 121, parágrafo único",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "e6b38d92e36d1a190a30903dec69ecc1781f353cb7e7b371064c859089725284",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 283,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "76d4a3409d6e53699bc9996f80b3ceb4198afdade610b503fd0e47ce00227032",
+      "raw_text_sha256": "b58fbe193a4ed33797947fd5150eb4406783b63dfdd577b19f3a1c50ecc6e73e",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A conexão pode modificar competência relativa e conduzir à reunião, respeitados prevenção, estágio dos processos e demais limites legais",
+      "explanation": "A conexão pode modificar competência relativa e conduzir à reunião, respeitados prevenção, estágio dos processos e demais limites legais. Isso não autoriza prorrogar competência absoluta nem ignorar que uma das causas já foi sentenciada. O caráter relativo precisa ser demonstrado antes de aplicar a regra. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: duas ações conexas sujeitas a competência territorial relativa podem ser reunidas no juízo prevento se presentes os requisitos legais, em vez de se alterar competência material absoluta.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 54, 55, 59 e 65",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "d99b3d8eb1c82df57b58825adb393c2033271887229260304b801f3056ca8f59",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 283,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "d2db8a10d2aad297182ee7257f5c03f3407d86c80464cab71ded9145a3b7c728",
+      "raw_text_sha256": "91b679e9534ced79ac468a8fe82ffcb1950c46b1a742e7167a10f2d55c9a6d0b",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O cumprimento da obrigação no Brasil é hipótese de competência internacional da autoridade brasileira",
+      "explanation": "O cumprimento da obrigação no Brasil é hipótese de competência internacional da autoridade brasileira. A análise não termina aí: devem ser conferidos competência exclusiva, tratados e eventual cláusula de foro estrangeiro nas condições legais. A frase somente a homologação precisa ser lida com essas ressalvas, não como regra universal. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um contrato internacional prevê cumprimento no Brasil. Antes de admitir processos paralelos sem restrições, verificam-se tratados, exclusividade e eventual eleição válida de foro estrangeiro.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 21, II, 23, 24 e 25",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "2f6c051817439f46a70a05e66d0ded8740b70b90efb753b3a4c22489a7bcae17",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b687e35ab506c3123ca47c4e89e2c420c2a5335665e60ca017c7e1276e665478",
+      "raw_text_sha256": "650ce6823482eea94c032ae1fbfe93fb32a8d60bec7994d383afc5e4bf232408",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O foro do inventário é relacionado ao domicílio do autor da herança, com critérios subsidiários quando não houver domicílio certo, e não simplesmente ao lugar da morte",
+      "explanation": "O foro do inventário é relacionado ao domicílio do autor da herança, com critérios subsidiários quando não houver domicílio certo, e não simplesmente ao lugar da morte. Para servidor público, o domicílio necessário do Código Civil exige apuração de onde exercia permanentemente suas funções. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: servidor morre durante uma viagem fora do lugar onde exercia permanentemente suas funções. O local do falecimento não substitui, por si só, o critério legal do inventário.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 48",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "sha256": "a7af08d4351ab9593b1474a53e67e6ecae507be7c642c9cfb1e43d0e71400082",
+          "checked_at": "2026-10-17T17:26:58.740680+00:00",
+          "reference": "art. 76",
+          "title": "Código Civil — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "13970f06a21a295ffe9e179cd3932315205fe3fe4f3a9307b5b20426fa4e9cb1",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b0d600bb7ceceb3c0c5ad73235d1297b45164ac62d9c671416c2029915ecbff6",
+      "raw_text_sha256": "650ce6823482eea94c032ae1fbfe93fb32a8d60bec7994d383afc5e4bf232408",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A continência exige distinguir a ordem de propositura",
+      "explanation": "A continência exige distinguir a ordem de propositura. Se a ação continente foi proposta antes, o CPC prevê sentença sem resolução de mérito na contida; caso contrário, prevê reunião. A hipótese em que a menor é posterior não leva indistintamente à reunião de ambas para decisão conjunta. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a demanda mais ampla já estava em curso quando foi ajuizada a contida. Deve-se examinar a consequência do art. 57, em vez de ordenar reunião apenas porque há continência.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 57",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "b3c279601a884a186c8343226a940f68a7b4301c39038b90c8f88d590625b983",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "7c86cefdb88e1dd1bc909e5b425f6bd47eea3da2327313437b18b790b739b659",
+      "raw_text_sha256": "0d22e817bcd3f74b22e72b8185967e9a37e01f290f672133a1de96203032105f",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "A regra atual fixa a competência no registro ou distribuição da inicial e ressalva supressão do órgão ou alteração da competência absoluta",
+      "explanation": "A regra atual fixa a competência no registro ou distribuição da inicial e ressalva supressão do órgão ou alteração da competência absoluta. O texto histórico que usa a propositura e restringe as exceções a matéria ou hierarquia não deve substituir essa formulação legal mais abrangente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma alteração legal que afete competência absoluta deve ser examinada segundo o art. 43, sem presumir que somente uma mudança rotulada como matéria ou hierarquia pode importar.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 43",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "e06f237189c5560d4a5a19ff5c7ef3da288660cad97557e09d821833035ad077",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "4c06869871af8a4bdd4c4d58493fe22f4cd6590cbbd6407d1fdce090ae1bbcbb",
+      "raw_text_sha256": "d7e45d0f06f5ffda578c3d20ff53bd8217e0c1bd2976f4cc85ecd20fa14047b9",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir a fonte doutrinária e a terminologia exigida pela banca antes de validar a classificação.",
+      "focus": "A Constituição distribui funções entre órgãos judiciais e o CPC disciplina o exercício da jurisdição civil",
+      "explanation": "A Constituição distribui funções entre órgãos judiciais e o CPC disciplina o exercício da jurisdição civil. Isso não certifica automaticamente toda nomenclatura doutrinária de jurisdição ordinária ou extraordinária. Deve-se separar a estrutura dos órgãos das classificações usadas por determinado autor ou banca. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a existência de Justiça do Trabalho e Justiça Federal não prova, por simples troca de palavras, a classificação doutrinária afirmada no item; é preciso conferir a referência conceitual.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 16 e 44",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "arts. 92, 109 e 114",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir a fonte doutrinária e a terminologia exigida pela banca antes de validar a classificação."
+      ]
+    },
+    {
+      "candidate_id": "0a4b71e7bd58076210525eb739a78ae381a3a75cc3675bfb93b568800e3deb63",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "acc2055a4f556fa2a3010c72e40e44689d1e86897b6a2a15940323b702cb5082",
+      "raw_text_sha256": "d7e45d0f06f5ffda578c3d20ff53bd8217e0c1bd2976f4cc85ecd20fa14047b9",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Certificar a classificação doutrinária na prova original, sem inferi-la apenas do nome do órgão.",
+      "focus": "A distinção didática entre justiça comum e especializada se relaciona à distribuição constitucional de órgãos e competências",
+      "explanation": "A distinção didática entre justiça comum e especializada se relaciona à distribuição constitucional de órgãos e competências. A lei permite conferir essa estrutura, mas a nomenclatura doutrinária não substitui o exame da matéria atribuída a cada ramo e da questão original. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: reconhecer um órgão como integrante da Justiça do Trabalho orienta a busca de suas competências constitucionais, não uma autorização para julgar todo litígio de qualquer natureza.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 16 e 44",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "arts. 92, 109 e 114",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Certificar a classificação doutrinária na prova original, sem inferi-la apenas do nome do órgão."
+      ]
+    },
+    {
+      "candidate_id": "f2fb51efb45be3ed3e07249d2113ae68716fb18f2634b385e1d1242be9aab073",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "c6660dd1871fea824668895e21b1c7aefeacd69507088ab4e9054a8c2e05fad7",
+      "raw_text_sha256": "d7e45d0f06f5ffda578c3d20ff53bd8217e0c1bd2976f4cc85ecd20fa14047b9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A Justiça do Trabalho possui órgãos e competências constitucionais próprios",
+      "explanation": "A Justiça do Trabalho possui órgãos e competências constitucionais próprios. O alcance social da matéria não é critério para transformá-la em justiça comum. A qualificação deve ser relacionada à estrutura constitucional e não ao juízo subjetivo sobre importância social. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma controvérsia de relação de trabalho deve ser analisada à luz do art. 114 da Constituição, e não deslocada à justiça comum somente porque atinge muitos interessados.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 44",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "arts. 92, IV, e 114",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "eed6ba8d7ec8231cb1dd5b6c621ae74d0c3f29719acf22e6568f0293dcfd01f6",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "9ba364446351c830387a5b15544e7e36b1ea0d7759424948e41ea146a30379a4",
+      "raw_text_sha256": "d7e45d0f06f5ffda578c3d20ff53bd8217e0c1bd2976f4cc85ecd20fa14047b9",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A estrutura constitucional contempla a Justiça Federal e a dos Estados, além dos ramos especializados",
+      "explanation": "A estrutura constitucional contempla a Justiça Federal e a dos Estados, além dos ramos especializados. A explicação da justiça comum deve observar essa organização e as matérias atribuídas constitucionalmente, sem supor que qualquer causa de parte federal ou estadual se resolva apenas pelo nome de um litigante. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: antes de distribuir uma ação entre a justiça comum federal e estadual, examinam-se as hipóteses constitucionais de competência e suas exceções, não só a localização das partes.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 44",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "arts. 92, 109 e 125",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "8ef968f9fa026b8ce73dd7c3d58e211042d44e4c6f4e52725c086d59fbd9013c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "610923d896a7ed02cb7c76c7ce56b9c399496b9e53d40fc46be43986a706cc85",
+      "raw_text_sha256": "f46103f4dbf00903c36780d70086c922d0c50ad0683199b212410141c22ce6e7",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Incompetência absoluta deve ser conhecida de ofício",
+      "explanation": "Incompetência absoluta deve ser conhecida de ofício. Uma demanda tipicamente familiar não passa a ser de competência trabalhista por ser proposta numa vara do trabalho. A formulação histórica sobre separação judicial não foi convertida em orientação atual sobre a persistência desse instituto material. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma ação de divórcio é apresentada perante juízo trabalhista. A escolha do autor não basta para atribuir a esse órgão competência para julgar a causa de família.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 44 e 64, § 1º",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "art. 114",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "ed015a312276650416632764e9240ac47437b0fa5fdbf96a32c18aefbf133076",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "072347b9b15cfd802c01d3cd834d9de873e96ca41993e73d65c5d5044c5970b2",
+      "raw_text_sha256": "58100cb3551694924f24f0c1ed9553b6eb945df201523c5539c6a8a14817d966",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Verificar a formulação doutrinária sobre ausência de lide e as particularidades do procedimento original.",
+      "focus": "O CPC prevê procedimentos de jurisdição voluntária, com interessados e providência judicial",
+      "explanation": "O CPC prevê procedimentos de jurisdição voluntária, com interessados e providência judicial. A caracterização doutrinária como administração de interesses privados não autoriza concluir que nunca possam existir divergências entre interessados. A classificação ampla do enunciado exige revisão conceitual específica, além da leitura dos artigos. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: interessados podem discordar sobre a providência pedida num procedimento voluntário. A existência de discordância não se resolve apenas repetindo que não há lide em qualquer hipótese.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 719 a 723",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Verificar a formulação doutrinária sobre ausência de lide e as particularidades do procedimento original."
+      ]
+    },
+    {
+      "candidate_id": "ba6c6c1faa1ae416fb85d2bd8cd5a957da87e069b213f4b1a5797e8b929784a3",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "8f0218b45df581e54f259dcc07f1bde235b555285554d9242d7538ff6fd51c47",
+      "raw_text_sha256": "58100cb3551694924f24f0c1ed9553b6eb945df201523c5539c6a8a14817d966",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O princípio da inércia comporta as exceções previstas em lei, conforme o próprio art",
+      "explanation": "O princípio da inércia comporta as exceções previstas em lei, conforme o próprio art. 2º. A expressão em nenhuma hipótese afasta indevidamente essas ressalvas. A arrecadação da herança jacente exemplifica atuação judicial expressamente disciplinada, sem transformar a exceção em iniciativa irrestrita do juiz. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a regra geral de provocação da jurisdição não autoriza ignorar uma providência que a lei expressamente determine ao juiz em situação de herança jacente.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 2º e 738",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "5fc28c5a44e2a8885acd6098c7243816e5afb6d88b53878d1029ea1497f4f82c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 285,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "f9a5e973a4b9eebbe71cccdb6ae4cfa6a5932fb1164495548859932a7bb2b2ee",
+      "raw_text_sha256": "58100cb3551694924f24f0c1ed9553b6eb945df201523c5539c6a8a14817d966",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir a classificação doutrinária de índole substitutiva e seu alcance no enunciado original.",
+      "focus": "A atuação jurisdicional estatal possui disciplina legal, e a legislação também admite autocomposição e arbitragem",
+      "explanation": "A atuação jurisdicional estatal possui disciplina legal, e a legislação também admite autocomposição e arbitragem. A descrição da função como substitutiva é classificação doutrinária; não significa que toda solução válida precise sempre substituir vontade privada por uma sentença estatal. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um acordo homologado deve ser compreendido sem negar a autonomia dos interessados. Sua existência recomenda cuidado ao apresentar como universal uma definição doutrinária de substitutividade.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 3º e 16",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir a classificação doutrinária de índole substitutiva e seu alcance no enunciado original."
+      ]
+    },
+    {
+      "candidate_id": "49b5fe1d693b9bb9e6389d1e832f0fdbfe89c8b3d18d69e0fe716ebf34817a98",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0279d0f1d88aca523f884c55f01c2b744f0bb0669b8a524fd5462b2a6cb7ad52",
+      "raw_text_sha256": "b0cf4ac656be8a9e4524862895c82db1f659c577918c305e55a0989884715c37",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir natureza dos bens e fundamento jurisprudencial da eventual prorrogação no inventário original.",
+      "focus": "O contexto extraído informa ausência de domicílio certo e bens em São Paulo",
+      "explanation": "O contexto extraído informa ausência de domicílio certo e bens em São Paulo. O art. 48 oferece critérios subsidiários, mas o domicílio da única herdeira não se torna, por conveniência, um novo critério literal do dispositivo. A conclusão sobre prorrogação territorial exige análise própria, não certificada por essa leitura isolada. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: se o falecido não tinha domicílio certo, apuram-se localização e natureza dos bens. Não se escolhe automaticamente a cidade da herdeira como se estivesse expressamente no art. 48.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 48, 63 e 65",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir natureza dos bens e fundamento jurisprudencial da eventual prorrogação no inventário original."
+      ]
+    },
+    {
+      "candidate_id": "d507111ffe1359d9160b0ac1d3c508d76655ba0299d8e9a5439b6ccca1b6f2d6",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "6474a4f9c7c0dd95f975ede4f1bfebdae187ae10d30b711029fa3622aa8e9988",
+      "raw_text_sha256": "b0cf4ac656be8a9e4524862895c82db1f659c577918c305e55a0989884715c37",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir localização e natureza dos bens e o uso da expressão preferencialmente no gabarito definitivo.",
+      "focus": "Sem domicílio certo, o CPC atual diferencia bens imóveis e outros bens nos critérios subsidiários",
+      "explanation": "Sem domicílio certo, o CPC atual diferencia bens imóveis e outros bens nos critérios subsidiários. A informação de que todos os bens estavam em São Paulo ajuda a análise, mas é necessário verificar a localização efetiva e se a referência é cidade, estado ou foro. A palavra preferencialmente não substitui os critérios legais. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: quando o espólio não tem imóveis e o falecido não tinha domicílio certo, o art. 48, parágrafo único, III, admite o foro do local de qualquer bem do espólio.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 48, parágrafo único",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir localização e natureza dos bens e o uso da expressão preferencialmente no gabarito definitivo."
+      ]
+    },
+    {
+      "candidate_id": "c8ace5385b90a3cf12477dc9acc9a22bdea4937ac5ad249269341743b3513187",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "28bfb660a72561ea002ba442e836e4c7fc0919eb87e1e1c4592de414b233dc8c",
+      "raw_text_sha256": "7e6218cb8ff7611d13f2ba3d551c7ce6b5600244983bb386dce0d4ad94bba247",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O processo civil disciplina o exercício de função estatal segundo a Constituição e as normas processuais",
+      "explanation": "O processo civil disciplina o exercício de função estatal segundo a Constituição e as normas processuais. A presença de direitos privados na causa não transforma automaticamente o direito processual em um conjunto de normas de natureza privada. É preciso separar objeto litigioso e organização da prestação jurisdicional. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma cobrança entre dois particulares continua sujeita a regras públicas de competência, contraditório e decisão; a natureza privada do crédito não elimina a função jurisdicional.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 1º e 16",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "arts. 5º, LIV e LV, e 22, I",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "ef35877e911fde22e23e422ce119f855f0a3cf8071c7af2b8cd1b6e87a341d49",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "fa650ba99cd3fa514633d20d628ea0ee8cd266ad53f1f8394027ac0f96fc8b78",
+      "raw_text_sha256": "7e6218cb8ff7611d13f2ba3d551c7ce6b5600244983bb386dce0d4ad94bba247",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Resolver a ambiguidade de capacidade de ser parte em negócio jurídico e conferir eventual erro editorial.",
+      "focus": "Capacidade de direitos, capacidade para exercer atos civis e capacidade processual não podem ser tratadas como um único conceito",
+      "explanation": "Capacidade de direitos, capacidade para exercer atos civis e capacidade processual não podem ser tratadas como um único conceito. A redação do item e a explicação editorial apresentam terminologia que precisa ser recuperada na prova oficial. Os diplomas atuais permitem distinguir os planos, mas não certificam a chave negativa reproduzida na apostila. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o menor pode ser titular de direitos, embora precise de representação ou assistência para determinados atos. Isso não se confunde com a validade de um negócio celebrado pessoalmente.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 70 e 71",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "sha256": "a7af08d4351ab9593b1474a53e67e6ecae507be7c642c9cfb1e43d0e71400082",
+          "checked_at": "2026-10-17T17:26:58.740680+00:00",
+          "reference": "arts. 1º, 3º, 4º, 5º e 104",
+          "title": "Código Civil — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Resolver a ambiguidade de capacidade de ser parte em negócio jurídico e conferir eventual erro editorial."
+      ]
+    },
+    {
+      "candidate_id": "8d9d78dbeee3a7301f4968a7c7b65f6dc341008697f723c5de2c1fc44639be0f",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "f87876b1065bd3932a0a61417db1a00300b85da19da49b7f3fba19ec3b02717c",
+      "raw_text_sha256": "7e6218cb8ff7611d13f2ba3d551c7ce6b5600244983bb386dce0d4ad94bba247",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir conflito entre o art. 23, II, o enunciado extraído e a chave editorial, sem presumir gabarito oficial.",
+      "focus": "O texto atual atribui à autoridade brasileira competência exclusiva para inventário e partilha de bens situados no Brasil, mesmo em relação a falecido estrangeiro ou domiciliado fora do país",
+      "explanation": "O texto atual atribui à autoridade brasileira competência exclusiva para inventário e partilha de bens situados no Brasil, mesmo em relação a falecido estrangeiro ou domiciliado fora do país. Isso indica divergência a investigar em relação à chave editorial negativa extraída. Não se alterou a resposta para fazê-la concordar com a lei sem verificar a prova e possíveis erros de transcrição. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um estrangeiro domiciliado no exterior deixa bem situado no Brasil. A sucessão desse bem deve ser examinada à luz da competência exclusiva prevista no art. 23, II.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 23, II",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir conflito entre o art. 23, II, o enunciado extraído e a chave editorial, sem presumir gabarito oficial."
+      ]
+    },
+    {
+      "candidate_id": "ddea45c7fe630b1b55f9f3cd3aade8f706ad79f0ccadc19aef1b39da5a09c903",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 286,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "dcd2bb29f58687fda1c042fa4c84eca53353312d09df02f05d81931d60d00fe5",
+      "raw_text_sha256": "7e6218cb8ff7611d13f2ba3d551c7ce6b5600244983bb386dce0d4ad94bba247",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A incapacidade de agir pessoalmente não exclui a possibilidade de ser parte",
+      "explanation": "A incapacidade de agir pessoalmente não exclui a possibilidade de ser parte. O art. 71 prevê representação ou assistência do incapaz. A distinção evita que se elimine o direito de alguém participar da relação processual apenas porque precisa de integração de sua capacidade. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma criança pode figurar como autora de demanda por seu representante legal; ela não deixa de ser parte por não praticar pessoalmente os atos do processo.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 70 e 71",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "sha256": "a7af08d4351ab9593b1474a53e67e6ecae507be7c642c9cfb1e43d0e71400082",
+          "checked_at": "2026-10-17T17:26:58.740680+00:00",
+          "reference": "arts. 1º, 3º e 4º",
+          "title": "Código Civil — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "75be10ffcf6a97175696400988fd727c2e0799bf851993215a454ab128651a1a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 288,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "a1fde82a34b9aac9d643e5550453209674c8d41637a7cf23fddb92f3bfccfa26",
+      "raw_text_sha256": "02e881cfbb5590acefc7bf437a4426ba0d93ab2289af346dbd692cb280af6bef",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O art",
+      "explanation": "O art. 17 exige interesse e legitimidade para postular em juízo, sem limitar a exigência ao polo ativo. A defesa também está sujeita à adequada posição processual e ao interesse correspondente. A frase que reduz a contestação à legitimidade não deve substituir a regra legal de postulação. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: antes de analisar um pedido formulado em defesa, o juízo verifica sua pertinência e utilidade processual, e não presume dispensado o interesse apenas porque o requerente é réu.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 17 e 337, XI",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "46aef744916c629b038daa9b10d590c3169e7a502bd40e417d70b8f988d94639",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 288,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b21058c81cbf07f8e74af6a3224fe1af2e434bd5306eb44f40dd543b93baba0e",
+      "raw_text_sha256": "02e881cfbb5590acefc7bf437a4426ba0d93ab2289af346dbd692cb280af6bef",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O CPC prevê conhecimento de ofício de matérias processuais, com ressalvas legais",
+      "explanation": "O CPC prevê conhecimento de ofício de matérias processuais, com ressalvas legais. A existência do princípio dispositivo não impede o exame de pressupostos de constituição e desenvolvimento válido do processo. Tampouco dispensa contraditório e oportunidade de saneamento quando cabíveis. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: identificada falta de pressuposto processual, o juiz não deve ignorá-la só porque as partes não levantaram o tema; deve aplicar o procedimento e as garantias pertinentes.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 337, § 5º, e 485, IV e § 3º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "3806b33466e7e517803c78c92850852963d9ec69c420e6ebb86481f498d96da5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 288,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "aa6f18c8e9d3616672ca371447b218293388f336e6ccd91409405e9e0c27f6cf",
+      "raw_text_sha256": "fe3913dbc119e4deb9b666e2e108afc6ff46c65f146f1e6bc3c4db38a70073ba",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Na cobrança, a posição ativa deve ser relacionada à pretensão de exigir a prestação, observadas legitimidade ordinária e eventuais autorizações de substituição",
+      "explanation": "Na cobrança, a posição ativa deve ser relacionada à pretensão de exigir a prestação, observadas legitimidade ordinária e eventuais autorizações de substituição. Não se define o legitimado ativo simplesmente como a pessoa apontada como devedora, que em regra ocupa a posição contrária na narrativa. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o titular que afirma ter um crédito e cobra seu pagamento precisa demonstrar a posição processual adequada; identificar o destinatário da cobrança não o converte em autor.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 17, 18 e 319, III",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "200b4242cc31c381a8ff279fd290c585624c2d4b589a8797f9413acf7894ebdf",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 289,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "7c65e216b809fe884a4432ab406c57977d27c84a0057fba71e884d7533991a57",
+      "raw_text_sha256": "eed4c668caf14b272f16a01cd62f509ccd7099c35b0a5b1cc6dba3fb685e68fb",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O momento do falecimento em relação ao fim da instrução não é o fundamento decisivo para prosseguir",
+      "explanation": "O momento do falecimento em relação ao fim da instrução não é o fundamento decisivo para prosseguir. É necessário verificar transmissibilidade e sucessão. O Código Civil prevê a continuação pelos herdeiros da ação de prova de filiação já iniciada pelo filho, na condição legal indicada. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: iniciada a ação de prova de filiação pelo filho, seu falecimento exige examinar a continuação pelos herdeiros. Não se decide a questão somente perguntando se a audiência de instrução já terminou.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 110, 313, I, e 485, IX",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "sha256": "a7af08d4351ab9593b1474a53e67e6ecae507be7c642c9cfb1e43d0e71400082",
+          "checked_at": "2026-10-17T17:26:58.740680+00:00",
+          "reference": "art. 1.606, parágrafo único",
+          "title": "Código Civil — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "1465bde5da845332efed5ddfe4083d3602ae0c0fed9356bd381ff0a8d01f9793",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 290,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "3d1b777d4254f75f731dfb0fa2aee8eca4efd2835266f433c255031ca840c417",
+      "raw_text_sha256": "ba52fe7db8166c859a50652d988fcba08e60c37a900455dff642542e3e69328d",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A suspensão, em regra, preserva o que já foi validamente praticado e determina restituição do prazo pelo tempo restante",
+      "explanation": "A suspensão, em regra, preserva o que já foi validamente praticado e determina restituição do prazo pelo tempo restante. Há disciplina de atos urgentes durante a suspensão; por isso, nem invalidação total dos atos anteriores nem proibição indistinta de toda providência urgente descrevem o sistema atual. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma causa suspensiva alcança prazo parcialmente cumprido. Cessada a suspensão, observa-se o restante, sem refazer automaticamente os atos válidos que a antecederam.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 221, 313 e 314",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "41e3ad5c6db2f79a028940a5db1db31db1ecca946102c72ddac018e47852cd14",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 290,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "60171c9dd8f7737e87b51e581a2b82235e2cb6ac105022910085ef482d41de5e",
+      "raw_text_sha256": "ba52fe7db8166c859a50652d988fcba08e60c37a900455dff642542e3e69328d",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Prejudicialidade penal pode justificar suspensão da causa cível nas condições do art",
+      "explanation": "Prejudicialidade penal pode justificar suspensão da causa cível nas condições do art. 315. Isso não equivale a apensar processos de competências distintas para um único julgamento. O artigo ainda estabelece limites temporais e consequência para a ausência ou demora da ação penal. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a análise cível depende da verificação de fato delituoso. O juiz pode examinar a suspensão legal, mas não presume que a simples alegação de legítima defesa permite julgamento conjunto civil e penal.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 315 e §§ 1º e 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "0b29ea7c2e570b97eb3f373a3b9a9d382a9dd39c63f5aacbaabbf21d404760b1",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 292,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "cd367314cd85f64ecf441f1aba7d333b46875db321a6dca95547feb006d0a68e",
+      "raw_text_sha256": "8fba2b40be08413d8b70321003b27b1ef12279bd19dda241fda799861e992e5d",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A tutela provisória não é proibida apenas porque a causa segue procedimento especial",
+      "explanation": "A tutela provisória não é proibida apenas porque a causa segue procedimento especial. O procedimento comum tem aplicação subsidiária na forma legal e os pressupostos da tutela devem ser verificados no caso. A divisão antiga entre ordinário e sumário não deve funcionar como veto genérico. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: uma demanda de procedimento especial pode exigir providência urgente. A análise começa por sua compatibilidade e requisitos, não por uma rejeição automática fundada somente no nome do rito.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 294, 297, 300 e 318, parágrafo único",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "f97e14c210392a37f900fbf74c5b5760b436eed75e3ce1a1a0195b7446d5ac58",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 292,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "1e8a2f9e657d486db682c3e4e60f8ed69aa5a45a15083e2ab37d999bb1ac0225",
+      "raw_text_sha256": "7e1b63dd48776bca484b7213fd477ac5db9c4000f9abf0480ade94742594724d",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir o contrato e a diferença entre cumulação e pedido subsidiário antes de certificar a formulação original.",
+      "focus": "A sentença pode produzir efeitos da declaração de vontade não emitida, mas isso não autoriza conceder indistintamente obrigações não pedidas",
+      "explanation": "A sentença pode produzir efeitos da declaração de vontade não emitida, mas isso não autoriza conceder indistintamente obrigações não pedidas. É preciso separar pedido de declaração, prestação decorrente e técnica de cumulação. A qualificação do segundo pedido como subsidiário exige exame do caso, pois subsidiariedade e cumulação não são equivalentes. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o autor pretende obter declaração de vontade e também o cumprimento de prestação autônoma. A inicial deve delimitar as tutelas desejadas, sem presumir que toda obrigação adicional está sempre incluída.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 141, 327, 492 e 501",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir o contrato e a diferença entre cumulação e pedido subsidiário antes de certificar a formulação original."
+      ]
+    },
+    {
+      "candidate_id": "ec908aa9076405b7cee1db415bd1928bcba347ce74f8b2ba4979c3db5d05ccae",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 292,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "5592342647782bda12393e7afd69855cad7c48ebf37b1cfd7cc7a2a61e8812b4",
+      "raw_text_sha256": "7e1b63dd48776bca484b7213fd477ac5db9c4000f9abf0480ade94742594724d",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "O comentário histórico contrapõe antecipação de tutela e cognição exauriente sob o sistema anterior",
+      "explanation": "O comentário histórico contrapõe antecipação de tutela e cognição exauriente sob o sistema anterior. O CPC/2015 exige distinguir tutela provisória, inclusive da evidência, e julgamento antecipado parcial do mérito. Este último não deve ser ensinado como se fosse simplesmente a antiga antecipação provisória da parte incontroversa. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: pedido incontroverso pode ser objeto de julgamento parcial do mérito conforme o art. 356, sem que isso seja automaticamente classificado como tutela provisória de urgência.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 294, 300, 311 e 356",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "a3b18454bec1539e4edc19660d345d6d67fc38d56cb73b32f22270948fad892d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 292,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "7864dead89598e6bba1d68d55ebf091c33f273399d8643ef26965565aa30e0f3",
+      "raw_text_sha256": "defdee9b2c9f8037fc257b996419f6a0164bb57c0c6a2452b8305a4264eb2816",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A probabilidade do direito é requisito da tutela de urgência, junto do perigo de dano ou risco ao resultado útil",
+      "explanation": "A probabilidade do direito é requisito da tutela de urgência, junto do perigo de dano ou risco ao resultado útil. O juízo provisório não se confunde com certeza de vitória final. A adequação da medida e sua relação com a tutela requerida devem observar os limites e poderes previstos em lei. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: prova inicial pode justificar tutela urgente sem eliminar a instrução posterior. O julgamento definitivo ainda depende da cognição pertinente, e a medida precisa ser motivada.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 141, 294, 297, 300 e 492",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "94066910a5c3358204b33fb355cbffc5d36d92e7b8adec95a3518933663155cd",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 292,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "84cce0a9a8db09a25c4950ae5dd9b97191fbd063ce02d2b3897786551c6e5473",
+      "raw_text_sha256": "defdee9b2c9f8037fc257b996419f6a0164bb57c0c6a2452b8305a4264eb2816",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A sentença que confirma, concede ou revoga tutela provisória tem hipótese legal de eficácia imediata",
+      "explanation": "A sentença que confirma, concede ou revoga tutela provisória tem hipótese legal de eficácia imediata. Isso não autoriza apagar a análise por capítulos nem ignorar eventual pedido de efeito suspensivo ao tribunal. O comentário deve distinguir ausência de suspensão automática e impossibilidade absoluta de suspensão. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a sentença concede tutela provisória. A eficácia imediata deve ser examinada com a possibilidade de requerimento de efeito suspensivo nas condições do art. 1.012, §§ 3º e 4º.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 1.012, § 1º, V, e §§ 3º e 4º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "3413e23b23e8a14c154b8be4a61b2fca74a294581ee3a124c1ef38f677d4b467",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 293,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "38696c7379582eefceca79504d3686a9d31acb0ac736a473132b8c7f79087db4",
+      "raw_text_sha256": "c3dd5b732dd7ec33d6d7d596b1c47a61b2b0c5db816a9acccc7f3dc53bd605a1",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir precedentes oficiais atuais sobre medicamento, Fazenda Pública, requisitos e multa antes de validar o caso.",
+      "focus": "O CPC prevê tutela específica, medidas de efetivação e multa, mas a hipótese de medicamento contra a Fazenda envolve limites legais e precedentes específicos",
+      "explanation": "O CPC prevê tutela específica, medidas de efetivação e multa, mas a hipótese de medicamento contra a Fazenda envolve limites legais e precedentes específicos. A possibilidade abstrata dos instrumentos não certifica qualquer fornecimento judicial, urgência ou multa no caso narrado. A jurisprudência citada no comentário editorial precisa ser recuperada e atualizada na autoridade oficial. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: num pedido de medicamento, não basta citar o poder geral de fixar multa. Devem ser examinados os requisitos da tutela e os critérios legais e jurisprudenciais de saúde aplicáveis.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 300, 497, 536, 537 e 1.059",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir precedentes oficiais atuais sobre medicamento, Fazenda Pública, requisitos e multa antes de validar o caso."
+      ]
+    },
+    {
+      "candidate_id": "1263de0a241dc5d08ca73534664f76781a4155209d636a76e63984250c13905e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 293,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "490e2d6ae17c0861d53f2bec8fe497bc30b8f55021870fb3fafe9c8be9baadb9",
+      "raw_text_sha256": "c3dd5b732dd7ec33d6d7d596b1c47a61b2b0c5db816a9acccc7f3dc53bd605a1",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Não há veto genérico à tutela urgente pelo simples fato de uma ação tratar de posse ou de imóvel",
+      "explanation": "Não há veto genérico à tutela urgente pelo simples fato de uma ação tratar de posse ou de imóvel. É indispensável identificar a natureza da imissão na posse e os requisitos da medida, sem confundi-la automaticamente com ação possessória de rito especial. A afirmação absoluta de impossibilidade não decorre dos dispositivos gerais. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: adquirente que busca imissão precisa demonstrar os fundamentos da pretensão e da urgência. O juiz não indefere o pedido apenas por afirmar que toda causa sobre posse é procedimento especial.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 300 e 318",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "c5657804c7fc7473e14d97c66d11b9fda4483dbd8e07fb5c809b3968c73bed99",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 294,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "da790d94675adba149c92764adc8cbf1d895030718a2c2873e4df244712d574f",
+      "raw_text_sha256": "3c5fa1e149eb144e86f808895917ff7c63288afbec3f6ab14544a92e43f5ff74",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "O texto legal impede tutela de urgência antecipada quando houver perigo de irreversibilidade dos efeitos",
+      "explanation": "O texto legal impede tutela de urgência antecipada quando houver perigo de irreversibilidade dos efeitos. A formulação deve ser entendida no âmbito dessa modalidade, sem generalizar para toda tutela provisória e sem presumir resolvidos casos excepcionais que dependam de jurisprudência específica. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: antes de conceder providência antecipatória com efeitos materialmente irreversíveis, o juiz precisa enfrentar o art. 300, § 3º; não basta identificar apenas probabilidade do direito.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 300, § 3º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "eeb9fe10b940cd27dd714b5d15d342d56c1025afa48c74dbf70392f28e26830e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 294,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "4732d9532416c7199da691ff5144b303dbbeeef138e15bf9d828d0a5b49efbbc",
+      "raw_text_sha256": "3c5fa1e149eb144e86f808895917ff7c63288afbec3f6ab14544a92e43f5ff74",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A tutela provisória pode ser revogada ou modificada a qualquer tempo, mediante motivação clara e precisa",
+      "explanation": "A tutela provisória pode ser revogada ou modificada a qualquer tempo, mediante motivação clara e precisa. A afirmação de que a alteração só seria possível na sentença não corresponde ao art. 296. Isso não converte a revisão em decisão arbitrária ou dispensa fundamentar a mudança. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: nova prova relevante surge durante a instrução e altera o quadro de urgência. O juiz deve examinar fundamentadamente a tutela, sem esperar necessariamente a sentença.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 296 e 298",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "6cea34067039fb9ad41009b1845028d2efea095f92a4e16b1e8c99c16911cb9d",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 297,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "264d6954e40005e3f9c0cbc21e27e625c55f9d3b6c51bc2071ab3f441b888466",
+      "raw_text_sha256": "a1fce6b7d64796efa054c89628ee1f6489fcd06d80af75e4db190b5e4d324b31",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "A incompetência é alegada como preliminar de contestação no CPC atual",
+      "explanation": "A incompetência é alegada como preliminar de contestação no CPC atual. O incidente autônomo de exceção, com a suspensão generalizada descrita, pertence a estrutura anterior e não organiza o procedimento vigente. Não se deve ensinar que toda discussão de competência paralisa o feito até trânsito em julgado. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o réu suscita incompetência na contestação. A alegação é processada conforme o art. 64, sem criar automaticamente um incidente autônomo suspensivo até decisão definitiva.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 64, caput e §§ 1º a 4º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "10fd89cc0b86b8a549ee4b7b7f003f9a772568b23dc4c3b9b9ac4554059c58a9",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 297,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "3bdbdae370c04588740032b8ac037a6df0cdf766a5182f5c1d41d4018b02c36c",
+      "raw_text_sha256": "a1fce6b7d64796efa054c89628ee1f6489fcd06d80af75e4db190b5e4d324b31",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "Em causa complexa, o debate oral pode ser substituído por razões finais escritas",
+      "explanation": "Em causa complexa, o debate oral pode ser substituído por razões finais escritas. O CPC/2015 prevê prazos sucessivos de quinze dias, assegurada vista dos autos. A fórmula antiga de entrega em dia e hora escolhidos pelo juiz não deve substituir essa disciplina atual. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: o juiz substitui debates orais por razões finais escritas diante da complexidade. Deve aplicar os prazos sucessivos previstos no art. 364, § 2º, em vez de inventar prazo comum sem base legal.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "art. 364, § 2º",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "07aa029d3cb25cce4e9ee0596d1945ca03ca8d8f138955125f7426dc7fe0b5ed",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 297,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "10a600cb41139577622709648baabf10a8c4cef0835c58b99eee85c9650a9c2f",
+      "raw_text_sha256": "a1fce6b7d64796efa054c89628ee1f6489fcd06d80af75e4db190b5e4d324b31",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "Pedidos incompatíveis podem gerar inépcia, mas pedidos alternativos ou subsidiários exigem leitura própria",
+      "explanation": "Pedidos incompatíveis podem gerar inépcia, mas pedidos alternativos ou subsidiários exigem leitura própria. A inadequação procedimental não deve ser equiparada automaticamente a toda causa de inépcia, e vícios sanáveis exigem oportunidade de correção quando cabível. Não se pode separar a primeira parte do item dessas ressalvas. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: a inicial formula pedidos em ordem subsidiária. Antes de chamá-los incompatíveis, o juiz deve verificar a técnica usada e a possibilidade de emenda prevista no CPC.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 317, 321, 327, §§ 2º e 3º, e 330, § 1º, IV",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "3fd2408b99d4e0d70b84b26422d20e17e07ed7f04faea7a9c28c3fc7564d8cfc",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 297,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "59a6e7d3407b7d4e24c069be78a54519aa17c1ad6737febf97fe7e5c5447a8ce",
+      "raw_text_sha256": "a1fce6b7d64796efa054c89628ee1f6489fcd06d80af75e4db190b5e4d324b31",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "A falta de conciliação não reduz a organização do processo a uma lista fechada de três providências",
+      "explanation": "A falta de conciliação não reduz a organização do processo a uma lista fechada de três providências. O art. 357 inclui solução de questões processuais, delimitação de fato e de direito, prova e ônus probatório, podendo exigir saneamento cooperativo. A audiência de conciliação do sistema atual não se confunde automaticamente com a antiga audiência preliminar. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: não obtido acordo, uma causa complexa pode demandar delimitação das questões probatórias e audiência de saneamento em cooperação com as partes, conforme a disciplina atual.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 334 e 357",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "f955187f669f15d559ae6e40066865b93d582fc777ab5b464d362293444efa36",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 275,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "8b7dad5c75779970e6d8a5b6375e0131d94c2320d887f22ef74fef6d95fd865a",
+      "raw_text_sha256": "43f7ce582b2c5ddb61e56bfdcf945b4aaec7ca223460e438c4d0a0d93f48c305",
+      "next_status": "reviewed",
+      "legal_current": true,
+      "reason": "Conferência normativa privada; gabarito oficial, contexto e edital ainda pendentes.",
+      "focus": "No CPC/2015, a oposição tem procedimento especial próprio e é oferecida contra autor e réu, com distribuição por dependência",
+      "explanation": "No CPC/2015, a oposição tem procedimento especial próprio e é oferecida contra autor e réu, com distribuição por dependência. A pretensão do opoente recai sobre a coisa ou o direito disputado. Não se deve converter a ideia de ingresso na controvérsia em afirmação de que se trata de qualquer intervenção incidental sem autonomia. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: terceiro afirma ser dono da coisa disputada por autor e réu. Deve oferecer sua pretensão contra ambos, observando o procedimento da oposição, em vez de pedir simples inclusão informal nos autos.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 682, 683 e 685",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "2098a8fb1827376e3534516b41d57a1dfcc8d953f5849bb018f6de50ac3c4dd8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "0bca5db09418804d9176a6aae605a33f3746f4c1c54ee81cbaec5205e1e0f0c4",
+      "raw_text_sha256": "cfb7e92da2d21488e35e2be7927506f8126ac19012a43be6b30f6bb8af961c91",
+      "next_status": "obsolete",
+      "legal_current": false,
+      "reason": "Regime ou fundamento histórico incompatível com a redação atual.",
+      "focus": "A oposição foi deslocada para os procedimentos especiais no CPC/2015",
+      "explanation": "A oposição foi deslocada para os procedimentos especiais no CPC/2015. O apensamento e o julgamento conjunto seguem as condições dos dispositivos próprios, inclusive o estágio da instrução. A formulação antiga que a apresenta como modalidade de intervenção de terceiros não deve ser reproduzida como classificação processual vigente. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: proposta oposição quando a causa principal já alcançou determinada fase, o juiz precisa examinar a disciplina dos arts. 685 e 686; não basta aplicar uma fórmula genérica de intervenção.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 682 a 686",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": []
+    },
+    {
+      "candidate_id": "97b9383574cfcea758f079738b3c05544eed88fd3107530d9d18950f36505b6e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 277,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "b2a5a7475be137913844781ca3a464d3a2efcad32f9509a3ff3439080773045b",
+      "raw_text_sha256": "e699b72ae32914c563dfcbfdd6289232f528b3b9a97f968ac2c16d41b2cd8e46",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Localizar jurisprudência oficial sobre o pedido concreto e o alcance da anulação de concurso narrada na prova.",
+      "focus": "A necessidade de litisconsórcio depende da previsão legal e da eficácia da sentença sobre a relação jurídica",
+      "explanation": "A necessidade de litisconsórcio depende da previsão legal e da eficácia da sentença sobre a relação jurídica. Saber se todos os candidatos de um concurso precisam ser citados exige o alcance exato do pedido e a orientação oficial pertinente. A conferência dos critérios gerais não certifica uma resposta única para qualquer anulação de concurso. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: um pedido pode afetar a situação individual de beneficiário determinado ou discutir ato com alcance diferente. É necessário identificar o que a sentença efetivamente atingirá antes de definir quem será citado.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 114 a 116",
+          "title": "CPC/2015 — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Localizar jurisprudência oficial sobre o pedido concreto e o alcance da anulação de concurso narrada na prova."
+      ]
+    },
+    {
+      "candidate_id": "1bc18c383717481ca8d22225b7aa3a5fac2cfa6d0335d3730269ab5d4d37ab4b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 278,
+      "expected_status": "under_review",
+      "expected_payload_sha256": "156bb0d52d7521342281988f10cbeaef56e82fd41f39c5fa18c28e3272f746bc",
+      "raw_text_sha256": "9a7fdd3643cb4963c7350a88a34f7bf8450358f88bac3a26fae93218e91e0d1c",
+      "next_status": "reviewed",
+      "legal_current": false,
+      "reason": "Conferência normativa parcial; Conferir o precedente oficial específico sobre continência entre ações civis públicas e competência federal.",
+      "focus": "A conexão ou continência altera competência relativa nas condições do CPC, mas a competência constitucional federal e o tratamento de ações coletivas exigem exame próprio",
+      "explanation": "A conexão ou continência altera competência relativa nas condições do CPC, mas a competência constitucional federal e o tratamento de ações coletivas exigem exame próprio. Não se confirmou, com os dispositivos gerais, a exceção ampla descrita no item para uma ação sem ente federal como parte. A resposta editorial é preservada; esta conferência não certifica o gabarito definitivo da banca nem autoriza publicação.",
+      "example": "Exemplo: duas ações civis públicas tramitam em ramos diferentes. Antes de reuni-las, é necessário examinar objeto, legitimados, competência constitucional e o precedente oficial aplicável ao caso.",
+      "evidence": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "8dc449cac0b55808fd100e27584e658b81617c1118c81f0c9b4e15404ee465ec",
+          "checked_at": "2026-10-17T17:24:04.520187+00:00",
+          "reference": "arts. 44, 54 e 62",
+          "title": "CPC/2015 — Planalto"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "4cdee30e018f5928ea60e5634c48555a89e1a31fe57509e5333e67677a48be54",
+          "checked_at": "2026-10-17T17:24:00.256849+00:00",
+          "reference": "art. 109, I",
+          "title": "Constituição Federal — Planalto"
+        }
+      ],
+      "additional_blockers": [
+        "Conferir o precedente oficial específico sobre continência entre ações civis públicas e competência federal."
+      ]
+    }
+  ]
+}

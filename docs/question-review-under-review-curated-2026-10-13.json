@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-13",
+  "items": [
+    {
+      "id": "04dd6e95-46ed-47ac-80d9-426d754e2704",
+      "decision": "active",
+      "answer_preserved": "E",
+      "topic": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "legal": true,
+      "reason": "Errado. A CF, art. 5º, § 2º, admite direitos decorrentes do regime, dos princípios e dos tratados internacionais de que o Brasil seja parte: o catálogo é aberto. Origem confirmada no caderno oficial STJ 2018, conhecimentos básicos cargo 1, item 16 (item 9 na coletânea), com gabarito definitivo E. Enunciado autossuficiente, sem figura ou texto de apoio. Não confundir número da coletânea com número da prova.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+        "https://cdn.cebraspe.org.br/concursos/STJ_18/arquivos/MATRIZ_385_STJCB2__PAG_3.PDF",
+        "https://cdn.cebraspe.org.br/concursos/STJ_18/arquivos/GAB_DEFINITIVO_385_STJCB2.PDF"
+      ]
+    },
+    {
+      "id": "e4fd1325-c3b4-4a90-a7d9-b4f29ec3f336",
+      "decision": "active",
+      "answer_preserved": "C",
+      "topic": "39909a82-6c59-4e72-9147-71ad8c445093",
+      "legal": true,
+      "reason": "Certo. Regras 1, 15 a 18, 22, 24 e 58 confirmam dignidade, vedação de tortura, higiene, alimentação, saúde e contato familiar. São padrões internacionais adotados por resolução da ONU, não uma nova lei federal nem tratado automaticamente incorporado. Questão autoral preservada como autoral. Confronto atual: PP-MG, Edital SEJUSP 01/2025, Anexo II, Direitos Humanos, item 2.1 (sistema global, ONU, resoluções). O vínculo indica pertinência temática; não promete cobrança expressa da norma pelo edital.",
+      "sources": [
+        "https://www.unodc.org/documents/justice-and-prison-reform/Nelson_Mandela_Rules-P-ebook.pdf",
+        "https://www.seguranca.mg.gov.br/images/0_planilhas-e-pdfs/Editais/Concurso%20Publico%20PP%2001%202025.pdf"
+      ]
+    }
+  ]
+}

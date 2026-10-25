@@ -1,0 +1,850 @@
+{
+  "enem-estatistica-aplicacoes": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Valores extremos podem alterar a média.",
+        "why": "Some os valores e divida pela quantidade; valores extremos podem alterá-la bastante."
+      },
+      {
+        "a": true,
+        "q": "Média ponderada divide pela soma dos pesos.",
+        "why": "Some valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores."
+      },
+      {
+        "a": true,
+        "q": "A mediana usa os dados ordenados.",
+        "why": "Mediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente."
+      },
+      {
+        "a": true,
+        "q": "Um gráfico exige leitura de eixos e unidades.",
+        "why": "Leia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade."
+      },
+      {
+        "a": false,
+        "q": "A média é imune a valores extremos.",
+        "why": "Some os valores e divida pela quantidade; valores extremos podem alterá-la bastante."
+      },
+      {
+        "a": false,
+        "q": "Na média ponderada, o denominador é sempre o número de notas.",
+        "why": "Some valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores."
+      },
+      {
+        "a": false,
+        "q": "A moda é necessariamente o maior valor da lista.",
+        "why": "Mediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente."
+      },
+      {
+        "a": false,
+        "q": "Correlação prova sozinha uma relação de causa e efeito.",
+        "why": "Leia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade."
+      },
+      {
+        "q": "A média aritmética dos valores 4, 6 e 11 é 7.",
+        "a": true,
+        "why": "A soma é 21 e há três valores: 21 / 3 = 7. Exemplo: a média não é obtida dividindo pelo maior valor."
+      },
+      {
+        "q": "A mediana de 2, 5, 8 e 13 é 8.",
+        "a": false,
+        "why": "Com quatro valores ordenados, a mediana é a média dos dois centrais: (5+8)/2 = 6,5. Exemplo: não se escolhe apenas o maior dos centrais."
+      },
+      {
+        "q": "A amplitude dos dados 3, 9, 12 e 20 é 17.",
+        "a": true,
+        "why": "Amplitude é máximo menos mínimo: 20 − 3 = 17. Exemplo: somar os extremos não mede a amplitude."
+      },
+      {
+        "q": "Uma nota 6 com peso 2 e uma nota 9 com peso 1 produzem média ponderada 7.",
+        "a": true,
+        "why": "A média é (6×2 + 9×1)/(2+1) = 21/3 = 7. Exemplo: os pesos precisam aparecer no numerador e no denominador."
+      },
+      {
+        "q": "Em um grupo de 40 pessoas, 10 representam 40% do total.",
+        "a": false,
+        "why": "A fração é 10/40 = 0,25, correspondente a 25%. Exemplo: o denominador é o total do grupo."
+      },
+      {
+        "q": "A moda do conjunto 1, 2, 2, 4 e 5 é 2.",
+        "a": true,
+        "why": "O valor 2 aparece duas vezes e os demais uma vez. Exemplo: moda mede frequência, não a posição central."
+      },
+      {
+        "q": "Se todos os três dados forem aumentados em 5, a média também aumentará em 5.",
+        "a": true,
+        "why": "Somar a mesma constante a cada observação soma essa constante à média. Exemplo: a média de 1, 4 e 7 é 4; a de 6, 9 e 12 é 9."
+      },
+      {
+        "q": "A variância populacional dos valores 2 e 4 é 2.",
+        "a": false,
+        "why": "A média é 3; os desvios quadráticos são 1 e 1. Dividindo por N=2, a variância populacional é 1. Exemplo: usar N−1 corresponderia a outro cálculo."
+      },
+      {
+        "q": "Em uma tabela, frequências absolutas 8, 12 e 5 somam 25 observações.",
+        "a": true,
+        "why": "O total é 8 + 12 + 5 = 25. Exemplo: frequências absolutas representam contagens das classes consideradas."
+      },
+      {
+        "q": "Se uma frequência relativa é 0,18, sua representação percentual é 1,8%.",
+        "a": false,
+        "why": "Para obter percentual, multiplica-se por 100: 0,18 = 18%. Exemplo: deslocar a vírgula apenas uma casa produz erro de fator 10."
+      },
+      {
+        "q": "A mediana de 9, 1 e 5 é 5.",
+        "a": true,
+        "why": "Primeiro ordene: 1, 5, 9. O elemento central é 5. Exemplo: a posição na lista original não define a mediana."
+      },
+      {
+        "q": "Adicionar 100 ao conjunto 1, 2 e 3 mantém sua média aritmética em 2.",
+        "a": false,
+        "why": "A nova média é 106/4 = 26,5. Exemplo: valores extremos podem influenciar intensamente a média."
+      }
+    ],
+    "syllabusTopicId": "bce77874-1849-5ee8-83db-e2c37c10e5fd",
+    "materialSlug": "enem-estatistica-aplicacoes"
+  },
+  "enem-fisica-fundamentos": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Velocidade média envolve tempo e deslocamento.",
+        "why": "Deslocamento dividido pelo intervalo de tempo; use unidades coerentes."
+      },
+      {
+        "a": true,
+        "q": "Potência é taxa de transferência de energia.",
+        "why": "Pode se transformar e se transferir. Em um sistema isolado, a energia total se conserva."
+      },
+      {
+        "a": true,
+        "q": "20 W equivalem a 0,020 kW.",
+        "why": "Energia transferida por unidade de tempo: P = E/Δt."
+      },
+      {
+        "a": true,
+        "q": "Um resistor ôhmico obedece a U = RI nas condições consideradas.",
+        "why": "Para um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I."
+      },
+      {
+        "a": false,
+        "q": "kW e kWh medem a mesma grandeza.",
+        "why": "Deslocamento dividido pelo intervalo de tempo; use unidades coerentes."
+      },
+      {
+        "a": false,
+        "q": "A velocidade média determina a velocidade de todo instante.",
+        "why": "Pode se transformar e se transferir. Em um sistema isolado, a energia total se conserva."
+      },
+      {
+        "a": false,
+        "q": "Energia desaparece quando há atrito.",
+        "why": "Energia transferida por unidade de tempo: P = E/Δt."
+      },
+      {
+        "a": false,
+        "q": "Em resistência constante, aumentar a tensão necessariamente reduz a corrente.",
+        "why": "Para um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I."
+      },
+      {
+        "q": "Um corpo que percorre 120 m em 20 s tem velocidade escalar média de 6 m/s.",
+        "a": true,
+        "why": "Velocidade escalar média é distância percorrida pelo intervalo de tempo: 120/20=6 m/s. Exemplo: não é necessário que a velocidade tenha sido constante para calcular essa média."
+      },
+      {
+        "q": "Uma velocidade de 36 km/h equivale a 36 m/s.",
+        "a": false,
+        "why": "Para converter km/h em m/s, divide-se por 3,6; 36 km/h=10 m/s. Exemplo: as duas unidades usam escalas diferentes de comprimento e tempo."
+      },
+      {
+        "q": "No modelo F=ma, uma massa de 4 kg com aceleração de 3 m/s² sofre força resultante de 12 N.",
+        "a": true,
+        "why": "A força resultante é 4×3=12 N. Exemplo: usa-se a resultante das forças, não necessariamente uma única força isolada."
+      },
+      {
+        "q": "Uma força constante de 10 N paralela ao deslocamento de 5 m realiza trabalho de 50 J.",
+        "a": true,
+        "why": "W=F×d×cos(0)=10×5=50 J. Exemplo: o ângulo é relevante; uma força perpendicular não teria o mesmo trabalho."
+      },
+      {
+        "q": "A energia cinética de uma massa de 2 kg a 3 m/s é 18 J.",
+        "a": false,
+        "why": "Ec=mv²/2=2×9/2=9 J. Exemplo: não se deve esquecer o fator 1/2."
+      },
+      {
+        "q": "Adotando g=10 m/s², elevar uma massa de 3 kg em 2 m aumenta sua energia potencial gravitacional em 60 J.",
+        "a": true,
+        "why": "Próximo à superfície e no modelo considerado, ΔEp=mgΔh=3×10×2=60 J. Exemplo: a referência de altura pode variar, mas a diferença é a grandeza usada."
+      },
+      {
+        "q": "Transferir 600 J em 20 s corresponde a potência média de 30 W.",
+        "a": true,
+        "why": "Potência média é energia por tempo: 600/20=30 W. Exemplo: watt equivale a joule por segundo."
+      },
+      {
+        "q": "Um aparelho que recebe 200 J e fornece 150 J de energia útil tem rendimento de 75%.",
+        "a": true,
+        "why": "Rendimento é energia útil sobre recebida: 150/200=0,75=75%. Exemplo: os 50 J restantes não fazem parte da saída útil indicada."
+      },
+      {
+        "q": "Um resistor ôhmico de 6 Ω submetido a 12 V conduz corrente de 72 A.",
+        "a": false,
+        "why": "Pela relação V=RI, I=V/R=12/6=2 A. Exemplo: multiplicar tensão pela resistência não fornece corrente."
+      },
+      {
+        "q": "Dois resistores de 4 Ω e 6 Ω em série têm resistência equivalente de 10 Ω.",
+        "a": true,
+        "why": "Na associação em série, as resistências somam: 4+6=10 Ω. Exemplo: essa regra não é a da associação em paralelo."
+      },
+      {
+        "q": "Uma máquina de 1 kW ligada por duas horas consome 2 kWh de energia elétrica no modelo de potência constante.",
+        "a": true,
+        "why": "Energia=potência×tempo=1 kW×2 h=2 kWh. Exemplo: kWh é unidade de energia, não de potência."
+      },
+      {
+        "q": "Uma variação de velocidade de 4 m/s em 2 s corresponde a aceleração média de 8 m/s².",
+        "a": false,
+        "why": "Aceleração média é Δv/Δt=4/2=2 m/s². Exemplo: a razão, e não o produto, relaciona a mudança de velocidade ao tempo."
+      }
+    ],
+    "syllabusTopicId": "62d4d90e-a08d-5ab8-8a19-0ed3ce781875",
+    "materialSlug": "enem-fisica-fundamentos"
+  },
+  "enem-funcoes-aplicacoes": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Uma função afim pode ter parcela fixa.",
+        "why": "f(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0."
+      },
+      {
+        "a": true,
+        "q": "Uma função quadrática tem vértice quando a é diferente de zero.",
+        "why": "f(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0."
+      },
+      {
+        "a": true,
+        "q": "Percentuais sucessivos usam bases atualizadas.",
+        "why": "Aplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100."
+      },
+      {
+        "a": true,
+        "q": "O contexto pode restringir o domínio.",
+        "why": "Nem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto."
+      },
+      {
+        "a": false,
+        "q": "Toda função afim representa proporcionalidade direta.",
+        "why": "f(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0."
+      },
+      {
+        "a": false,
+        "q": "Qualquer polinômio quadrático tem a igual a zero.",
+        "why": "f(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0."
+      },
+      {
+        "a": false,
+        "q": "Aumentar e descontar o mesmo percentual sempre se anulam.",
+        "why": "Aplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100."
+      },
+      {
+        "a": false,
+        "q": "Uma quantidade negativa de produtos é sempre válida no modelo.",
+        "why": "Nem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto."
+      },
+      {
+        "q": "Para f(x)=3x+2, o valor de f(4) é 14.",
+        "a": true,
+        "why": "Substitua x por 4: 3×4 + 2 = 14. Exemplo: multiplicação precede adição."
+      },
+      {
+        "q": "A raiz da função f(x)=2x−8 é x=8.",
+        "a": false,
+        "why": "Na raiz, 2x−8=0; portanto x=4. Exemplo: f(4)=0 confirma a solução."
+      },
+      {
+        "q": "Um produto de R$ 200 com desconto único de 15% passa a custar R$ 170.",
+        "a": true,
+        "why": "O desconto é 200×0,15=30; o preço final é 200−30=170. Exemplo: desconto incide sobre o preço de referência."
+      },
+      {
+        "q": "Dois aumentos sucessivos de 10% sobre R$ 100 resultam em R$ 120.",
+        "a": false,
+        "why": "Os fatores se multiplicam: 100×1,1×1,1=121. Exemplo: a segunda taxa incide sobre R$ 110, não sobre R$ 100."
+      },
+      {
+        "q": "Juros simples de 2% ao mês sobre R$ 1.000 por três meses geram R$ 60 de juros.",
+        "a": true,
+        "why": "J=C×i×t=1.000×0,02×3=60. Exemplo: a unidade da taxa deve coincidir com a do tempo."
+      },
+      {
+        "q": "No regime composto, R$ 1.000 a 10% por período durante dois períodos produzem montante de R$ 1.210.",
+        "a": true,
+        "why": "M=C(1+i)^t=1.000×1,1²=1.210. Exemplo: o montante inclui capital e juros."
+      },
+      {
+        "q": "Uma tarifa de R$ 8 fixos mais R$ 3 por unidade consumida custa R$ 23 para cinco unidades.",
+        "a": true,
+        "why": "O modelo é C(x)=8+3x; C(5)=8+15=23. Exemplo: o valor fixo não é multiplicado pelo consumo."
+      },
+      {
+        "q": "Uma função afim com coeficiente angular −2 é crescente em todo o domínio real.",
+        "a": false,
+        "why": "A afirmação é falsa: coeficiente angular negativo indica função estritamente decrescente. Exemplo: f(2)−f(1)=−2 para qualquer intercepto."
+      },
+      {
+        "q": "A função f(x)=x² possui valor 9 quando x=−3.",
+        "a": true,
+        "why": "O produto de dois números negativos é positivo: (−3)²=9. Exemplo: parênteses diferenciam (−3)² de −3²."
+      },
+      {
+        "q": "Um desconto de 20% seguido de aumento de 20% devolve um preço de R$ 100 exatamente a R$ 100.",
+        "a": false,
+        "why": "O resultado é 100×0,8×1,2=96. Exemplo: as taxas atuam sobre bases diferentes."
+      },
+      {
+        "q": "Para f(x)=x²−4, as raízes reais são −2 e 2, cuja soma é zero.",
+        "a": true,
+        "why": "Resolver x²=4 fornece x=−2 ou x=2. Exemplo: omitir a raiz negativa perde uma solução real."
+      },
+      {
+        "q": "Um valor que passa de 80 para 100 teve aumento percentual de 20%.",
+        "a": false,
+        "why": "O aumento foi 20 sobre a base inicial 80: 20/80=25%. Exemplo: dividir pela base final responde a outra comparação."
+      }
+    ],
+    "syllabusTopicId": "6b325b6a-19fb-5857-9e1a-ad540ec0a1d2",
+    "materialSlug": "enem-funcoes-aplicacoes"
+  },
+  "enem-geometria-aplicacoes": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Área é expressa em unidades quadradas.",
+        "why": "Mede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura."
+      },
+      {
+        "a": true,
+        "q": "Volume de um prisma usa área da base vezes altura.",
+        "why": "Mede ocupação espacial; para prismas, V = área da base × altura."
+      },
+      {
+        "a": true,
+        "q": "Um círculo de raio 8 cm tem diâmetro 16 cm.",
+        "why": "No círculo, diâmetro = 2 × raio e área = π × raio²."
+      },
+      {
+        "a": true,
+        "q": "2,4 m³ correspondem a 2400 L.",
+        "why": "1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear."
+      },
+      {
+        "a": false,
+        "q": "Área e volume medem a mesma grandeza.",
+        "why": "Mede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura."
+      },
+      {
+        "a": false,
+        "q": "Dobrar três dimensões lineares dobra o volume.",
+        "why": "Mede ocupação espacial; para prismas, V = área da base × altura."
+      },
+      {
+        "a": false,
+        "q": "O raio sempre coincide com o diâmetro.",
+        "why": "No círculo, diâmetro = 2 × raio e área = π × raio²."
+      },
+      {
+        "a": false,
+        "q": "1 m³ corresponde a apenas 100 L.",
+        "why": "1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear."
+      },
+      {
+        "q": "Um terreno retangular de 12 m por 8 m possui área de 96 m².",
+        "a": true,
+        "why": "Área do retângulo: base × altura = 12 × 8 = 96 m². Exemplo: cercar o terreno exige perímetro, uma grandeza diferente."
+      },
+      {
+        "q": "O perímetro de um quadrado de lado 7 cm é 49 cm.",
+        "a": false,
+        "why": "Perímetro soma os quatro lados: 4 × 7 = 28 cm. Exemplo: 49 cm² seria a área desse quadrado, não seu perímetro."
+      },
+      {
+        "q": "Um triângulo com base de 10 cm e altura correspondente de 6 cm tem área de 30 cm².",
+        "a": true,
+        "why": "Área do triângulo: base × altura / 2 = 10 × 6 / 2 = 30 cm². Exemplo: usar 60 cm² trataria a figura como um retângulo."
+      },
+      {
+        "q": "O volume de uma caixa retangular com dimensões internas de 2 m, 3 m e 4 m é 24 m³.",
+        "a": true,
+        "why": "Volume do bloco retangular: 2 × 3 × 4 = 24 m³. Exemplo: as três dimensões precisam estar na mesma unidade."
+      },
+      {
+        "q": "Uma área de 3 m² equivale a 300 cm².",
+        "a": false,
+        "why": "Como 1 m = 100 cm, então 1 m² = 10.000 cm²; 3 m² = 30.000 cm². Exemplo: conversões de área elevam o fator linear ao quadrado."
+      },
+      {
+        "q": "Na escala 1:500, um segmento de 4 cm representa 20 m.",
+        "a": true,
+        "why": "A distância real é 4 × 500 = 2.000 cm = 20 m. Exemplo: a conversão final usa 100 cm em cada metro."
+      },
+      {
+        "q": "Um triângulo retângulo de catetos 6 cm e 8 cm tem hipotenusa de 10 cm.",
+        "a": true,
+        "why": "Pelo teorema de Pitágoras, c² = 36 + 64 = 100, logo c = 10 cm. Exemplo: a hipotenusa é o lado oposto ao ângulo reto."
+      },
+      {
+        "q": "Se o lado de um quadrado é dobrado, sua área é multiplicada por 2.",
+        "a": false,
+        "why": "A área depende do quadrado do lado; dobrá-lo multiplica a área por 4. Exemplo: um lado de 3 cm produz 9 cm²; um de 6 cm produz 36 cm²."
+      },
+      {
+        "q": "Adotando π = 3,14, um círculo de raio 5 cm tem área de 78,5 cm².",
+        "a": true,
+        "why": "Área do círculo: πr² = 3,14 × 25 = 78,5 cm². Exemplo: o raio não deve ser confundido com o diâmetro."
+      },
+      {
+        "q": "Adotando π = 3, um círculo de raio 4 cm tem comprimento de circunferência de 12 cm.",
+        "a": false,
+        "why": "O comprimento é 2πr = 2 × 3 × 4 = 24 cm. Exemplo: usar apenas πr omite o fator 2."
+      },
+      {
+        "q": "Um reservatório cúbico de aresta interna 1 m comporta geometricamente 1.000 litros.",
+        "a": true,
+        "why": "O volume é 1 m³, equivalente a 1.000 litros. Exemplo: a capacidade geométrica não desconta espaços reservados por segurança."
+      },
+      {
+        "q": "Um retângulo de área 60 m² e base 12 m tem altura de 6 m.",
+        "a": false,
+        "why": "A altura é área / base = 60 / 12 = 5 m. Exemplo: conferir 12 × 5 = 60 evita aceitar uma altura incompatível."
+      }
+    ],
+    "syllabusTopicId": "b6cf426e-24e8-59d7-b093-180ee00cb6c1",
+    "materialSlug": "enem-geometria-aplicacoes"
+  },
+  "enem-ingles-fundamentos": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "O gênero ajuda a identificar a finalidade.",
+        "why": "Identifique tema, gênero, público e finalidade antes de traduzir detalhes."
+      },
+      {
+        "a": true,
+        "q": "They pode retomar um grupo mencionado antes.",
+        "why": "Pronomes como it e they retomam termos; confira número e contexto."
+      },
+      {
+        "a": true,
+        "q": "But pode expressar contraste.",
+        "why": "But marca contraste; because introduz causa; therefore anuncia conclusão."
+      },
+      {
+        "a": true,
+        "q": "Actually pode significar “na verdade”.",
+        "why": "Uma palavra parecida com português pode ter outro sentido, como actually: na verdade."
+      },
+      {
+        "a": false,
+        "q": "É necessário conhecer cada palavra para captar o tema.",
+        "why": "Identifique tema, gênero, público e finalidade antes de traduzir detalhes."
+      },
+      {
+        "a": false,
+        "q": "They sempre se refere a uma única pessoa.",
+        "why": "Pronomes como it e they retomam termos; confira número e contexto."
+      },
+      {
+        "a": false,
+        "q": "Because expressa necessariamente oposição.",
+        "why": "But marca contraste; because introduz causa; therefore anuncia conclusão."
+      },
+      {
+        "a": false,
+        "q": "Actually significa sempre “atualmente”.",
+        "why": "Uma palavra parecida com português pode ter outro sentido, como actually: na verdade."
+      },
+      {
+        "q": "Em “The clinic is closed today”, “closed” informa que a clínica está fechada hoje.",
+        "a": true,
+        "why": "O contexto estabelece a informação prática. Exemplo: a frase não comunica que o serviço permanecerá fechado para sempre."
+      },
+      {
+        "q": "Em um aviso, “Do not enter” autoriza a entrada do leitor.",
+        "a": false,
+        "why": "A expressão é uma proibição de entrada. Exemplo: “not” participa da negação do comando."
+      },
+      {
+        "q": "Em “Ana bought a book because she needed it”, “because” introduz uma razão.",
+        "a": true,
+        "why": "A necessidade é apresentada como motivo da compra. Exemplo: não se trata, nessa construção, de uma oposição entre fatos."
+      },
+      {
+        "q": "Em “The service is free”, “free” pode indicar ausência de cobrança, conforme o contexto.",
+        "a": true,
+        "why": "A palavra admite sentidos diferentes. Exemplo: em um anúncio de serviço gratuito, não significa necessariamente liberdade política."
+      },
+      {
+        "q": "A palavra inglesa “actually” deve ser traduzida sempre como “atualmente”.",
+        "a": false,
+        "why": "Nesse uso comum, significa “na verdade” ou “de fato”. Exemplo: “Actually, I disagree” introduz uma correção ou contraste com uma expectativa."
+      },
+      {
+        "q": "Em “Bring your own bottle”, o leitor é orientado a levar sua própria garrafa.",
+        "a": true,
+        "why": "O comando aponta uma ação esperada. Exemplo: não se afirma que garrafas serão fornecidas no local."
+      },
+      {
+        "q": "Em “Tickets are available until Friday”, o texto informa que as vendas começam obrigatoriamente na sexta-feira.",
+        "a": false,
+        "why": "“Until” marca um limite até sexta-feira, não o início obrigatório. Exemplo: o período de disponibilidade pode já estar em andamento."
+      },
+      {
+        "q": "Em “This is cheaper than that”, há uma comparação de preço.",
+        "a": true,
+        "why": "“Cheaper” indica preço menor na comparação. Exemplo: a frase não afirma que o objeto seja gratuito."
+      },
+      {
+        "q": "Em “Although it was raining, they continued”, o conector indica concessão.",
+        "a": true,
+        "why": "A continuação contraria uma expectativa associada à chuva. Exemplo: a estrutura não apresenta a chuva como objetivo da ação."
+      },
+      {
+        "q": "Para compreender qualquer texto em inglês é obrigatório traduzir isoladamente todas as palavras antes de identificar seu tema.",
+        "a": false,
+        "why": "Estratégias de leitura também usam contexto, finalidade e informações-chave. Exemplo: um aviso curto pode ser compreendido pela organização e por palavras relevantes."
+      },
+      {
+        "q": "Em “Please recycle this package”, o texto solicita uma ação de reciclagem.",
+        "a": true,
+        "why": "O propósito é orientar o leitor. Exemplo: a frase funciona como instrução, não como relato de um fato passado."
+      },
+      {
+        "q": "O referente de “they” deve ser identificado no contexto textual.",
+        "a": true,
+        "why": "A interpretação depende das relações do texto. Exemplo: um pronome pode retomar pessoas mencionadas em uma frase anterior."
+      }
+    ],
+    "syllabusTopicId": "ed209f8c-4f46-572b-9328-7b2330ee3169",
+    "materialSlug": "enem-ingles-fundamentos"
+  },
+  "enem-matematica-fundamentos": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Percentuais devem indicar a base.",
+        "why": "p% de x equivale a (p/100) × x; identifique sempre a base."
+      },
+      {
+        "a": true,
+        "q": "A mediana exige ordenar os dados.",
+        "why": "Média soma valores e divide pela quantidade; mediana é central na lista ordenada."
+      },
+      {
+        "a": true,
+        "q": "Probabilidade equiprovável usa favoráveis/possíveis.",
+        "why": "Em espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis."
+      },
+      {
+        "a": true,
+        "q": "Área e volume têm unidades distintas.",
+        "why": "Área tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular."
+      },
+      {
+        "a": false,
+        "q": "Aumento de 10% seguido de desconto de 10% sempre se anula.",
+        "why": "p% de x equivale a (p/100) × x; identifique sempre a base."
+      },
+      {
+        "a": false,
+        "q": "Média e mediana são sempre iguais.",
+        "why": "Média soma valores e divide pela quantidade; mediana é central na lista ordenada."
+      },
+      {
+        "a": false,
+        "q": "Todo evento tem probabilidade de 50%.",
+        "why": "Em espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis."
+      },
+      {
+        "a": false,
+        "q": "Dobrar todas as dimensões lineares dobra o volume.",
+        "why": "Área tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular."
+      },
+      {
+        "q": "Três cadernos de mesmo preço custam R$ 24; cinco desses cadernos custam R$ 40.",
+        "a": true,
+        "why": "O preço unitário é 24/3=8; cinco unidades custam 5×8=40. Exemplo: a razão preço por unidade permanece constante."
+      },
+      {
+        "q": "Mantidas as demais condições, quatro trabalhadores que concluem um serviço em seis dias indicam que oito trabalhadores o concluiriam em doze dias.",
+        "a": false,
+        "why": "No modelo inversamente proporcional, o esforço é 4×6=24 trabalhador-dias; 24/8=3 dias. Exemplo: dobrar a equipe reduz o tempo à metade nesse modelo."
+      },
+      {
+        "q": "Uma mistura que usa 2 partes de concentrado para 3 partes de água contém 40% de concentrado.",
+        "a": true,
+        "why": "São cinco partes no total e duas de concentrado: 2/5=40%. Exemplo: dividir apenas por três compara concentrado com água, não com a mistura."
+      },
+      {
+        "q": "Uma velocidade constante de 60 km/h durante 30 minutos corresponde a 30 km.",
+        "a": true,
+        "why": "Trinta minutos são 0,5 hora; d=v×t=60×0,5=30 km. Exemplo: é necessário converter o tempo para a unidade da velocidade."
+      },
+      {
+        "q": "Uma extensão de 2,5 km equivale a 250 m.",
+        "a": false,
+        "why": "Cada quilômetro tem 1.000 metros; 2,5 km=2.500 m. Exemplo: multiplicar por 100 seria insuficiente para essa conversão."
+      },
+      {
+        "q": "Dividir R$ 90 em partes proporcionais a 2 e 3 atribui R$ 36 à parte de peso 2.",
+        "a": true,
+        "why": "A soma dos pesos é 5; cada peso vale 18, e a parte de peso 2 vale 36. Exemplo: as duas parcelas somam 36+54=90."
+      },
+      {
+        "q": "O valor de 3/4 de 200 é 150.",
+        "a": true,
+        "why": "Multiplica-se 200 por 3/4: 200/4×3=150. Exemplo: calcular primeiro um quarto facilita o procedimento."
+      },
+      {
+        "q": "Um desconto de R$ 18 sobre R$ 120 representa redução de 18%.",
+        "a": false,
+        "why": "A taxa é 18/120=0,15=15%. Exemplo: o valor monetário do desconto não é automaticamente sua taxa percentual."
+      },
+      {
+        "q": "Na equação 3x+6=21, o valor de x é 5.",
+        "a": true,
+        "why": "Subtraia 6 dos dois lados: 3x=15; divida por 3: x=5. Exemplo: substituir 5 no original produz 21."
+      },
+      {
+        "q": "Um consumo de 12 litros em 180 km corresponde a rendimento de 15 km por litro.",
+        "a": true,
+        "why": "Rendimento em km/L é distância dividida pelo volume: 180/12=15. Exemplo: litros por quilômetro é a razão inversa."
+      },
+      {
+        "q": "Se uma quantidade de 50 unidades cresce 30%, o novo total é 80 unidades.",
+        "a": false,
+        "why": "O acréscimo é 50×0,30=15 e o total é 65. Exemplo: somar 30 unidades não equivale a somar 30%."
+      },
+      {
+        "q": "A razão entre 150 m e 0,5 km, expressa com unidades compatíveis, é 0,3.",
+        "a": true,
+        "why": "Converta 0,5 km para 500 m; então 150/500=0,3. Exemplo: comparar números sem converter unidades pode produzir uma razão errada."
+      }
+    ],
+    "syllabusTopicId": "d4df33c1-7c6a-5dd1-8f90-a48653946786",
+    "materialSlug": "enem-matematica-fundamentos"
+  },
+  "enem-probabilidade-aplicacoes": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "O universo de referência deve ser identificado.",
+        "why": "Defina quais resultados são possíveis e se têm a mesma chance antes de contar."
+      },
+      {
+        "a": true,
+        "q": "Combinações desconsideram a ordem da escolha.",
+        "why": "Escolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!]."
+      },
+      {
+        "a": true,
+        "q": "Eventos disjuntos de probabilidade positiva não são independentes.",
+        "why": "Eventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes."
+      },
+      {
+        "a": true,
+        "q": "Uma probabilidade condicional utiliza a condição no denominador.",
+        "why": "P(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência."
+      },
+      {
+        "a": false,
+        "q": "Todo espaço amostral é automaticamente equiprovável.",
+        "why": "Defina quais resultados são possíveis e se têm a mesma chance antes de contar."
+      },
+      {
+        "a": false,
+        "q": "Uma dupla constitui duas comissões porque seus nomes podem ser invertidos.",
+        "why": "Escolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!]."
+      },
+      {
+        "a": false,
+        "q": "Dois eventos disjuntos de probabilidade positiva são sempre independentes.",
+        "why": "Eventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes."
+      },
+      {
+        "a": false,
+        "q": "Condicionar nunca altera o universo de referência.",
+        "why": "P(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência."
+      },
+      {
+        "q": "Ao lançar um dado honesto de seis faces, a probabilidade de resultado par é 1/2.",
+        "a": true,
+        "why": "Há três resultados pares em seis equiprováveis: 3/6 = 1/2. Exemplo: enumere 2, 4 e 6 antes de contar."
+      },
+      {
+        "q": "No lançamento de duas moedas honestas independentes, a probabilidade de duas caras é 1/2.",
+        "a": false,
+        "why": "Os quatro pares equiprováveis são CC, CK, KC e KK; só CC atende. Exemplo: contar apenas quantidades de caras não produz três casos equiprováveis."
+      },
+      {
+        "q": "Escolher uma pessoa entre cinco e outra entre quatro opções independentes permite 20 pares.",
+        "a": true,
+        "why": "Pelo princípio multiplicativo, 5 × 4 = 20. Exemplo: cada primeira escolha se combina com as quatro segundas."
+      },
+      {
+        "q": "Escolher dois representantes sem ordem entre cinco pessoas permite 10 duplas.",
+        "a": true,
+        "why": "A combinação é 5×4/2 = 10. Exemplo: a dupla Ana–Bruno é a mesma que Bruno–Ana."
+      },
+      {
+        "q": "Uma urna com 3 bolas vermelhas e 2 azuis tem probabilidade de retirada de vermelha igual a 3/5.",
+        "a": true,
+        "why": "São três resultados favoráveis em cinco bolas equiprováveis. Exemplo: a probabilidade usa o total da urna como denominador."
+      },
+      {
+        "q": "Na mesma urna, retirar duas bolas sem reposição gera probabilidade de duas vermelhas de 9/25.",
+        "a": false,
+        "why": "Sem reposição, após uma vermelha restam duas em quatro bolas: 3/5 × 2/4 = 3/10. Exemplo: manter 3/5 no segundo sorteio ignoraria a mudança da urna."
+      },
+      {
+        "q": "Se a probabilidade de um evento é 0,35, a de seu complemento é 0,65.",
+        "a": true,
+        "why": "Evento e complemento somam probabilidade 1: 1 − 0,35 = 0,65. Exemplo: sucesso e ausência de sucesso são complementares quando cobrem todos os casos."
+      },
+      {
+        "q": "Permutar três objetos distintos em uma fila permite 9 ordens.",
+        "a": false,
+        "why": "O número é 3! = 3 × 2 × 1 = 6. Exemplo: a quantidade de opções diminui após cada posição ocupada."
+      },
+      {
+        "q": "Para eventos disjuntos A e B com probabilidades 0,2 e 0,3, a probabilidade da união é 0,5.",
+        "a": true,
+        "why": "Como não há interseção, somam-se 0,2 + 0,3 = 0,5. Exemplo: não se subtrai uma sobreposição inexistente."
+      },
+      {
+        "q": "Uma senha de dois algarismos, permitindo zero inicial e repetição, possui 90 possibilidades.",
+        "a": false,
+        "why": "Cada posição tem dez opções: 10 × 10 = 100. Exemplo: excluir zero inicial ou repetição mudaria o problema."
+      },
+      {
+        "q": "Em um dado honesto, sabendo que o resultado foi par, a probabilidade de ele ser 6 é 1/3.",
+        "a": true,
+        "why": "O universo condicionado é {2,4,6}; um dos três casos é 6. Exemplo: a condição muda o denominador de seis para três."
+      },
+      {
+        "q": "Distribuir primeiro e segundo lugares entre quatro pessoas distintas permite seis resultados ordenados.",
+        "a": false,
+        "why": "A ordem importa: há quatro opções para primeiro e três para segundo, total 12. Exemplo: Ana em primeiro e Bruno em segundo difere da ordem inversa."
+      }
+    ],
+    "syllabusTopicId": "4855d982-8b6a-59b0-8734-8b45121d4a64",
+    "materialSlug": "enem-probabilidade-aplicacoes"
+  },
+  "enem-quimica-fundamentos": {
+    "quiz": [
+      {
+        "a": true,
+        "q": "O balanceamento conserva átomos.",
+        "why": "Conserve os átomos de cada elemento ao ajustar os coeficientes."
+      },
+      {
+        "a": true,
+        "q": "Coeficientes indicam proporções em mol.",
+        "why": "Quantidade de matéria; relações dos coeficientes estequiométricos são relações em mol."
+      },
+      {
+        "a": true,
+        "q": "10 g em 0,5 L correspondem a 20 g/L.",
+        "why": "Pode expressar massa de soluto por volume de solução; explicite a unidade."
+      },
+      {
+        "a": true,
+        "q": "A diluição sem perda conserva soluto.",
+        "why": "Sem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta."
+      },
+      {
+        "a": false,
+        "q": "Coeficientes estequiométricos são sempre razões diretas de massa.",
+        "why": "Conserve os átomos de cada elemento ao ajustar os coeficientes."
+      },
+      {
+        "a": false,
+        "q": "Diluir necessariamente acrescenta mais soluto.",
+        "why": "Quantidade de matéria; relações dos coeficientes estequiométricos são relações em mol."
+      },
+      {
+        "a": false,
+        "q": "A concentração aumenta sempre que o volume aumenta.",
+        "why": "Pode expressar massa de soluto por volume de solução; explicite a unidade."
+      },
+      {
+        "a": false,
+        "q": "Na reação balanceada, átomos podem desaparecer.",
+        "why": "Sem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta."
+      },
+      {
+        "q": "Uma solução com 10 g de soluto em volume final de 2 L tem concentração comum de 5 g/L.",
+        "a": true,
+        "why": "Concentração comum é massa de soluto por volume da solução: 10/2=5 g/L. Exemplo: o volume usado é o volume final da solução."
+      },
+      {
+        "q": "Uma amostra de 36 g de água, adotando massa molar de 18 g/mol, corresponde a 3 mol.",
+        "a": false,
+        "why": "Quantidade de matéria é massa sobre massa molar: 36/18=2 mol. Exemplo: o resultado não é obtido somando os dois valores."
+      },
+      {
+        "q": "Ao diluir 100 mL de uma solução de 2 mol/L para volume final de 400 mL, a concentração passa a 0,5 mol/L, sem reação ou perda de soluto.",
+        "a": true,
+        "why": "Na diluição, C1V1=C2V2; C2=2×100/400=0,5 mol/L. Exemplo: aumentar quatro vezes o volume reduz a concentração à quarta parte."
+      },
+      {
+        "q": "A massa molar de CO₂, adotando C=12 e O=16 g/mol, é 44 g/mol.",
+        "a": true,
+        "why": "Somam-se 12+2×16=44 g/mol. Exemplo: o índice 2 afeta o oxigênio, não o carbono."
+      },
+      {
+        "q": "Uma substância de massa 40 g e volume 20 mL tem densidade de 0,5 g/mL.",
+        "a": false,
+        "why": "Densidade é massa dividida por volume: 40/20=2 g/mL. Exemplo: 0,5 mL/g seria a razão inversa."
+      },
+      {
+        "q": "Na reação balanceada 2 H₂ + O₂ → 2 H₂O, 4 mol de H₂ em excesso de O₂ podem formar teoricamente 4 mol de H₂O.",
+        "a": true,
+        "why": "A proporção molar H₂:H₂O é 2:2, isto é, 1:1. Exemplo: o rendimento real e reagentes limitantes podem alterar o resultado fora das condições indicadas."
+      },
+      {
+        "q": "Um átomo neutro de número atômico 11 possui 11 elétrons.",
+        "a": true,
+        "why": "O número atômico é a quantidade de prótons; no átomo neutro, elétrons e prótons têm a mesma quantidade. Exemplo: um íon exigiria considerar sua carga."
+      },
+      {
+        "q": "Um átomo com número de massa 23 e número atômico 11 possui 34 nêutrons.",
+        "a": false,
+        "why": "Nêutrons=A−Z=23−11=12. Exemplo: número de massa soma prótons e nêutrons."
+      },
+      {
+        "q": "Na fusão de uma substância pura, a transformação de sólido para líquido não exige, por si só, formar uma nova substância.",
+        "a": true,
+        "why": "Fusão é uma mudança física de estado. Exemplo: gelo que derrete continua sendo água, nas condições usuais."
+      },
+      {
+        "q": "Toda mistura homogênea é necessariamente uma substância pura.",
+        "a": false,
+        "why": "Uma mistura homogênea pode conter componentes diferentes em uma fase. Exemplo: água com sal dissolvido não é água pura."
+      },
+      {
+        "q": "Separar areia de água por filtração explora a retenção de partículas sólidas em um meio filtrante apropriado.",
+        "a": true,
+        "why": "É uma técnica de separação de mistura heterogênea. Exemplo: o filtro retém a areia sem ser, em regra, uma técnica para retirar todo sal dissolvido."
+      },
+      {
+        "q": "Na equação balanceada de uma reação química, a conservação dos átomos pode ser ignorada quando o produto tem aparência diferente.",
+        "a": false,
+        "why": "Os átomos dos elementos devem ser conservados na equação do modelo químico usual. Exemplo: mudar de cor não autoriza criar ou eliminar átomos no balanceamento."
+      }
+    ],
+    "syllabusTopicId": "0852affe-8c57-5aa3-a828-23d4e6c0fb20",
+    "materialSlug": "enem-quimica-fundamentos"
+  }
+}

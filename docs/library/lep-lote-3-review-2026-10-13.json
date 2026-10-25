@@ -1,0 +1,658 @@
+{
+  "checked_at": "2026-10-13T23:17:07.902709+00:00",
+  "batch": 3,
+  "new_reviews": 55,
+  "publication": {
+    "version": "2026-10-11-lep-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 55,
+    "published": 55,
+    "improved": 55,
+    "preserved": 0,
+    "verified_at": "2026-10-13T23:10:33.111Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T23:17:07.902709+00:00",
+    "authored_explanations_confirmed": 55,
+    "untargeted_explanations_preserved": 3458,
+    "untargeted_course_explanations_preserved": 161,
+    "prior_revisions_retained_in_manifest": 55,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses"
+    ],
+    "protected_existing_rows_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "content_sources"
+    ],
+    "authorized_syllabus_source_repair": {
+      "verified_at": "2026-10-13T23:08:10.958Z",
+      "table": "syllabus_editions",
+      "expected": {
+        "id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+        "contest_name": "Polícia Federal",
+        "role_name": "Delegado de Polícia Federal",
+        "contest_year": 2025,
+        "exam_board": "CEBRASPE",
+        "source_id": "2bc16d63-7351-4b3a-9267-41940be26594",
+        "status": "active",
+        "created_at": "2026-09-29T20:53:45.631808+00:00"
+      },
+      "applied": {
+        "id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+        "contest_name": "Polícia Federal",
+        "role_name": "Delegado de Polícia Federal",
+        "contest_year": 2025,
+        "exam_board": "CEBRASPE",
+        "source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+        "status": "active",
+        "created_at": "2026-09-29T20:53:45.631808+00:00"
+      },
+      "changed_fields": [
+        "source_id"
+      ],
+      "repair_applied": true,
+      "source": {
+        "id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+        "source_type": "edital",
+        "title": "Edital nº 1 – PF – Policial, atualizado até a Retificação nº 4",
+        "issuer": "Polícia Federal / CEBRASPE",
+        "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+        "published_on": "2025-05-20",
+        "checked_at": "2026-10-04T19:23:43.06302+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Matriz curricular oficial do concurso PF 2025."
+      },
+      "source_original_checked_at_preserved": true,
+      "notes": "Existing PF Delegado 2025 edition incorrectly pointed to a test booklet. Corrected only its source_id to the already registered official edital updated to retification 4. Fresh PDF request returned 403; source verification date of 4/10/2026 preserved, without claiming a fresh full syllabus audit. Importer rejected the package before any explanation write."
+    },
+    "concurrent_foreign_metadata_additions": {
+      "kind": "explicit_foreign_metadata_additions",
+      "target_course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "target_edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "tables": {
+        "syllabus_topics": [
+          {
+            "id": "04138154-f9d0-4271-9992-01b7fd55eed7",
+            "sha256": "357363cccfcc9a4e86ea98b47871a42c95484b707bf8975ec8186a7eb4ded6d8",
+            "title": null
+          },
+          {
+            "id": "088bdf51-6a26-49e1-8e07-75d2cf6bf3b2",
+            "sha256": "bd888114a0e9af971206344d8377f10681172ebc29b53ac19bdb6f551e21811b",
+            "title": null
+          },
+          {
+            "id": "0c48cf07-6002-4724-9bae-eda573a97424",
+            "sha256": "71f99fd977637ebeb2de1ad322df727350e318102d2ed9a3f2c1625a49bd4084",
+            "title": null
+          },
+          {
+            "id": "0c57c25e-fd48-42e6-9b63-2229d56fd933",
+            "sha256": "224c6798e162627aa9be50339348702cac0bbffb9de326d1802e7c3b525d9728",
+            "title": null
+          },
+          {
+            "id": "181c1402-b9af-4939-98a8-b2548f89524f",
+            "sha256": "635fa831707c38c56d1b9ff8ffa480a06d3348113cc4a49056f6ffcfd6912d1e",
+            "title": null
+          },
+          {
+            "id": "1976c964-1296-403a-9148-2ff9ee81d86d",
+            "sha256": "ee57be0d67d372fd7b71342f1d8aece987192ff6c452a1076188676658231227",
+            "title": null
+          },
+          {
+            "id": "1b7862ea-d87b-4fb5-86db-620c98a187b3",
+            "sha256": "0049b0e4ffd92cbfd8fc5e1901665270095a08136d0d26545380b4e6fb57b6ac",
+            "title": null
+          },
+          {
+            "id": "1eb4667f-91d4-401c-a9eb-5bf50e30770b",
+            "sha256": "6523f1091a06852f4368c65b5d81faa9302785c7e5330717a76c66068a2d1db1",
+            "title": null
+          },
+          {
+            "id": "1f550a00-0ab6-469d-917b-4a23b808a757",
+            "sha256": "e8fa13fff62fc72efbfa1c6d20e597460ddbf406a232d028de9631174ee8461e",
+            "title": null
+          },
+          {
+            "id": "1fb7cc3a-3c2f-4080-9eb7-b5a0d117efc2",
+            "sha256": "dab2b14c0617aa3fbb1a7374384bada375f85e1a4335adc284c157758f27ec20",
+            "title": null
+          },
+          {
+            "id": "24516bd8-7f2d-587d-b9a0-0bf4a79b4b3e",
+            "sha256": "650d13c3a2eaf29509ad9308e4ef6d2e147f94a55d305137910460cc8941e9d1",
+            "title": null
+          },
+          {
+            "id": "334714c9-e35a-4099-9bb1-28054250a69e",
+            "sha256": "cb381fdcae727e7a8cd3c94e5b5e5b9bc6af2fb407ae72fddebc342e53f81b34",
+            "title": null
+          },
+          {
+            "id": "37f3ce2c-0d14-4290-b45c-823d6a17131f",
+            "sha256": "a14ba583a3a9236f177da59e97b6666b600d5d6c8c90c3bdffb6cf750c617a9a",
+            "title": null
+          },
+          {
+            "id": "4525e2cb-66e0-560b-8513-04bcff5621fe",
+            "sha256": "1f9823b33c9ff89dc9c28e005eca4ce7afb60f3977625fb33605e930da055cfa",
+            "title": null
+          },
+          {
+            "id": "4553ed53-5664-4d35-a35b-5f7f6be892b3",
+            "sha256": "41b76a8dba65c8aedb28f2fb7024f94e9b78e6c01432deccac4cf67b7c172ed5",
+            "title": null
+          },
+          {
+            "id": "4bf1a16c-f98d-4ca4-ab43-2a6528b12207",
+            "sha256": "d3496003f147dac453365a4cb254f7e66f93d8ad63adfce3893ec3e68e6aec85",
+            "title": null
+          },
+          {
+            "id": "54ced529-9bd6-4e0e-b27d-7eab0a42fd5b",
+            "sha256": "884fbbc1e6ca5051fb76f48455ca7c0eec72e66eddd7fdd610da62296b88cc65",
+            "title": null
+          },
+          {
+            "id": "5b4864d1-1a31-54ea-a121-55fc58c78409",
+            "sha256": "c1f4190ac4300ad404e7acb5c83ca4e64e10aa33f84279e71a4042f50a00b309",
+            "title": null
+          },
+          {
+            "id": "6198adcb-011e-40c7-b995-930d89df63dd",
+            "sha256": "d83c6dc95d5d1510b6d38fb979c24be2cee3a20088341606c6d177b45a174749",
+            "title": null
+          },
+          {
+            "id": "700221fb-ffba-4416-a3be-0b634fa62bc2",
+            "sha256": "8a17661bfcdd2261d8189d9065b704c74c4639711846ae152e1c5a1a06090d34",
+            "title": null
+          },
+          {
+            "id": "7956ffae-8c7b-477b-8013-39cce16c4c12",
+            "sha256": "6a60f70c0299ed2cd52361c127b7e1e92b5de914005a609fc6a32e2d3c3e6386",
+            "title": null
+          },
+          {
+            "id": "8396dcf8-bade-47f1-b4db-c4a892f9c9da",
+            "sha256": "7cb8c139e1c1c43eed303482839765081b00d0034c258799ee1cc53a3e6b24af",
+            "title": null
+          },
+          {
+            "id": "884fdb32-82ae-45b6-9dfd-e3098b3ecfa7",
+            "sha256": "02a6de3a5a3402aa6b3f57e17f355f8b33b47da64aa7b3c549ba54b37de327d1",
+            "title": null
+          },
+          {
+            "id": "99fe36cc-4606-4f98-bf2b-c66801a192d1",
+            "sha256": "cdee15e1c1f4e16fb870abc6079e74771d37adf18c6ad3220b33b4dad1be4871",
+            "title": null
+          },
+          {
+            "id": "a1460755-d7e9-47ad-a46f-bd2a26cf476a",
+            "sha256": "508bbad12111eb5590f404d89b087c303d5fdb9b6f236dc2e246542ac078bbfd",
+            "title": null
+          },
+          {
+            "id": "b483c10c-dc45-4567-9cbb-f73f971b4d66",
+            "sha256": "f12f533ed2c39e18e71d57371c83efe6d36c082c6e6ede37008208b1b5b36305",
+            "title": null
+          },
+          {
+            "id": "bab35417-be6b-480d-af2e-5634d4d33b9a",
+            "sha256": "d7f9e40381155165fe5734a1cef9b695f80725d25566a89a1f4ecce2dc8425ee",
+            "title": null
+          },
+          {
+            "id": "bcba3f4e-2cf9-4675-886a-c624814a7b4d",
+            "sha256": "4412d5fbb008b61dfb2c2a738c718dfe0d7c185c93b02e6e64aefa52a7952f26",
+            "title": null
+          },
+          {
+            "id": "bd8fdea5-b3ba-4ceb-8ff5-f0ef2459afbd",
+            "sha256": "933ceef61532f2a46548d2de2428c1e430b2d9b8613c16ae08c734cf0ab04bde",
+            "title": null
+          },
+          {
+            "id": "c99fd3ff-a7b4-479c-93d8-0ce460fcf3a7",
+            "sha256": "52f24aba2b1bd703331a0ccf572e494d4a728085400aa2cf13c5f62579993feb",
+            "title": null
+          },
+          {
+            "id": "d4547659-1824-5c14-8da4-6f79fcec8416",
+            "sha256": "c9b46e2093a11f7c0adb7109b3e94b34b4d398cdd9bce2e75c240c350ecd4ec0",
+            "title": null
+          },
+          {
+            "id": "e19db6a6-4fce-520f-a3d5-62625620da5d",
+            "sha256": "7fab5ba82bc9bad6b987d7375a54449e9c808ec8e9de0f54fe89a06f3561824b",
+            "title": null
+          },
+          {
+            "id": "f79ba182-0375-47f0-9d06-5a1670d28838",
+            "sha256": "1182c30484ac22f2149397e2786efc04c809baa036533c4667ec4a7c8a2774d7",
+            "title": null
+          },
+          {
+            "id": "ff38a8d8-91a8-4b78-a09e-5a4d9cb50d91",
+            "sha256": "be8dcc912c2dcf9f89b22b3e393921bd349680b5dfe541ddc58b25e5c4ed4a0d",
+            "title": null
+          },
+          {
+            "id": "ffdd35e5-9439-5518-8335-573ebec8a91e",
+            "sha256": "9e2b155c1e008d17182e1e01a71b7749945d16de84ba71d3ea88e066c9d0a1f8",
+            "title": null
+          }
+        ],
+        "syllabus_editions": [
+          {
+            "id": "160dc91d-6e46-473d-a584-93077555dad5",
+            "sha256": "76f18ecaee6920da415d52f858dec08f26e1144d01cc8a8d665c2151ea18d6bb",
+            "title": null
+          },
+          {
+            "id": "b31d2a80-320d-494c-b4d2-1524a4d7ee42",
+            "sha256": "0210618a9db85e239305254154e0e512ec2d74e9d8807c6d9063bb46e338192c",
+            "title": null
+          },
+          {
+            "id": "e4e5d4ab-1d25-4dda-9031-4f3628264063",
+            "sha256": "d923df49e4a212a9c2800794908ea2ead9262a6c92b030ffb6113a91ba1ed788",
+            "title": null
+          }
+        ],
+        "content_sources": [
+          {
+            "id": "01cef1a4-b506-550c-b0ea-640a2c553a61",
+            "sha256": "1fb8220283afc580fc5c0787696fe25c1647f7ddc2f2efee3cb56e90cabe1bd7",
+            "title": "LC 236/2026 — reforma de normas gerais tributárias e aduaneiras"
+          },
+          {
+            "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+            "sha256": "64cdd4264f27e5803fe3968c8c886a8bde64e3643b55362d0c73c0f54e602030",
+            "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)"
+          },
+          {
+            "id": "0a744b27-117e-5931-8ca4-4e0b21eac325",
+            "sha256": "a3b764df053466ca41c8d22a53de593d4b0d0dbab4e200cf6fe6aea459baba10",
+            "title": "REsp 984.607/PR — non olet e perdimento"
+          },
+          {
+            "id": "0ff2c37b-79c0-5853-b67f-ff113783c985",
+            "sha256": "6219e98e2d5a3515e3ef55f449cf77c5552f7a957f9a1ea6717273e0c933084d",
+            "title": "ADI 2446 — dissimulação de fato gerador"
+          },
+          {
+            "id": "12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74",
+            "sha256": "0b711b8c611fd4c6d5a0ca9a6e9cd8ab8fe157d40440c937477c1a7a3bf06e9c",
+            "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)"
+          },
+          {
+            "id": "1b1edb83-11b0-4a4f-8cfb-bc64a379bf81",
+            "sha256": "5e8848b8378bbd3984f6fb4e6a9b7e4b75fab1d5182ad1b7f4ef70d37256a967",
+            "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Escrivão de Polícia (2022, FGV)"
+          },
+          {
+            "id": "820f1bba-5903-4511-906b-005e586f18e1",
+            "sha256": "9f1baa63ef538578c3aba3bc3ea1441f91ae23598103a1184b492e6671cb9821",
+            "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)"
+          },
+          {
+            "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+            "sha256": "8a796b41d9a11eb0a50dee87ef330e0f689f8d32fd28f473f58cc4a516c3b7eb",
+            "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)"
+          },
+          {
+            "id": "aa194dc3-1cfa-5330-90bf-7e573def7696",
+            "sha256": "6f6417052ce9e98815abbab83ecc078e29107dacb6761783a6272722fef87cbb",
+            "title": "Tema 1083 — imunidade de suportes musicais"
+          },
+          {
+            "id": "ab465c0c-b430-5926-917f-98071695fc8a",
+            "sha256": "d9749082b1fd334d2045e674f8e2f44b7df3f65aaa8d16d655c3222b1e2925a3",
+            "title": "Imunidade de livros e fonogramas — aplicação do STF"
+          },
+          {
+            "id": "dd498145-f1ac-5821-95bd-e5fb65f73969",
+            "sha256": "9dfee6fd719fe8f43a809e018e26a6e1b90d720c026d9a635b1b4f3625e4bf65",
+            "title": "Decreto-Lei 37/1966 — imposto de importação"
+          },
+          {
+            "id": "e5434925-8618-543c-b5e8-df87b2b0d0fb",
+            "sha256": "4ed1419d32380bf34cc54ed9d1ac455c0d09857ba2ad8979b6cd051383642203",
+            "title": "Súmula Vinculante 57 — livros eletrônicos"
+          }
+        ]
+      },
+      "note": "Adições concorrentes fora da edição da LEP: 35 tópicos, três edições e doze fontes. Todos os registros anteriores preservados, ressalvada correção exata source_id do edital."
+    },
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source. Optional foreign topic/edition/source additions require exact ID/hash evidence and preservation of every prior row; additions in the target edition are rejected. No broad protected-table exemption."
+  },
+  "compiled_source": {
+    "slug": "lep",
+    "title": "Lei 7.210/1984 — Lei de Execução Penal",
+    "units": 55,
+    "scope_type": "targeted_correction",
+    "course_current_units": 215,
+    "target_unit_keys": [
+      "art-50",
+      "art-52",
+      "art-54",
+      "art-96",
+      "art-97",
+      "art-98",
+      "art-99",
+      "art-100",
+      "art-101",
+      "art-102",
+      "art-103",
+      "art-104",
+      "art-105",
+      "art-106",
+      "art-107",
+      "art-108",
+      "art-109",
+      "art-110",
+      "art-111",
+      "art-112",
+      "art-113",
+      "art-115",
+      "art-116",
+      "art-117",
+      "art-118",
+      "art-119",
+      "art-119-a",
+      "art-120",
+      "art-121",
+      "art-122",
+      "art-125",
+      "art-126",
+      "art-127",
+      "art-128",
+      "art-129",
+      "art-130",
+      "art-131",
+      "art-132",
+      "art-133",
+      "art-134",
+      "art-135",
+      "art-136",
+      "art-137",
+      "art-138",
+      "art-139",
+      "art-140",
+      "art-141",
+      "art-142",
+      "art-143",
+      "art-144",
+      "art-145",
+      "art-146",
+      "art-147",
+      "art-148",
+      "art-149"
+    ],
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+    "source_sha256": "521ed0af59844f045fc3a5741e087629072ba9b4840eb22e8938b61299e241f9",
+    "source_checked_at": "2026-10-13T22:55:21.606634+00:00"
+  },
+  "text_audit": {
+    "checked_at": "2026-10-13T22:55:58.001650+00:00",
+    "rows": [
+      {
+        "slug": "lep",
+        "parsed_current": 215,
+        "database_current": 215,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "lep",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "status": 200,
+      "sha256": "521ed0af59844f045fc3a5741e087629072ba9b4840eb22e8938b61299e241f9",
+      "bytes": 307502,
+      "checked_at": "2026-10-13T22:55:21.606634+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15407",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm",
+      "status": 200,
+      "sha256": "c8c345bb24a60049a0b81dbe675bc7b54910b7fc51c27e19801d07e7a6a7a759",
+      "bytes": 21964,
+      "checked_at": "2026-10-13T22:55:19.786583+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15410",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+      "status": 200,
+      "sha256": "787bfea033562fa5772393f690a84c295f37fd825eadd28532a217c0a6fc78c2",
+      "bytes": 21277,
+      "checked_at": "2026-10-13T22:55:19.426172+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei14843",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+      "status": 200,
+      "sha256": "e7f007a7f7b42ca0f2f8497ea3452522901fe5aef403c309e48493bc569e2435",
+      "bytes": 32809,
+      "checked_at": "2026-10-13T22:55:19.995088+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum527",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 22265,
+      "sha256": "c5725302e978925b31939cb7b7f729a013b50594d2221114828b2c8cd7fc1b6a",
+      "checked_at": "2026-10-13T22:56:24.363544+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum534",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=534+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 40838,
+      "sha256": "341180948f06ce2173ae4f6d2c319572d9c3ef950004bb6e2415d627b75c6430",
+      "checked_at": "2026-10-13T22:56:23.467097+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum535",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=535+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 29243,
+      "sha256": "29aa6408459636430a5177b6b0e10fc3f3edabcf0ae6ebd312f7754cee880c8a",
+      "checked_at": "2026-10-13T22:56:25.054406+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum562",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=562+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 18209,
+      "sha256": "1b99d49da964f1d354f080f003b971747e996bb4677c9ae497c37c8ef6d4a174",
+      "checked_at": "2026-10-13T22:56:23.159371+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15358",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "status": 200,
+      "bytes": 217801,
+      "sha256": "ae8e91bdcb7881a5a80c37588b0ef7a40483d81641baa12aef463608e96b99b1",
+      "checked_at": "2026-10-13T22:56:25.672827+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15402",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+      "status": 200,
+      "bytes": 18610,
+      "sha256": "c4004914777c8e147c3828f547eccf868e835820b3c6cd841881a26bfd1a52f6",
+      "checked_at": "2026-10-13T22:56:47.282521+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei10216",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+      "status": 200,
+      "bytes": 13964,
+      "sha256": "e316324f27b7a652fa83b89385818eed52ef32152fde830905dfda1656762351",
+      "checked_at": "2026-10-13T22:56:46.927345+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-antifaccao",
+      "url": "https://noticias.stf.jus.br/postsnoticias/audiencia-publica-em-dois-dias-stf-debateu-pontos-da-lei-antifaccao-e-limites-constitucionais/",
+      "status": 200,
+      "bytes": 73978,
+      "sha256": "f93511be5a0aecdd5fbd42610f3c9ff69413e676e3181464bf794c1f4d5d7b4f",
+      "checked_at": "2026-10-13T22:56:47.582720+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-exame",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+      "status": 200,
+      "bytes": 65730,
+      "sha256": "fc9532873a9af522e36110fff6af58a1344a0d9c78936f0f5fa5d7877bce30bf",
+      "checked_at": "2026-10-13T22:57:28.881437+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-saida",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-mantem-saida-temporaria-de-condenado-por-roubo-cometido-antes-do-fim-do-beneficio/",
+      "status": 200,
+      "bytes": 65680,
+      "sha256": "63ccb9d17abad65ed75389e77934167191e30d02a758f832538029703df244ca",
+      "checked_at": "2026-10-13T22:57:28.097129+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum617",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=617+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 25088,
+      "sha256": "280d8960209ac1653d4058fe09f8e31d8db8a9e704467709ce39d773bf4e7b80",
+      "checked_at": "2026-10-13T22:57:29.002409+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15280",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm",
+      "status": 200,
+      "bytes": 41038,
+      "sha256": "d0efff74d292d0319bb2d9ca9a8259fa61fea1fb632d0e482020f3fb09e3e358",
+      "checked_at": "2026-10-13T22:57:29.849183+00:00",
+      "usable": true
+    },
+    {
+      "name": "cp-current",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "status": 200,
+      "sha256": "3c76284aae70b2800e4254c57680c6e2b0864e44140f5440ea65569452a1b374",
+      "bytes": 683589,
+      "checked_at": "2026-10-13T22:28:13.169928+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum441",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=441+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 21711,
+      "sha256": "416216e9c2934e7dbfa9e23bdbe23548c3c77cd60930b81d2331ee38f95d5276",
+      "checked_at": "2026-10-13T22:58:42.118532+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-sum493",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=493+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 21005,
+      "sha256": "1f236ab22d7f956114b4122538a6bfcf3701392854987bd9ee2d713a90ba44a5",
+      "checked_at": "2026-10-13T22:58:41.810813+00:00",
+      "usable": true
+    }
+  ],
+  "source_repair": {
+    "verified_at": "2026-10-13T23:08:10.958Z",
+    "table": "syllabus_editions",
+    "expected": {
+      "id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "contest_name": "Polícia Federal",
+      "role_name": "Delegado de Polícia Federal",
+      "contest_year": 2025,
+      "exam_board": "CEBRASPE",
+      "source_id": "2bc16d63-7351-4b3a-9267-41940be26594",
+      "status": "active",
+      "created_at": "2026-09-29T20:53:45.631808+00:00"
+    },
+    "applied": {
+      "id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "contest_name": "Polícia Federal",
+      "role_name": "Delegado de Polícia Federal",
+      "contest_year": 2025,
+      "exam_board": "CEBRASPE",
+      "source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+      "status": "active",
+      "created_at": "2026-09-29T20:53:45.631808+00:00"
+    },
+    "changed_fields": [
+      "source_id"
+    ],
+    "repair_applied": true,
+    "source": {
+      "id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+      "source_type": "edital",
+      "title": "Edital nº 1 – PF – Policial, atualizado até a Retificação nº 4",
+      "issuer": "Polícia Federal / CEBRASPE",
+      "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "published_on": "2025-05-20",
+      "checked_at": "2026-10-04T19:23:43.06302+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Matriz curricular oficial do concurso PF 2025."
+    },
+    "source_original_checked_at_preserved": true,
+    "notes": "Existing PF Delegado 2025 edition incorrectly pointed to a test booklet. Corrected only its source_id to the already registered official edital updated to retification 4. Fresh PDF request returned 403; source verification date of 4/10/2026 preserved, without claiming a fresh full syllabus audit. Importer rejected the package before any explanation write."
+  },
+  "validation": {
+    "tests": 443,
+    "typecheck": "passed",
+    "build": "passed",
+    "integrated": {
+      "tests": 444,
+      "typecheck": "passed",
+      "build": "passed"
+    }
+  },
+  "limits": [
+    "Aprovação dos 55 itens explicitamente listados; não certifica os demais nem toda jurisprudência.",
+    "Antifacção: audiência pública em ADIs não equivale a solução de mérito; percentuais atuais não aplicados retroativamente em prejuízo.",
+    "STF Temas 1408/1381: notícia sobre repercussão geral não é tese de mérito; não certificada toda decisão posterior.",
+    "Íntegra autônoma da promulgação das partes vetadas da Lei 14.843 não recuperada; não inventada data específica de sua publicação.",
+    "Lei 10.216 integrada a HCTP; ato CNJ indisponível nesta coleta, sem certificação integral de política/implantação.",
+    "Fonte do edital PF retificação 4 já cadastrada: data 4/10 preservada; tentativa nova PDF 403, sem nova auditoria integral do programa."
+  ],
+  "next_pending": 54
+}

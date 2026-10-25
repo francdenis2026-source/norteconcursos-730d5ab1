@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 export const MONTHS = [
   "janeiro",
   "fevereiro",
@@ -20,7 +21,7 @@ export const parse = (v: string) => {
   return y && m && d ? { y, m: m - 1, d } : null;
 };
 export const todayIso = () =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date());
+  new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(platformDate());
 
 export function formatDateBR(v: string) {
   const p = parse(v);

@@ -1,0 +1,139 @@
+{
+  "course_slug": "menor-potencial-ofensivo",
+  "units": {
+    "art-1": {
+      "simples": "Disciplina instrumentos de menor potencial ofensivo por agentes de segurança pública em todo país. Regulamentação atual inclui Decreto 12.341/2024.",
+      "pontos": [
+        "Âmbito nacional; lei e regulamento."
+      ],
+      "atencao": [
+        "Não confundir esta lei com infrações de menor potencial ofensivo dos Juizados: mesma expressão não significa mesma matéria."
+      ],
+      "exemplo": "O agente estuda instrumentos de uso da força pela Lei 13.060. Variação: A questão versa transação penal: deve consultar Lei 9.099, não confundir os títulos.",
+      "prova": [
+        "Esta lei define infrações de menor potencial dos Juizados? Não; trata de instrumentos de uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Prioriza menor potencial quando não põe em risco integridade física/psíquica policial, com legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo disparar contra fugitivo desarmado ou sem risco imediato, nem veículo que desrespeita bloqueio salvo risco de morte/lesão indicado.",
+      "pontos": [
+        "Não existe autorização automática de disparo por fuga ou bloqueio."
+      ],
+      "atencao": [
+        "Não trocar a condição de risco por desobediência simples. Prioridade não obriga instrumento inadequado que coloque policial em risco."
+      ],
+      "exemplo": "Veículo apenas evade bloqueio sem risco de morte/lesão: isso não autoriza arma de fogo pela lei. Variação: Há risco concreto nos termos da exceção: ainda examine necessidade e proporcionalidade, sem disparo automático.",
+      "prova": [
+        "A mera fuga de veículo autoriza disparo automaticamente? Não; a lei condiciona a exceção ao risco indicado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-3": {
+      "simples": "Formação/capacitação deve incluir conteúdo habilitante para instrumentos não letais. A denominação legal não significa risco zero: leia a definição de baixa probabilidade no art. 4º.",
+      "pontos": [
+        "Capacitação prática e legal; não letal não é inofensivo."
+      ],
+      "atencao": [
+        "Não dispensar treino pelo rótulo do equipamento."
+      ],
+      "exemplo": "Curso inclui habilitação no instrumento e seus limites. Variação: Entrega-se equipamento sem treinamento: a disponibilização não substitui capacitação.",
+      "prova": [
+        "O rótulo não letal dispensa capacitação? Não; o artigo exige conteúdo habilitante."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Instrumentos são projetados para conter, debilitar ou incapacitar temporariamente com baixa probabilidade de morte/lesão permanente. Baixa probabilidade não é impossibilidade absoluta de dano.",
+      "pontos": [
+        "Temporário e baixo risco, não risco zero."
+      ],
+      "atencao": [
+        "Uso indevido pode causar lesão grave e continua sujeito aos limites e responsabilidade."
+      ],
+      "exemplo": "O agente escolhe instrumento adequado ao objetivo de contenção temporária. Variação: É utilizado indevidamente e provoca dano: o rótulo não elimina análise da conduta.",
+      "prova": [
+        "Menor potencial significa impossibilidade de morte ou lesão permanente? Não; o texto diz baixa probabilidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-5": {
+      "simples": "Poder público deve fornecer a todo agente de segurança instrumentos de menor potencial para uso racional da força.",
+      "pontos": [
+        "Dever de fornecimento; uso racional continua exigido."
+      ],
+      "atencao": [
+        "Disponibilizar não autoriza uso indiscriminado nem substitui formação."
+      ],
+      "exemplo": "A instituição fornece equipamentos adequados e organiza treinamento. Variação: O equipamento existe, mas o caso não exige força: o fornecimento não cria necessidade de usar.",
+      "prova": [
+        "O dever de fornecer elimina requisitos de necessidade no uso? Não; instrumentos se destinam ao uso racional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "Ferimentos decorrentes de uso da força exigem assistência/socorro médico imediato e comunicação à família ou pessoa indicada. Dever independe de o instrumento ser menor potencial.",
+      "pontos": [
+        "Socorro imediato + comunicação."
+      ],
+      "atencao": [
+        "Não aguardar encerramento de burocracia para prestar assistência nem negar por imputação ao ferido."
+      ],
+      "exemplo": "Pessoa ferida recebe socorro imediato e comunicação ao contato indicado. Variação: O instrumento era classificado não letal: a ocorrência de ferimento mantém o dever.",
+      "prova": [
+        "Ferimento por instrumento de menor potencial afasta dever de socorro? Não; o artigo alcança ferimentos decorrentes do uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-7": {
+      "simples": "Executivo regulamenta classificação e utilização. Decreto 12.341/2024 é fonte atual complementar, sem alterar por si o texto legal nem criar uso irrestrito.",
+      "pontos": [
+        "Consultar regulamento junto da lei."
+      ],
+      "atencao": [
+        "Não considerar instrução informal como substituto de classificação e limites normativos."
+      ],
+      "exemplo": "O candidato compara instrumento e procedimento com o decreto vigente. Variação: A prática interna diverge da norma: não se presume válida apenas por costume.",
+      "prova": [
+        "A classificação e utilização têm regulamentação executiva prevista? Sim; o art. 7º a determina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "A Lei 13.060 vigora na publicação. A regulamentação posterior tem marco próprio; sua data não deve ser confundida com a da lei.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Não presumir que a lei só nasceu em 2024 porque o decreto atual é daquele ano."
+      ],
+      "exemplo": "A questão cobra a vigência original de 2014. Variação: Cobra o regulamento de 2024: consulte seu marco próprio.",
+      "prova": [
+        "A lei só passou a existir com o decreto de 2024? Não; vigora desde a publicação da própria lei."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

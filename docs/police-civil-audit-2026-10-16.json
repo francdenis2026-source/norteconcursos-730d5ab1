@@ -1,0 +1,2763 @@
+{
+  "snapshot_at": "2026-10-18T04:07:39.215Z",
+  "generated_at": "2026-10-18T04:09:56.388Z",
+  "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
+  "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
+  "groups": [
+    {
+      "exam": "Polícia Civil da Paraíba | 2009 | Agente de Investigação e Escrivão de Polícia | CEBRASPE",
+      "records": 2,
+      "status": {
+        "active": 2
+      },
+      "active_app_eligible": 2,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Delegado de Polícia Substituto | 2025 | Delegado de Polícia Substituto | FGV",
+      "records": 80,
+      "status": {
+        "active": 80
+      },
+      "active_app_eligible": 15,
+      "active_with_catalog_flags": 80,
+      "active_without_example_marker": 80,
+      "flags": {
+        "edition_without_verified_edital": 80,
+        "context_or_visual_flag": 2,
+        "app_gate_rejected": 65
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Investigador de Polícia I | 2025 | Investigador de Polícia I | FGV",
+      "records": 69,
+      "status": {
+        "active": 69
+      },
+      "active_app_eligible": 36,
+      "active_with_catalog_flags": 69,
+      "active_without_example_marker": 69,
+      "flags": {
+        "edition_without_verified_edital": 69,
+        "app_gate_rejected": 33,
+        "context_or_visual_flag": 4
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Médico-Legista | 2025 | Médico-Legista | FGV",
+      "records": 74,
+      "status": {
+        "active": 74
+      },
+      "active_app_eligible": 55,
+      "active_with_catalog_flags": 74,
+      "active_without_example_marker": 74,
+      "flags": {
+        "topic_not_current": 74,
+        "edition_without_verified_edital": 74,
+        "app_gate_rejected": 19,
+        "context_or_visual_flag": 4
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Perito Criminal – Área I | 2025 | Perito Criminal – Área I | FGV",
+      "records": 75,
+      "status": {
+        "active": 75
+      },
+      "active_app_eligible": 57,
+      "active_with_catalog_flags": 75,
+      "active_without_example_marker": 75,
+      "flags": {
+        "topic_not_current": 75,
+        "edition_without_verified_edital": 75,
+        "app_gate_rejected": 18,
+        "context_or_visual_flag": 8
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Perito Criminal – Área II | 2025 | Perito Criminal – Área II | FGV",
+      "records": 78,
+      "status": {
+        "active": 78
+      },
+      "active_app_eligible": 63,
+      "active_with_catalog_flags": 78,
+      "active_without_example_marker": 78,
+      "flags": {
+        "topic_not_current": 78,
+        "edition_without_verified_edital": 78,
+        "app_gate_rejected": 15,
+        "context_or_visual_flag": 5
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) | 2026 | Técnico-Assistente – Auxiliar de Perícia (TPAG) | CEBRASPE",
+      "records": 60,
+      "status": {
+        "active": 59,
+        "archived": 1
+      },
+      "active_app_eligible": 49,
+      "active_with_catalog_flags": 47,
+      "active_without_example_marker": 55,
+      "flags": {
+        "topic_not_current": 39,
+        "app_gate_rejected": 10,
+        "context_or_visual_flag": 2
+      }
+    },
+    {
+      "exam": "Polícia Civil de Minas Gerais | 2025 | Técnico-Assistente da Polícia Civil e de Atividades Governamentais (TPAG) - Auxiliar de Perícia | CEBRASPE",
+      "records": 60,
+      "status": {
+        "active": 58,
+        "archived": 2
+      },
+      "active_app_eligible": 36,
+      "active_with_catalog_flags": 58,
+      "active_without_example_marker": 58,
+      "flags": {
+        "edition_without_verified_edital": 58,
+        "app_gate_rejected": 22,
+        "context_or_visual_flag": 7
+      }
+    },
+    {
+      "exam": "Polícia Civil de Pernambuco - Agente de Polícia | 2024 | Agente de Polícia | CEBRASPE",
+      "records": 60,
+      "status": {
+        "active": 52,
+        "annulled": 7,
+        "obsolete": 1
+      },
+      "active_app_eligible": 52,
+      "active_with_catalog_flags": 29,
+      "active_without_example_marker": 35,
+      "flags": {
+        "topic_not_current": 29
+      }
+    },
+    {
+      "exam": "Polícia Civil de Pernambuco - Delegado de Polícia | 2024 | Delegado de Polícia | CEBRASPE",
+      "records": 100,
+      "status": {
+        "active": 95,
+        "obsolete": 1,
+        "annulled": 3,
+        "archived": 1
+      },
+      "active_app_eligible": 95,
+      "active_with_catalog_flags": 66,
+      "active_without_example_marker": 86,
+      "flags": {
+        "topic_not_current": 66
+      }
+    },
+    {
+      "exam": "Polícia Civil de Pernambuco - Escrivão de Polícia | 2024 | Escrivão de Polícia | CEBRASPE",
+      "records": 60,
+      "status": {
+        "active": 55,
+        "annulled": 5
+      },
+      "active_app_eligible": 55,
+      "active_with_catalog_flags": 40,
+      "active_without_example_marker": 45,
+      "flags": {
+        "topic_not_current": 40
+      }
+    },
+    {
+      "exam": "Polícia Civil de Santa Catarina – Delegado de Polícia | 2024 | Delegado de Polícia | FGV",
+      "records": 95,
+      "status": {
+        "active": 95
+      },
+      "active_app_eligible": 24,
+      "active_with_catalog_flags": 95,
+      "active_without_example_marker": 95,
+      "flags": {
+        "topic_not_current": 95,
+        "edition_without_verified_edital": 95,
+        "app_gate_rejected": 71,
+        "context_or_visual_flag": 3
+      }
+    },
+    {
+      "exam": "Polícia Civil do Acre | 2017 | Agente de Polícia Civil | IBADE",
+      "records": 79,
+      "status": {
+        "active": 72,
+        "archived": 4,
+        "obsolete": 3
+      },
+      "active_app_eligible": 72,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Acre | 2017 | Polícia Civil do Acre | IBADE",
+      "records": 79,
+      "status": {
+        "archived": 79
+      },
+      "active_app_eligible": 0,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Ceará – Delegado de Polícia Civil | 2025 | Delegado de Polícia Civil | CEBRASPE",
+      "records": 89,
+      "status": {
+        "active": 83,
+        "archived": 5,
+        "obsolete": 1
+      },
+      "active_app_eligible": 79,
+      "active_with_catalog_flags": 21,
+      "active_without_example_marker": 83,
+      "flags": {
+        "topic_not_current": 17,
+        "incomplete_text_marker": 4,
+        "app_gate_rejected": 4
+      }
+    },
+    {
+      "exam": "Polícia Civil do Ceará – Oficial Investigador de Polícia | 2025 | Oficial Investigador de Polícia | UECE-CEV",
+      "records": 95,
+      "status": {
+        "active": 95
+      },
+      "active_app_eligible": 53,
+      "active_with_catalog_flags": 95,
+      "active_without_example_marker": 95,
+      "flags": {
+        "topic_not_current": 95,
+        "edition_without_verified_edital": 95,
+        "context_or_visual_flag": 9,
+        "app_gate_rejected": 42
+      }
+    },
+    {
+      "exam": "Polícia Civil do Distrito Federal – Delegado de Polícia | 2026 | Delegado de Polícia | CEBRASPE",
+      "records": 111,
+      "status": {
+        "archived": 111
+      },
+      "active_app_eligible": 0,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Distrito Federal | 2026 | Delegado de Polícia | CEBRASPE",
+      "records": 111,
+      "status": {
+        "active": 111
+      },
+      "active_app_eligible": 111,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil | 2022 | Agente de Polícia Civil | CEBRASPE",
+      "records": 94,
+      "status": {
+        "active": 93,
+        "archived": 1
+      },
+      "active_app_eligible": 90,
+      "active_with_catalog_flags": 31,
+      "active_without_example_marker": 68,
+      "flags": {
+        "topic_not_current": 28,
+        "app_gate_rejected": 3
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial | 2022 | Datiloscopista Policial | CEBRASPE",
+      "records": 96,
+      "status": {
+        "active": 93,
+        "archived": 3
+      },
+      "active_app_eligible": 91,
+      "active_with_catalog_flags": 29,
+      "active_without_example_marker": 79,
+      "flags": {
+        "topic_not_current": 27,
+        "app_gate_rejected": 2
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado de Rondônia - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
+      "records": 98,
+      "status": {
+        "active": 93,
+        "archived": 5
+      },
+      "active_app_eligible": 91,
+      "active_with_catalog_flags": 10,
+      "active_without_example_marker": 38,
+      "flags": {
+        "app_gate_rejected": 2,
+        "topic_not_current": 8
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil | 2022 | Escrivão de Polícia Civil | CEBRASPE",
+      "records": 97,
+      "status": {
+        "active": 96,
+        "archived": 1
+      },
+      "active_app_eligible": 93,
+      "active_with_catalog_flags": 33,
+      "active_without_example_marker": 72,
+      "flags": {
+        "topic_not_current": 30,
+        "app_gate_rejected": 3
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária | 2021 | Agente de Polícia Judiciária | CEBRASPE",
+      "records": 100,
+      "status": {
+        "annulled": 6,
+        "active": 94
+      },
+      "active_app_eligible": 92,
+      "active_with_catalog_flags": 73,
+      "active_without_example_marker": 92,
+      "flags": {
+        "topic_not_current": 71,
+        "app_gate_rejected": 2
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado de Sergipe - Escrivão de Polícia | 2021 | Escrivão de Polícia | CEBRASPE",
+      "records": 100,
+      "status": {
+        "active": 96,
+        "annulled": 4
+      },
+      "active_app_eligible": 95,
+      "active_with_catalog_flags": 77,
+      "active_without_example_marker": 94,
+      "flags": {
+        "topic_not_current": 76,
+        "app_gate_rejected": 1
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado do Amazonas - Delegado de Polícia | 2022 | Delegado de Polícia | FGV",
+      "records": 100,
+      "status": {
+        "active": 96,
+        "obsolete": 1,
+        "annulled": 2,
+        "archived": 1
+      },
+      "active_app_eligible": 96,
+      "active_with_catalog_flags": 69,
+      "active_without_example_marker": 95,
+      "flags": {
+        "topic_not_current": 69
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado do Amazonas - Escrivão de Polícia | 2022 | Escrivão de Polícia | FGV",
+      "records": 80,
+      "status": {
+        "active": 78,
+        "annulled": 2
+      },
+      "active_app_eligible": 78,
+      "active_with_catalog_flags": 78,
+      "active_without_example_marker": 78,
+      "flags": {
+        "edition_without_verified_edital": 78,
+        "topic_not_current": 59
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado do Amazonas - Investigador de Polícia | 2022 | Investigador de Polícia | FGV",
+      "records": 80,
+      "status": {
+        "active": 78,
+        "annulled": 1,
+        "obsolete": 1
+      },
+      "active_app_eligible": 78,
+      "active_with_catalog_flags": 58,
+      "active_without_example_marker": 78,
+      "flags": {
+        "topic_not_current": 58
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado do Espírito Santo | 2022 | Delegado de Polícia | CEBRASPE",
+      "records": 74,
+      "status": {
+        "active": 72,
+        "obsolete": 2
+      },
+      "active_app_eligible": 46,
+      "active_with_catalog_flags": 72,
+      "active_without_example_marker": 72,
+      "flags": {
+        "edition_without_verified_edital": 72,
+        "app_gate_rejected": 26
+      }
+    },
+    {
+      "exam": "Polícia Civil do Estado do Paraná | 2026 | Agente de Polícia Judiciária | FGV",
+      "records": 100,
+      "status": {
+        "active": 100
+      },
+      "active_app_eligible": 100,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 100,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Estado do Paraná | 2026 | Delegado de Polícia | FGV",
+      "records": 100,
+      "status": {
+        "active": 98,
+        "archived": 2
+      },
+      "active_app_eligible": 98,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 96,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Estado do Paraná | 2026 | Papiloscopista Policial | FGV",
+      "records": 100,
+      "status": {
+        "active": 36,
+        "archived": 64
+      },
+      "active_app_eligible": 36,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 36,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
+      "records": 100,
+      "status": {
+        "active": 90,
+        "archived": 6,
+        "annulled": 3,
+        "under_review": 1
+      },
+      "active_app_eligible": 88,
+      "active_with_catalog_flags": 56,
+      "active_without_example_marker": 89,
+      "flags": {
+        "topic_not_current": 56,
+        "app_gate_rejected": 2
+      }
+    },
+    {
+      "exam": "Polícia Civil do Pará | 2006 | Escrivão de Polícia Civil | CEBRASPE",
+      "records": 2,
+      "status": {
+        "active": 2
+      },
+      "active_app_eligible": 2,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
+      "exam": "Polícia Civil do Piauí – Delegado de Polícia Civil | 2026 | Delegado de Polícia Civil | FGV",
+      "records": 80,
+      "status": {
+        "active": 80
+      },
+      "active_app_eligible": 21,
+      "active_with_catalog_flags": 59,
+      "active_without_example_marker": 77,
+      "flags": {
+        "app_gate_rejected": 59,
+        "context_or_visual_flag": 3
+      }
+    },
+    {
+      "exam": "Polícia Civil do Piauí – Oficial Investigador | 2026 | Oficial Investigador | FGV",
+      "records": 74,
+      "status": {
+        "active": 74
+      },
+      "active_app_eligible": 33,
+      "active_with_catalog_flags": 74,
+      "active_without_example_marker": 74,
+      "flags": {
+        "edition_without_verified_edital": 74,
+        "app_gate_rejected": 41,
+        "context_or_visual_flag": 3
+      }
+    },
+    {
+      "exam": "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia | 2022 | Escrivão de Polícia | UFMT",
+      "records": 60,
+      "status": {
+        "annulled": 2,
+        "active": 57,
+        "obsolete": 1
+      },
+      "active_app_eligible": 56,
+      "active_with_catalog_flags": 40,
+      "active_without_example_marker": 50,
+      "flags": {
+        "topic_not_current": 39,
+        "app_gate_rejected": 1
+      }
+    },
+    {
+      "exam": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia | 2022 | Investigador de Polícia | UFMT",
+      "records": 60,
+      "status": {
+        "active": 57,
+        "annulled": 2,
+        "obsolete": 1
+      },
+      "active_app_eligible": 56,
+      "active_with_catalog_flags": 40,
+      "active_without_example_marker": 50,
+      "flags": {
+        "topic_not_current": 39,
+        "app_gate_rejected": 1
+      }
+    }
+  ],
+  "totals": {
+    "records": 2972,
+    "status": {
+      "active": 2636,
+      "archived": 286,
+      "annulled": 37,
+      "obsolete": 12,
+      "under_review": 1
+    },
+    "active_app_eligible": 2194,
+    "active_with_catalog_flags": 1626,
+    "active_without_example_marker": 2266,
+    "editorial_approvals_generated_by_this_script": 0
+  },
+  "editorial_campaign": {
+    "newly_reviewed": 313,
+    "newly_published": 302,
+    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams. AM: one Delegado item (25), confirmed with Tema 1100, final key and updated official program; item 44 retained. RO Delegado item 29: LEP sanction and explicit execution-penal program verified; not certification of all remaining items. New baseline: 32 pending, preserving other-account decisions. This batch: PCPI2/4 active, MT59 two career records obsolete after LC803/2024; not blanket approval. Second batch: PCPI1, MT14 x2, RO79 active; AM65/80 obsolete after express repeal. Total resolved from32baseline:10 (6active,4obsolete). MT organization/probation: six individually activated (56/57/58, both careers), source confronted with17amendments. No approval of item60 or entire statute.",
+    "remaining_pcdf_current_items_this_campaign": 0,
+    "pending_under_review_all_pc": 1,
+    "previous_pcpr_review": "b6a1672",
+    "validation": {
+      "checked_at": "2026-10-16T20:26:47.135Z",
+      "audited": 111,
+      "eligible_audited": 111,
+      "other_pc_rows_preserved": 2857,
+      "concurrent_unrelated_pc_rows": [],
+      "missing_pc_rows": [],
+      "original_texts_answers_sources_subjects_statuses_preserved": false,
+      "original_isolated_items_answers_sources_subjects_statuses_preserved": true,
+      "shared_contexts_restored": 8,
+      "items": [
+        {
+          "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+          "item_number": 46,
+          "eligible": true
+        },
+        {
+          "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+          "item_number": 15,
+          "eligible": true
+        },
+        {
+          "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+          "item_number": 27,
+          "eligible": true
+        },
+        {
+          "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+          "item_number": 12,
+          "eligible": true
+        },
+        {
+          "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+          "item_number": 68,
+          "eligible": true
+        },
+        {
+          "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+          "item_number": 111,
+          "eligible": true
+        },
+        {
+          "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+          "item_number": 103,
+          "eligible": true
+        },
+        {
+          "id": "23409872-85b9-4547-9d76-ee840c996f70",
+          "item_number": 40,
+          "eligible": true
+        },
+        {
+          "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+          "item_number": 77,
+          "eligible": true
+        },
+        {
+          "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+          "item_number": 33,
+          "eligible": true
+        },
+        {
+          "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+          "item_number": 39,
+          "eligible": true
+        },
+        {
+          "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+          "item_number": 43,
+          "eligible": true
+        },
+        {
+          "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+          "item_number": 63,
+          "eligible": true
+        },
+        {
+          "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+          "item_number": 42,
+          "eligible": true
+        },
+        {
+          "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+          "item_number": 97,
+          "eligible": true
+        },
+        {
+          "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+          "item_number": 96,
+          "eligible": true
+        },
+        {
+          "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+          "item_number": 78,
+          "eligible": true
+        },
+        {
+          "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+          "item_number": 13,
+          "eligible": true
+        },
+        {
+          "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+          "item_number": 36,
+          "eligible": true
+        },
+        {
+          "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+          "item_number": 8,
+          "eligible": true
+        },
+        {
+          "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+          "item_number": 64,
+          "eligible": true
+        },
+        {
+          "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+          "item_number": 92,
+          "eligible": true
+        },
+        {
+          "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+          "item_number": 76,
+          "eligible": true
+        },
+        {
+          "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+          "item_number": 100,
+          "eligible": true
+        },
+        {
+          "id": "74436292-ad87-456d-870a-f8702db04364",
+          "item_number": 102,
+          "eligible": true
+        },
+        {
+          "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+          "item_number": 106,
+          "eligible": true
+        },
+        {
+          "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+          "item_number": 52,
+          "eligible": true
+        },
+        {
+          "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+          "item_number": 49,
+          "eligible": true
+        },
+        {
+          "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+          "item_number": 11,
+          "eligible": true
+        },
+        {
+          "id": "a1db110e-599c-4503-886b-a2483ac92082",
+          "item_number": 53,
+          "eligible": true
+        },
+        {
+          "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+          "item_number": 44,
+          "eligible": true
+        },
+        {
+          "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+          "item_number": 99,
+          "eligible": true
+        },
+        {
+          "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+          "item_number": 66,
+          "eligible": true
+        },
+        {
+          "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+          "item_number": 26,
+          "eligible": true
+        },
+        {
+          "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+          "item_number": 93,
+          "eligible": true
+        },
+        {
+          "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+          "item_number": 38,
+          "eligible": true
+        },
+        {
+          "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+          "item_number": 47,
+          "eligible": true
+        },
+        {
+          "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+          "item_number": 35,
+          "eligible": true
+        },
+        {
+          "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+          "item_number": 1,
+          "eligible": true
+        },
+        {
+          "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+          "item_number": 101,
+          "eligible": true
+        },
+        {
+          "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+          "item_number": 37,
+          "eligible": true
+        },
+        {
+          "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+          "item_number": 95,
+          "eligible": true
+        },
+        {
+          "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+          "item_number": 110,
+          "eligible": true
+        },
+        {
+          "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+          "item_number": 50,
+          "eligible": true
+        },
+        {
+          "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+          "item_number": 54,
+          "eligible": true
+        },
+        {
+          "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+          "item_number": 98,
+          "eligible": true
+        },
+        {
+          "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+          "item_number": 94,
+          "eligible": true
+        },
+        {
+          "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+          "item_number": 70,
+          "eligible": true
+        },
+        {
+          "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+          "item_number": 25,
+          "eligible": true
+        },
+        {
+          "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+          "item_number": 34,
+          "eligible": true
+        },
+        {
+          "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+          "item_number": 85,
+          "eligible": true
+        },
+        {
+          "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+          "item_number": 115,
+          "eligible": true
+        },
+        {
+          "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+          "item_number": 105,
+          "eligible": true
+        },
+        {
+          "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+          "item_number": 3,
+          "eligible": true
+        },
+        {
+          "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+          "item_number": 48,
+          "eligible": true
+        },
+        {
+          "id": "40aec608-f805-49af-a971-537ab56d2449",
+          "item_number": 113,
+          "eligible": true
+        },
+        {
+          "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+          "item_number": 7,
+          "eligible": true
+        },
+        {
+          "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+          "item_number": 87,
+          "eligible": true
+        },
+        {
+          "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+          "item_number": 45,
+          "eligible": true
+        },
+        {
+          "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+          "item_number": 112,
+          "eligible": true
+        },
+        {
+          "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+          "item_number": 81,
+          "eligible": true
+        },
+        {
+          "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+          "item_number": 88,
+          "eligible": true
+        },
+        {
+          "id": "ef3167f7-b998-406f-b567-e722bc835087",
+          "item_number": 114,
+          "eligible": true
+        },
+        {
+          "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+          "item_number": 41,
+          "eligible": true
+        },
+        {
+          "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+          "item_number": 14,
+          "eligible": true
+        },
+        {
+          "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+          "item_number": 71,
+          "eligible": true
+        },
+        {
+          "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+          "item_number": 9,
+          "eligible": true
+        },
+        {
+          "id": "57bf6610-4707-42d5-89d8-59537091e634",
+          "item_number": 16,
+          "eligible": true
+        },
+        {
+          "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+          "item_number": 90,
+          "eligible": true
+        },
+        {
+          "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+          "item_number": 65,
+          "eligible": true
+        },
+        {
+          "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+          "item_number": 32,
+          "eligible": true
+        },
+        {
+          "id": "95823a75-ff66-486d-af04-db532c85a217",
+          "item_number": 20,
+          "eligible": true
+        },
+        {
+          "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+          "item_number": 22,
+          "eligible": true
+        },
+        {
+          "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+          "item_number": 10,
+          "eligible": true
+        },
+        {
+          "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+          "item_number": 6,
+          "eligible": true
+        },
+        {
+          "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+          "item_number": 28,
+          "eligible": true
+        },
+        {
+          "id": "0a0c814c-0a8c-41ad-920e-751fff7128b1",
+          "item_number": 75,
+          "eligible": true
+        },
+        {
+          "id": "1b870eff-873e-49d2-875e-f52fc74f1c11",
+          "item_number": 19,
+          "eligible": true
+        },
+        {
+          "id": "51116dca-4453-47fb-9e1e-00bf31c0a268",
+          "item_number": 24,
+          "eligible": true
+        },
+        {
+          "id": "6267fc4b-f5e0-4682-b9df-6cd17f00a747",
+          "item_number": 61,
+          "eligible": true
+        },
+        {
+          "id": "779485b3-b3e9-42a7-b7bd-169a84bd6080",
+          "item_number": 104,
+          "eligible": true
+        },
+        {
+          "id": "9ffafcba-c3a0-45e8-b217-4dc299f7485b",
+          "item_number": 89,
+          "eligible": true
+        },
+        {
+          "id": "dcc04649-2d65-4ea0-bf07-2920ad654535",
+          "item_number": 74,
+          "eligible": true
+        },
+        {
+          "id": "3dab4984-aba1-4f12-a458-78f81e6e8aa8",
+          "item_number": 108,
+          "eligible": true
+        },
+        {
+          "id": "3333635d-9de5-4eb2-aa78-3ee914cf3247",
+          "item_number": 56,
+          "eligible": true
+        },
+        {
+          "id": "ce182ec0-b8d4-45e0-81f0-4c81e677d415",
+          "item_number": 59,
+          "eligible": true
+        },
+        {
+          "id": "e8ac7a6f-0f94-41e8-8cd7-1a886fa2cf03",
+          "item_number": 55,
+          "eligible": true
+        },
+        {
+          "id": "f494bd3b-537e-4913-aa26-fe446790ec4d",
+          "item_number": 57,
+          "eligible": true
+        },
+        {
+          "id": "fcb0aa6d-9d7b-4bb1-b9e6-9ab78b4ccc48",
+          "item_number": 58,
+          "eligible": true
+        },
+        {
+          "id": "cafdd2dc-c49b-4fcf-81a1-43cb81d23dea",
+          "item_number": 60,
+          "eligible": true
+        },
+        {
+          "id": "7773cac4-4997-4b13-af4d-c2ca052b4070",
+          "item_number": 62,
+          "eligible": true
+        },
+        {
+          "id": "a58703f7-ce05-4c52-bbd6-ed091cd8abb9",
+          "item_number": 120,
+          "eligible": true
+        },
+        {
+          "id": "fc05803c-c53e-4a7c-b98b-4bd1dd219c0b",
+          "item_number": 119,
+          "eligible": true
+        },
+        {
+          "id": "0ca16e52-8b0d-4f10-b90b-679a290d5ad9",
+          "item_number": 80,
+          "eligible": true
+        },
+        {
+          "id": "105ed9d5-c787-44c8-bb15-2d0bb91718cc",
+          "item_number": 84,
+          "eligible": true
+        },
+        {
+          "id": "3135eecf-e260-4632-9ca3-659a45b24037",
+          "item_number": 79,
+          "eligible": true
+        },
+        {
+          "id": "31a35825-1130-41ee-90c9-7272cf8454b0",
+          "item_number": 83,
+          "eligible": true
+        },
+        {
+          "id": "3739e072-2498-432a-bca5-7d7fcec0efe9",
+          "item_number": 86,
+          "eligible": true
+        },
+        {
+          "id": "3939fc83-b33a-4b23-b467-a30bb47f2144",
+          "item_number": 4,
+          "eligible": true
+        },
+        {
+          "id": "4a3799c5-0232-4421-ae7e-eef31f4fd73d",
+          "item_number": 51,
+          "eligible": true
+        },
+        {
+          "id": "5b94ad68-90b3-4252-9b58-0600c17da7b0",
+          "item_number": 82,
+          "eligible": true
+        },
+        {
+          "id": "5e621ddf-2343-4df4-8e75-43c255a0ef07",
+          "item_number": 118,
+          "eligible": true
+        },
+        {
+          "id": "667cb95c-a718-466b-8240-57a15326cf4a",
+          "item_number": 117,
+          "eligible": true
+        },
+        {
+          "id": "6b592bf4-381e-45f2-92cf-cee02867bf4c",
+          "item_number": 116,
+          "eligible": true
+        },
+        {
+          "id": "7e8098d6-64fd-4ffb-80b0-1642b9a0f0f0",
+          "item_number": 30,
+          "eligible": true
+        },
+        {
+          "id": "8b3d1164-61a8-4b69-8684-fd907613e88b",
+          "item_number": 18,
+          "eligible": true
+        },
+        {
+          "id": "8c8a15a0-9615-43d4-acb6-0798be589af4",
+          "item_number": 17,
+          "eligible": true
+        },
+        {
+          "id": "bfd3d161-5958-4f41-9e6a-944406c9a2d8",
+          "item_number": 21,
+          "eligible": true
+        },
+        {
+          "id": "cfbe9bdb-ba88-4905-a2f0-a779c0ee404e",
+          "item_number": 5,
+          "eligible": true
+        },
+        {
+          "id": "d80c4bdc-6887-496d-b9a7-f4fab4f11a40",
+          "item_number": 107,
+          "eligible": true
+        },
+        {
+          "id": "e54dc35b-2542-4f2b-87b6-57eeb102edc7",
+          "item_number": 73,
+          "eligible": true
+        }
+      ]
+    },
+    "active_records_not_yet_editorially_reviewed_this_campaign": 2399,
+    "coverage_note": "Count means not tracked by this campaign, not necessarily unaudited. Twenty-nine pending records were activated by another session between snapshots and were preserved, without our certification of that review.",
+    "rondonia_batch1": {
+      "reviewed": 59,
+      "published_active": 59,
+      "remaining_under_review": 97,
+      "validation": {
+        "checked_at": "2026-10-16T21:00:04.949Z",
+        "reviewed": 59,
+        "published_active": 59,
+        "eligible_reviewed": 59,
+        "by_career": {
+          "Escrivão de Polícia Civil": 15,
+          "Delegado de Polícia": 19,
+          "Agente de Polícia Civil": 17,
+          "Datiloscopista Policial": 8
+        },
+        "other_pc_rows_preserved": 2909,
+        "concurrent_other_question_rows": [],
+        "concurrent_other_metadata": [],
+        "original_texts_answers_raw_extractions_subjects_source_ids_preserved": true,
+        "new_official_sources": 9,
+        "reviewed_source_status_changes": 1,
+        "edition_source_repairs": 4,
+        "new_verified_syllabus_topics": 17,
+        "pc_status": {
+          "active": 2540,
+          "archived": 210,
+          "under_review": 175,
+          "annulled": 37,
+          "obsolete": 6
+        },
+        "pending_groups": {
+          "Polícia Civil de Pernambuco - Agente de Polícia | Agente de Polícia": 18,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia | Escrivão de Polícia": 11,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia | Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) | Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia | Delegado de Polícia": 60,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil | Agente de Polícia Civil": 13,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária | Agente de Polícia Judiciária": 1,
+          "Polícia Civil de Pernambuco - Delegado de Polícia | Delegado de Polícia": 10,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil | Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial | Datiloscopista Policial": 11,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil | Escrivão de Polícia Civil": 13,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia | Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais | Técnico-Assistente da Polícia Civil e de Atividades Governamentais (TPAG) - Auxiliar de Perícia": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia | Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia | Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia | Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia | Escrivão de Polícia": 1
+        }
+      }
+    },
+    "rondonia_batches2_3": {
+      "reviewed": 10,
+      "published_active": 10,
+      "remaining_under_review_ro": 87,
+      "validation": {
+        "checked_at": "2026-10-16T21:08:13.328Z",
+        "published": 10,
+        "eligible": 10,
+        "preserved_other_pc_records": 2958,
+        "concurrent_changes": [],
+        "metadata_changes": [],
+        "pc_status": {
+          "active": 2550,
+          "archived": 210,
+          "under_review": 165,
+          "annulled": 37,
+          "obsolete": 6
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Agente de Polícia": 18,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 11,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 57,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 10,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 11,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 10,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        }
+      }
+    },
+    "rondonia_batches4_5": {
+      "reviewed": 30,
+      "published_active": 28,
+      "editorially_archived": 2,
+      "remaining_under_review_ro": 57,
+      "validation": {
+        "checked_at": "2026-10-16T22:09:12.911Z",
+        "published": 30,
+        "eligible": 28,
+        "preserved_other_pc_records": 2938,
+        "concurrent_changes": [],
+        "metadata_changes": [],
+        "new_sources": 5,
+        "new_topics": 6,
+        "pc_status": {
+          "active": 2578,
+          "archived": 212,
+          "under_review": 135,
+          "annulled": 37,
+          "obsolete": 6
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Agente de Polícia": 18,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 11,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 10,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        }
+      }
+    },
+    "pernambuco_batch1": {
+      "reviewed": 12,
+      "published_active": 11,
+      "published_obsolete": 1,
+      "remaining_under_review_pe": 27,
+      "validation": {
+        "checked_at": "2026-10-16T22:25:13.875Z",
+        "reviewed": 12,
+        "published_active": 11,
+        "published_obsolete": 1,
+        "contexts_restored": 11,
+        "preserved_other_pc_records": 2956,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [
+          {
+            "table": "syllabus_topics",
+            "id": "0ec030bb-fb42-4875-afa6-712428cf1955"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "16539c8c-9212-4544-bb12-9b7bbe2e3da7"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "1695871d-7ac7-40fc-a8c8-26b00eefa079"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "17508d59-afab-4264-a94f-61dbfaffc886"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2a233f18-e893-492c-9f74-2fb1a8da9100"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2b106279-1fd5-4580-a04d-3da0829e1d3a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2b376edb-fecd-49d2-b4bc-1b341b4d3cd9"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2bfe8d07-3adf-4925-ae13-d818583bc2e2"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2cc876f9-885a-438a-82bd-7b35b2a55079"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "32b33f64-31e2-4bcd-80a3-f9bc28e69628"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "3fd7039b-bdde-458d-9ac3-20cdf7020b3a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "45748196-6284-47e5-b047-18b2f20d41fc"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "46accbb6-2a9c-4185-bf42-856cc8f3e2bb"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "4b058969-78c3-455a-bcb2-0e6b9bdb9054"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "5552a96c-d100-4ce6-90eb-5b6b66370d63"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "55acc377-7117-41e2-9b29-2c6e0159a451"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "62c80a39-2b57-4bfe-901b-dea480d4a543"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "6b961de6-1ad4-4da7-9261-012ebaa6c9f6"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "708266c8-259f-4e60-a5a5-5ee175bc2b14"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "7c49c734-b19a-4cbe-8923-f5f8f60149af"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "83bcf417-d715-4738-962e-5f63cfe881c6"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "8f9cdb9f-e7a5-4b08-99f0-8ee65d8d2485"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "93348e0b-a025-4629-bb7d-98ceff324894"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9b81749d-092a-4ad2-9b69-901b2c947646"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9c99754e-4cd5-43b4-b8fe-1214e03c924f"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9fc4243b-fe0f-461b-b705-57873fb33563"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "a662e765-8b43-450f-89e1-e39228ec55b4"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "aeb08f94-f5b1-47d8-bed0-e6b09d655d03"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "b85faffd-1051-4ae2-b129-d3d4d6f06e1a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "b9661d05-849c-4b38-8ae5-3c28ee50a948"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "bbfeeaa3-fb62-4b5d-8044-1fac990cc159"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "bd6227f4-9ece-4b9f-948f-e45446a51f90"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "c5f9e371-a50c-47c9-9087-b51a213d0720"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "d7de8327-3793-45a7-94ca-bb87b7a0a86a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "ef5b37af-fe0e-4839-ac45-964449a4639a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f16d8862-b0b8-4a40-b7fd-c54f1591fff0"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f1ca5e20-6ced-4c32-a7f3-b84bf08f9683"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f4cfb6a9-d5fd-471b-9e3a-f23f0f2f97f3"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f68fb13d-1bda-4db2-8dbb-c08678406235"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "fd994547-8b8a-4c79-9838-c50dfb5ea8d8"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "fefb8e9d-a381-432e-80f4-0e11ee68f095"
+          }
+        ],
+        "new_sources": 2,
+        "refreshed_sources": 6,
+        "repaired_editions": 3,
+        "new_topics": 6,
+        "reused_topics": 2,
+        "pc_status": {
+          "active": 2589,
+          "archived": 212,
+          "under_review": 123,
+          "annulled": 37,
+          "obsolete": 7
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Agente de Polícia": 11,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 10,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        },
+        "external_topic_changes_summary": {
+          "changed": 41
+        },
+        "scope_note": "All 2956 other PC question records preserved. Metadata comparison separately observed external topic changes; planned source/edition/topic writes matched and were not overwritten."
+      }
+    },
+    "pernambuco_batches2_3": {
+      "reviewed": 9,
+      "published_active": 9,
+      "validation": {
+        "checked_at": "2026-10-17T01:39:35.185Z",
+        "reviewed": 9,
+        "published_active": 9,
+        "contexts_restored": 8,
+        "figures_restored": 3,
+        "preserved_other_pc_records": 2959,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [],
+        "new_topics": 1,
+        "pc_status": {
+          "active": 2598,
+          "archived": 212,
+          "under_review": 114,
+          "annulled": 37,
+          "obsolete": 7
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 9,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+          "Polícia Civil de Pernambuco - Agente de Polícia": 3
+        }
+      },
+      "report": "docs/question-review-pcpe-batches2-3-2026-10-16.json"
+    },
+    "pernambuco_batches4_5": {
+      "reviewed": 2,
+      "published_active": 2,
+      "cumulative_validation_current_resume": {
+        "checked_at": "2026-10-17T01:43:58.765Z",
+        "reviewed": 11,
+        "published_active": 11,
+        "contexts_restored": 10,
+        "figures_restored": 3,
+        "preserved_other_pc_records": 2957,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [],
+        "new_topics": 2,
+        "new_sources": 2,
+        "provenance_repaired": 1,
+        "pc_status": {
+          "active": 2600,
+          "archived": 212,
+          "annulled": 37,
+          "under_review": 112,
+          "obsolete": 7
+        },
+        "pending_by_contest": {
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 7,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+          "Polícia Civil de Pernambuco - Agente de Polícia": 3
+        }
+      },
+      "report": "docs/question-review-pcpe-batches4-5-2026-10-16.json"
+    },
+    "pernambuco_batch6": {
+      "reviewed": 15,
+      "published_active": 14,
+      "published_obsolete": 1,
+      "validation": {
+        "checked_at": "2026-10-17T02:06:08.160Z",
+        "reviewed": 15,
+        "published_active": 14,
+        "published_obsolete": 1,
+        "provenance_repaired": 7,
+        "preserved_other_pc_records": 2953,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [],
+        "new_topics": 4,
+        "new_sources": 10,
+        "pc_status": {
+          "active": 2614,
+          "archived": 212,
+          "annulled": 37,
+          "under_review": 97,
+          "obsolete": 8
+        },
+        "pending_by_contest": {
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        }
+      },
+      "report": "docs/question-review-pcpe-batch6-2026-10-17.json"
+    },
+    "rondonia_mg_continuation": {
+      "reviewed": 22,
+      "published_active": 19,
+      "published_archived": 3,
+      "this_resumption_reviewed": 7,
+      "pc_status": {
+        "active": 2662,
+        "archived": 215,
+        "annulled": 37,
+        "under_review": 46,
+        "obsolete": 8
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcro-mg-2026-10-17.json"
+    },
+    "matogrosso_batch1": {
+      "reviewed_records": 6,
+      "unique_questions": 3,
+      "published_active": 6,
+      "preserved_other_pc_records": 2962,
+      "concurrent_changes": [],
+      "metadata": [
+        {
+          "table": "content_sources",
+          "planned_created": [
+            "5980a42c-020b-5b97-9e4e-418c39fa7c47"
+          ],
+          "planned_updated": [
+            "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+            "35c523d9-d59e-478d-b975-83b755bb639d"
+          ],
+          "concurrent_unrelated_changes": []
+        },
+        {
+          "table": "syllabus_editions",
+          "planned_created": [],
+          "planned_updated": [
+            "04dc75bb-eefe-44ca-99f6-a5c78bac332d",
+            "cc62e866-9796-47f5-a8b9-3fbaf86031af"
+          ],
+          "concurrent_unrelated_changes": []
+        },
+        {
+          "table": "syllabus_topics",
+          "planned_created": [
+            "1281d202-3241-5a5a-861c-195357c3ce25",
+            "f7c3488f-1d44-50bf-a4b7-06d8ea890749",
+            "6b2ca36b-726a-54ab-8e52-512524eaa14b",
+            "6ecfcba0-f520-586c-8f6e-4fb6ff06f5ed",
+            "4dfa4659-e9ed-5e63-8317-37f00585b1bf",
+            "840ac8d1-78d2-516d-ab91-c761af8444b8"
+          ],
+          "planned_updated": [],
+          "concurrent_unrelated_changes": []
+        }
+      ],
+      "tests": {
+        "application_passed": 602,
+        "review_guards_passed": 44,
+        "source_workflow_passed": 10
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcmt-batch1-2026-10-17.json"
+    },
+    "rondonia_judicial_continuation": {
+      "reviewed": 2,
+      "published_active": 2,
+      "preserved_other_pc_records": 2966,
+      "concurrent_changes": [],
+      "metadata_changes": [
+        {
+          "table": "content_sources",
+          "id": "5dec6f4e-222a-4d85-9448-ca998d146c1e",
+          "change": "inserted"
+        }
+      ],
+      "tests": {
+        "publication_and_provenance": 15
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 7,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcro-judicial-continuation-2026-10-17.json"
+    },
+    "sergipe_item14": {
+      "reviewed_records": 2,
+      "unique_questions": 1,
+      "published_active": 2,
+      "preserved_other_pc_records": 2966,
+      "tests": {
+        "publication_and_topics": 13
+      },
+      "report": "docs/question-review-pcse-item14-2026-10-17.json"
+    },
+    "amazonas_item25": {
+      "reviewed_records": 1,
+      "published_active": 1,
+      "preserved_other_pc_records": 2967,
+      "tests": {
+        "source_refresh_publication_and_topics": 24
+      },
+      "report": "docs/question-review-pcam-item25-2026-10-17.json"
+    },
+    "rondonia_item29": {
+      "reviewed": 1,
+      "published_active": 1,
+      "tests": 15,
+      "preserved_other_pc_records": 2967,
+      "report": "docs/question-review-pcro-item29-2026-10-17.json"
+    },
+    "pcpi_mt803": {
+      "reviewed_records": 4,
+      "published_active": 2,
+      "published_obsolete": 2,
+      "report": "docs/question-review-pcpi-mt803-2026-10-17.json"
+    },
+    "pcpi_am_mt_ro": {
+      "reviewed_records": 6,
+      "published_active": 4,
+      "published_obsolete": 2,
+      "report": "docs/question-review-pcpi-am-mt-ro-2026-10-17.json"
+    },
+    "mt_organization_probation": {
+      "reviewed_records": 6,
+      "published_active": 6,
+      "report": "docs/question-review-mt-organization-probation-2026-10-17.json"
+    },
+    "pe2_mt60": {
+      "reviewed_records": 3,
+      "published_active": 3,
+      "report": "docs/question-review-pe2-mt60-2026-10-17.json"
+    },
+    "am_investigador_edital_repair": {
+      "new_approvals": 0,
+      "pending_outside_ro": 5,
+      "report": "docs/reviews/pcam-investigador-edital-contabilidade-2026-10-17.json"
+    },
+    "am44_editorial_archive": {
+      "archived": 1,
+      "new_active_questions": 0,
+      "not_official_annulment": true,
+      "report": "docs/question-review-am44-editorial-disposition-2026-10-17.json"
+    },
+    "ro_history": {
+      "new_active": 1,
+      "editorial_archive": 1,
+      "report": "docs/question-review-ro-history-2026-10-17.json"
+    },
+    "am40_accounting_release": {
+      "active": 1,
+      "report": "docs/question-review-am40-2026-10-18.json"
+    },
+    "ro14_editorial_disposition": {
+      "archived": 1,
+      "not_official_annulment": true,
+      "report": "docs/question-review-ro14-2026-10-18.json"
+    },
+    "eight_pending_followup": {
+      "new_active": 2,
+      "archived_editorially": 1,
+      "remaining": 5,
+      "report": "docs/question-review-eight-pc-2026-10-18.json"
+    },
+    "rj75_followup": {
+      "new_active": 1,
+      "remaining": 4,
+      "report": "docs/question-review-rj75-2026-10-18.json"
+    },
+    "last_four_editorial_dispositions": {
+      "active": 0,
+      "archived_editorially": 3,
+      "remaining_under_review": 1,
+      "not_claiming_all_legal_disputes_resolved": true,
+      "report": "docs/question-review-last-four-dispositions-2026-10-18.json"
+    }
+  },
+  "source_comparison_pcdf": {
+    "pdfs": [
+      {
+        "file": "dfpaper.pdf",
+        "sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "retrieved_at": "2026-10-16T15:45:37.865077+00:00"
+      },
+      {
+        "file": "dfkey.pdf",
+        "sha256": "66112d99d6dc25ee043e9a6133ccd7955a8fa99350a01d32df2651c2b589ee18",
+        "retrieved_at": "2026-10-16T15:45:38.029070+00:00"
+      },
+      {
+        "file": "dfedital.pdf",
+        "sha256": "3b288efc9b596a8f915b38d50f693c2eae464a745ad07eac107283ec2fd876fa",
+        "retrieved_at": "2026-10-16T15:45:21.321015+00:00"
+      }
+    ],
+    "matching_texts": 111,
+    "matching_definitive_answers": 111,
+    "normalization": "casefold and removal of non-word characters; no stem differences after this normalization",
+    "editorial_batch": 50,
+    "not_reviewed_editorially_in_this_batch": 61,
+    "limitation": "Compared isolated stems and definitive letters; shared support contexts require separate verification before those dependent items are released. No endorsement of all preliminary explanations."
+  },
+  "source_access_check": {
+    "checked_at": "2026-10-16T16:03:25.858Z",
+    "scope": "HTTP/PDF-format access only; no legal, final-answer or source-identity approval",
+    "sources": [
+      {
+        "id": "0679a687-54f5-46d0-a854-5a695b3cd204",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1KBHuiegK67VlDZ9_qlwD2de9QVtE713n/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "0aad1229-5450-4e10-9973-53020b883c59",
+        "title": "Gabarito definitivo PC/ES - Delegado de Polícia - 2022 (Conhecimentos Específicos)",
+        "url": "https://drive.google.com/file/d/1g2lHFTok06Nbpk7ZQS5Ut_8dUkroSklm/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "0c8cd2e4-8436-434e-ac23-04b4cc033e26",
+        "title": "Prova objetiva (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+        "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/oippcceg1.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "0e9fe084-c258-4687-b5b8-86abbbec410d",
+        "title": "Gabarito definitivo PCDF - Delegado - 2026",
+        "url": "http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=gabarito_definitivo_p1",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "067bfc9a-d33e-45b3-a264-a428ec87e226",
+        "title": "Gabarito oficial definitivo (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:13.985Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/067bfc9a-d33e-45b3-a264-a428ec87e226.pdf",
+        "sha256": "66112d99d6dc25ee043e9a6133ccd7955a8fa99350a01d32df2651c2b589ee18"
+      },
+      {
+        "id": "0093adc0-8051-40d3-9dae-a0ea797e9341",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador-de-policia-icns401-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:14.000Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/0093adc0-8051-40d3-9dae-a0ea797e9341.pdf",
+        "sha256": "637c50bf3e64b09c6ef5dba405be25e856fe7b4f9b4c0dad5cb498f57705a42f"
+      },
+      {
+        "id": "12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e01_gabarito_definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:14.106Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74.pdf",
+        "sha256": "1b9b7aff287219efde78779bb2ebdc6ef72442db5b6b58fa549eb33dc8d96a90"
+      },
+      {
+        "id": "17883747-eefc-5cea-8985-8b65bfd85470",
+        "title": "Prova objetiva PCMG TPAG 2026 — Eixo Legislação",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:15.468Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/17883747-eefc-5cea-8985-8b65bfd85470.pdf",
+        "sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a"
+      },
+      {
+        "id": "2321adea-43d7-4b74-8de0-c3ee2dab9b38",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Geral",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_geral",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "24fe9686-3c49-42f1-8a33-061de92bb626",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1wTHKfk4jOxVNcoscagNnV6yOTpV4IMtV/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "1e91ec85-62cf-4cf0-90b0-1e9ee0edce1c",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:15.603Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/1e91ec85-62cf-4cf0-90b0-1e9ee0edce1c.pdf",
+        "sha256": "42e324097435673aa4680632f15accb634c80dacf6df11a49779979f260a62d3"
+      },
+      {
+        "id": "2775d0d6-670b-4147-a705-7959a2fd98e3",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.278Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/2775d0d6-670b-4147-a705-7959a2fd98e3.pdf",
+        "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf"
+      },
+      {
+        "id": "2f09a80d-b038-4a38-ac84-3de98e26184f",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1PgQEOt35VTZ3SR4xLI5uG7Y67D2pnAWG/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "3072439a-64fc-41ad-807d-e578b19e6868",
+        "title": "Prova objetiva PC/ES - Delegado de Polícia - 2022",
+        "url": "https://drive.google.com/file/d/1iXQnSEq7bc-EKkp3a0R3Qx78FWTA4wy9/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "30d1c027-8fc9-450d-b37b-f76fa9aa813e",
+        "title": "Edital nº 001/2017 - Governo do Estado do Acre/SEPC, Polícia Civil do Acre",
+        "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "2cf1a57e-fa5e-4e97-9728-a9c237624142",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/oficial-investigador-cns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.865Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/2cf1a57e-fa5e-4e97-9728-a9c237624142.pdf",
+        "sha256": "ac6be6effade8bd2a52932af4a0333151fa3d6976bcf40f8be80d7010e2ed991"
+      },
+      {
+        "id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "title": "Gabarito oficial definitivo - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "3198f5dc-172d-42bf-b7a7-acd101f03a44",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpdelegado.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.936Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/3198f5dc-172d-42bf-b7a7-acd101f03a44.pdf",
+        "sha256": "445b2d3d1e308f808a11f3a53a891b9775246b1c738b5e99e35f0d98d8897a33"
+      },
+      {
+        "id": "39ab4b9f-faab-480c-88e7-919e898fa1ac",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1-OdntAdaQA_me9NvqCqst4gE5UylcYso/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "391a22cd-a424-4c50-99a0-28a701352bfa",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.093Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/391a22cd-a424-4c50-99a0-28a701352bfa.pdf",
+        "sha256": "e466ffa704b6019ec72708b900b07315523db18663fb09a5866b4c0802b110f8"
+      },
+      {
+        "id": "3cdfcc5f-311e-4f35-a8c3-42b67e4caee2",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_002_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.132Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/3cdfcc5f-311e-4f35-a8c3-42b67e4caee2.pdf",
+        "sha256": "73845f978cc2356f80caa595a34249a35f8e85839129ce97deb0a155178948da"
+      },
+      {
+        "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.470Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/04dc4dc3-565a-4add-bfda-24835caf13aa.pdf",
+        "sha256": "fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+      },
+      {
+        "id": "43c654d1-90c8-4858-8104-6a5a16a0d208",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1ZT5pIIJ9SGqbJ4N9UgPm3QTT-bnWAAPQ/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "43f24940-05a0-44af-9126-2e2f5f6232ba",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/15iSenCLJL3iw9Yo6XnZbjQikU0QI4cmD/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+        "title": "Gabarito oficial definitivo (3 eixos) – Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.656Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/413a3e1e-2740-4e0f-91fd-39259eda81ff.pdf",
+        "sha256": "f79b75c73d2a5814eaa6702d57b215d83fea9c1e6fcb20602cfadeb27d7c2561"
+      },
+      {
+        "id": "412de40f-ade9-41a0-96fc-7e713e81c916",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.834Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/412de40f-ade9-41a0-96fc-7e713e81c916.pdf",
+        "sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f"
+      },
+      {
+        "id": "4e144e78-a97c-4cf5-b72e-bdc47c35aca7",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área II (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/perito-criminal-area-iicns302-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.901Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/4e144e78-a97c-4cf5-b72e-bdc47c35aca7.pdf",
+        "sha256": "998ab61ae6fad616779c9863b11ea61fa01db66d27d87dcfe2a6c32d8c75d949"
+      },
+      {
+        "id": "4b14490c-9256-47c2-a38b-d0197a3f4bff",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-substitutocns101-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.098Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/4b14490c-9256-47c2-a38b-d0197a3f4bff.pdf",
+        "sha256": "df92459f8f163457b102f50757fda4614fd955f49f0c118a98ba714b1e13a920"
+      },
+      {
+        "id": "5f0ec510-24d3-4cec-83db-95b6826cca86",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1112eq09B_oV-LwqEtMjVBhbSdJ4ArLKH/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "5f9c5b67-02f7-42d2-8cf4-da9e4f72ba48",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Legislação",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_legislacao",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "652036c6-f316-4a07-9cae-cd47805b4350",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.371Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/652036c6-f316-4a07-9cae-cd47805b4350.pdf",
+        "sha256": "95fcf8d73cdb3536788e431c921fb8e110c035a294a919e338ef070c0409af2b"
+      },
+      {
+        "id": "519c8e47-658c-4507-a772-87b563a8e3a4",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.644Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/519c8e47-658c-4507-a772-87b563a8e3a4.pdf",
+        "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95"
+      },
+      {
+        "id": "78ee2e01-e59c-4ab2-b792-05bf9d72f037",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-objetivacns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.688Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/78ee2e01-e59c-4ab2-b792-05bf9d72f037.pdf",
+        "sha256": "8dc6b30dcf3cc415cae4d486cfbef8d11bf5312abe68e694fd1e8742b4850e6d"
+      },
+      {
+        "id": "7a968028-063d-42ae-8dd1-7cbbe1f6f0df",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpinvestigador.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.909Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/7a968028-063d-42ae-8dd1-7cbbe1f6f0df.pdf",
+        "sha256": "5cf0a40ee1ee588132ce44ebf31ad9ae92dfdbf8ec6b72c1e41166b62315f444"
+      },
+      {
+        "id": "7d45d86f-97a8-485a-918d-722ce29afe35",
+        "title": "Prova objetiva PCDF - Delegado - 2026",
+        "url": "http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=prova_objetiva_p1",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.162Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/7a0a91da-effc-4172-8851-10f2c9e3d52e.pdf",
+        "sha256": "6a79e5708f1fbbfe11ce44ab34642cab00d7c8f508f61d56d915d0ba92919811"
+      },
+      {
+        "id": "825b62a7-96f2-4fcb-a8e5-afa7336824e0",
+        "title": "Prova objetiva PC/ES - Delegado de Polícia - 2022 (Conhecimentos Específicos)",
+        "url": "https://drive.google.com/file/d/14WVhwBnLPmD5jcop3GIHPwyCnfFyhiSp/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "1b1edb83-11b0-4a4f-8cfb-bc64a379bf81",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Escrivão de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/escrivao_de_policia_-_4a_classens200_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.386Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/1b1edb83-11b0-4a4f-8cfb-bc64a379bf81.pdf",
+        "sha256": "62859da728886e595cb6c9df27674bfbad4a83ee64d186db90963f3afa662b46"
+      },
+      {
+        "id": "820f1bba-5903-4511-906b-005e586f18e1",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/ns001_-_delegado_de_policia_-_4a_classe_prova_objetivans001_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.605Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/820f1bba-5903-4511-906b-005e586f18e1.pdf",
+        "sha256": "0a52be892b45fdc3f633bc1811a1152c2ae6f8fa11441e4f9a9735bf01f27142"
+      },
+      {
+        "id": "8e9a28c2-869b-4515-b624-3d8629e28609",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/134lSzI-OHM5D6tX0zsFn_d5hESStoY57/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "9251ce6c-5a4b-4175-82d2-3d4a75226255",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1ua1_XkBUPzmkao3nmzXvu6UrK4eAVYQi/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.724Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/82f21332-fbad-4e7d-b1cb-30d957243912.pdf",
+        "sha256": "a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+      },
+      {
+        "id": "96470890-4b87-4b7b-b09c-9f8a6b6cf1ad",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1plxOIdpXe9NPVHGgGj5GeRVZ5xD_ll1N/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "8d8933a2-280c-43bc-9db3-8c5ae328c13c",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.844Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/8d8933a2-280c-43bc-9db3-8c5ae328c13c.pdf",
+        "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac"
+      },
+      {
+        "id": "95433dcb-b5f4-4535-b569-b4be1e612d1e",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmperito1-002pcmg.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.855Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/95433dcb-b5f4-4535-b569-b4be1e612d1e.pdf",
+        "sha256": "b6e69b8293b30921e5fb61294f38758b0495375ec3bafd388cf212ce2dd565ef"
+      },
+      {
+        "id": "9f68a504-9bc1-4a71-b28a-6578a1b2c549",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Médico-Legista (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/medico-legistacns201-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.932Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/9f68a504-9bc1-4a71-b28a-6578a1b2c549.pdf",
+        "sha256": "08c04448c722157db49fc143d30e43fda28737866d4dd4d39b1f76c6c7ed36c5"
+      },
+      {
+        "id": "a1e7f1be-34a7-4eb3-bef2-b2bfbcb48484",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.018Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a1e7f1be-34a7-4eb3-bef2-b2bfbcb48484.pdf",
+        "sha256": "0cedb0505640a7401590f19b0955f94c9729f71f1b1c006e7ad590473ec2527d"
+      },
+      {
+        "id": "a469da2f-affd-480a-a0d3-6ee8ba68b070",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1dQDiU3nYBeP7uGmjft99IeR_EAuac3nY/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.182Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d.pdf",
+        "sha256": "b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648"
+      },
+      {
+        "id": "a8df0202-d3a3-41b4-ba17-31e57bf14d9b",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Específico",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_especifico",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "a4445ad3-e948-4f91-9b52-af1ab1382851",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.307Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a4445ad3-e948-4f91-9b52-af1ab1382851.pdf",
+        "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6"
+      },
+      {
+        "id": "a347cc8e-21d0-4951-a199-35adb9c2b994",
+        "title": "Prova objetiva – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/084_PC_CE_001_01.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.386Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a347cc8e-21d0-4951-a199-35adb9c2b994.pdf",
+        "sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba"
+      },
+      {
+        "id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "title": "Prova objetiva - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "b167f67e-fcfe-41f6-9b0a-7889770141cd",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1Dz_VWJZ5Y6A5-4kMUCjBiZmw5KJnOIOv/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b54f2a42-acd8-47fb-8d8a-6369c7a6b3e1",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/15TDG2Jt1yISfovmZ7XNxRlf-ZzU3VJIU/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b6abbff3-202c-4534-bd13-679403e7d3a3",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Geral",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_geral",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b772f1e9-a83f-4f3d-a0f3-d5c8159d98f6",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Específico",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_especifico",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b9f3a387-bb3b-4e95-b8d9-3e4043abef48",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Legislação",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_legislacao",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "aa2d07d5-d3c5-4b8d-b499-10c6ba6547d8",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_002_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.582Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/aa2d07d5-d3c5-4b8d-b499-10c6ba6547d8.pdf",
+        "sha256": "055ebcb79b6cc53afefa2d76ce25d774f3603410ee5d40a90192c2b0e5d3fdc6"
+      },
+      {
+        "id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+        "title": "Gabarito oficial definitivo PCMG TPAG 2026 — Eixo Legislação",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.958Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c276bc2f-35a7-5581-a35f-e9a805734750.pdf",
+        "sha256": "ad51738a383b463c77d937e613b651ea4cefd9c088eaee6af079dfd4370a74e5"
+      },
+      {
+        "id": "54cb008f-b402-4416-a155-95cc5979167f",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/perito-criminal-area-icns301-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.967Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/54cb008f-b402-4416-a155-95cc5979167f.pdf",
+        "sha256": "883114bd2482710c94d59ab697ea4e6feebafb468b80773141b406f87385d0a4"
+      },
+      {
+        "id": "cb7de1a3-d416-479c-a5f3-c478931740b1",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pc-pi-investigador-e-perito-2025.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.147Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/cb7de1a3-d416-479c-a5f3-c478931740b1.pdf",
+        "sha256": "633328916e6dbca13158883b525a7f5cfdc6b95135eccbcb1933299297428a12"
+      },
+      {
+        "id": "cb4f3322-79c0-4cc2-9fed-fbb5c865573c",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.303Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/cb4f3322-79c0-4cc2-9fed-fbb5c865573c.pdf",
+        "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16"
+      },
+      {
+        "id": "d7df7669-e14e-4327-b194-9544e064a6e8",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1AnSqnfU4uR1mRa1nv_JZSVQ2o-w3D3V1/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "ab306cde-778f-4d56-b92c-9a360a58aab6",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Médico-Legista (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpmedico-002.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.361Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/ab306cde-778f-4d56-b92c-9a360a58aab6.pdf",
+        "sha256": "659babf4d475ce64e9b2a567165fe2f0886111edee5c934a5ba02f22c501824b"
+      },
+      {
+        "id": "ddcd9b4d-2d05-4dab-baee-c7e9a1cd6fd3",
+        "title": "Gabarito definitivo PC/ES - Delegado de Polícia - 2022 (Conhecimentos Gerais)",
+        "url": "https://drive.google.com/file/d/1s7_LQx31L84EdnG-tMsegI6cVCTlI6Fr/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e1eb0476-1753-4067-ad3d-b275daf19014",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1Mnq3QKx7x4HQUu9LnesJ9rxr2ulmvNTD/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e23b3688-b208-40fc-a30b-a7e16937deb1",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1TcGn7Rrls3lBDE_KPC2UMdCY_nKoVO1K/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e29af695-831b-4096-95d7-7c1de62c02d7",
+        "title": "Gabarito oficial definitivo (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+        "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/comunicado1432025cev.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "title": "Prova objetiva (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.468Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/ce56cd4d-eda9-4bd3-8699-034d5386162b.pdf",
+        "sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95"
+      },
+      {
+        "id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+        "title": "Prova objetiva (3 eixos) – Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.654Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/dc50d641-b67c-41bd-b3ea-a49e904b4926.pdf",
+        "sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b"
+      },
+      {
+        "id": "eda8bb9f-2055-4170-8247-bc96743b7190",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcscdelegado2024_gabarito_definitivo_20240220.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.825Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/eda8bb9f-2055-4170-8247-bc96743b7190.pdf",
+        "sha256": "f634b847fa4c0b754c2d4259fc19fa9b03a465594c23274282c07a0f58073d5c"
+      },
+      {
+        "id": "e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.080Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37.pdf",
+        "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851"
+      },
+      {
+        "id": "f7e74759-cc7e-495e-ae16-dafeaf0ff784",
+        "title": "Gabarito oficial definitivo – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Gab_Definitivo_084_PC_CE_001_01.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.225Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/f7e74759-cc7e-495e-ae16-dafeaf0ff784.pdf",
+        "sha256": "b048d38ed7d377afc844bed448c9facabed949dfa121f9ee91ce22c2646a94a9"
+      },
+      {
+        "id": "c16e5bae-7b88-4ad5-bb3b-7413dccc943b",
+        "title": "Gabarito definitivo – PC-AC 2017 – Prova objetiva – S01 versão V",
+        "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.266Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c16e5bae-7b88-4ad5-bb3b-7413dccc943b.pdf",
+        "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697"
+      },
+      {
+        "id": "c1d10afc1ff4bec3",
+        "title": "gabarito Delegado de Polícia",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.436Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c1d10afc1ff4bec3.pdf",
+        "sha256": "34ae8a4d379c459448991b5868ab5f31ebf3e02e9a7aad5a09b5533021eda4de"
+      },
+      {
+        "id": "8825fb19cca74200",
+        "title": "prova Delegado de Polícia",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.448Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/8825fb19cca74200.pdf",
+        "sha256": "1f6438069cb18406e7b78b88a07ce5b30812a4f4c731de560d419e765b495312"
+      },
+      {
+        "id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+        "title": "Prova objetiva - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.547Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/e58044c4-c58d-422f-bf22-4a13cbbd9c07.pdf",
+        "sha256": "1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1"
+      },
+      {
+        "id": "0b08f7a16486cdf3",
+        "title": "prova Agente de Polícia Judiciária",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.638Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/0b08f7a16486cdf3.pdf",
+        "sha256": "bfaac1a1dd1bb300d9c2efde0518919c3db64b3e61d9e7d90de4c3c6f8fa0041"
+      },
+      {
+        "id": "f4010d942c872134",
+        "title": "prova Papiloscopista Policial",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.830Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/f4010d942c872134.pdf",
+        "sha256": "f60b0de018adf02b962c323383d2369ffa0001fb85b105d28b00bc9bc3dbb718"
+      },
+      {
+        "id": "efaf074c-cd9b-4f55-9b9f-17d7911dc585",
+        "title": "Prova objetiva – PC-AC 2017 – S01 Agente de Polícia Civil – versão V",
+        "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:25.780Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/efaf074c-cd9b-4f55-9b9f-17d7911dc585.pdf",
+        "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69"
+      }
+    ]
+  },
+  "network_blocker": {
+    "required_action": "Review and save environment configuration, then publish the cloud environment; draft save alone does not apply network changes.",
+    "added_domains": [
+      "apis.cebraspe.org.br",
+      "ibade.org.br",
+      "www.concursos.ufmt.br",
+      "www.cev.uece.br",
+      "rondonia.ro.gov.br",
+      "www.sinj.df.gov.br",
+      "sinj.df.gov.br",
+      "drive.google.com"
+    ],
+    "existing_custom_domains_preserved": 34,
+    "pcdf_source_access_update": {
+      "checked_at": "2026-10-16T20:27:46.066523+00:00",
+      "sinj_access_verified": true,
+      "scope": "LC 840/2011 and Decree 42590/2021 retrieved from SINJ. Previous source-access failures are historical; this does not certify all other destinations."
+    },
+    "rondonia_event_access_update": {
+      "checked_at": "2026-10-16T21:01:04.282810+00:00",
+      "official_api_access_verified": true,
+      "scope": "Cebraspe PC_RO_22 event and 19 official PDFs retrieved; previously failed guessed filenames were not evidence."
+    },
+    "pending_state_primary_domains": [
+      "sapl.al.ro.leg.br",
+      "www.al.ro.leg.br",
+      "sapl.al.am.leg.br",
+      "legisla.imprensaoficial.am.gov.br",
+      "www.al.pi.leg.br",
+      "sapl.al.pi.leg.br",
+      "www.al.mt.gov.br",
+      "www3.alerj.rj.gov.br",
+      "www.tcerj.tc.br",
+      "www2.senado.leg.br",
+      "www.ibge.gov.br",
+      "biblioteca.ibge.gov.br",
+      "www.stf.jus.br"
+    ],
+    "pending_state_domains_configuration": "Additive draft updated, including ALEPE; runtime application/publication still requires environment settings. No assertion of live access to blocked legislature hosts.",
+    "pernambuco_access_update": {
+      "checked_at": "2026-10-17T02:06:08.160Z",
+      "official_norms_retrieved": 8,
+      "scope": "ALEPE root, advanced search and eight exact norm routes retrieved successfully. Earlier failures are historical. RO SAPL still returned HTTP 503; other legislative root access alone does not certify a current norm."
+    },
+    "latest_actual_access": {
+      "checked_at": "2026-10-17T16:32:49.456Z",
+      "reachable": [
+        "www.al.ro.leg.br official constitutional PDF EC 179/2026",
+        "sapl.al.am.leg.br original norm and amendment references",
+        "sapl.al.pi.leg.br articulated LC 37",
+        "www.al.mt.gov.br individual norm pages",
+        "www.concursos.ufmt.br opening edital, program, paper, key and changes notice",
+        "bvsms.saude.gov.br RDC 222/2018"
+      ],
+      "note": "Earlier failures and draft configuration records are historical. Successful retrieval does not certify current legal effect, final answers or the whole corpus. UFMT final key must be read with 02/03/2022 changes (questions 2 and 10 annulled); not as the preliminary PDF alone."
+    },
+    "ufmt_documentary_update": {
+      "checked_at": "2026-10-17T16:50:37.706Z",
+      "official_documents_retrieved": true,
+      "verified_final_key_composition": true,
+      "scope": "Opening edital and retification, common program, official caderno, preliminary key plus 02/03/2022 changes. Approval restricted to items 7, 19 and 45 in two careers; 14 MT records remain under_review. No whole-exam legal certification."
+    }
+  }
+}

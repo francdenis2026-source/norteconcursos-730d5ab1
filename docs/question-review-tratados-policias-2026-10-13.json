@@ -1,0 +1,114 @@
+{
+  "verified_at": "2026-10-13T22:10:31.933657+00:00",
+  "scope": "Três questões individuais; catálogo ainda incompleto.",
+  "topics": [
+    {
+      "id": "38914995-7bd8-5145-bb4d-3a5b8f85d17b",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Constitucional",
+      "topic_order": 152,
+      "topic_text": "Convenção de Palermo (item 15.2 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "e42361af-326b-5869-92b9-37fe811b87ec",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 151,
+      "topic_text": "Princípios da administração pública e Convenção de Mérida (item 1.2 de Direito Administrativo e 15.1 de Direito Constitucional do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "7829fba8-dce4-59ed-a4e1-78748150bf5c",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 13,
+      "topic_text": "Agentes públicos e responsabilidade; regime dos policiais civis (itens 13 e 13.4 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "f86e438a-a157-4aef-a938-2acec084b4ba",
+      "item_number": 10,
+      "page": 2,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "a614e23f3d9a99ff750a4f16673aea00e9a9ac1e99bb1ecbb1c6990996cacf05",
+      "new_text_sha256": "513efc6acc1b339b0b2406f74d98282bb537e3dd9e351a9e6ee214c27edd1fc7",
+      "answer_preserved": true,
+      "raw_preserved": true
+    },
+    {
+      "id": "f25ae80e-684f-4881-b72a-4f2771bc245a",
+      "item_number": 4,
+      "page": 1,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "58290638b540c40b8f9f7b6210a3270d8ef65dbad1dd333f8f5c30cc70a2c916",
+      "new_text_sha256": "27a7b5244dc8d8339c8eddabd377ec89af65c17584ffa2d42494c8b9e145bf2e",
+      "answer_preserved": true,
+      "raw_preserved": true
+    }
+  ],
+  "items": [
+    {
+      "id": "f86e438a-a157-4aef-a938-2acec084b4ba",
+      "item_number": 10,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5687.htm",
+          "norma": "Decreto 5.687/2006 — Convenção de Mérida",
+          "artigo": "Convenção, art. 7º, 1, a"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. O art. 7º, 1, a, de Mérida prevê eficiência e transparência, acompanhadas de critérios objetivos como mérito, equidade e aptidão. As outras duplas podem conter princípios válidos do direito brasileiro, mas não reproduzem o dispositivo solicitado. Não substituir o texto do tratado pelo rol do art. 37 da Constituição.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5687.htm"
+        ]
+      }
+    },
+    {
+      "id": "7beff624-93ff-4359-959e-a2137e115f22",
+      "item_number": 20,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm",
+          "norma": "Lei 14.735/2023 — Lei Orgânica Nacional das Polícias Civis",
+          "artigo": "arts. 3º, VI; 10, § 3º; 30, XV e §§ 9º e 12"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. A lei orgânica estadual, de iniciativa do governador, disciplina diretrizes da proposta orçamentária, observadas as normas gerais nacionais (art. 3º, VI). O recurso disciplinar passa pelo Conselho Superior antes do chefe do Executivo (art. 10, § 3º); promoção póstuma independe de vagas (art. 30, § 12). O texto vigente garante mesma lotação por seis meses após a licença-maternidade (art. 30, XV), não um ano. A opção B restringe indevidamente as causas de morte e generaliza a vitaliciedade: o § 9º também contempla agressão e contaminação por moléstia grave e reserva vitaliciedade ao cônjuge ou companheiro, na forma da lei do ente. Conferido texto vigente com partes vetadas promulgadas, sem presumir válidos trechos ainda vetados.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm"
+        ]
+      }
+    },
+    {
+      "id": "f25ae80e-684f-4881-b72a-4f2771bc245a",
+      "item_number": 4,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/decreto/d5015.htm",
+          "norma": "Decreto 5.015/2004 — Convenção de Palermo",
+          "artigo": "Convenção, art. 8º, 1, a e b"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. O art. 8º, 1, a e b, de Palermo abrange oferecimento indireto de vantagem para terceiro e aceitação para omitir ato funcional, se intencionais: Frederico e Josias. Nomeação do cônjuge, isoladamente descrita, não integra essas modalidades de corrupção; isso não torna o nepotismo lícito. A Convenção obriga os Estados a criminalizar condutas e não dispensa lei penal interna para condenar alguém.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/decreto/d5015.htm"
+        ]
+      }
+    }
+  ]
+}

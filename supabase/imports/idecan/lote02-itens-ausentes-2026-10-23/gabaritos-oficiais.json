@@ -1,0 +1,32 @@
+[
+  {
+    "label": "pcsc-agente",
+    "file": "/tmp/idecan-next-collection/pcsc-agente-key.pdf",
+    "bytes": 113975,
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=QXKCWH6A0MIYW5KEAAHR3LTA6NR7EEQ2NA98G7VML2QR17129NO8IRQ5R6FVGRUVQEVI061WJKYVIH267159.pdf",
+    "sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+    "contest_page_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=200"
+  },
+  {
+    "label": "cbmmg",
+    "file": "/tmp/idecan-next-collection/cbmmg-key.pdf",
+    "bytes": 227731,
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+    "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
+    "contest_page_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=224"
+  },
+  {
+    "label": "pmsc",
+    "file": "/tmp/idecan-next-collection/pmsc-key.pdf",
+    "bytes": 417042,
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+    "sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "contest_page_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=207"
+  },
+  {
+    "label": "pcsc-escrivao",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=445F7XU35JUR4VEO0IWB06549QLKTDVHWSRH944PUKAY0OOVBQJFGC5RHCW660BCV9CXBLTBYOPH8OJJ7158.pdf",
+    "sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+    "contest_page_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201"
+  }
+]

@@ -23,12 +23,20 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { SubjectIcon } from "@/components/ui/subject-icon";
+import { EnemOfficialPractice } from "@/components/enem/EnemOfficialPractice";
+import { EnemStudy } from "@/components/enem/EnemStudy";
 import { EnemVideos } from "@/components/enem/EnemVideos";
+import { EnemCalendar } from "@/components/enem/EnemCalendar";
 import { COMPETENCIAS, ENEM_AREAS, ENEM_FACTS, type EnemArea } from "@/data/enem";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/enem")({
+  validateSearch: (search: Record<string, unknown>): { tab?: string } => ({
+    tab: ["visao", "materiais", "videos", "redacao", "questoes"].includes(String(search["tab"]))
+      ? String(search["tab"])
+      : "visao",
+  }),
   head: () => ({ meta: [{ title: "Área ENEM | Norte Concurso" }] }),
   component: EnemPage,
 });
@@ -63,6 +71,7 @@ function useChecks() {
 /** Quantas questões de ENEM existem no banco (0 enquanto ainda não foram importadas). */
 function useEnemQuestionCount() {
   const [n, setN] = React.useState<number | null>(null);
+  const [error, setError] = React.useState(false);
   React.useEffect(() => {
     let alive = true;
     void Promise.all(
@@ -74,21 +83,30 @@ function useEnemQuestionCount() {
           .eq("content_status", "active"),
       ),
     )
-      .then((r) => alive && setN(r.reduce((s, x) => s + (x.count ?? 0), 0)))
-      .catch(() => alive && setN(0));
+      .then((r) => {
+        if (r.some((x) => x.error)) throw new Error("Falha ao consultar questões ENEM");
+        if (alive) setN(r.reduce((s, x) => s + (x.count ?? 0), 0));
+      })
+      .catch(() => {
+        if (alive) setError(true);
+      });
     return () => {
       alive = false;
     };
   }, []);
-  return n;
+  return { count: n, error };
 }
 
 function EnemPage() {
-  const [tab, setTab] = React.useState("visao");
+  const { tab = "visao" } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const setTab = (value: string) => {
+    void navigate({ search: { tab: value }, replace: true });
+  };
   const [subject, setSubject] = React.useState("Matemática");
   const { catalog } = useMediaCatalog();
   const checks = useChecks();
-  const questions = useEnemQuestionCount();
+  const { count: questions, error: questionCountError } = useEnemQuestionCount();
 
   const allTopics = ENEM_AREAS.flatMap((a) =>
     a.subjects.flatMap((s) => s.topics.map((t) => `${s.name}|${t}`)),
@@ -103,9 +121,9 @@ function EnemPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="enem-page space-y-6">
       <PageHero
-        image="journey"
+        image="exam-hall"
         kicker="ENEM"
         icon={GraduationCap}
         title={
@@ -116,7 +134,7 @@ function EnemPage() {
         description="Estude por área do conhecimento, assista a videoaulas gratuitas, treine a redação e acompanhe seu checklist."
         actions={
           <Button asChild className="hero-btn-primary gap-2">
-            <Link to="/dashboard/study-tools">
+            <Link to="/dashboard/study-tools" search={{ context: "enem" }}>
               <Timer className="h-4 w-4" /> Sessão de foco
             </Link>
           </Button>
@@ -135,9 +153,12 @@ function EnemPage() {
       </PageHero>
 
       <Tabs value={tab} onValueChange={setTab}>
-        <TabsList className="flex-wrap">
+        <TabsList className="h-auto w-full flex-wrap justify-start gap-1">
           <TabsTrigger value="visao" className="gap-1.5">
             <Layers className="h-4 w-4 !text-sky-500" /> Visão geral
+          </TabsTrigger>
+          <TabsTrigger value="materiais" className="gap-1.5">
+            <BookOpenCheck className="h-4 w-4 !text-sky-500" /> Materiais de estudo
           </TabsTrigger>
           <TabsTrigger value="videos" className="gap-1.5">
             <PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas
@@ -147,9 +168,6 @@ function EnemPage() {
           </TabsTrigger>
           <TabsTrigger value="questoes" className="gap-1.5">
             <BrainCircuit className="h-4 w-4 !text-emerald-500" /> Questões
-          </TabsTrigger>
-          <TabsTrigger value="checklist" className="gap-1.5">
-            <ListChecks className="h-4 w-4 !text-violet-500" /> Checklist
           </TabsTrigger>
         </TabsList>
 
@@ -163,6 +181,7 @@ function EnemPage() {
               </div>
             ))}
           </div>
+          <EnemCalendar />
           <p className="flex items-start gap-2 text-xs text-muted-foreground">
             <CalendarDays className="mt-0.5 h-4 w-4 shrink-0" /> Dia 1: Linguagens, Ciências Humanas
             e Redação. Dia 2: Ciências da Natureza e Matemática. Datas e regras oficiais: confira
@@ -173,10 +192,14 @@ function EnemPage() {
               <AreaCard key={area.id} area={area} state={checks.state} onWatch={watch} />
             ))}
           </div>
+          <Checklist state={checks.state} toggle={checks.toggle} />
         </TabsContent>
 
+        <TabsContent value="materiais" className="mt-5">
+          <EnemStudy />
+        </TabsContent>
         <TabsContent value="videos" className="mt-5">
-          <EnemVideos subject={subject} onSubject={setSubject} />
+          <EnemVideos key={subject} subject={subject} onSubject={setSubject} />
         </TabsContent>
 
         <TabsContent value="redacao" className="mt-5 space-y-4">
@@ -222,7 +245,8 @@ function EnemPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="questoes" className="mt-5">
+        <TabsContent value="questoes" className="mt-5 space-y-4">
+          <EnemOfficialPractice />
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
@@ -233,7 +257,25 @@ function EnemPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {questions && questions > 0 ? (
+              <Button asChild variant="outline" className="gap-2">
+                <Link to="/dashboard/mock-exams" search={{ mode: "enem", contest: "ENEM" }}>
+                  <Timer className="h-4 w-4" /> Montar simulado ENEM
+                </Link>
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                Escolha a área do conhecimento, a disciplina, a quantidade e o tempo. O simulador
+                desta área usa somente questões do ENEM; combinações sem questões permanecem vazias.
+              </p>
+              {questionCountError ? (
+                <p role="alert" className="text-sm text-destructive">
+                  Não foi possível consultar o banco ENEM. Recarregue a página para tentar
+                  novamente.
+                </p>
+              ) : questions === null ? (
+                <p role="status" className="text-sm text-muted-foreground">
+                  Consultando questões ENEM…
+                </p>
+              ) : questions > 0 ? (
                 <>
                   <p className="text-sm">
                     Há <b>{questions.toLocaleString("pt-BR")}</b> questões do ENEM disponíveis no
@@ -257,19 +299,11 @@ function EnemPage() {
                 </div>
               )}
               <p className="text-xs text-muted-foreground">
-                Enquanto isso, use as videoaulas e o checklist para organizar os estudos.
+                O simulado mostra acertos e erros. Esse resultado não é uma estimativa da nota TRI
+                do ENEM.
               </p>
             </CardContent>
           </Card>
-        </TabsContent>
-
-        <TabsContent value="checklist" className="mt-5">
-          <Checklist
-            state={checks.state}
-            toggle={checks.toggle}
-            done={done}
-            total={allTopics.length}
-          />
         </TabsContent>
       </Tabs>
     </div>
@@ -326,7 +360,7 @@ function AreaCard({
                 </div>
                 <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
                   <div
-                    className={cn("h-full rounded-full transition-all", HUE_BAR[area.hue])}
+                    className={cn("h-full rounded-full transition-[width]", HUE_BAR[area.hue])}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -336,13 +370,7 @@ function AreaCard({
                   size="sm"
                   variant="outline"
                   className="shrink-0 gap-1.5"
-                  onClick={() =>
-                    onWatch(
-                      s.name === "Artes, Educação Física e Tecnologias"
-                        ? "Língua Portuguesa"
-                        : s.name,
-                    )
-                  }
+                  onClick={() => onWatch(s.name)}
                 >
                   <PlayCircle className="h-4 w-4" /> {videos}
                 </Button>
@@ -358,36 +386,20 @@ function AreaCard({
 function Checklist({
   state,
   toggle,
-  done,
-  total,
 }: {
   state: Record<string, true>;
   toggle: (k: string) => void;
-  done: number;
-  total: number;
 }) {
-  const pct = total ? Math.round((100 * done) / total) : 0;
   return (
     <Card>
       <CardHeader className="pb-3">
-        <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-lg">
-          <span className="flex items-center gap-2">
-            <BookOpenCheck className="h-5 w-5" /> Checklist de assuntos
-          </span>
-          <Badge variant="outline">
-            {done} de {total} · {pct}%
-          </Badge>
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <BookOpenCheck className="h-5 w-5" /> Checklist de assuntos
         </CardTitle>
         <CardDescription>
           Assuntos mais cobrados em cada matéria. Marque o que já estudou. Fica salvo neste
           navegador.
         </CardDescription>
-        <div className="h-2 overflow-hidden rounded-full bg-muted">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-emerald-500 transition-all"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
       </CardHeader>
       <CardContent className="grid gap-3 md:grid-cols-2">
         {ENEM_AREAS.flatMap((a) => a.subjects).map((s) => {

@@ -1,3 +1,5 @@
+import { acreDateKey } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -244,7 +246,7 @@ function AdminPanel() {
     link.setAttribute("href", url);
     link.setAttribute(
       "download",
-      `auditoria_assinaturas_${new Date().toISOString().split("T")[0]}.csv`,
+      `auditoria_assinaturas_${acreDateKey()}.csv`,
     );
     link.style.visibility = "hidden";
     document.body.appendChild(link);
@@ -369,29 +371,10 @@ function AdminPanel() {
                 </CardDescription>
               </div>
               <div className="flex gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="gap-2"
-                  onClick={() => document.getElementById("csv-import")?.click()}
-                >
-                  <FileText className="h-4 w-4" /> Importar Questões (CSV)
-                  <input
-                    id="csv-import"
-                    type="file"
-                    accept=".csv"
-                    className="hidden"
-                    onChange={async (e) => {
-                      const file = e.target.files?.[0];
-                      if (!file) return;
-                      toast.info("Processando arquivo CSV...");
-                      // Simulação de processamento
-                      setTimeout(() => {
-                        toast.success("50 questões importadas com sucesso!");
-                        loadData();
-                      }, 1500);
-                    }}
-                  />
+                <Button size="sm" variant="outline" className="gap-2" asChild>
+                  <Link to="/dashboard/admin-questions">
+                    <FileText className="h-4 w-4" /> Importar questões
+                  </Link>
                 </Button>
                 <Button size="sm" className="gap-2">
                   <Plus className="h-4 w-4" /> Novo Concurso
@@ -436,10 +419,10 @@ function AdminPanel() {
                           </TableCell>
                           <TableCell className="text-xs">
                             {contest.startDate
-                              ? new Date(contest.startDate).toLocaleDateString()
+                              ? acreDate(contest.startDate).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
                               : "∞"}{" "}
                             -
-                            {contest.endDate ? new Date(contest.endDate).toLocaleDateString() : "∞"}
+                            {contest.endDate ? acreDate(contest.endDate).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "∞"}
                           </TableCell>
                           <TableCell>{contest.examBoard}</TableCell>
                           <TableCell>
@@ -871,7 +854,7 @@ function AdminPanel() {
                             {row.file_name}
                           </TableCell>
                           <TableCell className="whitespace-nowrap text-[10px] text-muted-foreground">
-                            {new Date(row.created_at).toLocaleString("pt-BR")}
+                            {acreDate(row.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}
                           </TableCell>
                           <TableCell className="text-right">
                             <Button variant="ghost" size="sm" onClick={() => openRelink(row)}>
@@ -928,7 +911,7 @@ function AdminPanel() {
                       auditLogs.map((log) => (
                         <TableRow key={log.id}>
                           <TableCell className="text-xs whitespace-nowrap">
-                            {new Date(log.created_at).toLocaleString("pt-BR")}
+                            {acreDate(log.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}
                           </TableCell>
                           <TableCell>
                             <div className="flex flex-col">

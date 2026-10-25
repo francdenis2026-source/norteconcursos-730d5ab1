@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import * as React from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
@@ -46,10 +47,10 @@ export interface CheckRow {
 const KIND_STYLE: Record<BlockKind, string> = {
   Teoria: "border-sky-500/40 bg-sky-500/10",
   Flashcards: "border-cyan-500/40 bg-cyan-500/10",
-  Podcast: "border-fuchsia-500/40 bg-fuchsia-500/10",
+  Podcast: "border-cyan-500/40 bg-cyan-500/10",
   Questões: "border-emerald-500/40 bg-emerald-500/10",
   "Revisão de erros": "border-amber-500/40 bg-amber-500/10",
-  Redação: "border-violet-500/40 bg-violet-500/10",
+  Redação: "border-amber-500/40 bg-amber-500/10",
   Simulado: "border-rose-500/40 bg-rose-500/10",
 };
 const inRoom = (k: BlockKind) => k === "Teoria" || k === "Flashcards" || k === "Questões";
@@ -132,7 +133,7 @@ export function WeekChecklist({
       await alertDialog({
         title: "Podcasts em breve",
         message:
-          "Os episódios em áudio ainda estão sendo produzidos. Assim que forem publicados, eles aparecem na Central de mídia.",
+          "Os episódios em áudio ainda estão sendo produzidos. Assim que forem publicados, eles aparecem em Videoaulas e podcasts.",
       });
       return;
     }
@@ -458,7 +459,7 @@ export function StudyRecord({ checks, planId }: { checks: CheckRow[]; planId: st
                     </span>
                     <span className="text-xs tabular-nums text-muted-foreground">
                       {fmtMin(c.minutes)} ·{" "}
-                      {new Date(c.done_at).toLocaleString("pt-BR", {
+                      {acreDate(c.done_at).toLocaleString("pt-BR", {
                         timeZone: "America/Rio_Branco",
                         day: "2-digit",
                         month: "2-digit",
@@ -627,7 +628,6 @@ export function MethodCard({
                     KIND_STYLE[it.kind].split(" ")[1]?.replace("/10", "/70"),
                   )}
                   style={{ width: `${it.pct}%` }}
-                  title={`${it.kind} ${it.pct}%`}
                 />
               ))}
             </div>

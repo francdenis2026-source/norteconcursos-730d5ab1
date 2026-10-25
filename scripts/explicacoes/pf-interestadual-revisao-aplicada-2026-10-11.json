@@ -1,0 +1,45 @@
+{
+  "course_slug": "pf-interestadual",
+  "units": {
+    "art-1": {
+      "simples": "A PF pode investigar as infrações indicadas quando há repercussão interestadual ou internacional que exija repressão uniforme, sem excluir a responsabilidade dos demais órgãos de segurança. A lista abrange sequestros com motivação política/função da vítima, cartel, violações de direitos humanos de tratados, cargas, produtos medicinais, instituições financeiras, misoginia pela internet e transporte de valores. Outros casos exigem os pressupostos do caput e autorização ou determinação ministerial.",
+      "pontos": [
+        "Caput: repercussão + necessidade de repressão uniforme; responsabilidades dos demais órgãos preservadas.",
+        "Cargas: transporte interestadual/internacional + indícios de grupo em mais de um Estado.",
+        "Instituições financeiras: indícios de associação em mais de um Estado.",
+        "Lei 14.967/2024: produtos controlados nas cargas e empresas de transporte de valores no inciso VIII."
+      ],
+      "atencao": [
+        "PF investigar não é regra automática de deslocamento de competência judicial.",
+        "Não elimine as condições específicas dos incisos IV e VI.",
+        "A referência antiga de cartel deve ser lida com a lei penal atual; não restaura incisos revogados da Lei 8.137."
+      ],
+      "exemplo": "Há roubo de cargas interestaduais e indícios de grupo em dois Estados, com necessidade de repressão uniforme: a hipótese deve ser examinada pela PF sem excluir órgãos estaduais. Variação: Um roubo isolado a instituição privada, sem indícios interestaduais nem os pressupostos gerais, não se enquadra automaticamente só por envolver dinheiro.",
+      "prova": [
+        "A atuação da PF exclui automaticamente as polícias estaduais? Não; o caput preserva suas responsabilidades.",
+        "O inciso VIII inclui empresas especializadas em transporte de valores? Sim; foi acrescentado pela Lei 14.967/2024.",
+        "A investigação de outros casos dispensa autorização/determinação ministerial? Não; o parágrafo único a exige, além dos pressupostos do caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "A vigência original foi fixada para a publicação. Alterações do rol, como a Lei 14.967/2024, precisam ser lidas no ato modificador e não retroagem automaticamente para tornar ilícita uma conduta anterior.",
+      "pontos": [
+        "Vigência: publicação; atribuição investigatória não cria, sozinha, novo crime."
+      ],
+      "atencao": [
+        "Não confunda ampliar investigação com criar tipo penal ou pena."
+      ],
+      "exemplo": "O aluno identifica a regra de vigência da Lei 10.446: publicação. Variação: A questão atribui uma nova pena à ampliação do inciso VIII: esse artigo não cria tal sanção.",
+      "prova": [
+        "O art. 2º fixa vacância de 45 dias? Não; a vigência é na publicação.",
+        "A ampliação do rol investigatório cria, por si, uma nova pena? Não; atribuição investigatória e tipificação penal são distintas."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

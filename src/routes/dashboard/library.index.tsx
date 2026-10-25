@@ -1,3 +1,6 @@
+import { TRACKS } from "@/data/tracks";
+import { tracksOf } from "@/lib/disciplineHub";
+import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -18,13 +21,21 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
-import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
+import {
+  librarySearchText,
+  identifyingLibraryLaws,
+  libraryLawResultTitle,
+} from "@/lib/librarySearch";
+import { useContentSearch } from "@/lib/contentSearch";
+import { scopeLibraryMaterials, matchingLibraryMaterials } from "@/lib/librarySearchScope";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { StartHere } from "@/components/library/StartHere";
 import {
   libraryArea,
+  libraryCollection,
   libraryDiscipline,
   libraryDisciplines,
   libraryTopic,
@@ -32,6 +43,7 @@ import {
   type LibraryArea,
 } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
+import { ContranLibraryLink } from "@/components/library/ContranLibraryLink";
 import {
   readSlugs,
   useStudyMaterialList,
@@ -43,9 +55,16 @@ export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
   validateSearch: (
     s: Record<string, unknown>,
-  ): { q?: string | undefined; back?: string | undefined } => ({
+  ): {
+    q?: string | undefined;
+    back?: string | undefined;
+    collection?: "laws" | "subjects";
+    discipline?: string | undefined;
+  } => ({
+    collection: s["collection"] === "subjects" ? "subjects" : "laws",
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
+    discipline: typeof s["discipline"] === "string" ? s["discipline"] : undefined,
   }),
   head: () => ({ meta: [{ title: "Biblioteca de estudo | Norte Concurso" }] }),
 });
@@ -54,14 +73,21 @@ function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
-  const { q: initialQuery, back } = Route.useSearch();
+  const {
+    q: initialQuery,
+    back,
+    collection = "laws",
+    discipline: initialDiscipline,
+  } = Route.useSearch();
+  const lawsOnly = collection === "laws";
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
-  const [discipline, setDiscipline] = useState<string>("all");
+  const [discipline, setDiscipline] = useState<string>(initialDiscipline ?? "all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
+  const [law, setLaw] = useState("all");
   const restoredFilters = useRef(false);
-  const filterKey = `library-filters:${user?.id}:${initialQuery ?? ""}:${back ?? ""}`;
+  const filterKey = `library-filters:v3:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
   useEffect(() => {
     restoredFilters.current = false;
     try {
@@ -74,34 +100,46 @@ function LibraryIndex() {
         )
       ) {
         setQuery(saved.query);
-        setArea(saved.area);
-        setDiscipline(saved.discipline);
+        setArea(
+          initialDiscipline
+            ? "all"
+            : lawsOnly
+              ? ["all", "law", "legislation"].includes(saved.area)
+                ? saved.area
+                : "all"
+              : ["all", "general"].includes(saved.area)
+                ? saved.area
+                : "all",
+        );
+        setDiscipline(initialDiscipline ?? saved.discipline);
         setContest(saved.contest);
         setTopic(saved.topic);
+        setLaw(typeof saved.law === "string" ? saved.law : "all");
       } else {
         setQuery(initialQuery ?? "");
         setArea("all");
-        setDiscipline("all");
+        setDiscipline(initialDiscipline ?? "all");
         setContest("all");
         setTopic("all");
+        setLaw("all");
       }
     } catch {
       /* Session storage is optional. */
     }
     restoredFilters.current = true;
-  }, [filterKey, initialQuery]);
+  }, [filterKey, initialQuery, initialDiscipline, lawsOnly]);
   useEffect(() => {
     if (!restoredFilters.current) return;
     try {
       sessionStorage.setItem(
         filterKey,
-        JSON.stringify({ query, area, discipline, contest, topic }),
+        JSON.stringify({ query, area, discipline, contest, topic, law }),
       );
     } catch {
       /* Session storage is optional. */
     }
-  }, [filterKey, query, area, discipline, contest, topic]);
-  const lawMatches = useMemo(() => matchingLibraryLaws(query), [query]);
+  }, [filterKey, query, area, discipline, contest, topic, law]);
+  const lawMatches = useMemo(() => identifyingLibraryLaws(query), [query]);
   const content = useLibrarySearchContent(
     signedIn && query.trim().length >= 2 && !lawMatches.length,
     user?.id,
@@ -110,7 +148,10 @@ function LibraryIndex() {
 
   useEffect(() => setRead(readSlugs()), []);
 
-  const items = useMemo(() => data ?? [], [data]);
+  const items = useMemo(
+    () => (data ?? []).filter((item) => libraryCollection(item) === collection),
+    [data, collection],
+  );
   const areaItems = useMemo(
     () => items.filter((item) => area === "all" || libraryArea(item) === area),
     [items, area],
@@ -141,38 +182,70 @@ function LibraryIndex() {
     [items],
   );
 
-  const visible = useMemo(() => {
-    return items.filter(
-      (item) =>
-        (area === "all" || libraryArea(item) === area) &&
-        (discipline === "all" || libraryDiscipline(item) === discipline) &&
-        (contest === "all" || item.contest_name === contest) &&
-        matchesTopicFilter(libraryDiscipline(item), libraryTopic(item), topic) &&
-        (lawMatches.length
-          ? lawMatches.includes(materialLawSlug(item) ?? "")
-          : matchesLibrarySearch(searchIndex.get(item.id) ?? "", query)),
-    );
-  }, [items, query, area, discipline, contest, topic, searchIndex, lawMatches]);
+  const lawOptions = useMemo(() => {
+    const scoped = scopeLibraryMaterials(items, { area, discipline, contest, topic, law: "all" });
+    return [...new Set(scoped.map(materialLawSlug).filter((slug): slug is string => !!slug))]
+      .map((slug) => ({ slug, title: libraryLawResultTitle(slug) }))
+      .sort((a, b) => a.title.localeCompare(b.title, "pt-BR"));
+  }, [items, area, discipline, contest, topic]);
+  const scopedItems = useMemo(
+    () => scopeLibraryMaterials(items, { area, discipline, contest, topic, law }),
+    [items, area, discipline, contest, topic, law],
+  );
+  const allowedLaws = useMemo(
+    () =>
+      [
+        ...new Set(scopedItems.map(materialLawSlug).filter((slug): slug is string => !!slug)),
+      ].sort(),
+    [scopedItems],
+  );
+  const articleSearch = useContentSearch(
+    query,
+    signedIn ? user?.id : undefined,
+    allowedLaws,
+    !lawMatches.length,
+  );
+  const visible = useMemo(
+    () => matchingLibraryMaterials(scopedItems, query, searchIndex, articleSearch.data ?? []),
+    [scopedItems, query, searchIndex, articleSearch.data],
+  );
 
+  // Keep the simultaneous fix: broad law indexes must not appear inside a filtered result.
+  // Preserve collection/deep links and article searches scoped to that exact result.
+  const showLawIndex =
+    lawsOnly &&
+    area === "all" &&
+    discipline === "all" &&
+    topic === "all" &&
+    contest === "all" &&
+    law === "all";
   const visibleGroups = useMemo(
     () =>
-      libraryDisciplines(visible.filter((item) => !materialLawSlug(item)))
+      libraryDisciplines(visible.filter((item) => !materialLawSlug(item) || !showLawIndex))
         .map(
           ([name, list]) =>
             [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]],
         )
         .sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)),
-    [visible],
+    [visible, showLawIndex],
   );
-  const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
+  const focused = discipline !== "all";
+  const subjectItems = items.filter((item) => !focused || libraryDiscipline(item) === discipline);
+  const searching =
+    focused ||
+    area !== "all" ||
+    query.trim() !== "" ||
+    contest !== "all" ||
+    topic !== "all" ||
+    law !== "all";
   const resetFilters = () => {
     setQuery("");
     setArea("all");
-    setDiscipline("all");
     setContest("all");
     setTopic("all");
+    setLaw("all");
   };
-  const readCount = items.filter((item) => read.has(item.slug)).length;
+  const readCount = subjectItems.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
     return (
@@ -180,7 +253,15 @@ function LibraryIndex() {
         image="study-desk"
         title={
           <>
-            Biblioteca de <em>estudo</em>
+            {lawsOnly ? (
+              <>
+                Legislação e <em>súmulas</em>
+              </>
+            ) : (
+              <>
+                Materiais por <em>disciplina</em>
+              </>
+            )}
           </>
         }
         description="Entre na sua conta para ler os resumos por matéria, ligados ao edital do seu concurso."
@@ -189,39 +270,124 @@ function LibraryIndex() {
   }
 
   return (
-    <div className="space-y-6 pb-8">
+    <div className="material-library space-y-4 pb-8">
       <BackToPlan back={back} topic={initialQuery} />
-      <PageHero
-        image="study-desk"
-        size="lg"
-        kicker="Treinamento"
-        icon={Library}
-        title={
-          <>
-            Biblioteca de <em>estudo</em>
-          </>
-        }
-        description="Seu estudo organizado por área: encontre a disciplina, compreenda com exemplos e pratique. Leis e materiais atualizados, com o caminho de revisão sempre à mão."
-        actions={
-          <Button asChild className="hero-btn-ghost gap-2" variant="outline">
-            <Link to="/dashboard/edital">
-              <MapPin className="h-4 w-4" /> Edital eletrônico
-            </Link>
-          </Button>
-        }
-      >
-        <div className="page-hero__stats max-w-xl">
-          <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
-          <HeroStat
-            icon={Library}
-            label="Matérias"
-            value={isPending ? "—" : libraryDisciplines(items).length}
-          />
-          <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
-        </div>
-      </PageHero>
+      {focused ? (
+        <header className={`library-focus library-tone-${libraryTone(discipline)}`}>
+          <Link to="/dashboard/material" className="library-focus__back">
+            ← Todas as matérias
+          </Link>
+          <div className="library-focus__identity">
+            <div>
+              <p className="library-eyebrow">Biblioteca de estudo</p>
+              <h1>{discipline}</h1>
+              <p>
+                Escolha um assunto para abrir a leitura, as explicações e os exercícios disponíveis.
+              </p>
+            </div>
+            <div className="library-focus__counts" aria-label="Resumo da disciplina">
+              <span>
+                <strong>{isPending ? "—" : subjectItems.length}</strong> materiais
+              </span>
+              <span>
+                <strong>{readCount}</strong> lidos
+              </span>
+            </div>
+          </div>
+        </header>
+      ) : (
+        <PageHero
+          image="study-desk"
+          size="sm"
+          kicker="Material didático"
+          icon={Library}
+          title={
+            <>
+              {lawsOnly ? (
+                <>
+                  Legislação e <em>súmulas</em>
+                </>
+              ) : (
+                <>
+                  Materiais por <em>disciplina</em>
+                </>
+              )}
+            </>
+          }
+          description={
+            lawsOnly
+              ? "Leis e fundamentos jurídicos, organizados por disciplina. Estude o texto, os exemplos e os exercícios de fixação."
+              : "Português, raciocínio lógico, informática e demais disciplinas para concursos. Escolha a matéria e estude com exemplos."
+          }
+          actions={
+            <Button asChild className="hero-btn-ghost gap-2" variant="outline">
+              <Link to="/dashboard/edital">
+                <MapPin className="h-4 w-4" /> Meu edital
+              </Link>
+            </Button>
+          }
+        >
+          <div className="page-hero__stats max-w-xl">
+            <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
+            <HeroStat
+              icon={Library}
+              label="Matérias"
+              value={isPending ? "—" : libraryDisciplines(items).length}
+            />
+            <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
+          </div>
+        </PageHero>
+      )}
+      {discipline !== "all" &&
+        tracksOf(discipline, TRACKS).map((track) => (
+          <Link
+            key={track.slug}
+            to="/dashboard/trilhas"
+            search={{ t: track.slug }}
+            className="flex min-h-12 flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-sm"
+          >
+            <span>
+              <strong>Roteiro de {track.title}</strong>
+              <span className="ml-2 text-muted-foreground">Materiais na sequência de estudo</span>
+            </span>
+            <span className="font-semibold text-primary">Abrir roteiro →</span>
+          </Link>
+        ))}
 
-      {signedIn && !searching && user && <StartHere userId={user.id} />}
+      {!focused && (
+        <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
+          <Link
+            to="/dashboard/library"
+            search={{ collection: "laws" }}
+            aria-current={lawsOnly ? "page" : undefined}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Leis e Direito</strong>
+            <p className="mt-1 text-sm text-muted-foreground">Legislação e fundamentos jurídicos</p>
+          </Link>
+          <Link
+            to="/dashboard/library"
+            search={{ collection: "subjects" }}
+            aria-current={!lawsOnly ? "page" : undefined}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Demais disciplinas</strong>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Materiais por matéria para concursos
+            </p>
+          </Link>
+          <Link
+            to="/dashboard/enem"
+            search={{ tab: "materiais" }}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Materiais do ENEM</strong>
+            <p className="mt-1 text-sm text-muted-foreground">Estude na área dedicada ao exame</p>
+          </Link>
+        </nav>
+      )}
+
+      {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
       {isPending && signedIn ? (
         <div className="space-y-3">
@@ -252,34 +418,72 @@ function LibraryIndex() {
       ) : (
         <>
           <LibraryNavigation
-            items={items}
+            focused={focused}
+            collection={collection}
+            items={focused ? subjectItems : items}
             area={area}
             onArea={(value) => {
               setArea(value);
               setDiscipline("all");
               setTopic("all");
+              setLaw("all");
             }}
             query={query}
             onQuery={setQuery}
             discipline={discipline}
             onDiscipline={(value) => {
               setDiscipline(value);
+              setContest("all");
+              setArea("all");
               setTopic("all");
+              setLaw("all");
             }}
             disciplines={disciplines}
             topic={topic}
-            onTopic={setTopic}
+            onTopic={(value) => {
+              setTopic(value);
+              setLaw("all");
+            }}
+            law={law}
+            onLaw={lawsOnly ? setLaw : undefined}
+            laws={lawOptions}
             topics={topics}
             contest={contest}
             onContest={(value) => {
               setContest(value);
               setTopic("all");
+              setLaw("all");
             }}
-            contests={contests}
+            contests={
+              focused
+                ? [
+                    ...new Set(
+                      subjectItems
+                        .map((item) => item.contest_name)
+                        .filter((name): name is string => !!name),
+                    ),
+                  ].sort()
+                : contests
+            }
             count={visible.length}
-            searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
+            searchingContent={
+              !lawMatches.length &&
+              ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
+            }
             onReset={resetFilters}
           />
+          {signedIn && user && allowedLaws.length > 0 && !lawMatches.length && (
+            <ContentSearchResults query={query} userId={user.id} result={articleSearch} />
+          )}
+          {lawsOnly && law === "all" && (
+            <ContranLibraryLink
+              area={area}
+              discipline={discipline}
+              contest={contest}
+              topic={topic}
+              query={query}
+            />
+          )}
           {content.isError && query.trim().length >= 2 && (
             <p role="alert" className="rounded-xl border p-4 text-sm">
               A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}
@@ -289,37 +493,33 @@ function LibraryIndex() {
             </p>
           )}
 
-          <LegalPathCatalog
-            userId={user!.id}
-            materials={visible}
-            searching={searching || discipline !== "all"}
-            query={query}
-          />
+          {showLawIndex && (
+            <LegalPathCatalog
+              userId={user!.id}
+              materials={visible}
+              searching={searching || discipline !== "all"}
+              query={query}
+              hits={articleSearch.data ?? []}
+            />
+          )}
 
           {visible.length === 0 ? (
             <Empty
               icon={SearchX}
               title={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
+                !lawMatches.length &&
+                ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
                   ? "Pesquisando o conteúdo…"
                   : "Nada encontrado"
               }
               text={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
-                  ? "Aguarde a busca nos textos dos guias publicados."
+                !lawMatches.length &&
+                ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
+                  ? "Aguarde a busca nos textos das leis e dos guias publicados."
                   : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
               }
               action={
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setQuery("");
-                    setArea("all");
-                    setDiscipline("all");
-                    setContest("all");
-                    setTopic("all");
-                  }}
-                >
+                <Button variant="outline" onClick={resetFilters}>
                   Limpar filtros
                 </Button>
               }
@@ -357,10 +557,25 @@ function DisciplineSection({
   defaultOpen: boolean;
   query: string;
 }) {
-  const ordered = useMemo(() => [...list].sort(compareMaterialRevision), [list]);
+  const ordered = useMemo(
+    () =>
+      [...list].sort(
+        (a, b) =>
+          (a.sort_order ?? 0) - (b.sort_order ?? 0) || a.title.localeCompare(b.title, "pt-BR"),
+      ),
+    [list],
+  );
   const position = new Map(ordered.map((item, index) => [item.slug, index + 1]));
-  const groups = useMemo(() => [{ order: null as number | null, items: ordered }], [ordered]);
-  const byEdital = groups.filter((group) => group.order !== null).length > 1;
+  const groups = useMemo(() => {
+    const byTopic = new Map<string, StudyMaterialSummary[]>();
+    for (const item of ordered) {
+      const label = libraryTopic(item) || "Fundamentos e revisão";
+      const list = byTopic.get(label) ?? [];
+      list.push(item);
+      byTopic.set(label, list);
+    }
+    return [...byTopic].map(([label, items]) => ({ label, items }));
+  }, [ordered]);
   const done = ordered.filter((item) => read.has(item.slug)).length;
   const next = ordered.find((item) => !read.has(item.slug));
   const percent = ordered.length ? Math.round((done / ordered.length) * 100) : 0;
@@ -387,7 +602,7 @@ function DisciplineSection({
         <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
       </summary>
       <div className="space-y-5 border-t px-5 pb-5 pt-4">
-        {next && (
+        {next && ordered.length > 1 && (
           <Link
             to="/dashboard/library/$slug"
             params={{ slug: next.slug }}
@@ -402,17 +617,13 @@ function DisciplineSection({
           </Link>
         )}
         {groups.map((group) => (
-          <div key={group.order ?? "outros"} className="space-y-2">
-            {byEdital && (
-              <h3 className="flex items-center gap-2 text-xs font-black uppercase tracking-wide text-muted-foreground">
-                <span className="rounded-md bg-slate-100 px-2 py-0.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                  {group.order === null ? "Complementar" : `Edital · tópico ${group.order}`}
-                </span>
-                <span className="font-semibold normal-case tracking-normal">
-                  {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
-                </span>
-              </h3>
-            )}
+          <div key={group.label} className="space-y-2">
+            <h3 className="library-topic-heading">
+              <span>{group.label}</span>
+              <span>
+                {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
+              </span>
+            </h3>
             <ol className="grid gap-2 lg:grid-cols-2">
               {group.items.map((item) => (
                 <MaterialRow
@@ -468,7 +679,7 @@ function MaterialRow({
           {item.updated_at && (
             <span className="mt-1 block text-xs text-muted-foreground">
               Material atualizado em{" "}
-              {new Date(item.updated_at).toLocaleDateString("pt-BR", {
+              {acreDate(item.updated_at).toLocaleDateString("pt-BR", {
                 timeZone: "America/Rio_Branco",
               })}
             </span>

@@ -1,0 +1,923 @@
+{
+  "scope": "PCDF/2026 — complemento de 12 revisões, acumulado 76; não certifica toda a prova ou todo o acervo PC",
+  "checked_at": "2026-10-16T16:18:20.138Z",
+  "validation": {
+    "checked_at": "2026-10-16T16:15:26.653Z",
+    "audited": 76,
+    "eligible_audited": 76,
+    "other_pc_rows_preserved": 2892,
+    "concurrent_unrelated_pc_rows": [],
+    "missing_pc_rows": [],
+    "original_texts_answers_sources_subjects_statuses_preserved": true,
+    "items": [
+      {
+        "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+        "item_number": 46,
+        "eligible": true
+      },
+      {
+        "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+        "item_number": 15,
+        "eligible": true
+      },
+      {
+        "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+        "item_number": 27,
+        "eligible": true
+      },
+      {
+        "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+        "item_number": 12,
+        "eligible": true
+      },
+      {
+        "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+        "item_number": 68,
+        "eligible": true
+      },
+      {
+        "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+        "item_number": 111,
+        "eligible": true
+      },
+      {
+        "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+        "item_number": 103,
+        "eligible": true
+      },
+      {
+        "id": "23409872-85b9-4547-9d76-ee840c996f70",
+        "item_number": 40,
+        "eligible": true
+      },
+      {
+        "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+        "item_number": 77,
+        "eligible": true
+      },
+      {
+        "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+        "item_number": 33,
+        "eligible": true
+      },
+      {
+        "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+        "item_number": 39,
+        "eligible": true
+      },
+      {
+        "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+        "item_number": 43,
+        "eligible": true
+      },
+      {
+        "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+        "item_number": 63,
+        "eligible": true
+      },
+      {
+        "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+        "item_number": 42,
+        "eligible": true
+      },
+      {
+        "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+        "item_number": 97,
+        "eligible": true
+      },
+      {
+        "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+        "item_number": 96,
+        "eligible": true
+      },
+      {
+        "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+        "item_number": 78,
+        "eligible": true
+      },
+      {
+        "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+        "item_number": 13,
+        "eligible": true
+      },
+      {
+        "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+        "item_number": 36,
+        "eligible": true
+      },
+      {
+        "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+        "item_number": 8,
+        "eligible": true
+      },
+      {
+        "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+        "item_number": 64,
+        "eligible": true
+      },
+      {
+        "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+        "item_number": 92,
+        "eligible": true
+      },
+      {
+        "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+        "item_number": 76,
+        "eligible": true
+      },
+      {
+        "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+        "item_number": 100,
+        "eligible": true
+      },
+      {
+        "id": "74436292-ad87-456d-870a-f8702db04364",
+        "item_number": 102,
+        "eligible": true
+      },
+      {
+        "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+        "item_number": 106,
+        "eligible": true
+      },
+      {
+        "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+        "item_number": 52,
+        "eligible": true
+      },
+      {
+        "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+        "item_number": 49,
+        "eligible": true
+      },
+      {
+        "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+        "item_number": 11,
+        "eligible": true
+      },
+      {
+        "id": "a1db110e-599c-4503-886b-a2483ac92082",
+        "item_number": 53,
+        "eligible": true
+      },
+      {
+        "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+        "item_number": 44,
+        "eligible": true
+      },
+      {
+        "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+        "item_number": 99,
+        "eligible": true
+      },
+      {
+        "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+        "item_number": 66,
+        "eligible": true
+      },
+      {
+        "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+        "item_number": 26,
+        "eligible": true
+      },
+      {
+        "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+        "item_number": 93,
+        "eligible": true
+      },
+      {
+        "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+        "item_number": 38,
+        "eligible": true
+      },
+      {
+        "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+        "item_number": 47,
+        "eligible": true
+      },
+      {
+        "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+        "item_number": 35,
+        "eligible": true
+      },
+      {
+        "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+        "item_number": 1,
+        "eligible": true
+      },
+      {
+        "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+        "item_number": 101,
+        "eligible": true
+      },
+      {
+        "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+        "item_number": 37,
+        "eligible": true
+      },
+      {
+        "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+        "item_number": 95,
+        "eligible": true
+      },
+      {
+        "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+        "item_number": 110,
+        "eligible": true
+      },
+      {
+        "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+        "item_number": 50,
+        "eligible": true
+      },
+      {
+        "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+        "item_number": 54,
+        "eligible": true
+      },
+      {
+        "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+        "item_number": 98,
+        "eligible": true
+      },
+      {
+        "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+        "item_number": 94,
+        "eligible": true
+      },
+      {
+        "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+        "item_number": 70,
+        "eligible": true
+      },
+      {
+        "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+        "item_number": 25,
+        "eligible": true
+      },
+      {
+        "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+        "item_number": 34,
+        "eligible": true
+      },
+      {
+        "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+        "item_number": 85,
+        "eligible": true
+      },
+      {
+        "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+        "item_number": 115,
+        "eligible": true
+      },
+      {
+        "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+        "item_number": 105,
+        "eligible": true
+      },
+      {
+        "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+        "item_number": 3,
+        "eligible": true
+      },
+      {
+        "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+        "item_number": 48,
+        "eligible": true
+      },
+      {
+        "id": "40aec608-f805-49af-a971-537ab56d2449",
+        "item_number": 113,
+        "eligible": true
+      },
+      {
+        "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+        "item_number": 7,
+        "eligible": true
+      },
+      {
+        "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+        "item_number": 87,
+        "eligible": true
+      },
+      {
+        "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+        "item_number": 45,
+        "eligible": true
+      },
+      {
+        "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+        "item_number": 112,
+        "eligible": true
+      },
+      {
+        "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+        "item_number": 81,
+        "eligible": true
+      },
+      {
+        "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+        "item_number": 88,
+        "eligible": true
+      },
+      {
+        "id": "ef3167f7-b998-406f-b567-e722bc835087",
+        "item_number": 114,
+        "eligible": true
+      },
+      {
+        "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+        "item_number": 41,
+        "eligible": true
+      },
+      {
+        "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+        "item_number": 14,
+        "eligible": true
+      },
+      {
+        "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+        "item_number": 71,
+        "eligible": true
+      },
+      {
+        "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+        "item_number": 9,
+        "eligible": true
+      },
+      {
+        "id": "57bf6610-4707-42d5-89d8-59537091e634",
+        "item_number": 16,
+        "eligible": true
+      },
+      {
+        "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+        "item_number": 90,
+        "eligible": true
+      },
+      {
+        "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+        "item_number": 65,
+        "eligible": true
+      },
+      {
+        "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+        "item_number": 32,
+        "eligible": true
+      },
+      {
+        "id": "95823a75-ff66-486d-af04-db532c85a217",
+        "item_number": 20,
+        "eligible": true
+      },
+      {
+        "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+        "item_number": 22,
+        "eligible": true
+      },
+      {
+        "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+        "item_number": 10,
+        "eligible": true
+      },
+      {
+        "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+        "item_number": 6,
+        "eligible": true
+      },
+      {
+        "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+        "item_number": 28,
+        "eligible": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+      "item_number": 14,
+      "previous_row_sha256": "396129079b44c4ab395dd4e997dc045022174a0c109a8f1b433b6935f30a9b45",
+      "published_row_sha256": "fb2e8cc6b4d511cf45b637d7f3b632e38b7dfa45613436e6f5f29042a4f643ec",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nCada Poder exerce controle interno sobre seus próprios atos e agentes, além das formas de controle externo previstas na Constituição. O art. 74 prevê sistema de controle interno mantido de forma integrada pelos Poderes. Não se confunde controle interno com a fiscalização externa exercida com auxílio do tribunal de contas.\nExemplo: O Judiciário pode controlar administrativamente seus próprios serviços e despesas, sem que isso seja exercício de jurisdição sobre outro Poder.\nTeste rápido — Só o Executivo tem controle administrativo interno? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "70",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "74",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+      "item_number": 71,
+      "previous_row_sha256": "5d981852c09e7e824864ba3973d287ef579f3f79c2eeb614267f7a2e5065a9d8",
+      "published_row_sha256": "6dced5fcf373307095a7d366f2cef3b1b2d9aa1d5b6006b5a83c1eb345bce5b4",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO art. 156-A, § 1º, XI, exclui do IBS as prestações de comunicação nas modalidades de radiodifusão sonora e de sons e imagens de recepção livre e gratuita. É regra específica, que não se estende automaticamente a serviços pagos ou plataformas digitais. A inclusão constitucional pela EC 132/2023 não se confunde com o calendário de implementação e produção de efeitos do novo sistema tributário.\nExemplo: Recepção livre e gratuita de TV aberta enquadra-se na hipótese descrita. TV por assinatura não se torna automaticamente abrangida pela mesma previsão.\nTeste rápido — A não incidência abrange indistintamente toda comunicação paga ou gratuita? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "156-A",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+      "item_number": 9,
+      "previous_row_sha256": "f119e008247b63f1a3d2e9573765002ed658e6a1a86c9da4bf5fdc1dc0b8fab5",
+      "published_row_sha256": "3fbdf3f2bbb9b420b2a25cb2f961cb1f3bd421818bdd53fb016592ceb11d5a34",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA finalidade não é o único elemento que distingue decreto e resolução. Competência, autoridade emitente, forma e regime jurídico também importam, conforme a espécie do ato. A Constituição prevê, por exemplo, decretos do Executivo e competências do Senado exercidas por resolução, com funções distintas.\nExemplo: Decreto de execução de lei e resolução do Senado não se tornam o mesmo ato por ambos produzirem efeitos normativos.\nTeste rápido — A diferença decorre exclusivamente da finalidade? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "52",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "84",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "57bf6610-4707-42d5-89d8-59537091e634",
+      "item_number": 16,
+      "previous_row_sha256": "44a0af3b262a1d50c4d51c6ed90b57a26a3fa1a565058d0fababb30f3a497f67",
+      "published_row_sha256": "20f049d437b25655da8160528992c3f86e33f6fe76e7351b36e03fb61dbfe960",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA OAB possui natureza jurídica própria e não integra a Administração indireta como autarquia comum. O STF reafirmou essa autonomia no Tema 1.054 (RE 1.182.189), ao afastar prestação de contas ao TCU, com referência à ADI 3.026. Autonomia não significa ausência de controle jurídico ou imunidade a toda fiscalização. Atenção: autarquias também não se subordinam hierarquicamente ao ente criador; vinculação e supervisão não equivalem a hierarquia.\nExemplo: A OAB não se submete à hierarquia de um ministério por exercer serviço público. Isso não torna seus atos imunes ao controle judicial cabível.\nTeste rápido — Exercer serviço público torna a OAB automaticamente autarquia da Administração indireta? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/oab-nao-e-obrigada-a-prestar-contas-ao-tcu-decide-stf/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "70",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/oab-nao-e-obrigada-a-prestar-contas-ao-tcu-decide-stf/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/oab-nao-e-obrigada-a-prestar-contas-ao-tcu-decide-stf/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/oabfull.html",
+            "sha256": "bd84be1133a0d6432cd3616ccf10738c72fb053e1991bc46937acc5d87b07bed",
+            "retrieved_at": "2026-10-16T16:08:22.971089+00:00"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+      "item_number": 90,
+      "previous_row_sha256": "62e0521d0a98432fc1d8bf6e9919848e65b44cacb1e5ad3001a55ee04c49e206",
+      "published_row_sha256": "fdb33623ed89bc07d0d97e238047cec228042bbd3eb625724812ec4b0137f881",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nNo Tema 1.258, julgado em 11/06/2025, o STJ firmou observância obrigatória do art. 226 no inquérito e em juízo. Reconhecimento inicialmente inválido pode contaminar a memória e não é saneado apenas por confirmação judicial posterior. Provas independentes e identificação de pessoa já conhecida demandam distinção, conforme a própria tese.\nExemplo: Apresentar uma foto isolada de desconhecido e repetir o apontamento em audiência não corrige automaticamente o vício. Prova independente sem relação causal deve ser examinada separadamente.\nTeste rápido — Repetir em juízo torna válido qualquer reconhecimento anterior irregular? Não.\nFonte judicial: https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1258&cod_tema_final=1258",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "226",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1258&cod_tema_final=1258"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1258&cod_tema_final=1258",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/reconhecimento.html",
+            "sha256": "ac6aee166c3bcc5842e5949c3c3f5e16149680f6eec863b0af238b45b0699eb3",
+            "retrieved_at": "2026-10-16T16:05:55.105796+00:00"
+          }
+        ],
+        "official_pdf_page": 11
+      }
+    },
+    {
+      "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+      "item_number": 65,
+      "previous_row_sha256": "1b10f0d0e9e6b308d149fd2a57ac53feb022b30b10717f46e75731d921fdb9b0",
+      "published_row_sha256": "dd42518cf618c805e34bcb2af6f73c9fb25cc61cbbe4b8ca38afb73d65aec285",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO arrependimento posterior exige seus pressupostos legais, inclusive reparação do dano ou restituição da coisa antes do recebimento da denúncia ou queixa em crime sem violência ou grave ameaça. Por sua natureza objetiva, a reparação integral por um coautor pode comunicar a minorante aos demais, conforme o REsp 1.187.976/SP, Informativo 531/STJ. A fração exige avaliação das circunstâncias de cada agente.\nExemplo: Um corréu repara integralmente o dano dentro do prazo legal: os demais podem ser alcançados pela minorante. Isso não torna qualquer pagamento parcial ou tardio suficiente.\nTeste rápido — O benefício pertence necessariamente só a quem pagou? Não.\nFonte judicial: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=ARREPENDIMENTO%20POSTERIOR&refinar=S.DISP.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "16",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "30",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=ARREPENDIMENTO%20POSTERIOR&refinar=S.DISP."
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=ARREPENDIMENTO%20POSTERIOR&refinar=S.DISP.",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/concurso.html",
+            "sha256": "d0d5625d8dff7bd86b02bb0c9a81c884ddc85d4755b471b249af7e2093496e03",
+            "retrieved_at": "2026-10-16T16:05:56.285742+00:00"
+          }
+        ],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+      "item_number": 32,
+      "previous_row_sha256": "90c98f466ff83b0f26eab968347b996e1536c2716b3bd756d87cbeac4bc4a8ec",
+      "published_row_sha256": "40a2c0c0b771bb7c11652b7d8bf731b49801dbf568d199c890d7d6b332f37d6d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA Lei Orgânica Nacional das Polícias Civis prevê Conselho Superior presidido pelo delegado-geral e integrado por representantes de todos os cargos efetivos, admitindo eleição e participação paritária conforme a lei do ente. Não é composto exclusivamente por delegados da classe mais elevada.\nExemplo: Representação dos diversos cargos não se confunde com presidência do Conselho: ser presidido pelo delegado-geral não exclui os demais representantes.\nTeste rápido — Presidência por delegado significa composição exclusiva por delegados? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm",
+            "artigo": "9",
+            "title": "Lei 14.735/2023"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "2877adfe-fd4f-48db-8c1c-c20e17bec2e5"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lonpc.html",
+            "sha256": "d68f700908057e8ad1e0cc8c295bff370c41d4ac19b5ed7a279a016d786a3f30",
+            "captured_at": "2026-10-16T16:09:45.275Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "95823a75-ff66-486d-af04-db532c85a217",
+      "item_number": 20,
+      "previous_row_sha256": "1604987e2b330ff52889c4addc8a148acd9060cdbf60c9fbd4eb7cdd41bda4fe",
+      "published_row_sha256": "e75e8cbe172a49d79293617d78fea60f2c6867a71328f136b8f51525658ae9f2",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO controle judicial é predominantemente repressivo, mas admite controle preventivo excepcional nos limites reconhecidos pelo STF, especialmente para proteger o devido processo legislativo constitucional. Não cabe qualquer ação popular contra todo projeto; a legitimidade e o objeto devem ser observados. O MS 38.199 exemplifica os limites dessa intervenção e a proteção das questões internas do Legislativo.\nExemplo: Parlamentar pode questionar vício constitucional do procedimento nos termos admitidos pelo STF; simples discordância política com o projeto não autoriza intervenção judicial.\nTeste rápido — É correto afirmar que nunca há controle judicial antes da aprovação? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/stf-mantem-tramitacao-de-projeto-de-lei-do-novo-codigo-eleitoral/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "60",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/stf-mantem-tramitacao-de-projeto-de-lei-do-novo-codigo-eleitoral/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/stf-mantem-tramitacao-de-projeto-de-lei-do-novo-codigo-eleitoral/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/controlefull.html",
+            "sha256": "e858741edf6422a466d0b32f82e5d7f744b6861c160528d44adec1ce744ded85",
+            "retrieved_at": "2026-10-16T16:08:23.079084+00:00"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+      "item_number": 22,
+      "previous_row_sha256": "ab66e0928e3ba302016a19322909c5e511ece8bd49ad5cd26f6b9c7378e13bb5",
+      "published_row_sha256": "bd2d92dd87709299e8007a4238dab1dbde336efcb8f1d368d6291f619754b5e4",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA proteção domiciliar alcança aposento de habitação coletiva ocupado, como quarto de hotel. Não se restringe à casa própria nem protege indistintamente todo espaço aberto ao público. No RHC 90.376, o STF examinou provas obtidas com invasão de quarto de hotel sem observância da proteção constitucional.\nExemplo: Quarto de hotel ocupado recebe proteção domiciliar; a recepção aberta ao público não é automaticamente equiparada ao aposento privado.\nTeste rápido — Ficar hospedado em vez de ser proprietário elimina a proteção? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/2a-turma-anula-condenacao-do-tj-rj/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "150",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://noticias.stf.jus.br/postsnoticias/2a-turma-anula-condenacao-do-tj-rj/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/2a-turma-anula-condenacao-do-tj-rj/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/hotelfull.html",
+            "sha256": "e499f5545c2eed363e3e91bfc590e2a970027fc603580b1144aa494d9a594a88",
+            "retrieved_at": "2026-10-16T16:08:23.155081+00:00"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+      "item_number": 10,
+      "previous_row_sha256": "df15f5e03d9f3bf427ed8c618a6edea2788ca6b54a00e595d12c3c3b25aa5623",
+      "published_row_sha256": "510c833b0ee993dcf6fd55ee70895f4f9f0c2ad283939925cae9f4514a354b4f",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nPela teoria dos motivos determinantes, a Administração fica vinculada aos motivos que declarou como fundamento do ato, seja ele vinculado ou discricionário. A inexistência, falsidade ou inadequação lógica do motivo pode viciar a legalidade. O STJ explicitou essa orientação no MS 13.948/DF, Informativo 505.\nExemplo: Administração nega pedido afirmando inexistir documento que já estava no processo: a falsidade do motivo declarado importa, mesmo quando havia margem de escolha administrativa.\nTeste rápido — Discricionariedade autoriza usar motivo declarado inexistente? Não.\nFonte judicial: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22MOTIVOS%20DETERMINANTES%22&refinar=S.DISP.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "2",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "50",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22MOTIVOS%20DETERMINANTES%22&refinar=S.DISP."
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/proc.html",
+            "sha256": "2988f1a20fd8355c479fd52b3699c43167599e0c0434c45395f70d0656e04313",
+            "captured_at": "2026-10-16T15:47:28.122Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22MOTIVOS%20DETERMINANTES%22&refinar=S.DISP.",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/motivos.html",
+            "sha256": "2edf436c74c28dafa43b8a0cbd273ef54ff8a4422915d2cdaadba15089ec2bb8",
+            "retrieved_at": "2026-10-16T16:05:56.577729+00:00"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+      "item_number": 6,
+      "previous_row_sha256": "cc29c4ceb6269cfa37bda7a9aa9296ff3a4dc4e06ddd5059436aa9dea5651424",
+      "published_row_sha256": "85bf51e35a7de5420667815dddc85fa17c84fa8db042672f4e78ecc5365889c4",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA vedação ao nepotismo decorre dos princípios constitucionais da Administração, sem depender de lei formal específica para cada órgão. O STF consolidou a proibição na Súmula Vinculante 13. A interpretação de cargos políticos e situações excepcionais exige exame próprio: não se deve converter parentesco em proibição indistinta de toda investidura.\nExemplo: Troca de nomeações de parentes para cargos de confiança não se legitima pela falta de lei municipal proibitiva. Ingresso por concurso e hipóteses de cargos políticos exigem suas próprias distinções.\nTeste rápido — É necessária uma lei local para que os princípios constitucionais impeçam nepotismo? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/diario-da-justica-publica-sumula-vinculante-que-proibe-nepotismo-nos-tres-poderes/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/diario-da-justica-publica-sumula-vinculante-que-proibe-nepotismo-nos-tres-poderes/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/diario-da-justica-publica-sumula-vinculante-que-proibe-nepotismo-nos-tres-poderes/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/nepotismofull.html",
+            "sha256": "1dec8972a5a367b2b209bb8978c5c1d7f73d2a3167464251cf814f0c5bef5226",
+            "retrieved_at": "2026-10-16T16:08:23.127082+00:00"
+          }
+        ],
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+      "item_number": 28,
+      "previous_row_sha256": "916a0f6ee7842d31d525eeb9e47aa04419dbfceb23e481ba7090e1d57aae6ec0",
+      "published_row_sha256": "a9f8260327d5712e127ea271a15f5289fd26095cb7ad8fcd755df647cfb64f23",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nCPI tem poderes de investigação, mas respeita reserva de jurisdição e direitos fundamentais. Não pode ordenar busca domiciliar por conta própria. Segundo o STF, busca não domiciliar deve ter causa provável, motivação concreta e atender aos limites da investigação. Não basta retirar o nome residência de um local protegido.\nExemplo: CPI pode deliberar medida instrutória não domiciliar devidamente fundamentada; entrada em espaço constitucionalmente inviolável exige análise da reserva judicial.\nTeste rápido — Poderes de investigação permitem à CPI invadir domicílio sem ordem judicial? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/buscas-e-apreensoes-requeridas-por-cpi-tem-de-ser-fundamentadas/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "58",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:13:27.780884+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Conferência individual da letra definitiva, dispositivo oficial e, quando aplicável, precedente do tribunal; recorte e exceções indicados no comentário, sem certificação de toda a disciplina.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/buscas-e-apreensoes-requeridas-por-cpi-tem-de-ser-fundamentadas/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/buscas-e-apreensoes-requeridas-por-cpi-tem-de-ser-fundamentadas/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/cpifull.html",
+            "sha256": "6b9ae950493e1fc6c14b13a14aa78782f18c0a4d3577447479fdde3d18b0a39b",
+            "retrieved_at": "2026-10-16T16:08:23.015087+00:00"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    }
+  ]
+}

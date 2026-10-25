@@ -1,0 +1,412 @@
+{
+  "scope": "Two additional individual PCPE Escrivão reviews: technical archival accessibility and public-service concessionaire liability. Two contexts and one document provenance restored separately; official answers/raw extractions preserved.",
+  "checked_at": "2026-10-17T01:43:58.765Z",
+  "publication": [
+    {
+      "dry_run": false,
+      "reviewed": 1,
+      "updated": [
+        "01269336-2d26-4c7e-b008-beacd8fac4a8"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-17T01:42:48.873Z"
+    },
+    {
+      "dry_run": false,
+      "reviewed": 1,
+      "updated": [
+        "29f84c0b-fffe-49d0-ab8a-97e7bca977aa"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-17T01:43:41.461Z"
+    }
+  ],
+  "validation_current_resume_11_questions": {
+    "checked_at": "2026-10-17T01:43:58.765Z",
+    "reviewed": 11,
+    "published_active": 11,
+    "contexts_restored": 10,
+    "figures_restored": 3,
+    "preserved_other_pc_records": 2957,
+    "concurrent_changes": [],
+    "metadata_concurrent_changes": [],
+    "new_topics": 2,
+    "new_sources": 2,
+    "provenance_repaired": 1,
+    "pc_status": {
+      "active": 2600,
+      "archived": 212,
+      "annulled": 37,
+      "under_review": 112,
+      "obsolete": 7
+    },
+    "pending_by_contest": {
+      "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+      "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+      "Polícia Civil de Pernambuco - Escrivão de Polícia": 7,
+      "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+      "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+      "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+      "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+      "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+      "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+      "Polícia Civil de Minas Gerais": 2,
+      "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+      "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+      "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+      "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+      "Polícia Civil de Pernambuco - Agente de Polícia": 3
+    }
+  },
+  "sources": {
+    "sources": [
+      {
+        "kind": "edital",
+        "expected": {
+          "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+          "source_type": "edital",
+          "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+          "issuer": "SAD/SDS Pernambuco / Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "published_on": "2023-12-21",
+          "checked_at": "2026-10-16T22:08:51.908+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+        },
+        "row": {
+          "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+          "source_type": "edital",
+          "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+          "issuer": "SAD/SDS Pernambuco / Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "published_on": "2023-12-21",
+          "checked_at": "2026-10-16T22:08:51.908+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "sha256": "eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "prova",
+        "expected": null,
+        "row": {
+          "id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+          "source_type": "outro",
+          "title": "Prova objetiva — PCPE Escrivão 2024 — conhecimentos básicos (itens 1 a 20)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-17T01:42:40.251230+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Documento oficial listado no catálogo PC_PE_23, bloco de conhecimentos básicos do cargo de escrivão. Conferência visual individual do item 10 e chave definitiva B; não certificação integral dos demais itens. SHA-256 50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": null,
+        "row": {
+          "id": "84260811-6cea-5584-9d07-5d327667416e",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo — PCPE Escrivão 2024 — conhecimentos básicos (itens 1 a 20)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-17T01:42:40.251230+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Documento oficial listado no catálogo PC_PE_23, bloco de conhecimentos básicos do cargo de escrivão. Conferência visual individual do item 10 e chave definitiva B; não certificação integral dos demais itens. SHA-256 c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "visually_verified": true
+        }
+      }
+    ],
+    "edition": {
+      "expected": {
+        "id": "f9a28f64-a15c-400b-b748-edc069ddc5f0",
+        "contest_name": "Polícia Civil de Pernambuco",
+        "role_name": "Escrivão de Polícia",
+        "contest_year": 2024,
+        "exam_board": "Cebraspe",
+        "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+        "status": "active",
+        "created_at": "2026-10-14T00:46:11.137138+00:00"
+      },
+      "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+    }
+  },
+  "source_publication": {
+    "dry_run": false,
+    "createdSources": [
+      "0a07cb10-8846-541a-8723-359757f9b4e6",
+      "84260811-6cea-5584-9d07-5d327667416e"
+    ],
+    "editionSource": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+  },
+  "provenance_repairs": [
+    {
+      "id": "29f84c0b-fffe-49d0-ab8a-97e7bca977aa",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 6,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nProveniência corrigida para o bloco básico PECB2, item 10, página 6 e chave definitiva B; não o bloco específico PE002.",
+        "verified_at": "2026-10-17T01:42:40.251230+00:00"
+      },
+      "evidence": {
+        "visually_verified": true,
+        "reason": "Cotejo do caderno PECB2 e chave definitiva do próprio cargo; resposta B preservada.",
+        "item_number": 10,
+        "official_answer": "B",
+        "page": 6,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    }
+  ],
+  "provenance_publication": {
+    "updated": [
+      "29f84c0b-fffe-49d0-ab8a-97e7bca977aa"
+    ],
+    "preserved": 0
+  },
+  "topic": {
+    "expected_edition": {
+      "id": "f9a28f64-a15c-400b-b748-edc069ddc5f0",
+      "contest_name": "Polícia Civil de Pernambuco",
+      "role_name": "Escrivão de Polícia",
+      "contest_year": 2024,
+      "exam_board": "Cebraspe",
+      "source_id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+      "status": "active",
+      "created_at": "2026-10-14T00:46:11.137138+00:00"
+    },
+    "expected_source": {
+      "id": "d09d18a8-b314-5a52-893e-889e793a0b4b",
+      "source_type": "edital",
+      "title": "Edital nº 1 – PCPE, de 21/12/2023 — versão atualizada conforme Edital nº 4",
+      "issuer": "SAD/SDS Pernambuco / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "published_on": "2023-12-21",
+      "checked_at": "2026-10-16T22:08:51.908Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Abertura histórica do concurso com provas em 2024, versão atualizada conforme Edital 4. Data de origem distinta da data de conferência. Recortes programáticos exigem revisão individual; não certificação integral do edital ou de todas as leis. SHA-256 eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8"
+    },
+    "evidence": {
+      "visually_verified": true,
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+      "sha256": "eb7fa7b0e7fd5e2d1fa4e4a2b7e23eb1b9d272086e11b343db7f04d3dee4d4d8",
+      "scope": "Recortes específicos do programa da versão atualizada; sem certificar vigência de todas as normas mencionadas."
+    },
+    "items": [
+      {
+        "row": {
+          "id": "83d19696-dfcf-515e-99b9-7c4d02a949ed",
+          "edition_id": "f9a28f64-a15c-400b-b748-edc069ddc5f0",
+          "block_name": "Edital PCPE 1/2023 — recorte conferido em 16/10/2026",
+          "discipline": "Arquivologia",
+          "topic_order": 33,
+          "topic_text": "4 Gestão da informação e de documentos; implementação de programas de gestão de documentos.",
+          "content_status": "current"
+        },
+        "page": 68,
+        "reference": "NOÇÕES DE ARQUIVOLOGIA: item 4. Recorte específico, não certificação integral do programa."
+      }
+    ]
+  },
+  "topic_publication": {
+    "reviewed": 1,
+    "created": 1,
+    "preserved": 0
+  },
+  "verification": {
+    "application_tests_passed": 599,
+    "application_tests_failed": 0,
+    "application_build": "passed after integrating origin/main 4bd7f8f into cc69f82; generated version files restored, not committed",
+    "review_guard_tests_passed": 35,
+    "review_guard_tests_failed": 0,
+    "scope": "26 publisher/context/topic/media tests plus nine official-source/provenance tests. Data-only updates after application validation; no further application edits."
+  },
+  "items": [
+    {
+      "id": "01269336-2d26-4c7e-b008-beacd8fac4a8",
+      "career": "Escrivão de Polícia",
+      "item_number": 53,
+      "official_answer": "D",
+      "original_sha256": "138fbb741cd8d90b6d615f3800fd712c86d10f263deecf2b46097218a035bd39",
+      "prepublication_sha256": "54dd5e24200937273eb6167bd5afacce440605110a976f98ce4cbd051d9a450d",
+      "final_sha256": "a1cee35d4e898f0789a9d268b8d0c4bce5a4882d7091a247ea0e64f8c082ba8c",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "83d19696-dfcf-515e-99b9-7c4d02a949ed",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T01:41:35.279079+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nACESSIBILIDADE é poder localizar, recuperar, apresentar e interpretar o documento. O e-ARQ Brasil, versão 2, exige transmissão a outros sistemas sem perda de informação e funcionalidade (página impressa 29; página 30 do PDF). Por isso D está correta. As demais trocam os atributos: A descreve confiabilidade; B, unicidade; C, relação orgânica; E, autenticidade (identidade e integridade). Confiabilidade se relaciona à produção e à capacidade de sustentar os fatos; autenticidade não garante, sozinha, veracidade de todo conteúdo. A questão cobra conceitos técnicos de gestão documental, e não a criação de um direito irrestrito de acesso a informação sigilosa.\nExemplo: migrar um documento para outro sistema e conseguir localizá-lo, abri-lo e interpretá-lo sem perder informação ou função atende à exigência de acessibilidade. Preservar sua identidade e impedir adulterações atende à autenticidade: são dimensões relacionadas, mas diferentes.\nTeste rápido — Um arquivo pode ser autêntico e, ainda assim, estar inacessível por falha de recuperação? Sim; autenticidade e acessibilidade são atributos distintos.\nFonte técnica oficial: https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/EARQV205MAI2022.pdf"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Conceitos técnicos cotejados com e-ARQ Brasil versão 2, aprovado pela Resolução CONARQ 50/2022, e com o programa do próprio cargo. Não equivale a revisão de toda legislação arquivística.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/EARQV205MAI2022.pdf"
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "captured_at": "2026-10-16T22:08:53.366Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "captured_at": "2026-10-16T22:08:52.491Z"
+        },
+        "technical_capture": {
+          "url": "https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/EARQV205MAI2022.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/conarq-earq-v2.pdf",
+          "sha256": "79259fbade99c00d129a58f8f6bbc6babef4f3e2fc9794bcfb8ea290981a69e9",
+          "pdf_page": 30,
+          "printed_page": 29
+        },
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "29f84c0b-fffe-49d0-ab8a-97e7bca977aa",
+      "career": "Escrivão de Polícia",
+      "item_number": 10,
+      "official_answer": "B",
+      "original_sha256": "7228e67c007eb2670e3b85e343c8f7acbbc443537a413d66c669b42b5e4edaf9",
+      "prepublication_sha256": "d6791bbf6057a97dc568f7cbe801de3907d4145f39cd678399d8b26b065cd67b",
+      "final_sha256": "336235bd7b8c1bad30a19edf091fd7abd30a0a473cc02689a30ca806e3c25e9f",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "3805473f-499f-44c4-bb6f-c5f36aa6f721",
+        "legal_audit_completed": true,
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-17T01:42:40.251230+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37, § 6º",
+            "title": "Constituição Federal"
+          }
+        ],
+        "verified_at": "2026-10-17T01:42:40.251230+00:00",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nA concessionária é pessoa jurídica de direito privado PRESTADORA DE SERVIÇO PÚBLICO. Pelo art. 37, § 6º, da Constituição, responde objetivamente pelos danos causados por seus agentes nessa qualidade. No modelo de RISCO ADMINISTRATIVO cobrado, demonstram-se a conduta, o dano e o nexo causal; a vítima não precisa provar dolo ou culpa do agente para responsabilizar a prestadora. Isso não é responsabilidade automática por qualquer dano: a ausência de nexo causal pode afastá-la. Risco integral não é a regra desta situação. A ação regressiva contra o agente depende de dolo ou culpa, como prevê a parte final do dispositivo.\nExemplo: um motorista da concessionária, durante o serviço, causa dano ligado à condução do ônibus. Para a responsabilidade da prestadora, analise conduta, dano e nexo, sem exigir prova de culpa do motorista pela vítima. Se o dano foi inteiramente causado por evento sem vínculo causal com o serviço, a conclusão pode ser outra.\nTeste rápido — A responsabilidade objetiva da prestadora dispensa provar o próprio dano e o nexo? Não. Dispensa-se a demonstração de culpa para esse fundamento de responsabilidade, não os demais requisitos.\nFonte vigente: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Texto constitucional atual e programa do próprio cargo, item 6 de Direito Administrativo; caderno e chave do bloco básico corretos.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        },
+        "original_answer_preserved": true
+      }
+    }
+  ]
+}

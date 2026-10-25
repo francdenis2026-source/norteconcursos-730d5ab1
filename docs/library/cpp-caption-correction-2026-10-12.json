@@ -1,0 +1,551 @@
+{
+  "version": "2026-10-12-cpp-heading",
+  "checked_at": "2026-10-13T00:02:08.721108+00:00",
+  "scope": "Separação da rubrica não normativa e sua anotação; sem alterar normas, IDs, capítulos ou posições.",
+  "laws": [
+    {
+      "expected": {
+        "id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+        "slug": "codigo-processo-penal",
+        "title": "Código de Processo Penal — leitura atualizada",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "source_sha256": "2d5f2332c6cb006699e0e6f040e20fdb9a8b2de6af15f1976953dcadfc0f5232",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "processo-penal-cpp-provas-flagrante-revisao",
+        "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+        "overview": {
+          "intro": "Leitura do texto compilado oficial, por dispositivo, com recuperação ativa e alertas de atualização.",
+          "alerts": "Texto compilado conferido em 07/10/2026. O alcance da leitura supera o resumo e o recorte do tópico associado: confira seu edital. Dispositivos revogados ou vetados ficam fora da leitura ativa. A transcrição literal não substitui o controle de constitucionalidade nem a jurisprudência pertinente. Alterações mais gravosas não devem retroagir automaticamente.",
+          "contest": "Polícia Federal — carreira policial — Edital 2025",
+          "chapters": [
+            {
+              "count": 9,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES"
+            },
+            {
+              "count": 23,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO II — DO INQUÉRITO POLICIAL"
+            },
+            {
+              "count": 38,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO III — DA AÇÃO PENAL"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IV — DA AÇÃO CIVIL"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO I — DA COMPETÊNCIA PELO LUGAR DA INFRAÇÃO"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO II — DA COMPETÊNCIA PELO DOMICÍLIO OU RESIDÊNCIA DO RÉU"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO III — DA COMPETÊNCIA PELA NATUREZA DA INFRAÇÃO"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO IV — DA COMPETÊNCIA POR DISTRIBUIÇÃO"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO V — DA COMPETÊNCIA POR CONEXÃO OU CONTINÊNCIA"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VI — DA COMPETÊNCIA POR PREVENÇÃO"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VII — DA COMPETÊNCIA PELA PRERROGATIVA DE FUNÇÃO"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VIII — DISPOSIÇÕES ESPECIAIS"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO I — DAS QUESTÕES PREJUDICIAIS"
+            },
+            {
+              "count": 17,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO II — DAS EXCEÇÕES"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO III — DAS INCOMPATIBILIDADES E IMPEDIMENTOS"
+            },
+            {
+              "count": 5,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO IV — DO CONFLITO DE JURISDIÇÃO"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO V — DA RESTITUIÇÃO DAS COISAS APREENDIDAS"
+            },
+            {
+              "count": 22,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VI — DAS MEDIDAS ASSECURATÓRIAS"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VII — DO INCIDENTE DE FALSIDADE"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VIII — DA INSANIDADE MENTAL DO ACUSADO"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 33,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO II — DO EXAME DE CORPO DE DELITO, DA CADEIA DE"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO III — DO INTERROGATÓRIO DO ACUSADO"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IV — DA CONFISSÃO"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO V — DO OFENDIDO"
+            },
+            {
+              "count": 25,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VI — DAS TESTEMUNHAS"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VII — DO RECONHECIMENTO DE PESSOAS E COISAS"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VIII — DA ACAREAÇÃO"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IX — DOS DOCUMENTOS"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO X — DOS INDÍCIOS"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO XI — DA BUSCA E DA APREENSÃO"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO I — DO JUIZ"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO II — DO MINISTÉRIO PÚBLICO"
+            },
+            {
+              "count": 9,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO III — DO ACUSADO E SEU DEFENSOR"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO IV — DOS ASSISTENTES"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO V — DOS FUNCIONÁRIOS DA JUSTIÇA"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO VI — DOS PERITOS E INTÉRPRETES"
+            },
+            {
+              "count": 20,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO II — DA PRISÃO EM FLAGRANTE"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO III — DA PRISÃO PREVENTIVA"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO IV DA PRISÃO DOMICILIAR (Redação dada pela Lei nº 12.403, de 2011)."
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO V — DAS OUTRAS MEDIDAS CAUTELARES"
+            },
+            {
+              "count": 30,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO VI — DA LIBERDADE PROVISÓRIA, COM OU SEM FIANÇA"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX-A — (Incluído pela Lei nº 15.280, de 2025)"
+            },
+            {
+              "count": 19,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO I — DAS CITAÇÕES"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO II — DAS INTIMAÇÕES"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO XI — DA APLICAÇÃO PROVISÓRIA DE INTERDIÇÕES"
+            },
+            {
+              "count": 12,
+              "title": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO XII — DA SENTENÇA"
+            },
+            {
+              "count": 14,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO I — DA INSTRUÇÃO CRIMINAL"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção I — Da Acusação e da Instrução Preliminar"
+            },
+            {
+              "count": 9,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção II — Da Pronúncia, da Impronúncia e da Absolvição Sumária"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção III — Da Preparação do Processo para Julgamento em Plenário"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IV — Do Alistamento dos Jurados"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção V — Do Desaforamento"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VI — Da Organização da Pauta"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VII — Do Sorteio e da Convocação dos Jurados"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VIII — Da Função do Jurado"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IX — Da Composição do Tribunal do Júri e da Formação do Conselho de Sentença"
+            },
+            {
+              "count": 20,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção X — Da reunião e das sessões do Tribunal do Júri"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XI — Da Instrução em Plenário"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XII — Dos Debates"
+            },
+            {
+              "count": 10,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIII — Do Questionário e sua Votação"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIV — Da sentença"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XV — Da Ata dos Trabalhos"
+            },
+            {
+              "count": 1,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XVI — Das Atribuições do Presidente do Tribunal do Júri"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO II — DO PROCESSO E DO JULGAMENTO DOS CRIMES"
+            },
+            {
+              "count": 5,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO III — DO PROCESSO E DO JULGAMENTO DOS CRIMES"
+            },
+            {
+              "count": 16,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO IV — DO PROCESSO E DO JULGAMENTO DOS CRIMES"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO V — DO PROCESSO SUMÁRIO"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VI — DO PROCESSO DE RESTAURAÇÃO DE AUTOS EXTRAVIADOS OU DESTRUÍDOS"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VII — DO PROCESSO DE APLICAÇÃO DE MEDIDA DE SEGURANÇA"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO I — DAS NULIDADES"
+            },
+            {
+              "count": 7,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 12,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO II — DO RECURSO EM SENTIDO ESTRITO"
+            },
+            {
+              "count": 9,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO III — DA APELAÇÃO"
+            },
+            {
+              "count": 9,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO V — DO PROCESSO E DO JULGAMENTO DOS RECURSOS EM SENTIDO ESTRITO"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VI — DOS EMBARGOS"
+            },
+            {
+              "count": 11,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VII — DA REVISÃO"
+            },
+            {
+              "count": 2,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VIII — DO RECURSO EXTRAORDINÁRIO"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO IX — DA CARTA TESTEMUNHÁVEL"
+            },
+            {
+              "count": 22,
+              "title": "LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO X — DO HABEAS CORPUS E SEU PROCESSO"
+            },
+            {
+              "count": 6,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 12,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO I — DAS PENAS PRIVATIVAS DE LIBERDADE"
+            },
+            {
+              "count": 5,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO II — DAS PENAS PECUNIÁRIAS"
+            },
+            {
+              "count": 5,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO III — DAS PENAS ACESSÓRIAS"
+            },
+            {
+              "count": 13,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO I — DA SUSPENSÃO CONDICIONAL DA PENA"
+            },
+            {
+              "count": 24,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO II — DO LIVRAMENTO CONDICIONAL"
+            },
+            {
+              "count": 9,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO I — DA GRAÇA, DO INDULTO E DA ANISTIA"
+            },
+            {
+              "count": 8,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO II — DA REABILITAÇÃO"
+            },
+            {
+              "count": 29,
+              "title": "LIVRO IV — DA EXECUÇÃO / TÍTULO V — DA EXECUÇÃO DAS MEDIDAS DE SEGURANÇA"
+            },
+            {
+              "count": 3,
+              "title": "LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO II — DAS CARTAS ROGATÓRIAS"
+            },
+            {
+              "count": 4,
+              "title": "LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO III — DA HOMOLOGAÇÃO DAS SENTENÇAS ESTRANGEIRAS"
+            },
+            {
+              "count": 22,
+              "title": "LIVRO VI — DISPOSIÇÕES GERAIS"
+            }
+          ],
+          "objectives": [
+            "Organizar investigação, ação penal, sujeitos, competência e garantias.",
+            "Comparar provas, cadeia de custódia, prisões, medidas cautelares e procedimentos.",
+            "Estudar recursos, nulidades e disposições finais; diferenciar literalidade e interpretação judicial."
+          ],
+          "current_units": 808,
+          "jurisprudence": [
+            {
+              "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552",
+              "title": "STF — ADIs 6298, 6299, 6300 e 6305",
+              "articles": [
+                "Art. 3-A",
+                "Art. 3-B",
+                "Art. 3-C",
+                "Art. 3-D",
+                "Art. 3-F",
+                "Art. 28",
+                "Art. 157",
+                "Art. 310"
+              ],
+              "explanation": "A leitura dos dispositivos deve observar o julgamento de 2023. O art. 157, § 5º, não institui impedimento automático válido: foi declarado inconstitucional. Há interpretações específicas sobre estrutura acusatória, juiz das garantias, arquivamento e custódia; não aplique remissões do Planalto como se dispensassem a decisão. O art. 310 tem ainda redação legislativa nova de 2026, destacada no quadro de mudanças."
+            }
+          ],
+          "excluded_units": 38,
+          "editorial_scope": "Leitura integral do diploma como repertório adicional. A recuperação por artigo é autoavaliada; o conjunto comentado do resumo não equivale a exemplo e questão de aplicação de cada artigo. Jurisprudência apresentada apenas nos pontos verificados."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 313"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.438/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para aumentar o prazo decadencial do direito de queixa ou de representação quando se tratar de crime praticado no âmbito de violência doméstica e familiar contra a mulher.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 38"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 3-B",
+                "Art. 78",
+                "Art. 310",
+                "Art. 313",
+                "Art. 584"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 300-A",
+                "Art. 350",
+                "Art. 350-A",
+                "Art. 350-B"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15272.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.272/2025",
+              "summary": "Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para dispor sobre as circunstâncias que recomendam a conversão da prisão em flagrante em preventiva, sobre a coleta de material biológico para obtenção e armazenamento do perfil genético do custodiado e sobre os critérios para aferição da periculosidade do agente para concessão de prisão preventiva, inclusive quando da audiência de custódia.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 310",
+                "Art. 310-A",
+                "Art. 312"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "title": "Código de Processo Penal — leitura atualizada — texto oficial conferido",
+              "sha256": "2d5f2332c6cb006699e0e6f040e20fdb9a8b2de6af15f1976953dcadfc0f5232"
+            },
+            {
+              "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552",
+              "title": "STF — julgamento das ADIs do juiz das garantias"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "codigo-processo-penal"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+    }
+  ],
+  "changes": [
+    {
+      "expected": {
+        "id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+        "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+        "unit_key": "art-3",
+        "label": "Art. 3",
+        "chapter": "LIVRO I — DO PROCESSO EM GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES",
+        "position": 2,
+        "body_text": "Art. 3o A lei processual penal admitirá interpretação extensiva e aplicação analógica, bem como o suplemento dos princípios gerais de direito.\n\nJuiz das Garantias\n\n(Incluído pela Lei nº 13.964, de 2019) (Vigência)",
+        "content_sha256": "3e4fcd0e090b7d4929269e9267ba33f66430ebbe1324f9af9f56a7b658283cf2",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 3o A lei processual penal admitirá interpretação extensiva e aplicação analógica, bem como o suplemento dos princípios gerais de direito.",
+      "content_sha256": "b99a3a1c2753d0f0ff37952880ad10b509058e46ad931bfafceaf20f0bafec21",
+      "moved_captions": [
+        "Juiz das Garantias",
+        "(Incluído pela Lei nº 13.964, de 2019) (Vigência)"
+      ]
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

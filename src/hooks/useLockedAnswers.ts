@@ -1,65 +1,63 @@
-// Respostas que o aluno já deu no Treinador, pra travar a questão quando ele
-// voltar a vê-la: pode revisar, mas não responder de novo. Só a 1ª resposta
-// de cada questão conta (mesmo critério do ranking/medalhas).
+// Read the same first-answer history in the trainer, simulator and error notebook.
 import * as React from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import type { Answer } from "@/lib/questionFormat";
+import type { Question } from "@/lib/questionFormat";
 import { fetchAllRows } from "@/lib/catalog";
+import { answerHistory, isMissingIdentitySchema, type AnswerHistoryRow, type PreviousAnswer } from "@/lib/answerHistory";
 
-export type LockedAnswer = { selected: Answer; isCorrect: boolean };
+export type LockedAnswer = PreviousAnswer;
+// Kept for the existing reinforcement history until its source metadata is migrated.
 export const lockedKey = (source: string, id: string) => `${source}:${id}`;
+const EMPTY_CATALOG: Question[] = [];
 
-type Row = {
-  question_id: string;
-  question_source: string;
-  selected_answer: string;
-  is_correct: boolean;
-  created_at: string;
-};
-
-export function useLockedAnswers(userId: string | undefined, enabled: boolean) {
-  const [locked, setLocked] = React.useState<Map<string, LockedAnswer>>(new Map());
-  const [loading, setLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    if (!enabled || !userId) {
-      setLoading(false);
-      return;
-    }
-    let active = true;
-    void (async () => {
-      try {
-        const rows = await fetchAllRows<Row>((from, to) =>
-          supabase
-            .from("question_training_responses")
-            .select("question_id,question_source,selected_answer,is_correct,created_at")
-            .eq("user_id", userId)
-            .order("created_at", { ascending: true })
-            .range(from, to),
+export function useLockedAnswers(userId: string | undefined, enabled: boolean, catalog: Pick<Question, "id" | "source" | "table">[] = EMPTY_CATALOG) {
+  const client = useQueryClient();
+  const key = ["question-locked-answers", userId];
+  const result = useQuery({
+    queryKey: key,
+    enabled: enabled && !!userId,
+    staleTime: 0,
+    retry: 0,
+    refetchOnWindowFocus: true,
+    queryFn: async () => {
+      const { error: probeError } = await supabase.rpc("get_question_first_answers" as never).range(0, 0);
+      if (!probeError) {
+        const rows = await fetchAllRows<AnswerHistoryRow>((from, to) =>
+          supabase.rpc("get_question_first_answers" as never)
+            .order("answered_at").order("question_table").order("question_id")
+            .range(from, to) as unknown as PromiseLike<{ data: AnswerHistoryRow[] | null; error: unknown }>,
         );
-        const map = new Map<string, LockedAnswer>();
-        for (const row of rows) {
-          const key = lockedKey(row.question_source, row.question_id);
-          if (!map.has(key))
-            map.set(key, { selected: row.selected_answer as Answer, isCorrect: row.is_correct });
-        }
-        if (active) setLocked(map);
-      } finally {
-        if (active) setLoading(false);
+        return { rows, identityReady: true };
       }
-    })();
-    return () => {
-      active = false;
-    };
-  }, [enabled, userId]);
-
-  const markLocked = React.useCallback((source: string, id: string, answer: LockedAnswer) => {
-    setLocked((prev) => {
-      const copy = new Map(prev);
-      copy.set(lockedKey(source, id), answer);
-      return copy;
-    });
-  }, []);
-
-  return { locked, loading, markLocked };
+      if (!isMissingIdentitySchema(probeError)) throw probeError;
+      // Compatibility before the migration: both modalities, no invented table identities.
+      const rows = await Promise.all([
+        fetchAllRows<AnswerHistoryRow>((from, to) => supabase.from("question_training_responses")
+          .select("question_id,question_source,selected_answer,is_correct,created_at")
+          .eq("user_id", userId!).order("created_at").order("id").range(from, to)),
+        fetchAllRows<AnswerHistoryRow>((from, to) => supabase.from("simulator_responses")
+          .select("question_id,question_source,selected_answer,is_correct,created_at")
+          .eq("user_id", userId!).not("selected_answer", "is", null)
+          .order("created_at").order("id").range(from, to)),
+      ]);
+      return { rows: rows.flat(), identityReady: false };
+    },
+  });
+  const locked = React.useMemo(() => answerHistory(result.data?.rows ?? [], catalog), [result.data, catalog]);
+  const markLocked = React.useCallback((question: Pick<Question, "id" | "source" | "table">, answer: LockedAnswer) => {
+    client.setQueryData<{ rows: AnswerHistoryRow[]; identityReady: boolean }>(["question-locked-answers", userId], previous => previous && ({
+      ...previous,
+      rows: [...previous.rows, { question_id: question.id, question_source: question.source, question_table: question.table ?? null,
+        selected_answer: answer.selected, is_correct: answer.isCorrect, created_at: new Date().toISOString() }],
+    }));
+  }, [client, userId]);
+  return {
+    locked,
+    identityReady: result.data?.identityReady ?? false,
+    loading: enabled && !!userId && (result.isPending || result.isFetching),
+    error: result.isError ? "Não foi possível conferir seu histórico de respostas. Tente novamente." : null,
+    reload: result.refetch,
+    markLocked,
+  };
 }

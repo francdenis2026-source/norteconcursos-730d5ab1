@@ -1,0 +1,430 @@
+{
+  "checked_at": "2026-10-12T00:32:35.741233+00:00",
+  "method": "HTML5 tree repair followed by paragraph-boundary extraction. Counts and body hashes do not certify all jurisprudence or future production of effects.",
+  "courses": 42,
+  "missing_articles": 0,
+  "unexpected_current": 0,
+  "text_differences": 0,
+  "rows": [
+    {
+      "slug": "cin",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "source_sha256": "9ac00433887e64eb0481705587716976470a4c011857bf6bb3b9a57264ecb496",
+      "parsed_current": 30,
+      "database_current": 30,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "seguranca-privada",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+      "source_sha256": "1ec9acf822a097cc7927397ae8231cc447b5ed883c983418766186bbb63f86c9",
+      "parsed_current": 72,
+      "database_current": 72,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "codigo-penal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+      "parsed_current": 401,
+      "database_current": 401,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "armas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "source_sha256": "6b6b692933a68db64bed367cc591ae8bd67a3faef58e74476d8e1d9ea77fa1ec",
+      "parsed_current": 41,
+      "database_current": 41,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "lep",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "0117cdcf9b19f4b6bc007308e188fcd459b91b26dad3524f818f212e3c9e864f",
+      "parsed_current": 215,
+      "database_current": 215,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "organizacoes",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+      "source_sha256": "d47044adea1a3fd4786df20722f24bcaff2932d366a71acdef82f77815cca786",
+      "parsed_current": 37,
+      "database_current": 37,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "terrorismo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "source_sha256": "69eae7e21984b0e55e872f3766af9a5f298438576a0843a147436e4c849bdc72",
+      "parsed_current": 17,
+      "database_current": 17,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "idosa",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "source_sha256": "df3f322e03d8a75624b578846cc8297b71890679bdc6033d7bf5b1212c733d69",
+      "parsed_current": 117,
+      "database_current": 117,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "contravencoes",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "d9b938f5b06fa29403e590d890f7916a6e681ddecff28a16d8dad03e96f9b388",
+      "parsed_current": 66,
+      "database_current": 66,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "identificacao-criminal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "source_sha256": "9d5b2beb0ea45692d12789abd5f65a145dde55ba48cc4db707f5b73e4c38dc4e",
+      "parsed_current": 13,
+      "database_current": 13,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "quimicos",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "source_sha256": "0480e98c91b2612148982a7f30afb1893d4849cc3d64c0caf5b3f11b56e56798",
+      "parsed_current": 23,
+      "database_current": 23,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "pf-interestadual",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "source_sha256": "5fb4c0ed93e9e7275ed0b7458746a147ca6307a3862ca45d34b452ae39423d98",
+      "parsed_current": 2,
+      "database_current": 2,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "abuso",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "source_sha256": "91de35132bced973dba5cef789e6b09b09d3b0167a1e3a81d48d6ff0143340e5",
+      "parsed_current": 40,
+      "database_current": 40,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "icn",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "source_sha256": "f8c77a63eda1f844f46c67f46cd1f4a9f5b2b4e847ab66077fc2d101a02f1af4",
+      "parsed_current": 13,
+      "database_current": 13,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "antifaccao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "source_sha256": "62f7695eb98a84dfb4ecb04195226c97a22137b1398de51a75b466255e62b4db",
+      "parsed_current": 43,
+      "database_current": 43,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "eca",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "source_sha256": "6d183bfd7a63690c898049008c8a02e0f4c461339555d8d1ac09a63ea52dac6a",
+      "parsed_current": 326,
+      "database_current": 326,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "migracao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+      "source_sha256": "9de36d087073c903b91d7ece11784cecc23aa5b9b47b3bb26a87f3dfb936fa08",
+      "parsed_current": 123,
+      "database_current": 123,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "racismo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "source_sha256": "c8a6748257b510ffd438be81d2e5704778faf137b97f8216727f4c921fe7e01b",
+      "parsed_current": 23,
+      "database_current": 23,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "ric",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "source_sha256": "d5a23befcd323fa16242b0c757e43b71cf55886d61a4aaafefab5ead52b70e01",
+      "parsed_current": 7,
+      "database_current": 7,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "pcd",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "2c051964f8e1f0dfca42c5e1f60cea683c0dbfb04d9c7f9195784577e4740b95",
+      "parsed_current": 127,
+      "database_current": 127,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "maria-penha",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "parsed_current": 56,
+      "database_current": 56,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "hediondos",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "source_sha256": "24bc39962f9f8c6edd656b1e3a467f7aceab112202e2645936cffb714feb9c44",
+      "parsed_current": 17,
+      "database_current": 17,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "lavagem",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "source_sha256": "87c039b8f6baef746a0c791592aff4287dce2caeadd4972c4ee4ed4bd39985c3",
+      "parsed_current": 24,
+      "database_current": 24,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "trafico-pessoas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "source_sha256": "fe68bb7fc0cb67eca20574ac08f9d81a221f7a70939f107af8ed59c8539d696a",
+      "parsed_current": 18,
+      "database_current": 18,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "interceptacao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "source_sha256": "9205da3495263069f447075d55669d13f5b55b533f5f91d6035bc9c5bc86c26c",
+      "parsed_current": 14,
+      "database_current": 14,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "transito",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "48fad0463baf167be6a3fc1ffd9994e65f665fcf8372b8e981a4f02e5117f589",
+      "parsed_current": 365,
+      "database_current": 365,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "henry-borel",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "source_sha256": "8abf451f44d28489b32399a2d48750634f81756d0af511359a144fe746d1cec0",
+      "parsed_current": 34,
+      "database_current": 34,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "sic",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "source_sha256": "e9e94ff9dd0b7608bd7ec67a79db63ab3bef32ef09b1e757818f0a077dd02246",
+      "parsed_current": 29,
+      "database_current": 29,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "delegado",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "source_sha256": "a429de881b4cc267d10f20680949eedc69cd025b5cc807f6fe1d0cd5425ddc15",
+      "parsed_current": 4,
+      "database_current": 4,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "menor-potencial-ofensivo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "source_sha256": "0dd588a7754e4f849aed996c411a988b8d35497b218ce8ca5f8fecf3c3434598",
+      "parsed_current": 8,
+      "database_current": 8,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "tortura",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "source_sha256": "c29ebc576bf28287f8195cac290d48c3e8664acd39e0f32822fbd7abb3d00001",
+      "parsed_current": 4,
+      "database_current": 4,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "codigo-processo-penal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "1778beafdacf5a385bd242daece9626bf4ed575c8621a4a39fbd6dffed177d6d",
+      "parsed_current": 808,
+      "database_current": 808,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "pensao-regulamento",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "source_sha256": "e1d95c6874210f64f8ff0450c877f6a7475ff1567db100ed2affd9e4175cbc6e",
+      "parsed_current": 22,
+      "database_current": 22,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "uso-forca",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "source_sha256": "ed70fcb6c063c794473221dc957052c97067ea249eaaa4684b287f76ac1c9fa0",
+      "parsed_current": 11,
+      "database_current": 11,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "identidade",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "source_sha256": "37a0b7999247aa64b286f82a6f8b964ee4dcf2c1eeb1b5bc8bff994be93bdfd8",
+      "parsed_current": 13,
+      "database_current": 13,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "ambientais",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "3d2c03ec1cd2715c2651c06c925b88dfe5808bb1bb8c3eb8a1fdb5fff3b4d44f",
+      "parsed_current": 79,
+      "database_current": 79,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "testemunhas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "source_sha256": "3d543ce55c0de9bcec110b58a0a2d692f1c0e8b58bc5a8a689999ea604ba17df",
+      "parsed_current": 22,
+      "database_current": 22,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "temporaria",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "source_sha256": "2c4ad7ac9d6cf5fd41c7ee6ebbca9725be4ed02e36d7c13d21ac765475611bc0",
+      "parsed_current": 7,
+      "database_current": 7,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "budapeste",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11491.htm",
+      "source_sha256": "3ec6fb44461208503e820f255934390af751a93e0962a1607a91fa691246bcf6",
+      "parsed_current": 51,
+      "database_current": 51,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "juizados",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "source_sha256": "c0dff43605eb08e24a44b572f05fedec995ca1967fec6a2392e97cede7018a86",
+      "parsed_current": 98,
+      "database_current": 98,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "cpf",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "source_sha256": "ea2acd23920ade87062012fcd17c6bb194103065f1f0f46890dc453c96c5d9f9",
+      "parsed_current": 7,
+      "database_current": 7,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    },
+    {
+      "slug": "drogas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "86b928590095e37cb2dbeda93598a2fb8a790ac8a1e43c483a2de48f0823481b",
+      "parsed_current": 84,
+      "database_current": 84,
+      "missing_articles": [],
+      "unexpected_current": [],
+      "text_differences": []
+    }
+  ]
+}

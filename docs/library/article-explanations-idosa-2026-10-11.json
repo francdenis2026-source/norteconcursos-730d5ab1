@@ -1,0 +1,2836 @@
+{
+  "version": "2026-10-11",
+  "checked_at": "2026-10-11T20:26:58.642123+00:00",
+  "laws": [
+    {
+      "slug": "idosa",
+      "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+      "units": 117,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "source_sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5",
+      "source_checked_at": "2026-10-11T18:39:29.554167+00:00",
+      "additional_sources": [
+        {
+          "name": "stj-tema-952",
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+          "sha256": "b532b1887c3c6593176e3bc320faa9c9b6a86eca3725eeb98c34baec3f84455f",
+          "checked_at": "2026-10-11T20:12:45.788329+00:00"
+        },
+        {
+          "name": "stj-tema-1016",
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+          "sha256": "83e37e410198b56340953c9c1b4b4263e810b5965cc3d66e247f57306e3443cd",
+          "checked_at": "2026-10-11T20:12:45.788329+00:00"
+        },
+        {
+          "name": "cpc",
+          "title": "Código de Processo Civil — Lei 13.105/2015",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+          "sha256": "edc3ec5e2a3478b48415fa251382d487caa41a899e85c47acf8a33c4be9c5fc3",
+          "checked_at": "2026-10-11T20:20:46.544237+00:00"
+        },
+        {
+          "name": "politica-idosa",
+          "title": "Política Nacional da Pessoa Idosa — Lei 8.842/1994",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8842.htm",
+          "sha256": "2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1",
+          "checked_at": "2026-10-11T20:20:46.544237+00:00"
+        },
+        {
+          "name": "prioridade-atendimento",
+          "title": "Atendimento prioritário — Lei 10.048/2000",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+          "sha256": "77615455be63a05cd524f7873197b82d4898ee5d53bee34118bac3168d138e64",
+          "checked_at": "2026-10-11T20:20:46.544237+00:00"
+        },
+        {
+          "name": "fundo-idosa",
+          "title": "Fundo Nacional da Pessoa Idosa — Lei 12.213/2010",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12213.htm",
+          "sha256": "b3bc43086980781f820395f224ef4e30124c6855dae454fb97b5160d238ea872",
+          "checked_at": "2026-10-11T20:20:46.544237+00:00"
+        },
+        {
+          "name": "codigo-penal",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff",
+          "checked_at": "2026-10-11T18:39:29.554167+00:00"
+        },
+        {
+          "name": "codigo-processo-penal",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "sha256": "8b203895d0121a54facae748f4423f5a245c037b0eca13039e8ebb30bb11c0ee",
+          "checked_at": "2026-10-11T18:39:29.554167+00:00"
+        },
+        {
+          "name": "tortura",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "sha256": "dde1996257896984a2789c926f6936732209dda9cb6e73313f917870550ac53e",
+          "checked_at": "2026-10-11T18:39:29.554167+00:00"
+        },
+        {
+          "name": "contravencoes",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+          "sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032",
+          "checked_at": "2026-10-11T18:39:29.554167+00:00"
+        },
+        {
+          "name": "drogas",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+          "sha256": "dfc0e50e441f34a61ab249ccf0b9aee9982ea4eb2bc5471439e3daaf2f1e3ed8",
+          "checked_at": "2026-10-11T18:39:29.554167+00:00"
+        },
+        {
+          "title": "Constituição Federal — art. 12, §4º, redação da EC 131/2023",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "sha256": "249bc8f42e023faf2d7e70152e8f01fe06166ec28b6e2b75cd27c5e1a8e664ef",
+          "checked_at": "2026-10-11T18:56:23.073566+00:00"
+        }
+      ],
+      "scope": "Explicação, caso com variação e recuperação ativa para cada dispositivo vigente; não certifica cobertura de toda jurisprudência."
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "c9a92687-f5d7-565d-adc9-7b551ae15fea",
+      "content_sha256": "d378cc0e86429d07ad4804a9a9e552d5fb73024880e5a0392245a4a93b0d8ecb",
+      "simples": "O Estatuto regula direitos das pessoas com idade igual ou superior a sessenta anos. A Lei 14.423/2022 atualizou a denominação para Estatuto da Pessoa Idosa.",
+      "pontos": [
+        "Sessenta anos completos bastam; benefícios específicos podem exigir idade diferente."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Sessenta anos completos bastam; benefícios específicos podem exigir idade diferente."
+      ],
+      "exemplo": "Marina completou sessenta anos e está abrangida pelo Estatuto. Variação: Carlos tem cinquenta e nove: ainda não atingiu o limite deste artigo.",
+      "prova": [
+        "É preciso ter sessenta e cinco anos para ser abrangido? Não; a regra geral começa aos sessenta."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "76b8e9ea-49de-5543-8aa6-2bf810bbd026",
+      "content_sha256": "bc9df8dcab831a6cfd2acf6dd5a9a68f2d6a53efd9fb209f3cbf9a233483b7c7",
+      "simples": "A pessoa idosa conserva todos os direitos fundamentais e recebe proteção integral, com oportunidades para saúde física e mental e aperfeiçoamento moral, intelectual, espiritual e social em liberdade e dignidade.",
+      "pontos": [
+        "Proteção integral acrescenta garantias; não retira autonomia nem direitos fundamentais."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Proteção integral acrescenta garantias; não retira autonomia nem direitos fundamentais."
+      ],
+      "exemplo": "Um programa oferece educação e convivência sem restringir a liberdade dos participantes. Variação: O programa proíbe toda escolha pessoal apenas pela idade: proteção não autoriza eliminar liberdade e dignidade.",
+      "prova": [
+        "A proteção integral substitui os direitos fundamentais? Não; é assegurada sem prejuízo deles."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "ff2a85d7-215b-5746-bbdf-1b28d5fc7a9f",
+      "content_sha256": "4274a20962f884487279aaadf91dd30a1dfd38d4dd2a62b4b602b663d04a0e34",
+      "simples": "Família, comunidade, sociedade e poder público devem assegurar direitos com absoluta prioridade. Ela inclui atendimento individualizado, políticas e recursos, integração entre gerações, família com exceções, capacitação, informação, saúde e assistência, restituição do IR e preferência especial aos maiores de oitenta.",
+      "pontos": [
+        "O atendimento familiar tem exceção para quem não possui família ou condições de sobrevivência; a prioridade não é dever exclusivo do Estado."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "O atendimento familiar tem exceção para quem não possui família ou condições de sobrevivência; a prioridade não é dever exclusivo do Estado."
+      ],
+      "exemplo": "Entre pessoas idosas, uma pessoa de oitenta e um anos recebe a preferência especial prevista. Variação: Na saúde há emergência: consulte a ressalva do art. 15, §7º, antes de ordenar atendimento apenas pela idade.",
+      "prova": [
+        "A restituição do Imposto de Renda está na lista de prioridades? Sim; consta do inciso IX do §1º."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "6ae9679c-c96a-5fc6-b40b-be973ecd5dd6",
+      "content_sha256": "4c6a06c9c41d54b6c49822fbdefd402d6e2bdf76b71e838d5409fa8036c0d649",
+      "simples": "É proibida negligência, discriminação, violência, crueldade ou opressão. Violações por ação ou omissão são punidas na forma da lei, e todos devem prevenir ameaças e violações, sem excluir outras obrigações de prevenção.",
+      "pontos": [
+        "A omissão pode violar direitos; prevenção não exige esperar o dano acontecer."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A omissão pode violar direitos; prevenção não exige esperar o dano acontecer."
+      ],
+      "exemplo": "O responsável toma providências diante de ameaça de violência contra residente. Variação: Ele sabe da ameaça e nada faz: não se exclui violação apenas por ausência de ação física.",
+      "prova": [
+        "Somente conduta ativa pode atentar contra os direitos? Não; o artigo inclui ação e omissão."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "e8dfcfd5-bb5c-57d0-9474-9196bd42e540",
+      "content_sha256": "42063fe6cd0d52a1b4c0cbf0daf482485ffc0456c560e6c9eb4000ae90e0aded",
+      "simples": "A inobservância das normas de prevenção importa responsabilidade da pessoa física ou jurídica nos termos da lei. O dispositivo abrange indivíduos e organizações, respeitando o regime legal aplicável.",
+      "pontos": [
+        "Este artigo não fixa, sozinho, uma pena criminal única ou responsabilidade automática sem análise legal."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Este artigo não fixa, sozinho, uma pena criminal única ou responsabilidade automática sem análise legal."
+      ],
+      "exemplo": "Uma entidade deixa de cumprir norma de prevenção: sua condição de pessoa jurídica não a exclui da responsabilidade prevista. Variação: A falha é de indivíduo: pessoa física também está abrangida.",
+      "prova": [
+        "A regra responsabiliza somente pessoas físicas? Não; menciona também pessoas jurídicas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "5ad39e26-d559-5532-8660-98e3b9afe2fc",
+      "content_sha256": "cb4108f4f61e5cfd033483ad05d2e6f6ef70ad4bb985383afabb37363230d0b7",
+      "simples": "Todo cidadão deve comunicar à autoridade competente violações que testemunhe ou de que tenha conhecimento. A obrigação não se limita à pessoa que presenciou diretamente os fatos.",
+      "pontos": [
+        "Conhecimento e testemunho são hipóteses alternativas do texto."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Conhecimento e testemunho são hipóteses alternativas do texto."
+      ],
+      "exemplo": "Luana toma conhecimento de violência e comunica a autoridade competente. Variação: Não esteve no local: isso não elimina o dever decorrente do conhecimento.",
+      "prova": [
+        "O dever depende de testemunhar pessoalmente a violação? Não; também alcança quem tenha conhecimento dela."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "e5d3be87-d596-5f27-a6cc-c879ed24ba3d",
+      "content_sha256": "9620ffd85d551dc68b0a83969ff16f668eec0f5716d9e1bcfab225e70a5ceb29",
+      "simples": "Conselhos Nacional, Estaduais, do Distrito Federal e Municipais da Pessoa Idosa zelam pelo cumprimento dos direitos definidos no Estatuto, conforme a Lei 8.842/1994.",
+      "pontos": [
+        "O Distrito Federal está expressamente incluído; não reduza o dever aos municípios."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "O Distrito Federal está expressamente incluído; não reduza o dever aos municípios."
+      ],
+      "exemplo": "O conselho estadual acompanha o cumprimento de direitos no atendimento local. Variação: A questão afirma que somente o conselho nacional pode zelar: ignora os demais níveis previstos.",
+      "prova": [
+        "O conselho do Distrito Federal está abrangido? Sim; é expressamente mencionado."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "28cd6375-ddd9-5751-abf0-869419f9830a",
+      "content_sha256": "b8b30758c5581ab52f5b10fdba74019f53b8ec5b32772851cea1e337963837ad",
+      "simples": "O envelhecimento é direito personalíssimo, enquanto sua proteção é direito social. A distinção conecta a experiência individual de envelhecer à responsabilidade coletiva de proteção.",
+      "pontos": [
+        "Não inverta personalíssimo e social."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não inverta personalíssimo e social."
+      ],
+      "exemplo": "Uma política de cuidado concretiza a proteção social do envelhecimento individual. Variação: A questão classifica a proteção como apenas personalíssima: troca as categorias do texto.",
+      "prova": [
+        "Qual é o direito social mencionado? A proteção do envelhecimento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "0e9bac50-158d-53ed-8809-e94b3ad37268",
+      "content_sha256": "ce31a697add7726c0a49d9da9ef48b9d6f6ae516854a18d591553d327072feda",
+      "simples": "O Estado deve proteger vida e saúde por políticas sociais públicas capazes de permitir envelhecimento saudável e digno. A obrigação é de atuação pública, sem apagar os deveres compartilhados do art. 3º.",
+      "pontos": [
+        "Vida, saúde e dignidade orientam as políticas; não há aqui transferência exclusiva de deveres à família."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Vida, saúde e dignidade orientam as políticas; não há aqui transferência exclusiva de deveres à família."
+      ],
+      "exemplo": "O município organiza política de saúde voltada ao envelhecimento saudável. Variação: Alega que só familiares devem cuidar: a afirmação contraria o dever estatal deste artigo.",
+      "prova": [
+        "O Estado pode limitar-se a reconhecer formalmente os direitos? Não; deve efetivar políticas que permitam envelhecimento saudável e digno."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "6c684c0b-8531-5be7-a96b-24ce8014b88d",
+      "content_sha256": "e87cf18d80446cbad23bd09c6bfa34b1d8b3bcf31aa3203abb26fbc29fdfd4ad",
+      "simples": "Estado e sociedade asseguram liberdade, respeito e dignidade. A liberdade abrange locomoção com restrições legais, expressão, crença, esporte, convívio, política na forma da lei e busca de auxílio. O respeito protege integridade, imagem, identidade, autonomia, crenças, espaços e objetos pessoais.",
+      "pontos": [
+        "Todos devem afastar tratamento desumano, violento, aterrorizante, vexatório ou constrangedor; liberdade não elimina restrições legais."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Todos devem afastar tratamento desumano, violento, aterrorizante, vexatório ou constrangedor; liberdade não elimina restrições legais."
+      ],
+      "exemplo": "Uma instituição preserva objetos pessoais e decisões da residente. Variação: Retira todos os seus objetos sem fundamento apenas pela idade: isso afronta a esfera de respeito descrita.",
+      "prova": [
+        "A participação política dispensa as condições legais? Não; é assegurada na forma da lei."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "8fc1f4b5-45c8-53ab-b543-a551740ea33c",
+      "content_sha256": "99f7b6fade91d57e46a6671d4b403a46a5468a3b2f7ee6bf68224aadf91d004e",
+      "simples": "Os alimentos devidos à pessoa idosa seguem a lei civil. O artigo remete ao regime civil; não define aqui valor fixo nem transforma a prestação em benefício previdenciário.",
+      "pontos": [
+        "Leia junto dos arts. 12 e 13: solidariedade e formalização têm regras próprias."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Leia junto dos arts. 12 e 13: solidariedade e formalização têm regras próprias."
+      ],
+      "exemplo": "Uma demanda de alimentos exige aplicação da disciplina civil pertinente. Variação: A questão fixa sempre um salário mínimo como alimentos: o art. 11 não estabelece esse valor.",
+      "prova": [
+        "O Estatuto fixa neste artigo valor único de alimentos? Não; remete à lei civil."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "d7e833fb-b5d0-58b1-bfee-a6ea9b0ab16f",
+      "content_sha256": "b534a37677401fb0d4b4ce6bbcb3172b5dfa303c8586d4092a94392c638fda3f",
+      "simples": "A obrigação alimentar é solidária e a pessoa idosa pode optar entre os prestadores. A escolha protege o credor, sem dispensar os pressupostos civis da obrigação.",
+      "pontos": [
+        "Não imponha ao credor fracionamento obrigatório entre todos os devedores."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não imponha ao credor fracionamento obrigatório entre todos os devedores."
+      ],
+      "exemplo": "Havendo prestadores obrigados na forma civil, a pessoa idosa escolhe a quem demandar. Variação: O enunciado exige que ela cobre simultaneamente todos: ignora a opção do artigo.",
+      "prova": [
+        "A pessoa idosa pode escolher entre os prestadores? Sim; a obrigação é solidária."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "6360f1da-ccd1-5590-b2eb-080cfaaaf14e",
+      "content_sha256": "2d41149415d1774bd996df39ef19d7a714e1428200f2e45b52c48d9dc6c79417",
+      "simples": "Transações de alimentos podem ser celebradas perante Promotor de Justiça ou Defensor Público. Referendadas por eles, produzem título executivo extrajudicial nos termos processuais civis.",
+      "pontos": [
+        "Não omita a Defensoria nem confunda o título com sentença judicial."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não omita a Defensoria nem confunda o título com sentença judicial."
+      ],
+      "exemplo": "Acordo de alimentos é referendado por Defensor Público e adquire o efeito previsto. Variação: A questão reconhece esse efeito apenas ao acordo perante Promotor: desconsidera a alternativa legal.",
+      "prova": [
+        "O título resultante é judicial? Não; o artigo o qualifica como executivo extrajudicial."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "e773ad88-ef73-50e3-9b7d-7ef96b2d0a68",
+      "content_sha256": "2c64e25ee6709cfb3709c665de888791387cd06f59e56863d157fb347616b79c",
+      "simples": "O texto impõe ao poder público prover o sustento no âmbito da assistência social se a pessoa idosa ou seus familiares não possuem condições econômicas de fazê-lo. O fundamento é a insuficiência de condições de sustento prevista na lei.",
+      "pontos": [
+        "Não transforme esse dever em pensão automática e incondicional para toda pessoa idosa; a aplicação exige exame da situação e das regras assistenciais."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não transforme esse dever em pensão automática e incondicional para toda pessoa idosa; a aplicação exige exame da situação e das regras assistenciais."
+      ],
+      "exemplo": "Há insuficiência econômica de sustento no caso: examina-se o provimento pela assistência social. Variação: A questão exige pagamento universal apenas pela idade: não considera a condição econômica do artigo.",
+      "prova": [
+        "O provimento aqui é situado na previdência contributiva? Não; no âmbito da assistência social."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "2fbe9135-b431-5554-bb89-4551f178f7ef",
+      "content_sha256": "c1161f3f446c2149c187db16ac43bb5534d50f5a67c72e0f0d7e8164c8ea5bcf",
+      "simples": "A saúde integral é assegurada pelo SUS, com prevenção, atendimento geriátrico, unidades especializadas, cuidado domiciliar quando necessário e reabilitação. Há fornecimento gratuito de medicamentos e recursos terapêuticos, cuidado especializado, proteção do enfermo contra comparecimento exigido, perícia domiciliar e preferência dos maiores de oitenta, exceto emergência.",
+      "pontos": [
+        "Planos de saúde: o §3º veda discriminação. O Tema 952/STJ admite reajuste etário de plano individual ou familiar com previsão contratual, normas regulatórias e base atuarial idônea, sem percentuais abusivos ou discriminatórios. O Tema 1016 estende as teses aos coletivos, ressalvando autogestão quanto ao CDC. Isso não valida qualquer aumento."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Planos de saúde: o §3º veda discriminação. O Tema 952/STJ admite reajuste etário de plano individual ou familiar com previsão contratual, normas regulatórias e base atuarial idônea, sem percentuais abusivos ou discriminatórios. O Tema 1016 estende as teses aos coletivos, ressalvando autogestão quanto ao CDC. Isso não valida qualquer aumento."
+      ],
+      "exemplo": "A enferma não pode locomover-se: o caso permite examinar cuidado e perícia domiciliares, nas condições dos §§1º e 6º. Variação: Outra pessoa precisa de atendimento emergencial: a preferência etária do §7º não substitui a ressalva de emergência.",
+      "prova": [
+        "Todo reajuste etário é necessariamente inválido? Não; examine os requisitos do Tema 952 e, para coletivos, o Tema 1016. Reajuste abusivo ou discriminatório não é legitimado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "STJ — Temas Repetitivos 952 e 1016; fonte oficial nas referências deste lote."
+      ]
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "42bf6ebd-e4c4-5431-9621-cf7b9fa9560a",
+      "content_sha256": "c2e3486e20de68be6f46f88df2eaecdf27d86e39d7ca107b66547227211a24dc",
+      "simples": "À pessoa internada ou em observação é assegurado acompanhante, com condições de permanência integral segundo critério médico. O profissional responsável autoriza ou justifica por escrito a impossibilidade.",
+      "pontos": [
+        "A regra também abrange observação; eventual impossibilidade exige justificação escrita."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A regra também abrange observação; eventual impossibilidade exige justificação escrita."
+      ],
+      "exemplo": "Uma paciente em observação recebe condições de permanência do acompanhante. Variação: O responsável impede acompanhamento: deve justificar por escrito a impossibilidade, não apenas negar verbalmente.",
+      "prova": [
+        "A observação está fora da regra? Não; internação e observação são expressamente incluídas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17",
+      "unit_id": "b9fc61ec-adea-5de4-8e43-b2b80ce42266",
+      "content_sha256": "2bc629760248b810d899fb3ff3b53a42431f20a0b2efc53ebc47ede0588499b9",
+      "simples": "A pessoa idosa com domínio das faculdades mentais escolhe o tratamento mais favorável. Se não puder escolher, atuam curador, familiares nas condições legais ou médico em risco iminente sem tempo de consulta; sem curador ou familiar conhecido, o médico decide e comunica ao Ministério Público.",
+      "pontos": [
+        "Idade não significa incapacidade; risco iminente e ausência de tempo alteram quem decide."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Idade não significa incapacidade; risco iminente e ausência de tempo alteram quem decide."
+      ],
+      "exemplo": "Há risco iminente de vida e não há tempo para ouvir curador ou familiar: o inciso III atribui a decisão ao médico. Variação: Não há curador nem familiar conhecido: o médico decide e deve comunicar o fato ao Ministério Público, conforme inciso IV.",
+      "prova": [
+        "Familiares podem substituir toda escolha de pessoa idosa capaz apenas pela idade? Não; o caput assegura sua opção."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "46ee1b5b-1b4b-5b1f-b5e1-c72fe64dda46",
+      "content_sha256": "5774db09d8cfa685b2bacf07585d7a205f9261c0360767ec55917f607418c5ed",
+      "simples": "Instituições de saúde devem atender às necessidades da pessoa idosa mediante critérios mínimos, treinamento e capacitação profissional, além de orientação a cuidadores familiares e grupos de autoajuda.",
+      "pontos": [
+        "O cuidado qualificado envolve profissionais e apoio a cuidadores; não se limita a equipamentos."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "O cuidado qualificado envolve profissionais e apoio a cuidadores; não se limita a equipamentos."
+      ],
+      "exemplo": "O serviço capacita sua equipe e orienta familiares cuidadores. Variação: Capacita apenas profissionais e ignora orientação aos cuidadores: deixa incompleta a atuação descrita.",
+      "prova": [
+        "Cuidadores familiares são mencionados? Sim; devem receber orientação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-19",
+      "unit_id": "df87f22a-3803-5554-afdb-cdb3ddd05faa",
+      "content_sha256": "25ffed1a7c41c8e40844937f078f2b2ff00fd1c7af9611985b136a76d73ddf3b",
+      "simples": "Suspeita ou confirmação de violência exige notificação compulsória dos serviços públicos e privados à autoridade sanitária e comunicação aos órgãos enumerados: polícia, Ministério Público e conselhos municipal, estadual ou nacional. Violência inclui ação ou omissão, em local público ou privado, que cause morte, dano ou sofrimento físico ou psicológico.",
+      "pontos": [
+        "Não espere prova definitiva; suspeita já aciona o dever. Comunicação e notificação sanitária são deveres distintos."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não espere prova definitiva; suspeita já aciona o dever. Comunicação e notificação sanitária são deveres distintos."
+      ],
+      "exemplo": "A clínica privada suspeita de violência psicológica e deve proceder às notificações e comunicações previstas. Variação: Não há lesão visível: isso não exclui sofrimento psicológico nem permite ignorar a suspeita.",
+      "prova": [
+        "Somente hospitais públicos precisam notificar? Não; serviços públicos e privados estão abrangidos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "b9a808d6-bad4-5ba7-b724-b3dafb6c4e72",
+      "content_sha256": "d17aa1578c0e76e7c1fe83143cef1b0b831e5036d546ca1b7f5c2aa7df2e2346",
+      "simples": "Educação, cultura, esporte, lazer, diversões, espetáculos, produtos e serviços devem respeitar a condição de idade da pessoa idosa. Trata-se de acesso com respeito às peculiaridades, não de exclusão pela idade.",
+      "pontos": [
+        "Adequação não significa proibição geral de participação."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Adequação não significa proibição geral de participação."
+      ],
+      "exemplo": "Um curso adapta atividades para permitir participação com dignidade. Variação: Exclui todos os maiores de sessenta por conveniência: respeito à condição etária não autoriza esse impedimento geral.",
+      "prova": [
+        "Este artigo limita o direito apenas à educação? Não; inclui os demais direitos, produtos e serviços enumerados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "d1b45f4b-4a6d-5a2e-9c62-8e01c575fba0",
+      "content_sha256": "b2ce39ff1df470e12a3f8f03d2dd62d71ee216bbcd0bc84ab8c8bdfb3554a948",
+      "simples": "O poder público cria oportunidades educacionais com currículos, métodos e materiais adequados. Cursos especiais incluem comunicação, computação e avanços tecnológicos; comemorações cívicas e culturais permitem transmitir conhecimentos entre gerações.",
+      "pontos": [
+        "Aprendizagem tecnológica e preservação da memória cultural são dimensões distintas e complementares."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Aprendizagem tecnológica e preservação da memória cultural são dimensões distintas e complementares."
+      ],
+      "exemplo": "O curso especial ensina comunicação digital e computação. Variação: A atividade é uma comemoração cultural intergeracional: também pode concretizar o §2º.",
+      "prova": [
+        "Os cursos especiais podem ignorar os avanços tecnológicos? Não; o §1º inclui esse conteúdo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "30a9ae52-fc41-53fe-95f0-30decd527d32",
+      "content_sha256": "5d135e6a2c64198212550f240801eccfe436e83bdce0154d10fb3d9050c203e2",
+      "simples": "Os currículos mínimos dos diferentes níveis de ensino formal incluem envelhecimento, respeito e valorização da pessoa idosa para eliminar preconceito e produzir conhecimento.",
+      "pontos": [
+        "A regra alcança ensino formal em diversos níveis, não apenas cursos para pessoas idosas."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A regra alcança ensino formal em diversos níveis, não apenas cursos para pessoas idosas."
+      ],
+      "exemplo": "Uma escola insere conteúdo sobre respeito ao envelhecimento. Variação: A questão restringe a obrigação a universidades da terceira idade: reduz indevidamente o alcance.",
+      "prova": [
+        "Somente cursos destinados a pessoas idosas recebem esses conteúdos? Não; são previstos nos diversos níveis de ensino formal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-23",
+      "unit_id": "3ca1de90-e032-5ea8-b705-f754bc657afa",
+      "content_sha256": "ba6410c28c315665a47bcd3d1bfad5704c641ebf444a312fb169be59296a8b4a",
+      "simples": "Eventos artísticos, culturais, esportivos e de lazer oferecem desconto de pelo menos cinquenta por cento nos ingressos e acesso preferencial aos locais. O desconto mínimo e o acesso preferencial são garantias cumulativas.",
+      "pontos": [
+        "Pelo menos cinquenta não significa exatamente cinquenta nem gratuidade obrigatória."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Pelo menos cinquenta não significa exatamente cinquenta nem gratuidade obrigatória."
+      ],
+      "exemplo": "Um ingresso de cem reais custa cinquenta para pessoa idosa e há acesso preferencial. Variação: Custa sessenta: desconto de quarenta por cento fica abaixo do mínimo.",
+      "prova": [
+        "Desconto de sessenta por cento contraria o artigo? Não; supera o mínimo de cinquenta."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24",
+      "unit_id": "52a00acd-3a7b-5545-89ad-c9348e16beef",
+      "content_sha256": "926fe6e31e60f61b6378935b5443ba57bab906e7c6bcf38920c76583b044def1",
+      "simples": "Meios de comunicação mantêm espaços ou horários especiais voltados às pessoas idosas, com objetivos informativos, educativos, artísticos e culturais, e informam o público sobre envelhecimento.",
+      "pontos": [
+        "A regra também orienta a informação ao público em geral."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A regra também orienta a informação ao público em geral."
+      ],
+      "exemplo": "Uma emissora cria horário educativo sobre direitos e envelhecimento. Variação: A questão limita o espaço a publicidade comercial: ignora as finalidades do artigo.",
+      "prova": [
+        "A informação sobre envelhecimento é dirigida exclusivamente à pessoa idosa? Não; também ao público."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "56e73e7c-8f87-5a5f-bed0-3384d415522a",
+      "content_sha256": "5e38228be07f64f53bc40b408e16713157c506bb3fd3e68c29287b095e918d20",
+      "simples": "Instituições de educação superior oferecem cursos e extensão ao longo da vida, presenciais ou a distância, com atividades formais e não formais. O poder público apoia universidade aberta e publicações adequadas para facilitar leitura.",
+      "pontos": [
+        "A modalidade a distância é expressamente possível; o apoio editorial considera redução visual."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A modalidade a distância é expressamente possível; o apoio editorial considera redução visual."
+      ],
+      "exemplo": "A universidade oferece extensão a distância com materiais legíveis. Variação: A questão exige somente ensino presencial: contraria a alternativa legal.",
+      "prova": [
+        "A extensão precisa ser exclusivamente formal? Não; admite atividades formais e não formais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "13dc6626-afdf-5714-a0d4-10305c338427",
+      "content_sha256": "1ae1bac62d3b370f743d4dbd64a8dc5d492b5e7e4a8b6f973b19a02d74ab577a",
+      "simples": "A pessoa idosa tem direito à atividade profissional, respeitando condições físicas, intelectuais e psíquicas. A garantia exige atenção às condições reais de exercício, sem exclusão geral por idade.",
+      "pontos": [
+        "Não presuma incapacidade a partir da idade."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não presuma incapacidade a partir da idade."
+      ],
+      "exemplo": "Uma profissional mantém atividade compatível com suas condições. Variação: O caso envolve limitação concreta: deve-se respeitá-la, sem concluir por proibição universal de trabalho.",
+      "prova": [
+        "O direito ignora as condições psíquicas? Não; elas são expressamente mencionadas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-27",
+      "unit_id": "f569aca8-8758-56fb-ad34-9b3031edad45",
+      "content_sha256": "a29b810415f7b863dc5246ebfc1906f2ebbfd468ee27b2c193a96459e343fb88",
+      "simples": "A admissão em trabalho ou emprego, inclusive concursos, não pode discriminar nem fixar idade máxima, ressalvada exigência decorrente da natureza do cargo. O primeiro desempate em concurso é a idade, com preferência à mais elevada.",
+      "pontos": [
+        "A ressalva não autoriza limite arbitrário para todo cargo. A análise de edital concreto também exige sua base legal e constitucional."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "A ressalva não autoriza limite arbitrário para todo cargo. A análise de edital concreto também exige sua base legal e constitucional."
+      ],
+      "exemplo": "Dois candidatos empatam na hipótese do Estatuto: a preferência etária favorece o mais velho. Variação: O edital cria limite máximo sem relação com a natureza do cargo: o artigo não autoriza essa discriminação.",
+      "prova": [
+        "O desempate previsto favorece o mais jovem? Não; favorece a idade mais elevada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "9902b48f-377a-5f6d-8183-e5b12504339b",
+      "content_sha256": "6551fb3ba8de3d2576d9d41147593eddf78c931f3998cbf178ecd5fc1a21068f",
+      "simples": "O poder público estimula profissionalização especializada, preparação para aposentadoria com antecedência mínima de um ano e admissão de pessoas idosas em empresas privadas. A preparação inclui projetos de interesse do trabalhador e esclarecimento de direitos.",
+      "pontos": [
+        "Um ano é mínimo, não prazo máximo."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Um ano é mínimo, não prazo máximo."
+      ],
+      "exemplo": "A preparação começa dezoito meses antes da aposentadoria: atende ao mínimo temporal. Variação: Começa apenas seis meses antes: fica abaixo da antecedência mínima.",
+      "prova": [
+        "O artigo prevê somente preparação financeira? Não; inclui novos projetos sociais e direitos sociais e de cidadania."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-29",
+      "unit_id": "745c7385-0bae-5d91-9dd0-71258cf7b513",
+      "content_sha256": "7e6f1817727fa8d3b4396375605b58c5a22e235b4239dc3a7a9a379bd4ac1b53",
+      "simples": "A concessão de aposentadorias e pensões do RGPS observa critérios legais de preservação do valor real dos salários de contribuição. Benefícios mantidos têm reajuste na mesma data do salário mínimo, proporcional às datas próprias, por percentual regulamentar e critérios da Lei 8.213.",
+      "pontos": [
+        "Mesma data não significa mesmo percentual nem benefício sempre igual ao salário mínimo; cálculo exige legislação previdenciária vigente."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Mesma data não significa mesmo percentual nem benefício sempre igual ao salário mínimo; cálculo exige legislação previdenciária vigente."
+      ],
+      "exemplo": "Um benefício acima do piso é reajustado na data prevista, pelo índice aplicável ao seu regime. Variação: A questão atribui automaticamente o percentual do salário mínimo a todo benefício: o artigo não diz isso.",
+      "prova": [
+        "Data igual de reajuste implica percentual igual? Não; são elementos distintos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "3f36b9da-7b21-5fde-a5d1-c7ef70ba1a64",
+      "content_sha256": "64529e62233d163f5c4e0e00b3fff97c41e98bd2c53b94989d6687feab0fd8ea",
+      "simples": "Para a aposentadoria por idade tratada no artigo, perder a qualidade de segurado não impede concessão quando há contribuição mínima correspondente à carência exigida na data do requerimento. O cálculo remete às leis previdenciárias indicadas.",
+      "pontos": [
+        "Este artigo não dispensa idade e demais requisitos vigentes nem resolve sozinho as regras posteriores da reforma previdenciária."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Este artigo não dispensa idade e demais requisitos vigentes nem resolve sozinho as regras posteriores da reforma previdenciária."
+      ],
+      "exemplo": "A pessoa perdeu a qualidade, mas tem a carência exigida: essa perda, isoladamente, não é impedimento conforme o texto. Variação: Falta a carência exigida: não foi satisfeita a condição expressa desta regra.",
+      "prova": [
+        "A perda da qualidade dispensa o cumprimento da carência? Não; a carência mínima é condição expressa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "4eaa1c1e-9f15-56f2-9c64-cc050173590f",
+      "content_sha256": "d3883fb33272c6f16cf2f7c00cd63dcc7529c57912c00ec784f423b5f7fcafcb",
+      "simples": "Parcelas de benefícios atrasadas por responsabilidade da Previdência são atualizadas pelo índice de reajuste dos benefícios do RGPS, entre o mês em que deveriam ter sido pagas e o pagamento efetivo.",
+      "pontos": [
+        "Responsabilidade pelo atraso, índice e intervalo precisam estar demonstrados."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Responsabilidade pelo atraso, índice e intervalo precisam estar demonstrados."
+      ],
+      "exemplo": "A Previdência paga tarde parcela devida: calcula-se a atualização no intervalo legal. Variação: O exercício começa o intervalo só no mês do pagamento: omite o período desde quando a parcela era devida.",
+      "prova": [
+        "Qual índice o artigo indica? O utilizado para reajustar benefícios do RGPS."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "520c15e0-5b72-5ba5-92cf-65bc0a880268",
+      "content_sha256": "d4cb59f7cdafe2109815c39a9341f1ec4df391c1f06499308647f387a9d024e1",
+      "simples": "O primeiro de maio, Dia Mundial do Trabalho, é a data-base dos aposentados e pensionistas no Estatuto. O dispositivo não fixa percentual de reajuste.",
+      "pontos": [
+        "Não confunda data-base deste artigo com todos os critérios de cálculo e reajuste previdenciário."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não confunda data-base deste artigo com todos os critérios de cálculo e reajuste previdenciário."
+      ],
+      "exemplo": "A pergunta pede a data-base textual: primeiro de maio. Variação: Pede um percentual de aumento: ele não é definido aqui.",
+      "prova": [
+        "O artigo determina um percentual único anual? Não; estabelece a data-base."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "e2d41268-6e07-5ed1-ab27-e0f11f9620d1",
+      "content_sha256": "3bbb81d6d43e7b2e60ae9f23e3b85196400a2a8b40fe4a4a0d8e10e2ddd7cb22",
+      "simples": "A assistência social deve ser articulada com a Loas, a Política Nacional da Pessoa Idosa, o SUS e outras normas pertinentes. A integração evita tratar a proteção como serviço isolado.",
+      "pontos": [
+        "Assistência social e previdência contributiva são regimes diferentes; o artigo não cria contribuição obrigatória assistencial."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Assistência social e previdência contributiva são regimes diferentes; o artigo não cria contribuição obrigatória assistencial."
+      ],
+      "exemplo": "Serviço assistencial coordena o atendimento com a rede SUS. Variação: A questão proíbe a articulação com saúde: contraria a referência expressa ao SUS.",
+      "prova": [
+        "Somente a Loas precisa ser considerada? Não; o texto inclui outras políticas e normas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-34",
+      "unit_id": "f3fd9c30-192f-5c95-9631-8b62d7d8c579",
+      "content_sha256": "1da035f1b8b9b133f92a9b664883138e951e4b4c1264852ab13a43bd9b991863",
+      "simples": "A partir de sessenta e cinco anos, quem não pode prover subsistência nem tê-la provida pela família tem garantia de benefício mensal de um salário mínimo, nos termos da Loas. O benefício do caput já concedido a familiar não entra no cálculo de renda referido.",
+      "pontos": [
+        "Ser pessoa idosa aos sessenta não basta para o benefício etário. Demais requisitos e exclusões de renda dependem da Loas vigente; não crie renda-limite universal a partir deste artigo."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Ser pessoa idosa aos sessenta não basta para o benefício etário. Demais requisitos e exclusões de renda dependem da Loas vigente; não crie renda-limite universal a partir deste artigo."
+      ],
+      "exemplo": "Pessoa de sessenta e cinco sem condições de subsistência busca o benefício: examinam-se também os requisitos da Loas. Variação: Tem sessenta e dois: a condição geral de pessoa idosa não satisfaz a idade deste benefício.",
+      "prova": [
+        "O benefício exige contribuição previdenciária neste artigo? Não; é assistencial, nos termos da Loas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-35",
+      "unit_id": "5f8bb2b9-48d8-57b8-bf69-e889b89e5c8d",
+      "content_sha256": "046374142ef60d6b0769cf25ae85c6aef6bab9980053e889c009d7d068adacd0",
+      "simples": "Entidades de longa permanência e casas-lar firmam contrato com a pessoa abrigada. Em entidade filantrópica ou casa-lar, a participação no custeio é facultativa e regulada pelo conselho municipal competente, limitada a setenta por cento do benefício. Representante legal contrata para incapaz.",
+      "pontos": [
+        "O teto do §2º refere-se à participação do §1º; não transforme qualquer entidade privada em autorizada a cobrar automaticamente esse percentual."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "O teto do §2º refere-se à participação do §1º; não transforme qualquer entidade privada em autorizada a cobrar automaticamente esse percentual."
+      ],
+      "exemplo": "Casa-lar prevê participação de oitenta por cento: supera o teto do §2º. Variação: A participação é sessenta por cento: respeita o teto numérico, mas ainda depende da forma estabelecida pelo conselho e das demais condições.",
+      "prova": [
+        "A participação no custeio é obrigatória no §1º? Não; a cobrança é facultada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "00ad42c8-e0cf-5f52-babd-7f9cb9753086",
+      "content_sha256": "435ef1d90070c43b482a4cb235b598c3ddcfc923aa8561d805d6b62a712fa600",
+      "simples": "Acolher pessoa idosa em risco social por adulto ou núcleo familiar caracteriza dependência econômica para efeitos legais. O artigo exige situação de risco social e acolhimento nas modalidades descritas.",
+      "pontos": [
+        "Não confunda visita ocasional com acolhimento em risco social."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Não confunda visita ocasional com acolhimento em risco social."
+      ],
+      "exemplo": "Uma família acolhe pessoa idosa em risco social: o dispositivo caracteriza a dependência econômica. Variação: Há somente visita de fim de semana sem risco ou acolhimento descritos: não conclua automaticamente pela regra.",
+      "prova": [
+        "O acolhimento pode ocorrer por um adulto individualmente? Sim; o texto menciona adulto ou núcleo familiar."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "cbb87d1f-577c-5c9b-aea7-cb21431d110d",
+      "content_sha256": "5b10441d339869ae110b8ba52d5e9e1ba6ee0169408534870d752df4308ea711",
+      "simples": "A pessoa idosa tem direito à moradia digna com família, desacompanhada se desejar ou em instituição. A assistência integral em longa permanência observa as hipóteses legais. Instituições devem ter identificação externa visível, habitação adequada, alimentação e higiene compatíveis.",
+      "pontos": [
+        "Morar sozinha pode ser escolha; instituição sem identificação externa sujeita-se à interdição prevista."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Morar sozinha pode ser escolha; instituição sem identificação externa sujeita-se à interdição prevista."
+      ],
+      "exemplo": "Uma pessoa escolhe viver desacompanhada: a modalidade está no caput. Variação: Instituição deixa de manter identificação externa visível: há previsão de interdição, além das demais exigências.",
+      "prova": [
+        "A moradia institucional é a única admitida? Não; o artigo prevê várias modalidades."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "44cba378-428c-578e-962a-e6e62c622175",
+      "content_sha256": "218f483aba3f37b0b6dae47a9c3ea96cd4c464969443a48e38895e38c61ebfd7",
+      "simples": "Programas habitacionais públicos ou subsidiados priorizam moradia própria da pessoa idosa, reservando pelo menos três por cento das unidades, com equipamentos comunitários, acessibilidade e financiamento compatível com renda. As unidades reservadas ficam preferencialmente no térreo.",
+      "pontos": [
+        "Três por cento é mínimo; pavimento térreo é preferência, não localização exclusiva obrigatória."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Três por cento é mínimo; pavimento térreo é preferência, não localização exclusiva obrigatória."
+      ],
+      "exemplo": "Programa reserva quatro por cento: supera o mínimo legal. Variação: Reserva dois por cento: fica abaixo do mínimo.",
+      "prova": [
+        "Todas as unidades reservadas devem necessariamente estar no térreo? Não; o texto usa preferencialmente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-39",
+      "unit_id": "5238db14-5d41-515f-af61-34ea4e9dba2e",
+      "content_sha256": "e2c52ddb9a8281817770e4a32a03340cab15d4523581aa53a9c8af0ca43a4317",
+      "simples": "Há gratuidade em transporte coletivo público urbano e semiurbano para a faixa etária protegida, ressalvados serviços seletivos ou especiais paralelos aos regulares. Documento pessoal comprova idade, dez por cento dos assentos são reservados e a faixa entre sessenta e sessenta e cinco depende da lei local.",
+      "pontos": [
+        "O caput usa maiores de sessenta e cinco. A Constituição, art. 230, §2º, garante gratuidade aos maiores de sessenta e cinco anos. Não confunda esta regra com duas vagas e renda do transporte interestadual do art. 40."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "O caput usa maiores de sessenta e cinco. A Constituição, art. 230, §2º, garante gratuidade aos maiores de sessenta e cinco anos. Não confunda esta regra com duas vagas e renda do transporte interestadual do art. 40."
+      ],
+      "exemplo": "Pessoa de setenta apresenta documento pessoal de idade para o transporte urbano regular: o §1º não exige exclusivamente carteira especial. Variação: Pessoa de sessenta e dois pede gratuidade: é necessário consultar a legislação local aplicável à faixa do §3º.",
+      "prova": [
+        "A reserva urbana é de duas vagas por veículo? Não; o §2º prevê dez por cento dos assentos. As duas vagas pertencem ao art. 40."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "bf24111a-7dab-57dd-800c-d842e18d0a65",
+      "content_sha256": "10905d2a602b030b9101c5b81e52c0899858a7c2564ab2260aad2686d380a72b",
+      "simples": "No transporte coletivo interestadual, reservam-se duas vagas gratuitas por veículo a pessoas idosas com renda igual ou inferior a dois salários mínimos. Quem excede as vagas e tem a mesma condição de renda recebe desconto de pelo menos cinquenta por cento, conforme legislação específica.",
+      "pontos": [
+        "Exatamente dois salários mínimos satisfaz o limite; gratuidade ilimitada para todo passageiro não é a regra."
+      ],
+      "atencao": [
+        "Texto oficial conferido em 11/10/2026. A conferência não é data de alteração da lei; observe os atos e efeitos indicados no texto.",
+        "Exatamente dois salários mínimos satisfaz o limite; gratuidade ilimitada para todo passageiro não é a regra."
+      ],
+      "exemplo": "Duas vagas gratuitas já foram ocupadas e outro passageiro elegível solicita passagem: examina-se o desconto mínimo. Variação: Sua renda é superior a dois salários mínimos: não atende à condição destes incisos.",
+      "prova": [
+        "O desconto pode ser inferior a cinquenta por cento? Não; cinquenta é o mínimo legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "7cbabe93-2812-53bf-aa47-da383912571e",
+      "content_sha256": "b4311f34bc42335f2ef22b0dab16f300c046e4f04f61e0bf7a49b0eb04180903",
+      "simples": "Estacionamentos públicos e privados reservam cinco por cento das vagas à pessoa idosa, nos termos da lei local, em posição de melhor comodidade.",
+      "pontos": [
+        "Não restrinja a reserva aos estacionamentos públicos nem troque cinco por três por cento."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não restrinja a reserva aos estacionamentos públicos nem troque cinco por três por cento."
+      ],
+      "exemplo": "Estacionamento privado com cem vagas reserva cinco para pessoas idosas. Variação: Reserva apenas três: fica abaixo do percentual textual.",
+      "prova": [
+        "A reserva se aplica somente ao setor público? Não; públicos e privados estão expressamente incluídos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "0006931f-f7b4-5b60-a744-167b4c15705c",
+      "content_sha256": "e30bcba2d145edfaee920195cd59457424729e516b306cbdcf272de64da2ddb9",
+      "simples": "Prioridade e segurança devem ser asseguradas no embarque e desembarque do transporte coletivo. As duas garantias alcançam a entrada e a saída do veículo.",
+      "pontos": [
+        "Gratuidade não substitui embarque seguro; são direitos diferentes."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Gratuidade não substitui embarque seguro; são direitos diferentes."
+      ],
+      "exemplo": "O motorista permite embarque prioritário e com segurança. Variação: O desembarque é feito de modo inseguro: a garantia também cobre essa etapa.",
+      "prova": [
+        "A prioridade se limita ao embarque? Não; alcança também o desembarque."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "d46aa17c-6a56-5002-bc81-c278995ecf41",
+      "content_sha256": "8280a546e47c04edda98b4ba8e44f3bff9e6a38d411f1eb015a576bc10d0fe91",
+      "simples": "Medidas protetivas cabem quando há ameaça ou violação por sociedade ou Estado, por falta, omissão ou abuso de família, curador ou entidade, ou em razão da condição pessoal.",
+      "pontos": [
+        "Ameaça já autoriza proteção; não é necessário esperar dano consumado."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Ameaça já autoriza proteção; não é necessário esperar dano consumado."
+      ],
+      "exemplo": "O curador pratica abuso que ameaça direitos: a hipótese consta do inciso II. Variação: O risco decorre da condição pessoal, sem abuso de terceiro: o inciso III também permite proteção.",
+      "prova": [
+        "A proteção exige violação já consumada? Não; ameaça também é suficiente no texto."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "d54f7279-0a29-533c-a718-9a7f2687c06d",
+      "content_sha256": "53cd1a4d9be8eae63080ebae921c90a3cdba3ea7a3e1c0612cdbdfc4dd6b47b8",
+      "simples": "As medidas podem ser isoladas ou cumulativas e considerar fins sociais e fortalecimento dos vínculos familiares e comunitários. A escolha deve atender à finalidade protetiva.",
+      "pontos": [
+        "A cumulação é admitida, não obrigatória em todo caso."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A cumulação é admitida, não obrigatória em todo caso."
+      ],
+      "exemplo": "Tratamento e acompanhamento temporário são combinados conforme a necessidade. Variação: Uma medida isolada atende ao caso: o artigo também permite essa opção.",
+      "prova": [
+        "Aplicar uma medida impede sempre aplicar outra? Não; podem ser cumuladas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "b173247b-6db3-559d-8639-e4493be24a9a",
+      "content_sha256": "5db96ed2d09feb8a89ebcec117bba4faea118056b13cc12de138be86f7004792",
+      "simples": "Nas situações do art. 43, o MP ou o Judiciário, a requerimento dele, pode determinar medidas não exaustivas: família ou curador com termo, orientação e acompanhamento, tratamento de saúde, programa para dependência, abrigo e abrigo temporário.",
+      "pontos": [
+        "O programa de dependência pode alcançar pessoa do convívio que cause perturbação, não apenas a própria pessoa idosa."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O programa de dependência pode alcançar pessoa do convívio que cause perturbação, não apenas a própria pessoa idosa."
+      ],
+      "exemplo": "O familiar dependente causa perturbação: examina-se sua inclusão no programa do inciso IV. Variação: A medida necessária é acompanhamento temporário: ele está no inciso II, sem exigência de abrigo em todo caso.",
+      "prova": [
+        "A lista é fechada? Não; o artigo usa dentre outras."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-46",
+      "unit_id": "fc2c081f-7ba9-5833-972a-a30539082d77",
+      "content_sha256": "e520eba61e86305e067471f9fb8264fb1be638b8070aa09b87773f2ae182fac4",
+      "simples": "A política de atendimento articula ações governamentais e não governamentais da União, Estados, Distrito Federal e Municípios. Há coordenação entre setores e níveis federativos.",
+      "pontos": [
+        "Atendimento não é competência isolada de um único ente."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Atendimento não é competência isolada de um único ente."
+      ],
+      "exemplo": "Município e entidade não governamental coordenam serviços dentro da política. Variação: A questão exclui o Distrito Federal: ignora sua menção expressa.",
+      "prova": [
+        "Somente ações governamentais integram a política? Não; também as não governamentais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-47",
+      "unit_id": "4721d00a-9fdd-5df2-bdb8-4f56062f1801",
+      "content_sha256": "49ebd6ce8386823496c6d08032c9ea017274b38555579ea73bec0b1a3492b079",
+      "simples": "As linhas de atendimento incluem políticas básicas, assistência supletiva, prevenção e atendimento a vítimas, localização de familiares, defesa jurídico-social e mobilização da opinião pública.",
+      "pontos": [
+        "A assistência supletiva atende quem necessita; localização de familiares é linha própria."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A assistência supletiva atende quem necessita; localização de familiares é linha própria."
+      ],
+      "exemplo": "Serviço busca parentes de pessoa abandonada em hospital. Variação: O caso pede atuação contra maus-tratos: corresponde à linha de prevenção e atendimento especial.",
+      "prova": [
+        "A política inclui mobilizar a sociedade? Sim; o inciso VI prevê mobilização da opinião pública."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-48",
+      "unit_id": "d2f3b6dc-5eae-5595-abce-d9b2a969c62f",
+      "content_sha256": "2c90f531b9e24f6ad1c928297d4babd9aae95d6c43b6548d3873378e310ef793",
+      "simples": "As entidades mantêm suas unidades e inscrevem programas na Vigilância Sanitária e no Conselho Municipal; sem este, no Estadual ou Nacional. Exigem-se instalações adequadas, plano e estatuto compatíveis, constituição regular e dirigentes idôneos.",
+      "pontos": [
+        "A inscrição sanitária e a inscrição no conselho são exigências distintas."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A inscrição sanitária e a inscrição no conselho são exigências distintas."
+      ],
+      "exemplo": "Não há conselho municipal: a lei prevê alternativa estadual ou nacional. Variação: A entidade tem inscrição no conselho, mas não na Vigilância: não satisfez as duas exigências.",
+      "prova": [
+        "A idoneidade dos dirigentes é requisito? Sim; consta do inciso IV."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-49",
+      "unit_id": "9711bbd0-0a46-58fc-b3d0-43dae4d8aa65",
+      "content_sha256": "1f86e4e243d5146f1feda84ab110969d969a017337cbd9c2cced0ccf9241b8a4",
+      "simples": "Longa permanência preserva vínculos, identidade, direitos e comunidade; oferece atendimento personalizado em pequenos grupos e mantém a pessoa na mesma instituição, salvo força maior. Dirigente responde civil e criminalmente pelos atos lesivos, sem excluir sanções administrativas.",
+      "pontos": [
+        "A permanência tem ressalva de força maior; as responsabilidades não se limitam à administrativa."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A permanência tem ressalva de força maior; as responsabilidades não se limitam à administrativa."
+      ],
+      "exemplo": "Transferência é necessária por força maior: examina-se a ressalva do inciso III. Variação: Transferências arbitrárias rompem vínculos sem a ressalva: contrariam o princípio de permanência.",
+      "prova": [
+        "A sanção administrativa afasta sempre as demais responsabilidades? Não; o parágrafo único preserva responsabilidade civil e criminal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-51",
+      "unit_id": "3552d18d-85c4-51b8-8624-e41a423e2864",
+      "content_sha256": "e7975542e0bbc2c1648d4a44d5a25c819559fa7dc9a8cbf16a5036331ca17c49",
+      "simples": "Instituições filantrópicas ou sem fins lucrativos que prestam serviços às pessoas idosas têm direito à assistência judiciária gratuita nos termos deste dispositivo. O grupo protegido é definido pela natureza e atividade da entidade.",
+      "pontos": [
+        "Não estenda a previsão indistintamente a qualquer empresa com fins lucrativos."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não estenda a previsão indistintamente a qualquer empresa com fins lucrativos."
+      ],
+      "exemplo": "Entidade sem fins lucrativos prestadora de serviço a pessoas idosas invoca a regra específica. Variação: Empresa lucrativa pede o benefício apenas por atender pessoas idosas: não se enquadra automaticamente neste artigo.",
+      "prova": [
+        "A regra abrange apenas entidades filantrópicas? Não; também as sem fins lucrativos descritas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-52",
+      "unit_id": "57cf9160-d83c-5911-87a5-3926460ece96",
+      "content_sha256": "60eb133069ecf7ba561c1d54479321405fd92a0e11c1f592a79ba6657836f9d1",
+      "simples": "Entidades governamentais e não governamentais são fiscalizadas por conselhos, Ministério Público, Vigilância Sanitária e outros órgãos previstos em lei. A fiscalização é plural.",
+      "pontos": [
+        "Um fiscalizador não exclui os demais."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Um fiscalizador não exclui os demais."
+      ],
+      "exemplo": "A Vigilância Sanitária inspeciona condições de atendimento de entidade privada. Variação: A instituição já recebeu visita do conselho: isso não impede fiscalização do MP.",
+      "prova": [
+        "Somente entidades não governamentais são fiscalizadas? Não; ambos os grupos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-53",
+      "unit_id": "249d79ba-c2e7-5e48-966b-d24c79fc43ef",
+      "content_sha256": "41c45d4129531b459d31ed3101b9ac3fdd10d3dcff0d1f415f32e88b823b4c09",
+      "simples": "O artigo modificou a Política Nacional da Pessoa Idosa para atribuir aos conselhos supervisão, acompanhamento, fiscalização e avaliação nas respectivas instâncias político-administrativas. A leitura atual deve ser confrontada com a Lei 8.842 compilada.",
+      "pontos": [
+        "É norma modificadora; não confunda os quatro verbos com prestação direta de todo atendimento."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "É norma modificadora; não confunda os quatro verbos com prestação direta de todo atendimento."
+      ],
+      "exemplo": "Conselho estadual avalia a política em sua instância. Variação: A questão atribui aos conselhos apenas aconselhamento facultativo: omite fiscalização e demais competências.",
+      "prova": [
+        "Avaliação está entre as competências alteradas? Sim; junto de supervisão, acompanhamento e fiscalização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-54",
+      "unit_id": "f9f6255d-dc21-55e3-8f63-14fefcbcd229",
+      "content_sha256": "0581b90e257e562c9342b852a35de41bba0d0408fab44c8881b541f64093b5fc",
+      "simples": "As prestações de contas dos recursos públicos e privados recebidos por entidades de atendimento devem ter publicidade. O controle não se limita a verbas estatais.",
+      "pontos": [
+        "A natureza privada do recurso não elimina esta obrigação de prestação de contas pública."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A natureza privada do recurso não elimina esta obrigação de prestação de contas pública."
+      ],
+      "exemplo": "A entidade recebeu doação privada: a prestação de contas desses recursos também deve ter publicidade. Variação: Recebeu recurso público: igualmente está abrangido.",
+      "prova": [
+        "Somente recursos públicos são mencionados? Não; públicos e privados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-55",
+      "unit_id": "8ae26be7-b916-508f-870a-f1409339a44c",
+      "content_sha256": "a9f011b1c6823c60e0ea3a6dd38f5cf2ca0bfe323dfb7a42aadbf80e4149024e",
+      "simples": "Entidades infratoras recebem sanções com devido processo. Governamentais podem ter advertência, afastamento de dirigentes e fechamento ou interdição; não governamentais, advertência, multa, suspensão de repasse, interdição ou proibição de atendimento. Há regras para dano, fraude, desvio de recursos, comunicação ao MP e dosimetria.",
+      "pontos": [
+        "Não troque automaticamente as listas. Gravidade, danos, agravantes, atenuantes e antecedentes devem ser considerados; responsabilidade civil e criminal permanece."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não troque automaticamente as listas. Gravidade, danos, agravantes, atenuantes e antecedentes devem ser considerados; responsabilidade civil e criminal permanece."
+      ],
+      "exemplo": "Há desvio de finalidade de verba pública: o §2º permite suspensão parcial ou total do repasse. Variação: Há risco aos direitos: o §3º exige comunicação ao MP, sem afastar medidas da Vigilância.",
+      "prova": [
+        "As penalidades dispensam devido processo? Não; o caput o exige."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-56",
+      "unit_id": "724a8777-1922-533c-b7bb-e34caec194e8",
+      "content_sha256": "1e443161a37bbf4e1e9bf7f6a6dd388d5b04996d0c982faca357143d18c0f83c",
+      "simples": "Descumprir as obrigações do art. 50 gera multa textual de quinhentos a três mil reais se não for crime, podendo haver interdição até regularização. Residentes de longa permanência são transferidos a expensas do estabelecimento interditado durante a interdição.",
+      "pontos": [
+        "Há ressalva de caracterização como crime; valores são sujeitos à atualização do art. 59."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Há ressalva de caracterização como crime; valores são sujeitos à atualização do art. 59."
+      ],
+      "exemplo": "A instituição é interditada: ela custeia a transferência das pessoas abrigadas. Variação: A questão transfere automaticamente esse custo aos residentes: contraria o parágrafo único.",
+      "prova": [
+        "Toda infração ao art. 50 recebe somente multa administrativa? Não; há ressalva se o fato for crime e possibilidade de interdição."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-57",
+      "unit_id": "46448962-a389-529a-ba35-beb180b5f5d2",
+      "content_sha256": "3a864c8bece6e4d7ee79899b51cf530468fc58f790bef8196dcdf2d1de4b0b7f",
+      "simples": "Profissional de saúde ou responsável por estabelecimento de saúde ou longa permanência que não comunica crimes contra pessoa idosa de que sabe recebe multa textual de quinhentos a três mil reais, em dobro na reincidência.",
+      "pontos": [
+        "Não confunda esta infração administrativa por conhecimento de crime com a notificação de suspeita de violência do art. 19. Valores observam o art. 59."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não confunda esta infração administrativa por conhecimento de crime com a notificação de suspeita de violência do art. 19. Valores observam o art. 59."
+      ],
+      "exemplo": "Profissional conhece crime e não comunica: examine a sanção administrativa do artigo. Variação: Há reincidência: o texto manda aplicar a multa em dobro.",
+      "prova": [
+        "Na reincidência a multa aumenta pela metade? Não; dobra."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-58",
+      "unit_id": "c3b3c9be-73bc-5eb8-85da-97e8c7aece77",
+      "content_sha256": "30619de708324549d6a5292b9e05d9c77f64237566e99937119b5c22246014c7",
+      "simples": "Descumprir prioridade de atendimento gera multa textual de quinhentos a mil reais e multa civil fixada pelo juiz segundo o dano. As duas parcelas têm fundamentos próprios.",
+      "pontos": [
+        "O artigo usa e, não alternativa entre as multas. Valores administrativos observam atualização do art. 59."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O artigo usa e, não alternativa entre as multas. Valores administrativos observam atualização do art. 59."
+      ],
+      "exemplo": "A prioridade é desrespeitada e causa dano: pode haver a multa textual e a civil determinada pelo juiz. Variação: A questão exclui qualquer multa civil por existir a administrativa: contradiz a soma prevista.",
+      "prova": [
+        "A multa civil é fixada automaticamente no máximo de mil reais? Não; o juiz a estipula conforme o dano."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-59",
+      "unit_id": "7cd8f3f6-203e-5971-9264-c290b6f4ff25",
+      "content_sha256": "a743444e678b6ca1ec16e9b9bd750aa1d942bbd88fa1a7e55adcccb3394405f6",
+      "simples": "Os valores monetários do Capítulo IV são atualizados anualmente na forma da lei. A leitura dos valores impressos dos arts. 56 a 58 deve considerar essa regra.",
+      "pontos": [
+        "O artigo não fornece índice nem autoriza inventar valores atuais sem verificar o ato aplicável."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O artigo não fornece índice nem autoriza inventar valores atuais sem verificar o ato aplicável."
+      ],
+      "exemplo": "A prova pede a periodicidade de atualização: anual. Variação: Pede o valor exato hoje: é necessário conferir a atualização aplicável, não apenas repetir o valor original.",
+      "prova": [
+        "A atualização é mensal neste artigo? Não; anual."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-60",
+      "unit_id": "68b7e1a7-4285-5afe-a5b7-51057da5f0a2",
+      "content_sha256": "f247bd9bd1c71226c93f26e02fbb452cd4e3f8a1101c76eca94e5f8aaf640950",
+      "simples": "O procedimento administrativo começa com requisição do MP ou auto de servidor efetivo, assinado se possível por duas testemunhas. O auto pode usar formulário com natureza e circunstâncias e deve ser lavrado após verificação ou, justificadamente, em vinte e quatro horas.",
+      "pontos": [
+        "Duas testemunhas são exigidas se possível; ausência não deve ser tratada como invalidade automática por este texto."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Duas testemunhas são exigidas se possível; ausência não deve ser tratada como invalidade automática por este texto."
+      ],
+      "exemplo": "Servidor efetivo verifica infração e lavra auto com descrição das circunstâncias. Variação: Há motivo justificado para lavrá-lo em vinte e quatro horas: o §2º prevê essa possibilidade.",
+      "prova": [
+        "Somente requisição do MP inicia o procedimento? Não; o auto também."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-61",
+      "unit_id": "8a189036-f146-5fa3-9f99-e2583f32a813",
+      "content_sha256": "60612e4354e870cd64dae8964ddd20a719e5a587e8bd6f3ae14c36d3cc5f6133",
+      "simples": "O autuado tem dez dias para defesa contados da intimação. Ela ocorre no instrumento, se lavrado em sua presença, ou por correio com aviso de recebimento.",
+      "pontos": [
+        "O marco é a intimação, não sempre a data material da infração."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O marco é a intimação, não sempre a data material da infração."
+      ],
+      "exemplo": "O auto é lavrado na presença do infrator e ele é intimado no instrumento. Variação: O auto não é lavrado em sua presença: a via postal com aviso está prevista.",
+      "prova": [
+        "O prazo textual de defesa é de cinco dias? Não; dez dias."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-62",
+      "unit_id": "0c36f439-e504-5c04-8e77-f3ec25c9a851",
+      "content_sha256": "280d3e37696cf7e9b8e87cb7d70205e1c04c84b9ef1be80d4e5716b132caa5dd",
+      "simples": "Com risco à vida ou saúde, a autoridade aplica sanções regulamentares à entidade sem excluir iniciativas do MP ou demais legitimados à fiscalização. A atuação pode ser coordenada.",
+      "pontos": [
+        "Risco é a condição deste artigo; compare com a ausência de risco do art. 63."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Risco é a condição deste artigo; compare com a ausência de risco do art. 63."
+      ],
+      "exemplo": "Inspeção identifica risco à saúde e a autoridade adota sanções regulamentares. Variação: O MP também toma providências: isso não é impedido pela atuação administrativa.",
+      "prova": [
+        "Aplicar sanção impede medidas do MP? Não; são preservadas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-63",
+      "unit_id": "f3d360d7-8863-5f99-be33-7067c0a27c4b",
+      "content_sha256": "ddf51d9046db4ee1cb7b4c012d069ea9f4a43cc804b048cda8281a34385b2f4a",
+      "simples": "Mesmo sem risco à vida ou à saúde da pessoa abrigada, a autoridade aplica sanções regulamentares à entidade infratora, preservando atuação do MP e demais fiscalizadores.",
+      "pontos": [
+        "Ausência de risco grave não significa ausência de infração sancionável."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Ausência de risco grave não significa ausência de infração sancionável."
+      ],
+      "exemplo": "Há irregularidade sem risco à saúde demonstrado: pode haver sanção regulamentar. Variação: A instituição alega que só seria fiscalizada após dano à vida: a regra não exige isso.",
+      "prova": [
+        "A falta de risco elimina toda sanção? Não; o artigo prevê sanções também nessa situação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-64",
+      "unit_id": "dd3ade70-70a1-5a94-945a-9e2e60dc0c36",
+      "content_sha256": "7c4ea6b51cc4ba1ee65fd9ed60186ba145eb7d8fc3434dcd77347dac97d1a3af",
+      "simples": "O procedimento administrativo deste capítulo recebe aplicação subsidiária das Leis 6.437/1977 e 9.784/1999. As regras especiais do Estatuto permanecem como referência primária.",
+      "pontos": [
+        "Subsidiariamente significa complementar, não substituir automaticamente todos os prazos especiais."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Subsidiariamente significa complementar, não substituir automaticamente todos os prazos especiais."
+      ],
+      "exemplo": "Uma lacuna procedimental é examinada com as leis indicadas, respeitando a regra especial. Variação: O prazo especial é expresso: a remissão não permite ignorá-lo automaticamente.",
+      "prova": [
+        "A aplicação das leis indicadas é principal e integral em qualquer conflito? Não; é subsidiária."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-65",
+      "unit_id": "d24e1402-508f-54af-b803-6bcab2b41b6f",
+      "content_sha256": "331218c9de4c9c07fc83ec6470637a47a229dfe14ae4f5c5be44075f0ce2b2c5",
+      "simples": "A apuração de irregularidade em entidade governamental ou não governamental começa por petição fundamentada de interessado ou iniciativa do MP. São vias alternativas.",
+      "pontos": [
+        "Não confunda este procedimento com o auto administrativo do art. 60."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não confunda este procedimento com o auto administrativo do art. 60."
+      ],
+      "exemplo": "Interessado apresenta petição fundamentada sobre irregularidade da entidade. Variação: O MP toma iniciativa sem petição prévia: também é forma prevista.",
+      "prova": [
+        "Somente o MP pode dar início? Não; pessoa interessada por petição fundamentada também."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-66",
+      "unit_id": "a3bd1854-7751-563d-bc33-c589b555aa1a",
+      "content_sha256": "9e3b9e3189dffe831c41a32f06e1fb93d9ab358396d9980b964c18e26c86e9ec",
+      "simples": "Por motivo grave, o juiz pode afastar provisoriamente dirigente ou adotar outra medida adequada para evitar lesão, em decisão liminar fundamentada, ouvido o MP.",
+      "pontos": [
+        "Afastamento aqui é provisório; ouvir o MP e fundamentar são requisitos do texto."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Afastamento aqui é provisório; ouvir o MP e fundamentar são requisitos do texto."
+      ],
+      "exemplo": "Há motivo grave e decisão motivada após oitiva do MP: examina-se afastamento provisório. Variação: A decisão não apresenta fundamento: falta requisito expresso.",
+      "prova": [
+        "O artigo determina afastamento definitivo automático? Não; prevê medida provisória ou outra adequada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67",
+      "unit_id": "91acdf5a-5406-5420-84a7-60624cc03d40",
+      "content_sha256": "8847d171abdb2f0850b936b670efdc17a60f091216fee213031952fee384843a",
+      "simples": "O dirigente é citado para resposta escrita em dez dias, podendo juntar documentos e indicar provas a produzir. A defesa inclui manifestação e instrução pretendida.",
+      "pontos": [
+        "Citação do dirigente não é a mesma intimação do autuado no procedimento administrativo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Citação do dirigente não é a mesma intimação do autuado no procedimento administrativo."
+      ],
+      "exemplo": "O dirigente apresenta resposta e documentos dentro do prazo. Variação: A questão proíbe indicação de provas: o artigo expressamente permite.",
+      "prova": [
+        "O prazo textual é de vinte dias? Não; dez dias."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-68",
+      "unit_id": "a7d3b8aa-7f4a-58eb-9770-68e92a414cfc",
+      "content_sha256": "f66736172e9eb78a52c7910fe064370ace384655cebe5add6632e70e91fda6d3",
+      "simples": "Após defesa, o juiz aplica o art. 69 ou designa instrução se necessário. Fora de manifestação em audiência, partes e MP têm cinco dias para finais e o juiz decide em igual prazo. Dirigente governamental afastado é substituído em vinte e quatro horas após comunicação ao superior. Pode haver prazo para regularização; satisfeitas exigências, extingue-se sem mérito.",
+      "pontos": [
+        "Multa e advertência recaem no dirigente ou responsável pelo programa. Não confunda cinco dias de alegações com dez dias de resposta."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Multa e advertência recaem no dirigente ou responsável pelo programa. Não confunda cinco dias de alegações com dez dias de resposta."
+      ],
+      "exemplo": "A entidade regulariza dentro do prazo judicial concedido: o §3º prevê extinção sem julgamento do mérito. Variação: Há afastamento de dirigente governamental: o superior recebe prazo de vinte e quatro horas para substituí-lo.",
+      "prova": [
+        "Alegações finais fora de audiência têm dez dias? Não; cinco dias, e decisão em igual prazo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-69",
+      "unit_id": "1c8c9584-31de-5aa3-9e83-4bc5853d285d",
+      "content_sha256": "c6652a912ac75ba7869bff4109016b5136b4b1212052a7897ec068461527b620",
+      "simples": "O texto remete subsidiariamente ao procedimento sumário do CPC sem contrariar os prazos especiais. A remissão é histórica: o CPC de 1973 foi revogado e o CPC vigente regula correspondência e transição no art. 1.046.",
+      "pontos": [
+        "Não apresente o antigo rito como procedimento geral atual. Preserve regras especiais e examine o CPC vigente e a situação temporal do processo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não apresente o antigo rito como procedimento geral atual. Preserve regras especiais e examine o CPC vigente e a situação temporal do processo."
+      ],
+      "exemplo": "Um processo novo requer regra subsidiária: consulta-se a disciplina atual e correspondente, sem copiar automaticamente o CPC antigo. Variação: O processo já estava em curso na transição: é preciso verificar as disposições transitórias do art. 1.046.",
+      "prova": [
+        "A remissão autoriza ignorar prazos do Estatuto? Não; o artigo expressamente os preserva."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-70",
+      "unit_id": "0900c80b-d2cd-5653-b97e-aec08d88ee04",
+      "content_sha256": "3caafce2e19cbd8b5c69a27af15eb13ea6eccb69ebfde2eaaca22537e8ce4e4c",
+      "simples": "O poder público pode criar varas especializadas e exclusivas da pessoa idosa. O verbo legal indica faculdade de organização judiciária.",
+      "pontos": [
+        "Não transforme poderá em criação obrigatória de vara em todo município."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não transforme poderá em criação obrigatória de vara em todo município."
+      ],
+      "exemplo": "É criada vara especializada conforme organização judiciária aplicável. Variação: A questão afirma que todo município deve ter vara exclusiva imediatamente: isso não decorre do artigo.",
+      "prova": [
+        "O texto impõe criação universal obrigatória? Não; usa poderá."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-71",
+      "unit_id": "0b286b46-24b5-50d1-96d9-32c8481d9411",
+      "content_sha256": "49f42f94222153e85d75b972e6ebb35715d77fb65439000cfa44dd50177d4df1",
+      "simples": "Processos de parte ou interveniente com sessenta anos ou mais têm prioridade em qualquer instância, mediante prova e requerimento no Estatuto. A prioridade alcança administração, serviços públicos, finanças e Defensoria; não cessa com morte, estendendo-se nas condições do §2º. Maiores de oitenta têm preferência especial.",
+      "pontos": [
+        "O §2º exige cônjuge ou companheiro supérstite na condição etária indicada; não estenda indistintamente a qualquer herdeiro. O CPC art. 1.048 contém disciplina própria da prioridade."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O §2º exige cônjuge ou companheiro supérstite na condição etária indicada; não estenda indistintamente a qualquer herdeiro. O CPC art. 1.048 contém disciplina própria da prioridade."
+      ],
+      "exemplo": "Parte com oitenta e dois anos recebe preferência especial entre processos de pessoas idosas. Variação: Beneficiário morreu: verifique cônjuge ou companheiro e condições do §2º, sem encerrar a prioridade automaticamente.",
+      "prova": [
+        "A prioridade vale apenas em primeira instância? Não; em qualquer instância."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-73",
+      "unit_id": "91774954-beb7-5325-93ab-096875d0024c",
+      "content_sha256": "69ea3ac0168611906298a73673db7321d36f58d887332cb66870b4476c3acbc5",
+      "simples": "As funções do MP previstas no Estatuto são exercidas conforme sua Lei Orgânica. A remissão disciplina o exercício institucional dessas funções.",
+      "pontos": [
+        "O artigo não dispensa as atribuições expressas seguintes nem cria competência ilimitada."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "O artigo não dispensa as atribuições expressas seguintes nem cria competência ilimitada."
+      ],
+      "exemplo": "O membro exerce função estatutária observando a Lei Orgânica pertinente. Variação: A questão manda ignorar a Lei Orgânica porque existe o Estatuto: contraria a remissão.",
+      "prova": [
+        "Qual lei orienta o exercício institucional das funções? A respectiva Lei Orgânica do Ministério Público."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-74",
+      "unit_id": "6b218f9d-9f16-5bb1-a3db-59abb3719ae9",
+      "content_sha256": "f071648a07601226a94a72472f0b09bb859e876e8eb356b62d1ec365e7ae1ec5",
+      "simples": "O MP protege direitos por inquérito civil e ação coletiva, alimentos e curatela nas circunstâncias legais, substituição de pessoa em risco, revogação de procuração, investigação, requisições, inspeção, força policial e referendo de transações. Terceiros também podem ter legitimidade; atribuições compatíveis não são excluídas. Há livre acesso às entidades no exercício da função.",
+      "pontos": [
+        "Idade não equivale automaticamente a incapacidade ou risco. Requisições e medidas devem respeitar suas condições e limites legais e constitucionais."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Idade não equivale automaticamente a incapacidade ou risco. Requisições e medidas devem respeitar suas condições e limites legais e constitucionais."
+      ],
+      "exemplo": "O MP inspeciona entidade e promove medidas para remover irregularidades. Variação: A questão exige autorização da entidade para qualquer acesso funcional: ignora o §3º.",
+      "prova": [
+        "A legitimidade do MP exclui a de terceiros? Não; o §1º preserva a de terceiros nas hipóteses legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-75",
+      "unit_id": "f41e3efc-5592-556b-8d88-5190045589e9",
+      "content_sha256": "cc584d79c04c90856c99813317656e2b8c355cf98234e79da729a36552a23d62",
+      "simples": "Quando não é parte, o MP intervém obrigatoriamente na defesa dos direitos e interesses abrangidos pelo Estatuto, tem vista após as partes e pode juntar documentos, pedir provas e diligências e recorrer.",
+      "pontos": [
+        "Não presuma necessidade de intervenção em qualquer conflito patrimonial apenas por existir parte idosa; identifique o interesse protegido e as hipóteses legais."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não presuma necessidade de intervenção em qualquer conflito patrimonial apenas por existir parte idosa; identifique o interesse protegido e as hipóteses legais."
+      ],
+      "exemplo": "Em feito de proteção abrangido pela lei, o MP não é autor e atua como interveniente. Variação: Ele já é parte: esta modalidade de intervenção do artigo não é a mesma posição de autor.",
+      "prova": [
+        "O MP só pode assistir sem requerer provas? Não; tem as faculdades processuais indicadas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-76",
+      "unit_id": "79788387-ce94-56e1-8e43-b6acdb08bb60",
+      "content_sha256": "9cc664fe4aac29d09ed14307503d659d2fb9c9c4db3acb24a094e5e33ddc4108",
+      "simples": "A intimação do MP é pessoal em qualquer caso previsto. É garantia institucional distinta da publicação ordinária destinada a outros participantes.",
+      "pontos": [
+        "Não confunda intimação pessoal com exigir presença física em todo ato; o modo deve respeitar a legislação processual vigente."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não confunda intimação pessoal com exigir presença física em todo ato; o modo deve respeitar a legislação processual vigente."
+      ],
+      "exemplo": "O processo realiza intimação pessoal do membro conforme o regime aplicável. Variação: Só ocorre aviso informal sem intimação: ele não substitui a forma prevista.",
+      "prova": [
+        "O artigo admite intimação meramente facultativa? Não; prevê intimação pessoal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77",
+      "unit_id": "d6d87b8b-a828-5c0a-8655-c75ea0f5a018",
+      "content_sha256": "1765fa3a5ff4d08d39501ca46395f81d526af373a30d022f0c46348b725db0ff",
+      "simples": "A falta de intervenção obrigatória do MP é causa de nulidade, declarável de ofício ou a pedido de interessado. A aplicação atual deve observar o CPC art. 279, inclusive intimação prévia do MP para manifestar-se sobre prejuízo.",
+      "pontos": [
+        "Não dispense a análise da obrigatoriedade da intervenção nem a disciplina atual de nulidades."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não dispense a análise da obrigatoriedade da intervenção nem a disciplina atual de nulidades."
+      ],
+      "exemplo": "O processo em que o MP devia atuar seguiu sem ele: examine a nulidade após sua intimação nos termos do CPC. Variação: A questão manda anular imediatamente sem intimar o MP: ignora o art. 279, §2º.",
+      "prova": [
+        "Somente uma parte pode pedir a nulidade? Não; também pode ser declarada de ofício ou requerida por interessado."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-78",
+      "unit_id": "3797cf45-e19d-543e-b38c-f41b448fc139",
+      "content_sha256": "8a27da610c5776822510f93ab766c9dcbf2c7c5e86dec5271e5a93bdd24ec90a",
+      "simples": "As manifestações processuais do representante do MP precisam ser fundamentadas. A atuação deve expor razões relacionadas ao caso e à disciplina aplicável.",
+      "pontos": [
+        "Não basta afirmar concordância ou discordância sem apresentar fundamento."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não basta afirmar concordância ou discordância sem apresentar fundamento."
+      ],
+      "exemplo": "O parecer explica fatos e razões jurídicas de sua conclusão. Variação: Apresenta apenas conclusão vazia: não cumpre o dever de fundamentação.",
+      "prova": [
+        "Fundamentação é dispensável nas manifestações? Não; é exigida."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-79",
+      "unit_id": "2eed0938-a685-5c56-b927-13b1cfa152f3",
+      "content_sha256": "35128d201377b501ac3eb885034bbedb12cc820a2b96d8757a4ba82a268bf452",
+      "simples": "Ações de responsabilidade abrangem omissão ou oferta insatisfatória de saúde, cuidado especializado à deficiência ou doença infectocontagiosa e assistência social. A lista não exclui outros interesses protegidos difusos, coletivos ou individuais qualificados.",
+      "pontos": [
+        "Não confunda serviço insatisfatório com apenas ausência total de serviço."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "Não confunda serviço insatisfatório com apenas ausência total de serviço."
+      ],
+      "exemplo": "O cuidado especializado é oferecido de forma insatisfatória: também está no alcance do artigo. Variação: Há outro interesse legalmente protegido fora dos incisos: o parágrafo único impede considerar a lista exaustiva.",
+      "prova": [
+        "A lista é fechada? Não; o parágrafo único preserva outros interesses protegidos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-80",
+      "unit_id": "6149507d-a5d9-53b2-8818-e4b9e536a866",
+      "content_sha256": "925dba83fb03b6b887268531a50689ee691828388c9b1d237da686665d902a84",
+      "simples": "As ações deste capítulo são propostas no domicílio da pessoa idosa, com competência absoluta, ressalvadas Justiça Federal e competência originária dos Tribunais Superiores.",
+      "pontos": [
+        "A regra não elimina competências expressamente ressalvadas nem se estende automaticamente a toda ação de qualquer natureza."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; verificar o ato modificador e seus efeitos, não a data da conferência.",
+        "A regra não elimina competências expressamente ressalvadas nem se estende automaticamente a toda ação de qualquer natureza."
+      ],
+      "exemplo": "A ação do capítulo segue ao foro do domicílio da pessoa idosa. Variação: Incide competência da Justiça Federal: deve-se observar a ressalva do artigo.",
+      "prova": [
+        "O foro domiciliar afasta a competência originária de tribunal superior? Não; ela é ressalvada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-50",
+      "unit_id": "716ceda9-7018-5352-976f-9fd91d578ff6",
+      "content_sha256": "99c991088be31d956857a7c0f0a39924f8270c4abc65ba1a55c1dd0c6580ef7f",
+      "simples": "As entidades de atendimento têm dezessete obrigações, desde contrato escrito, garantia de direitos e atendimento personalizado até preservação familiar, saúde, lazer, religião facultativa, documentação, registro dos pertences e profissionais com formação específica.",
+      "pontos": [
+        "Vestuário adequado é exigido se a entidade for pública; alimentação suficiente integra o inciso III. Doença infectocontagiosa é comunicada à autoridade de saúde e abandono familiar ao Ministério Público."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não confunda destinatários das comunicações. A assistência religiosa respeita a vontade e a crença da pessoa. O contrato informa preços, se for o caso; este artigo não torna todo serviço necessariamente gratuito."
+      ],
+      "exemplo": "A entidade recebe bens móveis de uma residente: deve fornecer comprovante e manter os registros individualizados previstos. Variação: Há abandono material pela família: a comunicação prevista vai ao Ministério Público, não apenas à autoridade sanitária.",
+      "prova": [
+        "A assistência religiosa pode ser imposta? Não; o inciso X a oferece a quem desejar, de acordo com suas crenças."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "716ceda9-7018-5352-976f-9fd91d578ff6",
+        "content_sha256": "99c991088be31d956857a7c0f0a39924f8270c4abc65ba1a55c1dd0c6580ef7f",
+        "simples": "As entidades de atendimento têm dezessete obrigações, desde contrato escrito, garantia de direitos e atendimento personalizado até preservação familiar, saúde, lazer, religião facultativa, documentação, registro dos pertences e profissionais com formação específica.",
+        "pontos": [
+          "Vestuário adequado é exigido se a entidade for pública; alimentação suficiente integra o inciso III. Doença infectocontagiosa é comunicada à autoridade de saúde e abandono familiar ao Ministério Público."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Não confunda destinatários das comunicações. A assistência religiosa respeita a vontade e a crença da pessoa. O contrato informa preços, se for o caso; este artigo não torna todo serviço necessariamente gratuito."
+        ],
+        "exemplo": "A entidade recebe bens móveis de uma residente: deve fornecer comprovante e manter os registros individualizados previstos. Variação: Há abandono material pela família: a comunicação prevista vai ao Ministério Público, não apenas à autoridade sanitária.",
+        "prova": [
+          "A assistência religiosa pode ser imposta? Não; o inciso X a oferece a quem desejar, de acordo com suas crenças."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:44.56+00:00",
+        "created_at": "2026-10-11T20:08:15.137857+00:00",
+        "updated_at": "2026-10-11T20:09:44.56+00:00"
+      }
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-81",
+      "unit_id": "6d3d496d-8c88-5bb9-8954-5efe98d2c76d",
+      "content_sha256": "c2822ca08871c545acab021f09c0fced0df00091ce01f5f734a231fac7c6301d",
+      "simples": "MP, entes federativos, OAB e associações qualificadas têm legitimidade concorrente nas ações cíveis de interesses protegidos. Associação exige ao menos um ano e finalidade institucional; autorização estatutária prévia dispensa a assemblear. Há litisconsórcio facultativo entre MPs e dever de assumir ação abandonada por associação.",
+      "pontos": [
+        "Não troque legitimidade concorrente por exclusiva do MP nem dispense todos os requisitos da associação."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não troque legitimidade concorrente por exclusiva do MP nem dispense todos os requisitos da associação."
+      ],
+      "exemplo": "Associação legitimada abandona a ação: MP ou outro legitimado deve assumir o polo ativo. Variação: A ação foi proposta pela OAB: ela está expressamente na lista de legitimados.",
+      "prova": [
+        "O litisconsórcio entre MPs é obrigatório? Não; o §1º o admite facultativamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-82",
+      "unit_id": "f6e26954-e9c6-596f-bb2e-7b929a89296c",
+      "content_sha256": "cc7d10e792246c66f48443a1883b9446c594421647010deeaedd109223ba634e",
+      "simples": "Todas as espécies de ações pertinentes são admitidas para defesa dos direitos protegidos. Ato ilegal ou abusivo de autoridade ou agente no exercício de poder público que lesa direito líquido e certo pode ser combatido por ação mandamental, conforme sua lei.",
+      "pontos": [
+        "Direito líquido e certo e exercício de atribuição pública são condições da hipótese do parágrafo único."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Direito líquido e certo e exercício de atribuição pública são condições da hipótese do parágrafo único."
+      ],
+      "exemplo": "Ato de autoridade lesa direito líquido e certo protegido: examina-se mandado de segurança e seus requisitos. Variação: A questão declara que só uma espécie de ação pode proteger todos os direitos: contraria o caput.",
+      "prova": [
+        "A ação mandamental dispensa sua lei própria? Não; rege-se pelas normas do mandado de segurança."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-83",
+      "unit_id": "0fce5d38-a642-50d7-8fa0-e975c8b59b2a",
+      "content_sha256": "3b10e18a110daeee8ca1872ee09dc15d3f383daff84a739030aa95f723fd2b0c",
+      "simples": "Obrigações de fazer ou não fazer recebem tutela específica ou resultado equivalente. Relevância e risco de ineficácia autorizam liminar; multa diária pode ser imposta sem pedido, com prazo razoável. Sua exigibilidade é após trânsito favorável, mas a dívida se conta desde a configuração.",
+      "pontos": [
+        "A remissão ao art. 273 é do CPC antigo: confronte o CPC vigente e o art. 1.046, §4º. Não confunda nascimento da multa e momento de exigir seu pagamento."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A remissão ao art. 273 é do CPC antigo: confronte o CPC vigente e o art. 1.046, §4º. Não confunda nascimento da multa e momento de exigir seu pagamento."
+      ],
+      "exemplo": "O juiz impõe multa diária adequada, ainda que o autor não tenha pedido. Variação: A questão só conta a multa a partir do trânsito: ignora o marco em que se configurou no §3º.",
+      "prova": [
+        "É preciso pedido do autor para toda multa diária? Não; o §2º admite imposição independente dele."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-84",
+      "unit_id": "abe7c906-731d-5104-ae12-5df5fb6764cf",
+      "content_sha256": "cab72fbc86df03b2f2ee1c9a675dad3be8daf98840acde38c136707c09858368",
+      "simples": "Multas revertem ao Fundo da Pessoa Idosa ou, se inexistente, ao Fundo Municipal de Assistência Social, vinculadas ao atendimento. Após trinta dias do trânsito sem recolhimento, o MP executa nos mesmos autos; sua inércia permite iniciativa dos demais legitimados.",
+      "pontos": [
+        "Trinta dias não é o prazo de sessenta dias da execução da condenação do art. 87."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Trinta dias não é o prazo de sessenta dias da execução da condenação do art. 87."
+      ],
+      "exemplo": "Não existe Fundo da Pessoa Idosa: a destinação alternativa é ao fundo municipal assistencial. Variação: Multa permanece não recolhida após trinta dias: examina-se a execução prevista.",
+      "prova": [
+        "O valor pode ser destinado sem vínculo ao atendimento? Não; o caput o vincula."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-85",
+      "unit_id": "f461bc1c-51d0-5441-9501-9c7258e145fa",
+      "content_sha256": "e7bc3c79e30d94e524d08968420d0b15644dccf40f9dfdf3905c25ef0d590683",
+      "simples": "Para evitar dano irreparável, o juiz pode atribuir efeito suspensivo aos recursos. A regra prevê faculdade condicionada à finalidade indicada.",
+      "pontos": [
+        "Não diga que todo recurso possui efeito suspensivo automático por este artigo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não diga que todo recurso possui efeito suspensivo automático por este artigo."
+      ],
+      "exemplo": "Há risco de dano irreparável: o juiz examina a atribuição do efeito. Variação: O enunciado afirma suspensão necessária em qualquer recurso: troca poderá por deverá.",
+      "prova": [
+        "O efeito é automático no texto? Não; pode ser conferido para evitar dano irreparável."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-86",
+      "unit_id": "e01c8ef8-238e-5cdf-95bf-b095e2c658e0",
+      "content_sha256": "12dc1294c2c6a196ea0e41b467428241f1b9e89296daa21c0e6ae90985232133",
+      "simples": "Após trânsito da condenação ao poder público, o juiz remete peças à autoridade competente para apurar responsabilidade civil e administrativa do agente vinculado à ação ou omissão.",
+      "pontos": [
+        "Remessa para apuração não equivale a declarar automaticamente culpa pessoal ou pena criminal."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Remessa para apuração não equivale a declarar automaticamente culpa pessoal ou pena criminal."
+      ],
+      "exemplo": "A condenação pública transita: são encaminhadas peças para apuração do agente. Variação: A questão afirma condenação criminal automática do servidor: não é o efeito definido aqui.",
+      "prova": [
+        "Quais responsabilidades são mencionadas na apuração? Civil e administrativa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-87",
+      "unit_id": "25ede405-abff-5ca5-a947-3fad93e66c27",
+      "content_sha256": "8862e110a0858b2d7c32d4a17b1521a13e3f7e50c5852da03485d20ccbc547b5",
+      "simples": "Se o autor não executa a condenação favorável em sessenta dias do trânsito, o MP deve executá-la. Se também ele fica inerte, demais legitimados podem agir como assistentes ou assumir o polo ativo.",
+      "pontos": [
+        "É execução da sentença favorável, distinta da multa do art. 84 e seu prazo de trinta dias."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "É execução da sentença favorável, distinta da multa do art. 84 e seu prazo de trinta dias."
+      ],
+      "exemplo": "Decorreram sessenta dias sem execução pelo autor: surge o dever do MP. Variação: Também há inércia do MP: a lei permite iniciativa dos demais legitimados.",
+      "prova": [
+        "O MP pode simplesmente deixar de agir nessa hipótese? O texto estabelece que deverá promover a execução."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-88",
+      "unit_id": "fe43ea67-aa8a-5490-bb4f-582e76d50d25",
+      "content_sha256": "9a255335f4e1b2599b9dc5530d0bc1b641b927712f8405785456c27db32d831f",
+      "simples": "As ações do capítulo dispensam adiantamento de custas, emolumentos, perícia e outras despesas. Não se impõe sucumbência ao MP. São regras com escopo determinado.",
+      "pontos": [
+        "Dispensa de adiantamento não é afirmação de isenção final universal de todo participante e todo processo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Dispensa de adiantamento não é afirmação de isenção final universal de todo participante e todo processo."
+      ],
+      "exemplo": "Ao iniciar ação do capítulo, não se exige adiantamento pericial previsto no caput. Variação: A questão estende a ausência de sucumbência a qualquer autor: o parágrafo único refere-se ao MP.",
+      "prova": [
+        "Honorários periciais estão entre os adiantamentos dispensados? Sim."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-89",
+      "unit_id": "d9116e78-ea12-54cc-bbf7-9c308ec62915",
+      "content_sha256": "74cfbc83257c00057fe7a4e55dd7764ffd10f94ea7378ab46d1659202a2329c8",
+      "simples": "Qualquer pessoa pode provocar o MP, enquanto o servidor deve fazê-lo, informando fatos de possível ação civil e elementos de convicção. Os verbos diferenciam faculdade e dever.",
+      "pontos": [
+        "Não transforme poderá da pessoa em mera opção do servidor."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não transforme poderá da pessoa em mera opção do servidor."
+      ],
+      "exemplo": "Cidadã envia fatos e elementos ao MP: exerce a faculdade prevista. Variação: Servidor conhece os fatos pertinentes: o artigo estabelece seu dever.",
+      "prova": [
+        "Pessoa comum e servidor recebem o mesmo verbo legal? Não; poderá para qualquer pessoa e deverá para servidor."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-90",
+      "unit_id": "8b305dea-6d8a-5f95-be5d-f890271b0df2",
+      "content_sha256": "3cbbf105348e4b354bd6c06bd2d5484ee0cd2649e9ad457cfc952bc8f0705a0c",
+      "simples": "Agentes públicos, juízes e tribunais que, no exercício funcional, conhecem fatos de crime de ação pública contra pessoa idosa ou de ação para defendê-la encaminham as peças ao MP.",
+      "pontos": [
+        "A regra exige conhecimento funcional de fatos pertinentes e não depende de condenação definitiva."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A regra exige conhecimento funcional de fatos pertinentes e não depende de condenação definitiva."
+      ],
+      "exemplo": "O juiz conhece fato que pode configurar crime de ação pública e remete peças. Variação: A questão exige esperar condenação criminal: ignora a finalidade de providências cabíveis pelo MP.",
+      "prova": [
+        "Somente juízes estão abrangidos? Não; também tribunais e agentes públicos em geral."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-91",
+      "unit_id": "3b7b47f9-bb8e-5f19-a083-4f77e29d44e6",
+      "content_sha256": "88d8783c45359267514c20a3760eafab5c54b1fe5a65eef5b6e502e7b17f0760",
+      "simples": "Para preparar a inicial, o interessado pode requerer certidões e informações necessárias às autoridades competentes, que as fornecem em dez dias. É regra de obtenção de elementos para ajuizar ação.",
+      "pontos": [
+        "Não confunda dez dias fixos desta previsão com prazo mínimo de requisição do MP no art. 92."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda dez dias fixos desta previsão com prazo mínimo de requisição do MP no art. 92."
+      ],
+      "exemplo": "Interessado pede certidão pertinente à inicial: o fornecimento tem prazo textual de dez dias. Variação: A questão atribui sempre prazo livre de trinta dias à autoridade: desconsidera o prazo indicado.",
+      "prova": [
+        "A finalidade é somente produção de prova após sentença? Não; é instruir a petição inicial."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-92",
+      "unit_id": "d98b6ef9-364b-5186-8a1b-cf223cd776f2",
+      "content_sha256": "04092ae95450c4fd126d9583f4b0175bbfcb2d005282af097867454884f70399",
+      "simples": "O MP pode instaurar inquérito civil e requisitar elementos de fontes públicas ou privadas, com prazo mínimo de dez dias. Arquiva motivadamente após esgotar diligências sem fundamento, remete em três dias ao órgão revisor, permite razões das associações e, se o arquivamento não é homologado, outro membro ajuíza a ação.",
+      "pontos": [
+        "Três dias é remessa do arquivamento, não prazo para responder requisição."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Três dias é remessa do arquivamento, não prazo para responder requisição."
+      ],
+      "exemplo": "O MP fixa quinze dias para informações: supera o mínimo. Variação: Fixa cinco dias: fica abaixo do mínimo textual.",
+      "prova": [
+        "O próprio promotor pode arquivar sem revisão do órgão competente? A promoção deve ser remetida para homologação ou rejeição, conforme os parágrafos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-93",
+      "unit_id": "b2e4c969-4c08-595a-a0f4-0211c381c2cb",
+      "content_sha256": "2402918247d5d543054977d3ef867089cd08227033ea96102962396c1e3b03ca",
+      "simples": "A Lei da Ação Civil Pública, Lei 7.347/1985, aplica-se subsidiariamente no que couber à proteção judicial disciplinada. Regras especiais do Estatuto e compatibilidade orientam a integração.",
+      "pontos": [
+        "Não substitua automaticamente todo o capítulo pela lei geral nem confunda a remissão com o procedimento penal."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não substitua automaticamente todo o capítulo pela lei geral nem confunda a remissão com o procedimento penal."
+      ],
+      "exemplo": "Há lacuna compatível com a disciplina da ação civil pública: consulta-se a lei subsidiária. Variação: A questão usa a remissão para ignorar requisito especial expresso: a subsidiariedade não autoriza isso.",
+      "prova": [
+        "A aplicação é incondicional a toda matéria? Não; subsidiária e no que couber."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-94",
+      "unit_id": "4a764406-28f7-50b4-97ae-4bc827fa0c9e",
+      "content_sha256": "09bc79b97a026a3c1c5aab72a2fc53982b424c57dfe4738d38008d1e286144ec",
+      "simples": "Desde a alteração pela Lei 15.163/2025, CP e CPP aplicam-se no que couber. A Lei 9.099/1995 não se aplica aos crimes do Estatuto nem aos crimes praticados com violência contra pessoa idosa, independentemente da pena prevista.",
+      "pontos": [
+        "Atualização importante: não use a antiga regra de procedimento para pena máxima de quatro anos como texto atual. Analise a lei penal no tempo no caso concreto."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Atualização importante: não use a antiga regra de procedimento para pena máxima de quatro anos como texto atual. Analise a lei penal no tempo no caso concreto."
+      ],
+      "exemplo": "Crime do Estatuto tem pena baixa: isso, por si, não autoriza aplicar a Lei 9.099 diante do parágrafo único atual. Variação: Crime de outro diploma é praticado com violência contra pessoa idosa: a segunda hipótese do parágrafo também precisa ser examinada.",
+      "prova": [
+        "A exclusão depende da pena máxima superar dois anos? Não; o parágrafo único usa independentemente da pena prevista."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-95",
+      "unit_id": "6b612c8d-02ef-5dab-9422-1f67714a3cb1",
+      "content_sha256": "364d06826aa8c6f5f95b617b1403170e77df1a958c352a27643be6a7017b2fc9",
+      "simples": "Crimes definidos no Estatuto têm ação penal pública incondicionada, e não recebem as imunidades dos arts. 181 e 182 do CP. O escopo é o conjunto de crimes definidos nesta lei.",
+      "pontos": [
+        "Não exija representação nem aplique imunidade familiar desses artigos a tais crimes."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não exija representação nem aplique imunidade familiar desses artigos a tais crimes."
+      ],
+      "exemplo": "Familiar pratica crime definido no Estatuto: o parentesco não permite invocar as imunidades indicadas. Variação: A questão exige representação da vítima para iniciar ação: contraria a natureza incondicionada.",
+      "prova": [
+        "O parentesco torna privada a ação penal do Estatuto? Não; ela é pública incondicionada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-96",
+      "unit_id": "2b18fde0-1762-5f32-bddb-ce4e134b6fe1",
+      "content_sha256": "34c9fcce0657acd3e4606cbe3f60496147071e6bb1bf0172032a89057a3f1d8f",
+      "simples": "Discriminar por idade, dificultando banco, transporte, contrato ou cidadania, tem reclusão de seis meses a um ano e multa. Desdenhar, humilhar ou discriminar por qualquer motivo tem a mesma pena. A vítima sob cuidados do agente gera aumento de um terço. Crédito negado por superendividamento não constitui este crime.",
+      "pontos": [
+        "A ressalva exige motivação por superendividamento; não legitima negativa discriminatória arbitrária."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A ressalva exige motivação por superendividamento; não legitima negativa discriminatória arbitrária."
+      ],
+      "exemplo": "Banco nega crédito por superendividamento demonstrado: examine a ressalva do §3º. Variação: A negativa decorre apenas de preconceito etário: a ressalva não foi demonstrada.",
+      "prova": [
+        "A pena aumenta pela metade quando a vítima está sob responsabilidade do agente? Não; aumenta um terço."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-97",
+      "unit_id": "0e8b318f-62ec-5793-97e6-b40be998a547",
+      "content_sha256": "5e155725aa8f3061085332191e4db647718c41d163aa64602a2ed302dff2b668",
+      "simples": "Omissão de assistência possível sem risco pessoal em perigo iminente, dificuldade injustificada de saúde ou falta de pedido de socorro têm detenção de seis meses a um ano e multa. Lesão grave aumenta metade; morte triplica a pena.",
+      "pontos": [
+        "Não confunda triplicação com aumento de um terço. Verifique possibilidade sem risco e ausência de justa causa conforme a conduta."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda triplicação com aumento de um terço. Verifique possibilidade sem risco e ausência de justa causa conforme a conduta."
+      ],
+      "exemplo": "O agente pode ajudar sem risco, mas omite assistência em perigo iminente: examine o caput. Variação: Da omissão resulta morte: aplica-se a regra de triplicação, conforme seus pressupostos.",
+      "prova": [
+        "Com lesão grave a pena dobra? Não; aumenta de metade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-98",
+      "unit_id": "21f8a0ff-c64c-5910-a739-f329c896ba2e",
+      "content_sha256": "7b327ac328a26fede91a839b623f2436303867c5571de0d3b8ff1e548e4155a2",
+      "simples": "Abandonar pessoa idosa em hospital, casa de saúde, longa permanência ou congênere, ou não prover necessidades básicas estando obrigado por lei ou mandado, tem detenção de seis meses a três anos e multa.",
+      "pontos": [
+        "Na falta de provimento identifique a obrigação por lei ou mandado; nem toda ausência física é abandono descrito."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Na falta de provimento identifique a obrigação por lei ou mandado; nem toda ausência física é abandono descrito."
+      ],
+      "exemplo": "Responsável legal deixa de prover necessidades básicas da pessoa: a obrigação deve ser demonstrada. Variação: Não há obrigação legal ou por mandado demonstrada: não conclua pela segunda modalidade só por falta de auxílio.",
+      "prova": [
+        "Qual é a espécie de pena privativa prevista? Detenção, de seis meses a três anos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-99",
+      "unit_id": "5e0357f5-e287-5985-8294-3a27af2fa38f",
+      "content_sha256": "406a475d430533472312b1262d1caec2e4dad7d2917efd1f235f4994b1d4c4f0",
+      "simples": "Expor integridade ou saúde física ou psíquica a perigo por condições degradantes, privação de cuidados devidos ou trabalho excessivo tem hoje reclusão de dois a cinco anos. Lesão grave: três a sete. Morte: oito a quatorze. As penas foram alteradas pela Lei 15.163/2025.",
+      "pontos": [
+        "Atualização de pena: não copie os intervalos antigos de detenção ou as penas anteriores dos resultados. Lei no tempo exige análise própria."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Atualização de pena: não copie os intervalos antigos de detenção ou as penas anteriores dos resultados. Lei no tempo exige análise própria."
+      ],
+      "exemplo": "Cuidador expõe a perigo ao privar cuidados devidos: confronte a conduta e a pena atual do caput. Variação: O fato produz lesão grave: a hipótese atual tem reclusão de três a sete anos.",
+      "prova": [
+        "A forma com morte tem pena atual de quatro a doze anos? Não; oito a quatorze anos de reclusão."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-101",
+      "unit_id": "71ec67df-2953-52f6-8a01-890a19f67047",
+      "content_sha256": "d8e56b40fa9a977f1842d5704d9672297556d9465878eff42c022711d6208ca1",
+      "simples": "Descumprir, retardar ou frustrar sem justo motivo ordem judicial em ações com pessoa idosa como parte ou interveniente tem detenção de seis meses a um ano e multa.",
+      "pontos": [
+        "Compare o art. 100, IV: ali a pena é reclusão e há referência à ação civil daquela previsão; não misture os artigos."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Compare o art. 100, IV: ali a pena é reclusão e há referência à ação civil daquela previsão; não misture os artigos."
+      ],
+      "exemplo": "O destinatário frustra sem justo motivo ordem na ação abrangida: examine o art. 101. Variação: Existe justo motivo demonstrado: falta a condição negativa expressa.",
+      "prova": [
+        "O art. 101 prevê reclusão? Não; detenção de seis meses a um ano e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-102",
+      "unit_id": "f38f37f8-6089-54f6-9a2b-3674a8937156",
+      "content_sha256": "c10f8f1080ae3d10bb9b609ad72d76f71fba9b99e56e7517d5abd7b700242c50",
+      "simples": "Apropriar-se ou desviar bens, proventos, pensão ou outros rendimentos da pessoa idosa, com aplicação diversa de sua finalidade, tem reclusão de um a quatro anos e multa.",
+      "pontos": [
+        "Administrar legitimamente e desviar para interesse próprio são situações diferentes."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Administrar legitimamente e desviar para interesse próprio são situações diferentes."
+      ],
+      "exemplo": "O responsável desvia a pensão para uso próprio incompatível com a finalidade: examine os elementos do tipo. Variação: Há pagamento documentado de despesas autorizadas da titular: não presuma desvio apenas por haver administração.",
+      "prova": [
+        "A sanção é detenção? Não; reclusão de um a quatro anos e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-103",
+      "unit_id": "3b479ef7-f917-5748-b0a0-35efb36d26d4",
+      "content_sha256": "f0e6f1cbda8b5b171ca44bda188a21c2afab2cb83478cfdc8ddf004a17d25a5c",
+      "simples": "Negar acolhimento ou permanência como abrigada porque a pessoa idosa recusa procuração à entidade tem detenção de seis meses a um ano e multa. O motivo da recusa de atendimento integra a descrição.",
+      "pontos": [
+        "Não trate procuração como condição obrigatória de toda permanência."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não trate procuração como condição obrigatória de toda permanência."
+      ],
+      "exemplo": "Entidade ameaça expulsar residente porque ela não dá procuração: compare com o tipo. Variação: A recusa de acolhimento tem causa diversa: o motivo específico deste artigo precisa ser demonstrado.",
+      "prova": [
+        "Basta qualquer negativa de vaga para este tipo específico? Não; ele exige a negativa motivada pela recusa de procuração."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-104",
+      "unit_id": "b44e336b-f7dc-5c40-b722-83ad2deb334b",
+      "content_sha256": "b64f3936de380b1b31020641c39a30e17b5f8de5eb2bf0a6e8e61bc3ea35aa04",
+      "simples": "Reter cartão bancário de benefício, proventos ou pensão, ou outro documento, para assegurar recebimento ou ressarcimento de dívida tem detenção de seis meses a dois anos e multa.",
+      "pontos": [
+        "A finalidade de garantia da dívida integra o tipo; nem toda guarda consentida de documento a demonstra."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A finalidade de garantia da dívida integra o tipo; nem toda guarda consentida de documento a demonstra."
+      ],
+      "exemplo": "Credor retém cartão de benefício para cobrar dívida: a finalidade corresponde ao artigo. Variação: Há guarda autorizada sem objetivo de dívida: não conclua automaticamente por esse tipo.",
+      "prova": [
+        "A retenção precisa visar dívida na descrição? Sim; assegurar recebimento ou ressarcimento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-105",
+      "unit_id": "5f234e8e-38fe-561a-9374-2b3485502b38",
+      "content_sha256": "f8a11488831ddb923e6f86268eabf1341fec5b94bc0c0dade530287f7cbff453",
+      "simples": "Exibir ou veicular informações ou imagens depreciativas ou injuriosas à pessoa idosa por meio de comunicação tem detenção de um a três anos e multa. O meio pode variar.",
+      "pontos": [
+        "Não limite a divulgação a televisão nem confunda com ausência de qualquer conteúdo depreciativo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não limite a divulgação a televisão nem confunda com ausência de qualquer conteúdo depreciativo."
+      ],
+      "exemplo": "É divulgada imagem injuriosa em meio de comunicação: examine a descrição do artigo. Variação: A informação é respeitosa e não depreciativa ou injuriosa: esses elementos não foram demonstrados.",
+      "prova": [
+        "O tipo exige exclusivamente imagem? Não; também informações."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-106",
+      "unit_id": "6fd4d360-c531-5ce8-825a-7b316e56202d",
+      "content_sha256": "b84c2d215a87817e4badb1bd37fb9a955b6609552923a75c6466415862851f8b",
+      "simples": "Induzir pessoa idosa sem discernimento a dar procuração para administrar ou dispor de bens tem reclusão de dois a quatro anos. Ausência de discernimento e indução são elementos próprios.",
+      "pontos": [
+        "Não confunda induzir sem discernimento com coagir a pessoa do art. 107."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda induzir sem discernimento com coagir a pessoa do art. 107."
+      ],
+      "exemplo": "A pessoa sem discernimento é induzida a dar poderes para disposição de bens: examine o art. 106. Variação: A pessoa capaz é coagida: a comparação inicial é com o art. 107, não este tipo por falta de discernimento.",
+      "prova": [
+        "Toda procuração de pessoa idosa constitui o crime? Não; exige os elementos específicos descritos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-107",
+      "unit_id": "e375f3be-bb15-5cc3-8460-b3ef913ff098",
+      "content_sha256": "f094fb835cd3621d1a0267e355859f119c3a2e0f23c251a0ecdfabc730868764",
+      "simples": "Coagir de qualquer modo a pessoa idosa a doar, contratar, testar ou dar procuração tem reclusão de dois a cinco anos. O tipo não exige a falta de discernimento do art. 106.",
+      "pontos": [
+        "Coação é diferente de opção livre e de mera indução descrita em outro artigo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Coação é diferente de opção livre e de mera indução descrita em outro artigo."
+      ],
+      "exemplo": "O agente obriga a vítima a fazer testamento: compare com a conduta de coagir. Variação: Ela decide livremente, sem coação demonstrada: falta o elemento do artigo.",
+      "prova": [
+        "A coação alcança apenas doações? Não; também contratar, testar e outorgar procuração."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-108",
+      "unit_id": "ea45ed8f-0c7d-5391-8287-a1cc6875a3c9",
+      "content_sha256": "4306f1b263c9e594607109e555e324b7dc29e5f064f1f5c35326a10469c59e50",
+      "simples": "Lavrar ato notarial envolvendo pessoa idosa sem discernimento, sem devida representação legal, tem reclusão de dois a quatro anos. A conduta é a lavratura nas condições indicadas.",
+      "pontos": [
+        "Não confunda o agente que induz procuração do art. 106 com a lavratura notarial deste artigo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda o agente que induz procuração do art. 106 com a lavratura notarial deste artigo."
+      ],
+      "exemplo": "Ato é lavrado com pessoa sem discernimento e sem representação devida: confrontam-se os elementos do tipo. Variação: Existe representação legal devida: a condição negativa descrita precisa ser reexaminada.",
+      "prova": [
+        "Apenas idade avançada basta para este tipo? Não; falta de discernimento e representação nas condições do texto são relevantes."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-109",
+      "unit_id": "c0682af1-b3bb-59bb-9ed9-8397b8d42126",
+      "content_sha256": "c8e81892ca0d176957310d01fdbf884c63d7cd76b00da131bf9b3aa3de42babc",
+      "simples": "Impedir ou embaraçar ato do MP ou de outro agente fiscalizador tem reclusão de seis meses a um ano e multa. A proteção alcança diferentes fiscalizadores.",
+      "pontos": [
+        "Não reduza o tipo a ato exclusivo do promotor; é necessário identificar efetivo impedimento ou embaraço."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não reduza o tipo a ato exclusivo do promotor; é necessário identificar efetivo impedimento ou embaraço."
+      ],
+      "exemplo": "Entidade impede ato legítimo de fiscalização sanitária: o texto também protege outros fiscalizadores. Variação: Há apenas discordância sem embaraço demonstrado: não presuma a conduta típica.",
+      "prova": [
+        "A pena é detenção? Não; reclusão de seis meses a um ano e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-110",
+      "unit_id": "b2b7f7d6-4f5a-5181-aa56-77f1000f8e29",
+      "content_sha256": "ceacd0bf10afd2e7b0615ab932b912f36687d744ad8f922b4843e558fc503339",
+      "simples": "O artigo introduziu proteção etária em vários dispositivos do CP: agravantes, homicídio, abandono, honra, liberdade, extorsão, imunidades patrimoniais e assistência familiar. É texto modificador de 2003; cada regra atual deve ser lida no CP compilado.",
+      "pontos": [
+        "Exemplo de atualização: o art. 140, §3º, hoje tem redação da Lei 14.532/2023 sobre religião, pessoa idosa ou com deficiência. Não copie como atual a antiga enumeração racial transcrita aqui. Os limites maiores de sessenta e igual ou superior a sessenta não são intercambiáveis."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Exemplo de atualização: o art. 140, §3º, hoje tem redação da Lei 14.532/2023 sobre religião, pessoa idosa ou com deficiência. Não copie como atual a antiga enumeração racial transcrita aqui. Os limites maiores de sessenta e igual ou superior a sessenta não são intercambiáveis."
+      ],
+      "exemplo": "Para estudar imunidade familiar, consulta-se o art. 183, III, atual: idade igual ou superior a sessenta afasta as imunidades referidas. Variação: Para injúria, usa-se a redação atual do art. 140, §3º, não apenas o recorte de 2003.",
+      "prova": [
+        "Toda transcrição modificadora de 2003 é automaticamente a redação atual do CP? Não; precisa ser confrontada com alterações posteriores."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-111",
+      "unit_id": "ec5b7e50-0070-591d-bbb4-9ae7338326f3",
+      "content_sha256": "a80dc472d49d1b3a3904c2ea065b237ae296c77e867f6ebf41bc6ba37d66b3a7",
+      "simples": "O artigo introduziu aumento de um terço até metade nas vias de fato contra vítima maior de sessenta anos. No texto atual da LCP, essa regra está no §1º do art. 21, renumerado em 2024.",
+      "pontos": [
+        "A Lei 14.994/2024 também incluiu §2º próprio para a contravenção contra mulher por razões da condição do sexo feminino; não chame a estrutura atual de parágrafo único."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A Lei 14.994/2024 também incluiu §2º próprio para a contravenção contra mulher por razões da condição do sexo feminino; não chame a estrutura atual de parágrafo único."
+      ],
+      "exemplo": "Vias de fato envolvem vítima de setenta: examine o aumento do §1º e os demais elementos. Variação: O caso envolve a hipótese específica do novo §2º: ela exige comparação separada com seu aumento em triplo.",
+      "prova": [
+        "A regra etária ainda se chama parágrafo único no texto atual? Não; foi renumerada como §1º em 2024."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-112",
+      "unit_id": "5c258964-01b5-5853-8649-3c3e4c9e9955",
+      "content_sha256": "ecfca644288310819b7d1148558031f9c099dfecac6c431e77f2314bd6f0128c",
+      "simples": "O artigo alterou o aumento da Lei de Tortura para abranger criança, gestante, pessoa com deficiência, adolescente ou maior de sessenta. A aplicação atual deve consultar o art. 1º, §4º, II, da Lei 9.455 compilada.",
+      "pontos": [
+        "Esta alteração etária não é a lei inteira de tortura. A Lei 15.410/2026 incluiu figura própria no art. 1º, III; não ignore alterações posteriores ao Estatuto."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Esta alteração etária não é a lei inteira de tortura. A Lei 15.410/2026 incluiu figura própria no art. 1º, III; não ignore alterações posteriores ao Estatuto."
+      ],
+      "exemplo": "O tipo de tortura está demonstrado e a vítima tem setenta anos: examine a majorante etária no diploma próprio. Variação: O caso menciona apenas constrangimento sem requisitos de tortura: a idade não transforma qualquer conduta em tortura.",
+      "prova": [
+        "A majorante substitui a necessidade de comprovar o tipo de tortura? Não; ela pressupõe o crime e suas condições."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-113",
+      "unit_id": "d1243b17-c4fe-5252-a03f-1a062d9144be",
+      "content_sha256": "0f65a14b60bfbfb2444e031572c6d230bf5b92676a875e34675f3d33daaff040",
+      "simples": "Em 2003, este artigo alterou a antiga Lei 6.368/1976 quanto a uma majorante. Essa lei foi revogada expressamente pelo art. 75 da Lei 11.343/2006. O recorte deve ser identificado como histórico, não como regra atual de drogas.",
+      "pontos": [
+        "Não ensine menores de vinte e um ou pessoa de sessenta anos como a enumeração atual da Lei de Drogas apenas com esta transcrição. Leia o art. 40 da Lei 11.343 e seus elementos próprios."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não ensine menores de vinte e um ou pessoa de sessenta anos como a enumeração atual da Lei de Drogas apenas com esta transcrição. Leia o art. 40 da Lei 11.343 e seus elementos próprios."
+      ],
+      "exemplo": "Uma questão pede a majorante atual de drogas: o aluno consulta a Lei 11.343 compilada. Variação: O exercício pergunta o que foi alterado em 2003: a transcrição tem valor histórico, com essa identificação.",
+      "prova": [
+        "A Lei 6.368 continua vigente por ser citada aqui? Não; foi revogada pelo art. 75 da Lei 11.343/2006."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-114",
+      "unit_id": "125b1cb8-864e-519f-91fa-05350b708f44",
+      "content_sha256": "71425b17d4ac405f99c36780c67d32bffbbb066d89c4b4b09a065c1a17009d8e",
+      "simples": "O artigo alterou em 2003 a lei de atendimento prioritário para incluir pessoas idosas com sessenta anos ou mais entre os beneficiários. A lista atual da Lei 10.048 recebeu outras alterações e deve ser consultada diretamente.",
+      "pontos": [
+        "A Lei 14.626/2023 incluiu autismo, mobilidade reduzida e doadores de sangue; obesidade já constava da alteração de 2015. Doadores são atendidos após os demais beneficiários, com comprovante válido por cento e vinte dias. Não apresente o rol antigo como completo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A Lei 14.626/2023 incluiu autismo, mobilidade reduzida e doadores de sangue; obesidade já constava da alteração de 2015. Doadores são atendidos após os demais beneficiários, com comprovante válido por cento e vinte dias. Não apresente o rol antigo como completo."
+      ],
+      "exemplo": "Para identificar todos os grupos com prioridade hoje, consulta-se o art. 1º compilado da Lei 10.048. Variação: A pergunta é sobre a alteração de 2003: a transcrição histórica deve ser assim identificada.",
+      "prova": [
+        "O rol reproduzido aqui esgota os beneficiários atuais? Não; houve alterações posteriores."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-115",
+      "unit_id": "1b384e7a-2411-588a-a384-b4a85f7e1326",
+      "content_sha256": "5428e1685b8374c65b987a13c8448eca2ab71d6b675a456b09fe6a9c930d0153",
+      "simples": "O Estatuto previu recursos da seguridade ao Fundo Nacional de Assistência Social até a criação do fundo nacional específico, para programas de pessoas idosas. A condição é transitória.",
+      "pontos": [
+        "A Lei 12.213/2010 instituiu o fundo nacional; não afirme que ele ainda não existe a partir da redação até que seja criado. Confira a disciplina atual de financiamento e fundos."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "A Lei 12.213/2010 instituiu o fundo nacional; não afirme que ele ainda não existe a partir da redação até que seja criado. Confira a disciplina atual de financiamento e fundos."
+      ],
+      "exemplo": "A questão usa a redação de 2003 para afirmar que não existe fundo nacional: a Lei 12.213/2010 deve ser considerada. Variação: Pergunta a destinação transitória original: era ao Fundo Nacional de Assistência Social.",
+      "prova": [
+        "A condição até criação demonstra inexistência atual do fundo? Não; ele foi instituído em 2010."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-116",
+      "unit_id": "d3fb848f-1d0c-51ad-9c59-bf9d952d8fb8",
+      "content_sha256": "f0a436e8e7582c131a1093f3635e913695f746ef2dd77351e2cc2b3fe01a8a90",
+      "simples": "Censos demográficos incluem dados relativos à população idosa brasileira. A previsão orienta a produção de informação para conhecer essa população.",
+      "pontos": [
+        "Não confunda dados censitários com uma lista de pessoas para expor informações pessoais indevidamente."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda dados censitários com uma lista de pessoas para expor informações pessoais indevidamente."
+      ],
+      "exemplo": "O censo produz dados sobre composição etária da população. Variação: A questão exclui a população idosa da coleta demográfica: contraria a regra.",
+      "prova": [
+        "A inclusão de dados é facultativa no artigo? Não; o texto determina que serão incluídos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-117",
+      "unit_id": "7554ece6-c934-5cee-8f55-5098f1e83369",
+      "content_sha256": "041d732ec54db7039001ffe33692eb09834c556ca57e7c77f6d38b667430c98d",
+      "simples": "O Executivo encaminha ao Congresso projeto para rever critérios do BPC da Loas e adequar o acesso ao desenvolvimento socioeconômico. É determinação de encaminhar proposta, não alteração automática de critérios.",
+      "pontos": [
+        "Projeto de lei não é lei vigente. Para o BPC atual, consulte a Loas compilada e regras aplicáveis, sem inventar novos requisitos a partir deste artigo."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Projeto de lei não é lei vigente. Para o BPC atual, consulte a Loas compilada e regras aplicáveis, sem inventar novos requisitos a partir deste artigo."
+      ],
+      "exemplo": "É apresentado projeto de revisão: até alteração legal efetiva, a proposta não substitui os critérios vigentes. Variação: A questão atribui mudança automática da renda-limite pela simples previsão deste artigo: confunde proposta e norma.",
+      "prova": [
+        "O artigo fixa novo valor de benefício? Não; determina encaminhamento de projeto de revisão de critérios."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-118",
+      "unit_id": "b145eb90-ab60-5ae1-b952-e23dc8ccea45",
+      "content_sha256": "78e911dbbe0978e18862053b26027c3f820ebe4bb55656aeeaf8d3afbba45982",
+      "simples": "A vigência geral começa noventa dias após publicação, com exceção do caput do art. 36, que produz a vigência indicada a partir de primeiro de janeiro de 2004. Há dois marcos no texto original.",
+      "pontos": [
+        "Não confunda a entrada em vigor original com as datas de alterações posteriores, que dependem de seus próprios atos."
+      ],
+      "atencao": [
+        "Texto conferido em 11/10/2026; remissões históricas e alterações posteriores devem ser distinguidas do texto aplicável.",
+        "Não confunda a entrada em vigor original com as datas de alterações posteriores, que dependem de seus próprios atos."
+      ],
+      "exemplo": "Questão pergunta a vacância geral original: noventa dias. Variação: Pergunta especificamente o caput do art. 36: aplica-se a data excepcional indicada.",
+      "prova": [
+        "Todas as alterações futuras seguem novamente essa vacância original? Não; cada ato modificador tem sua disciplina de vigência e efeitos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "idosa",
+      "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-100",
+      "unit_id": "debda221-c294-5085-a94d-b7b59f7d9377",
+      "content_sha256": "7568eb98fefbbf0cf607724b10d30c20a58623a2951befd4ec61e30e8173a57c",
+      "simples": "O artigo reúne cinco condutas criminosas: impedir cargo público ou emprego por idade; dificultar saúde sem justa causa; descumprir ordem judicial sem justo motivo na ação civil prevista; e omitir dados técnicos indispensáveis requisitados pelo Ministério Público. A pena é reclusão de seis meses a um ano e multa.",
+      "pontos": [
+        "Idade é o motivo nos incisos I e II; os incisos III e IV contêm ressalvas de justa causa ou justo motivo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "Não troque reclusão por detenção. O trecho do art. 101 que ficou anexado ao fim foi separado; crimes próximos devem ser lidos em suas unidades."
+      ],
+      "exemplo": "O responsável omite dados técnicos indispensáveis à ação civil, requisitados pelo Ministério Público: confronte o caso com o inciso V. Variação: O atraso no atendimento tem justa causa demonstrada: o inciso III expressamente exige ausência de justa causa.",
+      "prova": [
+        "Qual é a pena do art. 100? Reclusão de seis meses a um ano e multa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "debda221-c294-5085-a94d-b7b59f7d9377",
+        "content_sha256": "7568eb98fefbbf0cf607724b10d30c20a58623a2951befd4ec61e30e8173a57c",
+        "simples": "O artigo reúne cinco condutas criminosas: impedir cargo público ou emprego por idade; dificultar saúde sem justa causa; descumprir ordem judicial sem justo motivo na ação civil prevista; e omitir dados técnicos indispensáveis requisitados pelo Ministério Público. A pena é reclusão de seis meses a um ano e multa.",
+        "pontos": [
+          "Idade é o motivo nos incisos I e II; os incisos III e IV contêm ressalvas de justa causa ou justo motivo."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Não troque reclusão por detenção. O trecho do art. 101 que ficou anexado ao fim foi separado; crimes próximos devem ser lidos em suas unidades."
+        ],
+        "exemplo": "O responsável omite dados técnicos indispensáveis à ação civil, requisitados pelo Ministério Público: confronte o caso com o inciso V. Variação: O atraso no atendimento tem justa causa demonstrada: o inciso III expressamente exige ausência de justa causa.",
+        "prova": [
+          "Qual é a pena do art. 100? Reclusão de seis meses a um ano e multa."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:45.016+00:00",
+        "created_at": "2026-10-11T20:08:15.612889+00:00",
+        "updated_at": "2026-10-11T20:09:45.016+00:00"
+      }
+    }
+  ]
+}

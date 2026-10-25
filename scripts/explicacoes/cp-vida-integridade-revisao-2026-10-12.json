@@ -1,0 +1,405 @@
+{
+  "course_slug": "codigo-penal",
+  "units": {
+    "art-121": {
+      "simples": "Homicídio simples pune matar alguém com reclusão de 6 a 20 anos. O artigo diferencia privilégio, qualificadoras, forma culposa e aumentos; o contexto de organização ultraviolenta/milícia tem redação especial de 2026, e feminicídio passou ao art. 121-A.",
+      "pontos": [
+        "Privilégio: 1/6 a 1/3; relevante valor OU domínio de emoção logo após provocação injusta, não mera influência.",
+        "Qualificado: 12 a 30; identificar motivo, meio, defesa dificultada, conexão, função, arma restrita/proibida, menor 14 e instituição de ensino.",
+        "Lei 15.134: função e familiares com recortes distintos, vigente em 7/5/2025. Lei 15.159: hipótese escolar, vigente em 4/7/2025.",
+        "§2º-D: 20 a 40, Lei 15.358 vigente em 25/3/2026, exige integrante E contexto/finalidade legais.",
+        "Culposo: detenção 1 a 3; §4º separa culpa e dolo; §5º perdão na hipótese culposa; §6º milícia/extermínio tem recorte próprio.",
+        "Menor 14: integrar §2º-B; instituição escolar: §2º-C. Não duplicar o mesmo fundamento."
+      ],
+      "atencao": [
+        "Não ressuscitar incisoVI/§§2º-A/7º revogados como feminicídio atual. Não aplicar aumento por menor 14 junto da qualificadora pelo mesmo dado sem enfrentar bis in idem. Pertencer a grupo sozinho não satisfaz contexto/finalidade do §2º-D; mudança gravosa não retroage e controle constitucional não foi certificado integralmente. Privilégio/qualificadoras exigem análise própria, não solução universal."
+      ],
+      "exemplo": "Professor mata aluno nas dependências da escola: a hipótese escolar e o vínculo específico devem ser analisados, sem presumir também toda qualificadora por profissão. Variação: Se o fato ocorreu antes das alterações agravadoras, analisar lei no tempo; se ocorreu fora de instituição, falta o pressuposto escolar, ainda que o autor seja professor.",
+      "prova": [
+        "Toda emoção basta para o privilégio? Não; domínio, provocação injusta e sequência imediata são requisitos.",
+        "Membro de facção sozinho prova §2º-D? Não; exige a qualidade legal e o contexto/finalidade.",
+        "Feminicídio atual permanece no incisoVI? Não; artigo autônomo desde 2024."
+      ],
+      "termos": [
+        {
+          "termo": "Qualificadora e majorante",
+          "significado": "Mudanças na espécie ou no aumento da pena, com pressupostos próprios e vedação de dupla contagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15134.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ]
+    },
+    "art-121-a": {
+      "simples": "Feminicídio é matar mulher por razões da condição do sexo feminino: violência doméstica/familiar OU menosprezo/discriminação. Lei 14.994 criou o tipo autônomo de 20 a 40 anos, publicada e vigente em 10/10/2024.",
+      "pontos": [
+        "§2º: aumento de 1/3 até metade nas hipóteses legais, não dobro universal.",
+        "Gestação,3 meses pós-parto OU mãe/responsável por criança/adolescente/pessoa com deficiência; não limitar esta última situação a 3 meses.",
+        "Presença física OU virtual de descendente/ascendente; idade, deficiência/doença e medidas protetivas têm recortes próprios.",
+        "§2ºV remete a meios/defesa/arma do art.121; §3º comunica as elementares pessoais do §1º ao coautor/partícipe."
+      ],
+      "atencao": [
+        "Ser mulher, sozinho, não prova as razões legais. Não generalizar qualquer presença de testemunha como ascendente/descendente nem duplicar o mesmo fundamento. A pena nova mais gravosa não retroage; coautoria exige elementos e conhecimento pertinentes, não responsabilidade automática por proximidade."
+      ],
+      "exemplo": "Ascendente da vítima acompanha por videochamada o fato configurado como feminicídio: examinar presença virtual expressamente prevista. Variação: Se a pessoa presente é apenas vizinho, essa hipótese de parentesco não está demonstrada; outros elementos precisam de análise própria.",
+      "prova": [
+        "Toda morte de mulher é automaticamente feminicídio? Não; exige razões legais.",
+        "A presença deve ser só física? Não; o texto inclui virtual."
+      ],
+      "termos": [
+        {
+          "termo": "Razões da condição do sexo feminino",
+          "significado": "Elementares previstas no §1º, não rótulo presumido por sexo da vítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ]
+    },
+    "art-121-b": {
+      "simples": "Vicaricídio pune matar pessoa indicada vinculada à mulher com finalidade específica de causar-lhe sofrimento, punição ou controle em violência doméstica/familiar. Lei 15.384:20 a 40 anos, vigente em 10/4/2026, texto retificado em 15/4/2026.",
+      "pontos": [
+        "Vítima direta: descendente, ascendente, dependente, enteado ou pessoa sob guarda/responsabilidade direta.",
+        "Aumento 1/3 até metade: presença da mulher, vítima com qualidades indicadas ou descumprimento de medida protetiva.",
+        "A definição de violência vicária na Maria da Penha é mais ampla que o tipo de matar."
+      ],
+      "atencao": [
+        "Não equiparar toda violência vicária a homicídio nem ampliar vítimas penais por analogia prejudicial a toda rede de apoio. Finalidade específica e contexto exigem prova. Novo tipo/pena gravosos não retroagem; não certificar todo controle constitucional por existir texto publicado."
+      ],
+      "exemplo": "Agente mata descendente da mulher para puni-la no contexto doméstico: examinar todos os elementos do art.121-B. Variação: Violência contra alguém da rede de apoio, sem matar ou sem o vínculo penal listado, não permite afirmar automaticamente este tipo; examinar outros enquadramentos.",
+      "prova": [
+        "Qualquer violência vicária configura art.121-B? Não; exige matar e elementos específicos.",
+        "Todo amigo da rede de apoio consta do rol penal? Não; não ampliar por analogia."
+      ],
+      "termos": [
+        {
+          "termo": "Finalidade vicária",
+          "significado": "Propósito específico de atingir a mulher por vítima vinculada, no contexto legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm"
+      ]
+    },
+    "art-122": {
+      "simples": "Induzir, instigar ou auxiliar materialmente suicídio/automutilação tem pena-base de 6 meses a 2 anos e resultados qualificados. A redação de 2019 não depende sempre de morte; vítimas especialmente vulneráveis e meios virtuais mudam a análise.",
+      "pontos": [
+        "Lesão grave/gravíssima:1 a 3; morte:2 a 6 na hipótese própria.",
+        "§3º duplica por motivo ou vulnerabilidade indicados; §4º meio virtual aumenta ATÉ dobro.",
+        "§5º líder/coordenador/administrador/responsável: dobro, redação Lei 14.811 vigente em 15/1/2024.",
+        "§6º: gravíssima e vítima indicada remetem a 129§2º; §7º: morte e vulnerabilidade indicada remetem a 121."
+      ],
+      "atencao": [
+        "Não reproduzir regra antiga que só punia havendo resultado grave/morte, nem tratar todo usuário de rede como administrador. Até o dobro não é dobro obrigatório. Remissões dos §§6º/7º exigem resultado e qualidades específicas; não deixar enquadramento no art.122 por automatismo."
+      ],
+      "exemplo": "Administrador de grupo virtual realiza a conduta típica: examinar o §5º e prova de sua atuação, sem atribuir o mesmo papel a todos os integrantes. Variação: Se há morte de vítima menor 14 na hipótese do §7º, analisar homicídio em vez de apenas repetir a faixa geral do §2º.",
+      "prova": [
+        "Todo usuário de rede é administrador? Não.",
+        "Até o dobro equivale a dobro obrigatório? Não; distinguir §§4º/5º."
+      ],
+      "termos": [
+        {
+          "termo": "Induzir e instigar",
+          "significado": "Criar ou reforçar decisão alheia nas condutas típicas, distinto de execução direta do resultado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+      ]
+    },
+    "art-127": {
+      "simples": "Resultados na gestante qualificam as penas dos arts.125/126: aumento de 1/3 por lesão grave e duplicação por morte decorrentes do aborto ou meios empregados. Não é regra de duplicação de todo autoaborto.",
+      "pontos": [
+        "Remissão aos DOIS artigos anteriores:125 e 126.",
+        "Nexo com aborto OU meios utilizados."
+      ],
+      "atencao": [
+        "Não aplicar ao art.124 apenas pela proximidade no capítulo nem imputar resultado sem nexo e elemento subjetivo exigível; integrar art.19. Consentimento não elimina automaticamente as consequências do resultado na hipótese legal."
+      ],
+      "exemplo": "Aborto provocado por terceiro na hipótese de 125/126 causa lesão grave na gestante: examinar aumento de 1/3 e requisitos. Variação: Se resulta morte da gestante no mesmo nexo legal, a regra prevista é duplicação, não repetir a fração da lesão.",
+      "prova": [
+        "A remissão inclui automaticamente art.124? Não; são 125/126.",
+        "Lesão grave e morte têm mesma fração? Não; um terço versus dobro."
+      ],
+      "termos": [
+        {
+          "termo": "Resultado agravador",
+          "significado": "Consequência ligada ao fato/meios, com requisito de imputação e aumento próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-128": {
+      "simples": "O CP prevê hipóteses de aborto praticado por médico: ausência de outro meio de salvar a vida da gestante e gravidez resultante de estupro com consentimento pertinente. ADPF 54 afasta criminalização da interrupção por anencefalia diagnosticada, como interpretação judicial própria.",
+      "pontos": [
+        "IncisoI: não há outro meio de salvar a VIDA, não qualquer risco genérico.",
+        "IncisoII: consentimento da gestante ou representante quando incapaz.",
+        "ADPF 54, julgamento de 2012: decisão da gestante e diagnóstico, sem generalizar a qualquer malformação.",
+        "ADPFs 989/1207: notícia de 27/10/2025 relata não referendo da liminar de 17/10, não decisão definitiva de todo mérito."
+      ],
+      "atencao": [
+        "Não dizer que remissão MC no compilado prova liminar vigente: STF não a referendou em 24/10/2025. Não certificada aqui inexistência de decisões posteriores ou todo mérito até 2026; não usar a cautelar superada como autorização atual universal de atuação da enfermagem. Urgência, consentimento e regulamentação assistencial exigem avaliação própria, sem inventar autorização judicial universal ou permissão geral a qualquer pessoa."
+      ],
+      "exemplo": "Diagnóstico médico de anencefalia e escolha da gestante exigem analisar ADPF 54; não restringir toda hipótese jurídica aos dois incisos literais. Variação: Se a questão usa a liminar isolada das ADPFs 989/1207 para afirmar autorização atual ampla à enfermagem, confrontar não referendo e reconferir eventual andamento posterior.",
+      "prova": [
+        "Apenas remissão MC comprova vigência da liminar? Não.",
+        "Anencefalia equivale a qualquer malformação? Não; a decisão tem recorte próprio.",
+        "Não referendo da cautelar encerra necessariamente todo mérito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Texto e decisão judicial",
+          "significado": "Fontes distintas que devem ser integradas com alcance e estado processual explicitados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/mes-da-mulher-ha-onze-anos-stf-descriminalizou-a-interrupcao-da-gravidez-de-fetos-anencefalos/",
+        "https://noticias.stf.jus.br/postsnoticias/stf-derruba-liminar-que-autorizou-profissionais-de-enfermagem-a-realizar-aborto-legal/"
+      ]
+    },
+    "art-129": {
+      "simples": "Lesão corporal ofende integridade ou saúde e tem modalidades conforme resultado e contexto. Leve:3 meses a 1 ano; grave:1 a 5; gravíssima:2 a 8; seguida de morte:4 a 12, sem dolo/assunção do risco de matar. Alterações de 2024–2026 têm disciplina própria.",
+      "pontos": [
+        "Grave: ocupações habituais MAIS de 30 dias, perigo de vida, debilidade ou aceleração do parto.",
+        "Gravíssima: incapacidade permanente para trabalho, enfermidade incurável, perda/inutilização, deformidade ou aborto.",
+        "Privilégio 1/6 a 1/3; culpa 2 meses a 1 ano; §5º contém moeda histórica, não tabela monetária atual.",
+        "§§9º/13:2 a 5 após Lei 14.994, vigente 10/10/2024; Lei 15.455 vigente 2/7/2026 inclui relação de trabalho doméstico no §9º.",
+        "§12 escolar/função: frações e pressupostos próprios, Lei 15.159 vigente 4/7/2025.",
+        "Lei 15.358 vigente 25/3/2026: §3º-A 20 a 40; §8º-A 2/3 com EXCEÇÃO do §3º-A; §§10/11 e remissões§§7º/8º exigem integração."
+      ],
+      "atencao": [
+        "Não confundir preterdolo com dolo eventual de matar nem aplicar todas as frações cumulativamente pelo mesmo fundamento. Não usar mil-réis como moeda atual ou duplicar fundamento de menor 14 nas remissões. Súmula 542/STJ: lesão em violência doméstica contra mulher tem ação pública incondicionada; não impor representação pelo novo prazo geral doméstico. Mudanças gravosas não retroagem."
+      ],
+      "exemplo": "A vítima fica incapaz de ocupações habituais por exatamente 30 dias: esse dado não satisfaz MAIS de 30, mas outros resultados graves devem ser verificados. Variação: Se o agente quis matar ou assumiu o risco, examinar homicídio; não enquadrar sempre como lesão seguida de morte só por haver lesões anteriores.",
+      "prova": [
+        "Exatamente 30 dias basta nesse inciso? Não.",
+        "§8º-A aplica automaticamente também ao §3º-A? Não; há exceção expressa.",
+        "A vítima de lesão doméstica contra mulher precisa sempre representar? Não; Súmula 542."
+      ],
+      "termos": [
+        {
+          "termo": "Resultados da lesão",
+          "significado": "Consequências e contextos distintos, com classificação e penas próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    },
+    "art-130": {
+      "simples": "Perigo de contágio venéreo exige exposição por relação sexual/ato libidinoso e conhecimento indicado da contaminação. A hipótese de intenção de transmitir tem pena própria; o artigo exige representação.",
+      "pontos": [
+        "Caput:3 meses a 1 ano OU multa.",
+        "Intenção de transmitir:1 a 4 E multa.",
+        "Representação:§2º."
+      ],
+      "atencao": [
+        "Diagnóstico sozinho não prova exposição, conhecimento ou finalidade. Não estigmatizar toda doença ou importar representação do art.130 para todo delito de contágio; tipo, prova e regime específico importam."
+      ],
+      "exemplo": "Há contaminação conhecida, mas nenhum ato sexual/libidinoso de exposição demonstrado: não presumir consumação só pelo diagnóstico. Variação: Se a exposição e intenção específica são provadas na hipótese legal, analisar §1º sem tratar o caput como pena universal.",
+      "prova": [
+        "Diagnóstico sozinho basta? Não.",
+        "As penas usam sempre multa cumulativa? Não; caput alternativa e §1º cumulativa."
+      ],
+      "termos": [
+        {
+          "termo": "Exposição ao contágio",
+          "significado": "Conduta de perigo com meio e elementos próprios, não mera condição de saúde."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-131": {
+      "simples": "Praticar ato capaz de produzir contágio de moléstia grave de que está contaminado, com finalidade de transmiti-la, tem reclusão de 1 a 4 anos e multa. Diferentemente do art.130, não se limita ao meio sexual.",
+      "pontos": [
+        "Fim de transmitir E ato capaz.",
+        "Não importar condição de representação do art.130."
+      ],
+      "atencao": [
+        "Não presumir dolo específico por doença ou contato social comum nem universalizar enquadramento de toda enfermidade sem verificar elementos e jurisprudência pertinente. Transmissão efetiva não é requisito textual de todo fato de perigo."
+      ],
+      "exemplo": "Pessoa conhece a contaminação, mas não há ato capaz nem finalidade de transmitir demonstrados. Variação: Com ato capaz e finalidade legal comprovados, examinar o tipo sem exigir sempre resultado de contágio como único fundamento.",
+      "prova": [
+        "Qualquer contato com pessoa doente basta? Não.",
+        "O texto exige finalidade? Sim; com o fim de transmitir."
+      ],
+      "termos": [
+        {
+          "termo": "Fim de transmissão",
+          "significado": "Elemento específico de propósito, diferente de mera ciência da doença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-132": {
+      "simples": "Expor vida/saúde a perigo direto e iminente tem detenção de 3 meses a 1 ano se não houver crime mais grave. Transporte irregular de pessoas para serviços tem aumento próprio; perigo não é presumido por toda irregularidade.",
+      "pontos": [
+        "Subsidiariedade expressa.",
+        "Transporte para serviços: aumento 1/6 a 1/3 com hipótese específica."
+      ],
+      "atencao": [
+        "Não confundir risco genérico/abstrato com perigo direto e iminente nem usar irregularidade administrativa isolada como prova automática do crime. Crime mais grave e resultado exigem enquadramento próprio."
+      ],
+      "exemplo": "O transporte viola norma, mas a questão presume o delito sem demonstrar perigo direto e iminente. Variação: Se a exposição típica é provada no transporte para serviços, examinar parágrafo e subsidiariedade, sem somar automaticamente todo enquadramento.",
+      "prova": [
+        "Basta risco remoto genérico? Não; direto e iminente.",
+        "Se há crime mais grave ignora-se a subsidiariedade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo concreto",
+          "significado": "Exposição direta e iminente nas condições do tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-133": {
+      "simples": "Abandonar pessoa sob cuidado/guarda/vigilância/autoridade incapaz de defender-se dos riscos tem penas ampliadas pela Lei 15.163, publicada e vigente em 4/7/2025. Incapacidade pode ter qualquer causa relevante, não apenas idade.",
+      "pontos": [
+        "Caput 2 a 5; lesão grave 3 a 7; morte 8 a 14 anos de reclusão.",
+        "Aumento 1/3: lugar ermo, vínculo legal ou vítima maior 60.",
+        "Exige relação especial e incapacidade de defesa dos riscos."
+      ],
+      "atencao": [
+        "Não usar penas antigas como atuais nem aplicá-las de forma gravosa retroativa. Não presumir incapacidade apenas por rótulo ou abandono típico por qualquer afastamento; verificar riscos e elementos. Resultado agravador exige imputação, não mero evento casual."
+      ],
+      "exemplo": "Responsável deixa pessoa incapaz de defender-se exposta aos riscos do abandono, preenchidos os elementos legais. Variação: Se não existe a relação especial nem incapacidade indicada, reavaliar enquadramento, inclusive eventual socorro, sem impor automaticamente art.133.",
+      "prova": [
+        "Só crianças podem ser vítimas? Não; incapacidade pode decorrer de outras causas.",
+        "Penas ampliadas retroagem prejudicialmente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incapacidade no abandono",
+          "significado": "Inaptidão de defesa diante dos riscos, ligada à relação especial do autor."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm"
+      ]
+    },
+    "art-134": {
+      "simples": "Expor/abandonar recém-nascido para ocultar desonra própria tem finalidade específica e resultados qualificados. A expressão histórica não legitima violência, culpa da vítima ou qualquer tese de defesa da honra.",
+      "pontos": [
+        "Caput 6 meses a 2; lesão grave 1 a 3; morte 2 a 6, detenção.",
+        "Recém-nascido e finalidade específica são requisitos."
+      ],
+      "atencao": [
+        "Não confundir com infanticídio, que exige matar e hipótese de estado puerperal, nem com qualquer abandono do art.133. Não presumir desonra ou a finalidade por estereótipo; resultado e elemento subjetivo exigem análise."
+      ],
+      "exemplo": "O recém-nascido é exposto com finalidade específica demonstrada de ocultar desonra própria, no recorte textual. Variação: Se não há essa finalidade, examinar outro enquadramento em vez de forçar art.134 por toda exposição de bebê.",
+      "prova": [
+        "Qualquer abandono de bebê é sempre art.134? Não.",
+        "A expressão justifica violência pela honra? Não; é requisito a examinar, não excludente."
+      ],
+      "termos": [
+        {
+          "termo": "Finalidade especial",
+          "significado": "Propósito exigido pelo tipo, sem legitimar preconceito ou violência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-135": {
+      "simples": "Omissão de socorro abrange falta de assistência possível sem risco pessoal nas hipóteses legais ou falta de pedido de socorro público. Não exige heroísmo, mas risco para assistência direta não elimina automaticamente possibilidade segura de acionar ajuda.",
+      "pontos": [
+        "Caput 1 a 6 meses OU multa.",
+        "Lesão grave: aumenta METADE; morte: TRIPLICA se resultar da omissão."
+      ],
+      "atencao": [
+        "Não exigir assistência que exponha a risco pessoal nem ignorar alternativa de pedir socorro. Resultado precisa decorrer da omissão; não multiplicar pena só porque o desfecho ocorreu sem nexo relevante."
+      ],
+      "exemplo": "Há risco pessoal em entrar no local, mas é possível acionar socorro com segurança: distinguir assistência direta e pedido de ajuda. Variação: Se a pessoa pode ajudar diretamente sem risco, a análise do dever muda, preservadas as hipóteses e elementos legais.",
+      "prova": [
+        "Risco na assistência direta dispensa sempre pedir ajuda segura? Não.",
+        "Toda morte no local triplica sem nexo com omissão? Não; o texto exige resultar dela."
+      ],
+      "termos": [
+        {
+          "termo": "Socorro possível",
+          "significado": "Assistência ou acionamento de ajuda nas condições legais, sem heroísmo obrigatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-135-a": {
+      "simples": "Condicionar atendimento médico-hospitalar emergencial a garantia ou prévio formulário administrativo configura hipótese legal própria. Não se confunde com cobrança legítima posterior ou qualquer cadastro sem atraso do atendimento.",
+      "pontos": [
+        "Cheque-caução, promissória OU qualquer garantia; formulário prévio como condição.",
+        "Caput 3 meses a 1 ano E multa.",
+        "Negativa com lesão grave:ATÉ dobro; morte:ATÉ triplo."
+      ],
+      "atencao": [
+        "Não exigir resultado grave para reconhecer o caput nem converter até o triplo em triplicação obrigatória, como no art.135. Verificar condição imposta, negativa, resultado e nexo no enquadramento aplicável."
+      ],
+      "exemplo": "Emergência só seria atendida após entrega de cheque-caução: identificar condicionamento, não exigir morte como requisito do caput. Variação: Cadastro realizado depois, sem condicionar emergência, não é o mesmo fato; cobrança e regras assistenciais têm análise própria.",
+      "prova": [
+        "O caput exige sempre morte? Não.",
+        "Até o triplo é triplo obrigatório? Não; distinguir da redação do art.135."
+      ],
+      "termos": [
+        {
+          "termo": "Condicionamento emergencial",
+          "significado": "Exigência como barreira ao atendimento urgente, com regime penal próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-136": {
+      "simples": "Maus-tratos expõem a perigo pessoa sob autoridade/guarda/vigilância para educação, ensino, tratamento ou custódia, pelos meios descritos. Lei 15.163, vigente em 4/7/2025, ampliou penas; educação não autoriza castigo físico em criança/adolescente.",
+      "pontos": [
+        "Caput 2 a 5; lesão grave 3 a 7; morte 8 a 14 anos de reclusão.",
+        "Menor 14: aumenta 1/3; exatamente 14 não é menor 14.",
+        "Privação de cuidados, trabalho excessivo/inadequado e abuso de correção são hipóteses; integrar ECA 18-A."
+      ],
+      "atencao": [
+        "Não usar abuso de correção como autorização geral de castigo físico moderado. ECA 18-A protege contra castigo físico e tratamento cruel/degradante; responsabilidade e distinção de tortura exigem elementos próprios. Mudanças penais gravosas não retroagem; resultado agravador depende de imputação."
+      ],
+      "exemplo": "Responsável priva criança de alimentação indispensável sob pretexto educativo, expondo-a ao perigo nas condições legais. Variação: Se há elementos de outro crime mais grave, como tortura, avaliar tipo próprio; chamar o ato de educação não o torna lícito.",
+      "prova": [
+        "Educação autoriza castigo físico contra criança? Não; integrar ECA 18-A.",
+        "Vítima exatamente 14 preenche menor 14? Não; a expressão é estrita."
+      ],
+      "termos": [
+        {
+          "termo": "Maus-tratos e educação",
+          "significado": "Perigo em relação especial, sem transformar disciplina em licença de violência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "item": 35,
+  "question_id": "1d4dcc62-77ad-4beb-9985-72e3eefdd03a",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "official_answer": {
+    "letter": "E",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 35",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Código Penal — Decreto-Lei nº 2.848/1940, texto compilado",
+    "articles": ["26, parágrafo único", "28, I, II, §§ 1º e 2º"],
+    "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "html_sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "essential_condition": "A isenção por embriaguez completa acidental exige incapacidade total de compreensão da ilicitude ou autodeterminação no momento do fato. A embriaguez, sozinha, não basta.",
+    "conclusion": "A alternativa E resume a hipótese do art. 28, § 1º, e é a única compatível entre as opções; a explicação acrescenta o requisito legal omitido na alternativa resumida."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Parte Geral: Arts. 1º ao 28.",
+    "confirmed": true
+  },
+  "explanation": "E resume a hipótese do art. 28, § 1º: embriaguez completa por caso fortuito ou força maior. A isenção também exige incapacidade total, no momento do fato, para entender a ilicitude ou determinar-se conforme esse entendimento; embriaguez involuntária isolada não basta. A e B não excluem imputabilidade (art. 28, II e I). C não é causa geral de inimputabilidade. D pode gerar redução quando a capacidade é parcial, conforme art. 26, parágrafo único. Se a embriaguez acidental apenas reduzir a capacidade, o art. 28, § 2º, prevê redução de pena.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item35-embriaguez-involuntaria.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

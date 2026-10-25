@@ -1,0 +1,205 @@
+{
+  "kind": "explicit_foreign_metadata_additions",
+  "target_course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+  "target_edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+  "tables": {
+    "syllabus_topics": [
+      {
+        "id": "1690eaac-72dc-549a-bd7b-03ebe1fb8479",
+        "sha256": "8f938331bf0ccee6c3d4b929166a481a46a0233d7dabfdfdfd207a6e431ed356",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "1de97123-e39b-5759-8676-e7d5d7836dda",
+        "sha256": "8b854adcb82ec7edfd8d16b0dc181fdbc69a9bbfe5bd0e295aece07bdb19ae6f",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "4c5291fa-a44e-58ae-a63c-068368157236",
+        "sha256": "463998b030f1460d80daeeea3ece24866b0e170d184aed91f6c3e4e3c5aae0a9",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "57ecef51-e255-5ff1-a19e-b1272be88e7c",
+        "sha256": "05feb90e4534962901ae41cc783769bc0fe145c20921c919f7e593c8678ba2bf",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "58a63695-0e01-5ad1-a3cd-b9eaa2a90bbf",
+        "sha256": "3e991abbd97f15259f1467f56bd006c702a6bc2d5a1c7eb13608466efe270eeb",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "6817f9a0-9309-5461-9fbc-965920ea450b",
+        "sha256": "1c1e377a489515789c68b10e9bacf3095e48f98bfff033f8c42e3d74910b74be",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "6b7c7563-6eab-5859-a9c6-d58b5cb7652b",
+        "sha256": "0827357d1c801b1409390b52fd13ab3d6da3650fd3826ad91c5105eb3c50b284",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "7367a389-2963-5434-9c3d-bba246c00140",
+        "sha256": "60995285050e0e2ba0742e5d55b6182371d11efa1fa52ac8d19491906d58de44",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "7fdf1041-db31-510d-a179-908fafca3743",
+        "sha256": "e47b0ccb4b3135346aadc80a33099ec80ed59e770be1813bdd0d8f30da2e2fc2",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "80551221-ac6e-551a-83c5-6306ce682518",
+        "sha256": "3d5ece8fb56eeec12319f3df61acec9c34af0688dfba53030faab6de58753a40",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "919fade8-a48f-5893-a73b-5c79de385cea",
+        "sha256": "77367694bc57b9f4d4d6ece2e20d1230b7f7b141e41e785f962ee778512082b3",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "9c2d3d05-1e1b-5276-8ce6-709a7381eec9",
+        "sha256": "ee6038125c8f552d0008e1cd924a1410cf33c9a8e1318365b084b959e6c6e2f3",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "a11f5456-9e3c-58ee-ad4a-caac9529fc8f",
+        "sha256": "b64844c5e22a77d22864e810dacc955cb7ee8f87b0abbf04b7d17705ec2a6c60",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "b0b5831c-6887-5328-b989-e5304c06c0b8",
+        "sha256": "f6fc16312594f5369537928db964ec5f8deb0266abca7a8990b8b681d12e25c3",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "b21b0f54-8438-5045-8d74-a407447e8e7c",
+        "sha256": "4d0db208a9f573f52a95c407bc5b654949c2a97275322bbe15c3ef428c370987",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "b2ac3794-a2c6-5778-be78-3f37c671aaaf",
+        "sha256": "91c1670abefb721fa966c3eb556ab08bead3faaf33b108323c4b6b89f0ced898",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "b46c65c5-0ea4-5ab5-ad8d-d5b1a73c5b66",
+        "sha256": "5a068a2fb8fde469fb82dc6913ff5f4c1520881efbcd63061fdc82af440c115c",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "d53df9f9-4324-5209-abf0-0a8ad0f7455d",
+        "sha256": "769fed61bb4d0bb45212111bc29887dd819af5b6c07cce9de3d018b16fdc5301",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "e16c8447-65ec-5954-93dd-28f671f87141",
+        "sha256": "210b7058270ae55fe061e225abeb7d1a3fa19ed9fe951e7e62cb1ac93bd65974",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "eb31d0ad-1952-5212-992d-8132e1c017ee",
+        "sha256": "dc44470d900d8f5da1c3ca95d36cb8fca77dc1e03352c91e8d3af5515a6252d8",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "f0d8c8f1-7b02-508c-b383-b4ff7827791a",
+        "sha256": "715b1737bc1efe4998e598b58ff4bfa70e83219dbb9d4834f8555f1dce5481cc",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "f5d6707f-84c2-50b3-b237-87c9b0f8e10f",
+        "sha256": "6f8d6d9d0ba8e3c3ff49e0c6c66913b592f173844d0296f017cd5bfdd5d44546",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      },
+      {
+        "id": "f870f2e2-ab69-54a1-a0cb-ad526b9afac2",
+        "sha256": "1c033b318736988f3da2fe08b6b1b9114d8a651615b6997a20643b321633fbc3",
+        "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686"
+      }
+    ],
+    "content_sources": [
+      {
+        "id": "1a75ba0c-a26c-5418-b248-150ee3385b44",
+        "sha256": "37c74d423410473e7b565b8a8f2fbb1b22f8b97ecdbe8d81451dbc1b9400ccdf",
+        "source_type": "jurisprudencia",
+        "title": "Informativo 819 — corroboração da confissão"
+      },
+      {
+        "id": "29dd762e-9a0b-5053-ada0-8264cd24e983",
+        "sha256": "edbd99eb9539693b9f009b7d3bd5b5c07586507f7324f0e8b946381174684818",
+        "source_type": "lei",
+        "title": "Código Eleitoral compilado"
+      },
+      {
+        "id": "597f92c9-a0e0-5c25-b2f8-8f1d3e5bd4aa",
+        "sha256": "2115df579fbff135a1d1550408f040e9cb6bb030f44668ab2d1db381f72a2c58",
+        "source_type": "jurisprudencia",
+        "title": "HC 704718/SP — imputação objetiva"
+      },
+      {
+        "id": "5c65a26e-2896-556c-a884-7f582474e894",
+        "sha256": "74f428c56bb79389534cff9a6efa944f8256781192076d6a5299adbe173f29db",
+        "source_type": "jurisprudencia",
+        "title": "REsp 2083823 — ANPP e distinção da transação privada"
+      },
+      {
+        "id": "5de3ed23-144f-523f-9ea7-db06cc13d1b4",
+        "sha256": "9dc7b16fba7d27e0f0ffb169e8737cd81c85f3780373b47bf6b367da42a7361a",
+        "source_type": "jurisprudencia",
+        "title": "AgRg no REsp 2038926/PR — alternatividade"
+      },
+      {
+        "id": "7151e0a7-14a1-5543-a1a2-3de9f6845f34",
+        "sha256": "d826e0ab123de27be24e290decbd1f28a8bbc76ae891f0f8e22b26fde6b115c8",
+        "source_type": "jurisprudencia",
+        "title": "STJ — AgRg no AREsp 3103207/ES — requisitos do tráfico privilegiado"
+      },
+      {
+        "id": "770caac4-bb71-5eb1-a6fe-42e1a13fea02",
+        "sha256": "0fae79b60487bea5a1e7a3e16d2034aa46a423d4841e8a0487f0087c2152fb20",
+        "source_type": "jurisprudencia",
+        "title": "Súmula 617"
+      },
+      {
+        "id": "799e91a7-c494-52b9-a174-757ae9d1d0a8",
+        "sha256": "2f5af8e18bbcd19e930073d4f456f85f1370471cbcdc5011258843592563e246",
+        "source_type": "jurisprudencia",
+        "title": "Súmula 589"
+      },
+      {
+        "id": "81575f5a-cbd2-50c7-8980-0952a863f078",
+        "sha256": "646c2fb86394acbfa0840acc055fb70730551869c810d34afbdf03af03ff5a6d",
+        "source_type": "jurisprudencia",
+        "title": "Tema 150 — antecedentes"
+      },
+      {
+        "id": "84d1cef1-c293-503c-a3b4-eeba07693331",
+        "sha256": "d84f660bbbfbe58b5d7853d0acde6f5e673d9598507e781abb4239628718bcf7",
+        "source_type": "jurisprudencia",
+        "title": "Súmula 147"
+      },
+      {
+        "id": "bfc8f2a4-1746-5cae-af17-d3b4238d2222",
+        "sha256": "eb0fefcd49b5c391ae0c5644e741965172177c23738139d885a0a0f63dedca27",
+        "source_type": "jurisprudencia",
+        "title": "Tema repetitivo 1121"
+      },
+      {
+        "id": "fac647f3-f1f9-50fa-9f8b-28f390eca43b",
+        "sha256": "fcaf66f7abc15ab574387ead71f92d586e75fe9bba12c8ea7bc868ac50d569c9",
+        "source_type": "jurisprudencia",
+        "title": "Súmula 209"
+      },
+      {
+        "id": "feb86695-462e-5dfb-a355-1f4cbdf17afb",
+        "sha256": "78c70c3bc92b87421b073970cb96e60d1ce833272f52fcd6e610ebb04cc3c7e7",
+        "source_type": "jurisprudencia",
+        "title": "Tema repetitivo 1168"
+      }
+    ]
+  },
+  "note": "23 tópicos da edição PC-CE distinta do CTB e 13 fontes adicionais registrados por trabalho concorrente. Todos os registros anteriores e o vínculo do CTB permanecem idênticos. Não são revisões autorais deste lote nem alterações feitas por este importador."
+}

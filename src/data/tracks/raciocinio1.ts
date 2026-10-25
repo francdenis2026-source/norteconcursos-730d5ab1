@@ -1,0 +1,103 @@
+import type { TrackLesson } from "./types";
+
+/** Raciocínio Lógico: tópicos recorrentes em editais policiais. */
+export const RACIOCINIO_1: TrackLesson[] = [
+  {
+    id: "rl-proposicoes",
+    group: "Lógica proposicional",
+    title: "Proposições e conectivos lógicos",
+    edital: "Proposições; conectivos lógicos",
+    simples: "Proposição é uma frase declarativa que pode ser verdadeira ou falsa, mas não as duas coisas. Ordens, perguntas e exclamações não são proposições. Os conectivos unem proposições: 'e' (conjunção), 'ou' (disjunção), 'se...então' (condicional) e 'se e somente se' (bicondicional). O 'não' nega a proposição.",
+    pontos: ["Conjunção (p e q): verdadeira só quando as duas são verdadeiras.", "Disjunção (p ou q): falsa só quando as duas são falsas.", "Condicional (se p, então q): falsa só quando p é verdadeira e q é falsa.", "Bicondicional: verdadeira quando as duas têm o mesmo valor.", "Disjunção exclusiva (ou p ou q): verdadeira quando os valores são diferentes."],
+    exemplo: "'Se chover, a rua fica molhada' só é falsa no caso em que chove e a rua não fica molhada. Se não chover, a condicional é verdadeira, não importa o que aconteça com a rua.",
+    atencao: ["'Se p então q' não diz nada quando p é falsa: o resultado é verdadeiro.", "'Ou' comum é inclusivo: aceita as duas verdadeiras."],
+    quiz: [
+      { q: "Uma condicional 'se p, então q' é falsa apenas quando p é verdadeira e q é falsa.", a: true, why: "Nos demais casos ela é verdadeira." },
+      { q: "A pergunta 'Que horas são?' é uma proposição.", a: false, why: "Perguntas não são verdadeiras nem falsas, logo não são proposições." },
+    ],
+  },
+  {
+    id: "rl-equivalencias",
+    group: "Lógica proposicional",
+    title: "Tabela-verdade, equivalências e negações",
+    edital: "Tabelas-verdade; equivalências lógicas; negação de proposições",
+    simples: "A tabela-verdade lista todos os valores possíveis de uma proposição. Duas proposições são equivalentes quando têm sempre o mesmo valor lógico. As equivalências mais cobradas são a da condicional (que é igual à contrapositiva e a 'não p ou q') e as leis de De Morgan para negar 'e' e 'ou'.",
+    pontos: ["Condicional: 'se p então q' é equivalente a 'se não q então não p' (contrapositiva).", "Condicional também equivale a 'não p ou q'.", "Negar 'p e q' dá 'não p ou não q'.", "Negar 'p ou q' dá 'não p e não q'.", "Negar 'se p então q' dá 'p e não q'."],
+    exemplo: "A negação de 'Estudo e passo' é 'Não estudo ou não passo'. Para a negação ser verdadeira, basta que uma das partes falhe.",
+    atencao: ["A recíproca (se q então p) e a inversa (se não p então não q) NÃO são equivalentes à condicional.", "Negar 'todo' é 'algum não'; negar 'algum' é 'nenhum'."],
+    quiz: [
+      { q: "A contrapositiva de 'se p então q' é equivalente à condicional original.", a: true, why: "'Se não q então não p' tem sempre o mesmo valor lógico." },
+      { q: "A negação de 'p ou q' é 'não p ou não q'.", a: false, why: "Pela lei de De Morgan, a negação de 'ou' é 'não p e não q'." },
+    ],
+  },
+  {
+    id: "rl-conjuntos",
+    group: "Conjuntos e diagramas",
+    title: "Conjuntos e diagramas lógicos",
+    edital: "Conjuntos; diagramas lógicos; argumentação",
+    simples: "Conjunto é um agrupamento de elementos. Os diagramas de Venn ajudam a visualizar união, interseção e diferença. Em problemas de pesquisa, comece pela interseção, preenchendo o diagrama de dentro para fora. A fórmula da união de dois conjuntos é: n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+    pontos: ["Interseção: elementos que pertencem aos dois conjuntos.", "União: elementos de pelo menos um dos conjuntos.", "n(A ∪ B) = n(A) + n(B) − n(A ∩ B).", "Preencha primeiro a região comum, depois as partes só de A e só de B.", "Todo A é B: o conjunto A fica dentro do conjunto B."],
+    exemplo: "Em um grupo de 30 pessoas, 18 estudam Português, 15 estudam Matemática e 5 não estudam nenhuma. Quantas estudam as duas? Os que estudam alguma são 25; 18 + 15 − 25 = 8 estudam as duas.",
+    atencao: ["Quem estuda 'só' uma matéria é o total dela menos a interseção.", "Confira se o problema inclui quem não está em nenhum conjunto."],
+    quiz: [
+      { q: "Se 18 estudam Português, 15 estudam Matemática e 25 estudam pelo menos uma das duas, então 8 estudam as duas.", a: true, why: "18 + 15 − 25 = 8." },
+      { q: "Para calcular a união de dois conjuntos, basta somar o número de elementos de cada um.", a: false, why: "É preciso subtrair a interseção, que foi contada duas vezes." },
+    ],
+  },
+  {
+    id: "rl-proporcao",
+    group: "Matemática básica",
+    title: "Razão, proporção e regra de três",
+    edital: "Razão e proporção; regra de três simples e composta",
+    simples: "Razão é a comparação entre duas grandezas por divisão. Proporção é a igualdade entre duas razões. Na regra de três simples, se as grandezas crescem juntas, são diretamente proporcionais (multiplica-se em cruz). Se uma cresce e a outra diminui, são inversamente proporcionais (multiplica-se em linha).",
+    pontos: ["Direta: mais material, mais custo.", "Inversa: mais trabalhadores, menos dias.", "Monte a tabela com as grandezas na mesma ordem antes de calcular.", "Na regra de três composta, compare cada grandeza com a que tem a incógnita.", "Divisão proporcional: some as partes e divida o total."],
+    exemplo: "Se 4 operários fazem uma obra em 12 dias, 6 operários (mesmo ritmo) fazem em 8 dias: 4 × 12 = 6 × x, logo x = 8. As grandezas são inversamente proporcionais.",
+    atencao: ["Antes de calcular, decida se a relação é direta ou inversa.", "Ritmo diferente entre as pessoas exige outra relação."],
+    quiz: [
+      { q: "Número de trabalhadores e dias para terminar uma obra são grandezas inversamente proporcionais.", a: true, why: "Mais trabalhadores no mesmo ritmo terminam a obra em menos tempo." },
+      { q: "Em grandezas inversamente proporcionais, usa-se a multiplicação em cruz.", a: false, why: "Na inversa, multiplica-se em linha, ou inverte-se uma das razões." },
+    ],
+  },
+  {
+    id: "rl-porcentagem",
+    group: "Matemática básica",
+    title: "Porcentagem",
+    edital: "Porcentagem; acréscimos e descontos",
+    simples: "Porcentagem é uma fração com denominador 100. Para calcular 20% de um valor, multiplique por 0,20. Acréscimo de 20% equivale a multiplicar por 1,20; desconto de 20%, por 0,80. Acréscimos e descontos sucessivos não se somam: multiplicam-se os fatores.",
+    pontos: ["p% de x = x × p/100.", "Aumento de p%: multiplicar por (1 + p/100).", "Desconto de p%: multiplicar por (1 − p/100).", "Variações sucessivas: multiplique os fatores.", "Aumento de 10% seguido de desconto de 10% não volta ao valor inicial."],
+    exemplo: "Um produto de 100 reais sobe 10% e depois cai 10%: 100 × 1,10 × 0,90 = 99 reais. O valor final é menor que o inicial.",
+    atencao: ["O desconto incide sobre o valor já alterado, não sobre o original.", "Percentual sobre percentual: confira qual é a base de cálculo."],
+    quiz: [
+      { q: "Um aumento de 10% seguido de um desconto de 10% resulta no preço original.", a: false, why: "1,10 × 0,90 = 0,99, ou seja, o preço final é 1% menor." },
+      { q: "Para calcular 20% de um valor, multiplica-se por 0,20.", a: true, why: "20% = 20/100 = 0,20." },
+    ],
+  },
+  {
+    id: "rl-combinatoria",
+    group: "Contagem e probabilidade",
+    title: "Análise combinatória",
+    edital: "Princípio fundamental da contagem; permutações; combinações",
+    simples: "Análise combinatória é a técnica de contar possibilidades. O princípio fundamental diz que, se uma escolha pode ser feita de m modos e outra de n modos, as duas juntas podem ser feitas de m × n modos. Permutação é a ordenação de todos os elementos; arranjo e combinação escolhem parte deles: no arranjo a ordem importa, na combinação não.",
+    pontos: ["Princípio multiplicativo: multiplique as possibilidades de cada etapa.", "Permutação simples: n! (fatorial).", "Arranjo: a ordem faz diferença (senha, pódio).", "Combinação: a ordem não faz diferença (comissão, grupo).", "Permutação com repetição: divida pelo fatorial de cada repetição."],
+    exemplo: "Quantas comissões de 2 pessoas se formam com 5 candidatos? Ordem não importa: combinação de 5 em 2 = 10.",
+    atencao: ["Pergunte-se: trocar a ordem gera uma situação diferente? Se sim, é arranjo; se não, combinação.", "Fatorial: 5! = 5 × 4 × 3 × 2 × 1 = 120."],
+    quiz: [
+      { q: "Na combinação, a ordem dos elementos escolhidos não altera o resultado.", a: true, why: "Escolher A e B é o mesmo que escolher B e A." },
+      { q: "O número de maneiras de ordenar 4 pessoas em fila é 8.", a: false, why: "O total é 4! = 4 × 3 × 2 × 1 = 24, e não 8." },
+    ],
+  },
+  {
+    id: "rl-probabilidade",
+    group: "Contagem e probabilidade",
+    title: "Probabilidade",
+    edital: "Noções de probabilidade",
+    simples: "Probabilidade mede a chance de um evento ocorrer. Em eventos igualmente possíveis, é o número de casos favoráveis dividido pelo número de casos possíveis. Ela vai de 0 (impossível) a 1 (certo). Para eventos independentes, multiplica-se; para eventos mutuamente exclusivos, somam-se as probabilidades.",
+    pontos: ["P = casos favoráveis / casos possíveis.", "Evento certo: 1; impossível: 0.", "Eventos independentes (um não afeta o outro): P(A e B) = P(A) × P(B).", "Eventos mutuamente exclusivos: P(A ou B) = P(A) + P(B).", "Complementar: P(não A) = 1 − P(A)."],
+    exemplo: "Ao lançar um dado, a chance de sair número par é 3/6 = 1/2, pois há 3 casos favoráveis (2, 4 e 6) em 6 possíveis.",
+    atencao: ["Em 'pelo menos um', costuma ser mais fácil calcular o complementar (nenhum) e subtrair de 1.", "Resultados anteriores de um dado não mudam a chance do próximo lançamento."],
+    quiz: [
+      { q: "A chance de sair número par no lançamento de um dado comum é 1/2.", a: true, why: "São 3 favoráveis (2, 4, 6) em 6 possíveis." },
+      { q: "A probabilidade de um evento pode ser maior que 1.", a: false, why: "Ela varia de 0 a 1." },
+    ],
+  },
+];

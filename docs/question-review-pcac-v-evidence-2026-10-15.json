@@ -1,0 +1,343 @@
+{
+  "sources": {
+    "cp": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "title": "Código Penal",
+      "sha256": "5ead235656cdd2e678a9f43747824f3d00b5b452f4a7c7cc1db1328cfa8d9b23",
+      "reviewed_at": "2026-10-15T19:05:52.123860+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "cpp": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "title": "Código de Processo Penal",
+      "sha256": "f75248fb8ab6f4e92920a8f961ebdada9b3f7571d27a8dc54b3b80c8d2d4edf3",
+      "reviewed_at": "2026-10-15T19:05:52.079432+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "cf": {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "title": "Constituição Federal",
+      "sha256": "98e7e9a7293948c6c4aac36a22cef3ba2c20d31f19455affdd3f565aaf0719e4",
+      "reviewed_at": "2026-10-15T19:06:02.911990+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l9784": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "sha256": "1240ebdf6cbf3740fe7e03c786dccf4ad9761a6627a02ac3dd3b16a5098f869d",
+      "reviewed_at": "2026-10-15T19:05:51.003911+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l8112": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "title": "Lei 8.112/1990 — Servidores federais",
+      "sha256": "5b898c697149970c7ef71e85529345ec58dd1c67a3742308570afec98bebb4d0",
+      "reviewed_at": "2026-10-15T19:08:56.043504+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l12830": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "title": "Lei 12.830/2013 — Investigação pelo delegado",
+      "sha256": "c21b058b5eca88e0a4f944dec5bd5f3363347f634820fa0a935536215a894052",
+      "reviewed_at": "2026-10-15T19:08:48.963825+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "drogas": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "sha256": "ac7182b75693b16e7206ea58756a7c0d22f5109c543fabdb229f334169094f55",
+      "reviewed_at": "2026-10-15T19:08:50.511755+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "tortura": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "title": "Lei 9.455/1997 — Tortura",
+      "sha256": "5ad33369b63c5a3e5ab0653d3831e9088a9bfaa1655a177b9f185ce780b2c6e4",
+      "reviewed_at": "2026-10-15T19:08:48.859830+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "ambientais": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "sha256": "ef44ef55597b2cee5f16dda009eddfe591c2f76190f355015254caca8bc484bf",
+      "reviewed_at": "2026-10-15T19:08:51.167725+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "lia": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "title": "Lei 8.429/1992 — Improbidade",
+      "sha256": "2df1405ade3fe64630aa3ac50ce1e8940ac11fa3703b02a81f9fe82e29312554",
+      "reviewed_at": "2026-10-15T19:05:50.507934+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "lep": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "title": "Lei 7.210/1984 — LEP",
+      "sha256": "9a3d530dde3cdc3654cee24fc29c31ef81cab3a49e18654738b13bf8f619271a",
+      "reviewed_at": "2026-10-15T19:08:52.623395+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "hediondos": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "title": "Lei 8.072/1990 — Crimes Hediondos",
+      "sha256": "7b14e61b9d3cc106f89bc83615c88dbc1b3e2170bd4443e4afe2aae2c4d63de3",
+      "reviewed_at": "2026-10-15T19:08:51.551708+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "prova": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+      "title": "Prova objetiva – PC-AC 2017 – S01 Agente de Polícia Civil – versão V",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69",
+      "reviewed_at": "2026-10-16T01:33:03.988224+00:00"
+    },
+    "gabarito": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "title": "Gabarito definitivo – PC-AC 2017 – Prova objetiva – S01 versão V",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697",
+      "reviewed_at": "2026-10-15T18:59:33.833492+00:00"
+    },
+    "matrix": {
+      "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "title": "Edital PF 2025 — Agente",
+      "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+      "reviewed_at": "2026-10-16T01:33:07.284074+00:00"
+    },
+    "stf_ambientais": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/primeira-turma-admite-abertura-de-acao-penal-contra-petrobras/",
+      "title": "Primeira Turma admite abertura de ação penal contra Petrobras",
+      "sha256": "d8a41a1c569983a7781750bf93c153fc0b515c4816f501a145a483fb43f190dd",
+      "reviewed_at": "2026-10-16T01:36:12.027684+00:00",
+      "published_at": "2013-08-06T19:45:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_promotor": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-reestruturacao-do-gaeco-do-mp-rj-e-seu-poder-investigativo/",
+      "title": "STF valida reestruturação do Gaeco do MP-RJ e seu poder investigativo",
+      "sha256": "69c262a3b1cf68bc91e9982c4ecee567545a0e1ae116ab6b820be4367dfaf631",
+      "reviewed_at": "2026-10-16T01:36:12.627657+00:00",
+      "published_at": "2023-07-11T17:02:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_sigilo": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/presidente-do-stf-manifesta-apoio-ao-ministro-flavio-dino/",
+      "title": "Presidente do STF manifesta apoio ao ministro Flávio Dino",
+      "sha256": "03f2e6f759831ebbacda586fe2ca79b70a796fcf4a19ec416aa0eb0825246f57",
+      "reviewed_at": "2026-10-16T01:36:12.227675+00:00",
+      "published_at": "2026-08-13T16:07:37",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_extradicao": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-nega-extradicao-de-sul-coreano-responsavel-por-filhos-menores-de-idade/",
+      "title": "STF nega extradição de sul-coreano responsável por filhos menores de idade",
+      "sha256": "33c6e2fcd7b05e52302c21de3eb58750502f589030b819fcf166a051a6b9c9f3",
+      "reviewed_at": "2026-10-16T01:36:12.287672+00:00",
+      "published_at": "2024-04-05T11:50:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_foro": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/",
+      "title": "Processos penais contra autoridades permanecem no STF mesmo após saída do cargo",
+      "sha256": "349fb4c27453bf187a747e7dcaa8ec7dd669a8d16011444c3257697eabf32d07",
+      "reviewed_at": "2026-10-16T01:36:12.387668+00:00",
+      "published_at": "2025-03-12T09:00:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "jec": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "title": "Lei 9.099/1995 — Juizados Especiais",
+      "sha256": "cc28691cf2d77eaeb856ef5015cad24a2a57dfdba24a7c4f8c244139f7630fe7",
+      "reviewed_at": "2026-10-15T19:08:53.767607+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "mariapenha": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "title": "Lei 11.340/2006 — Maria da Penha",
+      "sha256": "3b7ac398d3ccf27033402475339c8933850d7e3b587e2182f3464e0dd2065887",
+      "reviewed_at": "2026-10-15T19:08:56.491483+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503.",
+      "encoding": "UTF-16 com BOM, decodificado antes da leitura"
+    },
+    "interceptacao": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "title": "Lei 9.296/1996 — Interceptação",
+      "sha256": "3858f80c4f18e3c053d063d21ba8f557a2fc33f992289aa118c8c27e7e5dc02c",
+      "reviewed_at": "2026-10-15T19:08:48.665287+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "organizacoes": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+      "title": "Lei 12.850/2013 — Organizações Criminosas",
+      "sha256": "2e8b378775959c7c4f5d02008550c9faed3a86a494c9bd6ff046998a44235abc",
+      "reviewed_at": "2026-10-15T19:08:49.753672+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "lavagem": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "title": "Lei 9.613/1998 — Lavagem",
+      "sha256": "3681fcccf9239250fbc84a4752c3099dc9f3800e8c0d474a3cc7dcfab2f3ba28",
+      "reviewed_at": "2026-10-15T19:08:51.997303+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "pcdf_matrix": {
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/409522C3AA9E7D9736EC8A33888E0732BEE4FB07EABC75866BB311B2062C5FF9.pdf",
+      "title": "PCDF Delegado 2026: edital oficial retificado",
+      "sha256": "3b288efc9b596a8f915b38d50f693c2eae464a745ad07eac107283ec2fd876fa",
+      "reviewed_at": "2026-10-16T01:45:29.821400+00:00",
+      "pages_visually_reviewed": [
+        80,
+        83
+      ]
+    },
+    "stf_cpi": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/buscas-e-apreensoes-requeridas-por-cpi-tem-de-ser-fundamentadas/",
+      "title": "Buscas e apreensões requeridas por CPI têm de ser fundamentadas",
+      "sha256": "2da9ff7f22c10a452e3218c9b59c8e9acab412257ae1a289c64c919e6bddb1a5",
+      "reviewed_at": "2026-10-16T01:54:19.386615+00:00",
+      "published_at": "2015-06-22T18:55:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_emendas": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-do-parana-que-estendia-reajuste-do-tribunal-de-contas-a-servidores-da-assembleia-legislativa/",
+      "title": "STF invalida norma do Paraná que estendia reajuste do Tribunal de Contas a servidores da Assembleia Legislativa",
+      "sha256": "3dd525823e9d9cba4369c9817138b0fd2c15c48fecdd12f805cb86c2361c3a07",
+      "reviewed_at": "2026-10-16T01:53:11.681418+00:00",
+      "published_at": "2025-04-10T21:07:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_adi4424_specific": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/mes-da-mulher-mp-pode-processar-agressor-mesmo-sem-representacao-da-vitima-de-violencia-domestica/",
+      "title": "Mês da Mulher: MP pode processar agressor mesmo sem representação da vítima de violência doméstica",
+      "sha256": "082cb13f188e2771dc59b83d9eca5d657bca39da2ed18eb9f0cad0c113b1782a",
+      "reviewed_at": "2026-10-16T01:53:13.177764+00:00",
+      "published_at": "2023-03-02T09:00:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_mi7452": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-amplia-protecao-da-lei-maria-da-penha-a-casais-homoafetivos-do-sexo-masculino-travestis-e-transexuais/",
+      "title": "STF amplia proteção da Lei Maria da Penha a casais homoafetivos do sexo masculino, travestis e transexuais",
+      "sha256": "b2856d7d5ac6a86a52308e6dbeaaa63c55fe216fc3d4a9d232a2b62b365f85cd",
+      "reviewed_at": "2026-10-16T01:58:30.650912+00:00",
+      "published_at": "2025-02-24T18:52:19",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "documentos": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l5553.htm",
+      "title": "Lei 5.553/1968 — apresentação e uso de documentos de identificação pessoal",
+      "sha256": "26a03a8b2340bb77a1f30159948e978c6167c0fe3853f6cd725f9aaed2ef9936",
+      "reviewed_at": "2026-10-15T19:08:51.259721+00:00",
+      "retrieval": "Captura oficial preservada em 15/10/2026; horário do arquivo local. Nova consulta de 16/10 retornou HTTP 503; não se atribui nova consulta bem-sucedida."
+    },
+    "pericia_mj": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/analise-e-pesquisa/download/pop/procedimento_operacional_padrao-pericia_criminal.pdf",
+      "title": "Ministério da Justiça / SENASP — Procedimento Operacional Padrão: Perícia Criminal (2013)",
+      "sha256": "1c18a20c0f57c320bbc38ebc5d6a698b50f129213c8bd4661c987135a54ccadb",
+      "reviewed_at": "2026-10-16T03:14:32.332058+00:00",
+      "retrieval": "PDF oficial obtido nesta revisão de 16/10/2026. Partes consultadas: estrutura do laudo e fenômenos transformativos. Ano da edição preservado; não implica validação integral das regras históricas do manual."
+    },
+    "contran1031": {
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+      "title": "CONTRAN — Resolução 1.031/2026, Anexo II",
+      "sha256": "9f6d8d8c6e7b7996fce21326a229c9b262d45178907fff7bd9dd159ca5ba9b5a",
+      "reviewed_at": "2026-10-16T03:15:32.620685+00:00",
+      "retrieval": "PDF oficial obtido nesta revisão de 16/10/2026. Consultados art. 7º, arts. 15 e 16 e Anexo II. Utilizado para sinais observáveis; não se presume dos sinais um valor numérico de alcoolemia."
+    },
+    "stf_tco_pm": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/supremo-mantem-possibilidade-de-pm-mg-lavrar-termo-circunstanciado/",
+      "title": "STF — ADI 5637: possibilidade de PM lavrar TCO (2022)",
+      "sha256": "7ba3528fb4556ce3c5b45c3bb8ec665ab7d48802c47793f9a5ef7938bb3a07fb",
+      "reviewed_at": "2026-10-16T03:18:14.397334+00:00",
+      "retrieval": "Conteúdo integral obtido na API oficial, rota postsnoticias/55232, em 16/10/2026. Não confundir lavratura de TCO com condução de inquérito policial."
+    },
+    "stf_tco_prf": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/prf-pode-lavrar-termo-circunstanciado-de-ocorrencia-decide-stf/",
+      "title": "STF — ADIs 6245 e 6264: TCO não é ato investigativo (2023)",
+      "sha256": "4311b2dd6aa53bfd96c965faf3da0941444b5c8582c50fc62974665ca88cd89a",
+      "reviewed_at": "2026-10-16T03:18:15.209297+00:00",
+      "retrieval": "Conteúdo integral obtido na API oficial, rota postsnoticias/57511, em 16/10/2026; reafirma ADI 5637 para PM."
+    },
+    "nist": {
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+      "title": "NIST SP 800-145 — definição de computação em nuvem (2011)",
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "reviewed_at": "2026-10-16T03:34:56.833277+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "who_hymen": {
+      "url": "https://www.who.int/news/item/17-10-2018-united-nations-agencies-call-for-ban-on-virginity-testing",
+      "title": "OMS / ONU — ausência de validade científica dos testes de virgindade (2018)",
+      "sha256": "7f8762a8f3280111879b3b51f89d3f873398cb5203779efc30414c5b7c538854",
+      "reviewed_at": "2026-10-16T03:34:56.887660+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "firstaid": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_primeiros_socorros.pdf",
+      "title": "Ministério da Saúde / Fiocruz — Manual de Primeiros Socorros (2003)",
+      "sha256": "4f110686a10c4e1ecf847397f40340d2df92ad106262729ce524a903bb3d76f2",
+      "reviewed_at": "2026-10-16T03:39:00.308614+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "burn": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/cartilha_tratamento_emergencia_queimaduras.pdf",
+      "title": "Ministério da Saúde — Cartilha para tratamento de emergência das queimaduras (2012)",
+      "sha256": "4b69e98c9886a39dbfd9139db4403f95b10da35313c20034c0aced350bc79a92",
+      "reviewed_at": "2026-10-16T03:35:01.951430+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "work_diseases": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/doencas_relacionadas_trabalho_manual_procedimentos.pdf",
+      "title": "Ministério da Saúde — Doenças relacionadas ao trabalho (2001), barotrauma",
+      "sha256": "4be73b633c99efb2df090cb71cab1b597aca4ec7aee269961d425f376e37d9b8",
+      "reviewed_at": "2026-10-16T03:36:48.318601+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "drowning": {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/drowning",
+      "title": "OMS — afogamento: definição e prevenção",
+      "sha256": "49de4e5b36a2310793a4178470034d899c92d89f7fa38e988673d3ac3db1d84c",
+      "reviewed_at": "2026-10-16T03:37:30.572682+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cp16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "title": "Código Penal — compilado consultado em 16/10/2026",
+      "sha256": "46f069fb90279de30bf37c677eaae02ee59d0b52926fa0ddcba7bcf0bb42e415",
+      "reviewed_at": "2026-10-16T03:49:11.660860+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cf16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "title": "Constituição Federal — compilada consultada em 16/10/2026",
+      "sha256": "c8f92d74e30a61f201fe8419a9226283357794489cf6f94e3594a3792bc92e69",
+      "reviewed_at": "2026-10-16T03:49:19.153034+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cdc16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+      "title": "Código de Defesa do Consumidor — compilado, art. 76",
+      "sha256": "5989829bbdd4de5b685a38a923dd5b93b50a7146655da6ace6db371282ecedc2",
+      "reviewed_at": "2026-10-16T03:48:02.527998+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "dl20016": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+      "title": "Decreto-Lei 200/1967 — supervisão ministerial, arts. 19, 20 e 26",
+      "sha256": "a92f79cbba66cba5c83d9504ef50f83e4cb13edb98d14f35f643d3f0a12059c2",
+      "reviewed_at": "2026-10-16T03:49:11.668859+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "prova_user_upload": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+      "title": "PC-AC 2017 S01-V — caderno anexado pelo usuário",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69",
+      "reviewed_at": "2026-10-16T04:13:51.208651+00:00",
+      "retrieval": "Arquivo fornecido pelo usuário nesta conversa e conferido nesta data. Bytes idênticos ao arquivo oficial anteriormente registrado. Não é declaração de nova obtenção pela internet."
+    },
+    "gabarito_user_upload": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "title": "PC-AC 2017 S01-V — gabarito definitivo anexado pelo usuário",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697",
+      "reviewed_at": "2026-10-16T04:13:51.208651+00:00",
+      "retrieval": "Arquivo fornecido pelo usuário nesta conversa e conferido nesta data. Bytes idênticos ao arquivo oficial anteriormente registrado. Não é declaração de nova obtenção pela internet."
+    }
+  }
+}

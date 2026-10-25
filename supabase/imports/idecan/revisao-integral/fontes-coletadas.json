@@ -1,0 +1,120 @@
+[
+  {
+    "label": "pcsc-agente",
+    "kind": "source_url",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+    "status": 200,
+    "bytes": 754494,
+    "pdf": true,
+    "sha256": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147"
+  },
+  {
+    "label": "pcsc-agente",
+    "kind": "answer_key_url",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+    "status": 200,
+    "bytes": 113975,
+    "pdf": true,
+    "sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432"
+  },
+  {
+    "label": "pmsc",
+    "kind": "source_url",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf",
+    "status": 200,
+    "bytes": 772078,
+    "pdf": true,
+    "sha256": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec"
+  },
+  {
+    "label": "pmsc",
+    "kind": "answer_key_url",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+    "status": 200,
+    "bytes": 417042,
+    "pdf": true,
+    "sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd"
+  },
+  {
+    "label": "cbmmg",
+    "kind": "source_url",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/160263/idecan-2026-cbm-mg-cadete-bm-prova.pdf",
+    "status": 200,
+    "bytes": 2641034,
+    "pdf": true,
+    "sha256": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd"
+  },
+  {
+    "label": "cbmmg",
+    "kind": "answer_key_url",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+    "status": 200,
+    "bytes": 227731,
+    "pdf": true,
+    "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0"
+  },
+  {
+    "label": "pcsc-escrivao",
+    "kind": "source_url",
+    "url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+    "status": 200,
+    "bytes": 295188,
+    "pdf": true,
+    "sha256": "7d75eb4e9e447dae31b5a7f66cddd4a6bfde140dfbe54e1201f564017c5b8fa8"
+  },
+  {
+    "label": "pcsc-escrivao",
+    "kind": "answer_key_url",
+    "url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201",
+    "status": 200,
+    "bytes": 71066,
+    "pdf": false,
+    "sha256": "6718d99cd89187cdab3880b0a1fce693a4039385ba24a5b6761ae83034b36ba9"
+  },
+  {
+    "label": "pcsc-escrivao",
+    "kind": "definitive_key",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=445F7XU35JUR4VEO0IWB06549QLKTDVHWSRH944PUKAY0OOVBQJFGC5RHCW660BCV9CXBLTBYOPH8OJJ7158.pdf",
+    "status": 200,
+    "bytes": 427452,
+    "pdf": true,
+    "sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e"
+  },
+  {
+    "label": "pmsc-edital-200-ccp-2025",
+    "kind": "official_syllabus",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "status": 200,
+    "bytes": 967249,
+    "pdf": true,
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "checked_at": "2026-10-23",
+    "relevant_pages": "Anexo II, pp. 51–52",
+    "note": "Downloaded via official IDECAN contest page ID 207 with official-page session/referrer. Anexo II includes Lei 14.751/2023 under Legislação Institucional (pp. 51–52) and Código Penal arts. 213 a 218-C under Legislação Penal (p. 52)."
+  },
+  {
+    "label": "codigo-penal-compilado-art218c",
+    "kind": "official_law",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "status": 200,
+    "bytes": 683589,
+    "pdf": false,
+    "sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "relevant_excerpt": "Art. 218-C, caput e § 1º; pena do caput com redação dada pela Lei 15.280/2025."
+  },
+  {
+    "label": "ctb-compilado-2026-10-23",
+    "kind": "official_law",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "status": 200,
+    "bytes": 789873,
+    "pdf": false,
+    "sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+    "text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "relevant_items": "PMSC Tipo A 46–50",
+    "note": "Texto compilado vigente; inclui alterações recentes; disposições conferidas individualmente no item de cada questão."
+  }
+]

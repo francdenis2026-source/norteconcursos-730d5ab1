@@ -5,7 +5,7 @@ import { CAREERS } from "@/lib/careers";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ShieldCheck, FileStack, BookMarked } from "lucide-react";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/careers")({
   component: CareersPage,
@@ -64,15 +64,24 @@ function CareersPage() {
     <div className="space-y-6">
       <PageHero
         image="careers-team"
-        kicker="Objetivo"
+        kicker="Meu concurso"
         icon={ShieldCheck}
         title={
           <>
             Carreiras <em>policiais</em>
           </>
         }
-        description="Escolha a carreira para focar seus estudos — dados reais vão se acumulando conforme você envia provas."
-      />
+        description="Escolha uma carreira para treinar questões ou rever suas provas. Os números crescem conforme você registra provas e responde questões."
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={FileStack} label="Carreiras" value={CAREERS.length} />
+          <HeroStat
+            icon={BookMarked}
+            label="Questões registradas"
+            value={Object.values(counts).reduce((sum, c) => sum + c.questions, 0)}
+          />
+        </div>
+      </PageHero>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CAREERS.map((c) => {
@@ -84,7 +93,7 @@ function CareersPage() {
               <CardContent className="pt-5 space-y-3">
                 <div className="flex items-center justify-between">
                   <div
-                    className="h-10 w-10 rounded-xl flex items-center justify-center font-black text-white text-sm"
+                    className="flex h-10 min-w-10 items-center justify-center rounded-xl px-2 text-sm font-black text-white"
                     style={{ background: c.color }}
                   >
                     {c.name}
@@ -105,34 +114,33 @@ function CareersPage() {
                     {data.exams !== 1 ? "s" : ""}
                   </span>
                   <span className="flex items-center gap-1">
-                    <BookMarked className="h-3.5 w-3.5" /> {data.questions} questõe
-                    {data.questions !== 1 ? "s" : ""}
+                    <BookMarked className="h-3.5 w-3.5" /> {data.questions} questão
+                    {data.questions !== 1 ? "es" : ""}
                   </span>
                 </div>
-                <Link
-                  to="/dashboard/student-exams"
-                  search={{ career: c.agency }}
-                  className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90"
-                >
-                  Abrir área da carreira
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
+                <div className="grid gap-2">
+                  <Link
+                    to="/dashboard/question-trainer"
+                    search={{ career: c.agency }}
+                    className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90 active:scale-[0.97] motion-reduce:active:scale-100"
+                  >
+                    Treinar questões da carreira
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    to="/dashboard/student-exams"
+                    search={{ career: c.agency }}
+                    className="flex items-center justify-between rounded-xl border px-3 py-2 text-xs font-bold transition hover:bg-muted active:scale-[0.97] motion-reduce:active:scale-100"
+                  >
+                    Minhas provas desta carreira
+                    <FileStack className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           );
         })}
       </div>
-
-      <Card className="bg-muted/50 border-dashed">
-        <CardContent className="pt-5 flex items-start gap-3">
-          <ShieldCheck className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Plataforma multi-carreira: PF, PRF, DEPEN, PC, PP, Bombeiro e PM. Cada carreira acumula
-            provas reais, banco de questões com explicação pedagógica e legislação sempre verificada
-            no Planalto — igual ao que já foi feito para Polícia Federal.
-          </p>
-        </CardContent>
-      </Card>
     </div>
   );
 }

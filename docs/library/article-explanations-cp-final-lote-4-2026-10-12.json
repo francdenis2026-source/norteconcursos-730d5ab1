@@ -1,0 +1,2905 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-13T03:01:31.604525+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-317",
+        "art-318",
+        "art-319",
+        "art-319-a",
+        "art-320",
+        "art-321",
+        "art-322",
+        "art-323",
+        "art-324",
+        "art-325",
+        "art-326",
+        "art-327",
+        "art-328",
+        "art-329",
+        "art-330",
+        "art-331",
+        "art-332",
+        "art-333",
+        "art-334",
+        "art-334-a",
+        "art-335",
+        "art-336",
+        "art-337",
+        "art-337-a",
+        "art-337-b",
+        "art-337-c",
+        "art-337-d",
+        "art-337-e",
+        "art-337-f",
+        "art-337-g",
+        "art-337-h",
+        "art-337-i",
+        "art-337-j",
+        "art-337-k",
+        "art-337-l",
+        "art-337-m",
+        "art-337-n",
+        "art-337-o",
+        "art-337-p",
+        "art-338",
+        "art-338-a",
+        "art-339",
+        "art-340",
+        "art-341",
+        "art-344",
+        "art-345",
+        "art-346",
+        "art-347",
+        "art-348",
+        "art-349"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "source_checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-317",
+      "unit_id": "9ea50355-c33b-53e1-90bc-7d7ae407c5a2",
+      "content_sha256": "21fa9e7349635c6ab356c592fe5ca9ee83d8e67b127ca1552abb211bde390b08",
+      "simples": "Corrupção passiva: solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço se, em consequência da vantagem ou promessa, o funcionário retarda ou deixa de praticar qualquer ato de ofício ou o pratica infringindo dever funcional. Se o funcionário pratica, deixa de praticar ou retarda ato de ofício, com infração de dever funcional, cedendo a pedido ou influência de outrem: detenção de três meses a um ano, ou multa.",
+      "pontos": [
+        "Solicitar, receber ou aceitar promessa de vantagem indevida.",
+        "Reclusão de 2 a 12 anos e multa.",
+        "§1º: aumento de um terço se o funcionário retarda ou deixa de praticar ato de ofício, ou o pratica infringindo dever funcional.",
+        "§2º (privilegiada): cede a pedido ou influência de outrem: detenção de três meses a um ano, ou multa."
+      ],
+      "atencao": [
+        "Solicitar ou aceitar promessa não exige recebimento efetivo para consumação dessas modalidades. Receber tem consumação própria. Relação com função e ato pertinente precisam ser examinados;§1º e corrupção privilegiada têm requisitos próprios, sem dizer que todo ato de ofício apenas aumenta pena.",
+        "Funcionário é sujeito próprio; concurso de particulares depende dos requisitos legais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 316",
+        "Art. 333"
+      ],
+      "exemplo": "Servidor solicita vantagem indevida em razão da função, embora não pratique o ato pretendido. Variação: Corrupção privilegiada por influência de pedido tem requisitos e pena próprios, não pressupõe pagamento.",
+      "prova": [
+        "Solicitar exige recebimento efetivo para consumar essa modalidade? Não.",
+        "Qualquer presente sem vínculo funcional prova o crime? Não; demonstrar elementos."
+      ],
+      "expected": {
+        "unit_id": "9ea50355-c33b-53e1-90bc-7d7ae407c5a2",
+        "content_sha256": "21fa9e7349635c6ab356c592fe5ca9ee83d8e67b127ca1552abb211bde390b08",
+        "simples": "Corrupção passiva: solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço se, em consequência da vantagem ou promessa, o funcionário retarda ou deixa de praticar qualquer ato de ofício ou o pratica infringindo dever funcional. Se o funcionário pratica, deixa de praticar ou retarda ato de ofício, com infração de dever funcional, cedendo a pedido ou influência de outrem: detenção de três meses a um ano, ou multa.",
+        "pontos": [
+          "Solicitar, receber ou aceitar promessa de vantagem indevida.",
+          "Reclusão de 2 a 12 anos e multa.",
+          "§1º: aumento de um terço se o funcionário retarda ou deixa de praticar ato de ofício, ou o pratica infringindo dever funcional.",
+          "§2º (privilegiada): cede a pedido ou influência de outrem: detenção de três meses a um ano, ou multa."
+        ],
+        "atencao": [
+          "Crime formal: consuma-se com a solicitação, recebimento ou aceitação da promessa; o ato de ofício apenas aumenta a pena.",
+          "Corrupção passiva é crime próprio de funcionário público (com particulares possíveis em concurso)."
+        ],
+        "exemplo": "Servidor aceita promessa de dinheiro para agilizar processo.",
+        "prova": [
+          "Assertiva que exige a prática do ato de ofício para consumar a corrupção passiva erra: ele só gera o aumento do §1º."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 316",
+          "Art. 333"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-318",
+      "unit_id": "250a3071-4cc1-5dd4-8035-f92168f22158",
+      "content_sha256": "82bb3d41d51bbf7184431a61f9c0c770ff213a5cdb806df2c9e153527608fe19",
+      "simples": "Facilitação de contrabando ou descaminho com infração de dever funcional: reclusão 3 a 8 e multa. A referência textual antiga a 334 exige integração atual:334 é descaminho,334-A é contrabando.",
+      "pontos": [
+        "Facilitar, com infração de dever funcional, o contrabando ou o descaminho.",
+        "Reclusão de 3 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Crime funcional de facilitação com infração do dever; distinguir particular,participação e tipos atuais 334/334-A."
+      ],
+      "termos": [],
+      "remissoes": [
+        "CP art.334 (descaminho)",
+        "CP art.334-A (contrabando)"
+      ],
+      "exemplo": "Funcionário facilita contrabando infringindo dever funcional. Variação: Particular que importa mercadoria proibida exige distinguir 334-A e participação, sem presumir qualidade funcional.",
+      "prova": [
+        "Facilitar descaminho também está previsto? Sim.",
+        "Contrabando atual está todo no 334? Não;334-A tem tipo próprio."
+      ],
+      "expected": {
+        "unit_id": "250a3071-4cc1-5dd4-8035-f92168f22158",
+        "content_sha256": "82bb3d41d51bbf7184431a61f9c0c770ff213a5cdb806df2c9e153527608fe19",
+        "simples": "Facilitação de contrabando ou descaminho: facilitar, com infração de dever funcional, a prática de contrabando ou descaminho (art. 334). Pena: reclusão de 3 a 8 anos e multa.",
+        "pontos": [
+          "Facilitar, com infração de dever funcional, o contrabando ou o descaminho.",
+          "Reclusão de 3 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Exceção à teoria monista: o funcionário responde por crime próprio, e o particular, pelo art. 334."
+        ],
+        "exemplo": "Agente aduaneiro deixa de fiscalizar para facilitar a entrada irregular de mercadorias.",
+        "prova": [
+          "Assertiva que aplica o art. 318 a particular que não infringe dever funcional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 334",
+          "Art. 334-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-319",
+      "unit_id": "01ecf0a3-61f6-5b51-9529-769787eb21a1",
+      "content_sha256": "29e4c036801204fcd5af304af349b9ef15b9cd0cd5f65eff1e8cf500af236afd",
+      "simples": "Prevaricação: retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal. Pena: detenção de três meses a um ano e multa.",
+      "pontos": [
+        "Retardar ou deixar de praticar ato de ofício, ou praticá-lo contra expressa disposição de lei.",
+        "Fim de satisfazer interesse ou sentimento pessoal.",
+        "Detenção de três meses a um ano e multa."
+      ],
+      "atencao": [
+        "Interesse/sentimento pessoal e dolo precisam ser demonstrados. Não importar conclusão universal de que todo atraso ou toda vantagem caracteriza automaticamente este ou outro tipo. Texto oficial remete à ADPF 881; não certificada aqui toda controvérsia ou decisão posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 317",
+        "Art. 320"
+      ],
+      "exemplo": "Servidor retarda indevidamente ato de ofício para satisfazer vingança pessoal. Variação: Atraso por impossibilidade real ou mera negligência não prova o interesse/sentimento típico.",
+      "prova": [
+        "Motivo pessoal importa? Sim.",
+        "Qualquer demora é prevaricação automática? Não."
+      ],
+      "expected": {
+        "unit_id": "01ecf0a3-61f6-5b51-9529-769787eb21a1",
+        "content_sha256": "29e4c036801204fcd5af304af349b9ef15b9cd0cd5f65eff1e8cf500af236afd",
+        "simples": "Prevaricação: retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal. Pena: detenção de três meses a um ano e multa.",
+        "pontos": [
+          "Retardar ou deixar de praticar ato de ofício, ou praticá-lo contra expressa disposição de lei.",
+          "Fim de satisfazer interesse ou sentimento pessoal.",
+          "Detenção de três meses a um ano e multa."
+        ],
+        "atencao": [
+          "Exige dolo específico: INTERESSE ou SENTIMENTO PESSOAL.",
+          "Não há vantagem indevida (senão seria corrupção)."
+        ],
+        "exemplo": "Servidor deixa de atender um requerimento por inimizade com o interessado.",
+        "prova": [
+          "Assertiva que dispensa o interesse ou sentimento pessoal na prevaricação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 317",
+          "Art. 320"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-319-a",
+      "unit_id": "f36fda97-7884-51c9-bc3d-98b23a20ccd5",
+      "content_sha256": "56ad0abda4ba283864d1bffa8c4219028351e4fa84212e320ed2ab433b0019e7",
+      "simples": "Prevaricação em estabelecimento penal: deixar o Diretor de Penitenciária e/ou agente público de cumprir seu dever de vedar ao preso o acesso a aparelho telefônico, de rádio ou similar, que permita a comunicação com outros presos ou com o ambiente externo. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": [
+        "Diretor de penitenciária ou agente público deixa de vedar ao preso acesso a telefone, rádio ou similar.",
+        "Detenção de 3 meses a 1 ano."
+      ],
+      "atencao": [
+        "Crime omissivo próprio.",
+        "A conduta do preso que usa o aparelho é falta grave (Lei de Execução Penal)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 349-A"
+      ],
+      "exemplo": "Agente público com dever de vedação deixa de impedir acesso do preso a aparelho comunicador. Variação: O preso não é sujeito funcional desse tipo apenas porque usa telefone; outros regimes precisam ser separados.",
+      "prova": [
+        "Só celular entra? Não; rádio e similar comunicador também.",
+        "Qualquer trabalhador sem o dever indicado responde automaticamente? Não."
+      ],
+      "expected": {
+        "unit_id": "f36fda97-7884-51c9-bc3d-98b23a20ccd5",
+        "content_sha256": "56ad0abda4ba283864d1bffa8c4219028351e4fa84212e320ed2ab433b0019e7",
+        "simples": "Prevaricação em estabelecimento penal: deixar o Diretor de Penitenciária e/ou agente público de cumprir seu dever de vedar ao preso o acesso a aparelho telefônico, de rádio ou similar, que permita a comunicação com outros presos ou com o ambiente externo. Pena: detenção de 3 meses a 1 ano.",
+        "pontos": [
+          "Diretor de penitenciária ou agente público deixa de vedar ao preso acesso a telefone, rádio ou similar.",
+          "Detenção de 3 meses a 1 ano."
+        ],
+        "atencao": [
+          "Crime omissivo próprio.",
+          "A conduta do preso que usa o aparelho é falta grave (Lei de Execução Penal)."
+        ],
+        "exemplo": "Agente penitenciário permite que o preso mantenha celular na cela.",
+        "prova": [
+          "Assertiva que pune o preso que usa celular, por esse artigo, erra: o tipo pune quem deixa de vedar o acesso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 349-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-320",
+      "unit_id": "a05f86ab-1b84-53f1-8fdb-f3141336dc12",
+      "content_sha256": "7d0306c7e00f5365ee46ca7c77da4f55dd60a274534b00ce855159e593d8fbcc",
+      "simples": "Condescendência criminosa: deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": [
+        "Deixar de responsabilizar subordinado por indulgência.",
+        "Ou não levar o fato ao conhecimento da autoridade competente, quando faltar competência.",
+        "Detenção de quinze dias a um mês, ou multa."
+      ],
+      "atencao": [
+        "Motivo é a INDULGÊNCIA (tolerância).",
+        "O infrator é SUBORDINADO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 319"
+      ],
+      "exemplo": "Superior deixa de responsabilizar subordinado por indulgência. Variação: Se não tem competência, omitir comunicação à autoridade competente também integra a alternativa legal.",
+      "prova": [
+        "Indulgência importa? Sim.",
+        "Falta de competência autoriza sempre silêncio? Não."
+      ],
+      "expected": {
+        "unit_id": "a05f86ab-1b84-53f1-8fdb-f3141336dc12",
+        "content_sha256": "7d0306c7e00f5365ee46ca7c77da4f55dd60a274534b00ce855159e593d8fbcc",
+        "simples": "Condescendência criminosa: deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente. Pena: detenção de quinze dias a um mês, ou multa.",
+        "pontos": [
+          "Deixar de responsabilizar subordinado por indulgência.",
+          "Ou não levar o fato ao conhecimento da autoridade competente, quando faltar competência.",
+          "Detenção de quinze dias a um mês, ou multa."
+        ],
+        "atencao": [
+          "Motivo é a INDULGÊNCIA (tolerância).",
+          "O infrator é SUBORDINADO."
+        ],
+        "exemplo": "Chefe deixa de punir subordinado por pena do colega.",
+        "prova": [
+          "Assertiva que exige vantagem indevida na condescendência criminosa erra: o motivo é a indulgência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 319"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-321",
+      "unit_id": "0993be14-fe5f-5ab2-9817-77de1bc4d243",
+      "content_sha256": "fabaed363d038e348799b80c05c1eb2073c62aeb649475b47363e6006a8fbff7",
+      "simples": "Advocacia administrativa: patrocinar, direta ou indiretamente, interesse privado perante a administração pública, valendo-se da qualidade de funcionário. Pena: detenção de um a três meses, ou multa. Se o interesse é ilegítimo: detenção de três meses a um ano, além da multa.",
+      "pontos": [
+        "Patrocinar interesse privado perante a administração, valendo-se da qualidade de funcionário.",
+        "Detenção de um a três meses, ou multa.",
+        "Parágrafo único: interesse ilegítimo: detenção de três meses a um ano, além da multa."
+      ],
+      "atencao": [
+        "Interesse ilegítimo agrava a pena."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-G"
+      ],
+      "exemplo": "Funcionário patrocina interesse privado perante a Administração valendo-se do cargo. Variação: Interesse legítimo não exclui caput por si; ilegitimidade tem modalidade própria.",
+      "prova": [
+        "Precisa ser advogado inscrito? Não.",
+        "É todo auxílio particular sem uso do cargo? Não."
+      ],
+      "expected": {
+        "unit_id": "0993be14-fe5f-5ab2-9817-77de1bc4d243",
+        "content_sha256": "fabaed363d038e348799b80c05c1eb2073c62aeb649475b47363e6006a8fbff7",
+        "simples": "Advocacia administrativa: patrocinar, direta ou indiretamente, interesse privado perante a administração pública, valendo-se da qualidade de funcionário. Pena: detenção de um a três meses, ou multa. Se o interesse é ilegítimo: detenção de três meses a um ano, além da multa.",
+        "pontos": [
+          "Patrocinar interesse privado perante a administração, valendo-se da qualidade de funcionário.",
+          "Detenção de um a três meses, ou multa.",
+          "Parágrafo único: interesse ilegítimo: detenção de três meses a um ano, além da multa."
+        ],
+        "atencao": [
+          "Interesse ilegítimo agrava a pena."
+        ],
+        "exemplo": "Servidor intercede em favor de um conhecido perante outro setor, usando seu cargo.",
+        "prova": [
+          "Assertiva que exige que o interesse seja ilegítimo no caput erra: ele agrava a pena no parágrafo único."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-G"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-322",
+      "unit_id": "a4a486d1-1bdf-5864-9a49-2ce5f08ab9fa",
+      "content_sha256": "f90b45d40e83165c8b24cb11f9cafbbe9bf76fcac07ff767bc96339ef21bde04",
+      "simples": "Violência arbitrária: praticar violência, no exercício de função ou a pretexto de exercê-la. Pena: detenção de seis meses a três anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Praticar violência no exercício de função ou a pretexto de exercê-la.",
+        "Detenção de seis meses a três anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Hoje o abuso de autoridade é regido pela Lei nº 13.869, de 2019, o que reduz a incidência prática do art. 322.",
+        "Texto residual/histórico exige confronto com legislação especial e regime temporal vigente. Sem exercício literal automático de pena antiga ou conclusão universal de revogação; não certificadas todas as controvérsias de especialidade/recepção."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Lei nº 13.869, de 2019"
+      ],
+      "exemplo": "Conduta de violência funcional exige comparar texto residual com tipos atuais de abuso de autoridade. Variação: Não ensinar pena residual como enquadramento universal nem declarar revogação incontroversa de toda situação.",
+      "prova": [
+        "A leitura do caput resolve sozinha o regime atual? Não.",
+        "Toda atuação policial com força é automaticamente criminosa? Não; requisitos,legalidade e legislação específica importam."
+      ],
+      "expected": {
+        "unit_id": "a4a486d1-1bdf-5864-9a49-2ce5f08ab9fa",
+        "content_sha256": "f90b45d40e83165c8b24cb11f9cafbbe9bf76fcac07ff767bc96339ef21bde04",
+        "simples": "Violência arbitrária: praticar violência, no exercício de função ou a pretexto de exercê-la. Pena: detenção de seis meses a três anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Praticar violência no exercício de função ou a pretexto de exercê-la.",
+          "Detenção de seis meses a três anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Hoje o abuso de autoridade é regido pela Lei nº 13.869, de 2019, o que reduz a incidência prática do art. 322."
+        ],
+        "exemplo": "Funcionário agride alguém a pretexto de cumprir suas funções.",
+        "prova": [
+          "Assertiva que absorve a pena da violência no art. 322 erra: a pena é somada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei nº 13.869, de 2019"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-323",
+      "unit_id": "1ae7e525-a152-5463-8776-645927aabcb4",
+      "content_sha256": "fbcf0f524095b3b6e103bbf954f958deb0a5f1669e6f94eb51e5cbe8d045408f",
+      "simples": "Abandono de função: abandonar cargo público, fora dos casos permitidos em lei. Pena: detenção de quinze dias a um mês, ou multa. Se resulta prejuízo público: detenção de três meses a um ano e multa. Se ocorre em lugar compreendido na faixa de fronteira: detenção de um a três anos e multa.",
+      "pontos": [
+        "Abandonar cargo público fora dos casos permitidos em lei.",
+        "Detenção de quinze dias a um mês, ou multa.",
+        "§1º: prejuízo público: detenção de três meses a um ano e multa.",
+        "§2º: faixa de fronteira: detenção de um a três anos e multa."
+      ],
+      "atencao": [
+        "Faixa de fronteira tem a pena mais alta.",
+        "Ausência justificada e direitos constitucionais, inclusive greve lícita, não podem ser criminalizados só pelo afastamento físico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 324"
+      ],
+      "exemplo": "Funcionário abandona cargo fora das hipóteses legais. Variação: Ausência justificada ou exercício lícito de direito não é abandono por presunção.",
+      "prova": [
+        "Faixa de fronteira tem modalidade agravada? Sim.",
+        "Todo atraso equivale a abandonar cargo? Não."
+      ],
+      "expected": {
+        "unit_id": "1ae7e525-a152-5463-8776-645927aabcb4",
+        "content_sha256": "fbcf0f524095b3b6e103bbf954f958deb0a5f1669e6f94eb51e5cbe8d045408f",
+        "simples": "Abandono de função: abandonar cargo público, fora dos casos permitidos em lei. Pena: detenção de quinze dias a um mês, ou multa. Se resulta prejuízo público: detenção de três meses a um ano e multa. Se ocorre em lugar compreendido na faixa de fronteira: detenção de um a três anos e multa.",
+        "pontos": [
+          "Abandonar cargo público fora dos casos permitidos em lei.",
+          "Detenção de quinze dias a um mês, ou multa.",
+          "§1º: prejuízo público: detenção de três meses a um ano e multa.",
+          "§2º: faixa de fronteira: detenção de um a três anos e multa."
+        ],
+        "atencao": [
+          "Faixa de fronteira tem a pena mais alta."
+        ],
+        "exemplo": "Servidor abandona o cargo na faixa de fronteira.",
+        "prova": [
+          "Assertiva que fixa a mesma pena para o caput e a faixa de fronteira erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 324"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-324",
+      "unit_id": "9821e8fb-ab11-5cfe-bbf5-be8a987e306a",
+      "content_sha256": "da2b2b6193f8944cd5ef925db5ff980107a21798f4f310946331e3c823c37be2",
+      "simples": "Exercício funcional ilegalmente antecipado ou prolongado: entrar no exercício de função pública antes de satisfeitas as exigências legais, ou continuar a exercê-la, sem autorização, depois de saber oficialmente que foi exonerado, removido, substituído ou suspenso. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": [
+        "Entrar no exercício da função antes de cumprir as exigências legais.",
+        "Continuar a exercê-la, sem autorização, depois de saber oficialmente da exoneração, remoção, substituição ou suspensão.",
+        "Detenção de quinze dias a um mês, ou multa."
+      ],
+      "atencao": [
+        "Exige ciência OFICIAL no caso do exercício prolongado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 323"
+      ],
+      "exemplo": "Agente continua a função sabendo que foi suspenso por ato válido. Variação: Sem ciência do ato ou sem efeito válido, o pressuposto precisa ser examinado.",
+      "prova": [
+        "Iniciar antes das exigências legais também está previsto? Sim.",
+        "Toda demora administrativa em registrar ato prova crime? Não."
+      ],
+      "expected": {
+        "unit_id": "9821e8fb-ab11-5cfe-bbf5-be8a987e306a",
+        "content_sha256": "da2b2b6193f8944cd5ef925db5ff980107a21798f4f310946331e3c823c37be2",
+        "simples": "Exercício funcional ilegalmente antecipado ou prolongado: entrar no exercício de função pública antes de satisfeitas as exigências legais, ou continuar a exercê-la, sem autorização, depois de saber oficialmente que foi exonerado, removido, substituído ou suspenso. Pena: detenção de quinze dias a um mês, ou multa.",
+        "pontos": [
+          "Entrar no exercício da função antes de cumprir as exigências legais.",
+          "Continuar a exercê-la, sem autorização, depois de saber oficialmente da exoneração, remoção, substituição ou suspensão.",
+          "Detenção de quinze dias a um mês, ou multa."
+        ],
+        "atencao": [
+          "Exige ciência OFICIAL no caso do exercício prolongado."
+        ],
+        "exemplo": "Servidor continua trabalhando após ser oficialmente informado de sua exoneração.",
+        "prova": [
+          "Assertiva que dispensa a ciência oficial na modalidade prolongada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 323"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-325",
+      "unit_id": "a24748af-46ec-5bfa-897a-f1d02a6f2227",
+      "content_sha256": "b2cd141038aaa0215e80966b526554770d7ff35a40289e054fa3aea82728756f",
+      "simples": "Violação de sigilo funcional: revelar fato de que tem ciência em razão do cargo e que deva permanecer em segredo, ou facilitar-lhe a revelação. Pena: detenção de seis meses a dois anos, ou multa, se o fato não constitui crime mais grave. Nas mesmas penas quem permite ou facilita, mediante atribuição, fornecimento e empréstimo de senha ou qualquer outra forma, o acesso de pessoas não autorizadas a sistemas de informações ou banco de dados da Administração Pública, ou se utiliza indevidamente do acesso restrito. Se resulta dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa.",
+      "pontos": [
+        "Revelar fato sigiloso de que tem ciência em razão do cargo, ou facilitar a revelação.",
+        "Detenção de seis meses a dois anos, ou multa (subsidiário).",
+        "§1º: permitir acesso de pessoas não autorizadas a sistemas, ou usar indevidamente o acesso restrito.",
+        "§2º: dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa."
+      ],
+      "atencao": [
+        "Empréstimo de senha pode configurar o §1º.",
+        "Subsidiário no caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 153",
+        "Art. 313-A"
+      ],
+      "exemplo": "Servidor entrega credencial para acesso indevido a sistema sigiloso. Variação: Transparência legalmente exigida não se confunde com revelar fato que deva permanecer secreto.",
+      "prova": [
+        "Facilitar acesso não autorizado está previsto? Sim.",
+        "Qualquer informação administrativa é sigilosa por presunção? Não."
+      ],
+      "expected": {
+        "unit_id": "a24748af-46ec-5bfa-897a-f1d02a6f2227",
+        "content_sha256": "b2cd141038aaa0215e80966b526554770d7ff35a40289e054fa3aea82728756f",
+        "simples": "Violação de sigilo funcional: revelar fato de que tem ciência em razão do cargo e que deva permanecer em segredo, ou facilitar-lhe a revelação. Pena: detenção de seis meses a dois anos, ou multa, se o fato não constitui crime mais grave. Nas mesmas penas quem permite ou facilita, mediante atribuição, fornecimento e empréstimo de senha ou qualquer outra forma, o acesso de pessoas não autorizadas a sistemas de informações ou banco de dados da Administração Pública, ou se utiliza indevidamente do acesso restrito. Se resulta dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa.",
+        "pontos": [
+          "Revelar fato sigiloso de que tem ciência em razão do cargo, ou facilitar a revelação.",
+          "Detenção de seis meses a dois anos, ou multa (subsidiário).",
+          "§1º: permitir acesso de pessoas não autorizadas a sistemas, ou usar indevidamente o acesso restrito.",
+          "§2º: dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa."
+        ],
+        "atencao": [
+          "Empréstimo de senha pode configurar o §1º.",
+          "Subsidiário no caput."
+        ],
+        "exemplo": "Servidor empresta sua senha a pessoa não autorizada para acessar o sistema.",
+        "prova": [
+          "Assertiva que não pune o servidor que empresta sua senha erra: configura o §1º, I."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 153",
+          "Art. 313-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-326",
+      "unit_id": "6708c0b4-5d4a-5df4-8120-9ba78db317db",
+      "content_sha256": "d3097b398b0324cbd77b988acf01e1e6a0153a770a32edd55b840d494c8527fb",
+      "simples": "Violação do sigilo de proposta de concorrência: devassar o sigilo de proposta de concorrência pública, ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de três meses a um ano e multa.",
+      "pontos": [
+        "Devassar o sigilo de proposta de concorrência pública.",
+        "Ou proporcionar a terceiro a oportunidade de devassá-lo.",
+        "Detenção de três meses a um ano e multa."
+      ],
+      "atencao": [
+        "Atenção ao regime de licitações da Lei nº 14.133, de 2021.",
+        "Texto residual/histórico exige confronto com legislação especial e regime temporal vigente. Sem exercício literal automático de pena antiga ou conclusão universal de revogação; não certificadas todas as controvérsias de especialidade/recepção."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 325"
+      ],
+      "exemplo": "Questão sobre sigilo de proposta exige integrar 337-J e transição penal das licitações. Variação: Pena antiga de 326 não deve ser automaticamente apresentada como pena atual de todo certame.",
+      "prova": [
+        "O texto residual basta ao enquadramento atual? Não.",
+        "Lei 14.133 só mudou procedimentos administrativos? Não; também tipos penais."
+      ],
+      "expected": {
+        "unit_id": "6708c0b4-5d4a-5df4-8120-9ba78db317db",
+        "content_sha256": "d3097b398b0324cbd77b988acf01e1e6a0153a770a32edd55b840d494c8527fb",
+        "simples": "Violação do sigilo de proposta de concorrência: devassar o sigilo de proposta de concorrência pública, ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de três meses a um ano e multa.",
+        "pontos": [
+          "Devassar o sigilo de proposta de concorrência pública.",
+          "Ou proporcionar a terceiro a oportunidade de devassá-lo.",
+          "Detenção de três meses a um ano e multa."
+        ],
+        "atencao": [
+          "Atenção ao regime de licitações da Lei nº 14.133, de 2021."
+        ],
+        "exemplo": "Servidor abre propostas lacradas antes do momento e informa um concorrente.",
+        "prova": [
+          "Assertiva que aplica o art. 326 a qualquer sigilo funcional erra: o tipo trata do sigilo de proposta de concorrência pública."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 325"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-327",
+      "unit_id": "3647d027-49b5-5e3c-815a-76aad922c459",
+      "content_sha256": "e957a92fe82099ef4bcdd5c2ce63665cdf394f8b9b53b262577452b35c0b1dcc",
+      "simples": "Conceito de funcionário público: considera-se funcionário público, para os efeitos penais, quem, embora transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública. Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal, e quem trabalha para empresa prestadora de serviço contratada ou conveniada para a execução de atividade típica da Administração Pública. A pena será aumentada da terça parte quando os autores dos crimes deste Capítulo forem ocupantes de cargos em comissão ou de função de direção ou assessoramento de órgão da administração direta, sociedade de economia mista, empresa pública ou fundação instituída pelo poder público.",
+      "pontos": [
+        "Cargo,emprego ou função pública mesmo temporária/gratuita.",
+        "Equiparação do§1º tem condições próprias, não abrange toda atividade privada.",
+        "§2º: terça parte para crimes deste Capítulo, com cargo/função e entidades expressamente indicados; não basta o título de chefia isolado."
+      ],
+      "atencao": [
+        "Conceito AMPLO: transitoriedade e ausência de remuneração não afastam.",
+        "O aumento de terça parte aplica-se aos crimes DESTE Capítulo."
+      ],
+      "termos": [
+        {
+          "termo": "Entidade paraestatal",
+          "significado": "Entidade que atua ao lado do Estado em atividades de interesse público."
+        }
+      ],
+      "remissoes": [
+        "Art. 312",
+        "Art. 317"
+      ],
+      "exemplo": "Pessoa exerce função pública temporária sem remuneração. Variação: Isso pode preencher conceito penal, mas não dispensa provar conduta e elementos do crime imputado.",
+      "prova": [
+        "Salário é indispensável ao conceito? Não.",
+        "Todo empregado privado é funcionário público por presunção? Não; equiparação tem requisitos."
+      ],
+      "expected": {
+        "unit_id": "3647d027-49b5-5e3c-815a-76aad922c459",
+        "content_sha256": "e957a92fe82099ef4bcdd5c2ce63665cdf394f8b9b53b262577452b35c0b1dcc",
+        "simples": "Conceito de funcionário público: considera-se funcionário público, para os efeitos penais, quem, embora transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública. Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal, e quem trabalha para empresa prestadora de serviço contratada ou conveniada para a execução de atividade típica da Administração Pública. A pena será aumentada da terça parte quando os autores dos crimes deste Capítulo forem ocupantes de cargos em comissão ou de função de direção ou assessoramento de órgão da administração direta, sociedade de economia mista, empresa pública ou fundação instituída pelo poder público.",
+        "pontos": [
+          "Funcionário público: quem exerce cargo, emprego ou função pública, ainda que transitoriamente ou sem remuneração.",
+          "§1º: equiparados (paraestatal; empresa contratada para atividade típica da Administração).",
+          "§2º: aumento da terça parte para cargos em comissão ou função de direção ou assessoramento."
+        ],
+        "atencao": [
+          "Conceito AMPLO: transitoriedade e ausência de remuneração não afastam.",
+          "O aumento de terça parte aplica-se aos crimes DESTE Capítulo."
+        ],
+        "exemplo": "Mesário voluntário em eleição pode ser considerado funcionário público para fins penais.",
+        "prova": [
+          "Assertiva que exige remuneração para ser funcionário público para fins penais erra: basta exercer, ainda que sem remuneração."
+        ],
+        "termos": [
+          {
+            "termo": "Entidade paraestatal",
+            "significado": "Entidade que atua ao lado do Estado em atividades de interesse público."
+          }
+        ],
+        "remissoes": [
+          "Art. 312",
+          "Art. 317"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-328",
+      "unit_id": "13c8e019-4e36-5eb7-b227-c8e08c613ba0",
+      "content_sha256": "73daddf8071bce6b81f82ec01bf3499bab2f4a9203bdf6cfc74bfbb3e3c32a05",
+      "simples": "Usurpação de função pública: usurpar o exercício de função pública. Pena: detenção de três meses a dois anos e multa. Se o agente aufere vantagem: reclusão de dois a cinco anos e multa.",
+      "pontos": [
+        "Usurpar o exercício de função pública.",
+        "Detenção de três meses a dois anos e multa.",
+        "Parágrafo único: vantagem auferida: reclusão de dois a cinco anos e multa."
+      ],
+      "atencao": [
+        "Qualidade de particular não é exclusividade absoluta; servidor também pode usurpar função que não lhe compete. Distinguir efetiva usurpação de mera identificação/apresentação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 324"
+      ],
+      "exemplo": "Agente pratica ato reservado a função pública que não lhe compete. Variação: Inclusive servidor pode usurpar outra função; não limitar automaticamente a particular.",
+      "prova": [
+        "Vantagem obtida tem pena própria? Sim.",
+        "Só anunciar-se servidor sem usurpar ato equivale sempre a 328? Não."
+      ],
+      "expected": {
+        "unit_id": "13c8e019-4e36-5eb7-b227-c8e08c613ba0",
+        "content_sha256": "73daddf8071bce6b81f82ec01bf3499bab2f4a9203bdf6cfc74bfbb3e3c32a05",
+        "simples": "Usurpação de função pública: usurpar o exercício de função pública. Pena: detenção de três meses a dois anos e multa. Se o agente aufere vantagem: reclusão de dois a cinco anos e multa.",
+        "pontos": [
+          "Usurpar o exercício de função pública.",
+          "Detenção de três meses a dois anos e multa.",
+          "Parágrafo único: vantagem auferida: reclusão de dois a cinco anos e multa."
+        ],
+        "atencao": [
+          "O usurpador é PARTICULAR (não é funcionário)."
+        ],
+        "exemplo": "Particular se passa por fiscal e exerce atos de fiscalização.",
+        "prova": [
+          "Assertiva que considera o usurpador funcionário público erra: ele exerce função pública sem ter cargo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 324"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-329",
+      "unit_id": "164e77ba-4c4d-5ee9-93cb-c09c29ad44ee",
+      "content_sha256": "4dbcebd604b52472fe9978727334684573fe78076efb5c97c37fef4af48f0ccf",
+      "simples": "Resistência: opor-se à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio. Pena: detenção de dois meses a dois anos. Se o ato, em razão da resistência, não se executa: reclusão de um a três anos. As penas são aplicáveis sem prejuízo das correspondentes à violência.",
+      "pontos": [
+        "Opor-se à execução de ato legal mediante violência ou ameaça.",
+        "Detenção de dois meses a dois anos.",
+        "§1º: o ato não se executa: reclusão de um a três anos.",
+        "§2º: sem prejuízo da pena da violência."
+      ],
+      "atencao": [
+        "O ato deve ser LEGAL.",
+        "Exige violência ou ameaça (sem elas, pode ser desobediência)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 330"
+      ],
+      "exemplo": "Violência é usada para impedir execução de ato legal por funcionário competente. Variação: Discordância verbal ou resistência a ato ilegal não satisfaz automaticamente esse tipo.",
+      "prova": [
+        "Legalidade do ato importa? Sim.",
+        "Violência pode ter pena cumulativa própria? Sim."
+      ],
+      "expected": {
+        "unit_id": "164e77ba-4c4d-5ee9-93cb-c09c29ad44ee",
+        "content_sha256": "4dbcebd604b52472fe9978727334684573fe78076efb5c97c37fef4af48f0ccf",
+        "simples": "Resistência: opor-se à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio. Pena: detenção de dois meses a dois anos. Se o ato, em razão da resistência, não se executa: reclusão de um a três anos. As penas são aplicáveis sem prejuízo das correspondentes à violência.",
+        "pontos": [
+          "Opor-se à execução de ato legal mediante violência ou ameaça.",
+          "Detenção de dois meses a dois anos.",
+          "§1º: o ato não se executa: reclusão de um a três anos.",
+          "§2º: sem prejuízo da pena da violência."
+        ],
+        "atencao": [
+          "O ato deve ser LEGAL.",
+          "Exige violência ou ameaça (sem elas, pode ser desobediência)."
+        ],
+        "exemplo": "Ameaçar o oficial de justiça para impedir o cumprimento de mandado legal.",
+        "prova": [
+          "Assertiva que configura resistência sem violência ou ameaça erra: seria desobediência, se cabível."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-330",
+      "unit_id": "18612f88-60b7-5b17-bd1f-bc39666e145a",
+      "content_sha256": "3b3c2294cce278a1095e797260ee0ca22bccb4ffdee0b4caa204bd94e9d0150b",
+      "simples": "Desobediência: desobedecer a ordem legal de funcionário público. Pena: detenção de quinze dias a seis meses e multa.",
+      "pontos": [
+        "Desobedecer a ordem LEGAL de funcionário público.",
+        "Detenção de quinze dias a seis meses e multa."
+      ],
+      "atencao": [
+        "A ordem deve ser legal e emanada de funcionário público competente.",
+        "Sem violência ou ameaça.",
+        "Ordem legal e competência precisam de prova. Regime com sanção própria e ausência/presença de ressalva penal exigem análise, sem duplicação automática."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 329"
+      ],
+      "exemplo": "Destinatário descumpre conscientemente ordem legal de funcionário competente. Variação: Sanção administrativa especial ou tipo específico exigem examinar subsidiariedade, não duplicar imputação automaticamente.",
+      "prova": [
+        "Toda ordem informal é legal por presunção? Não.",
+        "Descumprir medida protetiva tem sempre só 330? Não; há tipos próprios."
+      ],
+      "expected": {
+        "unit_id": "18612f88-60b7-5b17-bd1f-bc39666e145a",
+        "content_sha256": "3b3c2294cce278a1095e797260ee0ca22bccb4ffdee0b4caa204bd94e9d0150b",
+        "simples": "Desobediência: desobedecer a ordem legal de funcionário público. Pena: detenção de quinze dias a seis meses e multa.",
+        "pontos": [
+          "Desobedecer a ordem LEGAL de funcionário público.",
+          "Detenção de quinze dias a seis meses e multa."
+        ],
+        "atencao": [
+          "A ordem deve ser legal e emanada de funcionário público competente.",
+          "Sem violência ou ameaça."
+        ],
+        "exemplo": "Particular descumpre ordem legal de autoridade, sem violência.",
+        "prova": [
+          "Assertiva que configura desobediência pela recusa de ordem ilegal erra: a ordem deve ser legal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 329"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-331",
+      "unit_id": "c8fe549f-3202-5709-8168-5e77711a66df",
+      "content_sha256": "de8bb33bbe81dfa91933c8bce8ee4c8d4db8b658d538cf194dc9ae94ff01b34a",
+      "simples": "Desacato: desacatar funcionário público no exercício da função ou em razão dela. Pena: detenção de seis meses a dois anos, ou multa.",
+      "pontos": [
+        "Desacatar funcionário público.",
+        "No exercício da função ou em razão dela.",
+        "Detenção de seis meses a dois anos, ou multa."
+      ],
+      "atencao": [
+        "Exige relação com a função.",
+        "Crítica,petição e liberdade de expressão não são desacato por presunção. Não declarar descriminalização universal; não certificada toda jurisprudência posterior ou recepção de cada situação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 330"
+      ],
+      "exemplo": "Ofensa típica é dirigida a funcionário no exercício ou em razão da função. Variação: Crítica à atuação pública não se converte automaticamente em desacato; contexto e requisitos precisam ser provados.",
+      "prova": [
+        "Vínculo com a função importa? Sim.",
+        "Toda reclamação áspera basta por si? Não."
+      ],
+      "expected": {
+        "unit_id": "c8fe549f-3202-5709-8168-5e77711a66df",
+        "content_sha256": "de8bb33bbe81dfa91933c8bce8ee4c8d4db8b658d538cf194dc9ae94ff01b34a",
+        "simples": "Desacato: desacatar funcionário público no exercício da função ou em razão dela. Pena: detenção de seis meses a dois anos, ou multa.",
+        "pontos": [
+          "Desacatar funcionário público.",
+          "No exercício da função ou em razão dela.",
+          "Detenção de seis meses a dois anos, ou multa."
+        ],
+        "atencao": [
+          "Exige relação com a função."
+        ],
+        "exemplo": "Ofender policial durante a abordagem.",
+        "prova": [
+          "Assertiva que dispensa a relação com a função pública no desacato erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-332",
+      "unit_id": "5c6e2a2f-115e-5851-ba30-1914b4b6a222",
+      "content_sha256": "207c57e5ff828c09d5ee26936d211c2e589c2f62e8120d502193b51c8d1a2ab2",
+      "simples": "Tráfico de influência: solicitar, exigir, cobrar ou obter, para si ou para outrem, vantagem ou promessa de vantagem, a pretexto de influir em ato praticado por funcionário público no exercício da função. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada ao funcionário.",
+      "pontos": [
+        "Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário público.",
+        "Reclusão de 2 a 5 anos e multa.",
+        "Parágrafo único: alegar ou insinuar que a vantagem também se destina ao funcionário: aumento da metade."
+      ],
+      "atencao": [
+        "O agente apenas ALEGA ter influência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 357",
+        "Art. 317"
+      ],
+      "exemplo": "Agente cobra vantagem a pretexto de influir em ato de funcionário. Variação: Se afirma destinar também ao funcionário, examinar parágrafo; corrupção real tem outros elementos.",
+      "prova": [
+        "É preciso demonstrar efetivo êxito da influência? Não; tipo trata de solicitar,exigir,cobrar ou obter no recorte.",
+        "Aumento é metade? Sim; hipótese legal."
+      ],
+      "expected": {
+        "unit_id": "5c6e2a2f-115e-5851-ba30-1914b4b6a222",
+        "content_sha256": "207c57e5ff828c09d5ee26936d211c2e589c2f62e8120d502193b51c8d1a2ab2",
+        "simples": "Tráfico de influência: solicitar, exigir, cobrar ou obter, para si ou para outrem, vantagem ou promessa de vantagem, a pretexto de influir em ato praticado por funcionário público no exercício da função. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada ao funcionário.",
+        "pontos": [
+          "Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário público.",
+          "Reclusão de 2 a 5 anos e multa.",
+          "Parágrafo único: alegar ou insinuar que a vantagem também se destina ao funcionário: aumento da metade."
+        ],
+        "atencao": [
+          "O agente apenas ALEGA ter influência."
+        ],
+        "exemplo": "Pessoa cobra dinheiro dizendo ter influência para destravar um processo.",
+        "prova": [
+          "Assertiva que exige que o agente seja funcionário público no art. 332 erra: o crime é comum."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 357",
+          "Art. 317"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-333",
+      "unit_id": "936fa0e7-39ca-5283-a9f9-c9cefaceaa88",
+      "content_sha256": "20f7c51956774bf74a87383ff2017a15e26f29e5f3261e4cff38bac0bcdf60c6",
+      "simples": "Corrupção ativa: oferecer ou prometer vantagem indevida a funcionário público, para determiná-lo a praticar, omitir ou retardar ato de ofício. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço, se, em razão da vantagem ou promessa, o funcionário retarda ou omite ato de ofício, ou o pratica infringindo dever funcional.",
+      "pontos": [
+        "Oferecer ou prometer vantagem indevida a funcionário público.",
+        "Fim de determiná-lo a praticar, omitir ou retardar ato de ofício.",
+        "Reclusão de 2 a 12 anos e multa.",
+        "Parágrafo único: aumento de um terço se o funcionário retarda, omite ou pratica o ato infringindo dever funcional."
+      ],
+      "atencao": [
+        "Núcleos do tipo: OFERECER e PROMETER (não há 'dar' no caput).",
+        "Crime formal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 317"
+      ],
+      "exemplo": "Particular oferece vantagem indevida para funcionário omitir ato de ofício. Variação: Recusa da oferta não torna automaticamente atípica a modalidade consumada de oferecer.",
+      "prova": [
+        "Só prometer também está previsto? Sim.",
+        "Todo pagamento sem oferta/promessa típica prova 333? Não; enquadramento e conduta precisam ser identificados."
+      ],
+      "expected": {
+        "unit_id": "936fa0e7-39ca-5283-a9f9-c9cefaceaa88",
+        "content_sha256": "20f7c51956774bf74a87383ff2017a15e26f29e5f3261e4cff38bac0bcdf60c6",
+        "simples": "Corrupção ativa: oferecer ou prometer vantagem indevida a funcionário público, para determiná-lo a praticar, omitir ou retardar ato de ofício. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço, se, em razão da vantagem ou promessa, o funcionário retarda ou omite ato de ofício, ou o pratica infringindo dever funcional.",
+        "pontos": [
+          "Oferecer ou prometer vantagem indevida a funcionário público.",
+          "Fim de determiná-lo a praticar, omitir ou retardar ato de ofício.",
+          "Reclusão de 2 a 12 anos e multa.",
+          "Parágrafo único: aumento de um terço se o funcionário retarda, omite ou pratica o ato infringindo dever funcional."
+        ],
+        "atencao": [
+          "Núcleos do tipo: OFERECER e PROMETER (não há 'dar' no caput).",
+          "Crime formal."
+        ],
+        "exemplo": "Particular oferece dinheiro ao fiscal para que deixe de autuá-lo.",
+        "prova": [
+          "Assertiva que exige a aceitação da vantagem pelo funcionário na corrupção ativa erra: o crime se consuma com o oferecimento ou a promessa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 317"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-334",
+      "unit_id": "d5b1c0c3-d7b5-5c7f-9046-39292fbe6720",
+      "content_sha256": "27d9c0d90d28a2a3ec14672ea8bb19e18294fbcbb9cac51cea606232458a1bd5",
+      "simples": "Descaminho: iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, pela saída ou pelo consumo de mercadoria. Pena: reclusão de 1 a 4 anos. Incorre na mesma pena quem pratica navegação de cabotagem fora dos casos permitidos em lei; pratica fato assimilado, em lei especial, a descaminho; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira que introduziu clandestinamente no País ou importou fraudulentamente, ou que sabe ser produto de introdução clandestina ou de importação fraudulenta por parte de outrem; adquire, recebe ou oculta, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira, desacompanhada de documentação legal ou acompanhada de documentos que sabe serem falsos.",
+      "pontos": [
+        "Iludir, total ou parcialmente, o pagamento de direito ou imposto devido pela entrada, saída ou consumo de mercadoria.",
+        "Reclusão de 1 a 4 anos.",
+        "§1º: cabotagem irregular; fato assimilado; venda e utilização de mercadoria estrangeira clandestina; aquisição sem documentação legal."
+      ],
+      "atencao": [
+        "Descaminho: mercadoria PERMITIDA, com fraude no pagamento do imposto.",
+        "Contrabando (art. 334-A): mercadoria PROIBIDA.",
+        "Majorantes,insignificância,modalidade de transporte e reiteração exigem fatos e jurisprudência pertinentes. Não certificado limite monetário/agravamento universal neste lote; nenhuma resposta automática por valor ou meio de transporte."
+      ],
+      "termos": [
+        {
+          "termo": "Descaminho",
+          "significado": "Fraude no pagamento do imposto devido em mercadoria permitida."
+        }
+      ],
+      "remissoes": [
+        "Art. 334-A",
+        "Art. 318"
+      ],
+      "exemplo": "Importador ilude tributo devido sobre mercadoria de entrada permitida. Variação: Mercadoria proibida ou hipótese equiparada de contrabando exige 334-A, não confundir tributo com proibição.",
+      "prova": [
+        "Descaminho tem pena de 1 a 4? Sim; caput.",
+        "Irregularidade fiscal sozinha dispensa dolo e critérios de tipicidade? Não."
+      ],
+      "expected": {
+        "unit_id": "d5b1c0c3-d7b5-5c7f-9046-39292fbe6720",
+        "content_sha256": "27d9c0d90d28a2a3ec14672ea8bb19e18294fbcbb9cac51cea606232458a1bd5",
+        "simples": "Descaminho: iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, pela saída ou pelo consumo de mercadoria. Pena: reclusão de 1 a 4 anos. Incorre na mesma pena quem pratica navegação de cabotagem fora dos casos permitidos em lei; pratica fato assimilado, em lei especial, a descaminho; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira que introduziu clandestinamente no País ou importou fraudulentamente, ou que sabe ser produto de introdução clandestina ou de importação fraudulenta por parte de outrem; adquire, recebe ou oculta, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira, desacompanhada de documentação legal ou acompanhada de documentos que sabe serem falsos.",
+        "pontos": [
+          "Iludir, total ou parcialmente, o pagamento de direito ou imposto devido pela entrada, saída ou consumo de mercadoria.",
+          "Reclusão de 1 a 4 anos.",
+          "§1º: cabotagem irregular; fato assimilado; venda e utilização de mercadoria estrangeira clandestina; aquisição sem documentação legal."
+        ],
+        "atencao": [
+          "Descaminho: mercadoria PERMITIDA, com fraude no pagamento do imposto.",
+          "Contrabando (art. 334-A): mercadoria PROIBIDA."
+        ],
+        "exemplo": "Trazer do exterior mercadorias permitidas sem pagar o imposto devido.",
+        "prova": [
+          "Assertiva que confunde descaminho com contrabando erra: descaminho envolve mercadoria permitida; contrabando, proibida."
+        ],
+        "termos": [
+          {
+            "termo": "Descaminho",
+            "significado": "Fraude no pagamento do imposto devido em mercadoria permitida."
+          }
+        ],
+        "remissoes": [
+          "Art. 334-A",
+          "Art. 318"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-334-a",
+      "unit_id": "b53510b7-3945-5621-a900-e680f191a7f4",
+      "content_sha256": "2dc761419973d3521ded04d35ed0e6a5ba9f9ac9fe652966df564c350397ffbd",
+      "simples": "Contrabando: importar ou exportar mercadoria proibida. Pena: reclusão de 2 a 5 anos. Incorre na mesma pena quem pratica fato assimilado, em lei especial, a contrabando; importa ou exporta clandestinamente mercadoria que dependa de registro, análise ou autorização de órgão público competente; reinsere no território nacional mercadoria brasileira destinada à exportação; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria proibida pela lei brasileira; adquire, recebe ou oculta, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, mercadoria proibida. Equipara-se às atividades comerciais qualquer forma de comércio irregular ou clandestino de mercadorias estrangeiras, inclusive o exercido em residências, entre outras previsões do dispositivo.",
+      "pontos": [
+        "Importar ou exportar mercadoria PROIBIDA.",
+        "Reclusão de 2 a 5 anos.",
+        "§1º: fato assimilado; mercadoria dependente de autorização; reinserção de mercadoria destinada à exportação; venda, utilização e aquisição de mercadoria proibida.",
+        "§2º: equipara-se às atividades comerciais o comércio irregular ou clandestino de mercadorias estrangeiras."
+      ],
+      "atencao": [
+        "Contrabando = mercadoria PROIBIDA; descaminho = fraude fiscal em mercadoria permitida.",
+        "Majorantes,insignificância,modalidade de transporte e reiteração exigem fatos e jurisprudência pertinentes. Não certificado limite monetário/agravamento universal neste lote; nenhuma resposta automática por valor ou meio de transporte."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 334"
+      ],
+      "exemplo": "Mercadoria proibida é importada nas condições típicas. Variação: Hipótese de autorização/registro necessário pode integrar equiparação; não reduzir todo artigo à proibição absoluta.",
+      "prova": [
+        "Contrabando caput tem 2 a 5? Sim.",
+        "Toda discussão sobre tributo é contrabando? Não; distinguir 334."
+      ],
+      "expected": {
+        "unit_id": "b53510b7-3945-5621-a900-e680f191a7f4",
+        "content_sha256": "2dc761419973d3521ded04d35ed0e6a5ba9f9ac9fe652966df564c350397ffbd",
+        "simples": "Contrabando: importar ou exportar mercadoria proibida. Pena: reclusão de 2 a 5 anos. Incorre na mesma pena quem pratica fato assimilado, em lei especial, a contrabando; importa ou exporta clandestinamente mercadoria que dependa de registro, análise ou autorização de órgão público competente; reinsere no território nacional mercadoria brasileira destinada à exportação; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria proibida pela lei brasileira; adquire, recebe ou oculta, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, mercadoria proibida. Equipara-se às atividades comerciais qualquer forma de comércio irregular ou clandestino de mercadorias estrangeiras, inclusive o exercido em residências, entre outras previsões do dispositivo.",
+        "pontos": [
+          "Importar ou exportar mercadoria PROIBIDA.",
+          "Reclusão de 2 a 5 anos.",
+          "§1º: fato assimilado; mercadoria dependente de autorização; reinserção de mercadoria destinada à exportação; venda, utilização e aquisição de mercadoria proibida.",
+          "§2º: equipara-se às atividades comerciais o comércio irregular ou clandestino de mercadorias estrangeiras."
+        ],
+        "atencao": [
+          "Contrabando = mercadoria PROIBIDA; descaminho = fraude fiscal em mercadoria permitida."
+        ],
+        "exemplo": "Importar mercadoria que a lei brasileira proíbe.",
+        "prova": [
+          "Assertiva que fixa pena de detenção para o contrabando erra: é reclusão de 2 a 5 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 334"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-335",
+      "unit_id": "0389eb14-829c-5c49-9fd7-3416567c5b14",
+      "content_sha256": "b63f502b129a0cbd9da34c59e6d4b18992a81b9381462dc1669ab18e2b4695a7",
+      "simples": "Impedimento, perturbação ou fraude de concorrência: impedir, perturbar ou fraudar concorrência pública ou venda em hasta pública, promovida pela administração federal, estadual ou municipal, ou por entidade paraestatal; afastar ou procurar afastar concorrente ou licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem. Pena: detenção de seis meses a dois anos, ou multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém de concorrer ou licitar, em razão da vantagem oferecida.",
+      "pontos": [
+        "Impedir, perturbar ou fraudar concorrência pública ou hasta pública.",
+        "Afastar ou procurar afastar concorrente por violência, grave ameaça, fraude ou oferecimento de vantagem.",
+        "Detenção de seis meses a dois anos, ou multa, além da pena da violência.",
+        "Parágrafo único: quem se abstém de concorrer em razão da vantagem."
+      ],
+      "atencao": [
+        "Quem aceita a vantagem para não concorrer também responde.",
+        "Texto residual/histórico exige confronto com legislação especial e regime temporal vigente. Sem exercício literal automático de pena antiga ou conclusão universal de revogação; não certificadas todas as controvérsias de especialidade/recepção."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-F"
+      ],
+      "exemplo": "Conduta em certame exige comparação com 337-I/337-K e regime temporal da Lei 14.133. Variação: Hasta pública e texto residual precisam de análise específica; não declarar revogação universal nem usar pena antiga indiscriminadamente.",
+      "prova": [
+        "Pode ignorar os novos tipos nas licitações atuais? Não.",
+        "Certame e hasta pública são sempre idênticos para enquadramento? Não."
+      ],
+      "expected": {
+        "unit_id": "0389eb14-829c-5c49-9fd7-3416567c5b14",
+        "content_sha256": "b63f502b129a0cbd9da34c59e6d4b18992a81b9381462dc1669ab18e2b4695a7",
+        "simples": "Impedimento, perturbação ou fraude de concorrência: impedir, perturbar ou fraudar concorrência pública ou venda em hasta pública, promovida pela administração federal, estadual ou municipal, ou por entidade paraestatal; afastar ou procurar afastar concorrente ou licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem. Pena: detenção de seis meses a dois anos, ou multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém de concorrer ou licitar, em razão da vantagem oferecida.",
+        "pontos": [
+          "Impedir, perturbar ou fraudar concorrência pública ou hasta pública.",
+          "Afastar ou procurar afastar concorrente por violência, grave ameaça, fraude ou oferecimento de vantagem.",
+          "Detenção de seis meses a dois anos, ou multa, além da pena da violência.",
+          "Parágrafo único: quem se abstém de concorrer em razão da vantagem."
+        ],
+        "atencao": [
+          "Quem aceita a vantagem para não concorrer também responde."
+        ],
+        "exemplo": "Pagar a um concorrente para que não participe da licitação.",
+        "prova": [
+          "Assertiva que isenta quem se abstém de licitar em razão de vantagem erra: ele incorre na mesma pena."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-336",
+      "unit_id": "71d42afa-d980-5c3c-b507-2695021c3a40",
+      "content_sha256": "a0552d9f5755f506ad6cbec4787a2ae39591c3b27c2ee50b5eec66a7f0e9c849",
+      "simples": "Inutilização de edital ou de sinal: rasgar ou, de qualquer forma, inutilizar ou conspurcar edital afixado por ordem de funcionário público; violar ou inutilizar selo ou sinal empregado, por determinação legal ou por ordem de funcionário público, para identificar ou cerrar qualquer objeto. Pena: detenção de um mês a um ano, ou multa.",
+      "pontos": [
+        "Rasgar, inutilizar ou conspurcar edital afixado por ordem de funcionário.",
+        "Violar ou inutilizar selo ou sinal de identificação ou fechamento.",
+        "Detenção de um mês a um ano, ou multa."
+      ],
+      "atencao": [
+        "O edital deve ter sido afixado por ordem de funcionário público."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337"
+      ],
+      "exemplo": "Selo público colocado para lacrar objeto é violado nas condições típicas. Variação: Abertura regularmente autorizada não equivale automaticamente a violação criminosa.",
+      "prova": [
+        "Edital legalmente afixado também é objeto previsto? Sim.",
+        "Todo cartaz privado entra? Não."
+      ],
+      "expected": {
+        "unit_id": "71d42afa-d980-5c3c-b507-2695021c3a40",
+        "content_sha256": "a0552d9f5755f506ad6cbec4787a2ae39591c3b27c2ee50b5eec66a7f0e9c849",
+        "simples": "Inutilização de edital ou de sinal: rasgar ou, de qualquer forma, inutilizar ou conspurcar edital afixado por ordem de funcionário público; violar ou inutilizar selo ou sinal empregado, por determinação legal ou por ordem de funcionário público, para identificar ou cerrar qualquer objeto. Pena: detenção de um mês a um ano, ou multa.",
+        "pontos": [
+          "Rasgar, inutilizar ou conspurcar edital afixado por ordem de funcionário.",
+          "Violar ou inutilizar selo ou sinal de identificação ou fechamento.",
+          "Detenção de um mês a um ano, ou multa."
+        ],
+        "atencao": [
+          "O edital deve ter sido afixado por ordem de funcionário público."
+        ],
+        "exemplo": "Arrancar edital afixado na porta do fórum.",
+        "prova": [
+          "Assertiva que aplica o art. 336 a qualquer cartaz particular erra: o edital deve ser afixado por ordem de funcionário público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337",
+      "unit_id": "0a838da5-fd4b-5f0d-a764-1c1d288b78f0",
+      "content_sha256": "a506d865a5fb7022a84e52eb856ace34dd35c2c623141bd1d36b71330f1604de",
+      "simples": "Subtração ou inutilização de livro ou documento: subtrair, ou inutilizar, total ou parcialmente, livro oficial, processo ou documento confiado à custódia de funcionário, em razão de ofício, ou de particular em serviço público. Pena: reclusão de dois a cinco anos, se o fato não constitui crime mais grave.",
+      "pontos": [
+        "Subtrair ou inutilizar livro oficial, processo ou documento sob custódia.",
+        "Custódia de funcionário ou de particular em serviço público.",
+        "Reclusão de dois a cinco anos.",
+        "Subsidiário."
+      ],
+      "atencao": [
+        "Diferença para o art. 314: lá, o agente tem a guarda em razão do cargo; aqui, o agente é terceiro que subtrai ou inutiliza."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 314"
+      ],
+      "exemplo": "Documento confiado a terceiro por função pública é inutilizado. Variação: Se o autor é guardião funcional, distinguir 314; posse,guarda e autoria precisam ser demonstradas.",
+      "prova": [
+        "Documento pode estar com particular prestando serviço público? Sim.",
+        "Mero extravio fortuito prova dolo? Não."
+      ],
+      "expected": {
+        "unit_id": "0a838da5-fd4b-5f0d-a764-1c1d288b78f0",
+        "content_sha256": "a506d865a5fb7022a84e52eb856ace34dd35c2c623141bd1d36b71330f1604de",
+        "simples": "Subtração ou inutilização de livro ou documento: subtrair, ou inutilizar, total ou parcialmente, livro oficial, processo ou documento confiado à custódia de funcionário, em razão de ofício, ou de particular em serviço público. Pena: reclusão de dois a cinco anos, se o fato não constitui crime mais grave.",
+        "pontos": [
+          "Subtrair ou inutilizar livro oficial, processo ou documento sob custódia.",
+          "Custódia de funcionário ou de particular em serviço público.",
+          "Reclusão de dois a cinco anos.",
+          "Subsidiário."
+        ],
+        "atencao": [
+          "Diferença para o art. 314: lá, o agente tem a guarda em razão do cargo; aqui, o agente é terceiro que subtrai ou inutiliza."
+        ],
+        "exemplo": "Particular subtrai processo que está sob custódia do cartório.",
+        "prova": [
+          "Assertiva que exige que o autor seja o próprio custodiante do documento erra: o art. 337 é crime comum."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 314"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-a",
+      "unit_id": "7153d155-4432-57ca-868e-29391f33f32c",
+      "content_sha256": "b1bcf0fe317c737f7f67d718dbd924496d737fd156ac098f750b70f8adf32380",
+      "simples": "Sonegação de contribuição previdenciária: suprimir ou reduzir contribuição social previdenciária e qualquer acessório, omitindo de folha de pagamento ou de documento de informações segurados que prestem serviços; deixando de lançar mensalmente na contabilidade as quantias descontadas dos segurados ou devidas pelo empregador; ou omitindo, total ou parcialmente, receitas, lucros, remunerações pagas ou demais fatos geradores. Pena: reclusão de 2 a 5 anos e multa. É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social antes do início da ação fiscal. É facultado ao juiz deixar de aplicar a pena ou aplicar somente a multa nas hipóteses previstas em lei.",
+      "pontos": [
+        "Supressão/redução previdenciária com conduta e dolo típicos;2 a 5 anos e multa.",
+        "§1º exige declaração,confissão e informações espontâneas antes da ação fiscal; confrontar§§5º/6º do contumaz.",
+        "§2º depende de primariedade,bons antecedentes e hipóteses legais; faculdade,não extinção automática.",
+        "§§3º/4º: limite histórico sujeito a reajuste,sem certificação de valor atual."
+      ],
+      "atencao": [
+        "A espontaneidade deve ser ANTES do início da ação fiscal.",
+        "Crime material: exige a supressão ou redução do tributo.",
+        "LC 225 publicada em 9/1/2026 introduz§§5º/6º para contumaz: não generalizar extinção. Regimes de pagamento/parcelamento dependem também de Lei 10.684 art.9 vigente; parcelamento não é pagamento integral. Valor histórico do§3º precisa de reajuste do§4º; não certificado limite nominal atual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 168-A"
+      ],
+      "exemplo": "Informação salarial é omitida e contribuição previdenciária é suprimida no recorte legal. Variação: Erro sem dolo ou sem resultado típico não basta; confissão espontânea antes da fiscalização tem requisitos próprios.",
+      "prova": [
+        "A extinção do§1º menciona pagamento como 168-A? Não; não copiar os textos.",
+        "R$1.510 é limite congelado para sempre? Não;§4º prevê reajuste."
+      ],
+      "expected": {
+        "unit_id": "7153d155-4432-57ca-868e-29391f33f32c",
+        "content_sha256": "b1bcf0fe317c737f7f67d718dbd924496d737fd156ac098f750b70f8adf32380",
+        "simples": "Sonegação de contribuição previdenciária: suprimir ou reduzir contribuição social previdenciária e qualquer acessório, omitindo de folha de pagamento ou de documento de informações segurados que prestem serviços; deixando de lançar mensalmente na contabilidade as quantias descontadas dos segurados ou devidas pelo empregador; ou omitindo, total ou parcialmente, receitas, lucros, remunerações pagas ou demais fatos geradores. Pena: reclusão de 2 a 5 anos e multa. É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social antes do início da ação fiscal. É facultado ao juiz deixar de aplicar a pena ou aplicar somente a multa nas hipóteses previstas em lei.",
+        "pontos": [
+          "Suprimir ou reduzir contribuição previdenciária mediante omissão em folha, contabilidade ou receitas.",
+          "Reclusão de 2 a 5 anos e multa.",
+          "§1º: declaração e confissão espontâneas antes da ação fiscal extinguem a punibilidade.",
+          "§2º: possibilidade de perdão judicial ou só multa."
+        ],
+        "atencao": [
+          "A espontaneidade deve ser ANTES do início da ação fiscal.",
+          "Crime material: exige a supressão ou redução do tributo."
+        ],
+        "exemplo": "Empresa omite empregados da folha para reduzir contribuição previdenciária.",
+        "prova": [
+          "Assertiva que extingue a punibilidade pela confissão depois do início da ação fiscal erra: deve ser antes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 168-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-b",
+      "unit_id": "6173f1d8-864c-5ce2-aa18-86fdb7edc5c9",
+      "content_sha256": "0f7ac8e9ee1545ab1c652af905ddfdff79e065cfb890ef944b15649fcece30eb",
+      "simples": "Corrupção ativa em transação comercial internacional: prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a funcionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar, omitir ou retardar ato de ofício relacionado à transação comercial internacional. Pena: reclusão de 1 a 8 anos e multa. A pena é aumentada de 1/3, se, em razão da vantagem ou promessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o pratica infringindo dever funcional.",
+      "pontos": [
+        "Prometer, oferecer ou dar vantagem indevida a funcionário público estrangeiro (ou a terceiro).",
+        "Fim relacionado a transação comercial internacional.",
+        "Reclusão de 1 a 8 anos e multa.",
+        "Parágrafo único: aumento de 1/3."
+      ],
+      "atencao": [
+        "Aqui o núcleo inclui DAR (diferente do art. 333)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 333",
+        "Art. 337-D"
+      ],
+      "exemplo": "Vantagem é dada a funcionário público estrangeiro para influenciar transação comercial internacional. Variação: Não copiar 333 excluindo dar; ato e transação internacional precisam ser identificados.",
+      "prova": [
+        "Dar está expressamente previsto? Sim.",
+        "Qualquer presente internacional prova crime sem finalidade típica? Não."
+      ],
+      "expected": {
+        "unit_id": "6173f1d8-864c-5ce2-aa18-86fdb7edc5c9",
+        "content_sha256": "0f7ac8e9ee1545ab1c652af905ddfdff79e065cfb890ef944b15649fcece30eb",
+        "simples": "Corrupção ativa em transação comercial internacional: prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a funcionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar, omitir ou retardar ato de ofício relacionado à transação comercial internacional. Pena: reclusão de 1 a 8 anos e multa. A pena é aumentada de 1/3, se, em razão da vantagem ou promessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o pratica infringindo dever funcional.",
+        "pontos": [
+          "Prometer, oferecer ou dar vantagem indevida a funcionário público estrangeiro (ou a terceiro).",
+          "Fim relacionado a transação comercial internacional.",
+          "Reclusão de 1 a 8 anos e multa.",
+          "Parágrafo único: aumento de 1/3."
+        ],
+        "atencao": [
+          "Aqui o núcleo inclui DAR (diferente do art. 333)."
+        ],
+        "exemplo": "Empresário oferece vantagem a funcionário estrangeiro para obter contrato internacional.",
+        "prova": [
+          "Assertiva que limita o art. 337-B a funcionário público nacional erra: o tipo trata de funcionário público estrangeiro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 333",
+          "Art. 337-D"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-c",
+      "unit_id": "bb5b35c5-4103-510e-bad4-769727e2f6b9",
+      "content_sha256": "b5d36ade051b1637f7fceccb3098f0d10bb3f5ce2adcc711fe7079dd650a04d9",
+      "simples": "Tráfico de influência em transação comercial internacional: solicitar, exigir, cobrar ou obter, para si ou para outrem, direta ou indiretamente, vantagem ou promessa de vantagem a pretexto de influir em ato praticado por funcionário público estrangeiro no exercício de suas funções, relacionado a transação comercial internacional. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada a funcionário estrangeiro.",
+      "pontos": [
+        "Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário estrangeiro.",
+        "Transação comercial internacional.",
+        "Reclusão de 2 a 5 anos e multa.",
+        "Parágrafo único: aumento da metade."
+      ],
+      "atencao": [
+        "Paralelo ao art. 332, com funcionário público estrangeiro."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 332",
+        "Art. 337-B"
+      ],
+      "exemplo": "Agente cobra vantagem a pretexto de influir em ato de funcionário estrangeiro em transação internacional. Variação: Vantagem também atribuída ao funcionário tem aumento próprio; corrupção efetiva exige distinguir 337-B.",
+      "prova": [
+        "A finalidade internacional importa? Sim.",
+        "Pena caput é igual à de 332? Não."
+      ],
+      "expected": {
+        "unit_id": "bb5b35c5-4103-510e-bad4-769727e2f6b9",
+        "content_sha256": "b5d36ade051b1637f7fceccb3098f0d10bb3f5ce2adcc711fe7079dd650a04d9",
+        "simples": "Tráfico de influência em transação comercial internacional: solicitar, exigir, cobrar ou obter, para si ou para outrem, direta ou indiretamente, vantagem ou promessa de vantagem a pretexto de influir em ato praticado por funcionário público estrangeiro no exercício de suas funções, relacionado a transação comercial internacional. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada a funcionário estrangeiro.",
+        "pontos": [
+          "Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário estrangeiro.",
+          "Transação comercial internacional.",
+          "Reclusão de 2 a 5 anos e multa.",
+          "Parágrafo único: aumento da metade."
+        ],
+        "atencao": [
+          "Paralelo ao art. 332, com funcionário público estrangeiro."
+        ],
+        "exemplo": "Pessoa cobra dinheiro dizendo influenciar funcionário estrangeiro em contrato internacional.",
+        "prova": [
+          "Assertiva que aplica o art. 337-C a ato de funcionário público nacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 332",
+          "Art. 337-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-d",
+      "unit_id": "0f251c27-5715-5114-b8b0-0aa86403f20c",
+      "content_sha256": "595fd766b95a485374da678160267b53c0500befd23dd41a320597127faced43",
+      "simples": "Funcionário público estrangeiro: considera-se funcionário público estrangeiro, para os efeitos penais, quem, ainda que transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública em entidades estatais ou em representações diplomáticas de país estrangeiro. Equipara-se a funcionário público estrangeiro quem exerce cargo, emprego ou função em empresas controladas, direta ou indiretamente, pelo Poder Público de país estrangeiro ou em organizações públicas internacionais.",
+      "pontos": [
+        "Conceito: quem exerce cargo, emprego ou função pública em entidades estatais ou representações diplomáticas de país estrangeiro.",
+        "Ainda que transitoriamente ou sem remuneração.",
+        "Equiparação: empresas controladas pelo Poder Público estrangeiro e organizações públicas internacionais."
+      ],
+      "atencao": [
+        "Estende-se a organizações públicas internacionais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 327",
+        "Art. 337-B"
+      ],
+      "exemplo": "Empregado de organismo público internacional exerce função incluída na equiparação. Variação: Empresa privada estrangeira comum não entra por nacionalidade isolada.",
+      "prova": [
+        "Função temporária ou gratuita pode contar? Sim.",
+        "Conceito dispensa os demais elementos do crime? Não."
+      ],
+      "expected": {
+        "unit_id": "0f251c27-5715-5114-b8b0-0aa86403f20c",
+        "content_sha256": "595fd766b95a485374da678160267b53c0500befd23dd41a320597127faced43",
+        "simples": "Funcionário público estrangeiro: considera-se funcionário público estrangeiro, para os efeitos penais, quem, ainda que transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública em entidades estatais ou em representações diplomáticas de país estrangeiro. Equipara-se a funcionário público estrangeiro quem exerce cargo, emprego ou função em empresas controladas, direta ou indiretamente, pelo Poder Público de país estrangeiro ou em organizações públicas internacionais.",
+        "pontos": [
+          "Conceito: quem exerce cargo, emprego ou função pública em entidades estatais ou representações diplomáticas de país estrangeiro.",
+          "Ainda que transitoriamente ou sem remuneração.",
+          "Equiparação: empresas controladas pelo Poder Público estrangeiro e organizações públicas internacionais."
+        ],
+        "atencao": [
+          "Estende-se a organizações públicas internacionais."
+        ],
+        "exemplo": "Empregado de empresa controlada pelo governo de outro país.",
+        "prova": [
+          "Assertiva que exclui organizações públicas internacionais do conceito erra: são equiparadas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 327",
+          "Art. 337-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-e",
+      "unit_id": "fd0c293a-156c-57c3-a0d3-9faaa037d77b",
+      "content_sha256": "ef6bdda174a9fb9f9c6ff1f8592158f006174391b87a9460ee60ff44970719a5",
+      "simples": "Contratação direta ilegal: admitir, possibilitar ou dar causa à contratação direta fora das hipóteses previstas em lei. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": [
+        "Admitir, possibilitar ou dar causa à contratação direta fora das hipóteses legais.",
+        "Reclusão de 4 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Incluído pela Lei nº 14.133, de 2021 (nova Lei de Licitações).",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-F"
+      ],
+      "exemplo": "Contratação direta é autorizada fora das hipóteses legais com elementos do tipo. Variação: Dispensa/inexigibilidade válida não é crime pelo simples uso de contratação direta.",
+      "prova": [
+        "Pena atual é 4 a 8 e multa? Sim.",
+        "Todo vício administrativo implica condenação automática? Não."
+      ],
+      "expected": {
+        "unit_id": "fd0c293a-156c-57c3-a0d3-9faaa037d77b",
+        "content_sha256": "ef6bdda174a9fb9f9c6ff1f8592158f006174391b87a9460ee60ff44970719a5",
+        "simples": "Contratação direta ilegal: admitir, possibilitar ou dar causa à contratação direta fora das hipóteses previstas em lei. Pena: reclusão de 4 a 8 anos e multa.",
+        "pontos": [
+          "Admitir, possibilitar ou dar causa à contratação direta fora das hipóteses legais.",
+          "Reclusão de 4 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 14.133, de 2021 (nova Lei de Licitações)."
+        ],
+        "exemplo": "Gestor contrata diretamente, sem licitação, fora das hipóteses de dispensa ou inexigibilidade previstas em lei.",
+        "prova": [
+          "Assertiva que fixa pena de detenção no art. 337-E erra: é reclusão de 4 a 8 anos e multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-f",
+      "unit_id": "c957b6e8-f203-577c-8852-5993b9683cbe",
+      "content_sha256": "f39021c70947d5e4b101b6107e5ec3d1d2d6b9ddf3e4e0a883ee3708487c08d5",
+      "simples": "Frustração do caráter competitivo de licitação: frustrar ou fraudar, com o intuito de obter para si ou para outrem vantagem decorrente da adjudicação do objeto da licitação, o caráter competitivo do processo licitatório. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": [
+        "Frustrar ou fraudar o caráter competitivo do processo licitatório.",
+        "Intuito de obter vantagem decorrente da adjudicação do objeto.",
+        "Reclusão de 4 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Exige dolo específico: vantagem decorrente da adjudicação.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 335",
+        "Art. 337-E"
+      ],
+      "exemplo": "Ajuste frustra competição visando vantagem decorrente da adjudicação. Variação: Impugnação regular de edital ou disputa legítima não constitui fraude por si.",
+      "prova": [
+        "Finalidade de vantagem importa? Sim.",
+        "É só infração sem finalidade específica? Não; verificar tipo e prova."
+      ],
+      "expected": {
+        "unit_id": "c957b6e8-f203-577c-8852-5993b9683cbe",
+        "content_sha256": "f39021c70947d5e4b101b6107e5ec3d1d2d6b9ddf3e4e0a883ee3708487c08d5",
+        "simples": "Frustração do caráter competitivo de licitação: frustrar ou fraudar, com o intuito de obter para si ou para outrem vantagem decorrente da adjudicação do objeto da licitação, o caráter competitivo do processo licitatório. Pena: reclusão de 4 a 8 anos e multa.",
+        "pontos": [
+          "Frustrar ou fraudar o caráter competitivo do processo licitatório.",
+          "Intuito de obter vantagem decorrente da adjudicação do objeto.",
+          "Reclusão de 4 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Exige dolo específico: vantagem decorrente da adjudicação."
+        ],
+        "exemplo": "Combinar com concorrentes os preços das propostas para fraudar a competição.",
+        "prova": [
+          "Assertiva que dispensa o intuito de obter vantagem no art. 337-F erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 335",
+          "Art. 337-E"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-g",
+      "unit_id": "7974adaa-cb01-5e29-a9a8-0c26afc8e169",
+      "content_sha256": "63b4ecc1e6db1fec442de2dcbbfb4422025caa41a08cb9afe41b03909d6f77ba",
+      "simples": "Patrocínio de contratação indevida: patrocinar, direta ou indiretamente, interesse privado perante a Administração Pública, dando causa à instauração de licitação ou à celebração de contrato cuja invalidação vier a ser decretada pelo Poder Judiciário. Pena: reclusão de 6 meses a 3 anos e multa.",
+      "pontos": [
+        "Patrocinar interesse privado perante a Administração.",
+        "Dar causa à instauração de licitação ou à celebração de contrato.",
+        "Invalidação decretada pelo Poder Judiciário.",
+        "Reclusão de 6 meses a 3 anos e multa."
+      ],
+      "atencao": [
+        "Exige a INVALIDAÇÃO judicial da licitação ou do contrato.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 321"
+      ],
+      "exemplo": "Patrocínio de interesse privado dá causa a contrato cuja invalidação é decretada judicialmente. Variação: A invalidação judicial é elemento expresso; não substituí-la por mera discordância administrativa.",
+      "prova": [
+        "Tipo menciona invalidação judicial? Sim.",
+        "Qualquer consulta privada sem esse encadeamento basta? Não."
+      ],
+      "expected": {
+        "unit_id": "7974adaa-cb01-5e29-a9a8-0c26afc8e169",
+        "content_sha256": "63b4ecc1e6db1fec442de2dcbbfb4422025caa41a08cb9afe41b03909d6f77ba",
+        "simples": "Patrocínio de contratação indevida: patrocinar, direta ou indiretamente, interesse privado perante a Administração Pública, dando causa à instauração de licitação ou à celebração de contrato cuja invalidação vier a ser decretada pelo Poder Judiciário. Pena: reclusão de 6 meses a 3 anos e multa.",
+        "pontos": [
+          "Patrocinar interesse privado perante a Administração.",
+          "Dar causa à instauração de licitação ou à celebração de contrato.",
+          "Invalidação decretada pelo Poder Judiciário.",
+          "Reclusão de 6 meses a 3 anos e multa."
+        ],
+        "atencao": [
+          "Exige a INVALIDAÇÃO judicial da licitação ou do contrato."
+        ],
+        "exemplo": "Agente patrocina contrato que depois é anulado pelo Judiciário.",
+        "prova": [
+          "Assertiva que dispensa a invalidação pelo Poder Judiciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 321"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-h",
+      "unit_id": "6617d840-9bab-5bf3-9d6f-b73bdbfbd481",
+      "content_sha256": "3a25b2fa8be176585a1d91f89e72c4ef2c6d1417986f1aa6ceb372e4456237b6",
+      "simples": "Modificação ou pagamento irregular em contrato administrativo: admitir, possibilitar ou dar causa a qualquer modificação ou vantagem, inclusive prorrogação contratual, em favor do contratado, durante a execução dos contratos celebrados com a Administração Pública, sem autorização em lei, no edital da licitação ou nos respectivos instrumentos contratuais, ou, ainda, pagar fatura com preterição da ordem cronológica de sua exigibilidade. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": [
+        "Admitir ou dar causa a modificação ou vantagem em favor do contratado, inclusive prorrogação.",
+        "Sem autorização em lei, no edital ou no contrato.",
+        "Ou pagar fatura com preterição da ordem cronológica.",
+        "Reclusão de 4 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Modificação/prorrogação sem autorização e preterição típica de pagamento têm requisitos próprios. Irregularidade administrativa não prova automaticamente dolo.",
+        "Lei 14.133 art.141 prevê exceções legais motivadas à ordem cronológica; não dizer que todo pagamento fora da sequência é crime.",
+        "Distinguir transição administrativa e entrada em vigor penal; sem retroatividade gravosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-E",
+        "Art. 337-I"
+      ],
+      "exemplo": "Modificação contratual vantajosa não autorizada é admitida durante execução. Variação: Exceção legal motivada à ordem cronológica de pagamento precisa ser distinguida de preterição típica.",
+      "prova": [
+        "Prorrogação irregular está abrangida? Sim.",
+        "Qualquer pagamento fora da sequência é automaticamente crime? Não; conferir autorização legal e elementos."
+      ],
+      "expected": {
+        "unit_id": "6617d840-9bab-5bf3-9d6f-b73bdbfbd481",
+        "content_sha256": "3a25b2fa8be176585a1d91f89e72c4ef2c6d1417986f1aa6ceb372e4456237b6",
+        "simples": "Modificação ou pagamento irregular em contrato administrativo: admitir, possibilitar ou dar causa a qualquer modificação ou vantagem, inclusive prorrogação contratual, em favor do contratado, durante a execução dos contratos celebrados com a Administração Pública, sem autorização em lei, no edital da licitação ou nos respectivos instrumentos contratuais, ou, ainda, pagar fatura com preterição da ordem cronológica de sua exigibilidade. Pena: reclusão de 4 a 8 anos e multa.",
+        "pontos": [
+          "Admitir ou dar causa a modificação ou vantagem em favor do contratado, inclusive prorrogação.",
+          "Sem autorização em lei, no edital ou no contrato.",
+          "Ou pagar fatura com preterição da ordem cronológica.",
+          "Reclusão de 4 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Pagamento fora da ordem cronológica também é crime."
+        ],
+        "exemplo": "Administrador prorroga contrato sem previsão legal, no edital ou no instrumento.",
+        "prova": [
+          "Assertiva que exclui o pagamento fora da ordem cronológica do art. 337-H erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-E",
+          "Art. 337-I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-i",
+      "unit_id": "c865d0f7-e57c-59ac-b958-42629703b970",
+      "content_sha256": "be12cb31a20268ef822c361ed24fe8fce2788c24aa71f0a14e653b8579f5d970",
+      "simples": "Perturbação de processo licitatório: impedir, perturbar ou fraudar a realização de qualquer ato de processo licitatório. Pena: detenção de 6 meses a 3 anos e multa.",
+      "pontos": [
+        "Impedir, perturbar ou fraudar a realização de qualquer ato do processo licitatório.",
+        "Detenção de 6 meses a 3 anos e multa."
+      ],
+      "atencao": [
+        "Abrange QUALQUER ato do processo licitatório.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 335",
+        "Art. 337-F"
+      ],
+      "exemplo": "Fraude perturba realização de ato do procedimento licitatório. Variação: Recurso administrativo regular não se torna crime por atrasar cronograma.",
+      "prova": [
+        "Fraudar é uma das condutas? Sim.",
+        "Todo atraso de certame prova dolo típico? Não."
+      ],
+      "expected": {
+        "unit_id": "c865d0f7-e57c-59ac-b958-42629703b970",
+        "content_sha256": "be12cb31a20268ef822c361ed24fe8fce2788c24aa71f0a14e653b8579f5d970",
+        "simples": "Perturbação de processo licitatório: impedir, perturbar ou fraudar a realização de qualquer ato de processo licitatório. Pena: detenção de 6 meses a 3 anos e multa.",
+        "pontos": [
+          "Impedir, perturbar ou fraudar a realização de qualquer ato do processo licitatório.",
+          "Detenção de 6 meses a 3 anos e multa."
+        ],
+        "atencao": [
+          "Abrange QUALQUER ato do processo licitatório."
+        ],
+        "exemplo": "Tumultuar a sessão pública da licitação para impedir a abertura das propostas.",
+        "prova": [
+          "Assertiva que restringe o art. 337-I à fase de julgamento das propostas erra: abrange qualquer ato do processo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 335",
+          "Art. 337-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-j",
+      "unit_id": "397f6f65-0795-5521-8a23-dcbaff130e25",
+      "content_sha256": "6500369da8c017d0a34867a47c1f01d47b17f9276487a4acbc428d3e6a8dc2a2",
+      "simples": "Violação de sigilo em licitação: devassar o sigilo de proposta apresentada em processo licitatório ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de 2 anos a 3 anos e multa.",
+      "pontos": [
+        "Devassar o sigilo de proposta apresentada em processo licitatório.",
+        "Ou proporcionar a terceiro o ensejo de devassá-lo.",
+        "Detenção de 2 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Pena maior que a do art. 326, que tratava da concorrência pública.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 326"
+      ],
+      "exemplo": "Conteúdo de proposta sigilosa é entregue a terceiro nas condições típicas atuais. Variação: Proposta legalmente pública não satisfaz sigilo por presunção; comparar 326 residual.",
+      "prova": [
+        "Pena atual é detenção 2 a 3 e multa? Sim.",
+        "Pode ensinar universalmente a faixa antiga de 326? Não."
+      ],
+      "expected": {
+        "unit_id": "397f6f65-0795-5521-8a23-dcbaff130e25",
+        "content_sha256": "6500369da8c017d0a34867a47c1f01d47b17f9276487a4acbc428d3e6a8dc2a2",
+        "simples": "Violação de sigilo em licitação: devassar o sigilo de proposta apresentada em processo licitatório ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de 2 anos a 3 anos e multa.",
+        "pontos": [
+          "Devassar o sigilo de proposta apresentada em processo licitatório.",
+          "Ou proporcionar a terceiro o ensejo de devassá-lo.",
+          "Detenção de 2 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Pena maior que a do art. 326, que tratava da concorrência pública."
+        ],
+        "exemplo": "Revelar a um concorrente o valor da proposta de outro licitante.",
+        "prova": [
+          "Assertiva que aplica ao art. 337-J a pena de três meses a um ano erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 326"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-k",
+      "unit_id": "0d8e52d6-e9b9-57ce-9fbb-a055aa511181",
+      "content_sha256": "779aa30e352862863c18be3f8563a3c4921bb8359d60bda3443e3ba6bc0a4bbf",
+      "simples": "Afastamento de licitante: afastar ou tentar afastar licitante por meio de violência, grave ameaça, fraude ou oferecimento de vantagem de qualquer tipo. Pena: reclusão de 3 a 5 anos e multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém ou desiste de licitar em razão de vantagem oferecida.",
+      "pontos": [
+        "Afastar ou tentar afastar licitante por violência, grave ameaça, fraude ou vantagem.",
+        "Reclusão de 3 a 5 anos e multa, além da pena da violência.",
+        "Parágrafo único: quem se abstém ou desiste de licitar em razão da vantagem."
+      ],
+      "atencao": [
+        "Pune também a TENTATIVA de afastar (crime de atentado).",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 335"
+      ],
+      "exemplo": "Vantagem é oferecida para afastar licitante. Variação: A lei equipara quem se abstém/desiste em razão da vantagem; tentativa de afastar está expressa.",
+      "prova": [
+        "Violência ou grave ameaça também são meios previstos? Sim.",
+        "Tentar afastar fica sempre fora do caput? Não."
+      ],
+      "expected": {
+        "unit_id": "0d8e52d6-e9b9-57ce-9fbb-a055aa511181",
+        "content_sha256": "779aa30e352862863c18be3f8563a3c4921bb8359d60bda3443e3ba6bc0a4bbf",
+        "simples": "Afastamento de licitante: afastar ou tentar afastar licitante por meio de violência, grave ameaça, fraude ou oferecimento de vantagem de qualquer tipo. Pena: reclusão de 3 a 5 anos e multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém ou desiste de licitar em razão de vantagem oferecida.",
+        "pontos": [
+          "Afastar ou tentar afastar licitante por violência, grave ameaça, fraude ou vantagem.",
+          "Reclusão de 3 a 5 anos e multa, além da pena da violência.",
+          "Parágrafo único: quem se abstém ou desiste de licitar em razão da vantagem."
+        ],
+        "atencao": [
+          "Pune também a TENTATIVA de afastar (crime de atentado)."
+        ],
+        "exemplo": "Pagar a um concorrente para que desista da licitação.",
+        "prova": [
+          "Assertiva que isenta quem desiste de licitar em razão da vantagem oferecida erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 335"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-l",
+      "unit_id": "83d187e4-25ef-5317-a4f2-93f0ac285653",
+      "content_sha256": "0103bb5bc495f35175e79cdcced6356859b80d9e4a317202ee8ff242bc2c9497",
+      "simples": "Fraude em licitação ou contrato: fraudar, em prejuízo da Administração Pública, licitação ou contrato dela decorrente, mediante entrega de mercadoria ou prestação de serviços com qualidade ou quantidade diversas das previstas no edital ou nos instrumentos contratuais; fornecimento, como verdadeira ou perfeita, de mercadoria falsificada, deteriorada, inservível para consumo ou com prazo de validade vencido; entrega de uma mercadoria por outra; alteração da substância, qualidade ou quantidade da mercadoria ou do serviço fornecido; ou qualquer meio fraudulento que torne injustamente mais onerosa para a Administração a proposta ou a execução do contrato. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": [
+        "Fraudar licitação ou contrato, em prejuízo da Administração.",
+        "Cinco modalidades (qualidade ou quantidade diversas; mercadoria falsificada ou vencida; entrega de uma por outra; alteração; meio fraudulento que encareça).",
+        "Reclusão de 4 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Exige PREJUÍZO à Administração Pública.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-F"
+      ],
+      "exemplo": "Mercadoria vencida é entregue como perfeita causando prejuízo à Administração. Variação: Diferença contratual sem fraude e prejuízo comprovados não satisfaz automaticamente o tipo.",
+      "prova": [
+        "Serviço em quantidade diversa pode integrar incisoI? Sim.",
+        "Prejuízo é irrelevante? Não; é elemento expresso."
+      ],
+      "expected": {
+        "unit_id": "83d187e4-25ef-5317-a4f2-93f0ac285653",
+        "content_sha256": "0103bb5bc495f35175e79cdcced6356859b80d9e4a317202ee8ff242bc2c9497",
+        "simples": "Fraude em licitação ou contrato: fraudar, em prejuízo da Administração Pública, licitação ou contrato dela decorrente, mediante entrega de mercadoria ou prestação de serviços com qualidade ou quantidade diversas das previstas no edital ou nos instrumentos contratuais; fornecimento, como verdadeira ou perfeita, de mercadoria falsificada, deteriorada, inservível para consumo ou com prazo de validade vencido; entrega de uma mercadoria por outra; alteração da substância, qualidade ou quantidade da mercadoria ou do serviço fornecido; ou qualquer meio fraudulento que torne injustamente mais onerosa para a Administração a proposta ou a execução do contrato. Pena: reclusão de 4 a 8 anos e multa.",
+        "pontos": [
+          "Fraudar licitação ou contrato, em prejuízo da Administração.",
+          "Cinco modalidades (qualidade ou quantidade diversas; mercadoria falsificada ou vencida; entrega de uma por outra; alteração; meio fraudulento que encareça).",
+          "Reclusão de 4 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Exige PREJUÍZO à Administração Pública."
+        ],
+        "exemplo": "Entregar produto diferente do especificado no contrato.",
+        "prova": [
+          "Assertiva que dispensa o prejuízo à Administração no art. 337-L erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-m",
+      "unit_id": "ebbb4be9-862e-5ba0-a042-861f813bd16d",
+      "content_sha256": "e4c5d01b082ed0de7bb7bb88caaf3b3ea8b974ec3736d18e3ff229b0e2a9f3b2",
+      "simples": "Contratação inidônea: admitir à licitação empresa ou profissional declarado inidôneo. Pena: reclusão de 1 a 3 anos e multa. Celebrar contrato com empresa ou profissional declarado inidôneo: reclusão de 3 a 6 anos e multa. Incide na pena do caput aquele que, declarado inidôneo, venha a participar de licitação, e na pena do §1º aquele que, declarado inidôneo, venha a contratar com a Administração Pública.",
+      "pontos": [
+        "Caput: admitir à licitação empresa ou profissional declarado inidôneo (1 a 3 anos).",
+        "§1º: celebrar contrato com inidôneo (3 a 6 anos).",
+        "§2º: o próprio inidôneo que participa de licitação ou contrata."
+      ],
+      "atencao": [
+        "O §2º alcança também o próprio declarado inidôneo.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-E"
+      ],
+      "exemplo": "Empresa declarada inidônea é admitida em licitação. Variação: Celebrar contrato com ela tem pena distinta e mais alta; também alcança o próprio inidôneo.",
+      "prova": [
+        "Participar e contratar têm a mesma faixa? Não.",
+        "Toda restrição cadastral equivale a declaração de inidoneidade? Não; conferir regime e validade."
+      ],
+      "expected": {
+        "unit_id": "ebbb4be9-862e-5ba0-a042-861f813bd16d",
+        "content_sha256": "e4c5d01b082ed0de7bb7bb88caaf3b3ea8b974ec3736d18e3ff229b0e2a9f3b2",
+        "simples": "Contratação inidônea: admitir à licitação empresa ou profissional declarado inidôneo. Pena: reclusão de 1 a 3 anos e multa. Celebrar contrato com empresa ou profissional declarado inidôneo: reclusão de 3 a 6 anos e multa. Incide na pena do caput aquele que, declarado inidôneo, venha a participar de licitação, e na pena do §1º aquele que, declarado inidôneo, venha a contratar com a Administração Pública.",
+        "pontos": [
+          "Caput: admitir à licitação empresa ou profissional declarado inidôneo (1 a 3 anos).",
+          "§1º: celebrar contrato com inidôneo (3 a 6 anos).",
+          "§2º: o próprio inidôneo que participa de licitação ou contrata."
+        ],
+        "atencao": [
+          "O §2º alcança também o próprio declarado inidôneo."
+        ],
+        "exemplo": "Empresa declarada inidônea participa de nova licitação.",
+        "prova": [
+          "Assertiva que pune só o agente público no art. 337-M erra: o §2º alcança o declarado inidôneo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-E"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-n",
+      "unit_id": "d49fab30-5fd9-5d32-99f1-5c43b0ec5747",
+      "content_sha256": "f78a822be812a7dae9e90346a7806bb386ddceacca59c6bb6e7d5ef16b221dee",
+      "simples": "Impedimento indevido: obstar, impedir ou dificultar injustamente a inscrição de qualquer interessado nos registros cadastrais ou promover indevidamente a alteração, a suspensão ou o cancelamento de registro do inscrito. Pena: reclusão de 6 meses a 2 anos e multa.",
+      "pontos": [
+        "Obstar, impedir ou dificultar injustamente a inscrição em registros cadastrais.",
+        "Ou promover indevidamente alteração, suspensão ou cancelamento de registro.",
+        "Reclusão de 6 meses a 2 anos e multa."
+      ],
+      "atencao": [
+        "Exige que o ato seja injusto ou indevido.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-M"
+      ],
+      "exemplo": "Inscrição cadastral é injustamente bloqueada para interessado. Variação: Recusa regular e motivada por requisito legal não equivale a impedimento indevido.",
+      "prova": [
+        "Cancelamento indevido também entra? Sim.",
+        "Toda negativa cadastral basta sem injustiça/indevido? Não."
+      ],
+      "expected": {
+        "unit_id": "d49fab30-5fd9-5d32-99f1-5c43b0ec5747",
+        "content_sha256": "f78a822be812a7dae9e90346a7806bb386ddceacca59c6bb6e7d5ef16b221dee",
+        "simples": "Impedimento indevido: obstar, impedir ou dificultar injustamente a inscrição de qualquer interessado nos registros cadastrais ou promover indevidamente a alteração, a suspensão ou o cancelamento de registro do inscrito. Pena: reclusão de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Obstar, impedir ou dificultar injustamente a inscrição em registros cadastrais.",
+          "Ou promover indevidamente alteração, suspensão ou cancelamento de registro.",
+          "Reclusão de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Exige que o ato seja injusto ou indevido."
+        ],
+        "exemplo": "Servidor cancela, sem motivo legal, o registro cadastral de um fornecedor.",
+        "prova": [
+          "Assertiva que pune qualquer recusa de inscrição, ainda que justa, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-M"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-o",
+      "unit_id": "bf5c03a8-8d44-5bf1-887d-d35fe4e3f5fb",
+      "content_sha256": "223d52d6153b3749f3fbebcdd595e75710c982b04abe573010473f72afcbc0c4",
+      "simples": "Omissão grave de dado ou de informação por projetista: omitir, modificar ou entregar à Administração Pública levantamento cadastral ou condição de contorno em relevante dissonância com a realidade, em frustração ao caráter competitivo da licitação ou em detrimento da seleção da proposta mais vantajosa, em contratação para a elaboração de projeto básico, projeto executivo ou anteprojeto, em diálogo competitivo ou em procedimento de manifestação de interesse. Pena: reclusão de 6 meses a 3 anos e multa. Condição de contorno: informações e levantamentos suficientes e necessários para a definição da solução de projeto e dos preços pelo licitante, incluídos sondagens, topografia, estudos de demanda e condições ambientais. Se o crime é praticado com o fim de obter benefício, direto ou indireto, próprio ou de outrem, aplica-se em dobro a pena do caput.",
+      "pontos": [
+        "Omitir, modificar ou entregar levantamento cadastral ou condição de contorno em relevante dissonância com a realidade.",
+        "Em contratação de projeto básico, executivo ou anteprojeto, diálogo competitivo ou manifestação de interesse.",
+        "Reclusão de 6 meses a 3 anos e multa.",
+        "§1º: conceito de condição de contorno.",
+        "§2º: fim de benefício próprio ou alheio: pena em dobro."
+      ],
+      "atencao": [
+        "A dissonância com a realidade deve ser RELEVANTE.",
+        "O fim de benefício dobra a pena.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-F"
+      ],
+      "exemplo": "Projetista omite sondagem relevante e frustra seleção de proposta vantajosa nas condições legais. Variação: Divergência técnica sem relevante dissonância e demais elementos não basta.",
+      "prova": [
+        "Fim de benefício próprio/alheio dobra a pena? Sim;§2º.",
+        "Só plantas arquitetônicas integram condição de contorno? Não; inclui outros levantamentos legais."
+      ],
+      "expected": {
+        "unit_id": "bf5c03a8-8d44-5bf1-887d-d35fe4e3f5fb",
+        "content_sha256": "223d52d6153b3749f3fbebcdd595e75710c982b04abe573010473f72afcbc0c4",
+        "simples": "Omissão grave de dado ou de informação por projetista: omitir, modificar ou entregar à Administração Pública levantamento cadastral ou condição de contorno em relevante dissonância com a realidade, em frustração ao caráter competitivo da licitação ou em detrimento da seleção da proposta mais vantajosa, em contratação para a elaboração de projeto básico, projeto executivo ou anteprojeto, em diálogo competitivo ou em procedimento de manifestação de interesse. Pena: reclusão de 6 meses a 3 anos e multa. Condição de contorno: informações e levantamentos suficientes e necessários para a definição da solução de projeto e dos preços pelo licitante, incluídos sondagens, topografia, estudos de demanda e condições ambientais. Se o crime é praticado com o fim de obter benefício, direto ou indireto, próprio ou de outrem, aplica-se em dobro a pena do caput.",
+        "pontos": [
+          "Omitir, modificar ou entregar levantamento cadastral ou condição de contorno em relevante dissonância com a realidade.",
+          "Em contratação de projeto básico, executivo ou anteprojeto, diálogo competitivo ou manifestação de interesse.",
+          "Reclusão de 6 meses a 3 anos e multa.",
+          "§1º: conceito de condição de contorno.",
+          "§2º: fim de benefício próprio ou alheio: pena em dobro."
+        ],
+        "atencao": [
+          "A dissonância com a realidade deve ser RELEVANTE.",
+          "O fim de benefício dobra a pena."
+        ],
+        "exemplo": "Projetista entrega levantamento topográfico muito diferente da realidade, frustrando a competição.",
+        "prova": [
+          "Assertiva que fixa a pena em dobro para qualquer caso do art. 337-O erra: o dobro depende do fim de benefício."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337-p",
+      "unit_id": "27dc88c4-5d33-5dfd-bd65-2b00e2dca558",
+      "content_sha256": "1f77593183293beed3acfd02d598dd9d4e462f52f6a0688255ab2a46e119a6aa",
+      "simples": "Multa nos crimes contra licitações e contratos: a pena de multa cominada aos crimes previstos neste Capítulo seguirá a metodologia de cálculo prevista neste Código e não poderá ser inferior a 2% do valor do contrato licitado ou celebrado com contratação direta.",
+      "pontos": [
+        "Multa segue a metodologia de cálculo do Código Penal.",
+        "Piso: não inferior a 2% do valor do contrato licitado ou celebrado por contratação direta."
+      ],
+      "atencao": [
+        "O piso é de 2% do valor do contrato.",
+        "Lei 14.133/2021 inseriu tipos penais; distinguir entrada em vigor penal da transição administrativa dos regimes de contratação. Não retroagir pena mais grave; irregularidade administrativa não prova automaticamente dolo e demais elementos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 337-E",
+        "Art. 49"
+      ],
+      "exemplo": "Multa dos crimes do capítulo respeita metodologia do CP e piso vinculado ao contrato. Variação: Não aplicar esse percentual como piso universal a todo crime do Código.",
+      "prova": [
+        "Piso é 2%? Sim.",
+        "Contratação direta também é base expressa? Sim."
+      ],
+      "expected": {
+        "unit_id": "27dc88c4-5d33-5dfd-bd65-2b00e2dca558",
+        "content_sha256": "1f77593183293beed3acfd02d598dd9d4e462f52f6a0688255ab2a46e119a6aa",
+        "simples": "Multa nos crimes contra licitações e contratos: a pena de multa cominada aos crimes previstos neste Capítulo seguirá a metodologia de cálculo prevista neste Código e não poderá ser inferior a 2% do valor do contrato licitado ou celebrado com contratação direta.",
+        "pontos": [
+          "Multa segue a metodologia de cálculo do Código Penal.",
+          "Piso: não inferior a 2% do valor do contrato licitado ou celebrado por contratação direta."
+        ],
+        "atencao": [
+          "O piso é de 2% do valor do contrato."
+        ],
+        "exemplo": "Em fraude a contrato de valor elevado, a multa não pode ficar abaixo de 2% do contrato.",
+        "prova": [
+          "Assertiva que fixa o piso da multa em 5% do contrato erra: é de 2%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337-E",
+          "Art. 49"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-338",
+      "unit_id": "23205033-33d9-557f-b836-bd7d58ee5bde",
+      "content_sha256": "db45a568956c68218d5171c0dbaff70fe1c7e80a55457dd7707bf2ec46c94189",
+      "simples": "Reingresso de estrangeiro expulso: reingressar no território nacional o estrangeiro que dele foi expulso. Pena: reclusão de um a quatro anos, sem prejuízo de nova expulsão após o cumprimento da pena.",
+      "pontos": [
+        "Estrangeiro expulso reingressa no território nacional.",
+        "Reclusão de um a quatro anos.",
+        "Sem prejuízo de nova expulsão após cumprir a pena."
+      ],
+      "atencao": [
+        "Crime próprio de estrangeiro que foi expulso.",
+        "Expulsão,deportação e impedimento não se confundem. Confrontar Lei de Migração e validade/efeitos da medida; não presumir crime por nacionalidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 232-A"
+      ],
+      "exemplo": "Estrangeiro reingressa após expulsão válida nos pressupostos penais. Variação: Não confundir expulsão com deportação ou impedimento temporário; direito migratório atual e validade da medida importam.",
+      "prova": [
+        "Qualquer retorno de estrangeiro é 338? Não.",
+        "Mera nacionalidade prova o elemento expulsão? Não."
+      ],
+      "expected": {
+        "unit_id": "23205033-33d9-557f-b836-bd7d58ee5bde",
+        "content_sha256": "db45a568956c68218d5171c0dbaff70fe1c7e80a55457dd7707bf2ec46c94189",
+        "simples": "Reingresso de estrangeiro expulso: reingressar no território nacional o estrangeiro que dele foi expulso. Pena: reclusão de um a quatro anos, sem prejuízo de nova expulsão após o cumprimento da pena.",
+        "pontos": [
+          "Estrangeiro expulso reingressa no território nacional.",
+          "Reclusão de um a quatro anos.",
+          "Sem prejuízo de nova expulsão após cumprir a pena."
+        ],
+        "atencao": [
+          "Crime próprio de estrangeiro que foi expulso."
+        ],
+        "exemplo": "Estrangeiro expulso volta ao Brasil clandestinamente.",
+        "prova": [
+          "Assertiva que aplica o art. 338 a estrangeiro apenas deportado erra: o tipo fala em expulso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 232-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-338-a",
+      "unit_id": "ab33af8b-7772-56e3-9310-590cb69bbce1",
+      "content_sha256": "52e12e70406eead620aa0656393fbeaf05110eb3e3dd836a74bbdc3c69083966",
+      "simples": "Descumprimento de medidas protetivas de urgência: descumprir decisão judicial que defere medidas protetivas de urgência. Pena: reclusão de 2 a 5 anos e multa. A configuração do crime independe da competência civil ou criminal do juiz que deferiu as medidas. Na prisão em flagrante, apenas a autoridade judicial pode conceder fiança. O disposto não exclui a aplicação de outras sanções cabíveis.",
+      "pontos": [
+        "Descumprir decisão judicial que defere medidas protetivas de urgência.",
+        "Reclusão de 2 a 5 anos e multa.",
+        "§1º: independe da competência civil ou criminal do juiz.",
+        "§2º: em flagrante, só a autoridade judicial concede fiança.",
+        "§3º: não exclui outras sanções."
+      ],
+      "atencao": [
+        "A fiança no flagrante só pode ser concedida pelo JUIZ, não pelo delegado.",
+        "Incluído por Lei 15.280 publicada/vigente em 8/12/2025. Verificar âmbito da medida e especialidade de tipos próprios de outras leis; não copiar automaticamente regras da Maria da Penha ou Henry Borel."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Lei nº 11.340, de 2006"
+      ],
+      "exemplo": "Decisão judicial de medida protetiva aplicável é conscientemente descumprida. Variação: Maria da Penha e Henry Borel possuem tipos próprios; não copiar indistintamente penas ou regras de fiança.",
+      "prova": [
+        "Competência civil/criminal do juiz é indiferente no§1º? Sim.",
+        "Delegado concede fiança no flagrante deste tipo? Não; apenas autoridade judicial."
+      ],
+      "expected": {
+        "unit_id": "ab33af8b-7772-56e3-9310-590cb69bbce1",
+        "content_sha256": "52e12e70406eead620aa0656393fbeaf05110eb3e3dd836a74bbdc3c69083966",
+        "simples": "Descumprimento de medidas protetivas de urgência: descumprir decisão judicial que defere medidas protetivas de urgência. Pena: reclusão de 2 a 5 anos e multa. A configuração do crime independe da competência civil ou criminal do juiz que deferiu as medidas. Na prisão em flagrante, apenas a autoridade judicial pode conceder fiança. O disposto não exclui a aplicação de outras sanções cabíveis.",
+        "pontos": [
+          "Descumprir decisão judicial que defere medidas protetivas de urgência.",
+          "Reclusão de 2 a 5 anos e multa.",
+          "§1º: independe da competência civil ou criminal do juiz.",
+          "§2º: em flagrante, só a autoridade judicial concede fiança.",
+          "§3º: não exclui outras sanções."
+        ],
+        "atencao": [
+          "A fiança no flagrante só pode ser concedida pelo JUIZ, não pelo delegado."
+        ],
+        "exemplo": "Agressor descumpre decisão que o proíbe de se aproximar da vítima.",
+        "prova": [
+          "Assertiva que permite ao delegado conceder fiança no art. 338-A erra: apenas a autoridade judicial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei nº 11.340, de 2006"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-339",
+      "unit_id": "f93cc9b7-f8c3-5610-b890-a9b382f5ae16",
+      "content_sha256": "eed74b242310d4b0c8fedfeab0eb92692a017018912ad27fd16dfc90b9b94591",
+      "simples": "Denunciação caluniosa: dar causa à instauração de inquérito policial, de procedimento investigatório criminal, de processo judicial, de processo administrativo disciplinar, de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo de que o sabe inocente. Pena: reclusão de dois a oito anos e multa. A pena é aumentada de sexta parte se o agente se serve de anonimato ou de nome suposto. É diminuída de metade se a imputação é de prática de contravenção.",
+      "pontos": [
+        "Dar causa à instauração de procedimento contra alguém que sabe inocente.",
+        "Reclusão de dois a oito anos e multa.",
+        "§1º: anonimato ou nome suposto: aumento de sexta parte.",
+        "§2º: imputação de contravenção: diminuição de metade."
+      ],
+      "atencao": [
+        "Exige que o agente SAIBA da inocência da vítima (dolo direto).",
+        "A imputação de contravenção reduz a pena."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 138",
+        "Art. 340"
+      ],
+      "exemplo": "Procedimento é instaurado contra pessoa por imputação que o agente sabe falsa e ela inocente. Variação: Comunicar fato inexistente sem imputação pessoal exige distinguir 340.",
+      "prova": [
+        "Abrange infração ético-disciplinar e improbidade? Sim; redação atual.",
+        "Suspeita razoável de boa-fé equivale automaticamente a denunciação caluniosa? Não."
+      ],
+      "expected": {
+        "unit_id": "f93cc9b7-f8c3-5610-b890-a9b382f5ae16",
+        "content_sha256": "eed74b242310d4b0c8fedfeab0eb92692a017018912ad27fd16dfc90b9b94591",
+        "simples": "Denunciação caluniosa: dar causa à instauração de inquérito policial, de procedimento investigatório criminal, de processo judicial, de processo administrativo disciplinar, de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo de que o sabe inocente. Pena: reclusão de dois a oito anos e multa. A pena é aumentada de sexta parte se o agente se serve de anonimato ou de nome suposto. É diminuída de metade se a imputação é de prática de contravenção.",
+        "pontos": [
+          "Dar causa à instauração de procedimento contra alguém que sabe inocente.",
+          "Reclusão de dois a oito anos e multa.",
+          "§1º: anonimato ou nome suposto: aumento de sexta parte.",
+          "§2º: imputação de contravenção: diminuição de metade."
+        ],
+        "atencao": [
+          "Exige que o agente SAIBA da inocência da vítima (dolo direto).",
+          "A imputação de contravenção reduz a pena."
+        ],
+        "exemplo": "Pessoa acusa falsamente alguém de crime para que seja instaurado inquérito, sabendo que é inocente.",
+        "prova": [
+          "Assertiva que admite dolo eventual na denunciação caluniosa erra: exige o conhecimento da inocência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 138",
+          "Art. 340"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-340",
+      "unit_id": "e9fd779b-0194-5242-ba93-ae01d76c4848",
+      "content_sha256": "d91a2b3078228dd8aafaba10b50e0f574c65081b1a2ff039d93021eb7dfb8591",
+      "simples": "Comunicação falsa de crime ou de contravenção: provocar a ação de autoridade, comunicando-lhe a ocorrência de crime ou de contravenção que sabe não se ter verificado. Pena: detenção de um a seis meses, ou multa.",
+      "pontos": [
+        "Provocar a ação de autoridade comunicando crime ou contravenção que sabe não ter ocorrido.",
+        "Detenção de um a seis meses, ou multa."
+      ],
+      "atencao": [
+        "Não há imputação a pessoa determinada (diferença da denunciação caluniosa)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 339"
+      ],
+      "exemplo": "Autoridade é acionada por notícia de crime que o comunicante sabe inexistente. Variação: Acusação de pessoa sabidamente inocente com instauração pertinente exige 339.",
+      "prova": [
+        "Contravenção inexistente também está prevista? Sim.",
+        "Notícia equivocada de boa-fé basta? Não."
+      ],
+      "expected": {
+        "unit_id": "e9fd779b-0194-5242-ba93-ae01d76c4848",
+        "content_sha256": "d91a2b3078228dd8aafaba10b50e0f574c65081b1a2ff039d93021eb7dfb8591",
+        "simples": "Comunicação falsa de crime ou de contravenção: provocar a ação de autoridade, comunicando-lhe a ocorrência de crime ou de contravenção que sabe não se ter verificado. Pena: detenção de um a seis meses, ou multa.",
+        "pontos": [
+          "Provocar a ação de autoridade comunicando crime ou contravenção que sabe não ter ocorrido.",
+          "Detenção de um a seis meses, ou multa."
+        ],
+        "atencao": [
+          "Não há imputação a pessoa determinada (diferença da denunciação caluniosa)."
+        ],
+        "exemplo": "Ligar para a polícia informando assalto inexistente.",
+        "prova": [
+          "Assertiva que exige imputação a pessoa determinada no art. 340 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 339"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-341",
+      "unit_id": "faac967e-3d3f-5bb0-92ca-0b6b0fd97f5f",
+      "content_sha256": "cc5dacd454fd7095e645ccad52d767703380418e3d0d0eb05bea7d85dbb0f991",
+      "simples": "Autoacusação falsa: acusar-se, perante a autoridade, de crime inexistente ou praticado por outrem. Pena: detenção de três meses a dois anos, ou multa.",
+      "pontos": [
+        "Acusar-se de crime inexistente ou praticado por outra pessoa.",
+        "Perante a autoridade.",
+        "Detenção de três meses a dois anos, ou multa."
+      ],
+      "atencao": [
+        "Crime de quem assume falsamente a autoria."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 339"
+      ],
+      "exemplo": "Pessoa se acusa perante autoridade de crime cometido por outra. Variação: Direito ao silêncio não transforma falsa autoacusação em prova legítima.",
+      "prova": [
+        "Crime inteiramente inexistente também entra? Sim.",
+        "Tipo é autoacusação de qualquer infração administrativa? Não; crime no texto."
+      ],
+      "expected": {
+        "unit_id": "faac967e-3d3f-5bb0-92ca-0b6b0fd97f5f",
+        "content_sha256": "cc5dacd454fd7095e645ccad52d767703380418e3d0d0eb05bea7d85dbb0f991",
+        "simples": "Autoacusação falsa: acusar-se, perante a autoridade, de crime inexistente ou praticado por outrem. Pena: detenção de três meses a dois anos, ou multa.",
+        "pontos": [
+          "Acusar-se de crime inexistente ou praticado por outra pessoa.",
+          "Perante a autoridade.",
+          "Detenção de três meses a dois anos, ou multa."
+        ],
+        "atencao": [
+          "Crime de quem assume falsamente a autoria."
+        ],
+        "exemplo": "Pessoa se apresenta como autora de crime cometido por seu filho.",
+        "prova": [
+          "Assertiva que aplica o art. 341 à acusação falsa contra terceiro erra: isso seria denunciação caluniosa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 339"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-344",
+      "unit_id": "f9a03996-a7c5-56f5-a50b-d5d10a377e4c",
+      "content_sha256": "19aab6752d2aacfd3cfd3b75db4e4be2bc3d53f38b70de7d1f6b9813e26d3662",
+      "simples": "Coação no curso do processo: usar de violência ou grave ameaça, com o fim de favorecer interesse próprio ou alheio, contra autoridade, parte, ou qualquer outra pessoa que funciona ou é chamada a intervir em processo judicial, policial ou administrativo, ou em juízo arbitral. Pena: reclusão de um a quatro anos e multa, além da pena correspondente à violência. A pena aumenta-se de 1/3 até a metade se o processo envolver crime contra a dignidade sexual.",
+      "pontos": [
+        "Violência ou grave ameaça para favorecer interesse próprio ou alheio.",
+        "Contra autoridade, parte ou quem intervém no processo.",
+        "Reclusão de um a quatro anos e multa, além da pena da violência.",
+        "Parágrafo único: processo de crime contra a dignidade sexual: aumento de 1/3 até a metade."
+      ],
+      "atencao": [
+        "Processos judicial,policial,administrativo e arbitragem estão no texto. Não exigir ação judicial já ajuizada para toda hipótese; violência/ameaça,finalidade e contexto precisam de prova."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 342"
+      ],
+      "exemplo": "Testemunha é gravemente ameaçada para favorecer interesse em investigação policial. Variação: Interesse processual pode ser de terceiro; reivindicação lícita sem violência/ameaça não basta.",
+      "prova": [
+        "Juízo arbitral está previsto? Sim.",
+        "Processo sexual tem aumento próprio? Sim;1/3 até metade."
+      ],
+      "expected": {
+        "unit_id": "f9a03996-a7c5-56f5-a50b-d5d10a377e4c",
+        "content_sha256": "19aab6752d2aacfd3cfd3b75db4e4be2bc3d53f38b70de7d1f6b9813e26d3662",
+        "simples": "Coação no curso do processo: usar de violência ou grave ameaça, com o fim de favorecer interesse próprio ou alheio, contra autoridade, parte, ou qualquer outra pessoa que funciona ou é chamada a intervir em processo judicial, policial ou administrativo, ou em juízo arbitral. Pena: reclusão de um a quatro anos e multa, além da pena correspondente à violência. A pena aumenta-se de 1/3 até a metade se o processo envolver crime contra a dignidade sexual.",
+        "pontos": [
+          "Violência ou grave ameaça para favorecer interesse próprio ou alheio.",
+          "Contra autoridade, parte ou quem intervém no processo.",
+          "Reclusão de um a quatro anos e multa, além da pena da violência.",
+          "Parágrafo único: processo de crime contra a dignidade sexual: aumento de 1/3 até a metade."
+        ],
+        "atencao": [
+          "Exige que a coação seja no curso de processo (judicial, policial, administrativo ou arbitral)."
+        ],
+        "exemplo": "Ameaçar a testemunha para que altere seu depoimento.",
+        "prova": [
+          "Assertiva que dispensa a violência ou grave ameaça na coação no curso do processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 342"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-345",
+      "unit_id": "24bdc72d-be5c-5c2c-8c8d-124dd6610e85",
+      "content_sha256": "d5745ea0297224b7ff2c82b05bba7e46a328adeb7e26e043edc81bd39abe2bfa",
+      "simples": "Exercício arbitrário das próprias razões: fazer justiça pelas próprias mãos, para satisfazer pretensão, embora legítima, salvo quando a lei o permite. Pena: detenção de quinze dias a um mês, ou multa, além da pena correspondente à violência. Se não há emprego de violência, somente se procede mediante queixa.",
+      "pontos": [
+        "Fazer justiça pelas próprias mãos para satisfazer pretensão, ainda que legítima.",
+        "Detenção de quinze dias a um mês, ou multa, além da pena da violência.",
+        "Parágrafo único: sem violência, ação por queixa."
+      ],
+      "atencao": [
+        "A pretensão pode ser LEGÍTIMA.",
+        "Sem violência: ação privada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 346"
+      ],
+      "exemplo": "Credor retoma bem pela força para satisfazer pretensão, sem permissão legal. Variação: Exercício expressamente permitido por lei é ressalva; dívida legítima não autoriza toda autotutela.",
+      "prova": [
+        "Pretensão legítima exclui sempre o crime? Não.",
+        "Sem violência procede mediante queixa? Sim; parágrafo."
+      ],
+      "expected": {
+        "unit_id": "24bdc72d-be5c-5c2c-8c8d-124dd6610e85",
+        "content_sha256": "d5745ea0297224b7ff2c82b05bba7e46a328adeb7e26e043edc81bd39abe2bfa",
+        "simples": "Exercício arbitrário das próprias razões: fazer justiça pelas próprias mãos, para satisfazer pretensão, embora legítima, salvo quando a lei o permite. Pena: detenção de quinze dias a um mês, ou multa, além da pena correspondente à violência. Se não há emprego de violência, somente se procede mediante queixa.",
+        "pontos": [
+          "Fazer justiça pelas próprias mãos para satisfazer pretensão, ainda que legítima.",
+          "Detenção de quinze dias a um mês, ou multa, além da pena da violência.",
+          "Parágrafo único: sem violência, ação por queixa."
+        ],
+        "atencao": [
+          "A pretensão pode ser LEGÍTIMA.",
+          "Sem violência: ação privada."
+        ],
+        "exemplo": "Credor invade a casa do devedor e toma um bem para pagar a dívida.",
+        "prova": [
+          "Assertiva que exige pretensão ilegítima no art. 345 erra: o tipo admite pretensão legítima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 346"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-346",
+      "unit_id": "6d777f49-fd9e-55e1-b375-7895692b2cd4",
+      "content_sha256": "0ba0f3a6b3006c6d5d758978e0f1bc074fa61bfa0c8b894231bc1b907004dc09",
+      "simples": "Subtração ou dano de coisa própria em poder de terceiro: tirar, suprimir, destruir ou danificar coisa própria, que se acha em poder de terceiro por determinação judicial ou convenção. Pena: detenção de seis meses a dois anos e multa.",
+      "pontos": [
+        "Tirar, suprimir, destruir ou danificar coisa PRÓPRIA.",
+        "Em poder de terceiro por determinação judicial ou convenção.",
+        "Detenção de seis meses a dois anos e multa."
+      ],
+      "atencao": [
+        "A coisa é PRÓPRIA do agente, mas está em poder de terceiro por decisão judicial ou contrato."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 345"
+      ],
+      "exemplo": "Proprietário destrói coisa sua que terceiro detém por determinação judicial. Variação: Ser dono não elimina a condição de detenção legítima por terceiro; dano à coisa alheia tem outro tipo.",
+      "prova": [
+        "Convenção também fundamenta detenção prevista? Sim.",
+        "A coisa necessariamente pertence a terceiro? Não; é própria."
+      ],
+      "expected": {
+        "unit_id": "6d777f49-fd9e-55e1-b375-7895692b2cd4",
+        "content_sha256": "0ba0f3a6b3006c6d5d758978e0f1bc074fa61bfa0c8b894231bc1b907004dc09",
+        "simples": "Subtração ou dano de coisa própria em poder de terceiro: tirar, suprimir, destruir ou danificar coisa própria, que se acha em poder de terceiro por determinação judicial ou convenção. Pena: detenção de seis meses a dois anos e multa.",
+        "pontos": [
+          "Tirar, suprimir, destruir ou danificar coisa PRÓPRIA.",
+          "Em poder de terceiro por determinação judicial ou convenção.",
+          "Detenção de seis meses a dois anos e multa."
+        ],
+        "atencao": [
+          "A coisa é PRÓPRIA do agente, mas está em poder de terceiro por decisão judicial ou contrato."
+        ],
+        "exemplo": "Dono retira bem penhorado que está sob guarda judicial de terceiro.",
+        "prova": [
+          "Assertiva que aplica o art. 346 a coisa alheia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 345"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-347",
+      "unit_id": "d901940a-f1de-578a-9537-ccf7f7889c5d",
+      "content_sha256": "ac946c56309c1ef4c8f35d585a0d9257eb0f965eb75a682759e97a56bdd45137",
+      "simples": "Fraude processual: inovar artificiosamente, na pendência de processo civil ou administrativo, o estado de lugar, de coisa ou de pessoa, com o fim de induzir a erro o juiz ou o perito. Pena: detenção de três meses a dois anos e multa. Se a inovação se destina a produzir efeito em processo penal, ainda que não iniciado, as penas aplicam-se em dobro.",
+      "pontos": [
+        "Inovar artificiosamente o estado de lugar, coisa ou pessoa.",
+        "Na pendência de processo civil ou administrativo.",
+        "Fim de induzir a erro o juiz ou o perito.",
+        "Detenção de três meses a dois anos e multa.",
+        "Parágrafo único: efeito em processo penal, ainda que não iniciado: pena em dobro."
+      ],
+      "atencao": [
+        "Em processo penal, mesmo que ainda NÃO iniciado, a pena é em dobro."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 342"
+      ],
+      "exemplo": "Lugar é artificialmente alterado para enganar perito em processo civil pendente. Variação: Para produzir efeito em processo penal, a lei alcança também processo ainda não iniciado e dobra penas.",
+      "prova": [
+        "Finalidade de induzir erro importa? Sim.",
+        "Todo reparo legítimo do local é fraude? Não."
+      ],
+      "expected": {
+        "unit_id": "d901940a-f1de-578a-9537-ccf7f7889c5d",
+        "content_sha256": "ac946c56309c1ef4c8f35d585a0d9257eb0f965eb75a682759e97a56bdd45137",
+        "simples": "Fraude processual: inovar artificiosamente, na pendência de processo civil ou administrativo, o estado de lugar, de coisa ou de pessoa, com o fim de induzir a erro o juiz ou o perito. Pena: detenção de três meses a dois anos e multa. Se a inovação se destina a produzir efeito em processo penal, ainda que não iniciado, as penas aplicam-se em dobro.",
+        "pontos": [
+          "Inovar artificiosamente o estado de lugar, coisa ou pessoa.",
+          "Na pendência de processo civil ou administrativo.",
+          "Fim de induzir a erro o juiz ou o perito.",
+          "Detenção de três meses a dois anos e multa.",
+          "Parágrafo único: efeito em processo penal, ainda que não iniciado: pena em dobro."
+        ],
+        "atencao": [
+          "Em processo penal, mesmo que ainda NÃO iniciado, a pena é em dobro."
+        ],
+        "exemplo": "Alterar a cena de um crime antes da perícia para induzir o perito a erro.",
+        "prova": [
+          "Assertiva que exige processo penal já iniciado para o dobro da pena erra: vale ainda que não iniciado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 342"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-348",
+      "unit_id": "52994d0e-f412-5153-9890-bf672ead36ac",
+      "content_sha256": "b4f0e2074f45a3e0f5ba021f2b0b6ed07e246b3708f0b411a199e530a7e4eed3",
+      "simples": "Favorecimento pessoal: auxiliar a subtrair-se à ação de autoridade pública autor de crime a que é cominada pena de reclusão. Pena: detenção de um a seis meses e multa. Se ao crime não é cominada pena de reclusão: detenção de quinze dias a três meses e multa. Se quem presta o auxílio é ascendente, descendente, cônjuge ou irmão do criminoso, fica isento de pena.",
+      "pontos": [
+        "Auxiliar autor de crime a subtrair-se à ação da autoridade.",
+        "Crime com pena de reclusão: detenção de um a seis meses e multa.",
+        "Crime sem pena de reclusão: detenção de quinze dias a três meses e multa.",
+        "§2º: isenção para ascendente, descendente, cônjuge ou irmão."
+      ],
+      "atencao": [
+        "Pena depende do crime antecedente. Rol textual de isenção: ascendente,descendente,cônjuge,irmão. Extensão a companheiro envolve interpretação; não certificada conclusão restritiva universal nem extensão automática a todo familiar ou ao 349."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 349"
+      ],
+      "exemplo": "Agente auxilia autor de crime a escapar da ação da autoridade. Variação: Auxílio ao proveito exige distinguir 349; isenção familiar tem recorte e extensão interpretativa não certificada aqui.",
+      "prova": [
+        "Crime antecedente sem reclusão tem pena própria? Sim.",
+        "Isenção do 348 aplica-se automaticamente ao favorecimento real? Não."
+      ],
+      "expected": {
+        "unit_id": "52994d0e-f412-5153-9890-bf672ead36ac",
+        "content_sha256": "b4f0e2074f45a3e0f5ba021f2b0b6ed07e246b3708f0b411a199e530a7e4eed3",
+        "simples": "Favorecimento pessoal: auxiliar a subtrair-se à ação de autoridade pública autor de crime a que é cominada pena de reclusão. Pena: detenção de um a seis meses e multa. Se ao crime não é cominada pena de reclusão: detenção de quinze dias a três meses e multa. Se quem presta o auxílio é ascendente, descendente, cônjuge ou irmão do criminoso, fica isento de pena.",
+        "pontos": [
+          "Auxiliar autor de crime a subtrair-se à ação da autoridade.",
+          "Crime com pena de reclusão: detenção de um a seis meses e multa.",
+          "Crime sem pena de reclusão: detenção de quinze dias a três meses e multa.",
+          "§2º: isenção para ascendente, descendente, cônjuge ou irmão."
+        ],
+        "atencao": [
+          "A pena depende de o crime auxiliado ter, ou não, pena de reclusão.",
+          "A isenção familiar não alcança companheiro e outros parentes (a doutrina discute)."
+        ],
+        "exemplo": "Esconder em sua casa um foragido autor de crime punido com reclusão.",
+        "prova": [
+          "Assertiva que pune o irmão que esconde o criminoso erra: ele fica isento de pena."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 349"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-349",
+      "unit_id": "f45740ee-bac6-5702-a4e9-581580e1d471",
+      "content_sha256": "1cfe85cacca119f2ef18a790350f8916b687426bf86ad45de5c139fee1a44b33",
+      "simples": "Favorecimento real: prestar a criminoso, fora dos casos de coautoria ou de receptação, auxílio destinado a tornar seguro o proveito do crime. Pena: detenção de um a seis meses e multa.",
+      "pontos": [
+        "Prestar auxílio ao criminoso para tornar seguro o proveito do crime.",
+        "Fora dos casos de coautoria ou receptação.",
+        "Detenção de um a seis meses e multa."
+      ],
+      "atencao": [
+        "Subsidiário em relação à coautoria e à receptação.",
+        "Auxilia o PROVEITO, e não a pessoa (diferença do art. 348)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 348",
+        "Art. 180"
+      ],
+      "exemplo": "Auxílio torna seguro proveito criminoso fora de coautoria ou receptação. Variação: Ajudar pessoa a fugir é outro recorte; participação previamente ajustada exige classificação própria.",
+      "prova": [
+        "Subsidiariedade é expressa? Sim.",
+        "A isenção familiar do 348 vale automaticamente aqui? Não."
+      ],
+      "expected": {
+        "unit_id": "f45740ee-bac6-5702-a4e9-581580e1d471",
+        "content_sha256": "1cfe85cacca119f2ef18a790350f8916b687426bf86ad45de5c139fee1a44b33",
+        "simples": "Favorecimento real: prestar a criminoso, fora dos casos de coautoria ou de receptação, auxílio destinado a tornar seguro o proveito do crime. Pena: detenção de um a seis meses e multa.",
+        "pontos": [
+          "Prestar auxílio ao criminoso para tornar seguro o proveito do crime.",
+          "Fora dos casos de coautoria ou receptação.",
+          "Detenção de um a seis meses e multa."
+        ],
+        "atencao": [
+          "Subsidiário em relação à coautoria e à receptação.",
+          "Auxilia o PROVEITO, e não a pessoa (diferença do art. 348)."
+        ],
+        "exemplo": "Guardar o dinheiro do roubo para que o criminoso não seja alcançado.",
+        "prova": [
+          "Assertiva que confunde favorecimento real com pessoal erra: o real auxilia o proveito do crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 348",
+          "Art. 180"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    }
+  ]
+}

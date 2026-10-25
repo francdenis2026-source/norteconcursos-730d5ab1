@@ -3,6 +3,7 @@ import { Brain, ChevronDown, Flag, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 export interface PlanEdition {
   key: string;
@@ -36,7 +37,7 @@ const tone = (value: number) =>
 
 const round1 = (value: number) => Math.round(value * 10) / 10;
 
-// Raio-X de TODAS as edições de um concurso (ex.: PF 2014, 2018, 2021 e 2025 juntas), mapa dos
+// Análise de TODAS as edições de um concurso (ex.: PF 2014, 2018, 2021 e 2025 juntas), mapa dos
 // pontos fracos (erros e brancos por disciplina) e um plano para chegar à nota de corte. Em prova
 // CEBRASPE (certo/errado com penalidade) um erro vale -1, então virar erro em acerto rende +2 e
 // virar branco em acerto rende +1.
@@ -100,7 +101,7 @@ export function ContestPlanCard({
                 <Badge variant="outline">{editions.length} edição(ões)</Badge>
               </CardTitle>
               <CardDescription className="mt-1">
-                Raio-X de todas as edições, mapa de pontos fracos e plano para chegar à nota de
+                Análise de todas as edições, mapa de pontos fracos e plano para chegar à nota de
                 corte.
               </CardDescription>
             </div>
@@ -169,7 +170,7 @@ export function ContestPlanCard({
 
           <section className="space-y-3">
             <h3 className="flex items-center gap-2 text-sm font-black">
-              <Brain className="h-4 w-4 text-violet-600" /> Raio-X de todas as edições
+              <Brain className="h-4 w-4 text-amber-600" /> Análise de todas as edições
             </h3>
             <p className="text-xs text-muted-foreground">
               {detailedEditions} de {editions.length} edição(ões) têm detalhe por questão; as demais
@@ -225,18 +226,18 @@ export function ContestPlanCard({
                       </div>
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {items.slice(0, 24).map((weak) => (
-                          <span
-                            key={`${weak.edition}-${weak.item}`}
-                            className={cn(
-                              "rounded-full px-2 py-0.5 text-[10px] font-bold",
-                              weak.verdict === "errada"
-                                ? "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200"
-                                : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
-                            )}
-                            title={weak.verdict === "errada" ? "Erro" : "Em branco"}
-                          >
-                            {weak.edition} · item {weak.item}
-                          </span>
+                          <Hint key={`${weak.edition}-${weak.item}`} content={weak.verdict === "errada" ? "Erro" : "Em branco"}>
+                            <span
+                              className={cn(
+                                "rounded-full px-2 py-0.5 text-[10px] font-bold",
+                                weak.verdict === "errada"
+                                  ? "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200"
+                                  : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
+                              )}
+                            >
+                              {weak.edition} · item {weak.item}
+                            </span>
+                          </Hint>
                         ))}
                         {items.length > 24 && (
                           <span className="text-[10px] text-muted-foreground">

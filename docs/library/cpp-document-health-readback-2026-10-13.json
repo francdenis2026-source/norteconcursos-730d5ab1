@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-13T01:46:07.708428+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 10,
+  "target_keys": [
+    "art-145",
+    "art-146",
+    "art-147",
+    "art-148",
+    "art-149",
+    "art-150",
+    "art-151",
+    "art-152",
+    "art-153",
+    "art-154"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 836,
+  "concurrent_other_changes": []
+}

@@ -1,0 +1,8 @@
+{
+  "caption_moves_confirmed": 1,
+  "normative_words_removed": 0,
+  "cpp_explanations_preserved": true,
+  "all_unit_changes_verified_by_strict_caption_verifier": true,
+  "concurrent_other_course_explanation_changes": 50,
+  "note": "Strict full-snapshot verifier confirmed all unit changes but detected external edits to other-course explanations; scoped CPP comparison confirms preservation."
+}

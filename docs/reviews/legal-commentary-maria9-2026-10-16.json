@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-16",
+  "course": "maria-penha",
+  "unit_key": "art-9",
+  "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+  "reason": "Incluir atualização ausente do Tema 1370/STF e embargos de maio/2026 sobre custeio do afastamento protetivo; substituir alerta genérico por distinção atual dos regimes.",
+  "sources": [
+    "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7064773",
+    "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=1370"
+  ],
+  "before_row_md5": "924f2ecd6dc122ce54536a61be01d286",
+  "patch": {
+    "pontos": [
+      "Lei 14.887/2024: caráter prioritário no SUS/Susp. Juiz determina cadastro assistencial por prazo certo.",
+      "Servidora: acesso prioritário à remoção; trabalhadora: manutenção do vínculo por até seis meses quando afastamento necessário. Encaminhamento jurídico inclusive para dissolução de vínculo familiar.",
+      "Saúde sexual: contracepção de emergência, profilaxias e procedimentos necessários. Agressor ressarce danos, custos SUS/tabela e dispositivos de segurança, sem ônus à mulher/dependentes, sem atenuante ou substituição de pena por ressarcimento.",
+      "Dependentes: prioridade de matrícula/transferência na educação básica mais próxima, com documentos previstos; dados sigilosos com acesso reservado aos órgãos indicados.",
+      "Tema 1370/STF, com embargos de maio/2026: o juízo estadual que atua na jurisdição criminal pode fixar o afastamento protetivo e requisitar a prestação, ainda que empregador e INSS executem o pagamento.",
+      "Segurada do RGPS: empregador, quando houver, paga os primeiros 15 dias; INSS custeia o período seguinte, sem carência e sem contribuição previdenciária sobre a prestação. Segurada sem vínculo de emprego tem custeio integral pelo INSS.",
+      "Não segurada: assistência financeira como benefício eventual de vulnerabilidade temporária, a cargo de Estado, DF ou Município conforme LOAS 22. O juiz define o ente pagador e verifica que o afastamento a deixará sem meios de manutenção."
+    ],
+    "atencao": [
+      "Não ensinar que o afastamento protetivo é necessariamente sem remuneração. Aplicar o Tema 1370, com a redação dos embargos de 2026: há regimes previdenciário e assistencial distintos, sujeitos à decisão e aos requisitos do caso. Não prometer seis meses de pagamento automático a toda requerente.",
+      "Ressarcimento do agressor não permite transferir dívida à vítima nem comprar redução de pena. Cadastro assistencial por prazo certo não determina expiração automática de medidas protetivas enquanto persistir risco.",
+      "Memória: empregada segurada = empregador nos 15 dias iniciais + INSS depois; segurada sem emprego = INSS integral; não segurada = ente subnacional definido pelo juiz. Não confundir o benefício eventual da LOAS com BPC automático."
+    ],
+    "exemplo": "Mulher precisa se afastar do trabalho por segurança: observar preservação do vínculo e medidas de assistência cabíveis. Variação: agressor paga custos médicos e pretende atenuante automática; o §6º afasta esse efeito do ressarcimento. Caso prático: Ana, empregada e segurada do RGPS, recebe afastamento protetivo de 60 dias. O empregador responde pelos primeiros 15 dias e o INSS pelo período subsequente, sem exigir carência. Variação: Beatriz é segurada contribuinte individual sem relação de emprego; o INSS custeia integralmente. Outra variação: Carla não é segurada e o afastamento a deixa sem meios de manutenção; o juiz identifica Estado, DF ou Município responsável pelo benefício eventual assistencial, não atribui automaticamente o pagamento ao INSS.",
+    "prova": [
+      "Manutenção do vínculo é prevista por até seis meses? Sim; quando necessário o afastamento, nos termos do §2º.",
+      "Ressarcir custos pode impor dívida à vítima ou gerar atenuante por esse pagamento? Não; o §6º veda esses efeitos.",
+      "A carência previdenciária é exigida para essa prestação da segurada no Tema 1370? Não; a tese dispensa carência.",
+      "Segurada sem vínculo de emprego tem de encontrar empregador para pagar os primeiros 15 dias? Não; nessa hipótese o INSS arca integralmente.",
+      "A não segurada recebe automaticamente o mesmo benefício do INSS? Não; aplica-se o regime assistencial de benefício eventual, com ente subnacional e condições definidos judicialmente."
+    ],
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14887.htm",
+      "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=7064773&numeroProcesso=1520468&numeroTema=1370"
+    ]
+  },
+  "verified_after": {
+    "prova": [
+      "Manutenção do vínculo é prevista por até seis meses? Sim; quando necessário o afastamento, nos termos do §2º.",
+      "Ressarcir custos pode impor dívida à vítima ou gerar atenuante por esse pagamento? Não; o §6º veda esses efeitos.",
+      "A carência previdenciária é exigida para essa prestação da segurada no Tema 1370? Não; a tese dispensa carência.",
+      "Segurada sem vínculo de emprego tem de encontrar empregador para pagar os primeiros 15 dias? Não; nessa hipótese o INSS arca integralmente.",
+      "A não segurada recebe automaticamente o mesmo benefício do INSS? Não; aplica-se o regime assistencial de benefício eventual, com ente subnacional e condições definidos judicialmente."
+    ],
+    "pontos": [
+      "Lei 14.887/2024: caráter prioritário no SUS/Susp. Juiz determina cadastro assistencial por prazo certo.",
+      "Servidora: acesso prioritário à remoção; trabalhadora: manutenção do vínculo por até seis meses quando afastamento necessário. Encaminhamento jurídico inclusive para dissolução de vínculo familiar.",
+      "Saúde sexual: contracepção de emergência, profilaxias e procedimentos necessários. Agressor ressarce danos, custos SUS/tabela e dispositivos de segurança, sem ônus à mulher/dependentes, sem atenuante ou substituição de pena por ressarcimento.",
+      "Dependentes: prioridade de matrícula/transferência na educação básica mais próxima, com documentos previstos; dados sigilosos com acesso reservado aos órgãos indicados.",
+      "Tema 1370/STF, com embargos de maio/2026: o juízo estadual que atua na jurisdição criminal pode fixar o afastamento protetivo e requisitar a prestação, ainda que empregador e INSS executem o pagamento.",
+      "Segurada do RGPS: empregador, quando houver, paga os primeiros 15 dias; INSS custeia o período seguinte, sem carência e sem contribuição previdenciária sobre a prestação. Segurada sem vínculo de emprego tem custeio integral pelo INSS.",
+      "Não segurada: assistência financeira como benefício eventual de vulnerabilidade temporária, a cargo de Estado, DF ou Município conforme LOAS 22. O juiz define o ente pagador e verifica que o afastamento a deixará sem meios de manutenção."
+    ],
+    "status": "published",
+    "termos": [
+      "prioritário",
+      "até seis meses",
+      "prazo certo",
+      "sem ônus",
+      "sigilosos"
+    ],
+    "atencao": [
+      "Não ensinar que o afastamento protetivo é necessariamente sem remuneração. Aplicar o Tema 1370, com a redação dos embargos de 2026: há regimes previdenciário e assistencial distintos, sujeitos à decisão e aos requisitos do caso. Não prometer seis meses de pagamento automático a toda requerente.",
+      "Ressarcimento do agressor não permite transferir dívida à vítima nem comprar redução de pena. Cadastro assistencial por prazo certo não determina expiração automática de medidas protetivas enquanto persistir risco.",
+      "Memória: empregada segurada = empregador nos 15 dias iniciais + INSS depois; segurada sem emprego = INSS integral; não segurada = ente subnacional definido pelo juiz. Não confundir o benefício eventual da LOAS com BPC automático."
+    ],
+    "exemplo": "Mulher precisa se afastar do trabalho por segurança: observar preservação do vínculo e medidas de assistência cabíveis. Variação: agressor paga custos médicos e pretende atenuante automática; o §6º afasta esse efeito do ressarcimento. Caso prático: Ana, empregada e segurada do RGPS, recebe afastamento protetivo de 60 dias. O empregador responde pelos primeiros 15 dias e o INSS pelo período subsequente, sem exigir carência. Variação: Beatriz é segurada contribuinte individual sem relação de emprego; o INSS custeia integralmente. Outra variação: Carla não é segurada e o afastamento a deixa sem meios de manutenção; o juiz identifica Estado, DF ou Município responsável pelo benefício eventual assistencial, não atribui automaticamente o pagamento ao INSS.",
+    "simples": "Assistência prioritária no SUS e Susp, articulada com assistência social e políticas públicas, inclusive emergencial quando cabível. Protege trabalho, acesso à justiça, saúde, dependentes e reparação dos custos pelo agressor.",
+    "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14887.htm",
+      "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=7064773&numeroProcesso=1520468&numeroTema=1370"
+    ],
+    "created_at": "2026-10-11T14:19:34.126458+00:00",
+    "updated_at": "2026-10-16T18:42:20.694612+00:00",
+    "authored_by": "codex",
+    "reviewed_at": "2026-10-16T18:42:20.694612+00:00",
+    "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+    "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a"
+  },
+  "verification": "Comparação de todos os campos: alterados somente cinco campos didáticos previstos e duas datas; guardas de curso, unidade, hash, publicação e edital ativos; pendentes preservados."
+}

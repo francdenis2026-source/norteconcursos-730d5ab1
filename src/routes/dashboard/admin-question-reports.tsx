@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 // Fila de revisão dos relatos de questão errada enviados pelos alunos
 // (ReportQuestionButton, no Treinador). O admin vê a questão como estava no
 // momento do relato, quem reportou e corrige direto na tabela física de
@@ -22,6 +24,7 @@ import {
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { confirmDialog } from "@/lib/confirm";
 import type { QuestionTable } from "@/lib/questionFormat";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 
 export const Route = createFileRoute("/dashboard/admin-question-reports")({
   head: () => ({
@@ -169,7 +172,7 @@ function AdminQuestionReportsPage() {
         status,
         resolved_by: status === "corrigida" || status === "rejeitada" ? report.reported_by : null,
         resolved_at:
-          status === "corrigida" || status === "rejeitada" ? new Date().toISOString() : null,
+          status === "corrigida" || status === "rejeitada" ? platformDate().toISOString() : null,
       })
       .eq("id", report.id);
     if (error) return void toast.error(error.message);
@@ -243,8 +246,12 @@ function AdminQuestionReportsPage() {
                   </CardTitle>
                   <p className="mt-1 text-xs text-muted-foreground">
                     Reportado por <b>{report.reporter_name}</b> em{" "}
-                    {new Date(report.created_at).toLocaleString("pt-BR")} ·{" "}
+                    {acreDate(report.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })} ·{" "}
                     {TABLE_LABEL[report.question_table]}
+                  </p>
+                  <p className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                    Código da questão:{" "}
+                    <QuestionCode question={{ id: report.question_id, source: "official", table: report.question_table }} />
                   </p>
                 </div>
                 <Badge variant="outline" className={STATUS_STYLE[report.status]}>

@@ -1,0 +1,728 @@
+{
+  "version": "2026-10-11-identificacao-criminal-targeted",
+  "checked_at": "2026-10-12T00:36:32.806792+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "identificacao-criminal",
+      "title": "Lei 12.037/2009 — Identificação Criminal",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 13,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-5-a",
+        "art-6",
+        "art-7",
+        "art-7-a",
+        "art-7-b",
+        "art-7-c",
+        "art-8",
+        "art-9"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "source_sha256": "9d5b2beb0ea45692d12789abd5f65a145dde55ba48cc4db707f5b73e4c38dc4e",
+      "source_checked_at": "2026-10-12T00:31:19.418455+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "d2893a7b-1ea6-5f1b-8a20-abda8dc78786",
+      "content_sha256": "a0aa074ad7c88842b2ddbc75490fd1480354a9e048d218fe5cb313986630a298",
+      "simples": "A identificação civil dispensa, como regra, a criminal. A própria lei enumera exceções: apresentar documento não impede automaticamente os procedimentos quando uma dessas hipóteses estiver demonstrada.",
+      "pontos": [
+        "Regra: civilmente identificado não se submete à identificação criminal.",
+        "Exceções: hipóteses legais, especialmente art. 3º."
+      ],
+      "atencao": [
+        "Não use a regra como proibição absoluta nem a exceção como autorização irrestrita."
+      ],
+      "exemplo": "O investigado apresenta documento público idôneo e não há hipótese legal de exceção: aplica-se a proteção. Variação: O documento tem indício de falsificação: deve-se examinar a exceção do art. 3º, I.",
+      "prova": [
+        "A apresentação de documento exclui todas as exceções legais? Não; o art. 1º ressalva os casos previstos na lei.",
+        "A identificação criminal é automática para todo investigado? Não; exige observar a regra e as hipóteses legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d2893a7b-1ea6-5f1b-8a20-abda8dc78786",
+        "content_sha256": "a0aa074ad7c88842b2ddbc75490fd1480354a9e048d218fe5cb313986630a298",
+        "simples": "O civilmente identificado não será submetido a identificação criminal, salvo nos casos previstos nesta Lei.",
+        "pontos": [
+          "Regra: quem tem identificação civil não passa por identificação criminal.",
+          "Exceções: casos da própria Lei (art. 3º)."
+        ],
+        "atencao": [
+          "Base constitucional: art. 5º, LVIII, da Constituição.",
+          "A exceção é a identificação criminal."
+        ],
+        "exemplo": "Quem apresenta carteira de identidade válida, em regra, não é fotografado nem tem as digitais colhidas para fins criminais.",
+        "prova": [
+          "Assertiva que torna a identificação criminal obrigatória para todo indiciado erra: a regra é a identificação civil."
+        ],
+        "termos": [
+          {
+            "termo": "Identificação criminal",
+            "significado": "Coleta de dados datiloscópicos, fotográficos e, em certos casos, genéticos."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "f9f12570-a841-59a0-b686-ec1fc8001429",
+      "content_sha256": "28bbee80fad9b111c1cbdc7eaf34902d28df335a5f47012239b20afae9b7753e",
+      "simples": "A lei admite carteira de identidade, trabalho, profissional, passaporte, identificação funcional e outro documento público capaz de identificar. Documentos militares são equiparados para essa finalidade.",
+      "pontos": [
+        "Rol inclui passaporte e documento público apto.",
+        "Documento militar: equiparação expressa."
+      ],
+      "atencao": [
+        "Não restrinja a identificação civil apenas ao RG.",
+        "Documento privado qualquer não se torna documento público pela simples apresentação."
+      ],
+      "exemplo": "O investigado apresenta passaporte suficiente para identificá-lo: é uma das formas legais. Variação: Apresenta cartão privado sem aptidão e sem natureza pública: não se presume enquadramento no inciso VI.",
+      "prova": [
+        "Somente a carteira de identidade é admitida? Não; o artigo enumera outras formas.",
+        "Documentos de identificação militares são equiparados? Sim; o parágrafo único assim dispõe."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f9f12570-a841-59a0-b686-ec1fc8001429",
+        "content_sha256": "28bbee80fad9b111c1cbdc7eaf34902d28df335a5f47012239b20afae9b7753e",
+        "simples": "A identificação civil é atestada por qualquer dos seguintes documentos: carteira de identidade, carteira de trabalho, carteira profissional, passaporte, carteira de identificação funcional e outro documento público que permita a identificação do indiciado. Para as finalidades desta Lei, equiparam-se aos documentos de identificação civis os documentos de identificação militares.",
+        "pontos": [
+          "Documentos que atestam a identificação civil.",
+          "Rol com cláusula aberta: outro documento público.",
+          "Documentos militares são equiparados."
+        ],
+        "atencao": [
+          "Documento militar vale como civil para esta Lei."
+        ],
+        "exemplo": "A carteira de trabalho comprova a identificação civil do indiciado.",
+        "prova": [
+          "Assertiva que exclui a carteira funcional do rol erra: ela está prevista."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "1cfc49df-c6d4-5b54-870d-7a685c9e9365",
+      "content_sha256": "3a215deaf280bd74fa826c55bda59541f952164886f4a8fdc8816363621ea769",
+      "simples": "Mesmo com documento, podem justificar identificação criminal: rasura/falsificação; insuficiência; documentos conflitantes; essencialidade investigatória reconhecida judicialmente; registros de outros nomes; impossibilidade de identificação pelos caracteres do documento. A Lei 15.295/2025 acrescentou o recebimento judicial da denúncia por grave violência contra pessoa, crimes sexuais indicados, os arts. 240, 241 e 241-A a 241-C do ECA e organização criminosa do art. 2º da Lei 12.850 que use ou disponha de armas de fogo.",
+      "pontos": [
+        "Inciso IV: decisão da autoridade judiciária; não basta vontade policial.",
+        "Inciso VII: recebimento da denúncia e crimes expressamente indicados.",
+        "Juntar cópias dos documentos, mesmo insuficientes."
+      ],
+      "atencao": [
+        "Lei 15.295: publicada em 22/12/2025, vacância de 30 dias; a mudança já está em vigor na conferência de outubro de 2026.",
+        "Não transforme o inciso VII em regra para toda denúncia ou toda organização.",
+        "A hipótese de flagrante com coleta genética está no art. 5º, §2º."
+      ],
+      "exemplo": "O juiz recebe denúncia pelo art. 2º da Lei 12.850 e a organização dispõe de armas: examina-se a nova alínea d. Variação: Sem armas e sem outra exceção legal demonstrada, a denúncia por esse crime não preenche, sozinha, a alínea d.",
+      "prova": [
+        "O inciso IV permite dispensar o despacho judicial sobre a essencialidade? Não; a decisão judicial integra a hipótese.",
+        "Qualquer denúncia recebida autoriza a nova hipótese do inciso VII? Não; o rol e suas condições devem ser observados.",
+        "Cópias de documentos considerados insuficientes devem ser juntadas? Sim; o parágrafo único exige a juntada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "1cfc49df-c6d4-5b54-870d-7a685c9e9365",
+        "content_sha256": "3a215deaf280bd74fa826c55bda59541f952164886f4a8fdc8816363621ea769",
+        "simples": "Embora apresentado documento de identificação, poderá ocorrer identificação criminal quando o documento apresentar rasura ou indício de falsificação; for insuficiente para identificar cabalmente o indiciado; houver documentos distintos com informações conflitantes; a medida for essencial às investigações, segundo despacho do juiz, de ofício ou por representação da autoridade policial, do Ministério Público ou da defesa; constarem registros policiais de outros nomes ou qualificações; o estado de conservação ou a distância temporal ou de localidade da expedição impossibilitarem a identificação; ou houver recebimento da denúncia por crime praticado com grave violência contra a pessoa, crime contra a liberdade sexual ou sexual contra vulnerável, crimes contra criança ou adolescente previstos nos arts. 240, 241, 241-A, 241-B e 241-C do ECA, ou crime do art. 2º da Lei de Organizações Criminosas quando a organização utilizar armas de fogo. As cópias dos documentos apresentados serão juntadas aos autos.",
+        "pontos": [
+          "Rasura ou indício de falsificação.",
+          "Documento insuficiente ou conflitante.",
+          "Essencial às investigações, por despacho judicial.",
+          "Registros de outros nomes.",
+          "Documento antigo ou de difícil verificação.",
+          "Recebimento da denúncia por certos crimes graves (inciso VII)."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso VII incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "A decisão judicial do inciso IV pode ser de ofício ou por provocação."
+        ],
+        "exemplo": "Quem apresenta documento com sinais de falsificação pode ser submetido à identificação criminal.",
+        "prova": [
+          "Assertiva que dispensa decisão judicial no caso do inciso IV erra: exige despacho da autoridade judiciária."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "1d6b1146-3586-57f9-80c0-fcbad71a163c",
+      "content_sha256": "6adf4ff40259b96c63cccafa9861f27ab64d7cd2ec29aaf0410d4173dfd36da6",
+      "simples": "Quando a identificação criminal for necessária, a autoridade deve adotar providências para evitar constrangimento. A existência de fundamento para identificar não autoriza exposição vexatória ou tratamento humilhante.",
+      "pontos": [
+        "Identificar com necessidade e respeito à pessoa."
+      ],
+      "atencao": [
+        "Necessidade do procedimento não elimina proteção à dignidade."
+      ],
+      "exemplo": "A identificação é feita em ambiente e condições que preservam a pessoa, sem exibição desnecessária. Variação: A equipe expõe o identificado para humilhá-lo: a autorização do procedimento não legitima o constrangimento.",
+      "prova": [
+        "O procedimento autorizado permite constrangimento desnecessário? Não; o artigo impõe providências para evitá-lo.",
+        "O dever recai sobre a autoridade encarregada? Sim; ela deve adotar as providências necessárias."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1d6b1146-3586-57f9-80c0-fcbad71a163c",
+        "content_sha256": "6adf4ff40259b96c63cccafa9861f27ab64d7cd2ec29aaf0410d4173dfd36da6",
+        "simples": "Quando houver necessidade de identificação criminal, a autoridade encarregada tomará as providências necessárias para evitar o constrangimento do identificado.",
+        "pontos": [
+          "Dever de evitar constrangimento ao identificado."
+        ],
+        "atencao": [
+          "Proteção da dignidade durante a identificação."
+        ],
+        "exemplo": "A coleta de impressões é feita de forma reservada, sem exposição pública do indiciado.",
+        "prova": [
+          "Assertiva que autoriza a exposição do identificado ao público erra: a autoridade deve evitar constrangimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "995102db-207c-5fc4-98cb-651e22995488",
+      "content_sha256": "acf447c7c08eb7efa4ea479cd8de82f9744b970b1cef87f88d365dda19438bbc",
+      "simples": "A identificação criminal inclui impressões digitais e fotografia, juntadas aos autos indicados. Pela Lei 15.295/2025, inclui coleta biológica para perfil genético nas hipóteses IV e VII do art. 3º e também no flagrante dos crimes do inciso VII.",
+      "pontos": [
+        "Datiloscopia + fotografia; DNA nas hipóteses específicas.",
+        "Flagrante dos crimes do inciso VII: §2º próprio."
+      ],
+      "atencao": [
+        "Não ensine DNA obrigatório para qualquer identificação.",
+        "No flagrante previsto no §2º não se exige esperar o recebimento de denúncia para essa hipótese.",
+        "Mudança de 2025 com vacância de 30 dias, já transcorrida."
+      ],
+      "exemplo": "Uma pessoa é presa em flagrante por crime sexual contra vulnerável: o §2º prevê identificação com coleta genética. Variação: O fundamento é apenas rasura documental, sem incidência das hipóteses de coleta: rasura não torna, sozinha, todo DNA obrigatório pelo §1º.",
+      "prova": [
+        "A identificação criminal inclui datiloscopia e fotografia? Sim; ambas estão no caput.",
+        "O §2º exige esperar a denúncia no flagrante dos crimes referidos? Não; a própria hipótese é o flagrante.",
+        "DNA é obrigatório para toda identificação, independentemente da hipótese? Não; a lei estabelece hipóteses específicas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "995102db-207c-5fc4-98cb-651e22995488",
+        "content_sha256": "acf447c7c08eb7efa4ea479cd8de82f9744b970b1cef87f88d365dda19438bbc",
+        "simples": "A identificação criminal incluirá o processo datiloscópico e o fotográfico, que serão juntados aos autos da comunicação da prisão em flagrante, do inquérito policial ou de outra forma de investigação. Nas hipóteses dos incisos IV e VII do art. 3º, incluirá também a coleta de material biológico para a obtenção do perfil genético. Nos casos de prisão em flagrante pelos crimes do inciso VII do art. 3º, a identificação criminal também incluirá a coleta de material biológico para o perfil genético.",
+        "pontos": [
+          "Processo datiloscópico e fotográfico.",
+          "Juntada aos autos da prisão em flagrante ou do inquérito.",
+          "Perfil genético nos incisos IV e VII do art. 3º.",
+          "Perfil genético também na prisão em flagrante pelos crimes do inciso VII."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§1º e 2º incluídos pela Lei nº 13.964, de 2019.",
+          "O perfil genético não é regra geral: depende das hipóteses legais."
+        ],
+        "exemplo": "Em flagrante de crime sexual contra vulnerável, a identificação inclui coleta de material genético.",
+        "prova": [
+          "Assertiva que torna a coleta genética automática em toda identificação criminal erra: só nas hipóteses legais."
+        ],
+        "termos": [
+          {
+            "termo": "Datiloscópico",
+            "significado": "Relativo às impressões digitais."
+          }
+        ],
+        "remissoes": [
+          "Art. 5º-A",
+          "Art. 7º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5-a",
+      "unit_id": "91464c23-f942-5996-b516-8f8504d40910",
+      "content_sha256": "1a71d6f38512186a2beb5275e47de4541e2b551b423bc159981fa76e9a539399",
+      "simples": "O banco de perfis genéticos é gerenciado por unidade oficial de perícia criminal. Os dados são sigilosos; a lei proíbe revelar traços somáticos ou comportamentais, com a exceção expressa da determinação genética de gênero. Coincidências devem constar de laudo assinado por perito oficial habilitado.",
+      "pontos": [
+        "Unidade oficial de perícia; sigilo; laudo pericial.",
+        "Coincidência de perfil é elemento pericial, não condenação automática."
+      ],
+      "atencao": [
+        "Não confunda este banco com o multibiométrico do art. 7º-C.",
+        "Uso indevido pode gerar responsabilidade civil, penal e administrativa."
+      ],
+      "exemplo": "Uma coincidência é encontrada e documentada em laudo oficial, a ser examinada com as demais provas. Variação: Um servidor divulga dados genéticos para finalidade alheia à lei ou decisão judicial: o sigilo continua exigível.",
+      "prova": [
+        "A coincidência dispensa laudo de perito oficial? Não; o §3º exige esse laudo.",
+        "O banco pode revelar livremente traços comportamentais? Não; a lei contém proibição expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "91464c23-f942-5996-b516-8f8504d40910",
+        "content_sha256": "1a71d6f38512186a2beb5275e47de4541e2b551b423bc159981fa76e9a539399",
+        "simples": "Os dados relacionados à coleta do perfil genético deverão ser armazenados em banco de dados de perfis genéticos, gerenciado por unidade oficial de perícia criminal. As informações genéticas não poderão revelar traços somáticos ou comportamentais das pessoas, exceto determinação genética de gênero. Os dados terão caráter sigiloso, e quem permitir ou promover seu uso para fins diversos responderá civil, penal e administrativamente. As informações obtidas a partir da coincidência de perfis genéticos serão consignadas em laudo pericial firmado por perito oficial habilitado.",
+        "pontos": [
+          "Banco de perfis genéticos gerido por unidade oficial de perícia criminal.",
+          "Vedado revelar traços somáticos ou comportamentais, exceto o gênero.",
+          "Dados sigilosos.",
+          "Coincidência registrada em laudo de perito oficial."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012, com alterações posteriores.",
+          "Uso indevido gera responsabilização civil, penal e administrativa."
+        ],
+        "exemplo": "A coincidência entre vestígio da cena do crime e um perfil do banco gera laudo pericial.",
+        "prova": [
+          "Assertiva que permite revelar traços comportamentais do investigado erra: é vedado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "e436df62-90df-5234-a26b-e8d231d0a3a6",
+      "content_sha256": "e5184ef10beba5c77887fa83958249ef23f52432acdfd890b5b68e00dcfb0561",
+      "simples": "Antes do trânsito em julgado da condenação, não se pode mencionar a identificação criminal em atestados de antecedentes ou informações não destinadas ao juízo criminal. A regra trata do destinatário e do marco processual.",
+      "pontos": [
+        "Antes de condenação definitiva: vedação para atestados e informações externas ao juízo criminal."
+      ],
+      "atencao": [
+        "Identificação não equivale a condenação.",
+        "O dispositivo não proíbe encaminhar informação pertinente ao juízo criminal."
+      ],
+      "exemplo": "Um atestado destinado a empregador não registra a identificação criminal de investigado sem condenação definitiva. Variação: A informação é destinada ao juízo criminal: não se aplica indistintamente a mesma vedação externa.",
+      "prova": [
+        "Identificação criminal é prova de condenação definitiva? Não; são fatos distintos.",
+        "A regra proíbe indistintamente toda informação ao juízo criminal? Não; o texto diferencia esse destinatário."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e436df62-90df-5234-a26b-e8d231d0a3a6",
+        "content_sha256": "e5184ef10beba5c77887fa83958249ef23f52432acdfd890b5b68e00dcfb0561",
+        "simples": "É vedado mencionar a identificação criminal do indiciado em atestados de antecedentes ou em informações não destinadas ao juízo criminal, antes do trânsito em julgado da sentença condenatória.",
+        "pontos": [
+          "Vedada a menção da identificação criminal em atestados de antecedentes.",
+          "Vale antes do trânsito em julgado da condenação."
+        ],
+        "atencao": [
+          "Proteção da presunção de inocência."
+        ],
+        "exemplo": "O atestado de antecedentes entregue ao empregador não pode citar a identificação criminal de indiciado.",
+        "prova": [
+          "Assertiva que autoriza a menção em atestados antes do trânsito em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "08ed37be-1e93-52f0-aad0-74b0131736f6",
+      "content_sha256": "4d3966b96da82ce0c81dc7eaaec33a992f828e5c1a69836238b67ed6dd540050",
+      "simples": "Sem denúncia, com rejeição ou absolvição, o interessado pode requerer retirada da identificação fotográfica após arquivamento definitivo ou trânsito em julgado, apresentando prova de identificação civil.",
+      "pontos": [
+        "Retirada de fotografia: requerimento + marco definitivo + prova civil."
+      ],
+      "atencao": [
+        "Não confunda retirada fotográfica com exclusão do perfil genético do art. 7º-A.",
+        "A mera notícia de investigação em curso não é o marco definitivo exigido."
+      ],
+      "exemplo": "Após absolvição definitiva, o réu comprova identificação civil e requer a retirada da foto. Variação: Pede exclusão de DNA: deve-se examinar o art. 7º-A, não substituir sua disciplina pela da fotografia.",
+      "prova": [
+        "Este artigo trata de retirada da fotografia? Sim; esse é seu objeto.",
+        "A retirada prevista independe de comprovação de identificação civil? Não; a prova é exigida."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "08ed37be-1e93-52f0-aad0-74b0131736f6",
+        "content_sha256": "4d3966b96da82ce0c81dc7eaaec33a992f828e5c1a69836238b67ed6dd540050",
+        "simples": "No caso de não oferecimento da denúncia, ou sua rejeição, ou absolvição, é facultado ao indiciado ou ao réu, após o arquivamento definitivo do inquérito ou o trânsito em julgado da sentença, requerer a retirada da identificação fotográfica do inquérito ou processo, desde que apresente provas de sua identificação civil.",
+        "pontos": [
+          "Direito de pedir a retirada da fotografia.",
+          "Hipóteses: sem denúncia, rejeição ou absolvição.",
+          "Após arquivamento definitivo ou trânsito em julgado.",
+          "Exige prova da identificação civil."
+        ],
+        "atencao": [
+          "A retirada alcança a identificação FOTOGRÁFICA."
+        ],
+        "exemplo": "O absolvido pede a retirada de sua foto do processo, comprovando sua identidade civil.",
+        "prova": [
+          "Assertiva que permite a retirada da foto antes do arquivamento definitivo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-a",
+      "unit_id": "553c1472-e625-50f4-b9bd-cb3090380b1a",
+      "content_sha256": "0b9b8810f28cfdd36b8129d6db6a26f1aad0a8398fb7a8073b3dcc7809eb4298",
+      "simples": "Perfis genéticos são excluídos em caso de absolvição; em caso de condenação, a exclusão depende de requerimento após vinte anos do cumprimento da pena. Esse marco não é a coleta, o início da pena ou a data da sentença.",
+      "pontos": [
+        "Absolvição; ou condenação + requerimento + 20 anos após cumprimento."
+      ],
+      "atencao": [
+        "Fotografia, perfil genético e dados multibiométricos têm regras distintas.",
+        "Não troque cumprimento da pena por data da coleta."
+      ],
+      "exemplo": "O condenado terminou a pena: para esta hipótese de exclusão, conta-se o prazo legal a partir do cumprimento. Variação: A amostra foi coletada há vinte anos, mas a pena terminou recentemente: a data da coleta não preenche o prazo.",
+      "prova": [
+        "Os vinte anos são contados da coleta? Não; o inciso II usa o cumprimento da pena.",
+        "Na hipótese de condenação, há exigência de requerimento? Sim; está expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "553c1472-e625-50f4-b9bd-cb3090380b1a",
+        "content_sha256": "0b9b8810f28cfdd36b8129d6db6a26f1aad0a8398fb7a8073b3dcc7809eb4298",
+        "simples": "A exclusão dos perfis genéticos dos bancos de dados ocorrerá no caso de absolvição do acusado ou, no caso de condenação, mediante requerimento, após decorridos 20 anos do cumprimento da pena.",
+        "pontos": [
+          "Absolvição: exclusão do perfil genético.",
+          "Condenação: exclusão a requerimento, após vinte anos do cumprimento da pena."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012.",
+          "Prazo de 20 anos para o condenado."
+        ],
+        "exemplo": "O condenado pode pedir a exclusão do perfil depois de vinte anos do cumprimento da pena.",
+        "prova": [
+          "Assertiva que fixa em 5 anos o prazo para o condenado pedir a exclusão erra: são 20 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-b",
+      "unit_id": "d49636f8-33b4-5a08-9e1e-fb76a5f98e07",
+      "content_sha256": "9897b30e3776d878cae63b35f7fee0366cc9d591ff36fcc67ab3a5e2bf503c74",
+      "simples": "O perfil genético fica em banco sigiloso, conforme regulamentação do Executivo. Regulamentar a operação não torna os dados públicos nem permite uso irrestrito.",
+      "pontos": [
+        "Banco sigiloso; regulamento do Poder Executivo."
+      ],
+      "atencao": [
+        "Ler em conjunto com os limites e responsabilidades do art. 5º-A."
+      ],
+      "exemplo": "O órgão organiza o armazenamento conforme regulamento e protege o acesso. Variação: Pretende divulgar a base ao público por existir regulamento: a regulamentação não afasta o sigilo.",
+      "prova": [
+        "O regulamento torna o banco público? Não; o artigo exige sigilo.",
+        "A regulamentação cabe ao Executivo? Sim; esse é o poder indicado."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d49636f8-33b4-5a08-9e1e-fb76a5f98e07",
+        "content_sha256": "9897b30e3776d878cae63b35f7fee0366cc9d591ff36fcc67ab3a5e2bf503c74",
+        "simples": "A identificação do perfil genético será armazenada em banco de dados sigiloso, conforme regulamento a ser expedido pelo Poder Executivo.",
+        "pontos": [
+          "Armazenamento em banco de dados sigiloso.",
+          "Regulamento do Poder Executivo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012."
+        ],
+        "exemplo": "O perfil genético fica em banco sigiloso regulamentado pelo Executivo.",
+        "prova": [
+          "Assertiva que torna público o banco de perfis genéticos erra: é sigiloso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-c",
+      "unit_id": "0b42ce26-fc10-5015-8038-48c93c616c62",
+      "content_sha256": "e786284fa21f913395197449798a8f172905a046cb199213008740a3339cefb1",
+      "simples": "O Banco Nacional Multibiométrico e de Impressões Digitais, no Ministério da Justiça e Segurança Pública, auxilia investigações federais, estaduais e distritais. Pode armazenar impressões e, quando possível, íris, face e voz. Integração exige acordo ou convênio; bancos civis, administrativos e eleitorais compartilham somente impressões digitais e informações necessárias à identificação do titular.",
+      "pontos": [
+        "Dados sigilosos; comercialização total ou parcial proibida.",
+        "Coincidência: laudo de perito oficial habilitado.",
+        "Polícia e MP podem requerer acesso ao juiz em inquérito ou ação penal instaurados.",
+        "Registros de presos provisórios ou definitivos podem ser colhidos se não extraídos anteriormente."
+      ],
+      "atencao": [
+        "Interoperabilidade não autoriza copiar irrestritamente todo banco eleitoral.",
+        "Não confunda biometria de íris/voz com perfil genético.",
+        "Uso fora da lei ou decisão judicial gera responsabilidades nas três esferas."
+      ],
+      "exemplo": "A unidade celebra convênio e limita o compartilhamento civil às impressões e informações identificadoras. Variação: A proposta vende parte da base ou inclui indiscriminadamente voz do cadastro civil: não atende aos limites legais.",
+      "prova": [
+        "É permitida a venda de parte da base? Não; a proibição abrange comercialização total e parcial.",
+        "O compartilhamento civil autoriza todos os dados de íris, face e voz? Não; o §6º limita a impressões digitais e informações necessárias à identificação.",
+        "O banco serve somente a investigação federal? Não; abrange também investigações estaduais e distritais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0b42ce26-fc10-5015-8038-48c93c616c62",
+        "content_sha256": "e786284fa21f913395197449798a8f172905a046cb199213008740a3339cefb1",
+        "simples": "Fica autorizada a criação, no Ministério da Justiça e Segurança Pública, do Banco Nacional Multibiométrico e de Impressões Digitais, para armazenar dados de registros biométricos, de impressões digitais e, quando possível, de íris, face e voz, para subsidiar investigações criminais federais, estaduais ou distritais. É integrado pelos registros colhidos em investigações ou na identificação criminal, e podem ser colhidos registros de presos provisórios ou definitivos. Outros bancos podem integrar-se ou interoperar mediante acordo ou convênio. Os dados são sigilosos, é vedada a comercialização da base e as coincidências constam de laudo pericial. A autoridade policial e o Ministério Público podem requerer ao juiz o acesso no caso de inquérito ou ação penal instaurados.",
+        "pontos": [
+          "Banco no Ministério da Justiça e Segurança Pública.",
+          "Armazena biometria, digitais e, quando possível, íris, face e voz.",
+          "Integração por acordo ou convênio.",
+          "Dados sigilosos, sem comercialização.",
+          "Acesso por requerimento ao juiz."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "Integração com bancos civis limitada às digitais e à identificação."
+        ],
+        "exemplo": "A polícia pede ao juiz acesso ao banco para identificar um suspeito em inquérito.",
+        "prova": [
+          "Assertiva que permite a venda da base do banco biométrico erra: é vedada a comercialização."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "6c16b1c7-946d-5a0b-970d-69393f51de85",
+      "content_sha256": "208be7c917197704a6f5e880d3d2574f4f067b3b9793e4972a0271b8ff081cb0",
+      "simples": "A Lei 12.037 entrou em vigor na publicação. Isso não elimina as vacâncias próprias das leis modificadoras: a Lei 15.295/2025 estabeleceu trinta dias após sua publicação oficial.",
+      "pontos": [
+        "Vigência original imediata; alteração de 2025 com prazo próprio."
+      ],
+      "atencao": [
+        "Não aplique automaticamente a cláusula original a toda mudança posterior."
+      ],
+      "exemplo": "Uma questão pergunta a regra original: entrada em vigor na publicação. Variação: Pergunta a alteração genética de 2025: consulte os trinta dias do art. 3º da Lei 15.295.",
+      "prova": [
+        "Toda alteração posterior vigora imediatamente por causa deste art. 8º? Não; cada ato modificador pode ter prazo próprio.",
+        "A vigência original foi na publicação? Sim; o artigo assim prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "6c16b1c7-946d-5a0b-970d-69393f51de85",
+        "content_sha256": "208be7c917197704a6f5e880d3d2574f4f067b3b9793e4972a0271b8ff081cb0",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer no dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "5078d89c-b1e1-5cb2-8759-656028247af9",
+      "content_sha256": "fa3167937e76e2865d211267bb2002de14259e405c101ec50863f77b862f06d3",
+      "simples": "A Lei 12.037 revogou expressamente a Lei 10.054/2000. Questões que atribuem vigência atual à lei anterior devem considerar essa revogação e as alterações posteriores da lei vigente.",
+      "pontos": [
+        "Revogação expressa: Lei 10.054/2000."
+      ],
+      "atencao": [
+        "Não confunda lei revogada com revogação da própria Lei 12.037."
+      ],
+      "exemplo": "O material recomenda usar a Lei 10.054 como disciplina vigente: é necessário corrigir a referência. Variação: A pergunta é histórica, anterior à revogação: o marco temporal precisa ser respeitado.",
+      "prova": [
+        "O artigo revoga a própria Lei 12.037? Não; revoga a Lei 10.054/2000.",
+        "A lei anterior pode ser apresentada como vigente hoje sem ressalva? Não; a revogação é expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5078d89c-b1e1-5cb2-8759-656028247af9",
+        "content_sha256": "fa3167937e76e2865d211267bb2002de14259e405c101ec50863f77b862f06d3",
+        "simples": "Revoga-se a Lei nº 10.054, de 7 de dezembro de 2000, que tratava anteriormente da identificação criminal.",
+        "pontos": [
+          "Revoga a lei anterior sobre identificação criminal."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A nova lei substituiu a lei de dois mil.",
+        "prova": [
+          "Assertiva que mantém em vigor a lei anterior erra: foi revogada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    }
+  ]
+}

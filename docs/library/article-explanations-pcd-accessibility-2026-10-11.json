@@ -1,0 +1,1116 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-11T23:59:28.355963+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 21,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-2-a",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45",
+        "art-46",
+        "art-47",
+        "art-48",
+        "art-49",
+        "art-50",
+        "art-51",
+        "art-52",
+        "art-53",
+        "art-54",
+        "art-55",
+        "art-56",
+        "art-57",
+        "art-58",
+        "art-59",
+        "art-60"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2-a",
+      "unit_id": "4e653c38-7480-557b-9a83-88534c5bb05a",
+      "content_sha256": "cbb175888bde1706668ae9ace4d7fb082ef010c2c164b31a3b1385f4c615f66e",
+      "simples": "O cordão com desenhos de girassóis identifica deficiências ocultas. Seu uso é opcional: a ausência não retira direitos. Mesmo com o cordão, documento comprobatório pode ser solicitado pelo atendente ou pela autoridade competente.",
+      "pontos": [
+        "Uso opcional; ausência não prejudica direitos.",
+        "Símbolo não dispensa prova documental quando solicitada."
+      ],
+      "atencao": [
+        "Incluído pela Lei 14.624/2023. Não transforme o símbolo em requisito obrigatório nem em documento suficiente em qualquer situação."
+      ],
+      "exemplo": "A pessoa não utiliza o cordão, mas comprova sua deficiência: a ausência do símbolo não elimina os direitos legais. Variação: Ela usa o cordão e recebe solicitação de documento: o §2º permite a solicitação, sem invalidar o símbolo.",
+      "prova": [
+        "O uso do cordão é opcional e sua ausência não prejudica os direitos previstos? Sim; o §1º assegura essa opção, e o §2º preserva a possível exigência documental."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4e653c38-7480-557b-9a83-88534c5bb05a",
+        "content_sha256": "cbb175888bde1706668ae9ace4d7fb082ef010c2c164b31a3b1385f4c615f66e",
+        "simples": "É instituído o cordão de fita com desenhos de girassóis como símbolo nacional de identificação de pessoas com deficiências ocultas. O uso do símbolo é opcional, e sua ausência não prejudica o exercício de direitos. A utilização não dispensa a apresentação de documento comprobatório da deficiência, se solicitado pelo atendente ou autoridade competente.",
+        "pontos": [
+          "Cordão de girassóis: símbolo das deficiências ocultas.",
+          "Uso opcional.",
+          "Não dispensa o documento comprobatório."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Uso OPCIONAL; ausência não prejudica direitos."
+        ],
+        "exemplo": "A pessoa com autismo usa o cordão, mas pode ser solicitada a apresentar o laudo.",
+        "prova": [
+          "Assertiva que torna obrigatório o cordão de girassol para exercer direitos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "a79a8e4d-c29d-5c34-8fbd-43c4620d2e02",
+      "content_sha256": "44650dfed398778b3fa63bfeccca9267ea8d9bb70d9b92896a19d1e4c7dedc9c",
+      "simples": "A pessoa com deficiência segurada do RGPS tem direito à aposentadoria conforme a LC 142/2013. Este artigo remete à lei complementar: não estabelece sozinho idade, tempo, grau de deficiência ou todos os requisitos do benefício.",
+      "pontos": [
+        "Destinatário: segurado do RGPS.",
+        "Requisitos específicos: LC 142/2013."
+      ],
+      "atencao": [
+        "Não confunda aposentadoria contributiva com o BPC do art. 40. Os requisitos completos da LC 142 devem ser estudados na fonte própria; não se presume concessão automática."
+      ],
+      "exemplo": "Um segurado consulta as condições de aposentadoria da pessoa com deficiência: deve analisar a LC 142, e não apenas o art. 41. Variação: A pessoa não é segurada do RGPS: este artigo não permite concluir que recebeu automaticamente uma aposentadoria contributiva.",
+      "prova": [
+        "O art. 41 dispensa os requisitos previstos na LC 142/2013? Não; ele remete expressamente à lei complementar."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a79a8e4d-c29d-5c34-8fbd-43c4620d2e02",
+        "content_sha256": "44650dfed398778b3fa63bfeccca9267ea8d9bb70d9b92896a19d1e4c7dedc9c",
+        "simples": "A pessoa com deficiência segurada do Regime Geral de Previdência Social tem direito à aposentadoria nos termos da Lei Complementar nº 142, de 8 de maio de 2013.",
+        "pontos": [
+          "Aposentadoria da pessoa com deficiência segurada do RGPS, conforme a LC nº 142."
+        ],
+        "atencao": [
+          "Regime próprio: Lei Complementar nº 142, de 2013."
+        ],
+        "exemplo": "O segurado com deficiência pode se aposentar com regras diferenciadas.",
+        "prova": [
+          "Assertiva que aplica as regras comuns de aposentadoria à pessoa com deficiência sem diferenciação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "e78e57c2-e707-5c45-a37c-63d97a0c767e",
+      "content_sha256": "62067f2b05d563ec66d5edab00298aaae8ecf567bd63f8fe936c9c2bc131ec2d",
+      "simples": "Cultura, esporte, turismo e lazer devem ser acessíveis em igualdade de oportunidades. O acesso inclui obras, programas, eventos e patrimônio cultural. Não se pode recusar formato acessível alegando propriedade intelectual; a superação de barreiras observa também proteção ambiental e patrimonial.",
+      "pontos": [
+        "Obras e eventos em formato acessível.",
+        "Propriedade intelectual não justifica recusa do formato acessível.",
+        "Patrimônio: acessibilidade articulada com preservação."
+      ],
+      "atencao": [
+        "Lei 15.249/2025: o §3º determina incentivo público à comunicação aumentativa e alternativa em espaços culturais. Incentivar não significa declarar automaticamente cumprida toda acessibilidade."
+      ],
+      "exemplo": "Um museu recebe visitante com necessidades complexas de comunicação e incorpora recursos que permitem interação com a exposição. Variação: O local é patrimônio histórico: devem ser buscadas soluções de acesso que observem também as normas de preservação, sem negar o direito por esse motivo.",
+      "prova": [
+        "O poder público deve incentivar comunicação aumentativa e alternativa nos espaços culturais previstos no §3º? Sim; essa medida foi incluída pela Lei 15.249/2025."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e78e57c2-e707-5c45-a37c-63d97a0c767e",
+        "content_sha256": "62067f2b05d563ec66d5edab00298aaae8ecf567bd63f8fe936c9c2bc131ec2d",
+        "simples": "A pessoa com deficiência tem direito à cultura, ao esporte, ao turismo e ao lazer em igualdade de oportunidades, sendo-lhe garantido o acesso a bens culturais em formato acessível; a programas de televisão, cinema, teatro e atividades culturais e desportivas em formato acessível; e a monumentos e espaços culturais. É vedada a recusa de oferta de obra intelectual em formato acessível, sob qualquer argumento, inclusive a proteção da propriedade intelectual. O poder público deve eliminar barreiras ao patrimônio cultural, observadas as normas de proteção, e incentivará museus e exposições a empregar comunicação aumentativa e alternativa.",
+        "pontos": [
+          "Acesso à cultura, esporte, turismo e lazer.",
+          "Formato acessível.",
+          "Vedada a recusa de obra em formato acessível, mesmo por direito autoral."
+        ],
+        "atencao": [
+          "Direito autoral NÃO justifica a recusa de formato acessível."
+        ],
+        "exemplo": "A editora não pode recusar a versão acessível de um livro alegando direito autoral.",
+        "prova": [
+          "Assertiva que admite a recusa de formato acessível com base na propriedade intelectual erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 43"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "8ab22e02-2fcc-59f2-ba81-233a2c73c67b",
+      "content_sha256": "961806f39432194ad14388d0a1fe3b6f4e4da2afc82ccf7f9bf72a6d462dd620",
+      "simples": "O poder público promove participação e protagonismo em atividades artísticas, intelectuais, culturais, esportivas e recreativas. Deve incentivar recursos e formação, assegurar acessibilidade em eventos e serviços e garantir participação inclusive no sistema escolar.",
+      "pontos": [
+        "Participação e protagonismo.",
+        "Locais de eventos e serviços acessíveis.",
+        "Igualdade também no sistema escolar."
+      ],
+      "atencao": [
+        "Acessibilidade não se limita à entrada física: os serviços envolvidos na organização também estão abrangidos."
+      ],
+      "exemplo": "Uma competição escolar adapta seu acesso e suas atividades para permitir participação em igualdade. Variação: O prédio é acessível, mas o serviço de inscrição exclui a pessoa: ainda há um aspecto do dever de acessibilidade a corrigir.",
+      "prova": [
+        "A participação prevista no artigo inclui atividades no sistema escolar? Sim; o inciso III inclui expressamente esse contexto."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8ab22e02-2fcc-59f2-ba81-233a2c73c67b",
+        "content_sha256": "961806f39432194ad14388d0a1fe3b6f4e4da2afc82ccf7f9bf72a6d462dd620",
+        "simples": "O poder público deve promover a participação da pessoa com deficiência em atividades artísticas, intelectuais, culturais, esportivas e recreativas, com vistas ao seu protagonismo, incentivando a provisão de instrução, treinamento e recursos adequados; assegurando acessibilidade nos locais de eventos e nos serviços; e assegurando a participação em jogos e atividades recreativas, esportivas, de lazer, culturais e artísticas, inclusive no sistema escolar.",
+        "pontos": [
+          "Participação em atividades artísticas, esportivas e culturais.",
+          "Acessibilidade nos locais de eventos.",
+          "Participação no sistema escolar."
+        ],
+        "atencao": [
+          "Foco no PROTAGONISMO."
+        ],
+        "exemplo": "A escola inclui o aluno com deficiência nas atividades esportivas.",
+        "prova": [
+          "Assertiva que restringe o direito ao esporte ao nível competitivo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "c47fcb74-9b1a-5c65-93d3-b99a5725d0a9",
+      "content_sha256": "e3c9b024a3f25daea70846c00ff62998a8a3dc1d0812fd28acc2fd0e47b44e63",
+      "simples": "Espaços de eventos reservam assentos e áreas conforme lotação e regulamento, distribuídos com boa visibilidade, sem segregação nem bloqueio das saídas. Deve haver acomodação para pelo menos um acompanhante, rotas de emergência acessíveis e ingresso sem preço superior por deficiência. Cinemas oferecem recursos de acessibilidade em todas as sessões.",
+      "pontos": [
+        "Reserva distribuída, sem segregação.",
+        "No mínimo um acompanhante; proximidade familiar e comunitária.",
+        "Cinema: todas as sessões; ingresso sem acréscimo por deficiência."
+      ],
+      "atencao": [
+        "Ocupar excepcionalmente lugares reservados exige ausência de procura comprovada e observância do regulamento. O artigo não fixa um único percentual geral para qualquer recinto."
+      ],
+      "exemplo": "O teatro distribui lugares acessíveis em diferentes setores, com acompanhante e saídas livres. Variação: Há procura por lugares reservados: não se aplica automaticamente a exceção de ocupação por outras pessoas.",
+      "prova": [
+        "O cinema pode oferecer recursos de acessibilidade apenas em algumas sessões? Não; o §6º exige recursos em todas as sessões."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c47fcb74-9b1a-5c65-93d3-b99a5725d0a9",
+        "content_sha256": "e3c9b024a3f25daea70846c00ff62998a8a3dc1d0812fd28acc2fd0e47b44e63",
+        "simples": "Nos teatros, cinemas, auditórios, estádios, ginásios e locais de espetáculos e conferências serão reservados espaços livres e assentos para a pessoa com deficiência, de acordo com a capacidade de lotação, conforme regulamento. Devem ser distribuídos em locais diversos, de boa visibilidade, em todos os setores, próximos aos corredores e sinalizados, evitando áreas segregadas. Se não houver comprovada procura, podem, excepcionalmente, ser ocupados por pessoas sem deficiência. Devem acomodar, no mínimo, 1 acompanhante. Deve haver rotas de fuga e saídas de emergência acessíveis.",
+        "pontos": [
+          "Espaços e assentos reservados.",
+          "Distribuídos em todos os setores, sem segregação.",
+          "Pelo menos 1 acompanhante.",
+          "Rotas de fuga acessíveis."
+        ],
+        "atencao": [
+          "Vedadas áreas SEGREGADAS.",
+          "Mínimo de 1 acompanhante."
+        ],
+        "exemplo": "O estádio distribui os assentos acessíveis por todos os setores.",
+        "prova": [
+          "Assertiva que permite concentrar os assentos acessíveis em um só setor erra: evitam-se áreas segregadas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "45b7915c-96bb-5011-8a92-f661b5a8ff07",
+      "content_sha256": "3d6cfc3d507d74946fdd33bd3939249f2ecf95d88291c076189bdce8ccb4950b",
+      "simples": "Hotéis, pousadas e similares observam desenho universal e acessibilidade. Para estabelecimentos já existentes, a lei fixa pelo menos 10% de dormitórios acessíveis, com no mínimo uma unidade em rota acessível. A exceção por riscos estruturais exige laudo técnico e renovação a cada cinco anos.",
+      "pontos": [
+        "Existentes: pelo menos 10%, mínimo de um dormitório.",
+        "Dormitórios em rotas acessíveis.",
+        "Exceção estrutural comprovada; laudo renovado a cada cinco anos."
+      ],
+      "atencao": [
+        "Lei 14.978/2024 acrescentou o §3º: dispensa apenas a exigência percentual na impossibilidade técnica por riscos estruturais, não toda acessibilidade. O Decreto 9.296/2018 diferencia projetos novos e estabelecimentos existentes; não aplique os 10% indistintamente a todo projeto."
+      ],
+      "exemplo": "Uma pousada existente tem vinte dormitórios: a regra percentual corresponde a dois acessíveis, sem ignorar os demais requisitos. Variação: Alega custo, mas não comprova riscos estruturais por laudo: essa alegação não atende à exceção do §3º.",
+      "prova": [
+        "A dispensa do percentual por risco estrutural exige laudo renovado a cada cinco anos? Sim; o §3º exige comprovação técnica e essa renovação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9296.htm"
+      ],
+      "expected": {
+        "unit_id": "45b7915c-96bb-5011-8a92-f661b5a8ff07",
+        "content_sha256": "3d6cfc3d507d74946fdd33bd3939249f2ecf95d88291c076189bdce8ccb4950b",
+        "simples": "Os hotéis, pousadas e similares devem ser construídos observando os princípios do desenho universal, além de adotar todos os meios de acessibilidade. Os estabelecimentos já existentes deverão disponibilizar, pelo menos, 10% de seus dormitórios acessíveis, garantida no mínimo 1 unidade, localizados em rotas acessíveis. Os que, por impossibilidade técnica decorrente de riscos estruturais, não possam cumprir o percentual ficam dispensados mediante laudo técnico estrutural, renovado a cada 5 anos.",
+        "pontos": [
+          "Hotéis novos: desenho universal.",
+          "Existentes: pelo menos 10% de dormitórios acessíveis.",
+          "Dispensa por laudo estrutural renovado a cada 5 anos."
+        ],
+        "atencao": [
+          "Mínimo de 10% dos dormitórios, e ao menos 1.",
+          "Laudo renovado a cada 5 anos."
+        ],
+        "exemplo": "O hotel antigo tem 10% de quartos acessíveis, ou laudo que o dispense.",
+        "prova": [
+          "Assertiva que fixa em 2% os dormitórios acessíveis erra: são 10%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-46",
+      "unit_id": "ab2ea9d4-1820-52b3-869f-92f0cc78f9a4",
+      "content_sha256": "8a92062c49d9842c8046a6f1e18e2a878c85470a1b0d8735180c7f4de271a53b",
+      "simples": "Transporte e mobilidade são garantidos mediante identificação e eliminação de barreiras. O serviço coletivo inclui veículos, terminais, estações, paradas, sistema viário e a própria prestação. Outorga e renovação também se submetem à acessibilidade; símbolo internacional no veículo depende de certificação pelo gestor público.",
+      "pontos": [
+        "Acessibilidade abrange toda a cadeia do serviço.",
+        "Outorga e renovação sujeitas à lei.",
+        "Símbolo: certificação pelo gestor responsável."
+      ],
+      "atencao": [
+        "Não limite a obrigação ao ônibus nem confunda símbolo adesivado com certificação efetiva."
+      ],
+      "exemplo": "O ônibus é acessível, mas a parada impede embarque: a análise deve abranger também o ponto e o serviço. Variação: A empresa cola o símbolo sem certificação do gestor: o §3º não foi atendido apenas pelo adesivo.",
+      "prova": [
+        "O sistema de transporte coletivo inclui pontos de parada e prestação do serviço? Sim; o §1º os inclui, além dos veículos e demais estruturas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ab2ea9d4-1820-52b3-869f-92f0cc78f9a4",
+        "content_sha256": "8a92062c49d9842c8046a6f1e18e2a878c85470a1b0d8735180c7f4de271a53b",
+        "simples": "O direito ao transporte e à mobilidade da pessoa com deficiência ou com mobilidade reduzida será assegurado em igualdade de oportunidades, por meio da identificação e eliminação de todos os obstáculos e barreiras. Consideram-se integrantes dos serviços de transporte coletivo terrestre, aquaviário e aéreo os veículos, terminais, estações, pontos de parada, sistema viário e a prestação do serviço. Sujeitam-se à Lei a outorga, concessão, permissão, autorização, renovação ou habilitação de linhas e serviços. Para o símbolo internacional de acesso nos veículos, as empresas dependem de certificação de acessibilidade do gestor público.",
+        "pontos": [
+          "Eliminação de barreiras no transporte.",
+          "Veículos, terminais, estações e sistema viário.",
+          "Concessões sujeitas à acessibilidade.",
+          "Certificação para o símbolo de acesso."
+        ],
+        "atencao": [
+          "Símbolo de acesso depende de CERTIFICAÇÃO do gestor público."
+        ],
+        "exemplo": "A concessão de linhas de ônibus exige o cumprimento das regras de acessibilidade.",
+        "prova": [
+          "Assertiva que permite colocar o símbolo de acesso sem certificação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-47",
+      "unit_id": "f360c0d6-6b14-5501-83d1-365e30f6f649",
+      "content_sha256": "edc2126347f20c4591cf5d146d6648a08feacb46f0395f0cb54d4c37511da94f",
+      "simples": "Estacionamentos abertos ao público, de uso público ou privado coletivo e vias públicas reservam 2% das vagas, com no mínimo uma, próximas aos acessos de pedestres. Destinam-se a veículos que transportem pessoa com deficiência com comprometimento de mobilidade, identificados por credencial. A credencial vincula-se à pessoa e vale nacionalmente.",
+      "pontos": [
+        "2% do total; mínimo de uma vaga.",
+        "Credencial vinculada à pessoa, não ao carro.",
+        "Comprometimento de mobilidade; sinalização e localização adequadas."
+      ],
+      "atencao": [
+        "Não confunda com a reserva de 5% do Estatuto da Pessoa Idosa. A remissão ao CTB art. 181, XX foi atualizada pela Lei 13.281/2016; credenciais e fiscalização dependem também da regulamentação de trânsito."
+      ],
+      "exemplo": "Um estacionamento com cem vagas reserva duas vagas nas condições legais para esse público. Variação: A pessoa é passageira de outro veículo: o vínculo da credencial é com ela, não permanentemente com um único automóvel.",
+      "prova": [
+        "A credencial fica vinculada exclusivamente ao veículo original? Não; o §4º a vincula à pessoa com deficiência com comprometimento de mobilidade e garante validade nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "CTB art. 181, XX",
+        "Estatuto da Pessoa Idosa art. 41"
+      ],
+      "expected": {
+        "unit_id": "f360c0d6-6b14-5501-83d1-365e30f6f649",
+        "content_sha256": "edc2126347f20c4591cf5d146d6648a08feacb46f0395f0cb54d4c37511da94f",
+        "simples": "Em todas as áreas de estacionamento aberto ao público, de uso público ou privado de uso coletivo e em vias públicas, devem ser reservadas vagas próximas aos acessos de circulação de pedestres, sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade. As vagas equivalem a 2% do total, garantida no mínimo 1. Os veículos devem exibir a credencial de beneficiário, fornecida pelos órgãos de trânsito. A utilização indevida sujeita o infrator às sanções do Código de Trânsito. A credencial é vinculada à pessoa e válida em todo o território nacional.",
+        "pontos": [
+          "Vagas reservadas: 2% do total, no mínimo 1.",
+          "Credencial de beneficiário.",
+          "Uso indevido: sanções do CTB.",
+          "Credencial vinculada à pessoa e nacional."
+        ],
+        "atencao": [
+          "Vagas de PCD: 2%; idosos: 5% (Estatuto da Pessoa Idosa).",
+          "A credencial é da PESSOA, e vale em todo o território nacional."
+        ],
+        "exemplo": "A pessoa com deficiência usa a credencial em qualquer cidade do País.",
+        "prova": [
+          "Assertiva que fixa em 5% as vagas reservadas a pessoas com deficiência erra: são 2%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Trânsito Brasileiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-48",
+      "unit_id": "2b7ab868-fc40-534c-ba62-1c78db6050ee",
+      "content_sha256": "9f9156d92b924d34f05e5e2a6f77a0c608e650c747e4b2b8b8bf83eeba943f8a",
+      "simples": "Veículos coletivos terrestres, aquaviários e aéreos e suas estruturas em operação no País devem ser acessíveis. A comunicação informa todos os pontos do itinerário; embarque e desembarque asseguram prioridade e segurança. A colocação do símbolo de acesso depende de certificação pública.",
+      "pontos": [
+        "Três modalidades de transporte.",
+        "Comunicação sobre todos os pontos do itinerário.",
+        "Prioridade e segurança no embarque e desembarque."
+      ],
+      "atencao": [
+        "A obrigação não se restringe ao transporte terrestre nem se cumpre só com adaptação física sem informação acessível."
+      ],
+      "exemplo": "Uma linha aquaviária fornece acesso ao terminal e informação acessível sobre as paradas. Variação: A informação não identifica todos os pontos do itinerário: falta cumprir a exigência específica do §1º.",
+      "prova": [
+        "A comunicação acessível pode omitir parte dos pontos do itinerário? Não; o §1º exige informações sobre todos os pontos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2b7ab868-fc40-534c-ba62-1c78db6050ee",
+        "content_sha256": "9f9156d92b924d34f05e5e2a6f77a0c608e650c747e4b2b8b8bf83eeba943f8a",
+        "simples": "Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, estações, portos e terminais em operação devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas. Devem dispor de sistema de comunicação acessível sobre os pontos do itinerário. São asseguradas prioridade e segurança nos procedimentos de embarque e desembarque. Para o símbolo internacional de acesso, as empresas dependem da certificação do gestor público.",
+        "pontos": [
+          "Veículos, terminais e portos acessíveis.",
+          "Comunicação acessível sobre o itinerário.",
+          "Prioridade e segurança no embarque e desembarque."
+        ],
+        "atencao": [
+          "Certificação de acessibilidade para o símbolo."
+        ],
+        "exemplo": "O ônibus anuncia as paradas de forma acessível a pessoas com deficiência visual.",
+        "prova": [
+          "Assertiva que restringe a acessibilidade aos veículos novos erra: abrange os em operação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 49"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-49",
+      "unit_id": "b0f6c966-be1f-519e-94ac-c5320668ccf5",
+      "content_sha256": "e7e15b9cae84bb9b76226474770b5efd2626b8c077d7a05aafa1459173085b67",
+      "simples": "Empresas de transporte de fretamento e turismo, na renovação das frotas, cumprem as disposições de transporte e acessibilidade dos arts. 46 e 48. O artigo integra esses serviços ao dever de tornar veículos, estruturas e comunicação acessíveis.",
+      "pontos": [
+        "Destinatários: fretamento e turismo.",
+        "Momento expresso: renovação da frota.",
+        "Remissão aos arts. 46 e 48."
+      ],
+      "atencao": [
+        "Não atribua ao art. 49 a quota de 10% dos táxis ou a proporção de um em vinte das locadoras: são regras diferentes."
+      ],
+      "exemplo": "Uma empresa turística renova seus veículos: deve cumprir as exigências remetidas, incluindo acessibilidade do serviço. Variação: A empresa afirma que somente táxis precisam ser acessíveis: a remissão do art. 49 alcança fretamento e turismo.",
+      "prova": [
+        "O artigo submete a renovação das frotas de fretamento e turismo aos arts. 46 e 48? Sim; essa é a remissão expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b0f6c966-be1f-519e-94ac-c5320668ccf5",
+        "content_sha256": "e7e15b9cae84bb9b76226474770b5efd2626b8c077d7a05aafa1459173085b67",
+        "simples": "As empresas de transporte de fretamento e de turismo, na renovação de suas frotas, são obrigadas ao cumprimento do disposto nos arts. 46 e 48.",
+        "pontos": [
+          "Fretamento e turismo cumprem a acessibilidade na renovação da frota."
+        ],
+        "atencao": [
+          "Obrigação na RENOVAÇÃO da frota."
+        ],
+        "exemplo": "A empresa de turismo adquire ônibus acessíveis ao renovar a frota.",
+        "prova": [
+          "Assertiva que exige substituição imediata de toda a frota erra: a obrigação ocorre na renovação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-50",
+      "unit_id": "54448361-1edc-585b-a564-d0a737c2ef4c",
+      "content_sha256": "39934ce4547b06e5c7eaf0913c882226e280b49a4f1948419f84876ee42e0a81",
+      "simples": "O poder público incentiva a fabricação de veículos acessíveis e sua utilização como táxis e vans, para uso por todas as pessoas. Trata-se de atuação pública de incentivo, distinta das quotas específicas dos artigos seguintes.",
+      "pontos": [
+        "Incentivo público à fabricação.",
+        "Utilização como táxis e vans.",
+        "Finalidade: uso por todas as pessoas."
+      ],
+      "atencao": [
+        "O art. 50 não fixa sozinho percentual de frota nem concede automaticamente isenção tributária individual."
+      ],
+      "exemplo": "Um programa público incentiva veículos acessíveis para o serviço de vans: aplica a finalidade do artigo. Variação: A prova afirma que este artigo fixa 10% para todas as vans: esse percentual não está no dispositivo.",
+      "prova": [
+        "O art. 50 fixa uma quota única de 10% para qualquer frota de vans? Não; dispõe sobre incentivo público, sem essa quota."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "54448361-1edc-585b-a564-d0a737c2ef4c",
+        "content_sha256": "39934ce4547b06e5c7eaf0913c882226e280b49a4f1948419f84876ee42e0a81",
+        "simples": "O poder público incentivará a fabricação de veículos acessíveis e a sua utilização como táxis e vans, de forma a garantir o seu uso por todas as pessoas.",
+        "pontos": [
+          "Incentivo à fabricação de veículos acessíveis."
+        ],
+        "atencao": [
+          "Incentivo, e não obrigação direta."
+        ],
+        "exemplo": "O governo oferece incentivos para táxis acessíveis.",
+        "prova": [
+          "Assertiva que proíbe incentivos à fabricação de veículos acessíveis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-51",
+      "unit_id": "e0630526-669b-5d5a-b562-c1b860d83d16",
+      "content_sha256": "04ed77fec00f5ccde937893c04954d04a0e83f2ae245c42c5d3409a0b8c248a4",
+      "simples": "Frotas de empresas de táxi reservam 10% de veículos acessíveis. Não podem cobrar tarifa diferenciada ou adicional pelo serviço à pessoa com deficiência. O poder público pode instituir incentivos fiscais para viabilizar a acessibilidade.",
+      "pontos": [
+        "Táxi: 10% acessíveis.",
+        "Vedados tarifa diferenciada e adicional por deficiência.",
+        "Incentivos fiscais autorizados, sem concessão automática."
+      ],
+      "atencao": [
+        "O Decreto 9.762/2019 detalha acessibilidade para transporte em cadeira de rodas e capacidades do veículo. Não confunda a quota de táxis com a regra das locadoras."
+      ],
+      "exemplo": "Uma empresa possui cem táxis: a reserva legal corresponde a dez acessíveis. Variação: O táxi cobra adicional exclusivamente por transportar cliente com deficiência: contraria o §1º.",
+      "prova": [
+        "A empresa pode cobrar um adicional exclusivamente pela deficiência do passageiro? Não; o §1º proíbe cobrança diferenciada ou adicional pelo serviço nessa condição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9762.htm"
+      ],
+      "expected": {
+        "unit_id": "e0630526-669b-5d5a-b562-c1b860d83d16",
+        "content_sha256": "04ed77fec00f5ccde937893c04954d04a0e83f2ae245c42c5d3409a0b8c248a4",
+        "simples": "As frotas de empresas de táxi devem reservar 10% de seus veículos acessíveis à pessoa com deficiência. É proibida a cobrança diferenciada de tarifas ou valores adicionais pelo serviço de táxi prestado à pessoa com deficiência. O poder público é autorizado a instituir incentivos fiscais para possibilitar a acessibilidade dos veículos.",
+        "pontos": [
+          "10% da frota de táxis acessível.",
+          "Vedada a cobrança adicional.",
+          "Incentivos fiscais autorizados."
+        ],
+        "atencao": [
+          "Reserva de 10% da frota."
+        ],
+        "exemplo": "A cooperativa de táxi mantém 10% de veículos acessíveis.",
+        "prova": [
+          "Assertiva que permite cobrar valor adicional da pessoa com deficiência erra: é proibido."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 119"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-52",
+      "unit_id": "e6ca69c0-0c45-5f4e-b627-5aa63b1da8d8",
+      "content_sha256": "4328dfa50ba585dc1551cf4aab87282ce74d900690b1ce8e5ab241d95893027f",
+      "simples": "Locadoras oferecem um veículo adaptado para cada conjunto de vinte da frota. A lei prevê equipamentos mínimos: câmbio automático, direção hidráulica, vidros elétricos e comandos manuais de freio e embreagem. O Decreto 9.762/2019 disciplina a aplicação da proporção.",
+      "pontos": [
+        "Locadoras: um adaptado a cada vinte.",
+        "Equipamentos mínimos previstos no parágrafo único.",
+        "Regulamento distingue condução e transporte acessível."
+      ],
+      "atencao": [
+        "O Decreto 9.762/2019 reparte adaptações em 40% para condutores e 60% para transporte em cadeira de rodas, disciplina exclusões da apuração e arredondamento. Os percentuais incidem no universo adaptado, não são 40% e 60% de toda a frota."
+      ],
+      "exemplo": "No exemplo simplificado de duzentos veículos computáveis, a proporção legal é de dez adaptados; o regulamento distribui quatro e seis conforme as finalidades. Variação: Parte da frota está destinada exclusivamente a contratos empresariais que se enquadram na exclusão regulamentar: deve ser verificada a base de cálculo antes de aplicar a proporção.",
+      "prova": [
+        "A proporção prevista na lei é um veículo adaptado a cada vinte? Sim; o regulamento complementa sua aplicação e os tipos de adaptação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9762.htm"
+      ],
+      "expected": {
+        "unit_id": "e6ca69c0-0c45-5f4e-b627-5aa63b1da8d8",
+        "content_sha256": "4328dfa50ba585dc1551cf4aab87282ce74d900690b1ce8e5ab241d95893027f",
+        "simples": "As locadoras de veículos são obrigadas a oferecer 1 veículo adaptado para uso de pessoa com deficiência, a cada conjunto de 20 veículos de sua frota. O veículo adaptado deverá ter, no mínimo, câmbio automático, direção hidráulica, vidros elétricos e comandos manuais de freio e de embreagem.",
+        "pontos": [
+          "1 veículo adaptado a cada 20 da frota.",
+          "Câmbio automático, direção hidráulica, vidros elétricos e comandos manuais."
+        ],
+        "atencao": [
+          "Proporção de 1 para 20."
+        ],
+        "exemplo": "A locadora com 40 carros mantém 2 veículos adaptados.",
+        "prova": [
+          "Assertiva que fixa 1 veículo adaptado para cada 100 da frota erra: é 1 para cada 20."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-53",
+      "unit_id": "e1e95699-c282-58bf-af1b-20b7cf198e71",
+      "content_sha256": "1f3e4afce5fea5cb97c5c10a8c4b1263d7cb7279088ab5558b4090c93a532a07",
+      "simples": "A acessibilidade é direito que assegura vida independente, cidadania e participação social à pessoa com deficiência ou mobilidade reduzida. Não é mero favor: dá suporte ao exercício dos demais direitos.",
+      "pontos": [
+        "Direito à acessibilidade.",
+        "Vida independente e cidadania.",
+        "Inclui mobilidade reduzida."
+      ],
+      "atencao": [
+        "Vida independente não significa que a pessoa deva dispensar todo apoio humano ou tecnológico."
+      ],
+      "exemplo": "Uma pessoa utiliza apoio e recursos acessíveis para participar autonomamente de atividades sociais. Variação: Ela tem mobilidade reduzida temporária: o artigo também contempla essa condição, sem exigir que seja deficiência permanente.",
+      "prova": [
+        "O direito do artigo também alcança pessoa com mobilidade reduzida? Sim; ambas as categorias são expressamente mencionadas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e1e95699-c282-58bf-af1b-20b7cf198e71",
+        "content_sha256": "1f3e4afce5fea5cb97c5c10a8c4b1263d7cb7279088ab5558b4090c93a532a07",
+        "simples": "A acessibilidade é direito que garante à pessoa com deficiência ou com mobilidade reduzida viver de forma independente e exercer seus direitos de cidadania e de participação social.",
+        "pontos": [
+          "Acessibilidade como direito instrumental da vida independente."
+        ],
+        "atencao": [
+          "Direito que viabiliza outros direitos."
+        ],
+        "exemplo": "A rampa permite que a pessoa exerça sua cidadania.",
+        "prova": [
+          "Assertiva que trata a acessibilidade como mera recomendação erra: é direito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-54",
+      "unit_id": "16073ddc-d510-5c5d-ba33-a7e71496347d",
+      "content_sha256": "03bf9f0fcee93ebce949f706a891babc2a2614366deacfeeffffb8ba3abdb2d1",
+      "simples": "As exigências de acessibilidade incidem, quando relacionadas à matéria, sobre projetos e obras de destinação pública ou coletiva, outorgas e renovações, financiamentos com recursos públicos e aval da União para empréstimos internacionais. Não se restringem à obra depois de pronta.",
+      "pontos": [
+        "Projetos, veículos, serviços e obras públicos ou coletivos.",
+        "Outorgas e renovações.",
+        "Financiamento público e aval internacional da União."
+      ],
+      "atencao": [
+        "Observe a condição de interação com a matéria regulada e não troque aval da União por qualquer operação privada sem vínculo descrito."
+      ],
+      "exemplo": "Um projeto coletivo busca financiamento mediante incentivo fiscal: deve atender às exigências relacionadas à acessibilidade. Variação: O edital fala em aval da União para financiamento internacional de ente privado: o inciso IV também o abrange.",
+      "prova": [
+        "O aval da União para financiamento internacional de ente privado está excluído do inciso IV? Não; o inciso alcança entes públicos ou privados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "16073ddc-d510-5c5d-ba33-a7e71496347d",
+        "content_sha256": "03bf9f0fcee93ebce949f706a891babc2a2614366deacfeeffffb8ba3abdb2d1",
+        "simples": "Sujeitam-se ao cumprimento da Lei e das normas de acessibilidade, sempre que houver interação com a matéria: a aprovação de projeto arquitetônico e urbanístico ou de comunicação e informação, a fabricação de veículos de transporte coletivo, a prestação do serviço e a execução de qualquer obra de destinação pública ou coletiva; a outorga ou renovação de concessão, permissão, autorização ou habilitação; a aprovação de financiamento de projeto com recursos públicos, por renúncia ou incentivo fiscal, contrato ou convênio; e a concessão de aval da União para empréstimo e financiamento internacionais.",
+        "pontos": [
+          "Aprovação de projetos e obras de destinação coletiva.",
+          "Concessões e permissões.",
+          "Financiamento com recursos públicos.",
+          "Aval da União para empréstimos internacionais."
+        ],
+        "atencao": [
+          "Acessibilidade é condição para concessões, financiamentos e avais."
+        ],
+        "exemplo": "O financiamento público de uma obra exige o cumprimento das regras de acessibilidade.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade nas obras financiadas com recursos públicos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-55",
+      "unit_id": "d0293b95-6158-538e-afd5-e431ff281bea",
+      "content_sha256": "d7a7cb09e4673746f9704781e512e8a729b6c8273e1e3da5fe7a4a32659366e6",
+      "simples": "Desenho universal é a regra geral na concepção e implantação de ambientes, transportes, comunicação, sistemas e outros serviços públicos ou de uso coletivo, urbanos e rurais. Se comprovadamente inviável, adota-se adaptação razoável. Políticas públicas consideram o desenho universal desde a concepção.",
+      "pontos": [
+        "Desenho universal como regra geral.",
+        "Adaptação razoável quando comprovada impossibilidade.",
+        "Diretrizes curriculares, pesquisa pública e concepção de políticas."
+      ],
+      "atencao": [
+        "A exceção exige impossibilidade comprovada; não é livre escolha entre acessibilidade e ausência de ajustes. O artigo também orienta formação profissional e pesquisa."
+      ],
+      "exemplo": "O projeto de um serviço digital nasce adequado à utilização por todos: segue a regra do desenho universal. Variação: Há impossibilidade comprovada de adotar plenamente esse desenho: deve ser utilizada adaptação razoável, e não simplesmente excluído o usuário.",
+      "prova": [
+        "A adaptação razoável é a regra geral e o desenho universal a exceção? Não; o §1º fixa desenho universal como regra e o §2º prevê adaptação na impossibilidade comprovada."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d0293b95-6158-538e-afd5-e431ff281bea",
+        "content_sha256": "d7a7cb09e4673746f9704781e512e8a729b6c8273e1e3da5fe7a4a32659366e6",
+        "simples": "A concepção e a implantação de projetos que tratem do meio físico, de transporte, de informação e comunicação e de outros serviços abertos ao público devem atender aos princípios do desenho universal, tendo como referência as normas de acessibilidade. O desenho universal será sempre a regra geral. Se comprovadamente não puder ser empreendido, deve ser adotada adaptação razoável. O poder público promoverá a inclusão do tema nas diretrizes curriculares e nos programas de pesquisa e considerará o desenho universal desde a concepção das políticas públicas.",
+        "pontos": [
+          "Desenho universal como regra geral.",
+          "Adaptação razoável quando inviável.",
+          "Inclusão do tema nos currículos e pesquisas."
+        ],
+        "atencao": [
+          "Desenho universal é a REGRA; adaptação razoável é a exceção."
+        ],
+        "exemplo": "A prefeitura projeta uma praça já com acessibilidade, em vez de adaptá-la depois.",
+        "prova": [
+          "Assertiva que torna a adaptação razoável a regra geral erra: a regra é o desenho universal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-56",
+      "unit_id": "bdd5306d-7023-5ea6-b53b-a08f5bd7d031",
+      "content_sha256": "dff5e5810be770b04767b9ec93335f3cfd08c48a6e0a8ab9628cc6a1729e8a1f",
+      "simples": "Construção, reforma, ampliação e mudança de uso de edificações públicas, abertas ao público ou privadas coletivas devem garantir acessibilidade. A responsabilidade técnica abrange atendimento às regras; aprovação e certificação exigem atestação. Após certificar, o poder público determina o símbolo internacional em local visível.",
+      "pontos": [
+        "Inclui reforma, ampliação e mudança de uso.",
+        "Responsabilidade profissional pelas regras.",
+        "Atestação e certificação; depois, símbolo."
+      ],
+      "atencao": [
+        "Não coloque o símbolo como substituto da certificação nem restrinja a obrigação às edificações exclusivamente públicas."
+      ],
+      "exemplo": "Um imóvel privado de uso coletivo sofre mudança de uso: a acessibilidade também integra a execução. Variação: O projeto exibe um símbolo, mas não possui atestação exigida: o símbolo isolado não satisfaz as etapas legais.",
+      "prova": [
+        "A mudança de uso de edificação privada coletiva deve ser executada de modo acessível? Sim; essa hipótese está expressamente no caput."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "bdd5306d-7023-5ea6-b53b-a08f5bd7d031",
+        "content_sha256": "dff5e5810be770b04767b9ec93335f3cfd08c48a6e0a8ab9628cc6a1729e8a1f",
+        "simples": "A construção, reforma, ampliação ou mudança de uso de edificações abertas ao público, de uso público ou privadas de uso coletivo deverão ser executadas de modo a serem acessíveis. As entidades de fiscalização profissional devem exigir, ao anotarem a responsabilidade técnica, a declaração de atendimento às regras de acessibilidade. Para aprovação, licenciamento ou certificado de conclusão de obra, deve ser atestado o atendimento às regras. O poder público, após certificar a acessibilidade, determinará a colocação do símbolo internacional de acesso.",
+        "pontos": [
+          "Edificações coletivas devem ser acessíveis.",
+          "Responsabilidade técnica com declaração de acessibilidade.",
+          "Licenciamento e habite-se condicionados.",
+          "Símbolo de acesso após certificação."
+        ],
+        "atencao": [
+          "O profissional declara a observância das regras de acessibilidade."
+        ],
+        "exemplo": "O arquiteto declara o atendimento à acessibilidade ao registrar a responsabilidade técnica.",
+        "prova": [
+          "Assertiva que dispensa o atestado de acessibilidade para o certificado de conclusão de obra erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 57"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-57",
+      "unit_id": "a4decf74-a013-5907-99ea-8f017afcf938",
+      "content_sha256": "4f60b7204565ea45ac9071690847b57814df0d2876c6f2ed270654be88c41a2b",
+      "simples": "Edificações públicas e privadas de uso coletivo já existentes garantem acessibilidade em todas as dependências e serviços, tendo como referência as normas vigentes. A obrigação não alcança apenas novas construções.",
+      "pontos": [
+        "Prédios já existentes.",
+        "Uso público ou privado coletivo.",
+        "Todas as dependências e serviços."
+      ],
+      "atencao": [
+        "O texto não autoriza limitar a acessibilidade à entrada principal. Soluções técnicas específicas devem ser verificadas nas normas aplicáveis, sem inventar uma dispensa geral."
+      ],
+      "exemplo": "Uma clínica coletiva antiga torna acessíveis suas dependências e seus serviços, em vez de adaptar apenas a porta. Variação: A clínica alega que só prédios novos estão sujeitos: o artigo trata expressamente dos já existentes.",
+      "prova": [
+        "As edificações coletivas já existentes ficam dispensadas de acessibilidade por serem antigas? Não; o art. 57 determina acessibilidade em todas as dependências e serviços."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a4decf74-a013-5907-99ea-8f017afcf938",
+        "content_sha256": "4f60b7204565ea45ac9071690847b57814df0d2876c6f2ed270654be88c41a2b",
+        "simples": "As edificações públicas e privadas de uso coletivo já existentes devem garantir acessibilidade à pessoa com deficiência em todas as suas dependências e serviços, tendo como referência as normas de acessibilidade vigentes.",
+        "pontos": [
+          "Edificações existentes também devem ser acessíveis."
+        ],
+        "atencao": [
+          "Alcança as edificações JÁ EXISTENTES."
+        ],
+        "exemplo": "O prédio antigo de uso público deve ser adaptado.",
+        "prova": [
+          "Assertiva que isenta as edificações existentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-58",
+      "unit_id": "6394c40d-647c-58dd-b35c-80dbdb3f7f19",
+      "content_sha256": "e66befa3e473552bc5de58cb9c1a7d1b223581a0aea8312961687b3a559243ec",
+      "simples": "Projeto e construção de edificação privada multifamiliar observam acessibilidade na forma regulamentar. Construtoras e incorporadoras asseguram percentual mínimo de unidades internamente acessíveis definido em regulamento, sem cobrar valores adicionais pela aquisição dessas unidades.",
+      "pontos": [
+        "Edificação privada multifamiliar.",
+        "Percentual mínimo conforme regulamento.",
+        "Vedada cobrança adicional pela unidade internamente acessível."
+      ],
+      "atencao": [
+        "O artigo não fornece um percentual numérico único. Não importe automaticamente os 3% dos programas habitacionais do art. 32 nem os 10% dos hotéis."
+      ],
+      "exemplo": "A incorporadora prevê unidades internamente acessíveis nos parâmetros regulamentares e não cobra um adicional pela acessibilidade. Variação: A questão pede o percentual numérico do art. 58: ele remete ao regulamento; não permite inventar um valor a partir de outra quota.",
+      "prova": [
+        "O art. 58 fixa expressamente a quota de 3% para toda edificação multifamiliar? Não; ele remete o percentual mínimo à forma regulamentar."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6394c40d-647c-58dd-b35c-80dbdb3f7f19",
+        "content_sha256": "e66befa3e473552bc5de58cb9c1a7d1b223581a0aea8312961687b3a559243ec",
+        "simples": "O projeto e a construção de edificação de uso privado multifamiliar devem atender aos preceitos de acessibilidade, na forma regulamentar. As construtoras e incorporadoras devem assegurar percentual mínimo de unidades internamente acessíveis. É vedada a cobrança de valores adicionais para a aquisição dessas unidades.",
+        "pontos": [
+          "Prédios multifamiliares com acessibilidade.",
+          "Percentual mínimo de unidades acessíveis.",
+          "Vedada a cobrança adicional."
+        ],
+        "atencao": [
+          "Vedado cobrar a mais pela unidade acessível."
+        ],
+        "exemplo": "A incorporadora não pode cobrar valor extra pela unidade internamente acessível.",
+        "prova": [
+          "Assertiva que permite cobrança adicional pela unidade acessível erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-59",
+      "unit_id": "cee6e362-338f-5f7b-8873-2fe1f1df811e",
+      "content_sha256": "4908536a4249488141b876dda42feb47dd3e739d0383de2c1969837aac1eeb81",
+      "simples": "Nas intervenções em vias e espaços públicos, poder público e concessionárias responsáveis garantem segurança, fluidez do trânsito, livre circulação e acessibilidade durante e após a execução. A obrigação persiste enquanto a obra acontece.",
+      "pontos": [
+        "Poder público e concessionárias responsáveis.",
+        "Segurança e circulação acessível.",
+        "Durante e após a intervenção."
+      ],
+      "atencao": [
+        "Não considere suficiente restaurar a passagem apenas ao término se durante os trabalhos as pessoas ficam sem circulação acessível e segura."
+      ],
+      "exemplo": "Uma obra em calçada mantém percurso temporário seguro e acessível para pedestres. Variação: O percurso só fica acessível depois da inauguração: o dever durante a execução também precisa ser atendido.",
+      "prova": [
+        "A acessibilidade deve ser garantida também durante a execução da obra? Sim; o artigo expressamente abrange durante e após sua execução."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "cee6e362-338f-5f7b-8873-2fe1f1df811e",
+        "content_sha256": "4908536a4249488141b876dda42feb47dd3e739d0383de2c1969837aac1eeb81",
+        "simples": "Em qualquer intervenção nas vias e espaços públicos, o poder público e as empresas concessionárias responsáveis pelas obras e serviços devem garantir, de forma segura, a fluidez do trânsito e a livre circulação e acessibilidade das pessoas, durante e após sua execução.",
+        "pontos": [
+          "Obras em vias públicas garantem circulação e acessibilidade, durante e depois."
+        ],
+        "atencao": [
+          "Vale DURANTE e APÓS a obra."
+        ],
+        "exemplo": "A obra na calçada mantém uma passagem segura para cadeirantes.",
+        "prova": [
+          "Assertiva que limita o dever ao período posterior à obra erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-60",
+      "unit_id": "d882dcc7-66cf-57d0-925e-a80eb8546e0b",
+      "content_sha256": "be626f3684ee706a8586f31c8f772b1ad912b7f29d46e30347ef2355995e09b9",
+      "simples": "Planejamento urbano, códigos e leis municipais, impacto de vizinhança, fiscalização e prevenção de incêndio observam acessibilidade no que couber. Concessão e renovação de alvará e emissão ou renovação de habite-se nas hipóteses legais dependem da observação e certificação dessas regras.",
+      "pontos": [
+        "Planos urbanos, códigos, fiscalização e prevenção de incêndio.",
+        "Alvará: observação e certificação.",
+        "Habite-se: emissão e renovação nas condições do §2º."
+      ],
+      "atencao": [
+        "Leia a expressão no que couber e a condição temporal do habite-se anterior às exigências. Não restrinja a acessibilidade à legislação de obras nem certifique aqui todo o conteúdo das três leis remetidas."
+      ],
+      "exemplo": "Na renovação de alvará de atividade, o órgão verifica atendimento e certificação de acessibilidade. Variação: A exigência envolve legislação de prevenção de incêndio e pânico: ela também integra a lista do inciso V.",
+      "prova": [
+        "A prevenção contra incêndio e pânico está fora das matérias orientadas pela acessibilidade? Não; o inciso V a inclui expressamente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d882dcc7-66cf-57d0-925e-a80eb8546e0b",
+        "content_sha256": "be626f3684ee706a8586f31c8f772b1ad912b7f29d46e30347ef2355995e09b9",
+        "simples": "Orientam-se pelas regras de acessibilidade os planos diretores municipais, os planos de transporte e trânsito, os de mobilidade urbana e de preservação de sítios históricos; os códigos de obras e de postura, as leis de uso e ocupação do solo e do sistema viário; os estudos prévios de impacto de vizinhança; a fiscalização e a imposição de sanções; e a legislação de prevenção contra incêndio e pânico. A concessão e a renovação de alvará de funcionamento são condicionadas à observação e certificação das regras de acessibilidade, assim como a carta de habite-se emitida antes das exigências, quando renovada.",
+        "pontos": [
+          "Planos diretores, códigos de obras e posturas.",
+          "Alvará de funcionamento condicionado à acessibilidade.",
+          "Habite-se condicionado à acessibilidade."
+        ],
+        "atencao": [
+          "Alvará e habite-se dependem de certificação de acessibilidade."
+        ],
+        "exemplo": "O alvará de um restaurante só é renovado se a acessibilidade for certificada.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade para a concessão de alvará erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    }
+  ]
+}

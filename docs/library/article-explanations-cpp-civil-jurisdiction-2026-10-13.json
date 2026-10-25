@@ -1,0 +1,1839 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T01:20:48.361792+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 29,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-63",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-76",
+        "art-77",
+        "art-78",
+        "art-79",
+        "art-80",
+        "art-81",
+        "art-82",
+        "art-83",
+        "art-84",
+        "art-85",
+        "art-86",
+        "art-87",
+        "art-88",
+        "art-89",
+        "art-90",
+        "art-91"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63",
+      "unit_id": "c978e40f-1dee-5814-a9fa-339ebf4a9f98",
+      "content_sha256": "d48539b34075e82bbf1bda4b3e7a8885691b0378b1466c57375c4e9b3d59e69d",
+      "simples": "Condenação penal transitada em julgado permite executar reparação no juízo cível por ofendido, representante ou herdeiros. O mínimo fixado na sentença não elimina liquidação do dano efetivamente sofrido.",
+      "pontos": [
+        "Exige trânsito da sentença condenatória para execução pelo título penal.",
+        "Art. 387, IV: valor mínimo reparatório; observar requisitos e contraditório na fixação.",
+        "Liquidação complementar permite apurar dano além do mínimo, sem duplicar indenização."
+      ],
+      "atencao": [
+        "Não confundir pena de multa, prestação ao Estado e reparação devida à vítima. Condenação sem valor determinado pode exigir liquidação."
+      ],
+      "exemplo": "Sentença definitiva fixa mínimo reparatório de R$ 5 mil; vítima executa esse valor e pode demonstrar dano adicional pela via adequada. Variação: Sem condenação definitiva, não usar CPP 63 como título penal já formado; eventual ação civil autônoma tem disciplina própria.",
+      "prova": [
+        "O mínimo impede apurar dano efetivo maior? Não.",
+        "Herdeiros podem promover execução da reparação? Sim; estão no caput."
+      ],
+      "termos": [
+        {
+          "termo": "Ação civil ex delicto",
+          "significado": "Reparação civil decorrente de fato criminoso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "c978e40f-1dee-5814-a9fa-339ebf4a9f98",
+        "content_sha256": "d48539b34075e82bbf1bda4b3e7a8885691b0378b1466c57375c4e9b3d59e69d",
+        "simples": "Transitada em julgado a sentença condenatória, poderão promover-lhe a execução, no juízo cível, para o efeito da reparação do dano, o ofendido, seu representante legal ou seus herdeiros. A execução pode ser feita pelo valor fixado nos termos do inciso IV do art. 387, sem prejuízo da liquidação para apurar o dano efetivamente sofrido.",
+        "pontos": [
+          "Sentença condenatória transitada em julgado é título executivo no cível.",
+          "Legitimados: ofendido, representante legal ou herdeiros.",
+          "Execução pelo valor mínimo fixado na sentença penal, sem prejuízo de liquidação do dano efetivo."
+        ],
+        "atencao": [
+          "A sentença penal condenatória é título executivo judicial."
+        ],
+        "exemplo": "Vítima executa no cível o valor mínimo de reparação fixado na sentença penal.",
+        "prova": [
+          "Assertiva que impede liquidar o dano efetivo, além do valor mínimo, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 387, IV"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-64",
+      "unit_id": "8074bd24-b85c-5f3f-888a-792664521424",
+      "content_sha256": "612ccc7ba38b554d3bef0769bbbbc7610f9ba512ca1320025b5d5b240e16f39c",
+      "simples": "A reparação pode ser buscada por ação civil autônoma contra autor do crime e, quando cabível, responsável civil, independentemente da execução de sentença penal definitiva.",
+      "pontos": [
+        "Responsável civil não precisa ser réu penal, mas sua responsabilidade exige fundamento.",
+        "Ação penal instaurada permite ao juiz cível suspender a ação civil até julgamento definitivo.",
+        "Suspensão pelo parágrafo é faculdade, não automatismo universal."
+      ],
+      "atencao": [
+        "Não exigir condenação penal prévia para toda reparação. Responsabilidade de terceiro não decorre só de parentesco."
+      ],
+      "exemplo": "Vítima propõe reparação enquanto se apura o delito; juiz cível avalia a suspensão diante da ação penal. Variação: A inclusão de terceiro depende de responsabilidade civil própria e defesa; não basta chamá-lo de familiar do autor.",
+      "prova": [
+        "A ação civil autônoma exige sempre condenação penal transitada? Não.",
+        "O parágrafo manda suspender obrigatoriamente todo processo civil? Não; poderá."
+      ],
+      "termos": [
+        {
+          "termo": "Responsável civil",
+          "significado": "Pessoa obrigada à reparação por fundamento civil, ainda que não seja autora penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "8074bd24-b85c-5f3f-888a-792664521424",
+        "content_sha256": "612ccc7ba38b554d3bef0769bbbbc7610f9ba512ca1320025b5d5b240e16f39c",
+        "simples": "Sem prejuízo do artigo anterior, a ação para ressarcimento do dano pode ser proposta no juízo cível contra o autor do crime e, se for caso, contra o responsável civil. Intentada a ação penal, o juiz da ação civil pode suspender o curso desta até o julgamento definitivo daquela.",
+        "pontos": [
+          "Ação civil de ressarcimento contra o autor e, se for o caso, o responsável civil.",
+          "Juiz cível pode suspender a ação civil até o julgamento definitivo da penal."
+        ],
+        "atencao": [
+          "A suspensão é FACULDADE do juiz cível."
+        ],
+        "exemplo": "Vítima propõe ação civil contra o autor e o empregador responsável.",
+        "prova": [
+          "Assertiva que obriga o juiz cível a suspender a ação civil durante a ação penal erra: é faculdade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63",
+          "Art. 65"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-65",
+      "unit_id": "2c5b4a9b-7131-5e17-afea-f08f79e0924e",
+      "content_sha256": "9ea5c5e07e369824553d3994d68ea7abd89817e8b42f5b5d975330b2783d3990",
+      "simples": "A decisão penal definitiva que reconhece uma excludente de ilicitude vincula a esfera civil quanto a esse reconhecimento. A consequência indenizatória ainda depende das regras civis aplicáveis.",
+      "pontos": [
+        "Hipóteses: necessidade, legítima defesa, estrito cumprimento do dever e exercício regular de direito.",
+        "CC 929–930: necessidade pode preservar reparação ao terceiro inocente e regresso nos termos legais.",
+        "ADPF 779: legítima defesa da honra não integra legítima defesa e não justifica violência contra mulher."
+      ],
+      "atencao": [
+        "Não concluir que toda excludente elimina qualquer indenização, especialmente a pessoa inocente atingida. A tese da honra foi afastada pelo STF."
+      ],
+      "exemplo": "Sentença reconhece estado de necessidade ao sacrificar bem de terceiro inocente; o reconhecimento penal não elimina automaticamente seu direito civil previsto em lei. Variação: Agressor alega honra para justificar violência contra mulher: essa tese não é legítima defesa admitida pela ADPF 779.",
+      "prova": [
+        "Necessidade afasta sempre reparação a terceiro inocente? Não; observar CC 929–930.",
+        "Honra legitima violência contra mulher? Não; ADPF 779."
+      ],
+      "termos": [
+        {
+          "termo": "Coisa julgada penal no cível",
+          "significado": "Vinculação civil aos pontos penalmente decididos nos limites legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=511556&ori=1."
+      ],
+      "expected": {
+        "unit_id": "2c5b4a9b-7131-5e17-afea-f08f79e0924e",
+        "content_sha256": "9ea5c5e07e369824553d3994d68ea7abd89817e8b42f5b5d975330b2783d3990",
+        "simples": "Faz coisa julgada no cível a sentença penal que reconhecer ter sido o ato praticado em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito.",
+        "pontos": [
+          "Sentença penal absolutória por excludente de ilicitude faz coisa julgada no cível.",
+          "Estado de necessidade, legítima defesa, estrito cumprimento de dever legal e exercício regular de direito."
+        ],
+        "atencao": [
+          "O texto indica discussão na ADPF 779 quanto à tese da legítima defesa da honra (leia a ressalva)."
+        ],
+        "exemplo": "Absolvição por legítima defesa impede, em regra, a reparação cível pelo mesmo ato.",
+        "prova": [
+          "Assertiva que afasta o efeito de coisa julgada no cível nas excludentes de ilicitude erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66",
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-66",
+      "unit_id": "f831df89-86e2-5c2b-a87c-0ff3fa7773f4",
+      "content_sha256": "930d362a5faee148cbc727fb52dba69e79b5db075257a9196475db0fa8b624d3",
+      "simples": "Absolvição criminal não impede toda ação civil. Quando a inexistência material do fato foi categoricamente reconhecida, essa conclusão não pode ser ignorada na reparação fundada no mesmo fato.",
+      "pontos": [
+        "Absolvição por insuficiência de prova tem efeito distinto de inexistência comprovada.",
+        "CC 935 também trata de existência do fato e autoria decididas criminalmente.",
+        "Analisar fundamento da decisão, não apenas o resultado absolvido."
+      ],
+      "atencao": [
+        "Não afirmar que qualquer absolvição permite indenização nem que qualquer absolvição a proíbe."
+      ],
+      "exemplo": "Absolvição por falta de prova suficiente deixa aberta análise civil dentro de seus requisitos. Variação: Sentença categoricamente afirma que o fato nunca existiu: não usar ação civil para presumir o mesmo fato existente.",
+      "prova": [
+        "Absolvição por falta de prova sempre elimina ação civil? Não.",
+        "Reconhecimento categórico da inexistência do fato é irrelevante ao cível? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Fundamento absolutório",
+          "significado": "Razão da absolvição que define seus efeitos extrapenais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "f831df89-86e2-5c2b-a87c-0ff3fa7773f4",
+        "content_sha256": "930d362a5faee148cbc727fb52dba69e79b5db075257a9196475db0fa8b624d3",
+        "simples": "Não obstante a sentença absolutória no juízo criminal, a ação civil pode ser proposta quando não tiver sido, categoricamente, reconhecida a inexistência material do fato.",
+        "pontos": [
+          "Absolvição criminal não impede a ação civil.",
+          "Exceção: reconhecimento categórico da inexistência material do fato."
+        ],
+        "atencao": [
+          "Absolvição por falta de provas não impede a ação civil."
+        ],
+        "exemplo": "Réu absolvido por falta de provas ainda pode ser demandado no cível.",
+        "prova": [
+          "Assertiva que impede a ação civil após qualquer absolvição criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65",
+          "Art. 386"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-67",
+      "unit_id": "2a284af0-64c5-578b-9260-b4fe13d0d37f",
+      "content_sha256": "e6f09b02e46c3db99b4fada38f571484f8dc13422ad7e00741cad0553dce22a3",
+      "simples": "Arquivamento investigativo, extinção da punibilidade ou absolvição por fato não constituir crime não impedem, por si, a ação civil reparatória.",
+      "pontos": [
+        "Arquivamento não é sentença civil de inexistência do dano.",
+        "Extinção da punibilidade não elimina automaticamente obrigação civil.",
+        "Fato atípico penalmente pode ser ilícito civil."
+      ],
+      "atencao": [
+        "A lista não assegura indenização automática: dano, nexo e fundamento civil precisam ser comprovados."
+      ],
+      "exemplo": "Fato não preenche tipo penal, mas pode violar dever civil e causar dano demonstrado; avaliar reparação própria. Variação: Sem dano e sem fundamento de responsabilidade, ausência de obstáculo penal não cria indenização.",
+      "prova": [
+        "Atipicidade penal exclui sempre ilícito civil? Não.",
+        "Prescrição penal determina automaticamente prescrição civil? Não; são regimes distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Independência relativa",
+          "significado": "Separação entre esferas com pontos de vinculação legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "2a284af0-64c5-578b-9260-b4fe13d0d37f",
+        "content_sha256": "e6f09b02e46c3db99b4fada38f571484f8dc13422ad7e00741cad0553dce22a3",
+        "simples": "Não impedirão igualmente a propositura da ação civil o despacho de arquivamento do inquérito ou das peças de informação; a decisão que julgar extinta a punibilidade; e a sentença absolutória que decidir que o fato imputado não constitui crime.",
+        "pontos": [
+          "Arquivamento do inquérito não impede a ação civil.",
+          "Extinção da punibilidade não impede a ação civil.",
+          "Sentença absolutória por fato atípico não impede a ação civil."
+        ],
+        "atencao": [
+          "Independência relativa entre as esferas."
+        ],
+        "exemplo": "Inquérito arquivado: a vítima ainda pode pedir indenização no cível.",
+        "prova": [
+          "Assertiva que impede a ação civil após o arquivamento do inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-68",
+      "unit_id": "4f36daac-1e33-5d9f-838e-51ce7687dadf",
+      "content_sha256": "959acd56650cf6cb7bc22977ca6f1f5b16b220717a42fc58ea2905836559fc40",
+      "simples": "A redação atribui ao MP reparação em favor de pessoa pobre a pedido. Sua aplicação atual depende da organização da Defensoria Pública e da interpretação de inconstitucionalidade progressiva.",
+      "pontos": [
+        "CF 134: assistência jurídica é função da Defensoria.",
+        "STJ: legitimidade substitutiva do MP subsiste excepcionalmente onde Defensoria não estiver organizada.",
+        "Informativo 592: antes de extinguir por ilegitimidade do MP no caso tratado, intimar Defensoria para ciência e possível assunção."
+      ],
+      "atencao": [
+        "Não apresentar MP como advogado civil universal de qualquer pessoa pobre, nem declarar a regra extinta em todo lugar sem analisar a estrutura institucional."
+      ],
+      "exemplo": "Defensoria organizada é cientificada de ação ajuizada pelo MP em favor de necessitados para avaliar assunção do polo ativo conforme precedente. Variação: Local sem Defensoria organizada exige examinar a legitimidade residual reconhecida, não presumir estrutura existente.",
+      "prova": [
+        "O caput pode ser aplicado isoladamente em toda localidade? Não.",
+        "A Defensoria pode precisar ser intimada antes da extinção pela ilegitimidade? Sim; no regime do precedente."
+      ],
+      "termos": [
+        {
+          "termo": "Inconstitucionalidade progressiva",
+          "significado": "Transição de atribuição vinculada à efetiva organização institucional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270592%27.cod."
+      ],
+      "expected": {
+        "unit_id": "4f36daac-1e33-5d9f-838e-51ce7687dadf",
+        "content_sha256": "959acd56650cf6cb7bc22977ca6f1f5b16b220717a42fc58ea2905836559fc40",
+        "simples": "Quando o titular do direito à reparação do dano for pobre, a execução da sentença condenatória ou a ação civil será promovida, a seu requerimento, pelo Ministério Público.",
+        "pontos": [
+          "Titular pobre do direito à reparação.",
+          "MP promove, a requerimento, a execução da sentença penal (art. 63) ou a ação civil (art. 64)."
+        ],
+        "atencao": [
+          "O STF reconheceu a inconstitucionalidade progressiva: onde houver Defensoria Pública, a legitimidade é dela."
+        ],
+        "exemplo": "Vítima pobre, em comarca sem Defensoria, pede ao MP que execute a sentença condenatória.",
+        "prova": [
+          "Assertiva que atribui ao Ministério Público a execução cível do dano para qualquer vítima, mesmo não pobre, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32",
+          "Art. 63",
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-69",
+      "unit_id": "36c2daf1-2b3d-5818-a215-c7ec034ca1d1",
+      "content_sha256": "905b498284547b25e0be95cfc3f4763967bb1fd7f684690afca5d8aa7bdf1c0a",
+      "simples": "Competência indica qual órgão julga, por critérios territoriais, materiais e funcionais. A enumeração do CPP deve ser integrada às competências da Constituição.",
+      "pontos": [
+        "Lugar da infração; domicílio/residência; natureza; distribuição.",
+        "Conexão/continência; prevenção; prerrogativa de função.",
+        "Constituição precede a aplicação das regras de reunião e preferência do CPP."
+      ],
+      "atencao": [
+        "Não escolher o juiz apenas pela proximidade da delegacia ou residência da vítima sem hipótese legal."
+      ],
+      "exemplo": "Primeiro identificar justiça e órgão constitucionalmente competentes, depois aplicar o critério territorial pertinente. Variação: Prerrogativa constitucional pode exigir tribunal; a regra territorial sozinha não a afasta.",
+      "prova": [
+        "Local da delegacia determina sempre competência? Não.",
+        "A lista do CPP dispensa consultar Constituição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Competência",
+          "significado": "Delimitação legal da atribuição jurisdicional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "36c2daf1-2b3d-5818-a215-c7ec034ca1d1",
+        "content_sha256": "905b498284547b25e0be95cfc3f4763967bb1fd7f684690afca5d8aa7bdf1c0a",
+        "simples": "Determinam a competência jurisdicional: o lugar da infração; o domicílio ou a residência do réu; a natureza da infração; a distribuição; a conexão ou continência; a prevenção; e a prerrogativa de função.",
+        "pontos": [
+          "Lugar da infração.",
+          "Domicílio ou residência do réu.",
+          "Natureza da infração.",
+          "Distribuição.",
+          "Conexão ou continência.",
+          "Prevenção.",
+          "Prerrogativa de função."
+        ],
+        "atencao": [
+          "Rol de critérios de competência; cada um é detalhado nos artigos seguintes."
+        ],
+        "exemplo": "O crime ocorrido na comarca A é, em regra, julgado ali, pelo critério do lugar da infração.",
+        "prova": [
+          "Assertiva que exclui a prevenção do rol de critérios de competência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70",
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-70",
+      "unit_id": "46f25ce2-527f-51e2-842a-bb5d75292b7b",
+      "content_sha256": "bf6e91e8d24ee42a87a61dbde0e0c77949a2cd1f01d74a92eabb9f60a1776cf8",
+      "simples": "Regra territorial: lugar da consumação; na tentativa, último ato de execução. Existem regras específicas para fatos transfronteiriços, limites incertos e certas modalidades de estelionato.",
+      "pontos": [
+        "§1º: execução iniciada no Brasil e consumação fora, último ato brasileiro.",
+        "§2º: último ato fora, lugar onde no Brasil produziu ou deveria produzir resultado parcial.",
+        "§3º: divisa/jurisdição incerta, prevenção.",
+        "§4º, Lei 14.155/2021: estelionato mediante depósito, cheques indicados ou transferência, domicílio da vítima; várias vítimas, prevenção."
+      ],
+      "atencao": [
+        "Não confundir teoria do lugar do crime no CP com regra processual do CPP. §4º não é regra para qualquer delito nem toda modalidade de fraude."
+      ],
+      "exemplo": "Estelionato por transferência de valores na hipótese do §4º: competência pelo domicílio da vítima, não automaticamente conta do autor. Variação: Tentativa comum fora dessa exceção: identificar onde ocorreu último ato de execução.",
+      "prova": [
+        "Tentativa segue sempre residência da vítima? Não; regra do último ato.",
+        "Pluralidade de vítimas na hipótese do §4º leva à prevenção? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência territorial",
+          "significado": "Foro definido por vínculo espacial previsto na legislação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "46f25ce2-527f-51e2-842a-bb5d75292b7b",
+        "content_sha256": "bf6e91e8d24ee42a87a61dbde0e0c77949a2cd1f01d74a92eabb9f60a1776cf8",
+        "simples": "A competência será, de regra, determinada pelo lugar em que se consumar a infração (teoria do resultado) ou, no caso de tentativa, pelo lugar do último ato de execução. Se a execução começou no território nacional e a infração se consumou fora dele, a competência é do lugar do último ato de execução no Brasil. Se o último ato de execução foi praticado fora do território nacional, é competente o juiz do lugar em que o crime, embora parcialmente, tenha produzido ou devia produzir seu resultado. Quando incerto o limite territorial entre jurisdições, ou quando a infração for praticada nas divisas, a competência firma-se pela prevenção. Nos crimes de estelionato praticados mediante depósito, cheque sem fundos ou com pagamento frustrado, ou transferência de valores, a competência é definida pelo domicílio da vítima; havendo várias vítimas, firma-se pela prevenção.",
+        "pontos": [
+          "Regra: lugar da consumação.",
+          "Tentativa: lugar do último ato de execução.",
+          "§1º e §2º: crimes que cruzam a fronteira.",
+          "§3º: limites incertos ou divisas: prevenção.",
+          "§4º: estelionato por depósito, cheque, transferência: domicílio da vítima; várias vítimas: prevenção."
+        ],
+        "atencao": [
+          "O §4º (Lei nº 14.155, de 2021) fixa o domicílio da VÍTIMA para certas fraudes.",
+          "Regra geral: teoria do resultado."
+        ],
+        "exemplo": "Estelionato por transferência de valores é julgado no domicílio da vítima.",
+        "prova": [
+          "Assertiva que fixa o domicílio do réu como regra geral de competência erra: a regra é o lugar da consumação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69",
+          "Art. 71",
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-71",
+      "unit_id": "aaf4d88b-af84-5aef-982d-ad08d1cc3286",
+      "content_sha256": "f0e3bca957aa17cb0f0a37051b2bdeade104e22db3c99d5f5b56fa246aee3b74",
+      "simples": "Crime permanente ou continuado que abrange duas ou mais jurisdições define competência pela prevenção entre juízos competentes.",
+      "pontos": [
+        "Permanente: consumação se prolonga; continuado: pluralidade de condutas nos requisitos materiais.",
+        "Abrangência em mais de uma jurisdição é relevante.",
+        "Não confundir com qualquer crime instantâneo investigado em cidades diferentes."
+      ],
+      "atencao": [
+        "O CPP 71 trata de competência; o CP 71 trata de crime continuado e pena. Mesmo número não significa mesmo tema."
+      ],
+      "exemplo": "Crime permanente desenvolve-se em duas jurisdições; examinar prevenção por ato pertinente. Variação: Crime instantâneo em local conhecido não muda de foro só porque testemunhas moram em outro local.",
+      "prova": [
+        "CPP 71 é regra de aumento de pena? Não; de competência.",
+        "Permanente e continuado são idênticos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prevenção",
+          "significado": "Fixação entre órgãos competentes por antecedência de ato relevante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "aaf4d88b-af84-5aef-982d-ad08d1cc3286",
+        "content_sha256": "f0e3bca957aa17cb0f0a37051b2bdeade104e22db3c99d5f5b56fa246aee3b74",
+        "simples": "Tratando-se de infração continuada ou permanente, praticada em território de duas ou mais jurisdições, a competência firmar-se-á pela prevenção.",
+        "pontos": [
+          "Crime continuado ou permanente em mais de uma jurisdição: prevenção."
+        ],
+        "atencao": [
+          "Prevenção: o juiz que primeiro conhece do caso."
+        ],
+        "exemplo": "Sequestro que se prolonga por dois municípios: competente o juízo prevento.",
+        "prova": [
+          "Assertiva que fixa o domicílio do réu para crimes permanentes em várias jurisdições erra: aplica-se a prevenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-72",
+      "unit_id": "065470b9-e13c-530b-9893-8627a5b05495",
+      "content_sha256": "a163d8460a5f91e50fb64c884e8b8d0c64a2037f60d009bb79c6447450095d2e",
+      "simples": "Quando o lugar da infração é desconhecido, usa-se domicílio ou residência do réu. Residências múltiplas levam à prevenção; sem residência certa ou paradeiro conhecido, primeiro juízo que conhecer o fato.",
+      "pontos": [
+        "Critério é subsidiário ao lugar conhecido.",
+        "§1º: mais de uma residência, prevenção.",
+        "§2º: sem residência certa/paradeiro ignorado, primeiro conhecimento."
+      ],
+      "atencao": [
+        "Desconhecimento do local do crime não é o mesmo que desconhecimento do endereço do réu."
+      ],
+      "exemplo": "Local do fato não é identificado, mas o acusado tem residência certa: aplica-se o critério subsidiário. Variação: Se também não há residência certa nem paradeiro conhecido, observar o §2º.",
+      "prova": [
+        "Usar residência exige necessariamente desconhecer o lugar da infração? Sim, nesta regra.",
+        "Múltiplas residências levam sempre à escolha livre da vítima? Não; prevenção."
+      ],
+      "termos": [
+        {
+          "termo": "Foro subsidiário",
+          "significado": "Critério territorial usado quando o principal não é conhecido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "065470b9-e13c-530b-9893-8627a5b05495",
+        "content_sha256": "a163d8460a5f91e50fb64c884e8b8d0c64a2037f60d009bb79c6447450095d2e",
+        "simples": "Não sendo conhecido o lugar da infração, a competência regula-se pelo domicílio ou residência do réu. Se o réu tiver mais de uma residência, firma-se pela prevenção. Se não tiver residência certa ou for ignorado seu paradeiro, é competente o juiz que primeiro tomar conhecimento do fato.",
+        "pontos": [
+          "Lugar da infração desconhecido: domicílio ou residência do réu.",
+          "Mais de uma residência: prevenção.",
+          "Sem residência certa ou paradeiro ignorado: o juiz que primeiro conhecer do fato."
+        ],
+        "atencao": [
+          "Critério subsidiário ao lugar da infração."
+        ],
+        "exemplo": "Não se sabe onde o crime ocorreu: vale o domicílio do réu.",
+        "prova": [
+          "Assertiva que aplica o domicílio do réu mesmo quando conhecido o lugar da infração, no art. 72, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70",
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-73",
+      "unit_id": "ffd7004c-31bd-513b-95ff-f5a4d346f5a2",
+      "content_sha256": "3e294c836da2325b264e3f51be4e07a457adf8a8831fa162eb745b07b66dabdb",
+      "simples": "Em ação exclusivamente privada, o querelante pode preferir o foro do domicílio ou residência do réu mesmo conhecendo o lugar do crime.",
+      "pontos": [
+        "Faculdade específica do querelante.",
+        "Exige modalidade exclusivamente privada.",
+        "Não estender automaticamente à ação privada subsidiária da pública."
+      ],
+      "atencao": [
+        "A eleição legal não é escolha de qualquer cidade; fica restrita aos foros indicados."
+      ],
+      "exemplo": "Ofendido em ação exclusivamente privada prefere a residência do querelado ao lugar conhecido da infração. Variação: Na ação pública, vítima não escolhe esse foro só por preferência.",
+      "prova": [
+        "A faculdade vale para qualquer ação penal? Não.",
+        "Conhecer o lugar do fato impede a preferência na privada exclusiva? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Foro facultativo privado",
+          "significado": "Opção territorial expressa para ação exclusivamente privada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ffd7004c-31bd-513b-95ff-f5a4d346f5a2",
+        "content_sha256": "3e294c836da2325b264e3f51be4e07a457adf8a8831fa162eb745b07b66dabdb",
+        "simples": "Nos casos de exclusiva ação privada, o querelante poderá preferir o foro de domicílio ou da residência do réu, ainda quando conhecido o lugar da infração.",
+        "pontos": [
+          "Ação exclusivamente privada: o querelante pode escolher o foro do domicílio do réu."
+        ],
+        "atencao": [
+          "Faculdade do querelante, apenas na ação EXCLUSIVAMENTE privada."
+        ],
+        "exemplo": "Em calúnia, o querelante ajuíza a queixa no domicílio do querelado.",
+        "prova": [
+          "Assertiva que estende a escolha do foro à ação pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-74",
+      "unit_id": "e1f39030-8a61-5d42-b8cf-adb99277ecac",
+      "content_sha256": "eb826ea8add702077b9f60073934909abd2edcaca3ec6f2d7726c57eb0e8eb3a",
+      "simples": "Competência pela natureza depende de organização judiciária e Constituição, incluindo o Júri para crimes dolosos contra a vida. A lista antiga do §1º não esgota tipos atuais.",
+      "pontos": [
+        "CF 5º, XXXVIII: Júri e garantias constitucionais.",
+        "Lei 14.994/2024 criou feminicídio autônomo no CP 121-A; não excluí-lo por não constar da enumeração de 1948.",
+        "Atual art. 122 do CP e seus resultados/hipóteses exigem leitura própria, não antiga remissão ao parágrafo único.",
+        "Desclassificação tem efeitos próprios; referências antigas do §3º devem ser integradas aos atuais arts. 419 e 492."
+      ],
+      "atencao": [
+        "Lei 15.358/2026 introduziu ressalva no art. 78, I, com controvérsia constitucional nas ADIs 7952, 7956, 7957 e 7958. Não ensinar exclusão indiscriminada do Júri ou decisão final dessas ações sem consulta."
+      ],
+      "exemplo": "Acusação de feminicídio atual exige considerar CP 121-A e competência constitucional, mesmo fora da antiga lista literal. Variação: Infração culposa contra a vida não é incluída só por envolver morte; natureza e requisitos são decisivos.",
+      "prova": [
+        "A lista de 1948 prova que feminicídio autônomo está fora do Júri? Não.",
+        "Todo crime com resultado morte é necessariamente doloso contra a vida? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Competência material",
+          "significado": "Atribuição pelo tipo/natureza da infração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "e1f39030-8a61-5d42-b8cf-adb99277ecac",
+        "content_sha256": "eb826ea8add702077b9f60073934909abd2edcaca3ec6f2d7726c57eb0e8eb3a",
+        "simples": "A competência pela natureza da infração é regulada pelas leis de organização judiciária, salvo a competência privativa do Tribunal do Júri. Compete ao Tribunal do Júri julgar os crimes dolosos contra a vida: homicídio doloso (simples e qualificado), induzimento, instigação ou auxílio a suicídio, infanticídio e aborto, consumados ou tentados. Se, iniciado o processo perante um juiz, houver desclassificação para infração da competência de outro, o processo é remetido a este, salvo se mais graduada for a jurisdição do primeiro, que terá sua competência prorrogada. Se o juiz da pronúncia desclassificar para infração de competência de juiz singular, aplica-se o art. 410; se a desclassificação for do próprio Júri, o presidente profere a sentença.",
+        "pontos": [
+          "Natureza da infração: leis de organização judiciária, ressalvado o Júri.",
+          "§1º: Júri julga crimes dolosos contra a vida, consumados ou tentados.",
+          "§2º: desclassificação leva o processo ao juízo competente, salvo jurisdição mais graduada.",
+          "§3º: desclassificação na pronúncia (art. 410) ou pelo Júri (presidente sentencia)."
+        ],
+        "atencao": [
+          "O homicídio culposo NÃO é do Júri.",
+          "Desclassificação feita pelo Júri: o presidente sentencia (art. 492, §2º)."
+        ],
+        "exemplo": "Homicídio doloso tentado é julgado pelo Tribunal do Júri.",
+        "prova": [
+          "Assertiva que atribui ao Júri o homicídio culposo erra: o Júri julga crimes dolosos contra a vida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 410",
+          "Art. 492"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-75",
+      "unit_id": "24d634d2-cb99-5145-b5a4-2699f58e650c",
+      "content_sha256": "c80ccd913a814f4013e9d9192c9664edb73383157ded7f38765a3d2603cd0f29",
+      "simples": "Entre juízes igualmente competentes na mesma circunscrição, a precedência da distribuição fixa competência. Atos anteriores podem prevenir, observada a separação atual das funções judiciais.",
+      "pontos": [
+        "Distribuição organiza órgãos igualmente habilitados.",
+        "Parágrafo cita fiança, preventiva e diligência anterior à acusação.",
+        "CPP 3º-B/3º-C e organização do juiz das garantias exigem integrar o regime atual."
+      ],
+      "atencao": [
+        "Não ensinar que toda atuação investigativa faz o juiz necessariamente julgar o mérito, ignorando juiz das garantias e suas exceções."
+      ],
+      "exemplo": "A ação é distribuída entre varas igualmente competentes segundo regras objetivas do tribunal. Variação: Medida investigativa é examinada por juiz das garantias; verificar a divisão vigente antes de concluir prevenção para julgamento.",
+      "prova": [
+        "Distribuição permite escolher juiz por preferência pessoal? Não.",
+        "O parágrafo elimina o juiz das garantias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Distribuição",
+          "significado": "Designação impessoal de processos entre órgãos habilitados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "24d634d2-cb99-5145-b5a4-2699f58e650c",
+        "content_sha256": "c80ccd913a814f4013e9d9192c9664edb73383157ded7f38765a3d2603cd0f29",
+        "simples": "A precedência da distribuição fixa a competência quando, na mesma circunscrição judiciária, houver mais de um juiz igualmente competente. A distribuição realizada para a concessão de fiança, a decretação de prisão preventiva ou qualquer diligência anterior à denúncia ou queixa previne a da ação penal.",
+        "pontos": [
+          "Mais de um juiz igualmente competente: vale a precedência da distribuição.",
+          "Distribuição de fiança, preventiva ou diligência prévia previne a ação penal."
+        ],
+        "atencao": [
+          "Há conexão com a prevenção do art. 83."
+        ],
+        "exemplo": "A distribuição do pedido de prisão preventiva torna aquele juiz prevento para a futura ação penal.",
+        "prova": [
+          "Assertiva que nega efeito preventivo à distribuição de diligência anterior à denúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-76",
+      "unit_id": "e0952c39-6d9f-5a02-af6b-12440722b289",
+      "content_sha256": "5d244a0185cfd1e81c0e74d5d260f92e9a592c24379edea9abfc1b0208a57359",
+      "simples": "Conexão liga infrações por pessoas, finalidade ou influência probatória. Pode fundamentar reunião quando não houver separação legal obrigatória ou facultativa.",
+      "pontos": [
+        "I: simultaneidade/grupo, concurso em tempos/lugares diversos, reciprocidade.",
+        "II: facilitar, ocultar, obter impunidade ou vantagem de outra infração.",
+        "III: prova de um fato influencia prova de outro."
+      ],
+      "atencao": [
+        "Conexão não significa qualquer semelhança de crimes nem supera automaticamente competência constitucional."
+      ],
+      "exemplo": "Fraude é praticada para ocultar outro delito: examinar conexão finalística do inciso II. Variação: Dois crimes semelhantes sem vínculo pessoal, finalístico ou probatório não se conectam só pelo nome do tipo.",
+      "prova": [
+        "Influência de prova de um crime em outro pode gerar conexão? Sim.",
+        "Mesmo nome do delito basta sempre? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Conexão",
+          "significado": "Vínculo entre infrações relevante à competência e reunião."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e0952c39-6d9f-5a02-af6b-12440722b289",
+        "content_sha256": "5d244a0185cfd1e81c0e74d5d260f92e9a592c24379edea9abfc1b0208a57359",
+        "simples": "A competência será determinada pela conexão: se, ocorrendo duas ou mais infrações, houverem sido praticadas ao mesmo tempo por várias pessoas reunidas, ou por várias pessoas em concurso, embora diverso o tempo e o lugar, ou por várias pessoas umas contra as outras (conexão intersubjetiva); se umas houverem sido praticadas para facilitar ou ocultar as outras, ou para conseguir impunidade ou vantagem (conexão consequencial ou teleológica); ou quando a prova de uma infração ou de suas circunstâncias elementares influir na prova de outra (conexão probatória).",
+        "pontos": [
+          "I: conexão intersubjetiva (por simultaneidade, por concurso ou por reciprocidade).",
+          "II: conexão teleológica ou consequencial.",
+          "III: conexão probatória (instrumental)."
+        ],
+        "atencao": [
+          "Três espécies de conexão."
+        ],
+        "exemplo": "Crime praticado para ocultar outro: conexão consequencial.",
+        "prova": [
+          "Assertiva que limita a conexão à hipótese de várias pessoas reunidas erra."
+        ],
+        "termos": [
+          {
+            "termo": "Conexão",
+            "significado": "Vínculo entre infrações que justifica o julgamento conjunto."
+          }
+        ],
+        "remissoes": [
+          "Art. 77",
+          "Art. 78",
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-77",
+      "unit_id": "1b75a20b-90c4-5f44-9d01-135f5c389f37",
+      "content_sha256": "5da1652acdcbe983928721658fa778634451fa94f065e905987c12859ded59e5",
+      "simples": "Continência ocorre quando várias pessoas são acusadas da mesma infração e nas hipóteses de unidade previstas pela remissão penal. As numerações antigas do CP exigem atualização interpretativa.",
+      "pontos": [
+        "Inciso I: pluralidade de acusados, mesma infração.",
+        "Inciso II: integrar atuais CP 70, 73 e 74, em vez de copiar números anteriores à reforma de 1984.",
+        "Conexão e continência não são sinônimos, embora possam reunir processos."
+      ],
+      "atencao": [
+        "O CP 51 atual trata da multa; a remissão histórica não faz da multa a causa atual da continência."
+      ],
+      "exemplo": "Dois coautores são acusados do mesmo furto: há continência por cumulação subjetiva. Variação: Infrações distintas podem ter conexão sem serem o mesmo fato compartilhado.",
+      "prova": [
+        "Duas pessoas acusadas da mesma infração enquadram-se no inciso I? Sim.",
+        "Deve-se ler a remissão ao antigo CP 51 como regra atual da multa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Continência",
+          "significado": "Unidade relevante entre acusados ou imputações nas hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1b75a20b-90c4-5f44-9d01-135f5c389f37",
+        "content_sha256": "5da1652acdcbe983928721658fa778634451fa94f065e905987c12859ded59e5",
+        "simples": "A competência é determinada pela continência quando duas ou mais pessoas forem acusadas pela mesma infração (cumulação subjetiva), ou no caso de infração cometida nas condições previstas nos arts. 51, § 1º, 53, segunda parte, e 54 do Código Penal (concurso formal, erro na execução e resultado diverso do pretendido).",
+        "pontos": [
+          "I: várias pessoas acusadas pela mesma infração.",
+          "II: concurso formal, aberratio ictus e aberratio criminis com resultado duplo."
+        ],
+        "atencao": [
+          "Continência: um fato com várias pessoas ou várias consequências de uma só conduta."
+        ],
+        "exemplo": "Dois acusados do mesmo roubo: continência por cumulação subjetiva.",
+        "prova": [
+          "Assertiva que identifica a continência com a conexão probatória erra."
+        ],
+        "termos": [
+          {
+            "termo": "Continência",
+            "significado": "Uma causa está contida em outra; o julgamento é conjunto."
+          }
+        ],
+        "remissoes": [
+          "Art. 76",
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-78",
+      "unit_id": "c2f5f214-0497-5963-884f-b03b3c236487",
+      "content_sha256": "a6fec357f098679d5a3d51f643c5f8adea439643ca710d26f7114e8f8f2d26b2",
+      "simples": "Na reunião por conexão ou continência, critérios de prevalência orientam o órgão competente, sempre integrados às ressalvas legais e constitucionais.",
+      "pontos": [
+        "I: texto atual prioriza Júri frente a outro órgão comum, com ressalva de 2026 para homicídios/tentativas na hipótese especial indicada.",
+        "II: mesma categoria, pena mais grave; penas iguais, maior número de infrações; demais casos, prevenção.",
+        "III: categorias diversas, órgão de maior graduação.",
+        "IV: jurisdição especial prevalece em concurso com comum, ressalvadas separações constitucionais/legais; art. 79 preserva comum e militar."
+      ],
+      "atencao": [
+        "Atualização: Lei 15.358/2026 acrescentou ressalva ao inciso I. STF abriu audiência nas ADIs 7952/7956/7957/7958 em agosto de 2026; audiência não é julgamento nem validação definitiva. Este conteúdo não certifica ausência de cautelares posteriores nem retirada universal do Júri."
+      ],
+      "exemplo": "Dois delitos conexos de mesma categoria possuem penas de gravidade diferente: examinar prevalência do lugar do delito mais grave. Variação: No recorte novo de homicídio ligado a organização ultraviolenta, conferir requisitos legais e situação das ADIs; não usar a simples palavra facção para mudar qualquer competência.",
+      "prova": [
+        "Penas iguais fazem prevalecer sempre o local do primeiro fato? Não; considerar maior número e depois prevenção.",
+        "Audiência pública resolve constitucionalidade definitivamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prevalência jurisdicional",
+          "significado": "Critério de escolha na reunião de competências."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-retoma-debates-sobre-a-lei-antifaccao/"
+      ],
+      "expected": {
+        "unit_id": "c2f5f214-0497-5963-884f-b03b3c236487",
+        "content_sha256": "a6fec357f098679d5a3d51f643c5f8adea439643ca710d26f7114e8f8f2d26b2",
+        "simples": "Na determinação da competência por conexão ou continência, observam-se as seguintes regras: no concurso entre a competência do júri e a de outro órgão da jurisdição comum, prevalece o júri, salvo os casos de homicídios cometidos por membros de organizações criminosas ultraviolentas, grupo paramilitar ou milícia privada, ou sua tentativa; no concurso de jurisdições da mesma categoria, preponderará a do lugar da infração à qual for cominada a pena mais grave, prevalecerá a do lugar com maior número de infrações se as penas forem de igual gravidade, e firmar-se-á a prevenção nos demais casos; no concurso de jurisdições de diversas categorias, predomina a de maior graduação; e no concurso entre a jurisdição comum e a especial, prevalece esta.",
+        "pontos": [
+          "I: júri prevalece sobre outros órgãos da jurisdição comum (com exceção para organizações ultraviolentas, grupo paramilitar ou milícia).",
+          "II, a: pena mais grave.",
+          "II, b: maior número de infrações, se penas iguais.",
+          "II, c: prevenção nos demais casos.",
+          "III: maior graduação.",
+          "IV: jurisdição especial prevalece sobre a comum."
+        ],
+        "atencao": [
+          "Exceção do inciso I incluída pela Lei nº 15.358, de 2026.",
+          "Ordem: júri; mesma categoria (pena, número, prevenção); maior graduação; especial."
+        ],
+        "exemplo": "Crime comum conexo a homicídio doloso: prevalece o Tribunal do Júri, em regra.",
+        "prova": [
+          "Assertiva que faz prevalecer a jurisdição comum sobre a especial na conexão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76",
+          "Art. 77",
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-79",
+      "unit_id": "6fdd7210-7203-5774-9f28-0b900dd4be75",
+      "content_sha256": "8f9f7122725183492d2602a2132dbb4910b5c0ebda33339f002c64fe8f4fe310",
+      "simples": "Conexão e continência geralmente reúnem processo e julgamento, mas há separações expressas, especialmente entre justiça comum e militar e entre adulto e adolescente.",
+      "pontos": [
+        "Menores: integrar ECA e sistema próprio, não antigo modelo penal de menores.",
+        "§1º: situação do art. 152 pode fazer cessar unidade.",
+        "§2º: unidade processual não garante julgamento conjunto em toda hipótese.",
+        "Antiga remissão ao art. 461 não deve substituir exame do procedimento atual do Júri."
+      ],
+      "atencao": [
+        "Não usar conexão para processar adolescente como adulto nem para reunificar órgãos com competências separadas."
+      ],
+      "exemplo": "Adulto e adolescente participam do fato: procedimentos seguem seus sistemas próprios, apesar do vínculo fático. Variação: Caso envolvendo justiça militar e comum requer separação indicada, não atração automática de tudo pela especializada.",
+      "prova": [
+        "Adulto e adolescente seguem necessariamente o mesmo processo penal por conexão? Não.",
+        "Unidade de processo sempre implica julgamento único? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Separação obrigatória",
+          "significado": "Ruptura da reunião nas hipóteses expressas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ],
+      "expected": {
+        "unit_id": "6fdd7210-7203-5774-9f28-0b900dd4be75",
+        "content_sha256": "8f9f7122725183492d2602a2132dbb4910b5c0ebda33339f002c64fe8f4fe310",
+        "simples": "A conexão e a continência importam unidade de processo e julgamento, salvo no concurso entre a jurisdição comum e a militar, e no concurso entre a jurisdição comum e a do juízo de menores. Cessa, em qualquer caso, a unidade do processo se, em relação a algum corréu, sobrevier o caso do art. 152 (doença mental superveniente). A unidade do processo não importará a do julgamento se houver corréu foragido que não possa ser julgado à revelia, ou ocorrer a hipótese do art. 461.",
+        "pontos": [
+          "Regra: unidade de processo e julgamento.",
+          "Exceções: jurisdição militar e juízo de menores.",
+          "§1º: cessa se sobrevier doença mental a algum corréu.",
+          "§2º: corréu foragido ou hipótese do art. 461 não impede o julgamento dos demais."
+        ],
+        "atencao": [
+          "Exceções clássicas: militar e menores (justiça da infância)."
+        ],
+        "exemplo": "Corréu foragido não impede o julgamento dos outros acusados.",
+        "prova": [
+          "Assertiva que obriga a unidade de julgamento entre jurisdição comum e militar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76",
+          "Art. 152",
+          "Art. 461"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-80",
+      "unit_id": "6e078bb0-00fe-59c6-8993-c75b1a6331f1",
+      "content_sha256": "809a1bb856d09b9917550df690f078951b239b018ae6fc39398d8d9b6d7286b4",
+      "simples": "Juiz pode separar processos por diferença de tempo/lugar, excesso de acusados para evitar prolongar prisão provisória ou outro motivo relevante.",
+      "pontos": [
+        "Separação é facultativa e exige razão concreta.",
+        "Protege duração razoável e organização adequada.",
+        "Não confundir com hipóteses obrigatórias do art. 79."
+      ],
+      "atencao": [
+        "Faculdade não é escolha arbitrária sem fundamentação. Reunião conveniente não justifica prisão indefinida."
+      ],
+      "exemplo": "Muitos acusados e agendas distintas prolongariam custódia; juiz fundamenta separação pertinente. Variação: Número reduzido e ausência de dificuldade não autorizam invocar excesso fictício sem motivação.",
+      "prova": [
+        "Só diferença de local permite separação? Não; há outras razões legais.",
+        "Separação é obrigatória em toda pluralidade de acusados? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Separação facultativa",
+          "significado": "Desmembramento motivado por conveniência processual relevante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "6e078bb0-00fe-59c6-8993-c75b1a6331f1",
+        "content_sha256": "809a1bb856d09b9917550df690f078951b239b018ae6fc39398d8d9b6d7286b4",
+        "simples": "É facultativa a separação dos processos quando as infrações tiverem sido praticadas em circunstâncias de tempo ou de lugar diferentes, ou quando, pelo excessivo número de acusados e para não lhes prolongar a prisão provisória, ou por outro motivo relevante, o juiz reputar conveniente a separação.",
+        "pontos": [
+          "Separação facultativa dos processos.",
+          "Hipóteses: tempo ou lugar diferentes; número excessivo de acusados; outro motivo relevante."
+        ],
+        "atencao": [
+          "A separação é discricionária do juiz."
+        ],
+        "exemplo": "Juiz separa o processo de acusados presos para não alongar a prisão provisória.",
+        "prova": [
+          "Assertiva que torna obrigatória a separação em razão do número de acusados erra: é facultativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-81",
+      "unit_id": "3e3d4beb-60b4-5d24-aee5-fbddcb6abd8f",
+      "content_sha256": "d9c5bca9107333052032b98935ae62d90e225f612baf1670a1021d34cd2cc51b",
+      "simples": "Após reunião regular, absolvição ou desclassificação do delito próprio geralmente não elimina competência para os outros. Júri tem ressalva específica antes do plenário.",
+      "pontos": [
+        "Caput: manutenção após decisão sobre infração própria.",
+        "Parágrafo: juiz desclassifica, impronuncia ou absolve, excluindo Júri, e remete ao competente.",
+        "Distinguir decisão antes do plenário e desclassificação pelos jurados, regida pelo art. 492."
+      ],
+      "atencao": [
+        "Não afirmar manutenção do Júri em qualquer fase após afastar crime doloso contra vida."
+      ],
+      "exemplo": "Juiz exclui a competência do Júri na fase inicial por impronúncia e remete delito restante ao órgão competente. Variação: Se a desclassificação ocorre pelo Conselho de Sentença, examinar art. 492 e atuação do juiz presidente.",
+      "prova": [
+        "O parágrafo repete simplesmente a regra geral de manutenção? Não; traz ressalva do Júri.",
+        "Fase da desclassificação é irrelevante? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perpetuação da competência",
+          "significado": "Manutenção após reunião, com exceções legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3e3d4beb-60b4-5d24-aee5-fbddcb6abd8f",
+        "content_sha256": "d9c5bca9107333052032b98935ae62d90e225f612baf1670a1021d34cd2cc51b",
+        "simples": "Verificada a reunião dos processos por conexão ou continência, ainda que no processo da sua competência própria o juiz ou tribunal venha a proferir sentença absolutória ou a desclassificar a infração para outra que não se inclua na sua competência, continuará competente em relação aos demais processos (perpetuação da jurisdição). Reconhecida inicialmente ao júri a competência por conexão ou continência, o juiz que desclassificar a infração, impronunciar ou absolver o acusado de modo a excluir a competência do júri remeterá o processo ao juízo competente.",
+        "pontos": [
+          "Reunidos os processos, o juízo continua competente mesmo com absolvição ou desclassificação.",
+          "Parágrafo único: exclusão da competência do júri leva à remessa ao juízo competente."
+        ],
+        "atencao": [
+          "Perpetuação da jurisdição na conexão e continência, com exceção do Júri."
+        ],
+        "exemplo": "O juiz absolve do crime de sua competência própria, mas continua julgando os conexos.",
+        "prova": [
+          "Assertiva que determina o declínio da competência após a absolvição pelo crime de competência própria erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-82",
+      "unit_id": "63b4f56d-9c9d-5bbe-870f-45e099d2720e",
+      "content_sha256": "2b4c30760b1bf9f2305fc7ae4c806608867d27533d7cb3a084556bbfc9b512a5",
+      "simples": "Processos separados apesar de vínculo podem ser avocados pela jurisdição prevalente, salvo existência de sentença definitiva; então eventual unidade é de soma ou unificação de penas.",
+      "pontos": [
+        "Avocação busca corrigir fragmentação antes de sentença definitiva.",
+        "Não reunir processo já julgado só porque há conexão.",
+        "Súmula 235/STJ: conexão não determina reunião quando um já foi julgado."
+      ],
+      "atencao": [
+        "Não confundir sentença definitiva com decisão interlocutória nem unificação de penas com novo julgamento conjunto."
+      ],
+      "exemplo": "Um processo conexo já foi julgado; não impor reunião para reiniciar sua instrução. Variação: Antes de julgamento definitivo, órgão prevalente pode avocar observando competência e garantias.",
+      "prova": [
+        "Conexão exige sempre reunir processo já julgado? Não; Súmula 235.",
+        "Unificação de penas equivale a julgamento conjunto retroativo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Avocação",
+          "significado": "Chamada de processo ao órgão de jurisdição prevalente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?sumula=235.num."
+      ],
+      "expected": {
+        "unit_id": "63b4f56d-9c9d-5bbe-870f-45e099d2720e",
+        "content_sha256": "2b4c30760b1bf9f2305fc7ae4c806608867d27533d7cb3a084556bbfc9b512a5",
+        "simples": "Se, não obstante a conexão ou continência, forem instaurados processos diferentes, a autoridade de jurisdição prevalente deve avocar os processos que corram perante os outros juízes, salvo se já estiverem com sentença definitiva. Neste caso, a unidade dos processos só se dará, ulteriormente, para efeito de soma ou unificação das penas.",
+        "pontos": [
+          "Processos separados apesar da conexão: o juízo prevalente avoca os demais.",
+          "Exceção: processo já com sentença definitiva.",
+          "Nesse caso, a unidade só serve à soma ou unificação das penas."
+        ],
+        "atencao": [
+          "Súmula 235 do STJ: a conexão não determina a reunião de processos se um deles já foi julgado."
+        ],
+        "exemplo": "Dois processos conexos tramitam separados: o do juízo prevalente avoca o outro, se ainda não sentenciado.",
+        "prova": [
+          "Assertiva que determina a avocação de processo já com sentença definitiva erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-83",
+      "unit_id": "971370cb-2752-5493-a31a-376967bbcc95",
+      "content_sha256": "c276c73ebd6960ffb3a8d08f41c65959193f2f04b6b276cc54a9e457b7b1b03d",
+      "simples": "Prevenção fixa competência quando dois ou mais juízes são igualmente competentes ou possuem jurisdição cumulativa e um pratica antes ato processual ou medida pertinente, mesmo anterior à acusação.",
+      "pontos": [
+        "Pressupõe concorrência de órgãos habilitados.",
+        "Antecedência do ato relevante não é preferência pessoal.",
+        "Integrar divisão entre garantias e instrução e regras objetivas do tribunal."
+      ],
+      "atencao": [
+        "Juiz constitucionalmente incompetente não se torna competente só por agir primeiro. Não ignorar regime do juiz das garantias."
+      ],
+      "exemplo": "Entre órgãos habilitados, o primeiro ato pertinente previne nos termos legais. Variação: Medida por órgão incompetente não afasta a regra constitucional correta.",
+      "prova": [
+        "Qualquer ato por qualquer juiz cria competência? Não.",
+        "Prevenção pode envolver medida anterior à denúncia? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Juízo prevento",
+          "significado": "Órgão cuja antecedência relevante fixa a atribuição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "971370cb-2752-5493-a31a-376967bbcc95",
+        "content_sha256": "c276c73ebd6960ffb3a8d08f41c65959193f2f04b6b276cc54a9e457b7b1b03d",
+        "simples": "Verifica-se a competência por prevenção toda vez que, concorrendo dois ou mais juízes igualmente competentes ou com jurisdição cumulativa, um deles tiver antecedido aos outros na prática de algum ato do processo ou de medida a este relativa, ainda que anterior ao oferecimento da denúncia ou da queixa.",
+        "pontos": [
+          "Prevenção: o juiz que primeiro pratica ato do processo ou medida a ele relativa.",
+          "Vale mesmo para ato anterior à denúncia ou queixa."
+        ],
+        "atencao": [
+          "Remissões do artigo: arts. 70, §3º, 71, 72, §2º, e 78, II, c."
+        ],
+        "exemplo": "O juiz que decretou a quebra de sigilo na investigação previne a competência para a ação.",
+        "prova": [
+          "Assertiva que restringe a prevenção a atos posteriores à denúncia erra."
+        ],
+        "termos": [
+          {
+            "termo": "Prevenção",
+            "significado": "Fixação da competência pelo juiz que primeiro conheceu do caso."
+          }
+        ],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-84",
+      "unit_id": "35b40799-0d30-501f-b018-921181c43d66",
+      "content_sha256": "ba710fbd0d76353841be40745d2acc181b39174da4d9b77ae14561f703201bde",
+      "simples": "Prerrogativa de função decorre da Constituição, com tribunal e âmbito próprios. O CPP não cria sozinho foro amplo para qualquer agente ou qualquer fato após deixar o cargo.",
+      "pontos": [
+        "Conferir CF 102, 105, 108 e 125 e natureza comum/de responsabilidade.",
+        "ADI 2797 afastou a ampliação da Lei 10.628/2002 nos antigos §§1º–2º; não ressuscitá-los.",
+        "HC 232627 e Inq 4787/STF, 2025: foro para crime praticado no cargo e em razão dele permanece após saída, mesmo se investigação/ação começa depois.",
+        "Embargos julgados em maio de 2026: alcance inclui titulares de cargos vitalícios; maior graduação prevalece em sucessão de cargos, sem novo declínio pela saída posterior.",
+        "Em princípio, fatos no período eleitoral a pretexto da função não ganham foro; há exceções por crimes funcionais conexos posteriores ou outro motivo de competência originária.",
+        "Orientação tem incidência imediata em processos em curso, ainda que instrução finalizada; não confundir manutenção funcional com foro universal para qualquer delito não funcional."
+      ],
+      "atencao": [
+        "Atualização de 2025/2026 não equivale a reviver os parágrafos inconstitucionais. Acesso integral à página do STF retornou 403 nesta conferência; andamento oficial indexado foi consultado, sem certificar todos os efeitos intertemporais ou o Tema 1147."
+      ],
+      "exemplo": "Autoridade deixa mandato depois de delito cometido no exercício e em razão da função; avaliar manutenção do foro segundo a tese atual, não declínio automático pelo fim do cargo. Variação: Fato sem vínculo funcional exige verificar categoria, Constituição e precedentes próprios; não presumir mesma solução pela mera qualidade de ex-autoridade.",
+      "prova": [
+        "Saída do cargo sempre afasta foro no delito funcional abrangido pela tese? Não.",
+        "Mudança de 2025 restabeleceu os antigos parágrafos da Lei 10.628? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Foro por função",
+          "significado": "Competência constitucional definida pela função e regime jurisprudencial pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=6742436",
+        "https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/"
+      ],
+      "expected": {
+        "unit_id": "35b40799-0d30-501f-b018-921181c43d66",
+        "content_sha256": "ba710fbd0d76353841be40745d2acc181b39174da4d9b77ae14561f703201bde",
+        "simples": "A competência pela prerrogativa de função é do Supremo Tribunal Federal, do Superior Tribunal de Justiça, dos Tribunais Regionais Federais e dos Tribunais de Justiça dos Estados e do Distrito Federal, relativamente às pessoas que devam responder perante eles por crimes comuns e de responsabilidade. Os parágrafos foram objeto de ação direta de inconstitucionalidade.",
+        "pontos": [
+          "Prerrogativa de função: STF, STJ, TRFs e TJs.",
+          "Aplica-se a quem responde perante esses tribunais por crimes comuns e de responsabilidade."
+        ],
+        "atencao": [
+          "Os §§1º e 2º foram declarados inconstitucionais no STF (ADIN)."
+        ],
+        "exemplo": "Governador de Estado é julgado, nos crimes comuns, pelo Superior Tribunal de Justiça.",
+        "prova": [
+          "Assertiva que afasta o STF do rol de tribunais com competência por prerrogativa de função erra."
+        ],
+        "termos": [
+          {
+            "termo": "Foro por prerrogativa de função",
+            "significado": "Competência de tribunal em razão do cargo do acusado."
+          }
+        ],
+        "remissoes": [
+          "Art. 86",
+          "Art. 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-85",
+      "unit_id": "05c54f70-2253-58bc-8e77-708848bca83b",
+      "content_sha256": "95ca8460986462528c756cb0ff0c3168d22e3ebd758c9b1260d1b7458df58fee",
+      "simples": "Exceção da verdade em crime contra honra tem regra de julgamento ligada ao foro constitucional da autoridade querelante, quando oposta e admitida. Não transfere automaticamente toda ação penal.",
+      "pontos": [
+        "Separar admissibilidade da exceção e seu julgamento.",
+        "Tribunais de Apelação é denominação histórica; consultar competência constitucional atual.",
+        "Identificar cargo, tipo contra honra e cabimento da prova."
+      ],
+      "atencao": [
+        "Não concluir que vítima autoridade torna todo acusado sujeito ao mesmo foro para toda a causa."
+      ],
+      "exemplo": "Exceção da verdade é admitida contra autoridade com foro constitucional pertinente: examinar órgão competente para a exceção. Variação: Sem exceção admitida, não usar art. 85 como atração automática de toda ação.",
+      "prova": [
+        "A regra exige exceção oposta e admitida? Sim.",
+        "Foro do querelante sempre atrai integralmente qualquer ação contra seu crítico? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção da verdade",
+          "significado": "Defesa específica de prova do fato nos limites do tipo e da competência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "05c54f70-2253-58bc-8e77-708848bca83b",
+        "content_sha256": "95ca8460986462528c756cb0ff0c3168d22e3ebd758c9b1260d1b7458df58fee",
+        "simples": "Nos processos por crime contra a honra em que forem querelantes as pessoas sujeitas à jurisdição do Supremo Tribunal Federal e dos Tribunais de Apelação, a eles caberá o julgamento quando oposta e admitida a exceção da verdade.",
+        "pontos": [
+          "Crime contra a honra com querelante de foro especial.",
+          "Exceção da verdade oposta e admitida desloca o julgamento ao tribunal competente."
+        ],
+        "atencao": [
+          "Relaciona-se com a exceção da verdade (arts. 138, §3º e 139 do Código Penal)."
+        ],
+        "exemplo": "Querelado em calúnia contra autoridade com foro opõe exceção da verdade, e o tribunal a julga.",
+        "prova": [
+          "Assertiva que desloca a competência sem a admissão da exceção da verdade erra."
+        ],
+        "termos": [
+          {
+            "termo": "Exceção da verdade",
+            "significado": "Defesa em que o querelado tenta provar a veracidade da imputação."
+          }
+        ],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-86",
+      "unit_id": "786956bb-2a8c-5bf3-a3ad-bc4233c4d871",
+      "content_sha256": "7481b81393e4db0ed92627cd86decb05c4c8ab373b280dc6a70b6e840c04323c",
+      "simples": "A lista de 1941 sobre competência do STF não substitui a Constituição vigente. Cargos citados têm distribuição atual entre STF, STJ e regimes de responsabilidade distintos.",
+      "pontos": [
+        "CF 102: competências originárias do STF.",
+        "CF 105: diversos membros de tribunais têm foro no STJ.",
+        "Crimes comuns e de responsabilidade não são categorias intercambiáveis."
+      ],
+      "atencao": [
+        "Não ensinar que todo desembargador atualmente é julgado pelo STF porque aparece na lista histórica."
+      ],
+      "exemplo": "Caso envolvendo desembargador exige consultar CF 105 e regime atual, sem atribuir STF pela simples leitura do inciso III. Variação: Membro do STF em crime comum possui regra constitucional própria no CF 102.",
+      "prova": [
+        "A lista antiga prevalece contra a Constituição? Não.",
+        "Todo crime de responsabilidade tem necessariamente o mesmo órgão de crime comum? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Competência constitucional originária",
+          "significado": "Julgamento diretamente atribuído pela Constituição a tribunal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "786956bb-2a8c-5bf3-a3ad-bc4233c4d871",
+        "content_sha256": "7481b81393e4db0ed92627cd86decb05c4c8ab373b280dc6a70b6e840c04323c",
+        "simples": "Ao Supremo Tribunal Federal compete privativamente processar e julgar seus ministros nos crimes comuns; os ministros de Estado, salvo nos crimes conexos com os do Presidente da República; e o procurador-geral da República, os desembargadores dos Tribunais de Apelação, os ministros do Tribunal de Contas e os embaixadores e ministros diplomáticos, nos crimes comuns e de responsabilidade.",
+        "pontos": [
+          "Ministros do STF nos crimes comuns.",
+          "Ministros de Estado, salvo crimes conexos com os do Presidente.",
+          "Procurador-geral da República, desembargadores, ministros do Tribunal de Contas e diplomatas, nos crimes comuns e de responsabilidade."
+        ],
+        "atencao": [
+          "Texto anterior à Constituição atual: a competência vigente é a prevista na Constituição."
+        ],
+        "exemplo": "A competência atual do STF segue o art. 102 da Constituição.",
+        "prova": [
+          "Assertiva que aplica literalmente o art. 86 sem observar a Constituição atual erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-87",
+      "unit_id": "e1d26c5b-e6de-5b32-81e4-e32d71f0d200",
+      "content_sha256": "46c198c7f6635cf94722cb6f07c7f8ec718cd7e8f56824fc2fb5db8aa730df8a",
+      "simples": "A referência a Tribunais de Apelação e cargos locais é histórica. Constituição atual disciplina foro de governador, prefeitos, magistrados, membros do MP e demais autoridades conforme cada categoria.",
+      "pontos": [
+        "Governador em crime comum: CF 105 indica STJ.",
+        "Prefeito: CF 29, X, integrado à competência material pertinente.",
+        "Magistratura/MP: verificar CF 96, 108 e 125 e prerrogativas próprias."
+      ],
+      "atencao": [
+        "Não colocar todas as autoridades enumeradas no mesmo tribunal atual. Interventor e secretários têm regime específico a conferir, não analogia automática."
+      ],
+      "exemplo": "Acusação comum contra governador exige observar competência do STJ, não lista antiga de Tribunais de Apelação. Variação: Prefeito envolvido em fato de competência federal demanda integração material; a regra local não apaga competência constitucional.",
+      "prova": [
+        "Governador por crime comum vai necessariamente ao TJ pela lista de 1941? Não.",
+        "Todos os cargos do artigo possuem foro atual idêntico? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Atualização constitucional do foro",
+          "significado": "Substituição de referência histórica pelo regime vigente da Constituição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "e1d26c5b-e6de-5b32-81e4-e32d71f0d200",
+        "content_sha256": "46c198c7f6635cf94722cb6f07c7f8ec718cd7e8f56824fc2fb5db8aa730df8a",
+        "simples": "Compete, originariamente, aos Tribunais de Apelação o julgamento dos governadores ou interventores nos Estados ou Territórios, do prefeito do Distrito Federal, seus respectivos secretários e chefes de Polícia, juízes de instância inferior e órgãos do Ministério Público.",
+        "pontos": [
+          "Tribunais de Apelação julgam originariamente governadores, secretários, chefes de Polícia, juízes de instância inferior e membros do Ministério Público."
+        ],
+        "atencao": [
+          "Dispositivo histórico: a competência atual é fixada pela Constituição e pelas constituições estaduais."
+        ],
+        "exemplo": "Hoje, um juiz estadual é julgado nos crimes comuns pelo Tribunal de Justiça.",
+        "prova": [
+          "Assertiva que aplica o art. 87 sem considerar a Constituição atual erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-88",
+      "unit_id": "f4073085-6e21-5141-a885-16831a71fa71",
+      "content_sha256": "0201c83ce082d20606ae561026f8c5c101b1a5d3e732bc4aad3fcdc10dd25d8e",
+      "simples": "Em crime praticado fora do Brasil sujeito à jurisdição penal brasileira, foro territorial é a capital do Estado onde o acusado residiu por último; se nunca residiu no país, capital da República.",
+      "pontos": [
+        "Antes: verificar aplicabilidade da lei penal brasileira e competência material.",
+        "Última residência no Brasil, não necessariamente residência atual.",
+        "Sem residência anterior brasileira: Brasília."
+      ],
+      "atencao": [
+        "O art. 88 organiza foro; não cria extraterritorialidade penal para qualquer fato estrangeiro."
+      ],
+      "exemplo": "Acusado residiu por último no Acre e delito no exterior está sujeito à jurisdição brasileira: examinar capital do Estado como foro territorial. Variação: Nunca residiu no Brasil: observar capital da República, além da competência material.",
+      "prova": [
+        "Art. 88 torna todo crime exterior punível no Brasil? Não.",
+        "Sem residência anterior no Brasil, o foro indicado é capital da República? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Foro de fato exterior",
+          "significado": "Critério territorial para delito estrangeiro submetido à jurisdição brasileira."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f4073085-6e21-5141-a885-16831a71fa71",
+        "content_sha256": "0201c83ce082d20606ae561026f8c5c101b1a5d3e732bc4aad3fcdc10dd25d8e",
+        "simples": "No processo por crimes praticados fora do território brasileiro, será competente o juízo da Capital do Estado onde houver por último residido o acusado. Se este nunca tiver residido no Brasil, será competente o juízo da Capital da República.",
+        "pontos": [
+          "Crime no exterior: Capital do Estado da última residência do acusado.",
+          "Se nunca residiu no Brasil: juízo da Capital da República."
+        ],
+        "atencao": [
+          "Aplicável quando a lei brasileira alcança crime cometido no exterior (extraterritorialidade)."
+        ],
+        "exemplo": "Brasileiro que cometeu crime no exterior, com última residência em Rio Branco, é julgado na Capital do Estado.",
+        "prova": [
+          "Assertiva que fixa o foro no local do crime no exterior erra: é a Capital do Estado da última residência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-89",
+      "unit_id": "00dd89cf-d935-5cf6-a69e-b8c43c45cbc7",
+      "content_sha256": "3e6ee6146e17ee1a73477484c4d1774e0ca9dc84c39c5e9be7a517860bd33556",
+      "simples": "O CPP define foro para crimes em embarcações nas águas/locais indicados: primeiro porto brasileiro após o crime ou último porto quando se afasta do país. A Constituição define a justiça competente.",
+      "pontos": [
+        "Abrange águas territoriais e rios/lagos fronteiriços; em alto-mar, embarcação nacional.",
+        "CF 109, IX: crime a bordo de navio é federal, ressalvada competência militar.",
+        "Navio não é qualquer pequena embarcação: qualificação e competência exigem exame."
+      ],
+      "atencao": [
+        "Não confundir comarca territorial com justiça estadual obrigatória, nem igualar canoa a navio federal automaticamente."
+      ],
+      "exemplo": "Crime a bordo de navio na hipótese constitucional: combinar justiça federal com foro territorial indicado pelo primeiro porto brasileiro pertinente. Variação: Pequena embarcação exige verificar categoria e outros fundamentos, não atribuir competência federal só pelo nome barco.",
+      "prova": [
+        "O CPP 89 impõe justiça estadual em todo caso? Não.",
+        "Primeiro porto após fato pode definir foro territorial? Sim, nas hipóteses do artigo."
+      ],
+      "termos": [
+        {
+          "termo": "Foro marítimo",
+          "significado": "Regra territorial associada ao percurso da embarcação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "00dd89cf-d935-5cf6-a69e-b8c43c45cbc7",
+        "content_sha256": "3e6ee6146e17ee1a73477484c4d1774e0ca9dc84c39c5e9be7a517860bd33556",
+        "simples": "Os crimes cometidos em qualquer embarcação nas águas territoriais da República, ou nos rios e lagos fronteiriços, bem como a bordo de embarcações nacionais em alto-mar, são processados e julgados pela justiça do primeiro porto brasileiro em que tocar a embarcação após o crime ou, quando se afastar do País, pela do último em que houver tocado.",
+        "pontos": [
+          "Crimes em embarcações: justiça do primeiro porto brasileiro em que tocar após o crime.",
+          "Se se afastar do País: justiça do último porto em que tocou."
+        ],
+        "atencao": [
+          "Na Justiça Federal, a competência é regulada pela Constituição (crimes a bordo de navios)."
+        ],
+        "exemplo": "Crime a bordo de navio nacional em alto-mar: julga-se no primeiro porto brasileiro tocado.",
+        "prova": [
+          "Assertiva que fixa o foro no porto de partida da embarcação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 90",
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-90",
+      "unit_id": "8ab17757-bf51-570e-8732-ca9406a6806b",
+      "content_sha256": "d793a1fef778f3db8191edd272dca417a01c2f64d297504a68e766a6790b28b2",
+      "simples": "Em crimes a bordo de aeronave nas hipóteses do artigo, foro territorial segue local do pouso após o fato ou comarca de partida. A Constituição reserva crimes a bordo de aeronaves à justiça federal, salvo militares.",
+      "pontos": [
+        "Aeronave nacional: espaço aéreo brasileiro ou alto-mar.",
+        "Aeronave estrangeira: espaço aéreo brasileiro.",
+        "CF 109, IX: distinguir justiça competente e critério de território."
+      ],
+      "atencao": [
+        "Não interpretar a palavra comarca como prova de competência estadual nem como regra para crime ocorrido só no aeroporto."
+      ],
+      "exemplo": "Crime ocorre a bordo de aeronave e ela pousa em território brasileiro: aplicar foro pertinente junto à competência constitucional. Variação: Fato apenas em terminal de aeroporto, fora da aeronave, exige analisar seus próprios fundamentos, não aplicar inciso IX por associação.",
+      "prova": [
+        "Crime a bordo e crime no aeroporto são automaticamente equivalentes? Não.",
+        "A competência militar permanece ressalvada pela Constituição? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Foro aeronáutico",
+          "significado": "Critério territorial para crime a bordo em hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "8ab17757-bf51-570e-8732-ca9406a6806b",
+        "content_sha256": "d793a1fef778f3db8191edd272dca417a01c2f64d297504a68e766a6790b28b2",
+        "simples": "Os crimes praticados a bordo de aeronave nacional, dentro do espaço aéreo correspondente ao território brasileiro ou ao alto-mar, ou a bordo de aeronave estrangeira dentro do espaço aéreo correspondente ao território nacional, são processados e julgados pela justiça da comarca em cujo território se verificar o pouso após o crime, ou pela da comarca de onde houver partido a aeronave.",
+        "pontos": [
+          "Crime em aeronave: comarca do pouso após o crime ou da partida da aeronave."
+        ],
+        "atencao": [
+          "Observa a Constituição quanto à competência federal."
+        ],
+        "exemplo": "Crime durante voo: pode ser julgado na comarca do pouso.",
+        "prova": [
+          "Assertiva que fixa só a comarca da partida erra: o pouso também é critério."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89",
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-91",
+      "unit_id": "1d22b202-1d82-585b-b42b-1911d4f059cf",
+      "content_sha256": "03100cc46190492c90a08ee898522163c3eee585bf91e282225b997556f12643",
+      "simples": "Se a competência territorial dos casos de embarcação ou aeronave continuar incerta pelas regras dos arts. 89 e 90, usa-se prevenção entre órgãos competentes.",
+      "pontos": [
+        "Regra residual vinculada aos dois artigos anteriores.",
+        "Primeiro resolver competência constitucional/material.",
+        "Prevenção não escolhe livremente qualquer órgão."
+      ],
+      "atencao": [
+        "Não aplicar essa regra residual antes de tentar identificar os portos, pousos ou partidas pertinentes."
+      ],
+      "exemplo": "Dados do percurso não permitem definir foro pelos artigos anteriores; examinar prevenção entre juízos habilitados. Variação: Se o pouso pertinente é conhecido e define o foro, não substituir a regra por escolha de conveniência.",
+      "prova": [
+        "Art. 91 vale quando as regras anteriores não resolvem a incerteza? Sim.",
+        "Prevenção dispensa órgão materialmente competente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Competência residual",
+          "significado": "Critério que resolve incerteza não solucionada pelas regras principais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "1d22b202-1d82-585b-b42b-1911d4f059cf",
+        "content_sha256": "03100cc46190492c90a08ee898522163c3eee585bf91e282225b997556f12643",
+        "simples": "Quando incerta e não se determinar de acordo com as normas estabelecidas nos arts. 89 e 90, a competência se firmará pela prevenção.",
+        "pontos": [
+          "Competência incerta nos casos de embarcação e aeronave: prevenção."
+        ],
+        "atencao": [
+          "Critério subsidiário."
+        ],
+        "exemplo": "Quando não se determinar o foro pelos arts. 89 e 90, decide a prevenção.",
+        "prova": [
+          "Assertiva que aplica a prevenção antes dos critérios dos arts. 89 e 90 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 89",
+          "Art. 90"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    }
+  ]
+}

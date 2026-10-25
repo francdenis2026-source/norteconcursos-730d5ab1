@@ -1,0 +1,2077 @@
+{
+  "version": "2026-10-11-abuso-targeted",
+  "checked_at": "2026-10-12T01:17:11.939607+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "abuso",
+      "title": "Lei 13.869/2019 — Abuso de Autoridade",
+      "units": 40,
+      "scope_type": "targeted_correction",
+      "course_current_units": 40,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-12",
+        "art-13",
+        "art-15",
+        "art-15-a",
+        "art-16",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-25",
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-39",
+        "art-40",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "source_sha256": "91de35132bced973dba5cef789e6b09b09d3b0167a1e3a81d48d6ff0143340e5",
+      "source_checked_at": "2026-10-12T00:31:20.632340+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "fb2304a8-b1f8-53a0-92ff-f64ecf9739ff",
+      "content_sha256": "19819193196ee499df17652d5cbc656f3055f689f05e50ef3eab032b90e819a4",
+      "simples": "Abuso de autoridade exige agente público no exercício ou a pretexto da função e finalidade específica de prejudicar alguém, beneficiar a si/terceiro, ou agir por mero capricho/satisfação pessoal. Divergência de interpretação da lei ou avaliação de fatos/provas não configura, por si, abuso.",
+      "pontos": [
+        "Finalidade específica vale para os tipos da lei; não há responsabilidade penal automática por decisão reformada."
+      ],
+      "atencao": [
+        "Não basta irregularidade ou erro. Tampouco chamar todo ato de divergência para ocultar finalidade abusiva comprovada."
+      ],
+      "exemplo": "O agente usa o cargo deliberadamente para prejudicar desafeto e pratica uma conduta típica. Variação: A decisão é reformada por interpretação diferente, sem finalidade específica demonstrada: reforma não significa abuso automático.",
+      "prova": [
+        "A reforma de uma decisão basta para configurar abuso? Não; são necessários tipo e finalidade específica.",
+        "Os tipos dispensam finalidade específica de abuso? Não; as finalidades do art. 1º, §1º são exigidas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fb2304a8-b1f8-53a0-92ff-f64ecf9739ff",
+        "content_sha256": "19819193196ee499df17652d5cbc656f3055f689f05e50ef3eab032b90e819a4",
+        "simples": "A Lei define os crimes de abuso de autoridade cometidos por agente público, servidor ou não, que, no exercício de suas funções ou a pretexto de exercê-las, abuse do poder que lhe tenha sido atribuído. As condutas constituem crime quando praticadas com a finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou ainda por mero capricho ou satisfação pessoal. A divergência na interpretação de lei ou na avaliação de fatos e provas não configura abuso de autoridade.",
+        "pontos": [
+          "Crimes cometidos por agente público no exercício das funções ou a pretexto de exercê-las.",
+          "Exige dolo ESPECÍFICO: prejudicar outrem, beneficiar a si ou a terceiro, capricho ou satisfação pessoal.",
+          "Divergência de interpretação de lei ou avaliação de provas não é abuso."
+        ],
+        "atencao": [
+          "Sem a finalidade específica (§1º), não há crime.",
+          "A mera divergência jurídica é excluída (§2º)."
+        ],
+        "exemplo": "Delegado que decreta medida por capricho, para prejudicar um desafeto, pode praticar abuso de autoridade.",
+        "prova": [
+          "Assertiva que configura abuso de autoridade pela mera divergência na interpretação da lei erra."
+        ],
+        "termos": [
+          {
+            "termo": "Dolo específico",
+            "significado": "Finalidade especial exigida pelo tipo, além da vontade da conduta."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "eb911c53-91a0-5525-bfb3-0a2f3ed15f52",
+      "content_sha256": "97e24c6a133e97debccf7d34c7563fb055625882311e15a561b9f088990aa519",
+      "simples": "Sujeito ativo é agente público, servidor ou não, dos entes e Poderes indicados. Inclui exercício transitório, sem remuneração e vínculos por eleição, designação, contratação ou outras formas. A enumeração não é exaustiva.",
+      "pontos": [
+        "Agente público amplo: temporário ou não remunerado também pode ser sujeito ativo."
+      ],
+      "atencao": [
+        "Não restringir a policiais nem exigir concurso, estabilidade ou salário."
+      ],
+      "exemplo": "Pessoa exerce função pública temporária sem remuneração e usa o poder atribuído: examine o tipo. Variação: É cidadão sem função pública: não se presume a qualidade funcional exigida por este artigo.",
+      "prova": [
+        "A ausência de salário exclui necessariamente a qualidade de agente público? Não; o parágrafo único inclui exercício sem remuneração."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "eb911c53-91a0-5525-bfb3-0a2f3ed15f52",
+        "content_sha256": "97e24c6a133e97debccf7d34c7563fb055625882311e15a561b9f088990aa519",
+        "simples": "É sujeito ativo do crime de abuso de autoridade qualquer agente público, servidor ou não, da administração direta, indireta ou fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal, dos Municípios e de Território, compreendendo servidores públicos e militares ou equiparados; membros dos Poderes Legislativo, Executivo e Judiciário; membros do Ministério Público; e membros dos tribunais ou conselhos de contas. Reputa-se agente público todo aquele que exerce, ainda que transitoriamente ou sem remuneração, por eleição, nomeação, designação, contratação ou qualquer outra forma de investidura ou vínculo, mandato, cargo, emprego ou função em órgão ou entidade abrangidos.",
+        "pontos": [
+          "Sujeito ativo: qualquer agente público, servidor ou não.",
+          "Abrange os três Poderes, o MP e os tribunais de contas.",
+          "Conceito amplo: ainda que transitório ou sem remuneração."
+        ],
+        "atencao": [
+          "Rol EXEMPLIFICATIVO ('compreendendo, mas não se limitando a').",
+          "Crime PRÓPRIO: exige a qualidade de agente público."
+        ],
+        "exemplo": "Mesário voluntário que exerce função pública sem remuneração é agente público para a lei.",
+        "prova": [
+          "Assertiva que restringe o sujeito ativo aos servidores efetivos remunerados erra: abrange quem exerce função ainda que transitoriamente ou sem remuneração."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "5089dcf1-4222-5f65-bbb1-e92d6b3cad24",
+      "content_sha256": "7f0f3fa3002440902ed4fd9d71e7089a8be64c0b5f765da751c2ff26ec0c3200",
+      "simples": "A ação penal é pública incondicionada. Se não intentada no prazo legal, cabe ação privada subsidiária, em seis meses do esgotamento do prazo para denúncia, com poderes de intervenção/retomada do MP.",
+      "pontos": [
+        "Subsidiária por inércia no prazo; prazo de 6 meses contado de seu esgotamento."
+      ],
+      "atencao": [
+        "Não exigir representação da vítima nem contar os seis meses automaticamente do fato."
+      ],
+      "exemplo": "O prazo ministerial se esgota sem ação e a vítima examina a via subsidiária. Variação: Há atuação tempestiva do MP: discordância da vítima não equivale à inércia prevista.",
+      "prova": [
+        "A ação penal depende de representação? Não; é pública incondicionada."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5089dcf1-4222-5f65-bbb1-e92d6b3cad24",
+        "content_sha256": "7f0f3fa3002440902ed4fd9d71e7089a8be64c0b5f765da751c2ff26ec0c3200",
+        "simples": "Os crimes previstos na Lei são de ação penal pública incondicionada. Será admitida ação privada se a ação penal pública não for intentada no prazo legal, cabendo ao Ministério Público aditar a queixa, repudiá-la e oferecer denúncia substitutiva, intervir em todos os termos do processo, fornecer elementos de prova, interpor recurso e, a todo tempo, no caso de negligência do querelante, retomar a ação como parte principal. A ação privada subsidiária será exercida no prazo de 6 meses, contado da data em que se esgotar o prazo para oferecimento da denúncia.",
+        "pontos": [
+          "Ação penal pública incondicionada.",
+          "Cabe ação privada subsidiária se o MP não agir no prazo.",
+          "MP pode aditar, repudiar, denunciar de forma substitutiva e retomar a ação.",
+          "Prazo da ação subsidiária: 6 meses após o fim do prazo da denúncia."
+        ],
+        "atencao": [
+          "Ação privada SUBSIDIÁRIA, só diante da inércia do MP.",
+          "Prazo de 6 MESES contados do fim do prazo da denúncia."
+        ],
+        "exemplo": "O MP não denuncia no prazo, e a vítima ajuíza queixa subsidiária em até 6 meses.",
+        "prova": [
+          "Assertiva que torna os crimes de abuso de autoridade de ação penal condicionada à representação erra: são de ação pública incondicionada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "0379516c-acce-5c62-b3bd-67c55057fd22",
+      "content_sha256": "27f1b81fad25eec2788d94f58d4b30cad45f896becc17cb1172d6f8497510296",
+      "simples": "A condenação torna certa a obrigação de indenizar; a fixação de valor mínimo exige requerimento do ofendido e prejuízos. Inabilitação pública de 1 a 5 anos e perda de cargo/mandato/função exigem reincidência em abuso de autoridade e declaração motivada; não são automáticas.",
+      "pontos": [
+        "Reincidência específica + motivação para incisos II/III."
+      ],
+      "atencao": [
+        "Não confundir reincidência em qualquer delito com a exigida nesta lei nem transplantar os oito anos da Lei 12.850."
+      ],
+      "exemplo": "Há reincidência em abuso e o juiz fundamenta a perda da função. Variação: É primeira condenação por abuso: não imponha automaticamente os efeitos II/III pelo art. 4º.",
+      "prova": [
+        "A perda do cargo é automática na primeira condenação? Não; este artigo exige reincidência em abuso e declaração motivada.",
+        "A reincidência em qualquer crime satisfaz o parágrafo único? Não; ele exige reincidência em crime de abuso de autoridade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0379516c-acce-5c62-b3bd-67c55057fd22",
+        "content_sha256": "27f1b81fad25eec2788d94f58d4b30cad45f896becc17cb1172d6f8497510296",
+        "simples": "São efeitos da condenação tornar certa a obrigação de indenizar o dano causado pelo crime, devendo o juiz, a requerimento do ofendido, fixar na sentença o valor mínimo para reparação dos danos; a inabilitação para o exercício de cargo, mandato ou função pública pelo período de 1 a 5 anos; e a perda do cargo, do mandato ou da função pública. Os efeitos dos incisos II e III são condicionados à ocorrência de reincidência em crime de abuso de autoridade e não são automáticos, devendo ser declarados motivadamente na sentença.",
+        "pontos": [
+          "I: obrigação de indenizar, com valor mínimo fixado na sentença.",
+          "II: inabilitação de 1 a 5 anos.",
+          "III: perda do cargo, do mandato ou da função.",
+          "II e III: só na reincidência e com declaração motivada."
+        ],
+        "atencao": [
+          "Inabilitação e perda do cargo exigem REINCIDÊNCIA e motivação; NÃO são automáticas."
+        ],
+        "exemplo": "O condenado reincidente em abuso de autoridade pode perder o cargo, se o juiz declarar motivadamente.",
+        "prova": [
+          "Assertiva que torna automática a perda do cargo na primeira condenação por abuso de autoridade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "a4c94931-2525-5b20-89ad-b8e8f26100d6",
+      "content_sha256": "85d1bf4a09a38bb3139d123b81c0431dec4a8f62a0181378a762441ee6b48358",
+      "simples": "Restritivas substitutivas: serviços comunitários ou suspensão do cargo/função/mandato por 1 a 6 meses, com perda de vencimentos e vantagens. Podem ser autônomas ou cumulativas; inciso vetado não cria outra pena.",
+      "pontos": [
+        "Suspensão penal de 1–6 meses, com perda remuneratória."
+      ],
+      "atencao": [
+        "Não confundir com afastamento cautelar remunerado da Lei 12.850, art. 2º, §5º."
+      ],
+      "exemplo": "A sentença substitui a pena pela suspensão nos termos legais. Variação: É afastamento cautelar de investigação de organização: consulte sua regra própria, não esta perda remuneratória.",
+      "prova": [
+        "A suspensão substitutiva preserva vencimentos por este artigo? Não; prevê perda de vencimentos e vantagens."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a4c94931-2525-5b20-89ad-b8e8f26100d6",
+        "content_sha256": "85d1bf4a09a38bb3139d123b81c0431dec4a8f62a0181378a762441ee6b48358",
+        "simples": "As penas restritivas de direitos substitutivas das privativas de liberdade previstas na Lei são a prestação de serviços à comunidade ou a entidades públicas e a suspensão do exercício do cargo, da função ou do mandato, pelo prazo de 1 a 6 meses, com a perda dos vencimentos e das vantagens. O inciso III foi vetado. As penas restritivas de direitos podem ser aplicadas autônoma ou cumulativamente.",
+        "pontos": [
+          "Prestação de serviços à comunidade ou a entidades públicas.",
+          "Suspensão do cargo, da função ou do mandato por 1 a 6 meses, com perda dos vencimentos.",
+          "Aplicáveis de forma autônoma ou cumulativa."
+        ],
+        "atencao": [
+          "Suspensão: 1 a 6 meses, COM perda dos vencimentos."
+        ],
+        "exemplo": "O juiz substitui a detenção por suspensão do cargo por 3 meses, com perda dos vencimentos.",
+        "prova": [
+          "Assertiva que prevê suspensão do cargo sem perda dos vencimentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "570d5122-c93d-5aba-8bd1-8ce82287a958",
+      "content_sha256": "6de020dd2acbe2e6a72dbb5bb6bc158e211871a04f166da087d5c2f88d56be0d",
+      "simples": "A pena criminal não afasta sanções civis ou administrativas cabíveis. Notícia que descreve falta funcional deve ser informada à autoridade competente para apuração.",
+      "pontos": [
+        "Esferas coexistem, com os limites dos arts. 7º/8º."
+      ],
+      "atencao": [
+        "Não afirmar que toda apuração funcional precisa aguardar condenação penal."
+      ],
+      "exemplo": "Um fato típico também descreve falta funcional e é comunicado à autoridade competente. Variação: O servidor afirma que a apuração criminal impede qualquer procedimento disciplinar: a independência não permite essa conclusão.",
+      "prova": [
+        "A pena criminal elimina automaticamente sanções administrativas? Não; são aplicadas independentemente quando cabíveis."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "570d5122-c93d-5aba-8bd1-8ce82287a958",
+        "content_sha256": "6de020dd2acbe2e6a72dbb5bb6bc158e211871a04f166da087d5c2f88d56be0d",
+        "simples": "As penas previstas na Lei serão aplicadas independentemente das sanções de natureza civil ou administrativa cabíveis. As notícias de crimes que descreverem falta funcional serão informadas à autoridade competente com vistas à apuração.",
+        "pontos": [
+          "Penas aplicadas independentemente de sanções civis e administrativas.",
+          "Falta funcional noticiada é informada à autoridade competente."
+        ],
+        "atencao": [
+          "Independência das esferas penal, civil e administrativa."
+        ],
+        "exemplo": "O agente condenado criminalmente também responde ao processo disciplinar.",
+        "prova": [
+          "Assertiva que impede a sanção administrativa após a condenação criminal por abuso de autoridade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "1084470e-e723-5a5e-bf6b-25da8fdc2921",
+      "content_sha256": "4ac2a0213d3b88394891fa678367fe29841f3ea0ecaa611e7d2dc668cdf20128",
+      "simples": "As responsabilidades civil e administrativa são independentes da criminal, mas existência e autoria do fato decididas no juízo criminal não podem ser novamente questionadas nessas esferas.",
+      "pontos": [
+        "Independência com vinculação sobre existência/autoria decididas."
+      ],
+      "atencao": [
+        "Absolvição por insuficiência de prova não deve ser equiparada automaticamente a decisão de inexistência do fato."
+      ],
+      "exemplo": "A decisão criminal define que o fato não existiu: isso deve ser observado nas outras esferas. Variação: A absolvição decorre de prova insuficiente: examine o fundamento, sem afirmar toda absolvição extingue responsabilidade funcional.",
+      "prova": [
+        "A independência autoriza rediscutir autoria já decidida no juízo criminal? Não; o artigo fixa esse limite."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1084470e-e723-5a5e-bf6b-25da8fdc2921",
+        "content_sha256": "4ac2a0213d3b88394891fa678367fe29841f3ea0ecaa611e7d2dc668cdf20128",
+        "simples": "As responsabilidades civil e administrativa são independentes da criminal, não se podendo mais questionar sobre a existência ou a autoria do fato quando essas questões tenham sido decididas no juízo criminal.",
+        "pontos": [
+          "Responsabilidades civil e administrativa independem da criminal.",
+          "Decidida no juízo criminal a existência ou a autoria do fato, não se pode mais questioná-las."
+        ],
+        "atencao": [
+          "Independência relativa: o criminal vincula quanto à existência e à autoria."
+        ],
+        "exemplo": "Reconhecida na sentença penal a autoria do fato, ela não é rediscutida no processo disciplinar.",
+        "prova": [
+          "Assertiva que permite rediscutir no juízo cível a autoria já decidida no criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "f89c6b4c-687a-5573-bad7-2305e3a2c0cc",
+      "content_sha256": "067da5a314ed6377224a17f8aa17ca0aae85d47c8b8199cca3dadaf3acc4458a",
+      "simples": "A sentença penal que reconhece necessidade, legítima defesa, estrito cumprimento de dever legal ou exercício regular de direito faz coisa julgada no cível e administrativo-disciplinar nos termos do artigo.",
+      "pontos": [
+        "Quatro justificantes legais com repercussão nas outras esferas."
+      ],
+      "atencao": [
+        "Não confundir reconhecimento de justificante com qualquer decisão de arquivamento ou mera insuficiência probatória."
+      ],
+      "exemplo": "A sentença reconhece legítima defesa e a conclusão é observada no procedimento disciplinar. Variação: A decisão apenas registra falta de prova: não lhe atribua automaticamente o fundamento de legítima defesa.",
+      "prova": [
+        "O reconhecimento de legítima defesa tem o efeito previsto nas outras esferas? Sim; o artigo expressamente o contempla."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f89c6b4c-687a-5573-bad7-2305e3a2c0cc",
+        "content_sha256": "067da5a314ed6377224a17f8aa17ca0aae85d47c8b8199cca3dadaf3acc4458a",
+        "simples": "Faz coisa julgada em âmbito cível, assim como no administrativo-disciplinar, a sentença penal que reconhecer ter sido o ato praticado em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito.",
+        "pontos": [
+          "Sentença penal que reconhece excludente de ilicitude faz coisa julgada no cível e no administrativo-disciplinar.",
+          "Excludentes: estado de necessidade, legítima defesa, estrito cumprimento de dever legal e exercício regular de direito."
+        ],
+        "atencao": [
+          "Efeito também na esfera ADMINISTRATIVO-DISCIPLINAR."
+        ],
+        "exemplo": "Policial absolvido por legítima defesa não pode ser punido disciplinarmente pelo mesmo fato.",
+        "prova": [
+          "Assertiva que limita a coisa julgada da absolvição por excludente à esfera cível erra: alcança o administrativo-disciplinar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Efeitos da sentença penal absolutória (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "262c9e27-26e7-526d-a4af-f6804d616a29",
+      "content_sha256": "e96d01bfe34ef157b00db4f2c6fad75c4ca66d8a827ac75431e8515d257abc87",
+      "simples": "Decretar privação de liberdade manifestamente incompatível com a lei: detenção de 1 a 4 anos e multa. Também alcança a omissão judicial, em prazo razoável, nas hipóteses manifestas de relaxamento, cautelar diversa/liberdade provisória ou habeas corpus. Aplica-se a finalidade do art. 1º.",
+      "pontos": [
+        "Manifestamente ilegal/cabível + tipo e finalidade específica."
+      ],
+      "atencao": [
+        "Não criminalizar automaticamente qualquer decisão cautelar posteriormente revista."
+      ],
+      "exemplo": "A autoridade deliberadamente decreta prisão em hipótese manifestamente ilegal para prejudicar alguém. Variação: Uma controvérsia interpretativa legítima leva à reforma: examine art. 1º, §2º, em vez de presumir crime.",
+      "prova": [
+        "Toda prisão posteriormente revogada configura este crime? Não; são necessários os requisitos legais e subjetivos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "262c9e27-26e7-526d-a4af-f6804d616a29",
+        "content_sha256": "e96d01bfe34ef157b00db4f2c6fad75c4ca66d8a827ac75431e8515d257abc87",
+        "simples": "Decretar medida de privação da liberdade em manifesta desconformidade com as hipóteses legais. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena a autoridade judiciária que, dentro de prazo razoável, deixar de relaxar a prisão manifestamente ilegal; de substituir a prisão preventiva por medida cautelar diversa ou de conceder liberdade provisória, quando manifestamente cabível; ou de deferir liminar ou ordem de habeas corpus, quando manifestamente cabível.",
+        "pontos": [
+          "Decretar privação de liberdade em manifesta desconformidade com a lei.",
+          "Detenção de 1 a 4 anos e multa.",
+          "Juiz que deixa, em prazo razoável, de relaxar prisão manifestamente ilegal.",
+          "Deixar de substituir a preventiva ou conceder liberdade provisória, quando manifestamente cabível.",
+          "Deixar de deferir habeas corpus manifestamente cabível."
+        ],
+        "atencao": [
+          "A ilegalidade deve ser MANIFESTA.",
+          "O parágrafo único alcança a omissão da autoridade judiciária."
+        ],
+        "exemplo": "Juiz que mantém, sem qualquer fundamento, uma prisão manifestamente ilegal pode incorrer no art. 9º.",
+        "prova": [
+          "Assertiva que pune a decretação de prisão por mera divergência de interpretação erra: exige manifesta desconformidade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º, §2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "3c670d54-69e4-5dda-8dd4-5295d7e9207d",
+      "content_sha256": "4b4b3f2a6a63f80b8ef8e005cc1551bdfa572e700477cb62ec59d8fde12992b8",
+      "simples": "Condução coercitiva manifestamente descabida ou sem prévia intimação: detenção de 1 a 4 anos e multa, com requisitos gerais da lei. STF, ADPFs 395/444: conduzir réu/investigado para interrogatório é incompatível com a Constituição, mesmo com intimação prévia.",
+      "pontos": [
+        "Intimação não torna lícita condução de investigado para interrogatório."
+      ],
+      "atencao": [
+        "Distinguir interrogatório de investigado da condução de testemunha nos requisitos próprios do CPP."
+      ],
+      "exemplo": "O investigado é conduzido à força para interrogatório após intimação: a intimação não supera a vedação constitucional. Variação: É testemunha: analise CPP e circunstâncias; não aplique indistintamente a vedação específica de interrogatório do acusado.",
+      "prova": [
+        "A intimação prévia autoriza condução do investigado para interrogatório? Não; o STF vedou essa condução."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADPF&numeroProcesso=395"
+      ],
+      "expected": {
+        "unit_id": "3c670d54-69e4-5dda-8dd4-5295d7e9207d",
+        "content_sha256": "4b4b3f2a6a63f80b8ef8e005cc1551bdfa572e700477cb62ec59d8fde12992b8",
+        "simples": "Decretar a condução coercitiva de testemunha ou investigado manifestamente descabida ou sem prévia intimação de comparecimento ao juízo. Pena: detenção de 1 a 4 anos e multa.",
+        "pontos": [
+          "Condução coercitiva manifestamente descabida.",
+          "Ou sem prévia intimação de comparecimento.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "A condução coercitiva do investigado para interrogatório é incompatível com a Constituição (STF)."
+        ],
+        "exemplo": "Determinar a condução coercitiva do investigado sem intimá-lo antes configura o crime.",
+        "prova": [
+          "Assertiva que permite a condução coercitiva sem prévia intimação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Condução coercitiva (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "e57cb90c-6f93-5ddd-96dd-8c1db8731197",
+      "content_sha256": "ca32d6abcae0dc4e23bfbba41bee55c6b499c04171f32024ec515e3e703d3486",
+      "simples": "Pune falta injustificada de comunicação da prisão e hipóteses do parágrafo: execução de temporária/preventiva ao juiz, informação imediata à família/pessoa indicada, nota de culpa em 24 horas e prolongamento indevido por não executar soltura imediatamente ou fim do prazo. Pena 6 meses a 2 anos e multa.",
+      "pontos": [
+        "Comunicações imediatas não se confundem com prazo de 24h da nota de culpa."
+      ],
+      "atencao": [
+        "Não aguardar nova ordem para soltar temporária vencida sem extensão/preventiva já comunicada. O inciso IV contém ressalva de motivo justo e excepcionalíssimo."
+      ],
+      "exemplo": "O prazo da temporária termina sem comunicação de prorrogação/preventiva: a custódia deve promover soltura. Variação: A nota de culpa é entregue em prazo, mas a família não é informada imediatamente: cumprir um dever não elimina os demais.",
+      "prova": [
+        "A nota de culpa pode ser entregue sem limite de prazo? Não; o inciso III fixa 24 horas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e57cb90c-6f93-5ddd-96dd-8c1db8731197",
+        "content_sha256": "ca32d6abcae0dc4e23bfbba41bee55c6b499c04171f32024ec515e3e703d3486",
+        "simples": "Deixar injustificadamente de comunicar prisão em flagrante à autoridade judiciária no prazo legal. Pena: detenção de 6 meses a 2 anos e multa. Incorre na mesma pena quem deixa de comunicar imediatamente a execução de prisão temporária ou preventiva à autoridade que a decretou; deixa de comunicar imediatamente a prisão e o local à família ou à pessoa indicada; deixa de entregar ao preso, em 24 horas, a nota de culpa com o motivo da prisão e os nomes do condutor e das testemunhas; ou prolonga a execução de pena, prisão temporária ou preventiva, medida de segurança ou internação, deixando sem motivo justo e excepcionalíssimo de executar o alvará de soltura imediatamente ou de promover a soltura quando esgotado o prazo.",
+        "pontos": [
+          "Não comunicar o flagrante ao juiz no prazo legal.",
+          "Não comunicar a prisão temporária ou preventiva ao juiz que a decretou.",
+          "Não comunicar a prisão à família.",
+          "Não entregar a nota de culpa em 24 horas.",
+          "Prolongar a prisão ao deixar de cumprir o alvará de soltura."
+        ],
+        "atencao": [
+          "Nota de culpa: prazo de 24 horas.",
+          "Detenção de 6 meses a 2 anos."
+        ],
+        "exemplo": "Delegado que não entrega ao preso a nota de culpa em 24 horas pratica o crime do art. 12.",
+        "prova": [
+          "Assertiva que fixa em dois dias o prazo da nota de culpa no art. 12 erra: são 24 horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Comunicação da prisão (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "7101aec4-b723-5781-a910-17c4630b9644",
+      "content_sha256": "7166e99a291ba98819d0f668147717876c86322a98b015ed61eab918317bc58a",
+      "simples": "Constranger preso com violência, grave ameaça ou redução da resistência para exposição à curiosidade pública, situação vexatória não autorizada ou prova contra si/terceiro: detenção de 1 a 4 anos e multa, além da violência, com finalidade do art. 1º.",
+      "pontos": [
+        "Exposição forçada e autoincriminação: proteger dignidade, sem espetáculo."
+      ],
+      "atencao": [
+        "Não confundir registro legal necessário com exibição constrangida à curiosidade pública."
+      ],
+      "exemplo": "O agente força o preso, mediante ameaça, a exibir o corpo para espetáculo público. Variação: Há registro pericial legal necessário sem constrangimento típico: a finalidade e os elementos precisam ser examinados.",
+      "prova": [
+        "A pena do artigo exclui a pena da violência? Não; a lei ressalva sua aplicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7101aec4-b723-5781-a910-17c4630b9644",
+        "content_sha256": "7166e99a291ba98819d0f668147717876c86322a98b015ed61eab918317bc58a",
+        "simples": "Constranger o preso ou o detento, mediante violência, grave ameaça ou redução de sua capacidade de resistência, a exibir-se ou ter seu corpo ou parte dele exibido à curiosidade pública; a submeter-se a situação vexatória ou a constrangimento não autorizado em lei; ou a produzir prova contra si mesmo ou contra terceiro. Pena: detenção de 1 a 4 anos e multa, sem prejuízo da pena cominada à violência.",
+        "pontos": [
+          "Constranger o preso mediante violência, grave ameaça ou redução da capacidade de resistência.",
+          "I: exibição à curiosidade pública.",
+          "II: situação vexatória.",
+          "III: produzir prova contra si ou contra terceiro.",
+          "Detenção de 1 a 4 anos e multa, além da pena da violência."
+        ],
+        "atencao": [
+          "Concurso material com a pena da violência."
+        ],
+        "exemplo": "Agente que obriga o preso a posar para a imprensa mediante ameaça comete o crime.",
+        "prova": [
+          "Assertiva que absorve a pena da violência pelo art. 13 erra: ela é cumulada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "0bd106b0-b8a4-519e-a5c3-c5662fc802bd",
+      "content_sha256": "af21f539cb3d80f2212df6e1bf97cc6688306e16b4b75bc5b99a0e67ea6a3dd7",
+      "simples": "Pune constranger depoimento sob ameaça de prisão de pessoa obrigada a sigilo por função/profissão e prosseguir interrogatório de quem escolheu silêncio ou assistência sem presença do patrono. Detenção 1 a 4 anos e multa, observados requisitos gerais.",
+      "pontos": [
+        "Segredo profissional; silêncio; assistência escolhida."
+      ],
+      "atencao": [
+        "Não considerar silêncio prova de culpa nem presumir renúncia definitiva pela resposta anterior."
+      ],
+      "exemplo": "A pessoa exerce direito ao silêncio e o interrogatório prossegue para constrangê-la. Variação: Optou por defensor ausente: não se supera a escolha com insistência no interrogatório.",
+      "prova": [
+        "A escolha de advogado permite continuar sem sua presença? Não; o parágrafo único pune essa continuidade nos termos legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0bd106b0-b8a4-519e-a5c3-c5662fc802bd",
+        "content_sha256": "af21f539cb3d80f2212df6e1bf97cc6688306e16b4b75bc5b99a0e67ea6a3dd7",
+        "simples": "Constranger a depor, sob ameaça de prisão, pessoa que, em razão de função, ministério, ofício ou profissão, deva guardar segredo ou resguardar sigilo. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena quem prossegue com o interrogatório de pessoa que tenha decidido exercer o direito ao silêncio, ou de pessoa que tenha optado por ser assistida por advogado ou defensor público, sem a presença de seu patrono.",
+        "pontos": [
+          "Constranger a depor, sob ameaça de prisão, quem tem dever de sigilo.",
+          "Prosseguir com o interrogatório de quem escolheu o silêncio.",
+          "Interrogar quem pediu assistência de advogado, sem a presença dele.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Protege o direito ao SILÊNCIO e à assistência de advogado."
+        ],
+        "exemplo": "Delegado que continua a interrogar o preso que optou pelo silêncio comete o crime.",
+        "prova": [
+          "Assertiva que permite continuar o interrogatório de quem exerce o direito ao silêncio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Direito ao silêncio (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15-a",
+      "unit_id": "253278c0-7ad2-568a-a8d4-aa0458f51894",
+      "content_sha256": "57817db60b2b0b49e71e57b1abf9bbb2e5ceedf151c94c1daa2f54107152d30e",
+      "simples": "Violência institucional, incluída em 2022: procedimentos desnecessários, repetitivos ou invasivos que façam vítima de infração ou testemunha de crime violento reviver violência/sofrimento sem estrita necessidade. Pena 3 meses a 1 ano e multa. Permitir intimidação por terceiro contra vítima de crime violento aumenta 2/3; intimidá-la diretamente dobra a pena.",
+      "pontos": [
+        "Permitir terceiro: +2/3; intimidar diretamente: dobro."
+      ],
+      "atencao": [
+        "Não proibir toda oitiva necessária; distinguir necessidade estrita de repetição revitimizante e ler art. 1º."
+      ],
+      "exemplo": "O agente permite que terceiro intimide vítima de crime violento, gerando revitimização indevida. Variação: O próprio agente intimida: compare a pena em dobro, não o aumento de dois terços.",
+      "prova": [
+        "A intimidação direta recebe o mesmo aumento de dois terços do §1º? Não; o §2º prevê pena em dobro."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "253278c0-7ad2-568a-a8d4-aa0458f51894",
+        "content_sha256": "57817db60b2b0b49e71e57b1abf9bbb2e5ceedf151c94c1daa2f54107152d30e",
+        "simples": "Submeter a vítima de infração penal ou a testemunha de crimes violentos a procedimentos desnecessários, repetitivos ou invasivos, que a leve a reviver, sem estrita necessidade, a situação de violência ou outras situações potencialmente geradoras de sofrimento ou estigmatização. Pena: detenção de 3 meses a 1 ano e multa. Se o agente público permitir que terceiro intimide a vítima de crimes violentos, gerando indevida revitimização, aplica-se a pena aumentada de 2/3. Se o agente público intimidar a vítima, gerando indevida revitimização, aplica-se a pena em dobro.",
+        "pontos": [
+          "Procedimentos desnecessários, repetitivos ou invasivos contra vítima ou testemunha de crimes violentos.",
+          "Detenção de 3 meses a 1 ano e multa.",
+          "Permitir que terceiro intimide a vítima: aumento de 2/3.",
+          "Agente público que intimida a vítima: pena em dobro."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.321, de 2022 (Lei do crime de violência institucional).",
+          "Pune a REVITIMIZAÇÃO."
+        ],
+        "exemplo": "Agente que obriga a vítima de estupro a repetir o relato várias vezes, sem necessidade, comete violência institucional.",
+        "prova": [
+          "Assertiva que fixa o aumento de 2/3 para o agente que intimida diretamente a vítima erra: nesse caso a pena é em dobro."
+        ],
+        "termos": [
+          {
+            "termo": "Violência institucional",
+            "significado": "Revitimização da vítima por agentes públicos no atendimento."
+          }
+        ],
+        "remissoes": [
+          "Art. 10-A da Lei Maria da Penha"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "442fd600-1b8b-5b23-b00d-37c4875d0ab1",
+      "content_sha256": "7cd3f5a8b7c072db028e12c5cc30e527f2db699cbb58dccf0bff66852da3548b",
+      "simples": "O agente deve identificar-se corretamente ao preso na captura e quando devido durante detenção/prisão. Também abrange responsável por interrogatório que oculta ou falseia identidade, cargo ou função. Pena 6 meses a 2 anos e multa.",
+      "pontos": [
+        "Identificação correta na captura e interrogatório."
+      ],
+      "atencao": [
+        "Não confundir proteção legal de identidade de infiltrado com falsa identificação abusiva ao preso."
+      ],
+      "exemplo": "O responsável pelo interrogatório atribui a si cargo falso para a finalidade abusiva. Variação: A questão trata de agente infiltrado autorizado: a disciplina específica precisa ser considerada.",
+      "prova": [
+        "A falsa identificação do cargo no interrogatório está abrangida? Sim; o parágrafo único a prevê."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "442fd600-1b8b-5b23-b00d-37c4875d0ab1",
+        "content_sha256": "7cd3f5a8b7c072db028e12c5cc30e527f2db699cbb58dccf0bff66852da3548b",
+        "simples": "Deixar de identificar-se ou identificar-se falsamente ao preso por ocasião de sua captura ou quando deva fazê-lo durante sua detenção ou prisão. Pena: detenção de 6 meses a 2 anos e multa. Incorre na mesma pena quem, como responsável por interrogatório em procedimento investigatório de infração penal, deixa de identificar-se ao preso ou atribui a si mesmo falsa identidade, cargo ou função.",
+        "pontos": [
+          "Não se identificar ou identificar-se falsamente ao preso.",
+          "Também o responsável pelo interrogatório que não se identifica ou assume falsa identidade.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Identificação exigida na captura e durante a custódia."
+        ],
+        "exemplo": "Agente que prende alguém sem se identificar nem informar sua função pratica o crime.",
+        "prova": [
+          "Assertiva que dispensa a identificação do responsável pelo interrogatório erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Comunicação da prisão (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "3b3446ad-7999-5487-8749-09c247d0051c",
+      "content_sha256": "ef44a8c271f03a443061b257d3dd09abd506cc2b124ae80ce426f92957df68d6",
+      "simples": "Interrogatório policial de preso no repouso noturno: detenção de 6 meses a 2 anos e multa, ressalvados flagrante ou consentimento para declarações com devida assistência. Requisitos gerais permanecem.",
+      "pontos": [
+        "Exceções: capturado em flagrante OU consentimento devidamente assistido."
+      ],
+      "atencao": [
+        "Repouso noturno não se confunde automaticamente com a faixa 21h–5h do mandado domiciliar."
+      ],
+      "exemplo": "O preso consente, devidamente assistido, em prestar declarações durante o período. Variação: Há só consentimento sem assistência: não satisfaz a segunda exceção.",
+      "prova": [
+        "Consentimento sem devida assistência atende à segunda exceção? Não; a lei exige ambas nessa hipótese."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3b3446ad-7999-5487-8749-09c247d0051c",
+        "content_sha256": "ef44a8c271f03a443061b257d3dd09abd506cc2b124ae80ce426f92957df68d6",
+        "simples": "Submeter o preso a interrogatório policial durante o período de repouso noturno, salvo se capturado em flagrante delito ou se ele, devidamente assistido, consentir em prestar declarações. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Interrogatório policial no período de repouso noturno.",
+          "Exceções: flagrante ou consentimento do preso devidamente assistido.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "O flagrante e o consentimento assistido AFASTAM o crime."
+        ],
+        "exemplo": "Interrogar de madrugada o preso por mandado, sem consentimento assistido, é abuso.",
+        "prova": [
+          "Assertiva que proíbe o interrogatório noturno também do preso em flagrante erra: o flagrante é exceção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-19",
+      "unit_id": "01bdce89-0576-530a-9993-bf6a39194c62",
+      "content_sha256": "0bb3c8cab803aa0eeca117dcdb98832462e1fcaafe765bb51c3a55821e083893",
+      "simples": "Impedir/retardar injustificadamente envio de pedido do preso sobre legalidade da prisão/custódia: detenção de 1 a 4 anos e multa. Também alcança magistrado ciente que não corrige impedimento/demora ou não encaminha ao juízo competente.",
+      "pontos": [
+        "Pedido deve chegar à autoridade competente; incompetência não autoriza retenção."
+      ],
+      "atencao": [
+        "Distinguir discordância sobre o pedido de impedimento abusivo de seu envio."
+      ],
+      "exemplo": "O magistrado sabe da retenção e, sem ser competente, deve encaminhar o pleito. Variação: A administração acha o pedido improcedente: isso não lhe dá poder de impedir sua apreciação judicial.",
+      "prova": [
+        "A falta de competência autoriza o magistrado a reter o pedido? Não; deve enviá-lo à autoridade competente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "01bdce89-0576-530a-9993-bf6a39194c62",
+        "content_sha256": "0bb3c8cab803aa0eeca117dcdb98832462e1fcaafe765bb51c3a55821e083893",
+        "simples": "Impedir ou retardar, injustificadamente, o envio de pleito de preso à autoridade judiciária competente para a apreciação da legalidade de sua prisão ou das circunstâncias de sua custódia. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena o magistrado que, ciente do impedimento ou da demora, deixa de tomar as providências tendentes a saná-lo ou, não sendo competente para decidir sobre a prisão, deixa de enviar o pedido à autoridade judiciária que o seja.",
+        "pontos": [
+          "Impedir ou retardar o envio de pleito do preso ao juiz.",
+          "Detenção de 1 a 4 anos e multa.",
+          "Magistrado ciente que não toma providências.",
+          "Magistrado incompetente que não envia o pedido ao competente."
+        ],
+        "atencao": [
+          "Alcança também o MAGISTRADO omisso."
+        ],
+        "exemplo": "O diretor do presídio retém o pedido de relaxamento de prisão do preso e não o envia ao juiz.",
+        "prova": [
+          "Assertiva que exclui o magistrado do alcance do art. 19 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "be568fd0-19c5-5487-9374-5beffbcbbac4",
+      "content_sha256": "730d0a0d599f69df6acbf3e7461f2cdb911cf477f41dab1a73f59ea2bded9042",
+      "simples": "Pune impedir sem justa causa entrevista pessoal e reservada do preso com advogado, pena 6 meses a 2 anos e multa. Estende proteção antes de audiência ao preso/réu solto/investigado e comunicação ao lado da defesa, com ressalvas textuais relativas a interrogatório/videoconferência.",
+      "pontos": [
+        "Entrevista reservada; prazo razoável antes da audiência."
+      ],
+      "atencao": [
+        "As ressalvas finais não apagam direito geral de defesa, consulta reservada e assistência aplicável."
+      ],
+      "exemplo": "O agente impede entrevista reservada sem justa causa para prejudicar o preso. Variação: O ato ocorre por vídeo: isso não significa exclusão automática de toda assistência técnica.",
+      "prova": [
+        "Videoconferência elimina automaticamente toda assistência e entrevista reservada? Não; a ressalva não extingue as garantias de defesa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "be568fd0-19c5-5487-9374-5beffbcbbac4",
+        "content_sha256": "730d0a0d599f69df6acbf3e7461f2cdb911cf477f41dab1a73f59ea2bded9042",
+        "simples": "Impedir, sem justa causa, a entrevista pessoal e reservada do preso com seu advogado. Pena: detenção de 6 meses a 2 anos e multa. Incorre na mesma pena quem impede o preso, o réu solto ou o investigado de entrevistar-se pessoal e reservadamente com seu advogado ou defensor, por prazo razoável, antes de audiência judicial, e de sentar-se ao seu lado e com ele comunicar-se durante a audiência, salvo no curso de interrogatório ou no caso de audiência por videoconferência.",
+        "pontos": [
+          "Impedir, sem justa causa, a entrevista reservada com o advogado.",
+          "Detenção de 6 meses a 2 anos e multa.",
+          "Também antes da audiência, por prazo razoável.",
+          "Comunicação com o advogado durante a audiência, salvo no interrogatório ou na videoconferência."
+        ],
+        "atencao": [
+          "Entrevista PESSOAL e RESERVADA."
+        ],
+        "exemplo": "Negar ao preso a conversa reservada com o advogado antes da audiência é crime.",
+        "prova": [
+          "Assertiva que permite a presença de agentes durante a entrevista reservada do preso com o advogado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "20ec9373-e3f8-5424-be7b-b34138349d6f",
+      "content_sha256": "e2098a5efd10e3014eb2bf9b6f237762fedafb28b01e9f94741b0da72730e0c3",
+      "simples": "Manter presos de ambos os sexos na mesma cela/espaço: detenção 1 a 4 anos e multa. Mesma pena por manter criança/adolescente com adulto ou em ambiente inadequado, observado ECA e requisitos gerais.",
+      "pontos": [
+        "Separação de custódia; proteção especial do menor."
+      ],
+      "atencao": [
+        "Não confundir cela compartilhada com toda presença de homens/mulheres no mesmo prédio."
+      ],
+      "exemplo": "Um adolescente é mantido na mesma cela de adultos: examine o parágrafo único. Variação: Só há instalações distintas no mesmo complexo: a unidade de prédio não prova compartilhamento típico.",
+      "prova": [
+        "A proteção do parágrafo inclui ambiente inadequado para criança/adolescente? Sim; é hipótese expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "20ec9373-e3f8-5424-be7b-b34138349d6f",
+        "content_sha256": "e2098a5efd10e3014eb2bf9b6f237762fedafb28b01e9f94741b0da72730e0c3",
+        "simples": "Manter presos de ambos os sexos na mesma cela ou espaço de confinamento. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena quem mantém, na mesma cela, criança ou adolescente na companhia de maior de idade ou em ambiente inadequado, observado o Estatuto da Criança e do Adolescente.",
+        "pontos": [
+          "Presos de ambos os sexos na mesma cela.",
+          "Criança ou adolescente com maior de idade ou em ambiente inadequado.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Dois núcleos: separação por sexo e proteção de crianças e adolescentes."
+        ],
+        "exemplo": "Manter homem e mulher presos no mesmo espaço configura o crime.",
+        "prova": [
+          "Assertiva que admite a mesma cela para presos de ambos os sexos em situação de emergência, sem crime, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Local de custódia (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "109c3f88-c8e6-5c08-8701-ffe73245f126",
+      "content_sha256": "19ada4544ac5e46c26b633b6ab840facde48bb16ff23310885fd120ccc9ef4da",
+      "simples": "Entrada/permanência clandestina, astuciosa ou contra vontade em imóvel alheio, sem ordem ou fora da lei: detenção 1 a 4 anos e multa. Inclui coação violenta para acesso e cumprimento de mandado domiciliar após 21h ou antes de 5h. Exceções: socorro e fundados indícios de flagrante/desastre nos termos legais.",
+      "pontos": [
+        "Mandado: vedação específica após 21h/antes de 5h; não é autorização genérica no intervalo."
+      ],
+      "atencao": [
+        "A faixa horária penal não substitui inviolabilidade constitucional do domicílio e requisitos do CPP. Flagrante exige fundamento concreto, não mera suspeita genérica."
+      ],
+      "exemplo": "A equipe executa mandado domiciliar às 23h sem hipótese excepcional aplicável. Variação: Às 6h, ainda deve observar Constituição, CPP e circunstâncias; estar fora da faixa proibida não basta para legitimar o ingresso.",
+      "prova": [
+        "Estar entre 5h e 21h dispensa todas as demais condições do ingresso? Não; as condições constitucionais e legais permanecem."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "109c3f88-c8e6-5c08-8701-ffe73245f126",
+        "content_sha256": "19ada4544ac5e46c26b633b6ab840facde48bb16ff23310885fd120ccc9ef4da",
+        "simples": "Invadir ou adentrar, clandestina ou astuciosamente, ou à revelia da vontade do ocupante, imóvel alheio ou suas dependências, ou nele permanecer nas mesmas condições, sem determinação judicial ou fora das condições estabelecidas em lei. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena quem coage alguém, mediante violência ou grave ameaça, a franquear-lhe o acesso a imóvel, e quem cumpre mandado de busca e apreensão domiciliar após as 21h ou antes das 5h. Não haverá crime se o ingresso for para prestar socorro, ou quando houver fundados indícios que indiquem a necessidade do ingresso em razão de situação de flagrante delito ou de desastre.",
+        "pontos": [
+          "Invadir imóvel alheio sem determinação judicial ou fora das condições legais.",
+          "Detenção de 1 a 4 anos e multa.",
+          "Coagir alguém a franquear o acesso.",
+          "Cumprir busca domiciliar após as 21h ou antes das 5h.",
+          "Exclusão: socorro, flagrante delito ou desastre."
+        ],
+        "atencao": [
+          "Horário da busca: das 5h às 21h.",
+          "Flagrante, desastre e socorro excluem o crime."
+        ],
+        "exemplo": "Policial que cumpre mandado de busca em residência às 22h pratica o crime do art. 22, §1º, III.",
+        "prova": [
+          "Assertiva que permite o cumprimento do mandado de busca domiciliar às 22h erra: só entre 5h e 21h."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Busca domiciliar (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-23",
+      "unit_id": "5bc4ba6a-9246-5337-8372-55e69267ce0d",
+      "content_sha256": "8f4241ed8a82b95b355ab94bf3e99fc6725e7ddc7bf5eb7b2d338569bb5c6ed3",
+      "simples": "Alterar artificiosamente lugar/coisa/pessoa em diligência, investigação ou processo para eximir responsabilidade ou incriminar/agravar responsabilidade alheia: detenção 1 a 4 anos e multa. Também alcança as finalidades de eximir excesso civil/administrativo ou desviar apuração por dados omitidos/incompletos.",
+      "pontos": [
+        "Fraude de cenário/prova com finalidade típica."
+      ],
+      "atencao": [
+        "Não equiparar preservação pericial legal a alteração artificiosa para encobrir responsabilidade."
+      ],
+      "exemplo": "O agente muda a cena deliberadamente para atribuir a terceiro conduta que praticou. Variação: A perícia modifica objeto com registro e finalidade técnica legítima: não se presume fraude pelo simples manuseio.",
+      "prova": [
+        "A ocultação de dados para desviar investigação pode estar abrangida? Sim; o parágrafo contempla essa finalidade nas condições do artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5bc4ba6a-9246-5337-8372-55e69267ce0d",
+        "content_sha256": "8f4241ed8a82b95b355ab94bf3e99fc6725e7ddc7bf5eb7b2d338569bb5c6ed3",
+        "simples": "Inovar artificiosamente, no curso de diligência, de investigação ou de processo, o estado de lugar, de coisa ou de pessoa, com o fim de eximir-se de responsabilidade ou de responsabilizar criminalmente alguém ou agravar-lhe a responsabilidade. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena quem pratica a conduta com o intuito de eximir-se de responsabilidade civil ou administrativa por excesso praticado no curso de diligência, ou de omitir dados ou informações ou divulgar dados incompletos para desviar o curso da investigação, da diligência ou do processo.",
+        "pontos": [
+          "Inovar artificiosamente lugar, coisa ou pessoa durante diligência, investigação ou processo.",
+          "Fim de eximir-se de responsabilidade ou responsabilizar alguém.",
+          "Detenção de 1 a 4 anos e multa.",
+          "Também: eximir-se de responsabilidade por excesso; omitir ou divulgar dados incompletos."
+        ],
+        "atencao": [
+          "Versão específica da fraude processual para agentes públicos."
+        ],
+        "exemplo": "Policial que planta uma arma na cena para justificar o excesso pratica o crime.",
+        "prova": [
+          "Assertiva que dispensa o fim especial de responsabilizar ou eximir-se de responsabilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Fraude processual (Código Penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24",
+      "unit_id": "dcd0b00a-9534-52c6-b76b-6b2294974074",
+      "content_sha256": "0a6564c8fff41630fef1a8b06065c386f9bba326d3ac6639f0c58fc1c641fac9",
+      "simples": "Constranger com violência/grave ameaça profissional de hospital público ou privado a admitir pessoa já morta para alterar local/momento do crime e prejudicar apuração: detenção 1 a 4 anos e multa, mais pena da violência.",
+      "pontos": [
+        "Óbito já ocorrido + constrangimento + finalidade de alterar apuração."
+      ],
+      "atencao": [
+        "Não confundir tentativa legítima de socorro com fraude consciente sobre pessoa já morta."
+      ],
+      "exemplo": "O agente sabe do óbito e ameaça a equipe para forjar outro local da morte. Variação: A equipe tenta salvar pessoa ainda viva: não se presume o óbito anterior exigido.",
+      "prova": [
+        "O tipo só abrange hospital público? Não; inclui instituições públicas e privadas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "dcd0b00a-9534-52c6-b76b-6b2294974074",
+        "content_sha256": "0a6564c8fff41630fef1a8b06065c386f9bba326d3ac6639f0c58fc1c641fac9",
+        "simples": "Constranger, sob violência ou grave ameaça, funcionário ou empregado de instituição hospitalar pública ou privada a admitir para tratamento pessoa cujo óbito já tenha ocorrido, com o fim de alterar local ou momento de crime, prejudicando sua apuração. Pena: detenção de 1 a 4 anos e multa, além da pena correspondente à violência.",
+        "pontos": [
+          "Constranger funcionário de hospital a admitir pessoa já morta.",
+          "Fim de alterar o local ou o momento do crime.",
+          "Detenção de 1 a 4 anos e multa, além da pena da violência."
+        ],
+        "atencao": [
+          "Cumulação com a pena da violência."
+        ],
+        "exemplo": "Agente ameaça o médico para que admita como paciente quem já estava morto, modificando o local do crime.",
+        "prova": [
+          "Assertiva que dispensa o fim de alterar o local ou o momento do crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "d81ac0cf-e2e7-54f9-8e72-8d2c54fd626a",
+      "content_sha256": "947ccc2e2c0ee79cfa92312c669d32ba634efead0c9dad5ede2fb7624bd10ff5",
+      "simples": "Obtenção de prova em investigação/fiscalização por meio manifestamente ilícito: detenção 1 a 4 anos e multa. Mesma pena por uso contra investigado/fiscalizado com conhecimento prévio da ilicitude; aplica-se art. 1º.",
+      "pontos": [
+        "Obter manifestamente ilícito; usar com prévio conhecimento."
+      ],
+      "atencao": [
+        "Não equiparar toda prova posteriormente excluída a crime automático do agente."
+      ],
+      "exemplo": "O agente conhece a ilicitude e utiliza a prova contra o investigado com finalidade abusiva. Variação: A invalidade decorre de controvérsia interpretativa sem dolo específico: não se presume o crime.",
+      "prova": [
+        "O uso previsto exige conhecimento prévio da ilicitude? Sim; esse requisito é expresso."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d81ac0cf-e2e7-54f9-8e72-8d2c54fd626a",
+        "content_sha256": "947ccc2e2c0ee79cfa92312c669d32ba634efead0c9dad5ede2fb7624bd10ff5",
+        "simples": "Proceder à obtenção de prova, em procedimento de investigação ou fiscalização, por meio manifestamente ilícito. Pena: detenção de 1 a 4 anos e multa. Incorre na mesma pena quem faz uso de prova, em desfavor do investigado ou fiscalizado, com prévio conhecimento de sua ilicitude.",
+        "pontos": [
+          "Obter prova por meio MANIFESTAMENTE ilícito.",
+          "Usar, contra o investigado, prova sabidamente ilícita.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "A ilicitude deve ser manifesta e conhecida."
+        ],
+        "exemplo": "Policial que obtém confissão sob tortura e a usa no processo comete o crime.",
+        "prova": [
+          "Assertiva que pune o uso de prova ilícita ainda que o agente a desconhecesse erra: exige prévio conhecimento da ilicitude."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Provas ilícitas (CPP)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-27",
+      "unit_id": "16a0e7cb-d24e-5d12-a26e-2926c2b73b0d",
+      "content_sha256": "d16a768d7ce6d96c29bdcac7098ee7424bea50ec5f606ea403e7ec3300efb849",
+      "simples": "Requisitar/instaurar investigação penal ou administrativa contra alguém sem qualquer indício: detenção 6 meses a 2 anos e multa. Sindicância/investigação preliminar sumária devidamente justificada não é crime. Finalidade do art. 1º é necessária.",
+      "pontos": [
+        "Nenhum indício; exceção preliminar sumária justificada."
+      ],
+      "atencao": [
+        "As remissões às ADIs não significam por si revogação, suspensão ou julgamento de mérito; pedido de ação não é decisão que invalida o artigo."
+      ],
+      "exemplo": "A autoridade instaura investigação contra desafeto sem qualquer indício para prejudicá-lo. Variação: Faz apuração preliminar sumária fundamentada para verificar notícia: examina-se a ressalva.",
+      "prova": [
+        "A sindicância sumária devidamente justificada configura automaticamente o crime? Não; o parágrafo único a ressalva."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADI&numProcesso=6240"
+      ],
+      "expected": {
+        "unit_id": "16a0e7cb-d24e-5d12-a26e-2926c2b73b0d",
+        "content_sha256": "d16a768d7ce6d96c29bdcac7098ee7424bea50ec5f606ea403e7ec3300efb849",
+        "simples": "Requisitar instauração ou instaurar procedimento investigatório de infração penal ou administrativa, em desfavor de alguém, à falta de qualquer indício da prática de crime, de ilícito funcional ou de infração administrativa. Pena: detenção de 6 meses a 2 anos e multa. Não há crime quando se tratar de sindicância ou investigação preliminar sumária, devidamente justificada. O texto remete a ADIs no STF.",
+        "pontos": [
+          "Requisitar ou instaurar investigação sem QUALQUER indício.",
+          "Detenção de 6 meses a 2 anos e multa.",
+          "Exclusão: sindicância ou investigação preliminar sumária justificada."
+        ],
+        "atencao": [
+          "Exige a falta de QUALQUER indício.",
+          "Há ações diretas de inconstitucionalidade (ADIs) sobre dispositivos da lei."
+        ],
+        "exemplo": "Instaurar inquérito contra alguém sem qualquer indício, apenas por perseguição, é crime.",
+        "prova": [
+          "Assertiva que pune a instauração de sindicância preliminar justificada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "ec21a74d-761f-5e7e-8994-aee637322fb6",
+      "content_sha256": "a3b6d694742a96af4d4b8ac4089b3179c713b5b6e0e5b500be8e4f6b2bb60a1b",
+      "simples": "Divulgar gravação/trecho sem relação com prova pretendida, expondo intimidade/vida privada ou ferindo honra/imagem do investigado/acusado: detenção 1 a 4 anos e multa, com art. 1º.",
+      "pontos": [
+        "Irrelevância probatória + exposição/lesão descrita."
+      ],
+      "atencao": [
+        "Não confundir acesso defensivo legal aos autos com divulgação pública desnecessária."
+      ],
+      "exemplo": "O responsável publica conversa íntima irrelevante para atingir a honra do investigado. Variação: O dado relevante é entregue legalmente à defesa sob proteção: examine a conduta concreta, não toda circulação como divulgação criminosa.",
+      "prova": [
+        "A relação com a prova e a exposição indicada integram a análise? Sim; são elementos do artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ec21a74d-761f-5e7e-8994-aee637322fb6",
+        "content_sha256": "a3b6d694742a96af4d4b8ac4089b3179c713b5b6e0e5b500be8e4f6b2bb60a1b",
+        "simples": "Divulgar gravação ou trecho de gravação sem relação com a prova que se pretenda produzir, expondo a intimidade ou a vida privada ou ferindo a honra ou a imagem do investigado ou acusado. Pena: detenção de 1 a 4 anos e multa.",
+        "pontos": [
+          "Divulgar gravação sem relação com a prova a produzir.",
+          "Exposição da intimidade, da vida privada, da honra ou da imagem do investigado ou acusado.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Vincula-se à ausência de relação com a prova."
+        ],
+        "exemplo": "Divulgar à imprensa trecho de conversa íntima do investigado, sem relação com os fatos, é crime.",
+        "prova": [
+          "Assertiva que pune a divulgação de qualquer gravação, ainda que relacionada à prova, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-29",
+      "unit_id": "d522b95c-e24c-523b-80bb-5207f9a8ff66",
+      "content_sha256": "70e96541dbc8861c5a10adcb3a16279f00d7c3ab33f0ce7d67b13bd3883210a0",
+      "simples": "Informação falsa sobre procedimento judicial, policial, fiscal ou administrativo, para prejudicar interesse do investigado: detenção 6 meses a 2 anos e multa. O parágrafo vetado não cria outra hipótese.",
+      "pontos": [
+        "Falsidade + finalidade de prejudicar interesse."
+      ],
+      "atencao": [
+        "Citação de ADI não prova que o artigo foi invalidado; compare ato decisório, não só petição."
+      ],
+      "exemplo": "A autoridade conscientemente informa andamento falso para prejudicar o investigado. Variação: Há informação equivocada sem finalidade demonstrada: não se presume automaticamente o tipo.",
+      "prova": [
+        "O artigo exige finalidade de prejudicar interesse do investigado? Sim; o caput a prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADI&numProcesso=6240"
+      ],
+      "expected": {
+        "unit_id": "d522b95c-e24c-523b-80bb-5207f9a8ff66",
+        "content_sha256": "70e96541dbc8861c5a10adcb3a16279f00d7c3ab33f0ce7d67b13bd3883210a0",
+        "simples": "Prestar informação falsa sobre procedimento judicial, policial, fiscal ou administrativo com o fim de prejudicar interesse de investigado. Pena: detenção de 6 meses a 2 anos e multa. O texto remete a ADIs no STF.",
+        "pontos": [
+          "Prestar informação falsa sobre procedimento judicial, policial, fiscal ou administrativo.",
+          "Fim de prejudicar interesse do investigado.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Dolo específico de prejudicar o investigado."
+        ],
+        "exemplo": "Funcionário que informa falsamente a situação de um procedimento para prejudicar o investigado comete o crime.",
+        "prova": [
+          "Assertiva que dispensa o fim de prejudicar o investigado no art. 29 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º, §1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "0637683a-4203-5c41-b629-38d86c695e1f",
+      "content_sha256": "056f1c37adff17c081e3140cec9ac55a22811a7d46b7996d8064028918e79737",
+      "simples": "Iniciar/proceder persecução penal, civil ou administrativa sem justa causa fundamentada ou contra quem sabe inocente: detenção 1 a 4 anos e multa, observadas condições gerais.",
+      "pontos": [
+        "Persecução ampla: penal, civil ou administrativa."
+      ],
+      "atencao": [
+        "Não confundir com investigação preliminar sumária justificada do art. 27 nem com mera divergência."
+      ],
+      "exemplo": "A autoridade promove persecução sabendo da inocência para prejudicar alguém. Variação: Só há controvérsia legítima sobre prova: art. 1º, §2º não permite inferir crime por resultado desfavorável.",
+      "prova": [
+        "O tipo limita-se à persecução penal? Não; inclui civil e administrativa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0637683a-4203-5c41-b629-38d86c695e1f",
+        "content_sha256": "056f1c37adff17c081e3140cec9ac55a22811a7d46b7996d8064028918e79737",
+        "simples": "Dar início ou proceder à persecução penal, civil ou administrativa sem justa causa fundamentada ou contra quem sabe inocente. Pena: detenção de 1 a 4 anos e multa.",
+        "pontos": [
+          "Iniciar ou proceder à persecução sem justa causa fundamentada.",
+          "Ou contra quem se sabe inocente.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Alcança a persecução penal, civil e administrativa."
+        ],
+        "exemplo": "Promotor que denuncia alguém sabendo-o inocente comete o crime.",
+        "prova": [
+          "Assertiva que restringe o art. 30 à persecução penal erra: abrange a civil e a administrativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 27"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "8c726752-3c36-52bf-b12f-305e0a0661dc",
+      "content_sha256": "a36e5aead65b70a407fb89666decfda6fac430c9e705d28dde4fa64609ab7a25",
+      "simples": "Prolongar investigação sem justificativa, procrastinando em prejuízo do investigado/fiscalizado: detenção 6 meses a 2 anos e multa. Ausência de prazo normativo não autoriza extensão imotivada; exige finalidade geral da lei.",
+      "pontos": [
+        "Sem prazo não significa investigação arbitrariamente interminável."
+      ],
+      "atencao": [
+        "Distinguir complexidade concretamente justificada de atraso abusivo. Remissão à ADI não equivale a declaração de inconstitucionalidade."
+      ],
+      "exemplo": "O responsável prolonga a apuração sem motivo para prejudicar o fiscalizado. Variação: A investigação exige diligências complexas justificadas: duração maior sozinha não prova abuso.",
+      "prova": [
+        "A falta de prazo legal autoriza prorrogação imotivada? Não; o parágrafo único também a alcança."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADI&numProcesso=6240"
+      ],
+      "expected": {
+        "unit_id": "8c726752-3c36-52bf-b12f-305e0a0661dc",
+        "content_sha256": "a36e5aead65b70a407fb89666decfda6fac430c9e705d28dde4fa64609ab7a25",
+        "simples": "Estender injustificadamente a investigação, procrastinando-a em prejuízo do investigado ou fiscalizado. Pena: detenção de 6 meses a 2 anos e multa. Incorre na mesma pena quem, inexistindo prazo para execução ou conclusão de procedimento, o estende de forma imotivada, procrastinando-o em prejuízo do investigado ou do fiscalizado. O texto remete a ADIs no STF.",
+        "pontos": [
+          "Estender injustificadamente a investigação em prejuízo do investigado.",
+          "Inclusive quando não há prazo legal, de forma imotivada.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Alcança procedimentos sem prazo legal."
+        ],
+        "exemplo": "Deixar um inquérito aberto por anos, sem diligências, para prejudicar o investigado, é crime.",
+        "prova": [
+          "Assertiva que isenta a extensão da investigação quando não há prazo legal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "376c0575-558a-52d9-b22f-98dcd430f3e4",
+      "content_sha256": "52bc18476d287bae3a99ad697704bbb008bb7bd7a2e6e76fc34743de179acf2c",
+      "simples": "Negar acesso/copias ao interessado/defesa nos procedimentos indicados: detenção 6 meses a 2 anos e multa. Ressalva peças de diligências em curso ou futuras cujo sigilo seja imprescindível.",
+      "pontos": [
+        "Acesso ao documentado pertinente; sigilo concreto de diligência em curso/futura."
+      ],
+      "atencao": [
+        "Não usar a ressalva para negar todo o processo indiscriminadamente; compare Súmula Vinculante 14.",
+        "O alcance penal deste artigo inclui procedimentos civis e administrativos indicados; isso não torna a Súmula Vinculante 14 universal nesses procedimentos. A aplicação oficial do STF registra, inclusive em fevereiro de 2026, restrição da reclamação por essa súmula à investigação criminal, ressalvadas garantias próprias de defesa."
+      ],
+      "exemplo": "A defesa solicita prova já documentada pertinente e sofre negativa abusiva. Variação: É diligência futura de sigilo imprescindível: a ressalva exige essa situação concreta.",
+      "prova": [
+        "A ressalva permite negar genericamente todas as peças já documentadas? Não; possui objeto e requisitos específicos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1230"
+      ],
+      "expected": {
+        "unit_id": "376c0575-558a-52d9-b22f-98dcd430f3e4",
+        "content_sha256": "52bc18476d287bae3a99ad697704bbb008bb7bd7a2e6e76fc34743de179acf2c",
+        "simples": "Negar ao interessado, seu defensor ou advogado acesso aos autos de investigação preliminar, ao termo circunstanciado, ao inquérito ou a qualquer outro procedimento investigatório de infração penal, civil ou administrativa, assim como impedir a obtenção de cópias, ressalvado o acesso a peças relativas a diligências em curso, ou que indiquem a realização de diligências futuras, cujo sigilo seja imprescindível. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Negar acesso aos autos ao interessado, defensor ou advogado.",
+          "Também impedir a obtenção de cópias.",
+          "Ressalva: diligências em curso ou futuras de sigilo imprescindível.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Relaciona-se à Súmula Vinculante 14 do STF (acesso às provas já documentadas)."
+        ],
+        "exemplo": "Negar ao advogado acesso ao inquérito, fora do sigilo de diligências em curso, configura o crime.",
+        "prova": [
+          "Assertiva que permite negar o acesso a todas as peças do inquérito, inclusive as já documentadas, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "6af93b9b-b7c5-56d1-8675-00fbc0e26995",
+      "content_sha256": "2fdaa21724984cfc09f4f71dfd999e499d480814d0b50568798a44ca51b1f229",
+      "simples": "Exigir informação/obrigação sem expresso amparo legal: detenção 6 meses a 2 anos e multa. Também pune usar cargo/função ou invocar condição pública para eximir obrigação ou obter privilégio/vantagem indevida.",
+      "pontos": [
+        "Dever legal e finalidade abusiva; cargo não cria privilégio pessoal."
+      ],
+      "atencao": [
+        "Não confundir requisição legalmente fundamentada com exigência sem amparo."
+      ],
+      "exemplo": "O agente invoca o cargo para exigir vantagem indevida em atendimento pessoal. Variação: A autoridade formula requisição com amparo expresso e finalidade legítima: não basta ser uma exigência para haver crime.",
+      "prova": [
+        "Invocar condição de agente para privilégio indevido está previsto? Sim; o parágrafo único inclui essa hipótese."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6af93b9b-b7c5-56d1-8675-00fbc0e26995",
+        "content_sha256": "2fdaa21724984cfc09f4f71dfd999e499d480814d0b50568798a44ca51b1f229",
+        "simples": "Exigir informação ou cumprimento de obrigação, inclusive o dever de fazer ou de não fazer, sem expresso amparo legal. Pena: detenção de 6 meses a 2 anos e multa. Incorre na mesma pena quem se utiliza de cargo ou função pública ou invoca a condição de agente público para se eximir de obrigação legal ou para obter vantagem ou privilégio indevido.",
+        "pontos": [
+          "Exigir informação ou obrigação sem expresso amparo legal.",
+          "Usar o cargo ou invocar a condição de agente público para se eximir de obrigação ou obter vantagem indevida.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Conhecido como 'carteirada' no parágrafo único."
+        ],
+        "exemplo": "Agente público que invoca o cargo para não pagar uma multa devida comete o crime.",
+        "prova": [
+          "Assertiva que isenta o agente que invoca o cargo para obter vantagem indevida erra."
+        ],
+        "termos": [
+          {
+            "termo": "Carteirada",
+            "significado": "Uso do cargo para obter vantagem ou eximir-se de obrigação."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "45ef0648-9cc1-5969-b3c8-d718bf59f0ea",
+      "content_sha256": "75c79204c0793783713bfd1b5d769eb54484caacbd6f7f921031c6214d7ab6ad",
+      "simples": "Indisponibilidade financeira judicial exacerbadamente superior à dívida estimada e omissão em corrigir após demonstração do excesso: detenção 1 a 4 anos e multa, com finalidade específica.",
+      "pontos": [
+        "Excesso exacerbado + demonstração pela parte + não correção."
+      ],
+      "atencao": [
+        "Não reduzir o tipo a qualquer bloqueio acima da dívida, sem os elementos cumulativos da hipótese."
+      ],
+      "exemplo": "A parte demonstra excesso exacerbado e o juiz mantém deliberadamente o bloqueio para prejudicá-la. Variação: O excesso é prontamente corrigido: não se presume a omissão típica.",
+      "prova": [
+        "Qualquer excesso inicial basta, sem demonstração e omissão em corrigir? Não; o artigo exige esses elementos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "45ef0648-9cc1-5969-b3c8-d718bf59f0ea",
+        "content_sha256": "75c79204c0793783713bfd1b5d769eb54484caacbd6f7f921031c6214d7ab6ad",
+        "simples": "Decretar, em processo judicial, a indisponibilidade de ativos financeiros em quantia que extrapole exacerbadamente o valor estimado para a satisfação da dívida da parte e, ante a demonstração, pela parte, da excessividade da medida, deixar de corrigi-la. Pena: detenção de 1 a 4 anos e multa.",
+        "pontos": [
+          "Indisponibilidade de ativos que extrapole exacerbadamente a dívida.",
+          "Deixar de corrigir após demonstrada a excessividade.",
+          "Detenção de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Exige a omissão em CORRIGIR depois da demonstração pela parte."
+        ],
+        "exemplo": "Juiz bloqueia valor muito superior à dívida e se recusa a corrigir mesmo demonstrado o excesso.",
+        "prova": [
+          "Assertiva que pune o bloqueio em valor superior à dívida independentemente de omissão em corrigir erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "7d2dfe3e-75c1-5554-a9f9-263004c7f15b",
+      "content_sha256": "9237816fdf631adf3e605021583d7093bdbfc57bba6edfac904f240751e12aed",
+      "simples": "Demora demasiada e injustificada na vista solicitada em órgão colegiado, visando procrastinar andamento ou julgamento: detenção 6 meses a 2 anos e multa.",
+      "pontos": [
+        "Vista + demora injustificada + intuito de procrastinar."
+      ],
+      "atencao": [
+        "Tempo maior por motivo concreto legítimo não equivale automaticamente à finalidade típica."
+      ],
+      "exemplo": "O membro retém injustificadamente a vista para impedir julgamento. Variação: Há necessidade fundamentada de exame técnico: a demora por si não comprova o intuito.",
+      "prova": [
+        "O intuito de procrastinar integra o tipo? Sim; o artigo o exige expressamente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7d2dfe3e-75c1-5554-a9f9-263004c7f15b",
+        "content_sha256": "9237816fdf631adf3e605021583d7093bdbfc57bba6edfac904f240751e12aed",
+        "simples": "Demorar demasiada e injustificadamente no exame de processo de que tenha requerido vista em órgão colegiado, com o intuito de procrastinar seu andamento ou retardar o julgamento. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Demora excessiva e injustificada no pedido de vista em órgão colegiado.",
+          "Intuito de procrastinar ou retardar o julgamento.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Pune o pedido de vista usado para procrastinar."
+        ],
+        "exemplo": "Desembargador pede vista e retém o processo por tempo excessivo para atrasar o julgamento.",
+        "prova": [
+          "Assertiva que pune qualquer pedido de vista em órgão colegiado erra: exige demora excessiva e intuito de procrastinar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 31"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "b9ddc625-aced-5ee4-b446-90bc50c494d7",
+      "content_sha256": "7437700518f02b5c6e6763063188ebd54b1a48faa080f34d3353ecdb8813bd55",
+      "simples": "Responsável pela investigação antecipa atribuição de culpa em comunicação, inclusive rede social, antes de terminar apuração e formalizar acusação: detenção 6 meses a 2 anos e multa, observados requisitos gerais.",
+      "pontos": [
+        "Não antecipar culpa; informar fato não é condenar publicamente."
+      ],
+      "atencao": [
+        "Distinguir informação objetiva sobre investigação de atribuição antecipada de culpabilidade."
+      ],
+      "exemplo": "O responsável declara publicamente culpado o investigado antes dos marcos legais para satisfação pessoal. Variação: Comunica objetivamente diligência sem afirmar culpa: examine conteúdo e finalidade, não só existência de notícia.",
+      "prova": [
+        "O tipo abrange comunicação por rede social? Sim; o caput a inclui."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b9ddc625-aced-5ee4-b446-90bc50c494d7",
+        "content_sha256": "7437700518f02b5c6e6763063188ebd54b1a48faa080f34d3353ecdb8813bd55",
+        "simples": "Antecipar o responsável pelas investigações, por meio de comunicação, inclusive rede social, atribuição de culpa, antes de concluídas as apurações e formalizada a acusação. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Responsável pelas investigações antecipa a atribuição de culpa por meio de comunicação, inclusive rede social.",
+          "Antes de concluídas as apurações e formalizada a acusação.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Protege a presunção de inocência."
+        ],
+        "exemplo": "Delegado que, em rede social, afirma a culpa do investigado antes do fim da apuração comete o crime.",
+        "prova": [
+          "Assertiva que permite ao responsável pela investigação atribuir culpa nas redes antes da acusação formal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-39",
+      "unit_id": "9c3f4cd4-8c8a-5985-998d-6dc2a9766cdb",
+      "content_sha256": "f58387aa5432af53d66312713b6e8fed3e7c2b44b5e07adf5f1a146beafd692b",
+      "simples": "Aplicam-se CPP e Lei 9.099 ao processo/julgamento, no que couber. A remissão não torna todo crime da lei de menor potencial ofensivo; analise pena máxima e requisitos de cada instituto.",
+      "pontos": [
+        "Pena máxima até 2 anos para critério de menor potencial, com regras próprias."
+      ],
+      "atencao": [
+        "Não prometer transação/suspensão/benefício automático a toda infração pelo nome da lei."
+      ],
+      "exemplo": "O tipo tem pena máxima de quatro anos: a remissão não o transforma automaticamente em infração de menor potencial. Variação: Outro tipo tem máximo de dois: examine os requisitos concretos do instituto cabível.",
+      "prova": [
+        "Todos os crimes tornam-se de menor potencial por esta remissão? Não; é preciso conferir penas e requisitos próprios."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "9c3f4cd4-8c8a-5985-998d-6dc2a9766cdb",
+        "content_sha256": "f58387aa5432af53d66312713b6e8fed3e7c2b44b5e07adf5f1a146beafd692b",
+        "simples": "Aplicam-se ao processo e ao julgamento dos delitos previstos na Lei, no que couber, as disposições do Código de Processo Penal e da Lei dos Juizados Especiais Criminais.",
+        "pontos": [
+          "Aplicam-se, no que couber, o CPP e a Lei nº 9.099, de 1995."
+        ],
+        "atencao": [
+          "Aplicação subsidiária de ambos."
+        ],
+        "exemplo": "Os crimes de abuso de autoridade seguem o CPP e podem admitir benefícios da Lei dos Juizados.",
+        "prova": [
+          "Assertiva que afasta a aplicação do CPP aos crimes de abuso de autoridade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "516f313f-f29f-54dc-ad4b-19e7130cc875",
+      "content_sha256": "240c27eb35f55c0e7d58f35b9e19fa440da48fd23a814632897ef3f56e2b5f22",
+      "simples": "Modificou prisão temporária: mandado inclui duração e dia da libertação; prazo vencido exige soltura imediata sem nova ordem, salvo extensão/preventiva já comunicada; dia de cumprimento conta no prazo. Conferido na Lei 7.960 atual.",
+      "pontos": [
+        "Mandado completo; execução entra na contagem; soltura no prazo."
+      ],
+      "atencao": [
+        "Não reiniciar contagem no dia seguinte nem manter custódia por espera burocrática de nova ordem."
+      ],
+      "exemplo": "Sem comunicação de extensão/preventiva, o prazo termina e a autoridade solta imediatamente. Variação: Existe preventiva já comunicada: é a ressalva legal, não prorrogação presumida.",
+      "prova": [
+        "A soltura por fim do prazo depende sempre de nova ordem? Não; a regra é soltura imediata, com as ressalvas expressas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm"
+      ],
+      "expected": {
+        "unit_id": "516f313f-f29f-54dc-ad4b-19e7130cc875",
+        "content_sha256": "240c27eb35f55c0e7d58f35b9e19fa440da48fd23a814632897ef3f56e2b5f22",
+        "simples": "O art. 2º da Lei da Prisão Temporária passa a vigorar com acréscimos: o mandado de prisão conterá necessariamente o período de duração da prisão temporária e o dia em que o preso deverá ser libertado; decorrido o prazo do mandado, a autoridade responsável pela custódia deverá, independentemente de nova ordem judicial, pôr imediatamente o preso em liberdade, salvo se já comunicada da prorrogação ou da decretação da prisão preventiva; e inclui-se o dia do cumprimento do mandado no cômputo do prazo da prisão temporária.",
+        "pontos": [
+          "Mandado de prisão temporária indica a duração e o dia da soltura.",
+          "Esgotado o prazo, o preso é solto sem nova ordem judicial.",
+          "O dia do cumprimento do mandado entra no cômputo do prazo."
+        ],
+        "atencao": [
+          "Soltura automática no fim do prazo, salvo prorrogação ou preventiva."
+        ],
+        "exemplo": "Terminado o prazo da prisão temporária, o preso é solto imediatamente, sem nova ordem.",
+        "prova": [
+          "Assertiva que exige nova ordem judicial para soltar o preso temporário ao fim do prazo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12, parágrafo único, IV"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "29fcef80-67fb-5fc5-ac7f-680bce6ee202",
+      "content_sha256": "c8f0ad98a6a02f7d7f9ec75c97897ca9e4183fdeac245ea0b83c144d727e82f5",
+      "simples": "Modificou interceptação: execução sem autorização judicial ou objetivo legal, escuta ambiental e quebra de segredo nas hipóteses do art. 10, pena 2 a 4 anos e multa. Também pune autoridade judicial que determina conduta com objetivo não autorizado. Confira a Lei 9.296 atual e seu art. 10-A.",
+      "pontos": [
+        "Crime próprio na lei alterada; não confundir registros, interceptação e prova privada lícita."
+      ],
+      "atencao": [
+        "A gravação de um interlocutor e captação ambiental possuem condições próprias; não chamar automaticamente toda gravação de interceptação criminosa."
+      ],
+      "exemplo": "A autoridade determina interceptação para finalidade não autorizada em lei. Variação: É gravação particular de interlocutor: analise a disciplina específica antes de equiparar ao tipo.",
+      "prova": [
+        "O artigo também alcança ordem judicial com objetivo não autorizado? Sim; o parágrafo único da redação alterada o prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm"
+      ],
+      "expected": {
+        "unit_id": "29fcef80-67fb-5fc5-ac7f-680bce6ee202",
+        "content_sha256": "c8f0ad98a6a02f7d7f9ec75c97897ca9e4183fdeac245ea0b83c144d727e82f5",
+        "simples": "O art. 10 da Lei de Interceptação Telefônica passa a vigorar com nova redação: constitui crime realizar interceptação de comunicações telefônicas, de informática ou telemática, promover escuta ambiental ou quebrar segredo da Justiça, sem autorização judicial ou com objetivos não autorizados em lei. Pena: reclusão de 2 a 4 anos e multa. Incorre na mesma pena a autoridade judicial que determina a execução de conduta prevista no caput com objetivo não autorizado em lei.",
+        "pontos": [
+          "Crime: interceptação, escuta ambiental ou quebra de segredo de Justiça sem autorização judicial ou fora das hipóteses legais.",
+          "Reclusão de 2 a 4 anos e multa.",
+          "Mesma pena para o juiz que determina conduta com objetivo não autorizado."
+        ],
+        "atencao": [
+          "Alteração da Lei da Interceptação, não da Lei de Abuso."
+        ],
+        "exemplo": "Grampo telefônico sem autorização judicial configura o crime do art. 10 da Lei de Interceptação.",
+        "prova": [
+          "Assertiva que isenta o magistrado que determina interceptação para fim não autorizado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Interceptação Telefônica"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "0b25493a-4ba8-5b4c-926d-dd06f00044a5",
+      "content_sha256": "9bf0ccbd4f361c6944c7a5135a806da3e8956803da6813fb5f974e46293e8687",
+      "simples": "Introduziu ECA 227-A: efeitos de perda de cargo por crime do ECA cometido por servidor com abuso exigem reincidência na hipótese descrita, sem depender da pena aplicada na reincidência. O dispositivo continua na compilação, mas deve ser confrontado com regras posteriores específicas do CP 92, §2º, ampliadas em 2026 para determinados crimes sexuais do ECA.",
+      "pontos": [
+        "Não generalizar requisito de reincidência do ECA 227-A para todas as hipóteses atuais de perda do cargo."
+      ],
+      "atencao": [
+        "CP 92, §2º tem efeitos automáticos para crimes expressamente enumerados após Lei 15.487/2026. Distinga textos, hipóteses e tempo do fato; esta transcrição de 2019 não esgota o regime atual."
+      ],
+      "exemplo": "A prova cobra regra literal do ECA 227-A e é identificada sua hipótese própria. Variação: Cobra crime especificamente enumerado no CP 92, §2º atual: consulte também essa regra posterior, em vez de aplicar indiscriminadamente a reprodução antiga.",
+      "prova": [
+        "A transcrição de 2019 esgota todas as regras atuais sobre perda do cargo por crime do ECA? Não; há regras posteriores específicas no CP 92."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+      ],
+      "expected": {
+        "unit_id": "0b25493a-4ba8-5b4c-926d-dd06f00044a5",
+        "content_sha256": "9bf0ccbd4f361c6944c7a5135a806da3e8956803da6813fb5f974e46293e8687",
+        "simples": "O Estatuto da Criança e do Adolescente passa a vigorar acrescido do art. 227-A: os efeitos da condenação do inciso I do art. 92 do Código Penal, para os crimes da Lei de Abuso de Autoridade praticados por servidores públicos com abuso de autoridade, são condicionados à ocorrência de reincidência. A perda do cargo, do mandato ou da função, nesse caso, independerá da pena aplicada na reincidência.",
+        "pontos": [
+          "Acréscimo ao ECA (art. 227-A).",
+          "Perda do cargo como efeito da condenação depende de reincidência.",
+          "Perda do cargo independe da pena aplicada na reincidência."
+        ],
+        "atencao": [
+          "Harmoniza o efeito da condenação com o art. 4º."
+        ],
+        "exemplo": "A perda do cargo só ocorre se o servidor for reincidente no crime de abuso de autoridade.",
+        "prova": [
+          "Assertiva que torna a perda do cargo efeito automático da primeira condenação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "1f1cf46b-0926-598a-8181-4b872811fd62",
+      "content_sha256": "3caf5ac937aaf8662ebc54479e92255ce67ad1b5470bd593b1baf4d35ff40539",
+      "simples": "Reproduz o texto inicial do crime de violar prerrogativas da advocacia, EAOAB 7º-B. A pena atual foi elevada pela Lei 14.365/2022 para detenção de 2 a 4 anos e multa; a antiga faixa de 3 meses a 1 ano nesta transcrição é histórica. O tipo remete especificamente aos incisos II, III, IV e V do art. 7º.",
+      "pontos": [
+        "Pena vigente no EAOAB 7º-B: 2–4 anos e multa."
+      ],
+      "atencao": [
+        "Não ensinar a faixa histórica nem afirmar que qualquer prerrogativa, indistintamente, integra o tipo."
+      ],
+      "exemplo": "A prova pergunta pena atual e o candidato consulta o Estatuto da Advocacia compilado. Variação: Só lê este artigo modificador: encontra faixa anterior à alteração de 2022 e deve conferir a fonte vigente.",
+      "prova": [
+        "A faixa de três meses a um ano reproduzida aqui continua atual no EAOAB? Não; a Lei 14.365/2022 elevou-a para dois a quatro anos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8906.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14365.htm"
+      ],
+      "expected": {
+        "unit_id": "1f1cf46b-0926-598a-8181-4b872811fd62",
+        "content_sha256": "3caf5ac937aaf8662ebc54479e92255ce67ad1b5470bd593b1baf4d35ff40539",
+        "simples": "O Estatuto da Advocacia passa a vigorar acrescido do art. 7º-B: constitui crime violar direito ou prerrogativa de advogado previstos nos incisos II, III, IV e V do caput do art. 7º. Pena: detenção de 3 meses a 1 ano e multa.",
+        "pontos": [
+          "Crime de violação de prerrogativas do advogado (incisos II, III, IV e V do art. 7º do Estatuto).",
+          "Detenção de 3 meses a 1 ano e multa."
+        ],
+        "atencao": [
+          "Alteração do Estatuto da Advocacia."
+        ],
+        "exemplo": "Violar o sigilo da comunicação do advogado com o cliente configura o crime do art. 7º-B.",
+        "prova": [
+          "Assertiva que fixa pena de reclusão para a violação de prerrogativas do advogado erra: é detenção de 3 meses a 1 ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "9b04b2db-dfc3-5f2a-97cc-2b2eae02de86",
+      "content_sha256": "2e6fe8e58907b957d75de20ba61d5f25b8edac3a5e3d4758187ef64a9869dd9f",
+      "simples": "Revogou a Lei 4.898/1965, CP 150, §2º e CP 350. Para fatos atuais, consulte os novos tipos e elementos, sem reutilizar enquadramento revogado. Fatos anteriores exigem análise temporal e comparação de leis.",
+      "pontos": [
+        "Regime antigo revogado; não há apagamento automático de todo fato anterior."
+      ],
+      "atencao": [
+        "Revogação não implica necessariamente abolitio criminis de toda conduta; examine continuidade e lei mais benéfica."
+      ],
+      "exemplo": "Uma apostila cobra o antigo CP 350 como vigente: a referência precisa ser corrigida. Variação: O fato é anterior à lei nova: analise sucessão legislativa, não aplique lei mais gravosa retroativamente.",
+      "prova": [
+        "A revogação significa automaticamente impunidade de todas as condutas anteriores? Não; depende da análise dos tipos e sucessão de leis."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9b04b2db-dfc3-5f2a-97cc-2b2eae02de86",
+        "content_sha256": "2e6fe8e58907b957d75de20ba61d5f25b8edac3a5e3d4758187ef64a9869dd9f",
+        "simples": "Revogam-se a Lei nº 4.898, de 1965, e o § 2º do art. 150 e o art. 350, ambos do Código Penal.",
+        "pontos": [
+          "Revoga a Lei nº 4.898, de 1965 (antiga Lei de Abuso de Autoridade).",
+          "Revoga o art. 150, §2º, e o art. 350 do Código Penal."
+        ],
+        "atencao": [
+          "A nova lei substituiu a Lei nº 4.898, de 1965."
+        ],
+        "exemplo": "A nova lei substituiu a antiga lei de abuso de autoridade.",
+        "prova": [
+          "Assertiva que mantém em vigor a Lei nº 4.898, de 1965, erra: foi revogada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "abuso",
+      "course_id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "4eff134e-7977-5db7-9384-b324c8792025",
+      "content_sha256": "a29c2422cb89b2f2689f37101195d4a9c564161b1016c6ff6d3ecc9621f58c84",
+      "simples": "A lei original previu vacância de 120 dias da publicação oficial. Alterações e partes posteriormente promulgadas têm fontes/marcos próprios; consulta atual não reabre a vacância.",
+      "pontos": [
+        "Vacância original: 120 dias."
+      ],
+      "atencao": [
+        "Não aplicar automaticamente os 120 dias a toda alteração posterior, como a violência institucional de 2022."
+      ],
+      "exemplo": "A prova pergunta a vacância da lei original: 120 dias. Variação: Pergunta a vigência de alteração: consulte seu ato específico.",
+      "prova": [
+        "A vacância original foi de 45 dias? Não; foi de 120 dias."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4eff134e-7977-5db7-9384-b324c8792025",
+        "content_sha256": "a29c2422cb89b2f2689f37101195d4a9c564161b1016c6ff6d3ecc9621f58c84",
+        "simples": "Esta Lei entra em vigor após decorridos 120 dias de sua publicação oficial.",
+        "pontos": [
+          "Vacatio legis de 120 dias."
+        ],
+        "atencao": [
+          "Dispositivo histórico (vacatio legis de 120 dias)."
+        ],
+        "exemplo": "A lei só passou a valer 120 dias depois de publicada.",
+        "prova": [
+          "Assertiva que fixa em 45 dias a vacatio legis da Lei de Abuso de Autoridade erra: são 120 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    }
+  ]
+}

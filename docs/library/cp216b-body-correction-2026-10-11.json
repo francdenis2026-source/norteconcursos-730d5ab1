@@ -1,0 +1,634 @@
+{
+  "version": "2026-10-11-cp216b",
+  "checked_at": "2026-10-11T23:37:37.059991+00:00",
+  "scope": "Remove apenas rubrica histórica do artigo posterior; conteúdo normativo, ID e progresso preservados.",
+  "laws": [
+    {
+      "expected": {
+        "id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+        "slug": "codigo-penal",
+        "title": "Código Penal — leitura atualizada",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "source_sha256": "2daee32a3073f953391f9be2ebf79f778cae2198b5a61434174e9b3731522537",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "penal-principios-direito-penal",
+        "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+        "overview": {
+          "intro": "Leitura do texto compilado oficial, por dispositivo, com recuperação ativa e alertas de atualização.",
+          "alerts": "Texto compilado conferido em 07/10/2026. O alcance da leitura supera o resumo e o recorte do tópico associado: confira seu edital. Dispositivos revogados ou vetados ficam fora da leitura ativa. A transcrição literal não substitui o controle de constitucionalidade nem a jurisprudência pertinente. Alterações mais gravosas não devem retroagir automaticamente.",
+          "contest": "Polícia Federal — carreira policial — Edital 2025",
+          "chapters": [
+            {
+              "count": 12,
+              "title": "Disposições iniciais"
+            },
+            {
+              "count": 13,
+              "title": "TÍTULO II DO CRIME — Relação de causalidade (Redação dada pela Lei nº 7.209, de 11.7.1984)"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO III DA IMPUTABILIDADE PENAL — Inimputáveis"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV DO CONCURSO DE PESSOAS"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO I DAS PENAS PRIVATIVAS DE LIBERDADE — Reclusão e detenção"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO II DAS PENAS RESTRITIVAS DE DIREITOS — Penas restritivas de direitos"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO III DA PENA DE MULTA — Multa"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO II DA COMINAÇÃO DAS PENAS — Penas privativas de liberdade"
+            },
+            {
+              "count": 18,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO III DA APLICAÇÃO DA PENA — Fixação da pena"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO IV DA SUSPENSÃO CONDICIONAL DA PENA — Requisitos da suspensão da pena"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO V DO LIVRAMENTO CONDICIONAL — Requisitos do livramento condicional"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO VI DOS EFEITOS DA CONDENAÇÃO — Efeitos genéricos e específicos"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V DAS PENAS / CAPÍTULO VII DA REABILITAÇÃO — Reabilitação"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VI DAS MEDIDAS DE SEGURANÇA — Espécies de medidas de segurança"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO VII DA AÇÃO PENAL — Ação pública e de iniciativa privada"
+            },
+            {
+              "count": 14,
+              "title": "TÍTULO VIII DA EXTINÇÃO DA PUNIBILIDADE — Extinção da punibilidade"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO I DOS CRIMES CONTRA A VIDA"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO II DAS LESÕES CORPORAIS"
+            },
+            {
+              "count": 8,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO III DA PERICLITAÇÃO DA VIDA E DA SAÚDE — Perigo de contágio venéreo"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO IV DA RIXA — Rixa"
+            },
+            {
+              "count": 8,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia"
+            },
+            {
+              "count": 9,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO I DOS CRIMES CONTRA A LIBERDADE PESSOAL — Constrangimento ilegal"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO II DOS CRIMES CONTRA A INVIOLABILIDADE DO DOMICÍLIO — Violação de domicílio"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO III DOS CRIMES CONTRA A INVIOLABILIDADE DE CORRESPONDÊNCIA — Violação de correspondência"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO IV DOS CRIMES CONTRA A INVIOLABILIDADE DOS SEGREDOS — Divulgação de segredo"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO I DO FURTO — Furto"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO II DO ROUBO E DA EXTORSÃO — Roubo"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO III DA USURPAÇÃO — Alteração de limites"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO IV DO DANO — Dano"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO V DA APROPRIAÇÃO INDÉBITA — Apropriação indébita"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VI DO ESTELIONATO E OUTRAS FRAUDES — Estelionato"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VII DA RECEPTAÇÃO — Receptação"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VIII DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III DOS CRIMES CONTRA A PROPRIEDADE IMATERIAL / CAPÍTULO I DOS CRIMES CONTRA A PROPRIEDADE INTELECTUAL — Violação de direito autoral"
+            },
+            {
+              "count": 11,
+              "title": "TÍTULO IV DOS CRIMES CONTRA A ORGANIZAÇÃO DO TRABALHO — Atentado contra a liberdade de trabalho"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO V DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO E CONTRA O RESPEITO AOS MORTOS / CAPÍTULO I DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO — Ultraje a culto e impedimento ou perturbação de ato a ele relativo"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO V DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO E CONTRA O RESPEITO AOS MORTOS / CAPÍTULO II DOS CRIMES CONTRA O RESPEITO AOS MORTOS — Impedimento ou perturbação de cerimônia funerária"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO I DOS CRIMES CONTRA A LIBERDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) — Estupro"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO I-A (Incluído pela Lei nº 13.772, de 2018) — DA EXPOSIÇÃO DA INTIMIDADE SEXUAL"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO IV DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO V DO LENOCÍNIO E DO TRÁFICO DE PESSOA PARA FIM DE PROSTITUIÇÃO OU OUTRA FORMA DE EXPLORAÇÃO SEXUAL (Redação dada pela Lei nº 12.015, de 2009) — Mediação para servir a lascívia de outrem"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO VI DO ULTRAJE PÚBLICO AO PUDOR — Ato obsceno"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO VII DISPOSIÇÕES GERAIS (Incluído pela Lei nº 12.015, de 2009) — Aumento de pena (Incluído pela Lei nº 12.015, de 2009)"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO I DOS CRIMES CONTRA O CASAMENTO — Bigamia"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO II DOS CRIMES CONTRA O ESTADO DE FILIAÇÃO — Registro de nascimento inexistente"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO III DOS CRIMES CONTRA A ASSISTÊNCIA FAMILIAR — Abandono material"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO IV DOS CRIMES CONTRA O PÁTRIO PODER, TUTELA CURATELA — Induzimento a fuga, entrega arbitrária ou sonegação de incapazes"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO I DOS CRIMES DE PERIGO COMUM — Incêndio"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO II DOS CRIMES CONTRA A SEGURANÇA DOS MEIOS DE COMUNICAÇÃO E TRANSPORTE E OUTROS SERVIÇOS PÚBLICOS — Perigo de desastre ferroviário"
+            },
+            {
+              "count": 17,
+              "title": "TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO III DOS CRIMES CONTRA A SAÚDE PÚBLICA — Epidemia"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IX DOS CRIMES CONTRA A PAZ PÚBLICA — Incitação ao crime"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO I DA MOEDA FALSA — Moeda Falsa"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO II DA FALSIDADE DE TÍTULOS E OUTROS PAPÉIS PÚBLICOS — Falsificação de papéis públicos"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO III DA FALSIDADE DOCUMENTAL — Falsificação do selo ou sinal público"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO IV DE OUTRAS FALSIDADES — Falsificação do sinal empregado no contraste de metal precioso ou na fiscalização alfandegária, ou para outros fins"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO V (Incluído pela Lei 12.550. de 2011) — das fraudes em certames de interesse público (Incluído pela Lei 12.550. de 2011)"
+            },
+            {
+              "count": 19,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO I DOS CRIMES PRATICADOS POR FUNCIONÁRIO PÚBLICO CONTRA A ADMINISTRAÇÃO EM GERAL — Peculato"
+            },
+            {
+              "count": 12,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II DOS CRIMES PRATICADOS POR PARTICULAR CONTRA A ADMINISTRAÇÃO EM GERAL — Usurpação de função pública"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II-A (Incluído pela Lei nº 10.467, de 11.6.2002) — DOS CRIMES PRATICADOS POR PARTICULAR CONTRA A ADMINISTRAÇÃO PÚBLICA ESTRANGEIRA"
+            },
+            {
+              "count": 12,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II-B — DOS CRIMES EM LICITAÇÕES E CONTRATOS ADMINISTRATIVOS"
+            },
+            {
+              "count": 23,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO III DOS CRIMES CONTRA A ADMINISTRAÇÃO DA JUSTIÇA — Reingresso de estrangeiro expulso"
+            },
+            {
+              "count": 8,
+              "title": "TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO IV DOS CRIMES CONTRA AS FINANÇAS PÚBLICAS — Contratação de operação de crédito"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO I (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA A SOBERANIA NACIONAL"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO II (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA AS INSTITUIÇÕES DEMOCRÁTICAS"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO III (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O FUNCIONAMENTO DAS INSTITUIÇÕES DEMOCRÁTICAS NO PROCESSO ELEITORAL"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO IV (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O FUNCIONAMENTODOS SERVIÇOS ESSENCIAIS"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO VI (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DISPOSIÇÕES COMUNS"
+            }
+          ],
+          "objectives": [
+            "Estudar princípios, aplicação da lei, teoria do crime e consequências jurídicas.",
+            "Comparar crimes da parte especial, elementos, penas, causas modificadoras e regras de ação.",
+            "Separar texto atual e regra aplicável à data do fato, sem retroagir norma penal mais gravosa."
+          ],
+          "current_units": 401,
+          "jurisprudence": [],
+          "excluded_units": 23,
+          "editorial_scope": "Leitura integral do diploma como repertório adicional. A recuperação por artigo é autoavaliada; o conjunto comentado do resumo não equivale a exemplo e questão de aplicação de cada artigo. Jurisprudência apresentada apenas nos pontos verificados."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15484.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.484/2026",
+              "summary": "LEI Nº 15.484/2026",
+              "vigency": "Art. 7º Esta Lei entra em vigor após decorridos 30 (trinta) dias de sua publicação oficial. Publicação: 04/08/2026. Entrada em vigor calculada pelo prazo legal: 03/09/2026.",
+              "articles": [
+                "Art. 105"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.517/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) e a Lei nº 8.176, de 8 de fevereiro de 1991, para dispor sobre os crimes de furto e roubo de petróleo e derivados, gás natural e suas frações recuperáveis, álcool etílico hidratado carburante e demais combustíveis fluidos carburantes, inclusive biocombustíveis, e óleos lubrificantes, bem como para tipificar novos crimes contra a ordem econômica.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 155",
+                "Art. 157"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 92"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.455, DE 1º DE JULHO DE 2026/2026",
+              "summary": "LEI Nº 15.455, DE 1º DE JULHO DE 2026/2026",
+              "vigency": "Art. 10. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 129"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.438/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para aumentar o prazo decadencial do direito de queixa ou de representação quando se tratar de crime praticado no âmbito de violência doméstica e familiar contra a mulher.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 103"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15425.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.425/2026",
+              "summary": "LEI Nº 15.425/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 281",
+                "Art. 282"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.402/2026",
+              "summary": "LEI Nº 15.402/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 359-M"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.397/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a fim de majorar as penas previstas para os crimes de furto, roubo, estelionato, receptação, receptação de animal e interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública, bem como para tipificar os crimes de receptação de animal doméstico e de fraude bancária.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 155",
+                "Art. 157",
+                "Art. 171",
+                "Art. 180",
+                "Art. 180-A",
+                "Art. 266"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.384/2026",
+              "summary": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para prever a violência vicária entre as formas de violência doméstica e familiar, criar o tipo penal do vicaricídio e incluí-lo no rol dos crimes hediondos.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 121-A",
+                "Art. 121-B"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 91-A",
+                "Art. 92",
+                "Art. 121",
+                "Art. 129",
+                "Art. 147-C",
+                "Art. 148",
+                "Art. 155",
+                "Art. 157",
+                "Art. 158",
+                "Art. 159",
+                "Art. 180"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15353.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.353/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para prever a presunção absoluta de vulnerabilidade da vítima do crime de estupro de vulnerável e para estabelecer a aplicação das penas desse crime independentemente da experiência sexual da vítima ou da ocorrência de gravidez resultante do estupro.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 217-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 217-A",
+                "Art. 218",
+                "Art. 218-A",
+                "Art. 218-B",
+                "Art. 218-C",
+                "Art. 338",
+                "Art. 338-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15245.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.245/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre o crime de associação criminosa, a Lei nº 12.694, de 24 de julho de 2012, para ampliar a proteção pessoal dos agentes públicos ou processuais envolvidos no combate ao crime organizado, e a Lei nº 12.850, de 2 de agosto de 2013, para tipificar as condutas de obstrução de ações contra o crime organizado e de conspiração para obstrução de ações contra o crime organizado.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 288"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15181.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.181/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para aumentar as penas aplicadas ao furto, roubo e receptação de fios, cabos ou equipamentos utilizados para fornecimento ou transmissão de energia elétrica ou de telefonia ou para transferência de dados e as aplicadas à interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública; e altera as Leis nºs 9.613, de 3 de março de 1998, para aumentar a pena dos crimes previstos no seu art. 1º, e 9.472, de 16 de julho de 1997, para estabelecer sanções aos detentores de serviço de telecomunicações pelo uso de fios, cabos ou equipamentos de telefonia ou transferência de dados que sejam produtos de crime; e dá outras providências.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 157",
+                "Art. 180"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 133",
+                "Art. 136"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15160.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.160/2025",
+              "summary": "Modifica os arts. 65 e 115 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para alterar circunstância atenuante e vedar a redução do prazo de prescrição para os crimes que envolvam violência sexual contra a mulher, quando o agente for, na data do fato, menor de 21 (vinte e um) anos ou, na data da sentença, maior de 70 (setenta) anos de idade.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 65",
+                "Art. 115"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15159.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.159/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para recrudescer o tratamento penal dispensado ao autor de crime praticado nas dependências de instituição de ensino.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 61",
+                "Art. 121",
+                "Art. 129"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15134.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.134/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 12.694, de 24 de julho de 2012, e 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), para reconhecer como atividade de risco permanente as atribuições inerentes ao Poder Judiciário, ao Ministério Público e à Defensoria Pública e garantir aos seus membros e aos oficiais de justiça medidas de proteção, bem como recrudescer o tratamento penal destinado aos crimes de homicídio e de lesão corporal dolosa contra eles e os membros da Advocacia Pública, desde que no exercício da função ou em decorrência dela, ou contra seu cônjuge, companheiro ou parente, inclusive por afinidade, até o terceiro grau, em razão dessa condição.",
+              "vigency": "Art. 11. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 121"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15123.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.123/2025",
+              "summary": "Altera o art. 147-B do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para estabelecer causa de aumento de pena no crime de violência psicológica contra a mulher quando praticado com o uso de inteligência artificial ou de qualquer outro recurso tecnológico que altere imagem ou som da vítima.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 147-B"
+              ]
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "state": "reference",
+              "title": "Súmulas 545 e 630 revisadas — Tema 1194",
+              "summary": "A utilização na formação do convencimento deixou de ser requisito obrigatório. No tráfico, admissão de posse para uso próprio recebe peso inferior ao de confissão plena; observar retratação, conteúdo e modulação.",
+              "vigency": "Julgamento em setembro de 2025; enunciados revisados publicados no DJEN em 02/12/2025. Entendimento jurisprudencial, não alteração legislativa.",
+              "articles": [
+                "CP, art. 65, III, d"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "title": "Código Penal — leitura atualizada — texto oficial conferido",
+              "sha256": "2daee32a3073f953391f9be2ebf79f778cae2198b5a61434174e9b3731522537"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+              "title": "Constituição Federal de 1988",
+              "sha256": "6a1f0f56efd9ee984dd432060b2ef38378b50087b291943303d5e84795ba5416"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc136.htm",
+              "title": "Emenda Constitucional 136/2025",
+              "sha256": "594bbbad74459ba2a0ee9171ac265aab581afee63d4c672486b68278c7284535"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc137.htm",
+              "title": "Emenda Constitucional 137/2025",
+              "sha256": "1933de34926fe42f01c2cbce6265aa6135c114d808058319b77e28bc8510a6d6"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+              "title": "Emenda Constitucional 138/2025",
+              "sha256": "037c5be2e65c76dd2ac7e2d75e2f31914f2dea6172a230b37d2883730421fbdf"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc139.htm",
+              "title": "Emenda Constitucional 139/2026",
+              "sha256": "4a10a62e3f5c42aafcc3caa07926240bbb2042df0ed084ab30f8510eef312d85"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "title": "STJ — Tema 1194 e revisão das Súmulas 545 e 630",
+              "sha256": "0b3359d58538ce5fa9209f03f12eb8c519ab507a01bb691ec13ec6390922b40c"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/12122025-Pagina-Sumulas-Anotadas-inclui-enunciados-sobre-efeitos-da-confissao-na-aplicacao-da-pena.aspx",
+              "title": "STJ — Súmulas Anotadas 545 e 630 atualizadas",
+              "sha256": "1abeafefb8702ea92055266c241ec237aca2a4d60d4604e79a9dae805ccf2cde"
+            },
+            {
+              "url": "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27",
+              "title": "STJ — Informativo 863, Tema 1194 e modulação",
+              "sha256": "81561197b76c549f9a9b1e48b91b58f7084a459ff01c5a5b7a58e748936be256"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Retiradas máximas absolutas sobre autolesão e absorção pelo crime mais grave.",
+            "Incluídos complemento com casos práticos, ligação para leitura e alertas de atualização.",
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "codigo-penal"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "cecc5a7a7ec8306e418cd8afe07c0cd3eda5345bf421321dccc6798f46a83aa6",
+      "source_checked_at": "2026-10-11T23:21:53.674427+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "codigo-penal",
+      "expected": {
+        "id": "e308203a-aa2f-515e-b499-a6f7c630a711",
+        "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+        "unit_key": "art-216-b",
+        "label": "Art. 216-B",
+        "chapter": "TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO I-A (Incluído pela Lei nº 13.772, de 2018) — DA EXPOSIÇÃO DA INTIMIDADE SEXUAL",
+        "position": 219,
+        "body_text": "Art. 216-B. Produzir, fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes: (Incluído pela Lei nº 13.772, de 2018)\n\nPena - detenção, de 6 (seis) meses a 1 (um) ano, e multa.\n\nParágrafo único. Na mesma pena incorre quem realiza montagem em fotografia, vídeo, áudio ou qualquer outro registro com o fim de incluir pessoa em cena de nudez ou ato sexual ou libidinoso de caráter íntimo. (Incluído pela Lei nº 13.772, de 2018)\n\nSedução",
+        "content_sha256": "e3a9bd9cba2ae663745857922f867fbc379465e35dad31ea54d1deb709899b94",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 216-B. Produzir, fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes: (Incluído pela Lei nº 13.772, de 2018)\n\nPena - detenção, de 6 (seis) meses a 1 (um) ano, e multa.\n\nParágrafo único. Na mesma pena incorre quem realiza montagem em fotografia, vídeo, áudio ou qualquer outro registro com o fim de incluir pessoa em cena de nudez ou ato sexual ou libidinoso de caráter íntimo. (Incluído pela Lei nº 13.772, de 2018)",
+      "content_sha256": "f1a7595d3b8ccb5f8f4cd8d2d0f226fab3e784a6779b650ce511aacec2b7fcec"
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

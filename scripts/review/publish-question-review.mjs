@@ -1,0 +1,149 @@
+import {readFile, writeFile} from 'node:fs/promises';
+import {isDeepStrictEqual} from 'node:util';
+import {pathToFileURL} from 'node:url';
+import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
+
+const tables = new Set(['official_exam_questions','curated_question_catalog','board_exam_questions']);
+const allowed = new Set(['content_status','subject','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+// figure_urls is PostgreSQL text[], unlike options/legal_basis (JSONB).
+// Keep it in the compare-and-set predicate using its actual storage syntax.
+export function reviewRowFilters(table, expected) {
+  return Object.entries(expected).map(([key,value])=>{
+    if (value===null) return `${key}=is.null`;
+    let literal;
+    if (table==='board_exam_questions' && key==='figure_urls') {
+      if (!Array.isArray(value) || value.some(v=>typeof v!=='string')) throw Error('Invalid figure URL array');
+      literal='{'+value.map(v=>'"'+v.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'"').join(',')+'}';
+    } else literal=typeof value==='object'?JSON.stringify(value):String(value);
+    return `${key}=eq.${encodeURIComponent(literal)}`;
+  }).join('&');
+}
+// PostgreSQL omits trailing fractional zeroes in timestamptz responses.
+// Preserve microsecond precision: Date parsing would silently round it away.
+export function sameReviewRow(a,b) {
+  const normalize=row=>row && Object.fromEntries(Object.entries(row).map(([key,value])=>{
+    if (['created_at','verified_at','law_version_checked_at','checked_at'].includes(key) && typeof value==='string') {
+      value=value.replace(/Z$/, '+00:00').replace(/\.(\d+)(?=[+-]\d{2}:\d{2}$)/,(_,fraction)=>{
+        const digits=fraction.replace(/0+$/,''); return digits?`.${digits}`:'';
+      });
+    }
+    return [key,value];
+  }));
+  return isDeepStrictEqual(normalize(a),normalize(b));
+}
+export function validateReview(pack) {
+  if (!Array.isArray(pack.items) || !pack.items.length) throw Error('Empty review');
+  const improvement = pack.purpose === 'explanation-improvement';
+  const restoration = ['pcpr-papiloscopista-restoration','restore-reviewed-status'].includes(pack.purpose);
+  const restoreItems = new Set([...Array.from({length:50},(_,i)=>i+1),81,82,83,84,85,92,93,94,95,96,97,98,99,100]);
+  const ids = new Set();
+  for (const item of pack.items) {
+    const {table,expected,patch,evidence} = item;
+    const id = `${table}:${expected?.id}`;
+    const validStatus = improvement ? ['active','archived'].includes(expected?.content_status) : expected?.content_status === (restoration ? 'archived' : 'under_review');
+    if (!tables.has(table) || ids.has(id) || !validStatus) throw Error('Invalid or repeated question');
+    ids.add(id);
+    if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
+    if (table==='official_exam_questions' && 'explanation' in patch) throw Error('Official question commentary must use review_note');
+    if (table==='board_exam_questions' && 'current_syllabus_topic_id' in patch) throw Error('Board questions must use syllabus_topic_id');
+    if (pack.purpose==='pcpr-papiloscopista-restoration') {
+      if (table!=='board_exam_questions' || expected.contest_name!=='Polícia Civil do Estado do Paraná' || expected.exam_year!==2026 || expected.career_name!=='Papiloscopista Policial' || !restoreItems.delete(expected.item_number) || pack.items.length>64 || patch.content_status!=='active' || Object.keys(patch).length!==1 || !evidence?.restore_expected || evidence.restore_expected.career_name!=='Agente de Polícia Judiciária' || evidence.restore_expected.content_status!=='active') throw Error('Restoration is restricted to the 64 shared PCPR Papiloscopista items and status only');
+    }
+    if (pack.purpose==='restore-reviewed-status') {
+      if (table!=='board_exam_questions' || patch.content_status!=='active' || Object.keys(patch).length!==1 || evidence?.previous_review_verified!==true) throw Error('Status restoration must preserve every reviewed field');
+      if ((evidence?.legal || expected.legal_review_required) && (!Number.isFinite(Date.parse(expected.law_version_checked_at)) || Date.parse(expected.law_version_checked_at)>Date.now())) throw Error('Existing current legal review required');
+      if (!(expected.explanation || expected.review_note)?.trim() || !Number.isFinite(Date.parse(expected.verified_at)) || Date.parse(expected.verified_at)>Date.now()) throw Error('Existing verified review required');
+    }
+    if (improvement) {
+      if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at','legal_basis','current_syllabus_topic_id'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
+      // Legacy active rows may lack the explicit current pointer required by
+      // the database guard. Confirm the existing topic; never reassign it here.
+      if ('current_syllabus_topic_id' in patch && (!patch.current_syllabus_topic_id || patch.current_syllabus_topic_id!==(expected.current_syllabus_topic_id || expected.syllabus_topic_id))) throw Error('Explanation improvement must preserve the existing syllabus topic');
+      if (!(patch.review_note || patch.explanation)?.trim() || (patch.review_note || patch.explanation).length<200) throw Error('Substantive explanation required');
+    } else if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
+    if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
+    if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !(table==='board_exam_questions'?patch.syllabus_topic_id:patch.current_syllabus_topic_id) || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
+    for (const url of evidence.sources) if (new URL(url).protocol !== 'https:') throw Error('HTTPS evidence required');
+    const reviewDate=restoration ? expected.verified_at : improvement ? patch.law_version_checked_at : patch.verified_at;
+    if (!Number.isFinite(Date.parse(reviewDate)) || Date.parse(reviewDate)>Date.now()) throw Error('Invalid review date');
+    if (patch.content_status==='active' || improvement) {
+      if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
+      if ((evidence.legal || (restoration && expected.legal_review_required)) && (!(patch.legal_basis || (improvement || restoration ? expected.legal_basis : null))?.length || !(patch.law_version_checked_at || (restoration && expected.law_version_checked_at)))) throw Error('Current legal basis required');
+      if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
+      if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
+      if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
+    }
+  }
+  return pack;
+}
+
+async function verifyRestoration(item, request) {
+  const {expected,evidence}=item;
+  const [canonical]=await request(`board_exam_questions?id=eq.${evidence.restore_expected.id}&select=*`);
+  const fields=['contest_name','exam_year','board','item_number','stem','options','official_answer','support_text','legal_basis','law_version_checked_at','needs_visual','legal_review_required'];
+  if (!sameReviewRow(canonical,evidence.restore_expected) || canonical?.content_status!=='active' || canonical.needs_visual || fields.some(k=>!isDeepStrictEqual(canonical[k],expected[k]))) throw Error(`Shared active question changed or mismatched: ${expected.id}`);
+}
+
+export async function publishReview(pack, request, {dryRun=false,onProgress=()=>{}}={}) {
+  validateReview(pack);
+  // Preflight the entire batch before the first write. Reruns preserve already applied reviews.
+  const pending=[];
+  for (const item of pack.items) {
+    const {table,expected,patch}=item;
+    const [actual]=await request(`${table}?id=eq.${expected.id}&select=*`);
+    if (sameReviewRow(actual,{...expected,...patch})) continue;
+    if (!sameReviewRow(actual,expected)) throw Error(`Concurrent revision: ${table}/${expected.id}`);
+    if (pack.purpose==='pcpr-papiloscopista-restoration') await verifyRestoration(item,request);
+    if (item.evidence.duplicate_of) {
+      if (patch.content_status!=='archived' || pack.items.some(i=>i.table===table && i.expected.id===item.evidence.duplicate_of)) throw Error('Canonical duplicate cannot also be archived');
+      const [canonical]=await request(`${table}?id=eq.${item.evidence.duplicate_of}&select=*`);
+      const identity=['question_source_id','answer_key_source_id','item_number','question_text','official_answer','syllabus_topic_id','exam_year','contest_name'];
+      const aliases={'Polícia Civil do Acre':'Agente de Polícia Civil','Polícia Penal do Acre':'Agente de Polícia Penal'};
+      const careerMatches=canonical && (canonical.career_name===expected.career_name || (item.evidence.career_alias_verified && aliases[expected.career_name]===canonical.career_name));
+      if (!canonical || !careerMatches || !['active','under_review'].includes(canonical.content_status) || identity.some(k=>!isDeepStrictEqual(canonical[k],expected[k]))) throw Error('Duplicate identity mismatch');
+    }
+    if (patch.content_status==='active' || pack.purpose==='explanation-improvement') {
+      const topicId=patch.current_syllabus_topic_id || patch.syllabus_topic_id || (pack.purpose==='explanation-improvement' ? expected.current_syllabus_topic_id : null) || expected.syllabus_topic_id;
+      const [topic]=await request(`syllabus_topics?id=eq.${topicId}&select=*`);
+      const [edition]=await request(`syllabus_editions?id=eq.${topic?.edition_id}&select=*`);
+      const [source]=await request(`content_sources?id=eq.${edition?.source_id}&select=*`);
+      if (topic?.content_status!=='current' || edition?.status!=='active' || !source?.is_official || source.source_type!=='edital' || source.status!=='vigente') throw Error('Verified official active syllabus required');
+      if (patch.subject!==undefined && patch.subject!==topic.discipline) throw Error('Corrected subject must match verified topic discipline');
+      for (const basis of patch.legal_basis || (['explanation-improvement','pcpr-papiloscopista-restoration','restore-reviewed-status'].includes(pack.purpose) ? expected.legal_basis : null) || []) {
+        const sources=await request(`content_sources?url=eq.${encodeURIComponent(basis.url)}&select=id,is_official,status`);
+        if (!sources.some(s=>s.is_official && ['vigente','parcialmente_revogado'].includes(s.status))) throw Error(`Official basis not registered: ${basis.url}`);
+      }
+    }
+    pending.push(item);
+    onProgress({phase:'preflight',completed:pending.length,total:pack.items.length});
+  }
+  const result={reviewed:pack.items.length,updated:[],preserved:pack.items.length-pending.length};
+  if (dryRun) return {...result,pending:pending.map(i=>i.expected.id)};
+  for (const item of pending) {
+    const {table,expected,patch}=item;
+    if (pack.purpose==='pcpr-papiloscopista-restoration') await verifyRestoration(item,request);
+    // Filter every original field to avoid overwriting another account's simultaneous work.
+    const filters=reviewRowFilters(table,expected);
+    const rows=await request(`${table}?${filters}`,'PATCH',patch);
+    if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
+    result.updated.push(expected.id);
+    onProgress({phase:'write',completed:result.updated.length,total:pending.length});
+  }
+  return result;
+}
+
+if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
+  const [input,report,mode]=process.argv.slice(2);
+  if (!input || !report || (mode && mode!=='--dry-run')) throw Error('Usage: REVIEW_PACK REPORT [--dry-run]');
+  const pack=validateReview(JSON.parse(await readFile(input,'utf8')));
+  const key=process.env.TASK_SUPABASE_KEY,project=process.env.TASK_SUPABASE_PROJECT;
+  if (!key || project!=='gkwphadbveiyjcwiiizw') throw Error('Project/session credentials required');
+  const request=async(path,method='GET',body)=>{
+    const res=await fetch(`https://${project}.supabase.co/rest/v1/${path}`,{method,headers:{...sessionAuthHeaders(key),'Content-Type':'application/json',Prefer:'return=representation'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});
+    if (!res.ok) throw Error(`Database HTTP ${res.status}`);
+    return res.json();
+  };
+  const result={dry_run:mode==='--dry-run',...await publishReview(pack,request,{dryRun:mode==='--dry-run',onProgress:progress=>{if(progress.completed%16===0 || progress.completed===progress.total) console.error(JSON.stringify(progress));}}),verified_at:new Date().toISOString()};
+  await writeFile(report,JSON.stringify(result,null,2)+'\n');
+  console.log(JSON.stringify(result));
+}

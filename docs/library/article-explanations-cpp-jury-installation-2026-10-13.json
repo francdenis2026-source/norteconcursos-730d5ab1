@@ -1,0 +1,1212 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:40:26.603769+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-451",
+        "art-452",
+        "art-453",
+        "art-454",
+        "art-455",
+        "art-456",
+        "art-457",
+        "art-458",
+        "art-459",
+        "art-460",
+        "art-461",
+        "art-462",
+        "art-463",
+        "art-464",
+        "art-465",
+        "art-466",
+        "art-467",
+        "art-468",
+        "art-469",
+        "art-470"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-451",
+      "unit_id": "ad30cd07-dd5c-52fb-998e-e2aa849035e0",
+      "content_sha256": "5b027dd870116ec8455306c4e35d118e69865c0dd176fb5b67863460fd14b49d",
+      "simples": "Jurados excluídos por impedimento, suspeição ou incompatibilidade contam para o número legal de realização da sessão.",
+      "pontos": [
+        "Contagem para instalar não é aptidão para votar.",
+        "Integrar art. 463."
+      ],
+      "atencao": [
+        "Não sortear impedido para Conselho só porque contou no número de presentes."
+      ],
+      "exemplo": "Dezesseis presentes incluem um impedido: a contagem legal não o habilita a julgar. Variação: Seleção dos sete deve conservar aptidão individual.",
+      "prova": [
+        "Excluído pode contar para instalação? Sim.",
+        "Isso permite votar apesar do impedimento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Quórum e aptidão",
+          "significado": "Contagem da sessão distinta de capacidade de integrar Conselho."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ad30cd07-dd5c-52fb-998e-e2aa849035e0",
+        "content_sha256": "5b027dd870116ec8455306c4e35d118e69865c0dd176fb5b67863460fd14b49d",
+        "simples": "Os jurados excluídos por impedimento, suspeição ou incompatibilidade serão considerados para a constituição do número legal exigível para a realização da sessão.",
+        "pontos": [
+          "Jurados excluídos por impedimento, suspeição ou incompatibilidade contam para o quorum de instalação."
+        ],
+        "atencao": [
+          "Contam para o quorum, embora excluídos do Conselho."
+        ],
+        "exemplo": "Jurado impedido não julga, mas conta para completar o número legal de presentes.",
+        "prova": [
+          "Assertiva que desconta os jurados excluídos do número legal para a sessão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 463"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-452",
+      "unit_id": "fbed0b72-f936-5076-89f1-dd418080f558",
+      "content_sha256": "c608286e071555db3e2e94a1f9a27b1694beb96fc5cbba555505719bcc55a7e1",
+      "simples": "Mesmo Conselho pode julgar mais de um processo no mesmo dia se partes aceitarem e houver novo compromisso.",
+      "pontos": [
+        "Aceitação das partes necessária.",
+        "Novo compromisso em cada caso.",
+        "Impedimentos próprios continuam aplicáveis."
+      ],
+      "atencao": [
+        "Concordância não torna jurado impedido apto para nova causa."
+      ],
+      "exemplo": "Conselho apto é aceito pelas partes e presta novo compromisso para segundo processo. Variação: Falta de aceitação impede usar regra como simples conveniência administrativa.",
+      "prova": [
+        "Novo compromisso é necessário? Sim.",
+        "Dispensa aceitação das partes? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reutilização do Conselho",
+          "significado": "Atuação em outra causa sob condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fbed0b72-f936-5076-89f1-dd418080f558",
+        "content_sha256": "c608286e071555db3e2e94a1f9a27b1694beb96fc5cbba555505719bcc55a7e1",
+        "simples": "O mesmo Conselho de Sentença poderá conhecer de mais de um processo, no mesmo dia, se as partes o aceitarem, hipótese em que seus integrantes deverão prestar novo compromisso.",
+        "pontos": [
+          "Mesmo Conselho em mais de um processo no mesmo dia, se as partes aceitarem.",
+          "Novo compromisso dos jurados."
+        ],
+        "atencao": [
+          "Depende da aceitação das partes."
+        ],
+        "exemplo": "Com a concordância das partes, o mesmo Conselho julga dois processos no mesmo dia.",
+        "prova": [
+          "Assertiva que dispensa a aceitação das partes para o mesmo Conselho julgar dois processos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 447"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-453",
+      "unit_id": "6b953c00-05f1-5626-b673-fdd0187aea5f",
+      "content_sha256": "858fff7d3cb80713d395867b46de1f21b89a9d4ce89d20dd1fd69331587b1c39",
+      "simples": "Períodos e forma das reuniões seguem lei local de organização judiciária.",
+      "pontos": [
+        "Distinguir organização local de garantias processuais nacionais.",
+        "Consultar norma competente para calendário."
+      ],
+      "atencao": [
+        "Não inventar calendário nacional único nem permitir lei local afastar defesa."
+      ],
+      "exemplo": "Tribunal agenda reuniões segundo sua organização legal. Variação: Calendário local não dispensa intimações e composição previstas no CPP.",
+      "prova": [
+        "Há calendário universal definido aqui? Não.",
+        "A lei local organiza as reuniões? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Organização local",
+          "significado": "Regras legais de períodos e funcionamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6b953c00-05f1-5626-b673-fdd0187aea5f",
+        "content_sha256": "858fff7d3cb80713d395867b46de1f21b89a9d4ce89d20dd1fd69331587b1c39",
+        "simples": "O Tribunal do Júri reunir-se-á para as sessões de instrução e julgamento nos períodos e na forma estabelecida pela lei local de organização judiciária.",
+        "pontos": [
+          "Períodos e forma das sessões definidos pela lei local de organização judiciária."
+        ],
+        "atencao": [
+          "Definição local."
+        ],
+        "exemplo": "A lei de organização judiciária local fixa os períodos das reuniões do Júri.",
+        "prova": [
+          "Assertiva que fixa os períodos das reuniões do Júri no próprio CPP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 447"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-454",
+      "unit_id": "f7d8e271-2b11-50bf-a7cf-8b6757b022d3",
+      "content_sha256": "a8292450717c31b1648608a9ee1aa080a3be7cb05f549d89d4cc37ba18b7c60b",
+      "simples": "Até abertura dos trabalhos, presidente decide isenções, dispensas e pedido de adiamento, registrando em ata.",
+      "pontos": [
+        "Examinar fundamentos.",
+        "Consignar deliberações."
+      ],
+      "atencao": [
+        "Pedido não concede dispensa ou adiamento por si só."
+      ],
+      "exemplo": "Jurado apresenta motivo e presidente decide com registro. Variação: Parte não presume sessão cancelada apenas por ter requerido adiamento.",
+      "prova": [
+        "Deliberações devem constar de ata? Sim.",
+        "Requerimento já cancela sessão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Decisões preliminares",
+          "significado": "Providências anteriores à abertura formal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f7d8e271-2b11-50bf-a7cf-8b6757b022d3",
+        "content_sha256": "a8292450717c31b1648608a9ee1aa080a3be7cb05f549d89d4cc37ba18b7c60b",
+        "simples": "Até o momento de abertura dos trabalhos da sessão, o juiz presidente decidirá os casos de isenção e dispensa de jurados e o pedido de adiamento de julgamento, mandando consignar em ata as deliberações.",
+        "pontos": [
+          "Juiz presidente decide, até a abertura dos trabalhos, isenções, dispensas e pedidos de adiamento.",
+          "Deliberações em ata."
+        ],
+        "atencao": [
+          "Momento: até a abertura dos trabalhos."
+        ],
+        "exemplo": "Antes de abrir a sessão, o presidente decide os pedidos de dispensa.",
+        "prova": [
+          "Assertiva que permite pedir isenção apenas após o início dos trabalhos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 444"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-455",
+      "unit_id": "a6e3daa1-caa2-5b9e-b435-6c2ecdd8cd57",
+      "content_sha256": "f0d454a1e456bb2eb0cc57a68e974ce363f6502a95cf2362ebce7a3f98e84fef",
+      "simples": "Ausência do MP adia para primeiro dia desimpedido da mesma reunião, com ciência das partes e testemunhas.",
+      "pontos": [
+        "Falta injustificada comunicada imediatamente ao Procurador-Geral de Justiça.",
+        "Comunicar também nova data."
+      ],
+      "atencao": [
+        "Não prosseguir substituindo acusação pública pelo juiz presidente."
+      ],
+      "exemplo": "Promotor ausente leva a adiamento e comunicações previstas. Variação: Se falta é justificada, isso não torna juiz parte acusadora.",
+      "prova": [
+        "Juiz pode substituir MP na acusação? Não.",
+        "Ausência injustificada deve ser comunicada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ausência do MP",
+          "significado": "Falta do órgão acusador com consequência processual própria."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a6e3daa1-caa2-5b9e-b435-6c2ecdd8cd57",
+        "content_sha256": "f0d454a1e456bb2eb0cc57a68e974ce363f6502a95cf2362ebce7a3f98e84fef",
+        "simples": "Se o Ministério Público não comparecer, o juiz presidente adiará o julgamento para o primeiro dia desimpedido da mesma reunião, cientificadas as partes e as testemunhas. Se a ausência não for justificada, o fato será imediatamente comunicado ao Procurador-Geral de Justiça com a data designada para a nova sessão.",
+        "pontos": [
+          "Ausência do MP: adiamento para o primeiro dia desimpedido da mesma reunião.",
+          "Ausência injustificada: comunicação ao Procurador-Geral de Justiça."
+        ],
+        "atencao": [
+          "Comunicação ao Procurador-Geral de Justiça."
+        ],
+        "exemplo": "O promotor falta sem justificativa, e o julgamento é adiado, com comunicação ao PGJ.",
+        "prova": [
+          "Assertiva que permite o julgamento sem o Ministério Público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 456"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-456",
+      "unit_id": "41b4615b-94b0-5928-8dfe-5baf4258a7a8",
+      "content_sha256": "342abf82d525ac010a1d137a469bdbdf6b1e35f43334f3db6f4bbea4b9792c03",
+      "simples": "Falta injustificada de advogado sem substituto leva a comunicação à OAB e um adiamento, preservando defesa na nova sessão.",
+      "pontos": [
+        "Intimar Defensoria para novo julgamento.",
+        "Primeiro dia desimpedido respeitando mínimo de dez dias.",
+        "Hipótese pressupõe ausência sem escusa legítima."
+      ],
+      "atencao": [
+        "Julgar na próxima chamada não significa julgar sem defensor preparado."
+      ],
+      "exemplo": "Após falta injustificada, Defensoria recebe intimação com antecedência mínima. Variação: Escusa legítima deve ser examinada antes de aplicar limite de adiamento.",
+      "prova": [
+        "Nova sessão dispensa defensor? Não.",
+        "Mínimo para novo julgamento é dez dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa substitutiva",
+          "significado": "Garantia de assistência diante da falta injustificada do advogado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "41b4615b-94b0-5928-8dfe-5baf4258a7a8",
+        "content_sha256": "342abf82d525ac010a1d137a469bdbdf6b1e35f43334f3db6f4bbea4b9792c03",
+        "simples": "Se a falta, sem escusa legítima, for do advogado do acusado, e se outro não for por este constituído, o fato será imediatamente comunicado ao presidente da seccional da OAB, com a data designada para a nova sessão. Não havendo escusa legítima, o julgamento será adiado somente uma vez, devendo o acusado ser julgado quando chamado novamente. Nessa hipótese, o juiz intimará a Defensoria Pública para o novo julgamento, que será adiado para o primeiro dia desimpedido, observado o prazo mínimo de 10 dias.",
+        "pontos": [
+          "Falta injustificada do advogado: comunicação à OAB.",
+          "Adiamento uma única vez.",
+          "Defensoria Pública intimada para o novo julgamento.",
+          "Prazo mínimo de 10 dias."
+        ],
+        "atencao": [
+          "Adiamento somente UMA vez.",
+          "Prazo mínimo de 10 dias para a Defensoria se preparar."
+        ],
+        "exemplo": "O advogado falta sem escusa; o julgamento é adiado uma vez e a Defensoria é intimada.",
+        "prova": [
+          "Assertiva que permite sucessivos adiamentos pela falta injustificada do advogado erra: só uma vez."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 455"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-457",
+      "unit_id": "8bb4632d-0bc5-569b-94ad-754c788025e8",
+      "content_sha256": "b988a3f4db29492427ddb1a3b784589ce111e96296f13076068d5f10a569efbd",
+      "simples": "Ausência de acusado solto, assistente ou advogado do querelante regularmente intimados não adia por si julgamento.",
+      "pontos": [
+        "Justificativas/pedidos prévio exame, salvo força maior comprovada.",
+        "Preso não apresentado: adiamento, salvo dispensa subscrita por ele e defensor.",
+        "Defesa técnica do acusado permanece."
+      ],
+      "atencao": [
+        "Não generalizar ausência do solto para preso nem aceitar dispensa do preso apenas pela assinatura do advogado."
+      ],
+      "exemplo": "Solto regularmente intimado não comparece: examina-se prosseguimento com defesa. Variação: Preso não conduzido só pode ter hipótese de dispensa pertinente com ambas as assinaturas.",
+      "prova": [
+        "Dispensa do preso exige ele e defensor? Sim.",
+        "Ausência do solto elimina defesa técnica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Presença no plenário",
+          "significado": "Regras distintas conforme liberdade e manifestação válida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8bb4632d-0bc5-569b-94ad-754c788025e8",
+        "content_sha256": "b988a3f4db29492427ddb1a3b784589ce111e96296f13076068d5f10a569efbd",
+        "simples": "O julgamento não será adiado pelo não comparecimento do acusado solto, do assistente ou do advogado do querelante, que tiver sido regularmente intimado. Os pedidos de adiamento e as justificações de não comparecimento deverão ser, salvo comprovado motivo de força maior, previamente submetidos à apreciação do juiz presidente. Se o acusado preso não for conduzido, o julgamento será adiado para o primeiro dia desimpedido da mesma reunião, salvo se houver pedido de dispensa de comparecimento subscrito por ele e seu defensor.",
+        "pontos": [
+          "Ausência do acusado solto, do assistente ou do advogado do querelante não adia o julgamento.",
+          "Pedidos de adiamento previamente submetidos ao juiz presidente.",
+          "Acusado preso não conduzido: adiamento, salvo dispensa subscrita por ele e seu defensor."
+        ],
+        "atencao": [
+          "Acusado SOLTO ausente: não adia; acusado PRESO não conduzido: adia."
+        ],
+        "exemplo": "O réu solto regularmente intimado falta, e o julgamento ocorre sem ele.",
+        "prova": [
+          "Assertiva que adia o julgamento pela ausência do acusado solto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 455"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-458",
+      "unit_id": "74faafd4-fa86-59d1-9608-3ca6a1000541",
+      "content_sha256": "2d5f4689f0ad3c3c9fad3c0a965b816178451905188b0797dfdad088de01e3ed",
+      "simples": "Testemunha ausente sem justa causa sujeita-se à multa do art. 436, §2º, sem prejuízo de apuração de desobediência.",
+      "pontos": [
+        "Multa de um a dez salários mínimos no regime remetido.",
+        "Verificar regular convocação e causa da ausência.",
+        "Desobediência requer apuração dos requisitos, não condenação sumária."
+      ],
+      "atencao": [
+        "Ausência não prova automaticamente crime nem dispensa análise de justa causa."
+      ],
+      "exemplo": "Testemunha regularmente intimada falta sem motivo: sanção é examinada. Variação: Emergência comprovada muda análise da justa causa.",
+      "prova": [
+        "Justa causa precisa ser examinada? Sim.",
+        "Falta equivale a condenação automática por crime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Falta de testemunha",
+          "significado": "Inadimplemento sujeito a consequências legalmente apuradas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "74faafd4-fa86-59d1-9608-3ca6a1000541",
+        "content_sha256": "2d5f4689f0ad3c3c9fad3c0a965b816178451905188b0797dfdad088de01e3ed",
+        "simples": "Se a testemunha, sem justa causa, deixar de comparecer, o juiz presidente, sem prejuízo da ação penal pela desobediência, aplicar-lhe-á a multa prevista no §2º do art. 436.",
+        "pontos": [
+          "Testemunha faltosa: multa do art. 436, §2º.",
+          "Sem prejuízo da ação penal por desobediência."
+        ],
+        "atencao": [
+          "Multa de 1 a 10 salários mínimos."
+        ],
+        "exemplo": "A testemunha falta sem justa causa e é multada pelo juiz presidente.",
+        "prova": [
+          "Assertiva que afasta a ação por desobediência diante da multa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 436"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-459",
+      "unit_id": "6254774e-27b7-5e78-9bee-b22d301f2376",
+      "content_sha256": "22e6cbef2cbf10aefefe760f0cff371406fd13d2c52cc5d0e9f4fa5096949d8d",
+      "simples": "Testemunha a serviço do júri recebe a proteção remuneratória do art. 441.",
+      "pontos": [
+        "Integrar comparecimento e comprovação.",
+        "Não é benefício reservado só aos jurados."
+      ],
+      "atencao": [
+        "Não descontar salário pela participação regular como testemunha nas condições legais."
+      ],
+      "exemplo": "Empregada comparece como testemunha e comprova participação. Variação: Ausência sem participação não gera documento fictício para justificar dia.",
+      "prova": [
+        "Proteção pode alcançar testemunha? Sim.",
+        "Autoriza comprovar presença inexistente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Remuneração da testemunha",
+          "significado": "Proteção salarial pela participação pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6254774e-27b7-5e78-9bee-b22d301f2376",
+        "content_sha256": "22e6cbef2cbf10aefefe760f0cff371406fd13d2c52cc5d0e9f4fa5096949d8d",
+        "simples": "Aplicar-se-á às testemunhas a serviço do Tribunal do Júri o disposto no art. 441.",
+        "pontos": [
+          "Testemunhas a serviço do Júri não sofrem desconto nos vencimentos."
+        ],
+        "atencao": [
+          "Estende a garantia do art. 441."
+        ],
+        "exemplo": "A testemunha convocada para o Júri não tem desconto salarial.",
+        "prova": [
+          "Assertiva que permite desconto nos vencimentos da testemunha a serviço do Júri erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 441"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-460",
+      "unit_id": "dd6e012d-a99e-59c2-9515-f5c00bb0ca3b",
+      "content_sha256": "bd3af1df0982233ad7cdd7aa17678596b145e114c2b99f154959578d85c4d823",
+      "simples": "Antes de formar Conselho, testemunhas ficam em local que impeça ouvir depoimentos umas das outras.",
+      "pontos": [
+        "Preservar independência dos relatos.",
+        "Organizar espera sem contaminação probatória."
+      ],
+      "atencao": [
+        "Não permitir acompanhar depoimento anterior só por conveniência logística."
+      ],
+      "exemplo": "Testemunhas aguardam separadas da oitiva em andamento. Variação: Sala com transmissão dos depoimentos contraria finalidade da separação.",
+      "prova": [
+        "Separação busca independência dos relatos? Sim.",
+        "Pode ouvir depoimento anterior sem restrição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Separação de testemunhas",
+          "significado": "Prevenção de influência entre depoimentos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dd6e012d-a99e-59c2-9515-f5c00bb0ca3b",
+        "content_sha256": "bd3af1df0982233ad7cdd7aa17678596b145e114c2b99f154959578d85c4d823",
+        "simples": "Antes de constituído o Conselho de Sentença, as testemunhas serão recolhidas a lugar onde umas não possam ouvir os depoimentos das outras.",
+        "pontos": [
+          "Testemunhas recolhidas em local onde não ouçam os depoimentos das outras antes do Conselho."
+        ],
+        "atencao": [
+          "Incomunicabilidade das testemunhas."
+        ],
+        "exemplo": "As testemunhas aguardam em sala separada, sem ouvir os depoimentos.",
+        "prova": [
+          "Assertiva que permite às testemunhas acompanhar os depoimentos anteriores erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 210"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-461",
+      "unit_id": "b37942be-e568-5b79-ae93-7571e1a0fd3b",
+      "content_sha256": "e71962bb3c753159d871713559fcba67ae41de7f6abe3bfde6c6dbded7158bd7",
+      "simples": "Falta de testemunha só tem hipótese específica de adiamento se requerida intimação por mandado no art. 422, indispensabilidade e localização.",
+      "pontos": [
+        "Se intimada não comparece: suspender e conduzir ou adiar com condução.",
+        "Se não encontrada no endereço indicado e certificado, julgamento ocorre.",
+        "Não confundir com condução de réu para interrogatório."
+      ],
+      "atencao": [
+        "Indicar nome sem declarar não prescindir e sem localização não preenche automaticamente exceção."
+      ],
+      "exemplo": "Parte requereu mandado, indicou local e indispensabilidade; testemunha intimada falta: aplicar providência legal. Variação: Não encontrada no endereço certificado leva à regra de realização do §2º.",
+      "prova": [
+        "Só nome no rol basta para exceção? Não.",
+        "Não encontrada certificadamente impede sempre julgamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Testemunha indispensável",
+          "significado": "Exceção condicionada ao requerimento e diligência previstos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b37942be-e568-5b79-ae93-7571e1a0fd3b",
+        "content_sha256": "e71962bb3c753159d871713559fcba67ae41de7f6abe3bfde6c6dbded7158bd7",
+        "simples": "O julgamento não será adiado se a testemunha deixar de comparecer, salvo se uma das partes tiver requerido a sua intimação por mandado, na oportunidade do art. 422, declarando não prescindir do depoimento e indicando a sua localização. Se, intimada, a testemunha não comparecer, o juiz presidente suspenderá os trabalhos e mandará conduzi-la ou adiará o julgamento para o primeiro dia desimpedido, ordenando a sua condução. O julgamento será realizado mesmo na hipótese de a testemunha não ser encontrada no local indicado, se assim for certificado por oficial de justiça.",
+        "pontos": [
+          "Regra: a ausência da testemunha não adia o julgamento.",
+          "Exceção: parte requereu intimação por mandado (art. 422), declarando não prescindir do depoimento e indicando a localização.",
+          "Intimada e ausente: condução imediata ou adiamento com condução.",
+          "Testemunha não encontrada, certificado pelo oficial: julgamento realizado."
+        ],
+        "atencao": [
+          "A cláusula 'não prescindir' (art. 422) é essencial."
+        ],
+        "exemplo": "A parte declarou não prescindir do depoimento e indicou o endereço; a testemunha faltou: condução ou adiamento.",
+        "prova": [
+          "Assertiva que adia sempre o julgamento pela ausência de qualquer testemunha erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 422"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-462",
+      "unit_id": "8f054864-3433-5080-824e-d14a71bb06a8",
+      "content_sha256": "edc45082e23445a34f0d591e8bc8020fcfc31ecab1350bbe8456565282cf13c2",
+      "simples": "Após providências preliminares, presidente verifica cédulas dos vinte e cinco sorteados e manda realizar chamada.",
+      "pontos": [
+        "Verificação antecede instalação e Conselho.",
+        "Chamada identifica comparecimento."
+      ],
+      "atencao": [
+        "Existirem 25 cédulas não demonstra que compareceram 25 jurados."
+      ],
+      "exemplo": "Urna é conferida e nomes são chamados. Variação: Quórum depende dos presentes segundo regras, não apenas do conteúdo da urna.",
+      "prova": [
+        "Cédulas provam comparecimento por si? Não.",
+        "Chamada segue verificação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Conferência da urna",
+          "significado": "Controle da seleção e da presença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8f054864-3433-5080-824e-d14a71bb06a8",
+        "content_sha256": "edc45082e23445a34f0d591e8bc8020fcfc31ecab1350bbe8456565282cf13c2",
+        "simples": "Realizadas as diligências referidas nos arts. 454 a 461, o juiz presidente verificará se a urna contém as cédulas dos 25 jurados sorteados, mandando que o escrivão proceda à chamada deles.",
+        "pontos": [
+          "Juiz verifica se a urna contém as cédulas dos 25 jurados sorteados.",
+          "Escrivão procede à chamada."
+        ],
+        "atencao": [
+          "Verificação das cédulas antes da chamada."
+        ],
+        "exemplo": "O juiz confere as 25 cédulas na urna e manda chamar os jurados.",
+        "prova": [
+          "Assertiva que dispensa a verificação da urna antes da chamada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 463"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-463",
+      "unit_id": "79e52eeb-ba17-56e1-ada9-fcfdcb0cdae1",
+      "content_sha256": "3af5a1c037ceb97019d9066f51688aacc02e3828d98fac43d63fe725c09ea33c",
+      "simples": "Com pelo menos quinze jurados presentes, presidente instala trabalhos e anuncia processo, com pregão certificado.",
+      "pontos": [
+        "Excluídos por impedimento/suspeição computam no número legal.",
+        "Conselho de sete é formado depois.",
+        "Integrar contagem do art. 451."
+      ],
+      "atencao": [
+        "Não confundir quórum de instalação de quinze com os sete que julgam ou 25 sorteados."
+      ],
+      "exemplo": "Quinze presentes satisfazem número legal nas condições previstas. Variação: Quatorze presentes exigem providências do art. 464, não instalação por haver sete aptos.",
+      "prova": [
+        "Quórum mínimo de instalação é quinze? Sim.",
+        "Sete aptos bastam sempre para instalar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instalação dos trabalhos",
+          "significado": "Abertura com número legal de presentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "79e52eeb-ba17-56e1-ada9-fcfdcb0cdae1",
+        "content_sha256": "3af5a1c037ceb97019d9066f51688aacc02e3828d98fac43d63fe725c09ea33c",
+        "simples": "Comparecendo, pelo menos, 15 jurados, o juiz presidente declarará instalados os trabalhos, anunciando o processo que será submetido a julgamento. O oficial de justiça fará o pregão, certificando a diligência nos autos. Os jurados excluídos por impedimento ou suspeição serão computados para a constituição do número legal.",
+        "pontos": [
+          "Quorum de instalação: pelo menos 15 jurados.",
+          "Pregão pelo oficial de justiça.",
+          "Jurados excluídos contam para o número legal."
+        ],
+        "atencao": [
+          "Quorum de 15 jurados."
+        ],
+        "exemplo": "Com 15 jurados presentes, o juiz instala os trabalhos.",
+        "prova": [
+          "Assertiva que fixa em 21 o quorum mínimo de instalação erra: são 15."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 464",
+          "Art. 451"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-464",
+      "unit_id": "7d163fdd-1f99-564b-9da1-d81433390e03",
+      "content_sha256": "55056a6d3a9ea188206146a4aa1efa5fa17fb901539879cb36cc6ae3991f234d",
+      "simples": "Sem número legal, sorteiam-se suplentes necessários e marca-se nova data.",
+      "pontos": [
+        "Não completar informalmente com espectadores.",
+        "Providência de nova convocação."
+      ],
+      "atencao": [
+        "Falta de quinze não é resolvida por reduzir Conselho ou dispensar quórum."
+      ],
+      "exemplo": "Quórum insuficiente leva ao sorteio de suplentes e redesignação. Variação: Pessoas da plateia não viram juradas sem regime legal.",
+      "prova": [
+        "Há designação de nova data? Sim.",
+        "Plateia supre quórum informalmente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suplementação do quórum",
+          "significado": "Seleção legal de suplentes para nova sessão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7d163fdd-1f99-564b-9da1-d81433390e03",
+        "content_sha256": "55056a6d3a9ea188206146a4aa1efa5fa17fb901539879cb36cc6ae3991f234d",
+        "simples": "Não havendo o número referido no art. 463, proceder-se-á ao sorteio de tantos suplentes quantos necessários, e designar-se-á nova data para a sessão do júri.",
+        "pontos": [
+          "Sem o quorum de 15 jurados: sorteio de suplentes.",
+          "Nova data para a sessão."
+        ],
+        "atencao": [
+          "Sorteio de suplentes e remarcação."
+        ],
+        "exemplo": "Só 12 jurados comparecem: sorteiam-se suplentes e designa-se nova data.",
+        "prova": [
+          "Assertiva que prossegue com a sessão sem o quorum mínimo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 463"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-465",
+      "unit_id": "3a3cac68-8e9a-57c1-bd94-ac3aafd9efa3",
+      "content_sha256": "f3cff0b73b0a23ae327e38d4f403540143429d6abc0e942a6956d974421a6816",
+      "simples": "Nomes dos suplentes ficam na ata e convocação observa arts. 434 e 435.",
+      "pontos": [
+        "Registro e comunicação formal.",
+        "Não basta seleção sem ciência hábil."
+      ],
+      "atencao": [
+        "Sorteio de suplente não equivale a comparecimento ou convocação efetiva."
+      ],
+      "exemplo": "Suplentes sorteados são documentados e regularmente chamados. Variação: Nome apenas em anotação interna não comprova ciência suficiente.",
+      "prova": [
+        "Nomes devem constar da ata? Sim.",
+        "Convocação segue regime indicado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Convocação de suplentes",
+          "significado": "Registro e ciência dos cidadãos adicionais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3a3cac68-8e9a-57c1-bd94-ac3aafd9efa3",
+        "content_sha256": "f3cff0b73b0a23ae327e38d4f403540143429d6abc0e942a6956d974421a6816",
+        "simples": "Os nomes dos suplentes serão consignados em ata, remetendo-se o expediente de convocação, com observância do disposto nos arts. 434 e 435.",
+        "pontos": [
+          "Suplentes consignados em ata.",
+          "Convocação segue os arts. 434 e 435."
+        ],
+        "atencao": [
+          "Convocação com as formalidades dos arts. 434 e 435."
+        ],
+        "exemplo": "Os suplentes sorteados são registrados em ata e convocados.",
+        "prova": [
+          "Assertiva que dispensa a convocação formal dos suplentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 434",
+          "Art. 435"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-466",
+      "unit_id": "3097636a-5bc7-5edd-8b9b-fe324d0e35ec",
+      "content_sha256": "02ab25c522f16d500f0747c205e1f30e675a56cd0d683606411e177e89dfa9df",
+      "simples": "Antes de sortear Conselho, presidente explica impedimentos e adverte sobre incomunicabilidade e opinião sobre o processo.",
+      "pontos": [
+        "Sorteados não podem comunicar-se entre si ou terceiros sobre contexto do processo, nem manifestar opinião.",
+        "Exclusão e multa previstas para violação.",
+        "Oficial certifica incomunicabilidade.",
+        "STJ, 2025: uso prolongado de celular nos debates compromete independência e pode gerar nulidade; não tratar telefone como comunicação livre."
+      ],
+      "atencao": [
+        "Não transformar proibição em isolamento desumano de necessidades ordinárias; preservar a finalidade de independência sobre a causa."
+      ],
+      "exemplo": "Jurado não comenta mérito com outro julgador durante julgamento. Variação: Atendimento de necessidade prática sob controle não autoriza discussão da prova.",
+      "prova": [
+        "Incomunicabilidade é certificada? Sim.",
+        "Podem trocar opiniões sobre mérito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incomunicabilidade",
+          "significado": "Garantia de decisão independente, sem discussão da causa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202402817414"
+      ],
+      "expected": {
+        "unit_id": "3097636a-5bc7-5edd-8b9b-fe324d0e35ec",
+        "content_sha256": "02ab25c522f16d500f0747c205e1f30e675a56cd0d683606411e177e89dfa9df",
+        "simples": "Antes do sorteio dos membros do Conselho de Sentença, o juiz presidente esclarecerá sobre os impedimentos, a suspeição e as incompatibilidades constantes dos arts. 448 e 449. O juiz presidente também advertirá os jurados de que, uma vez sorteados, não poderão comunicar-se entre si e com outrem, nem manifestar sua opinião sobre o processo, sob pena de exclusão do Conselho e multa, na forma do §2º do art. 436. A incomunicabilidade será certificada nos autos pelo oficial de justiça.",
+        "pontos": [
+          "Esclarecimento sobre impedimentos, suspeição e incompatibilidades (arts. 448 e 449).",
+          "Advertência de incomunicabilidade e proibição de opinar.",
+          "Sanção: exclusão do Conselho e multa.",
+          "Incomunicabilidade certificada pelo oficial de justiça."
+        ],
+        "atencao": [
+          "Incomunicabilidade dos jurados sorteados."
+        ],
+        "exemplo": "O juiz adverte os jurados de que não podem comentar o caso entre si.",
+        "prova": [
+          "Assertiva que permite aos jurados sorteados conversar sobre o processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 448",
+          "Art. 449"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-467",
+      "unit_id": "fe4eac3b-ed2a-5409-9003-59e8dc288660",
+      "content_sha256": "4a6c8c88684d4758aac6112f78ad5b9df494a7a86902dfc4e924b7296632a438",
+      "simples": "Conferidas cédulas dos presentes, presidente sorteia sete para Conselho.",
+      "pontos": [
+        "Selecionar dentre presentes aptos.",
+        "Aplicar impedimentos e recusas."
+      ],
+      "atencao": [
+        "Não sortear ausente apenas porque seu cartão está entre os convocados."
+      ],
+      "exemplo": "Juiz verifica presentes e realiza seleção de sete. Variação: Impedido contado para instalação continua excluído do Conselho.",
+      "prova": [
+        "Seleção é dentre presentes? Sim.",
+        "Contar para instalação cura impedimento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sorteio do Conselho",
+          "significado": "Formação dos sete julgadores da causa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fe4eac3b-ed2a-5409-9003-59e8dc288660",
+        "content_sha256": "4a6c8c88684d4758aac6112f78ad5b9df494a7a86902dfc4e924b7296632a438",
+        "simples": "Verificando que se encontram na urna as cédulas relativas aos jurados presentes, o juiz presidente sorteará 7 dentre eles para a formação do Conselho de Sentença.",
+        "pontos": [
+          "Verificação das cédulas dos jurados presentes na urna.",
+          "Sorteio de 7 para o Conselho de Sentença."
+        ],
+        "atencao": [
+          "Sete jurados."
+        ],
+        "exemplo": "O juiz presidente sorteia 7 jurados presentes para o Conselho.",
+        "prova": [
+          "Assertiva que fixa em 5 o número de sorteados para o Conselho erra: são 7."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 447",
+          "Art. 468"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-468",
+      "unit_id": "28acf66f-f4a9-5340-8df2-599a95d2a4f6",
+      "content_sha256": "04a0fca9b5de30517bee1e6a09d67213e57e44299953476f5d80cd3735f98230",
+      "simples": "Defesa e depois MP podem recusar até três sorteados cada, sem motivar.",
+      "pontos": [
+        "Leitura da cédula pelo presidente.",
+        "Recusado imotivadamente é excluído daquela sessão.",
+        "Sorteio prossegue com remanescentes.",
+        "Distinguir recusa imotivada de arguição fundada de impedimento."
+      ],
+      "atencao": [
+        "Não inverter ordem nem limitar toda impugnação fundamentada ao teto das recusas sem motivo."
+      ],
+      "exemplo": "Defesa recusa um jurado sem justificar e MP faz sua avaliação após ela. Variação: Impedimento legal alegado exige análise própria, não mero consumo automático do teto imotivado.",
+      "prova": [
+        "Defesa manifesta-se antes do MP? Sim.",
+        "Limite imotivado é três por parte? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Recusa imotivada",
+          "significado": "Exclusão limitada sem necessidade de fundamento declarado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "28acf66f-f4a9-5340-8df2-599a95d2a4f6",
+        "content_sha256": "04a0fca9b5de30517bee1e6a09d67213e57e44299953476f5d80cd3735f98230",
+        "simples": "À medida que as cédulas forem sendo retiradas da urna, o juiz presidente as lerá, e a defesa e, depois dela, o Ministério Público poderão recusar os jurados sorteados, até 3 cada parte, sem motivar a recusa. O jurado recusado imotivadamente por qualquer das partes será excluído daquela sessão, prosseguindo-se o sorteio com os jurados remanescentes.",
+        "pontos": [
+          "Recusa imotivada (peremptória): até 3 por parte.",
+          "A defesa recusa primeiro, depois o MP.",
+          "Jurado recusado é excluído da sessão."
+        ],
+        "atencao": [
+          "Defesa primeiro, MP depois.",
+          "3 recusas por parte."
+        ],
+        "exemplo": "A defesa recusa três jurados sem dar motivos, e o MP faz o mesmo.",
+        "prova": [
+          "Assertiva que permite 5 recusas imotivadas por parte erra: são 3."
+        ],
+        "termos": [
+          {
+            "termo": "Recusa peremptória",
+            "significado": "Recusa de jurado sem necessidade de motivar."
+          }
+        ],
+        "remissoes": [
+          "Art. 467",
+          "Art. 469"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-469",
+      "unit_id": "e70d8747-e72f-570c-8002-c81065ff84b6",
+      "content_sha256": "180e085ba015e624100039362e193bccd584194a9710e1cd78a01194ff5bea2d",
+      "simples": "Com vários acusados, um defensor pode exercer recusas; separação só ocorre se elas impedirem obter sete jurados.",
+      "pontos": [
+        "Separados, julga-se primeiro a quem atribuída autoria.",
+        "Coautoria: preferência do art. 429.",
+        "Não separar apenas por existirem duas defesas."
+      ],
+      "atencao": [
+        "Número de acusados não impõe cisão automática dos julgamentos."
+      ],
+      "exemplo": "Recusas deixam menos de sete aptos: separação é examinada conforme artigo. Variação: Com sete aptos após recusas, não se invoca essa causa de separação só pela pluralidade de réus.",
+      "prova": [
+        "Dois acusados exigem separação automática? Não.",
+        "Falta de sete por recusas é a condição prevista? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Separação por recusas",
+          "significado": "Cisão para viabilizar composição regular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e70d8747-e72f-570c-8002-c81065ff84b6",
+        "content_sha256": "180e085ba015e624100039362e193bccd584194a9710e1cd78a01194ff5bea2d",
+        "simples": "Se forem 2 ou mais os acusados, as recusas poderão ser feitas por um só defensor. A separação dos julgamentos somente ocorrerá se, em razão das recusas, não for obtido o número mínimo de 7 jurados para compor o Conselho de Sentença. Determinada a separação, será julgado em primeiro lugar o acusado a quem foi atribuída a autoria do fato ou, em caso de coautoria, aplicar-se-á o critério de preferência do art. 429.",
+        "pontos": [
+          "Vários acusados: recusas por um só defensor.",
+          "Separação dos julgamentos só se faltarem 7 jurados por causa das recusas.",
+          "Primeiro julga-se o autor; na coautoria, o critério do art. 429."
+        ],
+        "atencao": [
+          "Separação apenas se faltar o número mínimo de 7."
+        ],
+        "exemplo": "As recusas esgotam os jurados, e os julgamentos são separados.",
+        "prova": [
+          "Assertiva que separa os julgamentos sempre que há mais de um acusado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 429",
+          "Art. 468"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-470",
+      "unit_id": "5f47338c-fb3e-59d7-9cc6-cc7d36546502",
+      "content_sha256": "dd8e142fbb25903c211652cdea23b5d31c27ea905a0e37eb5effe286c48495d2",
+      "simples": "Rejeitada arguição de impedimento/suspeição/incompatibilidade, julgamento não suspende, mas fundamento e decisão constam da ata.",
+      "pontos": [
+        "Abrange presidente, MP, jurado ou funcionário.",
+        "Preservar registro para controle pertinente."
+      ],
+      "atencao": [
+        "Prosseguir não significa ignorar pedido nem dispensar sua documentação."
+      ],
+      "exemplo": "Juiz rejeita arguição e registra motivos e decisão. Variação: Anotação vazia de pedido rejeitado sem fundamento não satisfaz o registro exigido.",
+      "prova": [
+        "Rejeição suspende automaticamente? Não.",
+        "Fundamento e decisão precisam de registro? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro da arguição",
+          "significado": "Documentação da questão rejeitada sem paralisação automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5f47338c-fb3e-59d7-9cc6-cc7d36546502",
+        "content_sha256": "dd8e142fbb25903c211652cdea23b5d31c27ea905a0e37eb5effe286c48495d2",
+        "simples": "Desacolhida a arguição de impedimento, de suspeição ou de incompatibilidade contra o juiz presidente do Tribunal do Júri, órgão do Ministério Público, jurado ou qualquer funcionário, o julgamento não será suspenso, devendo, entretanto, constar da ata o seu fundamento e a decisão.",
+        "pontos": [
+          "Arguição desacolhida não suspende o julgamento.",
+          "Fundamento e decisão constam da ata."
+        ],
+        "atencao": [
+          "A ata registra o fundamento (para eventual recurso)."
+        ],
+        "exemplo": "A defesa argui a suspeição de um jurado; rejeitada, o julgamento prossegue e a ata registra.",
+        "prova": [
+          "Assertiva que suspende o julgamento diante de arguição desacolhida erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 471"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "course_slug": "henry-borel",
+  "units": {
+    "art-1": {
+      "simples": "Previne e enfrenta violência doméstica/familiar contra crianças e adolescentes e modifica outros diplomas. Não é lei exclusiva de homicídio nem apenas de meninos.",
+      "pontos": [
+        "Proteção integral e sistema de direitos."
+      ],
+      "atencao": [
+        "O nome homenageia Henry, mas o âmbito é definido pela lei. Para menina em violência doméstica, observar também a Lei Maria da Penha e o Tema 1186/STJ."
+      ],
+      "exemplo": "Uma adolescente sofre violência doméstica e integra o âmbito de proteção. Variação: A vítima é menina: idade não afasta por si a incidência da Maria da Penha.",
+      "prova": [
+        "A lei protege apenas meninos? Não; protege crianças e adolescentes, com articulação das normas pertinentes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1186&cod_tema_final=1186"
+      ]
+    },
+    "art-2": {
+      "simples": "Ação ou omissão com morte, lesão, sofrimento físico/sexual/psicológico ou dano patrimonial no domicílio, família ou convivência doméstica/familiar atual ou anterior. Coabitação não é necessária. Definições da Lei 13.431 complementam.",
+      "pontos": [
+        "Omissão também; vínculo anterior; sem coabitação obrigatória."
+      ],
+      "atencao": [
+        "Não restringir à lesão visível nem tornar toda discussão automaticamente crime sem elementos do tipo."
+      ],
+      "exemplo": "Ex-convivente pratica violência na relação familiar, embora more em outro endereço. Variação: Há dano psicológico sem hematoma: não se exclui proteção só pela ausência de lesão física.",
+      "prova": [
+        "Morar junto atualmente é requisito obrigatório? Não; o inciso III dispensa coabitação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "Violência doméstica/familiar contra criança ou adolescente constitui violação de direitos humanos.",
+      "pontos": [
+        "Proteção não é mero assunto privado."
+      ],
+      "atencao": [
+        "A afirmação não dispensa requisitos dos crimes e das medidas específicas."
+      ],
+      "exemplo": "A rede atende violência ocorrida no lar como violação de direitos. Variação: A família quer impedir atuação por ser assunto privado: isso não elimina proteção legal.",
+      "prova": [
+        "Ser praticada em casa retira a dimensão de direitos humanos? Não; a lei a reconhece expressamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "Bases oficiais integram estatísticas e informações para proteção. Compartilhamento segue fluxo de atendimento com sigilo; registro mínimo inclui identificação, atendimento, relato espontâneo quando houver e encaminhamentos.",
+      "pontos": [
+        "Integrar atendimento, preservar dados pessoais."
+      ],
+      "atencao": [
+        "Não publicar relatos identificados na internet nem forçar relato para preencher campo. Nomenclatura ministerial histórica não define toda estrutura administrativa atual."
+      ],
+      "exemplo": "Serviço encaminha registro protegido ao órgão que acolherá a vítima. Variação: O relato espontâneo não ocorreu: o modelo não autoriza exigir repetição traumática.",
+      "prova": [
+        "Compartilhar entre serviços permite exposição pública irrestrita? Não; os parágrafos exigem sigilo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Sistema mapeia, previne, faz cessar violência, evita reiteração, atende sequelas e repara direitos. A Lei 14.826/2024 acrescentou parentalidade positiva e direito ao brincar como prevenção.",
+      "pontos": [
+        "Atualização de 2024: prevenção também por brincar e parentalidade positiva."
+      ],
+      "atencao": [
+        "Não limitar atuação a punição depois do dano nem confundir educação positiva com tolerância a violência."
+      ],
+      "exemplo": "Programa orienta responsáveis sobre educação sem violência e direito ao brincar. Variação: A violência já ocorreu: cessação e atendimento continuam necessários além da prevenção.",
+      "prova": [
+        "O inciso VII sobre brincar integra o texto atual? Sim; foi incluído em 2024."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14826.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "Assistência articulada com ECA, assistência social, SUS e segurança pública, inclusive emergencial quando necessário.",
+      "pontos": [
+        "Rede articulada, não um único órgão."
+      ],
+      "atencao": [
+        "Não esperar encerramento do processo para atendimento urgente."
+      ],
+      "exemplo": "Saúde e assistência organizam atendimento imediato e acompanhamento. Variação: A apuração penal continua: isso não suspende cuidado necessário.",
+      "prova": [
+        "A assistência só pode começar após condenação? Não; a lei prevê atuação articulada e emergencial."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Entes podem criar, nas competências e diretrizes do ECA, serviços multidisciplinares, acolhimento, órgãos especializados, campanhas e reeducação dos agressores.",
+      "pontos": [
+        "Atendimento da vítima e prevenção da reiteração."
+      ],
+      "atencao": [
+        "Acolhimento e apadrinhamento não são adoção automática; respeitar procedimentos próprios."
+      ],
+      "exemplo": "Município estrutura centro multidisciplinar dentro de sua competência. Variação: Precisa acolhimento: examina-se a medida adequada, não entrega informal a terceiro.",
+      "prova": [
+        "A lista prevê também reeducação dos agressores? Sim; o inciso V a contempla."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "Sistemas de proteção, justiça, saúde, segurança, assistência, conselhos e escola podem articular identificação da agressão, agilidade no atendimento e responsabilização.",
+      "pontos": [
+        "Escola participa da rede."
+      ],
+      "atencao": [
+        "Não converter atuação articulada em competência judicial do Conselho Tutelar."
+      ],
+      "exemplo": "A escola reconhece sinais e aciona a rede competente. Variação: O conselho encaminha e protege: não aplica por conta própria pena criminal.",
+      "prova": [
+        "A comunidade escolar está excluída da articulação? Não; está expressamente incluída."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Estados e DF priorizam, na Polícia Civil, delegacias especializadas na proteção de crianças e adolescentes.",
+      "pontos": [
+        "Prioridade de política pública; Polícia Civil."
+      ],
+      "atencao": [
+        "Não condicionar recebimento de ocorrência à existência de delegacia especializada."
+      ],
+      "exemplo": "Estado prioriza unidade especializada no planejamento. Variação: A cidade não possui unidade específica: isso não impede providências da autoridade competente.",
+      "prova": [
+        "A falta de delegacia especializada elimina dever de agir? Não; a prioridade não afasta providências legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "Entes podem prever dotações específicas a cada exercício para implementação das medidas.",
+      "pontos": [
+        "Orçamento por exercício e competência."
+      ],
+      "atencao": [
+        "Não extrair valor individual fixo de indenização deste artigo."
+      ],
+      "exemplo": "Ente prevê recursos para rede protetiva no orçamento. Variação: Pede-se compensação pessoal: depende de disciplina própria, não deste planejamento.",
+      "prova": [
+        "O artigo fixa indenização automática de valor único? Não; trata de dotação orçamentária."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Autoridade policial que conhece ameaça ou prática de violência age imediatamente; a regra também alcança descumprimento de medida protetiva.",
+      "pontos": [
+        "Ameaça já exige providências cabíveis."
+      ],
+      "atencao": [
+        "Não aguardar consumação de lesão para proteger nem confundir atuação imediata com prisão automática em todo caso."
+      ],
+      "exemplo": "Há notícia de ameaça e a autoridade adota providências legais. Variação: Não houve ferimento: isso não torna a ameaça irrelevante para proteção.",
+      "prova": [
+        "A autoridade precisa esperar lesão consumada? Não; ameaça também integra o dispositivo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Depoimento da criança/adolescente vítima ou testemunha segue Lei 13.431 e ECA, com proteção e procedimento adequado.",
+      "pontos": [
+        "Vítima e testemunha; procedimento protegido."
+      ],
+      "atencao": [
+        "Não confundir escuta especializada de atendimento com depoimento especial nem repetir interrogatórios informais desnecessários."
+      ],
+      "exemplo": "Equipe encaminha a oitiva ao procedimento protegido aplicável. Variação: A criança é testemunha, não vítima direta: também está abrangida.",
+      "prova": [
+        "O artigo protege somente a vítima direta? Não; inclui a testemunha."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ]
+    },
+    "art-13": {
+      "simples": "Polícia encaminha imediatamente ao SUS/IML, aciona Conselho Tutelar nas hipóteses, garante proteção quando necessária com comunicação ao MP/juízo e transporte a local seguro quando há risco à vida.",
+      "pontos": [
+        "Saúde, perícia, rede e segurança."
+      ],
+      "atencao": [
+        "Não reduzir atendimento a registro de boletim nem exigir que responsável agressor acompanhe a vítima."
+      ],
+      "exemplo": "Há risco à vida e providencia-se transporte para lugar seguro. Variação: Há necessidade de saúde/perícia: o encaminhamento imediato não aguarda sentença.",
+      "prova": [
+        "O atendimento se resume ao boletim? Não; abrange encaminhamentos e proteção."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-14": {
+      "simples": "Risco atual/iminente à vida ou integridade física da vítima ou familiares permite afastamento imediato: juiz; delegado se município não é sede de comarca; policial se também não há delegado disponível. Nos dois últimos casos, comunica-se juiz em até 24h, que decide em igual prazo. Conselho pode representar.",
+      "pontos": [
+        "Duas condições para policial; 24h + 24h."
+      ],
+      "atencao": [
+        "Não dar poder geral de afastamento ao Conselho. O §3º veda liberdade provisória nas hipóteses de risco ali indicadas, não cria prisão automática em todo relato."
+      ],
+      "exemplo": "Município sem comarca nem delegado disponível: policial afasta diante de risco e comunica o juiz. Variação: Há delegado disponível: não cabe ao policial usar a hipótese subsidiária do inciso III.",
+      "prova": [
+        "Conselho Tutelar decide sozinho o afastamento? Não; representa às autoridades previstas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-15": {
+      "simples": "Recebido pedido protetivo, juiz tem 24h para decidir medidas, encaminhar responsável à assistência judiciária quando cabível, comunicar MP e determinar apreensão imediata de arma em posse do agressor.",
+      "pontos": [
+        "Prazo judicial 24h; não copiar as 48h da Maria da Penha."
+      ],
+      "atencao": [
+        "Não confundir apreensão física da arma com suspensão/restrição do art. 20."
+      ],
+      "exemplo": "Juízo recebe expediente e decide dentro de 24h. Variação: O estudo usa prazo de outra lei: deve conferir este procedimento especial.",
+      "prova": [
+        "O prazo deste artigo é 48h? Não; é 24h."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Juiz pode conceder medidas por requerimento do MP, polícia, Conselho ou pessoa em favor da vítima, de imediato sem audiência e manifestação prévia do MP, que será prontamente comunicado. Aplicação isolada/cumulativa e revisão buscam maior eficácia.",
+      "pontos": [
+        "Urgência sem audiência prévia; MP comunicado."
+      ],
+      "atencao": [
+        "Não exigir participação prévia do agressor como condição de proteção nem tornar toda medida eterna sem exame do risco."
+      ],
+      "exemplo": "Medida urgente é concedida e MP comunicado prontamente. Variação: Surge risco novo: juiz pode rever ou acrescentar proteção nos termos legais.",
+      "prova": [
+        "Manifestação prévia do MP é sempre condição da concessão imediata? Não; o §1º admite concessão e comunicação posterior pronta."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17": {
+      "simples": "Preventiva pode ser decretada pelo juiz em inquérito/instrução a pedido do MP ou representação policial. Revogação por cessação do motivo e nova decretação por razões supervenientes exigem avaliação concreta.",
+      "pontos": [
+        "Pedido/representação; motivação e requisitos do CPP."
+      ],
+      "atencao": [
+        "A lei não autoriza preventiva de ofício nem dispensa CPP 312/313. Medida protetiva não implica necessariamente prisão."
+      ],
+      "exemplo": "MP requer preventiva e juiz examina fundamentos concretos. Variação: Motivo desaparece: prisão não subsiste só porque a imputação é grave.",
+      "prova": [
+        "Este artigo autoriza preventiva automática de ofício? Não; exige iniciativa indicada e requisitos cautelares."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-18": {
+      "simples": "Responsável legal que não seja agressor é notificado de atos relativos ao agressor, especialmente entrada/saída da prisão, sem substituir intimação da defesa da vítima.",
+      "pontos": [
+        "Responsável não agressor; informação de prisão."
+      ],
+      "atencao": [
+        "Não comunicar a segurança da vítima apenas ao responsável que praticou violência."
+      ],
+      "exemplo": "Responsável não agressor recebe informação da saída da prisão. Variação: O responsável é autor: não se aplica a ele a condição protetiva prevista.",
+      "prova": [
+        "Avisar responsável dispensa intimação do advogado/defensor? Não; a lei preserva essa intimação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-19": {
+      "simples": "Juiz providencia registro da medida e inserção imediata após concessão em banco do CNJ, com acesso pelos órgãos enumerados para fiscalização/efetividade.",
+      "pontos": [
+        "Registro imediato; acesso funcional."
+      ],
+      "atencao": [
+        "Não tornar o banco consulta pública irrestrita com dados da criança."
+      ],
+      "exemplo": "Órgão de proteção acessa a medida para fiscalizar cumprimento. Variação: Um terceiro quer expor endereço: acesso funcional não autoriza exposição.",
+      "prova": [
+        "O acesso serve à efetividade das medidas? Sim; essa é a finalidade expressa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-20": {
+      "simples": "Juiz pode impor cumulativamente ou separadamente armas, afastamento, distância, vedação de contato/lugares, visitas, alimentos provisórios, reeducação e acompanhamento psicossocial. Lista não esgota proteção. Para agente com porte funcional, comunica corporação e impõe restrição; superior deve cumprir.",
+      "pontos": [
+        "Alimentos também são medida protetiva; rol aberto."
+      ],
+      "atencao": [
+        "Não confundir alimentos provisórios com a pensão especial de outra lei. Porte funcional não impede restrição judicial."
+      ],
+      "exemplo": "Juiz restringe visitas e fixa alimentos provisórios para a criança. Variação: Agressor possui porte funcional: ordem é comunicada e cumprida pela instituição.",
+      "prova": [
+        "As medidas só podem ser aplicadas uma por vez? Não; podem ser conjuntas e o rol é aberto."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-21": {
+      "simples": "Medidas à vítima incluem impedir contato, afastar agressor, proteção/assistência, acolhimento subsidiário e matrícula/transferência escolar independentemente de vaga. Preventiva exige fundamentos próprios. Na ADI 7192 (2024), STF interpretou a requisição policial ao MP do §1º como solicitação sem força vinculante.",
+      "pontos": [
+        "Delegado solicita antecipação de prova; MP conserva independência."
+      ],
+      "atencao": [
+        "Não ensinar que polícia obriga MP a propor ação. Conselho requer ao MP, não produz por si decisão judicial."
+      ],
+      "exemplo": "Delegado solicita ao MP ação de prova antecipada, que analisa pertinência. Variação: A escola mais próxima não tem vaga: a medida judicial de matrícula prevista não depende dessa existência.",
+      "prova": [
+        "A requisição do §1º obriga o MP a ajuizar a ação? Não; STF conferiu interpretação de solicitação não vinculante."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://noticias.stf.jus.br/postsnoticias/stf-decide-que-policia-nao-pode-exigir-que-mp-antecipe-providencias-em-casos-envolvendo-criancas-e-adolescentes/"
+      ]
+    },
+    "art-22": {
+      "simples": "MP registra casos, requisita força/serviços e fiscaliza estabelecimentos com providências administrativas/judiciais cabíveis, além de outras atribuições.",
+      "pontos": [
+        "Registro, requisição e fiscalização."
+      ],
+      "atencao": [
+        "Não confundir fiscalização com condenação penal administrativa pelo MP."
+      ],
+      "exemplo": "MP encontra irregularidade em estabelecimento e adota providências cabíveis. Variação: Há demanda de saúde: pode requisitar serviço, não apenas ação penal.",
+      "prova": [
+        "As atribuições se limitam a denunciar crime? Não; incluem serviços e fiscalização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-23": {
+      "simples": "Quem conhece/presencia violência deve comunicar imediatamente aos canais de denúncia, Disque 100, Conselho ou polícia; os destinatários adotam providências.",
+      "pontos": [
+        "Qualquer pessoa; canais alternativos."
+      ],
+      "atencao": [
+        "Não exigir que denunciante investigue ou aguarde confirmação pericial para comunicar notícia."
+      ],
+      "exemplo": "Pessoa presencia violência e informa imediatamente ao Conselho. Variação: Fato ocorreu em local privado: o dever de comunicação permanece.",
+      "prova": [
+        "Somente profissional de saúde tem dever de comunicar? Não; o artigo abrange qualquer pessoa na situação descrita."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-24": {
+      "simples": "Poder público protege noticiantes; revelação pode ser condicionada a medidas necessárias. Vedadas retaliações. Ameaça/coação pode justificar programa da Lei 9.807, proteção provisória urgente e cautelares, com requisitos e atuação MP/juiz.",
+      "pontos": [
+        "Proteção do denunciante e avaliação da ameaça."
+      ],
+      "atencao": [
+        "Não presumir ingresso definitivo automático no programa nem recompensa financeira universal só por denunciar."
+      ],
+      "exemplo": "Denunciante ameaçado requer proteção necessária antes de revelar informação. Variação: Há urgência: proteção provisória não equivale a inclusão definitiva sem deliberação.",
+      "prova": [
+        "A pessoa deve suportar retaliação por denunciar? Não; a lei a proíbe e prevê proteção."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-25": {
+      "simples": "Descumprir decisão judicial protetiva: detenção de três meses a dois anos. Independe de competência civil/criminal; no flagrante só juiz pode conceder fiança; não exclui outras sanções.",
+      "pontos": [
+        "Decisão judicial; fiança apenas judicial."
+      ],
+      "atencao": [
+        "Não copiar pena atual de 2 a 5 anos do art. 24-A da Maria da Penha: este tipo conserva faixa própria. Verificar qual medida/lei e elementos subjetivos."
+      ],
+      "exemplo": "Agressor consciente da ordem viola proibição de contato e examina-se art. 25. Variação: A ordem é da Maria da Penha: não importar automaticamente a faixa Henry Borel.",
+      "prova": [
+        "A polícia pode conceder fiança neste flagrante? Não; apenas a autoridade judicial."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1186&cod_tema_final=1186"
+      ]
+    },
+    "art-26": {
+      "simples": "Omitir comunicação de violência/tratamento cruel, formas violentas de correção ou abandono: detenção de seis meses a três anos. Lesão grave resultante da omissão aumenta metade; morte triplica. Relações familiares/responsabilidade enumeradas dobram pena.",
+      "pontos": [
+        "Metade, triplo, dobro: hipóteses diferentes."
+      ],
+      "atencao": [
+        "Não aplicar majorante por resultado sem relação com a omissão nem generalizar dobro a qualquer conhecido."
+      ],
+      "exemplo": "Responsável legal omite notícia de violência: examina-se hipótese do dobro. Variação: Da omissão resulta morte: a lei prevê triplicação, não mero aumento de metade.",
+      "prova": [
+        "A morte decorrente da omissão aumenta só metade? Não; triplica a pena."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-27": {
+      "simples": "Institui 3 de maio como dia nacional de combate à violência doméstica/familiar contra crianças e adolescentes.",
+      "pontos": [
+        "Data de conscientização."
+      ],
+      "atencao": [
+        "Dia nacional não é prazo de vigência nem automaticamente feriado."
+      ],
+      "exemplo": "Campanha educativa é organizada para 3 de maio. Variação: Questão pergunta vigência: deve consultar art. 34, não a data da campanha.",
+      "prova": [
+        "A data de 3 de maio é vacância da lei? Não; é dia nacional de conscientização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-28": {
+      "simples": "Acrescenta violência patrimonial à Lei 13.431: retenção, subtração ou destruição de documentos, bens, valores/direitos, inclusive destinados às necessidades, ressalvada medida educacional legítima.",
+      "pontos": [
+        "Patrimônio também pode ser objeto de violência."
+      ],
+      "atencao": [
+        "Não usar a ressalva educacional para legitimar privação abusiva; verificar finalidade e contexto."
+      ],
+      "exemplo": "Agressor destrói documento da criança para controlar seus direitos. Variação: Medida educacional legítima tem enquadramento diverso, sem autorização para abuso.",
+      "prova": [
+        "A proteção restringe-se a dano físico? Não; inclui violência patrimonial na definição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+      ]
+    },
+    "art-29": {
+      "simples": "Amplia ECA: tratamento especializado, prevenção/escola, profissionais capacitados, atribuições do Conselho, intervenção MP e limites de sanções. ECA 226 §1º afasta Lei 9.099 independentemente da pena; §2º veda cesta básica/prestação pecuniária e substituição por multa isolada no contexto doméstico. Outras alterações posteriores do ECA devem ser consultadas.",
+      "pontos": [
+        "Juizados: norma especial e tempo do fato."
+      ],
+      "atencao": [
+        "STJ, acórdão publicado em 26/05/2026, distingue rito processual de aplicação imediata dos institutos materiais/híbridos benéficos para fatos anteriores à vigência. Não aplicar retroativamente exclusão mais gravosa nem presumir mudança de competência só pelo rito."
+      ],
+      "exemplo": "Fato atual contra criança não recebe automaticamente transação penal por pena pequena. Variação: Fato anterior à vigência: examinar regra temporal dos benefícios, não copiar exclusão atual retroativamente.",
+      "prova": [
+        "Pena pequena garante aplicação da Lei 9.099 ao fato atual abrangido? Não; o ECA 226 §1º a afasta independentemente da pena."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202401397792"
+      ]
+    },
+    "art-30": {
+      "simples": "Altera LEP 152 para permitir determinação judicial de comparecimento obrigatório do agressor a recuperação/reeducação nos contextos descritos, incluindo criança/adolescente/mulher.",
+      "pontos": [
+        "Programa de reeducação por decisão judicial."
+      ],
+      "atencao": [
+        "Não tratar programa como extinção automática da pena ou substituição livre das sanções vedadas."
+      ],
+      "exemplo": "Juiz determina comparecimento obrigatório ao programa aplicável. Variação: Participar não elimina automaticamente outras consequências penais.",
+      "prova": [
+        "A frequência ao programa extingue automaticamente condenação? Não; não há esse efeito neste dispositivo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ]
+    },
+    "art-31": {
+      "simples": "Modifica CP: prescrição dos crimes sexuais/violentos contra criança/adolescente começa aos 18, salvo ação já proposta; homicídio contra menor de 14 é qualificado e possui majorantes; honra possui majorante etária com exceção do CP 140 §3º. A transcrição de 2022 não contém todas as alterações posteriores.",
+      "pontos": [
+        "Menor de 14, não menor ou igual a 14; prescrição tem exceção."
+      ],
+      "atencao": [
+        "CP 121 §7º foi revogado em 2024 e feminicídio passou ao 121-A. §2º-B ganhou inciso III em 2024 e §2º ganhou X em 2025. Confira CP atual e tempo do fato; não ensinar o bloco antigo como código completo vigente."
+      ],
+      "exemplo": "Vítima tem 13 anos: examina-se qualificadora etária do homicídio. Variação: Já tem 14: não enquadra só pela idade no inciso IX, sem afastar outras qualificadoras.",
+      "prova": [
+        "O antigo §7º de feminicídio continua vigente no CP 121? Não; foi revogado em 2024, com tipo próprio no art. 121-A."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm"
+      ]
+    },
+    "art-32": {
+      "simples": "Atualiza em 2022 rol hediondo para homicídio qualificado contra menor de 14. O rol atual foi modificado depois, inclusive qualificadora em instituição de ensino e hipóteses de 2026; consultar Lei 8.072 vigente.",
+      "pontos": [
+        "Transcrição modificadora não congela o rol em 2022."
+      ],
+      "atencao": [
+        "O inciso VI do CP 121 foi revogado com feminicídio autônomo. Não excluir qualificadora X atual só porque o trecho antigo termina em IX."
+      ],
+      "exemplo": "Homicídio contra vítima de 13 anos pode ser qualificado e hediondo. Variação: Crime na instituição de ensino exige exame da qualificadora atual X e suas condições, ausente no trecho de 2022.",
+      "prova": [
+        "A lista reproduzida em 2022 esgota o rol atual de hediondos? Não; houve alterações posteriores."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm"
+      ]
+    },
+    "art-33": {
+      "simples": "ECA, Maria da Penha e Lei 13.431 são subsidiários quando couber, respeitados regimes e competência. Tema 1186/STJ: idade da menina não afasta Maria da Penha no contexto doméstico/familiar; em conflito, prevalece a norma protetiva de gênero.",
+      "pontos": [
+        "Subsidiariedade não autoriza misturar prazos e penas."
+      ],
+      "atencao": [
+        "Não copiar automaticamente art. 24-A, prazo de 48h ou qualquer regra de outra lei para todo caso Henry Borel. Identifique situação, fundamento e regra específica."
+      ],
+      "exemplo": "Menina vítima de violência doméstica exige análise da Maria da Penha e competência pertinente. Variação: A medida é fundada em Henry Borel: conserva regra específica de prazo e tipo correspondente.",
+      "prova": [
+        "Subsidiariedade torna todas as penas idênticas? Não; cada tipo e procedimento conserva seus requisitos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1186&cod_tema_final=1186"
+      ]
+    },
+    "art-34": {
+      "simples": "Vigência após 45 dias da publicação oficial. É vacância original, não prazo de medida protetiva; alterações posteriores possuem datas próprias.",
+      "pontos": [
+        "45 dias: entrada em vigor original."
+      ],
+      "atencao": [
+        "Distinguir norma processual, penal material e regra temporal benéfica; não reiniciar vacância em cada pedido."
+      ],
+      "exemplo": "Aluno diferencia vigência da lei do prazo judicial de 24h. Variação: Alteração de 2024 tem marco próprio, não nova publicação fictícia da lei de 2022.",
+      "prova": [
+        "Os 45 dias são prazo do juiz para medida protetiva? Não; são vacância original."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

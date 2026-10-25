@@ -1,0 +1,10 @@
+/* Commit the entire palette in one paint; keep normal interaction transitions afterwards.
+   CSS animations (badge motion, spinners, etc.) are deliberately left running. */
+:root[data-theme-switching],
+:root[data-theme-switching] *,
+:root[data-theme-switching] *::before,
+:root[data-theme-switching] *::after {
+  transition-property: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}

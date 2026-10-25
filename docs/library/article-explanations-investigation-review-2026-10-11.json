@@ -1,0 +1,1732 @@
+{
+  "version": "2026-10-11-investigation-reviewed",
+  "checked_at": "2026-10-12T00:36:33.605456+00:00",
+  "scope": "Revisão editorial dos 30 dispositivos atuais de cinco percursos; não certifica os demais percursos.",
+  "laws": [
+    {
+      "slug": "delegado",
+      "title": "Lei 12.830/2013 — Investigação conduzida pelo Delegado",
+      "units": 4,
+      "scope_type": "targeted_correction",
+      "course_current_units": 4,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "source_sha256": "a429de881b4cc267d10f20680949eedc69cd025b5cc807f6fe1d0cd5425ddc15",
+      "source_checked_at": "2026-10-12T00:31:32.055684+00:00"
+    },
+    {
+      "slug": "identificacao-criminal",
+      "title": "Lei 12.037/2009 — Identificação Criminal",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 13,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-5-a",
+        "art-6",
+        "art-7",
+        "art-7-a",
+        "art-7-b",
+        "art-7-c",
+        "art-8",
+        "art-9"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "source_sha256": "9d5b2beb0ea45692d12789abd5f65a145dde55ba48cc4db707f5b73e4c38dc4e",
+      "source_checked_at": "2026-10-12T00:31:19.418455+00:00"
+    },
+    {
+      "slug": "pf-interestadual",
+      "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 2,
+      "target_unit_keys": [
+        "art-1",
+        "art-2"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "source_sha256": "5fb4c0ed93e9e7275ed0b7458746a147ca6307a3862ca45d34b452ae39423d98",
+      "source_checked_at": "2026-10-12T00:31:20.266142+00:00"
+    },
+    {
+      "slug": "temporaria",
+      "title": "Lei 7.960/1989 — Prisão Temporária",
+      "units": 7,
+      "scope_type": "targeted_correction",
+      "course_current_units": 7,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "source_sha256": "2c4ad7ac9d6cf5fd41c7ee6ebbca9725be4ed02e36d7c13d21ac765475611bc0",
+      "source_checked_at": "2026-10-12T00:31:34.575846+00:00"
+    },
+    {
+      "slug": "tortura",
+      "title": "Lei 9.455/1997 — Crimes de Tortura",
+      "units": 4,
+      "scope_type": "targeted_correction",
+      "course_current_units": 4,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "source_sha256": "c29ebc576bf28287f8195cac290d48c3e8664acd39e0f32822fbd7abb3d00001",
+      "source_checked_at": "2026-10-12T00:31:32.837702+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "delegado",
+      "course_id": "a1562aa3-b35a-56e9-a334-ff2f57086e97",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-1",
+      "unit_id": "56361a2d-9539-5b2c-98ad-a04564694810",
+      "content_sha256": "773661bd1d5eaa3a46d3ea6297d703c6445f7ad5ef2292d2e593941b59c64110",
+      "simples": "A lei disciplina a investigação conduzida pelo delegado. Seu âmbito não cria monopólio de toda investigação criminal: a ADI 5043 afastou essa leitura do art. 2º, §1º.",
+      "pontos": [
+        "Objeto: investigação conduzida pelo delegado; não exclusividade de toda investigação."
+      ],
+      "atencao": [
+        "Distinguir polícia judiciária, procedimento investigatório e atribuições de outros órgãos."
+      ],
+      "exemplo": "A polícia instaura inquérito para apurar um roubo e aplica as garantias desta lei. Variação: O Ministério Público conduz investigação própria: a lei não a torna inválida apenas por não ser dirigida por delegado.",
+      "prova": [
+        "A lei torna toda investigação criminal exclusiva do delegado? Não; essa interpretação foi afastada na ADI 5043.",
+        "A lei disciplina a investigação conduzida pelo delegado? Sim; esse é seu objeto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4464179"
+      ],
+      "expected": {
+        "unit_id": "56361a2d-9539-5b2c-98ad-a04564694810",
+        "content_sha256": "773661bd1d5eaa3a46d3ea6297d703c6445f7ad5ef2292d2e593941b59c64110",
+        "simples": "Esta Lei dispõe sobre a investigação criminal conduzida pelo delegado de polícia, regulamentando suas atribuições e prerrogativas.",
+        "pontos": [
+          "Trata da investigação criminal conduzida pelo delegado de polícia."
+        ],
+        "atencao": [
+          "Lei federal geral, que vale para delegados da Polícia Federal e das Polícias Civis."
+        ],
+        "exemplo": "O delegado conduz o inquérito policial conforme esta Lei.",
+        "prova": [
+          "Assertiva que restringe a Lei aos delegados federais erra: trata do delegado de polícia em geral."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "delegado",
+      "course_id": "a1562aa3-b35a-56e9-a334-ff2f57086e97",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-2",
+      "unit_id": "ab295e8e-995b-503c-ac0e-cd3a246f8f9e",
+      "content_sha256": "5b2898b85ce012c518dfb8dce970bf156ce3a4f9f39e891345a39a4914ab23db",
+      "simples": "As funções descritas são jurídicas, essenciais e exclusivas de Estado. O delegado apura circunstâncias, materialidade e autoria, requisita diligências e fundamenta o indiciamento. Avocação e redistribuição dependem de superior hierárquico e fundamento legal; remoção também exige motivação. Na ADI 5043, julgada em março de 2025, o STF afastou a leitura de exclusividade de toda investigação criminal.",
+      "pontos": [
+        "Indiciamento: privativo do delegado, fundamentado, com análise técnico-jurídica.",
+        "Avocação/redistribuição: superior hierárquico, despacho fundamentado, interesse público ou falha regulamentar prejudicial à eficácia.",
+        "Remoção: ato fundamentado; §3º vetado não cria poder."
+      ],
+      "atencao": [
+        "Exclusivas de Estado não significa exclusivas de um único órgão investigador.",
+        "Requisição de dados não elimina reservas constitucionais e legais de jurisdição.",
+        "Não confunda indiciamento com denúncia do Ministério Público ou condenação judicial."
+      ],
+      "exemplo": "O delegado indica os elementos de autoria e materialidade ao indiciar; a chefia só redistribui o caso com o fundamento exigido. Variação: A chefia retira o caso sem justificar, ou se afirma que investigação própria do MP é sempre proibida: são leituras incompatíveis com as garantias legais e a ADI 5043.",
+      "prova": [
+        "Indiciamento e denúncia são o mesmo ato? Não; o primeiro é ato privativo do delegado e a denúncia pertence à persecução judicial.",
+        "A remoção do delegado pode ocorrer sem fundamentação? Não; o §5º exige ato fundamentado.",
+        "Exclusividade de Estado exclui necessariamente a investigação própria do MP? Não; a ADI 5043 afastou o monopólio da investigação criminal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4464179"
+      ],
+      "expected": {
+        "unit_id": "ab295e8e-995b-503c-ac0e-cd3a246f8f9e",
+        "content_sha256": "5b2898b85ce012c518dfb8dce970bf156ce3a4f9f39e891345a39a4914ab23db",
+        "simples": "As funções de polícia judiciária e a apuração de infrações penais exercidas pelo delegado de polícia são de natureza jurídica, essenciais e exclusivas de Estado. Ao delegado, como autoridade policial, cabe a condução da investigação criminal por inquérito policial ou outro procedimento previsto em lei, para apurar circunstâncias, materialidade e autoria. Cabe-lhe requisitar perícia, informações, documentos e dados. O inquérito em curso só poderá ser avocado ou redistribuído por superior hierárquico mediante despacho fundamentado, por interesse público ou por inobservância de procedimentos que prejudique a investigação. A remoção do delegado dá-se somente por ato fundamentado. O indiciamento, privativo do delegado, dá-se por ato fundamentado, mediante análise técnico-jurídica do fato, indicando autoria, materialidade e circunstâncias.",
+        "pontos": [
+          "Função jurídica, essencial e exclusiva de Estado.",
+          "Condução da investigação criminal pelo delegado.",
+          "Requisição de perícia, informações, documentos e dados.",
+          "Avocação ou redistribuição só por despacho fundamentado.",
+          "Remoção por ato fundamentado.",
+          "Indiciamento privativo do delegado, fundamentado."
+        ],
+        "atencao": [
+          "O §3º foi vetado.",
+          "INDICIAMENTO é privativo do delegado e deve ser fundamentado.",
+          "Remoção sem fundamentação viola a Lei."
+        ],
+        "exemplo": "O delegado indicia o investigado por ato fundamentado, apontando autoria e materialidade.",
+        "prova": [
+          "Assertiva que permite ao Ministério Público indiciar o investigado erra: o indiciamento é privativo do delegado."
+        ],
+        "termos": [
+          {
+            "termo": "Indiciamento",
+            "significado": "Ato do delegado que aponta alguém como provável autor do crime."
+          }
+        ],
+        "remissoes": [
+          "Código de Processo Penal (inquérito)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "delegado",
+      "course_id": "a1562aa3-b35a-56e9-a334-ff2f57086e97",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-3",
+      "unit_id": "734e43b2-dfec-58b2-8302-cbcfe8a2e774",
+      "content_sha256": "ec3933873a18b194d8b0af6a3c95a59555d1460c42eb145079ce1e1737cadbc1",
+      "simples": "O cargo exige bacharelado em Direito e recebe o tratamento protocolar indicado na lei. Igual tratamento protocolar não equipara cargos, atribuições, remunerações ou garantias constitucionais de carreiras distintas.",
+      "pontos": [
+        "Requisito: bacharel em Direito.",
+        "Tratamento protocolar: magistrados, defensores, membros do MP e advogados."
+      ],
+      "atencao": [
+        "A lista inclui advogados; não se limita à magistratura.",
+        "O dispositivo não estabelece equiparação salarial."
+      ],
+      "exemplo": "No ato oficial, o delegado recebe o tratamento protocolar previsto para os profissionais enumerados. Variação: A questão conclui que isso garante o mesmo salário de magistrado: o artigo não contém essa regra.",
+      "prova": [
+        "O artigo cria equiparação salarial com magistrados? Não; trata de requisito e tratamento protocolar.",
+        "O cargo é privativo de bacharel em Direito? Sim; esse requisito está expresso."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "734e43b2-dfec-58b2-8302-cbcfe8a2e774",
+        "content_sha256": "ec3933873a18b194d8b0af6a3c95a59555d1460c42eb145079ce1e1737cadbc1",
+        "simples": "O cargo de delegado de polícia é privativo de bacharel em Direito, devendo-lhe ser dispensado o mesmo tratamento protocolar que recebem os magistrados, os membros da Defensoria Pública e do Ministério Público e os advogados.",
+        "pontos": [
+          "Cargo privativo de bacharel em Direito.",
+          "Tratamento protocolar igual ao de magistrados, defensores, promotores e advogados."
+        ],
+        "atencao": [
+          "Exige formação em Direito."
+        ],
+        "exemplo": "Só quem é bacharel em Direito pode ocupar o cargo de delegado.",
+        "prova": [
+          "Assertiva que permite o cargo a qualquer bacharel de nível superior erra: é privativo de bacharel em Direito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "delegado",
+      "course_id": "a1562aa3-b35a-56e9-a334-ff2f57086e97",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-4",
+      "unit_id": "e80ef30a-d205-5bb1-9004-7e90dbb5eef3",
+      "content_sha256": "2f4d3a28266b5bd41f54fcbaeff64f075e960cbaa2f4ddc0dbab8f0d383ee466",
+      "simples": "A vigência original começou na publicação da lei, sem vacância fixada neste artigo. A consulta atual da compilação não reinicia esse marco e decisões posteriores exigem leitura própria.",
+      "pontos": [
+        "Entrada em vigor: publicação."
+      ],
+      "atencao": [
+        "Data da assinatura e data da publicação são marcos distintos."
+      ],
+      "exemplo": "A questão pergunta a vacância original: a lei não prevê espera de 45 dias neste dispositivo. Variação: A pergunta trata da interpretação constitucional de 2025: consulte a ADI 5043, não uma nova vacância do art. 4º.",
+      "prova": [
+        "O art. 4º estabelece vacância de 45 dias? Não; prevê entrada em vigor na publicação.",
+        "Consultar a lei hoje reinicia sua vigência? Não; o marco original é a publicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e80ef30a-d205-5bb1-9004-7e90dbb5eef3",
+        "content_sha256": "2f4d3a28266b5bd41f54fcbaeff64f075e960cbaa2f4ddc0dbab8f0d383ee466",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "d2893a7b-1ea6-5f1b-8a20-abda8dc78786",
+      "content_sha256": "a0aa074ad7c88842b2ddbc75490fd1480354a9e048d218fe5cb313986630a298",
+      "simples": "A identificação civil dispensa, como regra, a criminal. A própria lei enumera exceções: apresentar documento não impede automaticamente os procedimentos quando uma dessas hipóteses estiver demonstrada.",
+      "pontos": [
+        "Regra: civilmente identificado não se submete à identificação criminal.",
+        "Exceções: hipóteses legais, especialmente art. 3º."
+      ],
+      "atencao": [
+        "Não use a regra como proibição absoluta nem a exceção como autorização irrestrita."
+      ],
+      "exemplo": "O investigado apresenta documento público idôneo e não há hipótese legal de exceção: aplica-se a proteção. Variação: O documento tem indício de falsificação: deve-se examinar a exceção do art. 3º, I.",
+      "prova": [
+        "A apresentação de documento exclui todas as exceções legais? Não; o art. 1º ressalva os casos previstos na lei.",
+        "A identificação criminal é automática para todo investigado? Não; exige observar a regra e as hipóteses legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d2893a7b-1ea6-5f1b-8a20-abda8dc78786",
+        "content_sha256": "a0aa074ad7c88842b2ddbc75490fd1480354a9e048d218fe5cb313986630a298",
+        "simples": "O civilmente identificado não será submetido a identificação criminal, salvo nos casos previstos nesta Lei.",
+        "pontos": [
+          "Regra: quem tem identificação civil não passa por identificação criminal.",
+          "Exceções: casos da própria Lei (art. 3º)."
+        ],
+        "atencao": [
+          "Base constitucional: art. 5º, LVIII, da Constituição.",
+          "A exceção é a identificação criminal."
+        ],
+        "exemplo": "Quem apresenta carteira de identidade válida, em regra, não é fotografado nem tem as digitais colhidas para fins criminais.",
+        "prova": [
+          "Assertiva que torna a identificação criminal obrigatória para todo indiciado erra: a regra é a identificação civil."
+        ],
+        "termos": [
+          {
+            "termo": "Identificação criminal",
+            "significado": "Coleta de dados datiloscópicos, fotográficos e, em certos casos, genéticos."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "f9f12570-a841-59a0-b686-ec1fc8001429",
+      "content_sha256": "28bbee80fad9b111c1cbdc7eaf34902d28df335a5f47012239b20afae9b7753e",
+      "simples": "A lei admite carteira de identidade, trabalho, profissional, passaporte, identificação funcional e outro documento público capaz de identificar. Documentos militares são equiparados para essa finalidade.",
+      "pontos": [
+        "Rol inclui passaporte e documento público apto.",
+        "Documento militar: equiparação expressa."
+      ],
+      "atencao": [
+        "Não restrinja a identificação civil apenas ao RG.",
+        "Documento privado qualquer não se torna documento público pela simples apresentação."
+      ],
+      "exemplo": "O investigado apresenta passaporte suficiente para identificá-lo: é uma das formas legais. Variação: Apresenta cartão privado sem aptidão e sem natureza pública: não se presume enquadramento no inciso VI.",
+      "prova": [
+        "Somente a carteira de identidade é admitida? Não; o artigo enumera outras formas.",
+        "Documentos de identificação militares são equiparados? Sim; o parágrafo único assim dispõe."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f9f12570-a841-59a0-b686-ec1fc8001429",
+        "content_sha256": "28bbee80fad9b111c1cbdc7eaf34902d28df335a5f47012239b20afae9b7753e",
+        "simples": "A identificação civil é atestada por qualquer dos seguintes documentos: carteira de identidade, carteira de trabalho, carteira profissional, passaporte, carteira de identificação funcional e outro documento público que permita a identificação do indiciado. Para as finalidades desta Lei, equiparam-se aos documentos de identificação civis os documentos de identificação militares.",
+        "pontos": [
+          "Documentos que atestam a identificação civil.",
+          "Rol com cláusula aberta: outro documento público.",
+          "Documentos militares são equiparados."
+        ],
+        "atencao": [
+          "Documento militar vale como civil para esta Lei."
+        ],
+        "exemplo": "A carteira de trabalho comprova a identificação civil do indiciado.",
+        "prova": [
+          "Assertiva que exclui a carteira funcional do rol erra: ela está prevista."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "1cfc49df-c6d4-5b54-870d-7a685c9e9365",
+      "content_sha256": "3a215deaf280bd74fa826c55bda59541f952164886f4a8fdc8816363621ea769",
+      "simples": "Mesmo com documento, podem justificar identificação criminal: rasura/falsificação; insuficiência; documentos conflitantes; essencialidade investigatória reconhecida judicialmente; registros de outros nomes; impossibilidade de identificação pelos caracteres do documento. A Lei 15.295/2025 acrescentou o recebimento judicial da denúncia por grave violência contra pessoa, crimes sexuais indicados, os arts. 240, 241 e 241-A a 241-C do ECA e organização criminosa do art. 2º da Lei 12.850 que use ou disponha de armas de fogo.",
+      "pontos": [
+        "Inciso IV: decisão da autoridade judiciária; não basta vontade policial.",
+        "Inciso VII: recebimento da denúncia e crimes expressamente indicados.",
+        "Juntar cópias dos documentos, mesmo insuficientes."
+      ],
+      "atencao": [
+        "Lei 15.295: publicada em 22/12/2025, vacância de 30 dias; a mudança já está em vigor na conferência de outubro de 2026.",
+        "Não transforme o inciso VII em regra para toda denúncia ou toda organização.",
+        "A hipótese de flagrante com coleta genética está no art. 5º, §2º."
+      ],
+      "exemplo": "O juiz recebe denúncia pelo art. 2º da Lei 12.850 e a organização dispõe de armas: examina-se a nova alínea d. Variação: Sem armas e sem outra exceção legal demonstrada, a denúncia por esse crime não preenche, sozinha, a alínea d.",
+      "prova": [
+        "O inciso IV permite dispensar o despacho judicial sobre a essencialidade? Não; a decisão judicial integra a hipótese.",
+        "Qualquer denúncia recebida autoriza a nova hipótese do inciso VII? Não; o rol e suas condições devem ser observados.",
+        "Cópias de documentos considerados insuficientes devem ser juntadas? Sim; o parágrafo único exige a juntada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "1cfc49df-c6d4-5b54-870d-7a685c9e9365",
+        "content_sha256": "3a215deaf280bd74fa826c55bda59541f952164886f4a8fdc8816363621ea769",
+        "simples": "Embora apresentado documento de identificação, poderá ocorrer identificação criminal quando o documento apresentar rasura ou indício de falsificação; for insuficiente para identificar cabalmente o indiciado; houver documentos distintos com informações conflitantes; a medida for essencial às investigações, segundo despacho do juiz, de ofício ou por representação da autoridade policial, do Ministério Público ou da defesa; constarem registros policiais de outros nomes ou qualificações; o estado de conservação ou a distância temporal ou de localidade da expedição impossibilitarem a identificação; ou houver recebimento da denúncia por crime praticado com grave violência contra a pessoa, crime contra a liberdade sexual ou sexual contra vulnerável, crimes contra criança ou adolescente previstos nos arts. 240, 241, 241-A, 241-B e 241-C do ECA, ou crime do art. 2º da Lei de Organizações Criminosas quando a organização utilizar armas de fogo. As cópias dos documentos apresentados serão juntadas aos autos.",
+        "pontos": [
+          "Rasura ou indício de falsificação.",
+          "Documento insuficiente ou conflitante.",
+          "Essencial às investigações, por despacho judicial.",
+          "Registros de outros nomes.",
+          "Documento antigo ou de difícil verificação.",
+          "Recebimento da denúncia por certos crimes graves (inciso VII)."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso VII incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "A decisão judicial do inciso IV pode ser de ofício ou por provocação."
+        ],
+        "exemplo": "Quem apresenta documento com sinais de falsificação pode ser submetido à identificação criminal.",
+        "prova": [
+          "Assertiva que dispensa decisão judicial no caso do inciso IV erra: exige despacho da autoridade judiciária."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "1d6b1146-3586-57f9-80c0-fcbad71a163c",
+      "content_sha256": "6adf4ff40259b96c63cccafa9861f27ab64d7cd2ec29aaf0410d4173dfd36da6",
+      "simples": "Quando a identificação criminal for necessária, a autoridade deve adotar providências para evitar constrangimento. A existência de fundamento para identificar não autoriza exposição vexatória ou tratamento humilhante.",
+      "pontos": [
+        "Identificar com necessidade e respeito à pessoa."
+      ],
+      "atencao": [
+        "Necessidade do procedimento não elimina proteção à dignidade."
+      ],
+      "exemplo": "A identificação é feita em ambiente e condições que preservam a pessoa, sem exibição desnecessária. Variação: A equipe expõe o identificado para humilhá-lo: a autorização do procedimento não legitima o constrangimento.",
+      "prova": [
+        "O procedimento autorizado permite constrangimento desnecessário? Não; o artigo impõe providências para evitá-lo.",
+        "O dever recai sobre a autoridade encarregada? Sim; ela deve adotar as providências necessárias."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1d6b1146-3586-57f9-80c0-fcbad71a163c",
+        "content_sha256": "6adf4ff40259b96c63cccafa9861f27ab64d7cd2ec29aaf0410d4173dfd36da6",
+        "simples": "Quando houver necessidade de identificação criminal, a autoridade encarregada tomará as providências necessárias para evitar o constrangimento do identificado.",
+        "pontos": [
+          "Dever de evitar constrangimento ao identificado."
+        ],
+        "atencao": [
+          "Proteção da dignidade durante a identificação."
+        ],
+        "exemplo": "A coleta de impressões é feita de forma reservada, sem exposição pública do indiciado.",
+        "prova": [
+          "Assertiva que autoriza a exposição do identificado ao público erra: a autoridade deve evitar constrangimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "995102db-207c-5fc4-98cb-651e22995488",
+      "content_sha256": "acf447c7c08eb7efa4ea479cd8de82f9744b970b1cef87f88d365dda19438bbc",
+      "simples": "A identificação criminal inclui impressões digitais e fotografia, juntadas aos autos indicados. Pela Lei 15.295/2025, inclui coleta biológica para perfil genético nas hipóteses IV e VII do art. 3º e também no flagrante dos crimes do inciso VII.",
+      "pontos": [
+        "Datiloscopia + fotografia; DNA nas hipóteses específicas.",
+        "Flagrante dos crimes do inciso VII: §2º próprio."
+      ],
+      "atencao": [
+        "Não ensine DNA obrigatório para qualquer identificação.",
+        "No flagrante previsto no §2º não se exige esperar o recebimento de denúncia para essa hipótese.",
+        "Mudança de 2025 com vacância de 30 dias, já transcorrida."
+      ],
+      "exemplo": "Uma pessoa é presa em flagrante por crime sexual contra vulnerável: o §2º prevê identificação com coleta genética. Variação: O fundamento é apenas rasura documental, sem incidência das hipóteses de coleta: rasura não torna, sozinha, todo DNA obrigatório pelo §1º.",
+      "prova": [
+        "A identificação criminal inclui datiloscopia e fotografia? Sim; ambas estão no caput.",
+        "O §2º exige esperar a denúncia no flagrante dos crimes referidos? Não; a própria hipótese é o flagrante.",
+        "DNA é obrigatório para toda identificação, independentemente da hipótese? Não; a lei estabelece hipóteses específicas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "995102db-207c-5fc4-98cb-651e22995488",
+        "content_sha256": "acf447c7c08eb7efa4ea479cd8de82f9744b970b1cef87f88d365dda19438bbc",
+        "simples": "A identificação criminal incluirá o processo datiloscópico e o fotográfico, que serão juntados aos autos da comunicação da prisão em flagrante, do inquérito policial ou de outra forma de investigação. Nas hipóteses dos incisos IV e VII do art. 3º, incluirá também a coleta de material biológico para a obtenção do perfil genético. Nos casos de prisão em flagrante pelos crimes do inciso VII do art. 3º, a identificação criminal também incluirá a coleta de material biológico para o perfil genético.",
+        "pontos": [
+          "Processo datiloscópico e fotográfico.",
+          "Juntada aos autos da prisão em flagrante ou do inquérito.",
+          "Perfil genético nos incisos IV e VII do art. 3º.",
+          "Perfil genético também na prisão em flagrante pelos crimes do inciso VII."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§1º e 2º incluídos pela Lei nº 13.964, de 2019.",
+          "O perfil genético não é regra geral: depende das hipóteses legais."
+        ],
+        "exemplo": "Em flagrante de crime sexual contra vulnerável, a identificação inclui coleta de material genético.",
+        "prova": [
+          "Assertiva que torna a coleta genética automática em toda identificação criminal erra: só nas hipóteses legais."
+        ],
+        "termos": [
+          {
+            "termo": "Datiloscópico",
+            "significado": "Relativo às impressões digitais."
+          }
+        ],
+        "remissoes": [
+          "Art. 5º-A",
+          "Art. 7º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5-a",
+      "unit_id": "91464c23-f942-5996-b516-8f8504d40910",
+      "content_sha256": "1a71d6f38512186a2beb5275e47de4541e2b551b423bc159981fa76e9a539399",
+      "simples": "O banco de perfis genéticos é gerenciado por unidade oficial de perícia criminal. Os dados são sigilosos; a lei proíbe revelar traços somáticos ou comportamentais, com a exceção expressa da determinação genética de gênero. Coincidências devem constar de laudo assinado por perito oficial habilitado.",
+      "pontos": [
+        "Unidade oficial de perícia; sigilo; laudo pericial.",
+        "Coincidência de perfil é elemento pericial, não condenação automática."
+      ],
+      "atencao": [
+        "Não confunda este banco com o multibiométrico do art. 7º-C.",
+        "Uso indevido pode gerar responsabilidade civil, penal e administrativa."
+      ],
+      "exemplo": "Uma coincidência é encontrada e documentada em laudo oficial, a ser examinada com as demais provas. Variação: Um servidor divulga dados genéticos para finalidade alheia à lei ou decisão judicial: o sigilo continua exigível.",
+      "prova": [
+        "A coincidência dispensa laudo de perito oficial? Não; o §3º exige esse laudo.",
+        "O banco pode revelar livremente traços comportamentais? Não; a lei contém proibição expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "91464c23-f942-5996-b516-8f8504d40910",
+        "content_sha256": "1a71d6f38512186a2beb5275e47de4541e2b551b423bc159981fa76e9a539399",
+        "simples": "Os dados relacionados à coleta do perfil genético deverão ser armazenados em banco de dados de perfis genéticos, gerenciado por unidade oficial de perícia criminal. As informações genéticas não poderão revelar traços somáticos ou comportamentais das pessoas, exceto determinação genética de gênero. Os dados terão caráter sigiloso, e quem permitir ou promover seu uso para fins diversos responderá civil, penal e administrativamente. As informações obtidas a partir da coincidência de perfis genéticos serão consignadas em laudo pericial firmado por perito oficial habilitado.",
+        "pontos": [
+          "Banco de perfis genéticos gerido por unidade oficial de perícia criminal.",
+          "Vedado revelar traços somáticos ou comportamentais, exceto o gênero.",
+          "Dados sigilosos.",
+          "Coincidência registrada em laudo de perito oficial."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012, com alterações posteriores.",
+          "Uso indevido gera responsabilização civil, penal e administrativa."
+        ],
+        "exemplo": "A coincidência entre vestígio da cena do crime e um perfil do banco gera laudo pericial.",
+        "prova": [
+          "Assertiva que permite revelar traços comportamentais do investigado erra: é vedado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "e436df62-90df-5234-a26b-e8d231d0a3a6",
+      "content_sha256": "e5184ef10beba5c77887fa83958249ef23f52432acdfd890b5b68e00dcfb0561",
+      "simples": "Antes do trânsito em julgado da condenação, não se pode mencionar a identificação criminal em atestados de antecedentes ou informações não destinadas ao juízo criminal. A regra trata do destinatário e do marco processual.",
+      "pontos": [
+        "Antes de condenação definitiva: vedação para atestados e informações externas ao juízo criminal."
+      ],
+      "atencao": [
+        "Identificação não equivale a condenação.",
+        "O dispositivo não proíbe encaminhar informação pertinente ao juízo criminal."
+      ],
+      "exemplo": "Um atestado destinado a empregador não registra a identificação criminal de investigado sem condenação definitiva. Variação: A informação é destinada ao juízo criminal: não se aplica indistintamente a mesma vedação externa.",
+      "prova": [
+        "Identificação criminal é prova de condenação definitiva? Não; são fatos distintos.",
+        "A regra proíbe indistintamente toda informação ao juízo criminal? Não; o texto diferencia esse destinatário."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e436df62-90df-5234-a26b-e8d231d0a3a6",
+        "content_sha256": "e5184ef10beba5c77887fa83958249ef23f52432acdfd890b5b68e00dcfb0561",
+        "simples": "É vedado mencionar a identificação criminal do indiciado em atestados de antecedentes ou em informações não destinadas ao juízo criminal, antes do trânsito em julgado da sentença condenatória.",
+        "pontos": [
+          "Vedada a menção da identificação criminal em atestados de antecedentes.",
+          "Vale antes do trânsito em julgado da condenação."
+        ],
+        "atencao": [
+          "Proteção da presunção de inocência."
+        ],
+        "exemplo": "O atestado de antecedentes entregue ao empregador não pode citar a identificação criminal de indiciado.",
+        "prova": [
+          "Assertiva que autoriza a menção em atestados antes do trânsito em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "08ed37be-1e93-52f0-aad0-74b0131736f6",
+      "content_sha256": "4d3966b96da82ce0c81dc7eaaec33a992f828e5c1a69836238b67ed6dd540050",
+      "simples": "Sem denúncia, com rejeição ou absolvição, o interessado pode requerer retirada da identificação fotográfica após arquivamento definitivo ou trânsito em julgado, apresentando prova de identificação civil.",
+      "pontos": [
+        "Retirada de fotografia: requerimento + marco definitivo + prova civil."
+      ],
+      "atencao": [
+        "Não confunda retirada fotográfica com exclusão do perfil genético do art. 7º-A.",
+        "A mera notícia de investigação em curso não é o marco definitivo exigido."
+      ],
+      "exemplo": "Após absolvição definitiva, o réu comprova identificação civil e requer a retirada da foto. Variação: Pede exclusão de DNA: deve-se examinar o art. 7º-A, não substituir sua disciplina pela da fotografia.",
+      "prova": [
+        "Este artigo trata de retirada da fotografia? Sim; esse é seu objeto.",
+        "A retirada prevista independe de comprovação de identificação civil? Não; a prova é exigida."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "08ed37be-1e93-52f0-aad0-74b0131736f6",
+        "content_sha256": "4d3966b96da82ce0c81dc7eaaec33a992f828e5c1a69836238b67ed6dd540050",
+        "simples": "No caso de não oferecimento da denúncia, ou sua rejeição, ou absolvição, é facultado ao indiciado ou ao réu, após o arquivamento definitivo do inquérito ou o trânsito em julgado da sentença, requerer a retirada da identificação fotográfica do inquérito ou processo, desde que apresente provas de sua identificação civil.",
+        "pontos": [
+          "Direito de pedir a retirada da fotografia.",
+          "Hipóteses: sem denúncia, rejeição ou absolvição.",
+          "Após arquivamento definitivo ou trânsito em julgado.",
+          "Exige prova da identificação civil."
+        ],
+        "atencao": [
+          "A retirada alcança a identificação FOTOGRÁFICA."
+        ],
+        "exemplo": "O absolvido pede a retirada de sua foto do processo, comprovando sua identidade civil.",
+        "prova": [
+          "Assertiva que permite a retirada da foto antes do arquivamento definitivo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-a",
+      "unit_id": "553c1472-e625-50f4-b9bd-cb3090380b1a",
+      "content_sha256": "0b9b8810f28cfdd36b8129d6db6a26f1aad0a8398fb7a8073b3dcc7809eb4298",
+      "simples": "Perfis genéticos são excluídos em caso de absolvição; em caso de condenação, a exclusão depende de requerimento após vinte anos do cumprimento da pena. Esse marco não é a coleta, o início da pena ou a data da sentença.",
+      "pontos": [
+        "Absolvição; ou condenação + requerimento + 20 anos após cumprimento."
+      ],
+      "atencao": [
+        "Fotografia, perfil genético e dados multibiométricos têm regras distintas.",
+        "Não troque cumprimento da pena por data da coleta."
+      ],
+      "exemplo": "O condenado terminou a pena: para esta hipótese de exclusão, conta-se o prazo legal a partir do cumprimento. Variação: A amostra foi coletada há vinte anos, mas a pena terminou recentemente: a data da coleta não preenche o prazo.",
+      "prova": [
+        "Os vinte anos são contados da coleta? Não; o inciso II usa o cumprimento da pena.",
+        "Na hipótese de condenação, há exigência de requerimento? Sim; está expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "553c1472-e625-50f4-b9bd-cb3090380b1a",
+        "content_sha256": "0b9b8810f28cfdd36b8129d6db6a26f1aad0a8398fb7a8073b3dcc7809eb4298",
+        "simples": "A exclusão dos perfis genéticos dos bancos de dados ocorrerá no caso de absolvição do acusado ou, no caso de condenação, mediante requerimento, após decorridos 20 anos do cumprimento da pena.",
+        "pontos": [
+          "Absolvição: exclusão do perfil genético.",
+          "Condenação: exclusão a requerimento, após vinte anos do cumprimento da pena."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012.",
+          "Prazo de 20 anos para o condenado."
+        ],
+        "exemplo": "O condenado pode pedir a exclusão do perfil depois de vinte anos do cumprimento da pena.",
+        "prova": [
+          "Assertiva que fixa em 5 anos o prazo para o condenado pedir a exclusão erra: são 20 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-b",
+      "unit_id": "d49636f8-33b4-5a08-9e1e-fb76a5f98e07",
+      "content_sha256": "9897b30e3776d878cae63b35f7fee0366cc9d591ff36fcc67ab3a5e2bf503c74",
+      "simples": "O perfil genético fica em banco sigiloso, conforme regulamentação do Executivo. Regulamentar a operação não torna os dados públicos nem permite uso irrestrito.",
+      "pontos": [
+        "Banco sigiloso; regulamento do Poder Executivo."
+      ],
+      "atencao": [
+        "Ler em conjunto com os limites e responsabilidades do art. 5º-A."
+      ],
+      "exemplo": "O órgão organiza o armazenamento conforme regulamento e protege o acesso. Variação: Pretende divulgar a base ao público por existir regulamento: a regulamentação não afasta o sigilo.",
+      "prova": [
+        "O regulamento torna o banco público? Não; o artigo exige sigilo.",
+        "A regulamentação cabe ao Executivo? Sim; esse é o poder indicado."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d49636f8-33b4-5a08-9e1e-fb76a5f98e07",
+        "content_sha256": "9897b30e3776d878cae63b35f7fee0366cc9d591ff36fcc67ab3a5e2bf503c74",
+        "simples": "A identificação do perfil genético será armazenada em banco de dados sigiloso, conforme regulamento a ser expedido pelo Poder Executivo.",
+        "pontos": [
+          "Armazenamento em banco de dados sigiloso.",
+          "Regulamento do Poder Executivo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.654, de 2012."
+        ],
+        "exemplo": "O perfil genético fica em banco sigiloso regulamentado pelo Executivo.",
+        "prova": [
+          "Assertiva que torna público o banco de perfis genéticos erra: é sigiloso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-c",
+      "unit_id": "0b42ce26-fc10-5015-8038-48c93c616c62",
+      "content_sha256": "e786284fa21f913395197449798a8f172905a046cb199213008740a3339cefb1",
+      "simples": "O Banco Nacional Multibiométrico e de Impressões Digitais, no Ministério da Justiça e Segurança Pública, auxilia investigações federais, estaduais e distritais. Pode armazenar impressões e, quando possível, íris, face e voz. Integração exige acordo ou convênio; bancos civis, administrativos e eleitorais compartilham somente impressões digitais e informações necessárias à identificação do titular.",
+      "pontos": [
+        "Dados sigilosos; comercialização total ou parcial proibida.",
+        "Coincidência: laudo de perito oficial habilitado.",
+        "Polícia e MP podem requerer acesso ao juiz em inquérito ou ação penal instaurados.",
+        "Registros de presos provisórios ou definitivos podem ser colhidos se não extraídos anteriormente."
+      ],
+      "atencao": [
+        "Interoperabilidade não autoriza copiar irrestritamente todo banco eleitoral.",
+        "Não confunda biometria de íris/voz com perfil genético.",
+        "Uso fora da lei ou decisão judicial gera responsabilidades nas três esferas."
+      ],
+      "exemplo": "A unidade celebra convênio e limita o compartilhamento civil às impressões e informações identificadoras. Variação: A proposta vende parte da base ou inclui indiscriminadamente voz do cadastro civil: não atende aos limites legais.",
+      "prova": [
+        "É permitida a venda de parte da base? Não; a proibição abrange comercialização total e parcial.",
+        "O compartilhamento civil autoriza todos os dados de íris, face e voz? Não; o §6º limita a impressões digitais e informações necessárias à identificação.",
+        "O banco serve somente a investigação federal? Não; abrange também investigações estaduais e distritais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0b42ce26-fc10-5015-8038-48c93c616c62",
+        "content_sha256": "e786284fa21f913395197449798a8f172905a046cb199213008740a3339cefb1",
+        "simples": "Fica autorizada a criação, no Ministério da Justiça e Segurança Pública, do Banco Nacional Multibiométrico e de Impressões Digitais, para armazenar dados de registros biométricos, de impressões digitais e, quando possível, de íris, face e voz, para subsidiar investigações criminais federais, estaduais ou distritais. É integrado pelos registros colhidos em investigações ou na identificação criminal, e podem ser colhidos registros de presos provisórios ou definitivos. Outros bancos podem integrar-se ou interoperar mediante acordo ou convênio. Os dados são sigilosos, é vedada a comercialização da base e as coincidências constam de laudo pericial. A autoridade policial e o Ministério Público podem requerer ao juiz o acesso no caso de inquérito ou ação penal instaurados.",
+        "pontos": [
+          "Banco no Ministério da Justiça e Segurança Pública.",
+          "Armazena biometria, digitais e, quando possível, íris, face e voz.",
+          "Integração por acordo ou convênio.",
+          "Dados sigilosos, sem comercialização.",
+          "Acesso por requerimento ao juiz."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "Integração com bancos civis limitada às digitais e à identificação."
+        ],
+        "exemplo": "A polícia pede ao juiz acesso ao banco para identificar um suspeito em inquérito.",
+        "prova": [
+          "Assertiva que permite a venda da base do banco biométrico erra: é vedada a comercialização."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "6c16b1c7-946d-5a0b-970d-69393f51de85",
+      "content_sha256": "208be7c917197704a6f5e880d3d2574f4f067b3b9793e4972a0271b8ff081cb0",
+      "simples": "A Lei 12.037 entrou em vigor na publicação. Isso não elimina as vacâncias próprias das leis modificadoras: a Lei 15.295/2025 estabeleceu trinta dias após sua publicação oficial.",
+      "pontos": [
+        "Vigência original imediata; alteração de 2025 com prazo próprio."
+      ],
+      "atencao": [
+        "Não aplique automaticamente a cláusula original a toda mudança posterior."
+      ],
+      "exemplo": "Uma questão pergunta a regra original: entrada em vigor na publicação. Variação: Pergunta a alteração genética de 2025: consulte os trinta dias do art. 3º da Lei 15.295.",
+      "prova": [
+        "Toda alteração posterior vigora imediatamente por causa deste art. 8º? Não; cada ato modificador pode ter prazo próprio.",
+        "A vigência original foi na publicação? Sim; o artigo assim prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm"
+      ],
+      "expected": {
+        "unit_id": "6c16b1c7-946d-5a0b-970d-69393f51de85",
+        "content_sha256": "208be7c917197704a6f5e880d3d2574f4f067b3b9793e4972a0271b8ff081cb0",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer no dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "identificacao-criminal",
+      "course_id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "5078d89c-b1e1-5cb2-8759-656028247af9",
+      "content_sha256": "fa3167937e76e2865d211267bb2002de14259e405c101ec50863f77b862f06d3",
+      "simples": "A Lei 12.037 revogou expressamente a Lei 10.054/2000. Questões que atribuem vigência atual à lei anterior devem considerar essa revogação e as alterações posteriores da lei vigente.",
+      "pontos": [
+        "Revogação expressa: Lei 10.054/2000."
+      ],
+      "atencao": [
+        "Não confunda lei revogada com revogação da própria Lei 12.037."
+      ],
+      "exemplo": "O material recomenda usar a Lei 10.054 como disciplina vigente: é necessário corrigir a referência. Variação: A pergunta é histórica, anterior à revogação: o marco temporal precisa ser respeitado.",
+      "prova": [
+        "O artigo revoga a própria Lei 12.037? Não; revoga a Lei 10.054/2000.",
+        "A lei anterior pode ser apresentada como vigente hoje sem ressalva? Não; a revogação é expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5078d89c-b1e1-5cb2-8759-656028247af9",
+        "content_sha256": "fa3167937e76e2865d211267bb2002de14259e405c101ec50863f77b862f06d3",
+        "simples": "Revoga-se a Lei nº 10.054, de 7 de dezembro de 2000, que tratava anteriormente da identificação criminal.",
+        "pontos": [
+          "Revoga a lei anterior sobre identificação criminal."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A nova lei substituiu a lei de dois mil.",
+        "prova": [
+          "Assertiva que mantém em vigor a lei anterior erra: foi revogada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "pf-interestadual",
+      "course_id": "49804a78-208e-5414-a7ca-d26eaf5b5421",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
+      "content_sha256": "352eed28acede3992c8b680aeab77f4778bc76e66797440fa48bb9a29553aab0",
+      "simples": "A PF pode investigar as infrações indicadas quando há repercussão interestadual ou internacional que exija repressão uniforme, sem excluir a responsabilidade dos demais órgãos de segurança. A lista abrange sequestros com motivação política/função da vítima, cartel, violações de direitos humanos de tratados, cargas, produtos medicinais, instituições financeiras, misoginia pela internet e transporte de valores. Outros casos exigem os pressupostos do caput e autorização ou determinação ministerial.",
+      "pontos": [
+        "Caput: repercussão + necessidade de repressão uniforme; responsabilidades dos demais órgãos preservadas.",
+        "Cargas: transporte interestadual/internacional + indícios de grupo em mais de um Estado.",
+        "Instituições financeiras: indícios de associação em mais de um Estado.",
+        "Lei 14.967/2024: produtos controlados nas cargas e empresas de transporte de valores no inciso VIII."
+      ],
+      "atencao": [
+        "PF investigar não é regra automática de deslocamento de competência judicial.",
+        "Não elimine as condições específicas dos incisos IV e VI.",
+        "A referência antiga de cartel deve ser lida com a lei penal atual; não restaura incisos revogados da Lei 8.137."
+      ],
+      "exemplo": "Há roubo de cargas interestaduais e indícios de grupo em dois Estados, com necessidade de repressão uniforme: a hipótese deve ser examinada pela PF sem excluir órgãos estaduais. Variação: Um roubo isolado a instituição privada, sem indícios interestaduais nem os pressupostos gerais, não se enquadra automaticamente só por envolver dinheiro.",
+      "prova": [
+        "A atuação da PF exclui automaticamente as polícias estaduais? Não; o caput preserva suas responsabilidades.",
+        "O inciso VIII inclui empresas especializadas em transporte de valores? Sim; foi acrescentado pela Lei 14.967/2024.",
+        "A investigação de outros casos dispensa autorização/determinação ministerial? Não; o parágrafo único a exige, além dos pressupostos do caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm"
+      ],
+      "expected": {
+        "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
+        "content_sha256": "352eed28acede3992c8b680aeab77f4778bc76e66797440fa48bb9a29553aab0",
+        "simples": "Na forma do inciso I do §1º do art. 144 da Constituição, quando houver repercussão interestadual ou internacional que exija repressão uniforme, poderá a Polícia Federal, sem prejuízo da responsabilidade dos demais órgãos de segurança pública, em especial das Polícias Militares e Civis dos Estados, investigar, entre outras, infrações como: sequestro, cárcere privado e extorsão mediante sequestro, se o agente foi impelido por motivação política ou em razão da função pública exercida pela vítima; formação de cartel; violações a direitos humanos que o Brasil se comprometeu a reprimir por tratados; furto, roubo ou receptação de cargas, inclusive produtos controlados como pólvoras e explosivos, em operação interestadual ou internacional, com indícios de quadrilha em mais de um Estado; falsificação, adulteração e venda de produtos terapêuticos ou medicinais; furto, roubo ou dano contra instituições financeiras, com indícios de associação criminosa em mais de um Estado; crimes na internet que difundam conteúdo misógino; e furto, roubo ou dano contra empresas de transporte de valores. Atendidos os pressupostos, a PF apurará outros casos autorizados ou determinados pelo Ministro da Justiça.",
+        "pontos": [
+          "Exige repercussão interestadual ou internacional e necessidade de repressão uniforme.",
+          "Atribuição concorrente: não exclui as polícias estaduais.",
+          "Rol de infrações (incisos I a VIII).",
+          "Outros casos podem ser autorizados ou determinados pelo Ministro da Justiça."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incisos acrescidos por leis posteriores (por exemplo, o inciso VII sobre conteúdo misógino na internet e o inciso VIII sobre transporte de valores).",
+          "A atribuição é CONCORRENTE com as polícias estaduais."
+        ],
+        "exemplo": "Roubo de cargas por quadrilha que atua em mais de um Estado pode ser investigado pela Polícia Federal.",
+        "prova": [
+          "Assertiva que afasta a atribuição das Polícias Civis nesses casos erra: a PF atua sem prejuízo dos demais órgãos."
+        ],
+        "termos": [
+          {
+            "termo": "Repressão uniforme",
+            "significado": "Atuação coordenada em mais de um Estado ou país."
+          }
+        ],
+        "remissoes": [
+          "Constituição, art. 144, §1º, I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "pf-interestadual",
+      "course_id": "49804a78-208e-5414-a7ca-d26eaf5b5421",
+      "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
+      "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
+      "simples": "A vigência original foi fixada para a publicação. Alterações do rol, como a Lei 14.967/2024, precisam ser lidas no ato modificador e não retroagem automaticamente para tornar ilícita uma conduta anterior.",
+      "pontos": [
+        "Vigência: publicação; atribuição investigatória não cria, sozinha, novo crime."
+      ],
+      "atencao": [
+        "Não confunda ampliar investigação com criar tipo penal ou pena."
+      ],
+      "exemplo": "O aluno identifica a regra de vigência da Lei 10.446: publicação. Variação: A questão atribui uma nova pena à ampliação do inciso VIII: esse artigo não cria tal sanção.",
+      "prova": [
+        "O art. 2º fixa vacância de 45 dias? Não; a vigência é na publicação.",
+        "A ampliação do rol investigatório cria, por si, uma nova pena? Não; atribuição investigatória e tipificação penal são distintas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
+        "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "7e2919d5-a21a-5470-b555-a12604d040fb",
+      "content_sha256": "ba0239b656fb277d390dab5be792b13f91863f8babeff49f1aaa52b4c0b56b9b",
+      "simples": "A leitura constitucional do STF nas ADIs 3360 e 4109 exige cinco requisitos cumulativos: imprescindibilidade concreta para o inquérito; fundadas razões de autoria/participação em crime do rol; fatos novos ou contemporâneos; adequação à gravidade concreta, circunstâncias e condições pessoais; insuficiência de cautelares alternativas. Falta de residência não autoriza, sozinha, a prisão. O rol não admite ampliação por analogia.",
+      "pontos": [
+        "Memória I-A-C-A-S: imprescindibilidade, autoria, contemporaneidade, adequação, subsidiariedade.",
+        "Cinco requisitos cumulativos; prisão para averiguações proibida."
+      ],
+      "atencao": [
+        "Não trate os incisos I, II e III como alternativas independentes.",
+        "O texto conserva remissões históricas a tipos e diplomas alterados/revogados; consultar CP e legislação atual, sem inventar novo crime no rol.",
+        "Prisão cautelar não é pena antecipada."
+      ],
+      "exemplo": "No inquérito por roubo, há elementos atuais de participação e demonstração concreta de necessidade; o juiz também examina adequação e insuficiência das alternativas. Variação: O único motivo é morar na rua: não atende aos requisitos constitucionais e não legitima prisão para averiguações.",
+      "prova": [
+        "A falta de residência fixa basta, sozinha? Não; o STF exige cinco requisitos cumulativos.",
+        "O rol pode ser ampliado por analogia? Não; a interpretação fixada proíbe essa ampliação.",
+        "Fatos novos ou contemporâneos e insuficiência de alternativas devem ser examinados? Sim; integram os requisitos cumulativos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=481715"
+      ],
+      "expected": {
+        "unit_id": "7e2919d5-a21a-5470-b555-a12604d040fb",
+        "content_sha256": "ba0239b656fb277d390dab5be792b13f91863f8babeff49f1aaa52b4c0b56b9b",
+        "simples": "Caberá prisão temporária quando imprescindível para as investigações do inquérito policial; quando o indiciado não tiver residência fixa ou não fornecer elementos necessários ao esclarecimento de sua identidade; ou quando houver fundadas razões de autoria ou participação do indiciado em crimes como homicídio doloso, sequestro ou cárcere privado, roubo, extorsão, extorsão mediante sequestro, estupro, atentado violento ao pudor, rapto violento, epidemia com resultado de morte, envenenamento de água potável ou substância alimentícia ou medicinal qualificado pela morte, quadrilha ou bando, genocídio, tráfico de drogas, crimes contra o sistema financeiro e crimes da Lei de Terrorismo.",
+        "pontos": [
+          "I: imprescindível para o inquérito policial.",
+          "II: sem residência fixa ou sem identidade esclarecida.",
+          "III: fundadas razões de autoria em crimes do rol (homicídio doloso, sequestro, roubo, extorsão, estupro, tráfico, terrorismo, entre outros)."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a alínea p (crimes da Lei de Terrorismo) foi incluída por lei posterior; o rol possui expressões de leis antigas, e a doutrina exige combinar os incisos.",
+          "Doutrina e STF: o inciso III exige, em regra, também a imprescindibilidade ou a falta de identidade (leitura conjunta).",
+          "Cabe apenas na fase de INQUÉRITO."
+        ],
+        "exemplo": "Suspeito de homicídio doloso, sem residência fixa, pode ser preso temporariamente.",
+        "prova": [
+          "Assertiva que admite a prisão temporária na fase processual erra: ela é cabível na investigação (inquérito)."
+        ],
+        "termos": [
+          {
+            "termo": "Prisão temporária",
+            "significado": "Prisão cautelar de curta duração, para a investigação de crimes graves."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "d20a035a-1d9f-5d2c-aca1-794bd2b11e5d",
+      "content_sha256": "f69cfa67995d998725753a1ffb75cc89765d8325788d0e1bc6ec3af21b746f9a",
+      "simples": "Só o juiz decreta temporária, provocado por representação policial ou requerimento do MP. O prazo geral é cinco dias, prorrogável por igual período diante de extrema e comprovada necessidade. A decisão é fundamentada em até 24 horas; na representação policial, ouve-se antes o MP. O mandado informa duração e dia de soltura, e o dia de cumprimento entra na contagem.",
+      "pontos": [
+        "Prazo geral 5 + 5; hediondos/equiparados: consultar 30 + 30 do art. 2º, §4º, da Lei 8.072.",
+        "Somente executar após mandado, em duas vias, com ciência dos direitos.",
+        "Término: soltar imediatamente sem nova ordem, salvo comunicação prévia de prorrogação ou preventiva."
+      ],
+      "atencao": [
+        "Juiz pode determinar apresentação/exame de ofício pelo §3º, mas isso não autoriza decretar a prisão de ofício.",
+        "Prorrogação não é automática.",
+        "Lei 13.869/2019 alterou soltura e acrescentou conteúdo do mandado e dia inicial da contagem."
+      ],
+      "exemplo": "O mandado é cumprido na segunda-feira e o prazo termina sem comunicação de prorrogação ou preventiva: a custódia deve liberar imediatamente no marco legal. Variação: A autoridade espera novo alvará só porque o prazo terminou: o §7º dispensa nova ordem nessa hipótese.",
+      "prova": [
+        "O juiz pode decretar temporária de ofício com base no §3º? Não; esse parágrafo trata de apresentação, informações e exame.",
+        "O dia do cumprimento do mandado entra na contagem? Sim; o §8º o inclui.",
+        "A soltura por fim do prazo depende sempre de nova ordem? Não; o §7º exige liberação, ressalvadas as comunicações previstas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+      ],
+      "expected": {
+        "unit_id": "d20a035a-1d9f-5d2c-aca1-794bd2b11e5d",
+        "content_sha256": "f69cfa67995d998725753a1ffb75cc89765d8325788d0e1bc6ec3af21b746f9a",
+        "simples": "A prisão temporária será decretada pelo juiz, em face da representação da autoridade policial ou de requerimento do Ministério Público, e terá o prazo de 5 dias, prorrogável por igual período em caso de extrema e comprovada necessidade. Na representação da autoridade policial, o juiz ouvirá antes o Ministério Público. O despacho será fundamentado e prolatado dentro de 24 horas do recebimento. O juiz poderá determinar que o preso lhe seja apresentado e submetê-lo a exame de corpo de delito. Expede-se mandado em duas vias, uma entregue ao indiciado como nota de culpa, e o mandado conterá o período de duração e o dia da libertação. A prisão só pode ser executada após o mandado judicial. Efetuada a prisão, a autoridade informará o preso de seus direitos constitucionais. Decorrido o prazo, a autoridade custodiante deve soltar o preso, independentemente de nova ordem, salvo comunicação de prorrogação ou de prisão preventiva. O dia do cumprimento do mandado entra no cômputo do prazo.",
+        "pontos": [
+          "Decretada pelo juiz, por representação da autoridade policial ou requerimento do MP.",
+          "Prazo de 5 dias, prorrogável por igual período.",
+          "Despacho fundamentado em 24 horas.",
+          "Mandado em duas vias, com duração e dia da libertação.",
+          "Soltura automática ao fim do prazo.",
+          "Dia do cumprimento do mandado conta no prazo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§4º-A, 7º e 8º incluídos pela Lei nº 13.869, de 2019 (Lei de Abuso de Autoridade).",
+          "O juiz NÃO decreta de ofício.",
+          "Crimes hediondos e equiparados têm prazo próprio, mais longo (veja a Lei dos Crimes Hediondos) (Lei dos Crimes Hediondos)."
+        ],
+        "exemplo": "O delegado representa pela prisão temporária, o juiz ouve o MP e decide em 24 horas.",
+        "prova": [
+          "Assertiva que permite ao juiz decretar a prisão temporária de ofício erra: depende de representação ou requerimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º",
+          "Lei dos Crimes Hediondos"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "c9b6d578-9ebb-563f-ac4e-bc7ad2c5a922",
+      "content_sha256": "6adc769dcdcfb67eefbd99dc0d4f9de94b88e97f2ef1f93354b3febed57673bc",
+      "simples": "Presos temporários devem permanecer separados dos demais detentos. É regra de custódia, não autorização para tratamento degradante ou restrição de direitos sem base legal.",
+      "pontos": [
+        "Separação obrigatória dos demais detentos."
+      ],
+      "atencao": [
+        "Não confundir separação com pena de isolamento ou regime disciplinar."
+      ],
+      "exemplo": "A unidade organiza a custódia do preso temporário separadamente dos demais detentos. Variação: A equipe chama essa separação de punição disciplinar: a natureza da regra é de custódia, não de sanção.",
+      "prova": [
+        "A separação é facultativa pelo artigo? Não; é obrigatória.",
+        "Essa regra constitui pena disciplinar de isolamento? Não; é exigência de custódia."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c9b6d578-9ebb-563f-ac4e-bc7ad2c5a922",
+        "content_sha256": "6adc769dcdcfb67eefbd99dc0d4f9de94b88e97f2ef1f93354b3febed57673bc",
+        "simples": "Os presos temporários deverão permanecer, obrigatoriamente, separados dos demais detentos.",
+        "pontos": [
+          "Separação obrigatória dos demais detentos."
+        ],
+        "atencao": [
+          "Evita contato com presos definitivos."
+        ],
+        "exemplo": "O preso temporário fica em cela ou ala separada.",
+        "prova": [
+          "Assertiva que permite misturar o preso temporário com os condenados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "d070c0bd-2226-5b13-bd0b-a72b73daf730",
+      "content_sha256": "2d81067857fccf201628dd6f8dfe25533a3ce17548a94d3442b15cf3237306e9",
+      "simples": "O artigo acrescentou historicamente crime à Lei 4.898/1965, que foi revogada pela Lei 13.869/2019. Não ensine aquela alínea como tipo penal vigente. A disciplina atual inclui o art. 12, parágrafo único, IV, da Lei 13.869, que deve ser lido com seus elementos e a finalidade específica do art. 1º, §1º.",
+      "pontos": [
+        "Lei 4.898: revogada; consultar tipo atual de abuso e seus requisitos."
+      ],
+      "atencao": [
+        "Não concluir que qualquer atraso, sem examinar dolo e finalidade legal, configura automaticamente abuso de autoridade.",
+        "A revogação do tipo antigo não elimina o dever de soltura do art. 2º, §7º."
+      ],
+      "exemplo": "Um material de hoje aplica a antiga alínea i da Lei 4.898 como vigente: a referência penal precisa ser atualizada. Variação: O caso trata de descumprimento atual de ordem de liberdade: examinam-se a Lei 13.869 e o contexto, não se reaplica automaticamente a lei revogada.",
+      "prova": [
+        "A antiga Lei 4.898 continua vigente por estar transcrita neste artigo? Não; foi revogada pela Lei 13.869.",
+        "A análise de abuso atual dispensa os requisitos subjetivos da Lei 13.869? Não; eles devem ser examinados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+      ],
+      "expected": {
+        "unit_id": "d070c0bd-2226-5b13-bd0b-a72b73daf730",
+        "content_sha256": "2d81067857fccf201628dd6f8dfe25533a3ce17548a94d3442b15cf3237306e9",
+        "simples": "O art. 4º da antiga Lei de Abuso de Autoridade foi acrescido da alínea i, que considerava abuso de autoridade prolongar a execução de prisão temporária, de pena ou de medida de segurança, deixando de expedir em tempo oportuno ou de cumprir imediatamente ordem de liberdade.",
+        "pontos": [
+          "Alterou a antiga Lei de Abuso de Autoridade.",
+          "Prolongar a execução da prisão era abuso."
+        ],
+        "atencao": [
+          "Dispositivo histórico: a antiga lei foi substituída pela Lei de Abuso de Autoridade atual."
+        ],
+        "exemplo": "Demorar para soltar o preso temporário ao fim do prazo era abuso de autoridade.",
+        "prova": [
+          "Assertiva que considera a alínea i vigente na antiga lei erra: ela foi substituída."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Abuso de Autoridade"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "3cd6296b-7b50-545b-9e2f-cafe5453cfbd",
+      "content_sha256": "3c843290160f646081b39d7e411fcf54d0a3e0c1531234d3023b2a86a5eb1687",
+      "simples": "Todas as comarcas e seções judiciárias devem ter plantão permanente de 24 horas do Judiciário e do MP para apreciar pedidos de prisão temporária. Plantão assegura apreciação, mas não dispensa os requisitos da medida.",
+      "pontos": [
+        "Plantão permanente: Judiciário e MP, 24 horas."
+      ],
+      "atencao": [
+        "Disponibilidade de plantão não torna automática a prisão."
+      ],
+      "exemplo": "O pedido chega de madrugada e pode ser apreciado no plantão dos órgãos indicados. Variação: O requerente sustenta que a urgência dispensa fundamentação: os requisitos continuam necessários.",
+      "prova": [
+        "O plantão é apenas do Judiciário? Não; o artigo inclui o Ministério Público.",
+        "O plantão dispensa os critérios do art. 1º? Não; facilita a apreciação, sem remover requisitos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3cd6296b-7b50-545b-9e2f-cafe5453cfbd",
+        "content_sha256": "3c843290160f646081b39d7e411fcf54d0a3e0c1531234d3023b2a86a5eb1687",
+        "simples": "Em todas as comarcas e seções judiciárias haverá um plantão permanente de vinte e quatro horas do Poder Judiciário e do Ministério Público para apreciação dos pedidos de prisão temporária.",
+        "pontos": [
+          "Plantão permanente de vinte e quatro horas.",
+          "Judiciário e Ministério Público.",
+          "Em todas as comarcas e seções judiciárias."
+        ],
+        "atencao": [
+          "Garante a apreciação a qualquer hora."
+        ],
+        "exemplo": "O pedido de prisão temporária feito na madrugada é apreciado pelo juiz de plantão.",
+        "prova": [
+          "Assertiva que restringe o plantão ao Judiciário erra: inclui o Ministério Público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "fa3463da-9083-533a-8436-3ad3589a0c71",
+      "content_sha256": "07ae326f3bcda8526ff6baf4243fd974b29cf5ce62dfdcb256547518f214b790",
+      "simples": "A Lei 7.960 entrou em vigor na publicação. A cláusula original não afasta os marcos próprios de alterações posteriores nem a interpretação constitucional fixada pelo STF.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Distinguir marco original, alteração legislativa e interpretação judicial."
+      ],
+      "exemplo": "A prova pergunta a vigência original: publicação. Variação: A prova pergunta os critérios constitucionais atuais: usa-se também o julgamento de 2022, não só os incisos isolados.",
+      "prova": [
+        "O art. 6º fixa espera de 45 dias? Não; a vigência é na publicação.",
+        "A cláusula de vigência dispensa leitura da jurisprudência constitucional? Não; são aspectos diferentes."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fa3463da-9083-533a-8436-3ad3589a0c71",
+        "content_sha256": "07ae326f3bcda8526ff6baf4243fd974b29cf5ce62dfdcb256547518f214b790",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "03e6b9b3-97ab-53a8-a430-883361bb42d9",
+      "content_sha256": "6e88e88b1a0e3bd66799665543a7bc49b18e55e7e71b66c30d670312be4db91d",
+      "simples": "A cláusula revoga disposições incompatíveis, sem listar a revogação de todo o sistema processual penal. Ela não substitui a pesquisa de atos posteriores e dos dispositivos vigentes.",
+      "pontos": [
+        "Revogação por incompatibilidade, não de todo o CPP."
+      ],
+      "atencao": [
+        "Não use a fórmula geral para presumir revogação de uma norma compatível."
+      ],
+      "exemplo": "Ao comparar normas, o aluno identifica conflito concreto antes de afirmar revogação. Variação: As regras são compatíveis: o texto geral não determina que uma delas seja descartada sem análise.",
+      "prova": [
+        "A cláusula revoga integralmente o CPP? Não; refere-se às disposições em contrário.",
+        "É necessário verificar incompatibilidade ao aplicar a cláusula? Sim; não se presume revogação indiscriminada."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "03e6b9b3-97ab-53a8-a430-883361bb42d9",
+        "content_sha256": "6e88e88b1a0e3bd66799665543a7bc49b18e55e7e71b66c30d670312be4db91d",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Normas incompatíveis foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "dadf4020-8f29-5aea-ad02-d55948459441",
+      "content_sha256": "99973903941e33281476709e2dffbf3b8419f8a14c835422515d00ddefa25bb9",
+      "simples": "A tortura abrange obtenção de informação/confissão, provocação de crime e discriminação racial/religiosa com violência ou grave ameaça; castigo/prevenção exige guarda, poder ou autoridade e sofrimento intenso. A Lei Barbara Penna, 15.410/2026, acrescentou sofrimento intenso reiterado de mulher em violência doméstica/familiar, em vigor desde a publicação em 21/05/2026. A pena básica é reclusão de 2 a 8 anos; omissão com dever de evitar/apurar recebe detenção de 1 a 4.",
+      "pontos": [
+        "Lesão grave/gravíssima: reclusão 4–10; morte: 8–16.",
+        "Aumento 1/6 a 1/3: agente público; vítimas enumeradas; sequestro.",
+        "Perda de cargo/função/emprego e interdição pelo dobro da pena; inafiançabilidade e vedação de graça/anistia.",
+        "Texto do §7º indica fechado, mas STJ aplica individualização pelo CP e Súmulas 440/STJ e 719/STF.",
+        "Informativo STJ 904, outubro/2026: majorante de agente público é compatível com tortura de pessoa presa, sem bis in idem automático."
+      ],
+      "atencao": [
+        "Não confundir detenção da omissão com reclusão dos tipos ativos.",
+        "O novo inciso III exige reiteração; não classificar toda discussão doméstica como tortura.",
+        "Na literalidade da majorante, a idade é maior de 60, não substituir silenciosamente por 60 ou mais.",
+        "Crime inafiançável não significa automaticamente imprescritível.",
+        "Regime inicial fechado não é obrigatório pela mera gravidade abstrata."
+      ],
+      "exemplo": "O agressor submete reiteradamente a mulher a sofrimento intenso em contexto doméstico: examinam-se os elementos do inciso III e as demais infrações cabíveis. Em outro caso, agente público impõe sofrimento ilegal a preso: a majorante pode incidir com o §1º, conforme STJ 904. Variação: Quem tinha dever de evitar ou apurar apenas se omite: examina-se o §2º, com pena distinta. Ao fixar regime, o juiz individualiza e não aplica fechado automaticamente só pelo nome do crime.",
+      "prova": [
+        "A omissão do §2º tem pena de reclusão de 2 a 8 anos? Não; sua pena é detenção de 1 a 4.",
+        "O inciso III exige sofrimento intenso reiterado no contexto doméstico/familiar? Sim; são elementos da redação de 2026.",
+        "Toda condenação por tortura exige automaticamente regime inicial fechado? Não; a jurisprudência exige individualização.",
+        "A majorante de agente público é sempre incompatível com tortura de pessoa presa? Não; o STJ 904 reconheceu compatibilidade porque as circunstâncias são distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D014772",
+        "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D022658"
+      ],
+      "expected": {
+        "unit_id": "dadf4020-8f29-5aea-ad02-d55948459441",
+        "content_sha256": "99973903941e33281476709e2dffbf3b8419f8a14c835422515d00ddefa25bb9",
+        "simples": "Constitui crime de tortura constranger alguém com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental, com o fim de obter informação, declaração ou confissão da vítima ou de terceira pessoa; para provocar ação ou omissão de natureza criminosa; ou em razão de discriminação racial ou religiosa; submeter alguém, sob sua guarda, poder ou autoridade, com emprego de violência ou grave ameaça, a intenso sofrimento físico ou mental, como forma de aplicar castigo pessoal ou medida de caráter preventivo; e submeter mulher, reiteradamente, a intenso sofrimento físico ou mental, no contexto de violência doméstica e familiar. Pena: reclusão de dois a oito anos. Na mesma pena incorre quem submete pessoa presa ou sujeita a medida de segurança a sofrimento físico ou mental por ato não previsto em lei ou não resultante de medida legal. Quem se omite, quando tinha o dever de evitar ou apurar, incorre em detenção de um a quatro anos. Se resulta lesão grave ou gravíssima, reclusão de quatro a dez anos; se resulta morte, de oito a dezesseis anos. A pena aumenta de um sexto até um terço se cometido por agente público, contra criança, gestante, pessoa com deficiência, adolescente ou maior de 60 anos, ou mediante sequestro. A condenação acarreta a perda do cargo e a interdição pelo dobro da pena. O crime é inafiançável e insuscetível de graça ou anistia, e o regime inicial é o fechado, salvo na omissão.",
+        "pontos": [
+          "I: tortura-prova, tortura-crime e tortura-discriminação (constranger com violência ou grave ameaça).",
+          "II: tortura-castigo contra quem está sob guarda, poder ou autoridade.",
+          "III: tortura da mulher em violência doméstica, reiteradamente.",
+          "Pena: reclusão de 2 a 8 anos.",
+          "§1º: tortura de preso ou de quem cumpre medida de segurança.",
+          "§2º: omissão (detenção de 1 a 4 anos).",
+          "§3º: qualificadoras (lesão: quatro a dez anos; morte: oito a dezesseis anos).",
+          "§4º: aumento de 1/6 a 1/3.",
+          "§5º: perda do cargo e interdição pelo dobro da pena.",
+          "§6º e §7º: inafiançável, sem graça ou anistia; regime inicial fechado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso III incluído pela Lei nº 15.410, de 2026 (tortura da mulher em violência doméstica).",
+          "Crime COMUM (qualquer pessoa pode praticar), com causa de aumento para agente público.",
+          "Equiparado a hediondo.",
+          "Perda do cargo: efeito da condenação, pelo dobro do prazo da pena."
+        ],
+        "exemplo": "Policial que agride o preso para obter confissão pratica tortura, com aumento por ser agente público.",
+        "prova": [
+          "Assertiva que considera a tortura crime próprio de agente público erra: é crime comum, com aumento quando cometido por agente público."
+        ],
+        "termos": [
+          {
+            "termo": "Tortura-prova",
+            "significado": "Tortura para obter informação, declaração ou confissão."
+          }
+        ],
+        "remissoes": [
+          "Lei dos Crimes Hediondos",
+          "Lei de Abuso de Autoridade"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "cdebd957-a710-5c0d-8a2c-2b21e53d073a",
+      "content_sha256": "e1cd312b892ce9843d3a29e2d137a5c154adaaca3500a5c6a6d9fd830d68e73f",
+      "simples": "A lei também se aplica a crime cometido fora do Brasil quando a vítima é brasileira ou o agente se encontra em local sob jurisdição brasileira. O artigo usa alternativas, e não exige simultaneamente nacionalidade brasileira da vítima e presença do autor.",
+      "pontos": [
+        "Memória: vítima brasileira OU agente sob jurisdição brasileira."
+      ],
+      "atencao": [
+        "Não trocar a conjunção ou por e.",
+        "Aplicação da lei não dispensa garantias processuais e análise dos fatos."
+      ],
+      "exemplo": "A vítima é brasileira e o crime ocorreu no exterior: o artigo contém hipótese de aplicação. Variação: A vítima é estrangeira, mas o agente se encontra sob jurisdição brasileira: a outra hipótese deve ser examinada.",
+      "prova": [
+        "As duas condições precisam ocorrer juntas? Não; o texto usa alternativas.",
+        "O artigo se limita a fatos ocorridos dentro do território nacional? Não; prevê aplicação também fora dele."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "cdebd957-a710-5c0d-8a2c-2b21e53d073a",
+        "content_sha256": "e1cd312b892ce9843d3a29e2d137a5c154adaaca3500a5c6a6d9fd830d68e73f",
+        "simples": "O disposto na Lei aplica-se ainda quando o crime não tenha sido cometido em território nacional, sendo a vítima brasileira ou encontrando-se o agente em local sob jurisdição brasileira.",
+        "pontos": [
+          "Aplica-se ao crime cometido fora do território nacional.",
+          "Quando a vítima for brasileira.",
+          "Ou quando o agente estiver em local sob jurisdição brasileira."
+        ],
+        "atencao": [
+          "Extraterritorialidade da lei brasileira."
+        ],
+        "exemplo": "Tortura cometida no exterior contra um brasileiro pode ser punida pela lei brasileira.",
+        "prova": [
+          "Assertiva que restringe a lei ao crime cometido em território nacional erra."
+        ],
+        "termos": [
+          {
+            "termo": "Extraterritorialidade",
+            "significado": "Aplicação da lei brasileira a fatos ocorridos no exterior."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "ef672a8d-080a-5074-b7c0-c36a1b86f05c",
+      "content_sha256": "beb64cfe34bd57e4a185559dd41f05d6400cffd658a6d0ef86b6716821283271",
+      "simples": "A Lei 9.455 entrou em vigor na publicação. A alteração de 2026 também adotou publicação como marco próprio; para a nova modalidade penal, deve-se respeitar a irretroatividade da lei penal mais gravosa.",
+      "pontos": [
+        "Vigência original: publicação; nova modalidade: publicação da Lei 15.410 em 21/05/2026."
+      ],
+      "atencao": [
+        "Não usar uma nova incriminação mais gravosa para fatos anteriores ao marco legal."
+      ],
+      "exemplo": "A prova pergunta quando a lei original iniciou vigência: na publicação. Variação: O fato é anterior à nova modalidade de 2026: não se aplica retroativamente a nova incriminação mais gravosa; examina-se a legislação aplicável ao fato.",
+      "prova": [
+        "O art. 3º fixa vacância de 45 dias? Não; usa a publicação.",
+        "A nova modalidade pode retroagir automaticamente para prejudicar o acusado? Não; deve-se respeitar a irretroatividade penal mais gravosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm"
+      ],
+      "expected": {
+        "unit_id": "ef672a8d-080a-5074-b7c0-c36a1b86f05c",
+        "content_sha256": "beb64cfe34bd57e4a185559dd41f05d6400cffd658a6d0ef86b6716821283271",
+        "simples": "Esta Lei entra em vigor na data de sua publicação.",
+        "pontos": [
+          "Vigência imediata, na data da publicação."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei começou a valer no dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis para a Lei de Tortura erra: vigora na data da publicação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
+      "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
+      "simples": "A Lei de Tortura revogou o art. 233 do ECA, antigo dispositivo sobre tortura. Não revogou todo o Estatuto nem o art. 232, que trata de vexame ou constrangimento de criança/adolescente sob autoridade, guarda ou vigilância.",
+      "pontos": [
+        "Revogado: ECA art. 233; não confundir com art. 232."
+      ],
+      "atencao": [
+        "Nem todo constrangimento é automaticamente tortura: examinar elementos de cada tipo."
+      ],
+      "exemplo": "O material cita o art. 233 do ECA como crime vigente: deve ser corrigido pela revogação expressa. Variação: A conduta envolve vexame no art. 232: esse artigo não foi revogado pelo art. 4º da Lei de Tortura.",
+      "prova": [
+        "Foi revogado todo o ECA? Não; a revogação é do art. 233.",
+        "O artigo revogado foi o 232? Não; foi o 233."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ],
+      "expected": {
+        "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
+        "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
+        "simples": "Revoga-se o art. 233 do Estatuto da Criança e do Adolescente, que previa o crime de submeter criança ou adolescente sob autoridade, guarda ou vigilância a tortura.",
+        "pontos": [
+          "Revoga o crime de tortura do ECA (art. 233).",
+          "A conduta passa a ser tratada pela Lei de Tortura."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A tortura de criança sob guarda passou a ser tratada pela lei específica.",
+        "prova": [
+          "Assertiva que mantém em vigor o crime de tortura previsto no ECA erra: foi revogado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { scrollAppToTop } from "@/lib/appScroll";
+import { platformDate } from "@/lib/platformClock";
 import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -134,7 +136,7 @@ function AdminContestsPage() {
       study_tips: r.study_tips ?? "",
       source_url: r.source_url ?? "",
     });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollAppToTop();
   }
 
   async function fetchFromUrl() {
@@ -240,12 +242,12 @@ function AdminContestsPage() {
       .update({
         content_status: "publicado",
         reviewed_by: user?.id ?? null,
-        reviewed_at: new Date().toISOString(),
+        reviewed_at: platformDate().toISOString(),
       })
       .eq("id", r.id);
     if (error) toast.error("Não foi possível publicar.");
     else {
-      toast.success("Publicado! Já aparece em Concursos disponíveis.");
+      toast.success("Publicado! Já aparece em Concursos e editais.");
       void load();
     }
   }

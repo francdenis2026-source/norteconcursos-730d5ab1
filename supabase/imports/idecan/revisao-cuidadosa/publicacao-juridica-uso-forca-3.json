@@ -1,0 +1,261 @@
+{
+  "batch_id": "idecan-use-of-force-3-v1",
+  "changes": [
+    {
+      "id": "b88e0433-aa12-4a06-8395-9dd4f6c0df9b",
+      "local_index": 30,
+      "expected": {
+        "id": "b88e0433-aa12-4a06-8395-9dd4f6c0df9b",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Agente de Polícia Civil 2026",
+        "career_name": "Agente de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo B",
+        "item_number": 31,
+        "subject": "Direitos Humanos",
+        "support_text": null,
+        "stem": "Nos termos expressos da Lei nº 13.060/2014, o uso de instrumentos de menor potencial ofensivo pelos agentes de segurança pública:",
+        "options": {
+          "A": "Deve observar os princípios da legalidade, necessidade, razoabilidade e proporcionalidade, priorizando-se sua utilização em detrimento do uso de armas de fogo.",
+          "B": "É facultativo, podendo o agente optar livremente pelo uso de arma de fogo sempre que julgar conveniente à atuação policial.",
+          "C": "Somente é permitido após esgotadas todas as tentativas de negociação, ainda que inexistente risco iminente.",
+          "D": "Restringe-se às situações de contenção de manifestações públicas e controle de distúrbios civis.",
+          "E": "Depende de autorização expressa da autoridade superior hierárquica para cada ocorrência concreta."
+        },
+        "official_answer": "A",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa A é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+        "answer_key_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; sem alteração legislativa localizada em 2026-10-22; ainda exige decisão individual antes de ativar Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T17:00:15.234319+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "5878c3730467ccffc55b3c64adb99bcff39cb397f5e133153174b820e2b7d2ef",
+        "import_unique_key": "5878c3730467ccffc55b3c64adb99bcff39cb397f5e133153174b820e2b7d2ef"
+      },
+      "patch": {
+        "explanation": "A Lei 13.060/2014 prioriza instrumentos de menor potencial ofensivo, desde que isso não ponha em risco a integridade física ou psíquica dos policiais, e exige legalidade, necessidade, razoabilidade e proporcionalidade: A.\n\nErro comum: A preferência legal não cria obrigação cega de usar qualquer instrumento em qualquer situação.\n\nExemplo prático: A escolha do meio deve considerar a ameaça concreta, a proteção das pessoas e as condições de segurança previstas na lei.",
+        "legal_basis": [
+          {
+            "title": "Lei 13.060/2014",
+            "artigo": "2",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+          }
+        ],
+        "law_version_checked_at": "2026-10-23T04:43:19.991470+00:00",
+        "legal_review_required": false,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "tested_topic": "A Lei 13",
+        "content_status": "active",
+        "review_note": "disciplina atribuída pela ordem do caderno; sem alteração legislativa localizada em 2026-10-22; ainda exige decisão individual antes de ativar Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Revisão final de uso da força: dispositivo vigente conferido no Planalto, gabarito definitivo, enunciado e alternativas cotejados; tópico real PF 2025. Pertinência temática, sem previsão de edital PC-AC."
+      },
+      "evidence": {
+        "publication_approved": true,
+        "context_complete": true,
+        "answer_verified": true,
+        "legal_current": true,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+        "syllabus_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+        "booklet_sha256": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+        "answer_key_sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+            "sha256": "5f8239efb481aebea09243dbfe402e41a0e7aab21b029cf1b2ad2beb3ffec62b",
+            "checked_at": "2026-10-23T04:06:12.727303+00:00",
+            "article": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3aa102d1-436e-4e61-b9ed-898f866da0f7",
+      "local_index": 33,
+      "expected": {
+        "id": "3aa102d1-436e-4e61-b9ed-898f866da0f7",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Agente de Polícia Civil 2026",
+        "career_name": "Agente de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo B",
+        "item_number": 34,
+        "subject": "Direitos Humanos",
+        "support_text": null,
+        "stem": "Nos termos do Decreto nº 12.341/2024, constituem princípios gerais do uso da força em segurança pública:",
+        "options": {
+          "A": "A legalidade, a autoridade, a coercitividade, a autotutela e a indisponibilidade do interesse público.",
+          "B": "A legalidade, a eficiência, a economicidade, a moralidade, a publicidade e a supremacia do interesse público.",
+          "C": "A legalidade, a precaução, a necessidade, a proporcionalidade, a razoabilidade, a responsabilização e a não discriminação.",
+          "D": "A legalidade, a hierarquia, a disciplina, a oportunidade e a conveniência administrativa.",
+          "E": "A legalidade, a eficiência, a transparência, a prevenção e a repressão qualificada."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "title": "Norma vigente conferida"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa C é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+        "answer_key_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; norma vigente conferida em 2026-10-22; ainda exige decisão individual antes de ativar (Decreto 12.341/2024 vigente; art. 2º confere com o gabarito.) Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T17:00:15.234319+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "7f0fd86902549f0dcb43b4f0005d349b729c28b63c94aeb3b1ebc85fd7a07d94",
+        "import_unique_key": "7f0fd86902549f0dcb43b4f0005d349b729c28b63c94aeb3b1ebc85fd7a07d94"
+      },
+      "patch": {
+        "explanation": "O art. 2º enumera legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação: C. A lista é específica para uso da força.\n\nErro comum: Princípios administrativos conhecidos não substituem a enumeração expressa do decreto.\n\nExemplo prático: Uma ação deve minimizar danos previsíveis e evitar tratamento discriminatório, além de perseguir um objetivo legal.",
+        "legal_basis": [
+          {
+            "title": "Decreto 12.341/2024",
+            "artigo": "2",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+          }
+        ],
+        "law_version_checked_at": "2026-10-23T04:43:19.991501+00:00",
+        "legal_review_required": false,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "tested_topic": "O art",
+        "content_status": "active",
+        "review_note": "disciplina atribuída pela ordem do caderno; norma vigente conferida em 2026-10-22; ainda exige decisão individual antes de ativar (Decreto 12.341/2024 vigente; art. 2º confere com o gabarito.) Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Revisão final de uso da força: dispositivo vigente conferido no Planalto, gabarito definitivo, enunciado e alternativas cotejados; tópico real PF 2025. Pertinência temática, sem previsão de edital PC-AC."
+      },
+      "evidence": {
+        "publication_approved": true,
+        "context_complete": true,
+        "answer_verified": true,
+        "legal_current": true,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+        "syllabus_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+        "booklet_sha256": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+        "answer_key_sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "sha256": "c2c25de2c94ff8359367177f67f516dd021bd8e4a11ba82d07fd94edb0d462b8",
+            "checked_at": "2026-10-23T04:06:13.869864+00:00",
+            "article": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5ee3b4ed-5693-41c8-bd51-8c5f9d786e66",
+      "local_index": 207,
+      "expected": {
+        "id": "5ee3b4ed-5693-41c8-bd51-8c5f9d786e66",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Escrivão de Polícia Civil 2026",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo A",
+        "item_number": 34,
+        "subject": "Direitos Humanos",
+        "support_text": null,
+        "stem": "Nos termos do art. 6º do Decreto nº 12.341/2024, no que se refere às diretrizes que os órgãos de segurança pública deverão observar para implementação do disposto na Lei nº 13.060/2014, assinale a alternativa correta.",
+        "options": {
+          "A": "Os órgãos de segurança pública deverão observar, como diretriz, a publicação de dados sobre o uso da força apenas quando houver lesão corporal ou morte.",
+          "B": "Os órgãos de segurança pública deverão observar, entre outras diretrizes, o registro e a publicação de dados sobre o uso da força.",
+          "C": "A implementação do Decreto dispensa a adoção de diretrizes relativas ao uso da força, por se tratar de matéria de execução discricionária.",
+          "D": "A disponibilização de equipamentos e instrumentos aos profissionais em serviço constitui diretriz apenas quando houver regulamentação local posterior.",
+          "E": "A capacitação sobre o uso diferenciado da força é diretriz restrita aos profissionais que empreguem arma de fogo."
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "title": "Sem alteração legislativa localizada"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa B é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+        "answer_key_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/gabarito-oficial-escrivao.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T21:25:19.286722+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "3cd63ddd52299351016289e9fdb2f223b26827da311c65b4f464a6805922cf7e",
+        "import_unique_key": "3cd63ddd52299351016289e9fdb2f223b26827da311c65b4f464a6805922cf7e"
+      },
+      "patch": {
+        "explanation": "O art. 6º, II, inclui registro e publicação de dados sobre uso da força entre as diretrizes dos órgãos de segurança pública: B. A diretriz não se limita, pela redação desse inciso, a lesão corporal ou morte.\n\nErro comum: Não trocar uma diretriz geral por um recorte de outras obrigações de registro previstas no decreto.\n\nExemplo prático: Publicar dados de uso da força e elaborar relatório de uma ocorrência específica são deveres que podem ter requisitos próprios.",
+        "legal_basis": [
+          {
+            "title": "Decreto 12.341/2024",
+            "artigo": "6",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+          }
+        ],
+        "law_version_checked_at": "2026-10-23T04:43:19.991522+00:00",
+        "legal_review_required": false,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "tested_topic": "O art",
+        "content_status": "active",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Revisão final de uso da força: dispositivo vigente conferido no Planalto, gabarito definitivo, enunciado e alternativas cotejados; tópico real PF 2025. Pertinência temática, sem previsão de edital PC-AC."
+      },
+      "evidence": {
+        "publication_approved": true,
+        "context_complete": true,
+        "answer_verified": true,
+        "legal_current": true,
+        "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+        "syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+        "syllabus_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+        "booklet_sha256": "7d75eb4e9e447dae31b5a7f66cddd4a6bfde140dfbe54e1201f564017c5b8fa8",
+        "answer_key_sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "sha256": "c2c25de2c94ff8359367177f67f516dd021bd8e4a11ba82d07fd94edb0d462b8",
+            "checked_at": "2026-10-23T04:06:13.869864+00:00",
+            "article": "6"
+          }
+        ]
+      }
+    }
+  ]
+}

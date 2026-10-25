@@ -1,0 +1,82 @@
+{
+  "checked_at": "2026-10-16T04:15:58.867Z",
+  "tables": [
+    {
+      "table": "official_exam_questions",
+      "total": 4888,
+      "active": 4011,
+      "under_review": 553,
+      "archived": 256,
+      "obsolete": 31,
+      "annulled": 37,
+      "revoked": 0
+    },
+    {
+      "table": "board_exam_questions",
+      "total": 1054,
+      "active": 691,
+      "under_review": 356,
+      "archived": 7,
+      "obsolete": 0,
+      "annulled": 0,
+      "revoked": 0
+    },
+    {
+      "table": "curated_question_catalog",
+      "total": 1792,
+      "active": 1790,
+      "under_review": 0,
+      "archived": 0,
+      "obsolete": 2,
+      "annulled": 0,
+      "revoked": 0
+    },
+    {
+      "table": "question_bank",
+      "total": 34,
+      "active": 34,
+      "under_review": 0,
+      "archived": 0,
+      "obsolete": 0,
+      "annulled": 0,
+      "revoked": 0
+    }
+  ],
+  "totals": {
+    "total": 7768,
+    "active": 6526,
+    "under_review": 909,
+    "archived": 263,
+    "obsolete": 33,
+    "annulled": 37,
+    "revoked": 0
+  },
+  "scope": "Registros físicos nas quatro tabelas de questões; inclui 34 registros pessoais. Não é contagem de questões únicas ou certificação jurídica do acervo.",
+  "last_published_review": {
+    "contest": "PC-AC 2017 Agente, S01-V",
+    "editorial_decisions": 79,
+    "activated": 72,
+    "archived_historical": 4,
+    "obsolete": 3,
+    "texts_recovered": 79,
+    "pending_in_exam": 0,
+    "this_batch": {
+      "final_editorial_decisions": 5,
+      "activated": 5,
+      "context_repairs": 5,
+      "item_numbers": [
+        2,
+        6,
+        7,
+        8,
+        10
+      ],
+      "user_provided_pdf_verified": true
+    },
+    "external_changes": "Desde o inventário anterior, board_exam_questions passou de 541 para 691 ativos e de 506 para 356 under_review (+150/-150), por operações externas a este lote. A alteração oficial deste lote é somente +5 active e -5 under_review em official_exam_questions. Na comparação dos metadados desta retomada houve uma nova fonte externa, com todas as fontes, edições e tópicos anteriores preservados; este lote não criou nem modificou esses metadados.",
+    "pending_context_items": [],
+    "pending_context_analyses_prepared": 0,
+    "pending_context_analyses_resolved": 5
+  },
+  "library_changes_this_batch": 0
+}

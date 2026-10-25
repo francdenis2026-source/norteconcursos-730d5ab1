@@ -1,0 +1,74 @@
+{
+  "batch_id": "idecan-pmsc-ti-transcription-v1",
+  "checked_at": "2026-10-23",
+  "scope": "somente correção da transcrição; os três itens seguem under_review",
+  "source": {
+    "booklet_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf",
+    "booklet_sha256": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+    "booklet_page": 7,
+    "official_key_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+    "official_key_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "definitive_answers": {"20": "E", "21": "D", "22": "B"}
+  },
+  "changes": [
+    {
+      "question_id": "194bc2b3-22c2-4af4-8dd7-63992c1e8b71",
+      "item": 20,
+      "confirmed_problem": "A alternativa D estava como Spam; o PDF traz File Explorer.",
+      "restored_option_d": "File Explorer.",
+      "answer_preserved": "E",
+      "state_after_sql": "under_review",
+      "before_snapshot": {
+        "stem": "Em uma distribuição Linux baseada no ambiente gráfico Xfce, o usuário interage com um gerenciador de arquivos leve, de código aberto, projetado para ser rápido e integrado ao próprio desktop, com suporte nativo a extensões como scripts e ações personalizadas. Esse software é conhecido como:",
+        "options": {"A":"Firefox.","B":"Gedit.","C":"PulseAudio.","D":"Spam.","E":"Thunar."},
+        "official_answer": "E",
+        "content_status": "under_review"
+      }
+    },
+    {
+      "question_id": "1f3faaa3-ab7b-49aa-9183-8e6a5e32e72e",
+      "item": 21,
+      "confirmed_problem": "O enunciado recebeu o final da questão 23; as opções A/B também foram substituídas.",
+      "restored_options": {"A":"Inválido.","B":"VERDADEIRO.","C":"FALSO.","D":"Válido.","E":"Erro."},
+      "answer_preserved": "D",
+      "state_after_sql": "under_review",
+      "before_snapshot": {
+        "stem": "Em uma planilha eletrônica, as células A4, B4 e C4 contêm, respectivamente, os valores 5, 6 e 35. Na célula D4, foi inserida a fórmula =SE(A4*B4<C4; “Válido”; “Inválido”). O resultado exibido em D4 será: plataforma é identificada como:",
+        "options": {"A":"Zoom.","B":"Google Meet.","C":"FALSO.","D":"Válido.","E":"Erro."},
+        "official_answer": "D",
+        "content_status": "under_review"
+      }
+    },
+    {
+      "question_id": "96007045-d3fb-45c9-acf0-68eae8af1c76",
+      "item": 22,
+      "confirmed_problem": "Todas as opções locais vieram da questão 19; o PDF lista categorias de malware.",
+      "restored_options": {"A":"Ransomware.","B":"Spyware.","C":"Phishing.","D":"Spam.","E":"Firewall."},
+      "answer_preserved": "B",
+      "state_after_sql": "under_review",
+      "before_snapshot": {
+        "stem": "Um software malicioso é instalado silenciosamente em um computador corporativo e, sem o consentimento do usuário, passa a registrar as teclas digitadas, capturar screenshots e exfiltrar credenciais de acesso a sistemas internos para um servidor controlado por atores maliciosos. Esse tipo de ameaça é classificado como:",
+        "options": {"A":"Módulo de Plataforma Confiável (TPM).","B":"Unidade de Processamento Gráfico (GPU).","C":"Memória de Acesso Aleatório (RAM).","D":"Controlador de Disco Rígido (HDD Controller).","E":"Adaptador de Rede (NIC)."},
+        "official_answer": "B",
+        "content_status": "under_review"
+      }
+    }
+  ],
+  "curriculum_match": {
+    "edition": "Polícia Federal — Agente de Polícia Federal, edital 2025, Retificação nº 4",
+    "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+    "official_source_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "official_source_status_in_snapshot": "vigente / is_official=true",
+    "matches": [
+      {"item": 20, "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf", "excerpt": "2.2 Noções de sistema operacional (ambiente Linux e Windows); 17.1 Noções de sistema operacional (ambiente Linux e Windows)."},
+      {"item": 21, "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf", "excerpt": "2.4 Edição de textos, planilhas e apresentações (ambientes Microsoft Office e LibreOffice)."},
+      {"item": 22, "topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906", "excerpt": "4.1 Noções de vírus, worms e pragas virtuais. 4.2 Aplicativos para segurança (antivírus, firewall, anti-spyware etc.)."}
+    ],
+    "qualification": "Compatibilidade para treino do edital PF Agente 2025; não constitui previsão PC-AC nem vínculo ao edital PMSC 2026."
+  },
+  "link_sql_path": "pmsc-informatica-vinculo-edital.sql",
+  "link_sql_applied": true,
+  "link_sql_application_reported_by_user": true,
+  "independent_public_readback": "não disponível: RLS não permite leitura pública de linhas individuais do catálogo de provas",
+  "remote_applied": false
+}

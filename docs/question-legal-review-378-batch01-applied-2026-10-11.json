@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-11T15:38:31.152643+00:00",
+  "scope_total": 378,
+  "individual_decisions": 100,
+  "remaining_individual_review": 278,
+  "publication_statuses": {
+    "under_review": 294,
+    "active": 84
+  },
+  "decisions": {
+    "verified": 84,
+    "legally_verified_context_pending": 2,
+    "legally_verified_syllabus_pending": 14
+  },
+  "unexpected_changes": [],
+  "preserved_original_text_and_keys": true
+}

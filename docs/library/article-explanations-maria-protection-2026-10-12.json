@@ -1,0 +1,1021 @@
+{
+  "version": "2026-10-12-maria-protection-targeted",
+  "checked_at": "2026-10-12T18:22:02.797936+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "maria-penha",
+      "title": "Lei 11.340/2006 — Lei Maria da Penha",
+      "units": 16,
+      "scope_type": "targeted_correction",
+      "course_current_units": 56,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-10-a",
+        "art-11",
+        "art-12",
+        "art-12-a",
+        "art-12-c",
+        "art-12-d"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "source_checked_at": "2026-10-12T16:18:21.610439+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "9e88a238-bda7-51cc-b43c-fcfd174627ce",
+      "content_sha256": "20d0b5dce8ba5794bee87647500bb70bd11e0534235dffb4c8ce1e31ad26f455",
+      "simples": "A Lei Maria da Penha organiza prevenção, assistência, proteção e juizados especializados contra violência doméstica/familiar, fundada na Constituição e tratados de direitos humanos.",
+      "pontos": [
+        "Não se limita a aumentar penas: contém rede de atendimento e medidas protetivas.",
+        "Art. 226, §8º, Constituição e convenções internacionais fundamentam proteção e prevenção."
+      ],
+      "atencao": [
+        "STF, Tema 1412, julgado em 19/08/2026: medidas protetivas alcançam violência contra mulher baseada no gênero também fora do ambiente doméstico/familiar/afetivo. Não transportar automaticamente toda regra penal ou competência a qualquer conflito."
+      ],
+      "exemplo": "Mulher ameaçada procura proteção urgente e serviços de apoio, além de eventual investigação. Variação: ameaça de gênero por vizinho sem vínculo afetivo pode receber medidas protetivas conforme Tema 1412; falta de coabitação não encerra a análise.",
+      "prova": [
+        "A lei se restringe a sanções penais? Não; também organiza assistência, prevenção e proteção.",
+        "Falta de vínculo doméstico impede sempre medidas protetivas de gênero? Não; o Tema 1412 ampliou sua aplicação."
+      ],
+      "termos": [
+        "coibir e prevenir",
+        "assistência e proteção",
+        "tratados internacionais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=7171450&numeroProcesso=1537713&numeroTema=1412"
+      ],
+      "expected": {
+        "unit_id": "9e88a238-bda7-51cc-b43c-fcfd174627ce",
+        "content_sha256": "20d0b5dce8ba5794bee87647500bb70bd11e0534235dffb4c8ce1e31ad26f455",
+        "simples": "A Lei cria mecanismos para coibir e prevenir a violência doméstica e familiar contra a mulher, nos termos do art. 226, §8º, da Constituição, da Convenção sobre a Eliminação de Todas as Formas de Violência contra a Mulher, da Convenção Interamericana de Belém do Pará e de outros tratados ratificados pelo Brasil. Dispõe sobre a criação dos Juizados de Violência Doméstica e Familiar contra a Mulher e estabelece medidas de assistência e proteção às mulheres em situação de violência.",
+        "pontos": [
+          "Coibir e prevenir a violência doméstica e familiar contra a mulher.",
+          "Fundamento constitucional e em tratados internacionais.",
+          "Criação dos Juizados de Violência Doméstica e Familiar.",
+          "Medidas de assistência e proteção."
+        ],
+        "atencao": [
+          "A lei é de natureza mista: penal, processual, civil e de assistência.",
+          "Parâmetros internacionais: Convenção sobre a Eliminação de Todas as Formas de Violência contra a Mulher e Convenção de Belém do Pará."
+        ],
+        "exemplo": "A mulher agredida pelo companheiro recebe proteção por medidas urgentes e atendimento no Juizado especializado.",
+        "prova": [
+          "Assertiva que restringe a Lei Maria da Penha ao aspecto penal, sem medidas de assistência e proteção, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º",
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "410b9b84-f828-5f82-9fca-4acd76e98d39",
+      "content_sha256": "38604e70b0bd254b38bb9842f42a5622e5be6d1524090795550c82c3475153e4",
+      "simples": "Toda mulher tem direito a viver sem violência e preservar saúde física/mental e desenvolvimento, independentemente de classe, raça, etnia, orientação sexual, renda, cultura, escolaridade, idade ou religião.",
+      "pontos": [
+        "Não exigir renda baixa, casamento ou determinada religião para reconhecer proteção.",
+        "Tema 1186/STJ: em contexto doméstico/familiar, idade não exclui incidência e a Lei Maria da Penha prevalece em conflito com ECA."
+      ],
+      "atencao": [
+        "STF, MI 7452, 2025: proteção nas relações intrafamiliares alcança mulheres travestis/trans e casais homoafetivos masculinos nos termos do julgamento. No último caso, observar vulnerabilidade/subalternidade contextual e não estender automaticamente tipos penais por analogia contra o réu.",
+        "A extensão protetiva não elimina a análise do caso nem resolve automaticamente toda questão de competência."
+      ],
+      "exemplo": "Mulher de alta renda sofre violência doméstica: renda não afasta proteção. Variação: mulher trans em relação intrafamiliar violenta não perde proteção por identidade de gênero, conforme MI 7452.",
+      "prova": [
+        "A proteção exige pobreza da vítima? Não; renda é expressamente irrelevante à garantia.",
+        "Idade avançada ou adolescência exclui automaticamente a lei? Não; a lei não cria esse corte etário e o Tema 1186 trata da prevalência em conflito."
+      ],
+      "termos": [
+        "toda mulher",
+        "independentemente",
+        "idade",
+        "orientação sexual"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=6714998",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1186&cod_tema_inicial=1186&novaConsulta=true&tipo_pesquisa=T",
+        "https://www.tjdft.jus.br/consultas/jurisprudencia/jurisprudencia-em-temas/lei-maria-da-penha-na-visao-do-tjdft/da-violencia-domestica-e-familiar-contra-a-mulher/relacoes-homoafetivas"
+      ],
+      "expected": {
+        "unit_id": "410b9b84-f828-5f82-9fca-4acd76e98d39",
+        "content_sha256": "38604e70b0bd254b38bb9842f42a5622e5be6d1524090795550c82c3475153e4",
+        "simples": "Toda mulher, independentemente de classe, raça, etnia, orientação sexual, renda, cultura, nível educacional, idade e religião, goza dos direitos fundamentais inerentes à pessoa humana, sendo-lhe asseguradas as oportunidades e facilidades para viver sem violência, preservar sua saúde física e mental e seu aperfeiçoamento moral, intelectual e social.",
+        "pontos": [
+          "Proteção a toda mulher, sem distinção de classe, raça, etnia, orientação sexual, renda, cultura, instrução, idade ou religião.",
+          "Direito de viver sem violência e de preservar a saúde física e mental."
+        ],
+        "atencao": [
+          "A lei protege a mulher independentemente de ORIENTAÇÃO SEXUAL."
+        ],
+        "exemplo": "Mulher lésbica agredida pela companheira é protegida pela lei.",
+        "prova": [
+          "Assertiva que condiciona a proteção da lei à orientação sexual da mulher erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º, parágrafo único"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "34b54df2-5d36-5e91-9312-9fa47a571842",
+      "content_sha256": "62de027e7377489acc36154ae5690da5df750ac2fd2c863e38db0e6d26ffd466",
+      "simples": "Garantir direitos à vida, segurança, saúde, alimentação, educação, cultura, moradia, justiça, esporte, lazer, trabalho, cidadania, liberdade, dignidade, respeito e convivência. Família, sociedade e poder público devem criar condições efetivas.",
+      "pontos": [
+        "Poder público desenvolve políticas contra negligência, discriminação, exploração, violência, crueldade e opressão.",
+        "Responsabilidade de criar condições não é apenas da família nem apenas da polícia."
+      ],
+      "atencao": [
+        "O rol de direitos não equivale a concessão automática de qualquer benefício com valor e prazo inventados; observar medidas e programas previstos."
+      ],
+      "exemplo": "Rede pública articula abrigo, saúde e acesso à justiça para assegurar direitos efetivos. Variação: órgão atribui tudo exclusivamente à família e deixa de aplicar dever público; isso contraria responsabilidade compartilhada.",
+      "prova": [
+        "Apenas a família tem dever de criar condições de proteção? Não; sociedade e poder público também.",
+        "A lista autoriza inventar benefício financeiro sem regra própria? Não; políticas e benefícios exigem regime aplicável."
+      ],
+      "termos": [
+        "exercício efetivo",
+        "família, sociedade e poder público",
+        "direitos humanos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "34b54df2-5d36-5e91-9312-9fa47a571842",
+        "content_sha256": "62de027e7377489acc36154ae5690da5df750ac2fd2c863e38db0e6d26ffd466",
+        "simples": "Serão asseguradas às mulheres as condições para o exercício efetivo dos direitos à vida, à segurança, à saúde, à alimentação, à educação, à cultura, à moradia, ao acesso à justiça, ao esporte, ao lazer, ao trabalho, à cidadania, à liberdade, à dignidade, ao respeito e à convivência familiar e comunitária. O poder público desenvolverá políticas que visem garantir os direitos humanos das mulheres no âmbito das relações domésticas e familiares. Cabe à família, à sociedade e ao poder público criar as condições necessárias para o efetivo exercício desses direitos.",
+        "pontos": [
+          "Rol de direitos a serem assegurados à mulher.",
+          "Políticas públicas para resguardar da negligência, discriminação, exploração, violência, crueldade e opressão.",
+          "Responsabilidade da família, da sociedade e do poder público."
+        ],
+        "atencao": [
+          "A responsabilidade é TRÍPLICE: família, sociedade e poder público."
+        ],
+        "exemplo": "O poder público cria política de moradia para mulheres em situação de violência.",
+        "prova": [
+          "Assertiva que atribui apenas ao Estado o dever de criar as condições previstas no art. 3º erra: é também da família e da sociedade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "0961ca54-c52d-5b02-b5cb-794a77372c96",
+      "content_sha256": "f2b37bc223df2a3b12946705bd5be7470f5503167b66d163ab9fa2fac50fdc75",
+      "simples": "Interpretar a lei conforme seus fins sociais e as condições peculiares da mulher em situação de violência doméstica/familiar.",
+      "pontos": [
+        "Aplicação deve considerar contexto e finalidade de proteção.",
+        "A interpretação não pode ignorar vulnerabilidades e barreiras de acesso à justiça."
+      ],
+      "atencao": [
+        "Interpretação protetiva não dispensa garantias processuais, prova para condenação ou legalidade penal; distinguir proteção urgente e responsabilização definitiva."
+      ],
+      "exemplo": "Ao decidir pedido urgente, avaliar contexto de risco e obstáculos da ofendida. Variação: na condenação penal, finalidade protetiva não substitui demonstração dos elementos do crime.",
+      "prova": [
+        "O artigo exige considerar fins sociais? Sim; expressamente.",
+        "Finalidade protetiva elimina prova e defesa na condenação? Não; permanecem garantias penais/processuais."
+      ],
+      "termos": [
+        "fins sociais",
+        "condições peculiares"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "0961ca54-c52d-5b02-b5cb-794a77372c96",
+        "content_sha256": "f2b37bc223df2a3b12946705bd5be7470f5503167b66d163ab9fa2fac50fdc75",
+        "simples": "Na interpretação da Lei, serão considerados os fins sociais a que ela se destina e, especialmente, as condições peculiares das mulheres em situação de violência doméstica e familiar.",
+        "pontos": [
+          "Interpretação teleológica: fins sociais da lei.",
+          "Atenção às condições peculiares das mulheres em situação de violência."
+        ],
+        "atencao": [
+          "Regra de interpretação: fins sociais e condição peculiar da vítima."
+        ],
+        "exemplo": "Na dúvida, o juiz interpreta a lei de modo a proteger a mulher em situação de violência.",
+        "prova": [
+          "Assertiva que manda interpretar a lei apenas pela literalidade, sem os fins sociais, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "52ccbbf8-39ca-57ac-823a-23b791a1cabf",
+      "content_sha256": "b93c8840d29312b2bb0f36cf8ddca7a0fbe99e98e23b2c2d77f6cbcb4e6da6d2",
+      "simples": "O texto define ação/omissão baseada no gênero em unidade doméstica, família ou relação íntima de afeto, independentemente de coabitação e orientação sexual. Dano pode ser físico, sexual, psicológico, moral ou patrimonial.",
+      "pontos": [
+        "Unidade doméstica: convívio permanente com ou sem vínculo familiar, inclusive agregação esporádica.",
+        "Família: parentesco natural, afinidade ou vontade expressa.",
+        "Afeto: convivência atual ou passada; morar junto não é requisito universal."
+      ],
+      "atencao": [
+        "Atualização constitucional, Tema 1412/STF, 19/08/2026: medidas protetivas para violência de gênero também fora desses vínculos. Não ensinar que qualquer ausência de relação afetiva impede proteção urgente.",
+        "Art. 40-A e Tema 1186/STJ: não exigir prova específica de subjugação feminina em todo contexto doméstico abrangido. Distinguir incidência protetiva, fato penal e competência; um conflito sem elementos de violência não é automaticamente enquadrado."
+      ],
+      "exemplo": "Ex-companheiro ameaça a mulher após a separação, sem coabitação: relação passada pode integrar inciso III. Variação: perseguição de gênero por vizinho sem afeto exige considerar medidas protetivas do Tema 1412, em vez de negar proteção só pelo vínculo.",
+      "prova": [
+        "Exigir coabitação em toda relação íntima de afeto é correto? Não; o inciso III a dispensa.",
+        "Vínculo afetivo ausente exclui sempre medidas protetivas? Não; o Tema 1412 abrange violência de gênero além dos vínculos textuais."
+      ],
+      "termos": [
+        "ação ou omissão",
+        "baseada no gênero",
+        "independentemente de coabitação",
+        "orientação sexual"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=7171450&numeroProcesso=1537713&numeroTema=1412",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1186&cod_tema_inicial=1186&novaConsulta=true&tipo_pesquisa=T"
+      ],
+      "expected": {
+        "unit_id": "52ccbbf8-39ca-57ac-823a-23b791a1cabf",
+        "content_sha256": "b93c8840d29312b2bb0f36cf8ddca7a0fbe99e98e23b2c2d77f6cbcb4e6da6d2",
+        "simples": "Configura violência doméstica e familiar contra a mulher qualquer ação ou omissão baseada no gênero que lhe cause morte, lesão, sofrimento físico, sexual ou psicológico e dano moral ou patrimonial, no âmbito da unidade doméstica (espaço de convívio permanente, com ou sem vínculo familiar, inclusive as esporadicamente agregadas), no âmbito da família (comunidade de indivíduos que são ou se consideram aparentados, por laços naturais, por afinidade ou por vontade expressa) ou em qualquer relação íntima de afeto, na qual o agressor conviva ou tenha convivido com a ofendida, independentemente de coabitação. As relações pessoais independem de orientação sexual.",
+        "pontos": [
+          "Ação ou omissão BASEADA NO GÊNERO.",
+          "Consequências: morte, lesão, sofrimento físico, sexual ou psicológico, dano moral ou patrimonial.",
+          "I: unidade doméstica.",
+          "II: família.",
+          "III: relação íntima de afeto, independentemente de coabitação.",
+          "Independe de orientação sexual."
+        ],
+        "atencao": [
+          "Exige motivação de GÊNERO (vulnerabilidade da mulher).",
+          "Relação íntima de afeto: não exige coabitação (STJ).",
+          "A violência contra a trabalhadora doméstica pode configurar o inciso I."
+        ],
+        "exemplo": "Agressão do ex-namorado, que nunca coabitou com a vítima, por ciúmes, é violência doméstica.",
+        "prova": [
+          "Assertiva que exige coabitação para configurar a relação íntima de afeto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "bf193a34-2dc9-5c7f-aff0-1b9880467025",
+      "content_sha256": "4c228430771280fb2f2eebddb7c37aae50fe021ce2360805dfe0e00b71aea0bd",
+      "simples": "Violência doméstica/familiar contra mulher é violação dos direitos humanos.",
+      "pontos": [
+        "Reconhecimento fundamenta dever estatal e proteção, além da esfera privada.",
+        "Assistência, prevenção e resposta institucional integram a proteção dos direitos."
+      ],
+      "atencao": [
+        "Não tratar violência doméstica como assunto privado imune a intervenção. O conceito não define sozinho tipo penal ou sua pena."
+      ],
+      "exemplo": "Autoridade se recusa a agir por considerar agressão doméstica assunto privado: a lei a reconhece como violação de direitos humanos. Variação: identificar crime e pena exige examinar o tipo específico, além desse reconhecimento.",
+      "prova": [
+        "A violência doméstica é apenas conflito privado sem relevância de direitos humanos? Não; o artigo afirma a violação.",
+        "O art. 6º fixa sozinho uma pena para toda violência? Não; os tipos e penas têm disciplina própria."
+      ],
+      "termos": [
+        "violação dos direitos humanos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "bf193a34-2dc9-5c7f-aff0-1b9880467025",
+        "content_sha256": "4c228430771280fb2f2eebddb7c37aae50fe021ce2360805dfe0e00b71aea0bd",
+        "simples": "A violência doméstica e familiar contra a mulher constitui uma das formas de violação dos direitos humanos.",
+        "pontos": [
+          "Violência doméstica e familiar é violação de direitos humanos."
+        ],
+        "atencao": [
+          "Reconhecimento expresso do caráter de violação de direitos humanos."
+        ],
+        "exemplo": "A agressão do marido contra a esposa é tratada como violação de direitos humanos.",
+        "prova": [
+          "Assertiva que trata a violência doméstica como questão meramente privada erra: é violação de direitos humanos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "6524002f-57e6-53de-b9d9-7502493de36a",
+      "content_sha256": "feb7d7316070b26f8a0fa8ba5b140be559c7f771f05364d4be00a124142cee4f",
+      "simples": "A lei distingue violência física, psicológica, sexual, patrimonial, moral e, desde 2026, vicária. O rol é exemplificativo; uma situação pode envolver mais de uma forma.",
+      "pontos": [
+        "Física: integridade/saúde corporal. Psicológica: dano emocional, controle, humilhação, ameaça, isolamento, perseguição ou intimidade violada, entre meios previstos.",
+        "Sexual: relação não desejada, coerção, impedimento de contracepção, imposição de matrimônio/gravidez/aborto/prostituição e limitação de direitos sexuais/reprodutivos.",
+        "Patrimonial: retenção, subtração/destruição de bens, documentos, instrumentos de trabalho e recursos, inclusive necessidades. Moral: calúnia, difamação ou injúria.",
+        "Lei 15.384/2026: vicária é violência contra pessoa da rede ou relação indicada com vistas a atingir a mulher, incluindo ascendentes, descendentes, dependentes, enteados e pessoas sob guarda/responsabilidade."
+      ],
+      "atencao": [
+        "Violência vicária não exige necessariamente morte: não confundir conceito amplo com vicaricídio do CP 121-B, que tem elementos e pena próprios.",
+        "Não reduzir violência psicológica a agressão física nem tratar mera disputa patrimonial civil como violência automaticamente. Exemplos servem à distinção e não substituem prova e enquadramento."
+      ],
+      "exemplo": "Agressor retém documentos e instrumentos de trabalho para controlar a mulher: examinar violência patrimonial e possível psicológica. Variação: agride pessoa da rede de apoio para atingir a mulher; examinar violência vicária, sem presumir homicídio.",
+      "prova": [
+        "Violência vicária exige sempre morte? Não; o inciso VI descreve qualquer forma de violência com finalidade indicada.",
+        "As formas do artigo são apenas cinco após 2026? Não; a Lei 15.384 acrescentou a violência vicária."
+      ],
+      "termos": [
+        "entre outras",
+        "patrimonial",
+        "moral",
+        "com vistas a atingi-la"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6524002f-57e6-53de-b9d9-7502493de36a",
+        "content_sha256": "feb7d7316070b26f8a0fa8ba5b140be559c7f771f05364d4be00a124142cee4f",
+        "simples": "São formas de violência doméstica e familiar contra a mulher, entre outras: a violência física (conduta que ofenda a integridade ou a saúde corporal); a violência psicológica (conduta que cause dano emocional, diminuição da autoestima ou prejudique o desenvolvimento, ou vise degradar ou controlar ações, comportamentos, crenças e decisões, mediante ameaça, constrangimento, humilhação, manipulação, isolamento, vigilância constante, perseguição contumaz, insulto, chantagem, violação de intimidade, ridicularização, exploração e limitação do direito de ir e vir); a violência sexual (constranger a presenciar, manter ou participar de relação sexual não desejada, mediante intimidação, ameaça, coação ou força, impedir o uso de método contraceptivo, forçar ao matrimônio, gravidez, aborto ou prostituição); a violência patrimonial (retenção, subtração ou destruição de objetos, instrumentos de trabalho, documentos, bens, valores e direitos); e a violência moral (calúnia, difamação ou injúria).",
+        "pontos": [
+          "I: violência física.",
+          "II: violência psicológica.",
+          "III: violência sexual.",
+          "IV: violência patrimonial.",
+          "V: violência moral (calúnia, difamação, injúria).",
+          "Rol exemplificativo ('entre outras')."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a redação do inciso II veio da Lei nº 13.772, de 2018 (violação da intimidade).",
+          "O rol é EXEMPLIFICATIVO."
+        ],
+        "exemplo": "Ex-companheiro que retém os documentos pessoais da vítima pratica violência patrimonial.",
+        "prova": [
+          "Assertiva que considera taxativo o rol de formas de violência do art. 7º erra: o texto diz 'entre outras'."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "a2501606-af92-561b-a946-290107094bd3",
+      "content_sha256": "af55169bafb4b39b07954fd15647a85336cc9f8672af5fce9a58290f5f5e733d",
+      "simples": "Prevenção exige ações articuladas dos entes federativos e sociedade, com integração institucional, pesquisa, comunicação responsável, atendimento especializado, educação e capacitação permanente.",
+      "pontos": [
+        "Integrar Judiciário, MP e Defensoria com segurança, assistência, saúde, educação, trabalho e habitação.",
+        "Produzir/unificar dados, estudos e avaliações com perspectivas de gênero e raça/etnia; evitar estereótipos que legitimem violência.",
+        "Priorizar atendimento especializado, campanhas educativas e parcerias governamentais/não governamentais.",
+        "Capacitação permanente inclui polícias, Guarda Municipal, Bombeiros e rede; currículos escolares de todos os níveis devem destacar direitos humanos e equidade."
+      ],
+      "atencao": [
+        "Não restringir política à repressão policial ou somente a entidades estatais. Capacitação é permanente, não evento único suficiente por definição."
+      ],
+      "exemplo": "Município articula saúde, escola, polícia e Defensoria com campanhas e dados de avaliação. Variação: oferece apenas palestra única e considera dispensada integração permanente; isso não corresponde às diretrizes.",
+      "prova": [
+        "As diretrizes excluem ações não governamentais? Não; o caput prevê articulação também com elas.",
+        "Capacitação funcional é apenas eventual? Não; o inciso VII prevê capacitação permanente."
+      ],
+      "termos": [
+        "conjunto articulado",
+        "não-governamentais",
+        "capacitação permanente",
+        "todos os níveis"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "a2501606-af92-561b-a946-290107094bd3",
+        "content_sha256": "af55169bafb4b39b07954fd15647a85336cc9f8672af5fce9a58290f5f5e733d",
+        "simples": "A política pública que visa coibir a violência doméstica e familiar contra a mulher far-se-á por meio de um conjunto articulado de ações da União, dos Estados, do Distrito Federal e dos Municípios e de ações não governamentais, tendo por diretrizes a integração operacional do Judiciário, do Ministério Público e da Defensoria com as áreas de segurança pública, assistência social, saúde, educação, trabalho e habitação; a promoção de estudos e estatísticas com perspectiva de gênero e raça ou etnia; o respeito, nos meios de comunicação, dos valores éticos e sociais, coibindo papéis estereotipados; e a implementação de atendimento policial especializado, em particular nas Delegacias de Atendimento à Mulher, entre outras.",
+        "pontos": [
+          "Ações articuladas de todos os entes e de organizações não governamentais.",
+          "Integração do sistema de justiça com segurança, assistência, saúde, educação, trabalho e habitação.",
+          "Estudos e estatísticas com perspectiva de gênero e raça ou etnia.",
+          "Combate a papéis estereotipados nos meios de comunicação.",
+          "Atendimento policial especializado."
+        ],
+        "atencao": [
+          "Rol de diretrizes com várias frentes; confira o texto integral."
+        ],
+        "exemplo": "A Delegacia de Atendimento à Mulher presta atendimento policial especializado.",
+        "prova": [
+          "Assertiva que restringe a política pública a ações da União erra: é articulada entre os entes e organizações não governamentais."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+      "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a",
+      "simples": "Assistência prioritária no SUS e Susp, articulada com assistência social e políticas públicas, inclusive emergencial quando cabível. Protege trabalho, acesso à justiça, saúde, dependentes e reparação dos custos pelo agressor.",
+      "pontos": [
+        "Lei 14.887/2024: caráter prioritário no SUS/Susp. Juiz determina cadastro assistencial por prazo certo.",
+        "Servidora: acesso prioritário à remoção; trabalhadora: manutenção do vínculo por até seis meses quando afastamento necessário. Encaminhamento jurídico inclusive para dissolução de vínculo familiar.",
+        "Saúde sexual: contracepção de emergência, profilaxias e procedimentos necessários. Agressor ressarce danos, custos SUS/tabela e dispositivos de segurança, sem ônus à mulher/dependentes, sem atenuante ou substituição de pena por ressarcimento.",
+        "Dependentes: prioridade de matrícula/transferência na educação básica mais próxima, com documentos previstos; dados sigilosos com acesso reservado aos órgãos indicados."
+      ],
+      "atencao": [
+        "Não confundir vínculo trabalhista de até seis meses com promessa automática de salário/benefício de igual duração ou dispensa de decisão e requisitos.",
+        "Ressarcimento do agressor não permite transferir dívida à vítima nem comprar redução de pena. Cadastro assistencial por prazo certo não determina expiração automática de medidas protetivas enquanto persistir risco."
+      ],
+      "exemplo": "Mulher precisa se afastar do trabalho por segurança: observar preservação do vínculo e medidas de assistência cabíveis. Variação: agressor paga custos médicos e pretende atenuante automática; o §6º afasta esse efeito do ressarcimento.",
+      "prova": [
+        "Manutenção do vínculo é prevista por até seis meses? Sim; quando necessário o afastamento, nos termos do §2º.",
+        "Ressarcir custos pode impor dívida à vítima ou gerar atenuante por esse pagamento? Não; o §6º veda esses efeitos."
+      ],
+      "termos": [
+        "prioritário",
+        "até seis meses",
+        "prazo certo",
+        "sem ônus",
+        "sigilosos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14887.htm"
+      ],
+      "expected": {
+        "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+        "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a",
+        "simples": "A assistência prioritária e articulada envolve SUS, Susp e políticas sociais. O artigo prevê inclusão em programas assistenciais, proteção do vínculo trabalhista por até seis meses nas condições legais, assistência jurídica e cuidados de saúde. Também disciplina ressarcimento pelo agressor, prioridade escolar dos dependentes e sigilo dos dados.",
+        "pontos": [
+          "O §4º inclui ressarcimento de danos e custos de saúde ao SUS; o §5º trata de dispositivos de segurança."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "O ressarcimento não pode onerar a mulher ou seus dependentes, configurar atenuante nem permitir substituição da pena. Prioridade e integração no caput foram atualizadas pela Lei 14.887/2024."
+        ],
+        "exemplo": "O agressor causa lesões que exigem tratamento no SUS: o §4º prevê ressarcir esses custos, nos termos descritos. Variação: Ele pretende usar o ressarcimento como atenuante ou transferir o custo à vítima: o §6º afasta essas consequências.",
+        "prova": [
+          "Ressarcir o SUS autoriza reduzir a pena por esse motivo? Não; o §6º impede que esse ressarcimento configure atenuante ou enseje substituição da pena."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:04.127+00:00",
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T19:32:04.127+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "3cfc53ff-2c1e-522f-8aae-fc4a679c4f41",
+      "content_sha256": "538384392b765b58e6d9cc18a6e9b82e9cf1c08b17232b80d3f4fba8e76a9b70",
+      "simples": "Autoridade policial que conhece iminência/prática de violência deve adotar imediatamente providências cabíveis; a regra também alcança descumprimento de medida protetiva deferida.",
+      "pontos": [
+        "Iminência já demanda resposta: não esperar nova agressão consumada.",
+        "Resposta deve observar providências legais, proteção e competências próprias."
+      ],
+      "atencao": [
+        "Providência imediata não significa prisão automática em todo caso. Verificar flagrante, requisitos cautelares e proteção adequada, sem omissão de atendimento."
+      ],
+      "exemplo": "Polícia toma conhecimento de ameaça iminente e atua para proteger a mulher. Variação: agressor descumpre medida já deferida; o parágrafo único também exige providências imediatas.",
+      "prova": [
+        "É preciso esperar consumação da violência para agir? Não; o caput inclui iminência.",
+        "Descumprir medida protetiva fica fora deste dever? Não; o parágrafo único o inclui."
+      ],
+      "termos": [
+        "iminência",
+        "de imediato",
+        "descumprimento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "3cfc53ff-2c1e-522f-8aae-fc4a679c4f41",
+        "content_sha256": "538384392b765b58e6d9cc18a6e9b82e9cf1c08b17232b80d3f4fba8e76a9b70",
+        "simples": "Na hipótese da iminência ou da prática de violência doméstica e familiar contra a mulher, a autoridade policial que tomar conhecimento da ocorrência adotará, de imediato, as providências legais cabíveis. Aplica-se o disposto também ao descumprimento de medida protetiva de urgência deferida.",
+        "pontos": [
+          "Iminência ou prática de violência: providências imediatas pela autoridade policial.",
+          "Vale também para o descumprimento de medida protetiva."
+        ],
+        "atencao": [
+          "Atua-se já na IMINÊNCIA da violência."
+        ],
+        "exemplo": "A polícia é acionada por ameaça iminente e adota, de imediato, as providências legais.",
+        "prova": [
+          "Assertiva que restringe a atuação policial à violência já consumada erra: abrange a iminência e o descumprimento de medida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10-a",
+      "unit_id": "4ab5b054-fc92-5418-8811-1c872b049c8d",
+      "content_sha256": "4d7d0aefe8fb0a35b2eaef276091420aac56fea523f05768894550e9d7428777",
+      "simples": "Atendimento policial/pericial especializado e ininterrupto por servidores capacitados, preferencialmente mulheres. Inquirição deve preservar integridade, evitar contato com suspeitos e prevenir revitimização.",
+      "pontos": [
+        "Evitar sucessivas inquirições e questionamentos sobre vida privada; resguardar integridade física, psíquica e emocional.",
+        "Sem contato direto da mulher, familiares/testemunhas com investigados/suspeitos e relacionados.",
+        "Procedimento preferencial: recinto adequado, profissional especializado quando cabível e registro eletrônico/magnético, com mídia e degravação no inquérito."
+      ],
+      "atencao": [
+        "Preferência de servidor feminino não autoriza negar atendimento quando só há servidor masculino capacitado. Não transformar procedimento preferencial em dispensa de direitos básicos contra revitimização."
+      ],
+      "exemplo": "Mulher recebe atendimento reservado por equipe capacitada, evitando contato com suspeito e repetição desnecessária do relato. Variação: só há servidor masculino capacitado disponível; a preferência não justifica negar atendimento.",
+      "prova": [
+        "Serviço é interrompido porque não há servidora mulher no turno? Não; deve ser ininterrupto e a preferência não é exclusividade.",
+        "Perguntas repetidas e sobre vida privada são recomendadas indiscriminadamente? Não; a lei busca evitar revitimização."
+      ],
+      "termos": [
+        "ininterrupto",
+        "preferencialmente",
+        "não revitimização",
+        "degravação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "4ab5b054-fc92-5418-8811-1c872b049c8d",
+        "content_sha256": "4d7d0aefe8fb0a35b2eaef276091420aac56fea523f05768894550e9d7428777",
+        "simples": "É direito da mulher em situação de violência doméstica e familiar o atendimento policial e pericial especializado, ininterrupto e prestado por servidores, preferencialmente do sexo feminino, previamente capacitados. A inquirição da mulher ou de testemunha obedecerá às diretrizes de salvaguarda da integridade física, psíquica e emocional da depoente; garantia de que, em nenhuma hipótese, a mulher, familiares e testemunhas terão contato direto com investigados ou suspeitos e pessoas a eles relacionadas; e não revitimização, evitando sucessivas inquirições sobre o mesmo fato nos âmbitos criminal, cível e administrativo e questionamentos sobre a vida privada.",
+        "pontos": [
+          "Atendimento policial e pericial especializado, ininterrupto, por servidores preferencialmente mulheres.",
+          "Inquirição com salvaguarda da integridade.",
+          "Sem contato direto com o investigado.",
+          "Não revitimização."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.505, de 2017.",
+          "Servidores PREFERENCIALMENTE do sexo feminino."
+        ],
+        "exemplo": "A vítima é ouvida em sala reservada, sem contato com o suspeito, e não repete o relato a cada instituição.",
+        "prova": [
+          "Assertiva que permite o contato direto da vítima com o investigado na inquirição erra."
+        ],
+        "termos": [
+          {
+            "termo": "Revitimização",
+            "significado": "Nova exposição da vítima ao sofrimento por repetidos relatos ou atendimentos inadequados."
+          }
+        ],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "eb192041-8f9d-5133-9237-1915cf47dd45",
+      "content_sha256": "25f3b0e6c84b393d7af8d1f3950f918b5979798d81f1794eeb3b6f8f4f2a1714",
+      "simples": "Polícia deve proteger e comunicar órgãos judiciais/MP quando necessário, encaminhar à saúde e IML, oferecer transporte seguro diante de risco de vida, acompanhar retirada de pertences quando necessário e informar direitos/serviços.",
+      "pontos": [
+        "Lista exemplificativa: entre outras providências.",
+        "Informar assistência judiciária inclusive para dissolução de vínculo familiar, sem exigir casamento para proteção.",
+        "Lei 15.455/2026: indícios de condição análoga à escravidão ou outra violência doméstica contra trabalhadora doméstica devem ser comunicados em até 48 horas ao MTE regional e MPT."
+      ],
+      "atencao": [
+        "Comunicação trabalhista tem destinatários e prazo próprios; não confundir com pedido protetivo enviado ao juiz ou decisão judicial também em 48 horas.",
+        "Afastamento seguro não deve ser condicionado a desistência da notícia de violência."
+      ],
+      "exemplo": "Mulher ameaçada recebe transporte a local seguro e orientação jurídica. Variação: há indícios de violência doméstica contra trabalhadora doméstica; examinar comunicação ao MTE regional e MPT em até 48 horas, além de outras medidas.",
+      "prova": [
+        "Comunicar apenas ao MP estadual cumpre todo o novo parágrafo único? Não; ele indica unidade regional do MTE e MPT.",
+        "O novo prazo é de 48 horas? Sim; observar o fato e os destinatários previstos."
+      ],
+      "termos": [
+        "entre outras providências",
+        "48 horas",
+        "Ministério Público do Trabalho"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm"
+      ],
+      "expected": {
+        "unit_id": "eb192041-8f9d-5133-9237-1915cf47dd45",
+        "content_sha256": "25f3b0e6c84b393d7af8d1f3950f918b5979798d81f1794eeb3b6f8f4f2a1714",
+        "simples": "No atendimento à mulher em situação de violência doméstica e familiar, a autoridade policial deverá, entre outras providências, garantir proteção policial, quando necessário, comunicando de imediato ao Ministério Público e ao Judiciário; encaminhar a ofendida ao hospital ou posto de saúde e ao Instituto Médico Legal; fornecer transporte para a ofendida e seus dependentes para abrigo ou local seguro, quando houver risco de vida; acompanhar a ofendida, se necessário, para a retirada de seus pertences; e informar à ofendida os direitos conferidos pela Lei e os serviços disponíveis, inclusive de assistência judiciária. Verificados indícios de redução a condição análoga à de escravo ou outra forma de violência contra a trabalhadora doméstica, a autoridade policial comunicará, em até 48 horas, a unidade regional do Ministério do Trabalho e Emprego e o Ministério Público do Trabalho.",
+        "pontos": [
+          "Proteção policial, com comunicação imediata ao MP e ao Judiciário.",
+          "Encaminhamento a hospital e IML.",
+          "Transporte para abrigo ou local seguro.",
+          "Acompanhar a retirada de pertences.",
+          "Informar os direitos e serviços.",
+          "Trabalhadora doméstica: comunicação em até 48 horas ao Ministério do Trabalho e ao MPT."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafo único incluído na proteção da trabalhadora doméstica (prazo de 48 horas).",
+          "Rol exemplificativo ('entre outras')."
+        ],
+        "exemplo": "A autoridade acompanha a vítima à residência para retirar seus pertences, com segurança.",
+        "prova": [
+          "Assertiva que fixa em 24 horas a comunicação sobre a trabalhadora doméstica ao Ministério do Trabalho erra: são 48 horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "bd82798c-2969-58aa-9726-ec2cc2fa8962",
+      "content_sha256": "2c8f6638ef2c6714cd850a7f4e2bea1570d956ee0bb52ece96be5bd3790873f0",
+      "simples": "Registrada ocorrência, polícia age de imediato: ouvir vítima, registrar representação quando apresentada, colher prova, enviar pedido protetivo apartado em 48 horas, realizar exames, ouvir envolvidos, identificar agressor e verificar armas, além de encaminhar inquérito no prazo legal.",
+      "pontos": [
+        "Pedido contém qualificação, dependentes, descrição e medidas solicitadas; registrar deficiência ou seu agravamento.",
+        "Anexar BO e documentos disponíveis; laudos/prontuários de hospitais e postos de saúde são meios admitidos.",
+        "Verificar registro de posse/porte do agressor, juntar informação e notificar instituição concedente.",
+        "48 horas da remessa policial não são os mesmos 48 horas da decisão do juiz após receber expediente."
+      ],
+      "atencao": [
+        "Art. 19, §5º: proteção não depende universalmente de BO/inquérito ou tipificação penal. O procedimento policial descrito aqui não é o único meio de pedir proteção.",
+        "Tomar representação se apresentada não converte ação penal incondicionada em condicionada. Distinguir natureza do crime antes de exigir manifestação."
+      ],
+      "exemplo": "Polícia formaliza pedido da mulher, reúne documentos e envia expediente separado ao juiz em 48 horas. Variação: ela busca diretamente proteção judicial sem BO; o art. 19 impede negar somente pela ausência desse registro.",
+      "prova": [
+        "É correto misturar remessa policial e decisão judicial em um único prazo sem distinguir marcos? Não; são atos e termos iniciais diferentes.",
+        "Só laudo do IML pode ser meio de prova admitido neste artigo? Não; hospitais e postos de saúde também fornecem documentos admitidos."
+      ],
+      "termos": [
+        "de imediato",
+        "expediente apartado",
+        "48 horas",
+        "se apresentada"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "bd82798c-2969-58aa-9726-ec2cc2fa8962",
+        "content_sha256": "2c8f6638ef2c6714cd850a7f4e2bea1570d956ee0bb52ece96be5bd3790873f0",
+        "simples": "Em todos os casos de violência doméstica e familiar contra a mulher, feito o registro da ocorrência, deverá a autoridade policial adotar, de imediato, os procedimentos de ouvir a ofendida, lavrar o boletim de ocorrência e tomar a representação a termo, se apresentada; colher todas as provas; remeter, no prazo de 48 horas, expediente apartado ao juiz com o pedido da ofendida para a concessão de medidas protetivas de urgência; determinar o exame de corpo de delito e outros exames periciais; ouvir o agressor e as testemunhas; ordenar a identificação do agressor e juntar sua folha de antecedentes, indicando a existência de mandado de prisão ou outras ocorrências; e verificar se o agressor possui registro de porte ou posse de arma de fogo, juntando a informação e notificando a instituição responsável, entre outras providências.",
+        "pontos": [
+          "Ouvir a ofendida, lavrar o boletim e tomar a representação a termo.",
+          "Colher provas.",
+          "Remeter ao juiz, em 48 horas, o pedido de medidas protetivas.",
+          "Exame de corpo de delito.",
+          "Ouvir o agressor e testemunhas.",
+          "Identificar o agressor e juntar antecedentes.",
+          "Verificar registro de arma de fogo do agressor."
+        ],
+        "atencao": [
+          "Prazo de 48 HORAS para remeter ao juiz o pedido de medidas protetivas.",
+          "Verificação de registro de arma de fogo foi acrescentada pela legislação posterior."
+        ],
+        "exemplo": "Em 48 horas, o delegado envia ao juiz o pedido de medida protetiva da vítima.",
+        "prova": [
+          "Assertiva que fixa em 24 horas a remessa do pedido de medidas protetivas ao juiz erra: são 48 horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18",
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12-a",
+      "unit_id": "386513d2-8efb-566b-ba9d-fb236eb3c845",
+      "content_sha256": "ec8cadd4419a62b84a418206e8c3087d5cdad96a728307ced2e7d1111151530a",
+      "simples": "Estados/DF devem priorizar, no âmbito da Polícia Civil, Deams, núcleos de investigação de feminicídio e equipes especializadas de atendimento/investigação de violência grave.",
+      "pontos": [
+        "Prioridade na formulação das políticas e planos de atendimento.",
+        "Não se limita a criar delegacia: inclui núcleo de feminicídio e equipes especializadas."
+      ],
+      "atencao": [
+        "Prioridade de estrutura não autoriza demais unidades a recusar ocorrência nem modifica sozinha tipificação ou competência judicial."
+      ],
+      "exemplo": "Estado planeja rede com Deams e equipes para violência grave. Variação: delegacia comum sem unidade especializada no local deve prestar atendimento, sem usar prioridade estrutural como recusa.",
+      "prova": [
+        "A prioridade se refere somente a Deams? Não; também a núcleos de feminicídio e equipes especializadas.",
+        "Falta de Deam autoriza negar atendimento policial? Não; prioridade de estrutura não elimina dever de atendimento."
+      ],
+      "termos": [
+        "darão prioridade",
+        "Polícia Civil",
+        "Núcleos Investigativos de Feminicídio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "386513d2-8efb-566b-ba9d-fb236eb3c845",
+        "content_sha256": "ec8cadd4419a62b84a418206e8c3087d5cdad96a728307ced2e7d1111151530a",
+        "simples": "Os Estados e o Distrito Federal, na formulação de suas políticas e planos de atendimento à mulher em situação de violência doméstica e familiar, darão prioridade, no âmbito da Polícia Civil, à criação de Delegacias Especializadas de Atendimento à Mulher (Deams), de Núcleos Investigativos de Feminicídio e de equipes especializadas para o atendimento e a investigação das violências graves contra a mulher.",
+        "pontos": [
+          "Prioridade à criação de Deams, de Núcleos Investigativos de Feminicídio e de equipes especializadas.",
+          "Dever dos Estados e do Distrito Federal, no âmbito da Polícia Civil."
+        ],
+        "atencao": [
+          "Cabe aos ESTADOS e ao DF, na Polícia Civil."
+        ],
+        "exemplo": "O Estado cria um núcleo especializado para investigar feminicídios.",
+        "prova": [
+          "Assertiva que atribui aos Municípios a criação das Deams erra: é dos Estados e do Distrito Federal."
+        ],
+        "termos": [
+          {
+            "termo": "Deam",
+            "significado": "Delegacia Especializada de Atendimento à Mulher."
+          }
+        ],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12-c",
+      "unit_id": "a9e3b77e-c95f-5356-a46f-5f6f0a46e6e9",
+      "content_sha256": "00b8802d26727644970f6080fa7c68be5625de8b88b5d41c7d03eb55036cf2fa",
+      "simples": "Risco atual/iminente à vida ou integridade física, sexual, psicológica, moral ou patrimonial da mulher/dependentes permite afastamento imediato do agressor. A Lei 15.411/2026 ampliou expressamente as integridades protegidas.",
+      "pontos": [
+        "Juiz; delegado quando município não é sede de comarca; policial nessa situação e sem delegado disponível no momento da denúncia.",
+        "Ato de delegado/policial: comunicar juiz em até 24 horas; juiz decide em igual prazo e dá ciência simultânea ao MP.",
+        "§2º traz restrição de liberdade provisória nos riscos descritos; integrar CPP e fundamentação cautelar concreta."
+      ],
+      "atencao": [
+        "Não afirmar que qualquer policial pode afastar em qualquer cidade ou que deve esperar agressão física consumada.",
+        "A restrição de liberdade não dispensa requisitos constitucionais, motivação e regime atual de prisão; não ensinar prisão automática só pela acusação.",
+        "Distinguir art. 12-D: monitoração tem lista de autoridades e hipótese próprias, sem repetir automaticamente a possibilidade do policial comum."
+      ],
+      "exemplo": "Município sem sede de comarca e sem delegado disponível: policial examina risco atual e afasta agressor, comunicando juiz em 24 horas. Variação: cidade sede de comarca não se enquadra nessa autorização excepcional pelo policial.",
+      "prova": [
+        "A comunicação ao juiz pode esperar 48 horas neste artigo? Não; prazo máximo é de 24 horas, seguido de igual prazo para decisão.",
+        "A mudança de 2026 limita risco apenas à integridade física? Não; inclui sexual, psicológica, moral e patrimonial."
+      ],
+      "termos": [
+        "risco atual ou iminente",
+        "não for sede de comarca",
+        "24 horas",
+        "igual prazo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15411.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a9e3b77e-c95f-5356-a46f-5f6f0a46e6e9",
+        "content_sha256": "00b8802d26727644970f6080fa7c68be5625de8b88b5d41c7d03eb55036cf2fa",
+        "simples": "Verificada a existência de risco atual ou iminente à vida ou à integridade física, sexual, psicológica, moral ou patrimonial da mulher em situação de violência doméstica e familiar, ou de seus dependentes, o agressor será imediatamente afastado do lar, domicílio ou local de convivência com a ofendida pela autoridade judicial; pelo delegado de polícia, quando o Município não for sede de comarca; ou pelo policial, quando o Município não for sede de comarca e não houver delegado disponível no momento da denúncia. Nas hipóteses do delegado e do policial, o juiz será comunicado em até 24 horas e decidirá, em igual prazo, sobre a manutenção ou a revogação da medida, dando ciência ao Ministério Público. Nos casos de risco à integridade física da ofendida ou à efetividade da medida protetiva, não será concedida liberdade provisória ao preso.",
+        "pontos": [
+          "Afastamento imediato do agressor em caso de risco atual ou iminente.",
+          "Quem afasta: juiz; delegado, se o Município não é sede de comarca; policial, se também não há delegado.",
+          "Juiz comunicado em 24 horas e decide em igual prazo.",
+          "Sem liberdade provisória ao preso em caso de risco à integridade física ou à efetividade da medida."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: caput com redação da Lei nº 15.411, de 2026; incisos e parágrafos incluídos pela Lei nº 13.827, de 2019.",
+          "Prazo de 24 HORAS para o juiz ser comunicado e decidir."
+        ],
+        "exemplo": "Em município sem sede de comarca, o delegado afasta o agressor e comunica o juiz em 24 horas.",
+        "prova": [
+          "Assertiva que permite ao policial afastar o agressor sempre que há delegado disponível, no município sem comarca, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12-d",
+      "unit_id": "ba58c930-64ae-519f-bf54-e95797be1723",
+      "content_sha256": "27c9ab8a5dda33b361ef87f04ba80561b7fcb32f692eebc16233c62b1e299181",
+      "simples": "Lei 15.383/2026 prevê monitoração eletrônica imediata diante de risco atual/iminente à vida ou integridade física/psicológica da mulher ou dependentes, determinada pelo juiz ou delegado quando município não é sede de comarca.",
+      "pontos": [
+        "Delegado comunica juiz em até 24 horas; este decide manutenção/revogação em igual prazo, com ciência simultânea ao MP.",
+        "O inciso II não enumera qualquer policial: não copiar a competência excepcional do art. 12-C.",
+        "Decreto 13.084/2026 institui Programa Alerta Mulher Segura para execução da monitoração e dispositivo portátil da vítima; observar regime regulamentar."
+      ],
+      "atencao": [
+        "Hipótese de risco deste artigo não tem exatamente todas as integridades do 12-C atualizado. Separar fundamento e autoridade competente, sem negar outras medidas cabíveis.",
+        "Monitoração não equivale automaticamente a prisão nem substitui toda proteção; ordem judicial de uso pode ser protegida pelo crime do art. 24-A, nos termos jurisprudenciais."
+      ],
+      "exemplo": "Delegado em município sem sede de comarca determina monitoração na hipótese legal e submete ao juiz em 24 horas. Variação: policial comum pretende repetir a mesma competência do 12-C; o 12-D não o lista como autoridade autorizadora.",
+      "prova": [
+        "O art. 12-D inclui expressamente policial comum no rol autorizador? Não; enumera juiz e delegado na hipótese indicada.",
+        "O prazo para comunicar juiz é de 24 horas? Sim; e a decisão judicial tem igual prazo."
+      ],
+      "termos": [
+        "monitoração eletrônica",
+        "delegado de polícia",
+        "24 horas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15383.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13084.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/12032026-Descumprir-ordem-de-monitoracao-eletronica-imposta-no-ambito-da-Lei-Maria-da-Penha-e-crime.aspx"
+      ],
+      "expected": {
+        "unit_id": "ba58c930-64ae-519f-bf54-e95797be1723",
+        "content_sha256": "27c9ab8a5dda33b361ef87f04ba80561b7fcb32f692eebc16233c62b1e299181",
+        "simples": "Verificada a existência de risco atual ou iminente à vida ou à integridade física ou psicológica da mulher em situação de violência doméstica e familiar, ou de seus dependentes, o agressor será imediatamente submetido à monitoração eletrônica pela autoridade judicial ou pelo delegado de polícia, quando o Município não for sede de comarca. Na hipótese do delegado, o juiz será comunicado no prazo máximo de 24 horas e decidirá, em igual prazo, sobre a manutenção ou a revogação da medida, dando ciência ao Ministério Público.",
+        "pontos": [
+          "Monitoração eletrônica imediata do agressor em caso de risco atual ou iminente.",
+          "Autoridade judicial ou delegado (Município sem comarca).",
+          "Juiz comunicado em 24 horas e decide em igual prazo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 15.383, de 2026 (monitoração eletrônica)."
+        ],
+        "exemplo": "O delegado, em Município sem sede de comarca, determina a tornozeleira e comunica o juiz em 24 horas.",
+        "prova": [
+          "Assertiva que permite ao policial, e não ao delegado, aplicar a monitoração eletrônica nesse caso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    }
+  ]
+}

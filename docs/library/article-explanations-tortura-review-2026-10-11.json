@@ -1,0 +1,262 @@
+{
+  "version": "2026-10-11-tortura-targeted",
+  "checked_at": "2026-10-12T00:36:33.581791+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "tortura",
+      "title": "Lei 9.455/1997 — Crimes de Tortura",
+      "units": 4,
+      "scope_type": "targeted_correction",
+      "course_current_units": 4,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "source_sha256": "c29ebc576bf28287f8195cac290d48c3e8664acd39e0f32822fbd7abb3d00001",
+      "source_checked_at": "2026-10-12T00:31:32.837702+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "dadf4020-8f29-5aea-ad02-d55948459441",
+      "content_sha256": "99973903941e33281476709e2dffbf3b8419f8a14c835422515d00ddefa25bb9",
+      "simples": "A tortura abrange obtenção de informação/confissão, provocação de crime e discriminação racial/religiosa com violência ou grave ameaça; castigo/prevenção exige guarda, poder ou autoridade e sofrimento intenso. A Lei Barbara Penna, 15.410/2026, acrescentou sofrimento intenso reiterado de mulher em violência doméstica/familiar, em vigor desde a publicação em 21/05/2026. A pena básica é reclusão de 2 a 8 anos; omissão com dever de evitar/apurar recebe detenção de 1 a 4.",
+      "pontos": [
+        "Lesão grave/gravíssima: reclusão 4–10; morte: 8–16.",
+        "Aumento 1/6 a 1/3: agente público; vítimas enumeradas; sequestro.",
+        "Perda de cargo/função/emprego e interdição pelo dobro da pena; inafiançabilidade e vedação de graça/anistia.",
+        "Texto do §7º indica fechado, mas STJ aplica individualização pelo CP e Súmulas 440/STJ e 719/STF.",
+        "Informativo STJ 904, outubro/2026: majorante de agente público é compatível com tortura de pessoa presa, sem bis in idem automático."
+      ],
+      "atencao": [
+        "Não confundir detenção da omissão com reclusão dos tipos ativos.",
+        "O novo inciso III exige reiteração; não classificar toda discussão doméstica como tortura.",
+        "Na literalidade da majorante, a idade é maior de 60, não substituir silenciosamente por 60 ou mais.",
+        "Crime inafiançável não significa automaticamente imprescritível.",
+        "Regime inicial fechado não é obrigatório pela mera gravidade abstrata."
+      ],
+      "exemplo": "O agressor submete reiteradamente a mulher a sofrimento intenso em contexto doméstico: examinam-se os elementos do inciso III e as demais infrações cabíveis. Em outro caso, agente público impõe sofrimento ilegal a preso: a majorante pode incidir com o §1º, conforme STJ 904. Variação: Quem tinha dever de evitar ou apurar apenas se omite: examina-se o §2º, com pena distinta. Ao fixar regime, o juiz individualiza e não aplica fechado automaticamente só pelo nome do crime.",
+      "prova": [
+        "A omissão do §2º tem pena de reclusão de 2 a 8 anos? Não; sua pena é detenção de 1 a 4.",
+        "O inciso III exige sofrimento intenso reiterado no contexto doméstico/familiar? Sim; são elementos da redação de 2026.",
+        "Toda condenação por tortura exige automaticamente regime inicial fechado? Não; a jurisprudência exige individualização.",
+        "A majorante de agente público é sempre incompatível com tortura de pessoa presa? Não; o STJ 904 reconheceu compatibilidade porque as circunstâncias são distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D014772",
+        "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D022658"
+      ],
+      "expected": {
+        "unit_id": "dadf4020-8f29-5aea-ad02-d55948459441",
+        "content_sha256": "99973903941e33281476709e2dffbf3b8419f8a14c835422515d00ddefa25bb9",
+        "simples": "Constitui crime de tortura constranger alguém com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental, com o fim de obter informação, declaração ou confissão da vítima ou de terceira pessoa; para provocar ação ou omissão de natureza criminosa; ou em razão de discriminação racial ou religiosa; submeter alguém, sob sua guarda, poder ou autoridade, com emprego de violência ou grave ameaça, a intenso sofrimento físico ou mental, como forma de aplicar castigo pessoal ou medida de caráter preventivo; e submeter mulher, reiteradamente, a intenso sofrimento físico ou mental, no contexto de violência doméstica e familiar. Pena: reclusão de dois a oito anos. Na mesma pena incorre quem submete pessoa presa ou sujeita a medida de segurança a sofrimento físico ou mental por ato não previsto em lei ou não resultante de medida legal. Quem se omite, quando tinha o dever de evitar ou apurar, incorre em detenção de um a quatro anos. Se resulta lesão grave ou gravíssima, reclusão de quatro a dez anos; se resulta morte, de oito a dezesseis anos. A pena aumenta de um sexto até um terço se cometido por agente público, contra criança, gestante, pessoa com deficiência, adolescente ou maior de 60 anos, ou mediante sequestro. A condenação acarreta a perda do cargo e a interdição pelo dobro da pena. O crime é inafiançável e insuscetível de graça ou anistia, e o regime inicial é o fechado, salvo na omissão.",
+        "pontos": [
+          "I: tortura-prova, tortura-crime e tortura-discriminação (constranger com violência ou grave ameaça).",
+          "II: tortura-castigo contra quem está sob guarda, poder ou autoridade.",
+          "III: tortura da mulher em violência doméstica, reiteradamente.",
+          "Pena: reclusão de 2 a 8 anos.",
+          "§1º: tortura de preso ou de quem cumpre medida de segurança.",
+          "§2º: omissão (detenção de 1 a 4 anos).",
+          "§3º: qualificadoras (lesão: quatro a dez anos; morte: oito a dezesseis anos).",
+          "§4º: aumento de 1/6 a 1/3.",
+          "§5º: perda do cargo e interdição pelo dobro da pena.",
+          "§6º e §7º: inafiançável, sem graça ou anistia; regime inicial fechado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: inciso III incluído pela Lei nº 15.410, de 2026 (tortura da mulher em violência doméstica).",
+          "Crime COMUM (qualquer pessoa pode praticar), com causa de aumento para agente público.",
+          "Equiparado a hediondo.",
+          "Perda do cargo: efeito da condenação, pelo dobro do prazo da pena."
+        ],
+        "exemplo": "Policial que agride o preso para obter confissão pratica tortura, com aumento por ser agente público.",
+        "prova": [
+          "Assertiva que considera a tortura crime próprio de agente público erra: é crime comum, com aumento quando cometido por agente público."
+        ],
+        "termos": [
+          {
+            "termo": "Tortura-prova",
+            "significado": "Tortura para obter informação, declaração ou confissão."
+          }
+        ],
+        "remissoes": [
+          "Lei dos Crimes Hediondos",
+          "Lei de Abuso de Autoridade"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "cdebd957-a710-5c0d-8a2c-2b21e53d073a",
+      "content_sha256": "e1cd312b892ce9843d3a29e2d137a5c154adaaca3500a5c6a6d9fd830d68e73f",
+      "simples": "A lei também se aplica a crime cometido fora do Brasil quando a vítima é brasileira ou o agente se encontra em local sob jurisdição brasileira. O artigo usa alternativas, e não exige simultaneamente nacionalidade brasileira da vítima e presença do autor.",
+      "pontos": [
+        "Memória: vítima brasileira OU agente sob jurisdição brasileira."
+      ],
+      "atencao": [
+        "Não trocar a conjunção ou por e.",
+        "Aplicação da lei não dispensa garantias processuais e análise dos fatos."
+      ],
+      "exemplo": "A vítima é brasileira e o crime ocorreu no exterior: o artigo contém hipótese de aplicação. Variação: A vítima é estrangeira, mas o agente se encontra sob jurisdição brasileira: a outra hipótese deve ser examinada.",
+      "prova": [
+        "As duas condições precisam ocorrer juntas? Não; o texto usa alternativas.",
+        "O artigo se limita a fatos ocorridos dentro do território nacional? Não; prevê aplicação também fora dele."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "cdebd957-a710-5c0d-8a2c-2b21e53d073a",
+        "content_sha256": "e1cd312b892ce9843d3a29e2d137a5c154adaaca3500a5c6a6d9fd830d68e73f",
+        "simples": "O disposto na Lei aplica-se ainda quando o crime não tenha sido cometido em território nacional, sendo a vítima brasileira ou encontrando-se o agente em local sob jurisdição brasileira.",
+        "pontos": [
+          "Aplica-se ao crime cometido fora do território nacional.",
+          "Quando a vítima for brasileira.",
+          "Ou quando o agente estiver em local sob jurisdição brasileira."
+        ],
+        "atencao": [
+          "Extraterritorialidade da lei brasileira."
+        ],
+        "exemplo": "Tortura cometida no exterior contra um brasileiro pode ser punida pela lei brasileira.",
+        "prova": [
+          "Assertiva que restringe a lei ao crime cometido em território nacional erra."
+        ],
+        "termos": [
+          {
+            "termo": "Extraterritorialidade",
+            "significado": "Aplicação da lei brasileira a fatos ocorridos no exterior."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "ef672a8d-080a-5074-b7c0-c36a1b86f05c",
+      "content_sha256": "beb64cfe34bd57e4a185559dd41f05d6400cffd658a6d0ef86b6716821283271",
+      "simples": "A Lei 9.455 entrou em vigor na publicação. A alteração de 2026 também adotou publicação como marco próprio; para a nova modalidade penal, deve-se respeitar a irretroatividade da lei penal mais gravosa.",
+      "pontos": [
+        "Vigência original: publicação; nova modalidade: publicação da Lei 15.410 em 21/05/2026."
+      ],
+      "atencao": [
+        "Não usar uma nova incriminação mais gravosa para fatos anteriores ao marco legal."
+      ],
+      "exemplo": "A prova pergunta quando a lei original iniciou vigência: na publicação. Variação: O fato é anterior à nova modalidade de 2026: não se aplica retroativamente a nova incriminação mais gravosa; examina-se a legislação aplicável ao fato.",
+      "prova": [
+        "O art. 3º fixa vacância de 45 dias? Não; usa a publicação.",
+        "A nova modalidade pode retroagir automaticamente para prejudicar o acusado? Não; deve-se respeitar a irretroatividade penal mais gravosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm"
+      ],
+      "expected": {
+        "unit_id": "ef672a8d-080a-5074-b7c0-c36a1b86f05c",
+        "content_sha256": "beb64cfe34bd57e4a185559dd41f05d6400cffd658a6d0ef86b6716821283271",
+        "simples": "Esta Lei entra em vigor na data de sua publicação.",
+        "pontos": [
+          "Vigência imediata, na data da publicação."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei começou a valer no dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis para a Lei de Tortura erra: vigora na data da publicação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "tortura",
+      "course_id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
+      "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
+      "simples": "A Lei de Tortura revogou o art. 233 do ECA, antigo dispositivo sobre tortura. Não revogou todo o Estatuto nem o art. 232, que trata de vexame ou constrangimento de criança/adolescente sob autoridade, guarda ou vigilância.",
+      "pontos": [
+        "Revogado: ECA art. 233; não confundir com art. 232."
+      ],
+      "atencao": [
+        "Nem todo constrangimento é automaticamente tortura: examinar elementos de cada tipo."
+      ],
+      "exemplo": "O material cita o art. 233 do ECA como crime vigente: deve ser corrigido pela revogação expressa. Variação: A conduta envolve vexame no art. 232: esse artigo não foi revogado pelo art. 4º da Lei de Tortura.",
+      "prova": [
+        "Foi revogado todo o ECA? Não; a revogação é do art. 233.",
+        "O artigo revogado foi o 232? Não; foi o 233."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ],
+      "expected": {
+        "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
+        "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
+        "simples": "Revoga-se o art. 233 do Estatuto da Criança e do Adolescente, que previa o crime de submeter criança ou adolescente sob autoridade, guarda ou vigilância a tortura.",
+        "pontos": [
+          "Revoga o crime de tortura do ECA (art. 233).",
+          "A conduta passa a ser tratada pela Lei de Tortura."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A tortura de criança sob guarda passou a ser tratada pela lei específica.",
+        "prova": [
+          "Assertiva que mantém em vigor o crime de tortura previsto no ECA erra: foi revogado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    }
+  ]
+}

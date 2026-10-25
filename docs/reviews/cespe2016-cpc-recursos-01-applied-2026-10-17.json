@@ -1,0 +1,19 @@
+{
+  "batch_id": "cespe2016-cpc-recursos-01-2026-10-17",
+  "dry_run": false,
+  "complete": true,
+  "updated": [
+    "35db4a3e263b89c2ee53ab45b2511b468c408b9cc36b0632d19e5a303697c5b2",
+    "916b7cb0f6d5e32b3be18d6adb3c586b0b79d2068aa4adbfcb703d9f83d2fae8",
+    "0afa629627b1ffe0bd237bfe6ca21aca04c953c578d9327f43c446b8bd87cb41",
+    "c72f6996f7e7f6c5eaebdb50f2228614125ccbbf529e8a8ee05933bcecae3e4c",
+    "6f547d74304108acdbb8c52f2efc0534b8eab4cf17077bb1a522f06556170493",
+    "fcee98437e9c34bc6bba036b6179afb58647926004f35c21ab63a3f9d2bfe663",
+    "e4e115c5dda3e4cf860cd982cc2a5c9d40f99be813fd50d2ad3ba3232647ec5d",
+    "a1b3e58a52ba7abbd86aa21dc85bae50d2d764d9fdeb38580671b78b02874c22"
+  ],
+  "unchanged": [],
+  "pending": 0,
+  "publications": 0,
+  "full_editorial_audit_complete": false
+}

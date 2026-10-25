@@ -1,0 +1,167 @@
+0|cf|Art. 1º, parágrafo único|O enunciado reduz a democracia à representação. A Constituição admite exercício do poder por representantes eleitos ou diretamente, nos seus termos.
+1|cf|Art. 1º, parágrafo único|A combinação de representação e participação direta corresponde ao texto constitucional. Exemplo: eleições de representantes não afastam os instrumentos constitucionais de participação popular.
+2|cf|Art. 1º, parágrafo único; Art. 14|A Constituição combina representação com os instrumentos de participação previstos. A classificação didática não dispensa os requisitos de cada instrumento.
+4|cf|Art. 1º, parágrafo único|O princípio democrático relaciona-se à origem popular do poder e às formas constitucionais de seu exercício, sem limitar-se a uma única via.
+5|cf|Art. 1º, III; Art. 5º|Dignidade não estabelece prevalência automática de todo interesse coletivo sobre qualquer direito individual. É necessário interpretar as garantias e o caso concreto.
+6|cf|Art. 4º, X|A concessão de asilo político está expressamente entre os princípios das relações internacionais. Não deve ser confundida com objetivo do art. 3º.
+7|cf|Art. 3º, II e III|Desenvolvimento nacional e redução de desigualdades integram os objetivos fundamentais. Exemplo: política voltada a reduzir desigualdade regional pode concretizar essas finalidades.
+8|cf|Art. 4º|Os princípios indicados estão no rol constitucional das relações internacionais. A lista do art. 4º não se confunde com os fundamentos do art. 1º.
+9|cf|Art. 4º, parágrafo único|A integração latino-americana prevista inclui dimensões econômica, política, social e cultural, não apenas relações comerciais.
+10|cf|Art. 1º, IV; Art. 170|A livre iniciativa convive com a ordem econômica constitucional e suas condições. O fundamento não proíbe toda intervenção estatal, independentemente de finalidade e competência.
+11|cf|Art. 1º, V; Art. 5º, XX|A proteção ao pluralismo não impõe filiação partidária a todo cidadão. Deve-se distinguir diversidade política de obrigação de integrar um partido.
+16|cf|Arts. 5º a 17|O Título II também abrange direitos sociais e partidos políticos. A enumeração de apenas três categorias está incompleta.
+17|cf|Art. 5º, § 3º|O rito exige votação em cada Casa do Congresso, em dois turnos, por três quintos dos respectivos membros. Aprovação apenas no Senado não basta.
+18|cf|Art. 5º, § 1º|Na terminologia didática, a eficácia vertical se refere à relação com o Estado; horizontal se refere às relações privadas. O item trocou a denominação, sem que isso resolva automaticamente todo caso concreto.
+19|cf|Art. 5º, § 1º; Art. 5º, LXXI|A aplicação imediata não permite classificar todos os direitos, em regra, como dependentes de regulamentação. É necessário identificar a norma e os efeitos discutidos.
+20|cf|Art. 5º, § 4º|O texto prevê submissão ao Tribunal Penal Internacional a cuja criação o Brasil tenha manifestado adesão. Não é autorização genérica para qualquer tribunal estrangeiro.
+21|cf|Art. 5º, XIII|Na classificação didática, eficácia contida permite exercício desde logo, com restrições constitucionalmente admitidas. Exemplo: liberdade profissional deve considerar qualificações legalmente exigidas.
+22|cf|Art. 5º, XIII|O enunciado atribui à eficácia contida a dependência de integração típica da categoria limitada. A classificação é didática e deve ser aplicada ao dispositivo concreto.
+23|cf|Art. 5º, § 3º|A mera aprovação pelo Congresso não satisfaz o rito especial: são exigidos dois turnos em cada Casa e três quintos dos respectivos membros, em tratado de direitos humanos.
+27|cf|Art. 5º, XLVII, a|A Constituição ressalva guerra declarada nos termos do art. 84, XIX. A afirmação de inexistência de qualquer exceção contraria a redação vigente.
+28|cf|Art. 5º, caput; Art. 37, I e VIII|Igualdade não proíbe toda diferenciação legítima. Requisitos de ingresso precisam de fundamento e compatibilidade constitucional; não se validam ou invalidam apenas por serem distintos.
+29|cf|Art. 1º, III; Art. 5º, caput|A proteção da vida deve ser lida com a dignidade da pessoa humana. O estudo constitucional não se reduz à manutenção biológica, sem consideração das condições de existência digna.
+30|cf|Art. 5º, II|A obrigação de fazer ou deixar de fazer algo deve ter fundamento legal. Exemplo: a vontade pessoal de uma autoridade não cria, sozinha, um dever geral ao particular.
+31|cf|Art. 5º, IV|A manifestação do pensamento é livre, mas o anonimato é vedado. A liberdade não elimina direito de resposta e reparação nas hipóteses constitucionais.
+32|cf|Art. 1º, V; Art. 5º, IV|A formação e a manifestação de opiniões integram o estudo da liberdade e do pluralismo. A explicação é conceitual, não atribuição de uma frase literal à Constituição.
+34|cf|Art. 5º, VIII|A escusa não afasta irrestritamente todo dever: devem ser examinadas obrigação geral e prestação alternativa legalmente fixada. O enunciado foi delimitado para não reproduzir dispensa absoluta.
+35|cf|Art. 5º, VI|O inciso protege consciência, crença e livre exercício dos cultos, com proteção legal aos locais e liturgias. Laicidade não significa proibição geral de prática religiosa.
+36|cf|Art. 5º, II|A legalidade exige fundamento para a imposição. Este item será reutilizado se já houver registro equivalente, sem multiplicar a mesma questão.
+37|cf|Art. 5º, XV e XVI|As liberdades possuem condições constitucionais e legais próprias. O texto não reserva toda e qualquer limitação exclusivamente a uma decisão judicial prévia.
+38|cf|Art. 5º, XVI|A reunião tem requisitos: caráter pacífico, ausência de armas, local aberto ao público, não frustração de outra e aviso prévio. Não é incondicional.
+39|cf|Art. 5º, XVI|A Constituição dispensa autorização nas condições previstas, mas exige aviso. Exemplo: comunicar a reunião não equivale a pedir licença por concordância com suas ideias.
+40|cf|Art. 5º, XVI|O aviso prévio está previsto no texto e convive com os demais requisitos. Não deve ser convertido em autorização discricionária.
+41|cf|Art. 5º, XIX|Decisão judicial é exigida para suspensão; o trânsito em julgado é requisito adicional expresso para dissolução compulsória, não para ambas indistintamente.
+42|cf|Art. 5º, XXI|A representação associativa descrita exige autorização expressa. Não se deve confundir esse regime com toda hipótese de substituição processual coletiva.
+44|cf|Art. 5º, XXV|Em iminente perigo público, a autoridade competente pode usar propriedade particular, com indenização ulterior se houver dano. O recorte público foi explicitado na adaptação.
+45|cf|Art. 5º, XXX|O direito de herança está expressamente garantido. Seu exercício concreto depende da disciplina sucessória aplicável, não de transferência automática de todo bem ao Estado.
+46|cf|Art. 5º, XXXI e § 1º|A regra protege cônjuge ou filhos brasileiros nos termos do inciso, ressalvada lei pessoal mais favorável. A aplicação imediata não elimina suas condições.
+47|cf|Art. 5º, XXVII|A transmissão dos direitos aos herdeiros ocorre pelo tempo que a lei fixar. A Constituição não torna a exclusividade hereditária indeterminada.
+48|cf|Art. 5º, XXVI|A proteção exige pequena propriedade definida em lei, trabalho familiar e dívida da atividade produtiva. Não é imunidade de todo imóvel a qualquer dívida.
+49|cf|Art. 184|A desapropriação para reforma agrária tem competência e regime constitucionais específicos. Não se pode atribuí-la ao estado e aplicar automaticamente a indenização ordinária em dinheiro.
+50|cf|Art. 5º, XII|A exceção literal de interceptação referida no inciso não autoriza generalizar um único regime para correspondência e toda comunicação. A adaptação delimita a leitura textual cobrada.
+52|cf|Art. 5º, XII|O inciso exige ordem judicial para a hipótese constitucional de interceptação telefônica e indica finalidades específicas. Não inclui autorização administrativa irrestrita nem todo processo civil.
+53|cf|Art. 5º, XI|A ordem administrativa não substitui a hipótese constitucional de determinação judicial. Também há exceções próprias de flagrante, desastre e socorro.
+54|cf|Art. 5º, XI|A determinação judicial tem condição diurna no texto constitucional. Exemplo: essa condição não se transfere automaticamente à prestação de socorro em emergência noturna.
+56|cf|Art. 5º, LXXVIII|Duração razoável e meios de celeridade abrangem âmbito judicial e administrativo. Não se limitam a processos perante tribunais.
+57|cf|Art. 5º, XXXVI|A proteção ao direito adquirido, ao ato jurídico perfeito e à coisa julgada deve ser observada na aplicação temporal da lei. A classificação de uma situação como adquirida exige análise concreta.
+58|cf|Art. 5º, XXXIV, b|A gratuidade constitucional de certidões tem os fins de defesa de direitos e esclarecimento de interesse pessoal. Não corresponde a gratuidade universal de qualquer documento.
+59|cf|Art. 5º, XXXIV, a|O direito de petição nas finalidades constitucionais independe do pagamento de taxas. Exigir a taxa como condição geral inverte a regra.
+60|cf|Art. 5º, XXXVIII, d|O texto prevê crimes dolosos contra a vida. Não inclui indistintamente os culposos na mesma competência constitucional.
+61|cf|Art. 5º, XXXVIII|A Constituição assegura sigilo das votações e competência para crimes dolosos contra a vida. O enunciado troca essas duas características.
+62|cf|Art. 5º, XXXVIII, d|A enumeração constitucional trata de crimes dolosos contra a vida. Não acrescenta genericamente toda infração contra honra e liberdade.
+63|cf|Art. 5º, XLVII|A lista de penas vedadas contém ressalva expressa para morte em guerra declarada. Não é correto eliminar a ressalva com a expressão em nenhuma circunstância.
+64|cf|Art. 5º, XLII a XLIV|Imprescritibilidade, inafiançabilidade e insuscetibilidade de graça ou anistia não são atributos intercambiáveis. É necessário ler o tratamento de cada hipótese.
+65|sv25|Súmula Vinculante 25|O STF considera ilícita a prisão civil do depositário infiel em qualquer modalidade de depósito. Exemplo: ser depositário judicial não afasta a orientação vinculante.
+66|cf|Art. 5º, LI|A Constituição não estende ao brasileiro nato a exceção de tráfico prevista para o naturalizado. É necessário preservar a distinção entre as categorias.
+67|cf|Art. 5º, LX|A lei pode restringir publicidade quando defesa da intimidade ou interesse social o exigirem. Não se trata de exposição irrestrita de todo ato em toda situação.
+68|cf|Art. 5º, X e XXXIII|Acesso à informação convive com sigilos constitucionalmente legítimos e proteção da intimidade. O enunciado não dispensa identificar a natureza da informação pedida.
+69|cf|Art. 5º, XXXIII|O acesso a informações de interesse particular tem proteção, observadas as ressalvas constitucionais. A adaptação explicita essas condições em vez de afirmar acesso sem qualquer limite.
+71|cf|Art. 5º, LXXIII; Art. 14|A legitimidade é do cidadão, não de qualquer nacional independentemente da condição política. Exemplo: nacionalidade e capacidade eleitoral não são expressões equivalentes.
+72|cf|Art. 5º, LXXI e LXXII|O problema de omissão regulamentadora é hipótese de mandado de injunção; habeas data tem objeto relativo aos dados do próprio impetrante.
+73|cf|Art. 5º, LXX, a|A Constituição exige representação do partido no Congresso Nacional, não presença simultânea nas duas Casas. O enunciado acrescenta condição cumulativa.
+74|cf|Art. 5º, LXXIII; Art. 14|A cidadania é a condição pertinente à ação popular. A origem nata ou naturalizada não dispensa os requisitos próprios de legitimidade.
+75|cf|Art. 6º|A questão foi delimitada ao rol literal do art. 6º. Ele não enumera as expressões apresentadas como se fossem sua redação expressa, embora outras normas protejam grupos e finalidades sociais.
+76|cf|Art. 6º|Alimentação integra expressamente os direitos sociais na redação atual. Não se deve usar enumeração antiga que a omita.
+77|cf|Arts. 5º a 7º|Na organização didática usual, a primeira dimensão relaciona liberdades civis e políticas; a segunda, direitos sociais, econômicos e culturais. O item troca os grupos. Não é lista literal de dimensões na Constituição.
+78|cf|Art. 6º|A previsão de alimentação como direito social orienta políticas de concretização. Isso não fixa, por si só, qualquer valor ou benefício automático sem disciplina pertinente.
+80|cf|Art. 8º, III|O sindicato defende interesses coletivos ou individuais da categoria inclusive em questões judiciais ou administrativas, conforme o âmbito constitucional.
+81|cf|Art. 7º, XXXIII|A vedação de trabalho noturno, perigoso ou insalubre ao menor de dezoito não é afastada por adicional. Exemplo: pagar mais não torna permitido o trabalho perigoso nessa faixa.
+82|cf|Art. 8º, I e II|Liberdade de fundação convive com registro e unicidade na mesma base territorial. A base não pode ser inferior à área de um município.
+83|cf|Art. 7º, XXIX|A Constituição estabelece cinco anos para créditos de relações de trabalho, até dois anos após a extinção do contrato, para urbanos e rurais. O item separa incorretamente os regimes.
+84|cf|Art. 7º, XXXIII|A regra geral proíbe trabalho a menores de dezesseis, salvo aprendiz a partir de quatorze, mantendo outras vedações até dezoito. O item altera idades e alcance.
+85|cf|Art. 9º, § 1º|A greve tem proteção e disciplina sobre serviços essenciais e necessidades inadiáveis. Não se deve confundir essa previsão com permissão irrestrita para toda carreira pública.
+86|cf|Art. 12, I, c|A via constitucional indicada está entre hipóteses de brasileiro nato, não naturalizado. Registro e residência com opção são caminhos que precisam ser distinguidos.
+87|cf|Art. 12, I e II|Há hipóteses de nacionalidade originária decorrentes do nascimento sem aceitação voluntária genérica. Não se deve afirmar que todo vínculo depende da mesma manifestação de vontade.
+88|cf|Art. 12, I|A Constituição prevê hipóteses territoriais e ligadas à filiação, mas não casamento como critério automático de nacionalidade originária.
+89|cf|Art. 12, I, c|O dispositivo trata de nacionalidade originária e opção depois de atingida a maioridade, na via de residência. O item troca categoria e momento.
+90|cf|Art. 12, I, b e c|Há hipóteses constitucionais de brasileiro nato nascido no exterior. Exemplo: filiação brasileira com serviço à República possui disciplina expressa.
+91|cf|Art. 12, II|A naturalização não é exclusiva de portugueses. A Constituição diferencia requisitos e admite estrangeiros de qualquer nacionalidade na hipótese extraordinária.
+92|cf|Art. 5º, LII|Não se concede extradição de estrangeiro por crime político ou de opinião. A reciprocidade indicada não afasta essa vedação constitucional.
+93|cf|Art. 5º, LI|O brasileiro nato é protegido pela vedação constitucional de extradição. Não confunda entrega a Estado estrangeiro com institutos internacionais de natureza distinta.
+94|cf|Art. 5º, LI|Para crime comum, o texto exige prática anterior à naturalização; a hipótese de tráfico possui condições próprias. O enunciado foi delimitado para evitar mistura das exceções.
+95|cf|Art. 12, § 3º, VI|Os cargos de oficial das Forças Armadas são privativos de brasileiro nato. A condição não deve ser estendida indistintamente a todo cargo público.
+96|cf|Art. 12, § 2º; Art. 14|Deputado federal não está no rol de cargos privativos de nato. O naturalizado pode preencher as condições de elegibilidade, observadas as demais regras.
+97|cf|Art. 12, § 4º|A EC 131/2023 retirou a perda por mera aquisição de outra nacionalidade. O item foi atualizado para não ensinar a antiga exceção como se a regra revogada continuasse vigente.
+98|cf|Art. 12, § 3º, VII|A reserva expressa alcança Ministro de Estado da Defesa, não todo ministro nem especificamente o de Relações Exteriores. Não confunda o cargo com a carreira diplomática.
+99|cf|Art. 12, § 2º|A vedação legal de distinção ressalva os casos previstos na própria Constituição. A expressão qualquer distinção elimina indevidamente essa ressalva.
+100|cf|Art. 14|Capacidade ativa se relaciona a votar; a passiva, à elegibilidade e a ser votado. O item inverte a classificação didática.
+101|cf|Art. 14; Art. 15|O exercício de direitos políticos possui condições e restrições constitucionais. Não é livre e indistinto para todo brasileiro em qualquer situação.
+102|cf|Art. 14, §§ 2º e 8º|A inalistabilidade do § 2º trata de conscritos durante o serviço militar obrigatório, não de todo militar. O § 8º disciplina o militar alistável.
+103|cf|Art. 14, §§ 3º a 9º|A capacidade passiva diz respeito à possibilidade de ser eleito, com condições e impedimentos. Não é nome apenas de normas de proibição de participação.
+105|cf|Art. 14, § 6º|O chefe do Executivo que concorre a outro cargo deve renunciar até seis meses antes do pleito. O texto não limita a exigência ao novo cargo majoritário.
+106|cf|Art. 14, § 7º|A inelegibilidade reflexa possui âmbito territorial e ressalvas constitucionais próprios. Não se estende automaticamente a todo o território nacional em qualquer caso.
+107|cf|Art. 14, §§ 1º e 4º|O analfabeto tem voto facultativo, mas é inelegível. Exemplo: poder votar não significa preencher a capacidade de ser eleito.
+109|cf|Art. 14, § 1º, II, a; § 4º|Alistamento e voto facultativos não eliminam a inelegibilidade constitucional do analfabeto. São capacidades eleitorais diferentes.
+111|cf|Art. 15|O texto veda cassação e delimita as hipóteses de perda ou suspensão. Não é autorização para inventar livremente novos casos por conveniência.
+112|cf|Art. 15; Art. 37, § 4º|Improbidade não cria exceção à vedação de cassação. Devem ser consideradas as sanções e condições previstas, incluindo suspensão na hipótese pertinente.
+113|cf|Art. 16|A lei entra em vigor na publicação, mas não se aplica à eleição que ocorra até um ano de sua vigência. O prazo não é simplesmente 180 dias.
+114|cf|Art. 15, V; Art. 37, § 4º|A consequência constitucional pertinente não se chama cassação. A suspensão depende das condições e da disciplina legal, sem perda definitiva genérica.
+115|cf|Art. 14, § 11|A ação de impugnação de mandato tramita em segredo de justiça. Essa regra convive com responsabilidade por atuação temerária ou manifesta má-fé.
+116|cf|Art. 17, II|A Constituição proíbe recursos de entidade ou governo estrangeiros e subordinação a eles. Declarar o recebimento não transforma a origem vedada em permitida.
+117|cf|Art. 17, § 1º|A regra atual distingue coligações majoritárias e veda proporcionais. O item foi atualizado para manter a autonomia sem reproduzir permissão genérica superada.
+118|cf|Arts. 1º e 18|Federação e Estado unitário pertencem ao estudo de formas de Estado, não são formas de governo. República é a forma de governo brasileira.
+119|cf|Arts. 34, 46 e 102|A organização constitucional prevê representação dos estados e DF no Senado, guarda constitucional pelo STF e intervenção excepcional. Essas referências dão suporte ao quadro didático federativo.
+120|cf|Art. 18, § 3º|A indissolubilidade não proíbe toda reorganização interna. Incorporação, subdivisão e desmembramento têm condições próprias, diferentes de secessão.
+121|cf|Art. 19, I|A vedação de aliança ou dependência ressalva colaboração de interesse público na forma da lei. A ressalva não autoriza religião oficial nem favorecimento irrestrito.
+122|cf|Arts. 1º e 18|O Brasil adota Federação, com autonomia dos entes nos termos da Constituição. Não corresponde ao Estado unitário puro descrito.
+123|cf|Arts. 1º e 18|Estados-membros têm autonomia, não soberania própria. A auto-organização por constituição estadual não os torna países independentes.
+124|cf|Art. 18, caput e § 2º|Territórios integram a União e não figuram no rol de entes autônomos do caput. O item os acrescenta como categoria equivalente.
+126|cf|Art. 60, § 4º, I|A proteção impede deliberar proposta tendente a abolir a forma federativa. Não significa congelar toda regra de competência sem exame do conteúdo da reforma.
+127|cf|Art. 33, § 3º; Art. 45, § 2º|A ausência de condição federativa autônoma não permite negar toda representação e organização territorial. A Constituição prevê quatro deputados por território e disciplina de Câmara Territorial.
+128|cf|Art. 33, § 1º|A Constituição admite divisão de territórios em municípios, aos quais se aplica, no que couber, a disciplina municipal pertinente.
+129|cf|Art. 45, § 2º; Art. 46|Cada território elege quatro deputados federais. O Senado representa estados e Distrito Federal, não cria representação senatorial territorial equivalente.
+130|cf|Art. 19, II|Recusar fé aos documentos públicos é vedação constitucional dirigida aos entes. Ela deve ser distinguida do exame legítimo de autenticidade e legalidade.
+131|cf|Art. 25, § 3º|A lei complementar estadual pode instituir os agrupamentos previstos para funções públicas de interesse comum. Não se cria um novo ente soberano.
+132|cf|Art. 20, II; Art. 26, IV|Nem toda terra devoluta pertence à União. É necessário distinguir o recorte federal e a atribuição das demais aos estados.
+133|cf|Art. 20, II; Art. 26, IV|A titularidade deve seguir a classificação constitucional, incluindo as terras federais descritas e as estaduais que não estejam no domínio da União.
+134|cf|Art. 37, caput|O agente precisa de fundamento e competência para atuar. Não se deve transportar indistintamente à administração a liberdade geral do particular de fazer o que não é proibido.
+136|cf|Art. 37, caput|Os princípios alcançam administração direta e indireta, incluindo sociedades de economia mista no âmbito constitucional. A natureza empresarial não elimina a regra.
+137|cf|Art. 5º, II; Art. 37, caput|O item descreve a exigência específica de reserva legal, não esgota o princípio da legalidade administrativa. A distinção é conceitual e não uma citação literal de definição na Constituição.
+138|cf|Art. 37, caput|Legalidade e eficiência alcançam também administração indireta e os demais âmbitos indicados. A limitação à direta está incorreta.
+139|cf|Art. 37, caput|Publicidade integra nominalmente a lista de princípios expressos. Não é apenas decorrência implícita sem menção nesse artigo.
+140|cf|Art. 37, caput|A natureza de sociedade de economia mista não afasta os princípios do caput. Se repetido, o conteúdo será reutilizado e não inserido novamente.
+141|cf|Art. 5º, XXXIII; Art. 37|Publicidade convive com sigilo imprescindível à segurança da sociedade e do Estado e outras proteções pertinentes. Não existe proibição constitucional de todo documento sigiloso.
+142|cf|Art. 37, caput|O item foi delimitado à lista nominal de cinco princípios do caput. Proporcionalidade não está nessa enumeração, o que não significa ausência de força jurídica ou de previsão em outras normas.
+145|cf|Art. 15; Art. 37, § 4º|Não se extrai dessas normas privação política definitiva genérica. A suspensão e outras consequências dependem da disciplina constitucional e legal.
+146|cf|Art. 37, § 4º|O texto prevê consequências nas condições e gradação legais. Não se deve concluir que todas sejam automaticamente cumuladas em qualquer caso, nem confundir medida cautelar com pena.
+147|cf|Art. 37, § 6º|O recorte constitucional inclui pessoas jurídicas de direito público e de direito privado prestadoras de serviço público. Não cobre indistintamente toda entidade privada da administração indireta.
+148|cf|Art. 37, § 6º|Pessoas jurídicas privadas prestadoras de serviço público estão no texto. Excluí-las genericamente da regra constitucional está incorreto.
+149|cf|Art. 37, § 6º|A Constituição não limita a regra às pessoas de direito público: também inclui privadas prestadoras de serviço público, nas condições descritas.
+150|cf|Art. 37, § 1º|Caráter educativo não autoriza promoção pessoal de autoridade. Exemplo: campanha institucional não pode servir de propaganda individual por nomes, símbolos ou imagens personalizadores.
+151|cf|Art. 37, I|A Constituição refere requisitos estabelecidos em lei e o acesso de estrangeiros na forma da lei. O edital não substitui sozinho esse fundamento normativo.
+152|cf|Art. 37, I|O texto admite acesso de estrangeiros na forma da lei. Isso não os transforma automaticamente em nacionais ou lhes confere todo direito político.
+153|cf|Art. 37, V|Funções de confiança e cargos em comissão têm destinação de direção, chefia e assessoramento. Ocupação e percentuais devem observar as distinções do inciso.
+154|cf|Art. 37, V|A função de confiança exige servidor ocupante de cargo efetivo. Não se confunde com qualquer hipótese de cargo em comissão.
+155|cf|Art. 37, I|A Constituição prevê acesso de estrangeiros na forma da lei. Uma proibição absoluta ignora essa possibilidade expressa.
+156|cf|Art. 39, § 3º|A remissão aos direitos do art. 7º é específica. Não há importação automática de todo o catálogo para todo vínculo público.
+157|cf|Art. 37, VI e VII|O texto prevê associação sindical e greve, com disciplina própria. Isso não significa autorização irrestrita para todas as carreiras ou eliminação das restrições pertinentes.
+158|cf|Art. 37, VII|A classificação didática da norma dependente de regulamentação não é a de eficácia contida descrita. O exercício concreto exige também considerar a jurisprudência e a carreira, sem autorização universal de greve.
+159|cf|Art. 37, XVI|Compatibilidade de horários é condição, mas não cria nova hipótese geral de dois cargos de técnico administrativo fora das exceções constitucionais.
+160|cf|Art. 38|A acumulação com mandato de vereador pressupõe compatibilidade. A adaptação explicita essa condição; para os demais mandatos, devem ser observadas as soluções constitucionais de afastamento e remuneração.
+161|cf|Art. 93, XIV|A Constituição prevê delegação a servidores de atos administrativos e de mero expediente sem caráter decisório. A proibição genérica de atos administrativos está incorreta.
+162|cf|Art. 92, I-A; Art. 103-B|O CNJ integra o Judiciário, com atribuições constitucionais próprias. Não é órgão do Executivo.
+163|cf|Art. 97|A declaração por tribunal exige maioria absoluta dos seus membros ou do órgão especial. Não se trata de maioria simples de qualquer órgão fracionário.
+164|cf|Art. 93, I|A Constituição prevê participação da OAB em todas as fases do concurso. O enunciado exclui requisito expresso.
+165|cf|Art. 93, IX e X|O dever constitucional de fundamentação alcança as decisões indicadas no texto. Publicidade e fundamentação não são categorias substituíveis.
+166|cf|Art. 95, I|No primeiro grau a aquisição ocorre após dois anos; nos demais casos, a garantia não depende de repetir esse estágio. É necessário distinguir a forma de ingresso e a perda do cargo.
+168|cf|Art. 95, I|O prazo constitucional de primeiro grau é dois anos, não três. Não se deve copiar o prazo de estabilidade do servidor do art. 41.
+169|cf|Art. 95, parágrafo único, V|A vedação no juízo ou tribunal de afastamento dura três anos nas condições constitucionais. Não há exceção genérica por ser tribunal federal ou superior.
+170|cf|Art. 95, parágrafo único, III|Atividade político-partidária é vedada aos juízes. Uma autorização interna não afasta essa proibição constitucional.
+171|cf|Arts. 96 e 99|Autonomia institucional e independência têm proteção constitucional, sem eliminar limites orçamentários, competências e controles aplicáveis.
+172|cf|Art. 103-B, § 4º|O âmbito de controle do CNJ não inclui genericamente a Defensoria Pública, que possui disciplina própria de autonomia e controle.
+173|cf|Art. 103-B|A inclusão no Judiciário não torna o Conselho órgão de julgamento jurisdicional comum. Suas atribuições de controle têm âmbito próprio.
+174|cf|Art. 103-B|O controle do Conselho não é recurso universal para reformar o mérito de atos jurisdicionais. É necessário distinguir ato administrativo e atividade de julgar.
+175|cf|Art. 103-B, § 4º, V|O inciso contempla revisão dos processos disciplinares julgados há menos de um ano, de ofício ou por provocação, nas condições constitucionais.
+178|cf|Art. 103-B, § 2º|A aprovação prevista é por maioria absoluta do Senado, com as regras de composição pertinentes. Não se deve trocá-la por maioria simples.
+179|cf|Art. 103-B, § 4º|O item foi delimitado para distinguir controle administrativo, financeiro e disciplinar de revisão universal do mérito jurisdicional. O Conselho não é instância recursal comum de toda sentença.
+181|cf|Art. 103-B, § 4º, I|O Conselho pode expedir atos regulamentares no âmbito de sua competência ou recomendar providências. A referência ao âmbito impede uma autorização normativa ilimitada.
+182|cf|Art. 103-B, § 5º|A função de corregedor é exercida pelo ministro do STJ que integra o Conselho. Não cabe indistintamente a qualquer membro.
+183|cf|Art. 101, parágrafo único|A escolha exige aprovação pela maioria absoluta do Senado Federal, não do Congresso como órgão conjunto.
+184|cf|Art. 105, I, b|A competência originária indicada para mandado de segurança contra ministro de Estado é do STJ, nas condições constitucionais, não do STF pelo simples título da autoridade.
+185|cf|Art. 102, II, b; Art. 109, IV|Crime político tem tratamento de competência e recurso próprio. O STF possui hipótese de recurso ordinário; isso não o torna julgador originário genérico.
+186|cf|Art. 102, I, e|O litígio descrito corresponde ao recorte originário do STF. É necessário preservar as partes indicadas, sem estender a resposta indistintamente a todo conflito internacional.
+187|cf|Art. 102, I, b; Art. 105, I, a|Governadores possuem disciplina no STJ para a hipótese constitucional pertinente. Não se pode reunir todas as autoridades indicadas sob competência penal originária do STF.
+188|cf|Art. 127, § 1º; Art. 128, § 5º|A alternativa B corresponde à independência funcional, entendida dentro da ordem jurídica, e não como licença para arbitrariedade. A alternativa A descreve indivisibilidade com nome de unidade; E faz a troca inversa; C e D tratam garantias como absolutas e ignoram exceções e limites constitucionais.
+189|cf|Arts. 1º e 18|A forma de Estado brasileira é a Federação e o vínculo é indissolúvel. A autonomia dos entes deve ser lida nos limites constitucionais.
+190|cf|Art. 5º, caput; Art. 14; Art. 85|Igualdade, periodicidade dos mandatos políticos e responsabilização ajudam a caracterizar a República. Não se deve concluir que todo cargo público seja eletivo.
+191|cf|Arts. 1º e 18|O erro é atribuir soberania aos estados-membros. Eles têm autonomia para se organizar dentro da Constituição, sem direito unilateral de secessão.

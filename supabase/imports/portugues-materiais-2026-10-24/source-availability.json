@@ -1,0 +1,58 @@
+{
+  "mrpr": {
+    "url": "https://www4.planalto.gov.br/centrodeestudos/assuntos/manual-de-redacao-da-presidencia-da-republica/manual-de-redacao.pdf",
+    "status": "unavailable_in_this_execution",
+    "response": 503,
+    "decision": "No claim of a fresh full-manual consultation. Historical models/treatment items needing full-manual reconciliation remain pending."
+  },
+  "consulted": [
+    [
+      "Decreto 6.583/2008 — Acordo Ortográfico da Língua Portuguesa",
+      "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6583.htm",
+      "2026-10-25T02:44:55.441492+00:00",
+      "61e5838b2921bd8379366e1d6cf356d11da62823f33504bb563aa91e868c97be"
+    ],
+    [
+      "Decreto 9.758/2019 — formas de tratamento na administração federal",
+      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9758.htm",
+      "2026-10-25T02:44:53.247984+00:00",
+      "51a006ceef1ebc05b2df7b26e4b92ae8ad215a5f91cc3b4a4c548d1a6f712aff"
+    ],
+    [
+      "Lei 15.263/2025 — Política Nacional de Linguagem Simples",
+      "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm",
+      "2026-10-25T02:44:54.076624+00:00",
+      "02913b7878a102065327dfd6311a16963177d07d713d4e64fcc738836430a165"
+    ],
+    [
+      "Senado Federal — concordância verbal",
+      "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+      "2026-10-25T02:47:55.585610+00:00",
+      "0ce86a5c31bae99702af0e93eace32547442022cfd7f3a310108b4e2097a808e"
+    ],
+    [
+      "Senado Federal — crase",
+      "https://www12.senado.leg.br/manualdecomunicacao/estilos/crase",
+      "2026-10-25T02:47:56.606572+00:00",
+      "a68488bead83950f65170fa13713bf47a69aea64bf894b4d05262bd50e65dbe1"
+    ],
+    [
+      "Senado Federal — uso da vírgula",
+      "https://www12.senado.leg.br/manualdecomunicacao/estilos/virgula",
+      "2026-10-25T02:49:16.178595+00:00",
+      "149b64227e4d08c429f1ac80c58db59cc85cc545e3d5a1a7ca3fef750fa7d438"
+    ],
+    [
+      "Senado Federal — Manual de Comunicação: referências de estilo e uso formal",
+      "https://www12.senado.leg.br/manualdecomunicacao/estilos",
+      "2026-10-25T03:07:02.833711+00:00",
+      "c9d716829969122d7e63a48e49c127f81993a55dc2c343b0a1fb44889ccce03b"
+    ],
+    [
+      "Polícia Federal — Agente — Edital 1/2025 e retificações",
+      "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "2026-10-25T02:47:05.911646+00:00",
+      "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b"
+    ]
+  ]
+}

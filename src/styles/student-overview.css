@@ -1,0 +1,232 @@
+/* Overview owns its width; no changes to the other student workspaces. */
+.app-shell.navigation-v2[data-area="student"] .app-content__inner:has(> .student-overview) {
+  width: 100%;
+  max-width: 1600px;
+  padding-block: 16px 32px;
+}
+.app-shell.navigation-v2[data-area="student"]
+  .app-content:has(> .app-content__inner > .student-overview) {
+  padding-inline: clamp(14px, 2vw, 30px);
+}
+.app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .student-overview > * {
+  min-width: 0;
+  margin-block: 0;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  min-height: 124px;
+  padding: 22px 26px;
+  border-radius: 18px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead h1 {
+  font-family: var(--font-display);
+  font-size: clamp(25px, 2.6vw, 34px);
+  line-height: 1.15;
+  margin-block: 5px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__welcome {
+  font-size: 13px;
+  font-weight: 650;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy > p:last-of-type {
+  font-size: 14px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats {
+  width: auto;
+  max-width: 180px;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading {
+  margin-bottom: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading h2 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 650;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  min-height: 76px;
+  padding: 12px;
+  border-radius: 13px;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong {
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 650;
+  white-space: normal;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: visible;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a > svg {
+  display: none;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric {
+  padding: 16px;
+  min-height: 104px;
+  border-radius: 14px;
+  background: var(--card);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric strong {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.2vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric strong[data-placeholder] {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(300px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.app-shell[data-area="student"] .student-overview :is(.student-hub__main, .student-hub__rail) {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: 20px;
+  border-radius: 16px;
+  border-left-width: 3px;
+  box-shadow: 0 8px 22px -24px rgb(0 0 0 / 30%);
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title {
+  margin-bottom: 16px;
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title h2 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 650;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 20px;
+  padding: 12px 0;
+  gap: 14px;
+  min-height: 64px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li strong {
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+  white-space: normal;
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .student-overview .student-home__next-topic {
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 14px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__next-topic strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .student-overview .student-home__wide-action {
+  min-height: 46px;
+  margin-top: 12px;
+  border-radius: 11px;
+  font-size: 13px;
+  color: var(--desk-amber);
+}
+.app-shell[data-area="student"] .student-overview .student-home__objective-name {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area="student"]
+  .student-overview
+  :is(.student-home__quiet, .student-home__signals p) {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.app-shell[data-area="student"] .student-overview .student-home__data-note {
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 1150px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__results {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .student-home.student-desk.student-overview {
+    gap: 14px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__rail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metric {
+    min-height: 100px;
+    padding: 14px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+    padding: 16px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead {
+    padding: 18px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__blocks li {
+    grid-template-columns: 60px minmax(0, 1fr) 16px;
+    gap: 10px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__section-title h2 {
+    font-size: 15px;
+  }
+}

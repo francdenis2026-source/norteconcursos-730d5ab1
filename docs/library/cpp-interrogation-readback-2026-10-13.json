@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-13T02:08:02.039842+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 15,
+  "target_keys": [
+    "art-185",
+    "art-186",
+    "art-187",
+    "art-188",
+    "art-189",
+    "art-190",
+    "art-191",
+    "art-192",
+    "art-193",
+    "art-195",
+    "art-196",
+    "art-197",
+    "art-198",
+    "art-199",
+    "art-200"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 831,
+  "concurrent_other_changes": []
+}

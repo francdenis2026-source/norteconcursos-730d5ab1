@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-13T03:09:52.008295+00:00",
+  "sources": [
+    {
+      "id": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06"
+    },
+    {
+      "id": "stf-dosimetria-suspensao",
+      "url": "https://noticias.stf.jus.br/postsnoticias/relator-suspende-aplicacao-da-lei-da-dosimetria-a-execucoes-penais-no-stf/",
+      "sha256": "2a5539bdee989ca780b29c64868056fb547379b2aebf85cc9fdc2b833f94a1df"
+    },
+    {
+      "id": "stf-dosimetria-primeiras",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-recebe-primeiras-acoes-contra-lei-da-dosimetria/",
+      "sha256": "04d5155ddfd7cb2da3f8e9e9dd9a9456441d42aafc0d08130901e92db1ed0dfc"
+    },
+    {
+      "id": "stf-dosimetria-duas",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-recebe-duas-novas-acoes-contra-lei-da-dosimetria/",
+      "sha256": "eff43629ceea7f9d1b429f0f962442892f29d9231adfe6519c89ced0c82d6ac1"
+    }
+  ],
+  "limitations": [
+    "STF: notícia9/5 informa suspensão nas EPs41,134,100,102,43,52,61,72; não suspensão nacional universal nem mérito deADI7966/7967. Notícia11/5 tambémADI7968/7969.",
+    "Autos deADI ePDF daEP retornaram403; não alegada leitura da íntegra ou desfecho posterior certificado.",
+    "Complementos financeiros e datas de toda regulamentação setorial não certificados; tipos e alertas revisados com escopo explícito.",
+    "Suplementos PlanaltoLeis15.402/14.197 retornaram503; compilado oficial CP é fonte textual validada,notícias oficiais delimitam interpretação/controle."
+  ]
+}

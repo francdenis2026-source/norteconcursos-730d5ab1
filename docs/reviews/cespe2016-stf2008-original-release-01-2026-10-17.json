@@ -1,0 +1,501 @@
+{
+  "batch_id": "cespe2016-stf2008-original-release-01-2026-10-17",
+  "checked_at": "2026-10-17T23:12:11.858393+00:00",
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "sources": [
+    {
+      "kind": "question",
+      "row": {
+        "id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "source_type": "outro",
+        "title": "STF 2008 — Cargo 15 — caderno oficial",
+        "issuer": "CESPE/UnB — Supremo Tribunal Federal",
+        "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_015_23.pdf",
+        "status": "vigente",
+        "is_official": true,
+        "checked_at": "2026-10-17T23:12:11.858393+00:00",
+        "notes": "Documento histórico oficial de prova; não é fonte de vigência de lei. SHA-256 41ca87c541304e1cc00308913a590922f30845fcb75787ddf210b912869032e5"
+      },
+      "evidence": {
+        "path": "/workspace/cespe7000-audit/official-exams-check/STF08_015_23.pdf",
+        "sha256": "41ca87c541304e1cc00308913a590922f30845fcb75787ddf210b912869032e5",
+        "catalog_url": "https://cdn.cebraspe.org.br/concursos/STF2008/",
+        "catalog_path": "/workspace/cespe7000-audit/official-exams-check/probe-1.html",
+        "catalog_sha256": "5b89a1e14f32c7e898db9c164894ea8cafad2e55681791386ab0644d2cdeab75",
+        "visually_verified": true,
+        "captured_at": "2026-10-17T23:04:58.463210+00:00"
+      }
+    },
+    {
+      "kind": "answer_key",
+      "row": {
+        "id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "source_type": "outro",
+        "title": "STF 2008 — Cargo 15 — gabarito oficial definitivo",
+        "issuer": "CESPE/UnB — Supremo Tribunal Federal",
+        "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_Gab_definitivo_015_23.pdf",
+        "status": "vigente",
+        "is_official": true,
+        "checked_at": "2026-10-17T23:12:11.858393+00:00",
+        "notes": "Documento histórico oficial de prova; não é fonte de vigência de lei. SHA-256 42319c4e6290c700bd0b4aecf0b0ce164a999d4ab8fb4b0a61f537f1d117539b"
+      },
+      "evidence": {
+        "path": "/workspace/cespe7000-audit/official-exams-check/STF08_Gab_definitivo_015_23.pdf",
+        "sha256": "42319c4e6290c700bd0b4aecf0b0ce164a999d4ab8fb4b0a61f537f1d117539b",
+        "catalog_url": "https://cdn.cebraspe.org.br/concursos/STF2008/",
+        "catalog_path": "/workspace/cespe7000-audit/official-exams-check/probe-1.html",
+        "catalog_sha256": "5b89a1e14f32c7e898db9c164894ea8cafad2e55681791386ab0644d2cdeab75",
+        "visually_verified": true,
+        "captured_at": "2026-10-17T23:04:59.425017+00:00"
+      }
+    },
+    {
+      "kind": "changes",
+      "row": {
+        "id": "b765bd47-0710-5426-ac2d-2f575291a92c",
+        "source_type": "outro",
+        "title": "STF 2008 — justificativas finais de alteração/anulação",
+        "issuer": "CESPE/UnB — Supremo Tribunal Federal",
+        "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF_2008_OBJETIVA_JUSTIFICATIVAS_DE_ALTERA____O_DE_GABARITO__21_8.PDF",
+        "status": "vigente",
+        "is_official": true,
+        "checked_at": "2026-10-17T23:12:11.858393+00:00",
+        "notes": "Documento histórico oficial de prova; não é fonte de vigência de lei. SHA-256 ddc2094eb80efa5e7eba094dee3c871feecb399d08fcbb57cb89aab3223fb8f9"
+      },
+      "evidence": {
+        "path": "/workspace/cespe7000-audit/official-exams-check/STF_2008_OBJETIVA_JUSTIFICATIVAS_DE_ALTERA____O_DE_GABARITO__21_8.PDF",
+        "sha256": "ddc2094eb80efa5e7eba094dee3c871feecb399d08fcbb57cb89aab3223fb8f9",
+        "catalog_url": "https://cdn.cebraspe.org.br/concursos/STF2008/",
+        "catalog_path": "/workspace/cespe7000-audit/official-exams-check/probe-1.html",
+        "catalog_sha256": "5b89a1e14f32c7e898db9c164894ea8cafad2e55681791386ab0644d2cdeab75",
+        "visually_verified": true,
+        "captured_at": "2026-10-17T23:05:00.313405+00:00"
+      }
+    }
+  ],
+  "supports": [
+    {
+      "id": "92b0ab96-28c5-5ecb-9b64-74d12ed8e067",
+      "label": "Texto para os itens 1 a 12 — STF/2008; referências temporais e dados do texto são históricos",
+      "body": "Um lugar sob o comando de gestores, onde os funcionários são orientados por metas, têm o desempenho avaliado dia a dia e recebem prêmios em dinheiro pela eficiência na execução de suas tarefas, pode parecer tudo — menos uma escola pública brasileira. Pois essas são algumas das práticas implantadas com sucesso em um grupo de escolas estaduais de ensino médio de Pernambuco. A experiência chama a atenção pelo impressionante progresso dos estudantes depois que ingressaram ali. Como é praxe no local, o avanço foi quantificado. Os alunos são testados na entrada, e quase metade deles tirou zero em matemática e notas entre 1 e 2 em português. Isso em uma escala de zero a 10. Depois de três anos, eles cravaram 6 em tais matérias, em uma prova aplicada pelo Ministério da Educação. Em poucas escolas públicas brasileiras, a média foi tão alta. De saída, há uma característica que as distingue das demais: elas são administradas por uma parceria entre o governo e uma associação formada por empresários da região. Os professores são avaliados em quatro frentes: recebem notas dos alunos, dos pais e do diretor e ainda outra pelo cumprimento das metas acadêmicas. Aos melhores, é concedido bônus no salário. Veja, 12/3/2008, p. 78 (com adaptações).",
+      "contest_name": "Supremo Tribunal Federal",
+      "exam_year": 2008,
+      "exam_board": "CEBRASPE",
+      "source_note": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_015_23.pdf — texto conferido no caderno oficial; questões de interpretação, sem atualização das estatísticas históricas."
+    },
+    {
+      "id": "0e75cb05-fc53-5dd6-876d-00bec0682298",
+      "label": "Texto para os itens 13 a 22 — STF/2008; referências temporais e dados do texto são históricos",
+      "body": "Um Brasil com desemprego zero. Um Brasil bem distante das estatísticas que apontam para uma taxa de desocupação em torno de 9%. E um Brasil que coloca o seu mercado de trabalho nas mãos de empreendedores locais, formais e informais. Cerca de 30 cidades devem integrar esse Brasil fora das estatísticas. São exceções e prova viva da força empreendedora do interior e de seu papel empregador. E representam, ainda, a força do agronegócio, o avanço ao consumo da classe C e os efeitos na economia dos programas de transferência de renda, afirmou Luiz Carlos Barboza, diretor do SEBRAE Nacional. O Globo, 6/4/2008, p. 33 (com adaptações).",
+      "contest_name": "Supremo Tribunal Federal",
+      "exam_year": 2008,
+      "exam_board": "CEBRASPE",
+      "source_note": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_015_23.pdf — texto conferido no caderno oficial; questões de interpretação, sem atualização das estatísticas históricas."
+    },
+    {
+      "id": "bded26a4-561f-54f4-a2bf-ae21a82d2db9",
+      "label": "Texto para os itens 23 a 27 — STF/2008; referências temporais e dados do texto são históricos",
+      "body": "O consumo das famílias deverá crescer 7,5% neste ano, tornando-se um dos principais responsáveis pelo crescimento do produto interno bruto, previsto em 5%. A nova estimativa do consumo das famílias é uma das principais mudanças nas perspectivas para a economia brasileira em 2008 traçadas pela Confederação Nacional da Indústria em relação às previsões apresentadas em dezembro do ano passado, quando o aumento do consumo foi estimado em 6,2%. O aumento do emprego e os programas de transferência de renda continuam a beneficiar mais as famílias que ganham menos, cujo consumo tende a aumentar proporcionalmente mais do que o das famílias de renda mais alta. A oferta de crédito, igualmente, atinge mais diretamente essa faixa. O Estado de S.Paulo, 7/4/2008 (com adaptações).",
+      "contest_name": "Supremo Tribunal Federal",
+      "exam_year": 2008,
+      "exam_board": "CEBRASPE",
+      "source_note": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_015_23.pdf — texto conferido no caderno oficial; questões de interpretação, sem atualização das estatísticas históricas."
+    }
+  ],
+  "items": [
+    {
+      "origin_candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "row": {
+        "id": "7011a64b-a63c-5535-8f5c-da4504f0b740",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 4,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com referência às idéias e às estruturas lingüísticas do texto acima, julgue os itens a seguir.\n\nPredomina no fragmento o tipo textual narrativo ficcional.",
+        "raw_extraction": "Predomina no fragmento o tipo textual narrativo ficcional.",
+        "official_answer": "E",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O texto apresenta práticas de gestão e resultados de escolas como experiência concreta, com dados e fonte jornalística. Relatar ações não basta para caracterizar narrativa ficcional: não se trata de uma história inventada. O exercício cobra a organização do texto de 2008, não a atualização dos indicadores educacionais ali citados.\n\nExemplo: Uma notícia relata que uma escola aplicou avaliações em três anos. Essa sequência de fatos não transforma a notícia em um conto inventado.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "92b0ab96-28c5-5ecb-9b64-74d12ed8e067",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "Predomina no fragmento o tipo textual narrativo ficcional.",
+      "original_instruction": "Com referência às idéias e às estruturas lingüísticas do texto acima, julgue os itens a seguir."
+    },
+    {
+      "origin_candidate_id": "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "row": {
+        "id": "5598753a-46a7-5c02-99ee-a9d65bceedf0",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 10,
+        "subject": "Língua Portuguesa",
+        "question_text": "Tendo o texto precedente como referência inicial e considerando o atual cenário educacional brasileiro, julgue os itens que se seguem.\n\nInfere-se do texto que a melhoria do desempenho na educação resulta de um conjunto de ações e de atitudes, entre as quais se situam o planejamento e a avaliação sistemática de alunos e docentes.",
+        "raw_extraction": "Infere-se do texto que a melhoria do desempenho na\neducação resulta de um conjunto de ações e de atitudes,\nentre as quais se situam o planejamento e a avaliação\nsistemática de alunos e docentes.",
+        "official_answer": "C",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Certo. O texto associa a experiência de melhora a um conjunto de práticas: metas, avaliação de alunos, acompanhamento dos professores e gestão. Essa organização sustenta a inferência sobre planejamento e avaliação sistemática, sem afirmar que um único fator explique todo o resultado. O texto-base e a referência histórica de 2008 acompanham o item.\n\nExemplo: Se um texto relaciona estudo orientado, prática e acompanhamento à melhora, é possível reconhecer um conjunto de fatores, sem atribuir todo o efeito a apenas um deles.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "92b0ab96-28c5-5ecb-9b64-74d12ed8e067",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "Infere-se do texto que a melhoria do desempenho na educação resulta de um conjunto de ações e de atitudes, entre as quais se situam o planejamento e a avaliação sistemática de alunos e docentes.",
+      "original_instruction": "Tendo o texto precedente como referência inicial e considerando o atual cenário educacional brasileiro, julgue os itens que se seguem."
+    },
+    {
+      "origin_candidate_id": "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "row": {
+        "id": "e177eedb-f237-5a7e-aa5a-af88514e6b6b",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 11,
+        "subject": "Língua Portuguesa",
+        "question_text": "Tendo o texto precedente como referência inicial e considerando o atual cenário educacional brasileiro, julgue os itens que se seguem.\n\nO texto confirma uma verdade conhecida há tempos: no Brasil, o principal problema da educação básica é a falta de vagas nas escolas públicas.",
+        "raw_extraction": "O texto confirma uma verdade conhecida há tempos: no\nBrasil, o principal problema da educação básica é a falta de\nvagas nas escolas públicas.",
+        "official_answer": "E",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O texto trata de aprendizagem, avaliação e gestão, mas não afirma que a falta de vagas seja o principal problema da educação básica. A proposição atribui ao texto uma conclusão que ele não estabelece. A resposta avalia essa extrapolação textual e não apresenta um diagnóstico atual do sistema educacional.\n\nExemplo: Um texto sobre baixa aprendizagem não autoriza concluir, sem outra informação, que a maior dificuldade seja a quantidade de matrículas disponíveis.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "92b0ab96-28c5-5ecb-9b64-74d12ed8e067",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "O texto confirma uma verdade conhecida há tempos: no Brasil, o principal problema da educação básica é a falta de vagas nas escolas públicas.",
+      "original_instruction": "Tendo o texto precedente como referência inicial e considerando o atual cenário educacional brasileiro, julgue os itens que se seguem."
+    },
+    {
+      "origin_candidate_id": "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "row": {
+        "id": "52e78e8d-057f-5d47-86d4-7ccea775192f",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 13,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com relação ao texto acima, julgue os itens a seguir.\n\nSegundo os dados estatísticos apresentados no texto, os beneficiados pelos programas de transferência de renda integram o contingente de empregados.",
+        "raw_extraction": "Segundo os dados estatísticos apresentados no texto, os\nbeneficiados pelos programas de transferência de renda\nintegram o contingente de empregados.",
+        "official_answer": "E",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. O texto menciona efeitos econômicos de programas de transferência de renda, mas não informa que seus beneficiários integrem, por esse motivo, o contingente de empregados. O item acrescenta uma relação que os dados narrados não demonstram. Os números e a referência a programas pertencem ao texto jornalístico de 2008.\n\nExemplo: Uma família recebe um benefício e compra alimentos. Isso não permite concluir apenas desse dado que todos os seus integrantes tenham emprego.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "0e75cb05-fc53-5dd6-876d-00bec0682298",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": false,
+      "official_statement": "Segundo os dados estatísticos apresentados no texto, os beneficiados pelos programas de transferência de renda integram o contingente de empregados.",
+      "original_instruction": "Com relação ao texto acima, julgue os itens a seguir."
+    },
+    {
+      "origin_candidate_id": "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "row": {
+        "id": "d68da23e-ab9a-51cd-a2bc-d5ac140858d7",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+        "current_syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 14,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com relação ao texto acima, julgue os itens a seguir.\n\nO primeiro período do texto tem natureza nominal.",
+        "raw_extraction": "O primeiro período do texto tem natureza nominal.",
+        "official_answer": "C",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Certo. “Um Brasil com desemprego zero” é um período nominal, porque não contém verbo expresso. Ele introduz o assunto por meio de uma construção centrada no substantivo “Brasil”. Essa classificação é linguística: não afirma que o desemprego seja zero no presente nem exige tomar o texto de 2008 como estatística atual.\n\nExemplo: A expressão “Uma cidade sem trânsito” pode formar um enunciado nominal. Já “A cidade não tem trânsito” apresenta verbo expresso.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "0e75cb05-fc53-5dd6-876d-00bec0682298",
+        "tested_topic": "Período nominal"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "O primeiro período do texto tem natureza nominal.",
+      "original_instruction": "Com relação ao texto acima, julgue os itens a seguir."
+    },
+    {
+      "origin_candidate_id": "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "row": {
+        "id": "2820eb6a-5062-598e-9702-f89dad1c06db",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 17,
+        "subject": "Língua Portuguesa",
+        "question_text": "Com relação ao texto acima, julgue os itens a seguir.\n\nDe acordo com as informações do texto, há cerca de 30 cidades que não são contabilizadas nas estatísticas oficiais sobre desemprego.",
+        "raw_extraction": "De acordo com as informações do texto, há cerca de 30\ncidades que não são contabilizadas nas estatísticas oficiais\nsobre desemprego.",
+        "official_answer": "E",
+        "source_page": 2,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Errado. As cidades são apresentadas como exceções ao quadro geral de desemprego. A expressão figurada “fora das estatísticas” não informa exclusão dos municípios da cobertura estatística oficial. O item troca a excepcionalidade descrita por uma ausência de contagem que o texto não demonstra.\n\nExemplo: Dizer que um atleta está “fora da curva” destaca seu desempenho. Isso não significa que ele tenha sido excluído do registro dos resultados.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "0e75cb05-fc53-5dd6-876d-00bec0682298",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "De acordo com as informações do texto, há cerca de 30 cidades que não são contabilizadas nas estatísticas oficiais sobre desemprego.",
+      "original_instruction": "Com relação ao texto acima, julgue os itens a seguir."
+    },
+    {
+      "origin_candidate_id": "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00",
+      "row": {
+        "id": "ddeab2cf-5485-58c3-8349-8bbdf3200da8",
+        "question_source_id": "92625ac7-1631-59af-80a6-04e46e66fdd4",
+        "answer_key_source_id": "dd05baf5-745d-57a9-9307-bffca609c204",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "current_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Supremo Tribunal Federal",
+        "exam_year": 2008,
+        "career_name": "Técnico Judiciário — Área Administrativa",
+        "exam_board": "CEBRASPE",
+        "item_number": 23,
+        "subject": "Língua Portuguesa",
+        "question_text": "Considerando o texto acima, julgue os itens que se seguem.\n\nDe acordo com os sentidos do texto, de dezembro do ano passado até hoje, houve uma modificação nas perspectivas para a economia brasileira no que se refere ao consumo.",
+        "raw_extraction": "De acordo com os sentidos do texto, de dezembro do ano\npassado até hoje, houve uma modificação nas perspectivas\npara a economia brasileira no que se refere ao consumo.",
+        "official_answer": "C",
+        "source_page": 3,
+        "content_status": "active",
+        "legal_review_required": false,
+        "context_review_required": false,
+        "legal_basis": [],
+        "law_version_checked_at": null,
+        "review_note": "Certo. O texto compara a previsão anterior de crescimento do consumo das famílias, de 6,2%, com a nova estimativa de 7,5%. Há mudança nas perspectivas relatadas. “Até hoje” deve ser interpretado na referência temporal da notícia e da prova de 2008; esses percentuais não são apresentados como previsões atuais.\n\nExemplo: Uma notícia de certa data informa que a previsão passou de 4% para 5%. Houve revisão da estimativa naquele período, sem que isso informe qual é a previsão de hoje.",
+        "verified_at": "2026-10-17T23:12:11.858393+00:00",
+        "legal_audit_completed": false,
+        "difficulty": "média",
+        "support_text_id": "bded26a4-561f-54f4-a2bf-ae21a82d2db9",
+        "tested_topic": "Interpretação textual e inferências — contexto histórico de 2008"
+      },
+      "book_text_matches_official": true,
+      "official_statement": "De acordo com os sentidos do texto, de dezembro do ano passado até hoje, houve uma modificação nas perspectivas para a economia brasileira no que se refere ao consumo.",
+      "original_instruction": "Considerando o texto acima, julgue os itens que se seguem."
+    }
+  ],
+  "confirmed_originals": [
+    {
+      "origin_candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "original_item_number": 4,
+      "official_answer": "E",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "00070cbddb3150c03aba2803a2df7512e89abf5bf8e73cafcafd1a4666c26b46",
+      "original_item_number": 8,
+      "official_answer": "E",
+      "publish": false
+    },
+    {
+      "origin_candidate_id": "8faebf506743e43dacbacc45aeb7e69d369a5e8621e7d4d44724e807fdda1eca",
+      "original_item_number": 9,
+      "official_answer": "C",
+      "publish": false
+    },
+    {
+      "origin_candidate_id": "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "original_item_number": 10,
+      "official_answer": "C",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "original_item_number": 11,
+      "official_answer": "E",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "d448ae3e2d8eadd8d6c5f800c8e4bc5567d73c3aabb75f7060a9e05c8dfe3e8a",
+      "original_item_number": 12,
+      "official_answer": "E",
+      "publish": false
+    },
+    {
+      "origin_candidate_id": "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "original_item_number": 13,
+      "official_answer": "E",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "original_item_number": 14,
+      "official_answer": "C",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "original_item_number": 17,
+      "official_answer": "E",
+      "publish": true
+    },
+    {
+      "origin_candidate_id": "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00",
+      "original_item_number": 23,
+      "official_answer": "C",
+      "publish": true
+    }
+  ],
+  "primary_evidence": [
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_015_23.pdf",
+      "title": "STF 2008 — Cargo 15 — caderno oficial",
+      "sha256": "41ca87c541304e1cc00308913a590922f30845fcb75787ddf210b912869032e5",
+      "checked_at": "2026-10-17T23:12:11.858393+00:00",
+      "verified": true
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF08_Gab_definitivo_015_23.pdf",
+      "title": "STF 2008 — Cargo 15 — gabarito oficial definitivo",
+      "sha256": "42319c4e6290c700bd0b4aecf0b0ce164a999d4ab8fb4b0a61f537f1d117539b",
+      "checked_at": "2026-10-17T23:12:11.858393+00:00",
+      "verified": true
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/STF2008/arquivos/STF_2008_OBJETIVA_JUSTIFICATIVAS_DE_ALTERA____O_DE_GABARITO__21_8.PDF",
+      "title": "STF 2008 — justificativas finais de alteração/anulação",
+      "sha256": "ddc2094eb80efa5e7eba094dee3c871feecb399d08fcbb57cb89aab3223fb8f9",
+      "checked_at": "2026-10-17T23:12:11.858393+00:00",
+      "verified": true
+    }
+  ],
+  "pf_syllabus_evidence": {
+    "file": "PF_25_edital_atualizado.pdf",
+    "path": "/workspace/cespe7000-audit/official-exams-check/PF_25_edital_atualizado.pdf",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "final_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "captured_at": "2026-10-17T23:07:12.549045+00:00",
+    "bytes": 1505541
+  },
+  "current_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+  "current_edital_source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+  "historical_reference_year": 2008,
+  "final_key_visually_checked": true,
+  "notice_visually_checked": true,
+  "publication_result": {
+    "batch_id": "cespe2016-stf2008-original-release-01-2026-10-17",
+    "apply": true,
+    "complete": true,
+    "confirmed_originals": 10,
+    "published_ids": [
+      "7011a64b-a63c-5535-8f5c-da4504f0b740",
+      "5598753a-46a7-5c02-99ee-a9d65bceedf0",
+      "e177eedb-f237-5a7e-aa5a-af88514e6b6b",
+      "52e78e8d-057f-5d47-86d4-7ccea775192f",
+      "d68da23e-ab9a-51cd-a2bc-d5ac140858d7",
+      "2820eb6a-5062-598e-9702-f89dad1c06db",
+      "ddeab2cf-5485-58c3-8349-8bbdf3200da8"
+    ],
+    "retained_originals": 3,
+    "compared_counts": {
+      "official_exam_questions": 4888,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 2022,
+      "question_corpus_candidates": 4982
+    },
+    "annulled_items_in_final_key": [
+      105,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114,
+      118
+    ],
+    "private_refined_ids": [
+      "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "00070cbddb3150c03aba2803a2df7512e89abf5bf8e73cafcafd1a4666c26b46",
+      "8faebf506743e43dacbacc45aeb7e69d369a5e8621e7d4d44724e807fdda1eca",
+      "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "d448ae3e2d8eadd8d6c5f800c8e4bc5567d73c3aabb75f7060a9e05c8dfe3e8a",
+      "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00"
+    ]
+  },
+  "instruction_restoration_result": {
+    "restored_ids": [
+      "7011a64b-a63c-5535-8f5c-da4504f0b740",
+      "5598753a-46a7-5c02-99ee-a9d65bceedf0",
+      "e177eedb-f237-5a7e-aa5a-af88514e6b6b",
+      "52e78e8d-057f-5d47-86d4-7ccea775192f",
+      "d68da23e-ab9a-51cd-a2bc-d5ac140858d7",
+      "2820eb6a-5062-598e-9702-f89dad1c06db",
+      "ddeab2cf-5485-58c3-8349-8bbdf3200da8"
+    ],
+    "complete": true
+  }
+}

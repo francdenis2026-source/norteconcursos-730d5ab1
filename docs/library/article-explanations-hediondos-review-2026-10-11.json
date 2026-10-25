@@ -1,0 +1,931 @@
+{
+  "version": "2026-10-11-hediondos-targeted",
+  "checked_at": "2026-10-12T01:27:10.158082+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "hediondos",
+      "title": "Lei 8.072/1990 — Crimes Hediondos",
+      "units": 17,
+      "scope_type": "targeted_correction",
+      "course_current_units": 17,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-12",
+        "art-13",
+        "art-159",
+        "art-213",
+        "art-214",
+        "art-223",
+        "art-267",
+        "art-270"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "source_sha256": "24bc39962f9f8c6edd656b1e3a467f7aceab112202e2645936cffb714feb9c44",
+      "source_checked_at": "2026-10-12T00:31:26.885772+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "6570f8b4-c3c6-58c1-af18-3083bc174d83",
+      "content_sha256": "646dcd71464c299a169001e9638bf5e85984889eeaba1d631fc6dd7a34332ddf",
+      "simples": "O rol legal abrange tentativa e consumação, com hipóteses específicas: não basta gravidade intuitiva. Atualizações incluem feminicídio autônomo (2024), ampliação de proteção funcional e lesão gravíssima/seguida de morte em ensino (2025), vicaricídio, domínio social estruturado/favorecimento e expansão dos crimes sexuais do ECA enumerados (2026). Diferencie estupro, modalidades de roubo/extorsão, epidemia com morte, medicamentos, exploração sexual, furto com explosivo, suicídio/automutilação por meios digitais, cárcere de menor e tráfico de pessoas contra criança/adolescente.",
+      "pontos": [
+        "Rol e remissão exata: posse/porte de arma de uso proibido, comércio ilegal e tráfico internacional; organização voltada a hediondo/equiparado; correspondência militar; delitos do ECA expressamente enumerados."
+      ],
+      "atencao": [
+        "Não tornar todo roubo, furto, arma restrita, tráfico de pessoas contra adulto ou organização automaticamente hediondo. A inclusão mais gravosa exige análise temporal. A nova lei cita §3º vetado no domínio social: remissão não cria tipo vetado."
+      ],
+      "exemplo": "Roubo com arma de fogo preenche hipótese específica; furto simples não entra por mera gravidade subjetiva. Variação: É posse/porte de arma apenas restrita: compare a hipótese de uso proibido do inciso II, sem confundir com outros crimes do estatuto.",
+      "prova": [
+        "Todo roubo é hediondo apenas pelo nome do crime? Não; devem ser verificadas as modalidades do rol."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+      ],
+      "expected": {
+        "unit_id": "6570f8b4-c3c6-58c1-af18-3083bc174d83",
+        "content_sha256": "646dcd71464c299a169001e9638bf5e85984889eeaba1d631fc6dd7a34332ddf",
+        "simples": "A lei lista, em rol taxativo, os crimes considerados hediondos, tipificados no Código Penal, consumados ou tentados: homicídio praticado em atividade típica de grupo de extermínio (ainda que por um só agente) e homicídio qualificado; lesão corporal dolosa gravíssima e lesão seguida de morte, quando praticadas contra autoridades e agentes de segurança, do sistema prisional, do Judiciário, do Ministério Público e outros, em razão da função, ou nas dependências de instituição de ensino; feminicídio; vicaricídio; roubo circunstanciado pela restrição de liberdade da vítima, pelo emprego de arma de fogo ou de arma de uso proibido ou restrito, e roubo qualificado pelo resultado lesão grave ou morte; extorsão qualificada; extorsão mediante sequestro e na forma qualificada; estupro; estupro de vulnerável; epidemia com resultado morte; falsificação de produto terapêutico ou medicinal; favorecimento da prostituição de criança, adolescente ou vulnerável; furto qualificado pelo emprego de explosivo; induzimento, instigação ou auxílio a suicídio ou automutilação pela internet; sequestro e cárcere privado contra menor de 18 anos; e tráfico de pessoas contra criança ou adolescente. O parágrafo único inclui o genocídio, o porte ou posse ilegal de arma de fogo de uso proibido, o comércio ilegal e o tráfico internacional de armas, a organização criminosa direcionada a crime hediondo ou equiparado, crimes do Código Penal Militar com identidade com os do artigo, crimes do Estatuto da Criança e do Adolescente sobre pornografia infantil e favorecimento da prostituição, e os crimes de domínio social estruturado.",
+        "pontos": [
+          "Rol TAXATIVO: só é hediondo o que a lei lista (critério legal).",
+          "I: homicídio de grupo de extermínio e homicídio qualificado.",
+          "I-A: lesão gravíssima ou seguida de morte contra autoridades e agentes de segurança e em escolas.",
+          "I-B: feminicídio. I-C: vicaricídio.",
+          "II e III: roubo e extorsão qualificados.",
+          "IV a VII: extorsão mediante sequestro, estupro, estupro de vulnerável, epidemia com morte, falsificação de medicamentos.",
+          "VIII a XII: favorecimento da exploração sexual infantil, furto com explosivo, indução ao suicídio pela internet, sequestro de menor e tráfico de pessoas de criança ou adolescente.",
+          "Parágrafo único: genocídio, armas, organização criminosa para crime hediondo, crimes do ECA e domínio social estruturado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dos incisos I e I-A dada pela Lei nº 15.159, de 2025; incluídos o feminicídio (I-B) e o vicaricídio (I-C) e, no parágrafo único, os crimes de domínio social estruturado.",
+          "A lei adota o critério LEGAL (lista), e não o judicial ou misto.",
+          "Tentado ou consumado: ambos são hediondos."
+        ],
+        "exemplo": "O feminicídio, consumado ou tentado, é crime hediondo.",
+        "prova": [
+          "Assertiva que considera hediondo qualquer crime praticado com extrema crueldade, ainda que fora do rol legal, erra: o critério é o legal."
+        ],
+        "termos": [
+          {
+            "termo": "Critério legal",
+            "significado": "Hediondo é só o crime que a lei lista expressamente."
+          },
+          {
+            "termo": "Vicaricídio",
+            "significado": "Homicídio de terceiro (em regra, filho) para atingir a mulher."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º",
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "7d540f8d-7610-5836-8dd0-67743176ad70",
+      "content_sha256": "26db3ce460b2d40681912575db696e3bce3d8bbe38752f4a6b2ae9a614ea90e5",
+      "simples": "Hediondos e equiparados são insuscetíveis de anistia, graça, indulto e fiança. Isso não equivale à proibição automática de liberdade provisória. STF afastou regime inicial fechado baseado exclusivamente na hediondez. Progressão deve ser estudada na LEP 112 atual, não nos percentuais do antigo §2º revogado. Temporária: 30 dias mais 30 em extrema/comprovada necessidade, com requisitos constitucionais. Apelar em liberdade exige decisão fundamentada.",
+      "pontos": [
+        "Tortura, terrorismo e tráfico ilícito equiparados; tráfico privilegiado não tem natureza hedionda (STF)."
+      ],
+      "atencao": [
+        "Não impor fechado automático ou confundir inafiançabilidade com prisão obrigatória. STJ, Informativo 882/2026: fabricação de maquinário (drogas 34) não é equiparada; associação (35) também não recebe hediondez por analogia."
+      ],
+      "exemplo": "A pena exige regime individualizado conforme requisitos, sem fundamentar apenas no rótulo hediondo. Variação: A acusação é art. 34 da Lei de Drogas: aplique a distinção recente do STJ, não chame todo delito daquela lei equiparado.",
+      "prova": [
+        "Inafiançabilidade significa prisão obrigatória sem exame de liberdade provisória? Não; são questões distintas.",
+        "O tráfico privilegiado tem natureza hedionda? Não; o STF afastou essa natureza na hipótese do art. 33, §4º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=361875",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=319638",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D022206"
+      ],
+      "expected": {
+        "unit_id": "7d540f8d-7610-5836-8dd0-67743176ad70",
+        "content_sha256": "26db3ce460b2d40681912575db696e3bce3d8bbe38752f4a6b2ae9a614ea90e5",
+        "simples": "Os crimes hediondos, a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins e o terrorismo são insuscetíveis de anistia, graça e indulto, e de fiança. A pena por esses crimes será cumprida inicialmente em regime fechado. O §2º foi revogado. Em caso de sentença condenatória, o juiz decidirá fundamentadamente se o réu poderá apelar em liberdade. A prisão temporária, nos crimes previstos no artigo, terá o prazo de 30 dias, prorrogável por igual período em caso de extrema e comprovada necessidade.",
+        "pontos": [
+          "Insuscetíveis de anistia, graça, indulto e fiança.",
+          "Regime inicial fechado.",
+          "Apelar em liberdade: decisão fundamentada do juiz.",
+          "Prisão temporária de 30 dias, prorrogável por igual período."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §2º (vedação de progressão) foi revogado e a progressão hoje segue o Código Penal e a LEP, com frações próprias.",
+          "Equiparados a hediondos: tortura, tráfico de drogas e terrorismo.",
+          "STF: o regime inicial fechado obrigatório foi declarado inconstitucional (o juiz deve fundamentar)."
+        ],
+        "exemplo": "A prisão temporária por crime hediondo dura 30 dias, prorrogável por mais 30.",
+        "prova": [
+          "Assertiva que fixa em 5 dias, prorrogável por mais 5, a prisão temporária nos crimes hediondos erra: são 30 dias, prorrogáveis por igual período."
+        ],
+        "termos": [
+          {
+            "termo": "Crimes equiparados a hediondos",
+            "significado": "Tortura, tráfico de drogas e terrorismo, que recebem tratamento similar."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º",
+          "Lei de Execução Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "66a393e2-94fd-55e3-afb1-8947c86bfbf4",
+      "content_sha256": "7e77c136e9439f2583e381fb7ce9843e6a65ba999c2f2bee97d1950dfc73d3cd",
+      "simples": "A União mantém estabelecimentos de segurança máxima para condenados de alta periculosidade cuja permanência estadual ponha em risco ordem/incolumidade pública. Recolhimento e transferência têm procedimentos próprios; o texto não ordena enviar todo condenado por hediondo ao sistema federal.",
+      "pontos": [
+        "Alta periculosidade + risco da permanência estadual; procedimento próprio."
+      ],
+      "atencao": [
+        "Distinguir regra geral de hipóteses federais específicas de leis posteriores, como crimes dos arts. 21-A/B da Lei 12.850."
+      ],
+      "exemplo": "O caso evidencia risco concreto no estabelecimento estadual e se examina o procedimento de transferência. Variação: Só há o rótulo hediondo: isso não prova todos os elementos deste artigo.",
+      "prova": [
+        "Todo condenado por hediondo vai automaticamente ao presídio federal por este artigo? Não; há condições e procedimento próprios."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "66a393e2-94fd-55e3-afb1-8947c86bfbf4",
+        "content_sha256": "7e77c136e9439f2583e381fb7ce9843e6a65ba999c2f2bee97d1950dfc73d3cd",
+        "simples": "A União manterá estabelecimentos penais de segurança máxima, destinados ao cumprimento de penas impostas a condenados de alta periculosidade, cuja permanência em presídios estaduais ponha em risco a ordem ou a incolumidade pública.",
+        "pontos": [
+          "União mantém presídios de segurança máxima.",
+          "Destino: condenados de alta periculosidade que ponham em risco a ordem ou a incolumidade pública."
+        ],
+        "atencao": [
+          "Dever da UNIÃO (presídios federais)."
+        ],
+        "exemplo": "Líder de facção é transferido a presídio federal de segurança máxima.",
+        "prova": [
+          "Assertiva que atribui aos Estados a manutenção dos presídios de segurança máxima da lei erra: é da União."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "e8f61c7e-4c1a-5161-b3c4-3283cfa38959",
+      "content_sha256": "bfc021223bd27198d792cd0b8aff214a965308af6c71e4a341baef841b6f5cd7",
+      "simples": "Introduziu no CP 83, V livramento após mais de dois terços, sem reincidência específica, para os crimes indicados. A redação atual também inclui tráfico de pessoas desde 2016. Outros requisitos do CP 83 e vedações especiais atuais precisam ser verificados; não é a fração da progressão.",
+      "pontos": [
+        "Mais de 2/3, não exatamente 2/3; livramento ≠ progressão."
+      ],
+      "atencao": [
+        "Não prometer benefício só pelo tempo. Domínio social tem proibição específica; LEP/leis especiais podem impor outras restrições conforme hipótese e data do fato."
+      ],
+      "exemplo": "Cumpre mais de dois terços e satisfaz os demais requisitos: examina-se possibilidade, não direito automático pelo relógio. Variação: O crime tem vedação especial de livramento: não se ignora a restrição apenas citando CP 83.",
+      "prova": [
+        "A fração do artigo é critério de progressão de regime? Não; trata de livramento condicional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e8f61c7e-4c1a-5161-b3c4-3283cfa38959",
+        "content_sha256": "bfc021223bd27198d792cd0b8aff214a965308af6c71e4a341baef841b6f5cd7",
+        "simples": "Ao art. 83 do Código Penal é acrescido o inciso V (livramento condicional): cumprido mais de dois terços da pena, nos casos de condenação por crime hediondo, prática da tortura, tráfico ilícito de entorpecentes e drogas afins e terrorismo, se o apenado não for reincidente específico em crimes dessa natureza.",
+        "pontos": [
+          "Livramento condicional após mais de dois terços da pena.",
+          "Para hediondos, tortura, tráfico e terrorismo.",
+          "Vedado ao reincidente específico."
+        ],
+        "atencao": [
+          "Hoje o art. 83 do Código Penal tem frações próprias e distingue o reincidente específico; confira a redação vigente."
+        ],
+        "exemplo": "Condenado primário por crime hediondo só obtém livramento após mais de 2/3 da pena.",
+        "prova": [
+          "Assertiva que permite o livramento condicional a qualquer tempo, nos crimes hediondos, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Reincidente específico",
+            "significado": "Quem reincide em crime da mesma natureza."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "5056b600-da25-53cb-a934-0f5ac70fab30",
+      "content_sha256": "6dca8c136f254b98b2d25e4bbfa89f81bee68b44f33c18a7c3872c6a1ea1d403",
+      "simples": "Artigo modificador com penas e remissões históricas. No CP 157 atual, lesão grave no roubo é 7 a 18 anos e multa; latrocínio geral passou a 24 a 30 anos e multa pela Lei 15.397/2026, além de hipóteses específicas do marco antifacção. Os arts. 214 e 223 foram revogados em 2009; consulte CP 213 e 217-A e demais tipos vigentes.",
+      "pontos": [
+        "CP compilado prevalece para estudar a pena atual; fragmento de 1990 não é quadro atual completo."
+      ],
+      "atencao": [
+        "Não memorizar 5–15/20–30 do roubo transcrito como penas gerais atuais. Não reutilizar tipos sexuais revogados nem combinar artificialmente penas de épocas diferentes."
+      ],
+      "exemplo": "A prova cobra latrocínio atual e o candidato consulta CP 157, §3º, II, com a alteração de 2026. Variação: Apostila reproduz a faixa de 1990: identifique o trecho como histórico e confira a fonte alterada.",
+      "prova": [
+        "O trecho de 1990 contém todas as penas atuais do roubo? Não; houve alterações posteriores, inclusive em 2026."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm"
+      ],
+      "expected": {
+        "unit_id": "5056b600-da25-53cb-a934-0f5ac70fab30",
+        "content_sha256": "6dca8c136f254b98b2d25e4bbfa89f81bee68b44f33c18a7c3872c6a1ea1d403",
+        "simples": "O artigo alterou a redação de dispositivos do Código Penal relativos a crimes depois classificados como hediondos (roubo qualificado, extorsão mediante sequestro, estupro, atentado violento ao pudor, corrupção de menores e epidemia, entre outros), elevando suas penas. Por exemplo, no roubo qualificado pelo resultado, lesão grave tem reclusão de cinco a quinze anos e morte, de vinte a trinta anos; na extorsão mediante sequestro, o caput tem de oito a quinze anos, e as formas qualificadas, de doze a vinte, de dezesseis a vinte e quatro e de vinte e quatro a trinta anos.",
+        "pontos": [
+          "Alterou penas de crimes do Código Penal depois tratados como hediondos.",
+          "Roubo com lesão grave: cinco a quinze anos; com morte: vinte a trinta anos.",
+          "Extorsão mediante sequestro: de oito a quinze anos no caput e agravamentos nas formas qualificadas."
+        ],
+        "atencao": [
+          "Texto histórico: várias penas foram posteriormente alteradas.",
+          "A redação atual dos tipos está no Código Penal."
+        ],
+        "exemplo": "Texto de alteração legislativa; a pena vigente deve ser consultada no Código Penal.",
+        "prova": [
+          "Assertiva que aplica hoje, sem conferir o Código Penal, as penas do art. 6º da Lei dos Crimes Hediondos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "60391cab-03f1-5e69-86ff-94d4a78d5072",
+      "content_sha256": "ce7bfcdbab2e3764cce3887db37b9d8240babbb0dc659c8f92cf23d66164b4e6",
+      "simples": "Introduziu redução no sequestro por colaboração. O CP 159, §4º foi alterado em 1996: crime cometido em concurso, e concorrente que denuncia à autoridade facilitando libertação tem redução de 1/3 a 2/3. A redação atual não exige necessariamente antiga quadrilha/bando.",
+      "pontos": [
+        "Atual: concurso + contribuição efetiva à libertação; redução 1/3–2/3."
+      ],
+      "atencao": [
+        "Denúncia sem facilitar libertação não concede redutor automático. Não exigir antigo número de quadrilha para a redação atual."
+      ],
+      "exemplo": "Dois concorrentes praticam extorsão mediante sequestro e um denuncia, facilitando libertação: examine §4º atual. Variação: Relata fato já encerrado sem facilitar libertação: a eficácia típica precisa ser demonstrada.",
+      "prova": [
+        "A redação atual exige necessariamente quadrilha ou bando? Não; desde 1996 refere-se ao crime cometido em concurso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9269.htm"
+      ],
+      "expected": {
+        "unit_id": "60391cab-03f1-5e69-86ff-94d4a78d5072",
+        "content_sha256": "ce7bfcdbab2e3764cce3887db37b9d8240babbb0dc659c8f92cf23d66164b4e6",
+        "simples": "Ao art. 159 do Código Penal fica acrescido o §4º: se o crime é cometido por quadrilha ou bando, o coautor que o denunciar à autoridade, facilitando a libertação do sequestrado, terá sua pena reduzida de um a dois terços (delação premiada na extorsão mediante sequestro).",
+        "pontos": [
+          "Delação premiada na extorsão mediante sequestro cometida por quadrilha ou bando.",
+          "Redução de um a dois terços da pena.",
+          "Exige que a denúncia facilite a libertação do sequestrado."
+        ],
+        "atencao": [
+          "Exige EFICÁCIA: a libertação do sequestrado deve ser facilitada."
+        ],
+        "exemplo": "O integrante do bando que denuncia o grupo e permite libertar a vítima tem a pena reduzida.",
+        "prova": [
+          "Assertiva que concede a redução ao coautor que denuncia sem facilitar a libertação do sequestrado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+      "content_sha256": "9c937bbc86358cf7c3dd06be4e23c17b8f410b2860bf79711784e34eea0b963d",
+      "simples": "Pena de 3 a 6 anos para associação do CP 288 voltada aos crimes indicados. Desmantelamento possibilitado pela denúncia do participante/associado permite redução de 1/3 a 2/3. Associação para o tráfico atual é tipo especial da Lei 11.343, art. 35, com 3 a 10 anos e dias-multa; não se substitui sua pena por este artigo.",
+      "pontos": [
+        "CP 288 especial versus drogas 35; não confundir com organização de 4+."
+      ],
+      "atencao": [
+        "Associação para o tráfico não é automaticamente hedionda. STJ, Tema 1355/2026: fração especial do art. 44 da Lei de Drogas para livramento aplica-se ao art. 35, embora não hediondo. Benefício não se deduz só da etiqueta."
+      ],
+      "exemplo": "Associação estável para tráfico é analisada pela lei especial e seus requisitos. Variação: É associação do CP 288 para crimes hediondos: analise a hipótese deste artigo, sem transplantar elementos de organização.",
+      "prova": [
+        "A pena atual do art. 35 da Lei de Drogas vira automaticamente três a seis anos? Não; a lei especial prevê três a dez anos e multa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&livre=multa+"
+      ],
+      "expected": {
+        "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+        "content_sha256": "9c937bbc86358cf7c3dd06be4e23c17b8f410b2860bf79711784e34eea0b963d",
+        "simples": "Será de três a seis anos de reclusão a pena da associação criminosa prevista no art. 288 do Código Penal, quando se tratar de crimes hediondos, prática da tortura, tráfico ilícito de entorpecentes e drogas afins ou terrorismo. O participante e o associado que denunciar à autoridade o bando ou quadrilha, possibilitando seu desmantelamento, terá a pena reduzida de um a dois terços.",
+        "pontos": [
+          "Associação para crimes hediondos ou equiparados: reclusão de 3 a 6 anos.",
+          "Delação que possibilite o desmantelamento do bando: redução de 1/3 a 2/3."
+        ],
+        "atencao": [
+          "A pena do art. 288 comum é menor; aqui é de 3 a 6 anos.",
+          "A delação deve possibilitar o DESMANTELAMENTO."
+        ],
+        "exemplo": "Quem integra um bando para praticar crimes hediondos responde com pena de 3 a 6 anos.",
+        "prova": [
+          "Assertiva que fixa em 1 a 3 anos a pena da associação para crimes hediondos erra: é de 3 a 6 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Associação criminosa (Código Penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "f4f988a6-91fb-54ae-996d-9b0870551ba6",
+      "content_sha256": "d2a49a2073f3ce3e0da9688c7e1e9509929b00640b36ec60e404be1e4d3a6115",
+      "simples": "O texto conserva antiga majorante ligada ao CP 224, revogado pela Lei 12.015/2009. STJ reconheceu o afastamento da causa de aumento do art. 9º com essa reforma. Para fatos atuais, não aplique a metade por esta remissão; consulte tipos e majorantes vigentes. Casos antigos exigem comparação integral e lei mais benéfica, sem mistura artificial.",
+      "pontos": [
+        "Remissão histórica ao CP 224 revogado; majorante afastada pela reforma."
+      ],
+      "atencao": [
+        "O limite de trinta anos do trecho histórico também não é o teto geral atual do CP 75. Não reconstruir vulnerabilidade atual pelo art. 224 revogado."
+      ],
+      "exemplo": "Questão atual tenta aumentar metade invocando art. 224: identifique a remissão superada. Variação: O fato precede 2009: compare regimes e jurisprudência de sucessão, sem somar partes mais benéficas de leis distintas automaticamente.",
+      "prova": [
+        "A remissão ao CP 224 fornece majorante geral vigente para fatos atuais? Não; é remissão histórica superada pela reforma."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20180822&formato=PDF&nreg=201701589314&salvar=false&seq=1732343&tipo=0"
+      ],
+      "expected": {
+        "unit_id": "f4f988a6-91fb-54ae-996d-9b0870551ba6",
+        "content_sha256": "d2a49a2073f3ce3e0da9688c7e1e9509929b00640b36ec60e404be1e4d3a6115",
+        "simples": "As penas fixadas no art. 6º para os crimes de roubo qualificado, extorsão qualificada, extorsão mediante sequestro, estupro e atentado violento ao pudor (este, em combinação com o art. 223) são acrescidas de metade, respeitado o limite superior de trinta anos de reclusão, estando a vítima em qualquer das hipóteses do art. 224 do Código Penal (presunção de violência).",
+        "pontos": [
+          "Acréscimo de metade às penas dos crimes sexuais e patrimoniais violentos.",
+          "Limite superior de trinta anos de reclusão.",
+          "Vítima nas hipóteses de presunção de violência do art. 224 do CP."
+        ],
+        "atencao": [
+          "Dispositivo histórico: o art. 224 do Código Penal foi revogado em 2009."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que aplica hoje o acréscimo de metade do art. 9º erra, porque o art. 224 foi revogado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "9715e0aa-536f-561d-a728-75cdf06c1b68",
+      "content_sha256": "72276dd85798c646857911dfc82cfb52d47ce77ec065b17263c10a889ece9472",
+      "simples": "Modificou prazos da antiga Lei de Drogas 6.368/1976, revogada pela Lei 11.343/2006. Para procedimentos atuais, consulte a lei nova e CPP aplicável; não dobre prazos atuais apenas com esta reprodução.",
+      "pontos": [
+        "Lei 6.368 revogada; procedimento atual na Lei 11.343."
+      ],
+      "atencao": [
+        "Não confundir histórico de prazos em dobro com regra geral atual de toda investigação sobre drogas."
+      ],
+      "exemplo": "A questão cobra prazo atual e o aluno busca a disciplina da lei vigente. Variação: A apostila aplica automaticamente a antiga duplicação: verifique a hipótese normativa atual antes de usar.",
+      "prova": [
+        "A transcrição da lei revogada dobra automaticamente todos os prazos atuais de drogas? Não; consulte a disciplina vigente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "9715e0aa-536f-561d-a728-75cdf06c1b68",
+        "content_sha256": "72276dd85798c646857911dfc82cfb52d47ce77ec065b17263c10a889ece9472",
+        "simples": "O art. 35 da antiga Lei de Tóxicos (lei antiga de tóxicos) passou a vigorar acrescido de parágrafo único: os prazos procedimentais do capítulo serão contados em dobro quando se tratar dos crimes dos arts. 12, 13 e 14 daquela lei. A lei antiga foi revogada pela Lei de Drogas atual.",
+        "pontos": [
+          "Prazos procedimentais em dobro nos crimes de tráfico da lei antiga."
+        ],
+        "atencao": [
+          "Dispositivo histórico: a lei antiga de tóxicos, foi revogada."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que aplica hoje a contagem em dobro dos prazos da lei antiga de tóxicos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Drogas"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "79ed83fd-ee5b-57d6-a6f1-366fa5bc3847",
+      "content_sha256": "7537699a66f3a24dc60562276c7af168bf7571ac16b228c0585327d6d2f521f7",
+      "simples": "A lei original entrou em vigor na publicação. Novas inclusões e penas seguem os marcos de seus atos, observada irretroatividade mais gravosa e retroatividade benéfica.",
+      "pontos": [
+        "Vigência original na publicação; cada alteração tem data própria."
+      ],
+      "atencao": [
+        "Não usar data de consulta para escolher lei do fato nem presumir que todas as inclusões vigoram desde 1990."
+      ],
+      "exemplo": "O fato ocorreu antes da inclusão de um novo delito no rol: examine a lei temporalmente aplicável. Variação: A alteração beneficia condenado: examine possibilidade de retroatividade benéfica.",
+      "prova": [
+        "Todas as inclusões posteriores são aplicáveis desde 1990? Não; possuem marcos próprios."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "79ed83fd-ee5b-57d6-a6f1-366fa5bc3847",
+        "content_sha256": "7537699a66f3a24dc60562276c7af168bf7571ac16b228c0585327d6d2f521f7",
+        "simples": "Esta lei entra em vigor na data de sua publicação.",
+        "pontos": [
+          "Vigência imediata, na data da publicação."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei começou a valer no mesmo dia em que foi publicada.",
+        "prova": [
+          "Assertiva que prevê vacatio legis para a Lei dos Crimes Hediondos erra: vigora na data da publicação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "d1c3a6ea-9e23-5dc5-b76e-1b5de2d295a8",
+      "content_sha256": "9ba5091e95b4a04c723beecf9149673286050f830375a68532511661cfe1460d",
+      "simples": "Revoga disposições contrárias à lei original; não dispensa verificar revogações e alterações posteriores no CP e leis especiais.",
+      "pontos": [
+        "Leia a compilação do diploma alterado, não somente o modificador."
+      ],
+      "atencao": [
+        "A cláusula não torna vigentes novamente CP 214/223 ou Lei 6.368 revogados depois."
+      ],
+      "exemplo": "O material mantém tipo antigo e o aluno confere a revogação na lei alterada. Variação: A cláusula genérica é invocada para ignorar a lei posterior: ela não impede sucessão legislativa.",
+      "prova": [
+        "A cláusula mantém vigentes tipos posteriormente revogados? Não; alterações posteriores devem ser observadas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d1c3a6ea-9e23-5dc5-b76e-1b5de2d295a8",
+        "content_sha256": "9ba5091e95b4a04c723beecf9149673286050f830375a68532511661cfe1460d",
+        "simples": "Revogam-se as disposições em contrário, cláusula final da lei que afasta normas anteriores incompatíveis com a Lei dos Crimes Hediondos.",
+        "pontos": [
+          "Cláusula de revogação das disposições em contrário."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A cláusula apenas afasta normas anteriores incompatíveis com a lei.",
+        "prova": [
+          "Assertiva que atribui ao art. 13 efeito prático sobre os crimes atuais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-159",
+      "unit_id": "3545bc81-fe20-560c-9db5-e18672485ab6",
+      "content_sha256": "8d170bc105add8b3b1cc93dd241a89d25b84b32330c32dd814253823cdb11b2d",
+      "simples": "Fragmento de penas do sequestro: caput 8–15 anos; qualificadas 12–20, 16–24 e 24–30. Consulte CP 159 completo para duração superior a 24h, idades, concurso e colaboração; em 2026, §5º acrescentou aumento de 2/3 no contexto específico do marco antifacção.",
+      "pontos": [
+        "Penas do fragmento não esgotam qualificadoras e majorante atual."
+      ],
+      "atencao": [
+        "Não deduzir elementos do crime de linhas pontilhadas. Exatamente 24h não significa mais de 24h; maior de 60 não equivale literalmente a 60 completos."
+      ],
+      "exemplo": "O fato ocorre no contexto de atuação definido no §5º e se examina a majorante de 2026. Variação: O candidato só memoriza o fragmento: perde requisitos de qualificadoras e regra posterior.",
+      "prova": [
+        "O fragmento reproduz o §5º acrescido em 2026? Não; é necessário consultar o CP atualizado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3545bc81-fe20-560c-9db5-e18672485ab6",
+        "content_sha256": "8d170bc105add8b3b1cc93dd241a89d25b84b32330c32dd814253823cdb11b2d",
+        "simples": "Trata-se da nova redação dada ao crime de extorsão mediante sequestro: o caput passa a ter pena de reclusão de oito a quinze anos; o §1º (sequestro de longa duração, vítima menor ou idosa, ou crime cometido por bando ou quadrilha), de doze a vinte anos; o §2º (lesão corporal de natureza grave), de dezesseis a vinte e quatro anos; e o §3º (morte), de vinte e quatro a trinta anos.",
+        "pontos": [
+          "Caput: reclusão de oito a quinze anos.",
+          "§1º: doze a vinte anos.",
+          "§2º: dezesseis a vinte e quatro anos.",
+          "§3º: vinte e quatro a trinta anos."
+        ],
+        "atencao": [
+          "Texto histórico: confira a redação vigente do art. 159 do Código Penal."
+        ],
+        "exemplo": "Extorsão mediante sequestro com resultado morte: reclusão de vinte e quatro a trinta anos.",
+        "prova": [
+          "Assertiva que fixa em vinte a trinta anos a pena da extorsão mediante sequestro com morte erra: é de vinte e quatro a trinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-213",
+      "unit_id": "dd5e668a-95fa-566c-951b-1e8e27cfbc31",
+      "content_sha256": "b410b0dd55cab4ff7d1a913f5d2a54b8e60370356270955f8cbfbc34c84e5a07",
+      "simples": "Reproduz apenas pena antiga de 6 a 10 anos, coincidente com caput atual, mas não o tipo completo. Desde 2009, CP 213 abrange constranger alguém mediante violência/grave ameaça à conjunção ou outro ato libidinoso, com qualificadas de lesão grave e morte. Estupro de vulnerável tem tipo próprio no CP 217-A.",
+      "pontos": [
+        "Pena coincidente não torna a reprodução antiga uma explicação atual completa."
+      ],
+      "atencao": [
+        "Não limitar estupro a vítima mulher/conjunção nem usar CP 214/223 revogados para os atos atuais."
+      ],
+      "exemplo": "O constrangimento envolve outro ato libidinoso com grave ameaça: examina-se CP 213 atual. Variação: A vulnerabilidade própria do 217-A exige analisar esse tipo, não apenas a pena do fragmento.",
+      "prova": [
+        "A pena isolada substitui o estudo do tipo e qualificadoras atuais? Não; consulte o CP 213 completo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dd5e668a-95fa-566c-951b-1e8e27cfbc31",
+        "content_sha256": "b410b0dd55cab4ff7d1a913f5d2a54b8e60370356270955f8cbfbc34c84e5a07",
+        "simples": "Trata-se da redação dada ao crime de estupro (então art. 213 do Código Penal): pena de reclusão de seis a dez anos. O dispositivo foi alterado posteriormente pela Lei nº 12.015, de 2009, que unificou estupro e atentado violento ao pudor.",
+        "pontos": [
+          "Pena de reclusão de 6 a 10 anos (redação histórica)."
+        ],
+        "atencao": [
+          "Texto histórico: a Lei nº 12.015, de 2009, alterou o crime de estupro."
+        ],
+        "exemplo": "Texto de alteração legislativa; consulte o Código Penal para a pena vigente.",
+        "prova": [
+          "Assertiva que aplica a pena de 6 a 10 anos sem considerar a reforma de 2009 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-214",
+      "unit_id": "e299187c-f5c3-59ac-9395-a554f50c4bab",
+      "content_sha256": "570645413e3e6e6659f6112690984879e4fc52c038973074a2e08f06d8db5b1d",
+      "simples": "Reprodução histórica do antigo atentado violento ao pudor. O CP 214 foi revogado em 2009; condutas precisam ser examinadas nos tipos atuais, especialmente CP 213 e 217-A, conforme elementos. Revogação do número não é impunidade automática de toda conduta.",
+      "pontos": [
+        "CP 214 revogado; analisar continuidade e tipo atual."
+      ],
+      "atencao": [
+        "Não oferecer lacuna automática para memorizar artigo revogado como vigente nem afirmar abolitio criminis geral."
+      ],
+      "exemplo": "A questão atual descreve ato libidinoso com violência e é comparada ao CP 213. Variação: O caso é anterior à reforma: examine sucessão e regime aplicável, sem presumir que toda conduta desapareceu.",
+      "prova": [
+        "O CP 214 continua como tipo vigente para fatos atuais? Não; foi revogado e exige análise dos tipos atuais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e299187c-f5c3-59ac-9395-a554f50c4bab",
+        "content_sha256": "570645413e3e6e6659f6112690984879e4fc52c038973074a2e08f06d8db5b1d",
+        "simples": "Trata-se da redação dada ao antigo crime de atentado violento ao pudor (art. 214 do Código Penal): pena de reclusão de seis a dez anos. O tipo foi revogado e absorvido pelo estupro com a reforma de 2009.",
+        "pontos": [
+          "Pena de reclusão de 6 a 10 anos (redação histórica).",
+          "Tipo posteriormente revogado."
+        ],
+        "atencao": [
+          "Texto histórico: o atentado violento ao pudor foi absorvido pelo estupro."
+        ],
+        "exemplo": "Texto histórico, sem aplicação autônoma hoje.",
+        "prova": [
+          "Assertiva que considera vigente o crime autônomo de atentado violento ao pudor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-223",
+      "unit_id": "db3eb08b-a715-5735-b291-93eb43153504",
+      "content_sha256": "4a266e0eb19b4278b5c1e0948d7d758b4a50793227c67094cbcad7ab556569d5",
+      "simples": "Trecho histórico de resultados qualificados de crimes sexuais. CP 223 foi revogado em 2009. Qualificadoras atuais de lesão/morte estão nos respectivos tipos, como CP 213/217-A, com penas próprias; faixas deste fragmento não são quadro atual.",
+      "pontos": [
+        "Resultado qualificado: consultar tipo vigente, não CP 223."
+      ],
+      "atencao": [
+        "Não transportar 8–12/12–25 anos indiscriminadamente para todos os crimes sexuais atuais."
+      ],
+      "exemplo": "A prova cobra resultado morte no estupro: consulta-se a qualificadora do tipo atual. Variação: Usa-se a faixa de 12–25 deste fragmento: é referência histórica, não pena universal vigente.",
+      "prova": [
+        "As penas do CP 223 reproduzido regem automaticamente crimes sexuais atuais? Não; o artigo foi revogado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "db3eb08b-a715-5735-b291-93eb43153504",
+        "content_sha256": "4a266e0eb19b4278b5c1e0948d7d758b4a50793227c67094cbcad7ab556569d5",
+        "simples": "Trata-se da redação dada ao antigo art. 223 do Código Penal (formas qualificadas do estupro e do atentado violento ao pudor): reclusão de oito a doze anos no caput, e de doze a vinte e cinco anos no parágrafo único. O dispositivo foi revogado pela Lei nº 12.015, de 2009.",
+        "pontos": [
+          "Caput: reclusão de oito a doze anos.",
+          "Parágrafo único: reclusão de doze a vinte e cinco anos."
+        ],
+        "atencao": [
+          "Texto histórico: dispositivo revogado em 2009."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática hoje.",
+        "prova": [
+          "Assertiva que aplica hoje as penas do antigo art. 223 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-267",
+      "unit_id": "f69e00d7-4c55-5c40-be2b-958e53158ae5",
+      "content_sha256": "f7aeb76c11fe0d0973ab4a7eb4bb797810030236b8892fcfa6c38ef9aac94506",
+      "simples": "O fragmento fixa epidemia dolosa em 10 a 15 anos, pena mantida no CP 267. Resultado morte dobra a pena e integra o rol hediondo; modalidade culposa tem penas próprias e não se equipara automaticamente à dolosa com morte.",
+      "pontos": [
+        "Epidemia dolosa com morte é hipótese do rol; nem toda epidemia é hedionda."
+      ],
+      "atencao": [
+        "Linhas omitidas escondem resultados e culpa: consultar CP completo."
+      ],
+      "exemplo": "Há propagação dolosa de germes e morte: examine §1º e rol. Variação: A conduta é culposa: não aplique automaticamente a pena da modalidade dolosa.",
+      "prova": [
+        "Toda modalidade de epidemia é hedionda? Não; o rol indica epidemia com resultado morte na hipótese legal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f69e00d7-4c55-5c40-be2b-958e53158ae5",
+        "content_sha256": "f7aeb76c11fe0d0973ab4a7eb4bb797810030236b8892fcfa6c38ef9aac94506",
+        "simples": "Trata-se da redação dada ao crime de epidemia (art. 267 do Código Penal): reclusão de dez a quinze anos. O dispositivo atual do Código Penal traz a estrutura vigente do tipo.",
+        "pontos": [
+          "Pena de reclusão de 10 a 15 anos (redação histórica da Lei)."
+        ],
+        "atencao": [
+          "Texto histórico: confira o art. 267 do Código Penal vigente."
+        ],
+        "exemplo": "Texto de alteração legislativa; consulte o Código Penal.",
+        "prova": [
+          "Assertiva que aplica a pena sem conferir a redação vigente do Código Penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "hediondos",
+      "course_id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-270",
+      "unit_id": "05af805c-3ccc-5cc3-9ece-103f0101440d",
+      "content_sha256": "e409524d06902bf4f3cc97f13758c0a2627a4d36162ac2a23417eb6313ba95e6",
+      "simples": "Envenenar água potável ou substância alimentícia/medicinal destinada ao consumo: CP 270 doloso com 10 a 15 anos; também inclui entregar ao consumo/depositar para distribuir o envenenado. A modalidade culposa tem 6 meses a 2 anos. Ter pena alta ou estar alterado nesta lei não torna o crime automaticamente hediondo no rol atual.",
+      "pontos": [
+        "Artigo modificador ≠ inclusão permanente no rol atual."
+      ],
+      "atencao": [
+        "Não confundir CP 270 com falsificação medicinal do CP 273 nem epidemia com morte do CP 267, §1º."
+      ],
+      "exemplo": "A questão pergunta classificação atual do envenenamento e se consulta o rol, não apenas a localização do fragmento. Variação: É adulteração medicinal do CP 273: analise os elementos e previsão específica, sem trocar artigos.",
+      "prova": [
+        "Estar reproduzido nesta lei torna automaticamente CP 270 hediondo no rol atual? Não; classificação depende do rol vigente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "05af805c-3ccc-5cc3-9ece-103f0101440d",
+        "content_sha256": "e409524d06902bf4f3cc97f13758c0a2627a4d36162ac2a23417eb6313ba95e6",
+        "simples": "Trata-se da redação dada ao crime de envenenamento de água potável ou de substância alimentícia ou medicinal (art. 270 do Código Penal): reclusão de dez a quinze anos.",
+        "pontos": [
+          "Envenenamento de água potável: reclusão de 10 a 15 anos."
+        ],
+        "atencao": [
+          "O crime consta do rol de hediondos? Confira o art. 1º; a lista está no próprio artigo."
+        ],
+        "exemplo": "Texto de alteração legislativa; a pena consta no Código Penal.",
+        "prova": [
+          "Assertiva que fixa em 5 a 10 anos a pena do envenenamento de água potável nessa alteração erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    }
+  ]
+}

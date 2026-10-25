@@ -1,0 +1,302 @@
+{
+  "course_slug": "hediondos",
+  "units": {
+    "art-1": {
+      "simples": "O rol legal abrange tentativa e consumação, com hipóteses específicas: não basta gravidade intuitiva. Atualizações incluem feminicídio autônomo (2024), ampliação de proteção funcional e lesão gravíssima/seguida de morte em ensino (2025), vicaricídio, domínio social estruturado/favorecimento e expansão dos crimes sexuais do ECA enumerados (2026). Diferencie estupro, modalidades de roubo/extorsão, epidemia com morte, medicamentos, exploração sexual, furto com explosivo, suicídio/automutilação por meios digitais, cárcere de menor e tráfico de pessoas contra criança/adolescente.",
+      "pontos": [
+        "Rol e remissão exata: posse/porte de arma de uso proibido, comércio ilegal e tráfico internacional; organização voltada a hediondo/equiparado; correspondência militar; delitos do ECA expressamente enumerados."
+      ],
+      "atencao": [
+        "Não tornar todo roubo, furto, arma restrita, tráfico de pessoas contra adulto ou organização automaticamente hediondo. A inclusão mais gravosa exige análise temporal. A nova lei cita §3º vetado no domínio social: remissão não cria tipo vetado."
+      ],
+      "exemplo": "Roubo com arma de fogo preenche hipótese específica; furto simples não entra por mera gravidade subjetiva. Variação: É posse/porte de arma apenas restrita: compare a hipótese de uso proibido do inciso II, sem confundir com outros crimes do estatuto.",
+      "prova": [
+        "Todo roubo é hediondo apenas pelo nome do crime? Não; devem ser verificadas as modalidades do rol."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Hediondos e equiparados são insuscetíveis de anistia, graça, indulto e fiança. Isso não equivale à proibição automática de liberdade provisória. STF afastou regime inicial fechado baseado exclusivamente na hediondez. Progressão deve ser estudada na LEP 112 atual, não nos percentuais do antigo §2º revogado. Temporária: 30 dias mais 30 em extrema/comprovada necessidade, com requisitos constitucionais. Apelar em liberdade exige decisão fundamentada.",
+      "pontos": [
+        "Tortura, terrorismo e tráfico ilícito equiparados; tráfico privilegiado não tem natureza hedionda (STF)."
+      ],
+      "atencao": [
+        "Não impor fechado automático ou confundir inafiançabilidade com prisão obrigatória. STJ, Informativo 882/2026: fabricação de maquinário (drogas 34) não é equiparada; associação (35) também não recebe hediondez por analogia."
+      ],
+      "exemplo": "A pena exige regime individualizado conforme requisitos, sem fundamentar apenas no rótulo hediondo. Variação: A acusação é art. 34 da Lei de Drogas: aplique a distinção recente do STJ, não chame todo delito daquela lei equiparado.",
+      "prova": [
+        "Inafiançabilidade significa prisão obrigatória sem exame de liberdade provisória? Não; são questões distintas.",
+        "O tráfico privilegiado tem natureza hedionda? Não; o STF afastou essa natureza na hipótese do art. 33, §4º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=361875",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=319638",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D022206"
+      ]
+    },
+    "art-3": {
+      "simples": "A União mantém estabelecimentos de segurança máxima para condenados de alta periculosidade cuja permanência estadual ponha em risco ordem/incolumidade pública. Recolhimento e transferência têm procedimentos próprios; o texto não ordena enviar todo condenado por hediondo ao sistema federal.",
+      "pontos": [
+        "Alta periculosidade + risco da permanência estadual; procedimento próprio."
+      ],
+      "atencao": [
+        "Distinguir regra geral de hipóteses federais específicas de leis posteriores, como crimes dos arts. 21-A/B da Lei 12.850."
+      ],
+      "exemplo": "O caso evidencia risco concreto no estabelecimento estadual e se examina o procedimento de transferência. Variação: Só há o rótulo hediondo: isso não prova todos os elementos deste artigo.",
+      "prova": [
+        "Todo condenado por hediondo vai automaticamente ao presídio federal por este artigo? Não; há condições e procedimento próprios."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Introduziu no CP 83, V livramento após mais de dois terços, sem reincidência específica, para os crimes indicados. A redação atual também inclui tráfico de pessoas desde 2016. Outros requisitos do CP 83 e vedações especiais atuais precisam ser verificados; não é a fração da progressão.",
+      "pontos": [
+        "Mais de 2/3, não exatamente 2/3; livramento ≠ progressão."
+      ],
+      "atencao": [
+        "Não prometer benefício só pelo tempo. Domínio social tem proibição específica; LEP/leis especiais podem impor outras restrições conforme hipótese e data do fato."
+      ],
+      "exemplo": "Cumpre mais de dois terços e satisfaz os demais requisitos: examina-se possibilidade, não direito automático pelo relógio. Variação: O crime tem vedação especial de livramento: não se ignora a restrição apenas citando CP 83.",
+      "prova": [
+        "A fração do artigo é critério de progressão de regime? Não; trata de livramento condicional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "Artigo modificador com penas e remissões históricas. No CP 157 atual, lesão grave no roubo é 7 a 18 anos e multa; latrocínio geral passou a 24 a 30 anos e multa pela Lei 15.397/2026, além de hipóteses específicas do marco antifacção. Os arts. 214 e 223 foram revogados em 2009; consulte CP 213 e 217-A e demais tipos vigentes.",
+      "pontos": [
+        "CP compilado prevalece para estudar a pena atual; fragmento de 1990 não é quadro atual completo."
+      ],
+      "atencao": [
+        "Não memorizar 5–15/20–30 do roubo transcrito como penas gerais atuais. Não reutilizar tipos sexuais revogados nem combinar artificialmente penas de épocas diferentes."
+      ],
+      "exemplo": "A prova cobra latrocínio atual e o candidato consulta CP 157, §3º, II, com a alteração de 2026. Variação: Apostila reproduz a faixa de 1990: identifique o trecho como histórico e confira a fonte alterada.",
+      "prova": [
+        "O trecho de 1990 contém todas as penas atuais do roubo? Não; houve alterações posteriores, inclusive em 2026."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm"
+      ]
+    },
+    "art-7": {
+      "simples": "Introduziu redução no sequestro por colaboração. O CP 159, §4º foi alterado em 1996: crime cometido em concurso, e concorrente que denuncia à autoridade facilitando libertação tem redução de 1/3 a 2/3. A redação atual não exige necessariamente antiga quadrilha/bando.",
+      "pontos": [
+        "Atual: concurso + contribuição efetiva à libertação; redução 1/3–2/3."
+      ],
+      "atencao": [
+        "Denúncia sem facilitar libertação não concede redutor automático. Não exigir antigo número de quadrilha para a redação atual."
+      ],
+      "exemplo": "Dois concorrentes praticam extorsão mediante sequestro e um denuncia, facilitando libertação: examine §4º atual. Variação: Relata fato já encerrado sem facilitar libertação: a eficácia típica precisa ser demonstrada.",
+      "prova": [
+        "A redação atual exige necessariamente quadrilha ou bando? Não; desde 1996 refere-se ao crime cometido em concurso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9269.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Pena de 3 a 6 anos para associação do CP 288 voltada aos crimes indicados. Desmantelamento possibilitado pela denúncia do participante/associado permite redução de 1/3 a 2/3. Associação para o tráfico atual é tipo especial da Lei 11.343, art. 35, com 3 a 10 anos e dias-multa; não se substitui sua pena por este artigo.",
+      "pontos": [
+        "CP 288 especial versus drogas 35; não confundir com organização de 4+."
+      ],
+      "atencao": [
+        "Associação para o tráfico não é automaticamente hedionda. STJ, Tema 1355/2026: fração especial do art. 44 da Lei de Drogas para livramento aplica-se ao art. 35, embora não hediondo. Benefício não se deduz só da etiqueta."
+      ],
+      "exemplo": "Associação estável para tráfico é analisada pela lei especial e seus requisitos. Variação: É associação do CP 288 para crimes hediondos: analise a hipótese deste artigo, sem transplantar elementos de organização.",
+      "prova": [
+        "A pena atual do art. 35 da Lei de Drogas vira automaticamente três a seis anos? Não; a lei especial prevê três a dez anos e multa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&livre=multa+"
+      ]
+    },
+    "art-9": {
+      "simples": "O texto conserva antiga majorante ligada ao CP 224, revogado pela Lei 12.015/2009. STJ reconheceu o afastamento da causa de aumento do art. 9º com essa reforma. Para fatos atuais, não aplique a metade por esta remissão; consulte tipos e majorantes vigentes. Casos antigos exigem comparação integral e lei mais benéfica, sem mistura artificial.",
+      "pontos": [
+        "Remissão histórica ao CP 224 revogado; majorante afastada pela reforma."
+      ],
+      "atencao": [
+        "O limite de trinta anos do trecho histórico também não é o teto geral atual do CP 75. Não reconstruir vulnerabilidade atual pelo art. 224 revogado."
+      ],
+      "exemplo": "Questão atual tenta aumentar metade invocando art. 224: identifique a remissão superada. Variação: O fato precede 2009: compare regimes e jurisprudência de sucessão, sem somar partes mais benéficas de leis distintas automaticamente.",
+      "prova": [
+        "A remissão ao CP 224 fornece majorante geral vigente para fatos atuais? Não; é remissão histórica superada pela reforma."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20180822&formato=PDF&nreg=201701589314&salvar=false&seq=1732343&tipo=0"
+      ]
+    },
+    "art-10": {
+      "simples": "Modificou prazos da antiga Lei de Drogas 6.368/1976, revogada pela Lei 11.343/2006. Para procedimentos atuais, consulte a lei nova e CPP aplicável; não dobre prazos atuais apenas com esta reprodução.",
+      "pontos": [
+        "Lei 6.368 revogada; procedimento atual na Lei 11.343."
+      ],
+      "atencao": [
+        "Não confundir histórico de prazos em dobro com regra geral atual de toda investigação sobre drogas."
+      ],
+      "exemplo": "A questão cobra prazo atual e o aluno busca a disciplina da lei vigente. Variação: A apostila aplica automaticamente a antiga duplicação: verifique a hipótese normativa atual antes de usar.",
+      "prova": [
+        "A transcrição da lei revogada dobra automaticamente todos os prazos atuais de drogas? Não; consulte a disciplina vigente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ]
+    },
+    "art-12": {
+      "simples": "A lei original entrou em vigor na publicação. Novas inclusões e penas seguem os marcos de seus atos, observada irretroatividade mais gravosa e retroatividade benéfica.",
+      "pontos": [
+        "Vigência original na publicação; cada alteração tem data própria."
+      ],
+      "atencao": [
+        "Não usar data de consulta para escolher lei do fato nem presumir que todas as inclusões vigoram desde 1990."
+      ],
+      "exemplo": "O fato ocorreu antes da inclusão de um novo delito no rol: examine a lei temporalmente aplicável. Variação: A alteração beneficia condenado: examine possibilidade de retroatividade benéfica.",
+      "prova": [
+        "Todas as inclusões posteriores são aplicáveis desde 1990? Não; possuem marcos próprios."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "Revoga disposições contrárias à lei original; não dispensa verificar revogações e alterações posteriores no CP e leis especiais.",
+      "pontos": [
+        "Leia a compilação do diploma alterado, não somente o modificador."
+      ],
+      "atencao": [
+        "A cláusula não torna vigentes novamente CP 214/223 ou Lei 6.368 revogados depois."
+      ],
+      "exemplo": "O material mantém tipo antigo e o aluno confere a revogação na lei alterada. Variação: A cláusula genérica é invocada para ignorar a lei posterior: ela não impede sucessão legislativa.",
+      "prova": [
+        "A cláusula mantém vigentes tipos posteriormente revogados? Não; alterações posteriores devem ser observadas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-159": {
+      "simples": "Fragmento de penas do sequestro: caput 8–15 anos; qualificadas 12–20, 16–24 e 24–30. Consulte CP 159 completo para duração superior a 24h, idades, concurso e colaboração; em 2026, §5º acrescentou aumento de 2/3 no contexto específico do marco antifacção.",
+      "pontos": [
+        "Penas do fragmento não esgotam qualificadoras e majorante atual."
+      ],
+      "atencao": [
+        "Não deduzir elementos do crime de linhas pontilhadas. Exatamente 24h não significa mais de 24h; maior de 60 não equivale literalmente a 60 completos."
+      ],
+      "exemplo": "O fato ocorre no contexto de atuação definido no §5º e se examina a majorante de 2026. Variação: O candidato só memoriza o fragmento: perde requisitos de qualificadoras e regra posterior.",
+      "prova": [
+        "O fragmento reproduz o §5º acrescido em 2026? Não; é necessário consultar o CP atualizado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-213": {
+      "simples": "Reproduz apenas pena antiga de 6 a 10 anos, coincidente com caput atual, mas não o tipo completo. Desde 2009, CP 213 abrange constranger alguém mediante violência/grave ameaça à conjunção ou outro ato libidinoso, com qualificadas de lesão grave e morte. Estupro de vulnerável tem tipo próprio no CP 217-A.",
+      "pontos": [
+        "Pena coincidente não torna a reprodução antiga uma explicação atual completa."
+      ],
+      "atencao": [
+        "Não limitar estupro a vítima mulher/conjunção nem usar CP 214/223 revogados para os atos atuais."
+      ],
+      "exemplo": "O constrangimento envolve outro ato libidinoso com grave ameaça: examina-se CP 213 atual. Variação: A vulnerabilidade própria do 217-A exige analisar esse tipo, não apenas a pena do fragmento.",
+      "prova": [
+        "A pena isolada substitui o estudo do tipo e qualificadoras atuais? Não; consulte o CP 213 completo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-214": {
+      "simples": "Reprodução histórica do antigo atentado violento ao pudor. O CP 214 foi revogado em 2009; condutas precisam ser examinadas nos tipos atuais, especialmente CP 213 e 217-A, conforme elementos. Revogação do número não é impunidade automática de toda conduta.",
+      "pontos": [
+        "CP 214 revogado; analisar continuidade e tipo atual."
+      ],
+      "atencao": [
+        "Não oferecer lacuna automática para memorizar artigo revogado como vigente nem afirmar abolitio criminis geral."
+      ],
+      "exemplo": "A questão atual descreve ato libidinoso com violência e é comparada ao CP 213. Variação: O caso é anterior à reforma: examine sucessão e regime aplicável, sem presumir que toda conduta desapareceu.",
+      "prova": [
+        "O CP 214 continua como tipo vigente para fatos atuais? Não; foi revogado e exige análise dos tipos atuais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-223": {
+      "simples": "Trecho histórico de resultados qualificados de crimes sexuais. CP 223 foi revogado em 2009. Qualificadoras atuais de lesão/morte estão nos respectivos tipos, como CP 213/217-A, com penas próprias; faixas deste fragmento não são quadro atual.",
+      "pontos": [
+        "Resultado qualificado: consultar tipo vigente, não CP 223."
+      ],
+      "atencao": [
+        "Não transportar 8–12/12–25 anos indiscriminadamente para todos os crimes sexuais atuais."
+      ],
+      "exemplo": "A prova cobra resultado morte no estupro: consulta-se a qualificadora do tipo atual. Variação: Usa-se a faixa de 12–25 deste fragmento: é referência histórica, não pena universal vigente.",
+      "prova": [
+        "As penas do CP 223 reproduzido regem automaticamente crimes sexuais atuais? Não; o artigo foi revogado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-267": {
+      "simples": "O fragmento fixa epidemia dolosa em 10 a 15 anos, pena mantida no CP 267. Resultado morte dobra a pena e integra o rol hediondo; modalidade culposa tem penas próprias e não se equipara automaticamente à dolosa com morte.",
+      "pontos": [
+        "Epidemia dolosa com morte é hipótese do rol; nem toda epidemia é hedionda."
+      ],
+      "atencao": [
+        "Linhas omitidas escondem resultados e culpa: consultar CP completo."
+      ],
+      "exemplo": "Há propagação dolosa de germes e morte: examine §1º e rol. Variação: A conduta é culposa: não aplique automaticamente a pena da modalidade dolosa.",
+      "prova": [
+        "Toda modalidade de epidemia é hedionda? Não; o rol indica epidemia com resultado morte na hipótese legal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-270": {
+      "simples": "Envenenar água potável ou substância alimentícia/medicinal destinada ao consumo: CP 270 doloso com 10 a 15 anos; também inclui entregar ao consumo/depositar para distribuir o envenenado. A modalidade culposa tem 6 meses a 2 anos. Ter pena alta ou estar alterado nesta lei não torna o crime automaticamente hediondo no rol atual.",
+      "pontos": [
+        "Artigo modificador ≠ inclusão permanente no rol atual."
+      ],
+      "atencao": [
+        "Não confundir CP 270 com falsificação medicinal do CP 273 nem epidemia com morte do CP 267, §1º."
+      ],
+      "exemplo": "A questão pergunta classificação atual do envenenamento e se consulta o rol, não apenas a localização do fragmento. Variação: É adulteração medicinal do CP 273: analise os elementos e previsão específica, sem trocar artigos.",
+      "prova": [
+        "Estar reproduzido nesta lei torna automaticamente CP 270 hediondo no rol atual? Não; classificação depende do rol vigente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}

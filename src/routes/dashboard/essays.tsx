@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
@@ -5,12 +6,16 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PenLine, CheckCircle2, XCircle, HelpCircle } from "lucide-react";
-import { PageHero, LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 import { EssayTabs } from "@/components/dashboard/EssayWorkshop";
 
 export const Route = createFileRoute("/dashboard/essays")({
-  component: EssaysPage,
+  component: () => (
+    <PlanGate feature="essays" title="Redação para concursos">
+      <EssaysPage />
+    </PlanGate>
+  ),
 });
 
 interface Topico {
@@ -72,7 +77,7 @@ function EssaysPage() {
   if (!user || user.id === "demo-user") {
     return (
       <LockedState
-        image="study-desk"
+        image="toolkit"
         title={
           <>
             Treino de <em>redação</em>
@@ -86,8 +91,8 @@ function EssaysPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="study-desk"
-        kicker="Provas"
+        image="toolkit"
+        kicker="Material didático"
         icon={PenLine}
         title={
           <>
@@ -95,7 +100,16 @@ function EssaysPage() {
           </>
         }
         description="Caderno de 30 linhas, guia, modelos de redação e discursivas de provas."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={PenLine} label="Redações registradas" value={essays.length} />
+          <HeroStat
+            icon={CheckCircle2}
+            label="Corrigidas"
+            value={essays.filter((e) => e.status === "corrigida").length}
+          />
+        </div>
+      </PageHero>
 
       <EssayTabs
         userId={user.id}

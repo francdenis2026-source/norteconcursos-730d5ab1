@@ -1,0 +1,9 @@
+{
+  "candidates_confirmed": 19,
+  "states": {
+    "under_review": 19
+  },
+  "distinct_content_fingerprints": 19,
+  "anonymous_access": "denied_401",
+  "publications_in_payload": 0
+}

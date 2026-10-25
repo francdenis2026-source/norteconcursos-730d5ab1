@@ -53,7 +53,7 @@ test('Legal highlights preserve source characters, classify full expressions and
  assert.ok(legalTextParts('reiteradamente ou não').some(p=>p.text==='reiteradamente ou não'&&p.kind==='exception'));
  const highlights=load('src/lib/legalHighlights.ts');
  const sourceUrls=load('src/lib/studySourceUrl.ts',{'./questionFormat':load('src/lib/questionFormat.ts')});
- const markdown=load('src/components/library/Markdown.tsx',{'@/lib/studySourceUrl':sourceUrls});
+ const markdown=load('src/components/library/Markdown.tsx',{'./GlossaryText':{GlossaryText:({text})=>text},'@/lib/studySourceUrl':sourceUrls});
  const refText={LegalRefText:({text})=>React.createElement(React.Fragment,null,text)};
  const reading=load('src/components/library/LegalStudyReading.tsx',{'@/lib/legalHighlights':highlights,'./Markdown':markdown,'./LegalRefText':refText,'@/lib/legalRefs':load('src/lib/legalRefs.ts')});
  const html=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:samples[2]}));
@@ -62,7 +62,7 @@ test('Legal highlights preserve source characters, classify full expressions and
  assert.match(formatted,/study-example/);assert.match(formatted,/legal-highlight-exception/);assert.match(formatted,/href="https:\/\/www.planalto.gov.br/);
  const route=readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8');
  assert.match(route,/step === "texto" \|\| \(step === "fixar" && revealed\)/);
- assert.match(route,/LegalStudyReading source=\{unit.body_text\}/);
+ assert.match(route,/LegalStudyReading\s+source=\{unit.body_text\}/);
 });
 
 test('Library search finds disciplines, law names and numbers, body content and exact short acronyms',()=>{
@@ -102,7 +102,7 @@ test('Antifaction comparison preserves practice, separates definitions from offe
  assert.ok(!Object.hasOwn(current.patch,'quiz'));
  assert.equal(pack.enrichments.length,1);
  assert.ok(pack.enrichments.every(e=>e.expected.status==='active'&&e.expected.source_body_sha256&&Object.keys(e.patch).join()==='source_body_sha256'));
- const {Markdown}=load('src/components/library/Markdown.tsx',{'@/lib/studySourceUrl':{isStudySourceUrl:url=>/^https:\/\//.test(url)}});
+ const {Markdown}=load('src/components/library/Markdown.tsx',{'./GlossaryText':{GlossaryText:({text})=>text},'@/lib/studySourceUrl':{isStudySourceUrl:url=>/^https:\/\//.test(url)}});
  const html=renderToStaticMarkup(React.createElement(Markdown,{source:readFileSync('docs/library/antifaccao-associacoes-comparacao-2026-10-07.md','utf8')}));
  assert.equal((html.match(/class="study-example"/g)??[]).length,5);
  assert.match(html,/definição não é o mesmo que tipo penal/);
@@ -116,6 +116,7 @@ test('Antifaction comparison preserves practice, separates definitions from offe
 
 test('All law case cards expose distinct presentation for case, resolution, pitfall and variation',()=>{
  const {WorkedExampleContent}=load('src/components/library/WorkedExamples.tsx',{
+  './StudyText':{StudyText:({text})=>text,HighlightToggle:()=>null},
   './LearningIllustrations':{LearningIllustration:()=>null},
   '@/lib/studyEnrichment':{},
   '@/lib/studySourceUrl':{isStudySourceUrl:()=>true},
@@ -178,11 +179,11 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
  });
  const materials=manifest.map(m=>({slug:m.material_slug}));
  const html=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials,searching:false}));
- assert.equal((html.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,39);
- assert.equal((html.match(/Leitura integral e revisão por dispositivo/g)??[]).length,39);
+ assert.equal((html.match(/Estudar artigo por artigo/g)??[]).length,39);
+ assert.equal((html.match(/Resumo da lei, exemplos e flashcards/g)??[]).length,39);
  for(const group of new Set(data.map(c=>c.group)))assert.ok(html.includes(group));
  const only=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-drogas-revisao'}],searching:true}));
- assert.equal((only.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,1);
+ assert.equal((only.match(/Estudar artigo por artigo/g)??[]).length,1);
  assert.ok(!only.includes('/dashboard/library/processo-penal-cpp-provas-flagrante-revisao'));
  assert.ok(html.indexOf('/dashboard/library/penal-principios-direito-penal')<html.indexOf('/dashboard/library/legislacao-transito-revisao'));
  const matched=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-maria-penha-revisao'}],searching:true,query:'11340'}));

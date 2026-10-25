@@ -1,0 +1,1221 @@
+{
+  "version": "2026-10-11-ambientais-targeted",
+  "checked_at": "2026-10-12T20:58:41.769051+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-38-a",
+        "art-39",
+        "art-40",
+        "art-41",
+        "art-42",
+        "art-44",
+        "art-45",
+        "art-46",
+        "art-48",
+        "art-49",
+        "art-50",
+        "art-50-a",
+        "art-51",
+        "art-52",
+        "art-53"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "3be3d63964a53747dc66fb26f9899f5b5392104ea5ca11f17b47a0023ce8b394",
+      "source_checked_at": "2026-10-12T20:57:57.785110+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-34",
+      "unit_id": "250a5c54-229f-50f1-ba23-3de17b8c1301",
+      "content_sha256": "305a5514a4d8591ab9af9d97f655333f97bcc21f1ff0a1651cb15901a6ef066a",
+      "simples": "O artigo pune pesca em período proibido ou local interditado e equipara outras condutas ligadas à pesca proibida. Exige identificar a regra competente sobre período, lugar, espécie, tamanho, quantidade ou método, sem presumir que toda pesca é criminosa.",
+      "pontos": [
+        "Pena: detenção de 1 a 3 anos OU multa, ou ambas cumulativamente.",
+        "O parágrafo inclui espécies/tamanhos protegidos, quantidade ou método não permitido e a cadeia comercial dos espécimes provenientes de pesca proibida."
+      ],
+      "atencao": [
+        "Conferir o ato do órgão competente e a data/local do fato. Não usar calendário de defeso desatualizado nem declarar insignificância ou condenação automática só pela quantidade."
+      ],
+      "exemplo": "No período de proibição fixado pelo órgão competente para aquele local, uma pessoa realiza a pesca alcançada pela proibição. Variação: Se o período está permitido, isso afasta apenas essa hipótese; ainda se verificam tamanho, espécie, quantidade, método e outras vedações.",
+      "prova": [
+        "A pena exige sempre detenção E multa? Não; o caput admite detenção ou multa, ou ambas.",
+        "Transportar espécimes provenientes da pesca proibida fica fora do artigo? Não; o parágrafo único, III inclui essa conduta."
+      ],
+      "termos": [
+        {
+          "termo": "Período proibido",
+          "significado": "Recorte temporal da proibição de pesca fixada pela autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "250a5c54-229f-50f1-ba23-3de17b8c1301",
+        "content_sha256": "305a5514a4d8591ab9af9d97f655333f97bcc21f1ff0a1651cb15901a6ef066a",
+        "simples": "Pescar em período no qual a pesca seja proibida ou em lugares interditados por órgão competente: detenção de um a três anos, ou multa, ou ambas. Incorre nas mesmas penas quem pesca espécies que devam ser preservadas ou espécimes com tamanho inferior ao permitido; quem pesca quantidades superiores às permitidas ou mediante aparelhos, petrechos, técnicas e métodos não permitidos; e quem transporta, comercializa, beneficia ou industrializa espécimes provenientes de pesca proibida.",
+        "pontos": [
+          "Pesca em período proibido ou em local interditado.",
+          "Espécies ou tamanhos proibidos e quantidades acima do permitido.",
+          "Comércio de pescado de origem proibida."
+        ],
+        "atencao": [
+          "Alcança também quem transporta ou comercializa o pescado ilegal."
+        ],
+        "exemplo": "Pescar durante o período do defeso é crime.",
+        "prova": [
+          "Assertiva que alcança só o pescador, excluindo quem comercializa o pescado ilegal, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 36"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-35",
+      "unit_id": "a9b17082-c6f9-5059-b89d-afbb9b031f73",
+      "content_sha256": "38b18abaeadf34dadea0a9bce0169fa953ffec966ecbdd516271aa9386a6e4f3",
+      "simples": "O foco é o meio empregado na pesca: explosivos, substâncias com efeito semelhante na água, tóxicos ou outro meio proibido pela autoridade competente. A escolha do método pode configurar o tipo mesmo sem a proibição de calendário do art. 34.",
+      "pontos": [
+        "Pena: reclusão de 1 a 5 anos.",
+        "Explosivos e substâncias tóxicas são hipóteses expressas; outros meios exigem a proibição competente."
+      ],
+      "atencao": [
+        "Não copiar a pena alternativa do art. 34 para este artigo. Descrever o método e seus elementos; não inventar proibição técnica que não foi consultada."
+      ],
+      "exemplo": "Um pescador utiliza explosivo para pescar durante período normalmente permitido. Variação: O uso de um método permitido afasta essa hipótese, mas não torna regular uma pesca em local interditado ou fora dos demais limites.",
+      "prova": [
+        "O período permitido afasta a proibição de pescar com explosivo? Não; o artigo trata do meio empregado.",
+        "A pena prevista é detenção ou multa do art. 34? Não; aqui o texto prevê reclusão de 1 a 5 anos."
+      ],
+      "termos": [
+        {
+          "termo": "Meio proibido",
+          "significado": "Método de pesca vedado expressamente ou por autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "a9b17082-c6f9-5059-b89d-afbb9b031f73",
+        "content_sha256": "38b18abaeadf34dadea0a9bce0169fa953ffec966ecbdd516271aa9386a6e4f3",
+        "simples": "Pescar mediante a utilização de explosivos ou substâncias que, em contato com a água, produzam efeito semelhante, ou de substâncias tóxicas, ou outro meio proibido pela autoridade competente: reclusão de um ano a cinco anos.",
+        "pontos": [
+          "Pesca com explosivos ou substâncias tóxicas.",
+          "Reclusão de um a cinco anos."
+        ],
+        "atencao": [
+          "Pena de reclusão, mais grave que a da pesca proibida comum."
+        ],
+        "exemplo": "Usar dinamite para pescar é crime com pena de reclusão.",
+        "prova": [
+          "Assertiva que prevê detenção para a pesca com explosivos erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-36",
+      "unit_id": "bf2c18a7-a25f-5e3e-ba88-5fde8a295eef",
+      "content_sha256": "a5229fb6b971246446171fcbd8e15a560ac78dce5bb1750490d59e1deb4808ba",
+      "simples": "A definição legal de pesca abrange atos tendentes a retirar ou capturar peixes, crustáceos, moluscos e vegetais hidróbios. A finalidade econômica não é requisito dessa definição, que contém ressalva sobre espécies ameaçadas nas listas oficiais.",
+      "pontos": [
+        "Inclui retirada, extração, coleta, apanha, apreensão e captura, como atos tendentes.",
+        "Abrange espécimes suscetíveis OU não de aproveitamento econômico; observar a ressalva das listas oficiais."
+      ],
+      "atencao": [
+        "Definição não é condenação automática: devem ser verificados o tipo incriminador, a conduta e seus pressupostos. A ressalva das espécies ameaçadas não significa autorização para capturá-las."
+      ],
+      "exemplo": "A questão exclui da definição a coleta de moluscos porque não haveria venda. Variação: Se a espécie está na lista oficial de ameaçadas, analisar a ressalva e o regime específico, sem transformá-la em permissão de captura.",
+      "prova": [
+        "A definição depende de venda dos espécimes? Não; abrange aproveitamento econômico ou não.",
+        "A ressalva sobre espécies ameaçadas autoriza capturá-las livremente? Não; exige examinar sua proteção específica."
+      ],
+      "termos": [
+        {
+          "termo": "Vegetais hidróbios",
+          "significado": "Vegetais associados ao meio aquático incluídos na definição legal de pesca."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "bf2c18a7-a25f-5e3e-ba88-5fde8a295eef",
+        "content_sha256": "a5229fb6b971246446171fcbd8e15a560ac78dce5bb1750490d59e1deb4808ba",
+        "simples": "Para os efeitos da Lei, considera-se pesca todo ato tendente a retirar, extrair, coletar, apanhar, apreender ou capturar espécimes dos grupos dos peixes, crustáceos, moluscos e vegetais hidróbios, suscetíveis ou não de aproveitamento econômico, ressalvadas as espécies ameaçadas de extinção constantes das listas oficiais.",
+        "pontos": [
+          "Conceito amplo de pesca.",
+          "Peixes, crustáceos, moluscos e vegetais hidróbios.",
+          "Ressalva das espécies ameaçadas."
+        ],
+        "atencao": [
+          "Conceito de PESCA para a Lei."
+        ],
+        "exemplo": "A coleta de moluscos também é considerada pesca.",
+        "prova": [
+          "Assertiva que restringe a pesca à captura de peixes erra: inclui crustáceos, moluscos e vegetais hidróbios."
+        ],
+        "termos": [
+          {
+            "termo": "Hidróbio",
+            "significado": "Vegetal que vive na água."
+          }
+        ],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-37",
+      "unit_id": "417acfae-e4ac-5540-bf15-fa4bbfc57644",
+      "content_sha256": "51d71e0a607433029fe83739fd5ddbfc4f7d99cb0c4151cddc3ee2170a6f8278",
+      "simples": "O artigo descreve hipóteses em que o abate de animal não constitui crime: necessidade para saciar fome, proteção autorizada de lavouras/pomares/rebanhos e animal caracterizado como nocivo pelo órgão competente. Cada hipótese tem seus próprios requisitos.",
+      "pontos": [
+        "Fome: estado de necessidade para o agente OU sua família.",
+        "Proteção de lavoura: autorização legal e expressa; nocividade: caracterização pelo órgão competente.",
+        "O inciso III está vetado."
+      ],
+      "atencao": [
+        "Alegação particular de perigo ou prejuízo não substitui as condições expressas. Não estender esta regra a abate automático de animal apreendido: preservar a ressalva da ADPF 640 no art. 25."
+      ],
+      "exemplo": "Para proteger seu pomar, uma pessoa abate animal sem a autorização legal e expressa exigida pelo inciso II. Variação: Com autorização válida, examina-se a hipótese do inciso II; se a justificativa for nocividade, é necessária a caracterização pelo órgão competente do inciso IV.",
+      "prova": [
+        "A proteção do pomar dispensa autorização? Não; o inciso II exige autorização legal e expressa.",
+        "Basta o particular declarar que o animal é nocivo? Não; o inciso IV exige caracterização pelo órgão competente."
+      ],
+      "termos": [
+        {
+          "termo": "Autorização expressa",
+          "significado": "Ato competente exigido para a hipótese de proteção de lavouras, pomares e rebanhos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "417acfae-e4ac-5540-bf15-fa4bbfc57644",
+        "content_sha256": "51d71e0a607433029fe83739fd5ddbfc4f7d99cb0c4151cddc3ee2170a6f8278",
+        "simples": "Não é crime o abate de animal quando realizado em estado de necessidade, para saciar a fome do agente ou de sua família; para proteger lavouras, pomares e rebanhos da ação predatória ou destruidora de animais, desde que legal e expressamente autorizado pela autoridade competente; ou por ser nocivo o animal, desde que assim caracterizado pelo órgão competente.",
+        "pontos": [
+          "Estado de necessidade para saciar a fome.",
+          "Proteção de lavouras e rebanhos, com autorização expressa.",
+          "Animal nocivo, caracterizado pelo órgão competente."
+        ],
+        "atencao": [
+          "O inciso III foi revogado.",
+          "A proteção de lavouras exige autorização expressa."
+        ],
+        "exemplo": "Abater animal para alimentar a família faminta não é crime.",
+        "prova": [
+          "Assertiva que dispensa a autorização para abater animal que ataca a lavoura erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-38",
+      "unit_id": "e4afc231-1718-58d0-8426-a88cb85d4217",
+      "content_sha256": "807487e00073a9b97f0c7cbbc81bf1010ad69fe348684a0ec5559f82e7d0f72e",
+      "simples": "Protege floresta considerada de preservação permanente, inclusive em formação, contra destruição, dano ou utilização contrária às normas de proteção. Identificar a floresta e seu regime, distinguindo esse tipo de outras infrações relativas a APP.",
+      "pontos": [
+        "Pena: detenção de 1 a 3 anos OU multa, ou ambas.",
+        "Modalidade culposa: redução da pena à metade."
+      ],
+      "atencao": [
+        "Não reduzir toda APP a floresta nem afirmar que qualquer intervenção em qualquer vegetação configura exatamente este artigo. O tipo exige o objeto e a conduta previstos."
+      ],
+      "exemplo": "É danificada dolosamente uma floresta de preservação permanente que ainda está em formação. Variação: Se os pressupostos da modalidade culposa forem demonstrados, aplica-se a redução à metade prevista no parágrafo, não a mesma resposta dolosa sem qualificação.",
+      "prova": [
+        "Floresta em formação está fora do tipo? Não; é expressamente abrangida.",
+        "O crime culposo mantém integralmente a pena prevista? Não; o parágrafo determina redução à metade."
+      ],
+      "termos": [
+        {
+          "termo": "Floresta em formação",
+          "significado": "Objeto protegido pelo artigo mesmo antes de alcançar desenvolvimento completo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "e4afc231-1718-58d0-8426-a88cb85d4217",
+        "content_sha256": "807487e00073a9b97f0c7cbbc81bf1010ad69fe348684a0ec5559f82e7d0f72e",
+        "simples": "Destruir ou danificar floresta considerada de preservação permanente, mesmo que em formação, ou utilizá-la com infringência das normas de proteção: detenção de um a três anos, ou multa, ou ambas. Se o crime for culposo, a pena será reduzida à metade.",
+        "pontos": [
+          "Destruir ou danificar floresta de preservação permanente.",
+          "Detenção de um a três anos, ou multa, ou ambas.",
+          "Culposo: pena reduzida à metade."
+        ],
+        "atencao": [
+          "Admite a forma culposa."
+        ],
+        "exemplo": "Desmatar a mata ciliar de um rio é crime do art. 38.",
+        "prova": [
+          "Assertiva que não admite a forma culposa erra: ela existe, com pena reduzida à metade."
+        ],
+        "termos": [
+          {
+            "termo": "Área de preservação permanente",
+            "significado": "Área protegida, como margens de rios e topos de morros."
+          }
+        ],
+        "remissoes": [
+          "Art. 39"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-38-a",
+      "unit_id": "27303e66-db89-566f-927e-2e33ac2503da",
+      "content_sha256": "2b9b917ed57f6d2ce8a5dd57e39b06c9cd03a36f73a0099f713dc48fcbe7bb8e",
+      "simples": "O tipo protege vegetação primária ou secundária em estágio avançado ou médio de regeneração do Bioma Mata Atlântica. Pune destruição, dano e utilização que infrinja as normas de proteção; o estágio deve ser tecnicamente identificado.",
+      "pontos": [
+        "Pena: detenção de 1 a 3 anos OU multa, ou ambas.",
+        "Culpa: pena reduzida à metade; recorte de bioma e estágio é essencial."
+      ],
+      "atencao": [
+        "Vegetação em estágio inicial não se insere automaticamente na redação deste tipo; isso não significa ausência de qualquer proteção ou infração por outros dispositivos."
+      ],
+      "exemplo": "O laudo caracteriza vegetação secundária em estágio médio do Bioma Mata Atlântica e a conduta infringe sua proteção. Variação: Se o estágio é inicial, reavaliar o enquadramento em vez de simplesmente repetir a hipótese do art. 38-A ou afirmar licitude universal.",
+      "prova": [
+        "O artigo limita-se à vegetação primária? Não; inclui secundária em estágio avançado ou médio.",
+        "Culpa tem previsão expressa? Sim; o parágrafo prevê redução à metade."
+      ],
+      "termos": [
+        {
+          "termo": "Estágio de regeneração",
+          "significado": "Classificação da vegetação relevante para o recorte de incidência deste tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "27303e66-db89-566f-927e-2e33ac2503da",
+        "content_sha256": "2b9b917ed57f6d2ce8a5dd57e39b06c9cd03a36f73a0099f713dc48fcbe7bb8e",
+        "simples": "Destruir ou danificar vegetação primária ou secundária, em estágio avançado ou médio de regeneração, do Bioma Mata Atlântica, ou utilizá-la com infringência das normas de proteção: detenção de 1 a 3 anos, ou multa, ou ambas. Se o crime for culposo, a pena será reduzida à metade.",
+        "pontos": [
+          "Danificar vegetação da Mata Atlântica em estágio avançado ou médio.",
+          "Detenção de 1 a 3 anos, ou multa, ou ambas.",
+          "Culposo: metade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei da Mata Atlântica.",
+          "Específico da Mata Atlântica."
+        ],
+        "exemplo": "Derrubar vegetação em estágio médio da Mata Atlântica configura o art. 38-A.",
+        "prova": [
+          "Assertiva que aplica o art. 38-A a qualquer bioma erra: é específico da Mata Atlântica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-39",
+      "unit_id": "ea399911-17e0-50e8-a07a-acd5eed6a691",
+      "content_sha256": "c48b81df97ff3816363fbfe4c6220efbf88d6488f48c21694b8fc268893ee6ce",
+      "simples": "O artigo pune o corte de árvores em floresta considerada de preservação permanente sem permissão da autoridade competente. O candidato deve identificar conjuntamente o corte, o objeto protegido e a ausência da permissão pertinente.",
+      "pontos": [
+        "Pena: detenção de 1 a 3 anos OU multa, ou ambas.",
+        "Corte sem permissão é o núcleo específico; não confundir com o tipo mais amplo do art. 38."
+      ],
+      "atencao": [
+        "Não importar automaticamente para este artigo a modalidade culposa do art. 38. A permissão deve ser competente, válida e pertinente; documento alheio ao fato não satisfaz o requisito."
+      ],
+      "exemplo": "Uma pessoa corta árvores na floresta de preservação permanente sem a permissão exigida. Variação: Se há permissão competente que efetivamente abrange a intervenção, a ausência de permissão desse tipo não está demonstrada; outras condições continuam relevantes.",
+      "prova": [
+        "Qual ato é especificamente descrito? Cortar árvores na floresta protegida sem permissão competente.",
+        "A pena necessariamente acumula detenção e multa? Não; admite alternativas ou cumulação."
+      ],
+      "termos": [
+        {
+          "termo": "Permissão competente",
+          "significado": "Permissão aplicável emitida pela autoridade com competência para a intervenção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "ea399911-17e0-50e8-a07a-acd5eed6a691",
+        "content_sha256": "c48b81df97ff3816363fbfe4c6220efbf88d6488f48c21694b8fc268893ee6ce",
+        "simples": "Cortar árvores em floresta considerada de preservação permanente, sem permissão da autoridade competente: detenção de um a três anos, ou multa, ou ambas.",
+        "pontos": [
+          "Cortar árvores em floresta de preservação permanente sem permissão."
+        ],
+        "atencao": [
+          "Exige a falta de permissão da autoridade."
+        ],
+        "exemplo": "Cortar árvores em APP sem licença é crime.",
+        "prova": [
+          "Assertiva que admite o corte livre em floresta de preservação permanente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-40",
+      "unit_id": "c5150b32-119e-5bc8-b2ae-86ace987e161",
+      "content_sha256": "b458fe9c1040d30b5865520427eb51386fbd1efd50ab2e6e01e0d091e7ed08ea",
+      "simples": "Pune dano direto ou indireto às unidades de conservação e às áreas indicadas no artigo. A enumeração das unidades de proteção integral e a agravante referente a espécies ameaçadas devem ser lidas no seu recorte próprio.",
+      "pontos": [
+        "Pena: reclusão de 1 a 5 anos; dano pode ser direto OU indireto.",
+        "Dano a espécies ameaçadas em unidade de proteção integral é agravante do §2º.",
+        "Culpa: pena reduzida à metade."
+      ],
+      "atencao": [
+        "O §2º é circunstância agravante, não fração fixa inventada. Não confundir os parágrafos atuais do art. 40 com o caput vetado e trechos residuais do art. 40-A."
+      ],
+      "exemplo": "Uma atividade fora da unidade causa dano indireto comprovado à unidade de conservação. Variação: A mudança para conduta culposa exige aplicar o §3º e seus pressupostos; a localização fora da unidade não afasta automaticamente o dano indireto.",
+      "prova": [
+        "Só dano praticado fisicamente dentro da unidade é abrangido? Não; a redação inclui dano indireto, independentemente da localização.",
+        "A agravante do §2º fixa aumento automático de metade? Não; não contém essa fração."
+      ],
+      "termos": [
+        {
+          "termo": "Dano indireto",
+          "significado": "Dano que alcança o objeto protegido por repercussão da conduta, com vínculo demonstrado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "c5150b32-119e-5bc8-b2ae-86ace987e161",
+        "content_sha256": "b458fe9c1040d30b5865520427eb51386fbd1efd50ab2e6e01e0d091e7ed08ea",
+        "simples": "Causar dano direto ou indireto às Unidades de Conservação e às áreas de que trata o decreto de regulamentação, independentemente de sua localização: reclusão de um a cinco anos. Unidades de Conservação de Proteção Integral são as Estações Ecológicas, Reservas Biológicas, Parques Nacionais, Monumentos Naturais e Refúgios de Vida Silvestre. O dano que afeta espécies ameaçadas no interior dessas unidades é circunstância agravante. Se o crime for culposo, a pena será reduzida à metade.",
+        "pontos": [
+          "Dano direto ou indireto às unidades de conservação.",
+          "Reclusão de um a cinco anos.",
+          "Rol de unidades de proteção integral.",
+          "Agravante para espécies ameaçadas.",
+          "Culposo: metade."
+        ],
+        "atencao": [
+          "Pena de RECLUSÃO.",
+          "Rol de proteção integral: Estações Ecológicas, Reservas Biológicas, Parques Nacionais, Monumentos Naturais e Refúgios de Vida Silvestre."
+        ],
+        "exemplo": "Causar dano em um Parque Nacional é crime com reclusão de um a cinco anos.",
+        "prova": [
+          "Assertiva que prevê detenção para dano a unidades de conservação erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-41",
+      "unit_id": "86a967f5-5bc1-572d-b53e-7856e9f80193",
+      "content_sha256": "628a7ae9dd6b617525a98a12412b0f55b8c6bf30e0e83b57eaa12426db1001cc",
+      "simples": "Após a Lei 14.944/2024, o artigo abrange incêndio em floresta ou nas demais formas de vegetação. O tipo não se restringe à antiga expressão mata ou floresta e distingue as penas das modalidades dolosa e culposa.",
+      "pontos": [
+        "Dolo: reclusão de 2 a 4 anos E multa.",
+        "Culpa: detenção de 6 meses a 1 ano E multa.",
+        "Objeto ampliado pela redação de 2024: floresta OU demais formas de vegetação."
+      ],
+      "atencao": [
+        "Não apresentar fogo legalmente autorizado ou toda queima como crime automático. Verificar conduta, elemento subjetivo, permissões e regime de manejo integrado do fogo."
+      ],
+      "exemplo": "O agente provoca dolosamente incêndio em forma de vegetação que não é floresta, em situação que preenche os pressupostos do tipo. Variação: Se o fato é culposo, a pena é a do parágrafo: detenção de 6 meses a 1 ano e multa, não a reclusão do caput.",
+      "prova": [
+        "A redação atual alcança apenas floresta? Não; também as demais formas de vegetação.",
+        "A modalidade culposa prevê reclusão de 2 a 4 anos? Não; prevê detenção de 6 meses a 1 ano e multa."
+      ],
+      "termos": [
+        {
+          "termo": "Demais formas de vegetação",
+          "significado": "Ampliação textual do objeto de proteção feita em 2024."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "86a967f5-5bc1-572d-b53e-7856e9f80193",
+        "content_sha256": "628a7ae9dd6b617525a98a12412b0f55b8c6bf30e0e83b57eaa12426db1001cc",
+        "simples": "Provocar incêndio em floresta ou em demais formas de vegetação: reclusão de dois a quatro anos, e multa. Se o crime é culposo, a pena é de detenção de seis meses a um ano, e multa.",
+        "pontos": [
+          "Incêndio em floresta ou vegetação.",
+          "Reclusão de dois a quatro anos e multa.",
+          "Culposo: detenção de seis meses a um ano."
+        ],
+        "atencao": [
+          "Dolo: reclusão; culpa: detenção."
+        ],
+        "exemplo": "Ateiar fogo na mata é o crime do art. 41.",
+        "prova": [
+          "Assertiva que prevê detenção para o incêndio doloso erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-42",
+      "unit_id": "d99eda7a-f4f6-5b18-86de-57b414039514",
+      "content_sha256": "fccb8424e2f73b2dd219d60f0ff3d0acad109bdabee625730a414587d73d8377",
+      "simples": "O tipo abrange fabricar, vender, transportar ou soltar balões capazes de provocar incêndios nos ambientes indicados. A capacidade de provocar incêndio é requisito; a redação não exige que o incêndio efetivamente aconteça.",
+      "pontos": [
+        "Condutas alternativas: fabricar, vender, transportar OU soltar.",
+        "Pena: detenção de 1 a 3 anos OU multa, ou ambas.",
+        "Abrange florestas, outras vegetações, áreas urbanas e assentamentos humanos."
+      ],
+      "atencao": [
+        "Não tratar qualquer balão decorativo como objeto do crime sem sua capacidade incendiária. Também não restringir o tipo à pessoa que o solta."
+      ],
+      "exemplo": "Uma pessoa transporta balão capaz de provocar incêndio e afirma que o artigo só alcança quem o solta. Variação: Se o objeto é mero balão decorativo incapaz de provocar incêndio, não está demonstrado esse requisito; a conclusão depende do objeto real.",
+      "prova": [
+        "Só soltar é conduta prevista? Não; fabricação, venda e transporte também constam.",
+        "É necessário demonstrar a capacidade de provocar incêndio? Sim; é característica expressa do objeto."
+      ],
+      "termos": [
+        {
+          "termo": "Capacidade incendiária",
+          "significado": "Aptidão do balão para provocar os incêndios descritos no artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d99eda7a-f4f6-5b18-86de-57b414039514",
+        "content_sha256": "fccb8424e2f73b2dd219d60f0ff3d0acad109bdabee625730a414587d73d8377",
+        "simples": "Fabricar, vender, transportar ou soltar balões que possam provocar incêndios nas florestas e demais formas de vegetação, em áreas urbanas ou qualquer tipo de assentamento humano: detenção de um a três anos, ou multa, ou ambas.",
+        "pontos": [
+          "Fabricar, vender, transportar ou soltar balões incendiários.",
+          "Detenção de um a três anos, ou multa, ou ambas."
+        ],
+        "atencao": [
+          "Alcança toda a cadeia: fabricar, vender, transportar e soltar."
+        ],
+        "exemplo": "Soltar balão que pode cair em floresta é crime.",
+        "prova": [
+          "Assertiva que pune só quem solta o balão erra: fabricar, vender e transportar também são condutas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-44",
+      "unit_id": "7c12e887-a212-58a1-8598-e9bf351d8ce9",
+      "content_sha256": "6ae0fc178deb05e2a66b26545362b653e33484eeb402ff53e7945229690dcf8e",
+      "simples": "Pune extração de pedra, areia, cal ou minerais de florestas de domínio público ou consideradas de preservação permanente, sem prévia autorização. O tipo combina o local protegido, a atividade extrativa e a falta do ato autorizativo.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "A autorização deve ser prévia; o objeto inclui qualquer espécie de minerais."
+      ],
+      "atencao": [
+        "Não confundir com o regime geral de mineração do art. 55 nem afirmar concurso automático de crimes. Identificar os tipos e a relação das condutas no caso concreto."
+      ],
+      "exemplo": "Areia é extraída da floresta de domínio público sem autorização prévia. Variação: Se há autorização competente anterior abrangendo a extração, verificar suas condições; alegar que pedirá autorização depois não equivale à autorização prévia.",
+      "prova": [
+        "A extração de areia está abrangida? Sim; é expressamente indicada.",
+        "Pedir autorização depois satisfaz a exigência prévia? Não; o ato exigido antecede a intervenção."
+      ],
+      "termos": [
+        {
+          "termo": "Extração",
+          "significado": "Retirada de minerais do local protegido nas condições descritas pelo tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "7c12e887-a212-58a1-8598-e9bf351d8ce9",
+        "content_sha256": "6ae0fc178deb05e2a66b26545362b653e33484eeb402ff53e7945229690dcf8e",
+        "simples": "Extrair de florestas de domínio público ou consideradas de preservação permanente, sem prévia autorização, pedra, areia, cal ou qualquer espécie de minerais: detenção de seis meses a um ano, e multa.",
+        "pontos": [
+          "Extração de pedra, areia, cal ou minerais sem autorização.",
+          "Detenção de seis meses a um ano e multa."
+        ],
+        "atencao": [
+          "Em floresta pública ou de preservação permanente."
+        ],
+        "exemplo": "Retirar areia de floresta de preservação permanente sem autorização é crime.",
+        "prova": [
+          "Assertiva que alcança qualquer propriedade particular comum erra: o tipo trata de floresta pública ou de preservação permanente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-45",
+      "unit_id": "d82f32e1-a05c-5568-8526-9aa6a39066a6",
+      "content_sha256": "bf033a0e0d84b8b5dae77749baf9e3d0bfc8e1b9eb0c84a58350dca53bb5084a",
+      "simples": "O objeto é madeira de lei classificada por ato do Poder Público. Cortá-la ou transformá-la em carvão em desacordo com determinações legais é abrangido para exploração econômica ou não, inclusive fins industriais e energéticos.",
+      "pontos": [
+        "Pena: reclusão de 1 a 2 anos E multa.",
+        "A classificação por ato público é requisito do objeto; a finalidade não precisa ser econômica."
+      ],
+      "atencao": [
+        "Não identificar madeira de lei apenas pelo preço comercial ou pela opinião do agente. O ato classificatório e as determinações legais precisam ser verificados."
+      ],
+      "exemplo": "Madeira oficialmente classificada é transformada em carvão, contrariando as determinações legais, para uso sem venda. Variação: Se não há classificação do objeto como madeira de lei por ato público, não se presume o requisito específico; verificar outros tipos eventualmente aplicáveis.",
+      "prova": [
+        "Venda é requisito indispensável? Não; a exploração pode ser econômica ou não.",
+        "Qualquer madeira cara é automaticamente madeira de lei? Não; o artigo exige classificação por ato do Poder Público."
+      ],
+      "termos": [
+        {
+          "termo": "Madeira de lei",
+          "significado": "Madeira assim classificada por ato do Poder Público para este tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d82f32e1-a05c-5568-8526-9aa6a39066a6",
+        "content_sha256": "bf033a0e0d84b8b5dae77749baf9e3d0bfc8e1b9eb0c84a58350dca53bb5084a",
+        "simples": "Cortar ou transformar em carvão madeira de lei, assim classificada por ato do Poder Público, para fins industriais, energéticos ou qualquer exploração, econômica ou não, em desacordo com as determinações legais: reclusão de um a dois anos, e multa.",
+        "pontos": [
+          "Cortar ou carbonizar madeira de lei em desacordo com a lei.",
+          "Reclusão de um a dois anos e multa."
+        ],
+        "atencao": [
+          "Madeira de lei é definida por ato do Poder Público."
+        ],
+        "exemplo": "Transformar ipê em carvão sem autorização é crime.",
+        "prova": [
+          "Assertiva que exige fins comerciais para o crime erra: alcança qualquer exploração, econômica ou não."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 46"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-46",
+      "unit_id": "91fbe213-e108-5837-9223-b6dc750d40c8",
+      "content_sha256": "6956968da347f0f29f7121df7bd7038bdb563c5ca30bde180abe6c643c9fee39",
+      "simples": "Na aquisição comercial ou industrial de produtos vegetais, o artigo exige licença do vendedor e a via que deve acompanhar o produto até o beneficiamento final. O parágrafo também alcança venda, depósito, transporte e guarda sem licença válida.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "A licença deve cobrir todo o tempo da viagem ou armazenamento nas condutas do parágrafo.",
+        "A aquisição do caput tem finalidade comercial ou industrial."
+      ],
+      "atencao": [
+        "Nota fiscal não substitui automaticamente o documento ambiental exigido. Verificar o sistema e os documentos aplicáveis ao produto e ao percurso, sem inventar dispensa genérica."
+      ],
+      "exemplo": "Uma empresa adquire madeira comercialmente sem exigir a licença do vendedor e sem a via documental exigida. Variação: Uma licença existe, mas não é válida durante toda a viagem; a mera existência do documento não satisfaz a condição temporal do parágrafo.",
+      "prova": [
+        "A finalidade do caput é qualquer aquisição, sem recorte? Não; o texto indica fins comerciais ou industriais.",
+        "Licença vencida durante a viagem atende ao parágrafo? Não; deve ser válida para todo o período."
+      ],
+      "termos": [
+        {
+          "termo": "Licença válida",
+          "significado": "Documento competente com alcance material e temporal pertinente ao produto e à atividade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "91fbe213-e108-5837-9223-b6dc750d40c8",
+        "content_sha256": "6956968da347f0f29f7121df7bd7038bdb563c5ca30bde180abe6c643c9fee39",
+        "simples": "Receber ou adquirir, para fins comerciais ou industriais, madeira, lenha, carvão e outros produtos de origem vegetal, sem exigir a exibição de licença do vendedor e sem munir-se da via que deverá acompanhar o produto até o final beneficiamento: detenção de seis meses a um ano, e multa. Incorre nas mesmas penas quem vende, expõe à venda, tem em depósito, transporta ou guarda esses produtos sem licença válida para todo o tempo da viagem ou do armazenamento.",
+        "pontos": [
+          "Adquirir produtos de origem vegetal sem exigir a licença do vendedor.",
+          "Vender, depositar, transportar ou guardar sem licença válida.",
+          "Detenção de seis meses a um ano e multa."
+        ],
+        "atencao": [
+          "O comprador deve exigir a licença do vendedor."
+        ],
+        "exemplo": "A serraria que compra madeira sem exigir a licença do vendedor comete o crime.",
+        "prova": [
+          "Assertiva que isenta o comprador que não exigiu a licença erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-48",
+      "unit_id": "dbf9f4f9-f395-5df5-b116-6417834373d8",
+      "content_sha256": "a0afb7586e760344e5d7c41bd83ce36060fc716bff5e210a72bb13d7db4eace5",
+      "simples": "O núcleo é impedir ou dificultar a regeneração natural de florestas ou outras formas de vegetação. Não se limita ao ato inicial de derrubada: a manutenção de obstáculo à recuperação pode exigir análise própria.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "Impedir OU dificultar são condutas distintas; o objeto não se restringe a floresta."
+      ],
+      "atencao": [
+        "Não presumir o crime apenas pela ausência de vegetação: é preciso identificar a conduta e seus elementos. Questões de permanência e prescrição dependem do caso e de jurisprudência específica."
+      ],
+      "exemplo": "São mantidos obstáculos que, nas circunstâncias comprovadas, impedem a regeneração natural de uma vegetação protegida. Variação: Se não há conduta impeditiva ou dificultadora demonstrada, uma fotografia isolada do solo não autoriza concluir automaticamente todos os elementos.",
+      "prova": [
+        "É indispensável que o agente tenha feito o desmatamento inicial? O núcleo deste artigo é impedir ou dificultar regeneração; a análise não se esgota na autoria da derrubada.",
+        "A norma protege apenas floresta? Não; inclui outras formas de vegetação."
+      ],
+      "termos": [
+        {
+          "termo": "Regeneração natural",
+          "significado": "Recuperação da vegetação que pode ser impedida ou dificultada pela conduta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "dbf9f4f9-f395-5df5-b116-6417834373d8",
+        "content_sha256": "a0afb7586e760344e5d7c41bd83ce36060fc716bff5e210a72bb13d7db4eace5",
+        "simples": "Impedir ou dificultar a regeneração natural de florestas e demais formas de vegetação: detenção de seis meses a um ano, e multa.",
+        "pontos": [
+          "Impedir ou dificultar a regeneração natural da vegetação."
+        ],
+        "atencao": [
+          "Protege a regeneração da vegetação."
+        ],
+        "exemplo": "Manter gado em área em recuperação para impedir o rebrote é crime.",
+        "prova": [
+          "Assertiva que exige a destruição da floresta para o crime erra: basta impedir ou dificultar a regeneração."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 49"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-49",
+      "unit_id": "41deb211-017b-5e41-8a44-c31dc16efcce",
+      "content_sha256": "4dd2e81ccaa2e089dba8d3723c809321ee40c70964454609cb13ac4e53f75559",
+      "simples": "Protege plantas ornamentais em logradouros públicos ou propriedade privada alheia. Além da modalidade culposa, a Lei 15.299/2025 acrescentou hipótese específica de corte ou poda tacitamente autorizados após requerimento com risco de acidente atestado e falta de resposta fundamentada.",
+      "pontos": [
+        "Dolo: detenção de 3 meses a 1 ano OU multa, ou ambas.",
+        "Culpa: detenção de 1 a 6 meses OU multa.",
+        "§2º: requerimento, risco atestado por profissional/empresa habilitado e 45 dias sem resposta fundamentada são requisitos da hipótese."
+      ],
+      "atencao": [
+        "O silêncio não cria licença universal para qualquer corte. Preservar o recorte do art. 49 e conferir outras proteções e autorizações pertinentes; a regra recente não é autorização para desmatar qualquer área."
+      ],
+      "exemplo": "O requerente pede poda por risco de acidente atestado por profissional habilitado e o órgão responsável não responde fundamentadamente em 45 dias, na hipótese descrita pelo §2º. Variação: Se falta o atestado exigido, não basta contar 45 dias: a hipótese legal não está integralmente demonstrada.",
+      "prova": [
+        "Qualquer pedido sem resposta autoriza qualquer corte? Não; há requisitos materiais e documentais específicos.",
+        "A regra dos 45 dias elimina a necessidade do atestado? Não; o risco deve ser devidamente atestado por profissional ou empresa habilitado."
+      ],
+      "termos": [
+        {
+          "termo": "Autorização tácita específica",
+          "significado": "Hipótese condicionada do §2º; não autorização geral para intervenção em vegetação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "41deb211-017b-5e41-8a44-c31dc16efcce",
+        "content_sha256": "4dd2e81ccaa2e089dba8d3723c809321ee40c70964454609cb13ac4e53f75559",
+        "simples": "Destruir, danificar, lesar ou maltratar, por qualquer modo ou meio, plantas de ornamentação de logradouros públicos ou em propriedade privada alheia: detenção de três meses a um ano, ou multa, ou ambas. No crime culposo, a pena é de um a seis meses, ou multa. Não incorre em crime quem procede à poda ou ao corte de árvore quando o órgão ambiental não responder de maneira fundamentada, no prazo máximo de 45 dias, ao requerimento que solicita o corte ou a poda em razão de possível acidente atestado por profissional habilitado, considerada tacitamente autorizada a realização.",
+        "pontos": [
+          "Danificar plantas ornamentais de logradouros ou de terceiros.",
+          "Detenção de três meses a um ano, ou multa, ou ambas.",
+          "Culposo: um a seis meses, ou multa.",
+          "Poda ou corte tacitamente autorizado após 45 dias sem resposta, em risco de acidente."
+        ],
+        "atencao": [
+          "Autorização TÁCITA após 45 dias de silêncio do órgão ambiental, com risco atestado."
+        ],
+        "exemplo": "Quem poda a árvore que ameaça cair, após 45 dias sem resposta do órgão, não comete crime.",
+        "prova": [
+          "Assertiva que exige autorização expressa mesmo após o silêncio do órgão por 45 dias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-50",
+      "unit_id": "233c62d2-4a5e-5be2-a834-14c0b54786b0",
+      "content_sha256": "6e96f7a20e89e9bd5f9ff6689689e45cf0c0cf0b46883dc6cba7cdde0dc985b1",
+      "simples": "Pune destruição ou dano de florestas nativas ou plantadas e de vegetação fixadora de dunas ou protetora de mangues, objeto de especial preservação. A especial proteção e a identificação do objeto importam para o enquadramento.",
+      "pontos": [
+        "Pena: detenção de 3 meses a 1 ano E multa.",
+        "Floresta plantada não é excluída só por sua origem; verificar a especial preservação."
+      ],
+      "atencao": [
+        "Não confundir com o art. 50-A: domínio público/devoluto e subsistência têm regime próprio. Também não presumir que qualquer plantação preenche este tipo."
+      ],
+      "exemplo": "É destruída vegetação fixadora de dunas objeto de especial preservação. Variação: Se o caso é floresta plantada, não descartá-lo só pela origem; verificar se o objeto e sua proteção correspondem ao artigo.",
+      "prova": [
+        "Somente floresta nativa pode ser objeto do artigo? Não; a redação inclui plantada, observados seus requisitos.",
+        "A pena do texto prevê multa cumulativa? Sim; indica detenção e multa."
+      ],
+      "termos": [
+        {
+          "termo": "Especial preservação",
+          "significado": "Regime de proteção relevante para identificar o objeto do tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "233c62d2-4a5e-5be2-a834-14c0b54786b0",
+        "content_sha256": "6e96f7a20e89e9bd5f9ff6689689e45cf0c0cf0b46883dc6cba7cdde0dc985b1",
+        "simples": "Destruir ou danificar florestas nativas ou plantadas ou vegetação fixadora de dunas, protetora de mangues, objeto de especial preservação: detenção de três meses a um ano, e multa.",
+        "pontos": [
+          "Destruir florestas nativas ou plantadas.",
+          "Vegetação fixadora de dunas e protetora de mangues.",
+          "Detenção de três meses a um ano e multa."
+        ],
+        "atencao": [
+          "Protege vegetação de especial preservação."
+        ],
+        "exemplo": "Destruir o mangue que protege a costa é crime.",
+        "prova": [
+          "Assertiva que restringe o crime às florestas nativas erra: inclui as plantadas e a vegetação de dunas e mangues."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-50-a",
+      "unit_id": "d6a2d8a5-e419-5716-ab02-aff77c820252",
+      "content_sha256": "54c1d6ab8e3556b25859b5d09f7474a93796866e53b9d3dbb51fb554817506fd",
+      "simples": "O tipo trata de desmatamento, exploração econômica ou degradação de floresta em terras públicas ou devolutas, sem autorização. Há ressalva para subsistência imediata e aumento de pena por extensão superior a mil hectares.",
+      "pontos": [
+        "Pena: reclusão de 2 a 4 anos E multa.",
+        "§1º: subsistência imediata pessoal do agente OU da família.",
+        "§2º: acima de 1.000 ha, aumento de 1 ano por milhar de hectare."
+      ],
+      "atencao": [
+        "Não estender a ressalva a exploração comercial apenas porque gera renda familiar. Não inventar fórmula de arredondamento de frações de hectare que o texto não resolve."
+      ],
+      "exemplo": "Uma exploração comercial degrada floresta em terra pública sem autorização; o agente invoca genericamente que mantém sua família. Variação: Uma conduta efetivamente necessária à subsistência imediata pessoal ou familiar exige analisar a ressalva própria, sem equipará-la a toda atividade rentável.",
+      "prova": [
+        "A ressalva é qualquer renda obtida para a família? Não; exige necessidade de subsistência imediata.",
+        "Exatamente 1.000 ha é superior a 1.000 ha? Não; a condição textual do §2º é extensão superior."
+      ],
+      "termos": [
+        {
+          "termo": "Subsistência imediata",
+          "significado": "Necessidade pessoal ou familiar no recorte do §1º, não justificativa comercial genérica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d6a2d8a5-e419-5716-ab02-aff77c820252",
+        "content_sha256": "54c1d6ab8e3556b25859b5d09f7474a93796866e53b9d3dbb51fb554817506fd",
+        "simples": "Desmatar, explorar economicamente ou degradar floresta, plantada ou nativa, em terras de domínio público ou devolutas, sem autorização do órgão competente: reclusão de 2 a 4 anos e multa. Não é crime a conduta necessária à subsistência imediata pessoal do agente ou de sua família. Se a área explorada for superior a 1.000 ha, a pena será aumentada de 1 ano por milhar de hectare.",
+        "pontos": [
+          "Desmatar, explorar ou degradar floresta em terras públicas ou devolutas sem autorização.",
+          "Reclusão de 2 a 4 anos e multa.",
+          "Subsistência imediata exclui o crime.",
+          "Aumento de 1 ano por milhar de hectare acima de 1.000 ha."
+        ],
+        "atencao": [
+          "Aplica-se a terras PÚBLICAS ou devolutas.",
+          "Exclusão: subsistência imediata do agente ou da família."
+        ],
+        "exemplo": "Desmatar grande área de terra devoluta para pastagem é crime.",
+        "prova": [
+          "Assertiva que aplica o art. 50-A a qualquer propriedade particular erra: ele trata de terras de domínio público ou devolutas."
+        ],
+        "termos": [
+          {
+            "termo": "Terra devoluta",
+            "significado": "Terra pública sem destinação definida."
+          }
+        ],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-51",
+      "unit_id": "b55c5583-da9a-5369-86c5-2f2ef24c0521",
+      "content_sha256": "1c934029f1b3ab28a5433ad19a47a24b8802cf21f4f50908421b14d850c80c16",
+      "simples": "O artigo abrange comercialização de motosserra ou sua utilização em florestas e outras vegetações sem licença ou registro da autoridade competente. O candidato deve observar as condutas e o documento exigido no regime pertinente.",
+      "pontos": [
+        "Pena: detenção de 3 meses a 1 ano E multa.",
+        "Comercializar é conduta expressa, além da utilização descrita."
+      ],
+      "atencao": [
+        "Não substituir o requisito ambiental por simples recibo de compra nem afirmar que qualquer posse de motosserra é o núcleo deste artigo."
+      ],
+      "exemplo": "O agente utiliza motosserra na vegetação sem o documento ambiental exigido, apresentando apenas o recibo da loja. Variação: Com licença/registro competente pertinente, a ausência documental não está demonstrada; a regularidade da ferramenta não autoriza por si qualquer corte de árvores.",
+      "prova": [
+        "Recibo comercial equivale automaticamente a licença ambiental? Não; são documentos e finalidades diferentes.",
+        "O texto limita-se à utilização? Não; também contempla comercialização."
+      ],
+      "termos": [
+        {
+          "termo": "Registro competente",
+          "significado": "Registro exigido pelo regime da autoridade competente para a atividade com motosserra."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "b55c5583-da9a-5369-86c5-2f2ef24c0521",
+        "content_sha256": "1c934029f1b3ab28a5433ad19a47a24b8802cf21f4f50908421b14d850c80c16",
+        "simples": "Comercializar motosserra ou utilizá-la em florestas e nas demais formas de vegetação, sem licença ou registro da autoridade competente: detenção de três meses a um ano, e multa.",
+        "pontos": [
+          "Comercializar ou usar motosserra sem licença ou registro.",
+          "Detenção de três meses a um ano e multa."
+        ],
+        "atencao": [
+          "Alcança a venda e o uso."
+        ],
+        "exemplo": "Usar motosserra em mata sem o registro exigido é crime.",
+        "prova": [
+          "Assertiva que só pune quem usa a motosserra erra: a comercialização também é punida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-52",
+      "unit_id": "47f75a58-ca1a-5877-b073-45b6308453bb",
+      "content_sha256": "7b65f6d3ae04a2c60934c989a02342e4210b06d1385bfb571d67dd4af443f859",
+      "simples": "O artigo pune entrada em unidade de conservação conduzindo substâncias ou instrumentos próprios à caça ou exploração de produtos florestais sem licença competente. Identificar o instrumento, a entrada e a falta da licença na hipótese descrita.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "O texto descreve penetrar na unidade; não exige narrar abate consumado como requisito adicional de sua redação."
+      ],
+      "atencao": [
+        "Nem todo objeto de uso cotidiano é automaticamente instrumento próprio para as atividades indicadas. Verificar características, contexto e licença, sem presumir culpabilidade pela simples visita."
+      ],
+      "exemplo": "O agente entra na unidade conduzindo instrumentos próprios para caça, sem a licença competente. Variação: Um visitante sem instrumentos próprios à caça/exploração não é automaticamente enquadrado só porque entrou na unidade; examinar os elementos concretos.",
+      "prova": [
+        "O artigo exige relato de abate consumado? Sua redação descreve a entrada com os instrumentos/substâncias sem licença; não exige esse resultado adicional.",
+        "Toda visita à unidade configura o tipo? Não; há requisitos específicos de objeto, conduta e licença."
+      ],
+      "termos": [
+        {
+          "termo": "Instrumento próprio",
+          "significado": "Instrumento relacionado à caça ou exploração florestal na hipótese do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "47f75a58-ca1a-5877-b073-45b6308453bb",
+        "content_sha256": "7b65f6d3ae04a2c60934c989a02342e4210b06d1385bfb571d67dd4af443f859",
+        "simples": "Penetrar em Unidades de Conservação conduzindo substâncias ou instrumentos próprios para caça ou para exploração de produtos ou subprodutos florestais, sem licença da autoridade competente: detenção de seis meses a um ano, e multa.",
+        "pontos": [
+          "Entrar em unidade de conservação com instrumentos de caça ou de exploração florestal sem licença."
+        ],
+        "atencao": [
+          "Crime de perigo: basta penetrar com os instrumentos."
+        ],
+        "exemplo": "Entrar armado com instrumentos de caça em um parque nacional configura o crime.",
+        "prova": [
+          "Assertiva que exige o efetivo abate de animais erra: basta a entrada com os instrumentos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-53",
+      "unit_id": "eb0e9d58-4545-5e68-af68-9bc2ad4c474c",
+      "content_sha256": "d7d4090661886b8d2dfe8dcd533b4a948c70e2f7743fad23e7269c705aa5b6d1",
+      "simples": "É causa de aumento aplicável aos crimes da seção de flora, quando ocorrem os resultados ou circunstâncias enumerados. Não cria um crime independente nem se aplica indistintamente a todos os crimes da lei.",
+      "pontos": [
+        "Aumento: 1/6 a 1/3.",
+        "Inclui diminuição de águas, erosão ou alteração climática e circunstâncias como sementes, formação da vegetação, seca/inundação, noite, domingo ou feriado.",
+        "Espécie ameaçada somente no local também está contemplada."
+      ],
+      "atencao": [
+        "Não aplicar automaticamente causas de aumento semelhantes cumulativamente pelo mesmo fato. Identificar o crime-base, a circunstância e eventual vedação de dupla valoração."
+      ],
+      "exemplo": "Um crime da seção de flora ocorre contra espécie ameaçada apenas naquele local, com a circunstância demonstrada. Variação: Se a questão trata de crime de outra seção, não transportar o aumento automaticamente: o caput limita seu alcance aos crimes desta seção.",
+      "prova": [
+        "A ameaça precisa abranger todo o país? Não; o inciso II, c admite ameaça somente no local da infração.",
+        "A fração é sempre metade? Não; é de um sexto a um terço."
+      ],
+      "termos": [
+        {
+          "termo": "Causa de aumento",
+          "significado": "Regra que eleva a pena do crime-base nas condições legais, sem criar tipo autônomo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "eb0e9d58-4545-5e68-af68-9bc2ad4c474c",
+        "content_sha256": "d7d4090661886b8d2dfe8dcd533b4a948c70e2f7743fad23e7269c705aa5b6d1",
+        "simples": "Nos crimes da seção dos crimes contra a flora, a pena é aumentada de um sexto a um terço se do fato resulta diminuição de águas naturais, erosão do solo ou modificação do regime climático, ou se o crime é cometido no período de queda das sementes, no de formação de vegetações, contra espécies raras ou ameaçadas, em época de seca ou inundação, ou durante a noite, em domingo ou feriado.",
+        "pontos": [
+          "Aumento de um sexto a um terço nos crimes contra a flora.",
+          "Consequências: diminuição de águas, erosão e mudança climática.",
+          "Época e circunstâncias especiais."
+        ],
+        "atencao": [
+          "Aumento de um sexto a um terço."
+        ],
+        "exemplo": "Desmatar à noite aumenta a pena do crime contra a flora.",
+        "prova": [
+          "Assertiva que fixa o aumento da metade erra: é de um sexto a um terço."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 38 a 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}

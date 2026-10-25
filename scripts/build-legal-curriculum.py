@@ -1,9 +1,12 @@
 """Build official legal reading paths offline from reviewed local HTML.
 Usage: python scripts/build-legal-curriculum.py SOURCE_DIRECTORY OUTPUT_JSON
-Requires lxml. No network, credentials or private source files in Git.
+Requires lxml and html5lib (scripts/requirements-legal.txt).
+No network, credentials or private source files in Git.
 """
 import pathlib,json,re,hashlib,uuid,sys,urllib.parse
 from lxml import html
+from lxml import etree
+import html5lib
 
 clean=lambda value:' '.join(value.translate({i:bytes([i]).decode('cp1252',errors='replace') for i in range(128,160)}).split())
 def number(value):
@@ -11,40 +14,180 @@ def number(value):
  return re.sub(r'^(\d+)([A-Z]+)$',r'\1-\2',value)
 
 def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
-    if raw.startswith((b'\xff\xfe',b'\xfe\xff')) or re.search(rb'charset\s*=',raw,re.I):
-        tree=html.fromstring(raw)
+    if raw.startswith((b'\xff\xfe',b'\xfe\xff')):
+        try:decoded=raw.decode('utf-16')
+        except UnicodeDecodeError:
+            # Some official pages append single-byte HTTP whitespace after
+            # their UTF-16 closing HTML tag. Never repair a corrupted law body.
+            decoded=raw.decode('utf-16',errors='replace')
+            end=decoded.lower().rfind('</html>')
+            if end<0 or '\ufffd' in decoded[:end+7]:raise
+            decoded=decoded[:end+7]
     else:
-        try:raw.decode('utf-8');encoding='utf-8'
-        except UnicodeDecodeError:encoding='windows-1252'
-        tree=html.fromstring(raw,parser=html.HTMLParser(encoding=encoding))
-    original=[clean(e.text_content()) for e in tree.xpath('//p')]
+        declared=re.search(rb'charset\s*=\s*["\']?\s*([\w-]+)',raw,re.I)
+        if declared:encoding=declared.group(1).decode('ascii')
+        else:
+            try:raw.decode('utf-8');encoding='utf-8'
+            except UnicodeDecodeError:encoding='windows-1252'
+        decoded=raw.decode(encoding,errors='replace')
+    # Planalto legacy markup closes formatting elements across <p> boundaries.
+    # libxml alone drops those paragraph bodies (e.g. CP arts. 1, 43, 172, 184).
+    # Repair with the HTML5 tree algorithm before querying paragraphs. Keep a
+    # Unicode serialization so a legacy charset declaration cannot re-decode it.
+    repaired=html5lib.parse(decoded,treebuilder='lxml',namespaceHTMLElements=False)
+    tree=html.fromstring(etree.tostring(repaired,encoding='unicode',method='html'))
+    # This legacy page mixes current h4/h5 headings with paragraph headings.
+    # Keep those boundaries in DOM order rather than attaching their captions
+    # to the preceding article or carrying an unrelated section forward.
+    block_selector='//p|//h4|//h5' if slug=='drogas' else '//p'
+    if slug=='contravencoes':block_selector='//p|//h2'
+    original_paragraphs=list(tree.xpath(block_selector))
+    original_text={e:clean(e.text_content()) for e in original_paragraphs}
+    original=list(original_text.values())
     for element in tree.xpath('//strike|//del|//s|//script|//style'):
      element.drop_tree()
     for element in tree.xpath('//*[@style]'):
      if 'line-through' in element.get('style',''):element.drop_tree()
     # Paragraph boundaries, not line-wrapped text, define article headings.
     blocks=[]
-    for element in tree.xpath('//p'):
-     value=clean(element.text_content())
-     if value:blocks.append(value)
+    remaining=set(tree.xpath(block_selector))
+    for element in original_paragraphs:
+     value=clean(element.text_content()) if element in remaining else ''
+     blocks.append((value,original_text[element]))
     article=re.compile(r'^(?:[“"\s]*Art\.?\s*(\d+(?:[º°o])?(?:[-–]\s*[A-Z]{1,2}|\s+[-–][A-Z]{1,2}|[A-Z]{1,2})?)(?!\.\d)(?=\s|[.\-–:]|$)\s*[.\-–:]?|Artigo\s+(\d+)\s*[-–:]?)',re.I)
     units=[];chapter='Disposições iniciais';pending=[];annex=False;hierarchy={};pending_level=0
     levels={'livro':0,'titulo':1,'capitulo':2,'secao':3,'seccao':3,'subsecao':4}
     if slug=='budapeste':levels={'capitulo':0,'secao':1,'seccao':1,'titulo':2,'subsecao':3,'livro':0}
+    if slug=='contravencoes':levels={'parte':0,'capitulo':1}
+    heading_pattern=r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b'
+    if slug=='contravencoes':heading_pattern=r'^(?:PARTE|CAP[IÍ]TULO|DISPOSIÇÕES FINAIS)\b'
     def finish_heading():
      for level in list(hierarchy):
       if level>=pending_level:del hierarchy[level]
      hierarchy[pending_level]=' — '.join(pending)
      return ' / '.join(hierarchy[k] for k in sorted(hierarchy))
-    for value in blocks:
+    inactive_article=False
+    # Inspected CP rubrics belong to the next article, not the preceding body.
+    # Keep rubrics inside an article (e.g. "Tentativa" within art. 14).
+    next_article_rubrics={'Desistência voluntária e arrependimento eficaz','Conversão das penas restritivas de direitos','Suspensão da execução da multa','Infanticídio','Abandono de incapaz','Sedução'}
+    arms_rubrics={'Posse irregular de arma de fogo de uso permitido','Omissão de cautela','Porte ilegal de arma de fogo de uso permitido','Disparo de arma de fogo','Posse ou porte ilegal de arma de fogo de uso restrito','Comércio ilegal de arma de fogo','Tráfico internacional de arma de fogo'}
+    contravention_rubrics={
+     'Abuso na prática da aviação',
+     'Anúncio de meio abortivo ou anticoncepcional',
+     'Aplicação das regras gerais do Código Penal',
+     'Arremesso ou colocação perigosa',
+     'Associação secreta',
+     'Ação penal',
+     'Bebidas alcoólicas',
+     'Conversão da multa em prisão simples',
+     'Crueldade contra animais',
+     'Desabamento de construção',
+     'Direção não licenciada de aeronave',
+     'Direção perigosa de veículo na via pública',
+     'Disparo de arma de fogo',
+     'Distribuição ou transporte de listas ou avisos',
+     'Embriaguez',
+     'Emissão de fumaça, vapor ou gás',
+     'Erro de direito',
+     'Exercício ilegal de profissão ou atividade',
+     'Exercício ilegal do comércio de coisas antigas e obras de arte',
+     'Exibição ou guarda de lista de sorteio',
+     'Exploração da credulidade pública',
+     'Fabrico, comércio, ou detenção de armas ou munição',
+     'Falso alarma',
+     'Falta de habilitação para dirigir veículo',
+     'Imitação de moeda para propaganda',
+     'Importunação ofensiva ao pudor',
+     'Impressão de bilhetes, lista ou anúncios',
+     'Indevida custódia de doente mental',
+     'Instrumento de emprego usual na prática de furto',
+     'Internação em colônia agrícola ou em instituto de trabalho, de reeducação ou de ensino profissional',
+     'Internação em manicômio judiciário ou em casa de custódia e tratamento',
+     'Internação irregular em estabelecimento psiquiátrico',
+     'Inumação ou exumação de cadáver',
+     'Jogo de azar',
+     'Jogo do bicho',
+     'Limites das penas',
+     'Loteria estadual',
+     'Loteria estrangeira',
+     'Loteria não autorizada',
+     'Matrícula ou escrituração de indústria e profissão',
+     'Medidas de segurança',
+     'Mendicância',
+     'Omissão de cautela na guarda ou condução de animais',
+     'Omissão de comunicação de crime',
+     'Penas acessórias',
+     'Penas principais',
+     'Perigo de desabamento',
+     'Perturbação da tranquilidade',
+     'Perturbação do trabalho ou do sossego alheios',
+     'Porte de arma',
+     'Posse não justificada de instrumento de emprego usual na prática de furto',
+     'Presunção de periculosidade',
+     'Prisão simples',
+     'Proibição de atividade remunerada a estrangeiro',
+     'Provocação de tumulto. Conduta inconveniente',
+     'Publicidade de sorteio',
+     'Recusa de dados sobre a própria identidade ou qualificação',
+     'Recusa de moeda de curso legal',
+     'Reincidência',
+     'Simulação da qualidade de funcionário',
+     'Sinais de perigo',
+     'Suspensão condicional da pena de prisão simples',
+     'Tentativa',
+     'Territorialidade',
+     'Uso ilegítimo de uniforme ou distintivo',
+     'Vadiagem',
+     'Vias de fato',
+     'Violação de lugar ou objeto',
+     'Violação do privilégio postal da União',
+     'Voluntariedade Dolo e culpa',
+    }
+    for value,unstripped in blocks:
+     # A standalone heading and its provenance describe the next CPP section.
+     # Do not append either to art. 3; inline amendment notes remain intact.
+     if slug=='codigo-processo-penal' and units and units[-1]['key']=='art-3' and value in {'Juiz das Garantias','(Incluído pela Lei nº 13.964, de 2019) (Vigência)'}:continue
+     # Inspected split chapter caption and annotation left after struck MP text.
+     # Scope to this source; never discard an operative paragraph by length.
+     if slug=='ambientais' and value in {'ADMINISTRATIVA OU DE CRIME','Prejudicada'}:continue
+     if slug=='contravencoes' and value=='CAPÍLULO II':value='CAPÍTULO II'
+     if slug=='contravencoes' and value in contravention_rubrics:continue
+     if slug=='armas' and value in arms_rubrics:
+      # Inspected standalone rubrics identify the following offense. They are
+      # not a normative paragraph of the preceding article (including 11-A).
+      continue
+     if slug=='codigo-penal':
+      rubric=re.sub(r'\s*\((?:Redação dada|Incluído|Vide).*$', '',value).strip()
+      if rubric in next_article_rubrics:continue
+      # Legacy markup puts several repealed arts. 187–195 in one paragraph,
+      # prefixed by old rubrics. It must not become part of current art. 186.
+      embedded=list(re.finditer(r'\bArt\.?\s+\d+[.\s]',value,re.I))
+      if embedded and not article.match(value) and all(re.match(r'\s*\(?Revogado\b',value[m.end():],re.I) for m in embedded):
+       inactive_article=True;continue
+     current_head=article.match(value)
+     original_head=article.match(unstripped)
+     if original_head and not unstripped.startswith(('“','"')) and not current_head:
+      # A removed article still owns its following penalty and revocation
+      # annotations. Do not attach them to the previous current article.
+      inactive_article=True
+     if current_head and not value.startswith(('“','"')):inactive_article=False
+     if not value:continue
+     if slug=='contravencoes' and value.startswith('Rio de Janeiro, 3 de outubro de 1941;'):break
+     if slug in {'drogas','contravencoes'} and re.match(heading_pattern,value,re.I):
+      # A new structural heading ends the preceding revoked article too.
+      inactive_article=False
+     if inactive_article:continue
      if value.startswith('Este texto não substitui') or value.startswith('Brasília,'):
       if slug!='budapeste':break
       if value.startswith('Brasília,'):continue
      if re.match(r'^(?:ANEXO|CONVENÇÃO SOBRE)',value,re.I):annex=True
-     if re.match(r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b',value,re.I):
+     if re.match(heading_pattern,value,re.I):
       if pending:chapter=finish_heading()
       token=value.split()[0].lower().translate(str.maketrans('íãç','iac'))
       pending_level=levels.get(token,0);pending=[value];continue
+     if slug=='drogas' and pending and re.match(r'^\((?:Redação dada|Incluído|Vide)\b',value,re.I):
+      # The following caption names the chapter; a change annotation does not.
+      continue
      if pending and len(value)<190 and not article.match(value):
       pending.append(value);chapter=finish_heading();pending=[];continue
      if pending:chapter=finish_heading();pending=[]

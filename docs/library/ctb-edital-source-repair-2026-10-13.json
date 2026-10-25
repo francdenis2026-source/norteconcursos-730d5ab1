@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-10-13T06:56:14.196Z",
+  "table": "syllabus_editions",
+  "expected": {
+    "id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+    "contest_name": "Polícia Civil do Distrito Federal",
+    "role_name": "Delegado de Polícia",
+    "contest_year": 2026,
+    "exam_board": "Cebraspe",
+    "source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+    "status": "active",
+    "created_at": "2026-09-28T03:34:44.103601+00:00"
+  },
+  "applied": {
+    "id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+    "contest_name": "Polícia Civil do Distrito Federal",
+    "role_name": "Delegado de Polícia",
+    "contest_year": 2026,
+    "exam_board": "Cebraspe",
+    "source_id": "bf11c280-41e9-4e27-a06b-f3b0f4c32c34",
+    "status": "active",
+    "created_at": "2026-09-28T03:34:44.103601+00:00"
+  },
+  "changed_fields": [
+    "source_id"
+  ],
+  "repair_applied": true,
+  "source": {
+    "id": "bf11c280-41e9-4e27-a06b-f3b0f4c32c34",
+    "source_type": "edital",
+    "title": "PCDF Delegado 2026: edital oficial retificado",
+    "issuer": "CEBRASPE / PCDF",
+    "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/409522C3AA9E7D9736EC8A33888E0732BEE4FB07EABC75866BB311B2062C5FF9.pdf",
+    "published_on": null,
+    "checked_at": "2026-10-11T15:26:41.589802+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte consultada na revisão individual do lote de 378; não implica auditoria integral de todos os dispositivos."
+  },
+  "source_original_checked_at_preserved": true,
+  "notes": "Existing registered official retified edital verified in the database; current PDF requests returned 403, so no new full syllabus certification is claimed. Eight early approvals withdrawn for reapproval under the repaired binding.",
+  "partial_approvals_withdrawn": [
+    "art-1",
+    "art-5",
+    "art-2",
+    "art-3",
+    "art-6",
+    "art-7-a",
+    "art-4",
+    "art-7"
+  ]
+}

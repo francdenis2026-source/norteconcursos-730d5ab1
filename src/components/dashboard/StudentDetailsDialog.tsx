@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useState, type ReactNode } from "react";
 import { AlertTriangle, CheckCircle2, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -60,7 +62,7 @@ interface TimeStats {
 
 import { fmtDateTime } from "@/lib/displayFormat";
 const fmtDate = (iso?: string | null) =>
-  iso ? new Date(iso.length === 10 ? `${iso}T12:00:00` : iso).toLocaleDateString("pt-BR") : "—";
+  iso ? acreDate(iso.length === 10 ? `${iso}T12:00:00` : iso).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "—";
 const money = (cents: number) =>
   (cents / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const planName = (id?: string | null) =>
@@ -118,7 +120,7 @@ export function StudentDetailsDialog({
     };
   }, [userId]);
 
-  const expired = !!d?.expires_at && new Date(d.expires_at) < new Date();
+  const expired = !!d?.expires_at && new Date(d.expires_at) < platformDate();
   const pending: string[] = [];
   if (d) {
     if (!d.email_confirmed_at) pending.push("E-mail ainda não confirmado.");

@@ -1,0 +1,75 @@
+/* Recolors the hero's baked-in emblem watermark: the background photo is a flattened image with no
+   editable layers, so this lays the clock art (full color, matching the footer clock) over roughly
+   the same spot, with real hands on top. Sits above the background photo (z:-2) and below the text
+   content (position:relative, stacks above any negative z-index), and below the dark wash (::after,
+   z:-1, generated after this element so it still paints over it) so the headline stays legible. */
+.home-hero__emblem-clock {
+  position: absolute;
+  z-index: -1;
+  top: 3%;
+  left: 60%;
+  width: clamp(160px, 17vw, 235px);
+  aspect-ratio: 656 / 856;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.home-hero__emblem-clock-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.62;
+}
+/* Specificity must beat the homepage's generic ".home svg { width: 20px; height: 20px }"
+   icon-sizing rule, or the hand overlay collapses to a 20px box and never shows. */
+.home.home .home-hero__emblem-clock-hands {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: initial;
+  overflow: visible;
+  opacity: 0.9;
+}
+.home-hero__emblem-clock-hand line { stroke-linecap: round; }
+.home-hero__emblem-clock-hand--hour line {
+  stroke: #eac77e;
+  stroke-width: 15;
+  filter: drop-shadow(0 0 6px rgb(234 199 126 / 65%));
+}
+.home-hero__emblem-clock-hand--minute line {
+  stroke: #f4d998;
+  stroke-width: 10;
+  filter: drop-shadow(0 0 6px rgb(234 199 126 / 60%));
+}
+.home-hero__emblem-clock-hand--second line {
+  stroke: #ff5a45;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 5px rgb(255 90 69 / 65%));
+}
+.home-hero__emblem-clock-pivot {
+  fill: #eac77e;
+  stroke: #3a2c12;
+  stroke-width: 3;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__emblem-clock-hand { transition: transform 260ms cubic-bezier(0.34, 1.3, 0.64, 1); }
+}
+
+:root:not(.dark) .home.home .home-hero__emblem-clock-art { opacity: 0.46; }
+:root:not(.dark) .home.home .home-hero__emblem-clock-hand--hour line,
+:root:not(.dark) .home.home .home-hero__emblem-clock-hand--minute line { stroke: #b4883a; }
+
+/* The hero's own background art is already washed to near-solid on narrow viewports for legibility,
+   so this watermark is hidden there too rather than fighting for contrast behind the headline. */
+@media (max-width: 759px) {
+  .home-hero__emblem-clock { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__emblem-clock-hand { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .home-hero__emblem-clock { display: none; }
+}

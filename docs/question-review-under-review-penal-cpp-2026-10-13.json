@@ -1,0 +1,203 @@
+{
+  "verified_at": "2026-10-13T21:14:02.258710+00:00",
+  "exam": "PC-CE Delegado 2025",
+  "scope": "Oito questões; não representa revisão integral do acervo.",
+  "edital_source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+  "topics": [
+    {
+      "id": "b46c65c5-0ea4-5ab5-ad8d-d5b1a73c5b66",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 6,
+      "topic_text": "Conduta, resultado, relação de causalidade e teorias. Omissão penalmente relevante (item 6.6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "7367a389-2963-5434-9c3d-bba246c00140",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 7,
+      "topic_text": "Prescrição: conceito, teorias, prazos, termos iniciais, causas suspensivas ou impeditivas e interruptivas (item 7.9.2 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "f870f2e2-ab69-54a1-a0cb-ad526b9afac2",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 101,
+      "topic_text": "Princípios gerais, conceito, finalidade e características (item 1.1 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "919fade8-a48f-5893-a73b-5c79de385cea",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 20,
+      "topic_text": "Ação civil ex delicto (item 20 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "a11f5456-9e3c-58ee-ad4a-caac9529fc8f",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 25,
+      "topic_text": "Recursos em geral (item 25 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "d53df9f9-4324-5209-abf0-0a8ad0f7455d",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 9,
+      "topic_text": "Prisão em flagrante (item 9.2 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "6b7c7563-6eab-5859-a9c6-d58b5cb7652b",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 42,
+      "topic_text": "Violência doméstica e familiar contra a criança e o adolescente — Lei 14.344/2022 (item 42 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "c10cedb7-4edf-4654-bba0-286eb1886d67",
+      "item": 26,
+      "answer": "D",
+      "discipline": "Direito Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 13, § 2º"
+        }
+      ],
+      "reason": "D. O garantidor precisa ter dever e possibilidade de impedir o resultado. A gravidade ou o dano isolado não bastam; o dever pode decorrer de lei, assunção de responsabilidade ou criação anterior do risco."
+    },
+    {
+      "id": "a3576a0d-ea55-4e67-a819-b5f4403e3a53",
+      "item": 27,
+      "answer": "C",
+      "discipline": "Direito Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 7º, I, d, e § 1º"
+        }
+      ],
+      "reason": "C. Genocídio cometido por brasileiro no exterior admite extraterritorialidade incondicionada, inclusive com julgamento estrangeiro anterior. Não se exigem as condições cumulativas do inciso II."
+    },
+    {
+      "id": "367a07f3-a80b-4726-8272-440d3afeba01",
+      "item": 28,
+      "answer": "B",
+      "discipline": "Direito Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "arts. 111 e 116"
+        }
+      ],
+      "reason": "B. Questão prejudicial externa sobre a existência do crime impede o curso da prescrição. Permanência: prazo desde sua cessação; recebimento da acusação interrompe, não inicia em regra. Pena no exterior e prisão por outro motivo também impedem nos termos do art. 116. Atualização: a exceção de violência sexual contra a mulher no art. 115 (Lei 15.160/2025) não altera a alternativa examinada."
+    },
+    {
+      "id": "0df2c9c8-3249-482f-a200-08146e10737b",
+      "item": 31,
+      "answer": "C",
+      "discipline": "Direito Processual Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 5º, XXXVII e LIII"
+        }
+      ],
+      "reason": "C. Juiz natural: competência previamente definida e vedação de tribunal de exceção. Contraditório e presunção de inocência são garantias distintas."
+    },
+    {
+      "id": "2f53a3d4-352e-4789-b516-35577f4e106f",
+      "item": 35,
+      "answer": "C",
+      "discipline": "Direito Processual Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "art. 63, caput e parágrafo único"
+        }
+      ],
+      "reason": "C. A condenação definitiva permite execução reparatória no juízo cível. O mínimo fixado não impede liquidação do dano remanescente; não é necessário repetir a condenação no juízo criminal."
+    },
+    {
+      "id": "1f3fb964-08f7-47ee-a2d6-8e3df74d86f3",
+      "item": 37,
+      "answer": "E",
+      "discipline": "Direito Processual Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 581, IX, e 582"
+        }
+      ],
+      "reason": "E. Indeferimento da prescrição admite recurso em sentido estrito ao tribunal estadual. Atualização: a Lei 15.358/2026 acrescentou regra de efeito suspensivo/ativo ao art. 584, § 4º, para hipótese do art. 581, V; não mudou o cabimento deste item (inciso IX)."
+    },
+    {
+      "id": "b60bc5d9-7d7c-42e0-ac3d-5ea60dafb150",
+      "item": 38,
+      "answer": "A",
+      "discipline": "Direito Processual Penal",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 301, 302, I, 304, § 1º, e 310"
+        }
+      ],
+      "reason": "A. Qualquer pessoa pode realizar a captura em flagrante real enquanto o delito está em execução, sem exigir representação ou propriedade dos animais. O auto decorre da fundada suspeita. A previsão do art. 304 não dispensa controle judicial da prisão nem torna a prisão preventiva automática; fiança depende dos requisitos legais."
+    },
+    {
+      "id": "2487a7f5-b0c8-4322-a02d-87f3a43e458e",
+      "item": 49,
+      "answer": "B",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+          "norma": "Lei Henry Borel (14.344/2022)",
+          "artigo": "art. 14, caput, III e § 2º"
+        }
+      ],
+      "reason": "B. Policial pode afastar quando o município não é sede de comarca e inexiste delegado disponível. Exige risco atual ou iminente à vida/integridade no contexto legal. O juiz deve ser comunicado em até 24 horas e decidir em igual prazo; Conselho Tutelar representa, não decreta sozinho."
+    }
+  ],
+  "held": [
+    {
+      "item": 29,
+      "reason": "Marcador de contexto exige operação auditada separada; enunciado visualmente completo."
+    },
+    {
+      "item": 32,
+      "reason": "Distinguir ação exclusivamente privada da subsidiária pública antes de liberar comentário genérico."
+    }
+  ]
+}

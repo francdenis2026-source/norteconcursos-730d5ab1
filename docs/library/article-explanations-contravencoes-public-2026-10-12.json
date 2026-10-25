@@ -1,0 +1,1111 @@
+{
+  "version": "2026-10-12-contravencoes-public-targeted",
+  "checked_at": "2026-10-12T19:46:43.657934+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "contravencoes",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+      "units": 18,
+      "scope_type": "targeted_correction",
+      "course_current_units": 66,
+      "target_unit_keys": [
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-25",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "2e94194ce818853cd12d7053747be20073903a0230868d2970f288e37320d835",
+      "source_checked_at": "2026-10-12T16:18:18.943244+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "cfdde07d-c037-5161-a339-2aed2e38408c",
+      "content_sha256": "da01fe8c6dba99c6f88abf271a132968e565f871662460fef00dcf7af151d1a3",
+      "simples": "A descrição antiga de fabricação/comércio de armas deve ser confrontada com Lei 10.826/2003 para armas de fogo, acessórios e munições; não aplicar sua pena histórica como pena atual desses crimes.",
+      "pontos": [
+        "Identificar espécie do objeto, autorização e conduta: fabricação/comércio irregular de arma de fogo demanda tipos atuais, inclusive art. 17.",
+        "Tipos novos não podem ser criados por analogia gravosa para qualquer objeto chamado arma."
+      ],
+      "atencao": [
+        "Não ensinar prisão simples de três meses a um ano como pena atual de comércio ilegal de arma de fogo.",
+        "Não pressupor que faca de uso comum exige a mesma licença de arma de fogo para fabricação/venda."
+      ],
+      "exemplo": "Comércio ilegal de arma de fogo exige consulta ao Estatuto do Desarmamento e suas penas atuais. Variação: fabricar utensílio cortante comum não permite importar automaticamente autorização e pena do regime de armas de fogo.",
+      "prova": [
+        "O comércio ilegal atual de arma de fogo é resolvido apenas com a pena antiga da LCP? Não; aplicar diploma atual pertinente.",
+        "Qualquer utensílio cortante pode receber por analogia pena de arma de fogo? Não; observar legalidade e objeto do tipo."
+      ],
+      "termos": [
+        "regime especial atual",
+        "arma de fogo",
+        "legalidade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cfdde07d-c037-5161-a339-2aed2e38408c",
+        "content_sha256": "31c6124763906f9ac10c3920fd0bbca4728ded3ce15d8689ff301bec389bf653",
+        "simples": "Fabricar, importar, exportar, ter em depósito ou vender, sem permissão da autoridade, arma ou munição: prisão simples de três meses a um ano, ou multa, ou ambas, se o fato não constitui crime contra a ordem política ou social.",
+        "pontos": [
+          "Fabricar, importar, exportar, depositar ou vender arma ou munição sem permissão.",
+          "Prisão simples e multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: hoje tais condutas são tratadas como crime no Estatuto do Desarmamento; o artigo está superado."
+        ],
+        "exemplo": "A venda clandestina de armas é hoje crime do Estatuto do Desarmamento.",
+        "prova": [
+          "Assertiva que aplica a contravenção do art. 18 à venda de armas hoje erra: há crime específico."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Estatuto do Desarmamento"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-19",
+      "unit_id": "bad284ea-4d22-5df4-acf4-871753aef9a2",
+      "content_sha256": "34eed6cddb043291bbec31bd418f11b5f16d070f8ac62dd43597c423cd9e9b4a",
+      "simples": "O art. 19 permanece aplicável a arma branca segundo Tema 857/STF, mas potencialidade lesiva deve ser aferida nas circunstâncias concretas, inclusive elemento subjetivo. Arma de fogo segue regime especial atual.",
+      "pontos": [
+        "Porte fora de casa/dependência e contexto devem ser examinados.",
+        "Tema 857 não torna todo transporte de utensílio faca automaticamente contravenção; finalidade e contexto importam.",
+        "A majorante textual de condenação definitiva por violência não deve ser confundida com regra geral de reincidência.",
+        "Cautelas do §2º precisam ser confrontadas com disciplina especial atual quando objeto é arma de fogo/munição."
+      ],
+      "atencao": [
+        "Não ensinar atipicidade universal de arma branca por ausência de licença regulamentada, nem criminalizar toda faca de trabalho pelo nome.",
+        "Não aplicar pena de quinze dias a seis meses como pena atual de porte ilegal de arma de fogo."
+      ],
+      "exemplo": "Pessoa leva faca em contexto ameaçador com potencial lesivo demonstrado: aplicar critérios do Tema 857. Variação: transporte seguro de instrumento de trabalho exige examinar contexto e finalidade, sem presumir mesma conclusão.",
+      "prova": [
+        "Ausência de regulamentação elimina universalmente o art. 19 para arma branca? Não; o STF reconheceu sua validade com análise concreta.",
+        "Arma de fogo e faca recebem automaticamente a mesma pena da LCP? Não; há regime especial para arma de fogo."
+      ],
+      "termos": [
+        "arma branca",
+        "circunstâncias do caso",
+        "elemento subjetivo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://stf.jus.br/arquivo/informativo/documento/informativo1151.htm"
+      ],
+      "expected": {
+        "unit_id": "bad284ea-4d22-5df4-acf4-871753aef9a2",
+        "content_sha256": "fc25c5c0746058060506090d2ba78ba1966ff47dae1a06c6cf31859d2c24f1ca",
+        "simples": "Trazer consigo arma fora de casa ou de dependência desta, sem licença da autoridade: prisão simples de quinze dias a seis meses, ou multa, ou ambas. A pena é aumentada de um terço até a metade se o agente já foi condenado, em sentença irrecorrível, por violência contra pessoa. Incorre em pena menor quem, possuindo arma ou munição, deixa de fazer comunicação ou entrega à autoridade quando a lei determina, permite que alienado menor de 18 anos ou pessoa inexperiente a tenha consigo ou omite cautelas para impedir que dela se apodere facilmente.",
+        "pontos": [
+          "Porte de arma fora de casa sem licença.",
+          "Aumento de um terço até a metade para condenado por violência.",
+          "Omissão de comunicação, empréstimo a inexperiente e falta de cautela."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o porte ilegal de arma de fogo é hoje crime do Estatuto do Desarmamento; este artigo ficou restrito a outras armas."
+        ],
+        "exemplo": "Portar arma de fogo na rua, sem licença, é hoje crime do Estatuto do Desarmamento.",
+        "prova": [
+          "Assertiva que aplica o art. 19 ao porte de arma de fogo hoje erra: o Estatuto trata o fato como crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Estatuto do Desarmamento, art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "a437e2c6-8da2-554d-8710-529dd2137df6",
+      "content_sha256": "3536d7dda4bc682c76f7bf365e0512ee95699fec1a81b36f621a1f222c2d829b",
+      "simples": "O tipo atual descreve anúncio de processo, substância ou objeto destinado a provocar aborto. A redação de 1979 retirou evitar gravidez; não confundir propaganda de contraceptivo com a antiga descrição.",
+      "pontos": [
+        "Pena textual é multa, em denominação histórica de cruzeiros.",
+        "Anúncio de meio abortivo e prática de aborto são condutas distintas."
+      ],
+      "atencao": [
+        "Não criminalizar informação de contracepção apenas com rubrica antiga meio anticoncepcional.",
+        "Casos de aborto permitido e comunicação de saúde exigem exame jurídico próprio; não inferir proibição de todo atendimento lícito."
+      ],
+      "exemplo": "Questão descreve anúncio de objeto destinado a provocar aborto: analisar tipo e contexto. Variação: anúncio de método contraceptivo não é automaticamente incluído só pela rubrica antiga.",
+      "prova": [
+        "Evitar gravidez continua no texto do tipo após 1979? Não; foi retirado.",
+        "O artigo prevê automaticamente pena de reclusão? Não; sua sanção textual é multa."
+      ],
+      "termos": [
+        "destinado a provocar aborto",
+        "anunciar",
+        "multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/l6734.htm"
+      ],
+      "expected": {
+        "unit_id": "a437e2c6-8da2-554d-8710-529dd2137df6",
+        "content_sha256": "650c868dec938750319f9463b490b9ece1d8fd8077ac832861c4fde49f46cdef",
+        "simples": "Anunciar processo, substância ou objeto destinado a provocar aborto: multa.",
+        "pontos": [
+          "Anúncio de meio abortivo.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Mantém apenas a pena de multa."
+        ],
+        "exemplo": "Publicar anúncio de substância para provocar aborto é contravenção.",
+        "prova": [
+          "Assertiva que prevê prisão simples para esse anúncio erra: a pena é de multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal (aborto)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "d8152662-0f77-549a-87e3-3ab30c96e163",
+      "content_sha256": "9e84c15645b671cb67e5a869b06d6c04e72c11426f77e9bb73adfcba8b2259bd",
+      "simples": "Vias de fato é subsidiária: prisão simples de quinze dias a três meses ou multa se o fato não constitui crime. Vítima maior de 60 anos gera aumento de um terço à metade; violência de gênero contra mulher tem pena em triplo desde Lei 14.994/2024.",
+      "pontos": [
+        "§1º usa maior de 60, não exatamente 60.",
+        "§2º remete ao CP 121-A, §1º: não basta a vítima ser mulher sem examinar razões legais.",
+        "Tema 1333/STJ, 2025: não acrescentar agravante CP 61, II, f pelo mesmo fundamento quando incide §2º especial."
+      ],
+      "atencao": [
+        "Não confundir vias de fato com lesão corporal quando fatos configuram crime.",
+        "Triplo é multiplicação por três, não aumento de apenas um terço; regra mais gravosa não retroage."
+      ],
+      "exemplo": "Agressão sem lesão típica, por razões legais da condição feminina, demanda §2º e pena triplicada. Variação: lesão corporal demonstrada exige examinar crime próprio, não aplicar subsidiária só porque a agressão foi breve.",
+      "prova": [
+        "A majorante etária textual inclui exatamente 60 anos? Não; usa maior de 60.",
+        "Aplicar pena em triplo equivale a aumentar um terço? Não; são cálculos diferentes."
+      ],
+      "termos": [
+        "se não constitui crime",
+        "maior de 60",
+        "pena em triplo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1333&cod_tema_inicial=1333&novaConsulta=true&tipo_pesquisa=T"
+      ],
+      "expected": {
+        "unit_id": "d8152662-0f77-549a-87e3-3ab30c96e163",
+        "content_sha256": "9068d18f1e0ca95bae4aeabc32cb95bcc3a81d9068c828be58fed862914dcc63",
+        "simples": "Vias de fato: praticar vias de fato contra alguém, se o fato não constitui crime. Pena: prisão simples de quinze dias a três meses, ou multa. A pena aumenta de 1/3 até a metade se a vítima é maior de 60 anos. Se a contravenção é praticada contra a mulher por razões da condição do sexo feminino, aplica-se a pena em triplo.",
+        "pontos": [
+          "Agressão física leve, sem lesão.",
+          "Prisão simples de quinze dias a três meses, ou multa.",
+          "Aumento de 1/3 até a metade se a vítima for maior de 60 anos.",
+          "Pena em triplo contra a mulher por razões do sexo feminino."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §1º renumerado e §2º incluído pela Lei nº 14.994, de 2024 (pacote antifeminicídio).",
+          "Subsidiária: só se o fato não constituir crime."
+        ],
+        "exemplo": "Dar um empurrão ou um tapa sem machucar é vias de fato.",
+        "prova": [
+          "Assertiva que exige lesão corporal para as vias de fato erra: não há lesão."
+        ],
+        "termos": [
+          {
+            "termo": "Vias de fato",
+            "significado": "Agressão física sem ferimento, como empurrões ou tapas leves."
+          }
+        ],
+        "remissoes": [
+          "Código Penal (lesão corporal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "92f5e3b0-68a2-5baa-a12d-33f378b3ba88",
+      "content_sha256": "577fbd5b137855c80bd4a42ee9ce90b6e75fb062eeb640cf3c00d14f11690f13",
+      "simples": "Internação psiquiátrica sem formalidades, falta de comunicação da internação urgente e saída sem prescrições são descrições distintas. Integrar Lei 10.216/2001, especialmente modalidades e deveres de comunicação.",
+      "pontos": [
+        "Caput e §1º têm multa; §2º prisão simples de quinze dias a três meses ou multa.",
+        "Lei 10.216: internação demanda laudo médico circunstanciado; a involuntária e sua alta têm comunicação ao MP estadual em até 72 horas, nos termos do art. 8º.",
+        "Saída não pode ser tratada como proibição universal de alta; aplicar regime atual e direitos do paciente."
+      ],
+      "atencao": [
+        "Urgência não apaga dever legal de comunicação.",
+        "Não confundir internação voluntária, involuntária e compulsória, nem substituir condições atuais por linguagem histórica."
+      ],
+      "exemplo": "Responsável admite internação involuntária e observa comunicação legal ao MP. Variação: urgência não autoriza omitir a comunicação exigida; modalidades e situações precisam ser identificadas.",
+      "prova": [
+        "Todas as modalidades de internação são iguais? Não; Lei 10.216 distingue requisitos.",
+        "A urgência elimina necessariamente dever de comunicação? Não; o §1º prevê a omissão nesse contexto."
+      ],
+      "termos": [
+        "formalidades legais",
+        "motivo de urgência",
+        "comunicação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ],
+      "expected": {
+        "unit_id": "92f5e3b0-68a2-5baa-a12d-33f378b3ba88",
+        "content_sha256": "84984c191ed0e2b0cf6b1cab9700ce9b7ee201ea21d6be119ef39daf6a43e5e1",
+        "simples": "Receber em estabelecimento psiquiátrico, e nele internar, sem as formalidades legais, pessoa apresentada como doente mental: multa. Na mesma pena quem deixa de comunicar à autoridade, no prazo legal, a internação admitida por urgência sem formalidades. Incorre em prisão simples de quinze dias a três meses, ou multa, quem, sem observar as prescrições legais, deixa retirar-se ou despede de estabelecimento psiquiátrico pessoa nele internada.",
+        "pontos": [
+          "Internação sem formalidades legais.",
+          "Falta de comunicação da internação de urgência.",
+          "Retenção ou despedida irregular do internado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a Lei da Reforma Psiquiátrica disciplina hoje as internações."
+        ],
+        "exemplo": "A clínica que interna alguém sem os requisitos legais comete a contravenção.",
+        "prova": [
+          "Assertiva que isenta o estabelecimento que interna sem formalidades erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei da Reforma Psiquiátrica"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-23",
+      "unit_id": "08b84db0-b407-521c-bda6-0a22176d9eb7",
+      "content_sha256": "5f9ea2cba4e875991e929f0a55464edcbd5fe66c33a00118b686bad825575346",
+      "simples": "Custódia fora da hipótese de estabelecimento psiquiátrico, sem autorização de quem de direito, exige examinar a descrição do art. 23 e garantias atuais da pessoa com sofrimento mental.",
+      "pontos": [
+        "Sanção textual: prisão simples de quinze dias a três meses ou multa.",
+        "Distinguir assistência familiar voluntária e privação de liberdade sem autorização; outros crimes podem demandar análise."
+      ],
+      "atencao": [
+        "Diagnóstico não transforma pessoa automaticamente em objeto de custódia irrestrita.",
+        "Integrar Lei 10.216 e eventual sequestro/cárcere privado; não apagar proteção individual por rótulo antigo."
+      ],
+      "exemplo": "Pessoa é mantida sob custódia sem autorização, fora de estabelecimento: examinar tipo e eventual crime mais grave. Variação: cuidado consentido sem restrição de liberdade não permite presumir idêntica custódia ilícita.",
+      "prova": [
+        "Diagnóstico autoriza custódia livre de requisitos? Não; direitos e autorização pertinente permanecem.",
+        "O artigo refere-se à mesma hipótese exata do estabelecimento do art. 22? Não; diz fora daquela hipótese."
+      ],
+      "termos": [
+        "fora do caso anterior",
+        "sem autorização",
+        "custódia"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "08b84db0-b407-521c-bda6-0a22176d9eb7",
+        "content_sha256": "29abf7ad0178cfef15b05c6095219bce2fe15611a38c03941292e17b308ebfd8",
+        "simples": "Receber e ter sob custódia doente mental, fora do caso previsto no artigo anterior, sem autorização de quem de direito: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Custódia de doente mental sem autorização.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Aplica-se fora do caso de internação em estabelecimento psiquiátrico."
+        ],
+        "exemplo": "Manter alguém com transtorno mental sob guarda sem autorização é contravenção.",
+        "prova": [
+          "Assertiva que aplica o art. 23 a internações em estabelecimento psiquiátrico erra: aquele caso é do art. 22."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24",
+      "unit_id": "e8b7b653-9c87-57f2-aacf-a42969b40872",
+      "content_sha256": "0e6b64c030a41c8d968ae41413db4a81f42c43672a53601ecfc64964614cb136",
+      "simples": "Fabricar, ceder ou vender gazua ou instrumento usual de furto tem pena textual de prisão simples de seis meses a dois anos e multa. Não confundir com mera posse do art. 25, não recepcionado pelo STF.",
+      "pontos": [
+        "Verbos são fabricar, ceder e vender; não incluem indistintamente toda posse.",
+        "Instrumento e contexto devem ser demonstrados, preservada legalidade e exercício profissional lícito."
+      ],
+      "atencao": [
+        "Tema 113/STF sobre art. 25 não significa extinção automática de todo art. 24.",
+        "Não enquadrar chaveiro por possuir ferramenta legítima sem examinar a conduta e elementos próprios."
+      ],
+      "exemplo": "Enunciado descreve fabricação de gazua nos elementos do tipo: examinar art. 24. Variação: mera posse legítima de ferramenta não pode ser convertida automaticamente em fabricação/venda nem no art. 25 afastado.",
+      "prova": [
+        "A pena textual usa e multa, cumulativamente? Sim; art. 24 prevê prisão simples e multa.",
+        "Não recepção do art. 25 elimina automaticamente art. 24? Não; são dispositivos e condutas distintos."
+      ],
+      "termos": [
+        "fabricar ceder vender",
+        "usualmente",
+        "e multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=2609919&numeroProcesso=583523&numeroTema=113"
+      ],
+      "expected": {
+        "unit_id": "e8b7b653-9c87-57f2-aacf-a42969b40872",
+        "content_sha256": "78e62ea858b5b8dad31034f01b7171e4ef78f9e791433d5dfcacf658d8e9eb94",
+        "simples": "Fabricar, ceder ou vender gazua ou instrumento empregado usualmente na prática de crime de furto: prisão simples de seis meses a dois anos, e multa.",
+        "pontos": [
+          "Fabricar, ceder ou vender gazua ou instrumento de furto.",
+          "Prisão simples e multa."
+        ],
+        "atencao": [
+          "Pena de prisão simples E multa cumulativas."
+        ],
+        "exemplo": "Quem fabrica chaves falsas para vender a ladrões comete a contravenção.",
+        "prova": [
+          "Assertiva que prevê somente multa para essa contravenção erra: há prisão simples e multa."
+        ],
+        "termos": [
+          {
+            "termo": "Gazua",
+            "significado": "Instrumento usado para abrir fechaduras sem a chave."
+          }
+        ],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "bc9e4be9-26b4-5ab6-8646-0b904ad025b4",
+      "content_sha256": "0e6f0acf20e389e581d148b6ba4cde576b70943c5e90e25d21cf65d67e193f6c",
+      "simples": "Tema 113/STF: art. 25 não foi recepcionado pela Constituição de 1988 por violar dignidade e isonomia. A presença na compilação não autoriza punir posse de instrumentos com base em condição social ou condenação anterior.",
+      "pontos": [
+        "Decisão do RE 583.523 afasta o tipo contravencional; não apenas reduz pena.",
+        "Preservar texto histórico permite estudar evolução constitucional, não exercitar sua aplicação como norma vigente."
+      ],
+      "atencao": [
+        "Não presumir culpabilidade por pobreza, mendicância ou condenação passada.",
+        "Outros crimes efetivamente demonstrados têm análise própria; não recepção não é licença geral para furtar."
+      ],
+      "exemplo": "Pessoa com condenação antiga possui ferramenta: não pode ser punida pelo art. 25 afastado pelo STF. Variação: furto efetivamente praticado exige prova e enquadramento no CP, fundamento distinto.",
+      "prova": [
+        "A compilação torna esse tipo automaticamente aplicável hoje? Não; STF reconheceu não recepção.",
+        "A decisão afasta responsabilidade por qualquer furto comprovado? Não; afasta este tipo, não crimes distintos."
+      ],
+      "termos": [
+        "não recepcionado",
+        "dignidade",
+        "isonomia"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=2609919&numeroProcesso=583523&numeroTema=113"
+      ],
+      "expected": {
+        "unit_id": "bc9e4be9-26b4-5ab6-8646-0b904ad025b4",
+        "content_sha256": "1c21b716abfc8ee3f724ab9ccc7a96eecb60ac10ad1d9bb8fa9ee9ea05bdde75",
+        "simples": "Ter alguém em seu poder, depois de condenado por crime de furto ou roubo, ou enquanto sujeito à liberdade vigiada ou quando conhecido como vadio ou mendigo, gazuas, chaves falsas ou alteradas ou instrumentos usualmente empregados no furto, desde que não prove destinação legítima: prisão simples de dois meses a um ano, e multa.",
+        "pontos": [
+          "Posse de gazuas e chaves falsas por pessoa com perfil indicado na lei.",
+          "Inversão do ônus: o agente deve provar destinação legítima.",
+          "Prisão simples e multa."
+        ],
+        "atencao": [
+          "Dispositivo criticado pela doutrina por ser de direito penal do autor (perfil do agente)."
+        ],
+        "exemplo": "Quem já foi condenado por furto e é flagrado com chaves falsas, sem justificar, comete a contravenção.",
+        "prova": [
+          "Assertiva que exige ao Estado provar a destinação ilícita dos instrumentos erra: cabe ao agente provar a destinação legítima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "04c7a549-b4f4-5845-9a9c-0eb072246aa1",
+      "content_sha256": "3079d238a4ba825c0971cc2cddcdfd5ba23c2b637e46997c4f71800a69460eb0",
+      "simples": "Disparo de arma de fogo é disciplinado atualmente pelo Estatuto do Desarmamento, art. 15, com condições próprias. O parágrafo da LCP sobre deflagração, fogos e balão deve ser confrontado com legislação especial, inclusive ambiental.",
+      "pontos": [
+        "Não usar prisão simples de um a seis meses como pena atual do crime de disparo de arma de fogo.",
+        "Lei 9.605, art. 42 pune fabricar, vender, transportar ou soltar balões que possam provocar incêndio nas situações legais.",
+        "Não confundir qualquer fogo de artifício com balão nem transferir sanção entre descrições."
+      ],
+      "atencao": [
+        "No Estatuto, finalidade de outro crime altera enquadramento; não somar automaticamente disparo com homicídio pelo mesmo ato.",
+        "O risco, objeto e âmbito territorial das leis especiais precisam ser demonstrados."
+      ],
+      "exemplo": "Disparo em via pública sem finalidade de outro crime exige art. 15 da Lei 10.826. Variação: balão capaz de incêndio demanda tipo ambiental, não pena antiga copiada do caput.",
+      "prova": [
+        "A pena antiga da LCP é a pena atual universal de disparo? Não; há disciplina especial.",
+        "Balão com risco de incêndio exige confrontar a lei ambiental? Sim; há tipo próprio."
+      ],
+      "termos": [
+        "lei especial",
+        "disparo",
+        "balão e risco de incêndio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "04c7a549-b4f4-5845-9a9c-0eb072246aa1",
+        "content_sha256": "9c93be29b71025b90752943698919ead0cdf61da9299ca387347ffaa0fdbec5d",
+        "simples": "Disparar arma de fogo em lugar habitado ou em suas adjacências, em via pública ou em direção a ela: prisão simples de um a seis meses, ou multa. Incorre em pena menor quem, em lugar habitado ou adjacências, em via pública ou em direção a ela, sem licença da autoridade, causa deflagração perigosa, queima fogo de artifício ou solta balão aceso.",
+        "pontos": [
+          "Disparo de arma de fogo em lugar habitado ou via pública.",
+          "Deflagração perigosa, fogos de artifício e balão aceso."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o disparo de arma de fogo é hoje crime do Estatuto do Desarmamento; soltar balão tem tipo ambiental específico."
+        ],
+        "exemplo": "Soltar fogos de artifício em via pública sem licença se enquadra no parágrafo único.",
+        "prova": [
+          "Assertiva que aplica a contravenção ao disparo de arma de fogo hoje erra: há crime específico."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Estatuto do Desarmamento, art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-29",
+      "unit_id": "58d47d26-e49c-53ae-b634-d2008a3340ec",
+      "content_sha256": "7f56b587ee0f23d654d7835637ff41688aa4ca37e13fe3be66ec6acffcbbedf7",
+      "simples": "Provocar desabamento ou dar-lhe causa por erro de projeto/execução tem sanção textual de multa, subsidiária ao crime contra incolumidade pública.",
+      "pontos": [
+        "Desabamento efetivo distingue o artigo do estado ruinoso do art. 30.",
+        "CP 256: comparar exposição concreta a perigo de vida, integridade ou patrimônio alheios e modalidades do crime."
+      ],
+      "atencao": [
+        "Não enquadrar todo desabamento automaticamente como contravenção, ignorando cláusula subsidiária."
+      ],
+      "exemplo": "Erro de projeto causa desabamento; primeiro examinar elementos de crime contra incolumidade. Variação: prédio ruinoso ainda não desabou e providência é omitida; analisar art. 30 e fatos próprios.",
+      "prova": [
+        "O tipo é subsidiário a crime contra incolumidade? Sim; texto faz ressalva expressa.",
+        "Estado ruinoso e desabamento ocorrido são idênticos? Não; distinguem artigos e fatos."
+      ],
+      "termos": [
+        "erro no projeto ou execução",
+        "se não constitui crime"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "58d47d26-e49c-53ae-b634-d2008a3340ec",
+        "content_sha256": "181fd90877a181cda663bb406a412f6ff8b046b9b458c3cef44d3d4ca4b3b4eb",
+        "simples": "Provocar o desabamento de construção ou, por erro no projeto ou na execução, dar-lhe causa: multa, se o fato não constitui crime contra a incolumidade pública.",
+        "pontos": [
+          "Desabamento provocado ou causado por erro de projeto ou execução.",
+          "Pena de multa, se não houver crime mais grave."
+        ],
+        "atencao": [
+          "Subsidiária: cede ao crime contra a incolumidade pública."
+        ],
+        "exemplo": "O engenheiro cujo erro de projeto causa o desabamento responde pela contravenção, se não houver crime.",
+        "prova": [
+          "Assertiva que prevê prisão simples para essa contravenção erra: a pena é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "ea8daa40-5381-59e0-87dc-57e8ff58cd84",
+      "content_sha256": "db484b7ef67df7c5a982e02a293128eaaf313781419f4bde61fc925c519ce8f9",
+      "simples": "Proprietário ou responsável pela conservação omite providência reclamada pelo estado ruinoso da construção: sanção textual de multa.",
+      "pontos": [
+        "Propriedade e responsabilidade pela conservação são alternativas legais.",
+        "Omissão requer providência pertinente ao estado ruinoso, não mero defeito estético sem esse pressuposto."
+      ],
+      "atencao": [
+        "Não exigir necessariamente desabamento consumado nem atribuir o dever a todo vizinho sem responsabilidade."
+      ],
+      "exemplo": "Responsável pela conservação deixa de adotar providência exigida pelo risco ruinoso. Variação: vizinho sem dever de conservação não se torna sujeito por simples proximidade.",
+      "prova": [
+        "Somente proprietário pode estar abrangido? Não; também quem tem responsabilidade de conservação.",
+        "É indispensável desabamento consumado para a descrição? Não; trata omissão diante do estado ruinoso."
+      ],
+      "termos": [
+        "estado ruinoso",
+        "lhe pertence",
+        "conservação lhe incumbe"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "ea8daa40-5381-59e0-87dc-57e8ff58cd84",
+        "content_sha256": "762f05e5e482641e0fd8e57219b2bb59b8dfa6c384c521840e1e4f6a2fba26a7",
+        "simples": "Omitir alguém a providência reclamada pelo estado ruinoso de construção que lhe pertence ou cuja conservação lhe incumbe: multa.",
+        "pontos": [
+          "Omissão diante de construção em ruínas.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Quem deve conservar a construção responde pela omissão."
+        ],
+        "exemplo": "O proprietário que ignora o risco de desabamento de seu prédio comete a contravenção.",
+        "prova": [
+          "Assertiva que exige o desabamento efetivo para a contravenção erra: basta a omissão diante do estado ruinoso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "baada9fd-bc6e-5bde-9571-460c78ff9d8b",
+      "content_sha256": "838d65f63040725e9935a10dfa3dd88aa57210e75d6084add751e2c5e57bcb65",
+      "simples": "Falta de cautela com animal perigoso, liberdade ou guarda por inexperiente tem sanção textual de prisão simples de dez dias a dois meses ou multa. Parágrafo também trata animais de tiro/carga/corrida e perigo alheio.",
+      "pontos": [
+        "Inclui abandonar na via pública ou confiar animal descrito a inexperiente, excitar/irritar expondo segurança e conduzir com perigo.",
+        "Lesão ou outro crime pode exigir enquadramento próprio, não absorção automática de tudo pelo rótulo animal."
+      ],
+      "atencao": [
+        "Não confundir com maus-tratos ambientais ao próprio animal nem presumir perigo de qualquer guarda regular."
+      ],
+      "exemplo": "Responsável deixa animal perigoso livre sem cautela. Variação: cuidado adequado e ausência dos pressupostos não demonstram a mesma omissão; lesão ocorrida exige avaliação própria.",
+      "prova": [
+        "Falta de cautela e maus-tratos ao animal são tipos necessariamente idênticos? Não; tutelam situações distintas.",
+        "Confiar animal perigoso a pessoa inexperiente aparece no caput? Sim; previsão expressa."
+      ],
+      "termos": [
+        "animal perigoso",
+        "devida cautela",
+        "pessoa inexperiente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "baada9fd-bc6e-5bde-9571-460c78ff9d8b",
+        "content_sha256": "181b99ad6b0ae0845d30557aa403a14591ea1eff743a91da7486ac472685aefa",
+        "simples": "Deixar em liberdade, confiar à guarda de pessoa inexperiente, ou não guardar com a devida cautela animal perigoso: prisão simples de dez dias a dois meses, ou multa. Incorre na mesma pena quem abandona na via pública animal de tiro, carga ou corrida, ou o confia a pessoa inexperiente; excita ou irrita animal, expondo a perigo a segurança alheia; ou conduz animal na via pública, pondo em perigo a segurança alheia.",
+        "pontos": [
+          "Omissão de cautela com animal perigoso.",
+          "Abandono de animal de tiro, carga ou corrida na via pública.",
+          "Excitar animal ou conduzi-lo de modo perigoso."
+        ],
+        "atencao": [
+          "Protege a segurança de terceiros."
+        ],
+        "exemplo": "Deixar um cão bravo solto na rua, sem cautela, é contravenção.",
+        "prova": [
+          "Assertiva que restringe a contravenção a animais de grande porte erra: abrange o animal perigoso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "ea6c2c81-63f2-54fd-80f4-0d8b7c05f2e3",
+      "content_sha256": "7df18ec6f9f88f553af11a9bc357767a7c6abc58e47dc8e279e29722a5602db8",
+      "simples": "Súmula 720/STF: CTB 309 derrogou art. 32 na direção sem habilitação em vias terrestres; crime do CTB exige perigo de dano. A referência a embarcação demanda análise própria.",
+      "pontos": [
+        "Sem habilitação, sem perigo exigido pelo crime, não restaurar antiga contravenção para punir condução terrestre.",
+        "Infração administrativa é distinta de crime; CTB inclui condições legais e contexto."
+      ],
+      "atencao": [
+        "Não concluir revogação total de toda referência à embarcação apenas pela súmula de trânsito terrestre.",
+        "Pena textual de multa da LCP não é pena atual do CTB 309."
+      ],
+      "exemplo": "Motorista sem habilitação gera perigo de dano: examinar CTB 309. Variação: sem perigo, não recriar art. 32 derrogado para condução terrestre; verificar infração administrativa.",
+      "prova": [
+        "O CTB 309 exige perigo de dano? Sim; Súmula 720 ressalta o requisito.",
+        "Sem perigo, pode-se sempre voltar à contravenção terrestre antiga? Não; a derrogação impede esse retorno automático."
+      ],
+      "termos": [
+        "vias terrestres",
+        "perigo de dano",
+        "derrogação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2558"
+      ],
+      "expected": {
+        "unit_id": "ea6c2c81-63f2-54fd-80f4-0d8b7c05f2e3",
+        "content_sha256": "e6b6dd1bf7cbc646a723788d6fef27d85eed01767e7c9602cbe3bab5aec2c2c7",
+        "simples": "Dirigir, sem a devida habilitação, veículo na via pública, ou embarcação a motor em águas públicas: multa.",
+        "pontos": [
+          "Dirigir sem habilitação veículo ou embarcação a motor.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: dirigir sem habilitação gerando perigo é hoje crime do Código de Trânsito."
+        ],
+        "exemplo": "A condução sem habilitação em via pública, com perigo de dano, é hoje crime do Código de Trânsito.",
+        "prova": [
+          "Assertiva que mantém a contravenção do art. 32 para o motorista sem habilitação em via pública erra: o Código de Trânsito prevê crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Trânsito Brasileiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "1d9d3663-5fb2-59d8-8829-cdb9e27bf9b3",
+      "content_sha256": "d8e10674004e83d197b5a6a3bfe57e6809054825e3523dd8bf5279419cd8e7a6",
+      "simples": "Dirigir aeronave sem licença adequada tem sanção textual de prisão simples de quinze dias a três meses e multa. Licença/habilitação deve ser identificada no regime aeronáutico vigente.",
+      "pontos": [
+        "Conduzir aeronave é distinto de trânsito terrestre do CTB.",
+        "Licença adequada e condições de exercício devem ser conferidas com CBA e normas aplicáveis da ANAC, não presumidas pelo cargo."
+      ],
+      "atencao": [
+        "Não importar automaticamente Súmula 720 de veículos terrestres para toda aeronave.",
+        "Sanção textual é cumulativa, não alternativa; valores monetários antigos não são reais atuais."
+      ],
+      "exemplo": "Pessoa dirige aeronave sem licença exigida: examinar elemento e regime aeronáutico. Variação: habilitação para dirigir carro não equivale à licença aeronáutica.",
+      "prova": [
+        "CNH de automóvel substitui automaticamente licença de piloto? Não; regimes e competências diferem.",
+        "A pena textual tem prisão simples e multa? Sim; a conjunção é cumulativa."
+      ],
+      "termos": [
+        "aeronave",
+        "devidamente licenciado",
+        "e multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7565compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1d9d3663-5fb2-59d8-8829-cdb9e27bf9b3",
+        "content_sha256": "b8a2a0a8633bfee87d4a35e4631c2d43196db2d72f1d67b8bcc00a3ade0828c8",
+        "simples": "Dirigir aeronave sem estar devidamente licenciado: prisão simples de quinze dias a três meses, e multa.",
+        "pontos": [
+          "Pilotar aeronave sem licença.",
+          "Prisão simples e multa."
+        ],
+        "atencao": [
+          "Pena de prisão simples E multa."
+        ],
+        "exemplo": "Pilotar um avião sem a licença exigida é contravenção.",
+        "prova": [
+          "Assertiva que prevê apenas multa para esse caso erra: há prisão simples e multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-34",
+      "unit_id": "10c73be9-3ad1-5b97-b323-0d0dcc8a1730",
+      "content_sha256": "376f5c5883a24b1853f8e18458290700113691292ad3569d9b19789024dfd761",
+      "simples": "Direção perigosa da LCP deve ser confrontada com CTB para veículos automotores terrestres, que disciplina crimes e infrações próprios. Não usar tipo genérico antigo para preencher toda conduta que o CTB não tornou crime.",
+      "pontos": [
+        "Identificar conduta específica e perigo nos tipos pertinentes, como CTB 308 ou 311.",
+        "Embarcações em águas públicas demandam exame próprio, não extensão automática do CTB terrestre."
+      ],
+      "atencao": [
+        "Não criminalizar automaticamente infração administrativa de manobra perigosa com o artigo antigo.",
+        "Não concluir que ausência de crime específico permite sempre aplicar contravenção por subsidiariedade."
+      ],
+      "exemplo": "Manobra perigosa de carro exige análise do CTB e seus elementos, sem recorrer automaticamente ao art. 34. Variação: condução de embarcação em águas públicas exige avaliar a parte própria e regime aplicável.",
+      "prova": [
+        "Toda manobra administrativa vira crime por este artigo? Não; confrontar disciplina atual e elementos.",
+        "O CTB terrestre resolve automaticamente toda embarcação? Não; delimitar âmbito de cada norma."
+      ],
+      "termos": [
+        "disciplina especial",
+        "perigo",
+        "vias terrestres e águas públicas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "https://www.tjsc.jus.br/documents/557855/13517655/anuario_tr_2016.pdf/99c7bd99-28d4-5842-f9a3-d180e50e72e1?t=1656676569407"
+      ],
+      "expected": {
+        "unit_id": "10c73be9-3ad1-5b97-b323-0d0dcc8a1730",
+        "content_sha256": "71815c757abd6729561836e5a4cd9d133cd12702eacd7c3b9c09b89c27f21cd0",
+        "simples": "Dirigir veículos na via pública, ou embarcações em águas públicas, pondo em perigo a segurança alheia: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Direção perigosa de veículo ou embarcação.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a direção que cause perigo de dano é hoje tratada pelo Código de Trânsito."
+        ],
+        "exemplo": "Conduzir o veículo em zigue-zague, ameaçando outros, é direção perigosa.",
+        "prova": [
+          "Assertiva que aplica o art. 34 aos veículos terrestres hoje, sem ressalvas, erra: o Código de Trânsito disciplina a matéria."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Trânsito Brasileiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-35",
+      "unit_id": "4a1d4b4e-505e-5831-b51f-8ab3f2be54b3",
+      "content_sha256": "7da863ac4b2961ed9f816355c43bc3b5275fb21a2f353e4ae83cf00aa5966008",
+      "simples": "Acrobacias/voos baixos fora de zona permitida ou pouso fora de local destinado têm pena textual de prisão simples de quinze dias a três meses ou multa. Integre normas de segurança e condições aeronáuticas atuais.",
+      "pontos": [
+        "Não basta chamar voo de baixo: examinar zona permitida e conduta prevista.",
+        "Locais de pouso e situações excepcionais, como emergência, precisam ser analisados no regime aeronáutico e causas legais pertinentes."
+      ],
+      "atencao": [
+        "Não presumir que pouso emergencial legítimo equivale automaticamente ao abuso descrito."
+      ],
+      "exemplo": "Piloto faz acrobacia fora da zona permitida sem situação justificante: examinar elementos do artigo e regime aeronáutico. Variação: pouso emergencial exige análise própria, sem condenação automática por estar fora de aeródromo.",
+      "prova": [
+        "Toda acrobacia é automaticamente proibida pelo artigo? Não; ele delimita zona em que a lei permite.",
+        "Emergência dispensa análise jurídica e leva sempre à mesma conclusão? Não; examinar pressupostos e justificativas."
+      ],
+      "termos": [
+        "fora da zona",
+        "lugares destinados",
+        "regime aeronáutico"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7565compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a1d4b4e-505e-5831-b51f-8ab3f2be54b3",
+        "content_sha256": "07aef2d4ffefa93f731221f2acc30882d042326b559dd508cdb6028a3a9e432e",
+        "simples": "Entregar-se na prática da aviação a acrobacias ou a voos baixos, fora da zona em que a lei o permite, ou fazer descer a aeronave fora dos lugares destinados a esse fim: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Acrobacias ou voos baixos fora da zona permitida.",
+          "Pouso fora dos locais destinados."
+        ],
+        "atencao": [
+          "Protege a segurança da aviação."
+        ],
+        "exemplo": "Fazer manobras acrobáticas sobre área urbana é contravenção.",
+        "prova": [
+          "Assertiva que permite acrobacias em qualquer lugar erra: só na zona permitida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "d2e953f9-1789-56de-bf8e-6127e0522723",
+      "content_sha256": "52e8618ab02d9b9809280f274dbeb75b5896c72627cde69408bf6d3b5303f065",
+      "simples": "O tipo trata omissão de sinal/obstáculo imposto para evitar perigo aos transeuntes e condutas de apagar, destruir/remover proteção ou outro sinal de serviço público.",
+      "pontos": [
+        "Caput exige determinação em lei ou pela autoridade para colocação da proteção.",
+        "Parágrafo distingue sinais de prevenção e outros de serviço público.",
+        "Pena textual: prisão simples de dez dias a dois meses ou multa."
+      ],
+      "atencao": [
+        "Não transformar qualquer objeto retirado da rua em sinal legal sem demonstrar função e contexto.",
+        "Dano, crime de trânsito ou outra infração exige confronto quando configurado."
+      ],
+      "exemplo": "Responsável omite barreira determinada para proteger transeuntes de obra. Variação: remover objeto sem função de sinal nem determinação exige provar outro enquadramento, não presumir este tipo.",
+      "prova": [
+        "O caput exige determinação legal ou da autoridade? Sim; condição expressa.",
+        "Apagar sinal luminoso protetivo também é previsto? Sim; parágrafo único."
+      ],
+      "termos": [
+        "determinado em lei ou pela autoridade",
+        "evitar perigo",
+        "sinal de serviço público"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d2e953f9-1789-56de-bf8e-6127e0522723",
+        "content_sha256": "6100b82c50b54b753eaf218f52f92c706b481790764096380ab87086cd826e80",
+        "simples": "Deixar de colocar na via pública sinal ou obstáculo, determinado em lei ou pela autoridade e destinado a evitar perigo a transeuntes: prisão simples de dez dias a dois meses, ou multa. Incorre na mesma pena quem apaga sinal luminoso, destrói ou remove sinal ou obstáculo destinado a evitar perigo, ou remove qualquer outro sinal de serviço público.",
+        "pontos": [
+          "Omissão de sinalização exigida.",
+          "Apagar, destruir ou remover sinais de segurança."
+        ],
+        "atencao": [
+          "Protege os transeuntes."
+        ],
+        "exemplo": "Quem faz uma obra na calçada e não sinaliza o buraco pratica a contravenção.",
+        "prova": [
+          "Assertiva que isenta quem remove sinais de serviço público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 37"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "b6c65cb8-6aed-52a8-be11-3d50f25d5803",
+      "content_sha256": "e08b98fb867555cbc6d65716ef8e3207967d8ba7acf80ddf1a357b03011f6a23",
+      "simples": "Arremessar/derramar em via pública, lugar comum ou alheio coisa apta a ofender, sujar ou molestar tem multa. Parágrafo inclui colocar/deixar suspensa coisa sem cautelas, com risco pela queda.",
+      "pontos": [
+        "Aptidão da coisa e local integram descrição.",
+        "Conduta ativa e falta de cautela no objeto suspenso são hipóteses diferentes."
+      ],
+      "atencao": [
+        "Não exigir necessariamente lesão consumada quando o texto usa possa; crime mais grave eventual exige análise própria.",
+        "Não confundir com emissão abusiva de fumaça/gás do art. 38."
+      ],
+      "exemplo": "Pessoa derrama substância capaz de sujar transeuntes em lugar comum. Variação: objeto suspenso sem cautelas e apto a cair demanda o parágrafo, não descrição de emissão de gás.",
+      "prova": [
+        "O texto exige sempre lesão corporal consumada? Não; usa possibilidade de ofender, sujar ou molestar.",
+        "Objeto suspenso com risco de queda possui previsão? Sim; parágrafo único."
+      ],
+      "termos": [
+        "possa ofender sujar molestar",
+        "sem devidas cautelas",
+        "uso comum ou alheio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b6c65cb8-6aed-52a8-be11-3d50f25d5803",
+        "content_sha256": "7f10e3ee498d8a42710b436c1edefc17edacdf387185171d962419df51a74d79",
+        "simples": "Arremessar ou derramar em via pública, ou em lugar de uso comum ou de uso alheio, coisa que possa ofender, sujar ou molestar alguém: multa. Na mesma pena quem, sem as devidas cautelas, coloca ou deixa suspensa coisa que, caindo em via pública ou lugar de uso comum, possa ofender, sujar ou molestar alguém.",
+        "pontos": [
+          "Arremessar ou derramar coisas que possam molestar alguém.",
+          "Colocar objetos em local de queda sem cautela."
+        ],
+        "atencao": [
+          "Pena de multa."
+        ],
+        "exemplo": "Deixar um vaso na janela sem proteção, com risco de cair na calçada, é contravenção.",
+        "prova": [
+          "Assertiva que prevê prisão simples para essa contravenção erra: a pena é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 36"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    }
+  ]
+}

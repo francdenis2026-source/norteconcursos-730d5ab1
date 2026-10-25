@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -23,9 +24,15 @@ import {
 } from "@/lib/editalRadar";
 import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
-export const Route = createFileRoute("/dashboard/edital-radar")({ component: EditalRadarPage });
+export const Route = createFileRoute("/dashboard/edital-radar")({
+  component: () => (
+    <PlanGate feature="editalRadar" title="Radar do edital">
+      <EditalRadarPage />
+    </PlanGate>
+  ),
+});
 
 const SPHERES: { id: Sphere; label: string }[] = [
   { id: "federal", label: "Concursos federais" },
@@ -45,7 +52,7 @@ function EditalRadarPage() {
     loadRadarData()
       .then((result) => active && setData(result))
       .catch((loadError) => {
-        console.error("Falha ao carregar o Raio-X dos editais", loadError);
+        console.error("Falha ao carregar o Radar do edital", loadError);
         if (active) setError("Não foi possível carregar os editais e as provas agora.");
       });
     return () => {
@@ -87,17 +94,22 @@ function EditalRadarPage() {
   return (
     <div className="space-y-7 pb-10">
       <PageHero
-        image="field-map"
+        image="dashboard"
         size="sm"
-        kicker="Inteligência de editais"
+        kicker="Meu concurso"
         icon={Radar}
         title={
           <>
-            Raio-X dos <em>editais</em>
+            Radar do <em>edital</em>
           </>
         }
         description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Radar} label="Tópicos analisados" value={result.topics.length} />
+          <HeroStat icon={AlertTriangle} label="Prioridade alta/média" value={likely.length} />
+        </div>
+      </PageHero>
       <section className="rounded-3xl border bg-background p-6 shadow-sm">
         <div className="flex flex-wrap gap-2">
           {SPHERES.map((item) => (

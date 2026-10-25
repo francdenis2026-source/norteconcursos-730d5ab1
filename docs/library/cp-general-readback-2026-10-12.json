@@ -1,0 +1,273 @@
+{
+  "verified_at": "2026-10-12T21:40:08.514617+00:00",
+  "authored_explanations_confirmed": 50,
+  "untargeted_explanations_preserved": 3463,
+  "timestamp_only_changes": [],
+  "prior_revisions_retained_in_manifest": 50,
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "legal_courses",
+    "legal_course_units",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "fully_explained_paths": 42,
+  "published_explanations": 3511,
+  "remaining_explanations": 0,
+  "coverage": [
+    {
+      "slug": "cin",
+      "total": 30,
+      "published": 30,
+      "missing": []
+    },
+    {
+      "slug": "seguranca-privada",
+      "total": 72,
+      "published": 72,
+      "missing": []
+    },
+    {
+      "slug": "codigo-penal",
+      "total": 401,
+      "published": 401,
+      "missing": []
+    },
+    {
+      "slug": "armas",
+      "total": 41,
+      "published": 41,
+      "missing": []
+    },
+    {
+      "slug": "lep",
+      "total": 215,
+      "published": 215,
+      "missing": []
+    },
+    {
+      "slug": "organizacoes",
+      "total": 37,
+      "published": 37,
+      "missing": []
+    },
+    {
+      "slug": "terrorismo",
+      "total": 17,
+      "published": 17,
+      "missing": []
+    },
+    {
+      "slug": "idosa",
+      "total": 117,
+      "published": 117,
+      "missing": []
+    },
+    {
+      "slug": "contravencoes",
+      "total": 66,
+      "published": 66,
+      "missing": []
+    },
+    {
+      "slug": "identificacao-criminal",
+      "total": 13,
+      "published": 13,
+      "missing": []
+    },
+    {
+      "slug": "quimicos",
+      "total": 23,
+      "published": 23,
+      "missing": []
+    },
+    {
+      "slug": "pf-interestadual",
+      "total": 2,
+      "published": 2,
+      "missing": []
+    },
+    {
+      "slug": "abuso",
+      "total": 40,
+      "published": 40,
+      "missing": []
+    },
+    {
+      "slug": "icn",
+      "total": 13,
+      "published": 13,
+      "missing": []
+    },
+    {
+      "slug": "antifaccao",
+      "total": 43,
+      "published": 43,
+      "missing": []
+    },
+    {
+      "slug": "eca",
+      "total": 326,
+      "published": 326,
+      "missing": []
+    },
+    {
+      "slug": "migracao",
+      "total": 123,
+      "published": 123,
+      "missing": []
+    },
+    {
+      "slug": "racismo",
+      "total": 23,
+      "published": 23,
+      "missing": []
+    },
+    {
+      "slug": "ric",
+      "total": 7,
+      "published": 7,
+      "missing": []
+    },
+    {
+      "slug": "pcd",
+      "total": 127,
+      "published": 127,
+      "missing": []
+    },
+    {
+      "slug": "maria-penha",
+      "total": 56,
+      "published": 56,
+      "missing": []
+    },
+    {
+      "slug": "hediondos",
+      "total": 17,
+      "published": 17,
+      "missing": []
+    },
+    {
+      "slug": "lavagem",
+      "total": 24,
+      "published": 24,
+      "missing": []
+    },
+    {
+      "slug": "trafico-pessoas",
+      "total": 18,
+      "published": 18,
+      "missing": []
+    },
+    {
+      "slug": "interceptacao",
+      "total": 14,
+      "published": 14,
+      "missing": []
+    },
+    {
+      "slug": "transito",
+      "total": 365,
+      "published": 365,
+      "missing": []
+    },
+    {
+      "slug": "henry-borel",
+      "total": 34,
+      "published": 34,
+      "missing": []
+    },
+    {
+      "slug": "sic",
+      "total": 29,
+      "published": 29,
+      "missing": []
+    },
+    {
+      "slug": "delegado",
+      "total": 4,
+      "published": 4,
+      "missing": []
+    },
+    {
+      "slug": "menor-potencial-ofensivo",
+      "total": 8,
+      "published": 8,
+      "missing": []
+    },
+    {
+      "slug": "tortura",
+      "total": 4,
+      "published": 4,
+      "missing": []
+    },
+    {
+      "slug": "codigo-processo-penal",
+      "total": 808,
+      "published": 808,
+      "missing": []
+    },
+    {
+      "slug": "pensao-regulamento",
+      "total": 22,
+      "published": 22,
+      "missing": []
+    },
+    {
+      "slug": "uso-forca",
+      "total": 11,
+      "published": 11,
+      "missing": []
+    },
+    {
+      "slug": "identidade",
+      "total": 13,
+      "published": 13,
+      "missing": []
+    },
+    {
+      "slug": "ambientais",
+      "total": 79,
+      "published": 79,
+      "missing": []
+    },
+    {
+      "slug": "testemunhas",
+      "total": 22,
+      "published": 22,
+      "missing": []
+    },
+    {
+      "slug": "temporaria",
+      "total": 7,
+      "published": 7,
+      "missing": []
+    },
+    {
+      "slug": "budapeste",
+      "total": 51,
+      "published": 51,
+      "missing": []
+    },
+    {
+      "slug": "juizados",
+      "total": 98,
+      "published": 98,
+      "missing": []
+    },
+    {
+      "slug": "cpf",
+      "total": 7,
+      "published": 7,
+      "missing": []
+    },
+    {
+      "slug": "drogas",
+      "total": 84,
+      "published": 84,
+      "missing": []
+    }
+  ]
+}

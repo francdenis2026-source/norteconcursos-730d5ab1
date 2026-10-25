@@ -1,0 +1,7 @@
+# Faixa do aluno e atalho discreto da PC-PR
+
+- A ilustração com cenário foi substituída por um emblema isolado com transparência real. Permanecem a logomarca, a caveira e o distintivo; pedra, painéis e linhas do fundo foram removidos na geração da nova imagem. O WebP preserva o canal alfa. O título acessível, saudação, data e link de desempenho foram mantidos.
+- Faixa reduzida, com emblema menor à direita; tablet e celular usam posicionamento compacto, sem uma fotografia grande acima do texto. O fundo geral da área do aluno permanece independente.
+- O destaque da PC-PR deixou de ser uma segunda hero ilustrada. Agora é um aviso discreto com título, banca, data, ressalva do gabarito preliminar e botão para o treino de Agente. Os demais cargos, quantidades e link oficial ficam nos detalhes expansíveis. Continuam sendo usadas as contagens do catálogo elegível e os filtros específicos existentes, sem quantidades fixas novas.
+
+Validação: build de produção; 59 regressões de navegação, contexto do treinador, biblioteca, planos e cobertura; teste visual nos dois temas e em 320, 390, 768, 1024 e 1440 px. A faixa da prova tem aproximadamente 105 px no desktop e 153 px no celular, recolhida. O teste usa três itens fictícios para verificar paginação, contagem por cargo e destinos dos links; toda autenticação e tráfego ao Supabase são simulados. Nenhum item ou usuário do banco foi alterado. Evidências ficam em `outputs/qa`.

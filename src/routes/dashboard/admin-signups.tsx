@@ -1,3 +1,4 @@
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CalendarDays, Loader2, UserPlus } from "lucide-react";
@@ -36,9 +37,7 @@ function SignupsPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const since = new Date();
-    since.setDate(since.getDate() - 29);
-    since.setHours(0, 0, 0, 0);
+    const since = new Date(`${acreDaysAgoKey(29)}T05:00:00.000Z`);
     supabase
       .from("profiles")
       .select("id, full_name, email, subscription_tier, created_at")
@@ -53,10 +52,8 @@ function SignupsPage() {
   const days = useMemo(() => {
     const out: { iso: string; people: Row[] }[] = [];
     for (let i = 0; i < 30; i++) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const iso = d.toISOString().slice(0, 10);
-      out.push({ iso, people: (rows ?? []).filter((r) => r.created_at.slice(0, 10) === iso) });
+      const iso = acreDaysAgoKey(i);
+      out.push({ iso, people: (rows ?? []).filter((r) => acreDateKey(new Date(r.created_at)) === iso) });
     }
     return out;
   }, [rows]);

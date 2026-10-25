@@ -1,0 +1,1214 @@
+{
+  "checked_at": "2026-10-24T03:06:39.621765+00:00",
+  "applied": true,
+  "expected_candidates": 171,
+  "inserted_sources": [
+    "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+    "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+    "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829"
+  ],
+  "inserted_candidates": [
+    "2fa9d766d966f3e3590fc59fcd2e542c3969aac0acb26edc3a85aecfcf297837",
+    "c8478d8ef84d74b35b8faa97c2f5df14fe8d45003aee875a7af32dfa5536d9ab",
+    "f26daff7ea1c95526e1fa48f9592382c69eea969bff0d9214cee669a57a650bb",
+    "b6e3f5f0c13503022a4de8011e84a3858494a862db09de62f218fce2e12d50df",
+    "ba0cb3141d347ac0efffd9a05cef9531f20a608ec6db68c390267fa86ef6d675",
+    "dc400a0954ce663e2170dbf27f7ecc4651314da8f3e1c7cabffc5c09ea27a418",
+    "69f63bae6e8b0b50e401cc3422a56cac0a6c5ddf6101a70ddc0c9f0782349978",
+    "5edcd746bc39033f9fd9ecfca325573f5a71c93732ee89e4e0b1b0b376efb331",
+    "ac7552418354151e4f00f9dc56907cdfe5e3cfb503f6ce3fcb049be84a10bf6a",
+    "29af1ebc0df40f5a834930720ad0e14428058638b299190e7d82255471e7333c",
+    "b530a998cd801d3c9d90994bb4c701bd8aa50ca48d9575068bea5259018067e3",
+    "c8f1104ac4697bcee0f3d01ab22f32761d2c2c4cc08eb57dc2ccacf81fe75d8a",
+    "71f9369e409a2f060bcae01b193752478bfa0deacbd1d4f5af02c62aa531b194",
+    "1f1d0b348a74f1dcc72e989db8cada217832c99beeedc9bce912a94aba38cd71",
+    "e8a91d282e36a123e1cd47d46c04980d534391fa5ff0a6abef7c2cb3b88e0348",
+    "d3230456925acc535d90049860c3d7fcf431b25341afbad51dbd4e82040a47a4",
+    "60e1b298ffe859a69a0da5471328f89908bbac32504fe60380e14facd4297a12",
+    "8e922096bcbbe17cd18f80f3ea0065dbd1c409b4b3f2b24f62f0a5daba535cab",
+    "f9ec7939d69ced845cd3741aca5b6b537e41a45e6b734e6fa6671a7559c02945",
+    "2600d4ac1e8328ac5b6340179f647b0bf913496897826abd90cefecb168cbad8",
+    "c5e6dc9e2094d166618625721423304f4a63539e337eb83356292362107cff0b",
+    "96c6055374b9f86455a705fca997470b4be6d6f4bc190d5812431a94adbcaa87",
+    "17b314365adfd294859d817b2a233d140afdf9caf4809282fb4e2b6a78b89022",
+    "c7c429ac37728f49c413c333dcc65366a9f2fa6e213e711fb1ef29b077aeb8d9",
+    "9a5b0b0833dc1aca2920be27ee891c544d82cf07a83b580e3d2b2daa07097113",
+    "74e2884bd8873af2475cc73e0e3f743df47f6269ee7a658b12568c3f20cfc225",
+    "5f1a5bdf3646d36a5ce22cd98880d25c2619ae1f5b1978b0d742522249265585",
+    "7b1a39bba6f35946a85f4131602ef033e4ae15e079d7b0d04344e7e25d101d59",
+    "2675e6e68e1d94737fc73efc9a0c38ef7472d0c87bcd5226246bf0e18fe3ba27",
+    "b719863455e0b06d95137de12864728ab4bdb9ac9caf542a6bb7044114491446",
+    "e56c6f1aa949f707350b4d48d93751056ad45f30ca97518a84e834bf7e403ecd",
+    "56a15d2b483001fad1f45bf9afc649cb36fc47a311ef77127b7d123a779dc002",
+    "5654260f046afe0c7816cf0253302ceab2dce3a2a47da2b670610e1d0a54c093",
+    "752ad4d6fea65fe03c24b884a1768b7b173b3c1eb663428e8f6396b033a4f7f4",
+    "96b02f43b518b1f9c027ddce3b508832bb3eaecb0f74334966de7fc6599e94a4",
+    "a240ff26d857a3979b0c1b5a144c9e7f2966483f346877f432ece32052a2791f",
+    "cfb3cd7049a282b943effa990bdbceb25cec241daea4e47262ced1e9055001b8",
+    "86edbd848df5b259e8ae6387d0d10b37683043218d234c500cd7af8e314c3267",
+    "78a8b2b933b22488988e3999e35f8de94adbd9a8840b09cd77328d4892e26041",
+    "4c2492b63d119905f68770d1ea1b2b41db6970ea46a879fe7eea13bcdbb406c0",
+    "94a8c5775b4d8cae6a8b389e71daae303cb3db03a6f21740a8c611a40fa2ee55",
+    "05f2dd0fb3033e718b7ef7765c84ee2cdb802cdb5f1c857c1c652ca04e359bb1",
+    "09bc0e59fc74ee5f39ffc233faba702eb71f3a5cc28d0b1554ec77c7fb70b90f",
+    "340282db784d7ff08ec212f54568d0911e16223a8b7207b5debde80eb0954740",
+    "06a55672ea358edfb026cecba4ff61a2e7153f72991d577872c478b3022b7d51",
+    "e0a71a8b6f63b6414896f798ab767cc30e686177feb29e9925ee40681627ca78",
+    "611c64edd82350c74c5ecdb34f6665ddc1cb839be84f07b2029b87d70f8b5ac2",
+    "e7d849eea2e7a1d7a2f20bc4308e40867c16356a2946894498321718733f8f10",
+    "bb2db650fa30d0b884e817197adc026c9486ec867f4e7c85f152af43548ace23",
+    "e48aa25a7d5208b618d8614cb2ae932e5657d3832e6e88728b9c598d2f1d1e41",
+    "b1fe1f25a7296735e1a0f071707609a9543f27569d897b3fd20b507fb7f70548",
+    "39fce477b094bb9d44ba1812694587cda946cb72e741169d120bbfedbb8eaefe",
+    "e8d4fd5051999f39d910141efc4c71077d440b49bc00fff636fb6318bc1b74dc",
+    "ba0413f9e9b3d74b483e00399547bfe8734c88bbe0fe1391d6db15683477d2cd",
+    "9c32ff223b321ad6402d044542df07e46b63b0d003b9ec41016207efb4d9cead",
+    "d0d85fd40b4a27cd3f1337bb4450c90c528ead2363cd48d69025ecf585c46eb9",
+    "6dd2c09309210103735dacca9094b9df84ae8d063dd322590b7adbc7dc209a2e",
+    "c4b419f693f3ed2bceb1e5a7d652f1a7b403bfa81e801946c27b589c657ad9bc",
+    "cdfe3e9998447c3fd16acb0f51b6d1c6cfd5713800eb00b489558d5b3e8a759b",
+    "8cbcda80e9bcbb6053c7600833d23fc9c128133b27b3eddf1f28781631ff310e",
+    "992206851f1a160d49ce043285c148a47ea018115a389a626e5cc9ac5b0f8888",
+    "6e4fb050ff506443f3be52b1f46f5a15cb8fe73b4d7f1bf78b7daeb7a2f6dda2",
+    "e10753889abdc44b9046a6c8002ec4e80453568635aac407d88b3c81fd495089",
+    "cb7ea53a5b2031f67999cc51b2d910f79b177e8ba238c1cd08bddd7c5e121a2d",
+    "b44f5922c8bef5b2e92326c2b4858f5cda2894005c45875f0187962a8750afa0",
+    "692a85550994674dd05d6c3991f6b5927f2a52fe4221ba8819067e654b2308eb",
+    "899233915d58fe2405be345c8075bb43acaf5b3a8ef1564393cb2f7a2cf0428b",
+    "1c824d3af94c25518c5a668eb87b0095e577ef2a794b465e1f3b06e0049be364",
+    "57873072ebfea0ffaa04766fb7bd08ab1cd14777d2e1c317d45d2687dba6fc00",
+    "6ed7fe354402da6e9897b2354621d001971b58f5dc8c30305fd3dbdb98b50efe",
+    "96a3ac280fbda44095f8a6cc42333625117289de9402c8a66d1e250a95df530b",
+    "c4ade36d57277be8532dfcbcc58bcb52b861bb9fcd93c7b24a66523c927e695a",
+    "23950b3c4b5d6577fb423b54f4e72eb6431036df4e7f7a5790fb32b59dd62010",
+    "d5969dc43307d8b2a4029ca6968a6c36c26a62abb4c2ef7bb3bda96d94d9f0d6",
+    "d5ab98fd6c965974e03dd51fc8cf16328017f2a82f7e507bd8367661fafc4af4",
+    "ccddd5fda02c4889e818c2428441ab24adb1d026e33e5872d8bc17e40a3295c7",
+    "b8d178149834ae8036a4a5ad18e9ee141764239822a5b2f5aadb71440aa2f8b4",
+    "af9c7b4938756eaa17e01d5c9309e3374e6c4c4b04257f3e7b877ea4aeb767c9",
+    "888ec16f3052000dbe6c0881ed0686fdcb631803508212c67314175a4796436d",
+    "cd438a90a2e61f787df0b106b63b5e772b5f0298d80ac46e84b75f40605f2fa3",
+    "8a15ddc05fb6c6ec9c10c67caea6ac7b724418862f67fa6ec72d08d37eb9e879",
+    "f634f523c1891e0a5733a2a3ba215f0e3eca0b7c4e9b955e38269deb60a23686",
+    "f11f2798417100a7030ef27829d33d334689bf565b2e6231fd16510009f5d3b6",
+    "7b5311bbb3c2802ab4a12522a6c75cb65401df4628de83af3ad0820af2791c3e",
+    "ed418091d44e1117404494053ec63f409cc87d49aa7bd0bda31229b0548eebd9",
+    "e43c1a133189ecebcf3c1f6d46c6eeb958a3c81e121beed9a1d31650e9aeaf41",
+    "018ae8405f3ec5e9b5398326c11ad113858e8d1233daa71ec242bb297a58cc64",
+    "5c473bea81d770dac58c98b608d6c8d6e87ad72a3ad6478865affc9b87ce0f9f",
+    "f6fa90d3f9bb7a2ee59b7be5e3682a9bc020692adc98d1a26a6a264cae71998c",
+    "d6c2de4a04ad4d755f7bcc5101a0f1550000b6cbf7fe41ffae1b77523fdb05c6",
+    "61bb1e803708ffb97b0d9a8d6aecd47d3213a6bea6b758ada88ac51556d6ef77",
+    "e8979029e6af69556fcadb42f0185fa33573451acb0f444b9bafd763cefd2907",
+    "a3fff52d7ca478d377322790ca5ed61a02ab0969227490fc40cf9550c48596e7",
+    "98aa26fb64230355b3a6a4116e1e4471a87e601dabb13e6674f9522ca3ff971b",
+    "b29b2c5affdd55e013963cb9c3a6fdaa1a83824c517bf89b4eecac4255eb9d03",
+    "3ecab81d1b2b66f0837d261832fc86d9b58e5f5e9be6a7a8c144ba86c4d26236",
+    "47bd346984f3dd3df56f6f21495fd70403dfac047c68adec4bb499d229807615",
+    "d9e54a42250a1c90cfbd9b431a3c2a5b2eee64edf965a02574d1633c306cd8d3",
+    "52c1c4f3c75246689c900d0455d2a403ca7d9389d7ad82983a8a9972657feaaa",
+    "e5102556a1ad0cc4a3763783c99d76b50beca510a1114de326dba10e96800737",
+    "a9ef6ee7e32a42a814fcb895392b0b3f621a613c7565566a6607eb28f521f25f",
+    "55cdc69b8c632e556e97f44d052d9da713d27556e40518aa91326f9b35324add",
+    "32d0d1d31bcc6e66c27c627a6dfcdd7e5a68a1d9e1181a3d576e42af4d3696ac",
+    "8472fe8284ce163a6bccda2bdef64afc5163a6397794937d1e8325b0d34bccc3",
+    "0feadd1bacd38542e428bf404f7e621821cee5357121b6cace436b5e10f9b81b",
+    "20bfb8993815b12b5dca8448fa4650ff8aaa2024365b86e206a810449299f6ac",
+    "20be33e04a6385cb0ec59f8816c1a8d09405ac3bcf8ffa0eb86320aaccb59e13",
+    "ba4186ffb9602bb1c454f48e9c62db0a243b404c631f57d0327dbf5db401322b",
+    "91c89306866bc5cabe17e576f7a9f9c95871c6027987f1df4db6964a12195e19",
+    "309047d9f62773bb3d6b8e41ff6150d4aa7fbb92f741a92b1b4c5a0be6af57c2",
+    "d291ab9b49ea100add0830b3e3f9940dfa886bdebe9e83de9a2ba94f01b7193c",
+    "a7b109101e04cded18e9f78268dec2eca8c05ad809a9a1e638944358ff50cd9c",
+    "095d8054f4fb631ae4c59ed3a15172becc67a62fe5dbc59865c6216bb6a5ac52",
+    "2788e8a66d6258000f41ccb1e83d5f2bf78c77433e09ddcf6c7f010ab8a4bb29",
+    "bc89bb3f58d228c701f1094ed324811358a860fb2a304208d1e462ae3096d315",
+    "35a1ba591d2af745153a952be7f2e25d7b77633f6e1c496b5d9f01e8b85d6be2",
+    "a9dcb6151ee3f7ea5eb1307c6d3421b40e3815e7fb67a0b27533eb54c8b687d7",
+    "593e1fa8f0dbedc4012fbce41896d4fb785bb1efabbbfeb23d0a5eec9080a6d9",
+    "f2430737961173303c6d52ef55ccbe98fded8526056066c52a5c1edbea333fd4",
+    "779ee1818c634317d06bbb45e66f3cae510c7fc29fdabdafdf2599a93c4dc073",
+    "3f1587cd6d9a3ebd839847017db657508abc13dc39823216896d1acef18b883f",
+    "882872471a79a2f94ded35092264cce69055e94830a4b28a5fc3443a242ee64f",
+    "1a82ea5baa5c57ae1605362c82c14695d042402fc2742effb2cc699c01e6f9ce",
+    "3bc7427349e12dae83ff1238dde760332aeb4a546e8b31adad4e00b7719af3fa",
+    "2f3abc65c7eda9d2e39faa1b366888bb564c635146d2ce09901c5dcd3800d7d9",
+    "252726af008ce1d1332260814cd332c272c86630d1cb5df68516d14c7dcaf841",
+    "fd3f0676bc462ba6252c42b985b48c7f66af5a667ea743fa160e5d73499422d9",
+    "7632bf86621496b7a780226cdbc5ef7d327bc03a6ddeb2e8ee38a64af9df5068",
+    "4c83be594e55afb8922af4a450f2780fab83f710b00d6decad50dfd3028118eb",
+    "7109adfa4cacf396b254fa8deaa5bdacfdf25578ab5b0002a85668e514604d44",
+    "d1f0d7db905ad6a504864b12d682c3a92c30dd14f64103002a676dd78c417b89",
+    "f57f0837ebb056596aa030c89663005e3b637ab9bccca64a73324e3051b18782",
+    "8cfd5476d2df7cc8d60a0d6b67c78a08d0a5f920b4f1aa523ced5c38c797e8f8",
+    "9278d2e2f41d428c3b0375ea217982d35df182944db66de6fd37a697a28550c8",
+    "ce432ab1b7da59a7f3061b5df82f766b636facb19ab1a898e9ccb70392df85b4",
+    "863048a495744c2c0dd0811bac54c48b7b77442e2637dbc63ecc10adb8918de8",
+    "ac6480eaf408eaa93dcff374b1a85cab9f5d66c3df8634509a8ac13b7d7aa181",
+    "fede743070d4f4b80492f8f1de3620d8341b4661280c08ed8579c239034a3406",
+    "14b8abe700f6e1f760a10d6e6d56f178a43592ead5706272d4dfb1b32235ac6f",
+    "e78ab74dd1e708a72d5b10aab2a15d2c23a357904ed7af66db5dfdf42be01bc8",
+    "14bea54a9e41e981119f01a897d2bb3b166974194af0ff40858249a1e37a39c5",
+    "48acaae7c44c326d2ae9255485e24a37dab13d67f19a54546d51a84fecc6fb0b",
+    "44f7c166835c71f6f3c5ce2099ebf7c763795299ebd62a186eeedd11b80536cd",
+    "c882ec35975611400c21ed80e617dd5ae8235c3932c03859011ef0d110498578",
+    "60d87460b785d27da3b9d577c91bffe2ed3de2da58124ce56c79ec7aab605a98",
+    "3af43e1f584fa42b250ade071a30ed10feba0f5a0ae322913176b91fd434ea9c",
+    "0987ad178a327a7368a0c1e44aadd1f9e1bcf7d7257c0422699cf56bd58bb4ab",
+    "5876a4e57d709e85dcf838c13121a6feeb07a4adda1a80b1958d5fd3807c040b",
+    "b589867bceb3f8299ea1cccbc13eeb1e537b490705c1fd40068116f87fd91e4d",
+    "9e474757752983d980eddcbf8dd678b2409173fd89e78bcdf5591c7909464c3a",
+    "5910650166cf3d5b225b05ec6243e895dcbf3ede6bf314527f18962ffbe555c1",
+    "7f0ce7d15d20244a6931feba201921a7f5a8188001c0d3c67783d193bbb044cd",
+    "40182de668dbf39cd761eac347ab2bacb9f803fc9aed44ac6c83efb19368569b",
+    "6c47b84abeabf5268a811961cfdf5311bbcd23aa1b4e23dece5acbd4c35f5fba",
+    "99d3015feecf4c8268f6f360ea099fa84212b8243f6fcadf9ce0af158acea272",
+    "e777931527336fac0fdeaecb60be2233ebca49abc569d41760a568b519b7722d",
+    "c8717a28942c9fcb0d7621de43e47adf442f7ff89d477f0bbc28e69b89aaaa68",
+    "bc9e9e07ec46c898cec3460d255d29aaeda09f11f78b2982585cd0e428772158",
+    "d549d30b3aaf4543cf9ea3332a480c4d07b7ebcc09a75f54062f5b9d6fa08933",
+    "d8ba7bc86d43b1d44d952fe17cc6f7af096b82d3f495c6b9edc0abf7ae319062",
+    "8de6b00a190cfa068e5c154cfb28faa0e55e02046a69234612b9bf5f1776a450",
+    "602e1f32c9bfc06894a2575149c6520c613158e9c1d04bf759be640379e7a885",
+    "13b804096debe0d0d9b55b32791aaf96ed68af49f32dc02b4fe7ab7386956e9e",
+    "e39f471d9c96d94a5398400603d28267a5f0844ebe4249c5f5803c3d521d471c",
+    "5dbe7b8ddacf43ba291fed2ad793d05e5588c2ed2499c314da20b399d17b445b",
+    "78ba0c058eb2344bbeb8d9a11be86da3843d35551fb9f58e4da2789a2b19d990",
+    "825e7b2011d84f24a7077a2b8369a9aea9101c3fd4a47ad82c8e5aef3f73f836",
+    "992e36b89a8f3d68a03b8f1de5adb8f8cc366144f7d4f7d01a4ff9e4d295c789",
+    "28562ab4b0c1df0aa9413b57cea2fa3bcba167ad7d5678f2adf66e5c9c8df06b",
+    "741463b238cbfca3d7df863f77539722954f1a8796c6a0657ed9c8ecd87d0184",
+    "b5cbec827a4359d76dacc3e5fd3e51df65ff2242c884b66dd97255131f9f437e"
+  ],
+  "preserved_candidates": [],
+  "confirmed": [
+    {
+      "id": "2fa9d766d966f3e3590fc59fcd2e542c3969aac0acb26edc3a85aecfcf297837",
+      "corpus_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "item_number": 13,
+      "status": "under_review"
+    },
+    {
+      "id": "c8478d8ef84d74b35b8faa97c2f5df14fe8d45003aee875a7af32dfa5536d9ab",
+      "corpus_id": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd",
+      "item_number": 10,
+      "status": "under_review"
+    },
+    {
+      "id": "f26daff7ea1c95526e1fa48f9592382c69eea969bff0d9214cee669a57a650bb",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 1,
+      "status": "under_review"
+    },
+    {
+      "id": "b6e3f5f0c13503022a4de8011e84a3858494a862db09de62f218fce2e12d50df",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 2,
+      "status": "under_review"
+    },
+    {
+      "id": "ba0cb3141d347ac0efffd9a05cef9531f20a608ec6db68c390267fa86ef6d675",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 3,
+      "status": "under_review"
+    },
+    {
+      "id": "dc400a0954ce663e2170dbf27f7ecc4651314da8f3e1c7cabffc5c09ea27a418",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 4,
+      "status": "under_review"
+    },
+    {
+      "id": "69f63bae6e8b0b50e401cc3422a56cac0a6c5ddf6101a70ddc0c9f0782349978",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 5,
+      "status": "under_review"
+    },
+    {
+      "id": "5edcd746bc39033f9fd9ecfca325573f5a71c93732ee89e4e0b1b0b376efb331",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 6,
+      "status": "under_review"
+    },
+    {
+      "id": "ac7552418354151e4f00f9dc56907cdfe5e3cfb503f6ce3fcb049be84a10bf6a",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 7,
+      "status": "under_review"
+    },
+    {
+      "id": "29af1ebc0df40f5a834930720ad0e14428058638b299190e7d82255471e7333c",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 8,
+      "status": "under_review"
+    },
+    {
+      "id": "b530a998cd801d3c9d90994bb4c701bd8aa50ca48d9575068bea5259018067e3",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 9,
+      "status": "under_review"
+    },
+    {
+      "id": "c8f1104ac4697bcee0f3d01ab22f32761d2c2c4cc08eb57dc2ccacf81fe75d8a",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 10,
+      "status": "under_review"
+    },
+    {
+      "id": "71f9369e409a2f060bcae01b193752478bfa0deacbd1d4f5af02c62aa531b194",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 11,
+      "status": "under_review"
+    },
+    {
+      "id": "1f1d0b348a74f1dcc72e989db8cada217832c99beeedc9bce912a94aba38cd71",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 12,
+      "status": "under_review"
+    },
+    {
+      "id": "e8a91d282e36a123e1cd47d46c04980d534391fa5ff0a6abef7c2cb3b88e0348",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 13,
+      "status": "under_review"
+    },
+    {
+      "id": "d3230456925acc535d90049860c3d7fcf431b25341afbad51dbd4e82040a47a4",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 14,
+      "status": "under_review"
+    },
+    {
+      "id": "60e1b298ffe859a69a0da5471328f89908bbac32504fe60380e14facd4297a12",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 15,
+      "status": "under_review"
+    },
+    {
+      "id": "8e922096bcbbe17cd18f80f3ea0065dbd1c409b4b3f2b24f62f0a5daba535cab",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 16,
+      "status": "under_review"
+    },
+    {
+      "id": "f9ec7939d69ced845cd3741aca5b6b537e41a45e6b734e6fa6671a7559c02945",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 17,
+      "status": "under_review"
+    },
+    {
+      "id": "2600d4ac1e8328ac5b6340179f647b0bf913496897826abd90cefecb168cbad8",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 18,
+      "status": "under_review"
+    },
+    {
+      "id": "c5e6dc9e2094d166618625721423304f4a63539e337eb83356292362107cff0b",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 19,
+      "status": "under_review"
+    },
+    {
+      "id": "96c6055374b9f86455a705fca997470b4be6d6f4bc190d5812431a94adbcaa87",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 20,
+      "status": "under_review"
+    },
+    {
+      "id": "17b314365adfd294859d817b2a233d140afdf9caf4809282fb4e2b6a78b89022",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 21,
+      "status": "under_review"
+    },
+    {
+      "id": "c7c429ac37728f49c413c333dcc65366a9f2fa6e213e711fb1ef29b077aeb8d9",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 22,
+      "status": "under_review"
+    },
+    {
+      "id": "9a5b0b0833dc1aca2920be27ee891c544d82cf07a83b580e3d2b2daa07097113",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 23,
+      "status": "under_review"
+    },
+    {
+      "id": "74e2884bd8873af2475cc73e0e3f743df47f6269ee7a658b12568c3f20cfc225",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 24,
+      "status": "under_review"
+    },
+    {
+      "id": "5f1a5bdf3646d36a5ce22cd98880d25c2619ae1f5b1978b0d742522249265585",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 25,
+      "status": "under_review"
+    },
+    {
+      "id": "7b1a39bba6f35946a85f4131602ef033e4ae15e079d7b0d04344e7e25d101d59",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 26,
+      "status": "under_review"
+    },
+    {
+      "id": "2675e6e68e1d94737fc73efc9a0c38ef7472d0c87bcd5226246bf0e18fe3ba27",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 27,
+      "status": "under_review"
+    },
+    {
+      "id": "b719863455e0b06d95137de12864728ab4bdb9ac9caf542a6bb7044114491446",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 28,
+      "status": "under_review"
+    },
+    {
+      "id": "e56c6f1aa949f707350b4d48d93751056ad45f30ca97518a84e834bf7e403ecd",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 29,
+      "status": "under_review"
+    },
+    {
+      "id": "56a15d2b483001fad1f45bf9afc649cb36fc47a311ef77127b7d123a779dc002",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 30,
+      "status": "under_review"
+    },
+    {
+      "id": "5654260f046afe0c7816cf0253302ceab2dce3a2a47da2b670610e1d0a54c093",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 31,
+      "status": "under_review"
+    },
+    {
+      "id": "752ad4d6fea65fe03c24b884a1768b7b173b3c1eb663428e8f6396b033a4f7f4",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 32,
+      "status": "under_review"
+    },
+    {
+      "id": "96b02f43b518b1f9c027ddce3b508832bb3eaecb0f74334966de7fc6599e94a4",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 33,
+      "status": "under_review"
+    },
+    {
+      "id": "a240ff26d857a3979b0c1b5a144c9e7f2966483f346877f432ece32052a2791f",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 34,
+      "status": "under_review"
+    },
+    {
+      "id": "cfb3cd7049a282b943effa990bdbceb25cec241daea4e47262ced1e9055001b8",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 35,
+      "status": "under_review"
+    },
+    {
+      "id": "86edbd848df5b259e8ae6387d0d10b37683043218d234c500cd7af8e314c3267",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 36,
+      "status": "under_review"
+    },
+    {
+      "id": "78a8b2b933b22488988e3999e35f8de94adbd9a8840b09cd77328d4892e26041",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 37,
+      "status": "under_review"
+    },
+    {
+      "id": "4c2492b63d119905f68770d1ea1b2b41db6970ea46a879fe7eea13bcdbb406c0",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 38,
+      "status": "under_review"
+    },
+    {
+      "id": "94a8c5775b4d8cae6a8b389e71daae303cb3db03a6f21740a8c611a40fa2ee55",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 39,
+      "status": "under_review"
+    },
+    {
+      "id": "05f2dd0fb3033e718b7ef7765c84ee2cdb802cdb5f1c857c1c652ca04e359bb1",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 40,
+      "status": "under_review"
+    },
+    {
+      "id": "09bc0e59fc74ee5f39ffc233faba702eb71f3a5cc28d0b1554ec77c7fb70b90f",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 41,
+      "status": "under_review"
+    },
+    {
+      "id": "340282db784d7ff08ec212f54568d0911e16223a8b7207b5debde80eb0954740",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 42,
+      "status": "under_review"
+    },
+    {
+      "id": "06a55672ea358edfb026cecba4ff61a2e7153f72991d577872c478b3022b7d51",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 43,
+      "status": "under_review"
+    },
+    {
+      "id": "e0a71a8b6f63b6414896f798ab767cc30e686177feb29e9925ee40681627ca78",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 44,
+      "status": "under_review"
+    },
+    {
+      "id": "611c64edd82350c74c5ecdb34f6665ddc1cb839be84f07b2029b87d70f8b5ac2",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 45,
+      "status": "under_review"
+    },
+    {
+      "id": "e7d849eea2e7a1d7a2f20bc4308e40867c16356a2946894498321718733f8f10",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 46,
+      "status": "under_review"
+    },
+    {
+      "id": "bb2db650fa30d0b884e817197adc026c9486ec867f4e7c85f152af43548ace23",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 47,
+      "status": "under_review"
+    },
+    {
+      "id": "e48aa25a7d5208b618d8614cb2ae932e5657d3832e6e88728b9c598d2f1d1e41",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 48,
+      "status": "under_review"
+    },
+    {
+      "id": "b1fe1f25a7296735e1a0f071707609a9543f27569d897b3fd20b507fb7f70548",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 49,
+      "status": "under_review"
+    },
+    {
+      "id": "39fce477b094bb9d44ba1812694587cda946cb72e741169d120bbfedbb8eaefe",
+      "corpus_id": "00648fcd5d53f9530ba7cbae5b6353a9870c35248965de4c0b2ac9aeef749444",
+      "item_number": 50,
+      "status": "under_review"
+    },
+    {
+      "id": "e8d4fd5051999f39d910141efc4c71077d440b49bc00fff636fb6318bc1b74dc",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 1,
+      "status": "under_review"
+    },
+    {
+      "id": "ba0413f9e9b3d74b483e00399547bfe8734c88bbe0fe1391d6db15683477d2cd",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 2,
+      "status": "under_review"
+    },
+    {
+      "id": "9c32ff223b321ad6402d044542df07e46b63b0d003b9ec41016207efb4d9cead",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 3,
+      "status": "under_review"
+    },
+    {
+      "id": "d0d85fd40b4a27cd3f1337bb4450c90c528ead2363cd48d69025ecf585c46eb9",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 4,
+      "status": "under_review"
+    },
+    {
+      "id": "6dd2c09309210103735dacca9094b9df84ae8d063dd322590b7adbc7dc209a2e",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 5,
+      "status": "under_review"
+    },
+    {
+      "id": "c4b419f693f3ed2bceb1e5a7d652f1a7b403bfa81e801946c27b589c657ad9bc",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 6,
+      "status": "under_review"
+    },
+    {
+      "id": "cdfe3e9998447c3fd16acb0f51b6d1c6cfd5713800eb00b489558d5b3e8a759b",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 7,
+      "status": "under_review"
+    },
+    {
+      "id": "8cbcda80e9bcbb6053c7600833d23fc9c128133b27b3eddf1f28781631ff310e",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 8,
+      "status": "under_review"
+    },
+    {
+      "id": "992206851f1a160d49ce043285c148a47ea018115a389a626e5cc9ac5b0f8888",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 9,
+      "status": "under_review"
+    },
+    {
+      "id": "6e4fb050ff506443f3be52b1f46f5a15cb8fe73b4d7f1bf78b7daeb7a2f6dda2",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 10,
+      "status": "under_review"
+    },
+    {
+      "id": "e10753889abdc44b9046a6c8002ec4e80453568635aac407d88b3c81fd495089",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 11,
+      "status": "under_review"
+    },
+    {
+      "id": "cb7ea53a5b2031f67999cc51b2d910f79b177e8ba238c1cd08bddd7c5e121a2d",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 12,
+      "status": "under_review"
+    },
+    {
+      "id": "b44f5922c8bef5b2e92326c2b4858f5cda2894005c45875f0187962a8750afa0",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 13,
+      "status": "under_review"
+    },
+    {
+      "id": "692a85550994674dd05d6c3991f6b5927f2a52fe4221ba8819067e654b2308eb",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 14,
+      "status": "under_review"
+    },
+    {
+      "id": "899233915d58fe2405be345c8075bb43acaf5b3a8ef1564393cb2f7a2cf0428b",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 15,
+      "status": "under_review"
+    },
+    {
+      "id": "1c824d3af94c25518c5a668eb87b0095e577ef2a794b465e1f3b06e0049be364",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 16,
+      "status": "under_review"
+    },
+    {
+      "id": "57873072ebfea0ffaa04766fb7bd08ab1cd14777d2e1c317d45d2687dba6fc00",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 17,
+      "status": "under_review"
+    },
+    {
+      "id": "6ed7fe354402da6e9897b2354621d001971b58f5dc8c30305fd3dbdb98b50efe",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 18,
+      "status": "under_review"
+    },
+    {
+      "id": "96a3ac280fbda44095f8a6cc42333625117289de9402c8a66d1e250a95df530b",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 19,
+      "status": "under_review"
+    },
+    {
+      "id": "c4ade36d57277be8532dfcbcc58bcb52b861bb9fcd93c7b24a66523c927e695a",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 20,
+      "status": "under_review"
+    },
+    {
+      "id": "23950b3c4b5d6577fb423b54f4e72eb6431036df4e7f7a5790fb32b59dd62010",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 21,
+      "status": "under_review"
+    },
+    {
+      "id": "d5969dc43307d8b2a4029ca6968a6c36c26a62abb4c2ef7bb3bda96d94d9f0d6",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 22,
+      "status": "under_review"
+    },
+    {
+      "id": "d5ab98fd6c965974e03dd51fc8cf16328017f2a82f7e507bd8367661fafc4af4",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 23,
+      "status": "under_review"
+    },
+    {
+      "id": "ccddd5fda02c4889e818c2428441ab24adb1d026e33e5872d8bc17e40a3295c7",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 24,
+      "status": "under_review"
+    },
+    {
+      "id": "b8d178149834ae8036a4a5ad18e9ee141764239822a5b2f5aadb71440aa2f8b4",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 25,
+      "status": "under_review"
+    },
+    {
+      "id": "af9c7b4938756eaa17e01d5c9309e3374e6c4c4b04257f3e7b877ea4aeb767c9",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 26,
+      "status": "under_review"
+    },
+    {
+      "id": "888ec16f3052000dbe6c0881ed0686fdcb631803508212c67314175a4796436d",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 27,
+      "status": "under_review"
+    },
+    {
+      "id": "cd438a90a2e61f787df0b106b63b5e772b5f0298d80ac46e84b75f40605f2fa3",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 28,
+      "status": "under_review"
+    },
+    {
+      "id": "8a15ddc05fb6c6ec9c10c67caea6ac7b724418862f67fa6ec72d08d37eb9e879",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 29,
+      "status": "under_review"
+    },
+    {
+      "id": "f634f523c1891e0a5733a2a3ba215f0e3eca0b7c4e9b955e38269deb60a23686",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 30,
+      "status": "under_review"
+    },
+    {
+      "id": "f11f2798417100a7030ef27829d33d334689bf565b2e6231fd16510009f5d3b6",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 31,
+      "status": "under_review"
+    },
+    {
+      "id": "7b5311bbb3c2802ab4a12522a6c75cb65401df4628de83af3ad0820af2791c3e",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 32,
+      "status": "under_review"
+    },
+    {
+      "id": "ed418091d44e1117404494053ec63f409cc87d49aa7bd0bda31229b0548eebd9",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 33,
+      "status": "under_review"
+    },
+    {
+      "id": "e43c1a133189ecebcf3c1f6d46c6eeb958a3c81e121beed9a1d31650e9aeaf41",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 34,
+      "status": "under_review"
+    },
+    {
+      "id": "018ae8405f3ec5e9b5398326c11ad113858e8d1233daa71ec242bb297a58cc64",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 35,
+      "status": "under_review"
+    },
+    {
+      "id": "5c473bea81d770dac58c98b608d6c8d6e87ad72a3ad6478865affc9b87ce0f9f",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 36,
+      "status": "under_review"
+    },
+    {
+      "id": "f6fa90d3f9bb7a2ee59b7be5e3682a9bc020692adc98d1a26a6a264cae71998c",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 37,
+      "status": "under_review"
+    },
+    {
+      "id": "d6c2de4a04ad4d755f7bcc5101a0f1550000b6cbf7fe41ffae1b77523fdb05c6",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 38,
+      "status": "under_review"
+    },
+    {
+      "id": "61bb1e803708ffb97b0d9a8d6aecd47d3213a6bea6b758ada88ac51556d6ef77",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 39,
+      "status": "under_review"
+    },
+    {
+      "id": "e8979029e6af69556fcadb42f0185fa33573451acb0f444b9bafd763cefd2907",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 40,
+      "status": "under_review"
+    },
+    {
+      "id": "a3fff52d7ca478d377322790ca5ed61a02ab0969227490fc40cf9550c48596e7",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 41,
+      "status": "under_review"
+    },
+    {
+      "id": "98aa26fb64230355b3a6a4116e1e4471a87e601dabb13e6674f9522ca3ff971b",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 42,
+      "status": "under_review"
+    },
+    {
+      "id": "b29b2c5affdd55e013963cb9c3a6fdaa1a83824c517bf89b4eecac4255eb9d03",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 43,
+      "status": "under_review"
+    },
+    {
+      "id": "3ecab81d1b2b66f0837d261832fc86d9b58e5f5e9be6a7a8c144ba86c4d26236",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 44,
+      "status": "under_review"
+    },
+    {
+      "id": "47bd346984f3dd3df56f6f21495fd70403dfac047c68adec4bb499d229807615",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 45,
+      "status": "under_review"
+    },
+    {
+      "id": "d9e54a42250a1c90cfbd9b431a3c2a5b2eee64edf965a02574d1633c306cd8d3",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 46,
+      "status": "under_review"
+    },
+    {
+      "id": "52c1c4f3c75246689c900d0455d2a403ca7d9389d7ad82983a8a9972657feaaa",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 47,
+      "status": "under_review"
+    },
+    {
+      "id": "e5102556a1ad0cc4a3763783c99d76b50beca510a1114de326dba10e96800737",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 48,
+      "status": "under_review"
+    },
+    {
+      "id": "a9ef6ee7e32a42a814fcb895392b0b3f621a613c7565566a6607eb28f521f25f",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 49,
+      "status": "under_review"
+    },
+    {
+      "id": "55cdc69b8c632e556e97f44d052d9da713d27556e40518aa91326f9b35324add",
+      "corpus_id": "61edcfed5484e1d74f1baeb9a77bfc81420bc113564392b4019bcc29de38cab2",
+      "item_number": 50,
+      "status": "under_review"
+    },
+    {
+      "id": "32d0d1d31bcc6e66c27c627a6dfcdd7e5a68a1d9e1181a3d576e42af4d3696ac",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 1,
+      "status": "under_review"
+    },
+    {
+      "id": "8472fe8284ce163a6bccda2bdef64afc5163a6397794937d1e8325b0d34bccc3",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 2,
+      "status": "under_review"
+    },
+    {
+      "id": "0feadd1bacd38542e428bf404f7e621821cee5357121b6cace436b5e10f9b81b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 3,
+      "status": "under_review"
+    },
+    {
+      "id": "20bfb8993815b12b5dca8448fa4650ff8aaa2024365b86e206a810449299f6ac",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 4,
+      "status": "under_review"
+    },
+    {
+      "id": "20be33e04a6385cb0ec59f8816c1a8d09405ac3bcf8ffa0eb86320aaccb59e13",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 5,
+      "status": "under_review"
+    },
+    {
+      "id": "ba4186ffb9602bb1c454f48e9c62db0a243b404c631f57d0327dbf5db401322b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 6,
+      "status": "under_review"
+    },
+    {
+      "id": "91c89306866bc5cabe17e576f7a9f9c95871c6027987f1df4db6964a12195e19",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 7,
+      "status": "under_review"
+    },
+    {
+      "id": "309047d9f62773bb3d6b8e41ff6150d4aa7fbb92f741a92b1b4c5a0be6af57c2",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 8,
+      "status": "under_review"
+    },
+    {
+      "id": "d291ab9b49ea100add0830b3e3f9940dfa886bdebe9e83de9a2ba94f01b7193c",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 9,
+      "status": "under_review"
+    },
+    {
+      "id": "a7b109101e04cded18e9f78268dec2eca8c05ad809a9a1e638944358ff50cd9c",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 10,
+      "status": "under_review"
+    },
+    {
+      "id": "095d8054f4fb631ae4c59ed3a15172becc67a62fe5dbc59865c6216bb6a5ac52",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 11,
+      "status": "under_review"
+    },
+    {
+      "id": "2788e8a66d6258000f41ccb1e83d5f2bf78c77433e09ddcf6c7f010ab8a4bb29",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 12,
+      "status": "under_review"
+    },
+    {
+      "id": "bc89bb3f58d228c701f1094ed324811358a860fb2a304208d1e462ae3096d315",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 13,
+      "status": "under_review"
+    },
+    {
+      "id": "35a1ba591d2af745153a952be7f2e25d7b77633f6e1c496b5d9f01e8b85d6be2",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 14,
+      "status": "under_review"
+    },
+    {
+      "id": "a9dcb6151ee3f7ea5eb1307c6d3421b40e3815e7fb67a0b27533eb54c8b687d7",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 15,
+      "status": "under_review"
+    },
+    {
+      "id": "593e1fa8f0dbedc4012fbce41896d4fb785bb1efabbbfeb23d0a5eec9080a6d9",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 16,
+      "status": "under_review"
+    },
+    {
+      "id": "f2430737961173303c6d52ef55ccbe98fded8526056066c52a5c1edbea333fd4",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 17,
+      "status": "under_review"
+    },
+    {
+      "id": "779ee1818c634317d06bbb45e66f3cae510c7fc29fdabdafdf2599a93c4dc073",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 18,
+      "status": "under_review"
+    },
+    {
+      "id": "3f1587cd6d9a3ebd839847017db657508abc13dc39823216896d1acef18b883f",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 19,
+      "status": "under_review"
+    },
+    {
+      "id": "882872471a79a2f94ded35092264cce69055e94830a4b28a5fc3443a242ee64f",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 20,
+      "status": "under_review"
+    },
+    {
+      "id": "1a82ea5baa5c57ae1605362c82c14695d042402fc2742effb2cc699c01e6f9ce",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 21,
+      "status": "under_review"
+    },
+    {
+      "id": "3bc7427349e12dae83ff1238dde760332aeb4a546e8b31adad4e00b7719af3fa",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 22,
+      "status": "under_review"
+    },
+    {
+      "id": "2f3abc65c7eda9d2e39faa1b366888bb564c635146d2ce09901c5dcd3800d7d9",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 23,
+      "status": "under_review"
+    },
+    {
+      "id": "252726af008ce1d1332260814cd332c272c86630d1cb5df68516d14c7dcaf841",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 24,
+      "status": "under_review"
+    },
+    {
+      "id": "fd3f0676bc462ba6252c42b985b48c7f66af5a667ea743fa160e5d73499422d9",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 25,
+      "status": "under_review"
+    },
+    {
+      "id": "7632bf86621496b7a780226cdbc5ef7d327bc03a6ddeb2e8ee38a64af9df5068",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 26,
+      "status": "under_review"
+    },
+    {
+      "id": "4c83be594e55afb8922af4a450f2780fab83f710b00d6decad50dfd3028118eb",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 27,
+      "status": "under_review"
+    },
+    {
+      "id": "7109adfa4cacf396b254fa8deaa5bdacfdf25578ab5b0002a85668e514604d44",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 28,
+      "status": "under_review"
+    },
+    {
+      "id": "d1f0d7db905ad6a504864b12d682c3a92c30dd14f64103002a676dd78c417b89",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 29,
+      "status": "under_review"
+    },
+    {
+      "id": "f57f0837ebb056596aa030c89663005e3b637ab9bccca64a73324e3051b18782",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 30,
+      "status": "under_review"
+    },
+    {
+      "id": "8cfd5476d2df7cc8d60a0d6b67c78a08d0a5f920b4f1aa523ced5c38c797e8f8",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 31,
+      "status": "under_review"
+    },
+    {
+      "id": "9278d2e2f41d428c3b0375ea217982d35df182944db66de6fd37a697a28550c8",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 32,
+      "status": "under_review"
+    },
+    {
+      "id": "ce432ab1b7da59a7f3061b5df82f766b636facb19ab1a898e9ccb70392df85b4",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 33,
+      "status": "under_review"
+    },
+    {
+      "id": "863048a495744c2c0dd0811bac54c48b7b77442e2637dbc63ecc10adb8918de8",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 34,
+      "status": "under_review"
+    },
+    {
+      "id": "ac6480eaf408eaa93dcff374b1a85cab9f5d66c3df8634509a8ac13b7d7aa181",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 35,
+      "status": "under_review"
+    },
+    {
+      "id": "fede743070d4f4b80492f8f1de3620d8341b4661280c08ed8579c239034a3406",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 36,
+      "status": "under_review"
+    },
+    {
+      "id": "14b8abe700f6e1f760a10d6e6d56f178a43592ead5706272d4dfb1b32235ac6f",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 37,
+      "status": "under_review"
+    },
+    {
+      "id": "e78ab74dd1e708a72d5b10aab2a15d2c23a357904ed7af66db5dfdf42be01bc8",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 38,
+      "status": "under_review"
+    },
+    {
+      "id": "14bea54a9e41e981119f01a897d2bb3b166974194af0ff40858249a1e37a39c5",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 39,
+      "status": "under_review"
+    },
+    {
+      "id": "48acaae7c44c326d2ae9255485e24a37dab13d67f19a54546d51a84fecc6fb0b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 40,
+      "status": "under_review"
+    },
+    {
+      "id": "44f7c166835c71f6f3c5ce2099ebf7c763795299ebd62a186eeedd11b80536cd",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 41,
+      "status": "under_review"
+    },
+    {
+      "id": "c882ec35975611400c21ed80e617dd5ae8235c3932c03859011ef0d110498578",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 42,
+      "status": "under_review"
+    },
+    {
+      "id": "60d87460b785d27da3b9d577c91bffe2ed3de2da58124ce56c79ec7aab605a98",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 43,
+      "status": "under_review"
+    },
+    {
+      "id": "3af43e1f584fa42b250ade071a30ed10feba0f5a0ae322913176b91fd434ea9c",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 44,
+      "status": "under_review"
+    },
+    {
+      "id": "0987ad178a327a7368a0c1e44aadd1f9e1bcf7d7257c0422699cf56bd58bb4ab",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 45,
+      "status": "under_review"
+    },
+    {
+      "id": "5876a4e57d709e85dcf838c13121a6feeb07a4adda1a80b1958d5fd3807c040b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 46,
+      "status": "under_review"
+    },
+    {
+      "id": "b589867bceb3f8299ea1cccbc13eeb1e537b490705c1fd40068116f87fd91e4d",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 47,
+      "status": "under_review"
+    },
+    {
+      "id": "9e474757752983d980eddcbf8dd678b2409173fd89e78bcdf5591c7909464c3a",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 48,
+      "status": "under_review"
+    },
+    {
+      "id": "5910650166cf3d5b225b05ec6243e895dcbf3ede6bf314527f18962ffbe555c1",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 49,
+      "status": "under_review"
+    },
+    {
+      "id": "7f0ce7d15d20244a6931feba201921a7f5a8188001c0d3c67783d193bbb044cd",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 50,
+      "status": "under_review"
+    },
+    {
+      "id": "40182de668dbf39cd761eac347ab2bacb9f803fc9aed44ac6c83efb19368569b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 51,
+      "status": "under_review"
+    },
+    {
+      "id": "6c47b84abeabf5268a811961cfdf5311bbcd23aa1b4e23dece5acbd4c35f5fba",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 53,
+      "status": "under_review"
+    },
+    {
+      "id": "99d3015feecf4c8268f6f360ea099fa84212b8243f6fcadf9ce0af158acea272",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 54,
+      "status": "under_review"
+    },
+    {
+      "id": "e777931527336fac0fdeaecb60be2233ebca49abc569d41760a568b519b7722d",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 55,
+      "status": "under_review"
+    },
+    {
+      "id": "c8717a28942c9fcb0d7621de43e47adf442f7ff89d477f0bbc28e69b89aaaa68",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 56,
+      "status": "under_review"
+    },
+    {
+      "id": "bc9e9e07ec46c898cec3460d255d29aaeda09f11f78b2982585cd0e428772158",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 57,
+      "status": "under_review"
+    },
+    {
+      "id": "d549d30b3aaf4543cf9ea3332a480c4d07b7ebcc09a75f54062f5b9d6fa08933",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 58,
+      "status": "under_review"
+    },
+    {
+      "id": "d8ba7bc86d43b1d44d952fe17cc6f7af096b82d3f495c6b9edc0abf7ae319062",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 59,
+      "status": "under_review"
+    },
+    {
+      "id": "8de6b00a190cfa068e5c154cfb28faa0e55e02046a69234612b9bf5f1776a450",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 60,
+      "status": "under_review"
+    },
+    {
+      "id": "602e1f32c9bfc06894a2575149c6520c613158e9c1d04bf759be640379e7a885",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 61,
+      "status": "under_review"
+    },
+    {
+      "id": "13b804096debe0d0d9b55b32791aaf96ed68af49f32dc02b4fe7ab7386956e9e",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 62,
+      "status": "under_review"
+    },
+    {
+      "id": "e39f471d9c96d94a5398400603d28267a5f0844ebe4249c5f5803c3d521d471c",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 63,
+      "status": "under_review"
+    },
+    {
+      "id": "5dbe7b8ddacf43ba291fed2ad793d05e5588c2ed2499c314da20b399d17b445b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 64,
+      "status": "under_review"
+    },
+    {
+      "id": "78ba0c058eb2344bbeb8d9a11be86da3843d35551fb9f58e4da2789a2b19d990",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 65,
+      "status": "under_review"
+    },
+    {
+      "id": "825e7b2011d84f24a7077a2b8369a9aea9101c3fd4a47ad82c8e5aef3f73f836",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 66,
+      "status": "under_review"
+    },
+    {
+      "id": "992e36b89a8f3d68a03b8f1de5adb8f8cc366144f7d4f7d01a4ff9e4d295c789",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 67,
+      "status": "under_review"
+    },
+    {
+      "id": "28562ab4b0c1df0aa9413b57cea2fa3bcba167ad7d5678f2adf66e5c9c8df06b",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 68,
+      "status": "under_review"
+    },
+    {
+      "id": "741463b238cbfca3d7df863f77539722954f1a8796c6a0657ed9c8ecd87d0184",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 69,
+      "status": "under_review"
+    },
+    {
+      "id": "b5cbec827a4359d76dacc3e5fd3e51df65ff2242c884b66dd97255131f9f437e",
+      "corpus_id": "cb5a0d9f845b7469318af7bdd115130643b42ebbd8988bc5a6c9e32790577829",
+      "item_number": 70,
+      "status": "under_review"
+    }
+  ],
+  "public_questions_created": 0,
+  "complete": true
+}

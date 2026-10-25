@@ -4,6 +4,27 @@ spec=importlib.util.spec_from_file_location('legal_builder',path)
 builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
 
 class CurriculumTests(unittest.TestCase):
+ def test_cp_next_article_rubric_does_not_pollute_previous_body(self):
+  rows=self.parse('<p>Art. 14. Crime.</p><p>Tentativa</p><p>II - tentado.</p><p>Desistência voluntária e arrependimento eficaz (Redação dada pela Lei nº 7.209)</p><p>Art. 15. O agente.</p>','codigo-penal')
+  self.assertIn('Tentativa',rows[0]['text']);self.assertNotIn('Desistência',rows[0]['text'])
+ def test_cp_embedded_repealed_articles_do_not_enter_current_186(self):
+  rows=self.parse('<p>Art. 186. Ação penal.</p><p>Violação de privilégio Art 187. (Revogado pela Lei nº 9.279) Falsa atribuição Art 188. (Revogado pela Lei nº 9.279)</p><p>Art. 196. Outra regra vigente.</p>','codigo-penal')
+  self.assertNotIn('187',rows[0]['text']);self.assertEqual(rows[1]['key'],'art-196')
+ def test_legacy_crossed_formatting_preserves_article_and_penalty(self):
+  rows=self.parse('<p>Art. 183-A. Majorante patrimonial.</p><b><font><p></font></b><font>Art. 184. Violar direitos de autor:</font></p><font><p>Pena — detenção, de três meses a um ano.</p></font><p>Art. 185. (Revogado)</p>')
+  self.assertEqual([r['key'] for r in rows],['art-183-a','art-184','art-185'])
+  self.assertNotIn('detenção',rows[0]['text'])
+  self.assertIn('detenção',rows[1]['text'])
+ def test_legacy_inline_reference_is_not_truncated(self):
+  rows=self.parse('<p>Art. 5º Aplica-se a <b><font><p></font></b><font>Lei nº 13.060</font></p><font> e este Decreto.</font></p>')
+  self.assertIn('Lei nº 13.060',rows[0]['text'])
+ def test_revoked_article_annotations_do_not_revoke_previous_current_article(self):
+  rows=self.parse('<p>Art. 232. Vexame ou constrangimento.</p><p>Pena — detenção de seis meses a dois anos.</p><p><strike>Art. 233. Tortura.</strike> (Revogado pela Lei nº 9.455)</p><p><strike>Pena antiga.</strike> (Revogado pela Lei nº 9.455)</p><p>Art. 234. Regra vigente seguinte.</p>')
+  current={r['key']:r for r in rows if r['status']=='current'}
+  self.assertIn('art-232',current);self.assertNotIn('Revogado',current['art-232']['text']);self.assertNotIn('art-233',current)
+ def test_unstruck_old_penalty_stays_out_of_previous_article(self):
+  rows=self.parse('<p>Art. 239. Regra atual.</p><p><strike>Art. 240. Caput antigo.</strike></p><p>Pena antiga — quatro a oito anos.</p><p>Art. 240. Caput novo.</p><p>Pena atual — quatro a dez anos.</p>')
+  self.assertNotIn('Pena antiga',rows[0]['text']);self.assertIn('dez anos',rows[1]['text'])
  def parse(self,text,slug='fixture'):
   return builder.parse_law(('<html><body>'+text+'</body></html>').encode('utf-8'),slug)
  def test_dash_and_article_suffix_are_distinct(self):
@@ -31,6 +52,10 @@ class CurriculumTests(unittest.TestCase):
   for encoding in ['utf-16','cp1252']:
    rows=builder.parse_law(text.encode(encoding),'fixture')
    self.assertIn('identificação',rows[0]['text'])
+ def test_utf16_trailing_transport_padding_does_not_corrupt_article(self):
+  raw='<html><body><p>Art. 1º Identificação válida.</p></body></html>'.encode('utf-16')+b'   '
+  rows=builder.parse_law(raw,'fixture')
+  self.assertIn('Identificação válida',rows[0]['text'])
  def test_annex_tables_and_figures_survive_the_signature_boundary(self):
   rows=self.parse('<p>Art. 1º Regra.</p><p>Brasília, assinatura.</p><p>ANEXO I</p><p>Definições.</p><table><tr><td>Termo</td><td>Definição</td></tr><tr><td>Veículo</td><td>Conceito oficial</td></tr></table><img src="/modelo.png">')
   self.assertEqual(rows[-1]['key'],'anexo-1')

@@ -1,0 +1,622 @@
+{
+  "asOf": "2026-10-13",
+  "profiles": [
+    {
+      "id": "investigador",
+      "label": "Investigador",
+      "records": 298,
+      "exams": [
+        {
+          "state": "PI",
+          "year": 2026,
+          "board": "FGV",
+          "records": 74,
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/oficial-investigador-cns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pc-pi-investigador-e-perito-2025.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Oficial Investigador"
+        },
+        {
+          "state": "CE",
+          "year": 2025,
+          "board": "UECE-CEV",
+          "records": 95,
+          "sources": [
+            {
+              "title": "Prova objetiva (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+              "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/oippcceg1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+              "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/comunicado1432025cev.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Oficial Investigador de Polícia"
+        },
+        {
+          "state": "MG",
+          "year": 2025,
+          "board": "FGV",
+          "records": 69,
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador-de-policia-icns401-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpinvestigador.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Investigador de Polícia I"
+        },
+        {
+          "state": "PE",
+          "year": 2024,
+          "board": "CEBRASPE",
+          "records": 60,
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+              "is_official": true
+            }
+          ],
+          "career": "Agente de Polícia"
+        }
+      ],
+      "subjects": [
+        {
+          "subject": "Português",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Informática",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Administrativo",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 4,
+          "exams": 4
+        },
+        {
+          "subject": "Raciocínio lógico",
+          "exams_present": 3,
+          "exams": 4
+        },
+        {
+          "subject": "Criminologia",
+          "exams_present": 3,
+          "exams": 4
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 3,
+          "exams": 4
+        },
+        {
+          "subject": "Contabilidade",
+          "exams_present": 2,
+          "exams": 4
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 2,
+          "exams": 4
+        },
+        {
+          "subject": "Estatística",
+          "exams_present": 2,
+          "exams": 4
+        },
+        {
+          "subject": "Conhecimentos Regionais (Piauí)",
+          "exams_present": 1,
+          "exams": 4
+        },
+        {
+          "subject": "RLM/estatística/contabilidade (bloco misto)",
+          "exams_present": 1,
+          "exams": 4
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 1,
+          "exams": 4
+        },
+        {
+          "subject": "Redação oficial",
+          "exams_present": 1,
+          "exams": 4
+        }
+      ]
+    },
+    {
+      "id": "escrivao",
+      "label": "Escrivão",
+      "records": 240,
+      "exams": [
+        {
+          "state": "PE",
+          "year": 2024,
+          "board": "CEBRASPE",
+          "records": 60,
+          "sources": [
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+              "is_official": true
+            }
+          ],
+          "career": "Escrivão de Polícia"
+        },
+        {
+          "state": "AM",
+          "year": 2022,
+          "board": "FGV",
+          "records": 80,
+          "sources": [
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Escrivão de Polícia (2022, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/escrivao_de_policia_-_4a_classens200_tipo_1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Escrivão de Polícia"
+        },
+        {
+          "state": "SE",
+          "year": 2021,
+          "board": "CEBRASPE",
+          "records": 100,
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_002_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_002_01.PDF",
+              "is_official": true
+            }
+          ],
+          "career": "Escrivão de Polícia"
+        }
+      ],
+      "subjects": [
+        {
+          "subject": "Português",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Arquivologia",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Informática",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Administrativo",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Raciocínio lógico",
+          "exams_present": 3,
+          "exams": 3
+        },
+        {
+          "subject": "Estatística",
+          "exams_present": 2,
+          "exams": 3
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 2,
+          "exams": 3
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 2,
+          "exams": 3
+        },
+        {
+          "subject": "Conhecimentos regionais do estado da prova",
+          "exams_present": 2,
+          "exams": 3
+        },
+        {
+          "subject": "Penal/CPP/leis especiais (bloco misto)",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Noções de Administração",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Contabilidade",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Ética",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Redação oficial",
+          "exams_present": 1,
+          "exams": 3
+        },
+        {
+          "subject": "Direito da Criança e do Adolescente",
+          "exams_present": 1,
+          "exams": 3
+        }
+      ]
+    },
+    {
+      "id": "delegado",
+      "label": "Delegado",
+      "records": 555,
+      "exams": [
+        {
+          "state": "DF",
+          "year": 2026,
+          "board": "CEBRASPE",
+          "records": 111,
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia"
+        },
+        {
+          "state": "PI",
+          "year": 2026,
+          "board": "FGV",
+          "records": 80,
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia Civil"
+        },
+        {
+          "state": "CE",
+          "year": 2025,
+          "board": "CEBRASPE",
+          "records": 89,
+          "sources": [
+            {
+              "title": "Prova objetiva – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/084_PC_CE_001_01.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Gab_Definitivo_084_PC_CE_001_01.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia Civil"
+        },
+        {
+          "state": "MG",
+          "year": 2025,
+          "board": "FGV",
+          "records": 80,
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpdelegado.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-substitutocns101-tipo-1.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia Substituto"
+        },
+        {
+          "state": "PE",
+          "year": 2024,
+          "board": "CEBRASPE",
+          "records": 100,
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia"
+        },
+        {
+          "state": "SC",
+          "year": 2024,
+          "board": "FGV",
+          "records": 95,
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-objetivacns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcscdelegado2024_gabarito_definitivo_20240220.pdf",
+              "is_official": true
+            }
+          ],
+          "career": "Delegado de Polícia"
+        }
+      ],
+      "subjects": [
+        {
+          "subject": "Administrativo",
+          "exams_present": 6,
+          "exams": 6
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 6,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Civil",
+          "exams_present": 6,
+          "exams": 6
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 5,
+          "exams": 6
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 5,
+          "exams": 6
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 5,
+          "exams": 6
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 5,
+          "exams": 6
+        },
+        {
+          "subject": "Criminologia",
+          "exams_present": 4,
+          "exams": 6
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 3,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Ambiental",
+          "exams_present": 3,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Tributário",
+          "exams_present": 3,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Empresarial",
+          "exams_present": 3,
+          "exams": 6
+        },
+        {
+          "subject": "CPP/leis especiais (bloco misto)",
+          "exams_present": 2,
+          "exams": 6
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 2,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Processual Civil",
+          "exams_present": 2,
+          "exams": 6
+        },
+        {
+          "subject": "Penal/leis especiais (bloco misto)",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Ciências Forenses",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Conhecimentos Regionais (Piauí)",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Português",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Noções de Tecnologia Aplicável a Investigações Criminais",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Primeiros Socorros",
+          "exams_present": 1,
+          "exams": 6
+        },
+        {
+          "subject": "Direito Eleitoral",
+          "exams_present": 1,
+          "exams": 6
+        }
+      ]
+    }
+  ],
+  "training": [
+    {
+      "label": "Penal, Processo Penal e leis especiais",
+      "investigador": 40,
+      "escrivao": 33,
+      "delegado": 48
+    },
+    {
+      "label": "Constitucional e Administrativo",
+      "investigador": 20,
+      "escrivao": 16,
+      "delegado": 22
+    },
+    {
+      "label": "Português e redação oficial",
+      "investigador": 15,
+      "escrivao": 20,
+      "delegado": 5
+    },
+    {
+      "label": "Informática e matérias quantitativas, conforme edital",
+      "investigador": 15,
+      "escrivao": 13,
+      "delegado": 0
+    },
+    {
+      "label": "Medicina Legal; Arquivologia para Escrivão",
+      "investigador": 5,
+      "escrivao": 12,
+      "delegado": 5
+    },
+    {
+      "label": "Complementares conforme edital",
+      "investigador": 5,
+      "escrivao": 6,
+      "delegado": 20
+    }
+  ]
+}

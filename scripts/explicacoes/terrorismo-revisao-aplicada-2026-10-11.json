@@ -1,0 +1,273 @@
+{
+  "course_slug": "terrorismo",
+  "units": {
+    "art-1": {
+      "simples": "A lei regulamenta o tratamento constitucional do terrorismo e disciplina definição, investigação, processo e organizações terroristas. Não basta chamar um ato de terror para dispensar os elementos do tipo legal.",
+      "pontos": [
+        "Definição penal exige elementos legais, não rótulos."
+      ],
+      "atencao": [
+        "Não confunda terrorismo com qualquer crime violento ou com o Marco Antifacção: são diplomas distintos."
+      ],
+      "exemplo": "A investigação examina atos, motivos e finalidade do art. 2º antes de atribuir terrorismo. Variação: O fato é violento, mas faltam os elementos de terrorismo: examinam-se os tipos cabíveis sem aplicar o rótulo automaticamente.",
+      "prova": [
+        "O nome popular do fato dispensa os elementos do art. 2º? Não; a tipificação exige os elementos legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-2": {
+      "simples": "Terrorismo pode ser praticado por um ou mais indivíduos. Exige ato previsto, motivos de xenofobia ou discriminação/preconceito de raça, cor, etnia e religião, finalidade de terror social/generalizado e exposição a perigo dos bens indicados. A pena é reclusão de 12 a 30 anos, além das sanções de ameaça ou violência. O §2º protege manifestações com os propósitos e objetivos constitucionais descritos, sem excluir outros crimes.",
+      "pontos": [
+        "Ato + motivos legais + finalidade de terror + perigo; um indivíduo pode praticar."
+      ],
+      "atencao": [
+        "Não exigir organização como condição de todo terrorismo. A exclusão do §2º não é imunidade penal geral. Incisos vetados não fornecem hipóteses vigentes."
+      ],
+      "exemplo": "Um autor emprega explosivos, com motivação racial e finalidade de terror generalizado, expondo pessoas a perigo: os elementos devem ser examinados em conjunto. Variação: Uma manifestação visa defender direitos constitucionais: não a classifique automaticamente como terrorismo; eventual outro delito continua sujeito à lei.",
+      "prova": [
+        "O crime exige pelo menos quatro autores? Não; pode ser praticado por um ou mais indivíduos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "Promover, constituir, integrar ou auxiliar organização terrorista, pessoalmente ou por interposta pessoa, é crime com reclusão de 5 a 8 anos e multa. Os parágrafos vetados não ampliam o rol vigente.",
+      "pontos": [
+        "Organização terrorista: promover, constituir, integrar ou auxiliar."
+      ],
+      "atencao": [
+        "Não confunda pena deste artigo com os 12–30 anos do art. 2º ou 15–30 do financiamento."
+      ],
+      "exemplo": "O autor presta auxílio por intermediário à organização voltada aos atos terroristas legalmente definidos. Variação: A prova usa a faixa do financiamento para integração: as penas dos artigos são distintas.",
+      "prova": [
+        "O auxílio por interposta pessoa está abrangido? Sim; o tipo o inclui expressamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Atos preparatórios com propósito inequívoco de consumar terrorismo são punidos com a pena do delito consumado reduzida de 1/4 a 1/2. Recrutamento, organização, transporte, municiamento e treinamento do §1º possuem hipóteses específicas de país distinto da residência ou nacionalidade. Sem esse deslocamento/treinamento internacional, o §2º prevê redução de 1/2 a 2/3 nas hipóteses daquele parágrafo.",
+      "pontos": [
+        "Caput: redução 1/4–1/2; §2º: 1/2–2/3 nas hipóteses do §1º."
+      ],
+      "atencao": [
+        "Não chamar qualquer pensamento ou ato ambíguo de preparação punível. Não aplicar a redução do §2º indistintamente a todos os atos do caput."
+      ],
+      "exemplo": "Há recrutamento com propósito terrorista inequívoco e viagem a país distinto da residência/nacionalidade: examina-se o §1º. Variação: A conduta correspondente não envolve a dimensão internacional indicada: compara-se a redução específica do §2º.",
+      "prova": [
+        "O caput pune preparação com propósito meramente duvidoso? Não; exige propósito inequívoco de consumar."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "O financiamento abrange diversas formas, diretas e indiretas, de obter, oferecer, guardar, investir e disponibilizar recursos, bens, direitos, valores ou serviços para planejar, preparar ou executar crimes da lei. A pena é reclusão de 15 a 30 anos. Também alcança financiamento de pessoas ou grupos com atividade terrorista principal, secundária ou eventual.",
+      "pontos": [
+        "Financiamento direto ou indireto; não apenas dinheiro."
+      ],
+      "atencao": [
+        "Não limitar o crime ao pagamento feito depois de ataque consumado."
+      ],
+      "exemplo": "Recursos são disponibilizados para preparar atentado com a finalidade típica: o planejamento está abrangido. Variação: São serviços destinados ao mesmo fim, em vez de dinheiro: o tipo inclui serviços de qualquer natureza.",
+      "prova": [
+        "O financiamento só abrange dinheiro e execução já consumada? Não; inclui bens, serviços, planejamento e preparação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Se resultar lesão corporal grave, a pena aumenta 1/3; se resultar morte, aumenta 1/2. A majorante não se aplica quando o resultado já é elementar do crime em questão, evitando dupla valoração.",
+      "pontos": [
+        "Lesão grave: +1/3; morte: +1/2; ressalva de elementar."
+      ],
+      "atencao": [
+        "Não confundir aumento por resultado com pena autônoma sem examinar o tipo e a ressalva."
+      ],
+      "exemplo": "Um crime da lei gera lesão grave e esse resultado não é sua elementar: examina-se aumento de um terço. Variação: O resultado já integra o tipo aplicado: a ressalva impede aplicar mecanicamente a mesma majorante.",
+      "prova": [
+        "O aumento por morte é de um terço? Não; é de metade, observada a ressalva de elementar."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "Na hipótese de preparação punível do art. 5º, aplicam-se desistência voluntária e arrependimento eficaz do art. 15 do CP mesmo antes da execução do terrorismo. Isso não apaga outros delitos já praticados.",
+      "pontos": [
+        "Art. 15 do CP: responde pelos atos já praticados."
+      ],
+      "atencao": [
+        "Não confundir desistência voluntária com arrependimento posterior do art. 16 do CP."
+      ],
+      "exemplo": "O autor abandona voluntariamente o plano nas condições legais: examina-se o art. 15, preservando responsabilidade pelos atos já praticados. Variação: A preparação incluiu um delito autônomo de armas: a desistência não concede perdão geral por esse fato.",
+      "prova": [
+        "A regra apaga automaticamente todos os delitos já praticados? Não; o art. 15 preserva a responsabilização pelos atos praticados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-11": {
+      "simples": "Os crimes da Lei de Terrorismo são considerados contra o interesse da União: PF investiga por inquérito e Justiça Federal processa e julga. É previsão expressa desta lei, diferente de presumir que toda investigação da PF federaliza qualquer delito.",
+      "pontos": [
+        "Investigação PF; processo/julgamento Justiça Federal."
+      ],
+      "atencao": [
+        "Parágrafo vetado não cria outra competência. Não generalizar esta regra a toda Lei 10.446."
+      ],
+      "exemplo": "O fato preenche um crime desta lei e a competência é examinada segundo a previsão federal. Variação: A PF investiga outro crime por repercussão interestadual: esta regra específica não decide, por si, a competência daquele outro caso.",
+      "prova": [
+        "A lei atribui processo e julgamento à Justiça Federal? Sim; o art. 11 traz previsão expressa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Com indícios suficientes, o juiz pode decretar medidas assecuratórias na investigação ou ação penal sobre instrumentos, produtos ou proveitos, inclusive em nome de interpostas pessoas. A redação prevê atuação de ofício, requerimento do MP ou representação policial, com oitiva do MP em 24 horas; sua aplicação deve ser lida com a estrutura acusatória do CPP. Alienação antecipada preserva valor; origem e destinação lícitas permitem liberação, mantido o necessário às obrigações legais.",
+      "pontos": [
+        "Medida assecuratória não é pena definitiva; bens de interpostas pessoas podem ser alcançados."
+      ],
+      "atencao": [
+        "Não liberar todo patrimônio automaticamente por uma alegação de licitude. Pedido de liberação exige comparecimento pessoal indicado no §3º. Não extrapolar o texto para iniciativa judicial investigatória irrestrita."
+      ],
+      "exemplo": "Bem relacionado ao crime deprecia rapidamente: examina-se alienação antecipada para preservar valor. Variação: Comprova-se licitude da origem e destinação: examina-se liberação, preservada constrição necessária à reparação e obrigações legais.",
+      "prova": [
+        "A alienação antecipada se destina a preservar valor de bens deterioráveis? Sim; o §1º também contempla depreciação ou dificuldade de manutenção."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-13": {
+      "simples": "Se as circunstâncias aconselharem, o juiz nomeia pessoa física ou jurídica qualificada para administrar os bens, ouvido o MP e mediante compromisso. Não é nomeação automática de qualquer pessoa.",
+      "pontos": [
+        "Nomeação judicial + oitiva do MP + qualificação + compromisso."
+      ],
+      "atencao": [
+        "Distinguir administrador de proprietário ou destinatário definitivo dos bens."
+      ],
+      "exemplo": "A administração exige atuação técnica e o juiz nomeia entidade qualificada após ouvir o MP. Variação: O indicado não tem qualificação: não basta vínculo com a investigação para atender ao artigo.",
+      "prova": [
+        "O administrador pode ser pessoa jurídica qualificada? Sim; a lei admite pessoa física ou jurídica."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-14": {
+      "simples": "O administrador recebe remuneração judicialmente fixada, preferencialmente paga pelo produto dos bens. Presta informações periódicas por determinação judicial, incluindo investimentos/reinvestimentos. Atos de administração são levados ao MP, que pode requerer providências.",
+      "pontos": [
+        "Remuneração fixada pelo juiz; prestação de informações; ciência ao MP."
+      ],
+      "atencao": [
+        "Preferencialmente não significa fonte única obrigatória em qualquer situação."
+      ],
+      "exemplo": "O administrador informa investimentos e situação dos bens conforme determinação do juiz. Variação: Investe recursos sem prestar as informações determinadas: a função não dispensa controle judicial e ministerial.",
+      "prova": [
+        "A remuneração é fixada livremente pelo administrador? Não; cabe ao juiz fixá-la."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-15": {
+      "simples": "A pedido de autoridade estrangeira competente, o juiz determina medidas assecuratórias com tratado/convenção ou, na sua ausência, reciprocidade. Sem tratado, bens ou produto da alienação são repartidos metade para cada Estado, resguardados lesado e terceiro de boa-fé.",
+      "pontos": [
+        "Cooperação: tratado ou reciprocidade; repartição 1/2 na falta de tratado."
+      ],
+      "atencao": [
+        "A falta de tratado não impede sempre a medida. Não sacrificar direitos de lesado/terceiro de boa-fé pela divisão."
+      ],
+      "exemplo": "O Estado solicitante oferece reciprocidade mesmo sem tratado: a hipótese legal deve ser examinada. Variação: Há titular lesado ou terceiro de boa-fé: seus direitos são ressalvados antes de tratar a repartição como livre.",
+      "prova": [
+        "A ausência de tratado impede toda cooperação assecuratória? Não; a reciprocidade também permite a aplicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Para investigação, processo e julgamento, aplicam-se as disposições da Lei 12.850. Isso exige observar requisitos de cada técnica, não copiar todas como poderes irrestritos nem confundir organização terrorista com qualquer organização criminosa.",
+      "pontos": [
+        "Aplicação da Lei 12.850 ao procedimento, com seus requisitos."
+      ],
+      "atencao": [
+        "Não dispensar autorização judicial quando exigida pela técnica concreta."
+      ],
+      "exemplo": "A investigação usa técnica da Lei 12.850 e verifica seu fundamento e requisitos. Variação: Pretende aplicá-la sem a autorização legalmente exigida: a remissão não elimina essa condição.",
+      "prova": [
+        "A remissão dispensa os requisitos das técnicas investigatórias? Não; a lei referida deve ser aplicada com suas condições."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm"
+      ]
+    },
+    "art-17": {
+      "simples": "Aplicam-se aos crimes desta lei as disposições da Lei 8.072. Deve-se consultar a compilação atual e a jurisprudência: a remissão não impõe automaticamente regime inicial fechado nem substitui a análise temporal das mudanças.",
+      "pontos": [
+        "Lei dos Hediondos e jurisprudência, não apenas texto original."
+      ],
+      "atencao": [
+        "Não presumir imprescritibilidade ou regime fechado obrigatório por essa remissão."
+      ],
+      "exemplo": "A prova indaga o regime inicial: examinam-se individualização e jurisprudência, além da legislação. Variação: A questão usa a remissão para chamar todo crime imprescritível: isso não decorre do artigo.",
+      "prova": [
+        "A remissão torna automaticamente todos os crimes imprescritíveis? Não; essa conclusão não está no dispositivo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm"
+      ]
+    },
+    "art-18": {
+      "simples": "Acrescentou crimes da Lei de Terrorismo ao rol da prisão temporária, alínea p do art. 1º, III, da Lei 7.960. A inclusão permanece na compilação atual e não dispensa os cinco requisitos cumulativos fixados pelo STF.",
+      "pontos": [
+        "Terrorismo no rol; requisitos da temporária continuam exigíveis."
+      ],
+      "atencao": [
+        "Rol não equivale a prisão automática. Distinguir temporária de preventiva e pena."
+      ],
+      "exemplo": "A imputação é terrorismo e a autoridade demonstra os requisitos concretos da temporária. Variação: Só cita o nome do crime sem demonstrar imprescindibilidade ou insuficiência de alternativas: a inclusão no rol não basta.",
+      "prova": [
+        "A inclusão no rol autoriza prisão temporária automática? Não; os requisitos legais e constitucionais permanecem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=481715"
+      ]
+    },
+    "art-19": {
+      "simples": "A Lei 12.850 passou a abranger organizações voltadas à prática de atos terroristas legalmente definidos. A redação foi conferida na lei alterada; essa remissão não converte qualquer associação ou manifestação em organização terrorista.",
+      "pontos": [
+        "Organização voltada a atos terroristas legalmente definidos."
+      ],
+      "atencao": [
+        "Não substituir os elementos legais por classificação política ou popular."
+      ],
+      "exemplo": "O grupo se volta a atos que preencham a definição legal: examina-se a aplicação da Lei 12.850. Variação: É um movimento reivindicatório sem os elementos típicos: o artigo não permite rotulá-lo automaticamente como organização terrorista.",
+      "prova": [
+        "Qualquer grupo reivindicatório é organização terrorista por essa remissão? Não; são necessários os atos terroristas legalmente definidos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm"
+      ]
+    },
+    "art-20": {
+      "simples": "A Lei 13.260 entrou em vigor na publicação, sem vacância prevista neste artigo. Fatos anteriores exigem análise temporal e respeito à irretroatividade da lei penal mais gravosa.",
+      "pontos": [
+        "Entrada em vigor na publicação."
+      ],
+      "atencao": [
+        "Não aplicar nova incriminação retroativamente para prejudicar."
+      ],
+      "exemplo": "A prova pergunta a vacância original: não há espera de 45 dias neste artigo. Variação: O fato precede a nova incriminação: não se aplica retroativamente a regra mais gravosa.",
+      "prova": [
+        "O art. 20 fixa vacância de 45 dias? Não; prevê vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-penal-01-10-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "role": "Agente de Polícia Civil",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "sources": {
+    "official_key_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+    "official_key_sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+    "official_key_title": "Gabarito Oficial Definitivo — 01100 Agente de Polícia Civil, Prova Tipo B",
+    "official_edital_url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "official_edital_sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "program_pages": "Anexo I, p. 53, Diário Oficial de SC nº 22.660, 12/12/2025",
+    "caderno_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+    "caderno_sha256": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+    "program_excerpt": "NOÇÕES DE DIREITO PENAL: introdução; conceito, características, função e princípios; conceito e elementos do crime; classificações; ação e omissão; sujeito ativo/passivo e bem jurídico; tipicidade, ilicitude, culpabilidade e punibilidade; erro de tipo e de proibição; consumação, tentativa, desistência voluntária, arrependimento eficaz e posterior, crime impossível; concurso de pessoas e de crimes; extinção da punibilidade; crimes contra a pessoa, patrimônio, dignidade sexual, fé pública, administração pública e Estado Democrático de Direito."
+  },
+  "result": "10 gabaritos confrontados; temas expressamente incluídos no Anexo I; explicações pedagógicas preparadas. A mudança de status depende da conferência do estado atual da base.",
+  "items": [
+    {
+      "id": "e6f5dd71-ef71-4758-aebb-9bf40b6ae75d",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 1,
+      "subject": "Direito Penal",
+      "stem": "Guilherme, 38 anos de idade, em 31 de maio de 2024, na cidade de Tubarão-SC, adentrou um Supermercado Carrefour para adquirir produtos de limpeza, carnes e chocolates. Ele, percebendo os valores dos produtos, sem violência ou grave ameaça à pessoa, subtraiu, para si, uma caixa de chocolate, avaliada em R$ 30 (trinta) reais. Ao sair do supermercado, Guilherme é preso em flagrante delito pelos seguranças do estabelecimento. Com base nos fatos narrados, marque a afirmativa correta.",
+      "options": {
+        "A": "Não é aplicável, ao caso, o princípio da insignificância, tendo em vista ter havido dano relevante ao bem jurídico patrimônio do supermercado.",
+        "B": "É aplicável, ao caso, o princípio da insignificância, que exclui a tipicidade em sua dimensão material.",
+        "C": "É aplicável, ao caso, o princípio da insignificância, que exclui a tipicidade em sua dimensão formal.",
+        "D": "Não é aplicável, ao caso, o princípio da insignificância, tendo em vista o valor da caixa de chocolates.",
+        "E": "É aplicável, ao caso, o princípio da insignificância, que exclui a antijuridicidade da conduta praticada."
+      },
+      "official_answer": "B",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa B é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "B é o gabarito definitivo. A insignificância afasta a tipicidade material, não a formal nem a ilicitude. O valor de R$ 30 e a ausência de violência apontam para lesão inexpressiva; a conclusão deve considerar também os quatro vetores do STF: mínima ofensividade, nenhuma periculosidade social, reduzido grau de reprovabilidade e inexpressividade da lesão. O valor isolado não cria um limite automático nem resolve todos os casos.\nA) e D) tratam dano/valor como decisivos sem avaliar o contexto. C) confunde tipicidade material com formal. E) confunde tipicidade com ilicitude.\nBase: STF, HC 84.412/SP; CP, art. 155.",
+      "tested_topic": "Tipicidade material e princípio da insignificância em crime patrimonial.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2226200"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa B está correta. O princípio da insignificância afasta a tipicidade material quando a lesão ao bem jurídico é irrelevante, desde que presentes os vetores reconhecidos pela jurisprudência, como mínima ofensividade e reduzido grau de reprovabilidade. Ele não elimina a tipicidade formal nem a ilicitude."
+    },
+    {
+      "id": "3b1a3115-43e4-4147-9007-377fe77babe5",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 2,
+      "subject": "Direito Penal",
+      "stem": "Simone, 49 anos de idade, doutora em Direito Civil e professora universitária, realiza um sonho de criança ao conhecer a linda cidade de Florianópolis-SC. Durante a sua estada, entusiasmada com a riqueza cultural da cidade e o reencontro com a sua amiga de infância, Natalia, 47 anos de idade, Simone aceita pequena quantidade de pó branco que lhe é oferecida por Paulo, guia turístico. Simone, acreditando tratarse de brincadeira com farinha, recebe o pó branco e o guarda em sua mochila de praia. Passados alguns minutos, Simone é surpreendida por policiais civis que a imputam a prática de crime de tráfico de drogas. Com base nos fatos narrados, marque a afirmativa correta.",
+      "options": {
+        "A": "Em tese, Simone teria incidido em erro de tipo que, nos termos do artigo 21 do Código Penal, se inescusável afastaria o dolo e a culpa.",
+        "B": "Em tese, Simone teria incidido em erro de tipo que, nos termos do artigo 20 do Código Penal, se escusável geraria a redução da pena de um sexto a um terço.",
+        "C": "Em tese, Simone teria incidido em erro de proibição que, nos termos do artigo 21 do Código Penal, se escusável excluiria o dolo, mas permitiria a punição na modalidade culposa.",
+        "D": "Em tese, Simone teria incidido em erro de proibição que, nos termos do artigo 21 do Código Penal, se escusável geraria a exclusão da antijuridicidade ou ilicitude.",
+        "E": "Em tese, Simone teria incidido em erro de tipo que, nos termos do artigo 20 do Código Penal, se escusável afastaria o dolo e a culpa."
+      },
+      "official_answer": "E",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa E é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "E é correta. Simone acredita receber farinha e desconhece a natureza da substância: erro sobre elemento fático do tipo (erro de tipo essencial). Pelo art. 20 do CP, o erro inevitável exclui dolo e culpa; o evitável exclui dolo e só permite punição culposa se houver modalidade culposa prevista, inexistente para o tráfico.\nA) cita art. 21, que trata de erro sobre a ilicitude. B) atribui ao art. 20 a redução do art. 21. C) troca erro de tipo por erro de proibição e inverte seus efeitos. D) erro de proibição inevitável isenta de pena; não exclui a ilicitude.\nBase: CP, arts. 20 e 21; Lei 11.343/2006, art. 33.",
+      "tested_topic": "Erro de tipo essencial e distinção do erro de proibição.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l11343.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa E está correta. Simone desconhecia a realidade do objeto recebido, o que caracteriza erro de tipo sobre elemento do fato, disciplinado pelo art. 20 do Código Penal. O erro inevitável exclui dolo e culpa; no caso narrado, a alternativa reproduz essa consequência."
+    },
+    {
+      "id": "82e22511-e91a-4b05-b998-d40719537e64",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 3,
+      "subject": "Direito Penal",
+      "stem": "Mário, 58 anos de idade, médico, em decorrência de cobranças de dívidas por parte de André, 42 anos de idade, decide ceifar a vida de André. Em 31 de maio de 2024, Mário, com animus necandi e portando arma de fogo com dez projéteis, dirige-se até a residência de André para concretizar seu desejo. Ao se deparar com André, Mário efetua os dez disparos de arma de fogo contra a vítima. Após efetuar os dez disparos, Mário é tomado por uma sensação divina e, de imediato, coloca André em seu carro e o leva até o hospital mais próximo. André é submetido a algumas cirurgias e sobrevive. A partir da situação apresentada, marque a afirmativa correta.",
+      "options": {
+        "A": "Aplica-se, ao caso, o instituto do arrependimento posterior e Mário deverá responder criminalmente pelo crime de tentativa de homicídio.",
+        "B": "Aplica-se, ao caso, o instituto da desistência voluntária e Mário deverá responder criminalmente pelo crime de tentativa de homicídio.",
+        "C": "Aplica-se, ao caso, o instituto do arrependimento posterior e Mário deverá responder criminalmente pelo crime de lesão corporal.",
+        "D": "Aplica-se, ao caso, o instituto do arrependimento eficaz e Mário deverá responder criminalmente pelo crime de lesão corporal.",
+        "E": "Aplica-se, ao caso, o instituto da desistência voluntária e Mário deverá responder criminalmente pelo crime de lesão corporal."
+      },
+      "official_answer": "D",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa D é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "D é a correta. Os disparos esgotaram a execução; o agente depois impede voluntariamente a morte levando a vítima ao hospital. É arrependimento eficaz (CP, art. 15), respondendo pelos atos já praticados, como lesões. A hipótese pressupõe que o socorro foi eficaz para evitar o resultado.\nA) e B) mantêm tentativa apesar de o resultado ter sido impedido. C) confunde com arrependimento posterior, que pressupõe crime consumado sem violência ou grave ameaça e reparação nos termos legais. E) descreve desistência voluntária, que interrompe uma execução ainda em curso.\nBase: CP, art. 15.",
+      "tested_topic": "Arrependimento eficaz; desistência voluntária; art. 15 do CP.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa D está correta. Após efetuar todos os disparos, Mário esgotou os atos executórios e, por iniciativa própria, socorreu a vítima, impedindo o resultado morte. Trata-se de arrependimento eficaz; responde pelos atos já praticados, lesão corporal."
+    },
+    {
+      "id": "28759241-3634-42dd-87df-5c03749897ed",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 4,
+      "subject": "Direito Penal",
+      "stem": "Em maio de 2022, Rodrigo, 62 anos de idade, casado, contador, mediante ardil, induz em erro Luciana, 61 anos de idade, divorciada, médica, e obtém, para si, vantagem ilícita em prejuízo de Luciana, gerando relevante resultado gravoso. Com base nos fatos narrados, marque a afirmativa correta.",
+      "options": {
+        "A": "Rodrigo praticara o crime de estelionato com a incidência da majorante de um terço até o dobro por ter tido como vítima pessoa idosa.",
+        "B": "Rodrigo praticara o crime de estelionato com a incidência da majorante de um terço até a metade por ter tido como vítima pessoa idosa.",
+        "C": "Rodrigo praticara o crime de estelionato com a incidência da majorante de um sexto até a metade por ter tido como vítima pessoa idosa.",
+        "D": "Rodrigo praticara o crime de estelionato sem a incidência da majorante de um terço até o dobro por não ter tido como vítima pessoa idosa.",
+        "E": "Rodrigo praticara o crime de estelionato com a incidência da majorante de um terço a dois terços por ter tido como vítima pessoa idosa."
+      },
+      "official_answer": "A",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa A é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "A é correta para o fato de maio de 2022. A Lei 14.155/2021 já previa, no art. 171, § 4º, aumento de um terço ao dobro se o estelionato fosse praticado contra idoso ou vulnerável, considerada a relevância do resultado gravoso. Luciana tinha 61 anos (idosa a partir de 60) e o enunciado afirma resultado gravoso relevante.\nB), C) e E) dão frações diferentes da redação aplicável. D) nega a condição de idosa apesar de ela ter mais de 60 anos. Alterações penais posteriores não retroagem para prejudicar o agente.\nBase: CP, art. 171, § 4º, redação da Lei 14.155/2021; Lei 10.741/2003, art. 1º.",
+      "tested_topic": "Estelionato contra pessoa idosa; aplicação temporal do art. 171, § 4º, do CP.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14155.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa A está correta. O estelionato contra pessoa idosa possui causa de aumento de um terço até o dobro, prevista no art. 171, § 4º, do Código Penal."
+    },
+    {
+      "id": "c27c8438-1c64-4d6e-a307-f6b3c7bc3c39",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 5,
+      "subject": "Direito Penal",
+      "stem": "João Bosco, 34 anos de idade, Delegado da Polícia Federal, é casado com Roberta, 32 anos de idade, psicóloga. O casal tem o sonho de ter filhos. Após anos de tentativas frustradas, o casal adota uma linda menina de 4 meses, a amada Maria Antonieta. No ano de 2024, Maria Antonieta, com 8 anos de idade, é vítima do crime de homicídio perpetrado por Rogério Duarte, 56 anos de idade. Rogério havia sido preso em flagrante pelo Delegado João Bosco, no ano de 2018, por envolvimento em tráfico internacional de drogas. Após a prisão, Rogério prometera se vingar do Delegado da Polícia Federal, o que se concretizara na prática de homicídio contra Maria Antonieta. Com base nos fatos narrados e no Código Penal, assinale a alternativa correta.",
+      "options": {
+        "A": "Incidirá a qualificadora do homicídio praticado contra autoridade ou agente descrito nos artigos 142 e 144 da Constituição da República de 1988, integrantes do Sistema Prisional e da Força Nacional de Segurança Pública, no exercício da função ou em decorrência dela, ou contra o seu cônjuge, companheiro ou parente consanguíneo ou de qualquer natureza, até o segundo grau, em razão dessa condição.",
+        "B": "Incidirá a qualificadora do homicídio praticado contra autoridade ou agente descrito nos artigos 142 e 144 da Constituição da República de 1988, integrantes do Sistema Prisional e da Força Nacional de Segurança Pública, no exercício da função ou em decorrência dela, ou contra o seu cônjuge, companheiro ou parente consanguíneo ou de qualquer natureza, até o quarto grau, em razão dessa condição.",
+        "C": "Incidirá a qualificadora do homicídio praticado contra autoridade ou agente descrito nos artigos 142 e 144 da Constituição da República de 1988, integrantes do Sistema Prisional e da Força Nacional de Segurança Pública, no exercício da função ou em decorrência dela, ou contra o seu cônjuge, companheiro ou parente consanguíneo, até o segundo grau, em razão dessa condição.",
+        "D": "Não incidirá a qualificadora do homicídio praticado contra autoridade ou agente descrito nos artigos 142 e 144 da Constituição da República de 1988, integrantes do Sistema Prisional e da Força Nacional de Segurança Pública, no exercício da função ou em decorrência dela, ou contra o seu cônjuge, companheiro ou parente consanguíneo, até o terceiro grau, em razão dessa condição.",
+        "E": "Incidirá a qualificadora do homicídio praticado contra autoridade ou agente descrito nos artigos 142 e 144 da Constituição da República de 1988, integrantes do Sistema Prisional e da Força Nacional de Segurança Pública, no exercício da função ou em decorrência dela, ou contra o seu cônjuge, companheiro ou parente consanguíneo, até o quarto grau, em razão dessa condição, com base em uma interpretação extensiva do conceito de filho, o que é admissível no Constitucional Direito Penal."
+      },
+      "official_answer": "D",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa D é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "D é correta quanto à qualificadora funcional perguntada. Na redação aplicável aos fatos de 2024, o art. 121, § 2º, VII, do CP abrangia o homicídio contra agente dos arts. 142/144 da CF e seu cônjuge, companheiro ou parente consanguíneo até terceiro grau, em razão dessa condição. A filha adotiva tem filiação civil plena, mas o texto da qualificadora funcional aplicável ao agente policial exige parentesco consanguíneo até terceiro grau; não se pode ampliá-la por analogia contra o réu.\nA), B), C) e E) erram o tipo de parentesco ou o grau. Limite da resposta: isso afasta somente a qualificadora funcional. A vítima tinha 8 anos, podendo incidir a qualificadora autônoma do art. 121, § 2º, IX (Lei 14.344/2022), além de outras conforme fatos provados.\nBase: CP, art. 121, § 2º, VII e IX; Leis 13.142/2015 e 14.344/2022; CF, art. 227, § 6º.",
+      "tested_topic": "Qualificadora funcional do homicídio; parentesco consanguíneo; qualificadora autônoma por vítima menor de 14 anos.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13142.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa D está correta. A qualificadora alcança parente consanguíneo ou por afinidade até o terceiro grau; filha adotiva é parente por vínculo civil, e a redação legal não autoriza ampliar o alcance para incluí-la nessa hipótese."
+    },
+    {
+      "id": "d877c024-cbd7-43fe-82f3-7e37a732a156",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 6,
+      "subject": "Direito Penal",
+      "stem": "Américo, 48 anos de idade, professor efetivo no Curso de Direito da Universidade Federal de Santa Catarina (UFSC), está na fase de escrever a sua tese de doutorado na Universidade Estadual do Rio de Janeiro (UERJ). Com o objetivo de facilitar o desenvolvimento da tese, Américo e seu irmão, Marcelo, 46 anos de idade, valendo-se do acesso irrestrito de Américo na UFSC, se apropriam do computador institucional de que Américo tem a posse em razão do cargo e o levam para a residência de Américo. Quando da posse no cargo de professor efetivo na UFSC, Marcelo presenteou Américo com uma linda coleção de Direito Penal do jurista Nelson Hungria. Nesse contexto, marque a afirmativa correta.",
+      "options": {
+        "A": "No caso de participação de menor importância reconhecida na decisão penal condenatória, a pena poderá ser reduzida de um sexto até a metade.",
+        "B": "A elementar típica, funcionário público, do crime de peculato se comunica a Marcelo, com base no artigo 30 do Código Penal.",
+        "C": "Américo, por ser funcionário público, deverá responder criminalmente pelo crime de peculato e Marcelo, por não ser funcionário público, deverá responder pelo crime de furto.",
+        "D": "Américo e Marcelo deverão responder criminalmente pelo crime de furto, com base na teoria monista.",
+        "E": "O artigo 29 do Código Penal, ao estabelecer que quem, de qualquer modo concorre para o crime, incide nas penas a este cominadas, na medida de sua culpabilidade, adota, como regra, a teoria pluralista no concurso de pessoas."
+      },
+      "official_answer": "B",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa B é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "B é correta. O computador estava na posse de Américo em razão do cargo e foi apropriado em proveito próprio/alheio: peculato-apropriação (CP, art. 312, caput). A condição de funcionário público é elementar e se comunica ao particular que concorre sabendo dela (art. 30); o enunciado liga Marcelo ao acesso funcional do irmão.\nA) erra a fração da participação de menor importância: um sexto a um terço. C) separa artificialmente os delitos apesar da comunicabilidade. D) ignora a posse funcional e o peculato. E) chama de pluralista a teoria geral do art. 29, que é unitária/monista.\nBase: CP, arts. 29, 30 e 312.",
+      "tested_topic": "Concurso de pessoas, comunicabilidade de elementar e peculato.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa B está correta. A condição de funcionário público é elementar do peculato e comunica-se ao particular que concorre para o crime, quando conhecida, conforme art. 30 do Código Penal."
+    },
+    {
+      "id": "ff118a80-525c-484d-9f2c-c6d2da9315ae",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 7,
+      "subject": "Direito Penal",
+      "stem": "Rafhael, 41 anos de idade, com a intenção de presentear sua esposa, Karina, 38 anos de idade, adentra a uma renomada joalheria em Florianópolis e, aproveitando-se da distração da funcionária, subtrai um colar de ouro avaliado em duzentos mil reais. Rafhael esconde o colar em sua mochila e, aparentando ser uma pessoa honesta e de trato agradável, deixa a loja conversando naturalmente com a funcionária. Quando Rafhael se encontra na esquina da joalheria, três seguranças do estabelecimento comercial que acompanhavam os fatos pelas câmeras capturam Rafhael em flagrante delito. Com base nos fatos narrados, indique a alternativa correta.",
+      "options": {
+        "A": "Rafhael praticara o delito de furto consumado, com base na teoria da amotio adotada pelo Direito Penal Brasileiro.",
+        "B": "Rafhael praticara o delito de furto consumado, com base na teoria da ablatio adotada pelo Direito Penal Brasileiro.",
+        "C": "Rafhael praticara o delito de furto tentado, com base na teoria da amotio adotada pelo Direito Penal Brasileiro.",
+        "D": "Rafhael praticara o delito de furto consumado, com base na teoria da contrectatio adotada pelo Direito Penal Brasileiro.",
+        "E": "Rafhael praticara o delito de furto tentado, com base na teoria da ablatio adotada pelo Direito Penal Brasileiro."
+      },
+      "official_answer": "A",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa A é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "A é correta. O furto se consuma com a inversão da posse, mesmo breve e seguida de perseguição ou captura; não se exige posse tranquila. Rafhael escondeu o colar e saiu da loja, portanto a captura na esquina não torna o fato tentado.\nB) atribui o resultado à teoria da ablatio. C) e E) dizem tentativa apesar da inversão da posse. D) invoca contrectatio, que não é o critério fixado pelo STJ.\nBase: STJ, Tema Repetitivo 934; CP, art. 155.",
+      "tested_topic": "Consumação do furto pela inversão da posse; STJ Tema Repetitivo 934.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=934&cod_tema_final=934"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa A está correta. O furto se consuma com a inversão da posse, ainda que breve, segundo a teoria da amotio adotada pelo STJ. A captura logo depois não transforma o crime em tentativa."
+    },
+    {
+      "id": "d5a0adcf-e3e1-4b5b-bcc7-19d091dd89d5",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 8,
+      "subject": "Direito Penal",
+      "stem": "Cristina, 42 anos de idade, Delegada de Polícia no Estado de Santa Catarina, no dia 24 de dezembro de 2025, após encerrar um plantão de trabalho na Delegacia Especializada em crimes contra a dignidade sexual, dirigindo seu veículo e com o objetivo de chegar em sua residência para as festividades de natal, imprime velocidade excessiva, perde o controle em determinada curva e colide, frontalmente, com outro veículo. Em decorrência da colisão, Álvaro e Rodrigo, passageiros do outro veículo, falecem ainda no local do acidente. Nesse contexto, assinale a afirmativa correta.",
+      "options": {
+        "A": "Haverá, no caso, a incidência do concurso material de crimes e se levará em consideração apenas uma das penas, se iguais, ou a mais gravosa, se diversas, aumentada, em qualquer caso, de um sexto até dois terços.",
+        "B": "Haverá, no caso, a incidência do concurso material de crimes e as penas serão somadas, com base no critério do cúmulo material.",
+        "C": "Haverá, no caso, a incidência do concurso formal próprio de crimes e se levará em consideração apenas uma das penas, se iguais, ou a mais gravosa, se diversas, aumentada, em qualquer caso, de um sexto até a metade.",
+        "D": "Haverá, no caso, a incidência do concurso formal impróprio de crimes e as penas serão somadas, com base no critério da exasperação da pena.",
+        "E": "Haverá, no caso, a incidência do crime continuado, tendo em vista tratar-se de crimes idênticos cometidos mediante uma única ação ou omissão."
+      },
+      "official_answer": "C",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa C é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "C descreve concurso formal próprio: uma única conduta culposa causa duas mortes, sem desígnios autônomos; aplica-se uma das penas, ou a mais grave, aumentada de um sexto até metade (CP, art. 70, caput).\nA) chama de concurso material e traz fração errada. B) é cúmulo material (art. 69), pressupõe mais de uma conduta. D) concurso formal impróprio envolve desígnios autônomos e cúmulo, não exasperação. E) crime continuado exige pluralidade de ações/omissões, não uma só conduta.\nBase: CP, arts. 69–71.",
+      "tested_topic": "Concurso formal próprio e concurso de crimes culposos.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa C está correta. Uma única ação culposa produziu dois homicídios, sem desígnios autônomos. Aplica-se concurso formal próprio, com a pena de um crime aumentada de um sexto até a metade."
+    },
+    {
+      "id": "78232f2c-9698-4737-a3d9-52fa31b39e84",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 9,
+      "subject": "Direito Penal",
+      "stem": "José Flávio, 45 anos de idade, residente em São Paulo, capital, em viagem de automóvel para a Joinville-SC, é parado em um Posto da Polícia Rodoviária Federal. Ao realizar a conferência dos documentos, o policial identifica que o certificado do automóvel estava vencido e que José Flávio não possuía habilitação para dirigir veículo automotor. Ato contínuo, o policial encara José Flávio, dá um sorriso irônico e solicita cinco mil reais para liberá-lo. José Flávio não paga o valor solicitado e tem o seu veículo apreendido. Com base no exposto, marque a opção correta.",
+      "options": {
+        "A": "O policial rodoviário federal praticara o delito de corrupção passiva na modalidade tentada.",
+        "B": "José Flávio praticara o delito de corrupção passiva.",
+        "C": "O policial rodoviário federal praticara o delito de corrupção ativa na modalidade consumada.",
+        "D": "O policial rodoviário federal praticara o delito de corrupção ativa na modalidade tentada.",
+        "E": "O policial rodoviário federal praticara o delito de corrupção passiva na modalidade consumada."
+      },
+      "official_answer": "E",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa E é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "E é correta. Solicitar vantagem indevida em razão da função já consuma corrupção passiva (CP, art. 317); não é preciso que o motorista pague. A recusa não desfaz o pedido consumado.\nA) erra ao tratar a solicitação como tentativa. B) atribui o crime ao particular. C) e D) confundem com corrupção ativa (art. 333), que exige oferecer ou prometer vantagem. O agente pediu, não exigiu; a figura descrita é corrupção passiva, não concussão.\nBase: CP, arts. 317 e 333.",
+      "tested_topic": "Corrupção passiva: solicitação e consumação.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa E está correta. O crime de corrupção passiva se consuma com a solicitação da vantagem indevida, ainda que o particular não pague. O policial praticou a modalidade consumada do art. 317 do Código Penal."
+    },
+    {
+      "id": "7dd46816-6ff3-4cda-acc6-bf134af37620",
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "exam_type": "Tipo B",
+      "item_number": 10,
+      "subject": "Direito Penal",
+      "stem": "José Augusto, 34 anos de idade, e Flávio Henrique, 28 anos de idade, na festa de réveillon de 2024, em Blumenau-SC, mediante violência, constrangem Solange, 21 anos de idade, a ter conjunção carnal com ambos. Os atos sexuais são realizados. Com base nos fatos narrados, marque a alternativa correta.",
+      "options": {
+        "A": "José Augusto e Flávio Henrique cometeram o crime de estupro de vulnerável em virtude da impossibilidade da vítima em oferecer resistência.",
+        "B": "José Augusto e Flávio Henrique cometeram o crime de estupro com a causa de aumento de pena de um terço a metade em virtude do concurso de pessoas.",
+        "C": "José Augusto e Flávio Henrique cometeram o crime de estupro com a causa de aumento de pena de um terço a dois terços em virtude do concurso de pessoas.",
+        "D": "José Augusto e Flávio Henrique cometeram o crime de estupro com a causa de aumento de pena de um sexto até a metade em virtude do concurso de pessoas.",
+        "E": "José Augusto e Flávio Henrique cometeram o crime de estupro com a causa de aumento de pena de um sexto ao dobro em virtude do concurso de pessoas."
+      },
+      "official_answer": "C",
+      "answer_matches_final_key": true,
+      "current_local_status": "under_review",
+      "previous_explanation": "Explicação preliminar: a alternativa C é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+      "replacement_explanation": "C é correta. O estupro praticado por dois ou mais agentes tem aumento de um terço a dois terços (CP, art. 226, IV, a, incluído pela Lei 13.718/2018). A vítima tem 21 anos e há constrangimento mediante violência: tipo base do art. 213, não estupro de vulnerável.\nA) incorreta: idade adulta, sem dado de vulnerabilidade. B), D) e E) indicam frações distintas da prevista no inciso IV.\nBase: CP, arts. 213 e 226, IV, a.",
+      "tested_topic": "Estupro coletivo; majorante do art. 226, IV, a, do CP.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13718.htm"
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa C está correta. O estupro praticado por duas ou mais pessoas recebe aumento de um terço a dois terços, conforme art. 226, IV, a, do Código Penal."
+    }
+  ],
+  "next_step": "Check current Supabase status/explanation for items 1–10 before writing updates; the latest CBMMG result showed live data can differ from the repository snapshot.",
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "all_items_active": true,
+    "all_answers_match": true,
+    "all_items_linked": true,
+    "syllabus_topic_id": "37976c57-41cc-4da5-951f-2f6c0520ff14",
+    "discipline": "Noções de Direito Penal",
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "evidence": "Saída SQL do usuário após a revisão; status active e tópicos específicos conferidos."
+  },
+  "official_edital": {
+    "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "title": "Edital nº 01/2025 — Agente de Polícia Civil, PCSC",
+    "program_pages": "Anexo I, p. 53 do Diário Oficial de SC nº 22.660, 12/12/2025"
+  },
+  "official_program_text": "NOÇÕES DE DIREITO PENAL: 1 introdução ao direito penal. 1.1 conceito, características e função do direito penal. 1.2 princípios do direito penal. 2. conceito de crime e seus elementos. 2.1 classificações do crime. 2.2 ação e omissão. 2.3 sujeito ativo e sujeito passivo. 2.4 bem jurídico. 3. Tipicidade. ilicitude. culpabilidade. punibilidade. 4. Erro de tipo e erro de proibição. 5. crime consumado. Tentativa. desistência voluntária. arrependimento eficaz. arrependimento posterior. crime impossível. 6. concurso de pessoas. 7. concurso de crimes. 8. Extinção da punibilidade. 9 crimes. 9.1 crimes contra a pessoa. 9.2 crimes contra o patrimônio. 9.3 crimes contra a dignidade sexual. 9.4 crimes contra a fé pública. 9.5 crimes contra a administração pública. 9.6 crimes contra o Estado democrático de direito."
+}

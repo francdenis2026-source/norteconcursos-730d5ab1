@@ -1,0 +1,51 @@
+{
+  "verified_at": "2026-10-13T04:45:03.232655+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 28,
+  "target_keys": [
+    "art-733",
+    "art-734",
+    "art-735",
+    "art-736",
+    "art-737",
+    "art-738",
+    "art-739",
+    "art-740",
+    "art-741",
+    "art-742",
+    "art-743",
+    "art-744",
+    "art-745",
+    "art-746",
+    "art-747",
+    "art-748",
+    "art-749",
+    "art-750",
+    "art-751",
+    "art-752",
+    "art-753",
+    "art-754",
+    "art-755",
+    "art-756",
+    "art-757",
+    "art-758",
+    "art-759",
+    "art-760"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 818,
+  "concurrent_other_changes": [
+    {
+      "table": "legal_unit_explanations",
+      "changed_ids": [
+        "50c35eaa-3c4b-51a5-af5d-b2965521724d",
+        "6d7362a0-0791-578a-9071-0198119d92b8",
+        "2f714423-311e-53af-810b-7fe5b81f5f31",
+        "556a0f6c-3d0a-5e69-b483-f2250beb3cf6",
+        "4e7d8339-690a-57a6-bbbc-899e661291aa"
+      ],
+      "origin": "Concurrent external edits observed; this importer writes only the listed CPP explanations."
+    }
+  ]
+}

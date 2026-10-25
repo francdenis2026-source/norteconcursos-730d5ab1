@@ -1,0 +1,145 @@
+{
+  "checked_at": "2026-10-24T22:13:50.316895+00:00",
+  "project": "gkwphadbveiyjcwiiizw",
+  "materials": [
+    {
+      "slug": "constitucional-nacionalidade-medidas-retirada",
+      "title": "Nacionalidade: brasileiros natos e naturalizados",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 7249,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-direitos-politicos-elegibilidade",
+      "title": "Direitos políticos, elegibilidade e partidos políticos",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 5367,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-direitos-fundamentais-teoria-geral",
+      "title": "Direitos fundamentais: teoria, eficácia e tratados",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 3131,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-vida-igualdade",
+      "title": "Vida e igualdade: leitura constitucional aplicada",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2269,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-liberdades-constitucionais",
+      "title": "Liberdades: expressão, crença, reunião, associação e profissão",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2343,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-propriedade-funcao-social",
+      "title": "Propriedade: função social, desapropriação e requisição",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2280,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-seguranca-juridica-processo",
+      "title": "Segurança jurídica: domicílio, defesa, processo e sanções",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 3022,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-remedios-constitucionais",
+      "title": "Remédios constitucionais: escolha, requisitos e limites",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2544,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-direitos-sociais-trabalho",
+      "title": "Direitos sociais e trabalhistas: Constituição atual",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2761,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-organizacao-estado-competencias",
+      "title": "Organização do Estado: entes, bens e competências",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2669,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-administracao-publica-constituicao",
+      "title": "Administração pública na Constituição: princípios, ingresso e vínculos",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 3228,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-judiciario-garantias-carreira",
+      "title": "Judiciário: estrutura, garantias e carreira",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2472,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-tribunais-competencias-cnj",
+      "title": "Tribunais e CNJ: composição, competências e controle",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2350,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-funcoes-essenciais-justica",
+      "title": "Funções essenciais à Justiça: MP, advocacias e Defensoria",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 2626,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    },
+    {
+      "slug": "constitucional-principios-fundamentais-federacao-republica",
+      "title": "Princípios fundamentais: Federação, República e autonomia dos entes",
+      "discipline": "Direito Constitucional",
+      "status": "active",
+      "body_characters": 8073,
+      "local_quiz_count": 20,
+      "practice_review_status": "reviewed"
+    }
+  ],
+  "materials_total": 15,
+  "local_quiz_total": 300,
+  "active_syllabus_links": 15,
+  "note": "Local material exercises and catalog questions are different datasets; do not sum as distinct global questions."
+}

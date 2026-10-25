@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-17T21:55:56.194Z",
+  "remote_main_integrated": "f68ddb0",
+  "scope": "Recheck of 16 remaining Polícia Civil questions; no substantive decision newly completed and no database writes.",
+  "pc_status": {
+    "active": 2624,
+    "archived": 279,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 16
+  },
+  "unchanged_since_last_publication": 2968,
+  "findings": [
+    {
+      "items": "MT 60, Escrivão e Investigador",
+      "finding": "Art.119 revogado pela LC803/2024 refere-se a Auxiliares de Desenvolvimento Econômico e Social. Devolução de objetos consta do art.301, parágrafo único. A revogação do art.119 NÃO fundamenta obsolescência dessas questões. Divergência entre assertiva I e redação do art.120 continua em análise.",
+      "source": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17"
+    },
+    {
+      "item": "MG TPAG48",
+      "finding": "Página correta OPAS localizada; link aponta handle123456789/31295. Download da biblioteca bloqueado pelo proxy. Edição OMS2007 árabe obtida, mas PDF digitalizado sem texto extraível; não valida ainda afirmação específica sobre autólise/putrefação.",
+      "source": "https://www.paho.org/en/documents/management-dead-bodies-after-disasters-field-manual-first-responders-2nd-edition-revised"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "outputs/pc-pending-review-2026-10-16/next16-before.json",
+      "sha256": "444b370684380f05b9858bc155a1273f4189fac7a660f0fd0210d36b3bd9cec1"
+    },
+    {
+      "path": "outputs/pc-pending-review-2026-10-16/next16-paho-search.html",
+      "sha256": "ee43bc6039d39ef27829f7d0d95d54b640c0c981eacfbe42f034e89aa97e450a"
+    },
+    {
+      "path": "outputs/pc-pending-review-2026-10-16/next16-paho-manual.html",
+      "sha256": "922be84b9c1edf973290cd1adacc6c79b447522191a4cddde5b618a31820c61a"
+    },
+    {
+      "path": "outputs/pc-pending-review-2026-10-16/next16-who-search.json",
+      "sha256": "da04c26fa720f06dcc9a7cf66ffc6a08f8a8572b81de0b8445958e35baf0903b"
+    },
+    {
+      "path": "outputs/pc-pending-review-2026-10-16/next16-who-manual.pdf",
+      "sha256": "286da33626b3141e13f4c37547543c2d7381ef516057a2d6cc994bdc138171a9"
+    }
+  ]
+}

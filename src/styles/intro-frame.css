@@ -1,0 +1,389 @@
+/* A self-contained cinematic frame; it never changes the hero's layout or height. */
+#norte-initial-loading .startup-intro {
+  position: absolute;
+  inset: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  z-index: 2;
+  display: grid;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #080c0e;
+  color: #f3eee4;
+  box-shadow: 0 24px 60px #0008;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+#norte-initial-loading .startup-intro:is([data-phase="playing"], [data-phase="fading"]) { opacity: 1; visibility: visible; pointer-events: auto; }
+:root .home.home .home-hero .home-intro.tactical-intro {
+  inset: 16px;
+  width: auto;
+  height: auto;
+  max-height: calc(100svh - 100px);
+  z-index: 8;
+  padding: 0;
+  background: #080c0e;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #f3eee4;
+  box-shadow: 0 24px 60px #0008;
+}
+.tactical-intro__frame {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 22px 28px 18px;
+  border: 1px solid #d2ad675c;
+  border-radius: inherit;
+  background: linear-gradient(105deg, #0a101377, #0a1013ed 42%, #0a1013f5), linear-gradient(180deg, #52616b20, transparent 45%, #04090caa);
+  overflow: hidden;
+}
+.tactical-intro__frame::before {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  inset: 8px;
+  border-radius: 12px;
+  pointer-events: none;
+  background:
+    linear-gradient(#e9c985, #e9c985) left top / 22px 1px no-repeat,
+    linear-gradient(#e9c985, #e9c985) left top / 1px 22px no-repeat,
+    linear-gradient(#e9c985, #e9c985) right bottom / 22px 1px no-repeat,
+    linear-gradient(#e9c985, #e9c985) right bottom / 1px 22px no-repeat;
+}
+.tactical-intro__frame > .tactical-intro__art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  opacity: .38;
+  pointer-events: none;
+}
+.tactical-intro__heading, .tactical-intro__footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.tactical-intro__heading { padding-bottom: 14px; border-bottom: 1px solid #d2ad6730; }
+.tactical-intro__brand { color: #f4efe4; font-size: 20px; font-weight: 750; line-height: 1; letter-spacing: .22em; }
+.tactical-intro__brand > span { display: inline-block; color: #dcb972; font-size: 9px; letter-spacing: .2em; margin-left: 12px; vertical-align: middle; }
+.tactical-intro__edition { display: inline-flex; align-items: center; gap: 7px; color: #d6c9ae; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.tactical-intro__body { display: grid; grid-template-columns: minmax(140px, .3fr) minmax(0, 1fr); align-items: center; gap: 28px; min-height: 0; }
+.tactical-intro__identity { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: 0; }
+.tactical-intro__identity > img { width: min(100%, 170px); max-height: 28vh; height: auto; object-fit: contain; filter: drop-shadow(0 12px 16px #000a); }
+.tactical-intro__identity > span { color: #d8c49c; font-size: 9px; line-height: 1.6; text-align: center; text-transform: uppercase; letter-spacing: .15em; }
+.tactical-intro__screen { position: relative; width: 100%; height: 100%; min-height: 0; overflow: hidden; border: 1px solid #c9a86b52; border-radius: 10px; box-shadow: 0 12px 40px #0006, 0 0 0 4px #05090b60; background: #050708; }
+:is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__screen video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; }
+.tactical-intro__footer { padding-top: 4px; min-height: 44px; }
+.tactical-intro__caption { color: #b9bdb7; font-size: 11px; letter-spacing: .025em; }
+:is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__footer button { position: static; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; flex: none; padding: 8px 14px; border: 1px solid #d0ac6866; border-radius: 8px; color: #eed49c; background: #d2ad6712; font-size: 11px; transition: background .2s; }
+:is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__footer button:hover { background: #d2ad6726; }
+:is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__footer button:focus-visible { outline: 2px solid #efcf8c; outline-offset: 3px; }
+@media (max-width: 1100px) {
+  :root .home.home .home-hero .home-intro.tactical-intro { inset: 12px; }
+  .tactical-intro__frame { padding: 20px; gap: 16px; }
+  .tactical-intro__body { gap: 18px; grid-template-columns: minmax(110px, .28fr) minmax(0, 1fr); }
+  .tactical-intro__identity > img { width: min(100%, 120px); }
+}
+@media (max-width: 599px) {
+  :root .home.home .home-hero .home-intro.tactical-intro { inset: 12px 8px; max-height: calc(100svh - 160px); border-radius: 16px; }
+  .tactical-intro__frame { padding: 20px 16px 16px; gap: 12px; }
+  .tactical-intro__heading { align-items: flex-start; gap: 12px; padding-bottom: 12px; }
+  .tactical-intro__brand { font-size: 19px; }
+  .tactical-intro__brand > span { display: block; margin: 8px 0 0; font-size: 8px; }
+  .tactical-intro__edition { max-width: 110px; font-size: 8px; line-height: 1.6; }
+  .tactical-intro__body { grid-template-columns: 1fr; grid-template-rows: auto auto; align-content: center; gap: 24px; }
+  .tactical-intro__identity { flex-direction: row; gap: 16px; padding: 0 12px; }
+  .tactical-intro__identity > img { width: 96px; max-height: 15svh; }
+  .tactical-intro__screen { aspect-ratio: 1280 / 660; height: auto; }
+  .tactical-intro__identity > span { max-width: 160px; text-align: left; font-size: 9px; }
+  .tactical-intro__footer { gap: 10px; }
+  .tactical-intro__caption { max-width: 130px; font-size: 10px; line-height: 1.6; }
+  :is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__footer button { padding-inline: 10px; font-size: 10px; }
+}
+@media (max-width: 599px) and (max-height: 650px) {
+  .tactical-intro__frame { padding: 16px; gap: 10px; }
+  .tactical-intro__heading { padding-bottom: 10px; }
+  .tactical-intro__body { gap: 12px; }
+  .tactical-intro__identity > img { width: 56px; max-height: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root .home.home .home-hero .home-intro.tactical-intro, :is(.home.home, #norte-initial-loading) .tactical-intro button { transition: none; }
+}
+@media (forced-colors: active) {
+  .tactical-intro__frame, .tactical-intro__screen { border-color: CanvasText; background: Canvas; }
+  .tactical-intro__art, .tactical-intro__frame::before { display: none; }
+  .tactical-intro__brand, .tactical-intro__edition, .tactical-intro__caption, .tactical-intro__identity > span { color: CanvasText; }
+}
+
+/* Fill the space around the film with the platform's tactical identity.
+   The video box follows its real 64:33 ratio, leaving no opaque black bars. */
+.tactical-intro__screen {
+  container-type: size;
+  background: linear-gradient(180deg, #080a09a6, #080a0966 45%, #080a09c9), url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
+}
+:is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__screen video {
+  z-index: 1;
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: min(100%, calc(100cqh * 64 / 33));
+  height: min(100%, calc(100cqw * 33 / 64));
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+.tactical-intro__side {
+  position: absolute;
+  inset-block: 0;
+  width: max(0px, calc((100cqw - 100cqh * 64 / 33) / 2));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #07090833, transparent 40%, #07090888);
+}
+.tactical-intro__side--left { left: 0; border-right: 1px solid #d2ad6738; }
+.tactical-intro__side--right { right: 0; border-left: 1px solid #d2ad6738; }
+.tactical-intro__side img {
+  width: 72%;
+  max-width: 132px;
+  height: auto;
+  object-fit: contain;
+  opacity: .72;
+  filter: saturate(.6) brightness(.8) drop-shadow(0 6px 12px #000b);
+}
+@media (forced-colors: active) {
+  .tactical-intro__screen { background: Canvas; }
+  .tactical-intro__side { display: none; }
+}
+
+
+/* Remember-intro preference: readable, accessible and contained in the film footer. */
+.tactical-intro__footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  min-width: 0;
+}
+.tactical-intro__remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 4px 0;
+  color: #e4ddcf;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.tactical-intro__remember input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #dcb972;
+}
+.tactical-intro__remember input:focus-visible {
+  outline: 2px solid #efcf8c;
+  outline-offset: 3px;
+}
+@media (max-width: 599px) {
+  .tactical-intro__footer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .tactical-intro__footer-actions {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 5px 10px;
+  }
+  .tactical-intro__remember {
+    flex: 1 1 145px;
+    min-width: 0;
+    font-size: 11px;
+  }
+}
+
+
+/* Mobile introduction: show the artwork at its natural proportions rather than
+   enlarging a landscape image to fill a tall portrait frame. Avoid the
+   excessively dark overlays that made details appear muddy. */
+@media (max-width: 599px) {
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    background:
+      linear-gradient(180deg, rgb(8 14 18 / 22%), rgb(8 14 18 / 76%) 52%, #080c0e 100%),
+      #101a1f;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
+    /* Small, contained scenery instead of a stretched full-window poster. */
+    inset: 52px auto auto 50%;
+    width: min(76%, 290px);
+    max-width: 290px;
+    height: auto;
+    aspect-ratio: 1440 / 600;
+    object-fit: contain;
+    object-position: center;
+    transform: translateX(-50%);
+    opacity: .38;
+    filter: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen {
+    background-color: #10191e;
+    background-image:
+      linear-gradient(180deg, rgb(8 12 15 / 24%), rgb(8 12 15 / 48%)),
+      url('/media/hero/home-bg-texture.webp');
+    background-position: center center, center center;
+    background-size: 100% 100%, auto min(100%, 170px);
+    background-repeat: no-repeat;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen video {
+    object-fit: contain;
+    image-rendering: auto;
+  }
+}
+
+
+/* Portrait cinematic intro: use the entire phone viewport for the composition,
+   with a photographic backdrop, a crisp emblem and an uncropped video.
+   Overrides the legacy 290px-wide landscape poster treatment above. */
+@media (max-width: 599px) and (orientation: portrait) {
+  #norte-initial-loading .startup-intro {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: clamp(10px, 2vh, 20px);
+    padding:
+      max(20px, env(safe-area-inset-top))
+      clamp(16px, 5vw, 26px)
+      max(16px, env(safe-area-inset-bottom));
+    background:
+      linear-gradient(180deg, rgb(7 13 19 / 36%) 0%, rgb(7 13 19 / 28%) 36%, rgb(7 13 19 / 74%) 100%),
+      #101a22;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: 48% center;
+    opacity: .34;
+    transform: none;
+    filter: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__heading {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    padding-block: 8px 12px;
+    min-height: 56px;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__body {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(16px, 3.2vh, 28px);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 0;
+    padding: 0;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > img {
+    display: block;
+    width: clamp(108px, 32vw, 165px);
+    max-width: 42vw;
+    max-height: min(20dvh, 165px);
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgb(0 0 0 / 45%));
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > span {
+    max-width: 100%;
+    color: #f0dcae;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .14em;
+    text-align: center;
+    text-shadow: 0 2px 12px #000;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 64 / 33;
+    border-radius: 12px;
+    background-color: #10191e;
+    background-size: 100% 100%, contain;
+    box-shadow: 0 14px 40px rgb(0 0 0 / 42%);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen video {
+    object-fit: contain;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__footer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    padding: 10px 0 0;
+    border-top: 1px solid rgb(210 173 103 / 28%);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__footer-actions {
+    width: 100%;
+    gap: 6px 12px;
+  }
+}
+@media (max-width: 599px) and (orientation: portrait) and (max-height: 650px) {
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    gap: 8px;
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity {
+    gap: 4px;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > img {
+    width: min(25vw, 92px);
+    max-height: 14dvh;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__body {
+    gap: 10px;
+  }
+}

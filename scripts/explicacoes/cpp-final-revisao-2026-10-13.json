@@ -1,0 +1,862 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "units": {
+    "art-780": {
+      "simples": "O título trata de homologação e rogatórias penais, sem afastar instrumentos internacionais aplicáveis. Integrar competência constitucional e procedimento atual de cooperação.",
+      "pontos": [
+        "Identificar objeto: reconhecer decisão ou cumprir diligência.",
+        "Tratado aplicável e legislação atual devem ser verificados, sem presumir que toda cláusula histórica governa qualquer pedido."
+      ],
+      "atencao": [
+        "Não tratar tratado como autorização para afastar Constituição, garantias ou requisitos indiscriminadamente. Não certificada vigência de todo tratado bilateral."
+      ],
+      "exemplo": "Juízo pede oitiva de testemunha no exterior: identificar instrumento e canal de cooperação adequado, sem chamar isso de homologação da condenação. Variação: Reconhecer efeitos de decisão estrangeira exige procedimento e pressupostos próprios, não mera carta para ouvir testemunha.",
+      "prova": [
+        "Uma carta para ouvir testemunha no exterior homologa a condenação? Não. É pedido de diligência; reconhecimento dos efeitos da sentença tem objeto e procedimento próprios.",
+        "O título do CPP permite ignorar tratado aplicável? Não. O próprio artigo ressalva convenções e tratados, integrados à Constituição e às normas atuais."
+      ],
+      "termos": [
+        {
+          "termo": "Cooperação jurídica internacional",
+          "significado": "Atuação entre autoridades de Estados para atos e efeitos jurídicos no regime pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ]
+    },
+    "art-781": {
+      "simples": "Ordem pública limita reconhecimento de decisões e cumprimento de diligências estrangeiras, com integração constitucional e garantias atuais.",
+      "pontos": [
+        "Examinar conteúdo e efeitos pertinentes.",
+        "Ordem pública não é autorização para revisar indiscriminadamente todo mérito estrangeiro."
+      ],
+      "atencao": [
+        "Bons costumes não legitima discriminação arbitrária ou juízo moral sem fundamento constitucional. O controle deve seguir o procedimento competente."
+      ],
+      "exemplo": "Pedido estrangeiro exige diligência incompatível com garantia fundamental: a incompatibilidade deve ser examinada pelo órgão competente. Variação: Discordar do resultado sem afronta relevante não transforma homologação em novo julgamento completo.",
+      "prova": [
+        "Basta discordar da conclusão estrangeira para negar reconhecimento? Não. O limite de ordem pública não transforma o procedimento em nova apreciação irrestrita do mérito.",
+        "Bons costumes autorizam discriminação arbitrária? Não. A expressão histórica deve ser interpretada sob direitos e garantias constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Ordem pública",
+          "significado": "Limite jurídico de reconhecimento e cooperação, integrado à Constituição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-782": {
+      "simples": "O artigo atribui força de autenticidade ao trânsito diplomático; ele não faz dessa via a única forma atual de autenticação de documento estrangeiro.",
+      "pontos": [
+        "Distinguir autenticidade, conteúdo e eficácia.",
+        "Regimes de tratados, dispensas e apostilamento pertinentes precisam ser identificados."
+      ],
+      "atencao": [
+        "Não exigir autenticação consular universal nem aceitar qualquer cópia sem o regime aplicável. Apostila não homologa o mérito da sentença."
+      ],
+      "exemplo": "Documento transmitido pela via diplomática é analisado sob a regra de autenticidade, sem concluir que a condenação já produz qualquer efeito. Variação: Quando instrumento vigente admite outro modo de autenticar, é preciso aplicar suas condições, não invalidar por ausência de trânsito diplomático isolada.",
+      "prova": [
+        "Autenticidade diplomática já torna a sentença executável? Não. Confirmar a origem documental é diferente de reconhecer seus efeitos jurídicos.",
+        "Todo documento estrangeiro exige a mesma legalização consular? Não. O instrumento e o canal de cooperação aplicáveis podem prever tratamento próprio; a orientação do MJ distingue a tramitação por autoridade central."
+      ],
+      "termos": [
+        {
+          "termo": "Autenticidade documental",
+          "significado": "Confirmação formal de origem distinta do reconhecimento dos efeitos da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ]
+    },
+    "art-783": {
+      "simples": "A remessa diplomática descrita no CPP deve ser integrada aos canais atuais de cooperação e às autoridades centrais designadas no instrumento aplicável.",
+      "pontos": [
+        "Identificar pedido ativo e Estado destinatário.",
+        "DRCI/MJSP atua na cooperação penal no regime informado pelo órgão oficial."
+      ],
+      "atencao": [
+        "Não ensinar remessa pessoal ao ministro como único canal em todo tratado ou confundir via diplomática com todos os mecanismos atuais."
+      ],
+      "exemplo": "Autoridade brasileira prepara pedido penal para o exterior e confere a autoridade central e requisitos indicados no instrumento aplicável. Variação: Pedido sob outro instrumento pode ter fluxo próprio; não copiar o mesmo percurso burocrático por presunção.",
+      "prova": [
+        "O DRCI substitui o tribunal no julgamento do pedido? Não. A autoridade central exerce funções técnicas e administrativas de cooperação, distintas da atividade jurisdicional.",
+        "A remessa diplomática é o único canal possível hoje? Não. É necessário conferir o instrumento internacional e as orientações da autoridade central, sem universalizar o fluxo histórico."
+      ],
+      "termos": [
+        {
+          "termo": "Autoridade central",
+          "significado": "Órgão designado para receber, transmitir ou acompanhar cooperação no instrumento pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ]
+    },
+    "art-784": {
+      "simples": "Carta rogatória não é homologação de sentença. O exequatur cabe hoje ao STJ, conforme CF, art. 105, I, i; a execução do exequatur é competência federal da CF, art. 109, X.",
+      "pontos": [
+        "Referências ao STF e Tribunal de Apelação são históricas.",
+        "Tradução, autenticidade e admissibilidade seguem normas e instrumentos pertinentes.",
+        "Não confundir reconhecimento de decisão com autorização de diligência.",
+        "O §3º trata do impulso pelo interessado e das despesas na hipótese de ação privada segundo a lei brasileira. Integrar instrumento aplicável, sem transformar isso em regra universal de toda cooperação."
+      ],
+      "atencao": [
+        "Não ensinar competência do STF ou cumprimento sempre por juiz criminal estadual. Via diplomática e relação com extradição do texto residual exigem integração; não certificadas todas as hipóteses internacionais."
+      ],
+      "exemplo": "Carta estrangeira pede citação no Brasil: distinguir exequatur no STJ e cumprimento federal, não enviar automaticamente ao STF. Variação: Pedido de reconhecer efeitos de condenação estrangeira exige homologação adequada, em vez de tratar toda decisão como simples rogatória.",
+      "prova": [
+        "O STF concede atualmente exequatur às cartas rogatórias? Não. A CF, art. 105, I, i, atribui essa competência ao STJ desde a EC 45/2004.",
+        "Depois do exequatur, toda carta deve ser cumprida por juiz estadual? Não. A CF, art. 109, X, atribui a execução à Justiça Federal; não repetir o percurso histórico do CPP."
+      ],
+      "termos": [
+        {
+          "termo": "Exequatur",
+          "significado": "Autorização para cumprimento da carta rogatória no regime constitucional atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ]
+    },
+    "art-785": {
+      "simples": "Conclusão, saneamento e devolução de rogatória seguem fluxo atual do STJ, Justiça Federal e instrumento de cooperação aplicável.",
+      "pontos": [
+        "Não reutilizar como órgãos atuais o STF e Tribunal de Apelação da redação antiga.",
+        "Diligência incompleta exige providência competente, sem inventar atos ou suprir defesa."
+      ],
+      "atencao": [
+        "Devolução histórica não pode fixar competência contra a CF. Não certificada toda regulamentação de cada canal internacional."
+      ],
+      "exemplo": "Diligência é concluída e sua documentação encaminhada pelo fluxo competente de cooperação. Variação: Se falta ato essencial, a incompletude precisa ser tratada, sem presumir cumprimento integral pela mera devolução.",
+      "prova": [
+        "A devolução dispensa verificar diligência incompleta? Não. O artigo prevê completar diligências e sanar nulidades, integrado ao fluxo constitucional atual.",
+        "Tribunal de Apelação é o órgão constitucional atual obrigatório desse fluxo? Não. A denominação é histórica; observar STJ, Justiça Federal e o canal pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Devolução da rogatória",
+          "significado": "Encerramento e remessa da diligência pelo canal pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ]
+    },
+    "art-786": {
+      "simples": "O cumprimento da diligência deve observar prazo fixado e eventual justa causa devidamente documentada, integrando o órgão constitucional atual.",
+      "pontos": [
+        "Prazo razoável não significa prazo arbitrário ou indefinido.",
+        "Justificativa e comunicação devem chegar à autoridade competente no fluxo vigente."
+      ],
+      "atencao": [
+        "Não direcionar comunicação ao STF apenas por referência histórica nem presumir que qualquer atraso fica automaticamente autorizado."
+      ],
+      "exemplo": "Diligência não pôde ser concluída por obstáculo comprovado; o órgão comunica justificativa e providência pertinente. Variação: Demora sem causa documentada não é validada pelo simples rótulo razoável.",
+      "prova": [
+        "O exequatur fixa sempre um número uniforme de dias? Não. O texto prevê prazo razoável fixado no despacho, conforme a diligência.",
+        "Qualquer demora é automaticamente permitida? Não. A exceção depende de justa causa consignada e comunicação no fluxo competente atual."
+      ],
+      "termos": [
+        {
+          "termo": "Justa causa documentada",
+          "significado": "Motivo verificável para atraso, submetido à autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-787": {
+      "simples": "Homologação de decisão estrangeira é competência do STJ. A remissão ao antigo CP 7 deve ser confrontada com CP 9 atual para efeitos civis e medida de segurança.",
+      "pontos": [
+        "CP 9 distingue pedido do interessado e condições dos demais efeitos.",
+        "Homologação não equivale automaticamente a toda execução de pena estrangeira.",
+        "CP 9: consequências equivalentes à lei brasileira; efeitos civis dependem de pedido do interessado. Para os demais efeitos ali previstos, tratado de extradição ou, na sua falta, requisição do Ministro da Justiça."
+      ],
+      "atencao": [
+        "Não recuperar competência do STF nem afirmar que o CP 7 atual tem o mesmo conteúdo da remissão antiga. Outros regimes de cooperação/execução têm fundamentos próprios."
+      ],
+      "exemplo": "Interessado busca reparação civil de sentença penal estrangeira: examinar homologação no STJ e condições do CP 9. Variação: Pedido de transferir execução de pena exige regime específico, não autorização universal só pelo art 787.",
+      "prova": [
+        "A remissão ao antigo CP 7 corresponde ao art. 7 atual? Não. A matéria dos efeitos de sentença estrangeira está no CP 9; a numeração histórica precisa de integração.",
+        "Homologação para reparação civil autoriza qualquer prisão estrangeira automaticamente? Não. O CP 9 separa efeitos civis e medida de segurança; outros regimes de execução dependem de fundamentos específicos."
+      ],
+      "termos": [
+        {
+          "termo": "Correspondência da remissão",
+          "significado": "Integração do número histórico ao conteúdo legal atual pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-788": {
+      "simples": "Os requisitos textuais de sentença penal estrangeira devem ser integrados ao CP 9, à Constituição e ao procedimento vigente do STJ/CPC, sem lista histórica universal.",
+      "pontos": [
+        "Autoridade competente, citação, autenticidade, efeitos e tradução precisam de exame.",
+        "A página oficial STJ remete ao CPC 963 e RISTJ 216-C/D.",
+        "Trânsito e eficácia dependem do regime e finalidade do reconhecimento.",
+        "A equivalência de consequências com a aplicação da lei brasileira é pressuposto do CP 9 e do caput textual; não basta apenas traduzir o documento."
+      ],
+      "atencao": [
+        "Não exigir chancela consular como única forma em qualquer instrumento, nem dispensar requisito específico com regra genérica de outro tipo de decisão. Não certificada toda hipótese de dispensa de trânsito/tradução."
+      ],
+      "exemplo": "Pedido traz sentença de juiz competente, citação e documentação; órgão verifica requisitos e efeitos no regime aplicável, sem homologação automática pela lista. Variação: Documento autenticado não sana por si citação irregular ou incompatibilidade constitucional.",
+      "prova": [
+        "Uma autenticação regular sana citação inválida? Não. Autenticidade documental e regularidade da citação são requisitos distintos de reconhecimento.",
+        "Os cinco incisos históricos bastam para certificar todo pedido atual? Não. Integrar CP 9, Constituição, CPC e Regimento do STJ, observando a finalidade e o regime aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Requisitos do reconhecimento",
+          "significado": "Pressupostos materiais e formais do regime vigente e da finalidade pretendida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-789": {
+      "simples": "O rito histórico de homologação e penas acessórias precisa ser integrado ao CP 9, CF, art. 105, I, i e procedimento atual do STJ. Não ensinar os prazos antigos 10/30 por residência como regra universal atual.",
+      "pontos": [
+        "Medida de segurança e efeitos civis têm condições próprias no CP 9.",
+        "STJ orienta petição eletrônica por advogado e requisitos do CPC/RISTJ.",
+        "Citação, defesa e intervenção seguem o procedimento pertinente."
+      ],
+      "atencao": [
+        "Não recuperar pena acessória histórica, STF, Tribunal de Apelação ou prazo por Distrito Federal automaticamente. Não certificada toda regulamentação processual específica posterior."
+      ],
+      "exemplo": "Parte apresenta pedido ao STJ sob rito vigente; contraditório é assegurado sem impor automaticamente prazo antigo por residência no DF. Variação: A medida de segurança pretendida exige seus pressupostos, não aplicação de pena acessória desaparecida apenas porque consta na redação antiga.",
+      "prova": [
+        "O prazo histórico de dez ou trinta dias conforme residência é universal hoje? Não. O rito atual do STJ deve ser consultado; não usar a distinção antiga como prazo geral vigente.",
+        "A menção a pena acessória restaura o regime antigo do CP? Não. Efeitos e medidas dependem do CP atual e de seus pressupostos; o texto residual não cria sanção desaparecida."
+      ],
+      "termos": [
+        {
+          "termo": "Rito integrado",
+          "significado": "Procedimento de reconhecimento segundo competência e normas atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-790": {
+      "simples": "Interessado nos efeitos civis de decisão penal estrangeira requer reconhecimento perante STJ, com integração ao CP 9 e CPC. Execução da decisão homologada segue competência federal.",
+      "pontos": [
+        "Reparação, restituição e outros efeitos civis são recorte expresso.",
+        "STJ reconhece; Justiça Federal executa no regime indicado."
+      ],
+      "atencao": [
+        "Não ensinar requerimento ao STF nem tratar homologação como nova ação de condenação sobre todo mérito. Outros regimes possuem hipóteses próprias."
+      ],
+      "exemplo": "Vítima busca executar reparação reconhecida no exterior: confere homologação e posterior execução competentes. Variação: Pretensão de aplicar toda pena corporal estrangeira não se resolve por um pedido de efeito civil.",
+      "prova": [
+        "A vítima deve pedir homologação ao STF para efeitos civis? Não. A competência passou ao STJ; a remissão histórica deve ser lida com a Constituição atual.",
+        "Reconhecida a sentença, sua execução cabe genericamente ao juízo estadual? Não. A CF 109, X, e a orientação oficial do STJ situam a execução na Justiça Federal."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos civis",
+          "significado": "Consequências patrimoniais da decisão reconhecida no regime adequado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ]
+    },
+    "art-791": {
+      "simples": "Audiências e sessões extraordinárias podem atender à celeridade conforme necessidade, sem eliminar direitos processuais.",
+      "pontos": [
+        "Distinguir calendário ordinário e necessidade extraordinária.",
+        "Compatibilizar intimação, preparação da defesa e restrições de 798-A."
+      ],
+      "atencao": [
+        "Celeridade não autoriza realizar ato no período suspenso sem hipótese legal ou surpreender defesa sem intimação pertinente."
+      ],
+      "exemplo": "Necessidade justifica sessão adicional em data permitida, com comunicações regulares. Variação: Urgência genérica não dispensa fundamentar exceção do 798-A quando necessária.",
+      "prova": [
+        "Sessão extraordinária dispensa intimação e defesa? Não. A finalidade de acelerar o andamento não elimina as garantias processuais.",
+        "É possível ignorar o art. 798-A porque a sessão é extraordinária? Não. O calendário deve respeitar a vedação e suas exceções expressas."
+      ],
+      "termos": [
+        {
+          "termo": "Sessão extraordinária",
+          "significado": "Ato adicional cabível sob requisitos e garantias processuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-792": {
+      "simples": "Publicidade é regra; restrição e local excepcional devem ter fundamento constitucional, necessidade e preservação da participação processual.",
+      "pontos": [
+        "Integrar CF, art. 5º, LX e 93, IX.",
+        "Intimidade e interesse social permitem restrição legal fundamentada.",
+        "Ato remoto/eletrônico e local excepcional têm regras próprias.",
+        "Sede do juízo/tribunal é a regra textual. Local excepcional por necessidade não dispensa acesso, defesa, motivação e requisitos pertinentes ao ato."
+      ],
+      "atencao": [
+        "Não decretar sigilo por mero constrangimento de autoridade ou invocar bons costumes para discriminar. Portas fechadas não eliminam defesa técnica nem fundamentação."
+      ],
+      "exemplo": "Dados íntimos legitimam restrição fundamentada de acesso, sem retirar defensor do ato. Variação: Incômodo político com audiência pública não constitui sozinho motivo legítimo de segredo.",
+      "prova": [
+        "Todos os atos processuais são secretos por conveniência do juiz? Não. Publicidade é regra; restrição exige hipótese legítima e fundamentação constitucional.",
+        "Portas fechadas permitem excluir automaticamente o defensor? Não. A restrição de público não elimina participação e defesa técnica."
+      ],
+      "termos": [
+        {
+          "termo": "Publicidade processual",
+          "significado": "Acesso como regra, com exceções legais integradas às garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-793": {
+      "simples": "A etiqueta da redação histórica deve ser compatibilizada com prerrogativas profissionais, acessibilidade e condições concretas do ato.",
+      "pontos": [
+        "O próprio parágrafo admite requerimento sentado do advogado perante juiz singular.",
+        "Postura física não substitui respeito, participação e garantias profissionais."
+      ],
+      "atencao": [
+        "Não criar prisão, nulidade ou punição automática pela pessoa permanecer sentada. Não certificada aqui toda disciplina profissional/regulamentação de atos remotos."
+      ],
+      "exemplo": "Advogado formula requerimento sentado perante juiz singular, na hipótese expressa; isso não é desobediência automática. Variação: Pessoa com mobilidade reduzida precisa de adaptação, não coerção para cumprir gesto fisicamente inviável.",
+      "prova": [
+        "O próprio CPP admite requerimento sentado do advogado perante juiz singular? Sim. É a hipótese expressa no parágrafo único; a postura, por si, não configura desobediência.",
+        "Uma limitação física autoriza coerção para cumprir gesto inviável? Não. A organização do ato deve preservar participação e acessibilidade compatíveis com as garantias constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Etiqueta e acessibilidade",
+          "significado": "Organização do ato compatível com direitos e participação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-794": {
+      "simples": "A autoridade que preside mantém a ordem e pode requisitar força pública, sob limites legais e constitucionais.",
+      "pontos": [
+        "Identificar juiz ou presidente responsável pelo ato.",
+        "Manutenção de ordem não elimina direito de defesa nem integridade."
+      ],
+      "atencao": [
+        "Não tratar polícia da audiência como autorização geral de prisão, punição coletiva ou repressão de manifestação defensiva pertinente."
+      ],
+      "exemplo": "Presidente organiza entrada do público e atua proporcionalmente diante de tumulto real. Variação: Pergunta pertinente do defensor não deve ser silenciada sob mero rótulo de inconveniência.",
+      "prova": [
+        "A polícia da audiência é a investigação do crime? Não. A expressão designa direção e manutenção da ordem do ato pelo juiz ou presidente.",
+        "Requisitar força pública permite suprimir qualquer pergunta defensiva? Não. O poder de ordem tem limites legais e não elimina defesa pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Polícia da audiência",
+          "significado": "Direção e preservação da ordem sob competência e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-795": {
+      "simples": "Espectadores devem preservar regularidade do ato; retirada e eventual responsabilização exigem situação e base legais.",
+      "pontos": [
+        "Espectador não exerce o mesmo papel processual da parte/defensor.",
+        "Retirada não equivale automaticamente a crime ou prisão."
+      ],
+      "atencao": [
+        "Não ensinar prisão universal de quem protesta: tipicidade, legalidade, proporcionalidade e garantias precisam ser demonstradas."
+      ],
+      "exemplo": "Espectador provoca tumulto e recebe ordem legítima de retirada, com providência proporcional à situação. Variação: Discordância sem conduta típica não autoriza inventar condenação automática por resistência.",
+      "prova": [
+        "Todo espectador retirado está automaticamente condenado por resistência? Não. A medida de ordem é distinta da apuração de eventual crime, que exige pressupostos próprios.",
+        "O artigo autoriza o público a interromper livremente a audiência? Não. O texto restringe manifestações dos espectadores e prevê retirada, sob limites constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Retirada do espectador",
+          "significado": "Medida de ordem distinta de condenação penal automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-796": {
+      "simples": "Comportamento inconveniente do réu exige medida fundamentada e preservação de defesa técnica e participação compatível.",
+      "pontos": [
+        "Integrar regra especial da instrução e do júri pertinente.",
+        "Não realizar instrução contra réu sem defensor apenas pela retirada."
+      ],
+      "atencao": [
+        "Inconveniência não significa perda de todos os direitos; distinguir silêncio, exercício legítimo da defesa e perturbação concreta."
+      ],
+      "exemplo": "Réu perturba repetidamente o ato e providência legal mantém presença do defensor e garantias necessárias. Variação: Réu exerce silêncio: isso não constitui automaticamente comportamento inconveniente que dispense sua defesa.",
+      "prova": [
+        "O ato pode prosseguir sem defensor apenas porque o réu se comportou inconvenientemente? Não. O texto preserva expressamente a assistência do defensor.",
+        "Exercer silêncio equivale automaticamente a perturbar a audiência? Não. Silêncio é garantia; comportamento inconveniente exige situação concreta, sem punição pelo exercício de direito."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa durante o ato",
+          "significado": "Preservação da assistência técnica diante de medida legítima de ordem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-797": {
+      "simples": "Calendário de atos e continuidade do julgamento devem ser integrados à suspensão específica do 798-A e às exceções legais.",
+      "pontos": [
+        "Sessões de julgamento não são marcadas para domingo ou feriado na regra textual.",
+        "Julgamento iniciado em dia útil não se interrompe apenas pela superveniência de domingo ou feriado.",
+        "Compatibilizar atos em férias com a vedação e as exceções específicas do art. 798-A."
+      ],
+      "atencao": [
+        "A permissão histórica de atos nas férias não afasta proibição atual de audiências/sessões de 20 de dezembro a 20 de janeiro fora das exceções."
+      ],
+      "exemplo": "Julgamento iniciado em dia útil tem regra de continuidade, que exige compatibilização com normas específicas pertinentes. Variação: Agendar audiência ordinária no período protegido não se torna válido só pela frase atos nas férias.",
+      "prova": [
+        "Pode-se marcar normalmente sessão de julgamento para domingo pelo art. 797? Não. O texto ressalva as sessões, que não serão marcadas para domingo ou feriado.",
+        "Todo julgamento iniciado em dia útil para automaticamente no domingo? Não. O texto prevê continuidade, integrada às regras especiais, inclusive ao art. 798-A."
+      ],
+      "termos": [
+        {
+          "termo": "Calendário processual",
+          "significado": "Datas permitidas e continuidade sob regras gerais e especiais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-798": {
+      "simples": "A regra penal é contagem contínua, excluindo o dia inicial e incluindo vencimento, com prorrogação e causas de não curso. Integrar 798-A e intimação aplicável.",
+      "pontos": [
+        "Dias úteis não substituem genericamente todos os dias corridos do CPP.",
+        "Vencimento não útil e inexistência de expediente exigem regime pertinente.",
+        "Intimação, ciência, força maior e obstáculo precisam de prova.",
+        "A certificação do término não é condição absoluta: o §2º admite prova do dia em que o prazo começou.",
+        "O §4º prevê impedimento do juiz, força maior e obstáculo judicial oposto pela parte contrária.",
+        "Salvo casos expressos, o §5º considera intimação, decisão em audiência/sessão com a parte presente e ciência inequívoca manifestada nos autos."
+      ],
+      "atencao": [
+        "Não dizer nunca suspende: 798-A e §4º são ressalvas. Intimação eletrônica, sexta-feira, feriados locais e prazos especiais exigem confirmação própria; exemplos pressupõem intimação válida e nenhum evento adicional."
+      ],
+      "exemplo": "Intimação válida ocorre na terça e prazo de cinco dias começa quarta: conta quarta, quinta, sexta, sábado, domingo; vencendo domingo, prorroga ao dia útil imediato, sem feriado ou outro evento. Variação: Se o curso alcança suspensão aplicável de 798-A, os dias suspensos não são consumidos; saldo retoma depois, sem reinício integral automático.",
+      "prova": [
+        "O CPP conta genericamente apenas dias úteis? Não. A regra geral é de dias contínuos, com exclusão do começo, inclusão do vencimento e exceções de suspensão/prorrogação.",
+        "Cinco dias após intimação válida na terça vencem necessariamente no domingo? Não. Na hipótese sem feriado ou evento adicional, a contagem alcança domingo e o vencimento é prorrogado ao dia útil imediato."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo contínuo",
+          "significado": "Contagem corrida integrada a suspensão, prorrogação e início válido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-798-a": {
+      "simples": "Suspensão inclui 20 de dezembro e 20 de janeiro. Exceções: réu preso no processo vinculado à prisão, Maria da Penha e medida urgente fundamentada.",
+      "pontos": [
+        "As duas datas extremas integram suspensão.",
+        "Vedadas audiências/sessões no intervalo fora das três hipóteses.",
+        "Suspender preserva saldo de prazo, não reinicia tudo como interrupção."
+      ],
+      "atencao": [
+        "Não excluir todo processo de pessoa presa sem vínculo com a prisão, nem declarar qualquer causa urgente sem despacho fundamentado. Redação incluída por Lei 14.365/2022; a data da conferência não é sua criação."
+      ],
+      "exemplo": "Prazo ordinário tem dois dias restantes ao começar suspensão: preserva saldo, retomando após o intervalo conforme calendário e regime de intimação. Variação: Processo vinculado à prisão do réu está na exceção; não copiar suspensão automática do caso ordinário.",
+      "prova": [
+        "Vinte de janeiro integra a suspensão ordinária? Sim. O intervalo legal inclui as duas datas extremas, de 20 de dezembro a 20 de janeiro.",
+        "Toda pessoa presa faz qualquer processo seu escapar da suspensão? Não. O inciso I exige processo vinculado àquela prisão; os demais incisos têm hipóteses próprias."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão e saldo",
+          "significado": "Pausa que preserva dias restantes, diferente de reinício integral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-799": {
+      "simples": "Atos do escrivão têm prazo textual de dois dias; sanções antigas devem ser integradas ao regime funcional e devido processo atuais.",
+      "pontos": [
+        "Não converter mil-réis em reais por palpite.",
+        "Responsabilização não é automática e depende de regime competente."
+      ],
+      "atencao": [
+        "Não ensinar desconto, suspensão ou multa monetária histórica como punição atual automática por qualquer demora."
+      ],
+      "exemplo": "Servidor cumpre determinação no prazo textual; atraso justificado e eventual responsabilidade são examinados sob regime pertinente. Variação: Erro de serviço não gera por si multa em valor inventado a partir de mil-réis.",
+      "prova": [
+        "Qual é o prazo textual para atos determinados ou ordenados ao escrivão? Dois dias. Essa regra não autoriza converter arbitrariamente em reais a multa histórica em mil-réis.",
+        "Qualquer atraso gera automaticamente a sanção monetária antiga? Não. Responsabilização funcional deve observar competência, regime atual e garantias de apuração."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo funcional",
+          "significado": "Marco para cumprimento de ato, distinto de sanção histórica automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-800": {
+      "simples": "Na ausência de prazo específico, o texto distingue decisões definitivas/mistas, simples e expediente: 10, 5 e 1 dia, com conclusão, vista e justo motivo.",
+      "pontos": [
+        "DECISÃO DEFINITIVA ou interlocutória mista: dez dias; interlocutória simples: cinco; expediente: um.",
+        "Prazos do juiz começam da conclusão; vista do MP tem marco próprio, ressalvada a interposição de recurso.",
+        "Prazo especial prevalece. Motivo justo declarado permite exceder por igual tempo, não indefinidamente."
+      ],
+      "atencao": [
+        "Não aplicar 1/5/10 indiscriminadamente a decisão com prazo especial nem copiar recurso do MP como prazo de mera vista."
+      ],
+      "exemplo": "Decisão tem prazo específico em outra norma: usa-se o específico, sem aplicar dez dias por automatismo. Variação: Sem prazo específico, despacho de expediente tem um dia no texto; motivo justo deve ser declarado para extensão cabível.",
+      "prova": [
+        "Qual prazo subsidiário cabe ao despacho de expediente? Um dia. A regra só se aplica quando outro prazo específico não estiver estabelecido.",
+        "O motivo justo permite qualquer extensão indefinida? Não. O §3º prevê exceder por igual tempo mediante motivo declarado, integrado às garantias e regras especiais."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo subsidiário",
+          "significado": "Regra geral aplicável quando não há prazo específico pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-801": {
+      "simples": "O dispositivo contém modelo histórico de descontos por atraso; aplicação exige compatibilidade com regimes constitucionais e funcionais atuais.",
+      "pontos": [
+        "Não descontar remuneração automaticamente.",
+        "Não eliminar tempo de serviço/promocional por simples contagem de dias sem procedimento."
+      ],
+      "atencao": [
+        "Não certificar sanção salarial automática contra juiz/MP como regime atual apenas pelo texto residual. Devido processo, competência e normas próprias precisam ser observados."
+      ],
+      "exemplo": "Atraso é levado ao órgão competente para apuração sob regime funcional aplicável. Variação: Certidão isolada não autoriza inventar desconto salarial e perda dobrada de tempo como consequência automática.",
+      "prova": [
+        "Uma certidão de atraso basta para desconto automático na remuneração atual? Não. O modelo histórico deve ser integrado às normas constitucionais e ao procedimento funcional competente.",
+        "A cautela sobre desconto torna irrelevante todo atraso? Não. O dever de celeridade permanece e eventual responsabilidade exige apuração válida."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade funcional",
+          "significado": "Apuração de deveres com competência e garantias atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-802": {
+      "simples": "Certidão pode documentar atraso, mas o mecanismo histórico de desconto/multa não substitui regime atual de responsabilização.",
+      "pontos": [
+        "Integrar 801 e garantias de apuração.",
+        "Valor em mil-réis é referência histórica, não tabela monetária atual."
+      ],
+      "atencao": [
+        "Não ensinar multa de pleno direito ou desconto automático sem competência, base atual e devido processo."
+      ],
+      "exemplo": "Registro documenta atraso para providência legítima do órgão competente. Variação: Enviar certidão não torna lícita sanção sem oportunidade de defesa.",
+      "prova": [
+        "Certificar atraso equivale a impor sanção definitiva? Não. Documentar o fato é distinto de decidir responsabilidade com competência e garantias atuais.",
+        "Quinhentos mil-réis permitem inventar valor equivalente em reais? Não. A moeda histórica não constitui tabela atual de multas por conversão arbitrária."
+      ],
+      "termos": [
+        {
+          "termo": "Certificação do atraso",
+          "significado": "Documentação distinta da decisão sancionatória válida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-803": {
+      "simples": "Retirada e acesso aos autos devem observar hipóteses legais, prerrogativas profissionais, sigilo e processo eletrônico atual.",
+      "pontos": [
+        "Não negar toda consulta/carga pela proibição geral histórica.",
+        "Também não autorizar retirada indiscriminada de documento sigiloso."
+      ],
+      "atencao": [
+        "Acesso eletrônico não elimina autenticação ou restrições legítimas; carga legal não se confunde com extravio de autos.",
+        "ATUALIZAÇÃO judicial: a notícia oficial do STF de 23/06/2025 registra a ADI 7231, que invalidou a revogação indevida dos §§1º e 2º do art. 7º do Estatuto da Advocacia. Não ensinar desaparecimento dessas garantias pelo erro legislativo de 2022."
+      ],
+      "exemplo": "Advogado acessa autos nas condições legais aplicáveis, sem negativa genérica baseada somente no 803. Variação: Autos sob sigilo exigem autorização/legitimação pertinentes, não livre disponibilização a qualquer visitante.",
+      "prova": [
+        "O art. 803 proíbe todas as formas de consulta ou carga? Não. O próprio dispositivo ressalva casos legais; integrar prerrogativas, sigilo e regras atuais de acesso.",
+        "Acesso eletrônico permite retirar ou divulgar livremente autos sigilosos? Não. Consulta e guarda continuam sujeitas à legitimação, integridade e restrições válidas."
+      ],
+      "termos": [
+        {
+          "termo": "Acesso e guarda dos autos",
+          "significado": "Consulta/carga legais com integridade, sigilo e responsabilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-que-revogou-direitos-dos-advogados-por-erro-legislativo/"
+      ]
+    },
+    "art-804": {
+      "simples": "Condenação em custas deve ser integrada à sucumbência, assistência jurídica e regimes legais de exigibilidade pertinentes.",
+      "pontos": [
+        "Condenar em custas não é o mesmo que cobrar imediatamente de qualquer pessoa.",
+        "Gratuidade e hipóteses especiais precisam ser verificadas."
+      ],
+      "atencao": [
+        "Não impedir defesa nem afirmar que todo hipossuficiente sempre paga imediatamente ou nunca pode constar da condenação em custas."
+      ],
+      "exemplo": "Decisão examina custas e condição de gratuidade, separando condenação e exigibilidade. Variação: Benefício reconhecido pode alterar cobrança no regime cabível, sem inventar imunidade patrimonial universal.",
+      "prova": [
+        "Condenação em custas equivale sempre a cobrança imediata? Não. A previsão na decisão é distinta da exigibilidade, que depende do regime e de eventual gratuidade.",
+        "A condição econômica pode ser ignorada em qualquer cobrança? Não. Assistência jurídica e regras de gratuidade/exigibilidade precisam ser examinadas no caso."
+      ],
+      "termos": [
+        {
+          "termo": "Exigibilidade de custas",
+          "significado": "Condições para cobrança, distintas da previsão na decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-805": {
+      "simples": "Contagem e cobrança de custas dependem de regras atuais da competência pertinente; o CPP não fornece tabela nacional completa.",
+      "pontos": [
+        "Conferir norma válida e hipótese de cobrança.",
+        "Competência tributária/legalidade e gratuidade não desaparecem pela referência a regulamento."
+      ],
+      "atencao": [
+        "Não inventar valor ou cobrar com tabela revogada. Não certificadas todas as tabelas estaduais/federais."
+      ],
+      "exemplo": "Diligência sujeita a custas é calculada pela tabela vigente do órgão competente, considerando eventual benefício. Variação: Tabela de outro estado não deve ser aplicada automaticamente só por existir no material.",
+      "prova": [
+        "O CPP fornece uma única tabela com todos os valores nacionais? Não. O artigo remete às regras pertinentes da União e dos Estados; conferir a tabela vigente e a hipótese de cobrança.",
+        "Uma tabela revogada pode ser usada por estar no material antigo? Não. Cobrança exige base atual e compatibilidade com competência, legalidade e eventual gratuidade."
+      ],
+      "termos": [
+        {
+          "termo": "Tabela pertinente",
+          "significado": "Regra vigente do órgão e hipótese de cobrança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-806": {
+      "simples": "Depósito e consequências textuais por falta de custas exigem integração ao regime da ação, recurso, gratuidade e defesa constitucional.",
+      "pontos": [
+        "Hipossuficiência e assistência não podem ser ignoradas.",
+        "Não aplicar deserção universal em todo recurso penal.",
+        "Prova de pobreza tardia não dispensa exame de prejuízo e garantias.",
+        "O caput tem recorte de ação mediante queixa e ressalva o art. 32. O §1º distingue atos no interesse da defesa e acusado pobre; integrar assistência jurídica atual."
+      ],
+      "atencao": [
+        "Não recusar prova essencial da defesa apenas por impossibilidade econômica, nem repetir o §3º como imunidade universal a nulidades. Não certificada toda regra local de preparo."
+      ],
+      "exemplo": "Defesa hipossuficiente requer diligência necessária: órgão examina assistência e garantia probatória, sem negativa automática por falta de depósito. Variação: Ausência de preparo em hipótese que efetivamente o exige é examinada com regras e oportunidades pertinentes, sem generalizar a toda ação penal pública.",
+      "prova": [
+        "Todo recurso criminal é deserto por falta de custas? Não. O recorte do artigo, a espécie de ação, o recurso e a gratuidade precisam ser examinados; não generalizar o texto residual.",
+        "O texto permite negar automaticamente prova essencial à defesa hipossuficiente? Não. A própria ressalva de pobreza e as garantias constitucionais exigem análise pertinente, sem exclusão automática."
+      ],
+      "termos": [
+        {
+          "termo": "Preparo e defesa",
+          "significado": "Requisito financeiro quando cabível, integrado a assistência e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-807": {
+      "simples": "A referência à iniciativa judicial deve ser compatibilizada com sistema acusatório e hipóteses legais, sem neutralizar garantias por exigência de custas.",
+      "pontos": [
+        "Juiz não pode substituir acusação na investigação.",
+        "Providência instrutória precisa de fundamento, momento e contraditório pertinentes.",
+        "A exigência de custas do artigo anterior não impede, por si, diligência judicial legalmente cabível; isso não amplia ilimitadamente o poder probatório."
+      ],
+      "atencao": [
+        "Não ensinar poderes ilimitados de produzir prova nem confundir esclarecimento cabível com investigação judicial substitutiva."
+      ],
+      "exemplo": "Durante instrução, juízo examina esclarecimento legalmente cabível e assegura manifestação das partes. Variação: Juízo não pode assumir coleta acusatória indiscriminada apenas porque o 807 permite diligência.",
+      "prova": [
+        "Determinar diligência de ofício significa substituir livremente a acusação? Não. O art. 807 deve ser integrado ao sistema acusatório e aos limites legais da atividade judicial.",
+        "A remissão às custas elimina contraditório sobre a prova? Não. A questão financeira não suprime garantias nem transforma o juiz em investigador acusatório."
+      ],
+      "termos": [
+        {
+          "termo": "Iniciativa probatória delimitada",
+          "significado": "Providência compatível com função judicial e sistema acusatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-808": {
+      "simples": "Na falta ou impedimento do escrivão e seu substituto, pessoa idônea pode servir mediante nomeação pela autoridade, compromisso e termo no recorte legal.",
+      "pontos": [
+        "Ausência dos responsáveis normais é pressuposto.",
+        "Nomeação não substitui competência e regime funcional atual para todos os cargos."
+      ],
+      "atencao": [
+        "Não apresentar nomeação ad hoc como dispensa universal de concurso, qualificação ou controle de acesso."
+      ],
+      "exemplo": "Em ato sem escrivão nem substituto, autoridade formaliza nomeação idônea e compromisso pertinente. Variação: Pessoal disponível regularmente não é afastado sem causa só para nomear conhecido da autoridade.",
+      "prova": [
+        "A nomeação excepcional prescinde de compromisso e termo? Não. O artigo exige pessoa idônea, nomeação, compromisso perante a autoridade e termo correspondente.",
+        "A regra dispensa concurso para qualquer investidura permanente? Não. Seu recorte é a falta ou impedimento do escrivão e substituto no ato, integrado ao regime funcional atual."
+      ],
+      "termos": [
+        {
+          "termo": "Escrivão ad hoc",
+          "significado": "Designação excepcional no ato, sujeita a pressupostos e formalização."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-809": {
+      "simples": "Estatística criminal prevista no texto deve ser integrada à gestão de dados e órgãos atuais, com finalidade, qualidade, sigilo e proteção constitucional.",
+      "pontos": [
+        "Boletim e remessa semestral são referências textuais históricas a integrar.",
+        "Não tratar acusado como culpado apenas por cadastro.",
+        "Dados pessoais/sensíveis não são automaticamente públicos.",
+        "Separar o trimestre referido no inciso I da remessa semestral do §2º, cuja redação é da Lei 9.061/1995."
+      ],
+      "atencao": [
+        "Não inventar competência atual pelo nome antigo da repartição nem divulgar religião, saúde ou antecedentes sem regime e finalidade legítimos. Não certificada toda regulamentação de estatísticas."
+      ],
+      "exemplo": "Órgão registra dados necessários para estatística legítima, preservando identificação e sigilo no regime pertinente. Variação: Planilha pública com informações de saúde identificáveis não se legitima só pela lista do 809.",
+      "prova": [
+        "Todos os dados do boletim criminal podem ser publicados com identificação? Não. A finalidade estatística não elimina sigilo, presunção de inocência e proteção constitucional de informações pessoais.",
+        "O nome histórico da repartição certifica o órgão atual competente? Não. A estrutura administrativa e regulamentação pertinentes devem ser conferidas; distinguir texto e implementação atual."
+      ],
+      "termos": [
+        {
+          "termo": "Estatística e proteção de dados",
+          "significado": "Informação para finalidade pública legítima sob limites e qualidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-810": {
+      "simples": "O CPP original entrou em vigor em 1º de janeiro de 1942. Essa data não é a vigência de toda alteração posterior.",
+      "pontos": [
+        "Diploma original: 1941; entrada em vigor: 1942.",
+        "Separar atualização normativa e conferência editorial de criação do Código."
+      ],
+      "atencao": [
+        "Não ensinar cláusula histórica como início da regra do 798-A de 2022 ou de qualquer lei posterior."
+      ],
+      "exemplo": "Cláusula original indica 1/1/1942, enquanto mudança posterior exige sua própria regra temporal. Variação: Data de revisão de 2026 não altera data original de vigência.",
+      "prova": [
+        "Toda alteração do CPP entrou em vigor em 1º de janeiro de 1942? Não. Esse é o marco do diploma original; cada lei modificadora possui sua disciplina temporal.",
+        "A data de conferência editorial muda a data original de vigência? Não. Revisão do conteúdo, criação do diploma e atualização normativa são marcos distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Vigência original",
+          "significado": "Marco histórico do Código, distinto das alterações posteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-811": {
+      "simples": "Cláusula final revoga disposições em contrário no contexto da criação do CPP; não elimina automaticamente todas as leis especiais futuras.",
+      "pontos": [
+        "Identificar conflito e sucessão normativa concretos.",
+        "Cláusula não é tipo penal autônomo nem autorização para ignorar legislação posterior."
+      ],
+      "atencao": [
+        "Não declarar revogação de qualquer lei especial só pela frase final de 1941. Normas posteriores e especiais exigem integração."
+      ],
+      "exemplo": "Conflito é analisado segundo hierarquia, especialidade e sucessão pertinentes. Variação: Lei especial posterior não desaparece automaticamente por estar fora do CPP.",
+      "prova": [
+        "A cláusula final revoga automaticamente toda lei especial futura? Não. Ela encerra o diploma original; conflitos posteriores exigem análise de hierarquia, especialidade e sucessão.",
+        "O art. 811 contém tipo penal autônomo? Não. Trata-se de cláusula revogatória, sem criação de crime ou pena própria."
+      ],
+      "termos": [
+        {
+          "termo": "Cláusula revogatória",
+          "significado": "Disposição final cuja aplicação exige conflito e contexto normativos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    }
+  }
+}

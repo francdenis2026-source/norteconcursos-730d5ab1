@@ -1,0 +1,39 @@
+{
+  "batch_id": "idecan-primary-critical-v1",
+  "applied": true,
+  "complete": true,
+  "scope": "Cinco registros, aplicados e auditados individualmente por REST; sem transação global.",
+  "verified_at": "2026-10-23T04:38:17.572564+00:00",
+  "rows": [
+    {
+      "id": "93d09d86-cfc0-4b1d-b225-82819f0ade61",
+      "content_status": "under_review",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "d060ae9a-0469-4996-8e25-ca862b5b93aa",
+      "content_status": "obsolete",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "c3bfe321-3371-4368-bfd8-a7d68a1d0217",
+      "content_status": "under_review",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "0a2c289f-8251-4956-8d10-178795fd4a88",
+      "content_status": "under_review",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "47901977-c1af-4e7b-af5c-7f80241a522a",
+      "content_status": "under_review",
+      "audited": true,
+      "historical_answer_preserved": true
+    }
+  ]
+}

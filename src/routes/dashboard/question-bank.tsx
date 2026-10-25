@@ -1,54 +1,56 @@
-import { filterCatalogMetadata, catalogMetadataFacets } from "@/lib/catalogMetadataFilters";
-import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
+import "@/styles/question-workspace.css";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   ArrowRight,
-  BookMarked,
   BookOpenCheck,
   Building2,
   FileCheck2,
   Layers3,
   LibraryBig,
   Loader2,
-  Play,
   RefreshCw,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  UsersRound,
+  Search,
+  TextSearch,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
+import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
+import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import {
+  availableQuestionBank,
+  publishedQuestionBank,
+  reviewedQuestionBank,
+  searchQuestionCatalog,
+  questionBankExams,
+  questionBankSearch,
+  type BankSource,
+  type BankCollection,
+} from "@/lib/questionBank";
+import { trainerCollectionQuestions } from "@/lib/trainerFilters";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { Badge } from "@/components/ui/badge";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
-import { isEligibleQuestion } from "@/lib/questionFormat";
+import { Input } from "@/components/ui/input";
+import { needsMissingSupportText } from "@/lib/questionText";
+import { catalogGroups } from "@/lib/questionCatalogSummary";
 import { cn } from "@/lib/utils";
+import {
+  QuestionCatalogDetails,
+  type CatalogDetail,
+} from "@/components/questions/QuestionCatalogDetails";
 
-export const Route = createFileRoute("/dashboard/question-bank")({ component: QuestionBankPage });
+/**
+ * Acervo de questões: página só de consulta. Mostra o que existe na plataforma (por disciplina, banca, prova e origem)
+ * e a qualidade do acervo. Resolver questões é no Treinador; aqui não há filtros de treino, para não duplicá-lo.
+ */
+export const Route = createFileRoute("/dashboard/question-bank")({
+  component: QuestionBankPage,
+  head: () => ({ meta: [{ title: "Acervo de questões | Norte Concurso" }] }),
+});
+
 type SourceKind = "official" | "curated" | "personal";
-interface CatalogItem {
-  id: string;
-  contest: string;
-  year: string;
-  career: string;
-  board: string;
-  subject: string;
-  source: SourceKind;
-  state: string;
-  category: string;
-}
 const SOURCE_LABELS: Record<SourceKind, string> = {
   official: "Provas oficiais",
   curated: "Questões autorais",
@@ -57,472 +59,477 @@ const SOURCE_LABELS: Record<SourceKind, string> = {
 
 function QuestionBankPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
-  const [items, setItems] = React.useState<CatalogItem[]>([]);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
-  const [contest, setContest] = React.useState("all"),
-    [board, setBoard] = React.useState("all"),
-    [career, setCareer] = React.useState("all"),
-    [year, setYear] = React.useState("all"),
-    [subject, setSubject] = React.useState("all"),
-    [source, setSource] = React.useState("all"),
-    [state, setState] = React.useState("all"),
-    [category, setCategory] = React.useState("all");
-  const load = React.useCallback(async () => {
-    if (authLoading || !user || user.id === "demo-user") {
-      setLoading(false);
-      return;
-    }
-    setLoading(true);
-    setError(null);
-    try {
-      const query = async (
-        table:
-          | "question_bank"
-          | "curated_question_catalog"
-          | "official_exam_questions"
-          | "board_exam_questions",
-        fields: string,
-        userId?: string,
-      ) => ({
-        data: await fetchAllRows((from, to) => {
-          let q = supabase
-            .from(table)
-            .select(fields + ",content_status,official_answer,legal_basis,law_version_checked_at")
-            .eq("content_status", "active")
-            .order("id")
-            .range(from, to);
-          if (userId) q = q.eq("user_id", userId);
-          return q.returns<Record<string, unknown>[]>();
-        }),
-        error: null,
-      });
-      const [personal, curated, official, boardQuestions] = await Promise.all([
-        query(
-          "question_bank",
-          "id,contest_name,contest_year,subject,state,career_category",
-          user.id,
-        ),
-        query(
-          "curated_question_catalog",
-          "id,contest_name,contest_year,career_name,exam_board,subject,state,career_category",
-        ),
-        query(
-          "official_exam_questions",
-          "id,contest_name,exam_year,career_name,exam_board,subject,state,career_category,legal_review_required,legal_audit_completed,context_review_required",
-        ),
-        query(
-          "board_exam_questions",
-          "id,contest_name,exam_year,career_name,board,subject,state,career_category,legal_review_required,needs_visual",
-        ).catch((error: unknown) => {
-          if (isMissingQuestionTable(error)) return { data: [], error: null };
-          throw error;
-        }),
-      ]);
-      if (personal.error) throw personal.error;
-      if (curated.error) throw curated.error;
-      if (official.error) throw official.error;
-      const personalRows = ((personal.data || []) as Array<Record<string, unknown>>)
-        .filter(isEligibleQuestion)
-        .map((row) => normalize(row, "personal"));
-      setItems([
-        ...((boardQuestions.data || []) as Array<Record<string, unknown>>)
-          .map((row) => ({
-            ...row,
-            context_review_required: row["needs_visual"],
-            legal_audit_completed: !row["legal_review_required"] || !!row["law_version_checked_at"],
-          }))
-          .filter(isEligibleQuestion)
-          .map((row) => normalize(row, "official")),
-        ...((official.data || []) as Array<Record<string, unknown>>)
-          .filter(isEligibleQuestion)
-          .map((row) => normalize(row, "official")),
-        ...((curated.data || []) as Array<Record<string, unknown>>)
-          .filter(isEligibleQuestion)
-          .map((row) => normalize(row, "curated")),
-        ...personalRows,
-      ]);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Não foi possível organizar o acervo.");
-    } finally {
-      setLoading(false);
-    }
-  }, [authLoading, user]);
-  React.useEffect(() => {
-    void load();
-  }, [load]);
-  const selections = React.useMemo(
-    () => ({ contest, board, career, year, subject, source, state, category }),
-    [contest, board, career, year, subject, source, state, category],
-  );
-  const facets = React.useMemo(() => catalogMetadataFacets(items, selections), [items, selections]);
-  const options = React.useMemo(() => {
-    const values = (key: keyof typeof selections) =>
-      unique([...facets[key].keys(), ...(selections[key] !== "all" ? [selections[key]] : [])]);
-    return {
-      contests: values("contest"),
-      boards: values("board"),
-      careers: values("career"),
-      years: values("year").sort((a, b) => Number(b) - Number(a)),
-      subjects: values("subject"),
-      states: values("state"),
-      categories: values("category"),
-    };
-  }, [facets, selections]);
-  const filtered = React.useMemo(
-    () => filterCatalogMetadata(items, selections),
-    [items, selections],
-  );
-  const bySubject = React.useMemo(() => groupBy(filtered, "subject"), [filtered]);
-  const byBoard = React.useMemo(() => groupBy(filtered, "board"), [filtered]);
-  const reset = () => {
-    setContest("all");
-    setBoard("all");
-    setCareer("all");
-    setYear("all");
-    setSubject("all");
-    setSource("all");
-    setState("all");
-    setCategory("all");
+  const canLoad = !authLoading && !!user && user.id !== "demo-user";
+  const { catalog, loading, error, reload } = useQuestionCatalog(user?.id, canLoad);
+  const summary = usePlatformQuestionSummary(canLoad);
+  const reviewed = React.useMemo(() => reviewedQuestionBank(catalog).length, [catalog]);
+  const [collection, setCollection] = React.useState<BankCollection>("contests");
+  const [search, setSearch] = React.useState("");
+  const [source, setSource] = React.useState<BankSource>("all");
+  const [detail, setDetail] = React.useState<CatalogDetail | null>(null);
+  const detailTrigger = React.useRef<HTMLButtonElement | null>(null);
+  const publicCatalog = React.useMemo(() => publishedQuestionBank(catalog), [catalog]);
+  const openDetail = (view: CatalogDetail, trigger: HTMLButtonElement) => {
+    detailTrigger.current = trigger;
+    setDetail(view);
   };
-  if (authLoading || loading) return <Loading />;
+  const [examLimit, setExamLimit] = React.useState(15);
+  const items = React.useMemo(
+    () => availableQuestionBank(catalog, collection),
+    [catalog, collection],
+  );
+  const missingText = React.useMemo(
+    () => trainerCollectionQuestions(catalog, collection).filter(needsMissingSupportText).length,
+    [catalog, collection],
+  );
+  const visible = React.useMemo(
+    () =>
+      searchQuestionCatalog(
+        items.filter((q) => source === "all" || q.source === source),
+        search,
+      ),
+    [items, source, search],
+  );
+  const bySubject = React.useMemo(
+    () =>
+      catalogGroups(visible, "subject").map((g): [string, number] => [g.name, g.questions.length]),
+    [visible],
+  );
+  const byBoard = React.useMemo(
+    () =>
+      catalogGroups(visible, "board").map((g): [string, number] => [g.name, g.questions.length]),
+    [visible],
+  );
+  const byYear = React.useMemo(
+    () =>
+      countBy(
+        visible.filter((q) => /^\d{4}$/.test(q.year)),
+        (q) => q.year,
+      ).sort((a, b) => Number(b[0]) - Number(a[0])),
+    [visible],
+  );
+  const exams = React.useMemo(() => questionBankExams(visible), [visible]);
+  const bySource = React.useMemo(() => countBy(items, (i) => i.source), [items]);
+
+  if (authLoading) return <Loading />;
   if (!user || user.id === "demo-user") return <Login />;
-  if (error) return <ErrorState message={error} retry={load} />;
-  const search = {
-    contest: contest === "all" ? undefined : contest,
-    board: board === "all" ? undefined : board,
-    career: career === "all" ? undefined : career,
-    year: year === "all" ? undefined : year,
-    subject: subject === "all" ? undefined : subject,
-    source: source === "all" ? undefined : source,
-    state: state === "all" ? undefined : state,
-    category: category === "all" ? undefined : category,
-  };
+  if (loading) return <Loading />;
+  if (error) return <ErrorState message={error} retry={reload} />;
+
+  const total = visible.length;
+  const maxSubject = bySubject[0]?.[1] ?? 1;
+  const maxBoard = byBoard[0]?.[1] ?? 1;
   return (
-    <div className="space-y-6 pb-8">
-      <section className="page-hero page-hero--lg" data-hero="trainer">
-        <Badge className="hero-chip">
-          <Sparkles className="mr-1 h-3.5 w-3.5" />
-          Central de Treinamento
-        </Badge>
-        <h1 className="text-3xl font-black md:text-5xl">Escolha como deseja treinar</h1>
-        <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-200 md:text-base">
-          As questões não ficam expostas no catálogo. Defina banca, carreira, concurso e disciplina;
-          os enunciados e opções aparecem somente depois que o treino começar.
+    <div className="question-workspace question-catalog">
+      <PageHero
+        image="trainer"
+        size="sm"
+        kicker="Questões"
+        icon={LibraryBig}
+        title={
+          <>
+            Explorar <em>questões</em>
+          </>
+        }
+        description="Encontre uma disciplina, banca ou prova e abra sua seleção no treinador."
+        actions={
+          <Button asChild className="hero-btn-primary gap-2">
+            <Link
+              to="/dashboard/question-trainer"
+              search={questionBankSearch(collection, source, search, {})}
+            >
+              <BookOpenCheck className="h-4 w-4" /> Ir para o Treinador
+            </Link>
+          </Button>
+        }
+      />
+      <PlatformQuestionCounts
+        enabled={canLoad}
+        reviewed={reviewed}
+        onExplore={(e) => openDetail("platform", e.currentTarget)}
+      />
+      <QuestionCatalogDetails
+        view={detail}
+        onClose={() => setDetail(null)}
+        restoreFocus={() => detailTrigger.current?.focus()}
+        publicCatalog={publicCatalog}
+        platformSummary={summary.data}
+        reviewedCount={reviewed}
+        items={visible}
+        collection={collection}
+        source={source}
+        query={search}
+      />
+
+      <Card className="question-catalog__filters">
+        <CardContent className="flex flex-wrap items-center gap-3 p-4">
+          <fieldset className="w-full border-b pb-4">
+            <legend className="mb-2 text-sm font-semibold">Área de preparação</legend>
+            <div className="flex flex-wrap gap-2">
+              {(
+                [
+                  ["contests", "Concursos públicos"],
+                  ["enem", "ENEM"],
+                ] as const
+              ).map(([value, label]) => (
+                <Button
+                  key={value}
+                  variant={collection === value ? "default" : "outline"}
+                  aria-pressed={collection === value}
+                  onClick={() => {
+                    if (value === collection) return;
+                    setCollection(value);
+                    setSource("all");
+                    setSearch("");
+                    setExamLimit(15);
+                  }}
+                >
+                  {label}
+                </Button>
+              ))}
+            </div>
+          </fieldset>
+          <div className="relative min-w-0 w-full flex-1 sm:min-w-60">
+            <Search
+              className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-muted-foreground"
+              aria-hidden
+            />
+            <Input
+              className="pl-9"
+              placeholder="Buscar concurso, banca, disciplina, cargo ou ano…"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              aria-label="Buscar no acervo"
+            />
+          </div>
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Origem das questões">
+            {(
+              [
+                ["all", "Todas"],
+                ["official", SOURCE_LABELS.official],
+                ["curated", SOURCE_LABELS.curated],
+                ["personal", SOURCE_LABELS.personal],
+              ] as const
+            ).map(([id, label]) => (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={source === id}
+                onClick={() => setSource(id)}
+                className={cn(
+                  "rounded-full border px-3 py-1.5 text-sm font-semibold",
+                  source === id
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "hover:bg-muted",
+                )}
+              >
+                {label}
+                {id !== "all" && (
+                  <span className="ml-1.5 text-xs opacity-80">
+                    {bySource.find(([k]) => k === id)?.[1] ?? 0}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+          <p className="w-full text-sm text-muted-foreground" aria-live="polite">
+            {total} questões nesta consulta.
+          </p>
+        </CardContent>
+      </Card>
+
+      <div>
+        <p className="question-catalog__scope">
+          Sua seleção de estudo · {collection === "enem" ? "ENEM" : "Concursos públicos"}
+          <span>Os números abaixo respeitam a área, a origem e a busca selecionadas.</span>
         </p>
-        <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
-          <Metric icon={LibraryBig} value={items.length} label="questões ativas" />
+        <div
+          className="catalog-metrics catalog-metrics--selection"
+          aria-label="Indicadores da seleção de estudo"
+        >
           <Metric
-            icon={Building2}
-            value={
-              new Set(items.map((item) => item.board).filter((board) => board !== "Não informada"))
-                .size
-            }
-            label="bancas"
+            icon={BookOpenCheck}
+            value={visible.length}
+            label="Questões da seleção"
+            hint={collection === "enem" ? "ENEM · ver questões" : "Concursos · ver questões"}
+            onClick={(e) => openDetail("questions", e.currentTarget)}
           />
           <Metric
-            icon={UsersRound}
-            value={new Set(items.map((item) => item.career)).size}
-            label="carreiras"
+            icon={FileCheck2}
+            value={exams.length}
+            label="Provas e concursos"
+            hint="Explorar provas"
+            onClick={(e) => openDetail("exams", e.currentTarget)}
+          />
+          <Metric
+            icon={Building2}
+            value={byBoard.length}
+            label="Bancas"
+            hint="Conhecer a distribuição"
+            onClick={(e) => openDetail("boards", e.currentTarget)}
           />
           <Metric
             icon={Layers3}
-            value={new Set(items.map((item) => item.subject)).size}
-            label="disciplinas"
+            value={bySubject.length}
+            label="Disciplinas"
+            hint="Encontrar sua matéria"
+            onClick={(e) => openDetail("subjects", e.currentTarget)}
           />
         </div>
-      </section>
-      <div className="grid gap-6 xl:grid-cols-[1.1fr_.9fr]">
-        <Card className="border-0 shadow-lg ring-1 ring-border/70">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-xl">
-              <Target className="h-5 w-5 text-emerald-600" />
-              Configurar bateria
-            </CardTitle>
-            <CardDescription>
-              Combine os critérios. Nenhum gabarito ou enunciado será mostrado nesta etapa.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Filter
-                label="Concurso"
-                counts={facets.contest}
-                value={contest}
-                set={setContest}
-                values={options.contests}
-              />
-              <Filter
-                label="Banca"
-                counts={facets.board}
-                value={board}
-                set={setBoard}
-                values={options.boards}
-              />
-              <Filter
-                label="Carreira ou cargo"
-                counts={facets.career}
-                value={career}
-                set={setCareer}
-                values={options.careers}
-              />
-              <Filter
-                label="Estado"
-                counts={facets.state}
-                value={state}
-                set={setState}
-                values={options.states}
-              />
-              <Filter
-                label="Categoria"
-                counts={facets.category}
-                value={category}
-                set={setCategory}
-                values={options.categories}
-              />
-              <Filter
-                label="Ano"
-                counts={facets.year}
-                value={year}
-                set={setYear}
-                values={options.years}
-              />
-              <Filter
-                label="Disciplina"
-                counts={facets.subject}
-                value={subject}
-                set={setSubject}
-                values={options.subjects}
-              />
-              <Filter
-                label="Origem"
-                counts={facets.source}
-                value={source}
-                set={setSource}
-                values={["official", "curated", "personal"]}
-                labels={SOURCE_LABELS}
-              />
-            </div>
-            <div className="rounded-2xl border bg-muted/30 p-4">
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <p className="text-2xl font-black">{filtered.length}</p>
-                  <p className="text-sm text-muted-foreground">
-                    questões disponíveis nesta seleção
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Button variant="outline" onClick={reset}>
-                    Limpar
-                  </Button>
-                  <Button
-                    asChild
-                    disabled={!filtered.length}
-                    className="gap-2 bg-emerald-600 hover:bg-emerald-700"
-                  >
-                    <Link to="/dashboard/question-trainer" search={search}>
-                      <BookOpenCheck className="h-4 w-4" />
-                      Treinar com correção imediata
-                    </Link>
-                  </Button>
-                  <Button asChild disabled={!filtered.length} variant="outline" className="gap-2">
-                    <Link to="/dashboard/mock-exams" search={search}>
-                      <Play className="h-4 w-4 fill-current" />
-                      Fazer simulado
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="border-0 shadow-lg ring-1 ring-border/70">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-xl">
-              <ShieldCheck className="h-5 w-5 text-blue-600" />
-              Formato da questão
-            </CardTitle>
-            <CardDescription>
-              O aplicativo identifica as alternativas e os itens de julgamento.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <StyleCard
-              title="Certo ou Errado"
-              description="Itens de julgamento com opções Certo ou Errado."
-              options={["Certo", "Errado"]}
-            />
-            <StyleCard
-              title="Múltipla escolha com quatro opções"
-              description="Questões objetivas com alternativas A, B, C e D."
-              options={["A", "B", "C", "D"]}
-            />
-            <StyleCard
-              title="Múltipla escolha com cinco opções"
-              description="Questões objetivas com alternativas A, B, C, D e E."
-              options={["A", "B", "C", "D", "E"]}
-            />
-            <div className="flex gap-2 rounded-xl border border-emerald-100 bg-emerald-50 p-3 text-xs leading-5 text-emerald-800">
-              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>
-                O gabarito permanece oculto durante o treino e só aparece na correção final.
-              </span>
-            </div>
-          </CardContent>
-        </Card>
       </div>
-      <section className="collection-showcase">
-        <div className="collection-showcase-heading">
-          <span>Rotas rápidas de estudo</span>
-          <h2>Entre diretamente no conteúdo que deseja treinar.</h2>
-          <p>Selecione uma disciplina ou banca para abrir o treinador com o filtro já aplicado.</p>
-        </div>
-        <div className="relative z-10 grid gap-6 lg:grid-cols-2">
-          <Collection
-            title="Acervo por disciplina"
-            icon={BookOpenCheck}
-            rows={bySubject}
-            filterKey="subject"
-          />
-          <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} filterKey="board" />
-        </div>
-      </section>
-      <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
-        Acervo educacional com governança editorial
-      </footer>
+
+      <div className="question-catalog__distributions grid gap-4 xl:grid-cols-2">
+        <Distribution
+          title="Por disciplina"
+          description="Quantidade de questões em cada matéria."
+          rows={bySubject}
+          max={maxSubject}
+          total={total}
+          collection={collection}
+          source={source}
+          query={search}
+          linkKey="subject"
+        />
+        <Distribution
+          title="Por banca"
+          description="Bancas organizadoras das provas."
+          rows={byBoard}
+          max={maxBoard}
+          total={total}
+          collection={collection}
+          source={source}
+          query={search}
+          linkKey="board"
+        />
+      </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">Provas e concursos</CardTitle>
+          <CardDescription>
+            Somente questões de provas oficiais. Cada seleção identifica concurso, cargo, banca e
+            edição; questões autorais não entram nessa contagem.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          {exams.slice(0, examLimit).map((e) => (
+            <div key={e.key} className="flex flex-wrap items-center gap-3 rounded-xl border p-3">
+              <div className="min-w-0 flex-1">
+                <p className="truncate font-semibold">
+                  {e.question.contest}{" "}
+                  <span className="font-normal text-muted-foreground">· {e.question.year}</span>
+                </p>
+                <p className="truncate text-xs text-muted-foreground">
+                  {e.question.board} · {e.question.career} · {e.subjects.size} disciplinas
+                </p>
+              </div>
+              <span className="rounded-full bg-muted px-3 py-1 text-sm font-bold tabular-nums">
+                {e.count} questões
+              </span>
+              <Button asChild size="sm" variant="outline">
+                <Link
+                  to="/dashboard/question-trainer"
+                  search={questionBankSearch(collection, source, search, { exam: e.question })}
+                >
+                  Treinar esta prova <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                </Link>
+              </Button>
+            </div>
+          ))}
+          {!exams.length && (
+            <p className="text-sm text-muted-foreground">
+              Nenhuma prova encontrada para esta consulta.
+            </p>
+          )}
+          {exams.length > examLimit && (
+            <Button variant="ghost" onClick={() => setExamLimit((n) => n + 20)}>
+              Mostrar mais ({exams.length - examLimit} restantes)
+            </Button>
+          )}
+        </CardContent>
+      </Card>
+
+      <div className="grid gap-6 xl:grid-cols-[1fr_1fr]">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Por ano da prova</CardTitle>
+            <CardDescription>Distribuição das questões ao longo dos anos.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-1.5">
+            {byYear.map(([y, n]) => (
+              <Link
+                key={y}
+                to="/dashboard/question-trainer"
+                search={questionBankSearch(collection, source, search, { year: y })}
+                aria-label={`Treinar questões de ${y}`}
+                className="grid min-h-11 grid-cols-[3rem_1fr_auto] items-center gap-3 rounded-lg px-2 text-sm transition-[background-color,transform] duration-150 hover:bg-muted active:scale-[0.98] motion-reduce:active:scale-100"
+              >
+                <span className="font-mono">{y}</span>
+                <span className="h-2 overflow-hidden rounded-full bg-muted">
+                  <span
+                    className="block h-full rounded-full bg-sky-500"
+                    style={{ width: `${(n / Math.max(1, ...byYear.map((r) => r[1]))) * 100}%` }}
+                  />
+                </span>
+                <span className="flex items-center gap-2 tabular-nums">
+                  {n}
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </span>
+              </Link>
+            ))}
+            {!byYear.length && (
+              <p className="text-sm text-muted-foreground">Sem dados de ano para esta consulta.</p>
+            )}
+          </CardContent>
+        </Card>
+        <details className="question-workspace__help question-catalog__quality">
+          <summary>
+            Qualidade do acervo{missingText ? ` · ${missingText} com apoio pendente` : ""}
+          </summary>
+          <div className="space-y-3 text-sm">
+            <p className="flex gap-2">
+              <FileCheck2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />{" "}
+              Questões oficiais só entram após conferência com o gabarito definitivo; itens com
+              revisão jurídica pendente ficam fora do acervo.
+            </p>
+            <p className="flex gap-2">
+              <Layers3 className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" aria-hidden /> Formatos
+              suportados: Certo ou Errado, múltipla escolha com quatro ou cinco alternativas.
+            </p>
+            {missingText !== null && (
+              <p
+                className={cn(
+                  "flex gap-2 rounded-lg border p-2",
+                  missingText
+                    ? "border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100"
+                    : "border-emerald-300 bg-emerald-50 text-emerald-950",
+                )}
+              >
+                <TextSearch className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+                {missingText ? (
+                  <span>
+                    <strong>{missingText} questões de Língua Portuguesa</strong> aguardam o texto de
+                    apoio e ficam fora do treino e dos simulados até o texto ser cadastrado.
+                  </span>
+                ) : (
+                  <span>
+                    As questões de Português disponíveis nesta área têm o apoio necessário.
+                  </span>
+                )}
+              </p>
+            )}
+          </div>
+        </details>
+      </div>
     </div>
   );
 }
 
-function StyleCard({
+function Distribution({
   title,
   description,
-  options,
+  rows,
+  max,
+  total,
+  linkKey,
+  collection,
+  source,
+  query,
 }: {
   title: string;
   description: string;
-  options: string[];
-}) {
-  return (
-    <div className="rounded-xl border p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="font-black">{title}</p>
-          <p className="mt-1 text-xs text-muted-foreground">{description}</p>
-        </div>
-        <div className="flex gap-1">
-          {options.map((option) => (
-            <span
-              key={option}
-              className="flex h-7 min-w-7 items-center justify-center rounded-md border bg-muted px-1.5 text-[10px] font-black"
-            >
-              {option}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-function Collection({
-  title,
-  icon: Icon,
-  rows,
-  filterKey,
-}: {
-  title: string;
-  icon: React.ElementType;
   rows: Array<[string, number]>;
-  filterKey: "subject" | "board";
+  max: number;
+  total: number;
+  linkKey: "subject" | "board";
+  collection: BankCollection;
+  source: BankSource;
+  query: string;
 }) {
   return (
-    <Card className="catalog-collection-card">
+    <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Icon className="h-5 w-5 text-primary" />
-          {title}
-        </CardTitle>
+        <CardTitle className="text-lg">{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-2 sm:grid-cols-2">
-        {rows.slice(0, 12).map(([name, count]) => (
+      <CardContent className="space-y-1.5">
+        {rows.map(([name, n]) => (
           <Link
             key={name}
             to="/dashboard/question-trainer"
-            search={filterKey === "subject" ? { subject: name } : { board: name }}
-            className="collection-study-link"
-            aria-label={`Treinar ${filterKey === "subject" ? "a disciplina" : "questões da banca"} ${name}`}
+            search={questionBankSearch(collection, source, query, { [linkKey]: name })}
+            className="group grid grid-cols-[minmax(0,12rem)_1fr_auto] items-center gap-3 min-h-11 rounded-lg px-2 py-2 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
+            aria-label={`Treinar ${name}`}
           >
-            <span className="truncate text-sm font-semibold">{name}</span>
-            <span className="flex shrink-0 items-center gap-2">
-              <Badge variant="secondary">{count}</Badge>
-              <ArrowRight className="h-4 w-4" />
+            <span className="truncate font-medium">{name}</span>
+            <span className="h-2 overflow-hidden rounded-full bg-muted">
+              <span
+                className="block h-full rounded-full bg-emerald-500"
+                style={{ width: `${Math.max(3, (n / max) * 100)}%` }}
+              />
+            </span>
+            <span className="flex items-center gap-2 tabular-nums text-muted-foreground">
+              <span className="font-semibold text-foreground">{n}</span>{" "}
+              {total ? `${Math.round((n / total) * 100)}%` : ""}{" "}
+              <ArrowRight
+                className="h-3.5 w-3.5 opacity-0 transition group-hover:opacity-100"
+                aria-hidden
+              />
             </span>
           </Link>
         ))}
+        {!rows.length && (
+          <p className="text-sm text-muted-foreground">Nada encontrado para esta consulta.</p>
+        )}
       </CardContent>
     </Card>
   );
 }
-function Filter({
-  label,
-  value,
-  set,
-  values,
-  labels,
-  counts,
-}: {
-  label: string;
-  value: string;
-  set: (value: string) => void;
-  values: string[];
-  labels?: Record<string, string>;
-  counts?: Map<string, number>;
-}) {
-  return (
-    <label className="space-y-1.5">
-      <span className="text-xs font-bold text-muted-foreground">{label}</span>
-      <Select value={value} onValueChange={set}>
-        <SelectTrigger>
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="all">Todos</SelectItem>
-          {values
-            .filter((option) => !counts || (counts.get(option) ?? 0) > 0 || option === value)
-            .map((value) => (
-              <SelectItem key={value} value={value}>
-                {labels?.[value] || value} {counts ? `(${counts.get(value) ?? 0})` : ""}
-              </SelectItem>
-            ))}
-        </SelectContent>
-      </Select>
-    </label>
-  );
-}
+
 function Metric({
   icon: Icon,
   value,
   label,
+  hint,
+  onClick,
 }: {
   icon: React.ElementType;
   value: number;
   label: string;
+  hint: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <div className="hero-stat">
+    <button
+      type="button"
+      className="question-workspace__metric catalog-metric"
+      onClick={onClick}
+      aria-haspopup="dialog"
+      aria-label={`${label}: ${value.toLocaleString("pt-BR")}. Ver detalhes`}
+    >
       <span>
-        <Icon />
+        <Icon aria-hidden="true" />
         {label}
       </span>
-      <strong className="tabular">{value}</strong>
-    </div>
+      <strong className="tabular">{value.toLocaleString("pt-BR")}</strong>
+      <small>
+        {hint}
+        <ArrowRight aria-hidden="true" />
+      </small>
+    </button>
   );
 }
 function Loading() {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center">
-      <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
-      <p className="mt-3 text-sm text-muted-foreground">Organizando opções de treino...</p>
+    <div aria-busy="true" className="space-y-5">
+      <section className="page-hero page-hero--lg workspace-banner" data-hero="trainer">
+        <h1>Explorar questões</h1>
+        <p>Consulte e organize suas questões para estudar.</p>
+      </section>
+      <div role="status" className="flex items-center gap-3 rounded-2xl border bg-card p-5">
+        <Loader2 className="h-5 w-5 animate-spin text-emerald-600" />
+        <p className="text-sm text-muted-foreground">Organizando o acervo…</p>
+      </div>
     </div>
   );
 }
@@ -532,10 +539,10 @@ function Login() {
       image="trainer"
       title={
         <>
-          Banco de <em>questões</em>
+          Explorar <em>questões</em>
         </>
       }
-      description="Entre na sua conta para montar baterias por banca, carreira, concurso e disciplina."
+      description="Entre na sua conta para consultar o acervo de questões."
     />
   );
 }
@@ -547,40 +554,14 @@ function ErrorState({ message, retry }: { message: string; retry: () => void }) 
         <h2 className="mt-4 text-xl font-black">Falha ao carregar o acervo</h2>
         <p className="mt-2 text-sm text-muted-foreground">{message}</p>
         <Button className="mt-5 gap-2" onClick={retry}>
-          <RefreshCw className="h-4 w-4" />
-          Tentar novamente
+          <RefreshCw className="h-4 w-4" /> Tentar novamente
         </Button>
       </CardContent>
     </Card>
   );
 }
-function normalize(row: Record<string, unknown>, source: SourceKind): CatalogItem {
-  return {
-    id: String(row["id"]),
-    contest: String(row["contest_name"] || "Não informado"),
-    year: String((source === "official" ? row["exam_year"] : row["contest_year"]) || "—"),
-    career:
-      source === "personal"
-        ? "Meu caderno"
-        : canonicalCareerName(String(row["career_name"] || "Carreira policial")),
-    board:
-      source === "personal"
-        ? "Meu caderno"
-        : canonicalBoard(String(row["board"] || row["exam_board"] || "Não informada")),
-    subject: canonicalSubject(String(row["subject"] || "Sem disciplina")),
-    source,
-    state: String(row["state"] || ""),
-    category: String(row["career_category"] || ""),
-  };
-}
-function unique(values: string[]) {
-  return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b, "pt-BR"));
-}
-function groupBy(items: CatalogItem[], key: "subject" | "board") {
+function countBy<T>(items: T[], key: (i: T) => string): Array<[string, number]> {
   return Array.from(
-    items.reduce(
-      (map, item) => map.set(item[key], (map.get(item[key]) || 0) + 1),
-      new Map<string, number>(),
-    ),
+    items.reduce((m, i) => m.set(key(i), (m.get(key(i)) || 0) + 1), new Map<string, number>()),
   ).sort((a, b) => b[1] - a[1]);
 }

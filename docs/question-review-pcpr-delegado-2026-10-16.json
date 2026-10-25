@@ -1,0 +1,369 @@
+{
+  "scope": "PC-PR/FGV/2026, Delegado, Tipo 1, itens 14, 29, 51 e 60; não é auditoria integral das três provas",
+  "checked_at": "2026-10-16T15:33:26.224Z",
+  "publication": {
+    "checked_at": "2026-10-16T15:33:26.224Z",
+    "reviewed": 4,
+    "updated": 4,
+    "untouched_preserved": 296,
+    "concurrent_unrelated_ids": [],
+    "roles": {
+      "Delegado de Polícia": {
+        "active": 98,
+        "archived": 2
+      },
+      "Agente de Polícia Judiciária": {
+        "active": 100
+      },
+      "Papiloscopista Policial": {
+        "active": 100
+      }
+    },
+    "original_text_options_answers_sources_preserved": true
+  },
+  "pending_under_review": 0,
+  "editorially_archived_awaiting_followup": [
+    14,
+    51
+  ],
+  "followup": "Consultar recursos, retificações e gabarito definitivo; verificar eventual julgamento do Tema 1408 antes de reavaliar o item 51. Arquivamento editorial não é anulação pela FGV.",
+  "tests": {
+    "passed": 64,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "scripts/review/*.test.mjs e quatro suítes de formato/texto/acervo"
+  },
+  "application_changed": false,
+  "build_run": false,
+  "sources": [
+    {
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+      "sha256": "1f6438069cb18406e7b78b88a07ce5b30812a4f4c731de560d419e765b495312",
+      "retrieval_completed_at": "2026-10-16T15:23:48.040549+00:00"
+    },
+    {
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+      "sha256": "34ae8a4d379c459448991b5868ab5f31ebf3e02e9a7aad5a09b5533021eda4de",
+      "retrieval_completed_at": "2026-10-16T15:23:48.016550+00:00"
+    },
+    {
+      "url": "https://conhecimento.fgv.br/concursos/pcpr26",
+      "sha256": "36ed467b56d9bec589137ba0d8a29fc2f94b17d09020ba0c1d909b479c342036",
+      "retrieval_completed_at": "2026-10-16T15:23:48.044549+00:00"
+    },
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/",
+      "sha256": "52aa9dd2c9075bd89210973e13ffbb6cceb57a8e8624bb428eb607776d11522a",
+      "retrieval_completed_at": "2026-10-16T15:26:16.077850+00:00"
+    },
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+      "sha256": "beebfb44c4905adcce78e9e41d1471c350f7d94b4e4238eba92e4c68ac8887fe",
+      "retrieval_completed_at": "2026-10-16T15:26:15.841861+00:00"
+    },
+    {
+      "url": "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%22439%22.num.&O=JT",
+      "sha256": "54134bc4b75764c37a0484f792c02d75312bd355087e7ca47deaedd14d82f083",
+      "retrieval_completed_at": "2026-10-16T15:24:46.417912+00:00"
+    },
+    {
+      "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=NOCENDI&refinar=S.DISP.",
+      "sha256": "dfa3e591198d7bb6f59bb277af6b78e524e49e1fa6b45e6282ec2b93d2c5cc78",
+      "retrieval_completed_at": "2026-10-16T15:28:58.526478+00:00"
+    },
+    {
+      "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=DESOBEDIENCIA&refinar=S.DISP.",
+      "sha256": "10de8bfa55ecc9a0ecb6e7849de55b09d5f771e788c598955d6cf1511df51740",
+      "retrieval_completed_at": "2026-10-16T15:29:00.258400+00:00"
+    },
+    {
+      "url": "https://scon.stj.jus.br/SCON/jt/doc.jsp?livre=%2787%27%20INPATH(TIT)",
+      "sha256": "939d07cab5379cc70b03d2686844a3b840bc5680cb6a90d0253f262776dcf198",
+      "retrieval_completed_at": "2026-10-16T15:27:57.153265+00:00"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sha256": "8889a2d730df7e7a760a6032de69b25cea4bac38917ce4792ca9668120e0395f",
+      "retrieval_completed_at": "2026-10-16T15:24:54.145Z"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "sha256": "fa3830e9c0b22b93d608637f4246eb98fbac0f7d0d02bedd96074a967cf71cb1",
+      "retrieval_completed_at": "2026-10-16T15:24:51.740Z"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "07e12b2a357170b8bd691f7e7c7931277f2dd32c1f04f1d57e80a2c9ceec7794",
+      "retrieval_completed_at": "2026-10-16T15:24:50.092Z"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "sha256": "1ea84e6c53926ec566881cf77d317f77c70161054734b06fd62826f344373b6e",
+      "retrieval_completed_at": "2026-10-16T15:24:48.774Z"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "sha256": "ff9e7d9d88a5ff3edc788f82fac735402e54eebea822832b7d16a1b91198a851",
+      "retrieval_completed_at": "2026-10-16T15:24:49.302Z"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "e5102a44-dd59-42d4-a938-0769effe8495",
+      "item_number": 14,
+      "previous_status": "under_review",
+      "status": "archived",
+      "official_answer": "A",
+      "answer_stage": "preliminary",
+      "previous_row_sha256": "0cb474ab7b6ae21a49d851b67f8075c95b07b312f68392828f8436f2d7157ff4",
+      "published_row_sha256": "f8bc15d334f7719f366b36fbd879cd351a3e0c79d500cab2dac0faf2ca47320d",
+      "patch": {
+        "content_status": "archived",
+        "explanation": "REVISÃO EDITORIAL — ITEM FORA DO TREINO AUTOMÁTICO.\nGabarito preliminar FGV: A, preservado. Não há declaração de anulação pela banca nesta revisão.\nA alternativa A afirma que a ocultação seria mero exaurimento impunível da corrupção. Entretanto, o enunciado descreve atos posteriores de simulação de negócio e integração dos valores ilícitos: não é apenas receber ou gastar a propina. O art. 1º da Lei 9.613/1998 tipifica ocultar ou dissimular a origem de valores provenientes de infração penal; o art. 2º, II, estabelece a autonomia do processo de lavagem em relação à infração antecedente. O autor do delito antecedente pode responder também pela lavagem quando pratica atos autônomos de ocultação ou dissimulação. Na leitura desses fatos, a alternativa C é juridicamente compatível, em oposição à letra A indicada preliminarmente. Esta conclusão editorial não substitui a resposta oficial.\nPor que as demais alternativas falham? A lei não prevê lavagem culposa (B); a condenação prévia pelo delito antecedente não é requisito obrigatório (D); a lavagem não absorve automaticamente a corrupção (E).\nExemplo: receber propina e simplesmente comprar um bem não demonstra, por si só, lavagem. Variação: criar documentação simulada para disfarçar a origem ilícita pode configurar uma operação autônoma de lavagem. Fixação: receber dinheiro ilícito e dissimular sua origem são etapas diferentes; procure atos concretos de ocultação.\nReabertura: conferir eventual retificação, resposta aos recursos e gabarito definitivo da FGV antes de voltar ao treino pontuado. Não memorizar A como regra jurídica atual.",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Conferência legal em 16/10/2026: Chave preliminar (A) parece divergir da Lei 9.613/1998 (art. 1º e art. 2º, II: lavagem autônoma, autolavagem em concurso material). Provável recurso ou anulação: aguardar o gabarito definitivo antes de ativar.\n\nConferência editorial em 16/10/2026: arquivamento editorial preventivo, sem declarar anulação pela FGV; explicação detalha o impedimento e o critério de reabertura.",
+        "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+        "verified_at": "2026-10-16T15:30:46.041061+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+            "artigo": "1"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+            "artigo": "2"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "317"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "69"
+          }
+        ],
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Divergência substantiva entre alternativa A preliminar e atos autônomos de dissimulação: quarentena editorial; letra oficial preservada.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "official_answer_stage": "preliminary",
+        "official_answer_preserved": true,
+        "automatic_reactivation": false
+      }
+    },
+    {
+      "id": "fb82bf3e-5245-4d12-9e8d-5da132c97bd3",
+      "item_number": 29,
+      "previous_status": "under_review",
+      "status": "active",
+      "official_answer": "E",
+      "answer_stage": "preliminary",
+      "previous_row_sha256": "06d97134f96e87797739c58e91a86f76132b9e1392ac4662107d1c2fb5a9ff45",
+      "published_row_sha256": "8e3fbbc9d8f70d9922b874966846c2da01f29426d5ded2615dd9582daeb05dae",
+      "patch": {
+        "content_status": "active",
+        "explanation": "Resposta preliminar FGV: E. Conferência editorial do conteúdo: compatível com as fontes consultadas. O gabarito ainda não é definitivo.\nO prefeito age por motivo estritamente pessoal: induz a namorada a abortar. O foro por prerrogativa de função não acompanha qualquer crime de quem exerce cargo público; exige relação com as funções. O STF, na AP 937 e no julgamento de 2025 do HC 232.627 e do INQ 4.787, preservou os requisitos de crime praticado no cargo e em razão dele. A alteração de 2025 sobre a permanência do foro após a saída da função não transforma um motivo pessoal em ato funcional.\nO aborto provocado por terceiro é julgado pelo Tribunal do Júri (CPP, art. 74, § 1º). O resultado morte da gestante não retira automaticamente o aborto qualificado pelo resultado dessa competência. No quadro narrado, a competência territorial segue o lugar de consumação (CPP, art. 70): DELTA, onde se realizou o procedimento e ocorreu a morte. A condição de prefeito não desloca esse caso pessoal para o Tribunal de Justiça, nem arrasta o médico para lá por conexão.\nAtenção: a Súmula Vinculante 45 trata de foro instituído exclusivamente por Constituição estadual. Não é fundamento para ignorar indistintamente todos os foros previstos na Constituição Federal.\nExemplo: o prefeito participa de aborto clandestino por motivo familiar, sem relação com suas funções: não recebe foro apenas por ser prefeito. Variação: crime praticado no exercício do cargo e em razão das funções exige análise própria da prerrogativa; não reutilize automaticamente a solução deste caso. Fixação: pergunte primeiro se há relação com o cargo e depois identifique a competência material e territorial.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Conferência legal em 16/10/2026: Depende da Súmula Vinculante 45 e da jurisprudência sobre foro de prefeito e Tribunal do Júri: precedentes ainda não conferidos; permanece em revisão.\n\nConferência editorial em 16/10/2026: liberada com gabarito preliminar identificado e comentário pedagógico; não certifica gabarito definitivo.",
+        "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+        "verified_at": "2026-10-16T15:30:46.041061+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "29"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "70"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "74"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "126"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "127"
+          }
+        ],
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Crime de motivo pessoal, sem nexo funcional; competência do Júri no lugar de consumação; precedente de 2025 preserva requisito funcional.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/"
+        ],
+        "official_answer_stage": "preliminary",
+        "official_answer_preserved": true,
+        "automatic_reactivation": false
+      }
+    },
+    {
+      "id": "64dbf18e-c8d8-493b-92c5-46c9080c6a88",
+      "item_number": 51,
+      "previous_status": "under_review",
+      "status": "archived",
+      "official_answer": "E",
+      "answer_stage": "preliminary",
+      "previous_row_sha256": "65da87074c1730bb713a5735d16cd3555f7117269a4c7cf666737418fb9c11ae",
+      "published_row_sha256": "3ce7a1df17d25be9cde04df9d65a0a280f37001f40f13189557f9ededdec7392",
+      "patch": {
+        "content_status": "archived",
+        "explanation": "REVISÃO EDITORIAL — QUESTÃO COM RESSALVA TEMPORAL, FORA DO TREINO AUTOMÁTICO.\nGabarito preliminar FGV: E, preservado. A banca não foi declarada anuladora desta questão nesta revisão.\nA letra E corresponde à orientação que admite exigir exame criminológico pelas peculiaridades do caso, desde que a decisão seja concretamente motivada (Súmula 439 do STJ). Nessa sistemática, a gravidade abstrata do delito e o tamanho da pena, isoladamente, não substituem fundamentos individualizados.\nEntretanto, a Lei 14.843/2024 alterou o art. 112, § 1º, da LEP para mencionar expressamente os resultados do exame criminológico como requisito da progressão. Por isso, é necessário distinguir a data do crime, a legislação aplicável e a jurisprudência sobre a aplicação temporal da lei mais gravosa. A notícia oficial do STF de 07/07/2025 registra o reconhecimento de repercussão geral no Tema 1.408 (RE 1.536.743); ela não equivale a uma tese de mérito nem autoriza afirmar um desfecho posterior não conferido.\nO enunciado cita as duas reformas, mas não informa a data do crime. Não é seguro transformar a resposta E em regra universal atual, nem ensinar que o exame foi abolido. Por essa ambiguidade, o item fica arquivado editorialmente até esclarecimento/retificação e conferência do gabarito definitivo e do estado atual do precedente pertinente.\nExemplo: em caso submetido à sistemática anterior, a exigência individual do exame deve ser concretamente justificada. Variação: para fato alcançado pela regra nova, não basta repetir a tese antiga sem analisar a alteração legal e o regime temporal. Fixação: prazo objetivo, comportamento e exame são requisitos distintos; sempre identifique qual legislação incide.\nFontes judiciais: Súmula 439/STJ; https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Conferência legal em 16/10/2026: O art. 112, § 1º, da LEP (Lei 14.843/2024) exige o exame criminológico para a progressão; a chave preliminar segue linha jurisprudencial. Aguardar o gabarito definitivo antes de ativar.\n\nConferência editorial em 16/10/2026: arquivamento editorial preventivo, sem declarar anulação pela FGV; explicação detalha o impedimento e o critério de reabertura.",
+        "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+        "verified_at": "2026-10-16T15:30:46.041061+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "artigo": "112"
+          }
+        ],
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Omissão da data do fato e alteração do art. 112 pela Lei 14.843/2024; não ensinar como regra universal antiga nem antecipar julgamento constitucional.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+          "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+          "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%22439%22.num.&O=JT"
+        ],
+        "official_answer_stage": "preliminary",
+        "official_answer_preserved": true,
+        "automatic_reactivation": false
+      }
+    },
+    {
+      "id": "9a050a67-4621-42fb-ae33-f01d4535321b",
+      "item_number": 60,
+      "previous_status": "under_review",
+      "status": "active",
+      "official_answer": "D",
+      "answer_stage": "preliminary",
+      "previous_row_sha256": "d06820f2f3489b264938fc688e7a49c85c2187c70572b604448738bd9059c36d",
+      "published_row_sha256": "52c9f31f2b48a04da8086f8622bfb2deb9ca89f1306c6d4512666d78518b5ed1",
+      "patch": {
+        "content_status": "active",
+        "explanation": "Resposta preliminar FGV: D. Conferência editorial do conteúdo: compatível com as fontes consultadas. O gabarito ainda não é definitivo.\nSepare duas perguntas: houve descumprimento da cautelar? Há um novo crime que autoriza este flagrante? O CPP, art. 282, § 4º, prevê consequências processuais para o descumprimento, como substituir ou cumular cautelares e, em último caso, decretar prisão preventiva se presentes os requisitos legais. Isso não equivale a transformar automaticamente o fato em desobediência do art. 330 do CP. A jurisprudência do STJ exige atenção à existência de sanção específica para o descumprimento; essa análise não dispensa verificar tipos penais especiais.\nQuanto ao dano qualificado, o STJ exige animus nocendi: vontade específica de prejudicar o patrimônio. O Informativo 856 (HC 916.770/SC, julgado em 30/04/2025) confirma esse requisito; a Jurisprudência em Teses, edição 87, tese 3, trata do dano para fuga sem esse dolo específico. Esses precedentes fornecem os fundamentos gerais, não são apresentados aqui como um julgamento idêntico sobre esta tornozeleira. O enunciado destaca o objetivo exclusivo de fugir do rastreamento, fundamento da solução D adotada preliminarmente pela banca.\nO delegado deve registrar e comunicar o fato ao juízo, sem lavrar flagrante pelos dois delitos nas circunstâncias descritas. Não pode arquivar o inquérito por conta própria (CPP, art. 17). A ausência desses crimes não elimina consequências cautelares, eventual reparação do equipamento ou responsabilização por outro fato devidamente comprovado.\nAtenção: o caso é de cautelar do CPP em processo por receptação. Não generalize para o descumprimento de medidas protetivas da Lei Maria da Penha (art. 24-A) ou para outros tipos especiais; não confunda cautelar processual com falta disciplinar de quem cumpre pena.\nExemplo: cortar o aparelho exclusivamente para evitar rastreamento exige analisar finalidade e consequências cautelares, sem presumir ambos os crimes. Variação: destruir patrimônio com finalidade autônoma de causar prejuízo altera a análise do dano. Fixação: descumprimento, crime autônomo e reação cautelar não são a mesma coisa.\nFontes judiciais: STJ, Informativo 856, HC 916.770/SC; Jurisprudência em Teses, edição 87, tese 3. A regra geral sobre desobediência consta do Informativo 546, RHC 41.970/MG, cuja situação histórica de medidas protetivas não deve ser aplicada como retrato da Lei Maria da Penha após a criação de seu art. 24-A.",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Conferência legal em 16/10/2026: Resposta depende de jurisprudência do STF/STJ: precedente ainda não conferido no site do tribunal; permanece em revisão (monitoração eletrônica e flagrante).\n\nConferência editorial em 16/10/2026: liberada com gabarito preliminar identificado e comentário pedagógico; não certifica gabarito definitivo.",
+        "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+        "verified_at": "2026-10-16T15:30:46.041061+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "282"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "319"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "17"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "163"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "330"
+          }
+        ],
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Aplicação dos requisitos gerais de dolo específico no dano e de sanção processual no descumprimento de cautelar; exceções expressamente diferenciadas.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=NOCENDI&refinar=S.DISP.",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=DESOBEDIENCIA&refinar=S.DISP.",
+          "https://scon.stj.jus.br/SCON/jt/doc.jsp?livre=%2787%27%20INPATH(TIT)"
+        ],
+        "official_answer_stage": "preliminary",
+        "official_answer_preserved": true,
+        "automatic_reactivation": false
+      }
+    }
+  ],
+  "question_inventory_snapshot": {
+    "checked_at": "2026-10-16T15:33:30.788Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 4011,
+        "under_review": 553,
+        "archived": 256,
+        "obsolete": 31,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 745,
+        "under_review": 300,
+        "archived": 9,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6580,
+      "under_review": 853,
+      "archived": 265,
+      "obsolete": 33,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "question_inventory_scope": "Registros físicos de quatro tabelas, incluindo banco pessoal; não são questões públicas únicas. Alteração deste lote: +2 ativas, -4 under_review, +2 arquivadas."
+}

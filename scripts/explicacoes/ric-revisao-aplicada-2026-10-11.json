@@ -1,0 +1,125 @@
+{
+  "course_slug": "ric",
+  "units": {
+    "art-1": {
+      "simples": "Institui identificador único para brasileiro nato/naturalizado nas relações públicas/privadas. Desde 2023, documentos novos usam CPF, único e definitivo. Trechos vetados não acrescentam campos ou novas obrigações.",
+      "pontos": [
+        "CPF único; não número novo por estado."
+      ],
+      "atencao": [
+        "Número identifica, não autentica sozinho nem autoriza exposição ilimitada."
+      ],
+      "exemplo": "Documento novo conserva CPF como identificador. Variação: Pessoa muda de estado: não recebe novo CPF por essa mudança.",
+      "prova": [
+        "O número de novos documentos é o CPF? Sim; o §2º atual o prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Cadastro nacional reúne número único acompanhado dos dados de identificação do cidadão. Não é banco penal por essa definição nem dispensa proteção e regras de compartilhamento.",
+      "pontos": [
+        "Cadastro civil e dados de identificação."
+      ],
+      "atencao": [
+        "Não presumir publicidade integral de biometria/cadastro."
+      ],
+      "exemplo": "Órgão mantém dados de identificação no cadastro civil. Variação: Terceiro quer acesso irrestrito: a existência do banco não cria essa autorização.",
+      "prova": [
+        "Criar o cadastro significa torná-lo integralmente público? Não; finalidade civil não elimina proteção de dados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "Executivo define órgão central; União pode conveniar com estados/DF. O §2º atual de 2009 atribui a signatários operacionalização/atualização em compartilhamento disciplinado pelo órgão central. A página oficial conserva §2º anterior; ele não deve ser ensinado como segunda regra simultânea. §3º antigo foi revogado.",
+      "pontos": [
+        "§2º com redação de 2009 é o atual."
+      ],
+      "atencao": [
+        "Duas redações na página não significam dois parágrafos simultaneamente vigentes; não recriar o §3º revogado."
+      ],
+      "exemplo": "Estado signatário atualiza cadastro com compartilhamento na disciplina central. Variação: Lê o §2º antigo antes do atual: deve selecionar a redação dada em 2009.",
+      "prova": [
+        "As duas versões exibidas do §2º são regras simultâneas atuais? Não; estude a redação de 2009."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Proposta orçamentária do órgão central inclui meios necessários e cronograma de implementação/manutenção. Previsão orçamentária não é taxa individual ao cidadão.",
+      "pontos": [
+        "Meios e cronograma no orçamento."
+      ],
+      "atencao": [
+        "Não inferir cobrança ou prazo de validade documental deste artigo."
+      ],
+      "exemplo": "Órgão planeja manutenção no orçamento. Variação: A questão é validade da CIN: não se extrai prazo deste planejamento.",
+      "prova": [
+        "O artigo fixa validade da carteira por um ano? Não; trata de orçamento e cronograma do sistema."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Regulamentação em 180 dias e início de implementação em 360 são prazos históricos da lei de 1997. Não se renovam por emissão nem equivalem a validade de documento. Prazo do art. 6º antigo, revogado, não deve ser inserido como regra atual.",
+      "pontos": [
+        "180/360: implantação histórica."
+      ],
+      "atencao": [
+        "Não ensinar antigo prazo revogado como validade de toda carteira atual."
+      ],
+      "exemplo": "A pergunta trata implantação inicial e identifica os dois prazos. Variação: Trata documento emitido agora: consulte regime atual, não reinicie cronograma de 1997.",
+      "prova": [
+        "Os 360 dias são validade de cada documento novo? Não; são prazo histórico de início da implementação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-7": {
+      "simples": "Lei original vigora na publicação; modificações posteriores têm marcos próprios, incluindo adoção CPF em 2023.",
+      "pontos": [
+        "Vigência original e mudanças não se confundem."
+      ],
+      "atencao": [
+        "Não afirmar que CPF estava nessa regra em 1997 pelo fato de hoje aparecer compilado."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: É o número de documento novo atual: considerar alterações de 2023.",
+      "prova": [
+        "O artigo original prevê vacância de 45 dias? Não; vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Revoga disposições contrárias sem impedir alterações posteriores. O artigo 6º da própria lei foi revogado em 2009 e está fora da leitura atual.",
+      "pontos": [
+        "Cláusula final; não reinserir artigo revogado."
+      ],
+      "atencao": [
+        "Não confundir revogação interna de 2009 com nova regra de validade."
+      ],
+      "exemplo": "Aluno separa dispositivo revogado e conserva leitura atual. Variação: Apostila reintroduz art. 6º como vigente: consulte revogação específica.",
+      "prova": [
+        "O art. 6º revogado deve ser estudado como prazo atual? Não; deve ser identificado como histórico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    }
+  }
+}

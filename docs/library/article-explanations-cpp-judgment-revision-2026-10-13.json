@@ -1,0 +1,1348 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:14:50.972157+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 22,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-609",
+        "art-610",
+        "art-612",
+        "art-613",
+        "art-614",
+        "art-615",
+        "art-616",
+        "art-617",
+        "art-618",
+        "art-619",
+        "art-620",
+        "art-621",
+        "art-622",
+        "art-623",
+        "art-624",
+        "art-625",
+        "art-626",
+        "art-627",
+        "art-628",
+        "art-629",
+        "art-630",
+        "art-631"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-609",
+      "unit_id": "c9b7d5dd-9bd0-5276-b505-ea83357794f7",
+      "content_sha256": "ab1382c1d5112ce355eaaa23c0ea0bc0f04ada0fd627f505cfc1f398e3c0c5f0",
+      "simples": "Competência recursal segue organização atual; decisão não unânime de segunda instância desfavorável pode admitir embargos na hipótese penal.",
+      "pontos": [
+        "Dez dias da publicação do acórdão.",
+        "Divergência parcial: limitar matéria embargada.",
+        "Não estender automaticamente a qualquer decisão de qualquer tribunal."
+      ],
+      "atencao": [
+        "Unanimidade desfavorável não cria esses embargos; verificar cabimento e competência específicos."
+      ],
+      "exemplo": "Voto vencido favorável ao réu em matéria pertinente permite examinar embargos. Variação: Divergência só de pena não autoriza reabrir toda imputação sem limite.",
+      "prova": [
+        "Prazo textual é dez dias? Sim.",
+        "Divergência parcial limita objeto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Embargos infringentes",
+          "significado": "Impugnação defensiva delimitada à divergência cabível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c9b7d5dd-9bd0-5276-b505-ea83357794f7",
+        "content_sha256": "ab1382c1d5112ce355eaaa23c0ea0bc0f04ada0fd627f505cfc1f398e3c0c5f0",
+        "simples": "Os recursos, apelações e embargos serão julgados pelos Tribunais de Justiça, câmaras ou turmas criminais, de acordo com a competência estabelecida nas leis de organização judiciária. Quando não for unânime a decisão de segunda instância desfavorável ao réu, admitem-se embargos infringentes e de nulidade, que poderão ser opostos dentro de 10 dias, a contar da publicação do acórdão. Se o desacordo for parcial, os embargos serão restritos à matéria objeto de divergência.",
+        "pontos": [
+          "Recursos julgados por Tribunais de Justiça, câmaras ou turmas criminais.",
+          "Decisão não unânime desfavorável ao réu: embargos infringentes e de nulidade.",
+          "Prazo de 10 dias da publicação do acórdão.",
+          "Divergência parcial: embargos restritos à matéria divergente."
+        ],
+        "atencao": [
+          "Embargos infringentes: só em favor do réu e se a decisão não for unânime.",
+          "Prazo de 10 dias."
+        ],
+        "exemplo": "Voto vencido favorável ao réu permite os embargos infringentes em 10 dias.",
+        "prova": [
+          "Assertiva que admite embargos infringentes em favor da acusação erra: apenas em favor do réu."
+        ],
+        "termos": [
+          {
+            "termo": "Embargos infringentes",
+            "significado": "Recurso contra decisão não unânime desfavorável ao réu."
+          }
+        ],
+        "remissoes": [
+          "Art. 613"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-610",
+      "unit_id": "7526d108-f79d-55e1-87bb-f58841e08898",
+      "content_sha256": "b182dbfa2518f3bd37e20fed35975008bf5bcc4eeaf762b7988c5b848486528c",
+      "simples": "Texto disciplina tramitação de RESE, exceto habeas corpus, e apelações de contravenção/detenção, integrado ao órgão atual.",
+      "pontos": [
+        "Vista acusatória de cinco dias e relator por igual prazo.",
+        "Sustentação textual de dez minutos.",
+        "Integrar regimento e garantias de ciência/sustentação."
+      ],
+      "atencao": [
+        "Não aplicar de modo isolado a todo recurso, incluindo habeas corpus ou reclusão com modificações próprias."
+      ],
+      "exemplo": "Apelação pertinente é preparada para sessão com ciência regular. Variação: Reclusão exige examinar art.613 e regras aplicáveis, não copiar só dez minutos.",
+      "prova": [
+        "HC segue indiscriminadamente esta regra? Não.",
+        "Há diferenciação de reclusão? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Preparação de julgamento",
+          "significado": "Tramitação segundo espécie e regime aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7526d108-f79d-55e1-87bb-f58841e08898",
+        "content_sha256": "b182dbfa2518f3bd37e20fed35975008bf5bcc4eeaf762b7988c5b848486528c",
+        "simples": "Nos recursos em sentido estrito, com exceção do de habeas corpus, e nas apelações interpostas das sentenças em processo de contravenção ou de crime a que a lei comine pena de detenção, os autos irão imediatamente com vista ao procurador-geral pelo prazo de cinco dias e, em seguida, passarão, por igual prazo, ao relator, que pedirá designação de dia para o julgamento. Anunciado o julgamento e apregoadas as partes, o relator fará a exposição do feito e o presidente concederá, pelo prazo de 10 minutos, a palavra aos advogados ou às partes que a solicitarem e ao procurador-geral, quando o requerer, por igual prazo.",
+        "pontos": [
+          "Recursos em sentido estrito (exceto habeas corpus) e apelações em contravenção ou crime com detenção.",
+          "Vista ao procurador-geral por cinco dias e depois ao relator por igual prazo.",
+          "Sustentação oral de 10 minutos."
+        ],
+        "atencao": [
+          "Rito da detenção: sem revisor.",
+          "Sustentação oral: 10 minutos."
+        ],
+        "exemplo": "Em apelação de crime punido com detenção, os autos vão ao procurador-geral e depois ao relator.",
+        "prova": [
+          "Assertiva que prevê revisor no rito de apelação de crime punido com detenção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 613"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-612",
+      "unit_id": "b2a69149-cf97-550a-92eb-c6c08f3a7143",
+      "content_sha256": "932439051a6da86ec1db56d890ed165dad560a317cbba0a46fed51c6054db0aa",
+      "simples": "Recurso de habeas corpus é julgado na primeira sessão após designação de relator no regime do artigo.",
+      "pontos": [
+        "Prioridade ligada à tutela de liberdade.",
+        "Não excluir medidas urgentes cabíveis."
+      ],
+      "atencao": [
+        "Regra de sessão não autoriza ignorar pedido urgente até data distante."
+      ],
+      "exemplo": "Relator examina urgência e prepara julgamento prioritário. Variação: Calendário não impede análise cautelar pertinente à liberdade.",
+      "prova": [
+        "Há prioridade de primeira sessão? Sim.",
+        "Urgência deve ser ignorada até sessão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prioridade do HC",
+          "significado": "Celeridade na tutela da liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b2a69149-cf97-550a-92eb-c6c08f3a7143",
+        "content_sha256": "932439051a6da86ec1db56d890ed165dad560a317cbba0a46fed51c6054db0aa",
+        "simples": "Os recursos de habeas corpus, designado o relator, serão julgados na primeira sessão.",
+        "pontos": [
+          "Recursos de habeas corpus são julgados na primeira sessão após a designação do relator."
+        ],
+        "atencao": [
+          "Celeridade do habeas corpus."
+        ],
+        "exemplo": "Designado o relator, o recurso de habeas corpus é julgado na primeira sessão.",
+        "prova": [
+          "Assertiva que submete o recurso de habeas corpus ao rito comum, sem preferência, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 647"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-613",
+      "unit_id": "efcef01e-843d-5a62-ac56-c90186b81dc7",
+      "content_sha256": "b88b529a3e67b818bb6515415777c37cbd3fd5650e666512d80303a46b5e4b48",
+      "simples": "Apelação de crime com reclusão integra art.610 com revisor, prazos dobrados e debate de quinze minutos, observadas normas atuais.",
+      "pontos": [
+        "Revisor após relatório no modelo previsto.",
+        "Prazos do art.610 ampliados ao dobro.",
+        "Não dobrar prazo de interposição por esta regra interna."
+      ],
+      "atencao": [
+        "Não confundir preparo no tribunal com cinco dias para apelar."
+      ],
+      "exemplo": "Relatório segue a exame revisional conforme regime competente. Variação: Apelante não ganha dez dias para interpor por crime prever reclusão.",
+      "prova": [
+        "Tempo textual de debate é quinze minutos? Sim.",
+        "Dobra automaticamente prazo de interposição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Julgamento em reclusão",
+          "significado": "Modificações internas do processamento recursal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "efcef01e-843d-5a62-ac56-c90186b81dc7",
+        "content_sha256": "b88b529a3e67b818bb6515415777c37cbd3fd5650e666512d80303a46b5e4b48",
+        "simples": "As apelações interpostas das sentenças proferidas em processos por crime a que a lei comine pena de reclusão deverão ser processadas e julgadas pela forma estabelecida no art. 610, com as seguintes modificações: exarado o relatório nos autos, passarão estes ao revisor, que terá igual prazo para o exame do processo e pedirá designação de dia para o julgamento; os prazos serão ampliados ao dobro; e o tempo para os debates será de um quarto de hora.",
+        "pontos": [
+          "Apelação em crime de reclusão segue o art. 610 com modificações.",
+          "Há revisor.",
+          "Prazos em dobro.",
+          "Debates de um quarto de hora."
+        ],
+        "atencao": [
+          "Reclusão: revisor, prazos em dobro e quinze minutos de debate."
+        ],
+        "exemplo": "A apelação de crime punido com reclusão tem revisor e prazos em dobro.",
+        "prova": [
+          "Assertiva que dispensa revisor na apelação de crime punido com reclusão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 610"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-614",
+      "unit_id": "2604e352-fa34-5db7-902d-15d175dcd103",
+      "content_sha256": "2e1b9b3aea382ecadd8d595b848386344255a3f72d4a54ae18c3cddedca0e8c6",
+      "simples": "Impossibilidade de cumprir prazos de610/613 precisa de motivos declarados nos autos.",
+      "pontos": [
+        "Transparência da demora.",
+        "Não constitui autorização ilimitada de atraso."
+      ],
+      "atencao": [
+        "Registrar razão genérica não resolve todo excesso nem afasta controle de duração."
+      ],
+      "exemplo": "Órgão documenta causa real que impediu prazo. Variação: Demora sem explicação não se justifica apenas por rotina administrativa.",
+      "prova": [
+        "Motivo deve constar dos autos? Sim.",
+        "Isso autoriza atraso sem limite? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Justificação da demora",
+          "significado": "Explicação documentada sujeita a controle."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2604e352-fa34-5db7-902d-15d175dcd103",
+        "content_sha256": "2e1b9b3aea382ecadd8d595b848386344255a3f72d4a54ae18c3cddedca0e8c6",
+        "simples": "No caso de impossibilidade de observância de qualquer dos prazos marcados nos arts. 610 e 613, os motivos da demora serão declarados nos autos.",
+        "pontos": [
+          "Prazos dos arts. 610 e 613 não cumpridos: motivos da demora declarados nos autos."
+        ],
+        "atencao": [
+          "Prazos impróprios, mas com dever de justificar."
+        ],
+        "exemplo": "O relator declara nos autos o motivo da demora para pedir o dia do julgamento.",
+        "prova": [
+          "Assertiva que dispensa a declaração dos motivos da demora nos autos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 610",
+          "Art. 613"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-615",
+      "unit_id": "827c77ff-f5d5-5853-82df-16dea4a4797b",
+      "content_sha256": "740301130f191921110036d489386766882477c86ccd1122645b2b6f66733468",
+      "simples": "Colegiado decide por maioria; Lei14836/2024 determina resultado mais favorável ao imputado em empate penal/processual penal.",
+      "pontos": [
+        "Regra vale em todos os julgamentos colegiados da matéria.",
+        "Proclamar de imediato, inclusive falta de integrantes pelas causas enumeradas.",
+        "Não insistir em antigo voto de desempate desfavorável automático.",
+        "Acórdão: conferência na sessão seguinte ou prazo de duas conforme texto."
+      ],
+      "atencao": [
+        "Empate não autoriza prolongar julgamento só para obter voto condenatório; observar regra atual."
+      ],
+      "exemplo": "Dois votos por liberdade e dois contrários em hipótese penal levam ao resultado favorável pertinente. Variação: Julgamento não penal não recebe essa regra automaticamente por analogia indiscriminada.",
+      "prova": [
+        "Empate penal atual favorece imputado? Sim.",
+        "Só se aplica ao HC? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Empate favorável",
+          "significado": "Solução legal atual dos votos empatados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14836.htm"
+      ],
+      "expected": {
+        "unit_id": "827c77ff-f5d5-5853-82df-16dea4a4797b",
+        "content_sha256": "740301130f191921110036d489386766882477c86ccd1122645b2b6f66733468",
+        "simples": "O tribunal decidirá por maioria de votos. Em todos os julgamentos em matéria penal ou processual penal em órgãos colegiados, havendo empate, prevalecerá a decisão mais favorável ao indivíduo imputado, proclamando-se de imediato esse resultado, ainda que, nas hipóteses de vaga aberta a ser preenchida, de impedimento, de suspeição ou de ausência, tenha sido o julgamento tomado sem a totalidade dos membros. O acórdão será apresentado à conferência na primeira sessão seguinte à do julgamento, ou no prazo de duas sessões, pelo juiz incumbido de lavrá-lo.",
+        "pontos": [
+          "Decisão por maioria de votos.",
+          "Empate: prevalece a decisão mais favorável ao imputado.",
+          "Acórdão apresentado na primeira sessão seguinte ou em duas sessões."
+        ],
+        "atencao": [
+          "Empate favorece o IMPUTADO (in dubio pro reo)."
+        ],
+        "exemplo": "Julgamento empatado em habeas corpus: prevalece a decisão favorável ao paciente.",
+        "prova": [
+          "Assertiva que resolve o empate pelo voto de qualidade do presidente, contra o imputado, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 616"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-616",
+      "unit_id": "f48af20a-d44e-5494-a8f8-dd8d4bc39d2c",
+      "content_sha256": "b3496d3397f574cccc2d6ad6d817adf695113c8d6c88e77f575328954faa829d",
+      "simples": "Em apelação, tribunal pode realizar novo interrogatório, reinquirir ou determinar diligências, respeitando contraditório.",
+      "pontos": [
+        "Não é obrigação de repetir toda prova.",
+        "Interrogatório conserva silêncio e defesa."
+      ],
+      "atencao": [
+        "Diligência não permite surpreender defesa com prova decisiva não comunicada."
+      ],
+      "exemplo": "Dúvida relevante demanda prova pertinente com participação das partes. Variação: Réu não é forçado a confessar por novo interrogatório.",
+      "prova": [
+        "Pode haver diligência recursal? Sim.",
+        "Repete-se obrigatoriamente toda instrução? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prova recursal",
+          "significado": "Esclarecimentos produzidos sob garantias na revisão da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f48af20a-d44e-5494-a8f8-dd8d4bc39d2c",
+        "content_sha256": "b3496d3397f574cccc2d6ad6d817adf695113c8d6c88e77f575328954faa829d",
+        "simples": "No julgamento das apelações poderá o tribunal, câmara ou turma proceder a novo interrogatório do acusado, reinquirir testemunhas ou determinar outras diligências.",
+        "pontos": [
+          "Na apelação, o tribunal pode reinterrogar o acusado, reinquirir testemunhas ou determinar diligências."
+        ],
+        "atencao": [
+          "Poder instrutório do tribunal na apelação."
+        ],
+        "exemplo": "O tribunal determina nova perícia ao julgar a apelação.",
+        "prova": [
+          "Assertiva que impede qualquer diligência instrutória pelo tribunal na apelação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 617"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-617",
+      "unit_id": "5451e5f1-9763-51c7-a922-823ca13476ec",
+      "content_sha256": "9b447ec4590cf8c7b4bab5e2d46c9fca3eed83198c5c059a92a71a99422190e6",
+      "simples": "Tribunal integra classificação, absolvição e condenação, mas não agrava pena quando só réu apelou.",
+      "pontos": [
+        "Respeitar objeto e iniciativa recursal.",
+        "Não usar mudança jurídica para contornar proteção.",
+        "Examinar consequências e regime cabíveis."
+      ],
+      "atencao": [
+        "Apelação exclusiva da defesa não é oportunidade de aumentar pena por discordância do tribunal."
+      ],
+      "exemplo": "Defesa pede reduzir e tribunal não majora sanção na hipótese exclusiva. Variação: Recurso acusatório pertinente exige análise de seus limites próprios.",
+      "prova": [
+        "Só defesa apelou: pode agravar pena? Não.",
+        "Recurso acusatório é situação idêntica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Vedação de reformatio in pejus",
+          "significado": "Proteção contra agravamento no recurso exclusivo do réu."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5451e5f1-9763-51c7-a922-823ca13476ec",
+        "content_sha256": "9b447ec4590cf8c7b4bab5e2d46c9fca3eed83198c5c059a92a71a99422190e6",
+        "simples": "O tribunal, câmara ou turma atenderá nas suas decisões ao disposto nos arts. 383, 386 e 387, no que for aplicável, não podendo, porém, ser agravada a pena quando somente o réu houver apelado da sentença (proibição da reformatio in pejus).",
+        "pontos": [
+          "Tribunal aplica os arts. 383, 386 e 387, no que couber.",
+          "Se só o réu apelou, a pena não pode ser agravada."
+        ],
+        "atencao": [
+          "Proibição de reformatio in pejus."
+        ],
+        "exemplo": "Apenas o réu apela, e o tribunal não pode aumentar sua pena.",
+        "prova": [
+          "Assertiva que permite ao tribunal agravar a pena em apelação exclusiva da defesa erra."
+        ],
+        "termos": [
+          {
+            "termo": "Reformatio in pejus",
+            "significado": "Piorar a situação do recorrente em seu próprio recurso."
+          }
+        ],
+        "remissoes": [
+          "Art. 383",
+          "Art. 386"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-618",
+      "unit_id": "cd4f18b4-48a2-5a81-a571-e23102bd1665",
+      "content_sha256": "dabb3f3d63c2bafe0b019181d88b6cc69fec761f004de1d2fe2ce94ff0171d3d",
+      "simples": "Regimentos estabelecem regras complementares atuais de julgamento recursal, sem afastar lei e Constituição.",
+      "pontos": [
+        "Nome histórico Tribunal de Apelação deve ser integrado.",
+        "Consultar órgão competente.",
+        "Norma complementar não cria supressão de defesa."
+      ],
+      "atencao": [
+        "Regimento não autoriza negar garantia nacional só por conveniência local."
+      ],
+      "exemplo": "Órgão aplica calendário e distribuição compatíveis com regime superior. Variação: Norma interna contrária ao contraditório não é validada pelo artigo.",
+      "prova": [
+        "Regimento é complementar? Sim.",
+        "Pode afastar Constituição por este artigo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Complementação regimental",
+          "significado": "Regras de organização subordinadas ao regime superior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cd4f18b4-48a2-5a81-a571-e23102bd1665",
+        "content_sha256": "dabb3f3d63c2bafe0b019181d88b6cc69fec761f004de1d2fe2ce94ff0171d3d",
+        "simples": "Os regimentos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento dos recursos e apelações.",
+        "pontos": [
+          "Regimentos internos complementam o processo e julgamento dos recursos."
+        ],
+        "atencao": [
+          "Normas complementares regimentais."
+        ],
+        "exemplo": "O regimento interno fixa detalhes da sessão de julgamento.",
+        "prova": [
+          "Assertiva que veda aos regimentos regular o processamento dos recursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 628"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-619",
+      "unit_id": "c71212f3-d898-5297-bfac-b25d6d63aa42",
+      "content_sha256": "e2443743523f3f3df905f6bb8c894bc7b2232a6bb5454266b57e0bf97c8ce982",
+      "simples": "Embargos declaratórios do acórdão penal têm dois dias da publicação para ambiguidade, obscuridade, contradição ou omissão.",
+      "pontos": [
+        "Distinguir prazo penal e CPC de cinco.",
+        "Identificar defeito efetivo.",
+        "Não confundir com embargos infringentes de dez."
+      ],
+      "atencao": [
+        "Simples derrota não cria omissão ou contradição interna."
+      ],
+      "exemplo": "Acórdão deixa ponto essencial sem exame: pedir integração pertinente. Variação: Conclusão contrária à pretensão, clara e completa, não basta por si.",
+      "prova": [
+        "Prazo penal textual é dois dias? Sim.",
+        "São mesmos embargos infringentes? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Declaração do acórdão",
+          "significado": "Integração dos defeitos previstos na decisão colegiada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c71212f3-d898-5297-bfac-b25d6d63aa42",
+        "content_sha256": "e2443743523f3f3df905f6bb8c894bc7b2232a6bb5454266b57e0bf97c8ce982",
+        "simples": "Aos acórdãos proferidos pelos Tribunais de Apelação, câmaras ou turmas, poderão ser opostos embargos de declaração, no prazo de dois dias contados da sua publicação, quando houver na sentença ambiguidade, obscuridade, contradição ou omissão.",
+        "pontos": [
+          "Embargos de declaração contra acórdão.",
+          "Prazo de dois dias da publicação.",
+          "Cabimento: ambiguidade, obscuridade, contradição ou omissão."
+        ],
+        "atencao": [
+          "Prazo de dois dias."
+        ],
+        "exemplo": "A parte opõe embargos de declaração por omissão no acórdão em dois dias.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo dos embargos de declaração de acórdão erra: são dois dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 382"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-620",
+      "unit_id": "06d19d69-a5fa-5f9e-9ffe-8977e79603ff",
+      "content_sha256": "8353ac9e4f86a5dc2b71214feaeb9c83eb7f4467141d13ba63d7b5a5df7afd2d",
+      "simples": "Pedido declaratório indica pontos defeituosos; relator leva à sessão sem revisão ou indefere se faltam condições.",
+      "pontos": [
+        "Expor trecho e defeito.",
+        "Primeira sessão no procedimento descrito.",
+        "Não presumir recurso admissível por nome da petição."
+      ],
+      "atencao": [
+        "Rótulo embargos não substitui indicação de omissão/contradição pertinente."
+      ],
+      "exemplo": "Parte identifica ponto omitido e efeito da integração requerida. Variação: Pedido só repete argumento sem defeito indicado demanda exame de admissibilidade.",
+      "prova": [
+        "Indicar pontos é requisito? Sim.",
+        "Nome da petição garante acolhimento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Fundamentação dos embargos",
+          "significado": "Demonstração do defeito a integrar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "06d19d69-a5fa-5f9e-9ffe-8977e79603ff",
+        "content_sha256": "8353ac9e4f86a5dc2b71214feaeb9c83eb7f4467141d13ba63d7b5a5df7afd2d",
+        "simples": "Os embargos de declaração serão deduzidos em requerimento de que constem os pontos em que o acórdão é ambíguo, obscuro, contraditório ou omisso. O requerimento será apresentado pelo relator e julgado, independentemente de revisão, na primeira sessão. Se não preenchidas as condições enumeradas neste artigo, o relator indeferirá desde logo o requerimento.",
+        "pontos": [
+          "Requerimento indica os pontos ambíguos, obscuros, contraditórios ou omissos.",
+          "Julgado na primeira sessão, sem revisão.",
+          "Indeferimento liminar pelo relator se faltarem as condições."
+        ],
+        "atencao": [
+          "Julgados na primeira sessão."
+        ],
+        "exemplo": "O relator indefere liminarmente embargos que não indicam o ponto omisso.",
+        "prova": [
+          "Assertiva que exige revisor no julgamento dos embargos de declaração erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 619"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-621",
+      "unit_id": "9abb94c4-111c-5dc9-9a18-240c8766727c",
+      "content_sha256": "1cee33351d6bd8fcda64fe01c245a10e17c7cf5aaa9ea3017a47f72ef6aadda1",
+      "simples": "Revisão de condenação finda cabe por contrariedade legal/probatória, prova falsa comprovada ou prova nova favorável na hipótese legal.",
+      "pontos": [
+        "Não é segunda apelação livre.",
+        "Prova nova: inocência ou circunstância de diminuição especial.",
+        "Júri também admite revisão nos limites reconhecidos pelo STJ."
+      ],
+      "atencao": [
+        "Não rever toda prova apenas por preferência de outra interpretação; demonstrar hipótese revisional."
+      ],
+      "exemplo": "Documento comprovadamente falso sustentou condenação: examinar revisão. Variação: Discordância genérica com pena sem fundamento legal revisional não basta.",
+      "prova": [
+        "Prova falsa comprovada é hipótese? Sim.",
+        "É nova apelação irrestrita? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Revisão criminal",
+          "significado": "Ação favorável contra condenação definitiva nas hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/17102021-Condenacao-passada-a-limpo-a-revisao-criminal-e-a-jurisprudencia-do-STJ.aspx"
+      ],
+      "expected": {
+        "unit_id": "9abb94c4-111c-5dc9-9a18-240c8766727c",
+        "content_sha256": "1cee33351d6bd8fcda64fe01c245a10e17c7cf5aaa9ea3017a47f72ef6aadda1",
+        "simples": "A revisão dos processos findos será admitida quando a sentença condenatória for contrária ao texto expresso da lei penal ou à evidência dos autos; quando se fundar em depoimentos, exames ou documentos comprovadamente falsos; e quando, após a sentença, se descobrirem novas provas de inocência do condenado ou de circunstância que determine ou autorize diminuição especial da pena.",
+        "pontos": [
+          "I: sentença contrária à lei penal ou à evidência dos autos.",
+          "II: sentença fundada em provas comprovadamente falsas.",
+          "III: novas provas de inocência ou de circunstância que diminua a pena."
+        ],
+        "atencao": [
+          "A revisão criminal só beneficia o condenado (pro reo)."
+        ],
+        "exemplo": "Depois da condenação, surge prova nova de inocência: cabe revisão criminal.",
+        "prova": [
+          "Assertiva que admite revisão criminal em favor da acusação erra."
+        ],
+        "termos": [
+          {
+            "termo": "Revisão criminal",
+            "significado": "Ação para rever condenação definitiva em favor do réu."
+          }
+        ],
+        "remissoes": [
+          "Art. 622"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-622",
+      "unit_id": "90bbd790-8d4a-5365-b283-83d53ab7190c",
+      "content_sha256": "a5eb6e0a4544f73751a3f6cfbf71aa1530ccdf30af19784f30fd720804b3bce4",
+      "simples": "Revisão pode ser pedida a qualquer tempo, mesmo após extinção da pena; reiteração exige provas novas.",
+      "pontos": [
+        "Não confundir com prazo de apelação.",
+        "Novo pedido precisa respeitar ressalva."
+      ],
+      "atencao": [
+        "Trocar redação da petição não equivale a prova nova."
+      ],
+      "exemplo": "Pessoa que já cumpriu pena pode requerer revisão cabível. Variação: Pedido idêntico sem novas provas não se renova livremente.",
+      "prova": [
+        "Pena cumprida impede sempre revisão? Não.",
+        "Reiteração sem prova nova é livre? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Tempo revisional",
+          "significado": "Ausência de prazo extintivo da ação favorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "90bbd790-8d4a-5365-b283-83d53ab7190c",
+        "content_sha256": "a5eb6e0a4544f73751a3f6cfbf71aa1530ccdf30af19784f30fd720804b3bce4",
+        "simples": "A revisão poderá ser requerida em qualquer tempo, antes da extinção da pena ou após. Não será admissível a reiteração do pedido, salvo se fundado em novas provas.",
+        "pontos": [
+          "Revisão a qualquer tempo, antes ou depois da extinção da pena.",
+          "Reiteração do pedido só com novas provas."
+        ],
+        "atencao": [
+          "Sem prazo decadencial."
+        ],
+        "exemplo": "Mesmo extinta a pena, o condenado pode pedir revisão.",
+        "prova": [
+          "Assertiva que fixa prazo para a revisão criminal erra: pode ser requerida a qualquer tempo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 621"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-623",
+      "unit_id": "e5e7a15d-66b7-5c0d-ba71-1941859709ff",
+      "content_sha256": "73bc1100f2b0f2555f2d634a61433d69b7d642f750b60d507593ea9bd04f28fd",
+      "simples": "Revisão pode ser pedida pelo réu ou procurador habilitado; se réu morreu, pelos familiares enumerados.",
+      "pontos": [
+        "Cônjuge, ascendente, descendente ou irmão.",
+        "STJ reconhece faculdade de pedido pelo próprio réu.",
+        "Distinguir legitimação e prova do cabimento."
+      ],
+      "atencao": [
+        "Ser familiar não dispensa hipótese revisional nem alcança automaticamente toda pessoa próxima."
+      ],
+      "exemplo": "Após morte, filha pede revisão com documentação pertinente. Variação: Amigo sem legitimidade legal não entra automaticamente como descendente.",
+      "prova": [
+        "Réu pode pedir por si na regra? Sim.",
+        "Irmão é enumerado após morte? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Legitimidade revisional",
+          "significado": "Titulares autorizados ao pedido favorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/17102021-Condenacao-passada-a-limpo-a-revisao-criminal-e-a-jurisprudencia-do-STJ.aspx"
+      ],
+      "expected": {
+        "unit_id": "e5e7a15d-66b7-5c0d-ba71-1941859709ff",
+        "content_sha256": "73bc1100f2b0f2555f2d634a61433d69b7d642f750b60d507593ea9bd04f28fd",
+        "simples": "A revisão poderá ser pedida pelo próprio réu ou por procurador legalmente habilitado ou, no caso de morte do réu, pelo cônjuge, ascendente, descendente ou irmão.",
+        "pontos": [
+          "Legitimados: o réu, procurador habilitado.",
+          "Morte do réu: cônjuge, ascendente, descendente ou irmão."
+        ],
+        "atencao": [
+          "Mesma ordem de sucessão do art. 31."
+        ],
+        "exemplo": "Falecido o condenado, o cônjuge requer a revisão.",
+        "prova": [
+          "Assertiva que nega legitimidade aos familiares após a morte do condenado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 31"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-624",
+      "unit_id": "dd39149f-66cf-5980-8529-62ae269238ea",
+      "content_sha256": "7465717f6d065c8a7f17dee4fdf92fbec676f51b172d4d6a512656f0453a81e0",
+      "simples": "Competência revisional exige integração à Constituição e tribunais atuais; TFR e Alçada históricos não definem destinatário contemporâneo.",
+      "pontos": [
+        "STF: condenações por ele proferidas no regime cabível.",
+        "STJ/TRFs/TJs: identificar competência constitucional e decisão própria.",
+        "Composição interna segue organização/regimento atual."
+      ],
+      "atencao": [
+        "Não encaminhar a órgão extinto nem atribuir revisão ao STJ só porque houve recurso nele sem examinar mérito e competência."
+      ],
+      "exemplo": "Condenação estadual é examinada pelo órgão revisional competente segundo caso. Variação: Recurso excepcional inadmitido não transfere automaticamente toda revisão ao superior.",
+      "prova": [
+        "TFR antigo é órgão atual para protocolar? Não.",
+        "Competência precisa ser identificada pelo caso? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência da revisão",
+          "significado": "Órgão apto no sistema constitucional atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "dd39149f-66cf-5980-8529-62ae269238ea",
+        "content_sha256": "7465717f6d065c8a7f17dee4fdf92fbec676f51b172d4d6a512656f0453a81e0",
+        "simples": "As revisões criminais serão processadas e julgadas pelo Supremo Tribunal Federal, quanto às condenações por ele proferidas, e pelo Tribunal Federal de Recursos, Tribunais de Justiça ou de Alçada nos demais casos. No STF e no Tribunal Federal de Recursos, o processo e julgamento obedecerão ao regimento interno. Nos Tribunais de Justiça ou de Alçada, o julgamento será efetuado pelas câmaras ou turmas criminais, reunidas em sessão conjunta, quando houver mais de uma, e, no caso contrário, pelo tribunal pleno. Onde houver quatro ou mais câmaras ou turmas, poderão ser constituídos dois ou mais grupos de câmaras para o julgamento da revisão.",
+        "pontos": [
+          "STF julga revisão de suas condenações.",
+          "Tribunais de Justiça (e outros) nos demais casos.",
+          "Câmaras reunidas em sessão conjunta ou tribunal pleno.",
+          "Quatro ou mais câmaras: possíveis grupos de câmaras."
+        ],
+        "atencao": [
+          "A competência atual segue a Constituição (STJ, TRFs)."
+        ],
+        "exemplo": "A revisão de condenação do Tribunal de Justiça é julgada pelas câmaras criminais reunidas.",
+        "prova": [
+          "Assertiva que atribui ao juiz de primeira instância o julgamento da revisão criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 625"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-625",
+      "unit_id": "dcaf6d23-4b7d-5593-bb50-eb1f30000caf",
+      "content_sha256": "a63106394118470daf7d25839bf513496f657bd50ddb73735ee76c65a2b690a8",
+      "simples": "Pedido revisional deve mostrar trânsito e fatos, com relator não participante de decisão anterior e procedimento de exame.",
+      "pontos": [
+        "Certidão e peças necessárias; apensamento se não prejudicar execução.",
+        "Pedido insuficiente pode ser indeferido; recurso interno na hipótese prevista.",
+        "Não indeferido: MP, relator e revisor por dez dias cada no modelo.",
+        "Integrar remissão antiga de organização ao regimento atual."
+      ],
+      "atencao": [
+        "Revisão não dispensa prova da condenação definitiva nem permite preencher fatos por suposição."
+      ],
+      "exemplo": "Parte junta certidão e prova nova pertinente. Variação: Relator que antes decidiu processo exige atenção à vedação prevista.",
+      "prova": [
+        "Precisa comprovar trânsito? Sim.",
+        "Relator deve ter pronunciado decisão antes? Não, regra exige que não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução revisional",
+          "significado": "Documentação e exame do pedido de revisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dcaf6d23-4b7d-5593-bb50-eb1f30000caf",
+        "content_sha256": "a63106394118470daf7d25839bf513496f657bd50ddb73735ee76c65a2b690a8",
+        "simples": "O requerimento será distribuído a um relator e a um revisor, devendo funcionar como relator um desembargador que não tenha pronunciado decisão em qualquer fase do processo. O requerimento será instruído com a certidão de haver passado em julgado a sentença condenatória e com as peças necessárias à comprovação dos fatos arguidos. O relator poderá determinar que se apensem os autos originais, se daí não advier dificuldade à execução normal da sentença. Se o relator julgar insuficientemente instruído o pedido, indeferi-lo-á in limine, dando recurso para as câmaras reunidas ou para o tribunal. Interposto o recurso por petição, o relator apresentará o processo em mesa para o julgamento. Se o requerimento não for indeferido in limine, abrir-se-á vista ao procurador-geral, que dará parecer no prazo de dez dias; em seguida, relator e revisor examinarão os autos em igual prazo, e o pedido será julgado na sessão designada.",
+        "pontos": [
+          "Relator e revisor; relator não pode ter decidido o caso antes.",
+          "Instrução com certidão do trânsito em julgado e peças.",
+          "Apensamento dos autos originais, se possível.",
+          "Indeferimento in limine, com recurso.",
+          "Parecer do procurador-geral em dez dias; relator e revisor em igual prazo."
+        ],
+        "atencao": [
+          "Relator imparcial: sem decisão prévia no processo."
+        ],
+        "exemplo": "O requerimento de revisão vem com a certidão do trânsito em julgado.",
+        "prova": [
+          "Assertiva que permite ao desembargador que já decidiu o caso funcionar como relator da revisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 624"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-626",
+      "unit_id": "e7d86759-764a-5f34-bd06-013849547e78",
+      "content_sha256": "1cea3eda8bdaaea31c35e296009234dc0ba03103e70e1354049236729dbdabce",
+      "simples": "Revisão procedente pode reclassificar, absolver, modificar pena ou anular processo, nunca agravar pena revista.",
+      "pontos": [
+        "Consequência depende do fundamento.",
+        "Não se limita apenas a absolvição.",
+        "Revisão é favorável ao condenado."
+      ],
+      "atencao": [
+        "Não aumentar pena para corrigir erro contra acusação nesta via."
+      ],
+      "exemplo": "Erro legal de pena é corrigido favoravelmente na hipótese cabível. Variação: Anulação pode ser resultado adequado, não necessariamente absolvição em todo caso.",
+      "prova": [
+        "Pode agravar pena revista? Não.",
+        "Anulação é resultado possível? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito da revisão",
+          "significado": "Providência favorável adequada ao vício reconhecido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e7d86759-764a-5f34-bd06-013849547e78",
+        "content_sha256": "1cea3eda8bdaaea31c35e296009234dc0ba03103e70e1354049236729dbdabce",
+        "simples": "Julgando procedente a revisão, o tribunal poderá alterar a classificação da infração, absolver o réu, modificar a pena ou anular o processo. De qualquer maneira, não poderá ser agravada a pena imposta pela decisão revista.",
+        "pontos": [
+          "Revisão procedente: alterar a classificação, absolver, modificar a pena ou anular o processo.",
+          "Vedado agravar a pena."
+        ],
+        "atencao": [
+          "Proibição de agravamento da pena."
+        ],
+        "exemplo": "O tribunal reduz a pena na revisão criminal.",
+        "prova": [
+          "Assertiva que permite agravar a pena na revisão criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 621"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-627",
+      "unit_id": "5e63b535-21ea-5260-ba6e-ead8691a1353",
+      "content_sha256": "207354976b0e3d6957948cd8327e046949cfd56aea83204fc0f30daaeb725e88",
+      "simples": "Absolvição revisional restabelece direitos perdidos pela condenação; medida de segurança só se juridicamente cabível.",
+      "pontos": [
+        "Examinar efeitos vinculados à condenação desconstituída.",
+        "Diagnóstico ou ausência de prova não impõem medida automaticamente."
+      ],
+      "atencao": [
+        "Não trocar absolvição por internação punitiva sem pressupostos atuais."
+      ],
+      "exemplo": "Pessoa absolvida recupera direitos afetados pela condenação nos termos pertinentes. Variação: Prova de não participação não autoriza medida de segurança por simples condição médica.",
+      "prova": [
+        "Medida cabe automaticamente em toda revisão procedente? Não.",
+        "Absolvição tem efeito restaurador de direitos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Restabelecimento de direitos",
+          "significado": "Consequências da condenação desconstituída."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5e63b535-21ea-5260-ba6e-ead8691a1353",
+        "content_sha256": "207354976b0e3d6957948cd8327e046949cfd56aea83204fc0f30daaeb725e88",
+        "simples": "A absolvição implicará o restabelecimento de todos os direitos perdidos em virtude da condenação, devendo o tribunal, se for caso, impor a medida de segurança cabível.",
+        "pontos": [
+          "Absolvição na revisão restabelece todos os direitos perdidos.",
+          "Tribunal pode impor a medida de segurança cabível."
+        ],
+        "atencao": [
+          "Efeito restituidor da absolvição."
+        ],
+        "exemplo": "Revisão absolve o condenado, que recupera seus direitos.",
+        "prova": [
+          "Assertiva que mantém os efeitos da condenação após a absolvição na revisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 626"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-628",
+      "unit_id": "4c5c5947-6b87-5ebb-b209-43f42cbb8944",
+      "content_sha256": "5222c80822f2c051e322d1b38ed05b070eb642cb80cb91a40e66f050e8e6a965",
+      "simples": "Regimento complementa processamento da revisão no órgão competente, subordinado a lei e Constituição.",
+      "pontos": [
+        "Integrar nome antigo de Tribunal de Apelação.",
+        "Não modificar pressupostos materiais por regra administrativa."
+      ],
+      "atencao": [
+        "Norma interna não transforma revisão em recurso acusatório para agravar pena."
+      ],
+      "exemplo": "Órgão organiza distribuição e sessão conforme regimento válido. Variação: Prazo interno não elimina garantia de defesa ou competência constitucional.",
+      "prova": [
+        "Regimento é complemento? Sim.",
+        "Pode autorizar agravamento vedado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Revisão e regimento",
+          "significado": "Organização da ação sob normas superiores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4c5c5947-6b87-5ebb-b209-43f42cbb8944",
+        "content_sha256": "5222c80822f2c051e322d1b38ed05b070eb642cb80cb91a40e66f050e8e6a965",
+        "simples": "Os regimentos internos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento das revisões criminais.",
+        "pontos": [
+          "Regimentos internos complementam o processamento das revisões criminais."
+        ],
+        "atencao": [
+          "Normas regimentais complementares."
+        ],
+        "exemplo": "O regimento interno detalha o rito da revisão criminal.",
+        "prova": [
+          "Assertiva que veda aos regimentos regular a revisão criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 618"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-629",
+      "unit_id": "da4b370a-ad09-51b9-ac82-d45cde9b71a2",
+      "content_sha256": "d8247e3637843fe1d5a0fa1488f150826bf5571d26fc0f456d47eb96f4407ba2",
+      "simples": "Certidão do acórdão que cassa condenação é juntada imediatamente para inteiro cumprimento da decisão.",
+      "pontos": [
+        "Concretizar resultado judicial.",
+        "Não aguardar conveniência administrativa para ajustar efeitos."
+      ],
+      "atencao": [
+        "Reconhecer revisão sem executar providências não satisfaz decisão."
+      ],
+      "exemplo": "Juízo recebe certidão e implementa alteração de pena ou liberdade pertinente. Variação: Erro no cadastro deve ser corrigido segundo título, não mantido por desatenção.",
+      "prova": [
+        "Juntada é imediata na regra? Sim.",
+        "Cumprimento pode ser ignorado após decisão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Efetivação revisional",
+          "significado": "Aplicação prática do acórdão favorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "da4b370a-ad09-51b9-ac82-d45cde9b71a2",
+        "content_sha256": "d8247e3637843fe1d5a0fa1488f150826bf5571d26fc0f456d47eb96f4407ba2",
+        "simples": "À vista da certidão do acórdão que cassar a sentença condenatória, o juiz mandará juntá-la imediatamente aos autos, para inteiro cumprimento da decisão.",
+        "pontos": [
+          "Certidão do acórdão que cassar a condenação é juntada imediatamente aos autos.",
+          "Cumprimento integral da decisão."
+        ],
+        "atencao": [
+          "Cumprimento imediato."
+        ],
+        "exemplo": "O juiz junta a certidão do acórdão e cumpre a decisão da revisão.",
+        "prova": [
+          "Assertiva que adia a juntada da certidão do acórdão erra: é imediata."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 626"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-630",
+      "unit_id": "5596c874-03d0-51c3-a9fc-5209534bd4bb",
+      "content_sha256": "22b94e2e3143196c833750c9bf0fcbaaf6f74b9eb2b9dafbfad61f7fe50a672a",
+      "simples": "A pedido, tribunal pode reconhecer indenização justa; liquidação é cível e leitura deve integrar garantia constitucional de erro judiciário.",
+      "pontos": [
+        "Examinar erro, danos e nexo.",
+        "Não é pagamento automático em todo resultado revisional.",
+        "Responsável e remissões de justiça territorial exigem sistema atual.",
+        "Exclusões textuais devem ser analisadas constitucionalmente, sem negar direito universal por rótulo de ação privada."
+      ],
+      "atencao": [
+        "Não prometer indenização automática nem aplicar exclusão antiga sem examinar CF5º,LXXV e regime de responsabilidade."
+      ],
+      "exemplo": "Erro de condenação com danos demonstrados fundamenta pedido e análise. Variação: Revisão sem demonstração de dano ou pressuposto não fixa valor indenizatório por simples nome.",
+      "prova": [
+        "Revisão garante pagamento automático? Não.",
+        "Liquidação da indenização ocorre no cível? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Indenização por erro",
+          "significado": "Reparação sujeita ao regime constitucional e pressupostos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "5596c874-03d0-51c3-a9fc-5209534bd4bb",
+        "content_sha256": "22b94e2e3143196c833750c9bf0fcbaaf6f74b9eb2b9dafbfad61f7fe50a672a",
+        "simples": "O tribunal, se o interessado o requerer, poderá reconhecer o direito a uma justa indenização pelos prejuízos sofridos. Por essa indenização, que será liquidada no juízo cível, responderá a União, se a condenação tiver sido proferida pela justiça do Distrito Federal ou de Território, ou o Estado, se o tiver sido pela respectiva justiça. A indenização não será devida se o erro ou a injustiça da condenação proceder de ato ou falta imputável ao próprio impetrante, como a confissão ou a ocultação de prova em seu poder, ou se a acusação houver sido meramente privada.",
+        "pontos": [
+          "Indenização por erro judiciário, a requerimento.",
+          "Liquidação no juízo cível; responde a União ou o Estado.",
+          "Não é devida: culpa do próprio impetrante (confissão, ocultação de prova) ou acusação meramente privada."
+        ],
+        "atencao": [
+          "Indenização liquidada no cível."
+        ],
+        "exemplo": "Absolvido na revisão, o interessado pede indenização, liquidada no juízo cível.",
+        "prova": [
+          "Assertiva que reconhece indenização mesmo quando o erro decorreu de confissão falsa do próprio condenado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 626"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-631",
+      "unit_id": "26a9af13-fe00-530b-a8f3-bc78ccccabbb",
+      "content_sha256": "e660a5cdcce9f96ad4e270b413564fc678f5c66a72abbd2f3288004485bba57f",
+      "simples": "Se pessoa revisanda morre durante ação, presidente nomeia curador para defesa.",
+      "pontos": [
+        "Proteção da defesa no processo em curso.",
+        "Distinguir familiares que iniciam pedido após morte, art.623.",
+        "Não confundir com curador antigo por menor de21."
+      ],
+      "atencao": [
+        "Morte não encerra necessariamente exame revisional nem restaura regra etária antiga."
+      ],
+      "exemplo": "Óbito durante revisão leva à nomeação para continuidade defensiva. Variação: Falecimento anterior ao ajuizamento exige examinar legitimados do art.623.",
+      "prova": [
+        "Morte durante revisão tem regra de curador? Sim.",
+        "É curadoria apenas por ter vinte anos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Curadoria revisional",
+          "significado": "Defesa do interesse revisional após morte no curso da ação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "26a9af13-fe00-530b-a8f3-bc78ccccabbb",
+        "content_sha256": "e660a5cdcce9f96ad4e270b413564fc678f5c66a72abbd2f3288004485bba57f",
+        "simples": "Quando, no curso da revisão, falecer a pessoa cuja condenação tiver de ser revista, o presidente do tribunal nomeará curador para a defesa.",
+        "pontos": [
+          "Morte do condenado no curso da revisão: o presidente do tribunal nomeia curador."
+        ],
+        "atencao": [
+          "Curador para a defesa."
+        ],
+        "exemplo": "O condenado morre durante a revisão, e um curador é nomeado.",
+        "prova": [
+          "Assertiva que extingue a revisão com a morte do condenado erra: nomeia-se curador."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 623"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    }
+  ]
+}
