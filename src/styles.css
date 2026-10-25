@@ -13588,7 +13588,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 [data-menu-motion="drawer"][data-menu-side="right"] { --menu-entry-x: 24px; }
 [data-menu-motion][data-state="closed"] {
   animation-duration: 160ms;
-  animation-timing-function: ease-in;
+  animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
 }
 @keyframes menu-popover-in {
   from { opacity: 0; transform: translate3d(0, -8px, 0) scale(.98); }
