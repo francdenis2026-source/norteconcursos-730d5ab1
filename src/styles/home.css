@@ -2382,7 +2382,7 @@
   border-left: 1px solid var(--home-line);
   border-radius: 10px;
   background: var(--home-surface);
-  transition: transform .2s var(--ease-out), border-color .2s ease, box-shadow .2s ease;
+  transition: transform .2s var(--ease-out), border-color .2s cubic-bezier(0.32,0.72,0,1), box-shadow .2s cubic-bezier(0.32,0.72,0,1);
 }
 @media (hover: hover) and (pointer: fine) {
 .home-career:hover {
@@ -3023,9 +3023,9 @@
 .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
   position: relative;
   transition:
-    box-shadow 180ms ease,
-    border-color 160ms ease,
-    background-color 160ms ease;
+    box-shadow 180ms cubic-bezier(0.32,0.72,0,1),
+    border-color 160ms cubic-bezier(0.32,0.72,0,1),
+    background-color 160ms cubic-bezier(0.32,0.72,0,1);
 }
 .home :is(a, button, summary) {
   cursor: pointer;
@@ -3034,8 +3034,8 @@
   transition:
     transform 220ms var(--ease-out),
     box-shadow 220ms var(--ease-out),
-    background-color 180ms ease,
-    border-color 180ms ease;
+    background-color 180ms cubic-bezier(0.32,0.72,0,1),
+    border-color 180ms cubic-bezier(0.32,0.72,0,1);
 }
 @media (hover: hover) and (pointer: fine) {
   .home :is(.home-button, .home-text-link, .home-final__challenge):hover {
@@ -3048,7 +3048,7 @@
 @media (prefers-reduced-motion: reduce), (hover: none) {
   .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
     transform: none;
-    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    transition: border-color 180ms cubic-bezier(0.32,0.72,0,1), box-shadow 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1);
   }
   .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details)::after {
     display: none;
@@ -4550,7 +4550,7 @@
   align-items: stretch;
 }
 .home.home .home-opportunity {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.32,0.72,0,1), box-shadow 0.2s cubic-bezier(0.32,0.72,0,1), border-color 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-opportunity__identity {
   flex-wrap: wrap;
@@ -4642,7 +4642,7 @@
 
 /* Efeito luminoso discreto nos dois pontos de conversão principais (CTA dourado). */
 .home.home :is(.home-button--gold, .home-header__register) {
-  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.25s ease, transform 0.2s ease;
+  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.25s cubic-bezier(0.32,0.72,0,1), transform 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home :is(.home-button--gold, .home-header__register):hover,
 .home.home :is(.home-button--gold, .home-header__register):focus-visible {
@@ -4690,7 +4690,7 @@
   bottom: 2px;
   height: 1px;
   background: var(--home-accent);
-  transition: right 0.2s ease;
+  transition: right 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-nav a:is(:hover, :focus-visible)::after {
   right: 0;
@@ -4734,7 +4734,7 @@
 @media (max-width:760px){.home-daily-feature{grid-template-columns:1fr;margin-inline:14px;padding:18px}.home-daily-feature__copy h2{font-size:25px}}
 
 .home-daily-feature .daily-badge--featured { position:relative; overflow:hidden; border:1px solid color-mix(in srgb, #e4b95f 56%, var(--home-line)); box-shadow:0 0 0 1px rgb(228 185 95 / .08), 0 16px 34px rgb(0 0 0 / .28); }
-.home-daily-feature .daily-badge--featured::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(105deg, transparent 20%, rgb(255 255 255 / .08) 48%, transparent 72%); transform:translateX(-100%); transition:transform .7s ease; }
+.home-daily-feature .daily-badge--featured::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(105deg, transparent 20%, rgb(255 255 255 / .08) 48%, transparent 72%); transform:translateX(-100%); transition:transform .7s cubic-bezier(0.32,0.72,0,1); }
 .home-daily-feature .daily-badge--featured:hover::after { transform:translateX(100%); }
 
 /* Homepage containment: every visual layer stays inside the viewport. */

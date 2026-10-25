@@ -77,7 +77,7 @@
   text-decoration: none;
   box-shadow: none;
   transform: none;
-  transition: background-color 160ms ease, border-color 160ms ease;
+  transition: background-color 160ms cubic-bezier(0.32,0.72,0,1), border-color 160ms cubic-bezier(0.32,0.72,0,1);
 }
 @media (hover: hover) and (pointer: fine) {
   :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link:hover {
