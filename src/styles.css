@@ -13348,7 +13348,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 :root:not(.dark) .student-home__metric:nth-child(4) > span { background: linear-gradient(155deg, var(--c-violet-soft), color-mix(in oklab, var(--c-violet-soft) 55%, white)); color: var(--c-violet); }
 :root:not(.dark) .student-home__card,
 :root:not(.dark) [data-slot="card"] { border-color: oklch(0.9 0.014 255); box-shadow: var(--shadow-card); }
-:root:not(.dark) .student-home__card { border-top: 3px solid var(--c-blue); }
+:root:not(.dark) .student-home__card { border-top: 2px solid var(--c-blue); }
 :root:not(.dark) .student-home__card:nth-of-type(3n+2) { border-top-color: var(--c-teal); }
 :root:not(.dark) .student-home__card:nth-of-type(3n) { border-top-color: var(--c-violet); }
 :root:not(.dark) .student-home__section-title { color: oklch(0.28 0.08 262); }
@@ -13361,8 +13361,8 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 :root:not(.dark) .trainer-workbench .trainer-main-action:hover,
 :root:not(.dark) .trainer-resolution-workspace .trainer-main-action:hover { background: oklch(0.44 0.18 262); color: #fff; }
 :root:not(.dark) .student-home__text-link { color: var(--c-blue); }
-:root:not(.dark) .trainer-session-builder { border-top: 3px solid var(--c-teal); }
-:root:not(.dark) .trainer-config-card { border-top: 3px solid var(--c-blue); }
+:root:not(.dark) .trainer-session-builder { border-top: 2px solid var(--c-teal); }
+:root:not(.dark) .trainer-config-card { border-top: 2px solid var(--c-blue); }
 :root:not(.dark) .trainer-stock strong { color: var(--c-blue); }
 :root:not(.dark) .trainer-practice-mode[aria-pressed="true"],
 :root:not(.dark) .trainer-practice-mode[data-active="true"] { border-color: var(--c-blue); background: var(--c-blue-soft); }
@@ -13536,7 +13536,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 .dark .student-hub__masthead .student-hub__date svg { color: var(--d-teal); }
 .dark .student-hub__masthead .student-hub__date small { color: var(--d-teal); border-color: color-mix(in oklab, var(--d-teal) 45%, transparent); }
 .dark .student-hub__masthead-actions > a { color: var(--d-blue); }
-.dark .student-home__card { border-top: 3px solid var(--d-blue); }
+.dark .student-home__card { border-top: 2px solid var(--d-blue); }
 .dark .student-home__card:nth-of-type(3n+2) { border-top-color: var(--d-teal); }
 .dark .student-home__card:nth-of-type(3n) { border-top-color: var(--d-violet); }
 .dark .student-home__section-title { color: color-mix(in oklab, var(--d-blue) 30%, #fff); }
@@ -13544,8 +13544,8 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 
 /* Treinador de questões */
 .dark .trainer-panel-kicker { color: var(--d-teal); }
-.dark .trainer-config-card { border-top: 3px solid var(--d-blue); }
-.dark .trainer-session-builder { border-top: 3px solid var(--d-teal); }
+.dark .trainer-config-card { border-top: 2px solid var(--d-blue); }
+.dark .trainer-session-builder { border-top: 2px solid var(--d-teal); }
 .dark .trainer-stock strong { color: var(--d-teal); }
 .dark .trainer-practice-mode[aria-pressed="true"], .dark .trainer-practice-mode[data-active="true"] {
   border-color: var(--d-blue); background: color-mix(in oklab, var(--d-blue) 14%, var(--card));
