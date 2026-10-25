@@ -426,6 +426,11 @@ html {
   }
 }
 
+.app-content__inner :where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--color-ring, var(--primary));
+  outline-offset: 2px;
+}
+
 /* Mobile client-area pass: shared guardrails for every dashboard route. */
 @media (max-width: 767px) {
   .app-content__inner {
