@@ -132,8 +132,8 @@ function MaterialPage() {
     >
       <ArrowLeft />{" "}
       {material && libraryCollection(material) === "subjects"
-        ? "Materiais por disciplina"
-        : "Biblioteca de leis"}
+        ? `Materiais · ${material?.discipline ?? "disciplina"}`
+        : `Legislação · ${material?.discipline ?? "biblioteca"}`}
     </Link>
   );
 
@@ -230,7 +230,7 @@ function MaterialPage() {
         <h1>{material.title}</h1>
         {material.summary && <p>{material.summary}</p>}
         <ul className="library-meta">
-          <li>{material.topic_label}</li>
+          <li><strong>Assunto:</strong> {material.topic_label}</li>
           <li>
             <Clock3 /> {readingMinutes(material.body_md)} min de leitura
           </li>
