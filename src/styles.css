@@ -14434,3 +14434,10 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .enem-page [role="tablist"] { padding: 5px; border: 1px solid rgb(255 255 255 / 10%); border-radius: 13px; background: color-mix(in oklab, var(--card) 90%, transparent); }
 .app-shell[data-area="student"] .enem-page [role="tab"] { min-height: 38px; border-radius: 9px; font-size: 12px; }
 .app-shell[data-area="student"] .enem-page [role="tabpanel"] > .grid > * { border-radius: 14px; }
+
+/* Performance analytics: make the evidence visually primary. */
+.app-shell[data-area="student"] .performance-page .performance-charts { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"] { min-height: 220px; }
+.app-shell[data-area="student"] .performance-page .performance-charts [data-slot="card-content"] { height: 220px; }
+@media (max-width: 1100px) { .app-shell[data-area="student"] .performance-page .performance-charts { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .app-shell[data-area="student"] .performance-page .performance-charts { grid-template-columns: 1fr; } }
