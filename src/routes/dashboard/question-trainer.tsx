@@ -1,3 +1,4 @@
+import { plannedAvailability } from "@/lib/plannedStudy";
 import { materialPracticePool, matchesMaterialScope } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
 import { questionIdentity } from "@/lib/questionIdentity";
@@ -148,6 +149,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "planned"
       | "studySubject"
       | "materialTopic"
       | "studyArticle"
@@ -178,6 +180,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    planned: search["planned"] === "1" ? "1" : undefined,
     studySubject:
       typeof search["studySubject"] === "string" ? search["studySubject"].slice(0, 200) : undefined,
     materialTopic:
@@ -979,7 +982,12 @@ function QuestionTrainer() {
       practiceMode === "catalog"
         ? catalogSessionQuestions(orderedPool, locked, dailyRemaining)
         : orderedPool;
+    if (routeFilters.planned === "1") {
+      const message = plannedAvailability(ordered.length, Number(limit) || 20);
+      if (message) { setNotice(message); toast.info(message); }
+    }
     if (!ordered.length) {
+      if (routeFilters.planned === "1") return;
       setNotice(
         practiceMode === "new"
           ? "Você já respondeu todas as questões deste filtro. Escolha “Reforço” para refazer as que errou."
@@ -1011,7 +1019,14 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
-  // Links preselect filters; only the start button may create a session.
+  const plannedLaunch = React.useRef("");
+  React.useEffect(() => {
+    const key = JSON.stringify([routeFilters.studySubject, routeFilters.materialTopic]);
+    if (routeFilters.planned !== "1" || loading || authLoading || error || !canLoad || started || subject !== canonicalSubject(routeFilters.subject) || plannedLaunch.current === key) return;
+    plannedLaunch.current = key;
+    startTraining();
+  }, [routeFilters.planned, routeFilters.studySubject, routeFilters.materialTopic, loading, authLoading, error, canLoad, started, trainingPool]);
+  // General links only preselect; explicit agenda activities also start after eligibility checks.
   const selectAppliedExam = (value: string) => {
     if (
       value !== "all" &&

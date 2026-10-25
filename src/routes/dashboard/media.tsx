@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileAudio, GraduationCap, Headphones, ListVideo, PlayCircle, Upload } from "lucide-react";
@@ -12,10 +13,11 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { type Podcast } from "@/data/mediaCatalog";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/dashboard/media")({ component: MediaCenterPage });
+export const Route = createFileRoute("/dashboard/media")({ component: MediaCenterPage, validateSearch: (s: Record<string, unknown>): { subject?: string | undefined; topic?: string | undefined } => ({ subject: typeof s["subject"] === "string" ? s["subject"] : undefined, topic: typeof s["topic"] === "string" ? s["topic"] : undefined }) });
 
 function PodcastsTab({ canPreview }: { canPreview: boolean }) {
-  const PODCASTS = useMediaCatalog().catalog.podcasts;
+  const selection = Route.useSearch();
+  const PODCASTS = useMediaCatalog().catalog.podcasts.filter(p => (!selection.subject || canonicalSubject(p.discipline) === canonicalSubject(selection.subject)) && (!selection.topic || `${p.title} ${p.description ?? ""}`.toLocaleLowerCase("pt-BR").includes(selection.topic.toLocaleLowerCase("pt-BR"))));
   const [pick, setSelected] = React.useState<Podcast | null>(null);
   const selected = pick ?? PODCASTS[0] ?? null;
   const [local, setLocal] = React.useState<{ url: string; name: string } | null>(null);
@@ -59,7 +61,7 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
           ) : (
             <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
               <FileAudio className="mx-auto mb-2 h-8 w-8 opacity-50" />
-              Os primeiros episódios chegam em breve.
+              {selection.subject ? `Não há podcast disponível para ${selection.subject}${selection.topic ? ` — ${selection.topic}` : ""}. Nenhum conteúdo de outra área foi selecionado.` : "Os primeiros episódios chegam em breve."}
             </div>
           )}
 
@@ -128,7 +130,7 @@ function MediaCenterPage() {
           <h1>Videoaulas e podcasts</h1>
         </div>
       </header>
-      <Tabs defaultValue="videos">
+      <Tabs defaultValue={Route.useSearch().subject ? "podcasts" : "videos"}>
         <TabsList className="video-study-page__tabs" aria-label="Tipo de material">
           <TabsTrigger value="videos">
             <PlayCircle size={16} /> Playlists

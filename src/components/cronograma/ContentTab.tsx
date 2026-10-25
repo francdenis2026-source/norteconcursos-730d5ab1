@@ -1,3 +1,4 @@
+import { plannedPractice } from "@/lib/plannedStudy";
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
 import { BookOpen, Layers, Search, Target } from "lucide-react";
@@ -44,8 +45,8 @@ function Actions({ nome, topic, theoryOf }: { nome: string; topic: string; theor
   return (
     <span className="flex flex-wrap items-center gap-1.5">
       <TheoryButton target={t} />
-      <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" } as never} className={cn(chip, "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200")}><Target className="h-3 w-3" />Questões</Link>
-      <Link to="/dashboard/flashcards" search={{ subject: nome } as never} className={cn(chip, "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200")}><Layers className="h-3 w-3" />Flashcards</Link>
+      <Link to="/dashboard/question-trainer" search={plannedPractice(nome, topic) as never} className={cn(chip, "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200")}><Target className="h-3 w-3" />Questões</Link>
+      <Link to="/dashboard/flashcards" search={{ subject: nome, topic, planned: "1" } as never} className={cn(chip, "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200")}><Layers className="h-3 w-3" />Flashcards</Link>
       {t.direct && <span className="max-w-64 truncate text-[11px] text-muted-foreground" title={t.label}>↳ {t.label}</span>}
     </span>
   );

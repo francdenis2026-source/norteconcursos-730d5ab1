@@ -1,3 +1,7 @@
+import { plannedAvailability } from "@/lib/plannedStudy";
+import { materialTopic } from "@/lib/materialPractice";
+import { classifyTopic } from "@/lib/questionTopics";
+import { canonicalTopic } from "@/lib/subjects";
 import { parseDidacticProvenance } from "@/lib/didacticQuestion";
 import { TacticalClock } from "@/components/brand/TacticalClock";
 import { questionIdentity } from "@/lib/questionIdentity";
@@ -126,6 +130,11 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "duration"
+      | "plannedSubjects"
+      | "planned"
+      | "materialTopic"
+      | "studySubject"
       | "mode"
       | "area"
       | "contest"
@@ -140,6 +149,11 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
       string | undefined
     >
   > => ({
+    duration: typeof search["duration"] === "string" ? search["duration"] : undefined,
+    plannedSubjects: typeof search["plannedSubjects"] === "string" ? search["plannedSubjects"] : undefined,
+    planned: search["planned"] === "1" ? "1" : undefined,
+    materialTopic: typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
+    studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
     mode: search["mode"] === "enem" ? "enem" : undefined,
     area: typeof search["area"] === "string" ? search["area"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
@@ -192,7 +206,7 @@ function ProfessionalSimulator() {
   const [paperKey, setPaperKey] = React.useState("");
   const [customTitle, setCustomTitle] = React.useState("Meu simulado");
   // Montagem livre começa só com questões inéditas, para não repetir o que o aluno já respondeu.
-  const [onlyNew, setOnlyNew] = React.useState(true);
+  const [onlyNew, setOnlyNew] = React.useState(routeSearch.planned !== "1");
   const [sessionConfig, setSessionConfig] = React.useState<{
     owner: string;
     scope: "enem" | "contests";
@@ -297,7 +311,7 @@ function ProfessionalSimulator() {
     routeSearch.reviewed,
   ]);
   const [limit, setLimit] = React.useState(20);
-  const [durationMinutes, setDurationMinutes] = React.useState(30);
+  const [durationMinutes, setDurationMinutes] = React.useState(Math.min(180, Math.max(5, Number(routeSearch.duration) || 30)));
   React.useEffect(() => {
     if (!isEnemMode) {
       setLimit((n) => (LIMITS.includes(n) ? n : 20));
@@ -581,8 +595,12 @@ function ProfessionalSimulator() {
     setCategory("all");
   };
   const available = React.useMemo(
-    () => filterSimulatorQuestions(scopedCatalog, filters),
-    [scopedCatalog, filters],
+    () => filterSimulatorQuestions(scopedCatalog, filters).filter(q => {
+      let subjects: string[] = [];
+      try { const value = JSON.parse(routeSearch.plannedSubjects ?? "[]"); if (Array.isArray(value)) subjects = value.filter((s): s is string => typeof s === "string").map(canonicalSubject); if (routeSearch.plannedSubjects !== undefined && !subjects.length) return false; } catch { return false; }
+      return (!subjects.length || subjects.includes(canonicalSubject(q.subject))) && (!routeSearch.materialTopic || canonicalTopic(classifyTopic(q.subject, q.text) ?? "") === canonicalTopic(routeSearch.materialTopic));
+    }),
+    [scopedCatalog, filters, routeSearch.materialTopic, routeSearch.plannedSubjects],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
   // Comparáveis do acervo, calculados uma vez por carga: filtros e respostas só reaproveitam as chaves.
@@ -657,6 +675,7 @@ function ProfessionalSimulator() {
       );
       return;
     }
+    if (routeSearch.planned === "1") { const message = plannedAvailability(sessionPool.length, limit); if (message) toast.info(message); }
     setInvalidDraft(false);
     setRankingSummary(null);
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
@@ -696,6 +715,14 @@ function ProfessionalSimulator() {
     setStage("active");
     scrollAppToTop();
   }
+
+  const plannedLaunch = React.useRef("");
+  React.useEffect(() => {
+    const key = JSON.stringify([routeSearch.subject, routeSearch.materialTopic, routeSearch.plannedSubjects]);
+    if (routeSearch.planned !== "1" || loading || authLoading || loadError || historyLoading || historyError || !sessionsReady || resumeDraft || stage !== "setup" || !user || plannedLaunch.current === key) return;
+    const frame = requestAnimationFrame(() => { plannedLaunch.current = key; startSimulator(); });
+    return () => cancelAnimationFrame(frame);
+  }, [routeSearch.planned, routeSearch.subject, routeSearch.materialTopic, loading, authLoading, loadError, historyLoading, historyError, sessionsReady, stage, user, sessionPool, resumeDraft, routeSearch.plannedSubjects]);
 
   function cancelSimulator() {
     const wasEarly = elapsedSeconds < 60;

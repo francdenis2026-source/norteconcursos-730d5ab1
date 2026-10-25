@@ -1,3 +1,4 @@
+import { plannedPractice } from "./plannedStudy";
 /**
  * Painel do dia: transforma os blocos da semana em ETAPAS guiadas (teoria → flashcards → questões →
  * revisão de erros), com pausas entre disciplinas, simulado e redação nos dias certos.
@@ -73,6 +74,7 @@ export interface DayStep {
   kind: StepKind;
   discId?: string;
   nome: string; // disciplina (ou título do passo)
+  subjects?: string[];
   topicId?: string;
   topic?: string;
   minutes: number;
@@ -131,7 +133,7 @@ export function buildDaySteps(
   if (opt.essay && opt.isSecondLastOrOnly)
     out.push({ id: "x-redacao", kind: "redacao", nome: "Redação", minutes: 40, topic: "Escreva um texto completo e confira estrutura, argumentos e gramática." });
   if (opt.simulado && opt.isLastStudyDay)
-    out.push({ id: "x-simulado", kind: "simulado", nome: "Simulado da semana", minutes: 60, topic: "Simulado completo com tempo de prova. Depois, revise o diagnóstico por disciplina." });
+    out.push({ id: "x-simulado", subjects: cfg.discs.map(d => d.nome), kind: "simulado", nome: "Simulado da semana", minutes: 60, topic: "Simulado completo com tempo de prova. Depois, revise o diagnóstico por disciplina." });
   return out;
 }
 
@@ -139,10 +141,10 @@ export function buildDaySteps(
 export function stepLink(step: DayStep): { to: string; search?: Record<string, string> } | null {
   switch (step.kind) {
     case "teoria": return { to: "/dashboard/library" };
-    case "flashcards": return { to: "/dashboard/flashcards", search: { subject: step.nome } };
-    case "questoes": return { to: "/dashboard/question-trainer", search: { area: step.nome, go: "1" } };
-    case "erros": return { to: "/dashboard/errors" };
-    case "simulado": return { to: "/dashboard/mock-exams" };
+    case "flashcards": return { to: "/dashboard/flashcards", search: { planned: "1", subject: step.nome, ...(step.topic ? { topic: step.topic } : {}) } };
+    case "questoes": return { to: "/dashboard/question-trainer", search: plannedPractice(step.nome, step.topic) };
+    case "erros": return { to: "/dashboard/errors", search: { subject: step.nome, ...(step.topic ? { topic: step.topic } : {}) } };
+    case "simulado": return { to: "/dashboard/mock-exams", search: { planned: "1", plannedSubjects: JSON.stringify(step.subjects ?? []), duration: String(step.minutes), go: "1" } };
     case "redacao": return { to: "/dashboard/essays" };
     default: return null;
   }
