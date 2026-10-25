@@ -14458,7 +14458,7 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .discipline-search input { flex: 1; min-width: 0; height: 50px; border: 0; outline: none; background: transparent; color: var(--foreground); font-size: 16px; box-shadow: none; }
 .discipline-search input::-webkit-search-cancel-button { display: none; }
 .discipline-search svg { flex: 0 0 auto; color: var(--muted-foreground); }
-.discipline-search button { display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 10px; background: var(--muted); color: var(--foreground); cursor: pointer; }
+.discipline-search button { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 10px; background: var(--muted); color: var(--foreground); cursor: pointer; }
 .discipline-card { display: grid; gap: 10px; align-content: start; min-height: 148px; padding: 18px; border: 1px solid var(--border); border-radius: 18px; background: var(--card); color: var(--foreground); text-decoration: none; transition: border-color .15s, transform .15s, box-shadow .15s; }
 a.discipline-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 26px rgb(0 0 0 / .14); }
 a.discipline-card:active { transform: translateY(0) scale(0.98); box-shadow: none; }
@@ -14471,7 +14471,7 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .discipline-card__stats { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
 .discipline-card__stats li { padding: 3px 10px; border-radius: 999px; background: var(--muted); font-size: 12px; color: var(--muted-foreground); }
 .discipline-card__soon { font-size: 12.5px; color: var(--muted-foreground); }
-.discipline-back { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; }
+.discipline-back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; }
 .discipline-practice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-weight: 700; text-decoration: none; transition: transform 100ms ease-out, opacity 0.15s; }
 .discipline-practice:hover { opacity: 0.9; }
 .discipline-practice:active { transform: scale(0.96); }
