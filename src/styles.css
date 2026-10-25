@@ -15265,3 +15265,30 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__hero-copy { z-index:5; padding:86px 18px 24px; border:1px solid rgb(255 255 255 / .16); border-radius:20px; background:rgb(9 24 37 / .28); box-shadow:inset 0 1px 0 rgb(255 255 255 / .1); -webkit-backdrop-filter:blur(8px) saturate(120%); backdrop-filter:blur(8px) saturate(120%); }
   .mobile-homepage__hero-copy::before { display:none; }
 }
+
+/* Taste app system: shared treatment for every client route, study area,
+   trainer, ENEM, media, library and settings screen. */
+.app-shell.navigation-v2 { --app-sidebar-width:240px; --taste-app-border:#dfe3e6; --taste-app-ground:#f5f6f7; --taste-app-surface:#fff; --taste-app-text:#171a1d; --taste-app-muted:#53606b; background:var(--taste-app-ground); color:var(--taste-app-text); }
+.app-shell.navigation-v2 .app-sidebar { width:var(--app-sidebar-width); background:var(--taste-app-ground); border-right:1px solid var(--taste-app-border); box-shadow:none; }
+.app-shell.navigation-v2 .app-nav__link { min-height:34px; margin:2px 8px; border-radius:7px; color:var(--taste-app-muted); font-size:13px; }
+.app-shell.navigation-v2 .app-nav__link[aria-current="page"] { color:var(--taste-app-text); background:#e8ebed; box-shadow:none; }
+.app-shell.navigation-v2 .app-content { background:var(--taste-app-ground); }
+.app-shell.navigation-v2 .app-content__inner { max-width:1280px; }
+.app-shell.navigation-v2 :is(.surface-card,.command-panel,[data-slot="card"],.trainer-config-card,.trainer-session-builder,.question-window) { border:1px solid var(--taste-app-border); border-radius:8px; background:var(--taste-app-surface); box-shadow:none; }
+.app-shell.navigation-v2 :is(h1,h2,h3,h4) { color:var(--taste-app-text); letter-spacing:-.025em; }
+.app-shell.navigation-v2 :is(p,small,.text-muted-foreground) { color:var(--taste-app-muted); }
+.app-shell.navigation-v2 :is(.btn-primary,.home-button--primary) { box-shadow:none; }
+.dark .app-shell.navigation-v2 { --taste-app-border:#293036; --taste-app-ground:#0d1114; --taste-app-surface:#151a1e; --taste-app-text:#f1f4f6; --taste-app-muted:#a9b4bd; background:var(--taste-app-ground); color:var(--taste-app-text); }
+.dark .app-shell.navigation-v2 .app-sidebar { background:var(--taste-app-ground); border-right-color:var(--taste-app-border); }
+.dark .app-shell.navigation-v2 .app-nav__link { color:var(--taste-app-muted); }
+.dark .app-shell.navigation-v2 .app-nav__link[aria-current="page"] { color:var(--taste-app-text); background:#20272c; }
+.dark .app-shell.navigation-v2 .app-content { background:var(--taste-app-ground); }
+.dark .app-shell.navigation-v2 :is(.surface-card,.command-panel,[data-slot="card"],.trainer-config-card,.trainer-session-builder,.question-window) { border-color:var(--taste-app-border); background:var(--taste-app-surface); }
+@media (max-width: 767px) {
+  .app-shell.navigation-v2 { --app-sidebar-width:0px; }
+  .app-shell.navigation-v2 .app-content { padding:12px 16px 24px; }
+  .app-shell.navigation-v2 .app-content__inner { width:100%; max-width:none; }
+  .app-shell.navigation-v2 .app-topbar { background:var(--taste-app-ground); border-bottom:1px solid var(--taste-app-border); box-shadow:none; color:var(--taste-app-text); }
+  .app-shell.navigation-v2 :is(.surface-card,.command-panel,[data-slot="card"],.trainer-config-card,.trainer-session-builder,.question-window) { border-radius:8px; }
+  .app-shell.navigation-v2 .app-bottom-nav { right:0; bottom:0; left:0; border:0; border-top:1px solid var(--taste-app-border); border-radius:0; background:var(--taste-app-surface); box-shadow:none; }
+}
