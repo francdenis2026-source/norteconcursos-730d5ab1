@@ -48,6 +48,7 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
+import "@/styles/home-footer.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
@@ -560,8 +561,8 @@ function Index() {
             >
               <img
                 src="/media/brand/platform-qr.svg"
-                width={112}
-                height={112}
+                width={128}
+                height={128}
                 loading="lazy"
                 alt="QR Code para https://norteconcursos.xyz/"
               />
