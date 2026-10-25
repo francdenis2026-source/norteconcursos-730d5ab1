@@ -225,7 +225,14 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 type OrderMode = "random" | "exam";
 
 function QuestionTrainer() {
-  const trainerFullscreen = useWorkspaceFullscreen();
+  // O DashboardLayout é o dono do modo foco no mobile; o treinador apenas
+  // observa o estado e solicita a entrada/saída pelo evento compartilhado.
+  const trainerFullscreen = useWorkspaceFullscreen(true);
+  React.useEffect(() => {
+    return () => {
+      document.dispatchEvent(new Event("norte:workspace-exit"));
+    };
+  }, []);
   const routeFilters = Route.useSearch();
   const lockedSubject = lockedTrainerSubject(routeFilters.subject);
   const lockedCollection = lockedTrainerCollection(routeFilters);

@@ -10928,6 +10928,14 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
+/* A hero mobile deve acompanhar o conteúdo. O min-height de 760px reservado
+   para a composição antiga deixava um vão grande antes do hub. */
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: 0;
+  }
+}
+
 /* Painel do aluno: ícones coloridos por tema (antes: caixa preta com ícone dourado também no modo claro). */
 .quick-action:nth-child(4n + 1), .metric-tile:nth-child(4n + 1) { --tone: oklch(0.52 0.02 260); }
 .quick-action:nth-child(4n + 2), .metric-tile:nth-child(4n + 2) { --tone: oklch(0.68 0.15 70); }
