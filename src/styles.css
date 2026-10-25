@@ -14489,3 +14489,11 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .legal-course-page .legal-course-filters { border-radius: 14px; }
 .app-shell[data-area="student"] .legal-course-page .surface-card { border-radius: 14px; box-shadow: 0 10px 24px rgb(0 0 0 / .1); }
 .app-shell[data-area="student"] .legal-course-page .legal-unit-row { min-height: 58px; padding-block: 9px; }
+
+/* Performance cleanup: remove duplicated title chrome and let evidence lead. */
+.app-shell[data-area="student"] .performance-page::before { display:none; }
+.app-shell[data-area="student"] .performance-page > .page-hero { display:none !important; }
+.app-shell[data-area="student"] .performance-page .performance-overview > :is(h2,.performance-overview__heading) { display:none; }
+.app-shell[data-area="student"] .performance-page { font-family: var(--font-sans); }
+.app-shell[data-area="student"] .performance-page :is(h1,h2,h3,h4) { letter-spacing:-.02em; line-height:1.2; }
+.app-shell[data-area="student"] .performance-page .performance-charts { margin-top:0; }
