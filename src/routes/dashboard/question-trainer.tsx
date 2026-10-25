@@ -1845,7 +1845,7 @@ function QuestionTrainer() {
                 >
                   <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
                   <span>
-                    Você já respondeu esta questão .{" "}
+                    Você já respondeu esta questão. {" "}
                     {reviewingPast ? "Resposta já registrada — revisão sem novo envio. " : ""}
                     Esta tentativa não gera novos pontos no ranking.
                   </span>
