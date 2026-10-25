@@ -3136,6 +3136,10 @@ html {
 }
 .institutional-prose {
   max-width: 740px;
+  font-family: var(--font-sans);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 .institutional-prose section {
   scroll-margin-top: 32px;
@@ -5963,8 +5967,12 @@ html {
 /* Reading typography for study materials */
 .study-prose {
   color: var(--color-foreground);
+  font-family: var(--font-sans);
   font-size: 1.0125rem;
   line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 .study-prose > :first-child {
   margin-top: 0;
@@ -13965,7 +13973,7 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   .q-text { max-width: 100%; line-height: 1.7; }
   .trainer-question-stem.q-text { font-size: 16px; }
 }
-.question-prose-block { white-space: pre-line; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; max-width: 72ch; }
+.question-prose-block { white-space: pre-line; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; max-width: 72ch; font-family: var(--font-sans); text-align: justify; text-justify: inter-word; }
 
 /* Scoped reading surface: never changes global poems, tables or code blocks. */
 .question-readable {
@@ -13975,13 +13983,18 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   overflow-wrap: anywhere;
   text-align: left;
   color: var(--foreground);
+  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.8;
+  text-justify: inter-word;
   tab-size: 4;
 }
 .question-readable img { max-width: 100%; height: auto; }
 .question-readable pre, .question-readable table { max-width: 100%; overflow-x: auto; }
 @media (max-width: 639px) {
+  .institutional-prose,
+  .study-prose,
+  .question-readable { text-align: start; text-justify: auto; hyphens: none; }
   .question-readable { font-size: 1rem; line-height: 1.75; }
   .trainer-question-column, .trainer-question-paper, .trainer-question-content { min-width: 0; }
   .trainer-option { overflow-wrap: anywhere; text-align: left; }
