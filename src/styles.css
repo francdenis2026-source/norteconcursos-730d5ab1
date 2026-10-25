@@ -14855,3 +14855,27 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .font-serif .text-sm {
   font-size: calc(0.875rem * var(--read-scale));
 }
+
+/* Mobile hero artwork: put the officer in the foreground as a full-body
+   portrait, with a clean spotlight edge instead of a washed-out background. */
+@media (max-width: 767px) {
+  .home.home #inicio.home-hero > .home-hero__image {
+    z-index: 0;
+    inset: auto 0 0 auto;
+    width: min(86%, 350px);
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    opacity: 1;
+    filter: saturate(1.12) contrast(1.08) drop-shadow(-12px 10px 22px rgb(0 0 0 / 48%));
+    mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 100%);
+  }
+  .home.home #inicio.home-hero::after {
+    z-index: 1;
+    background: linear-gradient(90deg, rgb(8 18 28 / 94%) 0%, rgb(8 18 28 / 72%) 38%, rgb(8 18 28 / 18%) 74%, transparent 100%), linear-gradient(0deg, rgb(8 18 28 / 88%) 0%, transparent 48%);
+  }
+  .home.home #inicio.home-hero .home-hero__content {
+    z-index: 2;
+  }
+}
