@@ -4230,9 +4230,9 @@
   transform-style: preserve-3d;
 }
 .hero-badge__tilt { transform: rotateY(-6deg); transition: transform 180ms var(--ease-out); }
-.hero-badge__float { animation: badge-rest 6.5s ease-in-out infinite; }
+.hero-badge__float { animation: badge-rest 6.5s cubic-bezier(0.32,0.72,0,1) infinite; }
 .hero-badge__glare { overflow: hidden; }
-.hero-badge__shine { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 244 214 / 40%) 50%, transparent 70%); animation: badge-shine 8s ease-in-out infinite; }
+.hero-badge__shine { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 244 214 / 40%) 50%, transparent 70%); animation: badge-shine 8s cubic-bezier(0.32,0.72,0,1) infinite; }
 .hero-badge[data-visible="false"] * { animation-play-state: paused; }
 @keyframes badge-rest { 50% { transform: translateY(-3px); } }
 @keyframes badge-shine { 0%, 65% { transform: translateX(-130%); opacity: 0; } 72% { opacity: 1; } 90%, 100% { transform: translateX(130%); opacity: 0; } }
@@ -4368,7 +4368,7 @@
   inset: 0;
   background: linear-gradient(105deg, transparent 35%, rgb(246 211 146 / 8%) 49.8%, rgb(246 211 146 / 24%) 50%, transparent 50.2%);
   transform: translateX(-110%);
-  animation: preparation-scan 5s ease-in-out 1;
+  animation: preparation-scan 5s cubic-bezier(0.32,0.72,0,1) 1;
 }
 @keyframes preparation-scan { to { transform: translateX(110%); } }
 @media (prefers-reduced-motion: reduce) { .home-preparation__sweep::after { animation: none; } }
@@ -4597,7 +4597,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  animation: home-pcsc-sheen 6s ease-in-out infinite;
+  animation: home-pcsc-sheen 6s cubic-bezier(0.32,0.72,0,1) infinite;
 }
 .home-pcsc-badge {
   position: absolute;
@@ -4616,7 +4616,7 @@
   color: var(--brass-foreground);
   background: var(--brass);
   box-shadow: 0 6px 16px -4px color-mix(in oklab, var(--home-gold) 75%, transparent);
-  animation: home-pcsc-pulse 2.4s ease-in-out infinite;
+  animation: home-pcsc-pulse 2.4s cubic-bezier(0.32,0.72,0,1) infinite;
 }
 .home-pcsc-badge > svg {
   width: 12px;
@@ -4704,7 +4704,7 @@
 .home .home-header .norte-brand__mark {
   width: 49px; height: 54px;
   filter: drop-shadow(0 2px 4px #94733526);
-  animation: norte-header-emblem 9s ease-in-out infinite;
+  animation: norte-header-emblem 9s cubic-bezier(0.32,0.72,0,1) infinite;
   transform-origin: center;
 }
 .home .home-header .norte-brand__type { --brand-size: 30px; }
