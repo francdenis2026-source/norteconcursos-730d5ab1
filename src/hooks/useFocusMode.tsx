@@ -1,3 +1,4 @@
+import { setReadingWorkspace, READING_FULLSCREEN_EXIT } from "@/lib/readingWorkspace";
 import { platformDate } from "@/lib/platformClock";
 import {
   lazy,
@@ -10,7 +11,7 @@ import {
   type ReactNode,
 } from "react";
 import { useBlocker, useRouter } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock3, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Hint } from "@/components/ui/hint";
 import type { ToolsArea } from "@/components/study/StudyTools";
@@ -90,9 +91,7 @@ export function useFocusMode() {
   const enter = useCallback(() => {
     beginFocus(href(), "");
     setFocus(true);
-    if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
-      void document.documentElement.requestFullscreen().catch(() => {});
-    }
+    setReadingWorkspace(true);
   }, [href]);
 
   const requestExit = useCallback(async () => {
@@ -100,7 +99,7 @@ export function useFocusMode() {
     exiting.current = true;
     try {
       const ok = await confirmDialog({
-        title: "Encerrar o modo foco?",
+        title: "Encerrar a leitura cronometrada?",
         message: `O tempo de estudo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) será encerrado.`,
         confirmLabel: "Encerrar",
         cancelLabel: "Continuar estudando",
@@ -109,7 +108,6 @@ export function useFocusMode() {
       if (ok) {
         endFocus();
         setFocus(false);
-        if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
       }
     } finally {
       exiting.current = false;
@@ -121,6 +119,9 @@ export function useFocusMode() {
       setToolsOpen(false);
       return;
     }
+    setReadingWorkspace(true);
+    const onNativeExit = () => void requestExit();
+    document.addEventListener(READING_FULLSCREEN_EXIT, onNativeExit);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") void requestExit();
     };
@@ -132,6 +133,8 @@ export function useFocusMode() {
       tickFocus();
     }, 1000);
     return () => {
+      document.removeEventListener(READING_FULLSCREEN_EXIT, onNativeExit);
+      setReadingWorkspace(false);
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearInterval(id);
@@ -208,7 +211,7 @@ export function useFocusMode() {
   /** Botão para entrar no modo foco (fora dele). */
   const button = (
     <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
-      <Maximize2 className="mr-1 h-4 w-4" /> Tela cheia de leitura
+      <Clock3 className="mr-1 h-4 w-4" /> Iniciar leitura cronometrada
     </Button>
   );
 
@@ -219,7 +222,7 @@ export function useFocusMode() {
         <header
           ref={barRef}
           className="focus-study-bar sticky top-0 z-[61] bg-gradient-to-r from-slate-900 to-sky-900 text-white shadow-md"
-          aria-label="Controles do modo foco"
+          aria-label="Controles da leitura cronometrada"
           role="banner"
         >
           <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-2 lg:grid-cols-[minmax(120px,1fr)_auto_auto]">
@@ -301,14 +304,15 @@ export function useFocusMode() {
                 </button>
               )}
               {p.extra}
-              <Hint content="Sair do modo foco (Esc)">
+              <Hint content="Encerrar leitura cronometrada (Esc)">
                 <button
                   type="button"
                   onClick={() => void requestExit()}
-                  aria-label="Sair do modo foco"
+                  aria-label="Encerrar leitura cronometrada"
                   className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15"
                 >
-                  <X className="h-4 w-4" /> <span className="hidden sm:inline">Sair</span>
+                  <X className="h-4 w-4" />{" "}
+                  <span className="hidden sm:inline">Encerrar leitura</span>
                 </button>
               </Hint>
             </div>

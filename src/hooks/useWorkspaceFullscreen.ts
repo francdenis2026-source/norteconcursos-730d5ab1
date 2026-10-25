@@ -1,11 +1,14 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { MOBILE_APP_QUERY } from '@/lib/appScroll';
+import { READING_WORKSPACE_EVENT, READING_FULLSCREEN_EXIT } from "@/lib/readingWorkspace";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { MOBILE_APP_QUERY } from "@/lib/appScroll";
 
 /** Native fullscreen where allowed; the same workspace layout works without it. */
 export function useWorkspaceFullscreen() {
   const [active, setActive] = useState(false);
   const activeRef = useRef(false);
   const native = useRef(false);
+  const reading = useRef(false);
+  const expandedBeforeReading = useRef(false);
   const pending = useRef(false);
   const mounted = useRef(true);
   const scroll = useRef<number | null>(null);
@@ -16,10 +19,10 @@ export function useWorkspaceFullscreen() {
   // seriam recalculados a cada quadro dessa animação, o que aparecia como um "piscar" de falha.
   // Este marcador congela transições e desfoque até a troca de tela cheia se acomodar.
   const beginTransition = useCallback(() => {
-    document.documentElement.dataset['workspaceFocusTransition'] = 'true';
+    document.documentElement.dataset["workspaceFocusTransition"] = "true";
     if (settleTimer.current !== null) window.clearTimeout(settleTimer.current);
     settleTimer.current = window.setTimeout(() => {
-      delete document.documentElement.dataset['workspaceFocusTransition'];
+      delete document.documentElement.dataset["workspaceFocusTransition"];
       settleTimer.current = null;
     }, 400);
   }, []);
@@ -28,31 +31,43 @@ export function useWorkspaceFullscreen() {
       window.clearTimeout(settleTimer.current);
       settleTimer.current = null;
     }
-    delete document.documentElement.dataset['workspaceFocusTransition'];
+    delete document.documentElement.dataset["workspaceFocusTransition"];
   }, []);
   const enter = useCallback(() => {
     if (activeRef.current) return;
-    returnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const content = document.getElementById('dashboard-content');
-    scroll.current = window.matchMedia(MOBILE_APP_QUERY).matches ? content?.scrollTop ?? 0 : window.scrollY;
+    returnFocus.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const content = document.getElementById("dashboard-content");
+    scroll.current = window.matchMedia(MOBILE_APP_QUERY).matches
+      ? (content?.scrollTop ?? 0)
+      : window.scrollY;
     beginTransition();
     activeRef.current = true;
     setActive(true);
-    if (!document.fullscreenElement && document.fullscreenEnabled && document.documentElement.requestFullscreen) {
+    if (
+      !document.fullscreenElement &&
+      document.fullscreenEnabled &&
+      document.documentElement.requestFullscreen
+    ) {
       pending.current = true;
-      void document.documentElement.requestFullscreen().then(() => {
-        pending.current = false;
-        native.current = document.fullscreenElement === document.documentElement;
-        if ((!mounted.current || !activeRef.current) && native.current) {
-          native.current = false;
-          void document.exitFullscreen().catch(() => {});
-        }
-      }).catch(() => { pending.current = false; });
+      void document.documentElement
+        .requestFullscreen()
+        .then(() => {
+          pending.current = false;
+          native.current = document.fullscreenElement === document.documentElement;
+          if ((!mounted.current || !activeRef.current) && native.current) {
+            native.current = false;
+            void document.exitFullscreen().catch(() => {});
+          }
+        })
+        .catch(() => {
+          pending.current = false;
+        });
     }
   }, [beginTransition]);
   const exit = useCallback(() => {
     if (!activeRef.current) return;
-    scroll.current = document.getElementById('dashboard-content')?.scrollTop ?? 0;
+    scroll.current = document.getElementById("dashboard-content")?.scrollTop ?? 0;
     beginTransition();
     activeRef.current = false;
     setActive(false);
@@ -63,16 +78,28 @@ export function useWorkspaceFullscreen() {
   }, [beginTransition]);
   useLayoutEffect(() => {
     if (active) {
-      document.documentElement.dataset['workspaceFocus'] = 'true';
-      if (scroll.current !== null) document.getElementById('dashboard-content')?.scrollTo({ top: scroll.current, behavior: 'instant' });
+      document.documentElement.dataset["workspaceFocus"] = "true";
+      if (scroll.current !== null)
+        document
+          .getElementById("dashboard-content")
+          ?.scrollTo({ top: scroll.current, behavior: "instant" });
     } else {
-      delete document.documentElement.dataset['workspaceFocus'];
+      delete document.documentElement.dataset["workspaceFocus"];
       if (scroll.current !== null) {
-        if (window.matchMedia(MOBILE_APP_QUERY).matches) document.getElementById('dashboard-content')?.scrollTo({ top: scroll.current, behavior: 'instant' });
-        else window.scrollTo({ top: scroll.current, behavior: 'instant' });
+        if (window.matchMedia(MOBILE_APP_QUERY).matches)
+          document
+            .getElementById("dashboard-content")
+            ?.scrollTo({ top: scroll.current, behavior: "instant" });
+        else window.scrollTo({ top: scroll.current, behavior: "instant" });
         const previous = returnFocus.current;
-        const target = previous?.isConnected && previous.getClientRects().length ? previous
-          : document.querySelector<HTMLElement>(window.matchMedia(MOBILE_APP_QUERY).matches ? '.app-mobile-bar button' : '.workspace-fullscreen-trigger');
+        const target =
+          previous?.isConnected && previous.getClientRects().length
+            ? previous
+            : document.querySelector<HTMLElement>(
+                window.matchMedia(MOBILE_APP_QUERY).matches
+                  ? ".app-mobile-bar button"
+                  : ".workspace-fullscreen-trigger",
+              );
         target?.focus({ preventScroll: true });
       }
     }
@@ -80,25 +107,53 @@ export function useWorkspaceFullscreen() {
   useEffect(() => {
     mounted.current = true;
     const change = () => {
-      if (document.fullscreenElement === document.documentElement && pending.current) native.current = true;
-      else if (!document.fullscreenElement && native.current) { native.current = false; exit(); }
+      if (document.fullscreenElement === document.documentElement && pending.current)
+        native.current = true;
+      else if (!document.fullscreenElement && native.current) {
+        native.current = false;
+        if (reading.current) document.dispatchEvent(new Event(READING_FULLSCREEN_EXIT));
+        else exit();
+      }
       // A troca de tela cheia nativa terminou: o layout pode voltar a animar normalmente.
       endTransition();
     };
     const key = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && activeRef.current && !document.querySelector('[role="dialog"], [role="menu"]')) exit();
+      if (
+        event.key === "Escape" &&
+        !reading.current &&
+        activeRef.current &&
+        !Array.from(document.querySelectorAll<HTMLElement>('[role="dialog"], [role="menu"]')).some((node) => node.getAttribute("data-state") !== "closed" && node.getClientRects().length > 0)
+      )
+        exit();
     };
-    document.addEventListener('fullscreenchange', change);
-    window.addEventListener('keydown', key, true);
+    const readingChange = (event: Event) => {
+      const next = (event as CustomEvent<{ active: boolean }>).detail.active;
+      if (next === reading.current) return;
+      reading.current = next;
+      if (next) {
+        expandedBeforeReading.current = activeRef.current;
+        document.documentElement.dataset["readingFocus"] = "true";
+        enter();
+      } else {
+        delete document.documentElement.dataset["readingFocus"];
+        if (!expandedBeforeReading.current) exit();
+      }
+    };
+    document.addEventListener(READING_WORKSPACE_EVENT, readingChange);
+    document.addEventListener("fullscreenchange", change);
+    window.addEventListener("keydown", key, true);
     return () => {
       mounted.current = false;
       activeRef.current = false;
-      delete document.documentElement.dataset['workspaceFocus'];
+      delete document.documentElement.dataset["workspaceFocus"];
       endTransition();
-      document.removeEventListener('fullscreenchange', change);
-      window.removeEventListener('keydown', key, true);
-      if (native.current && document.fullscreenElement === document.documentElement) void document.exitFullscreen().catch(() => {});
+      document.removeEventListener(READING_WORKSPACE_EVENT, readingChange);
+      delete document.documentElement.dataset["readingFocus"];
+      document.removeEventListener("fullscreenchange", change);
+      window.removeEventListener("keydown", key, true);
+      if (native.current && document.fullscreenElement === document.documentElement)
+        void document.exitFullscreen().catch(() => {});
     };
-  }, [exit, endTransition]);
+  }, [enter, exit, endTransition]);
   return { active, enter, exit };
 }

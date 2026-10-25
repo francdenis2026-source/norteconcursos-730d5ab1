@@ -53,13 +53,7 @@ async function assertFocus(page,desktop) {
   assert.equal(await page.locator('.workspace-section-nav').isVisible(),false);
   assert.equal(await page.locator('.app-bottom-nav').isVisible(),false);
   assert.equal(await page.locator('.workspace-focus-controls button').count(),2);
-  const sidebar=page.locator('.app-sidebar');
-  assert.equal(await sidebar.isVisible(),desktop);
-  if(desktop){
-    const rail=await sidebar.boundingBox();assert.equal(Math.round(rail.width),68);assert.equal(await sidebar.locator('.app-nav__compact-label').first().isVisible(),false);
-    const targets=await sidebar.locator('.app-nav__link').evaluateAll(nodes=>nodes.map(node=>{const r=node.getBoundingClientRect();return {x:r.x,width:r.width,height:r.height};}));
-    for(const target of targets){assert.equal(target.width,44);assert.equal(target.height,44);assert.ok(target.x>=rail.x&&target.x+target.width<=rail.x+rail.width,'icons remain inside compact rail');}
-  }
+  assert.equal(await page.locator('.app-sidebar').isVisible(),false);
   const c=await page.locator('#dashboard-content').boundingBox(), controls=await page.locator('.workspace-focus-controls').boundingBox();
   assert.ok(c.y>=controls.y+controls.height-1,'controls never overlap study content');
   const dimensions=await page.evaluate(()=>({w:innerWidth,h:innerHeight,sw:document.documentElement.scrollWidth}));
@@ -76,7 +70,6 @@ try {
     if(native)await p.waitForFunction(()=>document.fullscreenElement===document.documentElement);
     await p.getByRole('button',{name:'Ativar tema claro',exact:true}).click();
     assert.equal(await p.evaluate(()=>document.documentElement.classList.contains('dark')),false);
-    await p.locator('.app-sidebar a[href="/dashboard/material"]').click();await p.waitForURL(/dashboard\/material/);await assertFocus(p,true);
     await p.keyboard.press('Control+k');await p.locator('.navigation-command').waitFor();await p.keyboard.press('Escape');
     await p.locator('.navigation-command').waitFor({state:'hidden'});
     assert.equal(await p.locator('.app-shell').getAttribute('data-focus-mode'),'true','closing a dialog must not leave focus mode');
@@ -88,7 +81,7 @@ try {
     await entry.click();await assertFocus(p,true);
     await p.screenshot({path:`/tmp/norte-focus-desktop-${native?'native':'fallback'}.png`});
     await p.keyboard.press('Escape');await p.locator('.app-shell[data-focus-mode="false"]').waitFor();
-    await context.close();console.log(`PASS desktop ${native?'native Fullscreen API':'CSS fallback'}: icon rail, theme, contextual navigation, modal Escape, browser exit and preference restoration`);
+    await context.close();console.log(`PASS desktop ${native?'native Fullscreen API':'CSS fallback'}: hidden sidebar, full-width content, theme, modal Escape, browser exit and preference restoration`);
   }
   for(const width of [320,390,820,1180]) {
     const context=await contextFor(width,900,{coarse:true});const p=await context.newPage();

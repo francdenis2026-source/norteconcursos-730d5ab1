@@ -9,14 +9,14 @@
 .workspace-focus-controls { display: flex; justify-content: flex-end; gap: 6px; flex: none; padding: calc(6px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right)) 6px max(12px, env(safe-area-inset-left)); background: var(--card); border-bottom: 1px solid var(--border); }
 .workspace-focus-controls button:hover, .workspace-fullscreen-trigger:hover { background: var(--muted); border-color: var(--ring); }
 :is(.workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
-html[data-workspace-focus="true"], html[data-workspace-focus="true"] body { overflow: hidden; overscroll-behavior: none; }
+html[data-workspace-focus="true"], html[data-workspace-focus="true"] body { scrollbar-gutter: auto; overflow: hidden; overscroll-behavior: none; }
 /* position:fixed + inset:0 já prendem as quatro bordas à viewport, então a caixa não precisa de
    width/height explícitos. Um 100dvh aqui seria recalculado a cada quadro da animação nativa de
    entrada/saída da tela cheia (o navegador redimensiona a janela de forma gradual), o que fazia
    o layout piscar durante a transição. */
 .app-shell.navigation-v2[data-focus-mode="true"] {
   position: fixed; inset: 0; z-index: 40; display: grid;
-  grid-template-columns: 68px minmax(0, 1fr); min-height: 0; overflow: hidden;
+  grid-template-columns: minmax(0, 1fr); min-height: 0; overflow: hidden;
 }
 /* Enquanto a tela cheia nativa ainda está entrando/saindo (ver useWorkspaceFullscreen), congela
    transições e desfoque: evita o "piscar" causado pelo backdrop-filter sendo repintado a cada
@@ -36,23 +36,20 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
    fluxo e não captura o mouse, então a página pode continuar rolando sob o
    vidro sem produzir repinturas intermitentes. */
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after {
-  content: ""; position: fixed; z-index: 5; left: 68px; right: 0; bottom: 0;
+  content: ""; position: fixed; z-index: 5; left: 0; right: 0; bottom: 0;
   height: 58px; pointer-events: none;
   background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--background) 82%, transparent));
   border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content__inner { max-width: none; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: flex; position: relative; top: auto; width: 68px; height: 100%; min-height: 0; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 68px; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar__head { height: 60px; min-height: 60px; padding: 10px; justify-content: center; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar__search { width: 44px; min-width: 44px; height: 44px; margin: 6px auto; padding: 0; justify-content: center; }
-.app-shell.navigation-v2[data-focus-mode="true"] .student-direct-navigation { flex: 1; min-height: 0; padding: 4px 8px; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar.student-navigation[data-collapsed="true"] .student-direct-navigation .app-nav__link { display: grid; grid-template-columns: 1fr; place-items: center; width: 44px; min-width: 44px; max-width: 44px; height: 44px; min-height: 44px; gap: 0; padding: 0; margin: 4px auto; }
-.app-shell.navigation-v2[data-focus-mode="true"] .student-direct-navigation .app-nav__compact-label { display: none; }
-.app-shell.navigation-v2[data-focus-mode="true"] .student-direct-navigation .nav-primary { margin: 0 0 6px; padding: 0 0 6px; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar__foot { padding: 8px; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-user { justify-content: center; padding: 4px; }
+.app-shell.navigation-v2[data-focus-mode="true"] > .app-sidebar { display: none; }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 0; }
+/* Reading has its own timer and controls; keep a single toolbar and the entire viewport. */
+html[data-reading-focus="true"] .workspace-focus-controls { display: none; }
+html[data-reading-focus="true"] .focus-study-container { width: 100%; max-width: none; padding-inline: clamp(12px, 2vw, 32px); padding-top: env(safe-area-inset-top); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+html[data-reading-focus="true"] .focus-study-container > :not(aside) { max-width: none; width: 100%; }
+html[data-reading-focus="true"] .focus-study-bar { top: 0; }
 @media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
   .app-shell .workspace-fullscreen-trigger { display: none; }
   .app-shell.navigation-v2[data-focus-mode="true"] { grid-template-columns: minmax(0, 1fr); top: var(--app-viewport-top, 0px); height: var(--app-viewport-height, 100dvh); }
