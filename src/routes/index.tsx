@@ -1,3 +1,4 @@
+import { useHomeSection } from "@/hooks/useHomeSection";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HeroBadge } from "@/components/landing/HeroBadge";
@@ -49,6 +50,7 @@ import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import "@/styles/home-footer.css";
+import "@/styles/home-editorial.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
@@ -88,6 +90,8 @@ const NAV: [string, string][] = [
   ["Concursos", "#concursos"],
   ["Planos", "#planos"],
 ];
+
+const HOME_SECTION_IDS = ["plataforma", "concursos", "planos"] as const;
 
 const EXPLORE_LINKS: [string, string][] = [
   ["Ferramentas", "#ferramentas"],
@@ -285,6 +289,7 @@ function PreparationInfo() {
 }
 
 function Index() {
+  const activeSection = useHomeSection(HOME_SECTION_IDS);
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
@@ -312,7 +317,7 @@ function Index() {
           </div>
           <nav className="home-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
-              <a key={href} href={href}>
+              <a key={href} href={href} aria-current={activeSection === href.slice(1) ? "location" : undefined}>
                 {label}
               </a>
             ))}
@@ -474,8 +479,8 @@ function Index() {
         <section className="home-daily-feature home-container" aria-labelledby="daily-feature-title">
           <div className="home-daily-feature__copy">
             <span className="home-signal"><span /> RITMO DIÁRIO</span>
-            <h2 id="daily-feature-title">Um desafio por dia. Um passo mais perto da aprovação.</h2>
-            <p>Resolva a questão do dia, acompanhe sua sequência e transforme constância em confiança para a prova.</p>
+            <h2 id="daily-feature-title">Constância hoje. Mais preparo para a prova.</h2>
+            <p>Treine com 10 questões oficiais por dia, sem cadastro. Confira os comentários e retome amanhã para manter seu ritmo.</p>
           </div>
           <div className="home-daily-feature__card"><DailyChallengeBadge /></div>
         </section>
@@ -495,7 +500,7 @@ function Index() {
                 decoding="async"
               />
               <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow home-signal">Para quem escolheu servir e proteger</span>
+                <span className="home-preparation__eyebrow home-signal">01 · Prepare-se para sua carreira</span>
                 <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
                 <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
               </div>
@@ -517,7 +522,7 @@ function Index() {
           <div className="home-container">
             <div className="home-operations__heading">
               <Head
-                kicker="Seu foco começa no Acre"
+                kicker="02 · Seu foco começa no Acre"
                 lead="PC-AC em destaque. Provas da IDECAN e de outras bancas para transformar seu objetivo em prática."
               >
                 Seu próximo <em>objetivo.</em>

@@ -46,7 +46,7 @@ export function PlansSection() {
       <div className="home-container">
         <div className="home-plans__intro">
           <div className="home-heading">
-            <span className="home-eyebrow home-signal">Seu ritmo. Seu plano.</span>
+            <span className="home-eyebrow home-signal">03 · Seu ritmo. Seu plano.</span>
             <h2 id="planos-title">
               Comece grátis.
               <br />
