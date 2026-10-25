@@ -15246,7 +15246,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
    visual weight instead of oversized translucent cards. */
 @media (min-width: 768px) {
   .home.home .home-hero__copy { background:#142432; border:0; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; }
-  .home.home .home-daily-feature { background:#e7edf1; border:0; border-left:6px solid var(--home-gold); box-shadow:none; backdrop-filter:none; }
+  .home.home .home-daily-feature { background:#e7edf1; border:1px solid color-mix(in srgb, var(--home-gold) 35%, transparent); box-shadow:none; backdrop-filter:none; }
   .home.home .home-preparation__band { background:#172b3b; border:0; box-shadow:none; backdrop-filter:none; }
   .home.home .home-operations__heading { background:#e7edf1; border:0; box-shadow:none; backdrop-filter:none; }
   .home.home .home-footer--command .home-footer__grid { background:#101d29; border:0; box-shadow:none; backdrop-filter:none; }
