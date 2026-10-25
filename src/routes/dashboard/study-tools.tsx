@@ -17,6 +17,8 @@ import {
   Flame,
   Layers,
   ListChecks,
+  Maximize2,
+  Minimize2,
   Pause,
   Play,
   RotateCcw,
@@ -45,6 +47,8 @@ import { TRACKS } from "@/data/tracks";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
+import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
+import { userStorageKey } from "@/lib/userStorage";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
@@ -176,18 +180,37 @@ function useStudyContext() {
 // ───────────────────────── Página ─────────────────────────
 
 const DAY_KEY = "norte_focus_day";
+const HISTORY_KEY = "norte_focus_history_v1";
+type FocusRecord = {
+  id: string;
+  completedAt: string;
+  minutes: number;
+  subject: string;
+  topic: string;
+};
+
 function readDay(): { day: string; cycles: number; minutes: number } {
   const fresh = { day: acreDateKey(), cycles: 0, minutes: 0 };
   try {
-    const v = JSON.parse(localStorage.getItem(DAY_KEY) ?? "null") as typeof fresh | null;
+    const v = JSON.parse(localStorage.getItem(userStorageKey(DAY_KEY)) ?? "null") as typeof fresh | null;
     return v && v.day === fresh.day ? v : fresh;
   } catch {
     return fresh;
   }
 }
 
+function readFocusHistory(): FocusRecord[] {
+  try {
+    const value = JSON.parse(localStorage.getItem(userStorageKey(HISTORY_KEY)) ?? "[]") as FocusRecord[];
+    return Array.isArray(value) ? value.slice(0, 30) : [];
+  } catch {
+    return [];
+  }
+}
+
 function StudyToolsPage() {
   const ctx = useStudyContext();
+  const fullscreen = useWorkspaceFullscreen();
   const { context } = Route.useSearch();
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
@@ -199,9 +222,11 @@ function StudyToolsPage() {
     topic: "",
   });
   const [day, setDay] = React.useState({ day: "", cycles: 0, minutes: 0 });
+  const [history, setHistory] = React.useState<FocusRecord[]>([]);
 
   React.useEffect(() => {
     setDay(readDay());
+    setHistory(readFocusHistory());
     setPick({ subject: "", topic: "" });
     try {
       const saved = JSON.parse(localStorage.getItem(pickKey) ?? "null") as
@@ -210,7 +235,7 @@ function StudyToolsPage() {
     } catch {
       /* sem armazenamento */
     }
-  }, [pickKey]);
+  }, [pickKey, ctx.real]);
   const subject =
     pick.subject && subjects.includes(pick.subject) ? pick.subject : (suggested || subjects[0] || "");
   const topics = React.useMemo(() => enem ? (enemSubjects.find(item => item.name === subject)?.topics ?? []) : topicsFor(subject), [subject, enem, enemSubjects]);
@@ -223,19 +248,35 @@ function StudyToolsPage() {
       /* sem armazenamento */
     }
   };
-  const onFocusDone = (minutes: number) => {
+  const onFocusDone = (minutes: number, sessionSubject: string, sessionTopic: string) => {
     const d = readDay();
     const next = { ...d, cycles: d.cycles + 1, minutes: d.minutes + minutes };
     try {
-      localStorage.setItem(DAY_KEY, JSON.stringify(next));
+      localStorage.setItem(userStorageKey(DAY_KEY), JSON.stringify(next));
     } catch {
       /* sem armazenamento */
     }
     setDay(next);
+    const record: FocusRecord = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      completedAt: new Date().toISOString(),
+      minutes,
+      subject: sessionSubject,
+      topic: sessionTopic,
+    };
+    setHistory((previous) => {
+      const nextHistory = [record, ...previous].slice(0, 30);
+      try {
+        localStorage.setItem(userStorageKey(HISTORY_KEY), JSON.stringify(nextHistory));
+      } catch {
+        /* sem armazenamento */
+      }
+      return nextHistory;
+    });
   };
 
   return (
-    <div className="study-tools-page space-y-6">
+    <div className="study-tools-page space-y-6" data-focus-session={fullscreen.active ? "true" : undefined}>
       <PageHero
         image="study-desk"
         kicker={enem ? "ENEM" : "Meu planejamento"}
@@ -290,8 +331,13 @@ function StudyToolsPage() {
         topics={topics}
         onPick={choose}
         day={day}
-        onFocusDone={onFocusDone}
+        focusMode={fullscreen.active}
+        onEnterFocus={fullscreen.enter}
+        onExitFocus={fullscreen.exit}
+        onFocusDone={(minutes) => onFocusDone(minutes, subject, topic)}
       />
+
+      <FocusHistoryCard history={history} />
 
       {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
       <PlatformMaterialCard subject={subject} topic={topic} />
@@ -418,6 +464,48 @@ function usePomodoro(onDone: (mode: Mode) => void) {
 const selectCls =
   "h-10 w-full rounded-lg border border-input bg-background px-3 text-sm font-medium";
 
+function FocusHistoryCard({ history }: { history: FocusRecord[] }) {
+  return (
+    <Card className="focus-history-card">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-base">
+          <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Histórico de sessões
+        </CardTitle>
+        <CardDescription>
+          Cada ciclo concluído fica associado à disciplina e ao assunto estudado.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {history.length ? (
+          <div className="focus-history-list" aria-label="Sessões concluídas">
+            {history.slice(0, 6).map((item) => (
+              <div className="focus-history-row" key={item.id}>
+                <div className="min-w-0">
+                  <strong>{item.subject}</strong>
+                  <span>{item.topic || "Revisão geral"}</span>
+                </div>
+                <div className="focus-history-meta">
+                  <b>{item.minutes} min</b>
+                  <time dateTime={item.completedAt}>
+                    {new Date(item.completedAt).toLocaleDateString("pt-BR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                    })}
+                  </time>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-sm text-muted-foreground">
+            Seus ciclos concluídos aparecerão aqui depois da primeira sessão.
+          </p>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
 function FocusCard({
   enem = false,
   subjects,
@@ -427,6 +515,9 @@ function FocusCard({
   topics,
   onPick,
   day,
+  focusMode,
+  onEnterFocus,
+  onExitFocus,
   onFocusDone,
 }: {
   enem?: boolean;
@@ -437,6 +528,9 @@ function FocusCard({
   topics: string[];
   onPick: (v: { subject: string; topic: string }) => void;
   day: { cycles: number; minutes: number };
+  focusMode: boolean;
+  onEnterFocus: () => void;
+  onExitFocus: () => void;
   onFocusDone: (minutes: number) => void;
 }) {
   const pomo = usePomodoro((mode) => {
@@ -446,6 +540,10 @@ function FocusCard({
       toast.success(`Ciclo de ${mode} min concluído. Faça uma pausa de 5 min.`);
     }
   });
+  const startFocus = () => {
+    onEnterFocus();
+    if (!pomo.running) pomo.toggle();
+  };
   const total = pomo.mode * 60;
   const pct = total ? (total - pomo.left) / total : 0;
   const R = 92;
@@ -456,15 +554,31 @@ function FocusCard({
   const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}), ...(enem ? { contest: "ENEM" } : {}) };
 
   return (
-    <Card className="focus-session-card overflow-hidden">
+    <Card className={cn("focus-session-card overflow-hidden", focusMode && "focus-session-card--active")}>
       <div className="grid gap-0 lg:grid-cols-[1.05fr_1fr]">
         <div className="space-y-5 p-6">
+          <div className="focus-session-heading">
+            <div>
+              <span className="focus-session-kicker">{focusMode ? "MODO FOCO ATIVO" : "PREPARE SUA SESSÃO"}</span>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Target className="h-5 w-5" /> Sessão de foco
+              </CardTitle>
+            </div>
+            {focusMode ? (
+              <Button type="button" variant="outline" size="sm" onClick={onExitFocus} className="gap-2">
+                <Minimize2 className="h-4 w-4" /> Sair da tela cheia
+              </Button>
+            ) : (
+              <Button type="button" variant="outline" size="sm" onClick={startFocus} className="gap-2">
+                <Maximize2 className="h-4 w-4" /> Ativar modo foco
+              </Button>
+            )}
+          </div>
           <div>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Target className="h-5 w-5" /> Sessão de foco
-            </CardTitle>
             <CardDescription className="mt-1">
-              Escolha o que vai estudar agora. O cronômetro continua correndo se você mudar de tela.
+              {focusMode
+                ? "Apenas o assunto e os atalhos de estudo ficam na tela. Use Esc ou o botão acima para sair."
+                : "Escolha o que vai estudar agora. Ao iniciar, o cronômetro abre o modo foco em tela cheia."}
             </CardDescription>
           </div>
           <label className="block space-y-1.5">
@@ -517,7 +631,7 @@ function FocusCard({
 
         <div
           className={cn(
-            "flex flex-col items-center justify-center gap-4 border-t bg-gradient-to-b p-6 lg:border-l lg:border-t-0",
+            "focus-timer-panel flex flex-col items-center justify-center gap-4 border-t bg-gradient-to-b p-6 lg:border-l lg:border-t-0",
             isBreak ? "from-emerald-500/10 to-transparent" : "from-amber-400/10 to-transparent",
           )}
         >
@@ -584,9 +698,28 @@ function FocusCard({
               </div>
             </div>
           </div>
+          <div className="focus-progress" aria-label="Progresso do ciclo">
+            <div className="focus-progress__label">
+              <span>Progresso do ciclo</span>
+              <strong>{Math.round(pct * 100)}%</strong>
+            </div>
+            <div
+              className="focus-progress__track"
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={Math.round(pct * 100)}
+            >
+              <span style={{ width: `${Math.round(pct * 100)}%` }} />
+            </div>
+            <div className="focus-progress__meta">
+              <span>{Math.floor((total - pomo.left) / 60)} min concluídos</span>
+              <span>{Math.ceil(pomo.left / 60)} min restantes</span>
+            </div>
+          </div>
           <div className="flex gap-2">
             <Button
-              onClick={pomo.toggle}
+              onClick={pomo.running ? pomo.toggle : startFocus}
               className={cn(
                 "min-w-32 gap-2",
                 isBreak
@@ -600,7 +733,7 @@ function FocusCard({
                 </>
               ) : (
                 <>
-                  <Play className="h-4 w-4" /> Iniciar
+                  <Play className="h-4 w-4" /> {focusMode ? "Iniciar" : "Iniciar em tela cheia"}
                 </>
               )}
             </Button>
