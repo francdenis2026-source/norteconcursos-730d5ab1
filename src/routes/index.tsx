@@ -451,7 +451,6 @@ function Index() {
                 <div className="home-hero__study-entry" aria-label="Comece sua preparação" data-aim>
                   <TestingSeal />
                   <div className="home-hero__study-links">
-                    <DailyChallengeBadge />
                     <QuestionCountBadge />
                   </div>
                 </div>
