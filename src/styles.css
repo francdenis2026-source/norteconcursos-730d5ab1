@@ -15180,3 +15180,30 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html:not(.dark) .home.home .home-preparation__band { background:#dce8ef; }
   html:not(.dark) .home.home .home-footer--command .home-footer__grid { background:#fff; }
 }
+
+/* Mobile light-theme pass: every dark chapter keeps light text; paper chapters
+   use full ink. The clock hands stay animated unless reduced motion is requested. */
+@media (max-width: 767px) {
+  html:not(.dark) .mobile-homepage__hero,
+  html:not(.dark) .mobile-homepage__closing,
+  html:not(.dark) .mobile-homepage__contests,
+  html:not(.dark) .mobile-homepage__footer { color:#f6f8fb; }
+  html:not(.dark) .mobile-homepage__hero h1,
+  html:not(.dark) .mobile-homepage__hero p,
+  html:not(.dark) .mobile-homepage__hero .mobile-homepage__secondary,
+  html:not(.dark) .mobile-homepage__closing strong,
+  html:not(.dark) .mobile-homepage__contests h2 { color:#f6f8fb; }
+  html:not(.dark) .mobile-homepage__daily,
+  html:not(.dark) .mobile-homepage__resources { color:#17283a; background:#f4f6f8; }
+  html:not(.dark) .mobile-homepage__daily h2,
+  html:not(.dark) .mobile-homepage__resources h2,
+  html:not(.dark) .mobile-homepage__cards strong { color:#17283a; }
+  html:not(.dark) .mobile-homepage__daily p,
+  html:not(.dark) .mobile-homepage__cards p { color:#526176; }
+  .mobile-homepage__hero .tactical-clock-backdrop__hand,
+  .mobile-homepage__hero .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand { animation-play-state:running !important; }
+}
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+  .mobile-homepage__hero .tactical-clock-backdrop__hand,
+  .mobile-homepage__hero .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand { animation-play-state:paused !important; }
+}
