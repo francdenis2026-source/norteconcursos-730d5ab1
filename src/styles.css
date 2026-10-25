@@ -14792,3 +14792,53 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
   .trainer-save-question { grid-column: 1 / -1; width: 100%; }
   .trainer-save-question > div, .trainer-save-question button { width: 100%; }
 }
+
+/* Focus mode: fit the question paper in one viewport before resorting to page scroll. */
+.app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-paper {
+  min-height: 0 !important;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-content {
+  padding: 14px 18px 16px;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-stem {
+  margin-bottom: 12px;
+  line-height: 1.55;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .trainer-resolution-workspace .trainer-option {
+  min-height: 48px;
+  padding: 10px 12px;
+  line-height: 1.45;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .trainer-answer-actions {
+  gap: 8px;
+  padding-top: 14px;
+  margin-top: 14px;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content {
+  scrollbar-width: none;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell {
+    padding: 8px 8px 56px;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-content {
+    padding: 12px 12px 14px;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-stem {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-resolution-workspace .trainer-option {
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-answer-actions {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+}
