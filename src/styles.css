@@ -15307,3 +15307,21 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 @media (max-width: 767px) {
   .mobile-homepage__hero .mobile-homepage__eyebrow { width:max-content; max-width:100%; padding:7px 10px; border:1px solid rgb(223 180 91 / .38); border-radius:9px; background:rgb(10 27 42 / .32); box-shadow:inset 0 1px 0 rgb(255 255 255 / .1); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
 }
+
+/* Sidebar compact state: one authoritative geometry, with icon-only entries. */
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] { width:76px !important; overflow:visible; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__head { justify-content:center; padding:10px; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__head .norte-brand__type,
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__head .app-icon-btn { display:none !important; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__search { width:44px; height:44px; min-height:44px; margin:10px auto; padding:0; justify-content:center; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__search > svg { width:19px; height:19px; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__search > :not(svg) { display:none; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace { display:grid; gap:4px; padding:6px 8px 14px; overflow-y:auto; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace :is(.nav-primary,.app-nav__entries) { display:grid; gap:4px; margin:0; padding:0; border:0; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace :is(.nav-section-label,.nav-primary__label,.app-nav__group) { display:none !important; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace :is(.app-nav__link,.app-nav__heading,.nav-group-trigger) { display:grid; grid-template-columns:1fr; width:56px; min-height:56px; height:56px; margin:0 auto; padding:7px 3px; align-items:center; justify-items:center; gap:3px; border-radius:9px; text-align:center; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace :is(.app-nav__label,.app-nav__heading > span,.app-nav__heading > svg:last-child,.nav-section-link__arrow,.app-nav__compact-label) { display:none !important; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .navigation-workspace :is(.app-ico,.app-nav__heading > svg:first-child,.nav-group-trigger > svg) { width:25px; height:25px; margin:0; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__foot { padding:8px; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-user { width:58px; min-height:48px; margin:0 auto; padding:7px 0; justify-content:center; }
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-user > :not(.app-avatar) { display:none !important; }
