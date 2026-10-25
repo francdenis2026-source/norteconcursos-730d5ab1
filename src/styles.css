@@ -14400,3 +14400,14 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .student-hub__workspace { gap: 14px; }
 @media (max-width: 1000px) { .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: repeat(3,minmax(0,1fr)); } .app-shell[data-area="student"] .student-home__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 600px) { .app-shell[data-area="student"] .student-hub__masthead { padding: 16px; } .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Performance dashboard: compact analytical workspace. */
+.app-shell[data-area="student"] .performance-page { max-width: 1280px; margin-inline: auto; gap: 16px; }
+.app-shell[data-area="student"] .performance-page > .page-hero { min-height: 0; padding: 20px 24px; border-radius: 18px; }
+.app-shell[data-area="student"] .performance-page > .page-hero h1 { font-size: clamp(25px,3vw,38px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .performance-overview { gap: 16px; }
+.app-shell[data-area="student"] .performance-overview__heading { margin-bottom: -4px; font-size: 18px; }
+.app-shell[data-area="student"] .performance-overview > section { gap: 10px; }
+.app-shell[data-area="student"] .performance-metric-card { min-height: 112px; padding: 14px; border-radius: 14px; }
+.app-shell[data-area="student"] .performance-page [data-slot="card"] { border-radius: 14px; box-shadow: 0 10px 26px rgb(0 0 0 / .11); }
+.app-shell[data-area="student"] .performance-detail-tabs { border-radius: 14px; }
