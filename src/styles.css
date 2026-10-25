@@ -15039,3 +15039,11 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__hero-copy { position: relative; z-index: 2; }
   .mobile-homepage__hero-copy::before { content:""; position:absolute; z-index:-1; inset:72px 18px auto -8px; height:220px; border-radius:50%; background:radial-gradient(ellipse, rgb(22 67 83 / .28), transparent 70%); filter:blur(10px); pointer-events:none; }
 }
+
+@media (max-width: 767px) {
+  .mobile-homepage__qr { display:flex; align-items:center; gap:12px; width:100%; min-height:76px; padding:8px; border:1px solid rgb(223 180 91 / .38); border-radius:12px; background:rgb(255 255 255 / .06); color:#eef3f7; text-decoration:none; }
+  .mobile-homepage__qr img { display:block; width:60px; height:60px; flex:0 0 60px; padding:4px; border-radius:7px; background:#fff; object-fit:contain; }
+  .mobile-homepage__qr span { display:grid; gap:4px; min-width:0; }
+  .mobile-homepage__qr strong { font-size:12px; line-height:1.3; }
+  .mobile-homepage__qr small { color:#aebccc; font-size:10px; line-height:1.35; }
+}
