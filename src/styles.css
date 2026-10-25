@@ -14842,3 +14842,16 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
     margin-top: 10px;
   }
 }
+
+/* Reading scale also applies to the support passage inside the question trainer. */
+html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .font-serif {
+  font-size: calc(15px * var(--read-scale));
+  line-height: calc(1.8 * var(--read-scale));
+}
+html[data-read-scale] .trainer-resolution-workspace .trainer-question-content ol.font-serif {
+  font-size: calc(15px * var(--read-scale));
+}
+html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .font-serif .text-xs,
+html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .font-serif .text-sm {
+  font-size: calc(0.875rem * var(--read-scale));
+}
