@@ -15047,3 +15047,20 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__qr strong { font-size:12px; line-height:1.3; }
   .mobile-homepage__qr small { color:#aebccc; font-size:10px; line-height:1.35; }
 }
+
+/* Light theme mobile contrast pass for the homepage and student workspaces. */
+@media (max-width: 767px) {
+  html:not(.dark) .mobile-homepage__daily,
+  html:not(.dark) .mobile-homepage__resources { color: #17283a; background: #f7f9fb; }
+  html:not(.dark) .mobile-homepage__daily p,
+  html:not(.dark) .mobile-homepage__cards p { color: #526176; }
+  html:not(.dark) .mobile-homepage__cards article { border-color: #d5dfe8; background: #fff; color: #17283a; }
+  html:not(.dark) .mobile-homepage__wide-link { color: #79550e; border-color: #c5963b; background: #fffdf7; }
+  html:not(.dark) .app-shell[data-area="student"] { --foreground: #1d2b3a; --color-foreground: #1d2b3a; --muted-foreground: #536477; --color-muted-foreground: #536477; --border: #d5dfe8; --color-border: #d5dfe8; --card: #fff; --color-card: #fff; --background: #f7f9fb; --color-background: #f7f9fb; }
+  html:not(.dark) .app-shell[data-area="student"] .app-content { color: #1d2b3a; }
+  html:not(.dark) .app-shell[data-area="student"] :is(.trainer-workbench,.trainer-resolution-workspace,.question-window,.surface-card,[data-slot="card"]) { color: #1d2b3a; border-color: #d5dfe8; background: #fff; }
+  html:not(.dark) .app-shell[data-area="student"] :is(.text-muted-foreground,.text-secondary-foreground) { color: #536477 !important; }
+  html:not(.dark) .app-shell[data-area="student"] .trainer-resolution-workspace .trainer-option { color: #25374a; background: #fbfcfd; border-color: #d5dfe8; }
+  html:not(.dark) .app-shell[data-area="student"] .trainer-resolution-workspace .trainer-option.is-selected { background: #fff8e8; border-color: #ad7b20; }
+  html:not(.dark) .app-shell[data-area="student"] .app-topbar { color: #1d2b3a; background: #fff; border-bottom-color: #d5dfe8; }
+}
