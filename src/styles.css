@@ -10936,6 +10936,54 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
+/* Treinador de questões no celular (modo normal, sem foco): a leitura deve
+   usar a largura inteira disponível, sem deixar a coluna de mapa comprimir a
+   questão para uma faixa estreita. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell.navigation-v2[data-area="student"] .question-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: none;
+    gap: 14px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-layout {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-overview {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-question-column,
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-question-paper {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-command {
+    align-items: stretch;
+    gap: 10px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-command > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-command button,
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-session-command a {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+  .app-shell.navigation-v2[data-area="student"] .question-workspace .trainer-question-content {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 14px 22px;
+  }
+}
+
 /* Painel do aluno: ícones coloridos por tema (antes: caixa preta com ícone dourado também no modo claro). */
 .quick-action:nth-child(4n + 1), .metric-tile:nth-child(4n + 1) { --tone: oklch(0.52 0.02 260); }
 .quick-action:nth-child(4n + 2), .metric-tile:nth-child(4n + 2) { --tone: oklch(0.68 0.15 70); }
