@@ -2167,7 +2167,7 @@ function ActiveSimulator(p: {
               Depois de finalizar, suas respostas não poderão ser alteradas nesta tentativa.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid grid-cols-3 gap-3 rounded-xl bg-muted p-4 text-center text-sm">
+          <div className="grid grid-cols-1 gap-3 rounded-xl bg-muted p-4 text-center text-sm sm:grid-cols-3">
             <div>
               <strong className="block text-xl">{answeredCount}</strong>Respondidas
             </div>

@@ -1206,7 +1206,7 @@ function ContestCard({
                 contabilizados
               </CardDescription>
             </div>
-            <div className="grid grid-cols-4 items-center gap-5 text-center">
+            <div className="grid grid-cols-2 items-center gap-3 text-center sm:grid-cols-4 sm:gap-5">
               <MiniMetric label="Acertos" value={group.correct} className="text-emerald-600" />
               <MiniMetric label="Erros" value={group.wrong} className="text-rose-600" />
               <MiniMetric label="Saldo" value={group.score} className="text-primary" />
