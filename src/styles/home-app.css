@@ -151,6 +151,12 @@
   :root:is(.dark, :not(.dark)) .home.home .home-intro { top: 48px; bottom: auto; right: 0; left: auto; width: 43%; height: 200px; }
   .home.home .home-hero .home-actions { margin-top: 16px; gap: 8px; }
   .home.home .home-hero .home-actions > :is(a, button) { padding-inline: 12px; font-size: 12px; }
+  .home.home .home-hero .home-actions > :is(a, button) {
+    min-height: 46px;
+    border-radius: 999px;
+    transition: transform 300ms cubic-bezier(0.32,0.72,0,1), box-shadow 300ms cubic-bezier(0.32,0.72,0,1);
+  }
+  .home.home .home-hero .home-actions > :is(a, button):active { transform: scale(.98); }
   .home.home .home-trust { flex-wrap: nowrap; gap: 8px; width: 100%; overflow-x: auto; margin-top: 12px !important; padding: 4px 0 !important; scrollbar-width: thin; }
   .home.home .home-trust li { flex: none; min-height: 36px; padding: 7px 9px; border: 1px solid var(--home-line); border-radius: 6px; background: var(--home-glass-fill); font-size: 12px; }
   .home.home .home-preparation__band { padding-block: 16px; }
