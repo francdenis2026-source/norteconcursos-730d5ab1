@@ -4740,3 +4740,11 @@
 .home-daily-feature .daily-badge--featured { position:relative; overflow:hidden; border:1px solid color-mix(in srgb, #e4b95f 56%, var(--home-line)); box-shadow:0 0 0 1px rgb(228 185 95 / .08), 0 16px 34px rgb(0 0 0 / .28); }
 .home-daily-feature .daily-badge--featured::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(105deg, transparent 20%, rgb(255 255 255 / .08) 48%, transparent 72%); transform:translateX(-100%); transition:transform .7s ease; }
 .home-daily-feature .daily-badge--featured:hover::after { transform:translateX(100%); }
+
+/* Homepage containment: every visual layer stays inside the viewport. */
+.home, .home main, .home section, .home-container { min-width: 0; max-width: 100%; overflow-x: clip; }
+.home img, .home video, .home iframe { max-width: 100%; }
+.home :is(.home-hero__grid,.home-preparation__band,.home-operations,.home-plans__grid,.home-footer__grid) > * { min-width: 0; }
+.home :is(h1,h2,h3,p,a,span) { overflow-wrap: anywhere; }
+.home .home-container { width: min(100% - 32px, 1240px); margin-inline: auto; }
+@media (max-width: 640px) { .home .home-container { width: min(100% - 24px, 1240px); } .home .home-hero__grid { grid-template-columns: minmax(0,1fr); } .home .home-preparation__band { grid-template-columns: minmax(0,1fr); } }
