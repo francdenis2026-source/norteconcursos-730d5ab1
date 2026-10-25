@@ -2379,7 +2379,7 @@
 .home-career {
   padding: 16px 14px;
   border: 1px solid var(--home-line);
-  border-left: 3px solid var(--home-accent);
+  border-left: 2px solid var(--home-accent);
   border-radius: 10px;
   background: var(--home-surface);
   transition: transform .2s var(--ease-out), border-color .2s ease, box-shadow .2s ease;
@@ -3108,9 +3108,7 @@
 :root:not(.dark) .home-heading em,
 :root:not(.dark) .home-section h2 em {
   font-style: normal;
-  background: linear-gradient(95deg, var(--c-blue), var(--c-teal));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
+  color: var(--c-blue);
 }
 /* Faixas de seção com tons alternados */
 :root:not(.dark) .home-method {
@@ -3126,7 +3124,7 @@
 }
 
 /* Etapas: numeração em fichas coloridas */
-:root:not(.dark) .home-steps > li { padding: 16px; border: 1px solid oklch(0.9 0.03 262); border-radius: 12px; background: #fff; box-shadow: var(--shadow-card); border-top: 3px solid var(--step-c, var(--c-blue)); }
+:root:not(.dark) .home-steps > li { padding: 16px; border: 1px solid oklch(0.9 0.03 262); border-radius: 12px; background: #fff; box-shadow: var(--shadow-card); border-top: 2px solid var(--step-c, var(--c-blue)); }
 :root:not(.dark) .home-steps > li:nth-child(2) { --step-c: var(--c-teal); }
 :root:not(.dark) .home-steps > li:nth-child(3) { --step-c: var(--c-violet); }
 :root:not(.dark) .home-steps > li:nth-child(4) { --step-c: var(--c-amber); }
@@ -3148,7 +3146,7 @@
 :root:not(.dark) .home-tool[open], :root:not(.dark) .home-tool:hover { background: var(--c-blue-soft); }
 
 /* Carreiras */
-:root:not(.dark) .home-career { padding-left: 14px; border-left: 3px solid var(--car-c, var(--c-teal)); border-bottom-color: oklch(0.9 0.02 195); transition: background .2s; }
+:root:not(.dark) .home-career { padding-left: 14px; border-left: 2px solid var(--car-c, var(--c-teal)); border-bottom-color: oklch(0.9 0.02 195); transition: background .2s; }
 :root:not(.dark) .home-career:nth-child(3n+2) { --car-c: var(--c-blue); }
 :root:not(.dark) .home-career:nth-child(3n) { --car-c: var(--c-violet); }
 :root:not(.dark) .home-career:hover { background: #fff; }
@@ -3157,7 +3155,7 @@
 :root:not(.dark) .home-plan {
   --plan-c: var(--c-green); --plan-soft: var(--c-green-soft);
   border: 1px solid color-mix(in oklab, var(--plan-c) 30%, #fff);
-  border-top: 4px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   background: linear-gradient(180deg, var(--plan-soft) 0, #fff 42%);
   box-shadow: var(--shadow-card);
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
@@ -3223,9 +3221,7 @@
 .dark .home-heading em,
 .dark .home-section h2 em {
   font-style: normal;
-  background: linear-gradient(95deg, var(--d-blue), var(--d-teal));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
+  color: var(--d-blue);
 }
 /* Faixas de seção com tons sutis */
 .dark .home-method {
@@ -3244,7 +3240,7 @@
 .dark .home-steps > li {
   --step-c: var(--d-blue);
   padding: 16px; border: 1px solid color-mix(in oklab, var(--step-c) 24%, var(--home-line));
-  border-top: 3px solid var(--step-c); border-radius: 12px; background: var(--card);
+  border-top: 2px solid var(--step-c); border-radius: 12px; background: var(--card);
 }
 .dark .home-steps > li:nth-child(2) { --step-c: var(--d-teal); }
 .dark .home-steps > li:nth-child(3) { --step-c: var(--d-violet); }
@@ -3272,7 +3268,7 @@
 .dark .home-tool[open], .dark .home-tool:hover { background: color-mix(in oklab, var(--tool-c) 9%, var(--card)); }
 
 /* Carreiras */
-.dark .home-career { --car-c: var(--d-teal); padding-left: 14px; border-left: 3px solid var(--car-c); transition: background .2s; }
+.dark .home-career { --car-c: var(--d-teal); padding-left: 14px; border-left: 2px solid var(--car-c); transition: background .2s; }
 .dark .home-career:nth-child(3n+2) { --car-c: var(--d-blue); }
 .dark .home-career:nth-child(3n) { --car-c: var(--d-violet); }
 .dark .home-career:hover { background: color-mix(in oklab, var(--car-c) 9%, transparent); }
@@ -3281,7 +3277,7 @@
 .dark .home-plan {
   --plan-c: var(--d-green);
   border: 1px solid color-mix(in oklab, var(--plan-c) 30%, var(--home-line));
-  border-top: 4px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   background: linear-gradient(180deg, color-mix(in oklab, var(--plan-c) 10%, var(--card)) 0, var(--card) 45%);
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
 }
@@ -3475,7 +3471,7 @@
 .home-steps > li { padding: 20px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-surface); box-shadow: var(--shadow-card); }
 #concursos { background: var(--home-surface); border-block: 1px solid var(--home-line); }
 .home-careers { background: var(--home-bg); }
-.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 3px solid var(--home-accent); border-radius: 10px; background: var(--home-surface); }
+.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 2px solid var(--home-accent); border-radius: 10px; background: var(--home-surface); }
 .home-careers__grid { gap: 8px 18px; }
 .home-sources { padding-block: 48px 56px; background: var(--home-surface); }
 .home-source-details { border-color: var(--home-line); border-radius: 16px; background: var(--home-bg); }
@@ -3901,7 +3897,7 @@
 .home.home .home-section-intro {
   padding: 14px 18px;
   border: 1px solid color-mix(in srgb, var(--section-color) 24%, var(--home-line));
-  border-left: 3px solid var(--section-color);
+  border-left: 2px solid var(--section-color);
   border-radius: 0 12px 12px 0;
   color: var(--home-text);
   background: var(--card);
@@ -3921,22 +3917,22 @@
 .home.home .home-core-tool h3 svg { display: none; }
 .home.home .home-steps > li {
   background: linear-gradient(155deg, color-mix(in srgb, var(--step-c, var(--home-teal)) 9%, var(--card)), var(--card));
-  border-top: 3px solid var(--step-c, var(--home-teal));
+  border-top: 2px solid var(--step-c, var(--home-teal));
 }
 .home.home .home-steps h3 { font-size: 15px; line-height: 1.4; font-weight: 700; }
 .home.home .home-steps p { font-size: 13px; line-height: 1.65; margin-top: 8px; }
 .home.home .home-tool { border-color: color-mix(in srgb, var(--tool-c, var(--home-blue)) 28%, var(--home-line)); }
 .home.home .home-tool summary h3 { font-size: 13px; line-height: 1.4; }
 .home.home .home-tool p { font-size: 14px; line-height: 1.6; }
-.home.home .home-career { border-left: 3px solid var(--section-color); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
+.home.home .home-career { border-left: 2px solid var(--section-color); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
 .home.home .home-career h3 { font-size: 14px; line-height: 1.4; }
 .home.home .home-career p { font-size: 12px; line-height: 1.5; margin-top: 5px; }
 .home.home .home-plans__signal { padding: 14px 16px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--home-violet) 28%, var(--home-line)); background: var(--card); }
 .home.home .home-plans__signal strong { font-size: 15px; color: var(--home-violet); }
 .home.home .home-plan { background: linear-gradient(155deg, color-mix(in srgb, var(--plan-c, var(--home-blue)) 8%, var(--card)), var(--card)); }
-.home.home .home-source-details { border-left: 3px solid var(--home-teal); }
-.home.home .home-start .daily-badge { border-left: 3px solid var(--home-teal); }
-.home.home .home-start .question-count-badge { border-left: 3px solid var(--home-blue); }
+.home.home .home-source-details { border-left: 2px solid var(--home-teal); }
+.home.home .home-start .daily-badge { border-left: 2px solid var(--home-teal); }
+.home.home .home-start .question-count-badge { border-left: 2px solid var(--home-blue); }
 .home.home .home-hero__copy > p { font-size: 15px; line-height: 1.7; }
 .home.home .home-hero__note { font-size: 12px; }
 .home.home .home-trust li { font-size: 12px; line-height: 1.5; }
@@ -4064,7 +4060,7 @@
   padding: 16px;
   gap: 10px;
   border: 1px solid color-mix(in srgb, var(--plan-c) 24%, var(--border));
-  border-top: 3px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   border-radius: 14px;
   background: linear-gradient(160deg, var(--plan-soft), var(--card) 65%);
   box-shadow: var(--shadow-card);

@@ -11,7 +11,7 @@
 }
 :root:is(.dark, :not(.dark)) .home.home .home-daily-feature {
   width: min(100% - 48px, 1320px); margin: 28px auto; padding: clamp(20px, 2.4vw, 30px);
-  border: 1px solid var(--home-line); border-left: 3px solid var(--home-gold);
+  border: 1px solid var(--home-line); border-left: 2px solid var(--home-gold);
   background: var(--editorial-surface); border-radius: 18px;
   box-shadow: 0 12px 30px -24px rgb(0 0 0 / 32%);
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px;
