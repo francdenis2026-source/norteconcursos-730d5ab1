@@ -45,6 +45,9 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
 .focus-study-footer { position: fixed !important; z-index: 100 !important; left: 0; right: 0; bottom: 0; display: flex !important; align-items: center; justify-content: center; gap: 10px; min-height: 34px; padding: 6px 12px; background: rgb(17 24 39 / 94%); border-top: 1px solid rgb(255 255 255 / 22%); color: rgb(226 232 240); font-size: 11px; line-height: 1.2; visibility: visible !important; opacity: 1 !important; }
 .focus-study-footer span { color: rgb(148 163 184); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .focus-study-footer strong { color: #fff; font-weight: 800; }
+.focus-study-bar { background: rgb(10 28 48 / 92%) !important; border-bottom: 1px solid rgb(255 255 255 / 16%); -webkit-backdrop-filter: blur(18px) saturate(130%); backdrop-filter: blur(18px) saturate(130%); }
+.focus-study-bar > div { min-height: 54px; }
+.focus-study-container { scroll-padding-top: 60px; }
 /* Leitura cronometrada usa a viewport inteira: controles ficam acessíveis pelo
    teclado (Esc) e o cronômetro continua ativo sem ocupar a área de texto. */
 html[data-reading-focus="true"] .focus-study-bar,

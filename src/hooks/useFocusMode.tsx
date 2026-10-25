@@ -289,18 +289,6 @@ export function useFocusMode() {
                   </button>
                 </Hint>
               </nav>
-              {p.tools && (
-                <button
-                  type="button"
-                  onClick={() => setToolsOpen((v) => !v)}
-                  aria-pressed={toolsOpen}
-                  aria-label="Ferramentas"
-                  className="flex items-center gap-1.5 rounded-lg bg-amber-400 px-3 py-2 text-sm font-bold text-amber-950 hover:bg-amber-300"
-                >
-                  <Wrench className="h-4 w-4" />{" "}
-                  <span className="hidden sm:inline">Ferramentas</span>
-                </button>
-              )}
               {p.extra}
               <Hint content="Sair do modo foco (Esc)">
                 <button
