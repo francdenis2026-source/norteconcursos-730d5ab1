@@ -226,7 +226,7 @@ function LegalCoursePage() {
       <div className={`legal-course-page space-y-5 pb-8 ${fm.containerClass}`}>
         {fm.bar({
           kicker: course.title,
-          title: selected?.label ?? "Escolha um artigo",
+          title: "Estudo cronometrado",
           position: selected
             ? `${Math.max(1, navigationRows.findIndex((r) => r.id === selected.id) + 1)} de ${navigationRows.length}`
             : "",
