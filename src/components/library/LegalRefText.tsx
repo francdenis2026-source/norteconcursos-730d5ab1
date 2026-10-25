@@ -20,9 +20,16 @@ export function LegalRefText({ text }: { text: string }) {
             {p.text}
           </Link>
         ) : (
-          <GlossaryText key={i} text={p.text} />
+          <ReferenceText key={i} text={p.text} />
         ),
       )}
     </>
   );
+}
+
+function ReferenceText({ text }: { text: string }) {
+  const parts = text.split(/(https?:\/\/[^\s)]+)/g);
+  return <>{parts.map((part, index) => /^https?:\/\//.test(part)
+    ? <a key={index} href={part} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md border border-current/20 px-1.5 py-0.5 font-semibold text-amber-700 underline-offset-2 hover:underline dark:text-amber-300" aria-label="Abrir fonte oficial">Fonte oficial ↗</a>
+    : <GlossaryText key={index} text={part} />)}</>;
 }
