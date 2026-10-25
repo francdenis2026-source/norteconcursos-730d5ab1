@@ -70,7 +70,12 @@ import { relatedVideos } from "@/lib/relatedVideos";
 
 export const Route = createFileRoute("/dashboard/errors")({
   component: ErrorsPage,
-  validateSearch: (s: Record<string, unknown>): { subject?: string | undefined; topic?: string | undefined } => ({ subject: typeof s["subject"] === "string" ? s["subject"] : undefined, topic: typeof s["topic"] === "string" ? s["topic"] : undefined }),
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { subject?: string | undefined; topic?: string | undefined } => ({
+    subject: typeof s["subject"] === "string" ? s["subject"] : undefined,
+    topic: typeof s["topic"] === "string" ? s["topic"] : undefined,
+  }),
 });
 
 type ReviewStatus = "pendente" | "revisado" | "dominado";
@@ -261,7 +266,9 @@ function ErrorsPage() {
 
   const [reviewStatus, setReviewStatus] = useState<Record<string, ReviewStatus>>({});
   const [statusLoading, setStatusLoading] = useState(true);
-  const [filterSubject, setFilterSubject] = useState(Route.useSearch().subject ? canonicalSubject(Route.useSearch().subject) : "all");
+  const [filterSubject, setFilterSubject] = useState(
+    Route.useSearch().subject ? canonicalSubject(Route.useSearch().subject) : "all",
+  );
   const [detail, setDetail] = useState<Question | null>(null);
   const [revisionMode, setRevisionMode] = useState(false);
   const [revisionIndex, setRevisionIndex] = useState(0);
@@ -321,11 +328,21 @@ function ErrorsPage() {
     [allErrors],
   );
   const plannedSearch = Route.useSearch();
-  const plannedTopic = plannedSearch.topic ? materialTopic(plannedSearch.subject ?? filterSubject, plannedSearch.topic) : undefined;
+  useEffect(
+    () => setFilterSubject(plannedSearch.subject ? canonicalSubject(plannedSearch.subject) : "all"),
+    [plannedSearch.subject],
+  );
+  const plannedTopic = plannedSearch.topic
+    ? materialTopic(plannedSearch.subject ?? filterSubject, plannedSearch.topic)
+    : undefined;
   const visibleErrors = useMemo(
     () =>
       allErrors
-        .filter((e) => (filterSubject === "all" || e.question.subject === filterSubject) && matchesMaterialScope(e.question, { topic: plannedTopic }))
+        .filter(
+          (e) =>
+            (filterSubject === "all" || e.question.subject === filterSubject) &&
+            matchesMaterialScope(e.question, { topic: plannedTopic }),
+        )
         .sort((a, b) => a.question.subject.localeCompare(b.question.subject, "pt-BR")),
     [allErrors, filterSubject, plannedTopic],
   );
@@ -519,7 +536,9 @@ function ErrorsPage() {
                 </div>
                 <p className="mb-4 line-clamp-3 font-medium">{parseQuestion(question.text).stem}</p>
                 <div className="flex flex-wrap items-center justify-between gap-2 border-t pt-4 text-sm">
-                  <span className="text-muted-foreground">{DIFFICULTY_LABEL[question.difficulty]}</span>
+                  <span className="text-muted-foreground">
+                    {DIFFICULTY_LABEL[question.difficulty]}
+                  </span>
                   <Button variant="outline" onClick={() => setDetail(question)}>
                     Revisar
                   </Button>

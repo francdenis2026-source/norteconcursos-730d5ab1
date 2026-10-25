@@ -1,4 +1,4 @@
-import { plannedAvailability } from "@/lib/plannedStudy";
+import { matchesPlannedStudy, plannedSubjects, plannedAvailability } from "@/lib/plannedStudy";
 import { materialTopic } from "@/lib/materialPractice";
 import { classifyTopic } from "@/lib/questionTopics";
 import { canonicalTopic } from "@/lib/subjects";
@@ -150,9 +150,11 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
     >
   > => ({
     duration: typeof search["duration"] === "string" ? search["duration"] : undefined,
-    plannedSubjects: typeof search["plannedSubjects"] === "string" ? search["plannedSubjects"] : undefined,
+    plannedSubjects:
+      typeof search["plannedSubjects"] === "string" ? search["plannedSubjects"] : undefined,
     planned: search["planned"] === "1" ? "1" : undefined,
-    materialTopic: typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
+    materialTopic:
+      typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
     studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
     mode: search["mode"] === "enem" ? "enem" : undefined,
     area: typeof search["area"] === "string" ? search["area"] : undefined,
@@ -311,7 +313,9 @@ function ProfessionalSimulator() {
     routeSearch.reviewed,
   ]);
   const [limit, setLimit] = React.useState(20);
-  const [durationMinutes, setDurationMinutes] = React.useState(Math.min(180, Math.max(5, Number(routeSearch.duration) || 30)));
+  const [durationMinutes, setDurationMinutes] = React.useState(
+    Math.min(180, Math.max(5, Number(routeSearch.duration) || 30)),
+  );
   React.useEffect(() => {
     if (!isEnemMode) {
       setLimit((n) => (LIMITS.includes(n) ? n : 20));
@@ -595,12 +599,21 @@ function ProfessionalSimulator() {
     setCategory("all");
   };
   const available = React.useMemo(
-    () => filterSimulatorQuestions(scopedCatalog, filters).filter(q => {
-      let subjects: string[] = [];
-      try { const value = JSON.parse(routeSearch.plannedSubjects ?? "[]"); if (Array.isArray(value)) subjects = value.filter((s): s is string => typeof s === "string").map(canonicalSubject); if (routeSearch.plannedSubjects !== undefined && !subjects.length) return false; } catch { return false; }
-      return (!subjects.length || subjects.includes(canonicalSubject(q.subject))) && (!routeSearch.materialTopic || canonicalTopic(classifyTopic(q.subject, q.text) ?? "") === canonicalTopic(routeSearch.materialTopic));
-    }),
-    [scopedCatalog, filters, routeSearch.materialTopic, routeSearch.plannedSubjects],
+    () =>
+      filterSimulatorQuestions(scopedCatalog, filters).filter((q) =>
+        matchesPlannedStudy(q, {
+          subject: routeSearch.studySubject,
+          topic: routeSearch.materialTopic,
+          subjects: plannedSubjects(routeSearch.plannedSubjects),
+        }),
+      ),
+    [
+      scopedCatalog,
+      filters,
+      routeSearch.materialTopic,
+      routeSearch.plannedSubjects,
+      routeSearch.studySubject,
+    ],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
   // Comparáveis do acervo, calculados uma vez por carga: filtros e respostas só reaproveitam as chaves.
@@ -675,7 +688,10 @@ function ProfessionalSimulator() {
       );
       return;
     }
-    if (routeSearch.planned === "1") { const message = plannedAvailability(sessionPool.length, limit); if (message) toast.info(message); }
+    if (routeSearch.planned === "1") {
+      const message = plannedAvailability(sessionPool.length, limit);
+      if (message) toast.info(message);
+    }
     setInvalidDraft(false);
     setRankingSummary(null);
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
@@ -718,11 +734,55 @@ function ProfessionalSimulator() {
 
   const plannedLaunch = React.useRef("");
   React.useEffect(() => {
-    const key = JSON.stringify([routeSearch.subject, routeSearch.materialTopic, routeSearch.plannedSubjects]);
-    if (routeSearch.planned !== "1" || loading || authLoading || loadError || historyLoading || historyError || !sessionsReady || resumeDraft || stage !== "setup" || !user || plannedLaunch.current === key) return;
-    const frame = requestAnimationFrame(() => { plannedLaunch.current = key; startSimulator(); });
+    const key = JSON.stringify([
+      routeSearch.subject,
+      routeSearch.materialTopic,
+      routeSearch.plannedSubjects,
+    ]);
+    if (
+      routeSearch.planned !== "1" ||
+      loading ||
+      authLoading ||
+      loadError ||
+      historyLoading ||
+      historyError ||
+      !sessionsReady ||
+      stage !== "setup" ||
+      !user ||
+      plannedLaunch.current === key
+    )
+      return;
+    const frame = requestAnimationFrame(() => {
+      plannedLaunch.current = key;
+      if (resumeDraft) {
+        const ids = new Set(sessionPool.map((q) => q.id));
+        if (resumeDraft.questions.length && resumeDraft.questions.every((q) => ids.has(q.id)))
+          resumeSimulator();
+        else
+          toast.info(
+            "Há um simulado de outro assunto em andamento. Retome ou encerre essa sessão antes de iniciar a atividade da agenda.",
+          );
+        return;
+      }
+      startSimulator();
+    });
     return () => cancelAnimationFrame(frame);
-  }, [routeSearch.planned, routeSearch.subject, routeSearch.materialTopic, loading, authLoading, loadError, historyLoading, historyError, sessionsReady, stage, user, sessionPool, resumeDraft, routeSearch.plannedSubjects]);
+  }, [
+    routeSearch.planned,
+    routeSearch.subject,
+    routeSearch.materialTopic,
+    loading,
+    authLoading,
+    loadError,
+    historyLoading,
+    historyError,
+    sessionsReady,
+    stage,
+    user,
+    sessionPool,
+    resumeDraft,
+    routeSearch.plannedSubjects,
+  ]);
 
   function cancelSimulator() {
     const wasEarly = elapsedSeconds < 60;
@@ -1071,27 +1131,34 @@ function ProfessionalSimulator() {
     sessionConfig.scope === scope
   )
     return (
-      <ActiveSimulator
-        questions={questions}
-        currentIndex={currentIndex}
-        current={current}
-        repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
-        answers={answers}
-        flagged={flagged}
-        timeLeft={timeLeft}
-        durationSeconds={durationMinutes * 60}
-        answeredCount={answeredCount}
-        saving={saving}
-        storageError={storageError}
-        skipped={skipped}
-        isRepeated={isRepeated}
-        setCurrentIndex={setCurrentIndex}
-        setAnswers={setAnswers}
-        setFlagged={setFlagged}
-        setSkipped={setSkipped}
-        finish={finishSimulator}
-        cancel={cancelSimulator}
-      />
+      <>
+        {routeSearch.planned === "1" && questions.length < limit && (
+          <p role="status" className="rounded-xl border border-amber-500/40 bg-card p-3 text-sm">
+            {plannedAvailability(questions.length, limit)}
+          </p>
+        )}
+        <ActiveSimulator
+          questions={questions}
+          currentIndex={currentIndex}
+          current={current}
+          repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
+          answers={answers}
+          flagged={flagged}
+          timeLeft={timeLeft}
+          durationSeconds={durationMinutes * 60}
+          answeredCount={answeredCount}
+          saving={saving}
+          storageError={storageError}
+          skipped={skipped}
+          isRepeated={isRepeated}
+          setCurrentIndex={setCurrentIndex}
+          setAnswers={setAnswers}
+          setFlagged={setFlagged}
+          setSkipped={setSkipped}
+          finish={finishSimulator}
+          cancel={cancelSimulator}
+        />
+      </>
     );
   if (stage === "result" && sessionConfig?.owner === user.id && sessionConfig.scope === scope)
     return (

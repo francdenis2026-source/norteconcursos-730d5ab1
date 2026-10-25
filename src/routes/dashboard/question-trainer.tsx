@@ -620,7 +620,10 @@ function QuestionTrainer() {
       const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, subjectCatalog);
       if (!restored) return;
       setResumeAvailable(true);
-      if (!resumeRequested) return;
+      if (!resumeRequested) {
+        if (routeFilters.planned === "1") setResumeRequested(true);
+        return;
+      }
       pendingRestore.current = false;
       setResumeAvailable(false);
       const b = restored.bookmark;
@@ -984,7 +987,10 @@ function QuestionTrainer() {
         : orderedPool;
     if (routeFilters.planned === "1") {
       const message = plannedAvailability(ordered.length, Number(limit) || 20);
-      if (message) { setNotice(message); toast.info(message); }
+      if (message) {
+        setNotice(message);
+        toast.info(message);
+      }
     }
     if (!ordered.length) {
       if (routeFilters.planned === "1") return;
@@ -1022,10 +1028,40 @@ function QuestionTrainer() {
   const plannedLaunch = React.useRef("");
   React.useEffect(() => {
     const key = JSON.stringify([routeFilters.studySubject, routeFilters.materialTopic]);
-    if (routeFilters.planned !== "1" || loading || authLoading || error || !canLoad || started || subject !== canonicalSubject(routeFilters.subject) || plannedLaunch.current === key) return;
-    plannedLaunch.current = key;
-    startTraining();
-  }, [routeFilters.planned, routeFilters.studySubject, routeFilters.materialTopic, loading, authLoading, error, canLoad, started, trainingPool]);
+    if (
+      routeFilters.planned !== "1" ||
+      loading ||
+      authLoading ||
+      error ||
+      !canLoad ||
+      !sessionsReady ||
+      resumeAvailable ||
+      resumeRequested ||
+      started ||
+      subject !== canonicalSubject(routeFilters.subject) ||
+      plannedLaunch.current === key
+    )
+      return;
+    const frame = requestAnimationFrame(() => {
+      plannedLaunch.current = key;
+      startTraining();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [
+    routeFilters.planned,
+    routeFilters.studySubject,
+    routeFilters.materialTopic,
+    loading,
+    authLoading,
+    error,
+    canLoad,
+    started,
+    trainingPool,
+    sessionsReady,
+    resumeAvailable,
+    resumeRequested,
+    subject,
+  ]);
   // General links only preselect; explicit agenda activities also start after eligibility checks.
   const selectAppliedExam = (value: string) => {
     if (
@@ -1672,6 +1708,11 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell trainer-resolution-workspace question-workspace">
+      {routeFilters.planned === "1" && questions.length < (Number(limit) || 20) && (
+        <p role="status" className="rounded-xl border border-amber-500/40 bg-card p-3 text-sm">
+          {plannedAvailability(questions.length, Number(limit) || 20)}
+        </p>
+      )}
       <Dialog
         open={leaveDialogOpen}
         onOpenChange={(open) => {
@@ -1860,7 +1901,7 @@ function QuestionTrainer() {
                 >
                   <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
                   <span>
-                    Você já respondeu esta questão. {" "}
+                    Você já respondeu esta questão.{" "}
                     {reviewingPast ? "Resposta já registrada — revisão sem novo envio. " : ""}
                     Esta tentativa não gera novos pontos no ranking.
                   </span>
