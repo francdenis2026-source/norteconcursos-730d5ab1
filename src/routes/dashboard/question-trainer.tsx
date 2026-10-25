@@ -10,7 +10,8 @@ import { LawText } from "@/components/dashboard/LawText";
 import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
-import { scrollAppToSection } from "@/lib/appScroll";
+import { MOBILE_APP_QUERY, scrollAppToSection } from "@/lib/appScroll";
+import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import { HeroStat } from "@/components/dashboard/PageHero";
 import {
@@ -224,6 +225,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 type OrderMode = "random" | "exam";
 
 function QuestionTrainer() {
+  const trainerFullscreen = useWorkspaceFullscreen();
   const routeFilters = Route.useSearch();
   const lockedSubject = lockedTrainerSubject(routeFilters.subject);
   const lockedCollection = lockedTrainerCollection(routeFilters);
@@ -1018,6 +1020,7 @@ function QuestionTrainer() {
     setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
+    if (window.matchMedia(MOBILE_APP_QUERY).matches) trainerFullscreen.enter();
   };
   const plannedLaunch = React.useRef("");
   React.useEffect(() => {

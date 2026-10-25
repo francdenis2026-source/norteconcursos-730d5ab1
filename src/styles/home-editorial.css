@@ -93,8 +93,8 @@
     object-position: center bottom;
     opacity: 1;
     filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%));
-    -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .home.home .home-app-nav a {
     min-height: 62px;
