@@ -476,7 +476,7 @@ function StudyPlanPage() {
   const solid = subjects.filter((s) => s.level === "solido");
 
   return (
-    <div className="space-y-7 pb-10">
+    <div className="study-plan-page space-y-7 pb-10">
       <PageHero
         image="journey"
         size="sm"

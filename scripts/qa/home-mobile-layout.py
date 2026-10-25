@@ -35,7 +35,7 @@ async def main():
     menu=page.locator('.home-menu[role=dialog]');await menu.wait_for();await page.wait_for_timeout(150)
     bounds=await menu.bounding_box();assert bounds['x']>=0 and bounds['x']+bounds['width']<=width+1 and bounds['y']>=0 and bounds['y']+bounds['height']<=height+1,(width,height,bounds)
     assert await menu.evaluate('e=>e.scrollWidth<=e.clientWidth'),(width,'menu overflow')
-    nav=await menu.locator('nav').bounding_box();access=await menu.locator('.home-menu__access').bounding_box()
+    nav=await menu.locator('nav[aria-label="Navegação móvel"]').bounding_box();access=await menu.locator('.home-menu__access').bounding_box()
     assert 0<=access['y']-(nav['y']+nav['height'])<=24,(width,'excess gap',nav,access)
     register=menu.get_by_role('link',name='Começar grátis',exact=True);await register.scroll_into_view_if_needed();assert await register.is_visible()
     login=menu.get_by_role('link',name='Já tenho conta',exact=True);await login.scroll_into_view_if_needed();assert await login.is_visible()

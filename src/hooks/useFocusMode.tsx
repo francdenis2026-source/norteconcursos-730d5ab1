@@ -10,6 +10,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { createPortal } from "react-dom";
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -132,12 +133,39 @@ export function useFocusMode() {
       setNow(platformDate());
       tickFocus();
     }, 1000);
+    const readingScroll = document.querySelector<HTMLElement>(".focus-study-container");
+    let settle: number | null = null;
+    let pointerSettle: number | null = null;
+    const onScroll = () => {
+      document.documentElement.dataset["readingScrolling"] = "true";
+      if (settle !== null) window.clearTimeout(settle);
+      settle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingScrolling"];
+        settle = null;
+      }, 140);
+    };
+    readingScroll?.addEventListener("scroll", onScroll, { passive: true });
+    const onPointerMove = () => {
+      document.documentElement.dataset["readingPointer"] = "true";
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      pointerSettle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingPointer"];
+        pointerSettle = null;
+      }, 120);
+    };
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
     return () => {
       document.removeEventListener(READING_FULLSCREEN_EXIT, onNativeExit);
       setReadingWorkspace(false);
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearInterval(id);
+      if (settle !== null) window.clearTimeout(settle);
+      readingScroll?.removeEventListener("scroll", onScroll);
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      window.removeEventListener("pointermove", onPointerMove);
+      delete document.documentElement.dataset["readingScrolling"];
+      delete document.documentElement.dataset["readingPointer"];
     };
   }, [focus, requestExit]);
 
@@ -200,11 +228,11 @@ export function useFocusMode() {
   /** Classes do contêiner do conteúdo: tela cheia, abaixo da faixa fixa do topo. */
   const containerClass = focus
     ? [
-        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-10 pt-0 sm:px-8 text-[17px] leading-8",
+        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-16 pt-0 sm:px-8 text-[16px] leading-7",
         // explicação do artigo em duas colunas, sem quebrar os blocos no meio
         "lg:[&_section[aria-label='Entenda_este_artigo']]:columns-2 lg:[&_section[aria-label='Entenda_este_artigo']]:gap-10",
         "[&_section[aria-label='Entenda_este_artigo']>*]:break-inside-avoid [&_section[aria-label='Entenda_este_artigo']>*]:mb-4",
-        "[&_.library-body]:max-w-none",
+        "[&_.library-body]:mx-auto [&_.library-body]:max-w-5xl [&_.library-body]:text-justify",
       ].join(" ")
     : "";
 
@@ -291,18 +319,6 @@ export function useFocusMode() {
                   </button>
                 </Hint>
               </nav>
-              {p.tools && (
-                <button
-                  type="button"
-                  onClick={() => setToolsOpen((v) => !v)}
-                  aria-pressed={toolsOpen}
-                  aria-label="Ferramentas"
-                  className="flex items-center gap-1.5 rounded-lg bg-amber-400 px-3 py-2 text-sm font-bold text-amber-950 hover:bg-amber-300"
-                >
-                  <Wrench className="h-4 w-4" />{" "}
-                  <span className="hidden sm:inline">Ferramentas</span>
-                </button>
-              )}
               {p.extra}
               <Hint content="Encerrar leitura cronometrada (Esc)">
                 <button
@@ -342,6 +358,12 @@ export function useFocusMode() {
               onClose={() => setToolsOpen(false)}
             />
           </Suspense>
+        )}
+        {typeof document !== "undefined" && createPortal(
+          <div className="focus-study-footer" aria-label={`Estudo: ${p.kicker} · ${p.title}`}>
+            <span>{p.kicker}</span><strong>{p.title}</strong>
+          </div>,
+          document.body,
         )}
       </>
     );

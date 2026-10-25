@@ -86,6 +86,9 @@ function LegalCoursePage() {
   const userId = user?.id !== "demo-user" ? user?.id : undefined;
   const courses = useLegalCourses(userId);
   const course = courses.data?.find((row) => row.slug === slug);
+  useEffect(() => {
+    if (course) window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: "Direito Constitucional", topic: course.title } }));
+  }, [course]);
   const units = useLegalUnits(course?.id, userId);
   const progress = useLegalProgress(userId);
   const coverage = useLegalExplanationCoverage(userId).data?.find(
@@ -220,10 +223,10 @@ function LegalCoursePage() {
     );
   return (
     <LegalRefProvider value={{ slug: course.slug, index: refIndex }}>
-      <div className={`space-y-5 pb-8 ${fm.containerClass}`}>
+      <div className={`legal-course-page space-y-5 pb-8 ${fm.containerClass}`}>
         {fm.bar({
           kicker: course.title,
-          title: selected?.label ?? "Escolha um artigo",
+          title: "Estudo cronometrado",
           position: selected
             ? `${Math.max(1, navigationRows.findIndex((r) => r.id === selected.id) + 1)} de ${navigationRows.length}`
             : "",

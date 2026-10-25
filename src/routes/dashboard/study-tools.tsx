@@ -235,7 +235,7 @@ function StudyToolsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="study-tools-page space-y-6">
       <PageHero
         image="study-desk"
         kicker={enem ? "ENEM" : "Meu planejamento"}
@@ -296,14 +296,8 @@ function StudyToolsPage() {
       {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
       <PlatformMaterialCard subject={subject} topic={topic} />
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6">
         <ReviewCard due={ctx.due} subject={subject} careerId={ctx.career.id} real={ctx.real} />
-        <PlanLinkCard
-          profile={ctx.profile}
-          career={ctx.career.name}
-          real={ctx.real}
-          loading={ctx.loading}
-        />
       </div>
 
       <ChecklistCard
@@ -462,7 +456,7 @@ function FocusCard({
   const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}), ...(enem ? { contest: "ENEM" } : {}) };
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="focus-session-card overflow-hidden">
       <div className="grid gap-0 lg:grid-cols-[1.05fr_1fr]">
         <div className="space-y-5 p-6">
           <div>

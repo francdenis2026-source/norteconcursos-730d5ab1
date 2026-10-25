@@ -1292,3 +1292,20 @@
 @media (prefers-reduced-motion: reduce) {
   .question-workspace .trainer-collection button[data-preparation] .trainer-collection__art { transition: none; }
 }
+
+/* Trainer command center: compact chrome, larger answer canvas. */
+.app-shell[data-area="student"] .question-workspace.trainer-session-shell { width: min(1440px, 100%); max-width: 1440px; margin-inline: auto; gap: 10px; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-command { min-height: 48px; padding: 5px 10px; border-radius: 12px; background: rgb(8 28 48 / 94%); border: 1px solid rgb(255 255 255 / 10%); }
+.app-shell[data-area="student"] .question-workspace .trainer-session-command h1 { font-size: 17px; line-height: 1.1; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-layout { grid-template-columns: minmax(0,1fr) 220px; gap: 10px; }
+.app-shell[data-area="student"] .question-workspace .trainer-question-content { padding: clamp(16px,2vw,28px); border-radius: 16px; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-overview { top: 8px; border-radius: 14px; }
+
+/* Preparation chooser: icon-led cards, no decorative artwork competing with labels. */
+.question-workspace .trainer-collection > div { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.question-workspace .trainer-collection button[data-preparation] { min-height: 86px; padding: 14px 16px; display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px; background: linear-gradient(135deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--primary) 7%, var(--card))); }
+.question-workspace .trainer-collection button[data-preparation] > .trainer-collection__art { display: none !important; }
+.question-workspace .trainer-collection button[data-preparation] > svg:first-child { width: 28px; height: 28px; padding: 5px; border-radius: 9px; background: color-mix(in oklab, var(--primary) 16%, transparent); color: var(--primary); }
+.question-workspace .trainer-collection button[data-preparation] span { min-width: 0; text-align: left; }
+.question-workspace .trainer-collection button[data-preparation] span small { display: block; margin-top: 3px; font-size: 11px; line-height: 1.35; }
+@media (max-width: 620px) { .question-workspace .trainer-collection > div { grid-template-columns: 1fr; } }

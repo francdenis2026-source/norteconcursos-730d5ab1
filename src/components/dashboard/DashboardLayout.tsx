@@ -362,6 +362,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => setIsDarkMode(getActiveTheme() === "dark"), []);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [studyContext, setStudyContext] = React.useState<{ discipline: string; topic: string } | null>(null);
+  React.useEffect(() => {
+    const onContext = (event: Event) => {
+      const detail = (event as CustomEvent<{ discipline?: string; topic?: string }>).detail;
+      if (detail?.discipline) setStudyContext({ discipline: detail.discipline, topic: detail.topic ?? "" });
+    };
+    window.addEventListener("norte:study-context", onContext);
+    return () => window.removeEventListener("norte:study-context", onContext);
+  }, []);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
   const [avatarUrl, setAvatarUrl] = React.useState<string | null>(null);
@@ -374,6 +383,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const isAdmin = user?.role === "admin";
   const brandPath = location.pathname.replace(/\/+$/, "") || "/";
+  const isStudyReading = !isAdmin && (
+    location.pathname.startsWith("/dashboard/library/") ||
+    location.pathname.startsWith("/dashboard/legal-course/") ||
+    location.pathname.startsWith("/dashboard/trilhas")
+  );
   const brandBg = isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
     ? undefined
     : BRAND_BG_ROUTES[brandPath] ?? "blue";
@@ -590,14 +604,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <button
             type="button"
             className="app-sidebar__search"
-            onClick={() => setPaletteOpen(true)}
-            aria-label="Buscar área da plataforma"
+            onClick={() => (isStudyReading ? fullscreen.enter() : setPaletteOpen(true))}
+            aria-label={isStudyReading ? "Iniciar estudo cronometrado" : "Buscar área da plataforma"}
           >
-            <Search />
+            {isStudyReading ? <Timer /> : <Search />}
             {!compactSidebar && (
               <>
-                <span>Buscar área</span>
-                <span className="kbd">Ctrl K</span>
+                <span>{isStudyReading ? "Estudo cronometrado" : "Buscar área"}</span>
+                {!isStudyReading && <span className="kbd">Ctrl K</span>}
               </>
             )}
           </button>
@@ -659,7 +673,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : studentGroupLabel(current.group))}</span>}
               </div>
             </div>
 
@@ -732,7 +746,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </Hint>
           </div>}
 
-          {!isAdmin && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
+          {!isAdmin && current?.group !== "Material didático" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"
