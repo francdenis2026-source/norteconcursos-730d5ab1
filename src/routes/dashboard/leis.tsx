@@ -149,6 +149,22 @@ function LawFinderPage() {
     ? hits.map((hit) => hit.row)
     : sortLaws(scoped, sort === "relevancia" ? "recentes" : sort);
   const sorted = searching && sort !== "relevancia" ? sortLaws(rows, sort) : rows;
+  const grouped = React.useMemo(() => {
+    if (searching) return [] as Array<{ id: string; label: string; rows: LawRow[] }>;
+    const groups = new Map<string, LawRow[]>();
+    for (const row of sorted) {
+      const id = row.themes[0] ?? "outros";
+      const label = LAW_THEMES.find((item) => item.id === id)?.label ?? "Outras leis";
+      const current = groups.get(id) ?? [];
+      current.push(row);
+      groups.set(id, current);
+    }
+    return [...groups.entries()].map(([id, rows]) => ({
+      id,
+      label: LAW_THEMES.find((item) => item.id === id)?.label ?? "Outras leis",
+      rows,
+    }));
+  }, [searching, sorted]);
   const reasonOf = (slug: string) => hits.find((hit) => hit.row.slug === slug)?.reason;
   const reset = () => {
     setQuery("");
@@ -216,7 +232,15 @@ function LawFinderPage() {
         </div>
       </section>
 
-      <section aria-label="Filtrar por tema" className="law-finder__themes">
+      <section aria-label="Filtrar por tema" className="law-finder__themes-panel">
+        <div className="law-finder__section-heading">
+          <div>
+            <span className="law-finder__eyebrow">Navegue por assunto</span>
+            <h2>Temas das leis</h2>
+          </div>
+          <span>{LAW_THEMES.length} categorias</span>
+        </div>
+        <div className="law-finder__themes">
         <button type="button" aria-pressed={theme === "all"} onClick={() => setTheme("all")}>
           Todas <b>{LAW_ROWS.length}</b>
         </button>
@@ -234,6 +258,7 @@ function LawFinderPage() {
             </button>
           );
         })}
+        </div>
       </section>
 
       <div className="law-finder__bar">
@@ -255,16 +280,30 @@ function LawFinderPage() {
       </div>
 
       {sorted.length > 0 ? (
-        <ul className="law-finder__list">
-          {sorted.map((row) => (
-            <LawCard
-              key={row.slug}
-              row={row}
-              query={query}
-              reason={searching ? reasonOf(row.slug) : undefined}
-            />
-          ))}
-        </ul>
+        searching ? (
+          <ul className="law-finder__list">
+            {sorted.map((row) => (
+              <LawCard key={row.slug} row={row} query={query} reason={reasonOf(row.slug)} />
+            ))}
+          </ul>
+        ) : (
+          <div className="law-finder__groups">
+            {grouped.map((group) => (
+              <section key={group.id} className="law-finder__group" aria-labelledby={`law-group-${group.id}`}>
+                <header className="law-finder__group-heading">
+                  <div>
+                    <span className="law-finder__eyebrow">Coleção temática</span>
+                    <h2 id={`law-group-${group.id}`}>{group.label}</h2>
+                  </div>
+                  <span>{group.rows.length} {group.rows.length === 1 ? "lei" : "leis"}</span>
+                </header>
+                <ul className="law-finder__list">
+                  {group.rows.map((row) => <LawCard key={row.slug} row={row} query={query} />)}
+                </ul>
+              </section>
+            ))}
+          </div>
+        )
       ) : (
         <div className="law-finder__empty" role="status">
           <SearchX aria-hidden="true" size={30} />
