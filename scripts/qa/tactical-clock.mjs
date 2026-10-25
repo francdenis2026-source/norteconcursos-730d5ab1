@@ -99,32 +99,25 @@ try {
   for (const width of [320, 390, 768, 1440]) {
     const context = await contextFor(width, 900);
     const page = await context.newPage();
+    // /dashboard/timer is a legacy alias; the integrated focus session is the
+    // only timer now, with discipline/topic context and study history.
     await page.goto(base + "/dashboard/timer");
-    await page.locator(".tactical-clock--focus").waitFor();
+    await page.waitForURL(url => url.pathname === "/dashboard/study-tools");
+    const clock = page.getByRole("timer", { name: "Tempo restante", exact: true });
+    await clock.waitFor();
+    const reading = clock.locator(".tabular-nums");
     await page.getByRole("button", { name: "Iniciar", exact: true }).click();
     await page.waitForTimeout(2200);
-    const running = await page
-      .locator(".tactical-clock--focus .tactical-clock__time")
-      .textContent();
+    const running = await reading.textContent();
     assert.notEqual(running, "25:00");
     await page.getByRole("button", { name: "Pausar", exact: true }).click();
-    const paused = await page.locator(".tactical-clock--focus .tactical-clock__time").textContent();
+    const paused = await reading.textContent();
     await page.waitForTimeout(1200);
-    assert.equal(
-      await page.locator(".tactical-clock--focus .tactical-clock__time").textContent(),
-      paused,
-    );
-    assert.ok(await page.locator(".tactical-clock--focus").getAttribute("data-paused"));
-    await page.getByRole("button", { name: "Reiniciar cronômetro" }).click();
-    assert.equal(
-      await page.locator(".tactical-clock--focus .tactical-clock__time").textContent(),
-      "25:00",
-    );
-    await page.getByRole("button", { name: "Pausa Curta", exact: true }).click();
-    assert.equal(
-      await page.locator(".tactical-clock--focus .tactical-clock__time").textContent(),
-      "05:00",
-    );
+    assert.equal(await reading.textContent(), paused);
+    await page.getByRole("button", { name: "Zerar", exact: true }).click();
+    assert.equal(await reading.textContent(), "25:00");
+    await page.getByRole("tab", { name: "Pausa 5 min", exact: true }).click();
+    assert.equal(await reading.textContent(), "05:00");
     assert.ok(
       await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
       "no overflow " + width,
