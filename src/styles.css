@@ -4273,7 +4273,7 @@ html {
   display: flex;
   align-items: center;
   gap: 12px;
-  height: 38px;
+  min-height: 44px;
   padding-inline: 12px;
   border-radius: 10px;
   color: oklch(1 0 0 / 0.62);
@@ -4654,9 +4654,10 @@ html {
   }
   .app-topbar {
     padding-inline: 14px;
-    border-bottom-color: oklch(1 0 0 / 0.07);
-    color: white;
-    background: oklch(0.12 0.025 263 / 0.92);
+    border-bottom-color: var(--color-border);
+    color: var(--color-foreground);
+    background: color-mix(in oklab, var(--color-background) 92%, transparent);
+    box-shadow: var(--shadow-xs);
   }
   .app-topbar .app-crumbs {
     display: none;
@@ -4670,14 +4671,14 @@ html {
   .app-topbar .app-top-btn,
   .app-topbar .app-top-search {
     border-color: transparent;
-    color: oklch(1 0 0 / 0.72);
+    color: var(--color-muted-foreground);
     background: transparent;
     box-shadow: none;
   }
   .app-topbar .app-streak {
-    border-color: oklch(1 0 0 / 0.1);
-    color: white;
-    background: oklch(1 0 0 / 0.05);
+    border-color: var(--color-border);
+    color: var(--color-foreground);
+    background: var(--color-card);
   }
   .app-content {
     padding: 12px 12px 96px;
@@ -4694,10 +4695,10 @@ html {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 6px;
-    border: 1px solid oklch(1 0 0 / 0.08);
+    border: 1px solid var(--color-border);
     border-radius: 18px;
-    background: oklch(0.13 0.026 263 / 0.9);
-    box-shadow: 0 20px 40px -12px oklch(0 0 0 / 0.55);
+    background: color-mix(in oklab, var(--color-card) 94%, transparent);
+    box-shadow: var(--shadow-lg);
     backdrop-filter: blur(18px) saturate(1.4);
   }
   .app-bottom-nav a {
@@ -4706,7 +4707,7 @@ html {
     gap: 3px;
     padding: 7px 2px;
     border-radius: 12px;
-    color: oklch(1 0 0 / 0.62);
+    color: var(--color-muted-foreground);
     font-size: 0.625rem;
     font-weight: 600;
     transition:
@@ -4720,6 +4721,11 @@ html {
   .app-bottom-nav a[data-active="true"] {
     color: var(--brass-soft);
     background: oklch(0.8 0.13 78 / 0.12);
+  }
+  .app-bottom-nav a:focus-visible,
+  .app-nav__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }
 

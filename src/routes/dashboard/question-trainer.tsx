@@ -1,57 +1,3 @@
-import { plannedAvailability } from "@/lib/plannedStudy";
-import { materialPracticePool, matchesMaterialScope } from "@/lib/materialPractice";
-import "@/styles/question-workspace.css";
-import { questionIdentity } from "@/lib/questionIdentity";
-import { useResponseSeconds } from "@/hooks/useResponseSeconds";
-import { useSessionHydration } from "@/hooks/useSessionHydration";
-import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
-import { openRow, recordLocalSave } from "@/lib/sessionSnapshots";
-import { LawText } from "@/components/dashboard/LawText";
-import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
-import { QuestionText } from "@/components/dashboard/QuestionText";
-import { QuestionCode } from "@/components/dashboard/QuestionCode";
-import { MOBILE_APP_QUERY, scrollAppToSection } from "@/lib/appScroll";
-import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
-import { QuestionProse } from "@/components/dashboard/QuestionProse";
-import { HeroStat } from "@/components/dashboard/PageHero";
-import {
-  trainerContext,
-  lockedTrainerSubject,
-  lockedTrainerCollection,
-  trainerTopicSubject,
-  trainerDisciplineCatalog,
-} from "@/lib/trainerContext";
-import { useUnseenActivity } from "@/hooks/useUnseenActivity";
-import { freshActivityQuestions } from "@/lib/dailyStudyActivity";
-import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
-import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
-import { useQuery } from "@tanstack/react-query";
-import { fetchEditalEditions } from "@/lib/editalEditions";
-import { editalExamQuestions } from "@/lib/editalPractice";
-import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
-import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
-import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
-import { accountStudyLaterPort } from "@/lib/studyLaterAccount";
-import { pushStudyLaterItem } from "@/lib/studyLaterSync";
-import { readStudyLater, saveStudyLater, studyLaterHas } from "@/lib/studyLater";
-import { canStrikeQuestion } from "@/lib/studyLater";
-import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
-import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
-import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
-import { searchQuestionCatalog } from "@/lib/questionBank";
-import {
-  trainerSessionSize,
-  catalogSessionQuestions,
-  trainerReachableIndex,
-  trainerTally,
-  trainerCanFinish,
-  type TrainerResult,
-} from "@/lib/trainerSession";
-import {
-  questionContestValue,
-  questionContestOptionLabel,
-  selectedQuestionCareer,
-} from "@/lib/questionFilterIdentity";
 import * as React from "react";
 import {
   trainerRouteKey,
@@ -59,39 +5,29 @@ import {
   type TrainerBookmark,
 } from "@/lib/internalNavigation";
 import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
-import { createFileRoute, Link, useNavigate, useBlocker } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
-  PauseCircle,
-  GraduationCap,
-  ShieldCheck,
-  SlidersHorizontal,
-  ChevronDown,
-  LayoutGrid,
   ArrowLeft,
   ArrowRight,
   BookOpenCheck,
-  RefreshCw,
   BrainCircuit,
   Check,
   CheckCircle2,
+  Flame,
   Lock,
   Loader2,
   RotateCcw,
   Sparkles,
-  SkipForward,
   Strikethrough,
   Target,
+  X,
+  Timer,
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
-import { useReinforcement } from "@/hooks/useReinforcement";
-import { QuestionSupportText } from "@/components/library/QuestionSupportText";
-import { MissingTextNotice } from "@/components/library/MissingTextNotice";
-import { needsMissingSupportText, reflowStem } from "@/lib/questionText";
-import { idleSeconds, IDLE_PAUSE_SECONDS, startActivityTracking } from "@/lib/activity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
@@ -102,6 +38,7 @@ import {
   DIFFICULTY_STYLE,
   examKey,
   formatDate,
+  hasReviewedExplanation,
   isPlaceholderExplanation,
   parseQuestion,
   basisHref,
@@ -109,7 +46,6 @@ import {
   splitExplanation,
 } from "@/lib/questionFormat";
 import { Badge } from "@/components/ui/badge";
-import { Hint } from "@/components/ui/hint";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -121,44 +57,29 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
-
-import { canonicalSubject } from "@/lib/subjects";
-import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
 import {
-  filterTrainerQuestions,
-  trainerBoard,
-  trainerFilterFacets,
-  isEnemContest,
-  trainerCollectionQuestions,
-  trainerPracticeQuestions,
-  syllabusQuestions,
-} from "@/lib/trainerFilters";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
+import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
-import { StudyCompletionNotice } from "@/components/dashboard/StudyCompletionNotice";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
-import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
-import { QuestionAudioButton } from "@/components/dashboard/QuestionAudioButton";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
-import { checkFeatureAccess } from "@/lib/subscriptions.config";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   validateSearch: (
     search: Record<string, unknown>,
   ): Partial<
     Record<
-      | "planned"
-      | "studySubject"
-      | "materialTopic"
-      | "studyArticle"
-      | "studyTopic"
-      | "unseen"
-      | "fresh"
-      | "edition"
-      | "syllabus"
       | "law"
       | "contest"
       | "board"
@@ -172,29 +93,10 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "area"
       | "topic"
       | "go"
-      | "reinforce"
-      | "mode"
-      | "appliedExam"
-      | "catalogQuery"
-      | "currency"
-      | "limit",
+      | "reinforce",
       string | undefined
     >
   > => ({
-    planned: search["planned"] === "1" ? "1" : undefined,
-    studySubject:
-      typeof search["studySubject"] === "string" ? search["studySubject"].slice(0, 200) : undefined,
-    materialTopic:
-      typeof search["materialTopic"] === "string"
-        ? search["materialTopic"].slice(0, 300)
-        : undefined,
-    studyArticle:
-      typeof search["studyArticle"] === "string" ? search["studyArticle"].slice(0, 80) : undefined,
-    studyTopic: typeof search["studyTopic"] === "string" ? search["studyTopic"] : undefined,
-    unseen: search["unseen"] === "1" ? "1" : undefined,
-    fresh: typeof search["fresh"] === "string" ? search["fresh"] : undefined,
-    edition: typeof search["edition"] === "string" ? search["edition"] : undefined,
-    syllabus: typeof search["syllabus"] === "string" ? search["syllabus"] : undefined,
     law: typeof search["law"] === "string" ? search["law"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
     board: typeof search["board"] === "string" ? search["board"] : undefined,
@@ -209,15 +111,6 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
     go: typeof search["go"] === "string" ? search["go"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
-    mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
-    appliedExam: typeof search["appliedExam"] === "string" ? search["appliedExam"] : undefined,
-    catalogQuery: typeof search["catalogQuery"] === "string" ? search["catalogQuery"] : undefined,
-    currency: typeof search["currency"] === "string" ? search["currency"] : undefined,
-    limit:
-      typeof search["limit"] === "string" &&
-      ["5", "10", "20", "30", "50", "all"].includes(search["limit"])
-        ? search["limit"]
-        : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -225,17 +118,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 type OrderMode = "random" | "exam";
 
 function QuestionTrainer() {
-  // O DashboardLayout é o dono do modo foco no mobile; o treinador apenas
-  // observa o estado e solicita a entrada/saída pelo evento compartilhado.
-  const trainerFullscreen = useWorkspaceFullscreen(true);
-  React.useEffect(() => {
-    return () => {
-      document.dispatchEvent(new Event("norte:workspace-exit"));
-    };
-  }, []);
   const routeFilters = Route.useSearch();
-  const lockedSubject = lockedTrainerSubject(routeFilters.subject);
-  const lockedCollection = lockedTrainerCollection(routeFilters);
   const navigate = useNavigate();
   const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const userId = user?.id;
@@ -263,116 +146,22 @@ function QuestionTrainer() {
   const {
     catalog: fullCatalog,
     loading: catalogLoading,
-    error: catalogError,
-    reload: reloadCatalog,
+    error,
   } = useQuestionCatalog(userId, canLoad);
-  const examEdition = useQuery({
-    queryKey: ["trainer-exam-edition", userId, routeFilters.edition],
-    enabled: canLoad && !!routeFilters.edition,
-    queryFn: async () => {
-      const found = (await fetchEditalEditions()).find((e) => e.id === routeFilters.edition);
-      if (!found) throw Error("Edição não encontrada");
-      return found;
-    },
-    retry: false,
-  });
-  // Questões sem o texto de apoio ficam fora do treino até que o conteúdo esteja disponível.
-
   const law = routeFilters.law;
-  const [contest, setContest] = React.useState(
-    questionContestValue(routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all")),
+  const catalog = React.useMemo(
+    () => (law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law))),
+    [fullCatalog, law],
   );
-  const collection = lockedCollection ?? (isEnemContest(contest) ? "enem" : "contests");
-  // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
-  // sem ele, o aluno não consegue resolver.
-  const { catalog, missingSupportText } = React.useMemo(() => {
-    const collectionCatalog = trainerCollectionQuestions(
-      searchQuestionCatalog(
-        syllabusQuestions(
-          routeFilters.edition
-            ? examEdition.data
-              ? editalExamQuestions(fullCatalog, examEdition.data)
-              : []
-            : fullCatalog,
-          routeFilters.syllabus,
-        ),
-        routeFilters.catalogQuery ?? "",
-      ),
-      collection,
-    );
-    const scoped =
-      law === undefined
-        ? collectionCatalog
-        : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
-    const materialScope = {
-      subject: routeFilters.studySubject,
-      topic: routeFilters.materialTopic,
-      law,
-      article: routeFilters.studyArticle,
-    };
-    const fromMaterial = !!(
-      routeFilters.studySubject ||
-      routeFilters.materialTopic ||
-      routeFilters.studyArticle
-    );
-    const materialScoped = fromMaterial
-      ? materialPracticePool(scoped, materialScope)
-      : scoped.filter((q) => matchesMaterialScope(q, materialScope));
-    const usable = materialScoped.filter((q) => !needsMissingSupportText(q));
-    return { catalog: usable, missingSupportText: materialScoped.length - usable.length };
-  }, [
-    fullCatalog,
-    routeFilters.studySubject,
-    routeFilters.materialTopic,
-    routeFilters.studyArticle,
-    law,
-    collection,
-    routeFilters.syllabus,
-    routeFilters.catalogQuery,
-    routeFilters.edition,
-    examEdition.data,
-  ]);
-  const subjectCatalog = React.useMemo(
-    () => trainerDisciplineCatalog(catalog, lockedSubject),
-    [catalog, lockedSubject],
-  );
-  const {
-    locked: lockedBase,
-    identityReady,
-    loading: lockedLoading,
-    error: historyError,
-    reload: reloadHistory,
-    markLocked,
-  } = useLockedAnswers(userId, canLoad, catalog);
-  // O mesmo item cadastrado para dois cargos da mesma prova (ex.: Agente e Papiloscopista) é uma questão só.
-  const locked = React.useMemo(
-    () => expandAnsweredBySiblings(lockedBase, catalog, (q) => questionIdentity(q as never)),
-    [lockedBase, catalog],
-  );
-  const unseenHistory = useUnseenActivity(userId, canLoad && routeFilters.unseen === "1");
-  const error =
-    catalogError ??
-    historyError ??
-    (routeFilters.unseen === "1" && unseenHistory.isError
-      ? "Não foi possível conferir as questões feitas em simulados. Nenhuma questão será repetida sem essa conferência."
-      : null);
-  const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
+  const library = useStudyMaterialList(canLoad);
+  const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
-  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all" | "catalog">(
-    routeFilters.mode === "catalog" ? "catalog" : routeFilters.mode === "reforco" ? "wrong" : "new",
-  );
-  const [sessionReinforce, setSessionReinforce] = React.useState(false);
+  const [contest, setContest] = React.useState(routeFilters.contest || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
-  const [career, setCareer] = React.useState(
-    selectedQuestionCareer(
-      routeFilters.career || "all",
-      routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all"),
-      routeFilters.year || 0,
-    ),
-  );
+  const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
-  const [appliedExam, setAppliedExam] = React.useState(routeFilters.appliedExam || "all");
+  const [appliedExam, setAppliedExam] = React.useState("all");
   const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.subject) || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
@@ -381,104 +170,35 @@ function QuestionTrainer() {
   // Vindos do cronograma: matéria do plano (pode juntar várias do banco) e assunto classificado por palavras-chave.
   const [area, setArea] = React.useState(routeFilters.area || "all");
   const [topic, setTopic] = React.useState(routeFilters.topic || "all");
-  const [resumeRequested, setResumeRequested] = React.useState(false);
-  const [resumeAvailable, setResumeAvailable] = React.useState(false);
+  const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
-  const [currency, setCurrency] = React.useState(routeFilters.currency || "all");
-  // O filtro "Atual" é do Essencial para cima (durante o período de testes todas as contas têm Essencial).
-  const currencyAllowed =
-    isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "currencyFilter").included;
-  const activeCurrency = currencyAllowed ? currency : "all";
-  const [limit, setLimit] = React.useState(routeFilters.limit || "20");
-  const [orderMode, setOrderMode] = React.useState<OrderMode>(
-    routeFilters.limit === "all" ? "exam" : "random",
-  );
-  const loading =
-    catalogLoading ||
-    lockedLoading ||
-    (!!routeFilters.edition && examEdition.isPending) ||
-    (routeFilters.unseen === "1" && (unseenHistory.isPending || unseenHistory.isFetching));
+  const [limit, setLimit] = React.useState("20");
+  const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
+  const [includeAnswered, setIncludeAnswered] = React.useState(false);
+  const loading = catalogLoading || lockedLoading;
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
-  const [communityOpen, setCommunityOpen] = React.useState(false);
-  // seconds: tempo ativo até responder, guardado aqui para não depender do relógio nem do histórico remoto.
-  const sessionAnswers = React.useRef(
-    new Map<number, { selected: Answer; isCorrect: boolean; seconds?: number }>(),
-  );
   const [saving, setSaving] = React.useState(false);
-  const [saveError, setSaveError] = React.useState("");
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
   const [reviewingPast, setReviewingPast] = React.useState(false);
   const [supportNotice, setSupportNotice] = React.useState(false);
   const supportNoticeId = React.useId();
-  const [modal, setModal] = React.useState<"help" | null>(null);
-  const [mapOpen, setMapOpen] = React.useState(false);
-  const library = useStudyMaterialList(canLoad && answered && modal === "help");
-  const [results, setResults] = React.useState<TrainerResult[]>([]);
+  const [modal, setModal] = React.useState<"help" | "result" | null>(null);
+  const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
-  const [confirmStop, setConfirmStop] = React.useState(false);
-  const sessionInProgress = started && questions.length > 0 && index < questions.length;
-  const blocker = useBlocker({
-    shouldBlockFn: () => sessionInProgress || savingRef.current,
-    enableBeforeUnload: () => sessionInProgress || savingRef.current,
-    withResolver: true,
-  });
-  const leaveDialogOpen = confirmStop || blocker.status === "blocked";
-  const cancelLeave = () => {
-    setConfirmStop(false);
-    blocker.reset?.();
-  };
-  const clearBookmark = () => {
-    bookmarkRef.current = null;
-    if (!userId) return;
-    // A sessão encerrada também sai da conta, para outros aparelhos não oferecerem retomada.
-    void snapshotUploader(userId).close("trainer", "trainer", Date.now());
-    try {
-      localStorage.removeItem(`trainer-bookmark:${userId}`);
-      sessionStorage.removeItem(`trainer-bookmark:${userId}`);
-    } catch {
-      /* A blocked store must not prevent ending the session. */
-    }
-  };
-  const confirmLeave = () => {
-    if (savingRef.current) return;
-    clearBookmark();
-    if (blocker.status === "blocked") blocker.proceed();
-    else {
-      setConfirmStop(false);
-      setStarted(false);
-    }
-  };
-
-  // Cronômetro da questão: conta só o tempo ativo (aba visível e aluno interagindo) enquanto a questão está
-  // aberta e sem resposta, e recomeça do zero a cada questão. É o tempo gravado como response_seconds.
-  const [questionSecs, setQuestionSecs] = React.useState(0);
-  React.useEffect(() => startActivityTracking(), []);
-  const questionSecsRef = React.useRef(0);
   const routeKey = trainerRouteKey(routeFilters);
-  // Traz da conta a sessão mais recente antes de tentar retomar (outro aparelho).
-  const sessionsReady = useSessionHydration(userId, canLoad);
   const pendingRestore = React.useRef(false);
-  const [resumeNotice, setResumeNotice] = React.useState(false);
-  const [bookmarkError, setBookmarkError] = React.useState(false);
-  const restoredSeconds = React.useRef<number | null>(null);
   const restoredSelection = React.useRef<string | null>(null);
   const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
   bookmarkRef.current =
-    userId && sessionInProgress
+    userId && started
       ? {
           userId,
           value: {
             version: 1,
-            practiceMode,
-            sessionAttempts: Array.from(sessionAnswers.current, ([index, answer]) => ({
-              index,
-              ...answer,
-            })),
-            questionSeconds: questionSecs,
             savedAt: Date.now(),
             route: routeKey,
             questions: questions.map(({ id, source, table }) => ({ id, source, table })),
@@ -507,64 +227,28 @@ function QuestionTrainer() {
           },
         }
       : null;
-  const persistBookmark = React.useCallback(() => {
-    const saved = bookmarkRef.current;
-    if (!saved) return;
-    try {
-      localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
-      recordLocalSave(localStorage, "trainer", saved.userId, "trainer", saved.value.savedAt);
-      setBookmarkError(false);
-    } catch {
-      setBookmarkError(true);
-    }
-    // Espelho na conta: conteúdo sem relógios, para só enviar quando algo mudou de fato.
-    const { savedAt, questionSeconds, ...stable } = saved.value;
-    void questionSeconds;
-    snapshotUploader(saved.userId).schedule(
-      openRow("trainer", "trainer", saved.value, savedAt),
-      JSON.stringify(stable),
-    );
-  }, []);
-  // Save selections, position and active time before a browser reload can discard React.
-  React.useEffect(() => {
-    persistBookmark();
-  });
-  React.useEffect(() => {
-    const onHide = () => persistBookmark();
-    window.addEventListener("pagehide", onHide);
-    window.addEventListener("beforeunload", onHide);
-    return () => {
-      window.removeEventListener("pagehide", onHide);
-      window.removeEventListener("beforeunload", onHide);
+  React.useEffect(
+    () => () => {
       const saved = bookmarkRef.current;
-      if (saved) {
-        try {
-          localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
-        } catch {
-          /* Navigation remains possible when storage is blocked. */
-        }
+      if (!saved) return;
+      try {
+        sessionStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+      } catch {
+        /* Storage can be unavailable; navigation must still work. */
       }
-    };
-  }, [persistBookmark]);
+    },
+    [],
+  );
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
-    sessionAnswers.current.clear();
     setStarted(false);
     setQuestions([]);
     setResults([]);
     setIndex(0);
     setModal(null);
-    setContest(
-      questionContestValue(routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all")),
-    );
+    setContest(routeFilters.contest || "all");
     setBoard(trainerBoard(routeFilters.board));
-    setCareer(
-      selectedQuestionCareer(
-        routeFilters.career || "all",
-        routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all"),
-        routeFilters.year || 0,
-      ),
-    );
+    setCareer(canonicalCareerName(routeFilters.career) || "all");
     setYear(routeFilters.year || "all");
     setSubject(canonicalSubject(routeFilters.subject) || "all");
     setSource(routeFilters.source || "all");
@@ -574,24 +258,11 @@ function QuestionTrainer() {
     setArea(routeFilters.area || "all");
     setTopic(routeFilters.topic || "all");
     setDifficulty("all");
-    setCurrency(routeFilters.currency || "all");
-    setAppliedExam(routeFilters.appliedExam || "all");
-    setLimit(routeFilters.limit || "20");
-    setOrderMode(routeFilters.limit === "all" ? "exam" : "random");
-    setPracticeMode(
-      routeFilters.mode === "catalog"
-        ? "catalog"
-        : routeFilters.mode === "reforco"
-          ? "wrong"
-          : "new",
-    );
-    setResumeRequested(false);
-    setResumeAvailable(false);
+    setAppliedExam("all");
+    autoStart.current = routeFilters.go === "1";
     pendingRestore.current = true;
   }, [
     law,
-    routeFilters.edition,
-    routeFilters.syllabus,
     routeFilters.contest,
     routeFilters.board,
     routeFilters.career,
@@ -604,77 +275,35 @@ function QuestionTrainer() {
     routeFilters.area,
     routeFilters.topic,
     routeFilters.go,
-    routeFilters.unseen,
-    routeFilters.studyTopic,
-    routeFilters.fresh,
-    routeFilters.mode,
-    routeFilters.appliedExam,
-    routeFilters.catalogQuery,
-    routeFilters.limit,
   ]);
   React.useEffect(() => {
-    if (
-      !pendingRestore.current ||
-      loading ||
-      error ||
-      examEdition.isError ||
-      !userId ||
-      !sessionsReady
-    )
-      return;
+    if (!pendingRestore.current || loading || error || !userId) return;
+    pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
-      const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
+      const raw = sessionStorage.getItem(storageKey);
       if (!raw) return;
-      const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, subjectCatalog);
+      const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
       if (!restored) return;
-      setResumeAvailable(true);
-      if (!resumeRequested) {
-        if (routeFilters.planned === "1") setResumeRequested(true);
-        return;
-      }
-      pendingRestore.current = false;
-      setResumeAvailable(false);
+      sessionStorage.removeItem(storageKey);
       const b = restored.bookmark;
-      sessionAnswers.current = new Map(
-        (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
-      );
-      setPracticeMode(
-        b.practiceMode ??
-          (routeFilters.mode === "catalog"
-            ? "catalog"
-            : routeFilters.mode === "reforco"
-              ? "wrong"
-              : "new"),
-      );
-      setSessionReinforce(
-        b.practiceMode
-          ? b.practiceMode === "all" || b.practiceMode === "wrong"
-          : routeFilters.mode === "reforco",
-      );
       setQuestions(restored.questions);
       setIndex(b.index);
       setResults(b.results);
       setSelected(b.selected as Answer | null);
       setStruck(b.struck as Answer[]);
-      restoredSeconds.current = b.questionSeconds ?? 0;
-      setResumeNotice(true);
       setStartedAt(b.startedAt);
       setStarted(true);
       setModal(null);
       setAnswered(false); // The saved-answer gate is always reconstructed from the database.
       restoredSelection.current = restored.questions[b.index]?.id ?? null;
       const f = b.filters;
-      setContest(
-        lockedCollection === "enem" && !isEnemContest(f.contest)
-          ? "ENEM"
-          : questionContestValue(f.contest),
-      );
+      setContest(f.contest);
       setBoard(f.board);
-      setCareer(selectedQuestionCareer(f.career, f.contest, f.year));
+      setCareer(f.career);
       setYear(f.year);
       setAppliedExam(f.appliedExam);
-      setSubject(lockedSubject ?? f.subject);
+      setSubject(f.subject);
       setSource(f.source);
       setReviewed(f.reviewed);
       setState(f.state);
@@ -684,57 +313,11 @@ function QuestionTrainer() {
       setDifficulty(f.difficulty);
       setLimit(f.limit);
       setOrderMode(f.orderMode === "exam" ? "exam" : "random");
-      setResumeRequested(false);
+      autoStart.current = false;
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
-  }, [
-    loading,
-    error,
-    examEdition.isError,
-    userId,
-    routeKey,
-    subjectCatalog,
-    lockedSubject,
-    lockedCollection,
-    sessionsReady,
-    resumeRequested,
-  ]);
-  const examNotice = routeFilters.edition ? (
-    <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
-      <strong>
-        Prova selecionada:{" "}
-        {examEdition.data
-          ? `${examEdition.data.contest_name} · ${examEdition.data.role_name} · ${examEdition.data.contest_year}`
-          : "Consultando edição"}
-      </strong>
-      <p>
-        {routeFilters.go === "1"
-          ? "Você está resolvendo somente as questões oficiais elegíveis desta prova, com correção após cada resposta."
-          : "Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam essa seleção."}
-      </p>
-      {examEdition.data && !catalogLoading && (
-        <p className="mt-2 font-semibold">
-          {examCoverage(
-            {
-              contest: examEdition.data.contest_name,
-              career: examEdition.data.role_name,
-              year: examEdition.data.contest_year,
-            },
-            catalog.length,
-            true,
-          )}
-        </p>
-      )}
-      <Link
-        to="/dashboard/edital"
-        search={{ edition: routeFilters.edition }}
-        className="mt-2 inline-block underline"
-      >
-        Voltar ao meu edital
-      </Link>
-    </aside>
-  ) : null;
+  }, [loading, error, userId, routeKey, catalog]);
   const lawNotice =
     law !== undefined ? (
       <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
@@ -756,76 +339,22 @@ function QuestionTrainer() {
         </Link>
       </aside>
     ) : null;
-  const materialNotice =
-    routeFilters.studySubject || routeFilters.materialTopic || routeFilters.studyArticle ? (
-      <aside role="status" className="rounded-xl border bg-primary/5 p-3 text-sm">
-        <strong>Assunto do material</strong>
-        <p>
-          {[routeFilters.studySubject, routeFilters.materialTopic, routeFilters.studyArticle]
-            .filter(Boolean)
-            .join(" · ")}
-        </p>
-        <p>Este recorte permanece aplicado, mesmo se não houver questões disponíveis.</p>
-        <Link to="/dashboard/question-trainer" search={{}} className="underline">
-          Remover recorte do material
-        </Link>
-      </aside>
-    ) : null;
-  const activityNotice =
-    routeFilters.unseen === "1" ? (
-      <aside role="status" className="rounded-xl border bg-muted p-4 text-sm">
-        <strong>
-          Questões novas · {routeFilters.subject}
-          {routeFilters.studyTopic ? ` · ${routeFilters.studyTopic}` : ""}
-        </strong>
-        <p>
-          Somente itens deste assunto ainda não feitos no treinador, no reforço ou nos simulados. Se
-          não houver itens inéditos disponíveis, o assunto será mantido.
-        </p>
-      </aside>
-    ) : null;
-  const { correct, wrong, skipped } = trainerTally(results, questions.length);
+  const correct = results.filter((r) => r === "ok").length;
+  const wrong = results.filter((r) => r === "err").length;
 
-  const activityCatalog = React.useMemo(
-    () =>
-      routeFilters.unseen === "1"
-        ? freshActivityQuestions(
-            subjectCatalog,
-            new Set([...(unseenHistory.data ?? []), ...locked.keys(), ...reinforced.keys()]),
-            routeFilters.subject,
-            routeFilters.studyTopic,
-          )
-        : subjectCatalog,
-    [
-      subjectCatalog,
-      routeFilters.unseen,
-      routeFilters.subject,
-      routeFilters.studyTopic,
-      unseenHistory.data,
-      locked,
-      reinforced,
-    ],
-  );
-  const practiceCatalog = React.useMemo(
-    () => trainerPracticeQuestions(activityCatalog, practiceMode, locked, reinforced),
-    [activityCatalog, practiceMode, locked, reinforced],
-  );
-  const changePracticeMode = (mode: "new" | "wrong" | "all" | "catalog") => {
-    if (mode === practiceMode) return;
-    setPracticeMode(mode);
-    setNotice(
-      "Os filtros foram preservados. As opções e quantidades agora refletem o modo de prática escolhido.",
-    );
-  };
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   const topicOf = React.useMemo(
     () => new Map(catalog.map((q) => [q.id, questionTopic(q)])),
     [catalog],
   );
+  const trainingCatalog = React.useMemo(
+    () => includeAnswered ? catalog : catalog.filter((q) => !locked.has(lockedKey(q.source, q.id))),
+    [catalog, includeAnswered, locked],
+  );
   const facets = React.useMemo(
     () =>
       trainerFilterFacets(
-        practiceCatalog,
+        trainingCatalog,
         {
           area,
           topic,
@@ -838,14 +367,13 @@ function QuestionTrainer() {
           source,
           reviewed,
           difficulty,
-          currency: activeCurrency,
           state,
           category,
         },
         topicOf,
       ),
     [
-      practiceCatalog,
+      trainingCatalog,
       area,
       topic,
       contest,
@@ -857,10 +385,10 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
-      activeCurrency,
       state,
       category,
       topicOf,
+      trainingCatalog,
     ],
   );
   const choices = React.useMemo(() => {
@@ -875,24 +403,11 @@ function QuestionTrainer() {
       topics: options("topic", topic),
       states: options("state", state),
       categories: options("category", category),
-      currencies: options("currency", currency).filter((key) => key !== "recent"),
       exams: options("exam", appliedExam).map(
         (key) => [key, key.split("::").join(" · ")] as [string, string],
       ),
     };
-  }, [
-    facets,
-    contest,
-    board,
-    career,
-    year,
-    subject,
-    topic,
-    state,
-    category,
-    currency,
-    appliedExam,
-  ]);
+  }, [facets, contest, board, career, year, subject, topic, state, category, appliedExam]);
   const manual =
     <T,>(setter: (value: T) => void) =>
     (value: T) => {
@@ -901,30 +416,27 @@ function QuestionTrainer() {
     };
   const pool = React.useMemo(
     () =>
-      dedupeSharedExamItems(
-        filterTrainerQuestions(
-          activityCatalog,
-          {
-            area,
-            topic,
-            contest,
-            board,
-            career,
-            year,
-            appliedExam,
-            subject,
-            source,
-            reviewed,
-            difficulty,
-            currency: activeCurrency,
-            state,
-            category,
-          },
-          topicOf,
-        ),
+      filterTrainerQuestions(
+        trainingCatalog,
+        {
+          area,
+          topic,
+          contest,
+          board,
+          career,
+          year,
+          appliedExam,
+          subject,
+          source,
+          reviewed,
+          difficulty,
+          state,
+          category,
+        },
+        topicOf,
       ),
     [
-      activityCatalog,
+      trainingCatalog,
       area,
       topic,
       topicOf,
@@ -937,94 +449,13 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
-      activeCurrency,
       state,
       category,
     ],
   );
-  // Modos de prática. "new": só questões ainda não respondidas (a 1ª resposta é a que conta para ranking e medalhas).
-  // "wrong" e "all": reforço de questões já respondidas; as novas tentativas ficam numa tabela própria e não pontuam.
-  const [notice, setNotice] = React.useState("");
-  const fresh = React.useMemo(
-    () => pool.filter((q) => !locked.has(questionIdentity(q))),
-    [pool, locked],
-  );
-  const answeredPool = React.useMemo(
-    () => pool.filter((q) => locked.has(questionIdentity(q))),
-    [pool, locked],
-  );
-  // erro na 1ª tentativa e ainda não recuperado no reforço
-  const wrongPending = React.useMemo(
-    () =>
-      answeredPool.filter((q) => {
-        const k = questionIdentity(q);
-        return (
-          locked.get(k)?.isCorrect === false &&
-          !reinforced.get(lockedKey(q.source, q.id))?.lastCorrect
-        );
-      }),
-    [answeredPool, locked, reinforced],
-  );
-  const recovered = answeredPool.filter((q) => {
-    const k = questionIdentity(q);
-    return (
-      locked.get(k)?.isCorrect === false && reinforced.get(lockedKey(q.source, q.id))?.lastCorrect
-    );
-  }).length;
-  const trainingPool =
-    practiceMode === "catalog"
-      ? pool
-      : practiceMode === "new"
-        ? fresh
-        : practiceMode === "wrong"
-          ? wrongPending
-          : answeredPool;
-  const dailyRemaining =
-    (practiceMode === "new" || practiceMode === "catalog") && dailyLimit !== "unlimited"
-      ? Math.max(0, dailyLimit - dailyUsed)
-      : undefined;
   const startTraining = () => {
-    if (loading || authLoading || error || !canLoad) return;
-    pendingRestore.current = false;
-    setResumeAvailable(false);
-    setResumeRequested(false);
-    responseIdRef.current = crypto.randomUUID();
-    const orderedPool = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
-    const ordered =
-      practiceMode === "catalog"
-        ? catalogSessionQuestions(orderedPool, locked, dailyRemaining)
-        : orderedPool;
-    if (routeFilters.planned === "1") {
-      const message = plannedAvailability(ordered.length, Number(limit) || 20);
-      if (message) {
-        setNotice(message);
-        toast.info(message);
-      }
-    }
-    if (!ordered.length) {
-      if (routeFilters.planned === "1") return;
-      setNotice(
-        practiceMode === "new"
-          ? "Você já respondeu todas as questões deste filtro. Escolha “Reforço” para refazer as que errou."
-          : "Não há questões para este modo de reforço neste filtro.",
-      );
-      return;
-    }
-    setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
-    const count = trainerSessionSize(
-      ordered.length,
-      limit,
-      practiceMode === "new" ? dailyRemaining : undefined,
-    );
-    if (!count) {
-      setNotice(
-        "O limite de novas respostas foi atingido hoje. Você pode revisar questões já respondidas.",
-      );
-      return;
-    }
-    setQuestions(ordered.slice(0, count));
-    sessionAnswers.current.clear();
-    setSaveError("");
+    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -1033,53 +464,24 @@ function QuestionTrainer() {
     setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
-    if (window.matchMedia(MOBILE_APP_QUERY).matches) trainerFullscreen.enter();
   };
-  const plannedLaunch = React.useRef("");
+  // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
   React.useEffect(() => {
-    const key = JSON.stringify([routeFilters.studySubject, routeFilters.materialTopic]);
-    if (
-      routeFilters.planned !== "1" ||
-      loading ||
-      authLoading ||
-      error ||
-      !canLoad ||
-      !sessionsReady ||
-      resumeAvailable ||
-      resumeRequested ||
-      started ||
-      subject !== canonicalSubject(routeFilters.subject) ||
-      plannedLaunch.current === key
-    )
-      return;
-    const frame = requestAnimationFrame(() => {
-      plannedLaunch.current = key;
-      startTraining();
-    });
-    return () => cancelAnimationFrame(frame);
-  }, [
-    routeFilters.planned,
-    routeFilters.studySubject,
-    routeFilters.materialTopic,
-    loading,
-    authLoading,
-    error,
-    canLoad,
-    started,
-    trainingPool,
-    sessionsReady,
-    resumeAvailable,
-    resumeRequested,
-    subject,
-  ]);
-  // General links only preselect; explicit agenda activities also start after eligibility checks.
+    if (!autoStart.current || loading || started || pool.length === 0) return;
+    autoStart.current = false;
+    setLimit("10");
+    const ordered = shuffled(pool).slice(0, 10);
+    setQuestions(ordered);
+    setIndex(0);
+    setResults([]);
+    setSelected(null);
+    setStruck([]);
+    setAnswered(false);
+    setSupportNotice(false);
+    setStartedAt(Date.now());
+    setStarted(true);
+  }, [loading, started, pool]);
   const selectAppliedExam = (value: string) => {
-    if (
-      value !== "all" &&
-      lockedCollection &&
-      (isEnemContest(value.split("::")[0] ?? "") ? "enem" : "contests") !== lockedCollection
-    )
-      return;
     setAppliedExam(value);
     if (value === "all") return;
     const [
@@ -1094,69 +496,7 @@ function QuestionTrainer() {
     setYear(selectedYear);
   };
 
-  React.useEffect(() => {
-    if (started && questions.length > 0 && index >= questions.length) clearBookmark();
-  }, [started, questions.length, index, userId]);
   const question = questions[index];
-  const focusTarget = !started
-    ? "trainer-setup"
-    : question
-      ? "trainer-question"
-      : "trainer-result-title";
-  const focusKey = `${routeKey}:${focusTarget}:${index}:${question?.source ?? ""}:${question?.id ?? ""}`;
-  const focusedEntry = React.useRef("");
-  React.useEffect(() => {
-    if (!canLoad || loading || error || focusedEntry.current === focusKey) return;
-    let second = 0;
-    const first = window.requestAnimationFrame(() => {
-      second = window.requestAnimationFrame(() => {
-        if (scrollAppToSection(focusTarget)) focusedEntry.current = focusKey;
-      });
-    });
-    return () => {
-      window.cancelAnimationFrame(first);
-      window.cancelAnimationFrame(second);
-    };
-  }, [canLoad, loading, error, focusKey, focusTarget]);
-  const setupSubjects = question
-    ? []
-    : [...new Set(trainingPool.map((q) => canonicalSubject(q.subject)))];
-  const context = trainerContext(
-    question,
-    subject === "all" && setupSubjects.length === 1 ? setupSubjects[0] || subject : subject,
-    topic,
-    routeFilters.studyTopic,
-  );
-
-  // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
-  const noText = !!question && needsMissingSupportText(question);
-  const nonScoring =
-    sessionReinforce || noText || (!!question && locked.has(questionIdentity(question)));
-  // Tempo da resposta: o desta sessão; senão, o gravado na conta (questão revista depois); senão, nada.
-  const sessionSeconds = sessionAnswers.current.get(index)?.seconds;
-  const storedSeconds = useResponseSeconds(
-    userId,
-    question?.id,
-    answered && sessionSeconds === undefined && reviewingPast,
-  );
-  const shownSeconds =
-    sessionSeconds ??
-    (answered && !reviewingPast ? questionSecs : (storedSeconds.data ?? undefined));
-  React.useEffect(() => {
-    const seconds = restoredSeconds.current ?? 0;
-    restoredSeconds.current = null;
-    questionSecsRef.current = seconds;
-    setQuestionSecs(seconds);
-  }, [startedAt, index, question?.id, question?.source]);
-  React.useEffect(() => {
-    if (!started || !question || answered || leaveDialogOpen) return;
-    const id = window.setInterval(() => {
-      if (document.visibilityState !== "visible" || idleSeconds() >= IDLE_PAUSE_SECONDS) return;
-      questionSecsRef.current += 1;
-      setQuestionSecs(questionSecsRef.current);
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [started, question?.id, question?.source, answered, index, leaveDialogOpen]);
   // Já respondida antes (nesta sessão ou em qualquer sessão anterior): mostra
   // em modo revisão, sem permitir reenviar. Só rearma quando a questão exibida
   // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
@@ -1165,9 +505,7 @@ function QuestionTrainer() {
     // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
     // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
     if (lockedLoading) return;
-    const past =
-      sessionAnswers.current.get(index) ??
-      (nonScoring ? undefined : locked.get(questionIdentity(question)));
+    const past = locked.get(lockedKey(question.source, question.id));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -1195,7 +533,7 @@ function QuestionTrainer() {
       setStartedAt(Date.now());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
-  }, [index, question?.id, question?.source, lockedLoading, nonScoring]);
+  }, [index, question?.id, question?.source, lockedLoading]);
   const submit = async () => {
     if (
       !selected ||
@@ -1203,62 +541,13 @@ function QuestionTrainer() {
       answered ||
       !user ||
       savingRef.current ||
-      (reachedDailyLimit && !nonScoring) ||
+      reachedDailyLimit ||
       lockedLoading
     )
       return;
     savingRef.current = true;
     setSaving(true);
-    setSaveError("");
     const isCorrect = selected === question.answer;
-    if (nonScoring) {
-      // Reforço (ou questão sem texto): guarda o desempenho de estudo, mas não pontua nem consome o limite diário.
-      try {
-        const { error } = await supabase.from("question_reinforcement_attempts").insert({
-          id: responseIdRef.current,
-          user_id: user.id,
-          question_id: question.id,
-          question_source: question.source,
-          contest_name: question.contest,
-          board: question.board ?? "",
-          subject: question.subject,
-          selected_answer: selected,
-          official_answer: question.answer,
-          is_correct: isCorrect,
-          response_seconds: Math.max(0, questionSecsRef.current),
-        });
-        if (
-          error &&
-          !/PGRST205|42P01|does not exist|schema cache/i.test(
-            `${error.code ?? ""} ${error.message}`,
-          )
-        )
-          throw error;
-        if (error)
-          toast.message(
-            "Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.",
-          );
-        sessionAnswers.current.set(index, {
-          selected,
-          isCorrect,
-          seconds: Math.max(0, questionSecsRef.current),
-        });
-        setAnswered(true);
-        markReinforced(question.source, question.id, isCorrect);
-        setResults((prev) => {
-          const copy = [...prev];
-          copy[index] = isCorrect ? "ok" : "err";
-          return copy;
-        });
-        setModal(null);
-      } catch {
-        setSaveError("Não foi possível salvar sua tentativa de reforço. Tente novamente.");
-      } finally {
-        savingRef.current = false;
-        setSaving(false);
-      }
-      return;
-    }
     try {
       const { error } = await supabase.from("question_training_responses").upsert(
         {
@@ -1266,7 +555,6 @@ function QuestionTrainer() {
           user_id: user.id,
           question_id: question.id,
           question_source: question.source,
-          ...(identityReady ? { question_table: question.table } : {}),
           contest_name: question.contest,
           subject: question.subject,
           selected_answer: selected,
@@ -1274,106 +562,36 @@ function QuestionTrainer() {
           is_correct: isCorrect,
           // Learning support is available only after this answer is saved.
           asked_for_help: false,
-          response_seconds: Math.max(0, questionSecsRef.current),
+          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
         },
-        { onConflict: "id", ignoreDuplicates: true },
+        { onConflict: "id" },
       );
       if (error) throw error;
-      const { data: savedResponse, error: verifyError } = await supabase
-        .from("question_training_responses")
-        .select("question_id,question_source,selected_answer,is_correct")
-        .eq("id", responseIdRef.current)
-        .eq("user_id", user.id)
-        .single();
-      if (
-        verifyError ||
-        savedResponse.question_id !== question.id ||
-        savedResponse.question_source !== question.source ||
-        savedResponse.selected_answer !== selected ||
-        savedResponse.is_correct !== isCorrect
-      )
-        throw new Error("A resposta salva diverge do conteúdo exibido. Atualize a questão.");
-      sessionAnswers.current.set(index, {
-        selected,
-        isCorrect,
-        seconds: Math.max(0, questionSecsRef.current),
-      });
       setAnswered(true);
       setDailyUsed((n) => n + 1);
-      markLocked(question, { selected, isCorrect });
-      void reloadHistory();
+      markLocked(question.source, question.id, { selected, isCorrect });
       setResults((prev) => {
         const copy = [...prev];
         copy[index] = isCorrect ? "ok" : "err";
         return copy;
       });
-      setModal(null);
-    } catch (error) {
-      // O servidor também aplica o limite diário do plano (gatilho no banco).
-      if (/limite di[aá]rio/i.test(String((error as { message?: unknown })?.message ?? ""))) {
-        if (dailyLimit !== "unlimited") setDailyUsed(dailyLimit);
-        setSaveError(
-          "Você atingiu o limite diário de questões do seu plano. Ele renova à meia-noite (horário do Acre).",
-        );
-      } else {
-        setSaveError("Não foi possível salvar sua resposta. Tente novamente.");
-      }
+      setModal("result");
+    } catch {
+      toast.error("Não foi possível salvar sua resposta. Tente novamente.");
     } finally {
       savingRef.current = false;
       setSaving(false);
     }
   };
   const goTo = (target: number) => {
-    if (savingRef.current || target < 0 || target > questions.length) return;
-    if (target < questions.length && target > trainerReachableIndex(results, questions.length))
-      return;
-    if (target === questions.length && !trainerCanFinish(results, questions.length)) return;
-    moveTo(target);
-  };
-  const moveTo = (target: number) => {
-    setMapOpen(false);
+    if (target < 0 || target > questions.length) return;
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
-    setSaveError("");
-    setCommunityOpen(false);
     setIndex(target);
-    if (target === index)
-      window.requestAnimationFrame(() => scrollAppToSection("trainer-question"));
   };
   const next = () => goTo(index + 1);
-  // Pular não responde, não conta como erro e não pontua; a questão fica em "Estudar depois" para revisão.
-  const skipQuestion = () => {
-    if (!question || answered || savingRef.current || !user) return;
-    setResults((prev) => {
-      const copy = [...prev];
-      copy[index] = "skipped";
-      return copy;
-    });
-    try {
-      const before = readStudyLater(localStorage, user.id);
-      const items = saveStudyLater(
-        localStorage,
-        user.id,
-        question,
-        new Date().toISOString(),
-        "skipped",
-      );
-      const item = items.find((entry) => studyLaterHas([entry], question));
-      if (item && !studyLaterHas(before, question))
-        void pushStudyLaterItem(user.id, item, accountStudyLaterPort(user.id)).catch(() => false);
-      toast.message("Questão pulada. Ela ficou em Meus cadernos → Estudar depois.");
-    } catch {
-      toast.message("Questão pulada, mas não foi possível guardá-la em Estudar depois.");
-    }
-    moveTo(index + 1);
-  };
   const restart = () => {
-    clearBookmark();
-    setResumeNotice(false);
     responseIdRef.current = crypto.randomUUID();
-    sessionAnswers.current.clear();
-    setStarted(false);
-    setQuestions([]);
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -1381,25 +599,15 @@ function QuestionTrainer() {
     setAnswered(false);
     setReviewingPast(false);
     setSupportNotice(false);
+    setStartedAt(Date.now());
+    setQuestions((items) => (orderMode === "random" ? shuffled(items) : [...items]));
   };
 
-  if (authLoading || isGuest)
+  if (authLoading || loading || isGuest)
     return (
       <Center>
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
         <p>{isGuest ? "Redirecionando…" : "Preparando seu treino…"}</p>
-      </Center>
-    );
-  if (routeFilters.edition && examEdition.isError)
-    return (
-      <Center>
-        <p>
-          Não foi possível conferir a prova selecionada. Nenhuma questão de outra prova será usada.
-        </p>
-        <Button onClick={() => void examEdition.refetch()}>Tentar carregar a prova</Button>
-        <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
-          Voltar ao meu edital
-        </Link>
       </Center>
     );
   if (!user)
@@ -1417,15 +625,6 @@ function QuestionTrainer() {
       <Center>
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
-        <Button
-          onClick={() => {
-            if (catalogError) void reloadCatalog();
-            if (historyError) void reloadHistory();
-            if (routeFilters.unseen === "1") void unseenHistory.refetch();
-          }}
-        >
-          Tentar novamente
-        </Button>
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
         </Button>
@@ -1433,226 +632,58 @@ function QuestionTrainer() {
     );
   if (!started)
     return (
-      <div className="trainer-workbench question-workspace" aria-busy={loading}>
-        <header className="trainer-workbench-heading trainer-workbench-hero workspace-banner">
-          <div>
-            <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
-            <h1 id="trainer-title">Treinador de questões</h1>
-            <p>Uma seleção precisa. Uma questão por vez. Clareza para aprender.</p>
-            <div className="page-hero__stats">
-              <HeroStat icon={Target} label="Na seleção atual" value={pool.length} />
-              <HeroStat icon={CheckCircle2} label="Já respondidas" value={locked.size} />
-            </div>
-          </div>
-          <Link to="/dashboard/question-bank" className="trainer-catalog-link">
-            <BookOpenCheck aria-hidden="true" />
-            Explorar acervo
-            <ArrowRight aria-hidden="true" />
-          </Link>
-        </header>
-        {resumeAvailable && (
-          <aside className="flex flex-wrap items-center justify-between gap-3 rounded-xl border p-3">
-            <p className="text-sm">Você tem um treino salvo para esta seleção.</p>
-            <Button onClick={() => setResumeRequested(true)} disabled={loading}>
-              Continuar treino salvo
-            </Button>
-          </aside>
-        )}
-        <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} compact />
-        {loading && (
-          <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-            Carregando questões e conferindo seu histórico…
-          </p>
-        )}
-        {routeFilters.catalogQuery && (
-          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border p-3 text-sm">
-            <span>
-              Busca do acervo: <strong>{routeFilters.catalogQuery}</strong>
-            </span>
-            <Link
-              to="/dashboard/question-trainer"
-              search={{ ...routeFilters, catalogQuery: undefined }}
-              className="inline-flex min-h-11 items-center font-semibold underline"
-            >
-              Remover busca
-            </Link>
-          </div>
-        )}
-        {routeFilters.syllabus && (
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-primary/5 p-3 text-sm">
-            <span>Questões vinculadas ao assunto escolhido no edital.</span>
-            <Link
-              to="/dashboard/edital/$topicId"
-              params={{ topicId: routeFilters.syllabus }}
-              className="font-semibold text-primary underline"
-            >
-              Voltar ao assunto
-            </Link>
-          </div>
-        )}
-        {examNotice}
+      <div className="space-y-4">
         {lawNotice}
-        {materialNotice}
-        {activityNotice}
-        <div
-          id="trainer-setup"
-          tabIndex={-1}
-          className="trainer-focus-target"
-          aria-label="Configurar treino de questões"
-        >
-          {context.automatic && (
-            <TrainerContextBanner
-              discipline={context.discipline}
-              topic={context.topic}
-              automatic={context.automatic}
-              setup
-            />
-          )}
-          <TrainerSetup
-            practiceModes={
-              <section className="trainer-practice-panel" aria-label="Modo de prática">
-                {missingSupportText > 0 && (
-                  <details className="trainer-quality-note">
-                    <summary>Questões com conteúdo incompleto ficam fora do treino</summary>
-                    <p>
-                      {missingSupportText} questões desta área aguardam texto de apoio. Elas não
-                      entram na seleção até que o material esteja disponível.
-                    </p>
-                  </details>
-                )}
-                {notice && (
-                  <p
-                    className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100"
-                    role="status"
-                  >
-                    {notice}
-                  </p>
-                )}
-                <h2 className="text-base font-semibold">Como você quer praticar?</h2>
-                <div className="trainer-practice-modes">
-                  {(
-                    [
-                      ["catalog", "Todas da seleção", `${pool.length} disponíveis`],
-                      ["new", "Questões novas", `${fresh.length} sem resposta`],
-                      [
-                        "wrong",
-                        "Revisar meus erros",
-                        `${wrongPending.length} pendentes${recovered ? ` · ${recovered} recuperados` : ""}`,
-                      ],
-                      ["all", "Revisar respostas", `${answeredPool.length} respondidas`],
-                    ] as const
-                  ).map(([id, title, sub]) => (
-                    <label
-                      key={id}
-                      className="trainer-practice-mode"
-                      data-mode={id}
-                      data-active={practiceMode === id}
-                    >
-                      <input
-                        type="radio"
-                        name="practice-mode"
-                        className="mr-2"
-                        checked={practiceMode === id}
-                        onChange={() => changePracticeMode(id)}
-                      />
-                      <span className="trainer-practice-mode__title">{title}</span>
-                      <span className="mt-1 block text-xs text-muted-foreground">
-                        {loading ? "Consultando questões disponíveis…" : sub}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </section>
-            }
-            lockedSubject={lockedSubject}
-            lockedCollection={lockedCollection}
-            loading={loading}
-            available={
-              practiceMode === "catalog"
-                ? catalogSessionQuestions(trainingPool, locked, dailyRemaining).length
-                : trainingPool.length
-            }
-            dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
-            newAnswersRemaining={dailyRemaining}
-            choices={choices}
-            facets={facets}
-            currencyLocked={!currencyAllowed}
-            values={{
-              contest,
-              board,
-              career,
-              year,
-              appliedExam,
-              subject,
-              source,
-              reviewed,
-              difficulty,
-              currency: activeCurrency,
-              state,
-              category,
-              area,
-              topic,
-              limit,
-              orderMode,
-            }}
-            setters={{
-              setContest: (value: string) => {
-                if (
-                  value !== "all" &&
-                  lockedCollection &&
-                  (isEnemContest(value) ? "enem" : "contests") !== lockedCollection
-                )
-                  return;
-                setAppliedExam("all");
-                setContest(value === "all" && lockedCollection === "enem" ? "ENEM" : value);
-              },
-              setBoard: manual(setBoard),
-              setCareer: manual(setCareer),
-              setYear: manual(setYear),
-              setAppliedExam: selectAppliedExam,
-              setSubject: (value: string) => {
-                if (lockedSubject) return;
-                setSubject(value);
-                setArea("all");
-                setTopic("all");
-              },
-              setSource: setSource,
-              setReviewed: setReviewed,
-              setDifficulty: setDifficulty,
-              setCurrency: setCurrency,
-              setState: setState,
-              setCategory: setCategory,
-              setArea: (value: string) => {
-                setArea(value);
-                if (!lockedSubject) setSubject("all");
-                setTopic("all");
-              },
-              setTopic: (value: string) => {
-                const topicSubject = trainerTopicSubject(value);
-                if (lockedSubject && topicSubject && topicSubject !== lockedSubject) return;
-                if (topicSubject && !lockedSubject) {
-                  setSubject(topicSubject);
-                  setArea("all");
-                }
-                setTopic(value);
-              },
-              setLimit,
-              setOrderMode,
-            }}
-            start={startTraining}
-          />
-        </div>
-        <details className="question-workspace__help">
-          <summary>Como funciona este treino</summary>
-          <p>
-            Primeiras respostas registram seu desempenho. Revisões não pontuam novamente. O
-            cronômetro acompanha seu ritmo, sem limitar o tempo da questão.
-          </p>
-          {practiceMode === "catalog" && (
-            <p>{examCoverage({ contest, career, year }, pool.length, true)}</p>
-          )}
-        </details>
+        <TrainerSetup
+          total={trainingCatalog.length}
+          available={pool.length}
+          choices={choices}
+          facets={facets}
+          values={{
+            contest,
+            board,
+            career,
+            year,
+            appliedExam,
+            subject,
+            source,
+            reviewed,
+            difficulty,
+            state,
+            category,
+            area,
+            topic,
+            limit,
+            orderMode,
+            includeAnswered,
+          }}
+          setters={{
+            setContest: manual(setContest),
+            setBoard: manual(setBoard),
+            setCareer: manual(setCareer),
+            setYear: manual(setYear),
+            setAppliedExam: selectAppliedExam,
+            setSubject: manual((value: string) => {
+              setSubject(value);
+              setTopic("all");
+            }),
+            setSource: manual(setSource),
+            setReviewed: manual(setReviewed),
+            setDifficulty: manual(setDifficulty),
+            setState: manual(setState),
+            setCategory: manual(setCategory),
+            setArea: (value: string) => {
+              setArea(value);
+              setSubject("all");
+              setTopic("all");
+            },
+            setTopic: manual(setTopic),
+            setLimit,
+            setOrderMode,
+            setIncludeAnswered,
+          }}
+          start={startTraining}
+        />
       </div>
     );
   if (!questions.length)
@@ -1665,17 +696,7 @@ function QuestionTrainer() {
     );
   if (!question)
     return (
-      <TrainingResult
-        total={questions.length}
-        correct={correct}
-        wrong={wrong}
-        restart={restart}
-        review={sessionReinforce}
-        mixed={practiceMode === "catalog"}
-        skipped={skipped}
-        reviewFirstError={() => goTo(results.findIndex((result) => result === "err"))}
-        reviewFirstSkipped={() => goTo(results.findIndex((result) => result === "skipped"))}
-      />
+      <TrainingResult total={questions.length} correct={correct} wrong={wrong} restart={restart} />
     );
 
   const isCorrect = selected === question.answer;
@@ -1684,7 +705,7 @@ function QuestionTrainer() {
   const explanation = splitExplanation(question.explanation);
   const relatedMaterials = relatedTrainerMaterials(question, library.data ?? []);
   const supportAvailable = canOpenTrainerLearning(
-    answered && locked.has(questionIdentity(question)),
+    answered && locked.has(lockedKey(question.source, question.id)),
     saving,
     lockedLoading,
   );
@@ -1697,11 +718,8 @@ function QuestionTrainer() {
     setModal("help");
     if (library.isError) void library.refetch();
   };
-  const priorAnswer = nonScoring ? locked.get(questionIdentity(question)) : undefined;
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado =
-    question.kind === "true_false" || (!hasOptions && questionAnswers(question).join("") === "CE");
-  const canStrike = canStrikeQuestion(question);
+  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
     hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
   const chooseOption = (letter: Answer) => {
@@ -1710,89 +728,16 @@ function QuestionTrainer() {
     setSelected(letter);
   };
   const toggleStrike = (letter: Answer) => {
-    if (!canStrike || answered || savingRef.current) return;
+    if (answered || savingRef.current) return;
     setStruck((items) =>
       items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
     );
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="trainer-session-shell trainer-resolution-workspace question-workspace">
-      {routeFilters.planned === "1" && questions.length < (Number(limit) || 20) && (
-        <p role="status" className="rounded-xl border border-amber-500/40 bg-card p-3 text-sm">
-          {plannedAvailability(questions.length, Number(limit) || 20)}
-        </p>
-      )}
-      <Dialog
-        open={leaveDialogOpen}
-        onOpenChange={(open) => {
-          if (!open) cancelLeave();
-        }}
-      >
-        <DialogContent
-          className="max-w-sm rounded-2xl"
-          onEscapeKeyDown={(event) => {
-            if (saving) event.preventDefault();
-          }}
-        >
-          <DialogHeader>
-            <span className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-              <PauseCircle className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <DialogTitle>Encerrar este treino?</DialogTitle>
-            <DialogDescription>
-              {saving
-                ? "Aguarde enquanto sua resposta é salva."
-                : "Ao encerrar, a retomada desta sessão será removida. As respostas já confirmadas permanecem no seu histórico. Para continuar depois, você pode atualizar ou fechar a página."}
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter className="gap-2 sm:justify-start">
-            <Button onClick={cancelLeave}>Continuar estudando</Button>
-            <Button variant="outline" onClick={confirmLeave} disabled={saving}>
-              Encerrar treino
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-
-      <aside
-        role="status"
-        className="trainer-session-status"
-        data-error={bookmarkError || undefined}
-      >
-        <ShieldCheck aria-hidden="true" />
-        <span>
-          {bookmarkError
-            ? "Não foi possível salvar a retomada neste navegador. Evite recarregar antes de concluir."
-            : resumeNotice
-              ? "Treino retomado. Sua posição fica salva neste navegador."
-              : "Sua posição fica salva neste navegador para continuar depois."}
-        </span>
-        {sessionExamCoverage(questions) && (
-          <details>
-            <summary>Cobertura da prova</summary>
-            <p>{sessionExamCoverage(questions)}</p>
-          </details>
-        )}
-      </aside>
-      {examNotice}
+    <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
-      {materialNotice}
-      {activityNotice}
-      {noText && <MissingTextNotice scoring />}
-      {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
-        <div
-          role="status"
-          className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100"
-        >
-          <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-          <p>
-            <strong>Modo reforço.</strong> Revisão sem novos pontos ou consumo do limite diário. Sua
-            primeira resposta permanece como registro oficial.
-          </p>
-        </div>
-      )}
-      {routeFilters.reinforce === "1" && !sessionReinforce && (
+      {routeFilters.reinforce === "1" && (
         <div className="reinforce-banner">
           <BookOpenCheck className="h-5 w-5 shrink-0" />
           <div>
@@ -1804,7 +749,7 @@ function QuestionTrainer() {
           </div>
         </div>
       )}
-      {reachedDailyLimit && !nonScoring && (
+      {reachedDailyLimit && (
         <div
           role="status"
           className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
@@ -1820,426 +765,292 @@ function QuestionTrainer() {
           </span>
         </div>
       )}
-      <header className="trainer-session-command">
-        <div>
-          <span className="trainer-panel-kicker">
-            {isEnemContest(question.contest) ? "PREPARAÇÃO ENEM" : "TREINAMENTO POR QUESTÕES"}
-          </span>
-          <h1>{question.subject}</h1>
+      <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5">
+          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+            <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
+          </Button>
+          <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
+            <ArrowLeft className="mr-1.5 h-4 w-4" /> Anterior
+          </Button>
         </div>
-        <div>
-          {user?.id && <SaveStudyLater userId={user.id} question={question} />}
-          <Button
-            className="trainer-map-trigger"
-            variant="outline"
-            onClick={() => setMapOpen(true)}
-          >
-            <LayoutGrid className="mr-2 h-4 w-4" />
-            Navegar questões
-          </Button>
-          <Button variant="outline" onClick={() => setConfirmStop(true)}>
-            <PauseCircle className="mr-2 h-4 w-4" />
-            Encerrar treino
-          </Button>
+        <div className="flex items-center gap-2">
+          <Badge variant="secondary">
+            <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
+          </Badge>
+          <Badge variant="outline">Ranking de questões</Badge>
         </div>
       </header>
-      <div className="trainer-session-layout">
-        <div className="trainer-question-column">
-          <Card
-            id="trainer-question"
-            tabIndex={-1}
-            aria-label="Questão atual do treino"
-            className="question-window trainer-question-paper trainer-focus-target"
-            key={question.id}
-          >
-            <CardContent className="trainer-question-content">
-              <QuestionCode question={question} />
-              {context.automatic && (
-                <TrainerContextBanner
-                  discipline={context.discipline}
-                  topic={context.topic}
-                  automatic={context.automatic}
-                />
-              )}
-              <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-                {question.didacticProvenance ? (
-                  <Badge variant="secondary">Material didático catalogado</Badge>
-                ) : (
-                  question.isOriginal && <Badge variant="secondary">Questão autoral</Badge>
-                )}
-                {!question.didacticProvenance && <Badge variant="outline">{question.board}</Badge>}
-                <Badge variant="outline">
-                  {question.contest} ·{" "}
-                  {question.didacticProvenance ? `catalogação ${question.year}` : question.year}
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
-                >
-                  {DIFFICULTY_LABEL[question.difficulty]}
-                </Badge>
-                {currencyAllowed && question.currencyTags?.length ? (
-                  <Hint content={question.currencyNote ?? question.currencyTags.join(" · ")}>
-                    <Badge
-                      variant="outline"
-                      className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
-                    >
-                      <Sparkles className="h-3 w-3" aria-hidden="true" />
-                      Atual:{" "}
-                      {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
-                        "Prova recente"}
-                    </Badge>
-                  </Hint>
-                ) : null}
-                <span className="ml-auto">
-                  <ReportQuestionButton question={question} />
-                </span>
-              </div>
-              {results[index] === "skipped" && !answered && (
-                <p
-                  role="status"
-                  className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm"
-                >
-                  Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não
-                  respondida.
-                </p>
-              )}
-              {(reviewingPast || priorAnswer) && (
-                <div
-                  role="status"
-                  className="mb-3 flex items-start gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200"
-                >
-                  <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-                  <span>
-                    Você já respondeu esta questão.{" "}
-                    {reviewingPast ? "Resposta já registrada — revisão sem novo envio. " : ""}
-                    Esta tentativa não gera novos pontos no ranking.
-                  </span>
-                </div>
-              )}
-              <div className="trainer-question-heading">
-                <div className="min-w-0 flex-1 basis-24">
-                  <h2 className="font-display text-xl font-extrabold leading-none text-foreground sm:text-3xl">
-                    Questão {index + 1}{" "}
-                    <span className="text-muted-foreground">de {questions.length}</span>
-                  </h2>
-                  <p className="trainer-mobile-summary mt-1.5 text-xs text-muted-foreground">
-                    {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped}{" "}
-                    puladas
-                  </p>
-                </div>
-                {(!reviewingPast || sessionSeconds !== undefined) && (
-                  <div className="question-timing-row" aria-label="Tempo de resolução">
-                    <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
-                  </div>
-                )}
-              </div>
-              <progress
-                className="trainer-question-progress"
-                value={correct + wrong}
-                max={Math.max(1, questions.length)}
-                aria-label="Questões respondidas nesta sessão"
-              />
-              {parsed.base && (
-                <details
-                  open
-                  className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
-                >
-                  <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                    {parsed.baseLabel}
-                    <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
-                  </summary>
-                  <div className="max-h-64 overflow-y-auto px-3 pb-3 text-foreground sm:max-h-[26rem] sm:px-4 sm:pb-4">
-                    <QuestionSupportText
-                      text={parsed.base}
-                      citesLines={/(^|\W)linhas?\s+\d+/i.test(
-                        `${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`,
-                      )}
-                    />
-                  </div>
-                </details>
-              )}
-              <div className="mb-3 flex flex-wrap items-center gap-2 border-b pb-3">
-                <QuestionAudioButton
-                  text={[
-                    reflowStem(parsed.stem),
-                    ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
-                  ].join("\n")}
-                />
-                <ReadingSizeInline className="ml-auto" />
-              </div>
-              <QuestionProse text={reflowStem(parsed.stem)} className="trainer-question-stem" />
-              <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
-              <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
-                {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
+      <Card
+        className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        key={question.id}
+      >
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
+          <div className="flex items-center gap-3">
+            <span className="flex gap-1.5" aria-hidden>
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
+            </span>
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+              Treinador de questões
+            </span>
+          </div>
+          <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-700 dark:text-emerald-400">
+            <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />{" "}
+            Correção imediata
+          </span>
+        </div>
+        <CardContent className="p-3.5 sm:p-5 md:p-7">
+          <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+            <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
+              {question.subject}
+            </span>
+            <Badge variant="outline">{question.board}</Badge>
+            <Badge variant="outline">
+              {question.contest} · {question.year}
+            </Badge>
+            <Badge
+              variant="outline"
+              className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
+            >
+              {DIFFICULTY_LABEL[question.difficulty]}
+            </Badge>
+            <span className="ml-auto">
+              <ReportQuestionButton question={question} />
+            </span>
+          </div>
+          {reviewingPast && (
+            <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
+              <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
+              revisão apenas, sem reenvio.
+            </div>
+          )}
+          <div className="mb-3 flex items-end justify-between gap-3">
+            <div>
+              <h2 className="font-display text-2xl font-extrabold leading-none text-foreground sm:text-3xl">
+                Questão {index + 1}{" "}
+                <span className="text-muted-foreground">de {questions.length}</span>
+              </h2>
+              <p className="mt-1.5 text-xs text-muted-foreground">
+                {correct} certas · {wrong} erradas
               </p>
-              {hasOptions && (
-                <div className="mt-3 space-y-2">
-                  {parsed.options.map((option) => {
-                    const isStruck = !answered && struck.includes(option.letter);
-                    const isSelected = selected === option.letter;
-                    const isRight = answered && option.letter === question.answer;
-                    const isWrong = answered && isSelected && option.letter !== question.answer;
-                    return (
-                      <div key={option.letter} className="flex items-start gap-2">
-                        <button
-                          type="button"
-                          aria-pressed={isSelected}
-                          disabled={answered || saving}
-                          onClick={() => chooseOption(option.letter)}
-                          className={cn(
-                            "trainer-option",
-                            isStruck && "is-eliminated",
-                            isSelected && !answered && "is-selected",
-                            isRight && "is-correct",
-                            isWrong && "is-incorrect",
-                          )}
-                        >
-                          <span className="trainer-option-letter">{option.letter}</span>
-                          <span className={cn("q-option-text flex-1", isStruck && "line-through")}>
-                            <LawText text={option.text} />
-                          </span>
-                          {isRight && (
-                            <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                              <Check className="h-3.5 w-3.5 text-current" /> Correta
-                            </span>
-                          )}
-                          {isWrong && (
-                            <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
-                              <XCircle className="h-3.5 w-3.5 text-current" /> Sua resposta
-                            </span>
-                          )}
-                        </button>
-                        {canStrike && !answered && (
-                          <Hint content={isStruck ? "Desfazer risco" : "Riscar alternativa"}>
-                            <Button
-                              type="button"
-                              variant={isStruck ? "secondary" : "ghost"}
-                              size="sm"
-                              className="min-h-11 shrink-0 gap-1.5 px-2"
-                              disabled={answered || saving}
-                              aria-pressed={isStruck}
-                              aria-label={
-                                isStruck
-                                  ? `Desfazer risco da alternativa ${option.letter}`
-                                  : `Riscar alternativa ${option.letter}`
-                              }
-                              onClick={() => toggleStrike(option.letter)}
-                            >
-                              <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                            </Button>
-                          </Hint>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-              <div
+            </div>
+            <ElapsedTimer startedAt={startedAt} running={!answered} />
+          </div>
+          <div
+            className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
+            role="img"
+            aria-label={`Questão ${index + 1} de ${questions.length}`}
+          >
+            {questions.map((q, i) => (
+              <i
+                key={q.id}
                 className={cn(
-                  "mt-3 grid gap-2",
-                  hasOptions && "hidden",
-                  questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+                  "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
+                  results[i] === "ok" && "bg-emerald-500",
+                  results[i] === "err" && "bg-rose-500",
+                  !results[i] && i === index && "bg-amber-400",
+                  !results[i] && i !== index && "bg-muted",
                 )}
-              >
-                {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
-                  <div key={answer} className="flex min-w-0 items-center gap-2">
+              />
+            ))}
+          </div>
+          {parsed.base && (
+            <details
+              open
+              className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                {parsed.baseLabel}
+                <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
+              </summary>
+              <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
+                {parsed.base}
+              </div>
+            </details>
+          )}
+          <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
+            {parsed.stem}
+          </p>
+          <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
+            {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
+          </p>
+          {hasOptions && (
+            <div className="mt-3 space-y-2">
+              {parsed.options.map((option) => {
+                const isStruck = struck.includes(option.letter);
+                const isSelected = selected === option.letter;
+                const isRight = answered && option.letter === question.answer;
+                const isWrong = answered && isSelected && option.letter !== question.answer;
+                return (
+                  <div key={option.letter} className="flex items-start gap-2">
                     <button
                       type="button"
-                      aria-pressed={selected === answer}
+                      aria-pressed={isSelected}
                       disabled={answered || saving}
-                      onClick={() => chooseOption(answer)}
+                      onClick={() => chooseOption(option.letter)}
                       className={cn(
-                        "trainer-verdict min-w-0 flex-1",
-                        !answered && struck.includes(answer) && "is-eliminated",
-                        selected === answer && !answered && "is-selected",
-                        answered && answer === question.answer && "is-correct",
-                        answered &&
-                          selected === answer &&
-                          answer !== question.answer &&
-                          "is-incorrect",
+                        "group flex flex-1 items-center gap-2 rounded-xl border border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-background sm:gap-3 sm:p-3 sm:leading-6",
+                        isStruck && "opacity-50",
+                        isSelected &&
+                          !answered &&
+                          "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
+                        isRight &&
+                          "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
+                        isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
                       )}
                     >
                       <span
                         className={cn(
-                          "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
-                          selected === answer &&
-                            !answered &&
-                            "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+                          "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
+                          isSelected && !answered && "bg-amber-400 text-slate-900",
+                          isRight && "bg-emerald-600 text-white",
+                          isWrong && "bg-rose-600 text-white",
                         )}
                       >
-                        {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                        {option.letter}
                       </span>
-                      <span className={cn(!answered && struck.includes(answer) && "line-through")}>
-                        {labelFor(answer)}
+                      <span className={cn("flex-1", isStruck && "line-through")}>
+                        {option.text}
                       </span>
-                      {answered && (answer === question.answer || selected === answer) && (
-                        <span className="trainer-verdict__outcome">
-                          {answer === question.answer ? (
-                            <Check aria-hidden="true" size={14} className="text-current" />
-                          ) : (
-                            <XCircle aria-hidden="true" size={14} className="text-current" />
-                          )}
-                          {answer === question.answer ? "Gabarito" : "Sua resposta"}
+                      {isRight && (
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
+                          <Check className="h-3.5 w-3.5" /> Correta
+                        </span>
+                      )}
+                      {isWrong && (
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
+                          <XCircle className="h-3.5 w-3.5" /> Sua resposta
                         </span>
                       )}
                     </button>
-                    {canStrike && !answered && (
-                      <Button
-                        type="button"
-                        variant={struck.includes(answer) ? "secondary" : "ghost"}
-                        size="sm"
-                        className="min-h-11 shrink-0 gap-1.5 px-2"
-                        disabled={saving}
-                        aria-pressed={struck.includes(answer)}
-                        aria-label={`${struck.includes(answer) ? "Desfazer risco de" : "Riscar"} ${labelFor(answer)}`}
-                        onClick={() => toggleStrike(answer)}
-                      >
-                        <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                      </Button>
-                    )}
-                  </div>
-                ))}
-              </div>
-              {answered && (
-                <AnswerFeedback
-                  selected={selected ? labelFor(selected) : "—"}
-                  answer={labelFor(question.answer)}
-                  correct={isCorrect}
-                  sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
-                  elapsedSeconds={shownSeconds}
-                >
-                  {!isPlaceholderExplanation(explanation.main) && (
-                    <QuestionProse
-                      text={
-                        explanation.main.length > 420
-                          ? `${explanation.main.slice(0, 420)}…`
-                          : explanation.main
-                      }
-                    />
-                  )}
-                </AnswerFeedback>
-              )}
-              <div className="trainer-answer-actions">
-                <Button
-                  variant="outline"
-                  disabled={index === 0 || saving}
-                  onClick={() => goTo(index - 1)}
-                >
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Questão anterior
-                </Button>
-                {user?.id && (
-                  <div className="trainer-save-question">
-                    <SaveStudyLater userId={user.id} question={question} />
-                  </div>
-                )}
-                {!answered ? (
-                  <>
-                    <Button variant="outline" disabled={saving} onClick={skipQuestion}>
-                      <SkipForward className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Pular questão
-                    </Button>
                     <Button
-                      size="lg"
-                      disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
-                      onClick={submit}
-                      className="trainer-main-action"
+                      type="button"
+                      variant={isStruck ? "secondary" : "ghost"}
+                      size="icon"
+                      className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
+                      disabled={answered || saving}
+                      aria-pressed={isStruck}
+                      aria-label={
+                        isStruck
+                          ? `Desfazer risco da alternativa ${option.letter}`
+                          : `Riscar alternativa ${option.letter}`
+                      }
+                      title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                      onClick={() => toggleStrike(option.letter)}
                     >
-                      {saving ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Salvando resposta…
-                        </>
-                      ) : (
-                        <>
-                          Confirmar resposta <Check className="ml-2 h-4 w-4" />
-                        </>
-                      )}
+                      <Strikethrough className="h-4 w-4" />
                     </Button>
-                  </>
-                ) : (
-                  <>
-                    <Button variant="outline" onClick={openLearning}>
-                      <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Comentário e
-                      materiais
-                    </Button>
-                    <Button size="lg" onClick={next} className="trainer-main-action">
-                      {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+          <div
+            className={cn(
+              "mt-3 grid gap-2",
+              hasOptions && "hidden",
+              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+            )}
+          >
+            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
+              <button
+                key={answer}
+                type="button"
+                aria-pressed={selected === answer}
+                disabled={answered || saving}
+                onClick={() => setSelected(answer)}
+                className={cn(
+                  "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
+                  selected === answer &&
+                    !answered &&
+                    "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
+                  answered &&
+                    answer === question.answer &&
+                    "border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
+                  answered &&
+                    selected === answer &&
+                    answer !== question.answer &&
+                    "border-rose-500 bg-rose-500/10 text-rose-700 dark:text-rose-300",
                 )}
-              </div>
-              {saveError && (
-                <p
-                  role="alert"
-                  className="mt-3 rounded-xl border border-rose-300 bg-rose-50 p-3 text-sm text-rose-900 dark:border-rose-800 dark:bg-rose-950/30 dark:text-rose-100"
-                >
-                  {saveError}
-                </p>
-              )}
-              {supportNotice && !supportAvailable && (
-                <div
-                  id={supportNoticeId}
-                  role="status"
-                  className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
-                >
-                  <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                  <p>
-                    {saving
-                      ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
-                      : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
-                  </p>
-                </div>
-              )}
-              {answered && (
-                <details
-                  className="trainer-community"
-                  onToggle={(event) => setCommunityOpen(event.currentTarget.open)}
-                >
-                  <summary>Discussão desta questão</summary>
-                  {communityOpen && (
-                    <QuestionSocialPanel
-                      questionId={question.id}
-                      questionSource={question.source}
-                    />
+              >
+                <span
+                  className={cn(
+                    "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                    selected === answer &&
+                      !answered &&
+                      "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
                   )}
-                </details>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-        <aside className="trainer-session-overview">
-          <TrainerSessionMap
-            total={questions.length}
-            index={index}
-            results={results}
-            saving={saving}
-            onSelect={goTo}
-          />
-        </aside>
-      </div>
-      <Dialog open={mapOpen} onOpenChange={setMapOpen}>
-        <DialogContent className="trainer-map-window">
-          <DialogTitle>Mapa da sessão</DialogTitle>
-          <DialogDescription>
-            Consulte o progresso e retome uma questão já liberada.
-          </DialogDescription>
-          <TrainerSessionMap
-            total={questions.length}
-            index={index}
-            results={results}
-            saving={saving}
-            onSelect={goTo}
-          />
-        </DialogContent>
-      </Dialog>
+                >
+                  {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                </span>
+                {labelFor(answer)}
+              </button>
+            ))}
+          </div>
+          <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
+            {!answered ? (
+              <>
+                <Button
+                  variant="ghost"
+                  aria-disabled={!supportAvailable}
+                  aria-describedby={supportNotice ? supportNoticeId : undefined}
+                  className="text-muted-foreground"
+                  onClick={openLearning}
+                >
+                  <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
+                </Button>
+                <Button
+                  size="lg"
+                  disabled={!selected || saving || reachedDailyLimit}
+                  onClick={submit}
+                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                >
+                  Confirmar resposta <Check className="ml-2 h-4 w-4" />
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="outline" onClick={openLearning}>
+                  <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este
+                  assunto
+                </Button>
+                <Button
+                  size="lg"
+                  onClick={next}
+                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                >
+                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </>
+            )}
+          </div>
+          {supportNotice && !supportAvailable && (
+            <div
+              id={supportNoticeId}
+              role="status"
+              className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
+            >
+              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <p>
+                {saving
+                  ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
+                  : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
+              </p>
+            </div>
+          )}
+          {answered && (
+            <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
+          )}
+        </CardContent>
+      </Card>
       <Dialog
         open={modal !== null && supportAvailable}
         onOpenChange={(open) => !open && setModal(null)}
       >
-        <DialogContent className="trainer-learning-window">
+        <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
           <>
             <DialogHeader>
               <div
@@ -2248,18 +1059,26 @@ function QuestionTrainer() {
                   isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700",
                 )}
               >
-                <BookOpenCheck aria-hidden="true" />
+                {modal === "help" ? <BrainCircuit /> : isCorrect ? <CheckCircle2 /> : <X />}
               </div>
-              <DialogTitle>Comentário e materiais</DialogTitle>
+              <DialogTitle>
+                {modal === "help"
+                  ? "Entenda, revise e fixe"
+                  : isCorrect
+                    ? "Resposta correta"
+                    : "Vamos corrigir este ponto"}
+              </DialogTitle>
               <DialogDescription>
-                <span className="mb-1 block">
-                  Revise o raciocínio e aprofunde o assunto com o conteúdo da plataforma.
-                </span>
+                {modal === "help" && (
+                  <span className="mb-1 block">
+                    Revise o raciocínio e aprofunde o assunto com o conteúdo da plataforma.
+                  </span>
+                )}
                 Você marcou {selected ? labelFor(selected) : "—"}. O gabarito é{" "}
                 {labelFor(question.answer)}.
               </DialogDescription>
             </DialogHeader>
-            <div className="trainer-learning-body">
+            <div className="space-y-4">
               {!isCorrect && (
                 <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
                   <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
@@ -2279,7 +1098,7 @@ function QuestionTrainer() {
                   <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
                     Comentário da questão
                   </p>
-                  <QuestionProse text={explanation.main} className="text-sm" />
+                  <p className="text-sm leading-6">{explanation.main}</p>
                 </div>
               )}
               {explanation.example && (
@@ -2322,17 +1141,25 @@ function QuestionTrainer() {
                   </div>
                 </div>
               )}
-              <TrainerLearningMaterials
-                key={question.source + question.id}
-                materials={relatedMaterials}
-                loading={library.isLoading}
-                error={library.isError}
-              />
+              {modal === "help" ? (
+                <TrainerLearningMaterials
+                  key={question.source + question.id}
+                  materials={relatedMaterials}
+                  loading={library.isLoading}
+                  error={library.isError}
+                />
+              ) : (
+                <Button variant="outline" className="w-full" onClick={openLearning}>
+                  <BookOpenCheck className="mr-2 h-4 w-4" /> Revisar com materiais e flashcards
+                </Button>
+              )}
             </div>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setModal(null)}>
-                Voltar à questão
-              </Button>
+              {modal === "help" && (
+                <Button variant="outline" onClick={() => setModal(null)}>
+                  Voltar à questão
+                </Button>
+              )}
               <Button onClick={next}>
                 {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -2355,13 +1182,13 @@ type SetupValues = {
   source: string;
   reviewed: string;
   difficulty: string;
-  currency: string;
   state: string;
   category: string;
   area: string;
   topic: string;
   limit: string;
   orderMode: OrderMode;
+  includeAnswered: boolean;
 };
 type SetupSetters = {
   setContest: (value: string) => void;
@@ -2373,38 +1200,26 @@ type SetupSetters = {
   setSource: (value: string) => void;
   setReviewed: (value: string) => void;
   setDifficulty: (value: string) => void;
-  setCurrency: (value: string) => void;
   setState: (value: string) => void;
   setCategory: (value: string) => void;
   setArea: (value: string) => void;
   setTopic: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
+  setIncludeAnswered: (value: boolean) => void;
 };
 
 function TrainerSetup({
-  practiceModes,
-  loading,
-  lockedSubject,
-  lockedCollection,
+  total,
   available,
-  dailyRemaining,
-  newAnswersRemaining,
   choices,
   facets,
-  currencyLocked,
   values,
   setters,
   start,
 }: {
-  practiceModes: React.ReactNode;
-  loading: boolean;
-  lockedSubject: string | null;
-  lockedCollection: "enem" | "contests" | null;
-  currencyLocked: boolean;
+  total: number;
   available: number;
-  dailyRemaining?: number | undefined;
-  newAnswersRemaining?: number | undefined;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
   choices: {
     contests: string[];
@@ -2415,376 +1230,266 @@ function TrainerSetup({
     topics: string[];
     states: string[];
     categories: string[];
-    currencies: string[];
     exams: Array<[string, string]>;
   };
   values: SetupValues;
   setters: SetupSetters;
   start: () => void;
 }) {
-  const sessionSize = trainerSessionSize(available, values.limit, dailyRemaining);
   const reset = () => {
-    setters.setContest(isEnemContest(values.contest) ? "ENEM" : "all");
+    setters.setContest("all");
     setters.setBoard("all");
     setters.setCareer("all");
     setters.setYear("all");
     setters.setAppliedExam("all");
-    if (!lockedSubject) setters.setSubject("all");
+    setters.setSubject("all");
     setters.setSource("all");
     setters.setReviewed("all");
     setters.setDifficulty("all");
-    setters.setCurrency("all");
     setters.setState("all");
     setters.setCategory("all");
     setters.setArea("all");
     setters.setTopic("all");
+    setters.setIncludeAnswered(false);
   };
-  const selected = Object.entries(values).filter(
-    ([key, value]) => !["limit", "orderMode"].includes(key) && value !== "all",
-  );
   return (
-    <div className="trainer-configuration">
-      <section className="trainer-config-card" aria-labelledby="trainer-content-title">
-        <header className="trainer-config-heading">
-          <span>
-            <BookOpenCheck aria-hidden="true" />
-          </span>
+    <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
+      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-4 text-white shadow-xl sm:rounded-2xl sm:p-6 md:p-8">
+        <div className="grid gap-3 sm:gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <h2 id="trainer-content-title">O que você quer estudar?</h2>
-            <p>Escolha os filtros e o modo de prática.</p>
+            <Badge className="mb-2 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10 sm:mb-4">
+              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
+            </Badge>
+            <h1 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
+              Monte sua sessão de questões
+            </h1>
+            <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-300 sm:mt-3 sm:text-sm sm:leading-6">
+              Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
+              imediata e orientação pedagógica, sem afetar o ranking dos simulados.
+            </p>
           </div>
-        </header>
-        <fieldset className="trainer-collection">
-          <legend>Área de preparação</legend>
-          <div>
-            {(["contests", "enem"] as const).map((collection) => {
-              const active = isEnemContest(values.contest) === (collection === "enem");
-              return (
-                <button
-                  key={collection}
-                  type="button"
-                  data-preparation={collection}
-                  aria-pressed={active}
-                  disabled={!!lockedCollection && collection !== lockedCollection}
-                  title={
-                    lockedCollection && collection !== lockedCollection
-                      ? "Abra o Treinador de questões pela barra lateral para mudar a área de preparação."
-                      : undefined
-                  }
-                  aria-label={collection === "enem" ? "ENEM" : "Concursos públicos"}
-                  onClick={() => {
-                    if (active || (lockedCollection && collection !== lockedCollection)) return;
-                    reset();
-                    setters.setContest(collection === "enem" ? "ENEM" : "all");
-                  }}
-                >
-                  {collection === "enem" ? (
-                    <GraduationCap aria-hidden="true" />
-                  ) : (
-                    <ShieldCheck aria-hidden="true" />
-                  )}
-                  <span>
-                    {collection === "enem" ? "ENEM" : "Concursos públicos"}
-                    <small>
-                      {collection === "enem"
-                        ? "Somente questões do exame"
-                        : "Bancas, cargos e editais"}
-                    </small>
-                  </span>
-                  {active && <CheckCircle2 aria-hidden="true" />}
-                </button>
-              );
-            })}
+          <div className="grid grid-cols-2 gap-2 text-center">
+            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
+              <p className="text-xl font-black sm:text-2xl">{total}</p>
+              <p className="text-[10px] text-slate-300">questões ativas</p>
+            </div>
+            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
+              <p className="text-xl font-black text-amber-200 sm:text-2xl">{available}</p>
+              <p className="text-[10px] text-slate-300">na seleção</p>
+            </div>
           </div>
-        </fieldset>
-        {lockedCollection && (
-          <p className="trainer-scope-note">
-            Área vinculada a este treino. Para mudar, abra o Treinador de questões pela barra
-            lateral.
-          </p>
-        )}
-        {values.area !== "all" && (
-          <p className="trainer-scope-note">
-            Área do cronograma: <strong>{values.area}</strong>
-            <button
-              type="button"
-              onClick={() => {
-                setters.setArea("all");
-                setters.setTopic("all");
-              }}
-            >
-              Remover
-            </button>
-          </p>
-        )}
-        {practiceModes}
-        <div className="trainer-filter-grid">
-          {lockedSubject ? (
-            <div
-              className="trainer-field trainer-fixed-discipline"
-              role="group"
-              aria-label="Disciplina fixa neste treino"
-            >
-              <span className="trainer-field__label">Disciplina</span>
-              <div>
-                <strong>{lockedSubject}</strong>
-                <Lock aria-hidden="true" />
-              </div>
-              <p>
-                Para trocar de disciplina, abra <strong>Treinador de questões</strong> na barra
-                lateral.
+        </div>
+      </section>
+      <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
+        <CardContent className="p-3.5 sm:p-5 md:p-7">
+          <div className="mb-3 flex items-center gap-2.5 sm:mb-6 sm:gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200 sm:h-11 sm:w-11">
+              <BookOpenCheck className="h-5 w-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black">Filtros do treino</h2>
+              <p className="text-xs text-muted-foreground">
+                As opções podem ser combinadas livremente.
               </p>
             </div>
-          ) : (
-            <TrainerFilter
-              label="Disciplina"
-              value={values.subject}
-              setValue={setters.setSubject}
-              options={choices.subjects}
-              counts={facets.counts["subject"]}
-              allCount={facets.totals["subject"]}
-              allLabel="Todas as disciplinas"
-            />
+          </div>
+          {values.area !== "all" && (
+            <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
+              Filtro do seu cronograma: {values.area}
+              <button
+                type="button"
+                className="underline"
+                onClick={() => {
+                  setters.setArea("all");
+                  setters.setTopic("all");
+                }}
+              >
+                limpar
+              </button>
+            </p>
           )}
-          <TrainerFilter
-            label="Assunto"
-            value={values.topic}
-            setValue={setters.setTopic}
-            options={choices.topics}
-            counts={facets.counts["topic"]}
-            allCount={facets.totals["topic"]}
-            labels={Object.fromEntries(
-              choices.topics.map((value) => [value, topicFilterLabel(value)]),
-            )}
-            allLabel="Todos os assuntos"
-          />
-          {!isEnemContest(values.contest) && (
+          <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             <TrainerFilter
+              counts={facets.counts["board"]}
+              allCount={facets.totals["board"]}
               label="Banca"
               value={values.board}
               setValue={setters.setBoard}
               options={choices.boards}
-              counts={facets.counts["board"]}
-              allCount={facets.totals["board"]}
-              allLabel="Todas as bancas"
             />
-          )}
-          <TrainerFilter
-            label="Ano"
-            value={values.year}
-            setValue={setters.setYear}
-            options={choices.years}
-            counts={facets.counts["year"]}
-            allCount={facets.totals["year"]}
-            allLabel="Todos os anos"
-          />
-        </div>
-        <details
-          className="trainer-refinements"
-          open={
-            [
-              "contest",
-              "career",
-              "currency",
-              "appliedExam",
-              "source",
-              "reviewed",
-              "difficulty",
-              "state",
-              "category",
-            ].some((key) => values[key as keyof SetupValues] !== "all") || undefined
-          }
-        >
-          <summary>
-            <SlidersHorizontal aria-hidden="true" />
-            <span>
-              Mais filtros
-              <small>Concurso, cargo, atualidade, origem e dificuldade</small>
-            </span>
-            <ChevronDown aria-hidden="true" />
-          </summary>
-          <div className="trainer-filter-grid">
             <TrainerFilter
-              label="Concurso / material de origem"
-              description="De onde vêm as questões: órgão do concurso ou material de estudo."
-              allLabel="Todos os concursos e materiais"
+              counts={facets.counts["subject"]}
+              allCount={facets.totals["subject"]}
+              label="Disciplina"
+              value={values.subject}
+              setValue={setters.setSubject}
+              options={choices.subjects}
+            />
+            <TrainerFilter
+              counts={facets.counts["topic"]}
+              allCount={facets.totals["topic"]}
+              label="Assunto"
+              value={values.topic}
+              setValue={setters.setTopic}
+              options={choices.topics}
+              labels={Object.fromEntries(
+                choices.topics.map((value) => [value, topicFilterLabel(value)]),
+              )}
+              allLabel="Todos os assuntos"
+            />
+            <TrainerFilter
+              counts={facets.counts["contest"]}
+              allCount={facets.totals["contest"]}
+              label="Concurso"
               value={values.contest}
               setValue={setters.setContest}
               options={choices.contests}
-              counts={facets.counts["contest"]}
-              allCount={facets.totals["contest"]}
-              labels={Object.fromEntries(
-                choices.contests.map((value) => [value, questionContestOptionLabel(value)]),
-              )}
-              hideAll={isEnemContest(values.contest)}
             />
-            {!isEnemContest(values.contest) && (
-              <TrainerFilter
-                label="Cargo da prova"
-                description="Função disputada, como Agente, Escrivão ou Perito. Apenas cargos identificados."
-                value={values.career}
-                setValue={setters.setCareer}
-                options={choices.careers}
-                counts={facets.counts["career"]}
-                allCount={facets.totals["career"]}
-                allLabel="Qualquer cargo"
-              />
-            )}
-            {currencyLocked ? (
-              <div
-                role="note"
-                className="flex items-center gap-2 rounded-lg border border-dashed p-3 text-sm text-muted-foreground"
-              >
-                <Lock className="h-4 w-4 shrink-0" aria-hidden="true" />
-                <span>
-                  <strong className="text-foreground">Atualidade</strong>: conteúdo novo e em alta
-                  nas provas, a partir do plano Essencial.{" "}
-                  <Link
-                    to="/dashboard/subscriptions"
-                    className="font-semibold text-primary underline"
-                  >
-                    Ver planos
-                  </Link>
-                </span>
-              </div>
-            ) : (
-              <TrainerFilter
-                label="Atualidade"
-                value={values.currency}
-                setValue={setters.setCurrency}
-                options={["recent", ...choices.currencies]}
-                labels={{ recent: "Tudo que é atual" }}
-                counts={facets.counts["currency"]}
-                allCount={facets.totals["currency"]}
-                allLabel="Todas as questões"
-              />
-            )}
             <TrainerFilter
+              counts={facets.counts["career"]}
+              allCount={facets.totals["career"]}
+              label="Carreira ou cargo"
+              value={values.career}
+              setValue={setters.setCareer}
+              options={choices.careers}
+            />
+            <TrainerFilter
+              counts={facets.counts["state"]}
+              allCount={facets.totals["state"]}
+              label="Estado"
+              value={values.state}
+              setValue={setters.setState}
+              options={choices.states}
+            />
+            <TrainerFilter
+              counts={facets.counts["category"]}
+              allCount={facets.totals["category"]}
+              label="Categoria"
+              value={values.category}
+              setValue={setters.setCategory}
+              options={choices.categories}
+            />
+            <TrainerFilter
+              counts={facets.counts["year"]}
+              allCount={facets.totals["year"]}
+              label="Ano"
+              value={values.year}
+              setValue={setters.setYear}
+              options={choices.years}
+            />
+            <TrainerFilter
+              counts={facets.counts["exam"]}
+              allCount={facets.totals["exam"]}
               label="Prova aplicada"
               value={values.appliedExam}
               setValue={setters.setAppliedExam}
-              options={choices.exams.map(([key]) => key)}
+              options={choices.exams.map(([value]) => value)}
               labels={Object.fromEntries(choices.exams)}
-              counts={facets.counts["exam"]}
-              allCount={facets.totals["exam"]}
             />
             <TrainerFilter
+              counts={facets.counts["source"]}
+              allCount={facets.totals["source"]}
               label="Origem"
               value={values.source}
               setValue={setters.setSource}
-              options={["official", "curated", "didactic", "personal"]}
+              options={["official", "curated", "personal"]}
               labels={{
                 official: "Provas oficiais",
-                curated: "Autorais e repertório de estudo",
-                didactic: "Materiais didáticos catalogados",
+                curated: "Questões autorais",
                 personal: "Meu caderno",
               }}
-              counts={facets.counts["source"]}
-              allCount={facets.totals["source"]}
             />
             <TrainerFilter
+              counts={facets.counts["reviewed"]}
+              allCount={facets.totals["reviewed"]}
+              label="Explicação didática"
+              value={values.reviewed}
+              setValue={setters.setReviewed}
+              options={["reviewed"]}
+              labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
+              allLabel="Todas as questões"
+            />
+            <TrainerFilter
+              counts={facets.counts["difficulty"]}
+              allCount={facets.totals["difficulty"]}
               label="Dificuldade"
               value={values.difficulty}
               setValue={setters.setDifficulty}
               options={["fácil", "média", "difícil"]}
               labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
-              counts={facets.counts["difficulty"]}
-              allCount={facets.totals["difficulty"]}
             />
+            <label className="flex items-center gap-3 rounded-lg border bg-background px-3 py-2.5 sm:col-span-2 lg:col-span-3">
+              <input
+                type="checkbox"
+                checked={values.includeAnswered}
+                onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
+                className="h-4 w-4 accent-primary"
+              />
+              <span>
+                <span className="block text-sm font-bold">Incluir questões já respondidas</span>
+                <span className="block text-xs text-muted-foreground">
+                  Exibe questões anteriores para revisão. Elas continuarão bloqueadas para novo envio.
+                </span>
+              </span>
+            </label>
             <TrainerFilter
-              label="Explicação didática"
-              value={values.reviewed}
-              setValue={setters.setReviewed}
-              options={["reviewed"]}
-              labels={{ reviewed: "Com explicação e exemplo" }}
-              counts={facets.counts["reviewed"]}
-              allCount={facets.totals["reviewed"]}
+              label="Quantidade"
+              value={values.limit}
+              setValue={setters.setLimit}
+              options={["5", "10", "20", "30", "50"]}
+              allLabel="Quantidade"
+              hideAll
             />
-            <TrainerFilter
-              label="Estado"
-              value={values.state}
-              setValue={setters.setState}
-              options={choices.states}
-              counts={facets.counts["state"]}
-              allCount={facets.totals["state"]}
-            />
-            <TrainerFilter
-              label="Categoria"
-              value={values.category}
-              setValue={setters.setCategory}
-              options={choices.categories}
-              counts={facets.counts["category"]}
-              allCount={facets.totals["category"]}
-            />
+            <label className="space-y-1.5 sm:space-y-2">
+              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+                Ordem das questões
+              </span>
+              <Select
+                value={values.orderMode}
+                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
+              >
+                <SelectTrigger className="h-10 bg-background sm:h-11">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="random">Aleatório inteligente</SelectItem>
+                  <SelectItem value="exam">Ordem do acervo</SelectItem>
+                </SelectContent>
+              </Select>
+            </label>
           </div>
-        </details>
-        <div className="trainer-filter-footer">
-          <span>
-            {selected.length
-              ? `${selected.length} ${selected.length === 1 ? "critério aplicado" : "critérios aplicados"}`
-              : "Nenhum filtro adicional aplicado"}
-          </span>
-          <button type="button" onClick={reset}>
-            <RotateCcw aria-hidden="true" />
-            Limpar filtros
-          </button>
-        </div>
-      </section>
-      <aside className="trainer-session-builder" aria-labelledby="trainer-session-title">
-        <h2 id="trainer-session-title">Configurar sessão</h2>
-        <div className="trainer-stock">
-          <strong>{loading ? "…" : available.toLocaleString("pt-BR")}</strong>
-          <span>questões disponíveis neste modo</span>
-        </div>
-        <TrainerFilter
-          label="Quantidade"
-          value={values.limit}
-          setValue={setters.setLimit}
-          options={["5", "10", "20", "30", "50", "all"]}
-          labels={{ all: "Todas as questões da seleção" }}
-          hideAll
-        />
-        <QuestionFilterPicker
-          label="Ordem das questões"
-          value={values.orderMode}
-          onChange={(value) => setters.setOrderMode(value as OrderMode)}
-          options={["random", "exam"]}
-          labels={{ random: "Ordem aleatória", exam: "Ordem do acervo" }}
-          hideAll
-        />
-        <div className="trainer-start-bar">
-          <p>
-            {loading
-              ? "Conferindo as questões disponíveis…"
-              : dailyRemaining === 0
-                ? "Limite de novas respostas atingido hoje"
-                : sessionSize
-                  ? `${sessionSize} ${sessionSize === 1 ? "questão" : "questões"} nesta sessão`
-                  : "Nenhuma questão para estes filtros"}
-          </p>
-          {newAnswersRemaining !== undefined && (
-            <small>
-              {newAnswersRemaining} novas respostas disponíveis hoje. Revisões não consomem esse
-              limite.
-            </small>
-          )}
-          <Button
-            disabled={loading || !sessionSize}
-            onClick={start}
-            className="trainer-main-action"
-          >
-            <span>Começar sessão</span>
-            <ArrowRight aria-hidden="true" />
-          </Button>
-        </div>
-      </aside>
+          <div className="mt-4 flex flex-col gap-2.5 rounded-xl border bg-muted/30 p-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:p-4">
+            <div>
+              <p className="font-black">
+                {Math.min(available, Number(values.limit))} questões serão usadas
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {values.orderMode === "random"
+                  ? "Seleção embaralhada uma única vez ao iniciar; a questão fica estável enquanto você responde."
+                  : "Questões apresentadas na ordem cadastrada, com correção após cada resposta."}
+              </p>
+            </div>
+            <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">
+              <Button variant="outline" size="sm" onClick={reset} className="sm:h-10 sm:px-4">
+                Limpar filtros
+              </Button>
+              <Button
+                disabled={!available}
+                onClick={start}
+                className="hero-primary-action h-9 sm:h-10"
+              >
+                <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
 
 function TrainerFilter({
   label,
-  description,
   value,
   setValue,
   options,
@@ -2797,7 +1502,6 @@ function TrainerFilter({
   counts?: Map<string, number> | undefined;
   allCount?: number | undefined;
   label: string;
-  description?: string;
   value: string;
   setValue: (value: string) => void;
   options: string[];
@@ -2806,19 +1510,33 @@ function TrainerFilter({
   hideAll?: boolean;
 }) {
   return (
-    <QuestionFilterPicker
-      label={label}
-      description={description}
-      value={value}
-      onChange={setValue}
-      options={options}
-      labels={labels}
-      counts={counts}
-      allCount={allCount}
-      allLabel={allLabel}
-      hideAll={hideAll}
-      quantity={label === "Quantidade"}
-    />
+    <label className="space-y-1.5 sm:space-y-2">
+      <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
+      <Select value={value} onValueChange={setValue}>
+        <SelectTrigger className="h-10 bg-background sm:h-11">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {!hideAll && (
+            <SelectItem value="all">
+              {allLabel}
+              {allCount !== undefined ? ` (${allCount.toLocaleString("pt-BR")})` : ""}
+            </SelectItem>
+          )}
+          {options
+            .filter((option) => !counts || (counts.get(option) ?? 0) > 0 || option === value)
+            .map((option) => (
+              <SelectItem key={option} value={option}>
+                {labels?.[option] || option}
+                {counts ? ` (${(counts.get(option) ?? 0).toLocaleString("pt-BR")})` : ""}
+                {hideAll ? " questões" : ""}
+              </SelectItem>
+            ))}
+        </SelectContent>
+      </Select>
+    </label>
   );
 }
 
@@ -2837,148 +1555,66 @@ function Center({ children }: { children: React.ReactNode }) {
 }
 function TrainingResult({
   total,
-  review,
-  mixed,
   correct,
   wrong,
-  skipped,
   restart,
-  reviewFirstError,
-  reviewFirstSkipped,
 }: {
   total: number;
-  review: boolean;
-  mixed: boolean;
   correct: number;
   wrong: number;
-  skipped: number;
   restart: () => void;
-  reviewFirstError: () => void;
-  reviewFirstSkipped: () => void;
 }) {
-  const answered = correct + wrong;
-  const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
+  const accuracy = total ? Math.round((correct / total) * 100) : 0;
   return (
-    <section
-      className="trainer-workbench trainer-results question-workspace"
-      aria-labelledby="trainer-result-title"
-    >
-      <header className="trainer-result-header">
-        <span>
-          <CheckCircle2 aria-hidden="true" />
-        </span>
-        <div>
-          <p className="trainer-panel-kicker">RESULTADOS DESTA SESSÃO</p>
-          <h1 id="trainer-result-title" tabIndex={-1}>
-            Treino concluído
-          </h1>
-          <p>Confira suas respostas e escolha o próximo passo.</p>
-        </div>
-      </header>
-      <StudyCompletionNotice kind="trainer" />
-      <div className="trainer-result-layout">
-        <section className="trainer-result-score" aria-label="Resumo do treino">
-          <span>Aproveitamento nesta sessão</span>
-          <strong>{accuracy}%</strong>
-          <progress value={accuracy} max={100} aria-label="Percentual de acertos da sessão" />
-          <dl>
-            <div>
-              <dt>Acertos</dt>
-              <dd>{correct}</dd>
-            </div>
-            <div>
-              <dt>Erros</dt>
-              <dd>{wrong}</dd>
-            </div>
-            <div>
-              <dt>Puladas (sem resposta)</dt>
-              <dd>{skipped}</dd>
-            </div>
-            <div>
-              <dt>Questões</dt>
-              <dd>{total}</dd>
-            </div>
-          </dl>
-          <p>
-            {mixed
-              ? "Primeiras respostas registram seu desempenho. Questões já respondidas são revisões e não pontuam novamente."
-              : review
-                ? "Sessão de revisão: suas primeiras respostas permanecem como registro oficial, sem nova pontuação."
-                : "Suas respostas foram registradas no desempenho."}
-          </p>
-        </section>
-        <section className="trainer-result-next">
-          <h2>Transforme o treino em aprendizado</h2>
-          <p>
-            {wrong
-              ? "Retome o primeiro erro, confira o raciocínio e use o mapa para localizar as outras respostas que merecem revisão."
-              : "Você concluiu esta seleção. Consulte sua evolução ou configure outra sessão para continuar praticando."}
-          </p>
-          {skipped > 0 && (
-            <>
-              <p>
-                {skipped} {skipped === 1 ? "questão foi pulada" : "questões foram puladas"}: não
-                contam como erro nem geram pontos. Elas estão em Meus cadernos → Estudar depois.
-              </p>
-              <Button variant="outline" onClick={reviewFirstSkipped}>
-                <SkipForward className="mr-2 h-4 w-4" />
-                Voltar às questões puladas
-              </Button>
-              <Button asChild variant="outline">
-                <Link to="/dashboard/notebooks">Abrir Estudar depois</Link>
-              </Button>
-            </>
-          )}
-          {wrong > 0 && (
-            <Button variant="outline" onClick={reviewFirstError}>
-              <BookOpenCheck className="mr-2 h-4 w-4" />
-              Rever o primeiro erro
+    <div className="mx-auto flex min-h-[65vh] max-w-xl items-center">
+      <Card className="w-full overflow-hidden text-center shadow-xl">
+        <div className="h-2 bg-gradient-to-r from-emerald-500 to-sky-500" />
+        <CardContent className="space-y-6 p-8">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-emerald-100 text-emerald-700">
+            <Sparkles className="h-8 w-8" />
+          </div>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
+              Treino concluído
+            </p>
+            <h1 className="mt-2 text-4xl font-black">{accuracy}%</h1>
+            <p className="mt-2 text-muted-foreground">
+              {correct} certas · {wrong} erradas · {total} questões
+            </p>
+          </div>
+          <Progress value={accuracy} />
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <Button className="flex-1" onClick={restart}>
+              <RotateCcw className="mr-2 h-4 w-4" /> Treinar novamente
             </Button>
-          )}
-          <Button className="trainer-main-action" onClick={restart}>
-            <RotateCcw className="mr-2 h-4 w-4" />
-            Configurar novo treino
-          </Button>
-          <Link to="/dashboard/performance">
-            Ver meu desempenho
-            <ArrowRight aria-hidden="true" />
-          </Link>
-        </section>
-      </div>
-    </section>
+            <Button asChild variant="outline" className="flex-1">
+              <Link to="/dashboard/question-bank">Nova seleção</Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
-function TrainerContextBanner({
-  discipline,
-  topic,
-  automatic,
-  setup = false,
-}: {
-  discipline: string;
-  topic: string;
-  automatic: boolean;
-  setup?: boolean;
-}) {
+function ElapsedTimer({ startedAt, running }: { startedAt: number; running: boolean }) {
+  const [secs, setSecs] = React.useState(0);
+  React.useEffect(() => {
+    const tick = () => setSecs(Math.max(0, Math.floor((Date.now() - startedAt) / 1000)));
+    tick();
+    if (!running) return;
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [startedAt, running]);
+  const mm = String(Math.floor(secs / 60)).padStart(2, "0");
+  const ss = String(secs % 60).padStart(2, "0");
   return (
-    <div
-      className="trainer-context"
-      aria-label={
-        setup ? "Disciplina e assunto selecionados" : "Disciplina e assunto da questão atual"
-      }
-      aria-live="polite"
-      aria-atomic="true"
+    <span
+      className="flex items-center gap-1.5 rounded-xl border border-border bg-muted/50 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-foreground"
+      role="timer"
+      aria-label="Tempo nesta questão"
     >
-      <div>
-        <span>{setup ? "Disciplina selecionada" : "Disciplina desta questão"}</span>
-        <strong>{discipline}</strong>
-      </div>
-      <div>
-        <span>{setup ? "Assunto selecionado" : "Assunto desta questão"}</span>
-        <strong>{topic}</strong>
-        {automatic && <small>Identificado automaticamente pelo enunciado</small>}
-      </div>
-      {setup && <p>Escolha o assunto nos filtros abaixo ou confirme para iniciar o treino.</p>}
-    </div>
+      <Timer className="h-4 w-4 text-amber-400" aria-hidden /> {mm}:{ss}
+    </span>
   );
 }
