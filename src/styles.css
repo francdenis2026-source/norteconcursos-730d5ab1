@@ -14965,3 +14965,19 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .home.home .home-footer--command .home-platform-qr { display: flex !important; }
   .home.home #inicio.home-hero > .home-hero__image { display: block !important; }
 }
+
+/* Final parity pass: mobile follows the web page's section order and surfaces;
+   the app-style bottom dock was the main element making it feel like another product. */
+@media (max-width: 767px) {
+  .home.home { padding-bottom: 0 !important; }
+  .home.home .home-app-nav { display: none !important; }
+  .home.home #inicio.home-hero { min-height: 610px !important; padding-bottom: 28px !important; }
+  .home.home #inicio.home-hero .home-hero__content { min-height: 0; padding-top: 76px; }
+  .home.home #inicio.home-hero > .home-hero__image { width: min(72%, 330px); height: 100%; right: 0; bottom: 0; object-position: right bottom; }
+  .home.home .home-trust { grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+  .home.home .home-daily-feature { margin-block: 12px 20px !important; padding: 18px !important; }
+  .home.home :is(.home-preparation, .home-operations, .home-plans--insignia) { padding-block: 28px; }
+  .home.home .home-preparation__band,
+  .home.home .home-operations__heading,
+  .home.home .home-plans__intro { border-radius: 16px; }
+}
