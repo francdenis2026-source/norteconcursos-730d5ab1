@@ -14424,3 +14424,13 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell.navigation-v2[data-area="student"] .app-nav__link[aria-current="page"] { color: #f8fffd; background: linear-gradient(90deg, rgb(72 190 164 / 19%), rgb(72 190 164 / 5%)); border-color: rgb(99 220 190 / 36%); box-shadow: inset 3px 0 #68d7bd, 0 8px 20px rgb(0 0 0 / 12%); }
 .app-shell.navigation-v2[data-area="student"] .app-ico { border-radius: 10px; box-shadow: 0 4px 12px rgb(0 0 0 / 14%); }
 .app-shell.navigation-v2[data-area="student"] .app-sidebar__foot { background: rgb(0 0 0 / 18%); border-top-color: rgb(255 255 255 / 9%); }
+
+/* ENEM workspace: compact single-window learning cockpit. */
+.app-shell[data-area="student"] .enem-page { max-width: 1280px; margin-inline: auto; gap: 14px; }
+.app-shell[data-area="student"] .enem-page > .page-hero { min-height: 0; padding: 20px 24px; border-radius: 18px; }
+.app-shell[data-area="student"] .enem-page > .page-hero h1 { font-size: clamp(26px,3vw,40px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .enem-page > .page-hero .page-hero__stats { gap: 8px; margin-top: 16px; }
+.app-shell[data-area="student"] .enem-page > .page-hero .hero-stat { min-height: 64px; padding: 9px 12px; border-radius: 11px; }
+.app-shell[data-area="student"] .enem-page [role="tablist"] { padding: 5px; border: 1px solid rgb(255 255 255 / 10%); border-radius: 13px; background: color-mix(in oklab, var(--card) 90%, transparent); }
+.app-shell[data-area="student"] .enem-page [role="tab"] { min-height: 38px; border-radius: 9px; font-size: 12px; }
+.app-shell[data-area="student"] .enem-page [role="tabpanel"] > .grid > * { border-radius: 14px; }
