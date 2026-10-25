@@ -1292,3 +1292,11 @@
 @media (prefers-reduced-motion: reduce) {
   .question-workspace .trainer-collection button[data-preparation] .trainer-collection__art { transition: none; }
 }
+
+/* Trainer command center: compact chrome, larger answer canvas. */
+.app-shell[data-area="student"] .question-workspace.trainer-session-shell { width: min(1440px, 100%); max-width: 1440px; margin-inline: auto; gap: 10px; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-command { min-height: 48px; padding: 5px 10px; border-radius: 12px; background: rgb(8 28 48 / 94%); border: 1px solid rgb(255 255 255 / 10%); }
+.app-shell[data-area="student"] .question-workspace .trainer-session-command h1 { font-size: 17px; line-height: 1.1; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-layout { grid-template-columns: minmax(0,1fr) 220px; gap: 10px; }
+.app-shell[data-area="student"] .question-workspace .trainer-question-content { padding: clamp(16px,2vw,28px); border-radius: 16px; }
+.app-shell[data-area="student"] .question-workspace .trainer-session-overview { top: 8px; border-radius: 14px; }
