@@ -7099,7 +7099,13 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     display: none;
   }
   .lp-hero__panel {
-    gap: 8px;
+    gap: 4px;
+  }
+  /* Os dois avisos são consecutivos na hero mobile; zera margens próprias
+     para que o espaçamento venha apenas do grid do painel. */
+  .lp-hero__panel .daily-badge,
+  .lp-hero__panel .question-count-badge {
+    margin: 0 !important;
   }
   .lp-hero__panel [role="note"] {
     font-size: 0.7rem;
