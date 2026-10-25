@@ -352,3 +352,10 @@ test('Selected discipline exposes its existing study itinerary without creating 
  assert.ok(html.includes('/dashboard/trilhas?t=administrativo'));
  assert.ok(!html.includes('/dashboard/trilhas?t=contabilidade'));
 });
+
+test('Filtered material results never include the broad law index while scoped article matches remain accessible',()=>{
+ const {html}=renderGlobalLibrary({discipline:'Direito Penal'});
+ assert.ok(!html.includes('aria-label="Estudo por lei"'));
+ assert.ok(html.includes('/dashboard/legal-course/codigo-penal'));
+ assert.ok(!html.includes('/dashboard/legal-course/armas'));
+});

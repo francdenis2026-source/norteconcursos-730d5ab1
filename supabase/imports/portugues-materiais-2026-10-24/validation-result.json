@@ -1,9 +1,10 @@
 {
-  "tests_passed": 34,
+  "tests_passed": 56,
   "tests_failed": 0,
   "typecheck": "passed",
   "production_build": "passed",
   "practice_validator": "16 batteries accepted by matchesPracticeReview",
   "original_enem_material": "not changed",
-  "visual_browser_inspection": false
+  "visual_browser_inspection": false,
+  "merged_library_filter_regression": "passed: broad law index hidden for filtered results; scoped articles and discipline itinerary retained"
 }

@@ -65,7 +65,7 @@ Os SQLs 1 e 2 **já foram aplicados juntos numa transação no Supabase**. `publ
 
 O administrador informado pelo usuário é o responsável pela publicação assistida. Não se atribui revisão humana independente a outra pessoa.
 
-34 testes passaram, incluindo o validador real de prática, formatos e gabaritos, origem didática, reaproveitamento de repetições, exclusão das pendências e vínculos do roteiro. TypeScript e build de produção passaram. Não houve inspeção visual de navegador autenticado.
+56 testes passaram, incluindo o validador real de prática, formatos e gabaritos, origem didática, reaproveitamento de repetições, exclusão das pendências e vínculos do roteiro. TypeScript e build de produção passaram. Não houve inspeção visual de navegador autenticado.
 
 ## Pendências individuais
 
@@ -163,3 +163,5 @@ O administrador informado pelo usuário é o responsável pela publicação assi
 - 15-04_gb_lin_por.pdf, item 6: Modelo ou tratamento de edição antiga: conferir MRPR integral, âmbito do órgão e norma posterior. Não liberado como orientação atual.
 - 15-05_gb_lin_por.pdf, item 2: Exige revisão individual da extração, destaques, texto-base, alternativas e gabarito; resposta da apostila não certifica atualização.
 - 15-05_gb_lin_por.pdf, item 3: Exige revisão individual da extração, destaques, texto-base, alternativas e gabarito; resposta da apostila não certifica atualização.
+
+Na conciliação com a alteração simultânea da biblioteca, foram mantidos os filtros de coleção/disciplina/lei e a busca de artigos restrita à seleção. O índice amplo de leis fica oculto quando há filtro específico, preservando o isolamento dos resultados e o acesso ao roteiro da disciplina.

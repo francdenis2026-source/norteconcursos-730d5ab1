@@ -1,3 +1,6 @@
+import { TRACKS } from "@/data/tracks";
+import { tracksOf } from "@/lib/disciplineHub";
+import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -18,13 +21,21 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
-import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
+import {
+  librarySearchText,
+  identifyingLibraryLaws,
+  libraryLawResultTitle,
+} from "@/lib/librarySearch";
+import { useContentSearch } from "@/lib/contentSearch";
+import { scopeLibraryMaterials, matchingLibraryMaterials } from "@/lib/librarySearchScope";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { StartHere } from "@/components/library/StartHere";
 import {
   libraryArea,
+  libraryCollection,
   libraryDiscipline,
   libraryDisciplines,
   libraryTopic,
@@ -32,6 +43,7 @@ import {
   type LibraryArea,
 } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
+import { ContranLibraryLink } from "@/components/library/ContranLibraryLink";
 import {
   readSlugs,
   useStudyMaterialList,
@@ -43,9 +55,16 @@ export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
   validateSearch: (
     s: Record<string, unknown>,
-  ): { q?: string | undefined; back?: string | undefined } => ({
+  ): {
+    q?: string | undefined;
+    back?: string | undefined;
+    collection?: "laws" | "subjects";
+    discipline?: string | undefined;
+  } => ({
+    collection: s["collection"] === "subjects" ? "subjects" : "laws",
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
+    discipline: typeof s["discipline"] === "string" ? s["discipline"] : undefined,
   }),
   head: () => ({ meta: [{ title: "Biblioteca de estudo | Norte Concurso" }] }),
 });
@@ -54,14 +73,21 @@ function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
-  const { q: initialQuery, back } = Route.useSearch();
+  const {
+    q: initialQuery,
+    back,
+    collection = "laws",
+    discipline: initialDiscipline,
+  } = Route.useSearch();
+  const lawsOnly = collection === "laws";
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
-  const [discipline, setDiscipline] = useState<string>("all");
+  const [discipline, setDiscipline] = useState<string>(initialDiscipline ?? "all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
+  const [law, setLaw] = useState("all");
   const restoredFilters = useRef(false);
-  const filterKey = `library-filters:${user?.id}:${initialQuery ?? ""}:${back ?? ""}`;
+  const filterKey = `library-filters:v2:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
   useEffect(() => {
     restoredFilters.current = false;
     try {
@@ -74,34 +100,44 @@ function LibraryIndex() {
         )
       ) {
         setQuery(saved.query);
-        setArea(saved.area);
-        setDiscipline(saved.discipline);
+        setArea(
+          lawsOnly
+            ? ["all", "law", "legislation"].includes(saved.area)
+              ? saved.area
+              : "all"
+            : ["all", "general"].includes(saved.area)
+              ? saved.area
+              : "all",
+        );
+        setDiscipline(initialDiscipline ?? saved.discipline);
         setContest(saved.contest);
         setTopic(saved.topic);
+        setLaw(typeof saved.law === "string" ? saved.law : "all");
       } else {
         setQuery(initialQuery ?? "");
         setArea("all");
-        setDiscipline("all");
+        setDiscipline(initialDiscipline ?? "all");
         setContest("all");
         setTopic("all");
+        setLaw("all");
       }
     } catch {
       /* Session storage is optional. */
     }
     restoredFilters.current = true;
-  }, [filterKey, initialQuery]);
+  }, [filterKey, initialQuery, initialDiscipline, lawsOnly]);
   useEffect(() => {
     if (!restoredFilters.current) return;
     try {
       sessionStorage.setItem(
         filterKey,
-        JSON.stringify({ query, area, discipline, contest, topic }),
+        JSON.stringify({ query, area, discipline, contest, topic, law }),
       );
     } catch {
       /* Session storage is optional. */
     }
-  }, [filterKey, query, area, discipline, contest, topic]);
-  const lawMatches = useMemo(() => matchingLibraryLaws(query), [query]);
+  }, [filterKey, query, area, discipline, contest, topic, law]);
+  const lawMatches = useMemo(() => identifyingLibraryLaws(query), [query]);
   const content = useLibrarySearchContent(
     signedIn && query.trim().length >= 2 && !lawMatches.length,
     user?.id,
@@ -110,7 +146,10 @@ function LibraryIndex() {
 
   useEffect(() => setRead(readSlugs()), []);
 
-  const items = useMemo(() => data ?? [], [data]);
+  const items = useMemo(
+    () => (data ?? []).filter((item) => libraryCollection(item) === collection),
+    [data, collection],
+  );
   const areaItems = useMemo(
     () => items.filter((item) => area === "all" || libraryArea(item) === area),
     [items, area],
@@ -141,44 +180,56 @@ function LibraryIndex() {
     [items],
   );
 
-  const visible = useMemo(() => {
-    return items.filter(
-      (item) =>
-        (area === "all" || libraryArea(item) === area) &&
-        (discipline === "all" || libraryDiscipline(item) === discipline) &&
-        (contest === "all" || item.contest_name === contest) &&
-        matchesTopicFilter(libraryDiscipline(item), libraryTopic(item), topic) &&
-        (lawMatches.length
-          ? lawMatches.includes(materialLawSlug(item) ?? "")
-          : matchesLibrarySearch(searchIndex.get(item.id) ?? "", query)),
-    );
-  }, [items, query, area, discipline, contest, topic, searchIndex, lawMatches]);
+  const lawOptions = useMemo(() => {
+    const scoped = scopeLibraryMaterials(items, { area, discipline, contest, topic, law: "all" });
+    return [...new Set(scoped.map(materialLawSlug).filter((slug): slug is string => !!slug))]
+      .map((slug) => ({ slug, title: libraryLawResultTitle(slug) }))
+      .sort((a, b) => a.title.localeCompare(b.title, "pt-BR"));
+  }, [items, area, discipline, contest, topic]);
+  const scopedItems = useMemo(
+    () => scopeLibraryMaterials(items, { area, discipline, contest, topic, law }),
+    [items, area, discipline, contest, topic, law],
+  );
+  const allowedLaws = useMemo(
+    () =>
+      [
+        ...new Set(scopedItems.map(materialLawSlug).filter((slug): slug is string => !!slug)),
+      ].sort(),
+    [scopedItems],
+  );
+  const articleSearch = useContentSearch(
+    query,
+    signedIn ? user?.id : undefined,
+    allowedLaws,
+    !lawMatches.length,
+  );
+  const visible = useMemo(
+    () => matchingLibraryMaterials(scopedItems, query, searchIndex, articleSearch.data ?? []),
+    [scopedItems, query, searchIndex, articleSearch.data],
+  );
 
+  // Keep the simultaneous fix: broad law indexes must not appear inside a filtered result.
+  // Preserve collection/deep links and article searches scoped to that exact result.
+  const showLawIndex =
+    lawsOnly && discipline === "all" && topic === "all" && contest === "all" && law === "all";
   const visibleGroups = useMemo(
     () =>
-      libraryDisciplines(
-        visible.filter(
-          (item) =>
-            !materialLawSlug(item) ||
-            discipline !== "all" ||
-            topic !== "all" ||
-            contest !== "all",
-        ),
-      )
+      libraryDisciplines(visible.filter((item) => !materialLawSlug(item) || !showLawIndex))
         .map(
           ([name, list]) =>
             [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]],
         )
         .sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)),
-    [visible, discipline, topic, contest],
+    [visible, showLawIndex],
   );
-  const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
+  const searching = query.trim() !== "" || contest !== "all" || topic !== "all" || law !== "all";
   const resetFilters = () => {
     setQuery("");
     setArea("all");
     setDiscipline("all");
     setContest("all");
     setTopic("all");
+    setLaw("all");
   };
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
@@ -188,7 +239,15 @@ function LibraryIndex() {
         image="study-desk"
         title={
           <>
-            Biblioteca de <em>estudo</em>
+            {lawsOnly ? (
+              <>
+                Legislação e <em>súmulas</em>
+              </>
+            ) : (
+              <>
+                Materiais por <em>disciplina</em>
+              </>
+            )}
           </>
         }
         description="Entre na sua conta para ler os resumos por matéria, ligados ao edital do seu concurso."
@@ -202,18 +261,30 @@ function LibraryIndex() {
       <PageHero
         image="study-desk"
         size="lg"
-        kicker="Treinamento"
+        kicker="Material didático"
         icon={Library}
         title={
           <>
-            Biblioteca de <em>estudo</em>
+            {lawsOnly ? (
+              <>
+                Legislação e <em>súmulas</em>
+              </>
+            ) : (
+              <>
+                Materiais por <em>disciplina</em>
+              </>
+            )}
           </>
         }
-        description="Seu estudo organizado por área: encontre a disciplina, compreenda com exemplos e pratique. Leis e materiais atualizados, com o caminho de revisão sempre à mão."
+        description={
+          lawsOnly
+            ? "Leis e fundamentos jurídicos, organizados por disciplina. Estude o texto, os exemplos e os exercícios de fixação."
+            : "Português, raciocínio lógico, informática e demais disciplinas para concursos. Escolha a matéria e estude com exemplos."
+        }
         actions={
           <Button asChild className="hero-btn-ghost gap-2" variant="outline">
             <Link to="/dashboard/edital">
-              <MapPin className="h-4 w-4" /> Edital eletrônico
+              <MapPin className="h-4 w-4" /> Meu edital
             </Link>
           </Button>
         }
@@ -228,8 +299,52 @@ function LibraryIndex() {
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
+      {discipline !== "all" &&
+        tracksOf(discipline, TRACKS).map((track) => (
+          <Link
+            key={track.slug}
+            to="/dashboard/trilhas"
+            search={{ t: track.slug }}
+            className="flex min-h-12 flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-sm"
+          >
+            <span>
+              <strong>Roteiro de {track.title}</strong>
+              <span className="ml-2 text-muted-foreground">Materiais na sequência de estudo</span>
+            </span>
+            <span className="font-semibold text-primary">Abrir roteiro →</span>
+          </Link>
+        ))}
 
-      {signedIn && !searching && user && <StartHere userId={user.id} />}
+      <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
+        <Link
+          to="/dashboard/library"
+          search={{ collection: "laws" }}
+          aria-current={lawsOnly ? "page" : undefined}
+          className="rounded-xl border bg-card p-4 hover:border-primary"
+        >
+          <strong>Leis e Direito</strong>
+          <p className="mt-1 text-sm text-muted-foreground">Legislação e fundamentos jurídicos</p>
+        </Link>
+        <Link
+          to="/dashboard/library"
+          search={{ collection: "subjects" }}
+          aria-current={!lawsOnly ? "page" : undefined}
+          className="rounded-xl border bg-card p-4 hover:border-primary"
+        >
+          <strong>Demais disciplinas</strong>
+          <p className="mt-1 text-sm text-muted-foreground">Materiais por matéria para concursos</p>
+        </Link>
+        <Link
+          to="/dashboard/enem"
+          search={{ tab: "materiais" }}
+          className="rounded-xl border bg-card p-4 hover:border-primary"
+        >
+          <strong>Materiais do ENEM</strong>
+          <p className="mt-1 text-sm text-muted-foreground">Estude na área dedicada ao exame</p>
+        </Link>
+      </nav>
+
+      {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
       {isPending && signedIn ? (
         <div className="space-y-3">
@@ -260,12 +375,14 @@ function LibraryIndex() {
       ) : (
         <>
           <LibraryNavigation
+            collection={collection}
             items={items}
             area={area}
             onArea={(value) => {
               setArea(value);
               setDiscipline("all");
               setTopic("all");
+              setLaw("all");
             }}
             query={query}
             onQuery={setQuery}
@@ -273,21 +390,44 @@ function LibraryIndex() {
             onDiscipline={(value) => {
               setDiscipline(value);
               setTopic("all");
+              setLaw("all");
             }}
             disciplines={disciplines}
             topic={topic}
-            onTopic={setTopic}
+            onTopic={(value) => {
+              setTopic(value);
+              setLaw("all");
+            }}
+            law={law}
+            onLaw={lawsOnly ? setLaw : undefined}
+            laws={lawOptions}
             topics={topics}
             contest={contest}
             onContest={(value) => {
               setContest(value);
               setTopic("all");
+              setLaw("all");
             }}
             contests={contests}
             count={visible.length}
-            searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
+            searchingContent={
+              !lawMatches.length &&
+              ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
+            }
             onReset={resetFilters}
           />
+          {signedIn && user && allowedLaws.length > 0 && !lawMatches.length && (
+            <ContentSearchResults query={query} userId={user.id} result={articleSearch} />
+          )}
+          {lawsOnly && law === "all" && (
+            <ContranLibraryLink
+              area={area}
+              discipline={discipline}
+              contest={contest}
+              topic={topic}
+              query={query}
+            />
+          )}
           {content.isError && query.trim().length >= 2 && (
             <p role="alert" className="rounded-xl border p-4 text-sm">
               A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}
@@ -297,15 +437,13 @@ function LibraryIndex() {
             </p>
           )}
 
-          {/* A visão geral de leis é um índice amplo. Quando o aluno escolhe
-              disciplina, assunto ou concurso, ela some para não misturar
-              percursos com o resultado específico solicitado. */}
-          {discipline === "all" && topic === "all" && contest === "all" && (
+          {showLawIndex && (
             <LegalPathCatalog
               userId={user!.id}
               materials={visible}
-              searching={searching}
+              searching={searching || discipline !== "all"}
               query={query}
+              hits={articleSearch.data ?? []}
             />
           )}
 
@@ -313,13 +451,15 @@ function LibraryIndex() {
             <Empty
               icon={SearchX}
               title={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
+                !lawMatches.length &&
+                ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
                   ? "Pesquisando o conteúdo…"
                   : "Nada encontrado"
               }
               text={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
-                  ? "Aguarde a busca nos textos dos guias publicados."
+                !lawMatches.length &&
+                ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
+                  ? "Aguarde a busca nos textos das leis e dos guias publicados."
                   : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
               }
               action={
@@ -331,6 +471,7 @@ function LibraryIndex() {
                     setDiscipline("all");
                     setContest("all");
                     setTopic("all");
+                    setLaw("all");
                   }}
                 >
                   Limpar filtros
@@ -481,7 +622,7 @@ function MaterialRow({
           {item.updated_at && (
             <span className="mt-1 block text-xs text-muted-foreground">
               Material atualizado em{" "}
-              {new Date(item.updated_at).toLocaleDateString("pt-BR", {
+              {acreDate(item.updated_at).toLocaleDateString("pt-BR", {
                 timeZone: "America/Rio_Branco",
               })}
             </span>
