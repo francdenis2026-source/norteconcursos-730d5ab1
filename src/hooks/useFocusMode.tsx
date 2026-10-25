@@ -132,10 +132,24 @@ export function useFocusMode() {
       setNow(platformDate());
       tickFocus();
     }, 1000);
+    const readingScroll = document.querySelector<HTMLElement>(".focus-study-container");
+    let settle: number | null = null;
+    const onScroll = () => {
+      document.documentElement.dataset["readingScrolling"] = "true";
+      if (settle !== null) window.clearTimeout(settle);
+      settle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingScrolling"];
+        settle = null;
+      }, 140);
+    };
+    readingScroll?.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearInterval(id);
+      if (settle !== null) window.clearTimeout(settle);
+      readingScroll?.removeEventListener("scroll", onScroll);
+      delete document.documentElement.dataset["readingScrolling"];
     };
   }, [focus, requestExit]);
 

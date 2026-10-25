@@ -46,6 +46,7 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
 .focus-study-footer span { color: rgb(148 163 184); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .focus-study-footer strong { color: #fff; font-weight: 800; }
 .focus-study-bar { background: rgb(10 28 48 / 92%) !important; border-bottom: 1px solid rgb(255 255 255 / 16%); -webkit-backdrop-filter: blur(18px) saturate(130%); backdrop-filter: blur(18px) saturate(130%); }
+html[data-reading-scrolling="true"] .focus-study-bar { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: rgb(10 28 48 / 98%) !important; }
 .focus-study-bar > div { min-height: 54px; }
 .focus-study-container { scroll-padding-top: 60px; }
 /* Leitura cronometrada usa a viewport inteira: controles ficam acessíveis pelo
