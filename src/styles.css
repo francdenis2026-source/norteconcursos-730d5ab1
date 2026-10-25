@@ -14527,6 +14527,21 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
     width: 100%;
     max-width: none;
   }
+  /* O modo de questões deve ocupar toda a largura útil do viewport no celular.
+     Alguns wrappers herdados do layout desktop mantinham a coluna em tamanho
+     reduzido, fazendo a questão aparecer como uma meia tela. */
+  .app-shell.navigation-v2[data-area="student"] .app-content__inner:has(.question-workspace),
+  .app-shell.navigation-v2[data-area="student"] .question-workspace,
+  .app-shell.navigation-v2[data-area="student"] .trainer-session-layout,
+  .app-shell.navigation-v2[data-area="student"] .trainer-question-column,
+  .app-shell.navigation-v2[data-area="student"] .trainer-question-paper {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] .trainer-session-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .app-shell[data-area="student"] .app-content__inner :is(.text-xs, .text-\[10px\], .text-\[11px\]) {
     font-size: .76rem;
     line-height: 1.45;
