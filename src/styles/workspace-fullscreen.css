@@ -50,10 +50,14 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
 .focus-study-container { scroll-padding-top: 60px; }
 /* Leitura cronometrada usa a viewport inteira: controles ficam acessíveis pelo
    teclado (Esc) e o cronômetro continua ativo sem ocupar a área de texto. */
-html[data-reading-focus="true"] .focus-study-bar,
 html[data-reading-focus="true"] .focus-study-footer,
 html[data-reading-focus="true"] .workspace-focus-controls { display: none !important; }
 html[data-reading-focus="true"] .focus-study-container { padding-top: 24px; padding-bottom: 24px; }
+/* No estudo cronometrado a barra já identifica disciplina e assunto. A hero
+   duplicada do material sai do fluxo para devolver altura ao conteúdo. */
+html[data-reading-focus="true"] .focus-study-container .library-header { display: none !important; }
+html[data-reading-focus="true"] .focus-study-container > .library-header + * { margin-top: 0 !important; }
+html[data-reading-focus="true"] .focus-study-container .workspace-banner { box-shadow: none; }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content__inner { max-width: none; }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: flex; position: relative; top: auto; width: 68px; height: 100%; min-height: 0; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 68px; }
