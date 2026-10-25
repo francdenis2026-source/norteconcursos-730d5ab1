@@ -15030,3 +15030,12 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__contests .contest-rail { overflow-x:auto; scroll-snap-type:x mandatory; }
   .mobile-homepage__contests .contest-card { min-width:86vw; scroll-snap-align:start; }
 }
+
+/* Mobile hero artwork layers: let the tactical clock breathe behind the copy. */
+@media (max-width: 767px) {
+  .mobile-homepage__hero .tactical-clock-backdrop { z-index: -1; opacity: .7; mix-blend-mode: screen; }
+  .mobile-homepage__hero > img { z-index: 1; }
+  .mobile-homepage__hero-shade { z-index: 0; background: linear-gradient(90deg, rgb(11 20 32 / .86) 0%, rgb(11 20 32 / .56) 38%, rgb(11 20 32 / .12) 78%, transparent), linear-gradient(0deg, rgb(11 20 32 / .62), transparent 58%); }
+  .mobile-homepage__hero-copy { position: relative; z-index: 2; }
+  .mobile-homepage__hero-copy::before { content:""; position:absolute; z-index:-1; inset:72px 18px auto -8px; height:220px; border-radius:50%; background:radial-gradient(ellipse, rgb(22 67 83 / .28), transparent 70%); filter:blur(10px); pointer-events:none; }
+}
