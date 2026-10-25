@@ -325,6 +325,7 @@
 .workspace-section-nav[data-section="Questões"] a[data-tone] { transition: none; }
 .workspace-section-nav a[data-tone]:focus-visible { outline-color: var(--section-accent); }
 @media (prefers-reduced-motion: reduce) { .workspace-section-nav a[data-tone] { transition: none; } }
+.app-shell[data-section-art="Material didático"] .workspace-section-nav { display: none; }
 @media (forced-colors: active) {
   .workspace-section-nav { background: Canvas; }
   .workspace-section-nav a[data-tone] { color: LinkText; background: Canvas; border-color: ButtonBorder; }

@@ -14169,6 +14169,23 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .hub-search__box input:focus,
 .hub-search__box input:focus-visible { outline: none; box-shadow: none; }
 
+/* Material hub: command-center layout with one visual hierarchy. */
+.material-hub { max-width: 1180px; margin-inline: auto; gap: 22px !important; }
+.material-hub > .page-hero { min-height: 0 !important; padding: 22px 24px !important; border-radius: 18px; }
+.material-hub > .page-hero h1 { font-size: clamp(25px, 3vw, 38px) !important; }
+.material-hub > .page-hero .page-hero__stats { gap: 10px; margin-top: 18px; }
+.material-hub > .page-hero .hero-stat { min-height: 74px; padding: 11px 14px; border-radius: 12px; }
+.material-hub > .page-hero .hero-stat small { display: block; margin-top: 2px; color: var(--muted-foreground); font-size: 11px; }
+.material-hub > .hub-search { margin-inline: 0; padding: 14px 16px; border-radius: 14px; background: color-mix(in oklab, var(--card) 82%, transparent); }
+.material-hub > section { padding: 18px; border: 1px solid color-mix(in oklab, var(--border) 80%, transparent); border-radius: 18px; background: color-mix(in oklab, var(--card) 68%, transparent); }
+.material-hub > section > header { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid color-mix(in oklab, var(--border) 65%, transparent); }
+.material-hub > section > header h2 { font-size: 17px; letter-spacing: -.01em; }
+.material-hub > section > header p { font-size: 12px; }
+.material-hub .material-card { min-height: 72px; padding: 12px 14px; border-radius: 12px; background: color-mix(in oklab, var(--background) 74%, var(--card)); box-shadow: none; }
+.material-hub .material-card:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgb(0 0 0 / .14); }
+.material-hub .material-card__body strong { font-size: 13px; }
+.material-hub .material-card__body span { font-size: 11px; }
+
 /* Disciplinas: cartões por disciplina e página de cada uma */
 .discipline-search { display: flex; align-items: center; gap: 10px; padding: 0 14px; min-height: 54px; border: 2px solid var(--border); border-radius: 14px; background: var(--card); }
 .discipline-search:focus-within { border-color: var(--primary); }
