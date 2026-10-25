@@ -622,9 +622,10 @@ function Index() {
 }
 
 function FooterColumn({ title, links, compact = false }: { title: string; links: [string, string][]; compact?: boolean }) {
+  const visibleLinks = compact ? links.slice(0, 2) : links;
   const list = (
     <ul>
-      {links.map(([label, href]) => (
+      {visibleLinks.map(([label, href]) => (
         <li key={label}><a href={href}>{label}</a></li>
       ))}
     </ul>

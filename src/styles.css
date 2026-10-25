@@ -14879,3 +14879,40 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     z-index: 2;
   }
 }
+
+/* Mobile footer: expose the essential links directly, without accordion chrome. */
+@media (max-width: 767px) {
+  .home.home .home-footer--command .home-footer__section {
+    display: block;
+    border: 0;
+    border-top: 1px solid color-mix(in srgb, var(--home-line) 72%, transparent);
+    border-radius: 0;
+    background: transparent;
+  }
+  .home.home .home-footer--command .home-footer__section > summary {
+    min-height: 34px;
+    padding: 12px 0 2px;
+    color: var(--home-gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  .home.home .home-footer--command .home-footer__section > summary svg { display: none; }
+  .home.home .home-footer--command .home-footer__section .home-footer__links {
+    display: block;
+    padding: 0 0 6px;
+  }
+  .home.home .home-footer--command .home-footer__section .home-footer__links a {
+    display: inline-flex;
+    min-height: 32px;
+    margin-right: 18px;
+    padding: 4px 0;
+    color: var(--home-muted);
+    font-size: 12px;
+  }
+  .home.home .home-footer--command .home-footer__section .home-footer__links a:hover {
+    color: var(--home-gold);
+  }
+}
