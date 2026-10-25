@@ -3,7 +3,7 @@
 .legal-reading-surface { min-width: 0; }
 .legal-reading-prose {
   min-width: 0;
-  max-width: 72ch;
+  max-width: 100%;
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.65;
@@ -12,7 +12,7 @@
 }
 .legal-reading-prose > .legal-reading-paragraph {
   margin: 0;
-  white-space: pre-line;
+  white-space: normal;
   text-align: justify;
   text-align-last: left;
   text-justify: inter-word;
@@ -20,10 +20,15 @@
   -webkit-hyphens: auto;
 }
 .legal-reading-prose > .legal-reading-paragraph + .legal-reading-paragraph {
-  margin-top: .875rem;
+  margin-top: .65rem;
+}
+.legal-reading-prose > .legal-reading-paragraph[data-legal-enumeration="true"] {
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 .legal-reading-surface > .study-prose {
-  max-width: 72ch;
+  max-width: 100%;
   line-height: 1.65;
   overflow-wrap: break-word;
 }
