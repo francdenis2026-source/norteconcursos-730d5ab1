@@ -124,3 +124,25 @@ html[data-reading-focus="true"] .focus-study-bar { top: 0; }
   .focus-session-heading { align-items: flex-start; flex-direction: column; }
   .focus-session-heading > button { width: 100%; }
 }
+
+/* Question trainer on phones: keep the question paper readable and remove
+   setup chrome once the session starts. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell {
+    width: min(100%, 920px);
+    margin-inline: auto;
+    padding: 12px 10px 72px;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell > :not(.trainer-session-layout) {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell > .trainer-session-layout {
+    display: block;
+  }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-overview { display: none; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-column { width: 100%; max-width: 900px; margin-inline: auto; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-column .question-window { min-height: calc(100dvh - 98px); border-radius: 14px; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-content { padding: 20px 16px 24px; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-question-stem { font-size: 17px; line-height: 1.75; }
+  .app-shell.navigation-v2[data-focus-mode="true"] .trainer-option { min-height: 54px; padding: 14px 12px; font-size: 15px; line-height: 1.6; }
+}
