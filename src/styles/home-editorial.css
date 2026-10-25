@@ -74,3 +74,41 @@
 /* Avoid a second scrollbar hiding the last tool inside the presentation. */
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__info { height: auto; max-height: none; }
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__panel { height: auto; max-height: none; overflow: visible; scrollbar-gutter: auto; padding-bottom: 16px; }
+
+/* Mobile hero and reading scale: keep the full portrait visible and give
+   compact screens enough room for the text and primary actions. */
+@media (max-width: 760px) {
+  .home.home #inicio.home-hero {
+    padding-bottom: 240px;
+  }
+  .home.home #inicio.home-hero > .home-hero__image {
+    top: auto;
+    right: max(16px, calc(50% - 150px));
+    bottom: 0;
+    left: auto;
+    width: min(78%, 300px);
+    max-width: none;
+    height: 240px;
+    object-fit: contain;
+    object-position: center bottom;
+    opacity: 1;
+    filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%));
+    -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+  }
+  .home.home .home-app-nav a {
+    min-height: 62px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .home.home .home-app-nav svg { width: 24px; height: 24px; }
+}
+@media (max-width: 380px) {
+  .home.home #inicio.home-hero { padding-bottom: 220px; }
+  .home.home #inicio.home-hero > .home-hero__image {
+    width: min(86%, 280px);
+    height: 220px;
+    right: max(8px, calc(50% - 140px));
+  }
+  .home.home .home-app-nav a { min-height: 60px; font-size: 11.5px; }
+}
