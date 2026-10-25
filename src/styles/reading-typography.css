@@ -1,0 +1,48 @@
+/* Impeccable · scoped reading typography for law study and questions.
+   Keep authored legal breaks and formatted question layouts intact. */
+.legal-reading-surface { min-width: 0; }
+.legal-reading-prose {
+  min-width: 0;
+  max-width: 72ch;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.legal-reading-prose > .legal-reading-paragraph {
+  margin: 0;
+  white-space: pre-line;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.legal-reading-prose > .legal-reading-paragraph + .legal-reading-paragraph {
+  margin-top: .875rem;
+}
+.legal-reading-surface > .study-prose {
+  max-width: 72ch;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+.legal-reading-surface > .study-prose p {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.legal-reading-surface > .study-prose :is(h2, h3, th, td, li, blockquote) {
+  text-align: left;
+}
+.legal-reading-surface .legal-highlight-controls { line-height: 1.45; }
+.legal-reading-surface .legal-highlight-controls :is(button, li, p) { text-align: left; }
+.q-text[data-layout="prose"] { text-align-last: left; }
+@media (max-width: 599px) {
+  .legal-reading-prose { max-width: 100%; line-height: 1.6; }
+  .legal-reading-prose > .legal-reading-paragraph,
+  .legal-reading-surface > .study-prose p { text-align: left; hyphens: none; -webkit-hyphens: none; }
+  .legal-reading-surface > .study-prose { max-width: 100%; line-height: 1.6; }
+}

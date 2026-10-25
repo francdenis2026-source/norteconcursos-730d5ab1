@@ -1,6 +1,7 @@
 // Texto de questão (enunciado, alternativa, comentário) com a disposição certa para cada conteúdo.
 // A regra de layout fica em questionTextLayout(); o estilo, em .q-text (src/styles.css).
 import { LawText } from "@/components/dashboard/LawText";
+import "@/styles/reading-typography.css";
 import * as React from "react";
 import { questionTextLayout } from "@/lib/questionText";
 import { cn } from "@/lib/utils";
