@@ -13283,7 +13283,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
 }
 :root:not(.dark) .student-hub__masthead::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; z-index: 1;
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; z-index: 1;
   background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
 }
 :root:not(.dark) .student-hub__masthead .student-hub__welcome {
@@ -13319,7 +13319,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
 }
 :root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px;
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
   background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
 }
 :root:not(.dark) .trainer-workbench-hero .trainer-panel-kicker {
@@ -13509,14 +13509,14 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   border-color: color-mix(in oklab, var(--d-teal) 35%, var(--border));
   background: linear-gradient(90deg, color-mix(in oklab, var(--d-teal) 14%, var(--card)), var(--card) 70%);
   padding-left: 1.1rem;
-  box-shadow: inset 4px 0 0 var(--d-teal);
+  box-shadow: inset 2px 0 0 var(--d-teal);
 }
 .dark .trainer-resume-banner strong { color: var(--d-teal); }
 .dark .trainer-resume-banner button { color: var(--d-teal); text-decoration-color: color-mix(in oklab, var(--d-teal) 55%, transparent); }
 .dark .trainer-resume-banner button:hover { color: oklch(0.88 0.09 190); }
 :root:not(.dark) .trainer-resume-banner {
   border-color: oklch(0.52 0.11 195 / .35); background: linear-gradient(90deg, var(--c-teal-soft), #fff 70%);
-  box-shadow: inset 4px 0 0 var(--c-teal); padding-left: 1.1rem;
+  box-shadow: inset 2px 0 0 var(--c-teal); padding-left: 1.1rem;
 }
 :root:not(.dark) .trainer-resume-banner strong { color: var(--c-teal); }
 
@@ -13531,7 +13531,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 
 /* Hero do Painel e cartões */
 .dark .student-hub__masthead { position: relative; border-color: color-mix(in oklab, var(--d-blue) 28%, var(--border)); }
-.dark .student-hub__masthead::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; z-index: 1; background: linear-gradient(180deg, var(--d-blue), var(--d-teal)); }
+.dark .student-hub__masthead::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; z-index: 1; background: linear-gradient(180deg, var(--d-blue), var(--d-teal)); }
 .dark .student-hub__masthead .student-hub__welcome { display: inline-flex; padding: 4px 12px; border-radius: 999px; background: color-mix(in oklab, var(--d-blue) 16%, transparent); color: var(--d-blue); font-weight: 700; }
 .dark .student-hub__masthead .student-hub__date svg { color: var(--d-teal); }
 .dark .student-hub__masthead .student-hub__date small { color: var(--d-teal); border-color: color-mix(in oklab, var(--d-teal) 45%, transparent); }
