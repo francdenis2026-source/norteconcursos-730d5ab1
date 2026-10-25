@@ -60,6 +60,7 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
+import { MobileHomepage } from "@/components/landing/MobileHomepage";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -419,7 +420,8 @@ function Index() {
         </div>
       </header>
 
-      <main id="conteudo" tabIndex={-1}>
+      <MobileHomepage />
+      <main id="conteudo" className="desktop-homepage" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />

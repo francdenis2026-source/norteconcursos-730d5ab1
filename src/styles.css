@@ -14981,3 +14981,41 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .home.home .home-operations__heading,
   .home.home .home-plans__intro { border-radius: 16px; }
 }
+
+.mobile-homepage { display: none; }
+@media (max-width: 767px) {
+  .desktop-homepage, .home > .home-footer { display: none !important; }
+  .mobile-homepage { display: block; min-height: 100vh; padding-bottom: env(safe-area-inset-bottom); background: #0b1420; color: #f6f8fb; }
+  .mobile-homepage__hero { position: relative; min-height: 610px; overflow: hidden; isolation: isolate; background: #0b1420; }
+  .mobile-homepage__hero > img { position: absolute; z-index: -2; right: -8%; bottom: 0; width: 92%; height: 100%; object-fit: contain; object-position: 78% bottom; filter: saturate(1.1) contrast(1.08) drop-shadow(-12px 16px 25px rgb(0 0 0 / .46)); }
+  .mobile-homepage__hero-shade { position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#0b1420 0%,rgb(11 20 32 / .92) 32%,rgb(11 20 32 / .28) 72%,transparent),linear-gradient(0deg,#0b1420 0%,transparent 48%); }
+  .mobile-homepage__hero-copy { display:flex; flex-direction:column; align-items:flex-start; min-height:610px; padding:92px 22px 28px; }
+  .mobile-homepage__eyebrow { display:flex; align-items:center; gap:8px; color:#dfb45b; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+  .mobile-homepage__eyebrow > span { width:6px; height:6px; border-radius:50%; background:#dfb45b; box-shadow:0 0 0 4px rgb(223 180 91 / .14); }
+  .mobile-homepage h1 { max-width:11ch; margin-top:18px; font-size:clamp(38px,11vw,50px); line-height:.98; letter-spacing:-.05em; }
+  .mobile-homepage h1 em { color:#e0b65d; font-style:normal; }
+  .mobile-homepage__hero-copy > p { max-width:29ch; margin-top:16px; color:#c6d0dc; font-size:14px; line-height:1.6; }
+  .mobile-homepage__primary,.mobile-homepage__secondary,.mobile-homepage__wide-link { display:flex; align-items:center; justify-content:center; gap:8px; min-height:48px; border-radius:11px; font-size:13px; font-weight:750; text-decoration:none; }
+  .mobile-homepage__primary { width:100%; margin-top:22px; background:#dfb45b; color:#14202b; }
+  .mobile-homepage__secondary { width:100%; margin-top:8px; border:1px solid rgb(255 255 255 / .22); color:#edf2f6; }
+  .mobile-homepage__daily,.mobile-homepage__resources { padding:28px 18px; background:#f5f7f9; color:#152333; }
+  .mobile-homepage__daily { display:grid; gap:16px; }
+  .mobile-homepage__daily h2,.mobile-homepage__section-head h2 { margin-top:8px; font-size:25px; line-height:1.08; letter-spacing:-.035em; }
+  .mobile-homepage__daily p { margin-top:8px; color:#5d6b7a; font-size:13px; line-height:1.55; }
+  .mobile-homepage__daily .daily-badge { width:100%; margin:0; }
+  .mobile-homepage__resources { border-top:1px solid #dce4ec; }
+  .mobile-homepage__section-head > span { color:#9b6e16; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+  .mobile-homepage__cards { display:grid; gap:9px; margin-top:16px; }
+  .mobile-homepage__cards article { display:grid; grid-template-columns:28px 1fr; column-gap:10px; padding:14px; border:1px solid #dce4ec; border-radius:14px; background:white; box-shadow:0 8px 24px rgb(23 42 61 / .06); }
+  .mobile-homepage__cards svg { grid-row:span 2; width:22px; height:22px; color:#a87318; }
+  .mobile-homepage__cards strong { font-size:14px; }
+  .mobile-homepage__cards p { margin-top:4px; color:#667585; font-size:12px; line-height:1.4; }
+  .mobile-homepage__wide-link { margin-top:14px; border:1px solid #b98a35; color:#815b12; }
+  .mobile-homepage__closing { display:flex; align-items:center; gap:10px; padding:18px; background:#152637; color:#f4f7fa; }
+  .mobile-homepage__closing > svg { flex:none; width:22px; color:#dfb45b; }
+  .mobile-homepage__closing strong { font-size:13px; }.mobile-homepage__closing p { margin-top:3px; color:#b7c3cf; font-size:11px; }
+  .mobile-homepage__closing a { margin-left:auto; flex:none; padding:9px 11px; border:1px solid #dfb45b; border-radius:8px; color:#dfb45b; font-size:11px; font-weight:750; }
+  .mobile-homepage__footer { display:grid; gap:14px; padding:24px 18px 28px; background:#0b1420; color:#aebccc; }
+  .mobile-homepage__footer > strong { color:#fff; font-size:17px; letter-spacing:.06em; }.mobile-homepage__footer > strong span { color:#dfb45b; font-size:10px; letter-spacing:.14em; }
+  .mobile-homepage__footer div { display:flex; flex-wrap:wrap; gap:14px; }.mobile-homepage__footer a { color:#cbd5df; font-size:12px; }.mobile-homepage__footer small { color:#718092; font-size:10px; }
+}
