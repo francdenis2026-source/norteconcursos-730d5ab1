@@ -62,7 +62,7 @@ export function PlanStatusCard() {
       </CardHeader>
       <CardContent className="space-y-4">
         {scheduled && (
-          <div className="rounded-lg border border-border border-l-4 border-l-amber-500 bg-card p-3.5 text-sm text-foreground">
+          <div className="rounded-lg border border-amber-500/40 bg-card p-3.5 text-sm text-foreground">
             <p className="font-bold">Cancelamento agendado</p>
             <p className="mt-1">
               Você continua no plano {scheduled.plan_name} até{" "}

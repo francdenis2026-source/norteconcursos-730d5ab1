@@ -233,13 +233,13 @@ function Lesson({
                   <GlossaryText text={lesson.simples} />
                 </p>
               </section>
-              <section className="rounded-xl border-l-2 border-emerald-500 bg-emerald-500/5 p-4">
+              <section className="rounded-xl border border-emerald-500/35 bg-emerald-500/5 p-4">
                 <h3 className="font-semibold">Exemplo prático</h3>
                 <p className="mt-2 leading-7">
                   <GlossaryText text={lesson.exemplo} />
                 </p>
               </section>
-              <section className="rounded-xl border-l-2 border-amber-500 bg-amber-500/5 p-4">
+              <section className="rounded-xl border border-amber-500/35 bg-amber-500/5 p-4">
                 <h3 className="font-semibold">Pontos de atenção</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-7">
                   {lesson.atencao.map((p) => (
