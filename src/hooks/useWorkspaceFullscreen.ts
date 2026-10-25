@@ -72,6 +72,10 @@ export function useWorkspaceFullscreen(observerOnly = false) {
     scroll.current = document.getElementById("dashboard-content")?.scrollTop ?? 0;
     beginTransition();
     activeRef.current = false;
+    // Libere o layout imediatamente. A atualização do React chega no próximo
+    // commit; sem esta limpeza síncrona o shell móvel permanecia preso ao
+    // enquadramento de tela cheia e a página voltava renderizada pela metade.
+    delete document.documentElement.dataset["workspaceFocus"];
     setActive(false);
     if (native.current && document.fullscreenElement === document.documentElement) {
       native.current = false;
