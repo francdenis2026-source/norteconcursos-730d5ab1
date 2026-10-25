@@ -789,7 +789,7 @@ function UnitLesson({
       ) : (
         <>
           <nav
-            className="grid grid-cols-3 gap-1 rounded-xl border bg-card p-1"
+              className="grid grid-cols-1 gap-1 rounded-xl border bg-card p-1 sm:grid-cols-3"
             aria-label="Passos de estudo deste artigo"
           >
             {(

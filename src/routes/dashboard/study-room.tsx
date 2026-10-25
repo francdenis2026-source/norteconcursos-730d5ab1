@@ -269,7 +269,7 @@ function TimerPanel({
           ))}
         </ol>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
           <Button onClick={t.toggle} disabled={state.finished} className="col-span-3 h-11">
             {state.running ? (
               <>

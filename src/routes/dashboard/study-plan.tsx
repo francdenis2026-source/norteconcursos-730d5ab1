@@ -514,7 +514,7 @@ function StudyPlanPage() {
         <CardContent className="grid gap-4 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <p className="mb-2 text-xs font-bold text-muted-foreground">Carreira</p>
-            <div className="grid grid-cols-3 gap-2 rounded-2xl border bg-muted/30 p-1.5">
+            <div className="grid grid-cols-1 gap-2 rounded-2xl border bg-muted/30 p-1.5 sm:grid-cols-3">
               {(Object.keys(CAREERS) as CareerId[]).map((id) => (
                 <button
                   key={id}
