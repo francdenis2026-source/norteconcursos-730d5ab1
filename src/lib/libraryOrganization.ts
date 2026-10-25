@@ -63,7 +63,11 @@ export function libraryArea(item: LibraryClassifiable): LibraryArea {
   // Toda lei, inclusive o Código Penal e o CPP, fica em "Legislação"; "Direito" reúne os fundamentos.
   if (slug) return "legislation";
   if (/legislação/i.test(item.discipline)) return "legislation";
-  return /direito|criminalística|uso da força/i.test(item.discipline) ? "law" : "general";
+  return /direito|criminalística|uso da força|proteção de dados pessoais|LGPD/i.test(
+    item.discipline,
+  )
+    ? "law"
+    : "general";
 }
 export function libraryTone(name: string): string {
   if (/penal extravagante|legislação — outros/i.test(name)) return "amber";

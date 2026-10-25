@@ -87,7 +87,7 @@ function LibraryIndex() {
   const [topic, setTopic] = useState("all");
   const [law, setLaw] = useState("all");
   const restoredFilters = useRef(false);
-  const filterKey = `library-filters:v2:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
+  const filterKey = `library-filters:v3:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
   useEffect(() => {
     restoredFilters.current = false;
     try {
@@ -101,13 +101,15 @@ function LibraryIndex() {
       ) {
         setQuery(saved.query);
         setArea(
-          lawsOnly
-            ? ["all", "law", "legislation"].includes(saved.area)
-              ? saved.area
-              : "all"
-            : ["all", "general"].includes(saved.area)
-              ? saved.area
-              : "all",
+          initialDiscipline
+            ? "all"
+            : lawsOnly
+              ? ["all", "law", "legislation"].includes(saved.area)
+                ? saved.area
+                : "all"
+              : ["all", "general"].includes(saved.area)
+                ? saved.area
+                : "all",
         );
         setDiscipline(initialDiscipline ?? saved.discipline);
         setContest(saved.contest);
@@ -211,7 +213,12 @@ function LibraryIndex() {
   // Keep the simultaneous fix: broad law indexes must not appear inside a filtered result.
   // Preserve collection/deep links and article searches scoped to that exact result.
   const showLawIndex =
-    lawsOnly && discipline === "all" && topic === "all" && contest === "all" && law === "all";
+    lawsOnly &&
+    area === "all" &&
+    discipline === "all" &&
+    topic === "all" &&
+    contest === "all" &&
+    law === "all";
   const visibleGroups = useMemo(
     () =>
       libraryDisciplines(visible.filter((item) => !materialLawSlug(item) || !showLawIndex))
@@ -222,16 +229,23 @@ function LibraryIndex() {
         .sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)),
     [visible, showLawIndex],
   );
-  const searching = query.trim() !== "" || contest !== "all" || topic !== "all" || law !== "all";
+  const focused = discipline !== "all";
+  const subjectItems = items.filter((item) => !focused || libraryDiscipline(item) === discipline);
+  const searching =
+    focused ||
+    area !== "all" ||
+    query.trim() !== "" ||
+    contest !== "all" ||
+    topic !== "all" ||
+    law !== "all";
   const resetFilters = () => {
     setQuery("");
     setArea("all");
-    setDiscipline("all");
     setContest("all");
     setTopic("all");
     setLaw("all");
   };
-  const readCount = items.filter((item) => read.has(item.slug)).length;
+  const readCount = subjectItems.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
     return (
@@ -256,49 +270,74 @@ function LibraryIndex() {
   }
 
   return (
-    <div className="space-y-6 pb-8">
+    <div className="material-library space-y-4 pb-8">
       <BackToPlan back={back} topic={initialQuery} />
-      <PageHero
-        image="study-desk"
-        size="lg"
-        kicker="Material didático"
-        icon={Library}
-        title={
-          <>
-            {lawsOnly ? (
-              <>
-                Legislação e <em>súmulas</em>
-              </>
-            ) : (
-              <>
-                Materiais por <em>disciplina</em>
-              </>
-            )}
-          </>
-        }
-        description={
-          lawsOnly
-            ? "Leis e fundamentos jurídicos, organizados por disciplina. Estude o texto, os exemplos e os exercícios de fixação."
-            : "Português, raciocínio lógico, informática e demais disciplinas para concursos. Escolha a matéria e estude com exemplos."
-        }
-        actions={
-          <Button asChild className="hero-btn-ghost gap-2" variant="outline">
-            <Link to="/dashboard/edital">
-              <MapPin className="h-4 w-4" /> Meu edital
-            </Link>
-          </Button>
-        }
-      >
-        <div className="page-hero__stats max-w-xl">
-          <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
-          <HeroStat
-            icon={Library}
-            label="Matérias"
-            value={isPending ? "—" : libraryDisciplines(items).length}
-          />
-          <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
-        </div>
-      </PageHero>
+      {focused ? (
+        <header className={`library-focus library-tone-${libraryTone(discipline)}`}>
+          <Link to="/dashboard/material" className="library-focus__back">
+            ← Todas as matérias
+          </Link>
+          <div className="library-focus__identity">
+            <div>
+              <p className="library-eyebrow">Biblioteca de estudo</p>
+              <h1>{discipline}</h1>
+              <p>
+                Escolha um assunto para abrir a leitura, as explicações e os exercícios disponíveis.
+              </p>
+            </div>
+            <div className="library-focus__counts" aria-label="Resumo da disciplina">
+              <span>
+                <strong>{isPending ? "—" : subjectItems.length}</strong> materiais
+              </span>
+              <span>
+                <strong>{readCount}</strong> lidos
+              </span>
+            </div>
+          </div>
+        </header>
+      ) : (
+        <PageHero
+          image="study-desk"
+          size="sm"
+          kicker="Material didático"
+          icon={Library}
+          title={
+            <>
+              {lawsOnly ? (
+                <>
+                  Legislação e <em>súmulas</em>
+                </>
+              ) : (
+                <>
+                  Materiais por <em>disciplina</em>
+                </>
+              )}
+            </>
+          }
+          description={
+            lawsOnly
+              ? "Leis e fundamentos jurídicos, organizados por disciplina. Estude o texto, os exemplos e os exercícios de fixação."
+              : "Português, raciocínio lógico, informática e demais disciplinas para concursos. Escolha a matéria e estude com exemplos."
+          }
+          actions={
+            <Button asChild className="hero-btn-ghost gap-2" variant="outline">
+              <Link to="/dashboard/edital">
+                <MapPin className="h-4 w-4" /> Meu edital
+              </Link>
+            </Button>
+          }
+        >
+          <div className="page-hero__stats max-w-xl">
+            <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
+            <HeroStat
+              icon={Library}
+              label="Matérias"
+              value={isPending ? "—" : libraryDisciplines(items).length}
+            />
+            <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
+          </div>
+        </PageHero>
+      )}
       {discipline !== "all" &&
         tracksOf(discipline, TRACKS).map((track) => (
           <Link
@@ -315,34 +354,38 @@ function LibraryIndex() {
           </Link>
         ))}
 
-      <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
-        <Link
-          to="/dashboard/library"
-          search={{ collection: "laws" }}
-          aria-current={lawsOnly ? "page" : undefined}
-          className="rounded-xl border bg-card p-4 hover:border-primary"
-        >
-          <strong>Leis e Direito</strong>
-          <p className="mt-1 text-sm text-muted-foreground">Legislação e fundamentos jurídicos</p>
-        </Link>
-        <Link
-          to="/dashboard/library"
-          search={{ collection: "subjects" }}
-          aria-current={!lawsOnly ? "page" : undefined}
-          className="rounded-xl border bg-card p-4 hover:border-primary"
-        >
-          <strong>Demais disciplinas</strong>
-          <p className="mt-1 text-sm text-muted-foreground">Materiais por matéria para concursos</p>
-        </Link>
-        <Link
-          to="/dashboard/enem"
-          search={{ tab: "materiais" }}
-          className="rounded-xl border bg-card p-4 hover:border-primary"
-        >
-          <strong>Materiais do ENEM</strong>
-          <p className="mt-1 text-sm text-muted-foreground">Estude na área dedicada ao exame</p>
-        </Link>
-      </nav>
+      {!focused && (
+        <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
+          <Link
+            to="/dashboard/library"
+            search={{ collection: "laws" }}
+            aria-current={lawsOnly ? "page" : undefined}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Leis e Direito</strong>
+            <p className="mt-1 text-sm text-muted-foreground">Legislação e fundamentos jurídicos</p>
+          </Link>
+          <Link
+            to="/dashboard/library"
+            search={{ collection: "subjects" }}
+            aria-current={!lawsOnly ? "page" : undefined}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Demais disciplinas</strong>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Materiais por matéria para concursos
+            </p>
+          </Link>
+          <Link
+            to="/dashboard/enem"
+            search={{ tab: "materiais" }}
+            className="rounded-xl border bg-card p-4 hover:border-primary"
+          >
+            <strong>Materiais do ENEM</strong>
+            <p className="mt-1 text-sm text-muted-foreground">Estude na área dedicada ao exame</p>
+          </Link>
+        </nav>
+      )}
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
@@ -375,8 +418,9 @@ function LibraryIndex() {
       ) : (
         <>
           <LibraryNavigation
+            focused={focused}
             collection={collection}
-            items={items}
+            items={focused ? subjectItems : items}
             area={area}
             onArea={(value) => {
               setArea(value);
@@ -389,6 +433,8 @@ function LibraryIndex() {
             discipline={discipline}
             onDiscipline={(value) => {
               setDiscipline(value);
+              setContest("all");
+              setArea("all");
               setTopic("all");
               setLaw("all");
             }}
@@ -408,7 +454,17 @@ function LibraryIndex() {
               setTopic("all");
               setLaw("all");
             }}
-            contests={contests}
+            contests={
+              focused
+                ? [
+                    ...new Set(
+                      subjectItems
+                        .map((item) => item.contest_name)
+                        .filter((name): name is string => !!name),
+                    ),
+                  ].sort()
+                : contests
+            }
             count={visible.length}
             searchingContent={
               !lawMatches.length &&
@@ -463,17 +519,7 @@ function LibraryIndex() {
                   : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
               }
               action={
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setQuery("");
-                    setArea("all");
-                    setDiscipline("all");
-                    setContest("all");
-                    setTopic("all");
-                    setLaw("all");
-                  }}
-                >
+                <Button variant="outline" onClick={resetFilters}>
                   Limpar filtros
                 </Button>
               }
@@ -511,10 +557,25 @@ function DisciplineSection({
   defaultOpen: boolean;
   query: string;
 }) {
-  const ordered = useMemo(() => [...list].sort(compareMaterialRevision), [list]);
+  const ordered = useMemo(
+    () =>
+      [...list].sort(
+        (a, b) =>
+          (a.sort_order ?? 0) - (b.sort_order ?? 0) || a.title.localeCompare(b.title, "pt-BR"),
+      ),
+    [list],
+  );
   const position = new Map(ordered.map((item, index) => [item.slug, index + 1]));
-  const groups = useMemo(() => [{ order: null as number | null, items: ordered }], [ordered]);
-  const byEdital = groups.filter((group) => group.order !== null).length > 1;
+  const groups = useMemo(() => {
+    const byTopic = new Map<string, StudyMaterialSummary[]>();
+    for (const item of ordered) {
+      const label = libraryTopic(item) || "Fundamentos e revisão";
+      const list = byTopic.get(label) ?? [];
+      list.push(item);
+      byTopic.set(label, list);
+    }
+    return [...byTopic].map(([label, items]) => ({ label, items }));
+  }, [ordered]);
   const done = ordered.filter((item) => read.has(item.slug)).length;
   const next = ordered.find((item) => !read.has(item.slug));
   const percent = ordered.length ? Math.round((done / ordered.length) * 100) : 0;
@@ -541,7 +602,7 @@ function DisciplineSection({
         <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
       </summary>
       <div className="space-y-5 border-t px-5 pb-5 pt-4">
-        {next && (
+        {next && ordered.length > 1 && (
           <Link
             to="/dashboard/library/$slug"
             params={{ slug: next.slug }}
@@ -556,17 +617,13 @@ function DisciplineSection({
           </Link>
         )}
         {groups.map((group) => (
-          <div key={group.order ?? "outros"} className="space-y-2">
-            {byEdital && (
-              <h3 className="flex items-center gap-2 text-xs font-black uppercase tracking-wide text-muted-foreground">
-                <span className="rounded-md bg-slate-100 px-2 py-0.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                  {group.order === null ? "Complementar" : `Edital · tópico ${group.order}`}
-                </span>
-                <span className="font-semibold normal-case tracking-normal">
-                  {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
-                </span>
-              </h3>
-            )}
+          <div key={group.label} className="space-y-2">
+            <h3 className="library-topic-heading">
+              <span>{group.label}</span>
+              <span>
+                {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
+              </span>
+            </h3>
             <ol className="grid gap-2 lg:grid-cols-2">
               {group.items.map((item) => (
                 <MaterialRow

@@ -5,6 +5,7 @@ import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 
 const icons = { all: BookOpen, legislation: ShieldCheck, law: Scale, general: Shapes };
 type Props = {
+  focused?: boolean;
   items: StudyMaterialSummary[];
   area: LibraryArea;
   onArea: (area: LibraryArea) => void;
@@ -39,47 +40,53 @@ export function LibraryNavigation(p: Props) {
     <section className="library-navigator" aria-label="Pesquisar e organizar a biblioteca">
       <header className="library-navigator__heading">
         <div>
-          <p className="library-eyebrow">SEU ACERVO DE ESTUDO</p>
-          <h2>Encontre seu próximo assunto</h2>
-          <p>Escolha uma área e refine por disciplina. Cada conteúdo no seu lugar.</p>
+          {!p.focused && <p className="library-eyebrow">Seu acervo de estudo</p>}
+          <h2>
+            {p.focused ? "Encontre um assunto nesta matéria" : "Encontre seu próximo assunto"}
+          </h2>
+          {!p.focused && (
+            <p>Escolha uma área e refine por disciplina. Cada conteúdo no seu lugar.</p>
+          )}
         </div>
         <span className="library-total">
           <BookOpen aria-hidden="true" size={16} />
           {p.items.length} materiais
         </span>
       </header>
-      <div className="library-area-grid" role="group" aria-label="Áreas de estudo">
-        {LIBRARY_AREAS.filter(
-          (a) =>
-            !p.collection ||
-            a.id === "all" ||
-            (p.collection === "laws" ? a.id !== "general" : a.id === "general"),
-        ).map((a) => {
-          const Icon = icons[a.id];
-          const count =
-            a.id === "all"
-              ? p.items.length
-              : p.items.filter((item) => libraryArea(item) === a.id).length;
-          return (
-            <button
-              key={a.id}
-              type="button"
-              aria-pressed={p.area === a.id}
-              onClick={() => p.onArea(a.id)}
-              className={`library-area library-tone-${a.tone}`}
-            >
-              <span className="library-area__icon">
-                <Icon aria-hidden="true" size={21} />
-              </span>
-              <span className="library-area__content">
-                <strong>{a.title}</strong>
-                <span>{a.description}</span>
-              </span>
-              <span className="library-area__count">{count}</span>
-            </button>
-          );
-        })}
-      </div>
+      {!p.focused && (
+        <div className="library-area-grid" role="group" aria-label="Áreas de estudo">
+          {LIBRARY_AREAS.filter(
+            (a) =>
+              !p.collection ||
+              a.id === "all" ||
+              (p.collection === "laws" ? a.id !== "general" : a.id === "general"),
+          ).map((a) => {
+            const Icon = icons[a.id];
+            const count =
+              a.id === "all"
+                ? p.items.length
+                : p.items.filter((item) => libraryArea(item) === a.id).length;
+            return (
+              <button
+                key={a.id}
+                type="button"
+                aria-pressed={p.area === a.id}
+                onClick={() => p.onArea(a.id)}
+                className={`library-area library-tone-${a.tone}`}
+              >
+                <span className="library-area__icon">
+                  <Icon aria-hidden="true" size={21} />
+                </span>
+                <span className="library-area__content">
+                  <strong>{a.title}</strong>
+                  <span>{a.description}</span>
+                </span>
+                <span className="library-area__count">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
       <div className="library-searchbar">
         <Search aria-hidden="true" size={20} />
         <label className="sr-only" htmlFor="library-search">
@@ -91,9 +98,11 @@ export function LibraryNavigation(p: Props) {
           value={p.query}
           onChange={(e) => p.onQuery(e.target.value)}
           placeholder={
-            p.collection === "subjects"
-              ? "Busque nesta coleção de disciplinas…"
-              : "Busque um termo nas leis ou refine pelos filtros…"
+            p.focused
+              ? `Buscar em ${p.discipline}…`
+              : p.collection === "subjects"
+                ? "Busque nesta coleção de disciplinas…"
+                : "Busque um termo nas leis ou refine pelos filtros…"
           }
         />
         {p.query && (
@@ -118,7 +127,7 @@ export function LibraryNavigation(p: Props) {
             ))}
           </select>
         </label>
-        {p.onLaw && (
+        {p.onLaw && (!p.focused || (p.laws?.length ?? 0) > 1 || (p.law ?? "all") !== "all") && (
           <label>
             Lei
             <select value={p.law ?? "all"} onChange={(e) => p.onLaw?.(e.target.value)}>
@@ -165,7 +174,7 @@ export function LibraryNavigation(p: Props) {
         {filtered ? (
           <button type="button" onClick={p.onReset}>
             <X aria-hidden="true" size={14} />
-            Limpar filtros
+            {p.focused ? "Limpar busca e filtros" : "Limpar filtros"}
           </button>
         ) : (
           <span>Busca por nome ou número, com ou sem acentos</span>

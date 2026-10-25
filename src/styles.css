@@ -14282,3 +14282,39 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
     transform: none;
   }
 }
+
+/* Materials: a readable subject workspace, with the catalogue kept outside focused study. */
+.material-library { width: 100%; min-width: 0; }
+.material-library :is(h1,h2,h3,.library-material-row strong) { font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif); text-transform: none; letter-spacing: -.02em; }
+.library-focus { padding: 20px 24px; border: 1px solid var(--library-line); border-left: 3px solid var(--library-accent); border-radius: 18px; background: var(--card); }
+.library-focus__back { display: inline-flex; align-items: center; min-height: 36px; color: var(--muted-foreground); font-size: .875rem; font-weight: 600; }
+.library-focus__back:hover { color: var(--foreground); }
+.library-focus__identity { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 6px; }
+.library-focus__identity > div:first-child { flex: 1 1 300px; min-width: 0; }
+.material-library .library-focus h1 { margin: 5px 0 8px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 750; line-height: 1.2; color: var(--foreground); }
+.library-focus__identity p:last-child { color: var(--muted-foreground); font-size: .9rem; line-height: 1.5; }
+.library-focus__counts { display: flex; gap: 20px; color: var(--muted-foreground); font-size: .8rem; }
+.library-focus__counts strong { display: block; font-size: 1.5rem; color: var(--library-ink); line-height: 1.3; }
+.material-library .library-navigator { padding: 18px 22px; border-radius: 16px; }
+.material-library .library-navigator__heading { margin-bottom: 14px; }
+.material-library .library-navigator__heading h2 { font-size: 1.1rem; font-weight: 700; }
+.material-library .library-eyebrow { font-family: inherit; font-size: .72rem; letter-spacing: .08em; font-weight: 650; }
+.material-library .library-refine { grid-template-columns: repeat(auto-fit,minmax(min(100%,220px),1fr)); }
+.material-library .library-refine select { min-height: 44px; font-size: .875rem; }
+.material-library .library-discipline-title { font-size: 1.1rem; font-weight: 700; }
+.material-library .library-subject__heading { flex-wrap: wrap; }
+.material-library .library-subject__heading > .flex { max-width: 190px; }
+.library-topic-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--border); padding: 4px 0 10px; margin-bottom: 12px; font-size: .95rem; font-weight: 650; line-height: 1.4; }
+.library-topic-heading > span:last-child { flex-shrink: 0; font-size: .75rem; font-weight: 500; color: var(--muted-foreground); }
+.material-library .library-material-topic { text-transform: none; letter-spacing: 0; font-size: .8rem; font-weight: 550; }
+.material-library .library-material-row strong { font-size: .95rem; line-height: 1.5; font-weight: 650; }
+.material-library .library-material-row { padding: 18px; border-radius: 12px; }
+.material-library .library-material-row:focus-visible, .library-focus__back:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .library-focus, .material-library .library-navigator { padding: 16px; }
+  .library-focus__identity { gap: 12px; }
+  .library-focus__counts { gap: 18px; }
+  .material-library .library-subject > div { padding-inline: 12px; }
+  .material-library .library-material-row { padding: 14px; gap: 10px; }
+  .material-library .library-refine select, .material-library .library-searchbar input { font-size: 16px; }
+}
