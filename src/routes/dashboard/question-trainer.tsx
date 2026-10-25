@@ -2129,6 +2129,11 @@ function QuestionTrainer() {
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Questão anterior
                 </Button>
+                {user?.id && (
+                  <div className="trainer-save-question">
+                    <SaveStudyLater userId={user.id} question={question} />
+                  </div>
+                )}
                 {!answered ? (
                   <>
                     <Button variant="outline" disabled={saving} onClick={skipQuestion}>

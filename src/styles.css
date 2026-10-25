@@ -14781,3 +14781,14 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
   .home.home .home-footer__contact { margin-top: 12px; }
   .home.home .home-footer--command .home-footer__bottom { margin-top: 14px; padding-top: 12px; font-size: 10px; }
 }
+
+/* Ação de revisão: destaque a opção de guardar a questão sem competir com o envio. */
+.trainer-save-question { display: flex; align-items: center; }
+.trainer-save-question > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.trainer-save-question button { border-color: color-mix(in srgb, var(--trainer-accent) 55%, var(--trainer-line)); background: color-mix(in srgb, var(--trainer-soft) 72%, var(--card)); color: var(--foreground); font-weight: 650; }
+.trainer-save-question button:hover:not(:disabled) { border-color: var(--trainer-accent); background: var(--trainer-soft); }
+.trainer-save-question a { display: none; }
+@media (max-width: 639px) {
+  .trainer-save-question { grid-column: 1 / -1; width: 100%; }
+  .trainer-save-question > div, .trainer-save-question button { width: 100%; }
+}
