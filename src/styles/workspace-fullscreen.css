@@ -82,3 +82,45 @@ html[data-reading-focus="true"] .focus-study-bar { top: 0; }
   .workspace-focus-controls, .workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry { background: Canvas; color: CanvasText; border-color: CanvasText; }
 }
 @media print { .workspace-focus-controls { display: none; } .app-shell.navigation-v2[data-focus-mode="true"] { position: static; height: auto; display: block; overflow: visible; } }
+
+/* Sessão de foco: o cronômetro vira a área principal quando o aluno inicia um ciclo. */
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page {
+  width: min(1180px, 100%);
+  max-width: none;
+  min-height: 100%;
+  margin-inline: auto;
+  padding: clamp(18px, 4vw, 52px) clamp(14px, 4vw, 64px) 72px;
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page > :not(.focus-session-card) { display: none !important; }
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page .focus-session-card {
+  min-height: min(720px, calc(100dvh - 120px));
+  border-color: rgb(244 183 76 / 48%);
+  background: linear-gradient(135deg, rgb(22 25 30 / 98%), rgb(17 23 31 / 96%));
+  box-shadow: 0 24px 80px rgb(0 0 0 / 35%), 0 0 0 1px rgb(244 183 76 / 10%);
+}
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card > div { min-height: inherit; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-session-heading { align-items: flex-start; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-session-kicker { color: #f4b74c; }
+.app-shell.navigation-v2[data-focus-mode="true"] .focus-session-card .focus-timer-panel { min-height: 100%; }
+
+.focus-session-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.focus-session-kicker { display: block; margin-bottom: 5px; color: hsl(var(--muted-foreground)); font-size: 10px; font-weight: 800; letter-spacing: .14em; }
+.focus-history-card { border-color: rgb(148 163 184 / 24%); }
+.focus-history-list { display: grid; gap: 8px; }
+.focus-history-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid rgb(148 163 184 / 18%); border-radius: 11px; background: rgb(15 23 42 / 28%); }
+.focus-history-row > div:first-child { display: grid; min-width: 0; gap: 2px; }
+.focus-history-row strong, .focus-history-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.focus-history-row strong { font-size: 13px; }
+.focus-history-row span, .focus-history-meta time { color: hsl(var(--muted-foreground)); font-size: 11px; }
+.focus-history-meta { display: grid; flex: none; justify-items: end; gap: 2px; }
+.focus-history-meta b { color: #f4b74c; font-size: 12px; }
+.focus-progress { width: min(100%, 360px); display: grid; gap: 6px; }
+.focus-progress__label, .focus-progress__meta { display: flex; justify-content: space-between; gap: 12px; color: hsl(var(--muted-foreground)); font-size: 11px; }
+.focus-progress__label strong { color: hsl(var(--foreground)); font-variant-numeric: tabular-nums; }
+.focus-progress__track { height: 7px; overflow: hidden; border-radius: 999px; background: rgb(148 163 184 / 18%); }
+.focus-progress__track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #f4b74c, #f59e0b); transition: width .25s ease; }
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page { padding: 14px 10px 60px; }
+  .focus-session-heading { align-items: flex-start; flex-direction: column; }
+  .focus-session-heading > button { width: 100%; }
+}
