@@ -235,7 +235,7 @@ function StudyToolsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="study-tools-page space-y-6">
       <PageHero
         image="study-desk"
         kicker={enem ? "ENEM" : "Meu planejamento"}

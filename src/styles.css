@@ -14473,3 +14473,11 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(3) { border-top:3px solid #6ea8ff; }
 .app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(4) { border-top:3px solid #d681b8; }
 .app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tablist"] { border-radius:12px; padding:4px; background:#111a21; }
+
+/* Focus session: a single compact control surface for selecting and executing study. */
+.app-shell[data-area="student"] .study-tools-page { max-width: 1280px; margin-inline: auto; gap: 14px; }
+.app-shell[data-area="student"] .study-tools-page > .page-hero { min-height: 0; padding: 18px 22px; border-radius: 17px; }
+.app-shell[data-area="student"] .study-tools-page > .page-hero h1 { font-size: clamp(24px,3vw,38px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .study-tools-page [data-slot="card"] { border-radius: 15px; box-shadow: 0 10px 26px rgb(0 0 0 / .1); }
+.app-shell[data-area="student"] .study-tools-page [data-slot="card-header"] { padding: 14px 18px 9px; }
+.app-shell[data-area="student"] .study-tools-page [data-slot="card-content"] { padding: 10px 18px 16px; }
