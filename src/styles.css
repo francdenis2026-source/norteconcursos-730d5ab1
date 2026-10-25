@@ -14916,3 +14916,22 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     color: var(--home-gold);
   }
 }
+
+/* Mobile hero: reveal the officer instead of covering the artwork with a dark veil. */
+@media (max-width: 767px) {
+  .home.home #inicio.home-hero::after {
+    background:
+      linear-gradient(90deg, rgb(8 18 28 / 82%) 0%, rgb(8 18 28 / 42%) 34%, rgb(8 18 28 / 8%) 70%, transparent 100%),
+      linear-gradient(0deg, rgb(8 18 28 / 36%) 0%, transparent 54%);
+  }
+  .home.home #inicio.home-hero > .home-hero__image {
+    opacity: 1;
+    filter: saturate(1.18) contrast(1.06) brightness(1.06) drop-shadow(-10px 8px 20px rgb(0 0 0 / 34%));
+    mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 100%);
+  }
+  .home.home #inicio.home-hero .home-hero__copy {
+    background: linear-gradient(145deg, rgb(10 23 35 / 88%), rgb(10 23 35 / 48%));
+    border-color: rgb(255 255 255 / 22%);
+  }
+}
