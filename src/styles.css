@@ -14481,3 +14481,11 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .study-tools-page [data-slot="card"] { border-radius: 15px; box-shadow: 0 10px 26px rgb(0 0 0 / .1); }
 .app-shell[data-area="student"] .study-tools-page [data-slot="card-header"] { padding: 14px 18px 9px; }
 .app-shell[data-area="student"] .study-tools-page [data-slot="card-content"] { padding: 10px 18px 16px; }
+
+/* Legal-course workspace: compact article navigator with a clear reading path. */
+.app-shell[data-area="student"] .legal-course-page { width: min(1280px, 100%); max-width: 1280px; margin-inline: auto; gap: 14px; }
+.app-shell[data-area="student"] .legal-course-page > .workspace-banner { border-radius: 17px; }
+.app-shell[data-area="student"] .legal-course-page .legal-course-toolbar,
+.app-shell[data-area="student"] .legal-course-page .legal-course-filters { border-radius: 14px; }
+.app-shell[data-area="student"] .legal-course-page .surface-card { border-radius: 14px; box-shadow: 0 10px 24px rgb(0 0 0 / .1); }
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row { min-height: 58px; padding-block: 9px; }
