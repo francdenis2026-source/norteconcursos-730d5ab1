@@ -14747,10 +14747,10 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .performance-page .performance-metric-card { min-height:100px; border-radius:14px; border-color:rgb(255 255 255 / 10%); background:linear-gradient(145deg,color-mix(in oklab,var(--card) 92%,transparent),color-mix(in oklab,var(--primary) 5%,var(--card))); }
 .app-shell[data-area="student"] .performance-page .performance-charts { margin-top:2px; }
 .app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"] { border-radius:14px; border-color:rgb(255 255 255 / 10%); background:#111a21; }
-.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(1) { border-top:3px solid #28c6a3; }
-.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(2) { border-top:3px solid #d7a74b; }
-.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(3) { border-top:3px solid #6ea8ff; }
-.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(4) { border-top:3px solid #d681b8; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(1) { border-top:2px solid #28c6a3; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(2) { border-top:2px solid #d7a74b; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(3) { border-top:2px solid #6ea8ff; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(4) { border-top:2px solid #d681b8; }
 .app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tablist"] { border-radius:12px; padding:4px; background:#111a21; }
 
 /* Focus session: a single compact control surface for selecting and executing study. */
