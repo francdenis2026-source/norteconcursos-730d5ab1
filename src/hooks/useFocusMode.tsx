@@ -90,6 +90,9 @@ export function useFocusMode() {
   const enter = useCallback(() => {
     beginFocus(href(), "");
     setFocus(true);
+    if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+      void document.documentElement.requestFullscreen().catch(() => {});
+    }
   }, [href]);
 
   const requestExit = useCallback(async () => {
@@ -106,6 +109,7 @@ export function useFocusMode() {
       if (ok) {
         endFocus();
         setFocus(false);
+        if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
       }
     } finally {
       exiting.current = false;
@@ -204,7 +208,7 @@ export function useFocusMode() {
   /** Botão para entrar no modo foco (fora dele). */
   const button = (
     <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
-      <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
+      <Maximize2 className="mr-1 h-4 w-4" /> Tela cheia de leitura
     </Button>
   );
 
