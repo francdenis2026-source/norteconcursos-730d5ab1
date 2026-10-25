@@ -50,7 +50,19 @@ export const TRACK_MATERIALS: Record<string, Record<string, readonly string[]>> 
     defesas: ["informatica-malware-antivirus-firewall", "informatica-seguranca-cid-controles"],
   },
   portugues: {
+    "pt-interpretacao": ["portugues-leitura-interpretacao-tipologia"],
+    "pt-tipologia": ["portugues-leitura-interpretacao-tipologia"],
+    "pt-acentuacao": ["portugues-ortografia-acentuacao-atual"],
+    "pt-classes": [
+      "portugues-classes-palavras-contexto",
+      "portugues-pronomes-referentes-relativos",
+      "portugues-verbos-tempos-vozes",
+    ],
+    "pt-concordancia": ["portugues-concordancia-verbal-nominal"],
+    "pt-regencia-crase": ["portugues-regencia-crase"],
+    "pt-pontuacao": ["portugues-pontuacao-estrutura-sentido"],
     "pt-coesao": ["portugues-coesao-reescrita-sentido"],
+    "pt-redacao-oficial": ["portugues-redacao-oficial-atual"],
   },
   "raciocinio-logico": {
     "rl-proposicoes": ["rlm-proposicoes-negacao-condicionais"],

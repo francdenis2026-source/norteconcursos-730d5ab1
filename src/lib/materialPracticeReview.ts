@@ -17,7 +17,7 @@ export function isPracticeOfficialSource(value: string): boolean {
   try {
     const u = new URL(value);
     return u.protocol === 'https:' && !u.username && !u.password && !u.port &&
-      (['www.planalto.gov.br','planalto.gov.br','cfc.org.br','www.cfc.org.br','www1.cfc.org.br','cpc.org.br','www.cpc.org.br','conteudo.cvm.gov.br'].includes(u.hostname) || /^(?:[a-z0-9-]+\.)*(?:stf|stj)\.jus\.br$/.test(u.hostname));
+      (['www.planalto.gov.br','planalto.gov.br','cfc.org.br','www.cfc.org.br','www1.cfc.org.br','www12.senado.leg.br','cpc.org.br','www.cpc.org.br','conteudo.cvm.gov.br'].includes(u.hostname) || /^(?:[a-z0-9-]+\.)*(?:stf|stj)\.jus\.br$/.test(u.hostname));
   } catch { return false; }
 }
 /** An existing approval cannot silently survive any change to the quiz it reviewed. */

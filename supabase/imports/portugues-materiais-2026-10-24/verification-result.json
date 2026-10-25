@@ -1,0 +1,136 @@
+{
+  "checked_at": "2026-10-25T03:25:56.347910+00:00",
+  "project_ref": "gkwphadbveiyjcwiiizw",
+  "materials_verified": 16,
+  "new_materials": 12,
+  "updated_materials": 4,
+  "local_exercises": 320,
+  "new_local_exercises": 240,
+  "repaired_practice_reviews": 4,
+  "clarified_existing_items": 0,
+  "active_case_versions": 16,
+  "new_cases": 16,
+  "active_catalog_questions": 105,
+  "audit_rows": 202,
+  "question_classifications": {
+    "needs_review": 94,
+    "duplicate_reused": 3,
+    "published": 105
+  },
+  "all_fields_match": true,
+  "active_official_syllabus_verified": true,
+  "materials": [
+    {
+      "slug": "portugues-adjetivas-substantivas-pontuacao",
+      "title": "Orações adjetivas e substantivas: função e efeito das vírgulas",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-classes-palavras-contexto",
+      "title": "Classes de palavras: nomes, determinantes e circunstâncias",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-coesao-reescrita-sentido",
+      "title": "Coesão e reescrita: preserve referente, lógica e sentido",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-colocacao-pronominal",
+      "title": "Colocação pronominal: posição, atração e reescrita",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-concordancia-verbal-nominal",
+      "title": "Concordância verbal e nominal: núcleo, se e construções especiais",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-coordenacao-subordinacao",
+      "title": "Período composto: coordenação, subordinação e funções",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-leitura-interpretacao-tipologia",
+      "title": "Leitura e tipologia: interpretação, inferência e gêneros textuais",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-oracoes-adverbiais-conectores",
+      "title": "Conectores: causa, consequência, concessão e condição",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-ortografia-acentuacao-atual",
+      "title": "Ortografia e acentuação: regras atuais e dúvidas frequentes",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-pontuacao-estrutura-sentido",
+      "title": "Pontuação: estrutura, vírgula e efeitos de sentido",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-pronomes-referentes-relativos",
+      "title": "Pronomes: referência, relativos e funções no período",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-redacao-oficial-atual",
+      "title": "Redação oficial atual: clareza, documentos e alcance das normas",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-regencia-crase",
+      "title": "Regência e crase: relações, preposições e casos de prova",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-semantica-figuras-linguagem",
+      "title": "Sentido e figuras de linguagem: contexto, palavras e efeitos",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-sintaxe-termos-oracao",
+      "title": "Sintaxe: sujeito, predicado, complementos e termos associados",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    },
+    {
+      "slug": "portugues-verbos-tempos-vozes",
+      "title": "Verbos: flexão, tempos, correlação e vozes",
+      "discipline": "Língua Portuguesa",
+      "status": "active",
+      "local_exercises": 20
+    }
+  ]
+}

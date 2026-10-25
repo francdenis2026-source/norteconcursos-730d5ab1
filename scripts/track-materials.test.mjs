@@ -13,7 +13,20 @@ const audit = JSON.parse(
     new URL("../docs/audits/material-consolidation-2026-10-24/inventory.json", import.meta.url),
   ),
 );
-const materials = audit.materials;
+const portuguese = JSON.parse(
+  readFileSync(
+    new URL(
+      "../supabase/imports/portugues-materiais-2026-10-24/materials-package.json",
+      import.meta.url,
+    ),
+  ),
+);
+const materials = [
+  ...audit.materials,
+  ...portuguese.rows
+    .filter((r) => !audit.materials.some((m) => m.slug === r.material.slug))
+    .map((r) => r.material),
+];
 test("every curricular link resolves to an existing lesson and a published material from the inspected catalog", () => {
   for (const [slug, lessons] of Object.entries(TRACK_MATERIALS)) {
     const track = TRACKS.find((t) => t.slug === slug);
