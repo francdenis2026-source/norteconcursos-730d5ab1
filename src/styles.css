@@ -14386,3 +14386,17 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .edital-selected [role="region"] { border-radius: 14px; background: color-mix(in oklab, var(--primary) 8%, var(--card)); }
 .app-shell[data-area="student"] .edital-workspace .edital-topic-card { min-height: 104px; border-radius: 14px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
 .app-shell[data-area="student"] .edital-workspace .edital-topic-card:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--primary) 50%, var(--border)); box-shadow: 0 12px 26px rgb(0 0 0 / 12%); }
+
+/* Dashboard home: compact command center with clear priorities. */
+.app-shell[data-area="student"] .student-home { max-width: 1280px; margin-inline: auto; display: grid; gap: 16px; }
+.app-shell[data-area="student"] .student-hub__masthead { min-height: 0; padding: 20px 24px; border-radius: 18px; }
+.app-shell[data-area="student"] .student-hub__masthead h1 { font-size: clamp(25px, 3vw, 38px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .student-hub__masthead-stats { gap: 8px; }
+.app-shell[data-area="student"] .student-hub__masthead-stats .hero-stat { min-height: 62px; padding: 9px 12px; border-radius: 11px; }
+.app-shell[data-area="student"] .student-hub__shortcuts { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; }
+.app-shell[data-area="student"] .student-hub__shortcuts > a { min-height: 92px; padding: 12px; border-radius: 13px; }
+.app-shell[data-area="student"] .student-home__metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
+.app-shell[data-area="student"] .student-home__metrics > * { min-height: 78px; padding: 12px; border-radius: 13px; }
+.app-shell[data-area="student"] .student-hub__workspace { gap: 14px; }
+@media (max-width: 1000px) { .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: repeat(3,minmax(0,1fr)); } .app-shell[data-area="student"] .student-home__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { .app-shell[data-area="student"] .student-hub__masthead { padding: 16px; } .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); } }
