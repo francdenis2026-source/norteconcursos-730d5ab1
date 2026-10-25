@@ -15289,6 +15289,25 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__hero .tactical-clock-backdrop__hand,
   .mobile-homepage__hero .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand { animation-play-state:running !important; }
 }
+
+/* Homepage mobile light theme: readable text on navy image chapters. */
+@media (max-width: 767px) {
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero,.mobile-homepage__closing,.mobile-homepage__contests,.mobile-homepage__footer) {
+    color: #f7fafc;
+  }
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero p,.mobile-homepage__closing p,.mobile-homepage__contests p,.mobile-homepage__footer p,.mobile-homepage__footer small) {
+    color: #e5edf3;
+  }
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero h1,.mobile-homepage__hero h2,.mobile-homepage__closing strong,.mobile-homepage__contests h2,.mobile-homepage__footer > strong) {
+    color: #ffffff;
+  }
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__eyebrow,.mobile-homepage__section-head > span,.mobile-homepage__contests .mobile-homepage__section-head > span,.mobile-homepage__footer strong span) {
+    color: #f6d17a;
+  }
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__secondary,.mobile-homepage__closing a,.mobile-homepage__qr small) {
+    color: #f6d17a;
+  }
+}
 @media (prefers-reduced-motion: reduce) and (max-width: 767px) {
   .mobile-homepage__hero .tactical-clock-backdrop__hand,
   .mobile-homepage__hero .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand { animation-play-state:paused !important; }
