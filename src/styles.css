@@ -14760,3 +14760,24 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
     height: 24px !important;
   }
 }
+
+/* Final mobile homepage polish: visible hero art, no hero-to-daily void, and a compact footer. */
+@media (max-width: 767px) {
+  .home.home #inicio.home-hero { min-height: 0 !important; padding-bottom: 10px !important; background: linear-gradient(180deg, #0b1723 0%, #122536 72%, var(--home-bg) 100%); }
+  .home.home #inicio.home-hero > .home-hero__image { right: 0; bottom: 0; width: 100%; height: 270px; object-fit: contain; object-position: 62% bottom; opacity: .9; filter: saturate(1.08) contrast(1.05) drop-shadow(0 18px 22px rgb(0 0 0 / 35%)); mask-image: linear-gradient(180deg, transparent 0%, #000 28%, #000 82%, transparent 100%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 28%, #000 82%, transparent 100%); }
+  .home.home #inicio.home-hero::after { background: linear-gradient(180deg, rgb(9 21 32 / 12%) 0%, rgb(9 21 32 / 22%) 45%, var(--home-bg) 100%); }
+  .home.home #inicio.home-hero .home-hero__content { padding-bottom: 8px; }
+  .home.home .home-daily-feature { margin-top: 0 !important; padding-top: 10px !important; }
+  .home.home .home-footer--command { padding: 24px 0 14px; background: linear-gradient(180deg, color-mix(in srgb, var(--home-bg) 94%, #0c1b28), #09131e); }
+  .home.home .home-footer--command .home-footer__grid { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 16px; border: 1px solid color-mix(in srgb, var(--home-gold) 24%, var(--home-line)); border-radius: 18px; background: color-mix(in srgb, var(--home-surface) 96%, transparent); }
+  .home.home .home-footer--command .home-footer__brand { grid-column: 1; margin-bottom: 4px; }
+  .home.home .home-footer--command .home-footer__brand p { margin-top: 8px; font-size: 12px; }
+  .home.home .home-footer--command .home-footer__section { border: 1px solid var(--home-line); border-radius: 11px; background: color-mix(in srgb, var(--home-bg) 70%, transparent); }
+  .home.home .home-footer--command .home-footer__section > summary { min-height: 48px; padding: 0 12px; margin: 0; font-size: 12px; }
+  .home.home .home-footer--command .home-footer__links { padding: 2px 12px 8px; }
+  .home.home .home-footer--command .home-footer__links a { min-height: 40px; font-size: 12px; }
+  .home.home .home-footer--command .home-platform-qr { margin-top: 6px; padding: 12px; border-radius: 13px; }
+  .home.home .home-footer--command .home-platform-qr img { width: 84px; height: 84px; flex-basis: 84px; }
+  .home.home .home-footer__contact { margin-top: 12px; }
+  .home.home .home-footer--command .home-footer__bottom { margin-top: 14px; padding-top: 12px; font-size: 10px; }
+}
