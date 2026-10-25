@@ -426,6 +426,22 @@ html {
   }
 }
 
+/* Light desktop contrast pass for internal client surfaces. */
+@media (min-width: 768px) {
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-home__card,.student-home__metrics,.performance-metric-card,.performance-page .performance-charts > [data-slot="card"],.library-focus,.material-library .library-navigator,.law-finder__panel,.law-finder__themes-panel,.command-panel,.surface-card) {
+    background: #ffffff;
+    color: #17283a;
+    border-color: #d5dfe8;
+  }
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-home__card p,.student-home__card small,.performance-metric-card p,.performance-page .performance-charts > [data-slot="card"] p,.library-focus p,.material-library .library-navigator p,.command-panel p,.surface-card p) {
+    color: #526176;
+  }
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-hub__masthead,.trainer-workbench-hero,.study-assistant-hero,.exam-simulator-hero,.pcpr-spot--illustrated,.pcpr-spot--cover) :is(h1,h2,h3,p,.student-hub__date,.trainer-panel-kicker) {
+    color: #f7fafc;
+    text-shadow: 0 1px 14px rgb(0 0 0 / .45);
+  }
+}
+
 .app-content__inner :where(a, button, input, select, textarea, summary):focus-visible {
   outline: 2px solid var(--color-ring, var(--primary));
   outline-offset: 2px;
