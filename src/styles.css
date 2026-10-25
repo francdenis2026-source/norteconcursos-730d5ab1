@@ -14372,3 +14372,17 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
   .app-shell[data-area="student"] .app-content__inner:has(.library-navigator) .library-law-grid,
   .app-shell[data-area="student"] .app-content__inner:has(.library-navigator) .library-material-grid { grid-template-columns: 1fr; }
 }
+
+/* Edital workspace: structured command center instead of a long undifferentiated list. */
+.app-shell[data-area="student"] .edital-workspace { max-width: 1280px; margin-inline: auto; }
+.app-shell[data-area="student"] .edital-heading { padding: 24px 28px; border-radius: 20px; background: linear-gradient(120deg, color-mix(in oklab, #1e293b 88%, var(--card)), color-mix(in oklab, #0f766e 18%, var(--card))); }
+.app-shell[data-area="student"] .edital-heading h1 { font-size: clamp(27px, 3.4vw, 44px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .edital-heading p { max-width: 70ch; color: color-mix(in oklab, var(--foreground) 72%, transparent); }
+.app-shell[data-area="student"] .edital-heading .page-hero__stats { margin-top: 18px; gap: 10px; }
+.app-shell[data-area="student"] .edital-heading .hero-stat { min-width: 150px; padding: 11px 14px; border-radius: 12px; background: rgb(0 0 0 / 15%); }
+.app-shell[data-area="student"] .edital-selected { padding: 22px; border: 1px solid rgb(255 255 255 / 11%); border-radius: 18px; background: color-mix(in oklab, var(--card) 91%, transparent); box-shadow: 0 16px 40px rgb(0 0 0 / 14%); }
+.app-shell[data-area="student"] .edital-selected > h2 { margin-top: 18px; font-size: clamp(21px, 2.2vw, 30px); letter-spacing: -.025em; }
+.app-shell[data-area="student"] .edital-selected > p { margin-top: 5px; color: var(--muted-foreground); }
+.app-shell[data-area="student"] .edital-selected [role="region"] { border-radius: 14px; background: color-mix(in oklab, var(--primary) 8%, var(--card)); }
+.app-shell[data-area="student"] .edital-workspace .edital-topic-card { min-height: 104px; border-radius: 14px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.app-shell[data-area="student"] .edital-workspace .edital-topic-card:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--primary) 50%, var(--border)); box-shadow: 0 12px 26px rgb(0 0 0 / 12%); }
