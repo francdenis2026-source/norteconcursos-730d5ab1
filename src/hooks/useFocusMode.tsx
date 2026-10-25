@@ -197,18 +197,18 @@ export function useFocusMode() {
   /** Classes do contêiner do conteúdo: tela cheia, abaixo da faixa fixa do topo. */
   const containerClass = focus
     ? [
-        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-10 pt-0 sm:px-8 text-[17px] leading-8",
+        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-16 pt-0 sm:px-8 text-[16px] leading-7",
         // explicação do artigo em duas colunas, sem quebrar os blocos no meio
         "lg:[&_section[aria-label='Entenda_este_artigo']]:columns-2 lg:[&_section[aria-label='Entenda_este_artigo']]:gap-10",
         "[&_section[aria-label='Entenda_este_artigo']>*]:break-inside-avoid [&_section[aria-label='Entenda_este_artigo']>*]:mb-4",
-        "[&_.library-body]:max-w-none",
+        "[&_.library-body]:mx-auto [&_.library-body]:max-w-5xl [&_.library-body]:text-justify",
       ].join(" ")
     : "";
 
   /** Botão para entrar no modo foco (fora dele). */
   const button = (
     <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
-      <Maximize2 className="mr-1 h-4 w-4" /> Tela cheia de leitura
+      <Clock3 className="mr-1 h-4 w-4" /> Iniciar estudo cronometrado
     </Button>
   );
 
@@ -339,6 +339,9 @@ export function useFocusMode() {
             />
           </Suspense>
         )}
+        <div className="focus-study-footer" aria-label={`Estudo: ${p.kicker} · ${p.title}`}>
+          <span>{p.kicker}</span><strong>{p.title}</strong>
+        </div>
       </>
     );
 

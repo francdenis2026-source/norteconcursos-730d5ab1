@@ -42,6 +42,8 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
   border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
+.focus-study-footer { position: fixed; z-index: 62; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; gap: 10px; padding: 5px 12px; background: color-mix(in srgb, var(--card) 88%, transparent); border-top: 1px solid var(--border); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--muted-foreground); font-size: 11px; }
+.focus-study-footer strong { color: var(--foreground); }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content__inner { max-width: none; }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: flex; position: relative; top: auto; width: 68px; height: 100%; min-height: 0; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 68px; }
