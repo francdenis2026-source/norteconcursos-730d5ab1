@@ -15292,3 +15292,10 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .app-shell.navigation-v2 :is(.surface-card,.command-panel,[data-slot="card"],.trainer-config-card,.trainer-session-builder,.question-window) { border-radius:8px; }
   .app-shell.navigation-v2 .app-bottom-nav { right:0; bottom:0; left:0; border:0; border-top:1px solid var(--taste-app-border); border-radius:0; background:var(--taste-app-surface); box-shadow:none; }
 }
+
+@media (max-width: 767px) {
+  .mobile-homepage__hero-copy { background:rgb(8 22 35 / .12) !important; border-color:rgb(255 255 255 / .12) !important; box-shadow:none !important; -webkit-backdrop-filter:none !important; backdrop-filter:none !important; }
+  .mobile-homepage__hero-shade { background:rgb(8 22 35 / .22) !important; }
+  .mobile-homepage__hero > img { opacity:1 !important; filter:saturate(1.02) contrast(1.02) brightness(1) !important; }
+  .mobile-homepage__hero .tactical-clock-backdrop { opacity:.86 !important; }
+}
