@@ -13852,16 +13852,6 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   color: var(--brass-soft);
   text-shadow: 0 1px 0 rgb(0 0 0 / .7), 0 2px 2px rgb(0 0 0 / .45);
 }
-@supports (background-clip: text) {
-  .app-shell .student-hub__masthead--insignia #student-home-title {
-    background: linear-gradient(180deg, var(--on-ink) 8%, var(--brass-soft) 45%, var(--brass) 75%, var(--brass-soft));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-    filter: drop-shadow(0 1px 1px rgb(0 0 0 / .5));
-  }
-}
 .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__welcome {
   color: var(--brass-soft);
   background: color-mix(in srgb, var(--brass) 12%, var(--ink));
