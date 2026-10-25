@@ -15064,3 +15064,17 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html:not(.dark) .app-shell[data-area="student"] .trainer-resolution-workspace .trainer-option.is-selected { background: #fff8e8; border-color: #ad7b20; }
   html:not(.dark) .app-shell[data-area="student"] .app-topbar { color: #1d2b3a; background: #fff; border-bottom-color: #d5dfe8; }
 }
+
+@media (max-width: 767px) {
+  /* Balance the hero: reveal the photograph and keep the headline as the focal point. */
+  .mobile-homepage__hero > img { filter: saturate(1.08) contrast(1.02) brightness(1.14) drop-shadow(-8px 12px 20px rgb(0 0 0 / .28)); }
+  .mobile-homepage__hero-shade { background: linear-gradient(90deg, rgb(11 20 32 / .64) 0%, rgb(11 20 32 / .3) 42%, rgb(11 20 32 / .04) 82%, transparent), linear-gradient(0deg, rgb(11 20 32 / .38), transparent 58%); }
+  .mobile-homepage__hero-copy { text-shadow: 0 2px 14px rgb(0 0 0 / .48); }
+  .mobile-homepage__hero-copy > p { color: #e0e7ee; }
+  .mobile-homepage__hero-copy::before { background: radial-gradient(ellipse, rgb(19 70 90 / .16), transparent 70%); }
+  .mobile-homepage__hero .tactical-clock-backdrop { opacity: .82; }
+  .mobile-homepage__hero .tactical-clock-backdrop__mechanism { opacity: .58; }
+  .mobile-homepage__hero .tactical-clock-backdrop__hand { animation-play-state: running; }
+  .mobile-homepage__hero .tactical-clock-backdrop__hour-mark { opacity: .9; }
+  .mobile-homepage__hero .tactical-clock-backdrop__minute-mark { opacity: .55; }
+}
