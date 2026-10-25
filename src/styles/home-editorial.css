@@ -64,6 +64,12 @@
   .home.home .home-daily-feature .daily-badge::after { transition: none; transform: none; background: none; }
 }
 
+/* Keep the editorial composition slightly more compact on larger screens.
+   Mobile keeps its dedicated responsive scale and touch targets. */
+@media (min-width: 761px) {
+  .home.home { zoom: .97; }
+}
+
 .home .home-app-nav a > span { white-space: nowrap; overflow-wrap: normal; word-break: normal; }
 /* Avoid a second scrollbar hiding the last tool inside the presentation. */
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__info { height: auto; max-height: none; }
