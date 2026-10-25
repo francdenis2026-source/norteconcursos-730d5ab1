@@ -15207,3 +15207,17 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__hero .tactical-clock-backdrop__hand,
   .mobile-homepage__hero .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand { animation-play-state:paused !important; }
 }
+
+/* Desktop question count card: never clip the available and registered totals. */
+@media (min-width: 768px) and (max-height: 900px) {
+  .home.home #inicio.home-hero .home-hero__copy { max-height: none; overflow: visible; }
+  .home.home #inicio.home-hero .question-count-badge { gap: 10px; padding: 8px 12px 8px 9px; }
+  .home.home #inicio.home-hero .question-count-icon { width: 38px; height: 38px; border-radius: 9px; }
+  .home.home #inicio.home-hero .question-count-icon svg { width: 18px; }
+  .home.home #inicio.home-hero .question-count-content { gap: 1px; }
+  .home.home #inicio.home-hero .question-count-eyebrow { font-size: 9px; }
+  .home.home #inicio.home-hero .question-count-main { font-size: 12px; gap: 5px; }
+  .home.home #inicio.home-hero .question-count-main strong { font-size: 1.45rem; }
+  .home.home #inicio.home-hero .question-count-detail { font-size: 10px; }
+  .home.home #inicio.home-hero .question-count-arrow { width: 15px; margin-left: 3px; }
+}
