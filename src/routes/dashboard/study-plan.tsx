@@ -521,6 +521,7 @@ function StudyPlanPage() {
                   type="button"
                   onClick={() => setCareer(id)}
                   aria-pressed={career === id}
+                  data-control-tone={{ PF: "gold", PRF: "sky", PC: "violet" }[id]}
                   className={cn(
                     "rounded-xl px-3 py-2.5 text-left transition-[color,background-color,box-shadow]",
                     career === id
@@ -551,6 +552,8 @@ function StudyPlanPage() {
                   key={h}
                   size="sm"
                   variant={weeklyHours === h ? "default" : "outline"}
+                  aria-pressed={weeklyHours === h}
+                  data-control-tone="teal"
                   onClick={() => setWeeklyHours(h)}
                 >
                   {h}h

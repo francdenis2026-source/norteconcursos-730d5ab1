@@ -1,3 +1,5 @@
+import { STUDENT_GROUP_TONES as GROUP_HUE } from "@/lib/studentPalette";
+import "@/styles/student-control-colors.css";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
@@ -108,18 +110,6 @@ import { NorteBrand } from "@/components/brand/NorteBrand";
 type MenuItem = NavigationItem;
 
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal" | "indigo" | "slate";
-const GROUP_HUE: Record<string, Hue> = {
-  Planejamento: "gold",
-  "Meu concurso": "sky",
-  "Material didático": "violet",
-  Ferramentas: "teal",
-  Questões: "emerald",
-  Provas: "rose",
-  ENEM: "indigo",
-  Desempenho: "orange",
-  Conta: "slate",
-  Administração: "gold",
-};
 const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard": "gold",
   "/dashboard/question-trainer": "emerald",

@@ -1,0 +1,80 @@
+/* Dark study controls: tinted surfaces, readable labels and stable semantic states. */
+:root.dark .app-shell[data-area="student"] { --control-accent: #e2bd75; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="gold"], [data-control-tone="gold"]) { --control-accent: #e2bd75; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="sky"], [data-control-tone="sky"]) { --control-accent: #79bff5; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="violet"], [data-control-tone="violet"]) { --control-accent: #bd9ef6; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="teal"], [data-control-tone="teal"]) { --control-accent: #61cfc8; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="emerald"], [data-control-tone="emerald"]) { --control-accent: #75d6a0; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="rose"], [data-control-tone="rose"]) { --control-accent: #efa0ba; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="indigo"], [data-control-tone="indigo"]) { --control-accent: #aeb7ff; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="orange"], [data-control-tone="orange"]) { --control-accent: #f1b57a; }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="slate"], [data-control-tone="slate"]) { --control-accent: #a4bfd5; }
+
+:root.dark .app-shell[data-area="student"] .app-content :is([data-slot="button"][data-variant="default"], [data-slot="button"][data-variant="secondary"]) {
+  background: color-mix(in srgb, var(--control-accent) 22%, var(--card));
+  color: #f3f5f8;
+  border: 1px solid color-mix(in srgb, var(--control-accent) 60%, var(--border));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--control-accent) 18%, transparent);
+}
+:root.dark .app-shell[data-area="student"] .app-content [data-slot="button"][data-variant="outline"] {
+  background: color-mix(in srgb, var(--control-accent) 6%, var(--card));
+  border-color: color-mix(in srgb, var(--control-accent) 30%, var(--border));
+}
+:root.dark .app-shell[data-area="student"] .app-content :is([data-slot="button"][data-variant="outline"], [data-slot="button"][data-variant="ghost"]) > svg {
+  color: var(--control-accent);
+}
+:root.dark .app-shell[data-area="student"] .app-content [data-slot="card-title"] > svg { color: var(--control-accent); }
+:root.dark .app-shell[data-area="student"] .app-content [role="tab"] {
+  color: #cbd2de;
+  border: 1px solid transparent;
+}
+:root.dark .app-shell[data-area="student"] .app-content [role="tab"][data-state="active"] {
+  color: #f3f5f8;
+  background: color-mix(in srgb, var(--control-accent) 20%, var(--card));
+  border-color: color-mix(in srgb, var(--control-accent) 55%, var(--border));
+  box-shadow: inset 0 -2px 0 var(--control-accent);
+}
+:root.dark .app-shell[data-area="student"] .app-content [role="tab"] svg { color: var(--control-accent); }
+:root.dark .app-shell[data-area="student"] .app-content [role="tab"]:disabled { opacity: .45; }
+
+:root.dark .app-shell[data-area="student"] .app-content :is(button[data-control-tone], .study-planning-nav a[data-control-tone]) {
+  color: #e5eaf1;
+  background: color-mix(in srgb, var(--control-accent) 8%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--control-accent) 32%, var(--border));
+}
+:root.dark .app-shell[data-area="student"] .app-content :is(button[data-control-tone][aria-pressed="true"], .study-planning-nav a[data-control-tone][aria-current="page"]) {
+  background: color-mix(in srgb, var(--control-accent) 23%, var(--card));
+  border-color: var(--control-accent);
+  color: #f3f5f8;
+  box-shadow: inset 0 -3px 0 var(--control-accent);
+}
+:root.dark .app-shell[data-area="student"] .app-content button[data-control-tone] span { color: inherit; }
+:root.dark .app-shell[data-area="student"] .study-planning-nav a[data-control-tone] > svg { color: var(--control-accent); }
+:root.dark .navigation-command .nav-command__item[data-control-tone] .nav-command__icon {
+  color: var(--control-accent);
+  background: color-mix(in srgb, var(--control-accent) 14%, var(--card));
+  border-color: color-mix(in srgb, var(--control-accent) 35%, var(--border));
+}
+:root.dark .navigation-command .nav-command__item[data-control-tone][data-selected="true"] {
+  background: color-mix(in srgb, var(--control-accent) 16%, var(--card));
+  box-shadow: inset 3px 0 0 var(--control-accent);
+}
+@media (hover:hover) {
+  :root.dark .app-shell[data-area="student"] .app-content :is([data-slot="button"]:not([data-variant="destructive"]):not([data-variant="link"]), button[data-control-tone]):not(:disabled):hover,
+  :root.dark .app-shell[data-area="student"] .study-planning-nav a[data-control-tone]:hover {
+    border-color: var(--control-accent);
+    background: color-mix(in srgb, var(--control-accent) 17%, var(--card));
+  }
+}
+:root.dark .app-shell[data-area="student"] .workspace-section-nav a[data-tone] {
+  background: color-mix(in srgb, var(--section-accent) 10%, var(--card));
+  border-color: color-mix(in srgb, var(--section-accent) 32%, var(--border));
+}
+:root.dark .app-shell[data-area="student"] .workspace-section-nav a[data-tone][aria-current="page"] {
+  background: color-mix(in srgb, var(--section-accent) 22%, var(--card));
+  border-color: var(--section-accent);
+  color: #f3f5f8;
+}
+@media (forced-colors:active) {
+  :root.dark .app-shell[data-area="student"] .app-content :is(button,[role="tab"],.study-planning-nav a) { forced-color-adjust: auto; box-shadow: none; }
+}

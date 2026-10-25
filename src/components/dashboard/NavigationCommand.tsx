@@ -1,3 +1,4 @@
+import { STUDENT_GROUP_TONES } from "@/lib/studentPalette";
 import { studentGroupLabel } from '@/lib/studentNavigation';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, CornerDownLeft, History, SearchX, ShieldCheck, X } from 'lucide-react';
@@ -52,7 +53,7 @@ export function NavigationCommand({ open, onOpenChange, items, userId, pathname,
   };
   const clear = () => { setQuery(''); setGroup('all'); input.current?.focus(); };
   const row = (item: NavigationItem) => (
-    <CommandItem key={navigationKey(item)} value={navigationKey(item)} disabled={!!item.soon} onSelect={() => select(item)} className="nav-command__item">
+    <CommandItem key={navigationKey(item)} value={navigationKey(item)} disabled={!!item.soon} onSelect={() => select(item)} className="nav-command__item" data-control-tone={STUDENT_GROUP_TONES[item.group] ?? "gold"}>
       <span className="nav-command__icon"><item.icon aria-hidden="true" /></span>
       <span className="nav-command__text"><strong>{item.label}</strong><span>{navigationDetails(item).description}</span></span>
       {item.soon ? <span className="nav-command__badge">Em breve</span> : current === item ? <span className="nav-command__badge">Atual</span> : <ArrowRight className="nav-command__arrow" aria-hidden="true" />}
