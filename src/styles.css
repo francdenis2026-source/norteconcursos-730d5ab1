@@ -15299,3 +15299,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__hero > img { opacity:1 !important; filter:saturate(1.02) contrast(1.02) brightness(1) !important; }
   .mobile-homepage__hero .tactical-clock-backdrop { opacity:.86 !important; }
 }
+
+@media (max-width: 767px) {
+  .mobile-homepage__hero-lead { width:100%; padding:12px 14px !important; border:1px solid rgb(255 255 255 / .18); border-radius:12px; background:rgb(255 255 255 / .1); box-shadow:inset 0 1px 0 rgb(255 255 255 / .1); -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px); color:#f3f7fa !important; }
+}

@@ -16,7 +16,7 @@ export function MobileHomepage() {
         <div className="mobile-homepage__hero-copy">
           <span className="mobile-homepage__eyebrow"><span /> Preparação para carreiras policiais</span>
           <h1>Seu próximo passo começa <em>com direção.</em></h1>
-          <p>Questões, editais e simulados para transformar seu estudo em preparação real.</p>
+          <p className="mobile-homepage__hero-lead">Questões, editais e simulados para transformar seu estudo em preparação real.</p>
           <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary">Começar grátis <ArrowRight /></Link>
           <a href="#mobile-recursos" className="mobile-homepage__secondary">Ver como funciona <ChevronRight /></a>
         </div>
