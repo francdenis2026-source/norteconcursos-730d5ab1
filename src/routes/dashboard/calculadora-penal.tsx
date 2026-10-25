@@ -80,7 +80,7 @@ function PenaInput({
   return (
     <fieldset>
       <legend className="mb-1 text-sm font-medium">{label}</legend>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
         {(["anos", "meses", "dias"] as const).map((k) => (
           <label key={k} className="text-xs text-muted-foreground">
             {k}

@@ -2133,7 +2133,7 @@ function ActiveSimulator(p: {
                   aria-current={i === currentIndex ? "step" : undefined}
                   onClick={() => setCurrentIndex(i)}
                   className={cn(
-                    "relative flex h-10 items-center justify-center rounded-lg border text-xs font-bold transition",
+                    "relative flex h-11 items-center justify-center rounded-lg border text-xs font-bold transition",
                     i === currentIndex
                       ? "border-primary bg-primary text-primary-foreground"
                       : answers[q.id]
