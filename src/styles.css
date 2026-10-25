@@ -15325,3 +15325,21 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 .app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-sidebar__foot { padding:8px; }
 .app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-user { width:58px; min-height:48px; margin:0 auto; padding:7px 0; justify-content:center; }
 .app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .app-user > :not(.app-avatar) { display:none !important; }
+
+/* Homepage section subtitles: restrained glass labels for orientation. */
+.home.home :is(.home-eyebrow,.home-signal,.home-preparation__eyebrow) {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  width:max-content;
+  max-width:100%;
+  padding:6px 10px;
+  border:1px solid color-mix(in srgb, var(--home-gold) 34%, var(--home-line));
+  border-radius:9px;
+  background:color-mix(in srgb, var(--home-surface) 62%, transparent);
+  -webkit-backdrop-filter:blur(8px) saturate(120%);
+  backdrop-filter:blur(8px) saturate(120%);
+}
+@media (max-width: 767px) {
+  .mobile-homepage :is(.mobile-homepage__eyebrow,.mobile-homepage__section-head > span) { display:inline-flex; align-items:center; gap:7px; width:max-content; max-width:100%; padding:6px 9px; border:1px solid rgb(223 180 91 / .3); border-radius:8px; background:rgb(255 255 255 / .08); -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px); }
+}
