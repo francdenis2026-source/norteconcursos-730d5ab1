@@ -14380,20 +14380,20 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .law-finder__search svg { flex: 0 0 auto; color: var(--muted-foreground); }
 .law-finder__search input { flex: 1; min-width: 0; height: 54px; border: 0; outline: 0; appearance: none; -webkit-appearance: none; background: transparent; color: var(--foreground); font-size: 18px; }
 .law-finder__search input::-webkit-search-cancel-button { display: none; }
-.law-finder__search button { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 10px; background: var(--muted); color: var(--foreground); cursor: pointer; }
+.law-finder__search button { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 10px; background: var(--muted); color: var(--foreground); cursor: pointer; }
 .law-finder__search kbd { padding: 2px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; color: var(--muted-foreground); }
 @media (hover: none) { .law-finder__search kbd { display: none; } }
 .law-finder__help { margin: 10px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted-foreground); }
 .law-finder__examples { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; color: var(--muted-foreground); }
-.law-finder__examples button { min-height: 34px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--muted); color: var(--foreground); font-size: 13px; cursor: pointer; }
+.law-finder__examples button { min-height: 44px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--muted); color: var(--foreground); font-size: 13px; cursor: pointer; }
 .law-finder__examples button:hover { border-color: var(--primary); }
 .law-finder__themes { display: flex; flex-wrap: wrap; gap: 8px; }
-.law-finder__themes button { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--foreground); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.law-finder__themes button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--foreground); font-size: 13.5px; font-weight: 600; cursor: pointer; }
 .law-finder__themes button b { padding: 1px 7px; border-radius: 999px; background: var(--muted); font-size: 12px; }
 .law-finder__themes button[aria-pressed="true"] { border-color: var(--primary); background: color-mix(in oklab, var(--primary) 14%, var(--card)); }
 .law-finder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; }
 .law-finder__bar label { display: inline-flex; align-items: center; gap: 8px; color: var(--muted-foreground); }
-.law-finder__bar select { min-height: 38px; padding: 0 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--foreground); }
+.law-finder__bar select { min-height: 44px; padding: 0 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--foreground); font-size: 16px; }
 .law-finder__list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .law-finder__card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--foreground); text-decoration: none; transition: border-color .15s, transform .15s, box-shadow .15s; }
 .law-finder__card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 8px 22px rgb(0 0 0 / .12); }
