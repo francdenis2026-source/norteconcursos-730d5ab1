@@ -663,7 +663,9 @@ function MaterialRow({
         <span
           className={cn(
             "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black",
-            isRead ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800",
+            isRead
+              ? "bg-emerald-500 text-white"
+              : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300",
           )}
           aria-label={isRead ? "Já lido" : `Passo ${number}`}
         >
