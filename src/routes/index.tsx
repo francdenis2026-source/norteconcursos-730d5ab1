@@ -324,15 +324,12 @@ function Index() {
             ))}
           </nav>
           <div className="home-header__actions">
-            <Link to="/auth" search={{ mode: undefined }} className="home-login">
-              <LogIn /> Entrar
-            </Link>
             <Link
               to="/auth"
-              search={{ mode: "register" }}
+              search={{ mode: undefined }}
               className="home-button home-button--primary home-header__register"
             >
-              Começar grátis <ArrowUpRight />
+              <LogIn /> Entrar
             </Link>
             <ThemeToggle />
             <Sheet>
@@ -397,20 +394,11 @@ function Index() {
                   <SheetClose asChild>
                     <Link
                       to="/auth"
-                      search={{ mode: "register" }}
+                      search={{ mode: undefined }}
                       className="home-button home-button--primary"
                     >
-                      Começar grátis
+                      Entrar
                       <ArrowRight />
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link
-                      to="/auth"
-                      search={{ mode: undefined }}
-                      className="home-button home-button--secondary"
-                    >
-                      Já tenho conta
                     </Link>
                   </SheetClose>
                 </div>
@@ -444,11 +432,11 @@ function Index() {
                 <div className="home-actions">
                   <Link
                     to="/auth"
-                    search={{ mode: "register" }}
+                    search={{ mode: undefined }}
                     className="home-button home-button--gold"
                     data-aim
                   >
-                    Começar grátis
+                    Entrar
                     <ArrowUpRight />
                   </Link>
                   <a href="#plataforma" className="home-hero__explore" data-aim>
@@ -547,7 +535,6 @@ function Index() {
                 <p>Preparação para carreiras policiais.</p>
                 <div className="home-footer__access" aria-label="Acesse sua conta">
                   <Link to="/auth" search={{ mode: undefined }}>Entrar <LogIn aria-hidden="true" /></Link>
-                  <Link to="/auth" search={{ mode: "register" }}>Começar grátis <ArrowUpRight aria-hidden="true" /></Link>
                 </div>
               </div>
             </div>

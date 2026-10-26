@@ -84,6 +84,8 @@ function AuthPage() {
   const [pendingEmail, setPendingEmail] = useState<string | null>(null);
   /** E-mail de login recusado por falta de confirmação (mostra botão de reenvio). */
   const [unconfirmedEmail, setUnconfirmedEmail] = useState<string | null>(null);
+  /** Login recusado por credenciais inválidas: oferece ir direto ao cadastro. */
+  const [offerRegister, setOfferRegister] = useState(false);
   const [resending, setResending] = useState(false);
   const [cooldown, setCooldown] = useState(0);
 
@@ -94,6 +96,7 @@ function AuthPage() {
   useEffect(() => {
     setFormError(null);
     setUnconfirmedEmail(null);
+    setOfferRegister(false);
   }, [mode]);
 
   // Entrada automática: ao confirmar o e-mail (link volta para /auth ou outra aba confirma),
@@ -172,6 +175,7 @@ function AuthPage() {
   const handleAuth = async (e: FormEvent) => {
     e.preventDefault();
     setFormError(null);
+    setOfferRegister(false);
     setIsLoading(true);
     try {
       if (mode === "register") {
@@ -217,6 +221,7 @@ function AuthPage() {
             setUnconfirmedEmail(loginEmail);
           }
           manualAuth.current = false;
+          if (/invalid login credentials/i.test(error.message)) setOfferRegister(true);
           throw error;
         }
         toast.success("Bem-vindo de volta", {
@@ -500,6 +505,20 @@ function AuthPage() {
                     <AlertCircle />
                     <span>{formError}</span>
                   </div>
+                )}
+                {offerRegister && mode === "login" && (
+                  <button
+                    type="button"
+                    className="auth-link"
+                    onClick={() => {
+                      const typed = login.trim();
+                      if (typed.includes("@")) setEmail(typed.toLowerCase());
+                      else if (normalizeCpf(typed).length === 11) setCpf(formatCpf(typed));
+                      setMode("register");
+                    }}
+                  >
+                    Ainda não tem conta? Criar conta grátis
+                  </button>
                 )}
                 {unconfirmedEmail && (
                   <button
