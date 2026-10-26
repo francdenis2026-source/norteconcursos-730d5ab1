@@ -298,6 +298,10 @@
   line-height: 1.6;
   margin-top: 5px;
 }
+.student-home.student-desk .student-home__signals small,
+.student-home.student-desk .student-home__review-count {
+  color: color-mix(in srgb, var(--desk-accent, var(--desk-blue)) 25%, var(--muted-foreground));
+}
 .student-home.student-desk .student-home__empty :is(a, button) {
   font-size: 14px;
   min-height: 40px;
@@ -411,6 +415,11 @@
   font-size: 13px;
   line-height: 1.5;
   margin: 0;
+  color: color-mix(in srgb, var(--desk-accent) 25%, var(--muted-foreground));
+}
+.student-desk .resume-session--compact .resume-session__stats dt,
+.student-desk .resume-session--compact .resume-session__note {
+  color: color-mix(in srgb, var(--desk-accent) 25%, var(--muted-foreground));
 }
 .student-desk .resume-session--compact .resume-session__actions {
   grid-column: 2;
