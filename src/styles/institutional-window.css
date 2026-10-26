@@ -97,12 +97,16 @@
   color: var(--iw-muted);
   border: 1px solid transparent;
   white-space: nowrap;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 .iw-header nav a[aria-current="page"],
 .iw-header nav a:hover {
   color: var(--iw-gold);
   border-color: var(--iw-line);
   background: rgb(232 205 153 / 9%);
+}
+.iw-header nav a:active {
+  background: rgb(232 205 153 / 16%);
 }
 .iw-home {
   display: flex;
@@ -111,9 +115,14 @@
   min-height: 40px;
   font-size: 12px;
   color: var(--iw-muted);
+  transition: color 160ms ease;
 }
 .iw-home:hover {
   color: var(--iw-gold);
+}
+.iw-home:active {
+  color: var(--iw-gold);
+  opacity: 0.75;
 }
 .iw-hero {
   display: flex;
@@ -190,6 +199,7 @@
   text-align: left;
   font-size: 12px;
   cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 .iw-tabs > button > span {
   color: var(--iw-gold);
@@ -202,6 +212,9 @@
   border-color: var(--iw-line);
   background: rgb(232 205 153 / 9%);
   color: var(--iw-gold);
+}
+.iw-tabs > button:active {
+  background: rgb(232 205 153 / 16%);
 }
 .iw-reader {
   min-height: 0;
