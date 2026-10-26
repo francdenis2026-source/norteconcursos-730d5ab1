@@ -944,7 +944,7 @@ function Timeline({
                   {group.contest}
                 </p>
                 {accuracy === null && (
-                  <Badge variant="outline" className="mt-2 text-[10px] text-slate-600">
+                  <Badge variant="outline" className="mt-2 text-[10px] text-muted-foreground">
                     sem resultado
                   </Badge>
                 )}
@@ -953,7 +953,9 @@ function Timeline({
                     variant="outline"
                     className={cn(
                       "mt-2 text-[10px]",
-                      delta >= 0 ? "text-emerald-700" : "text-rose-700",
+                      delta >= 0
+                        ? "text-emerald-700 dark:text-emerald-400"
+                        : "text-rose-700 dark:text-rose-400",
                     )}
                   >
                     {delta >= 0 ? "+" : ""}
@@ -990,12 +992,12 @@ function DisciplineAnalysis({
   const unmapped = report.counted - report.mapped;
   const text = (value: number, neutral: boolean) =>
     neutral
-      ? "text-slate-500"
+      ? "text-muted-foreground"
       : value >= 70
-        ? "text-emerald-600"
+        ? "text-emerald-600 dark:text-emerald-400"
         : value >= 50
-          ? "text-amber-600"
-          : "text-rose-600";
+          ? "text-amber-600 dark:text-amber-400"
+          : "text-rose-600 dark:text-rose-400";
   const bar = (value: number, neutral: boolean) =>
     neutral
       ? "bg-slate-400"

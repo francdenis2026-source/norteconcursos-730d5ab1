@@ -97,7 +97,7 @@ export function ContestPlanCard({
           <div className="flex items-start justify-between gap-3">
             <div>
               <CardTitle className="flex items-center gap-2 text-lg">
-                <Flag className="h-5 w-5 text-emerald-600" /> {contest}
+                <Flag className="h-5 w-5 text-emerald-600 dark:text-emerald-400" /> {contest}
                 <Badge variant="outline">{editions.length} edição(ões)</Badge>
               </CardTitle>
               <CardDescription className="mt-1">
@@ -146,11 +146,11 @@ export function ContestPlanCard({
                           {diff === null ? (
                             <span className="text-muted-foreground">corte não cadastrado</span>
                           ) : diff >= 0 ? (
-                            <span className="font-bold text-emerald-600">
+                            <span className="font-bold text-emerald-600 dark:text-emerald-400">
                               acima do corte (+{diff})
                             </span>
                           ) : (
-                            <span className="font-bold text-rose-600">
+                            <span className="font-bold text-rose-600 dark:text-rose-400">
                               faltaram {Math.abs(diff)}
                             </span>
                           )}
@@ -170,7 +170,7 @@ export function ContestPlanCard({
 
           <section className="space-y-3">
             <h3 className="flex items-center gap-2 text-sm font-black">
-              <Brain className="h-4 w-4 text-amber-600" /> Análise de todas as edições
+              <Brain className="h-4 w-4 text-amber-600 dark:text-amber-400" /> Análise de todas as edições
             </h3>
             <p className="text-xs text-muted-foreground">
               {detailedEditions} de {editions.length} edição(ões) têm detalhe por questão; as demais
@@ -182,7 +182,7 @@ export function ContestPlanCard({
                   <div key={s.subject}>
                     <div className="mb-1 flex items-baseline justify-between gap-3 text-xs">
                       <span className="min-w-0 font-bold">{s.subject}</span>
-                      <span className={cn("shrink-0 font-black", s.total ? "" : "text-slate-500")}>
+                      <span className={cn("shrink-0 font-black", s.total ? "" : "text-muted-foreground")}>
                         {s.total ? `${s.accuracy}%` : "—"}
                       </span>
                     </div>
