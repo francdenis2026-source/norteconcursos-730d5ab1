@@ -574,7 +574,7 @@ function ErrorsPage() {
               return (
                 <>
                   <DialogHeader>
-                    <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 sm:mx-0">
+                    <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300 sm:mx-0">
                       <XCircle />
                     </div>
                     <DialogTitle>Revisão da questão</DialogTitle>

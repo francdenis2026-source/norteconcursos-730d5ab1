@@ -81,13 +81,13 @@ interface Profile {
 function PositionBadge({ pos }: { pos: number }) {
   const tier =
     pos === 1
-      ? { Icon: Gem, cls: "bg-sky-100 text-sky-600 ring-sky-300" }
+      ? { Icon: Gem, cls: "bg-sky-100 text-sky-600 ring-sky-300 dark:bg-sky-500/15 dark:text-sky-300 dark:ring-sky-400/40" }
       : pos === 2
-        ? { Icon: Medal, cls: "bg-yellow-100 text-yellow-600 ring-yellow-300" }
+        ? { Icon: Medal, cls: "bg-yellow-100 text-yellow-600 ring-yellow-300 dark:bg-yellow-500/15 dark:text-yellow-300 dark:ring-yellow-400/40" }
         : pos === 3
-          ? { Icon: Medal, cls: "bg-slate-100 text-slate-500 ring-slate-300" }
+          ? { Icon: Medal, cls: "bg-slate-100 text-slate-500 ring-slate-300 dark:bg-slate-400/15 dark:text-slate-300 dark:ring-slate-400/40" }
           : pos <= 10
-            ? { Icon: Award, cls: "bg-amber-100 text-amber-700 ring-amber-300" }
+            ? { Icon: Award, cls: "bg-amber-100 text-amber-700 ring-amber-300 dark:bg-amber-500/15 dark:text-amber-300 dark:ring-amber-400/40" }
             : null;
   if (!tier)
     return (

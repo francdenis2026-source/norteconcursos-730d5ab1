@@ -31,10 +31,10 @@ export const Route = createFileRoute("/dashboard/ctb")({
 const brl = (n: number) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const GRAV_STYLE: Record<Gravidade, string> = {
-  leve: "bg-emerald-100 text-emerald-900",
-  media: "bg-amber-100 text-amber-900",
-  grave: "bg-orange-100 text-orange-900",
-  gravissima: "bg-red-100 text-red-900",
+  leve: "bg-emerald-100 text-emerald-900 dark:bg-emerald-500/15 dark:text-emerald-300",
+  media: "bg-amber-100 text-amber-900 dark:bg-amber-500/15 dark:text-amber-300",
+  grave: "bg-orange-100 text-orange-900 dark:bg-orange-500/15 dark:text-orange-300",
+  gravissima: "bg-red-100 text-red-900 dark:bg-red-500/15 dark:text-red-300",
 };
 
 function CtbPanelPage() {
