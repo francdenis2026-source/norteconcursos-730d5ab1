@@ -15764,10 +15764,10 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
   }
   .mobile-homepage__hero > img {
-    inset: auto; top: 92px; right: -4%; bottom: auto; left: auto;
+    inset: auto; top: auto; right: -4%; bottom: 236px; left: auto;
     width: 62%; height: auto; aspect-ratio: 1208 / 1302; max-width: none;
-    object-fit: contain; object-position: 50% 0%;
-    -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
+    object-fit: contain; object-position: 50% 100%;
+    -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 100%); mask-image: linear-gradient(180deg, #000 88%, transparent 100%);
   }
   .mobile-homepage__hero-shade { background: linear-gradient(180deg, rgb(11 20 32 / .25) 0%, transparent 28%, rgb(11 20 32 / .5) 60%, rgb(11 20 32 / .92) 100%) !important; }
   .mobile-homepage__hero-copy { min-height: var(--mh-hero-h); justify-content: flex-end; gap: 0; padding: 92px 14px 16px; }
