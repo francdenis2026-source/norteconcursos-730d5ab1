@@ -1,0 +1,101 @@
+/* Texto corrido da plataforma: sempre justificado, hifenizado em português e com ritmo vertical
+   consistente. Textos longos NUNCA esticam a caixa: a caixa mantém o tamanho e o conteúdo rola
+   dentro dela, aparecendo conforme o usuário arrasta.
+   Especificidade proposital (html body …): vence as regras antigas por tela, mas perde para
+   utilitários de classe (.text-center, .text-left), então títulos e blocos centralizados seguem
+   como foram desenhados. */
+
+/* 1) Justificação + hifenização */
+html body :is(
+  p,
+  .q-text,
+  .q-text[data-layout="prose"],
+  .q-text[data-layout="short"],
+  .q-option-text,
+  .question-readable,
+  .question-prose-block,
+  .institutional-prose p,
+  .study-prose p,
+  .legal-reading-paragraph,
+  .answer-feedback__comment
+):not(h1, h2, h3, h4, h5, h6, button, a, label, li > span, th, td, small, figcaption) {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-wrap: pretty;
+}
+/* Blocos que precisam manter a forma original */
+html body :is(.q-text[data-layout="verse"], .q-text[data-layout="preserve"], pre, code, table, .text-center, [class~="text-center"], [class~="text-right"]) {
+  text-align: revert-layer;
+}
+html body .q-text[data-layout="verse"] { text-align: left; hyphens: none; -webkit-hyphens: none; }
+html body .q-text[data-layout="preserve"], html body pre { text-align: left; hyphens: none; -webkit-hyphens: none; }
+html body .text-center { text-align: center; text-align-last: center; }
+html body .text-right { text-align: right; text-align-last: right; }
+/* Legendas, rótulos, chips e botões nunca são justificados */
+html body :is(button, .badge, [role="tab"], [role="button"], nav a, summary, caption, .daily-eyebrow, .contest-eyebrow) {
+  text-align: start; text-align-last: auto; hyphens: manual;
+}
+
+/* 2) Ritmo e espaçamento de leitura */
+html body :is(.q-text, .q-option-text, .question-readable, .question-prose-block, .study-prose, .institutional-prose, .legal-reading-prose, .answer-feedback__comment) {
+  line-height: 1.7;
+}
+html body :is(.study-prose, .institutional-prose, .legal-reading-prose, .answer-feedback__comment) p + p {
+  margin-top: .85em;
+}
+html body :is(.study-prose, .institutional-prose) :is(h2, h3, h4) { margin-top: 1.4em; margin-bottom: .5em; }
+html body :is(.study-prose, .institutional-prose) :is(ul, ol) { padding-inline-start: 1.25em; }
+html body :is(.study-prose, .institutional-prose) li + li { margin-top: .35em; }
+@media (max-width: 639px) {
+  html body :is(.q-text, .question-readable, .study-prose, .institutional-prose) { max-width: 100%; }
+}
+
+/* 3) Caixas de tamanho fixo: o texto longo rola por dentro, a caixa não cresce nem é redimensionada */
+html body textarea,
+html body .ui-textarea {
+  resize: none;
+  field-sizing: fixed;
+  max-height: min(44dvh, 22rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  text-align: start;
+}
+.scroll-text-box {
+  max-height: min(56dvh, 26rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  /* esmaece só o rodapé, indicando que há mais texto abaixo */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 20px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 20px), transparent);
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-text-box {
+    -webkit-mask-image: none; mask-image: none;
+    animation: scroll-text-fade linear both;
+    animation-timeline: scroll(self block);
+  }
+  @keyframes scroll-text-fade {
+    0%, 96% { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 20px), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 20px), transparent); }
+    100% { -webkit-mask-image: linear-gradient(to bottom, #000, #000); mask-image: linear-gradient(to bottom, #000, #000); }
+  }
+}
+/* Comentários, explicações e textos de apoio com muito conteúdo */
+html body :is(.answer-feedback__comment, .legal-reading-surface .study-prose.is-long) {
+  max-height: min(56dvh, 26rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+@media (prefers-reduced-motion: reduce) { .scroll-text-box { animation: none; } }

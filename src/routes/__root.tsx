@@ -25,6 +25,7 @@ import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
 import { OfflineConnectionGuard } from "../components/OfflineConnectionGuard";
 import appCss from "../styles.css?url";
+import "@/styles/prose-justify.css";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
 import { CHUNK_RECOVERY_SCRIPT } from "../lib/chunkRecovery";
