@@ -31,6 +31,7 @@ export function QuestionSocialPanel({
   const [loading, setLoading] = React.useState(true);
   const [draft, setDraft] = React.useState("");
   const [sending, setSending] = React.useState(false);
+  const [loadError, setLoadError] = React.useState<string | null>(null);
   const [open, setOpen] = React.useState(false);
   const [visibleCount, setVisibleCount] = React.useState(COMMENTS_PAGE_SIZE);
   // A RPC traz do mais antigo pro mais novo; aqui exibimos do mais novo pro
@@ -40,6 +41,7 @@ export function QuestionSocialPanel({
   const shownComments = newestFirst.slice(0, visibleCount);
 
   const load = React.useCallback(async () => {
+    setLoadError(null);
     const [statsRes, commentsRes] = await Promise.all([
       supabase
         .rpc("get_question_training_stats", {
@@ -52,6 +54,9 @@ export function QuestionSocialPanel({
         p_question_source: questionSource,
       }),
     ]);
+    if (commentsRes.error) {
+      setLoadError("Não foi possível carregar os comentários agora.");
+    }
     setStats((statsRes.data as Stats | null) ?? null);
     setComments((commentsRes.data as Comment[] | null) ?? []);
     setLoading(false);
@@ -71,16 +76,31 @@ export function QuestionSocialPanel({
     try {
       const { data: auth } = await supabase.auth.getUser();
       if (!auth.user) throw new Error("not-authenticated");
-      const { error } = await supabase.from("question_comments").insert({
+      const { data: inserted, error } = await supabase.from("question_comments").insert({
         user_id: auth.user.id,
         question_id: questionId,
         question_source: questionSource,
         body,
-      });
+      }).select("id,body,created_at").single();
       if (error) throw error;
       setDraft("");
-      await load();
       toast.success("Comentário publicado.");
+      // Atualiza a lista imediatamente; a consulta seguinte confirma a
+      // persistência e traz o nome formatado pelos dados do perfil.
+      setOpen(true);
+      if (inserted) {
+        setComments((current) => [
+          ...current,
+          {
+            id: inserted.id,
+            body: inserted.body,
+            created_at: inserted.created_at,
+            display_name: "Você",
+            is_me: true,
+          },
+        ]);
+      }
+      await load();
     } catch {
       toast.error("Não foi possível publicar o comentário. Tente novamente.");
     } finally {
@@ -139,6 +159,11 @@ export function QuestionSocialPanel({
       </button>
       {!loading && comments.length === 0 && (
         <p className="text-sm text-muted-foreground">Seja o primeiro a comentar.</p>
+      )}
+      {loadError && (
+        <p role="alert" className="rounded-lg border border-destructive/30 bg-destructive/5 p-2 text-sm text-destructive">
+          {loadError} Atualize a página e tente novamente.
+        </p>
       )}
       {open && comments.length > 0 && (
         <div className="space-y-2">
