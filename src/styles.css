@@ -15582,6 +15582,8 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .home .mobile-homepage__contests .contest-catalog { gap: 10px; padding-inline: 0; scroll-padding-inline: 0; }
   .home .mobile-homepage__contests .contest-card__art { aspect-ratio: auto; height: 132px; overflow: hidden; }
   .home .mobile-homepage__contests .contest-card__art > img { position: absolute; inset: 0; height: 100%; }
+  .home .mobile-homepage__contests :is(#prova-pcpr, #prova-pcpi) .contest-card__art { height: auto; overflow: visible; }
+  .home .mobile-homepage__contests :is(#prova-pcpr, #prova-pcpi) .contest-card__art > img { position: static; height: auto; object-fit: contain; object-position: center; }
   .home .mobile-homepage__contests .contest-card__content > .contest-reference { display: none; }
   .home .mobile-homepage__contests .contest-card__content { padding: 14px; }
   .home .mobile-homepage__contests .contest-card h3 { font-size: 18px; margin-top: 4px; }

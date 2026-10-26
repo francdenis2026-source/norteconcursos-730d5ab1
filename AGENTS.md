@@ -35,6 +35,7 @@ Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as 
 - O selo da hero (`DailyChallengeBadge`) mostra quantas restam hoje e a contagem até a renovação; ao concluir, convida a criar conta.
 
 ## Theme architecture
+- Contest identity artwork uses scoped contain-fit rules and in-flow labels rather than cropped backgrounds, so logo visibility does not alter other contest imagery.
 - Homepage color aliases must inherit shared semantic theme tokens; image-backed sections use dedicated on-image tokens to maintain contrast without a second competing palette.
 - Install missing-module recovery before hydration as well as in the React boundary, sharing a session throttle to avoid reload loops after version changes.
 
