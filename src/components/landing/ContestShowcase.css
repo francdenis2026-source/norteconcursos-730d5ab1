@@ -373,3 +373,9 @@
 .home .contest-spotlight__art > img { object-position: 12% 0%; }
 @media (max-width: 700px) { .home .contest-spotlight__art > img { object-position: 50% 0%; } }
 .home .contest-card:hover .contest-card__art > img { transform: none; }
+
+/* PC-AC: o texto da capa fica na base da foto; sem escurecer, para manter o contraste */
+html body .home .contest-spotlight__art::after { background: linear-gradient(180deg, rgb(5 10 12 / 22%) 0%, transparent 22%); }
+html body .home .contest-spotlight__art > img { filter: none; opacity: 1; }
+html body .home .mobile-homepage__contests .contest-spotlight__art { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+html body .home .mobile-homepage__contests .contest-spotlight__art > img { object-position: 50% 0%; }
