@@ -15526,3 +15526,24 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     min-width: 560px;
   }
 }
+
+/* Homepage mobile, modo claro: a faixa "Concursos em foco" mantém fundo escuro (#101e2b),
+   mas os tokens --home-* viram azul-marinho no modo claro. Os blocos que ficam direto sobre
+   esse fundo (cabeçalho do catálogo, status/pontos do carrossel e nota de independência)
+   recebem tokens claros. Os cartões continuam brancos com texto escuro. Contraste >= 7:1. */
+@media (max-width: 767px) {
+  html:not(.dark) .mobile-homepage__contests :is(
+    .contest-catalog__heading,
+    .contest-carousel-status,
+    .contest-carousel-dots,
+    .contest-independence
+  ) {
+    --home-text: #ffffff;
+    --home-muted: #d3deea;
+    --contest-accent: #f6d17a;
+  }
+  html:not(.dark) .mobile-homepage__contests .contest-independence { --home-muted: #b9c7d4; }
+  html:not(.dark) .mobile-homepage__contests :is(.contest-catalog:focus-visible, .contest-carousel-controls button:focus-visible) {
+    outline-color: #f6d17a;
+  }
+}
