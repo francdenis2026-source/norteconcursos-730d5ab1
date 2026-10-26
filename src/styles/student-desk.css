@@ -52,7 +52,7 @@
 }
 .student-desk__section-heading > span {
   color: var(--muted-foreground);
-  font-size: 11px;
+  font-size: 12px;
 }
 /* Six direct routes replace the tall photographic tiles. */
 .student-home.student-desk .student-hub__shortcuts {
@@ -71,7 +71,7 @@
   border-radius: 12px;
   background: linear-gradient(
     120deg,
-    color-mix(in srgb, var(--desk-accent) 6%, var(--card)),
+    color-mix(in srgb, var(--desk-accent) 11%, var(--card)),
     var(--card)
   );
   color: var(--foreground);
@@ -90,7 +90,7 @@
   height: 32px;
   border: 0;
   border-radius: 9px;
-  background: color-mix(in srgb, var(--desk-accent) 12%, var(--card));
+  background: color-mix(in srgb, var(--desk-accent) 20%, var(--card));
   color: var(--desk-accent);
   backdrop-filter: none;
 }
@@ -100,13 +100,13 @@
 }
 .student-home.student-desk .student-hub__shortcuts strong {
   color: var(--foreground);
-  font-size: 13px;
+  font-size: 14px;
   text-shadow: none;
   line-height: 1.4;
 }
 .student-home.student-desk .student-hub__shortcuts small {
   color: var(--muted-foreground);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   margin-top: 3px;
   text-shadow: none;
@@ -143,7 +143,7 @@
   width: 30px;
   height: 34px;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--desk-accent) 11%, var(--card));
+  background: color-mix(in srgb, var(--desk-accent) 18%, var(--card));
   color: var(--desk-accent);
   box-shadow: none;
 }
@@ -152,7 +152,7 @@
   height: 17px;
 }
 .student-home.student-desk .student-home__metric h2 {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
 }
 .student-home.student-desk .student-home__metric strong {
@@ -161,7 +161,7 @@
   margin-top: 3px;
 }
 .student-home.student-desk .student-home__metric p {
-  font-size: 10px;
+  font-size: 11px;
   margin-top: 3px;
 }
 :root .student-home.student-desk .student-home__metric:hover {
@@ -191,7 +191,7 @@
   align-items: center;
   gap: 6px;
   color: var(--desk-accent);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 650;
 }
 .student-desk__eyebrow svg {
@@ -199,13 +199,14 @@
   height: 13px;
 }
 .student-desk__next h2 {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 700;
+  color: var(--foreground);
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 750;
   margin-top: 4px;
 }
 .student-desk__next p {
-  font-size: 11px;
+  font-size: 12.5px;
   line-height: 1.5;
   color: var(--muted-foreground);
   margin-top: 4px;
@@ -216,7 +217,7 @@
   margin: 0;
   min-height: 40px;
   padding: 9px 12px;
-  font-size: 11px;
+  font-size: 12px;
   max-width: 250px;
 }
 /* Useful content stays on quiet surfaces, with a consistent color assigned to each purpose. */
@@ -230,10 +231,10 @@
 }
 :root .student-home.student-desk .student-home__card[data-accent] {
   padding: 16px;
-  border: 1px solid var(--border);
-  border-top: 2px solid color-mix(in srgb, var(--desk-accent) 65%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--desk-accent) 20%, var(--border));
+  border-top: 3px solid color-mix(in srgb, var(--desk-accent) 70%, var(--border));
   border-radius: 12px;
-  background: var(--card);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--desk-accent) 6%, var(--card)), var(--card) 160px);
   box-shadow: none;
 }
 .student-home.student-desk .student-home__section-title {
@@ -246,7 +247,7 @@
   height: 30px;
   flex: none;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--desk-accent) 10%, var(--card));
+  background: color-mix(in srgb, var(--desk-accent) 18%, var(--card));
   color: var(--desk-accent);
 }
 .student-home.student-desk .student-home__section-title > span svg {
@@ -254,10 +255,10 @@
   height: 17px;
 }
 .student-home.student-desk .student-home__section-title h2 {
-  font-size: 14px;
+  font-size: 15px;
 }
 .student-home.student-desk .student-home__section-title p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   margin-top: 3px;
 }
@@ -269,23 +270,25 @@
 }
 .student-home.student-desk .student-home__empty h3,
 .student-home.student-desk .student-home__objective-name {
-  font-size: 14px;
+  color: var(--foreground);
+  font-size: 15px;
+  font-weight: 700;
   line-height: 1.45;
 }
 .student-home.student-desk .student-home__empty p,
 .student-home.student-desk .student-home__quiet {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.6;
   margin-top: 5px;
 }
 .student-home.student-desk .student-home__empty :is(a, button) {
-  font-size: 12px;
+  font-size: 13px;
   min-height: 40px;
   margin-top: 10px;
 }
 .student-home.student-desk .student-home__text-link {
   color: var(--desk-accent, var(--desk-blue));
-  font-size: 11px;
+  font-size: 12px;
   min-height: 36px;
 }
 
@@ -293,7 +296,7 @@
   padding: 0 4px;
 }
 .student-home.student-desk .student-hub__planning-link p {
-  font-size: 11px;
+  font-size: 12px;
 }
 .student-home.student-desk .student-home__blocks li {
   padding: 10px 0;
@@ -381,12 +384,12 @@
 .student-desk .resume-session--compact h2 {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 .student-desk .resume-session--compact .resume-session__copy > p:last-child {
   flex-basis: 100%;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   margin: 0;
 }
