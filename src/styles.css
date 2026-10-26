@@ -15615,3 +15615,80 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 .mobile-plans__list strong, .mobile-plans__list li > span { color: var(--foreground, #101820); }
 .mobile-plans__list li[data-featured] > span { color: var(--brass-ink, #8a5d12); }
 :root.dark .mobile-plans__list li[data-featured] > span { color: var(--brass-soft, #e8cd99); }
+
+/* Planos (mobile): pílula sólida e legível, cartões com hierarquia clara e destaque do Plus.
+   Sem vidro fosco: não há imagem atrás para desfocar. Contraste >= 4.5:1 nos dois modos. */
+@media (max-width: 767px) {
+  #mobile-planos { gap: 14px; padding: 26px 16px 28px; }
+
+  /* Pílula "PLANOS" */
+  html #mobile-planos .mobile-homepage__section-head > span {
+    -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none;
+    padding: 7px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .16em;
+  }
+  html:not(.dark) #mobile-planos .mobile-homepage__section-head > span {
+    color: #5e3d06; background: #fbecc4; border: 1.5px solid #c99a2e;
+  }
+  html.dark #mobile-planos .mobile-homepage__section-head > span {
+    color: #ffe3a0; background: #3a2d10; border: 1.5px solid #e0b65d;
+  }
+  html:not(.dark) #mobile-planos .mobile-homepage__section-head h2 { color: #0f1b2d; }
+  html.dark #mobile-planos .mobile-homepage__section-head h2 { color: #f4f7fa; }
+
+  /* Faixa do teste grátis */
+  #mobile-planos .mobile-plans__trial {
+    padding: 10px 12px; border-radius: 12px; font-weight: 600; font-size: 13px; line-height: 1.35;
+  }
+  html:not(.dark) #mobile-planos .mobile-plans__trial { color: #5e3d06; background: #fff4d6; border: 1px solid #e3c274; }
+  html.dark #mobile-planos .mobile-plans__trial { color: #ffe3a0; background: rgb(224 182 93 / .14); border: 1px solid rgb(224 182 93 / .45); }
+  html:not(.dark) #mobile-planos .mobile-plans__trial svg { color: #9a6a0c; }
+  html.dark #mobile-planos .mobile-plans__trial svg { color: #f0cd85; }
+
+  /* Cartões */
+  #mobile-planos .mobile-plans__list { gap: 10px; }
+  #mobile-planos .mobile-plans__list li { padding: 14px 16px; border-radius: 14px; position: relative; }
+  html:not(.dark) #mobile-planos .mobile-plans__list li {
+    background: #ffffff; border: 1px solid #d9dfe8; box-shadow: 0 1px 2px rgb(15 27 45 / .06);
+  }
+  html.dark #mobile-planos .mobile-plans__list li {
+    background: #12202f; border: 1px solid #263a50;
+  }
+  #mobile-planos .mobile-plans__list strong { font-size: 16px; font-weight: 800; }
+  html:not(.dark) #mobile-planos .mobile-plans__list strong,
+  html:not(.dark) #mobile-planos .mobile-plans__list li > span { color: #0f1b2d; }
+  html.dark #mobile-planos .mobile-plans__list strong,
+  html.dark #mobile-planos .mobile-plans__list li > span { color: #f4f7fa; }
+  html:not(.dark) #mobile-planos .mobile-plans__list small { color: #44546a; }
+  html.dark #mobile-planos .mobile-plans__list small { color: #b4c2d0; }
+  html:not(.dark) #mobile-planos .mobile-plans__list em { color: #44546a; opacity: 1; }
+  html.dark #mobile-planos .mobile-plans__list em { color: #b4c2d0; opacity: 1; }
+
+  /* Plus em destaque */
+  #mobile-planos .mobile-plans__list li[data-featured] { border-width: 2px; padding-top: 20px; }
+  html:not(.dark) #mobile-planos .mobile-plans__list li[data-featured] {
+    background: linear-gradient(180deg, #fff8e4, #ffffff); border-color: #c99a2e; box-shadow: 0 6px 18px rgb(176 125 20 / .18);
+  }
+  html.dark #mobile-planos .mobile-plans__list li[data-featured] {
+    background: linear-gradient(180deg, #2a2412, #12202f); border-color: #e0b65d; box-shadow: 0 6px 20px rgb(224 182 93 / .16);
+  }
+  #mobile-planos .mobile-plans__list li[data-featured]::before {
+    content: "Mais escolhido"; position: absolute; top: -10px; left: 14px; padding: 3px 10px; border-radius: 999px;
+    font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    background: #e0b65d; color: #2b1d00;
+  }
+  html:not(.dark) #mobile-planos .mobile-plans__list li[data-featured] > span { color: #7a4f08; }
+  html.dark #mobile-planos .mobile-plans__list li[data-featured] > span { color: #ffe3a0; }
+
+  /* Nota */
+  html:not(.dark) #mobile-planos .mobile-plans__note { color: #44546a; }
+  html.dark #mobile-planos .mobile-plans__note { color: #b4c2d0; }
+  #mobile-planos .mobile-plans__note { font-size: 12px; line-height: 1.45; }
+
+  /* Botão principal: dourado sólido */
+  #mobile-planos .mobile-homepage__wide-link {
+    min-height: 52px; font-weight: 800; border-radius: 14px;
+    background: #e0b65d; color: #2b1d00; border: 1px solid #b98a25; box-shadow: 0 4px 14px rgb(176 125 20 / .28);
+  }
+  html:not(.dark) #mobile-planos .mobile-homepage__wide-link { background: #b07d14; color: #ffffff; border-color: #8a610c; }
+  html.dark #mobile-planos .mobile-homepage__wide-link { background: #e0b65d; color: #2b1d00; border-color: #f0cd85; }
+}
