@@ -275,8 +275,8 @@
 @media (max-width: 1000px) { .home .contest-spotlight { max-height: none; } }
 @media (max-width: 700px) {
   .home .contest-spotlight { max-height: none; }
-  .home .contest-spotlight__art { aspect-ratio: auto; height: 168px; }
-  .home .contest-spotlight__art > img { object-position: 50% 28%; }
+  .home .contest-spotlight__art { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+  .home .contest-spotlight__art > img { object-position: 50% 0%; }
   .home .contest-spotlight__content { padding: 16px; }
   .home .contest-spotlight h3 { font-size: 28px; }
   .home .contest-spotlight__copy { font-size: 13px; line-height: 1.55; }
@@ -366,3 +366,10 @@
 /* Modo claro: a arte nunca recebe véu claro; só a linha fina separando foto e conteúdo. */
 .home .contest-card .contest-card__art { border-bottom: 1px solid var(--home-line); }
 :root:not(.dark) .home .contest-card .contest-card__art > img { filter: none; opacity: 1; }
+
+/* enquadramento: rostos ficam no topo das capas, nunca cortar */
+.home .contest-card .contest-card__art > img,
+.home :is(#prova-pcpr, #prova-pcpi) .contest-card__art > img { object-position: 50% 0%; }
+.home .contest-spotlight__art > img { object-position: 12% 0%; }
+@media (max-width: 700px) { .home .contest-spotlight__art > img { object-position: 50% 0%; } }
+.home .contest-card:hover .contest-card__art > img { transform: none; }
