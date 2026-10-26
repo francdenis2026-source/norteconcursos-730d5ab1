@@ -28,6 +28,12 @@ export function HomeAppNavigation() {
         <span>Entrar</span>
       </Link>
     </nav>
+    <p className="mobile-nav-shelf__sign">
+      <span>Desenvolvido por</span>
+      <strong>Franc D’nis</strong>
+      <i aria-hidden="true" />
+      <span>Feijó, Acre</span>
+    </p>
     </div>
   );
 }

@@ -100,6 +100,22 @@
     pointer-events: none;
   }
 }
+/* Assinatura discreta na barra de vidro: uma linha, caixa alta, baixo contraste. */
+@media (max-width: 767px) {
+  .home.home .mobile-nav-shelf {
+    height: calc(26px + env(safe-area-inset-bottom, 0px));
+    display: flex; align-items: flex-start; justify-content: center;
+  }
+  .home.home .mobile-nav-shelf__sign {
+    margin: 0; padding-top: 7px; display: flex; align-items: center; justify-content: center; gap: 6px;
+    max-width: 100%; white-space: nowrap; overflow: hidden;
+    font-size: 9px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; text-align: center; text-align-last: center;
+    hyphens: manual; color: color-mix(in srgb, var(--foreground) 58%, transparent);
+  }
+  .home.home .mobile-nav-shelf__sign strong { font-weight: 700; color: color-mix(in srgb, var(--foreground) 78%, transparent); }
+  .home.home .mobile-nav-shelf__sign i { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .6; flex: none; }
+}
+@media (min-width: 768px) { .home .mobile-nav-shelf__sign { display: none; } }
 @media (max-width: 767px) and ((prefers-reduced-transparency: reduce) or (forced-colors: active)) {
   .home.home .mobile-nav-shelf { background: var(--background); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
