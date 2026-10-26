@@ -12,10 +12,20 @@ html body .home-menu.hm2 {
   html body .home-menu.hm2 { left: auto; width: 420px; }
 }
 html body .hm2 .hm2-bg {
-  position: absolute; z-index: -1; inset: 0; pointer-events: none;
-  background:
-    linear-gradient(180deg, rgb(10 14 17 / 78%) 0%, rgb(10 14 17 / 60%) 45%, rgb(10 14 17 / 88%) 100%),
-    url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
+  position: absolute; z-index: -1; inset: 0; pointer-events: none; background-color: #0a0f13;
+  background-image:
+    linear-gradient(90deg, rgb(10 15 19 / 92%) 0%, rgb(10 15 19 / 70%) 58%, rgb(10 15 19 / 0%) 100%),
+    linear-gradient(180deg, transparent 0%, transparent 16%, #0a0f13 33%),
+    radial-gradient(120% 60% at 85% 100%, rgb(200 150 60 / 16%), transparent 60%),
+    url('/media/hero/hero-norte-impacto.webp');
+  background-size: 100% 30%, 100% 100%, 100% 100%, auto 25%;
+  background-position: 0 0, 0 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+html body .hm2 .hm2-bg::after {
+  content: ''; position: absolute; inset: 0; opacity: .22; mix-blend-mode: screen;
+  background: url('/media/hero/norte-atmosphere.webp') 70% 100% / auto 46% no-repeat;
+  -webkit-mask-image: linear-gradient(0deg, #000, transparent 85%); mask-image: linear-gradient(0deg, #000, transparent 85%);
 }
 html body .hm2 .hm2-header { padding: 0 44px 0 0; gap: 8px; text-align: left; flex: none; }
 html body .hm2 .hm2-header .norte-brand { --brand-scale: .9; }
@@ -66,3 +76,6 @@ html body .hm2 .norte-brand, html body .hm2 .norte-brand :is(span, strong, b) { 
 html body .hm2 .norte-brand :is(small, em, [class*="sub"]) { color: var(--brass-soft); }
 html body .hm2 .hm2-access .home-button--primary { background: var(--brass-soft); border-color: var(--brass); color: #15191d; font-weight: 800; }
 html body .hm2 .hm2-access .home-button--primary:hover { background: var(--brass-hover, var(--brass)); }
+
+html body .hm2 .hm2-header [data-slot="sheet-description"], html body .hm2 .hm2-header p { text-align: left !important; text-align-last: auto !important; text-justify: auto; hyphens: manual !important; text-wrap: balance; word-spacing: normal !important; max-width: 24ch; text-shadow: 0 1px 8px #000; }
+html body .hm2 .hm2-tile:active, html body .hm2 .hm2-chips a:active { transform: scale(.98); }

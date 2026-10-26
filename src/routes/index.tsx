@@ -110,14 +110,22 @@ const INSTITUTIONAL_LINKS: [string, string][] = [
 
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Rua+Joel+Fereira+de+Sousa%2C+Bela+Vista%2C+Feij%C3%B3%2C+Acre";
-const MENU_TILES: [string, string, LucideIcon][] = [
-  ["A plataforma", "#plataforma", Compass],
-  ["Concursos", "#concursos", Landmark],
-  ["Ferramentas", "#ferramentas", BrainCircuit],
-  ["Carreiras", "#carreiras", Target],
+/* [rótulo, id no desktop, id no celular] ou [rótulo, rota] */
+const MENU_TILES: [string, string, LucideIcon, string?][] = [
+  ["A plataforma", "plataforma", Compass, "mobile-recursos"],
+  ["Concursos", "concursos", Landmark, "mobile-concursos"],
+  ["Ferramentas", "ferramentas", BrainCircuit, "mobile-ferramentas"],
+  ["Carreiras", "carreiras", Target, "mobile-inicio"],
   ["Desafio diário", "/desafio-diario", Trophy],
-  ["Planos", "#planos", BadgeCheck],
+  ["Planos", "planos", BadgeCheck, "mobile-planos"],
 ];
+
+function goToSection(desktopId: string, mobileId?: string) {
+  const el = [desktopId, mobileId]
+    .map((id) => (id ? document.getElementById(id) : null))
+    .find((node) => node && node.getClientRects().length > 0);
+  (el ?? document.getElementById("inicio"))?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 const STEPS: [LucideIcon, string, string][] = [
   [
@@ -306,6 +314,7 @@ function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [compactHero, setCompactHero] = useState(false);
   useEffect(() => {
     const media = matchMedia("(max-width: 1100px)");
@@ -344,7 +353,7 @@ function Index() {
               <LogIn /> Entrar
             </Link>
             <ThemeToggle />
-            <Sheet>
+            <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
                 <button
                   type="button"
@@ -374,14 +383,30 @@ function Index() {
                   </SheetDescription>
                 </SheetHeader>
                 <nav className="hm2-grid" aria-label="Navegação móvel">
-                  {MENU_TILES.map(([label, href, Icon]) => (
-                    <SheetClose asChild key={href}>
-                      <a href={href} className="hm2-tile">
+                  {MENU_TILES.map(([label, target, Icon, mobileId]) =>
+                    target.startsWith("/") ? (
+                      <SheetClose asChild key={target}>
+                        <Link to={target} className="hm2-tile">
+                          <Icon aria-hidden="true" />
+                          <span>{label}</span>
+                        </Link>
+                      </SheetClose>
+                    ) : (
+                      <a
+                        key={target}
+                        href={`#${target}`}
+                        className="hm2-tile"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          setMenuOpen(false);
+                          window.setTimeout(() => goToSection(target, mobileId), 380);
+                        }}
+                      >
                         <Icon aria-hidden="true" />
                         <span>{label}</span>
                       </a>
-                    </SheetClose>
-                  ))}
+                    ),
+                  )}
                 </nav>
                 <section className="hm2-block" aria-labelledby="hm2-inst">
                   <h2 id="hm2-inst">Institucional</h2>
@@ -389,7 +414,7 @@ function Index() {
                     {INSTITUTIONAL_LINKS.map(([label, href]) => (
                       <li key={href}>
                         <SheetClose asChild>
-                          <a href={href}>{label}</a>
+                          <Link to={href}>{label}</Link>
                         </SheetClose>
                       </li>
                     ))}
@@ -639,7 +664,7 @@ function FooterColumn({ title, links, compact = false }: { title: string; links:
   const list = (
     <ul>
       {visibleLinks.map(([label, href]) => (
-        <li key={label}><a href={href}>{label}</a></li>
+        <li key={label}><Link to={href}>{label}</Link></li>
       ))}
     </ul>
   );
