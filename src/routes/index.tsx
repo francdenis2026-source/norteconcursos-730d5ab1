@@ -389,6 +389,9 @@ function Index() {
               </a>
             ))}
           </nav>
+          <span className="home-header__tagline" aria-hidden="true">
+            Sua preparação tem direção.
+          </span>
           <div className="home-header__actions">
             <Link
               to="/auth"
