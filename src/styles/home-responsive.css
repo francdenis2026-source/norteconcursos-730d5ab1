@@ -7,6 +7,12 @@
 :root.dark .home.home {
   --home-canvas-veil: color-mix(in srgb, var(--home-bg) 64%, transparent);
 }
+/* O claro ficava sem o override acima (herdava o padrão de 92%, quase opaco) — a arte de fundo
+   sumia e a página inteira lia como um azul liso sem contraste. Alinhado à mesma proporção do
+   escuro (um pouco mais opaco porque o claro precisa de mais véu para a leitura). */
+:root:not(.dark) .home.home {
+  --home-canvas-veil: color-mix(in srgb, var(--home-bg) 68%, transparent);
+}
 .home-backdrop {
   position: fixed;
   inset: 0;
