@@ -189,9 +189,10 @@ function QuestionTrainer() {
   const [reviewingPast, setReviewingPast] = React.useState(false);
   const [supportNotice, setSupportNotice] = React.useState(false);
   const [savedForStudy, setSavedForStudy] = React.useState(false);
+  const [confirmExit, setConfirmExit] = React.useState(false);
   const supportNoticeId = React.useId();
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
-  const [results, setResults] = React.useState<("ok" | "err")[]>([]);
+  const [results, setResults] = React.useState<("ok" | "err" | "skipped")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
   const routeKey = trainerRouteKey(routeFilters);
   const pendingRestore = React.useRef(false);
@@ -596,7 +597,7 @@ function QuestionTrainer() {
       if (error) throw error;
       setAnswered(true);
       setDailyUsed((n) => n + 1);
-      markLocked(question.source, question.id, { selected, isCorrect });
+      markLocked(question, { selected, isCorrect });
       setResults((prev) => {
         const copy = [...prev];
         copy[index] = isCorrect ? "ok" : "err";
@@ -800,7 +801,7 @@ function QuestionTrainer() {
           <Button variant="outline" size="sm" onClick={() => setStarted(false)}>
             <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
           </Button>
-          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+          <Button variant="ghost" size="sm" onClick={() => setConfirmExit(true)}>
             Sair do treino
           </Button>
           <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
@@ -816,7 +817,7 @@ function QuestionTrainer() {
           </Button>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+          <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
             {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
             {savedForStudy ? "Salva" : "Salvar"}
           </Button>
@@ -1047,7 +1048,7 @@ function QuestionTrainer() {
                   >
                     <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
                   </Button>
-                  <Button variant="outline" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+                  <Button variant="outline" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
                     {savedForStudy ? <BookmarkCheck className="mr-2 h-4 w-4" /> : <Bookmark className="mr-2 h-4 w-4" />}
                     {savedForStudy ? "Salva para estudar" : "Salvar para estudar"}
                   </Button>
@@ -1085,7 +1086,7 @@ function QuestionTrainer() {
             <div className="mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-xs font-black uppercase tracking-wider text-primary">Explicação da questão</p>
-                <Button variant="outline" size="sm" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+                <Button variant="outline" size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
                   {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
                   {savedForStudy ? "Salva" : "Salvar para estudar"}
                 </Button>
@@ -1118,6 +1119,22 @@ function QuestionTrainer() {
           )}
         </CardContent>
       </Card>
+      <Dialog open={confirmExit} onOpenChange={setConfirmExit}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Sair do treino?</DialogTitle>
+            <DialogDescription>
+              Seu progresso desta sessão será mantido apenas até você retornar. Deseja realmente sair?
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setConfirmExit(false)}>Continuar treinando</Button>
+            <Button variant="destructive" onClick={() => { setConfirmExit(false); setStarted(false); }}>
+              Sair do treino
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
       <Dialog
         open={modal !== null && supportAvailable}
         onOpenChange={(open) => !open && setModal(null)}
