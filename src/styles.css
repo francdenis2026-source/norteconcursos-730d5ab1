@@ -15792,3 +15792,23 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     margin-top: 12px; min-height: 44px; border: 1px solid rgb(223 180 91 / .55); background: rgb(223 180 91 / .14); color: #f6dca0;
   }
 }
+
+/* Card PC-AC (celular): a capa entra no topo, de ponta a ponta, e se funde ao corpo do card
+   com um degradê; o conteúdo sobe um pouco sobre a imagem. */
+@media (max-width: 767px) {
+  html body .home .mobile-homepage__contests .contest-spotlight { overflow: hidden; }
+  html body .home .mobile-homepage__contests .contest-spotlight__art {
+    display: block !important; position: relative; width: 100%;
+    aspect-ratio: 16 / 9 !important; height: auto !important; min-height: 160px !important; overflow: hidden;
+    background: #101719;
+  }
+  html body .home .mobile-homepage__contests .contest-spotlight__art > img {
+    display: block !important; position: absolute; inset: 0; width: 100%; height: 100% !important;
+    object-fit: cover; object-position: 50% 30%; opacity: 1 !important; filter: none !important;
+  }
+  html body .home .mobile-homepage__contests .contest-spotlight__art::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgb(5 10 12 / .16) 0%, transparent 28%, color-mix(in srgb, var(--card) 70%, transparent) 78%, var(--card) 100%);
+  }
+  html body .home .mobile-homepage__contests .contest-spotlight__content { position: relative; z-index: 1; margin-top: -30px; padding: 0 16px 16px; }
+}
