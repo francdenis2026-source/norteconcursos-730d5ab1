@@ -37,6 +37,18 @@ function Availability({
     </div>
   );
 }
+function Ficha({ items }: { items: [string, string][] }) {
+  return (
+    <dl className="contest-ficha">
+      {items.map(([k, v]) => (
+        <div key={k}>
+          <dt>{k}</dt>
+          <dd>{v}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
 function CountReference({ date }: { date: string | null }) {
   return (
     <p className="contest-reference">
@@ -187,19 +199,33 @@ export function ContestShowcase() {
           </span>
           <div className="contest-card__art">
             <img
-              src="/media/hero/pcsc-capa.webp"
-              alt="Capa da Polícia Civil de Santa Catarina"
+              src="/media/hero/pcsc-viatura.webp"
+              alt="Distintivo da Polícia Civil de Santa Catarina em viatura"
               width={1672}
-              height={941}
+              height={950}
               loading="lazy"
               decoding="async"
             />
             <span>MESMA BANCA DA PC-AC</span>
+            <div className="contest-card__sigla" aria-hidden="true">
+              <b>PC-SC</b>
+              <i />
+              <em>POLÍCIA CIVIL DE SANTA CATARINA</em>
+              <small>NORTE CONCURSOS</small>
+            </div>
           </div>
           <div className="contest-card__content">
             <span className="contest-eyebrow">IDECAN · {PCSC_EXAM.year}</span>
             <h3 id="pcsc-title">Polícia Civil de Santa Catarina</h3>
             <p className="contest-card__role">Agente de Polícia Civil</p>
+            <Ficha
+              items={[
+                ["Banca", PCSC_EXAM.board],
+                ["Ano", PCSC_EXAM.year],
+                ["Itens na prova", String(PCSC_EXAM.itemsOriginal)],
+                ["Correção", "A cada resposta"],
+              ]}
+            />
             <Availability
               count={scCount}
               label="Correção após cada resposta"
@@ -232,6 +258,14 @@ export function ContestShowcase() {
             <span className="contest-eyebrow">FGV · {PCPR_EXAM.year}</span>
             <h3 id="pcpr-title">Polícia Civil do Paraná</h3>
             <p className="contest-card__role">Agente de Polícia Judiciária</p>
+            <Ficha
+              items={[
+                ["Banca", PCPR_EXAM.board],
+                ["Aplicada em", PCPR_EXAM.appliedOn],
+                ["Cargos", String(PCPR_EXAM.roles.length)],
+                ["Gabarito", "Preliminar"],
+              ]}
+            />
             <Availability
               count={pr.counts?.[prAgentIndex]}
               label="Questões do cargo de Agente"
@@ -280,6 +314,14 @@ export function ContestShowcase() {
             <span className="contest-eyebrow">FGV · {PCPI_EXAM.year}</span>
             <h3 id="pcpi-title">Polícia Civil do Piauí</h3>
             <p className="contest-card__role">Treino com seleção por cargo</p>
+            <Ficha
+              items={[
+                ["Banca", PCPI_EXAM.board],
+                ["Ano", PCPI_EXAM.year],
+                ["Cargos", String(PCPI_EXAM.roles.length)],
+                ["Seleção", "Separada"],
+              ]}
+            />
             <div className="contest-pi-roles">
               {PCPI_EXAM.roles.map((role, index) => (
                 <div key={role}>
