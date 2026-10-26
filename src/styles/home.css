@@ -2165,13 +2165,26 @@
   padding-block: clamp(56px, 7vw, 88px);
 }
 .home-header {
-  background: color-mix(in oklab, var(--home-bg) 86%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--home-line) 78%, transparent);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
-  backdrop-filter: blur(18px) saturate(1.15);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    backdrop-filter .25s ease,
+    box-shadow .25s ease;
+}
+.home-header[data-scrolled] {
+  background: color-mix(in oklab, var(--home-bg) 78%, transparent);
+  border-bottom-color: color-mix(in oklab, var(--home-line) 70%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  backdrop-filter: blur(16px) saturate(1.15);
+  box-shadow: 0 10px 28px -20px rgb(0 0 0 / .35);
 }
 .home-header__inner {
-  min-height: 72px;
+  min-height: 60px;
 }
 .home-brand-lockup {
   gap: 16px;
@@ -2898,9 +2911,15 @@
 }
 
 :root:not(.dark) .home-header {
+  background: transparent;
+  border-bottom-color: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  box-shadow: none;
+}
+:root:not(.dark) .home-header[data-scrolled] {
   background: var(--header-glass);
   border-bottom-color: var(--home-line);
-  -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
   box-shadow: 0 2px 10px rgb(0 0 0 / .04);
 }
 :root:not(.dark) .home-header .norte-brand__type span { color:var(--home-accent); }

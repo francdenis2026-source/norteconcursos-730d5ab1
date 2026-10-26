@@ -139,8 +139,8 @@
   object-position: center bottom;
   opacity: 1;
   filter: drop-shadow(0 12px 32px rgb(0 0 0 / 25%));
-  -webkit-mask-image: linear-gradient(#000 78%, transparent);
-  mask-image: linear-gradient(#000 78%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%);
   border-radius: 0;
 }
 
