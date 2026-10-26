@@ -689,7 +689,7 @@ function StudyPlanPage() {
                   className={cn(
                     "flex h-8 w-8 items-center justify-center rounded-lg text-xs font-black",
                     subject.level === "critico"
-                      ? "bg-rose-100 text-rose-700"
+                      ? "bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300"
                       : "bg-muted text-muted-foreground",
                   )}
                 >
@@ -702,9 +702,10 @@ function StudyPlanPage() {
                       <Badge
                         variant="outline"
                         className={cn(
-                          subject.level === "critico" && "border-rose-300 bg-rose-50 text-rose-700",
+                          subject.level === "critico" &&
+                            "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-400/40 dark:bg-rose-500/15 dark:text-rose-300",
                           subject.level === "solido" &&
-                            "border-emerald-300 bg-emerald-50 text-emerald-700",
+                            "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-400/40 dark:bg-emerald-500/15 dark:text-emerald-300",
                         )}
                       >
                         {subject.accuracy}% · {subject.answered} resp.

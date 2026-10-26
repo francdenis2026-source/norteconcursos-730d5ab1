@@ -1905,7 +1905,7 @@ function ActiveSimulator(p: {
             className={cn(
               "flex items-center gap-2 rounded-xl px-4 py-2 font-mono text-lg font-black",
               timeLeft < 300
-                ? "bg-red-50 text-red-700"
+                ? "bg-red-50 text-red-700 dark:bg-red-500/15 dark:text-red-300"
                 : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
             )}
           >
@@ -2041,7 +2041,8 @@ function ActiveSimulator(p: {
                 variant="outline"
                 className={cn(
                   "gap-2",
-                  flagged.has(current.id) && "border-amber-400 bg-amber-50 text-amber-800",
+                  flagged.has(current.id) &&
+                    "border-amber-400 bg-amber-50 text-amber-800 dark:border-amber-400/50 dark:bg-amber-500/15 dark:text-amber-300",
                 )}
                 onClick={() =>
                   setFlagged((old) => {
@@ -2137,9 +2138,9 @@ function ActiveSimulator(p: {
                     i === currentIndex
                       ? "border-primary bg-primary text-primary-foreground"
                       : answers[q.id]
-                        ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+                        ? "border-emerald-300 bg-emerald-50 text-emerald-800 dark:border-emerald-400/40 dark:bg-emerald-500/15 dark:text-emerald-300"
                         : skipped.has(q.id)
-                          ? "border-dashed border-amber-500 bg-amber-50 text-amber-900"
+                          ? "border-dashed border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-500/15 dark:text-amber-300"
                           : "hover:bg-muted",
                   )}
                 >
@@ -2615,11 +2616,11 @@ function ResultMetric({
   tone: "emerald" | "red" | "amber" | "blue" | "slate";
 }) {
   const tones = {
-    emerald: "bg-emerald-50 text-emerald-700",
-    red: "bg-red-50 text-red-700",
-    amber: "bg-amber-50 text-amber-700",
-    blue: "bg-blue-50 text-blue-700",
-    slate: "bg-slate-100 text-slate-700",
+    emerald: "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300",
+    red: "bg-red-50 text-red-700 dark:bg-red-500/15 dark:text-red-300",
+    amber: "bg-amber-50 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300",
+    blue: "bg-blue-50 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300",
+    slate: "bg-slate-100 text-slate-700 dark:bg-slate-400/15 dark:text-slate-300",
   };
   return (
     <Card>

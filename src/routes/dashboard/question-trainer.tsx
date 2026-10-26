@@ -1161,7 +1161,9 @@ function QuestionTrainer() {
               <div
                 className={cn(
                   "mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl sm:mx-0",
-                  isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700",
+                  isCorrect
+                    ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300"
+                    : "bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300",
                 )}
               >
                 {modal === "help" ? <BrainCircuit /> : isCorrect ? <CheckCircle2 /> : <X />}
@@ -1675,7 +1677,7 @@ function TrainingResult({
       <Card className="w-full overflow-hidden text-center shadow-xl">
         <div className="h-2 bg-gradient-to-r from-emerald-500 to-sky-500" />
         <CardContent className="space-y-6 p-8">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-emerald-100 text-emerald-700">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300">
             <Sparkles className="h-8 w-8" />
           </div>
           <div>
