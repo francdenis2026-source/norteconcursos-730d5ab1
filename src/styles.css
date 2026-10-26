@@ -15754,3 +15754,14 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html body .home.home .home-header .home-header__register { flex: 0 0 auto; }
   html body .home.home .home-brand-lockup { flex: 1 1 0; min-width: 0; overflow: hidden; }
 }
+
+/* Hero mobile: imagem em tela cheia (sem faixas laterais) e altura que acompanha a janela. */
+@media (max-width: 767px) {
+  .mobile-homepage__hero { --mh-hero-h: clamp(610px, calc(100svh - 72px), 800px); min-height: var(--mh-hero-h); }
+  .mobile-homepage__hero > img {
+    inset: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; height: 100%; max-width: none;
+    object-fit: cover; object-position: 72% 24%;
+  }
+  .mobile-homepage__hero-copy { min-height: var(--mh-hero-h); justify-content: flex-end; }
+}
