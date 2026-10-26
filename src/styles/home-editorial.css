@@ -112,3 +112,48 @@
   }
   .home.home .home-app-nav a { min-height: 60px; font-size: 11.5px; }
 }
+
+/* Thin, discreet header at rest; the glass/blur treatment only appears once the
+   page has scrolled, so the hero reads clean and the chrome stays out of the way. */
+.home.home .home-header {
+  background: transparent;
+  border-bottom-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    backdrop-filter .25s ease,
+    box-shadow .25s ease;
+}
+.home.home .home-header__inner { min-height: 58px; }
+.home.home .home-header[data-scrolled] {
+  background: color-mix(in srgb, var(--home-bg) 80%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--home-line) 70%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  backdrop-filter: blur(16px) saturate(1.15);
+  box-shadow: 0 10px 26px -20px rgb(0 0 0 / 35%);
+}
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .home.home .home-header[data-scrolled] {
+    background: var(--home-bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* A quieter, more professional footer strip: flat surface instead of the gold
+   glow/shadow treatment, so it reads as a discreet closing band, not a banner. */
+:root:is(.dark, :not(.dark)) .home.home .home-footer {
+  background: color-mix(in srgb, var(--home-surface) 97%, transparent);
+  border-top: 1px solid var(--home-line);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-footer--command .home-footer__grid {
+  border-top: 1px solid var(--home-line);
+  box-shadow: none;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-footer--command .home-platform-qr {
+  background: color-mix(in srgb, var(--home-surface) 94%, transparent);
+  border: 1px solid var(--home-line);
+}

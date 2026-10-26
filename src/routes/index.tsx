@@ -348,12 +348,19 @@ function Index() {
   const [menuKeyboard, setMenuKeyboard] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [compactHero, setCompactHero] = useState(false);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
   useEffect(() => {
     const media = matchMedia("(max-width: 1100px)");
     const update = () => setCompactHero(media.matches);
     update();
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
+  }, []);
+  useEffect(() => {
+    const onScroll = () => setHeaderScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
     <div className="home">
@@ -363,7 +370,7 @@ function Index() {
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
-      <header className="home-header">
+      <header className="home-header" data-scrolled={headerScrolled || undefined}>
         <div className="home-container home-header__inner">
           <div className="home-brand-lockup">
             <Link to="/" aria-label="Norte Concurso — início">
@@ -594,6 +601,7 @@ function Index() {
                   <TestingSeal />
                   <div className="home-hero__study-links">
                     <QuestionCountBadge />
+                    <DailyChallengeBadge />
                   </div>
                 </div>
               </div>

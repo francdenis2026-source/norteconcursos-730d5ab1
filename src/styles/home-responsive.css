@@ -269,6 +269,30 @@
   :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:focus-visible { outline-color: Highlight; }
 }
 
+/* Question count card: same quiet glass family as the daily badge beside it,
+   with its own accent so the two featured cards read as a matched pair. */
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge {
+  --count-accent: var(--home-blue, var(--brass-soft));
+  border-color: color-mix(in oklch, var(--count-accent) 32%, var(--home-glass-edge));
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge::before {
+  background: linear-gradient(90deg, transparent, var(--count-accent), transparent);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge:hover {
+  background: linear-gradient(145deg, var(--home-glass-light), transparent 55%), var(--home-glass-fill);
+  border-color: color-mix(in oklch, var(--count-accent) 45%, var(--home-glass-edge));
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge .question-count-main strong {
+  color: var(--count-accent);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-meter__fill {
+  background: linear-gradient(90deg, var(--count-accent), var(--brass-soft));
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge,
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .question-count-badge:hover { background: Canvas; color: CanvasText; border-color: CanvasText; box-shadow: none; }
+}
+
 /* Supporting FAQ artwork fits the existing introduction, without a new band. */
 .home-faq__intro {
   display: grid;
