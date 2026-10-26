@@ -251,33 +251,35 @@
 }
 
 .dark {
-  /* Neutral charcoal removes the blue/brown cast; gold stays a small accent. */
-  --background: oklch(0.19 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.235 0 0);
+  /* Cool slate dark palette (not flat neutral, not brown): reads as a deliberate, professional
+     theme instead of a washed-out charcoal, and gives white/gold text more lift. Gold stays a
+     small accent. */
+  --background: oklch(0.165 0.012 250);
+  --foreground: oklch(0.96 0.002 250);
+  --card: oklch(0.21 0.014 250);
   --card-foreground: var(--foreground);
-  --popover: oklch(0.27 0 0);
+  --popover: oklch(0.245 0.015 250);
   --popover-foreground: var(--foreground);
   --primary: var(--foreground);
   --primary-foreground: var(--background);
   --brass: oklch(0.79 0.085 83);
   --brass-hover: oklch(0.85 0.075 83);
   --ink: var(--background);
-  --ink-deep: oklch(0.16 0 0);
+  --ink-deep: oklch(0.14 0.012 250);
   --ink-raised: var(--card);
   --on-ink: var(--foreground);
-  --on-ink-muted: oklch(0.76 0 0);
-  --on-ink-line: oklch(0.35 0 0);
+  --on-ink-muted: oklch(0.78 0.008 250);
+  --on-ink-line: oklch(0.33 0.016 250);
   --secondary: var(--brass);
   --secondary-foreground: var(--background);
-  --muted: oklch(0.27 0 0);
-  --muted-foreground: oklch(0.76 0 0);
+  --muted: oklch(0.255 0.014 250);
+  --muted-foreground: oklch(0.78 0.008 250);
   --accent: oklch(0.29 0.008 83);
   --accent-foreground: var(--brass);
   --destructive: oklch(0.62 0.18 22);
   --destructive-foreground: oklch(0.98 0.01 25);
-  --border: oklch(0.35 0 0);
-  --input: #667180;
+  --border: oklch(0.33 0.016 250);
+  --input: #5c6a7d;
   --ring: oklch(0.8 0.13 78);
 
   --chart-1: oklch(0.8 0.13 78);
