@@ -198,7 +198,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
         <link rel="preload" as="image" href={INITIAL_LOADING_ART} fetchPriority="high" type="image/webp" />
         <link rel="preload" as="image" href="/media/brand/norte-identity/emblema.svg" type="image/svg+xml" />
-        <link rel="preload" as="image" href="/media/brand/norte-identity/logo-vertical-escuro.svg" type="image/svg+xml" media="(max-width:1024px), (max-width:1366px) and (pointer:coarse)" />
+        <link rel="preload" as="image" href="/media/brand/norte-identity/logo-vertical-escuro.svg" type="image/svg+xml" />
         <link rel="preload" as="image" href={LIGHT_INSIGNIA} type="image/svg+xml" />
         <link rel="preload" as="image" href={DARK_INSIGNIA} type="image/webp" />
         <HeadContent />
