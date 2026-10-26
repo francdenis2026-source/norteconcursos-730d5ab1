@@ -15,8 +15,7 @@ export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
       <img
         className="pcpr-spot__art"
         src="/media/hero/pcpr-capa.webp"
-        alt=""
-        aria-hidden="true"
+        alt="Capa da Polícia Civil do Paraná"
         width={1672}
         height={941}
         loading="lazy"
