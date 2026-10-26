@@ -13555,6 +13555,8 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 .dark .student-home__metric:nth-child(4) { --m: var(--d-violet); }
 .dark .student-home__metric > span { background: linear-gradient(155deg, color-mix(in oklab, var(--m) 30%, var(--card)), color-mix(in oklab, var(--m) 14%, var(--card))); color: var(--m); }
 .dark .student-home__metric strong { color: color-mix(in oklab, var(--m) 35%, #fff); }
+.dark .student-home__metric h2,
+.dark .student-home__metric p { color: color-mix(in oklab, var(--m) 45%, var(--muted-foreground)); }
 
 /* Hero do Painel e cartões */
 .dark .student-hub__masthead { position: relative; border-color: color-mix(in oklab, var(--d-blue) 28%, var(--border)); }
