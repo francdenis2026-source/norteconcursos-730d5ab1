@@ -239,6 +239,9 @@ function AuthPage() {
 
   return (
     <main className="auth" data-auth-mode={mode}>
+      <figure className="auth-backdrop" aria-hidden="true">
+        <img src={authComposition} alt="" width={1440} height={600} decoding="async" />
+      </figure>
       <section className="auth-visual">
         <Link to="/" aria-label="Norte Concurso — início" className="w-fit">
           <NorteBrand light />
