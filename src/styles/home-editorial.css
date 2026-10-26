@@ -229,6 +229,20 @@ html body .home.home :is(p) {
   -webkit-hyphens: manual;
 }
 
+/* The site-wide reading-prose rule (prose-justify.css) justifies every <p>, which
+   is right for long-form question text but wrecks short marketing copy: with few
+   words per line, justify stretches inter-word gaps into visible holes (hero lead,
+   section intros, footer tagline). Left-align everything inside the homepage
+   instead — correct practice for short, responsive paragraphs anyway. Matches that
+   file's own specificity pattern (html body … + two classes) so it wins the tie by
+   source order. */
+html body .home.home :is(p) {
+  text-align: left;
+  text-align-last: auto;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
 /* A quieter, more professional footer strip: flat surface instead of the gold
    glow/shadow treatment, so it reads as a discreet closing band, not a banner. */
 :root:is(.dark, :not(.dark)) .home.home .home-footer {
