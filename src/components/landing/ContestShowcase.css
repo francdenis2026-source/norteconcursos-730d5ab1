@@ -311,7 +311,7 @@
 .home .contest-card:hover .contest-card__art > img { transform: scale(1.04); }
 .home .contest-card__art::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, rgb(8 12 15 / 28%) 0%, transparent 28%, transparent 55%, color-mix(in srgb, var(--card) 100%, transparent) 100%);
+  background: linear-gradient(180deg, rgb(8 12 15 / 30%) 0%, transparent 26%);
 }
 /* etiqueta sempre sobre a arte, canto superior esquerdo */
 .home .contest-card .contest-card__art > span,
@@ -362,3 +362,7 @@
   .home .contest-card__content > .contest-action--gold::after { animation: none; display: none; }
   .home .contest-card:hover .contest-card__art > img { transform: none; }
 }
+
+/* Modo claro: a arte nunca recebe véu claro; só a linha fina separando foto e conteúdo. */
+.home .contest-card .contest-card__art { border-bottom: 1px solid var(--home-line); }
+:root:not(.dark) .home .contest-card .contest-card__art > img { filter: none; opacity: 1; }
