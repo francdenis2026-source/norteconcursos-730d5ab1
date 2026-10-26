@@ -15755,35 +15755,40 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html body .home.home .home-brand-lockup { flex: 1 1 0; min-width: 0; overflow: hidden; }
 }
 
-/* Hero mobile: o agente (recorte) preenche a parte de cima; textos num único painel de vidro embaixo. */
+/* Hero mobile: composição em camadas. Relógio centralizado atrás (visível), agente menor à direita,
+   painel de vidro embaixo. A altura desconta o cabeçalho e a faixa fixa do rodapé. */
 @media (max-width: 767px) {
-  .mobile-homepage__hero { --mh-hero-h: clamp(600px, calc(100svh - 72px), 780px); min-height: var(--mh-hero-h); }
-  .mobile-homepage__hero > img {
-    inset: 34px 0 auto 0; right: 0; bottom: auto; left: 0; top: 34px;
-    width: 100%; height: 66%; max-width: none;
-    object-fit: contain; object-position: 50% 0%;
-    -webkit-mask-image: linear-gradient(180deg, #000 66%, transparent 100%); mask-image: linear-gradient(180deg, #000 66%, transparent 100%);
+  .mobile-homepage__hero { --mh-hero-h: clamp(560px, calc(100svh - 132px), 740px); min-height: var(--mh-hero-h); background: #0b1420; }
+  .mobile-homepage__hero .tactical-clock-backdrop {
+    inset: 0 auto auto -24%; width: 120%; height: 64%;
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
   }
-  .mobile-homepage__hero-shade { background: linear-gradient(180deg, rgb(11 20 32 / .2) 0%, transparent 30%, rgb(11 20 32 / .55) 62%, rgb(11 20 32 / .9) 100%) !important; }
-  .mobile-homepage__hero-copy { min-height: var(--mh-hero-h); justify-content: flex-end; gap: 0; padding: 92px 14px 18px; }
+  .mobile-homepage__hero > img {
+    inset: auto; top: 92px; right: -4%; bottom: auto; left: auto;
+    width: 62%; height: auto; aspect-ratio: 1208 / 1302; max-width: none;
+    object-fit: contain; object-position: 50% 0%;
+    -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
+  }
+  .mobile-homepage__hero-shade { background: linear-gradient(180deg, rgb(11 20 32 / .25) 0%, transparent 28%, rgb(11 20 32 / .5) 60%, rgb(11 20 32 / .92) 100%) !important; }
+  .mobile-homepage__hero-copy { min-height: var(--mh-hero-h); justify-content: flex-end; gap: 0; padding: 92px 14px 16px; }
   .mobile-homepage__hero .mobile-homepage__eyebrow {
     margin-bottom: 10px; -webkit-backdrop-filter: blur(12px) saturate(140%); backdrop-filter: blur(12px) saturate(140%); background: rgb(10 27 42 / .5);
   }
   .mobile-homepage__glass {
-    width: 100%; padding: 16px 16px 14px;
+    width: 100%; padding: 14px 16px 14px;
     border: 1px solid rgb(255 255 255 / .2); border-radius: 20px;
     background: linear-gradient(150deg, rgb(255 255 255 / .16), rgb(255 255 255 / .05));
     box-shadow: 0 18px 40px rgb(0 0 0 / .32), inset 0 1px 0 rgb(255 255 255 / .18);
     -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%);
   }
   .mobile-homepage__glass h1 { width: 100%; max-width: none; margin: 0; padding: 0; border: 0; background: none; box-shadow: none;
-    -webkit-backdrop-filter: none; backdrop-filter: none; font-size: clamp(28px, 8.4vw, 36px); line-height: 1.05; letter-spacing: -.04em; }
+    -webkit-backdrop-filter: none; backdrop-filter: none; font-size: clamp(26px, 7.8vw, 33px); line-height: 1.06; letter-spacing: -.04em; }
   .mobile-homepage__glass .mobile-homepage__hero-lead {
-    width: 100%; max-width: none; margin: 10px 0 0; padding: 0 !important; border: 0 !important; border-radius: 0;
+    width: 100%; max-width: none; margin: 8px 0 0; padding: 0 !important; border: 0 !important; border-radius: 0;
     background: none !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
-    font-size: 13.5px; line-height: 1.5; text-align: left;
+    font-size: 13px; line-height: 1.45; text-align: left;
   }
   .mobile-homepage__glass .mobile-homepage__secondary {
-    margin-top: 14px; min-height: 46px; border: 1px solid rgb(223 180 91 / .55); background: rgb(223 180 91 / .14); color: #f6dca0;
+    margin-top: 12px; min-height: 44px; border: 1px solid rgb(223 180 91 / .55); background: rgb(223 180 91 / .14); color: #f6dca0;
   }
 }
