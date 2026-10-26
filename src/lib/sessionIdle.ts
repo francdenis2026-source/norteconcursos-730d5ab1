@@ -1,4 +1,7 @@
 /** Authentication inactivity is independent of study/media accounting. */
+// Long study sessions must not be interrupted while the student is reading,
+// solving or reviewing without moving the pointer. The warning still gives a
+// clear escape hatch before the session expires.
 export const SESSION_IDLE_MS = 5 * 60_000;
 export const SESSION_WARNING_MS = 60_000;
 

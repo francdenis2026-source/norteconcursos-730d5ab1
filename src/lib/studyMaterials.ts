@@ -1,3 +1,4 @@
+import type { MaterialPracticeReview } from "./materialPracticeReview";
 import { canonicalSubject, canonicalTopic } from "@/lib/subjects";
 import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
@@ -29,6 +30,7 @@ export type Flashcard = { f: string; b: string };
 export type QuizItem = { q: string; a: boolean; why: string };
 
 export type StudyMaterial = StudyMaterialSummary & {
+  practice_review?: MaterialPracticeReview | null;
   legal_review?: LegalReview | null;
   flashcards: Flashcard[] | null;
   quiz: QuizItem[] | null;
@@ -108,7 +110,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,legal_review`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,legal_review,practice_review`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")

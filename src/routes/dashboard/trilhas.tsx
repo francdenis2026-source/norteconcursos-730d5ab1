@@ -16,6 +16,13 @@ import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
 import { TRACK_SUBJECT } from "@/lib/practiceLink";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
+import {
+  materialsForTrackLesson,
+  isIntegratedTrackLesson,
+  TRACK_MATERIALS,
+} from "@/lib/trackMaterials";
+import { Skeleton } from "@/components/ui/skeleton";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 
 export const Route = createFileRoute("/dashboard/trilhas")({
@@ -26,7 +33,7 @@ export const Route = createFileRoute("/dashboard/trilhas")({
     t: typeof s["t"] === "string" ? s["t"] : undefined,
     l: typeof s["l"] === "string" ? s["l"] : undefined,
   }),
-  head: () => ({ meta: [{ title: "Cursos por disciplina | Norte Concursos" }] }),
+  head: () => ({ meta: [{ title: "Roteiro de estudo | Norte Concursos" }] }),
 });
 
 const storeKey = (slug: string) => `trilha-feitas:${slug}`;
@@ -133,6 +140,7 @@ function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: str
 type LessonProps = {
   focus?: boolean;
   trackSlug: string;
+  materials: StudyMaterialSummary[];
   lesson: TrackLesson;
   done: boolean;
   toggleDone: () => void;
@@ -143,6 +151,7 @@ type LessonProps = {
 function Lesson({
   focus = false,
   trackSlug,
+  materials,
   lesson,
   onNext,
   onPrev,
@@ -150,6 +159,8 @@ function Lesson({
   toggleDone,
 }: LessonProps) {
   const { user } = useAuthStatus();
+  const linked = materialsForTrackLesson(trackSlug, lesson.id, materials);
+  const integrated = linked.length > 0 && isIntegratedTrackLesson(trackSlug, lesson.id);
   return (
     <article className={cn("surface-card space-y-5 p-5 sm:p-7", focus && "text-[17px] leading-8")}>
       <header className="border-b pb-4">
@@ -157,79 +168,116 @@ function Lesson({
           {lesson.group}
         </p>
         <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Edital: {lesson.edital}</p>
-        <div className="mt-3">
-          <HighlightToggle />
-        </div>
+        <p className="mt-1 text-xs text-muted-foreground">Tópico de estudo: {lesson.edital}</p>
+        {!integrated && (
+          <div className="mt-3">
+            <HighlightToggle legend={LAW_TRACKS.has(trackSlug)} />
+          </div>
+        )}
       </header>
-      <MaterialStudyTabs
-        key={`${trackSlug}:${lesson.id}`}
-        textLabel="Teoria"
-        text={
-          <>
-            <section className="space-y-2">
-              <h3 className="font-semibold">Conteúdo do assunto</h3>
-              <ul className="list-disc space-y-2 pl-5 leading-7">
-                {lesson.pontos.map((p) => (
-                  <li key={p}>
-                    <GlossaryText text={p} />
-                  </li>
-                ))}
-              </ul>
-            </section>
-            <Complement lesson={lesson} trackSlug={trackSlug} />
-          </>
-        }
-        explanation={
-          <>
-            <section className="space-y-2">
-              <h3 className="font-semibold">Em palavras simples</h3>
-              <p className="leading-7">
-                <GlossaryText text={lesson.simples} />
-              </p>
-            </section>
-            <section className="rounded-xl border-l-2 border-emerald-500 bg-emerald-500/5 p-4">
-              <h3 className="font-semibold">Exemplo prático</h3>
-              <p className="mt-2 leading-7">
-                <GlossaryText text={lesson.exemplo} />
-              </p>
-            </section>
-            <section className="rounded-xl border-l-2 border-amber-500 bg-amber-500/5 p-4">
-              <h3 className="font-semibold">Pontos de atenção</h3>
-              <ul className="mt-2 list-disc space-y-2 pl-5 leading-7">
-                {lesson.atencao.map((p) => (
-                  <li key={p}>
-                    <GlossaryText text={p} />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          </>
-        }
-        practice={
-          <>
-            {user && (
-              <MaterialPractice
-                key={`${trackSlug}:${lesson.id}`}
-                userId={user.id}
-                label={lesson.title}
-                scope={{
-                  subject: TRACK_SUBJECT[trackSlug] ?? trackSlug,
-                  topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? trackSlug, lesson.title),
-                }}
-              />
-            )}
-            <details className="rounded-xl border p-3">
-              <summary className="cursor-pointer font-semibold">
-                Teste rápido da aula ({lesson.quiz.length} itens)
-              </summary>
-              <div className="mt-3">
-                <Quiz lesson={lesson} key={`q-${lesson.id}`} />
-              </div>
-            </details>
-          </>
-        }
-      />
+      {linked.length > 0 && (
+        <section
+          className="space-y-3"
+          aria-label={integrated ? "Materiais deste passo" : "Leituras complementares"}
+        >
+          <p className="text-sm text-muted-foreground">
+            {integrated
+              ? "Estude este passo no material principal, com texto, explicações e prática no mesmo lugar. O roteiro mantém a sequência e suas marcações."
+              : "Estas leituras complementam parte do assunto. A aula abaixo continua disponível para os demais tópicos."}
+          </p>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {linked.map((material) => (
+              <li key={material.slug} className="min-w-0">
+                <Link
+                  to="/dashboard/library/$slug"
+                  params={{ slug: material.slug }}
+                  className="material-card h-full"
+                >
+                  <span className="material-card__icon" data-tone="subject">
+                    <GraduationCap aria-hidden="true" />
+                  </span>
+                  <span className="material-card__body min-w-0">
+                    <strong>{material.title}</strong>
+                    <span>Abrir material e praticar →</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {!integrated && (
+        <MaterialStudyTabs
+          key={`${trackSlug}:${lesson.id}`}
+          textLabel="Teoria"
+          text={
+            <>
+              <section className="space-y-2">
+                <h3 className="font-semibold">Conteúdo do assunto</h3>
+                <ul className="list-disc space-y-2 pl-5 leading-7">
+                  {lesson.pontos.map((p) => (
+                    <li key={p}>
+                      <GlossaryText text={p} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <Complement lesson={lesson} trackSlug={trackSlug} />
+            </>
+          }
+          explanation={
+            <>
+              <section className="space-y-2">
+                <h3 className="font-semibold">Em palavras simples</h3>
+                <p className="leading-7">
+                  <GlossaryText text={lesson.simples} />
+                </p>
+              </section>
+              <section className="rounded-xl border border-emerald-500/35 bg-emerald-500/5 p-4">
+                <h3 className="font-semibold">Exemplo prático</h3>
+                <p className="mt-2 leading-7">
+                  <GlossaryText text={lesson.exemplo} />
+                </p>
+              </section>
+              <section className="rounded-xl border border-amber-500/35 bg-amber-500/5 p-4">
+                <h3 className="font-semibold">Pontos de atenção</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-7">
+                  {lesson.atencao.map((p) => (
+                    <li key={p}>
+                      <GlossaryText text={p} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </>
+          }
+          practice={
+            <>
+              {user && (
+                <MaterialPractice
+                  key={`${trackSlug}:${lesson.id}`}
+                  userId={user.id}
+                  authoredQuiz={lesson.quiz}
+                  authoredKey={`${trackSlug}:${lesson.id}`}
+                  label={lesson.title}
+                  scope={{
+                    subject: TRACK_SUBJECT[trackSlug] ?? trackSlug,
+                    topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? trackSlug, lesson.title),
+                  }}
+                />
+              )}
+              <details className="rounded-xl border p-3">
+                <summary className="cursor-pointer font-semibold">
+                  Teste rápido da aula ({lesson.quiz.length} itens)
+                </summary>
+                <div className="mt-3">
+                  <Quiz lesson={lesson} key={`q-${lesson.id}`} />
+                </div>
+              </details>
+            </>
+          }
+        />
+      )}
       <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
         <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
           <CheckCircle2 className="mr-1 h-4 w-4" />
@@ -256,6 +304,9 @@ function Lesson({
 
 function TracksPage() {
   const { t, l } = Route.useSearch();
+  const { user } = useAuthStatus();
+  const signedIn = !!user && user.id !== "demo-user";
+  const catalog = useStudyMaterialList(signedIn);
   const navigate = useNavigate({ from: "/dashboard/trilhas" });
   const track: Track = TRACKS.find((x) => x.slug === t) ?? TRACKS[0]!;
   const [done, setDone] = React.useState<string[]>([]);
@@ -277,18 +328,29 @@ function TracksPage() {
   const fm = useFocusMode();
   const groups = [...new Set(track.lessons.map((x) => x.group))];
   const pct = Math.round((done.length / track.lessons.length) * 100);
-  const lessonView = (
-    <Lesson
-      focus={fm.focus}
-      trackSlug={track.slug}
-      key={lesson.id}
-      lesson={lesson}
-      done={done.includes(lesson.id)}
-      toggleDone={toggle}
-      {...(index < track.lessons.length - 1 ? { onNext: () => go(index + 1) } : {})}
-      {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
-    />
-  );
+  const lessonView =
+    signedIn && catalog.isPending ? (
+      <Skeleton className="h-56 rounded-xl" aria-label="Carregando materiais do roteiro" />
+    ) : catalog.isError && TRACK_MATERIALS[track.slug]?.[lesson.id] ? (
+      <section className="surface-card space-y-3 p-5" role="alert">
+        <p>Não foi possível consultar o material deste passo. Tente carregar novamente.</p>
+        <Button variant="outline" onClick={() => void catalog.refetch()}>
+          Tentar novamente
+        </Button>
+      </section>
+    ) : (
+      <Lesson
+        focus={fm.focus}
+        trackSlug={track.slug}
+        materials={catalog.data ?? []}
+        key={lesson.id}
+        lesson={lesson}
+        done={done.includes(lesson.id)}
+        toggleDone={toggle}
+        {...(index < track.lessons.length - 1 ? { onNext: () => go(index + 1) } : {})}
+        {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
+      />
+    );
   return (
     <div className={fm.focus ? fm.containerClass : "space-y-5 pb-8"}>
       {fm.bar({
@@ -318,12 +380,28 @@ function TracksPage() {
         ),
       })}
       {!fm.focus && (
+        <Link
+          to={LAW_TRACKS.has(track.slug) ? "/dashboard/library" : "/dashboard/disciplinas"}
+          search={
+            (LAW_TRACKS.has(track.slug)
+              ? {
+                  collection: "laws",
+                  ...(track.slug !== "direitos-humanos" ? { discipline: track.title } : {}),
+                }
+              : { d: track.title }) as never
+          }
+          className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-primary"
+        >
+          <ChevronLeft className="h-4 w-4" /> Voltar aos materiais da disciplina
+        </Link>
+      )}
+      {!fm.focus && (
         <PageHero
           image="study-desk"
           kicker="Material didático"
           icon={GraduationCap}
           title={track.title}
-          description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}
+          description={`${track.source}. Roteiro que reúne os materiais principais e as aulas complementares, sem repetir o estudo em áreas diferentes.`}
         />
       )}
       {!fm.focus && (

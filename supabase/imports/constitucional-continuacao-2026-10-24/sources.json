@@ -1,0 +1,55 @@
+[
+  {
+    "name": "cf",
+    "url": "https://www.planalto.gov.br/ccivil_03/Constituicao/ConstituicaoCompilado.htm",
+    "status": 200,
+    "bytes": 1507134,
+    "sha256": "f392ec09dc8a1be39c563dbe343f78a1093f61c1d3b67a8e81b23c60b496399d",
+    "checked_at": "2026-10-24T20:54:33.563025+00:00"
+  },
+  {
+    "name": "edital",
+    "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_delegado.22.12_0.pdf",
+    "status": 200,
+    "bytes": 958250,
+    "sha256": "a2f1676ecf38e22c2faef198420a071031b324831f4b488bdd276999a0725964",
+    "checked_at": "2026-10-24T20:54:30.639180+00:00"
+  },
+  {
+    "name": "mi",
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13300.htm",
+    "status": 200,
+    "bytes": 21556,
+    "sha256": "9492a18c98cca6062aff17c9ae9dc32125d9431a1a3e2d0cfdca234815fa39e2",
+    "checked_at": "2026-10-24T20:54:30.132001+00:00"
+  },
+  {
+    "name": "ms",
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12016.htm",
+    "status": 200,
+    "bytes": 36372,
+    "sha256": "e5e2c723ffd948ac102f7116c1f7c03fd86133b13a11e16c6ca09f3212259c6f",
+    "checked_at": "2026-10-24T20:54:29.930924+00:00"
+  },
+  {
+    "name": "hd",
+    "url": "https://www.planalto.gov.br/ccivil_03/Leis/L9507.htm",
+    "status": 200,
+    "bytes": 17354,
+    "sha256": "40a296f0fd3180b5a7d550e53b1f12b81f480c2ad018c5919e5be692d1a2a6d0",
+    "checked_at": "2026-10-24T20:54:30.185012+00:00"
+  },
+  {
+    "name": "sv25",
+    "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1268",
+    "status": 200,
+    "bytes": 66415,
+    "sha256": "bc86006e17122d1adbcb84afabff011071c4d7aa66f1fdfb642aa303fefe8861",
+    "checked_at": "2026-10-24T20:54:31.843369+00:00"
+  },
+  {
+    "name": "re466343",
+    "url": "https://redir.stf.jus.br/paginadorpub/paginador.jsp?docTP=AC&docID=595444",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

@@ -121,7 +121,7 @@ function EnemPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="enem-page space-y-6">
       <PageHero
         image="exam-hall"
         kicker="ENEM"

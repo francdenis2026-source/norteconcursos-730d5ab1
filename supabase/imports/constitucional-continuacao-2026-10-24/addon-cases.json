@@ -1,0 +1,133 @@
+{
+  "constitucional-principios-fundamentais-federacao-republica": [
+    {
+      "id": "listas-principios",
+      "title": "Três listas que não se misturam",
+      "scenario": "Um quadro coloca soberania em objetivos, erradicação da pobreza em relações internacionais e asilo político em fundamentos.",
+      "question": "Como reconstruir a classificação?",
+      "steps": [
+        "Separe os arts. 1º, 3º e 4º.",
+        "Associe fundamentos à soberania, objetivos à erradicação da pobreza e relações internacionais ao asilo.",
+        "Não use apenas a importância de uma ideia para trocar seu lugar textual."
+      ],
+      "conclusion": "As categorias constitucionais devem ser corrigidas; valor relevante não é sinônimo de mesma lista.",
+      "pitfall": "Memorizar uma lista única sem o dispositivo de referência.",
+      "variation": {
+        "scenario": "A pergunta trata da integração dos povos da América Latina.",
+        "answer": "A referência é o parágrafo único do art. 4º, com integração econômica, política, social e cultural."
+      },
+      "articles": [
+        "Art. 1º",
+        "Art. 3º",
+        "Art. 4º"
+      ]
+    },
+    {
+      "id": "harmonia",
+      "title": "Independência sem apagamento dos demais",
+      "scenario": "Um resumo ensina que independência permite a cada Poder eliminar os outros quando considerar seus atos inconvenientes.",
+      "question": "Essa conclusão cabe no art. 2º?",
+      "steps": [
+        "Identifique a combinação de independência e harmonia.",
+        "Distinga controles constitucionais de supressão de Poderes.",
+        "Lembre a proteção à separação do art. 60, § 4º."
+      ],
+      "conclusion": "Não. O sistema de controles exige fundamento constitucional e não é autorização de eliminação unilateral.",
+      "pitfall": "Transformar freios e contrapesos em supremacia irrestrita de um órgão.",
+      "variation": {
+        "scenario": "O exercício questionado é uma competência de controle expressamente prevista.",
+        "answer": "Examine a hipótese e o procedimento dessa competência; controle constitucional não se confunde com supressão dos demais."
+      },
+      "articles": [
+        "Art. 2º",
+        "Art. 60"
+      ]
+    }
+  ],
+  "constitucional-nacionalidade-medidas-retirada": [
+    {
+      "id": "portugues-equiparado",
+      "title": "Equiparação não cria nacionalidade originária",
+      "scenario": "Uma pessoa portuguesa com situação de equiparação pretende ocupar cargo de ministro do STF afirmando que recebeu automaticamente nacionalidade brasileira originária.",
+      "question": "Qual distinção deve ser feita?",
+      "steps": [
+        "Leia as condições do art. 12, § 1º, inclusive as ressalvas constitucionais.",
+        "Separe atribuição de direitos e aquisição de nacionalidade.",
+        "Confira o cargo reservado a brasileiro nato no § 3º."
+      ],
+      "conclusion": "A equiparação não transforma automaticamente a pessoa em brasileira nata nem elimina a reserva constitucional do cargo.",
+      "pitfall": "Tratar residência, equiparação, naturalização e nacionalidade originária como um único instituto.",
+      "variation": {
+        "scenario": "O interessado busca naturalização por ser originário de país de língua portuguesa.",
+        "answer": "Agora é necessário conferir a hipótese de naturalização e seus requisitos, sem usar automaticamente o regime da equiparação."
+      },
+      "articles": [
+        "Art. 12, § 1º",
+        "Art. 12, § 3º"
+      ]
+    },
+    {
+      "id": "registro-opcao",
+      "title": "Duas vias para nascimento no exterior",
+      "scenario": "Filha de pessoa brasileira nasce no exterior e é registrada em repartição brasileira competente. O resumo exige sempre, além do registro, residência no Brasil e opção após a maioridade.",
+      "question": "O resumo respeita as alternativas do art. 12, I, c?",
+      "steps": [
+        "Identifique a filiação brasileira e o registro informado.",
+        "Leia a separação entre a via de registro e a de residência com opção.",
+        "Não transforme o conectivo alternativo em soma obrigatória de todas as condições."
+      ],
+      "conclusion": "Não. As vias constitucionais precisam ser distinguidas conforme o caso.",
+      "pitfall": "Converter todos os caminhos em uma única lista cumulativa.",
+      "variation": {
+        "scenario": "Não há registro, e a pessoa invoca a via de residência e opção.",
+        "answer": "Agora os requisitos dessa via devem ser conferidos; não se pode presumir preenchimento apenas pelo nascimento no exterior."
+      },
+      "articles": [
+        "Art. 12, I, c"
+      ]
+    }
+  ],
+  "constitucional-direitos-politicos-elegibilidade": [
+    {
+      "id": "consulta-local",
+      "title": "Consulta local não é sempre convocação nacional",
+      "scenario": "Uma Câmara Municipal aprova consulta sobre questão local para o regime do art. 14, § 12. O resumo afirma que somente o Congresso pode agir em toda consulta local.",
+      "question": "Qual âmbito foi confundido?",
+      "steps": [
+        "Distinga a competência nacional do Congresso e a previsão constitucional de consultas locais.",
+        "Confira aprovação municipal e encaminhamento à Justiça Eleitoral.",
+        "Examine os prazos, limites operacionais e condições constitucionais, sem presumir convocação irrestrita."
+      ],
+      "conclusion": "A regra nacional não deve apagar a hipótese local prevista pela Constituição.",
+      "pitfall": "Usar uma frase genérica para todas as esferas e procedimentos.",
+      "variation": {
+        "scenario": "A questão é plebiscito nacional na hipótese de competência do Congresso.",
+        "answer": "A análise deve retornar ao art. 49, XV, distinguindo autorização de referendo e convocação de plebiscito."
+      },
+      "articles": [
+        "Art. 14, §§ 12 e 13",
+        "Art. 49, XV"
+      ]
+    },
+    {
+      "id": "recursos",
+      "title": "Percentuais com bases diferentes",
+      "scenario": "Um quadro soma automaticamente o percentual de programas de participação feminina com os de campanhas de candidatas e de pessoas pretas e pardas, tratando tudo como uma única conta indiferenciada.",
+      "question": "Por que a conta não pode começar assim?",
+      "steps": [
+        "Leia separadamente os §§ 7º, 8º e 9º do art. 17.",
+        "Identifique finalidade, base dos recursos e destinatários de cada previsão.",
+        "Confira a disciplina eleitoral atual para aplicação concreta, sem presumir exclusividade ou soma mecânica."
+      ],
+      "conclusion": "Percentuais com objetos e bases diferentes não autorizam conclusão aritmética simples sobre todo o financiamento.",
+      "pitfall": "Somar números antes de compreender a hipótese jurídica e os recursos abrangidos.",
+      "variation": {
+        "scenario": "O caso se limita ao mínimo de programas de promoção da participação política das mulheres no fundo partidário.",
+        "answer": "O ponto de partida é o § 7º, e não a importação automática de todo percentual de campanha de outros dispositivos."
+      },
+      "articles": [
+        "Art. 17, §§ 7º a 9º"
+      ]
+    }
+  ]
+}

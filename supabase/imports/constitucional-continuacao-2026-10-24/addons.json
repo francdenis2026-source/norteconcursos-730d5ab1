@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "constitucional-principios-fundamentais-federacao-republica",
+    "input_prefixes": [
+      "01-02",
+      "01-03"
+    ],
+    "file": "principios-complemento.md"
+  },
+  {
+    "slug": "constitucional-nacionalidade-medidas-retirada",
+    "input_prefixes": [
+      "04-03",
+      "04-04"
+    ],
+    "file": "nacionalidade-complemento.md"
+  },
+  {
+    "slug": "constitucional-direitos-politicos-elegibilidade",
+    "input_prefixes": [
+      "04-05",
+      "05-01",
+      "05-02"
+    ],
+    "file": "politicos-complemento.md"
+  }
+]

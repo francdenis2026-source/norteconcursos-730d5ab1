@@ -10,7 +10,6 @@ import {
   ClipboardCheck,
   Cpu,
   FlaskConical,
-  GraduationCap,
   Languages,
   Library,
   MapPin,
@@ -25,28 +24,15 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { readSlugs, useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
-import { disciplineCards, materialsOf, tracksOf, type DisciplineCard } from "@/lib/disciplineHub";
+import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
-import { libraryDisciplines, libraryCollection } from "@/lib/libraryOrganization";
-import { materialLawSlug } from "@/lib/legalLibrary";
-import { compareMaterialRevision } from "@/lib/legalChronology";
-
-/** The most useful next stop in a group: first unread, else the first by revision. */
-function nextMaterial(
-  items: StudyMaterialSummary[],
-  read: Set<string>,
-): StudyMaterialSummary | undefined {
-  if (!items.length) return undefined;
-  const ordered = [...items].sort(compareMaterialRevision);
-  return ordered.find((item) => !read.has(item.slug)) ?? ordered[0];
-}
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -73,12 +59,6 @@ const OTHER_RESOURCES: {
   title: string;
   text: string;
 }[] = [
-  {
-    to: "/dashboard/trilhas",
-    icon: GraduationCap,
-    title: "Trilhas por disciplina",
-    text: "Cursos curtos, aula a aula, com teste rápido.",
-  },
   {
     to: "/dashboard/media",
     icon: PlayCircle,
@@ -254,20 +234,7 @@ function MaterialHub() {
   const laws = hubLaws(items);
   const subjects = disciplineCards(items, TRACKS, PLAYLISTS);
   const lawTotal = laws.reduce((sum, entry) => sum + entry.count, 0);
-  const subjectTotal = subjects.reduce(
-    (sum, entry) => sum + entry.materials + entry.lessons + entry.videos,
-    0,
-  );
-  const [read, setRead] = React.useState<Set<string>>(new Set());
-  React.useEffect(() => setRead(readSlugs()), []);
-  const lawGroupItems = React.useMemo(
-    () => new Map(libraryDisciplines(items.filter((item) => libraryCollection(item) === "laws"))),
-    [items],
-  );
-  const subjectItems = React.useMemo(
-    () => items.filter((item) => libraryCollection(item) === "subjects"),
-    [items],
-  );
+  const subjectTotal = subjects.filter((entry) => entry.hasContent).length;
 
   if (!isLoading && !signedIn)
     return (
@@ -296,12 +263,26 @@ function MaterialHub() {
         description="Estude por legislação, disciplina ou formato."
       >
         <div className="page-hero__stats max-w-xl">
-          <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
-          <HeroStat
-            icon={BookOpen}
-            label="Conteúdos de disciplinas"
-            value={isPending ? "—" : subjectTotal}
-          />
+          <Link
+            to="/dashboard/material"
+            hash="hub-laws"
+            className="hero-stat transition hover:border-emerald-400/60 hover:bg-emerald-950/20"
+            aria-label="Abrir materiais de leis"
+          >
+            <span><Scale />Materiais de leis</span>
+            <strong className="tabular">{isPending ? "—" : lawTotal}</strong>
+            <small>Textos oficiais, súmulas e explicações</small>
+          </Link>
+          <Link
+            to="/dashboard/material"
+            hash="hub-subjects"
+            className="hero-stat transition hover:border-violet-400/60 hover:bg-violet-950/20"
+            aria-label="Abrir disciplinas com conteúdo"
+          >
+            <span><BookOpen />Disciplinas com conteúdo</span>
+            <strong className="tabular">{isPending ? "—" : subjectTotal}</strong>
+            <small>Roteiros, prática e revisão por tema</small>
+          </Link>
         </div>
       </PageHero>
 
@@ -348,10 +329,6 @@ function MaterialHub() {
               </Link>
             </li>
             {laws.map((entry) => {
-              const next = entry.lawSlug
-                ? undefined
-                : nextMaterial(lawGroupItems.get(entry.name) ?? [], read);
-              const nextLawSlug = next && materialLawSlug(next);
               const body = (
                 <>
                   <span className="material-card__icon" data-tone="law">
@@ -371,22 +348,6 @@ function MaterialHub() {
                     <Link
                       to="/dashboard/legal-course/$slug"
                       params={{ slug: entry.lawSlug }}
-                      className="material-card"
-                    >
-                      {body}
-                    </Link>
-                  ) : nextLawSlug ? (
-                    <Link
-                      to="/dashboard/legal-course/$slug"
-                      params={{ slug: nextLawSlug }}
-                      className="material-card"
-                    >
-                      {body}
-                    </Link>
-                  ) : next ? (
-                    <Link
-                      to="/dashboard/library/$slug"
-                      params={{ slug: next.slug }}
                       className="material-card"
                     >
                       {body}
@@ -483,30 +444,9 @@ function MaterialHub() {
                   </span>
                 </>
               );
-              const nextReading =
-                entry.materials > 0
-                  ? nextMaterial(materialsOf(entry.name, subjectItems), read)
-                  : undefined;
-              const firstTrack = !nextReading ? tracksOf(entry.name, TRACKS)[0] : undefined;
               return (
                 <li key={entry.name}>
-                  {nextReading ? (
-                    <Link
-                      to="/dashboard/library/$slug"
-                      params={{ slug: nextReading.slug }}
-                      className="material-card"
-                    >
-                      {content}
-                    </Link>
-                  ) : firstTrack ? (
-                    <Link
-                      to="/dashboard/trilhas"
-                      search={{ t: firstTrack.slug }}
-                      className="material-card"
-                    >
-                      {content}
-                    </Link>
-                  ) : entry.hasContent ? (
+                  {entry.hasContent ? (
                     <Link
                       to="/dashboard/disciplinas"
                       search={{ d: entry.name }}

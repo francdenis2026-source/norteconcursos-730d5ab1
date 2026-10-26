@@ -1,0 +1,184 @@
+[
+  {
+    "document_index": 0,
+    "document_name": "01-01_AlfaCon--introducao-ramos-do-direito-fontes-regime-juridico-administrativo-principios-da-indisponibilidade-e-supremacia-conceitos-importantes-nocoes-de-estado-e-de-governo.pdf",
+    "document_sha256": "a7d905dfda8e38a38db3e616ab3b07b544af4e3f95e1f968b743ae1c31ebe194",
+    "pages": 3,
+    "material_slug": "administrativo-fundamentos-fontes-regime-juridico"
+  },
+  {
+    "document_index": 1,
+    "document_name": "01-03_AlfaCon--administracao-direta-e-indireta_2.pdf",
+    "document_sha256": "9289a346742350b67aca1da7054a9eb4c7b71d9b7278908354e14af46d072d3f",
+    "pages": 3,
+    "material_slug": "administrativo-organizacao-direta-indireta-orgaos"
+  },
+  {
+    "document_index": 2,
+    "document_name": "01-02_AlfaCon--administracao-direta-e-indireta.pdf",
+    "document_sha256": "dbf2ebe0f74fd3761123eb51ba99574410ac2a37f5da42b76293edbcf827677c",
+    "pages": 3,
+    "material_slug": "administrativo-organizacao-direta-indireta-orgaos"
+  },
+  {
+    "document_index": 3,
+    "document_name": "02-01_AlfaCon--agentes-publicos.pdf",
+    "document_sha256": "c203eca5abc332eb6ac45895bbfb1c84edcf9f0d8c0d8cf8b28657a66b610fa4",
+    "pages": 4,
+    "material_slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao"
+  },
+  {
+    "document_index": 4,
+    "document_name": "01-04_AlfaCon--orgaos-publicos.pdf",
+    "document_sha256": "4e0cdb46ebab2ea7d4cf6b2213c9bd849bd8051a3f8d79dcc683257bdd6d5cd7",
+    "pages": 4,
+    "material_slug": "administrativo-organizacao-direta-indireta-orgaos"
+  },
+  {
+    "document_index": 5,
+    "document_name": "02-02_AlfaCon--agentes-publicos-parte-2.pdf",
+    "document_sha256": "1de5e2685418b3f1fd0c6a6e943812a21804b845e072ba91869f4008645628bc",
+    "pages": 3,
+    "material_slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao"
+  },
+  {
+    "document_index": 6,
+    "document_name": "01-05_AlfaCon--centralizacao-descentralizacao-concentracao-e-desconcentracao.pdf",
+    "document_sha256": "980d80bc4be413fe94fdba1bf4aecc405660de0dba2fd6e6d43afe1dd0440c75",
+    "pages": 3,
+    "material_slug": "administrativo-organizacao-direta-indireta-orgaos"
+  },
+  {
+    "document_index": 7,
+    "document_name": "02-03_AlfaCon--poderes-administrativos.pdf",
+    "document_sha256": "4ab8338a945f3165181db31bff31cda0bfce6ab11b269dcd62c9cbfe977e6df3",
+    "pages": 4,
+    "material_slug": "administrativo-poderes-vinculado-discricionario-hierarquico"
+  },
+  {
+    "document_index": 8,
+    "document_name": "03-02_AlfaCon--controle-da-administracao-publica-classificacoes-quanto-ao-momento-de-exercicio-controle-previo-controle-concomitante-controle-posterior-classificacoes-quanto-ao-aspecto-cont.pdf",
+    "document_sha256": "773f7111ae07420e27a8e0a6d9ab3712a74a0106e2b2e14896dcba1aa6aec1f9",
+    "pages": 3,
+    "material_slug": "administrativo-controle-da-administracao-publica"
+  },
+  {
+    "document_index": 9,
+    "document_name": "03-01_AlfaCon--controle-da-administracao-publica-introducao-e-conceito-classificacoes-quanto-a-origem-controle-interno-controle-externo-controle-popular-exercicios-de-controle-da-administracao-publica.pdf",
+    "document_sha256": "1637a677ce7040ad9b4af775de91dfd31184d07ad43014123831dcb9ec5a601a",
+    "pages": 3,
+    "material_slug": "administrativo-controle-da-administracao-publica"
+  },
+  {
+    "document_index": 10,
+    "document_name": "03-03_AlfaCon--controle-da-administracao-publica-classificacoes-quanto-a-amplitude-controle-hierarquico-controle-finalistico-especies-de-controle-contro.pdf",
+    "document_sha256": "9b2f89051cae23e759ecafb2f8210b8fa88403b6fd005cdbf290326910aa105f",
+    "pages": 3,
+    "material_slug": "administrativo-controle-da-administracao-publica"
+  },
+  {
+    "document_index": 11,
+    "document_name": "03-05_AlfaCon--controle-da-administracao-publica-anulacao-e-revogacao-exercicios-de-controle-da-administracao-publica.pdf",
+    "document_sha256": "353e4d586844e0510b1670c0411ab4311b8f9922629a655d8117447a20417c83",
+    "pages": 2,
+    "material_slug": "administrativo-controle-da-administracao-publica"
+  },
+  {
+    "document_index": 12,
+    "document_name": "03-04_AlfaCon--controle-da-administracao-publica-especies-de-controle-controle-legislativo-controle-judicial-exercicios-de-controle-da-administracao-publica.pdf",
+    "document_sha256": "4ee40a7660c637773320f3e7825310a7326d978cc79fa69caa7157f0125948e5",
+    "pages": 3,
+    "material_slug": "administrativo-controle-da-administracao-publica"
+  },
+  {
+    "document_index": 13,
+    "document_name": "04-01_AlfaCon--licitacao-regime-juridico-prerrogativas-e-sujeicoes-competencia-legislativa-principios-lei-n-8-666-96.pdf",
+    "document_sha256": "319a9bdb95787b383ed993af70c15d7b5501827eaa0994df570d5ac432337782",
+    "pages": 5,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 14,
+    "document_name": "04-02_AlfaCon--licitacao-principios-da-vinculacao-ao-instrumento-de-convocacao-alteracao-superveniente-do-edital-principio-da-adjudicacao-compulsoria-e-suas-consequenciais.pdf",
+    "document_sha256": "cbb2519d24cc9143e54cfe83c84df778fd32abe4987eba43814be07aedb33785",
+    "pages": 4,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 15,
+    "document_name": "04-04_AlfaCon--licitacao-criterios-de-desempate-e-margem-de-preferencia.pdf",
+    "document_sha256": "3c90e3ade51f5ef9682e94d41eab45338b9a97f8940e3121792cdca1dba1943d",
+    "pages": 4,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 16,
+    "document_name": "04-03_AlfaCon--licitacao-conceito-e-objetivos-e-disposicoes-constitucionais-artigos-37-173-e-175-da-cf.pdf",
+    "document_sha256": "243a9dc021474d5566746fcfc18f1e049aab20e86d341963f61e5a4428b40bf8",
+    "pages": 5,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 17,
+    "document_name": "05-01_AlfaCon--licitacao-modalidades-gerais.pdf",
+    "document_sha256": "ce825977b711660f3bbb36596b50517eb885bf85f33a9722cf8cf86ca0d7bc8b",
+    "pages": 7,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 18,
+    "document_name": "05-03_AlfaCon--licitacao-licitacao-sistema-de-registro-de-precos-parte-1-hipoteses-de-contratacao-direta-licitacao-dispensada-licitacao-dispensavel-licitacao-inexigivel.pdf",
+    "document_sha256": "70d435d4619b53568599e904ffe73f79be2564571243c3c395c649693b80c5e3",
+    "pages": 4,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 19,
+    "document_name": "06-01_AlfaCon--parte-i-responsabilidade-civil-do-estado-responsabilidade-civil-do-estado-no-direito-brasileiro-responsabilidade-por-ato-comissivo-do-estado-responsabilidade-por-omissao-do-e.pdf",
+    "document_sha256": "162e1d59b32063d2917c80365f3ecb622e72fa78b137c4b5b5648f2c1bb864b5",
+    "pages": 4,
+    "material_slug": "administrativo-responsabilidade-civil-do-estado"
+  },
+  {
+    "document_index": 20,
+    "document_name": "05-02_AlfaCon--licitacao-modalidades-especificas.pdf",
+    "document_sha256": "1078a05e6b99bf920b70abf0f5fa41c04bea2fb043bf305212161a58dcc16e03",
+    "pages": 3,
+    "material_slug": "administrativo-licitacoes-lei-14133-modalidades"
+  },
+  {
+    "document_index": 21,
+    "document_name": "06-02_AlfaCon--parte-ii-responsabilidade-civil-do-estado-responsabilidade-civil-do-estado-no-direito-brasileiro-responsabilidade-por-ato-comissivo-do-estado-responsabili.pdf",
+    "document_sha256": "f11bc0e392b89fdc399349ba7b453317e254ac9e53bc9c0105fb5d96d7ea2a53",
+    "pages": 3,
+    "material_slug": "administrativo-responsabilidade-civil-do-estado"
+  },
+  {
+    "document_index": 22,
+    "document_name": "06-04_AlfaCon--atos-administrativos-parte-ii-teoria-dos-atos-conceitos-classificacao-especies-elementos-requisitos-e-atributos-do-ato-administrativo-teoria-dos-motivo.pdf",
+    "document_sha256": "31d2d380469d60b81d409a3f3053c720c3200bbf5d959ae71ac50586a0c791c9",
+    "pages": 4,
+    "material_slug": "administrativo-atos-administrativos-requisitos-atributos"
+  },
+  {
+    "document_index": 23,
+    "document_name": "06-03_AlfaCon--atos-administrativos-parte-i-teoria-dos-atos-conceitos-classificacao-especies-elementos-requisitos-e-atributos-do-ato-administrativo-teoria.pdf",
+    "document_sha256": "93fb6e71476cdbe53904d3d42e6b9e6882db0063b3e27769251ee3f27301294b",
+    "pages": 4,
+    "material_slug": "administrativo-atos-administrativos-requisitos-atributos"
+  },
+  {
+    "document_index": 24,
+    "document_name": "06-05_AlfaCon--atos-administrativos-parte-iii-teoria-dos-atos-conceitos-classificacao-especies-elementos-requisitos-e-atributos-do-ato-administrativo-teoria-dos-motivos-de.pdf",
+    "document_sha256": "4ed9498a5077418a1ec504df9f7e989aca38633c1f1cbd571530d39bb49d83d8",
+    "pages": 3,
+    "material_slug": "administrativo-atos-administrativos-requisitos-atributos"
+  },
+  {
+    "document_index": 25,
+    "document_name": "Lei 9784 Atualizada e Esquematizada.pdf",
+    "document_sha256": "30725edce96506acde0d6f4e16ba342ab8a8e0ef35248463a23cf99ddd48a3c6",
+    "pages": 75,
+    "material_slug": "administrativo-processo-administrativo-lei-9784"
+  }
+]

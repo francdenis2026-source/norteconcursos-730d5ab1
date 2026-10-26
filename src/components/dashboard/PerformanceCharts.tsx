@@ -163,7 +163,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, name: string) => [`${value} questões`, name]}
+                formatter={(value) => [
+                  `${Number(value ?? 0)} questões`,
+                  String(name ?? ""),
+                ]}
               />
             </PieChart>
           </ResponsiveContainer>
@@ -203,8 +206,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number | null) =>
-                  value === null ? ["sem dados", "Aproveitamento"] : [`${value}%`, "Aproveitamento"]
+                formatter={(value) =>
+                  value == null
+                    ? ["sem dados", "Aproveitamento"]
+                    : [`${Number(value)}%`, "Aproveitamento"]
                 }
               />
               <Area
@@ -250,7 +255,7 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
         ) : (
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={subjectData}
+              data={subjectData.slice(0, 8)}
               layout="vertical"
               margin={{ top: 4, right: 16, left: 0, bottom: 0 }}
             >
@@ -269,19 +274,20 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 tick={AXIS_TICK}
                 axisLine={false}
                 tickLine={false}
-                width={100}
+                width={132}
+                tickFormatter={(v: string) => (v.length > 18 ? `${v.slice(0, 17)}…` : v)}
               />
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, _n, p) => [
-                  `${value}% (${p.payload.total} questões)`,
+                formatter={(value, _n, p) => [
+                  `${Number(value ?? 0)}% (${(p.payload as { total?: number } | undefined)?.total ?? 0} questões)`,
                   "Aproveitamento",
                 ]}
               />
-              <Bar dataKey="accuracy" radius={[0, 6, 6, 0]} barSize={14}>
-                {subjectData.map((d) => (
+              <Bar dataKey="accuracy" radius={[0, 6, 6, 0]} barSize={12}>
+                {subjectData.slice(0, 8).map((d) => (
                   <Cell
                     key={d.subject}
                     fill={d.accuracy < 50 ? ROSE : d.accuracy < 75 ? AMBER : EMERALD}
@@ -324,10 +330,14 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, _n, p) => [
-                  `${value}% · ${p.payload.count} simulado${p.payload.count === 1 ? "" : "s"}`,
-                  p.payload.label,
-                ]}
+                formatter={(value, _n, p) => {
+                  const payload = p.payload as { count?: number; label?: string } | undefined;
+                  const count = payload?.count ?? 0;
+                  return [
+                    `${Number(value ?? 0)}% · ${count} simulado${count === 1 ? "" : "s"}`,
+                    String(payload?.label ?? ""),
+                  ];
+                }}
               />
               <Bar dataKey="accuracy" radius={[6, 6, 0, 0]} barSize={28} fill={SKY}>
                 {bancaData.map((d, i) => (

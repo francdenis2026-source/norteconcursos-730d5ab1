@@ -1,3 +1,4 @@
+import { setReadingWorkspace, READING_FULLSCREEN_EXIT } from "@/lib/readingWorkspace";
 import { platformDate } from "@/lib/platformClock";
 import {
   lazy,
@@ -9,8 +10,9 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { createPortal } from "react-dom";
 import { useBlocker, useRouter } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock3, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Hint } from "@/components/ui/hint";
 import type { ToolsArea } from "@/components/study/StudyTools";
@@ -90,6 +92,7 @@ export function useFocusMode() {
   const enter = useCallback(() => {
     beginFocus(href(), "");
     setFocus(true);
+    setReadingWorkspace(true);
   }, [href]);
 
   const requestExit = useCallback(async () => {
@@ -97,7 +100,7 @@ export function useFocusMode() {
     exiting.current = true;
     try {
       const ok = await confirmDialog({
-        title: "Encerrar o modo foco?",
+        title: "Encerrar a leitura cronometrada?",
         message: `O tempo de estudo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) será encerrado.`,
         confirmLabel: "Encerrar",
         cancelLabel: "Continuar estudando",
@@ -117,6 +120,9 @@ export function useFocusMode() {
       setToolsOpen(false);
       return;
     }
+    setReadingWorkspace(true);
+    const onNativeExit = () => void requestExit();
+    document.addEventListener(READING_FULLSCREEN_EXIT, onNativeExit);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") void requestExit();
     };
@@ -127,10 +133,39 @@ export function useFocusMode() {
       setNow(platformDate());
       tickFocus();
     }, 1000);
+    const readingScroll = document.querySelector<HTMLElement>(".focus-study-container");
+    let settle: number | null = null;
+    let pointerSettle: number | null = null;
+    const onScroll = () => {
+      document.documentElement.dataset["readingScrolling"] = "true";
+      if (settle !== null) window.clearTimeout(settle);
+      settle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingScrolling"];
+        settle = null;
+      }, 140);
+    };
+    readingScroll?.addEventListener("scroll", onScroll, { passive: true });
+    const onPointerMove = () => {
+      document.documentElement.dataset["readingPointer"] = "true";
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      pointerSettle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingPointer"];
+        pointerSettle = null;
+      }, 120);
+    };
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
     return () => {
+      document.removeEventListener(READING_FULLSCREEN_EXIT, onNativeExit);
+      setReadingWorkspace(false);
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearInterval(id);
+      if (settle !== null) window.clearTimeout(settle);
+      readingScroll?.removeEventListener("scroll", onScroll);
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      window.removeEventListener("pointermove", onPointerMove);
+      delete document.documentElement.dataset["readingScrolling"];
+      delete document.documentElement.dataset["readingPointer"];
     };
   }, [focus, requestExit]);
 
@@ -193,18 +228,18 @@ export function useFocusMode() {
   /** Classes do contêiner do conteúdo: tela cheia, abaixo da faixa fixa do topo. */
   const containerClass = focus
     ? [
-        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-10 pt-0 sm:px-8 text-[17px] leading-8",
+        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-16 pt-0 sm:px-8 text-[16px] leading-7",
         // explicação do artigo em duas colunas, sem quebrar os blocos no meio
         "lg:[&_section[aria-label='Entenda_este_artigo']]:columns-2 lg:[&_section[aria-label='Entenda_este_artigo']]:gap-10",
         "[&_section[aria-label='Entenda_este_artigo']>*]:break-inside-avoid [&_section[aria-label='Entenda_este_artigo']>*]:mb-4",
-        "[&_.library-body]:max-w-none",
+        "[&_.library-body]:mx-auto [&_.library-body]:max-w-5xl [&_.library-body]:text-justify",
       ].join(" ")
     : "";
 
   /** Botão para entrar no modo foco (fora dele). */
   const button = (
     <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
-      <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
+      <Clock3 className="mr-1 h-4 w-4" /> Iniciar leitura cronometrada
     </Button>
   );
 
@@ -215,7 +250,7 @@ export function useFocusMode() {
         <header
           ref={barRef}
           className="focus-study-bar sticky top-0 z-[61] bg-gradient-to-r from-slate-900 to-sky-900 text-white shadow-md"
-          aria-label="Controles do modo foco"
+          aria-label="Controles da leitura cronometrada"
           role="banner"
         >
           <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-2 lg:grid-cols-[minmax(120px,1fr)_auto_auto]">
@@ -284,27 +319,16 @@ export function useFocusMode() {
                   </button>
                 </Hint>
               </nav>
-              {p.tools && (
-                <button
-                  type="button"
-                  onClick={() => setToolsOpen((v) => !v)}
-                  aria-pressed={toolsOpen}
-                  aria-label="Ferramentas"
-                  className="flex items-center gap-1.5 rounded-lg bg-amber-400 px-3 py-2 text-sm font-bold text-amber-950 hover:bg-amber-300"
-                >
-                  <Wrench className="h-4 w-4" />{" "}
-                  <span className="hidden sm:inline">Ferramentas</span>
-                </button>
-              )}
               {p.extra}
-              <Hint content="Sair do modo foco (Esc)">
+              <Hint content="Encerrar leitura cronometrada (Esc)">
                 <button
                   type="button"
                   onClick={() => void requestExit()}
-                  aria-label="Sair do modo foco"
+                  aria-label="Encerrar leitura cronometrada"
                   className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15"
                 >
-                  <X className="h-4 w-4" /> <span className="hidden sm:inline">Sair</span>
+                  <X className="h-4 w-4" />{" "}
+                  <span className="hidden sm:inline">Encerrar leitura</span>
                 </button>
               </Hint>
             </div>
@@ -334,6 +358,12 @@ export function useFocusMode() {
               onClose={() => setToolsOpen(false)}
             />
           </Suspense>
+        )}
+        {typeof document !== "undefined" && createPortal(
+          <div className="focus-study-footer" aria-label={`Estudo: ${p.kicker} · ${p.title}`}>
+            <span>{p.kicker}</span><strong>{p.title}</strong>
+          </div>,
+          document.body,
         )}
       </>
     );

@@ -250,6 +250,7 @@ function InteligenciaIdecan() {
   }, [pcRows]);
 
   const profile = React.useMemo(() => subjectProfile(pcRows), [pcRows]);
+  const allProfile = React.useMemo(() => subjectProfile(all), [all]);
   const maxShare = Math.max(0.0001, ...profile.subjects.map((s) => s.share));
   const themes = React.useMemo(
     () =>
@@ -361,6 +362,20 @@ function InteligenciaIdecan() {
             </p>
           </CardContent>
         )}
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base">Mapa completo da IDECAN por disciplina</CardTitle>
+          <CardDescription>
+            Inclui todas as carreiras e provas da banca disponíveis no acervo, além do recorte de Polícia Civil.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {allProfile.subjects.length ? (
+            <SubjectBars subjects={allProfile.subjects} maxShare={Math.max(0.0001, ...allProfile.subjects.map((s) => s.share))} />
+          ) : <p className="text-sm text-muted-foreground">Ainda não há disciplinas classificadas.</p>}
+        </CardContent>
       </Card>
 
       {currentYearExams.length > 0 && (

@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
-import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { SafeBoundary } from "@/components/library/SafeBoundary";
@@ -27,7 +26,7 @@ import { useMediaCatalog } from "@/lib/mediaStore";
 import { lawVideos } from "@/lib/relatedVideos";
 import { UnitTrueFalse } from "@/components/library/UnitTrueFalse";
 import { LegalCoverage } from "@/components/library/LegalCoverage";
-import { useStudyMaterial } from "@/lib/studyMaterials";
+import { useStudyMaterial, type StudyMaterial } from "@/lib/studyMaterials";
 import { UnitExplanation } from "@/components/library/UnitExplanation";
 import { LegalRefProvider } from "@/components/library/LegalRefText";
 import { rememberLegal } from "@/components/library/StartHere";
@@ -87,6 +86,9 @@ function LegalCoursePage() {
   const userId = user?.id !== "demo-user" ? user?.id : undefined;
   const courses = useLegalCourses(userId);
   const course = courses.data?.find((row) => row.slug === slug);
+  useEffect(() => {
+    if (course) window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: "Direito Constitucional", topic: course.title } }));
+  }, [course]);
   const units = useLegalUnits(course?.id, userId);
   const progress = useLegalProgress(userId);
   const coverage = useLegalExplanationCoverage(userId).data?.find(
@@ -221,10 +223,10 @@ function LegalCoursePage() {
     );
   return (
     <LegalRefProvider value={{ slug: course.slug, index: refIndex }}>
-      <div className={`space-y-5 pb-8 ${fm.containerClass}`}>
+      <div className={`legal-course-page space-y-5 pb-8 ${fm.containerClass}`}>
         {fm.bar({
           kicker: course.title,
-          title: selected?.label ?? "Escolha um artigo",
+          title: "Estudo cronometrado",
           position: selected
             ? `${Math.max(1, navigationRows.findIndex((r) => r.id === selected.id) + 1)} de ${navigationRows.length}`
             : "",
@@ -407,44 +409,53 @@ function LegalCoursePage() {
             law={{ slug: course.slug, materialSlug: course.material_slug }}
           />
         ) : tab === "application" ? (
-          material.isPending ? (
-            <Skeleton className="h-64" />
-          ) : material.data ? (
-            <>
-              <p className="text-sm text-muted-foreground">
-                Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da
-                leitura integral é acompanhada por dispositivo.
+          <section className="space-y-4" aria-label="Revisão geral da lei">
+            <header className="rounded-xl border bg-card p-4 sm:p-5">
+              <h2 className="text-lg font-bold">Revisão geral da lei</h2>
+              <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                Teste o que aprendeu, confira o resultado e volte aos artigos em que teve
+                dificuldade. Os exercícios desta revisão não substituem a leitura integral.
               </p>
-              <WorkedExamples
-                key={`${userId}:${course.material_slug}`}
-                slug={course.material_slug}
-                enabled={!!userId}
-              />
-              {userId && (
-                <LegalCoursePractice
-                  key={`${userId}:${material.data.slug}`}
-                  courseId={course.id}
-                  userId={userId}
-                  material={material.data}
-                />
-              )}
-              {userId && <LawPracticeLink law={course.slug} userId={userId} />}
-              <Link
-                to="/dashboard/library/$slug"
-                params={{ slug: course.material_slug }}
-                className="inline-block underline"
-              >
-                Abrir explicações e exemplos de aplicação
-              </Link>
-            </>
-          ) : (
-            <p>
-              Não foi possível carregar os exercícios.{" "}
-              <button onClick={() => void material.refetch()} className="underline">
-                Tentar novamente
-              </button>
-            </p>
-          )
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                <span className="rounded-full border px-3 py-1">1. Responder</span>
+                <span className="rounded-full border px-3 py-1">2. Conferir erros</span>
+                <span className="rounded-full border px-3 py-1">3. Revisar artigos</span>
+              </div>
+            </header>
+            {material.isPending ? (
+              <Skeleton className="h-64" />
+            ) : material.data ? (
+              <>
+                {userId && (
+                  <LegalCoursePractice
+                    key={`${userId}:${material.data.slug}`}
+                    courseId={course.id}
+                    userId={userId}
+                    material={material.data}
+                  />
+                )}
+                <div className="flex flex-wrap gap-3 rounded-xl border bg-card p-4">
+                  <Button variant="outline" onClick={() => setTab("learn")}>
+                    Revisar os artigos →
+                  </Button>
+                  <Link
+                    to="/dashboard/library/$slug"
+                    params={{ slug: course.material_slug }}
+                    className="inline-flex min-h-10 items-center rounded-lg border px-4 text-sm font-medium hover:bg-muted"
+                  >
+                    Consultar o material completo
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <p role="alert" className="rounded-xl border p-4 text-sm">
+                Não foi possível carregar a revisão.{" "}
+                <button onClick={() => void material.refetch()} className="underline">
+                  Tentar novamente
+                </button>
+              </p>
+            )}
+          </section>
         ) : (
           <div className={fm.focus ? "block" : "grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]"}>
             {!fm.focus && (
@@ -561,6 +572,7 @@ function LegalCoursePage() {
                   unit={selected}
                   law={course.slug}
                   materialSlug={course.material_slug}
+                  practiceMaterial={material.data ?? undefined}
                   references={course.overview.jurisprudence.filter((ref) =>
                     ref.articles.includes(selected.label),
                   )}
@@ -656,6 +668,7 @@ function UnitLesson({
   unit,
   law,
   materialSlug,
+  practiceMaterial,
   references,
   progress,
   userId,
@@ -669,6 +682,7 @@ function UnitLesson({
   unit: LegalUnit;
   law: string;
   materialSlug: string;
+  practiceMaterial?: StudyMaterial | undefined;
   references: LegalCourse["overview"]["jurisprudence"];
   progress: LegalProgress | undefined;
   userId: string;
@@ -701,10 +715,7 @@ function UnitLesson({
           520,
         )
       : "";
-  const mode = step === "fixar" ? "recall" : "read";
-  const [revealed, setRevealed] = useState(false);
   const [notes, setNotes] = useState(progress?.notes ?? "");
-  const [response, setResponse] = useState("");
   const [busy, setBusy] = useState(false);
   const pendingRequest = useRef<{
     rating: ReviewRating | "read";
@@ -778,7 +789,7 @@ function UnitLesson({
       ) : (
         <>
           <nav
-            className="grid grid-cols-3 gap-1 rounded-xl border bg-card p-1"
+              className="grid grid-cols-1 gap-1 rounded-xl border bg-card p-1 sm:grid-cols-3"
             aria-label="Passos de estudo deste artigo"
           >
             {(
@@ -812,10 +823,6 @@ function UnitLesson({
                 aria-current={step === id ? "step" : undefined}
                 onClick={() => {
                   setStep(id);
-                  if (id === "fixar") {
-                    setRevealed(false);
-                    setResponse("");
-                  }
                 }}
                 className={`flex min-h-11 items-center gap-2 rounded-lg p-2 text-left text-xs sm:p-3 ${step === id ? "bg-primary text-primary-foreground shadow-sm" : "hover:bg-card"}`}
               >
@@ -835,23 +842,6 @@ function UnitLesson({
               </button>
             ))}
           </nav>
-          {mode === "recall" && (
-            <section className="space-y-3 rounded-xl border p-4">
-              <h3 className="font-semibold">Revise de cabeça</h3>
-              <p className="text-sm text-muted-foreground">
-                Pense na resposta de cada pergunta, sem olhar o artigo. Depois confira com o texto e
-                diga o quanto lembrou: isso define quando o artigo volta para revisão.
-              </p>
-              <ol className="list-decimal space-y-2 pl-5 text-sm">
-                {unit.recall.prompts.map((prompt) => (
-                  <li key={prompt}>{prompt}</li>
-                ))}
-              </ol>
-              <Button variant="outline" onClick={() => setRevealed(true)}>
-                Mostrar o texto e conferir
-              </Button>
-            </section>
-          )}
           {step === "entender" && (
             <>
               {caveat && (
@@ -896,18 +886,14 @@ function UnitLesson({
                   ← Texto oficial
                 </Button>
                 <Button
-                  onClick={() => {
-                    setStep("fixar");
-                    setRevealed(false);
-                    setResponse("");
-                  }}
+                  onClick={() => setStep("fixar")}
                 >
                   Praticar →
                 </Button>
               </div>
             </>
           )}
-          {(step === "texto" || (step === "fixar" && revealed)) && (
+          {step === "texto" && (
             <>
               <div
                 className={
@@ -966,16 +952,18 @@ function UnitLesson({
                 key={`${law}:${unit.unit_key}`}
                 userId={userId}
                 scope={{ law, article: unit.label }}
+                authoredQuiz={practiceMaterial?.quiz ?? []}
+                authoredReview={practiceMaterial?.practice_review}
+                authoredKey={materialSlug}
                 label={unit.label}
               />
             </div>
           )}
-          {mode === "recall" && revealed && (
-            <section className="space-y-3">
-              <p className="text-sm">
-                Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que
-                confundiu. Esta avaliação é feita por você; não é correção automática de texto
-                livre.
+          {step === "fixar" && (
+            <section className="space-y-3 rounded-lg border px-3 py-3">
+              <h3 className="text-sm font-semibold">Como foi sua prática?</h3>
+              <p className="text-xs text-muted-foreground">
+                Depois de responder às questões, registre como foi sua lembrança para programar a próxima revisão deste artigo.
               </p>
               <div className="flex flex-wrap gap-2">
                 {(

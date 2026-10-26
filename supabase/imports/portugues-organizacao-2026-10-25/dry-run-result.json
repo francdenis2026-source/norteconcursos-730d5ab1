@@ -1,0 +1,15 @@
+{
+  "mode": "dry-run",
+  "at": "2026-10-25T04:10:03.581168+00:00",
+  "sql_sha256": "036b8cb2377a3594c60c2937d59ce50a056b79c7b75ae506b264bf86a28948fb",
+  "result": [
+    {
+      "resultado": {
+        "materiais": 17,
+        "novos_casos": 17,
+        "exemplos_inline": 55,
+        "questoes_preservadas": 340
+      }
+    }
+  ]
+}

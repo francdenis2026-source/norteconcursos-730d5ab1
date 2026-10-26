@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-24T21:28:49.906395+00:00",
+  "file": "01-publish-constitutional-continuation.sql",
+  "sql_sha256": "b02663a042e97e801cb2a4a0e68f19478aabc52527450dc6ed028a03d4f721f8",
+  "dry_run_rolled_back": true,
+  "http_status": 201,
+  "result": [
+    {
+      "confirmed_materials": 15,
+      "new_modules": 12,
+      "updated_modules": 3,
+      "exercises_in_final_snapshots": 300
+    }
+  ]
+}

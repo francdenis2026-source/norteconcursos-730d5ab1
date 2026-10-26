@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-24T17:41:07.189185+00:00",
+  "file": "02-publish-reused-practice.sql",
+  "sql_sha256": "a8a29ceadac00aff3469ba9e1d0034268266c001d8a69bdce37687465e0d9da3",
+  "http_status": 201,
+  "result": [
+    {
+      "confirmed_materials": 28,
+      "additional_exercises": 318
+    }
+  ]
+}

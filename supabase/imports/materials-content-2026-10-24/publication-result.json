@@ -1,0 +1,290 @@
+{
+  "at": "2026-10-24T16:45:15.128620+00:00",
+  "applied": true,
+  "expected": 40,
+  "confirmed": [
+    {
+      "id": "98cff578-733f-47dc-83e5-c2475e62c7eb",
+      "slug": "enem-artes-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "ce930960004a93af58899c8089f9cf314d0a177992a797355d7b483b70b92da4"
+    },
+    {
+      "id": "37014bee-faec-43d5-933e-71191e7eb8c0",
+      "slug": "enem-biologia-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "6e784e884eed75cf46df64c4a6bf91e6f5bc1e90ffa615e38ce1d3250edb63d8"
+    },
+    {
+      "id": "bea2fd55-6880-4568-91a5-944b5920c77d",
+      "slug": "enem-espanhol-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "f840f375f1cd9466d41ed7a5824a2dd3a5996dc38a3c2e8964953c2316609544"
+    },
+    {
+      "id": "1bba1ed8-f8a6-4911-9eef-59f7f17dde6a",
+      "slug": "enem-estatistica-aplicacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "7e54a2b8f8f0765a312658fdc40bd8ce219cc8b58b74c8657a9876a11a0ecc38"
+    },
+    {
+      "id": "58ce5537-897e-4b8c-90bc-d94b8a062bb3",
+      "slug": "enem-filosofia-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "ee95e5d2e790a6a342e6fc2db8f62e89176969f02e2802d926c3ca11c9d514bf"
+    },
+    {
+      "id": "96dd7886-04e4-48c0-89bd-ee6afb8027c3",
+      "slug": "enem-fisica-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "31e058d33e10b541a0294501c7a3bbd6dbcd0d7422904ea90c5496f5d7031099"
+    },
+    {
+      "id": "74ad56ec-0529-4bb4-981a-22e953a63ab6",
+      "slug": "enem-funcoes-aplicacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "989f3dc199aaf3f6dc2d18b701ba27bfddd57c48fb43230292dcea7f24aaf8d7"
+    },
+    {
+      "id": "ee5cac2a-642b-4201-bd10-453b43457a7f",
+      "slug": "enem-geografia-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "0e740eab65257a7f347675288a8ae53a36fdcc9f351747f18ebf0b5701445a5b"
+    },
+    {
+      "id": "080e41b3-282d-4d94-95fa-a379e2cf6297",
+      "slug": "enem-geometria-aplicacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "760ffd64466b62b76680701e03e94197c1c9bc0ae24ea6af9ed6423c8dfbef64"
+    },
+    {
+      "id": "50970a3b-6f98-42a7-a19b-24edffdc5060",
+      "slug": "enem-historia-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "f26019c680f3df2d847f041c47ff7c467d0ee1421a0bfaefffdbfa45b4e262df"
+    },
+    {
+      "id": "5a871087-5111-4b9b-a658-2052d2bc1a57",
+      "slug": "enem-ingles-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "d06d31e51e07b78215a4894857fa8d7123b4561e556a4c834878bf1db09f93fb"
+    },
+    {
+      "id": "de57825b-0f71-47e0-82e4-602cbedaa67f",
+      "slug": "enem-literatura-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "76d2c5bc90f8d1e87cb96e25ec533023d719546e30154941dce4f7b09049d2c0"
+    },
+    {
+      "id": "b4a9cd17-9b53-4210-bc57-de954609e1be",
+      "slug": "enem-matematica-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "3677dd6171357ff77d0d5cde31687c9d3bb7049700b1c352c6e15927d3126b4d"
+    },
+    {
+      "id": "712259b9-ec0b-4555-ad47-76cd7dafb13b",
+      "slug": "enem-portugues-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "67ee4a86660349f78dd0d2f3888c7e040a1c3e177671ae7e7d79833da967cf9a"
+    },
+    {
+      "id": "3332654a-d3b3-44ab-be79-f7c687c69848",
+      "slug": "enem-probabilidade-aplicacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "8b49b64e3d533c5de7c50de988973a8f33e6b6b4ede23d3e5d60d3fc1b39afe1"
+    },
+    {
+      "id": "7be74822-b86e-4c01-b87a-5c03e8137c83",
+      "slug": "enem-quimica-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "934e4c88495b87a9f87773e59d2da8318ae3e4ee87bc08b3aa534db4aa3ceac2"
+    },
+    {
+      "id": "8a17f7dd-c884-4386-9d31-01d48a9f88d4",
+      "slug": "enem-redacao-aplicacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "80873d253d5b0b6007a0c171ef3ed30ecb4ac46cc3e959fd1b6f9ed72c9352c5"
+    },
+    {
+      "id": "7bf22f76-40fc-4eea-8fb8-5c87071adb1d",
+      "slug": "enem-sociologia-fundamentos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "59433b44ea1d99916d4f2c506184d6901ec87af48f57119d902add1ca84eeef4"
+    },
+    {
+      "id": "6035d87e-04a2-483e-8f49-005e0a52ba5c",
+      "slug": "informatica-backup-incremental-diferencial",
+      "questions": 20,
+      "added": 12,
+      "sha256": "19546fe28fccdb4f0c949f42100d55ec5505e4cd48f335ed8d96025f71312822"
+    },
+    {
+      "id": "f180a41e-ea48-4572-941e-90758cf994a2",
+      "slug": "informatica-email-smtp-pop-imap",
+      "questions": 20,
+      "added": 12,
+      "sha256": "e591972241bf8d1013b5d35371fb51ad96bcfad6cc1b23a4f60377ee8bc5d676"
+    },
+    {
+      "id": "ca53799c-d582-40f7-84cf-21b5ec90ff15",
+      "slug": "informatica-excel-referencias-funcoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "03fb041e6a4a4ce4f6ecd90e79c308857ddf8d34c9078fafc42ab18523f26ed6"
+    },
+    {
+      "id": "d418c52d-7b19-4b3a-80d6-a43e657e5edd",
+      "slug": "informatica-hardware-memorias-software",
+      "questions": 20,
+      "added": 12,
+      "sha256": "b21af31e4598a52c220da9c8f274be1dba275a72f0f2a6c02960698e4070c768"
+    },
+    {
+      "id": "f5538c04-5d18-4d2e-b6cf-163aee135143",
+      "slug": "informatica-internet-intranet-vpn",
+      "questions": 20,
+      "added": 12,
+      "sha256": "6950394e10acec3ada9109c46022df79e196e30573f25e459374b85e83dbc7c9"
+    },
+    {
+      "id": "f68ede51-6c4d-4683-a7a1-28613b03aef0",
+      "slug": "informatica-linux-comandos-diretorios",
+      "questions": 20,
+      "added": 12,
+      "sha256": "3db5a74f033cc177fb5cbea54250e40bd7fcad5864108aa609cbd05fde75d109"
+    },
+    {
+      "id": "6d27f941-583a-46c5-aa3e-d84033354653",
+      "slug": "informatica-linux-permissoes-rwx",
+      "questions": 20,
+      "added": 12,
+      "sha256": "755cb5a82c39c6a95062d75e562b367b202b884b7397e166e918594f8f3afdc7"
+    },
+    {
+      "id": "81d45924-17ee-448b-a099-82e69c61f269",
+      "slug": "informatica-malware-antivirus-firewall",
+      "questions": 20,
+      "added": 12,
+      "sha256": "2e266a56d76e987c79d04d6a8fc0735176f5aa38a1f346ad4e1b3cc857a572db"
+    },
+    {
+      "id": "91f29cdb-d2ee-450b-8de2-af5ba15c1965",
+      "slug": "informatica-navegadores-privacidade-download",
+      "questions": 20,
+      "added": 12,
+      "sha256": "655754d1c3427bad0e0f2b7c6b1f7f0e1b6d74e0e643256da19033920448b193"
+    },
+    {
+      "id": "6ead92f9-2604-453e-9735-dade8f4c95d7",
+      "slug": "informatica-osi-tcp-ip-camadas",
+      "questions": 20,
+      "added": 12,
+      "sha256": "aad7a12404bcdc22f3c0b9ddb0d94d3c3572202c51be8892ab29a1f17703fb89"
+    },
+    {
+      "id": "70cb5762-4b8f-4484-bf56-c6b9261e7b56",
+      "slug": "informatica-powerpoint-impress-apresentacoes",
+      "questions": 20,
+      "added": 12,
+      "sha256": "2eff93d247cc281d711304a9338af292385ec27a5846ccc258eb432ceefcd528"
+    },
+    {
+      "id": "fca3f895-08cb-44e3-93fb-942ec400da83",
+      "slug": "informatica-protocolos-dns-dhcp-http",
+      "questions": 20,
+      "added": 12,
+      "sha256": "57844aa59bbc4f85014d5a2603485a8d51740b48b1b4f6148ce64854466faddc"
+    },
+    {
+      "id": "df98e842-cb1c-44ee-9e74-bbbc74a136d4",
+      "slug": "informatica-seguranca-cid-controles",
+      "questions": 20,
+      "added": 12,
+      "sha256": "e6de4da1489ac1eab4ad59ba0d91bd45294e1c4cbf9424c0a27df411b17841a5"
+    },
+    {
+      "id": "5ae9c269-482f-430b-8fdf-027fa31b7f0f",
+      "slug": "informatica-windows-arquivos-suporte",
+      "questions": 20,
+      "added": 12,
+      "sha256": "558d733927c4b926e4ec94075cf28a2670b79309371841a4fdac64e68717f6a3"
+    },
+    {
+      "id": "fa3cc366-4fb2-42e5-9222-f9a8d2076c68",
+      "slug": "informatica-word-writer-formatos-estilos",
+      "questions": 20,
+      "added": 12,
+      "sha256": "26cfe50d343e30e8b8984ba135255754a172c01301c8b774a54f94fceee6ae61"
+    },
+    {
+      "id": "f877aea8-3d78-42ea-a580-c933f47cb785",
+      "slug": "portugues-adjetivas-substantivas-pontuacao",
+      "questions": 20,
+      "added": 12,
+      "sha256": "cb1736181411e8f2421adeff39ecf5e2522dad89ef3ddcbe089f7c22e38e713c"
+    },
+    {
+      "id": "8d434ed1-452a-468a-90b0-7ea1106f4275",
+      "slug": "portugues-coesao-reescrita-sentido",
+      "questions": 20,
+      "added": 12,
+      "sha256": "087e57ba0d0ec9e3b897f5c7d80bc44af40a34ad85b231e5f4a54e5513750913"
+    },
+    {
+      "id": "ce72d895-43d5-463f-905e-8ef35337d33d",
+      "slug": "portugues-coordenacao-subordinacao",
+      "questions": 20,
+      "added": 12,
+      "sha256": "40d5821522b4b898bce1676efb6b99bda60c796618d4bc618b89ebd23a2a75a7"
+    },
+    {
+      "id": "cdc922f4-fc1c-4114-84c2-8e639c6aeee0",
+      "slug": "portugues-oracoes-adverbiais-conectores",
+      "questions": 20,
+      "added": 12,
+      "sha256": "ae48a4f9281ac62bbcff3e222b7510b6b647f7c4fe26f187428d0722e92ccff3"
+    },
+    {
+      "id": "cf2fcdd1-69d9-4908-9ca0-0f61ea08290f",
+      "slug": "rlm-conjuntos-quantificadores",
+      "questions": 20,
+      "added": 12,
+      "sha256": "ab1b805e477aae71c6fec55b108b9fe5a00e68d8e8d5ee5668c70aef7fa5dccf"
+    },
+    {
+      "id": "da025977-2734-40a5-8716-9d6aa9780f70",
+      "slug": "rlm-contagem-probabilidade-basica",
+      "questions": 20,
+      "added": 12,
+      "sha256": "2101a5a29a9c0824aa2b120cb2ce389503b91cf013b65d2e8a84f655141339f3"
+    },
+    {
+      "id": "8d21f4e8-a367-4edd-bde6-49860f353cb8",
+      "slug": "rlm-proposicoes-negacao-condicionais",
+      "questions": 20,
+      "added": 12,
+      "sha256": "f1d6d03ecf4d21b023f2c69f6701407d492712ad3c3a51f165c80857dc9de311"
+    }
+  ],
+  "complete": true,
+  "public_catalog_rows_added": 0,
+  "legal_content_modified": false
+}

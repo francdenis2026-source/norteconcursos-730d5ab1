@@ -7,11 +7,15 @@ export function MaterialStudyTabs({
   explanation,
   practice,
   textLabel = "Texto-base",
+  explanationLabel = "Explicação didática",
+  practiceLabel = "Praticar · até 20",
 }: {
   text: ReactNode;
   explanation: ReactNode;
   practice: ReactNode;
   textLabel?: string;
+  explanationLabel?: string;
+  practiceLabel?: string;
 }) {
   const [tab, setTab] = useState("text");
   const [visited, setVisited] = useState(() => new Set(["text"]));
@@ -38,13 +42,13 @@ export function MaterialStudyTabs({
           value="explanation"
           className="text-xs sm:text-sm data-[state=active]:bg-sky-500/10 data-[state=active]:text-sky-800 dark:data-[state=active]:text-sky-300"
         >
-          Explicação didática
+          {explanationLabel}
         </TabsTrigger>
         <TabsTrigger
           value="practice"
           className="text-xs sm:text-sm data-[state=active]:bg-amber-500/10 data-[state=active]:text-amber-900 dark:data-[state=active]:text-amber-200"
         >
-          Praticar · até 20
+          {practiceLabel}
         </TabsTrigger>
       </TabsList>
       {visited.has("text") && (

@@ -247,7 +247,7 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 <h3 className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   De onde vêm os pontos
                 </h3>
-                <dl className="grid grid-cols-5 divide-x rounded-xl border text-center">
+                <dl className="grid grid-cols-2 divide-x rounded-xl border text-center sm:grid-cols-5">
                   {(
                     [
                       ["Questões", p.question_points],

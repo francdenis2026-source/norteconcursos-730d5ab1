@@ -1,0 +1,2029 @@
+{
+  "checkedAt": "2026-10-25T02:26:52.649Z",
+  "project": "gkwphadbveiyjcwiiizw",
+  "activeMaterials": 139,
+  "tracks": 12,
+  "lessons": 98,
+  "exactBodyDuplicates": [],
+  "exactTitleDuplicates": [],
+  "disciplines": [
+    {
+      "name": "Artes e Educação Física",
+      "materials": 1
+    },
+    {
+      "name": "Biologia",
+      "materials": 1
+    },
+    {
+      "name": "Contabilidade Geral",
+      "materials": 18
+    },
+    {
+      "name": "Direito Administrativo",
+      "materials": 14
+    },
+    {
+      "name": "Direito Constitucional",
+      "materials": 17
+    },
+    {
+      "name": "Direito Digital",
+      "materials": 1
+    },
+    {
+      "name": "Direito Penal",
+      "materials": 5
+    },
+    {
+      "name": "Direito Processual Civil",
+      "materials": 1
+    },
+    {
+      "name": "Direito Processual Penal",
+      "materials": 1
+    },
+    {
+      "name": "Direitos Humanos",
+      "materials": 2
+    },
+    {
+      "name": "Filosofia",
+      "materials": 1
+    },
+    {
+      "name": "Física",
+      "materials": 1
+    },
+    {
+      "name": "Geografia",
+      "materials": 1
+    },
+    {
+      "name": "História",
+      "materials": 1
+    },
+    {
+      "name": "Informática",
+      "materials": 15
+    },
+    {
+      "name": "Legislação Especial",
+      "materials": 38
+    },
+    {
+      "name": "Legislação Penal Especial",
+      "materials": 1
+    },
+    {
+      "name": "Língua Espanhola",
+      "materials": 1
+    },
+    {
+      "name": "Língua Inglesa",
+      "materials": 1
+    },
+    {
+      "name": "Língua Portuguesa",
+      "materials": 5
+    },
+    {
+      "name": "Literatura",
+      "materials": 1
+    },
+    {
+      "name": "Matemática",
+      "materials": 5
+    },
+    {
+      "name": "Proteção de Dados Pessoais (LGPD)",
+      "materials": 1
+    },
+    {
+      "name": "Química",
+      "materials": 1
+    },
+    {
+      "name": "Raciocínio Lógico",
+      "materials": 3
+    },
+    {
+      "name": "Redação",
+      "materials": 1
+    },
+    {
+      "name": "Sociologia",
+      "materials": 1
+    }
+  ],
+  "materials": [
+    {
+      "slug": "enem-artes-fundamentos",
+      "title": "ENEM — Arte, corpo, identidade e tecnologias",
+      "discipline": "Artes e Educação Física",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "60f092e594d7ac933d965b4bbc4d590b951d835a48fbbad15b96aa5f5cdbd7f7"
+    },
+    {
+      "slug": "enem-biologia-fundamentos",
+      "title": "ENEM — Biologia: energia, cadeias alimentares e hereditariedade",
+      "discipline": "Biologia",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "76676ef768b7325c219e7ca6194b22408c8c74e56e9b07d2cf04df5d7a9051c4"
+    },
+    {
+      "slug": "contabilidade-conceito-objeto-usuarios",
+      "title": "Contabilidade: conceito, objeto e usuários",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "637d7c61fb1bf0a884518317370a2f04a7ffbd04cc6b5ffba09e70b6509a7855"
+    },
+    {
+      "slug": "contabilidade-patrimonio-equacao-fundamental",
+      "title": "Patrimônio, balanço e equação fundamental",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "4ad86ebcd0dee5cd36329938481591df326b8d57585199e7229a2951dd036251"
+    },
+    {
+      "slug": "contabilidade-atos-fatos-contabeis",
+      "title": "Atos e fatos contábeis: permutativos, modificativos e mistos",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "fb43d690398bfd570509432aea24dc5dc721559da36a33fbf92b35b73dee380e"
+    },
+    {
+      "slug": "contabilidade-contas-plano-de-contas",
+      "title": "Contas, plano de contas e títulos de crédito",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "402c11ff6db1b5f898748af9c8702d926f9d290629802ade5d354d5fc670b574"
+    },
+    {
+      "slug": "contabilidade-escrituracao-partidas-dobradas-livros",
+      "title": "Escrituração, partidas dobradas e livros contábeis",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "076e9bc0f2853ecf1124d781c1c841ef4bac7a4694df5dc504b9a3486f049bbf"
+    },
+    {
+      "slug": "contabilidade-regimes-caixa-competencia",
+      "title": "Regimes de caixa e de competência",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "48568ecbfa99bc72a96d755090933e1961a417c5cd70da6af1d1a99a110c8319"
+    },
+    {
+      "slug": "contabilidade-lancamentos-operacoes-diversas",
+      "title": "Lançamentos de operações diversas",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "10f63db4251147d9c91470a807e07ab93f766c32f04f906b6bafd46dcaa064e8"
+    },
+    {
+      "slug": "contabilidade-provisoes-passivo-contingente-epcld",
+      "title": "Provisões, passivos contingentes e EPCLD",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "131c70dde62f53719f7b1ac99245f3704b70d65f97de231820196ca3922bd1dc"
+    },
+    {
+      "slug": "contabilidade-balancete-verificacao",
+      "title": "Balancete de verificação",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "8da43c2792e46df10a481dde1921d5d4f275646f3dd31ea594d2dd4d29fadefe"
+    },
+    {
+      "slug": "contabilidade-balanco-patrimonial-estrutura",
+      "title": "Balanço patrimonial: estrutura e classificação das contas",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "86f96bee506b1ec9dd00c48895c1f599fb2bb22d343bc21147a1749d8b7bb3b5"
+    },
+    {
+      "slug": "contabilidade-mercadorias-cmv-resultado-bruto",
+      "title": "Operações com mercadorias, CMV e resultado bruto",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "7645ea7b401132258f057b3d18caa82a2aa2c18483ebdf93994cfd9e74eaf8fc"
+    },
+    {
+      "slug": "contabilidade-estoques-cpc-16",
+      "title": "Estoques (CPC 16): o que compõe o custo",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "d21c1ecba4d895746a8d9a27464875f13b5033c39efdf1e88cbd8f91817cacf1"
+    },
+    {
+      "slug": "contabilidade-depreciacao-amortizacao-exaustao",
+      "title": "Depreciação, amortização e exaustão",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0f1d76c207e75a16f71b77c35bb2095cf33a022f8713883bd1da40385825d30e"
+    },
+    {
+      "slug": "contabilidade-impairment-cpc-01-baixa-ativos",
+      "title": "Redução ao valor recuperável (CPC 01) e baixa de ativos",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "5b69f87c59df56ae5286a96b3c9668a6f35cbc3380c1821d407bd4bc85534b7e"
+    },
+    {
+      "slug": "contabilidade-patrimonio-liquido-capital-reservas",
+      "title": "Patrimônio líquido: capital, reservas e ações em tesouraria",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "8bacace496454219d5df52bceb320fd8bb4626632593897fe747733fd16040d4"
+    },
+    {
+      "slug": "contabilidade-demonstracoes-contabeis-lei-6404",
+      "title": "Demonstrações contábeis e a Lei nº 6.404/1976",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "a7b6f6f4476cd5fa091ffd912fe0f53f25bb45172a97e1f523173a74907ef6e2"
+    },
+    {
+      "slug": "contabilidade-dre-dfc-dva-lei-6404",
+      "title": "DRE, fluxos de caixa e valor adicionado (Lei nº 6.404/1976)",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "fc27c21b254ff9ee7a927f3bd8cb12b230364bbc25c1bcdf998100348312453a"
+    },
+    {
+      "slug": "contabilidade-notas-explicativas-grande-porte-avp",
+      "title": "Notas explicativas, sociedades de grande porte e ajuste a valor presente",
+      "discipline": "Contabilidade Geral",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "f728da89b33626f7818c859d0d211d956eff6524b385034ab40cae163763847a"
+    },
+    {
+      "slug": "administrativo-fundamentos-fontes-regime-juridico",
+      "title": "Fundamentos: fontes, regime jurídico e interesse público",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "35e9d6ef584c89f2a4934ea0382c3b347018a2e5f23d061ca95041cf9a37175f"
+    },
+    {
+      "slug": "administrativo-organizacao-direta-indireta-orgaos",
+      "title": "Organização administrativa: direta, indireta e órgãos públicos",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "7d97267a07577a2d46e96f34a80849cdaf6ca1d004a99c6b1d5b6582980767fb"
+    },
+    {
+      "slug": "administrativo-poderes-vinculado-discricionario-hierarquico",
+      "title": "Poderes vinculado, discricionário, hierárquico, disciplinar e regulamentar",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "499e45a075179e2448bc8c72a1b43c613fd36d00f3869dfc36d1fe6b75111973"
+    },
+    {
+      "slug": "administrativo-poder-de-policia-ciclo-prescricao",
+      "title": "Poder de polícia: atributos, ciclo e prescrição",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "bed7a8b573140e628d380f1c61fad54e9fe3912fec10a9f692b6d8a7d5547fbd"
+    },
+    {
+      "slug": "administrativo-improbidade-lei-8429-reforma-14230",
+      "title": "Improbidade administrativa após a Lei nº 14.230/2021",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "007538266a488f4d43061328171fb41d492dd164cf93ea3564b3ee9515f5e539"
+    },
+    {
+      "slug": "administrativo-responsabilidade-civil-do-estado",
+      "title": "Responsabilidade civil do Estado",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "4233a69694a433742660984ca543a6a897b4ce68d1d38daf0cff759bac025837"
+    },
+    {
+      "slug": "administrativo-licitacoes-lei-14133-modalidades",
+      "title": "Licitações: princípios, modalidades e inexigibilidade na Lei nº 14.133/2021",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "59fcf5bf2383d298d8bbecb21e46e5821bedd47c5355723daff6d7d792091153"
+    },
+    {
+      "slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao",
+      "title": "Lei nº 8.112/1990: posse, exercício, vacância, remoção e redistribuição",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0110d5affcf118159fe449468e94ce096530203b4b0d1816d0dc2c0a6a81ccf9"
+    },
+    {
+      "slug": "servidores-lei-8112-pad-sindicancia-ritos-prescricao",
+      "title": "Processo administrativo disciplinar: sindicância, ritos, prazos e prescrição",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "69616360fa5a2f0975ea14266f320d401b63086fcdbcaa10ca60c4497cc72518"
+    },
+    {
+      "slug": "administrativo-atos-administrativos-requisitos-atributos",
+      "title": "Atos administrativos: requisitos, atributos, espécies e extinção",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0bdecb5aefcc86a84a4efbb01c3334bc350cf999badd9585dd8dbad89c0378bc"
+    },
+    {
+      "slug": "administrativo-processo-administrativo-lei-9784",
+      "title": "Processo administrativo federal (Lei nº 9.784/1999)",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "fef845089e66b83e23caaba72582c4178ba5466ab6199dbb1b1713d25c707b38"
+    },
+    {
+      "slug": "administrativo-controle-da-administracao-publica",
+      "title": "Controle da Administração Pública",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e1492bdbc8f1b90b3cf660868f7b65e10123a068206e23540c08f79a65afce67"
+    },
+    {
+      "slug": "administrativo-contratos-administrativos-lei-14133",
+      "title": "Contratos administrativos: prerrogativas, alteração, extinção e sanções (Lei nº 14.133/2021)",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "82694425d1488e17336548d354ccd32d4ce242297694597e1094ce1930d57c56"
+    },
+    {
+      "slug": "administrativo-bens-publicos-classificacao-uso",
+      "title": "Bens públicos: classificação, regime e uso privativo",
+      "discipline": "Direito Administrativo",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "a9678ebb8c65b031b5737ff8a0324ed1b1890b9e50861d97908ab099a056c756"
+    },
+    {
+      "slug": "constitucional-principios-fundamentais-federacao-republica",
+      "title": "Princípios fundamentais: Federação, República e autonomia dos entes",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "ae3fae8ef2d838cd4c1d48e5a1fd477f072d43e5ce3e292a2ca62653a5bac355"
+    },
+    {
+      "slug": "constitucional-nacionalidade-medidas-retirada",
+      "title": "Nacionalidade: brasileiros natos e naturalizados",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": "migracao",
+      "content_status": "active",
+      "bodyHash": "fbf80bb851a260a201017e917869d5d780a90d691a057d0395a094255a4b3b76"
+    },
+    {
+      "slug": "constitucional-direitos-fundamentais-teoria-geral",
+      "title": "Direitos fundamentais: teoria, eficácia e tratados",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "dcdf38ceba01e8b2c9aa6ce87bdecf218c4c42b143c00c14ffb8dbfa195ec52b"
+    },
+    {
+      "slug": "constitucional-vida-igualdade",
+      "title": "Vida e igualdade: leitura constitucional aplicada",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0a259b10a6c654e7cca53399200f6ad4bce4361c25d5a58b84f4089545fd863f"
+    },
+    {
+      "slug": "constitucional-liberdades-constitucionais",
+      "title": "Liberdades: expressão, crença, reunião, associação e profissão",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "f43080e864bd327fb8c5c1bb56d27a2c94b20b826d7f6954050ed3ec8fd91ef2"
+    },
+    {
+      "slug": "constitucional-propriedade-funcao-social",
+      "title": "Propriedade: função social, desapropriação e requisição",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "8d4d175626185e869e957ccd0884c4fde4274aa32f2c9ce7cfae85439dc127ba"
+    },
+    {
+      "slug": "constitucional-seguranca-juridica-processo",
+      "title": "Segurança jurídica: domicílio, defesa, processo e sanções",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "f6a969e1633ba3a21c4949da1c188141e8451d82e52311fbd9584b0c2d4d5d30"
+    },
+    {
+      "slug": "constitucional-remedios-constitucionais",
+      "title": "Remédios constitucionais: escolha, requisitos e limites",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "7fbef2b09f8e131f36e2719d8a35243c2c153a96626d6af88fe501c72bc1c1ac"
+    },
+    {
+      "slug": "constitucional-direitos-sociais-trabalho",
+      "title": "Direitos sociais e trabalhistas: Constituição atual",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "2cf8ecafd2aa9be0a73df18de81e3a7fd1470192cc9474c741dc39e134d2575d"
+    },
+    {
+      "slug": "constitucional-organizacao-estado-competencias",
+      "title": "Organização do Estado: entes, bens e competências",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "905848ea8f0d16e7d930e9ade9b8f3bf7e168d1ddeef2d5cbdd183a8ce6a7541"
+    },
+    {
+      "slug": "constitucional-administracao-publica-constituicao",
+      "title": "Administração pública na Constituição: princípios, ingresso e vínculos",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "8dededddf2eda19ff4f0c4cdf9ddbabb9b006c49fa377061102921f25c1c31d0"
+    },
+    {
+      "slug": "constitucional-judiciario-garantias-carreira",
+      "title": "Judiciário: estrutura, garantias e carreira",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "3a3b3e96243d1fa998805523c34b6f22a447ef77db12fdc292f605970a0fc9cb"
+    },
+    {
+      "slug": "constitucional-direitos-politicos-elegibilidade",
+      "title": "Direitos políticos, elegibilidade e partidos políticos",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0c6183fcd19e2b5b6361cd454a172be6f45181b67c7d3741621a017e7d22642f"
+    },
+    {
+      "slug": "constitucional-tribunais-competencias-cnj",
+      "title": "Tribunais e CNJ: composição, competências e controle",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "5e10a4c972584558d2f1511d9dbea63e99ba4921556986f3f6078f4801f306bd"
+    },
+    {
+      "slug": "constitucional-funcoes-essenciais-justica",
+      "title": "Funções essenciais à Justiça: MP, advocacias e Defensoria",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "65c13aa5557a45f48ddffcea89b30873c8f44ce8195a42903bb4a56eb2cef007"
+    },
+    {
+      "slug": "constitucional-privacidade-dados",
+      "title": "Privacidade e dados pessoais: proteção constitucional",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "fad33f2afb1452c91e9ea74e1c679312b1c2bd49df4948cf69204fa28ec54ff1"
+    },
+    {
+      "slug": "constitucional-acumulacao-ec138-casos",
+      "title": "Constituição — acumulação de cargos: atualização da EC 138/2025",
+      "discipline": "Direito Constitucional",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "1f000163bbeaaab69e5ee00a843291698c5a3edf5525a2668a00bddc805e2e90"
+    },
+    {
+      "slug": "legislacao-marco-civil-internet-2026",
+      "title": "Marco Civil da Internet: registros, provedores e atualizações de 2026",
+      "discipline": "Direito Digital",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "c41634e949bcb681a2646f929ca37dfef59ae29a73330ca4c1d7eb5f55fd0b1e"
+    },
+    {
+      "slug": "penal-principios-direito-penal",
+      "title": "Código Penal — leitura atualizada — guia de estudo e aplicação",
+      "discipline": "Direito Penal",
+      "law_course_slug": "codigo-penal",
+      "content_status": "active",
+      "bodyHash": "2223d4e0435992a1c3d509def49adc91118f455058d4da2e996bd71476425ef1"
+    },
+    {
+      "slug": "penal-confissao-sumulas-545-630",
+      "title": "Confissão — Súmulas 545 e 630 revisadas",
+      "discipline": "Direito Penal",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "2da7182ee2066f2cd1a79a4c3e2ed9daf91a48c26c39189c1f3ca7e749330103"
+    },
+    {
+      "slug": "penal-lei-no-tempo",
+      "title": "Lei penal no tempo: organize a linha temporal",
+      "discipline": "Direito Penal",
+      "law_course_slug": "codigo-penal",
+      "content_status": "active",
+      "bodyHash": "25dbb7d0229427395ed1e9f1eb28c16602edd48eb228efbc656dd25056b3dac8"
+    },
+    {
+      "slug": "penal-lei-no-espaco",
+      "title": "Lei penal no espaço: lugar e aplicação são perguntas diferentes",
+      "discipline": "Direito Penal",
+      "law_course_slug": "codigo-penal",
+      "content_status": "active",
+      "bodyHash": "3d973ddc00c7d9d5494ad9507801a7a0eb2d716dcb758799318c066fed7fa1cc"
+    },
+    {
+      "slug": "penal-erros-tentativa-dolo-fixacao",
+      "title": "Código Penal — erros, tentativa e dolo: laboratório de casos",
+      "discipline": "Direito Penal",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "ea1970c87f21160aad3acdfb796b6de3458e3aeb5a4cb561d2324c7cbfaf46a3"
+    },
+    {
+      "slug": "processo-civil-tutela-provisoria",
+      "title": "Tutela provisória: urgência e evidência",
+      "discipline": "Direito Processual Civil",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "535342b9394de411bc6b4b4d4eeb0c5bd49a24649387e918754ff982adb4afff"
+    },
+    {
+      "slug": "processo-penal-cpp-provas-flagrante-revisao",
+      "title": "Código de Processo Penal — leitura atualizada — guia de estudo e aplicação",
+      "discipline": "Direito Processual Penal",
+      "law_course_slug": "codigo-processo-penal",
+      "content_status": "active",
+      "bodyHash": "5588d17870f1365e4bd24c1b5fdcef540e4abc768a55ab4b2450c3a31ff6f8b2"
+    },
+    {
+      "slug": "legislacao-menor-potencial-ofensivo-revisao",
+      "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo — guia de estudo e aplicação",
+      "discipline": "Direitos Humanos",
+      "law_course_slug": "menor-potencial-ofensivo",
+      "content_status": "active",
+      "bodyHash": "f441f63f8d971b50e0c2b6d89e55adbfb303fae22e61b33f996cf0a8391087ef"
+    },
+    {
+      "slug": "legislacao-uso-forca-revisao",
+      "title": "Decreto 12.341/2024 — Uso Diferenciado da Força — guia de estudo e aplicação",
+      "discipline": "Direitos Humanos",
+      "law_course_slug": "uso-forca",
+      "content_status": "active",
+      "bodyHash": "fb42c5b0cdfc845fb4dd7e3025408e3c9e7bc156ff31a73bd49595af4ed46432"
+    },
+    {
+      "slug": "enem-filosofia-fundamentos",
+      "title": "ENEM — Filosofia: argumentos, ética e política",
+      "discipline": "Filosofia",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "c1240414f2b3aea32f594f1ac559eb01d0ce9269a2a51c079b500132f8d19fe4"
+    },
+    {
+      "slug": "enem-fisica-fundamentos",
+      "title": "ENEM — Física: movimento, energia e circuitos",
+      "discipline": "Física",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "c7c9da19214cdcc571c7b2f7238a8cd5dc714e90fda4291ef3b8f8ee7466006d"
+    },
+    {
+      "slug": "enem-geografia-fundamentos",
+      "title": "ENEM — Geografia: escala, urbanização e questões ambientais",
+      "discipline": "Geografia",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "8056fb1d30ccd8ccc8d855cbb4908c2f07d243d57cbb84a63716e29d5415519d"
+    },
+    {
+      "slug": "enem-historia-fundamentos",
+      "title": "ENEM — História: fontes, cidadania e transformações sociais",
+      "discipline": "História",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e587f4b82490fd95f9ca35db8547b67f5ed44f0950f4c6bf113ed2c60b73e349"
+    },
+    {
+      "slug": "informatica-internet-intranet-vpn",
+      "title": "Internet, intranet, extranet e VPN: acesso não é alcance",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "5c5e138480f137e2e6340e74efa7e271b2fab5e8f9fcaf2b43b43fd388734f61"
+    },
+    {
+      "slug": "informatica-osi-tcp-ip-camadas",
+      "title": "OSI e TCP/IP: camadas, unidades e equipamentos",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "d6485fa9eab41ce094e6995febfe90b20856ee71df94c63a44e8b6d8de6a5f1c"
+    },
+    {
+      "slug": "informatica-protocolos-dns-dhcp-http",
+      "title": "DNS, DHCP, TCP, UDP e HTTPS: evite regras absolutas",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "19691dca07626d9c5d75d682edb1d2252388d50f09bd3aaa5651c3a8a2e7fbe6"
+    },
+    {
+      "slug": "informatica-email-smtp-pop-imap",
+      "title": "Correio eletrônico: SMTP, POP3, IMAP e destinatários",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "9d8c709a2047c62901138a49715ff82ceb46e59a334222bd83eb93cf759d4797"
+    },
+    {
+      "slug": "informatica-navegadores-privacidade-download",
+      "title": "Navegadores: cache, cookies, downloads e modo privado",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "6d9b9288ac00b3a90e13351f5e6acda6336abee264fce6b4cde7c3e2f354ad0d"
+    },
+    {
+      "slug": "informatica-seguranca-cid-controles",
+      "title": "Segurança da informação: confidencialidade, integridade e disponibilidade",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "ad71a5192bc050e7df654118c62ce9eccedda735f82012e3b0cdbfe55192273d"
+    },
+    {
+      "slug": "informatica-malware-antivirus-firewall",
+      "title": "Malwares, antimalware e firewall: ataque e defesa",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "489d0b4088e69b9bf49bec77ac424bb30206bb3a81dc086147227a93ad7405dd"
+    },
+    {
+      "slug": "informatica-backup-incremental-diferencial",
+      "title": "Backup: completo, incremental, diferencial e restauração",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e1681345a0cd96b8edeeeeeb3cdb68e2e1422206916e5d8359ebd7aa2dae30b4"
+    },
+    {
+      "slug": "informatica-linux-comandos-diretorios",
+      "title": "Linux: caminhos, arquivos e comandos essenciais",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "7f2117d30e0702375c24f4fa0850301031abcdafb466fba0bb6216d72e1ecb84"
+    },
+    {
+      "slug": "informatica-linux-permissoes-rwx",
+      "title": "Linux: permissões rwx e leitura do chmod",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0e58d001e3932b451a01185aea50f3ed2b8826cadf32c026f1a96e358ab2d4b8"
+    },
+    {
+      "slug": "informatica-windows-arquivos-suporte",
+      "title": "Windows: arquivos, atalhos e atenção ao fim de suporte",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "f4e169294eecbde8520bd690f4f718c79d4194e9d259d8c290f4b76d8e782d07"
+    },
+    {
+      "slug": "informatica-hardware-memorias-software",
+      "title": "Hardware, software e memórias: o que cada componente faz",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "4b142d788709f282c7b164e469e9c2d916d650246016c1fd6573f809643761cd"
+    },
+    {
+      "slug": "informatica-word-writer-formatos-estilos",
+      "title": "Word e Writer: formatos, estilos e organização de documentos",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0a7b9b2e322bd6253a14ed132dc1b9d55f3a5fb71bbf1785e65f29e4e1318be2"
+    },
+    {
+      "slug": "informatica-excel-referencias-funcoes",
+      "title": "Excel e Calc: referências, fórmulas e funções de prova",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "0844da3b2f7412f427b8a013ed4dcefb7c6a79abd53e9e7f2a85ca853e519f99"
+    },
+    {
+      "slug": "informatica-powerpoint-impress-apresentacoes",
+      "title": "PowerPoint e Impress: slides, transições e animações",
+      "discipline": "Informática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e6a29202d5ce9f0b6383f1d52dd8d2bbddde3bff3773d7365ce42e628822a1f9"
+    },
+    {
+      "slug": "legislacao-antifaccao-marco-legal",
+      "title": "Lei antifacção — leitura integral — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "antifaccao",
+      "content_status": "active",
+      "bodyHash": "046fd469d862cf3311a2ac75b5b52dab786918b9f1a591a1a008f1c2f436ae0c"
+    },
+    {
+      "slug": "legislacao-pensao-especial-feminicidio",
+      "title": "Pensão especial — regulamentação — leitura integral — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "pensao-regulamento",
+      "content_status": "active",
+      "bodyHash": "b5571912fb050a9378b8a9ad156199c2d8d99ce4d7b8667ec7c56d588ead97ca"
+    },
+    {
+      "slug": "legislacao-drogas-revisao",
+      "title": "Lei 11.343/2006 — Lei de Drogas — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "drogas",
+      "content_status": "active",
+      "bodyHash": "a10def2ce731c122b4cfd44ee8a3dcc75d430b10156735a9aa0164b6f3afb8ea"
+    },
+    {
+      "slug": "legislacao-tortura-revisao",
+      "title": "Lei 9.455/1997 — Crimes de Tortura — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "tortura",
+      "content_status": "active",
+      "bodyHash": "ecdda7d83e129727e7ee0f1e2d8abcdaa254cd219ce74c1311668dc13cf0a6c8"
+    },
+    {
+      "slug": "legislacao-abuso-revisao",
+      "title": "Lei 13.869/2019 — Abuso de Autoridade — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "abuso",
+      "content_status": "active",
+      "bodyHash": "7bde9037910d3aa29291280d5501d90335387ace3d43f44b5975a63292e90be5"
+    },
+    {
+      "slug": "legislacao-organizacoes-revisao",
+      "title": "Lei 12.850/2013 — Organizações Criminosas — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "organizacoes",
+      "content_status": "active",
+      "bodyHash": "b5981a2aa15f7901089447d3eed4ff79d8aab7fe726a893f3c28f9aa031a6e99"
+    },
+    {
+      "slug": "legislacao-hediondos-revisao",
+      "title": "Lei 8.072/1990 — Crimes Hediondos — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "hediondos",
+      "content_status": "active",
+      "bodyHash": "6f359ce56eefd74420684a88e9d71b9fc0c5ecb2684097dc0f49ba1174170877"
+    },
+    {
+      "slug": "legislacao-maria-penha-revisao",
+      "title": "Lei 11.340/2006 — Lei Maria da Penha — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "maria-penha",
+      "content_status": "active",
+      "bodyHash": "8c1b5cabd1d180919efc8d3dc0003208503ba11148a53708922d1dea8f46da90"
+    },
+    {
+      "slug": "legislacao-interceptacao-revisao",
+      "title": "Lei 9.296/1996 — Interceptação Telefônica — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "interceptacao",
+      "content_status": "active",
+      "bodyHash": "2edab8854714f7789a42b16d8a363dbd74b42bbd9d2c1b6bcf5f700accc759ed"
+    },
+    {
+      "slug": "legislacao-lavagem-revisao",
+      "title": "Lei 9.613/1998 — Lavagem de Dinheiro — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "lavagem",
+      "content_status": "active",
+      "bodyHash": "ccf75c182b6cdb57481910c7f59402e0ce17f84e140637f47f8289a41489d167"
+    },
+    {
+      "slug": "legislacao-eca-revisao",
+      "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "eca",
+      "content_status": "active",
+      "bodyHash": "52f255ae74472117b366aa2d19065d07b5a99f26194a7900e7da1f75892a13a7"
+    },
+    {
+      "slug": "legislacao-ambientais-revisao",
+      "title": "Lei 9.605/1998 — Crimes Ambientais — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "ambientais",
+      "content_status": "active",
+      "bodyHash": "2f78f24167770e9347a80d1ccc271670fd57f489f3acdd559ee1d73da97677c1"
+    },
+    {
+      "slug": "legislacao-temporaria-revisao",
+      "title": "Lei 7.960/1989 — Prisão Temporária — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "temporaria",
+      "content_status": "active",
+      "bodyHash": "586a1050d37493fc82b5bbee5e13c70954e7c642928834193fd649111af4a4df"
+    },
+    {
+      "slug": "legislacao-juizados-revisao",
+      "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "juizados",
+      "content_status": "active",
+      "bodyHash": "289f0bec3297e6cca2f3197e6a1cdbee80c0b748d7363d08f226b1d78ce4ddc7"
+    },
+    {
+      "slug": "legislacao-delegado-revisao",
+      "title": "Lei 12.830/2013 — Investigação conduzida pelo Delegado — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "delegado",
+      "content_status": "active",
+      "bodyHash": "5b5f5a41715afdd99a19d505096f0eaa4448d282aa49805b1c36c7fa29e4c4f7"
+    },
+    {
+      "slug": "legislacao-identificacao-criminal-revisao",
+      "title": "Lei 12.037/2009 — Identificação Criminal — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "identificacao-criminal",
+      "content_status": "active",
+      "bodyHash": "553a0850c21bc1760165a493660d69dbcff07dd6e879c750aeed40a54864a47b"
+    },
+    {
+      "slug": "legislacao-terrorismo-revisao",
+      "title": "Lei 13.260/2016 — Lei Antiterrorismo — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "terrorismo",
+      "content_status": "active",
+      "bodyHash": "97b3907969039551e1f5d9fc02e9bacb07cb7d6ccc32b882c4d3122ed8cac504"
+    },
+    {
+      "slug": "legislacao-trafico-pessoas-revisao",
+      "title": "Lei 13.344/2016 — Tráfico de Pessoas — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "trafico-pessoas",
+      "content_status": "active",
+      "bodyHash": "5a4dcbc877e32b92c8f2d7c51ba9cad92869a3e556cca447b150294c95c487f9"
+    },
+    {
+      "slug": "legislacao-testemunhas-revisao",
+      "title": "Lei 9.807/1999 — Proteção a Vítimas e Testemunhas — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "testemunhas",
+      "content_status": "active",
+      "bodyHash": "1d7199386ec48d4d7602cd7faf1b567ec24ca370dbb67dcf8d9c60ec803f3469"
+    },
+    {
+      "slug": "legislacao-racismo-revisao",
+      "title": "Lei 7.716/1989 — Crimes de Racismo e Preconceito — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "racismo",
+      "content_status": "active",
+      "bodyHash": "a98648276cd11b8abb3f8f46e4e6f970dca9d3199b82ff2569b7e7fb8c9998a3"
+    },
+    {
+      "slug": "legislacao-idosa-revisao",
+      "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "idosa",
+      "content_status": "active",
+      "bodyHash": "ca8aa0d44c726037ec78210343eee51b6e49f55a002fb33424a1ac369d685328"
+    },
+    {
+      "slug": "legislacao-pcd-revisao",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "pcd",
+      "content_status": "active",
+      "bodyHash": "0e0a4b8e043af95bbeacc8363018a32f4df94371602742324675b96eb06b1c18"
+    },
+    {
+      "slug": "legislacao-henry-borel-revisao",
+      "title": "Lei 14.344/2022 — Lei Henry Borel — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "henry-borel",
+      "content_status": "active",
+      "bodyHash": "faaff5fffb1368e9e6120496f9cec3f09764c37daf4f9369c7d49cbeced80740"
+    },
+    {
+      "slug": "legislacao-transito-revisao",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "transito",
+      "content_status": "active",
+      "bodyHash": "48172f9529c00537e68a4caa77f15c09596304951fac9f34d6d18273c2a0a9cf"
+    },
+    {
+      "slug": "legislacao-lep-revisao",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "lep",
+      "content_status": "active",
+      "bodyHash": "6fef3aaa6d5658c0195e61b0d29cc01d811c632312849b49aa987d8303bbeac0"
+    },
+    {
+      "slug": "legislacao-contravencoes-revisao",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "contravencoes",
+      "content_status": "active",
+      "bodyHash": "909b66606fa87cfc29a00cc384166a114ab7fe2d4cc45841106c100a0a6bb33f"
+    },
+    {
+      "slug": "legislacao-armas-revisao",
+      "title": "Lei 10.826/2003 — Estatuto do Desarmamento — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "armas",
+      "content_status": "active",
+      "bodyHash": "071d17c627a7a29ec9cc4fb92d4b2aa05d0de57ac6428d528950d1e2fed3ad0d"
+    },
+    {
+      "slug": "legislacao-seguranca-privada-revisao",
+      "title": "Lei 14.967/2024 — Estatuto da Segurança Privada — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "seguranca-privada",
+      "content_status": "active",
+      "bodyHash": "a8e7eb8d59366160afedb345fbe3c2a6fc693ee142bed2290878e9d4c770b1da"
+    },
+    {
+      "slug": "legislacao-quimicos-revisao",
+      "title": "Lei 10.357/2001 — Controle de Produtos Químicos — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "quimicos",
+      "content_status": "active",
+      "bodyHash": "ac04146e1922fc1c0aad5050d82d119affc55f9eed1d5acb5599c308dcbd48b0"
+    },
+    {
+      "slug": "legislacao-migracao-revisao",
+      "title": "Lei 13.445/2017 — Lei de Migração — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "migracao",
+      "content_status": "active",
+      "bodyHash": "8d00d44477d53268516bd36d6b52b71e88d61956ec823dcf58b0b679a85fd3e0"
+    },
+    {
+      "slug": "legislacao-pf-interestadual-revisao",
+      "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "pf-interestadual",
+      "content_status": "active",
+      "bodyHash": "e031800a919eac34dce65061b021b449e6d7c4da1964810f840c3036f71ecf7a"
+    },
+    {
+      "slug": "legislacao-icn-revisao",
+      "title": "Lei 13.444/2017 — Identificação Civil Nacional — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "icn",
+      "content_status": "active",
+      "bodyHash": "024d9145d20378adf45a691daf7f51ca58e13fb914b7eb16bfdeda061567dc70"
+    },
+    {
+      "slug": "legislacao-cpf-revisao",
+      "title": "Lei 14.534/2023 — CPF como identificador único — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "cpf",
+      "content_status": "active",
+      "bodyHash": "888d8592d9ba7794cee5baf12c2009bea9a934b6f99b94f0fe6a780187b5f5a0"
+    },
+    {
+      "slug": "legislacao-identidade-revisao",
+      "title": "Lei 7.116/1983 — Carteira de Identidade — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "identidade",
+      "content_status": "active",
+      "bodyHash": "948696cc99491496a06b8e6472cd667e89dc83c0a55f2b024c31adb6045b7b87"
+    },
+    {
+      "slug": "legislacao-cin-revisao",
+      "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "cin",
+      "content_status": "active",
+      "bodyHash": "3a1ab7a0db4f6e3a700091e99221330bd98e5dddf4d1282826232b36804102fc"
+    },
+    {
+      "slug": "legislacao-sic-revisao",
+      "title": "Decreto 11.797/2023 — Serviço de Identificação do Cidadão — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "sic",
+      "content_status": "active",
+      "bodyHash": "d70ca0e9aacd6383e3ff4a92789e06eadec1593f2877632040b980f3e8c35571"
+    },
+    {
+      "slug": "legislacao-budapeste-revisao",
+      "title": "Decreto 11.491/2023 — Convenção de Budapeste — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "budapeste",
+      "content_status": "active",
+      "bodyHash": "003a534daa7b6a3636e5bfe8aee7baae1d8ac6802b2323359c7ab90f9830ac1f"
+    },
+    {
+      "slug": "legislacao-ric-revisao",
+      "title": "Lei 9.454/1997 — Registro de Identidade Civil — guia de estudo e aplicação",
+      "discipline": "Legislação Especial",
+      "law_course_slug": "ric",
+      "content_status": "active",
+      "bodyHash": "1f9dde57007f33620c91f2d63c77daae114a2f381aa46a3423ac1c56d68c4134"
+    },
+    {
+      "slug": "legislacao-crimes-ciberneticos-atualizado-2026",
+      "title": "Crimes cibernéticos: invasão, fraude eletrônica e penas atualizadas",
+      "discipline": "Legislação Penal Especial",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "c4498f2b7a66ed34e4f21eaaf13d41b86dfa17e5accb0852c1dd0f916e6e0637"
+    },
+    {
+      "slug": "enem-espanhol-fundamentos",
+      "title": "ENEM — Espanhol: leitura, conectivos e falsos cognatos",
+      "discipline": "Língua Espanhola",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "448f66d55e88c52a8ba160871b08d9886e95ff9c6001f98ea7709f70a7b23239"
+    },
+    {
+      "slug": "enem-ingles-fundamentos",
+      "title": "ENEM — Inglês: finalidade, referências e vocabulário em contexto",
+      "discipline": "Língua Inglesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "945946f477497b684551333dc4abcc472559781cb17c64be948967fe43eec297"
+    },
+    {
+      "slug": "enem-portugues-fundamentos",
+      "title": "ENEM — Interpretação, inferência e intenção do texto",
+      "discipline": "Língua Portuguesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "7983517d26cba0f1a50f1030f20932b0955a5c52f5e909190436a9a7e413503e"
+    },
+    {
+      "slug": "portugues-coordenacao-subordinacao",
+      "title": "Período composto: coordenação, subordinação e funções",
+      "discipline": "Língua Portuguesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e9e61c8ead327ce817b9c4d650d8557deeb1a4dd370e0fefd02ba84e04365083"
+    },
+    {
+      "slug": "portugues-oracoes-adverbiais-conectores",
+      "title": "Conectores: causa, consequência, concessão e condição",
+      "discipline": "Língua Portuguesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "df5b6bc02f6fb2c78ba47badf7c5f03b12f5d461c3c0051967d4424f3b04016b"
+    },
+    {
+      "slug": "portugues-adjetivas-substantivas-pontuacao",
+      "title": "Orações adjetivas e substantivas: função e efeito das vírgulas",
+      "discipline": "Língua Portuguesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e1072eccc98c4483201ed10a31b5987013bf05621e24abc983a13f4571f7f85f"
+    },
+    {
+      "slug": "portugues-coesao-reescrita-sentido",
+      "title": "Coesão e reescrita: preserve referente, lógica e sentido",
+      "discipline": "Língua Portuguesa",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "c176874eda82bef62abf6ddc6374259eb338df346df5a23f1da23998f71d5093"
+    },
+    {
+      "slug": "enem-literatura-fundamentos",
+      "title": "ENEM — Recursos literários, vozes e contexto social",
+      "discipline": "Literatura",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "d4b48455bf588354563c656bd49e383322b3cbf71fd80741ec29de5c2d6d4954"
+    },
+    {
+      "slug": "enem-matematica-fundamentos",
+      "title": "ENEM — Matemática: porcentagens, estatística e modelos",
+      "discipline": "Matemática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "f66653a6ec6f939abf86fdd68f5aad17012c5fa03c60e0b8093baeaffef6f2c8"
+    },
+    {
+      "slug": "enem-geometria-aplicacoes",
+      "title": "ENEM — Geometria: área, volume e conversão de unidades",
+      "discipline": "Matemática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "09532cac1a372294c84e3e6e4bbb0c29c7ff020d1f031edb77220000447987d8"
+    },
+    {
+      "slug": "enem-probabilidade-aplicacoes",
+      "title": "ENEM — Probabilidade: universo, condições e combinações",
+      "discipline": "Matemática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "b5682fc2f4c2a90120b37662c78ea71a2eced090b58790d625679a47a2d219d2"
+    },
+    {
+      "slug": "enem-funcoes-aplicacoes",
+      "title": "ENEM — Funções: modelos, gráficos e porcentagens",
+      "discipline": "Matemática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "dd50c7c0463c500b2cc5379fb0537e4b7c188b7dd1b618d229877df430c79993"
+    },
+    {
+      "slug": "enem-estatistica-aplicacoes",
+      "title": "ENEM — Estatística: médias, mediana, dispersão e gráficos",
+      "discipline": "Matemática",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "198612488dbd9fb690ccfb1c71839a013a1beae335e6f39ec9db23b5e32e1644"
+    },
+    {
+      "slug": "legislacao-lgpd-atualizada-2026",
+      "title": "LGPD: tratamento de dados, segurança e atualizações da ANPD",
+      "discipline": "Proteção de Dados Pessoais (LGPD)",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "5d90e494bce48d2b77ab2eb6d33ac5fd5b41965c1f6311abc2842150b05ced51"
+    },
+    {
+      "slug": "enem-quimica-fundamentos",
+      "title": "ENEM — Química: estequiometria, soluções e química ambiental",
+      "discipline": "Química",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "86a471b2426af7d3391f34189fbf6cb6d7aa0fda523c574a22a1c2178f24ef7c"
+    },
+    {
+      "slug": "rlm-proposicoes-negacao-condicionais",
+      "title": "Proposições, condicionais e negações: pense pela tabela-verdade",
+      "discipline": "Raciocínio Lógico",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "30a4029fa7b725cc2fc22718f5146789ab346a8856f0eec15aa882f880bb6aff"
+    },
+    {
+      "slug": "rlm-conjuntos-quantificadores",
+      "title": "Conjuntos, quantificadores e inclusão-exclusão",
+      "discipline": "Raciocínio Lógico",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "be48d5af687a185fbe194a8d38e546fbe845cc301b8ce57574a68f58531c10a6"
+    },
+    {
+      "slug": "rlm-contagem-probabilidade-basica",
+      "title": "Contagem e probabilidade: ordem, repetição e espaço amostral",
+      "discipline": "Raciocínio Lógico",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "384b2a29f4f8be1a4f7aa766ce21295ea2eb943866ca0dea2b73670f315d07ee"
+    },
+    {
+      "slug": "enem-redacao-aplicacoes",
+      "title": "ENEM — Redação: da tese à proposta de intervenção",
+      "discipline": "Redação",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "036ed6e481acc91e6d79836b0ea8958d6b460131ffd7efceb93e42cfe4c84cca"
+    },
+    {
+      "slug": "enem-sociologia-fundamentos",
+      "title": "ENEM — Sociologia: cultura, trabalho e desigualdade",
+      "discipline": "Sociologia",
+      "law_course_slug": null,
+      "content_status": "active",
+      "bodyHash": "e98ebe6de332bf22f47bdd80ac3b063a6b7111cf9ccc6a5f27db6cc3d9065078"
+    }
+  ],
+  "routes": [
+    {
+      "track": "contabilidade",
+      "title": "Contabilidade Geral",
+      "lessons": [
+        {
+          "id": "conceito-objetivo",
+          "title": "O que é contabilidade e para que serve",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-conceito-objeto-usuarios"
+          ]
+        },
+        {
+          "id": "patrimonio-componentes",
+          "title": "Patrimônio: bens, direitos e obrigações",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-patrimonio-equacao-fundamental"
+          ]
+        },
+        {
+          "id": "equacao-fundamental",
+          "title": "Equação fundamental e situação líquida",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-patrimonio-equacao-fundamental"
+          ]
+        },
+        {
+          "id": "atos-fatos",
+          "title": "Atos e fatos administrativos",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-atos-fatos-contabeis"
+          ]
+        },
+        {
+          "id": "tipos-fatos",
+          "title": "Fatos permutativos, modificativos e mistos",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-atos-fatos-contabeis"
+          ]
+        },
+        {
+          "id": "contas-debito-credito",
+          "title": "Contas: débito, crédito e saldo",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-contas-plano-de-contas"
+          ]
+        },
+        {
+          "id": "contas-natureza",
+          "title": "Contas patrimoniais, de resultado e retificadoras",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-contas-plano-de-contas"
+          ]
+        },
+        {
+          "id": "plano-contas",
+          "title": "Plano de contas",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-contas-plano-de-contas"
+          ]
+        },
+        {
+          "id": "escrituracao-lancamento",
+          "title": "Escrituração e lançamentos contábeis",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-escrituracao-partidas-dobradas-livros"
+          ]
+        },
+        {
+          "id": "livros-metodos",
+          "title": "Livros diário e razão e métodos de escrituração",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-escrituracao-partidas-dobradas-livros"
+          ]
+        },
+        {
+          "id": "competencia-caixa",
+          "title": "Regime de competência e regime de caixa",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-regimes-caixa-competencia"
+          ]
+        },
+        {
+          "id": "compras-vendas",
+          "title": "Compras e vendas de mercadorias",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-mercadorias-cmv-resultado-bruto"
+          ]
+        },
+        {
+          "id": "juros-descontos",
+          "title": "Juros e descontos",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-lancamentos-operacoes-diversas"
+          ]
+        },
+        {
+          "id": "tributos-folha",
+          "title": "Tributos, folha de pagamento e aluguéis",
+          "mode": "complementary",
+          "materials": [
+            "contabilidade-lancamentos-operacoes-diversas"
+          ]
+        },
+        {
+          "id": "variacao-cambial",
+          "title": "Variação monetária e cambial",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "provisoes",
+          "title": "Provisões",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-provisoes-passivo-contingente-epcld"
+          ]
+        },
+        {
+          "id": "depreciacao-baixa",
+          "title": "Depreciação e baixa de bens",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-depreciacao-amortizacao-exaustao",
+            "contabilidade-impairment-cpc-01-baixa-ativos"
+          ]
+        },
+        {
+          "id": "balancete",
+          "title": "Balancete de verificação",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-balancete-verificacao"
+          ]
+        },
+        {
+          "id": "balanco-patrimonial",
+          "title": "Balanço patrimonial",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-balanco-patrimonial-estrutura"
+          ]
+        },
+        {
+          "id": "dre",
+          "title": "Demonstração do resultado do exercício",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-dre-dfc-dva-lei-6404"
+          ]
+        },
+        {
+          "id": "lei-6404",
+          "title": "Lei 6.404/1976 e as demonstrações financeiras",
+          "mode": "integrated",
+          "materials": [
+            "contabilidade-demonstracoes-contabeis-lei-6404"
+          ]
+        },
+        {
+          "id": "cpc-nbc",
+          "title": "CPC e normas brasileiras de contabilidade",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "nbc-tsp-ec",
+          "title": "NBC TSP Estrutura Conceitual (setor público)",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "informatica",
+      "title": "Informática",
+      "lessons": [
+        {
+          "id": "internet-intranet",
+          "title": "Internet e intranet",
+          "mode": "integrated",
+          "materials": [
+            "informatica-internet-intranet-vpn"
+          ]
+        },
+        {
+          "id": "navegadores-email",
+          "title": "Navegadores, correio eletrônico, busca e redes sociais",
+          "mode": "complementary",
+          "materials": [
+            "informatica-navegadores-privacidade-download",
+            "informatica-email-smtp-pop-imap"
+          ]
+        },
+        {
+          "id": "sistemas-operacionais",
+          "title": "Sistemas operacionais: Windows e Linux",
+          "mode": "complementary",
+          "materials": [
+            "informatica-windows-arquivos-suporte",
+            "informatica-linux-comandos-diretorios",
+            "informatica-linux-permissoes-rwx"
+          ]
+        },
+        {
+          "id": "acesso-remoto-colaboracao",
+          "title": "Acesso remoto, transferência de arquivos e colaboração online",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "office-libreoffice",
+          "title": "Editores de texto, planilhas e apresentações",
+          "mode": "integrated",
+          "materials": [
+            "informatica-word-writer-formatos-estilos",
+            "informatica-excel-referencias-funcoes",
+            "informatica-powerpoint-impress-apresentacoes"
+          ]
+        },
+        {
+          "id": "redes-tipos",
+          "title": "Tipos de rede e topologias",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "osi-tcpip",
+          "title": "Modelos OSI e TCP/IP",
+          "mode": "integrated",
+          "materials": [
+            "informatica-osi-tcp-ip-camadas"
+          ]
+        },
+        {
+          "id": "protocolos",
+          "title": "Principais protocolos: Ethernet, IP, TCP, UDP, DNS, DHCP e SNMP",
+          "mode": "complementary",
+          "materials": [
+            "informatica-protocolos-dns-dhcp-http"
+          ]
+        },
+        {
+          "id": "ip-enderecos",
+          "title": "Endereços IPv4 e IPv6",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "redes-sem-fio",
+          "title": "Redes sem fio: padrões 802.11, WPA e boas práticas",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "malwares",
+          "title": "Malwares: vírus, worms, trojans, ransomware e outros",
+          "mode": "integrated",
+          "materials": [
+            "informatica-malware-antivirus-firewall"
+          ]
+        },
+        {
+          "id": "defesas",
+          "title": "Antivírus, firewall, anti-spyware e autenticação multifator",
+          "mode": "complementary",
+          "materials": [
+            "informatica-malware-antivirus-firewall",
+            "informatica-seguranca-cid-controles"
+          ]
+        },
+        {
+          "id": "criptografia",
+          "title": "Criptografia, hash, assinatura digital, VPN e SSL/TLS",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "controle-acesso",
+          "title": "Controle de acesso e autenticação",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "nuvem",
+          "title": "Computação em nuvem",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "teoria-sistemas",
+          "title": "Teoria geral de sistemas, camadas, frontend e backend",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "sistemas-informacao",
+          "title": "Sistemas de informação e seu ciclo",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "teoria-informacao",
+          "title": "Teoria da informação: dado, informação e conhecimento",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "banco-dados",
+          "title": "Bancos de dados relacionais, chaves e SQL",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "modelagem-er",
+          "title": "Modelagem entidade-relacionamento",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dados-armazenamento",
+          "title": "Data warehouse, data lake e metadados",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "mineracao-bi-bigdata",
+          "title": "Mineração de dados, Business Intelligence e big data",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "ia-ml",
+          "title": "Aprendizado de máquina, inteligência artificial e testes biométricos",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "programacao-api-etl",
+          "title": "Programação (Python e R), API e ETL",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "portugues",
+      "title": "Língua Portuguesa",
+      "lessons": [
+        {
+          "id": "pt-interpretacao",
+          "title": "Interpretação e compreensão de texto",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-tipologia",
+          "title": "Tipos e gêneros textuais",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-acentuacao",
+          "title": "Ortografia e acentuação gráfica",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-classes",
+          "title": "Classes de palavras",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-concordancia",
+          "title": "Concordância verbal e nominal",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-regencia-crase",
+          "title": "Regência e crase",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-pontuacao",
+          "title": "Pontuação",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "pt-coesao",
+          "title": "Coesão, coerência e reescrita",
+          "mode": "integrated",
+          "materials": [
+            "portugues-coesao-reescrita-sentido"
+          ]
+        },
+        {
+          "id": "pt-redacao-oficial",
+          "title": "Redação oficial",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "raciocinio-logico",
+      "title": "Raciocínio Lógico",
+      "lessons": [
+        {
+          "id": "rl-proposicoes",
+          "title": "Proposições e conectivos lógicos",
+          "mode": "integrated",
+          "materials": [
+            "rlm-proposicoes-negacao-condicionais"
+          ]
+        },
+        {
+          "id": "rl-equivalencias",
+          "title": "Tabela-verdade, equivalências e negações",
+          "mode": "integrated",
+          "materials": [
+            "rlm-proposicoes-negacao-condicionais"
+          ]
+        },
+        {
+          "id": "rl-conjuntos",
+          "title": "Conjuntos e diagramas lógicos",
+          "mode": "integrated",
+          "materials": [
+            "rlm-conjuntos-quantificadores"
+          ]
+        },
+        {
+          "id": "rl-proporcao",
+          "title": "Razão, proporção e regra de três",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "rl-porcentagem",
+          "title": "Porcentagem",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "rl-combinatoria",
+          "title": "Análise combinatória",
+          "mode": "integrated",
+          "materials": [
+            "rlm-contagem-probabilidade-basica"
+          ]
+        },
+        {
+          "id": "rl-probabilidade",
+          "title": "Probabilidade",
+          "mode": "integrated",
+          "materials": [
+            "rlm-contagem-probabilidade-basica"
+          ]
+        }
+      ]
+    },
+    {
+      "track": "constitucional",
+      "title": "Direito Constitucional",
+      "lessons": [
+        {
+          "id": "cf-principios",
+          "title": "Princípios fundamentais (arts. 1º a 4º)",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-principios-fundamentais-federacao-republica"
+          ]
+        },
+        {
+          "id": "cf-direitos-individuais",
+          "title": "Direitos e garantias individuais (art. 5º)",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-direitos-fundamentais-teoria-geral",
+            "constitucional-vida-igualdade",
+            "constitucional-liberdades-constitucionais",
+            "constitucional-propriedade-funcao-social",
+            "constitucional-seguranca-juridica-processo"
+          ]
+        },
+        {
+          "id": "cf-remedios",
+          "title": "Remédios constitucionais",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-remedios-constitucionais"
+          ]
+        },
+        {
+          "id": "cf-sociais-nacionalidade",
+          "title": "Direitos sociais e nacionalidade",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-direitos-sociais-trabalho",
+            "constitucional-nacionalidade-medidas-retirada"
+          ]
+        },
+        {
+          "id": "cf-politicos",
+          "title": "Direitos políticos",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-direitos-politicos-elegibilidade"
+          ]
+        },
+        {
+          "id": "cf-organizacao",
+          "title": "Organização do Estado",
+          "mode": "integrated",
+          "materials": [
+            "constitucional-organizacao-estado-competencias"
+          ]
+        },
+        {
+          "id": "cf-executivo-legislativo",
+          "title": "Poderes Executivo e Legislativo",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "cf-judiciario-controle",
+          "title": "Poder Judiciário e controle de constitucionalidade",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "cf-seguranca-publica",
+          "title": "Segurança pública (art. 144)",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "administrativo",
+      "title": "Direito Administrativo",
+      "lessons": [
+        {
+          "id": "adm-principios",
+          "title": "Princípios da Administração Pública",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-fundamentos-fontes-regime-juridico"
+          ]
+        },
+        {
+          "id": "adm-poderes",
+          "title": "Poderes administrativos",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-poderes-vinculado-discricionario-hierarquico",
+            "administrativo-poder-de-policia-ciclo-prescricao"
+          ]
+        },
+        {
+          "id": "adm-atos",
+          "title": "Atos administrativos: elementos e atributos",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-atos-administrativos-requisitos-atributos"
+          ]
+        },
+        {
+          "id": "adm-organizacao",
+          "title": "Organização administrativa",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-organizacao-direta-indireta-orgaos"
+          ]
+        },
+        {
+          "id": "adm-servidores",
+          "title": "Agentes públicos e Lei 8.112/1990",
+          "mode": "integrated",
+          "materials": [
+            "servidores-lei-8112-posse-exercicio-vacancia-remocao",
+            "servidores-lei-8112-pad-sindicancia-ritos-prescricao"
+          ]
+        },
+        {
+          "id": "adm-licitacoes",
+          "title": "Licitações e contratos (Lei 14.133/2021)",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-licitacoes-lei-14133-modalidades",
+            "administrativo-contratos-administrativos-lei-14133"
+          ]
+        },
+        {
+          "id": "adm-responsabilidade",
+          "title": "Responsabilidade civil do Estado",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-responsabilidade-civil-do-estado"
+          ]
+        },
+        {
+          "id": "adm-processo",
+          "title": "Controle da Administração e processo administrativo (Lei 9.784/1999)",
+          "mode": "integrated",
+          "materials": [
+            "administrativo-controle-da-administracao-publica",
+            "administrativo-processo-administrativo-lei-9784"
+          ]
+        }
+      ]
+    },
+    {
+      "track": "direitos-humanos",
+      "title": "Direitos Humanos",
+      "lessons": [
+        {
+          "id": "dh-teoria",
+          "title": "Teoria geral dos direitos humanos",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dh-tratados-status",
+          "title": "Tratados internacionais de direitos humanos no Brasil",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dh-sistemas",
+          "title": "Declaração Universal, Pacto de São José e sistemas de proteção",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dh-tortura-genocidio",
+          "title": "Convenções contra a tortura e o genocídio",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dh-discriminacao-refugiados",
+          "title": "Discriminação racial, discriminação contra a mulher e refugiados",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "dh-seguranca-forca",
+          "title": "Uso da força, privação de liberdade e regras da ONU",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "estatistica",
+      "title": "Estatística",
+      "lessons": [
+        {
+          "id": "est-basico",
+          "title": "Conceitos básicos: população, amostra e variáveis",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "est-medidas-posicao",
+          "title": "Média, mediana e moda",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "est-dispersao",
+          "title": "Variância e desvio padrão",
+          "mode": "independent",
+          "materials": []
+        },
+        {
+          "id": "est-probabilidade-normal",
+          "title": "Probabilidade e distribuição normal",
+          "mode": "independent",
+          "materials": []
+        }
+      ]
+    },
+    {
+      "track": "matematica",
+      "title": "Matemática",
+      "lessons": [
+        {
+          "id": "mat-proporcoes",
+          "title": "Razão, proporção, porcentagem e unidades",
+          "mode": "integrated",
+          "materials": [
+            "enem-matematica-fundamentos"
+          ]
+        },
+        {
+          "id": "mat-geometria",
+          "title": "Geometria: áreas, perímetros, volumes e escalas",
+          "mode": "integrated",
+          "materials": [
+            "enem-geometria-aplicacoes"
+          ]
+        },
+        {
+          "id": "mat-dados",
+          "title": "Estatística e leitura de dados",
+          "mode": "integrated",
+          "materials": [
+            "enem-estatistica-aplicacoes"
+          ]
+        },
+        {
+          "id": "mat-probabilidade",
+          "title": "Probabilidade e contagem",
+          "mode": "integrated",
+          "materials": [
+            "enem-probabilidade-aplicacoes"
+          ]
+        },
+        {
+          "id": "mat-funcoes",
+          "title": "Funções, taxas e matemática financeira",
+          "mode": "integrated",
+          "materials": [
+            "enem-funcoes-aplicacoes"
+          ]
+        }
+      ]
+    },
+    {
+      "track": "fisica",
+      "title": "Física",
+      "lessons": [
+        {
+          "id": "fis-grandezas-energia",
+          "title": "Grandezas, movimento, energia e circuitos",
+          "mode": "integrated",
+          "materials": [
+            "enem-fisica-fundamentos"
+          ]
+        }
+      ]
+    },
+    {
+      "track": "quimica",
+      "title": "Química",
+      "lessons": [
+        {
+          "id": "qui-materia-quantidades",
+          "title": "Matéria, soluções e relações quantitativas",
+          "mode": "integrated",
+          "materials": [
+            "enem-quimica-fundamentos"
+          ]
+        }
+      ]
+    },
+    {
+      "track": "ingles",
+      "title": "Língua Inglesa",
+      "lessons": [
+        {
+          "id": "ing-leitura-contexto",
+          "title": "Leitura em inglês: finalidade, contexto e referências",
+          "mode": "integrated",
+          "materials": [
+            "enem-ingles-fundamentos"
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Comparison of exact normalized full text and titles plus reviewed curricular links. Not an exhaustive semantic or legal audit. No database rows deleted or renamed; routes and completion keys retained.",
+  "modes": {
+    "integrated": 51,
+    "complementary": 5,
+    "independent": 42
+  }
+}

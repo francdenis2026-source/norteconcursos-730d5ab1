@@ -96,7 +96,7 @@ export function PlanCountdown({
       {r?.over ? (
         <p className="mt-3 text-sm font-semibold text-amber-600">Período do plano encerrado.</p>
       ) : (
-        <div className="mt-3 grid grid-cols-4 gap-2 sm:max-w-md" role="timer" aria-live="off">
+        <div className="mt-3 grid grid-cols-2 gap-2 sm:max-w-md sm:grid-cols-4" role="timer" aria-live="off">
           {cells.map(([label, value]) => (
             <div key={label} className="rounded-lg bg-muted/60 py-2 text-center">
               <div

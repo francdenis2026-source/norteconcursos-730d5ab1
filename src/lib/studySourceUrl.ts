@@ -22,6 +22,7 @@ const technicalHosts = new Set([
   "www.cpc.org.br",
   "cpc.org.br",
   "www.cfc.org.br",
+  "www1.cfc.org.br",
   "cfc.org.br",
   "man7.org",
 ]);

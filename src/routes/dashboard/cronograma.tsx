@@ -1,3 +1,4 @@
+import { plannedPractice } from "@/lib/plannedStudy";
 import { platformDate } from "@/lib/platformClock";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { libraryCollection } from "@/lib/libraryOrganization";
@@ -320,7 +321,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const theoryIndex = React.useMemo(() => buildTheoryIndex(materials.data ?? [], syllabus.data ?? []), [materials.data, syllabus.data]);
   const backUrl = `/dashboard/cronograma?plano=${plan.id}&painel=1`;
   const theoryOf = React.useCallback(
-    (nome: string, topic: string) => theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl),
+    (nome: string, topic: string) => { const target = theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl); return target.direct ? target : { ...target, search: { ...target.search, discipline: nome, collection: libraryCollection({slug: "", discipline: nome}) === "subjects" ? "subjects" : "laws" } }; },
     [theoryIndex, backUrl],
   );
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
@@ -444,7 +445,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-amber-50 p-3 text-sm dark:from-sky-950/30 dark:to-amber-950/30">
           <Target className="h-4 w-4 text-sky-600" />
           <span className="min-w-0 flex-1"><b>Próximo passo:</b> {next.d.nome} — {next.t.t}</span>
-          <ToolLinks nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />
+          <ToolLinks topic={next.t.t} nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />
         </div>
       )}
       <Tabs defaultValue="semana">
@@ -461,7 +462,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
                     <span className={cn("absolute inset-y-0 left-0 w-1.5", discColor(cfg, b.discId).bar)} aria-hidden="true" />
                     <span className="w-28 shrink-0 font-mono text-xs text-muted-foreground">{b.start} – {b.end}</span>
                     <span className="min-w-0 flex-1 font-semibold">{b.nome}{b.first && <Badge className="ml-2 bg-amber-400 text-amber-950 hover:bg-amber-400">1ª vez</Badge>}</span>
-                    <ToolLinks nome={b.nome} theory={(() => { const nt = cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id])); return nt ? theoryOf(b.nome, nt.t) : undefined; })()} />
+                    <ToolLinks topic={cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id]))?.t} nome={b.nome} theory={(() => { const nt = cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id])); return nt ? theoryOf(b.nome, nt.t) : undefined; })()} />
                   </div>
                 ))}
               </CardContent>
@@ -571,16 +572,16 @@ function Stat({ label, value, sub }: { label: string; value: string; sub: string
 }
 
 /** Atalhos para as ferramentas da plataforma já filtradas pela disciplina. */
-function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | undefined }) {
+function ToolLinks({ nome, topic, theory }: { nome: string; topic?: string | undefined; theory?: TheoryTarget | undefined }) {
   const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold transition-[background-color,color,transform] duration-150 hover:bg-primary hover:text-primary-foreground active:scale-95 motion-reduce:active:scale-100";
   return (
     <span className="flex flex-wrap gap-1.5">
-      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws" }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
-      <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" }} className={cls}><Target className="h-3 w-3" />Questões</Link>
-      <Link to="/dashboard/flashcards" search={{ subject: nome }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
-      <Link to="/dashboard/media" className={cls}><Mic className="h-3 w-3" />Podcast</Link>
-      <Link to="/dashboard/errors" className={cls}><NotebookPen className="h-3 w-3" />Erros</Link>
-      <Link to="/dashboard/mock-exams" className={cls}><Trophy className="h-3 w-3" />Simulado</Link>
+      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws", discipline: nome, q: topic }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
+      <Link to="/dashboard/question-trainer" search={plannedPractice(nome, topic)} className={cls}><Target className="h-3 w-3" />Questões</Link>
+      <Link to="/dashboard/flashcards" search={{ subject: nome, topic, planned: "1" }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
+      <Link to="/dashboard/media" search={{ subject: nome, topic }} className={cls}><Mic className="h-3 w-3" />Podcast</Link>
+      <Link to="/dashboard/errors" search={{ subject: nome, topic }} className={cls}><NotebookPen className="h-3 w-3" />Erros</Link>
+      <Link to="/dashboard/mock-exams" search={plannedPractice(nome, topic)} className={cls}><Trophy className="h-3 w-3" />Simulado</Link>
     </span>
   );
 }

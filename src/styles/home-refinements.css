@@ -339,9 +339,9 @@
 .home :is(.home-nav a, .home-login, .home-footer__links a, .home-preparation__tab),
 .home-menu nav a {
   transition:
-    color 160ms ease,
-    background-color 160ms ease,
-    border-color 160ms ease;
+    color 160ms cubic-bezier(0.32,0.72,0,1),
+    background-color 160ms cubic-bezier(0.32,0.72,0,1),
+    border-color 160ms cubic-bezier(0.32,0.72,0,1);
 }
 
 /* Keyboard feedback is immediate; hover never needs to move a content card. */

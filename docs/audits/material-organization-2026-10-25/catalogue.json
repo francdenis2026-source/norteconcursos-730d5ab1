@@ -1,0 +1,1040 @@
+{
+  "checked_at": "2026-10-25T03:42:20.810Z",
+  "active_materials": 151,
+  "groups": [
+    {
+      "collection": "laws",
+      "discipline": "Direito Administrativo",
+      "count": 14,
+      "topics": [
+        "Fontes, regime jurídico e noções de Estado",
+        "Organização administrativa e entidades",
+        "Poderes administrativos",
+        "Improbidade administrativa",
+        "Responsabilidade civil",
+        "Licitações e contratos",
+        "Servidores públicos",
+        "Atos administrativos",
+        "Processo administrativo",
+        "Controle da Administração",
+        "Bens públicos"
+      ],
+      "materials": [
+        {
+          "slug": "administrativo-fundamentos-fontes-regime-juridico",
+          "title": "Fundamentos: fontes, regime jurídico e interesse público"
+        },
+        {
+          "slug": "administrativo-organizacao-direta-indireta-orgaos",
+          "title": "Organização administrativa: direta, indireta e órgãos públicos"
+        },
+        {
+          "slug": "administrativo-poderes-vinculado-discricionario-hierarquico",
+          "title": "Poderes vinculado, discricionário, hierárquico, disciplinar e regulamentar"
+        },
+        {
+          "slug": "administrativo-poder-de-policia-ciclo-prescricao",
+          "title": "Poder de polícia: atributos, ciclo e prescrição"
+        },
+        {
+          "slug": "administrativo-improbidade-lei-8429-reforma-14230",
+          "title": "Improbidade administrativa após a Lei nº 14.230/2021"
+        },
+        {
+          "slug": "administrativo-responsabilidade-civil-do-estado",
+          "title": "Responsabilidade civil do Estado"
+        },
+        {
+          "slug": "administrativo-licitacoes-lei-14133-modalidades",
+          "title": "Licitações: princípios, modalidades e inexigibilidade na Lei nº 14.133/2021"
+        },
+        {
+          "slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao",
+          "title": "Lei nº 8.112/1990: posse, exercício, vacância, remoção e redistribuição"
+        },
+        {
+          "slug": "servidores-lei-8112-pad-sindicancia-ritos-prescricao",
+          "title": "Processo administrativo disciplinar: sindicância, ritos, prazos e prescrição"
+        },
+        {
+          "slug": "administrativo-atos-administrativos-requisitos-atributos",
+          "title": "Atos administrativos: requisitos, atributos, espécies e extinção"
+        },
+        {
+          "slug": "administrativo-processo-administrativo-lei-9784",
+          "title": "Processo administrativo federal (Lei nº 9.784/1999)"
+        },
+        {
+          "slug": "administrativo-controle-da-administracao-publica",
+          "title": "Controle da Administração Pública"
+        },
+        {
+          "slug": "administrativo-contratos-administrativos-lei-14133",
+          "title": "Contratos administrativos: prerrogativas, alteração, extinção e sanções (Lei nº 14.133/2021)"
+        },
+        {
+          "slug": "administrativo-bens-publicos-classificacao-uso",
+          "title": "Bens públicos: classificação, regime e uso privativo"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direito Constitucional",
+      "count": 17,
+      "topics": [
+        "Princípios fundamentais",
+        "Teoria geral dos direitos fundamentais",
+        "Nacionalidade",
+        "Vida e igualdade",
+        "Liberdades constitucionais",
+        "Propriedade e função social",
+        "Segurança jurídica e garantias processuais",
+        "Remédios constitucionais",
+        "Proteção social e direitos dos trabalhadores",
+        "Organização do Estado",
+        "Administração pública constitucional",
+        "Judiciário: garantias e carreira",
+        "Direitos políticos",
+        "Tribunais: composição e competências",
+        "Funções essenciais à Justiça",
+        "Direitos e garantias fundamentais",
+        "Constituição — acumulação de cargos: atualização da EC 138/2025"
+      ],
+      "materials": [
+        {
+          "slug": "constitucional-principios-fundamentais-federacao-republica",
+          "title": "Princípios fundamentais: Federação, República e autonomia dos entes"
+        },
+        {
+          "slug": "constitucional-direitos-fundamentais-teoria-geral",
+          "title": "Direitos fundamentais: teoria, eficácia e tratados"
+        },
+        {
+          "slug": "constitucional-nacionalidade-medidas-retirada",
+          "title": "Nacionalidade: brasileiros natos e naturalizados"
+        },
+        {
+          "slug": "constitucional-vida-igualdade",
+          "title": "Vida e igualdade: leitura constitucional aplicada"
+        },
+        {
+          "slug": "constitucional-liberdades-constitucionais",
+          "title": "Liberdades: expressão, crença, reunião, associação e profissão"
+        },
+        {
+          "slug": "constitucional-propriedade-funcao-social",
+          "title": "Propriedade: função social, desapropriação e requisição"
+        },
+        {
+          "slug": "constitucional-seguranca-juridica-processo",
+          "title": "Segurança jurídica: domicílio, defesa, processo e sanções"
+        },
+        {
+          "slug": "constitucional-remedios-constitucionais",
+          "title": "Remédios constitucionais: escolha, requisitos e limites"
+        },
+        {
+          "slug": "constitucional-direitos-sociais-trabalho",
+          "title": "Direitos sociais e trabalhistas: Constituição atual"
+        },
+        {
+          "slug": "constitucional-organizacao-estado-competencias",
+          "title": "Organização do Estado: entes, bens e competências"
+        },
+        {
+          "slug": "constitucional-administracao-publica-constituicao",
+          "title": "Administração pública na Constituição: princípios, ingresso e vínculos"
+        },
+        {
+          "slug": "constitucional-judiciario-garantias-carreira",
+          "title": "Judiciário: estrutura, garantias e carreira"
+        },
+        {
+          "slug": "constitucional-direitos-politicos-elegibilidade",
+          "title": "Direitos políticos, elegibilidade e partidos políticos"
+        },
+        {
+          "slug": "constitucional-tribunais-competencias-cnj",
+          "title": "Tribunais e CNJ: composição, competências e controle"
+        },
+        {
+          "slug": "constitucional-funcoes-essenciais-justica",
+          "title": "Funções essenciais à Justiça: MP, advocacias e Defensoria"
+        },
+        {
+          "slug": "constitucional-privacidade-dados",
+          "title": "Privacidade e dados pessoais: proteção constitucional"
+        },
+        {
+          "slug": "constitucional-acumulacao-ec138-casos",
+          "title": "Constituição — acumulação de cargos: atualização da EC 138/2025"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direito Digital",
+      "count": 1,
+      "topics": [
+        "Marco Civil da Internet: registros, provedores e responsabilidade"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-marco-civil-internet-2026",
+          "title": "Marco Civil da Internet: registros, provedores e atualizações de 2026"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direito Penal",
+      "count": 5,
+      "topics": [
+        "Princípios",
+        "Aprofundamento e atualizações — Confissão — Súmulas 545 e 630 revisadas",
+        "Aplicação da lei penal no tempo",
+        "Territorialidade e extraterritorialidade",
+        "Código Penal — erros, tentativa e dolo: laboratório de casos"
+      ],
+      "materials": [
+        {
+          "slug": "penal-principios-direito-penal",
+          "title": "Código Penal — leitura atualizada — guia de estudo e aplicação"
+        },
+        {
+          "slug": "penal-confissao-sumulas-545-630",
+          "title": "Confissão — Súmulas 545 e 630 revisadas"
+        },
+        {
+          "slug": "penal-lei-no-tempo",
+          "title": "Lei penal no tempo: organize a linha temporal"
+        },
+        {
+          "slug": "penal-lei-no-espaco",
+          "title": "Lei penal no espaço: lugar e aplicação são perguntas diferentes"
+        },
+        {
+          "slug": "penal-erros-tentativa-dolo-fixacao",
+          "title": "Código Penal — erros, tentativa e dolo: laboratório de casos"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direito Processual Civil",
+      "count": 1,
+      "topics": [
+        "Tutela provisória"
+      ],
+      "materials": [
+        {
+          "slug": "processo-civil-tutela-provisoria",
+          "title": "Tutela provisória: urgência e evidência"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direito Processual Penal",
+      "count": 1,
+      "topics": [
+        "Prova penal, cadeia de custódia e prisão em flagrante"
+      ],
+      "materials": [
+        {
+          "slug": "processo-penal-cpp-provas-flagrante-revisao",
+          "title": "Código de Processo Penal — leitura atualizada — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Direitos humanos — uso da força",
+      "count": 2,
+      "topics": [
+        "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+        "Decreto 12.341/2024 — Uso Diferenciado da Força"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-menor-potencial-ofensivo-revisao",
+          "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-uso-forca-revisao",
+          "title": "Decreto 12.341/2024 — Uso Diferenciado da Força — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Legislação penal extravagante",
+      "count": 20,
+      "topics": [
+        "Lei antifacção — leitura integral",
+        "Lei 11.343/2006 — Lei de Drogas",
+        "Lei 9.455/1997 — Crimes de Tortura",
+        "Lei 13.869/2019 — Abuso de Autoridade",
+        "Lei 12.850/2013 — Organizações Criminosas",
+        "Lei 8.072/1990 — Crimes Hediondos",
+        "Lei 9.296/1996 — Interceptação Telefônica",
+        "Lei 9.613/1998 — Lavagem de Dinheiro",
+        "Lei 9.605/1998 — Crimes Ambientais",
+        "Lei 7.960/1989 — Prisão Temporária",
+        "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais",
+        "Lei 12.830/2013 — Investigação conduzida pelo Delegado",
+        "Lei 12.037/2009 — Identificação Criminal",
+        "Lei 13.260/2016 — Lei Antiterrorismo",
+        "Lei 13.344/2016 — Tráfico de Pessoas",
+        "Lei 9.807/1999 — Proteção a Vítimas e Testemunhas",
+        "Lei 7.716/1989 — Crimes de Racismo e Preconceito",
+        "Lei 7.210/1984 — Lei de Execução Penal",
+        "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+        "Lei 10.826/2003 — Estatuto do Desarmamento"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-antifaccao-marco-legal",
+          "title": "Lei antifacção — leitura integral — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-drogas-revisao",
+          "title": "Lei 11.343/2006 — Lei de Drogas — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-tortura-revisao",
+          "title": "Lei 9.455/1997 — Crimes de Tortura — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-abuso-revisao",
+          "title": "Lei 13.869/2019 — Abuso de Autoridade — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-organizacoes-revisao",
+          "title": "Lei 12.850/2013 — Organizações Criminosas — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-hediondos-revisao",
+          "title": "Lei 8.072/1990 — Crimes Hediondos — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-interceptacao-revisao",
+          "title": "Lei 9.296/1996 — Interceptação Telefônica — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-lavagem-revisao",
+          "title": "Lei 9.613/1998 — Lavagem de Dinheiro — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-ambientais-revisao",
+          "title": "Lei 9.605/1998 — Crimes Ambientais — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-temporaria-revisao",
+          "title": "Lei 7.960/1989 — Prisão Temporária — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-juizados-revisao",
+          "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-delegado-revisao",
+          "title": "Lei 12.830/2013 — Investigação conduzida pelo Delegado — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-identificacao-criminal-revisao",
+          "title": "Lei 12.037/2009 — Identificação Criminal — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-terrorismo-revisao",
+          "title": "Lei 13.260/2016 — Lei Antiterrorismo — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-trafico-pessoas-revisao",
+          "title": "Lei 13.344/2016 — Tráfico de Pessoas — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-testemunhas-revisao",
+          "title": "Lei 9.807/1999 — Proteção a Vítimas e Testemunhas — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-racismo-revisao",
+          "title": "Lei 7.716/1989 — Crimes de Racismo e Preconceito — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-lep-revisao",
+          "title": "Lei 7.210/1984 — Lei de Execução Penal — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-contravencoes-revisao",
+          "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-armas-revisao",
+          "title": "Lei 10.826/2003 — Estatuto do Desarmamento — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Proteção social — pensões",
+      "count": 1,
+      "topics": [
+        "Pensão especial — regulamentação — leitura integral"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-pensao-especial-feminicidio",
+          "title": "Pensão especial — regulamentação — leitura integral — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Proteção de pessoas e violência doméstica",
+      "count": 5,
+      "topics": [
+        "Lei 11.340/2006 — Lei Maria da Penha",
+        "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+        "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+        "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+        "Lei 14.344/2022 — Lei Henry Borel"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-maria-penha-revisao",
+          "title": "Lei 11.340/2006 — Lei Maria da Penha — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-eca-revisao",
+          "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-idosa-revisao",
+          "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-pcd-revisao",
+          "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-henry-borel-revisao",
+          "title": "Lei 14.344/2022 — Lei Henry Borel — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Trânsito — CTB",
+      "count": 1,
+      "topics": [
+        "Lei 9.503/1997 — Código de Trânsito Brasileiro"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-transito-revisao",
+          "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Legislação específica da Polícia Federal",
+      "count": 11,
+      "topics": [
+        "Lei 14.967/2024 — Estatuto da Segurança Privada",
+        "Lei 10.357/2001 — Controle de Produtos Químicos",
+        "Lei 13.445/2017 — Lei de Migração",
+        "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional",
+        "Lei 13.444/2017 — Identificação Civil Nacional",
+        "Lei 14.534/2023 — CPF como identificador único",
+        "Lei 7.116/1983 — Carteira de Identidade",
+        "Decreto 10.977/2022 — Carteira de Identidade Nacional",
+        "Decreto 11.797/2023 — Serviço de Identificação do Cidadão",
+        "Decreto 11.491/2023 — Convenção de Budapeste",
+        "Lei 9.454/1997 — Registro de Identidade Civil"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-seguranca-privada-revisao",
+          "title": "Lei 14.967/2024 — Estatuto da Segurança Privada — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-quimicos-revisao",
+          "title": "Lei 10.357/2001 — Controle de Produtos Químicos — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-migracao-revisao",
+          "title": "Lei 13.445/2017 — Lei de Migração — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-pf-interestadual-revisao",
+          "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-icn-revisao",
+          "title": "Lei 13.444/2017 — Identificação Civil Nacional — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-cpf-revisao",
+          "title": "Lei 14.534/2023 — CPF como identificador único — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-identidade-revisao",
+          "title": "Lei 7.116/1983 — Carteira de Identidade — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-cin-revisao",
+          "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-sic-revisao",
+          "title": "Decreto 11.797/2023 — Serviço de Identificação do Cidadão — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-budapeste-revisao",
+          "title": "Decreto 11.491/2023 — Convenção de Budapeste — guia de estudo e aplicação"
+        },
+        {
+          "slug": "legislacao-ric-revisao",
+          "title": "Lei 9.454/1997 — Registro de Identidade Civil — guia de estudo e aplicação"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Legislação — outros temas",
+      "count": 1,
+      "topics": [
+        "Crimes cibernéticos, invasão e fraude eletrônica"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-crimes-ciberneticos-atualizado-2026",
+          "title": "Crimes cibernéticos: invasão, fraude eletrônica e penas atualizadas"
+        }
+      ]
+    },
+    {
+      "collection": "laws",
+      "discipline": "Proteção de Dados Pessoais (LGPD)",
+      "count": 1,
+      "topics": [
+        "LGPD: tratamento, segurança e ANPD"
+      ],
+      "materials": [
+        {
+          "slug": "legislacao-lgpd-atualizada-2026",
+          "title": "LGPD: tratamento de dados, segurança e atualizações da ANPD"
+        }
+      ]
+    },
+    {
+      "collection": "subjects",
+      "discipline": "Contabilidade Geral",
+      "count": 18,
+      "topics": [
+        "Conceitos e finalidades",
+        "Patrimônio",
+        "Atos e fatos",
+        "Contas",
+        "Escrituração",
+        "Regimes contábeis",
+        "Operações contábeis",
+        "Balancete",
+        "Balanço patrimonial",
+        "Demonstração do resultado",
+        "Pronunciamentos CPC",
+        "Lei das S.A."
+      ],
+      "materials": [
+        {
+          "slug": "contabilidade-conceito-objeto-usuarios",
+          "title": "Contabilidade: conceito, objeto e usuários"
+        },
+        {
+          "slug": "contabilidade-patrimonio-equacao-fundamental",
+          "title": "Patrimônio, balanço e equação fundamental"
+        },
+        {
+          "slug": "contabilidade-atos-fatos-contabeis",
+          "title": "Atos e fatos contábeis: permutativos, modificativos e mistos"
+        },
+        {
+          "slug": "contabilidade-contas-plano-de-contas",
+          "title": "Contas, plano de contas e títulos de crédito"
+        },
+        {
+          "slug": "contabilidade-escrituracao-partidas-dobradas-livros",
+          "title": "Escrituração, partidas dobradas e livros contábeis"
+        },
+        {
+          "slug": "contabilidade-regimes-caixa-competencia",
+          "title": "Regimes de caixa e de competência"
+        },
+        {
+          "slug": "contabilidade-lancamentos-operacoes-diversas",
+          "title": "Lançamentos de operações diversas"
+        },
+        {
+          "slug": "contabilidade-provisoes-passivo-contingente-epcld",
+          "title": "Provisões, passivos contingentes e EPCLD"
+        },
+        {
+          "slug": "contabilidade-balancete-verificacao",
+          "title": "Balancete de verificação"
+        },
+        {
+          "slug": "contabilidade-balanco-patrimonial-estrutura",
+          "title": "Balanço patrimonial: estrutura e classificação das contas"
+        },
+        {
+          "slug": "contabilidade-mercadorias-cmv-resultado-bruto",
+          "title": "Operações com mercadorias, CMV e resultado bruto"
+        },
+        {
+          "slug": "contabilidade-estoques-cpc-16",
+          "title": "Estoques (CPC 16): o que compõe o custo"
+        },
+        {
+          "slug": "contabilidade-depreciacao-amortizacao-exaustao",
+          "title": "Depreciação, amortização e exaustão"
+        },
+        {
+          "slug": "contabilidade-impairment-cpc-01-baixa-ativos",
+          "title": "Redução ao valor recuperável (CPC 01) e baixa de ativos"
+        },
+        {
+          "slug": "contabilidade-patrimonio-liquido-capital-reservas",
+          "title": "Patrimônio líquido: capital, reservas e ações em tesouraria"
+        },
+        {
+          "slug": "contabilidade-demonstracoes-contabeis-lei-6404",
+          "title": "Demonstrações contábeis e a Lei nº 6.404/1976"
+        },
+        {
+          "slug": "contabilidade-dre-dfc-dva-lei-6404",
+          "title": "DRE, fluxos de caixa e valor adicionado (Lei nº 6.404/1976)"
+        },
+        {
+          "slug": "contabilidade-notas-explicativas-grande-porte-avp",
+          "title": "Notas explicativas, sociedades de grande porte e ajuste a valor presente"
+        }
+      ]
+    },
+    {
+      "collection": "subjects",
+      "discipline": "Informática",
+      "count": 15,
+      "topics": [
+        "Redes e tecnologias de acesso",
+        "Modelos de redes",
+        "Protocolos de rede",
+        "Internet e correio eletrônico",
+        "Navegação e pesquisa",
+        "Segurança da informação",
+        "Códigos maliciosos e proteção",
+        "Cópias e recuperação",
+        "Sistemas operacionais — Linux",
+        "Permissões de arquivos e diretórios",
+        "Sistemas operacionais — Windows",
+        "Fundamentos de computadores",
+        "Editores de texto",
+        "Planilhas eletrônicas",
+        "Apresentações e multimídia"
+      ],
+      "materials": [
+        {
+          "slug": "informatica-internet-intranet-vpn",
+          "title": "Internet, intranet, extranet e VPN: acesso não é alcance"
+        },
+        {
+          "slug": "informatica-osi-tcp-ip-camadas",
+          "title": "OSI e TCP/IP: camadas, unidades e equipamentos"
+        },
+        {
+          "slug": "informatica-protocolos-dns-dhcp-http",
+          "title": "DNS, DHCP, TCP, UDP e HTTPS: evite regras absolutas"
+        },
+        {
+          "slug": "informatica-email-smtp-pop-imap",
+          "title": "Correio eletrônico: SMTP, POP3, IMAP e destinatários"
+        },
+        {
+          "slug": "informatica-navegadores-privacidade-download",
+          "title": "Navegadores: cache, cookies, downloads e modo privado"
+        },
+        {
+          "slug": "informatica-seguranca-cid-controles",
+          "title": "Segurança da informação: confidencialidade, integridade e disponibilidade"
+        },
+        {
+          "slug": "informatica-malware-antivirus-firewall",
+          "title": "Malwares, antimalware e firewall: ataque e defesa"
+        },
+        {
+          "slug": "informatica-backup-incremental-diferencial",
+          "title": "Backup: completo, incremental, diferencial e restauração"
+        },
+        {
+          "slug": "informatica-linux-comandos-diretorios",
+          "title": "Linux: caminhos, arquivos e comandos essenciais"
+        },
+        {
+          "slug": "informatica-linux-permissoes-rwx",
+          "title": "Linux: permissões rwx e leitura do chmod"
+        },
+        {
+          "slug": "informatica-windows-arquivos-suporte",
+          "title": "Windows: arquivos, atalhos e atenção ao fim de suporte"
+        },
+        {
+          "slug": "informatica-hardware-memorias-software",
+          "title": "Hardware, software e memórias: o que cada componente faz"
+        },
+        {
+          "slug": "informatica-word-writer-formatos-estilos",
+          "title": "Word e Writer: formatos, estilos e organização de documentos"
+        },
+        {
+          "slug": "informatica-excel-referencias-funcoes",
+          "title": "Excel e Calc: referências, fórmulas e funções de prova"
+        },
+        {
+          "slug": "informatica-powerpoint-impress-apresentacoes",
+          "title": "PowerPoint e Impress: slides, transições e animações"
+        }
+      ]
+    },
+    {
+      "collection": "subjects",
+      "discipline": "Língua Portuguesa",
+      "count": 16,
+      "topics": [
+        "Interpretação e tipologia textual",
+        "Semântica e figuras de linguagem",
+        "Ortografia e acentuação",
+        "Classes de palavras",
+        "Pronomes e referenciação",
+        "Verbos e vozes verbais",
+        "Termos da oração",
+        "Colocação pronominal",
+        "Concordância verbal e nominal",
+        "Regência verbal, nominal e crase",
+        "Pontuação e vírgula",
+        "Redação oficial e linguagem simples",
+        "Sintaxe do período composto",
+        "Relações entre orações",
+        "Subordinação e pontuação",
+        "Compreensão e coesão textual"
+      ],
+      "materials": [
+        {
+          "slug": "portugues-leitura-interpretacao-tipologia",
+          "title": "Leitura e tipologia: interpretação, inferência e gêneros textuais"
+        },
+        {
+          "slug": "portugues-semantica-figuras-linguagem",
+          "title": "Sentido e figuras de linguagem: contexto, palavras e efeitos"
+        },
+        {
+          "slug": "portugues-ortografia-acentuacao-atual",
+          "title": "Ortografia e acentuação: regras atuais e dúvidas frequentes"
+        },
+        {
+          "slug": "portugues-classes-palavras-contexto",
+          "title": "Classes de palavras: nomes, determinantes e circunstâncias"
+        },
+        {
+          "slug": "portugues-pronomes-referentes-relativos",
+          "title": "Pronomes: referência, relativos e funções no período"
+        },
+        {
+          "slug": "portugues-verbos-tempos-vozes",
+          "title": "Verbos: flexão, tempos, correlação e vozes"
+        },
+        {
+          "slug": "portugues-sintaxe-termos-oracao",
+          "title": "Sintaxe: sujeito, predicado, complementos e termos associados"
+        },
+        {
+          "slug": "portugues-colocacao-pronominal",
+          "title": "Colocação pronominal: posição, atração e reescrita"
+        },
+        {
+          "slug": "portugues-concordancia-verbal-nominal",
+          "title": "Concordância verbal e nominal: núcleo, se e construções especiais"
+        },
+        {
+          "slug": "portugues-regencia-crase",
+          "title": "Regência e crase: relações, preposições e casos de prova"
+        },
+        {
+          "slug": "portugues-pontuacao-estrutura-sentido",
+          "title": "Pontuação: estrutura, vírgula e efeitos de sentido"
+        },
+        {
+          "slug": "portugues-redacao-oficial-atual",
+          "title": "Redação oficial atual: clareza, documentos e alcance das normas"
+        },
+        {
+          "slug": "portugues-coordenacao-subordinacao",
+          "title": "Período composto: coordenação, subordinação e funções"
+        },
+        {
+          "slug": "portugues-oracoes-adverbiais-conectores",
+          "title": "Conectores: causa, consequência, concessão e condição"
+        },
+        {
+          "slug": "portugues-adjetivas-substantivas-pontuacao",
+          "title": "Orações adjetivas e substantivas: função e efeito das vírgulas"
+        },
+        {
+          "slug": "portugues-coesao-reescrita-sentido",
+          "title": "Coesão e reescrita: preserve referente, lógica e sentido"
+        }
+      ]
+    },
+    {
+      "collection": "subjects",
+      "discipline": "Raciocínio Lógico",
+      "count": 3,
+      "topics": [
+        "Lógica proposicional",
+        "Conjuntos e lógica de primeira ordem",
+        "Contagem e probabilidade"
+      ],
+      "materials": [
+        {
+          "slug": "rlm-proposicoes-negacao-condicionais",
+          "title": "Proposições, condicionais e negações: pense pela tabela-verdade"
+        },
+        {
+          "slug": "rlm-conjuntos-quantificadores",
+          "title": "Conjuntos, quantificadores e inclusão-exclusão"
+        },
+        {
+          "slug": "rlm-contagem-probabilidade-basica",
+          "title": "Contagem e probabilidade: ordem, repetição e espaço amostral"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Artes e Educação Física",
+      "count": 1,
+      "topics": [
+        "Linguagens artísticas e corporais"
+      ],
+      "materials": [
+        {
+          "slug": "enem-artes-fundamentos",
+          "title": "ENEM — Arte, corpo, identidade e tecnologias"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Biologia",
+      "count": 1,
+      "topics": [
+        "Ecologia e genética"
+      ],
+      "materials": [
+        {
+          "slug": "enem-biologia-fundamentos",
+          "title": "ENEM — Biologia: energia, cadeias alimentares e hereditariedade"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Filosofia",
+      "count": 1,
+      "topics": [
+        "Ética e argumentação"
+      ],
+      "materials": [
+        {
+          "slug": "enem-filosofia-fundamentos",
+          "title": "ENEM — Filosofia: argumentos, ética e política"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Física",
+      "count": 1,
+      "topics": [
+        "Grandezas e energia"
+      ],
+      "materials": [
+        {
+          "slug": "enem-fisica-fundamentos",
+          "title": "ENEM — Física: movimento, energia e circuitos"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Geografia",
+      "count": 1,
+      "topics": [
+        "Espaço, ambiente e cartografia"
+      ],
+      "materials": [
+        {
+          "slug": "enem-geografia-fundamentos",
+          "title": "ENEM — Geografia: escala, urbanização e questões ambientais"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "História",
+      "count": 1,
+      "topics": [
+        "Fontes e processos históricos"
+      ],
+      "materials": [
+        {
+          "slug": "enem-historia-fundamentos",
+          "title": "ENEM — História: fontes, cidadania e transformações sociais"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Língua Espanhola",
+      "count": 1,
+      "topics": [
+        "Leitura em língua estrangeira"
+      ],
+      "materials": [
+        {
+          "slug": "enem-espanhol-fundamentos",
+          "title": "ENEM — Espanhol: leitura, conectivos e falsos cognatos"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Língua Inglesa",
+      "count": 1,
+      "topics": [
+        "Leitura em língua estrangeira"
+      ],
+      "materials": [
+        {
+          "slug": "enem-ingles-fundamentos",
+          "title": "ENEM — Inglês: finalidade, referências e vocabulário em contexto"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Língua Portuguesa",
+      "count": 1,
+      "topics": [
+        "Leitura e argumentação"
+      ],
+      "materials": [
+        {
+          "slug": "enem-portugues-fundamentos",
+          "title": "ENEM — Interpretação, inferência e intenção do texto"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Literatura",
+      "count": 1,
+      "topics": [
+        "Literatura e contexto"
+      ],
+      "materials": [
+        {
+          "slug": "enem-literatura-fundamentos",
+          "title": "ENEM — Recursos literários, vozes e contexto social"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Matemática",
+      "count": 5,
+      "topics": [
+        "Proporções, estatística e geometria",
+        "Geometria e medidas",
+        "Probabilidade e contagem",
+        "Funções e matemática financeira",
+        "Estatística e leitura de dados"
+      ],
+      "materials": [
+        {
+          "slug": "enem-matematica-fundamentos",
+          "title": "ENEM — Matemática: porcentagens, estatística e modelos"
+        },
+        {
+          "slug": "enem-geometria-aplicacoes",
+          "title": "ENEM — Geometria: área, volume e conversão de unidades"
+        },
+        {
+          "slug": "enem-probabilidade-aplicacoes",
+          "title": "ENEM — Probabilidade: universo, condições e combinações"
+        },
+        {
+          "slug": "enem-funcoes-aplicacoes",
+          "title": "ENEM — Funções: modelos, gráficos e porcentagens"
+        },
+        {
+          "slug": "enem-estatistica-aplicacoes",
+          "title": "ENEM — Estatística: médias, mediana, dispersão e gráficos"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Química",
+      "count": 1,
+      "topics": [
+        "Transformações e quantidades"
+      ],
+      "materials": [
+        {
+          "slug": "enem-quimica-fundamentos",
+          "title": "ENEM — Química: estequiometria, soluções e química ambiental"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Redação",
+      "count": 1,
+      "topics": [
+        "Projeto de texto e intervenção"
+      ],
+      "materials": [
+        {
+          "slug": "enem-redacao-aplicacoes",
+          "title": "ENEM — Redação: da tese à proposta de intervenção"
+        }
+      ]
+    },
+    {
+      "collection": "enem",
+      "discipline": "Sociologia",
+      "count": 1,
+      "topics": [
+        "Cultura e sociedade"
+      ],
+      "materials": [
+        {
+          "slug": "enem-sociologia-fundamentos",
+          "title": "ENEM — Sociologia: cultura, trabalho e desigualdade"
+        }
+      ]
+    }
+  ]
+}

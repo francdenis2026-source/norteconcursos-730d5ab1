@@ -1,3 +1,4 @@
+import { useHomeSection } from "@/hooks/useHomeSection";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HeroBadge } from "@/components/landing/HeroBadge";
@@ -48,6 +49,8 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
+import "@/styles/home-footer.css";
+import "@/styles/home-editorial.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
@@ -57,6 +60,7 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
+import { MobileHomepage } from "@/components/landing/MobileHomepage";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -87,6 +91,8 @@ const NAV: [string, string][] = [
   ["Concursos", "#concursos"],
   ["Planos", "#planos"],
 ];
+
+const HOME_SECTION_IDS = ["plataforma", "concursos", "planos"] as const;
 
 const EXPLORE_LINKS: [string, string][] = [
   ["Ferramentas", "#ferramentas"],
@@ -284,6 +290,7 @@ function PreparationInfo() {
 }
 
 function Index() {
+  const activeSection = useHomeSection(HOME_SECTION_IDS);
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
@@ -311,7 +318,7 @@ function Index() {
           </div>
           <nav className="home-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
-              <a key={href} href={href}>
+              <a key={href} href={href} aria-current={activeSection === href.slice(1) ? "location" : undefined}>
                 {label}
               </a>
             ))}
@@ -413,7 +420,8 @@ function Index() {
         </div>
       </header>
 
-      <main id="conteudo" tabIndex={-1}>
+      <MobileHomepage />
+      <main id="conteudo" className="desktop-homepage" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
@@ -451,7 +459,6 @@ function Index() {
                 <div className="home-hero__study-entry" aria-label="Comece sua preparação" data-aim>
                   <TestingSeal />
                   <div className="home-hero__study-links">
-                    <DailyChallengeBadge />
                     <QuestionCountBadge />
                   </div>
                 </div>
@@ -471,6 +478,15 @@ function Index() {
           </div>
         </section>
 
+        <section className="home-daily-feature home-container" aria-labelledby="daily-feature-title">
+          <div className="home-daily-feature__copy">
+            <span className="home-signal"><span /> RITMO DIÁRIO</span>
+            <h2 id="daily-feature-title">Constância hoje. Mais preparo para a prova.</h2>
+            <p>Treine com 10 questões oficiais por dia, sem cadastro. Confira os comentários e retome amanhã para manter seu ritmo.</p>
+          </div>
+          <div className="home-daily-feature__card"><DailyChallengeBadge /></div>
+        </section>
+
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">
             <div className="home-preparation__band">
@@ -486,7 +502,7 @@ function Index() {
                 decoding="async"
               />
               <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow home-signal">Para quem escolheu servir e proteger</span>
+                <span className="home-preparation__eyebrow home-signal">01 · Prepare-se para sua carreira</span>
                 <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
                 <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
               </div>
@@ -508,7 +524,7 @@ function Index() {
           <div className="home-container">
             <div className="home-operations__heading">
               <Head
-                kicker="Seu foco começa no Acre"
+                kicker="02 · Seu foco começa no Acre"
                 lead="PC-AC em destaque. Provas da IDECAN e de outras bancas para transformar seu objetivo em prática."
               >
                 Seu próximo <em>objetivo.</em>
@@ -552,8 +568,8 @@ function Index() {
             >
               <img
                 src="/media/brand/platform-qr.svg"
-                width={112}
-                height={112}
+                width={128}
+                height={128}
                 loading="lazy"
                 alt="QR Code para https://norteconcursos.xyz/"
               />
@@ -608,9 +624,10 @@ function Index() {
 }
 
 function FooterColumn({ title, links, compact = false }: { title: string; links: [string, string][]; compact?: boolean }) {
+  const visibleLinks = compact ? links.slice(0, 2) : links;
   const list = (
     <ul>
-      {links.map(([label, href]) => (
+      {visibleLinks.map(([label, href]) => (
         <li key={label}><a href={href}>{label}</a></li>
       ))}
     </ul>

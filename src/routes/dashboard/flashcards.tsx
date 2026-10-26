@@ -1,3 +1,4 @@
+import { materialTopic } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { PlanGate } from "@/components/dashboard/PlanGate";
@@ -36,7 +37,12 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/dashboard/flashcards")({
   validateSearch: (
     s: Record<string, unknown>,
-  ): { subject?: string | undefined; topic?: string | undefined } => ({
+  ): {
+    planned?: string | undefined;
+    subject?: string | undefined;
+    topic?: string | undefined;
+  } => ({
+    planned: s["planned"] === "1" ? "1" : undefined,
     subject: typeof s["subject"] === "string" ? s["subject"] : undefined,
     topic: typeof s["topic"] === "string" ? s["topic"] : undefined,
   }),
@@ -189,16 +195,25 @@ function FlashcardsPage() {
   const [cards, setCards] = React.useState<Card_[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [tab, setTab] = React.useState<"study" | "cards">(
-    search.subject || search.topic ? "cards" : "study",
+    search.planned === "1" ? "study" : search.subject || search.topic ? "cards" : "study",
   );
   const [queue, setQueue] = React.useState<Card_[]>([]);
   const [flipped, setFlipped] = React.useState(false);
   const [reviewed, setReviewed] = React.useState(0);
-  const [studySubject, setStudySubject] = React.useState("all");
+  const [studySubject, setStudySubject] = React.useState(
+    search.subject ? canonicalSubject(search.subject) : "all",
+  );
   const [editing, setEditing] = React.useState<Card_ | null>(null);
-  const [filter, setFilter] = React.useState("all");
+  const [filter, setFilter] = React.useState(
+    search.subject ? canonicalSubject(search.subject) : "all",
+  );
   const [query, setQuery] = React.useState("");
   const real = !!user && user.id !== "demo-user";
+  React.useEffect(() => {
+    setStudySubject(search.subject ? canonicalSubject(search.subject) : "all");
+    setFilter(search.subject ? canonicalSubject(search.subject) : "all");
+    if (search.planned === "1") setTab("study");
+  }, [search.subject, search.topic, search.planned]);
 
   const load = React.useCallback(async () => {
     if (!user) return;
@@ -227,8 +242,15 @@ function FlashcardsPage() {
   }, [authLoading, real, load]);
 
   const dueNow = React.useMemo(
-    () => cards.filter((c) => new Date(c.due_at) <= platformDate()),
-    [cards],
+    () =>
+      cards.filter(
+        (c) =>
+          new Date(c.due_at) <= platformDate() &&
+          (!search.topic ||
+            materialTopic(c.subject, c.topic ?? "") ===
+              materialTopic(search.subject ?? c.subject, search.topic)),
+      ),
+    [cards, search.subject, search.topic],
   );
   const doneToday = cards.filter((c) => isSameAcreDay(c.last_reviewed_at)).length;
 

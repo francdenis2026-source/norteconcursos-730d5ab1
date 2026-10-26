@@ -2,6 +2,8 @@ export type TrackQuiz = { q: string; a: boolean; why: string };
 
 export type TrackLesson = {
   id: string;
+  /** Tópico real do edital/matriz de referência, quando explicitamente vinculado. */
+  syllabusTopicId?: string;
   /** Grupo do edital (ex.: "Patrimônio"). */
   group: string;
   title: string;

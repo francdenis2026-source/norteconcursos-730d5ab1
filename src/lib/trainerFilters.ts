@@ -1,3 +1,4 @@
+import { questionDisplayOrigin } from "./didacticQuestion";
 import { questionIdentity } from "./questionIdentity";
 import type { Question } from "./questionFormat";
 import { examKey, hasReviewedExplanation } from "./questionFormat";
@@ -63,7 +64,7 @@ export function filterTrainerQuestions(
       (f.year === "all" || q.year === f.year) &&
       (f.appliedExam === "all" || (isAppliedExamQuestion(q) && examKey(q) === f.appliedExam)) &&
       (f.subject === "all" || canonicalSubject(q.subject) === canonicalSubject(f.subject)) &&
-      (f.source === "all" || q.source === f.source) &&
+      (f.source === "all" || questionDisplayOrigin(q) === f.source) &&
       (f.reviewed === "all" ||
         (f.reviewed === "reviewed"
           ? hasReviewedExplanation(q)
@@ -133,27 +134,29 @@ export function trainerFilterFacets(
       }
       const rawTopic = topics.get(q.id);
       const value =
-        key === "exam"
-          ? examKey(q)
-          : key === "board"
-            ? canonicalBoard(q.board)
-            : key === "subject"
-              ? canonicalSubject(q.subject)
-              : key === "reviewed"
-                ? hasReviewedExplanation(q)
-                  ? "reviewed"
-                  : "pending"
-                : key === "topic"
-                  ? rawTopic
-                    ? (topicNamesByIdentity.get(
-                        filterTopicIdentity(scopedTopic(q.subject, rawTopic)),
-                      ) ?? "")
-                    : ""
-                  : key === "career"
-                    ? questionCareerLabel(q.career, q.contest, q.year)
-                    : key === "contest"
-                      ? questionContestLabel(q.contest)
-                      : q[key];
+        key === "source"
+          ? questionDisplayOrigin(q)
+          : key === "exam"
+            ? examKey(q)
+            : key === "board"
+              ? canonicalBoard(q.board)
+              : key === "subject"
+                ? canonicalSubject(q.subject)
+                : key === "reviewed"
+                  ? hasReviewedExplanation(q)
+                    ? "reviewed"
+                    : "pending"
+                  : key === "topic"
+                    ? rawTopic
+                      ? (topicNamesByIdentity.get(
+                          filterTopicIdentity(scopedTopic(q.subject, rawTopic)),
+                        ) ?? "")
+                      : ""
+                    : key === "career"
+                      ? questionCareerLabel(q.career, q.contest, q.year)
+                      : key === "contest"
+                        ? questionContestLabel(q.contest)
+                        : q[key];
       if (value) map.set(value, (map.get(value) ?? 0) + 1);
     }
     // Preserve counts for older plan URLs whose topic has no discipline prefix.

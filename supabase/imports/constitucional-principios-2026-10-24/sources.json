@@ -1,0 +1,26 @@
+[
+  {
+    "name": "alternative-0",
+    "url": "https://www.planalto.gov.br/ccivil_03/Constituicao/ConstituicaoCompilado.htm",
+    "status": 200,
+    "bytes": 1507134,
+    "sha256": "82a054357e7b18f0a2f1d2c1d584a1ef77ff40842cf7297d9ff9fc78f9929349",
+    "checked_at": "2026-10-24T20:38:35.690514+00:00"
+  },
+  {
+    "name": "alternative-3",
+    "url": "https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del2848compilado.htm",
+    "status": 200,
+    "bytes": 683589,
+    "sha256": "7f567d6359fa6650072427ae9fcfc4f20adfa81f04d0c861831110144820ae92",
+    "checked_at": "2026-10-24T20:38:34.437648+00:00"
+  },
+  {
+    "name": "edital",
+    "url": "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/Ed_2_2022_PMSC_Abertura_Soldado_atualizado.pdf",
+    "sha256": "707f23f56d7a24e5f12997112d6082accd09c956d732915d89d565744d659608",
+    "bytes": 936727,
+    "checked_at": "2026-10-24T20:38:35.690514+00:00",
+    "status": 200
+  }
+]

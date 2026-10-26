@@ -7,7 +7,7 @@
   .question-count-badge, .home-plans__signal, .home-platform-qr
 ) {
   transition: transform 240ms cubic-bezier(.2,.7,.2,1),
-    border-color 240ms ease, box-shadow 240ms ease;
+    border-color 240ms cubic-bezier(0.32,0.72,0,1), box-shadow 240ms cubic-bezier(0.32,0.72,0,1);
 }
 /* Leave room for the lifted edge inside horizontal carousels. */
 .home.home .home-rail__track.home-plans__grid {
@@ -22,11 +22,11 @@
 .home :is(.home-nav a, .home-login, .home-footer__links a,
   .home-footer__contact-card[href], .home-hero__explore,
   .home-preparation__challenge, summary, .home-preparation__tab, h3) {
-  transition: color 180ms ease;
+  transition: color 180ms cubic-bezier(0.32,0.72,0,1);
   text-shadow: none;
 }
 .home :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge) > svg {
-  transition: transform 180ms ease;
+  transition: transform 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home .home-plan__media { overflow: hidden; }
 .home .home-plan__media > img {

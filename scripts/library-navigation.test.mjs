@@ -1,3 +1,5 @@
+import { TRACKS } from '../src/data/tracks/index.ts';
+import { tracksOf } from '../src/lib/disciplineHub.ts';
 import * as sharedSubjects from "../src/lib/subjects.ts";
 import * as sharedTaxonomy from "../src/lib/filterTaxonomy.ts";
 import test from 'node:test';
@@ -307,15 +309,15 @@ test('New queries never display the previous query data or error while debouncin
  assert.deepEqual(JSON.parse(JSON.stringify(captures[1].queryKey)),['content-search','estupro','user',['hediondos']]);
  const none=useContentSearch('estupro','user',[]);assert.equal(none.data.length,0);assert.equal(none.isFetching,false);
 });
-function renderGlobalLibrary(filters={}) {
+function renderGlobalLibrary(filters={}, search={q:"estupro"}) {
  let stateCall=0;
- const fixture=[...items,sample('legislacao-hediondos-revisao','Legislação Especial')];
+ const fixture=[...items,sample('legislacao-hediondos-revisao','Legislação Especial'),{...sample('digital-marco-civil','Direito Digital'),title:'Marco Civil da Internet',topic_label:'Internet e privacidade'}];
  const rawHits=['codigo-penal','hediondos','armas'].map(slug=>({key:slug+':art-1',slug,lawTitle:courseSearchLibrary.libraryLawResultTitle(slug),chapter:'Crimes',unitKey:'art-1',label:'Art. 1',snippet:'Estupro no texto.',via:'texto'}));
  const calls=[];const none=()=>null;
  const fakeSearch={useContentSearch:(query,user,allowed)=>{if(user)calls.push(allowed);return {data:rawHits.filter(hit=>!allowed||allowed.includes(hit.slug)),isFetching:false,isError:false,refetch:none};}};
  const chronology=load('src/lib/legalChronology.ts');
  const match=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary});
- const router={createFileRoute:()=>options=>({...options,useSearch:()=>({q:'estupro'})}),Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+(search?'?'+new URLSearchParams(search):'')},children)};
+ const router={createFileRoute:()=>options=>({...options,useSearch:()=>search}),Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+(search?'?'+new URLSearchParams(search):'')},children)};
  const courses=laws.LEGAL_LIBRARY.map(c=>({...c,id:c.slug,overview:{current_units:1,chapters:[]}}));
  const catalog=load('src/components/library/LegalPathCatalog.tsx',{'@/lib/legalCourses':{useLegalCourses:()=>({data:courses})},'@/lib/legalLibrary':laws,'@/lib/legalChronology':chronology,'@/lib/libraryOrganization':organization,'@/lib/librarySearch':courseSearchLibrary,'./LibrarySearchMatch':match,'@tanstack/react-router':router});
  const results=load('src/components/library/ContentSearchResults.tsx',{'@/lib/contentSearch':fakeSearch,'@/lib/glossary':{searchGlossary:()=>[]},'@/lib/librarySearch':courseSearchLibrary,'@/lib/legalCourseSearch':courseSearch,'@/lib/legalChronology':chronology,'./LibrarySearchMatch':match,'@tanstack/react-router':router});
@@ -323,7 +325,9 @@ function renderGlobalLibrary(filters={}) {
   react:{...React,useState:initial=>{const pair=React.useState(initial);const name=['query','area','discipline','contest','topic','law'][stateCall++];return name&&filters[name]!==undefined?[filters[name],pair[1]]:pair;}},
   '@tanstack/react-router':router,'@/lib/filterTaxonomy':sharedTaxonomy,'@/lib/librarySearch':courseSearchLibrary,'@/lib/librarySearchScope':searchScope,'@/lib/contentSearch':fakeSearch,
   '@/lib/legalLibrary':laws,'@/lib/libraryOrganization':organization,'@/lib/legalChronology':chronology,
+  '@/data/tracks':{TRACKS},'@/lib/disciplineHub':{tracksOf},
   '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},'@/lib/studyMaterials':{useStudyMaterialList:()=>({data:fixture,isPending:false,isError:false}),useLibrarySearchContent:()=>({data:[],isPending:false,isError:false}),readSlugs:()=>[]},
+  '@/components/library/StartHere':{StartHere:()=>React.createElement('div',null,'GENERAL_RECOMMENDATIONS')},
   '@/components/library/LegalPathCatalog':catalog,'@/components/library/ContentSearchResults':results,'@/components/library/LibrarySearchMatch':match,
   '@/components/library/LibraryNavigation':load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy}),
  };
@@ -342,4 +346,42 @@ test('Library page unifies guide and article results and passes selected discipl
  assert.deepEqual(JSON.parse(JSON.stringify(hed.calls[0])),['hediondos']);
  assert.ok(hed.html.includes('/dashboard/legal-course/hediondos'));assert.ok(!hed.html.includes('/dashboard/legal-course/codigo-penal'));
  const general=renderGlobalLibrary({area:'general'});assert.equal(general.calls[0].length,0);assert.ok(!general.html.includes('Resultados nos artigos'));
+});
+
+test('Selected discipline exposes its existing study itinerary without creating another curriculum',()=>{
+ const {html}=renderGlobalLibrary({discipline:'Direito Administrativo'});
+ assert.ok(html.includes('/dashboard/trilhas?t=administrativo'));
+ assert.ok(!html.includes('/dashboard/trilhas?t=contabilidade'));
+});
+
+test('Filtered material results never include the broad law index while scoped article matches remain accessible',()=>{
+ const {html}=renderGlobalLibrary({discipline:'Direito Penal'});
+ assert.ok(!html.includes('aria-label="Estudo por lei"'));
+ assert.ok(html.includes('/dashboard/legal-course/codigo-penal'));
+ assert.ok(!html.includes('/dashboard/legal-course/armas'));
+});
+
+test('Overview deep link opens the requested subject without unrelated recommendations or collection panels',()=>{
+ const {html}=renderGlobalLibrary({}, {collection:'laws',discipline:'Direito Digital'});
+ assert.ok(html.includes('<h1>Direito Digital</h1>'));
+ assert.ok(html.includes('/dashboard/library/digital-marco-civil'));
+ assert.ok(html.includes('Internet e privacidade'));
+ assert.ok(!html.includes('GENERAL_RECOMMENDATIONS'));
+ assert.ok(!html.includes('aria-label="Coleções de estudo"'));
+ assert.ok(!html.includes('aria-label="Áreas de estudo"'));
+ assert.ok(!html.includes('aria-label="Estudo por lei"'));
+ assert.ok(!html.includes('/dashboard/legal-course/codigo-processo-penal'));
+ assert.ok(!html.includes('/dashboard/library/admin-a'));
+ assert.ok(html.includes('/dashboard/material'));
+});
+
+test('General recommendations remain limited to the unfiltered catalogue',()=>{
+ assert.ok(renderGlobalLibrary({}, {}).html.includes('GENERAL_RECOMMENDATIONS'));
+ assert.ok(!renderGlobalLibrary({area:'law'}, {}).html.includes('GENERAL_RECOMMENDATIONS'));
+});
+
+test('Personal data protection belongs to the legal collection and keeps its own discipline',()=>{
+ const item=sample('lgpd-guide','Proteção de Dados Pessoais (LGPD)');
+ assert.equal(organization.libraryCollection(item),'laws');
+ assert.equal(organization.libraryDiscipline(item),'Proteção de Dados Pessoais (LGPD)');
 });

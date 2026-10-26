@@ -26,7 +26,7 @@ import {
 import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { readSlugs, useStudyMaterialList } from "@/lib/studyMaterials";
+import { readSlugs, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS, youtubePlaylistUrl } from "@/data/mediaCatalog";
 import {
@@ -250,7 +250,7 @@ function DisciplineDetail({
         kicker="Disciplina"
         icon={Icon}
         title={<>{card.name}</>}
-        description="Materiais de estudo, trilha de aulas, videoaulas e prática desta disciplina."
+        description="Materiais, roteiro de estudo, vídeos e questões reunidos nesta disciplina."
         actions={
           <Link
             to="/dashboard/question-trainer"
@@ -269,6 +269,9 @@ function DisciplineDetail({
 
       <MaterialStudyTabs
         key={card.name}
+        textLabel="Materiais"
+        explanationLabel="Roteiro e vídeos"
+        practiceLabel="Praticar"
         text={
           <>
             {" "}
@@ -323,10 +326,10 @@ function DisciplineDetail({
             {" "}
             <section aria-labelledby="d-track" className="space-y-3">
               <h2 id="d-track" className="discipline-h">
-                <GraduationCap aria-hidden="true" size={20} /> Trilha de aulas
+                <GraduationCap aria-hidden="true" size={20} /> Roteiro de estudo
               </h2>
               {tracks.length === 0 ? (
-                <p className="discipline-none">A trilha desta disciplina está em preparação.</p>
+                <p className="discipline-none">O roteiro desta disciplina está em preparação.</p>
               ) : (
                 <ul className="grid gap-3 sm:grid-cols-2">
                   {tracks.map((track) => {
@@ -423,19 +426,50 @@ function DisciplineDetail({
               </select>
             </label>
             {user && (
-              <MaterialPractice
+              <DisciplinePracticePanel
                 key={`${card.name}:${practiceTopic}`}
                 userId={user.id}
-                label={practiceTopic || card.name}
-                scope={{
-                  subject: card.name,
-                  ...(practiceTopic ? { topic: materialTopic(card.name, practiceTopic) } : {}),
-                }}
+                subject={card.name}
+                topic={practiceTopic}
+                items={items}
               />
             )}
           </>
         }
       />
     </div>
+  );
+}
+
+function DisciplinePracticePanel({
+  userId,
+  subject,
+  topic,
+  items,
+}: {
+  userId: string;
+  subject: string;
+  topic: string;
+  items: Parameters<typeof materialsOf>[1];
+}) {
+  const selected = topic
+    ? items.find((item) => {
+        const label = (item as { topic_label?: string }).topic_label;
+        return (
+          label &&
+          (label === topic || materialTopic(subject, label) === materialTopic(subject, topic))
+        );
+      })
+    : items[0];
+  const material = useStudyMaterial(selected?.slug ?? "", !!selected);
+  return (
+    <MaterialPractice
+      userId={userId}
+      label={topic || subject}
+      scope={{ subject, ...(topic ? { topic: materialTopic(subject, topic) } : {}) }}
+      authoredKey={selected?.slug ?? subject}
+      authoredQuiz={material.data?.quiz ?? []}
+      authoredReview={material.data?.practice_review}
+    />
   );
 }

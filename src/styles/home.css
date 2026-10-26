@@ -298,7 +298,7 @@
   background: transparent;
   color: var(--home-text);
   cursor: pointer;
-  transition: background-color 160ms ease, transform 160ms var(--ease-out);
+  transition: background-color 300ms cubic-bezier(0.32,0.72,0,1), transform 300ms cubic-bezier(0.32,0.72,0,1);
 }
 .home .lp-theme-toggle:hover,
 .home-menu-trigger:hover {
@@ -2379,10 +2379,10 @@
 .home-career {
   padding: 16px 14px;
   border: 1px solid var(--home-line);
-  border-left: 3px solid var(--home-accent);
+  border-left: 1px solid var(--home-line);
   border-radius: 10px;
   background: var(--home-surface);
-  transition: transform .2s var(--ease-out), border-color .2s ease, box-shadow .2s ease;
+  transition: transform .2s var(--ease-out), border-color .2s cubic-bezier(0.32,0.72,0,1), box-shadow .2s cubic-bezier(0.32,0.72,0,1);
 }
 @media (hover: hover) and (pointer: fine) {
 .home-career:hover {
@@ -2552,7 +2552,7 @@
 .home-login,
 .home-menu nav a {
   position: relative;
-  transition: color 220ms ease;
+  transition: color 300ms cubic-bezier(0.32,0.72,0,1);
 }
 .home-nav a::after,
 .home-login::after,
@@ -3023,9 +3023,9 @@
 .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
   position: relative;
   transition:
-    box-shadow 180ms ease,
-    border-color 160ms ease,
-    background-color 160ms ease;
+    box-shadow 180ms cubic-bezier(0.32,0.72,0,1),
+    border-color 160ms cubic-bezier(0.32,0.72,0,1),
+    background-color 160ms cubic-bezier(0.32,0.72,0,1);
 }
 .home :is(a, button, summary) {
   cursor: pointer;
@@ -3034,8 +3034,8 @@
   transition:
     transform 220ms var(--ease-out),
     box-shadow 220ms var(--ease-out),
-    background-color 180ms ease,
-    border-color 180ms ease;
+    background-color 180ms cubic-bezier(0.32,0.72,0,1),
+    border-color 180ms cubic-bezier(0.32,0.72,0,1);
 }
 @media (hover: hover) and (pointer: fine) {
   .home :is(.home-button, .home-text-link, .home-final__challenge):hover {
@@ -3048,7 +3048,7 @@
 @media (prefers-reduced-motion: reduce), (hover: none) {
   .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
     transform: none;
-    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    transition: border-color 180ms cubic-bezier(0.32,0.72,0,1), box-shadow 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1);
   }
   .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details)::after {
     display: none;
@@ -3108,9 +3108,7 @@
 :root:not(.dark) .home-heading em,
 :root:not(.dark) .home-section h2 em {
   font-style: normal;
-  background: linear-gradient(95deg, var(--c-blue), var(--c-teal));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
+  color: var(--c-blue);
 }
 /* Faixas de seção com tons alternados */
 :root:not(.dark) .home-method {
@@ -3126,7 +3124,7 @@
 }
 
 /* Etapas: numeração em fichas coloridas */
-:root:not(.dark) .home-steps > li { padding: 16px; border: 1px solid oklch(0.9 0.03 262); border-radius: 12px; background: #fff; box-shadow: var(--shadow-card); border-top: 3px solid var(--step-c, var(--c-blue)); }
+:root:not(.dark) .home-steps > li { padding: 16px; border: 1px solid oklch(0.9 0.03 262); border-radius: 12px; background: #fff; box-shadow: var(--shadow-card); border-top: 2px solid var(--step-c, var(--c-blue)); }
 :root:not(.dark) .home-steps > li:nth-child(2) { --step-c: var(--c-teal); }
 :root:not(.dark) .home-steps > li:nth-child(3) { --step-c: var(--c-violet); }
 :root:not(.dark) .home-steps > li:nth-child(4) { --step-c: var(--c-amber); }
@@ -3148,7 +3146,7 @@
 :root:not(.dark) .home-tool[open], :root:not(.dark) .home-tool:hover { background: var(--c-blue-soft); }
 
 /* Carreiras */
-:root:not(.dark) .home-career { padding-left: 14px; border-left: 3px solid var(--car-c, var(--c-teal)); border-bottom-color: oklch(0.9 0.02 195); transition: background .2s; }
+:root:not(.dark) .home-career { padding-left: 14px; border-left: 2px solid var(--car-c, var(--c-teal)); border-bottom-color: oklch(0.9 0.02 195); transition: background .2s; }
 :root:not(.dark) .home-career:nth-child(3n+2) { --car-c: var(--c-blue); }
 :root:not(.dark) .home-career:nth-child(3n) { --car-c: var(--c-violet); }
 :root:not(.dark) .home-career:hover { background: #fff; }
@@ -3157,7 +3155,7 @@
 :root:not(.dark) .home-plan {
   --plan-c: var(--c-green); --plan-soft: var(--c-green-soft);
   border: 1px solid color-mix(in oklab, var(--plan-c) 30%, #fff);
-  border-top: 4px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   background: linear-gradient(180deg, var(--plan-soft) 0, #fff 42%);
   box-shadow: var(--shadow-card);
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
@@ -3223,9 +3221,7 @@
 .dark .home-heading em,
 .dark .home-section h2 em {
   font-style: normal;
-  background: linear-gradient(95deg, var(--d-blue), var(--d-teal));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
+  color: var(--d-blue);
 }
 /* Faixas de seção com tons sutis */
 .dark .home-method {
@@ -3244,7 +3240,7 @@
 .dark .home-steps > li {
   --step-c: var(--d-blue);
   padding: 16px; border: 1px solid color-mix(in oklab, var(--step-c) 24%, var(--home-line));
-  border-top: 3px solid var(--step-c); border-radius: 12px; background: var(--card);
+  border-top: 2px solid var(--step-c); border-radius: 12px; background: var(--card);
 }
 .dark .home-steps > li:nth-child(2) { --step-c: var(--d-teal); }
 .dark .home-steps > li:nth-child(3) { --step-c: var(--d-violet); }
@@ -3272,7 +3268,7 @@
 .dark .home-tool[open], .dark .home-tool:hover { background: color-mix(in oklab, var(--tool-c) 9%, var(--card)); }
 
 /* Carreiras */
-.dark .home-career { --car-c: var(--d-teal); padding-left: 14px; border-left: 3px solid var(--car-c); transition: background .2s; }
+.dark .home-career { --car-c: var(--d-teal); padding-left: 14px; border-left: 2px solid var(--car-c); transition: background .2s; }
 .dark .home-career:nth-child(3n+2) { --car-c: var(--d-blue); }
 .dark .home-career:nth-child(3n) { --car-c: var(--d-violet); }
 .dark .home-career:hover { background: color-mix(in oklab, var(--car-c) 9%, transparent); }
@@ -3281,7 +3277,7 @@
 .dark .home-plan {
   --plan-c: var(--d-green);
   border: 1px solid color-mix(in oklab, var(--plan-c) 30%, var(--home-line));
-  border-top: 4px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   background: linear-gradient(180deg, color-mix(in oklab, var(--plan-c) 10%, var(--card)) 0, var(--card) 45%);
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
 }
@@ -3475,7 +3471,7 @@
 .home-steps > li { padding: 20px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-surface); box-shadow: var(--shadow-card); }
 #concursos { background: var(--home-surface); border-block: 1px solid var(--home-line); }
 .home-careers { background: var(--home-bg); }
-.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 3px solid var(--home-accent); border-radius: 10px; background: var(--home-surface); }
+.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 1px solid var(--home-line); border-radius: 10px; background: var(--home-surface); }
 .home-careers__grid { gap: 8px 18px; }
 .home-sources { padding-block: 48px 56px; background: var(--home-surface); }
 .home-source-details { border-color: var(--home-line); border-radius: 16px; background: var(--home-bg); }
@@ -3901,7 +3897,7 @@
 .home.home .home-section-intro {
   padding: 14px 18px;
   border: 1px solid color-mix(in srgb, var(--section-color) 24%, var(--home-line));
-  border-left: 3px solid var(--section-color);
+  border-left: 1px solid var(--home-line);
   border-radius: 0 12px 12px 0;
   color: var(--home-text);
   background: var(--card);
@@ -3921,22 +3917,22 @@
 .home.home .home-core-tool h3 svg { display: none; }
 .home.home .home-steps > li {
   background: linear-gradient(155deg, color-mix(in srgb, var(--step-c, var(--home-teal)) 9%, var(--card)), var(--card));
-  border-top: 3px solid var(--step-c, var(--home-teal));
+  border-top: 2px solid var(--step-c, var(--home-teal));
 }
 .home.home .home-steps h3 { font-size: 15px; line-height: 1.4; font-weight: 700; }
 .home.home .home-steps p { font-size: 13px; line-height: 1.65; margin-top: 8px; }
 .home.home .home-tool { border-color: color-mix(in srgb, var(--tool-c, var(--home-blue)) 28%, var(--home-line)); }
 .home.home .home-tool summary h3 { font-size: 13px; line-height: 1.4; }
 .home.home .home-tool p { font-size: 14px; line-height: 1.6; }
-.home.home .home-career { border-left: 3px solid var(--section-color); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
+.home.home .home-career { border-left: 1px solid var(--home-line); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
 .home.home .home-career h3 { font-size: 14px; line-height: 1.4; }
 .home.home .home-career p { font-size: 12px; line-height: 1.5; margin-top: 5px; }
 .home.home .home-plans__signal { padding: 14px 16px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--home-violet) 28%, var(--home-line)); background: var(--card); }
 .home.home .home-plans__signal strong { font-size: 15px; color: var(--home-violet); }
 .home.home .home-plan { background: linear-gradient(155deg, color-mix(in srgb, var(--plan-c, var(--home-blue)) 8%, var(--card)), var(--card)); }
-.home.home .home-source-details { border-left: 3px solid var(--home-teal); }
-.home.home .home-start .daily-badge { border-left: 3px solid var(--home-teal); }
-.home.home .home-start .question-count-badge { border-left: 3px solid var(--home-blue); }
+.home.home .home-source-details { border-left: 1px solid var(--home-line); }
+.home.home .home-start .daily-badge { border-left: 1px solid var(--home-line); }
+.home.home .home-start .question-count-badge { border-left: 2px solid var(--home-blue); }
 .home.home .home-hero__copy > p { font-size: 15px; line-height: 1.7; }
 .home.home .home-hero__note { font-size: 12px; }
 .home.home .home-trust li { font-size: 12px; line-height: 1.5; }
@@ -4064,7 +4060,7 @@
   padding: 16px;
   gap: 10px;
   border: 1px solid color-mix(in srgb, var(--plan-c) 24%, var(--border));
-  border-top: 3px solid var(--plan-c);
+  border-top: 2px solid var(--plan-c);
   border-radius: 14px;
   background: linear-gradient(160deg, var(--plan-soft), var(--card) 65%);
   box-shadow: var(--shadow-card);
@@ -4234,9 +4230,9 @@
   transform-style: preserve-3d;
 }
 .hero-badge__tilt { transform: rotateY(-6deg); transition: transform 180ms var(--ease-out); }
-.hero-badge__float { animation: badge-rest 6.5s ease-in-out infinite; }
+.hero-badge__float { animation: badge-rest 6.5s cubic-bezier(0.32,0.72,0,1) infinite; }
 .hero-badge__glare { overflow: hidden; }
-.hero-badge__shine { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 244 214 / 40%) 50%, transparent 70%); animation: badge-shine 8s ease-in-out infinite; }
+.hero-badge__shine { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 244 214 / 40%) 50%, transparent 70%); animation: badge-shine 8s cubic-bezier(0.32,0.72,0,1) infinite; }
 .hero-badge[data-visible="false"] * { animation-play-state: paused; }
 @keyframes badge-rest { 50% { transform: translateY(-3px); } }
 @keyframes badge-shine { 0%, 65% { transform: translateX(-130%); opacity: 0; } 72% { opacity: 1; } 90%, 100% { transform: translateX(130%); opacity: 0; } }
@@ -4372,7 +4368,7 @@
   inset: 0;
   background: linear-gradient(105deg, transparent 35%, rgb(246 211 146 / 8%) 49.8%, rgb(246 211 146 / 24%) 50%, transparent 50.2%);
   transform: translateX(-110%);
-  animation: preparation-scan 5s ease-in-out 1;
+  animation: preparation-scan 5s cubic-bezier(0.32,0.72,0,1) 1;
 }
 @keyframes preparation-scan { to { transform: translateX(110%); } }
 @media (prefers-reduced-motion: reduce) { .home-preparation__sweep::after { animation: none; } }
@@ -4554,7 +4550,7 @@
   align-items: stretch;
 }
 .home.home .home-opportunity {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.32,0.72,0,1), box-shadow 0.2s cubic-bezier(0.32,0.72,0,1), border-color 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-opportunity__identity {
   flex-wrap: wrap;
@@ -4601,7 +4597,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  animation: home-pcsc-sheen 6s ease-in-out infinite;
+  animation: home-pcsc-sheen 6s cubic-bezier(0.32,0.72,0,1) infinite;
 }
 .home-pcsc-badge {
   position: absolute;
@@ -4620,7 +4616,7 @@
   color: var(--brass-foreground);
   background: var(--brass);
   box-shadow: 0 6px 16px -4px color-mix(in oklab, var(--home-gold) 75%, transparent);
-  animation: home-pcsc-pulse 2.4s ease-in-out infinite;
+  animation: home-pcsc-pulse 2.4s cubic-bezier(0.32,0.72,0,1) infinite;
 }
 .home-pcsc-badge > svg {
   width: 12px;
@@ -4646,7 +4642,7 @@
 
 /* Efeito luminoso discreto nos dois pontos de conversão principais (CTA dourado). */
 .home.home :is(.home-button--gold, .home-header__register) {
-  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.25s ease, transform 0.2s ease;
+  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.25s cubic-bezier(0.32,0.72,0,1), transform 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home :is(.home-button--gold, .home-header__register):hover,
 .home.home :is(.home-button--gold, .home-header__register):focus-visible {
@@ -4694,7 +4690,7 @@
   bottom: 2px;
   height: 1px;
   background: var(--home-accent);
-  transition: right 0.2s ease;
+  transition: right 0.2s cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-nav a:is(:hover, :focus-visible)::after {
   right: 0;
@@ -4708,7 +4704,7 @@
 .home .home-header .norte-brand__mark {
   width: 49px; height: 54px;
   filter: drop-shadow(0 2px 4px #94733526);
-  animation: norte-header-emblem 9s ease-in-out infinite;
+  animation: norte-header-emblem 9s cubic-bezier(0.32,0.72,0,1) infinite;
   transform-origin: center;
 }
 .home .home-header .norte-brand__type { --brand-size: 30px; }
@@ -4728,3 +4724,23 @@
 @media (prefers-reduced-motion: reduce) {
   .home .home-header .norte-brand__mark { animation: none; }
 }
+
+.home-daily-feature { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); align-items:center; gap:24px; margin-block:28px; padding:22px 24px; border:1px solid color-mix(in srgb, var(--home-brass, #d7ad64) 34%, var(--home-line)); border-radius:20px; background:linear-gradient(115deg, rgb(18 26 28 / 94%), rgb(15 34 37 / 82%)); box-shadow:0 18px 44px rgb(0 0 0 / .2); }
+.home-daily-feature__copy { max-width:600px; }
+.home-daily-feature__copy .home-signal { display:inline-flex; align-items:center; gap:7px; color:var(--home-brass, #e7c27f); font-size:10px; font-weight:800; letter-spacing:.14em; }
+.home-daily-feature__copy h2 { margin:8px 0 7px; color:var(--home-text, #f5f5f5); font-size:clamp(22px,3vw,34px); line-height:1.1; letter-spacing:-.035em; }
+.home-daily-feature__copy p { max-width:55ch; color:var(--home-muted, #bbc5c7); font-size:14px; line-height:1.65; }
+.home-daily-feature__card .daily-badge { width:100%; min-height:110px; margin:0; }
+@media (max-width:760px){.home-daily-feature{grid-template-columns:1fr;margin-inline:14px;padding:18px}.home-daily-feature__copy h2{font-size:25px}}
+
+.home-daily-feature .daily-badge--featured { position:relative; overflow:hidden; border:1px solid color-mix(in srgb, #e4b95f 56%, var(--home-line)); box-shadow:0 0 0 1px rgb(228 185 95 / .08), 0 16px 34px rgb(0 0 0 / .28); }
+.home-daily-feature .daily-badge--featured::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(105deg, transparent 20%, rgb(255 255 255 / .08) 48%, transparent 72%); transform:translateX(-100%); transition:transform .7s cubic-bezier(0.32,0.72,0,1); }
+.home-daily-feature .daily-badge--featured:hover::after { transform:translateX(100%); }
+
+/* Homepage containment: every visual layer stays inside the viewport. */
+.home, .home main, .home section, .home-container { min-width: 0; max-width: 100%; overflow-x: clip; }
+.home img, .home video, .home iframe { max-width: 100%; }
+.home :is(.home-hero__grid,.home-preparation__band,.home-operations,.home-plans__grid,.home-footer__grid) > * { min-width: 0; }
+.home :is(h1,h2,h3,p,a,span) { overflow-wrap: anywhere; }
+.home .home-container { width: min(100% - 32px, 1240px); margin-inline: auto; }
+@media (max-width: 640px) { .home .home-container { width: min(100% - 24px, 1240px); } .home .home-hero__grid { grid-template-columns: minmax(0,1fr); } .home .home-preparation__band { grid-template-columns: minmax(0,1fr); } }

@@ -4,6 +4,10 @@ import { classifyTopic } from "@/lib/questionTopics";
 /** Disciplina de questões correspondente a cada curso por disciplina. */
 export const TRACK_SUBJECT: Record<string, string> = {
   portugues: "Língua Portuguesa",
+  matematica: "Matemática",
+  fisica: "Física",
+  quimica: "Química",
+  ingles: "Língua Inglesa",
   "raciocinio-logico": "Raciocínio Lógico",
   constitucional: "Direito Constitucional",
   administrativo: "Direito Administrativo",

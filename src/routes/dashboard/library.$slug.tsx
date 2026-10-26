@@ -1,3 +1,4 @@
+import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
@@ -71,7 +72,10 @@ function MaterialPage() {
   const { catalog } = useMediaCatalog();
 
   useEffect(() => {
-    if (material) markSlugRead(material.slug);
+    if (material) {
+      markSlugRead(material.slug);
+      window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: material.discipline, topic: material.topic_label ?? material.title } }));
+    }
   }, [material]);
 
   const videos = useMemo(() => {
@@ -131,8 +135,8 @@ function MaterialPage() {
     >
       <ArrowLeft />{" "}
       {material && libraryCollection(material) === "subjects"
-        ? "Materiais por disciplina"
-        : "Biblioteca de leis"}
+        ? `Materiais · ${material?.discipline ?? "disciplina"}`
+        : `Legislação · ${material?.discipline ?? "biblioteca"}`}
     </Link>
   );
 
@@ -229,7 +233,7 @@ function MaterialPage() {
         <h1>{material.title}</h1>
         {material.summary && <p>{material.summary}</p>}
         <ul className="library-meta">
-          <li>{material.topic_label}</li>
+          <li><strong>Assunto:</strong> {material.topic_label}</li>
           <li>
             <Clock3 /> {readingMinutes(material.body_md)} min de leitura
           </li>
@@ -241,7 +245,9 @@ function MaterialPage() {
         key={material.slug}
         text={
           <>
-            <HighlightToggle />
+            <HighlightToggle
+              legend={!!materialLawSlug(material) || /direito|legisla/i.test(material.discipline)}
+            />
             {materialLawSlug(material) && (
               <Link
                 to="/dashboard/legal-course/$slug"
@@ -252,8 +258,12 @@ function MaterialPage() {
               </Link>
             )}
 
-            <div className="surface-card library-body">
-              {materialLawSlug(material) || material.legal_review ? (
+            <div
+              className={`surface-card library-body ${material.discipline === "Língua Portuguesa" ? "library-body--portuguese" : ""}`}
+            >
+              {material.discipline === "Língua Portuguesa" ? (
+                <PortugueseStudyReading source={material.body_md} />
+              ) : materialLawSlug(material) || material.legal_review ? (
                 <LegalStudyReading source={material.body_md} markdown />
               ) : (
                 <Markdown source={material.body_md} />
@@ -294,6 +304,7 @@ function MaterialPage() {
             <WorkedExamples
               key={`${user?.id}:${material.slug}`}
               slug={material.slug}
+              languageStudy={material.discipline === "Língua Portuguesa"}
               enabled={signedIn}
             />
 
@@ -315,6 +326,9 @@ function MaterialPage() {
             <MaterialPractice
               key={material.slug}
               userId={user!.id}
+              authoredQuiz={material.quiz ?? []}
+              authoredReview={material.practice_review}
+              authoredKey={material.slug}
               label={material.topic_label ?? material.title}
               scope={{
                 subject: material.discipline,
@@ -323,18 +337,27 @@ function MaterialPage() {
                 ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
               }}
             />
-            <details className="rounded-xl border p-3">
-              <summary className="cursor-pointer font-semibold">
-                Fixação do material e flashcards
-              </summary>
-              <StudyPractice
-                flashcards={material.flashcards ?? []}
-                quiz={material.quiz ?? []}
-                slug={material.slug}
-                subject={material.discipline}
-                topic={material.topic_label ?? material.title}
-              />
-            </details>
+            {(() => {
+              const flashcards = material.flashcards ?? [];
+              return flashcards.length > 0 ? (
+                <details className="rounded-xl border p-3">
+                  <summary className="cursor-pointer font-semibold">
+                    Flashcards de revisão ({flashcards.length})
+                  </summary>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Revise os conceitos essenciais ou salve os cartões no seu baralho. As questões
+                    ficam somente na atividade acima, sem repetição.
+                  </p>
+                  <StudyPractice
+                    flashcards={flashcards}
+                    quiz={[]}
+                    slug={material.slug}
+                    subject={material.discipline}
+                    topic={material.topic_label ?? material.title}
+                  />
+                </details>
+              ) : null;
+            })()}
           </>
         }
       />

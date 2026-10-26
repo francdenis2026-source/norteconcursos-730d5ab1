@@ -175,7 +175,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation: footer-insignia-rest 6.5s ease-in-out infinite;
+  animation: footer-insignia-rest 6.5s cubic-bezier(0.32,0.72,0,1) infinite;
 }
 .home-footer__insignia-tilt {
   position: relative;
@@ -271,7 +271,7 @@
   position: relative;
   padding-inline: 12px;
   border-radius: 7px;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition: color 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home.home :is(.home-nav a, .home-login):is(:hover, :focus-visible) {
   color: var(--landing-nav-active);
@@ -284,10 +284,10 @@
   height: 1px;
   background: var(--landing-nav-active);
   transform-origin: left;
-  transition: transform 180ms ease;
+  transition: transform 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-header__register {
-  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: background-color 180ms cubic-bezier(0.32,0.72,0,1), border-color 180ms cubic-bezier(0.32,0.72,0,1), box-shadow 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-header__register:is(:hover, :focus-visible) {
   background: var(--brass-hover);
@@ -299,7 +299,7 @@
   outline: 2px solid var(--landing-nav-active);
   outline-offset: 3px;
 }
-.home-menu nav a { border-radius: 6px; padding-inline: 10px; transition: color 180ms ease, background-color 180ms ease; }
+.home-menu nav a { border-radius: 6px; padding-inline: 10px; transition: color 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1); }
 .home-menu nav a:is(:hover, :focus-visible) { color: var(--landing-nav-active); background: color-mix(in srgb, var(--landing-nav-active) 9%, transparent); }
 .home-menu nav a::after { background: var(--landing-nav-active); transform-origin: left; }
 .home-menu nav a:focus-visible { outline: 2px solid var(--landing-nav-active); outline-offset: 2px; }
@@ -308,21 +308,21 @@
   padding-inline: 8px;
   margin-inline: -8px;
   border-radius: 5px;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition: color 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-footer--command .home-footer__links a::after {
   content: "↗";
   color: var(--stage-gold);
   opacity: 0;
   transform: translateX(-3px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 180ms cubic-bezier(0.32,0.72,0,1), transform 180ms cubic-bezier(0.32,0.72,0,1);
 }
 .home.home .home-footer--command .home-footer__links a:is(:hover, :focus-visible) {
   color: var(--stage-gold);
   background: rgb(232 205 153 / 9%);
 }
 .home.home .home-footer--command .home-footer__links a:is(:hover, :focus-visible)::after { opacity: 1; transform: translateX(0); }
-.home.home .home-footer--command .home-platform-qr { transition: border-color 180ms ease, background-color 180ms ease, transform 160ms var(--ease-out); }
+.home.home .home-footer--command .home-platform-qr { transition: border-color 180ms cubic-bezier(0.32,0.72,0,1), background-color 180ms cubic-bezier(0.32,0.72,0,1), transform 160ms var(--ease-out); }
 .home.home .home-footer--command .home-platform-qr:is(:hover, :focus-visible) { border-color: var(--stage-gold); background: rgb(232 205 153 / 9%); }
 .home.home .home-footer--command .home-platform-qr:active { transform: scale(0.98); }
 @media (prefers-reduced-motion: reduce) {

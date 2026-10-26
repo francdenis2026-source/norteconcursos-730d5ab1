@@ -1,5 +1,6 @@
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import "@/styles/student-desk.css";
+import "@/styles/student-overview.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -247,7 +248,7 @@ function StudentHome({ user }: { user: UserProfile }) {
     }
   };
   return (
-    <div className="student-home student-hub student-desk">
+    <div className="student-home student-hub student-desk student-overview">
       <header className="student-hub__masthead student-hub__masthead--careers workspace-banner">
         <div className="student-hub__hero-copy">
           <p className="student-hub__welcome">
@@ -256,16 +257,6 @@ function StudentHome({ user }: { user: UserProfile }) {
           <h1 id="student-home-title">Área do aluno</h1>
           <p>Seu estudo, suas prioridades e sua evolução.</p>
           <div className="student-hub__masthead-stats" aria-label="Seu progresso">
-            <HeroStat
-              icon={CheckCircle2}
-              label="Questões hoje"
-              value={stats ? number(stats.today) : "—"}
-            />
-            <HeroStat
-              icon={TrendingUp}
-              label="Aproveitamento"
-              value={stats?.accuracy != null ? `${stats.accuracy}%` : "—"}
-            />
             <HeroStat
               icon={Target}
               label={days !== null && days < 0 ? "Dias desde a prova" : "Dias p/ a prova"}
@@ -415,7 +406,11 @@ function StudentHome({ user }: { user: UserProfile }) {
           </Link>
         </section>
       )}
-      <div className="student-hub__workspace">
+      <div
+        className="student-hub__workspace"
+        role="region"
+        aria-label="Seu estudo de hoje e prioridades"
+      >
         <div className="student-hub__main">
           <section
             className="student-home__card student-home__schedule"
@@ -885,7 +880,9 @@ function Metric({
       </span>
       <div>
         <h2>{label}</h2>
-        <strong>{value}</strong>
+        <strong data-placeholder={/^(Indisponível|Sem respostas)$/.test(value) || undefined}>
+          {value}
+        </strong>
         <p>{detail}</p>
       </div>
       <ArrowRight className="student-home__metric-arrow" aria-hidden="true" />

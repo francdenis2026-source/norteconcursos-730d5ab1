@@ -42,6 +42,10 @@
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+
+/* Percursos legais usam uma identificação curta; não precisam de uma faixa
+   vazia antes do breadcrumb. */
+.legal-course-page { margin-top: -12px; }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner::before,
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner::after { content: none !important; display: none !important; }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner h1 {

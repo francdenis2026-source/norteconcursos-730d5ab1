@@ -116,16 +116,36 @@ export const PORTUGUES_1: TrackLesson[] = [
   },
   {
     id: "pt-redacao-oficial",
+    syllabusTopicId: "13a80069-1852-447d-a71b-1c8f2489c487",
     group: "Redação oficial",
     title: "Redação oficial",
     edital: "Redação oficial: características e documentos",
-    simples: "A redação oficial é a forma como o poder público se comunica. Suas qualidades são impessoalidade, clareza, concisão, formalidade e uniformidade, com o padrão culto da língua. Os documentos mais comuns são ofício, memorando, requerimento e ata. Ofício é usado entre órgãos e com particulares; memorando circula dentro do mesmo órgão.",
-    pontos: ["Impessoalidade: sem opinião pessoal; texto em nome do órgão.", "Clareza e concisão: dizer o necessário, com precisão.", "Formalidade: tratamento adequado e linguagem culta.", "Não se usa gíria, nem abreviações informais.", "O fecho de ofício e memorando é padronizado."],
-    exemplo: "Para pedir informação a outro órgão, escreve-se um ofício; para avisar outra seção do mesmo órgão, usa-se um memorando.",
-    atencao: ["Redação oficial não é literária: evite adjetivos desnecessários e floreios.", "Confira o manual de redação vigente, pois o padrão dos documentos pode ser atualizado."],
+    simples:
+      "A redação oficial é a forma como o poder público se comunica. Suas qualidades são impessoalidade, clareza, concisão, formalidade e uniformidade, com o padrão culto da língua. As funções de ofício, requerimento, ata e relatório devem ser reconhecidas no contexto. Confira o manual e a norma aplicável antes de usar um modelo antigo de aviso ou memorando.",
+    pontos: [
+      "Impessoalidade: sem opinião pessoal; texto em nome do órgão.",
+      "Clareza e concisão: dizer o necessário, com precisão.",
+      "Formalidade: tratamento adequado e linguagem culta.",
+      "Não se usa gíria, nem abreviações informais.",
+      "O fecho deve observar o gênero e a norma aplicável; não existe fecho universal para todo documento.",
+    ],
+    exemplo:
+      "Uma comunicação que pede informação identifica o destinatário competente, o assunto e a ação esperada, com linguagem clara. As formas de tratamento no âmbito federal devem considerar o Decreto 9.758/2019, sem extrapolar suas regras para qualquer outro âmbito.",
+    atencao: [
+      "Redação oficial não é literária: evite adjetivos desnecessários e floreios.",
+      "Confira o manual de redação vigente, pois o padrão dos documentos pode ser atualizado.",
+    ],
     quiz: [
-      { q: "A impessoalidade é uma característica da redação oficial.", a: true, why: "O texto fala em nome do órgão, não de opiniões pessoais." },
-      { q: "O memorando é o documento usado para comunicação entre órgãos diferentes.", a: false, why: "Entre órgãos diferentes, usa-se ofício; o memorando é para comunicação interna." },
+      {
+        q: "A impessoalidade é uma característica da redação oficial.",
+        a: true,
+        why: "O texto fala em nome do órgão, não de opiniões pessoais.",
+      },
+      {
+        q: "O Decreto 9.758/2019 aplica-se automaticamente a toda comunicação de todos os Poderes e entes federativos.",
+        a: false,
+        why: "O decreto possui âmbito e ressalvas próprios. Não se deve transformar sua disciplina federal em regra universal para todo órgão ou ente.",
+      },
     ],
   },
 ];

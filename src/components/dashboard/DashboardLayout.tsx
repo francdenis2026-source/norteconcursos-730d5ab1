@@ -1,3 +1,6 @@
+import { STUDENT_GROUP_TONES as GROUP_HUE } from "@/lib/studentPalette";
+import "@/styles/student-control-colors.css";
+import "@/styles/study-experience.css";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
@@ -108,18 +111,6 @@ import { NorteBrand } from "@/components/brand/NorteBrand";
 type MenuItem = NavigationItem;
 
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal" | "indigo" | "slate";
-const GROUP_HUE: Record<string, Hue> = {
-  Planejamento: "gold",
-  "Meu concurso": "sky",
-  "Material didático": "violet",
-  Ferramentas: "teal",
-  Questões: "emerald",
-  Provas: "rose",
-  ENEM: "indigo",
-  Desempenho: "orange",
-  Conta: "slate",
-  Administração: "gold",
-};
 const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard": "gold",
   "/dashboard/question-trainer": "emerald",
@@ -155,17 +146,17 @@ const MENU: MenuItem[] = [
   { group: "Meu concurso", label: "Meu objetivo", icon: Target, href: "/dashboard/my-contest" },
   { group: "Meu concurso", label: "Estudar pelo edital", icon: MapPin, href: "/dashboard/edital" },
   { group: "Meu concurso", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { group: "Meu concurso", label: "Buscar concursos", icon: Search, href: "/dashboard/questions" },
+  { group: "Meu concurso", label: "Concursos e editais", icon: Search, href: "/dashboard/questions" },
   { group: "Meu concurso", label: "Radar do edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Meu concurso", label: "Panorama e tendências", icon: BarChart3, href: "/dashboard/exam-panorama" },
   { group: "Meu concurso", label: "Perfil das bancas", icon: Landmark, href: "/dashboard/perfil-bancas" },
   { group: "Meu concurso", label: "Inteligência IDECAN • PCAC", icon: Radar, href: "/dashboard/inteligencia-idecan" },
-  { group: "Material didático", label: "Visão geral dos materiais", icon: Library, href: "/dashboard/material" },
-  { group: "Material didático", label: "Legislação e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
+  { group: "Material didático", label: "Catálogo de materiais", icon: Library, href: "/dashboard/material" },
+  { group: "Material didático", label: "Leis e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
   { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
   { group: "Material didático", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
   { group: "Material didático", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
-  { group: "Material didático", label: "Disciplinas", icon: BookOpen, href: "/dashboard/disciplinas" },
+  { group: "Material didático", label: "Áreas e disciplinas", icon: BookOpen, href: "/dashboard/disciplinas" },
   { group: "Material didático", label: "Videoaulas e podcasts", icon: PlayCircle, href: "/dashboard/media" },
   { group: "Material didático", label: "Dicionário de estudo", icon: BookA, href: "/dashboard/dicionario" },
   { group: "Material didático", label: "Redação para concursos", icon: PenLine, href: "/dashboard/essays" },
@@ -173,7 +164,7 @@ const MENU: MenuItem[] = [
   { group: "Questões", label: "Caderno de erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
   { group: "Questões", label: "Coleções de questões", icon: BookOpen, href: "/dashboard/notebooks" },
-  { group: "Questões", label: "Explorar questões", icon: BookMarked, href: "/dashboard/question-bank" },
+  { group: "Questões", label: "Acervo de questões", icon: BookMarked, href: "/dashboard/question-bank" },
   {
     group: "Questões",
     label: "Resolver com IA",
@@ -372,6 +363,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => setIsDarkMode(getActiveTheme() === "dark"), []);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [studyContext, setStudyContext] = React.useState<{ discipline: string; topic: string } | null>(null);
+  React.useEffect(() => {
+    const onContext = (event: Event) => {
+      const detail = (event as CustomEvent<{ discipline?: string; topic?: string }>).detail;
+      if (detail?.discipline) setStudyContext({ discipline: detail.discipline, topic: detail.topic ?? "" });
+    };
+    window.addEventListener("norte:study-context", onContext);
+    return () => window.removeEventListener("norte:study-context", onContext);
+  }, []);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
   const [avatarUrl, setAvatarUrl] = React.useState<string | null>(null);
@@ -384,6 +384,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const isAdmin = user?.role === "admin";
   const brandPath = location.pathname.replace(/\/+$/, "") || "/";
+  const isStudyReading = !isAdmin && (
+    location.pathname.startsWith("/dashboard/library/") ||
+    location.pathname.startsWith("/dashboard/legal-course/") ||
+    location.pathname.startsWith("/dashboard/trilhas")
+  );
   const brandBg = isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
     ? undefined
     : BRAND_BG_ROUTES[brandPath] ?? "blue";
@@ -600,14 +605,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <button
             type="button"
             className="app-sidebar__search"
-            onClick={() => setPaletteOpen(true)}
-            aria-label="Buscar área da plataforma"
+            onClick={() => (isStudyReading ? fullscreen.enter() : setPaletteOpen(true))}
+            aria-label={isStudyReading ? "Iniciar estudo cronometrado" : "Buscar área da plataforma"}
           >
-            <Search />
+            {isStudyReading ? <Timer /> : <Search />}
             {!compactSidebar && (
               <>
-                <span>Buscar área</span>
-                <span className="kbd">Ctrl K</span>
+                <span>{isStudyReading ? "Estudo cronometrado" : "Buscar área"}</span>
+                {!isStudyReading && <span className="kbd">Ctrl K</span>}
               </>
             )}
           </button>
@@ -669,7 +674,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : studentGroupLabel(current.group))}</span>}
               </div>
             </div>
 
@@ -742,7 +747,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </Hint>
           </div>}
 
-          {!isAdmin && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
+          {!isAdmin && current?.group !== "Material didático" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"

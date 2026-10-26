@@ -284,7 +284,7 @@ export function searchLaws(query: string, rows: LawRow[] = LAW_ROWS): LawHit[] {
   );
 }
 
-export type LawSort = "relevancia" | "az" | "numero" | "recentes";
+export type LawSort = "relevancia" | "az" | "numero" | "recentes" | "antigas";
 export function sortLaws(rows: LawRow[], mode: LawSort): LawRow[] {
   const copy = [...rows];
   if (mode === "az") return copy.sort((a, b) => a.nickname.localeCompare(b.nickname, "pt-BR"));
@@ -295,6 +295,7 @@ export function sortLaws(rows: LawRow[], mode: LawSort): LawRow[] {
         (a.year ?? 0) - (b.year ?? 0),
     );
   if (mode === "recentes") return copy.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+  if (mode === "antigas") return copy.sort((a, b) => (a.year ?? Infinity) - (b.year ?? Infinity));
   return copy;
 }
 export const lawsByTheme = (rows: LawRow[], theme: string) =>

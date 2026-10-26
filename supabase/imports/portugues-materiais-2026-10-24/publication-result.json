@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-25T03:25:05.423421+00:00",
+  "rolled_back": false,
+  "materials_sql_sha256": "fe0d2c0492f762ef05c99bbe4019510863a165d75cab28f67b687b9ee4528e99",
+  "questions_sql_sha256": "f0f1302f5cff647d185a7d93b858b0772a2907fa5d965098f039d818ec1040da",
+  "result": [
+    {
+      "review_status": "duplicate_reused",
+      "count": 3
+    },
+    {
+      "review_status": "needs_review",
+      "count": 94
+    },
+    {
+      "review_status": "published",
+      "count": 105
+    }
+  ]
+}

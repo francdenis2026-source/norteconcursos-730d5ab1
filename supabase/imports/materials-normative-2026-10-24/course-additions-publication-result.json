@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-24T17:51:55.626269+00:00",
+  "file": "03-publish-course-additions.sql",
+  "sql_sha256": "97d8615e99ae57aa17f5697d12a1571b4ea31e46c8f7d2ba379babba0c5e1fa3",
+  "http_status": 201,
+  "result": [
+    {
+      "confirmed_materials": 14,
+      "additional_exercises": 170
+    }
+  ]
+}

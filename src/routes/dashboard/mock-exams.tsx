@@ -1,3 +1,8 @@
+import { matchesPlannedStudy, plannedSubjects, plannedAvailability } from "@/lib/plannedStudy";
+import { materialTopic } from "@/lib/materialPractice";
+import { classifyTopic } from "@/lib/questionTopics";
+import { canonicalTopic } from "@/lib/subjects";
+import { parseDidacticProvenance } from "@/lib/didacticQuestion";
 import { TacticalClock } from "@/components/brand/TacticalClock";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -40,6 +45,7 @@ import {
 } from "@/lib/examScoring";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 import { AttemptHistoryItem } from "@/components/dashboard/AttemptHistoryList";
+import { StudyCompletionNotice } from "@/components/dashboard/StudyCompletionNotice";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
 import { useLockedAnswers } from "@/hooks/useLockedAnswers";
@@ -124,6 +130,11 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "duration"
+      | "plannedSubjects"
+      | "planned"
+      | "materialTopic"
+      | "studySubject"
       | "mode"
       | "area"
       | "contest"
@@ -138,6 +149,13 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
       string | undefined
     >
   > => ({
+    duration: typeof search["duration"] === "string" ? search["duration"] : undefined,
+    plannedSubjects:
+      typeof search["plannedSubjects"] === "string" ? search["plannedSubjects"] : undefined,
+    planned: search["planned"] === "1" ? "1" : undefined,
+    materialTopic:
+      typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
+    studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
     mode: search["mode"] === "enem" ? "enem" : undefined,
     area: typeof search["area"] === "string" ? search["area"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
@@ -190,7 +208,7 @@ function ProfessionalSimulator() {
   const [paperKey, setPaperKey] = React.useState("");
   const [customTitle, setCustomTitle] = React.useState("Meu simulado");
   // Montagem livre começa só com questões inéditas, para não repetir o que o aluno já respondeu.
-  const [onlyNew, setOnlyNew] = React.useState(true);
+  const [onlyNew, setOnlyNew] = React.useState(routeSearch.planned !== "1");
   const [sessionConfig, setSessionConfig] = React.useState<{
     owner: string;
     scope: "enem" | "contests";
@@ -295,7 +313,9 @@ function ProfessionalSimulator() {
     routeSearch.reviewed,
   ]);
   const [limit, setLimit] = React.useState(20);
-  const [durationMinutes, setDurationMinutes] = React.useState(30);
+  const [durationMinutes, setDurationMinutes] = React.useState(
+    Math.min(180, Math.max(5, Number(routeSearch.duration) || 30)),
+  );
   React.useEffect(() => {
     if (!isEnemMode) {
       setLimit((n) => (LIMITS.includes(n) ? n : 20));
@@ -381,7 +401,7 @@ function ProfessionalSimulator() {
         ),
         query(
           "curated_question_catalog",
-          "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
+          "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis,didactic_provenance",
         ),
         query(
           "board_exam_questions",
@@ -426,6 +446,7 @@ function ProfessionalSimulator() {
           id: "curated_question_catalog:" + String(row["id"]),
           originalId: String(row["id"]),
           sourceKind: "curated",
+          didacticProvenance: parseDidacticProvenance(row["didactic_provenance"]),
           contest: String(row["contest_name"]),
           year: Number(row["contest_year"]),
           career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
@@ -578,8 +599,21 @@ function ProfessionalSimulator() {
     setCategory("all");
   };
   const available = React.useMemo(
-    () => filterSimulatorQuestions(scopedCatalog, filters),
-    [scopedCatalog, filters],
+    () =>
+      filterSimulatorQuestions(scopedCatalog, filters).filter((q) =>
+        matchesPlannedStudy(q, {
+          subject: routeSearch.studySubject,
+          topic: routeSearch.materialTopic,
+          subjects: plannedSubjects(routeSearch.plannedSubjects),
+        }),
+      ),
+    [
+      scopedCatalog,
+      filters,
+      routeSearch.materialTopic,
+      routeSearch.plannedSubjects,
+      routeSearch.studySubject,
+    ],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
   // Comparáveis do acervo, calculados uma vez por carga: filtros e respostas só reaproveitam as chaves.
@@ -654,6 +688,10 @@ function ProfessionalSimulator() {
       );
       return;
     }
+    if (routeSearch.planned === "1") {
+      const message = plannedAvailability(sessionPool.length, limit);
+      if (message) toast.info(message);
+    }
     setInvalidDraft(false);
     setRankingSummary(null);
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
@@ -693,6 +731,58 @@ function ProfessionalSimulator() {
     setStage("active");
     scrollAppToTop();
   }
+
+  const plannedLaunch = React.useRef("");
+  React.useEffect(() => {
+    const key = JSON.stringify([
+      routeSearch.subject,
+      routeSearch.materialTopic,
+      routeSearch.plannedSubjects,
+    ]);
+    if (
+      routeSearch.planned !== "1" ||
+      loading ||
+      authLoading ||
+      loadError ||
+      historyLoading ||
+      historyError ||
+      !sessionsReady ||
+      stage !== "setup" ||
+      !user ||
+      plannedLaunch.current === key
+    )
+      return;
+    const frame = requestAnimationFrame(() => {
+      plannedLaunch.current = key;
+      if (resumeDraft) {
+        const ids = new Set(sessionPool.map((q) => q.id));
+        if (resumeDraft.questions.length && resumeDraft.questions.every((q) => ids.has(q.id)))
+          resumeSimulator();
+        else
+          toast.info(
+            "Há um simulado de outro assunto em andamento. Retome ou encerre essa sessão antes de iniciar a atividade da agenda.",
+          );
+        return;
+      }
+      startSimulator();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [
+    routeSearch.planned,
+    routeSearch.subject,
+    routeSearch.materialTopic,
+    loading,
+    authLoading,
+    loadError,
+    historyLoading,
+    historyError,
+    sessionsReady,
+    stage,
+    user,
+    sessionPool,
+    resumeDraft,
+    routeSearch.plannedSubjects,
+  ]);
 
   function cancelSimulator() {
     const wasEarly = elapsedSeconds < 60;
@@ -1041,27 +1131,34 @@ function ProfessionalSimulator() {
     sessionConfig.scope === scope
   )
     return (
-      <ActiveSimulator
-        questions={questions}
-        currentIndex={currentIndex}
-        current={current}
-        repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
-        answers={answers}
-        flagged={flagged}
-        timeLeft={timeLeft}
-        durationSeconds={durationMinutes * 60}
-        answeredCount={answeredCount}
-        saving={saving}
-        storageError={storageError}
-        skipped={skipped}
-        isRepeated={isRepeated}
-        setCurrentIndex={setCurrentIndex}
-        setAnswers={setAnswers}
-        setFlagged={setFlagged}
-        setSkipped={setSkipped}
-        finish={finishSimulator}
-        cancel={cancelSimulator}
-      />
+      <>
+        {routeSearch.planned === "1" && questions.length < limit && (
+          <p role="status" className="rounded-xl border border-amber-500/40 bg-card p-3 text-sm">
+            {plannedAvailability(questions.length, limit)}
+          </p>
+        )}
+        <ActiveSimulator
+          questions={questions}
+          currentIndex={currentIndex}
+          current={current}
+          repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
+          answers={answers}
+          flagged={flagged}
+          timeLeft={timeLeft}
+          durationSeconds={durationMinutes * 60}
+          answeredCount={answeredCount}
+          saving={saving}
+          storageError={storageError}
+          skipped={skipped}
+          isRepeated={isRepeated}
+          setCurrentIndex={setCurrentIndex}
+          setAnswers={setAnswers}
+          setFlagged={setFlagged}
+          setSkipped={setSkipped}
+          finish={finishSimulator}
+          cancel={cancelSimulator}
+        />
+      </>
     );
   if (stage === "result" && sessionConfig?.owner === user.id && sessionConfig.scope === scope)
     return (
@@ -1812,9 +1909,18 @@ function ActiveSimulator(p: {
                 : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
             )}
           >
-            <span role="timer" aria-live="off" aria-label={`Tempo restante: ${formatTime(timeLeft)}`}>
-              <TacticalClock time={formatTime(timeLeft)} seconds={timeLeft} label="Tempo restante"
-                progress={durationSeconds > 0 ? timeLeft / durationSeconds : 0} urgent={timeLeft < 300} />
+            <span
+              role="timer"
+              aria-live="off"
+              aria-label={`Tempo restante: ${formatTime(timeLeft)}`}
+            >
+              <TacticalClock
+                time={formatTime(timeLeft)}
+                seconds={timeLeft}
+                label="Tempo restante"
+                progress={durationSeconds > 0 ? timeLeft / durationSeconds : 0}
+                urgent={timeLeft < 300}
+              />
             </span>
           </div>
           <div className="flex gap-2">
@@ -2027,7 +2133,7 @@ function ActiveSimulator(p: {
                   aria-current={i === currentIndex ? "step" : undefined}
                   onClick={() => setCurrentIndex(i)}
                   className={cn(
-                    "relative flex h-10 items-center justify-center rounded-lg border text-xs font-bold transition",
+                    "relative flex h-11 items-center justify-center rounded-lg border text-xs font-bold transition",
                     i === currentIndex
                       ? "border-primary bg-primary text-primary-foreground"
                       : answers[q.id]
@@ -2061,7 +2167,7 @@ function ActiveSimulator(p: {
               Depois de finalizar, suas respostas não poderão ser alteradas nesta tentativa.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid grid-cols-3 gap-3 rounded-xl bg-muted p-4 text-center text-sm">
+          <div className="grid grid-cols-1 gap-3 rounded-xl bg-muted p-4 text-center text-sm sm:grid-cols-3">
             <div>
               <strong className="block text-xl">{answeredCount}</strong>Respondidas
             </div>
@@ -2195,6 +2301,7 @@ function ResultView({
           </div>
         )}
       </section>
+      <StudyCompletionNotice kind="simulado" />
       <section className="mock-result-hero tactical-feature-hero rounded-2xl p-7 text-white shadow-xl md:p-10 workspace-banner">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
