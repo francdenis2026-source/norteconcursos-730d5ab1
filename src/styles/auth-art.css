@@ -316,3 +316,45 @@ html:not(.dark) body .auth .auth-field input { background: #faf8f2; }
   html:not(.dark) body .auth.auth { background: #f1ede2; }
   html:not(.dark) body .auth-backdrop::after { background: linear-gradient(180deg, rgb(247 244 236 / .5), rgb(241 236 224 / .72)); }
 }
+
+/* Entrar e Criar conta com a MESMA geometria: ao trocar de aba nada redimensiona nem "pula".
+   Faixa, abas, título, campos, botão e card têm as mesmas medidas nos dois modos; só o conteúdo muda. */
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) {
+  --auth-card-h: min(calc(100dvh - clamp(54px, 8dvh, 76px)), 740px);
+}
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-panel {
+  padding-block: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-bottom));
+}
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-access-nav { padding-bottom: clamp(4px, 1dvh, 10px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-access-nav .auth-back {
+  min-height: clamp(34px, 4.6dvh, 44px); padding-block: 0; font-size: 13px;
+}
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-card {
+  display: flex; flex-direction: column; justify-content: flex-start;
+  min-height: var(--auth-card-h); margin-block: 0 auto;
+  padding-bottom: clamp(10px, 1.8dvh, 18px);
+}
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-identity {
+  flex: none; min-height: clamp(72px, 11dvh, 124px); margin-bottom: clamp(8px, 1.6dvh, 16px); padding-block: 10px;
+}
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-identity strong { margin-top: 4px; font-size: clamp(16px, 2.5dvh, 21px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-identity__career { display: none; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-tabs { flex: none; margin-bottom: clamp(8px, 1.4dvh, 14px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-tabs button { min-height: clamp(34px, 4.6dvh, 40px); padding-block: 4px; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-heading { flex: none; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-heading h2 { font-size: clamp(1.15rem, 2.7dvh, 1.45rem); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-heading p { display: none; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-form { gap: clamp(8px, 1.4dvh, 12px); margin-top: clamp(8px, 1.6dvh, 14px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-field { gap: clamp(3px, .6dvh, 7px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-field label { font-size: 13px; line-height: 1.3; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-field input { height: clamp(38px, 5.2dvh, 46px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-field__toggle { width: 36px; height: 36px; }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-submit { min-height: clamp(40px, 5.4dvh, 46px); padding-block: 8px; margin-top: 0; }
+/* rodapé do card sempre na base, igual nos dois modos */
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-security { margin-top: auto; padding-top: clamp(6px, 1dvh, 14px); }
+html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-dev-signature { margin-top: clamp(4px, .8dvh, 10px); }
+/* sem animação de tamanho entre as abas */
+html body .auth.auth .auth-card, html body .auth.auth .auth-identity, html body .auth.auth .auth-form { transition: none; animation: none; }
+@media (max-height: 640px) {
+  html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) :is(.auth-security, .auth-dev-signature) { display: none; }
+}
