@@ -184,12 +184,35 @@
   color: var(--home-text);
   background: color-mix(in srgb, var(--home-tint) 75%, transparent);
   border: 1px solid transparent;
-  transition: background-color 160ms cubic-bezier(0.32,0.72,0,1), border-color 160ms cubic-bezier(0.32,0.72,0,1), color 160ms cubic-bezier(0.32,0.72,0,1);
+  transition: background-color 160ms cubic-bezier(0.32,0.72,0,1), border-color 160ms cubic-bezier(0.32,0.72,0,1), color 160ms cubic-bezier(0.32,0.72,0,1), box-shadow 160ms cubic-bezier(0.32,0.72,0,1), transform 160ms cubic-bezier(0.32,0.72,0,1);
 }
+/* --home-tint reads almost identical to the header's own glass background, so a hover that only
+   swapped background against it was invisible (reported: "menu sem nenhuma reação ao mouse").
+   A stronger gold fill + a lift gives a hover state that actually registers. */
 .home.home .home-nav a:hover {
   color: var(--home-text);
-  background: color-mix(in srgb, var(--home-gold) 14%, var(--home-tint));
-  border-color: color-mix(in srgb, var(--home-gold) 30%, transparent);
+  background: color-mix(in srgb, var(--home-gold) 26%, var(--home-tint));
+  border-color: color-mix(in srgb, var(--home-gold) 46%, transparent);
+  box-shadow: 0 4px 14px -8px color-mix(in srgb, var(--home-gold) 60%, transparent);
+  transform: translateY(-1px);
+}
+.home.home .home-nav a[aria-current="location"]:hover {
+  background: color-mix(in srgb, var(--home-gold) 22%, transparent);
+}
+.home.home :is(.home-menu-trigger, .lp-theme-toggle):hover {
+  background: color-mix(in srgb, var(--home-gold) 20%, var(--home-tint));
+  box-shadow: 0 4px 14px -8px color-mix(in srgb, var(--home-gold) 55%, transparent);
+}
+.home.home .home-login {
+  transition: filter 160ms cubic-bezier(0.32,0.72,0,1), box-shadow 160ms cubic-bezier(0.32,0.72,0,1), transform 160ms cubic-bezier(0.32,0.72,0,1);
+}
+.home.home .home-login:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 14px -8px color-mix(in srgb, var(--home-gold) 60%, transparent);
+  transform: translateY(-1px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home :is(.home-nav a, .home-login):hover { transform: none; }
 }
 
 /* The site-wide reading-prose rule (prose-justify.css) justifies every <p>, which
