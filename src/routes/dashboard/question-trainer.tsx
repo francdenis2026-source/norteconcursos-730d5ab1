@@ -9,6 +9,8 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
+  Bookmark,
+  BookmarkCheck,
   BookOpenCheck,
   BrainCircuit,
   Check,
@@ -17,6 +19,7 @@ import {
   Lock,
   Loader2,
   RotateCcw,
+  SkipForward,
   Sparkles,
   Strikethrough,
   Target,
@@ -185,6 +188,7 @@ function QuestionTrainer() {
   const [answered, setAnswered] = React.useState(false);
   const [reviewingPast, setReviewingPast] = React.useState(false);
   const [supportNotice, setSupportNotice] = React.useState(false);
+  const [savedForStudy, setSavedForStudy] = React.useState(false);
   const supportNoticeId = React.useId();
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
@@ -497,6 +501,29 @@ function QuestionTrainer() {
   };
 
   const question = questions[index];
+  const savedQuestionsKey = userId ? `trainer-saved-questions:${userId}` : null;
+  React.useEffect(() => {
+    if (!savedQuestionsKey || !question) return;
+    try {
+      const saved = JSON.parse(localStorage.getItem(savedQuestionsKey) || "[]") as string[];
+      setSavedForStudy(saved.includes(`${question.source}:${question.id}`));
+    } catch {
+      setSavedForStudy(false);
+    }
+  }, [savedQuestionsKey, question?.id, question?.source]);
+  const toggleSavedForStudy = () => {
+    if (!savedQuestionsKey || !question) return;
+    const key = `${question.source}:${question.id}`;
+    try {
+      const saved = JSON.parse(localStorage.getItem(savedQuestionsKey) || "[]") as string[];
+      const nextSaved = saved.includes(key) ? saved.filter((item) => item !== key) : [...saved, key];
+      localStorage.setItem(savedQuestionsKey, JSON.stringify(nextSaved));
+      setSavedForStudy(nextSaved.includes(key));
+      toast.success(nextSaved.includes(key) ? "Questão salva para estudar depois." : "Questão removida dos estudos salvos.");
+    } catch {
+      toast.error("Não foi possível salvar esta questão agora.");
+    }
+  };
   // Já respondida antes (nesta sessão ou em qualquer sessão anterior): mostra
   // em modo revisão, sem permitir reenviar. Só rearma quando a questão exibida
   // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
@@ -705,9 +732,12 @@ function QuestionTrainer() {
   const explanation = splitExplanation(question.explanation);
   const relatedMaterials = relatedTrainerMaterials(question, library.data ?? []);
   const supportAvailable = canOpenTrainerLearning(
-    answered && locked.has(lockedKey(question.source, question.id)),
+    // O registro local é atualizado antes do refresh do histórico remoto.
+    // Considerar `answered` aqui evita bloquear a explicação logo após o envio.
+    answered && (locked.has(lockedKey(question.source, question.id)) || !!selected),
     saving,
-    lockedLoading,
+    // A resposta recém-enviada já é válida; o histórico remoto pode terminar depois.
+    false,
   );
   const openLearning = () => {
     if (!supportAvailable || savingRef.current) {
@@ -767,14 +797,29 @@ function QuestionTrainer() {
       )}
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5">
-          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+          <Button variant="outline" size="sm" onClick={() => setStarted(false)}>
             <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
+          </Button>
+          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+            Sair do treino
           </Button>
           <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
             <ArrowLeft className="mr-1.5 h-4 w-4" /> Anterior
           </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            disabled={index + 1 >= questions.length}
+            onClick={next}
+          >
+            <SkipForward className="mr-1.5 h-4 w-4" /> Pular
+          </Button>
         </div>
         <div className="flex items-center gap-2">
+          <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+            {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
+            {savedForStudy ? "Salva" : "Salvar"}
+          </Button>
           <Badge variant="secondary">
             <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
           </Badge>
@@ -992,15 +1037,24 @@ function QuestionTrainer() {
           <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
             {!answered ? (
               <>
-                <Button
-                  variant="ghost"
-                  aria-disabled={!supportAvailable}
-                  aria-describedby={supportNotice ? supportNoticeId : undefined}
-                  className="text-muted-foreground"
-                  onClick={openLearning}
-                >
-                  <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
-                </Button>
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    variant="ghost"
+                    aria-disabled={!supportAvailable}
+                    aria-describedby={supportNotice ? supportNoticeId : undefined}
+                    className="text-muted-foreground"
+                    onClick={openLearning}
+                  >
+                    <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
+                  </Button>
+                  <Button variant="outline" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+                    {savedForStudy ? <BookmarkCheck className="mr-2 h-4 w-4" /> : <Bookmark className="mr-2 h-4 w-4" />}
+                    {savedForStudy ? "Salva para estudar" : "Salvar para estudar"}
+                  </Button>
+                  <Button variant="ghost" onClick={next} disabled={index + 1 >= questions.length}>
+                    <SkipForward className="mr-2 h-4 w-4" /> Pular questão
+                  </Button>
+                </div>
                 <Button
                   size="lg"
                   disabled={!selected || saving || reachedDailyLimit}
@@ -1027,7 +1081,25 @@ function QuestionTrainer() {
               </>
             )}
           </div>
-          {supportNotice && !supportAvailable && (
+          {answered && (
+            <div className="mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-xs font-black uppercase tracking-wider text-primary">Explicação da questão</p>
+                <Button variant="outline" size="sm" onClick={toggleSavedForStudy} aria-pressed={savedForStudy}>
+                  {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
+                  {savedForStudy ? "Salva" : "Salvar para estudar"}
+                </Button>
+              </div>
+              {!isCorrect && <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">Resposta correta: {labelFor(question.answer)}</p>}
+              {isPlaceholderExplanation(explanation.main) ? (
+                <p className="text-sm leading-6 text-muted-foreground">Esta questão ainda não tem um comentário detalhado. Consulte os materiais relacionados.</p>
+              ) : (
+                <p className="whitespace-pre-line text-sm leading-6">{explanation.main}</p>
+              )}
+              {explanation.example && <p className="text-sm leading-6"><strong>Exemplo:</strong> {explanation.example}</p>}
+            </div>
+          )}
+          {supportNotice && !supportAvailable && !answered && (
             <div
               id={supportNoticeId}
               role="status"
