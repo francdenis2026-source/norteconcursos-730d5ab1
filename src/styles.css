@@ -15735,3 +15735,20 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html body .home.home .home-header__actions { gap: 6px; }
   html body .home.home .home-brand-lockup .norte-brand__type { --brand-size: 17px; }
 }
+
+/* Homepage (celular): nada é cortado nas laterais; botões do topo sempre inteiros. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  html, body { max-width: 100%; overflow-x: clip; }
+  html body .home.home .home-header, html body .home.home .home-header__inner { overflow: visible !important; }
+  html body .home.home .home-header__inner {
+    padding-left: max(2px, env(safe-area-inset-left)); padding-right: max(4px, env(safe-area-inset-right)); box-sizing: border-box;
+  }
+  html body .home.home .home-header__actions { flex: 0 0 auto !important; margin-right: 2px; gap: 8px; }
+  html body .home.home .home-header .home-menu-trigger,
+  html body .home.home .home-header .lp-theme-toggle {
+    flex: 0 0 40px !important; box-sizing: border-box; width: 40px !important; min-width: 40px !important; max-width: 40px;
+    height: 40px !important; margin: 0 !important; overflow: visible;
+  }
+  html body .home.home .home-header .home-header__register { flex: 0 0 auto; }
+  html body .home.home .home-brand-lockup { flex: 1 1 0; min-width: 0; overflow: hidden; }
+}
