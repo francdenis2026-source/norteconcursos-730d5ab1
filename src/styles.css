@@ -15547,3 +15547,24 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     outline-color: #f6d17a;
   }
 }
+
+/* Homepage mobile: rótulos (eyebrows) sobre as seções CLARAS ("Ritmo diário", "O que você encontra").
+   O tema "capítulos escuros" pintava todo rótulo com o dourado-claro #f6d17a, que some em fundo
+   claro (1,4:1). Nas seções claras o rótulo vira dourado profundo sobre pastilha creme sólida
+   (contraste >= 6:1). Vidro fosco não ajuda aqui: não há imagem para desfocar atrás. */
+@media (max-width: 767px) {
+  html:is(.dark, :not(.dark)) .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources)
+  :is(.mobile-homepage__eyebrow, .mobile-homepage__section-head > span) {
+    color: #6f4a0b;
+    background: #fbf1d6;
+    border: 1px solid #d4ae5e;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  html:is(.dark, :not(.dark)) .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources)
+  .mobile-homepage__eyebrow > span {
+    background: #b07d14;
+    box-shadow: 0 0 0 4px rgb(176 125 20 / .18);
+  }
+}

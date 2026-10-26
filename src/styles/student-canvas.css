@@ -250,3 +250,81 @@
     color: CanvasText;
   }
 }
+
+
+/* Painel do aluno, modo claro: o fundo deixa de ser a textura escura sob um véu fino.
+   Antes, o SVG do relógio desenhava home-bg-texture.webp (escura) e só recebia um véu de 80%,
+   resultando num cinza pesado que engolia os textos soltos (títulos de seção, links, notas).
+   Agora o fundo é uma superfície mineral clara; o relógio vira uma marca d'água discreta em
+   azul-acinzentado. Os cartões e o modo escuro não mudam. */
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop,
+:root:not(.dark) .app-shell[data-area="student"][data-brand-bg] .app-study-backdrop:has(.tactical-clock-backdrop) {
+  background-color: #dfe8ef;
+  background-image:
+    radial-gradient(ellipse 80% 55% at 12% 0%, rgb(255 255 255 / .62), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 100% 100%, rgb(178 199 214 / .38), transparent 70%),
+    linear-gradient(180deg, #e8eff5, #dbe5ed);
+}
+/* Faixa dourada (ENEM): a arte continua, porém sob um véu quase opaco. */
+:root:not(.dark) .app-shell[data-area="student"][data-brand-bg="gold"] .app-study-backdrop {
+  background-image:
+    linear-gradient(180deg, rgb(232 239 245 / .94), rgb(220 230 238 / .96)),
+    var(--brand-banner);
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop image,
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop__veil {
+  display: none;
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop__mechanism {
+  opacity: .2;
+  filter: none;
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop__scale { opacity: .6; }
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop :is(.tactical-clock-backdrop__hour-mark, .tactical-clock-backdrop__minute-mark) { fill: #46627a; }
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop__edge { stroke: #46627a; }
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop :is(.tactical-clock-backdrop__hand, .tactical-clock-backdrop__hub) {
+  fill: #5d7890 !important;
+  stroke: #3b556b;
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop .tactical-clock-backdrop__collar { fill: #3b556b; }
+
+/* Textos que ficam direto sobre o fundo (sem cartão): tons escuros e firmes, contraste >= 7:1. */
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(
+  .platform-question-counts > header > span,
+  .student-desk__section-heading > span
+) { color: #36506a; font-weight: 550; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(
+  .platform-question-counts h2,
+  .student-desk__section-heading h2
+) { color: #14283b; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-hub__planning-link { color: #2f4963; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-hub__planning-link > svg { color: #8a5a10; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-hub__planning-link a { color: #14507f; font-weight: 700; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home__data-note {
+  color: #2f4963;
+  border-top-color: #aebfce;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home__data-note :is(summary, a) { color: #14507f; font-weight: 650; }
+
+/* "Revisar" quebrava letra por letra: a coluna do botão ficava sem largura mínima. */
+.student-home__signals li > div { flex: 1 1 0; min-width: 0; }
+.student-home__signals li > a { flex: none; white-space: nowrap; }
+
+/* Painel do aluno, modo claro: o "véu" escuro atrás do conteúdo (rgb(7 12 18 / .52→.76), pensado para
+   o modo escuro) virava uma laje cinza que engolia os títulos soltos. Aqui o painel vira VIDRO FOSCO
+   claro: branco translúcido com desfoque e borda luminosa, deixando a marca d'água do relógio
+   aparecer de leve ao fundo. É o único lugar onde o vidro compensa: há textura real atrás dele. */
+:root:not(.dark) .app-shell[data-area="student"] .student-home.student-desk::before {
+  background: linear-gradient(180deg, rgb(255 255 255 / .56), rgb(244 249 252 / .42));
+  border: 1px solid rgb(255 255 255 / .7);
+  box-shadow: 0 18px 44px -30px rgb(20 52 78 / .38), inset 0 1px 0 rgb(255 255 255 / .85);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+}
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  :root:not(.dark) .app-shell[data-area="student"] .student-home.student-desk::before {
+    background: var(--card);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
