@@ -101,3 +101,86 @@ html body .hm2 .hm2-plans__prices i { display: flex; flex-direction: column; gap
 html body .hm2 .hm2-plans__prices i b { font-size: 12px; color: #f6f0e0; }
 html body .hm2 .hm2-plans__prices i[data-featured] { border-color: color-mix(in srgb, var(--brass-soft) 60%, transparent); }
 html body .hm2 .hm2-plans__prices i[data-featured] b { color: var(--brass-soft); }
+
+/* ===== Menu móvel v3: uma janela organizada, sem sobreposição e com toque profissional ===== */
+html body .home-menu.hm2 {
+  gap: 10px; padding: 16px 14px 14px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain;
+  -webkit-tap-highlight-color: transparent;
+}
+html body .home-menu.hm2 > * { flex: none; min-height: 0; }
+html body .hm2 .hm2-bg { background-size: 100% 100%, 100% 100%, 100% 100%, auto 20%; }
+html body .hm2 .hm2-bg { background-image:
+  linear-gradient(180deg, rgb(10 15 19 / 55%) 0%, rgb(10 15 19 / 92%) 18%, #0a0f13 30%),
+  linear-gradient(180deg, transparent 0%, transparent 16%, #0a0f13 33%),
+  radial-gradient(120% 60% at 85% 100%, rgb(200 150 60 / 14%), transparent 60%),
+  url('/media/hero/hero-norte-impacto.webp'); }
+
+/* Cabeçalho: marca + fechar na mesma linha, sem cobrir nada */
+html body .hm2 .hm2-header { padding: 0 52px 0 2px; gap: 6px; min-height: 44px; justify-content: center; }
+html body .hm2 .hm2-header .norte-brand { --brand-scale: .82; transform-origin: left center; }
+html body .hm2 .hm2-header p { font-size: 12.5px; line-height: 1.4; max-width: none; }
+html body .hm2 > button:first-of-type {
+  top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 12px; z-index: 3;
+  background: rgb(255 255 255 / 10%); border: 1px solid rgb(255 255 255 / 18%);
+}
+
+/* Atalhos: 3 colunas x 2 linhas, altura natural (nunca se sobrepõem ao bloco de planos) */
+html body .hm2 .hm2-grid { flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: auto; gap: 8px; }
+html body .hm2 .hm2-tile {
+  min-height: 74px; padding: 10px 6px; gap: 6px; align-items: center; justify-content: center; text-align: center;
+  font-size: 12.5px; font-weight: 700; line-height: 1.15; color: #f6f0e0 !important;
+  border: 1px solid rgb(255 255 255 / 12%); border-radius: 14px; background: rgb(22 29 34 / 86%);
+  -webkit-backdrop-filter: none; backdrop-filter: none; transform: none;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+html body .hm2 .hm2-tile span { text-align: center; }
+html body .hm2 .hm2-tile svg { width: 22px; height: 22px; color: var(--brass-soft); }
+
+/* Toque: preenchimento dourado suave. Sem encolher, sem cor azul/verde, sem anel após o clique. */
+html body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a, .hm2-plans, .hm2-secondary, .hm2-access .home-button) { -webkit-tap-highlight-color: transparent; outline: none; transform: none !important; }
+html body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a, .hm2-plans):active {
+  background: rgb(232 205 153 / 18%) !important; border-color: var(--brass-soft) !important; color: #fff !important;
+  box-shadow: inset 0 0 0 1px rgb(232 205 153 / 35%);
+}
+html body .hm2 .hm2-tile:active svg, html body .hm2 .hm2-contact a:active svg { color: #fff; }
+@media (hover: hover) {
+  html body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a, .hm2-plans):hover {
+    background: rgb(232 205 153 / 10%); border-color: color-mix(in srgb, var(--brass-soft) 70%, transparent); color: #fff !important;
+  }
+}
+html body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a):focus:not(:focus-visible) { color: inherit; background: inherit; border-color: inherit; }
+/* Anel de foco só para teclado */
+html body .home-menu.hm2:not([data-keyboard]) :focus-visible { outline: none !important; box-shadow: none; }
+html body .home-menu.hm2[data-keyboard] :focus-visible { outline: 2px solid var(--brass-soft) !important; outline-offset: 2px; }
+
+/* Planos */
+html body .hm2 .hm2-plans { padding: 10px; gap: 8px; border-radius: 14px; -webkit-backdrop-filter: none; backdrop-filter: none; }
+html body .hm2 .hm2-plans__prices { gap: 5px; }
+html body .hm2 .hm2-plans__prices i { padding: 5px 4px; text-align: center; align-items: center; }
+html body .hm2 .hm2-plans__prices i[data-featured] { background: rgb(232 205 153 / 14%); }
+
+/* Institucional e contato */
+html body .hm2 .hm2-block h2 { margin-bottom: 6px; }
+html body .hm2 .hm2-chips { gap: 6px; }
+html body .hm2 .hm2-chips a { min-height: 40px; justify-content: center; text-align: center; border-radius: 12px; background: rgb(22 29 34 / 86%); }
+html body .hm2 .hm2-contact { gap: 6px; }
+html body .hm2 .hm2-contact a { flex-direction: row; gap: 6px; min-height: 44px; border-radius: 12px; font-size: 12px; background: rgb(22 29 34 / 86%); }
+html body .hm2 .hm2-address { margin-top: 6px; font-size: 10.5px; }
+
+/* Acesso */
+html body .hm2 .hm2-access { padding-top: 10px; gap: 8px; }
+html body .hm2 .hm2-access .home-button { min-height: 48px; border-radius: 14px; font-size: 14.5px; }
+html body .hm2 .hm2-access .home-button--primary:active { background: var(--brass); }
+html body .hm2 .hm2-secondary:active { background: rgb(232 205 153 / 14%) !important; border-color: var(--brass-soft) !important; }
+
+/* Telas baixas: remove o que é secundário para tudo caber, nunca sobrepor */
+@media (max-height: 760px) {
+  html body .hm2 .hm2-header p, html body .hm2 .hm2-address { display: none; }
+  html body .hm2 .hm2-tile { min-height: 62px; gap: 4px; flex-direction: column; }
+}
+@media (max-height: 660px) {
+  html body .hm2 .hm2-tile { min-height: 54px; }
+  html body .hm2 .hm2-tile svg { width: 18px; height: 18px; }
+  html body .hm2 .hm2-plans__lead small { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html body .hm2 * { transition: none !important; } }
