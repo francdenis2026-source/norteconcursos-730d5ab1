@@ -306,6 +306,19 @@
 }
 :root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home__data-note :is(summary, a) { color: #14507f; font-weight: 650; }
 
+/* Modo escuro: os mesmos textos soltos direto sobre o fundo (sem cartão) perdiam contraste quando
+   caíam sobre trechos mais claros da arte do relógio. Sombra garante leitura em qualquer ponto do
+   fundo, sem depender do véu exato. */
+:root.dark .app-shell[data-area="student"] #dashboard-content :is(
+  .platform-question-counts > header > span,
+  .student-desk__section-heading > span
+) { text-shadow: 0 1px 4px rgb(0 0 0 / .7); }
+:root.dark .app-shell[data-area="student"] #dashboard-content :is(
+  .platform-question-counts h2,
+  .student-desk__section-heading h2
+) { text-shadow: 0 1px 4px rgb(0 0 0 / .7); }
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-hub__planning-link { text-shadow: 0 1px 4px rgb(0 0 0 / .7); }
+
 /* "Revisar" quebrava letra por letra: a coluna do botão ficava sem largura mínima. */
 .student-home__signals li > div { flex: 1 1 0; min-width: 0; }
 .student-home__signals li > a { flex: none; white-space: nowrap; }
