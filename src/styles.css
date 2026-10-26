@@ -15692,3 +15692,46 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html:not(.dark) #mobile-planos .mobile-homepage__wide-link { background: #b07d14; color: #ffffff; border-color: #8a610c; }
   html.dark #mobile-planos .mobile-homepage__wide-link { background: #e0b65d; color: #2b1d00; border-color: #f0cd85; }
 }
+
+/* Barra superior (celular/tablet): organizada, colorida e com alvos de toque de 48px. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  html body .home.home .home-header { position: sticky; border-bottom: 0 !important; box-shadow: 0 6px 20px rgb(11 20 32 / .14); }
+  html body .home.home .home-header::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+    background: linear-gradient(90deg, #1f4e8c 0%, #2f6fb8 38%, #e0b65d 72%, #b07d14 100%);
+  }
+  html body .home.home .home-header__inner { min-height: 72px !important; gap: 10px; align-items: center; }
+  html body .home.home .home-header__actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+  html body .home.home .home-brand-lockup .norte-brand__type { --brand-size: 22px; }
+
+  /* Entrar: botão azul-marinho com degradê, texto e ícone brancos */
+  html body .home.home .home-header .home-header__register {
+    display: inline-flex !important; align-items: center; justify-content: center; gap: 8px;
+    min-height: 48px !important; padding: 0 20px !important; border-radius: 14px !important;
+    font-size: 15px !important; font-weight: 800 !important; letter-spacing: .01em;
+    color: #fff !important; border: 1px solid #1b4373 !important;
+    background: linear-gradient(135deg, #2f6fb8 0%, #1f4e8c 55%, #173a6a 100%) !important;
+    box-shadow: 0 6px 16px rgb(31 78 140 / .35), inset 0 1px 0 rgb(255 255 255 / .22);
+  }
+  html body .home.home .home-header .home-header__register svg { display: block !important; width: 18px; height: 18px; flex: none; }
+  html body .home.home .home-header .home-header__register:active { transform: translateY(1px); box-shadow: 0 2px 8px rgb(31 78 140 / .3); }
+
+  /* Tema e menu: botões de 48px, redondos, com cor própria */
+  html body .home.home .home-header :is(.lp-theme-toggle, .home-menu-trigger) {
+    width: 48px !important; height: 48px !important; min-width: 48px !important; min-height: 48px !important;
+    padding: 0 !important; display: inline-flex !important; align-items: center; justify-content: center;
+    border-radius: 14px !important;
+  }
+  html body .home.home .home-header :is(.lp-theme-toggle, .home-menu-trigger) svg { width: 24px !important; height: 24px !important; stroke-width: 2.2; }
+  html:not(.dark) body .home.home .home-header .lp-theme-toggle { color: #7a4f08 !important; background: #fff1cc !important; border: 1px solid #e3c274 !important; }
+  html:not(.dark) body .home.home .home-header .home-menu-trigger { color: #14304f !important; background: #e6eefa !important; border: 1px solid #b8cdea !important; }
+  html.dark body .home.home .home-header .lp-theme-toggle { color: #ffe3a0 !important; background: rgb(224 182 93 / .16) !important; border: 1px solid rgb(224 182 93 / .5) !important; }
+  html.dark body .home.home .home-header .home-menu-trigger { color: #dbe8fb !important; background: rgb(47 111 184 / .22) !important; border: 1px solid rgb(120 165 225 / .5) !important; }
+  html:not(.dark) body .home.home .home-header { background: #ffffff !important; }
+  html.dark body .home.home .home-header { background: #0b1420 !important; }
+}
+@media screen and (max-width: 380px) {
+  html body .home.home .home-header .home-header__register { padding: 0 14px !important; font-size: 14px !important; }
+  html body .home.home .home-header__actions { gap: 8px; }
+  html body .home.home .home-brand-lockup .norte-brand__type { --brand-size: 19px; }
+}
