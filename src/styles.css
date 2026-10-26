@@ -28,6 +28,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Brand activity indicators, independent of the neutral primary theme role. */
+:root { --training-loading-primary: oklch(0.5 0.18 262); }
+.dark { --training-loading-primary: oklch(0.75 0.12 255); }
+
 /* ===================================================================
    NORTE — Design System "Porcelain & Gold"
    Porcelain reading surfaces, neutral structure and the preserved gold accent.
