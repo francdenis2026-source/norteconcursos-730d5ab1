@@ -911,7 +911,7 @@ html:not(.dark) body .iw-panel .sc-error { color: #a3361a; }
   }
   .iw-header nav::-webkit-scrollbar, .iw-tabs::-webkit-scrollbar { display: none; }
   .iw-sections { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
-  .iw-tabs { display: flex; flex-wrap: nowrap; gap: 6px; width: 100%; padding: 6px; }
+  .iw-tabs { display: flex; flex-direction: row; flex-wrap: nowrap; gap: 6px; width: 100%; padding: 6px; }
   .iw-tabs > button { flex: none; white-space: nowrap; min-height: 40px; }
   .iw-footer { flex-wrap: wrap; gap: 6px 12px; min-width: 0; }
   .iw-chapter-footer { flex-wrap: wrap; gap: 8px; }
