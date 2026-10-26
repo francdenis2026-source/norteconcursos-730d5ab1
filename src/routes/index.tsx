@@ -624,25 +624,6 @@ function Index() {
         </section>
 
         <section
-          className="home-daily-feature home-container"
-          aria-labelledby="daily-feature-title"
-        >
-          <div className="home-daily-feature__copy">
-            <span className="home-signal">
-              <span /> RITMO DIÁRIO
-            </span>
-            <h2 id="daily-feature-title">Constância hoje. Mais preparo para a prova.</h2>
-            <p>
-              Treine com 10 questões oficiais por dia, sem cadastro. Confira os comentários e retome
-              amanhã para manter seu ritmo.
-            </p>
-          </div>
-          <div className="home-daily-feature__card">
-            <DailyChallengeBadge />
-          </div>
-        </section>
-
-        <section
           id="plataforma"
           className="home-section home-preparation"
           aria-labelledby="preparation-title"
@@ -791,7 +772,6 @@ function Index() {
           </section>
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
-            <span className="home-footer__credit">Designed by Franc Denis · Feijó, Acre</span>
           </div>
         </div>
       </footer>
