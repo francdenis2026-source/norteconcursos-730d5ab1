@@ -67,6 +67,10 @@ export const Route = createFileRoute("/desafio-diario")({
         content:
           "Responda 10 questões oficiais de concursos públicos por dia, sem cadastro. Mesmas questões pra todo mundo, todo dia.",
       },
+      { property: "og:title", content: "Desafio diário grátis | Norte Concurso" },
+      { property: "og:description", content: "Seu Campo de Treino Norte: 10 questões oficiais por dia, sem cadastro." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
@@ -199,10 +203,10 @@ function DesafioDiario() {
 
       <main className="daily-container daily-main">
         {step === "loading" && (
-          <Center>
-            <Loader2 className="h-8 w-8 animate-spin text-brass" />
-            <p>Preparando o desafio de hoje…</p>
-          </Center>
+          <section className="daily-loading" role="status" aria-live="polite" aria-busy="true">
+            <Loader2 className="daily-loading__spinner" aria-hidden="true" />
+            <h1>Preparando o desafio de hoje...</h1>
+          </section>
         )}
 
         {step === "error" && (

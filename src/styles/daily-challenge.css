@@ -1,4 +1,39 @@
 /* Daily training is a self-contained viewport, never a long marketing page. */
+/* Loading has its own solid surface; all question and briefing states remain unchanged. */
+.daily-page[data-step="loading"] {
+  --daily-accent: var(--training-loading-primary);
+  --daily-edge: var(--border);
+  --daily-glass: var(--card);
+  background: var(--background);
+  padding: calc(16px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.daily-page[data-step="loading"] .daily-art { display: none; }
+.daily-page[data-step="loading"] .daily-controls {
+  min-height: 56px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.daily-page[data-step="loading"] .daily-identity { color: var(--foreground); min-width: 0; }
+.daily-page[data-step="loading"] .daily-identity > svg { color: var(--training-loading-primary); flex: none; }
+.daily-page[data-step="loading"] .daily-identity > span { letter-spacing: 0; }
+.daily-page[data-step="loading"] .daily-identity small { font-size: 9px; letter-spacing: 0; font-weight: 600; }
+.daily-page[data-step="loading"] .daily-exit { flex: none; min-height: 44px; border-radius: 8px; color: var(--foreground); background: var(--card); }
+.daily-loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--foreground);
+}
+.daily-loading h1 { max-width: 24ch; font-size: 20px; font-weight: 650; line-height: 1.5; letter-spacing: 0; text-wrap: balance; }
+.daily-loading__spinner { width: 36px; height: 36px; flex: none; color: var(--training-loading-primary); animation: daily-loading-spin 1s linear infinite; }
+@keyframes daily-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .daily-loading__spinner { animation: none; } }
 body:has(.daily-page) { overflow: hidden; }
 .daily-page {
   --daily-edge: color-mix(in srgb, var(--foreground) 13%, transparent);
