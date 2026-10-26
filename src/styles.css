@@ -15312,7 +15312,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero,.mobile-homepage__closing,.mobile-homepage__contests,.mobile-homepage__footer) {
     color: #f7fafc;
   }
-  html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero p,.mobile-homepage__closing p,.mobile-homepage__contests p,.mobile-homepage__footer p,.mobile-homepage__footer small) {
+  html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero p,.mobile-homepage__closing p,.mobile-homepage__footer p,.mobile-homepage__footer small) {
     color: #e5edf3;
   }
   html:not(.dark) .mobile-homepage :is(.mobile-homepage__hero h1,.mobile-homepage__hero h2,.mobile-homepage__closing strong,.mobile-homepage__contests h2,.mobile-homepage__footer > strong) {
