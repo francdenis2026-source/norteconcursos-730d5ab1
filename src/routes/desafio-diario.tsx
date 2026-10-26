@@ -243,35 +243,11 @@ function DesafioDiario() {
         )}
 
         {step === "intro" && (
-          <div className="daily-overview">
-            <section className="daily-cover" aria-labelledby="daily-cover-title">
-              <span className="daily-eyebrow">SEGURANÇA PÚBLICA / DESAFIO DIÁRIO</span>
-              <div className="daily-cover__content">
-                <span className="daily-cover__badge"><Zap size={14} /> ACESSO LIVRE · SEM CADASTRO</span>
-                <h1 id="daily-cover-title">A próxima conquista<br />começa no <em>treino.</em></h1>
-                <p>Dez questões. Uma missão: avançar um pouco mais hoje. Teste seu conhecimento e aprenda com cada resposta.</p>
-                <button type="button" className="daily-start" onClick={startChallenge}>
-                  {remaining < GUEST_DAILY_LIMIT ? "Continuar meu desafio" : "Iniciar meu desafio"}<ArrowRight size={20} />
-                </button>
-                <span className="daily-cover__note"><ShieldCheck size={15} /> Gabarito oficial e explicações após responder</span>
-              </div>
-              <div className="daily-protocol"><span>01 <b>Leia</b></span><span>02 <b>Decida</b></span><span>03 <b>Evolua</b></span></div>
-            </section>
-            <aside className="daily-round" aria-labelledby="daily-round-title">
-              <div className="daily-round__heading"><span className="daily-eyebrow">BRIEFING DO DIA</span><span className="daily-round__tag">Disponível</span></div>
-              <h2 id="daily-round-title">Seu ponto de partida.</h2>
-              <div className="daily-metrics">
-                <div><strong>{questions.length.toString().padStart(2, "0")}</strong><span>questões disponíveis</span></div>
-                <div><strong>{new Set(questions.map(q => q.subject)).size.toString().padStart(2, "0")}</strong><span>disciplinas na rodada</span></div>
-              </div>
-              <div className="daily-briefing-subjects">
-                <span className="daily-briefing-subjects__label"><BookOpenCheck size={16} /> Disciplinas deste desafio</span>
-                <ul className="daily-subjects">{Array.from(new Set(questions.map(q => q.subject))).map(subject => <li key={subject}>{subject}</li>)}</ul>
-              </div>
-              <div className="daily-round__renewal"><Sparkles size={18} /><p><strong>Amanhã, uma nova oportunidade.</strong><span>Até {GUEST_DAILY_LIMIT} respostas por dia neste aparelho. Renova à meia-noite do Acre.</span></p></div>
-              <Link to="/auth" search={{mode:"register"}} className="daily-register">Conheça a preparação completa <ArrowRight size={15} /></Link>
-            </aside>
-          </div>
+          <IntroBriefing
+            questions={questions}
+            remaining={remaining}
+            onStart={startChallenge}
+          />
         )}
 
         <div className={step === "done" ? "daily-result" : "daily-workspace"} hidden={step !== "playing" && step !== "done"}>
@@ -302,6 +278,89 @@ function DesafioDiario() {
         </div>
       </main>
     </div>
+  );
+}
+
+function IntroBriefing({
+  questions,
+  remaining,
+  onStart,
+}: {
+  questions: Question[];
+  remaining: number;
+  onStart: () => void;
+}) {
+  const subjects = Array.from(new Set(questions.map((q) => q.subject)));
+  const shown = subjects.slice(0, 6);
+  const extra = subjects.length - shown.length;
+  const pad = (n: number) => n.toString().padStart(2, "0");
+  return (
+    <section className="dt-panel" aria-labelledby="dt-title">
+      <span className="dt-mark" aria-hidden="true" />
+      <header className="dt-status">
+        <span className="dt-status__tag">
+          <Zap size={13} aria-hidden="true" /> MISSÃO DIÁRIA · ACESSO LIVRE
+        </span>
+        <span className="dt-status__live">Disponível</span>
+      </header>
+      <div className="dt-hero">
+        <span className="daily-eyebrow">SEGURANÇA PÚBLICA</span>
+        <h1 id="dt-title">
+          Sua missão<br />
+          de <em>hoje.</em>
+        </h1>
+        <p>Questões oficiais, gabarito e explicação a cada resposta. Sem cadastro.</p>
+      </div>
+      <dl className="dt-metrics">
+        <div>
+          <dt>Questões</dt>
+          <dd>{pad(questions.length)}</dd>
+        </div>
+        <div>
+          <dt>Disciplinas</dt>
+          <dd>{pad(subjects.length)}</dd>
+        </div>
+        <div>
+          <dt>Limite/dia</dt>
+          <dd>{pad(GUEST_DAILY_LIMIT)}</dd>
+        </div>
+      </dl>
+      <div className="dt-subjects">
+        <span className="dt-subjects__label">
+          <BookOpenCheck size={13} aria-hidden="true" /> ALVOS DA RODADA
+        </span>
+        <ul>
+          {shown.map((subject) => (
+            <li key={subject}>{subject}</li>
+          ))}
+          {extra > 0 && <li className="dt-subjects__more">+{extra}</li>}
+        </ul>
+      </div>
+      <ol className="dt-protocol" aria-label="Como funciona">
+        <li>
+          <b>01</b> Leia
+        </li>
+        <li>
+          <b>02</b> Decida
+        </li>
+        <li>
+          <b>03</b> Evolua
+        </li>
+      </ol>
+      <footer className="dt-foot">
+        <button type="button" className="dt-start" onClick={onStart}>
+          {remaining < GUEST_DAILY_LIMIT ? "Continuar missão" : "Iniciar missão"}
+          <ArrowRight size={20} aria-hidden="true" />
+        </button>
+        <p className="dt-foot__note">
+          <Sparkles size={13} aria-hidden="true" /> Amanhã, uma nova oportunidade · renova à
+          meia-noite do Acre
+        </p>
+        <Link to="/auth" search={{ mode: "register" }} className="dt-foot__link">
+          Conheça a preparação completa <ArrowRight size={13} aria-hidden="true" />
+        </Link>
+      </footer>
+    </section>
   );
 }
 

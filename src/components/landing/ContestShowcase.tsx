@@ -1,6 +1,6 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
@@ -114,9 +114,6 @@ export function ContestShowcase() {
           />
         </div>
         <div className="contest-spotlight__content">
-          <span className="contest-spotlight__ribbon">
-            <Target size={14} aria-hidden="true" /> Concurso em destaque
-          </span>
           <div className="contest-kickers">
             <span>
               <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
@@ -126,12 +123,9 @@ export function ContestShowcase() {
           <h3 id="pcac-title">
             Polícia Civil <em>do Acre.</em>
           </h3>
-          <p className="contest-spotlight__lead">
-            Seu próximo objetivo merece uma preparação à altura.
-          </p>
           <p className="contest-spotlight__copy">
-            Comece pela banca: estude e pratique com uma prova real da IDECAN enquanto acompanha o
-            próximo edital da PC-AC.
+            Comece pela banca: pratique com uma prova real da IDECAN enquanto acompanha o próximo
+            edital da PC-AC.
           </p>
           <div className="contest-spotlight__training">
             <Availability
@@ -139,11 +133,6 @@ export function ContestShowcase() {
               label="PC-SC · Agente · banca IDECAN"
               loading={sc.loading}
             />
-            <p>
-              Treino da banca definida para a PC-AC.
-              <br />
-              <strong>Questões da prova de Agente da PC-SC de 2026.</strong>
-            </p>
           </div>
           <div className="contest-spotlight__actions">
             {isAuthenticated ? (
@@ -160,22 +149,22 @@ export function ContestShowcase() {
                 search={{ mode: "register" }}
                 className="contest-action contest-action--gold"
               >
-                Começar minha preparação
+                Começar preparação
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             )}
             {trainingLink(PCSC_TRAINER_SEARCH, "Treinar com a IDECAN")}
           </div>
-          <CountReference date={sc.checkedAt} />
-          <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           <details className="contest-details">
             <summary>Sobre o concurso e a preparação</summary>
+            <CountReference date={sc.checkedAt} />
             <p>
               A definição da IDECAN consta da dispensa de licitação e ratificação publicadas no
               Diário Oficial do Acre de 22/10/2026. O edital ainda não foi publicado. Este treino
               usa a prova de Agente da PC-SC de {PCSC_EXAM.year}; não garante questões idênticas na
               PC-AC.
             </p>
+            <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           </details>
         </div>
       </article>

@@ -258,3 +258,29 @@
     font-size: 9px;
   }
 }
+
+/* PC-AC em destaque: versão compacta. Foto com altura controlada, texto enxuto e ações lado a lado. */
+.home .contest-spotlight__art { min-height: 0; }
+.home .contest-spotlight { align-items: stretch; max-height: 480px; }
+.home .contest-spotlight__content { display: flex; flex-direction: column; justify-content: center; padding: clamp(18px, 2.2vw, 30px); }
+.home .contest-kickers { margin-bottom: 12px; }
+.home .contest-spotlight h3 { font-size: clamp(28px, 3vw, 40px); }
+.home .contest-spotlight__copy { margin-top: 10px; font-size: 14px; max-width: 46ch; }
+.home .contest-spotlight__training { margin-block: 14px; padding-block: 12px; }
+.home .contest-spotlight__training .contest-availability > strong { font-size: 32px; }
+.home .contest-spotlight__actions { flex-wrap: nowrap; }
+.home .contest-spotlight__actions .contest-action { flex: 1 1 0; min-width: 0; white-space: nowrap; }
+.home .contest-spotlight__actions .contest-action:not(.contest-action--gold) { flex: 0 1 auto; background: transparent; }
+.home .contest-spotlight__content .contest-reference { margin-top: 0; }
+@media (max-width: 1000px) { .home .contest-spotlight { max-height: none; } }
+@media (max-width: 700px) {
+  .home .contest-spotlight { max-height: none; }
+  .home .contest-spotlight__art { aspect-ratio: auto; height: 168px; }
+  .home .contest-spotlight__art > img { object-position: 50% 28%; }
+  .home .contest-spotlight__content { padding: 16px; }
+  .home .contest-spotlight h3 { font-size: 28px; }
+  .home .contest-spotlight__copy { font-size: 13px; line-height: 1.55; }
+  .home .contest-spotlight__training { margin-block: 12px; padding-block: 10px; }
+  .home .contest-spotlight__actions { display: flex; flex-direction: column; flex-wrap: wrap; gap: 8px; }
+  .home .contest-spotlight__actions .contest-action { flex: none; width: 100%; min-height: 46px; }
+}
