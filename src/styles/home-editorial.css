@@ -143,6 +143,55 @@
   }
 }
 
+/* Header layout: keep the nav close to the brand instead of drifting toward
+   center (space-between with few items left a dead gap), give the links real
+   presence instead of flat text, and use the freed-up space for a tagline
+   instead of leaving it empty. */
+.home.home .home-header__inner {
+  justify-content: flex-start;
+  gap: 32px;
+  min-height: 64px;
+}
+.home.home .home-header__actions {
+  margin-left: auto;
+  align-items: center;
+  gap: 12px;
+}
+.home.home .home-header__tagline {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: var(--home-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: .8;
+}
+@media (max-width: 1150px) {
+  .home.home .home-header__tagline { display: none; }
+}
+.home.home .home-nav {
+  flex: 0 0 auto;
+  gap: 4px;
+}
+.home.home .home-nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 650;
+  color: var(--home-text);
+  background: color-mix(in srgb, var(--home-tint) 75%, transparent);
+  border: 1px solid transparent;
+  transition: background-color 160ms cubic-bezier(0.32,0.72,0,1), border-color 160ms cubic-bezier(0.32,0.72,0,1), color 160ms cubic-bezier(0.32,0.72,0,1);
+}
+.home.home .home-nav a:hover {
+  color: var(--home-text);
+  background: color-mix(in srgb, var(--home-gold) 14%, var(--home-tint));
+  border-color: color-mix(in srgb, var(--home-gold) 30%, transparent);
+}
+
 /* A quieter, more professional footer strip: flat surface instead of the gold
    glow/shadow treatment, so it reads as a discreet closing band, not a banner. */
 :root:is(.dark, :not(.dark)) .home.home .home-footer {
