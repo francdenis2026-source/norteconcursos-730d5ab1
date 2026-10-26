@@ -1,7 +1,7 @@
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import * as Tabs from "@radix-ui/react-tabs";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Printer, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Home, Printer, ShieldCheck } from "lucide-react";
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import "@/styles/institutional-window.css";
@@ -28,6 +28,11 @@ export function InstitutionalWindow({
   updatedAt?: string;
   children: ReactNode;
 }) {
+  const router = useRouter();
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) router.history.back();
+    else void router.navigate({ to: "/" });
+  };
   return (
     <div
       className={`institutional-window iw-${page.slice(1)}`}
@@ -47,10 +52,16 @@ export function InstitutionalWindow({
             </Link>
           ))}
         </nav>
-        <Link className="iw-home" to="/">
-          <ArrowLeft size={14} aria-hidden="true" />
-          <span>Início</span>
-        </Link>
+        <div className="iw-actions">
+          <button type="button" className="iw-back" onClick={goBack} aria-label="Voltar à tela anterior">
+            <ArrowLeft size={16} aria-hidden="true" />
+            <span>Voltar</span>
+          </button>
+          <Link className="iw-home" to="/" aria-label="Ir para a página inicial">
+            <Home size={16} aria-hidden="true" />
+            <span>Início</span>
+          </Link>
+        </div>
       </header>
       <section className="iw-hero" aria-labelledby="institutional-title">
         <div>
