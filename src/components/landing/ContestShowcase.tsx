@@ -142,7 +142,7 @@ export function ContestShowcase() {
           <div className="contest-spotlight__training">
             <Availability
               count={scCount}
-              label="PC-SC · Agente · banca IDECAN"
+              label="da prova real PC-SC · Agente · IDECAN"
               loading={sc.loading}
             />
           </div>
