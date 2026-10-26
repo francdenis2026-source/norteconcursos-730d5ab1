@@ -286,3 +286,15 @@
   .auth.auth[data-auth-mode="register"] .auth-identity { min-height: 54px; }
   .auth.auth[data-auth-mode="register"] .auth-identity strong { font-size: 15px; }
 }
+
+/* Modo claro da tela de acesso: painel do formulário acompanha o tema escolhido. */
+html:not(.dark) body .auth.auth { background: #f1ede2; }
+html:not(.dark) body .auth .auth-panel { background: #f7f4ec url('/media/hero/home-bg-texture.webp') center / cover no-repeat; }
+html:not(.dark) body .auth .auth-panel::before { background: linear-gradient(135deg, rgb(247 244 236 / 94%), rgb(241 236 224 / 97%)); }
+html:not(.dark) body .auth .auth-access-nav .auth-back { background: #ffffff; color: #12233a; border-color: #d3c294; }
+html:not(.dark) body .auth .auth-access-nav .auth-back:hover { background: #fff6dc; border-color: #c99a2e; }
+html:not(.dark) body .auth .auth-access-nav .auth-back:active { background: #fbecc4; }
+html:not(.dark) body .auth .auth-access-nav .auth-back:focus-visible { outline-color: #1f4e8c; }
+html:not(.dark) body .auth.auth .auth-card { background: #ffffff; border-color: #d9c690; box-shadow: 0 24px 60px -28px rgb(15 27 45 / .4); }
+html:not(.dark) body .auth .auth-mobile-brand, html:not(.dark) body .auth .auth-mobile-brand :is(span, strong, b) { color: #12233a; }
+html:not(.dark) body .auth .auth-field input { background: #faf8f2; }
