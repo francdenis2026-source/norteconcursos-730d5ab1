@@ -79,3 +79,8 @@ html body .hm2 .hm2-access .home-button--primary:hover { background: var(--brass
 
 html body .hm2 .hm2-header [data-slot="sheet-description"], html body .hm2 .hm2-header p { text-align: left !important; text-align-last: auto !important; text-justify: auto; hyphens: manual !important; text-wrap: balance; word-spacing: normal !important; max-width: 24ch; text-shadow: 0 1px 8px #000; }
 html body .hm2 .hm2-tile:active, html body .hm2 .hm2-chips a:active { transform: scale(.98); }
+
+/* O texto do hero cobria o brasão e roubava o toque: só os links/botões recebem clique. */
+html body .mobile-homepage__hero-copy { pointer-events: none; }
+html body .mobile-homepage__hero-copy :is(a, button) { pointer-events: auto; }
+html body .mobile-homepage__hero .hero-badge { pointer-events: auto; }
