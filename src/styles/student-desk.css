@@ -47,12 +47,12 @@
 }
 .student-desk__section-heading h2 {
   color: var(--foreground);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
 }
 .student-desk__section-heading > span {
   color: var(--muted-foreground);
-  font-size: 12px;
+  font-size: 13px;
 }
 /* Six direct routes replace the tall photographic tiles. */
 .student-home.student-desk .student-hub__shortcuts {
@@ -100,13 +100,13 @@
 }
 .student-home.student-desk .student-hub__shortcuts strong {
   color: var(--foreground);
-  font-size: 14px;
+  font-size: 15px;
   text-shadow: none;
   line-height: 1.4;
 }
 .student-home.student-desk .student-hub__shortcuts small {
   color: var(--muted-foreground);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   margin-top: 3px;
   text-shadow: none;
@@ -156,16 +156,17 @@
   height: 17px;
 }
 .student-home.student-desk .student-home__metric h2 {
-  font-size: 12px;
+  color: var(--foreground);
+  font-size: 13px;
   line-height: 1.4;
 }
 .student-home.student-desk .student-home__metric strong {
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.2;
   margin-top: 3px;
 }
 .student-home.student-desk .student-home__metric p {
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 3px;
 }
 :root .student-home.student-desk .student-home__metric:hover {
@@ -195,7 +196,7 @@
   align-items: center;
   gap: 6px;
   color: var(--desk-accent);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
 }
 .student-desk__eyebrow svg {
@@ -203,14 +204,14 @@
   height: 13px;
 }
 .student-desk__next h2 {
-  color: var(--foreground);
-  font-size: 17px;
+  color: var(--foreground) !important;
+  font-size: 18px;
   line-height: 1.35;
   font-weight: 750;
   margin-top: 4px;
 }
 .student-desk__next p {
-  font-size: 12.5px;
+  font-size: 13.5px;
   line-height: 1.5;
   color: var(--muted-foreground);
   margin-top: 4px;
@@ -221,7 +222,7 @@
   margin: 0;
   min-height: 40px;
   padding: 9px 12px;
-  font-size: 12px;
+  font-size: 13px;
   max-width: 250px;
 }
 /* Useful content stays on quiet surfaces, with a consistent color assigned to each purpose. */
@@ -259,10 +260,12 @@
   height: 17px;
 }
 .student-home.student-desk .student-home__section-title h2 {
-  font-size: 15px;
+  color: var(--foreground) !important;
+  font-size: 16px;
 }
 .student-home.student-desk .student-home__section-title p {
-  font-size: 12px;
+  color: var(--muted-foreground);
+  font-size: 13px;
   line-height: 1.4;
   margin-top: 3px;
 }
@@ -274,25 +277,26 @@
 }
 .student-home.student-desk .student-home__empty h3,
 .student-home.student-desk .student-home__objective-name {
-  color: var(--foreground);
-  font-size: 15px;
+  color: var(--foreground) !important;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.45;
 }
 .student-home.student-desk .student-home__empty p,
 .student-home.student-desk .student-home__quiet {
-  font-size: 13px;
+  color: var(--muted-foreground);
+  font-size: 14px;
   line-height: 1.6;
   margin-top: 5px;
 }
 .student-home.student-desk .student-home__empty :is(a, button) {
-  font-size: 13px;
+  font-size: 14px;
   min-height: 40px;
   margin-top: 10px;
 }
 .student-home.student-desk .student-home__text-link {
   color: var(--desk-accent, var(--desk-blue));
-  font-size: 12px;
+  font-size: 13px;
   min-height: 36px;
 }
 
@@ -300,7 +304,7 @@
   padding: 0 4px;
 }
 .student-home.student-desk .student-hub__planning-link p {
-  font-size: 12px;
+  font-size: 13px;
 }
 .student-home.student-desk .student-home__blocks li {
   padding: 10px 0;
@@ -338,11 +342,12 @@
   display: block;
 }
 .student-home.student-desk .pcpr-spot--compact h2 {
-  font-size: 13px;
+  color: var(--foreground);
+  font-size: 14px;
 }
 .student-home.student-desk .pcpr-spot--compact p,
 .student-home.student-desk .pcpr-spot--compact summary {
-  font-size: 11px;
+  font-size: 13px;
 }
 /* Resume cards stay compact without removing counters, confirmation or the actual saved route. */
 .student-desk__sessions {
@@ -382,18 +387,19 @@
 }
 .student-desk .resume-session--compact .resume-session__copy > p:first-child {
   color: var(--desk-accent);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.04em;
 }
 .student-desk .resume-session--compact h2 {
   margin: 0;
+  color: var(--foreground);
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
 }
 .student-desk .resume-session--compact .resume-session__copy > p:last-child {
   flex-basis: 100%;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
   margin: 0;
 }
@@ -410,7 +416,7 @@
   color: var(--desk-accent);
   border: 1px solid color-mix(in srgb, var(--desk-accent) 30%, var(--border));
   box-shadow: none;
-  font-size: 12px;
+  font-size: 13px;
 }
 .student-desk .resume-session--compact .resume-session__actions button {
   width: 40px;
@@ -431,10 +437,11 @@
   gap: 5px;
 }
 .student-desk .resume-session--compact .resume-session__stats dt {
-  font-size: 10px;
+  font-size: 11px;
 }
 .student-desk .resume-session--compact .resume-session__stats dd {
-  font-size: 11px;
+  color: var(--foreground);
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
 }
 .student-desk .resume-session--compact .resume-session__progress {
@@ -449,7 +456,7 @@
 }
 .student-desk .resume-session--compact .resume-session__note {
   grid-column: 1 / -1;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.5;
   margin: 0;
 }
@@ -567,7 +574,7 @@
 
 .student-home.student-desk .student-home__data-note {
   padding-top: 0;
-  font-size: 11px;
+  font-size: 12px;
 }
 .student-home.student-desk .student-home__data-note summary {
   min-height: 44px;

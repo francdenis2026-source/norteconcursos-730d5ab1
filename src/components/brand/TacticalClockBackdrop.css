@@ -91,7 +91,7 @@ svg.tactical-clock-backdrop {
 .dark
   .app-shell[data-area="student"][data-brand-bg="blue"]
   .app-study-backdrop:has(.tactical-clock-backdrop) {
-  --backdrop-clock-veil: color-mix(in srgb, var(--background) 95%, transparent);
+  --backdrop-clock-veil: color-mix(in srgb, var(--background) 72%, transparent);
 }
 @media (prefers-reduced-motion: reduce) {
   .tactical-clock-backdrop__hand {
