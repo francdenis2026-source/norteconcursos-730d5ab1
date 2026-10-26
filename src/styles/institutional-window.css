@@ -811,3 +811,42 @@
   .iw-back, .iw-home { padding: 0 13px; font-size: 13.5px; }
 }
 @media print { .iw-actions { display: none; } }
+
+/* ===== Ajuste móvel: respeita relógio/entalhe do aparelho e compacta o cabeçalho ===== */
+.institutional-window {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: max(clamp(16px, 3vw, 48px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(16px, 3vw, 48px), env(safe-area-inset-right, 0px));
+}
+.institutional-page { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.iw-panel p, .iw-hero p { hyphens: auto; -webkit-hyphens: auto; text-justify: inter-word; overflow-wrap: break-word; }
+
+@media (max-width: 600px) {
+  .institutional-window { gap: 8px; }
+  .iw-header { min-height: 0; padding-block: 8px; gap: 8px; flex-wrap: nowrap; align-items: center; }
+  .iw-header > a:first-child { min-width: 0; flex: 1 1 auto; }
+  .iw-header .norte-brand__type { --brand-size: 17px; }
+  .iw-actions { gap: 6px; flex: none; }
+  .iw-back, .iw-home { min-height: 38px; padding: 0 12px; font-size: 13px; gap: 5px; }
+  .iw-back svg, .iw-home svg { width: 15px; height: 15px; }
+
+  /* Menu das páginas: uma linha rolável, em vez de 4 botões grandes */
+  .iw-header nav {
+    order: 3; flex: 0 0 100%; display: flex; gap: 6px; width: 100%; overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; padding-bottom: 2px;
+  }
+  .iw-header nav::-webkit-scrollbar { display: none; }
+  .iw-header { flex-wrap: wrap; }
+  .iw-header nav a { flex: none; min-height: 38px; padding: 0 14px; font-size: 13px; scroll-snap-align: start; border-radius: 999px; }
+
+  .iw-hero { gap: 10px; }
+  .iw-hero > img, .iw-hero > svg, .iw-hero > picture { display: none; }
+  .iw-hero h1 { font-size: 24px; margin-top: 4px; }
+  .iw-hero p { font-size: 12.5px; line-height: 1.55; margin-top: 6px; max-width: none; }
+  .iw-kicker { font-size: 10px; }
+  .iw-panel { padding: 16px; }
+  .iw-panel h2 { font-size: 21px; margin-bottom: 12px; }
+  .iw-panel p { font-size: 14px; line-height: 1.75; }
+  .iw-footer { padding-bottom: 8px; }
+}

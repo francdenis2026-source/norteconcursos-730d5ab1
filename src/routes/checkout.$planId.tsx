@@ -46,7 +46,7 @@ function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-[100svh] bg-background py-12 px-4">
+    <div className="min-h-[100svh] bg-background px-4 pb-[calc(3rem+env(safe-area-inset-bottom))] pt-[calc(3rem+env(safe-area-inset-top))]">
       <div className="max-w-4xl mx-auto space-y-8">
         <Link
           to="/dashboard/profile"
