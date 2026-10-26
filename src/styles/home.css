@@ -4490,12 +4490,12 @@
 .home-hero__study-links .daily-badge::before { display: none; }
 .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge):hover { border-color: var(--brass-soft); background: rgb(24 25 25 / 96%); }
 .home.home .home-hero__study-links .daily-badge__top { gap: 4px; flex-wrap: wrap; }
-.home.home .home-hero__study-links :is(.daily-badge__live, .daily-badge__timer) { font-size: 9px; color: var(--brass-soft); }
+.home.home .home-hero__study-links :is(.daily-badge__live, .daily-badge__timer) { font-size: 11px; color: var(--brass-soft); }
 .home.home .home-hero__study-links .daily-badge__body { display: block; }
-.home.home .home-hero__study-links .daily-badge__main { gap: 3px; }
-.home.home .home-hero__study-links .daily-badge__main strong { font-size: 12px; line-height: 1.4; }
-.home.home .home-hero__study-links :is(.daily-badge__main small, .question-count-detail) { font-size: 10px; line-height: 1.5; color: var(--on-ink-muted); }
-.home.home .home-hero__study-links .daily-badge__cta { display: inline-flex; margin-top: 5px; min-height: 0; padding: 0; font-size: 10px; color: var(--brass-soft); }
+.home.home .home-hero__study-links .daily-badge__main { gap: 4px; }
+.home.home .home-hero__study-links .daily-badge__main strong { font-size: 15px; line-height: 1.4; }
+.home.home .home-hero__study-links :is(.daily-badge__main small, .question-count-detail) { font-size: 12px; line-height: 1.5; color: var(--on-ink-muted); }
+.home.home .home-hero__study-links .daily-badge__cta { display: inline-flex; margin-top: 6px; min-height: 0; padding: 0; font-size: 12px; font-weight: 700; color: var(--brass-soft); }
 .home.home .home-hero__study-links .daily-badge__progress { display: none; }
 
 /* Banco de questões: cartão de destaque com cabeçalho, número, barra de
@@ -4525,8 +4525,8 @@
   gap: 8px;
 }
 .home.home .home-hero__study-links .question-count-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 6px; margin-top: 8px; }
-.home.home .home-hero__study-links .question-count-main strong { font-size: 24px; line-height: 1.15; color: var(--brass-soft); }
-.home.home .home-hero__study-links .question-count-main > span { font-size: 11px; color: var(--on-ink); }
+.home.home .home-hero__study-links .question-count-main strong { font-size: 28px; line-height: 1.15; color: var(--brass-soft); }
+.home.home .home-hero__study-links .question-count-main > span { font-size: 13px; color: var(--on-ink); }
 .home-hero__study-links .question-count-arrow {
   width: 13px;
   height: 13px;
@@ -4554,7 +4554,7 @@
 @media (max-width: 520px) {
   .home-hero__study-links { grid-template-columns: 1fr; gap: 7px; }
   .home.home .home-hero__study-links .question-count-badge { padding: 12px 14px 14px; }
-  .home.home .home-hero__study-links .question-count-main strong { font-size: 19px; }
+  .home.home .home-hero__study-links .question-count-main strong { font-size: 24px; }
 }
 @media (forced-colors: active) {
   .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { background: Canvas; color: CanvasText; border-color: CanvasText; }
