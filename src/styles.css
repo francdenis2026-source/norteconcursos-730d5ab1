@@ -12990,12 +12990,10 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
     color: var(--color-muted-foreground);
   }
   .app-shell .app-bottom-nav .app-ico {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border: 0;
-    background: transparent;
     box-shadow: none;
-    color: inherit;
   }
   .app-shell .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) {
     color: var(--color-foreground);
