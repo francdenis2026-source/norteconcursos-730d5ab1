@@ -184,3 +184,65 @@ html body .hm2 .hm2-secondary:active { background: rgb(232 205 153 / 14%) !impor
   html body .hm2 .hm2-plans__lead small { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html body .hm2 * { transition: none !important; } }
+
+/* ===== Menu móvel: modo claro (acompanha a escolha do usuário no botão de tema) ===== */
+html:not(.dark) body .home-menu.hm2 {
+  --foreground: #12233a; --home-text: #12233a; --muted-foreground: #44546a;
+  background: #f7f4ec; color: #12233a; border-color: #d8c79c;
+  box-shadow: 0 20px 50px rgb(15 27 45 / .28);
+}
+html:not(.dark) body .hm2 .hm2-bg {
+  background-color: #f7f4ec;
+  background-image:
+    linear-gradient(180deg, rgb(247 244 236 / 70%) 0%, rgb(247 244 236 / 96%) 18%, #f7f4ec 30%),
+    radial-gradient(120% 60% at 85% 100%, rgb(176 125 20 / 12%), transparent 60%),
+    url('/media/hero/hero-norte-impacto.webp');
+  background-size: 100% 100%, 100% 100%, auto 20%;
+  background-position: 0 0, 0 0, 100% 0;
+}
+html:not(.dark) body .hm2 .hm2-bg::after { display: none; }
+html:not(.dark) body .hm2 .norte-brand,
+html:not(.dark) body .hm2 .norte-brand :is(span, strong, b) { color: #12233a; }
+html:not(.dark) body .hm2 .norte-brand :is(small, em, [class*="sub"]) { color: #8a5d0e; }
+html:not(.dark) body .hm2 .hm2-header p,
+html:not(.dark) body .hm2 .hm2-header [data-slot="sheet-description"] { color: #44546a; text-shadow: none; }
+html:not(.dark) body .hm2 > button:first-of-type { background: #ffffff; color: #12233a; border: 1px solid #d3c294; }
+
+html:not(.dark) body .hm2 .hm2-tile { background: #ffffff; border: 1px solid #ddd3b8; color: #12233a !important; box-shadow: 0 1px 2px rgb(15 27 45 / .06); }
+html:not(.dark) body .hm2 .hm2-tile svg { color: #9a6a0c; }
+html:not(.dark) body .hm2 .hm2-chips a,
+html:not(.dark) body .hm2 .hm2-contact a { background: #ffffff; border: 1px solid #ddd3b8; color: #12233a; }
+html:not(.dark) body .hm2 .hm2-contact svg { color: #9a6a0c; }
+html:not(.dark) body .hm2 .hm2-block h2 { color: #8a5d0e; }
+html:not(.dark) body .hm2 .hm2-address { color: #44546a; }
+
+html:not(.dark) body .hm2 .hm2-plans {
+  color: #12233a; border: 1px solid #d3b66a; background: linear-gradient(120deg, #fff4d6, #ffffff 65%);
+}
+html:not(.dark) body .hm2 .hm2-plans__lead > svg { color: #9a6a0c; }
+html:not(.dark) body .hm2 .hm2-plans__lead small { color: #44546a; }
+html:not(.dark) body .hm2 .hm2-plans__prices i { color: #44546a; background: #ffffff; border: 1px solid #e3dac0; }
+html:not(.dark) body .hm2 .hm2-plans__prices i b { color: #12233a; }
+html:not(.dark) body .hm2 .hm2-plans__prices i[data-featured] { background: #fff1cc; border-color: #c99a2e; }
+html:not(.dark) body .hm2 .hm2-plans__prices i[data-featured] b { color: #7a4f08; }
+
+/* Toque e hover no claro */
+html:not(.dark) body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a, .hm2-plans):active {
+  background: #fbecc4 !important; border-color: #c99a2e !important; color: #12233a !important; box-shadow: inset 0 0 0 1px rgb(176 125 20 / .3);
+}
+html:not(.dark) body .hm2 .hm2-tile:active svg, html:not(.dark) body .hm2 .hm2-contact a:active svg { color: #7a4f08; }
+@media (hover: hover) {
+  html:not(.dark) body .hm2 :is(.hm2-tile, .hm2-chips a, .hm2-contact a, .hm2-plans):hover {
+    background: #fff6dc; border-color: #c99a2e; color: #12233a !important;
+  }
+}
+html:not(.dark) body .home-menu.hm2[data-keyboard] :focus-visible { outline-color: #1f4e8c !important; }
+
+/* Acesso */
+html:not(.dark) body .hm2 .hm2-access { border-top-color: #ddd3b8; }
+html:not(.dark) body .hm2 .hm2-access .home-button--primary {
+  background: linear-gradient(135deg, #2f6fb8, #1f4e8c 60%, #173a6a); border-color: #1b4373; color: #ffffff;
+}
+html:not(.dark) body .hm2 .hm2-access .home-button--primary:active { background: #173a6a; }
+html:not(.dark) body .hm2 .hm2-secondary { background: #ffffff; border: 1px solid #1f4e8c; color: #1f4e8c; }
+html:not(.dark) body .hm2 .hm2-secondary:active { background: #e6eefa !important; border-color: #1f4e8c !important; }
