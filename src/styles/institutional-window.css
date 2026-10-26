@@ -898,3 +898,22 @@ html:not(.dark) body .iw-panel .sc-request :is(input, select, textarea), html:no
 html:not(.dark) body .iw-panel .sc-faq summary { color: #12233a; }
 html:not(.dark) body .iw-panel .sc-feedback:not(:empty) { background: #e4f3e6; color: #1d5a2c; }
 html:not(.dark) body .iw-panel .sc-error { color: #a3361a; }
+
+/* ===== Enquadramento: nada pode ser mais largo que a tela; menus rolam por dentro ===== */
+.institutional-window { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 100vw; overflow-x: hidden; }
+.institutional-window > * { min-width: 0; max-width: 100%; }
+.iw-header, .iw-hero, .iw-main, .iw-footer, .iw-sections, .iw-reader, .iw-panel { min-width: 0; max-width: 100%; }
+.iw-header nav { min-width: 0; max-width: 100%; }
+@media (max-width: 600px) {
+  .iw-header nav, .iw-tabs {
+    overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .iw-header nav::-webkit-scrollbar, .iw-tabs::-webkit-scrollbar { display: none; }
+  .iw-sections { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .iw-tabs { display: flex; flex-wrap: nowrap; gap: 6px; width: 100%; padding: 6px; }
+  .iw-tabs > button { flex: none; white-space: nowrap; min-height: 40px; }
+  .iw-footer { flex-wrap: wrap; gap: 6px 12px; min-width: 0; }
+  .iw-chapter-footer { flex-wrap: wrap; gap: 8px; }
+  .iw-panel { overflow-x: hidden; overflow-wrap: anywhere; }
+}
