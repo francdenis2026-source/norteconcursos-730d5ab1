@@ -26,18 +26,17 @@ export function MobileHomepage() {
           <span className="mobile-homepage__eyebrow">
             <span /> Preparação para carreiras policiais
           </span>
-          <h1>
-            Seu próximo passo começa <em>com direção.</em>
-          </h1>
-          <p className="mobile-homepage__hero-lead">
-            Questões, editais e simulados para transformar seu estudo em preparação real.
-          </p>
-          <Link to="/auth" search={{ mode: undefined }} className="mobile-homepage__primary">
-            Entrar <ArrowRight />
-          </Link>
-          <a href="#mobile-recursos" className="mobile-homepage__secondary">
-            Ver como funciona <ChevronRight />
-          </a>
+          <div className="mobile-homepage__glass">
+            <h1>
+              Seu próximo passo começa <em>com direção.</em>
+            </h1>
+            <p className="mobile-homepage__hero-lead">
+              Questões, editais e simulados para transformar seu estudo em preparação real.
+            </p>
+            <a href="#mobile-recursos" className="mobile-homepage__secondary">
+              Ver como funciona <ChevronRight />
+            </a>
+          </div>
         </div>
       </section>
       <section className="mobile-homepage__daily">
