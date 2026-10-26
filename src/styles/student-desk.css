@@ -17,6 +17,8 @@
   --desk-violet: #c1a4ec;
   --desk-amber: #e8c176;
   --desk-rose: #f1a0b2;
+  /* Brighter than the site-wide muted gray so secondary text reads clearly over this page's dark art. */
+  --muted-foreground: oklch(0.83 0 0);
 }
 .student-desk [data-accent="blue"],
 .student-desk [data-tone="blue"] {
@@ -105,7 +107,7 @@
   line-height: 1.4;
 }
 .student-home.student-desk .student-hub__shortcuts small {
-  color: var(--muted-foreground);
+  color: color-mix(in srgb, var(--desk-accent) 35%, var(--muted-foreground));
   font-size: 13px;
   line-height: 1.4;
   margin-top: 3px;
@@ -177,10 +179,11 @@
 /* A suggestion is a short actionable row, not a second hero. */
 .student-desk__next {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px 24px;
-  padding: 14px 16px;
+  gap: 10px 20px;
+  padding: 13px 15px;
   border: 1px solid color-mix(in srgb, var(--desk-accent) 26%, var(--border));
   border-left: 3px solid var(--desk-accent);
   border-radius: 12px;
@@ -213,17 +216,23 @@
 .student-desk__next p {
   font-size: 13.5px;
   line-height: 1.5;
-  color: var(--muted-foreground);
+  color: color-mix(in srgb, var(--desk-accent) 30%, var(--muted-foreground));
   margin-top: 4px;
   max-width: 82ch;
 }
 .student-home.student-desk .student-desk__next .student-home__primary {
-  flex: none;
+  flex: 1 1 200px;
   margin: 0;
   min-height: 40px;
   padding: 9px 12px;
   font-size: 13px;
   max-width: 250px;
+}
+@media (max-width: 640px) {
+  .student-home.student-desk .student-desk__next .student-home__primary {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 /* Useful content stays on quiet surfaces, with a consistent color assigned to each purpose. */
 .student-home.student-desk .student-hub__workspace {
@@ -235,7 +244,7 @@
   gap: 10px;
 }
 :root .student-home.student-desk .student-home__card[data-accent] {
-  padding: 16px;
+  padding: 14px;
   border: 1px solid color-mix(in srgb, var(--desk-accent) 20%, var(--border));
   border-left: 3px solid color-mix(in srgb, var(--desk-accent) 70%, var(--border));
   border-radius: 12px;
@@ -243,7 +252,7 @@
   box-shadow: none;
 }
 .student-home.student-desk .student-home__section-title {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   gap: 9px;
   color: var(--foreground);
 }
@@ -264,7 +273,7 @@
   font-size: 16px;
 }
 .student-home.student-desk .student-home__section-title p {
-  color: var(--muted-foreground);
+  color: color-mix(in srgb, var(--desk-accent) 30%, var(--muted-foreground));
   font-size: 13px;
   line-height: 1.4;
   margin-top: 3px;
@@ -284,7 +293,7 @@
 }
 .student-home.student-desk .student-home__empty p,
 .student-home.student-desk .student-home__quiet {
-  color: var(--muted-foreground);
+  color: color-mix(in srgb, var(--desk-accent, var(--desk-blue)) 25%, var(--muted-foreground));
   font-size: 14px;
   line-height: 1.6;
   margin-top: 5px;
