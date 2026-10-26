@@ -84,3 +84,20 @@ html body .hm2 .hm2-tile:active, html body .hm2 .hm2-chips a:active { transform:
 html body .mobile-homepage__hero-copy { pointer-events: none; }
 html body .mobile-homepage__hero-copy :is(a, button) { pointer-events: auto; }
 html body .mobile-homepage__hero .hero-badge { pointer-events: auto; }
+
+/* Planos no menu: faixa discreta com os quatro valores */
+html body .hm2 .hm2-plans {
+  flex: none; display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; text-decoration: none; color: #f6f0e0;
+  border: 1px solid color-mix(in srgb, var(--brass-soft) 38%, transparent); border-radius: 12px;
+  background: linear-gradient(120deg, rgb(232 205 153 / 12%), rgb(18 24 28 / 70%) 60%);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+html body .hm2 .hm2-plans__lead { display: flex; align-items: center; gap: 10px; }
+html body .hm2 .hm2-plans__lead > svg { width: 20px; height: 20px; color: var(--brass-soft); flex: none; }
+html body .hm2 .hm2-plans__lead strong { display: block; font-size: 14px; line-height: 1.2; }
+html body .hm2 .hm2-plans__lead small { display: block; font-size: 11.5px; color: #cfc7b4; text-align: left; text-align-last: auto; }
+html body .hm2 .hm2-plans__prices { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+html body .hm2 .hm2-plans__prices i { display: flex; flex-direction: column; gap: 1px; padding: 5px 6px; border-radius: 8px; font-style: normal; font-size: 10px; color: #cfc7b4; background: rgb(255 255 255 / 5%); border: 1px solid rgb(255 255 255 / 8%); }
+html body .hm2 .hm2-plans__prices i b { font-size: 12px; color: #f6f0e0; }
+html body .hm2 .hm2-plans__prices i[data-featured] { border-color: color-mix(in srgb, var(--brass-soft) 60%, transparent); }
+html body .hm2 .hm2-plans__prices i[data-featured] b { color: var(--brass-soft); }

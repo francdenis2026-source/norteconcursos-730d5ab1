@@ -55,6 +55,8 @@ import "@/styles/home-editorial.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
+import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { HeroVideo } from "@/components/landing/HeroVideo";
@@ -82,7 +84,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preload", as: "image", href: "/media/hero/hero-norte-recorte.webp", fetchPriority: "high" },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/media/hero/hero-norte-recorte.webp",
+        fetchPriority: "high",
+      },
     ],
   }),
 });
@@ -117,7 +124,7 @@ const MENU_TILES: [string, string, LucideIcon, string?][] = [
   ["Ferramentas", "ferramentas", BrainCircuit, "mobile-ferramentas"],
   ["Carreiras", "carreiras", Target, "mobile-inicio"],
   ["Desafio diário", "/desafio-diario", Trophy],
-  ["Planos", "planos", BadgeCheck, "mobile-planos"],
+  ["Ajuda", "/suporte", MessageCircle],
 ];
 
 function goToSection(desktopId: string, mobileId?: string) {
@@ -255,7 +262,11 @@ function PreparationInfo() {
     };
   }, []);
   return (
-    <PreparationTabs.Root value={active} onValueChange={setActive} className="home-preparation__info">
+    <PreparationTabs.Root
+      value={active}
+      onValueChange={setActive}
+      className="home-preparation__info"
+    >
       <PreparationTabs.List className="home-preparation__tabs" aria-label="Conheça a preparação">
         {PREPARATION_TABS.map(([id, label]) => (
           <div key={id} id={id} className="home-preparation__tab-anchor">
@@ -287,21 +298,42 @@ function PreparationInfo() {
       <PreparationTabs.Content value="como" className="home-preparation__panel">
         <ol className="home-preparation__items home-preparation__steps">
           {STEPS.map(([Icon, title, text], index) => (
-            <li key={title}><span className="home-preparation__number">0{index + 1}</span><div><h3><Icon aria-hidden="true" />{title}</h3><p>{text}</p></div></li>
+            <li key={title}>
+              <span className="home-preparation__number">0{index + 1}</span>
+              <div>
+                <h3>
+                  <Icon aria-hidden="true" />
+                  {title}
+                </h3>
+                <p>{text}</p>
+              </div>
+            </li>
           ))}
         </ol>
       </PreparationTabs.Content>
       <PreparationTabs.Content value="carreiras" className="home-preparation__panel">
         <div className="home-preparation__items home-preparation__careers">
           {CAREERS.map(([name, roles]) => (
-            <article key={name}><ShieldCheck aria-hidden="true" /><div><h3>{name}</h3><p>{roles}</p></div></article>
+            <article key={name}>
+              <ShieldCheck aria-hidden="true" />
+              <div>
+                <h3>{name}</h3>
+                <p>{roles}</p>
+              </div>
+            </article>
           ))}
         </div>
       </PreparationTabs.Content>
       <PreparationTabs.Content value="fontes" className="home-preparation__panel">
         <div className="home-preparation__items">
           {PILLARS.map(({ icon: Icon, title, text }) => (
-            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+            <article key={title}>
+              <Icon aria-hidden="true" />
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            </article>
           ))}
         </div>
       </PreparationTabs.Content>
@@ -325,7 +357,9 @@ function Index() {
   }, []);
   return (
     <div className="home">
-      <div className="home-backdrop" aria-hidden="true"><TacticalClockBackdrop /></div>
+      <div className="home-backdrop" aria-hidden="true">
+        <TacticalClockBackdrop />
+      </div>
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
@@ -339,7 +373,11 @@ function Index() {
           </div>
           <nav className="home-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
-              <a key={href} href={href} aria-current={activeSection === href.slice(1) ? "location" : undefined}>
+              <a
+                key={href}
+                href={href}
+                aria-current={activeSection === href.slice(1) ? "location" : undefined}
+              >
                 {label}
               </a>
             ))}
@@ -408,6 +446,40 @@ function Index() {
                     ),
                   )}
                 </nav>
+                <a
+                  href="#planos"
+                  className="hm2-plans"
+                  aria-label="Ver planos"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setMenuOpen(false);
+                    window.setTimeout(() => goToSection("planos", "mobile-planos"), 380);
+                  }}
+                >
+                  <span className="hm2-plans__lead">
+                    <BadgeCheck aria-hidden="true" />
+                    <span>
+                      <strong>Planos</strong>
+                      <small>
+                        {TESTING_PHASE
+                          ? `${TESTING_DAYS} dias grátis com tudo do Plus`
+                          : "Escolha o seu ritmo"}
+                      </small>
+                    </span>
+                  </span>
+                  <span className="hm2-plans__prices" aria-hidden="true">
+                    {SUBSCRIPTION_PLANS.map((plan) => (
+                      <i key={plan.id} data-featured={plan.id === "plus" || undefined}>
+                        {plan.name}
+                        <b>
+                          {plan.price === 0
+                            ? "R$ 0"
+                            : `R$ ${plan.price.toFixed(2).replace(".", ",")}`}
+                        </b>
+                      </i>
+                    ))}
+                  </span>
+                </a>
                 <section className="hm2-block" aria-labelledby="hm2-inst">
                   <h2 id="hm2-inst">Institucional</h2>
                   <ul className="hm2-chips">
@@ -423,7 +495,12 @@ function Index() {
                 <section className="hm2-block" aria-labelledby="hm2-contact">
                   <h2 id="hm2-contact">Contato</h2>
                   <div className="hm2-contact">
-                    <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" aria-label="Localização no mapa, abre em nova aba">
+                    <a
+                      href={MAPS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Localização no mapa, abre em nova aba"
+                    >
                       <MapPin aria-hidden="true" />
                       <span>Mapa</span>
                     </a>
@@ -431,22 +508,37 @@ function Index() {
                       <Mail aria-hidden="true" />
                       <span>E-mail</span>
                     </a>
-                    <a href="https://wa.me/5568992031340" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp, abre em nova aba">
+                    <a
+                      href="https://wa.me/5568992031340"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp, abre em nova aba"
+                    >
                       <MessageCircle aria-hidden="true" />
                       <span>WhatsApp</span>
                     </a>
                   </div>
-                  <p className="hm2-address">Rua Joel Fereira de Sousa, Bela Vista · Feijó, Acre · CEP 69960-000</p>
+                  <p className="hm2-address">
+                    Rua Joel Fereira de Sousa, Bela Vista · Feijó, Acre · CEP 69960-000
+                  </p>
                 </section>
                 <div className="hm2-access">
                   <SheetClose asChild>
-                    <Link to="/auth" search={{ mode: undefined }} className="home-button home-button--primary">
+                    <Link
+                      to="/auth"
+                      search={{ mode: undefined }}
+                      className="home-button home-button--primary"
+                    >
                       Entrar
                       <ArrowRight />
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/auth" search={{ mode: "register" }} className="home-button hm2-secondary">
+                    <Link
+                      to="/auth"
+                      search={{ mode: "register" }}
+                      className="home-button hm2-secondary"
+                    >
                       Criar conta
                     </Link>
                   </SheetClose>
@@ -459,7 +551,12 @@ function Index() {
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage" tabIndex={-1}>
-        <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
+        <section
+          id="inicio"
+          className="home-hero"
+          aria-labelledby="home-title"
+          data-intro={introPlaying}
+        >
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
           <TacticalCrosshair />
@@ -515,16 +612,30 @@ function Index() {
           </div>
         </section>
 
-        <section className="home-daily-feature home-container" aria-labelledby="daily-feature-title">
+        <section
+          className="home-daily-feature home-container"
+          aria-labelledby="daily-feature-title"
+        >
           <div className="home-daily-feature__copy">
-            <span className="home-signal"><span /> RITMO DIÁRIO</span>
+            <span className="home-signal">
+              <span /> RITMO DIÁRIO
+            </span>
             <h2 id="daily-feature-title">Constância hoje. Mais preparo para a prova.</h2>
-            <p>Treine com 10 questões oficiais por dia, sem cadastro. Confira os comentários e retome amanhã para manter seu ritmo.</p>
+            <p>
+              Treine com 10 questões oficiais por dia, sem cadastro. Confira os comentários e retome
+              amanhã para manter seu ritmo.
+            </p>
           </div>
-          <div className="home-daily-feature__card"><DailyChallengeBadge /></div>
+          <div className="home-daily-feature__card">
+            <DailyChallengeBadge />
+          </div>
         </section>
 
-        <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
+        <section
+          id="plataforma"
+          className="home-section home-preparation"
+          aria-labelledby="preparation-title"
+        >
           <div className="home-preparation__fullwidth">
             <div className="home-preparation__band">
               <span className="home-preparation__frame" aria-hidden="true" />
@@ -539,9 +650,18 @@ function Index() {
                 decoding="async"
               />
               <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow home-signal">01 · Prepare-se para sua carreira</span>
-                <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
-                <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
+                <span className="home-preparation__eyebrow home-signal">
+                  01 · Prepare-se para sua carreira
+                </span>
+                <h2 id="preparation-title">
+                  Uma plataforma.
+                  <br />
+                  <em>A sua carreira.</em>
+                </h2>
+                <p>
+                  Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma
+                  prioridade clara.
+                </p>
               </div>
               <PreparationInfo />
             </div>
@@ -572,7 +692,6 @@ function Index() {
         </section>
 
         <PlansSection />
-
       </main>
 
       <footer className="home-footer home-footer--command">
@@ -583,20 +702,14 @@ function Index() {
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>
                 <div className="home-footer__access" aria-label="Acesse sua conta">
-                  <Link to="/auth" search={{ mode: undefined }}>Entrar <LogIn aria-hidden="true" /></Link>
+                  <Link to="/auth" search={{ mode: undefined }}>
+                    Entrar <LogIn aria-hidden="true" />
+                  </Link>
                 </div>
               </div>
             </div>
-            <FooterColumn
-              title="Explore"
-              compact={compactHero}
-              links={EXPLORE_LINKS}
-            />
-            <FooterColumn
-              title="Institucional"
-              compact={compactHero}
-              links={INSTITUTIONAL_LINKS}
-            />
+            <FooterColumn title="Explore" compact={compactHero} links={EXPLORE_LINKS} />
+            <FooterColumn title="Institucional" compact={compactHero} links={INSTITUTIONAL_LINKS} />
             <a
               className="home-platform-qr"
               href="https://norteconcursos.xyz/"
@@ -612,25 +725,42 @@ function Index() {
               <span>
                 <strong>Continue no celular</strong>
                 <span>Aponte a câmera e acesse a plataforma.</span>
-                <small>norteconcursos.xyz <ArrowUpRight aria-hidden="true" /></small>
+                <small>
+                  norteconcursos.xyz <ArrowUpRight aria-hidden="true" />
+                </small>
               </span>
             </a>
           </div>
           <section className="home-footer__contact" aria-labelledby="footer-contact-title">
-            <h3 id="footer-contact-title" className="sr-only">Endereço e contato</h3>
+            <h3 id="footer-contact-title" className="sr-only">
+              Endereço e contato
+            </h3>
             <div className="home-footer__contact-grid">
               {compactHero ? (
                 <details className="home-footer__address">
-                  <summary><MapPin aria-hidden="true" /><span>Feijó · Acre</span><ChevronRight aria-hidden="true" /></summary>
-                  <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000</address>
+                  <summary>
+                    <MapPin aria-hidden="true" />
+                    <span>Feijó · Acre</span>
+                    <ChevronRight aria-hidden="true" />
+                  </summary>
+                  <address>
+                    Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000
+                  </address>
                 </details>
               ) : (
                 <div className="home-footer__contact-card">
                   <MapPin aria-hidden="true" />
-                  <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · <span className="whitespace-nowrap">CEP 69960-000</span></address>
+                  <address>
+                    Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC ·{" "}
+                    <span className="whitespace-nowrap">CEP 69960-000</span>
+                  </address>
                 </div>
               )}
-              <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
+              <a
+                className="home-footer__contact-card"
+                href="mailto:francdenis2026@gmail.com"
+                aria-label="Enviar e-mail para francdenis2026@gmail.com"
+              >
                 <Mail aria-hidden="true" />
                 <span className="home-footer__contact-detail">francdenis2026@gmail.com</span>
                 <span className="home-footer__contact-label">E-mail</span>
@@ -659,20 +789,41 @@ function Index() {
   );
 }
 
-function FooterColumn({ title, links, compact = false }: { title: string; links: [string, string][]; compact?: boolean }) {
+function FooterColumn({
+  title,
+  links,
+  compact = false,
+}: {
+  title: string;
+  links: [string, string][];
+  compact?: boolean;
+}) {
   const visibleLinks = compact ? links.slice(0, 2) : links;
   const list = (
     <ul>
       {visibleLinks.map(([label, href]) => (
-        <li key={label}><Link to={href}>{label}</Link></li>
+        <li key={label}>
+          <Link to={href}>{label}</Link>
+        </li>
       ))}
     </ul>
   );
-  if (compact) return (
-    <details className="home-footer__section" name="home-footer-sections">
-      <summary>{title}<Plus aria-hidden="true" /></summary>
-      <nav className="home-footer__links" aria-label={title}>{list}</nav>
-    </details>
+  if (compact)
+    return (
+      <details className="home-footer__section" name="home-footer-sections">
+        <summary>
+          {title}
+          <Plus aria-hidden="true" />
+        </summary>
+        <nav className="home-footer__links" aria-label={title}>
+          {list}
+        </nav>
+      </details>
+    );
+  return (
+    <nav className="home-footer__links" aria-label={title}>
+      <h3>{title}</h3>
+      {list}
+    </nav>
   );
-  return <nav className="home-footer__links" aria-label={title}><h3>{title}</h3>{list}</nav>;
 }

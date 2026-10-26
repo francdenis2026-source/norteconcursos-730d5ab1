@@ -15599,3 +15599,19 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .home .mobile-homepage__contests .contest-spotlight__content { padding: 14px; gap: 10px; }
   .home .mobile-homepage__contests .contest-spotlight__training { padding-block: 10px; }
 }
+
+/* Planos na home do celular: lista discreta */
+.mobile-plans { display: grid; gap: 12px; padding: 22px 16px; }
+.mobile-plans__trial { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; color: var(--home-muted, #9aa); text-align: left; }
+.mobile-plans__trial svg { width: 16px; height: 16px; color: var(--brass-soft, #c9a45c); flex: none; }
+.mobile-plans__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.mobile-plans__list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid var(--home-line, #2a3338); border-radius: 12px; background: var(--card); }
+.mobile-plans__list li[data-featured] { border-color: color-mix(in srgb, var(--brass-soft, #c9a45c) 70%, transparent); }
+.mobile-plans__list strong { display: block; font-size: 15px; }
+.mobile-plans__list small { display: block; font-size: 12px; color: var(--home-muted, #8a9599); text-align: left; text-align-last: auto; }
+.mobile-plans__list li > span { font-weight: 800; font-size: 16px; white-space: nowrap; }
+.mobile-plans__list em { font-style: normal; font-weight: 500; font-size: 11px; opacity: .7; margin-left: 2px; }
+.mobile-plans__note { margin: 0; font-size: 11.5px; color: var(--home-muted, #8a9599); text-align: left; text-align-last: auto; }
+.mobile-plans__list strong, .mobile-plans__list li > span { color: var(--foreground, #101820); }
+.mobile-plans__list li[data-featured] > span { color: var(--brass-ink, #8a5d12); }
+:root.dark .mobile-plans__list li[data-featured] > span { color: var(--brass-soft, #e8cd99); }
