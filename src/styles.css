@@ -15568,3 +15568,35 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     box-shadow: 0 0 0 4px rgb(176 125 20 / .18);
   }
 }
+
+/* Mobile home, dark mode: no light slabs; compact contest cards that fill the slide. */
+@media (max-width: 767px) {
+  html.dark .mobile-homepage { background: #0b1420; }
+  html.dark .mobile-homepage__daily { background: #0e1a28; color: #eef3f8; }
+  html.dark .mobile-homepage__resources { background: #0b1522; color: #eef3f8; border-top: 1px solid rgb(255 255 255 / .08); }
+  html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources) :is(h2, h3, strong) { color: #f4f7fa; }
+  html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources) :is(p, article p, article span) { color: #b4c2d0; }
+  html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources)
+  :is(.mobile-homepage__eyebrow, .mobile-homepage__section-head > span) {
+    color: #f0cd85; background: rgb(223 180 91 / .12); border: 1px solid rgb(223 180 91 / .4);
+  }
+  html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources) .mobile-homepage__eyebrow > span { background: #dfb45b; box-shadow: 0 0 0 4px rgb(223 180 91 / .2); }
+  html.dark .mobile-homepage__cards article { background: #132233; border: 1px solid rgb(255 255 255 / .08); border-radius: 12px; }
+  html.dark .mobile-homepage__cards article svg { color: #e0b65d; }
+  html.dark .mobile-homepage__wide-link { color: #f0cd85; border: 1px solid rgb(223 180 91 / .45); background: transparent; }
+
+  .home .mobile-homepage__contests .contest-catalog .contest-card { flex: 0 0 100%; width: 100%; max-width: none; }
+  .home .mobile-homepage__contests .contest-catalog { gap: 10px; padding-inline: 0; scroll-padding-inline: 0; }
+  .home .mobile-homepage__contests .contest-card__art { aspect-ratio: auto; height: 132px; overflow: hidden; }
+  .home .mobile-homepage__contests .contest-card__art > img { position: absolute; inset: 0; height: 100%; }
+  .home .mobile-homepage__contests .contest-card__content > .contest-reference { display: none; }
+  .home .mobile-homepage__contests .contest-card__content { padding: 14px; }
+  .home .mobile-homepage__contests .contest-card h3 { font-size: 18px; margin-top: 4px; }
+  .home .mobile-homepage__contests .contest-card__content > .contest-availability { padding-block: 8px; }
+  .home .mobile-homepage__contests .contest-spotlight__art { aspect-ratio: auto; height: 150px; min-height: 0; overflow: hidden; }
+  .home .mobile-homepage__contests .contest-spotlight__art > img { height: 100%; object-fit: cover; }
+  .home .mobile-homepage__contests .contest-spotlight__copy,
+  .home .mobile-homepage__contests .contest-spotlight__signature { display: none; }
+  .home .mobile-homepage__contests .contest-spotlight__content { padding: 14px; gap: 10px; }
+  .home .mobile-homepage__contests .contest-spotlight__training { padding-block: 10px; }
+}
