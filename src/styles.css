@@ -12031,6 +12031,13 @@ html:not(.dark) .student-hub__resume .student-hub__kicker { color: #8a5b11; }
 html:not(.dark) .student-hub__masthead { background: #f6f8fa; color: #17283a; border-color: #d5dfe8; }
 html:not(.dark) .student-hub__masthead h1 { color: #17283a; text-shadow: none; }
 html:not(.dark) .student-hub__masthead h1 + p { color: #526176; }
+html:not(.dark) .student-hub__shortcuts > a { background: #ffffff; border-color: #d5dfe8; box-shadow: 0 12px 28px -24px rgb(23 40 58 / .35); }
+html:not(.dark) .student-hub__shortcuts > a::before { opacity: .08; filter: saturate(.45); }
+html:not(.dark) .student-hub__shortcuts > a::after { background: linear-gradient(180deg, transparent, rgb(255 255 255 / .96)); }
+html:not(.dark) .student-hub__shortcuts :is(strong,small) { color: #17283a; text-shadow: none; }
+html:not(.dark) .student-hub__shortcuts small { color: #526176; }
+html:not(.dark) .student-hub__shortcuts .student-home__tool-icon { background: #edf4fb; border-color: #d5e2ef; color: #1d5fbf; backdrop-filter: none; }
+html:not(.dark) .student-hub__shortcuts > a > svg { color: #1d5fbf; }
 .student-hub__kicker { display:flex; align-items:center; gap:7px; font-size:10px; font-weight:650; letter-spacing:.12em; color:#8ed6c5; }
 .student-hub__kicker > span { width:6px; height:6px; border-radius:50%; background:#8ed6c5; }
 .student-hub__resume h2 { max-width:30ch; margin-top:11px; font-size:clamp(19px,1.8vw,25px); font-weight:700; line-height:1.25; letter-spacing:-.02em; }
