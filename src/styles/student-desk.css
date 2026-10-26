@@ -329,7 +329,7 @@
   background: var(--card);
 }
 .student-home.student-desk .pcpr-spot--compact .pcpr-spot__art {
-  display: none;
+  display: block;
 }
 .student-home.student-desk .pcpr-spot--compact h2 {
   font-size: 13px;

@@ -79,6 +79,16 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
+  head: () => ({
+    meta: [
+      { title: "Treinador de questões | Norte Concursos" },
+      { name: "description", content: "Treine questões de concursos por banca, cargo e disciplina na sua preparação Norte Concursos." },
+      { property: "og:title", content: "Treinador de questões | Norte Concursos" },
+      { property: "og:description", content: "Sua sessão de questões de concursos por banca, cargo e disciplina." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
   validateSearch: (
     search: Record<string, unknown>,
   ): Partial<
@@ -96,6 +106,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "area"
       | "topic"
       | "go"
+      | "catalogQuery"
+      | "mode"
+      | "limit"
       | "reinforce",
       string | undefined
     >
@@ -113,6 +126,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     area: typeof search["area"] === "string" ? search["area"] : undefined,
     topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
     go: typeof search["go"] === "string" ? search["go"] : undefined,
+    catalogQuery: typeof search["catalogQuery"] === "string" ? search["catalogQuery"] : undefined,
+    mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
+    limit: typeof search["limit"] === "string" ? search["limit"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
   }),
   component: QuestionTrainer,

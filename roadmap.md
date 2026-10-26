@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Corrigir o enquadramento das artes PC PI e PC PR em todas as apresentações existentes; cards públicos conferidos em celular e computador, faixa do painel ajustada (verificação autenticada indisponível).
+
 - [x] Auditar a experiência do aluno e da administração.
 - [x] Separar e renomear destinos ambíguos sem remover funcionalidades.
 - [x] Aplicar a direção visual “Central de elite” às telas principais.
