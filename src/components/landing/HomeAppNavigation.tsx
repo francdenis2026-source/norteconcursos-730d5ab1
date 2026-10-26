@@ -29,10 +29,10 @@ export function HomeAppNavigation() {
       </Link>
     </nav>
     <p className="mobile-nav-shelf__sign">
-      <span>Desenvolvido por</span>
+      <span>Dev.</span>
       <strong>Franc D’nis</strong>
       <i aria-hidden="true" />
-      <span>Feijó, Acre</span>
+      <span>Feijó-AC, Brasil</span>
     </p>
     </div>
   );
