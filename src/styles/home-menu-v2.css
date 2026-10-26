@@ -246,3 +246,12 @@ html:not(.dark) body .hm2 .hm2-access .home-button--primary {
 html:not(.dark) body .hm2 .hm2-access .home-button--primary:active { background: #173a6a; }
 html:not(.dark) body .hm2 .hm2-secondary { background: #ffffff; border: 1px solid #1f4e8c; color: #1f4e8c; }
 html:not(.dark) body .hm2 .hm2-secondary:active { background: #e6eefa !important; border-color: #1f4e8c !important; }
+
+/* Janela do menu: ajusta-se ao conteúdo e nunca cobre a tela inteira.
+   Fica ancorada no topo, com a mesma largura útil da home. */
+html body .home-menu.hm2 {
+  bottom: auto;
+  height: fit-content;
+  max-height: calc(100dvh - max(10px, env(safe-area-inset-top)) - max(10px, env(safe-area-inset-bottom)));
+}
+html body .hm2 .hm2-grid { flex: none; }
