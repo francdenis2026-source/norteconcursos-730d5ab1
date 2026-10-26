@@ -42,6 +42,7 @@ import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
 import "@/styles/home-hero-emblem.css";
 import "@/styles/home-operations.css";
+import "@/styles/home-menu-v2.css";
 import "@/styles/home-light.css";
 import "@/styles/home-refinements.css";
 import "@/styles/home-interactions.css";
@@ -105,6 +106,17 @@ const INSTITUTIONAL_LINKS: [string, string][] = [
   ["Privacidade", "/privacy"],
   ["Termos de uso", "/terms"],
   ["Central de suporte", "/suporte"],
+];
+
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Rua+Joel+Fereira+de+Sousa%2C+Bela+Vista%2C+Feij%C3%B3%2C+Acre";
+const MENU_TILES: [string, string, LucideIcon][] = [
+  ["A plataforma", "#plataforma", Compass],
+  ["Concursos", "#concursos", Landmark],
+  ["Ferramentas", "#ferramentas", BrainCircuit],
+  ["Carreiras", "#carreiras", Target],
+  ["Desafio diário", "/desafio-diario", Trophy],
+  ["Planos", "#planos", BadgeCheck],
 ];
 
 const STEPS: [LucideIcon, string, string][] = [
@@ -345,14 +357,15 @@ function Index() {
                 </button>
               </SheetTrigger>
               <SheetContent
-                className="home-menu"
+                className="home-menu hm2"
                 data-keyboard={menuKeyboard || undefined}
                 onKeyDownCapture={() => setMenuKeyboard(true)}
                 menuMotion="popover"
                 overlayClassName={`home-menu-overlay${menuKeyboard ? " home-menu-overlay--keyboard" : ""}`}
                 closeLabel="Fechar menu"
               >
-                <SheetHeader className="home-menu__header">
+                <span className="hm2-bg" aria-hidden="true" />
+                <SheetHeader className="hm2-header">
                   <SheetTitle>
                     <NorteBrand />
                   </SheetTitle>
@@ -360,45 +373,56 @@ function Index() {
                     Estude com direção para a carreira que você escolheu.
                   </SheetDescription>
                 </SheetHeader>
-                <div className="home-menu__groups">
-                  <details className="home-menu__group" open>
-                    <summary>Explore<ChevronRight aria-hidden="true" /></summary>
-                    <nav aria-label="Navegação móvel">
-                      {[...NAV, ...EXPLORE_LINKS.filter(([, href]) => href !== "#planos")].map(([label, href]) => (
-                        <SheetClose asChild key={href}>
-                          <a href={href}>{label}<ChevronRight aria-hidden="true" /></a>
+                <nav className="hm2-grid" aria-label="Navegação móvel">
+                  {MENU_TILES.map(([label, href, Icon]) => (
+                    <SheetClose asChild key={href}>
+                      <a href={href} className="hm2-tile">
+                        <Icon aria-hidden="true" />
+                        <span>{label}</span>
+                      </a>
+                    </SheetClose>
+                  ))}
+                </nav>
+                <section className="hm2-block" aria-labelledby="hm2-inst">
+                  <h2 id="hm2-inst">Institucional</h2>
+                  <ul className="hm2-chips">
+                    {INSTITUTIONAL_LINKS.map(([label, href]) => (
+                      <li key={href}>
+                        <SheetClose asChild>
+                          <a href={href}>{label}</a>
                         </SheetClose>
-                      ))}
-                    </nav>
-                  </details>
-                  <details className="home-menu__group">
-                    <summary>Institucional<ChevronRight aria-hidden="true" /></summary>
-                    <nav aria-label="Informações institucionais">
-                      {INSTITUTIONAL_LINKS.map(([label, href]) => (
-                        <SheetClose asChild key={href}>
-                          <a href={href}>{label}<ChevronRight aria-hidden="true" /></a>
-                        </SheetClose>
-                      ))}
-                    </nav>
-                  </details>
-                  <details className="home-menu__group">
-                    <summary>Contato e localização<ChevronRight aria-hidden="true" /></summary>
-                    <div className="home-menu__contact">
-                      <address><MapPin aria-hidden="true" /><span>Rua Joel Fereira de Sousa, Bela Vista<br />Feijó, Acre · CEP 69960-000</span></address>
-                      <a href="mailto:francdenis2026@gmail.com"><Mail aria-hidden="true" /><span>E-mail<small>francdenis2026@gmail.com</small></span></a>
-                      <a href="https://wa.me/5568992031340" target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /><span>WhatsApp<small>(68) 99203-1340 · abre em nova aba</small></span></a>
-                    </div>
-                  </details>
-                </div>
-                <div className="home-menu__access">
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+                <section className="hm2-block" aria-labelledby="hm2-contact">
+                  <h2 id="hm2-contact">Contato</h2>
+                  <div className="hm2-contact">
+                    <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" aria-label="Localização no mapa, abre em nova aba">
+                      <MapPin aria-hidden="true" />
+                      <span>Mapa</span>
+                    </a>
+                    <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail">
+                      <Mail aria-hidden="true" />
+                      <span>E-mail</span>
+                    </a>
+                    <a href="https://wa.me/5568992031340" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp, abre em nova aba">
+                      <MessageCircle aria-hidden="true" />
+                      <span>WhatsApp</span>
+                    </a>
+                  </div>
+                  <p className="hm2-address">Rua Joel Fereira de Sousa, Bela Vista · Feijó, Acre · CEP 69960-000</p>
+                </section>
+                <div className="hm2-access">
                   <SheetClose asChild>
-                    <Link
-                      to="/auth"
-                      search={{ mode: undefined }}
-                      className="home-button home-button--primary"
-                    >
+                    <Link to="/auth" search={{ mode: undefined }} className="home-button home-button--primary">
                       Entrar
                       <ArrowRight />
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link to="/auth" search={{ mode: "register" }} className="home-button hm2-secondary">
+                      Criar conta
                     </Link>
                   </SheetClose>
                 </div>
