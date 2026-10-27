@@ -4,6 +4,8 @@ import {
   BookOpenCheck,
   CheckCircle2,
   ChevronRight,
+  Mail,
+  MessageCircle,
   ShieldCheck,
   Target,
 } from "lucide-react";
@@ -127,23 +129,25 @@ export function MobileHomepage() {
         </Link>
       </section>
       <footer className="mobile-homepage__footer">
-        <a
-          className="mobile-homepage__qr"
-          href="https://norteconcursos.xyz/"
-          aria-label="Abrir a plataforma Norte Concursos"
-        >
-          <img src="/media/brand/platform-qr.svg" alt="QR Code da plataforma Norte Concursos" />
-          <span>
-            <strong>Acesse também pelo computador</strong>
-            <small>Aponte a câmera para abrir norteconcursos.xyz</small>
-          </span>
-        </a>
         <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
           <a href="/sobre">Sobre</a>
           <a href="/suporte">Suporte</a>
           <a href="/privacy">Privacidade</a>
           <a href="/terms">Termos</a>
         </nav>
+        <div className="mobile-homepage__footer-contact">
+          <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
+            <Mail aria-hidden="true" /> francdenis2026@gmail.com
+          </a>
+          <a
+            href="https://wa.me/5568992031340"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
+          >
+            <MessageCircle aria-hidden="true" /> (68) 99203-1340
+          </a>
+        </div>
         <div className="mobile-homepage__footer-base">
           <strong>
             NORTE <span>CONCURSOS</span>
