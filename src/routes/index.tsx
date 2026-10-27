@@ -699,9 +699,6 @@ function Index() {
               ))}
             </nav>
             <div className="nc-footer__side">
-              <Link className="nc-footer__enter" to="/auth" search={{ mode: undefined }}>
-                Entrar <LogIn aria-hidden="true" />
-              </Link>
               <a
                 className="nc-footer__qr"
                 href="https://norteconcursos.xyz/"

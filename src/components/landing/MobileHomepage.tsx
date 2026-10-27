@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   ChevronRight,
   Mail,
+  MapPin,
   MessageCircle,
   ShieldCheck,
   Target,
@@ -129,13 +130,17 @@ export function MobileHomepage() {
         </Link>
       </section>
       <footer className="mobile-homepage__footer">
+        <strong className="mobile-homepage__footer-brand">
+          NORTE <span>CONCURSOS</span>
+        </strong>
         <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
-          <a href="/sobre">Sobre</a>
+          <a href="/desafio-diario">Desafio diário</a>
+          <a href="/sobre">Nossa história</a>
           <a href="/suporte">Suporte</a>
           <a href="/privacy">Privacidade</a>
-          <a href="/terms">Termos</a>
+          <a href="/terms">Termos de uso</a>
         </nav>
-        <div className="mobile-homepage__footer-contact">
+        <address className="mobile-homepage__footer-contact">
           <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
             <Mail aria-hidden="true" /> francdenis2026@gmail.com
           </a>
@@ -147,13 +152,15 @@ export function MobileHomepage() {
           >
             <MessageCircle aria-hidden="true" /> (68) 99203-1340
           </a>
-        </div>
-        <div className="mobile-homepage__footer-base">
-          <strong>
-            NORTE <span>CONCURSOS</span>
-          </strong>
-          <small>© 2026 · Feijó, Acre</small>
-        </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Rua+Joel+Fereira+de+Sousa%2C+Bela+Vista%2C+Feij%C3%B3%2C+Acre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MapPin aria-hidden="true" /> R. Joel Fereira de Sousa, Bela Vista · Feijó, AC · 69960-000
+          </a>
+        </address>
+        <small className="mobile-homepage__footer-copy">© 2026 Norte Concursos</small>
       </footer>
     </div>
   );
