@@ -552,7 +552,7 @@ function AuthPage() {
           )}
           {mode === "login" && (
             <figure className="auth-tactical" aria-hidden="true">
-              <img src="/media/hero/auth-seguranca.jpg" alt="" width={1600} height={1200} loading="lazy" decoding="async" />
+              <img src="/media/hero/auth-seguranca.webp" alt="" width={1000} height={750} decoding="async" />
               <figcaption>
                 <span>CARREIRAS POLICIAIS</span>
                 <strong>Preparação com direção.</strong>
