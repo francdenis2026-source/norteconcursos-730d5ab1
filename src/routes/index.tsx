@@ -59,7 +59,7 @@ import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { HeaderQuestionStats, HeroDock } from "@/components/landing/HeroDock";
+import { HeroDock } from "@/components/landing/HeroDock";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
@@ -393,7 +393,6 @@ function Index() {
           <span className="home-header__tagline" aria-hidden="true">
             Sua preparação tem direção.
           </span>
-          <HeaderQuestionStats />
           <div className="home-header__actions">
             <Link
               to="/auth"
