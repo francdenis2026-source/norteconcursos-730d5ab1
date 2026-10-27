@@ -14,6 +14,7 @@ import "@/styles/student-canvas.css";
 import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
 import "@/styles/student-bottom-nav.css";
+import "@/styles/student-light-mobile.css";
 import "@/styles/workspace-banners.css";
 import "@/styles/workspace-topbar.css";
 import "@/styles/workspace-fullscreen.css";
