@@ -22,9 +22,14 @@
       linear-gradient(0deg, rgb(7 14 23 / 75%) 0, transparent 34%);
   }
   :root:not(.dark) .home.home #inicio.home-hero::after {
+    /* Tema claro: véu azul-acinzentado só sobre a coluna do texto; o emblema à direita fica com cor e contraste
+       (antes o branco chegava ao emblema e parecia fumaça). */
     background:
-      linear-gradient(90deg, rgb(238 243 250 / 92%) 0, rgb(238 243 250 / 68%) 36%, transparent 60%),
-      linear-gradient(0deg, rgb(238 243 250 / 75%) 0, transparent 34%);
+      linear-gradient(90deg, rgb(222 232 245 / 95%) 0, rgb(222 232 245 / 72%) 24%, transparent 42%),
+      linear-gradient(0deg, rgb(222 232 245 / 55%) 0, transparent 16%);
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__image {
+    filter: saturate(1.08) contrast(1.18) brightness(.94);
   }
   .home.home .hx { position: relative; z-index: 2; display: flex; width: 100%; }
   .hx__inner {
