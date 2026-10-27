@@ -380,3 +380,22 @@ html body .auth.auth[data-auth-mode="login"] .auth-security { margin-top: 12px; 
 html body .auth.auth[data-auth-mode="login"] .auth-submit { margin-top: 4px; }
 @media (max-height: 700px) { .auth-tactical { display: none; } }
 @media (prefers-reduced-transparency: reduce) { html body .auth.auth .auth-card { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* Web (≥961px, zoom 100%): Entrar e Criar conta cabem na janela, sem barra de rolagem.
+   1) A barra fixa "Dev." do site (≥1101px) somava 32px de padding ao body e cobria o rodapé do card:
+      a assinatura já existe dentro do card, então nesta tela a barra global sai e a página não rola.
+   2) A altura do card agora desconta exatamente o que o painel usa (margens + botão "Página inicial"),
+      em vez de uma reserva fixa que estourava por 2–5px em janelas de 640–750px de altura.
+   3) Com altura ≥ 600px o painel não rola nem reserva espaço de barra; abaixo disso ele mantém a rolagem
+      apenas como rede de segurança. */
+@media (min-width: 961px) {
+  html:has(.auth), body:has(.auth) { overflow: hidden; }
+  body:has(.auth) { padding-bottom: 0 !important; }
+  body:has(.auth) > .dev-strip { display: none; }
+}
+@media (min-width: 961px) and (min-height: 600px) {
+  html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) {
+    --auth-card-h: min(calc(100dvh - 24px - clamp(34px, 4.6dvh, 44px) - clamp(4px, 1dvh, 10px)), 740px);
+  }
+  html body .auth.auth .auth-panel { overflow: hidden; scrollbar-gutter: auto; }
+}
