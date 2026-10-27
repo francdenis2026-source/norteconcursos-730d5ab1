@@ -1,0 +1,111 @@
+/* Hero da home (desktop/tablet): texto à esquerda sem cartão, emblema do relógio livre à direita,
+   e uma faixa horizontal de vidro na base com selo, questões, desafio e diferenciais.
+   Tudo cabe na primeira dobra. Carregado por último para vencer as regras antigas do cartão. */
+@media (min-width: 761px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    min-height: calc(100svh - 64px);
+    display: flex;
+    padding-bottom: 0;
+  }
+  /* Escurece só a coluna do texto (degradê), deixando o relógio à direita visível. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgb(8 16 26 / 88%) 0, rgb(8 16 26 / 62%) 34%, transparent 58%),
+      linear-gradient(0deg, rgb(8 16 26 / 70%) 0, transparent 30%);
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    background: linear-gradient(90deg, rgb(238 243 250 / 90%) 0, rgb(238 243 250 / 64%) 34%, transparent 58%),
+      linear-gradient(0deg, rgb(238 243 250 / 70%) 0, transparent 30%);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    z-index: 2;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: clamp(24px, 6vh, 64px) 20px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 52%) 1fr;
+    align-content: center;
+    flex: 1;
+  }
+  /* Sem cartão: o bloco de texto vira conteúdo solto e o relógio aparece atrás. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    display: contents;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy > :is(.home-eyebrow, h1, p, .home-actions) {
+    grid-column: 1;
+    text-shadow: 0 1px 14px rgb(0 0 0 / 45%);
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__copy > :is(.home-eyebrow, h1, p, .home-actions) {
+    text-shadow: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy > p {
+    max-width: 46ch;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  /* Faixa de vidro: selo + questões + desafio lado a lado, ocupando a largura toda. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: clamp(16px, 3vh, 32px);
+    padding: 10px;
+    border: 1px solid var(--home-line);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--home-glass-fill, var(--card)) 55%, transparent);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    backdrop-filter: blur(16px) saturate(130%);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links > * {
+    min-height: 0;
+    margin: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .question-count-meter { display: none; }
+  /* Diferenciais em uma linha discreta. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust {
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+    background: none;
+    border: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust li {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 12px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1099px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__grid { grid-template-columns: minmax(0, 60%) 1fr; }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry { flex-wrap: wrap; }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links { grid-template-columns: 1fr; flex-basis: 100%; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+}
