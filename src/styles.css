@@ -2,6 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 @import "./styles/platform-signature.css";
+@import "./styles/dev-strip.css";
 @import "./styles/police-insignia.css";
 @import "./styles/theme-switch.css";
 @import "./styles/question-palette.css";

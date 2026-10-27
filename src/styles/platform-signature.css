@@ -1,52 +1,56 @@
-/* Faixa discreta de vidro na base da página: o conteúdo passa por baixo (blur) ao rolar. Única assinatura do dev. */
+/* An ownership imprint on the page edge, outside reading and touch targets. */
 .platform-signature {
   position: fixed;
-  z-index: 40;
-  inset: auto 0 0;
+  z-index: 3;
+  inset: 50% 7px auto auto;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  min-height: 30px;
-  padding: 8px 12px max(8px, env(safe-area-inset-bottom, 0px));
-  background: color-mix(in srgb, var(--background) 55%, transparent);
-  border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  backdrop-filter: blur(14px) saturate(130%);
-  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+  gap: 18px;
+  writing-mode: vertical-rl;
+  color: color-mix(in srgb, var(--foreground) 52%, transparent);
   font-family: var(--font-mono);
-  font-size: 10px;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: .14em;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: .16em;
   text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
 }
-.platform-signature strong { color: color-mix(in srgb, var(--foreground) 96%, transparent); font-weight: 700; }
-/* Reserva a altura da faixa para o fim do conteúdo (rodapé) não ficar coberto. */
-body:has(> .platform-signature) { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
-.platform-signature__dot { opacity: .6; }
-
-/* A home já tem menu próprio no tablet; e a cápsula antiga da home sai para não duplicar. */
-.home .mobile-nav-shelf__sign { display: none !important; }
-@media (min-width: 768px) and (max-width: 1100px) {
-  body:has(.home) > .platform-signature { display: none; }
+.platform-signature::before,
+.platform-signature::after {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(transparent, currentColor, transparent);
 }
-/* No painel do aluno (celular) a faixa fica logo acima da navegação inferior. */
-@media (max-width: 1023px) {
-  body:has(.app-bottom-nav) > .platform-signature {
-    inset: auto 0 calc(76px + env(safe-area-inset-bottom, 0px));
-    padding-bottom: 8px;
+.platform-signature__mark {
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  padding: 6px 3px;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+.platform-signature__origin {
+  font-size: 7px;
+  letter-spacing: .12em;
+}
+@media (max-width: 760px) {
+  .platform-signature {
+    right: 3px;
+    gap: 12px;
+    font-size: 7px;
+    letter-spacing: .1em;
   }
-  body:has(.app-bottom-nav) { padding-bottom: 0; }
+  .platform-signature__mark { font-size: 7px; padding: 4px 1px; }
+  .platform-signature__origin { font-size: 6px; }
+  .platform-signature::before, .platform-signature::after { height: 20px; }
 }
-@media (max-width: 420px) {
-  .platform-signature { gap: 4px; font-size: 8px; letter-spacing: .08em; }
-}
-@media (prefers-reduced-transparency: reduce) {
-  .platform-signature { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (max-height: 540px) {
+  .platform-signature__origin,
+  .platform-signature::before,
+  .platform-signature::after { display: none; }
 }
 @media print {
   .platform-signature { display: none; }

@@ -4,6 +4,7 @@ import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_ART, INITIAL
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { PlatformSignature } from "@/components/brand/PlatformSignature";
+import { DevStrip } from "@/components/brand/DevStrip";
 import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
@@ -209,6 +210,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <noscript><style>{"#norte-initial-loading{display:none}html:not([data-norte-boot=ready]){overflow:auto}html:not([data-norte-boot=ready]) #norte-app-content{visibility:visible;opacity:1;pointer-events:auto}"}</style></noscript>
         <div id="norte-app-content">{children}</div>
         <PlatformSignature />
+        <DevStrip />
         <Scripts />
       </body>
     </html>

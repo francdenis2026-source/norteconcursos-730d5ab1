@@ -457,6 +457,7 @@
     line-height: 1.6;
   }
   .home.home .home-footer__credit { display: inline; }
+  body:has(.home) > .platform-signature { display: none; }
 }
 @media (max-width: 760px) {
   .home.home .home-preparation__band { gap: 12px; padding-block: 20px; }
