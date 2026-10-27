@@ -247,3 +247,36 @@
 }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--calculator > svg { display: none; }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__date small { display: inline-flex; align-items: center; padding: 2px 5px; font-size: 10px; line-height: 1.2; }
+
+/* Área do aluno: a fotografia do cartão de boas-vindas precisa ser visível.
+   Escudo suave só atrás do texto (esquerda/baixo) e a imagem preenche o cartão; vale para claro e escuro. */
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers {
+  background:
+    linear-gradient(90deg, rgb(13 16 15 / .88) 0%, rgb(13 16 15 / .66) 46%, rgb(13 16 15 / .2) 100%),
+    var(--workspace-banner-art) 72% center / cover no-repeat,
+    #151817 !important;
+}
+:root:not(.dark) .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers {
+  background:
+    linear-gradient(90deg, rgb(14 22 28 / .82) 0%, rgb(14 22 28 / .56) 46%, rgb(14 22 28 / .12) 100%),
+    var(--workspace-banner-art) 72% center / cover no-repeat,
+    #1b252c !important;
+  box-shadow: inset 0 1px 0 #ffffff14, 0 12px 28px -22px rgb(20 40 56 / .5) !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers :is(h1, .student-hub__hero-copy > p, .student-hub__welcome, .student-hub__date) {
+  text-shadow: 0 1px 3px rgb(0 0 0 / .6);
+}
+@media (max-width: 640px) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers {
+    background:
+      linear-gradient(180deg, rgb(13 16 15 / .55) 0%, rgb(13 16 15 / .72) 100%),
+      var(--workspace-banner-art) 72% center / cover no-repeat,
+      #151817 !important;
+  }
+  :root:not(.dark) .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers {
+    background:
+      linear-gradient(180deg, rgb(14 22 28 / .48) 0%, rgb(14 22 28 / .68) 100%),
+      var(--workspace-banner-art) 72% center / cover no-repeat,
+      #1b252c !important;
+  }
+}
