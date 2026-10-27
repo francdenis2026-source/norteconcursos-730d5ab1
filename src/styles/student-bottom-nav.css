@@ -6,7 +6,7 @@
     position: fixed;
     inset: auto 0 0;
     z-index: 40;
-    padding: 3px max(8px, env(safe-area-inset-right)) max(3px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    padding: 2px max(4px, env(safe-area-inset-right)) max(2px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
     border: 0;
     border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
     border-radius: 0;
@@ -39,15 +39,16 @@
     box-shadow: 0 -8px 26px rgb(0 0 0 / 38%), inset 0 1px 0 rgb(255 255 255 / 14%);
   }
   :root .app-shell.navigation-v2 .app-bottom-nav :is(a, button) {
-    min-height: 44px;
-    gap: 1px;
-    padding: 3px 2px;
-    font-size: 10.5px;
+    min-height: 48px;
+    gap: 0;
+    padding: 2px 1px;
+    font-size: 11.5px;
+    font-weight: 600;
     line-height: 1.15;
     border-radius: 10px;
   }
-  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico { width: 24px; height: 24px; }
-  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico svg { width: 20px !important; height: 20px !important; }
+  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico { width: 30px; height: 30px; }
+  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico svg { width: 25px !important; height: 25px !important; }
   /* O conteúdo passa por baixo do vidro; reserva a altura da barra no fim da rolagem. */
   :root .app-shell.navigation-v2 .app-content { padding-bottom: calc(var(--student-nav-h) + 16px); scroll-padding-bottom: var(--student-nav-h); }
 }
