@@ -482,3 +482,15 @@ html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .
 @media (min-width: 961px) and (prefers-reduced-transparency: reduce) {
   :root.dark body .auth.auth .auth-card { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* Aviso "30 dias de Plus grátis": dourado vivo para chamar atenção, legível nos dois temas. */
+html body .auth.auth .auth-trial {
+  color: #fff4d6;
+  background: linear-gradient(135deg, #b8791a 0%, #e0a43a 55%, #f0c25e 100%);
+  border: 1px solid #f3cf7a;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px -6px rgb(224 164 58 / .65), inset 0 1px 0 rgb(255 255 255 / .35);
+}
+html body .auth.auth .auth-trial strong { color: #1d1304; font-weight: 800; }
+html body .auth.auth .auth-trial span { color: #2c1d06; font-weight: 500; }
+html body .auth.auth .auth-trial svg { color: #1d1304; }
