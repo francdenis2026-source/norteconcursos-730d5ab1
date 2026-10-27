@@ -143,21 +143,26 @@
   :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register svg { width: 15px; height: 15px; }
 }
 
-/* Faixa "02 · Seu foco começa no Acre": foto da PC-AC preenche o lado direito vazio;
-   o degradê da cor do painel mantém o texto legível à esquerda (tema claro e escuro). */
+/* Faixa "02 · Seu foco começa no Acre": a imagem aparece inteira (sem corte e sem distorção), na altura
+   da faixa e encostada à direita; a borda esquerda dela some em degradê para o painel. */
 :root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, var(--home-surface) 0, color-mix(in srgb, var(--home-surface) 88%, transparent) 36%, transparent 70%),
-    linear-gradient(0deg, color-mix(in srgb, var(--home-surface) 55%, transparent), transparent 40%),
-    url("/media/hero/landing-pcac.webp") right center / cover no-repeat;
-  min-height: 170px;
+  isolation: isolate;
+  min-height: 190px;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 auto;
+  height: 100%;
+  aspect-ratio: 3 / 1; /* proporção real de home-interstitial.webp (2172 x 724) */
+  background: url("/media/hero/home-interstitial.webp") right center / 100% 100% no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+  pointer-events: none;
 }
 @media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
-    background:
-      linear-gradient(90deg, var(--home-surface) 0, color-mix(in srgb, var(--home-surface) 82%, transparent) 100%),
-      url("/media/hero/landing-pcac.webp") 78% center / cover no-repeat;
-  }
+  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before { opacity: .35; }
 }
