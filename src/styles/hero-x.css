@@ -245,3 +245,26 @@
   :root:not(.dark) .home.home .hx-dock__live { color: #f2c76a; }
   a.hx-dock__cell--daily:hover { filter: brightness(1.08); }
 }
+
+/* Tema claro: as demais faixas da homepage ganham a mesma paleta do dock (dourado, azul, marinho)
+   em vez do cinza-azulado chapado. Só fundos e bordas; textos seguem os tokens do tema. */
+:root:not(.dark) .home.home :is(.home-plans__signal, .home-testing) {
+  background: linear-gradient(135deg, #fff3d4, #fbe4a6);
+  border-color: #d9b45e;
+  box-shadow: 0 10px 26px -14px rgb(138 86 8 / 45%);
+}
+:root:not(.dark) .home.home .home-plans__notice {
+  background: linear-gradient(135deg, #eaf2ff, #d4e4fb);
+  border-color: #9db8de;
+}
+:root:not(.dark) .home.home .home-faq {
+  background: linear-gradient(160deg, #eef4ff, #dbe7f8);
+  border-color: #aebfd8;
+  box-shadow: 0 14px 30px -18px rgb(18 35 58 / 40%);
+}
+:root:not(.dark) .home.home .home-plan {
+  background: linear-gradient(180deg, #ffffff, #eef3fa);
+  border-color: #b9c6d8;
+  box-shadow: 0 12px 28px -16px rgb(18 35 58 / 35%);
+}
+:root:not(.dark) .home.home .home-operations__heading { border-color: #b9c6d8; }
