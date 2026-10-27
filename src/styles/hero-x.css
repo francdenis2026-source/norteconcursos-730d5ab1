@@ -202,3 +202,11 @@
   .hx-stats--mobile i { width: 1px; height: 14px; background: rgb(255 255 255 / 22%); }
   .hx-stats--mobile svg { width: 14px; height: 14px; color: #dfb45b; flex: none; }
 }
+
+/* O bloco do hero cobre a largura toda; deixa o brasão (efeitos de hover, toque e luz) receber o ponteiro
+   e só o texto, os botões e o dock capturam cliques. */
+@media (min-width: 761px) {
+  .home.home .hx { pointer-events: none; }
+  .home.home .hx :is(.hx__copy > *, .hx-dock) { pointer-events: auto; }
+  .home.home #inicio .hero-badge { z-index: 3; pointer-events: auto; }
+}
