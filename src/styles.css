@@ -15837,3 +15837,8 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html.dark .mobile-homepage .mobile-homepage__hero .mobile-homepage__eyebrow { background: rgb(22 24 28 / .55); }
   html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources) :is(p, article p, article span) { color: #b9bec6; }
 }
+
+/* Escuro: o véu sobre a textura da parede puxa o tom azulado para o grafite. */
+@media (max-width: 767px) {
+  html.dark .mobile-homepage .mobile-homepage__hero { --backdrop-clock-veil: rgb(22 24 28 / .6); }
+}
