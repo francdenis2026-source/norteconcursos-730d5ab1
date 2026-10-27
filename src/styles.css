@@ -15883,3 +15883,25 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html.dark .mobile-homepage .mobile-homepage__footer { background: #111316; }
   html.dark .mobile-homepage__footer-nav { border-color: rgb(255 255 255 / .09); }
 }
+
+/* Links do rodapé (celular): centralizados, com acento dourado discreto. */
+@media (max-width: 767px) {
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav {
+    display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 !important;
+    border-block: 1px solid rgb(223 180 91 / .26); border-radius: 0;
+  }
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a {
+    position: relative; display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 4px;
+    text-align: center !important; text-align-last: center; font-size: 12px; font-weight: 650; letter-spacing: .01em;
+    color: #e7dcc0; text-decoration: none; transition: color 160ms ease, background-color 160ms ease;
+  }
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a + a { border-left: 1px solid rgb(223 180 91 / .16); }
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a::after {
+    content: ""; position: absolute; left: 50%; bottom: 7px; width: 14px; height: 2px; border-radius: 2px;
+    background: #dfb45b; opacity: .55; transform: translateX(-50%); transition: width 160ms ease, opacity 160ms ease;
+  }
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a:active,
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a:focus-visible { color: #f6dca0; background: rgb(223 180 91 / .08); outline: none; }
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a:active::after,
+  html body .mobile-homepage__footer .mobile-homepage__footer-nav a:focus-visible::after { width: 26px; opacity: 1; }
+}
