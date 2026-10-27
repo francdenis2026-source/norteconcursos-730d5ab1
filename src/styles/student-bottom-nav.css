@@ -71,6 +71,21 @@
   }
   :root.dark body .app-shell.navigation-v2 .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) :is(span, svg) { color: #0b1117; text-shadow: none; }
 }
+/* Nomes dos ícones da barra: sem dourado (brass). Neutro no inativo; ativo com contraste sobre o chip claro. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  :root .app-shell.navigation-v2 .app-bottom-nav :is(a, button) span:last-child {
+    color: color-mix(in srgb, var(--foreground) 82%, transparent) !important;
+  }
+  :root .app-shell.navigation-v2 .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) {
+    background-image: none;
+  }
+  :root.dark body .app-shell.navigation-v2 .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) span:last-child {
+    color: #0b1117 !important;
+  }
+  html:not(.dark) body .app-shell.navigation-v2 .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) span:last-child {
+    color: #174f9e !important;
+  }
+}
 @media (prefers-reduced-transparency: reduce) {
   :root .app-shell.navigation-v2 .app-bottom-nav.mobile-nav-glass,
   :root .app-shell.navigation-v2 .app-bottom-nav.mobile-nav-glass[data-scrolling="true"] {
