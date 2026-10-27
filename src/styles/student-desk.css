@@ -856,3 +856,77 @@
   .student-home.student-desk .student-home__week-day > strong { font-size: 10px; }
   .student-home.student-desk .student-home__week-day > span { font-size: 9px; letter-spacing: .04em; }
 }
+
+/* ===== Área do aluno — visão geral compacta e tática =====
+   Faixas baixas (48–64 px) no lugar de cartões altos, borda fina, rótulos em mono, números fortes,
+   dourado como acento. Só estilo: markup, dados e ações permanecem. */
+.student-home.student-desk.student-overview { --ov-line: color-mix(in srgb, var(--foreground) 11%, transparent); --ov-panel: color-mix(in srgb, var(--card) 88%, transparent); --ov-gold: #e3c176; }
+.student-overview { display: grid; gap: 10px; }
+.student-overview .platform-question-counts--compact,
+.student-overview .student-desk__access,
+.student-overview .student-home__metrics { margin: 0; }
+
+/* Acervo da plataforma: uma linha com título à esquerda e dois medidores à direita */
+.student-overview .platform-question-counts--compact { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px 16px; padding: 0; }
+.student-overview .platform-question-counts--compact > header { display: grid; gap: 2px; }
+.student-overview .platform-question-counts--compact > header h2 { font: 700 11px/1 var(--font-mono, ui-monospace, monospace); letter-spacing: .14em; text-transform: uppercase; color: var(--ov-gold); }
+.student-overview .platform-question-counts--compact > header span { font-size: 11px; color: var(--muted-foreground); }
+.student-overview .platform-question-counts--compact > header button { position: absolute; width: 0; height: 0; opacity: 0; pointer-events: none; }
+.student-overview .platform-question-counts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+.student-overview .platform-question-counts__grid > * {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label value" "hint value";
+  align-items: center; column-gap: 12px; row-gap: 1px; min-height: 52px; padding: 8px 14px;
+  border: 1px solid var(--ov-line); border-radius: 10px; background: var(--ov-panel);
+}
+.student-overview .platform-question-counts__grid > * > span { grid-area: label; display: inline-flex; align-items: center; gap: 6px; font: 600 10.5px/1.2 var(--font-mono, ui-monospace, monospace); letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); }
+.student-overview .platform-question-counts__grid > * > span svg { width: 13px; height: 13px; color: var(--ov-gold); }
+.student-overview .platform-question-counts__grid > * > strong { grid-area: value; font-size: 24px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.student-overview .platform-question-counts__grid > * > small { grid-area: hint; font-size: 11px; line-height: 1.3; color: var(--muted-foreground); }
+.student-overview .platform-question-counts__grid > * > small svg { display: none; }
+@media (max-width: 720px) { .student-overview .platform-question-counts--compact { grid-template-columns: 1fr; } }
+
+/* Acessos rápidos: chips de 48 px */
+.student-overview .student-desk__section-heading { margin-bottom: 6px; }
+.student-overview .student-desk__section-heading h2 { font: 700 11px/1 var(--font-mono, ui-monospace, monospace); letter-spacing: .14em; text-transform: uppercase; color: var(--muted-foreground); }
+.student-overview .student-desk__section-heading span { font-size: 11px; }
+.student-overview .student-hub__shortcuts { gap: 8px; }
+.student-overview .student-hub__shortcuts > a { min-height: 48px; padding: 7px 10px; gap: 9px; border-radius: 10px; }
+.student-overview .student-hub__shortcuts > a > svg:last-child { display: none; }
+.student-overview .student-hub__shortcuts .student-home__tool-icon { width: 30px; height: 30px; border-radius: 8px; }
+.student-overview .student-hub__shortcuts .student-home__tool-icon svg { width: 16px; height: 16px; }
+.student-overview .student-hub__shortcuts strong { font-size: 12.5px; line-height: 1.2; }
+.student-overview .student-hub__shortcuts small { font-size: 10.5px; line-height: 1.25; }
+
+/* Métricas: faixas de ~64 px com ícone, rótulo em mono e número grande */
+.student-overview .student-home__metrics { gap: 8px; }
+.student-overview .student-home__metric {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 12px;
+  min-height: 0; padding: 10px 14px; border: 1px solid var(--ov-line); border-radius: 10px; background: var(--ov-panel);
+}
+.student-overview .student-home__metric > span { width: 34px; height: 34px; border-radius: 9px; }
+.student-overview .student-home__metric > span svg { width: 18px; height: 18px; }
+.student-overview .student-home__metric h2 { font: 600 10px/1.2 var(--font-mono, ui-monospace, monospace); letter-spacing: .1em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
+.student-overview .student-home__metric strong { display: block; margin: 2px 0 1px; font-size: 22px; line-height: 1.1; font-weight: 700; font-variant-numeric: tabular-nums; }
+.student-overview .student-home__metric p { margin: 0; font-size: 11px; line-height: 1.3; color: var(--muted-foreground); }
+.student-overview .student-home__metric-arrow { display: none; }
+
+/* Próximo passo: barra baixa */
+.student-overview .student-desk__next { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 0; padding: 10px 16px; border-radius: 10px; }
+.student-overview .student-desk__next h2 { margin: 2px 0 0; font-size: 16px; line-height: 1.25; }
+.student-overview .student-desk__next p { margin: 2px 0 0; font-size: 12.5px; line-height: 1.4; }
+.student-overview .student-desk__next .student-home__primary { min-height: 38px; padding: 8px 18px; font-size: 13px; width: auto; }
+.student-overview .student-desk__eyebrow { font: 700 10.5px/1 var(--font-mono, ui-monospace, monospace); letter-spacing: .12em; text-transform: uppercase; }
+
+/* Cartões da área de trabalho: padding menor, títulos de 14 px, sem vazios altos */
+.student-overview .student-hub__workspace { gap: 10px; }
+.student-overview .student-hub__main, .student-overview .student-hub__rail { gap: 10px; }
+.student-overview .student-home__card { padding: 14px 16px; border-radius: 12px; border: 1px solid var(--ov-line); }
+.student-overview .student-home__section-title { gap: 10px; margin-bottom: 8px; }
+.student-overview .student-home__section-title > span { width: 30px; height: 30px; border-radius: 8px; }
+.student-overview .student-home__section-title > span svg { width: 16px; height: 16px; }
+.student-overview .student-home__section-title h2 { font-size: 14px; line-height: 1.25; }
+.student-overview .student-home__section-title p { font-size: 11.5px; line-height: 1.35; margin-top: 1px; }
+.student-overview .student-home__card .student-home__quiet { font-size: 12.5px; line-height: 1.5; }
+.student-overview .student-home__objective-name { font-size: 15px; line-height: 1.3; }
+.student-overview .student-home__text-link { font-size: 12.5px; min-height: 0; padding-block: 4px; }
+.student-overview .student-home__wide-action, .student-overview .student-home__primary { min-height: 40px; }
