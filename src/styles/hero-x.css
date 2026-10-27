@@ -222,3 +222,26 @@
   .home.home .hx :is(.hx__copy > *, .hx-dock) { pointer-events: auto; }
   .home.home #inicio .hero-badge { z-index: 3; pointer-events: auto; }
 }
+
+/* Dock no tema claro: três faixas com cor própria (dourado, azul, marinho) em vez do cinza-azulado chapado. */
+@media (min-width: 768px) {
+  :root:not(.dark) .home.home .hx-dock {
+    border-color: #b9c6d8;
+    background: #b9c6d8;
+    box-shadow: 0 16px 36px -14px rgb(18 35 58 / 38%);
+  }
+  :root:not(.dark) .home.home .hx-dock__cell--access { background: linear-gradient(135deg, #fff3d4, #fbe4a6); }
+  :root:not(.dark) .home.home .hx-dock__cell--access strong { color: #8a5608; }
+  :root:not(.dark) .home.home .hx-dock__cell--access > svg { color: #b8791a; }
+  :root:not(.dark) .home.home .hx-dock__cell--access span { color: #5a4415; }
+  :root:not(.dark) .home.home .hx-dock__cell--access a { background: #fff; border-color: #d9b45e; color: #7a4a05; }
+  :root:not(.dark) .home.home .hx-dock__cell--bank { background: linear-gradient(135deg, #eaf2ff, #d4e4fb); }
+  :root:not(.dark) .home.home .hx-dock__stat strong { color: #1d5fbf; }
+  :root:not(.dark) .home.home .hx-dock__stat--muted strong { color: #a86a0c; }
+  :root:not(.dark) .home.home .hx-dock__stat span { color: #3b4a5c; }
+  :root:not(.dark) .home.home .hx-dock__cell--daily { background: linear-gradient(135deg, #12263f, #1d4272); color: #fff; }
+  :root:not(.dark) .home.home .hx-dock__cell--daily strong { color: #fff; }
+  :root:not(.dark) .home.home .hx-dock__cell--daily small { color: #c5d4ea; }
+  :root:not(.dark) .home.home .hx-dock__live { color: #f2c76a; }
+  a.hx-dock__cell--daily:hover { filter: brightness(1.08); }
+}
