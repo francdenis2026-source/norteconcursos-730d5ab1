@@ -1,22 +1,21 @@
-/* Developer credit pill, centered at the bottom edge; non-interactive. */
+/* Faixa discreta de vidro na base da página: o conteúdo passa por baixo (blur) ao rolar. Única assinatura do dev. */
 .platform-signature {
   position: fixed;
-  z-index: 3;
-  left: 50%;
-  bottom: calc(8px + env(safe-area-inset-bottom, 0px));
-  transform: translateX(-50%);
+  z-index: 40;
+  inset: auto 0 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 5px 14px;
-  border-radius: 999px;
-  background: rgb(20 20 20 / 78%);
-  border: 1px solid rgb(255 255 255 / 12%);
-  color: rgb(255 255 255 / 62%);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  padding: 7px 12px max(7px, env(safe-area-inset-bottom, 0px));
+  background: color-mix(in srgb, var(--background) 38%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  backdrop-filter: blur(14px) saturate(130%);
+  color: color-mix(in srgb, var(--foreground) 58%, transparent);
   font-family: var(--font-mono);
   font-size: 9px;
+  line-height: 1;
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -24,16 +23,26 @@
   pointer-events: none;
   user-select: none;
 }
-.platform-signature strong { color: #fff; font-weight: 700; }
+.platform-signature strong { color: color-mix(in srgb, var(--foreground) 82%, transparent); font-weight: 700; }
 .platform-signature__dot { opacity: .6; }
-/* Sit above the dashboard's mobile bottom navigation. */
+
+/* A home já tem menu próprio no tablet; e a cápsula antiga da home sai para não duplicar. */
+.home .mobile-nav-shelf__sign { display: none !important; }
+@media (min-width: 768px) and (max-width: 1100px) {
+  body:has(.home) > .platform-signature { display: none; }
+}
+/* No painel do aluno (celular) a faixa fica logo acima da navegação inferior. */
 @media (max-width: 1023px) {
   body:has(.app-bottom-nav) > .platform-signature {
-    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    inset: auto 0 calc(76px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 7px;
   }
 }
 @media (max-width: 420px) {
-  .platform-signature { gap: 4px; padding: 4px 10px; font-size: 8px; letter-spacing: .08em; }
+  .platform-signature { gap: 4px; font-size: 8px; letter-spacing: .08em; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .platform-signature { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 @media print {
   .platform-signature { display: none; }
