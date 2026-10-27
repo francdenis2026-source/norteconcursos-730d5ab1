@@ -1360,20 +1360,16 @@ function TrainerSetup({
     setters.setIncludeAnswered(false);
   };
   return (
-    <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
-      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-4 text-white shadow-xl sm:rounded-2xl sm:p-6 md:p-8">
+    <div className="trainer-setup mx-auto max-w-5xl space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
+      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-3 text-white shadow-xl sm:rounded-2xl sm:p-4 md:p-5">
         <div className="grid gap-3 sm:gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <Badge className="mb-2 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10 sm:mb-4">
+            <Badge className="mb-1.5 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
               <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
             </Badge>
-            <h1 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
+            <h1 className="text-xl font-black leading-tight sm:text-2xl">
               Monte sua sessão de questões
             </h1>
-            <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-300 sm:mt-3 sm:text-sm sm:leading-6">
-              Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
-              imediata e orientação pedagógica, sem afetar o ranking dos simulados.
-            </p>
           </div>
           <div className="grid grid-cols-2 gap-2 text-center">
             <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
@@ -1388,16 +1384,13 @@ function TrainerSetup({
         </div>
       </section>
       <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
-        <CardContent className="p-3.5 sm:p-5 md:p-7">
-          <div className="mb-3 flex items-center gap-2.5 sm:mb-6 sm:gap-3">
+        <CardContent className="p-3 sm:p-4 md:p-5">
+          <div className="mb-2 flex items-center gap-2.5 sm:mb-3 sm:gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200 sm:h-11 sm:w-11">
               <BookOpenCheck className="h-5 w-5" />
             </div>
             <div>
               <h2 className="text-lg font-black">Filtros do treino</h2>
-              <p className="text-xs text-muted-foreground">
-                As opções podem ser combinadas livremente.
-              </p>
             </div>
           </div>
           {values.area !== "all" && (
@@ -1415,7 +1408,7 @@ function TrainerSetup({
               </button>
             </p>
           )}
-          <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             <TrainerFilter
               counts={facets.counts["board"]}
               allCount={facets.totals["board"]}
@@ -1444,6 +1437,44 @@ function TrainerSetup({
               )}
               allLabel="Todos os assuntos"
             />
+            <TrainerFilter
+              counts={facets.counts["difficulty"]}
+              allCount={facets.totals["difficulty"]}
+              label="Dificuldade"
+              value={values.difficulty}
+              setValue={setters.setDifficulty}
+              options={["fácil", "média", "difícil"]}
+              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
+            />
+            <TrainerFilter
+              label="Quantidade"
+              value={values.limit}
+              setValue={setters.setLimit}
+              options={["5", "10", "20", "30", "50"]}
+              allLabel="Quantidade"
+              hideAll
+            />
+            <label className="space-y-1">
+              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+                Ordem das questões
+              </span>
+              <Select
+                value={values.orderMode}
+                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
+              >
+                <SelectTrigger className="h-9 bg-background sm:h-10">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="random">Aleatório inteligente</SelectItem>
+                  <SelectItem value="exam">Ordem do acervo</SelectItem>
+                </SelectContent>
+              </Select>
+            </label>
+          </div>
+          <details className="trainer-more mt-3 rounded-lg border bg-muted/20 px-3 py-2">
+            <summary className="cursor-pointer text-xs font-black uppercase tracking-wider text-muted-foreground">Mais filtros</summary>
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             <TrainerFilter
               counts={facets.counts["contest"]}
               allCount={facets.totals["contest"]}
@@ -1516,15 +1547,6 @@ function TrainerSetup({
               labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
               allLabel="Todas as questões"
             />
-            <TrainerFilter
-              counts={facets.counts["difficulty"]}
-              allCount={facets.totals["difficulty"]}
-              label="Dificuldade"
-              value={values.difficulty}
-              setValue={setters.setDifficulty}
-              options={["fácil", "média", "difícil"]}
-              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
-            />
             <label className="flex items-center gap-3 rounded-lg border bg-background px-3 py-2.5 sm:col-span-2 lg:col-span-3">
               <input
                 type="checkbox"
@@ -1539,41 +1561,12 @@ function TrainerSetup({
                 </span>
               </span>
             </label>
-            <TrainerFilter
-              label="Quantidade"
-              value={values.limit}
-              setValue={setters.setLimit}
-              options={["5", "10", "20", "30", "50"]}
-              allLabel="Quantidade"
-              hideAll
-            />
-            <label className="space-y-1.5 sm:space-y-2">
-              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
-                Ordem das questões
-              </span>
-              <Select
-                value={values.orderMode}
-                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
-              >
-                <SelectTrigger className="h-10 bg-background sm:h-11">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="random">Aleatório inteligente</SelectItem>
-                  <SelectItem value="exam">Ordem do acervo</SelectItem>
-                </SelectContent>
-              </Select>
-            </label>
-          </div>
-          <div className="mt-4 flex flex-col gap-2.5 rounded-xl border bg-muted/30 p-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:p-4">
+            </div>
+          </details>
+          <div className="mt-3 flex flex-col gap-2 rounded-xl border bg-muted/30 p-2.5 sm:flex-row sm:items-center sm:justify-between sm:p-3">
             <div>
               <p className="font-black">
                 {Math.min(available, Number(values.limit))} questões serão usadas
-              </p>
-              <p className="text-xs text-muted-foreground">
-                {values.orderMode === "random"
-                  ? "Seleção embaralhada uma única vez ao iniciar; a questão fica estável enquanto você responde."
-                  : "Questões apresentadas na ordem cadastrada, com correção após cada resposta."}
               </p>
             </div>
             <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">
@@ -1617,12 +1610,12 @@ function TrainerFilter({
   hideAll?: boolean;
 }) {
   return (
-    <label className="space-y-1.5 sm:space-y-2">
+    <label className="space-y-1">
       <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
       <Select value={value} onValueChange={setValue}>
-        <SelectTrigger className="h-10 bg-background sm:h-11">
+        <SelectTrigger className="h-9 bg-background sm:h-10">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
