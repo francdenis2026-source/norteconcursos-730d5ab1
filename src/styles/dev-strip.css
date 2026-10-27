@@ -37,8 +37,9 @@
   body:has(> .dev-strip) { padding-bottom: calc(34px + env(safe-area-inset-bottom, 0px)); }
   /* A cápsula antiga da home sai para não duplicar. */
   .home .mobile-nav-shelf__sign { display: none !important; }
-  /* No painel do aluno a cápsula fica logo acima da navegação inferior. */
-  body:has(.app-bottom-nav) > .dev-strip { inset: auto 0 calc(76px + env(safe-area-inset-bottom, 0px)) 0; padding-bottom: 9px; }
+  /* No painel do cliente (celular) a assinatura não aparece: ela ficava acima da navegação inferior e atrapalhava.
+     Só vale onde existe a barra inferior do painel; home, páginas públicas e web continuam com a assinatura. */
+  body:has(.app-bottom-nav) > .dev-strip { display: none; }
   body:has(.app-bottom-nav) { padding-bottom: 0; }
 }
 /* Versão web (≥1101 px): barra fixa de vidro de ponta a ponta na base, com a assinatura centralizada.
