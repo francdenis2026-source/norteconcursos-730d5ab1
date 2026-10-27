@@ -13,9 +13,9 @@ export type LegalReview = {
   changes: {
     title: string;
     url: string;
-    articles: string[];
+    articles?: string[] | undefined;
     summary: string;
-    vigency: string;
+    vigency?: string | undefined;
     state: "effective" | "future" | "reference" | "expired";
   }[];
 };
@@ -141,7 +141,7 @@ export function LegalUpdateNotice({
                     badge={STATE_LABEL[change.state]}
                     state={change.state}
                     what={change.summary}
-                    where={change.articles.join(", ")}
+                    where={(change.articles ?? []).join(", ")}
                     since={change.vigency}
                     url={change.url}
                   />
@@ -157,7 +157,7 @@ export function LegalUpdateNotice({
                   badge={STATE_LABEL[change.state]}
                   state={change.state}
                   what={change.summary}
-                  where={change.articles.join(", ")}
+                  where={(change.articles ?? []).join(", ")}
                   since={change.vigency}
                   url={change.url}
                 />
