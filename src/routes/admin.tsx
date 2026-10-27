@@ -73,7 +73,7 @@ function AdminLoginPage() {
     <main className="admin-access">
       <section className="admin-access__visual" aria-label="Norte Concurso — administração segura">
         <img
-          src="/media/hero/auth-seguranca.jpg"
+          src="/media/hero/auth-seguranca-full.webp"
           alt="Profissionais da segurança pública em operação"
           width={1600}
           height={1200}
