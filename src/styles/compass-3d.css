@@ -1,0 +1,140 @@
+/* Bússola 3D (CSS puro): aro de latão, mostrador com marcações, agulha que oscila e assenta, vidro com
+   reflexo. Flutua levemente e inclina ao passar o mouse na faixa. Respeita "reduzir movimento". */
+.cmp { display: none; }
+@media (min-width: 761px) {
+  .cmp {
+    --d: 132px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: clamp(24px, 6%, 80px);
+    width: var(--d);
+    height: var(--d);
+    margin-top: calc(var(--d) / -2);
+    perspective: 700px;
+    pointer-events: none;
+  }
+  .home-operations__heading:hover .cmp__scene { transform: rotateX(22deg) rotateY(-16deg); }
+  .cmp__scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(-8deg);
+    transition: transform .7s cubic-bezier(.2, .8, .2, 1);
+    animation: cmp-float 7s ease-in-out infinite;
+  }
+  .cmp__shadow {
+    position: absolute;
+    inset: 12% 8% -10%;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(0 0 0 / 55%), transparent);
+    transform: translateZ(-30px);
+    filter: blur(6px);
+  }
+  .cmp__bezel {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 9px;
+    background:
+      conic-gradient(from 210deg, #f3d58c, #8a6420 18%, #e9c778 36%, #5b4012 52%, #f6dc98 70%, #8a6420 86%, #f3d58c);
+    box-shadow:
+      0 14px 24px rgb(0 0 0 / 50%),
+      inset 0 2px 3px rgb(255 255 255 / 55%),
+      inset 0 -3px 5px rgb(0 0 0 / 55%);
+    transform: translateZ(10px);
+  }
+  .cmp__dial {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 38%, #26364a 0, #101a28 62%, #070d16 100%);
+    box-shadow: inset 0 5px 12px rgb(0 0 0 / 80%), inset 0 -2px 4px rgb(255 255 255 / 8%);
+    overflow: hidden;
+  }
+  .cmp__ticks {
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(rgb(233 199 120 / 85%) 0 .7deg, transparent .7deg 5deg);
+    -webkit-mask: radial-gradient(circle, transparent 79%, #000 80%);
+    mask: radial-gradient(circle, transparent 79%, #000 80%);
+  }
+  .cmp__rose {
+    position: absolute;
+    inset: 24%;
+    border-radius: 50%;
+    border: 1px solid rgb(233 199 120 / 35%);
+    background: repeating-conic-gradient(rgb(233 199 120 / 16%) 0 1.2deg, transparent 1.2deg 45deg);
+  }
+  .cmp b {
+    position: absolute;
+    font: 700 9px/1 var(--font-mono, monospace);
+    color: rgb(233 199 120 / 90%);
+    transform: translate(-50%, -50%);
+  }
+  .cmp__n { left: 50%; top: 15%; color: #ff6a55 !important; font-size: 11px !important; }
+  .cmp__e { left: 85%; top: 50%; }
+  .cmp__s { left: 50%; top: 85%; }
+  .cmp__w { left: 15%; top: 50%; }
+  .cmp__needle {
+    position: absolute;
+    inset: 0;
+    transform-origin: 50% 50%;
+    animation: cmp-swing 10s cubic-bezier(.3, 0, .3, 1) infinite;
+    filter: drop-shadow(0 3px 3px rgb(0 0 0 / 55%));
+  }
+  .cmp__needle i { position: absolute; left: 50%; width: 11px; margin-left: -5.5px; }
+  .cmp__north {
+    top: 20%;
+    height: 30%;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: linear-gradient(90deg, #ff8a6e 0 50%, #d8412c 50% 100%);
+  }
+  .cmp__south {
+    top: 50%;
+    height: 30%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: linear-gradient(90deg, #e9eef5 0 50%, #aab6c6 50% 100%);
+  }
+  .cmp__pin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    margin: -5.5px 0 0 -5.5px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff3c8, #c79a3a 55%, #6b4a10);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 70%);
+  }
+  .cmp__glass {
+    position: absolute;
+    inset: 9px;
+    border-radius: 50%;
+    pointer-events: none;
+    background:
+      radial-gradient(120% 70% at 30% 0, rgb(255 255 255 / 30%), transparent 55%),
+      linear-gradient(160deg, rgb(255 255 255 / 12%), transparent 40%, rgb(255 255 255 / 6%));
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 12%);
+    transform: translateZ(4px);
+  }
+  @keyframes cmp-float { 50% { transform: rotateX(13deg) rotateY(-4deg) translateY(-4px); } }
+  /* A agulha gira, oscila com amortecimento e assenta no norte; fica parada um tempo e repete. */
+  @keyframes cmp-swing {
+    0% { transform: rotate(140deg); }
+    14% { transform: rotate(-34deg); }
+    24% { transform: rotate(21deg); }
+    33% { transform: rotate(-11deg); }
+    41% { transform: rotate(6deg); }
+    48% { transform: rotate(-3deg); }
+    55%, 100% { transform: rotate(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cmp__scene, .cmp__needle { animation: none; }
+  }
+}
