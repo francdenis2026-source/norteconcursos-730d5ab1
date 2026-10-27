@@ -52,14 +52,14 @@ import "@/styles/home-touch.css";
 import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
-import "@/styles/home-hero-layout.css";
+import "@/styles/hero-x.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { TestingSeal } from "@/components/landing/TestingSeal";
+import { HeroDock } from "@/components/landing/HeroDock";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
@@ -571,9 +571,9 @@ function Index() {
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
           <TacticalCrosshair />
-          <div className="home-container home-hero__content" inert={introPlaying}>
-            <div className="home-hero__grid">
-              <div className="home-hero__copy">
+          <div className="hx" inert={introPlaying}>
+            <div className="home-container hx__inner">
+              <div className="hx__copy">
                 <span className="home-eyebrow home-signal">
                   <span /> Carreiras policiais e segurança pública
                 </span>
@@ -601,26 +601,20 @@ function Index() {
                     <ArrowRight />
                   </a>
                 </div>
-                <div className="home-hero__study-entry" aria-label="Comece sua preparação" data-aim>
-                  <TestingSeal />
-                  <div className="home-hero__study-links">
-                    <QuestionCountBadge />
-                    <DailyChallengeBadge />
-                  </div>
-                </div>
+                <ul className="hx__trust" aria-label="Diferenciais">
+                  <li>
+                    <BadgeCheck /> Fontes e revisões identificadas
+                  </li>
+                  <li>
+                    <Target /> Treino por banca e disciplina
+                  </li>
+                  <li>
+                    <Trophy /> Simulados no ritmo da prova
+                  </li>
+                </ul>
               </div>
+              <HeroDock />
             </div>
-            <ul className="home-trust" aria-label="Diferenciais" tabIndex={0}>
-              <li>
-                <BadgeCheck /> Fontes e revisões identificadas
-              </li>
-              <li>
-                <Target /> Treino por banca e disciplina
-              </li>
-              <li>
-                <Trophy /> Simulados no ritmo da prova
-              </li>
-            </ul>
           </div>
         </section>
 
