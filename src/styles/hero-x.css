@@ -145,26 +145,44 @@
   :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register svg { width: 15px; height: 15px; }
 }
 
-/* Faixa "02 · Seu foco começa no Acre": a imagem aparece inteira (sem corte e sem distorção), na altura
-   da faixa e encostada à direita; a borda esquerda dela some em degradê para o painel. */
+/* Faixa "02 · Seu foco começa no Acre": composição própria em vez de foto. À direita, as luzes azul e
+   vermelha da paleta da plataforma, uma malha fina e o brasão oficial do Acre; compacta e sem corte. */
 :root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  min-height: 190px;
+  min-height: 0;
+  padding-block: 18px;
 }
-:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before {
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before,
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::after {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 0 0 0 auto;
-  height: 100%;
-  aspect-ratio: 3 / 1; /* proporção real de home-interstitial.webp (2172 x 724) */
-  background: url("/media/hero/home-interstitial.webp") right center / 100% 100% no-repeat;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 38%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 38%);
   pointer-events: none;
+  inset: 0 0 0 auto;
+  height: auto;
+  width: min(48%, 560px);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before {
+  background:
+    radial-gradient(60% 90% at 78% 110%, rgb(64 110 255 / 34%), transparent 70%),
+    radial-gradient(45% 80% at 96% -10%, rgb(235 60 70 / 26%), transparent 70%),
+    radial-gradient(40% 70% at 55% 120%, rgb(223 180 91 / 20%), transparent 70%),
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 5%) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 5%) 0 1px, transparent 1px 28px);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 45%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 45%);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading::after {
+  width: 96px;
+  inset: 50% 40px auto auto;
+  height: 96px;
+  transform: translateY(-50%);
+  background: url("/media/brasao-acre-oficial.svg") center / contain no-repeat;
+  opacity: .9;
+  filter: drop-shadow(0 6px 16px rgb(0 0 0 / 45%));
 }
 @media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before { opacity: .35; }
+  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::after { opacity: .18; right: 12px; }
 }
