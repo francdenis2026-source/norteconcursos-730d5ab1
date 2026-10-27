@@ -53,14 +53,12 @@ import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
-import "@/styles/compass-3d.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { HeadingCompass } from "@/components/landing/HeadingCompass";
 import { HeroDock } from "@/components/landing/HeroDock";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
@@ -669,7 +667,6 @@ function Index() {
           />
           <div className="home-container">
             <div className="home-operations__heading">
-              <HeadingCompass />
               <Head
                 kicker="02 · Seu foco começa no Acre"
                 lead="PC-AC em destaque. Provas da IDECAN e de outras bancas para transformar seu objetivo em prática."

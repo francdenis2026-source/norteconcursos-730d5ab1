@@ -145,8 +145,8 @@
   :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register svg { width: 15px; height: 15px; }
 }
 
-/* Faixa "02 · Seu foco começa no Acre": arte própria — uma bússola (o "norte" da marca) com a linha de
-   rumo tracejada até o alvo, em dourado fino sobre o painel. Vetorial, nítida em qualquer tela. */
+/* Faixa "02 · Seu foco começa no Acre": a arte oficial da marca (caveira com pistola e circuitos) inteira,
+   na altura da faixa e encostada à direita, sem corte nem distorção; a borda esquerda some em degradê. */
 :root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
   position: relative;
   overflow: hidden;
@@ -160,17 +160,21 @@
   z-index: -1;
   pointer-events: none;
   inset: 0 0 0 auto;
-  height: auto;
-  width: min(62%, 760px);
-  background:
-    radial-gradient(50% 120% at 78% 50%, rgb(223 180 91 / 10%), transparent 70%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+  height: 100%;
+  aspect-ratio: 1024 / 410; /* proporção real de carreiras-faixa-azul.webp */
+  background: url("/media/brand/carreiras-faixa-azul.webp") center / 100% 100% no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 32%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 32%);
+  animation: hx-art-breathe 8s ease-in-out infinite;
+}
+@keyframes hx-art-breathe { 50% { opacity: .82; filter: brightness(1.12); } }
+@media (prefers-reduced-motion: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before { animation: none; }
+}
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before { opacity: .3; animation: none; }
 }
 :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::after { content: none; }
-@media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading::before { opacity: .3; }
-}
 
 .hx-stats { display: none; }
 
