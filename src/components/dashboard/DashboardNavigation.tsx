@@ -4,16 +4,17 @@ import { Link } from "@tanstack/react-router";
 import { Hint } from "@/components/ui/hint";
 import {
   ChevronDown,
-  LayoutDashboard,
+  Route,
+  Crosshair,
+  ScrollText,
+  Cpu,
   Target,
+  FileCheck2,
+  Activity,
+  IdCard,
+  Shield,
+  Landmark,
   BookOpen,
-  BrainCircuit,
-  ClipboardList,
-  BarChart3,
-  UserRound,
-  ShieldCheck,
-  GraduationCap,
-  Wrench,
   ChevronRight,
   type LucideIcon,
 } from "lucide-react";
@@ -36,17 +37,18 @@ export type NavigationItem = {
   soon?: boolean;
   primary?: boolean;
 };
+/** Ícones táticos por seção (visual de comando, sem ícones genéricos de painel). */
 const groupIcons: Record<string, LucideIcon> = {
-  Planejamento: LayoutDashboard,
-  "Meu concurso": Target,
-  "Material didático": BookOpen,
-  Ferramentas: Wrench,
-  Questões: BrainCircuit,
-  Provas: ClipboardList,
-  Desempenho: BarChart3,
-  ENEM: GraduationCap,
-  Conta: UserRound,
-  Administração: ShieldCheck,
+  Planejamento: Route,
+  "Meu concurso": Crosshair,
+  "Material didático": ScrollText,
+  Ferramentas: Cpu,
+  Questões: Target,
+  Provas: FileCheck2,
+  Desempenho: Activity,
+  ENEM: Landmark,
+  Conta: IdCard,
+  Administração: Shield,
 };
 const groupDetails: Record<string, string> = {
   Planejamento: "Configuração, agenda, resultados e foco",

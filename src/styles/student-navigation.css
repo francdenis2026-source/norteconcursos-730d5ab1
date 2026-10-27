@@ -646,46 +646,48 @@
   }
 }
 
-/* Barra lateral recolhida (web): mais respiro sem alargar. Os blocos ficam com 62×62 px, com 8 px entre eles,
-   rótulo legível, barra de rolagem escondida (a lista rola por gesto/roda) e um degradê suave nas pontas. */
+/* Barra lateral recolhida (web): cabe inteira numa janela, sem rolagem. A altura de cada botão se ajusta à altura
+   da tela (entre 48 e 66 px) para os ~9 itens, o cabeçalho e o rodapé caberem; largura segue 88 px. */
 @media (min-width: 1024px) {
+  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] {
+    --rail-tile: clamp(48px, calc((100dvh - 262px) / 9 - 6px), 66px);
+  }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace {
-    padding: 10px 0;
+    padding: 6px 0;
+    overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    -webkit-mask-image: linear-gradient(transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
-    mask-image: linear-gradient(transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
   }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace::-webkit-scrollbar { display: none; }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace.student-direct-navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    row-gap: 8px;
+    gap: 6px;
+    row-gap: 6px;
   }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace.student-direct-navigation :is(.app-nav__link, .nav-section-link, .nav-group-trigger) {
-    width: 62px;
-    height: 62px;
-    min-height: 62px;
+    width: 64px;
+    height: var(--rail-tile);
+    min-height: var(--rail-tile);
     margin: 0;
-    padding: 8px 2px 6px;
-    gap: 5px;
-    border-radius: 14px;
+    padding: 5px 2px 4px;
+    gap: 3px;
+    border-radius: 13px;
   }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace :is(.app-ico, .nav-group-trigger > svg) {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-nav__compact-label {
     font-size: 10px;
     line-height: 12px;
-    letter-spacing: .01em;
   }
-  /* A marca de cor vira um detalhe fino no lado, sem apertar o ícone. */
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] {
     box-shadow: inset 2px 0 0 var(--nav-identity);
   }
-  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__head { padding-block: 14px 8px; }
-  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__search { margin-block: 4px 8px; }
+  /* Cabeçalho, busca e rodapé mais baixos para sobrar altura aos botões. */
+  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__head { padding-block: 10px 4px; }
+  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__search { margin-block: 2px 4px; min-height: 40px; height: 40px; }
+  .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__foot { padding-block: 6px; }
 }

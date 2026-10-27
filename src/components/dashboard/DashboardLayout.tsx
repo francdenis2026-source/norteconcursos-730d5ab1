@@ -138,7 +138,7 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-contests",
     adminOnly: true,
   },
-  { group: "Planejamento", label: "Meu painel", icon: LayoutDashboard, href: "/dashboard", primary: true },
+  { group: "Planejamento", label: "Meu painel", icon: Radar, href: "/dashboard", primary: true },
   { group: "Planejamento", label: "Configuração do estudo", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Planejamento", label: "Agenda por edital", icon: CalendarClock, href: "/dashboard/cronograma" },
   { group: "Planejamento", label: "Ajustes pelos resultados", icon: ClipboardList, href: "/dashboard/study-plan" },
