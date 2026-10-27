@@ -20,7 +20,6 @@ import {
   ArrowUpRight,
   BadgeCheck,
   BrainCircuit,
-  ChevronRight,
   Compass,
   FileSearch,
   Landmark,
@@ -51,6 +50,7 @@ import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import "@/styles/home-footer.css";
+import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
@@ -686,92 +686,67 @@ function Index() {
         <PlansSection />
       </main>
 
-      <footer className="home-footer home-footer--command">
+      <footer className="nc-footer">
         <div className="home-container">
-          <div className="home-footer__grid">
-            <div className="home-footer__brand">
-              <div>
-                <NorteBrand />
-                <p>Preparação para carreiras policiais.</p>
-                <div className="home-footer__access" aria-label="Acesse sua conta">
-                  <Link to="/auth" search={{ mode: undefined }}>
-                    Entrar <LogIn aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
+          <div className="nc-footer__main">
+            <div className="nc-footer__brand">
+              <NorteBrand />
+              <p>Preparação para carreiras policiais.</p>
             </div>
-            <FooterColumn title="Explore" compact={compactHero} links={EXPLORE_LINKS} />
-            <FooterColumn title="Institucional" compact={compactHero} links={INSTITUTIONAL_LINKS} />
-            <a
-              className="home-platform-qr"
-              href="https://norteconcursos.xyz/"
-              aria-label="Abrir a plataforma Norte Concurso. Aponte a câmera do celular para o QR Code."
-            >
-              <img
-                src="/media/brand/platform-qr.svg"
-                width={128}
-                height={128}
-                loading="lazy"
-                alt="QR Code para https://norteconcursos.xyz/"
-              />
-              <span>
-                <strong>Continue no celular</strong>
-                <span>Aponte a câmera e acesse a plataforma.</span>
-                <small>
-                  norteconcursos.xyz <ArrowUpRight aria-hidden="true" />
-                </small>
-              </span>
-            </a>
+            <nav className="nc-footer__links" aria-label="Explore">
+              {EXPLORE_LINKS.map(([label, href]) => (
+                <Link key={label} to={href}>{label}</Link>
+              ))}
+            </nav>
+            <nav className="nc-footer__links" aria-label="Institucional">
+              {INSTITUTIONAL_LINKS.map(([label, href]) => (
+                <Link key={label} to={href}>{label}</Link>
+              ))}
+            </nav>
+            <div className="nc-footer__side">
+              <Link className="nc-footer__enter" to="/auth" search={{ mode: undefined }}>
+                Entrar <LogIn aria-hidden="true" />
+              </Link>
+              <a
+                className="nc-footer__qr"
+                href="https://norteconcursos.xyz/"
+                aria-label="Abrir a plataforma Norte Concurso. Aponte a câmera do celular para o QR Code."
+              >
+                <img
+                  src="/media/brand/platform-qr.svg"
+                  width={56}
+                  height={56}
+                  loading="lazy"
+                  alt="QR Code para https://norteconcursos.xyz/"
+                />
+                <span>
+                  Continue no celular
+                  <small>
+                    norteconcursos.xyz <ArrowUpRight aria-hidden="true" />
+                  </small>
+                </span>
+              </a>
+            </div>
           </div>
-          <section className="home-footer__contact" aria-labelledby="footer-contact-title">
-            <h3 id="footer-contact-title" className="sr-only">
-              Endereço e contato
-            </h3>
-            <div className="home-footer__contact-grid">
-              {compactHero ? (
-                <details className="home-footer__address">
-                  <summary>
-                    <MapPin aria-hidden="true" />
-                    <span>Feijó · Acre</span>
-                    <ChevronRight aria-hidden="true" />
-                  </summary>
-                  <address>
-                    Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000
-                  </address>
-                </details>
-              ) : (
-                <div className="home-footer__contact-card">
-                  <MapPin aria-hidden="true" />
-                  <address>
-                    Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC ·{" "}
-                    <span className="whitespace-nowrap">CEP 69960-000</span>
-                  </address>
-                </div>
-              )}
-              <a
-                className="home-footer__contact-card"
-                href="mailto:francdenis2026@gmail.com"
-                aria-label="Enviar e-mail para francdenis2026@gmail.com"
-              >
-                <Mail aria-hidden="true" />
-                <span className="home-footer__contact-detail">francdenis2026@gmail.com</span>
-                <span className="home-footer__contact-label">E-mail</span>
-              </a>
-              <a
-                className="home-footer__contact-card"
-                href="https://wa.me/5568992031340"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
-              >
-                <MessageCircle aria-hidden="true" />
-                <span className="home-footer__contact-detail">WhatsApp · (68) 99203-1340</span>
-                <span className="home-footer__contact-label">WhatsApp</span>
-              </a>
-            </div>
-          </section>
-          <div className="home-footer__bottom">
-            <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
+          <div className="nc-footer__bar">
+            <address>
+              <MapPin aria-hidden="true" />
+              Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000
+            </address>
+            <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
+              <Mail aria-hidden="true" />
+              francdenis2026@gmail.com
+            </a>
+            <a
+              href="https://wa.me/5568992031340"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
+            >
+              <MessageCircle aria-hidden="true" />
+              (68) 99203-1340
+            </a>
+            <span className="nc-footer__copy">© 2026 Norte Concursos</span>
           </div>
         </div>
       </footer>
@@ -780,41 +755,3 @@ function Index() {
   );
 }
 
-function FooterColumn({
-  title,
-  links,
-  compact = false,
-}: {
-  title: string;
-  links: [string, string][];
-  compact?: boolean;
-}) {
-  const visibleLinks = compact ? links.slice(0, 2) : links;
-  const list = (
-    <ul>
-      {visibleLinks.map(([label, href]) => (
-        <li key={label}>
-          <Link to={href}>{label}</Link>
-        </li>
-      ))}
-    </ul>
-  );
-  if (compact)
-    return (
-      <details className="home-footer__section" name="home-footer-sections">
-        <summary>
-          {title}
-          <Plus aria-hidden="true" />
-        </summary>
-        <nav className="home-footer__links" aria-label={title}>
-          {list}
-        </nav>
-      </details>
-    );
-  return (
-    <nav className="home-footer__links" aria-label={title}>
-      <h3>{title}</h3>
-      {list}
-    </nav>
-  );
-}
