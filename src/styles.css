@@ -6936,7 +6936,7 @@ iframe[src*="gpteng.co"] {
 
 /* ===== Login: imagem profissional de segurança pública ===== */
 .auth-visual::before {
-  background-image: url("/media/hero/auth-seguranca.jpg");
+  background-image: url("/media/hero/auth-seguranca-full.webp");
   background-position: 60% 30%;
 }
 .auth-photo {
