@@ -358,3 +358,25 @@ html body .auth.auth .auth-card, html body .auth.auth .auth-identity, html body 
 @media (max-height: 640px) {
   html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) :is(.auth-security, .auth-dev-signature) { display: none; }
 }
+
+/* Card de acesso: vidro sobre o fundo e painel tático ocupando o espaço livre do login. */
+html body .auth.auth .auth-card {
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(130%); backdrop-filter: blur(14px) saturate(130%);
+  border-color: color-mix(in srgb, var(--brass) 38%, var(--border));
+}
+.auth-tactical {
+  position: relative; flex: 1 1 120px; min-height: 110px; margin: 14px 0 0; overflow: hidden;
+  border: 1px solid #caa76845; border-radius: 14px; background: #0c1114;
+  box-shadow: inset 0 1px 0 #ffffff14, 0 14px 30px -18px #000c;
+}
+.auth-tactical img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
+.auth-tactical::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, #0c111426 0%, transparent 35%, #0c1114d9 100%); }
+.auth-tactical figcaption { position: absolute; z-index: 1; left: 14px; right: 14px; bottom: 12px; display: grid; gap: 3px; }
+.auth-tactical figcaption span { color: #e3bf78; font: 650 9px / 1.4 var(--font-mono); letter-spacing: .14em; }
+.auth-tactical figcaption strong { color: #fff5e5; font-size: 17px; line-height: 1.15; letter-spacing: -.02em; text-shadow: 0 2px 12px #000a; }
+html body .auth.auth[data-auth-mode="login"] .auth-security { margin-top: 12px; }
+html body .auth.auth[data-auth-mode="login"] .auth-submit { margin-top: 4px; }
+@media (max-height: 700px) { .auth-tactical { display: none; } }
+@media (prefers-reduced-transparency: reduce) { html body .auth.auth .auth-card { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; } }

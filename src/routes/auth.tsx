@@ -550,6 +550,15 @@ function AuthPage() {
               </form>
             </>
           )}
+          {mode === "login" && (
+            <figure className="auth-tactical" aria-hidden="true">
+              <img src="/media/hero/auth-seguranca.jpg" alt="" width={1600} height={1200} loading="lazy" decoding="async" />
+              <figcaption>
+                <span>CARREIRAS POLICIAIS</span>
+                <strong>Preparação com direção.</strong>
+              </figcaption>
+            </figure>
+          )}
           <div className="auth-security">
             <ShieldCheck />
             <span>Conexão segura · sua conta, seu progresso</span>
