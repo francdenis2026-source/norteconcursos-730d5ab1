@@ -142,3 +142,22 @@
   }
   :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register svg { width: 15px; height: 15px; }
 }
+
+/* Faixa "02 · Seu foco começa no Acre": foto da PC-AC preenche o lado direito vazio;
+   o degradê da cor do painel mantém o texto legível à esquerda (tema claro e escuro). */
+:root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, var(--home-surface) 0, color-mix(in srgb, var(--home-surface) 88%, transparent) 36%, transparent 70%),
+    linear-gradient(0deg, color-mix(in srgb, var(--home-surface) 55%, transparent), transparent 40%),
+    url("/media/hero/landing-pcac.webp") right center / cover no-repeat;
+  min-height: 170px;
+}
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-operations__heading {
+    background:
+      linear-gradient(90deg, var(--home-surface) 0, color-mix(in srgb, var(--home-surface) 82%, transparent) 100%),
+      url("/media/hero/landing-pcac.webp") 78% center / cover no-repeat;
+  }
+}
