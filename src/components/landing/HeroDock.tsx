@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, BadgeCheck, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library } from "lucide-react";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
@@ -87,5 +87,31 @@ export function HeroDock() {
         </Link>
       )}
     </div>
+  );
+}
+
+/** Pílula de vidro no cabeçalho (desktop): total de questões da plataforma e quantas há para responder. */
+export function HeaderQuestionStats() {
+  const { data } = usePlatformQuestionSummary();
+  const fmt = (n: number) => n.toLocaleString("pt-BR");
+  return (
+    <a
+      href="#plataforma"
+      className="hx-stats"
+      aria-label={
+        data
+          ? `${fmt(data.registered)} questões na plataforma, ${fmt(data.available)} disponíveis para responder`
+          : "Banco de questões da plataforma"
+      }
+    >
+      <Library aria-hidden="true" />
+      <span>
+        <strong>{data ? fmt(data.registered) : "—"}</strong> na plataforma
+      </span>
+      <i aria-hidden="true" />
+      <span>
+        <strong>{data ? fmt(data.available) : "—"}</strong> para responder
+      </span>
+    </a>
   );
 }
