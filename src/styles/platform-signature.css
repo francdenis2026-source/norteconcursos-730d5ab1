@@ -7,14 +7,15 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 7px 12px max(7px, env(safe-area-inset-bottom, 0px));
-  background: color-mix(in srgb, var(--background) 38%, transparent);
+  min-height: 30px;
+  padding: 8px 12px max(8px, env(safe-area-inset-bottom, 0px));
+  background: color-mix(in srgb, var(--background) 55%, transparent);
   border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
   -webkit-backdrop-filter: blur(14px) saturate(130%);
   backdrop-filter: blur(14px) saturate(130%);
-  color: color-mix(in srgb, var(--foreground) 58%, transparent);
+  color: color-mix(in srgb, var(--foreground) 78%, transparent);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1;
   font-weight: 600;
   letter-spacing: .14em;
@@ -23,7 +24,9 @@
   pointer-events: none;
   user-select: none;
 }
-.platform-signature strong { color: color-mix(in srgb, var(--foreground) 82%, transparent); font-weight: 700; }
+.platform-signature strong { color: color-mix(in srgb, var(--foreground) 96%, transparent); font-weight: 700; }
+/* Reserva a altura da faixa para o fim do conteúdo (rodapé) não ficar coberto. */
+body:has(> .platform-signature) { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
 .platform-signature__dot { opacity: .6; }
 
 /* A home já tem menu próprio no tablet; e a cápsula antiga da home sai para não duplicar. */
@@ -35,8 +38,9 @@
 @media (max-width: 1023px) {
   body:has(.app-bottom-nav) > .platform-signature {
     inset: auto 0 calc(76px + env(safe-area-inset-bottom, 0px));
-    padding-bottom: 7px;
+    padding-bottom: 8px;
   }
+  body:has(.app-bottom-nav) { padding-bottom: 0; }
 }
 @media (max-width: 420px) {
   .platform-signature { gap: 4px; font-size: 8px; letter-spacing: .08em; }
