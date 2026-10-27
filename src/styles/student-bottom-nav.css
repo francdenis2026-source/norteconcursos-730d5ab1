@@ -42,8 +42,10 @@
     min-height: 48px;
     gap: 0;
     padding: 2px 1px;
-    font-size: 11.5px;
-    font-weight: 600;
+    font-size: 12.5px;
+    font-weight: 650;
+    letter-spacing: -.01em;
+    color: color-mix(in srgb, var(--foreground) 82%, transparent);
     line-height: 1.15;
     border-radius: 10px;
   }
@@ -51,6 +53,14 @@
   :root .app-shell.navigation-v2 .app-bottom-nav .app-ico svg { width: 25px !important; height: 25px !important; }
   /* O conteúdo passa por baixo do vidro; reserva a altura da barra no fim da rolagem. */
   :root .app-shell.navigation-v2 .app-content { padding-bottom: calc(var(--student-nav-h) + 16px); scroll-padding-bottom: var(--student-nav-h); }
+}
+/* Item ativo: texto em destaque, bem contrastado nos dois temas. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  :root .app-shell.navigation-v2 .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) {
+    color: var(--foreground);
+    font-weight: 750;
+  }
+  :root .app-shell.navigation-v2 .app-bottom-nav :is(a, button) span:last-child { text-shadow: 0 0 6px color-mix(in srgb, var(--card) 70%, transparent); }
 }
 @media (prefers-reduced-transparency: reduce) {
   :root .app-shell.navigation-v2 .app-bottom-nav.mobile-nav-glass,
