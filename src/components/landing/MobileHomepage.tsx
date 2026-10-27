@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
+import { HeaderQuestionStats } from "@/components/landing/HeroDock";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
@@ -36,6 +37,7 @@ export function MobileHomepage() {
             <p className="mobile-homepage__hero-lead">
               Questões, editais e simulados para transformar seu estudo em preparação real.
             </p>
+            <HeaderQuestionStats mobile />
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight />
             </a>

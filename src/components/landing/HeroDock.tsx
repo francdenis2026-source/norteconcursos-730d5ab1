@@ -91,13 +91,13 @@ export function HeroDock() {
 }
 
 /** Pílula de vidro no cabeçalho (desktop): total de questões da plataforma e quantas há para responder. */
-export function HeaderQuestionStats() {
+export function HeaderQuestionStats({ mobile = false }: { mobile?: boolean }) {
   const { data } = usePlatformQuestionSummary();
   const fmt = (n: number) => n.toLocaleString("pt-BR");
   return (
     <a
       href="#plataforma"
-      className="hx-stats"
+      className={mobile ? "hx-stats hx-stats--mobile" : "hx-stats"}
       aria-label={
         data
           ? `${fmt(data.registered)} questões na plataforma, ${fmt(data.available)} disponíveis para responder`
