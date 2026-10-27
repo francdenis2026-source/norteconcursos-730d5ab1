@@ -128,3 +128,17 @@
 @media (prefers-reduced-transparency: reduce) {
   .hx-dock__cell { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* Botão "Entrar" do cabeçalho (web): discreto, sem o tamanho de alvo de toque. */
+@media (min-width: 1024px) and (pointer: fine) {
+  :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register {
+    min-height: 36px;
+    padding: 6px 16px;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 650;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-header .home-header__register svg { width: 15px; height: 15px; }
+}
