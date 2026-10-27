@@ -440,7 +440,7 @@ html body .auth.auth[data-auth-mode="login"] .auth-submit { margin-top: 4px; }
 /* Zoom 100%: a faixa da identidade encolhia e a arte (contain) virava um selo minúsculo.
    Agora a faixa tem altura mínima e a arte preenche toda ela, ancorada à direita. */
 html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-identity {
-  min-height: clamp(104px, 16dvh, 140px);
+  min-height: clamp(88px, 13dvh, 112px);
 }
 html body .auth.auth:is([data-auth-mode="login"], [data-auth-mode="register"]) .auth-identity__scene {
   inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 78% center;
