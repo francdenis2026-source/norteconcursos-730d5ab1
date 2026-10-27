@@ -1,63 +1,51 @@
-/* Faixa discreta de vidro na base da página: o conteúdo passa por baixo (blur) ao rolar. Única assinatura do dev. */
-.dev-strip {
-  position: fixed;
-  z-index: 40;
-  inset: auto 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  min-height: 30px;
-  padding: 8px 12px max(8px, env(safe-area-inset-bottom, 0px));
-  background: color-mix(in srgb, var(--background) 55%, transparent);
-  border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  backdrop-filter: blur(14px) saturate(130%);
-  color: color-mix(in srgb, var(--foreground) 78%, transparent);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-  user-select: none;
-}
-.dev-strip strong { color: color-mix(in srgb, var(--foreground) 96%, transparent); font-weight: 700; }
-/* Reserva a altura da faixa para o fim do conteúdo (rodapé) não ficar coberto. */
-body:has(> .dev-strip) { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
-.dev-strip__dot { opacity: .6; }
-
-/* A home já tem menu próprio no tablet; e a cápsula antiga da home sai para não duplicar. */
-.home .mobile-nav-shelf__sign { display: none !important; }
-@media (min-width: 768px) and (max-width: 1100px) {
-  body:has(.home) > .dev-strip { display: none; }
-}
-/* No painel do aluno (celular) a faixa fica logo acima da navegação inferior. */
-@media (max-width: 1023px) {
-  body:has(.app-bottom-nav) > .dev-strip {
-    inset: auto 0 calc(76px + env(safe-area-inset-bottom, 0px));
-    padding-bottom: 8px;
+/* Assinatura do dev — só no celular: cápsula discreta de vidro (glassmorphism) na base da tela, com o
+   conteúdo passando por baixo ao rolar. Na versão web ela não aparece. Única assinatura no mobile. */
+.dev-strip { display: none; }
+@media (max-width: 767px) {
+  .dev-strip {
+    position: fixed;
+    z-index: 40;
+    left: 50%;
+    bottom: max(10px, env(safe-area-inset-bottom, 0px));
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    max-width: calc(100% - 24px);
+    padding: 7px 14px;
+    border-radius: 999px;
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 22%), transparent 60%),
+      color-mix(in srgb, var(--background) 42%, transparent);
+    border: 1px solid color-mix(in srgb, var(--foreground) 16%, transparent);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 25%), 0 6px 16px rgb(0 0 0 / 18%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
+    color: color-mix(in srgb, var(--foreground) 66%, transparent);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
   }
+  .dev-strip strong { color: color-mix(in srgb, var(--foreground) 92%, transparent); font-weight: 700; }
+  .dev-strip__dot { opacity: .6; }
+  /* Espaço no fim da página para o rodapé não ficar coberto. */
+  body:has(> .dev-strip) { padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
+  /* A cápsula antiga da home sai para não duplicar. */
+  .home .mobile-nav-shelf__sign { display: none !important; }
+  /* No painel do aluno a cápsula fica logo acima da navegação inferior. */
+  body:has(.app-bottom-nav) > .dev-strip { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
   body:has(.app-bottom-nav) { padding-bottom: 0; }
-}
-@media (max-width: 420px) {
-  .dev-strip { gap: 4px; font-size: 8px; letter-spacing: .08em; }
 }
 @media (prefers-reduced-transparency: reduce) {
   .dev-strip { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
-@media print {
+@media print, (forced-colors: active) {
   .dev-strip { display: none; }
-}
-@media (forced-colors: active) {
-  .dev-strip { display: none; }
-}
-
-/* Home no celular: a assinatura fica dentro do rodapé; a faixa global sai e não reserva espaço. */
-@media (max-width: 767px) {
-  body:has(.home) > .dev-strip,
-  .home .mobile-nav-shelf { display: none !important; }
-  body:has(.home):has(> .dev-strip) { padding-bottom: 0; }
 }
