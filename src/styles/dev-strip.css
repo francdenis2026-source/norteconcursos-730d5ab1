@@ -54,3 +54,10 @@ body:has(> .dev-strip) { padding-bottom: calc(32px + env(safe-area-inset-bottom,
 @media (forced-colors: active) {
   .dev-strip { display: none; }
 }
+
+/* Home no celular: a assinatura fica dentro do rodapé; a faixa global sai e não reserva espaço. */
+@media (max-width: 767px) {
+  body:has(.home) > .dev-strip,
+  .home .mobile-nav-shelf { display: none !important; }
+  body:has(.home):has(> .dev-strip) { padding-bottom: 0; }
+}

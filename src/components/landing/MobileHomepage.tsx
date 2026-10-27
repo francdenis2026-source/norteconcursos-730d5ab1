@@ -162,7 +162,12 @@ export function MobileHomepage() {
             <MapPin aria-hidden="true" /> R. Joel Fereira de Sousa, Bela Vista · Feijó, AC · 69960-000
           </a>
         </address>
-        <small className="mobile-homepage__footer-copy">© 2026 Norte Concursos</small>
+        <small className="mobile-homepage__footer-copy">
+          <span>© 2026 Norte Concursos</span>
+          <span>
+            Dev. <strong>Franc D'nis</strong> · Feijó-AC, Brasil
+          </span>
+        </small>
       </footer>
     </div>
   );
