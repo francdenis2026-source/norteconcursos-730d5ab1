@@ -930,3 +930,25 @@
 .student-overview .student-home__objective-name { font-size: 15px; line-height: 1.3; }
 .student-overview .student-home__text-link { font-size: 12.5px; min-height: 0; padding-block: 4px; }
 .student-overview .student-home__wide-action, .student-overview .student-home__primary { min-height: 40px; }
+
+/* Modo escuro: textos de descrição (cartões de acesso rápido, contagens, métricas e painéis) sempre claros
+   sobre o fundo escuro. Corrige descrições em cinza/azul escuro com contraste baixo. */
+:root.dark .app-shell[data-area="student"] .student-overview {
+  --desk-desc: color-mix(in srgb, var(--foreground) 78%, transparent);
+}
+:root.dark .app-shell[data-area="student"] .student-overview :is(
+  .student-hub__shortcuts small,
+  .platform-question-counts__grid > * > small,
+  .platform-question-counts--compact > header span,
+  .student-desk__section-heading > span,
+  .student-home__metric p,
+  .student-home__blocks li small,
+  .student-home__next-topic small,
+  .student-home__signals small,
+  .student-home__empty p,
+  .student-home__card p,
+  .student-home__card small
+) {
+  color: var(--desk-desc, #d6dde8) !important;
+  text-shadow: none;
+}
