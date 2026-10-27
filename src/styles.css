@@ -15888,11 +15888,11 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 /* Links do rodapé (celular): chips compactos que quebram linha sozinhos, sem espaço sobrando. */
 @media (max-width: 767px) {
   html body .mobile-homepage__footer .mobile-homepage__footer-nav {
-    display: flex !important; flex-wrap: wrap; gap: 6px !important; border: 0; border-radius: 0;
+    display: flex !important; flex-wrap: nowrap; gap: 6px !important; border: 0; border-radius: 0;
   }
   html body .mobile-homepage__footer .mobile-homepage__footer-nav a {
-    display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px;
-    font-size: 12px; font-weight: 600; color: #e7dcc0; text-decoration: none;
+    display: inline-flex; align-items: center; justify-content: center; flex: 1 1 auto; min-width: 0; min-height: 32px; padding: 0 10px;
+    font-size: 12px; font-weight: 600; white-space: nowrap; color: #e7dcc0; text-decoration: none;
     border: 1px solid rgb(223 180 91 / .22); border-radius: 999px; background: rgb(255 255 255 / .03);
     transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
   }

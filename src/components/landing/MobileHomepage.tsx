@@ -136,8 +136,6 @@ export function MobileHomepage() {
           NORTE <span>CONCURSOS</span>
         </strong>
         <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
-          <a href="/desafio-diario">Desafio diário</a>
-          <a href="/sobre">Nossa história</a>
           <a href="/suporte">Suporte</a>
           <a href="/privacy">Privacidade</a>
           <a href="/terms">Termos de uso</a>
