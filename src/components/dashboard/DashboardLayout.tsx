@@ -13,6 +13,7 @@ import "@/styles/dashboard-light.css";
 import "@/styles/student-canvas.css";
 import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
+import "@/styles/student-bottom-nav.css";
 import "@/styles/workspace-banners.css";
 import "@/styles/workspace-topbar.css";
 import "@/styles/workspace-fullscreen.css";

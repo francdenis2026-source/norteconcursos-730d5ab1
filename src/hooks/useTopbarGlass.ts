@@ -10,12 +10,22 @@ export function useTopbarGlass() {
       if (header.current && header.current.dataset["scrolled"] !== value)
         header.current.dataset["scrolled"] = value;
     };
+    let idle: number | undefined;
+    const dock = () => {
+      const nav = document.querySelector<HTMLElement>(".app-bottom-nav");
+      if (!nav) return;
+      nav.dataset["scrolling"] = "true";
+      window.clearTimeout(idle);
+      idle = window.setTimeout(() => { nav.dataset["scrolling"] = "false"; }, 220);
+    };
+    const onScroll = () => { update(); dock(); };
     update();
-    window.addEventListener("scroll", update, { passive: true });
-    content?.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    content?.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", update);
-      content?.removeEventListener("scroll", update);
+      window.removeEventListener("scroll", onScroll);
+      content?.removeEventListener("scroll", onScroll);
+      window.clearTimeout(idle);
     };
   }, []);
   return header;
