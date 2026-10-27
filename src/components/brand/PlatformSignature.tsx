@@ -4,11 +4,12 @@ export function PlatformSignature() {
     <div
       className="platform-signature"
       role="img"
-      aria-label="Designed by Franc Denis · 2026. Feijó, Acre, Brasil."
+      aria-label="Dev. Franc D'nis. Feijó-AC, Brasil."
     >
-      <span className="platform-signature__mark" aria-hidden="true">FD</span>
-      <span aria-hidden="true">Designed by Franc Denis · 2026</span>
-      <span className="platform-signature__origin" aria-hidden="true">Feijó · Acre · Brasil</span>
+      <span aria-hidden="true">Dev.</span>
+      <strong aria-hidden="true">Franc D'nis</strong>
+      <span className="platform-signature__dot" aria-hidden="true">•</span>
+      <span aria-hidden="true">Feijó-AC, Brasil</span>
     </div>
   );
 }
