@@ -13,6 +13,8 @@
     content: "";
     position: absolute;
     inset: 0;
+    height: auto; /* regra antiga do ::after fixava ~44px de altura e virava uma faixa solta no topo */
+    width: auto;
     z-index: 1;
     pointer-events: none;
     background:
