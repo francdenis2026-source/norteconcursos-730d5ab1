@@ -138,16 +138,18 @@ export function MobileHomepage() {
             <small>Aponte a câmera para abrir norteconcursos.xyz</small>
           </span>
         </a>
-        <strong>
-          NORTE <span>CONCURSOS</span>
-        </strong>
-        <div>
+        <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
           <a href="/sobre">Sobre</a>
           <a href="/suporte">Suporte</a>
           <a href="/privacy">Privacidade</a>
           <a href="/terms">Termos</a>
+        </nav>
+        <div className="mobile-homepage__footer-base">
+          <strong>
+            NORTE <span>CONCURSOS</span>
+          </strong>
+          <small>© 2026 · Feijó, Acre</small>
         </div>
-        <small>© 2026 Norte Concursos · Feijó, Acre</small>
       </footer>
     </div>
   );

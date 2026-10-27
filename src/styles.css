@@ -15842,3 +15842,44 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 @media (max-width: 767px) {
   html.dark .mobile-homepage .mobile-homepage__hero { --backdrop-clock-veil: rgb(22 24 28 / .6); }
 }
+
+/* Área inferior do celular (planos, fechamento e rodapé): mais baixa, mais organizada.
+   Aproveita a largura em vez da altura; cores grafite no escuro. */
+@media (max-width: 767px) {
+  /* Planos: cartões compactos */
+  #mobile-planos { gap: 12px; padding: 22px 16px 22px; }
+  #mobile-planos .mobile-plans__list { gap: 8px; }
+  #mobile-planos .mobile-plans__list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 12px; padding: 11px 14px; border-radius: 13px; }
+  #mobile-planos .mobile-plans__list li[data-featured] { padding-top: 16px; }
+  #mobile-planos .mobile-plans__list strong { font-size: 15px; line-height: 1.2; }
+  #mobile-planos .mobile-plans__list small { margin-top: 2px; font-size: 11.5px; line-height: 1.35; }
+  #mobile-planos .mobile-plans__list li > span { font-size: 15px; }
+  #mobile-planos .mobile-plans__note { margin: -2px 0 0; font-size: 11px; text-align: center; }
+  #mobile-planos .mobile-homepage__wide-link { min-height: 48px; }
+  html.dark #mobile-planos .mobile-plans__list li { background: #1d2025; border-color: rgb(255 255 255 / .1); }
+  html.dark #mobile-planos .mobile-plans__list li[data-featured] { background: linear-gradient(180deg, #2a2517, #1d2025); border-color: #e0b65d; }
+
+  /* Faixa de fechamento: ícone, texto e botão na mesma linha, texto à esquerda */
+  .mobile-homepage__closing { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid rgb(223 180 91 / .28); }
+  .mobile-homepage__closing > div { min-width: 0; }
+  .mobile-homepage__closing strong { display: block; font-size: 14px; line-height: 1.2; }
+  .mobile-homepage__closing p { margin: 3px 0 0; font-size: 11.5px; line-height: 1.35; text-align: left; text-align-last: auto; hyphens: none; }
+  .mobile-homepage__closing a { margin: 0; padding: 9px 14px; border-radius: 10px; font-size: 12px; white-space: nowrap; background: rgb(223 180 91 / .12); }
+
+  /* Rodapé: QR, links em colunas e linha final com marca e direitos */
+  .mobile-homepage__footer { gap: 12px; padding: 16px 16px calc(64px + env(safe-area-inset-bottom)); }
+  .mobile-homepage__footer .mobile-homepage__qr { min-height: 0; padding: 8px 10px; gap: 12px; }
+  .mobile-homepage__footer .mobile-homepage__qr img { width: 52px; height: 52px; flex-basis: 52px; }
+  .mobile-homepage__footer-nav { display: grid !important; grid-template-columns: repeat(4, 1fr); gap: 0 !important; border-block: 1px solid rgb(255 255 255 / .1); }
+  .mobile-homepage__footer-nav a { padding: 11px 4px; text-align: center; font-size: 12px; font-weight: 600; }
+  .mobile-homepage__footer-nav a + a { border-left: 1px solid rgb(255 255 255 / .08); }
+  .mobile-homepage__footer-base { display: flex !important; flex-wrap: nowrap !important; align-items: baseline; justify-content: space-between; gap: 10px !important; }
+  .mobile-homepage__footer-base > strong { font-size: 14px; letter-spacing: .06em; color: #fff; }
+  .mobile-homepage__footer-base > strong span { color: #dfb45b; font-size: 9px; letter-spacing: .14em; }
+  .mobile-homepage__footer-base > small { font-size: 10px; color: #8d97a3; white-space: nowrap; }
+
+  /* Escuro: grafite */
+  html.dark .mobile-homepage .mobile-homepage__closing { background: #1e2227; }
+  html.dark .mobile-homepage .mobile-homepage__footer { background: #111316; }
+  html.dark .mobile-homepage__footer-nav { border-color: rgb(255 255 255 / .09); }
+}
