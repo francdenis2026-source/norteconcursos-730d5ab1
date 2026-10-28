@@ -113,9 +113,9 @@ function AdminStudentsPage() {
   const [editName, setEditName] = useState("");
   const [detailsId, setDetailsId] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
+  const load = useCallback(async (opts?: { silent?: boolean }) => {
     if (!isAdmin) return;
-    setLoading(true);
+    if (!opts?.silent) setLoading(true);
     setError(null);
     try {
       const profiles: {
@@ -198,7 +198,7 @@ function AdminStudentsPage() {
         "Não foi possível ler os alunos do banco. Verifique a conexão e se você entrou como administrador.",
       );
     } finally {
-      setLoading(false);
+      if (!opts?.silent) setLoading(false);
     }
   }, [isAdmin]);
 
@@ -206,8 +206,9 @@ function AdminStudentsPage() {
     void load();
     // A presença expira após 90 s; atualizar periodicamente mantém entrada e saída
     // refletidas no painel sem exigir que o administrador recarregue a página.
+    // Silencioso: não troca a lista por um spinner a cada atualização em segundo plano.
     const timer = window.setInterval(() => {
-      if (document.visibilityState === "visible") void load();
+      if (document.visibilityState === "visible") void load({ silent: true });
     }, 15000);
     return () => window.clearInterval(timer);
   }, [load]);
