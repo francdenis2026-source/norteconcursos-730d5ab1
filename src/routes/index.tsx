@@ -3,6 +3,7 @@ import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop"
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
@@ -365,6 +366,7 @@ function Index() {
   }, []);
   return (
     <div className="home">
+      <PublicAchievementSignal />
       <div className="home-backdrop" aria-hidden="true">
         <TacticalClockBackdrop />
       </div>

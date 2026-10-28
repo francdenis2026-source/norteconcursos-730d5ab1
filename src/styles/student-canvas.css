@@ -341,3 +341,5 @@
     backdrop-filter: none;
   }
 }
+.achievement-notice--public { border-left-color: var(--primary); }
+.achievement-notice--public > svg { color: var(--primary); }

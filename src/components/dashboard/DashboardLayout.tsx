@@ -435,6 +435,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       load: () => MockService.getAchievements({ strict: true }),
       onSnapshot: setAchievements,
       onEarned: (achievement) => {
+        void supabase.channel("norte-achievements-public-v1").send({ type: "broadcast", event: "achievement", payload: { id: achievement.id, name: achievement.name } });
         void import("@/components/dashboard/AchievementNotification").then(({ showAchievementNotification }) => {
           if (!cancelled) showAchievementNotification(achievement);
         }).catch(() => { /* The saved achievement remains available in the collection. */ });
