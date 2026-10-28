@@ -1,0 +1,8 @@
+begin;
+update public.study_materials
+set body_md = body_md || E'\n\n## Notícias recentes para revisão — outubro de 2026\n\n- **Conectividade na BR-364:** o Ministério das Comunicações anunciou cobertura integral de telefonia móvel em um trecho de 672 km da BR-364 no Acre. A medida é relevante para segurança, transporte, serviços públicos e integração regional.\n- **Infraestrutura rodoviária:** o DNIT mantém obras e contratos de manutenção na BR-364/AC, eixo de abastecimento e escoamento do estado. Em questões, diferencie obra anunciada, em execução e concluída.\n- **Gestão ambiental:** o Portal da Legislação do Acre registra o Decreto nº 11.932/2026, relacionado à situação de emergência por seca severa e possibilidade de desabastecimento hídrico.\n- **Fontes de acompanhamento:** o Diário Oficial do Estado, o Portal de Dados Abertos, a Seplan, o IBGE e os portais do DNIT e dos ministérios devem ser consultados para atualizar datas, valores e fases de políticas públicas.',
+source_note = 'Atualizado em 28/10/2026 com notícias oficiais do Ministério das Comunicações, DNIT, Portal da Legislação do Acre e Diário Oficial do Estado.',
+legal_basis = legal_basis || '[{"title":"Ministério das Comunicações — cobertura móvel na BR-364","url":"https://www.gov.br/mcom/pt-br/noticias/2026/outubro/br-364-tera-cobertura-integral-de-telefonia-movel-em-trecho-de-672-km-no-acre"},{"title":"Portal da Legislação do Acre — Decreto nº 11.932/2026","url":"https://legis.ac.gov.br/principal/3"},{"title":"Diário Oficial do Estado do Acre","url":"https://www.diario.ac.gov.br/"},{"title":"DNIT — Acre","url":"https://www.gov.br/dnit/pt-br/rodovias/mapa-de-gerenciamento/acre"}]'::jsonb,
+updated_at=now()
+where slug='acre-atualidades-politicas-publicas';
+commit;
