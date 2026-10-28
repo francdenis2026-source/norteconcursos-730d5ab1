@@ -271,9 +271,9 @@ function MaterialPage() {
             </div>
 
             {(sources.length > 0 || material.source_note) && (
-              <aside className="surface-card library-sources" aria-label="Fontes">
-                <h2>Fontes e transparência</h2>
-                <p>{material.source_note}</p>
+              <details className="surface-card library-sources" aria-label="Fontes">
+                <summary>Fontes e transparência <span>{sources.length} {sources.length === 1 ? "fonte" : "fontes"}</span></summary>
+                {material.source_note && <p>{material.source_note}</p>}
                 {sources.length > 0 && (
                   <ul>
                     {sources.map((source, index) => (
@@ -289,7 +289,7 @@ function MaterialPage() {
                     ))}
                   </ul>
                 )}
-              </aside>
+              </details>
             )}
           </>
         }
