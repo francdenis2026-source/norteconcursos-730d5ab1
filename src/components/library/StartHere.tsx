@@ -5,10 +5,12 @@ import { useLegalCourses, useLegalExplanationCoverage } from "@/lib/legalCourses
 /** Leis mais cobradas em concursos policiais, na ordem em que o candidato deve estudar. */
 const TOP_LAWS = ["codigo-penal", "codigo-processo-penal", "organizacoes", "drogas", "maria-penha", "lep", "eca", "abuso", "armas", "transito"];
 const LAST_KEY = "norte:legal-last";
+const lastKey = (userId: string) => `${LAST_KEY}:${userId}`;
 
 export type LastLegal = { slug: string; art: string; label: string; title: string };
-export const rememberLegal = (v: LastLegal) => {
-  try { localStorage.setItem(LAST_KEY, JSON.stringify(v)); } catch { /* sem armazenamento */ }
+export const rememberLegal = (userId: string, v: LastLegal) => {
+  if (!userId) return;
+  try { localStorage.setItem(lastKey(userId), JSON.stringify(v)); } catch { /* sem armazenamento */ }
 };
 
 /** "Comece por aqui": continuar de onde parou + as leis que mais caem, com o quanto já está explicado. */
@@ -17,8 +19,8 @@ export function StartHere({ userId }: { userId: string }) {
   const coverage = useLegalExplanationCoverage(userId).data;
   const [last, setLast] = useState<LastLegal | null>(null);
   useEffect(() => {
-    try { setLast(JSON.parse(localStorage.getItem(LAST_KEY) ?? "null") as LastLegal | null); } catch { setLast(null); }
-  }, []);
+    try { setLast(JSON.parse(localStorage.getItem(lastKey(userId)) ?? "null") as LastLegal | null); } catch { setLast(null); }
+  }, [userId]);
   const top = TOP_LAWS.flatMap((slug) => {
     const c = courses?.find((x) => x.slug === slug);
     return c ? [{ c, cov: coverage?.find((x) => x.course_slug === slug) }] : [];
