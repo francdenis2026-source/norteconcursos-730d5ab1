@@ -20,6 +20,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
+  BedDouble,
   BrainCircuit,
   Compass,
   FileSearch,
@@ -112,6 +113,7 @@ const EXPLORE_LINKS: [string, string][] = [
 ];
 const INSTITUTIONAL_LINKS: [string, string][] = [
   ["Nossa história", "/sobre"],
+  ["Sala de repouso", "/sala-de-repouso"],
   ["Privacidade", "/privacy"],
   ["Termos de uso", "/terms"],
   ["Central de suporte", "/suporte"],
@@ -126,6 +128,7 @@ const MENU_TILES: [string, string, LucideIcon, string?][] = [
   ["Ferramentas", "ferramentas", BrainCircuit, "mobile-ferramentas"],
   ["Carreiras", "carreiras", Target, "mobile-inicio"],
   ["Desafio diário", "/desafio-diario", Trophy],
+  ["Sala de repouso", "/sala-de-repouso", BedDouble],
   ["Ajuda", "/suporte", MessageCircle],
 ];
 
@@ -612,6 +615,11 @@ function Index() {
                   </li>
                   <li>
                     <Trophy /> Simulados no ritmo da prova
+                  </li>
+                  <li>
+                    <Link to="/sala-de-repouso" style={{ display: "inline-flex", alignItems: "center", gap: 7 }}>
+                      <BedDouble /> Sala de repouso disponível todos os dias
+                    </Link>
                   </li>
                 </ul>
               </div>

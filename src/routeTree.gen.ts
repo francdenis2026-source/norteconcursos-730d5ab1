@@ -15,6 +15,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DesafioDiarioRouteImport } from './routes/desafio-diario'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SalaDeRepousoRouteImport } from './routes/sala-de-repouso'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -111,6 +112,11 @@ const DesafioDiarioRoute = DesafioDiarioRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SalaDeRepousoRoute = SalaDeRepousoRouteImport.update({
+  id: '/sala-de-repouso',
+  path: '/sala-de-repouso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SobreRoute = SobreRouteImport.update({
@@ -463,6 +469,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sala-de-repouso': typeof SalaDeRepousoRoute
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
@@ -537,6 +544,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sala-de-repouso': typeof SalaDeRepousoRoute
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
@@ -611,6 +619,7 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sala-de-repouso': typeof SalaDeRepousoRoute
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
@@ -688,6 +697,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/desafio-diario'
     | '/privacy'
+    | '/sala-de-repouso'
     | '/sobre'
     | '/suporte'
     | '/terms'
@@ -762,6 +772,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/desafio-diario'
     | '/privacy'
+    | '/sala-de-repouso'
     | '/sobre'
     | '/suporte'
     | '/terms'
@@ -835,6 +846,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/desafio-diario'
     | '/privacy'
+    | '/sala-de-repouso'
     | '/sobre'
     | '/suporte'
     | '/terms'
@@ -911,6 +923,7 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRouteWithChildren
   DesafioDiarioRoute: typeof DesafioDiarioRoute
   PrivacyRoute: typeof PrivacyRoute
+  SalaDeRepousoRoute: typeof SalaDeRepousoRoute
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
@@ -964,6 +977,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sala-de-repouso': {
+      id: '/sala-de-repouso'
+      path: '/sala-de-repouso'
+      fullPath: '/sala-de-repouso'
+      preLoaderRoute: typeof SalaDeRepousoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sobre': {
@@ -1590,6 +1610,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRouteWithChildren,
   DesafioDiarioRoute: DesafioDiarioRoute,
   PrivacyRoute: PrivacyRoute,
+  SalaDeRepousoRoute: SalaDeRepousoRoute,
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
