@@ -119,7 +119,7 @@ function WorkedCaseCard({
       <span className="worked-case-badge">
         {languageStudy
           ? "Língua Portuguesa · exemplo comentado"
-          : "Caso concreto · exemplo aplicado"}
+          : "Exemplo aplicado"}
       </span>
       <h3 className="text-lg font-bold">{example.title}</h3>
       <p className="mt-3 leading-7">
@@ -130,7 +130,7 @@ function WorkedCaseCard({
       </p>
       <details className="worked-resolution mt-4">
         <summary className="cursor-pointer font-semibold text-primary">
-          Ver resolução passo a passo
+          Abrir explicação passo a passo
         </summary>
         <ol className="mt-3 list-decimal space-y-3 pl-5">
           {example.steps.map((step, i) => (
@@ -158,12 +158,12 @@ function WorkedCaseCard({
         </p>
       </details>
       <details className="worked-variation mt-4 rounded-lg border p-3">
-        <summary className="cursor-pointer font-semibold">E se o caso mudar?</summary>
+        <summary className="cursor-pointer font-semibold">Alterar uma condição</summary>
         <p className="mt-3 leading-7">
           <StudyText text={example.variation.scenario} />
         </p>
         <details className="mt-3">
-          <summary className="cursor-pointer text-sm underline">Conferir a variação</summary>
+          <summary className="cursor-pointer text-sm underline">Ver o efeito da alteração</summary>
           <p className="mt-2 leading-7">
             <StudyText text={example.variation.answer} />
           </p>

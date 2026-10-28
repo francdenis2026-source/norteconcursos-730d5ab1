@@ -15901,3 +15901,42 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html body .mobile-homepage__footer .mobile-homepage__footer-nav a:active,
   html body .mobile-homepage__footer .mobile-homepage__footer-nav a:focus-visible { color: #f6dca0; background: rgb(223 180 91 / .1); border-color: #dfb45b; outline: none; }
 }
+
+/* Leitura didática: exemplos com hierarquia neutra e foco no texto. */
+.worked-examples { gap: 1.25rem; }
+.worked-illustration, .worked-case { background: var(--card); border-color: var(--border); box-shadow: none; }
+.worked-case, .study-prose .study-example, .study-prose .study-example-cell {
+  --example-bg: color-mix(in srgb, var(--card) 96%, var(--primary));
+  --example-border: var(--border);
+  --example-ink: var(--foreground);
+  --resolution-bg: color-mix(in srgb, var(--card) 96%, var(--primary));
+  --resolution-border: var(--border);
+  --resolution-ink: var(--foreground);
+  --pitfall-bg: color-mix(in srgb, var(--card) 96%, var(--destructive));
+  --pitfall-border: var(--border);
+  --pitfall-ink: var(--foreground);
+  --variation-bg: var(--muted);
+  --variation-border: var(--border);
+  --variation-ink: var(--foreground);
+}
+.dark .worked-case, .dark .study-prose .study-example, .dark .study-prose .study-example-cell {
+  --example-bg: color-mix(in srgb, var(--card) 94%, var(--primary));
+  --example-border: var(--border);
+  --example-ink: var(--foreground);
+  --resolution-bg: color-mix(in srgb, var(--card) 94%, var(--primary));
+  --resolution-border: var(--border);
+  --resolution-ink: var(--foreground);
+  --pitfall-bg: color-mix(in srgb, var(--card) 94%, var(--destructive));
+  --pitfall-border: var(--border);
+  --pitfall-ink: var(--foreground);
+  --variation-bg: var(--muted);
+  --variation-border: var(--border);
+  --variation-ink: var(--foreground);
+}
+.worked-case, .study-prose .study-example { border-left-width: 3px; }
+.worked-case-badge { background: var(--muted); color: var(--muted-foreground); border: 1px solid var(--border); }
+.worked-resolution, .worked-variation, .worked-pitfall { border-color: var(--border); box-shadow: none; }
+.worked-resolution > summary, .worked-resolution strong, .worked-pitfall strong, .worked-variation > summary { color: var(--foreground); }
+.worked-flow { gap: .75rem; }
+.worked-flow li { background: var(--card); border-color: var(--border); }
+.worked-flow li span { background: var(--muted); color: var(--foreground); }

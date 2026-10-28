@@ -12,10 +12,11 @@ export function LearningIllustration({
 }: {
   illustration: StudyEnrichment["content"]["illustrations"][number];
 }) {
+  const displayTitle = illustration.title === "Mapa do raciocínio" ? "Roteiro de análise" : illustration.title;
   return (
     <figure className="worked-illustration">
       <figcaption>
-        <strong>{illustration.title}</strong>
+        <strong>{displayTitle}</strong>
         <p>{illustration.caption}</p>
       </figcaption>
       {illustration.kind === "truth" ? (
