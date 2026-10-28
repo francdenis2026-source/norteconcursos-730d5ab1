@@ -4955,7 +4955,7 @@ html {
 }
 .admin-tabs {
   display: grid;
-  grid-template-columns: repeat(8, minmax(112px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   justify-content: start;
   overflow-x: auto;
 }
