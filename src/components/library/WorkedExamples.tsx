@@ -70,8 +70,7 @@ export function WorkedExampleContent({
           {languageStudy ? "Entenda a frase, passo a passo" : "Do conceito ao caso concreto"}
         </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Observe o esquema e tente resolver o caso antes de abrir a explicação. Depois, mude um
-          dado e veja por que a resposta muda.
+          Leia o caso, identifique a regra e abra a resolução para conferir o raciocínio.
         </p>
       </header>
       {enrichment.content.illustrations.map((illustration, i) => (
@@ -117,57 +116,23 @@ function WorkedCaseCard({
   return (
     <article className="worked-case">
       <span className="worked-case-badge">
-        {languageStudy
-          ? "Língua Portuguesa · exemplo comentado"
-          : "Exemplo aplicado"}
+        {languageStudy ? "Exemplo comentado" : "Exemplo aplicado"}
       </span>
       <h3 className="text-lg font-bold">{example.title}</h3>
-      <p className="mt-3 leading-7">
-        <StudyText text={example.scenario} />
-      </p>
-      <p className="mt-3 font-semibold">
-        <StudyText text={example.question} />
-      </p>
+      <p className="mt-3 leading-7"><StudyText text={example.scenario} /></p>
+      <p className="mt-3 font-semibold"><StudyText text={example.question} /></p>
       <details className="worked-resolution mt-4">
-        <summary className="cursor-pointer font-semibold text-primary">
-          Abrir explicação passo a passo
-        </summary>
+        <summary className="cursor-pointer font-semibold text-primary">Abrir explicação</summary>
         <ol className="mt-3 list-decimal space-y-3 pl-5">
-          {example.steps.map((step, i) => (
-            <li key={i} className="leading-7">
-              <StudyText text={step} />
-            </li>
-          ))}
+          {example.steps.map((step, i) => <li key={i} className="leading-7"><StudyText text={step} /></li>)}
         </ol>
-        <p className="worked-result mt-4">
-          <strong>Conclusão: </strong>
-          <StudyText text={example.conclusion} />
-        </p>
+        <p className="worked-result mt-4"><strong>Conclusão: </strong><StudyText text={example.conclusion} /></p>
         {example.articles.length > 0 && (
           <p className="mt-3 text-xs text-muted-foreground">
-            {languageStudy ? "Conceitos relacionados" : "Dispositivos relevantes"}:{" "}
-            {example.articles.join("; ")}.{" "}
-            {languageStudy
-              ? "Confira a análise linguística e as referências deste material."
-              : "Confira a redação completa nas fontes abaixo."}
+            {languageStudy ? "Conceitos relacionados" : "Dispositivos relevantes"}: {example.articles.join("; ")}.
           </p>
         )}
-        <p className="worked-pitfall mt-4 text-sm leading-6">
-          <strong>Erro comum: </strong>
-          <StudyText text={example.pitfall} />
-        </p>
-      </details>
-      <details className="worked-variation mt-4 rounded-lg border p-3">
-        <summary className="cursor-pointer font-semibold">Alterar uma condição</summary>
-        <p className="mt-3 leading-7">
-          <StudyText text={example.variation.scenario} />
-        </p>
-        <details className="mt-3">
-          <summary className="cursor-pointer text-sm underline">Ver o efeito da alteração</summary>
-          <p className="mt-2 leading-7">
-            <StudyText text={example.variation.answer} />
-          </p>
-        </details>
+        <p className="worked-pitfall mt-4 text-sm leading-6"><strong>Erro comum: </strong><StudyText text={example.pitfall} /></p>
       </details>
     </article>
   );
