@@ -1,0 +1,11 @@
+-- Complementa o material ativo do Marco Civil com os Decretos 12.976/2026
+-- e a atuação sistêmica da ANPD.
+begin;
+update public.study_materials
+set
+  body_md = body_md || E'\n\n## 5. Decretos de 2026 e atuação da ANPD\n\nO Decreto nº 12.975/2026 atualizou a regulamentação do Marco Civil e passou a exigir deveres de cuidado, transparência, canais permanentes de denúncia e medidas de prevenção e mitigação de riscos das plataformas que intermediam conteúdo de terceiros. A responsabilização prevista no decreto está ligada à **falha sistêmica**: a existência isolada de um conteúdo ilícito não basta, por si só, para caracterizá-la.\n\nO Decreto nº 12.976/2026 criou diretrizes específicas para a proteção das mulheres no ambiente digital. Ele trata de violência digital, divulgação não consentida de conteúdo íntimo e produção ou modificação de conteúdo íntimo por inteligência artificial. A ANPD informa, para as hipóteses previstas no decreto, prazo de até duas horas para remoção de conteúdo íntimo divulgado sem consentimento e bloqueio do reenvio.\n\nA ANPD exerce fiscalização **sistêmica**: verifica se a plataforma possui governança, canais de denúncia, processos de análise, transparência e medidas técnicas adequadas. A Agência não julga isoladamente cada postagem, não avalia diretamente a conduta de cada usuário e não determina, por si só, a suspensão de contas.\n\nDenúncias relacionadas aos dois decretos devem ser encaminhadas pelo Sistema de Requerimentos da ANPD. A Agência também pode abrir tomadas de subsídios para receber contribuições sobre a implementação das novas regras.',
+  source_note = 'Material autoral revisado em 28/10/2026 com base na Lei nº 12.965/2014, nos Decretos nº 12.975/2026 e nº 12.976/2026, na página institucional e no FAQ da ANPD e na tese do Tema 987 do STF.',
+  legal_basis = legal_basis || '[{"title":"Decreto nº 12.976/2026 — Planalto","url":"https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d12976.htm"},{"title":"Marco Civil da Internet — ANPD","url":"https://www.gov.br/anpd/pt-br/assuntos/marco-civil-da-internet"},{"title":"Denúncias Marco Civil — ANPD","url":"https://www.gov.br/anpd/pt-br/assuntos/marco-civil-da-internet/denuncias-marco-civil-da-internet"}]'::jsonb,
+  updated_at = now()
+where slug = 'legislacao-marco-civil-internet-2026';
+commit;
