@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  BedDouble,
   BookOpenCheck,
   CheckCircle2,
   ChevronRight,
@@ -42,9 +41,6 @@ export function MobileHomepage() {
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight />
             </a>
-            <Link to="/sala-de-repouso" className="mobile-homepage__secondary">
-              <BedDouble aria-hidden="true" /> Sala de repouso disponível
-            </Link>
           </div>
         </div>
       </section>
@@ -140,7 +136,6 @@ export function MobileHomepage() {
           NORTE <span>CONCURSOS</span>
         </strong>
         <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
-          <a href="/sala-de-repouso">Sala de repouso</a>
           <a href="/suporte">Suporte</a>
           <a href="/privacy">Privacidade</a>
           <a href="/terms">Termos de uso</a>

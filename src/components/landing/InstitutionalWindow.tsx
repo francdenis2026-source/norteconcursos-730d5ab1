@@ -8,7 +8,6 @@ import "@/styles/institutional-window.css";
 
 const PAGES = [
   ["/sobre", "Nossa história"],
-  ["/sala-de-repouso", "Sala de repouso"],
   ["/privacy", "Privacidade"],
   ["/terms", "Termos de uso"],
   ["/suporte", "Suporte"],
