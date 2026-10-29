@@ -839,7 +839,7 @@ function QuestionTrainer() {
             {savedForStudy ? "Salva" : "Salvar"}
           </Button>
           <Badge variant="secondary">
-            <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
+            <Flame className="mr-1 h-3.5 w-3.5" /> Treinador
           </Badge>
           <Badge variant="outline">Ranking de questões</Badge>
         </div>
