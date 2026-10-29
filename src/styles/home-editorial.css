@@ -199,7 +199,7 @@
 .home.home .home-nav a[aria-current="location"]:hover {
   background: color-mix(in srgb, var(--home-gold) 22%, transparent);
 }
-.home.home :is(.home-menu-trigger, .lp-theme-toggle):hover {
+.home.home :is(.home-menu-trigger, .lp-theme-toggle, .home-fullscreen-toggle):hover {
   background: color-mix(in srgb, var(--home-gold) 20%, var(--home-tint));
   box-shadow: 0 4px 14px -8px color-mix(in srgb, var(--home-gold) 55%, transparent);
 }
