@@ -129,7 +129,10 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
   ) => ({
     data: await queryClient.fetchQuery({
       queryKey: ["question-catalog", userId, table, base, extra],
-      staleTime: 60_000,
+      // Acervo pesado (dezenas de milhares de linhas): cache mais longo é seguro porque
+      // useQuestionCatalogRealtime invalida esta chave assim que uma questão muda no banco —
+      // não depende de expirar rápido por conta própria pra ficar correto.
+      staleTime: 15 * 60_000,
       retry: 0,
       queryFn: ({ signal }) =>
         fetchAllRows(
@@ -349,7 +352,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
   const result = useQuery({
     queryKey: ["question-catalog-view", userId],
     enabled,
-    staleTime: 60_000,
+    staleTime: 15 * 60_000,
     retry: 0,
     queryFn: () => loadQuestionCatalog(queryClient, userId),
   });
