@@ -15,6 +15,7 @@ import {
   BrainCircuit,
   Check,
   CheckCircle2,
+  ChevronDown,
   Flame,
   Lock,
   Loader2,
@@ -1472,8 +1473,11 @@ function TrainerSetup({
               </Select>
             </label>
           </div>
-          <details className="trainer-more mt-3 rounded-lg border bg-muted/20 px-3 py-2">
-            <summary className="cursor-pointer text-xs font-black uppercase tracking-wider text-muted-foreground">Mais filtros</summary>
+          <details className="trainer-more group mt-3 rounded-lg border bg-muted/20 px-3 py-2 open:bg-muted/30">
+            <summary className="flex cursor-pointer list-none items-center justify-between text-xs font-black uppercase tracking-wider text-muted-foreground [&::-webkit-details-marker]:hidden">
+              Mais filtros
+              <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+            </summary>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             <TrainerFilter
               counts={facets.counts["contest"]}
