@@ -10,11 +10,11 @@ const WATCHED_TABLES = [
 ] as const;
 
 /**
- * O acervo, o Treinador de questões, o painel administrativo e o selo da home contam questões
- * cada um na sua própria consulta, com seu próprio cache (até 10 minutos no painel). Sem isto,
- * inserir, editar ou remover uma questão só aparecia em cada tela quando o cache dela expirasse
- * por conta própria. Uma única assinatura realtime nestas tabelas invalida todos os caches assim
- * que o banco muda, então os números ficam sempre consistentes entre si.
+ * O acervo, o Treinador, os Simulados, o painel administrativo e o selo da home contam questões
+ * cada um na sua própria consulta, com seu próprio cache (vários minutos, já que isto invalida na
+ * hora). Sem isto, inserir, editar ou remover uma questão só aparecia em cada tela quando o cache
+ * dela expirasse por conta própria. Uma única assinatura realtime nestas tabelas invalida todos os
+ * caches assim que o banco muda, então os números ficam sempre consistentes entre si.
  */
 export function useQuestionCatalogRealtime(enabled: boolean) {
   const queryClient = useQueryClient();
@@ -26,6 +26,7 @@ export function useQuestionCatalogRealtime(enabled: boolean) {
       void queryClient.invalidateQueries({ queryKey: ["official-year-questions"] });
       void queryClient.invalidateQueries({ queryKey: ["platform-question-stats"] });
       void queryClient.invalidateQueries({ queryKey: ["public-question-summary"] });
+      void queryClient.invalidateQueries({ queryKey: ["simulator-catalog"] });
     };
     let channel = supabase.channel("question-catalog-live");
     for (const table of WATCHED_TABLES)
