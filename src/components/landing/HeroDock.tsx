@@ -104,8 +104,8 @@ export function HeroDock() {
         <div className="hx-dock__cell hx-dock__cell--access" role="note">
           <BadgeCheck aria-hidden="true" />
           <div>
-            <strong>Acesso aberto · Fase de testes</strong>
-            <span>Grátis por {TESTING_DAYS} dias com tudo do Plus</span>
+            <strong>Acesso liberado</strong>
+            <span>{TESTING_DAYS} dias de acesso Plus</span>
           </div>
           <a href="#planos">
             Planos <ArrowUpRight aria-hidden="true" />
@@ -128,9 +128,9 @@ export function HeroDock() {
       >
         <span className="hx-dock__pulse-mark" aria-hidden="true"><i /></span>
         <div className="hx-dock__pulse-copy">
-          <span className="hx-dock__live"><Activity aria-hidden="true" /> NORTE PULSE · {pulse.eyebrow}</span>
-          <strong>{pulse.title}</strong>
-          <small>{pulse.detail}</small>
+          <span className="hx-dock__live"><Activity aria-hidden="true" /> NORTE PULSE</span>
+          <strong title={pulse.title}>{pulse.title}</strong>
+          <small title={pulse.detail}>{pulse.detail}</small>
           <div className="hx-dock__pulse-controls" aria-label="Navegação do Norte Pulse">
             <button type="button" onClick={() => setPulseIndex((i) => (i + pulseItems.length - 1) % pulseItems.length)} aria-label="Informação anterior"><ChevronLeft aria-hidden="true" /></button>
             <span className="hx-dock__pulse-count">{pulseIndex + 1} / {pulseItems.length}</span>
@@ -138,7 +138,7 @@ export function HeroDock() {
             <button type="button" onClick={() => setPulsePaused((v) => !v)} aria-label={pulsePaused ? "Retomar atualização automática" : "Pausar atualização automática"} aria-pressed={pulsePaused}>{pulsePaused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}</button>
           </div>
         </div>
-        <a href={pulse.href} className="hx-dock__pulse-action" aria-label={`Acessar: ${pulse.title}`}>Explorar <ArrowRight aria-hidden="true" /></a>
+        <a href={pulse.href} className="hx-dock__pulse-action" aria-label={`Acessar: ${pulse.title}`}>Ver <ArrowRight aria-hidden="true" /></a>
       </section>
       {done ? (
         <Link to="/auth" search={{ mode: "register" }} className="hx-dock__cell hx-dock__cell--daily">
