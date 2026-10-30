@@ -774,7 +774,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </Hint>
           </div>}
 
-          {!isAdmin && current?.group !== "Material didático" && current?.group !== "Questões" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
+          {!isAdmin && current?.group !== "Material didático" && current?.group !== "Questões" && current?.group !== "Central de Estudos" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"
