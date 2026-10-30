@@ -1231,9 +1231,10 @@ function QuestionTrainer() {
         </CardContent>
       </Card>
       {answered && (
-        <aside className="trainer-review-community" aria-label="Desempenho e comentários da questão">
+        <details className="trainer-review-community" aria-label="Desempenho e comentários da questão">
+          <summary className="trainer-review-community__toggle">Desempenho e comentários desta questão</summary>
           <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
-        </aside>
+        </details>
       )}
       <Dialog open={confirmExit} onOpenChange={setConfirmExit}>
         <DialogContent className="max-w-md">
