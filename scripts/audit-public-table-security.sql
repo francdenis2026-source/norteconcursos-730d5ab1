@@ -10,9 +10,10 @@ WITH tables AS (
     EXISTS (SELECT 1 FROM pg_trigger g
             WHERE g.tgrelid = t.oid AND NOT g.tgisinternal
             AND g.tgname = 'norte_require_current_session'
-            AND (g.tgtype & 1) = 1
+            AND (g.tgtype & 1) = 0
             AND (g.tgtype & 2) = 2
             AND (g.tgtype & 4) = 4
+            AND (g.tgtype & 8) = 8
             AND (g.tgtype & 16) = 16) AS session_trigger_present,
     has_table_privilege('anon', t.oid, 'SELECT') AS anon_select,
     has_table_privilege('authenticated', t.oid, 'SELECT') AS authenticated_select
