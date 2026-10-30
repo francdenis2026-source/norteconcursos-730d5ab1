@@ -170,7 +170,7 @@ function LegalCoursePage() {
     if (art) setSelectedIdState(undefined);
   }, [art, par]);
   useEffect(() => {
-    if (course && selected)
+    if (course && selected && userId)
       rememberLegal(userId, {
         slug: course.slug,
         art: selected.unit_key,
