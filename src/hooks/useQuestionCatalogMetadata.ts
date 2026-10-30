@@ -11,10 +11,10 @@ import { isEligibleQuestion, normalizeDifficulty, parseBasis, type Question } fr
  */
 const EMPTY: Question[] = [];
 const metadataFields = {
-  official_exam_questions: "id,contest_name,exam_year,career_name,exam_board,subject,official_answer,legal_basis,law_version_checked_at,content_status,state,career_category,difficulty",
+  official_exam_questions: "id,contest_name,exam_year,career_name,exam_board,subject,official_answer,legal_basis,law_version_checked_at,content_status,legal_review_required,legal_audit_completed,context_review_required,state,career_category,difficulty",
   curated_question_catalog: "id,contest_name,contest_year,career_name,exam_board,subject,official_answer,legal_basis,law_version_checked_at,content_status,state,career_category,difficulty,is_original",
   board_exam_questions: "id,contest_name,exam_year,career_name,board,subject,official_answer,legal_basis,law_version_checked_at,content_status,legal_review_required,needs_visual,state,career_category,difficulty",
-  question_bank: "id,contest_name,contest_year,subject,official_answer,legal_basis,law_version_checked_at,content_status,legal_review_required,legal_audit_completed,context_review_required,state,career_category,difficulty",
+  question_bank: "id,contest_name,contest_year,subject,official_answer,legal_basis,law_version_checked_at,content_status,state,career_category,difficulty",
 } as const;
 
 type CatalogTable = keyof typeof metadataFields;
