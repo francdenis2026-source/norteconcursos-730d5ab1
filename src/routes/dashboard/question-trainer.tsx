@@ -79,6 +79,7 @@ import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel"
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import "@/styles/trainer-success-feedback.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
@@ -204,6 +205,17 @@ function QuestionTrainer() {
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
+  const [successFeedback, setSuccessFeedback] = React.useState(false);
+  const successTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const clearSuccessFeedback = React.useCallback(() => {
+    if (successTimer.current !== null) clearTimeout(successTimer.current);
+    successTimer.current = null;
+    setSuccessFeedback(false);
+  }, []);
+  React.useEffect(() => () => {
+    if (successTimer.current !== null) clearTimeout(successTimer.current);
+  }, []);
+
   const [reviewingPast, setReviewingPast] = React.useState(false);
   const [supportNotice, setSupportNotice] = React.useState(false);
   const [savedForStudy, setSavedForStudy] = React.useState(false);
@@ -645,9 +657,16 @@ function QuestionTrainer() {
       });
       if (!isCorrect) {
         setModal("result");
+      } else {
+        clearSuccessFeedback();
+        setSuccessFeedback(true);
+        // Duração suficiente para leitura; saída automática sem clique.
+        // O timer é cancelado se o usuário navegar manualmente.
+        successTimer.current = setTimeout(() => {
+          successTimer.current = null;
+          next();
+        }, 3500);
       }
-      // Acertos recebem feedback integrado e persistente no cartão.
-      // Não navegar automaticamente: o aluno controla quando quer prosseguir.
     } catch (error) {
       // Never show raw database internals to students. Surface known recoverable causes.
       const code = typeof error === "object" && error !== null && "code" in error
@@ -676,6 +695,7 @@ function QuestionTrainer() {
   };
   const goTo = (target: number) => {
     if (target < 0 || target > questions.length) return;
+    clearSuccessFeedback();
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
     setPausedAt(null);
@@ -683,6 +703,7 @@ function QuestionTrainer() {
   };
   const next = () => goTo(index + 1);
   const restart = () => {
+    clearSuccessFeedback();
     responseIdRef.current = crypto.randomUUID();
     setIndex(0);
     setResults([]);
@@ -833,6 +854,30 @@ function QuestionTrainer() {
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
+      {successFeedback && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="trainer-success-overlay pointer-events-none fixed inset-x-3 top-20 z-[80] flex justify-center sm:inset-x-6 sm:top-24"
+        >
+          <div className="trainer-success-message relative flex w-full max-w-[340px] items-center gap-3 overflow-hidden rounded-2xl border border-emerald-400/25 bg-[#112821]/95 px-4 py-3 text-white shadow-[0_16px_48px_rgba(0,0,0,.32)] backdrop-blur-lg animate-in fade-in slide-in-from-top-3 duration-300 motion-reduce:animate-none">
+            <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" className="h-11 w-11 shrink-0">
+              <circle cx="24" cy="24" r="22" fill="#1BAF83" fillOpacity=".17" />
+              <circle cx="24" cy="24" r="16" fill="#24B487" />
+              <path d="m17 24 5 5 10-11" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="24" cy="24" r="21" stroke="#5EE1B6" strokeOpacity=".4" />
+            </svg>
+            <div className="min-w-0 flex-1">
+              <p className="text-[11px] font-bold uppercase tracking-[.12em] text-emerald-200">Resposta correta</p>
+              <p className="mt-0.5 text-sm font-semibold leading-5">Muito bem! Você acertou.</p>
+              <p className="mt-0.5 text-xs text-emerald-100/75">Avançando para a próxima questão…</p>
+            </div>
+            <span className="absolute inset-x-0 bottom-0 h-[3px] bg-emerald-200/15">
+              <span className="trainer-success-progress block h-full w-full origin-left bg-emerald-400" />
+            </span>
+          </div>
+        </div>
+      )}
       {routeFilters.reinforce === "1" && (
         <div className="reinforce-banner">
           <BookOpenCheck className="h-5 w-5 shrink-0" />
@@ -931,42 +976,6 @@ function QuestionTrainer() {
               <ReportQuestionButton question={question} />
             </span>
           </div>
-          {answered && isCorrect && !reviewingPast && (
-            <section
-              role="status"
-              aria-live="polite"
-              className="mb-5 overflow-hidden rounded-2xl border border-emerald-500/35 bg-emerald-50/85 shadow-[0_12px_32px_-22px_rgba(5,150,105,0.48)] dark:border-emerald-400/30 dark:bg-emerald-500/10"
-            >
-              <div className="flex items-start gap-3 p-4 sm:gap-4 sm:p-5">
-                <span
-                  aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm dark:bg-emerald-500"
-                >
-                  <CheckCircle2 className="h-6 w-6" />
-                </span>
-                <div className="min-w-0 flex-1 space-y-1">
-                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-emerald-800 dark:text-emerald-300">
-                    Resposta confirmada
-                  </p>
-                  <h3 className="text-lg font-bold tracking-tight text-emerald-950 dark:text-emerald-100 sm:text-xl">
-                    Muito bem! Você acertou esta questão.
-                  </h3>
-                  <p className="text-sm leading-6 text-emerald-900/85 dark:text-emerald-100/85">
-                    Sua resposta foi registrada. Confira a explicação e avance no seu ritmo.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-emerald-500/15 bg-white/45 px-4 py-3 dark:bg-emerald-950/20 sm:px-5">
-                <span className="text-xs font-medium text-emerald-900 dark:text-emerald-200">
-                  O feedback continuará aqui até você mudar de questão.
-                </span>
-                <Button size="sm" onClick={next} className="bg-emerald-700 text-white hover:bg-emerald-800">
-                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </section>
-          )}
           {reviewingPast && (
             <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
               <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —

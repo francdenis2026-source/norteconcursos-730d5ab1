@@ -1,0 +1,15 @@
+/* Compact answer confirmation floating over the trainer without shifting question layout. */
+.trainer-success-overlay { animation: trainer-success-dismiss 3.5s both; }
+.trainer-success-progress { animation: trainer-success-progress 3.5s linear both; }
+@keyframes trainer-success-dismiss {
+  0% { opacity: 0; transform: translateY(-8px); }
+  9%, 84% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+@keyframes trainer-success-progress {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trainer-success-overlay, .trainer-success-progress { animation: none; }
+}
