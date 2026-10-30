@@ -310,13 +310,13 @@ function QuestionTrainer() {
     setBoard(trainerBoard(routeFilters.board));
     setCareer(canonicalCareerName(routeFilters.career) || "all");
     setYear(routeFilters.year || "all");
-    setSubject(canonicalSubject(routeFilters.subject) || "all");
+    setSubject(canonicalSubject(routeFilters.studySubject ?? routeFilters.subject) || "all");
     setSource(routeFilters.source || "all");
     setReviewed(routeFilters.reviewed || "all");
     setState(routeFilters.state || "all");
     setCategory(routeFilters.category || "all");
     setArea(routeFilters.area || "all");
-    setTopic(routeFilters.topic || "all");
+    setTopic(routeFilters.materialTopic || routeFilters.topic || "all");
     setDifficulty("all");
     setAppliedExam("all");
     autoStart.current = routeFilters.go === "1";
@@ -328,12 +328,15 @@ function QuestionTrainer() {
     routeFilters.career,
     routeFilters.year,
     routeFilters.subject,
+    routeFilters.studySubject,
     routeFilters.source,
     routeFilters.reviewed,
     routeFilters.state,
     routeFilters.category,
     routeFilters.area,
     routeFilters.topic,
+    routeFilters.materialTopic,
+    routeFilters.studyArticle,
     routeFilters.go,
   ]);
   React.useEffect(() => {
