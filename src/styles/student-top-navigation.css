@@ -293,3 +293,61 @@
     stroke-linejoin: round;
   }
 }
+
+/* Restrained category colors on both SVGs and labels: vivid enough to scan, calm enough for a premium academic UI. */
+@media (min-width: 768px) {
+  .student-top-navigation__trigger {
+    --nav-accent: #dbe5f2;
+    --nav-wash: rgb(219 229 242 / 8%);
+    color: var(--nav-accent);
+    border-color: color-mix(in srgb, var(--nav-accent) 13%, transparent);
+    background: var(--nav-wash);
+  }
+  .student-top-navigation__trigger[data-tone="slate"] { --nav-accent: #dbe5f2; --nav-wash: rgb(219 229 242 / 7%); }
+  .student-top-navigation__trigger[data-tone="blue"] { --nav-accent: #a8cbff; --nav-wash: rgb(115 169 245 / 9%); }
+  .student-top-navigation__trigger[data-tone="cyan"] { --nav-accent: #91e0eb; --nav-wash: rgb(91 202 218 / 9%); }
+  .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #c7b2ff; --nav-wash: rgb(164 133 239 / 9%); }
+  .student-top-navigation__trigger[data-tone="emerald"] { --nav-accent: #91dfb7; --nav-wash: rgb(86 194 143 / 9%); }
+  .student-top-navigation__trigger[data-tone="amber"] { --nav-accent: #f2cc83; --nav-wash: rgb(224 174 82 / 9%); }
+  .student-top-navigation__trigger[data-tone="rose"] { --nav-accent: #f0aabd; --nav-wash: rgb(220 126 157 / 9%); }
+  .student-top-navigation__trigger[data-tone="indigo"] { --nav-accent: #b7c3ff; --nav-wash: rgb(128 145 238 / 9%); }
+  .student-top-navigation__label {
+    color: var(--nav-accent);
+    font-weight: 720;
+    letter-spacing: .005em;
+    transition: color 150ms ease, text-shadow 150ms ease;
+  }
+  .student-top-navigation__trigger .student-top-navigation__icon-wrap {
+    color: var(--nav-accent);
+    border-color: color-mix(in srgb, var(--nav-accent) 48%, transparent);
+    background: linear-gradient(145deg, color-mix(in srgb, var(--nav-accent) 15%, #142b43), rgb(255 255 255 / 3%));
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%), 0 2px 8px rgb(0 0 0 / 10%);
+  }
+  .student-top-navigation__trigger:hover {
+    color: var(--nav-accent);
+    border-color: color-mix(in srgb, var(--nav-accent) 42%, transparent);
+    background: color-mix(in srgb, var(--nav-accent) 13%, #142b43);
+  }
+  .student-top-navigation__trigger:hover .student-top-navigation__label,
+  .student-top-navigation__trigger[data-active="true"] .student-top-navigation__label {
+    color: #fff;
+    text-shadow: 0 0 14px color-mix(in srgb, var(--nav-accent) 35%, transparent);
+  }
+  .student-top-navigation__trigger[data-active="true"] {
+    color: #fff;
+    border-color: color-mix(in srgb, var(--nav-accent) 65%, transparent);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--nav-accent) 20%, #142b43), color-mix(in srgb, var(--nav-accent) 8%, #102238));
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%), 0 4px 16px color-mix(in srgb, var(--nav-accent) 12%, transparent);
+  }
+  .student-top-navigation__trigger[data-active="true"] .student-top-navigation__icon-wrap {
+    color: var(--nav-accent);
+    border-color: color-mix(in srgb, var(--nav-accent) 82%, white);
+    background: color-mix(in srgb, var(--nav-accent) 19%, #142b43);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--nav-accent) 10%, transparent), 0 3px 12px rgb(0 0 0 / 18%);
+  }
+  .student-top-navigation__trigger[data-active="true"] .student-top-navigation__chevron,
+  .student-top-navigation__trigger:hover .student-top-navigation__chevron { color: #e6edf6; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-top-navigation__label { transition: none; }
+}
