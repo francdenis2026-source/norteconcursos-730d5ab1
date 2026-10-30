@@ -45,3 +45,33 @@
 .home-ranking a:focus-visible,.home-ranking summary:focus-visible { outline:2px solid #e8be75; outline-offset:3px; }
 @media (max-width:900px) { .home-ranking__grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .home-ranking__shell { border-radius:16px; } }
 @media (max-width:480px) { .home-ranking__grid { gap:8px; } .home-ranking__card { padding:15px 8px 12px; } .home-ranking__stats { gap:2px; } .home-ranking__stats dt { font-size:9px; } .home-ranking__stats dd { font-size:12px; } .home-ranking__points strong { font-size:21px; } .home-ranking__bottom { align-items:stretch; } .home-ranking__cta { width:100%; } }
+
+/* Small contextual shortcut in the first screen; no additional homepage bar. */
+.home-ranking-hero-entry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 9px 12px;
+  border: 1px solid rgba(228,187,111,.50);
+  border-radius: 999px;
+  background: rgba(18,26,35,.8);
+  color: #f2d391;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+.home-ranking-hero-entry:hover { color: #fff0c8; border-color: #efce88; background: rgba(120,83,32,.23); }
+.home-ranking-hero-entry svg { width: 15px; height: 15px; flex: none; }
+.home-ranking-hero-entry:focus-visible { outline: 2px solid #f0c97a; outline-offset: 3px; }
+.home-ranking { scroll-margin-top: 80px; }
+.home-ranking-hero-entry--mobile { margin-top: 12px; }
+@media (max-width: 480px) {
+  .home-ranking-hero-entry--mobile { font-size: 11px; white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { .home-ranking-hero-entry { transition: none; } }

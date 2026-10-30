@@ -8,6 +8,7 @@ import {
   MapPin,
   MessageCircle,
   ShieldCheck,
+  Trophy,
   Target,
 } from "lucide-react";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
@@ -41,6 +42,9 @@ export function MobileHomepage() {
             <HeaderQuestionStats mobile />
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight />
+            </a>
+            <a href="#ranking-destaque-mobile" className="home-ranking-hero-entry home-ranking-hero-entry--mobile" aria-label="Ir ao ranking dos quatro melhores candidatos">
+              <Trophy aria-hidden="true" /> Veja o Top 4 do ranking <ChevronRight aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -91,7 +95,7 @@ export function MobileHomepage() {
         </div>
         <ContestShowcase />
       </section>
-      <HomeRankingShowcase />
+      <HomeRankingShowcase anchorId="ranking-destaque-mobile" />
       <section id="mobile-planos" className="mobile-plans" aria-labelledby="mobile-plans-title">
         <div className="mobile-homepage__section-head">
           <span>Planos</span>
