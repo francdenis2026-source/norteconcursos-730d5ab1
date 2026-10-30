@@ -33,11 +33,16 @@ jobs:
       - name: Run automated tests
         run: bun run test
 
+      # Keep collecting diagnostics after a failing test step. The job remains
+      # failed, so this never turns a red test suite into a green CI result.
       - name: TypeScript typecheck
+        if: ${{ !cancelled() }}
         run: bun run typecheck
 
       - name: Lint
+        if: ${{ !cancelled() }}
         run: bun run lint
 
       - name: Production build
+        if: ${{ !cancelled() }}
         run: bun run build
