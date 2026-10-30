@@ -256,3 +256,40 @@
 @media (prefers-reduced-motion: reduce) {
   .student-top-navigation__icon-wrap { transition: none; }
 }
+
+/* Consistent crisp SVG icon system for every navigation destination. */
+@media (min-width: 768px) {
+  .student-top-navigation__icon-wrap {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    flex: 0 0 31px;
+    border-width: 1px;
+    background: linear-gradient(145deg, color-mix(in srgb, currentColor 16%, #142b43), rgb(255 255 255 / 3%));
+  }
+  .student-top-navigation__icon-wrap svg {
+    display: block;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    stroke-width: 2.15;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    shape-rendering: geometricPrecision;
+  }
+  .student-top-navigation__trigger[data-tone="slate"] .student-top-navigation__icon-wrap { color: #dbe5f2; }
+  .student-top-navigation__trigger[data-tone="blue"] .student-top-navigation__icon-wrap { color: #8fc2ff; }
+  .student-top-navigation__trigger[data-tone="cyan"] .student-top-navigation__icon-wrap { color: #73e0ed; }
+  .student-top-navigation__trigger[data-tone="violet"] .student-top-navigation__icon-wrap { color: #c7adff; }
+  .student-top-navigation__trigger[data-tone="emerald"] .student-top-navigation__icon-wrap { color: #78e0b1; }
+  .student-top-navigation__trigger[data-tone="amber"] .student-top-navigation__icon-wrap { color: #ffd17b; }
+  .student-top-navigation__trigger[data-tone="rose"] .student-top-navigation__icon-wrap { color: #ffa9bd; }
+  .student-top-navigation__trigger[data-tone="indigo"] .student-top-navigation__icon-wrap { color: #b5c0ff; }
+  .student-top-navigation__menu [role="menuitem"] svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
