@@ -1496,3 +1496,81 @@
   .trainer-reading-workspace .trainer-shield img,
   .trainer-reading-workspace .trainer-shield::before { animation: none !important; }
 }
+
+/* Trainer v4: one viewport, one professional fullscreen control in global chrome. */
+@media (min-width: 1050px) and (min-height: 620px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) {
+    height: calc(100dvh - 152px) !important;
+    max-height: calc(100dvh - 152px) !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    padding: 0 0 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+    overflow: hidden !important;
+  }
+}
+@media (min-width: 1050px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-topbar {
+    min-height: 42px; flex: 0 0 auto; padding: 3px 9px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-shield {
+    height: 34px; flex-basis: 32px; width: 32px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-shield img { width: 28px; height: 32px; }
+  .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+    display: flex !important; flex-direction: column; flex: 1 1 auto;
+    min-height: 0 !important; overflow: hidden;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    display: grid !important; flex: 1 1 auto; min-height: 0 !important;
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto minmax(0, 1fr) auto auto;
+    gap: 3px 16px; padding: 9px 14px 10px;
+    overflow: hidden !important; align-content: stretch;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-meta { grid-column: 1/-1; grid-row: 1; margin: 0 0 2px; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-review { grid-column: 1/-1; grid-row: 2; margin: 0; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-heading { grid-column: 1/-1; grid-row: 3; margin: 0; align-items: center; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-heading h2 { font-size: clamp(23px, 2vw, 29px); }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-progress {
+    grid-column: 1/-1; grid-row: 4; margin: 2px 0 7px !important; height: 28px; align-self: auto; justify-self: stretch;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem {
+    grid-column: 1; grid-row: 5; min-height: 0; overflow: auto;
+    padding: 0 12px 0 0; scrollbar-width: none;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+    grid-column: 2; grid-row: 5; min-height: 0; overflow: auto;
+    padding: 0 10px 0 14px; scrollbar-width: none;
+  }
+  .app-shell[data-area="student"] .trainer-reading-stem::-webkit-scrollbar,
+  .app-shell[data-area="student"] .trainer-reading-answers::-webkit-scrollbar { display: none; }
+  .app-shell[data-area="student"] .trainer-reading-answers button { min-height: 36px; padding-block: 7px; }
+  .app-shell[data-area="student"] .trainer-reading-answers > div.mt-3.space-y-2 { margin-top: 6px; }
+  .app-shell[data-area="student"] .trainer-reading-answers > div.mt-3.space-y-2 > div { margin-bottom: 3px; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+    grid-column: 1/-1; grid-row: 6; margin: 3px 0 0; padding-top: 7px;
+    gap: 6px; flex: 0 0 auto;
+  }
+  .app-shell[data-area="student"] .trainer-reading-actions button { min-height: 36px; height: auto; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+    grid-column: 1/-1; grid-row: 7; max-height: 15dvh; overflow: auto; margin-top: 4px; padding: 9px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-progress__bars { height: 6px; }
+}
+@media (max-width: 1049px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) {
+    height: auto !important; max-height: none !important; overflow: visible !important;
+  }
+}
+/* Browser fullscreen is already provided by the existing global chrome button. */
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace {
+  height: calc(100dvh - 112px) !important;
+  max-height: calc(100dvh - 112px) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .trainer-reading-workspace .trainer-shield img,
+  .trainer-reading-workspace .trainer-shield::before { animation: none; }
+}
