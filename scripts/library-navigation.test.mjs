@@ -13,7 +13,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 const native=createRequire(import.meta.url);
 const contran=await import('../src/data/contranGuides.ts');
 const contranStudy=await import('../src/lib/contranStudy.ts');
-function load(file,overrides={}) { const module={exports:{}}; const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText; vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??native(n),URL}); return module.exports; }
+function load(file,overrides={}) { const module={exports:{}}; const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText; vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??(n.endsWith(".css")?{}:native(n)),URL}); return module.exports; }
 const laws=load('src/lib/legalLibrary.ts');
 const organization=load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
 test('CONTRAN current study rejects whole repeal and expired guides while preserving compatible amendments',()=>{
