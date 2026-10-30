@@ -39,9 +39,8 @@ export type NavigationItem = {
 };
 /** Ícones táticos por seção (visual de comando, sem ícones genéricos de painel). */
 const groupIcons: Record<string, LucideIcon> = {
-  Planejamento: Route,
+  "Minha Preparação": Target,
   "Central de Estudos": BookOpen,
-  "Meu concurso": Crosshair,
   "Material didático": ScrollText,
   Ferramentas: Cpu,
   Questões: Target,
@@ -52,9 +51,8 @@ const groupIcons: Record<string, LucideIcon> = {
   Administração: Shield,
 };
 const groupDetails: Record<string, string> = {
-  Planejamento: "Configuração, agenda, resultados e foco",
+  "Minha Preparação": "Objetivo, rotina e evolução em um só lugar",
   "Central de Estudos": "Notas, guias, simplificação, comparações, quiz e evolução",
-  "Meu concurso": "Objetivo, edital e análise do concurso",
   "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
   Questões: "Treino, erros, coleções e flashcards",
@@ -66,9 +64,8 @@ const groupDetails: Record<string, string> = {
 };
 /** Rótulo curto do grupo quando a barra lateral está recolhida. */
 const collapsedLabels: Record<string, string> = {
-  Planejamento: "Planejar",
+  "Minha Preparação": "Preparar",
   "Central de Estudos": "Estudar",
-  "Meu concurso": "Concurso",
   "Material didático": "Materiais",
   Ferramentas: "Recursos",
   Desempenho: "Evolução",
@@ -187,7 +184,7 @@ function GroupedDashboardNavigation({
     .filter((item) => item.primary)
     .sort((a, b) => primaryOrder.indexOf(a.href) - primaryOrder.indexOf(b.href));
   const groups = [...new Set(available.filter((item) => !item.primary).map((item) => item.group))];
-  const [expanded, setExpanded] = useState<string[]>(() => [current?.group ?? "Planejamento"]);
+  const [expanded, setExpanded] = useState<string[]>(() => [current?.group ?? "Minha Preparação"]);
   const instance = useId();
   useEffect(() => {
     if (current?.group)
