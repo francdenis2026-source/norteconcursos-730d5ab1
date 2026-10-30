@@ -116,7 +116,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         );
       })()}
       {!collapsed && <p className="nav-section-label">Sua jornada</p>}
-      {studentSections(available).map(({ group, entry }) => {
+      {studentSections(available).map(({ group, entry, entries }) => {
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
         const sectionLink = (
@@ -130,6 +130,26 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         );
         // Expanded, the group name and description already read on the card — a tooltip would only repeat them.
         if (group === 'ENEM' && !collapsed) return <div key={group} className="student-navigation__other"><p className="nav-section-label">Outros objetivos</p>{sectionLink}</div>;
+        if (group === "Central de Estudos" && !collapsed) {
+          const childItems = entries.filter((item) => !(item.href === entry.href && !item.search));
+          return (
+            <div key={group} className="student-central-nav">
+              {sectionLink}
+              <div className="student-central-nav__entries">
+                {childItems.map((item) => {
+                  const selected = !!current && navigationKey(current) === navigationKey(item);
+                  const ChildIcon = item.icon;
+                  return (
+                    <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} className="app-nav__link" data-active={selected} aria-current={selected ? "page" : undefined} onClick={onNavigate}>
+                      <span className="app-ico" data-hue={hues[group] ?? "gold"}><ChildIcon aria-hidden="true" /></span>
+                      <span className="app-nav__label">{item.label}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        }
         return collapsed
           ? <Hint key={group} content={<>{studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>
           : sectionLink;
