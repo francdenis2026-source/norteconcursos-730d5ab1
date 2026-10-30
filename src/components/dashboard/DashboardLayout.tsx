@@ -701,7 +701,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </div>
             )}
 
-            {!isAdmin && !fullscreen.active && <StudentTopNavigation items={items} pathname={location.pathname} search={location.search} />}
+            {!isAdmin && <StudentTopNavigation items={items} pathname={location.pathname} search={location.search} />}
 
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
