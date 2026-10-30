@@ -1633,3 +1633,72 @@
     display: block !important;
   }
 }
+
+/* Fullscreen focus: the viewport itself NEVER scrolls; reading panes only scroll on overflow.
+   These final selectors override the prior review layout's fullscreen overflow-y:auto. */
+:root:fullscreen {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+:root:fullscreen body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace {
+  box-sizing: border-box;
+  height: calc(100dvh - 112px) !important;
+  min-height: 0 !important;
+  max-height: calc(100dvh - 112px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  display: grid !important;
+  grid-template-columns: minmax(0,1.04fr) minmax(0,1fr) !important;
+  grid-template-rows: auto auto auto auto minmax(0,1fr) auto auto !important;
+  align-content: stretch !important;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-stem,
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-answers {
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-actions {
+  flex-shrink: 0;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-explanation {
+  min-height: 0;
+  max-height: 17dvh !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community {
+  display: none;
+}
+@media (max-width: 1049px) {
+  :root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    grid-template-columns: minmax(0,1fr) !important;
+    grid-template-rows: auto auto auto auto minmax(0,1fr) auto auto !important;
+  }
+  :root:fullscreen .app-shell[data-area="student"] .trainer-reading-stem,
+  :root:fullscreen .app-shell[data-area="student"] .trainer-reading-answers {
+    grid-column: 1 !important;
+    overflow: auto !important;
+  }
+}
