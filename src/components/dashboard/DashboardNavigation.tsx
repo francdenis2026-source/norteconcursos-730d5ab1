@@ -135,7 +135,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
           return (
             <div key={group} className="student-central-nav">
               {sectionLink}
-              <div className="student-central-nav__entries">
+              <div className="student-central-nav__entries ml-4 grid gap-1 border-l border-border/60 py-1 pl-3">
                 {childItems.map((item) => {
                   const selected = !!current && navigationKey(current) === navigationKey(item);
                   const ChildIcon = item.icon;
