@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library } from "lucide-react";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
+import { useOnlinePresence } from "@/hooks/useOnlinePresence";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
@@ -9,8 +10,11 @@ import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 /** Faixa de vidro na base do hero (desktop/tablet): acesso, banco de questões e desafio diário. */
 export function HeroDock() {
   const { data } = usePlatformQuestionSummary();
+  const presence = useOnlinePresence();
   const [remaining, setRemaining] = useState<number | null>(null);
   const [seconds, setSeconds] = useState<number | null>(null);
+  const [pulseIndex, setPulseIndex] = useState(0);
+  const [pulsePaused, setPulsePaused] = useState(false);
   const fmt = (n: number) => n.toLocaleString("pt-BR");
 
   useEffect(() => {
@@ -23,6 +27,39 @@ export function HeroDock() {
       stop();
     };
   }, []);
+
+  const pulseItems = [
+    {
+      eyebrow: "AO VIVO",
+      title: presence.count === null ? "Comunidade estudando" : `${fmt(presence.count)} estudando agora`,
+      detail: "Acompanhe seu ritmo de preparação",
+    },
+    {
+      eyebrow: "BANCO ATUALIZADO",
+      title: data ? `${fmt(data.available)} questões para treinar` : "Banco de questões",
+      detail: data ? `${fmt(data.registered)} questões cadastradas na plataforma` : "Conteúdo organizado por disciplina",
+    },
+    {
+      eyebrow: "FOCO RECOMENDADO",
+      title: "Revisão de Direito Constitucional",
+      detail: "Acesse o material e avance uma etapa hoje",
+      href: "/dashboard/library?q=Constitucional",
+    },
+    {
+      eyebrow: "DESAFIO DE HOJE",
+      title: `${left} questões gratuitas restantes`,
+      detail: `Renova em ${seconds === null ? "--:--:--" : formatCountdown(seconds)}`,
+      href: done ? "/auth?mode=register" : "/desafio-diario",
+    },
+  ];
+
+  useEffect(() => {
+    if (pulsePaused) return;
+    const id = window.setInterval(() => setPulseIndex((index) => (index + 1) % pulseItems.length), 6500);
+    return () => window.clearInterval(id);
+  }, [pulsePaused, pulseItems.length]);
+
+  const pulse = pulseItems[pulseIndex] ?? pulseItems[0];
   useEffect(() => {
     const tick = () => setSeconds(secondsUntilAcreMidnight());
     tick();
@@ -77,6 +114,26 @@ export function HeroDock() {
           <span>cadastradas</span>
         </div>
       </a>
+      <div
+        className="hx-dock__cell hx-dock__cell--pulse"
+        onMouseEnter={() => setPulsePaused(true)}
+        onMouseLeave={() => setPulsePaused(false)}
+        onFocus={() => setPulsePaused(true)}
+        onBlur={() => setPulsePaused(false)}
+      >
+        <span className="hx-dock__pulse-mark" aria-hidden="true"><i /></span>
+        <div className="hx-dock__pulse-copy">
+          <span className="hx-dock__live">{pulse.eyebrow}</span>
+          <strong>{pulse.title}</strong>
+          <small>{pulse.detail}</small>
+        </div>
+        {pulse.href ? <a href={pulse.href} className="hx-dock__pulse-action">Ver <ArrowRight aria-hidden="true" /></a> : null}
+        <div className="hx-dock__pulse-dots" aria-label="Sinais da preparação">
+          {pulseItems.map((item, index) => (
+            <button key={item.eyebrow} type="button" aria-label={`Mostrar ${item.eyebrow.toLowerCase()}`} aria-pressed={index === pulseIndex} onClick={() => setPulseIndex(index)} />
+          ))}
+        </div>
+      </div>
       {done ? (
         <Link to="/auth" search={{ mode: "register" }} className="hx-dock__cell hx-dock__cell--daily">
           {daily}
