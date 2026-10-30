@@ -53,7 +53,7 @@ import { userStorageKey } from "@/lib/userStorage";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
-  validateSearch: (search: Record<string, unknown>): { context?: "enem"; tool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" } => ({ context: search["context"] === "enem" ? "enem" : undefined, tool: ["handwritten", "guide", "simplify", "compare", "quiz"].includes(String(search["tool"])) ? search["tool"] as "handwritten" | "guide" | "simplify" | "compare" | "quiz" : undefined }),
+  validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined; tool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined, tool: ["handwritten", "guide", "simplify", "compare", "quiz"].includes(String(search["tool"])) ? search["tool"] as "handwritten" | "guide" | "simplify" | "compare" | "quiz" : undefined }),
   component: StudyToolsPage,
 });
 
