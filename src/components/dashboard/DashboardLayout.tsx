@@ -36,7 +36,7 @@ import {
   navigationActive as isActive,
   type NavigationItem,
 } from "./DashboardNavigation";
-import { AI_ENABLED, TESTING_PHASE } from "@/lib/launch.config";
+import { AI_ENABLED } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
 import {
@@ -48,7 +48,6 @@ import {
   ChevronsLeft,
   ChevronsRight,
   ChevronsUpDown,
-  FlaskConical,
   GraduationCap,
   ClipboardList,
   Clock,
@@ -103,7 +102,6 @@ import {
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Hint } from "@/components/ui/hint";
-import { PlanCountdownInline, PlanCountdownShort } from "@/components/dashboard/PlanCountdown";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
 import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
 import { StudyActivityTracker } from "@/components/dashboard/StudyActivityTracker";
@@ -717,30 +715,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span className="kbd">Ctrl K</span>
               </button>
               <div className="app-chips">
-                {TESTING_PHASE && !isAdmin && !!user?.on_trial && !!user?.plan_ends_at && (
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Link
-                        to="/dashboard/subscriptions"
-                        className="app-streak app-trial"
-                        aria-label="Fase de testes: tempo restante de acesso"
-                      >
-                        <FlaskConical />
-                        <span className="app-trial__label">Teste</span>
-                        <span className="app-trial__full">
-                          <PlanCountdownInline endsAt={user.plan_ends_at} />
-                        </span>
-                        <span className="app-trial__short">
-                          <PlanCountdownShort endsAt={user.plan_ends_at} />
-                        </span>
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent side="bottom">
-                      Fase de testes: você usa o plano Plus de graça. Depois, a conta segue no
-                      plano Gratuito.
-                    </TooltipContent>
-                  </Tooltip>
-                )}
                 {!isAdmin && (
                   <Hint content="Dias seguidos de estudo">
                     <span className="app-streak">
