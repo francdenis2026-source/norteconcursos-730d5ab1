@@ -23,6 +23,7 @@ import { platformDate } from "@/lib/platformClock";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HeroStat } from "@/components/dashboard/PageHero";
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 
 const NEXT_STEPS = [
   {
@@ -107,6 +108,7 @@ function MyContestPage() {
         </div>
         <Target className="edital-heading-icon" />
       </header>
+      <StudyPlanningNav active="objective" />
       {days !== null && Number.isFinite(days) && days < 0 && (
         <p className="flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
           <Calendar className="h-4 w-4 shrink-0" />A data da prova cadastrada já passou. Atualize o
