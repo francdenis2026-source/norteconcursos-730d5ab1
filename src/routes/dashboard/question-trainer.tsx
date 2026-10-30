@@ -73,6 +73,7 @@ import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
 import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, trainerPracticeQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { materialPracticePool, type MaterialPracticeScope } from "@/lib/materialPractice";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
@@ -113,7 +114,10 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "catalogQuery"
       | "mode"
       | "limit"
-      | "reinforce",
+      | "reinforce"
+      | "studySubject"
+      | "materialTopic"
+      | "studyArticle",
       string | undefined
     >
   > => ({
@@ -134,6 +138,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
     limit: typeof search["limit"] === "string" ? search["limit"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
+    studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
+    materialTopic: typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
+    studyArticle: typeof search["studyArticle"] === "string" ? search["studyArticle"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -172,9 +179,25 @@ function QuestionTrainer() {
     error,
   } = useQuestionCatalog(userId, canLoad);
   const law = routeFilters.law;
-  const catalog = React.useMemo(
+  const scoped = React.useMemo(
     () => (law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law))),
     [fullCatalog, law],
+  );
+  const materialScope = React.useMemo<MaterialPracticeScope>(
+    () => ({
+      ...(routeFilters.studySubject ? { subject: routeFilters.studySubject } : {}),
+      ...(routeFilters.materialTopic ? { topic: routeFilters.materialTopic } : {}),
+      ...(law ? { law } : {}),
+      ...(routeFilters.studyArticle ? { article: routeFilters.studyArticle } : {}),
+    }),
+    [routeFilters.studySubject, routeFilters.materialTopic, law, routeFilters.studyArticle],
+  );
+  const hasMaterialScope = Boolean(
+    routeFilters.studySubject || routeFilters.materialTopic || routeFilters.studyArticle,
+  );
+  const catalog = React.useMemo(
+    () => (hasMaterialScope ? materialPracticePool(scoped, materialScope) : scoped),
+    [scoped, materialScope, hasMaterialScope],
   );
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
@@ -185,14 +208,14 @@ function QuestionTrainer() {
   const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
   const [appliedExam, setAppliedExam] = React.useState("all");
-  const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.subject) || "all");
+  const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.studySubject ?? routeFilters.subject) || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
   const [state, setState] = React.useState(routeFilters.state || "all");
   const [category, setCategory] = React.useState(routeFilters.category || "all");
   // Vindos do cronograma: matéria do plano (pode juntar várias do banco) e assunto classificado por palavras-chave.
   const [area, setArea] = React.useState(routeFilters.area || "all");
-  const [topic, setTopic] = React.useState(routeFilters.topic || "all");
+  const [topic, setTopic] = React.useState(routeFilters.materialTopic || routeFilters.topic || "all");
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
