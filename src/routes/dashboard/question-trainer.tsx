@@ -1470,23 +1470,23 @@ function TrainerSetup({
   };
   return (
     <div className="trainer-setup mx-auto max-w-5xl space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
-      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-3 text-white shadow-xl sm:rounded-2xl sm:p-4 md:p-5">
-        <div className="grid gap-3 sm:gap-6 md:grid-cols-[1fr_auto] md:items-end">
+      <section className="question-trainer-hero question-trainer-hero--compact tactical-feature-hero overflow-hidden rounded-xl p-3 text-white shadow-sm">
+        <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
           <div>
-            <Badge className="mb-1.5 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
+            <Badge className="mb-1 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
               <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
             </Badge>
-            <h1 className="text-xl font-black leading-tight sm:text-2xl">
+            <h1 className="text-lg font-extrabold leading-tight sm:text-xl">
               Monte sua sessão de questões
             </h1>
           </div>
-          <div className="grid grid-cols-2 gap-2 text-center">
-            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
-              <p className="text-xl font-black sm:text-2xl">{total}</p>
+          <div className="grid grid-cols-2 gap-1.5 text-center">
+            <div className="rounded-lg border border-white/10 bg-white/10 px-2.5 py-1.5">
+              <p className="text-lg font-black leading-tight">{total}</p>
               <p className="text-[10px] text-slate-300">questões ativas</p>
             </div>
-            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
-              <p className="text-xl font-black text-amber-200 sm:text-2xl">{available}</p>
+            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-2.5 py-1.5">
+              <p className="text-lg font-black leading-tight text-amber-200">{available}</p>
               <p className="text-[10px] text-slate-300">na seleção</p>
             </div>
           </div>
