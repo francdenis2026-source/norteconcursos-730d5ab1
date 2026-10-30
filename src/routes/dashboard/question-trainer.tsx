@@ -604,6 +604,7 @@ function QuestionTrainer() {
           user_id: user.id,
           question_id: question.id,
           question_source: question.source,
+          question_table: question.table,
           contest_name: question.contest,
           subject: question.subject,
           selected_answer: selected,
@@ -629,8 +630,27 @@ function QuestionTrainer() {
       }
       // Acertos recebem feedback integrado e persistente no cartão.
       // Não navegar automaticamente: o aluno controla quando quer prosseguir.
-    } catch {
-      toast.error("Não foi possível salvar sua resposta. Tente novamente.");
+    } catch (error) {
+      // Never show raw database internals to students. Surface known recoverable causes.
+      const code = typeof error === "object" && error !== null && "code" in error
+        ? String((error as { code?: unknown }).code ?? "")
+        : "";
+      const detail = typeof error === "object" && error !== null && "details" in error
+        ? String((error as { details?: unknown }).details ?? "")
+        : "";
+      const message = typeof error === "object" && error !== null && "message" in error
+        ? String((error as { message?: unknown }).message ?? "")
+        : "";
+      if (detail.includes("NORTE_SESSION_REPLACED")) {
+        toast.error("Sua sessão foi substituída por outro login. Entre novamente para continuar.");
+      } else if (code === "P0429") {
+        toast.error("O limite de questões do seu plano foi atingido. Confira a renovação diária.");
+      } else if (message.includes("Question origin is missing or ambiguous")) {
+        toast.error("Não foi possível identificar a origem da questão. Atualize a página e tente novamente.");
+      } else {
+        toast.error("Não foi possível registrar sua resposta. Verifique a conexão e tente novamente.");
+      }
+      // Keep the selected answer so the learner can retry without losing progress.
     } finally {
       savingRef.current = false;
       setSaving(false);
