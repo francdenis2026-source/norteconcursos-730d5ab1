@@ -688,6 +688,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
             {!isAdmin && current?.group === "Questões" && <QuestionHeaderProgress userId={user?.id} />}
 
+            {location.pathname === "/dashboard/question-trainer" && (
+              <div className="trainer-setup-top-context" aria-label="Contexto da configuração do Treinador">
+                <span className="trainer-setup-top-context__indicator" aria-hidden="true" />
+                <span className="trainer-setup-top-context__title">Treinador</span>
+                <span className="trainer-setup-top-context__separator">·</span>
+                <span className="trainer-setup-top-context__subtitle">Configuração da sessão</span>
+                <span className="trainer-setup-top-context__hint">Escolha os filtros e comece a praticar</span>
+              </div>
+            )}
+
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
               {!isAdmin && <Hint content="Tela cheia"><button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia"><Maximize aria-hidden="true" /></button></Hint>}

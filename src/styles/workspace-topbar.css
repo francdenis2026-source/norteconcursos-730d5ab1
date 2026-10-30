@@ -165,3 +165,27 @@
    display: none !important;
  }
 }
+
+/* Context occupies the unused strip only while the trainer setup is showing. */
+.trainer-setup-top-context { display: none; }
+@media (min-width: 1000px) {
+  .app-shell[data-area="student"]:has(.trainer-setup) .app-topbar .trainer-setup-top-context {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin-left: auto;
+    white-space: nowrap;
+    color: var(--muted-foreground);
+    font-size: 11px;
+  }
+  .trainer-setup-top-context__indicator { width: 7px; height: 7px; flex: none; border-radius: 50%; background: #38b897; }
+  .trainer-setup-top-context__title { color: var(--foreground); font-weight: 700; }
+  .trainer-setup-top-context__separator { opacity: .45; }
+  .trainer-setup-top-context__hint { margin-left: 8px; padding-left: 12px; border-left: 1px solid var(--border); }
+  .app-shell[data-area="student"]:has(.trainer-setup) .app-topbar__actions { margin-left: 0; }
+}
+@media (max-width: 1400px) {
+  .trainer-setup-top-context__hint { display: none; }
+}
