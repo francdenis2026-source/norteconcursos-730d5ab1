@@ -351,3 +351,140 @@
 @media (prefers-reduced-motion: reduce) {
   .student-top-navigation__label { transition: none; }
 }
+
+/* Unified desktop header: brand, section navigation and utilities share one compact row. */
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(5px, .65vw, 10px);
+    height: calc(76px + env(safe-area-inset-top, 0px));
+    min-height: calc(76px + env(safe-area-inset-top, 0px));
+    padding-inline: clamp(10px, 1.35vw, 20px);
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 20% -100%, rgb(61 106 155 / 22%), transparent 52%),
+      linear-gradient(105deg, #0d1723 0%, #111d2b 54%, #0d1926 100%);
+    border-bottom: 1px solid rgb(124 159 196 / 28%);
+    box-shadow: 0 7px 22px rgb(0 0 0 / 20%), inset 0 1px 0 rgb(255 255 255 / 4%);
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .app-location {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .platform-back {
+    flex: 0 0 34px;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: 9px;
+    background: rgb(255 255 255 / 4%);
+    border-color: rgb(255 255 255 / 12%);
+    color: #c3d0df;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .student-top-navigation {
+    position: static;
+    top: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    gap: clamp(8px, 1.05vw, 15px);
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+    gap: 7px;
+    flex: 0 0 auto;
+    font-size: 10px;
+    letter-spacing: .105em;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-mark {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    font-size: 17px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: clamp(2px, .28vw, 4px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links::-webkit-scrollbar { display: none; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    flex: 0 0 auto;
+    min-height: 42px;
+    gap: 6px;
+    padding-inline: clamp(6px, .72vw, 10px);
+    border-radius: 10px;
+    font-size: clamp(10px, .78vw, 11px);
+    letter-spacing: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+    border-radius: 8px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron {
+    width: 11px;
+    height: 11px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions {
+    flex: 0 0 auto;
+    gap: 5px;
+    margin-left: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > .app-top-btn,
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > .workspace-fullscreen-trigger,
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > .app-top-search,
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > .app-theme-toggle {
+    flex: 0 0 35px;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    min-height: 35px;
+    border-radius: 9px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > .app-chips {
+    height: 34px;
+    border-radius: 9px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar .app-chips > .app-streak {
+    height: 32px;
+    min-height: 32px;
+    padding-inline: 7px;
+    gap: 4px;
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1180px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand > span:last-child { display: none; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger { gap: 5px; padding-inline: 6px; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap { width: 25px; height: 25px; flex-basis: 25px; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap svg { width: 15px !important; height: 15px !important; }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar .app-chips { display: none; }
+}
+@media (min-width: 768px) and (max-width: 920px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .platform-back { display: none; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger { font-size: 9px; gap: 4px; padding-inline: 5px; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron { display: none; }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions { gap: 3px; }
+}
