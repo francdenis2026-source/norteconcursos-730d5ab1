@@ -104,3 +104,30 @@
 @media (forced-colors: active) {
   .app-shell.navigation-v2[data-area] .app-topbar[data-scrolled] { background: Canvas; color: CanvasText; border-color: CanvasText; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
 }
+
+/* Daily practice snapshot — fits between section tabs and utility controls. */
+.app-topbar .question-header-progress {
+  flex: 0 1 260px; min-width: 190px; max-width: 260px;
+  display: flex; align-items: center; gap: 13px;
+  height: 42px; padding: 5px 11px; text-decoration: none;
+  color: var(--foreground); border: 1px solid var(--border);
+  border-radius: 10px; background: color-mix(in srgb, var(--card) 90%, var(--muted));
+}
+.app-topbar .question-header-progress:hover { border-color: color-mix(in srgb, var(--primary) 40%, var(--border)); }
+.app-topbar .question-header-progress:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.question-header-progress__stat { display: grid; gap: 2px; white-space: nowrap; }
+.question-header-progress small { color: var(--muted-foreground); font-size: 9px; line-height: 1.1; font-weight: 550; }
+.question-header-progress__stat strong { font-variant-numeric: tabular-nums; font-size: 14px; line-height: 1.1; font-weight: 750; }
+.question-header-progress__goal { display: grid; gap: 6px; flex: 1; min-width: 58px; white-space: nowrap; }
+.question-header-progress__track { display: block; height: 4px; border-radius: 10px; background: var(--border); overflow: hidden; }
+.question-header-progress__track > span { display: block; height: 100%; background: #39b79a; border-radius: inherit; transition: width 240ms ease; }
+@media (max-width: 1500px) {
+ .app-topbar .question-header-progress { flex-basis: 170px; min-width: 120px; gap: 9px; padding-inline: 8px; }
+ .question-header-progress__goal { display: none; }
+}
+@media (max-width: 1190px) {
+ .app-topbar .question-header-progress { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .question-header-progress__track > span { transition: none; }
+}
