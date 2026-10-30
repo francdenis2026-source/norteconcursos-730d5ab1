@@ -71,7 +71,7 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets } from "@/lib/trainerFilters";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, trainerPracticeQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -373,7 +373,7 @@ function QuestionTrainer() {
     [catalog],
   );
   const trainingCatalog = React.useMemo(
-    () => includeAnswered ? catalog : catalog.filter((q) => !locked.has(questionIdentity(q))),
+    () => includeAnswered ? catalog : trainerPracticeQuestions(catalog, "new", locked, new Map()),
     [catalog, includeAnswered, locked],
   );
   const facets = React.useMemo(
