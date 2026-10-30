@@ -978,7 +978,7 @@ function QuestionTrainer() {
           </span>
         </div>
         <CardContent className="trainer-reading-content p-3.5 sm:p-5 md:p-7">
-          <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+          <div className="trainer-reading-meta mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}
             </span>
@@ -997,12 +997,12 @@ function QuestionTrainer() {
             </span>
           </div>
           {reviewingPast && (
-            <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
+            <div className="trainer-reading-review mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
               <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
               revisão apenas, sem reenvio.
             </div>
           )}
-          <div className="mb-3 flex items-end justify-between gap-3">
+          <div className="trainer-reading-heading mb-3 flex items-end justify-between gap-3">
             <div>
               <h2 className="font-display text-2xl font-extrabold leading-none text-foreground sm:text-3xl">
                 Questão {index + 1}{" "}
@@ -1015,7 +1015,7 @@ function QuestionTrainer() {
             <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
           <div
-            className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
+            className="trainer-reading-progress mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
             role="img"
             aria-label={`Questão ${index + 1} de ${questions.length}`}
           >
