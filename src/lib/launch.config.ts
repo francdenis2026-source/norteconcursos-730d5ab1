@@ -31,7 +31,13 @@ export function planEndsAt(
   if (expiresAt) return expiresAt;
   if (!TESTING_PHASE || !isTestingTier(tier) || !createdAt) return null;
   const start = Math.max(new Date(createdAt).getTime(), new Date(TESTING_OPENED_AT).getTime());
-  return new Date(start + TESTING_DAYS * 86_400_000).toISOString();
+  // One-time extension for users whose original 30-day trial was still active
+  // when the extension was granted on 30 October 2026. Later sign-ups keep 30 days.
+  const cohortCutoff = new Date("2026-10-30T00:00:00-03:00").getTime();
+  const alreadyInActiveTrial = new Date(createdAt).getTime() < cohortCutoff
+    && start + TESTING_DAYS * 86_400_000 > cohortCutoff;
+  const days = TESTING_DAYS + (alreadyInActiveTrial ? 30 : 0);
+  return new Date(start + days * 86_400_000).toISOString();
 }
 
 /**
