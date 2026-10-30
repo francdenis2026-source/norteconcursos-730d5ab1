@@ -30,19 +30,23 @@ test("durante os 30 dias de testes, conta nova usa o plano de testes (Plus)", ()
   assert.equal(eff.trial, true);
 });
 
-test("ao fim dos 30 dias, a conta é rebaixada ao Gratuito e o aviso lembra o plano de testes", () => {
+test("a coorte que já estava em teste em 30/10 recebe uma extensão única de mais 30 dias", () => {
   const created = new Date(opened).toISOString();
-  const after = effectiveTier("essential", created, null, opened + 31 * DAY);
+  const duringExtension = effectiveTier("essential", created, null, opened + 31 * DAY);
+  assert.equal(duringExtension.tier, TESTING_TIER);
+  assert.equal(duringExtension.trial, true);
+  const after = effectiveTier("essential", created, null, opened + 61 * DAY);
   assert.equal(after.tier, "free");
   assert.equal(after.expiredFrom, TESTING_TIER);
   assert.equal(after.trial, undefined);
-  assert.equal(planEndsAt(created, "free", null), new Date(opened + 30 * DAY).toISOString());
+  assert.equal(planEndsAt(created, "free", null), new Date(opened + 60 * DAY).toISOString());
 });
 
-test("quem cadastrou antes da abertura ganha 30 dias a partir da abertura", () => {
+test("contas anteriores à abertura também recebem a extensão da coorte ativa", () => {
   const old = new Date(opened - 90 * DAY).toISOString();
   assert.equal(effectiveTier("free", old, null, opened + 29 * DAY).tier, TESTING_TIER);
-  assert.equal(effectiveTier("free", old, null, opened + 31 * DAY).tier, "free");
+  assert.equal(effectiveTier("free", old, null, opened + 31 * DAY).tier, TESTING_TIER);
+  assert.equal(effectiveTier("free", old, null, opened + 61 * DAY).tier, "free");
 });
 
 test("plano pago com vencimento: vencido volta ao Gratuito, vigente continua", () => {
