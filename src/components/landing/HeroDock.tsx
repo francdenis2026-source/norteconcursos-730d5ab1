@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library } from "lucide-react";
+import { Activity, ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library, Pause, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { useOnlinePresence } from "@/hooks/useOnlinePresence";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
@@ -28,33 +28,46 @@ export function HeroDock() {
     };
   }, []);
 
+  const left = remaining ?? GUEST_DAILY_LIMIT;
+  const used = GUEST_DAILY_LIMIT - left;
+  const done = remaining !== null && remaining <= 0;
+  const cta = done ? "Criar conta" : used > 0 ? "Continuar" : "Responder agora";
+
   const pulseItems = [
     {
-      eyebrow: "AO VIVO",
-      title: presence.count === null ? "Comunidade estudando" : `${fmt(presence.count)} estudando agora`,
-      detail: "Acompanhe seu ritmo de preparação",
+      eyebrow: "COMUNIDADE EM TEMPO REAL",
+      title: presence.state === "ready" && presence.count !== null
+        ? `${fmt(presence.count)} ${presence.count === 1 ? "pessoa online" : "pessoas online"}`
+        : "Comunidade Norte Concurso",
+      detail: presence.state === "ready"
+        ? "Presença anônima de navegadores conectados"
+        : "Aguardando dados de presença em tempo real",
+      href: "#plataforma",
     },
     {
-      eyebrow: "BANCO ATUALIZADO",
-      title: data ? `${fmt(data.available)} questões para treinar` : "Banco de questões",
-      detail: data ? `${fmt(data.registered)} questões cadastradas na plataforma` : "Conteúdo organizado por disciplina",
+      eyebrow: "ACERVO DA PLATAFORMA",
+      title: data ? `${fmt(data.available)} questões disponíveis` : "Explore o banco de questões",
+      detail: data
+        ? `${fmt(data.registered)} cadastradas · atualização automática`
+        : "Concursos, disciplinas e bancas organizadas",
+      href: "#plataforma",
     },
     {
-      eyebrow: "FOCO RECOMENDADO",
-      title: "Revisão de Direito Constitucional",
-      detail: "Acesse o material e avance uma etapa hoje",
-      href: "/dashboard/library?q=Constitucional",
+      eyebrow: "DICA DE PREPARAÇÃO",
+      title: "Revise os erros antes de avançar",
+      detail: "Reforçar pontos fracos é um passo importante na preparação",
+      href: "/auth",
     },
     {
-      eyebrow: "DESAFIO DE HOJE",
-      title: `${left} questões gratuitas restantes`,
-      detail: `Renova em ${seconds === null ? "--:--:--" : formatCountdown(seconds)}`,
-      href: done ? "/auth?mode=register" : "/desafio-diario",
+      eyebrow: "DESAFIO DIÁRIO",
+      title: remaining === null ? "Questões grátis sem cadastro" : `${left} de ${GUEST_DAILY_LIMIT} questões disponíveis`,
+      detail: `Renova em ${seconds === null ? "--:--:--" : formatCountdown(seconds)} · horário do Acre`,
+      href: done ? "/auth" : "/desafio-diario",
     },
-  ];
+  ] as const;
 
   useEffect(() => {
-    if (pulsePaused) return;
+    if (pulsePaused || (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
     const id = window.setInterval(() => setPulseIndex((index) => (index + 1) % pulseItems.length), 6500);
     return () => window.clearInterval(id);
   }, [pulsePaused, pulseItems.length]);
@@ -66,11 +79,6 @@ export function HeroDock() {
     const id = window.setInterval(tick, 1000);
     return () => window.clearInterval(id);
   }, []);
-
-  const left = remaining ?? GUEST_DAILY_LIMIT;
-  const used = GUEST_DAILY_LIMIT - left;
-  const done = remaining !== null && remaining <= 0;
-  const cta = done ? "Criar conta" : used > 0 ? "Continuar" : "Responder agora";
 
   const daily = (
     <>
@@ -114,26 +122,24 @@ export function HeroDock() {
           <span>cadastradas</span>
         </div>
       </a>
-      <div
+      <section
         className="hx-dock__cell hx-dock__cell--pulse"
-        onMouseEnter={() => setPulsePaused(true)}
-        onMouseLeave={() => setPulsePaused(false)}
-        onFocus={() => setPulsePaused(true)}
-        onBlur={() => setPulsePaused(false)}
+        aria-label="Norte Pulse — sua preparação em movimento"
       >
         <span className="hx-dock__pulse-mark" aria-hidden="true"><i /></span>
         <div className="hx-dock__pulse-copy">
-          <span className="hx-dock__live">{pulse.eyebrow}</span>
+          <span className="hx-dock__live"><Activity aria-hidden="true" /> NORTE PULSE · {pulse.eyebrow}</span>
           <strong>{pulse.title}</strong>
           <small>{pulse.detail}</small>
+          <div className="hx-dock__pulse-controls" aria-label="Navegação do Norte Pulse">
+            <button type="button" onClick={() => setPulseIndex((i) => (i + pulseItems.length - 1) % pulseItems.length)} aria-label="Informação anterior"><ChevronLeft aria-hidden="true" /></button>
+            <span className="hx-dock__pulse-count">{pulseIndex + 1} / {pulseItems.length}</span>
+            <button type="button" onClick={() => setPulseIndex((i) => (i + 1) % pulseItems.length)} aria-label="Próxima informação"><ChevronRight aria-hidden="true" /></button>
+            <button type="button" onClick={() => setPulsePaused((v) => !v)} aria-label={pulsePaused ? "Retomar atualização automática" : "Pausar atualização automática"} aria-pressed={pulsePaused}>{pulsePaused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}</button>
+          </div>
         </div>
-        {pulse.href ? <a href={pulse.href} className="hx-dock__pulse-action">Ver <ArrowRight aria-hidden="true" /></a> : null}
-        <div className="hx-dock__pulse-dots" aria-label="Sinais da preparação">
-          {pulseItems.map((item, index) => (
-            <button key={item.eyebrow} type="button" aria-label={`Mostrar ${item.eyebrow.toLowerCase()}`} aria-pressed={index === pulseIndex} onClick={() => setPulseIndex(index)} />
-          ))}
-        </div>
-      </div>
+        <a href={pulse.href} className="hx-dock__pulse-action" aria-label={`Acessar: ${pulse.title}`}>Explorar <ArrowRight aria-hidden="true" /></a>
+      </section>
       {done ? (
         <Link to="/auth" search={{ mode: "register" }} className="hx-dock__cell hx-dock__cell--daily">
           {daily}
