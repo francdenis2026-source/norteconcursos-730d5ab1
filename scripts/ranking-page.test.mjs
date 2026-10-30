@@ -68,3 +68,21 @@ test("incompatible RPC data fails explicitly instead of crashing or hiding candi
   ])
     assert.throws(() => readRankingPage(value));
 });
+
+test("ranking integrity: rejects duplicate candidates and inconsistent ordering", () => {
+  const base = {
+    entries: [], my_entry: null, total: 2, participants: 2,
+    page: 1, page_size: 20, page_count: 1,
+  };
+  const row = (id, position) => ({
+    rank_position: position, user_id: id, display_name: "Candidato",
+    points: 10, question_points: 10, simulator_points: 0,
+    study_points: 0, extra_points: 0, study_hours: 0,
+    questions: 5, accuracy: 80, simulators: 0,
+    is_me: false, stars: 1, level_name: "Aspirante",
+  });
+  assert.deepEqual(readRankingPage({ ...base, entries: [row("a", 1), row("b", 2)] }).entries.map(x => x.rank_position), [1, 2]);
+  assert.throws(() => readRankingPage({ ...base, entries: [row("a", 2), row("b", 1)] }));
+  assert.throws(() => readRankingPage({ ...base, entries: [row("a", 1), row("b", 1)] }));
+  assert.throws(() => readRankingPage({ ...base, entries: [row("a", 1), row("a", 2)] }));
+});
