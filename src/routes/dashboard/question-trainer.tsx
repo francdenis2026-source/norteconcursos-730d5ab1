@@ -1237,19 +1237,41 @@ function QuestionTrainer() {
         </details>
       )}
       <Dialog open={confirmExit} onOpenChange={setConfirmExit}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>Sair do treino?</DialogTitle>
-            <DialogDescription>
-              Seu progresso desta sessão será mantido apenas até você retornar. Deseja realmente sair?
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setConfirmExit(false)}>Continuar treinando</Button>
-            <Button variant="destructive" onClick={() => { setConfirmExit(false); setStarted(false); }}>
-              Sair do treino
-            </Button>
-          </DialogFooter>
+        <DialogContent className="trainer-exit-dialog max-w-[440px] overflow-hidden border-slate-600/40 p-0 text-slate-50 shadow-2xl">
+          <div className="trainer-exit-dialog__art" aria-hidden="true">
+            <svg viewBox="0 0 440 190" preserveAspectRatio="xMidYMid slice" role="presentation">
+              <defs>
+                <linearGradient id="trainer-exit-scene" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#1b2937"/><stop offset="1" stopColor="#080e15"/></linearGradient>
+                <linearGradient id="trainer-exit-book" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#304054"/><stop offset="1" stopColor="#101923"/></linearGradient>
+              </defs>
+              <rect width="440" height="190" fill="url(#trainer-exit-scene)"/>
+              <g opacity=".27" stroke="#92a6bb" strokeWidth="2" fill="url(#trainer-exit-book)">
+                <path d="M-20 125 90 112 130 127 22 145Z"/><path d="M-15 147 97 135 136 151 18 170Z"/>
+                <path d="M345 84 461 70 470 130 354 146Z"/><path d="M293 150 429 126 449 171 310 190Z"/>
+              </g>
+              <g opacity=".25" stroke="#94a3b8" strokeWidth="1.6"><path d="M20 145 119 130M20 157 123 143M358 113l92-12M317 171l107-19"/></g>
+              <rect width="440" height="190" fill="#090f17" opacity=".54"/>
+              <circle cx="220" cy="93" r="51" fill="#e65c6b" opacity=".07"/>
+              <circle cx="220" cy="93" r="35" fill="#e65c6b" opacity=".14" stroke="#fb8493" strokeOpacity=".23"/>
+              <path d="M207 77v-5a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v12m-32 0v29a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4v-12M223 93h29m-9-9 9 9-9 9" fill="none" stroke="#f8a0ab" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <div className="trainer-exit-dialog__body">
+            <DialogHeader className="space-y-2 text-center sm:text-center">
+              <DialogTitle className="text-xl font-bold tracking-tight text-slate-50">Sair do treino?</DialogTitle>
+              <DialogDescription className="mx-auto max-w-[330px] text-sm leading-6 text-slate-300">
+                As respostas já registradas continuam no seu histórico. Deseja encerrar esta sessão?
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:space-x-0">
+              <Button variant="outline" className="w-full border-slate-500/60 bg-slate-800/70 text-slate-50 hover:bg-slate-700 hover:text-white" onClick={() => setConfirmExit(false)}>
+                <BookOpenCheck className="mr-2 h-4 w-4" /> Continuar treinando
+              </Button>
+              <Button variant="destructive" className="w-full bg-rose-600 text-white hover:bg-rose-500" onClick={() => { setConfirmExit(false); setStarted(false); }}>
+                <ArrowRight className="mr-2 h-4 w-4" /> Sair do treino
+              </Button>
+            </DialogFooter>
+          </div>
         </DialogContent>
       </Dialog>
       <Dialog
