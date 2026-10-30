@@ -75,6 +75,7 @@ import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, trainerPract
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
@@ -1029,6 +1030,7 @@ function QuestionTrainer() {
           <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
             {parsed.stem}
           </p>
+          <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
           </section>
           <section className="trainer-reading-answers" aria-label="Alternativas da questão">
           <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
