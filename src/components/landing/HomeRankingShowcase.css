@@ -286,3 +286,153 @@
   .home-ranking__stats dt { font-size: 8px; }
   .home-ranking__stats dd { font-size: 10px; }
 }
+
+
+/* Theme-aware palette: keep the homepage ranking readable when light mode is active.
+   Support the theme hooks used by the app (class and data-theme variants) without
+   changing global theme behavior or the dark-mode design. */
+:root[data-theme="light"] .home-ranking,
+html.light .home-ranking,
+body.light .home-ranking,
+[data-theme="light"] .home-ranking {
+  color-scheme: light;
+  color: #172334;
+}
+:root[data-theme="light"] .home-ranking .home-ranking__shell,
+html.light .home-ranking .home-ranking__shell,
+body.light .home-ranking .home-ranking__shell,
+[data-theme="light"] .home-ranking .home-ranking__shell {
+  color: #172334;
+  background: radial-gradient(ellipse at 50% 0%,rgba(193,138,60,.09),transparent 62%),linear-gradient(145deg,#ffffff,#f2f5f9);
+  border-color: rgba(132,151,171,.42);
+  box-shadow: 0 18px 48px rgba(25,43,63,.10);
+}
+:root[data-theme="light"] .home-ranking .home-ranking__heading h2,
+html.light .home-ranking .home-ranking__heading h2,
+body.light .home-ranking .home-ranking__heading h2,
+[data-theme="light"] .home-ranking .home-ranking__heading h2 { color:#172334; }
+:root[data-theme="light"] .home-ranking .home-ranking__heading p:not(.home-ranking__eyebrow),
+html.light .home-ranking .home-ranking__heading p:not(.home-ranking__eyebrow),
+body.light .home-ranking .home-ranking__heading p:not(.home-ranking__eyebrow),
+[data-theme="light"] .home-ranking .home-ranking__heading p:not(.home-ranking__eyebrow),
+:root[data-theme="light"] .home-ranking .home-ranking__bottom > div,
+html.light .home-ranking .home-ranking__bottom > div,
+body.light .home-ranking .home-ranking__bottom > div,
+[data-theme="light"] .home-ranking .home-ranking__bottom > div,
+:root[data-theme="light"] .home-ranking .home-ranking__details,
+html.light .home-ranking .home-ranking__details,
+body.light .home-ranking .home-ranking__details,
+[data-theme="light"] .home-ranking .home-ranking__details { color:#526174; }
+:root[data-theme="light"] .home-ranking .home-ranking__status,
+html.light .home-ranking .home-ranking__status,
+body.light .home-ranking .home-ranking__status,
+[data-theme="light"] .home-ranking .home-ranking__status { color:#176b54; background:rgba(38,151,113,.08); border-color:rgba(38,151,113,.25); }
+:root[data-theme="light"] .home-ranking .home-ranking__card,
+html.light .home-ranking .home-ranking__card,
+body.light .home-ranking .home-ranking__card,
+[data-theme="light"] .home-ranking .home-ranking__card {
+  color:#172334;
+  background:linear-gradient(155deg,#ffffff,#f2f5f9);
+  border-color:rgba(123,143,164,.45);
+  box-shadow:0 5px 15px rgba(25,43,63,.05);
+}
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="1"],
+html.light .home-ranking .home-ranking__card[data-medal="1"],
+body.light .home-ranking .home-ranking__card[data-medal="1"],
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="1"] {
+  border-color:rgba(180,127,33,.75);
+  background:linear-gradient(145deg,#fff7e4,#fffdf7 76%);
+  box-shadow:inset 0 0 0 1px rgba(196,142,45,.08),0 5px 16px rgba(90,67,25,.06);
+}
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="2"],
+html.light .home-ranking .home-ranking__card[data-medal="2"],
+body.light .home-ranking .home-ranking__card[data-medal="2"],
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="2"] { border-color:rgba(117,135,156,.6); }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="3"],
+html.light .home-ranking .home-ranking__card[data-medal="3"],
+body.light .home-ranking .home-ranking__card[data-medal="3"],
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="3"] { border-color:rgba(174,111,76,.5); }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="4"],
+html.light .home-ranking .home-ranking__card[data-medal="4"],
+body.light .home-ranking .home-ranking__card[data-medal="4"],
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="4"] { border-color:rgba(66,127,183,.45); }
+:root[data-theme="light"] .home-ranking .home-ranking__position,
+html.light .home-ranking .home-ranking__position,
+body.light .home-ranking .home-ranking__position,
+[data-theme="light"] .home-ranking .home-ranking__position { color:#94671d; }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="2"] .home-ranking__position,
+html.light .home-ranking .home-ranking__card[data-medal="2"] .home-ranking__position,
+body.light .home-ranking .home-ranking__card[data-medal="2"] .home-ranking__position,
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="2"] .home-ranking__position { color:#53667b; }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="3"] .home-ranking__position,
+html.light .home-ranking .home-ranking__card[data-medal="3"] .home-ranking__position,
+body.light .home-ranking .home-ranking__card[data-medal="3"] .home-ranking__position,
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="3"] .home-ranking__position { color:#99572f; }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="4"] .home-ranking__position,
+html.light .home-ranking .home-ranking__card[data-medal="4"] .home-ranking__position,
+body.light .home-ranking .home-ranking__card[data-medal="4"] .home-ranking__position,
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="4"] .home-ranking__position { color:#286da8; }
+:root[data-theme="light"] .home-ranking .home-ranking__avatar,
+html.light .home-ranking .home-ranking__avatar,
+body.light .home-ranking .home-ranking__avatar,
+[data-theme="light"] .home-ranking .home-ranking__avatar { color:#35465a; background:rgba(91,112,137,.08); }
+:root[data-theme="light"] .home-ranking .home-ranking__card[data-medal="1"] .home-ranking__avatar,
+html.light .home-ranking .home-ranking__card[data-medal="1"] .home-ranking__avatar,
+body.light .home-ranking .home-ranking__card[data-medal="1"] .home-ranking__avatar,
+[data-theme="light"] .home-ranking .home-ranking__card[data-medal="1"] .home-ranking__avatar { color:#94671d; background:rgba(196,142,45,.10); }
+:root[data-theme="light"] .home-ranking .home-ranking__name,
+html.light .home-ranking .home-ranking__name,
+body.light .home-ranking .home-ranking__name,
+[data-theme="light"] .home-ranking .home-ranking__name { color:#1d2a3b; }
+:root[data-theme="light"] .home-ranking .home-ranking__points,
+html.light .home-ranking .home-ranking__points,
+body.light .home-ranking .home-ranking__points,
+[data-theme="light"] .home-ranking .home-ranking__points { background:rgba(228,234,241,.7); border-color:rgba(123,143,164,.25); }
+:root[data-theme="light"] .home-ranking .home-ranking__points strong,
+html.light .home-ranking .home-ranking__points strong,
+body.light .home-ranking .home-ranking__points strong,
+[data-theme="light"] .home-ranking .home-ranking__points strong { color:#172334; }
+:root[data-theme="light"] .home-ranking .home-ranking__points span,
+html.light .home-ranking .home-ranking__points span,
+body.light .home-ranking .home-ranking__points span,
+[data-theme="light"] .home-ranking .home-ranking__points span { color:#58687b; }
+:root[data-theme="light"] .home-ranking .home-ranking__stats dt,
+html.light .home-ranking .home-ranking__stats dt,
+body.light .home-ranking .home-ranking__stats dt,
+[data-theme="light"] .home-ranking .home-ranking__stats dt { color:#5d6d80; }
+:root[data-theme="light"] .home-ranking .home-ranking__stats dd,
+html.light .home-ranking .home-ranking__stats dd,
+body.light .home-ranking .home-ranking__stats dd,
+[data-theme="light"] .home-ranking .home-ranking__stats dd { color:#243449; }
+:root[data-theme="light"] .home-ranking .home-ranking__empty,
+html.light .home-ranking .home-ranking__empty,
+body.light .home-ranking .home-ranking__empty,
+[data-theme="light"] .home-ranking .home-ranking__empty { color:#526174; border-color:rgba(123,143,164,.5); background:rgba(255,255,255,.65); }
+:root[data-theme="light"] .home-ranking .home-ranking__bottom,
+html.light .home-ranking .home-ranking__bottom,
+body.light .home-ranking .home-ranking__bottom,
+[data-theme="light"] .home-ranking .home-ranking__bottom { border-top-color:rgba(100,120,145,.22); }
+:root[data-theme="light"] .home-ranking .home-ranking__bottom strong,
+html.light .home-ranking .home-ranking__bottom strong,
+body.light .home-ranking .home-ranking__bottom strong,
+[data-theme="light"] .home-ranking .home-ranking__bottom strong { color:#1d2a3b; }
+:root[data-theme="light"] .home-ranking .home-ranking__details summary,
+html.light .home-ranking .home-ranking__details summary,
+body.light .home-ranking .home-ranking__details summary,
+[data-theme="light"] .home-ranking .home-ranking__details summary { color:#8a611f; }
+:root[data-theme="light"] .home-ranking .home-ranking__cta,
+html.light .home-ranking .home-ranking__cta,
+body.light .home-ranking .home-ranking__cta,
+[data-theme="light"] .home-ranking .home-ranking__cta { color:#172334; background:#e8be75; }
+:root[data-theme="light"] .home-ranking .home-ranking__cta:hover,
+html.light .home-ranking .home-ranking__cta:hover,
+body.light .home-ranking .home-ranking__cta:hover,
+[data-theme="light"] .home-ranking .home-ranking__cta:hover { color:#172334; background:#f0cc8c; }
+
+/* On mobile the compact rows remain readable in both themes. */
+@media (max-width: 600px) {
+  :root[data-theme="light"] .home-ranking .home-ranking__points,
+  html.light .home-ranking .home-ranking__points,
+  body.light .home-ranking .home-ranking__points,
+  [data-theme="light"] .home-ranking .home-ranking__points { background:transparent; border-color:transparent; }
+}
