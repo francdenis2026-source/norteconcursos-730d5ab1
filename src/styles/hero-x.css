@@ -283,3 +283,31 @@
   box-shadow: 0 12px 28px -16px rgb(18 35 58 / 35%);
 }
 :root:not(.dark) .home.home .home-operations__heading { border-color: #b9c6d8; }
+
+/* Norte Pulse: compact controls with accessible hit targets and consistent contrast. */
+@media (min-width: 761px) {
+  .hx-dock__cell--pulse { align-items: flex-start; padding-block: 15px; }
+  .hx-dock__pulse-mark { margin-top: 5px; }
+  .hx-dock__pulse-copy .hx-dock__live { display: inline-flex; gap: 5px; align-items: center; flex-wrap: wrap; line-height: 1.4; }
+  .hx-dock__pulse-copy .hx-dock__live svg { width: 12px; height: 12px; flex: none; }
+  .hx-dock__pulse-copy strong { white-space: normal; font-size: 14px; }
+  .hx-dock__pulse-copy small { white-space: normal; line-height: 1.45; }
+  .hx-dock__pulse-controls { display: flex; align-items: center; gap: 5px; margin-top: 6px; }
+  .hx-dock__pulse-controls button {
+    display: grid; place-items: center; width: 27px; height: 27px;
+    padding: 0; border: 1px solid var(--home-line); border-radius: 7px;
+    background: color-mix(in srgb, var(--home-surface) 80%, transparent);
+    color: var(--home-text); cursor: pointer;
+  }
+  .hx-dock__pulse-controls button:hover { border-color: var(--home-gold, #c9a867); }
+  .hx-dock__pulse-controls button:focus-visible, .hx-dock__pulse-action:focus-visible {
+    outline: 2px solid var(--home-gold, #c9a867); outline-offset: 2px;
+  }
+  .hx-dock__pulse-controls button svg { width: 14px; height: 14px; }
+  .hx-dock__pulse-count { font: 600 10px/1.4 var(--font-mono); color: var(--home-muted); min-width: 27px; text-align: center; }
+  .hx-dock__pulse-action { align-self: center; white-space: nowrap; }
+  .hx-dock__pulse-dots { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hx-dock__pulse-mark i { animation: none; }
+}
