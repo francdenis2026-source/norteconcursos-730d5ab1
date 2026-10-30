@@ -922,8 +922,11 @@ function QuestionTrainer() {
           </span>
         </div>
       )}
-      <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-        <div className="flex items-center gap-1.5">
+      <header className="trainer-topbar flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+        <span className="trainer-shield" role="img" aria-label="Norte Concurso">
+          <img src="/media/brand/norte-identity/emblema.svg" alt="" width={38} height={38} />
+        </span>
+        <div className="trainer-topbar__group trainer-topbar__group--left flex items-center gap-1.5">
           <Button variant="outline" size="sm" onClick={() => setStarted(false)}>
             <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
           </Button>
@@ -942,7 +945,7 @@ function QuestionTrainer() {
             <SkipForward className="mr-1.5 h-4 w-4" /> Pular
           </Button>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="trainer-topbar__group trainer-topbar__group--right flex items-center gap-2">
           <Button variant="outline" size="sm" onClick={toggleImmersive} aria-pressed={immersive} aria-label={immersive ? "Sair do modo de leitura em tela cheia" : "Expandir treinador para tela cheia"}>
             {immersive ? <Minimize2 className="mr-1.5 h-4 w-4" /> : <Maximize2 className="mr-1.5 h-4 w-4" />}
             <span className="hidden sm:inline">{immersive ? "Sair da tela cheia" : "Tela cheia"}</span>
@@ -1012,25 +1015,21 @@ function QuestionTrainer() {
                 {correct} certas · {wrong} erradas
               </p>
             </div>
-            <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
+
           </div>
-          <div
-            className="trainer-reading-progress mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
-            role="img"
-            aria-label={`Questão ${index + 1} de ${questions.length}`}
-          >
-            {questions.map((q, i) => (
-              <i
-                key={q.id}
-                className={cn(
+          <div className="trainer-reading-progress mb-4 flex gap-1 sm:mb-6 sm:gap-1.5">
+            <div className="trainer-reading-progress__bars" role="img" aria-label={`Questão ${index + 1} de ${questions.length}`}>
+              {questions.map((q, i) => (
+                <i key={q.id} className={cn(
                   "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
                   results[i] === "ok" && "bg-emerald-500",
                   results[i] === "err" && "bg-rose-500",
                   !results[i] && i === index && "bg-amber-400",
                   !results[i] && i !== index && "bg-muted",
-                )}
-              />
-            ))}
+                )} />
+              ))}
+            </div>
+            <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
           <section className="trainer-reading-stem" aria-label="Enunciado da questão">
           {parsed.base && (
@@ -1839,7 +1838,7 @@ function ElapsedTimer({ startedAt, running }: { startedAt: number; running: bool
   const ss = String(secs % 60).padStart(2, "0");
   return (
     <span
-      className="flex items-center gap-1.5 rounded-xl border border-border bg-muted/50 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-foreground"
+      className="trainer-timer-chip flex items-center gap-1.5 rounded-xl border border-border bg-muted/50 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-foreground"
       role="timer"
       aria-label="Tempo nesta questão"
     >
