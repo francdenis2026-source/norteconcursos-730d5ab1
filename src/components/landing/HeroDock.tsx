@@ -125,8 +125,6 @@ export function HeroDock() {
       <section
         className="hx-dock__cell hx-dock__cell--pulse"
         aria-label="Norte Pulse — sua preparação em movimento"
-        onMouseEnter={() => setPulsePaused(true)}
-        onMouseLeave={() => setPulsePaused(false)}
       >
         <span className="hx-dock__pulse-mark" aria-hidden="true"><i /></span>
         <div className="hx-dock__pulse-copy">
