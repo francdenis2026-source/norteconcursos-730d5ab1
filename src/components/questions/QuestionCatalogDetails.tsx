@@ -45,7 +45,7 @@ type Props = {
   restoreFocus: () => void;
   publicCatalog: Question[];
   platformSummary: PlatformQuestionSummary | undefined;
-  reviewedCount: number;
+  reviewedCount: number | undefined;
   items: Question[];
   collection: BankCollection;
   source: BankSource;
@@ -144,7 +144,7 @@ function DetailBody({
               <span>{QUESTION_COUNT_LABELS.available}</span>
             </div>
             <div>
-              <strong>{n(reviewedCount)}</strong>
+              <strong>{reviewedCount === undefined ? "—" : n(reviewedCount)}</strong>
               <span>{QUESTION_COUNT_LABELS.reviewed}</span>
             </div>
           </div>

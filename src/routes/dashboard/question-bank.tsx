@@ -12,28 +12,24 @@ import {
   Loader2,
   RefreshCw,
   Search,
-  TextSearch,
 } from "lucide-react";
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
-import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { useQuestionCatalogMetadata } from "@/hooks/useQuestionCatalogMetadata";
 import {
   availableQuestionBank,
   publishedQuestionBank,
-  reviewedQuestionBank,
   searchQuestionCatalog,
   questionBankExams,
   questionBankSearch,
   type BankSource,
   type BankCollection,
 } from "@/lib/questionBank";
-import { trainerCollectionQuestions } from "@/lib/trainerFilters";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { PageHero, LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { needsMissingSupportText } from "@/lib/questionText";
 import { catalogGroups } from "@/lib/questionCatalogSummary";
 import { cn } from "@/lib/utils";
 import {
@@ -60,9 +56,8 @@ const SOURCE_LABELS: Record<SourceKind, string> = {
 function QuestionBankPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const canLoad = !authLoading && !!user && user.id !== "demo-user";
-  const { catalog, loading, error, reload } = useQuestionCatalog(user?.id, canLoad);
+  const { catalog, loading, error, reload } = useQuestionCatalogMetadata(user?.id, canLoad);
   const summary = usePlatformQuestionSummary(canLoad);
-  const reviewed = React.useMemo(() => reviewedQuestionBank(catalog).length, [catalog]);
   const [collection, setCollection] = React.useState<BankCollection>("contests");
   const [search, setSearch] = React.useState("");
   const deferredSearch = React.useDeferredValue(search);
@@ -77,10 +72,6 @@ function QuestionBankPage() {
   const [examLimit, setExamLimit] = React.useState(15);
   const items = React.useMemo(
     () => availableQuestionBank(catalog, collection),
-    [catalog, collection],
-  );
-  const missingText = React.useMemo(
-    () => trainerCollectionQuestions(catalog, collection).filter(needsMissingSupportText).length,
     [catalog, collection],
   );
   const visible = React.useMemo(
@@ -185,7 +176,6 @@ function QuestionBankPage() {
       />
       <PlatformQuestionCounts
         enabled={canLoad}
-        reviewed={reviewed}
         onExplore={(e) => openDetail("platform", e.currentTarget)}
       />
       <QuestionCatalogDetails
@@ -194,7 +184,7 @@ function QuestionBankPage() {
         restoreFocus={() => detailTrigger.current?.focus()}
         publicCatalog={publicCatalog}
         platformSummary={summary.data}
-        reviewedCount={reviewed}
+        reviewedCount={undefined}
         items={visible}
         collection={collection}
         source={source}
@@ -273,7 +263,7 @@ function QuestionBankPage() {
             ))}
           </div>
           <p className="w-full text-sm text-muted-foreground" aria-live="polite">
-            {total} questões nesta consulta.
+            {total} registros na prévia dos filtros. A contagem final remove itens duplicados ou sem apoio no Treinador.
           </p>
         </CardContent>
       </Card>
@@ -422,44 +412,10 @@ function QuestionBankPage() {
             )}
           </CardContent>
         </Card>
-        <details className="question-workspace__help question-catalog__quality">
-          <summary>
-            Qualidade do acervo{missingText ? ` · ${missingText} com apoio pendente` : ""}
-          </summary>
-          <div className="space-y-3 text-sm">
-            <p className="flex gap-2">
-              <FileCheck2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />{" "}
-              Questões oficiais só entram após conferência com o gabarito definitivo; itens com
-              revisão jurídica pendente ficam fora do acervo.
-            </p>
-            <p className="flex gap-2">
-              <Layers3 className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" aria-hidden /> Formatos
-              suportados: Certo ou Errado, múltipla escolha com quatro ou cinco alternativas.
-            </p>
-            {missingText !== null && (
-              <p
-                className={cn(
-                  "flex gap-2 rounded-lg border p-2",
-                  missingText
-                    ? "border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100"
-                    : "border-emerald-300 bg-emerald-50 text-emerald-950",
-                )}
-              >
-                <TextSearch className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-                {missingText ? (
-                  <span>
-                    <strong>{missingText} questões de Língua Portuguesa</strong> aguardam o texto de
-                    apoio e ficam fora do treino e dos simulados até o texto ser cadastrado.
-                  </span>
-                ) : (
-                  <span>
-                    As questões de Português disponíveis nesta área têm o apoio necessário.
-                  </span>
-                )}
-              </p>
-            )}
-          </div>
-        </details>
+        <p className="text-sm text-muted-foreground">
+          A prévia usa somente metadados; elegibilidade de textos de apoio e duplicatas é conferida no Treinador antes de iniciar a sessão.
+        </p>
+
       </div>
     </div>
   );
