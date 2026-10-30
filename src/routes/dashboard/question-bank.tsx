@@ -114,7 +114,46 @@ function QuestionBankPage() {
 
   if (authLoading) return <Loading />;
   if (!user || user.id === "demo-user") return <Login />;
-  if (loading) return <Loading />;
+  // Do not hide the entire catalog workspace while thousands of question rows load.
+  // Filters accept input immediately and the selected criteria apply when data arrives.
+  if (loading)
+    return (
+      <div className="question-workspace question-catalog space-y-5">
+        <PageHero
+          image="trainer"
+          size="sm"
+          kicker="Questões"
+          icon={LibraryBig}
+          title={<>Explorar <em>questões</em></>}
+          description="Prepare seus filtros enquanto o acervo é carregado."
+        />
+        <Card className="question-catalog__filters">
+          <CardContent className="space-y-4 p-4">
+            <fieldset>
+              <legend className="mb-2 text-sm font-semibold">Área de preparação</legend>
+              <div className="flex flex-wrap gap-2">
+                <Button variant={collection === "contests" ? "default" : "outline"} onClick={() => setCollection("contests")}>Concursos públicos</Button>
+                <Button variant={collection === "enem" ? "default" : "outline"} onClick={() => setCollection("enem")}>ENEM</Button>
+              </div>
+            </fieldset>
+            <Input
+              aria-label="Buscar no acervo"
+              placeholder="Buscar concurso, banca, disciplina, cargo ou ano…"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Origem das questões">
+              {(["all", "official", "curated", "personal"] as const).map((value) => (
+                <Button key={value} size="sm" variant={source === value ? "default" : "outline"} onClick={() => setSource(value)}>
+                  {value === "all" ? "Todas" : SOURCE_LABELS[value]}
+                </Button>
+              ))}
+            </div>
+            <p role="status" className="text-sm text-muted-foreground">Carregando resultados para os filtros selecionados…</p>
+          </CardContent>
+        </Card>
+      </div>
+    );
   if (error) return <ErrorState message={error} retry={reload} />;
 
   const total = visible.length;
