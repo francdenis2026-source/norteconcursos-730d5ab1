@@ -18,6 +18,19 @@ const fold = (text: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase("pt-BR")
     .trim();
+// Index normalized filter text once per immutable question object rather than
+// normalizing and concatenating metadata on every keystroke.
+const searchIndex = new WeakMap<Question, string>();
+function searchableMetadata(question: Question) {
+  let value = searchIndex.get(question);
+  if (value === undefined) {
+    value = fold(
+      `${question.contest} ${question.board} ${question.subject} ${question.career} ${question.year} ${questionCode(question)}`,
+    );
+    searchIndex.set(question, value);
+  }
+  return value;
+}
 /** Search the same provenance metadata in the bank and at the trainer destination. */
 export function searchQuestionCatalog(catalog: Question[], query: string) {
   // Um código permanente completo (ex.: BD-1A2B-3C4D-5E6F) localiza exatamente aquela questão.
@@ -25,11 +38,7 @@ export function searchQuestionCatalog(catalog: Question[], query: string) {
   if (code) return catalog.filter((q) => q.table === code.table && q.id.toLowerCase() === code.id);
   const text = fold(query);
   return text
-    ? catalog.filter((q) =>
-        fold(
-          `${q.contest} ${q.board} ${q.subject} ${q.career} ${q.year} ${questionCode(q)}`,
-        ).includes(text),
-      )
+    ? catalog.filter((q) => searchableMetadata(q).includes(text))
     : catalog;
 }
 // Mesma contagem do Treinador de questões: o mesmo item cadastrado para mais de um cargo
