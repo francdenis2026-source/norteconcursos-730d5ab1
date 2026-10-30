@@ -4,6 +4,7 @@ import "@/styles/study-experience.css";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
+import { QuestionHeaderProgress } from "./QuestionHeaderProgress";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
 import { useQuestionCatalogRealtime } from "@/hooks/useQuestionCatalogRealtime";
@@ -684,6 +685,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             {!isAdmin && current?.group === "Questões" && (
               <StudentSectionNavigation compact items={items} pathname={location.pathname} search={location.search} />
             )}
+
+            {!isAdmin && current?.group === "Questões" && <QuestionHeaderProgress userId={user?.id} />}
 
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
