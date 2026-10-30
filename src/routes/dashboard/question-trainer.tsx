@@ -211,6 +211,7 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err" | "skipped")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
+  const [pausedAt, setPausedAt] = React.useState<number | null>(null);
   const routeKey = trainerRouteKey(routeFilters);
   const pendingRestore = React.useRef(false);
   const restoredSelection = React.useRef<string | null>(null);
@@ -315,6 +316,7 @@ function QuestionTrainer() {
       setSelected(b.selected as Answer | null);
       setStruck(b.struck as Answer[]);
       setStartedAt(b.startedAt);
+      setPausedAt(null);
       setStarted(true);
       setModal(null);
       setAnswered(false); // The saved-answer gate is always reconstructed from the database.
@@ -576,6 +578,7 @@ function QuestionTrainer() {
       setSupportNotice(false);
       setStruck([]);
       setStartedAt(Date.now());
+      setPausedAt(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
   }, [index, question?.id, question?.source, lockedLoading]);
@@ -620,7 +623,12 @@ function QuestionTrainer() {
         copy[index] = isCorrect ? "ok" : "err";
         return copy;
       });
-      setModal("result");
+      if (isCorrect) {
+        toast.success("Resposta correta. Próxima questão…", { duration: 900 });
+        window.setTimeout(() => next(), 950);
+      } else {
+        setModal("result");
+      }
     } catch {
       toast.error("Não foi possível salvar sua resposta. Tente novamente.");
     } finally {
@@ -632,6 +640,7 @@ function QuestionTrainer() {
     if (target < 0 || target > questions.length) return;
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
+    setPausedAt(null);
     setIndex(target);
   };
   const next = () => goTo(index + 1);
@@ -763,6 +772,7 @@ function QuestionTrainer() {
       return;
     }
     setSupportNotice(false);
+    setPausedAt((value) => value ?? Date.now());
     setModal("help");
     if (library.isError) void library.refetch();
   };
@@ -899,7 +909,7 @@ function QuestionTrainer() {
                 {correct} certas · {wrong} erradas
               </p>
             </div>
-            <ElapsedTimer startedAt={startedAt} running={!answered} />
+            <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
           <div
             className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
@@ -1154,7 +1164,15 @@ function QuestionTrainer() {
       </Dialog>
       <Dialog
         open={modal !== null && supportAvailable}
-        onOpenChange={(open) => !open && setModal(null)}
+        onOpenChange={(open) => {
+          if (open) return;
+          if (pausedAt) {
+            const pausedFor = Date.now() - pausedAt;
+            setStartedAt((value) => value + pausedFor);
+            setPausedAt(null);
+          }
+          setModal(null);
+        }}
       >
         <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
           <>
