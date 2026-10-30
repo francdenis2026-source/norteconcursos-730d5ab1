@@ -79,6 +79,7 @@ import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel"
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import "@/styles/trainer-success-feedback.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
@@ -661,18 +662,9 @@ function QuestionTrainer() {
         setSuccessFeedback(true);
         // Duração suficiente para leitura; saída automática sem clique.
         // O timer é cancelado se o usuário navegar manualmente.
-        const answeredQuestionId = question.id;
         successTimer.current = setTimeout(() => {
           successTimer.current = null;
-          setSuccessFeedback(false);
-          setIndex((currentIndex) => {
-            // Evita avanço indevido se a questão mudou antes do timer.
-            if (questions[currentIndex]?.id !== answeredQuestionId) return currentIndex;
-            responseIdRef.current = crypto.randomUUID();
-            setModal(null);
-            setPausedAt(null);
-            return currentIndex + 1;
-          });
+          next();
         }, 3500);
       }
     } catch (error) {
@@ -866,9 +858,9 @@ function QuestionTrainer() {
         <div
           role="status"
           aria-live="polite"
-          className="pointer-events-none fixed inset-x-3 top-20 z-[80] flex justify-center sm:inset-x-6 sm:top-24"
+          className="trainer-success-overlay pointer-events-none fixed inset-x-3 top-20 z-[80] flex justify-center sm:inset-x-6 sm:top-24"
         >
-          <div className="relative flex w-full max-w-[340px] items-center gap-3 overflow-hidden rounded-2xl border border-emerald-400/25 bg-[#112821]/95 px-4 py-3 text-white shadow-[0_16px_48px_rgba(0,0,0,.32)] backdrop-blur-lg animate-in fade-in slide-in-from-top-3 duration-300 motion-reduce:animate-none">
+          <div className="trainer-success-message relative flex w-full max-w-[340px] items-center gap-3 overflow-hidden rounded-2xl border border-emerald-400/25 bg-[#112821]/95 px-4 py-3 text-white shadow-[0_16px_48px_rgba(0,0,0,.32)] backdrop-blur-lg animate-in fade-in slide-in-from-top-3 duration-300 motion-reduce:animate-none">
             <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" className="h-11 w-11 shrink-0">
               <circle cx="24" cy="24" r="22" fill="#1BAF83" fillOpacity=".17" />
               <circle cx="24" cy="24" r="16" fill="#24B487" />
@@ -881,7 +873,7 @@ function QuestionTrainer() {
               <p className="mt-0.5 text-xs text-emerald-100/75">Avançando para a próxima questão…</p>
             </div>
             <span className="absolute inset-x-0 bottom-0 h-[3px] bg-emerald-200/15">
-              <span className="block h-full w-full origin-left bg-emerald-400 [animation:trainer-success-progress_3.5s_linear_forwards] motion-reduce:animate-none" />
+              <span className="trainer-success-progress block h-full w-full origin-left bg-emerald-400" />
             </span>
           </div>
         </div>
