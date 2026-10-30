@@ -184,7 +184,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
     }), // sem a coluna de texto de apoio ainda: segue sem ela
     query(
       "curated_question_catalog",
-      "id,syllabus_topic_id,contest_name,contest_year,career_name,exam_board,tested_topic,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category,is_original,didactic_provenance",
+      "id,syllabus_topic_id,external_item_key,contest_name,contest_year,career_name,exam_board,tested_topic,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category,is_original,didactic_provenance",
       "law_version_checked_at",
       (builder) => builder.eq("content_status", "active"),
     ),
@@ -192,7 +192,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
       ? Promise.resolve({ data: [], error: null, gated: true })
       : query(
           "question_bank",
-          "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+          "id,contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
           "law_version_checked_at",
           (builder) => builder.eq("user_id", userId).eq("content_status", "active"),
         ),
@@ -294,6 +294,11 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
         difficulty: normalizeDifficulty(row["difficulty"]),
         state: String(row["state"] || ""),
         category: String(row["career_category"] || ""),
+        itemNumber: (() => {
+          const key = String(row["external_item_key"] ?? "").trim();
+          const match = /^(?:quest[aã]o|item)\s*#?\s*(\d+)$/i.exec(key);
+          return match ? Number(match[1]) : undefined;
+        })(),
         testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
       }),
     ),
@@ -320,6 +325,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
         difficulty: normalizeDifficulty(row["difficulty"]),
         state: String(row["state"] || ""),
         category: String(row["career_category"] || ""),
+        itemNumber: Number(row["item_number"]) || undefined,
       })),
   ];
   // Etiquetas do filtro "Atual" (question_currency). Tabela ainda não criada ou sem permissão: segue sem elas.
