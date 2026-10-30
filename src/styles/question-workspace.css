@@ -1474,7 +1474,7 @@
    sat behind the app shell/parent clipping and collapsed the question to a strip.
    Only native fullscreen is viewport-constrained (rules above). */
 @media (min-width: 1050px) {
- .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace:not(:fullscreen) {
+ html:not(:fullscreen) .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
    position: relative !important;
    inset: auto !important;
    z-index: auto !important;
@@ -1490,14 +1490,14 @@
    gap: 10px !important;
    overflow: visible !important;
  }
- .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) > .question-window {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
    height: auto !important;
    max-height: none !important;
    min-height: 0 !important;
    flex: none !important;
    overflow: visible !important;
  }
- .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) > .question-window > .trainer-reading-content {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
    height: auto !important;
    max-height: none !important;
    min-height: 0 !important;
@@ -1505,13 +1505,13 @@
    overflow: visible !important;
    grid-template-rows: auto auto auto auto auto auto auto !important;
  }
- .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-stem,
- .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-answers {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-stem,
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-answers {
    height: auto !important;
    max-height: none !important;
    overflow: visible !important;
  }
- .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-explanation {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-explanation {
    max-height: none !important;
    overflow: visible !important;
  }
@@ -1598,4 +1598,75 @@
 }
 @media (prefers-reduced-motion: reduce) {
  .trainer-exit-dialog, .trainer-exit-dialog * { animation: none !important; transition: none !important; }
+}
+
+/* Fix: fullscreen applies to documentElement, not to the trainer component.
+   Resolve the old normal-mode selector conflict and anchor the complete trainer
+   within the fullscreen viewport, above page artwork and beneath the 56px header. */
+@media (min-width: 1050px) and (min-height: 620px) {
+  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace {
+    position: fixed !important;
+    inset: 58px 12px 10px !important;
+    z-index: 36;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+    overflow: hidden !important;
+    background: var(--background);
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > header {
+    flex: 0 0 auto;
+    min-height: 40px;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto minmax(0, 1fr) auto minmax(0, auto) !important;
+    gap: 4px 16px !important;
+    padding: 9px 14px !important;
+    overflow: hidden !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem,
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+    grid-row: 5 !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+    grid-column: 1 / -1 !important;
+    grid-row: 6 !important;
+    margin: 2px 0 !important;
+    padding-top: 7px !important;
+    flex-shrink: 0;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+    grid-column: 1 / -1 !important;
+    grid-row: 7 !important;
+    min-height: 0 !important;
+    max-height: min(19dvh, 150px) !important;
+    overflow-y: auto !important;
+    margin: 3px 0 0 !important;
+    overscroll-behavior: contain;
+  }
 }
