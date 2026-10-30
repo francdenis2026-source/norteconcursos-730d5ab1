@@ -15,7 +15,7 @@ function load(file,overrides={}) {
  const module={exports:{}};
  const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
  const native=createRequire(import.meta.url);
- vm.runInNewContext(code,{module,exports:module.exports,require:name=>overrides[name]??native(name),URL});
+ vm.runInNewContext(code,{module,exports:module.exports,require:name=>overrides[name]??(name.endsWith(".css")?{}:native(name)),URL});
  return module.exports;
 }
 const laws=load('src/lib/legalLibrary.ts');
