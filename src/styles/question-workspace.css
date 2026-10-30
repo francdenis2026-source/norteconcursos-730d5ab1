@@ -1574,3 +1574,62 @@
   .trainer-reading-workspace .trainer-shield img,
   .trainer-reading-workspace .trainer-shield::before { animation: none; }
 }
+
+/* Review layout correction: the question and explanations must not be compressed by comments. */
+@media (min-width: 1050px) and (min-height: 620px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) > .question-window {
+    flex: 0 0 auto !important;
+    min-height: 480px !important;
+    overflow: visible !important;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) > .question-window > .trainer-reading-content {
+    display: grid !important;
+    min-height: 390px !important;
+    overflow: visible !important;
+    grid-template-columns: minmax(0,1.04fr) minmax(0,1fr);
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 7px 18px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-stem,
+  .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-answers {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-progress { position: relative; }
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-heading { position: relative; }
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-content > .trainer-reading-explanation {
+  max-height: none !important; overflow: visible !important;
+  border-radius: 12px; margin-top: 10px; padding: 14px;
+}
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community {
+  width: 100%; max-width: 100%; margin-top: 12px;
+}
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community > * {
+  max-width: 100%;
+}
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-stem,
+.app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-answers {
+  scrollbar-width: thin;
+}
+@media (min-width: 1050px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    grid-template-rows: auto auto auto auto minmax(230px,auto) auto auto !important;
+  }
+}
+:root:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace,
+.app-shell[data-area="student"] .trainer-reading-workspace:fullscreen {
+  height: auto !important; max-height: none !important; min-height: 100dvh !important;
+  overflow-y: auto !important; overflow-x: hidden !important;
+}
+@media (max-width: 1049px) {
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-content {
+    display: block !important;
+  }
+}

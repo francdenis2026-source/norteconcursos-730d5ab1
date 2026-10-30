@@ -1227,11 +1227,14 @@ function QuestionTrainer() {
               </p>
             </div>
           )}
-          {answered && (
-            <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
-          )}
+
         </CardContent>
       </Card>
+      {answered && (
+        <aside className="trainer-review-community" aria-label="Desempenho e comentários da questão">
+          <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
+        </aside>
+      )}
       <Dialog open={confirmExit} onOpenChange={setConfirmExit}>
         <DialogContent className="max-w-md">
           <DialogHeader>
