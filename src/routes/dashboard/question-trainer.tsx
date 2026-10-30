@@ -623,12 +623,11 @@ function QuestionTrainer() {
         copy[index] = isCorrect ? "ok" : "err";
         return copy;
       });
-      if (isCorrect) {
-        toast.success("Resposta correta. Próxima questão…", { duration: 900 });
-        window.setTimeout(() => next(), 950);
-      } else {
+      if (!isCorrect) {
         setModal("result");
       }
+      // Acertos recebem feedback integrado e persistente no cartão.
+      // Não navegar automaticamente: o aluno controla quando quer prosseguir.
     } catch {
       toast.error("Não foi possível salvar sua resposta. Tente novamente.");
     } finally {
@@ -893,6 +892,42 @@ function QuestionTrainer() {
               <ReportQuestionButton question={question} />
             </span>
           </div>
+          {answered && isCorrect && !reviewingPast && (
+            <section
+              role="status"
+              aria-live="polite"
+              className="mb-5 overflow-hidden rounded-2xl border border-emerald-500/35 bg-emerald-50/85 shadow-[0_12px_32px_-22px_rgba(5,150,105,0.48)] dark:border-emerald-400/30 dark:bg-emerald-500/10"
+            >
+              <div className="flex items-start gap-3 p-4 sm:gap-4 sm:p-5">
+                <span
+                  aria-hidden="true"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm dark:bg-emerald-500"
+                >
+                  <CheckCircle2 className="h-6 w-6" />
+                </span>
+                <div className="min-w-0 flex-1 space-y-1">
+                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-emerald-800 dark:text-emerald-300">
+                    Resposta confirmada
+                  </p>
+                  <h3 className="text-lg font-bold tracking-tight text-emerald-950 dark:text-emerald-100 sm:text-xl">
+                    Muito bem! Você acertou esta questão.
+                  </h3>
+                  <p className="text-sm leading-6 text-emerald-900/85 dark:text-emerald-100/85">
+                    Sua resposta foi registrada. Confira a explicação e avance no seu ritmo.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-emerald-500/15 bg-white/45 px-4 py-3 dark:bg-emerald-950/20 sm:px-5">
+                <span className="text-xs font-medium text-emerald-900 dark:text-emerald-200">
+                  O feedback continuará aqui até você mudar de questão.
+                </span>
+                <Button size="sm" onClick={next} className="bg-emerald-700 text-white hover:bg-emerald-800">
+                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </section>
+          )}
           {reviewingPast && (
             <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
               <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
