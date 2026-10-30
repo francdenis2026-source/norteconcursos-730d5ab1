@@ -393,6 +393,17 @@ function RankingPage() {
       <RankingHeader />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
+          <details className="rounded-lg border border-border/70 bg-muted/20 px-3 py-2 text-xs">
+            <summary className="cursor-pointer font-semibold text-foreground">Como funciona a classificação e o desempate?</summary>
+            <div className="mt-2 space-y-2 leading-relaxed text-muted-foreground">
+              <p><strong className="text-foreground">Pontuação primeiro.</strong> A classificação mantém os pontos já conquistados; não há bônus por assinatura ou tempo conectado.</p>
+              <p><strong className="text-foreground">Geral:</strong> pontos, percentual real de acertos, número de acertos, questões válidas e pontos de simulados.</p>
+              <p><strong className="text-foreground">Questões:</strong> pontos, percentual de acertos, acertos e quantidade de questões válidas.</p>
+              <p><strong className="text-foreground">Simulados:</strong> pontos de simulados e número de simulados pontuados. Questões repetidas não geram novos pontos.</p>
+              <p>Quando todos os critérios coincidem, os candidatos compartilham a mesma posição. Os nomes são exibidos em ordem estável, sem alterar a colocação.</p>
+              <p>Os dados vêm dos registros válidos do banco. Horas de estudo são informativas e não somam pontos.</p>
+            </div>
+          </details>
           <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">
             {TABS.map(([id, label]) => (
               <button
