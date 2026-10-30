@@ -40,6 +40,7 @@ export type NavigationItem = {
 /** Ícones táticos por seção (visual de comando, sem ícones genéricos de painel). */
 const groupIcons: Record<string, LucideIcon> = {
   Planejamento: Route,
+  "Central de Estudos": BookOpen,
   "Meu concurso": Crosshair,
   "Material didático": ScrollText,
   Ferramentas: Cpu,
@@ -52,6 +53,7 @@ const groupIcons: Record<string, LucideIcon> = {
 };
 const groupDetails: Record<string, string> = {
   Planejamento: "Configuração, agenda, resultados e foco",
+  "Central de Estudos": "Notas, guias, simplificação, comparações, quiz e evolução",
   "Meu concurso": "Objetivo, edital e análise do concurso",
   "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
@@ -65,6 +67,7 @@ const groupDetails: Record<string, string> = {
 /** Rótulo curto do grupo quando a barra lateral está recolhida. */
 const collapsedLabels: Record<string, string> = {
   Planejamento: "Planejar",
+  "Central de Estudos": "Estudar",
   "Meu concurso": "Concurso",
   "Material didático": "Materiais",
   Ferramentas: "Recursos",
