@@ -29,6 +29,8 @@ import { ReadingSizeControl } from "@/components/accessibility/ReadingSizeContro
 import { PanelTextScale } from "./PanelTextScale";
 import { showsReadingControl } from "@/lib/readingScale";
 import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
+import { StudentTopNavigation } from "./StudentTopNavigation";
+import "@/styles/student-top-navigation.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
@@ -758,6 +760,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </Hint>
             </div>
           </header>
+
+          {!isAdmin && !fullscreen.active && <StudentTopNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           {fullscreen.active && <div className="workspace-focus-controls no-print" role="toolbar" aria-label="Controles da tela cheia">
             <Hint content={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>
