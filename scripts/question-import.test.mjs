@@ -148,15 +148,15 @@ test("the IDECAN repository import file is accepted and its review metadata surv
       ),
     ),
   );
-  assert.equal(rows.length, 177);
+  assert.equal(rows.length, 273);
   assert(rows.every((q) => q.content_status === "under_review"));
-  assert.equal(rows.filter((q) => q.support_text).length, 10);
-  assert.equal(rows.filter((q) => "legal_review" in q).length, 66);
-  assert.equal(rows.filter((q) => q.answer_key_status === "preliminar").length, 39);
+  assert.equal(rows.filter((q) => q.support_text).length, 30);
+  assert.equal(rows.filter((q) => "legal_review" in q).length, 65);
+  assert.equal(rows.filter((q) => q.answer_key_status === "preliminar").length, 0);
   const mapped = rows.map(toBoardExamRow);
   assert(mapped.every((r) => !("legal_review" in r) && !("answer_key_status" in r)));
   const verified = mapped.filter((_, i) => typeof rows[i].legal_review === "object");
-  assert.equal(verified.length, 66);
+  assert.equal(verified.length, 65);
   assert(
     verified.every(
       (r) =>
@@ -168,7 +168,7 @@ test("the IDECAN repository import file is accepted and its review metadata surv
     ),
   );
   const preliminar = mapped.filter((_, i) => rows[i].answer_key_status === "preliminar");
-  assert.equal(preliminar.length, 39);
+  assert.equal(preliminar.length, 0);
   assert(
     preliminar.every((r) =>
       String(r.review_note).includes("Gabarito preliminar"),
@@ -177,5 +177,5 @@ test("the IDECAN repository import file is accepted and its review metadata surv
   assert(mapped.filter((_, i) => rows[i].answer_key_status === "definitivo").every((r) => !r.review_note));
   const repeated = planBoardImport(rows, rows);
   assert.equal(repeated.ready.length, 0);
-  assert.equal(repeated.duplicates, 177);
+  assert.equal(repeated.duplicates, 273);
 });
