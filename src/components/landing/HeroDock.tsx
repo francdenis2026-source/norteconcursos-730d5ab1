@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Activity, ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library, Pause, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library, ShieldCheck } from "lucide-react";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
-import { useOnlinePresence } from "@/hooks/useOnlinePresence";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
@@ -10,11 +9,8 @@ import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 /** Faixa de vidro na base do hero (desktop/tablet): acesso, banco de questões e desafio diário. */
 export function HeroDock() {
   const { data } = usePlatformQuestionSummary();
-  const presence = useOnlinePresence();
   const [remaining, setRemaining] = useState<number | null>(null);
   const [seconds, setSeconds] = useState<number | null>(null);
-  const [pulseIndex, setPulseIndex] = useState(0);
-  const [pulsePaused, setPulsePaused] = useState(false);
   const fmt = (n: number) => n.toLocaleString("pt-BR");
 
   useEffect(() => {
@@ -33,46 +29,6 @@ export function HeroDock() {
   const done = remaining !== null && remaining <= 0;
   const cta = done ? "Criar conta" : used > 0 ? "Continuar" : "Responder agora";
 
-  const pulseItems = [
-    {
-      eyebrow: "COMUNIDADE EM TEMPO REAL",
-      title: presence.state === "ready" && presence.count !== null
-        ? `${fmt(presence.count)} ${presence.count === 1 ? "pessoa online" : "pessoas online"}`
-        : "Comunidade Norte Concurso",
-      detail: presence.state === "ready"
-        ? "Presença anônima de navegadores conectados"
-        : "Aguardando dados de presença em tempo real",
-      href: "#plataforma",
-    },
-    {
-      eyebrow: "ACERVO DA PLATAFORMA",
-      title: data ? `${fmt(data.available)} questões disponíveis` : "Explore o banco de questões",
-      detail: data
-        ? `${fmt(data.registered)} cadastradas · atualização automática`
-        : "Concursos, disciplinas e bancas organizadas",
-      href: "#plataforma",
-    },
-    {
-      eyebrow: "DICA DE PREPARAÇÃO",
-      title: "Revise os erros antes de avançar",
-      detail: "Reforçar pontos fracos é um passo importante na preparação",
-      href: "/auth",
-    },
-    {
-      eyebrow: "DESAFIO DIÁRIO",
-      title: remaining === null ? "Questões grátis sem cadastro" : `${left} de ${GUEST_DAILY_LIMIT} questões disponíveis`,
-      detail: `Renova em ${seconds === null ? "--:--:--" : formatCountdown(seconds)} · horário do Acre`,
-      href: done ? "/auth" : "/desafio-diario",
-    },
-  ] as const;
-
-  useEffect(() => {
-    if (pulsePaused || (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
-    const id = window.setInterval(() => setPulseIndex((index) => (index + 1) % pulseItems.length), 6500);
-    return () => window.clearInterval(id);
-  }, [pulsePaused, pulseItems.length]);
-
-  const pulse = pulseItems[pulseIndex] ?? pulseItems[0];
   useEffect(() => {
     const tick = () => setSeconds(secondsUntilAcreMidnight());
     tick();
@@ -122,23 +78,16 @@ export function HeroDock() {
           <span>cadastradas</span>
         </div>
       </a>
-      <section
-        className="hx-dock__cell hx-dock__cell--pulse"
-        aria-label="Norte Pulse — sua preparação em movimento"
-      >
-        <span className="hx-dock__pulse-mark" aria-hidden="true"><i /></span>
-        <div className="hx-dock__pulse-copy">
-          <span className="hx-dock__live"><Activity aria-hidden="true" /> NORTE PULSE</span>
-          <strong title={pulse.title}>{pulse.title}</strong>
-          <small title={pulse.detail}>{pulse.detail}</small>
-          <div className="hx-dock__pulse-controls" aria-label="Navegação do Norte Pulse">
-            <button type="button" onClick={() => setPulseIndex((i) => (i + pulseItems.length - 1) % pulseItems.length)} aria-label="Informação anterior"><ChevronLeft aria-hidden="true" /></button>
-            <span className="hx-dock__pulse-count">{pulseIndex + 1} / {pulseItems.length}</span>
-            <button type="button" onClick={() => setPulseIndex((i) => (i + 1) % pulseItems.length)} aria-label="Próxima informação"><ChevronRight aria-hidden="true" /></button>
-            <button type="button" onClick={() => setPulsePaused((v) => !v)} aria-label={pulsePaused ? "Retomar atualização automática" : "Pausar atualização automática"} aria-pressed={pulsePaused}>{pulsePaused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}</button>
-          </div>
+      <section className="hx-dock__cell hx-dock__cell--pulse hx-dock__cell--radar" aria-label="Radar de concursos: Polícia Civil do Acre">
+        <span className="hx-dock__radar-icon" aria-hidden="true"><ShieldCheck /></span>
+        <div className="hx-dock__radar-copy">
+          <span className="hx-dock__live">RADAR DE CONCURSOS · PC ACRE</span>
+          <strong>Comissão formada. Edital aguardado.</strong>
+          <small>Decreto 11.966/2026 · comissão instituída em 22/10. Edital previsto para 2026, sem data oficial.</small>
+          <a href="https://legis.ac.gov.br/detalhar/6903" target="_blank" rel="noopener noreferrer" className="hx-dock__radar-source">
+            Ver publicação oficial <ArrowUpRight aria-hidden="true" />
+          </a>
         </div>
-        <a href={pulse.href} className="hx-dock__pulse-action" aria-label={`Acessar: ${pulse.title}`}>Ver <ArrowRight aria-hidden="true" /></a>
       </section>
       {done ? (
         <Link to="/auth" search={{ mode: "register" }} className="hx-dock__cell hx-dock__cell--daily">
