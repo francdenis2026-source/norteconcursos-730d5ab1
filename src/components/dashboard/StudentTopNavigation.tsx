@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
-import { BookOpen, BriefcaseBusiness, ChartNoAxesCombined, ChevronDown, ClipboardCheck, GraduationCap, LayoutDashboard, LibraryBig, NotebookTabs, Settings2, Target, Trophy } from "lucide-react";
+import { BookOpen, ChartNoAxesCombined, ChevronDown, ClipboardCheck, GraduationCap, LayoutDashboard, LibraryBig, Settings2, Target, Trophy } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
