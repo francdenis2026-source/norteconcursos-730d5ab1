@@ -22,6 +22,7 @@ export function useQuestionCatalogRealtime(enabled: boolean) {
     if (!enabled) return;
     const invalidate = () => {
       void queryClient.invalidateQueries({ queryKey: ["question-catalog-view"] });
+      void queryClient.invalidateQueries({ queryKey: ["question-catalog-metadata"] });
       void queryClient.invalidateQueries({ queryKey: ["question-catalog"] });
       void queryClient.invalidateQueries({ queryKey: ["official-year-questions"] });
       void queryClient.invalidateQueries({ queryKey: ["platform-question-stats"] });
