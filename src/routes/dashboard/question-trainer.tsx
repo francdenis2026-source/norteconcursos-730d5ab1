@@ -19,6 +19,8 @@ import {
   Flame,
   Lock,
   Loader2,
+  Maximize2,
+  Minimize2,
   RotateCcw,
   SkipForward,
   Sparkles,
@@ -205,6 +207,20 @@ function QuestionTrainer() {
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
+  const trainerScreenRef = React.useRef<HTMLDivElement>(null);
+  const [immersive, setImmersive] = React.useState(false);
+  React.useEffect(() => {
+    const sync = () => setImmersive(document.fullscreenElement === trainerScreenRef.current);
+    document.addEventListener("fullscreenchange", sync);
+    return () => document.removeEventListener("fullscreenchange", sync);
+  }, []);
+  const toggleImmersive = () => {
+    if (document.fullscreenElement === trainerScreenRef.current) {
+      void document.exitFullscreen().catch(() => {});
+    } else if (trainerScreenRef.current?.requestFullscreen) {
+      void trainerScreenRef.current.requestFullscreen().catch(() => {});
+    }
+  };
   const [successFeedback, setSuccessFeedback] = React.useState(false);
   const successTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const clearSuccessFeedback = React.useCallback(() => {
@@ -852,7 +868,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+    <div ref={trainerScreenRef} className="trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
       {successFeedback && (
         <div
@@ -927,6 +943,10 @@ function QuestionTrainer() {
           </Button>
         </div>
         <div className="flex items-center gap-2">
+          <Button variant="outline" size="sm" onClick={toggleImmersive} aria-pressed={immersive} aria-label={immersive ? "Sair do modo de leitura em tela cheia" : "Expandir treinador para tela cheia"}>
+            {immersive ? <Minimize2 className="mr-1.5 h-4 w-4" /> : <Maximize2 className="mr-1.5 h-4 w-4" />}
+            <span className="hidden sm:inline">{immersive ? "Sair da tela cheia" : "Tela cheia"}</span>
+          </Button>
           <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
             {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
             {savedForStudy ? "Salva" : "Salvar"}
@@ -957,7 +977,7 @@ function QuestionTrainer() {
             Correção imediata
           </span>
         </div>
-        <CardContent className="p-3.5 sm:p-5 md:p-7">
+        <CardContent className="trainer-reading-content p-3.5 sm:p-5 md:p-7">
           <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}
@@ -1012,6 +1032,7 @@ function QuestionTrainer() {
               />
             ))}
           </div>
+          <section className="trainer-reading-stem" aria-label="Enunciado da questão">
           {parsed.base && (
             <details
               open
@@ -1029,6 +1050,8 @@ function QuestionTrainer() {
           <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
             {parsed.stem}
           </p>
+          </section>
+          <section className="trainer-reading-answers" aria-label="Alternativas da questão">
           <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
             {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
           </p>
@@ -1145,7 +1168,8 @@ function QuestionTrainer() {
               </button>
             ))}
           </div>
-          <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
+          </section>
+          <div className="trainer-reading-actions mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
             {!answered ? (
               <>
                 <div className="flex flex-wrap gap-2">
@@ -1193,7 +1217,7 @@ function QuestionTrainer() {
             )}
           </div>
           {answered && (
-            <div className="mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
+            <div className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-xs font-black uppercase tracking-wider text-primary">Explicação da questão</p>
                 <Button variant="outline" size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
