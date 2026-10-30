@@ -93,6 +93,11 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
   const available = items.filter(item => !item.soon && !item.adminOnly);
   const current = activeNavigation(available, pathname, search);
   const home = available.find(item => item.href === "/dashboard");
+  const centralActive = current?.group === "Central de Estudos";
+  const [centralOpen, setCentralOpen] = useState(centralActive);
+  useEffect(() => {
+    if (centralActive) setCentralOpen(true);
+  }, [centralActive]);
   return (
     <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
       {home && (() => {
@@ -129,8 +134,20 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
           const childItems = entries.filter((item) => !(item.href === entry.href && !item.search));
           return (
             <div key={group} className="student-central-nav">
-              {sectionLink}
-              <div className="student-central-nav__entries ml-4 grid gap-1 border-l border-border/60 py-1 pl-3">
+              <div className="student-central-nav__header flex items-center gap-1">
+                <div className="min-w-0 flex-1">{sectionLink}</div>
+                <button
+                  type="button"
+                  className="app-nav__link shrink-0 justify-center"
+                  aria-label={centralOpen ? "Recolher menu da Central de Estudos" : "Expandir menu da Central de Estudos"}
+                  aria-expanded={centralOpen}
+                  aria-controls="student-central-nav-entries"
+                  onClick={() => setCentralOpen((open) => !open)}
+                >
+                  <ChevronDown aria-hidden="true" className="transition-transform" data-open={centralOpen} />
+                </button>
+              </div>
+              <div id="student-central-nav-entries" hidden={!centralOpen} className="student-central-nav__entries ml-4 grid gap-1 border-l border-border/60 py-1 pl-3">
                 {childItems.map((item) => {
                   const selected = !!current && navigationKey(current) === navigationKey(item);
                   const ChildIcon = item.icon;
