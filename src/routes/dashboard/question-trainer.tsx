@@ -1492,38 +1492,23 @@ function TrainerSetup({
   };
   return (
     <div className="trainer-setup mx-auto max-w-5xl space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
-      <section className="question-trainer-hero question-trainer-hero--compact tactical-feature-hero overflow-hidden rounded-xl p-3 text-white shadow-sm">
-        <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
-          <div>
-            <Badge className="mb-1 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
-              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
-            </Badge>
-            <h1 className="text-lg font-extrabold leading-tight sm:text-xl">
-              Monte sua sessão de questões
-            </h1>
-          </div>
-          <div className="grid grid-cols-2 gap-1.5 text-center">
-            <div className="rounded-lg border border-white/10 bg-white/10 px-2.5 py-1.5">
-              <p className="text-lg font-black leading-tight">{total}</p>
-              <p className="text-[10px] text-slate-300">questões ativas</p>
-            </div>
-            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-2.5 py-1.5">
-              <p className="text-lg font-black leading-tight text-amber-200">{available}</p>
-              <p className="text-[10px] text-slate-300">na seleção</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
+      <Card className="trainer-setup__unified command-panel overflow-hidden border border-border/80 shadow-lg">
         <CardContent className="p-3 sm:p-4 md:p-5">
-          <div className="mb-2 flex items-center gap-2.5 sm:mb-3 sm:gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200 sm:h-11 sm:w-11">
-              <BookOpenCheck className="h-5 w-5" />
+          <header className="trainer-setup__unified-head mb-3 flex flex-wrap items-center justify-between gap-3 border-b border-border/70 pb-3">
+            <div className="flex min-w-0 items-center gap-3">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-amber-400/20 bg-amber-400/10 text-amber-300">
+                <BookOpenCheck className="h-4 w-4" aria-hidden="true" />
+              </span>
+              <div className="min-w-0">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Treinamento de precisão</span>
+                <h1 className="text-lg font-extrabold leading-tight sm:text-xl">Monte sua sessão de questões</h1>
+              </div>
             </div>
-            <div>
-              <h2 className="text-lg font-black">Filtros do treino</h2>
+            <div className="flex shrink-0 items-center gap-2" aria-label="Resumo das questões">
+              <span className="trainer-setup__metric"><strong>{total}</strong><small>ativas</small></span>
+              <span className="trainer-setup__metric trainer-setup__metric--selected"><strong>{available}</strong><small>na seleção</small></span>
             </div>
-          </div>
+          </header>
           {values.area !== "all" && (
             <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
               Filtro do seu cronograma: {values.area}

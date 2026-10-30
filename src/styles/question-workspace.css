@@ -1670,3 +1670,20 @@
     overscroll-behavior: contain;
   }
 }
+
+/* Single cohesive preparation card. No separate hero occupies viewport height. */
+.trainer-setup .trainer-setup__unified { border-radius: 16px; }
+.trainer-setup .trainer-setup__unified-head { min-height: 55px; }
+.trainer-setup .trainer-setup__metric {
+  display: flex; align-items: baseline; gap: 5px;
+  padding: 7px 9px; border-radius: 9px; border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--muted) 45%, transparent);
+  white-space: nowrap;
+}
+.trainer-setup .trainer-setup__metric strong { font-size: 16px; line-height: 1; font-weight: 800; font-variant-numeric: tabular-nums; }
+.trainer-setup .trainer-setup__metric small { color: var(--muted-foreground); font-size: 10px; }
+.trainer-setup .trainer-setup__metric--selected { border-color: color-mix(in srgb, var(--brass) 40%, var(--border)); }
+@media (max-width: 600px) {
+  .trainer-setup .trainer-setup__unified-head { align-items: flex-start; }
+  .trainer-setup .trainer-setup__metric { padding: 6px 8px; }
+}
