@@ -76,15 +76,63 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    // Only public HTTPS web destinations are accepted. DNS-resolved private
+    // addresses and redirects must not be fetched by this privileged service.
+    let target: URL;
+    try {
+      target = new URL(url);
+      if (target.protocol !== "https:" || target.username || target.password || target.port) {
+        throw new Error("Destino inválido");
+      }
+      const host = target.hostname.toLowerCase().replace(/\\.$/, "");
+      if (!/^[a-z0-9.-]+$/.test(host) || !host.includes(".") ||
+          host === "localhost" || host.endsWith(".localhost") ||
+          host.endsWith(".local") || host.endsWith(".internal") ||
+          /^\\d+\\.\\d+\\.\\d+\\.\\d+$/.test(host) ||
+          host.includes(":")) throw new Error("Destino inválido");
+      // Constrain requests to known official publishing domains. Additional
+      // exam boards may be added only after explicit security review.
+      const trusted = ["gov.br", "jus.br", "leg.br", "edu.br", "cebraspe.org.br", "fgv.br",
+        "fcc.org.br", "vunesp.com.br", "ibfc.org.br", "institutoaocp.org.br"];
+      if (!trusted.some((domain) => host === domain || host.endsWith("." + domain))) {
+        throw new Error("Domínio não autorizado para importação");
+      }
+    } catch {
+      return new Response(JSON.stringify({ error: "URL não permitida. Use um endereço HTTPS de fonte oficial autorizada." }), {
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     let pageText: string;
     try {
-      const pageResponse = await fetch(url, {
+      const pageResponse = await fetch(target.toString(), {
+        redirect: "error",
+        signal: AbortSignal.timeout(10000),
         headers: { "User-Agent": "Mozilla/5.0 (compatible; NorteConcursosBot/1.0)" },
       });
       if (!pageResponse.ok) {
         throw new Error(`A página respondeu ${pageResponse.status}`);
       }
-      const html = await pageResponse.text();
+      const declaredSize = Number(pageResponse.headers.get("content-length") || "0");
+      if (declaredSize > 1_000_000) throw new Error("Página muito grande");
+      const reader = pageResponse.body?.getReader();
+      if (!reader) throw new Error("Resposta sem conteúdo");
+      const chunks: Uint8Array[] = [];
+      let total = 0;
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        total += value.byteLength;
+        if (total > 1_000_000) {
+          await reader.cancel();
+          throw new Error("Página muito grande");
+        }
+        chunks.push(value);
+      }
+      const bytes = new Uint8Array(total);
+      let offset = 0;
+      for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
+      const html = new TextDecoder().decode(bytes);
       // Extração simples: remove script/style/tags e colapsa espaços. Não precisa ser perfeita —
       // o modelo só usa isso para localizar os campos, e o admin confere tudo antes de salvar.
       pageText = html
