@@ -133,6 +133,11 @@ function WorkedCaseCard({
           </p>
         )}
         <p className="worked-pitfall mt-4 text-sm leading-6"><strong>Erro comum: </strong><StudyText text={example.pitfall} /></p>
+        <div className="worked-variation mt-4 rounded-lg border p-3">
+          <h4 className="font-semibold">E se o caso mudar?</h4>
+          <p className="mt-2 text-sm leading-6"><StudyText text={example.variation.scenario} /></p>
+          <p className="mt-2 text-sm leading-6"><strong>Resposta: </strong><StudyText text={example.variation.answer} /></p>
+        </div>
       </details>
     </article>
   );
