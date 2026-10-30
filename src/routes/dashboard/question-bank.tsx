@@ -12,7 +12,6 @@ import {
   Loader2,
   RefreshCw,
   Search,
-  TextSearch,
 } from "lucide-react";
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
@@ -26,7 +25,6 @@ import {
   type BankSource,
   type BankCollection,
 } from "@/lib/questionBank";
-import { trainerCollectionQuestions } from "@/lib/trainerFilters";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { PageHero, LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
