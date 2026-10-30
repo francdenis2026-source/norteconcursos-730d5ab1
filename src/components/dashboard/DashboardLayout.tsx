@@ -40,6 +40,7 @@ import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
 import {
   BookMarked,
   BookOpen,
+  BookOpenCheck,
   CalendarClock,
   BrainCircuit,
   ChevronsLeft,
