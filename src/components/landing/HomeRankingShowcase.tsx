@@ -17,7 +17,7 @@ const number = new Intl.NumberFormat("pt-BR");
 const REFRESH_MS = 30 * 60 * 1000;
 const MIN_SHOWCASE_POINTS = 50;
 
-export function HomeRankingShowcase() {
+export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
   const [candidates, setCandidates] = useState<Candidate[] | null>(null);
   const [unavailable, setUnavailable] = useState(false);
   const [updated, setUpdated] = useState<Date | null>(null);
@@ -64,7 +64,7 @@ export function HomeRankingShowcase() {
     position === 1 ? <Gem aria-hidden="true" /> :
     position === 2 || position === 3 ? <Medal aria-hidden="true" /> : <Award aria-hidden="true" />;
   return (
-    <section className="home-ranking" aria-labelledby="home-ranking-title">
+    <section id={anchorId} className="home-ranking" aria-labelledby="home-ranking-title">
       <div className="home-container">
         <div className="home-ranking__shell">
           <div className="home-ranking__heading">
