@@ -55,7 +55,8 @@ export function useLockedAnswers(userId: string | undefined, enabled: boolean, c
   return {
     locked,
     identityReady: result.data?.identityReady ?? false,
-    loading: enabled && !!userId && (result.isPending || result.isFetching),
+    // A atualização em segundo plano não deve esconder a questão nem bloquear a explicação já liberada.
+    loading: enabled && !!userId && result.isPending,
     error: result.isError ? "Não foi possível conferir seu histórico de respostas. Tente novamente." : null,
     reload: result.refetch,
     markLocked,
