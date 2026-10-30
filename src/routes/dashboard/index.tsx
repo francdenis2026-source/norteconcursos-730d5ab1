@@ -1,6 +1,7 @@
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import "@/styles/student-desk.css";
 import "@/styles/student-overview.css";
+import "@/styles/student-overview-v3.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
