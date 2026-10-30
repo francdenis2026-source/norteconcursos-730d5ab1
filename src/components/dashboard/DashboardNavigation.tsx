@@ -4,8 +4,6 @@ import { Link } from "@tanstack/react-router";
 import { Hint } from "@/components/ui/hint";
 import {
   ChevronDown,
-  Route,
-  Crosshair,
   ScrollText,
   Cpu,
   Target,
