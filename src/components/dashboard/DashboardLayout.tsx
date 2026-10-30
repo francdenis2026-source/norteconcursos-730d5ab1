@@ -677,9 +677,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : studentGroupLabel(current.group))}</span>}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : (current.group === "Questões" ? "Questões" : studentGroupLabel(current.group)))}</span>}
               </div>
             </div>
+
+            {!isAdmin && current?.group === "Questões" && (
+              <StudentSectionNavigation compact items={items} pathname={location.pathname} search={location.search} />
+            )}
 
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
@@ -750,7 +754,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </Hint>
           </div>}
 
-          {!isAdmin && current?.group !== "Material didático" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
+          {!isAdmin && current?.group !== "Material didático" && current?.group !== "Questões" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"

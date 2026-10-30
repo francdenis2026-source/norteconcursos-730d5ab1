@@ -16,6 +16,14 @@ const QUESTION_TONES: Record<string, string> = {
   "/dashboard/question-bank": "blue",
 };
 
+const SHORT_QUESTION_LABELS: Record<string, string> = {
+  "/dashboard/question-trainer": "Treinador",
+  "/dashboard/errors": "Erros",
+  "/dashboard/flashcards": "Flashcards",
+  "/dashboard/notebooks": "Coleções",
+  "/dashboard/question-bank": "Acervo",
+};
+
 const sectionTones = ["blue", "teal", "violet", "amber", "rose"];
 
 /** Secondary destinations live in the workspace, never in expanding sidebar groups. */
@@ -23,10 +31,12 @@ export function StudentSectionNavigation({
   items,
   pathname,
   search,
+  compact = false,
 }: {
   items: NavigationItem[];
   pathname: string;
   search: Record<string, unknown>;
+  compact?: boolean;
 }) {
   const current = activeNavigation(items, pathname, search);
   const section = studentSections(items).find((section) => section.group === current?.group);
@@ -46,7 +56,7 @@ export function StudentSectionNavigation({
   return (
     <nav
       ref={nav}
-      className="workspace-section-nav no-print"
+      className={`workspace-section-nav no-print${compact ? " workspace-section-nav--inline" : ""}`}
       data-section={section.group}
       aria-label={`${studentGroupLabel(section.group)}: páginas da área`}
     >
@@ -66,7 +76,7 @@ export function StudentSectionNavigation({
             aria-current={navigationKey(item) === activeKey ? "page" : undefined}
           >
             <item.icon aria-hidden="true" />
-            <span>{item.label}</span>
+            <span>{compact && section.group === "Questões" ? (SHORT_QUESTION_LABELS[item.href] ?? item.label) : item.label}</span>
           </Link>
         </span>
       ))}
