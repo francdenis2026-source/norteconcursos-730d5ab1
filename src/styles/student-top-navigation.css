@@ -488,3 +488,117 @@
   .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron { display: none; }
   .app-shell.navigation-v2[data-area="student"] .app-topbar__actions { gap: 3px; }
 }
+
+/* Fix flex compression: navigation items keep their intrinsic width and scroll as a row. */
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .platform-back { display: none !important; }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .student-top-navigation {
+    flex: 1 1 0% !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow: hidden !important;
+    gap: clamp(8px, 1vw, 14px);
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+    flex: 0 0 auto !important;
+    min-width: max-content;
+    white-space: nowrap;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    display: flex !important;
+    flex: 1 1 0% !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    flex-wrap: nowrap !important;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(145 173 205 / 42%) transparent;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    word-break: keep-all;
+    overflow: visible;
+    padding-inline: clamp(7px, .65vw, 10px);
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+    flex: 0 0 27px !important;
+    width: 27px !important;
+    min-width: 27px !important;
+    height: 27px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap svg {
+    display: block;
+    flex: none !important;
+    width: 16px !important;
+    min-width: 16px !important;
+    height: 16px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__label {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron {
+    flex: 0 0 11px !important;
+    width: 11px !important;
+    min-width: 11px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions {
+    flex: 0 0 auto !important;
+    min-width: max-content;
+    gap: 4px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions > :is(.app-top-btn, .workspace-fullscreen-trigger, .app-top-search, .app-theme-toggle) {
+    flex: 0 0 33px !important;
+    width: 33px !important;
+    min-width: 33px !important;
+    height: 33px !important;
+    min-height: 33px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1180px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand > span:last-child { display: none !important; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    min-height: 39px;
+    gap: 5px;
+    padding-inline: 6px;
+    font-size: 10px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+    flex-basis: 24px !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    height: 24px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap svg {
+    width: 15px !important;
+    min-width: 15px !important;
+    height: 15px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron { display: none; }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar .app-chips { display: none !important; }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__label { display: none !important; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    min-width: 38px !important;
+    width: 38px !important;
+    padding: 0 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+    margin: 0 auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links { scroll-behavior: auto; }
+}
