@@ -1474,7 +1474,7 @@
    sat behind the app shell/parent clipping and collapsed the question to a strip.
    Only native fullscreen is viewport-constrained (rules above). */
 @media (min-width: 1050px) {
- .app-shell[data-area="student"] .question-workspace.trainer-session-shellhtml:not(:fullscreen) .trainer-reading-workspace {
+ html:not(:fullscreen) .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
    position: relative !important;
    inset: auto !important;
    z-index: auto !important;
