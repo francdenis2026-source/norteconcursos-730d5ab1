@@ -602,3 +602,145 @@
 @media (prefers-reduced-motion: reduce) {
   .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links { scroll-behavior: auto; }
 }
+
+/* LIGHT THEME — accessible color system for the student navigation and learning icons.
+   Keep the light palette genuinely light; use saturated strokes and soft category tints. */
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar {
+  color: #20354b;
+  background: linear-gradient(105deg, #f7faff 0%, #edf4fb 55%, #f8faff 100%) !important;
+  border-bottom-color: #d7e2ef !important;
+  box-shadow: 0 5px 18px rgb(31 57 83 / 8%), inset 0 1px 0 #fff;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar :is(.platform-back, .app-top-btn, .workspace-fullscreen-trigger, .app-top-search, .app-theme-toggle) {
+  color: #45617d !important;
+  background: #fff !important;
+  border-color: #d5e1ed !important;
+  box-shadow: 0 1px 3px rgb(35 59 84 / 7%);
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar :is(.platform-back, .app-top-btn, .workspace-fullscreen-trigger, .app-top-search, .app-theme-toggle) svg {
+  color: #456f9d !important;
+  stroke: currentColor;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar :is(.platform-back, .app-top-btn, .workspace-fullscreen-trigger, .app-top-search, .app-theme-toggle):hover {
+  color: #174f8a !important;
+  background: #edf5ff !important;
+  border-color: #9dbde0 !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar .app-chips {
+  background: #fff !important;
+  border-color: #d5e1ed !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar .app-chips .app-streak { color: #29435f !important; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar .app-streak svg { color: #c18a2d !important; }
+
+@media (min-width: 768px) {
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand { color: #18324d !important; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand strong { color: #a66b12 !important; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-mark {
+    color: #a66b12 !important;
+    border-color: #c99a43 !important;
+    background: linear-gradient(145deg, #fff8e9, #f8edcf) !important;
+    box-shadow: 0 2px 8px rgb(145 105 36 / 12%);
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    color: #29435e !important;
+    border-color: color-mix(in srgb, var(--nav-accent) 24%, #dce5ef) !important;
+    background: color-mix(in srgb, var(--nav-accent) 8%, #fff) !important;
+    box-shadow: 0 1px 3px rgb(29 57 85 / 5%);
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="slate"] { --nav-accent: #647b94; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="blue"] { --nav-accent: #2874c7; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="cyan"] { --nav-accent: #07899a; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #8055c7; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="emerald"] { --nav-accent: #16845c; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="amber"] { --nav-accent: #a66a0a; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"] { --nav-accent: #bd5277; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="indigo"] { --nav-accent: #5367bd; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__label {
+    color: var(--nav-accent) !important;
+    font-weight: 800;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__icon-wrap {
+    color: var(--nav-accent) !important;
+    border-color: color-mix(in srgb, var(--nav-accent) 38%, #fff) !important;
+    background: color-mix(in srgb, var(--nav-accent) 12%, #fff) !important;
+    box-shadow: inset 0 1px 0 #fff, 0 1px 3px rgb(28 53 78 / 7%);
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__icon-wrap svg {
+    color: var(--nav-accent) !important;
+    stroke: currentColor !important;
+    opacity: 1 !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__chevron {
+    color: #71869c !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover,
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+    color: #18324d !important;
+    border-color: color-mix(in srgb, var(--nav-accent) 62%, #fff) !important;
+    background: color-mix(in srgb, var(--nav-accent) 13%, #fff) !important;
+    box-shadow: 0 3px 10px color-mix(in srgb, var(--nav-accent) 13%, transparent);
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover .student-top-navigation__label,
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] .student-top-navigation__label {
+    color: color-mix(in srgb, var(--nav-accent) 82%, #17324e) !important;
+    text-shadow: none !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] .student-top-navigation__icon-wrap {
+    color: var(--nav-accent) !important;
+    border-color: var(--nav-accent) !important;
+    background: color-mix(in srgb, var(--nav-accent) 17%, #fff) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--nav-accent) 10%, transparent);
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu {
+    color: #20354b !important;
+    border: 1px solid #d5e1ed !important;
+    background: #fff !important;
+    box-shadow: 0 16px 38px rgb(31 55 80 / 18%) !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu-title { color: #20354b !important; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu-description { color: #647b91 !important; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"] { color: #344d67 !important; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"] svg {
+    color: #3979b9 !important;
+    stroke: currentColor !important;
+  }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"]:hover,
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"]:focus {
+    color: #174f8a !important;
+    background: #edf5ff !important;
+  }
+}
+
+/* Give learning tools and dashboard action icons clear, consistent color in light mode. */
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a > svg {
+  color: #2874c7 !important;
+  stroke: currentColor !important;
+  background: #eaf3ff !important;
+  border: 1px solid #cfe1f6;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a:nth-child(2) > svg { color: #07899a !important; background: #e7f7f8 !important; border-color: #bfe8eb; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a:nth-child(3) > svg { color: #8055c7 !important; background: #f1ebfc !important; border-color: #ded0f5; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a:nth-child(4) > svg { color: #16845c !important; background: #e7f6ef !important; border-color: #c3e8d4; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-overview :is(.student-home__tool-icon, .student-home__metric > span, .student-home__section-title > span) svg {
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__text-link svg,
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__planning-link svg { color: #2874c7 !important; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__signals li > svg { color: #bd5277 !important; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__blocks li > svg { color: #16845c !important; }
+
+/* Generic student workspace controls: restore a crisp visible stroke instead of washed-out monochrome icons. */
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-content :is(button, a, [role="button"]) > svg {
+  opacity: 1;
+  stroke: currentColor;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-content :is(button, a, [role="button"]):hover > svg {
+  color: #236eb4;
+}
