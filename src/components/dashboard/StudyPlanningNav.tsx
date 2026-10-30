@@ -1,12 +1,12 @@
 import { Link } from '@tanstack/react-router';
-import { CalendarClock, Sparkles, BarChart3, Timer } from 'lucide-react';
+import { CalendarClock, Sparkles, BarChart3, Target } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const sections = [
-  { key: 'coach', href: '/dashboard/study-coach', label: 'Configuração do estudo', detail: 'Disponibilidade e distribuição da sua semana', icon: Sparkles },
-  { key: 'schedule', href: '/dashboard/cronograma', label: 'Agenda por edital', detail: 'Tópicos do edital e execução do dia', icon: CalendarClock },
-  { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Ajustes pelos resultados', detail: 'Prioridades a partir das provas realizadas', icon: BarChart3 },
-  { key: 'focus', href: '/dashboard/study-tools', label: 'Central de estudo', detail: 'Notas, guias, comparações, quiz e sessão de foco', icon: Timer },
+  { key: 'objective', href: '/dashboard/my-contest', label: 'Meu objetivo', detail: 'Concurso, cargo e edital', icon: Target },
+  { key: 'coach', href: '/dashboard/study-coach', label: 'Meu plano', detail: 'Rotina e disponibilidade', icon: Sparkles },
+  { key: 'schedule', href: '/dashboard/cronograma', label: 'Agenda', detail: 'Tópicos e execução do dia', icon: CalendarClock },
+  { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Minha evolução', detail: 'Prioridades pelos resultados', icon: BarChart3 },
 ] as const;
 
 export function StudyPlanningNav({ active }: { active: typeof sections[number]['key'] }) {
