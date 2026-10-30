@@ -19,8 +19,6 @@ import {
   Flame,
   Lock,
   Loader2,
-  Maximize2,
-  Minimize2,
   RotateCcw,
   SkipForward,
   Sparkles,
@@ -207,20 +205,6 @@ function QuestionTrainer() {
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
-  const trainerScreenRef = React.useRef<HTMLDivElement>(null);
-  const [immersive, setImmersive] = React.useState(false);
-  React.useEffect(() => {
-    const sync = () => setImmersive(document.fullscreenElement === trainerScreenRef.current);
-    document.addEventListener("fullscreenchange", sync);
-    return () => document.removeEventListener("fullscreenchange", sync);
-  }, []);
-  const toggleImmersive = () => {
-    if (document.fullscreenElement === trainerScreenRef.current) {
-      void document.exitFullscreen().catch(() => {});
-    } else if (trainerScreenRef.current?.requestFullscreen) {
-      void trainerScreenRef.current.requestFullscreen().catch(() => {});
-    }
-  };
   const [successFeedback, setSuccessFeedback] = React.useState(false);
   const successTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const clearSuccessFeedback = React.useCallback(() => {
@@ -868,7 +852,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div ref={trainerScreenRef} className="trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+    <div className="trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
       {successFeedback && (
         <div
@@ -946,10 +930,6 @@ function QuestionTrainer() {
           </Button>
         </div>
         <div className="trainer-topbar__group trainer-topbar__group--right flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={toggleImmersive} aria-pressed={immersive} aria-label={immersive ? "Sair do modo de leitura em tela cheia" : "Expandir treinador para tela cheia"}>
-            {immersive ? <Minimize2 className="mr-1.5 h-4 w-4" /> : <Maximize2 className="mr-1.5 h-4 w-4" />}
-            <span className="hidden sm:inline">{immersive ? "Sair da tela cheia" : "Tela cheia"}</span>
-          </Button>
           <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
             {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
             {savedForStudy ? "Salva" : "Salvar"}
