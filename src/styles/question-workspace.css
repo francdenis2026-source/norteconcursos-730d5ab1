@@ -1309,3 +1309,86 @@
 .question-workspace .trainer-collection button[data-preparation] span { min-width: 0; text-align: left; }
 .question-workspace .trainer-collection button[data-preparation] span small { display: block; margin-top: 3px; font-size: 11px; line-height: 1.35; }
 @media (max-width: 620px) { .question-workspace .trainer-collection > div { grid-template-columns: 1fr; } }
+
+/* Treinador: leitura compacta em janela, sem sacrificar letras ou alternativas longas. */
+.trainer-reading-workspace { width: min(100%, 1320px); max-width: 100%; min-width: 0; }
+.trainer-reading-workspace .question-window { min-width: 0; }
+.trainer-reading-workspace .trainer-reading-content { min-width: 0; }
+.trainer-reading-stem, .trainer-reading-answers { min-width: 0; overflow-wrap: anywhere; }
+.trainer-reading-stem > p { font-size: clamp(14px, 1.05vw, 17px); line-height: 1.55; }
+.trainer-reading-answers > div > div > button { min-height: 40px; }
+.trainer-reading-actions { position: relative; }
+@media (min-width: 1100px) {
+  .trainer-reading-workspace .trainer-reading-content { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); column-gap: clamp(14px, 2vw, 28px); align-content: start; }
+  .trainer-reading-content > :nth-child(1), .trainer-reading-content > :nth-child(2), .trainer-reading-content > :nth-child(3),
+  .trainer-reading-actions, .trainer-reading-explanation { grid-column: 1 / -1; }
+  .trainer-reading-stem { grid-column: 1; grid-row: 4; padding-right: 4px; }
+  .trainer-reading-answers { grid-column: 2; grid-row: 4; border-left: 1px solid var(--border); padding-left: clamp(12px, 1.6vw, 23px); }
+  .trainer-reading-answers > p:first-child { margin-top: 0; }
+  .trainer-reading-answers > div.mt-3.space-y-2 { margin-top: 8px; }
+  .trainer-reading-answers > div.mt-3.space-y-2 > div { margin-bottom: 5px; }
+  .trainer-reading-actions { grid-row: 5; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .trainer-reading-explanation { grid-row: 6; }
+}
+/* Native fullscreen keeps toolbar/actions visible. Long stems scroll only inside their reading pane. */
+.trainer-reading-workspace:fullscreen {
+  box-sizing: border-box; width: 100vw !important; max-width: none !important;
+  height: 100dvh; max-height: 100dvh; padding: 12px 16px !important;
+  margin: 0 !important; background: var(--background); color: var(--foreground);
+  display: flex; flex-direction: column; gap: 8px !important; overflow: hidden;
+}
+.trainer-reading-workspace:fullscreen > header { flex: 0 0 auto; }
+.trainer-reading-workspace:fullscreen > .question-window {
+  flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column;
+  box-shadow: none; border-radius: 14px;
+}
+.trainer-reading-workspace:fullscreen > .question-window > .trainer-reading-content {
+  flex: 1 1 auto; min-height: 0; display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+  column-gap: 18px; padding: 12px 18px;
+}
+.trainer-reading-workspace:fullscreen .trainer-reading-content > :nth-child(1),
+.trainer-reading-workspace:fullscreen .trainer-reading-content > :nth-child(2),
+.trainer-reading-workspace:fullscreen .trainer-reading-content > :nth-child(3) { grid-column: 1 / -1; }
+.trainer-reading-workspace:fullscreen .trainer-reading-stem,
+.trainer-reading-workspace:fullscreen .trainer-reading-answers {
+  grid-row: 4; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; padding-bottom: 8px;
+}
+.trainer-reading-workspace:fullscreen .trainer-reading-stem { grid-column: 1; }
+.trainer-reading-workspace:fullscreen .trainer-reading-answers { grid-column: 2; border-left: 1px solid var(--border); padding-left: 16px; }
+.trainer-reading-workspace:fullscreen .trainer-reading-actions { grid-column: 1 / -1; grid-row: 5; flex-shrink: 0; margin-top: 4px; padding-top: 8px; border-top: 1px solid var(--border); }
+.trainer-reading-workspace:fullscreen .trainer-reading-explanation {
+  display: block; grid-column: 1 / -1; grid-row: 6;
+  max-height: 20dvh; overflow-y: auto; margin-top: 6px;
+  padding: 10px; scrollbar-width: thin;
+}
+.trainer-reading-workspace:fullscreen .trainer-reading-content > div[role="status"] { grid-column: 1 / -1; }
+@media (max-width: 900px) {
+  .trainer-reading-workspace:fullscreen { overflow-y: auto; }
+  .trainer-reading-workspace:fullscreen > .question-window { flex: 0 0 auto; }
+  .trainer-reading-workspace:fullscreen > .question-window > .trainer-reading-content { display: block; }
+  .trainer-reading-workspace:fullscreen .trainer-reading-stem,
+  .trainer-reading-workspace:fullscreen .trainer-reading-answers { overflow: visible; border-left: 0; padding-left: 0; }
+  .trainer-reading-workspace:fullscreen .trainer-reading-explanation { display: block; }
+}
+
+/* Explicit grid placements remain correct when the prior-answer notice appears. */
+@media (min-width: 1100px) {
+  .trainer-reading-content > .trainer-reading-meta,
+  .trainer-reading-content > .trainer-reading-review,
+  .trainer-reading-content > .trainer-reading-heading,
+  .trainer-reading-content > .trainer-reading-progress { grid-column: 1 / -1; }
+  .trainer-reading-content > .trainer-reading-meta { grid-row: 1; }
+  .trainer-reading-content > .trainer-reading-review { grid-row: 2; }
+  .trainer-reading-content > .trainer-reading-heading { grid-row: 3; }
+  .trainer-reading-content > .trainer-reading-progress { grid-row: 3; justify-self: stretch; align-self: end; margin-top: 38px; }
+}
+.trainer-reading-workspace:fullscreen .trainer-reading-meta { grid-column: 1 / -1; grid-row: 1; }
+.trainer-reading-workspace:fullscreen .trainer-reading-review { grid-column: 1 / -1; grid-row: 2; }
+.trainer-reading-workspace:fullscreen .trainer-reading-heading { grid-column: 1 / -1; grid-row: 3; }
+.trainer-reading-workspace:fullscreen .trainer-reading-progress { grid-column: 1 / -1; grid-row: 3; align-self: end; margin-top: 38px; }
+@media (max-width: 900px) {
+  .trainer-reading-workspace:fullscreen .trainer-reading-progress { margin-top: 0; }
+}
