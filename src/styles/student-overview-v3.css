@@ -1,0 +1,530 @@
+/* Norte Concursos — student dashboard visual system v3.
+   A compact, action-first workspace with clear hierarchy and confident color.
+   Scoped to the student overview; all data, routes and interactions remain intact. */
+.app-shell[data-area="student"] .app-content__inner:has(> .student-overview) {
+  width: 100% !important;
+  max-width: 1880px !important;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .app-content:has(> .app-content__inner > .student-overview) {
+  width: 100%;
+  padding-inline: clamp(12px, 2vw, 32px) !important;
+}
+.app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: #f4f7fb;
+  --home-muted: #aab9ca;
+  --home-line: rgb(164 190 216 / 18%);
+  --home-surface: #142235;
+  --home-surface-2: #192b40;
+  --home-blue: #7db8ff;
+  --home-cyan: #66d6df;
+  --home-green: #69d5a6;
+  --home-gold: #f0c36d;
+  --home-violet: #b79aff;
+  --home-rose: #f09ab5;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(10px, 1.15vw, 16px);
+  font-size: 14px;
+  line-height: 1.5;
+}
+:root:not(.dark) .app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: #142b42;
+  --home-muted: #526a80;
+  --home-line: rgb(43 76 107 / 16%);
+  --home-surface: #ffffff;
+  --home-surface-2: #f2f7fb;
+  --home-blue: #246dc0;
+  --home-cyan: #087f91;
+  --home-green: #16865d;
+  --home-gold: #a66a0a;
+  --home-violet: #7551b5;
+  --home-rose: #b94f76;
+}
+.app-shell[data-area="student"] .student-overview > * { min-width: 0; margin-block: 0; }
+
+/* Welcome banner: compact, high-contrast and free of oversized decorative artwork. */
+.app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 104px !important;
+  padding: clamp(16px, 2vw, 26px) clamp(18px, 2.4vw, 34px) !important;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--home-blue) 42%, var(--home-line)) !important;
+  border-radius: 18px !important;
+  color: var(--home-ink);
+  background:
+    radial-gradient(ellipse at 88% 10%, color-mix(in srgb, var(--home-violet) 20%, transparent), transparent 38%),
+    radial-gradient(ellipse at 65% 110%, color-mix(in srgb, var(--home-cyan) 16%, transparent), transparent 42%),
+    linear-gradient(112deg, #10263e, #173955 58%, #202e4b) !important;
+  box-shadow: 0 14px 36px -28px rgb(0 0 0 / 55%), inset 0 1px 0 rgb(255 255 255 / 9%);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead::before,
+.app-shell[data-area="student"] .student-overview .student-hub__masthead::after { content: none !important; display: none !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__hero-visual { display: none !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 24px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__welcome {
+  grid-column: 1;
+  color: #9dc9f5 !important;
+  font-size: 12px !important;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead h1 {
+  grid-column: 1;
+  margin: 1px 0 3px !important;
+  color: #fff !important;
+  font-family: var(--font-display);
+  font-size: clamp(23px, 2.1vw, 31px) !important;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy > p:last-of-type {
+  grid-column: 1;
+  margin: 0;
+  color: #d0deec !important;
+  font-size: 13px !important;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  width: auto;
+  max-width: none;
+  min-width: 130px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat {
+  min-height: 64px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 13px;
+  background: rgb(255 255 255 / 9%);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat :is(span,strong) { color: #fff !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat strong { font-size: 24px; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions :is(.student-hub__date, a) {
+  color: #dce9f7 !important;
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions a {
+  font-weight: 750;
+  color: #f2ca7d !important;
+}
+
+/* Platform catalogue count: a clean compact strip, not another competing hero. */
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact {
+  padding: 10px 14px;
+  border: 1px solid var(--home-line);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--home-surface) 92%, transparent);
+  box-shadow: 0 5px 18px -18px rgb(0 0 0 / 45%);
+}
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact > header {
+  margin-bottom: 6px;
+}
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact > header h2 {
+  color: var(--home-ink);
+  font-size: 12px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact > header span {
+  color: var(--home-muted);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] .student-overview .platform-question-counts__grid { gap: 8px; }
+.app-shell[data-area="student"] .student-overview .platform-question-counts__grid > * {
+  min-height: 38px;
+  border-radius: 9px;
+  border-color: var(--home-line);
+  background: var(--home-surface-2);
+}
+
+/* Quick actions: larger SVG icons and a crisp colored rail. */
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 2px 7px;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading h2 {
+  color: var(--home-ink);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading > span {
+  color: var(--home-muted);
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  min-height: 68px;
+  padding: 10px 12px;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: var(--home-surface);
+  box-shadow: 0 5px 16px -18px rgb(0 0 0 / 45%);
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  color: var(--home-blue);
+  background: color-mix(in srgb, var(--home-blue) 13%, var(--home-surface-2));
+  border: 1px solid color-mix(in srgb, var(--home-blue) 30%, transparent);
+}
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon svg {
+  width: 21px !important;
+  height: 21px !important;
+  stroke-width: 2.1;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a[data-accent="teal"] .student-home__tool-icon { color: var(--home-cyan); background: color-mix(in srgb, var(--home-cyan) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a[data-accent="violet"] .student-home__tool-icon { color: var(--home-violet); background: color-mix(in srgb, var(--home-violet) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a[data-accent="rose"] .student-home__tool-icon { color: var(--home-rose); background: color-mix(in srgb, var(--home-rose) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a[data-accent="amber"] .student-home__tool-icon { color: var(--home-gold); background: color-mix(in srgb, var(--home-gold) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong {
+  display: block;
+  color: var(--home-ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
+  display: block;
+  margin-top: 3px;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a > svg { display: none; }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--home-blue) 55%, var(--home-line));
+  box-shadow: 0 9px 22px -16px color-mix(in srgb, var(--home-blue) 42%, transparent);
+}
+
+/* Four live metrics: consistent cards with clear numerals and meaningful color. */
+.app-shell[data-area="student"] .student-overview .student-home__metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 14px;
+  align-items: center;
+  min-height: 82px;
+  padding: 12px 14px;
+  gap: 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: var(--home-surface);
+  text-align: left;
+  transition: transform 150ms ease, border-color 150ms ease;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric > span {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  color: var(--home-blue);
+  background: color-mix(in srgb, var(--home-blue) 13%, var(--home-surface-2));
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="teal"] > span { color: var(--home-green); background: color-mix(in srgb, var(--home-green) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="amber"] > span { color: var(--home-gold); background: color-mix(in srgb, var(--home-gold) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="violet"] > span { color: var(--home-violet); background: color-mix(in srgb, var(--home-violet) 13%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__metric > span svg { width: 21px; height: 21px; stroke-width: 2.1; }
+.app-shell[data-area="student"] .student-overview .student-home__metric h2 {
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--home-ink);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric p {
+  margin: 2px 0 0;
+  color: var(--home-muted);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric-arrow { width: 14px; height: 14px; color: var(--home-muted); }
+.app-shell[data-area="student"] .student-overview .student-home__metric:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--home-blue) 50%, var(--home-line)); }
+
+/* Next action: prominent but short; the action button stays easy to find. */
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid color-mix(in srgb, var(--home-gold) 48%, var(--home-line));
+  border-left: 4px solid var(--home-gold);
+  border-radius: 13px;
+  background: linear-gradient(105deg, color-mix(in srgb, var(--home-gold) 10%, var(--home-surface)), var(--home-surface));
+}
+.app-shell[data-area="student"] .student-overview .student-desk__eyebrow {
+  color: var(--home-gold);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__eyebrow svg { width: 14px; height: 14px; }
+.app-shell[data-area="student"] .student-overview .student-desk__next h2 {
+  margin: 2px 0;
+  color: var(--home-ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next p {
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary {
+  min-height: 40px;
+  flex: none;
+  padding: 0 17px;
+  border-radius: 9px;
+  color: #172a3e;
+  background: linear-gradient(110deg, #f5d58e, #e7b95f);
+  font-size: 12px;
+  font-weight: 850;
+  box-shadow: 0 5px 14px -9px rgb(230 181 91 / 80%);
+}
+
+/* Work area: agenda and weekly rhythm left; objective and revision on right. */
+.app-shell[data-area="student"] .student-overview .student-hub__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(320px, .95fr);
+  align-items: start;
+  gap: 12px;
+}
+.app-shell[data-area="student"] .student-overview :is(.student-hub__main, .student-hub__rail) {
+  display: grid;
+  align-content: start;
+  gap: 11px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: 16px;
+  border: 1px solid var(--home-line);
+  border-top: 3px solid var(--home-blue);
+  border-radius: 14px;
+  background: var(--home-surface);
+  box-shadow: 0 8px 24px -22px rgb(0 0 0 / 50%);
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="teal"] { border-top-color: var(--home-green); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="amber"] { border-top-color: var(--home-gold); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="violet"] { border-top-color: var(--home-violet); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="rose"] { border-top-color: var(--home-rose); }
+.app-shell[data-area="student"] .student-overview .student-home__section-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 12px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title > span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border: 1px solid color-mix(in srgb, var(--home-blue) 28%, transparent);
+  border-radius: 11px;
+  color: var(--home-blue);
+  background: color-mix(in srgb, var(--home-blue) 12%, var(--home-surface-2));
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="teal"] .student-home__section-title > span { color: var(--home-green); background: color-mix(in srgb, var(--home-green) 12%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="amber"] .student-home__section-title > span { color: var(--home-gold); background: color-mix(in srgb, var(--home-gold) 12%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="violet"] .student-home__section-title > span { color: var(--home-violet); background: color-mix(in srgb, var(--home-violet) 12%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="rose"] .student-home__section-title > span { color: var(--home-rose); background: color-mix(in srgb, var(--home-rose) 12%, var(--home-surface-2)); }
+.app-shell[data-area="student"] .student-overview .student-home__section-title > span svg { width: 20px; height: 20px; stroke-width: 2.15; }
+.app-shell[data-area="student"] .student-overview .student-home__section-title h2 {
+  margin: 0;
+  color: var(--home-ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title p {
+  margin: 2px 0 0;
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li {
+  grid-template-columns: 66px minmax(0, 1fr) 18px;
+  min-height: 52px;
+  padding: 9px 0;
+  gap: 10px;
+  border-bottom: 1px solid var(--home-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li strong { color: var(--home-ink); font-size: 13px; font-weight: 750; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li small { color: var(--home-muted); font-size: 11px; }
+.app-shell[data-area="student"] .student-overview .student-home__coverage {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 12px;
+  color: var(--home-muted);
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__coverage strong { color: var(--home-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 99px;
+  accent-color: var(--home-green);
+}
+.app-shell[data-area="student"] .student-overview .student-home__day-heading h3 { color: var(--home-ink); font-size: 13px; font-weight: 800; }
+.app-shell[data-area="student"] .student-overview .student-home__day-heading span { color: var(--home-muted); font-size: 10px; }
+.app-shell[data-area="student"] .student-overview .student-home__next-topic {
+  margin-top: 10px;
+  padding: 11px 12px;
+  border: 1px solid color-mix(in srgb, var(--home-cyan) 25%, var(--home-line));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--home-cyan) 7%, var(--home-surface-2));
+}
+.app-shell[data-area="student"] .student-overview .student-home__next-topic :is(span, small) { color: var(--home-muted); font-size: 10px; }
+.app-shell[data-area="student"] .student-overview .student-home__next-topic strong { color: var(--home-ink); font-size: 13px; }
+.app-shell[data-area="student"] .student-overview .student-home__objective-name { color: var(--home-ink); font-size: 14px; font-weight: 800; }
+.app-shell[data-area="student"] .student-overview :is(.student-home__quiet, .student-home__empty p, .student-home__signals small, .student-home__review-count) {
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .student-overview .student-home__text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  color: var(--home-blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .student-overview .student-home__text-link svg { width: 14px; height: 14px; }
+.app-shell[data-area="student"] .student-overview .student-home__planning-link {
+  padding: 9px 12px;
+  border: 1px dashed color-mix(in srgb, var(--home-violet) 42%, var(--home-line));
+  border-radius: 10px;
+  color: var(--home-violet);
+  background: color-mix(in srgb, var(--home-violet) 6%, var(--home-surface));
+}
+.app-shell[data-area="student"] .student-overview .student-home__week {
+  gap: 8px;
+  min-height: 120px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__week-day > span { color: var(--home-muted); font-size: 10px; }
+.app-shell[data-area="student"] .student-overview .student-home__week-day > strong { color: var(--home-ink); font-size: 11px; }
+.app-shell[data-area="student"] .student-overview .student-home__bar-track { border-radius: 8px; background: var(--home-surface-2); }
+.app-shell[data-area="student"] .student-overview .student-home__bar-track i { border-radius: 8px; background: linear-gradient(180deg, var(--home-cyan), var(--home-blue)); }
+.app-shell[data-area="student"] .student-overview .student-home__week > [data-today="true"] .student-home__bar-track i { background: linear-gradient(180deg, #f6d78e, #dba94d); }
+.app-shell[data-area="student"] .student-overview .student-home__signals li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--home-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__signals li strong { color: var(--home-ink); font-size: 12px; }
+.app-shell[data-area="student"] .student-overview .student-home__signals li a {
+  flex: none;
+  color: var(--home-rose);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__results a {
+  min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid var(--home-line);
+  border-radius: 9px;
+  color: var(--home-ink);
+  background: var(--home-surface);
+  font-size: 11px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__results a svg:first-child { color: var(--home-violet); }
+.app-shell[data-area="student"] .student-overview .student-home__data-note {
+  color: var(--home-muted);
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__data-note summary { color: var(--home-blue); font-weight: 750; }
+
+@media (max-width: 1180px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__rail { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .app-shell[data-area="student"] .student-overview .student-hub__results { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-hub__rail { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead { padding: 15px !important; }
+  .app-shell[data-area="student"] .student-overview .student-hub__hero-copy { grid-template-columns: minmax(0, 1fr) auto; column-gap: 10px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats { min-width: 90px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat strong { font-size: 19px; }
+  .app-shell[data-area="student"] .student-overview .student-desk__next { align-items: flex-start; flex-direction: column; }
+  .app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary { width: 100%; justify-content: center; }
+}
+@media (max-width: 420px) {
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a { grid-template-columns: 36px minmax(0, 1fr); padding: 8px; gap: 8px; }
+  .app-shell[data-area="student"] .student-overview .student-home__tool-icon { width: 34px; height: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a,
+  .app-shell[data-area="student"] .student-overview .student-home__metric { transition: none; }
+}
