@@ -53,7 +53,7 @@ import { userStorageKey } from "@/lib/userStorage";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
-  validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined }),
+  validateSearch: (search: Record<string, unknown>): { context?: "enem"; tool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" } => ({ context: search["context"] === "enem" ? "enem" : undefined, tool: ["handwritten", "guide", "simplify", "compare", "quiz"].includes(String(search["tool"])) ? search["tool"] as "handwritten" | "guide" | "simplify" | "compare" | "quiz" : undefined }),
   component: StudyToolsPage,
 });
 
@@ -212,7 +212,7 @@ function readFocusHistory(): FocusRecord[] {
 function StudyToolsPage() {
   const ctx = useStudyContext();
   const fullscreen = useWorkspaceFullscreen(true);
-  const { context } = Route.useSearch();
+  const { context, tool } = Route.useSearch();
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
   const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;
@@ -334,7 +334,7 @@ function StudyToolsPage() {
         onFocusDone={(minutes) => onFocusDone(minutes, subject, topic)}
       />
 
-      {!enem && <StudyCentralCard subject={subject || suggested} topic={topic} />}
+      {!enem && <StudyCentralCard subject={subject || suggested} topic={topic} initialTool={tool} />}
 
       <FocusHistoryCard history={history} />
 
@@ -355,12 +355,14 @@ function StudyToolsPage() {
   );
 }
 
-function StudyCentralCard({ subject, topic }: { subject: string; topic: string }) {
-  const [tab, setTab] = React.useState<"notes" | "guide" | "compare" | "quiz">("notes");
+function StudyCentralCard({ subject, topic, initialTool }: { subject: string; topic: string; initialTool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" }) {
+  const [tab, setTab] = React.useState<"notes" | "guide" | "simplify" | "compare" | "quiz">("notes");
+  React.useEffect(() => { setTab(initialTool === "handwritten" ? "notes" : initialTool ?? "notes"); }, [initialTool]);
   const title = topic || subject || "Direitos fundamentais";
   const tabs = [
     ["notes", "Notas didáticas"],
     ["guide", "Study Guide"],
+    ["simplify", "Simplify"],
     ["compare", "Compare"],
     ["quiz", "Quiz Me"],
   ] as const;
@@ -393,6 +395,7 @@ function StudyCentralCard({ subject, topic }: { subject: string; topic: string }
           </div>
         )}
         {tab === "guide" && <StudyToolPanel title="Study Guide" text="1. Leia a nota de conceito. 2. Revise a pegadinha. 3. Resolva cinco questões. 4. Refaça amanhã as questões erradas." />}
+        {tab === "simplify" && <StudyToolPanel title="Simplify" text={`Reescreva ${title} em linguagem simples: identifique a ideia central, explique cada termo técnico e confira a explicação no material de estudo antes de memorizar.`} />}
         {tab === "compare" && <StudyToolPanel title="Compare" text="Coloque dois conceitos lado a lado e veja a diferença em definição, exemplo e erro mais comum." />}
         {tab === "quiz" && <StudyToolPanel title="Quiz Me" text="A Constituição trata os direitos fundamentais como ilimitados? Não. Eles podem sofrer limitações proporcionais e justificadas." action="Responder outra questão" />}
       </CardContent>
