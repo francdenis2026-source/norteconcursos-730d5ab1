@@ -131,3 +131,37 @@
 @media (prefers-reduced-motion: reduce) {
  .question-header-progress__track > span { transition: none; }
 }
+
+/* The daily summary must never steal space from navigation or overlap utilities. */
+@media (min-width: 768px) {
+ .app-shell.navigation-v2 .app-topbar:has(.workspace-section-nav--inline) {
+   min-width: 0; overflow: hidden;
+ }
+ .app-shell.navigation-v2 .app-topbar:has(.workspace-section-nav--inline) > .workspace-section-nav--inline {
+   flex: 1 1 0 !important;
+   min-width: 0 !important;
+   max-width: none !important;
+   overflow-x: auto !important;
+   overflow-y: hidden !important;
+   overscroll-behavior-x: contain;
+ }
+ .app-shell.navigation-v2 .app-topbar:has(.workspace-section-nav--inline) > .question-header-progress {
+   flex: 0 0 126px !important;
+   width: 126px !important;
+   min-width: 126px !important;
+   max-width: 126px !important;
+   gap: 8px;
+   overflow: hidden;
+ }
+ .app-shell.navigation-v2 .app-topbar:has(.workspace-section-nav--inline) > .app-topbar__actions {
+   flex: 0 0 auto !important;
+   min-width: max-content;
+   position: relative;
+   z-index: 1;
+ }
+}
+@media (max-width: 1450px) {
+ .app-shell.navigation-v2 .app-topbar:has(.workspace-section-nav--inline) > .question-header-progress {
+   display: none !important;
+ }
+}
