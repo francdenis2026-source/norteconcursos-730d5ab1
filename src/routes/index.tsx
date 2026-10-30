@@ -605,6 +605,9 @@ function Index() {
                     Conhecer a plataforma
                     <ArrowRight />
                   </a>
+                  <a href="#ranking-destaque" className="home-ranking-hero-entry" data-aim aria-label="Ver os quatro melhores candidatos no ranking real da plataforma">
+                    <Trophy aria-hidden="true" /> Ranking dos melhores <ArrowRight aria-hidden="true" />
+                  </a>
                 </div>
                 <ul className="hx__trust" aria-label="Diferenciais">
                   <li>
@@ -683,7 +686,7 @@ function Index() {
           </div>
         </section>
 
-        <HomeRankingShowcase />
+        <HomeRankingShowcase anchorId="ranking-destaque" />
         <PlansSection />
       </main>
 
