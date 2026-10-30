@@ -40,3 +40,19 @@ test("practice filters consume physical history without conflating UUID collisio
   assert.equal(trainerPracticeQuestions(questions, "new", answers, new Map()).length, 2);
   assert.equal(trainerPracticeQuestions(questions, "wrong", answers, new Map()).length, 1);
 });
+
+test("a saved trainer answer disappears from unanswered filters but stays available for review", async () => {
+  const { trainerPracticeQuestions } = await import("../src/lib/trainerFilters.ts");
+  const questions = [
+    { id: "q1", source: "official", table: "official_exam_questions", text: "Question", subject: "Direito" },
+    { id: "q2", source: "official", table: "board_exam_questions", text: "Question", subject: "Direito" },
+  ];
+  const firstHistory = answerHistory([], questions);
+  assert.equal(trainerPracticeQuestions(questions, "new", firstHistory, new Map()).length, 2);
+  const savedHistory = answerHistory([
+    { question_id: "q1", question_source: "official", question_table: "official_exam_questions", selected_answer: "C", is_correct: true },
+  ], questions);
+  assert.deepEqual(trainerPracticeQuestions(questions, "new", savedHistory, new Map()).map(q => q.id), ["q2"]);
+  assert.deepEqual(trainerPracticeQuestions(questions, "all", savedHistory, new Map()).map(q => q.id), ["q1"]);
+  assert.deepEqual(savedHistory.get("official_exam_questions:q1"), { selected: "C", isCorrect: true });
+});

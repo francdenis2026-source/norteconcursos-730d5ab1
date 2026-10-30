@@ -31,7 +31,8 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
-import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
+import { useLockedAnswers } from "@/hooks/useLockedAnswers";
+import { questionIdentity } from "@/lib/questionIdentity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
@@ -70,7 +71,7 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets } from "@/lib/trainerFilters";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, trainerPracticeQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -174,7 +175,7 @@ function QuestionTrainer() {
     [fullCatalog, law],
   );
   const library = useStudyMaterialList(canLoad);
-  const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
+  const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
@@ -372,7 +373,7 @@ function QuestionTrainer() {
     [catalog],
   );
   const trainingCatalog = React.useMemo(
-    () => includeAnswered ? catalog : catalog.filter((q) => !locked.has(lockedKey(q.source, q.id))),
+    () => includeAnswered ? catalog : trainerPracticeQuestions(catalog, "new", locked, new Map()),
     [catalog, includeAnswered, locked],
   );
   const facets = React.useMemo(
@@ -552,7 +553,7 @@ function QuestionTrainer() {
     // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
     // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
     if (lockedLoading) return;
-    const past = locked.get(lockedKey(question.source, question.id));
+    const past = locked.get(questionIdentity(question));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -760,9 +761,9 @@ function QuestionTrainer() {
   const supportAvailable = canOpenTrainerLearning(
     // O registro local é atualizado antes do refresh do histórico remoto.
     // Considerar `answered` aqui evita bloquear a explicação logo após o envio.
-    answered && (locked.has(lockedKey(question.source, question.id)) || !!selected),
+    answered,
     saving,
-    // A resposta recém-enviada já é válida; o histórico remoto pode terminar depois.
+    // O salvamento da resposta já foi confirmado; não depender de uma segunda busca de histórico.
     false,
   );
   const openLearning = () => {
