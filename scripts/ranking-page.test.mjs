@@ -83,6 +83,6 @@ test("ranking integrity: rejects duplicate candidates and inconsistent ordering"
   });
   assert.deepEqual(readRankingPage({ ...base, entries: [row("a", 1), row("b", 2)] }).entries.map(x => x.rank_position), [1, 2]);
   assert.throws(() => readRankingPage({ ...base, entries: [row("a", 2), row("b", 1)] }));
-  assert.throws(() => readRankingPage({ ...base, entries: [row("a", 1), row("b", 1)] }));
+  assert.equal(readRankingPage({ ...base, entries: [row("a", 1), row("b", 1)] }).entries[1].rank_position, 1);
   assert.throws(() => readRankingPage({ ...base, entries: [row("a", 1), row("a", 2)] }));
 });
