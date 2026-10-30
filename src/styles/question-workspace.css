@@ -1469,3 +1469,120 @@
  :root:fullscreen .trainer-reading-workspace .trainer-reading-answers { overflow: visible; border-left: 0; padding-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .trainer-reading-workspace .trainer-shield img { animation: none; } }
+
+/* Desktop exam canvas: exact viewport anchoring rather than estimated parent heights.
+   The app header remains visible; the footer is covered by the exam canvas.
+   Long reading material alone receives a scroll container. */
+@media (min-width: 1050px) and (min-height: 620px) {
+  .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
+    position: fixed !important;
+    inset: 64px 10px 8px !important;
+    z-index: 45;
+    box-sizing: border-box !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 9px 12px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+    overflow: hidden !important;
+    background: var(--background);
+    border-radius: 15px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace > header {
+    flex: 0 0 auto;
+    min-height: 39px;
+    padding-block: 2px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    border-radius: 12px;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto minmax(0, 1fr) auto minmax(0, auto) !important;
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    align-content: stretch !important;
+    gap: 4px 14px !important;
+    padding: 8px 13px !important;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-meta { grid-area: 1 / 1 / 2 / -1 !important; margin: 0 !important; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-review { grid-area: 2 / 1 / 3 / -1 !important; margin: 0 !important; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-heading { grid-area: 3 / 1 / 4 / -1 !important; margin: 0 !important; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-progress { grid-area: 4 / 1 / 5 / -1 !important; margin: 1px 0 4px !important; }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem {
+    grid-area: 5 / 1 / 6 / 2 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 0 10px 0 0 !important;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+    grid-area: 5 / 2 / 6 / 3 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 0 9px 0 12px !important;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+    grid-area: 6 / 1 / 7 / -1 !important;
+    margin: 2px 0 !important;
+    padding-top: 6px !important;
+    flex-shrink: 0;
+  }
+  .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+    grid-area: 7 / 1 / 8 / -1 !important;
+    min-height: 0 !important;
+    max-height: min(17dvh, 150px) !important;
+    overflow-y: auto !important;
+    margin: 2px 0 !important;
+    padding: 8px 10px !important;
+    overscroll-behavior: contain;
+  }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-heading h2 { font-size: 26px !important; }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-answers button { min-height: 36px !important; padding-block: 6px !important; }
+  .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-actions button { min-height: 36px !important; }
+  .app-shell[data-area="student"] .trainer-reading-workspace > .trainer-review-community {
+    position: absolute;
+    bottom: 9px;
+    right: 18px;
+    width: min(390px, 35vw);
+    max-height: 55dvh;
+    overflow-y: auto;
+    z-index: 4;
+    box-shadow: 0 12px 34px rgb(0 0 0 / 24%);
+  }
+  /* Avoid accidental page-level scroll as focus remains on the fixed exam surface. */
+  .app-shell[data-area="student"] .trainer-reading-workspace { overscroll-behavior: contain; }
+}
+@media (min-width: 1050px) and (min-height: 620px) {
+  :root:fullscreen .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
+    inset: 56px 8px 8px !important;
+  }
+}
+@media (max-width: 1049px), (max-height: 619px) {
+  .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
+    position: static !important;
+  }
+}
