@@ -65,6 +65,7 @@ function QuestionBankPage() {
   const reviewed = React.useMemo(() => reviewedQuestionBank(catalog).length, [catalog]);
   const [collection, setCollection] = React.useState<BankCollection>("contests");
   const [search, setSearch] = React.useState("");
+  const deferredSearch = React.useDeferredValue(search);
   const [source, setSource] = React.useState<BankSource>("all");
   const [detail, setDetail] = React.useState<CatalogDetail | null>(null);
   const detailTrigger = React.useRef<HTMLButtonElement | null>(null);
@@ -86,9 +87,9 @@ function QuestionBankPage() {
     () =>
       searchQuestionCatalog(
         items.filter((q) => source === "all" || q.source === source),
-        search,
+        deferredSearch,
       ),
-    [items, source, search],
+    [items, source, deferredSearch],
   );
   const bySubject = React.useMemo(
     () =>
