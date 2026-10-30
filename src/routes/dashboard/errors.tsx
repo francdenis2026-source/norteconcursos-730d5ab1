@@ -269,6 +269,8 @@ function ErrorsPage() {
   const [filterSubject, setFilterSubject] = useState(
     Route.useSearch().subject ? canonicalSubject(Route.useSearch().subject) : "all",
   );
+  const [filterStatus, setFilterStatus] = useState<"all" | ReviewStatus>("all");
+  const [filterBoard, setFilterBoard] = useState("all");
   const [detail, setDetail] = useState<Question | null>(null);
   const [revisionMode, setRevisionMode] = useState(false);
   const [revisionIndex, setRevisionIndex] = useState(0);
@@ -327,6 +329,11 @@ function ErrorsPage() {
       ),
     [allErrors],
   );
+  const boards = useMemo(
+    () => Array.from(new Set(allErrors.map((entry) => entry.question.board).filter(Boolean)))
+      .sort((a, b) => a.localeCompare(b, "pt-BR")),
+    [allErrors],
+  );
   const plannedSearch = Route.useSearch();
   useEffect(
     () => setFilterSubject(plannedSearch.subject ? canonicalSubject(plannedSearch.subject) : "all"),
@@ -340,11 +347,13 @@ function ErrorsPage() {
       allErrors
         .filter(
           (e) =>
-            (filterSubject === "all" || e.question.subject === filterSubject) &&
+            (filterSubject === "all" || canonicalSubject(e.question.subject) === filterSubject) &&
+            (filterStatus === "all" || e.status === filterStatus) &&
+            (filterBoard === "all" || e.question.board === filterBoard) &&
             matchesMaterialScope(e.question, { topic: plannedTopic }),
         )
         .sort((a, b) => a.question.subject.localeCompare(b.question.subject, "pt-BR")),
-    [allErrors, filterSubject, plannedTopic],
+    [allErrors, filterSubject, filterStatus, filterBoard, plannedTopic],
   );
   const reviewQueue = useMemo(
     () => visibleErrors.filter((e) => e.status !== "dominado"),
@@ -422,6 +431,9 @@ function ErrorsPage() {
             <div className="flex flex-wrap gap-1.5">
               <Badge variant="outline">{question.subject}</Badge>
               <Badge variant="outline">{question.board}</Badge>
+              {question.itemNumber != null && (
+                <Badge variant="secondary" className="font-mono">Questão {question.itemNumber}</Badge>
+              )}
               <Badge
                 variant="outline"
                 className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
@@ -471,7 +483,7 @@ function ErrorsPage() {
           <HeroStat icon={History} label="Para revisar" value={reviewQueue.length} />
         </div>
       </PageHero>
-      <div className="question-workspace__toolbar" aria-label="Filtrar e revisar erros">
+      <div className="question-workspace__toolbar flex flex-wrap items-center gap-3" aria-label="Filtrar e revisar erros">
         <Select value={filterSubject} onValueChange={setFilterSubject}>
           <SelectTrigger className="w-full sm:w-[210px]">
             <Filter className="mr-2 h-4 w-4" />
@@ -486,6 +498,31 @@ function ErrorsPage() {
             ))}
           </SelectContent>
         </Select>
+        <Select value={filterBoard} onValueChange={setFilterBoard}>
+          <SelectTrigger className="w-full sm:w-[190px]" aria-label="Filtrar por banca">
+            <SelectValue placeholder="Todas as bancas" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Todas as bancas</SelectItem>
+            {boards.map((board) => <SelectItem key={board} value={board}>{board}</SelectItem>)}
+          </SelectContent>
+        </Select>
+        <Select value={filterStatus} onValueChange={(value) => setFilterStatus(value as "all" | ReviewStatus)}>
+          <SelectTrigger className="w-full sm:w-[180px]" aria-label="Filtrar por situação">
+            <SelectValue placeholder="Todas as situações" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Todas as situações</SelectItem>
+            <SelectItem value="pendente">Pendentes</SelectItem>
+            <SelectItem value="revisado">Revisadas</SelectItem>
+            <SelectItem value="dominado">Dominadas</SelectItem>
+          </SelectContent>
+        </Select>
+        {(filterSubject !== "all" || filterBoard !== "all" || filterStatus !== "all") && (
+          <Button variant="ghost" onClick={() => { setFilterSubject("all"); setFilterBoard("all"); setFilterStatus("all"); }}>
+            Limpar filtros
+          </Button>
+        )}
         <Button
           className="question-workspace__primary gap-2"
           disabled={reviewQueue.length === 0}
@@ -528,6 +565,9 @@ function ErrorsPage() {
                     </Badge>
                     <Badge variant="outline">{question.subject}</Badge>
                     <Badge variant="outline">{question.board}</Badge>
+                    {question.itemNumber != null && (
+                      <Badge variant="secondary" className="font-mono">Questão {question.itemNumber}</Badge>
+                    )}
                     <QuestionCode question={question} />
                   </div>
                   <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
