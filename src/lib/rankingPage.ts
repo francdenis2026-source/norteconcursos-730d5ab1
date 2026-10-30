@@ -63,6 +63,13 @@ export function readRankingPage(value: unknown): RankingPageData {
     !integer(page.page_size, 1) ||
     page.page_size > 100 ||
     page.entries.length > page.page_size ||
+    // A corrupted or stale result must never display repeated students, swapped
+    // placements or positions inconsistent with the canonical server order.
+    page.entries.some((row, index) =>
+      (index > 0 && row.rank_position <= page.entries[index - 1].rank_position) ||
+      page.entries.some((other, otherIndex) => otherIndex < index && other.user_id === row.user_id)
+    ) ||
+
     (page.my_entry !== null && (!entry(page.my_entry, true) || !page.my_entry.is_me))
   )
     throw new Error("Invalid ranking page");
