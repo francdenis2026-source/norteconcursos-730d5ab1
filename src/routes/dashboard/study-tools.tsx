@@ -319,12 +319,21 @@ function StudyToolsPage() {
           <p className="mt-1 text-sm text-muted-foreground">Acesse diretamente a ferramenta certa para esta etapa.</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <Link to={enem ? "/dashboard/enem" : "/dashboard/study-room"} search={enem ? { tab: "materiais" } : { subject, topic }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
-            <BookOpenCheck className="mb-3 h-5 w-5 text-primary" />
-            <span className="block font-semibold">Estudar conteúdo</span>
-            <span className="mt-1 block text-xs text-muted-foreground">Sala de estudo, explicações e materiais</span>
-            <span className="mt-3 block text-xs font-semibold text-primary">Abrir sala de estudo →</span>
-          </Link>
+          {enem ? (
+            <Link to="/dashboard/enem" search={{ tab: "materiais" }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+              <BookOpenCheck className="mb-3 h-5 w-5 text-primary" />
+              <span className="block font-semibold">Estudar conteúdo</span>
+              <span className="mt-1 block text-xs text-muted-foreground">Materiais e explicações do ENEM</span>
+              <span className="mt-3 block text-xs font-semibold text-primary">Abrir materiais →</span>
+            </Link>
+          ) : (
+            <Link to="/dashboard/study-room" search={{ subject, topic }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+              <BookOpenCheck className="mb-3 h-5 w-5 text-primary" />
+              <span className="block font-semibold">Estudar conteúdo</span>
+              <span className="mt-1 block text-xs text-muted-foreground">Sala de estudo, explicações e materiais</span>
+              <span className="mt-3 block text-xs font-semibold text-primary">Abrir sala de estudo →</span>
+            </Link>
+          )}
           <Link to="/dashboard/question-trainer" search={trainer} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
             <BrainCircuit className="mb-3 h-5 w-5 text-primary" />
             <span className="block font-semibold">Praticar questões</span>
