@@ -428,3 +428,22 @@
   .home.home .hx-dock__cell:nth-last-child(-n+2) { border-bottom: 1px solid rgb(151 171 194 / 14%); }
   .home.home .hx-dock__cell:last-child { border-bottom: none; }
 }
+
+/* Radar de concurso: texto completo e bloco de altura natural, sem carrossel. */
+@media (min-width: 761px) {
+.home.home .hx-dock { grid-template-columns: minmax(0,.85fr) minmax(0,1fr) minmax(0,1.8fr) minmax(0,1.2fr); }
+.home.home .hx-dock__cell--radar { align-items:center; overflow:visible; gap:12px; }
+.home.home .hx-dock__radar-icon { display:grid; place-items:center; flex:none; width:30px; height:30px; border-radius:9px; background:#183d37; color:#a7dec9; }
+.home.home .hx-dock__radar-icon svg { width:17px; height:17px; }
+.home.home .hx-dock__radar-copy { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.home.home .hx-dock__radar-copy .hx-dock__live { font-size:9px; color:#a7dec9; line-height:1.5; }
+.home.home .hx-dock__radar-copy strong { display:block; font-size:13px; line-height:1.4; color:#f0f3f5; white-space:normal; overflow:visible; max-height:none; }
+.home.home .hx-dock__radar-copy small { display:block; color:#bfced8; font-size:11px; line-height:1.45; white-space:normal; overflow:visible; max-height:none; }
+.home.home .hx-dock__radar-source { display:inline-flex; gap:5px; align-items:center; align-self:flex-start; margin-top:3px; color:#d8c18f; font-size:11px; text-decoration:none; }
+.home.home .hx-dock__radar-source svg { width:12px; height:12px; }
+.home.home .hx-dock__radar-source:hover { text-decoration:underline; }
+:root:not(.dark) .home.home .hx-dock__radar-copy strong { color:#f0f3f5; }
+:root:not(.dark) .home.home .hx-dock__radar-copy small { color:#bfced8; }
+}
+@media (min-width:761px) and (max-width:1120px) { .home.home .hx-dock { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:761px) and (max-width:860px) { .home.home .hx-dock { grid-template-columns:1fr; } }
