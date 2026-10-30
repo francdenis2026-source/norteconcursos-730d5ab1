@@ -1583,3 +1583,19 @@
     scrollbar-color: var(--border) transparent;
   }
 }
+
+/* Exit confirmation is a self-contained illustrated dialog, not a browser-style alert. */
+.trainer-exit-dialog { background: #101820 !important; isolation: isolate; }
+.trainer-exit-dialog__art { position: relative; height: 126px; overflow: hidden; }
+.trainer-exit-dialog__art svg { display: block; width: 100%; height: 100%; }
+.trainer-exit-dialog__body { position: relative; padding: 8px 22px 22px; background: linear-gradient(180deg,#101820,#111923); }
+.trainer-exit-dialog > button[aria-label="Close"],
+.trainer-exit-dialog > button[data-state] { z-index: 2; }
+.trainer-exit-dialog button:focus-visible { outline: 2px solid #fda4af; outline-offset: 3px; }
+@media (max-width: 480px) {
+ .trainer-exit-dialog__art { height: 105px; }
+ .trainer-exit-dialog__body { padding: 8px 16px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .trainer-exit-dialog, .trainer-exit-dialog * { animation: none !important; transition: none !important; }
+}
