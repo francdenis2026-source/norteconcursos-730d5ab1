@@ -66,7 +66,7 @@ export function readRankingPage(value: unknown): RankingPageData {
     // A corrupted or stale result must never display repeated students, swapped
     // placements or positions inconsistent with the canonical server order.
     page.entries.some((row, index) =>
-      (index > 0 && row.rank_position <= page.entries[index - 1].rank_position) ||
+      (index > 0 && row.rank_position < page.entries[index - 1].rank_position) ||
       page.entries.some((other, otherIndex) => otherIndex < index && other.user_id === row.user_id)
     ) ||
 
