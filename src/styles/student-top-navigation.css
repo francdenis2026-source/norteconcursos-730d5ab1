@@ -63,3 +63,88 @@
 @media (prefers-reduced-motion: reduce) {
   .student-top-navigation__trigger { transition: none; }
 }
+
+/* Central de Estudos uses the available desktop canvas instead of a narrow reading column. */
+.app-shell.navigation-v2[data-area="student"] .study-tools-page {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  gap: clamp(14px, 1.8vw, 24px);
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px 28px;
+  padding: 4px 0 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > header > div:first-child {
+  min-width: min(100%, 420px);
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-selection-title"] {
+  display: grid;
+  grid-template-columns: minmax(190px, .7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: 18px 28px;
+  padding: clamp(18px, 2vw, 28px);
+  border: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  box-shadow: 0 12px 34px -28px rgb(0 0 0 / .5);
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-selection-title"] > div:first-child { margin: 0; }
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-selection-title"] > div:nth-child(2) { min-width: 0; }
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a {
+  min-width: 0;
+  min-height: 164px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-color: color-mix(in srgb, var(--border) 86%, transparent);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--card) 97%, transparent);
+  padding: 20px;
+  text-decoration: none;
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a:hover {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+  box-shadow: 0 12px 26px -24px var(--primary);
+  transform: translateY(-1px);
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a > svg {
+  width: 22px; height: 22px; padding: 3px; box-sizing: content-box;
+  border-radius: 9px; background: color-mix(in srgb, var(--primary) 10%, var(--card));
+}
+.app-shell.navigation-v2[data-area="student"] .study-tools-page > details {
+  max-width: 760px;
+}
+@media (max-width: 1100px) {
+  .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-selection-title"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a {
+    min-height: 150px;
+    padding: 14px;
+  }
+}
+@media (max-width: 420px) {
+  .app-shell.navigation-v2[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] > div:last-child {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
