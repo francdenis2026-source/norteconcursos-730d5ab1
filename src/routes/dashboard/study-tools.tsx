@@ -212,145 +212,166 @@ function readFocusHistory(): FocusRecord[] {
 function StudyToolsPage() {
   const ctx = useStudyContext();
   const fullscreen = useWorkspaceFullscreen(true);
-  const { context, tool } = Route.useSearch();
+  const { context } = Route.useSearch();
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
   const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;
-  const suggested = enem ? "" : ctx.suggested;
+  const suggested = enem ? (subjects[0] ?? "") : ctx.suggested;
   const pickKey = enem ? "norte_focus_pick_enem" : "norte_focus_pick";
-  const [pick, setPick] = React.useState<{ subject: string; topic: string }>({
-    subject: "",
-    topic: "",
-  });
+  const [pick, setPick] = React.useState<{ subject: string; topic: string }>({ subject: "", topic: "" });
   const [day, setDay] = React.useState({ day: "", cycles: 0, minutes: 0 });
-  const [history, setHistory] = React.useState<FocusRecord[]>([]);
 
   React.useEffect(() => {
     setDay(readDay());
-    setHistory(readFocusHistory());
-    setPick({ subject: "", topic: "" });
     try {
-      const saved = JSON.parse(localStorage.getItem(pickKey) ?? "null") as
-        typeof pick | null;
+      const saved = JSON.parse(localStorage.getItem(pickKey) ?? "null") as typeof pick | null;
       if (saved) setPick(saved);
     } catch {
-      /* sem armazenamento */
+      /* armazenamento indisponível */
     }
   }, [pickKey, ctx.real]);
-  const subject =
-    pick.subject && subjects.includes(pick.subject) ? pick.subject : (suggested || subjects[0] || "");
-  const topics = React.useMemo(() => enem ? (enemSubjects.find(item => item.name === subject)?.topics ?? []) : topicsFor(subject), [subject, enem, enemSubjects]);
+
+  const subject = pick.subject && subjects.includes(pick.subject) ? pick.subject : suggested;
+  const topics = React.useMemo(
+    () => enem ? (enemSubjects.find(item => item.name === subject)?.topics ?? []) : topicsFor(subject),
+    [subject, enem, enemSubjects],
+  );
   const topic = topics.includes(pick.topic) ? pick.topic : (topics[0] ?? "");
   const choose = (next: { subject: string; topic: string }) => {
     setPick(next);
     try {
       localStorage.setItem(pickKey, JSON.stringify(next));
     } catch {
-      /* sem armazenamento */
+      /* armazenamento indisponível */
     }
   };
-  const onFocusDone = (minutes: number, sessionSubject: string, sessionTopic: string) => {
-    const d = readDay();
-    const next = { ...d, cycles: d.cycles + 1, minutes: d.minutes + minutes };
+  const onFocusDone = (minutes: number) => {
+    const current = readDay();
+    const next = { ...current, cycles: current.cycles + 1, minutes: current.minutes + minutes };
     try {
       localStorage.setItem(userStorageKey(DAY_KEY), JSON.stringify(next));
     } catch {
-      /* sem armazenamento */
+      /* armazenamento indisponível */
     }
     setDay(next);
-    const record: FocusRecord = {
-      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      completedAt: new Date().toISOString(),
-      minutes,
-      subject: sessionSubject,
-      topic: sessionTopic,
-    };
-    setHistory((previous) => {
-      const nextHistory = [record, ...previous].slice(0, 30);
-      try {
-        localStorage.setItem(userStorageKey(HISTORY_KEY), JSON.stringify(nextHistory));
-      } catch {
-        /* sem armazenamento */
-      }
-      return nextHistory;
-    });
   };
+  const trainer = { ...plannedPractice(subject, topic), ...(enem ? { contest: "ENEM" } : {}) };
+  const track = TRACKS.find(item => norm(subject).includes(norm(item.discipline)));
 
   return (
-    <div className="study-tools-page space-y-6" data-focus-session={fullscreen.active ? "true" : undefined}>
-      <PageHero
-        image="study-desk"
-        kicker={enem ? "ENEM" : "Meu planejamento"}
-        icon={Timer}
-        title={<><em>Central</em> de estudo</>}
-        description={
-          enem ? "Escolha uma matéria do ENEM e use o cronômetro. Seus materiais e questões continuam vinculados ao exame." : ctx.profile
-            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e das Trilhas por disciplina.`
-            : "Foco, revisão e checklist das disciplinas. Abra Configuração do estudo para personalizar com o seu concurso."
-        }
-        actions={
-          !enem && !ctx.profile && !ctx.loading && ctx.real ? (
-            <Button asChild className="hero-btn-primary gap-2">
-              <Link to="/dashboard/study-coach">
-                <Sparkles className="h-4 w-4" /> Configuração do estudo
-              </Link>
+    <div className="study-tools-page space-y-5" data-focus-session={fullscreen.active ? "true" : undefined}>
+      <header className="space-y-2">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Seu ambiente de aprendizagem</p>
+            <h1 className="text-2xl font-bold tracking-tight">Central de Estudos</h1>
+            <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+              Um fluxo simples: escolha o assunto, estude o conteúdo e pratique com questões.
+            </p>
+          </div>
+          {!enem && !ctx.profile && !ctx.loading && ctx.real && (
+            <Button asChild variant="outline" size="sm">
+              <Link to="/dashboard/study-coach"><Sparkles className="mr-2 h-4 w-4" />Configurar meu plano</Link>
             </Button>
-          ) : undefined
-        }
-      >
-        <div className="page-hero__stats">
-          <HeroStat
-            icon={Target}
-            label={enem ? "Objetivo" : "Carreira"}
-            value={
-              <span className="text-base">
-                {enem ? "ENEM" : ctx.career.id === "OUTRA" ? "Geral" : ctx.career.id}
-              </span>
-            }
-          />
-          <HeroStat
-            icon={CalendarClock}
-            label="Dias para a prova"
-            value={!enem && ctx.daysToExam !== null ? Math.max(0, ctx.daysToExam) : "—"}
-          />
-          {!enem && <HeroStat icon={Layers} label="Cartões a revisar" value={ctx.due.length} />}
-          <HeroStat icon={Flame} label="Foco hoje" value={`${day.minutes} min`} />
+          )}
         </div>
-      </PageHero>
+        <div className="flex flex-wrap gap-x-5 gap-y-2 border-y py-3 text-sm">
+          <span className="text-muted-foreground">Hoje: <strong className="text-foreground">{day.minutes} min</strong> de estudo</span>
+          <span className="text-muted-foreground"><strong className="text-foreground">{day.cycles}</strong> {day.cycles === 1 ? "sessão concluída" : "sessões concluídas"}</span>
+          {!enem && <span className="text-muted-foreground"><strong className="text-foreground">{ctx.due.length}</strong> cartões aguardando revisão</span>}
+          {ctx.profile && !enem && ctx.daysToExam !== null && ctx.daysToExam >= 0 && (
+            <span className="text-muted-foreground"><strong className="text-foreground">{ctx.daysToExam}</strong> dias até a prova</span>
+          )}
+        </div>
+      </header>
 
-      {enem ? <Button asChild variant="outline"><Link to="/dashboard/enem">Voltar à área ENEM</Link></Button> : <StudyPlanningNav active="focus" />}
-      <FocusCard
-        enem={enem}
-        subjects={subjects}
-        suggested={suggested}
-        subject={subject}
-        topic={topic}
-        topics={topics}
-        onPick={choose}
-        day={day}
-        focusMode={fullscreen.active}
-        onEnterFocus={fullscreen.enter}
-        onExitFocus={fullscreen.exit}
-        onFocusDone={(minutes) => onFocusDone(minutes, subject, topic)}
-      />
+      <section className="rounded-2xl border bg-card p-4 sm:p-5" aria-labelledby="study-selection-title">
+        <div className="mb-4">
+          <h2 id="study-selection-title" className="text-base font-semibold">1. O que você vai estudar?</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {ctx.loading ? "Carregando suas disciplinas…" : suggested ? "Sua disciplina prioritária já vem selecionada. Você pode alterá-la quando quiser." : "Selecione a disciplina e o assunto para personalizar seus atalhos."}
+          </p>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2">
+          <label className="block space-y-1.5">
+            <span className="text-sm font-medium">Disciplina</span>
+            <select className={selectCls} value={subject} onChange={event => choose({ subject: event.target.value, topic: "" })}>
+              {subjects.map(name => <option key={name} value={name}>{name}{name === suggested && !enem ? " · prioridade" : ""}</option>)}
+            </select>
+          </label>
+          <label className="block space-y-1.5">
+            <span className="text-sm font-medium">Assunto</span>
+            <select className={selectCls} value={topic} onChange={event => choose({ subject, topic: event.target.value })}>
+              {topics.map(name => <option key={name} value={name}>{name}</option>)}
+            </select>
+          </label>
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+          <SubjectIcon subject={subject} />
+          <span className="font-medium text-foreground">{subject || "Disciplina não selecionada"}</span>
+          {topic && <><span aria-hidden="true">·</span><span>{topic}</span></>}
+        </div>
+      </section>
 
-      {!enem && <StudyCentralCard subject={subject || suggested} topic={topic} initialTool={tool} />}
+      <section aria-labelledby="study-actions-title" className="space-y-3">
+        <div>
+          <h2 id="study-actions-title" className="text-base font-semibold">2. Continue seu estudo</h2>
+          <p className="mt-1 text-sm text-muted-foreground">Acesse diretamente a ferramenta certa para esta etapa.</p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <Link to={enem ? "/dashboard/enem" : "/dashboard/study-room"} search={enem ? { tab: "materiais" } : { subject, topic }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+            <BookOpenCheck className="mb-3 h-5 w-5 text-primary" />
+            <span className="block font-semibold">Estudar conteúdo</span>
+            <span className="mt-1 block text-xs text-muted-foreground">Sala de estudo, explicações e materiais</span>
+            <span className="mt-3 block text-xs font-semibold text-primary">Abrir sala de estudo →</span>
+          </Link>
+          <Link to="/dashboard/question-trainer" search={trainer} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+            <BrainCircuit className="mb-3 h-5 w-5 text-primary" />
+            <span className="block font-semibold">Praticar questões</span>
+            <span className="mt-1 block text-xs text-muted-foreground">Treine com foco na disciplina selecionada</span>
+            <span className="mt-3 block text-xs font-semibold text-primary">Começar treino →</span>
+          </Link>
+          {!enem && <Link to="/dashboard/flashcards" search={{ subject, topic }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+            <Layers className="mb-3 h-5 w-5 text-primary" />
+            <span className="block font-semibold">Revisar flashcards</span>
+            <span className="mt-1 block text-xs text-muted-foreground">{ctx.due.length ? `${ctx.due.length} cartões aguardando revisão` : "Memorize conceitos e pontos-chave"}</span>
+            <span className="mt-3 block text-xs font-semibold text-primary">Abrir revisões →</span>
+          </Link>}
+          <Link to="/dashboard/library" search={{ q: topic || subject, back: undefined, collection: libraryCollection({ slug: "", discipline: subject }) === "subjects" ? "subjects" : "laws" }} className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-muted/40">
+            <LibraryBig className="mb-3 h-5 w-5 text-primary" />
+            <span className="block font-semibold">Consultar biblioteca</span>
+            <span className="mt-1 block text-xs text-muted-foreground">Localize legislação e materiais de referência</span>
+            <span className="mt-3 block text-xs font-semibold text-primary">Pesquisar material →</span>
+          </Link>
+        </div>
+        {!enem && track && <p className="text-xs text-muted-foreground">Trilha relacionada: <Link className="font-semibold text-primary underline-offset-4 hover:underline" to="/dashboard/trilhas" search={{ t: track.slug, l: undefined }}>{track.discipline}</Link></p>}
+      </section>
 
-      <FocusHistoryCard history={history} />
-
-      {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
-      <PlatformMaterialCard subject={subject} topic={topic} />
-
-      <div className="grid grid-cols-1 gap-6">
-        <ReviewCard due={ctx.due} subject={subject} careerId={ctx.career.id} real={ctx.real} />
-      </div>
-
-      <ChecklistCard
-        careerId={ctx.career.id}
-        subjects={ctx.subjects}
-        essay={ctx.profile?.essay ?? false}
-      />
-      </>}
+      <details className="rounded-xl border bg-card">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
+          <span>
+            <span className="block text-sm font-semibold">Cronômetro de foco</span>
+            <span className="mt-0.5 block text-xs text-muted-foreground">Opcional · ciclos de 25 ou 50 minutos e pausa</span>
+          </span>
+          <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+        </summary>
+        <div className="border-t p-3 sm:p-4">
+          <FocusCard
+            enem={enem}
+            subjects={subjects}
+            suggested={suggested}
+            subject={subject}
+            topic={topic}
+            topics={topics}
+            onPick={choose}
+            day={day}
+            focusMode={fullscreen.active}
+            onEnterFocus={fullscreen.enter}
+            onExitFocus={fullscreen.exit}
+            onFocusDone={onFocusDone}
+          />
+        </div>
+      </details>
     </div>
   );
 }
