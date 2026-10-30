@@ -35,6 +35,22 @@ Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
+    const authHeader = req.headers.get("Authorization") ?? "";
+    const jwt = authHeader.match(/^Bearer\\s+(.+)$/i)?.[1];
+    if (!jwt) {
+      return new Response(JSON.stringify({ error: "Não autenticado" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+    const { data: identity, error: authError } = await supabase.auth.getUser(jwt);
+    if (authError || !identity.user) {
+      return new Response(JSON.stringify({ error: "Sessão inválida" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     const { documentId } = await req.json();
     if (!documentId) {
       return new Response(JSON.stringify({ error: "documentId é obrigatório" }), {
@@ -42,8 +58,6 @@ Deno.serve(async (req: Request) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
-
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
     const { data: doc, error: fetchError } = await supabase
       .from("student_exam_documents")
@@ -55,6 +69,20 @@ Deno.serve(async (req: Request) => {
         status: 404,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
+    }
+
+    if (doc.user_id !== identity.user.id) {
+      const { data: adminRole, error: roleError } = await supabase
+        .from("user_roles")
+        .select("user_id")
+        .eq("user_id", identity.user.id)
+        .eq("role", "admin")
+        .maybeSingle();
+      if (roleError || !adminRole) {
+        return new Response(JSON.stringify({ error: "Documento não encontrado" }), {
+          status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
     }
 
     await supabase
