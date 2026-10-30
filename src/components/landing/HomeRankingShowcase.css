@@ -75,3 +75,86 @@
   .home-ranking-hero-entry--mobile { font-size: 11px; white-space: normal; }
 }
 @media (prefers-reduced-motion: reduce) { .home-ranking-hero-entry { transition: none; } }
+
+/* Refined podium: a clearly featured winner, with all four genuine places
+   retained. Restricted to this component; no home hero or global scroll rules. */
+@media (min-width: 1101px) {
+  .home-ranking__grid {
+    grid-template-columns: minmax(0, 1.22fr) repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  .home-ranking__card[data-medal="1"] {
+    position: relative;
+    border-color: rgba(245,194,100,.8);
+    background: radial-gradient(ellipse at top,rgba(186,121,30,.20),transparent 65%),
+      linear-gradient(155deg,rgba(96,64,20,.31),rgba(13,21,30,.97));
+    box-shadow: 0 0 0 1px rgba(238,186,85,.12),0 16px 30px rgba(0,0,0,.14);
+  }
+  .home-ranking__card[data-medal="1"] .home-ranking__avatar {
+    width: 65px;
+    height: 65px;
+    font-size: 27px;
+  }
+  .home-ranking__card[data-medal="1"] .home-ranking__points strong { color: #f3cb7a; font-size: 28px; }
+  .home-ranking__card[data-medal="1"] .home-ranking__name { font-size: 17px; }
+}
+/* Fullscreen applies to the root HTML element, not to the ranking component.
+   Keep page scrolling intact; only constrain the ranking's own content when
+   the full section would exceed the usable screen. */
+@media (min-width: 1024px) {
+  html:fullscreen .home-ranking {
+    box-sizing: border-box;
+    min-height: min(100dvh, 850px);
+    padding: 12px 0 18px;
+    display: flex;
+    align-items: center;
+  }
+  html:fullscreen .home-ranking > .home-container {
+    width: min(1360px, calc(100% - 36px));
+    min-width: 0;
+  }
+  html:fullscreen .home-ranking__shell {
+    box-sizing: border-box;
+    width: 100%;
+    max-height: calc(100dvh - 36px);
+    min-height: 0;
+    padding: clamp(12px,2dvh,22px) clamp(14px,2vw,26px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px,1.3dvh,14px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+  }
+  html:fullscreen .home-ranking__heading { flex: none; margin: 0; }
+  html:fullscreen .home-ranking__heading h2 { font-size: clamp(23px,2.2vw,32px); }
+  html:fullscreen .home-ranking__heading p:not(.home-ranking__eyebrow) { margin-top: 4px; }
+  html:fullscreen .home-ranking__grid {
+    flex: 1 1 auto;
+    min-height: 0;
+    gap: 10px;
+  }
+  html:fullscreen .home-ranking__card {
+    gap: clamp(5px,1dvh,9px);
+    padding: clamp(10px,1.6dvh,18px) 10px;
+  }
+  html:fullscreen .home-ranking__card[data-medal="1"] .home-ranking__avatar { width: 56px; height: 56px; font-size: 24px; }
+  html:fullscreen .home-ranking__avatar { width: 44px; height: 44px; font-size: 20px; }
+  html:fullscreen .home-ranking__points { padding: 6px; }
+  html:fullscreen .home-ranking__points strong { font-size: 21px; }
+  html:fullscreen .home-ranking__card[data-medal="1"] .home-ranking__points strong { font-size: 24px; }
+  html:fullscreen .home-ranking__bottom { flex: none; margin-top: 0; padding-top: 10px; }
+  html:fullscreen .home-ranking__details { flex: none; margin-top: 0; }
+}
+@media (min-width: 1024px) and (max-height: 660px) {
+  html:fullscreen .home-ranking__shell { padding: 10px 14px; gap: 6px; }
+  html:fullscreen .home-ranking__card { padding: 7px 9px; gap: 4px; }
+  html:fullscreen .home-ranking__card .home-ranking__avatar { width: 37px; height: 37px; font-size: 17px; }
+  html:fullscreen .home-ranking__card[data-medal="1"] .home-ranking__avatar { width: 44px; height: 44px; font-size: 20px; }
+  html:fullscreen .home-ranking__position { font-size: 13px; }
+  html:fullscreen .home-ranking__stars { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-ranking__card { transition: none; }
+}
