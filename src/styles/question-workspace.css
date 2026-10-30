@@ -1561,3 +1561,25 @@
     padding: 0 0 16px !important;
   }
 }
+
+/* Normal Treinador only: reclaim the decorative copyright footer's height.
+   Never apply to the native fullscreen state or other dashboard routes. */
+@media screen and (min-width: 768px) {
+  html:not(:has(:fullscreen)) .app-shell[data-area="student"]:has(.trainer-reading-workspace) .app-footer {
+    display: none !important;
+  }
+}
+/* A long explanation scrolls inside its own card; short explanations stay natural.
+   This intentionally does not constrain the stem, answers, or session canvas. */
+@media screen and (min-width: 768px) {
+  html:not(:has(:fullscreen)) .app-shell[data-area="student"] .trainer-reading-workspace:not(:fullscreen) .trainer-reading-explanation {
+    box-sizing: border-box;
+    max-height: min(24dvh, 230px) !important;
+    min-height: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+}
