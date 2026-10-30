@@ -479,6 +479,7 @@ function QuestionTrainer() {
     ],
   );
   const startTraining = () => {
+    responseIdRef.current = crypto.randomUUID();
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
     setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
@@ -494,6 +495,7 @@ function QuestionTrainer() {
   React.useEffect(() => {
     if (!autoStart.current || loading || started || pool.length === 0) return;
     autoStart.current = false;
+    responseIdRef.current = crypto.randomUUID();
     setLimit("10");
     const ordered = shuffled(pool).slice(0, 10);
     setQuestions(ordered);
@@ -604,6 +606,7 @@ function QuestionTrainer() {
           user_id: user.id,
           question_id: question.id,
           question_source: question.source,
+          question_table: question.table,
           contest_name: question.contest,
           subject: question.subject,
           selected_answer: selected,
@@ -613,9 +616,25 @@ function QuestionTrainer() {
           asked_for_help: false,
           response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
         },
-        { onConflict: "id" },
+        { onConflict: "id", ignoreDuplicates: true },
       );
       if (error) throw error;
+      // A request may have succeeded before a network retry. A duplicate ID must
+      // never UPDATE an immutable answer or be credited as a different question.
+      const { data: stored, error: verifyError } = await supabase
+        .from("question_training_responses")
+        .select("id,user_id,question_id,question_source,question_table,selected_answer")
+        .eq("id", responseIdRef.current)
+        .eq("user_id", user.id)
+        .maybeSingle();
+      if (verifyError || !stored ||
+        stored.question_id !== question.id ||
+        stored.question_source !== question.source ||
+        stored.question_table !== question.table ||
+        stored.selected_answer !== selected) {
+        responseIdRef.current = crypto.randomUUID();
+        throw new Error("ANSWER_SAVE_NOT_CONFIRMED");
+      }
       setAnswered(true);
       setDailyUsed((n) => n + 1);
       markLocked(question, { selected, isCorrect });
@@ -629,8 +648,27 @@ function QuestionTrainer() {
       }
       // Acertos recebem feedback integrado e persistente no cartão.
       // Não navegar automaticamente: o aluno controla quando quer prosseguir.
-    } catch {
-      toast.error("Não foi possível salvar sua resposta. Tente novamente.");
+    } catch (error) {
+      // Never show raw database internals to students. Surface known recoverable causes.
+      const code = typeof error === "object" && error !== null && "code" in error
+        ? String((error as { code?: unknown }).code ?? "")
+        : "";
+      const detail = typeof error === "object" && error !== null && "details" in error
+        ? String((error as { details?: unknown }).details ?? "")
+        : "";
+      const message = typeof error === "object" && error !== null && "message" in error
+        ? String((error as { message?: unknown }).message ?? "")
+        : "";
+      if (detail.includes("NORTE_SESSION_REPLACED")) {
+        toast.error("Sua sessão foi substituída por outro login. Entre novamente para continuar.");
+      } else if (code === "P0429") {
+        toast.error("O limite de questões do seu plano foi atingido. Confira a renovação diária.");
+      } else if (message.includes("Question origin is missing or ambiguous")) {
+        toast.error("Não foi possível identificar a origem da questão. Atualize a página e tente novamente.");
+      } else {
+        toast.error("Não foi possível registrar sua resposta. Verifique a conexão e tente novamente.");
+      }
+      // Keep the selected answer so the learner can retry without losing progress.
     } finally {
       savingRef.current = false;
       setSaving(false);
