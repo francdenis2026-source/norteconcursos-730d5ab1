@@ -6,7 +6,7 @@ const sections = [
   { key: 'coach', href: '/dashboard/study-coach', label: 'Configuração do estudo', detail: 'Disponibilidade e distribuição da sua semana', icon: Sparkles },
   { key: 'schedule', href: '/dashboard/cronograma', label: 'Agenda por edital', detail: 'Tópicos do edital e execução do dia', icon: CalendarClock },
   { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Ajustes pelos resultados', detail: 'Prioridades a partir das provas realizadas', icon: BarChart3 },
-  { key: 'focus', href: '/dashboard/study-tools', label: 'Sessão de foco', detail: 'Cronômetro e revisão rápida do que vai estudar', icon: Timer },
+  { key: 'focus', href: '/dashboard/study-tools', label: 'Central de estudo', detail: 'Notas, guias, comparações, quiz e sessão de foco', icon: Timer },
 ] as const;
 
 export function StudyPlanningNav({ active }: { active: typeof sections[number]['key'] }) {

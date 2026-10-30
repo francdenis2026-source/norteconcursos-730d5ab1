@@ -282,11 +282,7 @@ function StudyToolsPage() {
         image="study-desk"
         kicker={enem ? "ENEM" : "Meu planejamento"}
         icon={Timer}
-        title={
-          <>
-            Sessão de <em>foco</em>
-          </>
-        }
+        title={<><em>Central</em> de estudo</>}
         description={
           enem ? "Escolha uma matéria do ENEM e use o cronômetro. Seus materiais e questões continuam vinculados ao exame." : ctx.profile
             ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e das Trilhas por disciplina.`
