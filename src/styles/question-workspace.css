@@ -1603,35 +1603,23 @@
  }
 }
 
-/* Trainer setup: the browser page must not move when scrolling the mouse wheel.
-   Filter dropdown popovers can still scroll independently. */
-@media (min-width: 900px) {
-  html:has(.trainer-setup), body:has(.trainer-setup) {
-    overflow: hidden !important;
-    overscroll-behavior: none;
-  }
-  .trainer-setup {
-    position: fixed !important;
-    inset: 72px max(14px, calc((100vw - 1024px)/2)) 58px !important;
-    z-index: 35;
-    box-sizing: border-box;
-    width: auto !important;
-    max-width: none !important;
-    height: auto !important;
-    max-height: none !important;
-    margin: 0 !important;
-    padding: 10px 0 !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px !important;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-  }
-  .trainer-setup > section { flex: 0 0 auto; }
+/* Setup remains in the dashboard document flow. Never cover the sidebar or header.
+   The native fullscreen state is handled separately above; it is untouched here. */
+.trainer-setup {
+  position: relative !important;
+  inset: auto !important;
+  z-index: auto !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 1024px !important;
+  height: auto !important;
+  max-height: none !important;
+  margin-inline: auto !important;
+  overflow: visible !important;
+  display: block !important;
 }
-@media (max-width: 899px) {
-  .trainer-setup { overscroll-behavior: contain; }
+@media (min-width: 900px) {
+  .trainer-setup {
+    padding: 0 0 16px !important;
+  }
 }
