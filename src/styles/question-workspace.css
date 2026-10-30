@@ -1738,3 +1738,36 @@
     overflow-y: auto !important;
   }
 }
+
+/* Setup-only fullscreen: center a single configuration card within usable viewport. */
+@media (min-width: 768px) {
+  html:fullscreen .app-shell[data-area="student"] .trainer-setup {
+    position: relative !important;
+    inset: auto !important;
+    width: min(100%, 1060px) !important;
+    max-width: 1060px !important;
+    height: calc(100dvh - 120px) !important;
+    max-height: calc(100dvh - 120px) !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 14px 12px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0 !important;
+    box-sizing: border-box;
+    overflow-y: auto !important;
+    overscroll-behavior-y: contain;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-setup > .trainer-setup__unified {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: auto 0;
+  }
+}
+@media (max-height: 650px) {
+  html:fullscreen .app-shell[data-area="student"] .trainer-setup {
+    justify-content: flex-start;
+  }
+}
