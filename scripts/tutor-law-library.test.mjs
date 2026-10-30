@@ -62,7 +62,7 @@ test('Legal highlights preserve source characters, classify full expressions and
  assert.match(formatted,/study-example/);assert.match(formatted,/legal-highlight-exception/);assert.match(formatted,/href="https:\/\/www.planalto.gov.br/);
  const route=readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8');
  assert.match(route,/\{step === "texto" && \([\s\S]*?<LegalStudyReading\s+source=\{unit.body_text\}/);
- assert.match(route,/\{step === "fixar" && \([\s\S]*?<MaterialPractice/);
+ assert.match(route,/\{\(step === "fixar" \|\| practiceOpened\) && \([\s\S]*?<MaterialPractice/);
 });
 
 test('Library search finds disciplines, law names and numbers, body content and exact short acronyms',()=>{
