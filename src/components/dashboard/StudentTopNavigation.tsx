@@ -36,7 +36,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
               <DropdownMenuTrigger asChild>
                 <button type="button" className="student-top-navigation__trigger" data-tone={section.tone} data-active={active} aria-label={section.label} aria-expanded={undefined}>
                   <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Icon size={18} strokeWidth={2.15} absoluteStrokeWidth aria-hidden="true" focusable="false" /></span>
-                  <span>{section.label}</span>
+                  <span className="student-top-navigation__label">{section.label}</span>
                   <ChevronDown size={14} strokeWidth={2.2} aria-hidden="true" focusable="false" className="student-top-navigation__chevron" />
                 </button>
               </DropdownMenuTrigger>
