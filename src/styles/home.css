@@ -4769,3 +4769,36 @@
 .home :is(h1,h2,h3,p,a,span) { overflow-wrap: anywhere; }
 .home .home-container { width: min(100% - 32px, 1240px); margin-inline: auto; }
 @media (max-width: 640px) { .home .home-container { width: min(100% - 24px, 1240px); } .home .home-hero__grid { grid-template-columns: minmax(0,1fr); } .home .home-preparation__band { grid-template-columns: minmax(0,1fr); } }
+
+/* Homepage native fullscreen: enable scrolling the full page, not just the viewport.
+   The Fullscreen API targets <html>. This is scoped to a visible .home and must
+   not change the trainer fullscreen, dialogs, or normal browser layout. */
+html:fullscreen:has(> body .home) {
+  height: 100dvh !important;
+  min-height: 100dvh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: auto !important;
+  scroll-behavior: auto;
+}
+html:fullscreen:has(> body .home) > body {
+  height: auto !important;
+  min-height: 100dvh !important;
+  max-height: none !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  position: static !important;
+}
+html:fullscreen:has(> body .home) .home {
+  height: auto !important;
+  min-height: 100dvh;
+  max-height: none !important;
+  overflow: visible !important;
+}
+@supports selector(:-webkit-full-screen) {
+  html:-webkit-full-screen:has(> body .home) {
+    height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
