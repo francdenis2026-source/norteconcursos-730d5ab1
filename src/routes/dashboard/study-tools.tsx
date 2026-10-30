@@ -338,6 +338,8 @@ function StudyToolsPage() {
         onFocusDone={(minutes) => onFocusDone(minutes, subject, topic)}
       />
 
+      {!enem && <StudyCentralCard subject={subject || suggested} topic={topic} />}
+
       <FocusHistoryCard history={history} />
 
       {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
@@ -355,6 +357,59 @@ function StudyToolsPage() {
       </>}
     </div>
   );
+}
+
+function StudyCentralCard({ subject, topic }: { subject: string; topic: string }) {
+  const [tab, setTab] = React.useState<"notes" | "guide" | "compare" | "quiz">("notes");
+  const title = topic || subject || "Direitos fundamentais";
+  const tabs = [
+    ["notes", "Notas didáticas"],
+    ["guide", "Study Guide"],
+    ["compare", "Compare"],
+    ["quiz", "Quiz Me"],
+  ] as const;
+  return (
+    <Card className="study-central-card overflow-hidden">
+      <CardHeader className="border-b pb-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <CardDescription className="uppercase tracking-[0.12em]">Central de estudo</CardDescription>
+            <CardTitle className="mt-1 text-xl">Aprenda {title}</CardTitle>
+            <p className="mt-1 text-sm text-muted-foreground">Conceito, exemplo, pegadinha e revisão em um só lugar.</p>
+          </div>
+          <Badge variant="secondary">Piloto didático</Badge>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Ferramentas da Central de estudo">
+          {tabs.map(([key, label]) => (
+            <Button key={key} type="button" size="sm" variant={tab === key ? "default" : "outline"} onClick={() => setTab(key)} role="tab" aria-selected={tab === key}>
+              {label}
+            </Button>
+          ))}
+        </div>
+      </CardHeader>
+      <CardContent className="pt-5">
+        {tab === "notes" && (
+          <div className="grid gap-3 md:grid-cols-2">
+            <StudyNote tone="blue" label="Conceito" title="O que você precisa saber" text="Leia a definição principal do assunto em poucas linhas, com linguagem direta e foco no que costuma ser cobrado." />
+            <StudyNote tone="yellow" label="Atenção" title="Pegadinha de prova" text="Nenhum direito fundamental é absoluto: os limites dependem da Constituição e do caso concreto." />
+            <StudyNote tone="green" label="Exemplo" title="Como aparece na prática" text="A liberdade de expressão protege ideias, mas não autoriza ameaça, calúnia ou discriminação." />
+            <StudyNote tone="purple" label="Memorização" title="Frase para revisar" text="Conceito → exemplo → limite. Use essa sequência antes de resolver questões." />
+          </div>
+        )}
+        {tab === "guide" && <StudyToolPanel title="Study Guide" text="1. Leia a nota de conceito. 2. Revise a pegadinha. 3. Resolva cinco questões. 4. Refaça amanhã as questões erradas." />}
+        {tab === "compare" && <StudyToolPanel title="Compare" text="Coloque dois conceitos lado a lado e veja a diferença em definição, exemplo e erro mais comum." />}
+        {tab === "quiz" && <StudyToolPanel title="Quiz Me" text="A Constituição trata os direitos fundamentais como ilimitados? Não. Eles podem sofrer limitações proporcionais e justificadas." action="Responder outra questão" />}
+      </CardContent>
+    </Card>
+  );
+}
+
+function StudyNote({ tone, label, title, text }: { tone: "blue" | "yellow" | "green" | "purple"; label: string; title: string; text: string }) {
+  return <div className={`study-note study-note--${tone}`}><span className="study-note__label">{label}</span><h3>{title}</h3><p>{text}</p></div>;
+}
+
+function StudyToolPanel({ title, text, action }: { title: string; text: string; action?: string }) {
+  return <div className="rounded-xl border border-border bg-muted/20 p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">{text}</p>{action && <Button className="mt-4" size="sm">{action}</Button>}</div>;
 }
 
 // ───────────────────────── Material da plataforma (integra Biblioteca, trilhas e questões) ─────────────────────────
