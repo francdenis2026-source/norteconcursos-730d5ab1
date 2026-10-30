@@ -1687,3 +1687,54 @@
   .trainer-setup .trainer-setup__unified-head { align-items: flex-start; }
   .trainer-setup .trainer-setup__metric { padding: 6px 8px; }
 }
+
+/* Fullscreen fine tuning: reserve bottom controls above the fixed platform credit.
+   Keep body stationary; long stem/answers scroll only inside their own panes. */
+@media (min-width: 1050px) and (min-height: 620px) {
+  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace {
+    inset: 48px 12px 48px !important;
+    gap: 6px !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > header {
+    min-height: 38px !important;
+    padding-block: 2px !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+    min-height: 0 !important;
+    flex: 1 1 0 !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+    grid-template-rows: auto auto auto auto minmax(0, 1fr) minmax(42px,auto) minmax(0,auto) !important;
+    gap: 2px 12px !important;
+    padding: 7px 13px 9px !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-meta { margin-bottom: 1px !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-heading { margin: 0 !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-progress { margin: 0 0 5px !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem,
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: contain;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+    position: relative;
+    z-index: 2;
+    grid-row: 6 !important;
+    min-height: 42px;
+    padding: 5px 0 0 !important;
+    margin: 0 !important;
+    align-self: end;
+    background: var(--card);
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions button {
+    min-height: 36px !important;
+    padding-block: 6px !important;
+  }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+    grid-row: 7 !important;
+    max-height: min(16dvh, 130px) !important;
+    overflow-y: auto !important;
+  }
+}
