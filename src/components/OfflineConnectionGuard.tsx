@@ -41,7 +41,12 @@ export function OfflineConnectionGuard() {
     window.addEventListener("pageshow", resumed);
     window.addEventListener("message", retry);
     document.addEventListener("visibilitychange", visible);
-    const timer = window.setInterval(visible, 5000);
+    // 20s em vez de 5s: a cada aba aberta isso faz uma requisição HEAD para a própria origem,
+    // o tempo todo. Em 5s isso é +700 reqs/h por aba — volume alto o bastante para disparar
+    // proteção anti-bot do CDN para aquele visitante, que então passa a falhar essa mesma sondagem
+    // e o app mostra "sem conexão" com a internet normal. Eventos de rede reais (offline/online/
+    // focus/visibilitychange) continuam disparando a verificação na hora, sem depender do intervalo.
+    const timer = window.setInterval(visible, 20000);
     if (!navigator.onLine) monitor.offline();
     void check();
     return () => {

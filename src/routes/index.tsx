@@ -54,6 +54,7 @@ import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
+import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
@@ -403,6 +404,7 @@ function Index() {
             >
               <LogIn /> Entrar
             </Link>
+            <FullscreenToggle />
             <ThemeToggle />
             <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>

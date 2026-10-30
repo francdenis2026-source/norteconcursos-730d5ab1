@@ -185,6 +185,7 @@
 }
 
 :root {
+  color-scheme: light;
   --radius: 0.75rem;
 
   /* Brand constants (theme independent) */
@@ -252,6 +253,10 @@
 }
 
 .dark {
+  /* Tells the browser this page is dark so native UI (scrollbars, form controls, status bar)
+     renders in a matching scheme instead of its light default. */
+  color-scheme: dark;
+
   /* Cool slate dark palette (not flat neutral, not brown): reads as a deliberate, professional
      theme instead of a washed-out charcoal, and gives white/gold text more lift. Gold stays a
      small accent. */
@@ -4955,7 +4960,7 @@ html {
 }
 .admin-tabs {
   display: grid;
-  grid-template-columns: repeat(8, minmax(112px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   justify-content: start;
   overflow-x: auto;
 }

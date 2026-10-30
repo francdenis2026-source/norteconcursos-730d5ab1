@@ -287,6 +287,7 @@
   font-size: 12px;
 }
 .home .lp-theme-toggle,
+.home .home-fullscreen-toggle,
 .home-menu-trigger {
   display: grid;
   place-items: center;
@@ -301,15 +302,18 @@
   transition: background-color 300ms cubic-bezier(0.32,0.72,0,1), transform 300ms cubic-bezier(0.32,0.72,0,1);
 }
 .home .lp-theme-toggle:hover,
+.home .home-fullscreen-toggle:hover,
 .home-menu-trigger:hover {
   background: var(--home-tint);
 }
 .home .lp-theme-toggle:active,
+.home .home-fullscreen-toggle:active,
 .home-menu-trigger:active {
   transform: scale(0.92);
   background: var(--home-tint);
 }
-.home .lp-theme-toggle svg {
+.home .lp-theme-toggle svg,
+.home .home-fullscreen-toggle svg {
   width: 17px;
   height: 17px;
 }
@@ -1713,6 +1717,7 @@
     display: none;
   }
   .home .lp-theme-toggle,
+  .home .home-fullscreen-toggle,
   .home-menu-trigger {
     min-width: 44px;
     width: 44px;
@@ -2645,7 +2650,8 @@
   .home-header .norte-brand__type {
     --brand-size: 19px;
   }
-  .home .lp-theme-toggle {
+  .home .lp-theme-toggle,
+  .home .home-fullscreen-toggle {
     display: none;
   }
   .home-plans__grid {

@@ -43,7 +43,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
 import { EnrichmentAdmin } from "@/components/library/EnrichmentAdmin";
 import { Download } from "lucide-react";
@@ -349,16 +349,35 @@ function AdminPanel() {
           </>
         }
         description="Gerencie concursos, questões, editais, biblioteca e provas em uma central reservada."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={GraduationCap} label="Concursos" value={contests.length} />
+          <HeroStat icon={BookOpen} label="Questões" value={questions.length} />
+          <HeroStat icon={FileText} label="Provas enviadas" value={examUploads.length} />
+          <HeroStat icon={HistoryIcon} label="Logs de auditoria" value={auditLogs.length} />
+        </div>
+      </PageHero>
 
       <Tabs defaultValue="contests" className="w-full">
         <TabsList className="admin-tabs w-full max-w-5xl">
-          <TabsTrigger value="contests">Concursos</TabsTrigger>
-          <TabsTrigger value="questions">Questões</TabsTrigger>
-          <TabsTrigger value="syllabus">Edital</TabsTrigger>
-          <TabsTrigger value="library">Biblioteca</TabsTrigger>
-          <TabsTrigger value="exam-uploads">Provas Enviadas</TabsTrigger>
-          <TabsTrigger value="audit">Histórico</TabsTrigger>
+          <TabsTrigger value="contests" className="gap-1.5">
+            <GraduationCap className="h-4 w-4" /> Concursos
+          </TabsTrigger>
+          <TabsTrigger value="questions" className="gap-1.5">
+            <BookOpen className="h-4 w-4" /> Questões
+          </TabsTrigger>
+          <TabsTrigger value="syllabus" className="gap-1.5">
+            <FileText className="h-4 w-4" /> Edital
+          </TabsTrigger>
+          <TabsTrigger value="library" className="gap-1.5">
+            <Settings className="h-4 w-4" /> Biblioteca
+          </TabsTrigger>
+          <TabsTrigger value="exam-uploads" className="gap-1.5">
+            <ShieldCheck className="h-4 w-4" /> Provas Enviadas
+          </TabsTrigger>
+          <TabsTrigger value="audit" className="gap-1.5">
+            <HistoryIcon className="h-4 w-4" /> Histórico
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">

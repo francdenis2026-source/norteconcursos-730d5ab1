@@ -350,7 +350,10 @@ function ProfessionalSimulator() {
         error: null,
         data: await queryClient.fetchQuery({
           queryKey: ["simulator-catalog", user.id, isEnemMode, table, fields],
-          staleTime: 5 * 60_000,
+          // Mesmo acervo pesado do Treinador: cache mais longo (igual ao gcTime de 30min do
+          // router) é seguro porque o realtime em useQuestionCatalogRealtime invalida esta
+          // chave assim que uma questão muda — não precisa expirar rápido por conta própria.
+          staleTime: 15 * 60_000,
           retry: 1,
           queryFn: () =>
             fetchAllRows<Record<string, unknown>>((from, to) => {
@@ -364,7 +367,7 @@ function ProfessionalSimulator() {
                 .order("id")
                 .range(from, to)
                 .returns<Record<string, unknown>[]>();
-            }),
+            }, 1000),
         }),
       });
       const loadHistory = () => {
