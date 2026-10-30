@@ -1,6 +1,7 @@
 import { useHomeSection } from "@/hooks/useHomeSection";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
+import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
@@ -682,6 +683,7 @@ function Index() {
           </div>
         </section>
 
+        <HomeRankingShowcase />
         <PlansSection />
       </main>
 

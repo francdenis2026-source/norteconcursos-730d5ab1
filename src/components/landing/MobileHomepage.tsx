@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
+import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { HeaderQuestionStats } from "@/components/landing/HeroDock";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -90,6 +91,7 @@ export function MobileHomepage() {
         </div>
         <ContestShowcase />
       </section>
+      <HomeRankingShowcase />
       <section id="mobile-planos" className="mobile-plans" aria-labelledby="mobile-plans-title">
         <div className="mobile-homepage__section-head">
           <span>Planos</span>
