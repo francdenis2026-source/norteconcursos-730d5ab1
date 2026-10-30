@@ -691,3 +691,43 @@
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__search { margin-block: 2px 4px; min-height: 40px; height: 40px; }
   .app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .app-sidebar__foot { padding-block: 6px; }
 }
+
+/* Questões: one compact topbar; the existing accessible links keep their routes. */
+@media (min-width: 768px) {
+ .app-topbar:has(.workspace-section-nav--inline) { gap: 9px; padding-inline: 10px; min-width: 0; }
+ .app-topbar .workspace-section-nav--inline {
+   position: static !important; top: auto !important; z-index: auto;
+   flex: 1 1 auto; width: auto; min-width: 0; max-width: 100%;
+   height: auto; min-height: 0; padding: 0 2px; gap: 4px;
+   border: 0; background: transparent; overflow-x: auto; overflow-y: hidden;
+   scrollbar-width: none; white-space: nowrap;
+ }
+ .app-topbar .workspace-section-nav--inline::-webkit-scrollbar { display: none; }
+ .app-topbar .workspace-section-nav--inline .workspace-section-nav__segment { display: none; }
+ .app-topbar .workspace-section-nav--inline .workspace-section-nav__item { gap: 0; }
+ .app-topbar .workspace-section-nav--inline a {
+   gap: 5px; min-height: 34px; padding: 6px 8px; border-radius: 9px;
+   font-size: 11px; font-weight: 600; box-shadow: none;
+ }
+ .app-topbar .workspace-section-nav--inline a > svg {
+   width: 14px; height: 14px; margin: 0; box-shadow: none; background: none;
+ }
+ .app-topbar:has(.workspace-section-nav--inline) .app-location { flex: 0 0 auto; }
+ .app-topbar:has(.workspace-section-nav--inline) .app-location__context { white-space: nowrap; }
+ .app-topbar:has(.workspace-section-nav--inline) .app-topbar__actions {
+   flex: 0 0 auto; margin-left: auto; gap: 5px;
+ }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+ .app-topbar:has(.workspace-section-nav--inline) .app-location__group { display: none; }
+ .app-topbar .workspace-section-nav--inline a { padding-inline: 6px; font-size: 10px; }
+}
+@media (max-width: 767px) {
+ .app-topbar .workspace-section-nav--inline {
+   flex: 1 1 auto; width: auto; min-width: 0; height: 42px; gap: 3px;
+   padding: 0; border: 0; background: transparent; overflow-x: auto;
+ }
+ .app-topbar .workspace-section-nav--inline .workspace-section-nav__segment { display: none; }
+ .app-topbar .workspace-section-nav--inline a { min-height: 36px; padding: 6px 8px; font-size: 11px; }
+ .app-topbar:has(.workspace-section-nav--inline) .app-location { display: none; }
+}
