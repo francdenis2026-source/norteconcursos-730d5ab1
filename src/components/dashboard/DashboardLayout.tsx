@@ -145,7 +145,7 @@ const MENU: MenuItem[] = [
   { group: "Planejamento", label: "Configuração do estudo", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Planejamento", label: "Agenda por edital", icon: CalendarClock, href: "/dashboard/cronograma" },
   { group: "Planejamento", label: "Ajustes pelos resultados", icon: ClipboardList, href: "/dashboard/study-plan" },
-  { group: "Planejamento", label: "Central de estudo", icon: Timer, href: "/dashboard/study-tools" },
+  { group: "Estudo", label: "Central de estudo", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Meu concurso", label: "Meu objetivo", icon: Target, href: "/dashboard/my-contest" },
   { group: "Meu concurso", label: "Estudar pelo edital", icon: MapPin, href: "/dashboard/edital" },
   { group: "Meu concurso", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
