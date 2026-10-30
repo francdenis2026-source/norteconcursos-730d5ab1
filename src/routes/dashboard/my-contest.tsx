@@ -1,13 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import {
-  BarChart3,
   BookOpenText,
   Calendar,
-  CalendarClock,
   ChevronRight,
-  ClipboardList,
-  Radar,
   Target,
 } from "lucide-react";
 import { useAuthStatus, useDashboardData } from "@/hooks/useDashboard";
@@ -24,33 +20,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HeroStat } from "@/components/dashboard/PageHero";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
-
-const NEXT_STEPS = [
-  {
-    to: "/dashboard/edital-radar",
-    title: "Radar do edital",
-    text: "O que mais cai e o que tende a cair no seu edital.",
-    icon: Radar,
-  },
-  {
-    to: "/dashboard/exam-panorama",
-    title: "Panorama das provas",
-    text: "O peso de cada disciplina nas provas já realizadas.",
-    icon: BarChart3,
-  },
-  {
-    to: "/dashboard/cronograma",
-    title: "Agenda por edital",
-    text: "Disciplinas e tópicos distribuídos até a prova.",
-    icon: CalendarClock,
-  },
-  {
-    to: "/dashboard/study-plan",
-    title: "Ajustes pelos resultados",
-    text: "Prioridades a partir das provas que você já fez.",
-    icon: ClipboardList,
-  },
-] as const;
 
 export const Route = createFileRoute("/dashboard/my-contest")({ component: MyContestPage });
 function MyContestPage() {
@@ -170,28 +139,7 @@ function MyContestPage() {
           </Button>
         </div>
       </section>
-      <section aria-labelledby="my-contest-next" className="space-y-3">
-        <h2 id="my-contest-next" className="text-lg font-black">
-          Próximos passos
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          {NEXT_STEPS.map(({ to, title, text, icon: Icon }) => (
-            <Link
-              key={to}
-              to={to}
-              className="flex gap-3 rounded-2xl border bg-card p-4 transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
-            >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <span>
-                <strong className="block text-sm">{title}</strong>
-                <small className="text-xs text-muted-foreground">{text}</small>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
+
     </div>
   );
 }
