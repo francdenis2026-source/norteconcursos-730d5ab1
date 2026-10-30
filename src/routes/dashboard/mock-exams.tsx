@@ -392,7 +392,17 @@ function ProfessionalSimulator() {
                   []) as ReferenceRuleRow[]),
           () => [] as ReferenceRuleRow[],
         );
-      const [officialResult, curatedResult, boardResult, historyResult, rules] = await Promise.all([
+      // History and scoring-rule metadata are secondary to showing the setup filters.
+      // Load them independently so a slow history request does not block the catalog.
+      void Promise.all([loadHistory(), loadRules()]).then(([historyResult, rules]) => {
+        if (generation !== loadGeneration.current) return;
+        setHistoryUnavailable(!!historyResult.error);
+        setRulesRegistry(rules);
+        setHistory(historyResult.data.filter((item) => !isEnemMode || /ENEM/i.test(item.title)));
+      }).catch(() => {
+        if (generation === loadGeneration.current) setHistoryUnavailable(true);
+      });
+      const [officialResult, curatedResult, boardResult] = await Promise.all([
         query(
           "official_exam_questions",
           "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis,legal_review_required,legal_audit_completed,context_review_required,support:question_support_texts(label,body)",
@@ -413,8 +423,6 @@ function ProfessionalSimulator() {
           if (isMissingQuestionTable(error)) return { data: [], error: null };
           throw error;
         }),
-        loadHistory(),
-        loadRules(),
       ]);
       if (generation !== loadGeneration.current) return;
       if (officialResult.error) throw officialResult.error;
@@ -514,9 +522,7 @@ function ProfessionalSimulator() {
             }),
         ),
       );
-      setHistoryUnavailable(!!historyResult.error);
-      setRulesRegistry(rules);
-      setHistory(historyResult.data.filter((item) => !isEnemMode || /ENEM/i.test(item.title)));
+
     } catch (error) {
       if (generation !== loadGeneration.current) return;
       setLoadError("Não foi possível carregar as questões. Confira sua conexão e tente novamente.");
