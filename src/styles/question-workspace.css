@@ -1373,3 +1373,22 @@
   .trainer-reading-workspace:fullscreen .trainer-reading-answers { overflow: visible; border-left: 0; padding-left: 0; }
   .trainer-reading-workspace:fullscreen .trainer-reading-explanation { display: block; }
 }
+
+/* Explicit grid placements remain correct when the prior-answer notice appears. */
+@media (min-width: 1100px) {
+  .trainer-reading-content > .trainer-reading-meta,
+  .trainer-reading-content > .trainer-reading-review,
+  .trainer-reading-content > .trainer-reading-heading,
+  .trainer-reading-content > .trainer-reading-progress { grid-column: 1 / -1; }
+  .trainer-reading-content > .trainer-reading-meta { grid-row: 1; }
+  .trainer-reading-content > .trainer-reading-review { grid-row: 2; }
+  .trainer-reading-content > .trainer-reading-heading { grid-row: 3; }
+  .trainer-reading-content > .trainer-reading-progress { grid-row: 3; justify-self: stretch; align-self: end; margin-top: 38px; }
+}
+.trainer-reading-workspace:fullscreen .trainer-reading-meta { grid-column: 1 / -1; grid-row: 1; }
+.trainer-reading-workspace:fullscreen .trainer-reading-review { grid-column: 1 / -1; grid-row: 2; }
+.trainer-reading-workspace:fullscreen .trainer-reading-heading { grid-column: 1 / -1; grid-row: 3; }
+.trainer-reading-workspace:fullscreen .trainer-reading-progress { grid-column: 1 / -1; grid-row: 3; align-self: end; margin-top: 38px; }
+@media (max-width: 900px) {
+  .trainer-reading-workspace:fullscreen .trainer-reading-progress { margin-top: 0; }
+}
