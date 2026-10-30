@@ -1586,3 +1586,19 @@
     position: static !important;
   }
 }
+
+/* Optional review details remain reachable without taking space from the question. */
+.trainer-review-community__toggle {
+  cursor:pointer; padding:9px 12px; border-radius:10px;
+  border:1px solid var(--border); background:var(--card);
+  color:var(--foreground); font-size:12px; font-weight:600;
+}
+.trainer-review-community__toggle:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+@media (min-width:1050px) and (min-height:620px) {
+ .app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community:not([open]) {
+   width:auto; overflow:visible; box-shadow:none;
+ }
+ .app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community[open] {
+   width:min(420px,40vw); overflow:auto;
+ }
+}
