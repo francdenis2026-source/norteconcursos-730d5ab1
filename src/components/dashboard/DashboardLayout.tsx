@@ -31,6 +31,7 @@ import { showsReadingControl } from "@/lib/readingScale";
 import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import { StudentTopNavigation } from "./StudentTopNavigation";
 import "@/styles/student-top-navigation.css";
+import "@/styles/student-workspace-refresh.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
