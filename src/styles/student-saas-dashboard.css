@@ -1,0 +1,165 @@
+/* Norte Concursos — SaaS Dashboard system for the complete student workspace.
+   Visual-only layer: preserves routes, queries, permissions and existing interactions. */
+.app-shell[data-area="student"] {
+  --saas-bg: #f3f6fa;
+  --saas-panel: #ffffff;
+  --saas-panel-soft: #f7f9fc;
+  --saas-ink: #172b43;
+  --saas-muted: #62758a;
+  --saas-line: #dce5ee;
+  --saas-blue: #2868b2;
+  --saas-cyan: #087f91;
+  --saas-green: #16845d;
+  --saas-violet: #7555b5;
+  --saas-amber: #a56b12;
+  --saas-rose: #b94f76;
+  color: var(--saas-ink);
+}
+:root.dark .app-shell[data-area="student"] {
+  --saas-bg: #111923;
+  --saas-panel: #1a2734;
+  --saas-panel-soft: #202f3d;
+  --saas-ink: #edf3f8;
+  --saas-muted: #a9bac8;
+  --saas-line: #344757;
+  --saas-blue: #82baff;
+  --saas-cyan: #69d2d0;
+  --saas-green: #75d2a7;
+  --saas-violet: #b9a2f0;
+  --saas-amber: #edc17b;
+  --saas-rose: #efa1ba;
+}
+.app-shell[data-area="student"] .app-main,
+.app-shell[data-area="student"] #dashboard-content { background: var(--saas-bg); }
+.app-shell[data-area="student"] #dashboard-content { color: var(--saas-ink); }
+.app-shell[data-area="student"] #dashboard-content :is(h1,h2,h3,h4) { color: var(--saas-ink); letter-spacing: -.02em; }
+.app-shell[data-area="student"] #dashboard-content :is(p,small,.text-muted-foreground) { color: var(--saas-muted); }
+.app-shell[data-area="student"] #dashboard-content [data-slot="card"] {
+  color: var(--saas-ink); background: var(--saas-panel);
+  border: 1px solid var(--saas-line); border-radius: 16px;
+  box-shadow: 0 5px 18px -16px rgb(24 47 72 / 28%);
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card"] {
+  background: linear-gradient(145deg,#1d2b39,#192632);
+  box-shadow: 0 12px 28px -24px #000, inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+.app-shell[data-area="student"] #dashboard-content :is(input,select,textarea) {
+  color: var(--saas-ink); background: var(--saas-panel);
+  border-color: var(--saas-line); border-radius: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content :is(button,a,[role="button"]):focus-visible {
+  outline: 2px solid var(--saas-cyan); outline-offset: 3px;
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
+  background: linear-gradient(110deg,#2868b2,#168b91); color: white;
+  border: 1px solid #3a91b3; box-shadow: 0 5px 14px -10px #087f91;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
+  background: linear-gradient(110deg,#287e91,#258e83); border-color: #4ca9a0;
+}
+.app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  gap: 16px; max-width: 1760px; margin-inline: auto;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  min-height: 132px; border-radius: 18px; padding: 24px 30px;
+  background:
+    radial-gradient(ellipse at 86% 5%,rgb(112 173 244 / 22%),transparent 36%),
+    linear-gradient(115deg,#102b48 0%,#17486a 56%,#263d63 100%);
+  border: 1px solid #315d7e; box-shadow: 0 16px 34px -28px #102b48;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead h1 { font-size: clamp(26px,2.2vw,34px); }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts { gap: 10px; }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  min-height: 82px; padding: 14px; border-radius: 14px;
+  border: 1px solid var(--saas-line); background: var(--saas-panel);
+  box-shadow: 0 5px 16px -15px rgb(20 45 70 / 30%);
+  transition: transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a:hover {
+  transform: translateY(-2px); border-color: color-mix(in srgb,var(--saas-cyan) 55%,var(--saas-line));
+  box-shadow: 0 12px 22px -18px rgb(20 45 70 / 42%);
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  background: linear-gradient(145deg,#202f3d,#1a2733); border-color: var(--saas-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metrics { gap: 12px; }
+.app-shell[data-area="student"] .student-overview .student-home__metric {
+  min-height: 116px; padding: 16px; border: 1px solid var(--saas-line);
+  border-radius: 15px; background: var(--saas-panel);
+  box-shadow: 0 6px 18px -16px rgb(20 45 70 / 32%);
+  transition: transform .16s ease,border-color .16s ease;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric:hover {
+  transform: translateY(-2px); border-color: color-mix(in srgb,var(--saas-blue) 45%,var(--saas-line));
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__metric {
+  background: linear-gradient(145deg,#202f3d,#1a2733); border-color: var(--saas-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric > span {
+  width: 38px; height: 38px; border-radius: 11px;
+  background: color-mix(in srgb,var(--saas-blue) 13%,var(--saas-panel-soft));
+  color: var(--saas-blue);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="teal"] > span { color: var(--saas-cyan); background: color-mix(in srgb,var(--saas-cyan) 13%,var(--saas-panel-soft)); }
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="amber"] > span { color: var(--saas-amber); background: color-mix(in srgb,var(--saas-amber) 13%,var(--saas-panel-soft)); }
+.app-shell[data-area="student"] .student-overview .student-home__metric[data-tone="violet"] > span { color: var(--saas-violet); background: color-mix(in srgb,var(--saas-violet) 13%,var(--saas-panel-soft)); }
+.app-shell[data-area="student"] .student-overview .student-home__workspace {
+  grid-template-columns: minmax(0,1.55fr) minmax(310px,.9fr); gap: 16px;
+}
+.app-shell[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) { gap: 16px; }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: 20px; border: 1px solid var(--saas-line); border-radius: 16px;
+  border-left: 3px solid var(--saas-blue);
+  background: var(--saas-panel); box-shadow: 0 7px 20px -18px rgb(20 45 70 / 35%);
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  background: linear-gradient(145deg,#1d2b39,#192632); border-color: var(--saas-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="teal"] { border-left-color: var(--saas-cyan); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="amber"] { border-left-color: var(--saas-amber); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="violet"] { border-left-color: var(--saas-violet); }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent="rose"] { border-left-color: var(--saas-rose); }
+.app-shell[data-area="student"] .student-overview .student-home__section-title { margin-bottom: 16px; }
+.app-shell[data-area="student"] .student-overview .student-home__section-title > span {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: grid; place-items: center; color: var(--saas-cyan);
+  background: color-mix(in srgb,var(--saas-cyan) 12%,var(--saas-panel-soft));
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li { border-color: var(--saas-line); }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li strong,
+.app-shell[data-area="student"] .student-overview .student-home__objective-name { color: var(--saas-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__next-topic {
+  background: color-mix(in srgb,var(--saas-cyan) 9%,var(--saas-panel));
+  border-color: color-mix(in srgb,var(--saas-cyan) 35%,var(--saas-line));
+}
+.app-shell[data-area="student"] .student-overview .student-home__text-link { color: var(--saas-blue); font-weight: 650; }
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__text-link { color: #91c9ff; }
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  border: 1px solid color-mix(in srgb,var(--saas-amber) 42%,var(--saas-line));
+  border-left: 4px solid var(--saas-amber); border-radius: 15px;
+  background: color-mix(in srgb,var(--saas-amber) 8%,var(--saas-panel));
+  padding: 18px 20px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__primary {
+  border-radius: 10px; font-weight: 700;
+}
+.app-shell[data-area="student"] .student-overview .student-home__data-note {
+  color: var(--saas-muted); border: 1px solid var(--saas-line);
+  background: var(--saas-panel); border-radius: 13px; padding: 14px 16px;
+}
+@media (min-width:1500px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0,1.8fr) minmax(340px,.85fr); }
+}
+@media (max-width:1100px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0,1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:700px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead { padding: 17px !important; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] { padding: 15px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .app-shell[data-area="student"] .student-overview * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
