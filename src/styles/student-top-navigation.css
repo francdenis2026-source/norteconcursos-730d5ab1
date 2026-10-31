@@ -819,3 +819,51 @@
     display: none !important;
   }
 }
+
+
+/* Contextual student navigation: current group's submenus only, home always visible.
+   Link labels stay visible; navigation wraps rather than creating a scroll rail. */
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links[data-contextual="true"] {
+    flex-wrap: wrap !important;
+    align-content: center;
+    overflow: visible !important;
+    gap: 5px !important;
+    width: auto !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links[data-contextual="true"] > * {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links[data-contextual="true"] .student-top-navigation__trigger {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 clamp(7px, .7vw, 12px) !important;
+    font-size: clamp(10px, .78vw, 12px) !important;
+    text-decoration: none;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links[data-contextual="true"] .student-top-navigation__label {
+    display: inline !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links[data-contextual="true"] .student-top-navigation__icon-wrap {
+    margin: 0 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__home {
+    border-color: color-mix(in srgb, var(--primary) 35%, var(--border)) !important;
+    color: var(--foreground) !important;
+    font-weight: 750 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__submenu[data-active="true"] {
+    border-color: color-mix(in srgb, var(--primary) 55%, var(--border)) !important;
+    background: color-mix(in srgb, var(--primary) 15%, var(--card)) !important;
+    color: var(--foreground) !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar:has(.student-top-navigation__links[data-contextual="true"]) {
+    height: auto;
+    min-height: var(--app-topbar-h);
+  }
+}
