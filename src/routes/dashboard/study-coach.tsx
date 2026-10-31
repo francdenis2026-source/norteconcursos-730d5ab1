@@ -1,5 +1,4 @@
 import { platformDate } from "@/lib/platformClock";
-import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -677,8 +676,6 @@ function StudyCoachPage() {
           )}
         </div>
       </section>
-
-      <StudyPlanningNav active="coach" />
       <section aria-label="Concurso e edital do seu plano" className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-card px-4 py-3">
         <div>
           <p className="font-semibold">Concurso e edital</p>
