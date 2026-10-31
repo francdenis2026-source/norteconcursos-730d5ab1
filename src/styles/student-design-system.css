@@ -15,6 +15,12 @@
 .app-shell[data-area="student"] .app-content { padding: 22px clamp(18px, 3vw, 42px) 34px; }
 .app-shell[data-area="student"] .app-content__inner { max-width: 1480px; margin-inline: auto; }
 .app-shell[data-area="student"] #dashboard-content { color: var(--student-ink); font-size: 15px; line-height: 1.55; }
+.app-shell[data-area="student"] #dashboard-content::before { content: ""; position: fixed; z-index: -1; inset: var(--app-topbar-h, 72px) 0 0; pointer-events: none; opacity: .7; background: radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--student-accent) 8%, transparent), transparent 32%), linear-gradient(135deg, transparent 0 62%, color-mix(in srgb, var(--student-accent) 4%, transparent)); }
+.app-shell[data-area="student"][data-section-art="Planejamento"] #dashboard-content::before,
+.app-shell[data-area="student"][data-section-art="Meu concurso"] #dashboard-content::before { background: radial-gradient(circle at 12% 8%, rgb(43 111 196 / 12%), transparent 34%), linear-gradient(135deg, transparent 0 58%, rgb(43 111 196 / 5%)); }
+.app-shell[data-area="student"][data-section-art="Material didático"] #dashboard-content::before { background: radial-gradient(circle at 86% 10%, rgb(31 139 122 / 12%), transparent 34%), linear-gradient(135deg, transparent 0 58%, rgb(31 139 122 / 5%)); }
+.app-shell[data-area="student"][data-section-art="Questões"] #dashboard-content::before { background: radial-gradient(circle at 86% 10%, rgb(126 77 190 / 12%), transparent 34%), linear-gradient(135deg, transparent 0 58%, rgb(126 77 190 / 5%)); }
+.app-shell[data-area="student"][data-section-art="Provas"] #dashboard-content::before { background: radial-gradient(circle at 12% 10%, rgb(189 108 20 / 12%), transparent 34%), linear-gradient(135deg, transparent 0 58%, rgb(189 108 20 / 5%)); }
 .app-shell[data-area="student"] #dashboard-content :is(h1,h2,h3,h4,strong,th) { color: var(--student-ink); }
 .app-shell[data-area="student"] #dashboard-content :is(p,li,small,label,figcaption,.text-muted-foreground) { color: var(--student-muted); }
 .app-shell[data-area="student"] #dashboard-content :is([data-slot="card"],.surface-card,.question-window,.trainer-config-card) {
@@ -49,6 +55,7 @@
   --student-accent: #82b6ff;
   --student-accent-soft: #203c60;
 }
+:root.dark .app-shell[data-area="student"] #dashboard-content::before { opacity: .9; }
 :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] { color: #081525; }
 :root.dark .app-shell[data-area="student"] .app-nav__link[data-active="true"] { color: #eaf3ff; background: #203c60; box-shadow: inset 3px 0 0 var(--student-accent), inset 0 0 0 1px #486d98; }
 :root.dark .app-shell[data-area="student"] #dashboard-content :is(.page-hero,.library-header,.edital-heading,.ranking-glass-header) { background: var(--student-surface) !important; }
