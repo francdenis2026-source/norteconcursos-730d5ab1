@@ -6,10 +6,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import type { NavigationItem } from "./DashboardNavigation";
 
 const sections: { groups: string[]; label: string; icon: LucideIcon; description: string; tone: string }[] = [
-  { groups: ["Planejamento", "Meu concurso", "Minha Preparação"], label: "Preparação", icon: Compass, description: "Painel, objetivo, plano, agenda e evolução", tone: "blue" },
+  { groups: ["Planejamento", "Meu concurso", "Minha Preparação"], label: "Preparação", icon: Compass, description: "Objetivo, plano e agenda de estudos", tone: "blue" },
   { groups: ["Central de Estudos", "Material didático"], label: "Estudos", icon: BookOpenText, description: "Ferramentas, biblioteca, leis e conteúdos", tone: "cyan" },
   { groups: ["Questões", "Provas"], label: "Treinos", icon: ClipboardList, description: "Questões, simulados, flashcards e provas", tone: "emerald" },
-  { groups: ["Desempenho"], label: "Desempenho", icon: ChartNoAxesCombined, description: "Resultados, histórico, ranking e evolução", tone: "rose" },
+  { groups: ["Desempenho"], label: "Desempenho", icon: ChartNoAxesCombined, description: "Evolução, análises, histórico e conquistas", tone: "rose" },
   { groups: ["ENEM"], label: "ENEM", icon: GraduationCap, description: "Preparação para o ENEM", tone: "indigo" },
   { groups: ["Conta"], label: "Conta", icon: SlidersHorizontal, description: "Perfil e assinatura", tone: "slate" },
 ];
@@ -21,7 +21,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
   const entries = !isHome && current
-    ? items.filter(item => item.group === current.group)
+    ? items.filter(item => item.group === current.group && item.href !== "/dashboard")
     : [];
 
   return (
@@ -38,7 +38,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
           </Link>
         )}
         {isHome || !section ? sections.map(candidate => {
-          const groupEntries = items.filter(item => candidate.groups.includes(item.group));
+          const groupEntries = items.filter(item => candidate.groups.includes(item.group) && item.href !== "/dashboard");
           if (!groupEntries.length) return null;
           const Icon = candidate.icon;
           return (
