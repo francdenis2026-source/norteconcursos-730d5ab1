@@ -660,10 +660,11 @@ function StudyCoachPage() {
       >
         <div className="study-assistant-hero__content">
           <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
-          <h1 id="study-assistant-title">Configuração do estudo</h1>
+          <h1 id="study-assistant-title">Meu plano</h1>
           <p>
-            Defina sua disponibilidade e distribua a semana. Use a Agenda por edital para executar
-            os tópicos e Ajustes pelos resultados para consultar prioridades das provas realizadas.
+            {profile
+              ? "Acompanhe seu planejamento personalizado, organize os estudos da semana e ajuste sua estratégia conforme sua evolução."
+              : "Para começar, configure seu primeiro plano de estudos. Informe seu objetivo e sua disponibilidade para montar uma rotina personalizada."}
           </p>
           {profile && (
             <a
