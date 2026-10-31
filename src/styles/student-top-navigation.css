@@ -744,3 +744,78 @@
 :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-content :is(button, a, [role="button"]):hover > svg {
   color: #236eb4;
 }
+
+
+/* Final fit-first desktop navigation: six combined categories, never a horizontal scroll rail. */
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar {
+    overflow: visible !important;
+    min-width: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar > .student-top-navigation {
+    min-width: 0 !important;
+    overflow: visible !important;
+    gap: clamp(6px, .75vw, 12px) !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    display: flex !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    flex-wrap: nowrap !important;
+    gap: clamp(2px, .28vw, 5px) !important;
+    scrollbar-width: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links::-webkit-scrollbar {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links > * {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    display: inline-flex !important;
+    justify-content: center;
+    flex: 1 1 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding-inline: clamp(4px, .45vw, 8px) !important;
+    gap: clamp(4px, .45vw, 7px) !important;
+    white-space: nowrap !important;
+    font-size: clamp(10px, .75vw, 12px) !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1050px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand > span:last-child {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    min-height: 40px !important;
+    padding: 0 !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__label,
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1051px) and (max-width: 1280px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand > span:last-child {
+    display: none !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__chevron {
+    display: none !important;
+  }
+}
