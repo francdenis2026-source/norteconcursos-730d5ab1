@@ -69,7 +69,9 @@ function QuestionBankPage() {
     detailTrigger.current = trigger;
     setDetail(view);
   };
-  const [examLimit, setExamLimit] = React.useState(15);
+  const [activeView, setActiveView] = React.useState<"subject" | "board" | "exams" | "year">("subject");
+  const [page, setPage] = React.useState(1);
+  const [pageSize, setPageSize] = React.useState(8);
   const items = React.useMemo(
     () => availableQuestionBank(catalog, collection),
     [catalog, collection],
@@ -148,10 +150,16 @@ function QuestionBankPage() {
   if (error) return <ErrorState message={error} retry={reload} />;
 
   const total = visible.length;
-  const maxSubject = bySubject[0]?.[1] ?? 1;
-  const maxBoard = byBoard[0]?.[1] ?? 1;
+  const activeRows = activeView === "subject" ? bySubject : activeView === "board" ? byBoard : activeView === "year" ? byYear : [];
+  const resultCount = activeView === "exams" ? exams.length : activeRows.length;
+  const pages = Math.max(1, Math.ceil(resultCount / pageSize));
+  const currentPage = Math.min(page, pages);
+  const first = (currentPage - 1) * pageSize;
+  const visibleRows = activeRows.slice(first, first + pageSize);
+  const visibleExams = exams.slice(first, first + pageSize);
+  const changeView = (next: typeof activeView) => { setActiveView(next); setPage(1); };
   return (
-    <div className="question-workspace question-catalog">
+    <div className="question-workspace question-catalog question-catalog--compact">
       <PageHero
         image="trainer"
         size="sm"
@@ -211,7 +219,7 @@ function QuestionBankPage() {
                     setCollection(value);
                     setSource("all");
                     setSearch("");
-                    setExamLimit(15);
+                    setPage(1);
                   }}
                 >
                   {label}
@@ -308,115 +316,58 @@ function QuestionBankPage() {
         </div>
       </div>
 
-      <div className="question-catalog__distributions grid gap-4 xl:grid-cols-2">
-        <Distribution
-          title="Por disciplina"
-          description="Quantidade de questões em cada matéria."
-          rows={bySubject}
-          max={maxSubject}
-          total={total}
-          collection={collection}
-          source={source}
-          query={search}
-          linkKey="subject"
-        />
-        <Distribution
-          title="Por banca"
-          description="Bancas organizadoras das provas."
-          rows={byBoard}
-          max={maxBoard}
-          total={total}
-          collection={collection}
-          source={source}
-          query={search}
-          linkKey="board"
-        />
-      </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">Provas e concursos</CardTitle>
-          <CardDescription>
-            Somente questões de provas oficiais. Cada seleção identifica concurso, cargo, banca e
-            edição; questões autorais não entram nessa contagem.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          {exams.slice(0, examLimit).map((e) => (
-            <div key={e.key} className="flex flex-wrap items-center gap-3 rounded-xl border p-3">
-              <div className="min-w-0 flex-1">
-                <p className="truncate font-semibold">
-                  {e.question.contest}{" "}
-                  <span className="font-normal text-muted-foreground">· {e.question.year}</span>
-                </p>
-                <p className="truncate text-xs text-muted-foreground">
-                  {e.question.board} · {e.question.career} · {e.subjects.size} disciplinas
-                </p>
-              </div>
-              <span className="rounded-full bg-muted px-3 py-1 text-sm font-bold tabular-nums">
-                {e.count} questões
-              </span>
-              <Button asChild size="sm" variant="outline">
-                <Link
-                  to="/dashboard/question-trainer"
-                  search={questionBankSearch(collection, source, search, { exam: e.question })}
-                >
-                  Treinar esta prova <ArrowRight className="ml-1 h-3.5 w-3.5" />
-                </Link>
-              </Button>
+      <Card className="question-catalog__browser">
+        <CardHeader className="question-catalog__browser-head">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <CardTitle className="text-lg">Explorar o acervo</CardTitle>
+              <CardDescription>Uma categoria por vez, com resultados paginados e acesso direto ao treino.</CardDescription>
             </div>
-          ))}
-          {!exams.length && (
-            <p className="text-sm text-muted-foreground">
-              Nenhuma prova encontrada para esta consulta.
-            </p>
-          )}
-          {exams.length > examLimit && (
-            <Button variant="ghost" onClick={() => setExamLimit((n) => n + 20)}>
-              Mostrar mais ({exams.length - examLimit} restantes)
-            </Button>
-          )}
-        </CardContent>
-      </Card>
-
-      <div className="grid gap-6 xl:grid-cols-[1fr_1fr]">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Por ano da prova</CardTitle>
-            <CardDescription>Distribuição das questões ao longo dos anos.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-1.5">
-            {byYear.map(([y, n]) => (
-              <Link
-                key={y}
-                to="/dashboard/question-trainer"
-                search={questionBankSearch(collection, source, search, { year: y })}
-                aria-label={`Treinar questões de ${y}`}
-                className="grid min-h-11 grid-cols-[3rem_1fr_auto] items-center gap-3 rounded-lg px-2 text-sm transition-[background-color,transform] duration-150 hover:bg-muted active:scale-[0.98] motion-reduce:active:scale-100"
-              >
-                <span className="font-mono">{y}</span>
-                <span className="h-2 overflow-hidden rounded-full bg-muted">
-                  <span
-                    className="block h-full rounded-full bg-sky-500"
-                    style={{ width: `${(n / Math.max(1, ...byYear.map((r) => r[1]))) * 100}%` }}
-                  />
-                </span>
-                <span className="flex items-center gap-2 tabular-nums">
-                  {n}
-                  <ArrowRight className="h-4 w-4" aria-hidden />
-                </span>
+            <label className="flex items-center gap-2 text-xs text-muted-foreground">
+              Exibir
+              <select aria-label="Resultados por página" className="rounded-lg border bg-background px-2 py-2 text-foreground" value={pageSize} onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}>
+                <option value={6}>6</option><option value={8}>8</option><option value={10}>10</option>
+              </select>
+            </label>
+          </div>
+          <div className="question-catalog__view-tabs" role="tablist" aria-label="Organizar resultados por">
+            {([["subject","Disciplinas",bySubject.length],["board","Bancas",byBoard.length],["exams","Provas",exams.length],["year","Anos",byYear.length]] as const).map(([key,label,count]) => (
+              <button key={key} type="button" role="tab" aria-selected={activeView === key} onClick={() => changeView(key)} className={cn("rounded-lg px-3 py-2 text-sm font-semibold", activeView === key ? "bg-primary text-primary-foreground" : "bg-muted/50 text-muted-foreground hover:bg-muted")}>
+                {label} <span className="ml-1 text-xs opacity-80">{count}</span>
+              </button>
+            ))}
+          </div>
+        </CardHeader>
+        <CardContent className="question-catalog__browser-body">
+          <div role="tabpanel" aria-label={activeView === "subject" ? "Disciplinas" : activeView === "board" ? "Bancas" : activeView === "exams" ? "Provas" : "Anos"} className="question-catalog__result-list">
+            {activeView !== "exams" && visibleRows.map(([name, count]) => (
+              <Link key={name} to="/dashboard/question-trainer" search={questionBankSearch(collection, source, search, { [activeView === "year" ? "year" : activeView]: name })} className="question-catalog__result-row group">
+                <span className="min-w-0 truncate font-semibold">{name}</span>
+                <span className="h-1.5 overflow-hidden rounded-full bg-muted"><span className="block h-full rounded-full bg-primary" style={{width: `${Math.max(2, count / Math.max(1, activeRows[0]?.[1] ?? 1) * 100)}%`}} /></span>
+                <span className="text-right text-xs tabular-nums text-muted-foreground">{count.toLocaleString("pt-BR")}</span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
               </Link>
             ))}
-            {!byYear.length && (
-              <p className="text-sm text-muted-foreground">Sem dados de ano para esta consulta.</p>
-            )}
-          </CardContent>
-        </Card>
-        <p className="text-sm text-muted-foreground">
-          A prévia usa somente metadados; elegibilidade de textos de apoio e duplicatas é conferida no Treinador antes de iniciar a sessão.
-        </p>
-
-      </div>
+            {activeView === "exams" && visibleExams.map(e => (
+              <Link key={e.key} to="/dashboard/question-trainer" search={questionBankSearch(collection, source, search, { exam: e.question })} className="question-catalog__result-row question-catalog__result-row--exam group">
+                <span className="min-w-0"><strong className="block truncate">{e.question.contest} · {e.question.year}</strong><small className="block truncate text-muted-foreground">{e.question.board} · {e.question.career} · {e.subjects.size} disciplinas</small></span>
+                <span className="text-right text-xs tabular-nums text-muted-foreground">{e.count} questões</span>
+                <ArrowRight className="h-4 w-4 text-primary" aria-hidden="true" />
+              </Link>
+            ))}
+            {resultCount === 0 && <p className="rounded-xl border p-5 text-sm text-muted-foreground">Nenhum resultado para os filtros selecionados. Experimente limpar a busca ou alterar a origem.</p>}
+          </div>
+          <footer className="question-catalog__pager">
+            <span className="text-xs text-muted-foreground">{resultCount ? `${first + 1}–${Math.min(first + pageSize, resultCount)} de ${resultCount}` : "Nenhum registro"}</span>
+            <div className="flex items-center gap-2">
+              <Button type="button" size="sm" variant="outline" disabled={currentPage === 1} onClick={() => setPage(p => Math.max(1, p - 1))}>Anterior</Button>
+              <span className="min-w-14 text-center text-xs tabular-nums">{currentPage} / {pages}</span>
+              <Button type="button" size="sm" variant="outline" disabled={currentPage >= pages} onClick={() => setPage(p => Math.min(pages, p + 1))}>Próxima</Button>
+            </div>
+          </footer>
+          <p className="text-xs text-muted-foreground">Contagens da prévia do acervo. O Treinador verifica textos de apoio, disponibilidade e questões duplicadas antes da sessão.</p>
+        </CardContent>
+      </Card>
     </div>
   );
 }
