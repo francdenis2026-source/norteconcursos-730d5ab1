@@ -16,7 +16,7 @@ const sections: { groups: string[]; label: string; icon: LucideIcon; description
 
 export function StudentTopNavigation({ items, pathname, search }: { items: NavigationItem[]; pathname: string; search: Record<string, unknown> }) {
   const current = activeNavigation(items, pathname, search);
-  const isHome = pathname.replace(/\\/+$/, "") === "/dashboard";
+  const isHome = pathname === "/dashboard" || pathname === "/dashboard/";
   const section = sections.find(candidate => current && candidate.groups.includes(current.group));
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
