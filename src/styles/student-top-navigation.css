@@ -894,3 +894,42 @@
   border-color: #b7c9dc !important;
   box-shadow: 0 18px 42px rgb(24 51 82 / 22%) !important;
 }
+
+/* Two independent, visually contained workspaces for desktop studying.
+   Only the detail area scrolls for long plans; nothing gets clipped. */
+@media (min-width: 1024px) and (min-height: 650px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .plan-workspace-window,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-workspace-window {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: calc(100dvh - var(--app-topbar-h, 72px) - 110px);
+    min-height: 430px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding: 12px clamp(12px, 1.5vw, 24px) 20px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .plan-workspace-window .study-assistant-hero {
+    min-height: 0;
+    padding-block: 14px;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-workspace-window .page-hero {
+    min-height: 0;
+    padding-block: 12px;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .plan-workspace-window .study-planning-nav,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-workspace-window .study-planning-nav {
+    display: none;
+  }
+}
+@media (max-width: 1023px), (max-height: 649px) {
+  .plan-workspace-window, .agenda-workspace-window {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
