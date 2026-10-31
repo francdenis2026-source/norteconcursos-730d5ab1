@@ -32,6 +32,7 @@ import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-route
 import { StudentTopNavigation } from "./StudentTopNavigation";
 import "@/styles/student-top-navigation.css";
 import "@/styles/student-workspace-refresh.css";
+import "@/styles/student-saas-dashboard.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
