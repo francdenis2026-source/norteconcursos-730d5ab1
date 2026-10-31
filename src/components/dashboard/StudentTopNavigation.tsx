@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
-import { PanelsTopLeft, ChartNoAxesCombined, ChevronDown, ClipboardList, GraduationCap, BookOpenText, Library, SlidersHorizontal, Compass, Medal } from "lucide-react";
+import { House, ChartNoAxesCombined, ChevronDown, ClipboardList, GraduationCap, BookOpenText, SlidersHorizontal, Compass } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
@@ -16,46 +16,73 @@ const sections: { groups: string[]; label: string; icon: LucideIcon; description
 
 export function StudentTopNavigation({ items, pathname, search }: { items: NavigationItem[]; pathname: string; search: Record<string, unknown> }) {
   const current = activeNavigation(items, pathname, search);
+  const isHome = pathname.replace(/\\/+$/, "") === "/dashboard";
+  const section = sections.find(candidate => current && candidate.groups.includes(current.group));
+  // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
+  // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
+  const entries = !isHome && current
+    ? items.filter(item => item.group === current.group)
+    : [];
+
   return (
-    <nav className="student-top-navigation no-print" aria-label="Navegação principal">
-      <Link to="/dashboard" className="student-top-navigation__brand" aria-label="Norte Concurso — Painel">
+    <nav className="student-top-navigation no-print" aria-label={isHome ? "Áreas da plataforma" : "Submenus da área atual"}>
+      <Link to="/dashboard" className="student-top-navigation__brand" aria-label="Voltar à área principal do aluno">
         <span className="student-top-navigation__brand-mark">N</span>
         <span>NORTE <strong>CONCURSOS</strong></span>
       </Link>
-      <div className="student-top-navigation__links">
-        {sections.map(section => {
-          const entries = items.filter(item => section.groups.includes(item.group));
-          if (!entries.length) return null;
-          const active = !!current && section.groups.includes(current.group);
-          const Icon = section.icon;
+      <div className="student-top-navigation__links" data-contextual={!isHome}>
+        {!isHome && (
+          <Link to="/dashboard" className="student-top-navigation__trigger student-top-navigation__home" aria-label="Voltar à área principal">
+            <span className="student-top-navigation__icon-wrap" aria-hidden="true"><House size={18} /></span>
+            <span className="student-top-navigation__label">Área principal</span>
+          </Link>
+        )}
+        {isHome || !section ? sections.map(candidate => {
+          const groupEntries = items.filter(item => candidate.groups.includes(item.group));
+          if (!groupEntries.length) return null;
+          const Icon = candidate.icon;
           return (
-            <DropdownMenu key={section.label}>
+            <DropdownMenu key={candidate.label}>
               <DropdownMenuTrigger asChild>
-                <button type="button" className="student-top-navigation__trigger" data-tone={section.tone} data-active={active} aria-label={section.label} aria-expanded={undefined}>
-                  <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Icon size={18} strokeWidth={2.15} absoluteStrokeWidth aria-hidden="true" focusable="false" /></span>
-                  <span className="student-top-navigation__label">{section.label}</span>
-                  <ChevronDown size={14} strokeWidth={2.2} aria-hidden="true" focusable="false" className="student-top-navigation__chevron" />
+                <button type="button" className="student-top-navigation__trigger" data-tone={candidate.tone} aria-label={candidate.label}>
+                  <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Icon size={18} strokeWidth={2.15} absoluteStrokeWidth /></span>
+                  <span className="student-top-navigation__label">{candidate.label}</span>
+                  <ChevronDown size={14} strokeWidth={2.2} aria-hidden="true" className="student-top-navigation__chevron" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" sideOffset={10} className="student-top-navigation__menu">
                 <DropdownMenuLabel>
-                  <span className="student-top-navigation__menu-title">{section.label}</span>
-                  <span className="student-top-navigation__menu-description">{section.description}</span>
+                  <span className="student-top-navigation__menu-title">{candidate.label}</span>
+                  <span className="student-top-navigation__menu-description">{candidate.description}</span>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {entries.map(item => {
-                  const selected = !!current && navigationKey(current) === navigationKey(item);
-                  return (
-                    <DropdownMenuItem key={navigationKey(item)} asChild>
-                      <Link to={item.href} search={item.search ?? {}} activeOptions={{ exact: true, includeSearch: true }} aria-current={selected ? "page" : undefined} data-current={selected}>
-                        <item.icon size={17} strokeWidth={2} absoluteStrokeWidth aria-hidden="true" focusable="false" />
-                        <span>{item.label}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                  );
-                })}
+                {groupEntries.map(item => (
+                  <DropdownMenuItem key={navigationKey(item)} asChild>
+                    <Link to={item.href} search={item.search ?? {}}>
+                      <item.icon size={17} aria-hidden="true" />
+                      <span>{item.label}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
+          );
+        }) : entries.map(item => {
+          const selected = navigationKey(current!) === navigationKey(item);
+          return (
+            <Link
+              key={navigationKey(item)}
+              to={item.href}
+              search={item.search ?? {}}
+              className="student-top-navigation__trigger student-top-navigation__submenu"
+              data-tone={section.tone}
+              data-active={selected}
+              aria-current={selected ? "page" : undefined}
+              title={item.label}
+            >
+              <span className="student-top-navigation__icon-wrap" aria-hidden="true"><item.icon size={17} strokeWidth={2.1} /></span>
+              <span className="student-top-navigation__label">{item.label}</span>
+            </Link>
           );
         })}
       </div>
