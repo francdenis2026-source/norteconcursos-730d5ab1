@@ -3,7 +3,6 @@ import "@/styles/student-control-colors.css";
 import "@/styles/study-experience.css";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
-import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { QuestionHeaderProgress } from "./QuestionHeaderProgress";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
@@ -685,9 +684,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </div>
             </div>
 
-            {!isAdmin && current?.group === "Questões" && (
-              <StudentSectionNavigation compact items={items} pathname={location.pathname} search={location.search} />
-            )}
 
             {!isAdmin && current?.group === "Questões" && <QuestionHeaderProgress userId={user?.id} />}
 
@@ -748,7 +744,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </Hint>
           </div>}
 
-          {!isAdmin && current?.group !== "Material didático" && current?.group !== "Questões" && current?.group !== "Central de Estudos" && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"
