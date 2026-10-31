@@ -155,7 +155,7 @@ const MENU: MenuItem[] = [
   { group: "Central de Estudos", label: "Comparar conteúdos", icon: Scale, href: "/dashboard/study-tools", search: { tool: "compare" } },
   { group: "Central de Estudos", label: "Testar conhecimentos", icon: BrainCircuit, href: "/dashboard/study-tools", search: { tool: "quiz" } },
   { group: "Central de Estudos", label: "Meus assuntos", icon: BookOpen, href: "/dashboard/disciplinas" },
-  { group: "Minha Preparação", label: "Meu objetivo", icon: Target, href: "/dashboard/my-contest" },
+  { group: "Planejamento", label: "Meu objetivo", icon: Target, href: "/dashboard/my-contest" },
   { group: "Material didático", label: "Catálogo de materiais", icon: Library, href: "/dashboard/material" },
   { group: "Material didático", label: "Leis e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
   { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
