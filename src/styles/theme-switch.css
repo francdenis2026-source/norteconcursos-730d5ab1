@@ -8,3 +8,16 @@
   transition-duration: 0s !important;
   transition-delay: 0s !important;
 }
+
+
+/* Reserve the same viewport gutter in both themes. When one palette causes a
+   vertical scrollbar and the other does not, the content no longer jumps. */
+html { scrollbar-gutter: stable; }
+html, body { min-width: 0; }
+@supports (scrollbar-gutter: stable) {
+  html { overflow-y: auto; }
+}
+/* Switching theme must never animate size, padding, fonts or layout. */
+:root[data-theme-switching] *,
+:root[data-theme-switching] *::before,
+:root[data-theme-switching] *::after { animation-name: none !important; }
