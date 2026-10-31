@@ -5,16 +5,13 @@ import type { LucideIcon } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
 
-const sections: { group: string; label: string; icon: LucideIcon; description: string; tone: string }[] = [
-  { group: "Planejamento", label: "Painel", icon: PanelsTopLeft, description: "Resumo e próximos passos", tone: "slate" },
-  { group: "Minha Preparação", label: "Preparação", icon: Compass, description: "Objetivo, plano e agenda", tone: "blue" },
-  { group: "Central de Estudos", label: "Estudar", icon: BookOpenText, description: "Ferramentas de aprendizagem", tone: "cyan" },
-  { group: "Material didático", label: "Materiais", icon: Library, description: "Biblioteca e conteúdos", tone: "violet" },
-  { group: "Questões", label: "Questões", icon: ClipboardList, description: "Treinos, erros e flashcards", tone: "emerald" },
-  { group: "Provas", label: "Provas", icon: Medal, description: "Simulados e provas realizadas", tone: "amber" },
-  { group: "Desempenho", label: "Desempenho", icon: ChartNoAxesCombined, description: "Resultados e evolução", tone: "rose" },
-  { group: "ENEM", label: "ENEM", icon: GraduationCap, description: "Preparação para o ENEM", tone: "indigo" },
-  { group: "Conta", label: "Conta", icon: SlidersHorizontal, description: "Perfil e assinatura", tone: "slate" },
+const sections: { groups: string[]; label: string; icon: LucideIcon; description: string; tone: string }[] = [
+  { groups: ["Planejamento", "Minha Preparação"], label: "Preparação", icon: Compass, description: "Painel, objetivo, plano, agenda e evolução", tone: "blue" },
+  { groups: ["Central de Estudos", "Material didático"], label: "Estudos", icon: BookOpenText, description: "Ferramentas, biblioteca, leis e conteúdos", tone: "cyan" },
+  { groups: ["Questões", "Provas"], label: "Treinos", icon: ClipboardList, description: "Questões, simulados, flashcards e provas", tone: "emerald" },
+  { groups: ["Desempenho"], label: "Desempenho", icon: ChartNoAxesCombined, description: "Resultados, histórico, ranking e evolução", tone: "rose" },
+  { groups: ["ENEM"], label: "ENEM", icon: GraduationCap, description: "Preparação para o ENEM", tone: "indigo" },
+  { groups: ["Conta"], label: "Conta", icon: SlidersHorizontal, description: "Perfil e assinatura", tone: "slate" },
 ];
 
 export function StudentTopNavigation({ items, pathname, search }: { items: NavigationItem[]; pathname: string; search: Record<string, unknown> }) {
@@ -27,12 +24,12 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
       </Link>
       <div className="student-top-navigation__links">
         {sections.map(section => {
-          const entries = items.filter(item => item.group === section.group);
+          const entries = items.filter(item => section.groups.includes(item.group));
           if (!entries.length) return null;
-          const active = current?.group === section.group;
+          const active = !!current && section.groups.includes(current.group);
           const Icon = section.icon;
           return (
-            <DropdownMenu key={section.group}>
+            <DropdownMenu key={section.label}>
               <DropdownMenuTrigger asChild>
                 <button type="button" className="student-top-navigation__trigger" data-tone={section.tone} data-active={active} aria-label={section.label} aria-expanded={undefined}>
                   <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Icon size={18} strokeWidth={2.15} absoluteStrokeWidth aria-hidden="true" focusable="false" /></span>
@@ -42,7 +39,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" sideOffset={10} className="student-top-navigation__menu">
                 <DropdownMenuLabel>
-                  <span className="student-top-navigation__menu-title">{section.group}</span>
+                  <span className="student-top-navigation__menu-title">{section.label}</span>
                   <span className="student-top-navigation__menu-description">{section.description}</span>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
