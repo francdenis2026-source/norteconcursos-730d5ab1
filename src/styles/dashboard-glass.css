@@ -60,6 +60,17 @@
   .library-header, .edital-heading, .edital-topic-heading
 ) h1 em { color: var(--primary) !important; font-style: normal; }
 
+/* Área do aluno: contraste estável no tema escuro, sem texto cinza sobre cinza. */
+:root.dark .app-shell[data-area="student"] #dashboard-content {
+  color: #f2f5f9;
+  font-size: 15px;
+  line-height: 1.55;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content :is(p, li, label, small, figcaption, .text-muted-foreground) { color: #c5d0de; }
+:root.dark .app-shell[data-area="student"] #dashboard-content :is(h1, h2, h3, h4, strong, th) { color: #f2f5f9; }
+:root.dark .app-shell[data-area="student"] #dashboard-content :is([data-slot="card"], .surface-card) { border-color: #3d4d61; }
+:root.dark .app-shell[data-area="student"] #dashboard-content :is(a, button):focus-visible { outline: 3px solid #8bb8ff; outline-offset: 3px; }
+
 #dashboard-content[data-header-style="glass"] :is(
   .page-hero__text, .page-hero__actions, .study-assistant-hero__content,
   .exam-simulator-hero__content

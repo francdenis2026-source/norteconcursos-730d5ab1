@@ -128,6 +128,24 @@
   border-bottom-color: #d5e0ee;
   box-shadow: 0 3px 16px rgb(24 51 94 / .045);
 }
+
+/* Área do aluno: leitura e contraste consistentes no tema claro. */
+:root:not(.dark) .app-shell[data-area="student"] {
+  --foreground: #162b46;
+  --muted-foreground: #405873;
+  --border: #c4d2e2;
+  --muted: #e7eef7;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content {
+  color: var(--foreground);
+  font-size: 15px;
+  line-height: 1.55;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(p, li, label, small, figcaption) { color: #405873; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(h1, h2, h3, h4, strong, th) { color: #162b46; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(a, button) { -webkit-tap-highlight-color: transparent; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is(a, button):focus-visible { outline: 3px solid #3b6fd8; outline-offset: 3px; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content :is([data-slot="card"], .surface-card) { border-color: #c4d2e2; }
 @media (forced-colors: active) {
   :root:not(.dark) #dashboard-content [role="tab"][data-state="active"] { outline: 2px solid Highlight; }
 }
