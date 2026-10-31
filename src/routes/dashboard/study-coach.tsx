@@ -679,6 +679,17 @@ function StudyCoachPage() {
       </section>
 
       <StudyPlanningNav active="coach" />
+      <section aria-label="Concurso e edital do seu plano" className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-card px-4 py-3">
+        <div>
+          <p className="font-semibold">Concurso e edital</p>
+          <p className="text-sm text-muted-foreground">
+            Seu objetivo faz parte deste plano: consulte o concurso, o cargo e o edital de referência.
+          </p>
+        </div>
+        <Button asChild variant="outline" size="sm">
+          <Link to="/dashboard/my-contest">Ver concurso e edital <ArrowRight className="h-4 w-4" /></Link>
+        </Button>
+      </section>
       {loadError && (
         <Card role="alert">
           <CardContent className="flex flex-wrap items-center justify-between gap-3 p-5">
