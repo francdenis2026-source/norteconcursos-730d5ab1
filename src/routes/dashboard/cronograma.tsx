@@ -104,9 +104,9 @@ function CronogramaPage() {
 
   const open = plans!.find((p) => p.id === openId);
   return (
-    <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Agenda <em>por edital</em></>}
-        description="Organize e execute os tópicos do edital por dia. Esta agenda acompanha o conteúdo concluído; a configuração da semana e a análise de resultados ficam nas etapas ao lado.">
+    <div className="agenda-workspace-window mx-auto w-full max-w-none space-y-4">
+      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Agenda <em>de estudos</em></>}
+        description="Execute o cronograma do seu edital, acompanhe os tópicos concluídos e organize as atividades de cada dia.">
         <div className="page-hero__stats">
           <HeroStat icon={NotebookPen} label="Cronogramas" value={plans?.length ?? 0} />
           <HeroStat
