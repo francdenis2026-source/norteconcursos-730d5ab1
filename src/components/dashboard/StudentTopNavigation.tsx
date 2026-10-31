@@ -6,7 +6,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import type { NavigationItem } from "./DashboardNavigation";
 
 const sections: { groups: string[]; label: string; icon: LucideIcon; description: string; tone: string }[] = [
-  { groups: ["Planejamento", "Meu concurso", "Minha Preparação"], label: "Preparação", icon: Compass, description: "Objetivo, plano e agenda de estudos", tone: "blue" },
+  { groups: ["Minha Preparação", "Meu concurso"], label: "Concurso", icon: Compass, description: "Objetivo e edital do concurso", tone: "blue" },
+  { groups: ["Planejamento"], label: "Meu plano", icon: ClipboardList, description: "Plano personalizado e agenda de estudos", tone: "blue" },
   { groups: ["Central de Estudos", "Material didático"], label: "Estudos", icon: BookOpenText, description: "Ferramentas, biblioteca, leis e conteúdos", tone: "cyan" },
   { groups: ["Questões", "Provas"], label: "Treinos", icon: ClipboardList, description: "Questões, simulados, flashcards e provas", tone: "emerald" },
   { groups: ["Desempenho"], label: "Desempenho", icon: ChartNoAxesCombined, description: "Evolução, análises, histórico e conquistas", tone: "rose" },
@@ -20,8 +21,8 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
   const section = sections.find(candidate => current && candidate.groups.includes(current.group));
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
-  const entries = !isHome && current
-    ? items.filter(item => item.group === current.group && item.href !== "/dashboard")
+  const entries = !isHome && section
+    ? items.filter(item => section.groups.includes(item.group) && item.href !== "/dashboard")
     : [];
 
   return (
@@ -51,7 +52,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" sideOffset={10} className="student-top-navigation__menu">
-                <DropdownMenuLabel>
+                <DropdownMenuLabel className="flex flex-col gap-1">
                   <span className="student-top-navigation__menu-title">{candidate.label}</span>
                   <span className="student-top-navigation__menu-description">{candidate.description}</span>
                 </DropdownMenuLabel>
