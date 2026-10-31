@@ -1,6 +1,5 @@
 import { plannedPractice } from "@/lib/plannedStudy";
 import { platformDate } from "@/lib/platformClock";
-import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -123,7 +122,6 @@ function CronogramaPage() {
           />
         </div>
       </PageHero>
-      <StudyPlanningNav active="schedule" />
       {openId === "new" && !canCreate ? (
         <CreateLocked onBack={() => setOpenId(null)} />
       ) : openId === "new" ? (
