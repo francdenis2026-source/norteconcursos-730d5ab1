@@ -6,8 +6,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import type { NavigationItem } from "./DashboardNavigation";
 
 const sections: { groups: string[]; label: string; icon: LucideIcon; description: string; tone: string }[] = [
-  { groups: ["Minha Preparação", "Meu concurso"], label: "Concurso", icon: Compass, description: "Objetivo e edital do concurso", tone: "blue" },
-  { groups: ["Planejamento"], label: "Meu plano", icon: ClipboardList, description: "Plano personalizado e agenda de estudos", tone: "blue" },
+  { groups: ["Planejamento", "Minha Preparação", "Meu concurso"], label: "Planejamento", icon: Compass, description: "Objetivo, plano e agenda de estudos", tone: "blue" },
   { groups: ["Central de Estudos", "Material didático"], label: "Estudos", icon: BookOpenText, description: "Ferramentas, biblioteca, leis e conteúdos", tone: "cyan" },
   { groups: ["Questões", "Provas"], label: "Treinos", icon: ClipboardList, description: "Questões, simulados, flashcards e provas", tone: "emerald" },
   { groups: ["Desempenho"], label: "Desempenho", icon: ChartNoAxesCombined, description: "Evolução, análises, histórico e conquistas", tone: "rose" },
