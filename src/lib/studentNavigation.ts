@@ -3,6 +3,7 @@ import type { NavigationTarget } from './dashboardNavigation';
 type StudentTarget = NavigationTarget & { group: string; soon?: boolean; adminOnly?: boolean };
 const SECTION_DESTINATIONS: Record<string, string> = {
   'Minha Preparação': '/dashboard/my-contest',
+  Planejamento: '/dashboard/study-coach',
   'Central de Estudos': '/dashboard/study-tools',
   'Material didático': '/dashboard/material',
   Ferramentas: '/dashboard/study-tools',
@@ -25,7 +26,7 @@ export function studentSections<T extends StudentTarget>(items: T[]) {
 
 /** Internal group identifiers stay stable for artwork, permissions and saved navigation. */
 export function studentGroupLabel(group: string) {
-  return ({ 'Central de Estudos': 'Central de Estudos', 'Minha Preparação': 'Minha Preparação', 'Material didático': 'Materiais', Questões: 'Questões e revisão' } as Record<string, string>)[group] ?? group;
+  return ({ 'Central de Estudos': 'Central de Estudos', 'Minha Preparação': 'Concurso', Planejamento: 'Meu plano', 'Material didático': 'Materiais', Questões: 'Questões e revisão' } as Record<string, string>)[group] ?? group;
 }
 
 /** Related destinations share a compact, labelled segment in the workspace navigation. */
