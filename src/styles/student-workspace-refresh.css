@@ -1,0 +1,250 @@
+/* Norte Concursos — Student Workspace Refresh
+   A quieter, more legible workspace: graphite/blue-black canvas, layered slate surfaces,
+   restrained teal + copper accents. Scoped to the student shell; behavior and data untouched. */
+.app-shell[data-area="student"] {
+  --student-canvas: #111a23;
+  --student-canvas-raised: #17232e;
+  --student-surface: #1b2935;
+  --student-surface-raised: #223341;
+  --student-surface-soft: #202f3c;
+  --student-border: #344653;
+  --student-border-strong: #48606e;
+  --student-ink: #edf3f5;
+  --student-muted: #a8b8c1;
+  --student-subtle: #81949f;
+  --student-blue: #78b8e8;
+  --student-teal: #69c6b1;
+  --student-copper: #e2ae72;
+  --student-violet: #b4a0e4;
+  --student-rose: #e69bad;
+  --student-green: #83c99b;
+  --background: var(--student-canvas);
+  --foreground: var(--student-ink);
+  --card: var(--student-surface);
+  --card-foreground: var(--student-ink);
+  --popover: #202f3c;
+  --popover-foreground: var(--student-ink);
+  --muted: #263642;
+  --muted-foreground: var(--student-muted);
+  --border: var(--student-border);
+  --input: #536b78;
+  --primary: #398b91;
+  --primary-foreground: #f4fbfb;
+  --secondary: #293b48;
+  --secondary-foreground: #dce8eb;
+  --accent: #29434b;
+  --accent-foreground: #bce8df;
+  color: var(--student-ink);
+}
+.app-shell[data-area="student"] .app-main,
+.app-shell[data-area="student"] #dashboard-content {
+  background: var(--student-canvas) !important;
+}
+.app-shell[data-area="student"] #dashboard-content {
+  padding: clamp(14px, 1.8vw, 28px) clamp(14px, 2.1vw, 34px) 30px !important;
+  color: var(--student-ink);
+}
+.app-shell[data-area="student"] .app-content__inner {
+  width: min(100%, 1760px);
+  max-width: 1760px;
+  margin-inline: auto;
+}
+.app-shell[data-area="student"] #dashboard-content :is(h1,h2,h3,h4,[data-slot="card-title"]) {
+  color: var(--student-ink);
+  letter-spacing: -.018em;
+}
+.app-shell[data-area="student"] #dashboard-content :is(p,[data-slot="card-description"],.text-muted-foreground,small) {
+  color: var(--student-muted);
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="card"] {
+  color: var(--student-ink);
+  background: linear-gradient(145deg, #1d2c38 0%, #192631 100%);
+  border: 1px solid var(--student-border);
+  border-radius: 15px;
+  box-shadow: 0 10px 28px -24px #000, inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="card"] > [data-slot="card-header"] {
+  background: linear-gradient(90deg, rgb(105 198 177 / 7%), transparent 75%);
+  border-bottom: 1px solid rgb(147 174 185 / 13%);
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="card-title"] { color: #eaf2f4; font-weight: 760; }
+.app-shell[data-area="student"] #dashboard-content [data-slot="card-description"] { color: #a9bac3; }
+.app-shell[data-area="student"] #dashboard-content :is(.page-hero,.tactical-feature-hero,.catalog-command-hero,.study-assistant-hero,.exam-simulator-hero,.trainer-workbench-hero,.library-header,.edital-heading,.edital-topic-heading,.ranking-glass-header,.video-study-page__header) {
+  color: var(--student-ink);
+  border: 1px solid var(--student-border-strong) !important;
+  border-left: 3px solid var(--student-teal) !important;
+  border-radius: 16px;
+  background: linear-gradient(112deg,#1b2b36 0%,#203440 68%,#263542 100%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%), 0 12px 30px -26px #000 !important;
+}
+.app-shell[data-area="student"] #dashboard-content :is(.page-hero,.tactical-feature-hero,.catalog-command-hero,.study-assistant-hero,.exam-simulator-hero,.trainer-workbench-hero,.library-header,.edital-heading,.edital-topic-heading,.ranking-glass-header,.video-study-page__header) :is(h1,h2,p) {
+  text-shadow: none !important;
+}
+.app-shell[data-area="student"] #dashboard-content :is(.hero-chip,.internal-hero-kicker,.study-assistant-hero__eyebrow,.exam-simulator-hero__eyebrow,.trainer-panel-kicker,.edital-eyebrow,.ranking-glass-header__kicker) { color: #8bd5c5 !important; }
+.app-shell[data-area="student"] #dashboard-content :is(button,a,[role="button"]) > svg {
+  flex-shrink: 0;
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
+  color: #f5fbfa;
+  background: linear-gradient(115deg,#287d80,#369b91);
+  border: 1px solid #55aaa0;
+  box-shadow: 0 5px 14px -10px #69c6b1;
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="secondary"] {
+  color: #dce9eb;
+  background: #2a3c49;
+  border: 1px solid #455b67;
+}
+.app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="outline"] {
+  color: #d6e4e8;
+  background: #1d2c37;
+  border-color: #536a77;
+}
+.app-shell[data-area="student"] #dashboard-content :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),select,textarea,button[role="combobox"]) {
+  color: #edf4f5;
+  background: #14212b;
+  border-color: #526a77;
+}
+.app-shell[data-area="student"] #dashboard-content :is(input,select,textarea)::placeholder { color: #90a3ad; }
+.app-shell[data-area="student"] #dashboard-content :is(input,select,textarea,button,[role="button"],a):focus-visible {
+  outline: 2px solid #75c8bc;
+  outline-offset: 3px;
+}
+.app-shell[data-area="student"] #dashboard-content [role="tablist"] {
+  padding: 4px;
+  border: 1px solid var(--student-border);
+  border-radius: 12px;
+  background: #172630;
+}
+.app-shell[data-area="student"] #dashboard-content [role="tab"] { color: #b7c6cd; }
+.app-shell[data-area="student"] #dashboard-content [role="tab"][data-state="active"] {
+  color: #f3fbfa;
+  background: #31545a;
+  box-shadow: inset 0 0 0 1px #4f8583;
+}
+.app-shell[data-area="student"] #dashboard-content table thead { background: #243642; }
+.app-shell[data-area="student"] #dashboard-content table th { color: #c5d4da; }
+.app-shell[data-area="student"] #dashboard-content table tbody tr { border-color: #344653; }
+.app-shell[data-area="student"] #dashboard-content table tbody tr:hover { background: rgb(105 198 177 / 6%); }
+.app-shell[data-area="student"] .student-top-navigation__trigger { transition: background .16s ease,border-color .16s ease,transform .16s ease; }
+.app-shell[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+  box-shadow: inset 0 0 0 1px rgb(120 184 232 / 32%), 0 5px 16px -14px #000;
+}
+.app-shell[data-area="student"] .student-top-navigation__menu {
+  border: 1px solid #425967;
+  background: #1b2a35;
+  color: #edf3f5;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 38%);
+}
+.app-shell[data-area="student"] .student-top-navigation__menu [role="menuitem"] { color: #d5e1e5; }
+.app-shell[data-area="student"] .student-top-navigation__menu [role="menuitem"]:hover { background: #2b414c; color: #fff; }
+
+/* Overview: use a wide, calm dashboard grid instead of a vertical stack of equal-weight cards. */
+.app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: #edf3f5;
+  --home-muted: #a8b8c1;
+  --home-line: #344653;
+  --home-surface: #1b2935;
+  --home-surface-2: #223441;
+  --home-blue: #78b8e8;
+  --home-cyan: #69c6b1;
+  --home-green: #83c99b;
+  --home-gold: #e2ae72;
+  --home-violet: #b4a0e4;
+  --home-rose: #e69bad;
+  gap: 14px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  min-height: 116px !important;
+  border: 1px solid #405865 !important;
+  border-left: 4px solid #69c6b1 !important;
+  border-radius: 16px !important;
+  background: linear-gradient(112deg,#1b2b36 0%,#203642 64%,#263744 100%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%),0 14px 32px -28px #000;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__welcome { color: #8bd5c5 !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead h1 { color: #f3f7f8 !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy > p:last-of-type { color: #bdcbd1 !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions :is(.student-hub__date,a) { color: #bdcbd1 !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions a { color: #e8bc88 !important; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat { background: #293e49; border-color: #526a75; }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a,
+.app-shell[data-area="student"] .student-overview .student-home__metric,
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  background: linear-gradient(145deg,#1e2d39,#192731);
+  border-color: #3a505d;
+  box-shadow: 0 8px 22px -20px #000,inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric strong,
+.app-shell[data-area="student"] .student-overview .student-home__card :is(h2,h3,strong) { color: #edf3f5; }
+.app-shell[data-area="student"] .student-overview .student-home__metric h2,
+.app-shell[data-area="student"] .student-overview .student-home__metric p,
+.app-shell[data-area="student"] .student-overview .student-home__card :is(small,p) { color: #a8b8c1; }
+.app-shell[data-area="student"] .student-overview .student-home__section-title > span,
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon,
+.app-shell[data-area="student"] .student-overview .student-home__metric > span {
+  filter: saturate(.88);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  border-color: #6e654d;
+  border-left-color: #e2ae72;
+  background: linear-gradient(105deg,#302f29,#202d35 76%);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next h2 { color: #f1f3ef; }
+.app-shell[data-area="student"] .student-overview .student-desk__next p { color: #bbc6c8; }
+.app-shell[data-area="student"] .student-overview .student-home__primary {
+  color: #17262c !important;
+  background: linear-gradient(110deg,#e8c18d,#dca66b) !important;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__workspace {
+  grid-template-columns: minmax(0,1.65fr) minmax(300px,.9fr);
+  gap: 14px;
+}
+.app-shell[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) { gap: 14px; }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: clamp(15px,1.5vw,22px);
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title h2 { font-size: 16px; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li { border-color: #344653; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li strong { color: #eaf1f3; }
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress { accent-color: #69c6b1; }
+.app-shell[data-area="student"] .student-overview .student-home__next-topic {
+  background: #203942;
+  border-color: #3e6a6b;
+}
+.app-shell[data-area="student"] .student-overview .student-home__next-topic strong { color: #eaf2f2; }
+.app-shell[data-area="student"] .student-overview .student-home__text-link { color: #85c6ed; }
+.app-shell[data-area="student"] .student-overview .student-home__objective-name { color: #edf3f5; }
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact {
+  background: #1b2935;
+  border-color: #344653;
+}
+.app-shell[data-area="student"] .student-overview .platform-question-counts--compact :is(h2,strong) { color: #edf3f5; }
+.app-shell[data-area="student"] .student-overview .platform-question-counts__grid > * {
+  background: #223441;
+  border-color: #3a505d;
+}
+@media (min-width: 1500px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0,1.8fr) minmax(340px,.85fr); }
+}
+@media (max-width: 1100px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 720px) {
+  .app-shell[data-area="student"] #dashboard-content { padding: 12px 12px 90px !important; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead { padding: 16px !important; }
+  .app-shell[data-area="student"] .student-overview .student-hub__hero-copy { grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats { min-width: 90px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat strong { font-size: 20px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] #dashboard-content *,
+  .app-shell[data-area="student"] #dashboard-content *::before,
+  .app-shell[data-area="student"] #dashboard-content *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+@media (forced-colors: active) {
+  .app-shell[data-area="student"] #dashboard-content [data-slot="card"] { border: 1px solid CanvasText; }
+}
