@@ -694,7 +694,7 @@
 
 /* Questões: one compact topbar; the existing accessible links keep their routes. */
 @media (min-width: 768px) {
- .app-topbar:has(.workspace-section-nav--inline) { gap: 9px; padding-inline: 10px; min-width: 0; }
+ .app-topbar:has(.workspace-section-nav--inline) { gap: 12px; padding-inline: 14px; min-width: 0; }
  .app-topbar .workspace-section-nav--inline {
    position: static !important; top: auto !important; z-index: auto;
    flex: 1 1 auto; width: auto; min-width: 0; max-width: 100%;
@@ -706,11 +706,11 @@
  .app-topbar .workspace-section-nav--inline .workspace-section-nav__segment { display: none; }
  .app-topbar .workspace-section-nav--inline .workspace-section-nav__item { gap: 0; }
  .app-topbar .workspace-section-nav--inline a {
-   gap: 5px; min-height: 34px; padding: 6px 8px; border-radius: 9px;
-   font-size: 11px; font-weight: 600; box-shadow: none;
+   gap: 8px; min-height: 44px; padding: 8px 12px; border-radius: 10px;
+   font-size: 12px; font-weight: 650; box-shadow: none;
  }
  .app-topbar .workspace-section-nav--inline a > svg {
-   width: 14px; height: 14px; margin: 0; box-shadow: none; background: none;
+   width: 18px; height: 18px; margin: 0; box-shadow: none; background: none;
  }
  .app-topbar:has(.workspace-section-nav--inline) .app-location { flex: 0 0 auto; }
  .app-topbar:has(.workspace-section-nav--inline) .app-location__context { white-space: nowrap; }
@@ -720,7 +720,7 @@
 }
 @media (min-width: 768px) and (max-width: 1280px) {
  .app-topbar:has(.workspace-section-nav--inline) .app-location__group { display: none; }
- .app-topbar .workspace-section-nav--inline a { padding-inline: 6px; font-size: 10px; }
+ .app-topbar .workspace-section-nav--inline a { padding-inline: 10px; font-size: 11px; }
 }
 @media (max-width: 767px) {
  .app-topbar .workspace-section-nav--inline {
@@ -728,6 +728,6 @@
    padding: 0; border: 0; background: transparent; overflow-x: auto;
  }
  .app-topbar .workspace-section-nav--inline .workspace-section-nav__segment { display: none; }
- .app-topbar .workspace-section-nav--inline a { min-height: 36px; padding: 6px 8px; font-size: 11px; }
+ .app-topbar .workspace-section-nav--inline a { min-height: 42px; padding: 7px 10px; font-size: 11px; }
  .app-topbar:has(.workspace-section-nav--inline) .app-location { display: none; }
 }
