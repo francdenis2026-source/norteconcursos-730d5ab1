@@ -480,10 +480,10 @@ function StudyPlanPage() {
       <PageHero
         image="journey"
         size="sm"
-        kicker="Baseado nas suas provas"
-        icon={Sparkles}
-        title={<>Ajustes pelos resultados: <em>{plan.fullName}</em></>}
-        description="Consulte prioridades a partir das provas realizadas. A carreira, a carga horária e a data abaixo são os parâmetros deste diagnóstico; confira se correspondem ao objetivo da sua preparação."
+        kicker="Desempenho e prioridades"
+        icon={TrendingUp}
+        title={<>Minha evolução: <em>{plan.fullName}</em></>}
+        description="Acompanhe os resultados das provas realizadas, a precisão geral e as tendências do seu desempenho. Veja também as prioridades de estudo para melhorar sua preparação."
       >
         <div className="page-hero__stats">
           <HeroStat icon={FileCheck2} label="Provas da carreira" value={String(current.length)} />
