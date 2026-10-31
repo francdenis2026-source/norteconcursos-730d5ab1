@@ -38,6 +38,7 @@ export type NavigationItem = {
 /** Ícones táticos por seção (visual de comando, sem ícones genéricos de painel). */
 const groupIcons: Record<string, LucideIcon> = {
   "Minha Preparação": Target,
+  Planejamento: BookOpen,
   "Central de Estudos": BookOpen,
   "Material didático": ScrollText,
   Ferramentas: Cpu,
@@ -49,7 +50,8 @@ const groupIcons: Record<string, LucideIcon> = {
   Administração: Shield,
 };
 const groupDetails: Record<string, string> = {
-  "Minha Preparação": "Objetivo, rotina e evolução em um só lugar",
+  "Minha Preparação": "Objetivo, cargo e edital",
+  Planejamento: "Plano personalizado e agenda de estudos",
   "Central de Estudos": "Notas, guias, simplificação, comparações, quiz e evolução",
   "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
@@ -62,7 +64,8 @@ const groupDetails: Record<string, string> = {
 };
 /** Rótulo curto do grupo quando a barra lateral está recolhida. */
 const collapsedLabels: Record<string, string> = {
-  "Minha Preparação": "Preparar",
+  "Minha Preparação": "Concurso",
+  Planejamento: "Meu plano",
   "Central de Estudos": "Estudar",
   "Material didático": "Materiais",
   Ferramentas: "Recursos",
