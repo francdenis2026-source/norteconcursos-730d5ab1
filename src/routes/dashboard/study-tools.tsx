@@ -212,7 +212,7 @@ function readFocusHistory(): FocusRecord[] {
 function StudyToolsPage() {
   const ctx = useStudyContext();
   const fullscreen = useWorkspaceFullscreen(true);
-  const { context } = Route.useSearch();
+  const { context, tool } = Route.useSearch();
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
   const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;
@@ -313,6 +313,10 @@ function StudyToolsPage() {
         </div>
       </section>
 
+      {!enem && tool && (
+        <StudyMaterialsWorkspace tool={tool} subject={subject} topic={topic} />
+      )}
+
       <section aria-labelledby="study-actions-title" className="space-y-3">
         <div>
           <h2 id="study-actions-title" className="text-base font-semibold">2. Continue seu estudo</h2>
@@ -382,6 +386,105 @@ function StudyToolsPage() {
         </div>
       </details>
     </div>
+  );
+}
+
+
+type MaterialTool = "handwritten" | "guide" | "simplify" | "compare" | "quiz";
+const MATERIAL_TOOL_LABEL: Record<MaterialTool, string> = {
+  handwritten: "Anotações",
+  guide: "Guia de estudos",
+  simplify: "Simplificar",
+  compare: "Comparar conteúdos",
+  quiz: "Testar conhecimentos",
+};
+function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool; subject: string; topic: string }) {
+  const [notes, setNotes] = React.useState("");
+  const [other, setOther] = React.useState("");
+  const [showAnswer, setShowAnswer] = React.useState(false);
+  const [checked, setChecked] = React.useState<boolean[]>([false, false, false, false]);
+  const label = topic || subject;
+  const notesKey = userStorageKey("study_material_notes:" + subject + ":" + topic);
+  React.useEffect(() => {
+    try { setNotes(localStorage.getItem(notesKey) || ""); } catch { setNotes(""); }
+  }, [notesKey]);
+  React.useEffect(() => { setShowAnswer(false); setOther(""); setChecked([false, false, false, false]); }, [subject, topic, tool]);
+  const save = (value: string) => {
+    setNotes(value);
+    try { localStorage.setItem(notesKey, value); } catch { /* sem armazenamento */ }
+  };
+  const prompts = [
+    "Qual é a definição de " + label + "?",
+    "Quais são os requisitos, elementos ou características centrais?",
+    "Que exceções ou pegadinhas costumam aparecer em prova?",
+    "Como aplicar esse conteúdo em uma situação prática?",
+  ];
+  return (
+    <section aria-labelledby="study-materials-heading" className="rounded-2xl border bg-card p-4 sm:p-6 space-y-4">
+      <header className="space-y-1">
+        <p className="text-xs font-semibold uppercase tracking-widest text-primary">Material de aprendizagem</p>
+        <h2 id="study-materials-heading" className="text-xl font-bold">{MATERIAL_TOOL_LABEL[tool]}</h2>
+        <p className="text-sm text-muted-foreground">Disciplina: {subject} · Assunto: {topic || "Visão geral"}</p>
+      </header>
+      {tool === "handwritten" && (
+        <div className="space-y-3">
+          <p className="text-sm">Registre definições, exemplos, dúvidas e pegadinhas do assunto. As anotações ficam associadas a esta disciplina e a este tópico neste navegador.</p>
+          <label htmlFor="study-material-notes" className="block text-sm font-semibold">Meu caderno de anotações</label>
+          <textarea id="study-material-notes" className="min-h-44 w-full rounded-xl border bg-background p-3 text-sm" placeholder="Definição, fundamento legal, exemplo prático, dúvidas e revisão…" value={notes} onChange={e => save(e.target.value)} />
+          <p className="text-xs text-muted-foreground" role="status">Salvamento automático neste dispositivo. Não sincronizado com a conta.</p>
+        </div>
+      )}
+      {tool === "guide" && (
+        <div className="grid gap-3 sm:grid-cols-2">
+          {["Entender o conceito e localizar a fonte", "Identificar elementos e exceções", "Resolver questões da disciplina", "Registrar erros e revisar em 24 horas"].map((item, i) => (
+            <label key={item} className="flex cursor-pointer items-start gap-3 rounded-xl border bg-background p-4 text-sm">
+              <input type="checkbox" checked={checked[i]} onChange={e => setChecked(old => old.map((v, n) => i === n ? e.target.checked : v))} className="mt-0.5" />
+              <span><strong>Etapa {i + 1}</strong><span className="block mt-1 text-muted-foreground">{item}</span></span>
+            </label>
+          ))}
+          <p className="sm:col-span-2 text-xs text-muted-foreground">Checklist da sessão atual: {checked.filter(Boolean).length} de 4 etapas concluídas.</p>
+        </div>
+      )}
+      {tool === "simplify" && (
+        <div className="space-y-3 text-sm">
+          <p>Use a estrutura abaixo para explicar <strong>{label}</strong> com suas próprias palavras, sem perder as condições previstas na fonte.</p>
+          <ol className="list-decimal space-y-2 pl-5 text-muted-foreground">
+            <li>Escreva em uma frase o que o conceito significa.</li>
+            <li>Defina cada termo técnico essencial.</li>
+            <li>Dê um exemplo cotidiano e um contraexemplo.</li>
+            <li>Confira a explicação com o material original antes de memorizar.</li>
+          </ol>
+          <textarea className="min-h-32 w-full rounded-xl border bg-background p-3" aria-label="Explicação simplificada" placeholder="Minha explicação simples…" value={notes} onChange={e => save(e.target.value)} />
+        </div>
+      )}
+      {tool === "compare" && (
+        <div className="space-y-3">
+          <label className="block text-sm font-semibold" htmlFor="study-compare-other">Segundo conceito para comparar</label>
+          <input id="study-compare-other" className="w-full rounded-lg border bg-background p-3 text-sm" placeholder="Ex.: outro instituto, regra ou princípio" value={other} onChange={e => setOther(e.target.value)} />
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[label, other.trim() || "Segundo conceito"].map((name, i) => (
+              <div key={i} className="rounded-xl border bg-background p-4">
+                <h3 className="font-semibold">{name}</h3>
+                <p className="mt-2 text-xs text-muted-foreground">Preencha: definição · fundamento · requisitos · exemplo · principal diferença.</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground">Quadro de comparação orientada: não substitui a consulta às fontes oficiais.</p>
+        </div>
+      )}
+      {tool === "quiz" && (
+        <div className="space-y-3">
+          <h3 className="font-semibold">Autoavaliação de {label}</h3>
+          {prompts.map((question, i) => <p key={i} className="rounded-lg border bg-background p-3 text-sm"><strong>{i + 1}.</strong> {question}</p>)}
+          <button type="button" onClick={() => setShowAnswer(v => !v)} className="rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-muted">{showAnswer ? "Ocultar orientação" : "Como conferir minhas respostas"}</button>
+          {showAnswer && <p className="rounded-lg bg-muted p-3 text-sm">Confira cada resposta na fonte do assunto, identifique o fundamento legal quando aplicável e registre os pontos de dúvida no caderno de erros. Estas são perguntas de revisão, não questões oficiais com gabarito.</p>}
+        </div>
+      )}
+      <div className="flex flex-wrap gap-2 border-t pt-4">
+        <Button asChild size="sm" variant="outline"><Link to="/dashboard/study-room" search={{ subject, topic }}>Estudar material completo <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+        <Button asChild size="sm" variant="outline"><Link to="/dashboard/question-trainer" search={plannedPractice(subject, topic)}>Praticar questões <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+      </div>
+    </section>
   );
 }
 
