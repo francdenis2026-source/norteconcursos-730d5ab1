@@ -653,7 +653,7 @@ function StudyCoachPage() {
   const nextBlock = summary.nextBlock;
 
   return (
-    <div className="study-assistant mx-auto max-w-6xl space-y-6">
+    <div className="study-assistant plan-workspace-window mx-auto w-full max-w-none space-y-4">
       <section
         className="study-assistant-hero workspace-banner"
         aria-labelledby="study-assistant-title"
