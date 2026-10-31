@@ -37,7 +37,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
             <span className="student-top-navigation__label">Área principal</span>
           </Link>
         )}
-        {(isHome || isPlanningPage) && <>
+        {isHome && <>
           <Link to="/dashboard/study-coach" className="student-top-navigation__trigger" data-tone="blue" data-active={pathname === "/dashboard/study-coach"} aria-current={pathname === "/dashboard/study-coach" ? "page" : undefined}>
             <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
             <span className="student-top-navigation__label">Meu plano</span>
