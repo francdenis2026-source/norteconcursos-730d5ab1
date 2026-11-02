@@ -2,13 +2,32 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Library } from "lucide-react";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 
+/** "há Xs" / "há X min" a partir de um timestamp real (dataUpdatedAt do react-query), reticando a cada 5s. */
+function useElapsedLabel(timestamp: number) {
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const id = window.setInterval(() => setTick((t) => t + 1), 5000);
+    return () => window.clearInterval(id);
+  }, []);
+  if (!timestamp) return null;
+  const seconds = Math.max(0, Math.round((Date.now() - timestamp) / 1000));
+  if (seconds < 8) return "agora mesmo";
+  if (seconds < 60) return `há ${seconds}s`;
+  const minutes = Math.max(1, Math.round(seconds / 60));
+  return `há ${minutes} min`;
+}
+
 /** Faixa de vidro na base do hero (desktop/tablet): acesso, banco de questões e desafio diário. */
 export function HeroDock() {
-  const { data } = usePlatformQuestionSummary();
+  const { data, dataUpdatedAt } = usePlatformQuestionSummary();
+  const available = useAnimatedCounter(data?.available);
+  const registered = useAnimatedCounter(data?.registered);
+  const updatedLabel = useElapsedLabel(dataUpdatedAt);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [seconds, setSeconds] = useState<number | null>(null);
   const fmt = (n: number) => n.toLocaleString("pt-BR");
@@ -68,13 +87,25 @@ export function HeroDock() {
         </div>
       )}
       <a href="#plataforma" className="hx-dock__cell hx-dock__cell--bank">
-        <div className="hx-dock__stat">
-          <strong>{data ? fmt(data.available) : "—"}</strong>
-          <span>questões para treinar</span>
+        <div className="hx-dock__bank-head">
+          <span className="hx-dock__live hx-dock__live--bank">
+            <i aria-hidden="true" /> Ao vivo
+          </span>
+          {updatedLabel && (
+            <span className="hx-dock__updated">
+              Atualizado {updatedLabel}
+            </span>
+          )}
         </div>
-        <div className="hx-dock__stat hx-dock__stat--muted">
-          <strong>{data ? fmt(data.registered) : "—"}</strong>
-          <span>cadastradas</span>
+        <div className="hx-dock__bank-stats">
+          <div className="hx-dock__stat">
+            <strong>{available !== undefined ? fmt(available) : "—"}</strong>
+            <span>questões para treinar</span>
+          </div>
+          <div className="hx-dock__stat hx-dock__stat--muted">
+            <strong>{registered !== undefined ? fmt(registered) : "—"}</strong>
+            <span>cadastradas</span>
+          </div>
         </div>
       </a>
       {done ? (
@@ -93,6 +124,8 @@ export function HeroDock() {
 /** Pílula de vidro no cabeçalho (desktop): total de questões da plataforma e quantas há para responder. */
 export function HeaderQuestionStats({ mobile = false }: { mobile?: boolean }) {
   const { data } = usePlatformQuestionSummary();
+  const available = useAnimatedCounter(data?.available);
+  const registered = useAnimatedCounter(data?.registered);
   const fmt = (n: number) => n.toLocaleString("pt-BR");
   return (
     <a
@@ -100,17 +133,18 @@ export function HeaderQuestionStats({ mobile = false }: { mobile?: boolean }) {
       className={mobile ? "hx-stats hx-stats--mobile" : "hx-stats"}
       aria-label={
         data
-          ? `${fmt(data.registered)} questões na plataforma, ${fmt(data.available)} disponíveis para responder`
+          ? `${fmt(data.registered)} questões na plataforma, ${fmt(data.available)} disponíveis para responder, atualizado ao vivo`
           : "Banco de questões da plataforma"
       }
     >
+      <span className="hx-stats__live" aria-hidden="true" />
       <Library aria-hidden="true" />
       <span>
-        <strong>{data ? fmt(data.registered) : "—"}</strong> na plataforma
+        <strong>{registered !== undefined ? fmt(registered) : "—"}</strong> na plataforma
       </span>
       <i aria-hidden="true" />
       <span>
-        <strong>{data ? fmt(data.available) : "—"}</strong> para responder
+        <strong>{available !== undefined ? fmt(available) : "—"}</strong> para responder
       </span>
     </a>
   );

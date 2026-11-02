@@ -2,6 +2,10 @@
    livre à direita, e uma faixa de vidro (dock) com acesso, banco de questões e desafio diário na base.
    Tudo na primeira dobra, com margem em volta (nada encosta na borda). */
 .hx { display: none; }
+@keyframes hxLivePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(57 217 138 / 45%); }
+  50% { box-shadow: 0 0 0 5px rgb(57 217 138 / 0%); }
+}
 @media (min-width: 761px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     min-height: calc(100svh - 64px);
@@ -102,7 +106,15 @@
   .hx-dock__cell--access a svg { width: 13px; height: 13px; }
   .hx-dock__cell--access a:hover { border-color: var(--home-gold, #c9a867); color: var(--home-gold, #c9a867); }
 
-  .hx-dock__cell--bank { gap: 26px; }
+  .hx-dock__cell--bank { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hx-dock__bank-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .hx-dock__updated {
+    font-size: 11px;
+    color: var(--home-muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .hx-dock__bank-stats { display: flex; gap: 26px; }
   .hx-dock__stat { display: grid; gap: 2px; min-width: 0; }
   .hx-dock__stat strong { font-size: 28px; line-height: 1.1; font-weight: 700; color: #7fb4ff; font-variant-numeric: tabular-nums; }
   .hx-dock__stat span { font-size: 12px; color: var(--home-muted); }
@@ -116,6 +128,13 @@
     color: var(--home-gold, #c9a867);
   }
   .hx-dock__live i { width: 7px; height: 7px; border-radius: 50%; background: #ff5a45; box-shadow: 0 0 0 3px rgb(255 90 69 / 25%); }
+  /* Depois de .hx-dock__live para vencer no empate de especificidade (mesma contagem de seletores). */
+  .hx-dock__live--bank { color: #39d98a; }
+  .hx-dock__live--bank i {
+    background: #39d98a;
+    box-shadow: 0 0 0 3px rgb(57 217 138 / 25%);
+    animation: hxLivePulse 2.4s ease-in-out infinite;
+  }
   .hx-dock__cell--daily strong { font-size: 15px; line-height: 1.3; }
   .hx-dock__cell--daily small { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--home-muted); }
   .hx-dock__cell--daily small svg { width: 12px; height: 12px; }
@@ -134,6 +153,9 @@
 }
 @media (prefers-reduced-transparency: reduce) {
   .hx-dock__cell { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hx-dock__live i, .hx-stats__live { animation: none; }
 }
 
 /* Botão "Entrar" do cabeçalho (web): discreto, sem o tamanho de alvo de toque. */
@@ -213,6 +235,15 @@
   .hx-stats--mobile strong:last-of-type { color: #dfb45b; }
   .hx-stats--mobile i { width: 1px; height: 14px; background: rgb(255 255 255 / 22%); }
   .hx-stats--mobile svg { width: 14px; height: 14px; color: #dfb45b; flex: none; }
+  .hx-stats__live {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex: none;
+    background: #39d98a;
+    box-shadow: 0 0 0 2px rgb(57 217 138 / 30%);
+    animation: hxLivePulse 2.4s ease-in-out infinite;
+  }
 }
 
 /* O bloco do hero cobre a largura toda; deixa o brasão (efeitos de hover, toque e luz) receber o ponteiro
@@ -239,10 +270,12 @@
   :root:not(.dark) .home.home .hx-dock__stat strong { color: #1d5fbf; }
   :root:not(.dark) .home.home .hx-dock__stat--muted strong { color: #a86a0c; }
   :root:not(.dark) .home.home .hx-dock__stat span { color: #3b4a5c; }
+  :root:not(.dark) .home.home .hx-dock__updated { color: #3b4a5c; }
   :root:not(.dark) .home.home .hx-dock__cell--daily { background: linear-gradient(135deg, #12263f, #1d4272); color: #fff; }
   :root:not(.dark) .home.home .hx-dock__cell--daily strong { color: #fff; }
   :root:not(.dark) .home.home .hx-dock__cell--daily small { color: #c5d4ea; }
   :root:not(.dark) .home.home .hx-dock__live { color: #f2c76a; }
+  :root:not(.dark) .home.home .hx-dock__live--bank { color: #15824f; }
   a.hx-dock__cell--daily:hover { filter: brightness(1.08); }
 }
 
