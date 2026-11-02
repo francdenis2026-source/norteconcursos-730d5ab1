@@ -933,3 +933,15 @@
     max-width: 100%;
   }
 }
+
+/* Desempenho: use a darker rose in light mode so labels and icons remain readable. */
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"] {
+  --nav-accent: #a8325d;
+  color: #5f2340 !important;
+  border-color: #d7a8ba !important;
+  background: #fff6f9 !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"] .student-top-navigation__label,
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"] .student-top-navigation__icon-wrap { color: #a8325d !important; }
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"]:hover,
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"][data-active="true"] { color: #5b1f3c !important; border-color: #a8325d !important; background: #fde8f0 !important; }
