@@ -5,6 +5,7 @@ const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
 
 export function NewsBanner() {
   const [dismissed, setDismissed] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
     try {
@@ -12,6 +13,11 @@ export function NewsBanner() {
     } catch {
       setDismissed(false);
     }
+    const media = matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(media.matches);
+    const update = () => setReducedMotion(media.matches);
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
   }, []);
 
   if (dismissed) return null;
@@ -29,13 +35,27 @@ export function NewsBanner() {
     <aside className="news-banner" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
         <figure className="news-banner__media">
-          <img
-            src="/media/news/guarda-municipal-rb-viatura.webp"
-            alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
-            width={640}
-            height={429}
-            loading="lazy"
-          />
+          {reducedMotion ? (
+            <img
+              src="/media/news/guarda-municipal-rb-viatura.webp"
+              alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
+              width={640}
+              height={429}
+              loading="lazy"
+            />
+          ) : (
+            <video
+              poster="/media/news/guarda-municipal-rb-viatura.webp"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Vídeo em loop de uma viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
+            >
+              <source src="/media/news/guarda-municipal-rb-viatura.mp4" type="video/mp4" />
+            </video>
+          )}
           <figcaption>Viatura oficial · Guarda Municipal de Rio Branco</figcaption>
         </figure>
         <p className="news-banner__text">
