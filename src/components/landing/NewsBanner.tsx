@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Megaphone, X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 
 const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
 
@@ -28,9 +28,16 @@ export function NewsBanner() {
   return (
     <aside className="news-banner" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
-        <span className="news-banner__icon" aria-hidden="true">
-          <Megaphone />
-        </span>
+        <figure className="news-banner__media">
+          <img
+            src="/media/news/guarda-municipal-rb-viatura.webp"
+            alt="Viatura de uma Guarda Municipal, com a lateral identificada pelo nome da corporação"
+            width={640}
+            height={430}
+            loading="lazy"
+          />
+          <figcaption>Foto ilustrativa · Guarda Municipal (Hallel/Wikimedia Commons, CC BY-SA 4.0)</figcaption>
+        </figure>
         <p className="news-banner__text">
           <span className="news-banner__tag">Notícia · Segurança pública</span>
           <span className="news-banner__headline">
