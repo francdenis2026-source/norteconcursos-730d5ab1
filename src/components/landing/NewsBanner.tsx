@@ -31,12 +31,12 @@ export function NewsBanner() {
         <figure className="news-banner__media">
           <img
             src="/media/news/guarda-municipal-rb-viatura.webp"
-            alt="Viatura de uma Guarda Municipal, com a lateral identificada pelo nome da corporação"
+            alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
             width={640}
-            height={430}
+            height={429}
             loading="lazy"
           />
-          <figcaption>Foto ilustrativa · Guarda Municipal (Hallel/Wikimedia Commons, CC BY-SA 4.0)</figcaption>
+          <figcaption>Viatura oficial · Guarda Municipal de Rio Branco</figcaption>
         </figure>
         <p className="news-banner__text">
           <span className="news-banner__tag">Notícia · Segurança pública</span>
