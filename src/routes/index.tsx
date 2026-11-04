@@ -55,7 +55,9 @@ import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
+import "@/styles/news-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
+import { NewsBanner } from "@/components/landing/NewsBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
@@ -564,6 +566,8 @@ function Index() {
           </div>
         </div>
       </header>
+
+      <NewsBanner />
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage" tabIndex={-1}>
