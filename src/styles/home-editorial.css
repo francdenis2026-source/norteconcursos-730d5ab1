@@ -257,3 +257,43 @@ html body .home.home :is(p) {
   background: color-mix(in srgb, var(--home-surface) 94%, transparent);
   border: 1px solid var(--home-line);
 }
+
+/* Home refinement: clear primary action and predictable interaction feedback. */
+.home-hero .home-actions .home-button--gold {
+  min-height: 48px;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+.home-hero .home-actions .home-hero__explore {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-hero .home-actions :is(a, button):focus-visible,
+.mobile-homepage__hero-copy :is(a, button):focus-visible {
+  outline: 3px solid var(--home-accent);
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .mobile-homepage__hero-copy .mobile-homepage__primary {
+    min-height: 48px;
+    text-align: center;
+    justify-content: center;
+  }
+  .mobile-homepage__hero-copy .mobile-homepage__secondary {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-hero .home-actions :is(a, button),
+  .mobile-homepage__hero-copy :is(a, button) {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+}
