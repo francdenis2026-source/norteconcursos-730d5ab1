@@ -432,6 +432,7 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
   const [comparison, setComparison] = React.useState(["", ""]);
   const [quizAnswers, setQuizAnswers] = React.useState<string[]>(["", "", "", ""]);
   const [quizReviewed, setQuizReviewed] = React.useState<boolean[]>([false, false, false, false]);
+  const [hydratedActivityKey, setHydratedActivityKey] = React.useState("");
   const [showAnswer, setShowAnswer] = React.useState(false);
   const [checked, setChecked] = React.useState<boolean[]>([false, false, false, false]);
   const label = topic || subject;
@@ -443,6 +444,7 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
   React.useEffect(() => {
     setShowAnswer(false);
     setChecked([false, false, false, false]);
+    setHydratedActivityKey("");
     try {
       const saved = JSON.parse(localStorage.getItem(activityKey) ?? "{}") as {
         other?: string; comparison?: string[]; quizAnswers?: string[]; quizReviewed?: boolean[];
@@ -454,11 +456,13 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
     } catch {
       setOther(""); setComparison(["", ""]); setQuizAnswers(["", "", "", ""]); setQuizReviewed([false, false, false, false]);
     }
+    setHydratedActivityKey(activityKey);
   }, [activityKey, tool]);
   React.useEffect(() => {
+    if (hydratedActivityKey !== activityKey) return;
     try { localStorage.setItem(activityKey, JSON.stringify({ other, comparison, quizAnswers, quizReviewed })); }
     catch { /* armazenamento indisponível */ }
-  }, [activityKey, other, comparison, quizAnswers, quizReviewed]);
+  }, [activityKey, hydratedActivityKey, other, comparison, quizAnswers, quizReviewed]);
   const save = (value: string) => {
     setNotes(value);
     try { localStorage.setItem(notesKey, value); } catch { /* sem armazenamento */ }
