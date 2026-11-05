@@ -17,6 +17,8 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
   const current = activeNavigation(items, pathname, search);
   const isHome = pathname === "/dashboard" || pathname === "/dashboard/";
   const isPlanningPage = pathname === "/dashboard/study-coach" || pathname === "/dashboard/cronograma";
+  const isCoachActive = isPlanningPage && pathname === "/dashboard/study-coach";
+  const isScheduleActive = isPlanningPage && pathname === "/dashboard/cronograma";
   const section = sections.find(candidate => current && candidate.groups.includes(current.group));
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
