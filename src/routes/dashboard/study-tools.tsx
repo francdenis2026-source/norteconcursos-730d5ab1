@@ -1,4 +1,5 @@
 import { plannedPractice } from "@/lib/plannedStudy";
+import "@/styles/study-tool-launcher.css";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { ENEM_AREAS } from "@/data/enem";
 import { platformDate } from "@/lib/platformClock";
@@ -314,27 +315,27 @@ function StudyToolsPage() {
       </section>
 
       {!enem && (
-        <nav aria-label="Ferramentas da Central de Estudos" className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+        <nav aria-label="Ferramentas da Central de Estudos" className="study-tool-launcher grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
           {([
-            { key: "handwritten", label: "Anotações", icon: BookOpenCheck },
-            { key: "guide", label: "Guia de estudos", icon: BookOpenCheck },
-            { key: "simplify", label: "Simplificar", icon: Sparkles },
-            { key: "compare", label: "Comparar", icon: Layers },
-            { key: "quiz", label: "Quiz", icon: BrainCircuit },
-          ] as const).map(({ key, label, icon: Icon }) => (
+            { key: "handwritten", label: "Anotações", detail: "Organize suas ideias", icon: BookOpenCheck },
+            { key: "guide", label: "Guia de estudos", detail: "Estruture a revisão", icon: BookOpenCheck },
+            { key: "simplify", label: "Simplificar", detail: "Entenda com clareza", icon: Sparkles },
+            { key: "compare", label: "Comparar", detail: "Relacione conceitos", icon: Layers },
+            { key: "quiz", label: "Quiz", detail: "Teste seu domínio", icon: BrainCircuit },
+          ] as const).map(({ key, label, detail, icon: Icon }) => (
             <Link
               key={key}
               to="/dashboard/study-tools"
               search={{ tool: key, context: undefined }}
               aria-current={tool === key ? "page" : undefined}
               className={cn(
-                "flex min-h-24 items-center gap-3 rounded-xl border bg-card p-4 text-sm font-semibold transition-colors hover:border-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+                "study-tool-launcher__card group flex min-h-28 items-center gap-3 rounded-2xl border bg-card p-4 text-sm font-semibold transition-all hover:border-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
                 tool === key && "border-primary bg-primary/10",
               )}
             >
               <Icon aria-hidden="true" className="h-5 w-5 shrink-0 text-primary" />
-              <span>{label}</span>
-              <ArrowRight aria-hidden="true" className="ml-auto h-4 w-4 shrink-0" />
+              <span className="flex min-w-0 flex-1 flex-col gap-1"><strong className="text-sm">{label}</strong><small className="text-xs font-normal text-muted-foreground">{detail}</small></span>
+              <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-1" />
             </Link>
           ))}
         </nav>
