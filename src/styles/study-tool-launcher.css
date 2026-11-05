@@ -1,0 +1,50 @@
+/* Central de Estudos: focused, responsive tool launcher. */
+.study-tools-page .study-tool-launcher { min-width: 0; }
+.study-tools-page .study-tool-launcher__card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-color: var(--border);
+  background: var(--card);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 5%);
+}
+.study-tools-page .study-tool-launcher__card:nth-child(5n + 1) { --tool-accent: #3b82f6; }
+.study-tools-page .study-tool-launcher__card:nth-child(5n + 2) { --tool-accent: #0d9488; }
+.study-tools-page .study-tool-launcher__card:nth-child(5n + 3) { --tool-accent: #a855f7; }
+.study-tools-page .study-tool-launcher__card:nth-child(5n + 4) { --tool-accent: #ea580c; }
+.study-tools-page .study-tool-launcher__card:nth-child(5n + 5) { --tool-accent: #e11d48; }
+.study-tools-page .study-tool-launcher__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--tool-accent);
+  opacity: .7;
+}
+.study-tools-page .study-tool-launcher__card > svg:first-child {
+  color: var(--tool-accent);
+  width: 24px;
+  height: 24px;
+}
+.study-tools-page .study-tool-launcher__card[data-active],
+.study-tools-page .study-tool-launcher__card[aria-current="page"] {
+  border-color: var(--tool-accent);
+  background: color-mix(in srgb, var(--tool-accent) 9%, var(--card));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--tool-accent) 35%, transparent);
+}
+.study-tools-page .study-tool-launcher__card strong,
+.study-tools-page .study-tool-launcher__card small { overflow-wrap: anywhere; }
+@media (hover: hover) and (pointer: fine) {
+  .study-tools-page .study-tool-launcher__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgb(0 0 0 / 10%);
+  }
+}
+@media (max-width: 640px) {
+  .study-tools-page .study-tool-launcher__card { min-height: 88px; padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .study-tools-page .study-tool-launcher__card,
+  .study-tools-page .study-tool-launcher__card svg { transition: none; }
+  .study-tools-page .study-tool-launcher__card:hover { transform: none; }
+}
