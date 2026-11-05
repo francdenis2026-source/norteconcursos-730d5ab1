@@ -97,7 +97,7 @@ export function MobileHomepage() {
           <span>Concursos em foco</span>
           <h2>Treine para a prova que importa.</h2>
         </div>
-        <ContestShowcase />
+        <ContestShowcase mobile />
       </section>
       <HomeRankingShowcase anchorId="ranking-destaque-mobile" />
       <section id="mobile-planos" className="mobile-plans" aria-labelledby="mobile-plans-title">
