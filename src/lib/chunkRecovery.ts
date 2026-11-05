@@ -4,12 +4,23 @@ export const CHUNK_RECOVERY_SCRIPT = `(function(){
   function recover(value){
     if(!pattern.test(String(value&&value.message||value||''))||!navigator.onLine)return;
     try{
-      var key='norte-stale-chunk-recovery',now=Date.now(),previous=Number(sessionStorage.getItem(key)||0);
-      if(previous&&now-previous<10000)return;
-      sessionStorage.setItem(key,String(now));
-      var url=new URL(location.href);
-      url.searchParams.set('_nc_reload',String(now));
-      location.replace(url.href);
+      // Up to 4 attempts per minute; throttled attempts are delayed (not dropped) so a
+      // second rebuild arriving mid-reload no longer leaves a blank screen.
+      if(window.__ncRecoveryPending)return;
+      var key='norte-stale-chunk-recovery',now=Date.now(),list=[];
+      try{list=JSON.parse(sessionStorage.getItem(key)||'[]');}catch(e){list=[];}
+      if(!Array.isArray(list))list=[];
+      list=list.filter(function(t){return typeof t==='number'&&now-t<60000;});
+      if(list.length>=4)return;
+      var last=list.length?list[list.length-1]:0,wait=last&&now-last<3000?3000:0;
+      list.push(now);
+      sessionStorage.setItem(key,JSON.stringify(list));
+      window.__ncRecoveryPending=true;
+      setTimeout(function(){
+        var url=new URL(location.href);
+        url.searchParams.set('_nc_reload',String(Date.now()));
+        location.replace(url.href);
+      },wait);
     }catch(e){ /* The visible error boundary remains available when storage is blocked. */ }
   }
   window.addEventListener('vite:preloadError',function(event){recover(event.payload);});
