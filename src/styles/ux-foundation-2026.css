@@ -35,3 +35,33 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
     transition-duration: .01ms !important;
   }
 }
+
+/* Mobile landing: clear first action and scan-friendly resource cards. */
+.mobile-homepage__primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  width: 100%;
+  min-height: 50px;
+  margin-block: 1rem .6rem;
+  padding: .85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--brass-soft, #d4aa63) 65%, transparent);
+  border-radius: 14px;
+  background: var(--brass-soft, #d4aa63);
+  color: #181b21;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 16%);
+}
+.mobile-homepage__primary svg { width: 19px; height: 19px; flex: none; }
+.mobile-homepage__primary:focus-visible { outline-offset: 4px; }
+@media (hover: hover) {
+  .mobile-homepage__primary:hover { filter: brightness(1.06); }
+}
+@media (max-width: 760px) {
+  .mobile-homepage__cards > article { min-width: 0; }
+  .mobile-homepage__cards > article p { overflow-wrap: anywhere; }
+  .mobile-homepage__wide-link { min-height: 48px; }
+}
