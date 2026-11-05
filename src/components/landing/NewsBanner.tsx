@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, X } from "lucide-react";
 
 const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
 
@@ -58,23 +58,22 @@ export function NewsBanner() {
           )}
           <figcaption>Viatura oficial · Guarda Municipal de Rio Branco</figcaption>
         </figure>
-        <p className="news-banner__text">
-          <span className="news-banner__tag">Notícia · Segurança pública</span>
+        <div className="news-banner__text">
+          <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Radar de concursos · Segurança pública</span>
           <span className="news-banner__headline">
-            Rio Branco anuncia criação da Guarda Municipal
+            Guarda Municipal de Rio Branco: projeto de criação avança
           </span>
           <span className="news-banner__summary">
-            Prefeitura instituiu comissão para estruturar a corporação, com previsão de cerca de
-            80 vagas e concurso público em 2027. Edital ainda não foi publicado.
+            Comissão instituída para estruturar a corporação. Há previsão de cerca de 80 vagas e concurso em 2027; edital ainda não publicado.
           </span>
-        </p>
+        </div>
         <a
           className="news-banner__link"
           href="https://www.riobranco.ac.gov.br/sdti/rio-branco-anuncia-criacao-da-guarda-municipal-com-previsao-de-80-vagas-e-reforco-na-seguranca-preventiva/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ler matéria completa
+          Ver notícia oficial
           <ArrowUpRight aria-hidden="true" />
         </a>
         <button
