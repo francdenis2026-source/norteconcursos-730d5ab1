@@ -598,16 +598,16 @@ function Index() {
                 <div className="home-actions">
                   <Link
                     to="/auth"
-                    search={{ mode: undefined }}
+                    search={{ mode: "register" }}
                     className="home-button home-button--gold"
                     data-aim
                   >
-                    Entrar
-                    <ArrowUpRight />
+                    Começar grátis
+                    <ArrowUpRight aria-hidden="true" />
                   </Link>
                   <a href="#plataforma" className="home-hero__explore" data-aim>
                     Conhecer a plataforma
-                    <ArrowRight />
+                    <ArrowRight aria-hidden="true" />
                   </a>
                   <a href="#ranking-destaque" className="home-ranking-hero-entry" data-aim aria-label="Ver os quatro melhores candidatos no ranking real da plataforma">
                     <Trophy aria-hidden="true" /> Ranking dos melhores <ArrowRight aria-hidden="true" />
