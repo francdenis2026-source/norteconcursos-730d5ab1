@@ -48,3 +48,43 @@
   .study-tools-page .study-tool-launcher__card svg { transition: none; }
   .study-tools-page .study-tool-launcher__card:hover { transform: none; }
 }
+
+/* Work area: maximize reading and writing space without changing tool behavior. */
+.study-tools-page .study-materials-workspace {
+  min-width: 0;
+  border-radius: 20px;
+  padding: clamp(16px, 2vw, 28px);
+  box-shadow: 0 8px 26px rgb(0 0 0 / 6%);
+}
+.study-tools-page .study-materials-workspace > header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.study-tools-page .study-materials-workspace__editor {
+  display: block;
+  width: 100%;
+  min-height: clamp(190px, 30vh, 380px);
+  line-height: 1.65;
+  resize: vertical;
+}
+.study-tools-page .study-materials-workspace__checklist label {
+  min-height: 92px;
+  align-items: center;
+}
+.study-tools-page .study-materials-workspace__checklist input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+.study-tools-page .study-materials-workspace__footer {
+  justify-content: flex-start;
+}
+.study-tools-page .study-materials-workspace__footer > * {
+  min-height: 42px;
+}
+@media (max-width: 640px) {
+  .study-tools-page .study-materials-workspace { padding: 16px; }
+  .study-tools-page .study-materials-workspace__editor { min-height: 240px; }
+  .study-tools-page .study-materials-workspace__footer > * { width: 100%; }
+}
