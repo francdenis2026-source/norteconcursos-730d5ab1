@@ -429,14 +429,36 @@ const MATERIAL_TOOL_LABEL: Record<MaterialTool, string> = {
 function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool; subject: string; topic: string }) {
   const [notes, setNotes] = React.useState("");
   const [other, setOther] = React.useState("");
+  const [comparison, setComparison] = React.useState(["", ""]);
+  const [quizAnswers, setQuizAnswers] = React.useState<string[]>(["", "", "", ""]);
+  const [quizReviewed, setQuizReviewed] = React.useState<boolean[]>([false, false, false, false]);
   const [showAnswer, setShowAnswer] = React.useState(false);
   const [checked, setChecked] = React.useState<boolean[]>([false, false, false, false]);
   const label = topic || subject;
   const notesKey = userStorageKey("study_material_notes:" + subject + ":" + topic);
+  const activityKey = userStorageKey("study_material_activity:" + subject + ":" + topic);
   React.useEffect(() => {
     try { setNotes(localStorage.getItem(notesKey) || ""); } catch { setNotes(""); }
   }, [notesKey]);
-  React.useEffect(() => { setShowAnswer(false); setOther(""); setChecked([false, false, false, false]); }, [subject, topic, tool]);
+  React.useEffect(() => {
+    setShowAnswer(false);
+    setChecked([false, false, false, false]);
+    try {
+      const saved = JSON.parse(localStorage.getItem(activityKey) ?? "{}") as {
+        other?: string; comparison?: string[]; quizAnswers?: string[]; quizReviewed?: boolean[];
+      };
+      setOther(typeof saved.other === "string" ? saved.other : "");
+      setComparison([0, 1].map(i => typeof saved.comparison?.[i] === "string" ? saved.comparison[i]! : ""));
+      setQuizAnswers([0, 1, 2, 3].map(i => typeof saved.quizAnswers?.[i] === "string" ? saved.quizAnswers[i]! : ""));
+      setQuizReviewed([0, 1, 2, 3].map(i => saved.quizReviewed?.[i] === true));
+    } catch {
+      setOther(""); setComparison(["", ""]); setQuizAnswers(["", "", "", ""]); setQuizReviewed([false, false, false, false]);
+    }
+  }, [activityKey, tool]);
+  React.useEffect(() => {
+    try { localStorage.setItem(activityKey, JSON.stringify({ other, comparison, quizAnswers, quizReviewed })); }
+    catch { /* armazenamento indisponível */ }
+  }, [activityKey, other, comparison, quizAnswers, quizReviewed]);
   const save = (value: string) => {
     setNotes(value);
     try { localStorage.setItem(notesKey, value); } catch { /* sem armazenamento */ }
@@ -493,7 +515,8 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
             {[label, other.trim() || "Segundo conceito"].map((name, i) => (
               <div key={i} className="rounded-xl border bg-background p-4">
                 <h3 className="font-semibold">{name}</h3>
-                <p className="mt-2 text-xs text-muted-foreground">Preencha: definição · fundamento · requisitos · exemplo · principal diferença.</p>
+                <label className="mt-3 block text-xs text-muted-foreground" htmlFor={`study-compare-side-${i}`}>Definição, fundamento, requisitos, exemplos e diferenças</label>
+                <textarea id={`study-compare-side-${i}`} className="mt-2 min-h-36 w-full resize-y rounded-lg border bg-card p-3 text-sm" placeholder="Escreva sua análise com base nas fontes consultadas…" value={comparison[i] ?? ""} onChange={e => setComparison(prev => prev.map((v, n) => n === i ? e.target.value : v))} />
               </div>
             ))}
           </div>
@@ -503,7 +526,20 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
       {tool === "quiz" && (
         <div className="space-y-3">
           <h3 className="font-semibold">Autoavaliação de {label}</h3>
-          {prompts.map((question, i) => <p key={i} className="rounded-lg border bg-background p-3 text-sm"><strong>{i + 1}.</strong> {question}</p>)}
+          {prompts.map((question, i) => (
+            <div key={i} className="space-y-2 rounded-xl border bg-background p-4">
+              <label htmlFor={`study-quiz-answer-${i}`} className="block text-sm font-semibold">{i + 1}. {question}</label>
+              <textarea id={`study-quiz-answer-${i}`} className="min-h-24 w-full resize-y rounded-lg border bg-card p-3 text-sm" placeholder="Escreva sua resposta…" value={quizAnswers[i] ?? ""} onChange={e => {
+                setQuizAnswers(prev => prev.map((v, n) => n === i ? e.target.value : v));
+                setQuizReviewed(prev => prev.map((v, n) => n === i ? false : v));
+              }} />
+              <label className="flex items-center gap-2 text-xs text-muted-foreground">
+                <input type="checkbox" checked={quizReviewed[i] ?? false} disabled={!quizAnswers[i]?.trim()} onChange={e => setQuizReviewed(prev => prev.map((v, n) => n === i ? e.target.checked : v))} />
+                Conferi esta resposta na fonte de estudo
+              </label>
+            </div>
+          ))}
+          <p className="text-xs text-muted-foreground" role="status">{quizReviewed.filter(Boolean).length} de 4 respostas conferidas. Respostas salvas neste dispositivo; sem correção automática.</p>
           <button type="button" onClick={() => setShowAnswer(v => !v)} className="rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-muted">{showAnswer ? "Ocultar orientação" : "Como conferir minhas respostas"}</button>
           {showAnswer && <p className="rounded-lg bg-muted p-3 text-sm">Confira cada resposta na fonte do assunto, identifique o fundamento legal quando aplicável e registre os pontos de dúvida no caderno de erros. Estas são perguntas de revisão, não questões oficiais com gabarito.</p>}
         </div>
