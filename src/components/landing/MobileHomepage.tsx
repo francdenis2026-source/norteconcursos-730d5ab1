@@ -18,6 +18,7 @@ import { HeaderQuestionStats } from "@/components/landing/HeroDock";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 
 export function MobileHomepage() {
@@ -25,7 +26,7 @@ export function MobileHomepage() {
     <div className="mobile-homepage" aria-label="Norte Concursos para celular">
       <section id="mobile-inicio" className="mobile-homepage__hero">
         <TacticalClockBackdrop />
-        <img src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" />
+        <img src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
         <div className="mobile-homepage__hero-shade" />
         <HeroBadge />
         <div className="mobile-homepage__hero-copy">
@@ -59,7 +60,7 @@ export function MobileHomepage() {
           </span>
           <h2>Estude um pouco hoje. Chegue mais forte na prova.</h2>
           <p>
-            10 questões oficiais por dia, sem cadastro, com comentários para você entender cada
+            {GUEST_DAILY_LIMIT} questões por dia, sem cadastro, com comentários para você entender cada
             resposta.
           </p>
         </div>
