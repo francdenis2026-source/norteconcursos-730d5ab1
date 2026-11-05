@@ -317,3 +317,32 @@
   .news-banner__replay { inset: auto 5px 6px 5px; justify-content: center; padding: 5px; font-size: 10px; }
   .news-banner__media:has(.news-banner__replay) figcaption { display: none; }
 }
+
+/* Refinamento final: foco, leitura e controles consistentes em telas touch. */
+.news-banner__inner { isolation: isolate; }
+.news-banner__media img,
+.news-banner__media video { object-position: center; }
+.news-banner__link { text-underline-offset: 3px; }
+.news-banner__link:focus-visible,
+.news-banner__close:focus-visible,
+.news-banner__replay:focus-visible { outline: 3px solid var(--home-accent); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .news-banner__link:hover { background: var(--home-tint); }
+}
+@media (hover: none), (pointer: coarse) {
+  .news-banner__close { min-width: 44px; min-height: 44px; }
+  .news-banner__replay { min-height: 36px; }
+  .news-banner__link:hover { transform: none; }
+}
+@media (max-width: 600px) {
+  .news-banner__inner { grid-template-columns: 96px minmax(0, 1fr) 44px; }
+  .news-banner__close { width: 44px; height: 44px; }
+  .news-banner__tag { overflow-wrap: anywhere; }
+}
+@media (max-width: 370px) {
+  .news-banner__inner { grid-template-columns: 76px minmax(0, 1fr) 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .news-banner__link { transition: none; }
+  .news-banner__link:hover { transform: none; }
+}
