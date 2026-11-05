@@ -8,7 +8,7 @@ const sections = [
   { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Minha evolução', detail: 'Prioridades pelos resultados', icon: BarChart3 },
 ] as const;
 
-export function StudyPlanningNav({ active }: { active: typeof sections[number]['key'] }) {
+export function StudyPlanningNav({ active }: { active: typeof sections[number]['key'] | 'objective' }) {
   return (
     <nav aria-label="Planejamento de estudos" className="study-planning-nav grid gap-2 rounded-2xl border bg-card p-3 sm:grid-cols-2 xl:grid-cols-3">
       {sections.map(({ key, href, label, detail, icon: Icon }) => (
