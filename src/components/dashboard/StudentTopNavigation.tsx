@@ -40,11 +40,11 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
           </Link>
         )}
         {isHome && <>
-          <Link to="/dashboard/study-coach" className="student-top-navigation__trigger" data-tone="blue" data-active={pathname === "/dashboard/study-coach"} aria-current={pathname === "/dashboard/study-coach" ? "page" : undefined}>
+          <Link to="/dashboard/study-coach" className="student-top-navigation__trigger" data-tone="blue" data-active={isCoachActive} aria-current={isCoachActive ? "page" : undefined}>
             <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
             <span className="student-top-navigation__label">Meu plano</span>
           </Link>
-          <Link to="/dashboard/cronograma" className="student-top-navigation__trigger" data-tone="blue" data-active={pathname === "/dashboard/cronograma"} aria-current={pathname === "/dashboard/cronograma" ? "page" : undefined}>
+          <Link to="/dashboard/cronograma" className="student-top-navigation__trigger" data-tone="blue" data-active={isScheduleActive} aria-current={isScheduleActive ? "page" : undefined}>
             <span className="student-top-navigation__icon-wrap" aria-hidden="true"><CalendarClock size={18} /></span>
             <span className="student-top-navigation__label">Agenda de estudos</span>
           </Link>
@@ -87,7 +87,7 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
               to={item.href}
               search={item.search ?? {}}
               className="student-top-navigation__trigger student-top-navigation__submenu"
-              data-tone={section.tone}
+              data-tone={section?.tone}
               data-active={selected}
               aria-current={selected ? "page" : undefined}
               title={item.label}
