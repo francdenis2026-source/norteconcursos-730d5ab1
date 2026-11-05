@@ -60,7 +60,8 @@ function CountReference({ date }: { date: string | null }) {
 }
 
 /** Public references are dated; signed-in counts continue to use the eligible catalogue. */
-export function ContestShowcase() {
+export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
+  const suffix = mobile ? '-mobile' : '';
   const { isAuthenticated } = useAuthStatus();
   const catalogRef = useRef<HTMLDivElement>(null);
   const [activeContest, setActiveContest] = useState(0);
@@ -72,7 +73,7 @@ export function ContestShowcase() {
     const next = Math.max(0, Math.min(cards.length - 1, index));
     const destination = cards[next];
     if (!destination) return;
-    track.scrollTo({ left: destination.offsetLeft - (cards[0]?.offsetLeft ?? 0), behavior: "smooth" });
+    track.scrollTo({ left: destination.offsetLeft - (cards[0]?.offsetLeft ?? 0), behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
     setActiveContest(next);
   };
   const trackContestScroll = () => {
@@ -114,7 +115,7 @@ export function ContestShowcase() {
 
   return (
     <div className="contest-showcase">
-      <article className="contest-spotlight" aria-labelledby="pcac-title">
+      <article className="contest-spotlight" aria-labelledby={"pcac-title" + suffix}>
         <div className="contest-spotlight__art">
           <img
             src="/media/hero/pcac-capa.webp"
@@ -132,7 +133,7 @@ export function ContestShowcase() {
             </span>
             <span>Banca definida · IDECAN</span>
           </div>
-          <h3 id="pcac-title">
+          <h3 id={"pcac-title" + suffix}>
             Polícia Civil <em>do Acre.</em>
           </h3>
           <p className="contest-spotlight__copy">
@@ -191,8 +192,8 @@ export function ContestShowcase() {
       <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
         <article
           className="contest-card contest-card--idecan"
-          id="prova-pcsc"
-          aria-labelledby="pcsc-title"
+          id={"prova-pcsc" + suffix}
+          aria-labelledby={"pcsc-title" + suffix}
         >
           <span className="contest-card__badge">
             <Sparkles size={11} aria-hidden="true" /> Novo
@@ -216,7 +217,7 @@ export function ContestShowcase() {
           </div>
           <div className="contest-card__content">
             <span className="contest-eyebrow">IDECAN · {PCSC_EXAM.year}</span>
-            <h3 id="pcsc-title">Polícia Civil de Santa Catarina</h3>
+            <h3 id={"pcsc-title" + suffix}>Polícia Civil de Santa Catarina</h3>
             <p className="contest-card__role">Agente de Polícia Civil</p>
             <Ficha
               items={[
@@ -242,7 +243,7 @@ export function ContestShowcase() {
             </details>
           </div>
         </article>
-        <article className="contest-card" id="prova-pcpr" aria-labelledby="pcpr-title">
+        <article className="contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpr-capa.webp"
@@ -256,7 +257,7 @@ export function ContestShowcase() {
           </div>
           <div className="contest-card__content">
             <span className="contest-eyebrow">FGV · {PCPR_EXAM.year}</span>
-            <h3 id="pcpr-title">Polícia Civil do Paraná</h3>
+            <h3 id={"pcpr-title" + suffix}>Polícia Civil do Paraná</h3>
             <p className="contest-card__role">Agente de Polícia Judiciária</p>
             <Ficha
               items={[
@@ -298,7 +299,7 @@ export function ContestShowcase() {
             </details>
           </div>
         </article>
-        <article className="contest-card" id="prova-pcpi" aria-labelledby="pcpi-title">
+        <article className="contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpi-capa.webp"
@@ -312,7 +313,7 @@ export function ContestShowcase() {
           </div>
           <div className="contest-card__content">
             <span className="contest-eyebrow">FGV · {PCPI_EXAM.year}</span>
-            <h3 id="pcpi-title">Polícia Civil do Piauí</h3>
+            <h3 id={"pcpi-title" + suffix}>Polícia Civil do Piauí</h3>
             <p className="contest-card__role">Treino com seleção por cargo</p>
             <Ficha
               items={[
