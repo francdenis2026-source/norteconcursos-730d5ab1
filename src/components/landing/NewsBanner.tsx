@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, ShieldCheck, X } from "lucide-react";
+import { ArrowUpRight, Play, ShieldCheck, X } from "lucide-react";
+import { useRef } from "react";
 
 const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
 
@@ -7,6 +8,8 @@ export function NewsBanner() {
   const [dismissed, setDismissed] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(true);
   const [allowVideo, setAllowVideo] = useState(false);
+  const [videoFinished, setVideoFinished] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     try {
@@ -38,7 +41,7 @@ export function NewsBanner() {
     <aside className="news-banner" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
         <figure className="news-banner__media">
-          {reducedMotion || !allowVideo ? (
+          {reducedMotion || !allowVideo || videoFinished ? (
             <img
               src="/media/news/guarda-municipal-rb-viatura.webp"
               alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
@@ -51,13 +54,18 @@ export function NewsBanner() {
               poster="/media/news/guarda-municipal-rb-viatura.webp"
               autoPlay
               muted
-              loop
               playsInline
+              ref={videoRef}
+              onEnded={() => setVideoFinished(true)}
+              onError={() => setVideoFinished(true)}
               preload="none"
               aria-label="Vídeo em loop de uma viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
             >
               <source src="/media/news/guarda-municipal-rb-viatura.mp4" type="video/mp4" />
             </video>
+          )}
+          {videoFinished && allowVideo && !reducedMotion && (
+            <button type="button" className="news-banner__replay" onClick={() => setVideoFinished(false)} aria-label="Reproduzir vídeo novamente"><Play aria-hidden="true" /> Rever vídeo</button>
           )}
           <figcaption>Viatura oficial · Guarda Municipal de Rio Branco</figcaption>
         </figure>
