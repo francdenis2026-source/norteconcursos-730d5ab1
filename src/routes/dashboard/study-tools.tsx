@@ -433,11 +433,14 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
   const [quizAnswers, setQuizAnswers] = React.useState<string[]>(["", "", "", ""]);
   const [quizReviewed, setQuizReviewed] = React.useState<boolean[]>([false, false, false, false]);
   const [hydratedActivityKey, setHydratedActivityKey] = React.useState("");
+  const [history, setHistory] = React.useState<{ date: string; reviewed: number; answered: number; compared: boolean }[]>([]);
+  const [historyReady, setHistoryReady] = React.useState(false);
   const [showAnswer, setShowAnswer] = React.useState(false);
   const [checked, setChecked] = React.useState<boolean[]>([false, false, false, false]);
   const label = topic || subject;
   const notesKey = userStorageKey("study_material_notes:" + subject + ":" + topic);
   const activityKey = userStorageKey("study_material_activity:" + subject + ":" + topic);
+  const historyKey = userStorageKey("study_material_history:" + subject + ":" + topic);
   React.useEffect(() => {
     try { setNotes(localStorage.getItem(notesKey) || ""); } catch { setNotes(""); }
   }, [notesKey]);
@@ -463,6 +466,31 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
     try { localStorage.setItem(activityKey, JSON.stringify({ other, comparison, quizAnswers, quizReviewed })); }
     catch { /* armazenamento indisponível */ }
   }, [activityKey, hydratedActivityKey, other, comparison, quizAnswers, quizReviewed]);
+  React.useEffect(() => {
+    setHistoryReady(false);
+    try {
+      const saved: unknown = JSON.parse(localStorage.getItem(historyKey) ?? "[]");
+      setHistory(Array.isArray(saved) ? saved.filter(item => item && typeof item.date === "string" && typeof item.reviewed === "number").slice(0, 20) : []);
+    } catch { setHistory([]); }
+    setHistoryReady(true);
+  }, [historyKey]);
+  const answeredCount = quizAnswers.filter(value => value.trim().length > 0).length;
+  const reviewedCount = quizReviewed.filter(Boolean).length;
+  const recordSession = () => {
+    if (!historyReady || hydratedActivityKey !== activityKey) return;
+    const entry = {
+      date: new Date().toISOString(),
+      reviewed: reviewedCount,
+      answered: answeredCount,
+      compared: comparison.some(value => value.trim().length > 0),
+    };
+    const next = [entry, ...history].slice(0, 20);
+    try {
+      localStorage.setItem(historyKey, JSON.stringify(next));
+      setHistory(next);
+      toast.success("Sessão registrada neste dispositivo.");
+    } catch { toast.error("Não foi possível registrar a sessão neste dispositivo."); }
+  };
   const save = (value: string) => {
     setNotes(value);
     try { localStorage.setItem(notesKey, value); } catch { /* sem armazenamento */ }
@@ -546,6 +574,40 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
           <p className="text-xs text-muted-foreground" role="status">{quizReviewed.filter(Boolean).length} de 4 respostas conferidas. Respostas salvas neste dispositivo; sem correção automática.</p>
           <button type="button" onClick={() => setShowAnswer(v => !v)} className="rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-muted">{showAnswer ? "Ocultar orientação" : "Como conferir minhas respostas"}</button>
           {showAnswer && <p className="rounded-lg bg-muted p-3 text-sm">Confira cada resposta na fonte do assunto, identifique o fundamento legal quando aplicável e registre os pontos de dúvida no caderno de erros. Estas são perguntas de revisão, não questões oficiais com gabarito.</p>}
+        </div>
+      )}
+      {(tool === "quiz" || tool === "compare") && (
+        <div className="rounded-xl border bg-muted/30 p-4 space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 className="text-sm font-semibold">Progresso e histórico</h3>
+              <p className="text-xs text-muted-foreground">
+                {tool === "quiz" ? `${answeredCount}/4 respostas preenchidas · ${reviewedCount}/4 conferidas` : comparison.some(value => value.trim()) ? "Comparação em andamento" : "Inicie sua comparação"}
+              </p>
+            </div>
+            <Button type="button" size="sm" variant="secondary" disabled={!historyReady || hydratedActivityKey !== activityKey || (tool === "quiz" ? answeredCount === 0 : !comparison.some(value => value.trim()))} onClick={recordSession}>
+              Registrar sessão
+            </Button>
+          </div>
+          {tool === "quiz" && (
+            <div role="progressbar" aria-label="Respostas conferidas" aria-valuenow={reviewedCount} aria-valuemin={0} aria-valuemax={4} className="h-2 overflow-hidden rounded-full bg-muted">
+              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${reviewedCount * 25}%` }} />
+            </div>
+          )}
+          <details>
+            <summary className="cursor-pointer text-xs font-semibold">Histórico neste dispositivo ({history.length})</summary>
+            {history.length ? (
+              <ol className="mt-3 max-h-48 space-y-2 overflow-y-auto text-xs text-muted-foreground">
+                {history.map((item, i) => (
+                  <li key={item.date + i} className="flex flex-wrap justify-between gap-2 border-b pb-2">
+                    <time dateTime={item.date}>{new Date(item.date).toLocaleString("pt-BR")}</time>
+                    <span>{item.answered} respostas · {item.reviewed} conferidas{item.compared ? " · comparação registrada" : ""}</span>
+                  </li>
+                ))}
+              </ol>
+            ) : <p className="mt-2 text-xs text-muted-foreground">Nenhuma sessão registrada ainda.</p>}
+          </details>
+          <p className="text-xs text-muted-foreground">Registro manual e local, sem sincronização com sua conta.</p>
         </div>
       )}
       <div className="study-materials-workspace__footer flex flex-wrap gap-2 border-t pt-4">
