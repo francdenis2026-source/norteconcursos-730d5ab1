@@ -5,7 +5,8 @@ const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
 
 export function NewsBanner() {
   const [dismissed, setDismissed] = useState(true);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(true);
+  const [allowVideo, setAllowVideo] = useState(false);
 
   useEffect(() => {
     try {
@@ -13,8 +14,10 @@ export function NewsBanner() {
     } catch {
       setDismissed(false);
     }
-    const media = matchMedia("(prefers-reduced-motion: reduce)");
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReducedMotion(media.matches);
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    setAllowVideo(!connection?.saveData && !/(^|-)2g$/.test(connection?.effectiveType ?? ""));
     const update = () => setReducedMotion(media.matches);
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
@@ -35,7 +38,7 @@ export function NewsBanner() {
     <aside className="news-banner" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
         <figure className="news-banner__media">
-          {reducedMotion ? (
+          {reducedMotion || !allowVideo ? (
             <img
               src="/media/news/guarda-municipal-rb-viatura.webp"
               alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
@@ -50,7 +53,7 @@ export function NewsBanner() {
               muted
               loop
               playsInline
-              preload="auto"
+              preload="none"
               aria-label="Vídeo em loop de uma viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
             >
               <source src="/media/news/guarda-municipal-rb-viatura.mp4" type="video/mp4" />
@@ -60,9 +63,9 @@ export function NewsBanner() {
         </figure>
         <div className="news-banner__text">
           <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Radar de concursos · Segurança pública</span>
-          <span className="news-banner__headline">
+          <strong className="news-banner__headline">
             Guarda Municipal de Rio Branco: projeto de criação avança
-          </span>
+          </strong>
           <span className="news-banner__summary">
             Comissão instituída para estruturar a corporação. Há previsão de cerca de 80 vagas e concurso em 2027; edital ainda não publicado.
           </span>
