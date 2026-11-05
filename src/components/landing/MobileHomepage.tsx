@@ -45,7 +45,7 @@ export function MobileHomepage() {
               Começar minha preparação <ArrowRight aria-hidden="true" />
             </Link>
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
-              Ver como funciona <ChevronRight />
+              Ver como funciona <ChevronRight aria-hidden="true" />
             </a>
             <a href="#ranking-destaque-mobile" className="home-ranking-hero-entry home-ranking-hero-entry--mobile" aria-label="Ir ao ranking dos quatro melhores candidatos">
               <Trophy aria-hidden="true" /> Veja o Top 4 do ranking <ChevronRight aria-hidden="true" />
@@ -73,23 +73,23 @@ export function MobileHomepage() {
         </div>
         <div id="mobile-ferramentas" className="mobile-homepage__cards" aria-label="Recursos da plataforma">
           <article>
-            <BookOpenCheck />
+            <BookOpenCheck aria-hidden="true" />
             <strong>Treinador de questões</strong>
             <p>Pratique por banca, cargo e disciplina.</p>
           </article>
           <article>
-            <Target />
+            <Target aria-hidden="true" />
             <strong>Plano de estudos</strong>
             <p>Saiba o que revisar e qual é o próximo passo.</p>
           </article>
           <article>
-            <ShieldCheck />
+            <ShieldCheck aria-hidden="true" />
             <strong>Conteúdo confiável</strong>
             <p>Fontes oficiais e revisões identificadas.</p>
           </article>
         </div>
         <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__wide-link">
-          Conhecer a plataforma <ArrowRight />
+          Conhecer a plataforma <ArrowRight aria-hidden="true" />
         </Link>
       </section>
       <section id="mobile-concursos" className="mobile-homepage__contests">
@@ -132,7 +132,7 @@ export function MobileHomepage() {
         </Link>
       </section>
       <section className="mobile-homepage__closing">
-        <CheckCircle2 />
+        <CheckCircle2 aria-hidden="true" />
         <div>
           <strong>Preparação sem improviso.</strong>
           <p>Escolha sua carreira e comece pelo diagnóstico.</p>
@@ -146,9 +146,9 @@ export function MobileHomepage() {
           NORTE <span>CONCURSOS</span>
         </strong>
         <nav className="mobile-homepage__footer-nav" aria-label="Institucional">
-          <a href="/suporte">Suporte</a>
-          <a href="/privacy">Privacidade</a>
-          <a href="/terms">Termos de uso</a>
+          <Link to="/suporte">Suporte</Link>
+          <Link to="/privacy">Privacidade</Link>
+          <Link to="/terms">Termos de uso</Link>
         </nav>
         <address className="mobile-homepage__footer-contact">
           <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
