@@ -313,6 +313,33 @@ function StudyToolsPage() {
         </div>
       </section>
 
+      {!enem && (
+        <nav aria-label="Ferramentas da Central de Estudos" className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+          {([
+            { key: "handwritten", label: "Anotações", icon: BookOpenCheck },
+            { key: "guide", label: "Guia de estudos", icon: BookOpenCheck },
+            { key: "simplify", label: "Simplificar", icon: Sparkles },
+            { key: "compare", label: "Comparar", icon: Layers },
+            { key: "quiz", label: "Quiz", icon: BrainCircuit },
+          ] as const).map(({ key, label, icon: Icon }) => (
+            <Link
+              key={key}
+              to="/dashboard/study-tools"
+              search={{ tool: key, context: undefined }}
+              aria-current={tool === key ? "page" : undefined}
+              className={cn(
+                "flex min-h-24 items-center gap-3 rounded-xl border bg-card p-4 text-sm font-semibold transition-colors hover:border-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+                tool === key && "border-primary bg-primary/10",
+              )}
+            >
+              <Icon aria-hidden="true" className="h-5 w-5 shrink-0 text-primary" />
+              <span>{label}</span>
+              <ArrowRight aria-hidden="true" className="ml-auto h-4 w-4 shrink-0" />
+            </Link>
+          ))}
+        </nav>
+      )}
+
       {!enem && tool && (
         <StudyMaterialsWorkspace tool={tool} subject={subject} topic={topic} />
       )}
