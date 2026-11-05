@@ -123,6 +123,9 @@ const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard/mock-exams": "rose",
   "/dashboard/performance": "orange",
   "/dashboard/profile": "teal",
+  "/dashboard/study-coach": "violet",
+  "/dashboard/cronograma": "sky",
+  "/dashboard/study-tools": "teal",
   "/dashboard/admin-students": "sky",
   "/dashboard/admin-finance": "emerald",
   "/dashboard/admin-metrics": "violet",
@@ -259,10 +262,9 @@ const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Questões", href: "/dashboard/question-trainer", icon: BrainCircuit },
-  { label: "Simulados", href: "/dashboard/mock-exams", icon: Trophy },
-  { label: "Evolução", href: "/dashboard/performance", icon: Layers },
-  { label: "Perfil", href: "/dashboard/profile", icon: User },
+  { label: "Meu plano", href: "/dashboard/study-coach", icon: Target },
+  { label: "Agenda", href: "/dashboard/cronograma", icon: CalendarClock },
+  { label: "Estudos", href: "/dashboard/study-tools", icon: BookOpenCheck },
 ];
 
 const normalize = (path: string) => (path.length > 1 ? path.replace(/\/$/, "") : path);
