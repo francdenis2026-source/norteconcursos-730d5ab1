@@ -448,7 +448,7 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
     "Como aplicar esse conteúdo em uma situação prática?",
   ];
   return (
-    <section aria-labelledby="study-materials-heading" className="rounded-2xl border bg-card p-4 sm:p-6 space-y-4">
+    <section aria-labelledby="study-materials-heading" className="study-materials-workspace rounded-2xl border bg-card p-4 sm:p-6 space-y-4">
       <header className="space-y-1">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">Material de aprendizagem</p>
         <h2 id="study-materials-heading" className="text-xl font-bold">{MATERIAL_TOOL_LABEL[tool]}</h2>
@@ -458,12 +458,12 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
         <div className="space-y-3">
           <p className="text-sm">Registre definições, exemplos, dúvidas e pegadinhas do assunto. As anotações ficam associadas a esta disciplina e a este tópico neste navegador.</p>
           <label htmlFor="study-material-notes" className="block text-sm font-semibold">Meu caderno de anotações</label>
-          <textarea id="study-material-notes" className="min-h-44 w-full rounded-xl border bg-background p-3 text-sm" placeholder="Definição, fundamento legal, exemplo prático, dúvidas e revisão…" value={notes} onChange={e => save(e.target.value)} />
+          <textarea id="study-material-notes" className="study-materials-workspace__editor min-h-44 w-full rounded-xl border bg-background p-3 text-sm" placeholder="Definição, fundamento legal, exemplo prático, dúvidas e revisão…" value={notes} onChange={e => save(e.target.value)} />
           <p className="text-xs text-muted-foreground" role="status">Salvamento automático neste dispositivo. Não sincronizado com a conta.</p>
         </div>
       )}
       {tool === "guide" && (
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="study-materials-workspace__checklist grid gap-3 sm:grid-cols-2">
           {["Entender o conceito e localizar a fonte", "Identificar elementos e exceções", "Resolver questões da disciplina", "Registrar erros e revisar em 24 horas"].map((item, i) => (
             <label key={item} className="flex cursor-pointer items-start gap-3 rounded-xl border bg-background p-4 text-sm">
               <input type="checkbox" checked={checked[i]} onChange={e => setChecked(old => old.map((v, n) => i === n ? e.target.checked : v))} className="mt-0.5" />
@@ -482,7 +482,7 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
             <li>Dê um exemplo cotidiano e um contraexemplo.</li>
             <li>Confira a explicação com o material original antes de memorizar.</li>
           </ol>
-          <textarea className="min-h-32 w-full rounded-xl border bg-background p-3" aria-label="Explicação simplificada" placeholder="Minha explicação simples…" value={notes} onChange={e => save(e.target.value)} />
+          <textarea className="study-materials-workspace__editor min-h-32 w-full rounded-xl border bg-background p-3" aria-label="Explicação simplificada" placeholder="Minha explicação simples…" value={notes} onChange={e => save(e.target.value)} />
         </div>
       )}
       {tool === "compare" && (
@@ -508,7 +508,7 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
           {showAnswer && <p className="rounded-lg bg-muted p-3 text-sm">Confira cada resposta na fonte do assunto, identifique o fundamento legal quando aplicável e registre os pontos de dúvida no caderno de erros. Estas são perguntas de revisão, não questões oficiais com gabarito.</p>}
         </div>
       )}
-      <div className="flex flex-wrap gap-2 border-t pt-4">
+      <div className="study-materials-workspace__footer flex flex-wrap gap-2 border-t pt-4">
         <Button asChild size="sm" variant="outline"><Link to="/dashboard/study-room" search={{ subject, topic }}>Estudar material completo <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
         <Button asChild size="sm" variant="outline"><Link to="/dashboard/question-trainer" search={plannedPractice(subject, topic)}>Praticar questões <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
       </div>
