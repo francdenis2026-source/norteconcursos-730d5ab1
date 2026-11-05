@@ -1,0 +1,67 @@
+/* Norte Concursos — UX foundation 2026.
+   Progressive enhancement: no changes to routes, data or component behavior. */
+:root {
+  --nc-focus-ring: oklch(0.68 0.14 77);
+  --nc-motion-fast: 160ms;
+  --nc-motion-standard: 240ms;
+}
+html { scroll-padding-top: 5.5rem; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+:where(button, a, input, select, textarea, [role="button"]):focus-visible {
+  outline: 3px solid var(--nc-focus-ring);
+  outline-offset: 3px;
+}
+:where(button, a, [role="button"]) {
+  -webkit-tap-highlight-color: transparent;
+}
+:where(button, [role="button"]):not(:disabled) {
+  transition: transform var(--nc-motion-fast) ease, box-shadow var(--nc-motion-standard) ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  :where(button, [role="button"]):not(:disabled):active { transform: scale(.985); }
+}
+:where(input, select, textarea) { font: inherit; }
+:where(img, video, svg) { max-width: 100%; }
+:where([role="dialog"]) { max-height: min(92dvh, 960px); }
+@media (max-width: 640px) {
+  :where([role="dialog"]) { max-width: calc(100vw - 1.25rem); }
+  :where(input, select, textarea) { font-size: max(16px, 1em); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Mobile landing: clear first action and scan-friendly resource cards. */
+.mobile-homepage__primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  width: 100%;
+  min-height: 50px;
+  margin-block: 1rem .6rem;
+  padding: .85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--brass-soft, #d4aa63) 65%, transparent);
+  border-radius: 14px;
+  background: var(--brass-soft, #d4aa63);
+  color: #181b21;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 16%);
+}
+.mobile-homepage__primary svg { width: 19px; height: 19px; flex: none; }
+.mobile-homepage__primary:focus-visible { outline-offset: 4px; }
+@media (hover: hover) {
+  .mobile-homepage__primary:hover { filter: brightness(1.06); }
+}
+@media (max-width: 760px) {
+  .mobile-homepage__cards > article { min-width: 0; }
+  .mobile-homepage__cards > article p { overflow-wrap: anywhere; }
+  .mobile-homepage__wide-link { min-height: 48px; }
+}

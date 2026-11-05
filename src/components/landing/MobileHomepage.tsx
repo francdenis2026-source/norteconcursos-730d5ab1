@@ -40,6 +40,9 @@ export function MobileHomepage() {
               Questões, editais e simulados para transformar seu estudo em preparação real.
             </p>
             <HeaderQuestionStats mobile />
+            <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary">
+              Começar minha preparação <ArrowRight aria-hidden="true" />
+            </Link>
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight />
             </a>
@@ -67,7 +70,7 @@ export function MobileHomepage() {
           <span>O que você encontra</span>
           <h2>Uma rotina que cabe no seu objetivo.</h2>
         </div>
-        <div id="mobile-ferramentas" className="mobile-homepage__cards">
+        <div id="mobile-ferramentas" className="mobile-homepage__cards" aria-label="Recursos da plataforma">
           <article>
             <BookOpenCheck />
             <strong>Treinador de questões</strong>
