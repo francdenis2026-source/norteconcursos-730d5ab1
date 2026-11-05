@@ -60,28 +60,29 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
     };
   }, []);
 
+  const titleId = anchorId === "ranking-destaque-mobile" ? "home-ranking-title-mobile" : "home-ranking-title";
   const icon = (position: number) =>
     position === 1 ? <Gem aria-hidden="true" /> :
     position === 2 || position === 3 ? <Medal aria-hidden="true" /> : <Award aria-hidden="true" />;
   return (
-    <section id={anchorId} className="home-ranking" aria-labelledby="home-ranking-title">
+    <section id={anchorId} className="home-ranking" aria-labelledby={titleId}>
       <div className="home-container">
         <div className="home-ranking__shell">
           <div className="home-ranking__heading">
             <div>
               <p className="home-ranking__eyebrow"><Trophy aria-hidden="true" /> DESTAQUE DA COMUNIDADE</p>
-              <h2 id="home-ranking-title">Quem está no <em>topo da preparação?</em></h2>
+              <h2 id={titleId}>Quem está no <em>topo da preparação?</em></h2>
               <p>Acompanhe os quatro primeiros candidatos do ranking Geral do Norte Concurso.</p>
             </div>
             <span className="home-ranking__status">
               <span className="home-ranking__status-dot" />
-              {updated && !unavailable ? "Atualização a cada 30 minutos" : "Classificação da plataforma"}
+              {updated && !unavailable ? "Atualizado periodicamente" : "Classificação da plataforma"}
             </span>
           </div>
           {candidates && candidates.length > 0 ? (
-            <ol className="home-ranking__grid" aria-label="Quatro candidatos em destaque">
-              {candidates.map((candidate, index) => (
-                <li className="home-ranking__card" data-medal={candidate.rank_position <= 4 ? candidate.rank_position : "other"} key={index}>
+            <ol className="home-ranking__grid" aria-label="Candidatos em destaque">
+              {candidates.map((candidate) => (
+                <li className="home-ranking__card" data-medal={candidate.rank_position <= 4 ? candidate.rank_position : "other"} key={`${candidate.rank_position}-${candidate.display_name}`}>
                   <span className="home-ranking__position">{icon(candidate.rank_position)} {candidate.rank_position}º</span>
                   <span className="home-ranking__avatar" aria-hidden="true">{candidate.display_name.charAt(0).toLocaleUpperCase("pt-BR")}</span>
                   <strong className="home-ranking__name">{candidate.display_name}</strong>
