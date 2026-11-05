@@ -374,7 +374,10 @@ function Index() {
       <div className="home-backdrop" aria-hidden="true">
         <TacticalClockBackdrop />
       </div>
-      <a href="#conteudo" className="home-skip">
+      <a href="#conteudo" className="home-skip home-skip--desktop">
+        Pular para o conteúdo
+      </a>
+      <a href="#conteudo-mobile" className="home-skip home-skip--mobile">
         Pular para o conteúdo
       </a>
       <header className="home-header" data-scrolled={headerScrolled || undefined}>
