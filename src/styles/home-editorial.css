@@ -351,3 +351,14 @@ html body .home.home :is(p) {
 @media (prefers-reduced-motion: reduce) {
   .home .mobile-homepage :is(a, button) { transition: none; }
 }
+
+/* Match the skip link to the visible homepage landmark. */
+.home .home-skip--mobile { display: none; }
+@media (max-width: 1100px) {
+  .home .home-skip--desktop { display: none; }
+  .home .home-skip--mobile:not(:focus-visible) { display: none; }
+  .home .home-skip--mobile:focus-visible { display: block; }
+}
+@media (min-width: 1101px) {
+  .home .home-skip--mobile { display: none; }
+}
