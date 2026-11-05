@@ -36,8 +36,9 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
           typeof r.display_name === "string" && r.display_name.length > 0 &&
           Number.isInteger(r.points) && r.points >= MIN_SHOWCASE_POINTS &&
           Number.isInteger(r.accuracy) && r.accuracy >= 0 && r.accuracy <= 100 &&
-          Number.isInteger(r.questions) && Number.isInteger(r.simulators) &&
-          Number.isInteger(r.stars),
+          Number.isInteger(r.questions) && r.questions >= 0 &&
+          Number.isInteger(r.simulators) && r.simulators >= 0 &&
+          Number.isInteger(r.stars) && r.stars >= 0 && r.stars <= 5,
       ).slice(0, 4);
       setCandidates(valid);
       setUnavailable(false);
