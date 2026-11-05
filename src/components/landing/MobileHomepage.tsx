@@ -23,7 +23,7 @@ import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop"
 
 export function MobileHomepage() {
   return (
-    <div className="mobile-homepage" aria-label="Norte Concursos para celular">
+    <main className="mobile-homepage" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
       <section id="mobile-inicio" className="mobile-homepage__hero">
         <TacticalClockBackdrop />
         <img src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
@@ -177,6 +177,6 @@ export function MobileHomepage() {
           </span>
         </small>
       </footer>
-    </div>
+    </main>
   );
 }
