@@ -43,7 +43,13 @@ export function NewsBanner() {
         <figure className="news-banner__media">
           {reducedMotion || !allowVideo || videoFinished ? (
             <img
-              src="/media/news/guarda-municipal-rb-viatura.webp"
+              src={videoFinished ? "/media/news/guarda-municipal-rb-capa-final.webp" : "/media/news/guarda-municipal-rb-viatura.webp"}
+              onError={(event) => {
+                const image = event.currentTarget;
+                if (!image.src.endsWith("/media/news/guarda-municipal-rb-viatura.webp")) {
+                  image.src = "/media/news/guarda-municipal-rb-viatura.webp";
+                }
+              }}
               alt="Viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
               width={640}
               height={429}
