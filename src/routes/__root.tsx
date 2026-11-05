@@ -92,13 +92,23 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
     if (staleChunk) {
       try {
         const key = "norte-stale-chunk-recovery";
-        const previous = Number(sessionStorage.getItem(key) ?? 0);
         const now = Date.now();
-        // Um único reload resolve chunks antigos após deploy, sem criar loop caso
-        // o erro seja persistente ou a rede esteja indisponível.
-        if (!previous || now - previous > 10_000) {
-          sessionStorage.setItem(key, String(now));
-          window.location.reload();
+        let list: unknown;
+        try {
+          list = JSON.parse(sessionStorage.getItem(key) ?? "[]");
+        } catch {
+          list = [];
+        }
+        // Mesmo controle do script pré-hidratação: até 4 recargas por minuto,
+        // espaçadas em 3 s, para não criar loop com erro persistente.
+        const recent = (Array.isArray(list) ? list : []).filter(
+          (t): t is number => typeof t === "number" && now - t < 60_000,
+        );
+        if (recent.length < 4) {
+          const last = recent[recent.length - 1] ?? 0;
+          recent.push(now);
+          sessionStorage.setItem(key, JSON.stringify(recent));
+          window.setTimeout(() => window.location.reload(), last && now - last < 3_000 ? 3_000 : 0);
         }
       } catch {
         // Alguns modos privados bloqueiam sessionStorage; a tela de erro continua utilizável.
