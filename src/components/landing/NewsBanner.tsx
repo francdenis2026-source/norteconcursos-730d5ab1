@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Play, ShieldCheck, X } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, X } from "lucide-react";
 
-const DISMISS_KEY = "nc-news-banner-dismissed:guarda-municipal-rb-2026-11";
+const DISMISS_KEY = "nc-news-banner-dismissed:pcac-edital-001-2026-11";
 
 export function NewsBanner() {
   const [dismissed, setDismissed] = useState(true);
-  const [reducedMotion, setReducedMotion] = useState(true);
-  const [allowVideo, setAllowVideo] = useState(false);
-  const [videoFinished, setVideoFinished] = useState(false);
 
   useEffect(() => {
     try {
@@ -15,13 +12,6 @@ export function NewsBanner() {
     } catch {
       setDismissed(false);
     }
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(media.matches);
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
-    setAllowVideo(!connection?.saveData && !/(^|-)2g$/.test(connection?.effectiveType ?? ""));
-    const update = () => setReducedMotion(media.matches);
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
   }, []);
 
   if (dismissed) return null;
@@ -36,59 +26,37 @@ export function NewsBanner() {
   };
 
   return (
-    <aside className="news-banner" role="complementary" aria-label="Notícia em destaque">
+    <aside className="news-banner news-banner--spotlight" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
+        <span className="news-banner__pulse" aria-hidden="true">Edital publicado</span>
         <figure className="news-banner__media">
-          {reducedMotion || !allowVideo || videoFinished ? (
-            <img
-              src={videoFinished ? "/media/news/guarda-municipal-rb-capa-final.webp" : "/media/news/guarda-municipal-rb-viatura.webp"}
-              onError={(event) => {
-                const image = event.currentTarget;
-                if (!image.src.endsWith("/media/news/guarda-municipal-rb-viatura.webp")) {
-                  image.src = "/media/news/guarda-municipal-rb-viatura.webp";
-                }
-              }}
-              alt={videoFinished ? "Arte informativa sobre a criação da Guarda Municipal de Rio Branco, Acre" : "Imagem de uma viatura identificada como Guarda Municipal de Rio Branco"}
-              width={640}
-              height={429}
-              loading="lazy"
-              decoding="async"
-            />
-          ) : (
-            <video
-              poster="/media/news/guarda-municipal-rb-viatura.webp"
-              autoPlay
-              muted
-              playsInline
-              onEnded={() => setVideoFinished(true)}
-              onError={() => setVideoFinished(true)}
-              preload="none"
-              aria-label="Vídeo de uma viatura oficial da Guarda Municipal de Rio Branco, identificada com o brasão e o nome da corporação"
-            >
-              <source src="/media/news/guarda-municipal-rb-viatura.mp4" type="video/mp4" />
-            </video>
-          )}
-          {videoFinished && allowVideo && !reducedMotion && (
-            <button type="button" className="news-banner__replay" onClick={() => setVideoFinished(false)} aria-label="Reproduzir vídeo novamente"><Play aria-hidden="true" /> Rever vídeo</button>
-          )}
-          <figcaption>{videoFinished ? "Criação da Guarda Municipal · Rio Branco, AC" : "Guarda Municipal de Rio Branco · Imagem ilustrativa"}</figcaption>
+          <img
+            src="/media/news/pcac-edital-publicado-banner.jpg"
+            alt="Arte oficial do Edital nº 001 SEAD/PCAC com o brasão da Polícia Civil do Acre"
+            width={960}
+            height={600}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Edital nº 001 SEAD/PCAC · Diário Oficial do Acre nº 14.388</figcaption>
         </figure>
         <div className="news-banner__text">
-          <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Radar de concursos · Segurança pública</span>
+          <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Edital publicado · Polícia Civil do Acre</span>
           <strong className="news-banner__headline">
-            Guarda Municipal de Rio Branco: projeto de criação avança
+            Saiu o edital da PC-AC: 139 vagas em 6 cargos
           </strong>
           <span className="news-banner__summary">
-            Comissão instituída para estruturar a corporação. Há previsão de cerca de 80 vagas e concurso em 2027; edital ainda não publicado.
+            Banca IDECAN, salários de R$ 6.342,07 a R$ 19.505,66, inscrições de 11/11 a 14/12/2026.
+            Baixe o guia completo com cargos, provas, cronograma e checklist de estudo.
           </span>
         </div>
         <a
-          className="news-banner__link"
-          href="https://www.riobranco.ac.gov.br/sdti/rio-branco-anuncia-criacao-da-guarda-municipal-com-previsao-de-80-vagas-e-reforco-na-seguranca-preventiva/"
+          className="news-banner__link news-banner__link--gold"
+          href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ver notícia oficial
+          Baixar o edital explicado
           <ArrowUpRight aria-hidden="true" />
         </a>
         <button

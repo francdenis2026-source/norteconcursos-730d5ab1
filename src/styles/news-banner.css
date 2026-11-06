@@ -341,3 +341,76 @@
   .news-banner__link { transition: none; }
   .news-banner__link:hover { transform: none; }
 }
+
+/* Destaque "spotlight": edital publicado — brilho dourado pulsante para chamar atenção. */
+.news-banner--spotlight {
+  position: relative;
+}
+.news-banner--spotlight .news-banner__inner {
+  border-color: color-mix(in srgb, var(--home-gold) 55%, var(--home-line));
+  box-shadow:
+    0 12px 32px rgb(0 0 0 / 7%),
+    0 0 0 1px color-mix(in srgb, var(--home-gold) 30%, transparent);
+  animation: news-banner-glow 3.2s ease-in-out infinite;
+}
+.news-banner--spotlight .news-banner__media {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--home-gold) 55%, transparent);
+}
+.news-banner__pulse {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--home-gold);
+  color: var(--home-navy);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--home-gold) 50%, transparent);
+  animation: news-banner-pulse 1.8s ease-in-out infinite;
+}
+.news-banner__link--gold {
+  border-color: var(--home-gold);
+  background: linear-gradient(135deg, var(--home-gold), color-mix(in srgb, var(--home-gold) 70%, white 10%));
+  color: var(--home-navy);
+  font-weight: 800;
+}
+.news-banner__link--gold:hover {
+  background: var(--home-gold);
+  border-color: var(--home-gold);
+}
+@keyframes news-banner-glow {
+  0%, 100% {
+    box-shadow:
+      0 12px 32px rgb(0 0 0 / 7%),
+      0 0 0 1px color-mix(in srgb, var(--home-gold) 30%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 12px 32px rgb(0 0 0 / 7%),
+      0 0 0 2px color-mix(in srgb, var(--home-gold) 60%, transparent);
+  }
+}
+@keyframes news-banner-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+@media (max-width: 600px) {
+  .news-banner__pulse {
+    top: -8px;
+    left: 12px;
+    font-size: 9px;
+    padding: 2px 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .news-banner--spotlight .news-banner__inner,
+  .news-banner__pulse {
+    animation: none;
+  }
+}
