@@ -325,7 +325,6 @@ html body .home.home :is(p) {
   .home .mobile-homepage__footer-contact a {
     overflow-wrap: anywhere;
   }
-  .home .mobile-homepage__footer-contact a,
   .home .mobile-homepage__footer-nav a,
   .home .mobile-homepage__wide-link,
   .home .mobile-homepage__closing a {
@@ -337,6 +336,8 @@ html body .home.home :is(p) {
     align-items: center;
     gap: 8px;
     max-width: 100%;
+    min-height: 36px;
+    touch-action: manipulation;
   }
   .home .mobile-homepage__footer-contact a svg { flex: 0 0 auto; }
   .home .mobile-homepage :is(a, button, summary):focus-visible {
