@@ -282,39 +282,40 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
         </div>
       </header>
+      {!schedule && (
+        <section
+          className="student-desk__next"
+          data-accent="amber"
+          aria-labelledby="dashboard-next-step"
+        >
+          <div className="student-hub__resume-copy">
+            <span className="student-desk__eyebrow">
+              <Sparkles aria-hidden="true" /> Seu próximo passo
+            </span>
+            <h2 id="dashboard-next-step">{priority.title}</h2>
+            <p>{priority.reason}</p>
+          </div>
+          <Link
+            className="student-home__primary"
+            to={priority.to}
+            {...("params" in priority ? { params: priority.params } : {})}
+            {...("search" in priority ? { search: priority.search } : {})}
+          >
+            {priority.label}
+            <ArrowRight aria-hidden="true" />
+          </Link>
+        </section>
+      )}
       <PcAcreEditalSpotlight />
       <PlatformQuestionCounts compact />
-      <section className="student-desk__access" aria-labelledby="student-access-title">
-        <div className="student-desk__section-heading">
-          <h2 id="student-access-title">Acessos rápidos</h2>
-          <span>Seu estudo a um toque</span>
-        </div>
-        <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
-          {destinations.map(({ to, title, text, tone, icon: Icon }) => (
-            <Link
-              key={to}
-              to={to}
-              data-accent={tone}
-              {...(to === "/dashboard/ranking"
-                ? {
-                    search: { section: "general", page: 1, size: 20, q: "" } as never,
-                    "data-rank": "",
-                  }
-                : {})}
-            >
-              <span className="student-home__tool-icon">
-                <Icon aria-hidden="true" />
-              </span>
-              <div>
-                <strong>{title}</strong>
-                <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
-              </div>
-              <ArrowRight aria-hidden="true" />
-            </Link>
-          ))}
-        </nav>
-      </section>
-      <section className="student-home__metrics" aria-label="Seu resumo de estudos">
+      <div className="student-desk__section-heading">
+        <h2 id="student-metrics-title">Seu progresso</h2>
+        <span>Atualizado com seus registros na plataforma</span>
+      </div>
+      <section
+        className="student-home__metrics"
+        aria-labelledby="student-metrics-title"
+      >
         <Metric
           icon={BrainCircuit}
           label="Questões resolvidas"
@@ -360,6 +361,36 @@ function StudentHome({ user }: { user: UserProfile }) {
           detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
         />
       </section>
+      <section className="student-desk__access" aria-labelledby="student-access-title">
+        <div className="student-desk__section-heading">
+          <h2 id="student-access-title">Acessos rápidos</h2>
+          <span>Seu estudo a um toque</span>
+        </div>
+        <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
+          {destinations.map(({ to, title, text, tone, icon: Icon }) => (
+            <Link
+              key={to}
+              to={to}
+              data-accent={tone}
+              {...(to === "/dashboard/ranking"
+                ? {
+                    search: { section: "general", page: 1, size: 20, q: "" } as never,
+                    "data-rank": "",
+                  }
+                : {})}
+            >
+              <span className="student-home__tool-icon">
+                <Icon aria-hidden="true" />
+              </span>
+              <div>
+                <strong>{title}</strong>
+                <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
+              </div>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      </section>
       <StudentMetricPanel
         metric={metric}
         userId={user.id}
@@ -385,31 +416,6 @@ function StudentHome({ user }: { user: UserProfile }) {
         onClose={() => setMetric(null)}
         returnFocus={metricTrigger.current}
       />
-
-      {!schedule && (
-        <section
-          className="student-desk__next"
-          data-accent="amber"
-          aria-labelledby="dashboard-next-step"
-        >
-          <div className="student-hub__resume-copy">
-            <span className="student-desk__eyebrow">
-              <Sparkles aria-hidden="true" /> Seu próximo passo
-            </span>
-            <h2 id="dashboard-next-step">{priority.title}</h2>
-            <p>{priority.reason}</p>
-          </div>
-          <Link
-            className="student-home__primary"
-            to={priority.to}
-            {...("params" in priority ? { params: priority.params } : {})}
-            {...("search" in priority ? { search: priority.search } : {})}
-          >
-            {priority.label}
-            <ArrowRight aria-hidden="true" />
-          </Link>
-        </section>
-      )}
       <div
         className="student-hub__workspace"
         role="region"
