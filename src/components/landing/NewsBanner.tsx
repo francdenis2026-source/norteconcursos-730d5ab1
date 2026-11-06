@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, ShieldCheck, X } from "lucide-react";
+import { ArrowUpRight, Banknote, CalendarClock, ShieldCheck, Users, X } from "lucide-react";
 
 const DISMISS_KEY = "nc-news-banner-dismissed:pcac-edital-001-2026-11";
 
@@ -28,7 +28,6 @@ export function NewsBanner() {
   return (
     <aside className="news-banner news-banner--spotlight" role="complementary" aria-label="Notícia em destaque">
       <div className="home-container news-banner__inner">
-        <span className="news-banner__pulse" aria-hidden="true">Edital publicado</span>
         <figure className="news-banner__media">
           <img
             src="/media/news/pcac-edital-publicado-banner.jpg"
@@ -38,17 +37,31 @@ export function NewsBanner() {
             loading="lazy"
             decoding="async"
           />
+          <span className="news-banner__ribbon" aria-hidden="true">Novo</span>
           <figcaption>Edital nº 001 SEAD/PCAC · Diário Oficial do Acre nº 14.388</figcaption>
         </figure>
         <div className="news-banner__text">
           <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Edital publicado · Polícia Civil do Acre</span>
           <strong className="news-banner__headline">
-            Saiu o edital da PC-AC: 139 vagas em 6 cargos
+            Saiu o edital da PC-AC: <em>139 vagas</em> em 6 cargos
           </strong>
           <span className="news-banner__summary">
-            Banca IDECAN, salários de R$ 6.342,07 a R$ 19.505,66, inscrições de 11/11 a 14/12/2026.
             Baixe o guia completo com cargos, provas, cronograma e checklist de estudo.
           </span>
+          <ul className="news-banner__stats" aria-label="Resumo do edital">
+            <li>
+              <Users aria-hidden="true" />
+              139 vagas · 6 cargos
+            </li>
+            <li>
+              <Banknote aria-hidden="true" />
+              R$ 6.342,07 a R$ 19.505,66
+            </li>
+            <li>
+              <CalendarClock aria-hidden="true" />
+              Inscrições até 14/12/2026
+            </li>
+          </ul>
         </div>
         <a
           className="news-banner__link news-banner__link--gold"
