@@ -11826,53 +11826,6 @@ html.dark .study-note--purple { background: rgb(91 58 139 / .28); }
 .app-sheet .app-sidebar__search { flex-shrink: 0; }
 
 
-/* Public-safety artwork: reserved text area, separate image strip on small screens. */
-.page-hero[data-hero="public-security"] {
-  --hero-image: url('/media/hero/meu-concurso-seguranca-publica.webp');
-  --hero-position: right center;
-  min-height: 320px;
-  background-color: #252A32;
-}
-.page-hero[data-hero="public-security"]::before {
-  background: linear-gradient(90deg, rgb(37 42 50 / .90), rgb(37 42 50 / .72) 48%, rgb(37 42 50 / .12) 74%, rgb(37 42 50 / .06));
-}
-.page-hero[data-hero="public-security"]::after { display: none; }
-.page-hero[data-hero="public-security"] .page-hero__row {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 20px;
-}
-.page-hero[data-hero="public-security"] .page-hero__text,
-.page-hero[data-hero="public-security"] .page-hero__actions { max-width: 55%; }
-.page-hero[data-hero="public-security"] h1 { overflow-wrap: anywhere; }
-.page-hero[data-hero="public-security"] .page-hero__desc { color: #dce5f0; }
-.page-hero[data-hero="public-security"] .page-hero__actions :is(a, button) { min-height: 44px; white-space: normal; }
-@media (max-width: 1023px) {
-  .page-hero[data-hero="public-security"] {
-    min-height: 0;
-    padding-top: 210px !important;
-    background-position: right top;
-    background-size: auto 190px;
-  }
-  .page-hero[data-hero="public-security"]::before {
-    background: linear-gradient(180deg, rgb(8 24 39 / .06), rgb(8 24 39 / .10) 130px, #081827 190px);
-  }
-  .page-hero[data-hero="public-security"] .page-hero__text,
-  .page-hero[data-hero="public-security"] .page-hero__actions { max-width: 100%; }
-}
-@media (max-width: 640px) {
-  .page-hero[data-hero="public-security"] { padding-top: 172px !important; background-size: auto 150px; }
-  .page-hero[data-hero="public-security"]::before {
-    background: linear-gradient(180deg, rgb(8 24 39 / .04), rgb(8 24 39 / .10) 100px, #081827 150px);
-  }
-  .page-hero[data-hero="public-security"] .page-hero__actions { width: 100%; }
-}
-@media (forced-colors: active) {
-  .page-hero[data-hero="public-security"] { background-image: none; padding-top: 24px !important; }
-  .page-hero[data-hero="public-security"]::before { display: none; }
-}
-
 /* Student home: actionable summaries, shared records and quiet visual hierarchy. */
 /* Student dashboard: compact workspace with one clear primary action. */
 .student-home { --hub-accent: #a96f17; --hub-soft: #f7edcf; --hub-line: #e1e7ec; display:grid; gap:22px; min-width:0; color:var(--foreground); }
@@ -14083,10 +14036,13 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 }
 
 /* Book-cover variant (portrait edital cover): the landscape box above wastes most of its
-   height on a portrait image, so give it its own narrow, portrait-ratio art column. */
+   height on a portrait image, so give it its own narrow, portrait-ratio art column. A left
+   accent and slightly richer border mark it as a real highlight, not a plain list row. */
 .pcpr-spot.pcpr-spot--notice.pcpr-spot--book {
   grid-template-columns: 84px minmax(0, 1fr);
   gap: 10px 14px;
+  border-left: 3px solid var(--primary);
+  background: linear-gradient(100deg, color-mix(in srgb, var(--primary) 6%, transparent), transparent 55%), var(--card);
 }
 .pcpr-spot--notice.pcpr-spot--book .pcpr-spot__art {
   aspect-ratio: 180 / 254;
