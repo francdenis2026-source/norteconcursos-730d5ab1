@@ -42,6 +42,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
+import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
 import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -281,6 +282,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
         </div>
       </header>
+      <PcAcreEditalSpotlight />
       <PlatformQuestionCounts compact />
       <section className="student-desk__access" aria-labelledby="student-access-title">
         <div className="student-desk__section-heading">
