@@ -1,11 +1,48 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, ExternalLink, Target } from "lucide-react";
+import { ArrowRight, BookOpen, Download, ExternalLink, FileText, Target } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import outlook from "@/data/pcAcreStudyOutlook.json";
 import { pcAcrePriorities, type PcAcreRole } from "@/lib/pcAcreOutlook";
 import { cn } from "@/lib/utils";
 import { Hint } from "@/components/ui/hint";
+
+function PcAcreEditalResource() {
+  return (
+    <Card className="overflow-hidden border-amber-400/40 bg-gradient-to-br from-amber-500/10 via-card to-card">
+      <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
+        <img
+          src="/media/editais/edital-pcac-001-2026-capa.jpg"
+          alt="Capa do guia Edital PC-AC 001/2026 explicado"
+          width={180}
+          height={254}
+          loading="lazy"
+          decoding="async"
+          className="mx-auto w-28 shrink-0 rounded-lg border shadow-md sm:mx-0 sm:w-32"
+        />
+        <div className="flex-1 space-y-2">
+          <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-amber-600 dark:text-amber-400">
+            <FileText className="h-3.5 w-3.5" />
+            Edital nº 001 SEAD/PCAC publicado em 05/11/2026
+          </p>
+          <CardTitle className="text-lg">Edital PC-AC explicado, passo a passo</CardTitle>
+          <CardDescription>
+            139 vagas em 6 cargos, banca IDECAN. Guia completo com cargos, salários, inscrições,
+            isenção, provas, cronograma e checklist de conteúdo programático por cargo.
+          </CardDescription>
+          <div className="flex flex-wrap gap-2 pt-1">
+            <Button asChild>
+              <a href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-4 w-4" />
+                Baixar o guia em PDF
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}
 
 export function PcAcreStudyOutlook({
   role,
@@ -18,6 +55,7 @@ export function PcAcreStudyOutlook({
   const years = profile.exams.map((exam) => exam.year);
   return (
     <section id="pc-acre" className="scroll-mt-24 space-y-4" aria-labelledby="pc-acre-title">
+      <PcAcreEditalResource />
       <Card className="border-primary/40 bg-gradient-to-br from-primary/5 via-card to-card">
         <CardHeader>
           <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary">
@@ -34,8 +72,9 @@ export function PcAcreStudyOutlook({
         </CardHeader>
         <CardContent className="space-y-5">
           <p className="rounded-xl border border-sky-400/40 bg-sky-500/10 p-3 text-sm">
-            São prioridades de estudo, não garantia do que cairá. O novo edital e a banca da PC-AC
-            não foram confirmados neste levantamento.
+            São prioridades de estudo com base em provas anteriores de outras Polícias Civis, não
+            garantia do que cairá. O edital oficial da PC-AC já foi publicado (banca IDECAN) — veja
+            o guia completo acima para cargos, provas e conteúdo programático confirmados.
           </p>
           <div className="flex flex-wrap gap-2" role="group" aria-label="Cargo da PC do Acre">
             {outlook.profiles.map((item) => (
