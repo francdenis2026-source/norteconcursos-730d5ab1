@@ -59,6 +59,7 @@ import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
+import { Route as DashboardPcAcreEditalRouteImport } from './routes/dashboard/pc-acre-edital'
 import { Route as DashboardPerfilBancasRouteImport } from './routes/dashboard/perfil-bancas'
 import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
@@ -337,6 +338,11 @@ const DashboardNotebooksRoute = DashboardNotebooksRouteImport.update({
   path: '/notebooks',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardPcAcreEditalRoute = DashboardPcAcreEditalRouteImport.update({
+  id: '/pc-acre-edital',
+  path: '/pc-acre-edital',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardPerfilBancasRoute = DashboardPerfilBancasRouteImport.update({
   id: '/perfil-bancas',
   path: '/perfil-bancas',
@@ -506,6 +512,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/pc-acre-edital': typeof DashboardPcAcreEditalRoute
   '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -578,6 +585,7 @@ export interface FileRoutesByTo {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/pc-acre-edital': typeof DashboardPcAcreEditalRoute
   '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -654,6 +662,7 @@ export interface FileRoutesById {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/pc-acre-edital': typeof DashboardPcAcreEditalRoute
   '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
@@ -731,6 +740,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/pc-acre-edital'
     | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
@@ -803,6 +813,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/pc-acre-edital'
     | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
@@ -878,6 +889,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/pc-acre-edital'
     | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
@@ -1274,6 +1286,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardNotebooksRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/pc-acre-edital': {
+      id: '/dashboard/pc-acre-edital'
+      path: '/pc-acre-edital'
+      fullPath: '/dashboard/pc-acre-edital'
+      preLoaderRoute: typeof DashboardPcAcreEditalRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/perfil-bancas': {
       id: '/dashboard/perfil-bancas'
       path: '/perfil-bancas'
@@ -1501,6 +1520,7 @@ interface DashboardRouteChildren {
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
+  DashboardPcAcreEditalRoute: typeof DashboardPcAcreEditalRoute
   DashboardPerfilBancasRoute: typeof DashboardPerfilBancasRoute
   DashboardPerformanceRoute: typeof DashboardPerformanceRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
@@ -1558,6 +1578,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,
+  DashboardPcAcreEditalRoute: DashboardPcAcreEditalRoute,
   DashboardPerfilBancasRoute: DashboardPerfilBancasRoute,
   DashboardPerformanceRoute: DashboardPerformanceRoute,
   DashboardProfileRoute: DashboardProfileRoute,
