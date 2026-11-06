@@ -14052,6 +14052,11 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 @media (max-width: 640px) {
   .pcpr-spot.pcpr-spot--notice.pcpr-spot--book { grid-template-columns: 56px minmax(0, 1fr); gap: 10px; }
   .pcpr-spot--notice.pcpr-spot--book .pcpr-spot__art { max-width: 56px; grid-row: 1 / 3; }
+  /* The generic .pcpr-spot--notice mobile rule above pins __summary to grid-column: 1 for its
+     single-column stacked layout; this variant keeps two columns on mobile, so put it back in
+     column 2 next to the art, or it squeezes into the 56px art column and wraps one word per
+     line. */
+  .pcpr-spot--notice.pcpr-spot--book .pcpr-spot__summary { grid-column: 2; }
 }
 
 /* Perfil do ranking: cabeçalho com a arte do Norte, identidade e posição sobre fundo escuro. */
