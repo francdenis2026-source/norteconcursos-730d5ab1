@@ -6,7 +6,7 @@ import { ArrowRight, CheckSquare } from "lucide-react";
 export function PcAcreEditalSpotlight() {
   return (
     <section
-      className="pcpr-spot pcpr-spot--notice no-print"
+      className="pcpr-spot pcpr-spot--notice pcpr-spot--book no-print"
       aria-label="Edital verticalizado da Polícia Civil do Acre"
     >
       <img
