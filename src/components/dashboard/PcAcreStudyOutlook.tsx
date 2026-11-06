@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Download, ExternalLink, FileText, Target } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  CheckSquare,
+  Download,
+  ExternalLink,
+  FileText,
+  Target,
+} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import outlook from "@/data/pcAcreStudyOutlook.json";
@@ -32,7 +40,17 @@ function PcAcreEditalResource() {
           </CardDescription>
           <div className="flex flex-wrap gap-2 pt-1">
             <Button asChild>
-              <a href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf" target="_blank" rel="noopener noreferrer">
+              <Link to="/dashboard/pc-acre-edital">
+                <CheckSquare className="mr-2 h-4 w-4" />
+                Abrir edital verticalizado
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a
+                href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Baixar o guia em PDF
               </a>
@@ -62,7 +80,12 @@ export function PcAcreStudyOutlook({
             <Target className="h-4 w-4" />
             Seu próximo passo
           </p>
-          <CardTitle id="pc-acre-title" role="heading" aria-level={2} className="text-xl sm:text-2xl">
+          <CardTitle
+            id="pc-acre-title"
+            role="heading"
+            aria-level={2}
+            className="text-xl sm:text-2xl"
+          >
             PC do Acre: o que priorizar
           </CardTitle>
           <CardDescription>
