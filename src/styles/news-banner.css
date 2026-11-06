@@ -38,15 +38,11 @@
   background: var(--home-tint);
 }
 
-.news-banner__media figcaption {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 2px 5px;
-  background: linear-gradient(0deg, rgb(10 16 24 / 0.78), transparent);
-  color: #f3f5f8;
-  font-size: 7px;
-  line-height: 1.25;
-  letter-spacing: 0.01em;
+.news-banner__source {
+  display: block;
+  margin-top: 2px;
+  color: var(--home-muted);
+  font-size: 11px;
 }
 
 .news-banner__text {
@@ -197,7 +193,6 @@
   aspect-ratio: 16 / 10;
   border-radius: 14px;
 }
-.news-banner__media figcaption { font-size: 9px; padding: 7px; }
 .news-banner__text {
   display: flex;
   flex-direction: column;
