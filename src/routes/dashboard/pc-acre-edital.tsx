@@ -1,12 +1,15 @@
 import * as React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  BookOpen,
   BookOpenCheck,
+  BrainCircuit,
   CheckCircle2,
   Download,
-  GraduationCap,
   Scale,
   ShieldCheck,
+  Users,
+  Wallet,
 } from "lucide-react";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -33,6 +36,9 @@ import {
   writePcAcVerticalProgress,
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
+import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
+
+const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 
 export const Route = createFileRoute("/dashboard/pc-acre-edital")({
   component: PcAcreEditalVerticalizadoPage,
@@ -78,6 +84,43 @@ function StatusButton({
   );
 }
 
+/** Liga o assunto ao material que já existe na plataforma (teoria e questões por disciplina)
+ * ou, quando o assunto é só legislação institucional, aponta para a seção abaixo na própria
+ * página. Assuntos sem correspondência confiável não recebem link. */
+function DisciplineStudyLinks({ disciplineId }: { disciplineId: string }) {
+  const link = pcAcDisciplineLink(disciplineId);
+  if (!link) return null;
+  const linkClass =
+    "inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
+  if (link.anchor)
+    return (
+      <a href={`#${link.anchor}`} className={`mt-2 ${linkClass}`}>
+        <Scale className="h-3 w-3" aria-hidden="true" />
+        Ver leis institucionais abaixo
+      </a>
+    );
+  return (
+    <div className="mt-2 flex flex-wrap gap-1.5">
+      {link.subjects!.map((subject) => (
+        <React.Fragment key={subject}>
+          <Link
+            to="/dashboard/library"
+            search={{ collection: "subjects", discipline: subject }}
+            className={linkClass}
+          >
+            <BookOpen className="h-3 w-3" aria-hidden="true" />
+            Teoria{link.subjects!.length > 1 ? `: ${subject}` : ""}
+          </Link>
+          <Link to="/dashboard/question-trainer" search={{ subject }} className={linkClass}>
+            <BrainCircuit className="h-3 w-3" aria-hidden="true" />
+            Questões{link.subjects!.length > 1 ? `: ${subject}` : ""}
+          </Link>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
+
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
@@ -116,7 +159,7 @@ function PcAcreEditalVerticalizadoPage() {
   return (
     <div className="space-y-5 pb-10">
       <PageHero
-        image="public-security"
+        image="careers-team"
         kicker="ÁREA PROFISSIONAL · PC DO ACRE"
         icon={ShieldCheck}
         title="Edital verticalizado — PC-AC 001/2026"
@@ -129,29 +172,52 @@ function PcAcreEditalVerticalizadoPage() {
         }
       >
         <div className="page-hero__stats">
-          <HeroStat icon={GraduationCap} label="Cargo" value={cargo.label} />
+          <HeroStat icon={Users} label="Vagas" value={cargo.vagas} />
           <HeroStat icon={BookOpenCheck} label="Disciplinas" value={counts.total} />
           <HeroStat icon={CheckCircle2} label="Estudado" value={`${percent}%`} />
         </div>
       </PageHero>
 
       <Card>
+        <CardHeader className="pb-0">
+          <CardTitle className="text-sm font-semibold text-muted-foreground">
+            Escolha o cargo
+          </CardTitle>
+        </CardHeader>
         <CardContent
-          className="flex flex-wrap items-center gap-2 pt-5"
+          className="grid grid-cols-2 gap-2 pt-4 sm:grid-cols-3 lg:grid-cols-6"
           role="group"
           aria-label="Escolha o cargo"
         >
-          {pcAcVerticalCargos.map((item) => (
-            <Button
-              key={item.id}
-              size="sm"
-              variant={item.id === cargo.id ? "default" : "outline"}
-              aria-pressed={item.id === cargo.id}
-              onClick={() => void navigate({ search: { cargo: item.id as PcAcVerticalCargoId } })}
-            >
-              {item.label}
-            </Button>
-          ))}
+          {pcAcVerticalCargos.map((item) => {
+            const active = item.id === cargo.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                aria-pressed={active}
+                onClick={() => void navigate({ search: { cargo: item.id as PcAcVerticalCargoId } })}
+                className={
+                  "flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
+                  (active
+                    ? "border-primary bg-primary/10 text-foreground"
+                    : "border-border bg-background/50 text-foreground hover:bg-muted/60")
+                }
+              >
+                <span className="text-xs font-bold leading-snug">{item.label}</span>
+                <span className="flex items-center gap-2 text-[11px] text-muted-foreground">
+                  <span className="inline-flex items-center gap-0.5">
+                    <Users className="h-3 w-3" aria-hidden="true" />
+                    {item.vagas}
+                  </span>
+                  <span className="inline-flex items-center gap-0.5">
+                    <Wallet className="h-3 w-3" aria-hidden="true" />
+                    {item.salario}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
         </CardContent>
       </Card>
 
@@ -185,11 +251,12 @@ function PcAcreEditalVerticalizadoPage() {
                         key={discipline.id}
                         className="flex flex-wrap items-start justify-between gap-2 rounded-lg border bg-background/60 p-3"
                       >
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-sm font-medium">{discipline.name}</p>
                           {discipline.note && (
                             <p className="mt-1 text-xs text-muted-foreground">{discipline.note}</p>
                           )}
+                          <DisciplineStudyLinks disciplineId={discipline.id} />
                         </div>
                         <StatusButton
                           status={progress[pcAcVerticalItemId(block.title, discipline.id)]}
@@ -205,7 +272,7 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="scroll-mt-20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-base">
             <Scale className="h-5 w-5 text-primary" />

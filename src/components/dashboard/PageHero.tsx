@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 export type HeroImage =
   | "dashboard"
   | "journey"
-  | "public-security"
   | "study-desk"
   | "trainer"
   | "exam-hall"
