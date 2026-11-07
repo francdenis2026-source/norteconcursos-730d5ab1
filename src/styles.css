@@ -14076,11 +14076,12 @@ button.student-home__metric { position: relative; padding-right: 28px; }
    its own width (84px) inside the card's padding, which already made it the tallest thing in
    the row. Growing that width further would have grown the bar too. Instead, the bar height is
    pinned to what it already was (min-height, measured from this same layout before this
-   change), the cover frame is taken out of flow (position: absolute, on a plain div rather than
-   the <img> itself — an <img>'s own intrinsic pixel size fights the percentage/offset-based
-   sizing below) so it no longer drives the bar's height, and it bleeds past the card's
-   top/bottom/left padding to fill the full pinned height — same bar height, a visibly larger
-   cover. overflow: hidden clips the bleed to the card's own rounded corners. */
+   change), and the cover frame is taken out of flow (position: absolute, on a plain div rather
+   than the <img> itself — an <img>'s own intrinsic pixel size fights the percentage/offset-based
+   sizing below) so it no longer drives the bar's height. The frame keeps an 8px margin on every
+   side instead of bleeding to the card's edges, and clips its own corners (border-radius +
+   overflow: hidden on the frame) so the cover reads as its own rounded element rather than a
+   flush panel glued to the card border. */
 .pcpr-spot.pcpr-spot--pcac.pcpr-spot--book {
   position: relative;
   grid-template-columns: 108px minmax(0, 1fr);
@@ -14089,15 +14090,20 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 }
 .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art-frame {
   position: absolute;
-  top: -12px;
-  left: -16px;
+  /* Offsets are relative to the card's padding edge, which sits right past its 1px border —
+     padding itself is inside that edge, so it does not shift it. 7px (8px margin minus that
+     1px border) lands the frame 8px in from the card's actual top/left border on every side. */
+  top: 7px;
+  left: 7px;
   /* Fixed px, not % or auto: a non-replaced absolutely positioned box with "height: auto" sizes
      from its content, which here is an image at "height: 100%" of this very box — circular, and
-     different engines resolve it differently. 168px = the card's fixed 144px height above plus
-     the 24px (12px top + 12px bottom) this bleeds past the card's padding. */
-  height: 168px;
+     different engines resolve it differently. 128px = the card's fixed 144px height minus an 8px
+     margin top and bottom. */
+  height: 128px;
   width: auto;
   aspect-ratio: 180 / 254;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art {
   grid-row: auto;
@@ -14106,11 +14112,11 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   max-width: none;
   aspect-ratio: auto;
   object-fit: cover;
-  border-radius: 0;
 }
-/* Below 640px the bar is already tall (buttons stack full-width), so the bleed trick would
-   blow the cover up far past the text column. Fall back to the original, simpler in-flow
-   sizing there, just a little bigger than before (56px → 72px). */
+/* Below 640px the bar is already tall (buttons stack full-width), so the frame stays in normal
+   flow, sized from its own width (56px → 72px) rather than from the bar's height. It already
+   gets its margin for free from the card padding and grid gap, so it only needs the same rounded
+   corners as the desktop frame. */
 @media (max-width: 640px) {
   .pcpr-spot.pcpr-spot--pcac.pcpr-spot--book { grid-template-columns: 72px minmax(0, 1fr); height: auto; }
   .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art-frame {
@@ -14120,6 +14126,8 @@ button.student-home__metric { position: relative; padding-right: 28px; }
     max-width: 72px;
     height: auto;
     aspect-ratio: 180 / 254;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art { aspect-ratio: auto; height: 100%; }
 }
