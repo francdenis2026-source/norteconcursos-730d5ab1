@@ -245,3 +245,71 @@
     font-size: clamp(22px, 5vw, 26px);
   }
 }
+
+/* Edital catalog card contrast in both theme modes. */
+.app-shell[data-area="student"] .edital-edition {
+  border: 1px solid #5e7685;
+  background: #1d2d39;
+  color: #f5f8f9;
+}
+.app-shell[data-area="student"] .edital-edition:hover {
+  border-color: #8bded2;
+  background: #243b47;
+}
+.app-shell[data-area="student"] .edital-edition-meta span,
+.app-shell[data-area="student"] .edital-edition > p,
+.app-shell[data-area="student"] .edital-edition-foot > span:first-child {
+  color: #d0dce0;
+}
+.app-shell[data-area="student"] .edital-edition h3 { color: #ffffff; }
+.app-shell[data-area="student"] .edital-edition-foot { border-top-color: #526b79; }
+.app-shell[data-area="student"] .edital-edition-foot > span:last-child { color: #8ce0d2; }
+
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition,
+html.light .app-shell[data-area="student"] .edital-edition,
+body.light .app-shell[data-area="student"] .edital-edition,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition {
+  border-color: #c4d2dc;
+  background: #ffffff;
+  color: #182938;
+  box-shadow: 0 6px 16px rgb(28 52 66 / 10%);
+}
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition:hover,
+html.light .app-shell[data-area="student"] .edital-edition:hover,
+body.light .app-shell[data-area="student"] .edital-edition:hover,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition:hover {
+  border-color: #2b9b91;
+  background: #f5fbfa;
+}
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition-meta span,
+html.light .app-shell[data-area="student"] .edital-edition-meta span,
+body.light .app-shell[data-area="student"] .edital-edition-meta span,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition-meta span,
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition > p,
+html.light .app-shell[data-area="student"] .edital-edition > p,
+body.light .app-shell[data-area="student"] .edital-edition > p,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition > p,
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot > span:first-child,
+html.light .app-shell[data-area="student"] .edital-edition-foot > span:first-child,
+body.light .app-shell[data-area="student"] .edital-edition-foot > span:first-child,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot > span:first-child {
+  color: #405565;
+}
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition h3,
+html.light .app-shell[data-area="student"] .edital-edition h3,
+body.light .app-shell[data-area="student"] .edital-edition h3,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition h3 {
+  color: #172b3b;
+}
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot,
+html.light .app-shell[data-area="student"] .edital-edition-foot,
+body.light .app-shell[data-area="student"] .edital-edition-foot,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot {
+  border-top-color: #d2dee5;
+}
+:root[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot > span:last-child,
+html.light .app-shell[data-area="student"] .edital-edition-foot > span:last-child,
+body.light .app-shell[data-area="student"] .edital-edition-foot > span:last-child,
+[data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot > span:last-child {
+  color: #14796f;
+}
