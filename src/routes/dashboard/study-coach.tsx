@@ -418,7 +418,7 @@ function TrendIcon({ t }: { t: "up" | "down" | "flat" | null }) {
 
 const COACH_STAT_TONE = {
   amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
-  violet: "bg-violet-500/10 text-violet-600 dark:text-violet-400",
+  violet: "bg-teal-500/10 text-teal-700 dark:text-teal-300",
   sky: "bg-sky-500/10 text-sky-600 dark:text-sky-400",
   emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
   teal: "bg-teal-500/10 text-teal-600 dark:text-teal-400",
@@ -817,7 +817,7 @@ function StudyCoachPage() {
                 />
                 <CoachStat
                   icon={Gauge}
-                  tone="violet"
+                  tone="teal"
                   label="Ritmo necessário"
                   value={`${plan.neededHoursPerWeek} h/sem`}
                 />
