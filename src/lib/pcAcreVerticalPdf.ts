@@ -18,6 +18,7 @@ const STATUS_LABEL: Record<PcAcVerticalStatus, string> = {
 };
 
 const LOGO_URL = "/media/brand/norte-identity/emblema.png";
+const DEV_SIGNATURE = "Desenvolvido por Franc Denis · Feijó, Acre, Brasil";
 
 /** Paleta da marca (mesmas cores do emblema — dourado e azul-marinho quase preto), em RGB 0-255. */
 const NAVY: [number, number, number] = [18, 30, 39];
@@ -38,7 +39,7 @@ const PAGE_W = 595.28; // A4 em pt
 const PAGE_H = 841.89;
 const MARGIN_X = 48;
 const CONTENT_W = PAGE_W - MARGIN_X * 2;
-const FOOTER_Y = PAGE_H - 34;
+const FOOTER_Y = PAGE_H - 44;
 const TOP_SAFE = 56;
 
 /** Busca o emblema do site (caveira com pistola) e devolve como data URL, para embutir no PDF.
@@ -95,17 +96,22 @@ function drawRunningHeader(doc: jsPDF, logo: string | null, cargoLabel: string) 
   doc.line(MARGIN_X, 52, PAGE_W - MARGIN_X, 52);
 }
 
-/** Rodapé com selo da marca, site e paginação, separado por um filete dourado. */
+/** Rodapé com selo da marca, nome da plataforma, assinatura do desenvolvedor e paginação,
+ * separado por um filete dourado — repetido em toda página de conteúdo. */
 function drawFooter(doc: jsPDF, logo: string | null, page: number, pageCount: number) {
   doc.setDrawColor(...LINE);
   doc.setLineWidth(0.6);
   doc.line(MARGIN_X, FOOTER_Y - 10, PAGE_W - MARGIN_X, FOOTER_Y - 10);
   if (logo) doc.addImage(logo, "PNG", MARGIN_X, FOOTER_Y - 7, 13, 13);
-  doc.setFont("helvetica", "normal");
+  const textX = logo ? MARGIN_X + 18 : MARGIN_X;
+  doc.setFont("helvetica", "bold");
   doc.setFontSize(8);
-  doc.setTextColor(...MUTED);
-  doc.text("Norte Concursos · norteconcursos.xyz", logo ? MARGIN_X + 18 : MARGIN_X, FOOTER_Y + 2);
+  doc.setTextColor(...NAVY);
+  doc.text("Norte Concursos · norteconcursos.xyz", textX, FOOTER_Y + 2);
   doc.text(`página ${page} de ${pageCount}`, PAGE_W - MARGIN_X, FOOTER_Y + 2, { align: "right" });
+  doc.setFontSize(7);
+  doc.setTextColor(...MUTED);
+  doc.text(DEV_SIGNATURE, textX, FOOTER_Y + 12);
 }
 
 /** Faixa colorida de título de bloco (ex.: "Conhecimentos básicos"), cheia a largura da página. */
@@ -249,11 +255,13 @@ export async function generatePcAcVerticalPdf(
   );
   doc.text(legislacaoNote, MARGIN_X, cursor.y);
 
-  const pageCount = doc.getNumberOfPages();
-  for (let i = 2; i <= pageCount; i++) {
+  const contentPageCount = doc.getNumberOfPages() - 1; // exclui a capa
+  for (let i = 2; i <= doc.getNumberOfPages(); i++) {
     doc.setPage(i);
-    drawFooter(doc, logo, i - 1, pageCount - 1);
+    drawFooter(doc, logo, i - 1, contentPageCount);
   }
+
+  drawBackCover(doc, logo);
 
   doc.save(`edital-verticalizado-pc-ac-${cargo.id}.pdf`);
 }
@@ -364,8 +372,42 @@ function drawCoverPage(
   doc.text(
     "Marque o que já estudou na área do aluno — o progresso deste PDF reflete o que estava salvo no seu navegador no momento da exportação.",
     MARGIN_X,
-    PAGE_H - 56,
+    PAGE_H - 62,
     { maxWidth: CONTENT_W },
   );
-  doc.text("norteconcursos.xyz", PAGE_W / 2, PAGE_H - 30, { align: "center" });
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(9);
+  doc.setTextColor(...NAVY);
+  doc.text("Norte Concursos · norteconcursos.xyz", PAGE_W / 2, PAGE_H - 34, { align: "center" });
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(7.5);
+  doc.setTextColor(...MUTED);
+  doc.text(DEV_SIGNATURE, PAGE_W / 2, PAGE_H - 23, { align: "center" });
+}
+
+/** Contracapa: fecha o documento reforçando a marca, o site e a assinatura do desenvolvedor. */
+function drawBackCover(doc: jsPDF, logo: string | null) {
+  doc.addPage();
+  doc.setFillColor(...NAVY);
+  doc.rect(0, 0, PAGE_W, PAGE_H, "F");
+  if (logo) {
+    const size = 90;
+    doc.setGState(new doc.GState({ opacity: 0.9 }));
+    doc.addImage(logo, "PNG", (PAGE_W - size) / 2, PAGE_H / 2 - 150, size, size);
+    doc.setGState(new doc.GState({ opacity: 1 }));
+  }
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(17);
+  doc.setTextColor(255, 255, 255);
+  doc.text("NORTE CONCURSOS", PAGE_W / 2, PAGE_H / 2 - 30, { align: "center" });
+  doc.setDrawColor(...GOLD);
+  doc.setLineWidth(1);
+  doc.line(PAGE_W / 2 - 40, PAGE_H / 2 - 18, PAGE_W / 2 + 40, PAGE_H / 2 - 18);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.setTextColor(...GOLD);
+  doc.text("norteconcursos.xyz", PAGE_W / 2, PAGE_H / 2 + 4, { align: "center" });
+  doc.setFontSize(9.5);
+  doc.setTextColor(210, 210, 216);
+  doc.text(DEV_SIGNATURE, PAGE_W / 2, PAGE_H / 2 + 24, { align: "center" });
 }
