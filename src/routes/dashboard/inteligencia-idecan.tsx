@@ -147,10 +147,11 @@ function SubjectBars({
   return (
     <div className="space-y-2">
       {subjects.slice(0, 12).map((s) => (
-        <div key={s.subject} className="flex items-center gap-3 text-sm">
-          <span className="w-40 shrink-0 truncate sm:w-52" title={s.subject}>
+        <div key={s.subject} className="rounded-lg border border-border/60 p-2.5 text-sm">
+          <div className="flex items-center gap-3">
+          <Link to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject }} className="w-40 shrink-0 truncate font-semibold hover:text-primary sm:w-52" title={s.subject}>
             {s.subject}
-          </span>
+          </Link>
           <div className="h-3 flex-1 overflow-hidden rounded bg-muted">
             <div
               className="h-full bg-primary/80"
@@ -169,6 +170,11 @@ function SubjectBars({
               <Minus className="h-4 w-4 text-muted-foreground" />
             ) : null}
           </span>
+          </div>
+          <div className="mt-2 flex gap-2 text-[11px]">
+            <Link to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject }} className="rounded-md border px-2 py-1 font-semibold text-primary hover:bg-primary/10">Treinar questões</Link>
+            <Link to="/dashboard/library" search={{ collection: "subjects", discipline: s.subject }} className="rounded-md border px-2 py-1 font-semibold text-muted-foreground hover:bg-muted">Ver teoria</Link>
+          </div>
         </div>
       ))}
     </div>
