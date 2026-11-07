@@ -15762,12 +15762,12 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
   }
   .mobile-homepage__hero > img {
-    inset: auto; top: auto; right: -4%; bottom: 236px; left: auto;
-    width: 62%; height: auto; aspect-ratio: 1208 / 1302; max-width: none;
+    inset: auto; top: auto; right: -2%; bottom: 196px; left: auto;
+    width: 84%; height: auto; aspect-ratio: 1208 / 1302; max-width: none;
     object-fit: contain; object-position: 50% 100%;
-    -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 100%); mask-image: linear-gradient(180deg, #000 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 92%, transparent 100%); mask-image: linear-gradient(180deg, #000 92%, transparent 100%);
   }
-  .mobile-homepage__hero-shade { background: linear-gradient(180deg, rgb(11 20 32 / .25) 0%, transparent 28%, rgb(11 20 32 / .5) 60%, rgb(11 20 32 / .92) 100%) !important; }
+  .mobile-homepage__hero-shade { background: linear-gradient(180deg, rgb(11 20 32 / .2) 0%, transparent 24%, rgb(11 20 32 / .42) 62%, rgb(11 20 32 / .88) 100%) !important; }
   .mobile-homepage__hero-copy { min-height: var(--mh-hero-h); justify-content: flex-end; gap: 0; padding: 92px 14px 16px; }
   .mobile-homepage__hero .mobile-homepage__eyebrow {
     margin-bottom: 10px; -webkit-backdrop-filter: blur(12px) saturate(140%); backdrop-filter: blur(12px) saturate(140%); background: rgb(10 27 42 / .5);
@@ -15830,7 +15830,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   html.dark .mobile-homepage .mobile-homepage__footer { background: #111316; }
   html.dark .mobile-homepage .mobile-homepage__cards article { background: #202329; border-color: rgb(255 255 255 / .09); }
   html.dark .mobile-homepage .mobile-homepage__hero-shade {
-    background: linear-gradient(180deg, rgb(22 24 28 / .25) 0%, transparent 28%, rgb(22 24 28 / .5) 60%, rgb(22 24 28 / .92) 100%) !important;
+    background: linear-gradient(180deg, rgb(22 24 28 / .2) 0%, transparent 24%, rgb(22 24 28 / .42) 62%, rgb(22 24 28 / .88) 100%) !important;
   }
   html.dark .mobile-homepage .mobile-homepage__hero .mobile-homepage__eyebrow { background: rgb(22 24 28 / .55); }
   html.dark .mobile-homepage :is(.mobile-homepage__daily, .mobile-homepage__resources) :is(p, article p, article span) { color: #b9bec6; }
