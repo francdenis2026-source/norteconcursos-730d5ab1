@@ -29,7 +29,7 @@
 .app-location__group::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--brass-deep); }
 .dark .app-location__group::before { background: var(--brass); }
 .app-shell.navigation-v2[data-area] .app-topbar__actions { flex: none; display: flex; align-items: center; gap: 8px; }
-.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back) {
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .app-logout-btn, .platform-back) {
   display: grid;
   place-items: center;
   flex: 0 0 44px;
@@ -46,9 +46,9 @@
   transform: none;
 }
 .app-shell.navigation-v2[data-area] .app-topbar .app-top-search > span { display: none; }
-.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back):hover { color: var(--foreground); background: var(--muted); border-color: color-mix(in srgb, var(--foreground) 24%, var(--border)); transform: none; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .app-logout-btn, .platform-back):hover { color: var(--foreground); background: var(--muted); border-color: color-mix(in srgb, var(--foreground) 24%, var(--border)); transform: none; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .app-logout-btn, .platform-back) svg { width: 18px; height: 18px; color: inherit; }
 .app-shell.navigation-v2[data-area] .app-topbar :is(button, a):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
-.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back) svg { width: 18px; height: 18px; color: inherit; }
 .app-shell.navigation-v2[data-area] .app-topbar .app-chips { display: flex; align-items: center; flex: none; height: 40px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: color-mix(in srgb, var(--card) 72%, transparent); box-shadow: none; }
 .app-shell.navigation-v2[data-area] .app-topbar .app-chips > .app-streak {
   display: inline-flex;
