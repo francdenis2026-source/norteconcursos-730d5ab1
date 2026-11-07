@@ -32,22 +32,37 @@ alter table public.official_exam_questions drop constraint if exists official_ex
 alter table public.official_exam_questions add constraint official_exam_questions_official_answer_check
   check (official_answer in ('A','B','C','D','E','X'));
 
-insert into public.content_sources (source_type,title,issuer,url,status,notes) values
-('edital','Edital nº 001/2017 - Governo do Estado do Acre/SEPC, Polícia Civil do Acre','Governo do Estado do Acre / SEPC / IBADE','https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf','vigente','Gabarito Final da Prova Objetiva, banca IBADE, cargo Agente de Polícia Civil, caderno S01, todas as versões (T/V/W/X). Consultado via mirror qconcursos.com pois antigo.ibade.org.br está inacessível (conexão recusada). Versão V confirmada como a do caderno do candidato.')
-on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
+-- Nenhum destes blocos usa ON CONFLICT: produção já mostrou mais de uma tabela
+-- com a unique constraint "oficial" ausente apesar do CREATE TABLE do schema
+-- (provavelmente tabelas pré-existentes a essas migrações). update + insert
+-- condicional (not exists) funciona com ou sem a constraint, para qualquer tabela.
+update public.content_sources set
+  checked_at=now(), status='vigente',
+  notes='Gabarito Final da Prova Objetiva, banca IBADE, cargo Agente de Polícia Civil, caderno S01, todas as versões (T/V/W/X). Consultado via mirror qconcursos.com pois antigo.ibade.org.br está inacessível (conexão recusada). Versão V confirmada como a do caderno do candidato.'
+where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf';
+
+insert into public.content_sources (source_type,title,issuer,url,status,notes)
+select 'edital','Edital nº 001/2017 - Governo do Estado do Acre/SEPC, Polícia Civil do Acre','Governo do Estado do Acre / SEPC / IBADE','https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf','vigente','Gabarito Final da Prova Objetiva, banca IBADE, cargo Agente de Polícia Civil, caderno S01, todas as versões (T/V/W/X). Consultado via mirror qconcursos.com pois antigo.ibade.org.br está inacessível (conexão recusada). Versão V confirmada como a do caderno do candidato.'
+where not exists (select 1 from public.content_sources where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf');
+
+update public.syllabus_editions set
+  source_id=(select id from public.content_sources where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf'),
+  status='active'
+where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017;
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
 select 'Polícia Civil do Acre','Agente de Polícia Civil',2017,'IBADE',id,'active'
 from public.content_sources where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf'
-on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id,status='active';
+and not exists (
+  select 1 from public.syllabus_editions
+  where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017
+);
 
 with edition as (
   select id from public.syllabus_editions
   where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017
-)
-insert into public.syllabus_topics (edition_id,block_name,discipline,topic_order,topic_text,content_status)
-select edition.id,'Histórico 2017',d.discipline,1,d.topic_text,'current'
-from edition cross join (values
+),
+topics(discipline,topic_text) as (values
   ('Língua Portuguesa','Compreensão de texto, sintaxe, semântica, coesão e pontuação.'),
   ('Noções de Informática','Windows, Office, Internet, malware e backup.'),
   ('Raciocínio Lógico','Lógica proposicional, sequências e problemas de raciocínio.'),
@@ -57,8 +72,33 @@ from edition cross join (values
   ('Noções de Direito Processual Penal','Inquérito policial, prisões e procedimentos do CPP.'),
   ('Legislação de Direito Penal e Processual Penal Especial','Leis penais e processuais especiais.'),
   ('Noções de Medicina Legal','Tanatologia, traumatologia e perícia médico-legal.')
-) d(discipline,topic_text)
-on conflict (edition_id,discipline,topic_order) do update set topic_text=excluded.topic_text;
+)
+update public.syllabus_topics t set topic_text=topics.topic_text, content_status='current'
+from edition, topics
+where t.edition_id=edition.id and t.discipline=topics.discipline and t.topic_order=1;
+
+with edition as (
+  select id from public.syllabus_editions
+  where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017
+),
+topics(discipline,topic_text) as (values
+  ('Língua Portuguesa','Compreensão de texto, sintaxe, semântica, coesão e pontuação.'),
+  ('Noções de Informática','Windows, Office, Internet, malware e backup.'),
+  ('Raciocínio Lógico','Lógica proposicional, sequências e problemas de raciocínio.'),
+  ('Noções de Direito Administrativo','Princípios, atos e poderes administrativos, licitações e servidores públicos.'),
+  ('Noções de Direito Constitucional','Direitos e garantias fundamentais, organização do Estado e segurança pública.'),
+  ('Noções de Direito Penal','Parte geral e especial do Código Penal.'),
+  ('Noções de Direito Processual Penal','Inquérito policial, prisões e procedimentos do CPP.'),
+  ('Legislação de Direito Penal e Processual Penal Especial','Leis penais e processuais especiais.'),
+  ('Noções de Medicina Legal','Tanatologia, traumatologia e perícia médico-legal.')
+)
+insert into public.syllabus_topics (edition_id,block_name,discipline,topic_order,topic_text,content_status)
+select edition.id,'Histórico 2017',topics.discipline,1,topics.topic_text,'current'
+from edition cross join topics
+where not exists (
+  select 1 from public.syllabus_topics t
+  where t.edition_id=edition.id and t.discipline=topics.discipline and t.topic_order=1
+);
 
 with src as (select id from public.content_sources where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf'),
 edition as (select id from public.syllabus_editions where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017),
@@ -79,6 +119,16 @@ gabarito(item_number,official_answer) as (values
 (61,'E'),(62,'C'),(63,'B'),(64,'A'),(65,'B'),(66,'C'),(67,'B'),(68,'B'),(69,'D'),(70,'B'),
 (71,'C'),(72,'D'),(73,'E'),(74,'D'),(75,'B'),(76,'A'),(77,'D'),(78,'D'),(79,'A'),(80,'D')
 )
+update public.official_exam_questions q set
+  official_answer = gabarito.official_answer,
+  content_status = case when gabarito.official_answer='X' then 'annulled' else 'under_review' end,
+  review_note = case when gabarito.official_answer='X'
+    then 'Item anulado no gabarito oficial (legenda "Questão Anulada" no documento da banca); não deve ser exibido aos estudantes.'
+    else 'Apenas o gabarito oficial (resposta correta) foi confirmado nesta sessão, no "Gabarito Final da Prova Objetiva" da banca IBADE, seção "Prova: V". Texto da questão ainda pendente de transcrição verbatim da versão V — content_status permanece under_review até então.'
+  end
+from gabarito
+where q.contest_name='Polícia Civil do Acre' and q.exam_year=2017 and q.item_number=gabarito.item_number;
+
 insert into public.official_exam_questions
   (question_source_id,answer_key_source_id,syllabus_topic_id,contest_name,exam_year,career_name,exam_board,
    item_number,subject,question_text,raw_extraction,official_answer,source_page,content_status,
@@ -101,8 +151,10 @@ cross join src
 cross join edition
 join topic_map tm on gabarito.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (contest_name,exam_year,item_number) do update set
-  official_answer=excluded.official_answer, content_status=excluded.content_status, review_note=excluded.review_note;
+where not exists (
+  select 1 from public.official_exam_questions q
+  where q.contest_name='Polícia Civil do Acre' and q.exam_year=2017 and q.item_number=gabarito.item_number
+);
 
 -- Student's own graded attempt (Franc Denis, CPF 69598193268), caderno S01 -
 -- Versão V. Todos os 80 itens confrontados item a item com o gabarito oficial.
