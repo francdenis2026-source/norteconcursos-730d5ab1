@@ -23,13 +23,14 @@ test("a frase de confirmação ignora caixa e espaços extras, mas exige as pala
   assert.ok(!phraseMatches(""));
 });
 
-test("na fase de testes, Gratuito/Essencial sem vencimento não é assinatura paga", () => {
+test("liberação geral: sem vencimento gravado não é assinatura paga, nenhum plano escapa da varredura", () => {
   assert.equal(isPaidSubscriber("free", null), false);
   assert.equal(isPaidSubscriber("essential", null), false);
   assert.equal(isPaidSubscriber("essential", "2026-12-01T00:00:00Z"), true);
-  assert.equal(isPaidSubscriber("plus", null), true);
   assert.equal(isPaidSubscriber("premium", "2026-12-01T00:00:00Z"), true);
-  // plano de testes (Plus gratuito por 30 dias) não é assinatura e não tem o que cancelar
+  // Licenças pagas foram revogadas: mesmo um Plus/Premium sem vencimento gravado não tem
+  // assinatura real pra cancelar enquanto a fase de testes varrer todos os planos (isTestingTier).
+  assert.equal(isPaidSubscriber("plus", null), false);
   assert.equal(isPaidSubscriber("plus", null, true), false);
 });
 
