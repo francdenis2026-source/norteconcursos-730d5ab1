@@ -124,7 +124,7 @@ const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard/mock-exams": "rose",
   "/dashboard/performance": "orange",
   "/dashboard/profile": "teal",
-  "/dashboard/study-coach": "violet",
+  "/dashboard/study-coach": "teal",
   "/dashboard/cronograma": "sky",
   "/dashboard/study-tools": "teal",
   "/dashboard/admin-students": "sky",
