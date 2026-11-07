@@ -342,3 +342,21 @@
   :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-header"],
   :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-content"] { padding-inline: 14px; }
 }
+
+
+/* Edital study checklist */
+.edital-progress-panel { display: grid; gap: 8px; margin-bottom: 14px; padding: 12px 14px; border: 1px solid color-mix(in srgb, var(--student-blue) 35%, var(--student-border)); border-radius: 12px; background: color-mix(in srgb, var(--student-blue) 8%, var(--student-surface)); }
+.edital-progress-panel > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; color: var(--student-ink); }
+.edital-progress-panel strong { font-size: 15px; } .edital-progress-panel span { color: var(--student-muted); font-size: 12px; }
+.edital-progress-track { height: 8px; overflow: hidden; border-radius: 99px; background: var(--student-canvas); }
+.edital-progress-track > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--student-blue), var(--student-teal)); transition: width .2s ease; }
+.edital-topic-link { min-height: 50px; gap: 14px; align-items: center; border-color: var(--student-border); background: var(--student-surface-soft); transition: background .15s ease, border-color .15s ease, transform .15s ease; }
+.edital-topic-link:hover { border-color: var(--student-blue); background: color-mix(in srgb, var(--student-blue) 10%, var(--student-surface)); transform: translateX(2px); }
+.edital-topic-link.is-complete { border-color: color-mix(in srgb, var(--student-green) 55%, var(--student-border)); background: color-mix(in srgb, var(--student-green) 10%, var(--student-surface)); }
+.edital-topic-link.is-complete > span:first-child > span:last-child { color: var(--student-muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--student-green) 70%, transparent); }
+.edital-check { display: inline-grid; flex: 0 0 24px; width: 24px; height: 24px; place-items: center; padding: 0; border: 2px solid var(--student-border-strong); border-radius: 7px; background: var(--student-canvas); color: var(--student-canvas); }
+.edital-check:hover { border-color: var(--student-blue); } .edital-check.is-checked { border-color: var(--student-green); background: var(--student-green); }
+
+.edital-filter-tabs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; grid-column: 1 / -1; margin-top: 4px; }
+.edital-filter-tabs button { min-height: 34px; padding: 6px 12px; border: 1px solid var(--student-border); border-radius: 999px; background: var(--student-surface-soft); color: var(--student-muted); font-size: 12px; font-weight: 700; }
+.edital-filter-tabs button:hover, .edital-filter-tabs button.is-active { border-color: var(--student-blue); background: color-mix(in srgb, var(--student-blue) 16%, var(--student-surface)); color: var(--student-ink); }

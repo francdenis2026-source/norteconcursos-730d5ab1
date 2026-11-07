@@ -50,6 +50,7 @@ function EditalPage() {
   const [topicsError, setTopicsError] = React.useState("");
   const [search, setSearch] = React.useState(""),
     [discipline, setDiscipline] = React.useState("all"),
+    [progressFilter, setProgressFilter] = React.useState<"all" | "pending" | "done">("all"),
     [revision, setRevision] = React.useState(0);
   const [completed, setCompleted] = React.useState<Record<string, boolean>>({});
   const {
@@ -143,6 +144,7 @@ function EditalPage() {
   const filtered = topics.filter(
     (t) =>
       (discipline === "all" || canonicalSubject(t.discipline) === discipline) &&
+      (progressFilter === "all" || (progressFilter === "done" ? completed[t.id] : !completed[t.id])) &&
       (!search || fold(`${t.discipline} ${t.topic_text}`).includes(fold(search))),
   );
   const completedCount = topics.filter((topic) => completed[topic.id]).length;
@@ -373,6 +375,11 @@ function EditalPage() {
                       <option key={d}>{d}</option>
                     ))}
                   </select>
+                </div>
+                <div className="edital-filter-tabs" role="group" aria-label="Filtrar progresso">
+                  {([["all", "Todos"], ["pending", "Pendentes"], ["done", "Estudados"]] as const).map(([value, label]) => (
+                    <button key={value} type="button" className={progressFilter === value ? "is-active" : ""} onClick={() => setProgressFilter(value)}>{label}</button>
+                  ))}
                 </div>
               </div>
               {catalogError && (

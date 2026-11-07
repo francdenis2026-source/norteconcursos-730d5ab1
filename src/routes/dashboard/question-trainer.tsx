@@ -524,7 +524,7 @@ function QuestionTrainer() {
   const startTraining = () => {
     responseIdRef.current = crypto.randomUUID();
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
-    setQuestions(ordered.slice(0, Number(limit)));
+    setQuestions(limit === "all" ? ordered : ordered.slice(0, Number(limit)));
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -1612,8 +1612,7 @@ function TrainerSetup({
               value={values.limit}
               setValue={setters.setLimit}
               options={["5", "10", "20", "30", "50"]}
-              allLabel="Quantidade"
-              hideAll
+              allLabel="Todas as questões"
             />
             <label className="space-y-1">
               <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -1730,7 +1729,7 @@ function TrainerSetup({
           <div className="mt-3 flex flex-col gap-2 rounded-xl border bg-muted/30 p-2.5 sm:flex-row sm:items-center sm:justify-between sm:p-3">
             <div>
               <p className="font-black">
-                {Math.min(available, Number(values.limit))} questões serão usadas
+                {values.limit === "all" ? available.toLocaleString("pt-BR") : Math.min(available, Number(values.limit))} questões serão usadas
               </p>
             </div>
             <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">

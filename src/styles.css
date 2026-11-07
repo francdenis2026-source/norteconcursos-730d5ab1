@@ -13897,6 +13897,19 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .pcpr-spot--notice h2 { font-size: 15px; line-height: 1.4; margin: 0; color: var(--foreground); }
 .pcpr-spot--notice p { font-size: 12px; line-height: 1.5; margin: 4px 0 0; color: var(--muted-foreground); }
 .pcpr-spot--notice .pcpr-spot__cta { min-height: 40px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--accent); color: var(--accent-foreground); font-size: 12px; }
+
+/* PC-AC spotlight: título/descrição em cima, os três acessos numa única linha compacta embaixo —
+   em vez de empilhados ao lado do texto, que deixava a faixa alta demais. */
+.pcpr-spot--pcac .pcpr-spot__summary { flex-direction: column; align-items: stretch; gap: 10px; }
+.pcpr-spot--pcac .pcpr-spot__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.pcpr-spot--pcac .pcpr-spot__cta { min-height: 32px; padding: 6px 12px; gap: 6px; font-size: 12px; border-radius: 8px; }
+.pcpr-spot--pcac .pcpr-spot__cta svg { width: 14px; height: 14px; }
+.pcpr-spot--pcac .pcpr-spot__cta--ghost { background: transparent; border-color: var(--border); color: var(--foreground); font-weight: 600; }
+.pcpr-spot--pcac .pcpr-spot__cta--ghost:hover { background: var(--muted); }
+@media (max-width: 480px) {
+  .pcpr-spot--pcac .pcpr-spot__actions { gap: 6px; }
+  .pcpr-spot--pcac .pcpr-spot__cta { flex: 1 1 auto; justify-content: center; }
+}
 .pcpr-spot--notice .pcpr-spot__details { margin-top: 4px; font-size: 12px; }
 .pcpr-spot--notice .pcpr-spot__details summary { min-height: 32px; display: list-item; width: fit-content; padding-block: 6px; color: var(--muted-foreground); cursor: pointer; }
 .pcpr-spot--notice .pcpr-spot__details[open] summary { color: var(--foreground); }

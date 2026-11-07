@@ -346,3 +346,61 @@
 @media print, (forced-colors: active) {
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers::before, .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers::after { display: none !important; }
 }
+
+
+/* Edital verticalizado: cabeçalho compacto e hierarquia refinada */
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 104px !important;
+  padding: 12px 16px !important;
+  border-left-width: 2px !important;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #1a2739, #202f44) !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner > div:first-child { min-width: 0; }
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner::after {
+  content: "";
+  grid-column: 1;
+  grid-row: 1;
+  width: 82px;
+  height: 82px;
+  border-radius: 9px;
+  background: var(--workspace-banner-art) center / cover no-repeat;
+  opacity: .9;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner h1 {
+  margin-top: 2px;
+  font-size: clamp(18px, 1.7vw, 24px) !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner :is(.edital-heading > div > p, .page-hero__desc) {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner .page-hero__stats { display: none; }
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner > :is(a, button, .edital-heading-actions) {
+  grid-column: 3;
+}
+@media (max-width: 760px) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 86px !important;
+  }
+  .app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner::after { width: 64px; height: 64px; }
+}
+
+
+/* Remover controles nativos pouco elegantes do cabeçalho do edital */
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading select,
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading [data-slot="select"],
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading .native-select {
+  display: none !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading :is(button, a) {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
