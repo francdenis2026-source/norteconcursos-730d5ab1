@@ -33,6 +33,7 @@ import { StudentTopNavigation } from "./StudentTopNavigation";
 import "@/styles/student-top-navigation.css";
 import "@/styles/student-workspace-refresh.css";
 import "@/styles/student-saas-dashboard.css";
+import "@/styles/student-home-premium.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,

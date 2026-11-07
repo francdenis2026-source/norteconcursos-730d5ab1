@@ -1,0 +1,215 @@
+/* Área do aluno — refinamento "premium": paleta escura mais sofisticada (índigo profundo,
+   sem chumbo/cinza neutro), tipografia um pouco maior em toda a página, e um painel único
+   para "Seu progresso" + "Acessos rápidos" (antes dois blocos soltos com cabeçalhos repetidos).
+   Carregado por último e só na home do aluno (.student-home.student-desk.student-overview);
+   nenhuma outra tela do painel é afetada. Puro CSS: nenhum dado, rota ou interação muda. */
+
+/* ---------- Painel único: progresso + acessos rápidos ---------- */
+.student-home.student-desk .student-desk__panel {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--desk-blue, var(--home-blue, #7c93ff)) 5%, var(--card));
+}
+.student-home.student-desk .student-desk__panel > .student-desk__section-heading {
+  margin-bottom: 12px;
+}
+.student-home.student-desk .student-desk__panel .student-home__metrics {
+  margin: 0;
+}
+.student-home.student-desk .student-desk__panel-divider {
+  height: 1px;
+  margin: 16px 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 15%,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 85%,
+    transparent
+  );
+}
+@media (max-width: 600px) {
+  .student-home.student-desk .student-desk__panel {
+    padding: 15px 14px 14px;
+  }
+  .student-home.student-desk .student-desk__panel-divider {
+    margin: 13px 0;
+  }
+}
+
+/* ---------- Paleta escura: índigo profundo, sem chumbo/cinza ----------
+   As três camadas de estilo anteriores (student-overview-v3, student-workspace-refresh,
+   student-saas-dashboard) definem variáveis próprias (--home-*, --student-*, --saas-*)
+   com baixa saturação (cinza-azulado quase neutro). Redefinimos aqui, só para esta página
+   e só no escuro, com mais croma (mais "cor" visível) e um leve matiz violeta — sofisticado
+   sem perder a legibilidade nem o dourado da marca. */
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview {
+  --home-ink: #f3f5ff;
+  --home-muted: #aab0d6;
+  --home-line: #3c4280;
+  --home-surface: #1b2150;
+  --home-surface-2: #242a63;
+  --home-blue: #8b9bff;
+  --home-cyan: #63d9c9;
+  --home-green: #7fe3b0;
+  --home-gold: #e9c173;
+  --home-violet: #c2a4ff;
+  --home-rose: #f3a0c0;
+  --saas-bg: #0c0f28;
+  --saas-panel: #1b2150;
+  --saas-panel-soft: #242a63;
+  --saas-ink: #f3f5ff;
+  --saas-muted: #aab0d6;
+  --saas-line: #3c4280;
+  --saas-blue: #8b9bff;
+  --saas-cyan: #63d9c9;
+  --saas-green: #7fe3b0;
+  --saas-violet: #c2a4ff;
+  --saas-amber: #e9c173;
+  --saas-rose: #f3a0c0;
+}
+/* Fundo da página: índigo profundo com leve gradiente, não um retângulo cinza plano.
+   Só nesta página (:has limita o escopo ao wrapper .student-overview). */
+:root.dark .app-shell[data-area="student"] #dashboard-content:has(.student-desk.student-overview) {
+  background:
+    radial-gradient(ellipse 900px 480px at 15% -10%, rgb(139 155 255 / 7%), transparent 60%),
+    radial-gradient(ellipse 700px 420px at 100% 15%, rgb(233 193 115 / 5%), transparent 55%),
+    linear-gradient(175deg, #0c0f28 0%, #0e1130 55%, #0b0e24 100%) !important;
+}
+/* Cartões (acessos rápidos, métricas, seções) — fundo índigo com gradiente sutil
+   em vez do cinza-azulado quase neutro que havia antes. */
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview :is(
+  .student-hub__shortcuts > a,
+  .student-home__metric,
+  .student-home__card[data-accent]
+) {
+  background: linear-gradient(150deg, #212a63 0%, #181c47 100%);
+  border-color: var(--home-line);
+  box-shadow: 0 10px 26px -20px rgb(5 6 20 / 70%), inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview :is(
+  .student-hub__shortcuts > a:hover,
+  .student-home__metric:hover
+) {
+  border-color: color-mix(in srgb, var(--home-blue) 55%, var(--home-line));
+  box-shadow: 0 14px 30px -18px rgb(5 6 20 / 78%), inset 0 1px 0 rgb(255 255 255 / 6%);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact {
+  background: linear-gradient(150deg, #1d2355, #161a44);
+  border-color: var(--home-line);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts__grid > * {
+  background: color-mix(in srgb, var(--home-surface-2) 85%, transparent);
+  border-color: var(--home-line);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-desk__panel {
+  background: linear-gradient(165deg, rgb(33 42 99 / 55%), rgb(24 28 71 / 45%));
+  border-color: var(--home-line);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-desk__next {
+  background: linear-gradient(105deg, color-mix(in srgb, var(--home-gold) 14%, #1b2150), #181c47);
+  border-color: color-mix(in srgb, var(--home-gold) 42%, var(--home-line));
+  border-left-color: var(--home-gold);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-home__next-topic {
+  background: color-mix(in srgb, var(--home-cyan) 10%, #1d2355);
+  border-color: color-mix(in srgb, var(--home-cyan) 32%, var(--home-line));
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-hub__results a {
+  background: linear-gradient(150deg, #1d2355, #181c47);
+  border-color: var(--home-line);
+}
+:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-home__data-note {
+  background: color-mix(in srgb, var(--home-surface) 55%, transparent);
+  border-radius: 12px;
+}
+
+/* ---------- Tipografia um pouco maior em toda a página (claro e escuro) ---------- */
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__welcome {
+  font-size: 13px !important;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__masthead h1 {
+  font-size: clamp(25px, 2.3vw, 34px) !important;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__hero-copy > p:last-of-type {
+  font-size: 14px !important;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-desk__section-heading h2 {
+  font-size: 16px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-desk__section-heading > span {
+  font-size: 12.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts strong {
+  font-size: 14.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts small {
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__metric h2 {
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__metric strong {
+  font-size: clamp(23px, 2.1vw, 28px);
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__metric p {
+  font-size: 11.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-desk__next h2 {
+  font-size: 16.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-desk__next p {
+  font-size: 13px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-desk__next .student-home__primary {
+  font-size: 13.5px;
+  min-height: 44px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__section-title h2 {
+  font-size: 17px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__section-title p {
+  font-size: 13px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview :is(
+  .student-home__quiet,
+  .student-home__empty p,
+  .student-home__signals small,
+  .student-home__review-count
+) {
+  font-size: 13px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__text-link {
+  font-size: 13px;
+  min-height: 38px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__objective-name {
+  font-size: 15.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__blocks li strong {
+  font-size: 14.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-home__blocks li small {
+  font-size: 12.5px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .student-hub__results a {
+  font-size: 13px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact > header h2 {
+  font-size: 13px;
+}
+.app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact > header span {
+  font-size: 11px;
+}
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts strong {
+    font-size: 15.5px;
+  }
+  .app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts small {
+    font-size: 13px;
+  }
+  .app-shell[data-area="student"] .student-desk.student-overview .student-home__metric strong {
+    font-size: clamp(22px, 5vw, 26px);
+  }
+}

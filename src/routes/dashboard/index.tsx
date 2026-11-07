@@ -3,6 +3,7 @@ import "@/styles/student-desk.css";
 import "@/styles/student-overview.css";
 import "@/styles/student-overview-v3.css";
 import "@/styles/student-hub-refresh.css";
+import "@/styles/student-home-premium.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -308,64 +309,58 @@ function StudentHome({ user }: { user: UserProfile }) {
       )}
       <PcAcreEditalSpotlight />
       <PlatformQuestionCounts compact />
-      <div className="student-desk__section-heading">
-        <h2 id="student-metrics-title">Seu progresso</h2>
-        <span>Atualizado com seus registros na plataforma</span>
-      </div>
-      <section
-        className="student-home__metrics"
-        aria-labelledby="student-metrics-title"
-      >
-        <Metric
-          icon={BrainCircuit}
-          label="Questões resolvidas"
-          tone="blue"
-          onOpen={(event) => openMetric("questions", event.currentTarget)}
-          value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
-          detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
-        />
-        <Metric
-          icon={CheckCircle2}
-          label="Taxa de acerto"
-          tone="teal"
-          onOpen={(event) => openMetric("accuracy", event.currentTarget)}
-          value={
-            q.training.isError
-              ? "Indisponível"
-              : stats
-                ? stats.accuracy === null
-                  ? "Sem respostas"
-                  : `${stats.accuracy}%`
-                : "…"
-          }
-          detail={
-            stats?.total
-              ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
-              : "Comece pelas questões"
-          }
-        />
-        <Metric
-          icon={Clock}
-          label="Tempo ativo hoje"
-          tone="amber"
-          onOpen={(event) => openMetric("today", event.currentTarget)}
-          value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
-          detail="Somando suas sessões"
-        />
-        <Metric
-          icon={TrendingUp}
-          label="Estudo nesta semana"
-          tone="violet"
-          onOpen={(event) => openMetric("week", event.currentTarget)}
-          value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
-          detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
-        />
-      </section>
-      <section className="student-desk__access" aria-labelledby="student-access-title">
+      <section className="student-desk__panel" aria-labelledby="student-metrics-title">
         <div className="student-desk__section-heading">
-          <h2 id="student-access-title">Acessos rápidos</h2>
-          <span>Seu estudo a um toque</span>
+          <h2 id="student-metrics-title">Seu painel de estudo</h2>
+          <span>Progresso atualizado e seus atalhos, em um só lugar</span>
         </div>
+        <section className="student-home__metrics" aria-label="Seu progresso">
+          <Metric
+            icon={BrainCircuit}
+            label="Questões resolvidas"
+            tone="blue"
+            onOpen={(event) => openMetric("questions", event.currentTarget)}
+            value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
+            detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
+          />
+          <Metric
+            icon={CheckCircle2}
+            label="Taxa de acerto"
+            tone="teal"
+            onOpen={(event) => openMetric("accuracy", event.currentTarget)}
+            value={
+              q.training.isError
+                ? "Indisponível"
+                : stats
+                  ? stats.accuracy === null
+                    ? "Sem respostas"
+                    : `${stats.accuracy}%`
+                  : "…"
+            }
+            detail={
+              stats?.total
+                ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
+                : "Comece pelas questões"
+            }
+          />
+          <Metric
+            icon={Clock}
+            label="Tempo ativo hoje"
+            tone="amber"
+            onOpen={(event) => openMetric("today", event.currentTarget)}
+            value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
+            detail="Somando suas sessões"
+          />
+          <Metric
+            icon={TrendingUp}
+            label="Estudo nesta semana"
+            tone="violet"
+            onOpen={(event) => openMetric("week", event.currentTarget)}
+            value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
+            detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
+          />
+        </section>
+        <div className="student-desk__panel-divider" role="separator" aria-hidden="true" />
         <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
           {destinations.map(({ to, title, text, tone, icon: Icon }) => (
             <Link
