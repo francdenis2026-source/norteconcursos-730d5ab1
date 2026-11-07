@@ -109,6 +109,7 @@ export function StudentTopNavigation({
           <Link
             to="/dashboard"
             className="student-top-navigation__trigger student-top-navigation__home"
+            data-tone="slate"
             aria-label="Voltar à área principal"
           >
             <span className="student-top-navigation__icon-wrap" aria-hidden="true">
