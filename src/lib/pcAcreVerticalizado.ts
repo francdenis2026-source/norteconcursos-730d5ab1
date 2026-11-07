@@ -86,7 +86,7 @@ export function pcAcVerticalDisciplineCounts(
   progress: Record<string, PcAcVerticalStatus>,
 ) {
   const topicsCount = discipline.topics?.length ?? 0;
-  let total = Math.max(topicsCount, 1);
+  const total = Math.max(topicsCount, 1);
   let estudado = 0;
   let aEstudar = 0;
   if (topicsCount === 0) {

@@ -131,9 +131,7 @@ export async function generatePcAcVerticalPdf(
       for (let i = 0; i < topics.length; i++) {
         ensureSpace(20);
         const status =
-          progress[
-            pcAcVerticalItemId(block.title, discipline.id, trackedPerTopic ? i : undefined)
-          ];
+          progress[pcAcVerticalItemId(block.title, discipline.id, trackedPerTopic ? i : undefined)];
         doc.setFont("helvetica", "normal");
         doc.setFontSize(9);
         doc.setTextColor(60, 60, 70);
