@@ -8,12 +8,16 @@ export interface PcAcVerticalStorage {
 }
 
 export const pcAcVerticalKey = (userId: string, cargo: PcAcVerticalCargoId) =>
-  `norte:pcac-verticalizado:v1:${userId}:${cargo}`;
+  `norte:pcac-verticalizado:v2:${userId}:${cargo}`;
 
-/** Todo item de um cargo é identificado por "<bloco>::<disciplina>" para aceitar disciplinas
+/** Cada item rastreável é identificado por "<bloco>::<disciplina>" (quando a disciplina não tem
+ * itens detalhados) ou "<bloco>::<disciplina>::<índice do item>" (um item do conteúdo
+ * programático oficial dessa disciplina). O bloco entra na chave para aceitar disciplinas
  * repetidas entre blocos (ex.: Legislação Institucional aparece em vários cargos). */
-export function pcAcVerticalItemId(block: string, disciplineId: string) {
-  return `${block}::${disciplineId}`;
+export function pcAcVerticalItemId(block: string, disciplineId: string, topicIndex?: number) {
+  return topicIndex === undefined
+    ? `${block}::${disciplineId}`
+    : `${block}::${disciplineId}::${topicIndex}`;
 }
 
 export function readPcAcVerticalProgress(
@@ -57,10 +61,44 @@ export function pcAcVerticalCounts(
   let aEstudar = 0;
   for (const block of cargo.blocks)
     for (const discipline of block.disciplines) {
-      total += 1;
-      const status = progress[pcAcVerticalItemId(block.title, discipline.id)];
+      const topicsCount = discipline.topics?.length ?? 0;
+      if (topicsCount === 0) {
+        total += 1;
+        const status = progress[pcAcVerticalItemId(block.title, discipline.id)];
+        if (status === "estudado") estudado += 1;
+        else if (status === "a-estudar") aEstudar += 1;
+        continue;
+      }
+      for (let i = 0; i < topicsCount; i++) {
+        total += 1;
+        const status = progress[pcAcVerticalItemId(block.title, discipline.id, i)];
+        if (status === "estudado") estudado += 1;
+        else if (status === "a-estudar") aEstudar += 1;
+      }
+    }
+  return { total, estudado, aEstudar, pendente: total - estudado - aEstudar };
+}
+
+/** Progresso só desta disciplina (para mostrar um selo "x/y" no cabeçalho dela). */
+export function pcAcVerticalDisciplineCounts(
+  block: string,
+  discipline: { id: string; topics?: string[] },
+  progress: Record<string, PcAcVerticalStatus>,
+) {
+  const topicsCount = discipline.topics?.length ?? 0;
+  let total = Math.max(topicsCount, 1);
+  let estudado = 0;
+  let aEstudar = 0;
+  if (topicsCount === 0) {
+    const status = progress[pcAcVerticalItemId(block, discipline.id)];
+    if (status === "estudado") estudado += 1;
+    else if (status === "a-estudar") aEstudar += 1;
+  } else {
+    for (let i = 0; i < topicsCount; i++) {
+      const status = progress[pcAcVerticalItemId(block, discipline.id, i)];
       if (status === "estudado") estudado += 1;
       else if (status === "a-estudar") aEstudar += 1;
     }
+  }
   return { total, estudado, aEstudar, pendente: total - estudado - aEstudar };
 }

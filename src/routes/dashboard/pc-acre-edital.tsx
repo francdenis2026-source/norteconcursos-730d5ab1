@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate, useSearch } from "@tanstack/react-router";
 import {
   BookOpen,
   BookOpenCheck,
@@ -27,10 +27,12 @@ import {
   pcAcVerticalCargos,
   pcAcInstitutionalLaws,
   type PcAcVerticalCargoId,
+  type PcAcVerticalDiscipline,
 } from "@/data/pcAcreVerticalizado";
 import {
   pcAcVerticalCargo,
   pcAcVerticalCounts,
+  pcAcVerticalDisciplineCounts,
   pcAcVerticalItemId,
   readPcAcVerticalProgress,
   writePcAcVerticalProgress,
@@ -58,9 +60,11 @@ function nextStatus(current: PcAcVerticalStatus | undefined) {
 function StatusButton({
   status,
   onClick,
+  size = "default",
 }: {
   status: PcAcVerticalStatus | undefined;
   onClick: () => void;
+  size?: "default" | "sm";
 }) {
   const label =
     status === "estudado" ? "Estudado" : status === "a-estudar" ? "A estudar" : "Pendente";
@@ -70,7 +74,8 @@ function StatusButton({
       onClick={onClick}
       aria-pressed={!!status}
       className={
-        "inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold transition-colors " +
+        "inline-flex shrink-0 items-center gap-1.5 rounded-full border font-bold transition-colors " +
+        (size === "sm" ? "px-2 py-0.5 text-[11px] " : "px-3 py-1 text-xs ") +
         (status === "estudado"
           ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
           : status === "a-estudar"
@@ -78,7 +83,7 @@ function StatusButton({
             : "border-muted-foreground/30 bg-muted/40 text-muted-foreground")
       }
     >
-      {status === "estudado" && <CheckCircle2 className="h-3.5 w-3.5" />}
+      {status === "estudado" && <CheckCircle2 className="h-3 w-3" />}
       {label}
     </button>
   );
@@ -121,11 +126,100 @@ function DisciplineStudyLinks({ disciplineId }: { disciplineId: string }) {
   );
 }
 
+/** Uma disciplina do edital: cabeçalho com nome, selo de progresso e links de estudo, e — quando
+ * o Anexo III detalha itens de conteúdo programático — a lista de itens, cada um com seu próprio
+ * clique para marcar "a estudar"/"estudado". */
+function DisciplineAccordionItem({
+  block,
+  discipline,
+  progress,
+  onToggleTopic,
+}: {
+  block: string;
+  discipline: PcAcVerticalDiscipline;
+  progress: Record<string, PcAcVerticalStatus>;
+  onToggleTopic: (disciplineId: string, topicIndex: number | undefined) => void;
+}) {
+  const counts = pcAcVerticalDisciplineCounts(block, discipline, progress);
+  const hasTopics = !!discipline.topics?.length;
+  const value = `${block}::${discipline.id}`;
+
+  const header = (
+    <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 text-left">
+      <span className="text-sm font-semibold">{discipline.name}</span>
+      <Badge
+        variant="outline"
+        className={
+          "shrink-0 text-[10px] " +
+          (counts.estudado === counts.total && counts.total > 0
+            ? "border-emerald-500/50 text-emerald-700 dark:text-emerald-400"
+            : "")
+        }
+      >
+        {counts.estudado}/{counts.total}
+      </Badge>
+    </div>
+  );
+
+  const extras = (
+    <>
+      {discipline.note && <p className="mt-1 text-xs text-muted-foreground">{discipline.note}</p>}
+      <DisciplineStudyLinks disciplineId={discipline.id} />
+    </>
+  );
+
+  if (!hasTopics) {
+    return (
+      <li className="flex flex-wrap items-start justify-between gap-2 rounded-lg border bg-background/60 p-3">
+        <div className="min-w-0">
+          {header}
+          {extras}
+        </div>
+        <StatusButton
+          status={progress[pcAcVerticalItemId(block, discipline.id)]}
+          onClick={() => onToggleTopic(discipline.id, undefined)}
+        />
+      </li>
+    );
+  }
+
+  return (
+    <li className="rounded-lg border bg-background/60">
+      <Accordion type="single" collapsible>
+        <AccordionItem value={value} className="border-0">
+          <AccordionTrigger className="px-3 py-2.5 hover:no-underline">{header}</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
+            {extras}
+            <ul className="mt-2 space-y-1.5">
+              {discipline.topics!.map((topic, i) => (
+                <li
+                  key={i}
+                  className="flex flex-wrap items-start justify-between gap-2 rounded-md border border-border/60 bg-muted/20 p-2"
+                >
+                  <span className="min-w-0 flex-1 text-xs leading-relaxed text-foreground/90">
+                    {topic}
+                  </span>
+                  <StatusButton
+                    size="sm"
+                    status={progress[pcAcVerticalItemId(block, discipline.id, i)]}
+                    onClick={() => onToggleTopic(discipline.id, i)}
+                  />
+                </li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </li>
+  );
+}
+
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
-  const { cargo: cargoParam } = Route.useSearch();
-  const navigate = Route.useNavigate();
+  const search = useSearch({ strict: false }) as { cargo?: string };
+  const cargoParam = search.cargo;
+  const navigate = useNavigate();
   const cargo = pcAcVerticalCargo(cargoParam);
 
   const [progress, setProgress] = React.useState<Record<string, PcAcVerticalStatus>>({});
@@ -135,8 +229,8 @@ function PcAcreEditalVerticalizadoPage() {
     setProgress(readPcAcVerticalProgress(window.localStorage, userId, cargo.id));
   }, [userId, cargo.id]);
 
-  const toggle = (block: string, disciplineId: string) => {
-    const itemId = pcAcVerticalItemId(block, disciplineId);
+  const toggle = (block: string, disciplineId: string, topicIndex?: number) => {
+    const itemId = pcAcVerticalItemId(block, disciplineId, topicIndex);
     setProgress((prev) => {
       const next = { ...prev };
       const nextValue = nextStatus(prev[itemId]);
@@ -153,7 +247,7 @@ function PcAcreEditalVerticalizadoPage() {
 
   const exportPdf = async () => {
     const { generatePcAcVerticalPdf } = await import("@/lib/pcAcreVerticalPdf");
-    generatePcAcVerticalPdf(cargo, progress);
+    await generatePcAcVerticalPdf(cargo, progress);
   };
 
   return (
@@ -196,7 +290,12 @@ function PcAcreEditalVerticalizadoPage() {
                 key={item.id}
                 type="button"
                 aria-pressed={active}
-                onClick={() => void navigate({ search: { cargo: item.id as PcAcVerticalCargoId } })}
+                onClick={() =>
+                  void navigate({
+                    to: "/dashboard/pc-acre-edital",
+                    search: { cargo: item.id as PcAcVerticalCargoId },
+                  })
+                }
                 className={
                   "flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
                   (active
@@ -247,22 +346,15 @@ function PcAcreEditalVerticalizadoPage() {
                 <AccordionContent>
                   <ul className="space-y-2">
                     {block.disciplines.map((discipline) => (
-                      <li
+                      <DisciplineAccordionItem
                         key={discipline.id}
-                        className="flex flex-wrap items-start justify-between gap-2 rounded-lg border bg-background/60 p-3"
-                      >
-                        <div className="min-w-0">
-                          <p className="text-sm font-medium">{discipline.name}</p>
-                          {discipline.note && (
-                            <p className="mt-1 text-xs text-muted-foreground">{discipline.note}</p>
-                          )}
-                          <DisciplineStudyLinks disciplineId={discipline.id} />
-                        </div>
-                        <StatusButton
-                          status={progress[pcAcVerticalItemId(block.title, discipline.id)]}
-                          onClick={() => toggle(block.title, discipline.id)}
-                        />
-                      </li>
+                        block={block.title}
+                        discipline={discipline}
+                        progress={progress}
+                        onToggleTopic={(disciplineId, topicIndex) =>
+                          toggle(block.title, disciplineId, topicIndex)
+                        }
+                      />
                     ))}
                   </ul>
                 </AccordionContent>
