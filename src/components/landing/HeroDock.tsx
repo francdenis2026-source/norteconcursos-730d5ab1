@@ -113,10 +113,15 @@ export function HeroDock() {
         <span className="hx-dock__radar-icon" aria-hidden="true"><ShieldCheck /></span>
         <div className="hx-dock__radar-copy">
           <span className="hx-dock__live">RADAR DE CONCURSOS · PC ACRE</span>
-          <strong>Comissão formada. Edital aguardado.</strong>
-          <small>Decreto 11.966/2026 · comissão instituída em 22/10. Edital previsto para 2026, sem data oficial.</small>
-          <a href="https://legis.ac.gov.br/detalhar/6903" target="_blank" rel="noopener noreferrer" className="hx-dock__radar-source">
-            Ver publicação oficial <ArrowUpRight aria-hidden="true" />
+          <strong>Edital publicado: 139 vagas</strong>
+          <small>Edital 001/2026 SEAD/PCAC · banca IDECAN · inscrições até 14/12. Confira cargos, salários e cronograma.</small>
+          <a
+            href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hx-dock__radar-source"
+          >
+            Ver edital completo <ArrowUpRight aria-hidden="true" />
           </a>
         </div>
       </section>
