@@ -185,7 +185,6 @@
   gap: 10px 20px;
   padding: 13px 15px;
   border: 1px solid color-mix(in srgb, var(--desk-accent) 26%, var(--border));
-  border-left: 3px solid var(--desk-accent);
   border-radius: 12px;
   background: var(--card);
 }
@@ -246,7 +245,6 @@
 :root .student-home.student-desk .student-home__card[data-accent] {
   padding: 14px;
   border: 1px solid color-mix(in srgb, var(--desk-accent) 20%, var(--border));
-  border-left: 3px solid color-mix(in srgb, var(--desk-accent) 70%, var(--border));
   border-radius: 12px;
   background: linear-gradient(180deg, color-mix(in srgb, var(--desk-accent) 6%, var(--card)), var(--card) 160px);
   box-shadow: none;
@@ -374,7 +372,6 @@
   gap: 8px 16px;
   padding: 12px 14px;
   border: 1px solid color-mix(in srgb, var(--desk-accent) 28%, var(--border));
-  border-left: 3px solid var(--desk-accent);
   border-radius: 12px;
   background: var(--card);
   background-image: none;
