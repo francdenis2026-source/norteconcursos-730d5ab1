@@ -763,3 +763,39 @@
 .app-shell[data-area="student"] .edital-edition h3 { color: #ffffff; }
 .app-shell[data-area="student"] .edital-edition-foot { border-top-color: rgb(168 202 203 / 24%); }
 .app-shell[data-area="student"] .edital-edition-foot > span:last-child { color: #a9e5da; }
+
+/* Compact hero: preserve hierarchy without wasting vertical space. */
+.app-shell[data-area="student"] .edital-modern-hero {
+  min-height: 0;
+  padding: 14px clamp(18px, 2.4vw, 30px);
+}
+.app-shell[data-area="student"] .edital-modern-hero .edital-eyebrow {
+  margin-bottom: 4px;
+  font-size: 9px;
+}
+.app-shell[data-area="student"] .edital-modern-hero h1 {
+  font-size: clamp(26px, 2.8vw, 38px);
+  line-height: 1.02;
+}
+.app-shell[data-area="student"] .edital-modern-hero p {
+  max-width: 68ch;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.34;
+}
+.app-shell[data-area="student"] .edital-modern-hero .page-hero__stats {
+  gap: 6px;
+  margin-top: 9px;
+}
+.app-shell[data-area="student"] .edital-modern-hero .hero-stat {
+  min-width: 108px;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+.app-shell[data-area="student"] .edital-modern-hero .hero-stat strong {
+  font-size: 20px;
+  line-height: 1.05;
+}
+.app-shell[data-area="student"] .edital-modern-hero .hero-stat span {
+  font-size: 9px;
+}
