@@ -129,6 +129,25 @@ update public.official_exam_questions q set
 from gabarito
 where q.contest_name='Polícia Civil do Acre' and q.exam_year=2017 and q.item_number=gabarito.item_number;
 
+with src as (select id from public.content_sources where url='https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf'),
+edition as (select id from public.syllabus_editions where contest_name='Polícia Civil do Acre' and role_name='Agente de Polícia Civil' and contest_year=2017),
+topic_map(item_from,item_to,discipline) as (values
+  (1,10,'Língua Portuguesa'),(11,15,'Noções de Informática'),(16,20,'Raciocínio Lógico'),
+  (21,30,'Noções de Direito Administrativo'),(31,40,'Noções de Direito Constitucional'),
+  (41,50,'Noções de Direito Penal'),(51,60,'Noções de Direito Processual Penal'),
+  (61,70,'Legislação de Direito Penal e Processual Penal Especial'),(71,80,'Noções de Medicina Legal')
+),
+gabarito(item_number,official_answer) as (values
+(1,'C'),(2,'A'),(3,'C'),(4,'A'),(5,'E'),(6,'D'),(7,'C'),(8,'A'),(9,'A'),(10,'D'),
+(11,'B'),(12,'A'),(13,'A'),(14,'D'),(15,'A'),
+(16,'B'),(17,'A'),(18,'A'),(19,'B'),(20,'E'),
+(21,'A'),(22,'D'),(23,'E'),(24,'C'),(25,'E'),(26,'X'),(27,'E'),(28,'C'),(29,'A'),(30,'B'),
+(31,'E'),(32,'B'),(33,'B'),(34,'E'),(35,'A'),(36,'C'),(37,'E'),(38,'A'),(39,'C'),(40,'D'),
+(41,'B'),(42,'B'),(43,'D'),(44,'A'),(45,'B'),(46,'C'),(47,'C'),(48,'B'),(49,'E'),(50,'C'),
+(51,'D'),(52,'C'),(53,'D'),(54,'C'),(55,'C'),(56,'C'),(57,'C'),(58,'C'),(59,'B'),(60,'B'),
+(61,'E'),(62,'C'),(63,'B'),(64,'A'),(65,'B'),(66,'C'),(67,'B'),(68,'B'),(69,'D'),(70,'B'),
+(71,'C'),(72,'D'),(73,'E'),(74,'D'),(75,'B'),(76,'A'),(77,'D'),(78,'D'),(79,'A'),(80,'D')
+)
 insert into public.official_exam_questions
   (question_source_id,answer_key_source_id,syllabus_topic_id,contest_name,exam_year,career_name,exam_board,
    item_number,subject,question_text,raw_extraction,official_answer,source_page,content_status,
