@@ -59,6 +59,17 @@ const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
+const PCAC_IDECAN_PRIORITY = [
+  { subject: "Direito Penal", level: "Muito alta", reason: "teoria do crime, crimes contra a pessoa, patrimônio e administração pública", filter: "Direito Penal" },
+  { subject: "Direito Processual Penal", level: "Muito alta", reason: "inquérito, ação penal, prisões, provas e cadeia de custódia", filter: "Direito Processual Penal" },
+  { subject: "Tecnologia da Informação", level: "Alta", reason: "segurança da informação, redes, phishing, malware e crimes digitais", filter: "Tecnologia da Informação" },
+  { subject: "Língua Portuguesa", level: "Alta", reason: "interpretação, sintaxe, concordância, regência, crase e pontuação", filter: "Língua Portuguesa" },
+  { subject: "Raciocínio Lógico", level: "Alta", reason: "proposições, equivalências, negações, conjuntos e probabilidade", filter: "Raciocínio Lógico-Matemático" },
+  { subject: "Direito Constitucional", level: "Média", reason: "direitos fundamentais, segurança pública e organização do Estado", filter: "Direito Constitucional" },
+  { subject: "Direito Administrativo", level: "Média", reason: "atos, poderes, agentes, responsabilidade e improbidade", filter: "Direito Administrativo" },
+  { subject: "Legislação Institucional", level: "Muito alta", reason: "Lei Orgânica Nacional, PC-AC e estatuto funcional", filter: "Legislação Institucional" },
+];
+
 export const Route = createFileRoute("/dashboard/pc-acre-edital")({
   component: PcAcreEditalVerticalizadoPage,
   validateSearch: (s: Record<string, unknown>): { cargo?: string | undefined } => ({
@@ -538,6 +549,30 @@ function PcAcreEditalVerticalizadoPage() {
           </CardContent>
         </Card>
       )}
+
+      <Card className="pcac-edital-card pcac-priority-card">
+        <CardHeader>
+          <CardTitle className="text-base">Onde concentrar seu tempo</CardTitle>
+          <CardDescription>
+            Ordem de estudo baseada no histórico recente da IDECAN em concursos policiais. Comece pelo topo e avance conforme o seu progresso.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-2 sm:grid-cols-2">
+          {PCAC_IDECAN_PRIORITY.map((item, index) => (
+            <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-semibold">{index + 1}. {item.subject}</span>
+                <Badge variant={item.level === "Muito alta" ? "default" : "outline"}>{item.level}</Badge>
+              </div>
+              <p className="mt-1 text-xs text-muted-foreground">{item.reason}</p>
+              <div className="mt-2 flex gap-2">
+                <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-primary hover:bg-primary/10">Treinar</Link>
+                <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-muted-foreground hover:bg-muted">Estudar teoria</Link>
+              </div>
+            </div>
+          ))}
+        </CardContent>
+      </Card>
 
       <Card className="pcac-edital-card pcac-edital-content">
         <CardHeader>
