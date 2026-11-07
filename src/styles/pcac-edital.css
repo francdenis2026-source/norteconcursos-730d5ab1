@@ -47,3 +47,9 @@
   .pcac-edital-page .pcac-edital-card > [data-slot="card-header"],
   .pcac-edital-page .pcac-edital-card > [data-slot="card-content"] { padding-inline: 12px; }
 }
+
+.pcac-edital-content [data-slot="accordion-content"] > ul { display: grid; gap: 8px; }
+.pcac-edital-content [data-slot="accordion-content"] > ul > li { border-radius: 10px; background: color-mix(in srgb, var(--card) 84%, var(--primary) 6%); }
+.pcac-edital-content [data-slot="accordion-content"] > ul > li .rounded-md.border { border-color: color-mix(in srgb, var(--primary) 22%, var(--border)); }
+.pcac-edital-content .bg-primary\/5 { background: color-mix(in srgb, var(--primary) 7%, transparent); }
+.pcac-priority-card { border-color: color-mix(in srgb, var(--primary) 30%, var(--border)); }
