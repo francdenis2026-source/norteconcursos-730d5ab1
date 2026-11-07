@@ -742,3 +742,15 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__primary:hover {
   background: #075985 !important;
 }
+
+/* Replace the dashboard's violet accent with a calmer professional teal. */
+.app-shell[data-area="student"] .student-overview {
+  --home-violet: #69b8c3 !important;
+  --saas-violet: #2f8790 !important;
+  --desk-violet: #4b9ca6 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .student-overview {
+  --home-violet: #0f766e !important;
+  --saas-violet: #0f766e !important;
+  --desk-violet: #16747b !important;
+}
