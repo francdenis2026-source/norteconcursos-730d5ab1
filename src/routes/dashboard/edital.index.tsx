@@ -81,6 +81,7 @@ function EditalPage() {
     };
   }, [authLoading, user?.id, real, revision]);
   const edition = editions.find((e) => e.id === selected);
+  const editionId = edition?.id;
   React.useEffect(() => {
     if (!editionId) return;
     try { setCompleted(JSON.parse(localStorage.getItem(`norte-edital-progress:${editionId}`) ?? "{}")); } catch { setCompleted({}); }
@@ -92,7 +93,6 @@ function EditalPage() {
       return next;
     });
   };
-  const editionId = edition?.id;
   const examQuestions = React.useMemo(
     () => (edition ? editalExamQuestions(catalog, edition) : []),
     [catalog, edition],
