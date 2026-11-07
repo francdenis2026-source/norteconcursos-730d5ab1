@@ -237,10 +237,10 @@ function DisciplineAccordionItem({
           {header}
           {extras}
         </div>
-        <StatusButton
-          status={progress[pcAcVerticalItemId(block, discipline.id)]}
+        <span onClick={(event) => event.stopPropagation()}><StatusButton
+          status={progress[pcAcVerticalItemId(block, discipline.id)]
           onClick={() => onToggleTopic(discipline.id, undefined)}
-        />
+        /></span>
       </li>
     );
   }
@@ -249,7 +249,7 @@ function DisciplineAccordionItem({
     <li className="rounded-lg border bg-background/60">
       <Accordion type="single" collapsible>
         <AccordionItem value={value} className="border-0">
-          <AccordionTrigger className="px-3 py-2.5 hover:no-underline">{header}</AccordionTrigger>
+          <AccordionTrigger onClick={(event) => event.stopPropagation()} className="px-3 py-2.5 hover:no-underline">{header}</AccordionTrigger>
           <AccordionContent className="px-3 pb-3">
             {extras}
             <ul className="mt-2 space-y-1.5">
