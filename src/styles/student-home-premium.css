@@ -754,3 +754,15 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   --saas-violet: #0f766e !important;
   --desk-violet: #16747b !important;
 }
+
+/* Dashboard study cards use neutral slate surfaces instead of purple panels. */
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  border-left-color: #4b9aa4 !important;
+  background: #1d303a !important;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 18%) !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  border-left-color: #2f8790 !important;
+  background: #ffffff !important;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 7%) !important;
+}
