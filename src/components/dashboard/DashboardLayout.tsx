@@ -150,28 +150,125 @@ const MENU: MenuItem[] = [
   },
   { group: "Planejamento", label: "Meu painel", icon: Radar, href: "/dashboard", primary: true },
   { group: "Planejamento", label: "Meu plano", icon: Sparkles, href: "/dashboard/study-coach" },
-  { group: "Planejamento", label: "Agenda de estudos", icon: CalendarClock, href: "/dashboard/cronograma" },
-  { group: "Desempenho", label: "Minha evolução", icon: ClipboardList, href: "/dashboard/study-plan" },
-  { group: "Central de Estudos", label: "Visão geral", icon: GraduationCap, href: "/dashboard/study-tools" },
-  { group: "Central de Estudos", label: "Anotações", icon: NotebookPen, href: "/dashboard/study-tools", search: { tool: "handwritten" } },
-  { group: "Central de Estudos", label: "Guia de estudos", icon: BookOpenCheck, href: "/dashboard/study-tools", search: { tool: "guide" } },
-  { group: "Central de Estudos", label: "Simplificar", icon: Sparkles, href: "/dashboard/study-tools", search: { tool: "simplify" } },
-  { group: "Central de Estudos", label: "Comparar conteúdos", icon: Scale, href: "/dashboard/study-tools", search: { tool: "compare" } },
-  { group: "Central de Estudos", label: "Testar conhecimentos", icon: BrainCircuit, href: "/dashboard/study-tools", search: { tool: "quiz" } },
-  { group: "Central de Estudos", label: "Meus assuntos", icon: BookOpen, href: "/dashboard/disciplinas" },
-  { group: "Material didático", label: "Catálogo de materiais", icon: Library, href: "/dashboard/material" },
-  { group: "Material didático", label: "Leis e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
+  {
+    group: "Planejamento",
+    label: "Agenda de estudos",
+    icon: CalendarClock,
+    href: "/dashboard/cronograma",
+  },
+  {
+    group: "Desempenho",
+    label: "Minha evolução",
+    icon: ClipboardList,
+    href: "/dashboard/study-plan",
+  },
+  {
+    group: "Central de Estudos",
+    label: "Visão geral",
+    icon: GraduationCap,
+    href: "/dashboard/study-tools",
+  },
+  {
+    group: "Central de Estudos",
+    label: "Anotações",
+    icon: NotebookPen,
+    href: "/dashboard/study-tools",
+    search: { tool: "handwritten" },
+  },
+  {
+    group: "Central de Estudos",
+    label: "Guia de estudos",
+    icon: BookOpenCheck,
+    href: "/dashboard/study-tools",
+    search: { tool: "guide" },
+  },
+  {
+    group: "Central de Estudos",
+    label: "Simplificar",
+    icon: Sparkles,
+    href: "/dashboard/study-tools",
+    search: { tool: "simplify" },
+  },
+  {
+    group: "Central de Estudos",
+    label: "Comparar conteúdos",
+    icon: Scale,
+    href: "/dashboard/study-tools",
+    search: { tool: "compare" },
+  },
+  {
+    group: "Central de Estudos",
+    label: "Testar conhecimentos",
+    icon: BrainCircuit,
+    href: "/dashboard/study-tools",
+    search: { tool: "quiz" },
+  },
+  {
+    group: "Central de Estudos",
+    label: "Meus assuntos",
+    icon: BookOpen,
+    href: "/dashboard/disciplinas",
+  },
+  {
+    group: "Material didático",
+    label: "Catálogo de materiais",
+    icon: Library,
+    href: "/dashboard/material",
+  },
+  {
+    group: "Material didático",
+    label: "Leis e súmulas",
+    icon: Scale,
+    href: "/dashboard/library",
+    search: { collection: "laws" },
+  },
   { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
   { group: "Material didático", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
-  { group: "Material didático", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
-  { group: "Material didático", label: "Videoaulas e podcasts", icon: PlayCircle, href: "/dashboard/media" },
-  { group: "Material didático", label: "Dicionário de estudo", icon: BookA, href: "/dashboard/dicionario" },
-  { group: "Central de Estudos", label: "Redação para concursos", icon: PenLine, href: "/dashboard/essays" },
-  { group: "Questões", label: "Treinador de questões", icon: BrainCircuit, href: "/dashboard/question-trainer", primary: true },
+  {
+    group: "Material didático",
+    label: "Calculadora penal",
+    icon: Scale,
+    href: "/dashboard/calculadora-penal",
+  },
+  {
+    group: "Material didático",
+    label: "Videoaulas e podcasts",
+    icon: PlayCircle,
+    href: "/dashboard/media",
+  },
+  {
+    group: "Material didático",
+    label: "Dicionário de estudo",
+    icon: BookA,
+    href: "/dashboard/dicionario",
+  },
+  {
+    group: "Central de Estudos",
+    label: "Redação para concursos",
+    icon: PenLine,
+    href: "/dashboard/essays",
+  },
+  {
+    group: "Questões",
+    label: "Treinador de questões",
+    icon: BrainCircuit,
+    href: "/dashboard/question-trainer",
+    primary: true,
+  },
   { group: "Questões", label: "Caderno de erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
-  { group: "Questões", label: "Coleções de questões", icon: BookOpen, href: "/dashboard/notebooks" },
-  { group: "Questões", label: "Acervo de questões", icon: BookMarked, href: "/dashboard/question-bank" },
+  {
+    group: "Questões",
+    label: "Coleções de questões",
+    icon: BookOpen,
+    href: "/dashboard/notebooks",
+  },
+  {
+    group: "Questões",
+    label: "Acervo de questões",
+    icon: BookMarked,
+    href: "/dashboard/question-bank",
+  },
   {
     group: "Questões",
     label: "Resolver com IA",
@@ -179,9 +276,25 @@ const MENU: MenuItem[] = [
     href: "/dashboard/ai-solver",
     soon: !AI_ENABLED,
   },
-  { group: "Provas", label: "Simulados", icon: Trophy, href: "/dashboard/mock-exams", primary: true },
-  { group: "Provas", label: "Provas realizadas e diagnóstico", icon: FileStack, href: "/dashboard/student-exams" },
-  { group: "Desempenho", label: "Painel de desempenho", icon: Layers, href: "/dashboard/performance" },
+  {
+    group: "Provas",
+    label: "Simulados",
+    icon: Trophy,
+    href: "/dashboard/mock-exams",
+    primary: true,
+  },
+  {
+    group: "Provas",
+    label: "Provas realizadas e diagnóstico",
+    icon: FileStack,
+    href: "/dashboard/student-exams",
+  },
+  {
+    group: "Desempenho",
+    label: "Painel de desempenho",
+    icon: Layers,
+    href: "/dashboard/performance",
+  },
   { group: "Desempenho", label: "Histórico de estudos", icon: History, href: "/dashboard/history" },
   { group: "Desempenho", label: "Ranking", icon: Trophy, href: "/dashboard/ranking" },
   { group: "Desempenho", label: "Medalhas", icon: Medal, href: "/dashboard/medals" },
@@ -317,9 +430,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   // Depois que a tela principal já está pronta, baixa em segundo plano o código das seções mais
   // usadas, uma por vez, para o clique no menu abrir na hora. Respeita "economia de dados".
   React.useEffect(() => {
-    const connection = (navigator as Navigator & {
-      connection?: { saveData?: boolean; effectiveType?: string };
-    }).connection;
+    const connection = (
+      navigator as Navigator & {
+        connection?: { saveData?: boolean; effectiveType?: string };
+      }
+    ).connection;
     if (connection?.saveData || /(^|-)2g$/.test(connection?.effectiveType ?? "")) return;
     const sections = [
       "/dashboard/question-trainer",
@@ -369,11 +484,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => setIsDarkMode(getActiveTheme() === "dark"), []);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [studyContext, setStudyContext] = React.useState<{ discipline: string; topic: string } | null>(null);
+  const [studyContext, setStudyContext] = React.useState<{
+    discipline: string;
+    topic: string;
+  } | null>(null);
   React.useEffect(() => {
     const onContext = (event: Event) => {
       const detail = (event as CustomEvent<{ discipline?: string; topic?: string }>).detail;
-      if (detail?.discipline) setStudyContext({ discipline: detail.discipline, topic: detail.topic ?? "" });
+      if (detail?.discipline)
+        setStudyContext({ discipline: detail.discipline, topic: detail.topic ?? "" });
     };
     window.addEventListener("norte:study-context", onContext);
     return () => window.removeEventListener("norte:study-context", onContext);
@@ -390,14 +509,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const isAdmin = user?.role === "admin";
   const brandPath = location.pathname.replace(/\/+$/, "") || "/";
-  const isStudyReading = !isAdmin && (
-    location.pathname.startsWith("/dashboard/library/") ||
-    location.pathname.startsWith("/dashboard/legal-course/") ||
-    location.pathname.startsWith("/dashboard/trilhas")
-  );
-  const brandBg = isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
-    ? undefined
-    : BRAND_BG_ROUTES[brandPath] ?? "blue";
+  const isStudyReading =
+    !isAdmin &&
+    (location.pathname.startsWith("/dashboard/library/") ||
+      location.pathname.startsWith("/dashboard/legal-course/") ||
+      location.pathname.startsWith("/dashboard/trilhas"));
+  const brandBg =
+    isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
+      ? undefined
+      : (BRAND_BG_ROUTES[brandPath] ?? "blue");
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
   const items = React.useMemo(
     () =>
@@ -417,7 +537,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     navigate({ to: "/dashboard/admin-students", replace: true });
   }, [isAdmin, location.pathname, navigate]);
   const activeItem = activeNavigation(items, location.pathname, location.search);
-  const current = location.pathname === "/dashboard/study-tools" && location.search["context"] === "enem" && activeItem?.group === "ENEM" ? { ...activeItem, label: "Sessão de foco ENEM" } : activeItem;
+  const current =
+    location.pathname === "/dashboard/study-tools" &&
+    location.search["context"] === "enem" &&
+    activeItem?.group === "ENEM"
+      ? { ...activeItem, label: "Sessão de foco ENEM" }
+      : activeItem;
 
   React.useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -439,14 +564,26 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       load: () => MockService.getAchievements({ strict: true }),
       onSnapshot: setAchievements,
       onEarned: (achievement) => {
-        void supabase.channel("norte-achievements-public-v1").send({ type: "broadcast", event: "achievement", payload: { id: achievement.id, name: achievement.name } });
-        void import("@/components/dashboard/AchievementNotification").then(({ showAchievementNotification }) => {
-          if (!cancelled) showAchievementNotification(achievement);
-        }).catch(() => { /* The saved achievement remains available in the collection. */ });
+        void supabase.channel("norte-achievements-public-v1").send({
+          type: "broadcast",
+          event: "achievement",
+          payload: { id: achievement.id, name: achievement.name },
+        });
+        void import("@/components/dashboard/AchievementNotification")
+          .then(({ showAchievementNotification }) => {
+            if (!cancelled) showAchievementNotification(achievement);
+          })
+          .catch(() => {
+            /* The saved achievement remains available in the collection. */
+          });
       },
     });
-    void MockService.registerStudyVisit().then((v) => v ?? MockService.getUserStreak())
-      .then((s) => { if (!cancelled) setStreak(s); }).catch(() => {});
+    void MockService.registerStudyVisit()
+      .then((v) => v ?? MockService.getUserStreak())
+      .then((s) => {
+        if (!cancelled) setStreak(s);
+      })
+      .catch(() => {});
     const refresh = () => {
       if (document.visibilityState === "hidden" || !navigator.onLine) return;
       // Retain the last confirmed snapshot on failure; retry without overlapping requests.
@@ -584,11 +721,18 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         style={{ "--workspace-banner-art": `url("${workspaceBannerArt}")` } as React.CSSProperties}
         data-brand-bg={brandBg ?? "off"}
       >
-        {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true">{brandBg === "blue" && <TacticalClockBackdrop />}</div>}
+        {!isAdmin && brandBg && (
+          <div className="app-study-backdrop" aria-hidden="true">
+            {brandBg === "blue" && <TacticalClockBackdrop />}
+          </div>
+        )}
         {user && user.id !== "demo-user" && <ActivityTracker />}
         {!isAdmin && user && user.id !== "demo-user" && <StudyActivityTracker userId={user.id} />}
         <FocusReturnBar />
-        <aside className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`} data-collapsed={compactSidebar}>
+        <aside
+          className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`}
+          data-collapsed={compactSidebar}
+        >
           <div className="app-sidebar__head">
             <Link
               to="/dashboard"
@@ -613,7 +757,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             type="button"
             className="app-sidebar__search"
             onClick={() => (isStudyReading ? fullscreen.enter() : setPaletteOpen(true))}
-            aria-label={isStudyReading ? "Iniciar estudo cronometrado" : "Buscar área da plataforma"}
+            aria-label={
+              isStudyReading ? "Iniciar estudo cronometrado" : "Buscar área da plataforma"
+            }
           >
             {isStudyReading ? <Timer /> : <Search />}
             {!compactSidebar && (
@@ -653,7 +799,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     <Menu />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="left" menuMotion="drawer" className={`app-sheet${isAdmin ? "" : " student-navigation"}`}>
+                <SheetContent
+                  side="left"
+                  menuMotion="drawer"
+                  className={`app-sheet${isAdmin ? "" : " student-navigation"}`}
+                >
                   <SheetTitle className="sr-only">Menu principal</SheetTitle>
                   <div className="app-sidebar__head">
                     <NorteBrand light />
@@ -671,7 +821,18 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   </button>
                   {nav(false)}
                   <div className="app-sidebar__foot">
-                    {!isAdmin && <button type="button" className="workspace-focus-entry" onClick={() => { setMobileOpen(false); fullscreen.enter(); }}><Maximize aria-hidden="true" /> Expandir área de estudo</button>}
+                    {!isAdmin && (
+                      <button
+                        type="button"
+                        className="workspace-focus-entry"
+                        onClick={() => {
+                          setMobileOpen(false);
+                          fullscreen.enter();
+                        }}
+                      >
+                        <Maximize aria-hidden="true" /> Expandir área de estudo
+                      </button>
+                    )}
                     {userMenu(false)}
                   </div>
                 </SheetContent>
@@ -680,29 +841,64 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
-                <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : (current.group === "Questões" ? "Questões" : studentGroupLabel(current.group)))}</span>}
+                <span className="app-location__area">
+                  {isAdmin ? "Administração" : "Área do aluno"}
+                </span>{" "}
+                {current?.group && (!isAdmin || current.group !== "Administração") && (
+                  <span className="app-location__group">
+                    {studyContext
+                      ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}`
+                      : isAdmin
+                        ? current.group
+                        : current.group === "Questões"
+                          ? "Questões"
+                          : studentGroupLabel(current.group)}
+                  </span>
+                )}
               </div>
             </div>
 
-
-            {!isAdmin && current?.group === "Questões" && <QuestionHeaderProgress userId={user?.id} />}
+            {!isAdmin && current?.group === "Questões" && (
+              <QuestionHeaderProgress userId={user?.id} />
+            )}
 
             {location.pathname === "/dashboard/question-trainer" && (
-              <div className="trainer-setup-top-context" aria-label="Contexto da configuração do Treinador">
+              <div
+                className="trainer-setup-top-context"
+                aria-label="Contexto da configuração do Treinador"
+              >
                 <span className="trainer-setup-top-context__indicator" aria-hidden="true" />
                 <span className="trainer-setup-top-context__title">Treinador</span>
                 <span className="trainer-setup-top-context__separator">·</span>
                 <span className="trainer-setup-top-context__subtitle">Configuração da sessão</span>
-                <span className="trainer-setup-top-context__hint">Escolha os filtros e comece a praticar</span>
+                <span className="trainer-setup-top-context__hint">
+                  Escolha os filtros e comece a praticar
+                </span>
               </div>
             )}
 
-            {!isAdmin && <StudentTopNavigation items={items} pathname={location.pathname} search={location.search} />}
+            {!isAdmin && (
+              <StudentTopNavigation
+                items={items}
+                pathname={location.pathname}
+                search={location.search}
+              />
+            )}
 
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
-              {!isAdmin && <Hint content="Tela cheia"><button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia"><Maximize aria-hidden="true" /></button></Hint>}
+              {!isAdmin && (
+                <Hint content="Tela cheia">
+                  <button
+                    type="button"
+                    className="workspace-fullscreen-trigger"
+                    onClick={fullscreen.enter}
+                    aria-label="Expandir área de estudo em tela cheia"
+                  >
+                    <Maximize aria-hidden="true" />
+                  </button>
+                </Hint>
+              )}
               <button
                 type="button"
                 className="app-top-search"
@@ -736,15 +932,28 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
           </header>
 
-          {fullscreen.active && <div className="workspace-focus-controls no-print" role="toolbar" aria-label="Controles da tela cheia">
-            <Hint content={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>
-              <button type="button" onClick={toggleTheme} aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>{isDarkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
-            </Hint>
-            <Hint content="Restaurar visualização (Esc)">
-              <button type="button" onClick={fullscreen.exit} aria-label="Restaurar visualização"><Minimize aria-hidden="true" /></button>
-            </Hint>
-          </div>}
-
+          {fullscreen.active && (
+            <div
+              className="workspace-focus-controls no-print"
+              role="toolbar"
+              aria-label="Controles da tela cheia"
+            >
+              <Hint content={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>
+                <button
+                  type="button"
+                  onClick={toggleTheme}
+                  aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
+                >
+                  {isDarkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+                </button>
+              </Hint>
+              <Hint content="Restaurar visualização (Esc)">
+                <button type="button" onClick={fullscreen.exit} aria-label="Restaurar visualização">
+                  <Minimize aria-hidden="true" />
+                </button>
+              </Hint>
+            </div>
+          )}
 
           <main
             id="dashboard-content"
@@ -755,15 +964,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             className="app-content"
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >
-            <div className="app-content__inner">
-              {children}
-            </div>
+            <div className="app-content__inner">{children}</div>
             {showsReadingControl(location.pathname) && <ReadingSizeControl />}
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>
-                Desenvolvido por <strong className="text-foreground">Franc Denis</strong> ·
-                Feijó-AC
+                Desenvolvido por <strong className="text-foreground">Franc Denis</strong> · Feijó-AC
               </span>
             </footer>
           </main>
@@ -808,7 +1014,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           onLeave={() => void reallySignOut()}
         />
 
-        <NavigationCommand open={paletteOpen} onOpenChange={setPaletteOpen} items={items} userId={user?.id ?? "anonymous"} pathname={location.pathname} search={location.search} onNavigate={go} />
+        <NavigationCommand
+          open={paletteOpen}
+          onOpenChange={setPaletteOpen}
+          items={items}
+          userId={user?.id ?? "anonymous"}
+          pathname={location.pathname}
+          search={location.search}
+          onNavigate={go}
+        />
       </div>
     </TooltipProvider>
   );

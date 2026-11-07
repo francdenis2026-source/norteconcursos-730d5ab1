@@ -78,27 +78,37 @@
 }
 /* Cartões (acessos rápidos, métricas, seções) — fundo índigo com gradiente sutil
    em vez do cinza-azulado quase neutro que havia antes. */
-:root.dark .app-shell[data-area="student"] .student-desk.student-overview :is(
-  .student-hub__shortcuts > a,
-  .student-home__metric,
-  .student-home__card[data-accent]
-) {
+:root.dark
+  .app-shell[data-area="student"]
+  .student-desk.student-overview
+  :is(.student-hub__shortcuts > a, .student-home__metric, .student-home__card[data-accent]) {
   background: linear-gradient(150deg, #212a63 0%, #181c47 100%);
   border-color: var(--home-line);
-  box-shadow: 0 10px 26px -20px rgb(5 6 20 / 70%), inset 0 1px 0 rgb(255 255 255 / 4%);
+  box-shadow:
+    0 10px 26px -20px rgb(5 6 20 / 70%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
 }
-:root.dark .app-shell[data-area="student"] .student-desk.student-overview :is(
-  .student-hub__shortcuts > a:hover,
-  .student-home__metric:hover
-) {
+:root.dark
+  .app-shell[data-area="student"]
+  .student-desk.student-overview
+  :is(.student-hub__shortcuts > a:hover, .student-home__metric:hover) {
   border-color: color-mix(in srgb, var(--home-blue) 55%, var(--home-line));
-  box-shadow: 0 14px 30px -18px rgb(5 6 20 / 78%), inset 0 1px 0 rgb(255 255 255 / 6%);
+  box-shadow:
+    0 14px 30px -18px rgb(5 6 20 / 78%),
+    inset 0 1px 0 rgb(255 255 255 / 6%);
 }
-:root.dark .app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact {
+:root.dark
+  .app-shell[data-area="student"]
+  .student-desk.student-overview
+  .platform-question-counts--compact {
   background: linear-gradient(150deg, #1d2355, #161a44);
   border-color: var(--home-line);
 }
-:root.dark .app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts__grid > * {
+:root.dark
+  .app-shell[data-area="student"]
+  .student-desk.student-overview
+  .platform-question-counts__grid
+  > * {
   background: color-mix(in srgb, var(--home-surface-2) 85%, transparent);
   border-color: var(--home-line);
 }
@@ -111,7 +121,10 @@
   border-color: color-mix(in srgb, var(--home-gold) 42%, var(--home-line));
   border-left-color: var(--home-gold);
 }
-:root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-home__next-topic {
+:root.dark
+  .app-shell[data-area="student"]
+  .student-desk.student-overview
+  .student-home__next-topic {
   background: color-mix(in srgb, var(--home-cyan) 10%, #1d2355);
   border-color: color-mix(in srgb, var(--home-cyan) 32%, var(--home-line));
 }
@@ -131,13 +144,19 @@
 .app-shell[data-area="student"] .student-desk.student-overview .student-hub__masthead h1 {
   font-size: clamp(25px, 2.3vw, 34px) !important;
 }
-.app-shell[data-area="student"] .student-desk.student-overview .student-hub__hero-copy > p:last-of-type {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  .student-hub__hero-copy
+  > p:last-of-type {
   font-size: 14px !important;
 }
 .app-shell[data-area="student"] .student-desk.student-overview .student-desk__section-heading h2 {
   font-size: 16px;
 }
-.app-shell[data-area="student"] .student-desk.student-overview .student-desk__section-heading > span {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  .student-desk__section-heading
+  > span {
   font-size: 12.5px;
 }
 .app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts strong {
@@ -161,7 +180,10 @@
 .app-shell[data-area="student"] .student-desk.student-overview .student-desk__next p {
   font-size: 13px;
 }
-.app-shell[data-area="student"] .student-desk.student-overview .student-desk__next .student-home__primary {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  .student-desk__next
+  .student-home__primary {
   font-size: 13.5px;
   min-height: 44px;
 }
@@ -171,12 +193,14 @@
 .app-shell[data-area="student"] .student-desk.student-overview .student-home__section-title p {
   font-size: 13px;
 }
-.app-shell[data-area="student"] .student-desk.student-overview :is(
-  .student-home__quiet,
-  .student-home__empty p,
-  .student-home__signals small,
-  .student-home__review-count
-) {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  :is(
+    .student-home__quiet,
+    .student-home__empty p,
+    .student-home__signals small,
+    .student-home__review-count
+  ) {
   font-size: 13px;
 }
 .app-shell[data-area="student"] .student-desk.student-overview .student-home__text-link {
@@ -196,10 +220,18 @@
   font-size: 13px;
   font-weight: 700;
 }
-.app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact > header h2 {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  .platform-question-counts--compact
+  > header
+  h2 {
   font-size: 13px;
 }
-.app-shell[data-area="student"] .student-desk.student-overview .platform-question-counts--compact > header span {
+.app-shell[data-area="student"]
+  .student-desk.student-overview
+  .platform-question-counts--compact
+  > header
+  span {
   font-size: 11px;
 }
 @media (max-width: 700px) {
