@@ -360,3 +360,170 @@
 .edital-filter-tabs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; grid-column: 1 / -1; margin-top: 4px; }
 .edital-filter-tabs button { min-height: 34px; padding: 6px 12px; border: 1px solid var(--student-border); border-radius: 999px; background: var(--student-surface-soft); color: var(--student-muted); font-size: 12px; font-weight: 700; }
 .edital-filter-tabs button:hover, .edital-filter-tabs button.is-active { border-color: var(--student-blue); background: color-mix(in srgb, var(--student-blue) 16%, var(--student-surface)); color: var(--student-ink); }
+
+/* NorteConcursos edital workspace refresh: use the full canvas with a compact study rhythm. */
+.app-shell[data-area="student"] .app-content {
+  padding: 12px clamp(12px, 2vw, 28px) 22px;
+}
+
+.app-shell[data-area="student"] .app-content__inner {
+  width: 100%;
+  max-width: none;
+}
+
+.app-shell[data-area="student"] .edital-workspace {
+  width: 100%;
+  max-width: none !important;
+  display: grid;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.app-shell[data-area="student"] .edital-heading {
+  min-height: 0 !important;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgb(92 145 192 / 35%) !important;
+  background: linear-gradient(118deg, #173451 0%, #245b86 58%, #1f766f 100%);
+  color: #f7fbff;
+  box-shadow: 0 10px 24px rgb(24 52 82 / 14%) !important;
+}
+
+.app-shell[data-area="student"] .edital-heading h1,
+.app-shell[data-area="student"] .edital-heading p,
+.app-shell[data-area="student"] .edital-heading .edital-eyebrow {
+  color: #f7fbff;
+}
+
+.app-shell[data-area="student"] .edital-heading h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.1;
+}
+
+.app-shell[data-area="student"] .edital-heading p {
+  max-width: 75ch;
+  color: rgb(232 242 251 / 78%);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.app-shell[data-area="student"] .edital-heading .page-hero__stats {
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.app-shell[data-area="student"] .edital-heading .hero-stat {
+  min-width: 116px;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 10px;
+  background: rgb(4 20 36 / 25%);
+}
+
+.app-shell[data-area="student"] .edital-heading .hero-stat strong,
+.app-shell[data-area="student"] .edital-heading .hero-stat span {
+  color: #f7fbff;
+}
+
+.app-shell[data-area="student"] .edital-heading-icon { display: none; }
+
+.app-shell[data-area="student"] .edital-selected {
+  padding: 15px 17px;
+  gap: 7px;
+  border-radius: 14px;
+  border-color: var(--student-line);
+  background: var(--student-surface);
+  box-shadow: 0 8px 22px rgb(24 52 82 / 9%);
+}
+
+.app-shell[data-area="student"] .edital-selected > h2 {
+  margin-top: 8px;
+  font-size: clamp(19px, 2vw, 27px);
+  line-height: 1.15;
+}
+
+.app-shell[data-area="student"] .edital-selected > p { margin-top: 1px; }
+
+.app-shell[data-area="student"] .edital-selected [role="region"] {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--student-blue) 26%, var(--student-line));
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--student-blue) 6%, var(--student-surface));
+}
+
+.app-shell[data-area="student"] .edital-selected [role="region"] p { margin-block: 4px; line-height: 1.45; }
+
+.app-shell[data-area="student"] .edital-workspace > section[aria-label="Cobertura do edital"] {
+  gap: 8px;
+}
+
+.app-shell[data-area="student"] .edital-workspace > section[aria-label="Cobertura do edital"] > div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-color: var(--student-line);
+  background: var(--student-surface);
+  box-shadow: 0 5px 14px rgb(24 52 82 / 6%);
+}
+
+.app-shell[data-area="student"] .edital-workspace > section[aria-label="Cobertura do edital"] p.text-xl {
+  font-size: 18px;
+}
+
+.app-shell[data-area="student"] .edital-workspace [data-slot="card"] {
+  border-radius: 14px;
+}
+
+.app-shell[data-area="student"] .edital-workspace [data-slot="card-header"],
+.app-shell[data-area="student"] .edital-workspace [data-slot="card-content"] {
+  padding: 13px 15px;
+}
+
+.app-shell[data-area="student"] .edital-workspace [data-slot="card-title"] {
+  font-size: 17px;
+}
+
+.app-shell[data-area="student"] .edital-progress-panel {
+  margin-bottom: 9px;
+  padding: 9px 11px;
+}
+
+.app-shell[data-area="student"] .edital-workspace [data-slot="accordion-item"] {
+  margin-block: 5px;
+  overflow: hidden;
+  border-color: var(--student-line);
+  border-radius: 10px;
+  background: var(--student-surface-soft);
+}
+
+.app-shell[data-area="student"] .edital-workspace [data-slot="accordion-trigger"] {
+  min-height: 42px;
+  padding: 9px 12px;
+  font-size: 13px;
+  background: var(--student-surface-soft);
+}
+
+.app-shell[data-area="student"] .edital-topic-link {
+  min-height: 42px;
+  gap: 10px;
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.app-shell[data-area="student"] .edital-check {
+  width: 21px;
+  height: 21px;
+  flex-basis: 21px;
+}
+
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .app-content { padding: 10px 10px 18px; }
+  .app-shell[data-area="student"] .edital-heading { padding: 14px; }
+  .app-shell[data-area="student"] .edital-selected { padding: 12px; }
+  .app-shell[data-area="student"] .edital-workspace > section[aria-label="Cobertura do edital"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .edital-workspace [data-slot="card-header"],
+  .app-shell[data-area="student"] .edital-workspace [data-slot="card-content"] { padding-inline: 12px; }
+}
