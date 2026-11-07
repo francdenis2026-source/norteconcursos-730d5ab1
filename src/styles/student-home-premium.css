@@ -428,3 +428,53 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   color: #17655e;
   background: #e1f4ef;
 }
+
+/* Dark mode final contrast pass. */
+:root.dark .app-shell[data-area="student"] .edital-modern-hero {
+  color: #f5f8fa !important;
+  background:
+    linear-gradient(105deg, rgb(18 34 46 / 98%), rgb(28 62 70 / 94%)),
+    url('/media/hero/faixa-tatica.webp') right center / cover no-repeat !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-modern-hero h1 { color: #ffffff !important; }
+:root.dark .app-shell[data-area="student"] .edital-modern-hero p { color: #d4e3e6 !important; }
+:root.dark .app-shell[data-area="student"] .edital-modern-hero .edital-eyebrow { color: #9be3d8 !important; }
+:root.dark .app-shell[data-area="student"] .edital-modern-hero .hero-stat {
+  border-color: #587985 !important;
+  background: #203743 !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-modern-hero .hero-stat :is(strong, span) {
+  color: #f5fbfb !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-catalog {
+  color: #edf5f6 !important;
+  background: #1b303c !important;
+  border-color: #54717d !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-catalog-intro h2 { color: #ffffff !important; }
+:root.dark .app-shell[data-area="student"] .edital-catalog-intro p,
+:root.dark .app-shell[data-area="student"] .edital-catalog > [role="status"] { color: #c4d7db !important; }
+:root.dark .app-shell[data-area="student"] .edital-catalog-filters label { color: #cfe3e6 !important; }
+:root.dark .app-shell[data-area="student"] .edital-catalog-filters :is(input, select) {
+  color: #f4f9fa !important;
+  background: #142631 !important;
+  border-color: #65818b !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-catalog-filters input::placeholder { color: #a8bec4 !important; }
+:root.dark .app-shell[data-area="student"] .edital-catalog > .edital-note {
+  color: #c9dcdf !important;
+  background: #24434d !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-edition {
+  color: #f5f8f9 !important;
+  background: #203743 !important;
+  border-color: #5d7d88 !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-edition h3 { color: #ffffff !important; }
+:root.dark .app-shell[data-area="student"] .edital-edition-meta span,
+:root.dark .app-shell[data-area="student"] .edital-edition > p,
+:root.dark .app-shell[data-area="student"] .edital-edition-foot > span:first-child {
+  color: #cbdde0 !important;
+}
+:root.dark .app-shell[data-area="student"] .edital-edition-foot { border-top-color: #54717d !important; }
+:root.dark .app-shell[data-area="student"] .edital-edition-foot > span:last-child { color: #9ce4d8 !important; }
