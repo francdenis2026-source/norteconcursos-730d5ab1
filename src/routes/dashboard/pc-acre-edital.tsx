@@ -186,7 +186,7 @@ function DisciplineStudyLinks({
       {videos.map((video) => {
         const href = video.id.startsWith("PL") ? "https://www.youtube.com/playlist?list=" + video.id : "https://www.youtube.com/watch?v=" + video.id;
         return (
-          <a key={video.id} href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10">
+          <a key={video.id} href={href} target="_blank" rel="noreferrer" className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10">
             <PlayCircle className="h-3 w-3" aria-hidden="true" />
             Vídeo{video.channel ? " · " + video.channel : ""}
           </a>
