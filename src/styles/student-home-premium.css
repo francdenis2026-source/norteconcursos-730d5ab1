@@ -313,3 +313,12 @@ body.light .app-shell[data-area="student"] .edital-edition-foot > span:last-chil
 [data-theme="light"] .app-shell[data-area="student"] .edital-edition-foot > span:last-child {
   color: #14796f;
 }
+
+/* Replace legacy side accents with a quiet full-frame border. */
+:root.dark .app-shell[data-area="student"] #dashboard-content
+  :is(.page-hero,.tactical-feature-hero,.catalog-command-hero,.study-assistant-hero,.exam-simulator-hero,.trainer-workbench-hero,.library-header,.edital-heading,.edital-topic-heading,.ranking-glass-header,.video-study-page__header) {
+  border-left: 1px solid var(--student-border-strong) !important;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  border-left: 1px solid #405174 !important;
+}
