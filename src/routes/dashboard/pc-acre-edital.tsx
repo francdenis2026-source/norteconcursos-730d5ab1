@@ -59,6 +59,28 @@ const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
+const PCAC_DISCIPLINE_GUIDE: Record<string, string> = {
+  "Língua Portuguesa": "Interpretação, tipologia textual, coesão, coerência, sintaxe, concordância, regência, crase, pontuação e reescrita.",
+  "Raciocínio Lógico": "Proposições, conectivos, equivalências, negações, argumentação, conjuntos, análise combinatória, probabilidade e gráficos.",
+  "Raciocínio Lógico-Matemático": "Lógica proposicional, porcentagem, razão, proporção, conjuntos, sequências, combinatória, probabilidade e interpretação de dados.",
+  "Informática": "Windows e Linux, editores de texto, planilhas, internet, e-mail, nuvem, segurança da informação e redes.",
+  "Tecnologia da Informação": "Segurança cibernética, malware, phishing, autenticação, criptografia, redes, LGPD, crimes digitais e resposta a incidentes.",
+  "Direito Penal": "Aplicação da lei penal, teoria do crime, concurso de pessoas, penas, crimes contra a pessoa, patrimônio e administração pública.",
+  "Direito Processual Penal": "Inquérito, ação penal, competência, provas, prisões, medidas cautelares, procedimentos, recursos e cadeia de custódia.",
+  "Direito Constitucional": "Princípios fundamentais, direitos e garantias, organização do Estado, poderes, segurança pública e controle de constitucionalidade.",
+  "Direito Administrativo": "Atos, poderes, agentes públicos, organização administrativa, responsabilidade civil, licitações, contratos e improbidade.",
+  "Legislação Institucional": "Lei Orgânica Nacional das Polícias Civis, legislação da PC-AC, estatuto dos servidores, deveres, direitos e regime disciplinar.",
+  "Direitos Humanos": "Tratados, dignidade, igualdade, grupos vulneráveis, uso da força, segurança pública e proteção internacional.",
+  "Contabilidade": "Patrimônio, escrituração, contas, demonstrações contábeis, análise financeira e princípios de contabilidade.",
+  "Estatística": "População e amostra, tabelas, gráficos, medidas de posição, dispersão, probabilidade e análise de dados.",
+  "Arquivologia": "Gestão documental, classificação, avaliação, protocolo, arquivo corrente, intermediário e permanente.",
+  "Análise de Dados e Informações": "Coleta, tratamento, validação, indicadores, correlação, visualização e interpretação para investigação.",
+  "Administração": "Funções administrativas, planejamento, organização, direção, controle, gestão pública e processos.",
+  "Realidade do Acre": "História, formação territorial, Revolução Acreana, geografia, economia, cultura, povos indígenas e segurança pública.",
+  "Criminalística": "Local de crime, vestígios, cadeia de custódia, documentação pericial e métodos de investigação.",
+  "Medicina Legal": "Traumatologia, tanatologia, sexologia, toxicologia, identificação e psicopatologia forense.",
+  "Ciências Forenses": "Vestígios, identificação, perícia, genética, química, balística, documentoscopia e cadeia de custódia.",
+};
 const PCAC_IDECAN_PRIORITY = [
   { subject: "Direito Penal", level: "Muito alta", reason: "teoria do crime, crimes contra a pessoa, patrimônio e administração pública", filter: "Direito Penal" },
   { subject: "Direito Processual Penal", level: "Muito alta", reason: "inquérito, ação penal, prisões, provas e cadeia de custódia", filter: "Direito Processual Penal" },
@@ -200,7 +222,10 @@ function DisciplineAccordionItem({
 
   const extras = (
     <>
-      {discipline.note && <p className="mt-1 text-xs text-muted-foreground">{discipline.note}</p>}
+      <div className="mt-2 rounded-md border border-primary/20 bg-primary/5 p-2.5">
+        <p className="text-[10px] font-bold uppercase tracking-wide text-primary">Conteúdo cobrado</p>
+        <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{PCAC_DISCIPLINE_GUIDE[discipline.name] ?? discipline.note ?? "Consulte os itens detalhados do edital nesta disciplina."}</p>
+      </div>
       <DisciplineStudyLinks disciplineId={discipline.id} cargoId={cargoId} />
     </>
   );
