@@ -37,7 +37,7 @@ function PcAcreEditalResource() {
             </Button>
             <Button variant="outline" asChild>
               <a
-                href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf"
+                href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
