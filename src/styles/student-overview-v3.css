@@ -299,7 +299,6 @@
   gap: 16px;
   padding: 12px 16px;
   border: 1px solid color-mix(in srgb, var(--home-gold) 48%, var(--home-line));
-  border-left: 4px solid var(--home-gold);
   border-radius: 13px;
   background: linear-gradient(105deg, color-mix(in srgb, var(--home-gold) 10%, var(--home-surface)), var(--home-surface));
 }
@@ -352,7 +351,6 @@
 .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
   padding: 16px;
   border: 1px solid var(--home-line);
-  border-top: 3px solid var(--home-blue);
   border-radius: 14px;
   background: var(--home-surface);
   box-shadow: 0 8px 24px -22px rgb(0 0 0 / 50%);
