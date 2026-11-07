@@ -4,7 +4,7 @@ import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalo
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { BookOpenText, ChevronRight, ExternalLink, Loader2, Search } from "lucide-react";
+import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
@@ -51,6 +51,7 @@ function EditalPage() {
   const [search, setSearch] = React.useState(""),
     [discipline, setDiscipline] = React.useState("all"),
     [revision, setRevision] = React.useState(0);
+  const [completed, setCompleted] = React.useState<Record<string, boolean>>({});
   const {
     catalog,
     loading: catalogLoading,
@@ -80,6 +81,17 @@ function EditalPage() {
     };
   }, [authLoading, user?.id, real, revision]);
   const edition = editions.find((e) => e.id === selected);
+  React.useEffect(() => {
+    if (!editionId) return;
+    try { setCompleted(JSON.parse(localStorage.getItem(`norte-edital-progress:${editionId}`) ?? "{}")); } catch { setCompleted({}); }
+  }, [editionId]);
+  const toggleCompleted = (topicId: string) => {
+    setCompleted((current) => {
+      const next = { ...current, [topicId]: !current[topicId] };
+      if (editionId) localStorage.setItem(`norte-edital-progress:${editionId}`, JSON.stringify(next));
+      return next;
+    });
+  };
   const editionId = edition?.id;
   const examQuestions = React.useMemo(
     () => (edition ? editalExamQuestions(catalog, edition) : []),
@@ -133,6 +145,8 @@ function EditalPage() {
       (discipline === "all" || canonicalSubject(t.discipline) === discipline) &&
       (!search || fold(`${t.discipline} ${t.topic_text}`).includes(fold(search))),
   );
+  const completedCount = topics.filter((topic) => completed[topic.id]).length;
+  const completionPercent = topics.length ? Math.round((completedCount / topics.length) * 100) : 0;
   const groups = new Map<string, Topic[]>();
   for (const t of filtered) {
     const name = canonicalSubject(t.discipline);
@@ -318,6 +332,10 @@ function EditalPage() {
           </section>
           <Card>
             <CardHeader>
+              <div className="edital-progress-panel">
+                <div><strong>{completionPercent}% concluído</strong><span>{completedCount} de {topics.length} assuntos estudados</span></div>
+                <div className="edital-progress-track"><span style={{ width: `${completionPercent}%` }} /></div>
+              </div>
               <CardTitle>Encontre seu próximo assunto</CardTitle>
               <CardDescription>
                 As contagens indicam questões elegíveis para treino, não domínio ou conclusão do
@@ -384,11 +402,13 @@ function EditalPage() {
                               <Link
                                 to="/dashboard/edital/$topicId"
                                 params={{ topicId: t.id }}
-                                className="edital-topic-link"
+                                className={`edital-topic-link ${completed[t.id] ? "is-complete" : ""}`}
                               >
-                                <span className="flex items-start gap-2">
-                                  <BookOpenText className="mt-0.5 h-4 w-4 shrink-0" />
-                                  <span>{t.topic_text}</span>
+                                <span className="flex items-start gap-3">
+                                  <button type="button" className={`edital-check ${completed[t.id] ? "is-checked" : ""}`} aria-label={completed[t.id] ? "Marcar como pendente" : "Marcar como estudado"} onClick={(event) => { event.preventDefault(); event.stopPropagation(); toggleCompleted(t.id); }}>
+                                    {completed[t.id] && <Check className="h-4 w-4" />}
+                                  </button>
+                                  <span className="flex items-start gap-2"><BookOpenText className="mt-0.5 h-4 w-4 shrink-0" /><span>{t.topic_text}</span></span>
                                 </span>
                                 <span className="flex shrink-0 items-center gap-2">
                                   <Badge variant="outline">
