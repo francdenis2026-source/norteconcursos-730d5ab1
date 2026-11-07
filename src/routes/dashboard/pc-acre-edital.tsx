@@ -320,6 +320,37 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
+      {cargo.exam && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">Como será a seleção</CardTitle>
+            <CardDescription>Resumo do edital para {cargo.label}.</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>{cargo.exam.objectiveQuestions} questões</strong><span className="mt-1 block text-xs text-muted-foreground">prova objetiva · {cargo.exam.objectivePoints} pontos</span></div>
+            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>60 específicas · peso {cargo.exam.specificWeight}</strong><span className="mt-1 block text-xs text-muted-foreground">24 básicas + 16 jurídicas</span></div>
+            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>Prova discursiva</strong><span className="mt-1 block text-xs text-muted-foreground">{cargo.exam.discursive}</span></div>
+          </CardContent>
+        </Card>
+      )}
+
+      {cargo.locations && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">Distribuição das vagas por município</CardTitle>
+            <CardDescription>{cargo.vagas} vagas no total, conforme o Anexo I do edital.</CardDescription>
+          </CardHeader>
+          <CardContent className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+            {cargo.locations.map((location) => (
+              <div key={location.name} className="rounded-lg border bg-background/60 p-2.5 text-sm">
+                <strong>{location.name}</strong>
+                <span className="mt-1 block text-xs text-muted-foreground">{location.vacancies} vaga{location.vacancies === 1 ? "" : "s"}{location.pcd ? ` · ${location.pcd} PcD` : ""}</span>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
+
       <Card>
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-3">

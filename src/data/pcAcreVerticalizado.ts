@@ -26,6 +26,8 @@ export interface PcAcVerticalCargo {
   label: string;
   vagas: number;
   salario: string;
+  exam?: { objectiveQuestions: number; objectivePoints: number; specificWeight: number; discursive: string };
+  locations?: Array<{ name: string; vacancies: number; pcd?: number }>;
   blocks: { title: string; disciplines: PcAcVerticalDiscipline[] }[];
 }
 
@@ -311,6 +313,18 @@ export const pcAcVerticalCargos: PcAcVerticalCargo[] = [
     label: "Oficial Investigador de Polícia",
     vagas: 74,
     salario: "R$ 6.342,07",
+    exam: { objectiveQuestions: 100, objectivePoints: 160, specificWeight: 2, discursive: "Redação sobre conhecimentos específicos, de 20 a 30 linhas, valendo 40 pontos." },
+    locations: [
+      { name: "Acrelândia", vacancies: 3 }, { name: "Assis Brasil", vacancies: 6, pcd: 1 },
+      { name: "Capixaba", vacancies: 2 }, { name: "Epitaciolândia", vacancies: 3 },
+      { name: "Feijó", vacancies: 3 }, { name: "Jordão", vacancies: 4 },
+      { name: "Mâncio Lima", vacancies: 2 }, { name: "Manoel Urbano", vacancies: 8, pcd: 1 },
+      { name: "Marechal Thaumaturgo", vacancies: 5, pcd: 1 }, { name: "Plácido de Castro", vacancies: 6, pcd: 1 },
+      { name: "Porto Acre", vacancies: 2 }, { name: "Porto Walter", vacancies: 4 },
+      { name: "Rodrigues Alves", vacancies: 2 }, { name: "Santa Rosa do Purus", vacancies: 5, pcd: 1 },
+      { name: "Sena Madureira", vacancies: 8, pcd: 1 }, { name: "Tarauacá", vacancies: 9, pcd: 1 },
+      { name: "Xapuri", vacancies: 2 },
+    ],
     blocks: [
       {
         title: "Conhecimentos básicos",
