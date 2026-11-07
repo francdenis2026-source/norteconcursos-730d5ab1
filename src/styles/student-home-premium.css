@@ -478,3 +478,81 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 }
 :root.dark .app-shell[data-area="student"] .edital-edition-foot { border-top-color: #54717d !important; }
 :root.dark .app-shell[data-area="student"] .edital-edition-foot > span:last-child { color: #9ce4d8 !important; }
+
+/* The app represents light mode as :root without the .dark class. */
+:root:not(.dark) .app-shell[data-area="student"]:has(.edital-modern-hero) .app-main {
+  background:
+    linear-gradient(135deg, rgb(238 245 247 / 96%), rgb(250 252 252 / 94%)),
+    url('/media/hero/faixa-tatica.webp') center / cover fixed no-repeat !important;
+}
+:root:not(.dark) .app-shell[data-area="student"]:has(.edital-modern-hero) #dashboard-content {
+  background: #f5f8f9 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero {
+  border: 1px solid #b7cbd2 !important;
+  color: #172b3b !important;
+  background:
+    linear-gradient(105deg, rgb(255 255 255 / 98%), rgb(232 244 244 / 94%)),
+    url('/media/hero/faixa-tatica.webp') right center / cover no-repeat !important;
+  box-shadow: 0 12px 26px rgb(34 59 70 / 12%), inset 0 1px 0 #ffffff !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero h1 { color: #172b3b !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero p { color: #465d6a !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero .edital-eyebrow { color: #13766d !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero .hero-stat {
+  border-color: #bfd2d8 !important;
+  background: #f4f9f9 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero .hero-stat :is(strong, span) {
+  color: #1c3948 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog {
+  border: 1px solid #c6d6dc !important;
+  color: #1c3342 !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px rgb(28 52 66 / 10%) !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog-intro h2 { color: #172b3b !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog-intro p,
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog > [role="status"] {
+  color: #526875 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog-filters label { color: #405866 !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog-filters :is(input, select) {
+  color: #193342 !important;
+  background: #ffffff !important;
+  border-color: #b8cbd3 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog-filters input::placeholder { color: #6e818c !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-catalog > .edital-note {
+  color: #46626c !important;
+  border-left-color: #2b9b91 !important;
+  background: #edf7f6 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition {
+  border: 1px solid #c5d4db !important;
+  color: #1b3342 !important;
+  background: #ffffff !important;
+  box-shadow: 0 6px 16px rgb(28 52 66 / 10%) !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition:hover {
+  border-color: #2b9b91 !important;
+  background: #f4fbfa !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition h3 { color: #172b3b !important; }
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition-meta span,
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition > p,
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition-foot > span:first-child {
+  color: #48606d !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition-foot {
+  border-top-color: #d2dee5 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition-foot > span:last-child {
+  color: #14796f !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .edital-edition-meta strong {
+  border: 1px solid #a8d6ce !important;
+  color: #17655e !important;
+  background: #e1f4ef !important;
+}
