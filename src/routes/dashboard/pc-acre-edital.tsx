@@ -4,8 +4,10 @@ import {
   BookOpen,
   BookOpenCheck,
   BrainCircuit,
+  CalendarClock,
   CheckCircle2,
   Download,
+  ScanSearch,
   Scale,
   ShieldCheck,
   Users,
@@ -16,6 +18,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Accordion,
   AccordionContent,
@@ -39,9 +43,21 @@ import {
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
+import {
+  DEFAULT_PCAC_STUDY_CONFIG,
+  PCAC_EXAM_DATE,
+  buildPcAcStudyWeek,
+  pcAcDaysUntilExam,
+  readPcAcStudyConfig,
+  writePcAcStudyConfig,
+  type PcAcStudyPlanConfig,
+} from "@/lib/pcAcreStudyPlan";
 import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
+const CRONOGRAMA_ANCHOR = "pcac-cronograma";
+const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
 export const Route = createFileRoute("/dashboard/pc-acre-edital")({
   component: PcAcreEditalVerticalizadoPage,
@@ -224,6 +240,154 @@ function DisciplineAccordionItem({
   );
 }
 
+/** Cronograma de estudos adaptado à data da prova e à disponibilidade do aluno: calcula a semana
+ * a partir do peso de cada disciplina do Anexo III (específicas pesam mais que básicas) e deixa
+ * exportar em PDF estilizado. Configuração salva neste navegador, por cargo. */
+function PcAcStudyPlanCard({
+  cargo,
+  userId,
+}: {
+  cargo: (typeof pcAcVerticalCargos)[number];
+  userId: string;
+}) {
+  const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
+  const [exporting, setExporting] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    setCfg(readPcAcStudyConfig(window.localStorage, userId, cargo.id));
+  }, [userId, cargo.id]);
+
+  const update = (patch: Partial<PcAcStudyPlanConfig>) => {
+    setCfg((prev) => {
+      const next = { ...prev, ...patch };
+      if (typeof window !== "undefined") writePcAcStudyConfig(window.localStorage, userId, cargo.id, next);
+      return next;
+    });
+  };
+
+  const week = React.useMemo(() => buildPcAcStudyWeek(cargo, cfg), [cargo, cfg]);
+  const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
+  const totalMinutes = Object.values(week).reduce(
+    (s, blocks) => s + blocks.reduce((a, b) => a + b.minutes, 0),
+    0,
+  );
+
+  const exportPdf = async () => {
+    setExporting(true);
+    try {
+      const { generatePcAcCronogramaPdf } = await import("@/lib/pcAcreCronogramaPdf");
+      await generatePcAcCronogramaPdf(cargo, cfg, week);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  return (
+    <Card id={CRONOGRAMA_ANCHOR} className="pcac-edital-card pcac-edital-cronograma scroll-mt-20">
+      <CardHeader>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <CalendarClock className="h-5 w-5 text-primary" />
+              Cronograma de estudos para a prova
+            </CardTitle>
+            <CardDescription>
+              Ajustado à data da prova e ao tempo que você tem disponível. Exporte em PDF quando
+              quiser.
+            </CardDescription>
+          </div>
+          <Badge variant="outline" className="text-sm">
+            {daysLeft} dias até a prova ({PCAC_EXAM_DATE.split("-").reverse().join("/")})
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-1.5">
+            <Label>Horas de estudo por semana</Label>
+            <Input
+              type="number"
+              min={1}
+              max={80}
+              value={cfg.weeklyHours}
+              onChange={(e) => update({ weeklyHours: Math.min(80, Math.max(1, Number(e.target.value) || 1)) })}
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Começo do estudo</Label>
+            <Input
+              type="time"
+              value={cfg.startTime}
+              onChange={(e) => e.target.value && update({ startTime: e.target.value })}
+            />
+          </div>
+          <div className="space-y-1.5 sm:col-span-2">
+            <Label>Dias de estudo</Label>
+            <div className="flex flex-wrap gap-1.5">
+              {DAY_ORDER.map((d) => {
+                const on = cfg.days.includes(d);
+                return (
+                  <button
+                    key={d}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => {
+                      const days = on ? cfg.days.filter((x) => x !== d) : [...cfg.days, d];
+                      if (days.length) update({ days });
+                    }}
+                    className={
+                      "rounded-full px-3 py-1 text-xs font-semibold transition-colors " +
+                      (on ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground")
+                    }
+                  >
+                    {DAY_SHORT[d]}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t pt-3">
+          <p className="text-xs text-muted-foreground">
+            {cfg.days.length} dia{cfg.days.length === 1 ? "" : "s"} por semana ·{" "}
+            {Math.round(totalMinutes / 60)}h{totalMinutes % 60 ? String(totalMinutes % 60).padStart(2, "0") : ""}{" "}
+            distribuídas entre as disciplinas do Anexo III.
+          </p>
+          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting}>
+            <Download className="mr-2 h-4 w-4" />
+            {exporting ? "Gerando…" : "Exportar cronograma em PDF"}
+          </Button>
+        </div>
+
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {DAY_ORDER.filter((d) => cfg.days.includes(d)).map((d) => (
+            <div key={d} className="rounded-lg border bg-background/60 p-3">
+              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                {["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"][d]}
+              </p>
+              <ul className="mt-2 space-y-1.5">
+                {(week[d] ?? []).map((block, i) => (
+                  <li key={i} className="flex items-start justify-between gap-2 text-xs">
+                    <span className="text-foreground/90">{block.discipline}</span>
+                    <span className="shrink-0 font-semibold text-muted-foreground">
+                      {block.start}–{block.end}
+                    </span>
+                  </li>
+                ))}
+                {!(week[d] ?? []).length && (
+                  <li className="text-xs text-muted-foreground">Sem blocos neste dia.</li>
+                )}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
@@ -269,10 +433,24 @@ function PcAcreEditalVerticalizadoPage() {
         title="Edital verticalizado — PC-AC 001/2026"
         description="Marque o que já estudou, acompanhe o progresso por cargo e exporte seu edital verticalizado em PDF. Conteúdo organizado a partir do Edital nº 001 SEAD/PCAC, banca IDECAN."
         actions={
-          <Button variant="secondary" onClick={() => void exportPdf()}>
-            <Download className="mr-2 h-4 w-4" />
-            Exportar PDF
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button variant="outline" asChild>
+              <Link to="/dashboard/inteligencia-idecan">
+                <ScanSearch className="mr-2 h-4 w-4" />
+                Raio-X da banca
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href={`#${CRONOGRAMA_ANCHOR}`}>
+                <CalendarClock className="mr-2 h-4 w-4" />
+                Cronograma de estudos
+              </a>
+            </Button>
+            <Button variant="secondary" onClick={() => void exportPdf()}>
+              <Download className="mr-2 h-4 w-4" />
+              Exportar PDF
+            </Button>
+          </div>
         }
       >
         <div className="page-hero__stats">
@@ -405,6 +583,8 @@ function PcAcreEditalVerticalizadoPage() {
           </Accordion>
         </CardContent>
       </Card>
+
+      <PcAcStudyPlanCard cargo={cargo} userId={userId} />
 
       <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
         <CardHeader>

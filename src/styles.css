@@ -13897,6 +13897,8 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .pcpr-spot--notice h2 { font-size: 15px; line-height: 1.4; margin: 0; color: var(--foreground); }
 .pcpr-spot--notice p { font-size: 12px; line-height: 1.5; margin: 4px 0 0; color: var(--muted-foreground); }
 .pcpr-spot--notice .pcpr-spot__cta { min-height: 40px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--accent); color: var(--accent-foreground); font-size: 12px; }
+.pcpr-spot--notice .pcpr-spot__cta--ghost { background: transparent; color: var(--foreground); }
+.pcpr-spot--notice .pcpr-spot__cta--ghost:hover { background: var(--muted); }
 .pcpr-spot--notice .pcpr-spot__details { margin-top: 4px; font-size: 12px; }
 .pcpr-spot--notice .pcpr-spot__details summary { min-height: 32px; display: list-item; width: fit-content; padding-block: 6px; color: var(--muted-foreground); cursor: pointer; }
 .pcpr-spot--notice .pcpr-spot__details[open] summary { color: var(--foreground); }
