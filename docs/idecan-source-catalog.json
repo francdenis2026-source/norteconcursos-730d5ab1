@@ -9,7 +9,19 @@
       "cargo": "Agente de Polícia Civil",
       "year": 2025,
       "official_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=200",
-      "documents": ["edital", "prova objetiva", "gabarito preliminar tipo A", "gabarito preliminar tipo B", "gabarito definitivo"]
+      "documents": [
+        "edital",
+        "prova objetiva",
+        "gabarito preliminar tipo A",
+        "gabarito preliminar tipo B",
+        "gabarito definitivo",
+        "prova oficial tipo A",
+        "gabarito definitivo oficial"
+      ],
+      "document_urls": {
+        "prova_oficial_tipo_a": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=QLG542RHISVE8F3RA20NY5I6L57EBSTSGKALW3JLR846G6HLRS3GEE9KLDLT8MMJUSJ06V96W8TQJM0D7032.pdf&ID2=1",
+        "gabarito_definitivo": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=QXKCWH6A0MIYW5KEAAHR3LTA6NR7EEQ2NA98G7VML2QR17129NO8IRQ5R6FVGRUVQEVI061WJKYVIH267159.pdf&ID2=1"
+      }
     },
     {
       "id": "idecan-pc-sc-escrivao-2025",
@@ -18,7 +30,19 @@
       "cargo": "Escrivão de Polícia Civil",
       "year": 2025,
       "official_url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201",
-      "documents": ["edital", "prova objetiva", "gabarito preliminar tipo A", "gabarito preliminar tipo B", "gabarito definitivo"]
+      "documents": [
+        "edital",
+        "prova objetiva",
+        "gabarito preliminar tipo A",
+        "gabarito preliminar tipo B",
+        "gabarito definitivo",
+        "prova oficial tipo A",
+        "gabarito definitivo oficial"
+      ],
+      "document_urls": {
+        "prova_oficial_tipo_a": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=HGSFEQ48XLD8YQHD5HOVFAH0PS4YSWWBM5FEOBA6QDK4SNEMB7UGLBUHJNPRK5HQWL1SX5V2W8QB0SXC7034.pdf&ID2=1",
+        "gabarito_definitivo": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=445F7XU35JUR4VEO0IWB06549QLKTDVHWSRH944PUKAY0OOVBQJFGC5RHCW660BCV9CXBLTBYOPH8OJJ7158.pdf&ID2=1"
+      }
     }
   ],
   "import_policy": {
