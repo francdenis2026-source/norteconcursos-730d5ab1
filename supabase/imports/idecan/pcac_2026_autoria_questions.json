@@ -1,0 +1,92 @@
+[
+  {
+    "board": "IDECAN",
+    "contest_name": "PC-AC 2026 — questão autoral",
+    "career_name": "Oficial Investigador",
+    "exam_year": 2026,
+    "subject": "Direito Penal",
+    "topic": "Erro de tipo",
+    "stem": "Durante uma diligência, um agente recolhe objeto alheio acreditando, de forma justificável, que se trata de material apreendido no procedimento. Considerando o Código Penal, a situação descreve, em tese:",
+    "options": {
+      "A": "erro de proibição, que sempre exclui a ilicitude.",
+      "B": "erro de tipo, que pode excluir o dolo e permitir punição culposa quando prevista.",
+      "C": "erro de tipo, que sempre exclui dolo e culpa.",
+      "D": "desistência voluntária.",
+      "E": "arrependimento posterior."
+    },
+    "official_answer": "B",
+    "explanation": "O erro sobre elemento constitutivo do tipo é erro de tipo. Se escusável, exclui o dolo e permite culpa quando prevista."
+  },
+  {
+    "board": "IDECAN",
+    "contest_name": "PC-AC 2026 — questão autoral",
+    "career_name": "Oficial Investigador",
+    "exam_year": 2026,
+    "subject": "Direito Processual Penal",
+    "topic": "Inquérito policial",
+    "stem": "Sobre o inquérito policial, assinale a alternativa correta:",
+    "options": {
+      "A": "É sempre indispensável para o oferecimento da denúncia.",
+      "B": "Tem natureza jurisdicional.",
+      "C": "É procedimento administrativo destinado à apuração da infração e de sua autoria.",
+      "D": "Admite contraditório pleno desde o primeiro ato.",
+      "E": "É conduzido exclusivamente pelo Ministério Público."
+    },
+    "official_answer": "C",
+    "explanation": "O inquérito é procedimento administrativo, inquisitivo e informativo, presidido pela autoridade policial."
+  },
+  {
+    "board": "IDECAN",
+    "contest_name": "PC-AC 2026 — questão autoral",
+    "career_name": "Oficial Investigador",
+    "exam_year": 2026,
+    "subject": "Língua Portuguesa",
+    "topic": "Concordância verbal",
+    "stem": "Assinale a frase correta de acordo com a norma-padrão:",
+    "options": {
+      "A": "Fazem dois anos que a investigação começou.",
+      "B": "Houveram diligências durante a madrugada.",
+      "C": "Existem indícios suficientes no relatório.",
+      "D": "Deve haverem novas oitivas.",
+      "E": "Foi apreendido documentos relevantes."
+    },
+    "official_answer": "C",
+    "explanation": "O verbo existir concorda com o sujeito plural. Em A, B e D há verbo impessoal. Em E, o correto é foram apreendidos documentos."
+  },
+  {
+    "board": "IDECAN",
+    "contest_name": "PC-AC 2026 — questão autoral",
+    "career_name": "Oficial Investigador",
+    "exam_year": 2026,
+    "subject": "Tecnologia da Informação e Segurança Cibernética",
+    "topic": "Phishing",
+    "stem": "Uma mensagem solicita que o servidor informe sua senha em página semelhante à institucional, acessada por link recebido por e-mail. O ataque é classificado como:",
+    "options": {
+      "A": "phishing.",
+      "B": "backup incremental.",
+      "C": "ransomware físico.",
+      "D": "desfragmentação.",
+      "E": "spoofing de hardware."
+    },
+    "official_answer": "A",
+    "explanation": "Phishing é a fraude que usa engenharia social e páginas ou mensagens falsas para capturar credenciais."
+  },
+  {
+    "board": "IDECAN",
+    "contest_name": "PC-AC 2026 — questão autoral",
+    "career_name": "Oficial Investigador",
+    "exam_year": 2026,
+    "subject": "Raciocínio Lógico-Matemático",
+    "topic": "Proposições",
+    "stem": "A negação lógica da proposição 'Todos os relatórios foram revisados' é:",
+    "options": {
+      "A": "Nenhum relatório foi revisado.",
+      "B": "Todos os relatórios não foram revisados.",
+      "C": "Pelo menos um relatório não foi revisado.",
+      "D": "Pelo menos um relatório foi revisado.",
+      "E": "A maioria dos relatórios não foi revisada."
+    },
+    "official_answer": "C",
+    "explanation": "A negação de 'todos' é 'pelo menos um não'."
+  }
+]
