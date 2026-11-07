@@ -27,7 +27,7 @@ import { callbackErrorMessage, type CallbackError } from "@/lib/authCallback";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { normalizeUppercase, validateCPF } from "@/lib/utils";
-import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
@@ -122,10 +122,12 @@ function AuthPage() {
       if (event === "SIGNED_IN" && session) {
         // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
         if (!manualAuth.current) {
-          toast.success("E-mail confirmado com sucesso!", {
+          toast.success("E-mail confirmado! Seu acesso Plus está liberado.", {
             id: "auth-welcome",
-            description: "Seu acesso está liberado. Bem-vindo à sua área de estudos da Norte Concurso.",
-            duration: 7000,
+            description: TESTING_PHASE
+              ? `Revogamos as licenças pagas: você tem ${TESTING_LABEL} do plano Plus, de graça e sem cartão. Bem-vindo à sua área de estudos da Norte Concursos — vamos começar?`
+              : "Bem-vindo à sua área de estudos da Norte Concursos.",
+            duration: 8000,
           });
         }
         navigate({ to: "/dashboard" });
@@ -191,7 +193,13 @@ function AuthPage() {
         });
         if (error) throw error;
         if (data.session) {
-          toast.success("Conta criada!");
+          toast.success("Conta criada! Seu acesso Plus está liberado.", {
+            id: "auth-welcome",
+            description: TESTING_PHASE
+              ? `Revogamos as licenças pagas: você tem ${TESTING_LABEL} do plano Plus, de graça e sem cartão. Hoje é um ótimo dia para começar — monte seu plano de estudos e já treine suas primeiras questões.`
+              : "Organize seu primeiro plano de estudos e já comece a treinar.",
+            duration: 8000,
+          });
           navigate({ to: "/dashboard" });
         } else {
           setPendingEmail(email.trim().toLowerCase());
@@ -385,7 +393,7 @@ function AuthPage() {
                 <p className="auth-trial" role="note">
                   <Sparkles aria-hidden="true" />
                   <span>
-                    <strong>{TESTING_DAYS} dias de Plus grátis.</strong> Sem cartão; depois, plano Gratuito.
+                    <strong>{TESTING_LABEL} de Plus grátis.</strong> Licenças pagas revogadas — sem cartão; depois, plano Gratuito.
                   </span>
                 </p>
               )}
