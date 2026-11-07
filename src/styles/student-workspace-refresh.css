@@ -270,3 +270,75 @@
     background-position: center, 72% center !important;
   }
 }
+
+
+/* Edital verticalizado: leitura concentrada e contraste confortável */
+:root.dark .app-shell[data-area="student"] {
+  --student-canvas: #101722;
+  --student-canvas-raised: #172131;
+  --student-surface: #202c3d;
+  --student-surface-raised: #29374b;
+  --student-surface-soft: #1c2838;
+  --student-border: #3b4b62;
+  --student-border-strong: #58708d;
+  --student-ink: #f5f7fb;
+  --student-muted: #b9c5d4;
+  --student-subtle: #91a3ba;
+  --student-blue: #74b8ff;
+  --student-teal: #63d2cf;
+  --student-copper: #e6bd6a;
+  --student-green: #78d9ad;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content {
+  min-height: 100vh;
+  background: var(--student-canvas) !important;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content > * {
+  width: min(100%, 1180px);
+  margin-inline: auto;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card"] {
+  background: linear-gradient(145deg, #202c3d, #1a2534);
+  border: 1px solid #40536c;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 16%);
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-header"] {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgb(164 190 216 / 17%);
+  background: linear-gradient(90deg, rgb(116 184 255 / 9%), transparent 70%);
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-content"] { padding: 18px 20px; }
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-title"] { font-size: 16px; color: #f7f9fc; }
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-description"] { color: #c0ccda; }
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="accordion-item"] {
+  border-color: #40536c;
+  background: #1a2534;
+  border-radius: 10px;
+  margin-block: 8px;
+  overflow: hidden;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="accordion-trigger"] {
+  min-height: 48px;
+  padding: 12px 16px;
+  color: #f5f7fb;
+  background: #202d40;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="accordion-trigger"]:hover {
+  background: #293a50;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content select,
+:root.dark .app-shell[data-area="student"] #dashboard-content input {
+  min-height: 42px;
+  color: #f5f7fb;
+  background: #111b29;
+  border-color: #526985;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content button {
+  border-radius: 9px;
+}
+@media (max-width: 760px) {
+  :root.dark .app-shell[data-area="student"] #dashboard-content > * { width: 100%; }
+  :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-header"],
+  :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card-content"] { padding-inline: 14px; }
+}
