@@ -39,6 +39,7 @@ import {
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
+import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 
@@ -251,7 +252,7 @@ function PcAcreEditalVerticalizadoPage() {
   };
 
   return (
-    <div className="space-y-5 pb-10">
+    <div className="pcac-edital-page space-y-5 pb-10">
       <PageHero
         image="careers-team"
         kicker="ÁREA PROFISSIONAL · PC DO ACRE"
@@ -272,7 +273,7 @@ function PcAcreEditalVerticalizadoPage() {
         </div>
       </PageHero>
 
-      <Card>
+      <Card className="pcac-edital-card pcac-edital-cargos">
         <CardHeader className="pb-0">
           <CardTitle className="text-sm font-semibold text-muted-foreground">
             Escolha o cargo
@@ -321,7 +322,7 @@ function PcAcreEditalVerticalizadoPage() {
       </Card>
 
       {cargo.exam && (
-        <Card>
+        <Card className="pcac-edital-card pcac-edital-overview">
           <CardHeader>
             <CardTitle className="text-base">Como será a seleção</CardTitle>
             <CardDescription>Resumo do edital para {cargo.label}.</CardDescription>
@@ -335,7 +336,7 @@ function PcAcreEditalVerticalizadoPage() {
       )}
 
       {cargo.locations && (
-        <Card>
+        <Card className="pcac-edital-card pcac-edital-locations">
           <CardHeader>
             <CardTitle className="text-base">Distribuição das vagas por município</CardTitle>
             <CardDescription>{cargo.vagas} vagas no total, conforme o Anexo I do edital.</CardDescription>
@@ -351,7 +352,7 @@ function PcAcreEditalVerticalizadoPage() {
         </Card>
       )}
 
-      <Card>
+      <Card className="pcac-edital-card pcac-edital-content">
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
@@ -395,7 +396,7 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
-      <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="scroll-mt-20">
+      <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-base">
             <Scale className="h-5 w-5 text-primary" />

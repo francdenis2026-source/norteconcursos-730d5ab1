@@ -1,0 +1,31 @@
+.pcac-edital-page {
+  --pcac-ink: #162337;
+  --pcac-muted: #5e6f83;
+  --pcac-line: #dbe4ef;
+  --pcac-surface: #ffffff;
+  --pcac-soft: #f4f7fb;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 2.4vw, 36px);
+  color: var(--pcac-ink);
+}
+.pcac-edital-page .pcac-edital-card { border: 1px solid var(--pcac-line); border-radius: 18px; background: var(--pcac-surface); box-shadow: 0 12px 30px rgb(17 39 68 / 7%); }
+.pcac-edital-page .pcac-edital-cargos [role="group"] button { min-height: 74px; border-color: var(--pcac-line); background: var(--pcac-soft); }
+.pcac-edital-page .pcac-edital-cargos [role="group"] button[aria-pressed="true"] { border-color: #2d73d5; background: #eaf2ff; box-shadow: inset 3px 0 #2d73d5; }
+.pcac-edital-page .pcac-edital-overview .rounded-lg, .pcac-edital-page .pcac-edital-locations .rounded-lg { border-color: var(--pcac-line); background: var(--pcac-soft); }
+.pcac-edital-page .pcac-edital-content li, .pcac-edital-page .pcac-edital-laws [data-state] { border-color: var(--pcac-line); }
+@media (prefers-color-scheme: dark) {
+  .pcac-edital-page { --pcac-ink: #e8eef7; --pcac-muted: #aab8ca; --pcac-line: #2c3c52; --pcac-surface: #172234; --pcac-soft: #1d2b3f; }
+  .pcac-edital-page .pcac-edital-card { background: var(--pcac-surface); border-color: var(--pcac-line); box-shadow: 0 14px 34px rgb(0 0 0 / 20%); }
+  .pcac-edital-page .pcac-edital-cargos [role="group"] button { background: #1d2b3f; border-color: #344861; color: #e8eef7; }
+  .pcac-edital-page .pcac-edital-cargos [role="group"] button[aria-pressed="true"] { border-color: #78aaf0; background: #233c60; box-shadow: inset 3px 0 #78aaf0; }
+  .pcac-edital-page .pcac-edital-overview .rounded-lg, .pcac-edital-page .pcac-edital-locations .rounded-lg { background: #1d2b3f; border-color: #344861; }
+  .pcac-edital-page .text-muted-foreground { color: var(--pcac-muted); }
+}
+.dark .pcac-edital-page { --pcac-ink: #e8eef7; --pcac-muted: #aab8ca; --pcac-line: #2c3c52; --pcac-surface: #172234; --pcac-soft: #1d2b3f; }
+.dark .pcac-edital-page .pcac-edital-card { background: var(--pcac-surface); border-color: var(--pcac-line); box-shadow: 0 14px 34px rgb(0 0 0 / 20%); }
+.dark .pcac-edital-page .pcac-edital-cargos [role="group"] button { background: #1d2b3f; border-color: #344861; color: #e8eef7; }
+.dark .pcac-edital-page .pcac-edital-cargos [role="group"] button[aria-pressed="true"] { border-color: #78aaf0; background: #233c60; box-shadow: inset 3px 0 #78aaf0; }
+.dark .pcac-edital-page .pcac-edital-overview .rounded-lg, .dark .pcac-edital-page .pcac-edital-locations .rounded-lg { background: #1d2b3f; border-color: #344861; }
+.dark .pcac-edital-page .text-muted-foreground { color: var(--pcac-muted); }
+@media (max-width: 700px) { .pcac-edital-page { padding-inline: 10px; } .pcac-edital-page .pcac-edital-card { border-radius: 14px; } }
