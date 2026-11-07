@@ -116,7 +116,7 @@ export function HeroDock() {
           <strong>Edital publicado: 139 vagas</strong>
           <small>Edital 001/2026 SEAD/PCAC · banca IDECAN · inscrições até 14/12. Confira cargos, salários e cronograma.</small>
           <a
-            href="/media/editais/edital-pcac-001-2026-norte-concursos.pdf"
+            href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hx-dock__radar-source"
