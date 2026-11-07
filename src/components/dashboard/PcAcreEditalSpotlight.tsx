@@ -11,15 +11,17 @@ export function PcAcreEditalSpotlight() {
       className="pcpr-spot pcpr-spot--notice pcpr-spot--book pcpr-spot--pcac no-print"
       aria-label="Edital verticalizado da Polícia Civil do Acre"
     >
-      <img
-        className="pcpr-spot__art"
-        src="/media/editais/edital-pcac-001-2026-capa.jpg"
-        alt="Capa do Edital PC-AC 001/2026"
-        width={180}
-        height={254}
-        loading="lazy"
-        decoding="async"
-      />
+      <div className="pcpr-spot__art-frame">
+        <img
+          className="pcpr-spot__art"
+          src="/media/editais/edital-pcac-001-2026-capa.jpg"
+          alt="Capa do Edital PC-AC 001/2026"
+          width={180}
+          height={254}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <div className="pcpr-spot__summary">
         <div>
           <h2>PC-AC 2026 · Edital verticalizado</h2>

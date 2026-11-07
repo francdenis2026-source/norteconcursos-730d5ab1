@@ -14072,6 +14072,58 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   .pcpr-spot--notice.pcpr-spot--book .pcpr-spot__summary { grid-column: 2; }
 }
 
+/* PC-AC spotlight: a bigger cover without a taller bar. The old art column sized itself from
+   its own width (84px) inside the card's padding, which already made it the tallest thing in
+   the row. Growing that width further would have grown the bar too. Instead, the bar height is
+   pinned to what it already was (min-height, measured from this same layout before this
+   change), the cover frame is taken out of flow (position: absolute, on a plain div rather than
+   the <img> itself — an <img>'s own intrinsic pixel size fights the percentage/offset-based
+   sizing below) so it no longer drives the bar's height, and it bleeds past the card's
+   top/bottom/left padding to fill the full pinned height — same bar height, a visibly larger
+   cover. overflow: hidden clips the bleed to the card's own rounded corners. */
+.pcpr-spot.pcpr-spot--pcac.pcpr-spot--book {
+  position: relative;
+  grid-template-columns: 108px minmax(0, 1fr);
+  height: 144px;
+  overflow: hidden;
+}
+.pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art-frame {
+  position: absolute;
+  top: -12px;
+  left: -16px;
+  /* Fixed px, not % or auto: a non-replaced absolutely positioned box with "height: auto" sizes
+     from its content, which here is an image at "height: 100%" of this very box — circular, and
+     different engines resolve it differently. 168px = the card's fixed 144px height above plus
+     the 24px (12px top + 12px bottom) this bleeds past the card's padding. */
+  height: 168px;
+  width: auto;
+  aspect-ratio: 180 / 254;
+}
+.pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art {
+  grid-row: auto;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+/* Below 640px the bar is already tall (buttons stack full-width), so the bleed trick would
+   blow the cover up far past the text column. Fall back to the original, simpler in-flow
+   sizing there, just a little bigger than before (56px → 72px). */
+@media (max-width: 640px) {
+  .pcpr-spot.pcpr-spot--pcac.pcpr-spot--book { grid-template-columns: 72px minmax(0, 1fr); height: auto; }
+  .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art-frame {
+    position: static;
+    grid-row: 1 / 3;
+    width: 100%;
+    max-width: 72px;
+    height: auto;
+    aspect-ratio: 180 / 254;
+  }
+  .pcpr-spot--pcac.pcpr-spot--book .pcpr-spot__art { aspect-ratio: auto; height: 100%; }
+}
+
 /* Perfil do ranking: cabeçalho com a arte do Norte, identidade e posição sobre fundo escuro. */
 .ranking-profile__hero { position: relative; isolation: isolate; min-height: 92px; display: flex; align-items: flex-end; background: #11151b; }
 .ranking-profile__hero > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; }
