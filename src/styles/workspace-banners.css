@@ -404,3 +404,15 @@
   border-radius: 8px !important;
   box-shadow: none !important;
 }
+
+/* Enquadramento da capa do edital dentro da faixa */
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner {
+  padding-left: 18px !important;
+  background-size: auto 86% !important;
+  background-position: 18px center !important;
+  background-repeat: no-repeat !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner::after {
+  margin-left: 2px;
+  transform: translateY(0);
+}
