@@ -1,0 +1,131 @@
+/* Faixa de vidro (glassmorphism) no topo da home: anúncio da liberação geral da plataforma. */
+.general-access {
+  position: relative;
+  z-index: 6;
+  padding: 10px 0;
+  background: linear-gradient(100deg, color-mix(in srgb, var(--home-gold) 10%, transparent), transparent 60%);
+}
+.general-access__inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border: 1px solid color-mix(in srgb, var(--home-gold) 38%, var(--home-line));
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--home-surface) 55%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow:
+    0 12px 32px rgb(0 0 0 / 10%),
+    inset 0 1px 0 color-mix(in srgb, white 14%, transparent);
+}
+.general-access__icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--home-gold) 20%, transparent);
+  color: var(--home-gold);
+}
+.general-access__icon svg { width: 22px; height: 22px; }
+.general-access__text {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.general-access__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--home-gold);
+}
+.general-access__tag svg { width: 12px; height: 12px; }
+.general-access__headline {
+  font-weight: 700;
+  font-size: 14.5px;
+  line-height: 1.35;
+  color: var(--home-text);
+}
+.general-access__summary {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--home-muted);
+}
+.general-access__summary svg { width: 14px; height: 14px; flex: none; margin-top: 1px; color: var(--home-gold); }
+.general-access__cta {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--home-gold), color-mix(in srgb, var(--home-gold) 70%, white 10%));
+  color: var(--home-navy);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.general-access__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px color-mix(in srgb, var(--home-gold) 70%, transparent);
+}
+.general-access__cta svg { width: 15px; height: 15px; }
+.general-access__close {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--home-muted);
+  cursor: pointer;
+}
+.general-access__close:hover { background: var(--home-tint); color: var(--home-text); }
+.general-access__close svg { width: 16px; height: 16px; }
+.general-access__close:focus-visible,
+.general-access__cta:focus-visible {
+  outline: 3px solid var(--home-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .general-access { padding: 8px 0; }
+  .general-access__inner {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 12px 40px 12px 14px;
+    border-radius: 14px;
+  }
+  .general-access__headline { font-size: 13.5px; }
+  .general-access__summary { font-size: 11.5px; }
+  .general-access__cta {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .general-access__close { position: absolute; top: 10px; right: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .general-access__cta { transition: none; }
+  .general-access__cta:hover { transform: none; }
+}

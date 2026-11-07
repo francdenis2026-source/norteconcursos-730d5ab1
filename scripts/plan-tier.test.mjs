@@ -22,41 +22,41 @@ import {
 const DAY = 86_400_000;
 const opened = new Date(TESTING_OPENED_AT).getTime();
 
-test("durante os 30 dias de testes, conta nova usa o plano de testes (Plus)", () => {
+test("durante os 6 meses de liberação geral, conta nova usa o plano de testes (Plus)", () => {
   const created = new Date(opened + 2 * DAY).toISOString();
   assert.equal(TESTING_TIER, "plus");
+  assert.equal(TESTING_DAYS, 182);
   const eff = effectiveTier("free", created, null, opened + 10 * DAY);
   assert.equal(eff.tier, TESTING_TIER);
   assert.equal(eff.trial, true);
 });
 
-test("a coorte que já estava em teste em 30/10 recebe uma extensão única de mais 30 dias", () => {
-  const created = new Date(opened).toISOString();
-  const duringExtension = effectiveTier("essential", created, null, opened + 31 * DAY);
-  assert.equal(duringExtension.tier, TESTING_TIER);
-  assert.equal(duringExtension.trial, true);
-  const after = effectiveTier("essential", created, null, opened + 61 * DAY);
-  assert.equal(after.tier, "free");
-  assert.equal(after.expiredFrom, TESTING_TIER);
-  assert.equal(after.trial, undefined);
-  assert.equal(planEndsAt(created, "free", null), new Date(opened + 60 * DAY).toISOString());
-});
-
-test("contas anteriores à abertura também recebem a extensão da coorte ativa", () => {
+test("contas anteriores à abertura também ganham os 6 meses inteiros a partir da abertura", () => {
   const old = new Date(opened - 90 * DAY).toISOString();
-  assert.equal(effectiveTier("free", old, null, opened + 29 * DAY).tier, TESTING_TIER);
-  assert.equal(effectiveTier("free", old, null, opened + 31 * DAY).tier, TESTING_TIER);
-  assert.equal(effectiveTier("free", old, null, opened + 61 * DAY).tier, "free");
+  assert.equal(effectiveTier("free", old, null, opened + 1 * DAY).tier, TESTING_TIER);
+  assert.equal(effectiveTier("free", old, null, opened + 181 * DAY).tier, TESTING_TIER);
+  assert.equal(effectiveTier("free", old, null, opened + 183 * DAY).tier, "free");
+  assert.equal(
+    planEndsAt(old, "free", null),
+    new Date(opened + TESTING_DAYS * DAY).toISOString(),
+  );
 });
 
-test("plano pago com vencimento: vencido volta ao Gratuito, vigente continua", () => {
+test("licenças pagas são revogadas: plano pago com vencimento também vira Plus de testes", () => {
   const created = new Date(opened - 5 * DAY).toISOString();
   const future = new Date(opened + 60 * DAY).toISOString();
   const past = new Date(opened + 1 * DAY).toISOString();
-  assert.equal(effectiveTier("plus", created, future, opened + 10 * DAY).tier, "plus");
-  const lapsed = effectiveTier("plus", created, past, opened + 10 * DAY);
-  assert.equal(lapsed.tier, "free");
-  assert.equal(lapsed.expiredFrom, "plus");
+  // Mesmo com vencimento futuro gravado, a conta usa o Plus de testes (licença revogada) até o fim dos 6 meses.
+  const withFutureExpiry = effectiveTier("premium", created, future, opened + 10 * DAY);
+  assert.equal(withFutureExpiry.tier, TESTING_TIER);
+  assert.equal(withFutureExpiry.trial, true);
+  const withPastExpiry = effectiveTier("plus", created, past, opened + 10 * DAY);
+  assert.equal(withPastExpiry.tier, TESTING_TIER);
+  assert.equal(withPastExpiry.trial, true);
+  // Depois dos 6 meses, todo mundo volta ao Gratuito, inclusive quem tinha plano pago.
+  const afterWindow = effectiveTier("premium", created, future, opened + 200 * DAY);
+  assert.equal(afterWindow.tier, "free");
+  assert.equal(afterWindow.expiredFrom, TESTING_TIER);
 });
 
 test("plano Gratuito: 20 questões por dia e áreas pagas bloqueadas", () => {
@@ -103,7 +103,10 @@ test("planos pagos mantêm as áreas liberadas", () => {
 });
 
 test("o gatilho do servidor usa as mesmas regras do aplicativo (sem divergência)", () => {
-  const sql = readFileSync("supabase/migrations/20261018110000_trial_tier_plus.sql", "utf8");
+  const sql = readFileSync(
+    "supabase/migrations/20261106220000_revoke_licenses_six_month_trial.sql",
+    "utf8",
+  );
   const sqlOpened = /testing_opened_at constant timestamptz := timestamptz '([^']+)'/.exec(
     sql,
   )?.[1];

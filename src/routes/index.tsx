@@ -56,13 +56,15 @@ import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
 import "@/styles/news-banner.css";
+import "@/styles/general-access-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { NewsBanner } from "@/components/landing/NewsBanner";
+import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { HeroDock } from "@/components/landing/HeroDock";
 import { HeroVideo } from "@/components/landing/HeroVideo";
@@ -483,7 +485,7 @@ function Index() {
                       <strong>Planos</strong>
                       <small>
                         {TESTING_PHASE
-                          ? `${TESTING_DAYS} dias grátis com tudo do Plus`
+                          ? `${TESTING_LABEL} grátis com tudo do Plus`
                           : "Escolha o seu ritmo"}
                       </small>
                     </span>
@@ -570,6 +572,7 @@ function Index() {
         </div>
       </header>
 
+      <GeneralAccessBanner />
       <NewsBanner />
 
       <MobileHomepage />
@@ -762,4 +765,3 @@ function Index() {
     </div>
   );
 }
-

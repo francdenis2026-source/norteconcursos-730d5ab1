@@ -17,7 +17,7 @@ import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { HeaderQuestionStats } from "@/components/landing/HeroDock";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 
@@ -107,7 +107,7 @@ export function MobileHomepage() {
         </div>
         {TESTING_PHASE && (
           <p className="mobile-plans__trial">
-            <ShieldCheck aria-hidden="true" /> {TESTING_DAYS} dias com tudo do Plus, sem cartão.
+            <ShieldCheck aria-hidden="true" /> {TESTING_LABEL} com tudo do Plus, sem cartão.
           </p>
         )}
         <ul className="mobile-plans__list">

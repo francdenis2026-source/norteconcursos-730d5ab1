@@ -5,7 +5,7 @@ import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
-import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 
 /** "há Xs" / "há X min" a partir de um timestamp real (dataUpdatedAt do react-query), reticando a cada 5s. */
 function useElapsedLabel(timestamp: number) {
@@ -80,7 +80,7 @@ export function HeroDock() {
           <BadgeCheck aria-hidden="true" />
           <div>
             <strong>Acesso liberado</strong>
-            <span>{TESTING_DAYS} dias de acesso Plus</span>
+            <span>{TESTING_LABEL} de acesso Plus grátis</span>
           </div>
           <a href="#planos">
             Planos <ArrowUpRight aria-hidden="true" />
