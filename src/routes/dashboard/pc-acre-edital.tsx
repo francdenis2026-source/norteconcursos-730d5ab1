@@ -52,6 +52,8 @@ import {
   writePcAcStudyConfig,
   type PcAcStudyPlanConfig,
 } from "@/lib/pcAcreStudyPlan";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
@@ -150,7 +152,9 @@ function DisciplineStudyLinks({
   cargoId: PcAcVerticalCargoId;
 }) {
   const link = pcAcDisciplineLink(disciplineId);
-  if (!link) return null;
+  const { catalog } = useMediaCatalog();
+  const videos = link?.subjects?.flatMap((subject) => relatedVideos(catalog, subject, "*", 2)).slice(0, 3) ?? [];
+  if (!link && !videos.length) return null;
   const linkClass =
     "inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
   const back = `/dashboard/pc-acre-edital?cargo=${cargoId}`;
@@ -163,7 +167,7 @@ function DisciplineStudyLinks({
     );
   return (
     <div className="mt-2 flex flex-wrap gap-1.5">
-      {link.subjects!.map((subject) => (
+      {link?.subjects?.map((subject) => (
         <React.Fragment key={subject}>
           <Link
             to="/dashboard/library"
@@ -179,6 +183,15 @@ function DisciplineStudyLinks({
           </Link>
         </React.Fragment>
       ))}
+      {videos.map((video) => {
+        const href = video.id.startsWith("PL") ? "https://www.youtube.com/playlist?list=" + video.id : "https://www.youtube.com/watch?v=" + video.id;
+        return (
+          <a key={video.id} href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10">
+            <PlayCircle className="h-3 w-3" aria-hidden="true" />
+            Vídeo{video.channel ? " · " + video.channel : ""}
+          </a>
+        );
+      })}
     </div>
   );
 }
