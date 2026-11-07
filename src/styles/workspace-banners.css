@@ -392,3 +392,15 @@
   }
   .app-shell[data-area] #dashboard-content[data-header-style] .edital-heading.workspace-banner::after { width: 64px; height: 64px; }
 }
+
+
+/* Remover controles nativos pouco elegantes do cabeçalho do edital */
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading select,
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading [data-slot="select"],
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading .native-select {
+  display: none !important;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .edital-heading :is(button, a) {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
