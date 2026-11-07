@@ -238,7 +238,7 @@ function DisciplineAccordionItem({
           {extras}
         </div>
         <span onClick={(event) => event.stopPropagation()}><StatusButton
-          status={progress[pcAcVerticalItemId(block, discipline.id)]
+          status={progress[pcAcVerticalItemId(block, discipline.id)]}
           onClick={() => onToggleTopic(discipline.id, undefined)}
         /></span>
       </li>
