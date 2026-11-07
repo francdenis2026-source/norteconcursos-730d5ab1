@@ -79,22 +79,65 @@ export function StudentTopNavigation({ items, pathname, search }: { items: Navig
               </DropdownMenuContent>
             </DropdownMenu>
           );
-        }) : entries.map(item => {
-          const selected = navigationKey(current!) === navigationKey(item);
+        }) : [...new Set(entries.map(item => item.group))].map(group => {
+          const groupEntries = entries.filter(item => item.group === group);
+          // A single destination opens directly; it needs no menu around it.
+          if (groupEntries.length === 1) {
+            const item = groupEntries[0];
+            if (!item) return null;
+            const selected = navigationKey(current!) === navigationKey(item);
+            return (
+              <Link
+                key={group}
+                to={item.href}
+                search={item.search ?? {}}
+                className="student-top-navigation__trigger student-top-navigation__submenu"
+                data-tone={section?.tone}
+                data-active={selected}
+                aria-current={selected ? "page" : undefined}
+                title={item.label}
+              >
+                <span className="student-top-navigation__icon-wrap" aria-hidden="true"><item.icon size={17} strokeWidth={2.1} /></span>
+                <span className="student-top-navigation__label">{item.label}</span>
+              </Link>
+            );
+          }
+          const groupActive = groupEntries.some(item => navigationKey(current!) === navigationKey(item));
+          const GroupIcon = groupEntries[0]?.icon;
+          if (!GroupIcon) return null;
           return (
-            <Link
-              key={navigationKey(item)}
-              to={item.href}
-              search={item.search ?? {}}
-              className="student-top-navigation__trigger student-top-navigation__submenu"
-              data-tone={section?.tone}
-              data-active={selected}
-              aria-current={selected ? "page" : undefined}
-              title={item.label}
-            >
-              <span className="student-top-navigation__icon-wrap" aria-hidden="true"><item.icon size={17} strokeWidth={2.1} /></span>
-              <span className="student-top-navigation__label">{item.label}</span>
-            </Link>
+            <DropdownMenu key={group}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className="student-top-navigation__trigger student-top-navigation__submenu"
+                  data-tone={section?.tone}
+                  data-active={groupActive}
+                  aria-label={group}
+                >
+                  <span className="student-top-navigation__icon-wrap" aria-hidden="true"><GroupIcon size={17} strokeWidth={2.1} /></span>
+                  <span className="student-top-navigation__label">{group}</span>
+                  <ChevronDown size={14} strokeWidth={2.2} aria-hidden="true" className="student-top-navigation__chevron" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" sideOffset={10} className="student-top-navigation__menu">
+                <DropdownMenuLabel className="flex flex-col gap-1">
+                  <span className="student-top-navigation__menu-title">{group}</span>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                {groupEntries.map(item => {
+                  const selected = navigationKey(current!) === navigationKey(item);
+                  return (
+                    <DropdownMenuItem key={navigationKey(item)} asChild data-current={selected}>
+                      <Link to={item.href} search={item.search ?? {}} aria-current={selected ? "page" : undefined}>
+                        <item.icon size={17} aria-hidden="true" />
+                        <span>{item.label}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
           );
         })}
       </div>
