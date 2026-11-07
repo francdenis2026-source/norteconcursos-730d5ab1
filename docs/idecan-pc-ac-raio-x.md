@@ -54,3 +54,12 @@ Fontes de conferência:
 - Portal oficial IDECAN: https://portal.concursos.idecan.org.br/
 - Notícias e distribuição do edital PC-AC: https://folha.qconcursos.com/n/concurso-pc-ac-edital-2026
 - Análise da prova IDECAN PC-SC Escrivão: https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2026-pc-sc-escrivao-de-policia-civil
+
+
+## Acervo oficial IDECAN para integração
+
+O portal oficial mantém páginas públicas de concursos da Polícia Civil com edital, prova objetiva, gabaritos preliminares e definitivos. Foram identificados:
+- Agente de Polícia Civil — Santa Catarina, Edital 01/2025: https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=200
+- Escrivão de Polícia Civil — Santa Catarina, Edital 02/2025: https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201
+
+Essas páginas serão usadas como fonte oficial de conferência. A integração deve registrar o concurso, cargo, ano, banca, disciplina, assunto, número da questão, alternativa correta e URL de origem. O texto integral deve ser utilizado somente quando o documento e a licença de reprodução permitirem. Quando isso não estiver claro, a plataforma deve guardar o link, o gabarito e os metadados, além de oferecer uma questão inédita equivalente produzida internamente.
