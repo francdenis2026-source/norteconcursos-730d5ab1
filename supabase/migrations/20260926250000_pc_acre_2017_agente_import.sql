@@ -157,6 +157,19 @@ select u.id,'Polícia Civil do Acre','2017','IBADE','resultado',
 from auth.users u where u.email='69598193268@norteconcurso.local'
 on conflict do nothing;
 
+-- Produção tinha a tabela sem a unique(contest_name, contest_year) definida em
+-- 20260925010000_exam_documents_and_reference.sql (o "create table if not exists"
+-- não adiciona a constraint quando a tabela já existia sem ela). Garante a
+-- constraint antes do upsert abaixo, sem falhar se ela já existir.
+do $$
+begin
+  alter table public.contest_reference_info
+    add constraint contest_reference_info_contest_name_contest_year_key
+    unique (contest_name, contest_year);
+exception
+  when duplicate_object then null;
+end $$;
+
 insert into public.contest_reference_info (contest_name,contest_year,exam_board,cutoff_score,scoring_rule,source_url,notes) values
 ('Polícia Civil do Acre','2017','IBADE',null,'Pontuação ponderada por disciplina (Direito Penal e Direito Processual Penal valem 2 pts/questão; demais 1 pt/questão), total 0-100.',null,'NÃO LOCALIZADO com confiança nesta sessão — antigo.ibade.org.br (fonte oficial) está inacessível e a busca na web não retornou o resultado final/classificação consolidada para o cargo de Agente de Polícia Civil do Edital nº 001/2017. Precisa de verificação no Diário Oficial do Estado do Acre.')
 on conflict (contest_name, contest_year) do update set
