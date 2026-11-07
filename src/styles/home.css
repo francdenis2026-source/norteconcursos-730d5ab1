@@ -518,7 +518,7 @@
 }
 .home-intro button {
   position: absolute;
-  right: max(20px, calc((100% - 1200px) / 2));
+  right: max(20px, calc((100% - 1760px) / 2));
   bottom: 20px;
   display: inline-flex;
   align-items: center;
@@ -2812,7 +2812,7 @@
 .home-intro-start {
   position: absolute;
   top: 16px;
-  right: max(16px, calc((100% - 1200px) / 2));
+  right: max(16px, calc((100% - 1760px) / 2));
   z-index: 4;
   display: inline-flex;
   align-items: center;
@@ -4351,7 +4351,7 @@
   align-items: center;
   min-height: 400px;
   gap: clamp(24px, 4vw, 56px);
-  padding: 32px max(40px, calc((100% - 1360px) / 2));
+  padding: 32px max(40px, calc((100% - 1760px) / 2));
   overflow: hidden;
   clip-path: inset(0);
   border: 1px solid var(--on-ink-line);

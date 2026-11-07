@@ -464,7 +464,7 @@
     --home-desktop-gutter: clamp(24px, 3.6vw, 68px);
   }
   :root:is(.dark, :not(.dark)) .home.home .home-container {
-    width: min(1440px, calc(100% - 2 * var(--home-desktop-gutter)));
+    width: min(1760px, calc(100% - 2 * var(--home-desktop-gutter)));
     max-width: 100%;
     min-width: 0;
   }
@@ -550,6 +550,13 @@
   }
   :root:is(.dark, :not(.dark)) .home.home #concursos .contest-catalog {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* Ultra-wide monitors: let the page use more of the available width instead of
+   stopping at a desktop-era cap. */
+@media (min-width: 1920px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-container {
+    width: min(2040px, calc(100% - 2 * var(--home-desktop-gutter)));
   }
 }
 @media (min-width: 1101px) and (max-width: 1370px) {

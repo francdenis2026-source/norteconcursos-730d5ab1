@@ -154,7 +154,7 @@
 :root:not(.dark) .home.home :is(.home-testing, .home-testing strong) { color: var(--stage-amber); }
 :root:not(.dark) .home.home .home-trust :is(span, svg) { color: var(--stage-muted); }
 :root:not(.dark) .home.home .home-trust svg { color: var(--stage-accent); }
-:root:not(.dark) .home.home .home-hero a:not(.home-button):not(.home-hero__explore) { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero a:not(.home-button):not(.home-hero__explore):not(.home-ranking-hero-entry) { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-testing a { background: oklch(1 0 0 / 0.92); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--stage-line); font-weight: 600; }
 :root:not(.dark) .home.home .home-hero__study-entry .home-testing > svg { color: var(--stage-amber); }
 

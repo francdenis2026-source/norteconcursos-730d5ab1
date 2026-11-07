@@ -38,7 +38,6 @@ export function NewsBanner() {
             decoding="async"
           />
           <span className="news-banner__ribbon" aria-hidden="true">Novo</span>
-          <figcaption>Edital nº 001 SEAD/PCAC · Diário Oficial do Acre nº 14.388</figcaption>
         </figure>
         <div className="news-banner__text">
           <span className="news-banner__tag"><ShieldCheck aria-hidden="true" /> Edital publicado · Polícia Civil do Acre</span>
@@ -47,6 +46,7 @@ export function NewsBanner() {
           </strong>
           <span className="news-banner__summary">
             Baixe o guia completo com cargos, provas, cronograma e checklist de estudo.
+            <span className="news-banner__source">Edital nº 001 SEAD/PCAC · Diário Oficial do Acre nº 14.388.</span>
           </span>
           <ul className="news-banner__stats" aria-label="Resumo do edital">
             <li>

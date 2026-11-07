@@ -11,8 +11,13 @@
   isolation: isolate;
 }
 .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) > .home-container {
-  width: min(1440px, calc(100% - 80px));
+  width: min(1760px, calc(100% - 80px));
   position: relative;
+}
+@media (min-width: 1920px) {
+  .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) > .home-container {
+    width: min(2040px, calc(100% - 80px));
+  }
 }
 .home.home :is(.home-operations, .home-plans--insignia) .home-rail { min-width: 0; overflow: clip; }
 .home.home .home-plans--insignia .home-compare { contain: inline-size paint; }
