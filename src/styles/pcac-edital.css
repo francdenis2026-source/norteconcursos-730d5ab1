@@ -53,3 +53,8 @@
 .pcac-edital-content [data-slot="accordion-content"] > ul > li .rounded-md.border { border-color: color-mix(in srgb, var(--primary) 22%, var(--border)); }
 .pcac-edital-content .bg-primary\/5 { background: color-mix(in srgb, var(--primary) 7%, transparent); }
 .pcac-priority-card { border-color: color-mix(in srgb, var(--primary) 30%, var(--border)); }
+
+/* Roadmap IDECAN/PC-AC: leitura rápida, sem blocos repetidos */
+.idecan-pcac-roadmap { border-color: color-mix(in srgb, var(--primary) 35%, var(--border)); }
+.idecan-pcac-roadmap [data-slot="card-content"] { display: grid; gap: 8px; }
+.idecan-pcac-roadmap [data-slot="card-content"] > div { min-height: 96px; }
