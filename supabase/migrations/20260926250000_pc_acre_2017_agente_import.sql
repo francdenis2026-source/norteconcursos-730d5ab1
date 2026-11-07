@@ -101,7 +101,7 @@ cross join src
 cross join edition
 join topic_map tm on gabarito.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,exam_year,item_number) do update set
   official_answer=excluded.official_answer, content_status=excluded.content_status, review_note=excluded.review_note;
 
 -- Student's own graded attempt (Franc Denis, CPF 69598193268), caderno S01 -
@@ -159,23 +159,22 @@ on conflict do nothing;
 
 -- Produção tinha a tabela sem a unique(contest_name, contest_year) definida em
 -- 20260925010000_exam_documents_and_reference.sql (o "create table if not exists"
--- não adiciona a constraint quando a tabela já existia sem ela). Garante a
--- constraint antes do upsert abaixo, sem falhar se ela já existir.
-do $$
-begin
-  alter table public.contest_reference_info
-    add constraint contest_reference_info_contest_name_contest_year_key
-    unique (contest_name, contest_year);
-exception
-  when duplicate_object then null;
-end $$;
+-- não adiciona a constraint quando a tabela já existia sem ela), e uma tentativa
+-- anterior de recriar essa constraint aqui mesmo não resolveu em produção. Em vez
+-- de depender de ON CONFLICT, faz update + insert condicional (not exists), que
+-- funciona com ou sem a constraint.
+update public.contest_reference_info set
+  exam_board = 'IBADE',
+  scoring_rule = 'Pontuação ponderada por disciplina (Direito Penal e Direito Processual Penal valem 2 pts/questão; demais 1 pt/questão), total 0-100.',
+  notes = 'NÃO LOCALIZADO com confiança nesta sessão — antigo.ibade.org.br (fonte oficial) está inacessível e a busca na web não retornou o resultado final/classificação consolidada para o cargo de Agente de Polícia Civil do Edital nº 001/2017. Precisa de verificação no Diário Oficial do Estado do Acre.'
+where contest_name = 'Polícia Civil do Acre' and contest_year = '2017';
 
-insert into public.contest_reference_info (contest_name,contest_year,exam_board,cutoff_score,scoring_rule,source_url,notes) values
-('Polícia Civil do Acre','2017','IBADE',null,'Pontuação ponderada por disciplina (Direito Penal e Direito Processual Penal valem 2 pts/questão; demais 1 pt/questão), total 0-100.',null,'NÃO LOCALIZADO com confiança nesta sessão — antigo.ibade.org.br (fonte oficial) está inacessível e a busca na web não retornou o resultado final/classificação consolidada para o cargo de Agente de Polícia Civil do Edital nº 001/2017. Precisa de verificação no Diário Oficial do Estado do Acre.')
-on conflict (contest_name, contest_year) do update set
-  exam_board = excluded.exam_board,
-  scoring_rule = excluded.scoring_rule,
-  notes = excluded.notes;
+insert into public.contest_reference_info (contest_name,contest_year,exam_board,cutoff_score,scoring_rule,source_url,notes)
+select 'Polícia Civil do Acre','2017','IBADE',null,'Pontuação ponderada por disciplina (Direito Penal e Direito Processual Penal valem 2 pts/questão; demais 1 pt/questão), total 0-100.',null,'NÃO LOCALIZADO com confiança nesta sessão — antigo.ibade.org.br (fonte oficial) está inacessível e a busca na web não retornou o resultado final/classificação consolidada para o cargo de Agente de Polícia Civil do Edital nº 001/2017. Precisa de verificação no Diário Oficial do Estado do Acre.'
+where not exists (
+  select 1 from public.contest_reference_info
+  where contest_name = 'Polícia Civil do Acre' and contest_year = '2017'
+);
 
 create index if not exists idx_official_exam_questions_pcacre2017
   on public.official_exam_questions(contest_name,exam_year) where contest_name='Polícia Civil do Acre';
