@@ -929,6 +929,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   {isDarkMode ? <Sun /> : <Moon />}
                 </button>
               </Hint>
+              <Hint content="Sair da plataforma">
+                <button
+                  type="button"
+                  className="app-top-btn app-logout-btn"
+                  onClick={signOut}
+                  aria-label="Sair da plataforma"
+                >
+                  <LogOut />
+                </button>
+              </Hint>
             </div>
           </header>
 
