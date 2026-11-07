@@ -592,6 +592,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                       <button
                         type="button"
                         className="student-home__week-day"
+                        data-empty={!d.seconds || undefined}
                         aria-haspopup="dialog"
                         aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}. Ver detalhes do dia`}
                         onClick={(event) => openMetric("today", event.currentTarget, d.date)}
@@ -604,7 +605,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                             style={{
                               height: d.seconds
                                 ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
-                                : "0%",
+                                : "3%",
                             }}
                           />
                         </div>

@@ -309,7 +309,13 @@
 }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__hero-copy {
   position: relative; z-index: 1;
-  width: fit-content; max-width: min(100%, 680px);
+  /* Volta a empilhar em uma coluna só: a grade genérica (3 colunas) herdada do
+     .workspace-banner acima fazia esse painel "vidro" crescer quase até a largura
+     total do cartão, cobrindo a foto de fundo quase inteira. Aqui o painel deve
+     abraçar só o texto, deixando a foto visível à direita. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: fit-content; max-width: min(100%, 420px);
   gap: 2px 16px;
   padding: 9px 14px;
   border: 1px solid rgb(255 255 255 / .14);
@@ -319,8 +325,22 @@
   -webkit-backdrop-filter: blur(10px) saturate(150%);
   backdrop-filter: blur(10px) saturate(150%);
 }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__hero-copy > * { grid-column: 1; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__masthead-stats {
+  grid-row: auto;
+  flex-wrap: wrap;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__masthead-actions {
+  grid-row: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  background: transparent;
+}
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers h1 { margin: 0 !important; font-size: clamp(20px, 2vw, 24px) !important; line-height: 1.1 !important; }
-.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__hero-copy > p:not(.student-hub__welcome) { margin: 0 !important; font-size: 12px !important; line-height: 1.35 !important; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__hero-copy > p:not(.student-hub__welcome) { margin: 0 !important; font-size: 12px !important; line-height: 1.35 !important; max-width: 38ch; }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__masthead-stats { margin: 0 !important; }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__masthead-stats .hero-stat { min-height: 30px; padding: 4px 9px; background: rgb(6 10 9 / .5); }
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.student-hub__masthead--careers .student-hub__masthead-stats .hero-stat strong { font-size: 15px; }

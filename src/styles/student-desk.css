@@ -839,16 +839,23 @@
 .student-home.student-desk .student-home__bar-track i {
   position: relative;
   z-index: 1;
-  border-radius: 3px 3px 1px 1px;
+  display: block;
+  width: 100%;
+  border-radius: 4px 4px 1px 1px;
   background: linear-gradient(180deg, #8fc1ff, #3f78c2);
-  box-shadow: 0 0 12px rgb(95 160 255 / 35%);
-  -webkit-mask: repeating-linear-gradient(0deg, #000 0 7px, transparent 7px 9px);
-  mask: repeating-linear-gradient(0deg, #000 0 7px, transparent 7px 9px);
+  box-shadow: 0 0 10px rgb(95 160 255 / 30%);
+  transition: height .25s ease;
 }
 .student-home.student-desk .student-home__week > [data-today="true"] .student-home__bar-track i {
   background: linear-gradient(180deg, #f1d68f, #b98a2e);
-  box-shadow: 0 0 14px rgb(227 193 118 / 45%);
+  box-shadow: 0 0 12px rgb(227 193 118 / 40%);
 }
+/* Dia sem tempo registrado: traço fino e discreto em vez de uma barra "vazia". */
+.student-home.student-desk .student-home__week-day[data-empty] .student-home__bar-track i {
+  background: color-mix(in srgb, var(--foreground) 28%, transparent);
+  box-shadow: none;
+}
+.student-home.student-desk .student-home__week-day[data-empty] > strong { color: var(--muted-foreground); }
 .student-home.student-desk .student-home__week-day:hover .student-home__bar-track { border-color: rgb(227 193 118 / 55%); }
 @media (max-width: 640px) {
   .student-home.student-desk .student-home__week { gap: 4px; padding-inline: 6px; }
