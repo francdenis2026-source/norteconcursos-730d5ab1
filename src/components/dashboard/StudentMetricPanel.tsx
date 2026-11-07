@@ -445,7 +445,7 @@ export function StudentMetricDetails({
   const savedDay = dayRows.reduce((sum, r) => sum + r.active_seconds, 0);
   const fullDate = (date: string) => date.split("-").reverse().join("/");
   return (
-    <div className="student-metric-panel__body" data-metric={metric}>
+    <div className="student-metric-panel__body student-metric-panel__body--time" data-metric={metric}>
       <StudyPeriodControls
         period={timePeriod}
         day={day}
@@ -453,95 +453,103 @@ export function StudentMetricDetails({
         onPeriodChange={onPeriodChange}
         onDayChange={onDayChange}
       />
-      <div className="student-metric-panel__summary">
-        <div>
-          <span>
-            {period === "day"
-              ? `${isToday ? "Hoje, " : ""}${fullDate(day)} · Acre`
-              : `${fullDate(time.days[0]?.date ?? day)} a ${fullDate(day)} · Acre`}
-          </span>
-          <strong>{duration(time.total)}</strong>
-          <p>Tempo ativo de estudo</p>
+      <div className="student-metric-panel__time-grid">
+        <div className="student-metric-panel__time-main">
+          <div className="student-metric-panel__summary">
+            <div>
+              <span>
+                {period === "day"
+                  ? `${isToday ? "Hoje, " : ""}${fullDate(day)} · Acre`
+                  : `${fullDate(time.days[0]?.date ?? day)} a ${fullDate(day)} · Acre`}
+              </span>
+              <strong>{duration(time.total)}</strong>
+              <p>Tempo ativo de estudo</p>
+            </div>
+            <Clock aria-hidden="true" />
+          </div>
+          {period === "day" ? (
+            <dl className="student-metric-panel__facts">
+              <div>
+                <dt>Tempo sincronizado do dia</dt>
+                <dd>{duration(savedDay)}</dd>
+              </div>
+              <div>
+                <dt>Sessões com atividade no dia</dt>
+                <dd>{count(dayRows.length)}</dd>
+              </div>
+            </dl>
+          ) : (
+            <dl className="student-metric-panel__facts">
+              <div>
+                <dt>Dias com atividade</dt>
+                <dd>
+                  {time.activeDays} de {time.days.length}
+                </dd>
+              </div>
+              <div>
+                <dt>Média por dia no período</dt>
+                <dd>{duration(time.average)}</dd>
+              </div>
+            </dl>
+          )}
         </div>
-        <Clock aria-hidden="true" />
-      </div>
-      {period === "day" ? (
-        <>
-          <dl className="student-metric-panel__facts">
-            <div>
-              <dt>Tempo sincronizado do dia</dt>
-              <dd>{duration(savedDay)}</dd>
-            </div>
-            <div>
-              <dt>Sessões com atividade no dia</dt>
-              <dd>{count(dayRows.length)}</dd>
-            </div>
-          </dl>
-          <section>
-            <h3>Como o tempo é contado</h3>
-            <p>
-              {isToday
-                ? "O relógio considera sua atividade na plataforma. O total de hoje usa o maior valor entre as sessões sincronizadas e o relógio deste aparelho, sem somá-los duas vezes."
-                : "Este total considera apenas as sessões sincronizadas na data selecionada. O tempo de hoje não é incluído neste histórico."}
-            </p>
-            <p>
-              O dia renova à meia-noite do Acre. O registro sincronizado pode levar até um minuto
-              para atualizar.
-            </p>
-          </section>
-        </>
-      ) : (
-        <>
-          <dl className="student-metric-panel__facts">
-            <div>
-              <dt>Dias com atividade</dt>
-              <dd>
-                {time.activeDays} de {time.days.length}
-              </dd>
-            </div>
-            <div>
-              <dt>Média por dia no período</dt>
-              <dd>{duration(time.average)}</dd>
-            </div>
-          </dl>
-          <section aria-label={time.monthly ? "Tempo por mês" : "Tempo por dia"}>
-            <h3>{time.monthly ? "Tempo por mês" : "Tempo por dia"}</h3>
-            {time.monthly && (
-              <p className="daily-study-activity__note">
-                Os meses nas extremidades incluem somente os dias dentro do intervalo exibido acima.
+        <div className="student-metric-panel__time-side">
+          {period === "day" ? (
+            <section aria-label="Como o tempo é contado">
+              <h3>Como o tempo é contado</h3>
+              <p>
+                {isToday
+                  ? "O relógio considera sua atividade na plataforma. O total de hoje usa o maior valor entre as sessões sincronizadas e o relógio deste aparelho, sem somá-los duas vezes."
+                  : "Este total considera apenas as sessões sincronizadas na data selecionada. O tempo de hoje não é incluído neste histórico."}
               </p>
-            )}
-            <ol className="student-metric-panel__days">
-              {time.buckets.map((d) => (
-                <li key={d.date}>
-                  <span>
-                    {time.monthly
-                      ? `${d.date.slice(5, 7)}/${d.date.slice(2, 4)}`
-                      : `${dateLabel(d.date)}${d.date === today ? " · Hoje" : ""}`}
-                  </span>
-                  <progress
-                    aria-label={`Tempo em ${d.date}: ${duration(d.seconds)}`}
-                    value={d.seconds}
-                    max={peak}
-                  />
-                  <strong>{duration(d.seconds)}</strong>
-                </li>
-              ))}
-            </ol>
-          </section>
-        </>
-      )}
+              <p>
+                O dia renova à meia-noite do Acre. O registro sincronizado pode levar até um minuto
+                para atualizar.
+              </p>
+            </section>
+          ) : (
+            <section aria-label={time.monthly ? "Tempo por mês" : "Tempo por dia"}>
+              <h3>{time.monthly ? "Tempo por mês" : "Tempo por dia"}</h3>
+              {time.monthly && (
+                <p className="daily-study-activity__note">
+                  Os meses nas extremidades incluem somente os dias dentro do intervalo exibido acima.
+                </p>
+              )}
+              <ol className="student-metric-panel__days">
+                {time.buckets.map((d) => (
+                  <li key={d.date}>
+                    <span>
+                      {time.monthly
+                        ? `${d.date.slice(5, 7)}/${d.date.slice(2, 4)}`
+                        : `${dateLabel(d.date)}${d.date === today ? " · Hoje" : ""}`}
+                    </span>
+                    <progress
+                      aria-label={`Tempo em ${d.date}: ${duration(d.seconds)}`}
+                      value={d.seconds}
+                      max={peak}
+                    />
+                    <strong>{duration(d.seconds)}</strong>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+        </div>
+      </div>
       {!time.total && (
         <p className="student-metric-panel__empty">
           Não há tempo ativo registrado {period === "day" ? "neste dia" : "neste período"}.
         </p>
       )}
-      <DailyStudyActivity
-        key={`${userId}:${period}:${day}`}
-        userId={userId}
-        day={day}
-        period={timePeriod}
-      />
+      <details className="student-metric-panel__activities">
+        <summary>Ver atividades detalhadas {period === "day" ? "do dia" : "do período"}</summary>
+        <DailyStudyActivity
+          key={`${userId}:${period}:${day}`}
+          userId={userId}
+          day={day}
+          period={timePeriod}
+        />
+      </details>
     </div>
   );
 }

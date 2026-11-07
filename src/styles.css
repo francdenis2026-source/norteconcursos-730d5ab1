@@ -13623,8 +13623,11 @@ button.student-home__metric { text-align: left; cursor: pointer; font: inherit; 
 button.student-home__metric:hover { background: var(--muted); }
 button.student-home__metric:focus-visible { outline: 2px solid var(--ring); outline-offset: -3px; }
 .student-metric-panel {
-  width: min(760px, calc(100vw - 24px));
-  max-width: 760px;
+  --smp-accent: oklch(0.56 0.19 275);
+  --smp-accent-soft: oklch(0.95 0.025 275);
+  --smp-accent-deep: oklch(0.4 0.17 278);
+  width: min(820px, calc(100vw - 24px));
+  max-width: 820px;
   max-height: calc(100dvh - 32px);
   padding: 0;
   gap: 0;
@@ -13635,26 +13638,39 @@ button.student-home__metric:focus-visible { outline: 2px solid var(--ring); outl
   color: var(--foreground);
   background: var(--card);
 }
-.student-metric-panel__header { display: flex; align-items: flex-start; gap: 14px; padding: 28px 52px 24px 28px; border-bottom: 1px solid var(--border); flex: none; }
+.dark .student-metric-panel {
+  --smp-accent: oklch(0.74 0.13 275);
+  --smp-accent-soft: oklch(0.3 0.08 275 / 55%);
+  --smp-accent-deep: oklch(0.84 0.09 275);
+  background: linear-gradient(165deg, #1b2150 0%, #141833 100%);
+  border-color: oklch(0.32 0.06 275);
+}
+.student-metric-panel__header { display: flex; align-items: flex-start; gap: 12px; padding: 20px 52px 16px 24px; border-bottom: 1px solid var(--border); flex: none; }
+.dark .student-metric-panel__header { border-color: oklch(0.32 0.06 275); }
 .student-metric-panel__header > div { min-width: 0; }
-.student-metric-panel__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--muted); color: var(--brass-deep); flex: none; }
-.dark .student-metric-panel__icon { color: var(--brass); }
-.student-metric-panel__owner { margin: 0 0 6px; color: var(--muted-foreground); font-size: 12px; overflow-wrap: anywhere; }
-.student-metric-panel__header h2 { font-size: 22px; line-height: 1.3; margin-bottom: 8px; }
-.student-metric-panel__body { overflow-y: auto; overscroll-behavior: contain; padding: 24px 28px; min-height: 0; }
-.student-metric-panel__summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; background: var(--muted); border: 1px solid var(--border); padding: 22px; border-radius: 14px; }
+.student-metric-panel__icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: var(--smp-accent-soft); color: var(--smp-accent-deep); flex: none; }
+.dark .student-metric-panel__icon { color: var(--smp-accent); }
+.student-metric-panel__owner { margin: 0 0 4px; color: var(--muted-foreground); font-size: 12px; overflow-wrap: anywhere; }
+.student-metric-panel__header h2 { font-size: 19px; line-height: 1.25; margin-bottom: 4px; }
+.student-metric-panel__header p { font-size: 12.5px; line-height: 1.4; }
+.student-metric-panel__body { overflow-y: auto; overscroll-behavior: contain; padding: 18px 24px 20px; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.student-metric-panel__body > .study-period-controls { margin-bottom: 0; }
+.student-metric-panel__summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; background: linear-gradient(135deg, var(--smp-accent-soft), var(--card)); border: 1px solid color-mix(in oklab, var(--smp-accent) 25%, var(--border)); padding: 18px 20px; border-radius: 14px; }
+.dark .student-metric-panel__summary { background: linear-gradient(150deg, color-mix(in oklab, var(--smp-accent) 16%, #1b2150), #161a44); border-color: color-mix(in oklab, var(--smp-accent) 30%, transparent); }
 .student-metric-panel__summary > div > span, .student-metric-panel__summary p { color: var(--muted-foreground); font-size: 13px; }
-.student-metric-panel__summary > div > strong { display: block; font-size: clamp(28px, 5vw, 42px); line-height: 1.2; margin-block: 8px; font-variant-numeric: tabular-nums; }
+.student-metric-panel__summary > div > strong { display: block; font-size: clamp(26px, 4vw, 36px); line-height: 1.2; margin-block: 6px; font-variant-numeric: tabular-nums; color: var(--smp-accent-deep); }
+.dark .student-metric-panel__summary > div > strong { color: var(--smp-accent); }
 .student-metric-panel__summary { flex-wrap: wrap; }
+.student-metric-panel__summary svg { color: var(--smp-accent); opacity: .85; width: 22px; height: 22px; }
 .student-metric-panel__summary dl { display: grid; grid-template-columns: repeat(2, minmax(0, auto)); gap: 12px 28px; flex: none; }
 @media (max-width: 520px) { .student-metric-panel__summary dl { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .student-metric-panel dl { margin: 0; }
 .student-metric-panel dt { color: var(--muted-foreground); font-size: 13px; }
 .student-metric-panel dd { margin: 0; font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .student-metric-panel section { margin-top: 24px; }
-.student-metric-panel h3 { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
-.student-metric-panel section > p, .student-metric-panel__empty { font-size: 14px; line-height: 1.7; color: var(--muted-foreground); }
-.student-metric-panel section > p + p { margin-top: 12px; }
+.student-metric-panel h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.student-metric-panel section > p, .student-metric-panel__empty { font-size: 13.5px; line-height: 1.6; color: var(--muted-foreground); }
+.student-metric-panel section > p + p { margin-top: 10px; }
 .student-metric-panel__subjects { display: grid; gap: 18px; }
 .student-metric-panel__subjects > div > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; }
 .student-metric-panel__subjects > div > div > strong { overflow-wrap: anywhere; }
@@ -13673,10 +13689,31 @@ button.student-home__metric:focus-visible { outline: 2px solid var(--ring); outl
 .student-metric-panel__history [data-correct] { flex: none; font-size: 12px; font-weight: 700; padding: 5px 8px; border-radius: 7px; background: var(--muted); color: var(--foreground); }
 .student-metric-panel__history [data-correct="true"] { border: 1px solid var(--border); }
 .student-metric-panel__history [data-correct="false"] { border: 1px solid var(--destructive); }
-.student-metric-panel__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-block: 22px; border-bottom: 1px solid var(--border); }
-.student-metric-panel__facts dd { margin-top: 6px; }
-.student-metric-panel__days li { display: grid; grid-template-columns: 85px 1fr 90px; align-items: center; gap: 12px; padding-block: 12px; font-size: 13px; }
-.student-metric-panel__days strong { text-align: right; font-size: 13px; }
+.student-metric-panel__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.student-metric-panel__facts dd { margin-top: 5px; }
+
+/* "Histórico de estudo" (tempo ativo): filtros + resumo à esquerda, tempo por mês/dia à
+   direita, para caber na janela do navegador numa única tela, sem rolagem aninhada. */
+.student-metric-panel__time-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.student-metric-panel__time-main, .student-metric-panel__time-side { min-width: 0; }
+.student-metric-panel__time-side section { margin-top: 0; }
+@media (max-width: 720px) {
+  .student-metric-panel__time-grid { grid-template-columns: 1fr; gap: 18px; }
+}
+.student-metric-panel__days { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 7px; max-height: 260px; overflow-y: auto; padding-right: 2px; }
+.student-metric-panel__days li { display: flex; flex-direction: column; gap: 5px; padding: 9px 10px; border-radius: 10px; background: var(--muted); border: 1px solid var(--border); font-size: 12px; }
+.dark .student-metric-panel__days li { background: color-mix(in oklab, var(--smp-accent) 10%, #1b2150); border-color: color-mix(in oklab, var(--smp-accent) 20%, transparent); }
+.student-metric-panel__days li > span { color: var(--muted-foreground); font-weight: 600; }
+.student-metric-panel__days strong { font-size: 12.5px; font-variant-numeric: tabular-nums; }
+
+.student-metric-panel__activities { margin-top: 2px; border-top: 1px solid var(--border); padding-top: 12px; }
+.student-metric-panel__activities summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--smp-accent-deep); list-style: none; display: flex; align-items: center; gap: 6px; }
+.dark .student-metric-panel__activities summary { color: var(--smp-accent); }
+.student-metric-panel__activities summary::-webkit-details-marker { display: none; }
+.student-metric-panel__activities summary::before { content: "›"; display: inline-block; font-size: 16px; font-weight: 700; transition: transform .15s var(--ease-out, ease); }
+.student-metric-panel__activities[open] summary::before { transform: rotate(90deg); }
+.student-metric-panel__activities summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
+.student-metric-panel__activities > section:first-of-type { margin-top: 14px; }
 .student-metric-panel footer { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; border-top: 1px solid var(--border); margin-top: 24px; padding-top: 18px; }
 .student-metric-panel footer p { flex: 1 1 230px; color: var(--muted-foreground); font-size: 12px; line-height: 1.6; }
 .student-metric-panel footer a, .student-metric-panel__state button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; gap: 8px; border: 1px solid var(--border); padding: 10px 14px; border-radius: 10px; font-size: 14px; font-weight: 600; }
@@ -13693,7 +13730,8 @@ button.student-home__metric:focus-visible { outline: 2px solid var(--ring); outl
   .student-metric-panel__body { padding: 18px; }
   .student-metric-panel__summary { padding: 16px; gap: 10px; }
   .student-metric-panel__facts { gap: 12px; }
-  .student-metric-panel__days li { grid-template-columns: 70px 1fr 76px; gap: 8px; font-size: 12px; }
+  .student-metric-panel__days { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); max-height: 220px; }
+  .student-metric-panel__days li { gap: 4px; padding: 8px; font-size: 11.5px; }
 }
 
 button.student-home__metric { position: relative; padding-right: 28px; }
@@ -13747,7 +13785,8 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .study-period-controls { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; }
 .study-period-controls__options { display: flex; flex-wrap: wrap; gap: 6px; }
 .study-period-controls__options button { min-height: 44px; padding: 9px 12px; border: 1px solid var(--border); border-radius: 9px; font-size: 13px; font-weight: 600; background: var(--card); color: var(--foreground); cursor: pointer; }
-.study-period-controls__options button[aria-pressed="true"] { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+.study-period-controls__options button[aria-pressed="true"] { background: var(--smp-accent, var(--primary)); color: var(--primary-foreground); border-color: var(--smp-accent, var(--primary)); }
+.dark .study-period-controls__options button[aria-pressed="true"] { color: #0c0f28; }
 .study-period-controls label { display: grid; gap: 5px; color: var(--muted-foreground); font-size: 12px; }
 .study-period-controls input { min-height: 44px; max-width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 9px; color: var(--foreground); background: var(--card); font-size: 16px; }
 .study-period-controls :is(button,input):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
