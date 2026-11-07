@@ -527,3 +527,168 @@
   .app-shell[data-area="student"] .edital-workspace [data-slot="card-header"],
   .app-shell[data-area="student"] .edital-workspace [data-slot="card-content"] { padding-inline: 12px; }
 }
+
+/* Modern edital catalog: a full-width page with the homepage artwork as the canvas. */
+.app-shell[data-area="student"]:has(.edital-modern-hero) .app-main {
+  background:
+    linear-gradient(135deg, rgb(8 18 31 / 94%), rgb(12 35 54 / 88%) 52%, rgb(12 61 69 / 82%)),
+    url('/media/hero/faixa-tatica.webp') center / cover fixed no-repeat !important;
+}
+
+.app-shell[data-area="student"]:has(.edital-modern-hero) #dashboard-content {
+  background: linear-gradient(135deg, rgb(8 18 31 / 72%), rgb(12 35 54 / 56%)) !important;
+}
+
+.app-shell[data-area="student"]:has(.edital-modern-hero) .app-content__inner,
+.app-shell[data-area="student"]:has(.edital-modern-hero) .edital-workspace {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 136px;
+  width: 100%;
+  padding: 22px clamp(20px, 3vw, 42px);
+  overflow: hidden;
+  border: 1px solid rgb(111 211 205 / 42%);
+  border-radius: 18px;
+  color: #f8fbff;
+  background:
+    linear-gradient(90deg, rgb(8 24 39 / 96%) 0%, rgb(12 47 67 / 87%) 52%, rgb(12 73 75 / 64%) 100%),
+    url('/media/hero/faixa-tatica.webp') right center / cover no-repeat;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 24%), inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+
+.app-shell[data-area="student"] .edital-modern-hero > div {
+  width: min(100%, 820px);
+  max-width: none !important;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero .edital-eyebrow {
+  display: inline-flex;
+  margin: 0 0 7px;
+  color: #8de1d6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero h1 {
+  max-width: none;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(28px, 3.5vw, 46px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero p {
+  max-width: 76ch;
+  margin: 9px 0 0;
+  color: rgb(231 245 248 / 84%);
+  font-size: 14px;
+  line-height: 1.48;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero .page-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: auto;
+  margin-top: 14px;
+}
+
+.app-shell[data-area="student"] .edital-modern-hero .hero-stat {
+  min-width: 122px;
+  padding: 8px 11px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 10px;
+  background: rgb(3 21 36 / 38%);
+}
+
+.app-shell[data-area="student"] .edital-modern-hero .hero-stat :is(strong, span) { color: #fff; }
+.app-shell[data-area="student"] .edital-modern-hero > svg { display: none; }
+
+.app-shell[data-area="student"] .edital-catalog {
+  width: 100%;
+  padding: clamp(16px, 2vw, 24px);
+  gap: 14px;
+  border: 1px solid rgb(133 190 211 / 32%);
+  border-radius: 18px;
+  background: rgb(13 35 53 / 78%);
+  box-shadow: 0 18px 42px rgb(0 0 0 / 20%), inset 0 1px 0 rgb(255 255 255 / 7%);
+  backdrop-filter: blur(10px);
+}
+
+.app-shell[data-area="student"] .edital-catalog-intro h2,
+.app-shell[data-area="student"] .edital-catalog-intro p,
+.app-shell[data-area="student"] .edital-catalog > [role="status"] { color: #f3f8fb; }
+.app-shell[data-area="student"] .edital-catalog-intro p { color: rgb(211 230 237 / 75%); }
+.app-shell[data-area="student"] .edital-catalog-filters {
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(180px, 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .edital-catalog-filters label { color: #c9e2ea; font-size: 11px; font-weight: 750; }
+.app-shell[data-area="student"] .edital-catalog-filters :is(input, select) {
+  min-height: 40px;
+  margin-top: 5px;
+  border-color: rgb(132 181 205 / 50%);
+  border-radius: 9px;
+  color: #effaff;
+  background: rgb(5 23 39 / 74%);
+}
+.app-shell[data-area="student"] .edital-catalog-filters input::placeholder { color: rgb(198 221 231 / 58%); }
+.app-shell[data-area="student"] .edital-catalog > .edital-note {
+  margin: 0;
+  padding: 9px 11px;
+  border-left-color: #75d4c8;
+  color: rgb(211 231 238 / 78%);
+  background: rgb(77 153 160 / 14%);
+}
+.app-shell[data-area="student"] .edital-editions {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .edital-edition {
+  min-height: 136px;
+  gap: 8px;
+  padding: 13px;
+  border: 1px solid rgb(124 173 205 / 42%);
+  border-radius: 12px;
+  color: #f2f8fb;
+  background: linear-gradient(145deg, rgb(25 58 83 / 82%), rgb(8 28 47 / 88%));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%);
+}
+.app-shell[data-area="student"] .edital-edition:hover {
+  border-color: #78dcd0;
+  background: linear-gradient(145deg, rgb(33 83 104 / 92%), rgb(10 41 58 / 92%));
+  transform: translateY(-2px);
+}
+.app-shell[data-area="student"] .edital-edition-meta,
+.app-shell[data-area="student"] .edital-edition > p,
+.app-shell[data-area="student"] .edital-edition-foot { color: rgb(212 232 238 / 75%); }
+.app-shell[data-area="student"] .edital-edition-meta strong {
+  padding: 3px 6px;
+  color: #092237;
+  background: #b8eee4;
+}
+.app-shell[data-area="student"] .edital-edition h3 { color: #fff; font-size: 14px; line-height: 1.28; }
+.app-shell[data-area="student"] .edital-edition-foot { padding-top: 8px; border-top-color: rgb(148 190 211 / 24%); }
+.app-shell[data-area="student"] .edital-edition-foot > span:last-child { color: #a7e9df; }
+
+@media (max-width: 1120px) {
+  .app-shell[data-area="student"] .edital-editions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .edital-modern-hero { min-height: 0; padding: 18px; }
+  .app-shell[data-area="student"] .edital-modern-hero h1 { font-size: 30px; }
+  .app-shell[data-area="student"] .edital-catalog-filters { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] .edital-editions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .app-shell[data-area="student"] .edital-editions { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] .edital-modern-hero h1 { font-size: 26px; }
+}
