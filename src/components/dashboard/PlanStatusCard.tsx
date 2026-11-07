@@ -6,7 +6,7 @@ import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useMyCancellations } from "@/hooks/useCancellations";
 import { scheduledCancellation } from "@/lib/cancellation";
-import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 
@@ -44,7 +44,7 @@ export function PlanStatusCard() {
                 : expired
                   ? "Seu período de testes terminou e a conta voltou ao plano Gratuito."
                   : testing
-                    ? `Fase de testes: ${TESTING_DAYS} dias com os recursos do plano Plus, de graça.`
+                    ? `Licenças pagas revogadas: ${TESTING_LABEL} com os recursos do plano Plus, de graça.`
                     : current.description}
             </CardDescription>
           </div>

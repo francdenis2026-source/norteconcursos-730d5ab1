@@ -4,46 +4,46 @@ import type { SubscriptionTier } from "@/types";
 export const AI_ENABLED = false;
 export const PAYMENTS_ENABLED = false;
 
-/** Fase de testes: contas gratuitas usam o plano abaixo até a liberação dos planos. */
+/** Fase de testes: todas as contas usam o plano abaixo até a liberação dos planos pagos. */
 export const TESTING_PHASE = true;
-/** Duração anunciada da fase de testes (só texto; o fim real é decidido ao virar TESTING_PHASE). */
-export const TESTING_DAYS = 30;
-/** Durante os 30 dias a conta usa o plano Plus: tudo da plataforma, menos o que é só do Premium (análise das suas provas). */
+/** Duração real, em dias, do acesso gratuito (usada nos cálculos de data). */
+export const TESTING_DAYS = 182;
+/** Rótulo em texto da duração acima, para exibir nas telas (mantenha alinhado com TESTING_DAYS). */
+export const TESTING_LABEL = "6 meses";
+/** Durante a fase de testes a conta usa o plano Plus: tudo da plataforma, menos o que é só do Premium (análise das suas provas). */
 export const TESTING_TIER: SubscriptionTier = "plus";
 
-/** A fase de testes só vale para quem está gravado como Gratuito/Essencial; Plus e Premium pagos ficam como estão. */
-export const isTestingTier = (tier: string) => tier === "free" || tier === "essential";
+/**
+ * Liberação geral (06/11/2026): licenças pagas foram revogadas e todas as contas — Gratuito,
+ * Essencial, Plus ou Premium gravados — passam a valer como Plus grátis durante a fase de testes.
+ */
+export const isTestingTier = (_tier: string) => true;
 
-/** Abertura pública da fase de testes (horário do Acre). Quem já tinha conta ganha os 30 dias a partir daqui. */
-export const TESTING_OPENED_AT = "2026-10-03T00:00:00-05:00";
+/** Abertura pública da liberação geral (horário do Acre). Toda conta já existente ganha os 6 meses a partir daqui. */
+export const TESTING_OPENED_AT = "2026-11-06T00:00:00-05:00";
 
 /**
- * Fim do plano vigente para exibir o contador.
- * - Plano com vencimento definido: usa o vencimento.
- * - Gratuito/Essencial (gravado) na fase de testes: 30 dias após o cadastro (ou após a abertura, o que for mais tarde).
- * - Plano pago sem vencimento: sem contador.
+ * Fim do plano vigente para exibir o contador: sempre os 6 meses de liberação geral a partir do
+ * cadastro (ou da abertura da liberação, o que for mais tarde) — ignora qualquer vencimento pago
+ * gravado, já que as licenças foram revogadas enquanto a fase de testes estiver ativa.
  */
 export function planEndsAt(
   createdAt: string | undefined,
   tier: string,
   expiresAt?: string | null,
 ): string | null {
-  if (expiresAt) return expiresAt;
-  if (!TESTING_PHASE || !isTestingTier(tier) || !createdAt) return null;
-  const start = Math.max(new Date(createdAt).getTime(), new Date(TESTING_OPENED_AT).getTime());
-  // One-time extension for users whose original 30-day trial was still active
-  // when the extension was granted on 30 October 2026. Later sign-ups keep 30 days.
-  const cohortCutoff = new Date("2026-10-30T00:00:00-03:00").getTime();
-  const alreadyInActiveTrial = new Date(createdAt).getTime() < cohortCutoff
-    && start + TESTING_DAYS * 86_400_000 > cohortCutoff;
-  const days = TESTING_DAYS + (alreadyInActiveTrial ? 30 : 0);
-  return new Date(start + days * 86_400_000).toISOString();
+  if (TESTING_PHASE && isTestingTier(tier) && createdAt) {
+    const start = Math.max(new Date(createdAt).getTime(), new Date(TESTING_OPENED_AT).getTime());
+    return new Date(start + TESTING_DAYS * 86_400_000).toISOString();
+  }
+  return expiresAt ?? null;
 }
 
 /**
- * Plano em vigor agora (mesma regra do app e do servidor):
- * vencimento próprio vencido -> Gratuito; na fase de testes, free/essencial sem vencimento
- * valem Plus por 30 dias (`trial: true`) e depois voltam ao Gratuito.
+ * Plano em vigor agora (mesma regra do app e do servidor): durante a fase de testes, toda conta
+ * vale Plus (`trial: true`) pelos 6 meses de liberação geral, independente do plano gravado ou de
+ * um vencimento pago anterior; passado esse prazo, volta ao Gratuito. Fora da fase de testes, usa
+ * o plano e o vencimento gravados normalmente.
  */
 export function effectiveTier(
   tier: string | null | undefined,
@@ -51,28 +51,22 @@ export function effectiveTier(
   expiresAt: string | null | undefined,
   now = Date.now(),
 ): { tier: string; expiredFrom?: string; trial?: boolean } {
-  let current = tier || "free";
-  let expiredFrom: string | undefined;
-  if (expiresAt && new Date(expiresAt).getTime() < now) {
-    if (current !== "free") expiredFrom = current;
-    current = "free";
-  }
-  let trial = false;
-  if (TESTING_PHASE && !expiresAt && isTestingTier(current)) {
-    const end = planEndsAt(createdAt, current, null);
+  const current = tier || "free";
+  if (TESTING_PHASE && isTestingTier(current) && createdAt) {
+    const end = planEndsAt(createdAt, current, expiresAt);
     if (end && new Date(end).getTime() > now) {
-      current = TESTING_TIER;
-      trial = true;
-    } else {
-      current = "free";
-      expiredFrom = TESTING_TIER;
+      return { tier: TESTING_TIER, trial: true };
     }
+    return { tier: "free", expiredFrom: TESTING_TIER };
   }
-  return { tier: current, ...(expiredFrom ? { expiredFrom } : {}), ...(trial ? { trial } : {}) };
+  if (expiresAt && new Date(expiresAt).getTime() < now) {
+    return { tier: "free", ...(current !== "free" ? { expiredFrom: current } : {}) };
+  }
+  return { tier: current };
 }
 
 export const SOON_LABEL = "Em breve";
 export const TESTING_NOTICE =
-  "Plataforma aberta e gratuita por 30 dias, em fase de testes. Durante este período, todas as contas usam o plano Plus, com tudo da plataforma, exceto a análise das suas provas. Em breve os planos pagos serão ativados.";
+  `Plataforma liberada: revogamos as licenças pagas e, durante a fase de testes, toda conta — nova ou já cadastrada — usa o plano Plus de graça por ${TESTING_LABEL}, sem cartão. Depois, sua conta segue no plano Gratuito.`;
 export const PAYMENTS_NOTICE =
   "Os pagamentos estão desativados por enquanto. Em breve os planos serão ativados.";

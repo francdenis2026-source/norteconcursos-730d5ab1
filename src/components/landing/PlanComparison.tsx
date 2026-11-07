@@ -1,7 +1,7 @@
 import { Check, Minus } from "lucide-react";
 import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { TESTING_DAYS, TESTING_PHASE, TESTING_TIER } from "@/lib/launch.config";
+import { TESTING_LABEL, TESTING_PHASE, TESTING_TIER } from "@/lib/launch.config";
 
 /** Tabela lado a lado: mostra de uma vez o que muda de um plano para o outro. */
 export function PlanComparison() {
@@ -25,7 +25,7 @@ export function PlanComparison() {
               >
                 {plan.name}
                 {TESTING_PHASE && plan.id === TESTING_TIER && (
-                  <small>grátis por {TESTING_DAYS} dias</small>
+                  <small>grátis por {TESTING_LABEL}</small>
                 )}
               </th>
             ))}

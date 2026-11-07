@@ -1,5 +1,5 @@
 import { FREE_MONTHLY_MOCKS, type TierFeature } from "@/lib/subscriptions.config";
-import { AI_ENABLED, TESTING_DAYS } from "@/lib/launch.config";
+import { AI_ENABLED, TESTING_LABEL } from "@/lib/launch.config";
 
 export const PLAN_ROWS: [string, string][] = [
   ["questions", "Questões"],
@@ -38,11 +38,11 @@ export function planValue(key: string, f: TierFeature | undefined): string | nul
 
 export const FAQ: [string, string][] = [
   [
-    "Como funciona o período de testes?",
-    `Por ${TESTING_DAYS} dias a plataforma está aberta e gratuita: ao criar a conta você usa tudo do plano Plus (só a análise das suas provas, exclusiva do Premium, fica de fora), sem cartão e sem cobrança.`,
+    "Como funciona a liberação geral da plataforma?",
+    `Revogamos as licenças pagas: por ${TESTING_LABEL} a plataforma está aberta e gratuita, para quem já tinha conta e para quem acabou de criar. Você usa tudo do plano Plus (só a análise das suas provas, exclusiva do Premium, fica de fora), sem cartão e sem cobrança.`,
   ],
   [
-    "O que acontece quando os 30 dias terminam?",
+    `O que acontece quando os ${TESTING_LABEL} terminam?`,
     "A conta volta automaticamente para o plano Gratuito, que continua disponível. Você vê um aviso e pode escolher renovar para um plano pago quando eles estiverem ativos. Nada é cobrado sem você pedir.",
   ],
   [

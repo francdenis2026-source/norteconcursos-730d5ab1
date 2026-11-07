@@ -9,7 +9,7 @@ import {
   PAYMENTS_ENABLED,
   PAYMENTS_NOTICE,
   SOON_LABEL,
-  TESTING_DAYS,
+  TESTING_LABEL,
   TESTING_PHASE,
   TESTING_TIER,
 } from "@/lib/launch.config";
@@ -54,7 +54,7 @@ export function PlansSection() {
             </h2>
             <p>
               {TESTING_PHASE
-                ? `Por ${TESTING_DAYS} dias, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
+                ? `Licenças pagas revogadas: por ${TESTING_LABEL}, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
                 : "Escolha o plano que acompanha o seu ritmo de estudo."}
             </p>
           </div>
@@ -72,7 +72,7 @@ export function PlansSection() {
             </span>
             <div>
               <strong>
-                {TESTING_PHASE ? `${TESTING_DAYS} dias para testar` : "Planos para cada fase"}
+                {TESTING_PHASE ? `${TESTING_LABEL} para testar` : "Planos para cada fase"}
               </strong>
               <p>
                 <Check aria-hidden="true" /> Sem cartão e sem cobrança durante o teste
@@ -134,7 +134,7 @@ export function PlansSection() {
                     ? "Para começar e continuar estudando"
                     : !PAYMENTS_ENABLED
                       ? testing
-                        ? `Grátis por ${TESTING_DAYS} dias · cobrança em breve`
+                        ? `Grátis por ${TESTING_LABEL} · cobrança em breve`
                         : "Disponível em breve"
                       : "Escolha o plano ideal para você"}
                 </p>
