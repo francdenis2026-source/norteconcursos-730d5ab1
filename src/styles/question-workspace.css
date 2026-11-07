@@ -1739,6 +1739,51 @@
   }
 }
 
+/* Normal (non-fullscreen) setup: fits the viewport without a page scrollbar and stays put —
+   the card never grows the page or shifts when "Mais filtros" opens. Each level of the chain
+   is clamped to the remaining flex space (instead of a hand-computed height) so it keeps
+   working if the surrounding paddings change; only the card itself scrolls internally if the
+   window is too short for every filter to fit. */
+@media (min-width: 768px) {
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .app-main {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .app-content {
+    height: calc(100dvh - 76px - env(safe-area-inset-top, 0px));
+    max-height: calc(100dvh - 76px - env(safe-area-inset-top, 0px));
+    padding-bottom: 12px !important;
+    display: flex;
+    overflow: hidden;
+  }
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .app-content__inner {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    padding-block: 12px !important;
+    overflow: hidden;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup) .trainer-setup {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup) .trainer-setup > .trainer-setup__unified {
+    flex: 0 1 auto;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup) .app-footer {
+    display: none !important;
+  }
+}
+
 /* Setup-only fullscreen: center a single configuration card within usable viewport. */
 @media (min-width: 768px) {
   html:fullscreen .app-shell[data-area="student"] .trainer-setup {
