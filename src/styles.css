@@ -12543,8 +12543,16 @@ html:not(.dark) .student-hub__shortcuts > a > svg { color: #1d5fbf; }
 }
 .edital-catalog-filters {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(110px, 0.6fr) minmax(0, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
+}
+.edital-catalog-filters > div:first-child {
+  grid-column: 1 / -1;
+}
+@media (min-width: 720px) {
+  .edital-catalog-filters > div:first-child {
+    grid-column: span 2;
+  }
 }
 .edital-catalog-filters :is(input, select) {
   margin-top: 8px;
@@ -12570,8 +12578,8 @@ html:not(.dark) .student-hub__shortcuts > a > svg { color: #1d5fbf; }
 }
 .edital-editions {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
 }
 .edital-edition {
   text-align: left;
@@ -12699,16 +12707,13 @@ html:not(.dark) .student-hub__shortcuts > a > svg { color: #1d5fbf; }
   font-size: 0.95rem;
   line-height: 1.85;
 }
-@media (max-width: 1100px) {
-  .edital-editions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .edital-catalog-filters,
   .edital-editions {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+@media (max-width: 640px) {
   .edital-topic-link {
     align-items: flex-start;
     flex-direction: column;
