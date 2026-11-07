@@ -229,6 +229,7 @@ function QuestionTrainer() {
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
+  const [responseSeconds, setResponseSeconds] = React.useState<number | null>(null);
   const [successFeedback, setSuccessFeedback] = React.useState(false);
   const successTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const clearSuccessFeedback = React.useCallback(() => {
@@ -616,6 +617,7 @@ function QuestionTrainer() {
       }
       setSelected(null);
       setAnswered(false);
+      setResponseSeconds(null);
       setReviewingPast(false);
       setSupportNotice(false);
       setStruck([]);
@@ -638,6 +640,7 @@ function QuestionTrainer() {
     savingRef.current = true;
     setSaving(true);
     const isCorrect = selected === question.answer;
+    const elapsedSeconds = Math.max(0, Math.round((Date.now() - startedAt) / 1000));
     try {
       const { error } = await supabase.from("question_training_responses").upsert(
         {
@@ -653,7 +656,8 @@ function QuestionTrainer() {
           is_correct: isCorrect,
           // Learning support is available only after this answer is saved.
           asked_for_help: false,
-          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
+          topic: questionTopic(question),
+          response_seconds: elapsedSeconds,
         },
         { onConflict: "id", ignoreDuplicates: true },
       );
@@ -674,6 +678,7 @@ function QuestionTrainer() {
         responseIdRef.current = crypto.randomUUID();
         throw new Error("ANSWER_SAVE_NOT_CONFIRMED");
       }
+      setResponseSeconds(elapsedSeconds);
       setAnswered(true);
       setDailyUsed((n) => n + 1);
       markLocked(question, { selected, isCorrect });
@@ -726,6 +731,7 @@ function QuestionTrainer() {
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
     setPausedAt(null);
+    setResponseSeconds(null);
     setIndex(target);
   };
   const next = () => goTo(index + 1);
@@ -737,6 +743,7 @@ function QuestionTrainer() {
     setSelected(null);
     setStruck([]);
     setAnswered(false);
+    setResponseSeconds(null);
     setReviewingPast(false);
     setSupportNotice(false);
     setStartedAt(Date.now());
@@ -1227,6 +1234,11 @@ function QuestionTrainer() {
             <div className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-xs font-black uppercase tracking-wider text-primary">Explicação da questão</p>
+                {responseSeconds !== null && (
+                  <span className="rounded-full border border-primary/20 bg-background/70 px-2.5 py-1 text-xs font-semibold text-muted-foreground">
+                    Tempo de resposta: {formatResponseTime(responseSeconds)}
+                  </span>
+                )}
                 <Button variant="outline" size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
                   {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
                   {savedForStudy ? "Salva" : "Salvar para estudar"}
@@ -1864,4 +1876,10 @@ function ElapsedTimer({ startedAt, running }: { startedAt: number; running: bool
       <Timer className="h-4 w-4 text-amber-400" aria-hidden /> {mm}:{ss}
     </span>
   );
+}
+
+function formatResponseTime(seconds: number) {
+  const minutes = Math.floor(seconds / 60);
+  const rest = seconds % 60;
+  return minutes > 0 ? `${minutes}min ${String(rest).padStart(2, "0")}s` : `${rest}s`;
 }
