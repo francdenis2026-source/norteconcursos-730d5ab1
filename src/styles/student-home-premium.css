@@ -322,3 +322,12 @@ body.light .app-shell[data-area="student"] .edital-edition-foot > span:last-chil
 :root.dark .app-shell[data-area="student"] .student-overview .student-hub__masthead {
   border-left: 1px solid #405174 !important;
 }
+
+/* Dark mode year badge: quieter slate accent with readable light text. */
+:root.dark .app-shell[data-area="student"] .edital-edition-meta strong {
+  padding: 3px 7px;
+  border: 1px solid #527486;
+  border-radius: 6px;
+  color: #e0f4f0;
+  background: #29414d;
+}
