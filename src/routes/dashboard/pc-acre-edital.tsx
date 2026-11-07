@@ -7,6 +7,7 @@ import {
   CalendarClock,
   CheckCircle2,
   Download,
+  PlayCircle,
   ScanSearch,
   Scale,
   ShieldCheck,
@@ -158,7 +159,7 @@ function DisciplineStudyLinks({
   const linkClass =
     "inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
   const back = `/dashboard/pc-acre-edital?cargo=${cargoId}`;
-  if (link.anchor)
+  if (link?.anchor)
     return (
       <a href={`#${link.anchor}`} className={`mt-2 ${linkClass}`}>
         <Scale className="h-3 w-3" aria-hidden="true" />
