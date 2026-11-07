@@ -79,6 +79,7 @@ import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearning
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
+import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import "@/styles/trainer-success-feedback.css";
@@ -117,7 +118,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "reinforce"
       | "studySubject"
       | "materialTopic"
-      | "studyArticle",
+      | "studyArticle"
+      | "back",
       string | undefined
     >
   > => ({
@@ -141,6 +143,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
     materialTopic: typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
     studyArticle: typeof search["studyArticle"] === "string" ? search["studyArticle"] : undefined,
+    back: typeof search["back"] === "string" ? search["back"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -773,6 +776,7 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="space-y-4">
+        <BackToEdital back={routeFilters.back} />
         {lawNotice}
         <TrainerSetup
           total={trainingCatalog.length}
@@ -880,6 +884,7 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      <BackToEdital back={routeFilters.back} />
       {lawNotice}
       {successFeedback && (
         <div

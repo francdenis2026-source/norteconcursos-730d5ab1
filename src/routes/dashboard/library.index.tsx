@@ -32,6 +32,7 @@ import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
+import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
 import { StartHere } from "@/components/library/StartHere";
 import {
   libraryArea,
@@ -272,6 +273,7 @@ function LibraryIndex() {
   return (
     <div className="material-library space-y-4 pb-8">
       <BackToPlan back={back} topic={initialQuery} />
+      <BackToEdital back={back} />
       {focused ? (
         <header className={`library-focus library-tone-${libraryTone(discipline)}`}>
           <Link to="/dashboard/material" className="library-focus__back">
