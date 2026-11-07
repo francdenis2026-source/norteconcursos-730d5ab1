@@ -28,7 +28,7 @@ const EMERALD = "#10b981";
 const ROSE = "#f43f5e";
 const AMBER = "#f59e0b";
 const SKY = "#0ea5e9";
-const VIOLET = "#8b5cf6";
+const TEAL = "#0f766e";
 const GOLD = "var(--brass)";
 
 const TOOLTIP_STYLE = {
@@ -341,7 +341,7 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
               />
               <Bar dataKey="accuracy" radius={[6, 6, 0, 0]} barSize={28} fill={SKY}>
                 {bancaData.map((d, i) => (
-                  <Cell key={d.label} fill={i % 2 === 0 ? SKY : VIOLET} />
+                  <Cell key={d.label} fill={i % 2 === 0 ? SKY : TEAL} />
                 ))}
               </Bar>
             </BarChart>
