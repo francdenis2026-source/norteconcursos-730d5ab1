@@ -93,11 +93,18 @@ function StatusButton({
 /** Liga o assunto ao material que já existe na plataforma (teoria e questões por disciplina)
  * ou, quando o assunto é só legislação institucional, aponta para a seção abaixo na própria
  * página. Assuntos sem correspondência confiável não recebem link. */
-function DisciplineStudyLinks({ disciplineId }: { disciplineId: string }) {
+function DisciplineStudyLinks({
+  disciplineId,
+  cargoId,
+}: {
+  disciplineId: string;
+  cargoId: PcAcVerticalCargoId;
+}) {
   const link = pcAcDisciplineLink(disciplineId);
   if (!link) return null;
   const linkClass =
     "inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
+  const back = `/dashboard/pc-acre-edital?cargo=${cargoId}`;
   if (link.anchor)
     return (
       <a href={`#${link.anchor}`} className={`mt-2 ${linkClass}`}>
@@ -111,13 +118,13 @@ function DisciplineStudyLinks({ disciplineId }: { disciplineId: string }) {
         <React.Fragment key={subject}>
           <Link
             to="/dashboard/library"
-            search={{ collection: "subjects", discipline: subject }}
+            search={{ collection: "subjects", discipline: subject, back }}
             className={linkClass}
           >
             <BookOpen className="h-3 w-3" aria-hidden="true" />
             Teoria{link.subjects!.length > 1 ? `: ${subject}` : ""}
           </Link>
-          <Link to="/dashboard/question-trainer" search={{ subject }} className={linkClass}>
+          <Link to="/dashboard/question-trainer" search={{ subject, back }} className={linkClass}>
             <BrainCircuit className="h-3 w-3" aria-hidden="true" />
             Questões{link.subjects!.length > 1 ? `: ${subject}` : ""}
           </Link>
@@ -133,11 +140,13 @@ function DisciplineStudyLinks({ disciplineId }: { disciplineId: string }) {
 function DisciplineAccordionItem({
   block,
   discipline,
+  cargoId,
   progress,
   onToggleTopic,
 }: {
   block: string;
   discipline: PcAcVerticalDiscipline;
+  cargoId: PcAcVerticalCargoId;
   progress: Record<string, PcAcVerticalStatus>;
   onToggleTopic: (disciplineId: string, topicIndex: number | undefined) => void;
 }) {
@@ -165,7 +174,7 @@ function DisciplineAccordionItem({
   const extras = (
     <>
       {discipline.note && <p className="mt-1 text-xs text-muted-foreground">{discipline.note}</p>}
-      <DisciplineStudyLinks disciplineId={discipline.id} />
+      <DisciplineStudyLinks disciplineId={discipline.id} cargoId={cargoId} />
     </>
   );
 
@@ -382,6 +391,7 @@ function PcAcreEditalVerticalizadoPage() {
                         key={discipline.id}
                         block={block.title}
                         discipline={discipline}
+                        cargoId={cargo.id}
                         progress={progress}
                         onToggleTopic={(disciplineId, topicIndex) =>
                           toggle(block.title, disciplineId, topicIndex)
