@@ -26,7 +26,11 @@ const SUBJECTS_BY_DISCIPLINE: Record<string, string[]> = {
   criminalistica: ["Criminalística"],
   "nocoes-medicina-legal": ["Medicina Legal"],
   "medicina-legal-forense": ["Medicina Legal"],
+  "medicina-legal-forense-delegado": ["Medicina Legal"],
+  "medicina-legal-comum-pml": ["Medicina Legal"],
   "criminologia-vitimologia": ["Criminologia"],
+  "contabilidade-analise-financeira": ["Contabilidade Geral"],
+  estatistica: ["Estatística"],
 };
 
 const ANCHOR_BY_DISCIPLINE: Record<string, string> = {

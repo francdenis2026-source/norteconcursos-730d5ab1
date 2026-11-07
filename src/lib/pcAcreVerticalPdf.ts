@@ -12,7 +12,28 @@ const STATUS_LABEL: Record<PcAcVerticalStatus, string> = {
   "a-estudar": "A estudar",
 };
 
-function drawWatermark(doc: jsPDF) {
+const LOGO_URL = "/media/brand/norte-identity/emblema.png";
+
+/** Busca o emblema do site (caveira com pistola) e devolve como data URL, para embutir no PDF.
+ * `null` se a busca falhar (ex. offline) — o PDF ainda assim é gerado, só sem a imagem. */
+async function loadLogoDataUrl(): Promise<string | null> {
+  try {
+    const res = await fetch(LOGO_URL);
+    if (!res.ok) return null;
+    const blob = await res.blob();
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
+
+/** Marca d'água central (texto) e, quando disponível, o emblema do site em baixa opacidade. */
+function drawWatermark(doc: jsPDF, logo: string | null) {
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
   doc.saveGraphicsState();
@@ -24,22 +45,38 @@ function drawWatermark(doc: jsPDF) {
     angle: 35,
     align: "center",
   });
+  if (logo) {
+    const size = 170;
+    doc.setGState(new doc.GState({ opacity: 0.06 }));
+    doc.addImage(logo, "PNG", (pageWidth - size) / 2, pageHeight / 2 - size - 30, size, size);
+    doc.setGState(new doc.GState({ opacity: 1 }));
+  }
   doc.restoreGraphicsState();
 }
 
-/** Gera o edital verticalizado do cargo em PDF, com o progresso de estudo do aluno e marca
- * d'água "Norte Concursos" em cada página. Executa inteiramente no navegador do aluno. */
-export function generatePcAcVerticalPdf(
+/** Emblema pequeno no rodapé de cada página, ao lado da atribuição. */
+function drawFooterLogo(doc: jsPDF, logo: string | null, marginX: number) {
+  if (!logo) return;
+  const size = 14;
+  const pageHeight = doc.internal.pageSize.getHeight();
+  doc.addImage(logo, "PNG", marginX - 2, pageHeight - 28 - size + 3, size, size);
+}
+
+/** Gera o edital verticalizado do cargo em PDF, com o progresso de estudo do aluno e o emblema
+ * do site (caveira com pistola) na capa, no rodapé e na marca d'água de cada página. Executa
+ * inteiramente no navegador do aluno. */
+export async function generatePcAcVerticalPdf(
   cargo: PcAcVerticalCargo,
   progress: Record<string, PcAcVerticalStatus>,
 ) {
+  const logo = await loadLogoDataUrl();
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const marginX = 48;
   let y = 56;
 
   const newPage = () => {
     doc.addPage();
-    drawWatermark(doc);
+    drawWatermark(doc, logo);
     y = 56;
   };
 
@@ -48,15 +85,19 @@ export function generatePcAcVerticalPdf(
     if (y + needed > pageHeight - 56) newPage();
   };
 
-  drawWatermark(doc);
+  drawWatermark(doc, logo);
 
+  if (logo) {
+    doc.addImage(logo, "PNG", marginX, y - 30, 34, 34);
+  }
+  const headerTextX = logo ? marginX + 44 : marginX;
   doc.setTextColor(20, 20, 30);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(18);
-  doc.text("Edital verticalizado — PC-AC 001/2026", marginX, y);
+  doc.text("Edital verticalizado — PC-AC 001/2026", headerTextX, y);
   y += 22;
   doc.setFontSize(13);
-  doc.text(cargo.label, marginX, y);
+  doc.text(cargo.label, headerTextX, y);
   y += 18;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
@@ -78,20 +119,35 @@ export function generatePcAcVerticalPdf(
 
     for (const discipline of block.disciplines) {
       ensureSpace(26);
-      const status = progress[pcAcVerticalItemId(block.title, discipline.id)];
-      doc.setFont("helvetica", "normal");
+      doc.setFont("helvetica", "bold");
       doc.setFontSize(10.5);
       doc.setTextColor(30, 30, 40);
-      const lines = doc.splitTextToSize(`• ${discipline.name}`, 400);
-      doc.text(lines, marginX + 8, y);
-      doc.setFont("helvetica", "bold");
-      doc.setTextColor(
-        status === "estudado" ? 22 : status === "a-estudar" ? 180 : 140,
-        status === "estudado" ? 140 : status === "a-estudar" ? 120 : 140,
-        90,
-      );
-      doc.text(status ? STATUS_LABEL[status] : "Pendente", marginX + 420, y);
-      y += lines.length * 13 + 6;
+      const nameLines = doc.splitTextToSize(`• ${discipline.name}`, 480);
+      doc.text(nameLines, marginX + 8, y);
+      y += nameLines.length * 13 + 2;
+
+      const topics = discipline.topics?.length ? discipline.topics : [discipline.name];
+      const trackedPerTopic = !!discipline.topics?.length;
+      for (let i = 0; i < topics.length; i++) {
+        ensureSpace(20);
+        const status =
+          progress[pcAcVerticalItemId(block.title, discipline.id, trackedPerTopic ? i : undefined)];
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(9);
+        doc.setTextColor(60, 60, 70);
+        const lines = doc.splitTextToSize(`– ${topics[i]}`, 420);
+        doc.text(lines, marginX + 16, y);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(8.5);
+        doc.setTextColor(
+          status === "estudado" ? 22 : status === "a-estudar" ? 180 : 140,
+          status === "estudado" ? 140 : status === "a-estudar" ? 120 : 140,
+          90,
+        );
+        doc.text(status ? STATUS_LABEL[status] : "Pendente", marginX + 440, y);
+        y += lines.length * 11 + 4;
+      }
+      y += 4;
     }
     y += 8;
   }
@@ -119,9 +175,10 @@ export function generatePcAcVerticalPdf(
     doc.setTextColor(140, 140, 150);
     doc.text(
       `Norte Concursos · norteconcursos.xyz · página ${i} de ${pageCount}`,
-      marginX,
+      logo ? marginX + 20 : marginX,
       doc.internal.pageSize.getHeight() - 28,
     );
+    drawFooterLogo(doc, logo, marginX);
   }
 
   doc.save(`edital-verticalizado-pc-ac-${cargo.id}.pdf`);
