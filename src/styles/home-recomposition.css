@@ -2708,3 +2708,268 @@
     width: 110px;
   }
 }
+
+
+/* HERO V3 — structural desktop correction matching the approved composition.
+   A promotional ribbon followed by three fully separated cards; no hero text
+   may cover the clock illustration or collide with the fixed bottom strip. */
+@media (min-width: 761px) {
+  .home.home-recomposition .desktop-homepage #inicio.home-hero {
+    min-height: max(720px, 100svh);
+    height: auto;
+    overflow: visible;
+    isolation: isolate;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__inner {
+    box-sizing: border-box;
+    width: min(calc(100% - 64px), 1480px);
+    max-width: 1480px;
+    min-height: max(720px, 100svh);
+    height: auto;
+    padding: 108px 0 68px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(260px, 1fr) auto;
+    align-items: stretch;
+    align-content: stretch;
+    gap: clamp(22px, 4vh, 44px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy {
+    align-self: center;
+    justify-self: start;
+    width: min(100%, 610px);
+    max-width: min(48vw, 610px);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 4;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy h1 {
+    font-size: clamp(42px, 4.3vw, 70px);
+    line-height: 1.06;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy > p {
+    max-width: 49ch;
+    font-size: clamp(14px, 1.2vw, 17px);
+    line-height: 1.5;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 20px !important;
+    padding: 0;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hero-badge {
+    top: 125px;
+    right: clamp(32px, 4vw, 80px);
+    max-height: 26vh;
+    width: clamp(100px, 10vw, 160px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell,
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access {
+    position: relative;
+    box-sizing: border-box;
+    grid-column: auto;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    padding: 18px 20px;
+    margin: 0;
+    border-radius: 16px;
+    border: 1px solid #987944;
+    background: rgb(4 19 34 / 96%);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 18%);
+    overflow: hidden;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 76px;
+    padding: 14px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    border-color: #d7ae62;
+    background: linear-gradient(100deg, rgb(7 26 46 / 98%), rgb(9 34 57 / 94%));
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access > svg {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    color: #e9bb58;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access strong {
+    font-size: 17px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access span {
+    color: #d8e1eb;
+    font-size: 13px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access > a {
+    margin-left: auto;
+    padding: 10px 18px;
+    flex: 0 0 auto;
+    border: 1px solid #b48a39;
+    border-radius: 10px;
+    background: #332912;
+    color: #f6d68d;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--bank,
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--radar,
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    grid-row: 2;
+    min-height: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--bank {
+    grid-column: 1;
+    border-color: #1fae72;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--radar {
+    grid-column: 2;
+    border-color: #b68c3e;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    grid-column: 3;
+    border-color: #b68c3e;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__bank-head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__bank-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__stat {
+    min-width: 0;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__stat strong {
+    display: block;
+    font-size: clamp(24px, 2.5vw, 35px);
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-copy strong {
+    font-size: clamp(15px, 1.35vw, 19px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-copy small {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-source {
+    margin-top: auto;
+    font-size: 12px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily strong {
+    font-size: clamp(15px, 1.3vw, 19px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cta {
+    align-self: flex-start;
+    padding: 10px 16px;
+    background: #e9b84c;
+    color: #152235;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily small {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.home-recomposition .desktop-homepage #inicio .hx__inner {
+    width: calc(100% - 40px);
+    padding-top: 96px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--bank {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--radar {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    min-height: 120px;
+  }
+}
+@media (min-width: 761px) and (max-height: 760px) {
+  .home.home-recomposition .desktop-homepage #inicio .hx__inner {
+    padding-top: 90px;
+    padding-bottom: 56px;
+    gap: 14px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--bank,
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--radar,
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    min-height: 150px;
+    padding: 14px 16px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access {
+    min-height: 64px;
+    padding: 10px 18px;
+  }
+}
