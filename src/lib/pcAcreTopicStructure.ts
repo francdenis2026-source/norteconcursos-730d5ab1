@@ -38,6 +38,18 @@ export function splitPcAcTopic(raw: string): PcAcTopicGroup {
     return { title: semicolonParts[0]!, subtopics: semicolonParts.slice(1) };
   }
 
+  const colon = text.indexOf(":");
+  if (colon > 0) {
+    const commaParts = text
+      .slice(colon + 1)
+      .split(/,\s*/)
+      .map(clean)
+      .filter(Boolean);
+    if (commaParts.length >= 4) {
+      return { title: clean(text.slice(0, colon)), subtopics: commaParts };
+    }
+  }
+
   const dashParts = text.split(/\s+–\s+/).map(clean).filter(Boolean);
   if (dashParts.length >= 3) {
     return { title: dashParts[0]!, subtopics: dashParts.slice(1) };

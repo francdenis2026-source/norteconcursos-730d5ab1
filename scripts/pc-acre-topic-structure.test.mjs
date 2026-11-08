@@ -34,6 +34,20 @@ test("leaves already atomic topics unchanged", () => {
   });
 });
 
+test("separates long comma lists after a named nucleus", () => {
+  const groups = splitPcAcTopic(
+    "Formação histórica do Acre: ocupação, ciclos da borracha, antecedentes diplomáticos, Revolução Acreana, Tratado de Petrópolis.",
+  );
+  assert.equal(groups.title, "Formação histórica do Acre");
+  assert.deepEqual(groups.subtopics, [
+    "ocupação",
+    "ciclos da borracha",
+    "antecedentes diplomáticos",
+    "Revolução Acreana",
+    "Tratado de Petrópolis.",
+  ]);
+});
+
 test("normalizes every topic in a discipline", () => {
   const groups = pcAcVerticalTopicGroups({
     topics: ["A. 1.1 Primeiro item. 1.2 Segundo item.", "Princípios fundamentais."],
