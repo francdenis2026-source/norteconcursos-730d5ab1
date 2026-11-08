@@ -25,4 +25,13 @@
     min-height: 58px;
     padding: 10px 12px;
   }
+
+  .app-shell[data-area="student"] .study-tools-page .study-materials-workspace {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .study-tools-page .study-materials-workspace__checklist {
+    gap: 7px;
+  }
 }
