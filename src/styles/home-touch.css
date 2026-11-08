@@ -1298,3 +1298,39 @@
     color: CanvasText;
   }
 }
+
+/* Mobile header: remove the unused top spacer seen on iOS browsers.
+   Keep the browser's status bar outside the page; don't double-count safe-area. */
+@media (max-width: 760px) {
+  .home.home {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .home.home .home-header {
+    top: 0;
+    margin-top: 0;
+    padding-top: 0;
+    min-height: 0;
+  }
+  .home.home .home-header__inner {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    height: auto;
+    margin-top: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+  .home.home .home-header__actions {
+    align-items: center;
+    gap: 6px;
+  }
+  .home.home .home-header__actions > button,
+  .home.home .home-menu-trigger {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
