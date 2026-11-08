@@ -13,4 +13,13 @@
   .app-shell[data-area="student"] .simulator-exam-grid .command-panel > div {
     padding: 14px;
   }
+
+  .app-shell[data-area="student"] .simulator-exam-grid .grid.grid-cols-5 {
+    gap: 5px;
+  }
+
+  .app-shell[data-area="student"] .simulator-exam-grid .grid.grid-cols-5 > button {
+    min-height: 40px;
+    min-width: 40px;
+  }
 }
