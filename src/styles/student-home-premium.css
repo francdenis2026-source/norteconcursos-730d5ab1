@@ -818,6 +818,24 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
     min-height: 34px;
     padding: 6px 7px;
   }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead {
+    min-height: 92px !important;
+    padding: 14px 15px !important;
+    border-radius: 14px !important;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__hero-copy {
+    column-gap: 10px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats {
+    min-width: 96px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat {
+    min-height: 56px;
+    padding: 7px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat strong {
+    font-size: 20px;
+  }
   .app-shell[data-area="student"] .student-overview .student-desk__next {
     align-items: stretch;
     flex-direction: column;
