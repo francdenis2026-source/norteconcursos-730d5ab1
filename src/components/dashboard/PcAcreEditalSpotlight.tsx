@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ExternalLink, ScanSearch } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ScanSearch } from "lucide-react";
 
 /** Destaque do edital verticalizado da PC-AC logo no topo da área do aluno, para acesso
  * imediato — reaproveita o padrão visual do spotlight de prova (ver PcprExamSpotlight). Os
@@ -48,10 +48,10 @@ export function PcAcreEditalSpotlight() {
             <Download aria-hidden="true" />
             PDF do edital
           </a>
-          <a href="https://edital-digital-pcac.awake-harp-4300.chatgpt.site/" target="_blank" rel="noreferrer" className="pcpr-spot__cta pcpr-spot__cta--ghost">
-            <ExternalLink aria-hidden="true" />
+          <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta pcpr-spot__cta--ghost">
+            <BookOpenCheck aria-hidden="true" />
             Edital digital
-          </a>
+          </Link>
         </div>
       </div>
     </section>
