@@ -24,7 +24,7 @@ export function PcAcreEditalSpotlight() {
       </div>
       <div className="pcpr-spot__summary">
         <div>
-          <h2 className="pcpr-spot__title"><span className="pcpr-spot__title-icon" aria-hidden="true"><BookOpenCheck /></span>PC-AC 2026 · Edital verticalizado</h2>
+          <h2 className="flex items-center gap-2"><span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-amber-300/60 bg-amber-400/15 text-amber-300" aria-hidden="true"><BookOpenCheck className="h-4 w-4" /></span><span>PC-AC 2026 · Edital verticalizado</span></h2>
           <p>139 vagas, 6 cargos · Marque o que já estudou e exporte em PDF.</p>
         </div>
         <div className="pcpr-spot__actions">
