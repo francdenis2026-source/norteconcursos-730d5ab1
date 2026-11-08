@@ -25,4 +25,13 @@
     width: 100%;
     justify-content: center;
   }
+
+  .app-shell[data-area="student"] .question-errors > .grid > .rounded-xl,
+  .app-shell[data-area="student"] .question-errors > .grid > [class*="rounded"] {
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .question-errors .question-error-card {
+    padding: 12px;
+  }
 }
