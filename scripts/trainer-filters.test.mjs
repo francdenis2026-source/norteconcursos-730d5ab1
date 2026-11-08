@@ -66,6 +66,17 @@ test("Cebraspe aliases from old booklets match the same board", () => {
     ["cespe"],
   );
 });
+test("reinforcement mode keeps previously wrong questions instead of switching to new-only", () => {
+  const answers = new Map([
+    ["official:wrong", { isCorrect: false }],
+    ["official:right", { isCorrect: true }],
+  ]);
+  const catalog = [q("wrong", "CEBRASPE"), q("right", "CEBRASPE"), q("new", "CEBRASPE")];
+  assert.deepEqual(
+    trainerPracticeQuestions(catalog, "wrong", answers, new Map()).map((item) => item.id),
+    ["wrong"],
+  );
+});
 test("incompatible board and discipline produce zero, without cross-board fallback", () => {
   assert.deepEqual(run({ board: "FGV", subject: "Informática" }), []);
   assert.deepEqual(run({ board: "VUNESP" }), []);

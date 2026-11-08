@@ -416,8 +416,13 @@ function QuestionTrainer() {
     [catalog],
   );
   const trainingCatalog = React.useMemo(
-    () => includeAnswered ? catalog : trainerPracticeQuestions(catalog, "new", locked, new Map()),
-    [catalog, includeAnswered, locked],
+    () =>
+      routeFilters.mode === "reforco"
+        ? trainerPracticeQuestions(catalog, "wrong", locked, new Map())
+        : includeAnswered
+          ? catalog
+          : trainerPracticeQuestions(catalog, "new", locked, new Map()),
+    [catalog, includeAnswered, locked, routeFilters.mode],
   );
   const facets = React.useMemo(
     () =>
