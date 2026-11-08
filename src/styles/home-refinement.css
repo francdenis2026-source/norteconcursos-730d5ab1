@@ -30,9 +30,10 @@
   font-size: clamp(26px, 3vw, 38px);
 }
 .home.home .home-preparation__panel {
-  height: auto;
-  max-height: 176px;
+  height: 176px !important;
+  max-height: 176px !important;
   padding-block: 2px;
+  overflow-y: auto !important;
 }
 .home.home .home-preparation__tool > summary {
   min-height: 27px;
@@ -67,7 +68,8 @@
     padding-block: 20px;
   }
   .home.home .home-preparation__panel {
-    max-height: 190px;
+    height: 190px !important;
+    max-height: 190px !important;
   }
 }
 
