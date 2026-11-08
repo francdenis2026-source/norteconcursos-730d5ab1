@@ -21,4 +21,9 @@
   .app-shell[data-area="student"] .student-exams-page .overflow-x-auto button {
     min-height: 44px;
   }
+
+  .app-shell[data-area="student"] .student-exams-page .student-exam-metric {
+    min-height: 88px;
+    padding: 12px;
+  }
 }
