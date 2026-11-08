@@ -917,17 +917,65 @@ export const pcAcVerticalCargos: PcAcVerticalCargo[] = [
         title: "Conhecimentos específicos (comum a todas as áreas)",
         disciplines: [
           {
-            id: "criminalistica",
-            name: "Criminalística, Documentação Pericial, Balística, Documentoscopia e Perícias em Local",
+            id: "criminalistica-1",
+            name: "Criminalística",
             topics: [
               "Criminalística. 1.1 Conceito, definições, objetivos, princípios e postulados. 1.2 Áreas de atuação da criminalística e modalidades de perícias criminais. 1.3 Prova: conceito e objeto; tipos de prova (confessional, testemunhal, documental e pericial); formas direta e indireta. 1.4 Corpo de delito: conceito. 1.5 Locais de crime: definição, classificação, isolamento, preservação e levantamento. 1.6 Vestígios e indícios encontrados nos locais de crime; cadeia de custódia.",
+            ],
+          },
+          {
+            id: "criminalistica-2",
+            name: "Documentação Pericial",
+            topics: [
               "Documentação pericial: fotografia forense, croqui e laudo; elaboração de laudos e resposta a quesitos.",
+            ],
+          },
+          {
+            id: "criminalistica-3",
+            name: "Balística Forense",
+            topics: [
               "Balística forense.",
+            ],
+          },
+          {
+            id: "criminalistica-4",
+            name: "Documentoscopia e Grafoscopia",
+            topics: [
               "Documentoscopia e grafoscopia.",
+            ],
+          },
+          {
+            id: "criminalistica-5",
+            name: "Perícia em Acidentes de Trânsito",
+            topics: [
               "Perícia em locais de acidente de trânsito: levantamento, dinâmica e noções de cálculo de velocidade.",
+            ],
+          },
+          {
+            id: "criminalistica-6",
+            name: "Perícia em Locais de Incêndio",
+            topics: [
               "Noções de perícia em locais de incêndio (arts. 158 e 159 do Código de Processo Penal).",
+            ],
+          },
+          {
+            id: "criminalistica-7",
+            name: "Noções de Medicina Legal",
+            topics: [
               "Noções de medicina legal. 7.1 Conceitos, importância e divisões da medicina legal. 7.2 Corpo de delito, perícia e peritos em medicina legal. 7.3 Documentos médico-legais. 7.4 Identidade, identificação e reconhecimento; principais métodos de identificação. 7.5 Lesões e mortes por ação contundente, por armas brancas e por projéteis de arma de fogo comuns e de alta energia. 7.6 Conceito e diagnóstico da morte: fenômenos cadavéricos; cronotanatognose, comoriência e premoriência; exumação; causa jurídica da morte; morte súbita e morte suspeita. 7.7 Modificadores e avaliação pericial da imputabilidade penal e da capacidade civil: doença mental, desenvolvimento mental incompleto ou retardado, perturbação mental.",
+            ],
+          },
+          {
+            id: "criminalistica-8",
+            name: "Perícias Oficiais de Natureza Criminal",
+            topics: [
               "Lei nº 12.030/2009 (perícias oficiais de natureza criminal).",
+            ],
+          },
+          {
+            id: "criminalistica-9",
+            name: "Ética e Responsabilidade do Perito",
+            topics: [
               "Ética e responsabilidade do perito.",
             ],
           },
@@ -1206,18 +1254,72 @@ export const pcAcVerticalCargos: PcAcVerticalCargo[] = [
         title: "Conhecimentos específicos",
         disciplines: [
           {
-            id: "anatomia",
-            name: "Anatomia e Fisiologia Humanas, Tanatologia, Biossegurança e Cadeia de Custódia",
+            id: "aux-1",
+            name: "Anatomia e Fisiologia Humanas",
             topics: [
               "Anatomia e fisiologia humanas. 1.1 Seres vivos: classificação dos seres vivos. 1.2 Célula: célula procariota e eucariota; componentes morfológicos das células; funções das estruturas celulares. 1.3 Posição anatômica, divisões do corpo humano, quadrantes abdominais (órgãos) e topografia. 1.4 Sistema tegumentar: pele, pelos, unhas. 1.5 Sistema muscular. 1.6 Sistema esquelético: funções, divisão anatômica do esqueleto, ossos, crânio, coluna vertebral, articulações. 1.7 Sistema respiratório: função, respiração, órgãos componentes, mecanismo da respiração. 1.8 Sistema cardiovascular: principais funções, sangue, coração, movimentos cardíacos, pulso, vasos sanguíneos, circulação sanguínea. 1.9 Sistema geniturinário: sistema urinário, sistema genital masculino, sistema genital feminino. 1.10 Sistema digestório. 1.11 Sistema nervoso: função, divisão, meninges, sistema nervoso central, sistema nervoso periférico, sistema nervoso visceral, sistema nervoso somático. 1.12 Noções de fisiologia.",
+            ],
+          },
+          {
+            id: "aux-2",
+            name: "Tanatologia",
+            topics: [
               "Tanatologia: fenômenos cadavéricos e cronologia da morte.",
+            ],
+          },
+          {
+            id: "aux-3",
+            name: "Técnicas de Necropsia",
+            topics: [
               "Técnicas de necropsia: abertura e exame das cavidades, retirada e pesagem de órgãos, coleta e acondicionamento de material, recomposição e sutura. 3.1 Exumação. 3.2 Remoção e transporte de cadáveres.",
+            ],
+          },
+          {
+            id: "aux-4",
+            name: "Biossegurança",
+            topics: [
               "Biossegurança. 4.1 Equipamentos de proteção, limpeza e desinfecção, resíduos de serviços de saúde. 4.2 Prevenção de acidentes e cuidados de ordem pessoal e geral. 4.3 Perigos no ambiente de trabalho: cuidados gerais, substâncias tóxicas, emitentes de vapores venenosos, explosivos e combustíveis, manuseio de material contaminado.",
+            ],
+          },
+          {
+            id: "aux-5",
+            name: "Noções de Química e Física Aplicadas",
+            topics: [
               "Noções de química e de física aplicadas: soluções; densidade; concentração e diluição de soluções; volumetria; estado físico da matéria (sólido, líquido, gasoso); Sistema Internacional de Unidades.",
+            ],
+          },
+          {
+            id: "aux-6",
+            name: "Noções de Medicina Legal",
+            topics: [
               "Noções de medicina legal.",
+            ],
+          },
+          {
+            id: "aux-7",
+            name: "Cadeia de Custódia",
+            topics: [
               "Cadeia de custódia (arts. 158-A a 158-F do Código de Processo Penal).",
+            ],
+          },
+          {
+            id: "aux-8",
+            name: "Ética Profissional e Sigilo",
+            topics: [
               "Noções de ética profissional e sigilo.",
+            ],
+          },
+          {
+            id: "aux-9",
+            name: "Registros e Documentação do Serviço",
+            topics: [
               "Registros e documentação do serviço: guias de remoção, livros de entrada e saída, noções sobre a declaração de óbito.",
+            ],
+          },
+          {
+            id: "aux-10",
+            name: "Destinação de Cadáver Não Reclamado",
+            topics: [
               "Lei nº 8.501/1992, que trata da destinação de cadáver não reclamado.",
             ],
           },
