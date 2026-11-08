@@ -19,4 +19,10 @@
   .app-shell[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] {
     gap: 10px;
   }
+
+  .app-shell[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] a,
+  .app-shell[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] button {
+    min-height: 58px;
+    padding: 10px 12px;
+  }
 }
