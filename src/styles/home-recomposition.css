@@ -1221,3 +1221,18 @@
     height: 15px;
   }
 }
+
+
+/* Light-mode plan disclaimer: avoid dark inherited text over the dark
+   textured plans panel. The note must remain readable in both themes. */
+@media (max-width: 760px) {
+  :root:not(.dark) .home.home-recomposition .mobile-homepage .mobile-plans .mobile-plans__note {
+    color: #f1f5f9 !important;
+    opacity: 1 !important;
+    text-shadow: none;
+  }
+  :root.dark .home.home-recomposition .mobile-homepage .mobile-plans .mobile-plans__note {
+    color: #d7e0ea;
+    opacity: 1;
+  }
+}
