@@ -8,7 +8,6 @@ import {
   MapPin,
   MessageCircle,
   ShieldCheck,
-  Trophy,
   Target,
 } from "lucide-react";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
@@ -23,7 +22,7 @@ import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop"
 
 export function MobileHomepage() {
   return (
-    <main className="mobile-homepage" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
+    <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
       <section id="mobile-inicio" className="mobile-homepage__hero">
         <TacticalClockBackdrop />
         <img src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
@@ -46,9 +45,6 @@ export function MobileHomepage() {
             </Link>
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight aria-hidden="true" />
-            </a>
-            <a href="#ranking-destaque-mobile" className="home-ranking-hero-entry home-ranking-hero-entry--mobile" aria-label="Ir ao ranking dos quatro melhores candidatos">
-              <Trophy aria-hidden="true" /> Veja o Top 4 do ranking <ChevronRight aria-hidden="true" />
             </a>
           </div>
         </div>
