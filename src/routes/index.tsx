@@ -74,6 +74,7 @@ import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import "@/styles/home-refinement.css";
+import "@/styles/home-recomposition.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -373,7 +374,7 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <div className="home">
+    <div className="home home-recomposition">
       <PublicAchievementSignal />
       <div className="home-backdrop" aria-hidden="true">
         <TacticalClockBackdrop />
