@@ -38,6 +38,18 @@
   min-height: 38px;
   padding-block: 6px;
 }
+@media (min-width: 768px) {
+  .home.home .home-hero,
+  .home.home .home-hero__content {
+    min-height: min(68svh, 620px);
+  }
+  .home.home .home-hero__content {
+    padding-block: 58px 20px;
+  }
+  .home.home .home-hero__copy {
+    max-width: 520px;
+  }
+}
 @media (max-width: 760px) {
   .home.home .home-preparation__band {
     grid-template-columns: 1fr;
