@@ -55,6 +55,7 @@ import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
+import "@/styles/home-layout-fixes.css";
 import "@/styles/news-banner.css";
 import "@/styles/general-access-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
