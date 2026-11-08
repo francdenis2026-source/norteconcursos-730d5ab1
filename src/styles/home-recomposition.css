@@ -2060,3 +2060,154 @@
     -webkit-text-fill-color: #485569;
   }
 }
+
+
+/* Desktop homepage 2026: professional editorial composition.
+   Scoped to >= 761px so the independently tuned app shell/mobile homepage
+   and its pricing cards remain untouched. */
+@media (min-width: 761px) {
+  .home.home-recomposition {
+    --recomp-max: 1320px;
+    --recomp-radius: 20px;
+  }
+  .home.home-recomposition .home-container,
+  .home.home-recomposition .home-preparation__band {
+    width: min(calc(100% - clamp(40px, 6vw, 112px)), 1320px);
+    max-width: 1320px;
+    margin-inline: auto;
+  }
+  .home.home-recomposition .home-header__inner {
+    min-height: 76px;
+  }
+  .home.home-recomposition .home-nav {
+    gap: clamp(14px, 1.7vw, 26px);
+  }
+  .home.home-recomposition .home-nav a {
+    font-size: 12px;
+    letter-spacing: .015em;
+  }
+  .home.home-recomposition .home-hero {
+    min-height: clamp(620px, 76svh, 820px);
+    background: var(--home-bg);
+  }
+  .home.home-recomposition .home-hero__image {
+    opacity: .96;
+    object-position: 73% center;
+    filter: saturate(1.03) contrast(1.05);
+  }
+  .home.home-recomposition .home-hero::after {
+    background:
+      linear-gradient(90deg, var(--home-bg) 0%, color-mix(in srgb, var(--home-bg) 90%, transparent) 31%, color-mix(in srgb, var(--home-bg) 35%, transparent) 59%, transparent 86%),
+      linear-gradient(0deg, color-mix(in srgb, var(--home-bg) 44%, transparent), transparent 30%);
+    pointer-events: none;
+  }
+  .home.home-recomposition .hx__inner {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    align-items: center;
+    gap: clamp(28px, 4vw, 60px);
+    padding-block: clamp(112px, 13vh, 156px) 46px;
+  }
+  .home.home-recomposition .hx__copy {
+    max-width: 670px;
+  }
+  .home.home-recomposition .hx__copy h1 {
+    max-width: 11ch;
+    font-size: clamp(48px, 5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+  .home.home-recomposition .hx__copy > p {
+    max-width: 55ch;
+    margin-top: 20px;
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.65;
+  }
+  .home.home-recomposition .home-actions {
+    margin-top: 25px;
+    gap: 12px;
+  }
+  .home.home-recomposition .hx__trust {
+    max-width: 620px;
+    margin-top: 25px !important;
+    gap: 12px;
+  }
+  .home.home-recomposition .hx-dock {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    border: 1px solid color-mix(in srgb, var(--home-line) 80%, transparent);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 46px rgb(0 0 0 / 16%);
+  }
+  .home.home-recomposition .hx-dock__cell {
+    min-width: 0;
+    min-height: 84px;
+    padding: 14px 18px;
+  }
+  .home.home-recomposition .home-preparation {
+    padding-block: 52px 58px;
+  }
+  .home.home-recomposition .home-preparation__band {
+    padding: clamp(28px, 3.3vw, 46px);
+    border-radius: 22px;
+    box-shadow: 0 14px 40px rgb(0 0 0 / 9%);
+  }
+  .home.home-recomposition .home-preparation__art {
+    opacity: .24;
+    mix-blend-mode: normal;
+  }
+  .home.home-recomposition .home-preparation__intro h2,
+  .home.home-recomposition .home-operations .home-heading h2 {
+    font-size: clamp(32px, 3.5vw, 48px);
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .home.home-recomposition .home-preparation__panel {
+    max-height: none;
+    min-height: 200px;
+    height: auto;
+  }
+  .home.home-recomposition .home-operations {
+    padding-block: 56px;
+  }
+  .home.home-recomposition .home-operations__heading {
+    margin-bottom: 22px;
+  }
+  .home.home-recomposition #ranking-destaque,
+  .home.home-recomposition .home-plans--insignia {
+    padding-block: 56px;
+  }
+  :root:not(.dark) .home.home-recomposition .hx__copy > p,
+  :root:not(.dark) .home.home-recomposition .home-preparation__intro > p,
+  :root:not(.dark) .home.home-recomposition .home-operations .home-heading > p {
+    color: #475569;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home-recomposition .home-preparation__band,
+  :root:not(.dark) .home.home-recomposition .home-preparation__info {
+    border-color: #cbd5e1;
+    background-color: #fff;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.home-recomposition .hx__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding-block: 110px 34px;
+  }
+  .home.home-recomposition .hx__copy {
+    max-width: 660px;
+  }
+  .home.home-recomposition .home-hero {
+    min-height: 640px;
+  }
+  .home.home-recomposition .home-hero__image {
+    object-position: 75% center;
+  }
+  .home.home-recomposition .hx-dock {
+    max-width: 100%;
+  }
+}
