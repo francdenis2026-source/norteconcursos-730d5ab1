@@ -1088,3 +1088,86 @@
   .home-recomposition .mobile-plans__list > li { flex-wrap: wrap; }
   .home-recomposition .mobile-plans__list > li > span { margin-left: auto; }
 }
+
+
+/* Mobile app framing: keep the header controls and hero inside the viewport.
+   Scoped to the public homepage; desktop composition remains unchanged. */
+@media (max-width: 760px) {
+  .home.home-recomposition .home-header {
+    width: 100%;
+    max-width: 100%;
+  }
+  .home.home-recomposition .home-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(6px, 2vw, 12px);
+    width: 100%;
+    min-width: 0;
+    padding-inline: max(12px, env(safe-area-inset-left, 0px))
+                    max(12px, env(safe-area-inset-right, 0px));
+  }
+  .home.home-recomposition .home-brand-lockup {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 42%;
+  }
+  .home.home-recomposition .home-brand-lockup > a {
+    display: flex;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home.home-recomposition .home-brand-lockup .norte-brand {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home.home-recomposition .home-header__actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(5px, 1.5vw, 9px);
+    min-width: 0;
+    margin-left: auto;
+  }
+  .home.home-recomposition .home-header__actions > * {
+    flex-shrink: 0;
+  }
+  .home.home-recomposition .mobile-homepage__hero-media {
+    width: calc(100% - 24px);
+    max-width: 620px;
+    height: auto;
+    aspect-ratio: 1.9 / 1;
+    min-height: 0;
+    margin: 12px auto 14px;
+    border: 1px solid rgb(202 165 101 / 55%);
+    border-radius: 16px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .home.home-recomposition .mobile-homepage__hero-media > img.mobile-homepage__portrait {
+    bottom: 0;
+    left: 0;
+    height: 96%;
+    max-width: 60%;
+    object-fit: contain;
+    object-position: left bottom;
+  }
+  .home.home-recomposition .mobile-homepage__hero-media > svg.tactical-clock-backdrop {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home.home-recomposition .mobile-homepage__hero-copy {
+    width: min(calc(100% - 24px), 620px);
+    max-width: 100%;
+    margin-inline: auto !important;
+  }
+}
+@media (max-width: 390px) {
+  .home.home-recomposition .home-brand-lockup { max-width: 39%; }
+  .home.home-recomposition .home-header__actions { gap: 4px; }
+  .home.home-recomposition .mobile-homepage__hero-media {
+    aspect-ratio: 1.65 / 1;
+  }
+}
