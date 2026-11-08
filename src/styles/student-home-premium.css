@@ -804,6 +804,20 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   .app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
     font-size: 11px;
   }
+  .app-shell[data-area="student"] .student-overview .platform-question-counts--compact {
+    padding: 8px 10px;
+  }
+  .app-shell[data-area="student"] .student-overview .platform-question-counts--compact > header {
+    gap: 4px;
+    margin-bottom: 5px;
+  }
+  .app-shell[data-area="student"] .student-overview .platform-question-counts__grid {
+    gap: 5px;
+  }
+  .app-shell[data-area="student"] .student-overview .platform-question-counts__grid > * {
+    min-height: 34px;
+    padding: 6px 7px;
+  }
   .app-shell[data-area="student"] .student-overview .student-desk__next {
     align-items: stretch;
     flex-direction: column;
