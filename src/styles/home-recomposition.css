@@ -1983,3 +1983,42 @@
   }
   :root:not(.dark) .home.home-recomposition .mobile-plans__note { color: #46576a !important; }
 }
+
+
+/* Light mode contrast hotfix: explicitly target the two washed-out elements
+   shown in iOS screenshots, including inherited link and paragraph styles. */
+:root:not(.dark) .home.home.home-recomposition .mobile-homepage__hero-copy .mobile-homepage__glass p.mobile-homepage__hero-lead {
+  color: #334155 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #334155;
+  filter: none;
+  text-shadow: none;
+}
+:root:not(.dark) .home.home.home-recomposition .mobile-homepage__closing > div > p {
+  color: #475569 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #475569;
+  filter: none;
+}
+:root:not(.dark) .home.home.home-recomposition .mobile-homepage__closing > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid #b48b3d;
+  border-radius: 12px;
+  background: #f6e5b9;
+  color: #50350e !important;
+  -webkit-text-fill-color: #50350e;
+  font-weight: 750;
+  opacity: 1 !important;
+  filter: none;
+  text-decoration: none;
+}
+:root:not(.dark) .home.home.home-recomposition .mobile-homepage__closing > a:hover,
+:root:not(.dark) .home.home.home-recomposition .mobile-homepage__closing > a:focus-visible {
+  background: #ead099;
+  color: #3d2a0d !important;
+  -webkit-text-fill-color: #3d2a0d;
+}
