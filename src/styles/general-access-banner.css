@@ -129,3 +129,65 @@
   .general-access__cta { transition: none; }
   .general-access__cta:hover { transform: none; }
 }
+
+/* Secondary announcement: quiet, wide utility strip instead of a competing advertisement. */
+.home-recomposition .general-access { padding: 0 0 10px; background: var(--home-bg); }
+.home-recomposition .general-access__inner {
+  width: min(100% - clamp(24px, 4vw, 64px), 1600px);
+  max-width: none;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto 44px;
+  gap: clamp(10px, 1.4vw, 20px);
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--home-line);
+  background: var(--home-surface);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.home-recomposition .general-access__icon { width: 38px; height: 38px; border-radius: 10px; }
+.home-recomposition .general-access__icon svg { width: 18px; height: 18px; }
+.home-recomposition .general-access__tag { font-size: 10px; }
+.home-recomposition .general-access__headline { font-size: clamp(12px, 1.2vw, 15px); line-height: 1.35; }
+.home-recomposition .general-access__summary { font-size: 12px; line-height: 1.4; }
+.home-recomposition .general-access__cta {
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--home-text);
+  color: var(--home-surface);
+  box-shadow: none;
+  font-size: 12px;
+}
+.home-recomposition .general-access__close {
+  position: static;
+  grid-column: 4;
+  grid-row: 1;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .home-recomposition .general-access__inner {
+    width: calc(100% - 24px);
+    grid-template-columns: 34px minmax(0, 1fr) 44px;
+    gap: 10px;
+    padding: 12px;
+  }
+  .home-recomposition .general-access__icon { width: 34px; height: 34px; }
+  .home-recomposition .general-access__text { grid-column: 2; min-width: 0; }
+  .home-recomposition .general-access__headline { font-size: 12px; overflow-wrap: anywhere; }
+  .home-recomposition .general-access__summary { font-size: 11px; overflow-wrap: anywhere; }
+  .home-recomposition .general-access__cta {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    order: initial;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .home-recomposition .general-access__close { grid-column: 3; grid-row: 1; }
+}
