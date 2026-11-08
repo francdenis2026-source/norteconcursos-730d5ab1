@@ -32,6 +32,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { catalogGroups } from "@/lib/questionCatalogSummary";
 import { cn } from "@/lib/utils";
+import "@/styles/question-bank-refinement.css";
 import {
   QuestionCatalogDetails,
   type CatalogDetail,

@@ -1,0 +1,24 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .question-catalog {
+    gap: 16px;
+  }
+
+  .app-shell[data-area="student"] .question-catalog__filters,
+  .app-shell[data-area="student"] .question-catalog__browser {
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .question-catalog__view-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .app-shell[data-area="student"] .question-catalog__view-tabs [role="tab"] {
+    flex: 0 0 auto;
+    min-height: 44px;
+    white-space: nowrap;
+  }
+}
