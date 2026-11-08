@@ -31,12 +31,22 @@
 }
 .home.home .home-preparation__panel {
   height: auto;
-  max-height: 248px;
-  padding-block: 4px;
+  max-height: 176px;
+  padding-block: 2px;
 }
 .home.home .home-preparation__tool > summary {
-  min-height: 38px;
-  padding-block: 6px;
+  min-height: 27px;
+  padding-block: 3px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+.home.home .home-preparation__tool > summary > svg:first-child {
+  width: 14px;
+  height: 14px;
+}
+.home.home .home-preparation__tool > summary > svg:last-child {
+  width: 12px;
+  height: 12px;
 }
 @media (min-width: 768px) {
   .home.home .home-hero,
@@ -57,7 +67,7 @@
     padding-block: 20px;
   }
   .home.home .home-preparation__panel {
-    max-height: 240px;
+    max-height: 190px;
   }
 }
 
