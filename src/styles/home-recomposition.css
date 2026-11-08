@@ -1,0 +1,425 @@
+/* Recomposition of the public homepage.
+   Keeps the existing components and anchors while giving the page one compact visual rhythm. */
+
+.home-recomposition {
+  --recomp-max: 1180px;
+  --recomp-gap: clamp(20px, 3vw, 36px);
+  --recomp-radius: 18px;
+  --recomp-surface: color-mix(in srgb, var(--home-surface) 86%, transparent);
+  --recomp-surface-strong: color-mix(in srgb, var(--home-surface) 96%, transparent);
+}
+
+.home-recomposition .home-container {
+  width: min(var(--recomp-max), calc(100% - 48px));
+}
+
+.home-recomposition .home-header__inner {
+  min-height: 68px;
+}
+
+.home-recomposition .home-header__tagline {
+  display: none;
+}
+
+.home-recomposition .home-nav {
+  gap: 22px;
+}
+
+.home-recomposition .home-nav a {
+  font-size: 11px;
+  letter-spacing: .02em;
+}
+
+.home-recomposition .home-hero {
+  min-height: min(720px, 82svh);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--home-bg) 96%, transparent) 0%, color-mix(in srgb, var(--home-bg) 70%, transparent) 47%, transparent 78%),
+    var(--home-bg);
+}
+
+.home-recomposition .home-hero__image {
+  opacity: .82;
+  object-position: 72% center;
+  filter: saturate(.92) contrast(1.05);
+}
+
+.home-recomposition .home-hero::after {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--home-bg) 94%, transparent) 0%, color-mix(in srgb, var(--home-bg) 74%, transparent) 44%, transparent 76%),
+    linear-gradient(0deg, color-mix(in srgb, var(--home-bg) 62%, transparent), transparent 34%);
+}
+
+.home-recomposition .hx__inner {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(340px, 1.08fr);
+  align-items: end;
+  gap: clamp(28px, 5vw, 72px);
+  padding-block: clamp(108px, 15vh, 156px) clamp(28px, 6vh, 56px);
+}
+
+.home-recomposition .hx__copy {
+  max-width: 560px;
+  align-self: center;
+}
+
+.home-recomposition .hx__copy h1 {
+  max-width: 8ch;
+  font-size: clamp(46px, 6.3vw, 82px);
+  line-height: .96;
+}
+
+.home-recomposition .hx__copy > p {
+  max-width: 48ch;
+  margin-top: 22px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.6;
+}
+
+.home-recomposition .home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 28px;
+}
+
+.home-recomposition .home-actions .home-ranking-hero-entry {
+  display: none;
+}
+
+.home-recomposition .home-hero__explore {
+  min-height: 44px;
+  font-size: 12px;
+}
+
+.home-recomposition .hx__trust {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 640px;
+  margin-top: 30px !important;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--home-line) 62%, transparent);
+}
+
+.home-recomposition .hx__trust li {
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.home-recomposition .hx__trust svg {
+  color: var(--home-gold);
+  margin-top: 1px;
+}
+
+.home-recomposition .hx-dock {
+  align-self: end;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-radius: var(--recomp-radius);
+  background: color-mix(in srgb, var(--home-line) 72%, transparent);
+  box-shadow: 0 20px 42px rgb(0 0 0 / 24%);
+}
+
+.home-recomposition .hx-dock__cell {
+  min-height: 92px;
+  padding: 16px 18px;
+  background: var(--recomp-surface);
+}
+
+.home-recomposition .hx-dock__cell--access {
+  display: none;
+}
+
+.home-recomposition .hx-dock__cell--radar {
+  grid-column: span 1;
+}
+
+.home-recomposition .home-preparation {
+  padding-block: 20px 42px;
+}
+
+.home-recomposition .home-preparation__band {
+  width: min(var(--recomp-max), calc(100% - 48px));
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid color-mix(in srgb, var(--home-line) 80%, transparent);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--home-surface) 90%, transparent), color-mix(in srgb, var(--home-bg) 78%, transparent)),
+    var(--home-surface);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 12%);
+}
+
+.home-recomposition .home-preparation__art {
+  opacity: .11;
+  mix-blend-mode: screen;
+}
+
+.home-recomposition .home-preparation__intro {
+  max-width: 430px;
+}
+
+.home-recomposition .home-preparation__intro h2 {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: .98;
+}
+
+.home-recomposition .home-preparation__intro > p {
+  max-width: 38ch;
+  font-size: 14px;
+}
+
+.home-recomposition .home-preparation__info {
+  border: 1px solid color-mix(in srgb, var(--home-line) 74%, transparent);
+  border-radius: var(--recomp-radius);
+  background: var(--recomp-surface-strong);
+}
+
+.home-recomposition .home-preparation__tabs {
+  padding: 6px;
+}
+
+.home-recomposition .home-preparation__tab {
+  min-height: 38px;
+  font-size: 11px;
+}
+
+.home-recomposition .home-preparation__panel {
+  min-height: 214px;
+  height: auto;
+  max-height: 252px;
+  padding: 8px 18px 14px;
+}
+
+.home-recomposition .home-preparation__items {
+  gap: 0 20px;
+}
+
+.home-recomposition .home-preparation__tool,
+.home-recomposition .home-preparation__items > article,
+.home-recomposition .home-preparation__items > li {
+  padding-block: 12px;
+}
+
+.home-recomposition .home-operations {
+  padding-block: 50px;
+}
+
+.home-recomposition .home-operations__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.home-recomposition .home-operations .home-heading h2 {
+  font-size: clamp(34px, 4.2vw, 56px);
+}
+
+.home-recomposition .home-operations .home-heading > p {
+  max-width: 52ch;
+}
+
+.home-recomposition #ranking-destaque,
+.home-recomposition .home-plans--insignia {
+  padding-block: 48px;
+}
+
+.home-recomposition .nc-footer {
+  border-top: 1px solid color-mix(in srgb, var(--home-line) 76%, transparent);
+}
+
+.home-recomposition .mobile-homepage {
+  background: var(--home-bg);
+}
+
+.home-recomposition .mobile-homepage__hero {
+  min-height: 640px;
+  padding: 92px 18px 24px;
+}
+
+.home-recomposition .mobile-homepage__hero-copy {
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+.home-recomposition .mobile-homepage__glass {
+  border: 1px solid color-mix(in srgb, var(--home-line) 82%, transparent);
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--home-bg) 72%, transparent);
+  box-shadow: 0 18px 42px rgb(0 0 0 / 22%);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.home-recomposition .mobile-homepage__glass h1 {
+  max-width: 12ch;
+  font-size: clamp(36px, 11vw, 54px);
+  line-height: .98;
+}
+
+.home-recomposition .mobile-homepage__hero-lead {
+  max-width: 34ch;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.home-recomposition .mobile-homepage__primary {
+  min-height: 50px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.home-recomposition .mobile-homepage__secondary {
+  min-height: 42px;
+  border-bottom: 1px solid color-mix(in srgb, var(--home-line) 70%, transparent);
+}
+
+.home-recomposition .mobile-homepage__daily,
+.home-recomposition .mobile-homepage__resources,
+.home-recomposition .mobile-homepage__contests,
+.home-recomposition .mobile-plans,
+.home-recomposition .mobile-homepage__closing {
+  width: min(100% - 36px, 620px);
+  margin-inline: auto;
+  border-radius: 20px;
+}
+
+.home-recomposition .mobile-homepage__daily {
+  margin-top: 14px;
+  padding: 22px;
+  border: 1px solid color-mix(in srgb, var(--home-line) 74%, transparent);
+  background: var(--recomp-surface);
+}
+
+.home-recomposition .mobile-homepage__daily h2 {
+  font-size: 26px;
+  line-height: 1.05;
+}
+
+.home-recomposition .mobile-homepage__resources,
+.home-recomposition .mobile-homepage__contests,
+.home-recomposition .mobile-plans {
+  padding: 28px 20px;
+}
+
+.home-recomposition .mobile-homepage__section-head h2 {
+  font-size: 30px;
+  line-height: 1.03;
+}
+
+.home-recomposition .mobile-homepage__cards {
+  gap: 10px;
+}
+
+.home-recomposition .mobile-homepage__cards article {
+  min-height: 124px;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--home-line) 74%, transparent);
+  border-radius: 14px;
+  background: var(--recomp-surface-strong);
+}
+
+.home-recomposition .mobile-homepage__cards article svg {
+  color: var(--home-gold);
+}
+
+.home-recomposition .mobile-homepage__wide-link {
+  min-height: 46px;
+  margin-top: 18px;
+  border-radius: 12px;
+  background: var(--home-text);
+  color: var(--home-surface);
+}
+
+.home-recomposition .mobile-homepage__closing {
+  margin-top: 14px;
+  padding: 20px;
+  border: 1px solid color-mix(in srgb, var(--home-line) 74%, transparent);
+  background: var(--recomp-surface);
+}
+
+@media (max-width: 1100px) {
+  .home-recomposition .home-container {
+    width: min(960px, calc(100% - 40px));
+  }
+
+  .home-recomposition .hx__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-block: 112px 28px;
+  }
+
+  .home-recomposition .hx__copy {
+    max-width: 640px;
+  }
+
+  .home-recomposition .hx-dock {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-recomposition .desktop-homepage {
+    display: none;
+  }
+
+  .home-recomposition .home-header__inner {
+    min-height: 60px;
+  }
+
+  .home-recomposition .home-header__actions {
+    gap: 3px;
+  }
+
+  .home-recomposition .home-nav {
+    display: none;
+  }
+
+  .home-recomposition .mobile-homepage {
+    display: block;
+  }
+
+  .home-recomposition .mobile-homepage__hero {
+    min-height: 0;
+    padding-top: 86px;
+  }
+
+  .home-recomposition .mobile-homepage__hero img {
+    object-position: 68% center;
+  }
+
+  .home-recomposition .mobile-homepage__hero-copy {
+    padding-bottom: 12px;
+  }
+
+  .home-recomposition .mobile-homepage__daily,
+  .home-recomposition .mobile-homepage__resources,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition .mobile-plans,
+  .home-recomposition .mobile-homepage__closing {
+    width: calc(100% - 28px);
+  }
+}
+
+@media (min-width: 761px) {
+  .home-recomposition .mobile-homepage {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-recomposition *,
+  .home-recomposition *::before,
+  .home-recomposition *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
