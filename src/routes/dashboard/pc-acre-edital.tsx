@@ -490,14 +490,14 @@ function PcAcreEditalVerticalizadoPage() {
   if (digitalView) {
     return (
       <div className="pcac-edital-page space-y-4 pb-10">
-        <PageHero
-          image="careers-team"
-          kicker="ÁREA DO ALUNO · EDITAL DIGITAL"
-          icon={BookOpenCheck}
-          title="Edital digital PC-AC 2026"
-          description="Conteúdo interativo incorporado à plataforma Norte Concursos. Use as abas por cargo, marque os tópicos e acompanhe seu progresso."
-          actions={<Button variant="outline" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>}
-        />
+        <div className="flex items-center justify-between gap-4 rounded-xl border border-primary/30 border-l-4 border-l-cyan-400 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 px-4 py-3 text-white shadow-sm">
+          <div className="min-w-0">
+            <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide text-cyan-200"><BookOpenCheck className="h-3.5 w-3.5 text-amber-300" /> Área do aluno · edital digital</p>
+            <h1 className="mt-1 text-xl font-black tracking-tight">Edital digital PC-AC 2026</h1>
+            <p className="mt-0.5 text-xs text-slate-300">Marque tópicos por cargo e acompanhe seu progresso dentro da plataforma.</p>
+          </div>
+          <Button size="sm" variant="outline" className="shrink-0 border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>
+        </div>
         <Card className="overflow-hidden border-primary/20">
           <CardContent className="p-0">
             <iframe title="Edital digital PC-AC 2026" src="/pcac-edital-digital/index.html" className="h-[calc(100vh-190px)] min-h-[720px] w-full border-0" />
