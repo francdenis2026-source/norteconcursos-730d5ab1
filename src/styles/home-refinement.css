@@ -17,6 +17,26 @@
   position: relative;
   z-index: 1;
 }
+@media (max-width: 600px) {
+  .home.home .home-header__inner {
+    align-items: center;
+    min-height: 64px;
+  }
+  .home.home .home-brand-lockup {
+    display: flex !important;
+    flex: 1 1 auto;
+    min-width: 142px;
+    transform: translateY(3px);
+  }
+  .home.home .home-brand-lockup .norte-brand {
+    --brand-scale: .78;
+    max-width: 154px;
+  }
+  .home.home .home-header__actions {
+    flex: 0 0 auto;
+    gap: 2px;
+  }
+}
 
 .home.home .home-header[data-scrolled] {
   background: color-mix(in oklab, var(--home-bg) 72%, transparent);
