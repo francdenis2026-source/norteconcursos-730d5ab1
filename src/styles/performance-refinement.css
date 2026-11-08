@@ -1,0 +1,35 @@
+.performance-page .page-hero--lg {
+  min-height: 150px;
+}
+
+.performance-page > .flex.flex-wrap {
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .performance-page {
+    gap: 16px !important;
+  }
+
+  .performance-page .page-hero--lg {
+    min-height: 112px;
+    padding: 18px 16px;
+  }
+
+  .performance-page .page-hero__desc {
+    max-width: 42ch;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .performance-page > .flex.flex-wrap {
+    padding: 12px !important;
+    border-radius: 14px;
+  }
+
+  .performance-page > .flex.flex-wrap > a {
+    width: 100%;
+    justify-content: center;
+  }
+}

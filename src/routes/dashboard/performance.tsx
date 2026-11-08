@@ -28,6 +28,7 @@ import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMate
 import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
 import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import "@/styles/performance-refinement.css";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
