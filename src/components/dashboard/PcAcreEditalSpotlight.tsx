@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarClock, CheckSquare, ScanSearch } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, ScanSearch } from "lucide-react";
 
 /** Destaque do edital verticalizado da PC-AC logo no topo da área do aluno, para acesso
  * imediato — reaproveita o padrão visual do spotlight de prova (ver PcprExamSpotlight). Os
@@ -24,7 +24,7 @@ export function PcAcreEditalSpotlight() {
       </div>
       <div className="pcpr-spot__summary">
         <div>
-          <h2>PC-AC 2026 · Edital verticalizado</h2>
+          <h2 className="pcpr-spot__title"><span className="pcpr-spot__title-icon" aria-hidden="true"><BookOpenCheck /></span>PC-AC 2026 · Edital verticalizado</h2>
           <p>139 vagas, 6 cargos · Marque o que já estudou e exporte em PDF.</p>
         </div>
         <div className="pcpr-spot__actions">

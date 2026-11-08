@@ -58,3 +58,7 @@
 .idecan-pcac-roadmap { border-color: color-mix(in srgb, var(--primary) 35%, var(--border)); }
 .idecan-pcac-roadmap [data-slot="card-content"] { display: grid; gap: 8px; }
 .idecan-pcac-roadmap [data-slot="card-content"] > div { min-height: 96px; }
+/* Ícone do edital no destaque da área do aluno */
+.pcpr-spot--pcac .pcpr-spot__title { display: flex; align-items: center; gap: 9px; }
+.pcpr-spot--pcac .pcpr-spot__title-icon { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid rgb(247 183 55 / 55%); border-radius: 8px; background: rgb(247 183 55 / 14%); color: #f7b737; }
+.pcpr-spot--pcac .pcpr-spot__title-icon svg { width: 17px; height: 17px; }
