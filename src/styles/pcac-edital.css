@@ -66,3 +66,29 @@
 .pcac-digital-fullscreen { max-width: none !important; width: 100% !important; padding-inline: 16px !important; }
 .pcac-digital-fullscreen > .overflow-hidden { width: 100%; }
 @media (max-width: 700px) { .pcac-digital-fullscreen { padding-inline: 8px !important; } }
+
+/* Ações de acesso rápido e listas longas do edital verticalizado. */
+.pcac-discipline-actions {
+  align-items: center;
+  min-height: 28px;
+}
+.pcac-discipline-actions > a {
+  white-space: nowrap;
+}
+.pcac-status-control {
+  flex: 0 0 auto;
+}
+.pcac-discipline-informatica .pcac-discipline-actions {
+  padding-block: 2px;
+}
+.pcac-discipline-informatica [data-slot="accordion-content"] > ul {
+  gap: 6px;
+}
+.pcac-discipline-informatica [data-slot="accordion-content"] > ul > li {
+  min-width: 0;
+}
+@media (max-width: 700px) {
+  .pcac-discipline-actions > a {
+    white-space: normal;
+  }
+}

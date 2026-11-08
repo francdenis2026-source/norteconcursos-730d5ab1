@@ -212,6 +212,16 @@ function DisciplineStudyLinks({
             <BrainCircuit className="h-3 w-3" aria-hidden="true" />
             Questões{link.subjects!.length > 1 ? `: ${subject}` : ""}
           </Link>
+          {videos.length === 0 && (
+            <Link
+              to="/dashboard/media"
+              search={{ subject }}
+              className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10"
+            >
+              <PlayCircle className="h-3 w-3" aria-hidden="true" />
+              Vídeos{link.subjects!.length > 1 ? `: ${subject}` : ""}
+            </Link>
+          )}
         </React.Fragment>
       ))}
       {videos.map((video) => {
@@ -282,7 +292,7 @@ function DisciplineAccordionItem({
 
   if (!hasTopics) {
     return (
-      <li className="flex items-start gap-2 rounded-lg border bg-background/60 p-3">
+      <li className={`pcac-discipline-item pcac-discipline-${discipline.id} flex items-start gap-2 rounded-lg border bg-background/60 p-3`}>
         <span onClick={(event) => event.stopPropagation()} className="shrink-0">
           <StatusButton
             status={progress[pcAcVerticalItemId(block, discipline.id)]}
@@ -298,7 +308,7 @@ function DisciplineAccordionItem({
   }
 
   return (
-    <li className="rounded-lg border bg-background/60">
+    <li className={`pcac-discipline-item pcac-discipline-${discipline.id} rounded-lg border bg-background/60`}>
       <Accordion type="single" collapsible>
         <AccordionItem value={value} className="border-0">
           <AccordionTrigger onClick={(event) => event.stopPropagation()} className="px-3 py-2.5 hover:no-underline">{header}</AccordionTrigger>
@@ -326,7 +336,7 @@ function DisciplineAccordionItem({
                         status={groupStatus}
                         onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
                       />
-                      <span className="min-w-0 flex-1 text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
+                      <span className="min-w-0 flex-1 break-words text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
                     </div>
                     {group.subtopics.length > 0 && (
                       <ul className="mt-1.5 space-y-1 border-l-2 border-primary/20 pl-2.5">
@@ -337,7 +347,7 @@ function DisciplineAccordionItem({
                               status={statuses[j]}
                               onClick={() => onToggleTopic(discipline.id, i, j)}
                             />
-                            <span className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground">{subtopic}</span>
+                            <span className="min-w-0 flex-1 break-words text-xs leading-relaxed text-muted-foreground [overflow-wrap:anywhere]">{subtopic}</span>
                           </li>
                         ))}
                       </ul>
