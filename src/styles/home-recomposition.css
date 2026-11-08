@@ -424,223 +424,36 @@
   }
 }
 
-/* Mobile viewport contract: the portrait is framed independently from the content.
-   Prevent fixed-height hero and nested sections from overflowing narrow screens. */
-@media (max-width: 760px) {
-  .home-recomposition .mobile-homepage {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    overflow-x: clip;
-    container-type: inline-size;
-  }
 
-  .home-recomposition .mobile-homepage,
-  .home-recomposition .mobile-homepage *,
-  .home-recomposition .mobile-homepage *::before,
-  .home-recomposition .mobile-homepage *::after {
-    box-sizing: border-box;
-  }
-
-  .home-recomposition .mobile-homepage__hero {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    min-width: 0;
-    min-height: max(650px, 100svh);
-    height: auto;
-    padding: clamp(76px, 11svh, 108px) 0 28px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  /* Target only the hero portrait, not images inside badges or nested widgets. */
-  .home-recomposition .mobile-homepage__hero > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    object-position: 64% 20%;
-    opacity: .82;
-    z-index: -2;
-    pointer-events: none;
-  }
-
-  .home-recomposition .mobile-homepage__hero-shade {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background: linear-gradient(180deg,
-      rgb(4 12 24 / 18%) 0%,
-      rgb(4 12 24 / 18%) 25%,
-      rgb(4 12 24 / 68%) 52%,
-      rgb(4 12 24 / 96%) 100%);
-  }
-
-  .home-recomposition .mobile-homepage__hero-copy {
-    position: relative;
-    width: min(100% - 32px, 540px);
-    max-width: 100%;
-    min-width: 0;
-    margin-inline: auto;
-    padding: 0 0 max(12px, env(safe-area-inset-bottom));
-    z-index: 1;
-  }
-
-  .home-recomposition .mobile-homepage__glass {
-    width: 100%;
-    min-width: 0;
-    padding: clamp(18px, 5cqw, 26px);
-  }
-
-  .home-recomposition .mobile-homepage__glass h1 {
-    max-width: 100%;
-    font-size: clamp(30px, 9cqw, 44px);
-    line-height: 1.07;
-    overflow-wrap: anywhere;
-  }
-
-  .home-recomposition .mobile-homepage__hero-lead {
-    max-width: 100%;
-    font-size: clamp(13px, 3.6cqw, 15px);
-    line-height: 1.55;
-  }
-
-  .home-recomposition .mobile-homepage__primary,
-  .home-recomposition .mobile-homepage__secondary,
-  .home-recomposition .mobile-homepage__wide-link {
-    max-width: 100%;
-    min-width: 0;
-    min-height: 44px;
-    overflow-wrap: anywhere;
-    text-align: center;
-  }
-
-  .home-recomposition .mobile-homepage__daily,
-  .home-recomposition .mobile-homepage__resources,
-  .home-recomposition .mobile-homepage__contests,
-  .home-recomposition .mobile-plans,
-  .home-recomposition .mobile-homepage__closing,
-  .home-recomposition .mobile-homepage__footer {
-    width: min(100% - 28px, 620px);
-    max-width: 100%;
-    min-width: 0;
-    margin-inline: auto;
-  }
-
-  .home-recomposition .mobile-homepage__daily,
-  .home-recomposition .mobile-homepage__resources,
-  .home-recomposition .mobile-homepage__contests,
-  .home-recomposition .mobile-plans {
-    padding-inline: clamp(14px, 4cqw, 22px);
-  }
-
-  .home-recomposition .mobile-homepage__cards {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    min-width: 0;
-  }
-
-  .home-recomposition .mobile-homepage__cards article,
-  .home-recomposition .mobile-plans__list > li,
-  .home-recomposition .mobile-homepage__closing > div,
-  .home-recomposition .mobile-homepage__footer-contact,
-  .home-recomposition .mobile-homepage__footer-nav {
-    min-width: 0;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-  }
-
-  .home-recomposition .mobile-homepage__section-head h2 {
-    font-size: clamp(23px, 7cqw, 30px);
-    line-height: 1.12;
-    overflow-wrap: anywhere;
-  }
-
-  .home-recomposition .mobile-homepage__contests .contest-carousel,
-  .home-recomposition .mobile-homepage__contests .contest-showcase,
-  .home-recomposition #ranking-destaque-mobile {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .home-recomposition .mobile-homepage__footer a {
-    overflow-wrap: anywhere;
-  }
-}
-
-@media (max-width: 380px) {
-  .home-recomposition .mobile-homepage__hero {
-    min-height: max(620px, 100svh);
-  }
-  .home-recomposition .mobile-homepage__hero > img {
-    object-position: 61% 17%;
-  }
-  .home-recomposition .mobile-homepage__hero-copy {
-    width: calc(100% - 24px);
-  }
-  .home-recomposition .mobile-homepage__glass {
-    padding: 16px;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 760px) {
-  .home-recomposition .mobile-homepage__hero > img {
-    object-position: 68% 24%;
-  }
-  .home-recomposition .mobile-homepage__hero {
-    min-height: max(640px, 88svh);
-  }
-}
-
-@media (max-width: 760px) and (max-height: 680px) {
-  .home-recomposition .mobile-homepage__hero {
-    min-height: 620px;
-  }
-}
-
-@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
-  .home-recomposition .mobile-homepage__hero > img {
-    transition: none;
-    animation: none;
-  }
-}
-
-/* Wider homepage rhythm: use available viewport width without stretching copy excessively. */
+/* Unified mobile composition. Supersedes the experimental viewport/portrait
+   patches: no nested glass layers, no hidden tactical clock, no cropped face. */
 .home-recomposition { --recomp-max: 1600px; }
-.home-recomposition .home-container { width: min(100% - clamp(24px, 4vw, 64px), var(--recomp-max)); max-width: none; }
-.home-recomposition .home-preparation__band { width: min(100% - clamp(24px, 4vw, 64px), var(--recomp-max)); }
+.home-recomposition .home-container,
+.home-recomposition .home-preparation__band {
+  width: min(100% - clamp(24px, 4vw, 64px), var(--recomp-max));
+  max-width: none;
+}
 @media (min-width: 1101px) {
   .home-recomposition .hx__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .home-recomposition .hx__copy { max-width: 680px; }
 }
 @media (max-width: 760px) {
   .home-recomposition .home-container { width: calc(100% - 24px); }
-  .home-recomposition .mobile-homepage__daily,
-  .home-recomposition .mobile-homepage__resources,
-  .home-recomposition .mobile-homepage__contests,
-  .home-recomposition .mobile-plans,
-  .home-recomposition .mobile-homepage__closing,
-  .home-recomposition .mobile-homepage__footer {
-    width: calc(100% - 24px);
+  .home-recomposition .mobile-homepage {
+    display: block;
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
+    overflow-x: clip;
+    background: var(--home-bg);
+    container-type: inline-size;
   }
-  .home-recomposition .mobile-homepage__hero-copy { width: calc(100% - 24px); max-width: 540px; }
-  .home-recomposition .mobile-homepage__resources,
-  .home-recomposition .mobile-homepage__contests,
-  .home-recomposition .mobile-plans { padding-inline: clamp(14px, 4vw, 22px); }
-}
-
-/* Mobile hero redesign v3 — photograph is a contained editorial masthead,
-   not a full-height background beneath an oversized translucent card. */
-@media (max-width: 760px) {
+  .home-recomposition .mobile-homepage,
+  .home-recomposition .mobile-homepage *,
+  .home-recomposition .mobile-homepage *::before,
+  .home-recomposition .mobile-homepage *::after { box-sizing: border-box; }
   .home-recomposition .mobile-homepage__hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -648,59 +461,81 @@
     height: auto;
     padding: 0 0 22px;
     overflow: hidden;
-    isolation: isolate;
     background: var(--home-bg);
   }
-  .home-recomposition .mobile-homepage__hero > img {
+  .home-recomposition .mobile-homepage__hero-media {
     position: relative;
-    inset: auto;
-    display: block;
-    order: 0;
+    isolation: isolate;
     width: 100%;
-    height: clamp(230px, 64vw, 350px);
-    max-height: 350px;
+    height: clamp(260px, 78vw, 410px);
     min-height: 0;
-    object-fit: contain;
-    object-position: center bottom;
-    opacity: 1;
+    overflow: hidden;
+    background: #0b1422;
+  }
+  /* Original textured clock SVG is back, scaled to show the dial on phones. */
+  .home-recomposition .mobile-homepage__hero-media > svg.tactical-clock-backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
     z-index: 0;
-    background: radial-gradient(ellipse at 50% 80%, #22334a 0%, #0b1422 70%);
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    transform: none;
+    --backdrop-clock-veil: rgb(9 19 33 / 38%);
+  }
+  .home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__mechanism { opacity: .5; }
+  .home-recomposition .mobile-homepage__portrait {
+    position: absolute;
+    inset: auto auto 0 -7%;
+    z-index: 1;
+    display: block;
+    width: auto;
+    height: 95%;
+    max-width: none;
+    object-fit: contain;
+    object-position: left bottom;
+    opacity: .94;
+    pointer-events: none;
+    filter: none;
   }
   .home-recomposition .mobile-homepage__hero-shade {
     position: absolute;
-    top: clamp(180px, 51vw, 290px);
-    right: 0;
-    bottom: auto;
-    left: 0;
-    height: 70px;
-    z-index: 1;
-    background: linear-gradient(to bottom, transparent, var(--home-bg));
+    inset: 0;
+    z-index: 2;
     pointer-events: none;
+    background: linear-gradient(90deg, transparent 35%, rgb(9 19 33 / 20%) 100%),
+      linear-gradient(0deg, var(--home-bg) 0%, transparent 34%);
   }
-  .home-recomposition .mobile-homepage__hero .tactical-clock-backdrop {
-    display: none;
+  .home-recomposition .mobile-homepage__hero-media .hero-badge {
+    z-index: 3;
   }
   .home-recomposition .mobile-homepage__hero-copy {
+    position: relative;
+    z-index: 4;
     order: 2;
-    width: min(calc(100% - 32px), 540px);
+    width: min(calc(100% - 28px), 620px);
     max-width: 100%;
-    margin: 0 auto;
+    min-width: 0;
+    margin: -10px auto 0;
     padding: 0;
-    z-index: 2;
   }
   .home-recomposition .mobile-homepage__eyebrow {
+    display: inline-flex;
+    align-items: center;
     max-width: 100%;
-    font-size: clamp(10px, 2.8vw, 12px);
-    line-height: 1.4;
-    letter-spacing: .065em;
+    font-size: clamp(10px, 2.8cqw, 12px);
+    line-height: 1.45;
+    letter-spacing: .05em;
     white-space: normal;
     overflow-wrap: anywhere;
   }
   .home-recomposition .mobile-homepage__glass {
     width: 100%;
-    margin: 10px 0 0;
-    padding: clamp(20px, 5vw, 28px);
-    border: 1px solid color-mix(in srgb, var(--home-line) 72%, transparent);
+    min-width: 0;
+    margin: 12px 0 0;
+    padding: clamp(18px, 5cqw, 28px);
+    border: 1px solid color-mix(in srgb, var(--home-line) 70%, transparent);
     border-radius: 18px;
     background: var(--home-surface);
     box-shadow: none;
@@ -713,46 +548,99 @@
   .home-recomposition .mobile-homepage__hero-copy::before,
   .home-recomposition .mobile-homepage__hero-copy::after {
     box-shadow: none;
-    backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   .home-recomposition .mobile-homepage__glass h1 {
     max-width: 100%;
     margin: 0;
-    font-size: clamp(29px, 8.2vw, 40px);
+    font-size: clamp(29px, 8.5cqw, 43px);
     line-height: 1.12;
     letter-spacing: -.035em;
+    overflow-wrap: normal;
     text-wrap: balance;
   }
   .home-recomposition .mobile-homepage__hero-lead {
     max-width: 42ch;
-    font-size: clamp(13px, 3.5vw, 15px);
+    font-size: clamp(13px, 3.5cqw, 15px);
     line-height: 1.55;
     text-wrap: pretty;
   }
-  .home-recomposition .mobile-homepage__primary {
+  .home-recomposition .mobile-homepage__primary,
+  .home-recomposition .mobile-homepage__secondary,
+  .home-recomposition .mobile-homepage__wide-link {
     width: 100%;
-    min-height: 48px;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 46px;
     border-radius: 11px;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
-  .home-recomposition .mobile-homepage__secondary {
+  .home-recomposition .mobile-homepage__daily,
+  .home-recomposition .mobile-homepage__resources,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition .mobile-plans,
+  .home-recomposition .mobile-homepage__closing,
+  .home-recomposition .mobile-homepage__footer {
+    width: min(calc(100% - 24px), 620px);
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+  }
+  .home-recomposition .mobile-homepage__daily,
+  .home-recomposition .mobile-homepage__resources,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition .mobile-plans {
+    padding-inline: clamp(14px, 4cqw, 22px);
+  }
+  .home-recomposition .mobile-homepage__section-head h2 {
+    font-size: clamp(24px, 7cqw, 31px);
+    line-height: 1.13;
+    text-wrap: balance;
+  }
+  .home-recomposition .mobile-homepage__cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    min-width: 0;
     width: 100%;
-    min-height: 44px;
   }
+  .home-recomposition .mobile-homepage__cards article {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: start;
+    gap: 4px 12px;
+    min-height: 0;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+  .home-recomposition .mobile-homepage__cards article > svg { grid-row: 1 / span 2; }
+  .home-recomposition .mobile-homepage__cards article > strong,
+  .home-recomposition .mobile-homepage__cards article > p { grid-column: 2; min-width: 0; margin: 0; }
+  .home-recomposition .mobile-plans__list > li,
+  .home-recomposition .mobile-homepage__closing > div,
+  .home-recomposition .mobile-homepage__footer-contact,
+  .home-recomposition .mobile-homepage__footer-nav,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition #ranking-destaque-mobile {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .home-recomposition .mobile-homepage__footer a { overflow-wrap: anywhere; }
 }
 @media (max-width: 380px) {
-  .home-recomposition .mobile-homepage__hero > img {
-    height: 235px;
-    object-position: center bottom;
-  }
-  .home-recomposition .mobile-homepage__hero-shade { top: 185px; }
+  .home-recomposition .mobile-homepage__hero-media { height: 260px; }
+  .home-recomposition .mobile-homepage__portrait { height: 88%; left: -10%; }
   .home-recomposition .mobile-homepage__hero-copy { width: calc(100% - 24px); }
   .home-recomposition .mobile-homepage__glass { padding: 18px; }
 }
 @media (min-width: 500px) and (max-width: 760px) {
-  .home-recomposition .mobile-homepage__hero > img {
-    height: 350px;
-    object-position: center bottom;
-  }
-  .home-recomposition .mobile-homepage__hero-shade { top: 290px; }
+  .home-recomposition .mobile-homepage__hero-media { height: 410px; }
+  .home-recomposition .mobile-homepage__portrait { height: 100%; left: 0; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__hand { animation: none; }
 }
