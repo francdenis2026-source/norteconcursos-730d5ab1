@@ -470,6 +470,14 @@ function PcAcreEditalVerticalizadoPage() {
   const digitalView = search.view === "digital";
   const navigate = useNavigate();
   const cargo = pcAcVerticalCargo(cargoParam);
+  const [clockNow, setClockNow] = React.useState(() => new Date());
+  React.useEffect(() => {
+    if (!digitalView) return;
+    const timer = window.setInterval(() => setClockNow(new Date()), 60_000);
+    return () => window.clearInterval(timer);
+  }, [digitalView]);
+  const examDate = new Date("2027-01-24T00:00:00");
+  const daysToExam = Math.max(0, Math.ceil((examDate.getTime() - clockNow.getTime()) / 86_400_000));
 
   const [progress, setProgress] = React.useState<Record<string, PcAcVerticalStatus>>({});
 
@@ -507,6 +515,12 @@ function PcAcreEditalVerticalizadoPage() {
             <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide text-cyan-200"><BookOpenCheck className="h-3.5 w-3.5 text-amber-300" /> Área do aluno · edital digital</p>
             <h1 className="mt-1 text-xl font-black tracking-tight">Edital digital PC-AC 2026</h1>
             <p className="mt-0.5 text-xs text-slate-300">Marque tópicos por cargo e acompanhe seu progresso dentro da plataforma.</p>
+          </div>
+          <div className="hidden items-center gap-3 lg:flex">
+            <div className="text-right text-[10px] leading-tight text-slate-300"><strong className="block text-slate-100">Inscrições</strong>11/11 a 14/12/2026</div>
+            <div className="h-7 w-px bg-white/15" />
+            <div className="text-right text-[10px] leading-tight text-slate-300"><strong className="block text-slate-100">Prova objetiva</strong>24/01/2027</div>
+            <div className="rounded-lg border border-amber-300/40 bg-amber-400/10 px-3 py-1 text-center"><strong className="block text-lg leading-none text-amber-200">{daysToExam}</strong><span className="text-[9px] font-bold uppercase tracking-wide text-amber-100">dias restantes</span></div>
           </div>
           <Button size="sm" variant="outline" className="shrink-0 border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>
         </div>
