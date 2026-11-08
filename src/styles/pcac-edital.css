@@ -76,7 +76,25 @@
   white-space: nowrap;
 }
 .pcac-status-control {
-  flex: 0 0 auto;
+  position: static !important;
+  display: inline-flex !important;
+  flex: 0 0 24px !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  align-self: flex-start;
+}
+.pcac-discipline-item .pcac-status-control + span,
+.pcac-discipline-item .pcac-status-control ~ span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.pcac-discipline-item li {
+  min-width: 0;
 }
 .pcac-discipline-informatica .pcac-discipline-actions {
   padding-block: 2px;
