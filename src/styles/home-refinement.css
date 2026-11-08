@@ -28,4 +28,13 @@
   .desktop-homepage .home-operations .home-heading > p {
     max-width: 54ch;
   }
+
+  .desktop-homepage #ranking-destaque {
+    scroll-margin-top: 84px;
+  }
+
+  .desktop-homepage #ranking-destaque .home-heading {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
 }
