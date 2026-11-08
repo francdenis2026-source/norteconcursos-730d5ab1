@@ -1171,3 +1171,53 @@
     aspect-ratio: 1.65 / 1;
   }
 }
+
+
+/* App-shell / iOS standalone: the translucent system status bar occupies the
+   safe-area. Reserve it INSIDE the header instead of pushing the navigation
+   behind the notch. In Safari's normal tab, no extra top inset is added. */
+@media (max-width: 760px) {
+  @media (display-mode: standalone) {
+    .home.home-recomposition .home-header {
+      position: sticky;
+      top: 0;
+      padding-top: env(safe-area-inset-top, 0px);
+      z-index: 100;
+      box-sizing: border-box;
+    }
+  }
+  .home.home-recomposition .home-header {
+    overflow: visible;
+    transform: none;
+  }
+  .home.home-recomposition .home-header__inner {
+    min-height: 60px;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .home.home-recomposition .home-header__actions {
+    position: relative;
+    z-index: 2;
+    max-width: 62%;
+  }
+  .home.home-recomposition .home-menu-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 380px) {
+  .home.home-recomposition .home-header__register {
+    padding-inline: 7px;
+    font-size: 12px;
+  }
+  .home.home-recomposition .home-header__register svg {
+    width: 15px;
+    height: 15px;
+  }
+}
