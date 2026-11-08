@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  .desktop-homepage .home-hero {
+    min-height: min(720px, 78vh);
+  }
+
+  .desktop-homepage .home-hero__actions {
+    gap: 10px;
+  }
+
+  .desktop-homepage .home-hero__actions :is(a, button) {
+    min-height: 46px;
+  }
+}

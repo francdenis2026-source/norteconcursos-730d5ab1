@@ -72,6 +72,7 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
+import "@/styles/home-refinement.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
