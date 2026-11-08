@@ -46,4 +46,12 @@
     min-height: 128px;
     padding: 18px;
   }
+
+  .desktop-homepage .home-footer--command .home-container {
+    gap: 24px;
+  }
+
+  .desktop-homepage .home-footer--command .home-footer__section {
+    min-height: 44px;
+  }
 }
