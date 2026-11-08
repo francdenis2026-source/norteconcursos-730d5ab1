@@ -21,4 +21,14 @@
     min-height: 44px;
     white-space: nowrap;
   }
+
+  .app-shell[data-area="student"] .question-catalog__result-row {
+    min-height: 52px;
+    gap: 8px;
+    padding: 9px 10px;
+  }
+
+  .app-shell[data-area="student"] .question-catalog__result-row > :last-child {
+    flex: 0 0 auto;
+  }
 }
