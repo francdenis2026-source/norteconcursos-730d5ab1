@@ -1,0 +1,17 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .question-errors {
+    gap: 16px;
+  }
+
+  .app-shell[data-area="student"] .question-errors .page-hero {
+    min-height: 112px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .question-errors select,
+  .app-shell[data-area="student"] .question-errors button,
+  .app-shell[data-area="student"] .question-errors a {
+    min-height: 44px;
+  }
+}

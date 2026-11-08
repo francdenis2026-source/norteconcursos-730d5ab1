@@ -67,6 +67,7 @@ import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
+import "@/styles/errors-refinement.css";
 
 export const Route = createFileRoute("/dashboard/errors")({
   component: ErrorsPage,
