@@ -1,0 +1,22 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .study-tools-page > section,
+  .app-shell[data-area="student"] .study-tools-page > nav {
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .study-tools-page > section[aria-labelledby="study-selection-title"] {
+    padding: 12px;
+  }
+
+  .app-shell[data-area="student"] .study-tools-page .study-tool-launcher {
+    gap: 7px;
+  }
+
+  .app-shell[data-area="student"] .study-tools-page .study-tool-launcher > * {
+    min-height: 64px;
+  }
+
+  .app-shell[data-area="student"] .study-tools-page > section[aria-labelledby="study-actions-title"] {
+    gap: 10px;
+  }
+}

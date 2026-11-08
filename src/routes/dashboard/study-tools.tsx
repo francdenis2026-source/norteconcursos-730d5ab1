@@ -51,6 +51,7 @@ import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
 import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { userStorageKey } from "@/lib/userStorage";
+import "@/styles/study-tools-refinement.css";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
