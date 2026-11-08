@@ -20,4 +20,20 @@
   .app-shell[data-area="student"] .plan-workspace-window button {
     min-height: 44px;
   }
+
+  .app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero {
+    min-height: 118px;
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero h1 {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
 }
