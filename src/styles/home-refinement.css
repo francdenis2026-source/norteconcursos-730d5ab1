@@ -17,6 +17,38 @@
   box-shadow: 0 10px 28px -18px rgb(0 0 0 / 42%);
 }
 
+/* Compact the platform band so it reads as one focused panel instead of a
+   full-screen interstitial. */
+.home.home .home-preparation__band {
+  min-height: 0;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(20px, 3vw, 40px);
+  padding-block: 24px;
+}
+.home.home .home-preparation__intro h2 {
+  margin-block: 10px;
+  font-size: clamp(26px, 3vw, 38px);
+}
+.home.home .home-preparation__panel {
+  height: auto;
+  max-height: 248px;
+  padding-block: 4px;
+}
+.home.home .home-preparation__tool > summary {
+  min-height: 38px;
+  padding-block: 6px;
+}
+@media (max-width: 760px) {
+  .home.home .home-preparation__band {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-block: 20px;
+  }
+  .home.home .home-preparation__panel {
+    max-height: 240px;
+  }
+}
+
 @media (min-width: 768px) {
   .desktop-homepage .home-hero {
     min-height: min(720px, 78vh);
