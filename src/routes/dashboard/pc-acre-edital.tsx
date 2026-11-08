@@ -84,6 +84,17 @@ const PCAC_DISCIPLINE_GUIDE: Record<string, string> = {
   "Medicina Legal": "Traumatologia, tanatologia, sexologia, toxicologia, identificação e psicopatologia forense.",
   "Ciências Forenses": "Vestígios, identificação, perícia, genética, química, balística, documentoscopia e cadeia de custódia.",
 };
+const INVESTIGATOR_FOCUS = [
+  { subject: "Direito Penal", priority: "Muito alta", topics: "teoria do crime, consumação e tentativa, concurso de pessoas e crimes contra pessoa, patrimônio e administração pública", filter: "Direito Penal" },
+  { subject: "Direito Processual Penal", priority: "Muito alta", topics: "inquérito policial, provas, cadeia de custódia, prisões, medidas cautelares e identificação criminal", filter: "Direito Processual Penal" },
+  { subject: "Língua Portuguesa", priority: "Alta", topics: "interpretação, coesão e coerência, sintaxe, concordância, regência, crase, pontuação e reescrita", filter: "Língua Portuguesa" },
+  { subject: "Raciocínio Lógico", priority: "Alta", topics: "proposições, equivalências, negações, argumentação, conjuntos, porcentagem, combinatória, probabilidade e gráficos", filter: "Raciocínio Lógico-Matemático" },
+  { subject: "Contabilidade e Estatística", priority: "Alta", topics: "patrimônio, escrituração, demonstrações, juros, análise financeira; população, amostra, tabelas, medidas, probabilidade e correlação", filter: "Contabilidade" },
+  { subject: "Análise de Dados e Informações", priority: "Alta", topics: "coleta, padronização, duplicidades, cruzamento de registros, linhas do tempo, vínculos, redes, mapas e relatórios analíticos", filter: "Análise de Dados e Informações" },
+  { subject: "Tecnologia da Informação e Segurança", priority: "Média-alta", topics: "sistemas, arquivos, planilhas, bancos de dados, redes, autenticação, criptografia, backups, metadados e proteção de informações", filter: "Tecnologia da Informação" },
+  { subject: "Arquivologia e Administração", priority: "Média", topics: "ciclo documental, classificação, avaliação, temporalidade, preservação, gestão de processos, atendimento, ética e sigilo", filter: "Arquivologia" },
+] as const;
+
 const PCAC_IDECAN_PRIORITY = [
   { subject: "Direito Penal", level: "Muito alta", reason: "teoria do crime, crimes contra a pessoa, patrimônio e administração pública", filter: "Direito Penal" },
   { subject: "Direito Processual Penal", level: "Muito alta", reason: "inquérito, ação penal, prisões, provas e cadeia de custódia", filter: "Direito Processual Penal" },
@@ -579,6 +590,30 @@ function PcAcreEditalVerticalizadoPage() {
                 <p className="mt-1 text-sm font-semibold">{focus}</p>
               </div>
             ))}
+          </CardContent>
+          <CardContent className="border-t border-amber-400/20 pt-4">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <p className="text-sm font-bold">Assuntos para ganhar tempo</p>
+                <p className="text-xs text-muted-foreground">Prioridade estratégica cruzando o edital PC-AC com o padrão observado em provas policiais da IDECAN, incluindo PC-SC 2026. É orientação de estudo, não alteração do conteúdo oficial.</p>
+              </div>
+              <Badge variant="outline">IDECAN · 2026</Badge>
+            </div>
+            <div className="grid gap-2 lg:grid-cols-2">
+              {INVESTIGATOR_FOCUS.map((item, index) => (
+                <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <div><span className="mr-1 text-xs font-black text-muted-foreground">{index + 1}.</span><span className="text-sm font-semibold">{item.subject}</span></div>
+                    <Badge variant={item.priority === "Muito alta" ? "default" : "outline"}>{item.priority}</Badge>
+                  </div>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.topics}</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-primary hover:bg-primary/10">Treinar questões</Link>
+                    <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-muted-foreground hover:bg-muted">Abrir teoria</Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
       )}
