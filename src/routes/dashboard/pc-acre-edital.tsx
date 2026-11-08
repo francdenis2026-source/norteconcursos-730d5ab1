@@ -43,6 +43,7 @@ import {
   writePcAcVerticalProgress,
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
+import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
 import {
   DEFAULT_PCAC_STUDY_CONFIG,
@@ -235,10 +236,16 @@ function DisciplineAccordionItem({
   discipline: PcAcVerticalDiscipline;
   cargoId: PcAcVerticalCargoId;
   progress: Record<string, PcAcVerticalStatus>;
-  onToggleTopic: (disciplineId: string, topicIndex: number | undefined) => void;
+  onToggleTopic: (
+    disciplineId: string,
+    topicIndex: number | undefined,
+    subtopicIndex?: number,
+    forcedStatus?: PcAcVerticalStatus | null,
+  ) => void;
 }) {
   const counts = pcAcVerticalDisciplineCounts(block, discipline, progress);
-  const hasTopics = !!discipline.topics?.length;
+  const groups = pcAcVerticalTopicGroups(discipline);
+  const hasTopics = groups.length > 0;
   const value = `${block}::${discipline.id}`;
 
   const header = (
@@ -291,21 +298,46 @@ function DisciplineAccordionItem({
           <AccordionContent className="px-3 pb-3">
             {extras}
             <ul className="mt-2 space-y-1.5">
-              {discipline.topics!.map((topic, i) => (
-                <li
-                  key={i}
-                  className="flex flex-wrap items-start justify-between gap-2 rounded-md border border-border/60 bg-muted/20 p-2"
-                >
-                  <span className="min-w-0 flex-1 text-xs leading-relaxed text-foreground/90">
-                    {topic}
-                  </span>
-                  <StatusButton
-                    size="sm"
-                    status={progress[pcAcVerticalItemId(block, discipline.id, i)]}
-                    onClick={() => onToggleTopic(discipline.id, i)}
-                  />
-                </li>
-              ))}
+              {groups.map((group, i) => {
+                const units = group.subtopics.length ? group.subtopics : [group.title];
+                const statuses = units.map((_, j) =>
+                  group.subtopics.length
+                    ? progress[pcAcVerticalItemId(block, discipline.id, i, j)]
+                    : progress[pcAcVerticalItemId(block, discipline.id, i)],
+                );
+                const groupStatus: PcAcVerticalStatus | undefined = statuses.every((status) => status === "estudado")
+                  ? "estudado"
+                  : statuses.some(Boolean)
+                    ? "a-estudar"
+                    : undefined;
+                const nextGroupStatus = groupStatus === "estudado" ? undefined : groupStatus === "a-estudar" ? "estudado" : "a-estudar";
+                return (
+                  <li key={i} className="rounded-md border border-border/60 bg-muted/20 p-2">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="min-w-0 flex-1 text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
+                      <StatusButton
+                        size="sm"
+                        status={groupStatus}
+                        onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
+                      />
+                    </div>
+                    {group.subtopics.length > 0 && (
+                      <ul className="mt-1.5 space-y-1 border-l-2 border-primary/20 pl-2.5">
+                        {group.subtopics.map((subtopic, j) => (
+                          <li key={j} className="flex items-start justify-between gap-2 rounded border border-border/50 bg-background/60 px-2 py-1.5">
+                            <span className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground">{subtopic}</span>
+                            <StatusButton
+                              size="sm"
+                              status={statuses[j]}
+                              onClick={() => onToggleTopic(discipline.id, i, j)}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </AccordionContent>
         </AccordionItem>
@@ -486,11 +518,17 @@ function PcAcreEditalVerticalizadoPage() {
     setProgress(readPcAcVerticalProgress(window.localStorage, userId, cargo.id));
   }, [userId, cargo.id]);
 
-  const toggle = (block: string, disciplineId: string, topicIndex?: number) => {
-    const itemId = pcAcVerticalItemId(block, disciplineId, topicIndex);
+  const toggle = (
+    block: string,
+    disciplineId: string,
+    topicIndex?: number,
+    subtopicIndex?: number,
+    forcedStatus?: PcAcVerticalStatus | null,
+  ) => {
+    const itemId = pcAcVerticalItemId(block, disciplineId, topicIndex, subtopicIndex);
     setProgress((prev) => {
       const next = { ...prev };
-      const nextValue = nextStatus(prev[itemId]);
+      const nextValue = forcedStatus === undefined ? nextStatus(prev[itemId]) : forcedStatus;
       if (nextValue) next[itemId] = nextValue;
       else delete next[itemId];
       if (typeof window !== "undefined")
@@ -768,8 +806,8 @@ function PcAcreEditalVerticalizadoPage() {
                         discipline={discipline}
                         cargoId={cargo.id}
                         progress={progress}
-                        onToggleTopic={(disciplineId, topicIndex) =>
-                          toggle(block.title, disciplineId, topicIndex)
+                        onToggleTopic={(disciplineId, topicIndex, subtopicIndex, forcedStatus) =>
+                          toggle(block.title, disciplineId, topicIndex, subtopicIndex, forcedStatus)
                         }
                       />
                     ))}

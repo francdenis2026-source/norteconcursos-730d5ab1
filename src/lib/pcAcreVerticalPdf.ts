@@ -11,6 +11,7 @@ import {
   pcAcVerticalItemId,
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
+import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
 
 const STATUS_LABEL: Record<PcAcVerticalStatus, string> = {
   estudado: "Estudado",
@@ -188,8 +189,8 @@ export async function generatePcAcVerticalPdf(
     cursor.y += 34;
 
     for (const discipline of block.disciplines) {
-      const topics = discipline.topics?.length ? discipline.topics : [discipline.name];
-      const trackedPerTopic = !!discipline.topics?.length;
+      const groups = pcAcVerticalTopicGroups(discipline);
+      const topics = groups.length ? groups : [{ title: discipline.name, subtopics: [] }];
       const dCounts = pcAcVerticalDisciplineCounts(block.title, discipline, progress);
 
       ensureSpace(30);
@@ -223,11 +224,21 @@ export async function generatePcAcVerticalPdf(
       }
 
       for (let i = 0; i < topics.length; i++) {
-        const status =
-          progress[pcAcVerticalItemId(block.title, discipline.id, trackedPerTopic ? i : undefined)];
+        const group = topics[i]!;
+        const units = group.subtopics.length ? group.subtopics : [group.title];
+        const groupStatuses = units.map((_, j) =>
+          group.subtopics.length
+            ? progress[pcAcVerticalItemId(block.title, discipline.id, i, j)]
+            : progress[pcAcVerticalItemId(block.title, discipline.id, i)],
+        );
+        const groupStatus = groupStatuses.every((value) => value === "estudado")
+          ? "estudado"
+          : groupStatuses.some(Boolean)
+            ? "a-estudar"
+            : undefined;
         doc.setFont("helvetica", "normal");
         doc.setFontSize(9);
-        const lines = doc.splitTextToSize(topics[i]!, CONTENT_W - 100);
+        const lines = doc.splitTextToSize(group.title, CONTENT_W - 100);
         const rowH = Math.max(lines.length * 11.5, 11.5) + 7;
         ensureSpace(rowH);
         doc.setFillColor(...CARD_BG);
@@ -236,8 +247,21 @@ export async function generatePcAcVerticalPdf(
         doc.roundedRect(MARGIN_X, cursor.y - 9, CONTENT_W, rowH - 2, 3, 3, "FD");
         doc.setTextColor(...INK);
         doc.text(lines, MARGIN_X + 10, cursor.y);
-        drawStatusPill(doc, status, MARGIN_X + CONTENT_W - 8, cursor.y + 1.5);
+        drawStatusPill(doc, groupStatus, MARGIN_X + CONTENT_W - 8, cursor.y + 1.5);
         cursor.y += rowH + 3;
+        for (let j = 0; j < group.subtopics.length; j++) {
+          const subtopic = group.subtopics[j]!;
+          const subLines = doc.splitTextToSize(subtopic, CONTENT_W - 112);
+          const subRowH = Math.max(subLines.length * 10.5, 10.5) + 6;
+          ensureSpace(subRowH);
+          doc.setFillColor(...CARD_BG);
+          doc.setDrawColor(...LINE);
+          doc.roundedRect(MARGIN_X + 7, cursor.y - 8, CONTENT_W - 14, subRowH - 2, 2, 2, "FD");
+          doc.setTextColor(...MUTED);
+          doc.text(subLines, MARGIN_X + 15, cursor.y);
+          drawStatusPill(doc, groupStatuses[j], MARGIN_X + CONTENT_W - 15, cursor.y + 1.5);
+          cursor.y += subRowH + 2;
+        }
       }
       cursor.y += 6;
     }

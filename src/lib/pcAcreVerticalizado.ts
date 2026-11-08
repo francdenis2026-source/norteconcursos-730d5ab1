@@ -1,4 +1,5 @@
 import { pcAcVerticalCargos, type PcAcVerticalCargoId } from "@/data/pcAcreVerticalizado";
+import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
 
 export type PcAcVerticalStatus = "a-estudar" | "estudado";
 
@@ -14,10 +15,17 @@ export const pcAcVerticalKey = (userId: string, cargo: PcAcVerticalCargoId) =>
  * itens detalhados) ou "<bloco>::<disciplina>::<índice do item>" (um item do conteúdo
  * programático oficial dessa disciplina). O bloco entra na chave para aceitar disciplinas
  * repetidas entre blocos (ex.: Legislação Institucional aparece em vários cargos). */
-export function pcAcVerticalItemId(block: string, disciplineId: string, topicIndex?: number) {
+export function pcAcVerticalItemId(
+  block: string,
+  disciplineId: string,
+  topicIndex?: number,
+  subtopicIndex?: number,
+) {
   return topicIndex === undefined
     ? `${block}::${disciplineId}`
-    : `${block}::${disciplineId}::${topicIndex}`;
+    : subtopicIndex === undefined
+      ? `${block}::${disciplineId}::${topicIndex}`
+      : `${block}::${disciplineId}::${topicIndex}::${subtopicIndex}`;
 }
 
 export function readPcAcVerticalProgress(
@@ -61,7 +69,8 @@ export function pcAcVerticalCounts(
   let aEstudar = 0;
   for (const block of cargo.blocks)
     for (const discipline of block.disciplines) {
-      const topicsCount = discipline.topics?.length ?? 0;
+      const groups = pcAcVerticalTopicGroups(discipline);
+      const topicsCount = groups.length;
       if (topicsCount === 0) {
         total += 1;
         const status = progress[pcAcVerticalItemId(block.title, discipline.id)];
@@ -70,10 +79,15 @@ export function pcAcVerticalCounts(
         continue;
       }
       for (let i = 0; i < topicsCount; i++) {
-        total += 1;
-        const status = progress[pcAcVerticalItemId(block.title, discipline.id, i)];
-        if (status === "estudado") estudado += 1;
-        else if (status === "a-estudar") aEstudar += 1;
+        const units = groups[i]!.subtopics.length ? groups[i]!.subtopics : [groups[i]!.title];
+        for (let j = 0; j < units.length; j++) {
+          total += 1;
+          const status = groups[i]!.subtopics.length
+            ? progress[pcAcVerticalItemId(block.title, discipline.id, i, j)]
+            : progress[pcAcVerticalItemId(block.title, discipline.id, i)];
+          if (status === "estudado") estudado += 1;
+          else if (status === "a-estudar") aEstudar += 1;
+        }
       }
     }
   return { total, estudado, aEstudar, pendente: total - estudado - aEstudar };
@@ -85,8 +99,9 @@ export function pcAcVerticalDisciplineCounts(
   discipline: { id: string; topics?: string[] },
   progress: Record<string, PcAcVerticalStatus>,
 ) {
-  const topicsCount = discipline.topics?.length ?? 0;
-  const total = Math.max(topicsCount, 1);
+  const groups = pcAcVerticalTopicGroups(discipline);
+  const topicsCount = groups.length;
+  const total = Math.max(groups.reduce((sum, group) => sum + Math.max(group.subtopics.length, 1), 0), 1);
   let estudado = 0;
   let aEstudar = 0;
   if (topicsCount === 0) {
@@ -94,10 +109,16 @@ export function pcAcVerticalDisciplineCounts(
     if (status === "estudado") estudado += 1;
     else if (status === "a-estudar") aEstudar += 1;
   } else {
-    for (let i = 0; i < topicsCount; i++) {
-      const status = progress[pcAcVerticalItemId(block, discipline.id, i)];
-      if (status === "estudado") estudado += 1;
-      else if (status === "a-estudar") aEstudar += 1;
+    for (let i = 0; i < groups.length; i++) {
+      const group = groups[i]!;
+      const units = group.subtopics.length ? group.subtopics : [group.title];
+      for (let j = 0; j < units.length; j++) {
+        const status = group.subtopics.length
+          ? progress[pcAcVerticalItemId(block, discipline.id, i, j)]
+          : progress[pcAcVerticalItemId(block, discipline.id, i)];
+        if (status === "estudado") estudado += 1;
+        else if (status === "a-estudar") aEstudar += 1;
+      }
     }
   }
   return { total, estudado, aEstudar, pendente: total - estudado - aEstudar };

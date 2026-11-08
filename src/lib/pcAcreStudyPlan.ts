@@ -1,4 +1,5 @@
 import type { PcAcVerticalCargo, PcAcVerticalCargoId } from "@/data/pcAcreVerticalizado";
+import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
 
 /** Data da prova objetiva do Edital nº 001 SEAD/PCAC (fonte: comunicado oficial do processo,
  * 06/11/2026) e banca responsável. Usada para o cronograma de estudos se ajustar ao tempo real
@@ -61,7 +62,16 @@ export function buildPcAcStudyWeek(
   const entries = cargo.blocks.flatMap((block) =>
     block.disciplines.map((d) => ({
       name: d.name,
-      weight: disciplineWeight(block.title, d.topics?.length ?? 1),
+      weight: disciplineWeight(
+        block.title,
+        Math.max(
+          1,
+          pcAcVerticalTopicGroups(d).reduce(
+            (total, group) => total + Math.max(group.subtopics.length, 1),
+            0,
+          ),
+        ),
+      ),
     })),
   );
   if (!entries.length) return out;
