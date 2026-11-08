@@ -117,8 +117,8 @@ export function MobileHomepage() {
       <HomeRankingShowcase anchorId="ranking-destaque-mobile" />
       <section id="mobile-planos" className="mobile-plans" aria-labelledby="mobile-plans-title">
         <div className="mobile-homepage__section-head">
-          <span>Planos</span>
-          <h2 id="mobile-plans-title">Planos</h2>
+          <span>Escolha sua evolução</span>
+          <h2 id="mobile-plans-title">Um plano para cada etapa.</h2>
         </div>
         {TESTING_PHASE && (
           <p className="mobile-plans__trial">
