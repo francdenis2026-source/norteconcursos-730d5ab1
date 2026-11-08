@@ -611,3 +611,28 @@
     animation: none;
   }
 }
+
+/* Wider homepage rhythm: use available viewport width without stretching copy excessively. */
+.home-recomposition { --recomp-max: 1600px; }
+.home-recomposition .home-container { width: min(100% - clamp(24px, 4vw, 64px), var(--recomp-max)); max-width: none; }
+.home-recomposition .home-preparation__band { width: min(100% - clamp(24px, 4vw, 64px), var(--recomp-max)); }
+@media (min-width: 1101px) {
+  .home-recomposition .hx__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .home-recomposition .hx__copy { max-width: 680px; }
+}
+@media (max-width: 760px) {
+  .home-recomposition .home-container { width: calc(100% - 24px); }
+  .home-recomposition .mobile-homepage__daily,
+  .home-recomposition .mobile-homepage__resources,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition .mobile-plans,
+  .home-recomposition .mobile-homepage__closing,
+  .home-recomposition .mobile-homepage__footer {
+    width: calc(100% - 24px);
+    max-width: 100%;
+  }
+  .home-recomposition .mobile-homepage__hero-copy { width: calc(100% - 24px); max-width: 540px; }
+  .home-recomposition .mobile-homepage__resources,
+  .home-recomposition .mobile-homepage__contests,
+  .home-recomposition .mobile-plans { padding-inline: clamp(14px, 4vw, 22px); }
+}
