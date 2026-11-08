@@ -766,3 +766,23 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   background: #ffffff !important;
   box-shadow: 0 6px 18px rgb(15 23 42 / 7%) !important;
 }
+
+/* Action-first refinement: the recommended study step leads the page without
+   making the supporting metrics compete with it. */
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  border-left-width: 4px !important;
+  box-shadow: 0 12px 26px rgb(15 23 42 / 10%) !important;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary {
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .student-overview .student-desk__next {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary {
+    width: 100%;
+  }
+}
