@@ -2,6 +2,17 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookOpenCheck,
+  BookOpen,
+  ClipboardList,
+  PlaySquare,
+  BarChart3,
+  FileText,
+  Brain,
+  Bookmark,
+  Gift,
+  Crown,
+  Gem,
+  Zap,
   CheckCircle2,
   ChevronRight,
   Mail,
@@ -36,14 +47,14 @@ export function MobileHomepage() {
           </span>
           <div className="mobile-homepage__glass">
             <h1>
-              Seu próximo passo começa <em>com direção.</em>
+              Carreiras <em>Policiais.</em>
             </h1>
             <p className="mobile-homepage__hero-lead">
               Questões, editais e simulados para transformar seu estudo em preparação real.
             </p>
             <HeaderQuestionStats mobile />
             <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary">
-              Começar minha preparação <ArrowRight aria-hidden="true" />
+              Começar agora <ArrowRight aria-hidden="true" />
             </Link>
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
               Ver como funciona <ChevronRight aria-hidden="true" />
@@ -51,6 +62,12 @@ export function MobileHomepage() {
           </div>
         </div>
       </section>
+      <nav className="mobile-homepage__quick-nav" aria-label="Acesso rápido às ferramentas">
+        <a href="#mobile-recursos"><BookOpen aria-hidden="true" />Estudar</a>
+        <a href="#mobile-ferramentas"><ClipboardList aria-hidden="true" />Questões</a>
+        <a href="#mobile-recursos"><PlaySquare aria-hidden="true" />Videoaulas</a>
+        <a href="#ranking-destaque-mobile"><BarChart3 aria-hidden="true" />Desempenho</a>
+      </nav>
       <section className="mobile-homepage__daily">
         <div>
           <span className="mobile-homepage__eyebrow">
@@ -67,7 +84,7 @@ export function MobileHomepage() {
       <section id="mobile-recursos" className="mobile-homepage__resources">
         <div className="mobile-homepage__section-head">
           <span>O que você encontra</span>
-          <h2>Uma rotina que cabe no seu objetivo.</h2>
+          <h2>Recursos que aceleram sua aprovação</h2>
         </div>
         <div id="mobile-ferramentas" className="mobile-homepage__cards" aria-label="Recursos da plataforma">
           <article>
@@ -93,7 +110,7 @@ export function MobileHomepage() {
       <section id="mobile-concursos" className="mobile-homepage__contests">
         <div className="mobile-homepage__section-head">
           <span>Concursos em foco</span>
-          <h2>Treine para a prova que importa.</h2>
+          <h2>Concursos em foco</h2>
         </div>
         <ContestShowcase mobile />
       </section>
@@ -101,7 +118,7 @@ export function MobileHomepage() {
       <section id="mobile-planos" className="mobile-plans" aria-labelledby="mobile-plans-title">
         <div className="mobile-homepage__section-head">
           <span>Planos</span>
-          <h2 id="mobile-plans-title">Comece grátis. Evolua no seu ritmo.</h2>
+          <h2 id="mobile-plans-title">Planos</h2>
         </div>
         {TESTING_PHASE && (
           <p className="mobile-plans__trial">
@@ -112,6 +129,7 @@ export function MobileHomepage() {
           {SUBSCRIPTION_PLANS.map((plan) => (
             <li key={plan.id} data-featured={plan.id === "plus" || undefined}>
               <div>
+                {plan.id === "plus" ? <Crown className="mobile-plans__icon" aria-hidden="true" /> : plan.id === "premium" ? <Gem className="mobile-plans__icon" aria-hidden="true" /> : plan.price === 0 ? <Gift className="mobile-plans__icon" aria-hidden="true" /> : <Target className="mobile-plans__icon" aria-hidden="true" />}
                 <strong>{plan.name}</strong>
                 <small>{plan.description}</small>
               </div>
@@ -128,6 +146,15 @@ export function MobileHomepage() {
         <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__wide-link">
           Criar conta grátis <ArrowRight />
         </Link>
+      </section>
+      <section className="mobile-homepage__feature-grid" aria-label="Destaques da preparação">
+        <h2><Zap aria-hidden="true" /> Recursos que aceleram sua aprovação</h2>
+        <div>
+          <a href="#mobile-concursos"><FileText aria-hidden="true" />Editais atualizados</a>
+          <a href="#mobile-ferramentas"><BarChart3 aria-hidden="true" />Simulados realistas</a>
+          <a href="#mobile-recursos"><Bookmark aria-hidden="true" />Materiais direcionados</a>
+          <a href="#mobile-recursos"><Brain aria-hidden="true" />Método de estudo</a>
+        </div>
       </section>
       <section className="mobile-homepage__closing">
         <CheckCircle2 aria-hidden="true" />
