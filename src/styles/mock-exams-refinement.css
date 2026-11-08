@@ -22,4 +22,14 @@
     min-height: 40px;
     min-width: 40px;
   }
+
+  .app-shell[data-area="student"] .mock-exam-result,
+  .app-shell[data-area="student"] .simulator-result {
+    gap: 14px;
+  }
+
+  .app-shell[data-area="student"] .mock-exam-result .grid,
+  .app-shell[data-area="student"] .simulator-result .grid {
+    gap: 8px;
+  }
 }
