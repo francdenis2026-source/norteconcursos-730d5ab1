@@ -151,9 +151,11 @@ function StatusButton({
       type="button"
       onClick={onClick}
       aria-pressed={!!status}
+      aria-label={`Checklist: ${label}`}
+      title={label}
       className={
-        "inline-flex shrink-0 items-center gap-1.5 rounded-full border font-bold transition-colors " +
-        (size === "sm" ? "px-2 py-0.5 text-[11px] " : "px-3 py-1 text-xs ") +
+        "pcac-status-control inline-flex shrink-0 items-center justify-center rounded-md border font-bold transition-colors " +
+        (size === "sm" ? "h-6 w-6 " : "h-8 w-8 ") +
         (status === "estudado"
           ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
           : status === "a-estudar"
@@ -162,7 +164,8 @@ function StatusButton({
       }
     >
       {status === "estudado" && <CheckCircle2 className="h-3 w-3" />}
-      {label}
+      {status !== "estudado" && <span className="h-2.5 w-2.5 rounded-sm border border-current/60" aria-hidden="true" />}
+      <span className="sr-only">{label}</span>
     </button>
   );
 }
@@ -182,17 +185,19 @@ function DisciplineStudyLinks({
   const videos = link?.subjects?.flatMap((subject) => relatedVideos(catalog, subject, "*", 2)).slice(0, 3) ?? [];
   if (!link && !videos.length) return null;
   const linkClass =
-    "inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
+    "inline-flex items-center gap-1 rounded-md border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
   const back = `/dashboard/pc-acre-edital?cargo=${cargoId}`;
   if (link?.anchor)
     return (
-      <a href={`#${link.anchor}`} className={`mt-2 ${linkClass}`}>
-        <Scale className="h-3 w-3" aria-hidden="true" />
-        Ver leis institucionais abaixo
-      </a>
+      <div className="pcac-discipline-actions flex flex-wrap gap-1.5">
+        <a href={`#${link.anchor}`} className={linkClass}>
+          <Scale className="h-3 w-3" aria-hidden="true" />
+          Ver leis institucionais abaixo
+        </a>
+      </div>
     );
   return (
-    <div className="mt-2 flex flex-wrap gap-1.5">
+    <div className="pcac-discipline-actions flex flex-wrap gap-1.5">
       {link?.subjects?.map((subject) => (
         <React.Fragment key={subject}>
           <Link
@@ -266,26 +271,28 @@ function DisciplineAccordionItem({
   );
 
   const extras = (
-    <>
-      <div className="mt-2 rounded-md border border-primary/20 bg-primary/5 p-2.5">
+    <div className="mt-2 space-y-2 border-t border-border/60 pt-2">
+      <div className="rounded-md border border-primary/20 bg-primary/5 p-2.5">
         <p className="text-[10px] font-bold uppercase tracking-wide text-primary">Conteúdo cobrado</p>
         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{PCAC_DISCIPLINE_GUIDE[discipline.name] ?? discipline.note ?? "Consulte os itens detalhados do edital nesta disciplina."}</p>
       </div>
       <DisciplineStudyLinks disciplineId={discipline.id} cargoId={cargoId} />
-    </>
+    </div>
   );
 
   if (!hasTopics) {
     return (
-      <li className="flex flex-wrap items-start justify-between gap-2 rounded-lg border bg-background/60 p-3">
-        <div className="min-w-0">
+      <li className="flex items-start gap-2 rounded-lg border bg-background/60 p-3">
+        <span onClick={(event) => event.stopPropagation()} className="shrink-0">
+          <StatusButton
+            status={progress[pcAcVerticalItemId(block, discipline.id)]}
+            onClick={() => onToggleTopic(discipline.id, undefined)}
+          />
+        </span>
+        <div className="min-w-0 flex-1">
           {header}
           {extras}
         </div>
-        <span onClick={(event) => event.stopPropagation()}><StatusButton
-          status={progress[pcAcVerticalItemId(block, discipline.id)]}
-          onClick={() => onToggleTopic(discipline.id, undefined)}
-        /></span>
       </li>
     );
   }
@@ -313,24 +320,24 @@ function DisciplineAccordionItem({
                 const nextGroupStatus = groupStatus === "estudado" ? undefined : groupStatus === "a-estudar" ? "estudado" : "a-estudar";
                 return (
                   <li key={i} className="rounded-md border border-border/60 bg-muted/20 p-2">
-                    <div className="flex items-start justify-between gap-2">
-                      <span className="min-w-0 flex-1 text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
+                    <div className="flex items-start gap-2">
                       <StatusButton
                         size="sm"
                         status={groupStatus}
                         onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
                       />
+                      <span className="min-w-0 flex-1 text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
                     </div>
                     {group.subtopics.length > 0 && (
                       <ul className="mt-1.5 space-y-1 border-l-2 border-primary/20 pl-2.5">
                         {group.subtopics.map((subtopic, j) => (
-                          <li key={j} className="flex items-start justify-between gap-2 rounded border border-border/50 bg-background/60 px-2 py-1.5">
-                            <span className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground">{subtopic}</span>
+                          <li key={j} className="flex items-start gap-2 rounded border border-border/50 bg-background/60 px-2 py-1.5">
                             <StatusButton
                               size="sm"
                               status={statuses[j]}
                               onClick={() => onToggleTopic(discipline.id, i, j)}
                             />
+                            <span className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground">{subtopic}</span>
                           </li>
                         ))}
                       </ul>
