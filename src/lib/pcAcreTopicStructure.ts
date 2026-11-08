@@ -4,6 +4,7 @@ export interface PcAcTopicGroup {
 }
 
 export interface PcAcTopicSource {
+  id?: string;
   topics?: string[];
 }
 
@@ -59,5 +60,21 @@ export function splitPcAcTopic(raw: string): PcAcTopicGroup {
 }
 
 export function pcAcVerticalTopicGroups(discipline: PcAcTopicSource): PcAcTopicGroup[] {
+  if (discipline.id === "realidade-acre" && (discipline.topics?.length ?? 0) === 1) {
+    const text = clean(discipline.topics?.[0] ?? "");
+    const sections = text
+      .split(/(?<=\.)\s+(?=(?:Movimento|Geografia|Aspectos étnicos|Aspectos políticos|Aspectos sociais|Segurança pública))/u)
+      .map(clean)
+      .filter(Boolean);
+    if (sections.length > 1) {
+      return sections.map((section) => {
+        const colon = section.indexOf(":");
+        if (colon > 0) {
+          return { title: clean(section.slice(0, colon)), subtopics: [clean(section.slice(colon + 1))] };
+        }
+        return splitPcAcTopic(section);
+      });
+    }
+  }
   return (discipline.topics ?? []).map(splitPcAcTopic);
 }

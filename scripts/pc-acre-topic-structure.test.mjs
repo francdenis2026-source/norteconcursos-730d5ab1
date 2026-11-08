@@ -55,3 +55,21 @@ test("normalizes every topic in a discipline", () => {
   assert.equal(groups.length, 2);
   assert.equal(groups[0].subtopics.length, 2);
 });
+
+test("keeps the Acre reality syllabus as separate area topics when delivered as one block", () => {
+  const groups = pcAcVerticalTopicGroups({
+    id: "realidade-acre",
+    topics: [
+      "Formação histórica do Acre: ocupação e ciclos da borracha. Movimento dos seringueiros, Chico Mendes e reservas. Geografia: municípios e fronteiras. Aspectos étnicos e culturais: povos indígenas. Aspectos políticos: Constituição do Estado. Aspectos sociais e econômicos: população e produção. Segurança pública no Acre: estrutura e fronteiras.",
+    ],
+  });
+  assert.deepEqual(groups.map((group) => group.title), [
+    "Formação histórica do Acre",
+    "Movimento dos seringueiros, Chico Mendes e reservas.",
+    "Geografia",
+    "Aspectos étnicos e culturais",
+    "Aspectos políticos",
+    "Aspectos sociais e econômicos",
+    "Segurança pública no Acre",
+  ]);
+});
