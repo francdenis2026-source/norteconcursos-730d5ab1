@@ -49,7 +49,7 @@ export function writePcAcVerticalProgress(
 }
 
 export function pcAcVerticalCargo(id: unknown) {
-  return pcAcVerticalCargos.find((c) => c.id === id) ?? pcAcVerticalCargos[0]!;
+  return pcAcVerticalCargos.find((c) => c.id === id) ?? pcAcVerticalCargos.find((c) => c.id === "investigador") ?? pcAcVerticalCargos[0]!;
 }
 
 export function pcAcVerticalCounts(
