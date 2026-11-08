@@ -777,6 +777,20 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   white-space: nowrap;
 }
 @media (max-width: 600px) {
+  .app-shell[data-area="student"] .student-overview .student-home__metrics {
+    gap: 7px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metric {
+    min-height: 70px;
+    padding: 10px 12px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metric h2 {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metric p {
+    font-size: 10px;
+  }
   .app-shell[data-area="student"] .student-overview .student-desk__next {
     align-items: stretch;
     flex-direction: column;
