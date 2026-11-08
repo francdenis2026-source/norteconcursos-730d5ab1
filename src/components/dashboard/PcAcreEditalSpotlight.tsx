@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ScanSearch } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ExternalLink, ScanSearch } from "lucide-react";
 
 /** Destaque do edital verticalizado da PC-AC logo no topo da área do aluno, para acesso
  * imediato — reaproveita o padrão visual do spotlight de prova (ver PcprExamSpotlight). Os
@@ -47,6 +47,10 @@ export function PcAcreEditalSpotlight() {
           <a href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf" target="_blank" rel="noreferrer" className="pcpr-spot__cta pcpr-spot__cta--ghost">
             <Download aria-hidden="true" />
             PDF do edital
+          </a>
+          <a href="https://edital-digital-pcac.awake-harp-4300.chatgpt.site/" target="_blank" rel="noreferrer" className="pcpr-spot__cta pcpr-spot__cta--ghost">
+            <ExternalLink aria-hidden="true" />
+            Edital digital
           </a>
         </div>
       </div>
