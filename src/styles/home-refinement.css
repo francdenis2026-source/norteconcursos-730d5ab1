@@ -3,12 +3,19 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 60;
+  isolation: isolate;
   width: 100%;
   background: color-mix(in oklab, var(--home-bg) 58%, transparent);
   border-bottom-color: color-mix(in oklab, var(--home-line) 48%, transparent);
   -webkit-backdrop-filter: blur(18px) saturate(1.2);
   backdrop-filter: blur(18px) saturate(1.2);
   box-shadow: 0 8px 28px -20px rgb(0 0 0 / 35%);
+}
+.home.home .home-header__inner,
+.home.home .home-brand-lockup,
+.home.home .home-brand-lockup > a {
+  position: relative;
+  z-index: 1;
 }
 
 .home.home .home-header[data-scrolled] {
