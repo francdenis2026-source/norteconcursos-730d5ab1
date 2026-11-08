@@ -12,4 +12,13 @@
   .app-shell[data-area="student"] .student-exams-page .grid.grid-cols-2 {
     gap: 8px;
   }
+
+  .app-shell[data-area="student"] .student-exams-page .overflow-x-auto {
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+
+  .app-shell[data-area="student"] .student-exams-page .overflow-x-auto button {
+    min-height: 44px;
+  }
 }
