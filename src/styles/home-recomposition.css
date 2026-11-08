@@ -1352,3 +1352,49 @@
     box-shadow: inset 0 0 0 1px rgb(182 138 60 / 10%);
   }
 }
+
+
+/* Homepage-wide outline tokens. Apply to section frames, not every nested
+   element: preserve the hierarchy and avoid turning all surfaces gold. */
+@media (max-width: 760px) {
+  .home.home-recomposition .mobile-homepage {
+    --nc-outline-panel: #687483;
+    --nc-outline-section: #9b8358;
+    --nc-outline-accent: #e3bc6b;
+  }
+  .home.home-recomposition .mobile-homepage__glass,
+  .home.home-recomposition .mobile-homepage__daily,
+  .home.home-recomposition .mobile-homepage__resources,
+  .home.home-recomposition .mobile-homepage__contests,
+  .home.home-recomposition .mobile-plans,
+  .home.home-recomposition .mobile-homepage__closing,
+  .home.home-recomposition .mobile-homepage__footer {
+    border: 1px solid var(--nc-outline-section);
+    background-clip: padding-box;
+  }
+  .home.home-recomposition .mobile-homepage__glass,
+  .home.home-recomposition .mobile-homepage__closing,
+  .home.home-recomposition .mobile-homepage__footer {
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 3%);
+  }
+  .home.home-recomposition .mobile-homepage__cards article,
+  .home.home-recomposition .mobile-plans__list > li {
+    border: 1px solid var(--nc-outline-panel);
+  }
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] {
+    border: 2px solid var(--nc-outline-accent);
+  }
+  .home.home-recomposition .mobile-homepage__primary,
+  .home.home-recomposition .mobile-homepage__secondary,
+  .home.home-recomposition .mobile-homepage__wide-link {
+    outline-offset: 2px;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-homepage {
+    --nc-outline-panel: #a5b1be;
+    --nc-outline-section: #b59661;
+    --nc-outline-accent: #b68a3c;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-homepage__glass {
+    border-color: #9cabb8;
+  }
+}
