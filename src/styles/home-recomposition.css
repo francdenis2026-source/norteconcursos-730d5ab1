@@ -619,3 +619,35 @@
   }
   .home-recomposition .mobile-homepage__hero-media .hero-badge { z-index: 4; }
 }
+
+/* Image visibility fix: retain the original clock texture and portrait without dark overlays. */
+@media (max-width: 760px) {
+  .home-recomposition .mobile-homepage__hero-media {
+    background-color: #101b2a;
+    background-image: none;
+    isolation: isolate;
+  }
+  .home-recomposition .mobile-homepage__hero-media > svg.tactical-clock-backdrop {
+    --backdrop-clock-veil: transparent;
+    opacity: 1;
+    filter: none;
+  }
+  .home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__veil {
+    fill: transparent !important;
+    opacity: 0 !important;
+  }
+  .home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__mechanism {
+    opacity: 1;
+    filter: none;
+  }
+  .home-recomposition .mobile-homepage__hero-media > img.mobile-homepage__portrait {
+    opacity: 1;
+    filter: none;
+    mix-blend-mode: normal;
+  }
+  .home-recomposition .mobile-homepage__hero-shade {
+    display: none !important;
+    background: none !important;
+    opacity: 0 !important;
+  }
+}
