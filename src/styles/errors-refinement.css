@@ -14,4 +14,15 @@
   .app-shell[data-area="student"] .question-errors a {
     min-height: 44px;
   }
+
+  .app-shell[data-area="student"] .question-errors .question-workspace__toolbar {
+    align-items: stretch;
+    gap: 7px;
+  }
+
+  .app-shell[data-area="student"] .question-errors .question-workspace__toolbar .question-workspace__primary,
+  .app-shell[data-area="student"] .question-errors .question-workspace__toolbar > button {
+    width: 100%;
+    justify-content: center;
+  }
 }
