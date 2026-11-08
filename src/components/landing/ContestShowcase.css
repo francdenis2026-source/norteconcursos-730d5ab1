@@ -497,3 +497,65 @@ html body .home .mobile-homepage__contests .contest-spotlight__art > img { objec
   .home .contest-acre-banner { grid-template-columns: minmax(0, 1fr) 85px; }
   .home .contest-acre-banner__seal { display: none; }
 }
+
+
+/* Light-theme contrast audit — shared by desktop and mobile showcase.
+   Inherit the correct palette at the component boundary rather than allowing
+   old dark-theme custom properties to wash out descriptive text. */
+:root:not(.dark) .home .contest-showcase {
+  --home-text: #17283e;
+  --home-muted: #475569;
+  --home-line: #cbd5e1;
+  --contest-accent: #93631d;
+  --card: #ffffff;
+  color: #17283e;
+}
+:root:not(.dark) .home .contest-showcase :is(
+  .contest-spotlight__copy,
+  .contest-catalog__heading > p,
+  .contest-independence,
+  .contest-reference,
+  .contest-details,
+  .contest-card__role,
+  .contest-availability small,
+  .contest-ficha dt,
+  .contest-kickers > span,
+  .contest-carousel-status
+) {
+  color: #475569;
+  opacity: 1;
+  text-shadow: none;
+}
+:root:not(.dark) .home .contest-showcase :is(
+  .contest-swipe-hint,
+  .contest-eyebrow,
+  .contest-details > summary
+) {
+  color: #8b5b14;
+  opacity: 1;
+}
+:root:not(.dark) .home .contest-showcase :is(
+  .contest-catalog__heading h3,
+  .contest-card__content h3,
+  .contest-spotlight h3,
+  .contest-availability > span,
+  .contest-ficha dd
+) {
+  color: #17283e;
+  opacity: 1;
+}
+:root:not(.dark) .home .contest-showcase :is(
+  .contest-spotlight,
+  .contest-card
+) {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+:root:not(.dark) .home .contest-showcase .contest-action:not(.contest-action--gold) {
+  color: #17283e;
+  background: #f8fafc;
+  border-color: #b6c3d3;
+}
+:root:not(.dark) .home .contest-showcase .contest-carousel-status {
+  color: #334155;
+}
