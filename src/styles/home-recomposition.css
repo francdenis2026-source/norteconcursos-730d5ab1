@@ -1822,3 +1822,164 @@
 ) {
   opacity: 1;
 }
+
+
+/* Pricing section refinement: readable background artwork, balanced density
+   and a deliberate visual hierarchy. Scoped to mobile to avoid desktop regressions. */
+@media (max-width: 760px) {
+  .home.home-recomposition .mobile-plans {
+    position: relative;
+    isolation: isolate;
+    padding: clamp(16px, 4vw, 22px);
+    border: 1px solid #bd9654;
+    border-radius: 20px;
+    background-color: #101b2a;
+    background-image:
+      linear-gradient(115deg, rgb(7 15 26 / 56%), rgb(7 15 26 / 66%)),
+      var(--nc-texture, url("/media/hero/home-bg-texture.webp"));
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 14%);
+  }
+  .home.home-recomposition .mobile-plans .mobile-homepage__section-head {
+    margin-bottom: 12px;
+  }
+  .home.home-recomposition .mobile-plans .mobile-homepage__section-head > span {
+    color: #e5c17a;
+    font-size: 11px;
+    letter-spacing: .13em;
+  }
+  .home.home-recomposition .mobile-plans .mobile-homepage__section-head h2 {
+    max-width: 18ch;
+    margin-top: 5px;
+    font-size: clamp(21px, 5.6vw, 27px);
+    line-height: 1.16;
+    color: #fff;
+    text-wrap: balance;
+  }
+  .home.home-recomposition .mobile-plans__trial {
+    min-height: 0;
+    margin: 0 0 13px;
+    padding: 9px 11px;
+    border: 1px solid #c5a265;
+    border-radius: 11px;
+    background: rgb(15 24 35 / 88%);
+    color: #f4dcab;
+    font-size: clamp(11px, 3vw, 13px);
+    line-height: 1.35;
+    box-shadow: none;
+  }
+  .home.home-recomposition .mobile-plans__trial svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #f1ca7e;
+  }
+  .home.home-recomposition .mobile-plans__list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+  .home.home-recomposition .mobile-plans__list > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    min-height: 0;
+    padding: 11px 12px;
+    border: 1px solid #6d7785;
+    border-radius: 13px;
+    background: rgb(15 22 32 / 96%);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  }
+  .home.home-recomposition .mobile-plans__list > li > div {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    align-items: center;
+    gap: 2px 9px;
+    min-width: 0;
+    text-align: left;
+  }
+  .home.home-recomposition .mobile-plans__list > li strong {
+    color: #f7f9fc;
+    font-size: clamp(14px, 3.8vw, 17px);
+  }
+  .home.home-recomposition .mobile-plans__list > li small {
+    color: #c4cfdd;
+    font-size: clamp(10px, 2.75vw, 12px);
+    line-height: 1.3;
+  }
+  .home.home-recomposition .mobile-plans__list > li > span {
+    padding: 7px 8px;
+    border: 1px solid #b99252;
+    border-radius: 9px;
+    background: #20232b;
+    color: #fff4dc;
+    font-size: clamp(12px, 3.3vw, 15px);
+    white-space: nowrap;
+  }
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] {
+    border: 2px solid #e3b85f;
+    background: rgb(42 34 25 / 97%);
+    box-shadow: 0 0 0 1px rgb(227 184 95 / 8%);
+  }
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span {
+    background: #d9af5a;
+    border-color: #e7c780;
+    color: #241c12;
+  }
+  .home.home-recomposition .mobile-plans__note {
+    margin: 13px 0 12px;
+    color: #d5deea;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .home.home-recomposition .mobile-plans > .mobile-homepage__wide-link {
+    min-height: 45px;
+    margin-top: 0;
+    border-radius: 11px;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans {
+    background-color: #f7f9fc;
+    background-image:
+      linear-gradient(115deg, rgb(248 250 252 / 80%), rgb(248 250 252 / 87%)),
+      var(--nc-texture, url("/media/hero/home-bg-texture.webp"));
+    border-color: #d3b77c;
+    box-shadow: 0 8px 24px rgb(20 43 70 / 7%);
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans .mobile-homepage__section-head h2 {
+    color: #15283d;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans .mobile-homepage__section-head > span {
+    color: #835919;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__trial {
+    background: #fff6e3;
+    color: #684719;
+    border-color: #caa966;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li {
+    background: rgb(255 255 255 / 96%);
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgb(20 43 70 / 6%);
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li strong { color: #15283d; }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li small { color: #526174; }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li > span {
+    background: #fff9eb;
+    border-color: #bc9856;
+    color: #674516;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li[data-featured="true"] {
+    background: #fff7e4;
+    border-color: #b58a37;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span {
+    background: #e9c777;
+    color: #2b2110;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__note { color: #46576a !important; }
+}
