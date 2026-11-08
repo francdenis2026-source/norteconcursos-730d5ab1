@@ -791,6 +791,19 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   .app-shell[data-area="student"] .student-overview .student-home__metric p {
     font-size: 10px;
   }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+    gap: 6px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+    min-height: 52px;
+    padding: 8px 10px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong {
+    font-size: 13px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
+    font-size: 11px;
+  }
   .app-shell[data-area="student"] .student-overview .student-desk__next {
     align-items: stretch;
     flex-direction: column;
