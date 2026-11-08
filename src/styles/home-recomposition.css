@@ -2485,3 +2485,226 @@
 @media (prefers-reduced-motion: reduce) {
   .home.home-recomposition .mobile-homepage__daily { background-attachment: scroll; }
 }
+
+
+/* Desktop hero design reset (2026-11): replace the compressed glass strip
+   with three distinct, readable cards; frame the floating insignia. */
+@media (min-width: 761px) {
+  .home.home-recomposition .home-header {
+    background: rgb(5 16 29 / 96%);
+    border-bottom: 1px solid #a98239;
+    backdrop-filter: blur(14px);
+  }
+  .home.home-recomposition .home-header__inner {
+    min-height: 74px;
+    gap: 22px;
+  }
+  .home.home-recomposition .home-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.4vw, 36px);
+    margin-inline: auto;
+  }
+  .home.home-recomposition .home-nav a {
+    color: #e8edf5;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  .home.home-recomposition .home-nav a:hover,
+  .home.home-recomposition .home-nav a[aria-current="location"] {
+    color: #e9bf61;
+  }
+  .home.home-recomposition .home-header__actions { gap: 10px; }
+  .home.home-recomposition .desktop-homepage > #inicio.home-hero {
+    position: relative;
+    min-height: max(690px, 100svh);
+    height: auto;
+    overflow: clip;
+    background: #071522;
+  }
+  .home.home-recomposition .desktop-homepage > #inicio.home-hero::after {
+    background: linear-gradient(90deg, rgb(4 15 28 / 94%) 0%, rgb(4 15 28 / 86%) 31%, rgb(4 15 28 / 22%) 65%, transparent 100%);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .home-hero__image {
+    object-position: 70% center;
+    filter: saturate(1.12) contrast(1.08);
+    opacity: 1;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__inner {
+    width: min(calc(100% - clamp(40px, 5vw, 100px)), 1380px);
+    max-width: 1380px;
+    min-height: max(690px, 100svh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 28px;
+    padding-top: clamp(115px, 15vh, 155px);
+    padding-bottom: clamp(28px, 5vh, 48px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy {
+    width: min(100%, 620px);
+    max-width: 620px;
+    position: relative;
+    z-index: 3;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy h1 {
+    max-width: 12ch;
+    font-size: clamp(48px, 4.6vw, 72px);
+    line-height: 1.05;
+    color: #fff;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy h1 em {
+    color: #e7b650;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy > p {
+    color: #dbe5ef;
+    max-width: 53ch;
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.55;
+    text-align: left;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__trust {
+    color: #e2e9f2;
+    font-size: 12px;
+    gap: 10px 18px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hero-badge {
+    position: absolute;
+    top: clamp(110px, 16vh, 190px);
+    right: clamp(24px, 5vw, 100px);
+    left: auto;
+    bottom: auto;
+    width: clamp(115px, 12vw, 185px);
+    height: auto;
+    aspect-ratio: 768 / 811;
+    max-height: 31vh;
+    transform: none;
+    z-index: 3;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.12fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    gap: 14px;
+    max-width: 1380px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    overflow: visible;
+    box-shadow: none;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell {
+    min-width: 0;
+    min-height: 176px;
+    height: auto;
+    display: flex;
+    padding: 20px 22px;
+    border: 1px solid #8b7148;
+    border-radius: 18px;
+    background: rgb(8 23 38 / 94%);
+    color: #f7f9fc;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 18%);
+    overflow-wrap: anywhere;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--bank {
+    justify-content: space-between;
+    border-color: #5e927c;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--radar {
+    align-items: flex-start;
+    border-color: #b48b3f;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-color: #a9854b;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell :is(strong, b) {
+    color: #f8fafc;
+    line-height: 1.25;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell :is(small, .hx-dock__updated, .hx-dock__stat span) {
+    color: #c5d2e0;
+    line-height: 1.4;
+    white-space: normal;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__stat strong {
+    color: #f6f8fb;
+    font-size: clamp(23px, 2.4vw, 32px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__stat--muted strong {
+    color: #e9ba55;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__bank-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-copy {
+    min-width: 0;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__radar-source {
+    color: #e8be62;
+    font-weight: 700;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #e9bd59;
+    color: #17202c;
+    font-weight: 750;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--access {
+    grid-column: 1 / -1;
+    min-height: 0;
+    padding: 10px 18px;
+  }
+  :root:not(.dark) .home.home-recomposition .desktop-homepage #inicio .hx__copy > p,
+  :root:not(.dark) .home.home-recomposition .desktop-homepage #inicio .hx__trust {
+    color: #e2e9f2;
+  }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell--daily {
+    grid-column: 1 / -1;
+    min-height: 125px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hero-badge {
+    right: 24px;
+    width: 115px;
+  }
+}
+@media (min-width: 761px) and (max-height: 760px) {
+  .home.home-recomposition .desktop-homepage #inicio .hx__inner {
+    padding-top: 95px;
+    padding-bottom: 20px;
+    gap: 14px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx__copy h1 {
+    font-size: clamp(40px, 4vw, 56px);
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hx-dock__cell {
+    min-height: 140px;
+    padding: 14px 16px;
+  }
+  .home.home-recomposition .desktop-homepage #inicio .hero-badge {
+    top: 95px;
+    width: 110px;
+  }
+}
