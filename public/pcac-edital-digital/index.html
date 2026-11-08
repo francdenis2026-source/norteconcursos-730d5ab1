@@ -119,3 +119,84 @@ label.topic.semantic-has-subtopics > .topic-copy {
   grid-column: 2 / -1 !important;
 }
 </style>
+<style id="collapsible-subtopics-final">
+/* Submenus stay compact until the learner asks to see their checklist items. */
+.subtopics-panel {
+  display: block !important;
+  min-width: 0;
+  margin-top: 6px;
+  border: 1px solid #dbe5f1;
+  border-radius: 8px;
+  background: #f8fbff;
+  overflow: hidden;
+}
+.subtopics-panel > summary {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 32px;
+  padding: 6px 9px !important;
+  color: #1e3a8a;
+  background: #eef5ff;
+  cursor: pointer;
+  font-size: 11px !important;
+  font-weight: 800;
+  list-style: none;
+}
+.subtopics-panel > summary::-webkit-details-marker { display: none; }
+.subtopics-panel > summary::before {
+  content: '+';
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: auto;
+  border: 1px solid #9db9df;
+  border-radius: 5px;
+  color: #2563eb;
+  font-size: 14px;
+  line-height: 1;
+}
+.subtopics-panel[open] > summary::before { content: '−'; }
+.subtopics-panel > summary .subtopics-count {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: #dceaff;
+  color: #1e3a8a;
+  font-size: 10px;
+  font-weight: 800;
+}
+.subtopics-panel > .semantic-subtopics,
+.subtopics-panel > .subtopics {
+  margin-top: 0 !important;
+  border-left: 0 !important;
+  border-top: 1px solid #dbe5f1;
+  padding: 6px 8px !important;
+}
+</style>
+<script id="collapse-all-subtopics">
+(()=>{
+  const panels=[...document.querySelectorAll('.semantic-subtopics, .subtopics')]
+    .filter(panel=>!panel.closest('details.subtopics-panel'));
+  panels.forEach((panel,index)=>{
+    const items=panel.querySelectorAll(':scope > .semantic-subtopic, :scope > .subtopic');
+    if(!items.length) return;
+    const disclosure=document.createElement('details');
+    disclosure.className='subtopics-panel';
+    disclosure.dataset.subtopicsIndex=String(index);
+    const summary=document.createElement('summary');
+    summary.className='subtopics-toggle';
+    const label=document.createElement('span');
+    label.textContent='Ver subitens';
+    const count=document.createElement('span');
+    count.className='subtopics-count';
+    count.textContent=items.length+' '+(items.length===1?'item':'itens');
+    summary.append(label,count);
+    disclosure.append(summary);
+    panel.parentNode.insertBefore(disclosure,panel);
+    disclosure.append(panel);
+  });
+})();
+</script>
