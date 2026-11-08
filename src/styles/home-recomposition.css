@@ -2022,3 +2022,41 @@
   color: #3d2a0d !important;
   -webkit-text-fill-color: #3d2a0d;
 }
+
+
+/* Plus price legibility: dark ink on gold, with muted copy on dark cards.
+   Keep the light theme equally readable and avoid inherited pale text. */
+@media (max-width: 760px) {
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span {
+    background: #e4bc70;
+    border: 1px solid #f0d291;
+    color: #252017 !important;
+    -webkit-text-fill-color: #252017;
+    opacity: 1;
+    text-shadow: none;
+  }
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span em {
+    color: #473920 !important;
+    -webkit-text-fill-color: #473920;
+    opacity: 1;
+  }
+  .home.home-recomposition .mobile-plans__list > li[data-featured="true"] small {
+    color: #e0e5ed !important;
+    -webkit-text-fill-color: #e0e5ed;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span {
+    background: #e7c57d;
+    border-color: #b98e3c;
+    color: #30240e !important;
+    -webkit-text-fill-color: #30240e;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span em {
+    color: #4e3c1e !important;
+    -webkit-text-fill-color: #4e3c1e;
+  }
+  :root:not(.dark) .home.home-recomposition .mobile-plans__list > li[data-featured="true"] small {
+    color: #485569 !important;
+    -webkit-text-fill-color: #485569;
+  }
+}
