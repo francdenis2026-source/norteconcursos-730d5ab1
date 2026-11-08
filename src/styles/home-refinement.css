@@ -37,4 +37,13 @@
     gap: 16px;
     margin-bottom: 20px;
   }
+
+  .desktop-homepage .home-preparation__panel {
+    gap: 18px;
+  }
+
+  .desktop-homepage .home-preparation__tool {
+    min-height: 128px;
+    padding: 18px;
+  }
 }
