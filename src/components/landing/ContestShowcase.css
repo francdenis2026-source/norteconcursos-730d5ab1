@@ -411,3 +411,89 @@ html body .home .mobile-homepage__contests .contest-spotlight__art > img { objec
   .home .contest-action { transition: none; }
   .home .contest-card__content > .contest-action--gold::after { display: none; }
 }
+
+
+/* Acre identity banner — geometric flag, not a stretched raster image. */
+.home .contest-acre-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 36%);
+  min-height: 90px;
+  margin-bottom: 18px;
+  border: 1px solid #c7a15b;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fafc;
+  color: #17283e;
+}
+.home .contest-acre-banner__identity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 13px 15px;
+}
+.home .contest-acre-banner__seal {
+  display: grid;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid #c7a15b;
+  border-radius: 50%;
+  color: #986d21;
+  background: #fff7e4;
+}
+.home .contest-acre-banner__identity > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.home .contest-acre-banner__identity strong {
+  font-size: clamp(14px, 1.6vw, 19px);
+  line-height: 1.2;
+  color: #15263c;
+}
+.home .contest-acre-banner__identity > div > span {
+  font-size: 11px;
+  line-height: 1.3;
+  color: #53647a;
+}
+.home .contest-acre-banner__flag {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #f9d523 0 49.7%, #008b4d 50% 100%);
+}
+.home .contest-acre-banner__star {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  color: #e32025;
+  font-size: clamp(27px, 4vw, 42px);
+  line-height: 1;
+}
+:root.dark .home .contest-acre-banner {
+  background: #142131;
+  color: #f8fafc;
+}
+:root.dark .home .contest-acre-banner__identity strong { color: #f8fafc; }
+:root.dark .home .contest-acre-banner__identity > div > span { color: #c7d2e0; }
+:root.dark .home .contest-acre-banner__seal { background: #2a291e; color: #e8c478; }
+@media (max-width: 760px) {
+  .home .contest-acre-banner {
+    grid-template-columns: minmax(0, 1fr) minmax(90px, 34%);
+    min-height: 76px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+  .home .contest-acre-banner__identity { gap: 8px; padding: 10px; }
+  .home .contest-acre-banner__seal { flex-basis: 36px; width: 36px; height: 36px; }
+  .home .contest-acre-banner__seal svg { width: 22px; height: 22px; }
+  .home .contest-acre-banner__identity strong { font-size: 13px; }
+  .home .contest-acre-banner__identity > div > span { font-size: 10px; }
+  .home .contest-acre-banner__star { font-size: 28px; }
+}
+@media (max-width: 350px) {
+  .home .contest-acre-banner { grid-template-columns: minmax(0, 1fr) 85px; }
+  .home .contest-acre-banner__seal { display: none; }
+}
