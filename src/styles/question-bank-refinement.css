@@ -31,4 +31,16 @@
   .app-shell[data-area="student"] .question-catalog__result-row > :last-child {
     flex: 0 0 auto;
   }
+
+  .app-shell[data-area="student"] .question-catalog__filters [role="group"] {
+    gap: 6px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 3px;
+  }
+
+  .app-shell[data-area="student"] .question-catalog__filters [role="group"] > button {
+    flex: 0 0 auto;
+    min-height: 44px;
+  }
 }
