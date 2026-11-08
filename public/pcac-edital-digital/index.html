@@ -109,3 +109,13 @@ label.topic.semantic-has-subtopics > .topic-copy {
   overflow-wrap: anywhere !important;
 }
 </style>
+<style id="checklist-semantic-grid-final">
+label.topic.semantic-has-subtopics {
+  display: grid !important;
+  grid-template-columns: 22px minmax(0, 1fr) auto auto !important;
+}
+label.topic.semantic-has-subtopics > .topic-copy {
+  display: block !important;
+  grid-column: 2 / -1 !important;
+}
+</style>
