@@ -36,4 +36,15 @@
     font-size: 13px;
     line-height: 1.45;
   }
+
+  .app-shell[data-area="student"] .plan-workspace-window section[aria-label="Concurso e edital do seu plano"] {
+    align-items: flex-start;
+    padding: 11px 12px;
+    border-radius: 13px;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window section[aria-label="Concurso e edital do seu plano"] > a {
+    width: 100%;
+    justify-content: center;
+  }
 }
