@@ -8060,6 +8060,57 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
+/* ===== Homepage: hierarquia compacta e consistente ===== */
+@media (min-width: 1024px) {
+  .lp-hero { min-height: min(82svh, 680px); }
+  .lp-hero__body { padding-top: clamp(82px, 10vh, 116px); padding-bottom: clamp(24px, 3vh, 36px); }
+  .lp-hero__layout { gap: clamp(36px, 5vw, 72px); }
+  .lp-hero__title { max-width: 760px; margin-top: 14px; font-size: clamp(2.25rem, 4vw, 3.8rem); line-height: 0.98; }
+  .lp-hero__lead { max-width: 600px; margin-top: 16px; line-height: 1.55; }
+  .lp-hero__ctas { margin-top: 20px; }
+  .lp-section { padding-block: clamp(44px, 5vw, 68px); }
+  .lp-head { margin-bottom: clamp(24px, 3vw, 34px); }
+  .lp-h2 { line-height: 1.03; }
+  .lp-rail__item { padding: 13px 18px; }
+  .lp-bento { gap: 12px; grid-auto-rows: minmax(138px, auto); }
+  .lp-tile { padding: 17px; border-radius: 16px; }
+  .lp-tile h3 { padding-top: 14px; font-size: 1.08rem; }
+  .lp-tile p { font-size: 0.88rem; line-height: 1.5; }
+  .lp-tile--feature { max-height: min(66svh, 450px); }
+  .lp-tile--feature .lp-feature__copy { padding: 24px 28px; }
+  .lp-tile--feature .lp-feature__copy h3 { margin-top: 14px; }
+  .lp-feature__list { gap: 6px; margin-top: 12px; }
+  .lp-feature__list li { padding: 5px 9px; font-size: 0.72rem; }
+  .lp-feature__window { padding: 16px 18px; }
+  .lp-mock__app { gap: 8px; padding: 13px 15px 0; }
+  .lp-mock__stem { font-size: 0.82rem; }
+  .lp-mock__opt { padding-block: 6px; }
+  .lp-careers__list { margin-top: 24px; }
+  .lp-career { padding-block: 11px; }
+  .lp-pillars { margin-top: 22px; }
+  .lp-pillar { padding-block: 13px; }
+  .lp-footer__grid { padding-block: 34px 24px; }
+}
+
+@media (max-width: 767px) {
+  .lp-hero__body { padding-top: 72px; padding-bottom: 16px; }
+  .lp-hero__layout { gap: 12px; }
+  .lp-hero__content { padding: 14px; border-radius: 16px; }
+  .lp-hero__title { max-width: 22ch; font-size: clamp(1.9rem, 9vw, 2.35rem); line-height: 1; }
+  .lp-hero__lead { margin-top: 10px; line-height: 1.42; }
+  .lp-hero__ctas { margin-top: 14px; }
+  .lp-hero__panel { gap: 6px; }
+  .mh { padding: 12px 12px 16px; }
+  .mh__tabs { margin-bottom: 9px; }
+  .mh__tab { padding: 7px 11px; font-size: 0.76rem; }
+  .mh__grid { gap: 6px; }
+  .mh__grid li { padding: 10px; border-radius: 12px; }
+  .mh__grid strong { font-size: 0.8rem; }
+  .mh__grid span { font-size: 0.7rem; }
+  .mh__cta { margin-top: 11px; }
+  .lp-footer__grid { padding-block: 16px; }
+}
+
 /* ===================================================================
    Instalar app (PWA) — banner discreto, só aparece no celular quando o
    navegador dispara beforeinstallprompt (hoje, principalmente Chrome/Android).
