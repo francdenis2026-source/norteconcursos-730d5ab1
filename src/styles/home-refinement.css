@@ -1,18 +1,3 @@
-/* Keep the public navigation available while the homepage sections scroll. */
-.home.home .home-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-/* Let the tools list size to its content, while retaining a bounded scroll area
-   when a future content set becomes longer. */
-.home.home .home-preparation__panel {
-  height: auto;
-  max-height: 272px;
-  overflow-y: auto;
-}
-
 @media (min-width: 768px) {
   .desktop-homepage .home-hero {
     min-height: min(720px, 78vh);
