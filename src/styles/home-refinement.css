@@ -10,4 +10,13 @@
   .desktop-homepage .home-hero__actions :is(a, button) {
     min-height: 46px;
   }
+
+  .desktop-homepage .home-plans--insignia .home-plans__intro {
+    gap: 32px;
+    margin-bottom: 22px;
+  }
+
+  .desktop-homepage .home-plans--insignia .home-heading > p {
+    max-width: 58ch;
+  }
 }
