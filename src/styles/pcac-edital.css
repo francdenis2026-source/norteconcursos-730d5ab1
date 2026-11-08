@@ -62,3 +62,7 @@
 .pcpr-spot--pcac .pcpr-spot__title { display: flex; align-items: center; gap: 9px; }
 .pcpr-spot--pcac .pcpr-spot__title-icon { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid rgb(247 183 55 / 55%); border-radius: 8px; background: rgb(247 183 55 / 14%); color: #f7b737; }
 .pcpr-spot--pcac .pcpr-spot__title-icon svg { width: 17px; height: 17px; }
+/* Visualização digital incorporada: usa toda a largura útil do workspace. */
+.pcac-digital-fullscreen { max-width: none !important; width: 100% !important; padding-inline: 16px !important; }
+.pcac-digital-fullscreen > .overflow-hidden { width: 100%; }
+@media (max-width: 700px) { .pcac-digital-fullscreen { padding-inline: 8px !important; } }

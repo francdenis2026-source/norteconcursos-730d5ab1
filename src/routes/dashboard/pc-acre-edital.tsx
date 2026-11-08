@@ -489,7 +489,7 @@ function PcAcreEditalVerticalizadoPage() {
 
   if (digitalView) {
     return (
-      <div className="pcac-edital-page space-y-4 pb-10">
+      <div className="pcac-edital-page pcac-digital-fullscreen -mt-4 space-y-3 pb-6">
         <div className="flex items-center justify-between gap-4 rounded-xl border border-primary/30 border-l-4 border-l-cyan-400 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 px-4 py-3 text-white shadow-sm">
           <div className="min-w-0">
             <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide text-cyan-200"><BookOpenCheck className="h-3.5 w-3.5 text-amber-300" /> Área do aluno · edital digital</p>
@@ -500,7 +500,7 @@ function PcAcreEditalVerticalizadoPage() {
         </div>
         <Card className="overflow-hidden border-primary/20">
           <CardContent className="p-0">
-            <iframe title="Edital digital PC-AC 2026" src="/pcac-edital-digital/index.html" className="h-[calc(100vh-190px)] min-h-[720px] w-full border-0" />
+            <iframe title="Edital digital PC-AC 2026" src="/pcac-edital-digital/index.html" className="h-[calc(100vh-140px)] min-h-[760px] w-full border-0" />
           </CardContent>
         </Card>
       </div>
