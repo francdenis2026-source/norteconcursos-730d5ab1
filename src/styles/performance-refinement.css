@@ -46,4 +46,16 @@
     min-height: 44px;
     white-space: nowrap;
   }
+
+  .performance-page .performance-overview > section.grid {
+    gap: 8px;
+  }
+
+  .performance-page .performance-metric-card {
+    min-height: 104px;
+  }
+
+  .performance-page .performance-metric-card > * {
+    padding: 12px;
+  }
 }
