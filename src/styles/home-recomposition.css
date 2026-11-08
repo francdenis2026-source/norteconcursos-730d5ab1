@@ -2430,3 +2430,58 @@
     margin-top: 12px !important;
   }
 }
+
+
+/* Daily challenge: photographic backdrop using the existing police-career
+   artwork. The card remains readable and keeps its intrinsic height. */
+.home.home-recomposition .mobile-homepage__daily {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #151d2b;
+  background-image:
+    linear-gradient(100deg, rgb(12 20 32 / 90%) 0%, rgb(12 20 32 / 77%) 53%, rgb(12 20 32 / 58%) 100%),
+    url("/media/hero/carreiras-background.webp");
+  background-position: center, center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #a68b5d;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 15%);
+}
+.home.home-recomposition .mobile-homepage__daily > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.home.home-recomposition .mobile-homepage__daily h2 {
+  color: #f8fafc;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 24%);
+}
+.home.home-recomposition .mobile-homepage__daily > div:first-child > p {
+  color: #e2e8f0;
+  opacity: 1;
+  text-shadow: none;
+}
+.home.home-recomposition .mobile-homepage__daily .mobile-homepage__eyebrow {
+  color: #eac67d;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__daily {
+  background-color: #f6f8fc;
+  background-image:
+    linear-gradient(100deg, rgb(248 250 252 / 96%) 0%, rgb(248 250 252 / 91%) 53%, rgb(248 250 252 / 75%) 100%),
+    url("/media/hero/carreiras-background.webp");
+  border-color: #c5a875;
+  box-shadow: 0 8px 24px rgb(20 43 70 / 9%);
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__daily h2 {
+  color: #17283e;
+  text-shadow: none;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__daily > div:first-child > p {
+  color: #475569;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__daily .mobile-homepage__eyebrow {
+  color: #80591e;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home-recomposition .mobile-homepage__daily { background-attachment: scroll; }
+}
