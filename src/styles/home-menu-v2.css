@@ -257,18 +257,16 @@ html body .home-menu.hm2 {
 html body .hm2 .hm2-grid { flex: none; }
 
 /* Mobile hero legibility: busy artwork must never cover the headline. */
-html body .mobile-homepage__hero .tactical-clock-backdrop { display: none; }
-html body .mobile-homepage__hero .mobile-homepage__hero-shade {
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--background) 25%, transparent) 0%,
-    color-mix(in oklab, var(--background) 70%, transparent) 38%,
-    var(--background) 62%);
-  opacity: 1;
+@media (max-width: 767px) {
+  html body .mobile-homepage__hero .tactical-clock-backdrop,
+  html body .home .home-backdrop .tactical-clock-backdrop { display: none !important; }
+  html body .mobile-homepage .mobile-homepage__hero .mobile-homepage__hero-shade {
+    background: linear-gradient(180deg,
+      color-mix(in oklab, var(--background) 10%, transparent) 0%,
+      color-mix(in oklab, var(--background) 55%, transparent) 30%,
+      color-mix(in oklab, var(--background) 94%, transparent) 50%,
+      var(--background) 70%) !important;
+    opacity: 1 !important;
+  }
+  html body .mobile-homepage__hero .mobile-homepage__glass h1 { color: var(--foreground) !important; text-shadow: none !important; filter: none !important; }
 }
-html body .mobile-homepage__hero .mobile-homepage__glass,
-html body .mobile-homepage__hero .mobile-homepage__glass * {
-  filter: none;
-  text-shadow: none;
-  opacity: 1;
-}
-html body .mobile-homepage__hero .mobile-homepage__glass h1 { color: var(--foreground); }
