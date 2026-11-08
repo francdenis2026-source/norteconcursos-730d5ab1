@@ -24,10 +24,12 @@ export function MobileHomepage() {
   return (
     <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
       <section id="mobile-inicio" className="mobile-homepage__hero">
-        <TacticalClockBackdrop />
-        <img src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
-        <div className="mobile-homepage__hero-shade" />
-        <HeroBadge />
+        <div className="mobile-homepage__hero-media">
+          <TacticalClockBackdrop />
+          <img className="mobile-homepage__portrait" src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
+          <div className="mobile-homepage__hero-shade" aria-hidden="true" />
+          <HeroBadge />
+        </div>
         <div className="mobile-homepage__hero-copy">
           <span className="mobile-homepage__eyebrow">
             <span /> Preparação para carreiras policiais
