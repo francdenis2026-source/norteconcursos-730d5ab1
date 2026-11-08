@@ -47,4 +47,15 @@
     width: 100%;
     justify-content: center;
   }
+
+  .app-shell[data-area="student"] .plan-workspace-window .coach-view-switch {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window .coach-view-switch button {
+    padding-inline: 8px;
+    font-size: 12px;
+  }
 }
