@@ -255,3 +255,20 @@ html body .home-menu.hm2 {
   max-height: calc(100dvh - max(10px, env(safe-area-inset-top)) - max(10px, env(safe-area-inset-bottom)));
 }
 html body .hm2 .hm2-grid { flex: none; }
+
+/* Mobile hero legibility: busy artwork must never cover the headline. */
+html body .mobile-homepage__hero .tactical-clock-backdrop { display: none; }
+html body .mobile-homepage__hero .mobile-homepage__hero-shade {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--background) 25%, transparent) 0%,
+    color-mix(in oklab, var(--background) 70%, transparent) 38%,
+    var(--background) 62%);
+  opacity: 1;
+}
+html body .mobile-homepage__hero .mobile-homepage__glass,
+html body .mobile-homepage__hero .mobile-homepage__glass * {
+  filter: none;
+  text-shadow: none;
+  opacity: 1;
+}
+html body .mobile-homepage__hero .mobile-homepage__glass h1 { color: var(--foreground); }
