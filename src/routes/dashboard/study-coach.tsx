@@ -51,6 +51,7 @@ import {
 import { cn } from "@/lib/utils";
 import { confirmDialog } from "@/lib/confirm";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
+import "@/styles/study-coach-refinement.css";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 

@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .plan-workspace-window > * {
+    min-width: 0;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] {
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li {
+    flex: 0 0 auto;
+    min-height: 32px;
+    padding: 7px 10px;
+    white-space: nowrap;
+  }
+
+  .app-shell[data-area="student"] .plan-workspace-window button {
+    min-height: 44px;
+  }
+}
