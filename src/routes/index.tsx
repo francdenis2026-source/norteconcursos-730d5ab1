@@ -639,6 +639,13 @@ function Index() {
           </div>
         </section>
 
+        <nav className="desktop-homepage__quick-access home-container" aria-label="Acesso rápido à plataforma">
+          <a href="#plataforma"><BrainCircuit aria-hidden="true" /><span><strong>Plataforma</strong><small>Organize sua preparação</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a href="#concursos"><Landmark aria-hidden="true" /><span><strong>Concursos</strong><small>Explore provas e editais</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a href="#ranking-destaque"><LineChart aria-hidden="true" /><span><strong>Desempenho</strong><small>Acompanhe sua evolução</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a href="#planos"><ShieldCheck aria-hidden="true" /><span><strong>Planos</strong><small>Escolha seu caminho</small></span><ArrowUpRight aria-hidden="true" /></a>
+        </nav>
+
         <section
           id="plataforma"
           className="home-section home-preparation"
