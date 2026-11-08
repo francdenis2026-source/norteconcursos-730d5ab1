@@ -1635,3 +1635,131 @@
     margin-left: 31px;
   }
 }
+
+
+/* Genuine light mode: eliminate dark-themed panels and restore a readable
+   neutral canvas. Scoped to the public mobile homepage only. */
+@media (max-width: 760px) {
+  :root:not(.dark) .home.home.home-recomposition {
+    --home-bg: #f5f7fb;
+    --home-surface: #ffffff;
+    --home-line: #d5dee9;
+    --home-text: #18283b;
+    --nc-outline-panel: #cbd5e1;
+    --nc-outline-section: #c6d0dc;
+    --nc-outline-accent: #b88b35;
+    color: #18283b;
+    background: #f5f7fb;
+  }
+  :root:not(.dark) .home.home.home-recomposition .home-backdrop {
+    background: #f5f7fb;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage {
+    background: transparent;
+    color: #18283b;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__daily,
+    .mobile-homepage__resources,
+    .mobile-homepage__contests,
+    .mobile-plans,
+    .mobile-homepage__closing,
+    .mobile-homepage__footer,
+    .mobile-homepage__glass
+  ) {
+    background-image: none;
+    background-color: #fff;
+    border: 1px solid #d4dde7;
+    color: #18283b;
+    box-shadow: 0 2px 12px rgb(20 43 70 / 5%);
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__section-head h2,
+    .mobile-homepage__daily h2,
+    .mobile-plans h2,
+    .mobile-homepage__closing strong,
+    .mobile-homepage__footer-brand,
+    .mobile-homepage__feature-grid h2,
+    .mobile-homepage__glass h1
+  ) {
+    color: #15283d;
+    text-shadow: none;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__section-head > span,
+    .mobile-homepage__daily p,
+    .mobile-homepage__hero-lead,
+    .mobile-plans__note,
+    .mobile-homepage__closing p,
+    .mobile-homepage__footer-copy,
+    .mobile-homepage__cards article p
+  ) {
+    color: #475569;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__quick-nav a,
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__feature-grid a,
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__cards article {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    color: #17283e;
+    box-shadow: 0 2px 9px rgb(20 43 70 / 5%);
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__quick-nav svg,
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__feature-grid svg {
+    color: #a8761d;
+    filter: none;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    background: #fff;
+    color: #17283e;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 8px rgb(20 43 70 / 5%);
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li[data-featured="true"] {
+    background: #fffbf1;
+    border: 2px solid #b88b35;
+    box-shadow: 0 2px 9px rgb(184 139 53 / 11%);
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li > span {
+    border-color: #c9a25d;
+    color: #76501a;
+    background: #fff8e8;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li > span em {
+    color: #675a44;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__icon {
+    color: #a8761d;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__note {
+    color: #475569 !important;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__footer :is(
+    a, .mobile-homepage__footer-copy, .mobile-homepage__footer-brand
+  ) {
+    color: #24364a;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__footer-brand span {
+    color: #956a24;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__footer-nav a {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__hero-copy h1 em {
+    color: #946719;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__primary {
+    background: #b98b37;
+    color: #101820;
+  }
+}
+@media (max-width: 360px) {
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
