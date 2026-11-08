@@ -76,6 +76,35 @@ html body .home.home .home-preparation__panel {
   padding: 4px 16px;
 }
 
+/* Ferramentas: leitura compacta em grade, alinhada às demais abas. */
+html body .home.home .home-preparation__panel:has(.home-preparation__tool) {
+  height: auto;
+  max-height: 176px;
+  overflow-y: auto;
+}
+
+html body .home.home .home-preparation__panel:has(.home-preparation__tool) .home-preparation__items {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 18px;
+}
+
+html body .home.home .home-preparation__panel:has(.home-preparation__tool) .home-preparation__tool {
+  min-width: 0;
+  border-bottom: 1px solid rgb(240 198 115 / 14%);
+}
+
+html body .home.home .home-preparation__panel:has(.home-preparation__tool) .home-preparation__tool > summary {
+  min-height: 34px;
+  gap: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html body .home.home .home-preparation__panel:has(.home-preparation__tool) .home-preparation__tool > p {
+  grid-column: 1 / -1;
+}
+
 html body .home.home .home-preparation__items > :is(article, li) {
   padding-block: 10px;
 }
@@ -107,6 +136,12 @@ html body .home.home .home-preparation__tool > p {
   html body .home.home .home-preparation__intro h2 { font-size: 30px; }
   html body .home.home .home-preparation__info { width: 100%; }
   html body .home.home .home-preparation__panel { height: 198px; }
+  html body .home.home .home-preparation__panel:has(.home-preparation__tool) {
+    max-height: 198px;
+  }
+  html body .home.home .home-preparation__panel:has(.home-preparation__tool) .home-preparation__items {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* A primeira dobra começa depois do cabeçalho; a arte continua visível sem cobrir o título. */
