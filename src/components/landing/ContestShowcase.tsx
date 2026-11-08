@@ -127,6 +127,18 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
           />
         </div>
         <div className="contest-spotlight__content">
+          <div className="contest-acre-banner" aria-label="Destaque da Polícia Civil do Acre">
+            <div className="contest-acre-banner__identity">
+              <span className="contest-acre-banner__seal" aria-hidden="true"><ShieldCheck size={27} /></span>
+              <div>
+                <strong>PC Civil do Acre</strong>
+                <span>Preparação direcionada · IDECAN</span>
+              </div>
+            </div>
+            <div className="contest-acre-banner__flag" aria-label="Bandeira do Acre" role="img">
+              <span className="contest-acre-banner__star" aria-hidden="true">★</span>
+            </div>
+          </div>
           <div className="contest-kickers">
             <span>
               <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
