@@ -538,10 +538,13 @@ function PcAcreEditalVerticalizadoPage() {
                   "flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
                   (active
                     ? "border-primary bg-primary/10 text-foreground"
-                    : "border-border bg-background/50 text-foreground hover:bg-muted/60")
+                    : item.id === "investigador"
+                      ? "border-amber-400/70 bg-amber-400/10 text-foreground hover:bg-amber-400/15"
+                      : "border-border bg-background/50 text-foreground hover:bg-muted/60")
                 }
               >
                 <span className="text-xs font-bold leading-snug">{item.label}</span>
+                {item.id === "investigador" && <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-amber-700 dark:text-amber-300">Foco recomendado</span>}
                 <span className="flex items-center gap-2 text-[11px] text-muted-foreground">
                   <span className="inline-flex items-center gap-0.5">
                     <Users className="h-3 w-3" aria-hidden="true" />
@@ -557,6 +560,28 @@ function PcAcreEditalVerticalizadoPage() {
           })}
         </CardContent>
       </Card>
+
+      {cargo.id === "investigador" && (
+        <Card className="pcac-edital-card border-amber-400/60 bg-gradient-to-br from-amber-400/10 via-card to-card">
+          <CardHeader className="pb-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <CardTitle className="text-base">Foco recomendado: Oficial Investigador</CardTitle>
+                <CardDescription>O cargo concentra 74 vagas e seis disciplinas específicas. Organize sua semana pelo núcleo abaixo.</CardDescription>
+              </div>
+              <Badge className="bg-amber-500 text-slate-950">74 vagas</Badge>
+            </div>
+          </CardHeader>
+          <CardContent className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {["Português e Raciocínio Lógico", "Penal, Processual Penal e Constitucional", "Contabilidade, Estatística e Dados", "Arquivologia e Tecnologia da Informação"].map((focus, index) => (
+              <div key={focus} className="rounded-lg border border-amber-400/30 bg-background/60 p-3">
+                <span className="text-[10px] font-black uppercase tracking-wide text-amber-700 dark:text-amber-300">Etapa {index + 1}</span>
+                <p className="mt-1 text-sm font-semibold">{focus}</p>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
 
       {cargo.exam && (
         <Card className="pcac-edital-card pcac-edital-overview">
