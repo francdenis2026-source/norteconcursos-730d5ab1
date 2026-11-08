@@ -157,6 +157,12 @@ const MENU: MenuItem[] = [
     href: "/dashboard/cronograma",
   },
   {
+    group: "Planejamento",
+    label: "Edital digital PC-AC",
+    icon: BookOpenCheck,
+    href: "/dashboard/pc-acre-edital",
+  },
+  {
     group: "Desempenho",
     label: "Minha evolução",
     icon: ClipboardList,

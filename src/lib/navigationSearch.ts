@@ -9,6 +9,7 @@ const DETAILS: Record<string, { description: string; terms: string }> = {
   '/dashboard/study-plan': { description: 'Acompanhe metas e ajuste seu plano de estudos.', terms: 'metas planejamento resultados ajustes diagnostico plano por resultados' },
   '/dashboard/my-contest': { description: 'Defina o concurso que orienta sua preparação.', terms: 'objetivo cargo concurso alvo' },
   '/dashboard/edital': { description: 'Consulte as disciplinas e tópicos do seu edital.', terms: 'conteudo programatico materias edital' },
+  '/dashboard/pc-acre-edital': { description: 'Estude o edital verticalizado da Polícia Civil do Acre por cargo e tópico.', terms: 'PCAC policia civil acre edital verticalizado tópicos cargo disciplinas marcar estudado' },
   '/dashboard/library': { description: 'Consulte legislação, súmulas e material de apoio.', terms: 'lei leis seca sumula sumulas legislacao biblioteca direito' },
   '/dashboard/leis': { description: 'Estude a legislação complementar do seu concurso.', terms: 'lei leis seca extravagante extravagantes especiais legislacao direito' },
   '/dashboard/disciplinas': { description: 'Encontre conteúdos por disciplina.', terms: 'materias assuntos disciplinas trilhas' },
