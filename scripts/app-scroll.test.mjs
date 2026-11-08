@@ -8,7 +8,10 @@ test('scroll commands target the mobile workspace and the desktop window', () =>
   let mobile = true, mounted = true;
   const content = { scrollTo: (options) => calls.push(['content', options]) };
   globalThis.window = { matchMedia: () => ({matches: mobile}), scrollTo: options => calls.push(['window', options]) };
-  globalThis.document = { getElementById: () => mounted ? content : null };
+  globalThis.document = {
+    documentElement: { dataset: {} },
+    getElementById: () => mounted ? content : null,
+  };
   try {
     scrollAppToTop();
     mobile = false; scrollAppToTop('instant');
