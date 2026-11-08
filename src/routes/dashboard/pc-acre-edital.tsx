@@ -95,6 +95,18 @@ const INVESTIGATOR_FOCUS = [
   { subject: "Arquivologia e Administração", priority: "Média", topics: "ciclo documental, classificação, avaliação, temporalidade, preservação, gestão de processos, atendimento, ética e sigilo", filter: "Arquivologia" },
 ] as const;
 
+const INVESTIGATOR_RADAR = [
+  { subject: "Língua Portuguesa", priority: "Alta", topics: "interpretação e inferência, coesão e coerência, reescrita, sintaxe, concordância, regência, crase e pontuação", evidence: "Edital PC-AC + recorrência IDECAN em provas policiais" },
+  { subject: "Raciocínio Lógico", priority: "Alta", topics: "proposições, conectivos, equivalências, negações, argumentação, conjuntos, porcentagem, probabilidade e gráficos", evidence: "Edital PC-AC + padrão de questões IDECAN" },
+  { subject: "Direito Penal", priority: "Muito alta", topics: "teoria do crime, dolo e culpa, tentativa, concurso de pessoas, crimes contra pessoa, patrimônio e administração pública", evidence: "Bloco jurídico do edital + recorrência em polícia civil" },
+  { subject: "Direito Processual Penal", priority: "Muito alta", topics: "inquérito, provas, exame de corpo de delito, cadeia de custódia, prisões, cautelares e identificação criminal", evidence: "Bloco jurídico do edital + padrão policial IDECAN" },
+  { subject: "Tecnologia e Segurança da Informação", priority: "Alta", topics: "arquivos, planilhas, bancos, redes, autenticação, criptografia, backups, metadados e proteção de dados", evidence: "Específica do Investigador + tendência de investigação digital" },
+  { subject: "Contabilidade e Análise Financeira", priority: "Alta", topics: "patrimônio, partidas dobradas, demonstrações, juros, extratos, PIX/TED, conciliação e movimentações atípicas", evidence: "Específica do Investigador + foco financeiro do cargo" },
+  { subject: "Estatística e Análise de Dados", priority: "Alta", topics: "tabelas, gráficos, média, mediana, dispersão, probabilidade, correlação, outliers, cruzamentos e linhas do tempo", evidence: "Duas disciplinas específicas convergentes no edital" },
+  { subject: "Arquivologia", priority: "Média-alta", topics: "teoria das três idades, classificação, temporalidade, preservação, documentos digitais, metadados e autenticidade", evidence: "Específica do Investigador + rotina documental policial" },
+  { subject: "Noções de Administração", priority: "Média", topics: "planejamento, organização, processos, eficiência, gestão da informação, atendimento, ética e sigilo", evidence: "Específica do edital; revisar após o núcleo de maior peso" },
+] as const;
+
 const PCAC_IDECAN_PRIORITY = [
   { subject: "Direito Penal", level: "Muito alta", reason: "teoria do crime, crimes contra a pessoa, patrimônio e administração pública", filter: "Direito Penal" },
   { subject: "Direito Processual Penal", level: "Muito alta", reason: "inquérito, ação penal, prisões, provas e cadeia de custódia", filter: "Direito Processual Penal" },
@@ -633,6 +645,21 @@ function PcAcreEditalVerticalizadoPage() {
                     <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-primary hover:bg-primary/10">Treinar questões</Link>
                     <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-muted-foreground hover:bg-muted">Abrir teoria</Link>
                   </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+          <CardContent className="border-t border-amber-400/20 pt-4">
+            <div className="mb-3">
+              <p className="text-sm font-bold">Radar de incidência para começar</p>
+              <p className="text-xs text-muted-foreground">Mapeamento orientativo: edital PC-AC cruzado com o padrão de provas policiais da IDECAN disponível na plataforma, incluindo PC-SC 2026. Use para priorizar revisões; não substitui o conteúdo oficial.</p>
+            </div>
+            <div className="grid gap-2 lg:grid-cols-2">
+              {INVESTIGATOR_RADAR.map((item, index) => (
+                <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
+                  <div className="flex items-start justify-between gap-2"><span className="text-sm font-semibold">{index + 1}. {item.subject}</span><Badge variant={item.priority === "Muito alta" ? "default" : "outline"}>{item.priority}</Badge></div>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.topics}</p>
+                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">Base: {item.evidence}</p>
                 </div>
               ))}
             </div>
