@@ -756,6 +756,13 @@ html {
   gap: 24px;
   transition: height 0.35s var(--ease-out);
 }
+/* Keep the floating homepage mark clear of the header's lower edge. */
+.lp-header__bar > a .norte-brand {
+  transform: translateY(8px);
+}
+.lp-header__bar > a .norte-brand:hover {
+  transform: translateY(7px);
+}
 .lp-header[data-scrolled="true"] .lp-header__bar {
   height: 64px;
 }
@@ -782,6 +789,9 @@ html {
 .lp-nav a:hover {
   color: white;
   background: oklch(1 0 0 / 0.07);
+}
+.lp-nav a:focus-visible {
+  outline: none;
 }
 .lp-nav a.is-campaign {
   color: var(--brass-soft);
