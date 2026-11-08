@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .simulator-exam-grid,
+  .app-shell[data-area="student"] .command-panel {
+    gap: 12px;
+  }
+
+  .app-shell[data-area="student"] .command-panel,
+  .app-shell[data-area="student"] .exam-question-window {
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .simulator-exam-grid .command-panel > header,
+  .app-shell[data-area="student"] .simulator-exam-grid .command-panel > div {
+    padding: 14px;
+  }
+}

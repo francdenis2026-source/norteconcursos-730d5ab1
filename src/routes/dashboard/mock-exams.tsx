@@ -124,6 +124,7 @@ import { cn } from "@/lib/utils";
 
 import { ENEM_AREAS } from "@/data/enem";
 import { enemSimulatorCatalog, enemSimulatorFilters } from "@/lib/enemScope";
+import "@/styles/mock-exams-refinement.css";
 
 export const Route = createFileRoute("/dashboard/mock-exams")({
   validateSearch: (
