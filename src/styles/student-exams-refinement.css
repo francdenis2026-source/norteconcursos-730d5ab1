@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .student-exams-page {
+    gap: 16px;
+  }
+
+  .app-shell[data-area="student"] .student-exams-page .page-hero {
+    min-height: 116px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .app-shell[data-area="student"] .student-exams-page .grid.grid-cols-2 {
+    gap: 8px;
+  }
+}

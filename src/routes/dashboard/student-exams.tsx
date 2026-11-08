@@ -38,6 +38,7 @@ import { ExamPhotoUploader } from "@/components/dashboard/ExamPhotoUploader";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { canRegisterExams } from "@/lib/subscriptions.config";
 import { cn } from "@/lib/utils";
+import "@/styles/student-exams-refinement.css";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -640,7 +641,7 @@ function StudentExamIntelligence() {
   };
 
   return (
-    <div className="space-y-5 pb-8">
+    <div className="student-exams-page space-y-5 pb-8">
       <Hero
         attempts={attempts.length}
         action={
