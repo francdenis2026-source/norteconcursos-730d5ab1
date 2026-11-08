@@ -956,3 +956,135 @@
     background-image: none;
   }
 }
+
+/* Light theme: readable promotional banners and plan typography. */
+@media (max-width: 760px) {
+  /* The themed background is intentionally dark even with the light switch on.
+     Never inherit dark text onto the textured panel. */
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__daily,
+    .mobile-homepage__resources,
+    .mobile-homepage__contests,
+    .mobile-plans,
+    .mobile-homepage__closing,
+    .mobile-homepage__footer
+  ) {
+    color: #f8fafc;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__section-head h2,
+    .mobile-homepage__daily h2,
+    .mobile-plans h2,
+    .mobile-homepage__closing strong,
+    .mobile-homepage__footer-brand
+  ) {
+    color: #f8fafc;
+    opacity: 1;
+    text-shadow: none;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage :is(
+    .mobile-homepage__section-head > span,
+    .mobile-homepage__daily > p,
+    .mobile-plans__note,
+    .mobile-homepage__closing p,
+    .mobile-homepage__footer-copy
+  ) {
+    color: #d7e0ea;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans {
+    background-image:
+      linear-gradient(120deg, rgb(10 20 35 / 77%), rgb(10 20 35 / 87%)),
+      var(--nc-texture);
+    background-color: #122237;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #d8e0e8;
+    color: #17283e;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li[data-featured="true"] {
+    background: #fffaf0;
+    border-color: #bc9342;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li :is(strong, span) {
+    color: #17283e;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li[data-featured="true"] > span {
+    color: #76501a;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li small,
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__list > li em {
+    color: #475569;
+    opacity: 1;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__trial {
+    color: #503a14;
+    background: #fff4d7;
+    border: 1px solid #c9a657;
+    box-shadow: none;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-plans__trial svg {
+    color: #8a651e;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__cards article {
+    background: #fff;
+    color: #182b42;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__cards article strong {
+    color: #17283e;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__cards article p {
+    color: #46566b;
+  }
+  :root:not(.dark) .home.home.home-recomposition .mobile-homepage__footer-contact a {
+    color: #e3eaf2;
+  }
+  /* Compact plan heading, banner and prices without squeezing text. */
+  .home-recomposition .mobile-plans .mobile-homepage__section-head {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .home-recomposition .mobile-plans .mobile-homepage__section-head h2 {
+    margin: 0;
+    font-size: clamp(23px, 6.2vw, 29px);
+    line-height: 1.17;
+  }
+  .home-recomposition .mobile-plans__trial {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 0;
+    margin: 10px 0 14px;
+    padding: 11px 13px;
+    line-height: 1.35;
+  }
+  .home-recomposition .mobile-plans__list > li {
+    min-width: 0;
+    padding: 12px 14px;
+  }
+  .home-recomposition .mobile-plans__list > li > div {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .home-recomposition .mobile-plans__list > li > span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .home-recomposition .mobile-plans__note {
+    margin: 12px 0;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+@media (max-width: 360px) {
+  .home-recomposition .mobile-plans__list > li { flex-wrap: wrap; }
+  .home-recomposition .mobile-plans__list > li > span { margin-left: auto; }
+}
