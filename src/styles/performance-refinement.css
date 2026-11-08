@@ -32,4 +32,18 @@
     width: 100%;
     justify-content: center;
   }
+
+  .performance-page .performance-detail-tabs [role="tablist"] {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+  }
+
+  .performance-page .performance-detail-tabs [role="tab"] {
+    flex: 0 0 auto;
+    min-height: 44px;
+    white-space: nowrap;
+  }
 }
