@@ -1763,3 +1763,62 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+
+/* Homepage light-mode legibility, mobile + desktop.
+   Repair low-contrast inherited text and translucent gold on white. */
+:root:not(.dark) .home.home-recomposition {
+  --home-text: #17283e;
+  --home-muted: #475569;
+  --home-line: #cbd5e1;
+  --home-accent: #916018;
+  color: #17283e;
+}
+:root:not(.dark) .home.home-recomposition :is(
+  .mobile-homepage__hero-lead,
+  .mobile-homepage__eyebrow,
+  .mobile-homepage__section-head > span,
+  .mobile-homepage__daily p,
+  .mobile-homepage__cards article p,
+  .mobile-homepage__closing p,
+  .mobile-homepage__footer-copy,
+  .mobile-homepage__footer-contact a,
+  .mobile-plans__note
+) {
+  color: #475569;
+  opacity: 1;
+  text-shadow: none;
+}
+:root:not(.dark) .home.home-recomposition :is(
+  .mobile-homepage__eyebrow,
+  .mobile-homepage__section-head > span
+) {
+  color: #8b5b14;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__eyebrow > span {
+  background-color: #b88b35;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__glass :is(
+  p, small, span:not(.mobile-homepage__eyebrow)
+) {
+  color: #475569;
+  opacity: 1;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__glass :is(
+  strong, b, h1, h2
+) {
+  color: #17283e;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__secondary {
+  color: #744d12;
+  background: #fffbf1;
+  border-color: #c6a25e;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__footer-copy strong {
+  color: #17283e;
+}
+:root:not(.dark) .home.home-recomposition .mobile-homepage__footer :is(
+  a, address, p, small, span
+) {
+  opacity: 1;
+}
