@@ -1,12 +1,12 @@
 /* Barra inferior do painel (celular): baixa, em vidro, flutuando sobre o conteúdo que rola por baixo.
    Ao rolar, o vidro ganha um pouco mais de corpo (data-scrolling) e um brilho fino no topo. */
 @media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
-  :root { --student-nav-h: calc(46px + env(safe-area-inset-bottom, 0px)); }
+  :root { --student-nav-h: calc(68px + env(safe-area-inset-bottom, 0px)); }
   :root .app-shell.navigation-v2 .app-bottom-nav.mobile-nav-glass {
     position: fixed;
     inset: auto 0 0;
     z-index: 40;
-    padding: 1px max(4px, env(safe-area-inset-right)) max(1px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    padding: 5px max(6px, env(safe-area-inset-right)) max(5px, env(safe-area-inset-bottom)) max(6px, env(safe-area-inset-left));
     border: 0;
     border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
     border-radius: 0;
@@ -39,20 +39,29 @@
     box-shadow: 0 -8px 26px rgb(0 0 0 / 38%), inset 0 1px 0 rgb(255 255 255 / 14%);
   }
   :root .app-shell.navigation-v2 .app-bottom-nav :is(a, button) {
-    min-height: 0;
-    gap: 1px;
-    padding: 2px 1px 1px;
-    font-size: 12.5px;
+    min-height: 58px;
+    gap: 3px;
+    padding: 5px 2px 3px;
+    font-size: 14px;
     font-weight: 650;
     letter-spacing: -.01em;
     color: color-mix(in srgb, var(--foreground) 82%, transparent);
     line-height: 1.1;
     border-radius: 10px;
   }
-  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico { width: 26px; height: 26px; }
-  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico svg { width: 24px !important; height: 24px !important; }
+  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico { width: 32px; height: 32px; }
+  :root .app-shell.navigation-v2 .app-bottom-nav .app-ico svg { width: 27px !important; height: 27px !important; }
   /* O conteúdo passa por baixo do vidro; reserva a altura da barra no fim da rolagem. */
   :root .app-shell.navigation-v2 .app-content { padding-bottom: calc(var(--student-nav-h) + 16px); scroll-padding-bottom: var(--student-nav-h); }
+}
+
+/* Escala de leitura e alvos de toque para telas estreitas. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell[data-area="student"] .app-content { font-size: 16px; }
+  .app-shell[data-area="student"] .app-content :is(p, li, label, input, select, textarea) { font-size: max(1em, 15px); line-height: 1.55; }
+  .app-shell[data-area="student"] .app-content :is(button, a[role="button"], .button, [class*="btn"]) { min-height: 44px; }
+  .app-shell[data-area="student"] .app-content :is(.card, [class*="card"], [class*="panel"], [class*="tile"]) { border-radius: 14px; }
+  .app-shell[data-area="student"] .app-content :is(.card, [class*="card"], [class*="panel"], [class*="tile"]) > :is(header, section, div) { min-height: 0; }
 }
 /* Item ativo: texto em destaque, bem contrastado nos dois temas. */
 @media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {

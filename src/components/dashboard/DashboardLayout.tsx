@@ -376,9 +376,9 @@ const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Meu plano", href: "/dashboard/study-coach", icon: Target },
-  { label: "Agenda", href: "/dashboard/cronograma", icon: CalendarClock },
+  { label: "Treinar", href: "/dashboard/question-trainer", icon: BrainCircuit },
   { label: "Estudos", href: "/dashboard/study-tools", icon: BookOpenCheck },
+  { label: "Agenda", href: "/dashboard/cronograma", icon: CalendarClock },
 ];
 
 const normalize = (path: string) => (path.length > 1 ? path.replace(/\/$/, "") : path);
