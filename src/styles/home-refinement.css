@@ -1,3 +1,22 @@
+/* Homepage navigation floats above the page so hero content can pass beneath it. */
+.home.home .home-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  width: 100%;
+  background: color-mix(in oklab, var(--home-bg) 58%, transparent);
+  border-bottom-color: color-mix(in oklab, var(--home-line) 48%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  box-shadow: 0 8px 28px -20px rgb(0 0 0 / 35%);
+}
+
+.home.home .home-header[data-scrolled] {
+  background: color-mix(in oklab, var(--home-bg) 72%, transparent);
+  border-bottom-color: color-mix(in oklab, var(--home-line) 72%, transparent);
+  box-shadow: 0 10px 28px -18px rgb(0 0 0 / 42%);
+}
+
 @media (min-width: 768px) {
   .desktop-homepage .home-hero {
     min-height: min(720px, 78vh);
