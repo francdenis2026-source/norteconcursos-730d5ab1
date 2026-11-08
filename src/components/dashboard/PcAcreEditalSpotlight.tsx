@@ -48,7 +48,7 @@ export function PcAcreEditalSpotlight() {
             <Download aria-hidden="true" />
             PDF do edital
           </a>
-          <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta pcpr-spot__cta--ghost">
+          <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} className="pcpr-spot__cta pcpr-spot__cta--ghost">
             <BookOpenCheck aria-hidden="true" />
             Edital digital
           </Link>

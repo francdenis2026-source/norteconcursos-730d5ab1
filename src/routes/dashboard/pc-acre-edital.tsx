@@ -108,8 +108,9 @@ const PCAC_IDECAN_PRIORITY = [
 
 export const Route = createFileRoute("/dashboard/pc-acre-edital")({
   component: PcAcreEditalVerticalizadoPage,
-  validateSearch: (s: Record<string, unknown>): { cargo?: string | undefined } => ({
+  validateSearch: (s: Record<string, unknown>): { cargo?: string | undefined; view?: string | undefined } => ({
     cargo: typeof s["cargo"] === "string" ? s["cargo"] : undefined,
+    view: typeof s["view"] === "string" ? s["view"] : undefined,
   }),
   head: () => ({ meta: [{ title: "Edital verticalizado PC-AC | Norte Concurso" }] }),
 });
@@ -454,6 +455,7 @@ function PcAcreEditalVerticalizadoPage() {
   const userId = user?.id ?? "guest";
   const search = useSearch({ strict: false }) as { cargo?: string };
   const cargoParam = search.cargo;
+  const digitalView = search.view === "digital";
   const navigate = useNavigate();
   const cargo = pcAcVerticalCargo(cargoParam);
 
@@ -484,6 +486,26 @@ function PcAcreEditalVerticalizadoPage() {
     const { generatePcAcVerticalPdf } = await import("@/lib/pcAcreVerticalPdf");
     await generatePcAcVerticalPdf(cargo, progress);
   };
+
+  if (digitalView) {
+    return (
+      <div className="pcac-edital-page space-y-4 pb-10">
+        <PageHero
+          image="careers-team"
+          kicker="ÁREA DO ALUNO · EDITAL DIGITAL"
+          icon={BookOpenCheck}
+          title="Edital digital PC-AC 2026"
+          description="Conteúdo interativo incorporado à plataforma Norte Concursos. Use as abas por cargo, marque os tópicos e acompanhe seu progresso."
+          actions={<Button variant="outline" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>}
+        />
+        <Card className="overflow-hidden border-primary/20">
+          <CardContent className="p-0">
+            <iframe title="Edital digital PC-AC 2026" src="/pcac-edital-digital/index.html" className="h-[calc(100vh-190px)] min-h-[720px] w-full border-0" />
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="pcac-edital-page space-y-5 pb-10">
