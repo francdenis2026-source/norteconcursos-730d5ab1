@@ -1,0 +1,331 @@
+/* Norte Concursos — compact editorial feature band.
+   One image-led information rail; existing tabs, destinations and content stay intact. */
+.home.hr-canvas #plataforma.hr-showcase {
+  position: relative !important;
+  isolation: isolate !important;
+  box-sizing: border-box !important;
+  min-height: 0 !important;
+  height: clamp(390px, 43vw, 470px) !important;
+  max-height: 470px !important;
+  padding: 18px 0 !important;
+  overflow: hidden !important;
+  border-block: 1px solid rgb(220 177 91 / 20%) !important;
+  background:
+    radial-gradient(ellipse at 78% 45%, rgb(208 164 82 / 9%), transparent 36%),
+    linear-gradient(112deg, #0b1219 0%, #111b24 54%, #0d151d 100%) !important;
+}
+.home.hr-canvas #plataforma.hr-showcase::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: .13 !important;
+  background-image: linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px) !important;
+  background-size: 34px 34px !important;
+  mask-image: linear-gradient(90deg, #000, transparent 92%) !important;
+}
+.home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
+  display: grid !important;
+  grid-template-columns: minmax(270px, .78fr) minmax(0, 1.72fr) !important;
+  align-items: stretch !important;
+  gap: clamp(18px, 2.2vw, 32px) !important;
+  box-sizing: border-box !important;
+  width: min(calc(100% - clamp(32px, 5vw, 76px)), 1600px) !important;
+  max-width: 1600px !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin-inline: auto !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading {
+  position: relative !important;
+  isolation: isolate !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 22px 20px 18px !important;
+  overflow: hidden !important;
+  border: 1px solid rgb(222 179 95 / 24%) !important;
+  border-radius: 12px !important;
+  background: #111a22 !important;
+  box-shadow: 0 14px 34px rgb(0 0 0 / 24%) !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  background: url("/media/hero/preparacao-norte.webp") center 38% / cover no-repeat !important;
+  opacity: .58 !important;
+  transform: scale(1.015) !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  background: linear-gradient(180deg, rgb(7 13 19 / 18%) 0%, rgb(8 14 20 / 48%) 34%, rgb(8 14 20 / 96%) 100%) !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading > div:first-child {
+  max-width: 100% !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__eyebrow {
+  margin: 0 0 12px !important;
+  color: #e7bd70 !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: .16em !important;
+  line-height: 1.4 !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__eyebrow::before {
+  display: none !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading h2 {
+  max-width: 12ch !important;
+  margin: 0 !important;
+  color: #f7f3eb !important;
+  font-size: clamp(27px, 2.35vw, 36px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.05em !important;
+  text-wrap: balance !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading h2 em {
+  display: block !important;
+  color: #e8bd70 !important;
+  font-style: normal !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__heading p {
+  max-width: 34ch !important;
+  margin: 12px 0 0 !important;
+  color: #d0d5d8 !important;
+  font-size: 11px !important;
+  line-height: 1.48 !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__index {
+  align-self: flex-start !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 14px 0 0 !important;
+  padding: 8px 11px !important;
+  border: 1px solid rgb(229 188 105 / 35%) !important;
+  border-radius: 7px !important;
+  background: rgb(8 14 20 / 72%) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__index strong {
+  color: #e9bd6b !important;
+  font-size: 25px !important;
+  line-height: 1 !important;
+}
+.home.hr-canvas #plataforma .hr-showcase__index span {
+  color: #d4d9dc !important;
+  font-size: 8px !important;
+  line-height: 1.35 !important;
+}
+.home.hr-canvas #plataforma .home-preparation__info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas #plataforma .home-preparation__tabs {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 5px !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 0 12px !important;
+  padding: 4px !important;
+  border: 1px solid rgb(220 230 238 / 12%) !important;
+  border-radius: 8px !important;
+  background: rgb(5 11 17 / 58%) !important;
+}
+.home.hr-canvas #plataforma .home-preparation__tab-anchor { margin: 0 !important; }
+.home.hr-canvas #plataforma .home-preparation__tab {
+  min-height: 31px !important;
+  padding: 0 12px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  color: #b9c3cb !important;
+  background: transparent !important;
+  font-size: 10px !important;
+  font-weight: 720 !important;
+  white-space: nowrap !important;
+}
+.home.hr-canvas #plataforma .home-preparation__tab[data-state="active"] {
+  color: #f4dfb5 !important;
+  border-color: rgb(222 179 95 / 35%) !important;
+  background: linear-gradient(135deg, rgb(216 173 85 / 19%), rgb(216 173 85 / 7%)) !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas #plataforma .home-preparation__panel {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+.home.hr-canvas #plataforma .hr-tools-grid,
+.home.hr-canvas #plataforma .home-preparation__items {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 9px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.home.hr-canvas #plataforma .hr-tool-card,
+.home.hr-canvas #plataforma .hr-career-card,
+.home.hr-canvas #plataforma .hr-source-card,
+.home.hr-canvas #plataforma .hr-step-card {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 30px minmax(0, 1fr) !important;
+  align-content: center !important;
+  align-items: start !important;
+  column-gap: 9px !important;
+  min-width: 0 !important;
+  min-height: 94px !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  padding: 11px 12px !important;
+  overflow: hidden !important;
+  border: 1px solid rgb(188 204 218 / 16%) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(145deg, rgb(26 39 50 / 96%), rgb(15 25 34 / 98%)) !important;
+  box-shadow: 0 6px 16px rgb(0 0 0 / 14%), inset 0 1px 0 rgb(255 255 255 / 4%) !important;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease !important;
+}
+.home.hr-canvas #plataforma .hr-tool-card::before,
+.home.hr-canvas #plataforma .hr-career-card::before,
+.home.hr-canvas #plataforma .hr-source-card::before,
+.home.hr-canvas #plataforma .hr-step-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  width: 2px !important;
+  height: auto !important;
+  background: #dcb15f !important;
+  opacity: .8 !important;
+}
+.home.hr-canvas #plataforma .hr-tool-card:hover,
+.home.hr-canvas #plataforma .hr-career-card:hover,
+.home.hr-canvas #plataforma .hr-source-card:hover,
+.home.hr-canvas #plataforma .hr-step-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgb(226 184 98 / 48%) !important;
+  background: linear-gradient(145deg, #202f3c, #17242f) !important;
+}
+.home.hr-canvas #plataforma .hr-tool-icon,
+.home.hr-canvas #plataforma .hr-career-card > svg,
+.home.hr-canvas #plataforma .hr-source-card > svg {
+  display: grid !important;
+  place-items: center !important;
+  width: 29px !important;
+  height: 29px !important;
+  margin: 0 !important;
+  padding: 6px !important;
+  border: 1px solid rgb(222 179 95 / 28%) !important;
+  border-radius: 7px !important;
+  color: #e5b963 !important;
+  background: rgb(222 179 95 / 9%) !important;
+}
+.home.hr-canvas #plataforma .hr-tool-icon svg { width: 16px !important; height: 16px !important; }
+.home.hr-canvas #plataforma .hr-tool-card h3,
+.home.hr-canvas #plataforma .hr-career-card h3,
+.home.hr-canvas #plataforma .hr-source-card h3,
+.home.hr-canvas #plataforma .hr-step-card h3 {
+  margin: 1px 0 0 !important;
+  color: #f3f0e9 !important;
+  font-size: 11px !important;
+  font-weight: 760 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.01em !important;
+}
+.home.hr-canvas #plataforma .hr-tool-card p,
+.home.hr-canvas #plataforma .hr-career-card p,
+.home.hr-canvas #plataforma .hr-source-card p,
+.home.hr-canvas #plataforma .hr-step-card p {
+  grid-column: 2 !important;
+  margin: 4px 0 0 !important;
+  color: #aebbc5 !important;
+  font-size: 9px !important;
+  line-height: 1.35 !important;
+}
+.home.hr-canvas #plataforma .hr-tool-card .hr-tool-ribbon { top: 6px !important; right: 7px !important; font-size: 7px !important; }
+.home.hr-canvas #plataforma .home-preparation__steps,
+.home.hr-canvas #plataforma .home-preparation__careers { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+.home.hr-canvas #plataforma .hr-step-card { grid-template-columns: 30px minmax(0, 1fr) !important; }
+.home.hr-canvas #plataforma .home-preparation__number {
+  color: #e5b963 !important;
+  font-size: 19px !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+}
+.home.hr-canvas #plataforma .hr-step-card h3 svg { display: none !important; }
+.home.hr-canvas #plataforma .hr-career-card > div,
+.home.hr-canvas #plataforma .hr-source-card > div,
+.home.hr-canvas #plataforma .hr-step-card > div { min-width: 0 !important; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas #plataforma.hr-showcase { height: 430px !important; }
+  .home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
+    grid-template-columns: minmax(220px, .7fr) minmax(0, 1.5fr) !important;
+    width: calc(100% - 32px) !important;
+    gap: 14px !important;
+  }
+  .home.hr-canvas #plataforma .hr-tools-grid,
+  .home.hr-canvas #plataforma .home-preparation__items { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .home.hr-canvas #plataforma .hr-tool-card { min-height: 86px !important; }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #plataforma.hr-showcase {
+    height: auto !important;
+    max-height: none !important;
+    padding: 20px 0 24px !important;
+    overflow: visible !important;
+  }
+  .home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    width: calc(100% - 28px) !important;
+    height: auto !important;
+    gap: 14px !important;
+  }
+  .home.hr-canvas #plataforma .hr-showcase__heading {
+    min-height: 220px !important;
+    padding: 18px !important;
+  }
+  .home.hr-canvas #plataforma .hr-showcase__heading h2 { max-width: 15ch !important; font-size: 29px !important; }
+  .home.hr-canvas #plataforma .home-preparation__info { height: auto !important; }
+  .home.hr-canvas #plataforma .home-preparation__tabs {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 2px !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__tab { padding-inline: 4px !important; font-size: 9px !important; }
+  .home.hr-canvas #plataforma .hr-tools-grid,
+  .home.hr-canvas #plataforma .home-preparation__items { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .home.hr-canvas #plataforma .hr-tool-card,
+  .home.hr-canvas #plataforma .hr-career-card,
+  .home.hr-canvas #plataforma .hr-source-card,
+  .home.hr-canvas #plataforma .hr-step-card { min-height: 100px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas #plataforma .hr-tool-card,
+  .home.hr-canvas #plataforma .hr-career-card,
+  .home.hr-canvas #plataforma .hr-source-card,
+  .home.hr-canvas #plataforma .hr-step-card { transition: none !important; }
+}
