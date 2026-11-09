@@ -48,3 +48,60 @@
     aspect-ratio: 2172 / 724 !important;
   }
 }
+
+/* Recovery for the public homepage: keep the hero copy above the decorative clock
+   backdrop and let the approved platform banner occupy its natural full-width height. */
+.home.hr-canvas > .home-backdrop {
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+.home.hr-canvas > .home-header {
+  position: relative !important;
+  z-index: 100 !important;
+}
+.home.hr-canvas > .desktop-homepage {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero {
+  position: relative !important;
+  isolation: isolate !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero > .hx {
+  position: relative !important;
+  z-index: 30 !important;
+  display: block !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__inner,
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy,
+.home.hr-canvas #inicio.home-hero.hr-hero .hr-hero-route {
+  position: relative !important;
+  z-index: 31 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy :is(.hx__kicker, h1, p, .home-actions) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.home.hr-canvas #plataforma.hr-showcase-artwork {
+  display: block !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  aspect-ratio: auto !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+}
+.home.hr-canvas #plataforma.hr-showcase-artwork > .hr-showcase-art {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
