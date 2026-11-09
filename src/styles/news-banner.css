@@ -37,7 +37,10 @@
   background: #f4e6c5;
   color: #7a561d;
 }
-.news-banner--floating .news-banner__icon svg { width: 19px; height: 19px; }
+.news-banner--floating .news-banner__icon svg {
+  width: 19px;
+  height: 19px;
+}
 .news-banner--floating .news-banner__text {
   display: flex;
   flex-direction: column;
@@ -55,7 +58,7 @@
   font-size: 10px;
   font-weight: 800;
   line-height: 1.3;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
 }
 .news-banner--floating .news-banner__headline {
   display: block;
@@ -63,7 +66,7 @@
   font-size: clamp(13px, 1.3vw, 16px);
   line-height: 1.3;
   font-weight: 750;
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   white-space: normal;
   overflow-wrap: anywhere;
 }
@@ -95,8 +98,13 @@
   box-shadow: none;
   transform: none;
 }
-.news-banner--floating .news-banner__link svg { width: 14px; height: 14px; }
-.news-banner--floating .news-banner__link:hover { background: #294766; }
+.news-banner--floating .news-banner__link svg {
+  width: 14px;
+  height: 14px;
+}
+.news-banner--floating .news-banner__link:hover {
+  background: #294766;
+}
 .news-banner--floating .news-banner__close {
   display: inline-flex;
   align-items: center;
@@ -116,8 +124,13 @@
   color: #526175;
   cursor: pointer;
 }
-.news-banner--floating .news-banner__close svg { width: 17px; height: 17px; }
-.news-banner--floating .news-banner__close:hover { background: #eee2cb; }
+.news-banner--floating .news-banner__close svg {
+  width: 17px;
+  height: 17px;
+}
+.news-banner--floating .news-banner__close:hover {
+  background: #eee2cb;
+}
 .news-banner--floating :is(.news-banner__link, .news-banner__close):focus-visible {
   outline: 3px solid #3c6fa2;
   outline-offset: 2px;
@@ -127,14 +140,32 @@
   border-color: #665636;
   box-shadow: 0 6px 20px rgb(0 0 0 / 18%);
 }
-:root.dark .news-banner--floating .news-banner__icon { background: #302d28; color: #e0bd75; }
-:root.dark .news-banner--floating .news-banner__tag { color: #e0bd75; }
-:root.dark .news-banner--floating .news-banner__headline { color: #f6f7f9; }
-:root.dark .news-banner--floating .news-banner__summary { color: #b9c5d2; }
-:root.dark .news-banner--floating .news-banner__link { background: #d5b46f; color: #172334; }
-:root.dark .news-banner--floating .news-banner__link:hover { background: #ebcb89; }
-:root.dark .news-banner--floating .news-banner__close { color: #b9c5d2; }
-:root.dark .news-banner--floating .news-banner__close:hover { background: #2a3647; }
+:root.dark .news-banner--floating .news-banner__icon {
+  background: #302d28;
+  color: #e0bd75;
+}
+:root.dark .news-banner--floating .news-banner__tag {
+  color: #e0bd75;
+}
+:root.dark .news-banner--floating .news-banner__headline {
+  color: #f6f7f9;
+}
+:root.dark .news-banner--floating .news-banner__summary {
+  color: #b9c5d2;
+}
+:root.dark .news-banner--floating .news-banner__link {
+  background: #d5b46f;
+  color: #172334;
+}
+:root.dark .news-banner--floating .news-banner__link:hover {
+  background: #ebcb89;
+}
+:root.dark .news-banner--floating .news-banner__close {
+  color: #b9c5d2;
+}
+:root.dark .news-banner--floating .news-banner__close:hover {
+  background: #2a3647;
+}
 @media (max-width: 760px) {
   .news-banner.news-banner--floating {
     width: calc(100% - 24px);
@@ -146,13 +177,33 @@
     padding: 10px;
     border-radius: 12px;
   }
-  .news-banner--floating .news-banner__icon { width: 30px; height: 30px; border-radius: 8px; }
-  .news-banner--floating .news-banner__icon svg { width: 16px; height: 16px; }
-  .news-banner--floating .news-banner__text { grid-column: 2; grid-row: 1; }
-  .news-banner--floating .news-banner__headline { font-size: 13px; line-height: 1.25; }
-  .news-banner--floating .news-banner__summary { display: none; }
-  .news-banner--floating .news-banner__tag { font-size: 9px; }
-  .news-banner--floating .news-banner__close { grid-column: 3; grid-row: 1; }
+  .news-banner--floating .news-banner__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+  .news-banner--floating .news-banner__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  .news-banner--floating .news-banner__text {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .news-banner--floating .news-banner__headline {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+  .news-banner--floating .news-banner__summary {
+    display: none;
+  }
+  .news-banner--floating .news-banner__tag {
+    font-size: 9px;
+  }
+  .news-banner--floating .news-banner__close {
+    grid-column: 3;
+    grid-row: 1;
+  }
   .news-banner--floating .news-banner__link {
     grid-column: 2;
     grid-row: 2;
@@ -163,7 +214,174 @@
   }
 }
 @media (max-width: 350px) {
-  .news-banner--floating .news-banner__inner { grid-template-columns: 26px minmax(0, 1fr) 32px; gap: 6px; }
-  .news-banner--floating .news-banner__icon { width: 26px; height: 26px; }
-  .news-banner--floating .news-banner__close { width: 32px; height: 32px; min-width: 32px; min-height: 32px; }
+  .news-banner--floating .news-banner__inner {
+    grid-template-columns: 26px minmax(0, 1fr) 32px;
+    gap: 6px;
+  }
+  .news-banner--floating .news-banner__icon {
+    width: 26px;
+    height: 26px;
+  }
+  .news-banner--floating .news-banner__close {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+}
+
+/* ================= Aviso do edital da PC-AC com a bandeira do Acre =================
+   O cartão é o campo verde; a faixa diagonal amarela com a estrela vermelha completa a bandeira.
+   Cores fixas nos dois temas (são as cores da bandeira), com contraste AA no texto. */
+.home .acre-banner {
+  position: relative;
+  z-index: 8;
+  width: min(calc(100% - 32px), 1100px);
+  margin: 12px auto 8px;
+}
+.home .acre-banner__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 40px;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 12px 12px 12px 178px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 14px;
+  background: linear-gradient(100deg, #17603a 0%, #124a2d 55%, #0d3a23 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 28px -14px rgb(0 0 0 / 0.55);
+  overflow: hidden;
+  isolation: isolate;
+}
+.home .acre-banner__flag {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: -1;
+  width: 168px;
+  background: linear-gradient(160deg, #fbe043 0%, #f2c91a 100%);
+  clip-path: polygon(0 0, 100% 0, 42% 100%, 0 100%);
+}
+.home .acre-banner__flag svg {
+  position: absolute;
+  top: 50%;
+  left: 26px;
+  width: 38px;
+  height: 38px;
+  transform: translateY(-58%);
+  fill: #d7262d;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.25));
+}
+.home .acre-banner__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  line-height: 1.3;
+}
+.home .acre-banner__tag {
+  color: #fbe043;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home .acre-banner__headline {
+  color: #ffffff;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+.home .acre-banner__summary {
+  color: #d6e6dc;
+  font-size: 13px;
+}
+.home .acre-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #fbe043;
+  color: #0d3a23;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+.home .acre-banner__link:hover {
+  background: #fff0a0;
+  transform: translateY(-1px);
+}
+.home .acre-banner__link svg {
+  width: 16px;
+  height: 16px;
+}
+.home .acre-banner__close {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #d6e6dc;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.home .acre-banner__close:hover {
+  background: rgb(255 255 255 / 0.12);
+  color: #ffffff;
+}
+.home .acre-banner__close svg {
+  width: 18px;
+  height: 18px;
+}
+.home .acre-banner :is(a, button):focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+@media (max-width: 767px) {
+  .home .acre-banner__inner {
+    grid-template-columns: minmax(0, 1fr) 40px;
+    gap: 8px 6px;
+    padding: 12px 8px 12px 84px;
+  }
+  .home .acre-banner__flag {
+    width: 84px;
+    clip-path: polygon(0 0, 100% 0, 30% 100%, 0 100%);
+  }
+  .home .acre-banner__flag svg {
+    top: 14px;
+    left: 12px;
+    width: 26px;
+    height: 26px;
+    transform: none;
+  }
+  .home .acre-banner__close {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+  }
+  .home .acre-banner__link {
+    grid-column: 1 / -1;
+    justify-self: start;
+    min-height: 40px;
+  }
+  .home .acre-banner__summary {
+    font-size: 12.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .acre-banner__link,
+  .home .acre-banner__close {
+    transition: none;
+  }
+  .home .acre-banner__link:hover {
+    transform: none;
+  }
 }
