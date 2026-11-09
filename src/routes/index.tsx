@@ -75,6 +75,7 @@ import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
+import "@/styles/home-premium-system.css";
 
 export const Route = createFileRoute("/")({
   component: Index,

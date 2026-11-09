@@ -141,6 +141,7 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
 
 function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
+  const { tab } = Route.useSearch();
   return (
     <div className="video-study-page">
       <header className="video-study-page__header workspace-banner">
@@ -149,7 +150,7 @@ function MediaCenterPage() {
           <h1>Videoaulas e podcasts</h1>
         </div>
       </header>
-      <Tabs defaultValue={Route.useSearch().tab === "podcasts" ? "podcasts" : Route.useSearch().tab === "assuntos" ? "assuntos" : "videos"}>
+      <Tabs defaultValue={tab === "podcasts" ? "podcasts" : tab === "assuntos" ? "assuntos" : "videos"}>
         <TabsList className="video-study-page__tabs" aria-label="Tipo de material">
           <TabsTrigger value="videos">
             <PlayCircle size={16} /> Playlists
