@@ -1,9 +1,11 @@
-/* Approved static artwork for the Norte Concursos preparation rail.
-   The image is used as supplied: preserve its complete 3:1 composition. */
+/* Norte homepage — render the approved artwork as a real image element.
+   Using <img> avoids background-image loading/cascade issues and preserves the
+   complete 3:1 composition without cropping or stretching. */
 .home.hr-canvas #plataforma.hr-showcase {
   position: relative !important;
   display: block !important;
   box-sizing: border-box !important;
+  flex: 0 0 auto !important;
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
@@ -13,18 +15,27 @@
   margin: 0 !important;
   overflow: hidden !important;
   border: 0 !important;
-  background-color: #07131f !important;
-  background-image: url("/media/hero/banner-premium-norte-concursos.webp") !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: 100% 100% !important;
+  background: #07131f !important;
+}
+.home.hr-canvas #plataforma.hr-showcase > .hr-showcase-art {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: fill !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 .home.hr-canvas #plataforma.hr-showcase::before,
 .home.hr-canvas #plataforma.hr-showcase::after {
   content: none !important;
   display: none !important;
 }
-.home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
+.home.hr-canvas #plataforma.hr-showcase > .hr-showcase__inner {
   display: none !important;
 }
 @media (max-width: 760px) {
@@ -33,8 +44,6 @@
     aspect-ratio: 3 / 1 !important;
     min-height: 0 !important;
     padding: 0 !important;
-    overflow: hidden !important;
-    background-size: 100% 100% !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
