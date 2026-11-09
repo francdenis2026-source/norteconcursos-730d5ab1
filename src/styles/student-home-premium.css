@@ -845,3 +845,298 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
     width: 100%;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   Dashboard homepage — final visual pass
+   Single graphite/porcelain/brass language. Scoped only to the student home.
+   Keeps existing data, links, actions, and responsive behavior untouched.
+   -------------------------------------------------------------------------- */
+.app-shell.navigation-v2[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: #252b33;
+  --home-muted: #66717d;
+  --home-line: #d9dfe5;
+  --home-surface: #ffffff;
+  --home-surface-2: #f4f6f8;
+  --home-blue: #596675;
+  --home-cyan: #657f8b;
+  --home-green: #43836c;
+  --home-gold: #b58a43;
+  --home-violet: #8a7958;
+  --home-rose: #a95d68;
+  gap: 12px;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: #edf0f3;
+  --home-muted: #b4bdc7;
+  --home-line: #3b4652;
+  --home-surface: #202832;
+  --home-surface-2: #28323d;
+  --home-blue: #aebbc8;
+  --home-cyan: #8eb0b8;
+  --home-green: #77b99b;
+  --home-gold: #d7b36e;
+  --home-violet: #c0ae87;
+  --home-rose: #d58b95;
+}
+
+/* Welcome area: quiet editorial hierarchy, no competing blue/violet gradients. */
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead {
+  min-height: 112px !important;
+  padding: 17px 22px !important;
+  border: 1px solid #39424c !important;
+  border-radius: 14px !important;
+  background:
+    radial-gradient(ellipse at 92% 12%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2b333d 58%, #343b43 100%) !important;
+  box-shadow: 0 8px 24px rgb(20 28 36 / 13%), inset 0 1px 0 rgb(255 255 255 / 5%) !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__welcome {
+  color: #d7b36e !important;
+  letter-spacing: .09em;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead h1 {
+  font-size: clamp(24px, 2vw, 30px) !important;
+  letter-spacing: -.035em;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead-actions a {
+  color: #e2c58d !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat {
+  min-height: 58px;
+  border-color: rgb(215 179 110 / 35%);
+  background: rgb(255 255 255 / 7%);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat :is(span,strong) {
+  color: #f6f0e4 !important;
+}
+
+/* Catalogue totals and metrics sit on one consistent surface family. */
+.app-shell.navigation-v2[data-area="student"] .student-overview .platform-question-counts--compact,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__panel,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__card[data-accent],
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__rail > * {
+  border: 1px solid var(--home-line) !important;
+  border-radius: 13px !important;
+  background: var(--home-surface) !important;
+  box-shadow: 0 3px 12px rgb(31 42 54 / 4%) !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .platform-question-counts--compact {
+  padding: 9px 13px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .platform-question-counts__grid > * {
+  border-color: var(--home-line);
+  border-radius: 9px;
+  background: var(--home-surface-2);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__panel {
+  padding: 13px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__section-heading h2 {
+  color: var(--home-ink);
+  font-size: 14px;
+  font-weight: 750;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__section-heading > span {
+  color: var(--home-muted);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric {
+  min-height: 76px;
+  padding: 10px 12px;
+  border: 1px solid var(--home-line);
+  border-radius: 11px;
+  background: var(--home-surface-2);
+  box-shadow: none;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric h2 {
+  color: var(--home-muted);
+  font-size: 10px;
+  letter-spacing: .035em;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric strong {
+  color: var(--home-ink);
+  font-size: clamp(19px, 1.55vw, 24px);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric p {
+  color: var(--home-muted);
+}
+
+/* Quick access: calm, aligned tiles with restrained brass detail. */
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  min-height: 62px;
+  padding: 9px 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 10px;
+  background: var(--home-surface-2);
+  box-shadow: none;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts > a:hover {
+  border-color: color-mix(in srgb, var(--home-gold) 65%, var(--home-line));
+  background: color-mix(in srgb, var(--home-gold) 7%, var(--home-surface));
+  box-shadow: 0 6px 16px rgb(31 42 54 / 7%);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__tool-icon {
+  border-color: color-mix(in srgb, var(--home-gold) 30%, var(--home-line));
+  color: var(--home-gold);
+  background: color-mix(in srgb, var(--home-gold) 10%, var(--home-surface));
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts strong {
+  color: var(--home-ink);
+  font-size: 12px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts small {
+  color: var(--home-muted);
+  font-size: 10px;
+}
+
+/* Next action reads as one compact call-to-action, not a second hero. */
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next {
+  border: 1px solid color-mix(in srgb, var(--home-gold) 42%, var(--home-line)) !important;
+  border-left: 3px solid var(--home-gold) !important;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--home-gold) 7%, var(--home-surface)) !important;
+  box-shadow: none !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next h2 {
+  color: var(--home-ink);
+  font-size: 14px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next p {
+  color: var(--home-muted);
+  font-size: 11px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next .student-home__primary {
+  min-height: 36px;
+  border: 1px solid #a77d38;
+  border-radius: 9px;
+  background: #b58a43;
+  color: #211b11 !important;
+  box-shadow: none;
+  font-size: 11px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next .student-home__primary:hover {
+  background: #c49a53;
+}
+
+/* Main/side columns: aligned cards, tighter vertical rhythm, no fixed heights. */
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__workspace {
+  grid-template-columns: minmax(0, 1.45fr) minmax(290px, .9fr);
+  gap: 12px;
+  align-items: start;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) {
+  gap: 10px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: 14px;
+  border-top: 2px solid color-mix(in srgb, var(--home-gold) 55%, var(--home-line)) !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__section-title {
+  margin-bottom: 9px;
+  gap: 9px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__section-title > span {
+  width: 32px;
+  height: 32px;
+  border: 1px solid color-mix(in srgb, var(--home-gold) 28%, var(--home-line));
+  border-radius: 9px;
+  color: var(--home-gold);
+  background: color-mix(in srgb, var(--home-gold) 9%, var(--home-surface-2));
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__section-title h2 {
+  color: var(--home-ink);
+  font-size: 14px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__section-title p,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__quiet,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__card small {
+  color: var(--home-muted);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__text-link {
+  color: var(--home-gold);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__next-topic {
+  border-color: var(--home-line);
+  background: var(--home-surface-2);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__next-topic strong,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__objective-name,
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__blocks li strong {
+  color: var(--home-ink);
+}
+.app-shell.navigation-v2[data-area="student"] .student-overview .student-home__week {
+  min-height: 104px;
+}
+
+/* Dark mode is a real dark surface, not a light card with dark text. */
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-overview :is(
+  .platform-question-counts--compact,.student-desk__panel,.student-home__card[data-accent],
+  .student-hub__rail > *
+) {
+  background: var(--home-surface) !important;
+  border-color: var(--home-line) !important;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric,
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  background: var(--home-surface-2) !important;
+  border-color: var(--home-line) !important;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-overview :is(
+  .student-desk__section-heading h2,.student-home__metric strong,.student-home__section-title h2,
+  .student-home__objective-name,.student-home__blocks li strong,.student-hub__shortcuts strong
+) {
+  color: var(--home-ink) !important;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-overview :is(
+  .student-desk__section-heading > span,.student-home__metric h2,.student-home__metric p,
+  .student-home__section-title p,.student-home__quiet,.student-home__card small,
+  .student-hub__shortcuts small
+) {
+  color: var(--home-muted) !important;
+}
+
+/* Responsive: preserve readable card widths and let long content flow naturally. */
+@media (max-width: 1180px) {
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead {
+    min-height: 0 !important;
+    padding: 14px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next {
+    align-items: stretch;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next .student-home__primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 420px) {
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 7px;
+    padding: 9px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric > span {
+    width: 30px;
+    height: 30px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric-arrow {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .student-overview :is(.student-home__metric,.student-hub__shortcuts > a) {
+    transition: none;
+  }
+}
