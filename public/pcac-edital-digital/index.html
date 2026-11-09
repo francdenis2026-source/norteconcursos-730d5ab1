@@ -1630,3 +1630,141 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
   .subtopics-panel > .subtopics { padding-left: 7px !important; }
 }
 </style>
+
+
+<script id="pcac-contextual-search-v1">
+(()=>{
+  const input=document.querySelector('#search');
+  const clear=document.querySelector('#clear');
+  const toolbar=document.querySelector('.toolbar');
+  const tabs=[...document.querySelectorAll('.tab[data-target]')];
+  if(!input || !toolbar) return;
+
+  const status=document.createElement('div');
+  status.id='pcac-search-status';
+  status.setAttribute('role','status');
+  status.setAttribute('aria-live','polite');
+  status.hidden=true;
+  toolbar.insertAdjacentElement('afterend',status);
+
+  let savedOpen=null;
+  const clean=value=>(value||'').replace(/\s+/g,' ').trim();
+  const textOf=element=>clean(element?.textContent||'');
+  const rememberOpen=()=>{
+    savedOpen=new Map([...document.querySelectorAll('details')].map(node=>[node,node.open]));
+  };
+  const restoreOpen=()=>{
+    if(savedOpen) savedOpen.forEach((open,node)=>{if(node.isConnected) node.open=open;});
+    savedOpen=null;
+  };
+  const showAll=()=>{
+    document.querySelectorAll('.tabpane > details, .subject-collapse, label.topic, .semantic-subtopic, label.subtopic')
+      .forEach(node=>{node.style.display='';});
+    document.querySelectorAll('.subtopics-panel').forEach(node=>{node.style.display='';});
+    restoreOpen();
+    status.hidden=true;
+    status.textContent='';
+  };
+
+  function applySearch() {
+    const query=clean(input.value).toLocaleLowerCase('pt-BR');
+    const active=document.querySelector('.tabpane.active');
+    if(!query || !active) {
+      showAll();
+      return;
+    }
+    if(!savedOpen) rememberOpen();
+
+    let total=0;
+    const blocks=[...active.querySelectorAll(':scope > details')];
+
+    blocks.forEach(block=>{
+      const blockSummary=block.querySelector(':scope > summary');
+      const blockMatch=textOf(blockSummary).toLocaleLowerCase('pt-BR').includes(query);
+      const inside=block.querySelector(':scope > .inside');
+      const disciplines=inside?[...inside.querySelectorAll(':scope > .subject-collapse')]:[];
+      let blockHasResult=blockMatch;
+
+      disciplines.forEach(discipline=>{
+        const summary=discipline.querySelector(':scope > summary');
+        const disciplineMatch=blockMatch || textOf(summary).toLocaleLowerCase('pt-BR').includes(query);
+        const body=discipline.querySelector(':scope > .subject-body');
+        const topics=body?[...body.querySelectorAll(':scope > label.topic')]:[];
+        let disciplineHasResult=disciplineMatch;
+
+        topics.forEach(topic=>{
+          const title=textOf(topic.querySelector('.semantic-parent'));
+          const titleMatch=disciplineMatch || title.toLocaleLowerCase('pt-BR').includes(query);
+          const subtopics=[...topic.querySelectorAll('.semantic-subtopic, label.subtopic')];
+          let topicMatch=titleMatch;
+
+          if(subtopics.length && !titleMatch) {
+            let matchingChildren=0;
+            subtopics.forEach(child=>{
+              const match=textOf(child).toLocaleLowerCase('pt-BR').includes(query);
+              child.style.display=match?'':'none';
+              if(match) matchingChildren++;
+            });
+            topicMatch=matchingChildren>0;
+            const panel=topic.querySelector('.subtopics-panel');
+            if(panel) {
+              panel.style.display=topicMatch?'':'none';
+              if(topicMatch) panel.open=true;
+            }
+          } else {
+            subtopics.forEach(child=>{child.style.display='';});
+            const panel=topic.querySelector('.subtopics-panel');
+            if(panel) panel.style.display='';
+          }
+
+          topic.style.display=topicMatch?'':'none';
+          if(topicMatch) {
+            total++;
+            disciplineHasResult=true;
+          }
+        });
+
+        discipline.style.display=disciplineHasResult?'':'none';
+        if(disciplineHasResult) {
+          if(!disciplineMatch) discipline.open=true;
+          blockHasResult=true;
+        }
+      });
+
+      block.style.display=blockHasResult?'':'none';
+      if(blockHasResult && !blockMatch) block.open=true;
+    });
+
+    status.hidden=false;
+    status.textContent=total
+      ? total+' assunto(s) encontrado(s) em '+textOf(active.querySelector(':scope > h2'))+'. A pesquisa considera apenas o cargo selecionado.'
+      : 'Nenhum assunto encontrado neste cargo. Experimente outro termo ou selecione outro cargo.';
+  }
+
+  input.addEventListener('input',applySearch);
+  if(clear) clear.addEventListener('click',()=>{
+    input.value='';
+    showAll();
+    input.focus();
+  });
+  tabs.forEach(tab=>tab.addEventListener('click',()=>{
+    input.value='';
+    showAll();
+  }));
+  showAll();
+})();
+</script>
+<style id="pcac-contextual-search-v1-css">
+#pcac-search-status {
+  margin: 7px 0 12px;
+  padding: 8px 11px;
+  border: 1px solid #d9e3f0;
+  border-radius: 8px;
+  background: #f5f8fc;
+  color: #526581;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+}
+#pcac-search-status[hidden] { display: none !important; }
+</style>
