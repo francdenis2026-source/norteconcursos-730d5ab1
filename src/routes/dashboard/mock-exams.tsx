@@ -125,6 +125,7 @@ import { cn } from "@/lib/utils";
 import { ENEM_AREAS } from "@/data/enem";
 import { enemSimulatorCatalog, enemSimulatorFilters } from "@/lib/enemScope";
 import "@/styles/mock-exams-refinement.css";
+import "@/styles/learning-workspace-refinement.css";
 
 export const Route = createFileRoute("/dashboard/mock-exams")({
   validateSearch: (
@@ -1191,7 +1192,7 @@ function ProfessionalSimulator() {
     );
 
   return (
-    <div className="simulator-workspace mx-auto max-w-6xl space-y-5 pb-6">
+    <div className="nc-learning-workspace simulator-workspace mx-auto max-w-6xl space-y-5 pb-6">
       <section className="exam-simulator-hero workspace-banner" aria-labelledby="simulator-title">
         <div className="exam-simulator-hero__content">
           <span className="exam-simulator-hero__eyebrow">Preparação em condições de prova</span>
