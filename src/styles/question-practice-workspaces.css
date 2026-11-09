@@ -11,6 +11,8 @@
   --practice-accent-strong: #20565d;
   --practice-accent-soft: #eaf2f2;
   --practice-gold: #a77b42;
+  --question-accent: var(--practice-accent);
+  --trainer-accent: var(--practice-accent);
   color: var(--practice-ink);
   font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
@@ -25,6 +27,8 @@
   --practice-accent-strong: #a3d9d7;
   --practice-accent-soft: #203e43;
   --practice-gold: #d8b77c;
+  --question-accent: var(--practice-accent);
+  --trainer-accent: var(--practice-accent);
 }
 .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(h1,h2,h3,h4) {
   color: var(--practice-ink);
@@ -114,7 +118,7 @@
   text-transform: none;
 }
 .app-shell[data-area="student"] .trainer-setup :is([data-slot="select-trigger"],button[data-slot="select-trigger"]) {
-  min-height: 42px;
+  min-height: 44px;
   border-color: var(--practice-line);
   border-radius: 9px;
   background: var(--practice-paper);
@@ -163,7 +167,7 @@
   font-weight: 750;
 }
 .app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button {
-  min-height: 42px;
+  min-height: 44px;
   border-radius: 9px;
   font-weight: 700;
 }
@@ -203,7 +207,7 @@
   gap: 6px;
 }
 .app-shell[data-area="student"] .question-catalog .question-catalog__filters [role="group"] button {
-  min-height: 36px;
+  min-height: 44px;
   padding: 7px 11px;
   border: 1px solid var(--practice-line);
   border-radius: 8px;
@@ -254,7 +258,7 @@
 .app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric {
   flex: 1 1 150px;
   min-width: 0;
-  min-height: 0;
+  min-height: 44px;
   gap: 2px;
   padding: 11px 15px;
   border: 0;
@@ -308,7 +312,7 @@
   background: var(--practice-soft);
 }
 .app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"] {
-  min-height: 36px;
+  min-height: 44px;
   border-radius: 7px;
   color: var(--practice-muted);
   font-size: 11px;
@@ -366,7 +370,7 @@
 .app-shell[data-area="student"] .question-flashcards .question-workspace__metric {
   flex: 1 1 145px;
   min-width: 0;
-  min-height: 0;
+  min-height: 44px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -407,7 +411,7 @@
   background: var(--practice-soft);
 }
 .app-shell[data-area="student"] .question-flashcards [role="tablist"] [role="tab"] {
-  min-height: 38px;
+  min-height: 44px;
   padding: 7px 13px;
   border: 0;
   border-radius: 7px;
