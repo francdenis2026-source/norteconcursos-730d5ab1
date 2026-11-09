@@ -31,7 +31,7 @@ function MyContestPage() {
   const { focusedContest, contests, isLoading } = useDashboardData();
   const [activeContest, setActiveContest] = React.useState<Contest | undefined>(focusedContest);
   const [savingContestId, setSavingContestId] = React.useState<string | null>(null);
-  React.useEffect(() => setActiveContest(focusedContest), [focusedContest?.id]);
+  React.useEffect(() => setActiveContest(focusedContest), [focusedContest]);
   const selectContest = async (contest: Contest) => {
     setSavingContestId(contest.id);
     try {
