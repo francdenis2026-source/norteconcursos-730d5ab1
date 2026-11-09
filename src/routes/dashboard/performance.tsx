@@ -29,6 +29,7 @@ import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
 import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import "@/styles/performance-refinement.css";
+import "@/styles/student-workspace-unified.css";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -52,7 +53,7 @@ function PerformancePage() {
       />
     );
   return (
-    <div className="performance-page space-y-6">
+    <div className="nc-student-workspace performance-page space-y-6">
       <section className="page-hero page-hero--lg workspace-banner" data-hero="dashboard">
         <div className="page-hero__text">
           <span className="hero-chip">
