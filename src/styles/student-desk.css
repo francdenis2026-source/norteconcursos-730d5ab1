@@ -1,10 +1,10 @@
 /* Student home only. The welcome banner and the other menu pages keep their own art. */
 :root .student-home.student-desk {
-  --desk-blue: #275fa5;
-  --desk-teal: #137568;
-  --desk-violet: #7751a7;
-  --desk-amber: #94620f;
-  --desk-rose: #ad4565;
+  --desk-blue: var(--nc-color-action-text);
+  --desk-teal: var(--nc-color-success);
+  --desk-violet: var(--nc-color-action-text);
+  --desk-amber: var(--nc-color-action-text);
+  --desk-rose: var(--nc-color-danger);
   --hub-accent: var(--desk-blue);
   --hub-line: var(--border);
   --hub-soft: color-mix(in srgb, var(--desk-blue) 8%, var(--card));
@@ -12,11 +12,11 @@
   container: student-desk / inline-size;
 }
 :root.dark .student-home.student-desk {
-  --desk-blue: #8bbcf2;
-  --desk-teal: #7ed6bb;
-  --desk-violet: #c1a4ec;
-  --desk-amber: #e8c176;
-  --desk-rose: #f1a0b2;
+  --desk-blue: var(--nc-color-action);
+  --desk-teal: var(--nc-color-success);
+  --desk-violet: var(--nc-color-action);
+  --desk-amber: var(--nc-color-action);
+  --desk-rose: var(--nc-color-danger);
   /* Brighter than the site-wide muted gray so secondary text reads clearly over this page's dark art. */
   --muted-foreground: oklch(0.83 0 0);
 }
