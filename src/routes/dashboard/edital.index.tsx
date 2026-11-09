@@ -5,7 +5,7 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import "@/styles/student-workspace-unified.css";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search } from "lucide-react";
+import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
@@ -56,6 +56,22 @@ function EditalPage() {
     [progressFilter, setProgressFilter] = React.useState<"all" | "pending" | "done">("all"),
     [revision, setRevision] = React.useState(0);
   const [completed, setCompleted] = React.useState<Record<string, boolean>>({});
+  const [shareFeedback, setShareFeedback] = React.useState("");
+  async function shareEdital(url: string, title: string) {
+    setShareFeedback("");
+    try {
+      if (typeof navigator.share === "function") {
+        await navigator.share({ title, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      setShareFeedback("Link do documento copiado.");
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      setShareFeedback("Não foi possível compartilhar. Abra o documento e copie o endereço.");
+    }
+  }
+
   const {
     catalog,
     loading: catalogLoading,
@@ -217,17 +233,27 @@ function EditalPage() {
                 : "Banca não informada")}
           </p>
           {editalSourceUrl(edition.source) && (
-            <a
-              href={editalSourceUrl(edition.source)!}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline"
-            >
-              {edition.source?.source_type === "edital"
-                ? "Abrir documento do edital"
-                : "Consultar documento de referência"}
-              <ExternalLink className="h-4 w-4" />
-            </a>
+            <div className="flex flex-wrap items-center gap-2" aria-label="Ações do documento do edital">
+              <Button asChild variant="outline" size="sm">
+                <a href={editalSourceUrl(edition.source)!} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                  {edition.source?.source_type === "edital" ? "Abrir edital" : "Abrir referência"}
+                </a>
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => void shareEdital(
+                  editalSourceUrl(edition.source)!,
+                  `${edition.contest_name} — ${edition.contest_year}`
+                )}
+              >
+                <Share2 className="mr-2 h-4 w-4" aria-hidden="true" />
+                Compartilhar
+              </Button>
+              {shareFeedback && <span role="status" className="text-xs text-muted-foreground">{shareFeedback}</span>}
+            </div>
           )}
           <div
             className="mt-4 rounded-xl border border-primary/25 bg-primary/5 p-4"
