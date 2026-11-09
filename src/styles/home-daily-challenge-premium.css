@@ -5,7 +5,7 @@
   position: relative;
   z-index: 2;
 }
-.home-daily-challenge-wrap .daily-challenge-home {
+.daily-challenge-home {
   position: relative;
   display: grid !important;
   grid-template-columns: 58px minmax(240px, 1.5fr) minmax(190px, .9fr) auto;
@@ -26,7 +26,7 @@
   box-shadow: 0 12px 34px rgb(0 0 0 / 20%), 0 1px 0 rgb(255 255 255 / 5%) inset;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
-.home-daily-challenge-wrap .daily-challenge-home::after {
+.daily-challenge-home::after {
   content: "";
   position: absolute;
   inset: auto 0 0;
@@ -35,12 +35,12 @@
   opacity: .72;
   pointer-events: none;
 }
-.home-daily-challenge-wrap .daily-challenge-home:hover {
+.daily-challenge-home:hover {
   border-color: rgb(232 194 117 / 86%);
   box-shadow: 0 16px 38px rgb(0 0 0 / 26%), 0 0 22px rgb(208 164 76 / 10%);
   transform: translateY(-2px);
 }
-.home-daily-challenge-wrap .daily-badge__emblem {
+.daily-challenge-home .daily-badge__emblem {
   display: grid;
   place-items: center;
   width: 54px;
@@ -51,13 +51,13 @@
   background: linear-gradient(145deg, rgb(211 165 77 / 19%), rgb(211 165 77 / 5%));
   box-shadow: 0 0 24px rgb(211 165 77 / 10%), 0 1px 0 rgb(255 255 255 / 8%) inset;
 }
-.home-daily-challenge-wrap .daily-badge__emblem svg { width: 27px; height: 27px; stroke-width: 1.7; }
-.home-daily-challenge-wrap .daily-badge__copy {
+.daily-challenge-home .daily-badge__emblem svg { width: 27px; height: 27px; stroke-width: 1.7; }
+.daily-challenge-home .daily-badge__copy {
   display: grid;
   gap: 5px;
   min-width: 0;
 }
-.home-daily-challenge-wrap .daily-badge__eyebrow {
+.daily-challenge-home .daily-badge__eyebrow {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -67,28 +67,28 @@
   letter-spacing: .15em;
   line-height: 1.2;
 }
-.home-daily-challenge-wrap .daily-badge__signal {
+.daily-challenge-home .daily-badge__signal {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #d9b76f;
   box-shadow: 0 0 0 3px rgb(217 183 111 / 12%);
 }
-.home-daily-challenge-wrap .daily-badge__eyebrow-separator { color: #777d82; }
-.home-daily-challenge-wrap .daily-badge__title {
+.daily-challenge-home .daily-badge__eyebrow-separator { color: #777d82; }
+.daily-challenge-home .daily-badge__title {
   color: #f4f1e9;
   font-size: clamp(15px, 1.25vw, 18px);
   font-weight: 760;
   line-height: 1.25;
   letter-spacing: -.02em;
 }
-.home-daily-challenge-wrap .daily-badge__description {
+.daily-challenge-home .daily-badge__description {
   color: #aeb7bf;
   font-size: 11px;
   font-weight: 450;
   line-height: 1.4;
 }
-.home-daily-challenge-wrap .daily-badge__details {
+.daily-challenge-home .daily-badge__details {
   display: grid;
   gap: 5px;
   min-width: 0;
@@ -96,8 +96,8 @@
   border-left: 1px solid rgb(220 185 113 / 24%);
   border-right: 1px solid rgb(220 185 113 / 24%);
 }
-.home-daily-challenge-wrap .daily-badge__progress-label,
-.home-daily-challenge-wrap .daily-badge__renewal {
+.daily-challenge-home .daily-badge__progress-label,
+.daily-challenge-home .daily-badge__renewal {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -106,18 +106,18 @@
   font-weight: 650;
   white-space: nowrap;
 }
-.home-daily-challenge-wrap .daily-badge__progress-label svg { width: 13px; height: 13px; color: #d7a94f; }
-.home-daily-challenge-wrap .daily-badge__renewal { color: #9da8b1; font-size: 9px; font-weight: 500; }
-.home-daily-challenge-wrap .daily-badge__renewal svg { width: 12px; height: 12px; color: #d7b36d; }
-.home-daily-challenge-wrap .daily-badge__renewal time { color: #e4c47f; font-variant-numeric: tabular-nums; }
-.home-daily-challenge-wrap .daily-badge__progress-track {
+.daily-challenge-home .daily-badge__progress-label svg { width: 13px; height: 13px; color: #d7a94f; }
+.daily-challenge-home .daily-badge__renewal { color: #9da8b1; font-size: 9px; font-weight: 500; }
+.daily-challenge-home .daily-badge__renewal svg { width: 12px; height: 12px; color: #d7b36d; }
+.daily-challenge-home .daily-badge__renewal time { color: #e4c47f; font-variant-numeric: tabular-nums; }
+.daily-challenge-home .daily-badge__progress-track {
   display: block;
   height: 5px;
   overflow: hidden;
   border-radius: 99px;
   background: rgb(255 255 255 / 10%);
 }
-.home-daily-challenge-wrap .daily-badge__progress-track span {
+.daily-challenge-home .daily-badge__progress-track span {
   display: block;
   height: 100%;
   border-radius: inherit;
@@ -125,12 +125,12 @@
   box-shadow: 0 0 10px rgb(227 183 97 / 35%);
   transition: width 240ms ease;
 }
-.home-daily-challenge-wrap .daily-badge__progress-count {
+.daily-challenge-home .daily-badge__progress-count {
   color: #9da8b1;
   font-size: 9px;
   font-variant-numeric: tabular-nums;
 }
-.home-daily-challenge-wrap .daily-badge__cta {
+.daily-challenge-home .daily-badge__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -146,38 +146,38 @@
   white-space: nowrap;
   transition: filter 160ms ease, transform 160ms ease;
 }
-.home-daily-challenge-wrap .daily-badge__cta svg { width: 15px; height: 15px; }
-.home-daily-challenge-wrap .daily-challenge-home:hover .daily-badge__cta {
+.daily-challenge-home .daily-badge__cta svg { width: 15px; height: 15px; }
+.daily-challenge-home:hover .daily-badge__cta {
   filter: brightness(1.08);
   transform: translateX(2px);
 }
 @media (max-width: 900px) {
   .home-daily-challenge-wrap { width: min(calc(100% - 28px), 720px); margin: 9px auto 16px; }
-  .home-daily-challenge-wrap .daily-challenge-home {
+  .daily-challenge-home {
     grid-template-columns: 46px minmax(0, 1fr) auto;
     gap: 12px;
     min-height: 0;
     padding: 13px;
   }
-  .home-daily-challenge-wrap .daily-badge__emblem { width: 44px; height: 44px; }
-  .home-daily-challenge-wrap .daily-badge__emblem svg { width: 23px; height: 23px; }
-  .home-daily-challenge-wrap .daily-badge__details { grid-column: 2; grid-row: 2; border: 0; padding: 2px 0 0; }
-  .home-daily-challenge-wrap .daily-badge__cta { grid-column: 3; grid-row: 1 / span 2; padding-inline: 11px; }
+  .daily-challenge-home .daily-badge__emblem { width: 44px; height: 44px; }
+  .daily-challenge-home .daily-badge__emblem svg { width: 23px; height: 23px; }
+  .daily-challenge-home .daily-badge__details { grid-column: 2; grid-row: 2; border: 0; padding: 2px 0 0; }
+  .daily-challenge-home .daily-badge__cta { grid-column: 3; grid-row: 1 / span 2; padding-inline: 11px; }
 }
 @media (max-width: 560px) {
   .home-daily-challenge-wrap { width: calc(100% - 24px); }
-  .home-daily-challenge-wrap .daily-challenge-home {
+  .daily-challenge-home {
     grid-template-columns: 38px minmax(0, 1fr);
     gap: 9px;
     padding: 11px;
   }
-  .home-daily-challenge-wrap .daily-badge__emblem { width: 36px; height: 36px; }
-  .home-daily-challenge-wrap .daily-badge__emblem svg { width: 20px; height: 20px; }
-  .home-daily-challenge-wrap .daily-badge__eyebrow { font-size: 8px; letter-spacing: .11em; }
-  .home-daily-challenge-wrap .daily-badge__title { font-size: 13px; }
-  .home-daily-challenge-wrap .daily-badge__description { font-size: 10px; }
-  .home-daily-challenge-wrap .daily-badge__details { grid-column: 2; grid-row: 2; }
-  .home-daily-challenge-wrap .daily-badge__cta {
+  .daily-challenge-home .daily-badge__emblem { width: 36px; height: 36px; }
+  .daily-challenge-home .daily-badge__emblem svg { width: 20px; height: 20px; }
+  .daily-challenge-home .daily-badge__eyebrow { font-size: 8px; letter-spacing: .11em; }
+  .daily-challenge-home .daily-badge__title { font-size: 13px; }
+  .daily-challenge-home .daily-badge__description { font-size: 10px; }
+  .daily-challenge-home .daily-badge__details { grid-column: 2; grid-row: 2; }
+  .daily-challenge-home .daily-badge__cta {
     grid-column: 2;
     grid-row: 3;
     justify-self: start;
@@ -187,7 +187,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .home-daily-challenge-wrap .daily-challenge-home,
-  .home-daily-challenge-wrap .daily-badge__progress-track span,
-  .home-daily-challenge-wrap .daily-badge__cta { transition: none !important; }
+  .daily-challenge-home,
+  .daily-challenge-home .daily-badge__progress-track span,
+  .daily-challenge-home .daily-badge__cta { transition: none !important; }
 }
