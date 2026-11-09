@@ -448,3 +448,163 @@
     filter: none !important;
   }
 }
+
+
+
+/* Desktop navigation repair: preserve every destination without compressing
+   labels. The live-presence chip was taking the same width as a nav item. */
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .home.hr-canvas .hr-header .home-header__inner,
+  .home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
+    width: calc(100% - 40px) !important;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto !important;
+    gap: clamp(8px, 1vw, 14px) !important;
+  }
+  .home.hr-canvas .home-brand-lockup {
+    min-width: 0;
+    flex: 0 0 auto;
+    gap: 10px;
+  }
+  .home.hr-canvas .home-brand-lockup > a {
+    flex: 0 0 auto;
+    padding-right: 14px;
+  }
+  .home.hr-canvas .home-presence {
+    flex: 0 0 46px;
+    width: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    height: 30px;
+    min-height: 30px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 7px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .home.hr-canvas .home-presence > span {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    font-size: 0;
+  }
+  .home.hr-canvas .home-presence strong {
+    font-size: 11px;
+    line-height: 1;
+  }
+  .home.hr-canvas .home-presence__full,
+  .home.hr-canvas .home-presence__short {
+    display: none !important;
+  }
+  .home.hr-canvas .home-nav.hr-nav {
+    min-width: 0;
+    justify-content: space-between;
+    gap: 0;
+    overflow: visible;
+  }
+  .home.hr-canvas .hr-nav > a,
+  .home.hr-canvas .hr-nav .home-nav__group > summary {
+    flex: 0 1 auto;
+    min-width: max-content;
+    padding-inline: clamp(5px, .6vw, 9px) !important;
+    gap: 5px !important;
+    font-size: clamp(10.5px, .82vw, 12px) !important;
+    letter-spacing: -.015em;
+  }
+  .home.hr-canvas .hr-nav svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .home.hr-canvas .home-header__actions {
+    flex: 0 0 auto;
+    gap: 3px !important;
+    padding-left: 8px !important;
+  }
+  .home.hr-canvas .home-header__register {
+    padding-inline: 11px !important;
+    white-space: nowrap;
+  }
+  .home.hr-canvas .home-header__actions :is(.lp-theme-toggle, .home-fullscreen-toggle) {
+    width: 32px !important;
+    min-width: 32px !important;
+  }
+}
+
+/* At narrower desktop widths use the existing drawer instead of squeezing
+   seven labels into a row. The logo, live count and primary actions remain. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .home.hr-canvas .hr-header .home-header__inner,
+  .home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
+    width: calc(100% - 36px) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px !important;
+  }
+  .home.hr-canvas .home-nav.hr-nav {
+    display: none !important;
+  }
+  .home.hr-canvas .home-header__register,
+  .home.hr-canvas .home-fullscreen-toggle {
+    display: none !important;
+  }
+  .home.hr-canvas .home-header__actions {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 12px !important;
+  }
+  .home.hr-canvas .home-menu-trigger {
+    display: grid !important;
+    place-items: center;
+  }
+  .home.hr-canvas .home-presence {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    padding-inline: 9px;
+  }
+}
+
+/* Remove the persistent selected-item plaque and underline. Keep a restrained
+   text-only hover and a clear keyboard focus indicator for accessibility. */
+.home.hr-canvas .hr-nav > a[aria-current="location"],
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary {
+  color: #c7cbd0 !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.home.hr-canvas .hr-nav > a[aria-current="location"]::before,
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary::before {
+  content: none !important;
+  display: none !important;
+}
+.home.hr-canvas .hr-nav > a[aria-current="location"]::after,
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary::after {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover {
+  color: #edc36d !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover::before,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover::before {
+  content: none !important;
+  display: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover::after,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover::after {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.home.hr-canvas .hr-nav :is(a, summary):focus-visible {
+  outline: 2px solid rgb(240 199 101 / 72%) !important;
+  outline-offset: -4px;
+}
