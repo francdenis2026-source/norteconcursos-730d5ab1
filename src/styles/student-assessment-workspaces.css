@@ -1,0 +1,270 @@
+/* Norte Concursos — assessment workspaces: question catalog, trainer and student exam review.
+   Shared visual language, responsive reading and accessible contrast. No data or scoring changes. */
+.app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) {
+  --assessment-ink: #24343b;
+  --assessment-muted: #63757c;
+  --assessment-line: #dce5e6;
+  --assessment-paper: #fff;
+  --assessment-soft: #f4f7f7;
+  --assessment-accent: #286a70;
+  --assessment-accent-strong: #20565d;
+  --assessment-accent-soft: #eaf2f2;
+  color: var(--assessment-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.dark .app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) {
+  --assessment-ink: #eaf1f2;
+  --assessment-muted: #afc0c5;
+  --assessment-line: #344a52;
+  --assessment-paper: #172b33;
+  --assessment-soft: #1d353d;
+  --assessment-accent: #8ac9c8;
+  --assessment-accent-strong: #a3d9d7;
+  --assessment-accent-soft: #203e43;
+}
+.app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) :is(h1,h2,h3,h4) {
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) .text-muted-foreground {
+  color: var(--assessment-muted);
+}
+.app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) :is(button,a,input,select,textarea,summary,[role="tab"]):focus-visible {
+  outline: 2px solid var(--assessment-accent);
+  outline-offset: 3px;
+}
+
+/* Catalog: concise heading, predictable filters, clear result rows. */
+.app-shell[data-area="student"] .question-catalog {
+  width: 100%;
+  gap: 13px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser {
+  overflow: hidden;
+  border: 1px solid var(--assessment-line);
+  border-radius: 13px;
+  background: var(--assessment-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser-head {
+  gap: 10px;
+  padding: 15px 17px;
+  border-bottom: 1px solid var(--assessment-line);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser-body {
+  padding: 14px 17px 17px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--assessment-line);
+  border-radius: 10px;
+  background: var(--assessment-soft);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"] {
+  min-height: 40px;
+  border-radius: 8px;
+  color: var(--assessment-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"][aria-selected="true"],
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"][data-state="active"] {
+  background: var(--assessment-paper);
+  color: var(--assessment-accent-strong);
+  box-shadow: 0 1px 3px rgb(15 35 42 / 10%);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-list {
+  gap: 7px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row {
+  min-height: 62px;
+  padding: 11px 13px;
+  border-color: var(--assessment-line);
+  border-radius: 10px;
+  background: var(--assessment-paper);
+  color: var(--assessment-ink);
+  transition: border-color .15s ease, background .15s ease;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row:hover {
+  border-color: var(--assessment-accent);
+  background: var(--assessment-soft);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--assessment-line);
+}
+
+/* Trainer: keep the reading column calm and centered, without clipping controls. */
+.app-shell[data-area="student"] .trainer-session-shell {
+  width: 100%;
+  max-width: 1120px;
+  gap: 13px;
+}
+.app-shell[data-area="student"] .trainer-session-shell .question-window {
+  border-color: var(--assessment-line);
+  border-radius: 15px;
+  background: var(--assessment-paper);
+  color: var(--assessment-ink);
+  box-shadow: 0 12px 32px -30px rgb(12 39 48 / 45%);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-stem {
+  border-color: var(--assessment-line);
+  background: var(--assessment-soft);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-stem > p,
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-content {
+  color: var(--assessment-ink);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-answers button.group.flex-1 {
+  border-color: var(--assessment-line);
+  background: var(--assessment-paper);
+  color: var(--assessment-ink);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-answers button.group.flex-1:hover:not(:disabled) {
+  border-color: var(--assessment-accent);
+  background: var(--assessment-accent-soft);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-actions {
+  border-color: var(--assessment-line);
+}
+.app-shell[data-area="student"] .trainer-session-shell .trainer-reading-actions > :is(button,a) {
+  min-height: 42px;
+  border-radius: 9px;
+}
+
+/* Personal exam review: make the diagnosis, timeline and detailed correction scan as one report. */
+.app-shell[data-area="student"] .student-exams-page {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .student-exams-page .page-hero--lg {
+  min-height: 132px;
+  padding: clamp(17px,2.5vw,25px);
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .student-exams-page .page-hero__desc {
+  max-width: 62ch;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .student-exams-page > section {
+  min-width: 0;
+  gap: 12px;
+}
+.app-shell[data-area="student"] .student-exams-page > section > .grid {
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-exams-page > section > .grid > * {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--assessment-line);
+  border-radius: 12px;
+  background: var(--assessment-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .student-exams-page > section > .grid > * [data-slot="card-content"] {
+  padding: 14px;
+}
+.app-shell[data-area="student"] .student-exams-page :is(.rounded-2xl.border,.rounded-xl.border) {
+  border-color: var(--assessment-line);
+}
+.app-shell[data-area="student"] .student-exams-page .overflow-x-auto {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+.app-shell[data-area="student"] .student-exams-page .overflow-x-auto > * {
+  max-width: none;
+}
+.app-shell[data-area="student"] .student-exams-page :is(.rounded-xl.border.bg-background,.rounded-2xl.border.bg-background) {
+  background: var(--assessment-paper);
+}
+.app-shell[data-area="student"] .student-exams-page :is(.bg-slate-50,.bg-slate-100) {
+  background: var(--assessment-soft);
+}
+.dark .app-shell[data-area="student"] .student-exams-page :is(.bg-slate-50,.bg-slate-100) {
+  background: var(--assessment-soft);
+}
+.app-shell[data-area="student"] .student-exams-page :is(.border-slate-200,.border-slate-300) {
+  border-color: var(--assessment-line);
+}
+.app-shell[data-area="student"] .student-exams-page section > [data-slot="card"] {
+  border-color: var(--assessment-line);
+  border-radius: 12px;
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .student-exams-page section > [data-slot="card"] [data-slot="card-header"] {
+  padding: 15px 17px 10px;
+}
+.app-shell[data-area="student"] .student-exams-page section > [data-slot="card"] [data-slot="card-content"] {
+  padding: 14px 17px 17px;
+}
+.app-shell[data-area="student"] .student-exams-page :is(button,a) {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .question-catalog {
+    gap: 10px;
+  }
+  .app-shell[data-area="student"] .question-catalog .question-catalog__browser-head,
+  .app-shell[data-area="student"] .question-catalog .question-catalog__browser-body {
+    padding-inline: 12px;
+  }
+  .app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"] {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .app-shell[data-area="student"] .question-catalog .question-catalog__result-row {
+    min-height: 58px;
+    padding: 10px;
+  }
+  .app-shell[data-area="student"] .trainer-session-shell .trainer-reading-content {
+    padding: 13px;
+  }
+  .app-shell[data-area="student"] .trainer-session-shell .trainer-reading-heading {
+    align-items: flex-start;
+  }
+  .app-shell[data-area="student"] .trainer-session-shell .trainer-reading-actions {
+    gap: 8px;
+  }
+  .app-shell[data-area="student"] .trainer-session-shell .trainer-reading-actions > :is(button,a) {
+    min-height: 44px;
+  }
+  .app-shell[data-area="student"] .student-exams-page {
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+  .app-shell[data-area="student"] .student-exams-page .page-hero--lg {
+    min-height: 0;
+    padding: 16px 14px;
+  }
+  .app-shell[data-area="student"] .student-exams-page > section > .grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 8px;
+  }
+  .app-shell[data-area="student"] .student-exams-page > section > .grid > * [data-slot="card-content"] {
+    padding: 11px;
+  }
+  .app-shell[data-area="student"] .student-exams-page section > [data-slot="card"] [data-slot="card-header"],
+  .app-shell[data-area="student"] .student-exams-page section > [data-slot="card"] [data-slot="card-content"] {
+    padding-inline: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) * {
+    transition: none !important;
+  }
+}
