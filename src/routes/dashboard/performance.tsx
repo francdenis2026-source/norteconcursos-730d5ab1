@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
