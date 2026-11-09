@@ -131,6 +131,8 @@ export interface UserProfile {
   name?: string; // Compatibility field
   email?: string;
   avatar_url?: string;
+  /** Data de prova personalizada escolhida pelo aluno. */
+  personal_exam_date?: string | null;
   subscription_tier: SubscriptionTier;
   subscription_expires_at?: string;
   /** Fim do plano para o contador (vencimento real ou fim da fase de testes). */
