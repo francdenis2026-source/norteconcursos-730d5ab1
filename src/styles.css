@@ -16637,3 +16637,336 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 @media (prefers-reduced-motion: reduce) {
   .agenda-workspace-window *, .day-run-workspace * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+
+/* ==========================================================================
+   NORTE — Student workspace visual audit (Impeccable / UI UX Pro Max)
+   Scope: authenticated student area only. Public homepage and admin are untouched.
+   Palette: graphite + porcelain + restrained brass; semantic status colors stay semantic.
+   WCAG AA checks for the defined pairs:
+   light ink/canvas 12.8:1; muted/surface 6.1:1; ink/brass action 6.8:1;
+   dark ink/canvas 14.9:1; muted/surface 8.3:1; ink/brass action 7.0:1.
+   Control borders: light 3.7:1, dark 4.4:1; focus/text accent > 5:1.
+   ========================================================================== */
+
+:root:not(.dark) body .app-shell[data-area="student"] {
+  --student-canvas: #f2f4f6;
+  --student-surface: #ffffff;
+  --student-surface-soft: #e9edf1;
+  --student-ink: #252b33;
+  --student-muted: #58636f;
+  --student-line: #d7dce1;
+  --student-control-line: #7a8793;
+  --student-accent: #d3ad68;
+  --student-accent-text: #8a6428;
+  --student-accent-soft: #f5eedf;
+  --student-accent-foreground: #252b33;
+
+  --background: var(--student-canvas);
+  --foreground: var(--student-ink);
+  --card: var(--student-surface);
+  --card-foreground: var(--student-ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--student-ink);
+  --primary: var(--student-accent);
+  --primary-foreground: var(--student-accent-foreground);
+  --secondary: var(--student-surface-soft);
+  --secondary-foreground: #303740;
+  --muted: var(--student-surface-soft);
+  --muted-foreground: var(--student-muted);
+  --accent: var(--student-accent-soft);
+  --accent-foreground: #463820;
+  --border: var(--student-line);
+  --input: var(--student-control-line);
+  --ring: var(--student-accent-text);
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #303740;
+  --sidebar-primary: var(--student-accent);
+  --sidebar-primary-foreground: var(--student-accent-foreground);
+  --sidebar-accent: var(--student-accent-soft);
+  --sidebar-accent-foreground: #463820;
+  --panel-accent: var(--student-accent-text);
+  --control-accent: var(--student-accent-text);
+  --section-accent: var(--student-accent-text);
+
+  background: var(--student-canvas);
+  color: var(--student-ink);
+}
+
+:root.dark body .app-shell[data-area="student"] {
+  --student-canvas: #171d24;
+  --student-surface: #202832;
+  --student-surface-soft: #29333e;
+  --student-ink: #edf1f4;
+  --student-muted: #b9c2cc;
+  --student-line: #414c57;
+  --student-control-line: #82909a;
+  --student-accent: #d3ad68;
+  --student-accent-text: #d3ad68;
+  --student-accent-soft: #3a3327;
+  --student-accent-foreground: #202832;
+
+  --background: var(--student-canvas);
+  --foreground: var(--student-ink);
+  --card: var(--student-surface);
+  --card-foreground: var(--student-ink);
+  --popover: #26313c;
+  --popover-foreground: var(--student-ink);
+  --primary: var(--student-accent);
+  --primary-foreground: var(--student-accent-foreground);
+  --secondary: var(--student-surface-soft);
+  --secondary-foreground: #e7edf2;
+  --muted: var(--student-surface-soft);
+  --muted-foreground: var(--student-muted);
+  --accent: var(--student-accent-soft);
+  --accent-foreground: #f1e7d5;
+  --border: var(--student-line);
+  --input: var(--student-control-line);
+  --ring: var(--student-accent);
+  --sidebar: #1c242d;
+  --sidebar-foreground: #e7edf2;
+  --sidebar-primary: var(--student-accent);
+  --sidebar-primary-foreground: var(--student-accent-foreground);
+  --sidebar-accent: var(--student-accent-soft);
+  --sidebar-accent-foreground: #f1e7d5;
+  --panel-accent: var(--student-accent);
+  --control-accent: var(--student-accent);
+  --section-accent: var(--student-accent);
+
+  background: var(--student-canvas);
+  color: var(--student-ink);
+}
+
+/* Normalize legacy section hues. Emerald/rose/amber/sky status badges and charts
+   are intentionally excluded and retain their semantic meaning. */
+:root:not(.dark) body .app-shell[data-area="student"] .app-content[data-hue],
+:root:not(.dark) body .app-shell[data-area="student"] [data-control-tone],
+:root:not(.dark) body .app-shell[data-area="student"] .workspace-section-nav [data-tone] {
+  --control-accent: #8a6428;
+  --section-accent: #8a6428;
+}
+:root.dark body .app-shell[data-area="student"] .app-content[data-hue],
+:root.dark body .app-shell[data-area="student"] [data-control-tone],
+:root.dark body .app-shell[data-area="student"] .workspace-section-nav [data-tone] {
+  --control-accent: #d3ad68;
+  --section-accent: #d3ad68;
+}
+
+/* Canvas, typography and shared surfaces. */
+:root:not(.dark) body .app-shell[data-area="student"] .app-main,
+:root:not(.dark) body .app-shell[data-area="student"] .app-content {
+  background: #f2f4f6;
+}
+:root.dark body .app-shell[data-area="student"] .app-main,
+:root.dark body .app-shell[data-area="student"] .app-content {
+  background: #171d24;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content {
+  color: #252b33;
+  font-size: 15px;
+  line-height: 1.55;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content {
+  color: #edf1f4;
+  font-size: 15px;
+  line-height: 1.55;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(h1,h2,h3,h4,strong,th,[data-slot="card-title"]) {
+  color: #252b33;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(h1,h2,h3,h4,strong,th,[data-slot="card-title"]) {
+  color: #edf1f4;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(p,li,small,label,figcaption,.text-muted-foreground,[data-slot="card-description"]) {
+  color: #58636f;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(p,li,small,label,figcaption,.text-muted-foreground,[data-slot="card-description"]) {
+  color: #b9c2cc;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is([data-slot="card"],.surface-card,.question-window,.trainer-config-card) {
+  color: #252b33;
+  background: #ffffff;
+  border-color: #d7dce1;
+  box-shadow: 0 2px 5px rgb(27 39 51 / 5%), 0 10px 24px -20px rgb(27 39 51 / 22%);
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is([data-slot="card"],.surface-card,.question-window,.trainer-config-card) {
+  color: #edf1f4;
+  background: #202832;
+  border-color: #414c57;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 16%), 0 10px 24px -20px rgb(0 0 0 / 45%);
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [data-slot="card-header"] {
+  background: #f6f7f8;
+  border-bottom-color: #e0e4e8;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [data-slot="card-header"] {
+  background: #26313c;
+  border-bottom-color: #414c57;
+}
+
+/* One action color across navigation, tabs and primary controls. */
+:root:not(.dark) body .app-shell[data-area="student"] :is(.app-nav__link[data-active="true"],.student-top-navigation__trigger[aria-current="page"],.student-top-navigation__trigger[data-active="true"]) {
+  color: #463820;
+  background: #f5eedf;
+  border-color: #d3ad68;
+}
+:root.dark body .app-shell[data-area="student"] :is(.app-nav__link[data-active="true"],.student-top-navigation__trigger[aria-current="page"],.student-top-navigation__trigger[data-active="true"]) {
+  color: #f1e7d5;
+  background: #3a3327;
+  border-color: #d3ad68;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
+  color: #252b33;
+  background: #d3ad68;
+  border-color: #b58b45;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
+  color: #202832;
+  background: #d3ad68;
+  border-color: #d3ad68;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="secondary"] {
+  color: #303740;
+  background: #e9edf1;
+  border-color: #cbd2d9;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="secondary"] {
+  color: #edf1f4;
+  background: #29333e;
+  border-color: #414c57;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [role="tablist"] {
+  background: #e9edf1;
+  border-color: #d7dce1;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [role="tablist"] {
+  background: #29333e;
+  border-color: #414c57;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [role="tab"] {
+  color: #58636f;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [role="tab"] {
+  color: #b9c2cc;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content [role="tab"][data-state="active"] {
+  color: #463820;
+  background: #ffffff;
+  border-color: #d3ad68;
+  box-shadow: inset 0 -2px 0 #b58b45;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content [role="tab"][data-state="active"] {
+  color: #f1e7d5;
+  background: #202832;
+  border-color: #d3ad68;
+  box-shadow: inset 0 -2px 0 #d3ad68;
+}
+
+/* Inputs and keyboard focus: visible without depending on hue alone. */
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),select,textarea,button[role="combobox"]) {
+  color: #252b33;
+  background: #ffffff;
+  border-color: #7a8793;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),select,textarea,button[role="combobox"]) {
+  color: #edf1f4;
+  background: #202832;
+  border-color: #82909a;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(input,select,textarea,button[role="combobox"]):focus-visible {
+  outline: 2px solid #8a6428;
+  outline-offset: 2px;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(input,select,textarea,button[role="combobox"]):focus-visible {
+  outline: 2px solid #d3ad68;
+  outline-offset: 2px;
+}
+
+/* Internal workspaces: remove competing teal/blue/violet page accents while
+   keeping success, warning, error and information states distinct. */
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(.nc-student-workspace,.agenda-workspace-window,.edital-workspace,.question-catalog-page) {
+  --ncw-ink: #252b33;
+  --ncw-muted: #58636f;
+  --ncw-line: #d7dce1;
+  --ncw-surface: #ffffff;
+  --ncw-soft: #f2f4f6;
+  --ncw-accent: #8a6428;
+  --ncw-accent-soft: #f5eedf;
+  --workspace-ink: #252b33;
+  --workspace-muted: #58636f;
+  --workspace-line: #d7dce1;
+  --workspace-paper: #ffffff;
+  --workspace-soft: #f2f4f6;
+  --workspace-accent: #8a6428;
+  --workspace-accent-soft: #f5eedf;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(.nc-student-workspace,.agenda-workspace-window,.edital-workspace,.question-catalog-page) {
+  --ncw-ink: #edf1f4;
+  --ncw-muted: #b9c2cc;
+  --ncw-line: #414c57;
+  --ncw-surface: #202832;
+  --ncw-soft: #29333e;
+  --ncw-accent: #d3ad68;
+  --ncw-accent-soft: #3a3327;
+  --workspace-ink: #edf1f4;
+  --workspace-muted: #b9c2cc;
+  --workspace-line: #414c57;
+  --workspace-paper: #202832;
+  --workspace-soft: #29333e;
+  --workspace-accent: #d3ad68;
+  --workspace-accent-soft: #3a3327;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(.edital-progress-track > span,.study-progress-track > span) {
+  background: linear-gradient(90deg,#a77b35,#d3ad68);
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(.edital-progress-track > span,.study-progress-track > span) {
+  background: linear-gradient(90deg,#a77b35,#e0c58d);
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+  color: #edf1f4;
+  border-color: #414c57;
+  background: linear-gradient(112deg,#202832 0%,#2b3540 64%,#343f4a 100%);
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+  color: #edf1f4;
+  border-color: #414c57;
+  background: linear-gradient(112deg,#202832 0%,#2b3540 64%,#343f4a 100%);
+}
+:root body .app-shell[data-area="student"] #dashboard-content :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) :is(h1,h2,h3,p,.page-hero__desc,.edital-eyebrow,.hero-chip,.study-assistant-hero__eyebrow) {
+  color: #edf1f4;
+}
+:root body .app-shell[data-area="student"] #dashboard-content :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) :is(.hero-chip,.edital-eyebrow,.study-assistant-hero__eyebrow) {
+  color: #e0c58d;
+}
+
+/* Compact rhythm for dense study screens without clipping long reading content. */
+.app-shell[data-area="student"] .app-content {
+  padding: 18px clamp(16px, 2.4vw, 34px) 28px;
+}
+.app-shell[data-area="student"] .app-content__inner {
+  max-width: 1480px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace {
+  gap: 16px !important;
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+  min-height: 112px;
+  padding: 16px 20px;
+  border-radius: 14px;
+}
+.app-shell[data-area="student"] #dashboard-content :is([data-slot="card"],.surface-card) {
+  border-radius: 14px;
+}
+@media (max-width: 767px) {
+  .app-shell[data-area="student"] .app-content {
+    padding: 14px 14px 24px;
+  }
+  .app-shell[data-area="student"] #dashboard-content .nc-student-workspace {
+    gap: 12px !important;
+  }
+  .app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+    min-height: 0;
+    padding: 14px 15px;
+  }
+}
