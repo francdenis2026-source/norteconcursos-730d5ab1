@@ -1092,9 +1092,9 @@ html body .home .mobile-homepage__contests .contest-spotlight__art > img { objec
 .home.home-recomposition .contest-catalog__feature-cards :is([id^="prova-pcpr"], [id^="prova-pcpi"]) .contest-card__art > span {
   position: absolute;
   z-index: 3;
-  top: auto;
+  top: 8px;
   right: auto;
-  bottom: 8px;
+  bottom: auto;
   left: 9px;
   display: inline-flex;
   width: fit-content;
