@@ -134,7 +134,7 @@ function DesafioDiario() {
         }
         const [{ data: progressData, error: progressError }, { data, error }] = await Promise.all([
           guestChallengeSupabase.rpc("get_daily_guest_progress", { p_session_token: token }),
-          supabase
+          guestChallengeSupabase
             .rpc("get_daily_guest_questions", { p_limit: 10 })
             .select(
               "id,contest_name,exam_year,career_name,exam_board,subject,question_text,difficulty,state,career_category",
