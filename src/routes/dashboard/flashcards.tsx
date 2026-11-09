@@ -1,5 +1,6 @@
 import { materialTopic } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
+import "@/styles/learning-workspace-refinement.css";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import { platformDate } from "@/lib/platformClock";
@@ -387,7 +388,7 @@ function FlashcardsPage() {
   const sessionTotal = reviewed + queue.length;
 
   return (
-    <div className="question-workspace question-flashcards">
+    <div className="nc-learning-workspace question-workspace question-flashcards">
       <PageHero
         image="toolkit"
         size="sm"
