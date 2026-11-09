@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
 import { examCoverage } from "@/lib/examCoverage";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
@@ -25,6 +24,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/edital/")({
   component: EditalPage,
