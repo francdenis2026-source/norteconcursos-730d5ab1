@@ -241,7 +241,10 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
     if(!badge){
       badge=document.createElement('span');
       badge.className='topic-subtopic-status';
-      if(title) title.append(badge);
+      if(title){
+      if(title.classList.contains('semantic-parent') && title.parentNode) title.parentNode.insertBefore(badge,title.nextSibling);
+      else title.append(badge);
+    }
     }
     const sync=()=>{
       const done=subs.filter(input=>input.checked).length;
