@@ -143,6 +143,7 @@ html,body{width:100%;min-width:0}body{background:#f8fafc;overflow-x:hidden}heade
       parentRow.dataset.semanticDone='1';
       parentRow.classList.remove('partial','complete','topic-collapsed');
       parentRow.removeAttribute('style');
+      if(groupIndex===0) while(parentRow.firstChild) parentRow.removeChild(parentRow.firstChild);
 
       const parentInput=groupIndex===0 && oldInput ? oldInput : document.createElement('input');
       parentInput.type='checkbox';
