@@ -35,6 +35,7 @@ import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
 
 import "@/styles/student-internal-workspace-system.css";
+import "@/styles/student-planning-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/cronograma")({
   component: CronogramaPage,

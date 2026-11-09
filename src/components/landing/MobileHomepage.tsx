@@ -34,7 +34,7 @@ import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop"
 export function MobileHomepage() {
   return (
     <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
-      <section id="mobile-inicio" className="mobile-homepage__hero">
+      <section id="mobile-inicio" className="mobile-homepage__hero hr-m-hero">
         <div className="mobile-homepage__hero-media">
           <TacticalClockBackdrop />
           <img className="mobile-homepage__portrait" src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
@@ -53,7 +53,7 @@ export function MobileHomepage() {
               Questões, editais e simulados para transformar seu estudo em preparação real.
             </p>
             <HeaderQuestionStats mobile />
-            <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary">
+            <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary hr-m-primary">
               Começar agora <ArrowRight aria-hidden="true" />
             </Link>
             <a href="#mobile-recursos" className="mobile-homepage__secondary">
@@ -68,7 +68,7 @@ export function MobileHomepage() {
         <a href="#mobile-recursos"><PlaySquare aria-hidden="true" />Videoaulas</a>
         <a href="#ranking-destaque-mobile"><BarChart3 aria-hidden="true" />Desempenho</a>
       </nav>
-      <section className="mobile-homepage__daily">
+      <section className="mobile-homepage__daily hr-m-card">
         <div>
           <span className="mobile-homepage__eyebrow">
             <span /> Ritmo diário
@@ -87,17 +87,17 @@ export function MobileHomepage() {
           <h2>Recursos que aceleram sua aprovação</h2>
         </div>
         <div id="mobile-ferramentas" className="mobile-homepage__cards" aria-label="Recursos da plataforma">
-          <article>
+          <article className="hr-m-card">
             <BookOpenCheck aria-hidden="true" />
             <strong>Treinador de questões</strong>
             <p>Pratique por banca, cargo e disciplina.</p>
           </article>
-          <article>
+          <article className="hr-m-card">
             <Target aria-hidden="true" />
             <strong>Plano de estudos</strong>
             <p>Saiba o que revisar e qual é o próximo passo.</p>
           </article>
-          <article>
+          <article className="hr-m-card">
             <ShieldCheck aria-hidden="true" />
             <strong>Conteúdo confiável</strong>
             <p>Fontes oficiais e revisões identificadas.</p>
@@ -127,7 +127,11 @@ export function MobileHomepage() {
         )}
         <ul className="mobile-plans__list">
           {SUBSCRIPTION_PLANS.map((plan) => (
-            <li key={plan.id} data-featured={plan.id === "plus" || undefined}>
+            <li
+              key={plan.id}
+              className={`hr-m-card${plan.id === "plus" ? " hr-m-plan-featured" : ""}`}
+              data-featured={plan.id === "plus" || undefined}
+            >
               <div>
                 {plan.id === "plus" ? <Crown className="mobile-plans__icon" aria-hidden="true" /> : plan.id === "premium" ? <Gem className="mobile-plans__icon" aria-hidden="true" /> : plan.price === 0 ? <Gift className="mobile-plans__icon" aria-hidden="true" /> : <Target className="mobile-plans__icon" aria-hidden="true" />}
                 <strong>{plan.name}</strong>

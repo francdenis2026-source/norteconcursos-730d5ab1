@@ -1,0 +1,28 @@
+/* Homepage color correction: remove the cyan/teal wash without changing source imagery. */
+.home.home-recomposition {
+  --home-canvas-veil: transparent !important;
+}
+.home.home-recomposition .home-backdrop:has(.tactical-clock-backdrop) {
+  --backdrop-clock-veil: transparent !important;
+}
+@media (min-width: 761px) {
+  .home.home-recomposition #inicio.home-hero::after {
+    background:
+      linear-gradient(90deg, rgb(12 15 19 / 94%) 0%, rgb(12 15 19 / 82%) 32%, rgb(12 15 19 / 42%) 57%, rgb(12 15 19 / 5%) 100%),
+      linear-gradient(0deg, rgb(12 15 19 / 72%) 0%, transparent 48%) !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.home-recomposition .mobile-homepage__hero-media {
+    background-color: #17191c !important;
+    background-image: linear-gradient(140deg, #17191c 0%, #292d31 58%, #383d42 100%) !important;
+  }
+  .home.home-recomposition .mobile-homepage__hero-media > svg.tactical-clock-backdrop {
+    --backdrop-clock-veil: transparent !important;
+  }
+  .home.home-recomposition .mobile-homepage__hero-shade {
+    background:
+      linear-gradient(90deg, transparent 28%, rgb(12 15 19 / 18%) 100%),
+      linear-gradient(0deg, var(--nc-v2-porcelain) 0%, transparent 34%) !important;
+  }
+}

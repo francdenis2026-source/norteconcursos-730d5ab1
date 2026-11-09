@@ -1,0 +1,511 @@
+/*
+ * Home redesign v2 — a genuinely new visual language for the public homepage,
+ * built on fresh "hr-*" hook classes added alongside the legacy markup/classes
+ * (which stay, untouched, for anything this pass doesn't touch). Because every
+ * selector below keys on a brand-new class name that nothing else in the
+ * ~20-file legacy stack defines, there is no specificity fight to lose: this
+ * file's rules are the only rules that ever apply to these elements.
+ */
+
+.hr-canvas {
+  --hr-bg: #f4efe4;
+  --hr-bg-alt: #ece4d2;
+  --hr-ink: #151313;
+  --hr-muted: #5b5247;
+  --hr-line: color-mix(in srgb, #151313 13%, transparent);
+  --hr-card: #fffdf8;
+  --hr-card-raised: #ffffff;
+  --hr-gold: #9a6a1c;
+  --hr-gold-strong: #7c5414;
+  --hr-on-gold: #211505;
+  --hr-navy: #16233a;
+  --hr-shadow: 0 18px 40px -22px rgb(21 19 19 / 28%);
+  --hr-shadow-lg: 0 30px 70px -26px rgb(21 19 19 / 32%);
+  --hr-radius-sm: 12px;
+  --hr-radius: 20px;
+  --hr-radius-lg: 28px;
+}
+:root.dark .hr-canvas {
+  --hr-bg: #0a0f17;
+  --hr-bg-alt: #0f1826;
+  --hr-ink: #f3efe6;
+  --hr-muted: #a9b2bd;
+  --hr-line: color-mix(in srgb, #f3efe6 14%, transparent);
+  --hr-card: #121b29;
+  --hr-card-raised: #16222f;
+  --hr-gold: #e7b65a;
+  --hr-gold-strong: #ffd086;
+  --hr-on-gold: #1a1106;
+  --hr-navy: #0b1424;
+  --hr-shadow: 0 20px 48px -22px rgb(0 0 0 / 60%);
+  --hr-shadow-lg: 0 36px 80px -24px rgb(0 0 0 / 70%);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Header — floating pill bar */
+/* ---------------------------------------------------------------------- */
+
+.hr-header {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  padding-top: 10px;
+}
+.hr-header .home-header__inner {
+  background: color-mix(in srgb, var(--hr-card) 86%, transparent);
+  border: 1px solid var(--hr-line);
+  border-radius: 999px;
+  box-shadow: var(--hr-shadow);
+  padding-inline: 18px;
+  backdrop-filter: blur(18px) saturate(140%);
+}
+.hr-header[data-scrolled] .home-header__inner {
+  box-shadow: var(--hr-shadow-lg);
+}
+.hr-nav a {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  color: var(--hr-muted) !important;
+}
+.hr-nav a:hover,
+.hr-nav a[aria-current="location"] {
+  background: var(--hr-gold) !important;
+  color: var(--hr-on-gold) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Hero — dark banner slab, big type, bottom "ticket" dock                */
+/* ---------------------------------------------------------------------- */
+
+.hr-hero {
+  position: relative;
+  background: linear-gradient(170deg, var(--hr-navy), color-mix(in srgb, var(--hr-navy) 70%, black 10%));
+  border-radius: 0 0 var(--hr-radius-lg) var(--hr-radius-lg);
+  overflow: clip;
+  isolation: isolate;
+}
+.hr-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 50% at 78% 18%, color-mix(in srgb, var(--hr-gold) 22%, transparent), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hr-hero .home-backdrop {
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+.hr-hero-eyebrow {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--hr-gold) 18%, transparent) !important;
+  border: 1px solid color-mix(in srgb, var(--hr-gold) 40%, transparent) !important;
+  color: var(--hr-gold-strong) !important;
+  border-radius: 999px !important;
+  padding: 7px 14px !important;
+}
+.hr-hero .hx__copy h1 {
+  color: #f6f3ea !important;
+  font-size: clamp(2.6rem, 5vw, 4.4rem) !important;
+  text-shadow: none !important;
+}
+.hr-hero .hx__copy h1 em {
+  color: var(--hr-gold-strong) !important;
+}
+.hr-hero .hx__copy > p {
+  color: color-mix(in srgb, #f6f3ea 78%, transparent) !important;
+}
+.hr-hero .hx__trust li {
+  color: color-mix(in srgb, #f6f3ea 82%, transparent) !important;
+}
+.hr-hero .hx__trust svg {
+  color: var(--hr-gold-strong) !important;
+}
+
+.hr-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hr-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px !important;
+  padding: 13px 22px !important;
+  font-weight: 800 !important;
+  font-size: 14.5px !important;
+  letter-spacing: -0.01em;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.hr-btn:hover {
+  transform: translateY(-2px);
+}
+.hr-btn--gold {
+  background: linear-gradient(135deg, var(--hr-gold-strong), var(--hr-gold)) !important;
+  color: var(--hr-on-gold) !important;
+  box-shadow: 0 16px 30px -12px color-mix(in srgb, var(--hr-gold) 70%, transparent);
+  border: none !important;
+}
+.hr-btn--ghost {
+  background: color-mix(in srgb, white 10%, transparent) !important;
+  border: 1px solid color-mix(in srgb, white 24%, transparent) !important;
+  color: #f6f3ea !important;
+}
+.hr-btn--outline {
+  background: transparent !important;
+  border: 1px solid color-mix(in srgb, var(--hr-gold-strong) 55%, transparent) !important;
+  color: var(--hr-gold-strong) !important;
+}
+
+/* Quick-access rail becomes a row of chip tiles riding under the hero */
+.hr-quick {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: -34px !important;
+  position: relative;
+  z-index: 3;
+}
+.hr-quick-item {
+  background: var(--hr-card-raised) !important;
+  border: 1px solid var(--hr-line) !important;
+  border-radius: var(--hr-radius) !important;
+  box-shadow: var(--hr-shadow-lg) !important;
+  padding: 16px !important;
+}
+.hr-quick-item svg:first-child {
+  color: var(--hr-gold) !important;
+}
+.hr-quick-item strong {
+  color: var(--hr-ink) !important;
+}
+.hr-quick-item small {
+  color: var(--hr-muted) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Section scaffolding                                                    */
+/* ---------------------------------------------------------------------- */
+
+.hr-canvas .home-container {
+  width: min(100% - 2 * clamp(20px, 4vw, 48px), 1680px);
+}
+main#conteudo.hr-main {
+  scroll-snap-type: y proximity;
+}
+.hr-section {
+  scroll-snap-align: start;
+  scroll-margin-top: 90px;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-block: clamp(56px, 7vw, 92px) !important;
+}
+.hr-section.home-preparation,
+.hr-section .home-preparation__fullwidth,
+.hr-section .home-preparation__band {
+  min-height: 0 !important;
+  height: auto !important;
+}
+.hr-section--alt {
+  background: var(--hr-bg-alt);
+}
+.hr-eyebrow-chip {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  background: color-mix(in srgb, var(--hr-gold) 14%, transparent) !important;
+  color: var(--hr-gold-strong) !important;
+  border-radius: 999px !important;
+  padding: 6px 13px !important;
+  font-size: 11.5px !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 800 !important;
+}
+.hr-section h2,
+.hr-section .home-preparation__intro h2 {
+  color: var(--hr-ink) !important;
+  font-size: clamp(1.9rem, 3vw, 2.7rem) !important;
+  letter-spacing: -0.025em !important;
+}
+.hr-section h2 em,
+.hr-section .home-preparation__intro h2 em {
+  color: var(--hr-gold) !important;
+  font-style: normal;
+}
+.hr-section > .home-container > p,
+.hr-section .home-heading p,
+.hr-section .home-preparation__intro p {
+  color: var(--hr-muted) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Platform section — accordion replaced by a fixed, always-visible grid  */
+/* ---------------------------------------------------------------------- */
+
+.hr-tools-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.hr-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px !important;
+  border-radius: var(--hr-radius) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow);
+  position: relative;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.hr-tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--hr-shadow-lg);
+}
+.hr-tool-card--featured {
+  background: linear-gradient(160deg, color-mix(in srgb, var(--hr-gold) 14%, transparent), var(--hr-card)) !important;
+  border-color: color-mix(in srgb, var(--hr-gold) 50%, transparent) !important;
+}
+.hr-tool-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--hr-gold) 16%, transparent);
+  color: var(--hr-gold-strong);
+}
+.hr-tool-card h3 {
+  font-size: 15.5px;
+  color: var(--hr-ink);
+  font-weight: 800;
+  margin: 0;
+}
+.hr-tool-card p {
+  font-size: 13.5px;
+  color: var(--hr-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.hr-tool-ribbon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: var(--hr-gold);
+  color: var(--hr-on-gold);
+  border-radius: 999px;
+  padding: 4px 9px;
+}
+
+.hr-step-card,
+.hr-career-card,
+.hr-source-card {
+  border-radius: var(--hr-radius) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow);
+}
+.hr-step-card h3,
+.hr-career-card h3,
+.hr-source-card h3 {
+  color: var(--hr-ink) !important;
+}
+.hr-step-card p,
+.hr-career-card p,
+.hr-source-card p {
+  color: var(--hr-muted) !important;
+}
+.hr-step-card .home-preparation__number {
+  color: var(--hr-gold) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Contest / exam cards — numbered ribbon + bold accent spine             */
+/* ---------------------------------------------------------------------- */
+
+.hr-contest-card {
+  position: relative !important;
+  border-radius: var(--hr-radius) !important;
+  box-shadow: var(--hr-shadow-lg) !important;
+  border: 1px solid var(--hr-line) !important;
+}
+.hr-contest-index {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, black 55%, transparent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Ranking                                                                 */
+/* ---------------------------------------------------------------------- */
+
+.hr-ranking-card {
+  border-radius: var(--hr-radius) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow);
+  position: relative;
+  overflow: clip;
+}
+.hr-ranking-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--hr-gold);
+}
+.hr-ranking-card[data-medal="1"]::before { background: linear-gradient(90deg, #f3cf6b, #c9972c); }
+.hr-ranking-card[data-medal="2"]::before { background: linear-gradient(90deg, #d8dde4, #9aa5b1); }
+.hr-ranking-card[data-medal="3"]::before { background: linear-gradient(90deg, #d9a26a, #a96a37); }
+
+/* ---------------------------------------------------------------------- */
+/* Plan cards                                                              */
+/* ---------------------------------------------------------------------- */
+
+.hr-plan-card {
+  border-radius: var(--hr-radius-lg) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow);
+  position: relative;
+  padding-top: 54px !important;
+}
+.hr-plan-card--featured {
+  border-color: color-mix(in srgb, var(--hr-gold) 55%, transparent) !important;
+  box-shadow: var(--hr-shadow-lg) !important;
+}
+.hr-plan-icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--hr-gold) 18%, transparent);
+  color: var(--hr-gold-strong);
+}
+.hr-plan-card h3 {
+  color: var(--hr-ink) !important;
+}
+.hr-plan-card__price {
+  color: var(--hr-ink) !important;
+}
+
+/* FAQ becomes a two-column grid of chip cards */
+.hr-faq-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.hr-faq-grid details {
+  border-radius: var(--hr-radius) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow);
+}
+.hr-faq-grid summary {
+  color: var(--hr-ink) !important;
+}
+.hr-faq-grid p {
+  color: var(--hr-muted) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Footer CTA band                                                         */
+/* ---------------------------------------------------------------------- */
+
+.hr-footer-cta {
+  margin: 0 auto;
+  max-width: min(100% - 2 * clamp(20px, 4vw, 48px), 1680px);
+  background: linear-gradient(135deg, var(--hr-navy), color-mix(in srgb, var(--hr-navy) 70%, black 8%));
+  border-radius: var(--hr-radius-lg);
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #f6f3ea;
+  box-shadow: var(--hr-shadow-lg);
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+.hr-footer-cta h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+.hr-footer-cta p {
+  margin: 0;
+  color: color-mix(in srgb, #f6f3ea 78%, transparent);
+  max-width: 48ch;
+}
+
+.hr-canvas .nc-footer {
+  background: var(--hr-bg-alt) !important;
+  border-top: 1px solid var(--hr-line) !important;
+}
+.hr-canvas .nc-footer__dev-sign {
+  display: inline-flex !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Mobile                                                                  */
+/* ---------------------------------------------------------------------- */
+
+.hr-m-card {
+  border-radius: var(--hr-radius) !important;
+  border: 1px solid var(--hr-line) !important;
+  background: var(--hr-card) !important;
+  box-shadow: var(--hr-shadow) !important;
+}
+.hr-m-hero {
+  position: relative;
+}
+.hr-m-hero .mobile-homepage__glass {
+  background: color-mix(in srgb, var(--hr-navy) 92%, transparent) !important;
+  border-radius: var(--hr-radius-lg) !important;
+  color: #f6f3ea !important;
+}
+.hr-m-hero .mobile-homepage__glass h1 {
+  color: #f6f3ea !important;
+}
+.hr-m-hero .mobile-homepage__glass h1 em {
+  color: var(--hr-gold-strong) !important;
+}
+.hr-m-hero .mobile-homepage__hero-lead {
+  color: color-mix(in srgb, #f6f3ea 80%, transparent) !important;
+}
+.hr-m-primary {
+  background: linear-gradient(135deg, var(--hr-gold-strong), var(--hr-gold)) !important;
+  color: var(--hr-on-gold) !important;
+  border-radius: 999px !important;
+}
+.hr-m-plan-featured {
+  border-color: color-mix(in srgb, var(--hr-gold) 55%, transparent) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main#conteudo.hr-main {
+    scroll-snap-type: none;
+  }
+}

@@ -87,6 +87,7 @@ import "@/styles/learning-workspace-refinement.css";
 
 import "@/styles/question-trainer-experience.css";
 import "@/styles/question-practice-workspaces.css";
+import "@/styles/student-assessment-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({

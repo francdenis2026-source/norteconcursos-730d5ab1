@@ -115,7 +115,8 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
 
   return (
     <div className="contest-showcase">
-      <article className="contest-spotlight" aria-labelledby={"pcac-title" + suffix}>
+      <article className="contest-spotlight hr-contest-card" aria-labelledby={"pcac-title" + suffix}>
+        <span className="hr-contest-index" aria-hidden="true">01</span>
         <div className="contest-spotlight__art">
           <img
             src="/media/hero/pcac-capa.webp"
@@ -203,10 +204,11 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
       </div>
       <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
         <article
-          className="contest-card contest-card--idecan"
+          className="contest-card contest-card--idecan hr-contest-card"
           id={"prova-pcsc" + suffix}
           aria-labelledby={"pcsc-title" + suffix}
         >
+          <span className="hr-contest-index" aria-hidden="true">02</span>
           <span className="contest-card__badge">
             <Sparkles size={11} aria-hidden="true" /> Novo
           </span>
@@ -255,7 +257,8 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
             </details>
           </div>
         </article>
-        <article className="contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
+        <article className="contest-card hr-contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
+          <span className="hr-contest-index" aria-hidden="true">03</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpr-capa.webp"
@@ -311,7 +314,8 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
             </details>
           </div>
         </article>
-        <article className="contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
+        <article className="contest-card hr-contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
+          <span className="hr-contest-index" aria-hidden="true">04</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpi-capa.webp"

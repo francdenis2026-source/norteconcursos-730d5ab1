@@ -1,4 +1,5 @@
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
+import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
 import "@/styles/student-desk.css";
 import "@/styles/student-overview.css";
 import "@/styles/student-overview-v3.css";
@@ -7,6 +8,7 @@ import "@/styles/student-home-premium.css";
 import "@/styles/student-home-navigation-refinement.css";
 import "@/styles/student-dashboard-premium.css";
 import "@/styles/student-overview-card-refinement.css";
+import "@/styles/student-home-hero-rework.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -43,8 +45,9 @@ import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
 import type { UserProfile } from "@/types";
@@ -65,6 +68,11 @@ export const Route = createFileRoute("/dashboard/")({
 const liveMinutes = () => Math.floor(getStudyToday() / 60) * 60;
 const number = (n: number) => n.toLocaleString("pt-BR");
 const duration = (seconds: number) => (seconds > 0 ? fmtHuman(seconds) : "0 min");
+const formatExamDate = (value?: string | null) => {
+  if (!value) return "";
+  const [year, month, day] = value.split("-");
+  return year && month && day ? `${day}/${month}/${year}` : value;
+};
 const destinations = [
   {
     to: "/dashboard/cronograma",
@@ -124,6 +132,10 @@ function DashboardIndex() {
 }
 function StudentHome({ user }: { user: UserProfile }) {
   const [now, setNow] = React.useState(platformDate);
+  const [personalExamDate, setPersonalExamDate] = React.useState(user.personal_exam_date ?? "");
+  const [examDateDraft, setExamDateDraft] = React.useState("");
+  const [isEditingExamDate, setIsEditingExamDate] = React.useState(false);
+  const [isSavingExamDate, setIsSavingExamDate] = React.useState(false);
   const [metric, setMetric] = React.useState<StudentMetric | null>(null);
   const metricTrigger = React.useRef<HTMLElement | null>(null);
   const [metricDate, setMetricDate] = React.useState<string | null>(null);
@@ -161,6 +173,9 @@ function StudentHome({ user }: { user: UserProfile }) {
     : null;
   const plan = q.plans.data?.find((p) => p.id === selectedId) ?? q.plans.data?.[0];
   React.useEffect(() => {
+    setPersonalExamDate(user.personal_exam_date ?? "");
+  }, [user.id, user.personal_exam_date]);
+  React.useEffect(() => {
     if (q.plans.isSuccess && plan?.id !== selectedId) setSelectedId(plan?.id ?? "");
   }, [q.plans.isSuccess, plan?.id, selectedId]);
   React.useEffect(() => {
@@ -190,7 +205,16 @@ function StudentHome({ user }: { user: UserProfile }) {
       ? dashboardSchedule(plan.config, q.progress.data, day)
       : null;
   const objective = q.objective.data;
-  const days = daysToExam(objective?.examDate, today);
+  const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
+  const days = daysToExam(effectiveExamDate, today);
+  const examCountdown =
+    days === null
+      ? "Defina o dia para ativar a contagem regressiva."
+      : days > 0
+        ? "Faltam " + days + " " + (days === 1 ? "dia" : "dias") + " para a prova"
+        : days === 0
+          ? "Sua prova é hoje. Boa preparação!"
+          : "A prova ocorreu há " + Math.abs(days) + " " + (Math.abs(days) === 1 ? "dia." : "dias.");
   const firstName = user.full_name?.trim().split(/\s+/)[0] || "Estudante";
   const hour = acreHour(now),
     hello = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
@@ -254,36 +278,153 @@ function StudentHome({ user }: { user: UserProfile }) {
       /* Optional navigation preference. */
     }
   };
+  const openExamDateEditor = () => {
+    setExamDateDraft(personalExamDate || objective?.examDate || "");
+    setIsEditingExamDate(true);
+  };
+  const savePersonalExamDate = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!examDateDraft || daysToExam(examDateDraft, today) === null) {
+      toast.error("Escolha uma data válida para a prova.");
+      return;
+    }
+    setIsSavingExamDate(true);
+    try {
+      const { data, error } = await supabase
+        .from("profiles")
+        .update({ personal_exam_date: examDateDraft })
+        .eq("id", user.id)
+        .select("personal_exam_date")
+        .single();
+      if (error) throw error;
+      setPersonalExamDate(data.personal_exam_date ?? examDateDraft);
+      setIsEditingExamDate(false);
+      window.dispatchEvent(new Event("norte:profile-updated"));
+      toast.success("Data da prova salva com sucesso.");
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível salvar a data da prova.");
+    } finally {
+      setIsSavingExamDate(false);
+    }
+  };
+  const clearPersonalExamDate = async () => {
+    if (!personalExamDate) {
+      setIsEditingExamDate(false);
+      return;
+    }
+    setIsSavingExamDate(true);
+    try {
+      const { error } = await supabase
+        .from("profiles")
+        .update({ personal_exam_date: null })
+        .eq("id", user.id);
+      if (error) throw error;
+      setPersonalExamDate("");
+      setExamDateDraft(objective?.examDate ?? "");
+      setIsEditingExamDate(false);
+      window.dispatchEvent(new Event("norte:profile-updated"));
+      toast.success(objective?.examDate ? "Data oficial do concurso restaurada." : "Data da prova removida.");
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível remover a data da prova.");
+    } finally {
+      setIsSavingExamDate(false);
+    }
+  };
   return (
     <div className="student-home student-hub student-desk student-overview">
-      <header className="student-hub__masthead student-hub__masthead--careers workspace-banner">
-        <div className="student-hub__hero-copy">
-          <p className="student-hub__welcome">
-            {hello}, {firstName}.
-          </p>
-          <h1 id="student-home-title">Área do aluno</h1>
-          <p>Seu estudo, suas prioridades e sua evolução.</p>
-          <div className="student-hub__masthead-stats" aria-label="Seu progresso">
-            <HeroStat
-              icon={Target}
-              label={days !== null && days < 0 ? "Dias desde a prova" : "Dias p/ a prova"}
-              value={days !== null ? Math.abs(days) : "—"}
-            />
+      <header className="student-hub__masthead student-hub__masthead--careers student-hub__masthead--revamped workspace-banner">
+        <div className="student-hub__hero-layout">
+          <div className="student-hub__hero-copy">
+            <p className="student-hub__welcome">
+              {hello}, {firstName}.
+            </p>
+            <h1 id="student-home-title">Área do aluno</h1>
+            <p className="student-hub__hero-subtitle">
+              Seu estudo, suas prioridades e sua evolução — tudo em um só lugar.
+            </p>
+            <div className="student-hub__masthead-actions">
+              <span className="student-hub__date">
+                <CalendarClock aria-hidden="true" />
+                {new Intl.DateTimeFormat("pt-BR", {
+                  day: "2-digit",
+                  month: "long",
+                  timeZone: ACRE_TZ,
+                }).format(now)}
+                <small>Acre</small>
+              </span>
+              <Link to="/dashboard/performance">
+                Meu desempenho <ArrowRight aria-hidden="true" />
+              </Link>
+            </div>
           </div>
-          <div className="student-hub__masthead-actions">
-            <span className="student-hub__date">
-              <CalendarClock aria-hidden="true" />
-              {new Intl.DateTimeFormat("pt-BR", {
-                day: "2-digit",
-                month: "long",
-                timeZone: ACRE_TZ,
-              }).format(now)}
-              <small>Acre</small>
-            </span>
-            <Link to="/dashboard/performance">
-              Meu desempenho <ArrowRight aria-hidden="true" />
-            </Link>
-          </div>
+
+          <aside className="student-hub__exam-spotlight" aria-label="Data da prova">
+            <div className="student-hub__exam-spotlight-heading">
+              <span>Data da prova</span>
+              <span className="student-hub__exam-status" data-defined={Boolean(effectiveExamDate)}>
+                {personalExamDate ? "Personalizada" : effectiveExamDate ? "Data oficial" : "A definir"}
+              </span>
+            </div>
+            <p className="student-hub__exam-date">
+              {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Escolha uma data"}
+            </p>
+            <p className="student-hub__exam-countdown">{examCountdown}</p>
+
+            {!isEditingExamDate ? (
+              <Button
+                type="button"
+                size="default"
+                variant="default"
+                onClick={openExamDateEditor}
+                className="student-hub__exam-action"
+              >
+                <CalendarClock aria-hidden="true" />
+                {personalExamDate
+                  ? "Alterar data da prova"
+                  : effectiveExamDate
+                    ? "Ajustar data da prova"
+                    : "Escolher data da prova"}
+              </Button>
+            ) : (
+              <form onSubmit={savePersonalExamDate} className="student-hub__exam-form">
+                <label htmlFor="student-personal-exam-date">Selecione o dia no calendário</label>
+                <input
+                  id="student-personal-exam-date"
+                  type="date"
+                  required
+                  value={examDateDraft}
+                  onChange={(event) => setExamDateDraft(event.target.value)}
+                />
+                <div className="student-hub__exam-form-actions">
+                  <Button type="submit" size="sm" disabled={isSavingExamDate || !examDateDraft}>
+                    {isSavingExamDate ? "Salvando..." : "Salvar data"}
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    disabled={isSavingExamDate}
+                    onClick={() => setIsEditingExamDate(false)}
+                  >
+                    Cancelar
+                  </Button>
+                  {personalExamDate && (
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      disabled={isSavingExamDate}
+                      onClick={() => void clearPersonalExamDate()}
+                      className="student-hub__exam-clear"
+                    >
+                      {objective?.examDate ? "Usar data oficial" : "Remover data"}
+                    </Button>
+                  )}
+                </div>
+                <p>A contagem regressiva será atualizada automaticamente após salvar.</p>
+              </form>
+            )}
+          </aside>
         </div>
       </header>
       {!schedule && (
@@ -589,57 +730,12 @@ function StudentHome({ user }: { user: UserProfile }) {
               <PanelLoading />
             ) : (
               <>
-                <div className="student-home__week" role="list" aria-label="Tempo ativo por dia">
-                  {time.days.map((d) => (
-                    <div role="listitem" key={d.date} data-today={d.date === today}>
-                      <button
-                        type="button"
-                        className="student-home__week-day"
-                        data-empty={!d.seconds || undefined}
-                        aria-haspopup="dialog"
-                        aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}. Ver detalhes do dia`}
-                        onClick={(event) => openMetric("today", event.currentTarget, d.date)}
-                      >
-                        <span>
-                          {d.date.slice(8)}/{d.date.slice(5, 7)}
-                        </span>
-                        <div className="student-home__bar-track">
-                          <i
-                            style={{
-                              height: d.seconds
-                                ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
-                                : "3%",
-                            }}
-                          />
-                        </div>
-                        <strong>
-                          {d.seconds
-                            ? d.seconds < 60
-                              ? "<1 min"
-                              : d.seconds < 3600
-                                ? `${Math.floor(d.seconds / 60)} min`
-                                : `${Math.round(d.seconds / 360) / 10} h`
-                            : "—"}
-                        </strong>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                {!time.week && (
-                  <p className="student-home__quiet">
-                    Nenhum tempo ativo registrado nesta semana. Seus próximos períodos de uso
-                    aparecerão aqui.
-                  </p>
-                )}
-                <button
-                  type="button"
-                  className="student-home__text-link"
-                  aria-haspopup="dialog"
-                  onClick={(event) => openMetric("week", event.currentTarget)}
-                >
-                  Ver histórico de tempo
-                  <ArrowRight aria-hidden="true" />
-                </button>
+                <WeeklyRhythmChart
+                  days={time.days}
+                  formatDuration={duration}
+                  onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+                  onOpenHistory={(trigger) => openMetric("week", trigger)}
+                />
               </>
             )}
           </section>
@@ -664,17 +760,6 @@ function StudentHome({ user }: { user: UserProfile }) {
                 <h3 className="student-home__objective-name">{objective.agency}</h3>
                 <p className="student-home__quiet">{objective.role}</p>
                 <p className="student-home__quiet">{objective.examBoard}</p>
-                {objective.examDate && (
-                  <p className="student-home__exam-date">
-                    {days !== null
-                      ? days > 0
-                        ? `${days} dias para a data registrada`
-                        : days === 0
-                          ? "Data da prova registrada para hoje"
-                          : "A data registrada da prova já passou"
-                      : "Confira a data da prova no concurso"}
-                  </p>
-                )}
                 <Link to="/dashboard/my-contest" className="student-home__text-link">
                   Consultar meu concurso
                   <ArrowRight aria-hidden="true" />
@@ -691,6 +776,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                 </Link>
               </EmptyPanel>
             )}
+
           </section>
 
           <section

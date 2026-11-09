@@ -74,3 +74,24 @@ export const INVESTIGATOR_DISCIPLINE_PESO: Record<string, 1 | 2> = {
   "analise-dados": 2,
   "nocoes-administracao": 1,
 };
+
+/** Ordem de estudo das 14 disciplinas do Anexo III do Investigador, da maior para a menor
+ * prioridade (mesmo critério de `INVESTIGATOR_DISCIPLINE_PESO`, só que granular). Usada pelo
+ * plano de estudos completo para percorrer as disciplinas — e, dentro de cada uma, os tópicos
+ * dela em `pcAcVerticalCargos` — na ordem que mais rende pontos primeiro. */
+export const INVESTIGATOR_DISCIPLINE_ORDER: string[] = [
+  "nocoes-penal-processual",
+  "legislacao-institucional-nocoes",
+  "portugues",
+  "raciocinio-logico",
+  "contabilidade-analise-financeira",
+  "estatistica",
+  "tecnologia-informacao-seguranca",
+  "analise-dados",
+  "arquivologia",
+  "informatica",
+  "realidade-acre",
+  "nocoes-constitucional",
+  "nocoes-administrativo",
+  "nocoes-administracao",
+];

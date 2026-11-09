@@ -1,3 +1,4 @@
+import "@/styles/student-library-media-workspaces.css";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
@@ -250,7 +251,7 @@ function MaterialHub() {
     );
 
   return (
-    <div className="material-hub space-y-8 pb-10">
+    <div className="nc-learning-workspace material-hub space-y-4 pb-8">
       <PageHero
         image="study-desk"
         kicker="Material didático"

@@ -1,3 +1,4 @@
+import "@/styles/student-library-media-workspaces.css";
 import { materialTopic } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
 import "@/styles/learning-workspace-refinement.css";

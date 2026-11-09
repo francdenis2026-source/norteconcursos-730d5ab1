@@ -1,0 +1,274 @@
+/* Norte Concursos — student workspace viewport efficiency.
+   Operate mode: reclaim unused width, group related content, tighten vertical rhythm.
+   Long reading and study content remains naturally scrollable; no fixed-height clipping. */
+
+.app-shell.navigation-v2[data-area="student"] .app-content {
+  padding: 14px clamp(14px, 1.65vw, 28px) 24px;
+}
+
+.app-shell.navigation-v2[data-area="student"] .app-content__inner {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .study-assistant,
+  .performance-page,
+  .performance-overview,
+  .study-tools-page,
+  .question-catalog,
+  .trainer-setup,
+  .pcac-edital-page
+) {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin-inline: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .study-assistant,
+  .performance-page,
+  .performance-overview,
+  .study-tools-page,
+  .question-catalog,
+  .agenda-plan-view
+) {
+  display: grid;
+  gap: 14px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .study-assistant,
+  .performance-page,
+  .performance-overview,
+  .study-tools-page,
+  .question-catalog,
+  .agenda-plan-view
+) > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: 0;
+}
+
+/* Shared cards: keep information dense without squeezing controls or reading. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .nc-student-workspace [data-slot="card-header"],
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-workspace-window [data-slot="card-header"] {
+  gap: 6px;
+  padding: 13px 16px 9px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .nc-student-workspace [data-slot="card-content"],
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-workspace-window [data-slot="card-content"] {
+  padding: 11px 16px 14px;
+}
+
+/* PC-AC verticalized notice: remove the 1,180px cap and duplicate inner gutters.
+   Two related pairs share the desktop canvas; the long syllabus keeps the larger column. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > * {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-block-start: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-overview {
+  grid-column: span 5;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-locations {
+  grid-column: span 7;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-priority-card {
+  grid-column: span 5;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-content {
+  grid-column: span 7;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .page-hero {
+  min-height: 0;
+  padding: 16px 20px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-edital-card {
+  min-width: 0;
+  border-radius: 13px;
+  box-shadow: 0 4px 16px rgb(20 30 40 / 5%);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-edital-card > [data-slot="card-header"] {
+  padding: 13px 16px 9px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-edital-card > [data-slot="card-content"] {
+  min-width: 0;
+  padding: 11px 16px 14px;
+}
+
+/* Question trainer: let the configuration panel use the full workspace.
+   Keep the reading/answering session itself at its deliberate reading measure. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup {
+  margin-inline: 0;
+  padding-bottom: 12px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-setup__unified {
+  width: 100%;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-setup__unified > [data-slot="card-content"] {
+  padding: clamp(14px, 1.25vw, 22px);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-setup__unified > [data-slot="card-content"] > .grid.grid-cols-2,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-more > div.grid.grid-cols-2 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-more > div.grid.grid-cols-2 > label:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Agenda: a two-column weekly board is easier to scan on a wide screen than
+   seven full-width cards stacked in one narrow column. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-plan-view [role="tabpanel"]:has(> p) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-plan-view [role="tabpanel"]:has(> p) > p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-plan-view [role="tabpanel"]:has(> p) > [data-slot="card"] {
+  min-width: 0;
+  margin: 0;
+}
+
+/* Compact vertical rhythm for the analytics and study-tools workspaces. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .performance-page .page-hero--lg {
+  min-height: 0;
+  padding: 16px 20px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .performance-page .performance-overview > section.grid {
+  gap: 10px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .study-tools-page .study-tool-launcher {
+  gap: 10px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .study-tools-page .study-materials-workspace {
+  padding: clamp(14px, 1.4vw, 22px);
+}
+
+@media (min-width: 1440px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-overview {
+    grid-column: span 4;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-locations {
+    grid-column: span 8;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-priority-card {
+    grid-column: span 4;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-content {
+    grid-column: span 8;
+  }
+}
+
+@media (min-width: 1600px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-setup__unified > [data-slot="card-content"] > .grid.grid-cols-2,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-more > div.grid.grid-cols-2 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-overview,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-locations,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-priority-card,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page > .pcac-edital-content {
+    grid-column: 1 / -1;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-plan-view [role="tabpanel"]:has(> p) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .agenda-plan-view [role="tabpanel"]:has(> p) > p {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-area="student"] .app-content {
+    padding: 12px 12px calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .study-assistant,
+    .performance-page,
+    .performance-overview,
+    .study-tools-page,
+    .question-catalog,
+    .agenda-plan-view
+  ) {
+    gap: 12px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page {
+    gap: 10px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-edital-card > [data-slot="card-header"],
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-edital-card > [data-slot="card-content"] {
+    padding-inline: 12px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-setup__unified > [data-slot="card-content"] > .grid.grid-cols-2,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-more > div.grid.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content :is(
+    .pcac-edital-page,
+    .trainer-setup,
+    .agenda-plan-view,
+    .performance-page,
+    .study-tools-page
+  ) * {
+    scroll-behavior: auto;
+  }
+}

@@ -55,6 +55,7 @@ import "@/styles/study-coach-refinement.css";
 import "@/styles/student-workspace-unified.css";
 
 import "@/styles/student-internal-workspace-system.css";
+import "@/styles/student-planning-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 
