@@ -696,8 +696,17 @@ function Index() {
         <section
           id="plataforma"
           className="home-section home-preparation hr-section hr-showcase"
-          aria-labelledby="preparation-title"
+          aria-label="O ecossistema Norte — preparação completa"
         >
+          <img
+            className="hr-showcase-art"
+            src="/media/hero/banner-premium-norte-concursos.webp"
+            alt="Norte Concursos: ferramentas de estudo, método de preparação, concursos e fontes confiáveis."
+            width={2172}
+            height={724}
+            loading="lazy"
+            decoding="async"
+          />
           <div className="home-container hr-showcase__inner">
             <div className="hr-showcase__heading">
               <div>
