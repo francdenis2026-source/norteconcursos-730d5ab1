@@ -32,7 +32,7 @@
 @media (min-width: 1101px) {
   .home.hr-canvas .home-hero.hr-hero {
     box-sizing: border-box;
-    height: clamp(390px, calc(100svh - 250px), 620px);
+    height: clamp(390px, calc(100svh - 250px), 620px) !important;
     min-height: 390px !important;
     max-height: none !important;
     overflow: clip;
@@ -299,7 +299,7 @@
 
 /* Short laptop screens: compact the same information; never apply a fixed clipping height. */
 @media (min-width: 1101px) and (max-height: 820px) {
-  .home.hr-canvas .home-hero.hr-hero { height: clamp(360px, calc(100svh - 230px), 500px); }
+  .home.hr-canvas .home-hero.hr-hero { height: clamp(360px, calc(100svh - 230px), 500px) !important; }
   .home.hr-canvas .home-hero.hr-hero .hx__copy h1 { font-size: clamp(40px, 3.7vw, 54px) !important; }
   .home.hr-canvas .home-daily-challenge-wrap { margin-block: 7px !important; }
   .home.hr-canvas .daily-challenge-home { min-height: 68px; padding-block: 8px; }
