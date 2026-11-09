@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, Check, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
 
@@ -57,53 +57,52 @@ export function ContestObjectivesShowcase({
     <section className="contest-showcase" aria-labelledby="contest-showcase-title">
       <div className="contest-showcase__backdrop" aria-hidden="true" />
       <div className="contest-showcase__inner">
-        <div className="contest-showcase__topline">
+        <div className="contest-showcase__lead">
           <div className="contest-showcase__intro">
             <span className="contest-showcase__eyebrow"><Target aria-hidden="true" /> PREPARAÇÃO COM DIREÇÃO</span>
             <h1 id="contest-showcase-title">{focusedContest ? "Seu próximo objetivo." : "Escolha seu próximo objetivo."}</h1>
             <p>Defina o concurso que orienta sua preparação e acompanhe as informações mais importantes em um só lugar.</p>
+            <Link to="/dashboard/questions" className="contest-showcase__catalog-link">
+              Explorar concursos <ArrowRight aria-hidden="true" />
+            </Link>
           </div>
-          <Link to="/dashboard/questions" className="contest-showcase__catalog-link">
-            Explorar concursos <ArrowRight aria-hidden="true" />
-          </Link>
+          {featured ? (
+            <article className="contest-showcase__featured">
+              <div className="contest-showcase__featured-art">
+                <img src={contestArt(featured)} alt={`Imagem ilustrativa de ${featured.agency || featured.name}`} loading="eager" decoding="async" />
+                <span className="contest-showcase__art-caption">{featured.name}</span>
+              </div>
+              <div className="contest-showcase__featured-body">
+                <div className="contest-showcase__featured-head">
+                  <span className="contest-showcase__tag"><Target aria-hidden="true" /> {focusedContest ? "OBJETIVO PRINCIPAL" : "CONCURSO EM DESTAQUE"}</span>
+                  <span className="contest-showcase__status">{featured.status}</span>
+                </div>
+                <div>
+                  <h2>{featured.agency || featured.name}</h2>
+                  <p className="contest-showcase__role">{featured.role} <span>·</span> {featured.examBoard || "Banca a confirmar"}</p>
+                </div>
+                <div className="contest-showcase__date"><CalendarDays aria-hidden="true" /><span><small>Data da prova</small><strong>{dateLabel(featured.examDate)}</strong></span></div>
+                <ContestFacts contest={featured} />
+                <div className="contest-showcase__featured-actions">
+                  {focusedContest ? (
+                    <Link to="/dashboard/edital" className="contest-showcase__primary-action">Estudar pelo edital <ArrowRight aria-hidden="true" /></Link>
+                  ) : (
+                    <button type="button" className="contest-showcase__primary-action" onClick={() => onSelect(featured)} disabled={savingId === featured.id}>
+                      {savingId === featured.id ? "Salvando objetivo…" : "Definir como objetivo"} <ArrowRight aria-hidden="true" />
+                    </button>
+                  )}
+                  {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
+                </div>
+              </div>
+            </article>
+          ) : (
+            <div className="contest-showcase__empty">
+              <Target aria-hidden="true" />
+              <div><strong>Nenhum concurso publicado no catálogo ainda.</strong><p>Consulte as opções disponíveis na área de concursos.</p></div>
+              <Link to="/dashboard/questions">Explorar concursos <ArrowRight aria-hidden="true" /></Link>
+            </div>
+          )}
         </div>
-
-        {featured ? (
-          <article className="contest-showcase__featured">
-            <div className="contest-showcase__featured-art">
-              <img src={contestArt(featured)} alt={`Imagem ilustrativa de ${featured.agency || featured.name}`} loading="eager" decoding="async" />
-              <span className="contest-showcase__art-caption">{featured.name}</span>
-            </div>
-            <div className="contest-showcase__featured-body">
-              <div className="contest-showcase__featured-head">
-                <span className="contest-showcase__tag"><Target aria-hidden="true" /> {focusedContest ? "OBJETIVO PRINCIPAL" : "CONCURSO EM DESTAQUE"}</span>
-                <span className="contest-showcase__status">{featured.status}</span>
-              </div>
-              <div>
-                <h2>{featured.agency || featured.name}</h2>
-                <p className="contest-showcase__role">{featured.role} <span>·</span> {featured.examBoard || "Banca a confirmar"}</p>
-              </div>
-              <div className="contest-showcase__date"><CalendarDays aria-hidden="true" /><span><small>Data da prova</small><strong>{dateLabel(featured.examDate)}</strong></span></div>
-              <ContestFacts contest={featured} />
-              <div className="contest-showcase__featured-actions">
-                {focusedContest ? (
-                  <Link to="/dashboard/edital" className="contest-showcase__primary-action">Estudar pelo edital <ArrowRight aria-hidden="true" /></Link>
-                ) : (
-                  <button type="button" className="contest-showcase__primary-action" onClick={() => onSelect(featured)} disabled={savingId === featured.id}>
-                    {savingId === featured.id ? "Salvando objetivo…" : "Definir como objetivo"} <ArrowRight aria-hidden="true" />
-                  </button>
-                )}
-                {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
-              </div>
-            </div>
-          </article>
-        ) : (
-          <div className="contest-showcase__empty">
-            <Target aria-hidden="true" />
-            <div><strong>Nenhum concurso publicado no catálogo ainda.</strong><p>Você pode consultar as opções disponíveis na área de concursos.</p></div>
-            <Link to="/dashboard/questions">Explorar concursos <ArrowRight aria-hidden="true" /></Link>
-          </div>
-        )}
 
         {others.length > 0 && (
           <div className="contest-showcase__others">
@@ -138,5 +137,4 @@ export function ContestObjectivesShowcase({
         )}
       </div>
     </section>
-  );
 }
