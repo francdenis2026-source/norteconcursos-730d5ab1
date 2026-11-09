@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
 import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
+import { PCAC_VIDEOS } from "@/data/pcAcVideos";
 import { ENEM_VIDEOS } from "@/data/enemVideos";
 
 export interface MediaCatalog {
@@ -49,6 +50,28 @@ export interface PodcastRow {
 
 export const MEDIA_KEY = ["media-catalog"] as const;
 
+function mergeTopicVideos(
+  base: Record<string, Record<string, TopicVideo[]>>,
+  extra: Record<string, Record<string, TopicVideo[]>>,
+) {
+  const merged: Record<string, Record<string, TopicVideo[]>> = Object.fromEntries(
+    Object.entries(base).map(([subject, topics]) => [
+      subject,
+      Object.fromEntries(Object.entries(topics).map(([topic, videos]) => [topic, [...videos]])),
+    ]),
+  );
+  for (const [subject, topics] of Object.entries(extra)) {
+    const target = (merged[subject] ??= {});
+    for (const [topic, videos] of Object.entries(topics)) {
+      const existing = (target[topic] ??= []);
+      for (const video of videos) {
+        if (!existing.some((item) => item.id === video.id)) existing.push(video);
+      }
+    }
+  }
+  return merged;
+}
+
 export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaCatalog {
   const topicVideos: MediaCatalog["topicVideos"] = {};
   const playlists: VideoPlaylist[] = [];
@@ -66,7 +89,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
       playlists.push({ id: v.youtube_id, title: v.title, discipline: subject });
   }
   return {
-    topicVideos,
+    topicVideos: mergeTopicVideos(topicVideos, PCAC_VIDEOS),
     playlists,
     podcasts: podcasts.map((p) => ({
       id: p.id,
@@ -80,7 +103,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
 }
 
 export const STATIC_CATALOG: MediaCatalog = {
-  topicVideos: { ...TOPIC_VIDEOS, ...ENEM_VIDEOS },
+  topicVideos: mergeTopicVideos({ ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, PCAC_VIDEOS),
   playlists: PLAYLISTS,
   podcasts: PODCASTS,
   fromDb: false,
