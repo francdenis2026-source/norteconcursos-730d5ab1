@@ -7,6 +7,7 @@ import {
   type StudentSort,
   type ActivityPeriod,
 } from "@/lib/adminStudentActivity";
+import { visibleAdminStudentProfiles } from "@/lib/adminStudentList";
 import { acreDateKey } from "@/lib/acreTime";
 import { acreDate } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
@@ -132,7 +133,7 @@ function AdminStudentsPage() {
           .order("id")
           .range(offset, offset + 499);
         if (error) throw error;
-        profiles.push(...(data ?? []));
+        profiles.push(...visibleAdminStudentProfiles(data ?? []));
         if (!data || data.length < 500) break;
       }
       const activity = new Map<string, StudentActivity>();
