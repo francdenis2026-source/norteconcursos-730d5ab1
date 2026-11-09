@@ -111,6 +111,55 @@ export function buildPcAcStudyWeek(
   return out;
 }
 
+export interface PcAcWeeklyGridRow {
+  id: string;
+  name: string;
+  peso: 1 | 2;
+  totalMinutes: number;
+  /** Dias da semana (0 domingo … 6 sábado) em que a disciplina aparece na semana gerada. */
+  days: number[];
+  /** Faixa de horário, só quando a disciplina sempre cai no mesmo horário; "variável" senão. */
+  horario: string;
+}
+
+/** Vira a semana gerada por `buildPcAcStudyWeek` (organizada por dia) numa grade por disciplina —
+ * o mesmo formato do cronograma em papel (disciplina · peso · horário · dias da semana marcados).
+ * `pesoMap` é opcional: sem ele, toda disciplina sai com peso 1. */
+export function buildPcAcWeeklyGrid(
+  cargo: PcAcVerticalCargo,
+  week: Record<number, PcAcStudyBlock[]>,
+  pesoMap: Record<string, 1 | 2> = {},
+): PcAcWeeklyGridRow[] {
+  const byName = new Map<string, { minutes: number; days: Set<number>; ranges: Set<string> }>();
+  for (const [dayStr, blocks] of Object.entries(week)) {
+    const day = Number(dayStr);
+    for (const b of blocks) {
+      const cur = byName.get(b.discipline) ?? { minutes: 0, days: new Set<number>(), ranges: new Set<string>() };
+      cur.minutes += b.minutes;
+      cur.days.add(day);
+      cur.ranges.add(`${b.start}–${b.end}`);
+      byName.set(b.discipline, cur);
+    }
+  }
+
+  const idByName = new Map<string, string>();
+  for (const block of cargo.blocks) for (const d of block.disciplines) idByName.set(d.name, d.id);
+
+  return [...byName.entries()]
+    .map(([name, info]) => {
+      const id = idByName.get(name) ?? name;
+      return {
+        id,
+        name,
+        peso: pesoMap[id] ?? 1,
+        totalMinutes: info.minutes,
+        days: [...info.days].sort((a, b) => a - b),
+        horario: info.ranges.size === 1 ? [...info.ranges][0]! : "variável",
+      };
+    })
+    .sort((a, b) => b.peso - a.peso || b.totalMinutes - a.totalMinutes);
+}
+
 export interface PcAcStudyPlanStorage {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
