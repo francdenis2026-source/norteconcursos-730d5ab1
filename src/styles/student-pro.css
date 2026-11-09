@@ -237,3 +237,45 @@
   border-color: var(--sp-line) !important;
   background: linear-gradient(120deg, #171b22, #1e232b) !important;
 }
+
+/* ---------- Tipografia: um só tipo de letra nos títulos das telas internas ---------- */
+.app-shell[data-area="student"]:not(#_):not(#_) #dashboard-content :is(h1, h2, h3, h4) {
+  font-family: inherit !important;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Treinador: painel de configuração centralizado, barra sem quebra ---------- */
+.app-shell[data-area="student"]:not(#_):not(#_) #dashboard-content .trainer-setup {
+  margin-inline: auto !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__links {
+  flex-wrap: nowrap !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(
+    .trainer-setup-top-context__hint,
+    .trainer-setup-top-context__subtitle,
+    .trainer-setup-top-context__separator
+  ) {
+  display: none !important;
+}
+
+/* Código técnico da questão: discreto, sem competir com o enunciado. */
+.app-shell[data-area="student"]:not(#_):not(#_) [data-question-code] {
+  border-color: transparent !important;
+  background: transparent !important;
+  padding-inline: 0 !important;
+  color: var(--sp-muted) !important;
+  font-size: 11px !important;
+  opacity: 0.85;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  #dashboard-content
+  .trainer-setup
+  > .trainer-setup__unified {
+  margin-inline: auto !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .app-content__inner > :has(> .trainer-setup) {
+  width: 100%;
+  flex: 1 1 auto;
+}
