@@ -29,7 +29,7 @@ import {
   XCircle,
   Zap,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { guestChallengeSupabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -102,13 +102,26 @@ function DesafioDiario() {
     void (async () => {
       try {
         const day = await getAcreDateKey(true);
+
+        // A identidade anônima é criada pela Supabase Auth e persiste separada
+        // da conta do estudante. O limite de signup anônimo por IP dificulta
+        // reiniciar a cota simplesmente apagando o token local do desafio.
+        const { data: authData, error: authError } = await guestChallengeSupabase.auth.getSession();
+        if (authError) throw authError;
+        if (!authData.session?.user) {
+          const { data: anonymousData, error: anonymousError } =
+            await guestChallengeSupabase.auth.signInAnonymously();
+          if (anonymousError) throw anonymousError;
+          if (!anonymousData.user) throw new Error("Não foi possível criar uma sessão gratuita.");
+        }
+
         let existingToken: string | null = null;
         try {
           existingToken = window.localStorage.getItem(`norteconcurso:guest-session:${day}`);
         } catch {
-          // Sessão continua válida nesta aba mesmo se o armazenamento estiver indisponível.
+          // A identidade anônima continua persistida pelo cliente Supabase.
         }
-        const { data: token, error: sessionError } = await supabase.rpc(
+        const { data: token, error: sessionError } = await guestChallengeSupabase.rpc(
           "start_daily_guest_session",
           { p_existing_token: existingToken },
         );
@@ -120,7 +133,7 @@ function DesafioDiario() {
           // O token permanece em memória até a aba ser fechada.
         }
         const [{ data: progressData, error: progressError }, { data, error }] = await Promise.all([
-          supabase.rpc("get_daily_guest_progress", { p_session_token: token }),
+          guestChallengeSupabase.rpc("get_daily_guest_progress", { p_session_token: token }),
           supabase
             .rpc("get_daily_guest_questions", { p_limit: 10 })
             .select(
@@ -181,7 +194,7 @@ function DesafioDiario() {
     submitting.current = true;
     try {
       if (!sessionToken.current) throw new Error("Sessão de visitante inválida. Recarregue o desafio.");
-      const { data, error } = await supabase.rpc("grade_daily_guest_answer", {
+      const { data, error } = await guestChallengeSupabase.rpc("grade_daily_guest_answer", {
         p_session_token: sessionToken.current,
         p_question_id: question.id,
         p_selected_answer: selected,
