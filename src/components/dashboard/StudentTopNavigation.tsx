@@ -21,6 +21,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
+import "@/styles/student-home-navigation-refinement.css";
 
 const sections: {
   groups: string[];
