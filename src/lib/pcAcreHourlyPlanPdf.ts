@@ -251,12 +251,44 @@ export async function generatePcAcHourlyPlanPdf(cargoLabel: string, weeks: PcAcH
     cursor.y = TOP_SAFE;
   };
 
+  // Sumário: uma linha por semana com o período e as disciplinas em foco, para localizar
+  // rapidamente qualquer semana sem folhear o PDF inteiro.
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(13);
+  doc.setTextColor(...NAVY);
+  doc.text("Semanas e disciplinas em foco", MARGIN_X, cursor.y);
+  doc.setDrawColor(...GOLD);
+  doc.setLineWidth(1);
+  doc.line(MARGIN_X, cursor.y + 5, MARGIN_X + 46, cursor.y + 5);
+  cursor.y += 22;
+  for (const week of weeks) {
+    if (cursor.y + 16 > FOOTER_Y - 18) newContentPage();
+    doc.setFillColor(...CARD_BG);
+    doc.setDrawColor(...LINE);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(MARGIN_X, cursor.y, CONTENT_W, 15, 2, 2, "FD");
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8.5);
+    doc.setTextColor(...GOLD_DEEP);
+    doc.text(`Semana ${week.weekNumber} (${fmtDate(week.startDate)} a ${fmtDate(week.endDate)})`, MARGIN_X + 7, cursor.y + 10);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...INK);
+    doc.text(week.focusSubjects.join(" + "), MARGIN_X + 190, cursor.y + 10);
+    cursor.y += 17;
+  }
+  cursor.y += 10;
+
   for (const week of weeks) {
     if (cursor.y > TOP_SAFE + 30) newContentPage();
     doc.setFont("helvetica", "bold");
     doc.setFontSize(11.5);
     doc.setTextColor(...GOLD_DEEP);
     doc.text(`Semana ${week.weekNumber} · ${fmtDate(week.startDate)} a ${fmtDate(week.endDate)}`, MARGIN_X, cursor.y);
+    cursor.y += 14;
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.setTextColor(...NAVY);
+    doc.text(`Foco da semana: ${week.focusSubjects.join(" + ")}`, MARGIN_X, cursor.y);
     cursor.y += 16;
     for (const day of week.days) drawDayTable(doc, day, cursor, newContentPage);
   }
