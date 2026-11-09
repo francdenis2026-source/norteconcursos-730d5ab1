@@ -47,3 +47,6 @@
   html body .home.home .home-preparation__items > * { padding: 16px !important; min-height: 0 !important; height: auto !important; margin: 0 !important; }
   html body .home.home .home-preparation__items p { padding-left: 0 !important; margin-top: 6px !important; font-size: 0.85rem; line-height: 1.45; }
 }
+@media (min-width: 761px) {
+  html body .home.home .home-preparation__items > :last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+}
