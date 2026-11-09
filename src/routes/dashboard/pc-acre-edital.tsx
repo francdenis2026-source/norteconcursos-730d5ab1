@@ -7,6 +7,7 @@ import {
   CalendarClock,
   CheckCircle2,
   Download,
+  GraduationCap,
   PlayCircle,
   ScanSearch,
   Scale,
@@ -57,10 +58,23 @@ import {
 } from "@/lib/pcAcreStudyPlan";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
+import {
+  INVESTIGATOR_FOCUS,
+  INVESTIGATOR_RADAR,
+  PCAC_IDECAN_PRIORITY,
+} from "@/data/pcAcreIdecanRadar";
+import {
+  PCAC_ACTIVITY_LABEL,
+  PCAC_PHASE_LABEL,
+  buildPcAcFinalDays,
+  buildPcAcMasterPlan,
+  type PcAcPlanWeek,
+} from "@/lib/pcAcreMasterPlan";
 import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
+const PLANO_ESTUDOS_ANCHOR = "pcac-plano-estudos";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
@@ -86,39 +100,6 @@ const PCAC_DISCIPLINE_GUIDE: Record<string, string> = {
   "Medicina Legal": "Traumatologia, tanatologia, sexologia, toxicologia, identificação e psicopatologia forense.",
   "Ciências Forenses": "Vestígios, identificação, perícia, genética, química, balística, documentoscopia e cadeia de custódia.",
 };
-const INVESTIGATOR_FOCUS = [
-  { subject: "Direito Penal", priority: "Muito alta", topics: "teoria do crime, consumação e tentativa, concurso de pessoas e crimes contra pessoa, patrimônio e administração pública", filter: "Direito Penal" },
-  { subject: "Direito Processual Penal", priority: "Muito alta", topics: "inquérito policial, provas, cadeia de custódia, prisões, medidas cautelares e identificação criminal", filter: "Direito Processual Penal" },
-  { subject: "Língua Portuguesa", priority: "Alta", topics: "interpretação, coesão e coerência, sintaxe, concordância, regência, crase, pontuação e reescrita", filter: "Língua Portuguesa" },
-  { subject: "Raciocínio Lógico", priority: "Alta", topics: "proposições, equivalências, negações, argumentação, conjuntos, porcentagem, combinatória, probabilidade e gráficos", filter: "Raciocínio Lógico-Matemático" },
-  { subject: "Contabilidade e Estatística", priority: "Alta", topics: "patrimônio, escrituração, demonstrações, juros, análise financeira; população, amostra, tabelas, medidas, probabilidade e correlação", filter: "Contabilidade" },
-  { subject: "Análise de Dados e Informações", priority: "Alta", topics: "coleta, padronização, duplicidades, cruzamento de registros, linhas do tempo, vínculos, redes, mapas e relatórios analíticos", filter: "Análise de Dados e Informações" },
-  { subject: "Tecnologia da Informação e Segurança", priority: "Média-alta", topics: "sistemas, arquivos, planilhas, bancos de dados, redes, autenticação, criptografia, backups, metadados e proteção de informações", filter: "Tecnologia da Informação" },
-  { subject: "Arquivologia e Administração", priority: "Média", topics: "ciclo documental, classificação, avaliação, temporalidade, preservação, gestão de processos, atendimento, ética e sigilo", filter: "Arquivologia" },
-] as const;
-
-const INVESTIGATOR_RADAR = [
-  { subject: "Língua Portuguesa", priority: "Alta", topics: "interpretação e inferência, coesão e coerência, reescrita, sintaxe, concordância, regência, crase e pontuação", evidence: "Edital PC-AC + recorrência IDECAN em provas policiais" },
-  { subject: "Raciocínio Lógico", priority: "Alta", topics: "proposições, conectivos, equivalências, negações, argumentação, conjuntos, porcentagem, probabilidade e gráficos", evidence: "Edital PC-AC + padrão de questões IDECAN" },
-  { subject: "Direito Penal", priority: "Muito alta", topics: "teoria do crime, dolo e culpa, tentativa, concurso de pessoas, crimes contra pessoa, patrimônio e administração pública", evidence: "Bloco jurídico do edital + recorrência em polícia civil" },
-  { subject: "Direito Processual Penal", priority: "Muito alta", topics: "inquérito, provas, exame de corpo de delito, cadeia de custódia, prisões, cautelares e identificação criminal", evidence: "Bloco jurídico do edital + padrão policial IDECAN" },
-  { subject: "Tecnologia e Segurança da Informação", priority: "Alta", topics: "arquivos, planilhas, bancos, redes, autenticação, criptografia, backups, metadados e proteção de dados", evidence: "Específica do Investigador + tendência de investigação digital" },
-  { subject: "Contabilidade e Análise Financeira", priority: "Alta", topics: "patrimônio, partidas dobradas, demonstrações, juros, extratos, PIX/TED, conciliação e movimentações atípicas", evidence: "Específica do Investigador + foco financeiro do cargo" },
-  { subject: "Estatística e Análise de Dados", priority: "Alta", topics: "tabelas, gráficos, média, mediana, dispersão, probabilidade, correlação, outliers, cruzamentos e linhas do tempo", evidence: "Duas disciplinas específicas convergentes no edital" },
-  { subject: "Arquivologia", priority: "Média-alta", topics: "teoria das três idades, classificação, temporalidade, preservação, documentos digitais, metadados e autenticidade", evidence: "Específica do Investigador + rotina documental policial" },
-  { subject: "Noções de Administração", priority: "Média", topics: "planejamento, organização, processos, eficiência, gestão da informação, atendimento, ética e sigilo", evidence: "Específica do edital; revisar após o núcleo de maior peso" },
-] as const;
-
-const PCAC_IDECAN_PRIORITY = [
-  { subject: "Direito Penal", level: "Muito alta", reason: "teoria do crime, crimes contra a pessoa, patrimônio e administração pública", filter: "Direito Penal" },
-  { subject: "Direito Processual Penal", level: "Muito alta", reason: "inquérito, ação penal, prisões, provas e cadeia de custódia", filter: "Direito Processual Penal" },
-  { subject: "Tecnologia da Informação", level: "Alta", reason: "segurança da informação, redes, phishing, malware e crimes digitais", filter: "Tecnologia da Informação" },
-  { subject: "Língua Portuguesa", level: "Alta", reason: "interpretação, sintaxe, concordância, regência, crase e pontuação", filter: "Língua Portuguesa" },
-  { subject: "Raciocínio Lógico", level: "Alta", reason: "proposições, equivalências, negações, conjuntos e probabilidade", filter: "Raciocínio Lógico-Matemático" },
-  { subject: "Direito Constitucional", level: "Média", reason: "direitos fundamentais, segurança pública e organização do Estado", filter: "Direito Constitucional" },
-  { subject: "Direito Administrativo", level: "Média", reason: "atos, poderes, agentes, responsabilidade e improbidade", filter: "Direito Administrativo" },
-  { subject: "Legislação Institucional", level: "Muito alta", reason: "Lei Orgânica Nacional, PC-AC e estatuto funcional", filter: "Legislação Institucional" },
-];
 
 export const Route = createFileRoute("/dashboard/pc-acre-edital")({
   component: PcAcreEditalVerticalizadoPage,
@@ -526,6 +507,147 @@ function PcAcStudyPlanCard({
   );
 }
 
+const WEEKDAY_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+/** Plano de estudos completo: semana a semana e dia a dia, organizado pela ordem de relevância
+ * já marcada para o Investigador (ver "Foco recomendado" e "Onde concentrar seu tempo" acima),
+ * cobrindo teoria, questões, redação e simulados até 3 dias antes da prova. Reaproveita os
+ * mesmos dias de estudo configurados no cronograma de horários, para os dois ficarem
+ * consistentes. */
+function PcAcMasterPlanCard({
+  cargoLabel,
+  cargoId,
+  userId,
+}: {
+  cargoLabel: string;
+  cargoId: PcAcVerticalCargoId;
+  userId: string;
+}) {
+  const [exporting, setExporting] = React.useState(false);
+  const [days, setDays] = React.useState<number[]>(DEFAULT_PCAC_STUDY_CONFIG.days);
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    setDays(readPcAcStudyConfig(window.localStorage, userId, cargoId).days);
+  }, [userId, cargoId]);
+  const weeks = React.useMemo(() => buildPcAcMasterPlan(days), [days]);
+  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
+  const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
+
+  const exportPdf = async () => {
+    setExporting(true);
+    try {
+      const { generatePcAcMasterPlanPdf } = await import("@/lib/pcAcreMasterPlanPdf");
+      await generatePcAcMasterPlanPdf(cargoLabel, weeks, finalDays);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const phaseWeeks = (phase: PcAcPlanWeek["phase"]) => weeks.filter((w) => w.phase === phase);
+
+  return (
+    <Card id={PLANO_ESTUDOS_ANCHOR} className="pcac-edital-card pcac-edital-master-plan scroll-mt-20">
+      <CardHeader>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <GraduationCap className="h-5 w-5 text-primary" />
+              Plano de estudos completo
+            </CardTitle>
+            <CardDescription>
+              Semana a semana e dia a dia até 3 dias antes da prova, por ordem de relevância da
+              banca IDECAN — com teoria, questões, redação e simulados. Usa os mesmos dias de
+              estudo do cronograma acima.
+            </CardDescription>
+          </div>
+          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !weeks.length}>
+            <Download className="mr-2 h-4 w-4" />
+            {exporting ? "Gerando…" : "Exportar plano em PDF"}
+          </Button>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {!weeks.length ? (
+          <p className="text-sm text-muted-foreground">
+            Faltam poucos dias para a prova — use o período para revisão leve (ver "Últimos dias"
+            abaixo) em vez de um plano de semanas completas.
+          </p>
+        ) : (
+          <>
+            <p className="text-xs text-muted-foreground">
+              {weeks.length} semana{weeks.length === 1 ? "" : "s"} de estudo · {totalActivities}{" "}
+              atividades planejadas · encerra conteúdo novo 3 dias antes da prova.
+            </p>
+            <Accordion type="multiple" defaultValue={[`fase-fundamentos`]}>
+              {(["fundamentos", "pratica", "revisao"] as const).map((phase) => {
+                const items = phaseWeeks(phase);
+                if (!items.length) return null;
+                return (
+                  <AccordionItem key={phase} value={`fase-${phase}`}>
+                    <AccordionTrigger className="text-left">
+                      <span className="flex items-center gap-2">
+                        {PCAC_PHASE_LABEL[phase]}
+                        <Badge variant="outline" className="text-[10px]">
+                          {items.length} semana{items.length === 1 ? "" : "s"}
+                        </Badge>
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="space-y-3">
+                      {items.map((week) => (
+                        <div key={week.weekNumber} className="rounded-lg border bg-background/60 p-3">
+                          <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                            Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
+                            {week.endDate.split("-").reverse().join("/")}
+                          </p>
+                          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                            {week.days.map((day) => (
+                              <div key={day.date} className="rounded-md border border-dashed bg-muted/20 p-2">
+                                <p className="text-[11px] font-semibold text-foreground/90">
+                                  {WEEKDAY_FULL[day.weekday]} · {day.date.split("-").reverse().join("/")}
+                                </p>
+                                <ul className="mt-1 space-y-1">
+                                  {day.activities.map((activity, i) => (
+                                    <li key={i} className="text-[11px] leading-relaxed text-muted-foreground">
+                                      <span className="font-semibold text-primary">
+                                        {PCAC_ACTIVITY_LABEL[activity.type]}:
+                                      </span>{" "}
+                                      {activity.detail}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
+          </>
+        )}
+
+        <div className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3">
+          <p className="text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+            Últimos dias antes da prova
+          </p>
+          <ul className="mt-2 space-y-1.5">
+            {finalDays.map((day) => (
+              <li key={day.date} className="text-xs text-muted-foreground">
+                <span className="font-semibold text-foreground/90">
+                  {WEEKDAY_FULL[day.weekday]} ({day.date.split("-").reverse().join("/")}):
+                </span>{" "}
+                {day.activities[0]?.detail}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
@@ -867,6 +989,10 @@ function PcAcreEditalVerticalizadoPage() {
       </Card>
 
       <PcAcStudyPlanCard cargo={cargo} userId={userId} />
+
+      {cargo.id === "investigador" && (
+        <PcAcMasterPlanCard cargoLabel={cargo.label} cargoId={cargo.id} userId={userId} />
+      )}
 
       <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
         <CardHeader>
