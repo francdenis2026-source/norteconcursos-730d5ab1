@@ -57,6 +57,7 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
     <div
       ref={root}
       className="hero-badge hero-badge--premium"
+      style={{ position: "relative", left: 0, top: 0, right: "auto", zIndex: 5 }}
       role="img"
       aria-label="Brasão Norte Concursos"
       data-visible="false"
