@@ -328,11 +328,12 @@
   flex: none;
   padding: 0 17px;
   border-radius: 9px;
-  color: #172a3e;
-  background: linear-gradient(110deg, #f5d58e, #e7b95f);
+  color: var(--nc-color-action-foreground);
+  background: var(--nc-color-action);
+  border: 1px solid var(--nc-color-action);
   font-size: 12px;
   font-weight: 850;
-  box-shadow: 0 5px 14px -9px rgb(230 181 91 / 80%);
+  box-shadow: var(--nc-shadow-card);
 }
 
 /* Work area: agenda and weekly rhythm left; objective and revision on right. */
