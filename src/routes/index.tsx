@@ -647,33 +647,31 @@ function Index() {
                   </a>
                 </div>
               </div>
-              <ul className="hx__trust" aria-label="Recursos da plataforma">
-                  <li>
-                    <Target aria-hidden="true" />
-                    <span><strong>Plano estratégico</strong><small>Estude com direção</small></span>
-                  </li>
-                  <li>
-                    <BookOpen aria-hidden="true" />
-                    <span><strong>Conteúdo direcionado</strong><small>Foco no que importa</small></span>
-                  </li>
-                  <li>
-                    <FileSearch aria-hidden="true" />
-                    <span><strong>Questões e simulados</strong><small>Pratique para a prova</small></span>
-                  </li>
-                  <li>
-                    <LineChart aria-hidden="true" />
-                    <span><strong>Evolução acompanhada</strong><small>Veja seu progresso</small></span>
-                  </li>
-              </ul>
-            </div>
+              </div>
           </div>
         </section>
 
-        <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Acesso rápido à plataforma">
-          <a className="hr-quick-item" href="#plataforma"><BrainCircuit aria-hidden="true" /><span><strong>Plataforma</strong><small>Organize sua preparação</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a className="hr-quick-item" href="#concursos"><Landmark aria-hidden="true" /><span><strong>Concursos</strong><small>Explore provas e editais</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a className="hr-quick-item" href="#ranking-destaque"><LineChart aria-hidden="true" /><span><strong>Desempenho</strong><small>Acompanhe sua evolução</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a className="hr-quick-item" href="#planos"><ShieldCheck aria-hidden="true" /><span><strong>Planos</strong><small>Escolha seu caminho</small></span><ArrowUpRight aria-hidden="true" /></a>
+        <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Explore os principais recursos">
+          <a className="hr-quick-item hr-quick-item--study" href="#plataforma">
+            <span className="hr-quick-icon"><BrainCircuit aria-hidden="true" /></span>
+            <span className="hr-quick-copy"><strong>Plano de estudos</strong><small>Organize sua preparação</small></span>
+            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
+          </a>
+          <a className="hr-quick-item hr-quick-item--contests" href="#concursos">
+            <span className="hr-quick-icon"><Landmark aria-hidden="true" /></span>
+            <span className="hr-quick-copy"><strong>Concursos e editais</strong><small>Encontre sua próxima prova</small></span>
+            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
+          </a>
+          <a className="hr-quick-item hr-quick-item--progress" href="#ranking-destaque">
+            <span className="hr-quick-icon"><LineChart aria-hidden="true" /></span>
+            <span className="hr-quick-copy"><strong>Seu desempenho</strong><small>Acompanhe sua evolução</small></span>
+            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
+          </a>
+          <a className="hr-quick-item hr-quick-item--practice" href="#planos">
+            <span className="hr-quick-icon"><ShieldCheck aria-hidden="true" /></span>
+            <span className="hr-quick-copy"><strong>Treino e simulados</strong><small>Pratique com estratégia</small></span>
+            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
+          </a>
         </nav>
 
         <section
