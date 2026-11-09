@@ -707,6 +707,11 @@ label.topic.semantic-has-subtopics > .marker-tools {
   min-width: 0 !important;
   overflow-wrap: anywhere !important;
 }
+.topic-study:checked + .topic-copy > .semantic-parent {
+  color: #0f9d68 !important;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
 </style>
 <script id="universal-topic-structure-v4">
 (()=> {
@@ -963,7 +968,7 @@ label.topic.semantic-has-subtopics > .marker-tools {
 
   const rows=[...document.querySelectorAll('label.topic')];
   rows.forEach((row,index)=>{
-    const parentInput=row.querySelector(':scope > input.topic-study') || row.querySelector('input.topic-study');
+    let parentInput=row.querySelector(':scope > input.topic-study') || row.querySelector('input.topic-study');
     let copy=row.querySelector(':scope > .topic-copy') || row.querySelector(':scope > span:not(.topic-priority)');
     if(!copy) {
       copy=document.createElement('div');
@@ -1037,7 +1042,11 @@ label.topic.semantic-has-subtopics > .marker-tools {
         if(Object.prototype.hasOwnProperty.call(saved,key)) input.checked=!!saved[key];
         else if(previous) input.checked=!!previous.checked;
         else input.checked=oldParentChecked;
-        input.addEventListener('click',event=>event.stopPropagation());
+        input.addEventListener('click',event=>{
+          event.preventDefault();event.stopPropagation();
+          input.checked=!input.checked;
+          input.dispatchEvent(new Event('change',{bubbles:true}));
+        });
         input.addEventListener('change',()=>{
           saved[key]=input.checked;
           try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
@@ -1089,14 +1098,13 @@ label.topic.semantic-has-subtopics > .marker-tools {
       if(oldActions) copy.append(oldActions);
     }
 
-    if(parentInput && parentInput.parentElement!==row) row.insertBefore(parentInput,row.firstChild);
     if(!parentInput) {
-      const input=document.createElement('input');
-      input.type='checkbox';
-      input.className='topic-study';
-      input.dataset.key=location.pathname+'::universal-parent::'+index;
-      row.insertBefore(input,row.firstChild);
+      parentInput=document.createElement('input');
+      parentInput.type='checkbox';
+      parentInput.className='topic-study';
+      parentInput.dataset.key=location.pathname+'::universal-parent::'+index;
     }
+    if(parentInput.parentElement!==row) row.insertBefore(parentInput,row.firstChild);
     row.dataset.universalTopicStructure='v4';
     addPriority(row);
     addActions(row,copy);
