@@ -277,3 +277,75 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
   });
 })();
 </script>
+<style id="topic-collapse-controls">
+.topic-collapse-toggle {
+  position: absolute !important;
+  top: 7px !important;
+  right: 34px !important;
+  z-index: 6;
+  display: inline-grid !important;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0 !important;
+  border: 1px solid #cbd8ec !important;
+  border-radius: 6px;
+  background: #fff !important;
+  color: #1e3a8a !important;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+}
+.topic-collapse-toggle:hover,
+.topic-collapse-toggle:focus-visible { background: #eef5ff !important; outline: 2px solid #93b4e5; outline-offset: 1px; }
+.topic.topic-collapsed > .topic-copy,
+.topic.topic-collapsed > span:not(.topic-priority) {
+  display: block !important;
+  max-height: 1.65em !important;
+  min-height: 1.65em;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+}
+.topic.topic-collapsed .subtopics-panel,
+.topic.topic-collapsed .topic-actions,
+.topic.topic-collapsed .semantic-subtopics { display: none !important; }
+.topic.topic-collapsed .topic-subtopic-status { display: inline-flex !important; }
+</style>
+<script id="topic-collapse-controls-script">
+(()=>{
+  const storageKey='norte-concursos-pcac-topic-collapse';
+  let saved={};
+  try { saved=JSON.parse(localStorage.getItem(storageKey)||'{}'); } catch {}
+  document.querySelectorAll('label.topic').forEach((row,index)=>{
+    if(row.querySelector(':scope > .topic-collapse-toggle')) return;
+    const key=row.dataset.markerKey || `${location.pathname}::topic-collapse::${index}`;
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='topic-collapse-toggle';
+    button.dataset.collapseKey=key;
+    button.setAttribute('aria-controls',`topic-content-${index}`);
+    const copy=row.querySelector(':scope > .topic-copy') || row.querySelector(':scope > span');
+    if(copy && !copy.id) copy.id=`topic-content-${index}`;
+    const update=()=>{
+      const collapsed=row.classList.contains('topic-collapsed');
+      button.textContent=collapsed?'+':'−';
+      button.title=collapsed?'Expandir conteúdo':'Minimizar conteúdo';
+      button.setAttribute('aria-label',collapsed?'Expandir conteúdo do tópico':'Minimizar conteúdo do tópico');
+      button.setAttribute('aria-expanded',String(!collapsed));
+    };
+    if(saved[key]) row.classList.add('topic-collapsed');
+    button.addEventListener('click',event=>{
+      event.preventDefault();
+      event.stopPropagation();
+      const collapsed=row.classList.toggle('topic-collapsed');
+      saved[key]=collapsed;
+      try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
+      update();
+    });
+    row.append(button);
+    update();
+  });
+})();
+</script>
