@@ -44,37 +44,37 @@
    e só no escuro, com mais croma (mais "cor" visível) e um leve matiz violeta — sofisticado
    sem perder a legibilidade nem o dourado da marca. */
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview {
-  --home-ink: #f3f5ff;
-  --home-muted: #aab0d6;
-  --home-line: #3c4280;
-  --home-surface: #1b2150;
-  --home-surface-2: #242a63;
-  --home-blue: #8b9bff;
-  --home-cyan: #63d9c9;
-  --home-green: #7fe3b0;
-  --home-gold: #e9c173;
-  --home-violet: #c2a4ff;
-  --home-rose: #f3a0c0;
-  --saas-bg: #0c0f28;
-  --saas-panel: #1b2150;
-  --saas-panel-soft: #242a63;
-  --saas-ink: #f3f5ff;
-  --saas-muted: #aab0d6;
-  --saas-line: #3c4280;
-  --saas-blue: #8b9bff;
-  --saas-cyan: #63d9c9;
-  --saas-green: #7fe3b0;
-  --saas-violet: #c2a4ff;
-  --saas-amber: #e9c173;
-  --saas-rose: #f3a0c0;
+  --home-ink: var(--nc-color-text);
+  --home-muted: var(--nc-color-text-muted);
+  --home-line: var(--nc-color-border);
+  --home-surface: var(--nc-color-surface);
+  --home-surface-2: var(--nc-color-surface-muted);
+  --home-blue: var(--nc-color-action);
+  --home-cyan: var(--nc-color-action);
+  --home-green: var(--nc-color-success);
+  --home-gold: var(--nc-color-action);
+  --home-violet: var(--nc-color-action);
+  --home-rose: var(--nc-color-danger);
+  --saas-bg: var(--nc-color-canvas);
+  --saas-panel: var(--nc-color-surface);
+  --saas-panel-soft: var(--nc-color-surface-muted);
+  --saas-ink: var(--nc-color-text);
+  --saas-muted: var(--nc-color-text-muted);
+  --saas-line: var(--nc-color-border);
+  --saas-blue: var(--nc-color-action);
+  --saas-cyan: var(--nc-color-action);
+  --saas-green: var(--nc-color-success);
+  --saas-violet: var(--nc-color-action);
+  --saas-amber: var(--nc-color-action);
+  --saas-rose: var(--nc-color-danger);
 }
 /* Fundo da página: índigo profundo com leve gradiente, não um retângulo cinza plano.
    Só nesta página (:has limita o escopo ao wrapper .student-overview). */
 :root.dark .app-shell[data-area="student"] #dashboard-content:has(.student-desk.student-overview) {
   background:
-    radial-gradient(ellipse 900px 480px at 15% -10%, rgb(139 155 255 / 7%), transparent 60%),
-    radial-gradient(ellipse 700px 420px at 100% 15%, rgb(233 193 115 / 5%), transparent 55%),
-    linear-gradient(175deg, #0c0f28 0%, #0e1130 55%, #0b0e24 100%) !important;
+    radial-gradient(ellipse 900px 480px at 15% -10%, color-mix(in srgb, var(--nc-color-action) 7%, transparent), transparent 60%),
+    radial-gradient(ellipse 700px 420px at 100% 15%, color-mix(in srgb, var(--nc-color-action) 4%, transparent), transparent 55%),
+    linear-gradient(175deg, var(--nc-color-canvas), var(--nc-color-canvas)) !important;
 }
 /* Cartões (acessos rápidos, métricas, seções) — fundo índigo com gradiente sutil
    em vez do cinza-azulado quase neutro que havia antes. */
@@ -82,7 +82,7 @@
   .app-shell[data-area="student"]
   .student-desk.student-overview
   :is(.student-hub__shortcuts > a, .student-home__metric, .student-home__card[data-accent]) {
-  background: linear-gradient(150deg, #212a63 0%, #181c47 100%);
+  background: linear-gradient(150deg, var(--nc-color-surface-muted), var(--nc-color-surface));
   border-color: var(--home-line);
   box-shadow:
     0 10px 26px -20px rgb(5 6 20 / 70%),
@@ -101,7 +101,7 @@
   .app-shell[data-area="student"]
   .student-desk.student-overview
   .platform-question-counts--compact {
-  background: linear-gradient(150deg, #1d2355, #161a44);
+  background: linear-gradient(150deg, var(--nc-color-surface-muted), var(--nc-color-surface));
   border-color: var(--home-line);
 }
 :root.dark
@@ -113,11 +113,11 @@
   border-color: var(--home-line);
 }
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-desk__panel {
-  background: linear-gradient(165deg, rgb(33 42 99 / 55%), rgb(24 28 71 / 45%));
+  background: color-mix(in srgb, var(--nc-color-surface-muted) 55%, var(--nc-color-surface));
   border-color: var(--home-line);
 }
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-desk__next {
-  background: linear-gradient(105deg, color-mix(in srgb, var(--home-gold) 14%, #1b2150), #181c47);
+  background: linear-gradient(105deg, color-mix(in srgb, var(--nc-color-action) 14%, var(--nc-color-surface)), var(--nc-color-surface));
   border-color: color-mix(in srgb, var(--home-gold) 42%, var(--home-line));
   border-left-color: var(--home-gold);
 }
@@ -125,11 +125,11 @@
   .app-shell[data-area="student"]
   .student-desk.student-overview
   .student-home__next-topic {
-  background: color-mix(in srgb, var(--home-cyan) 10%, #1d2355);
+  background: color-mix(in srgb, var(--nc-color-action) 10%, var(--nc-color-surface-muted));
   border-color: color-mix(in srgb, var(--home-cyan) 32%, var(--home-line));
 }
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-hub__results a {
-  background: linear-gradient(150deg, #1d2355, #181c47);
+  background: linear-gradient(150deg, var(--nc-color-surface-muted), var(--nc-color-surface));
   border-color: var(--home-line);
 }
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview .student-home__data-note {
@@ -576,7 +576,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   color: #475569 !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-modern-hero .edital-eyebrow {
-  color: #0369a1 !important;
+  color: var(--nc-color-action-text) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-catalog {
   border-color: #dbe3ea !important;
@@ -599,9 +599,9 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   background: #ffffff !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-catalog > .edital-note {
-  border-left-color: #0369a1 !important;
+  border-left-color: var(--nc-color-action-text) !important;
   color: #334155 !important;
-  background: #eff6ff !important;
+  background: var(--nc-color-action-soft) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-edition {
   border-color: #d5dee7 !important;
@@ -610,8 +610,8 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   box-shadow: 0 5px 14px rgb(15 23 42 / 6%) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-edition:hover {
-  border-color: #0369a1 !important;
-  background: #f8fbff !important;
+  border-color: var(--nc-color-action-text) !important;
+  background: var(--nc-color-action-soft) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-edition h3 {
   color: #0f172a !important;
@@ -625,7 +625,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   border-top-color: #e2e8f0 !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-edition-foot > span:last-child {
-  color: #0369a1 !important;
+  color: var(--nc-color-action-text) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .edital-edition-meta strong {
   border-color: #bae6fd !important;
@@ -695,14 +695,14 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   color: #475569 !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-hub__masthead-actions a {
-  color: #0369a1 !important;
+  color: var(--nc-color-action-text) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat {
-  border-color: #bfdbfe !important;
-  background: #eff6ff !important;
+  border-color: color-mix(in srgb, var(--nc-color-action-text) 34%, var(--border)) !important;
+  background: var(--nc-color-action-soft) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats .hero-stat :is(span, strong) {
-  color: #0f3d67 !important;
+  color: var(--nc-color-action-text) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview :is(.student-desk__panel, .student-desk__next, .student-hub__rail > *, .student-hub__workspace > *) {
   border-color: #dbe3ea !important;
@@ -724,8 +724,8 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__metrics > *:hover,
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a:hover {
-  border-color: #0369a1 !important;
-  background: #f8fbff !important;
+  border-color: var(--nc-color-action-text) !important;
+  background: var(--nc-color-action-soft) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong,
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__metrics strong {
@@ -736,33 +736,33 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   color: #64748b !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__primary {
-  color: #ffffff !important;
-  background: #0369a1 !important;
+  color: var(--nc-color-action-foreground) !important;
+  background: var(--nc-color-action) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__primary:hover {
-  background: #075985 !important;
+  background: var(--nc-color-action-hover) !important;
 }
 
 /* Replace the dashboard's violet accent with a calmer professional teal. */
 .app-shell[data-area="student"] .student-overview {
-  --home-violet: #69b8c3 !important;
-  --saas-violet: #2f8790 !important;
-  --desk-violet: #4b9ca6 !important;
+  --home-violet: var(--nc-color-action) !important;
+  --saas-violet: var(--nc-color-action) !important;
+  --desk-violet: var(--nc-color-action) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview {
-  --home-violet: #0f766e !important;
-  --saas-violet: #0f766e !important;
-  --desk-violet: #16747b !important;
+  --home-violet: var(--nc-color-action-text) !important;
+  --saas-violet: var(--nc-color-action-text) !important;
+  --desk-violet: var(--nc-color-action-text) !important;
 }
 
 /* Dashboard study cards use neutral slate surfaces instead of purple panels. */
 :root.dark .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
-  border-left-color: #4b9aa4 !important;
-  background: #1d303a !important;
+  border-left-color: var(--nc-color-action) !important;
+  background: var(--nc-color-surface) !important;
   box-shadow: 0 8px 22px rgb(0 0 0 / 18%) !important;
 }
 :root:not(.dark) .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
-  border-left-color: #2f8790 !important;
+  border-left-color: var(--nc-color-action-text) !important;
   background: #ffffff !important;
   box-shadow: 0 6px 18px rgb(15 23 42 / 7%) !important;
 }
