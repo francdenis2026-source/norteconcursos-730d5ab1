@@ -15,6 +15,7 @@ const SUBJECTS_BY_DISCIPLINE: Record<string, string[]> = {
   "raciocinio-logico": ["Raciocínio Lógico"],
   informatica: ["Informática"],
   portugues: ["Língua Portuguesa"],
+  "realidade-acre": ["Realidade do Acre"],
   "direito-penal": ["Direito Penal"],
   "direito-processual-penal": ["Direito Processual Penal"],
   "direito-constitucional": ["Direito Constitucional"],
