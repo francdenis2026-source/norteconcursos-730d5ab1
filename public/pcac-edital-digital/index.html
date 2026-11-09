@@ -1165,3 +1165,36 @@ label.topic.semantic-has-subtopics > .marker-tools {
   updateOverall();
 })();
 </script>
+
+
+<style id="checkbox-input-pointer-fix-v2">
+label.topic > input.topic-study,
+label.subtopic > input[type="checkbox"],
+.semantic-subtopic > input[type="checkbox"] {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 5 !important;
+  cursor: pointer !important;
+}
+</style>
+<script id="checkbox-direct-toggle-v2">
+(()=> {
+  // Capture the physical checkbox click and perform one explicit toggle.
+  // This bypasses conflicting legacy <label> activation/click handlers.
+  document.addEventListener('click',event=>{
+    const input=event.target;
+    if(!(input instanceof HTMLInputElement) || input.type!=='checkbox') return;
+    const row=input.closest('label.topic,label.subtopic,.semantic-subtopic');
+    if(!row) return;
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    // Native checkbox behavior: an indeterminate parent becomes checked.
+    const nextChecked=input.indeterminate ? true : !input.checked;
+    input.indeterminate=false;
+    input.checked=nextChecked;
+    input.dispatchEvent(new Event('change',{bubbles:true}));
+  },true);
+})();
+</script>
