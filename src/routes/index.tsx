@@ -23,6 +23,7 @@ import {
   BadgeCheck,
   BrainCircuit,
   Compass,
+  CreditCard,
   FileSearch,
   Landmark,
   LineChart,
@@ -106,10 +107,10 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const NAV: [string, string][] = [
-  ["A plataforma", "#plataforma"],
-  ["Concursos", "#concursos"],
-  ["Planos", "#planos"],
+const NAV: [string, string, LucideIcon][] = [
+  ["A plataforma", "#plataforma", Compass],
+  ["Concursos", "#concursos", Landmark],
+  ["Planos", "#planos", CreditCard],
 ];
 
 const HOME_SECTION_IDS = ["plataforma", "concursos", "planos"] as const;
@@ -395,13 +396,14 @@ function Index() {
             <StudyPresence />
           </div>
           <nav className="home-nav" aria-label="Navegação principal">
-            {NAV.map(([label, href]) => (
+            {NAV.map(([label, href, Icon]) => (
               <a
                 key={href}
                 href={href}
                 aria-current={activeSection === href.slice(1) ? "location" : undefined}
               >
-                {label}
+                <Icon aria-hidden="true" className="home-nav__icon" />
+                <span>{label}</span>
               </a>
             ))}
           </nav>
