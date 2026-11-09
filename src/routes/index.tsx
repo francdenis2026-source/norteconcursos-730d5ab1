@@ -88,6 +88,7 @@ import "@/styles/home-hero-editorial.css";
 import "@/styles/home-navigation-command.css";
 import "@/styles/home-feature-rail.css";
 import "@/styles/home-glass-fixed-header.css";
+import "@/styles/home-daily-challenge-premium.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -603,6 +604,9 @@ function Index() {
 
       <GeneralAccessBanner />
       <NewsBanner />
+      <div className="home-daily-challenge-wrap">
+        <DailyChallengeBadge />
+      </div>
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
