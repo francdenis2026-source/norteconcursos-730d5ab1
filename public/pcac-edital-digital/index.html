@@ -1716,8 +1716,11 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
 
       disciplines.forEach(discipline=>{
         const summary=discipline.querySelector(':scope > summary');
-        const disciplineMatch=blockMatch || textOf(summary).toLocaleLowerCase('pt-BR').includes(query);
         const body=discipline.querySelector(':scope > .subject-body');
+        const nestedHeadingMatch=body && [...body.querySelectorAll('h4')].some(heading=>
+          textOf(heading).toLocaleLowerCase('pt-BR').includes(query)
+        );
+        const disciplineMatch=blockMatch || textOf(summary).toLocaleLowerCase('pt-BR').includes(query) || nestedHeadingMatch;
         const topics=body?[...body.querySelectorAll(':scope > label.topic')]:[];
         let disciplineHasResult=disciplineMatch;
 
