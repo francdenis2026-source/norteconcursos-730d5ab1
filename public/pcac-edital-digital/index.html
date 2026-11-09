@@ -184,6 +184,12 @@ html,body{width:100%;min-width:0}body{background:#f8fafc;overflow-x:hidden}heade
       if(groupIndex===0 && oldActions) topicCopy.append(oldActions);
 
       parentRow.append(parentInput,topicCopy);
+      parentRow.addEventListener('click',event=>{
+        const target=event.target;
+        if(target instanceof HTMLInputElement || target.closest('.marker-tools,.subtopics-panel,.topic-action,.topic-collapse-toggle')) return;
+        event.preventDefault();
+        event.stopPropagation();
+      });
       if(oldPriority) parentRow.append(groupIndex===0 ? oldPriority : oldPriority.cloneNode(true));
       if(groupIndex===0 && oldMarkerTools) parentRow.append(oldMarkerTools);
       fragment.append(parentRow);
