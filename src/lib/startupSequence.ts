@@ -1,6 +1,6 @@
-export type StartupStage = 'preparing' | 'intro' | 'ready';
+export type StartupStage = 'preparing' | 'ready';
 
-/** Route hydration and optional film form one irreversible startup sequence. */
+/** Reveal the application as soon as its route has hydrated; no intro media blocks startup. */
 export function createStartupSequence(_homeDocument: boolean, reveal: () => void, publish: (stage: StartupStage) => void = () => {}) {
   let routeReady = false;
   // The cinematic intro was removed: the loader ends as soon as the route hydrates.
@@ -19,11 +19,7 @@ export function createStartupSequence(_homeDocument: boolean, reveal: () => void
       complete();
     },
     prepareIntro() { return false; },
-    showIntro() {
-      if (settled || revealed) return false;
-      publish('intro');
-      return true;
-    },
+    showIntro() { return false; },
     settleIntro() { settled = true; complete(); },
     forceReveal() { settled = true; routeReady = true; complete(); },
   };
