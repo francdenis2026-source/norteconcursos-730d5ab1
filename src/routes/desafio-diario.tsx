@@ -133,7 +133,9 @@ function DesafioDiario() {
           if (active) window.location.reload();
           return;
         }
-        const progressRow = Array.isArray(progressData) ? progressData[0] : progressData;
+        const progressRow = (Array.isArray(progressData) ? progressData[0] : progressData) as
+          | { used?: number; answers?: Array<{ id: string; correct: boolean }> }
+          | null;
         const preview = dailyGuestQuestionPreviews((data || []) as Record<string, unknown>[]);
         const serverAnswers = Array.isArray(progressRow?.answers) ? progressRow.answers : [];
         const progress = {
@@ -185,7 +187,16 @@ function DesafioDiario() {
         p_selected_answer: selected,
       });
       if (error) throw error;
-      const graded = Array.isArray(data) ? data[0] : data;
+      const graded = (Array.isArray(data) ? data[0] : data) as
+        | {
+            is_correct: boolean;
+            official_answer: string;
+            explanation?: string | null;
+            legal_basis?: unknown;
+            law_version_checked_at?: string | null;
+            used: number;
+          }
+        | null;
       if (!graded) throw new Error("O servidor não retornou a correção da questão.");
       const isCorrect = Boolean(graded.is_correct);
       const serverAnswer = String(graded.official_answer) as Answer;
