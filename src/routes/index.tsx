@@ -631,21 +631,19 @@ function Index() {
             <div className="home-container hx__inner">
               <div className="hx__copy">
                 <HeroBadge />
-                <div className="hx__kicker" aria-label="Concursos públicos para carreiras policiais e segurança pública">
+                <div className="hx__kicker" aria-label="Preparação estratégica para concursos públicos">
                   <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span className="hx__kicker-primary">CONCURSOS PÚBLICOS</span>
+                  <span className="hx__kicker-primary">SUA JORNADA COMEÇA AQUI</span>
                   <span className="hx__kicker-divider" aria-hidden="true" />
-                  <span className="hx__kicker-secondary">CARREIRAS POLICIAIS E SEGURANÇA PÚBLICA</span>
+                  <span className="hx__kicker-secondary">FOCO · MÉTODO · CONSTÂNCIA</span>
                 </div>
-                <h1 id="home-title" className="hx__headline">
-                  <span className="hx__glass-strip">Sua aprovação começa</span>
-                  <span className="hx__glass-strip"><em>com estratégia.</em></span>
+                <h1 id="home-title" className="hx__headline hr-hero__headline">
+                  <span>Vista o seu futuro.</span>
+                  <span><em>Prepare sua conquista.</em></span>
                 </h1>
-                <p className="hx__description">
-                  <span className="hx__glass-strip">
-                    Da escolha do edital à revisão final: organize seu plano de estudos, aprofunde
-                    os conteúdos e pratique com questões e simulados em um só lugar.
-                  </span>
+                <p className="hx__description hr-hero__description">
+                  Transforme seu objetivo em um plano possível: estude pelo edital, pratique com questões
+                  e acompanhe sua evolução em uma plataforma feita para quem leva a aprovação a sério.
                 </p>
                 <div className="home-actions hr-cta-row">
                   <Link
@@ -663,6 +661,27 @@ function Index() {
                   </a>
                 </div>
               </div>
+              <aside className="hr-hero-route" aria-label="Método de preparação Norte">
+                <div className="hr-hero-route__top">
+                  <span className="hr-hero-route__eyebrow">MÉTODO NORTE</span>
+                  <span className="hr-hero-route__status"><i /> SUA ROTA DE APROVAÇÃO</span>
+                </div>
+                <div className="hr-hero-route__steps">
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">01</span>
+                    <div><strong>Defina seu alvo</strong><small>Encontre o edital e entenda o que priorizar.</small></div>
+                  </div>
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">02</span>
+                    <div><strong>Estude com direção</strong><small>Organize matérias, revisões e metas.</small></div>
+                  </div>
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">03</span>
+                    <div><strong>Treine sua evolução</strong><small>Resolva questões e acompanhe seu desempenho.</small></div>
+                  </div>
+                </div>
+                <div className="hr-hero-route__footer"><ShieldCheck aria-hidden="true" /><span>Uma preparação completa. Um passo de cada vez.</span></div>
+              </aside>
               </div>
           </div>
         </section>
