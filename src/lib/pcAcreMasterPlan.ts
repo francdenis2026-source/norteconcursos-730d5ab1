@@ -90,7 +90,7 @@ function activitiesForRevisao(subject: string | undefined, isLastStudyDayOfWeek:
   }
   const theme = REDACAO_THEMES[weekIndex % REDACAO_THEMES.length];
   return [
-    { type: "revisao", subject, detail: subject ? `Revisão rápida: ${subject} — refaça só as questões que errou antes.` : "Revisão rápida dos pontos mais fracos do Anexo III." },
+    { type: "revisao", ...(subject ? { subject } : {}), detail: subject ? `Revisão rápida: ${subject} — refaça só as questões que errou antes.` : "Revisão rápida dos pontos mais fracos do Anexo III." },
     { type: "redacao", detail: `Redação: pratique novamente sobre ${theme}, cronometrando 1h.` },
   ];
 }
