@@ -160,11 +160,14 @@ export function simulatorResume(
     !d.answers ||
     typeof d.answers !== "object" ||
     Array.isArray(d.answers) ||
+    typeof d.startedAt !== "number" ||
     !Number.isFinite(d.startedAt) ||
     d.startedAt > now ||
+    typeof d.durationMinutes !== "number" ||
     !Number.isInteger(d.durationMinutes) ||
     d.durationMinutes < 1 ||
     d.durationMinutes > 720 ||
+    typeof d.currentIndex !== "number" ||
     !Number.isInteger(d.currentIndex) ||
     d.currentIndex < 0 ||
     d.currentIndex >= d.questions.length ||
@@ -175,6 +178,9 @@ export function simulatorResume(
     (d.skipped !== undefined && !Array.isArray(d.skipped))
   )
     return null;
+  const startedAt = d.startedAt;
+  const durationMinutes = d.durationMinutes;
+  const currentIndex = d.currentIndex;
   const questionIds = d.questions.map((q) => q?.id);
   if (
     questionIds.some((id) => typeof id !== "string" || !id.trim()) ||
@@ -191,18 +197,18 @@ export function simulatorResume(
   const skipped = (d.skipped ?? []).filter((id) => !d.answers![id]).length;
   const total = d.questions.length;
   const secondsLeft =
-    d.phase === "result" ? 0 : simulatorClock(d.startedAt, d.durationMinutes * 60, now).remaining;
+    d.phase === "result" ? 0 : simulatorClock(startedAt, durationMinutes * 60, now).remaining;
   return {
     kind: "simulator",
     title: d.title || (scope === "enem" ? "Simulado ENEM" : "Simulado"),
-    position: Math.min(total, Math.max(0, (d.currentIndex ?? 0) + 1)),
+    position: Math.min(total, Math.max(0, currentIndex + 1)),
     total,
     answered,
     correct: null,
     wrong: null,
     skipped,
     remaining: total - answered,
-    savedAt: d.startedAt,
+    savedAt: startedAt,
     secondsLeft,
     unsavedResult: d.phase === "result",
     to: "/dashboard/mock-exams",
