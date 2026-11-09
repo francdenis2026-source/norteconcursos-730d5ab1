@@ -21,7 +21,9 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
+  BookOpen,
   BrainCircuit,
+  ChevronDown,
   Compass,
   FileSearch,
   Landmark,
@@ -78,6 +80,7 @@ import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
 import "@/styles/home-v2.css";
 import "@/styles/home-redesign.css";
+import "@/styles/home-navigation-premium.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -108,13 +111,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const NAV: [string, string][] = [
-  ["A plataforma", "#plataforma"],
-  ["Concursos", "#concursos"],
-  ["Planos", "#planos"],
-];
-
-const HOME_SECTION_IDS = ["plataforma", "concursos", "planos"] as const;
+const HOME_SECTION_IDS = ["inicio", "plataforma", "concursos", "planos"] as const;
 
 const EXPLORE_LINKS: [string, string][] = [
   ["Ferramentas", "#ferramentas"],
@@ -395,15 +392,36 @@ function Index() {
             <StudyPresence />
           </div>
           <nav className="home-nav hr-nav" aria-label="Navegação principal">
-            {NAV.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                aria-current={activeSection === href.slice(1) ? "location" : undefined}
-              >
-                {label}
-              </a>
-            ))}
+            <a href="#inicio" aria-current={activeSection === "inicio" ? "location" : undefined}>
+              <Home aria-hidden="true" />
+              <span>Início</span>
+            </a>
+            <a href="#plataforma" aria-current={activeSection === "plataforma" ? "location" : undefined}>
+              <BookOpen aria-hidden="true" />
+              <span>Plataforma</span>
+            </a>
+            <a href="#concursos" aria-current={activeSection === "concursos" ? "location" : undefined}>
+              <Landmark aria-hidden="true" />
+              <span>Concursos</span>
+            </a>
+            <details className="home-nav__group">
+              <summary aria-label="Abrir menu de preparação">
+                <Target aria-hidden="true" />
+                <span>Preparação</span>
+                <ChevronDown className="home-nav__chevron" aria-hidden="true" />
+              </summary>
+              <div className="home-nav__panel">
+                <a href="#ferramentas">Ferramentas de estudo</a>
+                <a href="#como">Como funciona</a>
+                <a href="#carreiras">Carreiras policiais</a>
+                <a href="#fontes">Fontes oficiais</a>
+                <Link to="/desafio-diario">Desafio diário</Link>
+              </div>
+            </details>
+            <a href="#planos" aria-current={activeSection === "planos" ? "location" : undefined}>
+              <Layers3 aria-hidden="true" />
+              <span>Planos</span>
+            </a>
           </nav>
           <span className="home-header__tagline" aria-hidden="true">
             Sua preparação tem direção.
