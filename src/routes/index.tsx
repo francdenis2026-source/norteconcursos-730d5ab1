@@ -91,6 +91,7 @@ import "@/styles/home-glass-fixed-header.css";
 import "@/styles/home-daily-challenge-premium.css";
 import "@/styles/home-desktop-pro.css";
 import "@/styles/home-viewport-fit.css";
+import "@/styles/home-showcase-redesign.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
