@@ -9,6 +9,7 @@ import {
   pcAcVerticalCounts,
   pcAcVerticalDisciplineCounts,
   pcAcVerticalItemId,
+  pcAcVerticalTopicStatus,
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
 import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
@@ -227,9 +228,13 @@ export async function generatePcAcVerticalPdf(
         const group = topics[i]!;
         const units = group.subtopics.length ? group.subtopics : [group.title];
         const groupStatuses = units.map((_, j) =>
-          group.subtopics.length
-            ? progress[pcAcVerticalItemId(block.title, discipline.id, i, j)]
-            : progress[pcAcVerticalItemId(block.title, discipline.id, i)],
+          pcAcVerticalTopicStatus(
+            progress,
+            block.title,
+            discipline.id,
+            i,
+            group.subtopics.length ? j : undefined,
+          ),
         );
         const groupStatus = groupStatuses.every((value) => value === "estudado")
           ? "estudado"
