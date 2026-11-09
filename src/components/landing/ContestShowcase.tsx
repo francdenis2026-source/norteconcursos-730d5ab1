@@ -208,14 +208,20 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         </div>
       </article>
 
-      <div className="contest-catalog__heading">
-        <div>
-          <span className="contest-eyebrow">DA PREPARAÇÃO À PRÁTICA</span>
-          <h3>Provas reais. Seu próximo treino.</h3>
+      <section className="contest-catalog__feature-band" aria-labelledby={"contest-catalog-title" + suffix}>
+        <div className="contest-catalog__feature-intro">
+          <span className="contest-catalog__feature-eyebrow"><Sparkles size={14} aria-hidden="true" /> OPORTUNIDADES EM DESTAQUE</span>
+          <h3 id={"contest-catalog-title" + suffix}>Outros concursos <em>para acompanhar</em></h3>
+          <p>Acompanhe provas reais, bancas e oportunidades da área policial. Consulte os dados e escolha seu próximo treino.</p>
+          <div className="contest-catalog__feature-points">
+            <span><ShieldCheck aria-hidden="true" /> Provas e editais</span>
+            <span><CalendarDays aria-hidden="true" /> Datas e bancas</span>
+            <span><Users aria-hidden="true" /> Questões disponíveis</span>
+          </div>
+          <span className="contest-catalog__feature-hint">Escolha um concurso para abrir o treino correspondente.</span>
         </div>
-        <p>Escolha o concurso e veja quantas questões estão disponíveis. <span className="contest-swipe-hint">Deslize para ver outros concursos →</span></p>
-      </div>
-      <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
+        <div className="contest-catalog__feature-cards">
+          <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
         <article
           className="contest-card contest-card--idecan hr-contest-card"
           id={"prova-pcsc" + suffix}
@@ -223,7 +229,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         >
           <span className="hr-contest-index" aria-hidden="true">02</span>
           <span className="contest-card__badge">
-            <Sparkles size={11} aria-hidden="true" /> Novo
+            <Sparkles size={11} aria-hidden="true" /> PROVA REAL
           </span>
           <div className="contest-card__art">
             <img
@@ -272,6 +278,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         </article>
         <article className="contest-card hr-contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
           <span className="hr-contest-index" aria-hidden="true">03</span>
+          <span className="contest-card__badge"><ShieldCheck size={11} aria-hidden="true" /> PROVA APLICADA</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpr-capa.webp"
@@ -329,6 +336,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         </article>
         <article className="contest-card hr-contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
           <span className="hr-contest-index" aria-hidden="true">04</span>
+          <span className="contest-card__badge"><BriefcaseBusiness size={11} aria-hidden="true" /> POR CARGO</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpi-capa.webp"
@@ -375,7 +383,9 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
             </details>
           </div>
         </article>
-      </div>
+          </div>
+        </div>
+      </section>
       <div className="contest-carousel-controls" aria-label="Navegação entre concursos">
         <span className="contest-carousel-status" aria-live="polite">{activeContest + 1} de {contestTotal} concursos</span>
         <div className="contest-carousel-dots" aria-label="Selecionar concurso">
