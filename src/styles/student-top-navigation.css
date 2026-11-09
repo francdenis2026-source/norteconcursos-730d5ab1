@@ -289,7 +289,7 @@
     border-color: color-mix(in srgb, var(--nav-accent) 13%, transparent);
     background: var(--nav-wash);
   }
-  .student-top-navigation__trigger[data-tone] { --nav-accent: #b7c3ff; --nav-wash: rgb(128 145 238 / 9%); }
+  .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action); --nav-wash: var(--nc-color-action-soft); }
   .student-top-navigation__label {
     color: var(--nav-accent);
     font-weight: 720;
@@ -632,7 +632,7 @@
     background: color-mix(in srgb, var(--nav-accent) 8%, #fff) !important;
     box-shadow: 0 1px 3px rgb(29 57 85 / 5%);
   }
-  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone] { --nav-accent: #4e5fae; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action-text); }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__label {
     color: var(--nav-accent) !important;
     font-weight: 800;
