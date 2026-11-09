@@ -99,6 +99,40 @@ export function dailyGuestQuestions(rows: Record<string, unknown>[]): Question[]
     })
     .slice(0, 10);
 }
+/**
+ * Public preview rows are already filtered by the SECURITY DEFINER RPC.
+ * The server deliberately sends no answer key or explanation before grading.
+ * "C" is a UI placeholder only and must never be used to grade locally.
+ */
+export function dailyGuestQuestionPreviews(rows: Record<string, unknown>[]): Question[] {
+  const seen = new Set<string>();
+  return rows.flatMap((row) => {
+    const text = String(row["question_text"] ?? "");
+    const id = String(row["id"] ?? "");
+    if (!id || !text || seen.has(id)) return [];
+    seen.add(id);
+    return [{
+      id,
+      source: "official" as const,
+      table: "official_exam_questions" as const,
+      contest: String(row["contest_name"] ?? ""),
+      year: String(row["exam_year"] ?? ""),
+      career: String(row["career_name"] || "Carreira não informada"),
+      board: String(row["exam_board"] || "Banca não informada"),
+      subject: canonicalSubject(String(row["subject"] ?? "")),
+      subtopic: null,
+      text,
+      answer: "C" as Answer,
+      kind: "true_false" as const,
+      explanation: "",
+      legalBasis: [],
+      checkedAt: null,
+      difficulty: normalizeDifficulty(row["difficulty"]),
+      state: String(row["state"] || ""),
+      category: String(row["career_category"] || ""),
+    }];
+  }).slice(0, 10);
+}
 export function pendingGuestQuestions(questions: Question[], progress: GuestProgress) {
   const ids = new Set(progress.answers.map((a) => a.id)),
     keys = new Set(progress.answers.map((a) => a.key));
