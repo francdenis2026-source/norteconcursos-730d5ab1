@@ -695,36 +695,19 @@ function Index() {
 
         <section
           id="plataforma"
-          className="home-section home-preparation hr-section hr-showcase"
+          className="home-section home-preparation hr-section hr-showcase hr-showcase-artwork"
           aria-label="O ecossistema Norte — preparação completa"
         >
           <img
             className="hr-showcase-art"
             src="/media/hero/banner-premium-norte-concursos.webp"
-            alt="Norte Concursos: ferramentas de estudo, método de preparação, concursos e fontes confiáveis."
+            alt="O ecossistema Norte: ferramentas, método de preparação, concursos e fontes confiáveis."
             width={2172}
             height={724}
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
             decoding="async"
           />
-          <div className="home-container hr-showcase__inner">
-            <div className="hr-showcase__heading">
-              <div>
-                <span className="hr-showcase__eyebrow">O ECOSSISTEMA NORTE · PREPARAÇÃO COMPLETA</span>
-                <h2 id="preparation-title">
-                  Tudo para transformar <em>estudo em resultado.</em>
-                </h2>
-                <p>
-                  Do planejamento às questões e à análise de desempenho: encontre cada etapa da sua preparação em um só lugar.
-                </p>
-              </div>
-              <div className="hr-showcase__index" aria-label="Sete recursos de preparação integrados">
-                <strong>07</strong>
-                <span>FERRAMENTAS<br />INTEGRADAS</span>
-              </div>
-            </div>
-            <PreparationInfo />
-          </div>
         </section>
 
         <section id="concursos" className="home-section home-operations hr-section hr-section--alt">
