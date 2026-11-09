@@ -6,7 +6,6 @@ import {
   ClipboardList,
   Calendar,
   ChevronRight,
-  Target,
 } from "lucide-react";
 import { useAuthStatus, useDashboardData } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
@@ -127,21 +126,21 @@ function MyContestPage() {
         </div>
         {!matches.length && !editions.isLoading && (
           <p className="text-sm text-muted-foreground">
-            {focusedContest
+            {activeContest
               ? "Não encontramos uma edição vinculada exatamente a este concurso e cargo. Consulte o catálogo para localizar as opções disponíveis."
               : "Escolha uma edição no catálogo de editais para consultar o programa de estudo."}
           </p>
         )}
         <div className="flex flex-wrap gap-2">
-          <Button asChild variant={focusedContest ? "default" : "outline"}>
+          <Button asChild variant={activeContest ? "default" : "outline"}>
             <Link to="/dashboard/edital">
               <BookOpenText className="mr-2 h-4 w-4" />
               Estudar pelo edital
             </Link>
           </Button>
-          <Button asChild variant={focusedContest ? "outline" : "default"}>
+          <Button asChild variant={activeContest ? "outline" : "default"}>
             <Link to="/dashboard/questions">
-              {focusedContest ? "Trocar meu concurso" : "Escolher meu concurso"}
+              {activeContest ? "Trocar meu concurso" : "Escolher meu concurso"}
             </Link>
           </Button>
         </div>
