@@ -10,8 +10,8 @@ The existing `PRODUCT.md` is the source of truth:
 
 - Audience: candidates preparing for public-service examinations, especially public-safety careers.
 - Product: questions, mock exams, notices, legislation, study routines and performance in one coherent workspace.
-- Brand: Norte Concurso; gold remains the highlight and primary action color.
-- Visual constraints: avoid brown and blue-petrol; use a professional visual language appropriate to public-safety education.
+- Brand: Norte Concurso; no single hue is mandatory as the dominant color or primary action.
+- Visual direction: compare professional combinations including navy, petrol/teal, restrained gold and cool neutrals; choose by accessibility, clarity, hierarchy and consistency across themes and breakpoints.
 - Preserve the homepage introduction video behavior; only its visual treatment may change.
 - Preserve existing routes, data, permissions, paid-plan rules, study features and administrative workflows.
 - Keep the platform responsive on desktop, tablet and mobile.
@@ -23,8 +23,8 @@ The existing `PRODUCT.md` is the source of truth:
 ### P0 — Conflicting visual sources of truth
 
 - `src/styles.css` is approximately 592 KB and contains roughly 171 `:root` occurrences, 527 `.dark` occurrences and 283 `!important` declarations.
-- The global stylesheet contains the Porcelain & Gold foundation, but page-level styles add independent palettes and repeated overrides.
-- Student styles currently define several competing accent families: blue, cyan/teal, green, violet, rose and amber. `dashboard-light.css` also introduces a violet hue and a blue primary that conflict with the product's gold-first brand commitment.
+- The global stylesheet contains legacy palette foundations, but page-level styles add independent palettes and repeated overrides. Treat all legacy palette choices as candidates, not mandates.
+- Student styles currently define several competing accent families: blue, cyan/teal, green, violet, rose and amber. `dashboard-light.css` also introduces a violet hue and a blue primary that compete with one another and need semantic roles.
 - `student-overview-v3.css`, `student-saas-dashboard.css`, `student-design-system.css` and `student-home-premium.css` each define overlapping surface, text, accent or theme variables.
 
 **Impact:** a page can look different depending on which route-specific stylesheet wins the cascade. Theme fixes may solve one page and regress another.
