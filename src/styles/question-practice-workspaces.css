@@ -1,0 +1,562 @@
+/* Norte Concursos — focused practice, question catalog and spaced-repetition surfaces.
+   Operate mode: familiar controls, restrained brand accents, calm reading surfaces.
+   Presentation only. All filtering, scoring, persistence and review behavior stay intact. */
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) {
+  --practice-ink: #24333b;
+  --practice-muted: #62737b;
+  --practice-line: #dce4e6;
+  --practice-paper: #ffffff;
+  --practice-soft: #f4f7f7;
+  --practice-accent: #286a70;
+  --practice-accent-strong: #20565d;
+  --practice-accent-soft: #eaf2f2;
+  --practice-gold: #a77b42;
+  color: var(--practice-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.dark .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) {
+  --practice-ink: #eaf1f2;
+  --practice-muted: #afc0c5;
+  --practice-line: #344a52;
+  --practice-paper: #172b33;
+  --practice-soft: #1d353d;
+  --practice-accent: #8ac9c8;
+  --practice-accent-strong: #a3d9d7;
+  --practice-accent-soft: #203e43;
+  --practice-gold: #d8b77c;
+}
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(h1,h2,h3,h4) {
+  color: var(--practice-ink);
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) .text-muted-foreground {
+  color: var(--practice-muted);
+}
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(input,select,textarea,[role="combobox"]) {
+  min-width: 0;
+  border-color: var(--practice-line);
+  border-radius: 9px;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+}
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(button,a,input,select,textarea,[role="tab"],summary):focus-visible {
+  outline: 2px solid var(--practice-accent);
+  outline-offset: 3px;
+}
+
+/* Session builder: one cohesive control surface, filters grouped by task priority. */
+.app-shell[data-area="student"] .trainer-setup {
+  max-width: 1080px;
+  gap: 12px;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified {
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 15px;
+  background: var(--practice-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 14px;
+  border-color: var(--practice-line);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head > div:first-child > span {
+  display: none;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head h1 {
+  font-size: 19px;
+  font-weight: 780;
+  letter-spacing: -.035em;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head > div:first-child > span.grid {
+  border: 1px solid var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-soft);
+  color: var(--practice-accent);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__metric {
+  align-items: baseline;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--practice-line);
+  border-radius: 9px;
+  background: var(--practice-soft);
+  color: var(--practice-muted);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__metric strong {
+  color: var(--practice-ink);
+  font-size: 15px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__metric--selected {
+  border-color: color-mix(in srgb,var(--practice-accent) 38%,var(--practice-line));
+  background: var(--practice-accent-soft);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__metric--selected strong {
+  color: var(--practice-accent-strong);
+}
+.app-shell[data-area="student"] .trainer-setup .grid.grid-cols-2.gap-2 {
+  gap: 12px;
+}
+.app-shell[data-area="student"] .trainer-setup label.space-y-1 {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .trainer-setup label.space-y-1 > span:first-child {
+  color: var(--practice-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .015em;
+  text-transform: none;
+}
+.app-shell[data-area="student"] .trainer-setup :is([data-slot="select-trigger"],button[data-slot="select-trigger"]) {
+  min-height: 42px;
+  border-color: var(--practice-line);
+  border-radius: 9px;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more {
+  border-color: var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more > summary {
+  min-height: 34px;
+  color: var(--practice-ink);
+  font-size: 11px;
+  letter-spacing: .025em;
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more > summary svg {
+  color: var(--practice-muted);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more > div {
+  padding-top: 12px;
+  border-top: 1px solid var(--practice-line);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more label.flex.items-center {
+  min-height: 56px;
+  border-color: var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-paper);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-more label.flex.items-center input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--practice-accent);
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+  align-items: center;
+  padding: 12px 14px;
+  border-color: var(--practice-line);
+  border-radius: 11px;
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl p {
+  color: var(--practice-ink);
+  font-size: 13px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button {
+  min-height: 42px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action {
+  background: var(--practice-accent-strong);
+  color: #fff;
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:disabled {
+  opacity: .48;
+}
+
+/* Question bank: search first, source filters second, catalog statistics as one compact strip. */
+.app-shell[data-area="student"] .question-catalog {
+  gap: 13px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters {
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 13px;
+  background: var(--practice-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters [data-slot="card-content"] {
+  gap: 12px;
+  padding: 15px 17px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters fieldset {
+  padding-bottom: 12px;
+  border-color: var(--practice-line);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters legend {
+  color: var(--practice-muted);
+  font-size: 11px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters [role="group"] {
+  gap: 6px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters [role="group"] button {
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid var(--practice-line);
+  border-radius: 8px;
+  background: var(--practice-paper);
+  color: var(--practice-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters [role="group"] button[aria-pressed="true"] {
+  border-color: var(--practice-accent);
+  background: var(--practice-accent-soft);
+  color: var(--practice-accent-strong);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters input {
+  min-height: 42px;
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__filters > [data-slot="card-content"] > p {
+  margin: 0;
+  color: var(--practice-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__scope {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 12px;
+  margin: 0 0 9px;
+  color: var(--practice-ink);
+  font-size: 13px;
+  font-weight: 760;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__scope span {
+  color: var(--practice-muted);
+  font-size: 11px;
+  font-weight: 450;
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 11px;
+  background: var(--practice-paper);
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric {
+  flex: 1 1 150px;
+  min-width: 0;
+  min-height: 0;
+  gap: 2px;
+  padding: 11px 15px;
+  border: 0;
+  border-right: 1px solid var(--practice-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric:last-child {
+  border-right: 0;
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric > span {
+  color: var(--practice-muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric > strong {
+  margin: 1px 0;
+  color: var(--practice-ink);
+  font-size: 19px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric > small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--practice-accent-strong);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser {
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 13px;
+  background: var(--practice-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser-head {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--practice-line);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__browser-head [data-slot="card-title"] {
+  font-size: 15px;
+  font-weight: 780;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs {
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"] {
+  min-height: 36px;
+  border-radius: 7px;
+  color: var(--practice-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__view-tabs [role="tab"][aria-selected="true"] {
+  background: var(--practice-paper);
+  color: var(--practice-accent-strong);
+  box-shadow: 0 1px 3px rgb(15 35 42 / 10%);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-list {
+  gap: 0;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row {
+  min-height: 52px;
+  padding: 10px 13px;
+  border-bottom: 1px solid var(--practice-line);
+  background: transparent;
+  color: var(--practice-ink);
+  transition: background-color 140ms ease;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row:hover {
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row:last-child {
+  border-bottom: 0;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__result-row :is(span,strong) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__pager {
+  padding-top: 12px;
+  border-top: 1px solid var(--practice-line);
+}
+.app-shell[data-area="student"] .question-catalog .question-catalog__pager button {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 8px;
+}
+
+/* Flashcards: put the next learning action first; make the deck stats supporting context. */
+.app-shell[data-area="student"] .question-flashcards {
+  gap: 13px;
+}
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 11px;
+  background: var(--practice-paper);
+}
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metric {
+  flex: 1 1 145px;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 10px 14px;
+  border: 0;
+  border-right: 1px solid var(--practice-line);
+  border-radius: 0;
+  background: transparent;
+}
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metric:last-child {
+  border-right: 0;
+}
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metric p:first-child {
+  grid-column: 1;
+  margin: 0;
+  color: var(--practice-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metric p:last-child {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+  color: var(--practice-ink);
+  font-size: 20px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .question-flashcards [role="tablist"] {
+  width: fit-content;
+  max-width: 100%;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-soft);
+}
+.app-shell[data-area="student"] .question-flashcards [role="tablist"] [role="tab"] {
+  min-height: 38px;
+  padding: 7px 13px;
+  border: 0;
+  border-radius: 7px;
+  color: var(--practice-muted);
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .question-flashcards [role="tablist"] [role="tab"][aria-selected="true"] {
+  background: var(--practice-paper);
+  color: var(--practice-accent-strong);
+  box-shadow: 0 1px 3px rgb(15 35 42 / 10%);
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card"] {
+  border: 1px solid var(--practice-line);
+  border-radius: 13px;
+  background: var(--practice-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card-header"] {
+  padding: 16px 18px 11px;
+  border-bottom: 1px solid var(--practice-line);
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card-content"] {
+  padding: 16px 18px 18px;
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card-title"] {
+  color: var(--practice-ink);
+  font-size: 15px;
+}
+.app-shell[data-area="student"] .question-flashcards button.flex.min-h-56 {
+  min-height: clamp(190px,26vh,270px);
+  padding: clamp(18px,3vw,34px);
+  border: 1px solid var(--practice-line);
+  border-radius: 13px;
+  background: var(--practice-soft);
+  color: var(--practice-ink);
+  box-shadow: none;
+  overflow-wrap: anywhere;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+.app-shell[data-area="student"] .question-flashcards button.flex.min-h-56:hover {
+  border-color: color-mix(in srgb,var(--practice-accent) 45%,var(--practice-line));
+  background: var(--practice-accent-soft);
+}
+.app-shell[data-area="student"] .question-flashcards button.flex.min-h-56 > span:first-child {
+  color: var(--practice-accent-strong);
+  letter-spacing: .04em;
+}
+.app-shell[data-area="student"] .question-flashcards button.flex.min-h-56 > span:last-child {
+  max-width: 68ch;
+  font-size: clamp(16px,1.6vw,21px);
+  font-weight: 650;
+  line-height: 1.7;
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card"] button.rounded-xl.border {
+  min-height: 48px;
+  border-color: var(--practice-line);
+  border-radius: 10px;
+  background: var(--practice-soft);
+  color: var(--practice-ink);
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card"] button.rounded-xl.border:hover:not(:disabled) {
+  border-color: var(--practice-accent);
+}
+.app-shell[data-area="student"] .question-flashcards [data-slot="card"] button.rounded-xl.border:disabled {
+  opacity: .55;
+}
+.app-shell[data-area="student"] .question-flashcards .divide-y > li {
+  border-color: var(--practice-line);
+}
+.app-shell[data-area="student"] .question-flashcards .divide-y > li > div:first-child {
+  min-width: 0;
+}
+.app-shell[data-area="student"] .question-flashcards .divide-y > li > div:first-child > p:first-child {
+  color: var(--practice-ink);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .question-flashcards .divide-y > li > div:first-child > div {
+  row-gap: 6px;
+}
+.app-shell[data-area="student"] .question-flashcards :is(.question-workspace__metric,.question-catalog__result-row) {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head > div:last-child {
+    width: 100%;
+  }
+  .app-shell[data-area="student"] .trainer-setup .grid.grid-cols-2.gap-2 {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 9px;
+  }
+  .app-shell[data-area="student"] .trainer-setup .trainer-setup__metric {
+    flex: 1;
+    justify-content: center;
+  }
+  .app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric {
+    flex-basis: 50%;
+    border-bottom: 1px solid var(--practice-line);
+  }
+  .app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric:nth-child(2) {
+    border-right: 0;
+  }
+  .app-shell[data-area="student"] .question-catalog .catalog-metrics .question-workspace__metric:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric {
+    flex-basis: 50%;
+    border-bottom: 1px solid var(--practice-line);
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric:nth-child(2) {
+    border-right: 0;
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric:last-child {
+    border-bottom: 0;
+  }
+  .app-shell[data-area="student"] .question-flashcards [data-slot="card-header"],
+  .app-shell[data-area="student"] .question-flashcards [data-slot="card-content"] {
+    padding-inline: 13px;
+  }
+}
+@media (max-width: 420px) {
+  .app-shell[data-area="student"] .trainer-setup .grid.grid-cols-2.gap-2 {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .app-shell[data-area="student"] .question-catalog .question-catalog__filters [role="group"] {
+    flex-wrap: wrap;
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metrics {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric {
+    border-right: 1px solid var(--practice-line);
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric:nth-child(2) {
+    border-right: 0;
+  }
+  .app-shell[data-area="student"] .question-flashcards .question-workspace__metric:last-child {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) * {
+    transition: none !important;
+  }
+}
