@@ -39,6 +39,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { canRegisterExams } from "@/lib/subscriptions.config";
 import { cn } from "@/lib/utils";
 import "@/styles/student-exams-refinement.css";
+import "@/styles/student-assessment-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
