@@ -325,9 +325,9 @@
   }
   #norte-initial-loading .startup-intro .tactical-intro__identity > img {
     display: block;
-    width: clamp(108px, 32vw, 165px);
-    max-width: 42vw;
-    max-height: min(20dvh, 165px);
+    width: clamp(148px, 48vw, 190px);
+    max-width: 88vw;
+    max-height: min(24dvh, 190px);
     height: auto;
     object-fit: contain;
     opacity: 1;
@@ -380,8 +380,9 @@
     gap: 4px;
   }
   #norte-initial-loading .startup-intro .tactical-intro__identity > img {
-    width: min(25vw, 92px);
-    max-height: 14dvh;
+    width: min(42vw, 128px);
+    max-width: 72vw;
+    max-height: 18dvh;
   }
   #norte-initial-loading .startup-intro .tactical-intro__body {
     gap: 10px;
