@@ -224,3 +224,25 @@
     border-bottom: 0 !important;
   }
 }
+
+
+/* The desktop hero was visually empty at common laptop viewport heights.
+   The daily challenge is now the first homepage section, directly below the notices. */
+@media (min-width: 761px) {
+  .home.hr-canvas .desktop-homepage > #inicio.home-daily-challenge-wrap {
+    box-sizing: border-box !important;
+    width: min(calc(100% - clamp(40px, 6vw, 96px)), 1600px) !important;
+    max-width: 1600px !important;
+    margin: 14px auto 20px !important;
+    position: relative !important;
+    z-index: 4 !important;
+  }
+  .home.hr-canvas #plataforma.hr-showcase-artwork {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .desktop-homepage > #inicio.home-daily-challenge-wrap {
+    margin-top: 9px !important;
+  }
+}
