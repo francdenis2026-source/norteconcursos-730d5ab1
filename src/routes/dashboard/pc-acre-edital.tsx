@@ -6,6 +6,7 @@ import {
   BrainCircuit,
   CalendarClock,
   CheckCircle2,
+  Clock,
   Download,
   GraduationCap,
   PlayCircle,
@@ -70,11 +71,13 @@ import {
   buildPcAcMasterPlan,
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
+import { buildPcAcHourlyPlan } from "@/lib/pcAcreHourlyPlan";
 import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const PLANO_ESTUDOS_ANCHOR = "pcac-plano-estudos";
+const CRONOGRAMA_HORARIO_ANCHOR = "pcac-cronograma-horario";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
@@ -648,6 +651,86 @@ function PcAcMasterPlanCard({
   );
 }
 
+/** Cronograma horário detalhado: 06:00–22:00, todos os dias, a partir de segunda-feira
+ * 09/11/2026, com intervalos de descanso marcados. Complementa o plano de estudos completo
+ * acima (aquele diz o que estudar e em que ordem; este diz a que hora exata). */
+function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
+  const [exporting, setExporting] = React.useState(false);
+  const weeks = React.useMemo(() => buildPcAcHourlyPlan(), []);
+  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
+
+  const exportPdf = async () => {
+    setExporting(true);
+    try {
+      const { generatePcAcHourlyPlanPdf } = await import("@/lib/pcAcreHourlyPlanPdf");
+      await generatePcAcHourlyPlanPdf(cargoLabel, weeks, finalDays);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  return (
+    <Card id={CRONOGRAMA_HORARIO_ANCHOR} className="pcac-edital-card pcac-edital-hourly-plan scroll-mt-20">
+      <CardHeader>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <Clock className="h-5 w-5 text-primary" />
+              Cronograma horário detalhado
+            </CardTitle>
+            <CardDescription>
+              Das 06:00 às 22:00, todos os dias, a partir de segunda-feira (09/11), com
+              intervalos de descanso marcados. Sábado é dia de simulado completo; domingo é
+              descanso ativo, reduzido de propósito.
+            </CardDescription>
+          </div>
+          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !weeks.length}>
+            <Download className="mr-2 h-4 w-4" />
+            {exporting ? "Gerando…" : "Exportar cronograma horário em PDF"}
+          </Button>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <p className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-muted-foreground">
+          Estudar 16h por dia, todos os dias, por mais de dois meses sem pausa reduz o
+          desempenho na reta final — por isso domingo foi reservado para descanso ativo. Veja o
+          detalhe dia a dia no PDF; aqui, a primeira semana a título de exemplo.
+        </p>
+        {weeks[0] && (
+          <Accordion type="multiple" defaultValue={weeks[0].days.map((d) => d.date)}>
+            {weeks[0].days.map((day) => (
+              <AccordionItem key={day.date} value={day.date}>
+                <AccordionTrigger className="text-left text-sm">
+                  {["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][day.weekday]}{" "}
+                  · {day.date.split("-").reverse().join("/")}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-1">
+                    {day.blocks.map((block, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs">
+                        <span className="shrink-0 font-mono text-[10px] font-semibold text-amber-700 dark:text-amber-300">
+                          {block.start}–{block.end}
+                        </span>
+                        <span className="text-muted-foreground">
+                          <span className="font-semibold text-foreground/90">{PCAC_ACTIVITY_LABEL[block.type]}:</span> {block.label}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        )}
+        <p className="text-xs text-muted-foreground">
+          {weeks.length} semana{weeks.length === 1 ? "" : "s"} completas no PDF, hora a hora, até
+          3 dias antes da prova.
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
+
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
@@ -991,7 +1074,10 @@ function PcAcreEditalVerticalizadoPage() {
       <PcAcStudyPlanCard cargo={cargo} userId={userId} />
 
       {cargo.id === "investigador" && (
-        <PcAcMasterPlanCard cargoLabel={cargo.label} cargoId={cargo.id} userId={userId} />
+        <>
+          <PcAcMasterPlanCard cargoLabel={cargo.label} cargoId={cargo.id} userId={userId} />
+          <PcAcHourlyPlanCard cargoLabel={cargo.label} />
+        </>
       )}
 
       <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
