@@ -177,7 +177,7 @@
    This stylesheet is imported last by the homepage so these rules supersede
    earlier compact overrides without affecting the authenticated dashboard. */
 @media (max-width: 1100px) {
-  .home.home { padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
+  .home.home { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
   .home.home .home-app-nav {
     width: min(680px, calc(100% - 16px));
     padding: 7px 5px;

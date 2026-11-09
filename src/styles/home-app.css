@@ -2,25 +2,28 @@
 .home-app-nav { display: none; }
 @media (max-width: 1100px) {
   html:has(.home) { scroll-behavior: auto; }
-  .home { --app-accent: var(--brass-soft); padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+  .home { --app-accent: var(--brass-soft); padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
   :root:not(.dark) .home { --app-accent: var(--stage-amber); }
   :root:is(.dark, :not(.dark)) .home.home :is(h1, h2) { font-family: var(--font-display); font-weight: 750; letter-spacing: -.03em; }
   .home-app-nav {
     position: fixed;
     z-index: 45;
-    bottom: max(10px, env(safe-area-inset-bottom, 0px));
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    width: min(640px, calc(100% - 24px));
-    padding: 5px;
-    border: 1px solid var(--home-line);
-    border-radius: 18px;
-    background: var(--card);
+    width: 100%;
+    padding: 4px 8px calc(4px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--home-line);
+    border-radius: 0;
+    background: color-mix(in oklab, var(--home-bg) 92%, transparent);
     color: var(--home-muted);
     font-family: var(--font-sans);
-    box-shadow: 0 8px 28px rgb(0 0 0 / 18%);
+    -webkit-backdrop-filter: blur(16px) saturate(1.1);
+    backdrop-filter: blur(16px) saturate(1.1);
+    box-shadow: 0 -4px 20px -8px rgb(0 0 0 / 22%);
   }
   .home-app-nav a {
     display: flex;
@@ -31,7 +34,7 @@
     min-width: 0;
     min-height: 54px;
     border: 1px solid transparent;
-    border-radius: 12px;
+    border-radius: 6px;
     color: inherit;
     font-size: 12px;
     font-weight: 600;
