@@ -1,0 +1,295 @@
+/* Norte Concursos — authenticated workspace card refinement.
+   Information hierarchy: progress → quick actions → today's agenda → supporting signals.
+   Visual-only: keep queries, routes, permissions and learning data untouched. */
+.app-shell[data-area="student"] .student-overview {
+  --home-ink: #172d36;
+  --home-muted: #5d727b;
+  --home-line: #d9e4e7;
+  --home-surface: #ffffff;
+  --home-surface-2: #f3f7f8;
+  --home-blue: #174653;
+  --home-cyan: #287b83;
+  --home-green: #39866e;
+  --home-gold: #a77b3f;
+  --home-violet: #287b83;
+  --home-rose: #b45c64;
+  color: var(--home-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+:root.dark .app-shell[data-area="student"] .student-overview {
+  --home-ink: #edf5f6;
+  --home-muted: #aec2c7;
+  --home-line: #304b55;
+  --home-surface: #172b34;
+  --home-surface-2: #1d3540;
+  --home-blue: #82d4d8;
+  --home-cyan: #82d4d8;
+  --home-green: #76c5a6;
+  --home-gold: #d9b77b;
+  --home-violet: #82d4d8;
+  --home-rose: #e59aa0;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__panel {
+  padding: clamp(16px, 1.8vw, 24px);
+  border: 1px solid var(--home-line);
+  border-radius: 18px;
+  background: var(--home-surface);
+  box-shadow: 0 12px 34px -30px rgb(13 44 54 / 38%);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 16px;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading h2 {
+  margin: 0;
+  color: var(--home-ink);
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 780;
+  letter-spacing: -.035em;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading > span {
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric {
+  min-width: 0;
+  min-height: 90px;
+  grid-template-columns: 38px minmax(0, 1fr) 12px;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid var(--home-line);
+  border-radius: 13px;
+  background: var(--home-surface-2);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric > span {
+  width: 36px;
+  height: 36px;
+  border: 1px solid color-mix(in srgb, var(--home-blue) 20%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--home-blue) 9%, var(--home-surface));
+  color: var(--home-blue);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric h2 {
+  margin: 0 0 4px;
+  color: var(--home-muted);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric strong {
+  color: var(--home-ink);
+  font-size: clamp(19px, 1.8vw, 25px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric p {
+  margin-top: 4px;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.35;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric-arrow { color: var(--home-muted); }
+.app-shell[data-area="student"] .student-overview .student-desk__panel-divider {
+  margin: 18px 0 16px;
+  background: var(--home-line);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  min-width: 0;
+  min-height: 68px;
+  grid-template-columns: 36px minmax(0, 1fr) 14px;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: var(--home-surface);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--home-blue) 9%, var(--home-surface-2));
+  color: var(--home-blue);
+}
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong {
+  display: block;
+  color: var(--home-ink);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
+  display: block;
+  margin-top: 3px;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.35;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a > svg {
+  width: 14px;
+  height: 14px;
+  color: var(--home-muted);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a:hover,
+.app-shell[data-area="student"] .student-overview .student-home__metric:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--home-blue) 38%, var(--home-line));
+  box-shadow: 0 10px 22px -20px color-mix(in srgb, var(--home-blue) 55%, transparent);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  gap: 22px;
+  padding: 18px 22px;
+  border: 1px solid color-mix(in srgb, var(--home-gold) 30%, var(--home-line));
+  border-left: 3px solid var(--home-gold);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--home-gold) 5%, var(--home-surface));
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next h2 {
+  color: var(--home-ink);
+  font-size: clamp(17px, 1.7vw, 22px);
+  letter-spacing: -.03em;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next p {
+  max-width: 68ch;
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .student-overview .student-home__primary {
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--home-blue);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 750;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__primary { color: #0b2029; }
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  padding: 17px;
+  border: 1px solid var(--home-line);
+  border-radius: 15px;
+  background: var(--home-surface);
+  box-shadow: 0 10px 28px -26px rgb(13 44 54 / 36%);
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title > span {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--home-blue) 9%, var(--home-surface-2));
+  color: var(--home-blue);
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title h2 {
+  color: var(--home-ink);
+  font-size: 15px;
+  font-weight: 780;
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title p {
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.app-shell[data-area="student"] .student-overview .student-home__select {
+  display: grid;
+  gap: 6px;
+  color: var(--home-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .student-overview .student-home__select select {
+  min-height: 40px;
+  border: 1px solid var(--home-line);
+  border-radius: 9px;
+  background: var(--home-surface-2);
+  color: var(--home-ink);
+  padding-inline: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__plan-name {
+  color: var(--home-ink);
+  font-size: 13px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .student-overview .student-home__week {
+  gap: 8px;
+  min-height: 110px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__week-day {
+  min-width: 0;
+  padding: 8px 5px;
+  border: 1px solid var(--home-line);
+  border-radius: 9px;
+  background: var(--home-surface-2);
+}
+.app-shell[data-area="student"] .student-overview .student-home__bar-track {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--home-blue) 9%, var(--home-surface-2));
+}
+.app-shell[data-area="student"] .student-overview .student-home__bar-track i {
+  border-radius: 999px;
+  background: var(--home-blue);
+}
+.app-shell[data-area="student"] .student-overview .student-home__signals li {
+  border-color: var(--home-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__signals li strong { color: var(--home-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__quiet,
+.app-shell[data-area="student"] .student-overview .student-home__footnote {
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] .student-overview :is(a, button, select):focus-visible {
+  outline: 2px solid var(--home-blue);
+  outline-offset: 3px;
+}
+@media (max-width: 1050px) {
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .student-overview .student-desk__panel { padding: 14px; border-radius: 14px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { gap: 8px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metric { min-height: 78px; padding: 10px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { gap: 7px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a { min-height: 60px; padding: 9px; grid-template-columns: 30px minmax(0, 1fr) 12px; gap: 7px; }
+  .app-shell[data-area="student"] .student-overview .student-home__tool-icon { width: 30px; height: 30px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metric h2 { font-size: 10px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metric p { font-size: 9px; }
+}
+@media (max-width: 380px) {
+  .app-shell[data-area="student"] .student-overview .student-home__metrics,
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .student-overview :is(.student-home__metric,.student-hub__shortcuts > a) { transition: none; }
+}
