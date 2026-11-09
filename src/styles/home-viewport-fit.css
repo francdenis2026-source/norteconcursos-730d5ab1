@@ -818,3 +818,107 @@
     transform-origin: right bottom !important;
   }
 }
+
+
+/* Homepage hero cleanup: plain editorial typography, safer left inset and higher copy placement. */
+.home.hr-canvas #inicio.home-hero.hr-hero > .hx {
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 1480px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(24px, 5.2vw, 88px) !important;
+  padding-top: clamp(28px, 5vh, 62px) !important;
+  padding-bottom: clamp(18px, 3vh, 36px) !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+  box-sizing: border-box !important;
+  width: min(620px, 58%) !important;
+  max-width: 620px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  align-self: flex-start !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+/* Remove all glass surfaces and outlines from the text itself. */
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker,
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline > .hx__glass-strip,
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description > .hx__glass-strip {
+  display: inline !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker {
+  display: flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 0 16px !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy h1.hx__headline {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description {
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  max-width: 58ch !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description > .hx__glass-strip {
+  -webkit-box-decoration-break: initial !important;
+  box-decoration-break: initial !important;
+  text-shadow: 0 1px 9px rgb(0 0 0 / 38%) !important;
+}
+@media (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    padding-top: clamp(30px, 5.5vh, 68px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    width: min(620px, 54%) !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    width: 100% !important;
+    padding-inline: 24px !important;
+    padding-top: 22px !important;
+    padding-bottom: 18px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker {
+    margin-bottom: 12px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__description {
+    margin-top: 12px !important;
+    max-width: 100% !important;
+  }
+}
