@@ -257,3 +257,16 @@
 @media (max-width: 760px) {
   .home.hr-canvas > .home-agent-fixed { display: none !important; }
 }
+
+/* Fine vertical alignment of the homepage hero copy: lift it toward the header
+   while retaining a deliberate breathing gap beneath the navigation bar. */
+@media (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    transform: translateY(-14px) !important;
+  }
+}
+@media (min-width: 761px) and (max-height: 720px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    transform: translateY(-8px) !important;
+  }
+}
