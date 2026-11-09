@@ -32,6 +32,7 @@ import "@/styles/performance-refinement.css";
 import "@/styles/student-workspace-unified.css";
 
 import "@/styles/student-internal-workspace-system.css";
+import "@/styles/exam-performance-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
