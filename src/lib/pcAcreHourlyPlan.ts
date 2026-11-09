@@ -8,16 +8,18 @@ import {
   type PcAcPlanPhase,
 } from "@/lib/pcAcreMasterPlan";
 
-/** Cronograma horário detalhado (06:00–22:00, todos os dias) para o Oficial Investigador da
- * PC-AC, a partir de segunda-feira 09/11/2026, com intervalos de descanso e tempo marcado para
- * teoria, questões, redação, simulado e revisão. Complementa o "Plano de estudos completo"
- * (`pcAcreMasterPlan.ts`): aquele diz O QUE estudar e em que ordem; este diz QUANDO, hora a
- * hora. Sábado é dia de simulado completo; domingo é descanso ativo (reduzido de propósito —
- * estudar 16h por dia, 7 dias por semana, por mais de dois meses não é sustentável e piora o
- * desempenho na reta final). */
+/** Cronograma horário detalhado (05:00–22:00, todos os dias) para o Oficial Investigador da
+ * PC-AC, a partir de segunda-feira 09/11/2026, com treino físico (05:00–06:00 e 17:30–19:00,
+ * nos horários em que o Franc confirmou disponibilidade), intervalos de descanso e tempo
+ * marcado para teoria, questões, redação, simulado e revisão. Complementa o "Plano de estudos
+ * completo" (`pcAcreMasterPlan.ts`): aquele diz O QUE estudar e em que ordem; este diz QUANDO,
+ * hora a hora. Cerca de 8h30 de estudo efetivo por dia de semana — de propósito menor que a
+ * janela total, para sobrar tempo real para refeições, treino e descanso: um cronograma
+ * exaustivo rende menos do que um sustentável. Sábado é dia de simulado completo; domingo é
+ * descanso ativo, reduzido de propósito. */
 
 export const PCAC_HOURLY_START_DATE = "2026-11-09";
-const DAY_START = "06:00";
+const DAY_START = "05:00";
 const DAY_END = "22:00";
 
 export interface PcAcHourBlock {
@@ -56,103 +58,100 @@ function b(start: string, end: string, type: PcAcActivityType, label: string, su
 /** Segunda a sexta: as DUAS disciplinas em foco são as mesmas a semana inteira (`subjectA` e
  * `subjectB`) — só a atividade do dia muda (teoria → questões → revisão → redação), para a
  * semana ter um foco claro e reconhecível, em vez de trocar de disciplina todo dia. `dayIndex`
- * vai de 0 (segunda) a 4 (sexta). Soma exatamente 06:00–22:00, incluindo refeições e pausas. */
+ * vai de 0 (segunda) a 4 (sexta). Treino físico fixo às 05:00–06:00 e 17:30–19:00 (disponibilidade
+ * do Franc). Cerca de 8h30 de estudo efetivo (6 blocos de 1h30), o resto é treino, refeições,
+ * pausas e rotina — soma exatamente 05:00–22:00. */
 function buildWeekdayBlocks(phase: PcAcPlanPhase, subjectA: string, subjectB: string, dayIndex: number): PcAcHourBlock[] {
   const blocks: PcAcHourBlock[] = [
-    b("06:00", "06:20", "rotina", "Acordar, café da manhã e organização do dia."),
+    b("05:00", "06:00", "exercicio", "Treino físico."),
+    b("06:00", "06:30", "rotina", "Banho, café da manhã e organização do dia."),
   ];
+  let bloco1: PcAcHourBlock;
+  let bloco2: PcAcHourBlock;
+  let bloco3: PcAcHourBlock;
+  let bloco4: PcAcHourBlock;
+  let bloco5: PcAcHourBlock;
   if (phase === "fundamentos") {
-    // Semana de base teórica: segunda e terça entram em A, quarta e quinta entram em B, sexta
-    // fecha com revisão geral das duas — sempre as mesmas 2 disciplinas da semana.
-    const primary = dayIndex < 2 ? subjectA : dayIndex < 4 ? subjectB : subjectA;
-    const secondary = dayIndex < 2 ? subjectB : dayIndex < 4 ? subjectA : subjectB;
+    // Segunda e terça entram em A, quarta e quinta entram em B, sexta fecha com revisão geral
+    // das duas — sempre as mesmas 2 disciplinas da semana.
+    const primary = dayIndex < 2 ? subjectA : subjectB;
+    const secondary = dayIndex < 2 ? subjectB : subjectA;
     if (dayIndex === 4) {
-      blocks.push(
-        b("06:20", "08:10", "revisao", `Revisão geral: ${subjectA} — pontos marcados como fracos na semana.`, subjectA),
-        b("08:10", "08:25", "pausa", "Intervalo curto."),
-        b("08:25", "10:15", "revisao", `Revisão geral: ${subjectB} — pontos marcados como fracos na semana.`, subjectB),
-        b("10:15", "10:30", "pausa", "Intervalo curto."),
-        b("10:30", "12:00", "questoes", `Questões mistas: ${subjectA} e ${subjectB}.`),
-        b("12:00", "13:30", "pausa", "Almoço e descanso."),
-        b("13:30", "15:00", "questoes", `Questões mistas: ${subjectA} e ${subjectB}, cronometradas.`),
-      );
+      bloco1 = b("06:30", "08:00", "revisao", `Revisão geral: ${subjectA} — pontos marcados como fracos na semana.`, subjectA);
+      bloco2 = b("08:15", "09:45", "revisao", `Revisão geral: ${subjectB} — pontos marcados como fracos na semana.`, subjectB);
+      bloco3 = b("10:00", "11:30", "questoes", `Questões mistas: ${subjectA} e ${subjectB}.`);
+      bloco4 = b("13:00", "14:30", "questoes", `Questões mistas: ${subjectA} e ${subjectB}, cronometradas.`);
+      bloco5 = b("14:45", "16:15", "revisao", `Revisão: pontos marcados como fracos em ${subjectA} e ${subjectB} na semana.`);
     } else {
-      blocks.push(
-        b("06:20", "08:10", "teoria", `Teoria: ${primary} — leitura ativa e resumo.`, primary),
-        b("08:10", "08:25", "pausa", "Intervalo curto."),
-        b("08:25", "10:15", "teoria", `Teoria: ${primary} — continuação e aprofundamento.`, primary),
-        b("10:15", "10:30", "pausa", "Intervalo curto."),
-        b("10:30", "12:00", "questoes", `Questões: ${primary}, revisando cada erro.`, primary),
-        b("12:00", "13:30", "pausa", "Almoço e descanso."),
-        b("13:30", "15:00", "questoes", `Questões: ${secondary}, revisando cada erro.`, secondary),
-      );
+      bloco1 = b("06:30", "08:00", "teoria", `Teoria: ${primary} — leitura ativa e resumo.`, primary);
+      bloco2 = b("08:15", "09:45", "teoria", `Teoria: ${primary} — continuação e aprofundamento.`, primary);
+      bloco3 = b("10:00", "11:30", "questoes", `Questões: ${primary}, revisando cada erro.`, primary);
+      bloco4 = b("13:00", "14:30", "questoes", `Questões: ${secondary}, revisando cada erro.`, secondary);
+      bloco5 = b("14:45", "16:15", "revisao", `Revisão: pontos marcados como fracos em ${subjectA} e ${subjectB}.`);
     }
-    blocks.push(
-      b("15:00", "15:15", "pausa", "Intervalo curto."),
-      b("15:15", "16:45", "revisao", `Revisão: pontos marcados como fracos em ${subjectA} e ${subjectB}.`),
-      b("16:45", "17:00", "pausa", "Intervalo curto."),
-      b("17:00", "19:00", "teoria", `Teoria: ${subjectA} e ${subjectB} — Anexo III completo.`, subjectA),
-      b("19:00", "20:00", "pausa", "Jantar e descanso."),
-      b("20:00", "21:30", "revisao", "Revisão do dia + Legislação institucional (lei seca)."),
-      b("21:30", "22:00", "rotina", "Planejamento do dia seguinte e relaxamento."),
-    );
   } else {
-    // Semana de prática: terça e sexta fecham o dia com redação; quarta vira simulado parcial
-    // na fase de revisão. As disciplinas da semana continuam as mesmas em todos os dias.
+    // Semana de prática: terça e sexta fecham com redação; quarta vira simulado parcial na fase
+    // de revisão. As disciplinas da semana continuam as mesmas em todos os dias.
     const withRedacao = dayIndex === 1 || dayIndex === 4;
-    const afternoonLabel = withRedacao
-      ? "Redação: texto dissertativo-argumentativo, 20 a 30 linhas, cronometrado em 1h."
-      : `Revisão: refaça as questões erradas de ${subjectA} e ${subjectB} nesta semana.`;
-    blocks.push(
-      b("06:20", "08:00", "questoes", `Questões: ${subjectA}, cronometradas.`, subjectA),
-      b("08:00", "08:15", "pausa", "Intervalo curto."),
-      b("08:15", "09:55", "questoes", `Questões: ${subjectB}, cronometradas.`, subjectB),
-      b("09:55", "10:10", "pausa", "Intervalo curto."),
-      b(
-        "10:10",
-        "11:40",
-        phase === "revisao" && dayIndex === 2 ? "simulado" : "teoria",
-        phase === "revisao" && dayIndex === 2 ? "Simulado parcial: 40 questões, condições de prova." : `Teoria: aprofundamento de ${subjectA}.`,
-        subjectA,
-      ),
-      b("11:40", "13:10", "pausa", "Almoço e descanso."),
-      b("13:10", "14:40", "questoes", `Questões: mescla de bancas policiais em ${subjectA} e ${subjectB}.`),
-      b("14:40", "14:55", "pausa", "Intervalo curto."),
-      b("14:55", "16:25", withRedacao ? "redacao" : "revisao", afternoonLabel),
-      b("16:25", "16:40", "pausa", "Intervalo curto."),
-      b("16:40", "18:40", "questoes", `Questões mistas: ${subjectA} e ${subjectB}, revisão espaçada.`),
-      b("18:40", "19:40", "pausa", "Jantar e descanso."),
-      b("19:40", "21:20", "revisao", "Revisão do dia + Legislação institucional (lei seca)."),
-      b("21:20", "22:00", "rotina", "Planejamento do dia seguinte e relaxamento."),
-    );
+    bloco1 = b("06:30", "08:00", "questoes", `Questões: ${subjectA}, cronometradas.`, subjectA);
+    bloco2 = b("08:15", "09:45", "questoes", `Questões: ${subjectB}, cronometradas.`, subjectB);
+    bloco3 =
+      phase === "revisao" && dayIndex === 2
+        ? b("10:00", "11:30", "simulado", "Simulado parcial: 40 questões, condições de prova.")
+        : b("10:00", "11:30", "teoria", `Teoria: aprofundamento de ${subjectA}.`, subjectA);
+    bloco4 = b("13:00", "14:30", "questoes", `Questões mistas: ${subjectA} e ${subjectB}, mesclando bancas policiais.`);
+    bloco5 = withRedacao
+      ? b("14:45", "16:15", "redacao", "Redação: texto dissertativo-argumentativo, 20 a 30 linhas, cronometrado em 1h30.")
+      : b("14:45", "16:15", "revisao", `Revisão: refaça as questões erradas de ${subjectA} e ${subjectB} nesta semana.`);
   }
+  blocks.push(
+    bloco1,
+    b("08:00", "08:15", "pausa", "Intervalo curto."),
+    bloco2,
+    b("09:45", "10:00", "pausa", "Intervalo curto."),
+    bloco3,
+    b("11:30", "13:00", "pausa", "Almoço e descanso."),
+    bloco4,
+    b("14:30", "14:45", "pausa", "Intervalo curto."),
+    bloco5,
+    b("16:15", "17:30", "rotina", "Transição: banho, lanche e deslocamento."),
+    b("17:30", "19:00", "exercicio", "Treino físico (tarde)."),
+    b("19:00", "20:00", "rotina", "Banho, jantar e descanso."),
+    b("20:00", "21:00", "revisao", "Revisão leve do dia + Legislação institucional (lei seca)."),
+    b("21:00", "21:30", "rotina", "Leitura leve e organização para o dia seguinte."),
+    b("21:30", "22:00", "pausa", "Tempo livre e relaxamento."),
+  );
   return blocks;
 }
 
-/** Sábado: simulado completo (100 questões, condições reais de prova) + correção detalhada. */
+/** Sábado: simulado completo (100 questões, condições reais de prova) + correção detalhada,
+ * com os mesmos horários fixos de treino físico da semana. */
 function buildSaturdayBlocks(): PcAcHourBlock[] {
   return [
-    b("06:00", "06:20", "rotina", "Acordar, café da manhã e organização."),
+    b("05:00", "06:00", "exercicio", "Treino físico."),
+    b("06:00", "06:20", "rotina", "Café da manhã e organização."),
     b("06:20", "10:00", "simulado", "Simulado completo: 100 questões, cronometrado, nas condições reais da prova."),
     b("10:00", "10:30", "pausa", "Intervalo."),
     b("10:30", "12:30", "revisao", "Correção do simulado: reveja cada questão errada e anote o motivo do erro."),
     b("12:30", "14:00", "pausa", "Almoço e descanso."),
     b("14:00", "15:30", "redacao", "Redação: treino cronometrado, 20 a 30 linhas."),
     b("15:30", "15:45", "pausa", "Intervalo."),
-    b("15:45", "17:45", "revisao", "Revisão geral dos pontos fracos identificados na semana."),
-    b("17:45", "18:15", "pausa", "Intervalo."),
-    b("18:15", "19:45", "questoes", "Questões de reforço nas disciplinas de maior prioridade IDECAN."),
-    b("19:45", "20:45", "pausa", "Jantar e descanso."),
-    b("20:45", "22:00", "rotina", "Revisão leve e planejamento da semana seguinte."),
+    b("15:45", "17:30", "revisao", "Revisão geral dos pontos fracos identificados na semana."),
+    b("17:30", "19:00", "exercicio", "Treino físico (tarde)."),
+    b("19:00", "20:00", "pausa", "Jantar e descanso."),
+    b("20:00", "21:00", "questoes", "Questões de reforço nas disciplinas de maior prioridade IDECAN."),
+    b("21:00", "22:00", "rotina", "Revisão leve e planejamento da semana seguinte."),
   ];
 }
 
-/** Domingo: descanso ativo, de propósito reduzido (ver nota no topo do arquivo). */
+/** Domingo: descanso ativo, de propósito reduzido (ver nota no topo do arquivo). O treino físico
+ * aqui é opcional, não um bloco fixo como nos outros dias — domingo o corpo também descansa. */
 function buildSundayBlocks(): PcAcHourBlock[] {
   return [
-    b("06:00", "09:00", "rotina", "Dormir até tarde / despertar sem despertador — recuperação é parte do plano."),
-    b("09:00", "10:30", "revisao", "Revisão leve e opcional: reler resumos e flashcards, sem questões."),
-    b("10:30", "22:00", "pausa", "Resto do dia livre: família, lazer, descanso. Sem conteúdo novo nem questões."),
+    b("05:00", "09:30", "rotina", "Dormir até tarde / despertar sem despertador — recuperação é parte do plano."),
+    b("09:30", "10:30", "exercicio", "Treino físico leve (opcional) — sem compromisso, só se quiser."),
+    b("10:30", "12:00", "revisao", "Revisão leve e opcional: reler resumos e flashcards, sem questões."),
+    b("12:00", "22:00", "pausa", "Resto do dia livre: família, lazer, descanso. Sem conteúdo novo nem questões."),
   ];
 }
 

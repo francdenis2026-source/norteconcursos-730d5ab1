@@ -18,6 +18,8 @@ const MUTED: [number, number, number] = [104, 108, 118];
 const LINE: [number, number, number] = [222, 222, 228];
 const CARD_BG: [number, number, number] = [250, 249, 246];
 const PAUSE_BG: [number, number, number] = [238, 242, 236];
+const EXERCISE_BG: [number, number, number] = [234, 243, 250];
+const EXERCISE_INK: [number, number, number] = [31, 90, 125];
 
 const PAGE_W = 595.28;
 const PAGE_H = 841.89;
@@ -128,7 +130,7 @@ function drawCoverPage(doc: jsPDF, logo: string | null, weeks: PcAcHourWeek[], c
   const stats: [string, string][] = [
     ["Dias até a prova", String(daysLeft)],
     ["Semanas detalhadas", String(weeks.length)],
-    ["Janela diária", "16h"],
+    ["Janela diária", "17h"],
   ];
   const cardW = (CONTENT_W - 24) / 3;
   stats.forEach(([label, value], i) => {
@@ -158,9 +160,10 @@ function drawCoverPage(doc: jsPDF, logo: string | null, weeks: PcAcHourWeek[], c
   y += 18;
 
   const notes = [
-    "Segunda a sexta: teoria, questões cronometradas, revisão e (a partir da fase de prática) redação — sempre com pausas curtas e almoço/jantar reservados.",
-    "Sábado: simulado completo de 100 questões nas condições da prova, seguido de correção detalhada e redação.",
-    "Domingo: descanso ativo, de propósito reduzido — dormir mais e sem conteúdo novo. Estudar 16h por dia, todo dia, por mais de dois meses, piora o desempenho na reta final.",
+    "Treino físico fixo todos os dias às 05:00–06:00 e 17:30–19:00, conforme a disponibilidade informada — o estudo roda em torno desses horários, não o contrário.",
+    "Segunda a sexta: cerca de 8h30 de estudo efetivo (teoria, questões cronometradas, revisão e, a partir da fase de prática, redação), com café da manhã, almoço, jantar e pausas curtas sempre reservados.",
+    "Sábado: simulado completo de 100 questões nas condições da prova, seguido de correção detalhada e redação — mesmo treino físico da semana.",
+    "Domingo: descanso ativo, de propósito reduzido — dormir mais, treino opcional e sem conteúdo novo. Um cronograma exaustivo todos os dias, por mais de dois meses, rende menos do que um sustentável.",
   ];
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9.5);
@@ -207,17 +210,18 @@ function drawDayTable(doc: jsPDF, day: PcAcHourDay, cursor: { y: number }, newPa
       cursor.y += 14;
     }
     const isPause = block.type === "pausa" || block.type === "rotina";
-    doc.setFillColor(...(isPause ? PAUSE_BG : CARD_BG));
+    const isExercise = block.type === "exercicio";
+    doc.setFillColor(...(isExercise ? EXERCISE_BG : isPause ? PAUSE_BG : CARD_BG));
     doc.setDrawColor(...LINE);
     doc.setLineWidth(0.5);
     doc.roundedRect(MARGIN_X, cursor.y, CONTENT_W, rowH - 2, 2, 2, "FD");
     doc.setFont("helvetica", "bold");
     doc.setFontSize(8);
-    doc.setTextColor(...(isPause ? MUTED : GOLD_DEEP));
+    doc.setTextColor(...(isExercise ? EXERCISE_INK : isPause ? MUTED : GOLD_DEEP));
     doc.text(`${block.start}–${block.end}`, MARGIN_X + 7, cursor.y + 10);
     doc.setFont("helvetica", isPause ? "italic" : "bold");
     doc.setFontSize(8);
-    doc.setTextColor(...(isPause ? MUTED : NAVY));
+    doc.setTextColor(...(isExercise ? EXERCISE_INK : isPause ? MUTED : NAVY));
     doc.text(`${PCAC_ACTIVITY_LABEL[block.type]}: `, MARGIN_X + 64, cursor.y + 10);
     const tagW = doc.getTextWidth(`${PCAC_ACTIVITY_LABEL[block.type]}: `);
     doc.setFont("helvetica", "normal");
