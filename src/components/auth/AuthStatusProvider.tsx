@@ -61,6 +61,7 @@ async function loadProfile(session: Session): Promise<UserProfile> {
   return {
     id: session.user.id,
     avatar_url: profile?.avatar_url ?? undefined,
+    personal_exam_date: profile?.personal_exam_date ?? undefined,
     full_name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
     name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
     email: session.user.email || "",
