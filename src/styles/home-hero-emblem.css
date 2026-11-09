@@ -73,3 +73,65 @@
 @media (forced-colors: active) {
   .home-hero__emblem-clock { display: none; }
 }
+
+
+/* Desktop homepage integration: restore the live hands on the existing clock artwork.
+   The overlay is decorative, stays behind the hero content and never changes section geometry. */
+@media (min-width: 760px) {
+  .home.hr-canvas .sx-band {
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .home.hr-canvas .sx-band > .home-hero__emblem-clock {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 60%;
+    right: auto;
+    width: clamp(220px, 22vw, 320px);
+    aspect-ratio: 656 / 856;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: none;
+  }
+  .home.hr-canvas .sx-band > .sx-hero {
+    position: relative;
+    z-index: 1;
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-art {
+    opacity: .48;
+    filter: saturate(.9) contrast(1.08) drop-shadow(0 8px 22px rgb(0 0 0 / 38%));
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-hands {
+    opacity: 1;
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-hand--hour line {
+    stroke: #e8c77f;
+    stroke-width: 14;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 95%))
+            drop-shadow(0 0 4px rgb(232 199 127 / 35%));
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-hand--minute line {
+    stroke: #f7e8c5;
+    stroke-width: 9;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 95%))
+            drop-shadow(0 0 3px rgb(247 232 197 / 30%));
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-hand--second line {
+    stroke: #ff7058;
+    stroke-width: 5;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 95%))
+            drop-shadow(0 0 4px rgb(255 112 88 / 35%));
+  }
+  .home.hr-canvas .sx-band .home-hero__emblem-clock-pivot {
+    fill: #f0cc7d;
+    stroke: #17191d;
+    stroke-width: 3.5;
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 95%));
+  }
+}
+@media (max-width: 759px) {
+  .home.hr-canvas .sx-band > .home-hero__emblem-clock {
+    display: none;
+  }
+}
