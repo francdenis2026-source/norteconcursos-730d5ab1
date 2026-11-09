@@ -177,3 +177,8 @@ svg.tactical-clock-backdrop {
   stroke: #f1d59b !important;
   stroke-width: 1.15px !important;
 }
+
+/* Homepage: subtle photographic shade for stronger contrast with the foreground. */
+.home.hr-canvas > .home-backdrop:has(.tactical-clock-backdrop) {
+  --backdrop-clock-veil: rgb(8 13 20 / 20%);
+}
