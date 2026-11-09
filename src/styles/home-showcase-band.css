@@ -1,53 +1,50 @@
-/* Norte homepage — render the approved artwork as a real image element.
-   Using <img> avoids background-image loading/cascade issues and preserves the
-   complete 3:1 composition without cropping or stretching. */
-.home.hr-canvas #plataforma.hr-showcase {
+/* Approved Norte banner: use the original artwork as a normal, responsive image.
+   Keep selectors independent from optional homepage theme classes so the artwork
+   remains visible in both light/dark modes and after future class changes. */
+#plataforma.hr-showcase-artwork {
   position: relative !important;
   display: block !important;
   box-sizing: border-box !important;
-  flex: 0 0 auto !important;
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
-  aspect-ratio: 3 / 1 !important;
-  padding: 0 !important;
+  aspect-ratio: 2172 / 724 !important;
   margin: 0 !important;
+  padding: 0 !important;
   overflow: hidden !important;
   border: 0 !important;
-  background: #07131f !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
-.home.hr-canvas #plataforma.hr-showcase > .hr-showcase-art {
-  position: absolute !important;
-  inset: 0 !important;
+#plataforma.hr-showcase-artwork > .hr-showcase-art {
+  position: relative !important;
+  inset: auto !important;
   z-index: 1 !important;
   display: block !important;
   width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  object-fit: fill !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
   object-position: center !important;
   opacity: 1 !important;
   visibility: visible !important;
+  filter: none !important;
+  transform: none !important;
 }
-.home.hr-canvas #plataforma.hr-showcase::before,
-.home.hr-canvas #plataforma.hr-showcase::after {
+#plataforma.hr-showcase-artwork::before,
+#plataforma.hr-showcase-artwork::after {
   content: none !important;
   display: none !important;
 }
-.home.hr-canvas #plataforma.hr-showcase > .hr-showcase__inner {
-  display: none !important;
-}
 @media (max-width: 760px) {
-  .home.hr-canvas #plataforma.hr-showcase {
+  #plataforma.hr-showcase-artwork {
     width: 100% !important;
-    aspect-ratio: 3 / 1 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home.hr-canvas #plataforma.hr-showcase {
-    scroll-behavior: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 }
