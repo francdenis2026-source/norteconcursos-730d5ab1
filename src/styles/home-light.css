@@ -185,3 +185,30 @@
   border-color: #c9a56a;
   box-shadow: none;
 }
+
+
+/* Public homepage palette candidate: cool porcelain + petrol + teal. */
+:root:not(.dark) .home.home-recomposition {
+  --stage-ink: #172b35;
+  --stage-muted: #5b6f79;
+  --stage-line: #dce6e9;
+  --stage-accent: #246e76;
+  --stage-amber: #87602b;
+  --stage-card: #ffffff;
+  --stage-shadow: 0 8px 24px -20px rgb(16 42 54 / 22%);
+}
+:root:not(.dark) .home.home-recomposition .home-preparation__tabs {
+  background: #edf3f4;
+}
+:root:not(.dark) .home.home-recomposition .home-preparation__tab[data-state="active"] {
+  background: #174653;
+  color: #ffffff;
+}
+:root:not(.dark) .home.home-recomposition .home-plan[data-plan].home-plan--featured {
+  background: linear-gradient(155deg, #e8f3f3, #ffffff 68%);
+  border-color: #78aeb1;
+}
+:root:not(.dark) .home.home-recomposition .home-preparation__band {
+  background: #f7fafb;
+  border-color: #dce6e9;
+}
