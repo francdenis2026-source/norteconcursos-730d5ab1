@@ -81,7 +81,7 @@ test("creates seven Acre parent topics with independent subtopics", () => {
     "Movimento autonomista",
     "Elevação a Estado",
   ]);
-  assert.deepEqual(groups[3]!.subtopics, [
+  assert.deepEqual(groups[3].subtopics, [
     "Povos indígenas, incluindo povos isolados",
     "Populações tradicionais",
     "Extrativismo",
@@ -103,5 +103,5 @@ test("normalizes every topic in a discipline", () => {
     topics: ["A. 1.1 Primeiro item. 1.2 Segundo item.", "Princípios fundamentais."],
   });
   assert.equal(groups.length, 2);
-  assert.equal(groups[0]!.subtopics.length, 2);
+  assert.equal(groups[0].subtopics.length, 2);
 });
