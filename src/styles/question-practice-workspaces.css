@@ -63,7 +63,7 @@
   padding-bottom: 14px;
   border-color: var(--practice-line);
 }
-.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head > div:first-child > span {
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head > div:first-child > div > span {
   display: none;
 }
 .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head h1 {
