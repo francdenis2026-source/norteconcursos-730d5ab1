@@ -664,8 +664,8 @@ function Index() {
                   <span className="hx__kicker-secondary">MÉTODO · CONSTÂNCIA · RESULTADO</span>
                 </div>
                 <h1 id="home-hero-title" className="hx__headline hr-hero__headline">
-                  <span>Sua preparação</span>
-                  <span>Conquiste seu próximo objetivo.</span>
+                  <span>Preparação estratégica</span>
+                  <span>para sua carreira <em>policial.</em></span>
                 </h1>
                 <p className="hx__description hr-hero__description">
                   Editais organizados, questões por banca e simulados para orientar cada etapa da sua preparação policial.
@@ -679,10 +679,10 @@ function Index() {
                   </a>
                 </div>
                 <ul className="hx__trust" aria-label="Diferenciais da plataforma">
-                  <li><ShieldCheck aria-hidden="true" /><span><strong>Fontes identificadas</strong><small>Referências oficiais</small></span></li>
-                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por banca</strong><small>Prática alinhada ao edital</small></span></li>
-                  <li><Target aria-hidden="true" /><span><strong>Plano de estudos</strong><small>Trilha conforme seu objetivo</small></span></li>
-                  <li><Trophy aria-hidden="true" /><span><strong>Evolução monitorada</strong><small>Indicadores de desempenho</small></span></li>
+                  <li><ShieldCheck aria-hidden="true" /><span><strong>Fontes oficiais</strong><small>Referências com origem verificada</small></span></li>
+                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por organizadora</strong><small>Treino direcionado por banca</small></span></li>
+                  <li><Target aria-hidden="true" /><span><strong>Plano individualizado</strong><small>Rotina alinhada ao edital</small></span></li>
+                  <li><Trophy aria-hidden="true" /><span><strong>Desempenho monitorado</strong><small>Indicadores de evolução</small></span></li>
                 </ul>
               </div>
             </div>
