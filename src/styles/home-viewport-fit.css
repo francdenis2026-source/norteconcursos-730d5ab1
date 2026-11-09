@@ -616,3 +616,45 @@
     min-height: 17px !important;
   }
 }
+
+
+/* Refined homepage hero: remove the oversized glass card.
+   Keep the copy directly on the artwork with restrained contrast and clean typography. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  width: min(660px, 54%) !important;
+  max-width: 660px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1 {
+  text-shadow: 0 2px 16px rgb(0 0 0 / 28%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy > p,
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  text-shadow: 0 1px 9px rgb(0 0 0 / 34%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy .home-actions {
+  margin-top: 18px !important;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: min(620px, 72%) !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+}
