@@ -238,3 +238,30 @@
     width: clamp(300px, 39vw, 430px);
   }
 }
+
+
+/* Hero final layer correction: the previous dark wash was almost opaque across
+   the full banner, hiding both the photographic background and the large clock.
+   Keep contrast behind the left-hand copy only; reveal the right-hand artwork. */
+.home.home .home-hero {
+  background-color: #101821 !important;
+}
+.home.home .home-hero::after {
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgb(16 24 33 / .90) 0%,
+    rgb(16 24 33 / .76) 34%,
+    rgb(16 24 33 / .30) 58%,
+    rgb(16 24 33 / .06) 78%,
+    transparent 100%
+  ) !important;
+}
+.home.home .home-hero > .home-hero__image {
+  opacity: 1 !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 100%) !important;
+}
+.home.home .home-hero .home-hero__emblem-clock {
+  z-index: 0;
+}
