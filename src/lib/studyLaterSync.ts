@@ -121,10 +121,28 @@ export async function syncStudyLater(
   }
   const remote = rows.flatMap((row) => studyLaterFromRow(row) ?? []);
   const items = mergeStudyLaterItems(local, remote);
-  const known = new Set(remote.map(studyLaterRef));
+  const remoteRows = new Map(
+    rows.flatMap((row) => {
+      const item = studyLaterFromRow(row);
+      return item ? [[studyLaterRef(item), row] as const] : [];
+    }),
+  );
+  // Also push merged local edits for items that already exist remotely. Otherwise a failed
+  // earlier write (notes/reviewed/reason) would remain stale forever after a later successful fetch.
   const pending = items.flatMap((item) => {
-    const row = known.has(studyLaterRef(item)) ? null : studyLaterRow(userId, item);
-    return row ? [row] : [];
+    const row = studyLaterRow(userId, item);
+    if (!row) return [];
+    const previous = remoteRows.get(studyLaterRef(item));
+    if (
+      previous &&
+      previous.reason === row.reason &&
+      previous.notes === row.notes &&
+      previous.reviewed === row.reviewed &&
+      previous.saved_at === row.saved_at &&
+      JSON.stringify(previous.payload) === JSON.stringify(row.payload)
+    )
+      return [];
+    return [row];
   });
   if (pending.length) await port.upsertRows(pending);
   return { items, account: true };
