@@ -519,7 +519,7 @@ function PcAcStudyPlanCard({
 function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
-  const search = useSearch({ strict: false }) as { cargo?: string };
+  const search = useSearch({ strict: false }) as { cargo?: string; view?: string };
   const cargoParam = search.cargo;
   const digitalView = search.view === "digital";
   const navigate = useNavigate();
