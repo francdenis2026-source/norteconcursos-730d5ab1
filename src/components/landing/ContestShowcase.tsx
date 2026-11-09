@@ -1,6 +1,6 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness, Bell } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, CalendarDays, Users, Bell } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 
 function Ficha({ items }: { items: [string, string][] }) {
