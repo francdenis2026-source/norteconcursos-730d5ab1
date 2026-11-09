@@ -16970,3 +16970,141 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     padding: 14px 15px;
   }
 }
+
+
+/* -------------------------------------------------------------------------
+   NORTE CONCURSOS — Student dashboard color harmony (final palette layer)
+   Deep navy + mineral slate + restrained brass + muted teal.
+   Red is reserved for genuine errors/urgent states, never decorative icons.
+   Scoped to the authenticated student overview in both color schemes.
+   ------------------------------------------------------------------------- */
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview {
+  --home-ink: #f2f5f8 !important;
+  --home-muted: #b5c2cf !important;
+  --home-line: #35495d !important;
+  --home-surface: #182638 !important;
+  --home-surface-2: #203247 !important;
+  --home-blue: #83b5df !important;
+  --home-cyan: #7ccbc4 !important;
+  --home-green: #83c6a6 !important;
+  --home-gold: #e5bd75 !important;
+  --home-violet: #b5addd !important;
+  --home-rose: #d995a0 !important;
+  --saas-bg: #101923 !important;
+  --saas-panel: #182638 !important;
+  --saas-panel-soft: #203247 !important;
+  --saas-ink: #f2f5f8 !important;
+  --saas-muted: #b5c2cf !important;
+  --saas-line: #35495d !important;
+  --saas-blue: #83b5df !important;
+  --saas-cyan: #7ccbc4 !important;
+  --saas-green: #83c6a6 !important;
+  --saas-violet: #b5addd !important;
+  --saas-amber: #e5bd75 !important;
+  --saas-rose: #d995a0 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview {
+  --home-ink: #203247 !important;
+  --home-muted: #52677b !important;
+  --home-line: #d7e1e9 !important;
+  --home-surface: #ffffff !important;
+  --home-surface-2: #f4f7fa !important;
+  --home-blue: #2f6590 !important;
+  --home-cyan: #176d68 !important;
+  --home-green: #237a59 !important;
+  --home-gold: #8a5a17 !important;
+  --home-violet: #675b99 !important;
+  --home-rose: #a84f60 !important;
+  --saas-bg: #f2f5f8 !important;
+  --saas-panel: #ffffff !important;
+  --saas-panel-soft: #f4f7fa !important;
+  --saas-ink: #203247 !important;
+  --saas-muted: #52677b !important;
+  --saas-line: #d7e1e9 !important;
+  --saas-blue: #2f6590 !important;
+  --saas-cyan: #176d68 !important;
+  --saas-green: #237a59 !important;
+  --saas-violet: #675b99 !important;
+  --saas-amber: #8a5a17 !important;
+  --saas-rose: #a84f60 !important;
+}
+
+/* Neutralize the overly saturated cyan/blue slabs across the student homepage. */
+:root.dark .app-shell[data-area="student"] #dashboard-content:has(.student-home.student-desk.student-overview) {
+  background: #101923 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content:has(.student-home.student-desk.student-overview) {
+  background: #f2f5f8 !important;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__card[data-accent], .student-desk__panel, .student-home__metrics,
+    .student-home__rhythm-chart, .student-home__rhythm-insights,
+    .student-home__rhythm-metric, .student-hub__rail > *) {
+  color: #f2f5f8;
+  background: #182638 !important;
+  border-color: #35495d !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 16%), inset 0 1px 0 rgb(255 255 255 / 3%) !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__card[data-accent], .student-desk__panel, .student-home__metrics,
+    .student-home__rhythm-chart, .student-home__rhythm-insights,
+    .student-home__rhythm-metric, .student-hub__rail > *) {
+  color: #203247;
+  background: #ffffff !important;
+  border-color: #d7e1e9 !important;
+  box-shadow: 0 5px 18px rgb(25 48 70 / 5%) !important;
+}
+
+/* Accent rails stay subtle; semantic colors remain distinct and readable. */
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+.student-home__card[data-accent="gold"] { border-top-color: #e5bd75 !important; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+.student-home__card[data-accent="gold"] { border-top-color: #b17a2d !important; }
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+.student-home__card[data-accent="teal"] { border-top-color: #7ccbc4 !important; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+.student-home__card[data-accent="teal"] { border-top-color: #176d68 !important; }
+
+/* The "Concurso em foco" target receives a calm brass treatment, not alert red. */
+.app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+[aria-labelledby="dashboard-objective-title"] .student-home__section-title > span {
+  color: #e5bd75 !important;
+  background: rgb(229 189 117 / 11%) !important;
+  border: 1px solid rgb(229 189 117 / 28%) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+[aria-labelledby="dashboard-objective-title"] .student-home__section-title > span svg {
+  color: currentColor !important;
+  stroke: currentColor !important;
+  filter: none !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+[aria-labelledby="dashboard-objective-title"] .student-home__section-title > span {
+  color: #8a5a17 !important;
+  background: #fbf3e5 !important;
+  border-color: #ead7b8 !important;
+}
+
+/* Unified type contrast for cards, section headings and supporting copy. */
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__section-title h2, .student-home__objective-name, .student-home__blocks li strong,
+    .student-home__next-topic strong, .student-home__metric strong, .student-desk__section-heading h2) {
+  color: #f2f5f8 !important;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__quiet, .student-home__section-title p, .student-home__card small,
+    .student-home__metric p, .student-home__metric h2, .student-desk__section-heading > span) {
+  color: #b5c2cf !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__section-title h2, .student-home__objective-name, .student-home__blocks li strong,
+    .student-home__next-topic strong, .student-home__metric strong, .student-desk__section-heading h2) {
+  color: #203247 !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .student-home.student-desk.student-overview
+:is(.student-home__quiet, .student-home__section-title p, .student-home__card small,
+    .student-home__metric p, .student-home__metric h2, .student-desk__section-heading > span) {
+  color: #52677b !important;
+}
