@@ -8,7 +8,6 @@ import type { PcAcVerticalCargo } from "@/data/pcAcreVerticalizado";
 import {
   pcAcVerticalCounts,
   pcAcVerticalDisciplineCounts,
-  pcAcVerticalItemId,
   pcAcVerticalTopicStatus,
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
