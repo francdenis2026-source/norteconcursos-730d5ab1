@@ -100,3 +100,108 @@
 @media (max-width: 420px) {
   .home.hr-canvas { --nc-fixed-header-height: 58px; }
 }
+
+
+/* Homepage desktop composition repair — align hero with the header and reclaim left canvas. */
+@media (min-width: 901px) {
+  .home.hr-canvas .home-hero.hr-hero {
+    min-height: min(620px, calc(100svh - var(--nc-fixed-header-height, 66px))) !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    overflow: clip !important;
+  }
+
+  .home.hr-canvas .home-hero.hr-hero > .hx {
+    width: 100% !important;
+    min-height: inherit !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  /* A single full-width content rail prevents the copy from being centered in an empty grid column. */
+  .home.hr-canvas .home-hero.hr-hero .hx__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    width: min(calc(100% - clamp(64px, 8vw, 144px)), 1600px) !important;
+    max-width: 1600px !important;
+    min-height: inherit !important;
+    height: auto !important;
+    margin-inline: auto !important;
+    padding: clamp(28px, 4vh, 44px) 0 clamp(22px, 3vh, 34px) !important;
+    gap: 18px !important;
+  }
+
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    position: relative !important;
+    align-self: flex-start !important;
+    justify-self: start !important;
+    width: min(680px, 58%) !important;
+    max-width: 680px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .home.hr-canvas .home-hero.hr-hero .hx__copy h1 {
+    max-width: 12ch !important;
+    margin: 0 !important;
+    font-size: clamp(44px, 4.4vw, 66px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > p {
+    max-width: 56ch !important;
+    margin: 16px 0 0 !important;
+    line-height: 1.55 !important;
+  }
+
+  .home.hr-canvas .home-hero.hr-hero .hx__copy .home-actions {
+    justify-content: flex-start !important;
+    margin-top: 20px !important;
+  }
+
+  /* Align the challenge panel to the same content rail and bring it closer to the hero. */
+  .home.hr-canvas .home-daily-challenge-wrap {
+    width: min(calc(100% - clamp(64px, 8vw, 144px)), 1600px) !important;
+    max-width: 1600px !important;
+    margin: -18px auto 18px !important;
+    z-index: 4 !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__inner {
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    padding-block: 30px 22px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: min(680px, 78%) !important;
+    max-width: 680px !important;
+    margin: 0 !important;
+  }
+  .home.hr-canvas .home-daily-challenge-wrap {
+    width: calc(100% - 40px) !important;
+    margin: -12px auto 16px !important;
+  }
+}
+
+/* Keep the developer credit in the actual footer instead of a floating viewport strip. */
+@media (min-width: 761px) {
+  .home.hr-canvas .nc-footer__dev-sign {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: none !important;
+    pointer-events: auto !important;
+  }
+}
