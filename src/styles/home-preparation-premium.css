@@ -592,3 +592,57 @@
 @media (prefers-reduced-motion: reduce) {
   .hr-preparation__glass-feature { transition: none !important; }
 }
+
+
+/* Supporting illustration inside the resources panel — compact, never competing
+   with the feature grid or expanding the homepage section. */
+.hr-preparation__content-head {
+  min-height: 68px;
+  align-items: center !important;
+  position: relative;
+}
+.hr-preparation__content-head > div { position: relative; z-index: 1; }
+.hr-preparation__visual {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 clamp(112px, 14vw, 174px);
+  width: clamp(112px, 14vw, 174px);
+  height: 72px;
+  margin: -3px 2px -3px auto;
+  overflow: visible;
+  pointer-events: none;
+}
+.hr-preparation__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 5px 12px rgb(0 0 0 / 34%));
+  opacity: .96;
+}
+.hr-preparation__feature-grid { position: relative; z-index: 1; }
+@media (min-width: 761px) and (max-width: 1080px) {
+  .hr-preparation__visual {
+    flex-basis: 104px;
+    width: 104px;
+    height: 66px;
+  }
+}
+@media (max-width: 760px) {
+  .hr-preparation__content-head { min-height: 58px; }
+  .hr-preparation__visual {
+    flex-basis: 96px;
+    width: 96px;
+    height: 62px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 420px) {
+  .hr-preparation__visual {
+    flex-basis: 78px;
+    width: 78px;
+    height: 54px;
+  }
+}
