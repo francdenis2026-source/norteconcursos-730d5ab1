@@ -301,3 +301,88 @@
   .app-shell[data-area="student"] :is(.nc-learning-workspace,.question-workspace,.trainer-setup,.agenda-plan-view) [data-slot="card-header"] { padding: 13px 14px 8px; }
   .app-shell[data-area="student"] :is(.nc-learning-workspace,.question-workspace,.trainer-setup,.agenda-plan-view) [data-slot="card-content"] { padding: 10px 14px 14px; }
 }
+
+/* Material hub, mock-exam catalog and account settings complete the student surface system. */
+.app-shell[data-area="student"] .material-hub {
+  --ncm-ink: var(--nc-student-ink, #172d36);
+  --ncm-muted: var(--nc-student-muted, #627780);
+  --ncm-line: var(--nc-student-line, #dce7e9);
+  --ncm-surface: var(--nc-student-surface, #fff);
+  --ncm-soft: var(--nc-student-surface-soft, #f7fafb);
+  display: grid;
+  min-width: 0;
+  gap: 16px;
+  color: var(--ncm-ink);
+}
+.app-shell[data-area="student"] .material-hub > * { min-width: 0; }
+.app-shell[data-area="student"] .material-hub :is(h1,h2,h3,h4,strong) { color: var(--ncm-ink); }
+.app-shell[data-area="student"] .material-hub :is(p,small) { color: var(--ncm-muted); }
+.app-shell[data-area="student"] .material-hub .material-card {
+  min-width: 0;
+  border: 1px solid var(--ncm-line);
+  border-radius: 15px;
+  background: var(--ncm-surface);
+  color: var(--ncm-ink);
+  box-shadow: 0 8px 24px -23px rgb(10 40 50 / 36%);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.app-shell[data-area="student"] .material-hub .material-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--nc-student-cyan, #48b8c3);
+  box-shadow: 0 12px 28px -22px rgb(10 40 50 / 42%);
+}
+.app-shell[data-area="student"] .material-hub .material-card__icon {
+  border: 1px solid color-mix(in srgb, var(--nc-student-cyan, #48b8c3) 28%, var(--ncm-line));
+  border-radius: 12px;
+  background: var(--nc-student-cyan-soft, #e5f5f6);
+  color: var(--nc-student-petrol-800, #174653);
+}
+:root.dark .app-shell[data-area="student"] .material-hub .material-card__icon { color: #a5e5e6; }
+.app-shell[data-area="student"] .material-hub .hero-stat {
+  border-color: var(--ncm-line);
+  border-radius: 12px;
+  background: var(--ncm-surface);
+}
+.app-shell[data-area="student"] .material-hub .hero-stat :is(strong,span,svg) { color: var(--ncm-ink); }
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero {
+  overflow: hidden;
+  border: 1px solid #244c57;
+  border-radius: 17px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgb(72 184 195 / 20%), transparent 42%),
+    linear-gradient(112deg, #0b2029 0%, #123944 58%, #1b5260 100%) !important;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero :is(h1,h2,h3,p,.exam-simulator-hero__eyebrow,.page-hero__desc) { color: #f0f8f9 !important; }
+.app-shell[data-area="student"] .simulator-workspace :is(.command-panel,.simulator-extra-filters) {
+  border-color: var(--nc-student-line);
+  border-radius: 14px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .simulator-workspace :is(.command-panel,.simulator-extra-filters) :is(h2,h3,h4,strong) { color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .simulator-workspace :is(.command-panel,.simulator-extra-filters) :is(p,small) { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .profile-workspace [data-slot="card"] {
+  border: 1px solid var(--nc-student-line);
+  border-radius: 15px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+  box-shadow: 0 8px 24px -23px rgb(10 40 50 / 36%);
+}
+.app-shell[data-area="student"] .profile-workspace [data-slot="card-title"] { color: var(--nc-student-ink); font-size: 15px; font-weight: 800; }
+.app-shell[data-area="student"] .profile-workspace [data-slot="input"] {
+  min-height: 42px;
+  border-color: var(--nc-student-line);
+  border-radius: 9px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .profile-workspace label { color: var(--nc-student-muted); font-size: 12px; font-weight: 700; }
+.app-shell[data-area="student"] .profile-workspace [data-slot="button"][data-variant="default"] {
+  border-color: var(--nc-student-petrol-800);
+  background: var(--nc-student-petrol-800);
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .material-hub { gap: 12px; }
+  .app-shell[data-area="student"] .profile-workspace { gap: 12px; }
+}
