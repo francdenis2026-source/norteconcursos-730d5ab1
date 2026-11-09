@@ -729,3 +729,16 @@
     transform: translateY(-5px) !important;
   }
 }
+
+/* Remove the faint horizontal gold rules framing the homepage hero.
+   Keep the photographic background and all inner card/button borders untouched. */
+.home.hr-canvas,
+.home.hr-canvas > .desktop-homepage,
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero.hr-hero {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  outline: 0 !important;
+}
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero.hr-hero {
+  box-shadow: none !important;
+}
