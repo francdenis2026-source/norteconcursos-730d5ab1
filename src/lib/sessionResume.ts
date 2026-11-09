@@ -156,15 +156,39 @@ export function simulatorResume(
     d.owner !== userId ||
     !Array.isArray(d.questions) ||
     !d.questions.length ||
+    d.questions.length > 720 ||
     !d.answers ||
-    typeof d.startedAt !== "number" ||
-    typeof d.durationMinutes !== "number" ||
-    (d.phase !== "active" && d.phase !== "result")
+    typeof d.answers !== "object" ||
+    Array.isArray(d.answers) ||
+    !Number.isFinite(d.startedAt) ||
+    d.startedAt > now ||
+    !Number.isInteger(d.durationMinutes) ||
+    d.durationMinutes < 1 ||
+    d.durationMinutes > 720 ||
+    !Number.isInteger(d.currentIndex) ||
+    d.currentIndex < 0 ||
+    d.currentIndex >= d.questions.length ||
+    (d.phase !== "active" && d.phase !== "result") ||
+    (d.phase === "active" && d.endedAt !== null) ||
+    (d.phase === "result" &&
+      (!Number.isFinite(d.endedAt) || d.endedAt! < d.startedAt || d.endedAt! > now)) ||
+    (d.skipped !== undefined && !Array.isArray(d.skipped))
   )
     return null;
-  const ids = new Set(d.questions.map((q) => q?.id));
-  const answered = Object.keys(d.answers).filter((id) => ids.has(id)).length;
-  const skipped = (d.skipped ?? []).filter((id) => ids.has(id) && !d.answers![id]).length;
+  const questionIds = d.questions.map((q) => q?.id);
+  if (
+    questionIds.some((id) => typeof id !== "string" || !id.trim()) ||
+    new Set(questionIds).size !== questionIds.length
+  )
+    return null;
+  const ids = new Set(questionIds as string[]);
+  if (
+    Object.entries(d.answers).some(([id, answer]) => !ids.has(id) || !/^[A-E]$/.test(answer)) ||
+    (d.skipped ?? []).some((id) => !ids.has(id))
+  )
+    return null;
+  const answered = Object.keys(d.answers).length;
+  const skipped = (d.skipped ?? []).filter((id) => !d.answers![id]).length;
   const total = d.questions.length;
   const secondsLeft =
     d.phase === "result" ? 0 : simulatorClock(d.startedAt, d.durationMinutes * 60, now).remaining;

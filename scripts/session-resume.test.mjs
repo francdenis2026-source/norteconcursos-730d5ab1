@@ -100,3 +100,43 @@ test("closing a session removes only its own local marker and names its account 
   discardLocalSession({ removeItem: (k) => removed.push(k) }, "u", trainer, throwing);
   assert.deepEqual(removed, ["trainer-bookmark:u"]);
 });
+
+test("malformed simulator bookmarks are rejected instead of showing misleading progress", () => {
+  const now = 1_000_000 + 10 * 60_000;
+  const invalid = [
+    { questions: [{ id: "a" }, { id: "a" }] },
+    { questions: [{ id: "" }] },
+    { answers: { ghost: "A" } },
+    { answers: { a: "Z" } },
+    { skipped: ["ghost"] },
+    { currentIndex: 4 },
+    { currentIndex: -1 },
+    { durationMinutes: 0 },
+    { durationMinutes: 721 },
+    { startedAt: now + 1 },
+    { phase: "active", endedAt: 1_000_001 },
+    { phase: "result", endedAt: null },
+    { phase: "result", endedAt: now + 1 },
+  ];
+  for (const patch of invalid) {
+    const raw = draft({ ...patch });
+    const sessions = readInProgressSessions(
+      store({ "norte:simulator:v1:u:contests": JSON.stringify(raw) }),
+      "u",
+      now,
+    );
+    assert.deepEqual(sessions, [], JSON.stringify(patch));
+  }
+});
+
+test("a valid expired active simulator remains resumable without receiving extra time", () => {
+  const now = 1_000_000 + 2 * 3600_000;
+  const [session] = readInProgressSessions(
+    store({ "norte:simulator:v1:u:contests": JSON.stringify(draft()) }),
+    "u",
+    now,
+  );
+  assert.equal(session.secondsLeft, 0);
+  assert.equal(session.answered, 2);
+  assert.equal(session.position, 3);
+});
