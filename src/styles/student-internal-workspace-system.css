@@ -1,0 +1,353 @@
+/* Norte Concursos — unified internal learning workspace.
+   REA design principles: clear hierarchy, calm surfaces, compact density,
+   consistent actions, accessible focus and responsive reflow.
+   Presentation only: no changes to study logic, records, routes or permissions. */
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) {
+  --workspace-ink: #172f38;
+  --workspace-muted: #607780;
+  --workspace-line: #dce6e8;
+  --workspace-paper: #ffffff;
+  --workspace-soft: #f4f8f9;
+  --workspace-accent: #205f6a;
+  --workspace-accent-soft: #e8f3f4;
+  --workspace-success: #34785f;
+  --workspace-warning: #a47737;
+  --workspace-danger: #a9525c;
+  color: var(--workspace-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+:root.dark .app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) {
+  --workspace-ink: #edf5f6;
+  --workspace-muted: #aec2c7;
+  --workspace-line: #304a54;
+  --workspace-paper: #172b34;
+  --workspace-soft: #1d3540;
+  --workspace-accent: #82d4d8;
+  --workspace-accent-soft: #1b3a42;
+  --workspace-success: #83c9a9;
+  --workspace-warning: #e0c18a;
+  --workspace-danger: #e39ba1;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(h1,h2,h3,h4) {
+  color: var(--workspace-ink);
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(p,small,.text-muted-foreground,.page-hero__desc) {
+  color: var(--workspace-muted);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is([data-slot="card"], .edital-selected, .edital-progress-panel, .edital-note, .edital-empty, .command-panel) {
+  min-width: 0;
+  border: 1px solid var(--workspace-line);
+  border-radius: 15px;
+  background: var(--workspace-paper);
+  box-shadow: 0 10px 28px -26px rgb(12 42 52 / 40%);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card"] {
+  overflow: clip;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card-header"] {
+  gap: 6px;
+  padding: 18px 19px 12px;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card-title"] {
+  color: var(--workspace-ink);
+  font-size: 15px;
+  font-weight: 780;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card-description"] {
+  color: var(--workspace-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card-content"] {
+  min-width: 0;
+  padding: 12px 19px 18px;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) [data-slot="card-footer"] {
+  gap: 8px;
+  padding: 0 19px 18px;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(.rounded-xl.border, .rounded-2xl.border) {
+  border-color: var(--workspace-line);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(input,select,textarea) {
+  min-width: 0;
+  border-color: var(--workspace-line);
+  border-radius: 9px;
+  background-color: var(--workspace-paper);
+  color: var(--workspace-ink);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(input,select,textarea)::placeholder {
+  color: var(--workspace-muted);
+  opacity: .85;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(button,a,input,select,textarea,[role="tab"],summary):focus-visible {
+  outline: 2px solid var(--workspace-accent);
+  outline-offset: 3px;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) .workspace-banner,
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) .page-hero {
+  min-height: 112px;
+  padding: 20px 24px;
+  border: 1px solid #294b55 !important;
+  border-radius: 16px !important;
+  background:
+    radial-gradient(ellipse at 92% 5%, rgb(84 155 158 / 17%), transparent 38%),
+    linear-gradient(112deg, #142d38, #1c414c 62%, #244751) !important;
+  box-shadow: 0 14px 32px -28px rgb(10 36 44 / 55%);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(.workspace-banner,.page-hero) :is(h1,h2,p,.page-hero__desc) {
+  color: #f1f7f7 !important;
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(.hero-chip,.internal-hero-kicker,.edital-eyebrow,.study-assistant-hero__eyebrow) {
+  color: #c6e3df !important;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-topic-heading {
+  display: grid;
+  gap: 9px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: linear-gradient(112deg,#142d38,#1c414c 62%,#244751);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-topic-heading :is(h1,h2,p) { color: #f1f7f7 !important; }
+.app-shell[data-area="student"] .edital-workspace .edital-topic-heading .edital-eyebrow { color: #c6e3df !important; }
+.app-shell[data-area="student"] .edital-workspace .edital-progress-panel {
+  display: grid;
+  gap: 11px;
+  padding: 14px 16px;
+  background: var(--workspace-soft);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-progress-panel :is(strong,span) { color: var(--workspace-ink); }
+.app-shell[data-area="student"] .edital-workspace .edital-progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb,var(--workspace-accent) 12%,var(--workspace-soft));
+}
+.app-shell[data-area="student"] .edital-workspace .edital-progress-track > span {
+  border-radius: inherit;
+  background: linear-gradient(90deg,#246b76,#65a9a4);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-filter-tabs {
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--workspace-line);
+  border-radius: 11px;
+  background: var(--workspace-soft);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-filter-tabs [role="tab"][aria-selected="true"] {
+  border: 1px solid var(--workspace-line);
+  border-radius: 8px;
+  background: var(--workspace-paper);
+  color: var(--workspace-ink);
+  box-shadow: 0 2px 6px rgb(10 35 45 / 8%);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view,
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > * { min-width: 0; }
+.app-shell[data-area="student"] .agenda-workspace-window :is(.rounded-xl.border.bg-card,.rounded-2xl.border.bg-card) {
+  border-radius: 13px;
+  background: var(--workspace-paper);
+  box-shadow: 0 8px 24px -24px rgb(10 35 45 / 35%);
+}
+.app-shell[data-area="student"] .agenda-workspace-window button.rounded-xl.border {
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+.app-shell[data-area="student"] .agenda-workspace-window button.rounded-xl.border:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb,var(--workspace-accent) 45%,var(--workspace-line));
+}
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero {
+  min-height: 112px;
+  padding: 20px 24px;
+  border: 1px solid #294b55;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 92% 5%, rgb(84 155 158 / 17%), transparent 38%),
+    linear-gradient(112deg,#142d38,#1c414c 62%,#244751);
+}
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero :is(h1,h2,p) { color: #f1f7f7; }
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero__eyebrow { color: #c6e3df; }
+.app-shell[data-area="student"] .performance-page .performance-overview__heading {
+  color: var(--workspace-ink);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tablist"] {
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--workspace-line);
+  border-radius: 11px;
+  background: var(--workspace-soft);
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tab"] {
+  border-radius: 8px;
+  color: var(--workspace-muted);
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tab"][aria-selected="true"] {
+  border: 1px solid var(--workspace-line);
+  background: var(--workspace-paper);
+  color: var(--workspace-ink);
+  box-shadow: 0 2px 6px rgb(10 35 45 / 8%);
+}
+.app-shell[data-area="student"] .question-catalog-page .catalog-command-hero {
+  min-height: 112px;
+  padding: 20px 24px;
+}
+.app-shell[data-area="student"] .question-catalog-page .command-panel {
+  border-radius: 15px;
+  background: var(--workspace-paper);
+  box-shadow: 0 10px 28px -26px rgb(12 42 52 / 40%);
+  transition: transform 160ms ease,border-color 160ms ease,box-shadow 160ms ease;
+}
+.app-shell[data-area="student"] .question-catalog-page .command-panel:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb,var(--workspace-accent) 42%,var(--workspace-line));
+  box-shadow: 0 16px 30px -25px rgb(12 42 52 / 35%);
+}
+.app-shell[data-area="student"] :is(
+  .nc-student-workspace,
+  .agenda-workspace-window,
+  .edital-workspace,
+  .question-catalog-page
+) :is(button,a)[class*="bg-primary"] {
+  border-radius: 9px;
+  font-weight: 750;
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .edital-workspace,
+    .question-catalog-page
+  ) { gap: 13px !important; }
+  .app-shell[data-area="student"] :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .edital-workspace,
+    .question-catalog-page
+  ) :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-topic-heading) {
+    min-height: 0;
+    padding: 15px 16px;
+    border-radius: 13px !important;
+  }
+  .app-shell[data-area="student"] :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .edital-workspace,
+    .question-catalog-page
+  ) [data-slot="card-header"] { padding: 15px 15px 10px; }
+  .app-shell[data-area="student"] :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .edital-workspace,
+    .question-catalog-page
+  ) [data-slot="card-content"] { padding: 10px 15px 15px; }
+  .app-shell[data-area="student"] :is(
+    .nc-student-workspace,
+    .agenda-workspace-window,
+    .edital-workspace,
+    .question-catalog-page
+  ) [data-slot="card-footer"] { padding: 0 15px 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(.agenda-workspace-window,.question-catalog-page) * { transition: none !important; }
+}
