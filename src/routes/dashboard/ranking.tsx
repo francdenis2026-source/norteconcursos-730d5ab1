@@ -389,7 +389,7 @@ function RankingPage() {
   const tab = TABS.find((t) => t[0] === kind)!;
 
   return (
-    <div className="space-y-6">
+    <div className="ranking-workspace space-y-6">
       <RankingHeader />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
