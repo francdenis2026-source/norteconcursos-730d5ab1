@@ -1,0 +1,597 @@
+/* Norte Concursos — student workspace premium foundation.
+   Visual-only migration for the authenticated student area; data and behavior remain untouched. */
+.app-shell[data-area="student"] {
+  --nc-student-petrol-950: #0b2029;
+  --nc-student-petrol-900: #10313b;
+  --nc-student-petrol-800: #174653;
+  --nc-student-petrol-700: #1d5d69;
+  --nc-student-cyan: #48b8c3;
+  --nc-student-cyan-soft: #e5f5f6;
+  --nc-student-jade: #39866e;
+  --nc-student-amber: #b98d4d;
+  --nc-student-canvas: #f2f6f7;
+  --nc-student-surface: #ffffff;
+  --nc-student-surface-soft: #f7fafb;
+  --nc-student-ink: #172d36;
+  --nc-student-muted: #627780;
+  --nc-student-line: #dce7e9;
+  --nc-student-shadow: 0 8px 26px -22px rgb(13 44 54 / 30%);
+  --student-canvas: var(--nc-student-canvas);
+  --student-surface: var(--nc-student-surface);
+  --student-surface-soft: var(--nc-student-surface-soft);
+  --student-ink: var(--nc-student-ink);
+  --student-muted: var(--nc-student-muted);
+  --student-line: var(--nc-student-line);
+  --saas-bg: var(--nc-student-canvas);
+  --saas-panel: var(--nc-student-surface);
+  --saas-panel-soft: var(--nc-student-surface-soft);
+  --saas-ink: var(--nc-student-ink);
+  --saas-muted: var(--nc-student-muted);
+  --saas-line: var(--nc-student-line);
+  --saas-blue: var(--nc-student-petrol-800);
+  --saas-cyan: var(--nc-student-cyan);
+  --saas-green: var(--nc-student-jade);
+  --saas-violet: var(--nc-student-petrol-700);
+  --saas-amber: var(--nc-student-amber);
+  background: var(--nc-student-canvas);
+  color: var(--nc-student-ink);
+}
+:root.dark .app-shell[data-area="student"] {
+  --nc-student-canvas: #101f27;
+  --nc-student-surface: #172b34;
+  --nc-student-surface-soft: #1d3540;
+  --nc-student-ink: #edf6f7;
+  --nc-student-muted: #aec2c7;
+  --nc-student-line: #304b55;
+  --nc-student-cyan-soft: #1a3b43;
+  --student-canvas: var(--nc-student-canvas);
+  --student-surface: var(--nc-student-surface);
+  --student-surface-soft: var(--nc-student-surface-soft);
+  --student-ink: var(--nc-student-ink);
+  --student-muted: var(--nc-student-muted);
+  --student-line: var(--nc-student-line);
+  --saas-bg: var(--nc-student-canvas);
+  --saas-panel: var(--nc-student-surface);
+  --saas-panel-soft: var(--nc-student-surface-soft);
+  --saas-ink: var(--nc-student-ink);
+  --saas-muted: var(--nc-student-muted);
+  --saas-line: var(--nc-student-line);
+  --saas-blue: #82d4d8;
+  --saas-cyan: #82d4d8;
+  --saas-green: #76c5a6;
+  --saas-violet: #82d4d8;
+  --saas-amber: #d9b77b;
+}
+.app-shell[data-area="student"] .app-main,
+.app-shell[data-area="student"] #dashboard-content { background: var(--nc-student-canvas); color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .app-content { padding: 18px clamp(14px, 2.2vw, 34px) 30px; }
+.app-shell[data-area="student"] .app-content__inner { width: 100%; max-width: 1660px; margin-inline: auto; }
+.app-shell[data-area="student"] .app-topbar {
+  min-height: 64px;
+  border-bottom: 1px solid var(--nc-student-line);
+  background: color-mix(in srgb, var(--nc-student-surface) 96%, transparent);
+  box-shadow: 0 8px 24px -25px rgb(10 40 49 / 40%);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.app-shell[data-area="student"] .app-sidebar {
+  border-right: 1px solid var(--nc-student-line);
+  background: var(--nc-student-surface);
+}
+.app-shell[data-area="student"] .student-navigation {
+  --student-nav-accent: var(--nc-student-petrol-700);
+  --student-nav-selected: var(--nc-student-cyan-soft);
+  --student-nav-hover: var(--nc-student-surface-soft);
+  --student-nav-line: var(--nc-student-line);
+}
+:root.dark .app-shell[data-area="student"] .student-navigation {
+  --student-nav-accent: #82d4d8;
+  --student-nav-selected: #20434c;
+  --student-nav-hover: #1c3540;
+  --student-nav-line: #304b55;
+}
+.app-shell[data-area="student"] .student-navigation .app-nav__link[data-active="true"] {
+  border-radius: 9px;
+  color: var(--nc-student-petrol-900);
+  background: var(--nc-student-cyan-soft);
+  box-shadow: inset 3px 0 0 var(--nc-student-cyan);
+}
+:root.dark .app-shell[data-area="student"] .student-navigation .app-nav__link[data-active="true"] {
+  color: #eaf8f9;
+  background: #20434c;
+  box-shadow: inset 3px 0 0 #82d4d8;
+}
+.app-shell[data-area="student"] #dashboard-content :is(button,a,[role="button"],input,select,textarea):focus-visible {
+  outline: 2px solid var(--nc-student-cyan);
+  outline-offset: 3px;
+}
+
+/* Overview page — welcome, next step, live edital and question bank. */
+.app-shell[data-area="student"] .student-home.student-desk.student-overview {
+  --home-ink: var(--nc-student-ink);
+  --home-muted: var(--nc-student-muted);
+  --home-line: var(--nc-student-line);
+  --home-surface: var(--nc-student-surface);
+  --home-surface-2: var(--nc-student-surface-soft);
+  --home-blue: var(--nc-student-petrol-800);
+  --home-cyan: var(--nc-student-cyan);
+  --home-green: var(--nc-student-jade);
+  --home-gold: var(--nc-student-amber);
+  --home-violet: var(--nc-student-petrol-700);
+  --home-rose: #b65e6f;
+  display: grid;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  gap: clamp(12px, 1.35vw, 18px);
+  color: var(--nc-student-ink);
+  font-size: 14px;
+}
+.app-shell[data-area="student"] .student-overview > * { min-width: 0; margin-block: 0; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead {
+  position: relative;
+  isolation: isolate;
+  min-height: 150px;
+  overflow: hidden;
+  padding: clamp(20px, 2.2vw, 30px);
+  border: 1px solid #244c57;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 86% 0%, rgb(72 184 195 / 22%), transparent 40%),
+    linear-gradient(112deg, #0b2029 0%, #123944 58%, #1b5260 100%) !important;
+  box-shadow: 0 16px 34px -28px rgb(4 28 37 / 55%);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 50%, rgb(255 255 255 / 3%));
+}
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy { max-width: 760px; }
+.app-shell[data-area="student"] .student-overview .student-hub__welcome {
+  color: #9ddfe0;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .055em;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead h1 {
+  margin: 5px 0 6px;
+  color: #f4fbfc;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__hero-copy > p:not(.student-hub__welcome) {
+  color: #c6dadd;
+  font-size: 14px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats {
+  display: inline-flex;
+  max-width: 190px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgb(190 231 232 / 24%);
+  border-radius: 11px;
+  background: rgb(255 255 255 / 6%);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-stats :is(strong,span,svg) { color: #eaf8f8; }
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions {
+  position: absolute;
+  right: clamp(18px, 2.2vw, 30px);
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__date {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #c9dfe2;
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions > a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid rgb(145 216 218 / 38%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 7%);
+  color: #eaf8f8;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 18px;
+  border: 1px solid color-mix(in srgb, var(--nc-student-cyan) 32%, var(--nc-student-line));
+  border-radius: 14px;
+  background: linear-gradient(100deg, var(--nc-student-cyan-soft), var(--nc-student-surface));
+  box-shadow: var(--nc-student-shadow);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__next :is(h2,p) { color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .student-overview .student-desk__eyebrow {
+  color: var(--nc-student-petrol-700);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-desk__eyebrow { color: #9cdee0; }
+.app-shell[data-area="student"] .student-overview .student-home__primary {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: 1px solid var(--nc-student-petrol-800);
+  border-radius: 9px;
+  background: var(--nc-student-petrol-800);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.app-shell[data-area="student"] .student-overview .student-home__primary:hover { background: var(--nc-student-petrol-700); }
+.app-shell[data-area="student"] .student-overview .student-desk__panel {
+  min-width: 0;
+  padding: clamp(15px, 1.5vw, 21px);
+  border: 1px solid var(--nc-student-line);
+  border-radius: 16px;
+  background: var(--nc-student-surface);
+  box-shadow: var(--nc-student-shadow);
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px 14px;
+  margin-bottom: 13px;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading h2 {
+  color: var(--nc-student-ink);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.app-shell[data-area="student"] .student-overview .student-desk__section-heading > span {
+  color: var(--nc-student-muted);
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric {
+  min-width: 0;
+  min-height: 104px;
+  padding: 14px 15px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 13px;
+  background: var(--nc-student-surface-soft);
+  color: var(--nc-student-ink);
+  box-shadow: none;
+  text-align: left;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric:hover {
+  border-color: color-mix(in srgb, var(--nc-student-cyan) 58%, var(--nc-student-line));
+  background: var(--nc-student-surface);
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric :is(strong,h3,p,span) { color: inherit; }
+.app-shell[data-area="student"] .student-overview .student-home__metric strong {
+  font-size: clamp(22px, 2.1vw, 29px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+.app-shell[data-area="student"] .student-overview .student-home__metric p,
+.app-shell[data-area="student"] .student-overview .student-home__metric small { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .student-overview .student-home__tool-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--nc-student-cyan) 25%, var(--nc-student-line));
+  border-radius: 11px;
+  background: var(--nc-student-cyan-soft);
+  color: var(--nc-student-petrol-800);
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__tool-icon { color: #a5e5e6; }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a {
+  display: grid;
+  min-width: 0;
+  min-height: 70px;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 12px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+  box-shadow: none;
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a:hover {
+  transform: translateY(-2px);
+  border-color: var(--nc-student-cyan);
+  box-shadow: var(--nc-student-shadow);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a > div { min-width: 0; }
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts strong {
+  display: block;
+  color: var(--nc-student-ink);
+  font-size: 12px;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
+  display: block;
+  margin-top: 3px;
+  color: var(--nc-student-muted);
+  font-size: 10px;
+  line-height: 1.35;
+}
+.app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a > svg { display: none; }
+.app-shell[data-area="student"] .student-overview .student-hub__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(300px, .92fr);
+  gap: 14px;
+  align-items: start;
+}
+.app-shell[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--nc-student-line);
+  border-left: 3px solid var(--nc-student-cyan);
+  border-radius: 15px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+  box-shadow: var(--nc-student-shadow);
+}
+.app-shell[data-area="student"] .student-overview .student-home__card :is(h2,h3,strong) { color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__card :is(p,small,.student-home__quiet) { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .student-overview .student-home__section-title {
+  gap: 10px;
+  margin-bottom: 13px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__section-title > svg {
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, var(--nc-student-cyan) 28%, var(--nc-student-line));
+  border-radius: 10px;
+  background: var(--nc-student-cyan-soft);
+  color: var(--nc-student-petrol-800);
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__section-title > svg { color: #a5e5e6; }
+.app-shell[data-area="student"] .student-overview .student-home__section-title h2 { color: var(--nc-student-ink); font-size: 15px; font-weight: 800; }
+.app-shell[data-area="student"] .student-overview .student-home__section-title p { color: var(--nc-student-muted); font-size: 11px; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--nc-student-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__blocks li > span {
+  color: var(--nc-student-petrol-700);
+  font-size: 12px;
+  font-weight: 800;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__blocks li > span { color: #9cdee0; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li strong { color: var(--nc-student-ink); font-size: 13px; }
+.app-shell[data-area="student"] .student-overview .student-home__blocks li small { color: var(--nc-student-muted); font-size: 11px; }
+.app-shell[data-area="student"] .student-overview .student-home__coverage {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  margin: 12px 0;
+  color: var(--nc-student-muted);
+  font-size: 11px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 99px;
+  background: var(--nc-student-line);
+  accent-color: var(--nc-student-jade);
+}
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress::-webkit-progress-bar { background: var(--nc-student-line); }
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress::-webkit-progress-value { border-radius: 99px; background: var(--nc-student-jade); }
+.app-shell[data-area="student"] .student-overview .student-home__coverage progress::-moz-progress-bar { border-radius: 99px; background: var(--nc-student-jade); }
+.app-shell[data-area="student"] .student-overview .student-home__next-topic,
+.app-shell[data-area="student"] .student-overview .student-home__empty {
+  padding: 13px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 11px;
+  background: var(--nc-student-surface-soft);
+}
+.app-shell[data-area="student"] .student-overview .student-home__next-topic :is(span,strong,small) { display: block; color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+.app-shell[data-area="student"] .student-overview .student-home__week-day {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  min-height: 120px;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  gap: 8px;
+  padding: 9px 5px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 10px;
+  background: var(--nc-student-surface-soft);
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .student-overview .student-home__week-day > span { color: var(--nc-student-muted); font-size: 10px; }
+.app-shell[data-area="student"] .student-overview .student-home__week-day strong { color: var(--nc-student-ink); font-size: 10px; }
+.app-shell[data-area="student"] .student-overview .student-home__bar-track {
+  display: flex;
+  width: 100%;
+  min-height: 38px;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--nc-student-cyan) 12%, var(--nc-student-surface));
+}
+.app-shell[data-area="student"] .student-overview .student-home__bar-track i {
+  display: block;
+  width: 58%;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, #75d0d5, #258c98);
+}
+.app-shell[data-area="student"] .student-overview .student-home__text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--nc-student-petrol-700);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__text-link { color: #9cdee0; }
+.app-shell[data-area="student"] .student-overview .student-hub__planning-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 12px;
+  background: var(--nc-student-surface-soft);
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .student-overview .student-hub__planning-link > svg { color: var(--nc-student-petrol-700); flex: 0 0 auto; }
+.app-shell[data-area="student"] .student-overview .student-home__signals li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--nc-student-line);
+}
+.app-shell[data-area="student"] .student-overview .student-home__signals strong { color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .student-overview .student-home__signals small { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .student-overview .student-home__quiet { color: var(--nc-student-muted); font-size: 12px; line-height: 1.55; }
+.app-shell[data-area="student"] .student-overview .student-home__select {
+  display: grid;
+  gap: 6px;
+  color: var(--nc-student-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .student-overview .student-home__select select {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 9px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .student-overview .student-home__empty {
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .student-overview .student-home__error {
+  border: 1px solid #d69a9a;
+  border-radius: 10px;
+  background: #fff2f1;
+  color: #7b3030;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__error {
+  border-color: #75494a;
+  background: #3b2729;
+  color: #ffd8d4;
+}
+.app-shell[data-area="student"] .student-overview .student-home__loading { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .student-overview .student-hub__rail .student-home__card { padding: 16px; }
+.app-shell[data-area="student"] .student-overview .student-home__objective-name { color: var(--nc-student-ink); font-size: 15px; font-weight: 800; }
+.app-shell[data-area="student"] .student-overview .student-home__exam-date {
+  margin-top: 9px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: var(--nc-student-cyan-soft);
+  color: var(--nc-student-petrol-800);
+  font-size: 11px;
+  font-weight: 750;
+}
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__exam-date { color: #c4eff0; }
+.app-shell[data-area="student"] .student-overview :is(.student-home__card,.student-desk__panel,.student-desk__next,.student-hub__masthead) { overflow-wrap: anywhere; }
+@media (min-width: 1500px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0, 1.85fr) minmax(330px, .82fr); }
+}
+@media (max-width: 1100px) {
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .app-content { padding: 12px 12px calc(24px + env(safe-area-inset-bottom)); }
+  .app-shell[data-area="student"] .student-overview { gap: 11px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead {
+    min-height: 0;
+    padding: 18px 16px 76px;
+    border-radius: 14px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-actions {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead-actions > a { min-height: 35px; padding-inline: 10px; }
+  .app-shell[data-area="student"] .student-overview .student-desk__next {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+  }
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metric { min-height: 98px; padding: 12px; }
+  .app-shell[data-area="student"] .student-overview .student-home__metric strong { font-size: 22px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts > a { min-height: 64px; padding: 8px; grid-template-columns: 32px minmax(0,1fr); }
+  .app-shell[data-area="student"] .student-overview .student-home__tool-icon { width: 32px; height: 32px; }
+  .app-shell[data-area="student"] .student-overview .student-hub__workspace { gap: 11px; }
+  .app-shell[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) { gap: 11px; }
+  .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] { padding: 14px; border-radius: 13px; }
+  .app-shell[data-area="student"] .student-overview .student-home__week { gap: 4px; }
+  .app-shell[data-area="student"] .student-overview .student-home__week-day { min-height: 100px; padding-inline: 2px; }
+  .app-shell[data-area="student"] .student-overview .student-home__week-day strong { font-size: 9px; }
+}
+@media (max-width: 390px) {
+  .app-shell[data-area="student"] .student-overview .student-home__metrics { grid-template-columns: minmax(0,1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__shortcuts { grid-template-columns: minmax(0,1fr); }
+  .app-shell[data-area="student"] .student-overview .student-hub__masthead { padding-bottom: 82px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .student-overview *,
+  .app-shell[data-area="student"] .student-overview *::before,
+  .app-shell[data-area="student"] .student-overview *::after { scroll-behavior: auto !important; transition-duration: 1ms !important; animation-duration: 1ms !important; }
+}

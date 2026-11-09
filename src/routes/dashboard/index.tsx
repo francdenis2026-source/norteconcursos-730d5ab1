@@ -5,6 +5,7 @@ import "@/styles/student-overview-v3.css";
 import "@/styles/student-hub-refresh.css";
 import "@/styles/student-home-premium.css";
 import "@/styles/student-home-navigation-refinement.css";
+import "@/styles/student-dashboard-premium.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
