@@ -3,6 +3,7 @@ import { examCoverage } from "@/lib/examCoverage";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
+import "@/styles/student-workspace-unified.css";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -172,7 +173,7 @@ function EditalPage() {
       />
     );
   return (
-    <div className="edital-workspace space-y-5 pb-8">
+    <div className="nc-student-workspace edital-workspace space-y-5 pb-8">
       <header className="edital-modern-hero">
         <div>
           <span className="edital-eyebrow">MEU CONCURSO</span>
