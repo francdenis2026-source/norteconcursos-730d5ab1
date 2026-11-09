@@ -71,12 +71,12 @@
 
   .home.hr-canvas .home-daily-challenge-wrap {
     width: min(calc(100% - 8vw), 1600px) !important;
-    margin: 10px auto 10px !important;
+    margin: 8px auto 8px !important;
   }
   .home.hr-canvas .daily-challenge-home {
     grid-template-columns: 44px minmax(0, 1.5fr) minmax(150px, .8fr) auto;
-    min-height: 76px;
-    gap: 12px;
+    min-height: 72px;
+    gap: 10px;
     padding: 10px 14px;
   }
   .home.hr-canvas .daily-challenge-home .daily-badge__emblem {
@@ -92,12 +92,12 @@
     width: min(calc(100% - 8vw), 1600px) !important;
     margin: 0 auto 16px !important;
   }
-  .home.hr-canvas .hr-quick-item { min-height: 60px; padding-block: 9px !important; }
+  .home.hr-canvas .hr-quick-item { min-height: 54px; padding-block: 8px !important; }
 
   /* The notices are real content too: account for them before sizing the hero. */
   .home.hr-canvas:has(.general-access):has(.news-banner) .home-hero.hr-hero {
-    height: clamp(360px, calc(100svh - 390px), 520px);
-    min-height: 360px !important;
+    height: clamp(340px, calc(100svh - 420px), 520px);
+    min-height: 340px !important;
   }
   .home.hr-canvas:has(.general-access):not(:has(.news-banner)) .home-hero.hr-hero {
     height: clamp(380px, calc(100svh - 320px), 560px);
