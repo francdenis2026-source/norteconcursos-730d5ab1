@@ -1,37 +1,30 @@
-import { useEffect, useRef, type PointerEvent } from "react";
+import { useRef, type PointerEvent, type KeyboardEvent } from "react";
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 
-const THICKNESS = [1, 2, 3, 4];
+const DEPTH_LAYERS = [1, 2];
 
 /**
- * Premium brand signature: restrained 3D depth, a soft ambient glow and
- * pointer-responsive parallax. No click spectacle, glitch, particles or drag mode.
+ * Emblema interativo da homepage.
+ * Repouso limpo; responde ao cursor com perspectiva discreta e ao clique com um pulso curto.
+ * Sem animações contínuas, brilho artificial ou movimento automático.
  */
 export function HeroBadge({ show = true }: { show?: boolean }) {
   const root = useRef<HTMLDivElement>(null);
   const tilt = useRef<HTMLDivElement>(null);
-  const spin = useRef<HTMLDivElement>(null);
+  const face = useRef<HTMLDivElement>(null);
   const ambient = useRef<HTMLSpanElement>(null);
   const frame = useRef(0);
   const target = useRef({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const node = root.current;
-    if (!node) return;
-    let inView = false;
-    const update = () => { node.dataset.visible = String(inView && !document.hidden); };
-    const observer = new IntersectionObserver(([entry]) => {
-      inView = !!entry?.isIntersecting;
-      update();
-    }, { threshold: 0.05 });
-    observer.observe(node);
-    document.addEventListener("visibilitychange", update);
-    return () => {
-      observer.disconnect();
-      document.removeEventListener("visibilitychange", update);
-      if (frame.current) cancelAnimationFrame(frame.current);
-    };
-  }, []);
+  const applyTilt = (x: number, y: number) => {
+    if (frame.current) cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      frame.current = 0;
+      if (tilt.current) {
+        tilt.current.style.transform = `rotateX(${-y * 2.8}deg) rotateY(${x * 3.6}deg)`;
+      }
+    });
+  };
 
   const move = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType !== "mouse" ||
@@ -41,11 +34,7 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
       x: Math.max(-1, Math.min(1, ((event.clientX - box.left) / box.width) * 2 - 1)),
       y: Math.max(-1, Math.min(1, ((event.clientY - box.top) / box.height) * 2 - 1)),
     };
-    if (!frame.current) frame.current = requestAnimationFrame(() => {
-      frame.current = 0;
-      if (tilt.current) tilt.current.style.transform =
-        `rotateX(${-target.current.y * 5}deg) rotateY(${target.current.x * 7}deg)`;
-    });
+    applyTilt(target.current.x, target.current.y);
   };
 
   const reset = () => {
@@ -53,26 +42,31 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
     if (frame.current) cancelAnimationFrame(frame.current);
     frame.current = 0;
     if (tilt.current) tilt.current.style.transform = "rotateX(0deg) rotateY(0deg)";
+    if (root.current) root.current.dataset.hover = "false";
   };
 
   const activate = () => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    spin.current?.animate(
+    face.current?.animate(
       [
-        { transform: "rotateY(0deg) rotateX(0deg) scale(1)", filter: "brightness(1)" },
-        { transform: "rotateY(16deg) rotateX(-5deg) scale(1.045)", filter: "brightness(1.18) drop-shadow(0 0 13px rgb(224 184 103 / 42%))", offset: 0.38 },
-        { transform: "rotateY(-9deg) rotateX(3deg) scale(1.02)", filter: "brightness(1.1) drop-shadow(0 0 8px rgb(224 184 103 / 28%))", offset: 0.7 },
-        { transform: "rotateY(0deg) rotateX(0deg) scale(1)", filter: "brightness(1)" },
+        { transform: "translateZ(0) scale(1) rotateY(0deg)" },
+        { transform: "translateZ(5px) scale(1.025) rotateY(7deg)", offset: 0.42 },
+        { transform: "translateZ(2px) scale(1.01) rotateY(-3deg)", offset: 0.72 },
+        { transform: "translateZ(0) scale(1) rotateY(0deg)" },
       ],
-      { duration: 720, easing: "cubic-bezier(.2,.8,.25,1)" },
+      { duration: 560, easing: "cubic-bezier(.2,.75,.25,1)" },
     );
     ambient.current?.animate(
-      [{ opacity: .45, transform: "scale(.92)" }, { opacity: 1, transform: "scale(1.2)", offset: .45 }, { opacity: .55, transform: "scale(1)" }],
-      { duration: 760, easing: "ease-out" },
+      [
+        { opacity: 0, transform: "scale(.82)" },
+        { opacity: .7, transform: "scale(1.04)", offset: .42 },
+        { opacity: 0, transform: "scale(1.18)" },
+      ],
+      { duration: 680, easing: "ease-out" },
     );
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       activate();
@@ -86,10 +80,11 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
       style={{ position: "relative", left: 0, top: 0, right: "auto", zIndex: 5 }}
       role="button"
       tabIndex={0}
-      aria-label="Ativar animação do brasão Norte Concursos"
-      title="Clique para ativar o efeito do brasão"
-      data-visible="false"
+      aria-label="Interagir com o brasão Norte Concursos"
+      title="Mova o cursor ou clique no brasão"
+      data-hover="false"
       data-reveal={show ? "in" : "pending"}
+      onPointerEnter={() => { if (root.current) root.current.dataset.hover = "true"; }}
       onPointerMove={move}
       onPointerLeave={reset}
       onClick={activate}
@@ -98,8 +93,8 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
       <span ref={ambient} className="hero-badge__ambient" aria-hidden="true" />
       <div className="hero-badge__float" aria-hidden="true">
         <div className="hero-badge__tilt" ref={tilt}>
-          <div className="hero-badge__spin" ref={spin}>
-            {THICKNESS.map((depth) => (
+          <div className="hero-badge__spin" ref={face}>
+            {DEPTH_LAYERS.map((depth) => (
               <PoliceInsignia
                 key={depth}
                 className="hero-badge__edge"
@@ -110,8 +105,14 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
                 draggable={false}
               />
             ))}
-            <PoliceInsignia className="hero-badge__face" alt="" width={768} height={811} decoding="async" draggable={false} />
-            <span className="hero-badge__glare" aria-hidden="true" />
+            <PoliceInsignia
+              className="hero-badge__face"
+              alt=""
+              width={768}
+              height={811}
+              decoding="async"
+              draggable={false}
+            />
           </div>
         </div>
       </div>
