@@ -120,16 +120,16 @@ type MenuItem = NavigationItem;
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal" | "indigo" | "slate";
 const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard": "gold",
-  "/dashboard/question-trainer": "emerald",
-  "/dashboard/mock-exams": "rose",
-  "/dashboard/performance": "orange",
-  "/dashboard/profile": "teal",
-  "/dashboard/study-coach": "teal",
-  "/dashboard/cronograma": "sky",
-  "/dashboard/study-tools": "teal",
-  "/dashboard/admin-students": "sky",
-  "/dashboard/admin-finance": "emerald",
-  "/dashboard/admin-metrics": "violet",
+  "/dashboard/question-trainer": "gold",
+  "/dashboard/mock-exams": "gold",
+  "/dashboard/performance": "gold",
+  "/dashboard/profile": "gold",
+  "/dashboard/study-coach": "gold",
+  "/dashboard/cronograma": "gold",
+  "/dashboard/study-tools": "gold",
+  "/dashboard/admin-students": "gold",
+  "/dashboard/admin-finance": "gold",
+  "/dashboard/admin-metrics": "gold",
   "/dashboard/admin": "gold",
 };
 
@@ -1012,7 +1012,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               aria-label="Abrir menu completo"
               aria-expanded={mobileOpen}
             >
-              <span className="app-ico" data-hue="teal">
+              <span className="app-ico" data-hue="gold">
                 <Menu aria-hidden="true" />
               </span>
               <span>Menu</span>
