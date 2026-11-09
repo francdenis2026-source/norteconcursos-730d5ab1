@@ -3,6 +3,7 @@ import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop"
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { HeroBadge } from "@/components/landing/HeroBadge";
+import { HeroEmblemClock } from "@/components/landing/HeroEmblemClock";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import * as PreparationTabs from "@radix-ui/react-tabs";
@@ -625,6 +626,7 @@ function Index() {
         >
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
+          <HeroEmblemClock />
           <TacticalCrosshair />
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
