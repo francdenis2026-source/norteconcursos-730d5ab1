@@ -559,3 +559,132 @@ html body .home .mobile-homepage__contests .contest-spotlight__art > img { objec
 :root:not(.dark) .home .contest-showcase .contest-carousel-status {
   color: #334155;
 }
+
+
+/* Final homepage palette alignment: teal is the action color; gold remains
+   reserved for the Acre identity and a single editorial highlight. */
+.home.home-recomposition .contest-showcase {
+  --contest-accent: #246e76;
+  color: var(--nc-home-ink);
+}
+.home.home-recomposition .contest-spotlight {
+  border-color: var(--nc-home-line);
+  border-radius: 18px;
+  background: var(--nc-home-paper);
+  box-shadow: 0 14px 38px -30px rgb(11 24 32 / 34%);
+}
+.home.home-recomposition .contest-spotlight__content {
+  padding: clamp(18px, 2.2vw, 30px);
+}
+.home.home-recomposition .contest-kickers > span:first-child {
+  color: #246e76;
+  border-color: #c8e0e1;
+  background: #eaf4f4;
+}
+.home.home-recomposition .contest-spotlight h3 em,
+.home.home-recomposition .contest-eyebrow,
+.home.home-recomposition .contest-details > summary {
+  color: #246e76;
+}
+.home.home-recomposition .contest-spotlight__training {
+  margin-block: 14px;
+  padding-block: 12px;
+}
+.home.home-recomposition .contest-availability > strong {
+  color: #246e76;
+}
+.home.home-recomposition .contest-action {
+  min-height: 42px;
+  border-radius: 9px;
+}
+.home.home-recomposition .contest-action--gold {
+  border-color: #246e76;
+  background: #246e76;
+  color: #ffffff;
+}
+.home.home-recomposition .contest-action--gold:hover {
+  border-color: #1d5c63;
+  background: #1d5c63;
+  color: #ffffff;
+}
+.home.home-recomposition .contest-card {
+  border-color: var(--nc-home-line);
+  border-radius: 14px;
+  background: var(--nc-home-paper);
+  box-shadow: 0 8px 24px -22px rgb(11 24 32 / 35%);
+}
+.home.home-recomposition .contest-card:hover {
+  border-color: #9fc7ca;
+  box-shadow: 0 16px 32px -26px rgb(36 110 118 / 38%);
+}
+.home.home-recomposition .contest-card__content {
+  padding: 16px;
+  gap: 7px;
+}
+.home.home-recomposition .contest-card h3 {
+  min-height: 0;
+  margin-top: 5px;
+  font-size: 19px;
+}
+.home.home-recomposition .contest-card__role {
+  min-height: 0;
+  margin-top: 2px;
+}
+.home.home-recomposition .contest-card__content > .contest-availability {
+  min-height: 0;
+  padding-block: 10px;
+}
+.home.home-recomposition .contest-card__badge {
+  border: 1px solid #e2c58f;
+  background: #f7edd9;
+  color: #76511e;
+  box-shadow: none;
+}
+.home.home-recomposition .contest-card--idecan {
+  border-color: #d2a35b;
+  animation: none;
+}
+.home.home-recomposition .contest-card--idecan:hover { animation: none; }
+.dark .home.home-recomposition .contest-showcase {
+  --contest-accent: #64b7ba;
+}
+.dark .home.home-recomposition .contest-spotlight,
+.dark .home.home-recomposition .contest-card {
+  border-color: #29404a;
+  background: #122630;
+}
+.dark .home.home-recomposition .contest-kickers > span:first-child {
+  color: #64b7ba;
+  border-color: #365b63;
+  background: #173942;
+}
+.dark .home.home-recomposition .contest-spotlight h3 em,
+.dark .home.home-recomposition .contest-eyebrow,
+.dark .home.home-recomposition .contest-details > summary,
+.dark .home.home-recomposition .contest-availability > strong {
+  color: #64b7ba;
+}
+.dark .home.home-recomposition .contest-action--gold {
+  border-color: #64b7ba;
+  background: #64b7ba;
+  color: #0b1820;
+}
+.dark .home.home-recomposition .contest-action--gold:hover {
+  border-color: #80c9cb;
+  background: #80c9cb;
+  color: #0b1820;
+}
+.dark .home.home-recomposition .contest-card__badge {
+  border-color: #876b3f;
+  background: #332d20;
+  color: #ead3a4;
+}
+@media (max-width: 760px) {
+  .home.home-recomposition .contest-spotlight__content { padding: 16px; }
+  .home.home-recomposition .contest-spotlight__actions { display: grid; grid-template-columns: 1fr; }
+  .home.home-recomposition .contest-spotlight__actions .contest-action { width: 100%; }
+  .home.home-recomposition .contest-card__content { padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home-recomposition .contest-card { transition: none; }
+}
