@@ -92,6 +92,7 @@ import "@/styles/home-showcase-band.css";
 import "@/styles/home-contests-compact.css";
 import "@/styles/home-hero-strategy.css";
 import "@/styles/home-hero-fit-correction.css";
+import "@/styles/home-agent-fixed-background.css";
 import "@/styles/home-preparation-premium.css";
 
 export const Route = createFileRoute("/")({
@@ -379,6 +380,16 @@ function Index() {
   return (
     <div className="home home-recomposition hr-canvas">
       <PublicAchievementSignal />
+      <div className="home-agent-fixed" aria-hidden="true">
+        <img
+          src="/media/hero/hero-norte-recorte.webp"
+          alt=""
+          width={1208}
+          height={1302}
+          fetchPriority="high"
+          decoding="async"
+        />
+      </div>
       <div className="home-backdrop" aria-hidden="true">
         <TacticalClockBackdrop />
       </div>
