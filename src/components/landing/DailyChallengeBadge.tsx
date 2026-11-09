@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock3, Flame, Target, Trophy } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import {
@@ -10,15 +10,10 @@ import {
   onAcreDayChange,
 } from "@/lib/guestQuota";
 
-/**
- * Selo de destaque no topo da hero: chama o visitante para o Desafio diário
- * (10 questões oficiais grátis, sem cadastro). Mostra quantas ele ainda tem hoje
- * e uma contagem regressiva até a renovação, à meia-noite do horário do Acre.
- */
+/** Destaque editorial do desafio diário na homepage, com dados reais da cota gratuita. */
 export function DailyChallengeBadge() {
   const { isAuthenticated } = useAuthStatus();
   const [remaining, setRemaining] = useState<number | null>(null);
-  // Só depois de montar: o servidor e o navegador contariam segundos diferentes (hydration).
   const [seconds, setSeconds] = useState<number | null>(null);
 
   useEffect(() => {
@@ -36,11 +31,11 @@ export function DailyChallengeBadge() {
     const tick = () => {
       const left = secondsUntilAcreMidnight();
       setSeconds(left);
-      // Virou o dia: força a data do servidor e renova a contagem das questões.
-      if (left >= 86_399)
+      if (left >= 86_399) {
         void getAcreDateKey(true)
           .then(() => getGuestRemainingToday())
           .then(setRemaining);
+      }
     };
     tick();
     const id = window.setInterval(tick, 1000);
@@ -52,58 +47,51 @@ export function DailyChallengeBadge() {
   const done = remaining !== null && remaining <= 0;
   const started = used > 0 && !done;
   const countdown = seconds === null ? "--:--:--" : formatCountdown(seconds);
-
   const title = done
-    ? "Desafio de hoje concluído"
+    ? "Você concluiu o desafio de hoje."
     : started
-      ? `Faltam ${left} de ${GUEST_DAILY_LIMIT} questões hoje`
-      : `${GUEST_DAILY_LIMIT} questões de certo ou errado grátis hoje`;
-  const hint = done
-    ? "Nova rodada à meia-noite do Acre"
-    : isAuthenticated
-      ? "Segurança pública · pratique agora · renova no horário do Acre"
-      : "Segurança pública · sem cadastro · renova no horário do Acre";
+      ? `Você já respondeu ${used} de ${GUEST_DAILY_LIMIT} questões.`
+      : `${GUEST_DAILY_LIMIT} questões gratuitas para testar seus conhecimentos.`;
+  const description = done
+    ? "Sua próxima rodada será liberada à meia-noite, no horário do Acre."
+    : "Questões de certo ou errado para manter seu ritmo de preparação.";
+  const action = done ? "Conhecer a plataforma" : started ? "Continuar desafio" : "Começar desafio";
 
   const content = (
     <>
-      <span className="daily-badge__top">
-        <span className="daily-badge__live">
-          <span className="daily-badge__pulse" aria-hidden="true" />
-          Desafio de hoje
-        </span>
-        <span className="daily-badge__timer" aria-hidden="true">
-          <Clock /> Renova em <time>{countdown}</time>
-        </span>
+      <span className="daily-badge__emblem" aria-hidden="true">
+        {done ? <Trophy /> : <Target />}
       </span>
-      <span className="daily-badge__body">
-        <span className="daily-badge__main">
-          <strong>{title}</strong>
-          <small>{hint}</small>
+      <span className="daily-badge__copy">
+        <span className="daily-badge__eyebrow">
+          <span className="daily-badge__signal" />
+          DESAFIO DIÁRIO <span className="daily-badge__eyebrow-separator">/</span> TREINO GRATUITO
         </span>
-        <span className="daily-badge__cta">
-          {done ? "Criar conta e treinar sem limite" : started ? "Continuar" : "Responder agora"}
-          <ArrowRight aria-hidden="true" />
-        </span>
+        <strong className="daily-badge__title">{title}</strong>
+        <small className="daily-badge__description">{description}</small>
       </span>
-      <span className="daily-badge__progress" aria-hidden="true">
-        <span className="daily-badge__dots">
-          {Array.from({ length: GUEST_DAILY_LIMIT }, (_, i) => (
-            <i key={i} data-done={i < used} />
-          ))}
+      <span className="daily-badge__details">
+        <span className="daily-badge__progress-label">
+          <Flame aria-hidden="true" /> Seu ritmo de hoje
         </span>
-        <span className="daily-badge__count">
-          {used}/{GUEST_DAILY_LIMIT}
+        <span className="daily-badge__progress-track" aria-hidden="true">
+          <span style={{ width: `${(used / GUEST_DAILY_LIMIT) * 100}%` }} />
         </span>
+        <span className="daily-badge__progress-count">{used} de {GUEST_DAILY_LIMIT} respondidas</span>
+        <span className="daily-badge__renewal"><Clock3 aria-hidden="true" /> Nova rodada em <time>{countdown}</time></span>
+      </span>
+      <span className="daily-badge__cta">
+        <span>{action}</span><ArrowRight aria-hidden="true" />
       </span>
     </>
   );
 
   return done ? (
-    <Link to="/auth" search={{ mode: "register" }} className="daily-badge daily-badge--featured">
+    <Link to="/auth" search={{ mode: "register" }} className="daily-badge daily-badge--featured daily-challenge-home">
       {content}
     </Link>
   ) : (
-    <Link to="/desafio-diario" className="daily-badge daily-badge--featured">
+    <Link to="/desafio-diario" className="daily-badge daily-badge--featured daily-challenge-home">
       {content}
     </Link>
   );
