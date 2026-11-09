@@ -94,6 +94,7 @@ import "@/styles/home-viewport-fit.css";
 import "@/styles/home-showcase-redesign.css";
 import "@/styles/home-contests-compact.css";
 import "@/styles/home-hero-strategy.css";
+import "@/styles/home-hero-fit-correction.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
