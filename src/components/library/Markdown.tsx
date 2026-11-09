@@ -126,10 +126,18 @@ function highlightExampleSections(blocks: Block[]): Block[] {
 function parse(markdown: string): Block[] {
   // Alguns materiais antigos receberam acidentalmente um trecho do script de
   // manutenção usado para corrigir títulos. Nunca o exiba como conteúdo de estudo.
-  const cleaned = markdown
+  let cleaned = markdown
     .replace(/\r\n/g, "\n")
     .replace(/(?:^|\n)[^\n]*(?:trimDanglingNumber|document\.querySelectorAll)[^\n]*(?=\n|$)/gi, "")
     .replace(/\b(?:trimDanglingNumber|sciencesSummary|medicinePanel|heading\.remove\(\))\b[^\n]*/gi, "");
+  // Alguns registros trazem o script começando no meio de um parágrafo. Nesse
+  // formato não existe uma linha isolada para filtrar: corta-se o material no
+  // primeiro marcador inequívoco, preservando somente o conteúdo anterior.
+  const leakedScriptAt = cleaned.search(/trimDanglingNumber|document\.querySelectorAll|sciencesSummary|medicinePanel|heading\.remove\(\)|\}\)\(\);/i);
+  if (leakedScriptAt >= 0) {
+    const lineStart = cleaned.lastIndexOf("\n", leakedScriptAt);
+    cleaned = cleaned.slice(0, lineStart >= 0 ? lineStart : 0);
+  }
   const lines = cleaned.split("\n");
   const blocks: Block[] = [];
   let i = 0;
