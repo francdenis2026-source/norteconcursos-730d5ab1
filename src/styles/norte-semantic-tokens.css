@@ -57,6 +57,8 @@
   --nc-color-border: var(--border);
   --nc-color-action: var(--brass);
   --nc-color-action-hover: var(--brass-hover);
+  --nc-color-action-text: var(--brass-deep);
+  --nc-color-action-soft: color-mix(in srgb, var(--brass) 14%, var(--card));
   --nc-color-action-foreground: oklch(0.18 0.012 260);
   --nc-color-focus: var(--ring);
   --nc-color-success: var(--color-emerald-600);
@@ -107,6 +109,8 @@
   --nc-color-border: var(--border);
   --nc-color-action: var(--brass);
   --nc-color-action-hover: var(--brass-hover);
+  --nc-color-action-text: var(--brass);
+  --nc-color-action-soft: color-mix(in srgb, var(--brass) 18%, var(--card));
   --nc-color-action-foreground: oklch(0.18 0.012 260);
   --nc-color-focus: var(--ring);
   --nc-color-success: var(--color-emerald-400);
