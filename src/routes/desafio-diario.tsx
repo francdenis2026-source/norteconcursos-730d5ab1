@@ -12,7 +12,7 @@ import { dispatchAimFeedback } from "@/lib/aimFeedback";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
-  dailyGuestQuestions,
+  dailyGuestQuestionPreviews,
   pendingGuestQuestions,
   guestContentKey,
 } from "@/lib/dailyGuestQuestions";
@@ -37,10 +37,8 @@ import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import {
   GUEST_DAILY_LIMIT,
-  getGuestProgressToday,
   getAcreDateKey,
   onAcreDayChange,
-  registerGuestAnswer,
 } from "@/lib/guestQuota";
 import {
   type Answer,
@@ -49,6 +47,7 @@ import {
   shuffled,
   parseQuestion,
   splitExplanation,
+  parseBasis,
 } from "@/lib/questionFormat";
 
 // Página pública do Desafio Diário — as MESMAS 10 questões oficiais pra
@@ -81,6 +80,7 @@ function DesafioDiario() {
   const [step, setStep] = React.useState<Step>("loading");
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const sessionDay = React.useRef("");
+  const sessionToken = React.useRef<string | null>(null);
   const submitting = React.useRef(false);
   const [remaining, setRemaining] = React.useState(GUEST_DAILY_LIMIT);
   const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
@@ -103,25 +103,54 @@ function DesafioDiario() {
     void (async () => {
       try {
         await getAcreDateKey(true);
-        const progress = await getGuestProgressToday();
-        const remainingToday = Math.max(0, GUEST_DAILY_LIMIT - progress.used);
-        sessionDay.current = progress.day;
-        const { data, error } = await supabase
-          .rpc("get_daily_guest_questions", { p_limit: 10 })
-          .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category,content_status,law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required",
-          );
+        const day = await getAcreDateKey(true);
+        sessionDay.current = day;
+        let existingToken: string | null = null;
+        try {
+          existingToken = window.localStorage.getItem(`norteconcurso:guest-session:${day}`);
+        } catch {
+          // Sessão continua válida nesta aba mesmo se o armazenamento estiver indisponível.
+        }
+        const { data: token, error: sessionError } = await supabase.rpc(
+          "start_daily_guest_session",
+          { p_existing_token: existingToken },
+        );
+        if (sessionError || !token) throw sessionError ?? new Error("Não foi possível iniciar a sessão.");
+        sessionToken.current = String(token);
+        try {
+          window.localStorage.setItem(`norteconcurso:guest-session:${day}`, String(token));
+        } catch {
+          // O token permanece em memória até a aba ser fechada.
+        }
+        const [{ data: progressData, error: progressError }, { data, error }] = await Promise.all([
+          supabase.rpc("get_daily_guest_progress", { p_session_token: token }),
+          supabase
+            .rpc("get_daily_guest_questions", { p_limit: 10 })
+            .select(
+              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,difficulty,state,career_category",
+            ),
+        ]);
+        if (progressError) throw progressError;
         if (error) throw error;
-        if ((await getAcreDateKey(true)) !== progress.day) {
+        if ((await getAcreDateKey(true)) !== day) {
           if (active) window.location.reload();
           return;
         }
-        const daily = shuffled(
-          pendingGuestQuestions(
-            dailyGuestQuestions((data || []) as Record<string, unknown>[]),
-            progress,
-          ),
-        );
+        const progressRow = Array.isArray(progressData) ? progressData[0] : progressData;
+        const preview = dailyGuestQuestionPreviews((data || []) as Record<string, unknown>[]);
+        const serverAnswers = Array.isArray(progressRow?.answers) ? progressRow.answers : [];
+        const progress = {
+          day,
+          used: Number(progressRow?.used ?? 0),
+          answers: serverAnswers.map((answer: { id: string; correct: boolean }) => ({
+            id: String(answer.id),
+            key: guestContentKey(preview.find((q) => q.id === String(answer.id))?.text ?? String(answer.id)),
+            correct: Boolean(answer.correct),
+          })),
+          legacyUsed: 0,
+        };
+        const remainingToday = Math.max(0, GUEST_DAILY_LIMIT - progress.used);
+        const daily = shuffled(pendingGuestQuestions(preview, progress));
         if (!active) return;
         setRemaining(remainingToday);
         setCorrect(progress.answers.filter((a) => a.correct).length);
@@ -152,24 +181,31 @@ function DesafioDiario() {
     if (!selected || !question || answered || submitting.current) return;
     submitting.current = true;
     try {
-      const isCorrect = selected === question.answer;
-      const result = await registerGuestAnswer(
-        { id: question.id, key: guestContentKey(question.text), correct: isCorrect },
-        sessionDay.current,
+      if (!sessionToken.current) throw new Error("Sessão de visitante inválida. Recarregue o desafio.");
+      const { data, error } = await supabase.rpc("grade_daily_guest_answer", {
+        p_session_token: sessionToken.current,
+        p_question_id: question.id,
+        p_selected_answer: selected,
+      });
+      if (error) throw error;
+      const graded = Array.isArray(data) ? data[0] : data;
+      if (!graded) throw new Error("O servidor não retornou a correção da questão.");
+      const isCorrect = Boolean(graded.is_correct);
+      const serverAnswer = String(graded.official_answer) as Answer;
+      setQuestions((current) =>
+        current.map((item) =>
+          item.id === question.id
+            ? {
+                ...item,
+                answer: serverAnswer,
+                explanation: String(graded.explanation ?? ""),
+                legalBasis: parseBasis(graded.legal_basis),
+                checkedAt: graded.law_version_checked_at ? String(graded.law_version_checked_at) : null,
+              }
+            : item,
+        ),
       );
-      setRemaining(Math.max(0, GUEST_DAILY_LIMIT - result.used));
-      if (!result.recorded) {
-        const pending = pendingGuestQuestions(questions, result);
-        setQuestions(pending);
-        setIndex(0);
-        setSelected(null);
-        setCorrect(result.answers.filter((a) => a.correct).length);
-        setWrong(result.answers.filter((a) => !a.correct).length);
-        setStep(
-          result.used >= GUEST_DAILY_LIMIT ? "blocked" : pending.length ? "intro" : "unavailable",
-        );
-        return;
-      }
+      setRemaining(Math.max(0, GUEST_DAILY_LIMIT - Number(graded.used ?? 0)));
       setAnswered(true);
       dispatchAimFeedback(isCorrect ? "hit" : "miss");
       if (isCorrect) setCorrect((value) => value + 1);
