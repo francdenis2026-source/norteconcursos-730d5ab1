@@ -135,6 +135,34 @@ test("closing sends immediately, cancels a pending write and marks the session c
   assert.equal(p.sent[0].payload, null);
 });
 
+
+test("a failed snapshot write does not mark content as sent and can be retried", async () => {
+  const t = fakeTimers();
+  const sent = [];
+  let shouldFail = true;
+  const p = {
+    async upsertRow(row) {
+      if (shouldFail) throw new Error("temporary network failure");
+      sent.push(row);
+    },
+  };
+  const up = createSnapshotUploader(p, { setTimer: t.setTimer, clearTimer: t.clearTimer });
+  const row = openRow("trainer", "trainer", bookmark(1000), 1000);
+  up.schedule(row, "same-content");
+  t.run();
+  await new Promise((r) => setImmediate(r));
+  assert.equal(sent.length, 0);
+  shouldFail = false;
+  up.schedule(row, "same-content");
+  t.run();
+  await new Promise((r) => setImmediate(r));
+  assert.equal(sent.length, 1);
+  up.schedule(row, "same-content");
+  t.run();
+  await new Promise((r) => setImmediate(r));
+  assert.equal(sent.length, 1, "successful content is not sent again");
+});
+
 test("a missing table turns the uploader off instead of retrying forever", async () => {
   const missing = { code: "42P01", message: 'relation "study_session_snapshots" does not exist' };
   const p = port([], missing);
