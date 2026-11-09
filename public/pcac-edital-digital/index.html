@@ -86,7 +86,7 @@ html,body{width:100%;min-width:0}body{background:#f8fafc;overflow-x:hidden}heade
       title='Aspectos étnicos e culturais';
       body=clean(text.slice(markers[3].length));
       const parts=body.replace(/[.]$/u,'').split(/,\s*/u).map(clean).filter(Boolean);
-      items=[parts.slice(0,2).join(', '),...parts.slice(2)];
+      items=[parts.slice(0,2).join(', '),...parts.slice(2,-1),...splitLastE(parts.at(-1)||'')];
     } else if(text.startsWith(markers[4])) {
       title='Aspectos políticos';
       body=clean(text.slice(markers[4].length));
@@ -95,7 +95,7 @@ html,body{width:100%;min-width:0}body{background:#f8fafc;overflow-x:hidden}heade
     } else if(text.startsWith(markers[5])) {
       title='Aspectos sociais e econômicos';
       body=clean(text.slice(markers[5].length));
-      items=body.replace(/[.]$/u,'').split(/,\s*/u).map(clean).filter(Boolean);
+      items=body.replace(/[.]$/u,'').split(/,\s*/u).map(clean).filter(Boolean);items=[...items.slice(0,-1),...splitLastE(items.at(-1)||'')];
     } else if(text.startsWith(markers[6])) {
       title='Segurança pública no Acre';
       body=clean(text.slice(markers[6].length)).replace(/[.]$/u,'');
