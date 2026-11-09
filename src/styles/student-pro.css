@@ -1,0 +1,239 @@
+/* Área do aluno — paleta única e profissional para todas as telas internas.
+   Superfícies neutras (grafite no escuro, branco no claro), dourado como destaque,
+   contraste AA. Carregado por último; redefine as famílias de tokens antigas. */
+.app-shell[data-area="student"]:not(#_):not(#_),
+.app-shell[data-area="student"]:not(#_):not(#_) * {
+  --sp-canvas: #f3f5f9;
+  --sp-surface: #ffffff;
+  --sp-soft: #f5f7fb;
+  --sp-line: #d5dbe5;
+  --sp-ink: #0f1b2d;
+  --sp-muted: #4a5568;
+  --sp-gold: #7a5606;
+  --sp-gold-bg: #e3b14b;
+  --sp-gold-soft: #fbf2dc;
+
+  --background: var(--sp-canvas) !important;
+  --foreground: var(--sp-ink) !important;
+  --card: var(--sp-surface) !important;
+  --card-foreground: var(--sp-ink) !important;
+  --popover: var(--sp-surface) !important;
+  --popover-foreground: var(--sp-ink) !important;
+  --muted: var(--sp-soft) !important;
+  --muted-foreground: var(--sp-muted) !important;
+  --secondary: var(--sp-soft) !important;
+  --border: var(--sp-line) !important;
+  --hub-line: var(--sp-line) !important;
+  --accent: var(--sp-gold-soft) !important;
+  --color-background: var(--sp-canvas) !important;
+  --color-foreground: var(--sp-ink) !important;
+  --color-card: var(--sp-surface) !important;
+  --color-card-foreground: var(--sp-ink) !important;
+  --color-popover: var(--sp-surface) !important;
+  --color-popover-foreground: var(--sp-ink) !important;
+  --color-muted: var(--sp-soft) !important;
+  --color-muted-foreground: var(--sp-muted) !important;
+  --color-secondary: var(--sp-soft) !important;
+  --color-border: var(--sp-line) !important;
+  --color-accent: var(--sp-gold-soft) !important;
+
+  --saas-bg: var(--sp-canvas) !important;
+  --saas-panel: var(--sp-surface) !important;
+  --saas-panel-soft: var(--sp-soft) !important;
+  --saas-line: var(--sp-line) !important;
+  --saas-ink: var(--sp-ink) !important;
+  --saas-muted: var(--sp-muted) !important;
+  --home-surface: var(--sp-surface) !important;
+  --home-surface-2: var(--sp-soft) !important;
+  --home-line: var(--sp-line) !important;
+  --home-ink: var(--sp-ink) !important;
+  --home-muted: var(--sp-muted) !important;
+  --nc-student-canvas: var(--sp-canvas) !important;
+  --nc-student-surface: var(--sp-surface) !important;
+  --nc-student-surface-soft: var(--sp-soft) !important;
+  --nc-student-line: var(--sp-line) !important;
+  --nc-student-ink: var(--sp-ink) !important;
+  --nc-student-muted: var(--sp-muted) !important;
+  --student-canvas: var(--sp-canvas) !important;
+  --student-surface: var(--sp-surface) !important;
+  --student-surface-soft: var(--sp-soft) !important;
+  --student-surface-raised: var(--sp-soft) !important;
+  --student-canvas-raised: var(--sp-surface) !important;
+  --student-line: var(--sp-line) !important;
+  --student-border: var(--sp-line) !important;
+  --student-ink: var(--sp-ink) !important;
+  --student-muted: var(--sp-muted) !important;
+  --student-subtle: var(--sp-muted) !important;
+  --student-accent-text: var(--sp-gold) !important;
+  --nc-color-canvas: var(--sp-canvas) !important;
+  --nc-color-surface: var(--sp-surface) !important;
+  --nc-color-surface-muted: var(--sp-soft) !important;
+  --nc-color-surface-raised: var(--sp-surface) !important;
+  --nc-color-border: var(--sp-line) !important;
+  --nc-color-text: var(--sp-ink) !important;
+  --nc-color-text-muted: var(--sp-muted) !important;
+  --nc-card-bg: var(--sp-surface) !important;
+  --nc-card-border: var(--sp-line) !important;
+  --nc-panel-bg: var(--sp-soft) !important;
+  --taste-app-ground: var(--sp-canvas) !important;
+  --taste-app-surface: var(--sp-surface) !important;
+  --taste-app-border: var(--sp-line) !important;
+  --taste-app-text: var(--sp-ink) !important;
+  --taste-app-muted: var(--sp-muted) !important;
+  --app-navigation-background: var(--sp-surface) !important;
+}
+.dark .app-shell[data-area="student"]:not(#_):not(#_),
+.dark .app-shell[data-area="student"]:not(#_):not(#_) * {
+  --sp-canvas: #101318;
+  --sp-surface: #171b22;
+  --sp-soft: #1e232b;
+  --sp-line: #2c333e;
+  --sp-ink: #eef1f5;
+  --sp-muted: #a7b0bd;
+  --sp-gold: #e3b14b;
+  --sp-gold-soft: #2e2817;
+
+  /* No escuro, os antigos tons petróleo viram grafite neutro. */
+  --nc-student-petrol-950: #101318 !important;
+  --nc-student-petrol-900: #171b22 !important;
+  --nc-student-petrol-800: #1e232b !important;
+  --nc-student-petrol-700: #2c333e !important;
+  --nc-shell-petrol-950: #101318 !important;
+  --nc-shell-petrol-900: #171b22 !important;
+  --nc-shell-petrol-800: #1e232b !important;
+  --nc-student-cyan-soft: #1e232b !important;
+  --ink: #101318 !important;
+  --ink-deep: #0d1015 !important;
+  --ink-raised: #171b22 !important;
+}
+
+.app-shell[data-area="student"]:not(#_):not(#_),
+.app-shell[data-area="student"]:not(#_):not(#_) #dashboard-content {
+  background: var(--sp-canvas) !important;
+  color: var(--sp-ink);
+}
+
+/* :not(#_) apenas eleva a especificidade acima das folhas antigas. */
+
+/* ---------- Navegação superior: itens limpos, sem caixas sobrepostas ---------- */
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation {
+  background: var(--sp-surface) !important;
+  border-bottom: 1px solid var(--sp-line) !important;
+  box-shadow: none !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__links {
+  gap: 2px !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__trigger {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--sp-ink) !important;
+  white-space: nowrap;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__trigger:is(:hover, [aria-expanded="true"], [aria-current="page"]) {
+  background: var(--sp-soft) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__label {
+  color: inherit !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__icon-wrap {
+  border-color: transparent !important;
+  background: var(--sp-gold-soft) !important;
+  color: var(--sp-gold) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__icon-wrap svg {
+  color: var(--sp-gold) !important;
+}
+
+/* ---------- Painel: cartões uniformes, sem caixa dentro de caixa ---------- */
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(
+    .student-home__card,
+    .student-desk__panel,
+    .student-desk__next,
+    .platform-question-counts,
+    .pcpr-spot,
+    .student-hub__results,
+    .student-hub__planning-link,
+    .student-home__data-note
+  ) {
+  border: 1px solid var(--sp-line) !important;
+  border-radius: 12px !important;
+  background: var(--sp-surface) !important;
+  box-shadow: 0 1px 2px rgb(16 21 28 / 0.05) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-desk__next {
+  border-left: 3px solid var(--sp-gold-bg) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__empty {
+  padding: 4px 0 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__empty h3 {
+  font-size: 15px !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(.student-home__metric, .student-hub__shortcuts > a, .platform-question-counts__grid > a) {
+  border: 1px solid var(--sp-line) !important;
+  background: var(--sp-soft) !important;
+  box-shadow: none !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(.student-home__metric, .student-hub__shortcuts > a):hover {
+  border-color: var(--sp-gold-bg) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__section-section,
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__metrics {
+  background: transparent !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__text-link {
+  color: var(--sp-gold) !important;
+}
+
+/* Faixa de boas-vindas: uma moldura só. */
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__masthead {
+  border: 1px solid rgb(227 177 75 / 0.35) !important;
+  border-radius: 14px !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__masthead::before,
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__masthead::after {
+  display: none !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__hero-copy {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__hero-copy a {
+  white-space: nowrap;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-hub__exam-spotlight {
+  border: 1px solid rgb(255 255 255 / 0.16) !important;
+  border-radius: 12px !important;
+  background: rgb(13 16 21 / 0.62) !important;
+}
+
+/* Ritmo da semana: mesmos tons neutros do restante do painel. */
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(.student-home__rhythm-metric, .student-home__rhythm-chart, .student-home__rhythm-insights) {
+  border: 1px solid var(--sp-line) !important;
+  background: var(--sp-soft) !important;
+  box-shadow: none !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-home__empty a[class*="inline-flex"] {
+  border: 1px solid var(--sp-line) !important;
+  background: var(--sp-soft) !important;
+  color: var(--sp-ink) !important;
+}
+
+/* Faixas de identificação das áreas internas no escuro: grafite, sem azul. */
+.dark
+  .app-shell[data-area="student"]:not(#_):not(#_)
+  .workspace-banner:not(.student-hub__masthead) {
+  border-color: var(--sp-line) !important;
+  background: linear-gradient(120deg, #171b22, #1e232b) !important;
+}

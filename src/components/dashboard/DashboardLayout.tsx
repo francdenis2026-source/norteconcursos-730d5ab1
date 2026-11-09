@@ -37,6 +37,7 @@ import "@/styles/student-home-premium.css";
 import "@/styles/student-edital-premium.css";
 import "@/styles/student-shell-premium.css";
 import "@/styles/student-viewport-efficiency.css";
+import "@/styles/student-pro.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
