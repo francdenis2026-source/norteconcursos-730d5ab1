@@ -76,6 +76,7 @@ import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
+import "@/styles/home-v2.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -769,6 +770,9 @@ function Index() {
               (68) 99203-1340
             </a>
             <span className="nc-footer__copy">© 2026 Norte Concursos</span>
+            <span className="nc-footer__dev-sign">
+              Dev. <strong>Franc D'nis</strong> · Feijó-AC, Brasil
+            </span>
           </div>
         </div>
       </footer>
