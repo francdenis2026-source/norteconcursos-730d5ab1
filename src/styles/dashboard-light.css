@@ -31,7 +31,7 @@
 :root:not(.dark) #dashboard-content[data-hue="teal"] { --panel-accent: var(--nc-color-action-text); }
 :root:not(.dark) #dashboard-content[data-hue="violet"] { --panel-accent: var(--nc-color-action-text); }
 :root:not(.dark) #dashboard-content[data-hue="gold"] { --panel-accent: var(--nc-color-action-text); }
-:root:not(.dark) #dashboard-content[data-hue="rose"] { --panel-accent: #b3385c; }
+:root:not(.dark) #dashboard-content[data-hue="rose"] { --panel-accent: var(--nc-color-action-text); }
 
 /* Keep the glass, with a clear edge and a restrained accent instead of grey-on-grey. */
 :root:not(.dark) #dashboard-content[data-header-style="glass"] :is(
