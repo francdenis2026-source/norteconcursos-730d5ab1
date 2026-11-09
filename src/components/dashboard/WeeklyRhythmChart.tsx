@@ -26,7 +26,7 @@ export function WeeklyRhythmChart({
   const scale = Math.max(3600, ...days.map((day) => day.seconds));
   const chartPoints = days.map((day, index) => ({
     ...day,
-    x: 34 + index * 112,
+    x: 34 + index * 106,
     y: 184 - (day.seconds / scale) * 132,
   }));
   const firstPoint = chartPoints[0] ?? { x: 34, y: 184 };
