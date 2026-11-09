@@ -615,11 +615,11 @@ function Index() {
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
               <div className="hx__copy">
-                <div className="hx__kicker">
+                <div className="hx__kicker" aria-label="Concursos públicos para carreiras policiais e segurança pública">
                   <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span>CONCURSOS PÚBLICOS</span>
-                  <i aria-hidden="true" />
-                  <span>CARREIRAS POLICIAIS E ADMINISTRATIVAS</span>
+                  <span className="hx__kicker-primary">CONCURSOS PÚBLICOS</span>
+                  <span className="hx__kicker-divider" aria-hidden="true" />
+                  <span className="hx__kicker-secondary">CARREIRAS POLICIAIS E SEGURANÇA PÚBLICA</span>
                 </div>
                 <h1 id="home-title">
                   Sua aprovação começa
