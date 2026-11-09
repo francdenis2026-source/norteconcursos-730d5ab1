@@ -35,6 +35,7 @@ import "@/styles/student-workspace-refresh.css";
 import "@/styles/student-saas-dashboard.css";
 import "@/styles/student-home-premium.css";
 import "@/styles/student-edital-premium.css";
+import "@/styles/student-shell-premium.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
