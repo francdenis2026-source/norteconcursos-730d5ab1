@@ -651,9 +651,10 @@ function PcAcMasterPlanCard({
   );
 }
 
-/** Cronograma horário detalhado: 06:00–22:00, todos os dias, a partir de segunda-feira
- * 09/11/2026, com intervalos de descanso marcados. Complementa o plano de estudos completo
- * acima (aquele diz o que estudar e em que ordem; este diz a que hora exata). */
+/** Cronograma horário detalhado: 05:00–22:00, todos os dias, a partir de segunda-feira
+ * 09/11/2026, com treino físico (05:00–06:00 e 17:30–19:00) e intervalos de descanso marcados.
+ * Complementa o plano de estudos completo acima (aquele diz o que estudar e em que ordem; este
+ * diz a que hora exata). */
 function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
   const [exporting, setExporting] = React.useState(false);
   const weeks = React.useMemo(() => buildPcAcHourlyPlan(), []);
@@ -679,9 +680,9 @@ function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
               Cronograma horário detalhado
             </CardTitle>
             <CardDescription>
-              Das 06:00 às 22:00, todos os dias, a partir de segunda-feira (09/11), com
-              intervalos de descanso marcados. Sábado é dia de simulado completo; domingo é
-              descanso ativo, reduzido de propósito.
+              Das 05:00 às 22:00, todos os dias, a partir de segunda-feira (09/11), com treino
+              físico (05:00–06:00 e 17:30–19:00), refeições e intervalos marcados. Sábado é dia
+              de simulado completo; domingo é descanso ativo, reduzido de propósito.
             </CardDescription>
           </div>
           <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !weeks.length}>
@@ -693,9 +694,10 @@ function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
       <CardContent className="space-y-3">
         <p className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-muted-foreground">
           Cada semana tem 1 ou 2 disciplinas fixas — a semana inteira gira em torno delas, do
-          jeito que muda é só a atividade (teoria → questões → revisão → redação). Estudar 16h
-          por dia, todos os dias, por mais de dois meses sem pausa reduz o desempenho na reta
-          final — por isso domingo foi reservado para descanso ativo.
+          jeito que muda é só a atividade (teoria → questões → revisão → redação). Treino físico
+          entra todos os dias, às 05:00–06:00 e 17:30–19:00, e o estudo efetivo fica em torno de
+          8h30 por dia — um cronograma exaustivo rende menos do que um sustentável, por isso
+          domingo foi reservado para descanso ativo.
         </p>
         <Accordion type="multiple" defaultValue={weeks[0] ? [`semana-${weeks[0].weekNumber}`] : []}>
           {weeks.map((week) => (

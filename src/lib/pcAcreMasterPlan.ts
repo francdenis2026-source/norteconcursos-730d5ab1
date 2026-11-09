@@ -17,7 +17,8 @@ export type PcAcActivityType =
   | "simulado"
   | "descanso"
   | "pausa"
-  | "rotina";
+  | "rotina"
+  | "exercicio";
 
 export interface PcAcPlanActivity {
   type: PcAcActivityType;
@@ -195,4 +196,5 @@ export const PCAC_ACTIVITY_LABEL: Record<PcAcActivityType, string> = {
   descanso: "Descanso",
   pausa: "Pausa",
   rotina: "Rotina",
+  exercicio: "Treino físico",
 };
