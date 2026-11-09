@@ -1,4 +1,4 @@
-/* Glass fixed header + clean gold hover system. */
+/* Fixed opaque navigation with a restrained scroll-state transition (no glass/blur). */
 .home.hr-canvas {
   --nc-fixed-header-height: 88px;
   box-sizing: border-box;
@@ -11,45 +11,34 @@
   width: 100%;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top) !important;
-  background: linear-gradient(
-    105deg,
-    rgb(8 13 19 / 76%) 0%,
-    rgb(14 22 31 / 68%) 52%,
-    rgb(8 13 19 / 78%) 100%
-  ) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(145%);
-  backdrop-filter: blur(24px) saturate(145%);
+  background: #111820 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
   border: 0 !important;
-  border-bottom: 1px solid rgb(224 184 103 / 34%) !important;
+  border-bottom: 1px solid rgb(224 184 103 / 24%) !important;
   border-radius: 0 !important;
-  box-shadow:
-    0 12px 34px rgb(0 0 0 / 22%),
-    0 1px 0 rgb(255 255 255 / 8%) inset !important;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 12%) !important;
   transform: translateZ(0);
   isolation: isolate;
+  transition:
+    background-color 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease !important;
 }
 .home.hr-canvas .home-header.hr-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgb(255 255 255 / 5%), transparent 75%);
+  content: none !important;
+  display: none !important;
 }
 .home.hr-canvas .hr-header .home-header__inner,
 .home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
   min-height: var(--nc-fixed-header-height) !important;
 }
 .home.hr-canvas .hr-header[data-scrolled] {
-  background: linear-gradient(
-    105deg,
-    rgb(7 11 16 / 84%) 0%,
-    rgb(12 19 27 / 78%) 52%,
-    rgb(7 11 16 / 86%) 100%
-  ) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(155%);
-  backdrop-filter: blur(28px) saturate(155%);
-  box-shadow: 0 14px 38px rgb(0 0 0 / 30%) !important;
+  background: #0b1117 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom-color: rgb(224 184 103 / 34%) !important;
+  box-shadow: 0 5px 16px rgb(0 0 0 / 18%) !important;
 }
 
 /* Remove the chunky clipped gold patch. Use a precise gold label and underline. */
