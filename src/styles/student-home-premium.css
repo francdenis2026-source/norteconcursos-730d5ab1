@@ -41,7 +41,7 @@
    As três camadas de estilo anteriores (student-overview-v3, student-workspace-refresh,
    student-saas-dashboard) definem variáveis próprias (--home-*, --student-*, --saas-*)
    com baixa saturação (cinza-azulado quase neutro). Redefinimos aqui, só para esta página
-   e só no escuro, com mais croma (mais "cor" visível) e um leve matiz violeta — sofisticado
+   e só no escuro, com superfícies neutras e dourado discreto — sofisticado
    sem perder a legibilidade nem o dourado da marca. */
 :root.dark .app-shell[data-area="student"] .student-desk.student-overview {
   --home-ink: var(--nc-color-text);
@@ -743,7 +743,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   background: var(--nc-color-action-hover) !important;
 }
 
-/* Replace the dashboard's violet accent with a calmer professional teal. */
+/* Replace the dashboard's old violet accent with the committed Norte gold. */
 .app-shell[data-area="student"] .student-overview {
   --home-violet: var(--nc-color-action) !important;
   --saas-violet: var(--nc-color-action) !important;
