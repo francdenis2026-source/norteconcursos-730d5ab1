@@ -609,7 +609,50 @@ function Index() {
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
-        <div id="inicio" className="home-daily-challenge-wrap">
+        <section id="inicio" className="home-hero hr-hero" aria-labelledby="home-hero-title">
+          <img
+            className="home-hero__image"
+            src="/media/hero/hero-norte-recorte.webp"
+            alt="Agente de segurança pública em uniforme operacional"
+            width={1208}
+            height={1302}
+            fetchPriority="high"
+            decoding="async"
+          />
+          <div className="hx">
+            <div className="hx__inner">
+              <div className="hx__copy">
+                <div className="hx__kicker" aria-label="Preparação para carreiras policiais">
+                  <span className="hx__kicker-mark" aria-hidden="true" />
+                  <span className="hx__kicker-primary">NORTE CONCURSOS · PREPARAÇÃO ESTRATÉGICA</span>
+                  <span className="hx__kicker-secondary">DIREÇÃO · DISCIPLINA · CONQUISTA</span>
+                </div>
+                <h1 id="home-hero-title" className="hx__headline hr-hero__headline">
+                  <span>Sua preparação</span>
+                  <span>tem um <em>norte.</em></span>
+                </h1>
+                <p className="hx__description hr-hero__description">
+                  Questões, editais e simulados para transformar seu estudo em preparação real para as carreiras policiais.
+                </p>
+                <div className="home-actions">
+                  <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
+                    Começar agora <ArrowRight aria-hidden="true" />
+                  </Link>
+                  <a href="#plataforma" className="hr-btn hr-btn--ghost">
+                    Conhecer a plataforma <ArrowUpRight aria-hidden="true" />
+                  </a>
+                </div>
+                <ul className="hx__trust" aria-label="Diferenciais da plataforma">
+                  <li><ShieldCheck aria-hidden="true" /><span><strong>Fontes identificadas</strong><small>Referências oficiais</small></span></li>
+                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por banca</strong><small>Treino direcionado</small></span></li>
+                  <li><Target aria-hidden="true" /><span><strong>Plano de estudos</strong><small>Foco no seu objetivo</small></span></li>
+                  <li><Trophy aria-hidden="true" /><span><strong>Desempenho acompanhado</strong><small>Evolução mensurável</small></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="home-daily-challenge-wrap">
           <DailyChallengeBadge />
         </div>
 
