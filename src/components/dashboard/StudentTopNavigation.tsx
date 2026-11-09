@@ -34,35 +34,35 @@ const sections: {
     label: "Estudos",
     icon: BookOpenText,
     description: "Ferramentas, biblioteca, leis e conteúdos",
-    tone: "cyan",
+    tone: "gold",
   },
   {
     groups: ["Questões", "Provas"],
     label: "Treinos",
     icon: ClipboardList,
     description: "Questões, simulados, flashcards e provas",
-    tone: "emerald",
+    tone: "gold",
   },
   {
     groups: ["Desempenho"],
     label: "Desempenho",
     icon: ChartNoAxesCombined,
     description: "Evolução, análises, histórico e conquistas",
-    tone: "rose",
+    tone: "gold",
   },
   {
     groups: ["ENEM"],
     label: "ENEM",
     icon: GraduationCap,
     description: "Preparação para o ENEM",
-    tone: "indigo",
+    tone: "gold",
   },
   {
     groups: ["Conta"],
     label: "Conta",
     icon: SlidersHorizontal,
     description: "Perfil e assinatura",
-    tone: "slate",
+    tone: "gold",
   },
 ];
 
@@ -109,7 +109,7 @@ export function StudentTopNavigation({
           <Link
             to="/dashboard"
             className="student-top-navigation__trigger student-top-navigation__home"
-            data-tone="slate"
+            data-tone="gold"
             aria-label="Voltar à área principal"
           >
             <span className="student-top-navigation__icon-wrap" aria-hidden="true">
@@ -123,7 +123,7 @@ export function StudentTopNavigation({
             <Link
               to="/dashboard/study-coach"
               className="student-top-navigation__trigger"
-              data-tone="blue"
+              data-tone="gold"
               data-active={isCoachActive}
               aria-current={isCoachActive ? "page" : undefined}
             >
@@ -135,7 +135,7 @@ export function StudentTopNavigation({
             <Link
               to="/dashboard/cronograma"
               className="student-top-navigation__trigger"
-              data-tone="blue"
+              data-tone="gold"
               data-active={isScheduleActive}
               aria-current={isScheduleActive ? "page" : undefined}
             >
