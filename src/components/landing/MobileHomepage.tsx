@@ -1,115 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  BookOpenCheck,
-  BookOpen,
-  ClipboardList,
-  PlaySquare,
-  BarChart3,
-  FileText,
-  Brain,
-  Bookmark,
-  Gift,
-  Crown,
-  Gem,
-  Zap,
-  CheckCircle2,
-  ChevronRight,
-  Mail,
-  MapPin,
-  MessageCircle,
-  ShieldCheck,
-  Target,
-} from "lucide-react";
-import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
+import { ArrowRight, Gift, Crown, Gem, Mail, MapPin, MessageCircle, ShieldCheck, Target } from "lucide-react";
+import { HomeIntro } from "@/components/landing/HomeIntro";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
-import { HeaderQuestionStats } from "@/components/landing/HeroDock";
-import { HeroBadge } from "@/components/landing/HeroBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
-import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
-import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 
 export function MobileHomepage() {
   return (
     <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
-      <section id="mobile-inicio" className="mobile-homepage__hero hr-m-hero">
-        <div className="mobile-homepage__hero-media">
-          <TacticalClockBackdrop />
-          <img className="mobile-homepage__portrait" src="/media/hero/hero-norte-recorte.webp" alt="Agente de segurança pública" width={1208} height={1302} fetchPriority="high" decoding="async" />
-          <div className="mobile-homepage__hero-shade" aria-hidden="true" />
-          <HeroBadge />
-        </div>
-        <div className="mobile-homepage__hero-copy">
-          <span className="mobile-homepage__eyebrow">
-            <span /> Preparação para carreiras policiais
-          </span>
-          <div className="mobile-homepage__glass">
-            <h1>
-              Carreiras <em>Policiais.</em>
-            </h1>
-            <p className="mobile-homepage__hero-lead">
-              Questões, editais e simulados para transformar seu estudo em preparação real.
-            </p>
-            <HeaderQuestionStats mobile />
-            <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__primary hr-m-primary">
-              Começar agora <ArrowRight aria-hidden="true" />
-            </Link>
-            <a href="#mobile-recursos" className="mobile-homepage__secondary">
-              Ver como funciona <ChevronRight aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-      </section>
-      <nav className="mobile-homepage__quick-nav" aria-label="Acesso rápido às ferramentas">
-        <a href="#mobile-recursos"><BookOpen aria-hidden="true" />Estudar</a>
-        <a href="#mobile-ferramentas"><ClipboardList aria-hidden="true" />Questões</a>
-        <a href="#mobile-recursos"><PlaySquare aria-hidden="true" />Videoaulas</a>
-        <a href="#ranking-destaque-mobile"><BarChart3 aria-hidden="true" />Desempenho</a>
-      </nav>
-      <section className="mobile-homepage__daily hr-m-card">
-        <div>
-          <span className="mobile-homepage__eyebrow">
-            <span /> Ritmo diário
-          </span>
-          <h2>Estude um pouco hoje. Chegue mais forte na prova.</h2>
-          <p>
-            {GUEST_DAILY_LIMIT} questões por dia, sem cadastro, com comentários para você entender cada
-            resposta.
-          </p>
-        </div>
-        <DailyChallengeBadge />
-      </section>
-      <section id="mobile-recursos" className="mobile-homepage__resources">
-        <div className="mobile-homepage__section-head">
-          <span>O que você encontra</span>
-          <h2>Recursos que aceleram sua aprovação</h2>
-        </div>
-        <div id="mobile-ferramentas" className="mobile-homepage__cards" aria-label="Recursos da plataforma">
-          <article className="hr-m-card">
-            <BookOpenCheck aria-hidden="true" />
-            <strong>Treinador de questões</strong>
-            <p>Pratique por banca, cargo e disciplina.</p>
-          </article>
-          <article className="hr-m-card">
-            <Target aria-hidden="true" />
-            <strong>Plano de estudos</strong>
-            <p>Saiba o que revisar e qual é o próximo passo.</p>
-          </article>
-          <article className="hr-m-card">
-            <ShieldCheck aria-hidden="true" />
-            <strong>Conteúdo confiável</strong>
-            <p>Fontes oficiais e revisões identificadas.</p>
-          </article>
-        </div>
-        <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__wide-link">
-          Conhecer a plataforma <ArrowRight aria-hidden="true" />
-        </Link>
-      </section>
+      <HomeIntro mobile />
       <section id="mobile-concursos" className="mobile-homepage__contests">
         <div className="mobile-homepage__section-head">
-          <span>Concursos em foco</span>
           <h2>Concursos em foco</h2>
         </div>
         <ContestShowcase mobile />
@@ -149,25 +51,6 @@ export function MobileHomepage() {
         </p>
         <Link to="/auth" search={{ mode: "register" }} className="mobile-homepage__wide-link">
           Criar conta grátis <ArrowRight />
-        </Link>
-      </section>
-      <section className="mobile-homepage__feature-grid" aria-label="Destaques da preparação">
-        <h2><Zap aria-hidden="true" /> Recursos que aceleram sua aprovação</h2>
-        <div>
-          <a href="#mobile-concursos"><FileText aria-hidden="true" />Editais atualizados</a>
-          <a href="#mobile-ferramentas"><BarChart3 aria-hidden="true" />Simulados realistas</a>
-          <a href="#mobile-recursos"><Bookmark aria-hidden="true" />Materiais direcionados</a>
-          <a href="#mobile-recursos"><Brain aria-hidden="true" />Método de estudo</a>
-        </div>
-      </section>
-      <section className="mobile-homepage__closing">
-        <CheckCircle2 aria-hidden="true" />
-        <div>
-          <strong>Preparação sem improviso.</strong>
-          <p>Escolha sua carreira e comece pelo diagnóstico.</p>
-        </div>
-        <Link to="/auth" search={{ mode: "register" }}>
-          Criar conta
         </Link>
       </section>
       <footer className="mobile-homepage__footer">

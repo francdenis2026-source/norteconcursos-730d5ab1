@@ -49,47 +49,49 @@ export function DailyChallengeBadge() {
     ? "Você concluiu o desafio de hoje."
     : started
       ? `Você já respondeu ${used} de ${GUEST_DAILY_LIMIT} questões.`
-      : `${GUEST_DAILY_LIMIT} questões gratuitas para testar seus conhecimentos.`;
+      : `${GUEST_DAILY_LIMIT} questões gratuitas hoje.`;
   const description = done
-    ? "Sua próxima rodada será liberada à meia-noite, no horário do Acre."
-    : "Questões de certo ou errado para manter seu ritmo de preparação.";
+    ? "Nova rodada à meia-noite, no horário do Acre."
+    : "Certo ou errado, com comentários. Sem cadastro.";
   const action = done ? "Conhecer a plataforma" : started ? "Continuar desafio" : "Começar desafio";
 
   const content = (
     <>
-      <span className="daily-badge__emblem" aria-hidden="true">
+      <span className="sx-daily__icon" aria-hidden="true">
         {done ? <Trophy /> : <Target />}
       </span>
-      <span className="daily-badge__copy">
-        <span className="daily-badge__eyebrow">
-          <span className="daily-badge__signal" />
-          DESAFIO DIÁRIO <span className="daily-badge__eyebrow-separator">/</span> TREINO GRATUITO
+      <span className="sx-daily__copy">
+        <span className="sx-daily__eyebrow">
+          <i aria-hidden="true" /> Desafio diário
         </span>
-        <strong className="daily-badge__title">{title}</strong>
-        <small className="daily-badge__description">{description}</small>
+        <strong>{title}</strong>
+        <small>{description}</small>
       </span>
-      <span className="daily-badge__details">
-        <span className="daily-badge__progress-label">
-          <Flame aria-hidden="true" /> Seu ritmo de hoje
-        </span>
-        <span className="daily-badge__progress-track" aria-hidden="true">
+      <span className="sx-daily__meta">
+        <span className="sx-daily__track" aria-hidden="true">
           <span style={{ width: `${(used / GUEST_DAILY_LIMIT) * 100}%` }} />
         </span>
-        <span className="daily-badge__progress-count">{used} de {GUEST_DAILY_LIMIT} respondidas</span>
-        <span className="daily-badge__renewal"><Clock3 aria-hidden="true" /> Nova rodada em <time>{countdown}</time></span>
+        <span className="sx-daily__row">
+          <span>
+            <Flame aria-hidden="true" /> {used} de {GUEST_DAILY_LIMIT} respondidas
+          </span>
+          <span>
+            <Clock3 aria-hidden="true" /> Renova em <time>{countdown}</time>
+          </span>
+        </span>
       </span>
-      <span className="daily-badge__cta">
-        <span>{action}</span><ArrowRight aria-hidden="true" />
+      <span className="sx-daily__cta">
+        {action} <ArrowRight aria-hidden="true" />
       </span>
     </>
   );
 
   return done ? (
-    <Link to="/auth" search={{ mode: "register" }} className="daily-badge daily-badge--featured daily-challenge-home">
+    <Link to="/auth" search={{ mode: "register" }} className="sx-daily" data-done>
       {content}
     </Link>
   ) : (
-    <Link to="/desafio-diario" className="daily-badge daily-badge--featured daily-challenge-home">
+    <Link to="/desafio-diario" className="sx-daily">
       {content}
     </Link>
   );

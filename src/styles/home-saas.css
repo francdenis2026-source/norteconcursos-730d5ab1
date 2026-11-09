@@ -1,0 +1,526 @@
+/* Homepage SaaS: abertura única (hero, desafio diário, recursos) para desktop e celular.
+   Tokens próprios e neutros; claro/escuro seguem a classe .dark do <html>. */
+.home.hr-canvas {
+  --sx-bg: #f5f6f8;
+  --sx-surface: #ffffff;
+  --sx-surface-2: #eef0f4;
+  --sx-border: #dfe3e9;
+  --sx-text: #10151c;
+  --sx-muted: #556070;
+  --sx-accent: #8a6208;
+  --sx-accent-bg: #e3b14b;
+  --sx-accent-ink: #1a1405;
+  --sx-shadow: 0 1px 2px rgb(16 21 28 / 0.05), 0 12px 32px -16px rgb(16 21 28 / 0.18);
+  background: var(--sx-bg);
+}
+.dark .home.hr-canvas {
+  --sx-bg: #101318;
+  --sx-surface: #171b22;
+  --sx-surface-2: #1e232b;
+  --sx-border: #2a303a;
+  --sx-text: #eef1f5;
+  --sx-muted: #9ca6b4;
+  --sx-accent: #e3b14b;
+  --sx-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -20px rgb(0 0 0 / 0.6);
+}
+
+.home.hr-canvas .sx {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100% - 48px);
+  margin-inline: auto;
+  color: var(--sx-text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.home.hr-canvas .sx *,
+.home.hr-canvas .sx *::before,
+.home.hr-canvas .sx *::after {
+  box-sizing: border-box;
+}
+.home.hr-canvas .sx :is(h1, h2, p, ul, dl, dd, dt) {
+  margin: 0;
+  padding: 0;
+}
+.home.hr-canvas .sx ul {
+  list-style: none;
+}
+.home.hr-canvas .sx svg {
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+/* ---------- Hero ---------- */
+.home.hr-canvas .sx-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 48px;
+  align-items: center;
+  padding: 44px 0 40px;
+  scroll-margin-top: 140px;
+}
+.home.hr-canvas .sx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--sx-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home.hr-canvas .sx-hero h1 {
+  margin-top: 14px;
+  color: var(--sx-text);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.home.hr-canvas .sx-hero h1 em {
+  color: var(--sx-accent);
+  font-style: normal;
+}
+.home.hr-canvas .sx-lead {
+  max-width: 52ch;
+  margin-top: 14px;
+  color: var(--sx-muted);
+  font-size: 16px;
+  text-align: justify;
+  hyphens: auto;
+}
+.home.hr-canvas .sx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.home.hr-canvas .sx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    transform 0.15s;
+}
+.home.hr-canvas .sx-btn--primary {
+  background: var(--sx-accent-bg);
+  color: var(--sx-accent-ink);
+}
+.home.hr-canvas .sx-btn--primary:hover {
+  background: #edc063;
+  transform: translateY(-1px);
+}
+.home.hr-canvas .sx-btn--ghost {
+  border-color: var(--sx-border);
+  background: var(--sx-surface);
+  color: var(--sx-text);
+}
+.home.hr-canvas .sx-btn--ghost:hover {
+  border-color: var(--sx-muted);
+}
+.home.hr-canvas .sx :is(a, button):focus-visible {
+  outline: 2px solid var(--sx-accent);
+  outline-offset: 2px;
+}
+.home.hr-canvas .sx-stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 28px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--sx-border);
+}
+.home.hr-canvas .sx-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+.home.hr-canvas .sx-stats dd {
+  color: var(--sx-text);
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.home.hr-canvas .sx-stats dt {
+  color: var(--sx-muted);
+  font-size: 12px;
+}
+
+/* painel: imagem + desafio diário */
+.home.hr-canvas .sx-hero__panel {
+  position: relative;
+  display: grid;
+  border: 1px solid var(--sx-border);
+  border-radius: 16px;
+  background: var(--sx-surface);
+  box-shadow: var(--sx-shadow);
+  overflow: hidden;
+}
+.home.hr-canvas .sx-hero__image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: 50% 12%;
+  background: var(--sx-surface-2);
+}
+
+/* ---------- Desafio diário ---------- */
+.home.hr-canvas .sx-daily {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px 14px;
+  align-items: start;
+  padding: 18px;
+  border-top: 1px solid var(--sx-border);
+  color: var(--sx-text);
+  text-decoration: none;
+}
+.home.hr-canvas .sx-daily:hover .sx-daily__cta {
+  background: #edc063;
+}
+.home.hr-canvas .sx-daily__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--sx-surface-2);
+  color: var(--sx-accent);
+  font-size: 20px;
+}
+.home.hr-canvas .sx-daily__copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.home.hr-canvas .sx-daily__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sx-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home.hr-canvas .sx-daily__eyebrow i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2fb277;
+}
+.home.hr-canvas .sx-daily__copy strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home.hr-canvas .sx-daily__copy small {
+  color: var(--sx-muted);
+  font-size: 13px;
+}
+.home.hr-canvas .sx-daily__meta {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+}
+.home.hr-canvas .sx-daily__track {
+  display: block;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--sx-surface-2);
+  overflow: hidden;
+}
+.home.hr-canvas .sx-daily__track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--sx-accent-bg);
+}
+.home.hr-canvas .sx-daily__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+  color: var(--sx-muted);
+  font-size: 12px;
+}
+.home.hr-canvas .sx-daily__row > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.home.hr-canvas .sx-daily__row time {
+  color: var(--sx-text);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.home.hr-canvas .sx-daily__cta {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 10px;
+  background: var(--sx-accent-bg);
+  color: var(--sx-accent-ink);
+  font-size: 14px;
+  font-weight: 650;
+  transition: background-color 0.15s;
+}
+
+/* ---------- Recursos ---------- */
+.home.hr-canvas .sx-features {
+  padding: 36px 0 48px;
+  border-top: 1px solid var(--sx-border);
+  scroll-margin-top: 90px;
+}
+.home.hr-canvas .sx-head h2 {
+  margin-top: 8px;
+  color: var(--sx-text);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 720;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.home.hr-canvas .sx-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+.home.hr-canvas .sx-card {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--sx-border);
+  border-radius: 12px;
+  background: var(--sx-surface);
+}
+.home.hr-canvas .sx-card__icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--sx-surface-2);
+  color: var(--sx-accent);
+  font-size: 18px;
+}
+.home.hr-canvas .sx-card strong {
+  display: block;
+  color: var(--sx-text);
+  font-size: 15px;
+  font-weight: 680;
+}
+.home.hr-canvas .sx-card p {
+  margin-top: 3px;
+  color: var(--sx-muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1023px) {
+  .home.hr-canvas .sx-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .home.hr-canvas .sx-hero__image {
+    height: 180px;
+  }
+  .home.hr-canvas .sx-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx {
+    width: min(100% - 32px, 560px);
+    font-size: 14px;
+  }
+  .home.hr-canvas .sx-hero {
+    gap: 20px;
+    padding: 20px 0 24px;
+  }
+  .home.hr-canvas .sx-hero h1 {
+    font-size: 28px;
+  }
+  .home.hr-canvas .sx-lead {
+    font-size: 14.5px;
+  }
+  .home.hr-canvas .sx-btn {
+    flex: 1 1 150px;
+  }
+  .home.hr-canvas .sx-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+  .home.hr-canvas .sx-stats dd {
+    font-size: 18px;
+  }
+  .home.hr-canvas .sx-stats dt {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .home.hr-canvas .sx-hero__image {
+    display: none;
+  }
+  .home.hr-canvas .sx-daily {
+    padding: 14px;
+    border-top: 0;
+  }
+  .home.hr-canvas .sx-features {
+    padding: 24px 0 28px;
+  }
+  .home.hr-canvas .sx-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .home.hr-canvas .sx-card {
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas .sx-btn,
+  .home.hr-canvas .sx-daily__cta {
+    transition: none;
+  }
+  .home.hr-canvas .sx-btn--primary:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Ritmo vertical à prova de regras antigas ---------- */
+.home.hr-canvas .sx-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.home.hr-canvas .sx-hero__copy > * {
+  margin: 0 !important;
+}
+.home.hr-canvas .sx-hero__copy > .sx-actions {
+  margin-top: 6px !important;
+}
+.home.hr-canvas .sx-hero__copy > .sx-stats {
+  align-self: stretch;
+  margin-top: 10px !important;
+}
+.home.hr-canvas .sx-features {
+  display: grid;
+  gap: 22px;
+}
+.home.hr-canvas .sx-features > *,
+.home.hr-canvas .sx-head > * {
+  margin: 0 !important;
+}
+.home.hr-canvas .sx-head {
+  display: grid;
+  gap: 8px;
+}
+
+/* ---------- Seções existentes: mais compactas e neutras ---------- */
+.home.hr-canvas .desktop-homepage > .home-section,
+.home.hr-canvas .desktop-homepage .home-ranking {
+  padding-block: 28px !important;
+}
+.dark .home.hr-canvas .home-ranking__shell {
+  border-color: var(--sx-border) !important;
+  background: var(--sx-surface) !important;
+}
+.home.hr-canvas .hr-footer-cta {
+  margin-block: 12px 28px !important;
+  padding-block: 24px !important;
+}
+
+/* Ficha dos concursos: texto legível no modo claro (antes branco sobre branco). */
+html:not(.dark) .home.hr-canvas .contest-ficha dt {
+  color: #5b6573 !important;
+}
+html:not(.dark) .home.hr-canvas .contest-ficha dd {
+  color: #10151c !important;
+}
+.home.hr-canvas .sx-btn {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-btn {
+    padding-inline: 12px;
+  }
+}
+
+/* Cabeçalho: abaixo de 1100px a navegação fica no menu e na barra inferior (sem sobreposição). */
+@media (max-width: 1099px) {
+  .home.hr-canvas .home-header .hr-nav {
+    display: none !important;
+  }
+}
+@media (max-width: 1023px) {
+  .home.hr-canvas .sx-hero__image {
+    display: none;
+  }
+  .home.hr-canvas .sx-daily {
+    border-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-hero h1 {
+    font-size: 26px;
+    text-wrap: pretty;
+  }
+  .home.hr-canvas .sx-btn {
+    flex: 1 1 0;
+  }
+}
+.home.hr-canvas .sx-hero h1 {
+  width: 100%;
+  max-width: 22ch;
+}
+@media (max-width: 1023px) {
+  .home.hr-canvas .sx-hero h1 {
+    max-width: none;
+  }
+}
+
+/* Cabeçalho dos recursos com a ilustração da plataforma. */
+.home.hr-canvas .sx-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+.home.hr-canvas .sx-head > div {
+  display: grid;
+  gap: 8px;
+}
+.home.hr-canvas .sx-head__art {
+  width: 112px;
+  height: auto;
+  border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-head__art {
+    width: 76px;
+  }
+}

@@ -1,11 +1,10 @@
 import { useHomeSection } from "@/hooks/useHomeSection";
-import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 import {
   Sheet,
   SheetClose,
@@ -20,28 +19,19 @@ import {
   ArrowUpRight,
   BadgeCheck,
   BookOpen,
-  BrainCircuit,
   CalendarCheck,
-  ChevronDown,
   Compass,
-  FileSearch,
   Home,
   Landmark,
   Layers3,
-  LineChart,
-  Map as MapIcon,
   MapPin,
   Mail,
   MessageCircle,
   Menu,
   Plus,
-  X,
   LogIn,
-  ScrollText,
-  ShieldCheck,
   Target,
   Trophy,
-  Volume2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
@@ -65,11 +55,10 @@ import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { NewsBanner } from "@/components/landing/NewsBanner";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
+import { HomeIntro } from "@/components/landing/HomeIntro";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
@@ -99,7 +88,7 @@ import "@/styles/home-preparation-premium.css";
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    title: "Norte Concursos | Prepare-se com método. tem direção",
+    title: "Norte Concursos | Preparação estratégica para carreiras policiais",
     meta: [
       {
         name: "description",
@@ -114,22 +103,14 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      {
-        rel: "preload",
-        as: "image",
-        href: "/media/hero/hero-norte-recorte.webp",
-        fetchPriority: "high",
-      },
-    ],
   }),
 });
 
 const HOME_SECTION_IDS = ["inicio", "plataforma", "concursos", "planos"] as const;
 
 const EXPLORE_LINKS: [string, string][] = [
-  ["Ferramentas", "#ferramentas"],
-  ["Carreiras", "#carreiras"],
+  ["A plataforma", "#plataforma"],
+  ["Concursos", "#concursos"],
   ["Desafio diário", "/desafio-diario"],
   ["Planos e condições", "#planos"],
 ];
@@ -146,8 +127,7 @@ const MAPS_URL =
 const MENU_TILES: [string, string, LucideIcon, string?][] = [
   ["A plataforma", "plataforma", Compass, "mobile-recursos"],
   ["Concursos", "concursos", Landmark, "mobile-concursos"],
-  ["Ferramentas", "ferramentas", BrainCircuit, "mobile-ferramentas"],
-  ["Carreiras", "carreiras", Target, "mobile-inicio"],
+  ["Ranking", "ranking-destaque", Target, "ranking-destaque-mobile"],
   ["Desafio diário", "/desafio-diario", Trophy],
   ["Ajuda", "/suporte", MessageCircle],
 ];
@@ -157,61 +137,6 @@ function goToSection(desktopId: string, mobileId?: string) {
     .map((id) => (id ? document.getElementById(id) : null))
     .find((node) => node && node.getClientRects().length > 0);
   (el ?? document.getElementById("inicio"))?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-function Head({ kicker, children, lead }: { kicker: string; children: ReactNode; lead?: string }) {
-  return (
-    <div className="home-heading">
-      <span className="home-eyebrow home-signal">{kicker}</span>
-      <h2>{children}</h2>
-      {lead && <p>{lead}</p>}
-    </div>
-  );
-}
-
-function PreparationInfo() {
-  const highlights: { icon: LucideIcon; title: string; text: string; tag: string }[] = [
-    { icon: MapIcon, title: "Edital organizado", text: "Transforme o conteúdo programático em tópicos claros para estudar e acompanhar.", tag: "DIRECIONE" },
-    { icon: BrainCircuit, title: "Questões por banca", text: "Pratique por disciplina, assunto e organizadora, com correção e comentários.", tag: "PRATIQUE" },
-    { icon: Trophy, title: "Simulados", text: "Treine tempo, estratégia e consistência em uma experiência próxima da prova.", tag: "AVALIE" },
-    { icon: Compass, title: "Plano de estudos", text: "Organize prioridades e revisões conforme seu edital e sua rotina.", tag: "PLANEJE" },
-    { icon: FileSearch, title: "Caderno de erros", text: "Retome pontos de dificuldade e converta erros em novas metas de revisão.", tag: "EVOLUA" },
-    { icon: LineChart, title: "Desempenho", text: "Acompanhe acertos, ritmo e lacunas para decidir onde concentrar seus esforços.", tag: "ACOMPANHE" },
-  ];
-  return (
-    <div className="hr-preparation hr-preparation--glass">
-      <div className="hr-preparation__intro">
-        <span className="hr-preparation__eyebrow"><i /> AMBIENTE DE PREPARAÇÃO</span>
-        <h2>Estude com método.<br /><em>Avance com direção.</em></h2>
-        <p>Os recursos essenciais para organizar o edital, praticar com estratégia e acompanhar sua evolução até a prova.</p>
-        <div className="hr-preparation__proof" aria-label="Diferenciais da plataforma">
-          <span><ShieldCheck aria-hidden="true" /> Referências identificadas</span>
-          <span><Target aria-hidden="true" /> Estudo orientado por objetivo</span>
-        </div>
-      </div>
-      <div className="hr-preparation__content">
-        <div className="hr-preparation__content-head">
-          <div><span>RECURSOS ESSENCIAIS</span><strong>Da organização à aprovação</strong></div>
-          <div className="hr-preparation__visual" aria-hidden="true">
-            <img src="/images/norte-recursos-glass.webp" alt="" loading="lazy" />
-          </div>
-        </div>
-        <div className="hr-preparation__feature-grid">
-          {highlights.map(({ icon: Icon, title, text, tag }, index) => (
-            <article className="hr-preparation__glass-feature" key={title}>
-              <span className="hr-preparation__glass-icon"><Icon aria-hidden="true" /></span>
-              <div className="hr-preparation__glass-copy">
-                <span className="hr-preparation__glass-tag">{tag}</span>
-                <strong>{title}</strong>
-                <p>{text}</p>
-              </div>
-              <span className="hr-preparation__glass-index">0{index + 1}</span>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
 }
 
 function Index() {
@@ -228,19 +153,6 @@ function Index() {
   return (
     <div className="home home-recomposition hr-canvas">
       <PublicAchievementSignal />
-      <div className="home-agent-fixed" aria-hidden="true">
-        <img
-          src="/media/hero/hero-norte-recorte.webp"
-          alt=""
-          width={1208}
-          height={1302}
-          fetchPriority="high"
-          decoding="async"
-        />
-      </div>
-      <div className="home-backdrop" aria-hidden="true">
-        <TacticalClockBackdrop />
-      </div>
       <a href="#conteudo" className="home-skip home-skip--desktop">
         Pular para o conteúdo
       </a>
@@ -268,20 +180,6 @@ function Index() {
               <Landmark aria-hidden="true" className="home-nav__icon" />
               <span>Concursos</span>
             </a>
-            <details className="home-nav__group">
-              <summary aria-label="Abrir menu de preparação">
-                <Target aria-hidden="true" className="home-nav__icon" />
-                <span>Preparação</span>
-                <ChevronDown className="home-nav__chevron" aria-hidden="true" />
-              </summary>
-              <div className="home-nav__panel">
-                <a href="#ferramentas">Ferramentas de estudo</a>
-                <a href="#como">Como funciona</a>
-                <a href="#carreiras">Carreiras policiais</a>
-                <a href="#fontes">Fontes oficiais</a>
-                <Link to="/desafio-diario">Desafio diário</Link>
-              </div>
-            </details>
             <a href="#ranking-destaque">
               <Trophy aria-hidden="true" className="home-nav__icon" />
               <span>Ranking</span>
@@ -295,9 +193,6 @@ function Index() {
               <span>Planos</span>
             </a>
           </nav>
-          <span className="home-header__tagline" aria-hidden="true">
-            Sua preparação tem direção.
-          </span>
           <div className="home-header__actions">
             <Link
               to="/auth"
@@ -471,73 +366,10 @@ function Index() {
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
-        <section id="inicio" className="home-hero hr-hero" aria-labelledby="home-hero-title">
-          <img
-            className="home-hero__image"
-            src="/media/hero/hero-norte-recorte.webp"
-            alt="Agente de segurança pública em uniforme operacional"
-            width={1208}
-            height={1302}
-            fetchPriority="high"
-            decoding="async"
-          />
-          <div className="hx">
-            <div className="hx__inner">
-              <div className="hx__copy">
-                <div className="hx__kicker" aria-label="Preparação para carreiras policiais">
-                  <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span className="hx__kicker-primary">NORTE CONCURSOS · FORMAÇÃO PARA CARREIRAS POLICIAIS</span>
-                  <span className="hx__kicker-secondary">MÉTODO · CONSTÂNCIA · RESULTADO</span>
-                </div>
-                <h1 id="home-hero-title" className="hx__headline hr-hero__headline">
-                  <span>Preparação estratégica</span>
-                  <span>para sua carreira <em>policial.</em></span>
-                </h1>
-                <p className="hx__description hr-hero__description">
-                  Editais organizados, questões por banca e simulados para orientar cada etapa da sua preparação policial.
-                </p>
-                <div className="home-actions">
-                  <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
-                    Iniciar preparação <ArrowRight aria-hidden="true" />
-                  </Link>
-                  <a href="#plataforma" className="hr-btn hr-btn--ghost">
-                    Explorar a plataforma <ArrowUpRight aria-hidden="true" />
-                  </a>
-                </div>
-                <ul className="hx__trust" aria-label="Diferenciais da plataforma">
-                  <li><ShieldCheck aria-hidden="true" /><span><strong>Fontes oficiais</strong><small>Referências com origem verificada</small></span></li>
-                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por organizadora</strong><small>Treino direcionado por banca</small></span></li>
-                  <li><Target aria-hidden="true" /><span><strong>Plano individualizado</strong><small>Rotina alinhada ao edital</small></span></li>
-                  <li><Trophy aria-hidden="true" /><span><strong>Desempenho monitorado</strong><small>Indicadores de evolução</small></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="home-daily-challenge-wrap">
-          <DailyChallengeBadge />
-        </div>
+        <HomeIntro />
 
-        <section
-          id="plataforma"
-          className="home-section home-preparation hr-section hr-showcase"
-          aria-labelledby="preparation-title"
-        >
-          <div className="home-container hr-showcase__inner">
-            <PreparationInfo />
-          </div>
-        </section>
-
-        <section id="concursos" className="home-section home-operations hr-section hr-section--alt">
+        <section id="concursos" className="home-section home-operations hr-section hr-section--alt" aria-label="Concursos em foco">
           <div className="home-container">
-            <div className="home-operations__heading">
-              <Head
-                kicker="02 · Seu foco começa no Acre"
-                lead="PC-AC em destaque. Provas da IDECAN e de outras bancas para transformar seu objetivo em prática."
-              >
-                Seu próximo <em>objetivo.</em>
-              </Head>
-            </div>
             <ContestShowcase />
           </div>
         </section>
@@ -548,8 +380,8 @@ function Index() {
 
       <div className="hr-footer-cta">
         <div>
-          <h2>Pronto para dar o próximo passo?</h2>
-          <p>Crie sua conta grátis e comece a treinar com questões, simulados e fontes oficiais ainda hoje.</p>
+          <h2>Comece a treinar hoje.</h2>
+          <p>Conta gratuita, sem cartão.</p>
         </div>
         <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
           Criar conta grátis <ArrowUpRight aria-hidden="true" />
