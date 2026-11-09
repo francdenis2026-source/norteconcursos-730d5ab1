@@ -1,4 +1,5 @@
 import { TRACKS } from "@/data/tracks";
+import "@/styles/learning-workspace-refinement.css";
 import { tracksOf } from "@/lib/disciplineHub";
 import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
@@ -271,7 +272,7 @@ function LibraryIndex() {
   }
 
   return (
-    <div className="material-library space-y-4 pb-8">
+    <div className="nc-learning-workspace material-library space-y-4 pb-8">
       <BackToPlan back={back} topic={initialQuery} />
       <BackToEdital back={back} />
       {focused ? (
