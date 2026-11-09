@@ -615,15 +615,15 @@ function Index() {
 
         <section
           id="plataforma"
-          className="home-section home-preparation hr-section hr-showcase hr-showcase-artwork"
-          aria-label="O ecossistema Norte — preparação completa"
+          className="home-section home-preparation hr-section hr-showcase hr-showcase-pcac"
+          aria-label="Concurso Público da Polícia Civil do Estado do Acre"
         >
           <img
-            className="hr-showcase-art"
-            src="/media/hero/banner-premium-norte-concursos.webp"
-            alt="O ecossistema Norte: ferramentas, método de preparação, concursos e fontes confiáveis."
-            width={2172}
-            height={724}
+            className="hr-showcase-pcac__art"
+            src="/media/hero/pc-ac-homepage.webp"
+            alt="Destaque do concurso da Polícia Civil do Estado do Acre: 139 vagas em 6 cargos, prova objetiva em 24 de janeiro de 2027 e simulado complementar com 92 questões da PC-SC."
+            width={1024}
+            height={323}
             loading="eager"
             fetchPriority="high"
             decoding="async"

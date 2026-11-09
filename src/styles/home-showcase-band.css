@@ -149,3 +149,55 @@
     margin-bottom: 6px !important;
   }
 }
+
+/* PC-AC featured area — exact approved artwork, full width and uncropped. */
+#plataforma.hr-showcase-pcac {
+  display: block !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  aspect-ratio: 1024 / 323 !important;
+  background: #101c25 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#plataforma.hr-showcase-pcac > .hr-showcase-pcac__art {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  transform: none !important;
+}
+#plataforma.hr-showcase-pcac::before,
+#plataforma.hr-showcase-pcac::after {
+  content: none !important;
+  display: none !important;
+}
+@media (max-width: 760px) {
+  #plataforma.hr-showcase-pcac {
+    width: 100% !important;
+    aspect-ratio: 1024 / 323 !important;
+    overflow: visible !important;
+  }
+  #plataforma.hr-showcase-pcac > .hr-showcase-pcac__art {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
