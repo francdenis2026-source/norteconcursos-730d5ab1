@@ -225,7 +225,7 @@ function ExamPanoramaPage() {
   const always = view.table.filter((s) => view.n > 1 && s.inExams === view.n).map((s) => s.name);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6">
+    <div className="exam-panorama-workspace mx-auto max-w-5xl space-y-6">
       <PageHero
         image="field-map"
         size="sm"
