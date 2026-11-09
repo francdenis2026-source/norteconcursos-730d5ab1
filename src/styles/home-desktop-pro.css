@@ -39,3 +39,11 @@
   /* Final CTA compact. */
   html body .home .hr-footer-cta { padding-block: 32px !important; margin-block: 24px !important; }
 }
+
+@media (min-width: 761px) {
+  html body .home.home .home-preparation__band { display: grid !important; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 2fr) !important; gap: 24px !important; align-items: start !important; }
+  html body .home.home .home-preparation__intro { align-self: start !important; position: sticky; top: 96px; margin: 0 !important; }
+  html body .home.home .home-preparation__items.hr-tools-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 12px !important; padding: 12px !important; }
+  html body .home.home .home-preparation__items > * { padding: 16px !important; min-height: 0 !important; height: auto !important; margin: 0 !important; }
+  html body .home.home .home-preparation__items p { padding-left: 0 !important; margin-top: 6px !important; font-size: 0.85rem; line-height: 1.45; }
+}
