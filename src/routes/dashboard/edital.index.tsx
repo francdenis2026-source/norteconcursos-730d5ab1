@@ -5,7 +5,7 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import "@/styles/student-workspace-unified.css";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search, Share2 } from "lucide-react";
+import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search, Share2, Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
@@ -57,6 +57,35 @@ function EditalPage() {
     [revision, setRevision] = React.useState(0);
   const [completed, setCompleted] = React.useState<Record<string, boolean>>({});
   const [shareFeedback, setShareFeedback] = React.useState("");
+  const [downloadBusy, setDownloadBusy] = React.useState(false);
+  const [downloadFeedback, setDownloadFeedback] = React.useState("");
+  async function downloadEdital(url: string, title: string) {
+    if (downloadBusy) return;
+    setDownloadBusy(true);
+    setDownloadFeedback("");
+    try {
+      const response = await fetch(url, { credentials: "omit" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const blob = await response.blob();
+      const type = blob.type.toLowerCase();
+      const pdf = type.includes("pdf") || new URL(url).pathname.toLowerCase().endsWith(".pdf");
+      if (!pdf || type.includes("html")) throw new Error("A origem não retornou um PDF válido");
+      const objectUrl = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = objectUrl;
+      anchor.download = `${title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9_-]+/g, "-").slice(0, 90)}.pdf`;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
+      setDownloadFeedback("Download iniciado.");
+    } catch {
+      setDownloadFeedback("O servidor do documento não permitiu o download direto. Use Abrir edital e salve o PDF pelo navegador.");
+    } finally {
+      setDownloadBusy(false);
+    }
+  }
+
   async function shareEdital(url: string, title: string) {
     setShareFeedback("");
     try {
@@ -244,6 +273,19 @@ function EditalPage() {
                 type="button"
                 variant="outline"
                 size="sm"
+                disabled={downloadBusy}
+                onClick={() => void downloadEdital(
+                  editalSourceUrl(edition.source)!,
+                  `${edition.contest_name}-${edition.contest_year}`
+                )}
+              >
+                <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+                {downloadBusy ? "Baixando…" : "Baixar PDF"}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
                 onClick={() => void shareEdital(
                   editalSourceUrl(edition.source)!,
                   `${edition.contest_name} — ${edition.contest_year}`
@@ -252,7 +294,7 @@ function EditalPage() {
                 <Share2 className="mr-2 h-4 w-4" aria-hidden="true" />
                 Compartilhar
               </Button>
-              {shareFeedback && <span role="status" className="text-xs text-muted-foreground">{shareFeedback}</span>}
+              {(shareFeedback || downloadFeedback) && <span role="status" className="text-xs text-muted-foreground">{downloadFeedback || shareFeedback}</span>}
             </div>
           )}
           <div
