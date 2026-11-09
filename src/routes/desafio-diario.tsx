@@ -101,7 +101,6 @@ function DesafioDiario() {
     let active = true;
     void (async () => {
       try {
-        await getAcreDateKey(true);
         const day = await getAcreDateKey(true);
         let existingToken: string | null = null;
         try {
@@ -210,7 +209,7 @@ function DesafioDiario() {
       else setWrong((value) => value + 1);
     } catch {
       setErrorMessage(
-        "Não foi possível salvar sua resposta neste navegador. Verifique se o armazenamento está disponível e tente novamente.",
+        "Não foi possível registrar sua resposta no servidor. Verifique sua conexão e tente novamente.",
       );
       setStep("error");
     } finally {
