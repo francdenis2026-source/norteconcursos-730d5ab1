@@ -83,6 +83,7 @@ import "@/styles/home-premium-system.css";
 import "@/styles/home-v2.css";
 import "@/styles/home-redesign.css";
 import "@/styles/home-navigation-premium.css";
+import "@/styles/home-color-neutralization.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
