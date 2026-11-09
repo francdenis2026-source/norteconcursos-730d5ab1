@@ -79,7 +79,6 @@ type Step = "loading" | "blocked" | "intro" | "playing" | "done" | "error" | "un
 function DesafioDiario() {
   const [step, setStep] = React.useState<Step>("loading");
   const [questions, setQuestions] = React.useState<Question[]>([]);
-  const sessionDay = React.useRef("");
   const sessionToken = React.useRef<string | null>(null);
   const submitting = React.useRef(false);
   const [remaining, setRemaining] = React.useState(GUEST_DAILY_LIMIT);
@@ -104,7 +103,6 @@ function DesafioDiario() {
       try {
         await getAcreDateKey(true);
         const day = await getAcreDateKey(true);
-        sessionDay.current = day;
         let existingToken: string | null = null;
         try {
           existingToken = window.localStorage.getItem(`norteconcurso:guest-session:${day}`);
