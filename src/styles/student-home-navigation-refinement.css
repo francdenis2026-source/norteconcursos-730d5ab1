@@ -1,0 +1,167 @@
+/* Student home + command navigation: compact, readable and responsive. */
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+    min-width: 0;
+    gap: clamp(10px, 1.5vw, 22px);
+    min-height: 58px;
+    padding-block: 7px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+    gap: 7px;
+    font-size: 11px;
+    letter-spacing: .09em;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    gap: 3px;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--foreground) 24%, transparent) transparent;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding-inline: clamp(8px, .8vw, 12px);
+    font-size: 11.5px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[aria-current="page"],
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+    color: var(--foreground);
+    border-color: color-mix(in srgb, var(--brass, #b8955b) 40%, var(--border));
+    background: color-mix(in srgb, var(--brass, #b8955b) 12%, var(--card));
+    box-shadow: inset 0 -2px 0 var(--brass, #b8955b);
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+.student-home.student-hub.student-desk.student-overview {
+  width: 100%;
+  min-width: 0;
+  gap: clamp(10px, 1.15vw, 15px);
+}
+.student-home.student-hub.student-desk.student-overview > * { min-width: 0; }
+.student-home.student-hub.student-desk.student-overview .student-hub__masthead {
+  min-height: 0;
+  padding: clamp(16px, 1.8vw, 24px);
+  border-radius: 15px;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__masthead h1 {
+  font-size: clamp(23px, 2.1vw, 31px);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__masthead :is(.student-hub__welcome,.student-hub__hero-copy > p:not(.student-hub__welcome)) {
+  max-width: 62ch;
+  line-height: 1.45;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__masthead-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.student-home.student-hub.student-desk.student-overview .student-desk__panel {
+  min-width: 0;
+  padding: clamp(12px, 1.25vw, 17px);
+  border-radius: 14px;
+}
+.student-home.student-hub.student-desk.student-overview .student-home__metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+.student-home.student-hub.student-desk.student-overview .student-home__metric {
+  min-width: 0;
+  min-height: 84px;
+  padding: 11px;
+  border-radius: 11px;
+}
+.student-home.student-hub.student-desk.student-overview .student-home__metric :is(strong,p,span) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__shortcuts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a {
+  min-width: 0;
+  min-height: 62px;
+  grid-template-columns: 34px minmax(0, 1fr) 14px;
+  gap: 9px;
+  padding: 10px 11px;
+  border-radius: 11px;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a > div { min-width: 0; }
+.student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a strong,
+.student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a small {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.student-home.student-hub.student-desk.student-overview .student-home__tool-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+}
+.student-home.student-hub.student-desk.student-overview .student-desk__next {
+  min-width: 0;
+  padding: 13px 16px;
+  border-radius: 12px;
+}
+.student-home.student-hub.student-desk.student-overview .student-hub__workspace {
+  min-width: 0;
+  gap: 12px;
+}
+.student-home.student-hub.student-desk.student-overview .student-home__card {
+  min-width: 0;
+  border-radius: 13px;
+}
+@media (max-width: 900px) {
+  .student-home.student-hub.student-desk.student-overview .student-home__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .student-home.student-hub.student-desk.student-overview .student-hub__shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .student-home.student-hub.student-desk.student-overview { gap: 10px; }
+  .student-home.student-hub.student-desk.student-overview .student-hub__masthead {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  .student-home.student-hub.student-desk.student-overview .student-hub__masthead h1 { font-size: 24px; }
+  .student-home.student-hub.student-desk.student-overview .student-desk__panel { padding: 11px; }
+  .student-home.student-hub.student-desk.student-overview .student-home__metrics { gap: 7px; }
+  .student-home.student-hub.student-desk.student-overview .student-home__metric {
+    min-height: 78px;
+    padding: 9px;
+  }
+  .student-home.student-hub.student-desk.student-overview .student-hub__shortcuts { gap: 7px; }
+  .student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a {
+    min-height: 58px;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 7px;
+    padding: 8px;
+  }
+  .student-home.student-hub.student-desk.student-overview .student-hub__shortcuts > a > svg:last-child { display: none; }
+  .student-home.student-hub.student-desk.student-overview .student-home__tool-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .student-home.student-hub.student-desk.student-overview .student-home__metrics,
+  .student-home.student-hub.student-desk.student-overview .student-hub__shortcuts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-home.student-hub.student-desk.student-overview *,
+  .student-top-navigation * { transition-duration: .01ms !important; }
+}
