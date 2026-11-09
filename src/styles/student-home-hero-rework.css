@@ -1194,3 +1194,83 @@
     font-size: 11px !important;
   }
 }
+
+
+/* -------------------------------------------------------------------------
+   Student overview — reclaim vertical space around the welcome masthead.
+   Keep the content and controls intact; reduce only outer whitespace.
+   ------------------------------------------------------------------------- */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content:has(.student-home.student-desk.student-overview) {
+  padding-top: 7px !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview {
+  gap: 8px !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+> .student-hub__masthead--revamped.workspace-banner {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 13px 19px !important;
+  margin-block: 0 !important;
+  border-width: 1px !important;
+  border-radius: 13px !important;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 10%), inset 0 1px 0 rgb(255 255 255 / 3%) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__hero-layout {
+  gap: 16px !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__hero-copy {
+  padding: 0 4px !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__masthead-actions {
+  margin-top: 10px !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__exam-spotlight {
+  gap: 6px !important;
+  padding: 11px 14px !important;
+}
+
+@media (max-width: 900px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content:has(.student-home.student-desk.student-overview) {
+    padding-top: 6px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  > .student-hub__masthead--revamped.workspace-banner {
+    padding: 12px 15px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  > .student-hub__masthead--revamped.workspace-banner {
+    padding: 11px 13px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__hero-layout {
+    gap: 10px !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__exam-spotlight {
+    padding: 10px 12px !important;
+  }
+}
