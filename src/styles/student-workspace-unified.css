@@ -91,6 +91,31 @@
   font-weight: 700;
 }
 .nc-student-workspace .study-assistant-hero__action:hover { background: rgb(255 255 255 / 13%); }
+.nc-student-workspace .coach-view-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--ncw-line);
+  border-radius: 10px;
+  background: var(--ncw-soft);
+}
+.nc-student-workspace .coach-view-switch button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: var(--ncw-muted);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+}
+.nc-student-workspace .coach-view-switch button[aria-pressed="true"] {
+  color: var(--ncw-ink);
+  border-color: var(--ncw-line);
+  background: var(--ncw-surface);
+  box-shadow: 0 1px 4px rgb(20 30 40 / 12%);
+}
 .nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tablist"] {
   display: flex;
   flex-wrap: wrap;
@@ -133,10 +158,10 @@
   border-radius: 12px;
   background: var(--ncw-soft);
 }
-.nc-student-workspace .edital-workspace :is(.edital-topic-link,.edital-filter-tabs button) {
+.nc-student-workspace.edital-workspace :is(.edital-topic-link,.edital-filter-tabs button) {
   border-color: var(--ncw-line);
 }
-.nc-student-workspace .edital-workspace .edital-topic-link {
+.nc-student-workspace.edital-workspace .edital-topic-link {
   border-radius: 9px;
   background: var(--ncw-surface);
 }
@@ -144,7 +169,7 @@
   border-color: var(--ncw-accent);
   background: var(--ncw-accent-soft);
 }
-.nc-student-workspace .edital-workspace .edital-check {
+.nc-student-workspace.edital-workspace .edital-check {
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
@@ -169,6 +194,8 @@
   }
   .nc-student-workspace [data-slot="card-header"] { padding: 12px 13px 8px; }
   .nc-student-workspace [data-slot="card-content"] { padding: 10px 13px 13px; }
+  .nc-student-workspace .coach-view-switch { flex-wrap: nowrap; overflow-x: auto; }
+  .nc-student-workspace .coach-view-switch button { flex: 0 0 auto; min-height: 40px; white-space: nowrap; }
   .nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tablist"] {
     flex-wrap: nowrap;
     overflow-x: auto;
