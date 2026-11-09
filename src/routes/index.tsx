@@ -87,6 +87,7 @@ import "@/styles/home-announcements-refined.css";
 import "@/styles/home-hero-editorial.css";
 import "@/styles/home-navigation-command.css";
 import "@/styles/home-feature-rail.css";
+import "@/styles/home-glass-fixed-header.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
