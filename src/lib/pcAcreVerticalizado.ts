@@ -56,6 +56,21 @@ export function writePcAcVerticalProgress(
   storage.setItem(pcAcVerticalKey(userId, cargo), JSON.stringify(progress));
 }
 
+/** Lê o status do subtópico atual e preserva o status antigo do tópico-pai durante a transição. */
+export function pcAcVerticalTopicStatus(
+  progress: Record<string, PcAcVerticalStatus>,
+  block: string,
+  disciplineId: string,
+  topicIndex: number,
+  subtopicIndex?: number,
+): PcAcVerticalStatus | undefined {
+  const current = progress[pcAcVerticalItemId(block, disciplineId, topicIndex, subtopicIndex)];
+  if (current) return current;
+  return subtopicIndex === undefined
+    ? undefined
+    : progress[pcAcVerticalItemId(block, disciplineId, topicIndex)];
+}
+
 export function pcAcVerticalCargo(id: unknown) {
   return pcAcVerticalCargos.find((c) => c.id === id) ?? pcAcVerticalCargos.find((c) => c.id === "investigador") ?? pcAcVerticalCargos[0]!;
 }
@@ -82,9 +97,13 @@ export function pcAcVerticalCounts(
         const units = groups[i]!.subtopics.length ? groups[i]!.subtopics : [groups[i]!.title];
         for (let j = 0; j < units.length; j++) {
           total += 1;
-          const status = groups[i]!.subtopics.length
-            ? progress[pcAcVerticalItemId(block.title, discipline.id, i, j)]
-            : progress[pcAcVerticalItemId(block.title, discipline.id, i)];
+          const status = pcAcVerticalTopicStatus(
+            progress,
+            block.title,
+            discipline.id,
+            i,
+            groups[i]!.subtopics.length ? j : undefined,
+          );
           if (status === "estudado") estudado += 1;
           else if (status === "a-estudar") aEstudar += 1;
         }
@@ -113,9 +132,13 @@ export function pcAcVerticalDisciplineCounts(
       const group = groups[i]!;
       const units = group.subtopics.length ? group.subtopics : [group.title];
       for (let j = 0; j < units.length; j++) {
-        const status = group.subtopics.length
-          ? progress[pcAcVerticalItemId(block, discipline.id, i, j)]
-          : progress[pcAcVerticalItemId(block, discipline.id, i)];
+        const status = pcAcVerticalTopicStatus(
+          progress,
+          block,
+          discipline.id,
+          i,
+          group.subtopics.length ? j : undefined,
+        );
         if (status === "estudado") estudado += 1;
         else if (status === "a-estudar") aEstudar += 1;
       }
