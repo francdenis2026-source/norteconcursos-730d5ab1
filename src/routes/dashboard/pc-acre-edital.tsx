@@ -595,7 +595,7 @@ function PcAcCronogramaCard({
                                               className="whitespace-nowrap border-t px-2.5 py-1.5 font-semibold text-foreground/90"
                                               rowSpan={day.activities.length}
                                             >
-                                              {WEEKDAY_FULL[day.weekday].slice(0, 3)} ·{" "}
+                                              {(WEEKDAY_FULL[day.weekday] ?? "Dia").slice(0, 3)} ·{" "}
                                               {day.date.split("-").reverse().slice(0, 2).join("/")}
                                             </td>
                                           )}
