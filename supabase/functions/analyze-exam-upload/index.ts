@@ -36,7 +36,7 @@ Deno.serve(async (req: Request) => {
 
   try {
     const authHeader = req.headers.get("Authorization") ?? "";
-    const jwt = authHeader.match(/^Bearer\\s+(.+)$/i)?.[1];
+    const jwt = authHeader.match(/^Bearer\s+(.+)$/i)?.[1];
     if (!jwt) {
       return new Response(JSON.stringify({ error: "Não autenticado" }), {
         status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
