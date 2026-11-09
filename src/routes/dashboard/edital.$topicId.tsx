@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { TRACKS } from "@/data/tracks";
 import { editalLessonLinks } from "@/lib/editalStudy";
 import { useLegalCourses } from "@/lib/legalCourses";
@@ -245,7 +246,7 @@ function TopicPage() {
     ...(edition && isEnemContest(edition.contest_name) ? { contest: "ENEM" } : {}),
   };
   return (
-    <div className="edital-workspace space-y-5 pb-8">
+    <div className="nc-student-workspace edital-workspace space-y-5 pb-8">
       <BackToPlan back={backToPlan} topic={tema} />
       <Button asChild variant="ghost" size="sm" className="gap-2">
         <Link to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
