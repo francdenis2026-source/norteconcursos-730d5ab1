@@ -397,20 +397,20 @@ function Index() {
           </div>
           <nav className="home-nav hr-nav" aria-label="Navegação principal">
             <a href="#inicio" aria-current={activeSection === "inicio" ? "location" : undefined}>
-              <Home aria-hidden="true" />
+              <Home aria-hidden="true" className="home-nav__icon" />
               <span>Início</span>
             </a>
             <a href="#plataforma" aria-current={activeSection === "plataforma" ? "location" : undefined}>
-              <BookOpen aria-hidden="true" />
+              <BookOpen aria-hidden="true" className="home-nav__icon" />
               <span>Plataforma</span>
             </a>
             <a href="#concursos" aria-current={activeSection === "concursos" ? "location" : undefined}>
-              <Landmark aria-hidden="true" />
+              <Landmark aria-hidden="true" className="home-nav__icon" />
               <span>Concursos</span>
             </a>
             <details className="home-nav__group">
               <summary aria-label="Abrir menu de preparação">
-                <Target aria-hidden="true" />
+                <Target aria-hidden="true" className="home-nav__icon" />
                 <span>Preparação</span>
                 <ChevronDown className="home-nav__chevron" aria-hidden="true" />
               </summary>
@@ -423,7 +423,7 @@ function Index() {
               </div>
             </details>
             <a href="#planos" aria-current={activeSection === "planos" ? "location" : undefined}>
-              <Layers3 aria-hidden="true" />
+              <Layers3 aria-hidden="true" className="home-nav__icon" />
               <span>Planos</span>
             </a>
           </nav>
