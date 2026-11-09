@@ -4,7 +4,6 @@ import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
-import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import {
@@ -93,6 +92,7 @@ import "@/styles/home-showcase-band.css";
 import "@/styles/home-contests-compact.css";
 import "@/styles/home-hero-strategy.css";
 import "@/styles/home-hero-fit-correction.css";
+import "@/styles/home-preparation-premium.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -264,7 +264,7 @@ const PREPARATION_TABS = [
 ] as const;
 
 function PreparationInfo() {
-  const [active, setActive] = useState("ferramentas");
+  const [active, setActive] = useState<string | null>(null);
   useEffect(() => {
     const selectHash = (hash: string) => {
       const value = hash.replace(/^#/, "");
@@ -284,81 +284,84 @@ function PreparationInfo() {
       document.removeEventListener("click", onAnchorClick);
     };
   }, []);
+  const groups = [
+    { id: "ferramentas", label: "Ferramentas", icon: BrainCircuit, note: "Treine, revise e acompanhe sua evolução." },
+    { id: "como", label: "Método", icon: Target, note: "Um caminho claro do diagnóstico à prova." },
+    { id: "carreiras", label: "Concursos", icon: ShieldCheck, note: "Trilhas para diferentes carreiras de segurança." },
+    { id: "fontes", label: "Fontes confiáveis", icon: ScrollText, note: "Conteúdo com origem e referência identificadas." },
+  ] as const;
   return (
-    <PreparationTabs.Root
-      value={active}
-      onValueChange={setActive}
-      className="home-preparation__info"
-    >
-      <PreparationTabs.List className="home-preparation__tabs" aria-label="Conheça a preparação">
-        {PREPARATION_TABS.map(([id, label]) => (
-          <div key={id} id={id} className="home-preparation__tab-anchor">
-            <PreparationTabs.Trigger value={id} className="home-preparation__tab">
-              {label}
-            </PreparationTabs.Trigger>
+    <div className="hr-preparation">
+      <div className="hr-preparation__intro">
+        <span className="hr-preparation__eyebrow"><i /> CONHEÇA A PLATAFORMA</span>
+        <h2>Preparação inteligente. <em>Do seu jeito.</em></h2>
+        <p>Reúna planejamento, treino e evolução em uma única jornada — com ferramentas pensadas para concursos da área policial.</p>
+        <div className="hr-preparation__proof">
+          <span><BookOpen aria-hidden="true" /> Questões por banca</span>
+          <span><LineChart aria-hidden="true" /> Evolução acompanhada</span>
+          <span><ShieldCheck aria-hidden="true" /> Fontes identificadas</span>
+        </div>
+      </div>
+      <div className="hr-preparation__explorer">
+        <div className="hr-preparation__explorer-head">
+          <div><span>EXPLORE OS RECURSOS</span><strong>O que você precisa conhecer?</strong></div>
+          <span className="hr-preparation__hint">{active ? "Clique novamente para recolher" : "Selecione para expandir"}</span>
+        </div>
+        <div className="hr-preparation__categories" role="group" aria-label="Categorias de recursos da plataforma">
+          {groups.map(({ id, label, icon: Icon, note }) => (
+            <button key={id} type="button" className="hr-preparation__category"
+              data-active={active === id || undefined} aria-expanded={active === id}
+              aria-controls="preparation-detail-panel"
+              onClick={() => setActive((current) => current === id ? null : id)}>
+              <span className="hr-preparation__category-icon"><Icon aria-hidden="true" /></span>
+              <span className="hr-preparation__category-copy"><strong>{label}</strong><small>{note}</small></span>
+              <Plus aria-hidden="true" className="hr-preparation__category-toggle" />
+            </button>
+          ))}
+        </div>
+        {active && (
+          <div id="preparation-detail-panel" className="hr-preparation__details">
+            {active === "ferramentas" && (
+              <div className="hr-preparation__detail-grid hr-preparation__detail-grid--tools">
+                {TOOLS.map(({ icon: Icon, title, text, featured }) => (
+                  <article className="hr-preparation__feature" key={title}>
+                    <span><Icon aria-hidden="true" /></span>
+                    <div><strong>{title}{featured && <i>EM DESTAQUE</i>}</strong><p>{text}</p></div>
+                  </article>
+                ))}
+              </div>
+            )}
+            {active === "como" && (
+              <ol className="hr-preparation__detail-grid hr-preparation__detail-grid--steps">
+                {STEPS.map(([Icon, title, text], index) => (
+                  <li className="hr-preparation__step" key={title}>
+                    <b>0{index + 1}</b><div><strong><Icon aria-hidden="true" />{title}</strong><p>{text}</p></div>
+                  </li>
+                ))}
+              </ol>
+            )}
+            {active === "carreiras" && (
+              <div className="hr-preparation__detail-grid hr-preparation__detail-grid--careers">
+                {CAREERS.map(([name, roles]) => (
+                  <article className="hr-preparation__career" key={name}>
+                    <ShieldCheck aria-hidden="true" /><div><strong>{name}</strong><small>{roles}</small></div>
+                  </article>
+                ))}
+              </div>
+            )}
+            {active === "fontes" && (
+              <div className="hr-preparation__detail-grid hr-preparation__detail-grid--sources">
+                {PILLARS.map(({ icon: Icon, title, text }) => (
+                  <article className="hr-preparation__source" key={title}>
+                    <Icon aria-hidden="true" /><div><strong>{title}</strong><p>{text}</p></div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
-        ))}
-      </PreparationTabs.List>
-      <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
-        <div className="home-preparation__items hr-tools-grid">
-          {TOOLS.map(({ icon: Icon, title, text, featured }) => (
-            <article
-              key={title}
-              className={`home-preparation__tool hr-tool-card${featured ? " home-preparation__tool--featured hr-tool-card--featured" : ""}`}
-            >
-              {featured && <span className="home-preparation__tool-tag hr-tool-ribbon">Destaque</span>}
-              <span className="hr-tool-icon" aria-hidden="true">
-                <Icon />
-              </span>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-        </div>
-      </PreparationTabs.Content>
-      <PreparationTabs.Content value="como" className="home-preparation__panel">
-        <ol className="home-preparation__items home-preparation__steps">
-          {STEPS.map(([Icon, title, text], index) => (
-            <li className="hr-step-card" key={title}>
-              <span className="home-preparation__number">0{index + 1}</span>
-              <div>
-                <h3>
-                  <Icon aria-hidden="true" />
-                  {title}
-                </h3>
-                <p>{text}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </PreparationTabs.Content>
-      <PreparationTabs.Content value="carreiras" className="home-preparation__panel">
-        <div className="home-preparation__items home-preparation__careers">
-          {CAREERS.map(([name, roles]) => (
-            <article className="hr-career-card" key={name}>
-              <ShieldCheck aria-hidden="true" />
-              <div>
-                <h3>{name}</h3>
-                <p>{roles}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </PreparationTabs.Content>
-      <PreparationTabs.Content value="fontes" className="home-preparation__panel">
-        <div className="home-preparation__items">
-          {PILLARS.map(({ icon: Icon, title, text }) => (
-            <article className="hr-source-card" key={title}>
-              <Icon aria-hidden="true" />
-              <div>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </PreparationTabs.Content>
-    </PreparationTabs.Root>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -662,21 +665,6 @@ function Index() {
           aria-labelledby="preparation-title"
         >
           <div className="home-container hr-showcase__inner">
-            <div className="hr-showcase__heading">
-              <div>
-                <span className="hr-showcase__eyebrow">O ECOSSISTEMA NORTE · PREPARAÇÃO COMPLETA</span>
-                <h2 id="preparation-title">
-                  Tudo para transformar <em>estudo em resultado.</em>
-                </h2>
-                <p>
-                  Do planejamento às questões e à análise de desempenho: encontre cada etapa da sua preparação em um só lugar.
-                </p>
-              </div>
-              <div className="hr-showcase__index" aria-label="Sete recursos de preparação integrados">
-                <strong>07</strong>
-                <span>FERRAMENTAS<br />INTEGRADAS</span>
-              </div>
-            </div>
             <PreparationInfo />
           </div>
         </section>
