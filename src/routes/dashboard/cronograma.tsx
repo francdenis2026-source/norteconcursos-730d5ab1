@@ -403,7 +403,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 864e5) : null;
 
   return (
-    <div className="space-y-4">
+    <div className="agenda-plan-view space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Meus cronogramas</Button>
         <Button variant="ghost" size="sm" className="text-destructive" onClick={remove}><Trash2 className="mr-1 h-4 w-4" /> Excluir</Button>
