@@ -443,3 +443,209 @@
   .home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li strong { font-size: 10px !important; color: #f5f3ee !important; }
   .home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li small { font-size: 9px !important; color: #b9c2c9 !important; }
 }
+
+
+/* Editorial hero refresh: remove the opaque glass card that obscured the clock.
+   Keep only a local, feathered scrim behind the copy column; the dial and
+   background artwork remain crisp and visible outside this narrow text zone. */
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+  position: relative !important;
+  isolation: isolate !important;
+  box-sizing: border-box !important;
+  width: min(100%, 610px) !important;
+  max-width: 610px !important;
+  padding: 10px 12px 12px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: -22px -36px -20px -22px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(90deg,
+    rgb(5 11 17 / 64%) 0%,
+    rgb(5 11 17 / 48%) 44%,
+    rgb(5 11 17 / 22%) 72%,
+    transparent 100%) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  pointer-events: none !important;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 7px 12px !important;
+  margin-bottom: 17px !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker-mark {
+  width: 3px !important;
+  height: 30px !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, #f0cb78, #bd8d3d) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker-primary {
+  color: #e7c27c !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: .13em !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker-secondary {
+  color: #c3cbd1 !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+  max-width: 590px !important;
+  color: #fffdf8 !important;
+  font-size: clamp(40px, 4.1vw, 58px) !important;
+  line-height: .99 !important;
+  letter-spacing: -.055em !important;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 72%), 0 0 2px rgb(0 0 0 / 88%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline em {
+  color: #e8bb62 !important;
+  font-style: normal !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description.hr-hero__description {
+  max-width: 47ch !important;
+  margin-top: 13px !important;
+  color: #e1e6e9 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 90%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 20px !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 11px !important;
+  width: auto !important;
+  min-width: 198px !important;
+  min-height: 45px !important;
+  padding: 0 18px !important;
+  border-radius: 7px !important;
+  font-size: 12px !important;
+  font-weight: 780 !important;
+  white-space: nowrap !important;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn:hover {
+  transform: translateY(-2px) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn--gold {
+  border: 1px solid #f0cb78 !important;
+  background: linear-gradient(120deg, #f0cb78, #d7a84f) !important;
+  color: #17140e !important;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 28%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn--ghost {
+  border: 1px solid rgb(235 221 194 / 58%) !important;
+  background: rgb(8 15 21 / 30%) !important;
+  color: #f8f5ed !important;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 16%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 5px 18px !important;
+  max-width: 520px !important;
+  margin: 15px 0 0 !important;
+  padding: 12px 0 0 !important;
+  border-top: 1px solid rgb(229 192 116 / 32%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-width: 0 !important;
+  min-height: 32px !important;
+  padding: 3px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li > svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex: 0 0 16px !important;
+  color: #e7bd69 !important;
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 85%)) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li > span {
+  display: grid !important;
+  gap: 2px !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li strong {
+  color: #fffdf7 !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+  font-weight: 760 !important;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 95%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__trust li small {
+  color: #c5cdd2 !important;
+  font-size: 9px !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 95%) !important;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy { max-width: 540px !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+    font-size: clamp(36px, 4vw, 48px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__trust { max-width: 470px !important; gap-inline: 10px !important; }
+}
+@media (max-height: 720px) and (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy { padding-block: 4px 6px !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker { margin-bottom: 10px !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+    font-size: clamp(34px, 3.6vw, 48px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__description.hr-hero__description {
+    margin-top: 9px !important;
+    font-size: 12px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .home-actions { margin-top: 13px !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn { min-height: 40px !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__trust { margin-top: 10px !important; padding-top: 8px !important; }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 14px 0 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy::before {
+    inset: -8px -16px !important;
+    background: linear-gradient(90deg, rgb(5 11 17 / 76%), rgb(5 11 17 / 46%) 75%, transparent) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+    font-size: clamp(34px, 9vw, 46px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__trust { max-width: none !important; }
+  .home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn { transition: none !important; }
+}
