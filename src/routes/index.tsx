@@ -71,7 +71,6 @@ import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { HeroDock } from "@/components/landing/HeroDock";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
@@ -615,17 +614,20 @@ function Index() {
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
               <div className="hx__copy">
-                <span className="home-eyebrow home-signal hr-hero-eyebrow">
-                  <span /> Carreiras policiais e segurança pública
-                </span>
+                <div className="hx__kicker">
+                  <span className="hx__kicker-mark" aria-hidden="true" />
+                  <span>CONCURSOS PÚBLICOS</span>
+                  <i aria-hidden="true" />
+                  <span>CARREIRAS POLICIAIS E ADMINISTRATIVAS</span>
+                </div>
                 <h1 id="home-title">
-                  Sua preparação
+                  Sua aprovação começa
                   <br />
-                  <em>tem um norte.</em>
+                  <em>com estratégia.</em>
                 </h1>
                 <p>
-                  Questões, legislação e simulados para carreiras policiais. Organize seu estudo,
-                  fortaleça suas dificuldades e acompanhe cada avanço em um só lugar.
+                  Da escolha do edital à revisão final: organize seu plano de estudos, aprofunde
+                  os conteúdos e pratique com questões e simulados em um só lugar.
                 </p>
                 <div className="home-actions hr-cta-row">
                   <Link
@@ -634,30 +636,33 @@ function Index() {
                     className="home-button home-button--gold hr-btn hr-btn--gold"
                     data-aim
                   >
-                    Começar grátis
+                    Começar minha preparação
                     <ArrowUpRight aria-hidden="true" />
                   </Link>
                   <a href="#plataforma" className="home-hero__explore hr-btn hr-btn--ghost" data-aim>
-                    Conhecer a plataforma
+                    Explorar a plataforma
                     <ArrowRight aria-hidden="true" />
                   </a>
-                  <a href="#ranking-destaque" className="home-ranking-hero-entry hr-btn hr-btn--outline" data-aim aria-label="Ver os quatro melhores candidatos no ranking real da plataforma">
-                    <Trophy aria-hidden="true" /> Ranking dos melhores <ArrowRight aria-hidden="true" />
-                  </a>
                 </div>
-                <ul className="hx__trust" aria-label="Diferenciais">
+                <ul className="hx__trust" aria-label="Recursos da plataforma">
                   <li>
-                    <BadgeCheck /> Fontes e revisões identificadas
+                    <Target aria-hidden="true" />
+                    <span><strong>Plano estratégico</strong><small>Estude com direção</small></span>
                   </li>
                   <li>
-                    <Target /> Treino por banca e disciplina
+                    <BookOpen aria-hidden="true" />
+                    <span><strong>Conteúdo direcionado</strong><small>Foco no que importa</small></span>
                   </li>
                   <li>
-                    <Trophy /> Simulados no ritmo da prova
+                    <FileSearch aria-hidden="true" />
+                    <span><strong>Questões e simulados</strong><small>Pratique para a prova</small></span>
+                  </li>
+                  <li>
+                    <LineChart aria-hidden="true" />
+                    <span><strong>Evolução acompanhada</strong><small>Veja seu progresso</small></span>
                   </li>
                 </ul>
               </div>
-              <HeroDock />
             </div>
           </div>
         </section>
