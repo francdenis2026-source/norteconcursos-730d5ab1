@@ -93,7 +93,7 @@
   transition: none;
 }
 @media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow) { font-size: 9px; letter-spacing: .08em; padding: 5px 7px; }
+  :root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow) { font-size: 10px; letter-spacing: .08em; padding: 5px 7px; }
 }
 @media (prefers-reduced-motion: reduce) {
   :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link { transition: none; }
