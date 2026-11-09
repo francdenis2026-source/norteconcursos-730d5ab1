@@ -368,10 +368,8 @@ function Index() {
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <HomeIntro />
 
-        <section id="concursos" className="home-section home-operations hr-section hr-section--alt" aria-label="Concursos em foco">
-          <div className="home-container">
-            <ContestShowcase />
-          </div>
+        <section id="concursos" className="sx-section" aria-label="Concursos em foco">
+          <ContestShowcase />
         </section>
 
         <HomeRankingShowcase anchorId="ranking-destaque" />

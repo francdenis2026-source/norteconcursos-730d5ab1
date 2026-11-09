@@ -63,57 +63,54 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
     : { hero: "inicio", platform: "plataforma", tools: "ferramentas", title: "home-hero-title" };
 
   return (
-    <div className="sx">
-      <section id={ids.hero} className="sx-hero" aria-labelledby={ids.title}>
-        <div className="sx-hero__copy">
-          <span className="sx-eyebrow">
-            <ShieldCheck aria-hidden="true" /> Preparação para carreiras policiais
-          </span>
-          <h1 id={ids.title}>
-            Preparação estratégica para sua carreira <em>policial.</em>
-          </h1>
-          <p className="sx-lead">
-            Editais organizados, questões por banca, simulados e desempenho em um único ambiente de
-            estudo.
-          </p>
-          <div className="sx-actions">
-            <Link to="/auth" search={{ mode: "register" }} className="sx-btn sx-btn--primary">
-              Criar conta grátis <ArrowRight aria-hidden="true" />
-            </Link>
-            <a href={`#${ids.platform}`} className="sx-btn sx-btn--ghost">
-              Ver a plataforma
-            </a>
+    <>
+      <section id={ids.hero} className="sx-band" aria-labelledby={ids.title}>
+        <div className="sx sx-hero">
+          <div className="sx-hero__copy">
+            <span className="sx-eyebrow">
+              <ShieldCheck aria-hidden="true" /> Preparação para carreiras policiais
+            </span>
+            <h1 id={ids.title}>
+              Preparação estratégica para sua carreira <em>policial.</em>
+            </h1>
+            <p className="sx-lead">
+              Editais organizados, questões por banca, simulados e desempenho em um único ambiente
+              de estudo.
+            </p>
+            <div className="sx-actions">
+              <Link to="/auth" search={{ mode: "register" }} className="sx-btn sx-btn--primary">
+                Criar conta grátis <ArrowRight aria-hidden="true" />
+              </Link>
+              <a href={`#${ids.platform}`} className="sx-btn sx-btn--ghost">
+                Ver a plataforma
+              </a>
+            </div>
+            <dl className="sx-stats" aria-label="Números da plataforma">
+              <div>
+                <dt>Total cadastrado</dt>
+                <dd>{fmt(data?.registered)}</dd>
+              </div>
+              <div>
+                <dt>Disponíveis para treinar</dt>
+                <dd>{fmt(data?.available)}</dd>
+              </div>
+              <div>
+                <dt>Grátis por dia, sem cadastro</dt>
+                <dd>{GUEST_DAILY_LIMIT}</dd>
+              </div>
+            </dl>
           </div>
-          <dl className="sx-stats" aria-label="Números da plataforma">
-            <div>
-              <dt>Total cadastrado</dt>
-              <dd>{fmt(data?.registered)}</dd>
-            </div>
-            <div>
-              <dt>Disponíveis para treinar</dt>
-              <dd>{fmt(data?.available)}</dd>
-            </div>
-            <div>
-              <dt>Grátis por dia, sem cadastro</dt>
-              <dd>{GUEST_DAILY_LIMIT}</dd>
-            </div>
-          </dl>
-        </div>
-        <div className="sx-hero__panel">
-          <img
-            className="sx-hero__image"
-            src="/media/hero/hero-norte-recorte.webp"
-            alt="Agente de segurança pública em uniforme operacional"
-            width={1208}
-            height={1302}
-            fetchPriority="high"
-            decoding="async"
-          />
-          <DailyChallengeBadge />
+          <div className="sx-hero__panel">
+            <DailyChallengeBadge />
+          </div>
         </div>
       </section>
 
-      <section id={ids.platform} className="sx-features" aria-labelledby={`${ids.title}-features`}>
+      <section
+        id={ids.platform}
+        className="sx sx-features"
+        aria-labelledby={`${ids.title}-features`}
+      >
         <header className="sx-head">
           <div>
             <span className="sx-eyebrow">A plataforma</span>
@@ -143,6 +140,6 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
           ))}
         </ul>
       </section>
-    </div>
+    </>
   );
 }

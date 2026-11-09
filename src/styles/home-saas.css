@@ -524,3 +524,324 @@ html:not(.dark) .home.hr-canvas .contest-ficha dd {
     width: 76px;
   }
 }
+
+/* ================= Revisão: cor, fundo, banner PC-AC, provas ================= */
+html:not(.dark) .home.hr-canvas {
+  --sx-bg: #f3f5f9;
+  --sx-surface-2: #fbf2dc;
+  --sx-border: #d5dbe5;
+  --sx-text: #0f1b2d;
+  --sx-muted: #4a5568;
+  --sx-accent: #7a5606;
+}
+@media (min-width: 768px) {
+  /* Cabeçalho escuro também no modo claro: marca e botões precisam ficar visíveis. */
+  html:not(.dark) .home.hr-canvas .home-header .norte-brand__name {
+    fill: #f2f4f7 !important;
+    color: #f2f4f7 !important;
+  }
+  html:not(.dark)
+    .home.hr-canvas
+    .home-header
+    :is(.lp-theme-toggle, .home-fullscreen-toggle, .home-menu-trigger) {
+    color: #f2f4f7 !important;
+    border-color: rgb(255 255 255 / 0.22) !important;
+    background: rgb(255 255 255 / 0.06) !important;
+  }
+  html:not(.dark)
+    .home.hr-canvas
+    .home-header
+    :is(.lp-theme-toggle, .home-fullscreen-toggle, .home-menu-trigger)
+    svg {
+    color: #f2f4f7 !important;
+    stroke: currentColor !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Faixa do hero: sempre escura, com a textura da marca ao fundo. */
+.home.hr-canvas .sx-band {
+  --sx-surface: rgb(19 23 30 / 0.86);
+  --sx-surface-2: #232a34;
+  --sx-border: rgb(255 255 255 / 0.14);
+  --sx-text: #f3f5f8;
+  --sx-muted: #b3bcc8;
+  --sx-accent: #e3b14b;
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, #0d1015 0%, rgb(13 16 21 / 0.92) 38%, rgb(13 16 21 / 0.55) 100%),
+    url("/media/hero/carreiras-background.webp") right center / cover no-repeat,
+    #0d1015;
+  border-bottom: 1px solid rgb(227 177 75 / 0.28);
+  scroll-margin-top: 140px;
+}
+.home.hr-canvas .sx-band .sx-hero {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  padding: 40px 0;
+}
+.home.hr-canvas .sx-band .sx-btn--ghost {
+  background: rgb(255 255 255 / 0.06);
+}
+.home.hr-canvas .sx-hero__panel {
+  backdrop-filter: blur(10px);
+}
+.home.hr-canvas .sx-band .sx-daily {
+  border-top: 0;
+}
+.home.hr-canvas .sx-features {
+  border-top: 0;
+  padding: 32px 0 20px;
+}
+.home.hr-canvas .sx-card {
+  box-shadow: var(--sx-shadow);
+}
+html:not(.dark) .home.hr-canvas .sx-card__icon {
+  color: #7a5606;
+}
+
+/* Seção de concursos */
+.home.hr-canvas .sx-section {
+  position: relative;
+  z-index: 1;
+  padding: 12px 0 28px;
+  background: transparent;
+  scroll-margin-top: 90px;
+}
+.home.hr-canvas .sx-contests {
+  display: grid;
+  gap: 20px;
+}
+.home.hr-canvas .sx-banner {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 250px;
+  padding: 28px 32px;
+  border: 1px solid rgb(227 177 75 / 0.35);
+  border-radius: 16px;
+  background: #0b1018;
+  color: #f3f5f8;
+  overflow: hidden;
+  isolation: isolate;
+}
+.home.hr-canvas .sx-banner__art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 82% 30%;
+}
+.home.hr-canvas .sx-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #0b1018 0%,
+    rgb(11 16 24 / 0.92) 42%,
+    rgb(11 16 24 / 0.15) 78%
+  );
+}
+.home.hr-canvas .sx-banner__crest {
+  display: none;
+}
+.home.hr-canvas .sx-banner__copy {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+}
+.home.hr-canvas .sx-banner__copy > * {
+  margin: 0 !important;
+}
+.home.hr-canvas .sx-banner__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: start;
+  padding: 5px 10px;
+  border-radius: 99px;
+  background: rgb(47 178 119 / 0.16);
+  color: #7fe0b3;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.home.hr-canvas .sx-banner__tag i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2fb277;
+}
+.home.hr-canvas .sx-banner h2 {
+  color: #ffffff;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.home.hr-canvas .sx-banner p {
+  color: #c3cbd6;
+  font-size: 14px;
+}
+.home.hr-canvas .sx-banner__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  padding: 10px 0 4px;
+}
+.home.hr-canvas .sx-banner__facts div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.home.hr-canvas .sx-banner__facts dd {
+  color: #e9bd5c;
+  font-size: 20px;
+  font-weight: 720;
+  font-variant-numeric: tabular-nums;
+}
+.home.hr-canvas .sx-banner__facts dt {
+  color: #aab4c1;
+  font-size: 11.5px;
+}
+.home.hr-canvas .sx-banner .sx-actions {
+  margin-top: 4px !important;
+}
+.home.hr-canvas .sx-btn--onimage {
+  border-color: rgb(255 255 255 / 0.28);
+  background: rgb(255 255 255 / 0.08);
+  color: #ffffff;
+}
+.home.hr-canvas .sx-btn--onimage:hover {
+  background: rgb(255 255 255 / 0.16);
+}
+.home.hr-canvas .sx-head--plain {
+  margin-top: 8px;
+}
+.home.hr-canvas .sx-exams {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.home.hr-canvas .sx-exam {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--sx-border);
+  border-radius: 12px;
+  background: var(--sx-surface);
+  box-shadow: var(--sx-shadow);
+  overflow: hidden;
+}
+.home.hr-canvas .sx-exam img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.home.hr-canvas .sx-exam__body {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px 16px;
+}
+.home.hr-canvas .sx-exam__body > * {
+  margin: 0 !important;
+}
+.home.hr-canvas .sx-exam strong {
+  color: var(--sx-text);
+  font-size: 16px;
+  font-weight: 720;
+}
+.home.hr-canvas .sx-exam strong span {
+  color: var(--sx-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+.home.hr-canvas .sx-exam small {
+  color: var(--sx-accent);
+  font-size: 12.5px;
+  font-weight: 650;
+}
+.home.hr-canvas .sx-exam p {
+  color: var(--sx-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.home.hr-canvas .sx-exam__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: start;
+  min-height: 44px;
+  margin-top: 4px !important;
+  color: var(--sx-text);
+  font-size: 13.5px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--sx-accent-bg);
+  text-underline-offset: 4px;
+}
+.home.hr-canvas .sx-note {
+  color: var(--sx-muted);
+  font-size: 11.5px;
+  text-align: justify;
+}
+@media (max-width: 1023px) {
+  .home.hr-canvas .sx-band .sx-hero {
+    grid-template-columns: 1fr;
+    padding: 28px 0;
+  }
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-band {
+    background:
+      linear-gradient(180deg, rgb(13 16 21 / 0.9), #0d1015),
+      url("/media/hero/carreiras-background.webp") center top / cover no-repeat,
+      #0d1015;
+  }
+  .home.hr-canvas .sx-band .sx-hero {
+    padding: 20px 0 24px;
+  }
+  .home.hr-canvas .sx-banner {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+  .home.hr-canvas .sx-banner::after {
+    background: linear-gradient(180deg, rgb(11 16 24 / 0.82), rgb(11 16 24 / 0.94));
+  }
+  .home.hr-canvas .sx-banner__facts dd {
+    font-size: 17px;
+  }
+  .home.hr-canvas .sx-exams {
+    grid-template-columns: 1fr;
+  }
+  .home.hr-canvas .sx-exam {
+    grid-template-columns: 124px minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+  .home.hr-canvas .sx-exam img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .home.hr-canvas .sx-exam__body {
+    padding: 10px 12px;
+  }
+  .home.hr-canvas .sx-exam strong span {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-exam img {
+    width: 124px;
+    min-height: 100%;
+    align-self: stretch;
+  }
+}
+.home.hr-canvas .sx-exam p {
+  text-align: left;
+  hyphens: manual;
+}

@@ -10,10 +10,7 @@ export function MobileHomepage() {
   return (
     <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
       <HomeIntro mobile />
-      <section id="mobile-concursos" className="mobile-homepage__contests">
-        <div className="mobile-homepage__section-head">
-          <h2>Concursos em foco</h2>
-        </div>
+      <section id="mobile-concursos" className="sx-section" aria-label="Concursos em foco">
         <ContestShowcase mobile />
       </section>
       <HomeRankingShowcase anchorId="ranking-destaque-mobile" />

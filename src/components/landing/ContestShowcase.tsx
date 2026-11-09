@@ -1,132 +1,143 @@
-import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Sparkles, CalendarDays, Users, Bell } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileText } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { PCPI_EXAM } from "@/lib/pcpiExam";
+import { PCPR_EXAM } from "@/lib/pcprExam";
+import { PCSC_EXAM } from "@/lib/pcscExam";
 
-function Ficha({ items }: { items: [string, string][] }) {
-  return (
-    <dl className="contest-ficha">
-      {items.map(([k, v]) => (
-        <div key={k}>
-          <dt>{k}</dt>
-          <dd>{v}</dd>
-        </div>
-      ))}
-    </dl>
-  );
-}
-/** Public references are dated; signed-in counts continue to use the eligible catalogue. */
+const PCAC_EDITAL = "/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf";
+const PCAC_VAGAS = pcAcVerticalCargos.reduce((total, cargo) => total + cargo.vagas, 0);
+
+/** Provas já disponíveis no banco de questões; cada capa pertence ao próprio concurso. */
+const EXAMS = [
+  {
+    sigla: "PC-SC",
+    name: "Polícia Civil de Santa Catarina",
+    image: "/media/hero/pcsc-capa.webp",
+    meta: `${PCSC_EXAM.board} · ${PCSC_EXAM.year}`,
+    roles: PCSC_EXAM.roles.join(" · "),
+  },
+  {
+    sigla: "PC-PR",
+    name: "Polícia Civil do Paraná",
+    image: "/media/hero/pcpr-capa.webp",
+    meta: `${PCPR_EXAM.board} · aplicada em ${PCPR_EXAM.appliedOn}`,
+    roles: PCPR_EXAM.roles.join(" · "),
+  },
+  {
+    sigla: "PC-PI",
+    name: "Polícia Civil do Piauí",
+    image: "/media/hero/pcpi-capa.webp",
+    meta: `${PCPI_EXAM.board} · ${PCPI_EXAM.year}`,
+    roles: PCPI_EXAM.roles.join(" · "),
+  },
+];
+
+/** Concursos da homepage: banner do edital da PC-AC e provas recentes para treinar. */
 export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
-  const suffix = mobile ? '-mobile' : '';
+  const suffix = mobile ? "-mobile" : "";
   const { isAuthenticated } = useAuthStatus();
   return (
-    <div className="contest-showcase">
-      <section className="contest-catalog__feature-band" aria-labelledby={"contest-catalog-title" + suffix}>
-        <div className="contest-catalog__feature-intro">
-          <span className="contest-catalog__feature-eyebrow"><Sparkles size={14} aria-hidden="true" /> OPORTUNIDADES EM DESTAQUE</span>
-          <h3 id={"contest-catalog-title" + suffix}>Outros concursos <em>para acompanhar</em></h3>
-          <p>Fique por dentro das oportunidades na área policial. Editais, datas e vagas — tudo em um só lugar.</p>
-          <div className="contest-catalog__feature-emblem" aria-hidden="true">
-            <ShieldCheck size={22} />
-            <span>NORTE CONCURSOS</span>
-          </div>
-          <div className="contest-catalog__feature-points">
-            <span><Bell aria-hidden="true" /> Editais e novidades</span>
-            <span><CalendarDays aria-hidden="true" /> Datas e prazos</span>
-            <span><Users aria-hidden="true" /> Vagas e remunerações</span>
-          </div>
-        </div>
-        <div className="contest-catalog__feature-cards">
-          <div className="contest-upcoming-grid">
-
-            <article className="contest-upcoming-card">
-              <div className="contest-upcoming-card__art">
-                <img src="/media/hero/pcsc-viatura.webp" alt="Polícia Civil de Santa Catarina" width={1672} height={950} loading="lazy" decoding="async" />
-                <span className="contest-upcoming-card__status contest-upcoming-card__status--previsto">
-                  <CalendarDays size={10} aria-hidden="true" /> Edital previsto
-                </span>
-              </div>
-              <div className="contest-upcoming-card__content">
-                <p className="contest-upcoming-card__sigla"><strong>PC-SC</strong> / POLÍCIA CIVIL DE SANTA CATARINA</p>
-                <Ficha items={[
-                  ["Cargo", "Agente de Polícia"],
-                  ["Banca", "FCC"],
-                  ["Prova Prevista", "13/04/2025"],
-                  ["Vagas", "400"],
-                  ["Remuneração", "R$ 6.935,09"],
-                ]} />
-                {isAuthenticated ? (
-                  <Link to="/dashboard" className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                ) : (
-                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                )}
-              </div>
-            </article>
-
-            <article className="contest-upcoming-card">
-              <div className="contest-upcoming-card__art">
-                <img src="/media/hero/auth-seguranca-full.webp" alt="Polícia Federal" width={1920} height={1280} loading="lazy" decoding="async" />
-                <span className="contest-upcoming-card__status contest-upcoming-card__status--em-breve">
-                  <Bell size={10} aria-hidden="true" /> Edital em breve
-                </span>
-              </div>
-              <div className="contest-upcoming-card__content">
-                <p className="contest-upcoming-card__sigla"><strong>PF</strong> / POLÍCIA FEDERAL</p>
-                <Ficha items={[
-                  ["Cargo", "Agente de Polícia Federal"],
-                  ["Banca", "Cebraspe"],
-                  ["Prova Prevista", "29/06/2025"],
-                  ["Vagas", "1.800"],
-                  ["Remuneração", "R$ 13.900,54"],
-                ]} />
-                {isAuthenticated ? (
-                  <Link to="/dashboard" className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                ) : (
-                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                )}
-              </div>
-            </article>
-
-            <article className="contest-upcoming-card">
-              <div className="contest-upcoming-card__art">
-                <img src="/media/hero/meu-concurso-seguranca-publica.webp" alt="Polícia Militar de São Paulo" width={1920} height={1280} loading="lazy" decoding="async" />
-                <span className="contest-upcoming-card__status contest-upcoming-card__status--aberto">
-                  <ShieldCheck size={10} aria-hidden="true" /> Edital aberto
-                </span>
-              </div>
-              <div className="contest-upcoming-card__content">
-                <p className="contest-upcoming-card__sigla"><strong>PM-SP</strong> / POLÍCIA MILITAR DE SÃO PAULO</p>
-                <Ficha items={[
-                  ["Cargo", "Soldado PM"],
-                  ["Banca", "Vunesp"],
-                  ["Prova", "09/03/2025"],
-                  ["Vagas", "2.700"],
-                  ["Remuneração", "R$ 4.852,21"],
-                ]} />
-                {isAuthenticated ? (
-                  <Link to="/dashboard" className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                ) : (
-                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
-                    Acompanhar concurso <ArrowRight aria-hidden="true" />
-                  </Link>
-                )}
-              </div>
-            </article>
-
+    <div className="sx sx-contests">
+      <article className="sx-banner" aria-labelledby={"sx-pcac-title" + suffix}>
+        <img
+          className="sx-banner__art"
+          src="/media/hero/landing-pcac.webp"
+          alt=""
+          width={1915}
+          height={821}
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          className="sx-banner__crest"
+          src="/media/brasao-pcac-oficial.jpg"
+          alt="Brasão da Polícia Civil do Acre"
+          width={347}
+          height={418}
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="sx-banner__copy">
+          <span className="sx-banner__tag">
+            <i aria-hidden="true" /> Edital publicado · 05/11/2026
+          </span>
+          <h2 id={"sx-pcac-title" + suffix}>Polícia Civil do Acre</h2>
+          <p>Edital nº 001 SEAD/PCAC · Banca IDECAN</p>
+          <dl className="sx-banner__facts">
+            <div>
+              <dt>Vagas</dt>
+              <dd>{PCAC_VAGAS}</dd>
+            </div>
+            <div>
+              <dt>Cargos</dt>
+              <dd>{pcAcVerticalCargos.length}</dd>
+            </div>
+            <div>
+              <dt>Salário inicial até</dt>
+              <dd>{pcAcVerticalCargos[0]?.salario}</dd>
+            </div>
+          </dl>
+          <div className="sx-actions">
+            {isAuthenticated ? (
+              <Link to="/dashboard" className="sx-btn sx-btn--primary">
+                Estudar para a PC-AC <ArrowRight aria-hidden="true" />
+              </Link>
+            ) : (
+              <Link to="/auth" search={{ mode: "register" }} className="sx-btn sx-btn--primary">
+                Estudar para a PC-AC <ArrowRight aria-hidden="true" />
+              </Link>
+            )}
+            <a
+              href={PCAC_EDITAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sx-btn sx-btn--onimage"
+            >
+              <FileText aria-hidden="true" /> Ver edital
+            </a>
           </div>
         </div>
-      </section>
-      <p className="contest-independence">
+      </article>
+
+      <header className="sx-head sx-head--plain">
+        <div>
+          <span className="sx-eyebrow">Provas recentes</span>
+          <h2>Treine com provas de 2026.</h2>
+        </div>
+      </header>
+      <ul className="sx-exams">
+        {EXAMS.map((exam) => (
+          <li key={exam.sigla} className="sx-exam">
+            <img
+              src={exam.image}
+              alt={`Capa ${exam.name}`}
+              width={1672}
+              height={941}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="sx-exam__body">
+              <strong>
+                {exam.sigla} <span>{exam.name}</span>
+              </strong>
+              <small>{exam.meta}</small>
+              <p>{exam.roles}</p>
+              {isAuthenticated ? (
+                <Link to="/dashboard" className="sx-exam__link">
+                  Treinar questões <ArrowUpRight aria-hidden="true" />
+                </Link>
+              ) : (
+                <Link to="/auth" search={{ mode: "register" }} className="sx-exam__link">
+                  Treinar questões <ArrowUpRight aria-hidden="true" />
+                </Link>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p className="sx-note">
         Iniciativa educacional independente, sem vínculo ou endosso das Polícias Civis, governos ou
         bancas. Artes ilustrativas. Consulte os documentos oficiais de cada concurso.
       </p>
