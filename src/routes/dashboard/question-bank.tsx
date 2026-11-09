@@ -34,6 +34,7 @@ import { catalogGroups } from "@/lib/questionCatalogSummary";
 import { cn } from "@/lib/utils";
 import "@/styles/question-bank-refinement.css";
 import "@/styles/question-practice-workspaces.css";
+import "@/styles/student-assessment-workspaces.css";
 import {
   QuestionCatalogDetails,
   type CatalogDetail,
