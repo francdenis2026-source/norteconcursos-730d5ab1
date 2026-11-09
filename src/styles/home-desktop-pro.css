@@ -265,3 +265,16 @@
 .home.home .home-hero .home-hero__emblem-clock {
   z-index: 0;
 }
+
+
+/* User requested the hero dark overlay to be removed completely. */
+.home.home .home-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+.home.home .home-hero > .home-hero__image {
+  opacity: 1 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
