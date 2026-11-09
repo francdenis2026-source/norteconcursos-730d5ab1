@@ -5,9 +5,10 @@
   isolation: isolate !important;
   box-sizing: border-box !important;
   min-height: 0 !important;
-  height: clamp(390px, 43vw, 470px) !important;
-  max-height: 470px !important;
-  padding: 18px 0 !important;
+  height: clamp(210px, 16vw, 236px) !important;
+  min-height: 210px !important;
+  max-height: 236px !important;
+  padding: 9px 0 !important;
   overflow: hidden !important;
   border-block: 1px solid rgb(220 177 91 / 20%) !important;
   background:
@@ -27,9 +28,9 @@
 }
 .home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
   display: grid !important;
-  grid-template-columns: minmax(270px, .78fr) minmax(0, 1.72fr) !important;
+  grid-template-columns: minmax(235px, .66fr) minmax(0, 1.9fr) !important;
   align-items: stretch !important;
-  gap: clamp(18px, 2.2vw, 32px) !important;
+  gap: clamp(12px, 1.35vw, 20px) !important;
   box-sizing: border-box !important;
   width: min(calc(100% - clamp(32px, 5vw, 76px)), 1600px) !important;
   max-width: 1600px !important;
@@ -48,7 +49,7 @@
   height: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important;
-  padding: 22px 20px 18px !important;
+  padding: 13px 15px 11px !important;
   overflow: hidden !important;
   border: 1px solid rgb(222 179 95 / 24%) !important;
   border-radius: 12px !important;
@@ -75,7 +76,7 @@
   max-width: 100% !important;
 }
 .home.hr-canvas #plataforma .hr-showcase__eyebrow {
-  margin: 0 0 12px !important;
+  margin: 0 0 7px !important;
   color: #e7bd70 !important;
   font-size: 9px !important;
   font-weight: 850 !important;
@@ -89,7 +90,7 @@
   max-width: 12ch !important;
   margin: 0 !important;
   color: #f7f3eb !important;
-  font-size: clamp(27px, 2.35vw, 36px) !important;
+  font-size: clamp(21px, 1.8vw, 27px) !important;
   line-height: 1.02 !important;
   letter-spacing: -.05em !important;
   text-wrap: balance !important;
@@ -101,17 +102,17 @@
 }
 .home.hr-canvas #plataforma .hr-showcase__heading p {
   max-width: 34ch !important;
-  margin: 12px 0 0 !important;
+  margin: 7px 0 0 !important;
   color: #d0d5d8 !important;
-  font-size: 11px !important;
-  line-height: 1.48 !important;
+  font-size: 8px !important;
+  line-height: 1.25 !important;
 }
 .home.hr-canvas #plataforma .hr-showcase__index {
   align-self: flex-start !important;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  margin: 14px 0 0 !important;
+  margin: 7px 0 0 !important;
   padding: 8px 11px !important;
   border: 1px solid rgb(229 188 105 / 35%) !important;
   border-radius: 7px !important;
@@ -148,21 +149,21 @@
   gap: 5px !important;
   width: fit-content !important;
   max-width: 100% !important;
-  margin: 0 0 12px !important;
-  padding: 4px !important;
+  margin: 0 0 7px !important;
+  padding: 3px !important;
   border: 1px solid rgb(220 230 238 / 12%) !important;
   border-radius: 8px !important;
   background: rgb(5 11 17 / 58%) !important;
 }
 .home.hr-canvas #plataforma .home-preparation__tab-anchor { margin: 0 !important; }
 .home.hr-canvas #plataforma .home-preparation__tab {
-  min-height: 31px !important;
-  padding: 0 12px !important;
+  min-height: 25px !important;
+  padding: 0 9px !important;
   border: 1px solid transparent !important;
   border-radius: 5px !important;
   color: #b9c3cb !important;
   background: transparent !important;
-  font-size: 10px !important;
+  font-size: 9px !important;
   font-weight: 720 !important;
   white-space: nowrap !important;
 }
@@ -181,8 +182,9 @@
 .home.hr-canvas #plataforma .home-preparation__items {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
   align-items: stretch !important;
-  gap: 9px !important;
+  gap: 6px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -197,10 +199,10 @@
   align-items: start !important;
   column-gap: 9px !important;
   min-width: 0 !important;
-  min-height: 94px !important;
-  height: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
   box-sizing: border-box !important;
-  padding: 11px 12px !important;
+  padding: 7px 8px !important;
   overflow: hidden !important;
   border: 1px solid rgb(188 204 218 / 16%) !important;
   border-radius: 8px !important;
@@ -249,7 +251,7 @@
 .home.hr-canvas #plataforma .hr-step-card h3 {
   margin: 1px 0 0 !important;
   color: #f3f0e9 !important;
-  font-size: 11px !important;
+  font-size: 9px !important;
   font-weight: 760 !important;
   line-height: 1.25 !important;
   letter-spacing: -.01em !important;
@@ -279,15 +281,15 @@
 .home.hr-canvas #plataforma .hr-source-card > div,
 .home.hr-canvas #plataforma .hr-step-card > div { min-width: 0 !important; }
 @media (min-width: 761px) and (max-width: 1100px) {
-  .home.hr-canvas #plataforma.hr-showcase { height: 430px !important; }
+  .home.hr-canvas #plataforma.hr-showcase { height: 236px !important; }
   .home.hr-canvas #plataforma.hr-showcase .hr-showcase__inner {
-    grid-template-columns: minmax(220px, .7fr) minmax(0, 1.5fr) !important;
+    grid-template-columns: minmax(190px, .62fr) minmax(0, 1.8fr) !important;
     width: calc(100% - 32px) !important;
     gap: 14px !important;
   }
   .home.hr-canvas #plataforma .hr-tools-grid,
-  .home.hr-canvas #plataforma .home-preparation__items { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
-  .home.hr-canvas #plataforma .hr-tool-card { min-height: 86px !important; }
+  .home.hr-canvas #plataforma .home-preparation__items { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .home.hr-canvas #plataforma .hr-tool-card { min-height: 0 !important; }
 }
 @media (max-width: 760px) {
   .home.hr-canvas #plataforma.hr-showcase {
