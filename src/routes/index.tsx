@@ -669,63 +669,29 @@ function Index() {
           <DailyChallengeBadge />
         </div>
 
-        <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Explore os principais recursos">
-          <a className="hr-quick-item hr-quick-item--study" href="#plataforma">
-            <span className="hr-quick-icon"><BrainCircuit aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Plano de estudos</strong><small>Organize sua preparação</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--contests" href="#concursos">
-            <span className="hr-quick-icon"><Landmark aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Concursos e editais</strong><small>Encontre sua próxima prova</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--progress" href="#ranking-destaque">
-            <span className="hr-quick-icon"><LineChart aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Seu desempenho</strong><small>Acompanhe sua evolução</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--practice" href="#planos">
-            <span className="hr-quick-icon"><ShieldCheck aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Treino e simulados</strong><small>Pratique com estratégia</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-        </nav>
-
         <section
           id="plataforma"
-          className="home-section home-preparation hr-section"
+          className="home-section home-preparation hr-section hr-showcase"
           aria-labelledby="preparation-title"
         >
-          <div className="home-preparation__fullwidth">
-            <div className="home-preparation__band">
-              <span className="home-preparation__frame" aria-hidden="true" />
-              <span className="home-preparation__sweep" aria-hidden="true" />
-              <img
-                className="home-preparation__art"
-                src="/media/hero/auth-carreiras-composicao.webp"
-                alt=""
-                width={1440}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow home-signal">
-                  01 · Prepare-se para sua carreira
-                </span>
+          <div className="home-container hr-showcase__inner">
+            <div className="hr-showcase__heading">
+              <div>
+                <span className="hr-showcase__eyebrow">O ECOSSISTEMA NORTE · PREPARAÇÃO COMPLETA</span>
                 <h2 id="preparation-title">
-                  Uma plataforma.
-                  <br />
-                  <em>A sua carreira.</em>
+                  Tudo para transformar <em>estudo em resultado.</em>
                 </h2>
                 <p>
-                  Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma
-                  prioridade clara.
+                  Ferramentas conectadas para orientar sua rotina, fortalecer seus pontos fracos e
+                  acompanhar sua evolução até a prova.
                 </p>
               </div>
-              <PreparationInfo />
+              <div className="hr-showcase__index" aria-label="Sete ferramentas integradas">
+                <strong>07</strong>
+                <span>FERRAMENTAS<br />INTEGRADAS</span>
+              </div>
             </div>
+            <PreparationInfo />
           </div>
         </section>
 
