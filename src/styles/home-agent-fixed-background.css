@@ -91,3 +91,70 @@
 @media (prefers-reduced-motion: reduce) {
   .home.hr-canvas > .home-agent-fixed { scroll-behavior: auto !important; }
 }
+
+/* Final visibility correction: the fixed agent was being hidden by the opaque
+   desktop hero canvas and its full-strength gradient overlay. Keep the portrait
+   behind all copy, but let the homepage canvas remain transparent over it. */
+.home.hr-canvas > .home-agent-fixed {
+  z-index: 1 !important;
+  top: 64px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: clamp(340px, 40vw, 610px) !important;
+  height: calc(100svh - 64px) !important;
+  opacity: .52 !important;
+  overflow: visible !important;
+}
+.home.hr-canvas > .home-agent-fixed::after {
+  inset: 0 !important;
+  background:
+    linear-gradient(90deg, transparent 0%, transparent 43%, rgb(8 14 20 / 26%) 70%, transparent 100%),
+    linear-gradient(0deg, rgb(8 14 20 / 18%) 0%, transparent 24%, transparent 78%, rgb(8 14 20 / 16%) 100%) !important;
+}
+.home.hr-canvas > .home-agent-fixed img {
+  inset: auto auto 0 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: left bottom !important;
+  opacity: 1 !important;
+  filter: saturate(.9) contrast(1.08) brightness(.94) !important;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 56%, transparent 100%) !important;
+  mask-image: linear-gradient(90deg, #000 0%, #000 56%, transparent 100%) !important;
+  -webkit-mask-composite: source-over !important;
+  mask-composite: add !important;
+}
+.home.hr-canvas > .home-backdrop { z-index: 0 !important; }
+.home.hr-canvas > .desktop-homepage {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero,
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero::before,
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero::after {
+  background: transparent !important;
+  background-image: none !important;
+}
+.home.hr-canvas > .desktop-homepage > #inicio.home-hero {
+  isolation: isolate !important;
+}
+.home.hr-canvas > .desktop-homepage > section {
+  background-color: transparent !important;
+}
+.home.hr-canvas > .desktop-homepage > section:not(.home-final)::before,
+.home.hr-canvas > .desktop-homepage > section:not(.home-final)::after {
+  background-color: transparent;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas > .home-agent-fixed {
+    width: clamp(300px, 39vw, 440px) !important;
+    opacity: .42 !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas > .home-agent-fixed { display: none !important; }
+  .home.hr-canvas > .desktop-homepage > #inicio.home-hero > img.home-hero__image {
+    display: block !important;
+  }
+}
