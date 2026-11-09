@@ -1,7 +1,8 @@
 /* Desktop homepage: compact professional pass. Loaded last; desktop-only (>=761px). */
 @media (min-width: 761px) {
   /* Quiet canvas: remove the busy emblem/clock behind every section. */
-  html body .home .home-backdrop { opacity: 0.06 !important; filter: grayscale(1) blur(2px); }
+  /* Keep the original homepage clock and background texture visible. */
+  html body .home .home-backdrop { opacity: 1 !important; filter: none !important; }
   html body .home .home-operations__art { opacity: 0.12 !important; }
 
   /* Consistent rhythm between sections. */
@@ -237,4 +238,373 @@
     right: -2%;
     width: clamp(300px, 39vw, 430px);
   }
+}
+
+
+/* Hero final layer correction: the previous dark wash was almost opaque across
+   the full banner, hiding both the photographic background and the large clock.
+   Keep contrast behind the left-hand copy only; reveal the right-hand artwork. */
+.home.home .home-hero {
+  background-color: #101821 !important;
+}
+.home.home .home-hero::after {
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgb(16 24 33 / .90) 0%,
+    rgb(16 24 33 / .76) 34%,
+    rgb(16 24 33 / .30) 58%,
+    rgb(16 24 33 / .06) 78%,
+    transparent 100%
+  ) !important;
+}
+.home.home .home-hero > .home-hero__image {
+  opacity: 1 !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 100%) !important;
+}
+.home.home .home-hero .home-hero__emblem-clock {
+  z-index: 0;
+}
+
+
+/* User requested the hero dark overlay to be removed completely. */
+.home.home .home-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+.home.home .home-hero > .home-hero__image {
+  opacity: 1 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+
+/* Restore the full homepage artwork: portrait photo + live clock backdrop.
+   Only a subtle text-side gradient remains for headline contrast. */
+.home.home .home-hero {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.home.home .home-hero::after {
+  content: "" !important;
+  display: block !important;
+  z-index: 1 !important;
+  background: linear-gradient(
+    90deg,
+    rgb(7 14 23 / 66%) 0%,
+    rgb(7 14 23 / 44%) 27%,
+    rgb(7 14 23 / 16%) 46%,
+    transparent 62%
+  ) !important;
+}
+.home.home .home-hero > .home-hero__image {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  filter: saturate(1.06) contrast(1.04) !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 100%) !important;
+  background: transparent !important;
+}
+.home.home .home-hero .home-hero__emblem-clock {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
+/* Slightly enlarge the animated Norte insignia in the hero without competing
+   with the headline or the photographic background. Keep its current anchor. */
+.home.home #inicio.home-hero .hero-badge {
+  --badge-w: clamp(82px, 7.2vw, 96px) !important;
+  width: var(--badge-w) !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+@media (max-width: 760px) {
+  .home.home #inicio.home-hero .hero-badge {
+    --badge-w: 76px !important;
+  }
+}
+
+
+/* Premium motion system for the homepage insignia and hero copy.
+   Replaces spins, glitch, bursts, draggable positioning and aggressive shine. */
+.home.home #inicio .hero-badge--premium {
+  --badge-w: clamp(82px, 7.2vw, 96px);
+  position: relative !important;
+  display: block;
+  width: var(--badge-w) !important;
+  height: auto;
+  aspect-ratio: 768 / 811;
+  margin: 0 0 16px;
+  padding: 0;
+  perspective: 900px;
+  cursor: default;
+  touch-action: pan-y;
+  user-select: none;
+  isolation: isolate;
+  overflow: visible;
+  transform: translateZ(0);
+  transition: filter 500ms ease, opacity 500ms ease;
+}
+.home.home #inicio .hero-badge--premium[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(12px) scale(.96);
+}
+.home.home #inicio .hero-badge--premium[data-reveal="in"] {
+  animation: nc-crest-arrive 900ms cubic-bezier(.2,.75,.25,1) both;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__float {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: nc-crest-float 7s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__tilt,
+.home.home #inicio .hero-badge--premium .hero-badge__spin {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.75,.25,1);
+}
+.home.home #inicio .hero-badge--premium .hero-badge__edge {
+  filter: brightness(.48) saturate(.78);
+}
+.home.home #inicio .hero-badge--premium .hero-badge__face {
+  filter: drop-shadow(0 8px 16px rgb(0 0 0 / 28%));
+}
+.home.home #inicio .hero-badge--premium .hero-badge__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 22%;
+  background: linear-gradient(118deg, transparent 28%, rgb(255 244 214 / 0%) 42%, rgb(255 244 214 / 38%) 50%, rgb(255 244 214 / 0%) 58%, transparent 72%);
+  background-size: 240% 100%;
+  background-position: 130% 0;
+  -webkit-mask: var(--police-insignia-art) center / contain no-repeat;
+  mask: var(--police-insignia-art) center / contain no-repeat;
+  mix-blend-mode: screen;
+  animation: nc-crest-sheen 8s ease-in-out 1.2s infinite;
+  pointer-events: none;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__ambient {
+  position: absolute;
+  z-index: -1;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(220 177 91 / 24%), rgb(220 177 91 / 7%) 42%, transparent 72%);
+  filter: blur(13px);
+  opacity: .7;
+  animation: nc-crest-breathe 5.5s ease-in-out infinite;
+}
+.home.home #inicio .hero-badge--premium[data-visible="false"] *,
+.home.home #inicio .hero-badge--premium[data-visible="false"] {
+  animation-play-state: paused !important;
+}
+@keyframes nc-crest-arrive {
+  from { opacity: 0; transform: translateY(16px) scale(.94); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes nc-crest-float {
+  0%, 100% { transform: translateY(0) rotateZ(-1deg); }
+  50% { transform: translateY(-5px) rotateZ(1deg); }
+}
+@keyframes nc-crest-sheen {
+  0%, 18% { background-position: 130% 0; }
+  42%, 100% { background-position: -130% 0; }
+}
+@keyframes nc-crest-breathe {
+  0%, 100% { opacity: .42; transform: scale(.92); }
+  50% { opacity: .82; transform: scale(1.08); }
+}
+/* Subtle entrance rhythm: eyebrow, headline, supporting copy and actions. */
+@media (prefers-reduced-motion: no-preference) {
+  .home.home #inicio .hx__kicker { animation: nc-copy-rise 650ms 100ms both; }
+  .home.home #inicio .hx__headline { animation: nc-copy-rise 760ms 220ms both; }
+  .home.home #inicio .hx__description { animation: nc-copy-rise 760ms 360ms both; }
+  .home.home #inicio .hx__copy .home-actions { animation: nc-copy-rise 760ms 480ms both; }
+}
+@keyframes nc-copy-rise {
+  from { opacity: 0; transform: translateY(13px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 760px) {
+  .home.home #inicio .hero-badge--premium { --badge-w: 76px; margin-bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home #inicio .hero-badge--premium,
+  .home.home #inicio .hero-badge--premium *,
+  .home.home #inicio .hx__kicker,
+  .home.home #inicio .hx__headline,
+  .home.home #inicio .hx__description,
+  .home.home #inicio .hx__copy .home-actions {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+
+
+
+/* Desktop navigation repair: preserve every destination without compressing
+   labels. The live-presence chip was taking the same width as a nav item. */
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .home.hr-canvas .hr-header .home-header__inner,
+  .home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
+    width: calc(100% - 40px) !important;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto !important;
+    gap: clamp(8px, 1vw, 14px) !important;
+  }
+  .home.hr-canvas .home-brand-lockup {
+    min-width: 0;
+    flex: 0 0 auto;
+    gap: 10px;
+  }
+  .home.hr-canvas .home-brand-lockup > a {
+    flex: 0 0 auto;
+    padding-right: 14px;
+  }
+  .home.hr-canvas .home-presence {
+    flex: 0 0 46px;
+    width: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    height: 30px;
+    min-height: 30px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 7px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .home.hr-canvas .home-presence > span {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    font-size: 0;
+  }
+  .home.hr-canvas .home-presence strong {
+    font-size: 11px;
+    line-height: 1;
+  }
+  .home.hr-canvas .home-presence__full,
+  .home.hr-canvas .home-presence__short {
+    display: none !important;
+  }
+  .home.hr-canvas .home-nav.hr-nav {
+    min-width: 0;
+    justify-content: space-between;
+    gap: 0;
+    overflow: visible;
+  }
+  .home.hr-canvas .hr-nav > a,
+  .home.hr-canvas .hr-nav .home-nav__group > summary {
+    flex: 0 1 auto;
+    min-width: max-content;
+    padding-inline: clamp(5px, .6vw, 9px) !important;
+    gap: 5px !important;
+    font-size: clamp(10.5px, .82vw, 12px) !important;
+    letter-spacing: -.015em;
+  }
+  .home.hr-canvas .hr-nav svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .home.hr-canvas .home-header__actions {
+    flex: 0 0 auto;
+    gap: 3px !important;
+    padding-left: 8px !important;
+  }
+  .home.hr-canvas .home-header__register {
+    padding-inline: 11px !important;
+    white-space: nowrap;
+  }
+  .home.hr-canvas .home-header__actions :is(.lp-theme-toggle, .home-fullscreen-toggle) {
+    width: 32px !important;
+    min-width: 32px !important;
+  }
+}
+
+/* At narrower desktop widths use the existing drawer instead of squeezing
+   seven labels into a row. The logo, live count and primary actions remain. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .home.hr-canvas .hr-header .home-header__inner,
+  .home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
+    width: calc(100% - 36px) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px !important;
+  }
+  .home.hr-canvas .home-nav.hr-nav {
+    display: none !important;
+  }
+  .home.hr-canvas .home-header__register,
+  .home.hr-canvas .home-fullscreen-toggle {
+    display: none !important;
+  }
+  .home.hr-canvas .home-header__actions {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 12px !important;
+  }
+  .home.hr-canvas .home-menu-trigger {
+    display: grid !important;
+    place-items: center;
+  }
+  .home.hr-canvas .home-presence {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    padding-inline: 9px;
+  }
+}
+
+/* Remove the persistent selected-item plaque and underline. Keep a restrained
+   text-only hover and a clear keyboard focus indicator for accessibility. */
+.home.hr-canvas .hr-nav > a[aria-current="location"],
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary {
+  color: #c7cbd0 !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.home.hr-canvas .hr-nav > a[aria-current="location"]::before,
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary::before {
+  content: none !important;
+  display: none !important;
+}
+.home.hr-canvas .hr-nav > a[aria-current="location"]::after,
+.home.hr-canvas .hr-nav .home-nav__group[open] > summary::after {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover {
+  color: #edc36d !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover::before,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover::before {
+  content: none !important;
+  display: none !important;
+}
+.home.hr-canvas .hr-nav > a:hover::after,
+.home.hr-canvas .hr-nav .home-nav__group > summary:hover::after {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.home.hr-canvas .hr-nav :is(a, summary):focus-visible {
+  outline: 2px solid rgb(240 199 101 / 72%) !important;
+  outline-offset: -4px;
 }

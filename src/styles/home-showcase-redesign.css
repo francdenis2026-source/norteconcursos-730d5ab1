@@ -1,0 +1,366 @@
+/* Norte Concursos — premium platform showcase.
+   Replaces the crowded mini-dashboard composition with a clear editorial hierarchy. */
+.home.hr-canvas .hr-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(42px, 5vw, 76px) 0 clamp(48px, 5vw, 72px) !important;
+  margin: 0 !important;
+  background:
+    radial-gradient(ellipse at 88% 12%, rgb(196 151 67 / 11%), transparent 34%),
+    linear-gradient(135deg, #101820 0%, #121b24 48%, #0c131a 100%) !important;
+  border-top: 1px solid rgb(225 187 111 / 16%);
+  border-bottom: 1px solid rgb(225 187 111 / 13%);
+}
+.home.hr-canvas .hr-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .2;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(90deg, transparent, #000 28%, #000 78%, transparent);
+}
+.home.hr-canvas .hr-showcase__inner {
+  width: min(calc(100% - clamp(36px, 7vw, 120px)), 1500px) !important;
+  max-width: 1500px !important;
+  margin-inline: auto !important;
+}
+.home.hr-canvas .hr-showcase__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 0 0 28px;
+}
+.home.hr-canvas .hr-showcase__heading > div:first-child {
+  max-width: 760px;
+}
+.home.hr-canvas .hr-showcase__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+  color: #d8b46a;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .18em;
+  line-height: 1.4;
+}
+.home.hr-canvas .hr-showcase__eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: #d8ad55;
+}
+.home.hr-canvas .hr-showcase__heading h2 {
+  margin: 0;
+  color: #f4f1e9;
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 730;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.home.hr-canvas .hr-showcase__heading h2 em {
+  color: #e4b85f;
+  font-style: normal;
+}
+.home.hr-canvas .hr-showcase__heading p {
+  max-width: 65ch;
+  margin: 12px 0 0;
+  color: #aeb9c3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.home.hr-canvas .hr-showcase__index {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid rgb(225 187 111 / 24%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 3%);
+}
+.home.hr-canvas .hr-showcase__index strong {
+  color: #e4b85f;
+  font-size: 32px;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: -.06em;
+  font-variant-numeric: tabular-nums;
+}
+.home.hr-canvas .hr-showcase__index span {
+  color: #aeb9c3;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: .12em;
+}
+.home.hr-canvas .hr-showcase .home-preparation__info {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.home.hr-canvas .hr-showcase .home-preparation__tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 18px;
+  padding: 5px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 9px;
+  background: rgb(5 10 15 / 42%);
+}
+.home.hr-canvas .hr-showcase .home-preparation__tab-anchor { margin: 0; }
+.home.hr-canvas .hr-showcase .home-preparation__tab {
+  min-height: 36px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #aeb9c3;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+.home.hr-canvas .hr-showcase .home-preparation__tab[data-state="active"] {
+  color: #f5e7c7;
+  border-color: rgb(220 177 91 / 28%);
+  background: linear-gradient(135deg, rgb(214 169 82 / 17%), rgb(214 169 82 / 7%));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%);
+}
+.home.hr-canvas .hr-showcase .home-preparation__panel {
+  width: 100%;
+  min-width: 0;
+}
+.home.hr-canvas .hr-showcase .hr-tools-grid,
+.home.hr-canvas .hr-showcase .home-preparation__items {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card,
+.home.hr-canvas .hr-showcase .hr-career-card,
+.home.hr-canvas .hr-showcase .hr-source-card,
+.home.hr-canvas .hr-showcase .hr-step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 174px;
+  padding: 19px 19px 17px;
+  overflow: hidden;
+  border: 1px solid rgb(190 204 217 / 13%);
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgb(27 39 51 / 96%), rgb(17 26 36 / 98%));
+  box-shadow: 0 8px 22px rgb(0 0 0 / 15%), inset 0 1px 0 rgb(255 255 255 / 4%);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card::before,
+.home.hr-canvas .hr-showcase .hr-career-card::before,
+.home.hr-canvas .hr-showcase .hr-source-card::before,
+.home.hr-canvas .hr-showcase .hr-step-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d8ad55, rgb(216 173 85 / 8%) 72%, transparent);
+  opacity: .7;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card:hover,
+.home.hr-canvas .hr-showcase .hr-career-card:hover,
+.home.hr-canvas .hr-showcase .hr-source-card:hover,
+.home.hr-canvas .hr-showcase .hr-step-card:hover {
+  transform: translateY(-3px);
+  border-color: rgb(220 177 91 / 42%);
+  box-shadow: 0 14px 28px rgb(0 0 0 / 22%), inset 0 1px 0 rgb(255 255 255 / 5%);
+}
+.home.hr-canvas .hr-showcase .hr-tool-icon,
+.home.hr-canvas .hr-showcase .hr-career-card > svg,
+.home.hr-canvas .hr-showcase .hr-source-card > svg {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  margin: 0 0 15px;
+  padding: 10px;
+  border: 1px solid rgb(222 179 95 / 26%);
+  border-radius: 9px;
+  color: #e4b85f;
+  background: linear-gradient(145deg, rgb(222 179 95 / 16%), rgb(222 179 95 / 5%));
+}
+.home.hr-canvas .hr-showcase .hr-tool-icon svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.8;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card h3,
+.home.hr-canvas .hr-showcase .hr-career-card h3,
+.home.hr-canvas .hr-showcase .hr-source-card h3,
+.home.hr-canvas .hr-showcase .hr-step-card h3 {
+  margin: 0;
+  color: #f2efe8;
+  font-size: 14px;
+  font-weight: 760;
+  line-height: 1.3;
+  letter-spacing: -.015em;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card p,
+.home.hr-canvas .hr-showcase .hr-career-card p,
+.home.hr-canvas .hr-showcase .hr-source-card p,
+.home.hr-canvas .hr-showcase .hr-step-card p {
+  margin: 7px 0 0;
+  color: #aeb9c3;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.home.hr-canvas .hr-showcase .hr-tool-card .hr-tool-ribbon {
+  position: absolute;
+  top: 14px;
+  right: 13px;
+  padding: 4px 7px;
+  border: 1px solid rgb(222 179 95 / 25%);
+  border-radius: 4px;
+  color: #e4c47f;
+  background: rgb(222 179 95 / 8%);
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.home.hr-canvas .hr-showcase .home-preparation__steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+}
+.home.hr-canvas .hr-showcase .hr-step-card {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  min-height: 140px;
+}
+.home.hr-canvas .hr-showcase .home-preparation__number {
+  color: #e4b85f;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1;
+}
+.home.hr-canvas .hr-showcase .hr-step-card h3 svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  color: #e4b85f;
+  vertical-align: -3px;
+}
+.home.hr-canvas .hr-showcase .home-preparation__careers {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.home.hr-canvas .hr-showcase .hr-career-card,
+.home.hr-canvas .hr-showcase .hr-source-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 13px;
+  min-height: 120px;
+}
+.home.hr-canvas .hr-showcase .hr-career-card > svg,
+.home.hr-canvas .hr-showcase .hr-source-card > svg {
+  margin: 0;
+}
+.home.hr-canvas .hr-showcase .home-preparation__careers .hr-career-card > div,
+.home.hr-canvas .hr-showcase .hr-source-card > div { min-width: 0; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .hr-showcase .hr-tools-grid,
+  .home.hr-canvas .hr-showcase .home-preparation__items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .hr-showcase {
+    padding: 34px 0 42px !important;
+  }
+  .home.hr-canvas .hr-showcase__inner {
+    width: calc(100% - 28px) !important;
+  }
+  .home.hr-canvas .hr-showcase__heading {
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .home.hr-canvas .hr-showcase__heading h2 { font-size: clamp(26px, 7vw, 34px); }
+  .home.hr-canvas .hr-showcase__heading p { font-size: 12px; line-height: 1.55; }
+  .home.hr-canvas .hr-showcase__index {
+    gap: 7px;
+    padding: 7px 8px;
+  }
+  .home.hr-canvas .hr-showcase__index strong { font-size: 23px; }
+  .home.hr-canvas .hr-showcase__index span { font-size: 7px; }
+  .home.hr-canvas .hr-showcase .home-preparation__tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3px;
+    padding: 4px;
+  }
+  .home.hr-canvas .hr-showcase .home-preparation__tab {
+    width: 100%;
+    min-height: 34px;
+    padding-inline: 5px;
+    font-size: 9px;
+  }
+  .home.hr-canvas .hr-showcase .hr-tools-grid,
+  .home.hr-canvas .hr-showcase .home-preparation__items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .home.hr-canvas .hr-showcase .hr-tool-card {
+    min-height: 158px;
+    padding: 13px;
+  }
+  .home.hr-canvas .hr-showcase .hr-tool-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 11px;
+    padding: 8px;
+  }
+  .home.hr-canvas .hr-showcase .hr-tool-card h3 { font-size: 12px; }
+  .home.hr-canvas .hr-showcase .hr-tool-card p { font-size: 10px; line-height: 1.4; }
+  .home.hr-canvas .hr-showcase .hr-tool-card .hr-tool-ribbon {
+    top: 9px;
+    right: 8px;
+    font-size: 7px;
+  }
+  .home.hr-canvas .hr-showcase .home-preparation__steps,
+  .home.hr-canvas .hr-showcase .home-preparation__careers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home.hr-canvas .hr-showcase .hr-step-card,
+  .home.hr-canvas .hr-showcase .hr-career-card,
+  .home.hr-canvas .hr-showcase .hr-source-card {
+    min-height: 126px;
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas .hr-showcase .hr-tool-card,
+  .home.hr-canvas .hr-showcase .hr-career-card,
+  .home.hr-canvas .hr-showcase .hr-source-card,
+  .home.hr-canvas .hr-showcase .hr-step-card { transition: none !important; }
+}

@@ -474,3 +474,578 @@
     min-height: 330px !important;
   }
 }
+
+
+/* Header stability: keep the public navigation anchored to the viewport.
+   Scrolling may change only its surface tone; never its position or dimensions. */
+.home.hr-canvas .home-header.hr-header {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
+  top: 0 !important;
+  z-index: 1200 !important;
+  margin: 0 !important;
+  transform: none !important;
+  translate: none !important;
+  animation: none !important;
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+  will-change: auto !important;
+}
+.home.hr-canvas .home-header.hr-header,
+.home.hr-canvas .home-header.hr-header[data-scrolled] {
+  width: 100% !important;
+}
+.home.hr-canvas .home-header.hr-header .home-header__inner,
+.home.hr-canvas .home-header.hr-header[data-scrolled] .home-header__inner {
+  min-height: var(--nc-fixed-header-height, 66px) !important;
+  height: var(--nc-fixed-header-height, 66px) !important;
+  box-sizing: border-box !important;
+}
+
+
+/* Animated brand insignia returned to the left rail, directly above the hero headline.
+   Glass treatment is intentionally subtle so the portrait and clock remain visible. */
+@media (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: min(690px, 59%) !important;
+    max-width: 690px !important;
+    padding: clamp(14px, 1.6vw, 22px) clamp(16px, 1.9vw, 26px) !important;
+    border: 1px solid rgb(235 220 190 / 17%) !important;
+    border-radius: 16px !important;
+    background: linear-gradient(
+      135deg,
+      rgb(13 20 27 / 38%) 0%,
+      rgb(13 20 27 / 24%) 58%,
+      rgb(13 20 27 / 13%) 100%
+    ) !important;
+    -webkit-backdrop-filter: blur(9px) saturate(112%) !important;
+    backdrop-filter: blur(9px) saturate(112%) !important;
+    box-shadow:
+      0 14px 38px rgb(0 0 0 / 12%),
+      inset 0 1px 0 rgb(255 255 255 / 5%) !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: clamp(62px, 5.8vw, 78px);
+    position: relative !important;
+    inset: auto !important;
+    align-self: flex-start !important;
+    flex: 0 0 auto !important;
+    width: var(--badge-w) !important;
+    margin: 0 0 10px !important;
+    z-index: 3 !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy h1,
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > p,
+  .home.hr-canvas .home-hero.hr-hero .hx__kicker {
+    text-shadow: 0 1px 12px rgb(0 0 0 / 22%);
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy .home-actions {
+    margin-top: 18px !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: min(620px, 72%) !important;
+    padding: 13px 16px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: 62px;
+    margin-bottom: 7px !important;
+  }
+}
+@media (max-height: 760px) and (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    padding-block: 11px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: 56px;
+    margin-bottom: 6px !important;
+  }
+}
+
+
+/* Navigation emphasis: enlarge labels and icons without changing header height. */
+.home.hr-canvas .hr-header .home-header__inner,
+.home.hr-canvas .hr-header[data-scrolled] .home-header__inner {
+  height: var(--nc-fixed-header-height, 66px) !important;
+  min-height: var(--nc-fixed-header-height, 66px) !important;
+  max-height: var(--nc-fixed-header-height, 66px) !important;
+}
+.home.hr-canvas .hr-nav > a,
+.home.hr-canvas .hr-nav .home-nav__group > summary {
+  height: var(--nc-fixed-header-height, 66px) !important;
+  min-height: var(--nc-fixed-header-height, 66px) !important;
+  max-height: var(--nc-fixed-header-height, 66px) !important;
+  padding-inline: clamp(8px, .72vw, 12px) !important;
+  gap: 8px !important;
+  font-size: clamp(13px, .98vw, 14.5px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.015em !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+.home.hr-canvas .hr-nav > a svg,
+.home.hr-canvas .hr-nav .home-nav__group > summary svg:not(.home-nav__chevron) {
+  width: 19px !important;
+  height: 19px !important;
+  min-width: 19px !important;
+  min-height: 19px !important;
+  stroke-width: 2 !important;
+}
+.home.hr-canvas .hr-nav .home-nav__group > summary .home-nav__chevron {
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+}
+@media (max-width: 1200px) and (min-width: 901px) {
+  .home.hr-canvas .hr-nav > a,
+  .home.hr-canvas .hr-nav .home-nav__group > summary {
+    padding-inline: 7px !important;
+    gap: 6px !important;
+    font-size: 13px !important;
+  }
+  .home.hr-canvas .hr-nav > a svg,
+  .home.hr-canvas .hr-nav .home-nav__group > summary svg:not(.home-nav__chevron) {
+    width: 17px !important;
+    height: 17px !important;
+    min-width: 17px !important;
+    min-height: 17px !important;
+  }
+}
+
+
+/* Refined homepage hero: remove the oversized glass card.
+   Keep the copy directly on the artwork with restrained contrast and clean typography. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  width: min(660px, 54%) !important;
+  max-width: 660px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1 {
+  text-shadow: 0 2px 16px rgb(0 0 0 / 28%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy > p,
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  text-shadow: 0 1px 9px rgb(0 0 0 / 34%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy .home-actions {
+  margin-top: 18px !important;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: min(620px, 72%) !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+}
+
+
+/* Text-by-text glass treatment: no enclosing card, each key message gets its own subtle strip. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 7px 11px !important;
+  margin: 0 0 14px !important;
+  border: 1px solid rgb(225 190 116 / 19%) !important;
+  border-left: 2px solid rgb(225 190 116 / 72%) !important;
+  border-radius: 4px !important;
+  background: rgb(16 22 29 / 25%) !important;
+  -webkit-backdrop-filter: blur(4px) saturate(108%) !important;
+  backdrop-filter: blur(4px) saturate(108%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1.hx__headline {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 5px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 2px 10px 5px !important;
+  margin-left: -10px !important;
+  border: 1px solid rgb(238 232 219 / 10%) !important;
+  border-radius: 5px !important;
+  background: linear-gradient(100deg, rgb(15 21 28 / 32%), rgb(15 21 28 / 17%)) !important;
+  -webkit-backdrop-filter: blur(5px) saturate(108%) !important;
+  backdrop-filter: blur(5px) saturate(108%) !important;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 7%), inset 0 1px 0 rgb(255 255 255 / 4%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description {
+  max-width: 600px !important;
+  margin-top: 16px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description > .hx__glass-strip {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 3px 8px 4px !important;
+  border: 1px solid rgb(238 232 219 / 8%) !important;
+  border-radius: 4px !important;
+  background: rgb(15 21 28 / 23%) !important;
+  -webkit-backdrop-filter: blur(4px) saturate(106%) !important;
+  backdrop-filter: blur(4px) saturate(106%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%) !important;
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+    padding: 2px 7px 4px !important;
+    margin-left: -7px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__description {
+    margin-top: 12px !important;
+  }
+}
+
+
+/* Premium glass refinement: softer surfaces, no harsh outlined boxes around every line. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  align-items: flex-start !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  padding: 6px 12px !important;
+  border: 1px solid rgb(229 205 159 / 10%) !important;
+  border-left: 2px solid rgb(224 181 92 / 78%) !important;
+  border-radius: 3px !important;
+  background: linear-gradient(100deg, rgb(12 18 25 / 42%), rgb(12 18 25 / 17%)) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(115%) !important;
+  backdrop-filter: blur(7px) saturate(115%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1.hx__headline {
+  gap: 3px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+  padding: 1px 11px 4px !important;
+  margin-left: -11px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: linear-gradient(100deg, rgb(11 18 25 / 48%) 0%, rgb(11 18 25 / 26%) 72%, rgb(11 18 25 / 5%) 100%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(118%) !important;
+  backdrop-filter: blur(8px) saturate(118%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%), 0 2px 10px rgb(0 0 0 / 8%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description {
+  margin-top: 14px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description > .hx__glass-strip {
+  padding: 1px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: 0 1px 10px rgb(0 0 0 / 62%) !important;
+}
+@media (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__inner {
+    width: calc(100% - clamp(44px, 6vw, 112px)) !important;
+    max-width: 1600px !important;
+    margin-inline: auto !important;
+    justify-content: flex-start !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    margin-left: 0 !important;
+    transform: translateX(clamp(-18px, -1.2vw, -8px));
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+    padding: 1px 8px 3px !important;
+    margin-left: -8px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__kicker {
+    padding: 5px 9px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+
+/* Professional portrait framing: show the complete upper-body composition without oversized cropping. */
+@media (min-width: 1101px) {
+  .home.hr-canvas #inicio.home-hero > img.home-hero__image {
+    left: auto !important;
+    right: 0 !important;
+    width: min(56%, 820px) !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    transform: none !important;
+    transform-origin: right bottom !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas #inicio.home-hero > img.home-hero__image {
+    left: auto !important;
+    right: 0 !important;
+    width: 54% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    transform: none !important;
+    transform-origin: right bottom !important;
+  }
+}
+
+
+/* Homepage hero cleanup: plain editorial typography, safer left inset and higher copy placement. */
+.home.hr-canvas #inicio.home-hero.hr-hero > .hx {
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 1480px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(24px, 5.2vw, 88px) !important;
+  padding-top: clamp(28px, 5vh, 62px) !important;
+  padding-bottom: clamp(18px, 3vh, 36px) !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+  box-sizing: border-box !important;
+  width: min(620px, 58%) !important;
+  max-width: 620px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  align-self: flex-start !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+/* Remove all glass surfaces and outlines from the text itself. */
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker,
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline > .hx__glass-strip,
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description > .hx__glass-strip {
+  display: inline !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker {
+  display: flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 0 16px !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__copy h1.hx__headline {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description {
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  max-width: 58ch !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__description > .hx__glass-strip {
+  -webkit-box-decoration-break: initial !important;
+  box-decoration-break: initial !important;
+  text-shadow: 0 1px 9px rgb(0 0 0 / 38%) !important;
+}
+@media (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    padding-top: clamp(30px, 5.5vh, 68px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    width: min(620px, 54%) !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    width: 100% !important;
+    padding-inline: 24px !important;
+    padding-top: 22px !important;
+    padding-bottom: 18px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__kicker {
+    margin-bottom: 12px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__description {
+    margin-top: 12px !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* Lift the entire hero copy group while keeping it safely clear of the fixed navigation. */
+@media (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    position: relative !important;
+    top: -18px !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    position: relative !important;
+    top: -10px !important;
+  }
+}
+
+
+/* Desktop hero composition: use the full horizontal canvas instead of a narrow centered text island. */
+@media (min-width: 1101px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero {
+    position: relative !important;
+    min-height: 560px !important;
+    height: clamp(560px, calc(100svh - var(--nc-view-header, 66px) - 92px), 720px) !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero > .hx {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    align-items: stretch !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: clamp(28px, 4vw, 72px) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 1680px !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin-inline: auto !important;
+    padding: 34px clamp(48px, 6.2vw, 104px) 42px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    flex: 0 1 52% !important;
+    width: min(700px, 52%) !important;
+    max-width: 700px !important;
+    min-width: 420px !important;
+    margin: 0 !important;
+    align-self: center !important;
+    position: relative !important;
+    top: 0 !important;
+    z-index: 4 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy h1 {
+    max-width: 11.5ch !important;
+    font-size: clamp(48px, 4.5vw, 72px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.055em !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__description {
+    max-width: 54ch !important;
+    margin-top: 18px !important;
+    font-size: clamp(15px, 1.12vw, 18px) !important;
+    line-height: 1.55 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .home-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero > img.home-hero__image {
+    position: absolute !important;
+    inset: auto 0 0 auto !important;
+    z-index: 1 !important;
+    display: block !important;
+    width: min(51%, 790px) !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+@media (min-width: 1101px) and (max-height: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero {
+    height: 560px !important;
+    min-height: 560px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    padding-block: 24px 30px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy h1 {
+    font-size: clamp(44px, 4vw, 60px) !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    padding-inline: 32px !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    flex: 0 1 58% !important;
+    width: 58% !important;
+    min-width: 0 !important;
+    top: 0 !important;
+    align-self: center !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero > img.home-hero__image {
+    width: 48% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+  }
+}

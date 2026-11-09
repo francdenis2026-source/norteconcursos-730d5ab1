@@ -2,8 +2,6 @@ import { useHomeSection } from "@/hooks/useHomeSection";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
-import { HeroBadge } from "@/components/landing/HeroBadge";
-import { HeroEmblemClock } from "@/components/landing/HeroEmblemClock";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import * as PreparationTabs from "@radix-ui/react-tabs";
@@ -47,7 +45,6 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
-import "@/styles/home-hero-emblem.css";
 import "@/styles/home-operations.css";
 import "@/styles/home-menu-v2.css";
 import "@/styles/home-light.css";
@@ -69,6 +66,7 @@ import { NewsBanner } from "@/components/landing/NewsBanner";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
+import { HeroBadge } from "@/components/landing/HeroBadge";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
@@ -93,6 +91,11 @@ import "@/styles/home-glass-fixed-header.css";
 import "@/styles/home-daily-challenge-premium.css";
 import "@/styles/home-desktop-pro.css";
 import "@/styles/home-viewport-fit.css";
+import "@/styles/home-showcase-redesign.css";
+import "@/styles/home-showcase-band.css";
+import "@/styles/home-contests-compact.css";
+import "@/styles/home-hero-strategy.css";
+import "@/styles/home-hero-fit-correction.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -258,9 +261,9 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
 
 const PREPARATION_TABS = [
   ["ferramentas", "Ferramentas"],
-  ["como", "Como funciona"],
-  ["carreiras", "Carreiras"],
-  ["fontes", "Fontes oficiais"],
+  ["como", "Método"],
+  ["carreiras", "Concursos"],
+  ["fontes", "Fontes confiáveis"],
 ] as const;
 
 function PreparationInfo() {
@@ -626,26 +629,24 @@ function Index() {
           data-intro={introPlaying}
         >
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <HeroBadge show={introSettled} />
-          <HeroEmblemClock />
           <TacticalCrosshair />
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
               <div className="hx__copy">
-                <div className="hx__kicker" aria-label="Concursos públicos para carreiras policiais e segurança pública">
+                <HeroBadge />
+                <div className="hx__kicker" aria-label="Preparação estratégica para concursos públicos">
                   <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span className="hx__kicker-primary">CONCURSOS PÚBLICOS</span>
+                  <span className="hx__kicker-primary">SUA JORNADA COMEÇA AQUI</span>
                   <span className="hx__kicker-divider" aria-hidden="true" />
-                  <span className="hx__kicker-secondary">CARREIRAS POLICIAIS E SEGURANÇA PÚBLICA</span>
+                  <span className="hx__kicker-secondary">FOCO · MÉTODO · CONSTÂNCIA</span>
                 </div>
-                <h1 id="home-title">
-                  Sua aprovação começa
-                  <br />
-                  <em>com estratégia.</em>
+                <h1 id="home-title" className="hx__headline hr-hero__headline">
+                  <span>Vista o seu futuro.</span>
+                  <span><em>Prepare sua conquista.</em></span>
                 </h1>
-                <p>
-                  Da escolha do edital à revisão final: organize seu plano de estudos, aprofunde
-                  os conteúdos e pratique com questões e simulados em um só lugar.
+                <p className="hx__description hr-hero__description">
+                  Transforme seu objetivo em um plano possível: estude pelo edital, pratique com questões
+                  e acompanhe sua evolução em uma plataforma feita para quem leva a aprovação a sério.
                 </p>
                 <div className="home-actions hr-cta-row">
                   <Link
@@ -663,6 +664,27 @@ function Index() {
                   </a>
                 </div>
               </div>
+              <aside className="hr-hero-route" aria-label="Método de preparação Norte">
+                <div className="hr-hero-route__top">
+                  <span className="hr-hero-route__eyebrow">MÉTODO NORTE</span>
+                  <span className="hr-hero-route__status"><i /> SUA ROTA DE APROVAÇÃO</span>
+                </div>
+                <div className="hr-hero-route__steps">
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">01</span>
+                    <div><strong>Defina seu alvo</strong><small>Encontre o edital e entenda o que priorizar.</small></div>
+                  </div>
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">02</span>
+                    <div><strong>Estude com direção</strong><small>Organize matérias, revisões e metas.</small></div>
+                  </div>
+                  <div className="hr-hero-route__step">
+                    <span className="hr-hero-route__number">03</span>
+                    <div><strong>Treine sua evolução</strong><small>Resolva questões e acompanhe seu desempenho.</small></div>
+                  </div>
+                </div>
+                <div className="hr-hero-route__footer"><ShieldCheck aria-hidden="true" /><span>Uma preparação completa. Um passo de cada vez.</span></div>
+              </aside>
               </div>
           </div>
         </section>
@@ -671,76 +693,24 @@ function Index() {
           <DailyChallengeBadge />
         </div>
 
-        <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Explore os principais recursos">
-          <a className="hr-quick-item hr-quick-item--study" href="#plataforma">
-            <span className="hr-quick-icon"><BrainCircuit aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Plano de estudos</strong><small>Organize sua preparação</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--contests" href="#concursos">
-            <span className="hr-quick-icon"><Landmark aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Concursos e editais</strong><small>Encontre sua próxima prova</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--progress" href="#ranking-destaque">
-            <span className="hr-quick-icon"><LineChart aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Seu desempenho</strong><small>Acompanhe sua evolução</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-          <a className="hr-quick-item hr-quick-item--practice" href="#planos">
-            <span className="hr-quick-icon"><ShieldCheck aria-hidden="true" /></span>
-            <span className="hr-quick-copy"><strong>Treino e simulados</strong><small>Pratique com estratégia</small></span>
-            <ArrowUpRight className="hr-quick-arrow" aria-hidden="true" />
-          </a>
-        </nav>
-
         <section
           id="plataforma"
-          className="home-section home-preparation hr-section"
-          aria-labelledby="preparation-title"
+          className="home-section home-preparation hr-section hr-showcase hr-showcase-artwork"
+          aria-label="O ecossistema Norte — preparação completa"
         >
-          <div className="home-preparation__fullwidth">
-            <div className="home-preparation__band">
-              <span className="home-preparation__frame" aria-hidden="true" />
-              <span className="home-preparation__sweep" aria-hidden="true" />
-              <img
-                className="home-preparation__art"
-                src="/media/hero/auth-carreiras-composicao.webp"
-                alt=""
-                width={1440}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow home-signal">
-                  01 · Prepare-se para sua carreira
-                </span>
-                <h2 id="preparation-title">
-                  Uma plataforma.
-                  <br />
-                  <em>A sua carreira.</em>
-                </h2>
-                <p>
-                  Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma
-                  prioridade clara.
-                </p>
-              </div>
-              <PreparationInfo />
-            </div>
-          </div>
+          <img
+            className="hr-showcase-art"
+            src="/media/hero/banner-premium-norte-concursos.webp"
+            alt="O ecossistema Norte: ferramentas, método de preparação, concursos e fontes confiáveis."
+            width={2172}
+            height={724}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </section>
 
         <section id="concursos" className="home-section home-operations hr-section hr-section--alt">
-          <img
-            className="home-operations__art"
-            src="/media/hero/carreiras-background.webp"
-            alt=""
-            width={1926}
-            height={816}
-            loading="lazy"
-            decoding="async"
-          />
           <div className="home-container">
             <div className="home-operations__heading">
               <Head

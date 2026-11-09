@@ -470,3 +470,31 @@
   .home.home .hr-quick-copy strong { font-size: 11px; }
   .home.home .hr-quick-copy small { font-size: 10px; }
 }
+
+
+/* Reveal the original live clock artwork behind the homepage hero.
+   Keep text contrast on the left, but do not paint an opaque black panel over the dial. */
+@media (min-width: 761px) {
+  .home.home #inicio.home-hero.hr-hero {
+    background: transparent !important;
+  }
+  .home.home #inicio.home-hero::after {
+    background:
+      linear-gradient(90deg,
+        rgb(9 11 14 / 82%) 0%,
+        rgb(9 11 14 / 62%) 28%,
+        rgb(9 11 14 / 24%) 44%,
+        transparent 58%),
+      linear-gradient(0deg, rgb(9 11 14 / 22%) 0%, transparent 24%) !important;
+  }
+  .home.home #inicio.home-hero::before {
+    background:
+      linear-gradient(115deg, transparent 0 72%, rgb(211 164 67 / 5%) 72.1%, transparent 73%),
+      radial-gradient(42% 68% at 82% 46%, rgb(195 146 53 / 8%), transparent 72%) !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.home #inicio.home-hero {
+    background: transparent !important;
+  }
+}

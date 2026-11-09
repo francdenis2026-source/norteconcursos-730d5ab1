@@ -1,6 +1,6 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness } from "lucide-react";
 import { useRef, useState } from "react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
@@ -9,8 +9,12 @@ import { usePcpiAvailability } from "@/hooks/usePcpiAvailability";
 import { PCSC_EXAM, PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
 import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
 import { PCPI_EXAM, pcpiTrainerSearch } from "@/lib/pcpiExam";
+import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 
 const format = (value: number) => value.toLocaleString("pt-BR");
+const pcacVacancies = pcAcVerticalCargos.reduce((total, cargo) => total + cargo.vagas, 0);
+const formatDate = (value: string) => new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value + "T00:00:00Z"));
 
 function Availability({
   count,
@@ -128,45 +132,53 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
           />
         </div>
         <div className="contest-spotlight__content">
-          <div className="contest-acre-banner" aria-label="Destaque da Polícia Civil do Acre">
-            <div className="contest-acre-banner__identity">
-              <span className="contest-acre-banner__seal" aria-hidden="true"><ShieldCheck size={27} /></span>
-              <div>
-                <strong>PC Civil do Acre</strong>
-                <span>Preparação direcionada · IDECAN</span>
-              </div>
-            </div>
-            <div className="contest-acre-banner__flag" aria-label="Bandeira do Acre" role="img">
-              <span className="contest-acre-banner__star" aria-hidden="true">★</span>
-            </div>
+          <div className="contest-acre-mark">
+            <span className="contest-acre-mark__seal" aria-hidden="true"><ShieldCheck size={17} /></span>
+            <span className="contest-acre-mark__copy">
+              <strong>DESTAQUE REGIONAL</strong>
+              <small>Polícia Civil do Acre · IDECAN</small>
+            </span>
+            <span className="contest-acre-mark__flag" role="img" aria-label="Bandeira do Acre">
+              <i aria-hidden="true">★</i>
+            </span>
           </div>
           <div className="contest-kickers">
             <span>
-              <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
+              <ShieldCheck size={14} aria-hidden="true" /> PC-AC · EDITAL 001/2026
             </span>
-            <span>Banca definida · IDECAN</span>
+            <span>Publicado em 05/11/2026 · IDECAN</span>
           </div>
           <h3 id={"pcac-title" + suffix}>
             Polícia Civil <em>do Acre.</em>
           </h3>
           <p className="contest-spotlight__copy">
-            Comece pela banca: pratique com uma prova real da IDECAN enquanto acompanha o próximo
-            edital da PC-AC.
+            Edital publicado: são {pcacVacancies} vagas em {pcAcVerticalCargos.length} cargos.
+            Organize sua preparação pelo conteúdo oficial e use a prova da PC-SC como treino complementar
+            da mesma banca, IDECAN.
           </p>
+          <div className="contest-spotlight__facts" aria-label="Informações principais do edital PC-AC">
+            <div><Users aria-hidden="true" /><span><strong>{format(pcacVacancies)}</strong><small>vagas no edital</small></span></div>
+            <div><BriefcaseBusiness aria-hidden="true" /><span><strong>{pcAcVerticalCargos.length}</strong><small>cargos disponíveis</small></span></div>
+            <div><CalendarDays aria-hidden="true" /><span><strong>{formatDate(PCAC_EXAM_DATE)}</strong><small>prova objetiva</small></span></div>
+          </div>
           <div className="contest-spotlight__training">
+            <div className="contest-spotlight__training-context">
+              <strong>Treino complementar · prova real PC-SC</strong>
+              <span>Agente de Polícia Civil · IDECAN · questões da prova aplicada em Santa Catarina</span>
+            </div>
             <Availability
               count={scCount}
-              label="da prova real PC-SC · Agente · IDECAN"
+              label="questões disponíveis da PC-SC — não são questões da prova PC-AC"
               loading={sc.loading}
             />
           </div>
           <div className="contest-spotlight__actions">
             {isAuthenticated ? (
               <Link
-                to="/dashboard/inteligencia-idecan"
+                to="/dashboard/pc-acre-edital"
                 className="contest-action contest-action--gold"
               >
-                Preparar para a PC-AC
+                Abrir edital PC-AC
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             ) : (
@@ -175,34 +187,41 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
                 search={{ mode: "register" }}
                 className="contest-action contest-action--gold"
               >
-                Começar preparação
+                Abrir edital PC-AC
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             )}
-            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar com a IDECAN")}
+            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar prova PC-SC")}
           </div>
           <details className="contest-details">
-            <summary>Sobre o concurso e a preparação</summary>
+            <summary>Dados oficiais do edital e treino complementar</summary>
             <CountReference date={sc.checkedAt} />
             <p>
-              A definição da IDECAN consta da dispensa de licitação e ratificação publicadas no
-              Diário Oficial do Acre de 22/10/2026. O edital ainda não foi publicado. Este treino
-              usa a prova de Agente da PC-SC de {PCSC_EXAM.year}; não garante questões idênticas na
-              PC-AC.
+              O card resume o Edital nº 001 SEAD/PCAC, de 05/11/2026, publicado no Diário Oficial
+              do Acre nº 14.388 de 06/11/2026. A prova objetiva está prevista para {formatDate(PCAC_EXAM_DATE)}.
+              O treino complementar usa a prova de Agente da PC-SC de {PCSC_EXAM.year}, aplicada
+              pela IDECAN. As questões da PC-SC não pertencem ao caderno da PC-AC e servem apenas
+              para praticar o estilo da banca.
             </p>
             <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           </details>
         </div>
       </article>
 
-      <div className="contest-catalog__heading">
-        <div>
-          <span className="contest-eyebrow">DA PREPARAÇÃO À PRÁTICA</span>
-          <h3>Provas reais. Seu próximo treino.</h3>
+      <section className="contest-catalog__feature-band" aria-labelledby={"contest-catalog-title" + suffix}>
+        <div className="contest-catalog__feature-intro">
+          <span className="contest-catalog__feature-eyebrow"><Sparkles size={14} aria-hidden="true" /> OPORTUNIDADES EM DESTAQUE</span>
+          <h3 id={"contest-catalog-title" + suffix}>Outros concursos <em>para acompanhar</em></h3>
+          <p>Acompanhe provas reais, bancas e oportunidades da área policial. Consulte os dados e escolha seu próximo treino.</p>
+          <div className="contest-catalog__feature-points">
+            <span><ShieldCheck aria-hidden="true" /> Provas e editais</span>
+            <span><CalendarDays aria-hidden="true" /> Datas e bancas</span>
+            <span><Users aria-hidden="true" /> Questões disponíveis</span>
+          </div>
+          <span className="contest-catalog__feature-hint">Escolha um concurso para abrir o treino correspondente.</span>
         </div>
-        <p>Escolha o concurso e veja quantas questões estão disponíveis. <span className="contest-swipe-hint">Deslize para ver outros concursos →</span></p>
-      </div>
-      <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
+        <div className="contest-catalog__feature-cards">
+          <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
         <article
           className="contest-card contest-card--idecan hr-contest-card"
           id={"prova-pcsc" + suffix}
@@ -210,7 +229,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         >
           <span className="hr-contest-index" aria-hidden="true">02</span>
           <span className="contest-card__badge">
-            <Sparkles size={11} aria-hidden="true" /> Novo
+            <Sparkles size={11} aria-hidden="true" /> PROVA REAL
           </span>
           <div className="contest-card__art">
             <img
@@ -259,6 +278,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         </article>
         <article className="contest-card hr-contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
           <span className="hr-contest-index" aria-hidden="true">03</span>
+          <span className="contest-card__badge"><ShieldCheck size={11} aria-hidden="true" /> PROVA APLICADA</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpr-capa.webp"
@@ -316,6 +336,7 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         </article>
         <article className="contest-card hr-contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
           <span className="hr-contest-index" aria-hidden="true">04</span>
+          <span className="contest-card__badge"><BriefcaseBusiness size={11} aria-hidden="true" /> POR CARGO</span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcpi-capa.webp"
@@ -362,7 +383,9 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
             </details>
           </div>
         </article>
-      </div>
+          </div>
+        </div>
+      </section>
       <div className="contest-carousel-controls" aria-label="Navegação entre concursos">
         <span className="contest-carousel-status" aria-live="polite">{activeContest + 1} de {contestTotal} concursos</span>
         <div className="contest-carousel-dots" aria-label="Selecionar concurso">
