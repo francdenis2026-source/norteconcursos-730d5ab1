@@ -201,7 +201,7 @@
     transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
   }
   .student-top-navigation__icon-wrap svg { width: 15px; height: 15px; stroke-width: 2.2; }
-  .student-top-navigation__trigger[data-tone] .student-top-navigation__icon-wrap { color: #aab7e6; }
+  .student-top-navigation__trigger[data-tone] .student-top-navigation__icon-wrap { color: var(--nc-color-action); }
   .student-top-navigation__trigger .student-top-navigation__chevron {
     width: 13px; height: 13px; color: #aebed0; opacity: .8;
   }
@@ -270,7 +270,7 @@
     stroke-linejoin: round;
     shape-rendering: geometricPrecision;
   }
-  .student-top-navigation__trigger[data-tone] .student-top-navigation__icon-wrap { color: #aab7e6; }
+  .student-top-navigation__trigger[data-tone] .student-top-navigation__icon-wrap { color: var(--nc-color-action); }
   .student-top-navigation__menu [role="menuitem"] svg {
     width: 17px;
     height: 17px;
