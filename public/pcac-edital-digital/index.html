@@ -497,7 +497,10 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
       try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
       update();
     });
-    row.append(button);
+    row.classList.add('has-topic-collapse');
+    const markerTools=row.querySelector(':scope > .marker-tools');
+    if(markerTools) markerTools.insertBefore(button,markerTools.firstChild);
+    else row.append(button);
     update();
   });
 })();
@@ -522,3 +525,71 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
   update();
 })();
 </script>
+<style id="topic-collapse-layout-fix">
+/* Keep the priority badge, collapse control and marker pencil in separate slots. */
+label.topic.has-topic-collapse {
+  display: grid !important;
+  grid-template-columns: 22px minmax(0, 1fr) auto auto !important;
+  align-items: start !important;
+  column-gap: 8px !important;
+  box-sizing: border-box !important;
+}
+label.topic.has-topic-collapse > input.topic-study {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+label.topic.has-topic-collapse > .topic-copy,
+label.topic.has-topic-collapse > span:not(.topic-priority):not(.marker-tools) {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+  width: auto !important;
+}
+label.topic.has-topic-collapse > .topic-priority {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: start !important;
+  float: none !important;
+  margin: 3px 0 0 4px !important;
+  white-space: nowrap !important;
+}
+label.topic.has-topic-collapse > .marker-tools {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-self: end !important;
+  align-self: start !important;
+  gap: 4px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+label.topic.has-topic-collapse .topic-collapse-toggle {
+  position: static !important;
+  inset: auto !important;
+  z-index: 1 !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 22px !important;
+  width: 22px !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #cbd8ec !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  color: #1e3a8a !important;
+  line-height: 1 !important;
+}
+label.topic.has-topic-collapse > .topic-collapse-toggle {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: start !important;
+}
+</style>
