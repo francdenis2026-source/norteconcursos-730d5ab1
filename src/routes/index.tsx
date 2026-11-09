@@ -615,19 +615,27 @@ function Index() {
 
         <section
           id="plataforma"
-          className="home-section home-preparation hr-section hr-showcase hr-showcase-pcac"
-          aria-label="Concurso Público da Polícia Civil do Estado do Acre"
+          className="home-section home-preparation hr-section hr-showcase"
+          aria-labelledby="preparation-title"
         >
-          <img
-            className="hr-showcase-pcac__art"
-            src="/media/hero/pc-ac-homepage.webp"
-            alt="Destaque do concurso da Polícia Civil do Estado do Acre: 139 vagas em 6 cargos, prova objetiva em 24 de janeiro de 2027 e simulado complementar com 92 questões da PC-SC."
-            width={1024}
-            height={323}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
+          <div className="home-container hr-showcase__inner">
+            <div className="hr-showcase__heading">
+              <div>
+                <span className="hr-showcase__eyebrow">O ECOSSISTEMA NORTE · PREPARAÇÃO COMPLETA</span>
+                <h2 id="preparation-title">
+                  Tudo para transformar <em>estudo em resultado.</em>
+                </h2>
+                <p>
+                  Do planejamento às questões e à análise de desempenho: encontre cada etapa da sua preparação em um só lugar.
+                </p>
+              </div>
+              <div className="hr-showcase__index" aria-label="Sete recursos de preparação integrados">
+                <strong>07</strong>
+                <span>FERRAMENTAS<br />INTEGRADAS</span>
+              </div>
+            </div>
+            <PreparationInfo />
+          </div>
         </section>
 
         <section id="concursos" className="home-section home-operations hr-section hr-section--alt">

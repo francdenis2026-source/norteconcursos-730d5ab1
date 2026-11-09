@@ -87,93 +87,50 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
 
   return (
     <div className="contest-showcase">
-      <article className="contest-spotlight hr-contest-card" aria-labelledby={"pcac-title" + suffix}>
-        <span className="hr-contest-index" aria-hidden="true">01</span>
-        <div className="contest-spotlight__art">
-          <img
-            src="/media/hero/pcac-capa.webp"
-            alt="PC-AC, Polícia Civil do Acre: composição com agente e viatura"
-            width={1672}
-            height={940}
-            loading="lazy"
-            decoding="async"
+      <article className="contest-spotlight hr-contest-card contest-spotlight--artwork" aria-label="Destaque do concurso da Polícia Civil do Estado do Acre">
+        <img
+          className="contest-spotlight-artwork__image"
+          src="/media/hero/pc-ac-homepage.webp"
+          alt="Polícia Civil do Estado do Acre — edital 001/2026: 139 vagas, 6 cargos, prova objetiva em 24 de janeiro de 2027 e simulado complementar com 92 questões da PC-SC."
+          width={1024}
+          height={323}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+        {isAuthenticated ? (
+          <Link
+            to="/dashboard/pc-acre-edital"
+            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--edit"
+            aria-label="Abrir edital PC-AC"
+            title="Abrir edital PC-AC"
           />
-        </div>
-        <div className="contest-spotlight__content">
-          <div className="contest-acre-mark">
-            <span className="contest-acre-mark__seal" aria-hidden="true"><ShieldCheck size={17} /></span>
-            <span className="contest-acre-mark__copy">
-              <strong>DESTAQUE REGIONAL</strong>
-              <small>Polícia Civil do Acre · IDECAN</small>
-            </span>
-            <span className="contest-acre-mark__flag" role="img" aria-label="Bandeira do Acre">
-              <i aria-hidden="true">★</i>
-            </span>
-          </div>
-          <div className="contest-kickers">
-            <span>
-              <ShieldCheck size={14} aria-hidden="true" /> PC-AC · EDITAL 001/2026
-            </span>
-            <span>Publicado em 05/11/2026 · IDECAN</span>
-          </div>
-          <h3 id={"pcac-title" + suffix}>
-            Polícia Civil <em>do Acre.</em>
-          </h3>
-          <p className="contest-spotlight__copy">
-            Edital publicado: são {pcacVacancies} vagas em {pcAcVerticalCargos.length} cargos.
-            Organize sua preparação pelo conteúdo oficial e use a prova da PC-SC como treino complementar
-            da mesma banca, IDECAN.
-          </p>
-          <div className="contest-spotlight__facts" aria-label="Informações principais do edital PC-AC">
-            <div><Users aria-hidden="true" /><span><strong>{format(pcacVacancies)}</strong><small>vagas no edital</small></span></div>
-            <div><BriefcaseBusiness aria-hidden="true" /><span><strong>{pcAcVerticalCargos.length}</strong><small>cargos disponíveis</small></span></div>
-            <div><CalendarDays aria-hidden="true" /><span><strong>{formatDate(PCAC_EXAM_DATE)}</strong><small>prova objetiva</small></span></div>
-          </div>
-          <div className="contest-spotlight__training">
-            <div className="contest-spotlight__training-context">
-              <strong>Treino complementar · prova real PC-SC</strong>
-              <span>Agente de Polícia Civil · IDECAN · questões da prova aplicada em Santa Catarina</span>
-            </div>
-            <Availability
-              count={scCount}
-              label="questões disponíveis da PC-SC — não são questões da prova PC-AC"
-              loading={sc.loading}
-            />
-          </div>
-          <div className="contest-spotlight__actions">
-            {isAuthenticated ? (
-              <Link
-                to="/dashboard/pc-acre-edital"
-                className="contest-action contest-action--gold"
-              >
-                Abrir edital PC-AC
-                <ArrowUpRight aria-hidden="true" />
-              </Link>
-            ) : (
-              <Link
-                to="/auth"
-                search={{ mode: "register" }}
-                className="contest-action contest-action--gold"
-              >
-                Abrir edital PC-AC
-                <ArrowUpRight aria-hidden="true" />
-              </Link>
-            )}
-            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar prova PC-SC")}
-          </div>
-          <details className="contest-details">
-            <summary>Dados oficiais do edital e treino complementar</summary>
-            <CountReference date={sc.checkedAt} />
-            <p>
-              O card resume o Edital nº 001 SEAD/PCAC, de 05/11/2026, publicado no Diário Oficial
-              do Acre nº 14.388 de 06/11/2026. A prova objetiva está prevista para {formatDate(PCAC_EXAM_DATE)}.
-              O treino complementar usa a prova de Agente da PC-SC de {PCSC_EXAM.year}, aplicada
-              pela IDECAN. As questões da PC-SC não pertencem ao caderno da PC-AC e servem apenas
-              para praticar o estilo da banca.
-            </p>
-            <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
-          </details>
-        </div>
+        ) : (
+          <Link
+            to="/auth"
+            search={{ mode: "register" }}
+            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--edit"
+            aria-label="Abrir edital PC-AC"
+            title="Abrir edital PC-AC"
+          />
+        )}
+        {isAuthenticated ? (
+          <Link
+            to="/dashboard/question-trainer"
+            search={PCSC_TRAINER_SEARCH}
+            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--train"
+            aria-label="Realizar simulado PC-SC"
+            title="Realizar simulado PC-SC"
+          />
+        ) : (
+          <Link
+            to="/auth"
+            search={{ mode: "register" }}
+            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--train"
+            aria-label="Realizar simulado PC-SC"
+            title="Realizar simulado PC-SC"
+          />
+        )}
       </article>
 
       <section className="contest-catalog__feature-band" aria-labelledby={"contest-catalog-title" + suffix}>
