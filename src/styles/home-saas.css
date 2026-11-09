@@ -845,3 +845,65 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
   text-align: left;
   hyphens: manual;
 }
+
+/* Banner "Edital aberto" da PC-AC, logo abaixo do hero. */
+.home.hr-canvas .sx-banner-wrap {
+  padding-top: 24px;
+}
+.home.hr-canvas .sx-banner {
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 22px;
+  min-height: 230px;
+  border-color: rgb(227 177 75 / 0.55);
+  box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.55);
+}
+.home.hr-canvas .sx-banner__crest {
+  display: block;
+  width: 92px;
+  height: auto;
+  padding: 8px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.35);
+}
+.home.hr-canvas .sx-banner__tag {
+  background: #1f9d63;
+  color: #ffffff;
+}
+.home.hr-canvas .sx-banner__tag i {
+  background: #ffffff;
+  animation: sx-pulse 1.6s ease-in-out infinite;
+}
+@keyframes sx-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+.home.hr-canvas .sx-features {
+  padding-top: 28px;
+}
+.home.hr-canvas .sx-section {
+  padding-top: 4px;
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-banner-wrap {
+    padding-top: 16px;
+  }
+  .home.hr-canvas .sx-banner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .home.hr-canvas .sx-banner__crest {
+    width: 60px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .home.hr-canvas .sx-head .sx-btn {
+    flex: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas .sx-banner__tag i {
+    animation: none;
+  }
+}

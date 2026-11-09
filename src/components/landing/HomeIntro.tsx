@@ -10,6 +10,7 @@ import {
   Trophy,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { PcacBanner } from "@/components/landing/PcacBanner";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
@@ -105,6 +106,7 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
           </div>
         </div>
       </section>
+      <PcacBanner mobile={mobile} />
 
       <section
         id={ids.platform}
@@ -116,15 +118,9 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
             <span className="sx-eyebrow">A plataforma</span>
             <h2 id={`${ids.title}-features`}>Do edital à prova, em um só lugar.</h2>
           </div>
-          <img
-            className="sx-head__art"
-            src="/images/norte-recursos-glass.webp"
-            alt=""
-            width={180}
-            height={135}
-            loading="lazy"
-            decoding="async"
-          />
+          <Link to="/auth" search={{ mode: "register" }} className="sx-btn sx-btn--ghost">
+            Experimentar grátis <ArrowRight aria-hidden="true" />
+          </Link>
         </header>
         <ul id={ids.tools} className="sx-grid">
           {FEATURES.map(({ icon: Icon, title, text }) => (

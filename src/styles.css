@@ -17112,7 +17112,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 
 /* Global native cursor semantics — keep text-entry fields consistent in every area. */
 :where(
-  input:not([type="button]):not([type="submit]):not([type="reset]):not([type="checkbox]):not([type="radio]):not([type="range]):not([type="file]):not([type="color"]),
+  input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="color"]),
   textarea,
   [contenteditable="true"],
   [contenteditable=""],
