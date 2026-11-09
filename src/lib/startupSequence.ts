@@ -3,7 +3,7 @@ export type StartupStage = 'preparing' | 'intro' | 'ready';
 /** Route hydration and optional film form one irreversible startup sequence. */
 export function createStartupSequence(homeDocument: boolean, reveal: () => void, publish: (stage: StartupStage) => void = () => {}) {
   let routeReady = false;
-  let settled = !homeDocument;
+  // The cinematic intro was removed: the loader ends as soon as the route hydrates.\n  let settled = true;
   let revealed = false;
   const complete = () => {
     if (revealed || !routeReady || !settled) return;
@@ -17,7 +17,7 @@ export function createStartupSequence(homeDocument: boolean, reveal: () => void,
       if (pathname !== '/') settled = true;
       complete();
     },
-    prepareIntro() { return homeDocument && !settled && !revealed; },
+    prepareIntro() { return false; },
     showIntro() {
       if (settled || revealed) return false;
       publish('intro');
