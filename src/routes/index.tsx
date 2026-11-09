@@ -697,15 +697,6 @@ function Index() {
         </section>
 
         <section id="concursos" className="home-section home-operations hr-section hr-section--alt">
-          <img
-            className="home-operations__art"
-            src="/media/hero/carreiras-background.webp"
-            alt=""
-            width={1926}
-            height={816}
-            loading="lazy"
-            decoding="async"
-          />
           <div className="home-container">
             <div className="home-operations__heading">
               <Head
