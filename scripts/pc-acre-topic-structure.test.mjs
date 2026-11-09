@@ -2,6 +2,16 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { splitPcAcTopic, pcAcVerticalTopicGroups } from "../src/lib/pcAcreTopicStructure.ts";
 
+const acreTopics = [
+  "Formação histórica do Acre: ocupação, ciclos da borracha, antecedentes diplomáticos (Tratado de Ayacucho), Revolução Acreana, Tratado de Petrópolis, Território Federal, movimento autonomista e elevação a Estado.",
+  "Movimento dos seringueiros, Chico Mendes e criação das reservas extrativistas.",
+  "Geografia: localização, limites e fronteiras, fuso horário, municípios e regionais de desenvolvimento, bacias hidrográficas, relevo, clima, vegetação e unidades de conservação.",
+  "Aspectos étnicos e culturais: povos indígenas, incluindo povos isolados, populações tradicionais, extrativismo e manifestações culturais.",
+  "Aspectos políticos: Constituição do Estado do Acre, organização dos Poderes e símbolos estaduais.",
+  "Aspectos sociais e econômicos: população e indicadores sociais, economia, produção extrativista e agropecuária, desenvolvimento sustentável, infraestrutura de transportes e integração regional e fronteiriça.",
+  "Segurança pública no Acre: estrutura do sistema estadual de segurança pública e aspectos das regiões de fronteira.",
+];
+
 test("separates numbered edital subitems without losing their numbering", () => {
   const groups = splitPcAcTopic(
     "Teoria geral do crime. 4.1 Crime e contravenção penal; bem jurídico. 4.2 Teorias da ação. 4.3 Fato típico: conduta e resultado.",
@@ -48,28 +58,50 @@ test("separates long comma lists after a named nucleus", () => {
   ]);
 });
 
-test("normalizes every topic in a discipline", () => {
-  const groups = pcAcVerticalTopicGroups({
-    topics: ["A. 1.1 Primeiro item. 1.2 Segundo item.", "Princípios fundamentais."],
-  });
-  assert.equal(groups.length, 2);
-  assert.equal(groups[0].subtopics.length, 2);
-});
-
-test("keeps the Acre reality syllabus as separate area topics when delivered as one block", () => {
-  const groups = pcAcVerticalTopicGroups({
-    id: "realidade-acre",
-    topics: [
-      "Formação histórica do Acre: ocupação e ciclos da borracha. Movimento dos seringueiros, Chico Mendes e reservas. Geografia: municípios e fronteiras. Aspectos étnicos e culturais: povos indígenas. Aspectos políticos: Constituição do Estado. Aspectos sociais e econômicos: população e produção. Segurança pública no Acre: estrutura e fronteiras.",
-    ],
-  });
+test("creates seven Acre parent topics with independent subtopics", () => {
+  const groups = pcAcVerticalTopicGroups({ id: "realidade-acre", topics: acreTopics });
   assert.deepEqual(groups.map((group) => group.title), [
     "Formação histórica do Acre",
-    "Movimento dos seringueiros, Chico Mendes e reservas.",
+    "Movimento dos seringueiros, Chico Mendes e criação das reservas extrativistas",
     "Geografia",
     "Aspectos étnicos e culturais",
     "Aspectos políticos",
     "Aspectos sociais e econômicos",
     "Segurança pública no Acre",
   ]);
+  assert.deepEqual(groups.map((group) => group.subtopics.length), [8, 3, 9, 4, 3, 6, 2]);
+  assert.equal(groups.reduce((total, group) => total + group.subtopics.length, 0), 35);
+  assert.deepEqual(groups[0]!.subtopics, [
+    "Ocupação",
+    "Ciclos da borracha",
+    "Antecedentes diplomáticos (Tratado de Ayacucho)",
+    "Revolução Acreana",
+    "Tratado de Petrópolis",
+    "Território Federal",
+    "Movimento autonomista",
+    "Elevação a Estado",
+  ]);
+  assert.deepEqual(groups[3]!.subtopics, [
+    "Povos indígenas, incluindo povos isolados",
+    "Populações tradicionais",
+    "Extrativismo",
+    "Manifestações culturais",
+  ]);
+});
+
+test("also separates the original single-block edital text", () => {
+  const groups = pcAcVerticalTopicGroups({
+    id: "realidade-acre",
+    topics: [acreTopics.join(" ")],
+  });
+  assert.equal(groups.length, 7);
+  assert.deepEqual(groups.map((group) => group.subtopics.length), [8, 3, 9, 4, 3, 6, 2]);
+});
+
+test("normalizes every topic in a discipline", () => {
+  const groups = pcAcVerticalTopicGroups({
+    topics: ["A. 1.1 Primeiro item. 1.2 Segundo item.", "Princípios fundamentais."],
+  });
+  assert.equal(groups.length, 2);
+  assert.equal(groups[0]!.subtopics.length, 2);
 });
