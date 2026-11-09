@@ -1,0 +1,52 @@
+/* Desktop homepage: compact professional pass. Loaded last; desktop-only (>=761px). */
+@media (min-width: 761px) {
+  /* Quiet canvas: remove the busy emblem/clock behind every section. */
+  html body .home .home-backdrop { opacity: 0.06 !important; filter: grayscale(1) blur(2px); }
+  html body .home .home-operations__art { opacity: 0.12 !important; }
+
+  /* Consistent rhythm between sections. */
+  html body .home .desktop-homepage > .hr-section,
+  html body .home .desktop-homepage > section { margin-block: 0 !important; padding-block: 40px !important; }
+  html body .home .desktop-homepage__quick-access { margin-block: 16px 0 !important; }
+
+  /* Hero: shorter and balanced. */
+  html body .home .home-hero.hr-hero { min-height: 0 !important; padding-block: 72px 56px !important; }
+
+  /* Readable body copy: no justified gaps. */
+  html body .home .desktop-homepage p,
+  html body .home .desktop-homepage li { text-align: left !important; hyphens: manual; }
+
+  /* Preparation band: let content size itself so cards are never clipped. */
+  html body .home.home .home-preparation__band { height: auto !important; min-height: 0 !important; padding: 28px !important; }
+  html body .home.home .home-preparation [role="tabpanel"],
+  html body .home.home .home-preparation [class*="tools"] { height: auto !important; max-height: none !important; overflow: visible !important; }
+
+  /* Section heading: plain, no oversized empty card. */
+  html body .home .home-operations__heading { padding: 0 0 20px !important; min-height: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
+  html body .home .home-operations__heading > * { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; max-width: 640px; }
+
+  /* Cards: one radius, one border, one shadow. */
+  html body .home .desktop-homepage :is(.hr-quick-item, [class*="plan-card"], [class*="ranking-card"], [class*="contest-card"]) {
+    border-radius: 14px !important;
+    border-color: color-mix(in oklab, var(--foreground) 12%, transparent) !important;
+    box-shadow: 0 1px 2px color-mix(in oklab, var(--background) 60%, transparent) !important;
+  }
+
+  /* Plans: solid surface behind copy so text never sits on artwork. */
+  html body .home #planos { background: var(--background) !important; }
+  html body .home #planos::before, html body .home #planos > img { opacity: 0.08 !important; }
+
+  /* Final CTA compact. */
+  html body .home .hr-footer-cta { padding-block: 32px !important; margin-block: 24px !important; }
+}
+
+@media (min-width: 761px) {
+  html body .home.home .home-preparation__band { display: grid !important; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 2fr) !important; gap: 24px !important; align-items: start !important; }
+  html body .home.home .home-preparation__intro { align-self: start !important; position: sticky; top: 96px; margin: 0 !important; }
+  html body .home.home .home-preparation__items.hr-tools-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 12px !important; padding: 12px !important; }
+  html body .home.home .home-preparation__items > * { padding: 16px !important; min-height: 0 !important; height: auto !important; margin: 0 !important; }
+  html body .home.home .home-preparation__items p { padding-left: 0 !important; margin-top: 6px !important; font-size: 0.85rem; line-height: 1.45; }
+}
+@media (min-width: 761px) {
+  html body .home.home .home-preparation__items > :last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+}
