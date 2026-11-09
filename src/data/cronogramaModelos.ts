@@ -1,4 +1,5 @@
 import { canonicalDiscipline } from "@/lib/cronograma";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 
 // Modelos fixos de cronograma, extraídos dos cronogramas do Método Focus (edital → disciplinas → conteúdo programático).
 // "peso" é a sugestão inicial (2 = disciplina de maior peso/dificuldade: bloco inicial de 2 h); o aluno pode ajustar.
@@ -2145,6 +2146,28 @@ const MODELOS_BRUTOS: ModeloCronograma[] = [
    }
   ]
  }
+
+  // Edital oficial PC-AC 2026: reutiliza os seis cargos e o conteúdo do Anexo III
+  // já mantidos no edital verticalizado, evitando divergência entre as duas áreas.
+  ...pcAcVerticalCargos.map((cargo): ModeloCronograma => ({
+    id: `pcac-2026-${cargo.id}`,
+    orgao: "Polícia Civil do Acre",
+    cargo: cargo.label,
+    banca: "IDECAN",
+    nivel: "Ensino Superior",
+    metodo: "Múltipla escolha + discursiva",
+    questoes: cargo.exam
+      ? `${cargo.exam.objectiveQuestions} questões objetivas + discursiva`
+      : "Prova objetiva + discursiva",
+    ano: 2026,
+    disciplinas: cargo.blocks.flatMap((block) =>
+      block.disciplines.map((discipline) => ({
+        nome: discipline.name,
+        peso: /específicos/i.test(block.title) ? 2 as const : 1 as const,
+        topicos: discipline.topics ?? [],
+      })),
+    ),
+  })),
 ] as ModeloCronograma[];
 
 const semRepetir = (topicos: string[]) => {
