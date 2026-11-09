@@ -1373,3 +1373,135 @@ html body .home .mobile-homepage__contests .contest-spotlight__art > img { objec
   }
   .home.home-recomposition .contest-catalog__feature-cards .contest-card:hover { transform: none; }
 }
+
+/* Norte Concursos emblem in left panel */
+.home.home-recomposition .contest-catalog__feature-emblem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 10px;
+  color: #e8c477;
+}
+.home.home-recomposition .contest-catalog__feature-emblem span {
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .15em;
+  color: #b8976e;
+}
+
+/* Upcoming contest cards grid */
+.home.home-recomposition .contest-upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+.home.home-recomposition .contest-upcoming-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, #354a50 80%, transparent);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgb(5 11 15 / 92%);
+  transition: border-color 160ms cubic-bezier(0.32,0.72,0,1), box-shadow 200ms cubic-bezier(0.32,0.72,0,1), transform 200ms cubic-bezier(0.32,0.72,0,1);
+}
+.home.home-recomposition .contest-upcoming-card:hover {
+  border-color: color-mix(in srgb, var(--contest-accent) 55%, #354a50);
+  box-shadow: 0 16px 36px -24px color-mix(in srgb, var(--contest-accent) 45%, transparent);
+  transform: translateY(-2px);
+}
+.home.home-recomposition .contest-upcoming-card__art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.home.home-recomposition .contest-upcoming-card__art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms cubic-bezier(0.32,0.72,0,1);
+}
+.home.home-recomposition .contest-upcoming-card:hover .contest-upcoming-card__art > img { transform: scale(1.04); }
+.home.home-recomposition .contest-upcoming-card__art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgb(5 11 15 / 55%));
+  pointer-events: none;
+}
+.home.home-recomposition .contest-upcoming-card__status {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.home.home-recomposition .contest-upcoming-card__status--previsto {
+  background: rgb(190 138 44 / 92%);
+  color: #0d1114;
+  border: 1px solid rgb(224 184 103 / 55%);
+}
+.home.home-recomposition .contest-upcoming-card__status--em-breve {
+  background: rgb(42 95 170 / 92%);
+  color: #d8e9fb;
+  border: 1px solid rgb(80 130 210 / 50%);
+}
+.home.home-recomposition .contest-upcoming-card__status--aberto {
+  background: rgb(26 118 72 / 92%);
+  color: #c8f0dc;
+  border: 1px solid rgb(50 150 95 / 50%);
+}
+.home.home-recomposition .contest-upcoming-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px 16px;
+}
+.home.home-recomposition .contest-upcoming-card__sigla {
+  margin: 0;
+  color: #c8c2b8;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.home.home-recomposition .contest-upcoming-card__sigla strong { color: #e8c477; font-weight: 850; }
+.home.home-recomposition .contest-upcoming-card__content > .contest-action {
+  margin-top: auto;
+  width: 100%;
+  min-height: 40px;
+  justify-content: center;
+  font-size: 12px;
+}
+.home.home-recomposition .contest-upcoming-card__content .contest-ficha > div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+@media (max-width: 1120px) {
+  .home.home-recomposition .contest-catalog__feature-emblem { grid-column: 1 / -1; margin: 8px 0 4px; }
+  .home.home-recomposition .contest-upcoming-grid { gap: 10px; }
+}
+@media (max-width: 700px) {
+  .home.home-recomposition .contest-upcoming-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home.home-recomposition .contest-upcoming-card__art { aspect-ratio: 16 / 7; }
+  .home.home-recomposition .contest-upcoming-card__content { padding: 12px 14px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home-recomposition .contest-upcoming-card,
+  .home.home-recomposition .contest-upcoming-card__art > img { transition: none; }
+  .home.home-recomposition .contest-upcoming-card:hover { transform: none; }
+}
