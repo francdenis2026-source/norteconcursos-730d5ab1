@@ -14,6 +14,14 @@ import {
   TESTING_TIER,
 } from "@/lib/launch.config";
 import { Hint } from "@/components/ui/hint";
+import { Crown, Gem, Gift, Target as TargetIcon } from "lucide-react";
+
+const PLAN_ICON: Record<string, typeof Crown> = {
+  free: Gift,
+  essential: TargetIcon,
+  plus: Crown,
+  premium: Gem,
+};
 
 /** Uma foto por plano (do acervo da plataforma), enquadrada no rosto e no assunto de cada cena. */
 const PLAN_IMAGES: Record<
@@ -40,7 +48,7 @@ export function PlansSection() {
   return (
     <section
       id="planos"
-      className="home-section home-plans home-plans--insignia"
+      className="home-section home-plans home-plans--insignia hr-section"
       aria-labelledby="planos-title"
     >
       <div className="home-container">
@@ -86,12 +94,16 @@ export function PlansSection() {
         <HomeRail className="home-plans__grid" label="Planos de estudo">
           {SUBSCRIPTION_PLANS.map((plan) => {
             const testing = TESTING_PHASE && plan.id === TESTING_TIER;
+            const PlanIcon = PLAN_ICON[plan.id] ?? TargetIcon;
             return (
               <article
                 key={plan.id}
                 data-plan={plan.id}
-                className={`home-plan${testing ? " home-plan--featured" : ""}`}
+                className={`home-plan hr-plan-card${testing ? " home-plan--featured hr-plan-card--featured" : ""}`}
               >
+                <span className="hr-plan-icon" aria-hidden="true">
+                  <PlanIcon />
+                </span>
                 {PLAN_IMAGES[plan.id] && (
                   <div className="home-plan__media" aria-hidden="true">
                     <img
@@ -219,7 +231,7 @@ export function PlansSection() {
               />
             </div>
           </div>
-          <div className="home-faq__list">
+          <div className="home-faq__list hr-faq-grid">
             {FAQ.map(([question, answer]) => (
               <details key={question}>
                 <summary>
