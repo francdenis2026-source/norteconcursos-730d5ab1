@@ -159,95 +159,6 @@ function goToSection(desktopId: string, mobileId?: string) {
   (el ?? document.getElementById("inicio"))?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-const STEPS: [LucideIcon, string, string][] = [
-  [
-    Target,
-    "Escolha seu objetivo",
-    "Escolha carreira, cargo, banca e edital para estudar o que realmente pontua.",
-  ],
-  [
-    FileSearch,
-    "Entenda seu ponto de partida",
-    "Resolva um diagnóstico e descubra onde você perde pontos, disciplina por disciplina.",
-  ],
-  [
-    BrainCircuit,
-    "Pratique e revise",
-    "Questões, revisões e blocos de foco com objetivo claro em cada sessão.",
-  ],
-  [Trophy, "Prepare o ritmo da prova", "Teste tempo e estratégia antes do dia decisivo."],
-];
-
-const TOOLS: { icon: LucideIcon; title: string; text: string; featured?: boolean }[] = [
-  {
-    icon: BrainCircuit,
-    title: "Treinador de questões",
-    text: "Sessões por banca, cargo e disciplina, com correção imediata, explicação e fonte jurídica oficial.",
-    featured: true,
-  },
-  {
-    icon: Trophy,
-    title: "Simulador de provas",
-    text: "Cronômetro, mapa de questões e diagnóstico por disciplina no ritmo da prova real.",
-  },
-  {
-    icon: MapIcon,
-    title: "Edital eletrônico",
-    featured: true,
-    text: "Cada assunto do edital vira porta de entrada para resumo, explicações e treino.",
-  },
-  {
-    icon: Compass,
-    title: "Planejamento individual",
-    text: "Prioridades pelo cargo, pela banca e pelo seu desempenho, com foco e revisão no mesmo lugar.",
-  },
-  {
-    icon: FileSearch,
-    title: "Caderno de erros",
-    text: "Retome as questões que errou e transforme suas dificuldades em prioridades de revisão.",
-  },
-  {
-    icon: LineChart,
-    title: "Análise de desempenho",
-    featured: true,
-    text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
-  },
-  {
-    icon: Volume2,
-    title: "Leitura em voz alta",
-    text: "Ouça enunciados e alternativas em português enquanto revisa ou descansa os olhos. Use a voz padrão do navegador, quando disponível, em todos os planos.",
-  },
-];
-
-const CAREERS: [string, string][] = [
-  ["Polícia Federal", "Agente, Escrivão, Delegado"],
-  ["Polícia Rodoviária Federal", "Policial Rodoviário Federal"],
-  ["Polícias Civis", "Investigador, Escrivão, Delegado"],
-  ["Polícias Penais", "Federal e estaduais"],
-  ["Polícias Militares", "Soldado e Oficial"],
-  ["Bombeiros Militares", "Soldado e Oficial"],
-  ["Perícia Criminal", "Perito e Papiloscopista"],
-  ["Guardas Municipais", "Guarda Civil Municipal"],
-];
-
-const PILLARS: { icon: LucideIcon; title: string; text: string }[] = [
-  {
-    icon: ScrollText,
-    title: "Fonte oficial em cada questão jurídica",
-    text: "Questões jurídicas indicam a fonte, a referência e a data de verificação quando aplicável.",
-  },
-  {
-    icon: Landmark,
-    title: "Texto legal vigente",
-    text: "Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no tribunal competente.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Conteúdo auditado e identificado",
-    text: "O que foi auditado vem sinalizado, para você saber exatamente o que está estudando.",
-  },
-];
-
 function Head({ kicker, children, lead }: { kicker: string; children: ReactNode; lead?: string }) {
   return (
     <div className="home-heading">
@@ -257,13 +168,6 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
     </div>
   );
 }
-
-const PREPARATION_TABS = [
-  ["ferramentas", "Ferramentas"],
-  ["como", "Método"],
-  ["carreiras", "Concursos"],
-  ["fontes", "Fontes confiáveis"],
-] as const;
 
 function PreparationInfo() {
   const highlights: { icon: LucideIcon; title: string; text: string; tag: string }[] = [
