@@ -1767,4 +1767,63 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
   text-align: left;
 }
 #pcac-search-status[hidden] { display: none !important; }
+
+/* The legacy toolbar hid search controls; restore them as primary navigation. */
+.toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin: 12px 0 16px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+.toolbar #search {
+  display: block !important;
+  flex: 1 1 280px !important;
+  width: auto !important;
+  min-width: min(240px, 100%) !important;
+  max-width: none !important;
+  min-height: 42px !important;
+  margin: 0 !important;
+  padding: 10px 13px !important;
+  border: 1px solid #cbd8e8 !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  color: #172b4d !important;
+  font-size: 13px !important;
+  box-shadow: 0 1px 2px #18345b08 !important;
+}
+.toolbar #search:focus {
+  outline: 3px solid #dbeafe !important;
+  border-color: #3973b9 !important;
+}
+.toolbar #clear,
+.toolbar #print {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 42px !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  border: 1px solid #cbd8e8 !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  color: #244b80 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+.toolbar #clear:hover,
+.toolbar #print:hover {
+  background: #f1f6fd !important;
+  border-color: #9fb7d5 !important;
+}
+@media (max-width: 600px) {
+  .toolbar { gap: 7px !important; }
+  .toolbar #search { flex: 1 1 100% !important; min-width: 100% !important; }
+  .toolbar #clear, .toolbar #print { flex: 1 1 calc(50% - 4px) !important; }
+}
 </style>
