@@ -124,7 +124,13 @@ function highlightExampleSections(blocks: Block[]): Block[] {
 }
 
 function parse(markdown: string): Block[] {
-  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  // Alguns materiais antigos receberam acidentalmente um trecho do script de
+  // manutenção usado para corrigir títulos. Nunca o exiba como conteúdo de estudo.
+  const cleaned = markdown
+    .replace(/\r\n/g, "\n")
+    .replace(/(?:^|\n)[^\n]*(?:trimDanglingNumber|document\.querySelectorAll)[^\n]*(?=\n|$)/gi, "")
+    .replace(/\b(?:trimDanglingNumber|sciencesSummary|medicinePanel|heading\.remove\(\))\b[^\n]*/gi, "");
+  const lines = cleaned.split("\n");
   const blocks: Block[] = [];
   let i = 0;
   while (i < lines.length) {
