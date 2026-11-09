@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Clock3, Flame, Target, Trophy } from "lucide-react";
-import { useAuthStatus } from "@/hooks/useDashboard";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
 import {
   GUEST_DAILY_LIMIT,
@@ -12,7 +11,6 @@ import {
 
 /** Destaque editorial do desafio diário na homepage, com dados reais da cota gratuita. */
 export function DailyChallengeBadge() {
-  const { isAuthenticated } = useAuthStatus();
   const [remaining, setRemaining] = useState<number | null>(null);
   const [seconds, setSeconds] = useState<number | null>(null);
 
