@@ -92,6 +92,7 @@ import "@/styles/home-daily-challenge-premium.css";
 import "@/styles/home-desktop-pro.css";
 import "@/styles/home-viewport-fit.css";
 import "@/styles/home-showcase-redesign.css";
+import "@/styles/home-showcase-band.css";
 import "@/styles/home-contests-compact.css";
 import "@/styles/home-hero-strategy.css";
 import "@/styles/home-hero-fit-correction.css";
@@ -260,9 +261,9 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
 
 const PREPARATION_TABS = [
   ["ferramentas", "Ferramentas"],
-  ["como", "Como funciona"],
-  ["carreiras", "Carreiras"],
-  ["fontes", "Fontes oficiais"],
+  ["como", "Método"],
+  ["carreiras", "Concursos"],
+  ["fontes", "Fontes confiáveis"],
 ] as const;
 
 function PreparationInfo() {
@@ -705,11 +706,10 @@ function Index() {
                   Tudo para transformar <em>estudo em resultado.</em>
                 </h2>
                 <p>
-                  Ferramentas conectadas para orientar sua rotina, fortalecer seus pontos fracos e
-                  acompanhar sua evolução até a prova.
+                  Do planejamento às questões e à análise de desempenho: encontre cada etapa da sua preparação em um só lugar.
                 </p>
               </div>
-              <div className="hr-showcase__index" aria-label="Sete ferramentas integradas">
+              <div className="hr-showcase__index" aria-label="Sete recursos de preparação integrados">
                 <strong>07</strong>
                 <span>FERRAMENTAS<br />INTEGRADAS</span>
               </div>
