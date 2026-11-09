@@ -1,14 +1,9 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness } from "lucide-react";
-import { useRef, useState } from "react";
+import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness, Bell } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
-import { usePcprAvailability } from "@/hooks/usePcprAvailability";
-import { usePcpiAvailability } from "@/hooks/usePcpiAvailability";
 import { PCSC_EXAM, PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
-import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
-import { PCPI_EXAM, pcpiTrainerSearch } from "@/lib/pcpiExam";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 
@@ -67,35 +62,8 @@ function CountReference({ date }: { date: string | null }) {
 export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
   const suffix = mobile ? '-mobile' : '';
   const { isAuthenticated } = useAuthStatus();
-  const catalogRef = useRef<HTMLDivElement>(null);
-  const [activeContest, setActiveContest] = useState(0);
-  const contestTotal = 3;
-  const moveContest = (index: number) => {
-    const track = catalogRef.current;
-    if (!track) return;
-    const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
-    const next = Math.max(0, Math.min(cards.length - 1, index));
-    const destination = cards[next];
-    if (!destination) return;
-    track.scrollTo({ left: destination.offsetLeft - (cards[0]?.offsetLeft ?? 0), behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-    setActiveContest(next);
-  };
-  const trackContestScroll = () => {
-    const track = catalogRef.current;
-    if (!track) return;
-    const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
-    if (!cards.length) return;
-    const first = cards[0]?.offsetLeft ?? 0;
-    const closest = cards.reduce((best, card, i) =>
-      Math.abs(card.offsetLeft - first - track.scrollLeft) <
-      Math.abs((cards[best]?.offsetLeft ?? 0) - first - track.scrollLeft) ? i : best, 0);
-    setActiveContest(closest);
-  };
   const sc = usePcscAvailability();
-  const pr = usePcprAvailability();
-  const pi = usePcpiAvailability();
   const scCount = sc.counts?.[0];
-  const prAgentIndex = PCPR_EXAM.roles.findIndex((role) => role === PCPR_TRAINER_SEARCH.career);
   const trainingLink = (search: Record<string, string>, label: string, primary = false) =>
     isAuthenticated ? (
       <Link
@@ -212,202 +180,107 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
         <div className="contest-catalog__feature-intro">
           <span className="contest-catalog__feature-eyebrow"><Sparkles size={14} aria-hidden="true" /> OPORTUNIDADES EM DESTAQUE</span>
           <h3 id={"contest-catalog-title" + suffix}>Outros concursos <em>para acompanhar</em></h3>
-          <p>Acompanhe provas reais, bancas e oportunidades da área policial. Consulte os dados e escolha seu próximo treino.</p>
-          <div className="contest-catalog__feature-points">
-            <span><ShieldCheck aria-hidden="true" /> Provas e editais</span>
-            <span><CalendarDays aria-hidden="true" /> Datas e bancas</span>
-            <span><Users aria-hidden="true" /> Questões disponíveis</span>
+          <p>Fique por dentro das oportunidades na área policial. Editais, datas e vagas — tudo em um só lugar.</p>
+          <div className="contest-catalog__feature-emblem" aria-hidden="true">
+            <ShieldCheck size={22} />
+            <span>NORTE CONCURSOS</span>
           </div>
-          <span className="contest-catalog__feature-hint">Escolha um concurso para abrir o treino correspondente.</span>
+          <div className="contest-catalog__feature-points">
+            <span><Bell aria-hidden="true" /> Editais e novidades</span>
+            <span><CalendarDays aria-hidden="true" /> Datas e prazos</span>
+            <span><Users aria-hidden="true" /> Vagas e remunerações</span>
+          </div>
         </div>
         <div className="contest-catalog__feature-cards">
-          <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
-        <article
-          className="contest-card contest-card--idecan hr-contest-card"
-          id={"prova-pcsc" + suffix}
-          aria-labelledby={"pcsc-title" + suffix}
-        >
-          <span className="hr-contest-index" aria-hidden="true">02</span>
-          <span className="contest-card__badge">
-            <Sparkles size={11} aria-hidden="true" /> PROVA REAL
-          </span>
-          <div className="contest-card__art">
-            <img
-              src="/media/hero/pcsc-viatura.webp"
-              alt="Distintivo da Polícia Civil de Santa Catarina em viatura"
-              width={1672}
-              height={950}
-              loading="lazy"
-              decoding="async"
-            />
-            <span>MESMA BANCA DA PC-AC</span>
-            <div className="contest-card__sigla" aria-hidden="true">
-              <b>PC-SC</b>
-              <i />
-              <em>POLÍCIA CIVIL DE SANTA CATARINA</em>
-              <small>NORTE CONCURSOS</small>
-            </div>
-          </div>
-          <div className="contest-card__content">
-            <span className="contest-eyebrow">IDECAN · {PCSC_EXAM.year}</span>
-            <h3 id={"pcsc-title" + suffix}>Polícia Civil de Santa Catarina</h3>
-            <p className="contest-card__role">Agente de Polícia Civil</p>
-            <Ficha
-              items={[
-                ["Banca", PCSC_EXAM.board],
-                ["Ano", PCSC_EXAM.year],
-                ["Itens na prova", String(PCSC_EXAM.itemsOriginal)],
-                ["Correção", "A cada resposta"],
-              ]}
-            />
-            <Availability
-              count={scCount}
-              label="Correção após cada resposta"
-              loading={sc.loading}
-            />
-            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar prova da PC-SC", true)}
-            <CountReference date={sc.checkedAt} />
-            <details className="contest-details">
-              <summary>O que está disponível</summary>
-              <p>
-                {PCSC_EXAM.itemsOriginal} itens na prova original. A seleção elegível pode ser
-                parcial; questões arquivadas não entram. Gabarito definitivo da IDECAN.
-              </p>
-            </details>
-          </div>
-        </article>
-        <article className="contest-card hr-contest-card" id={"prova-pcpr" + suffix} aria-labelledby={"pcpr-title" + suffix}>
-          <span className="hr-contest-index" aria-hidden="true">03</span>
-          <span className="contest-card__badge"><ShieldCheck size={11} aria-hidden="true" /> PROVA APLICADA</span>
-          <div className="contest-card__art">
-            <img
-              src="/media/hero/pcpr-capa.webp"
-              alt="Capa da Polícia Civil do Paraná"
-              width={1672}
-              height={940}
-              loading="lazy"
-              decoding="async"
-            />
-            <span>PROVA PARA TREINAR</span>
-          </div>
-          <div className="contest-card__content">
-            <span className="contest-eyebrow">FGV · {PCPR_EXAM.year}</span>
-            <h3 id={"pcpr-title" + suffix}>Polícia Civil do Paraná</h3>
-            <p className="contest-card__role">Agente de Polícia Judiciária</p>
-            <Ficha
-              items={[
-                ["Banca", PCPR_EXAM.board],
-                ["Aplicada em", PCPR_EXAM.appliedOn],
-                ["Cargos", String(PCPR_EXAM.roles.length)],
-                ["Gabarito", "Preliminar"],
-              ]}
-            />
-            <Availability
-              count={pr.counts?.[prAgentIndex]}
-              label="Questões do cargo de Agente"
-              loading={pr.loading}
-            />
-            {trainingLink(PCPR_TRAINER_SEARCH, "Treinar prova de Agente", true)}
-            <CountReference date={pr.checkedAt} />
-            <details className="contest-details">
-              <summary>Outros cargos e detalhes</summary>
-              <ul className="contest-role-list">
-                {PCPR_EXAM.roles.map((role, index) => (
-                  <li key={role}>
-                    <span>
-                      {role}
-                      <strong>
-                        {pr.counts?.[index] === undefined
-                          ? "Quantidade não confirmada"
-                          : `${format(pr.counts[index]!)} questões disponíveis`}
-                      </strong>
-                    </span>
-                    {trainingLink({ ...PCPR_TRAINER_SEARCH, career: role }, "Treinar")}
-                  </li>
-                ))}
-              </ul>
-              <p>
-                Prova aplicada em {PCPR_EXAM.appliedOn}. Gabarito preliminar da FGV, sujeito a
-                alterações após os recursos. A disponibilidade pode ser menor que os 100 itens
-                originais de cada cargo.
-              </p>
-            </details>
-          </div>
-        </article>
-        <article className="contest-card hr-contest-card" id={"prova-pcpi" + suffix} aria-labelledby={"pcpi-title" + suffix}>
-          <span className="hr-contest-index" aria-hidden="true">04</span>
-          <span className="contest-card__badge"><BriefcaseBusiness size={11} aria-hidden="true" /> POR CARGO</span>
-          <div className="contest-card__art">
-            <img
-              src="/media/hero/pcpi-capa.webp"
-              alt="Capa da Polícia Civil do Piauí"
-              width={1672}
-              height={941}
-              loading="lazy"
-              decoding="async"
-            />
-            <span>ESCOLHA SEU CARGO</span>
-          </div>
-          <div className="contest-card__content">
-            <span className="contest-eyebrow">FGV · {PCPI_EXAM.year}</span>
-            <h3 id={"pcpi-title" + suffix}>Polícia Civil do Piauí</h3>
-            <p className="contest-card__role">Treino com seleção por cargo</p>
-            <Ficha
-              items={[
-                ["Banca", PCPI_EXAM.board],
-                ["Ano", PCPI_EXAM.year],
-                ["Cargos", String(PCPI_EXAM.roles.length)],
-                ["Seleção", "Separada"],
-              ]}
-            />
-            <div className="contest-pi-roles">
-              {PCPI_EXAM.roles.map((role, index) => (
-                <div key={role}>
-                  <span className="contest-pi-roles__name">{role}</span>
-                  <Availability
-                    count={pi.counts?.[index]}
-                    label="Disponíveis neste cargo"
-                    loading={pi.loading}
-                  />
-                  {trainingLink(pcpiTrainerSearch(role), "Treinar", index === 0)}
-                </div>
-              ))}
-            </div>
-            <CountReference date={pi.checkedAt} />
-            <details className="contest-details">
-              <summary>Sobre a seleção de questões</summary>
-              <p>
-                As seleções dos cargos permanecem separadas. Questões arquivadas ou bloqueadas não
-                entram no treino; a seleção pode ser parcial.
-              </p>
-            </details>
-          </div>
-        </article>
+          <div className="contest-upcoming-grid">
+
+            <article className="contest-upcoming-card">
+              <div className="contest-upcoming-card__art">
+                <img src="/media/hero/pcsc-viatura.webp" alt="Polícia Civil de Santa Catarina" width={1672} height={950} loading="lazy" decoding="async" />
+                <span className="contest-upcoming-card__status contest-upcoming-card__status--previsto">
+                  <CalendarDays size={10} aria-hidden="true" /> Edital previsto
+                </span>
+              </div>
+              <div className="contest-upcoming-card__content">
+                <p className="contest-upcoming-card__sigla"><strong>PC-SC</strong> / POLÍCIA CIVIL DE SANTA CATARINA</p>
+                <Ficha items={[
+                  ["Cargo", "Agente de Polícia"],
+                  ["Banca", "FCC"],
+                  ["Prova Prevista", "13/04/2025"],
+                  ["Vagas", "400"],
+                  ["Remuneração", "R$ 6.935,09"],
+                ]} />
+                {isAuthenticated ? (
+                  <Link to="/dashboard" className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                ) : (
+                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                )}
+              </div>
+            </article>
+
+            <article className="contest-upcoming-card">
+              <div className="contest-upcoming-card__art">
+                <img src="/media/hero/auth-seguranca-full.webp" alt="Polícia Federal" width={1920} height={1280} loading="lazy" decoding="async" />
+                <span className="contest-upcoming-card__status contest-upcoming-card__status--em-breve">
+                  <Bell size={10} aria-hidden="true" /> Edital em breve
+                </span>
+              </div>
+              <div className="contest-upcoming-card__content">
+                <p className="contest-upcoming-card__sigla"><strong>PF</strong> / POLÍCIA FEDERAL</p>
+                <Ficha items={[
+                  ["Cargo", "Agente de Polícia Federal"],
+                  ["Banca", "Cebraspe"],
+                  ["Prova Prevista", "29/06/2025"],
+                  ["Vagas", "1.800"],
+                  ["Remuneração", "R$ 13.900,54"],
+                ]} />
+                {isAuthenticated ? (
+                  <Link to="/dashboard" className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                ) : (
+                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                )}
+              </div>
+            </article>
+
+            <article className="contest-upcoming-card">
+              <div className="contest-upcoming-card__art">
+                <img src="/media/hero/meu-concurso-seguranca-publica.webp" alt="Polícia Militar de São Paulo" width={1920} height={1280} loading="lazy" decoding="async" />
+                <span className="contest-upcoming-card__status contest-upcoming-card__status--aberto">
+                  <ShieldCheck size={10} aria-hidden="true" /> Edital aberto
+                </span>
+              </div>
+              <div className="contest-upcoming-card__content">
+                <p className="contest-upcoming-card__sigla"><strong>PM-SP</strong> / POLÍCIA MILITAR DE SÃO PAULO</p>
+                <Ficha items={[
+                  ["Cargo", "Soldado PM"],
+                  ["Banca", "Vunesp"],
+                  ["Prova", "09/03/2025"],
+                  ["Vagas", "2.700"],
+                  ["Remuneração", "R$ 4.852,21"],
+                ]} />
+                {isAuthenticated ? (
+                  <Link to="/dashboard" className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                ) : (
+                  <Link to="/auth" search={{ mode: "register" }} className="contest-action contest-action--gold">
+                    Acompanhar concurso <ArrowRight aria-hidden="true" />
+                  </Link>
+                )}
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
-      <div className="contest-carousel-controls" aria-label="Navegação entre concursos">
-        <span className="contest-carousel-status" aria-live="polite">{activeContest + 1} de {contestTotal} concursos</span>
-        <div className="contest-carousel-dots" aria-label="Selecionar concurso">
-          {["PC-SC", "PC-PR", "PC-PI"].map((label, index) => (
-            <button
-              key={label}
-              type="button"
-              aria-label={`Ver concurso ${label}`}
-              aria-current={activeContest === index ? "true" : undefined}
-              onClick={() => moveContest(index)}
-            />
-          ))}
-        </div>
-        <div className="contest-carousel-arrows">
-          <button type="button" aria-label="Concurso anterior" disabled={activeContest === 0} onClick={() => moveContest(activeContest - 1)}>
-            <ArrowLeft aria-hidden="true" />
-          </button>
-          <button type="button" aria-label="Próximo concurso" disabled={activeContest === contestTotal - 1} onClick={() => moveContest(activeContest + 1)}>
-            <ArrowRight aria-hidden="true" />
-          </button>
-        </div>
-      </div>
       <p className="contest-independence">
         Iniciativa educacional independente, sem vínculo ou endosso das Polícias Civis, governos ou
         bancas. Artes ilustrativas. Consulte os documentos oficiais de cada concurso.
