@@ -7,6 +7,7 @@ import "@/styles/student-home-premium.css";
 import "@/styles/student-home-navigation-refinement.css";
 import "@/styles/student-dashboard-premium.css";
 import "@/styles/student-overview-card-refinement.css";
+import "@/styles/student-home-hero-rework.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -45,7 +46,7 @@ import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
 import type { UserProfile } from "@/types";
@@ -205,6 +206,14 @@ function StudentHome({ user }: { user: UserProfile }) {
   const objective = q.objective.data;
   const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
   const days = daysToExam(effectiveExamDate, today);
+  const examCountdown =
+    days === null
+      ? "Defina o dia para ativar a contagem regressiva."
+      : days > 0
+        ? "Faltam " + days + " " + (days === 1 ? "dia" : "dias") + " para a prova"
+        : days === 0
+          ? "Sua prova é hoje. Boa preparação!"
+          : "A prova ocorreu há " + Math.abs(days) + " " + (Math.abs(days) === 1 ? "dia." : "dias.");
   const firstName = user.full_name?.trim().split(/\s+/)[0] || "Estudante";
   const hour = acreHour(now),
     hello = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
@@ -322,34 +331,99 @@ function StudentHome({ user }: { user: UserProfile }) {
   };
   return (
     <div className="student-home student-hub student-desk student-overview">
-      <header className="student-hub__masthead student-hub__masthead--careers workspace-banner">
-        <div className="student-hub__hero-copy">
-          <p className="student-hub__welcome">
-            {hello}, {firstName}.
-          </p>
-          <h1 id="student-home-title">Área do aluno</h1>
-          <p>Seu estudo, suas prioridades e sua evolução.</p>
-          <div className="student-hub__masthead-stats" aria-label="Seu progresso">
-            <HeroStat
-              icon={Target}
-              label={days !== null && days < 0 ? "Dias desde a prova" : "Dias p/ a prova"}
-              value={days !== null ? Math.abs(days) : "—"}
-            />
+      <header className="student-hub__masthead student-hub__masthead--careers student-hub__masthead--revamped workspace-banner">
+        <div className="student-hub__hero-layout">
+          <div className="student-hub__hero-copy">
+            <p className="student-hub__welcome">
+              {hello}, {firstName}.
+            </p>
+            <h1 id="student-home-title">Área do aluno</h1>
+            <p className="student-hub__hero-subtitle">
+              Seu estudo, suas prioridades e sua evolução — tudo em um só lugar.
+            </p>
+            <div className="student-hub__masthead-actions">
+              <span className="student-hub__date">
+                <CalendarClock aria-hidden="true" />
+                {new Intl.DateTimeFormat("pt-BR", {
+                  day: "2-digit",
+                  month: "long",
+                  timeZone: ACRE_TZ,
+                }).format(now)}
+                <small>Acre</small>
+              </span>
+              <Link to="/dashboard/performance">
+                Meu desempenho <ArrowRight aria-hidden="true" />
+              </Link>
+            </div>
           </div>
-          <div className="student-hub__masthead-actions">
-            <span className="student-hub__date">
-              <CalendarClock aria-hidden="true" />
-              {new Intl.DateTimeFormat("pt-BR", {
-                day: "2-digit",
-                month: "long",
-                timeZone: ACRE_TZ,
-              }).format(now)}
-              <small>Acre</small>
-            </span>
-            <Link to="/dashboard/performance">
-              Meu desempenho <ArrowRight aria-hidden="true" />
-            </Link>
-          </div>
+
+          <aside className="student-hub__exam-spotlight" aria-label="Data da prova">
+            <div className="student-hub__exam-spotlight-heading">
+              <span>Data da prova</span>
+              <span className="student-hub__exam-status" data-defined={Boolean(effectiveExamDate)}>
+                {personalExamDate ? "Personalizada" : effectiveExamDate ? "Data oficial" : "A definir"}
+              </span>
+            </div>
+            <p className="student-hub__exam-date">
+              {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Escolha uma data"}
+            </p>
+            <p className="student-hub__exam-countdown">{examCountdown}</p>
+
+            {!isEditingExamDate ? (
+              <Button
+                type="button"
+                size="default"
+                variant="default"
+                onClick={openExamDateEditor}
+                className="student-hub__exam-action"
+              >
+                <CalendarClock aria-hidden="true" />
+                {personalExamDate
+                  ? "Alterar data da prova"
+                  : effectiveExamDate
+                    ? "Ajustar data da prova"
+                    : "Escolher data da prova"}
+              </Button>
+            ) : (
+              <form onSubmit={savePersonalExamDate} className="student-hub__exam-form">
+                <label htmlFor="student-personal-exam-date">Selecione o dia no calendário</label>
+                <input
+                  id="student-personal-exam-date"
+                  type="date"
+                  required
+                  value={examDateDraft}
+                  onChange={(event) => setExamDateDraft(event.target.value)}
+                />
+                <div className="student-hub__exam-form-actions">
+                  <Button type="submit" size="sm" disabled={isSavingExamDate || !examDateDraft}>
+                    {isSavingExamDate ? "Salvando..." : "Salvar data"}
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    disabled={isSavingExamDate}
+                    onClick={() => setIsEditingExamDate(false)}
+                  >
+                    Cancelar
+                  </Button>
+                  {personalExamDate && (
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      disabled={isSavingExamDate}
+                      onClick={() => void clearPersonalExamDate()}
+                      className="student-hub__exam-clear"
+                    >
+                      {objective?.examDate ? "Usar data oficial" : "Remover data"}
+                    </Button>
+                  )}
+                </div>
+                <p>A contagem regressiva será atualizada automaticamente após salvar.</p>
+              </form>
+            )}
+          </aside>
         </div>
       </header>
       {!schedule && (
@@ -730,19 +804,6 @@ function StudentHome({ user }: { user: UserProfile }) {
                 <h3 className="student-home__objective-name">{objective.agency}</h3>
                 <p className="student-home__quiet">{objective.role}</p>
                 <p className="student-home__quiet">{objective.examBoard}</p>
-                {effectiveExamDate && (
-                  <p className="student-home__exam-date">
-                    Prova em {formatExamDate(effectiveExamDate)}
-                    {days !== null
-                      ? days > 0
-                        ? ` · ${days} dias restantes`
-                        : days === 0
-                          ? " · é hoje"
-                          : ` · ${Math.abs(days)} dias atrás`
-                      : ""}
-                    {personalExamDate ? " · data personalizada" : ""}
-                  </p>
-                )}
                 <Link to="/dashboard/my-contest" className="student-home__text-link">
                   Consultar meu concurso
                   <ArrowRight aria-hidden="true" />
@@ -759,84 +820,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                 </Link>
               </EmptyPanel>
             )}
-            <div className="mt-3 border-t border-slate-200 pt-3 dark:border-slate-700">
-              <div className="mb-2 flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    Data da prova
-                  </p>
-                  <p className="mt-1 text-sm font-semibold text-slate-800 dark:text-slate-100">
-                    {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Ainda não definida"}
-                  </p>
-                  {personalExamDate && (
-                    <p className="mt-0.5 text-xs text-teal-700 dark:text-teal-300">
-                      Data personalizada
-                    </p>
-                  )}
-                </div>
-                <CalendarClock className="mt-1 h-5 w-5 shrink-0 text-teal-700 dark:text-teal-300" />
-              </div>
-              {!isEditingExamDate ? (
-                <Button
-                  type="button"
-                  size="sm"
-                  variant="outline"
-                  onClick={openExamDateEditor}
-                  className="relative z-10 w-full cursor-pointer pointer-events-auto justify-center border-[#b58a43] text-[#805c22] hover:bg-[#b58a43]/10 dark:border-[#d3ad68] dark:text-[#e0c58d] dark:hover:bg-[#d3ad68]/10"
-                >
-                  <CalendarClock className="mr-1.5 h-4 w-4" aria-hidden="true" />
-                  {personalExamDate ? "Alterar data da prova" : effectiveExamDate ? "Ajustar data da prova" : "Escolher data da prova"}
-                </Button>
-              ) : (
-                <form
-                  onSubmit={savePersonalExamDate}
-                  className="space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-900/60"
-                >
-                  <div>
-                    <label htmlFor="student-personal-exam-date" className="mb-1.5 block text-xs font-semibold text-slate-700 dark:text-slate-200">
-                      Selecione o dia no calendário
-                    </label>
-                    <input
-                      id="student-personal-exam-date"
-                      type="date"
-                      required
-                      value={examDateDraft}
-                      onChange={(event) => setExamDateDraft(event.target.value)}
-                      className="h-10 w-full cursor-pointer pointer-events-auto rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-900 shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
-                    />
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Button type="submit" size="sm" disabled={isSavingExamDate || !examDateDraft}>
-                      {isSavingExamDate ? "Salvando..." : "Salvar data"}
-                    </Button>
-                    <Button
-                      type="button"
-                      size="sm"
-                      variant="outline"
-                      disabled={isSavingExamDate}
-                      onClick={() => setIsEditingExamDate(false)}
-                    >
-                      Cancelar
-                    </Button>
-                    {personalExamDate && (
-                      <Button
-                        type="button"
-                        size="sm"
-                        variant="ghost"
-                        disabled={isSavingExamDate}
-                        onClick={() => void clearPersonalExamDate()}
-                        className="text-amber-700 hover:text-amber-800 dark:text-amber-300"
-                      >
-                        {objective?.examDate ? "Usar data oficial" : "Remover"}
-                      </Button>
-                    )}
-                  </div>
-                  <p className="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-                    A contagem regressiva será atualizada automaticamente após salvar.
-                  </p>
-                </form>
-              )}
-            </div>
+
           </section>
 
           <section
