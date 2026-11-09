@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
