@@ -1,0 +1,279 @@
+/* Norte Concursos — question trainer focused reading and answer experience.
+   Compact controls, generous reading rhythm, clear answer states, light/dark parity. */
+.app-shell[data-area="student"] .nc-learning-workspace.question-workspace {
+  --trainer-paper: #fff;
+  --trainer-soft: #f5f8f8;
+  --trainer-line: #dce6e8;
+  --trainer-ink: #1b3038;
+  --trainer-muted: #61757d;
+  --trainer-focus: #246a75;
+  --trainer-gold: #a77b3f;
+  width: 100%;
+  max-width: 1120px;
+  gap: 13px;
+  color: var(--trainer-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+}
+:root.dark .app-shell[data-area="student"] .nc-learning-workspace.question-workspace {
+  --trainer-paper: #172b34;
+  --trainer-soft: #1d3540;
+  --trainer-line: #304a54;
+  --trainer-ink: #edf5f6;
+  --trainer-muted: #aec2c7;
+  --trainer-focus: #82d4d8;
+  --trainer-gold: #d9b77b;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-topbar {
+  min-height: 46px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--trainer-line);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-shield {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--trainer-line);
+  border-radius: 10px;
+  background: var(--trainer-paper);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-shield img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+.app-shell[data-area="student"] .question-workspace .question-window {
+  overflow: hidden;
+  border: 1px solid var(--trainer-line);
+  border-radius: 18px;
+  background: var(--trainer-paper);
+  color: var(--trainer-ink);
+  box-shadow: 0 18px 44px -36px rgb(12 39 48 / 48%);
+  ring: none;
+}
+.app-shell[data-area="student"] .question-workspace .question-window > .flex.flex-wrap.items-center.justify-between {
+  min-height: 42px;
+  padding: 9px 18px;
+  border-bottom: 1px solid var(--trainer-line);
+  background: var(--trainer-soft);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-content {
+  padding: clamp(16px, 2.4vw, 30px);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-meta {
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--trainer-line);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-meta > span:first-child {
+  border-color: color-mix(in srgb,var(--trainer-gold) 40%,var(--trainer-line));
+  background: color-mix(in srgb,var(--trainer-gold) 10%,var(--trainer-paper));
+  color: var(--trainer-ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .025em;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-heading {
+  align-items: center;
+  margin-top: 16px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-heading h2 {
+  color: var(--trainer-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(21px,2.3vw,29px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-heading h2 span {
+  color: var(--trainer-muted);
+  font-size: .72em;
+  font-weight: 600;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-progress {
+  align-items: center;
+  gap: 12px;
+  margin-top: 13px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-progress__bars {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  gap: 4px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-progress__bars i {
+  height: 5px;
+  border-radius: 999px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-timer-chip {
+  min-height: 32px;
+  border-color: var(--trainer-line);
+  border-radius: 9px;
+  background: var(--trainer-soft);
+  color: var(--trainer-ink);
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-stem {
+  margin-top: 20px;
+  padding: clamp(15px,2vw,22px);
+  border: 1px solid var(--trainer-line);
+  border-radius: 14px;
+  background: var(--trainer-soft);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-stem > p {
+  color: var(--trainer-ink);
+  font-size: clamp(15px,1.2vw,17px);
+  font-weight: 520;
+  line-height: 1.8;
+  letter-spacing: -.006em;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-stem details {
+  border-color: var(--trainer-line);
+  border-radius: 10px;
+  background: var(--trainer-paper);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-stem details summary {
+  min-height: 42px;
+  color: var(--trainer-muted);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-stem details > div {
+  max-height: 420px;
+  color: var(--trainer-ink);
+  font-size: 13px;
+  line-height: 1.75;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers {
+  margin-top: 20px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers > p:first-child {
+  margin: 0 0 10px;
+  color: var(--trainer-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers > div.mt-3.space-y-2 > div {
+  align-items: stretch;
+  gap: 8px;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1 {
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid var(--trainer-line);
+  border-radius: 12px;
+  background: var(--trainer-paper);
+  color: var(--trainer-ink);
+  font-size: 14px;
+  line-height: 1.65;
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1:hover:not(:disabled) {
+  border-color: color-mix(in srgb,var(--trainer-focus) 50%,var(--trainer-line));
+  background: color-mix(in srgb,var(--trainer-focus) 5%,var(--trainer-paper));
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1[aria-pressed="true"]:not(:disabled) {
+  border-color: var(--trainer-gold);
+  background: color-mix(in srgb,var(--trainer-gold) 11%,var(--trainer-paper));
+  box-shadow: inset 3px 0 0 var(--trainer-gold);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1 > span:first-child {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--trainer-line);
+  border-radius: 9px;
+  background: var(--trainer-soft);
+  color: var(--trainer-ink);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1[aria-pressed="true"]:not(:disabled) > span:first-child {
+  border-color: var(--trainer-gold);
+  background: var(--trainer-gold);
+  color: #fff;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-answers button[aria-label^="Riscar alternativa"] {
+  align-self: center;
+  border: 1px solid var(--trainer-line);
+  border-radius: 10px;
+  color: var(--trainer-muted);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions {
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--trainer-line);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions > button,
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions a,
+.app-shell[data-area="student"] .question-workspace .trainer-topbar button {
+  min-height: 40px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions button[class*="bg-amber"] {
+  background: #a77b3f;
+  color: #fff;
+  box-shadow: 0 7px 16px -10px rgb(110 75 32 / 60%);
+}
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions button[class*="bg-amber"]:hover {
+  background: #916833;
+}
+.app-shell[data-area="student"] .question-workspace :is(button,a,input,summary):focus-visible {
+  outline: 2px solid var(--trainer-focus);
+  outline-offset: 3px;
+}
+.app-shell[data-area="student"] .question-workspace .reinforce-banner {
+  border-color: var(--trainer-line);
+  border-radius: 12px;
+  background: var(--trainer-soft);
+}
+@media (max-width: 640px) {
+  .app-shell[data-area="student"] .nc-learning-workspace.question-workspace {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-topbar {
+    align-items: center;
+    gap: 7px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-topbar__group--left,
+  .app-shell[data-area="student"] .question-workspace .trainer-topbar__group--right {
+    gap: 6px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-topbar button {
+    min-height: 36px;
+    padding-inline: 9px;
+    font-size: 11px;
+  }
+  .app-shell[data-area="student"] .question-workspace .question-window {
+    border-radius: 14px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-stem {
+    margin-top: 15px;
+    padding: 13px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-stem > p {
+    font-size: 15px;
+    line-height: 1.72;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-answers {
+    margin-top: 16px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-answers button.group.flex-1 {
+    min-height: 50px;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-actions {
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 13px;
+  }
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-actions > button,
+  .app-shell[data-area="student"] .question-workspace .trainer-reading-actions a {
+    min-height: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .question-workspace * { transition: none !important; }
+}
