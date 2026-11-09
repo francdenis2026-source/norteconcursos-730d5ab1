@@ -692,39 +692,57 @@ function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
       </CardHeader>
       <CardContent className="space-y-3">
         <p className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-muted-foreground">
-          Estudar 16h por dia, todos os dias, por mais de dois meses sem pausa reduz o
-          desempenho na reta final — por isso domingo foi reservado para descanso ativo. Veja o
-          detalhe dia a dia no PDF; aqui, a primeira semana a título de exemplo.
+          Cada semana tem 1 ou 2 disciplinas fixas — a semana inteira gira em torno delas, do
+          jeito que muda é só a atividade (teoria → questões → revisão → redação). Estudar 16h
+          por dia, todos os dias, por mais de dois meses sem pausa reduz o desempenho na reta
+          final — por isso domingo foi reservado para descanso ativo.
         </p>
-        {weeks[0] && (
-          <Accordion type="multiple" defaultValue={weeks[0].days.map((d) => d.date)}>
-            {weeks[0].days.map((day) => (
-              <AccordionItem key={day.date} value={day.date}>
-                <AccordionTrigger className="text-left text-sm">
-                  {["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][day.weekday]}{" "}
-                  · {day.date.split("-").reverse().join("/")}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className="space-y-1">
-                    {day.blocks.map((block, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs">
-                        <span className="shrink-0 font-mono text-[10px] font-semibold text-amber-700 dark:text-amber-300">
-                          {block.start}–{block.end}
-                        </span>
-                        <span className="text-muted-foreground">
-                          <span className="font-semibold text-foreground/90">{PCAC_ACTIVITY_LABEL[block.type]}:</span> {block.label}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        )}
+        <Accordion type="multiple" defaultValue={weeks[0] ? [`semana-${weeks[0].weekNumber}`] : []}>
+          {weeks.map((week) => (
+            <AccordionItem key={week.weekNumber} value={`semana-${week.weekNumber}`}>
+              <AccordionTrigger className="text-left text-sm">
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="font-semibold">
+                    Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
+                    {week.endDate.split("-").reverse().join("/")}
+                  </span>
+                  <Badge variant="outline" className="text-[10px]">
+                    {week.focusSubjects.join(" + ")}
+                  </Badge>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent>
+                <Accordion type="multiple">
+                  {week.days.map((day) => (
+                    <AccordionItem key={day.date} value={day.date}>
+                      <AccordionTrigger className="text-left text-xs">
+                        {["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][day.weekday]}{" "}
+                        · {day.date.split("-").reverse().join("/")}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <ul className="space-y-1">
+                          {day.blocks.map((block, i) => (
+                            <li key={i} className="flex items-start gap-2 text-xs">
+                              <span className="shrink-0 font-mono text-[10px] font-semibold text-amber-700 dark:text-amber-300">
+                                {block.start}–{block.end}
+                              </span>
+                              <span className="text-muted-foreground">
+                                <span className="font-semibold text-foreground/90">{PCAC_ACTIVITY_LABEL[block.type]}:</span> {block.label}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
         <p className="text-xs text-muted-foreground">
-          {weeks.length} semana{weeks.length === 1 ? "" : "s"} completas no PDF, hora a hora, até
-          3 dias antes da prova.
+          {weeks.length} semana{weeks.length === 1 ? "" : "s"}, hora a hora, até 3 dias antes da
+          prova.
         </p>
       </CardContent>
     </Card>
