@@ -251,12 +251,15 @@
   background: var(--home-surface-2);
 }
 .app-shell[data-area="student"] .student-overview .student-home__bar-track {
-  border-radius: 999px;
+  border-radius: 6px;
   background: color-mix(in srgb, var(--home-blue) 9%, var(--home-surface-2));
 }
 .app-shell[data-area="student"] .student-overview .student-home__bar-track i {
-  border-radius: 999px;
-  background: var(--home-blue);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, var(--home-cyan, var(--home-blue)), var(--home-blue));
+}
+.app-shell[data-area="student"] .student-overview .student-home__week > [data-today="true"] .student-home__bar-track i {
+  background: linear-gradient(180deg, #f6d78e, #dba94d);
 }
 .app-shell[data-area="student"] .student-overview .student-home__signals li {
   border-color: var(--home-line);
