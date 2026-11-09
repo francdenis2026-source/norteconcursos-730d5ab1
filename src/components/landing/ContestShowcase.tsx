@@ -2,7 +2,6 @@ import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness, Bell } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
 
 function Ficha({ items }: { items: [string, string][] }) {
   return (
@@ -22,52 +21,6 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
   const { isAuthenticated } = useAuthStatus();
   return (
     <div className="contest-showcase">
-      <article className="contest-spotlight hr-contest-card contest-spotlight--artwork" aria-label="Destaque do concurso da Polícia Civil do Estado do Acre">
-        <img
-          className="contest-spotlight-artwork__image"
-          src="/media/hero/pc-ac-homepage.webp"
-          alt="Polícia Civil do Estado do Acre — edital 001/2026: 139 vagas, 6 cargos, prova objetiva em 24 de janeiro de 2027 e simulado complementar com 92 questões da PC-SC."
-          width={1024}
-          height={323}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
-        {isAuthenticated ? (
-          <Link
-            to="/dashboard/pc-acre-edital"
-            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--edit"
-            aria-label="Abrir edital PC-AC"
-            title="Abrir edital PC-AC"
-          />
-        ) : (
-          <Link
-            to="/auth"
-            search={{ mode: "register" }}
-            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--edit"
-            aria-label="Abrir edital PC-AC"
-            title="Abrir edital PC-AC"
-          />
-        )}
-        {isAuthenticated ? (
-          <Link
-            to="/dashboard/question-trainer"
-            search={PCSC_TRAINER_SEARCH}
-            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--train"
-            aria-label="Realizar simulado PC-SC"
-            title="Realizar simulado PC-SC"
-          />
-        ) : (
-          <Link
-            to="/auth"
-            search={{ mode: "register" }}
-            className="contest-spotlight-artwork__action contest-spotlight-artwork__action--train"
-            aria-label="Realizar simulado PC-SC"
-            title="Realizar simulado PC-SC"
-          />
-        )}
-      </article>
-
       <section className="contest-catalog__feature-band" aria-labelledby={"contest-catalog-title" + suffix}>
         <div className="contest-catalog__feature-intro">
           <span className="contest-catalog__feature-eyebrow"><Sparkles size={14} aria-hidden="true" /> OPORTUNIDADES EM DESTAQUE</span>
