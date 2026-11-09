@@ -109,6 +109,20 @@ test("sync uploads what exists only in this browser and reports account availabi
   assert.equal(port.calls.upsert[0].question_id, ID);
 });
 
+
+test("sync repairs account rows when local notes or review status are newer", async () => {
+  const s = memory();
+  const [base] = saveStudyLater(s, "u", question(), "2026-10-20T10:00:00Z", "saved");
+  const local = { ...base, notes: "revisar jurisprudência", reviewed: true };
+  const remote = { ...base, notes: "", reviewed: false };
+  const port = fakePort([studyLaterRow("u", remote)]);
+  const result = await syncStudyLater("u", [local], port);
+  assert.equal(result.account, true);
+  assert.equal(port.calls.upsert.length, 1);
+  assert.equal(port.calls.upsert[0].notes, "revisar jurisprudência");
+  assert.equal(port.calls.upsert[0].reviewed, true);
+});
+
 test("without the account table the notebook keeps working in this browser", async () => {
   const missing = { code: "PGRST205", message: "Could not find the table 'public.study_later_items' in the schema cache" };
   const s = memory();
