@@ -52,6 +52,7 @@ import { cn } from "@/lib/utils";
 import { confirmDialog } from "@/lib/confirm";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import "@/styles/study-coach-refinement.css";
+import "@/styles/student-workspace-unified.css";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 
@@ -653,7 +654,7 @@ function StudyCoachPage() {
   const nextBlock = summary.nextBlock;
 
   return (
-    <div className="study-assistant plan-workspace-window mx-auto w-full max-w-none space-y-4">
+    <div className="nc-student-workspace study-assistant plan-workspace-window mx-auto w-full max-w-none space-y-4">
       <section
         className="study-assistant-hero workspace-banner"
         aria-labelledby="study-assistant-title"
