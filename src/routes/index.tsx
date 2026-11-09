@@ -644,7 +644,8 @@ function Index() {
                     <ArrowRight aria-hidden="true" />
                   </a>
                 </div>
-                <ul className="hx__trust" aria-label="Recursos da plataforma">
+              </div>
+              <ul className="hx__trust" aria-label="Recursos da plataforma">
                   <li>
                     <Target aria-hidden="true" />
                     <span><strong>Plano estratégico</strong><small>Estude com direção</small></span>
@@ -661,8 +662,7 @@ function Index() {
                     <LineChart aria-hidden="true" />
                     <span><strong>Evolução acompanhada</strong><small>Veja seu progresso</small></span>
                   </li>
-                </ul>
-              </div>
+              </ul>
             </div>
           </div>
         </section>
