@@ -506,7 +506,7 @@ export function prescricao(
     violenciaSexualContraMulher: boolean;
   },
 ) {
-  let anos = prazoPrescricaoAnos(penaDias);
+  const anos = prazoPrescricaoAnos(penaDias);
   const notas: string[] = [
     `Art. 109: pena ${o.executoria ? "aplicada" : "máxima cominada"} de ${formatPena(diasParaPena(penaDias))} corresponde a ${anos} anos.`,
   ];
