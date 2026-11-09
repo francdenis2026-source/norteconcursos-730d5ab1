@@ -1,6 +1,7 @@
 import { materialTopic } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
 import "@/styles/learning-workspace-refinement.css";
+import "@/styles/question-practice-workspaces.css";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import { platformDate } from "@/lib/platformClock";
