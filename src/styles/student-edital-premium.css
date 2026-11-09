@@ -386,3 +386,20 @@
   .app-shell[data-area="student"] .material-hub { gap: 12px; }
   .app-shell[data-area="student"] .profile-workspace { gap: 12px; }
 }
+
+/* Agenda hero mirrors the same visual hierarchy without changing its scheduling controls. */
+.app-shell[data-area="student"] .agenda-workspace-window :is(.page-hero,.edital-modern-hero,.study-assistant-hero) {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #244c57;
+  border-radius: 17px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgb(72 184 195 / 20%), transparent 42%),
+    linear-gradient(112deg, #0b2029 0%, #123944 58%, #1b5260 100%) !important;
+  box-shadow: 0 14px 32px -27px rgb(4 28 37 / 55%);
+}
+.app-shell[data-area="student"] .agenda-workspace-window :is(.page-hero,.edital-modern-hero,.study-assistant-hero) :is(h1,h2,h3,p,.page-hero__desc,.edital-eyebrow,.hero-chip) {
+  color: #f0f8f9 !important;
+}
+.app-shell[data-area="student"] .agenda-workspace-window :is(.page-hero__stats,.hero-stat) :is(strong,span,svg) { color: #e6f6f7; }
+.app-shell[data-area="student"] .agenda-workspace-window :is(.page-hero__stats,.hero-stat) { border-color: rgb(190 231 232 / 22%); }
