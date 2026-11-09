@@ -360,3 +360,117 @@
     padding: 6px 10px 8px !important;
   }
 }
+
+/* Tablet and compact laptop: preserve the same one-screen rhythm with denser grids. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .home-hero.hr-hero {
+    height: clamp(340px, calc(100svh - 300px), 500px) !important;
+    min-height: 340px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__inner {
+    min-height: 0 !important;
+    height: 100% !important;
+    justify-content: center !important;
+    padding-block: 24px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy h1 {
+    font-size: clamp(40px, 5vw, 56px) !important;
+    line-height: 1.04 !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > p {
+    margin-top: 11px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .home-actions { margin-top: 14px !important; }
+  .home.hr-canvas .home-daily-challenge-wrap { margin-block: 8px !important; }
+  .home.hr-canvas .daily-challenge-home { min-height: 70px; padding: 9px 12px; }
+  .home.hr-canvas .desktop-homepage__quick-access {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+  }
+  .home.hr-canvas .hr-quick-item {
+    grid-template-columns: 28px minmax(0, 1fr) 12px !important;
+    gap: 6px !important;
+    min-height: 58px;
+    padding: 8px !important;
+  }
+  .home.hr-canvas .hr-quick-icon { width: 28px !important; height: 28px !important; }
+  .home.hr-canvas .hr-quick-copy strong { font-size: 10px !important; }
+  .home.hr-canvas .hr-quick-copy small { font-size: 9px !important; }
+
+  .home.hr-canvas .desktop-homepage > :is(section, .home-ranking) {
+    min-height: calc(100svh - var(--nc-view-header));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 18px !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__band {
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__intro h2 { font-size: 30px !important; }
+  .home.hr-canvas #plataforma .home-preparation__intro > p { font-size: 11px !important; }
+  .home.hr-canvas #plataforma .home-preparation__panel,
+  .home.hr-canvas #plataforma .home-preparation__info {
+    max-height: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__items.hr-tools-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__items > * { padding: 9px !important; }
+  .home.hr-canvas #plataforma .home-preparation__items h3 { font-size: 11px !important; }
+  .home.hr-canvas #plataforma .home-preparation__items p { font-size: 9px !important; line-height: 1.35 !important; }
+
+  .home.hr-canvas #concursos .home-operations__heading { padding-bottom: 8px !important; }
+  .home.hr-canvas #concursos .contest-spotlight__art { min-height: 175px !important; }
+  .home.hr-canvas #concursos .contest-spotlight__content { padding: 12px !important; }
+  .home.hr-canvas #concursos .contest-spotlight h3 { font-size: 26px !important; }
+  .home.hr-canvas #concursos .contest-spotlight__copy { font-size: 10px !important; line-height: 1.35 !important; }
+  .home.hr-canvas #concursos .contest-spotlight__training { margin-block: 7px !important; padding-block: 6px !important; }
+  .home.hr-canvas #concursos .contest-catalog__heading { margin: 9px 0 6px !important; }
+  .home.hr-canvas #concursos .contest-catalog { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 7px !important; }
+  .home.hr-canvas #concursos .contest-card__art { aspect-ratio: 16 / 5 !important; }
+  .home.hr-canvas #concursos .contest-card__content { padding: 8px !important; gap: 4px !important; }
+  .home.hr-canvas #concursos .contest-card__content h3 { font-size: 11px !important; }
+  .home.hr-canvas #concursos .contest-card__content :is(p,dd,dt,.contest-reference) { font-size: 8px !important; }
+  .home.hr-canvas #concursos .contest-card .contest-action { min-height: 28px !important; padding: 5px !important; font-size: 9px !important; }
+
+  .home.hr-canvas #planos .home-plans__intro { margin-bottom: 8px !important; }
+  .home.hr-canvas #planos .home-plans__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+  .home.hr-canvas #planos .home-plan { padding: 9px !important; gap: 5px !important; }
+  .home.hr-canvas #planos .home-plan__media { height: 42px !important; }
+  .home.hr-canvas #planos .home-faq {
+    display: grid !important;
+    grid-template-columns: minmax(130px, .4fr) minmax(0, 1.6fr) !important;
+    gap: 10px !important;
+    margin-top: 8px !important;
+    padding: 9px !important;
+  }
+  .home.hr-canvas #planos .home-faq__scene { display: none !important; }
+  .home.hr-canvas #planos .home-faq__list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px 8px !important;
+  }
+  .home.hr-canvas #planos .home-faq__list summary { font-size: 9px !important; }
+  .home.hr-canvas #planos .home-faq__list details > p { font-size: 9px !important; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas:has(.general-access):has(.news-banner) .home-hero.hr-hero {
+    height: clamp(320px, calc(100svh - 430px), 420px) !important;
+    min-height: 320px !important;
+  }
+  .home.hr-canvas:has(.general-access):not(:has(.news-banner)) .home-hero.hr-hero,
+  .home.hr-canvas:has(.news-banner):not(:has(.general-access)) .home-hero.hr-hero {
+    height: clamp(330px, calc(100svh - 365px), 450px) !important;
+    min-height: 330px !important;
+  }
+}
