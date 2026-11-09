@@ -2,7 +2,6 @@ import { useHomeSection } from "@/hooks/useHomeSection";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
-import { HeroEmblemClock } from "@/components/landing/HeroEmblemClock";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import * as PreparationTabs from "@radix-ui/react-tabs";
@@ -46,7 +45,6 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
-import "@/styles/home-hero-emblem.css";
 import "@/styles/home-operations.css";
 import "@/styles/home-menu-v2.css";
 import "@/styles/home-light.css";
@@ -625,7 +623,6 @@ function Index() {
           data-intro={introPlaying}
         >
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <HeroEmblemClock />
           <TacticalCrosshair />
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
