@@ -1,3 +1,4 @@
+import "@/styles/student-library-media-workspaces.css";
 import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
@@ -175,7 +176,7 @@ function MaterialPage() {
   const sources = (material.legal_basis ?? []).filter((item) => item.title || item.url);
 
   return (
-    <article className={`mx-auto max-w-3xl space-y-6 pb-10 ${fm.containerClass}`}>
+    <article className={`nc-learning-workspace library-reading-workspace mx-auto max-w-3xl space-y-4 pb-10 ${fm.containerClass}`}> 
       {fm.bar({
         kicker: material.discipline,
         title: material.title,
