@@ -1,4 +1,5 @@
 import { plannedPractice } from "@/lib/plannedStudy";
+import "@/styles/learning-workspace-refinement.css";
 import "@/styles/study-tool-launcher.css";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { ENEM_AREAS } from "@/data/enem";
@@ -261,7 +262,7 @@ function StudyToolsPage() {
   const track = TRACKS.find(item => norm(subject).includes(norm(item.discipline)));
 
   return (
-    <div className="study-tools-page space-y-5" data-focus-session={fullscreen.active ? "true" : undefined}>
+    <div className="nc-learning-workspace study-tools-page space-y-5" data-focus-session={fullscreen.active ? "true" : undefined}>
       <header className="space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
