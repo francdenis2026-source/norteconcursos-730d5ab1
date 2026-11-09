@@ -118,7 +118,7 @@
 .home.home .home-plans--insignia .home-plan[data-plan] :is(h3, .home-plan__annual) { color: var(--stage-gold); }
 .home.home .home-plans--insignia .home-plan[data-plan] .home-plan__price { color: var(--home-text); font-size: 29px; }
 .home.home .home-plans--insignia .home-plan[data-plan] :is(.home-plan__description, .home-plan__availability, .home-plan__features) { color: var(--home-muted); }
-.home.home .home-plans--insignia .home-plan[data-plan] .home-tag { background: rgb(232 205 153 / 10%); color: var(--stage-gold); border-color: var(--home-line); font-size: 9px; }
+.home.home .home-plans--insignia .home-plan[data-plan] .home-tag { background: rgb(232 205 153 / 10%); color: var(--stage-gold); border-color: var(--home-line); font-size: 11px; }
 .home.home .home-plans--insignia .home-plan[data-plan] > .home-button { color: var(--stage-gold); background: transparent; border-color: var(--home-line); }
 .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button { color: var(--brass-foreground); background: var(--stage-gold); border-color: var(--stage-gold); }
 .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:disabled { color: #c0b7a6; background: #252622; border-color: #45443d; }
