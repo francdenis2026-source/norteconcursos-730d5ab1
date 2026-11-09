@@ -2,26 +2,24 @@ export type StartupStage = 'preparing' | 'ready';
 
 /** Reveal the application as soon as its route has hydrated; no intro media blocks startup. */
 export function createStartupSequence(_homeDocument: boolean, reveal: () => void, publish: (stage: StartupStage) => void = () => {}) {
-  let routeReady = false;
-  // The cinematic intro was removed: the loader ends as soon as the route hydrates.
-  let settled = true;
-  let revealed = false;
+  // Keep startup flags in one object so every callback reads the same live state,
+  // avoiding stale or missing closure bindings during preview hot updates.
+  const state = { routeReady: false, revealed: false };
   const complete = () => {
-    if (revealed || !routeReady || !settled) return;
-    revealed = true;
+    if (state.revealed || !state.routeReady) return;
+    state.revealed = true;
     publish('ready');
     reveal();
   };
   return {
-    routeReady(pathname: string) {
-      routeReady = true;
-      if (pathname !== '/') settled = true;
+    routeReady(_pathname: string) {
+      state.routeReady = true;
       complete();
     },
     prepareIntro() { return false; },
     showIntro() { return false; },
-    settleIntro() { settled = true; complete(); },
-    forceReveal() { settled = true; routeReady = true; complete(); },
+    settleIntro() { complete(); },
+    forceReveal() { state.routeReady = true; complete(); },
   };
 }
 
