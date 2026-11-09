@@ -99,7 +99,7 @@ import "@/styles/home-preparation-premium.css";
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    title: "Norte Concursos | Sua preparação tem direção",
+    title: "Norte Concursos | Prepare-se com método. tem direção",
     meta: [
       {
         name: "description",
@@ -198,7 +198,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; featured?: boolean
   },
   {
     icon: Compass,
-    title: "Plano de estudos",
+    title: "Planejamento individual",
     text: "Prioridades pelo cargo, pela banca e pelo seu desempenho, com foco e revisão no mesmo lugar.",
   },
   {
@@ -307,9 +307,9 @@ function PreparationInfo() {
         <h2>Preparação inteligente. <em>Do seu jeito.</em></h2>
         <p>Reúna planejamento, treino e evolução em uma única jornada — com ferramentas pensadas para concursos da área policial.</p>
         <div className="hr-preparation__proof">
-          <span><BookOpen aria-hidden="true" /> Questões por banca</span>
+          <span><BookOpen aria-hidden="true" /> Questões por organizadora</span>
           <span><LineChart aria-hidden="true" /> Evolução acompanhada</span>
-          <span><ShieldCheck aria-hidden="true" /> Fontes identificadas</span>
+          <span><ShieldCheck aria-hidden="true" /> Conteúdo com origem verificada</span>
         </div>
       </div>
       <div className="hr-preparation__explorer">
@@ -660,29 +660,29 @@ function Index() {
               <div className="hx__copy">
                 <div className="hx__kicker" aria-label="Preparação para carreiras policiais">
                   <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span className="hx__kicker-primary">NORTE CONCURSOS · PREPARAÇÃO ESTRATÉGICA</span>
-                  <span className="hx__kicker-secondary">DIREÇÃO · DISCIPLINA · CONQUISTA</span>
+                  <span className="hx__kicker-primary">NORTE CONCURSOS · FORMAÇÃO PARA CARREIRAS POLICIAIS</span>
+                  <span className="hx__kicker-secondary">MÉTODO · CONSTÂNCIA · RESULTADO</span>
                 </div>
                 <h1 id="home-hero-title" className="hx__headline hr-hero__headline">
                   <span>Sua preparação</span>
-                  <span>tem um <em>norte.</em></span>
+                  <span>Conquiste seu próximo objetivo.</span>
                 </h1>
                 <p className="hx__description hr-hero__description">
-                  Questões, editais e simulados para transformar seu estudo em preparação real para as carreiras policiais.
+                  Editais organizados, questões por banca e simulados para orientar cada etapa da sua preparação policial.
                 </p>
                 <div className="home-actions">
                   <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
-                    Começar agora <ArrowRight aria-hidden="true" />
+                    Iniciar preparação <ArrowRight aria-hidden="true" />
                   </Link>
                   <a href="#plataforma" className="hr-btn hr-btn--ghost">
-                    Conhecer a plataforma <ArrowUpRight aria-hidden="true" />
+                    Explorar a plataforma <ArrowUpRight aria-hidden="true" />
                   </a>
                 </div>
                 <ul className="hx__trust" aria-label="Diferenciais da plataforma">
                   <li><ShieldCheck aria-hidden="true" /><span><strong>Fontes identificadas</strong><small>Referências oficiais</small></span></li>
-                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por banca</strong><small>Treino direcionado</small></span></li>
-                  <li><Target aria-hidden="true" /><span><strong>Plano de estudos</strong><small>Foco no seu objetivo</small></span></li>
-                  <li><Trophy aria-hidden="true" /><span><strong>Desempenho acompanhado</strong><small>Evolução mensurável</small></span></li>
+                  <li><BookOpen aria-hidden="true" /><span><strong>Questões por banca</strong><small>Prática alinhada ao edital</small></span></li>
+                  <li><Target aria-hidden="true" /><span><strong>Plano de estudos</strong><small>Trilha conforme seu objetivo</small></span></li>
+                  <li><Trophy aria-hidden="true" /><span><strong>Evolução monitorada</strong><small>Indicadores de desempenho</small></span></li>
                 </ul>
               </div>
             </div>
