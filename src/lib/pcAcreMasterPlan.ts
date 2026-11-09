@@ -1,11 +1,56 @@
-import { INVESTIGATOR_STUDY_ORDER } from "@/data/pcAcreIdecanRadar";
+import { INVESTIGATOR_DISCIPLINE_ORDER } from "@/data/pcAcreIdecanRadar";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 
 /** Plano de estudos completo (semana a semana, dia a dia) para o Oficial Investigador da PC-AC,
  * organizado pela ordem de relevância da banca IDECAN já marcada em `pcAcreIdecanRadar.ts` —
  * reaproveita a mesma marcação usada nos cartões "Foco recomendado" e "Onde concentrar seu
- * tempo" do edital verticalizado, em vez de criar uma nova. Encerra o estudo de conteúdo novo
+ * tempo" do edital verticalizado, em vez de criar uma nova. Cada atividade de teoria/questões
+ * cita o tópico (ou subtópico) exato do Anexo III, não só o nome da disciplina — para o aluno
+ * saber na hora o que abrir no edital digital, sem adivinhar. Encerra o estudo de conteúdo novo
  * 3 dias antes da prova, deixando esses últimos dias para revisão leve e descanso. */
+
+interface DisciplineTopics {
+  name: string;
+  topics: string[];
+}
+
+/** Disciplinas do Investigador (nome + tópicos do Anexo III), chaveadas pelo `id` usado em
+ * `pcAcVerticalCargos` — mesma fonte do edital digital, para o plano nunca divergir dela. */
+const INVESTIGATOR_DISCIPLINE_TOPICS: Record<string, DisciplineTopics> = (() => {
+  const cargo = pcAcVerticalCargos.find((c) => c.id === "investigador");
+  const out: Record<string, DisciplineTopics> = {};
+  for (const block of cargo?.blocks ?? []) {
+    for (const d of block.disciplines) {
+      out[d.id] = { name: d.name, topics: d.topics?.length ? d.topics : [d.name] };
+    }
+  }
+  return out;
+})();
+
+/** Um tópico específico a estudar: disciplina + o texto exato do item do Anexo III. */
+export interface PcAcStudyTopic {
+  discipline: string;
+  topic: string;
+}
+
+/** Percorre `INVESTIGATOR_DISCIPLINE_ORDER` em roda-viva; cada vez que uma disciplina volta a
+ * aparecer, avança para o próximo tópico dela (volta ao primeiro depois do último), para nunca
+ * repetir o mesmo tópico duas vezes seguidas e cobrir o Anexo III inteiro ao longo do plano. */
+function createTopicCursor() {
+  const topicIndexByDiscipline: Record<string, number> = {};
+  let disciplineCursor = 0;
+  return (): PcAcStudyTopic => {
+    const order = INVESTIGATOR_DISCIPLINE_ORDER.length ? INVESTIGATOR_DISCIPLINE_ORDER : Object.keys(INVESTIGATOR_DISCIPLINE_TOPICS);
+    const disciplineId = order[disciplineCursor % order.length]!;
+    disciplineCursor += 1;
+    const entry = INVESTIGATOR_DISCIPLINE_TOPICS[disciplineId];
+    if (!entry) return { discipline: disciplineId, topic: disciplineId };
+    const topicIndex = topicIndexByDiscipline[disciplineId] ?? 0;
+    topicIndexByDiscipline[disciplineId] = (topicIndex + 1) % entry.topics.length;
+    return { discipline: entry.name, topic: entry.topics[topicIndex]! };
+  };
+}
 
 export const PCAC_LAST_STUDY_OFFSET_DAYS = 3;
 
@@ -23,6 +68,8 @@ export type PcAcActivityType =
 export interface PcAcPlanActivity {
   type: PcAcActivityType;
   subject?: string;
+  /** Tópico (ou subtópico) exato do Anexo III a que a atividade se refere, quando houver um. */
+  topic?: string;
   detail: string;
 }
 
@@ -67,40 +114,42 @@ const REDACAO_THEMES = [
   "crimes contra a administração pública e investigação financeira",
 ];
 
-function activitiesForFundamentos(subject: string, dayIndexInWeek: number): PcAcPlanActivity[] {
+function activitiesForFundamentos(topic: PcAcStudyTopic, dayIndexInWeek: number): PcAcPlanActivity[] {
+  const base = { subject: topic.discipline, topic: topic.topic };
   if (dayIndexInWeek === 0) {
-    return [
-      { type: "teoria", subject, detail: `Teoria: ${subject} — leia o resumo e os pontos do Anexo III, sem pressa.` },
-    ];
+    return [{ type: "teoria", ...base, detail: "Leia o resumo e os pontos do Anexo III, sem pressa." }];
   }
   return [
-    { type: "teoria", subject, detail: `Teoria: continue ${subject} — fixe os pontos marcados como "a estudar" no edital digital.` },
-    { type: "questoes", subject, detail: `Questões: 15 a 20 questões de ${subject} no Treinador, revisando cada erro.` },
+    { type: "teoria", ...base, detail: 'Continue o tópico — fixe os pontos marcados como "a estudar" no edital digital.' },
+    { type: "questoes", ...base, detail: "15 a 20 questões no Treinador, revisando cada erro." },
   ];
 }
 
-function activitiesForPratica(subject: string, isLastStudyDayOfWeek: boolean, weekIndex: number): PcAcPlanActivity[] {
+function activitiesForPratica(topic: PcAcStudyTopic, isLastStudyDayOfWeek: boolean, weekIndex: number): PcAcPlanActivity[] {
+  const base = { subject: topic.discipline, topic: topic.topic };
   if (isLastStudyDayOfWeek) {
     const theme = REDACAO_THEMES[weekIndex % REDACAO_THEMES.length];
     return [
-      { type: "questoes", subject, detail: `Questões: 20 a 30 questões de ${subject}, cronometradas.` },
-      { type: "redacao", detail: `Redação: um texto dissertativo-argumentativo de 20 a 30 linhas sobre ${theme} (modelo da prova discursiva).` },
+      { type: "questoes", ...base, detail: "20 a 30 questões, cronometradas." },
+      { type: "redacao", detail: `Texto dissertativo-argumentativo de 20 a 30 linhas sobre ${theme} (modelo da prova discursiva).` },
     ];
   }
   return [
-    { type: "questoes", subject, detail: `Questões: 25 a 35 questões de ${subject}, misturando bancas policiais.` },
-    { type: "revisao", subject, detail: `Revisão: reveja os erros do dia anterior antes de avançar.` },
+    { type: "questoes", ...base, detail: "25 a 35 questões, misturando bancas policiais." },
+    { type: "revisao", ...base, detail: "Reveja os erros do dia anterior antes de avançar." },
   ];
 }
 
-function activitiesForRevisao(subject: string | undefined, isLastStudyDayOfWeek: boolean, weekIndex: number): PcAcPlanActivity[] {
+function activitiesForRevisao(topic: PcAcStudyTopic | undefined, isLastStudyDayOfWeek: boolean, weekIndex: number): PcAcPlanActivity[] {
   if (isLastStudyDayOfWeek) {
-    return [{ type: "simulado", detail: "Simulado completo: 100 questões cronometradas, nas condições da prova (ver Simulados)." }];
+    return [{ type: "simulado", detail: "100 questões cronometradas, nas condições da prova (ver Simulados)." }];
   }
   const theme = REDACAO_THEMES[weekIndex % REDACAO_THEMES.length];
   return [
-    { type: "revisao", ...(subject ? { subject } : {}), detail: subject ? `Revisão rápida: ${subject} — refaça só as questões que errou antes.` : "Revisão rápida dos pontos mais fracos do Anexo III." },
-    { type: "redacao", detail: `Redação: pratique novamente sobre ${theme}, cronometrando 1h.` },
+    topic
+      ? { type: "revisao", subject: topic.discipline, topic: topic.topic, detail: "Refaça só as questões que errou antes." }
+      : { type: "revisao", detail: "Revisão rápida dos pontos mais fracos do Anexo III." },
+    { type: "redacao", detail: `Pratique novamente sobre ${theme}, cronometrando 1h.` },
   ];
 }
 
@@ -124,13 +173,7 @@ export function buildPcAcMasterPlan(
   const fundamentosWeeks = Math.max(1, Math.round(totalWeeks * 0.5));
   const praticaWeeks = totalWeeks <= 2 ? 0 : Math.max(1, Math.round(totalWeeks * 0.3));
 
-  const subjects = INVESTIGATOR_STUDY_ORDER;
-  let subjectCursor = 0;
-  const nextSubject = () => {
-    const s = subjects[subjectCursor % subjects.length]!;
-    subjectCursor += 1;
-    return s.subject;
-  };
+  const nextTopic = createTopicCursor();
 
   const weeks: PcAcPlanWeek[] = [];
   let cursor = start;
@@ -146,11 +189,11 @@ export function buildPcAcMasterPlan(
       const isLast = i === studyDaysThisWeek.length - 1;
       let activities: PcAcPlanActivity[];
       if (phase === "fundamentos") {
-        activities = activitiesForFundamentos(nextSubject(), i);
+        activities = activitiesForFundamentos(nextTopic(), i);
       } else if (phase === "pratica") {
-        activities = activitiesForPratica(nextSubject(), isLast, w);
+        activities = activitiesForPratica(nextTopic(), isLast, w);
       } else {
-        activities = activitiesForRevisao(isLast ? undefined : nextSubject(), isLast, w);
+        activities = activitiesForRevisao(isLast ? undefined : nextTopic(), isLast, w);
       }
       weekDays.push({ date: toIso(date), weekday: date.getDay(), activities });
     });

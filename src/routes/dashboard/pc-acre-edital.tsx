@@ -569,28 +569,57 @@ function PcAcCronogramaCard({
                         <AccordionContent className="space-y-3">
                           {items.map((week) => (
                             <div key={week.weekNumber} className="rounded-lg border bg-background/60 p-3">
-                              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
                                 Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
                                 {week.endDate.split("-").reverse().join("/")}
                               </p>
-                              <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                                {week.days.map((day) => (
-                                  <div key={day.date} className="rounded-md border border-dashed bg-muted/20 p-2">
-                                    <p className="text-[11px] font-semibold text-foreground/90">
-                                      {WEEKDAY_FULL[day.weekday]} · {day.date.split("-").reverse().join("/")}
-                                    </p>
-                                    <ul className="mt-1 space-y-1">
-                                      {day.activities.map((activity, i) => (
-                                        <li key={i} className="text-[11px] leading-relaxed text-muted-foreground">
-                                          <span className="font-semibold text-primary">
-                                            {PCAC_ACTIVITY_LABEL[activity.type]}:
-                                          </span>{" "}
-                                          {activity.detail}
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                ))}
+                              <div className="overflow-x-auto rounded-md border">
+                                <table className="w-full min-w-[720px] border-collapse text-xs">
+                                  <thead>
+                                    <tr className="bg-muted/60">
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Dia</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Atividade</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Disciplina</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Tópico / instrução</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {week.days.flatMap((day, di) =>
+                                      day.activities.map((activity, ai) => (
+                                        <tr
+                                          key={`${day.date}-${ai}`}
+                                          className={di % 2 === 1 ? "bg-muted/20 align-top" : "align-top"}
+                                        >
+                                          {ai === 0 && (
+                                            <td
+                                              className="whitespace-nowrap border-t px-2.5 py-1.5 font-semibold text-foreground/90"
+                                              rowSpan={day.activities.length}
+                                            >
+                                              {WEEKDAY_FULL[day.weekday].slice(0, 3)} ·{" "}
+                                              {day.date.split("-").reverse().slice(0, 2).join("/")}
+                                            </td>
+                                          )}
+                                          <td className="border-t px-2.5 py-1.5 font-semibold text-primary">
+                                            {PCAC_ACTIVITY_LABEL[activity.type]}
+                                          </td>
+                                          <td className="border-t px-2.5 py-1.5 text-foreground/90">
+                                            {activity.subject ?? "—"}
+                                          </td>
+                                          <td className="border-t px-2.5 py-1.5 text-muted-foreground">
+                                            {activity.topic ? (
+                                              <>
+                                                <span className="text-foreground/90">{activity.topic}</span>{" "}
+                                                <span>— {activity.detail}</span>
+                                              </>
+                                            ) : (
+                                              activity.detail
+                                            )}
+                                          </td>
+                                        </tr>
+                                      )),
+                                    )}
+                                  </tbody>
+                                </table>
                               </div>
                             </div>
                           ))}

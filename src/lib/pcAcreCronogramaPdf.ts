@@ -308,38 +308,88 @@ function drawWeeklyGridTable(doc: jsPDF, grid: PcAcWeeklyGridRow[], y: number): 
   return y + 26;
 }
 
-function activityLine(doc: jsPDF, activity: { type: keyof typeof PCAC_ACTIVITY_LABEL; detail: string }, x: number, y: number, maxWidth: number) {
+// Colunas da tabela "Dia · Atividade · Disciplina · Tópico/instrução" — mesmo recorte da tabela
+// equivalente na tela (ver PcAcCronogramaCard em pc-acre-edital.tsx).
+const DAY_COL_W = 86;
+const TYPE_COL_W = 58;
+const SUBJECT_COL_W = 108;
+const TOPIC_COL_W = CONTENT_W - DAY_COL_W - TYPE_COL_W - SUBJECT_COL_W;
+const DAY_COL_X = MARGIN_X;
+const TYPE_COL_X = DAY_COL_X + DAY_COL_W;
+const SUBJECT_COL_X = TYPE_COL_X + TYPE_COL_W;
+const TOPIC_COL_X = SUBJECT_COL_X + SUBJECT_COL_W;
+
+function drawWeekTableHeader(doc: jsPDF, y: number): number {
+  const rowH = 16;
+  doc.setFillColor(...NAVY);
+  doc.rect(MARGIN_X, y, CONTENT_W, rowH, "F");
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(8.5);
-  doc.setTextColor(...GOLD_DEEP);
-  const tag = `${PCAC_ACTIVITY_LABEL[activity.type]} — `;
-  doc.text(tag, x, y);
-  doc.setFont("helvetica", "normal");
-  doc.setTextColor(...INK);
-  const tagWidth = doc.getTextWidth(tag);
-  const lines = doc.splitTextToSize(activity.detail, maxWidth - tagWidth);
-  doc.text(lines[0] ?? "", x + tagWidth, y);
-  for (let i = 1; i < lines.length; i += 1) doc.text(lines[i]!, x, y + i * 11);
-  return Math.max(1, lines.length);
+  doc.setFontSize(7.5);
+  doc.setTextColor(255, 255, 255);
+  doc.text("DIA", DAY_COL_X + 6, y + 11);
+  doc.text("ATIVIDADE", TYPE_COL_X + 6, y + 11);
+  doc.text("DISCIPLINA", SUBJECT_COL_X + 6, y + 11);
+  doc.text("TÓPICO / INSTRUÇÃO", TOPIC_COL_X + 6, y + 11);
+  return y + rowH;
 }
 
-function drawDay(doc: jsPDF, day: PcAcPlanDay, cursor: { y: number }, newPage: () => void) {
-  const rowH = 16 + day.activities.length * 13 + 6;
-  if (cursor.y + rowH > FOOTER_Y - 18) newPage();
-  doc.setFillColor(...CARD_BG);
-  doc.setDrawColor(...LINE);
-  doc.setLineWidth(0.6);
-  doc.roundedRect(MARGIN_X, cursor.y, CONTENT_W, rowH, 4, 4, "FD");
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(9.5);
-  doc.setTextColor(...NAVY);
-  doc.text(`${WEEKDAY_NAMES[day.weekday]} · ${fmtDate(day.date)}`, MARGIN_X + 10, cursor.y + 14);
-  let lineY = cursor.y + 29;
-  for (const activity of day.activities) {
-    const n = activityLine(doc, activity, MARGIN_X + 10, lineY, CONTENT_W - 20);
-    lineY += n * 11 + 3;
+/** Uma linha da tabela por atividade (dia · atividade · disciplina · tópico do Anexo III +
+ * instrução). Altura variável conforme o texto do tópico, que normalmente é o mais longo. */
+function drawActivityRow(doc: jsPDF, day: PcAcPlanDay, activity: PcAcPlanDay["activities"][number], zebra: boolean, y: number): number {
+  const topicText = activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(7.5);
+  const topicLines = doc.splitTextToSize(topicText, TOPIC_COL_W - 10);
+  const subjectLines = doc.splitTextToSize(activity.subject ?? "—", SUBJECT_COL_W - 10);
+  const lineCount = Math.max(topicLines.length, subjectLines.length, 1);
+  const rowH = Math.max(15, lineCount * 9.5 + 6);
+
+  if (zebra) {
+    doc.setFillColor(...ROW_ALT);
+    doc.rect(MARGIN_X, y, CONTENT_W, rowH, "F");
   }
-  cursor.y += rowH + 8;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(7.5);
+  doc.setTextColor(...INK);
+  doc.text(`${WEEKDAY_NAMES[day.weekday]!.slice(0, 3)} ${fmtDate(day.date)}`, DAY_COL_X + 6, y + 10.5);
+  doc.setTextColor(...GOLD_DEEP);
+  doc.text(PCAC_ACTIVITY_LABEL[activity.type], TYPE_COL_X + 6, y + 10.5);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(...INK);
+  doc.text(subjectLines, SUBJECT_COL_X + 6, y + 10.5);
+  doc.setTextColor(...MUTED);
+  doc.text(topicLines, TOPIC_COL_X + 6, y + 10.5);
+
+  doc.setDrawColor(...LINE);
+  doc.setLineWidth(0.5);
+  doc.line(MARGIN_X, y + rowH, MARGIN_X + CONTENT_W, y + rowH);
+  [TYPE_COL_X, SUBJECT_COL_X, TOPIC_COL_X].forEach((lx) => doc.line(lx, y, lx, y + rowH));
+
+  return rowH;
+}
+
+/** Desenha a semana inteira como tabela (uma linha por atividade), quebrando página quando
+ * necessário e repetindo o cabeçalho da tabela no topo de cada página nova. */
+function drawWeekTable(doc: jsPDF, week: PcAcPlanWeek, cursor: { y: number }, newPage: () => void) {
+  cursor.y = drawWeekTableHeader(doc, cursor.y);
+  let zebra = false;
+  week.days.forEach((day) => {
+    day.activities.forEach((activity) => {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7.5);
+      const topicText = activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail;
+      const topicLines = doc.splitTextToSize(topicText, TOPIC_COL_W - 10);
+      const estRowH = Math.max(15, topicLines.length * 9.5 + 6);
+      if (cursor.y + estRowH > FOOTER_Y - 18) {
+        newPage();
+        cursor.y = drawWeekTableHeader(doc, cursor.y);
+        zebra = false;
+      }
+      cursor.y += drawActivityRow(doc, day, activity, zebra, cursor.y);
+      zebra = !zebra;
+    });
+  });
+  cursor.y += 14;
 }
 
 export interface PcAcCronogramaPdfInput {
@@ -381,8 +431,7 @@ export async function generatePcAcCronogramaPdf({ cargo, cfg, grid, weeks, final
       if (cursor.y + 60 > FOOTER_Y - 18) newContentPage();
       drawSectionBand(doc, `Semana ${week.weekNumber} · ${fmtDate(week.startDate)} a ${fmtDate(week.endDate)}`, PCAC_PHASE_LABEL[week.phase], cursor.y);
       cursor.y += 36;
-      for (const day of week.days) drawDay(doc, day, cursor, newContentPage);
-      cursor.y += 6;
+      drawWeekTable(doc, week, cursor, newContentPage);
     }
   }
 
@@ -390,7 +439,7 @@ export async function generatePcAcCronogramaPdf({ cargo, cfg, grid, weeks, final
     newContentPage();
     drawSectionBand(doc, "Últimos dias antes da prova", undefined, cursor.y);
     cursor.y += 36;
-    for (const day of finalDays) drawDay(doc, day, cursor, newContentPage);
+    drawWeekTable(doc, { weekNumber: 0, phase: "revisao", startDate: "", endDate: "", days: finalDays }, cursor, newContentPage);
   }
 
   const pageCount = doc.getNumberOfPages();
