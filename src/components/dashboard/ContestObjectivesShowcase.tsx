@@ -45,7 +45,7 @@ export function ContestObjectivesShowcase({
   onSelect,
   savingId,
 }: {
-  focusedContest?: Contest;
+  focusedContest: Contest | undefined;
   contests: Contest[];
   onSelect: (contest: Contest) => void;
   savingId?: string | null;
