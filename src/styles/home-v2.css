@@ -1,0 +1,479 @@
+/*
+ * Home v2 — cohesive redesign layer for the public homepage.
+ * Loaded LAST after the legacy home-*.css stack so its rules win on any
+ * selector of equal specificity, and uses selectors that match or exceed the
+ * specificity of the legacy rule being replaced where a plain override
+ * wouldn't win. This keeps every existing component (ContestShowcase,
+ * HomeRankingShowcase, PlansSection, the mobile layout, the sheet menu…)
+ * working exactly as before, while giving the whole page one real palette,
+ * one type scale and one card language instead of the old patchwork.
+ */
+
+/* ---------------------------------------------------------------------- */
+/* 1. Design tokens — one definition per theme, no parallel duplicate blocks */
+/* ---------------------------------------------------------------------- */
+
+:root .home.home-recomposition {
+  --home-bg: #f3f1ea;
+  --home-canvas-veil: color-mix(in srgb, var(--home-bg) 72%, transparent);
+  --home-text: #16202c;
+  --home-muted: #4d5c6c;
+  --home-line: color-mix(in srgb, #16202c 14%, transparent);
+  --home-accent: #8a5a16;
+  --home-gold: #a9731f;
+  --brass-soft: #a9731f;
+  --signal-ink: #8a5a16;
+  --home-card: color-mix(in srgb, #ffffff 92%, var(--home-bg));
+  --home-card-strong: #ffffff;
+  --home-shadow: 0 18px 44px -24px rgb(22 32 44 / 22%);
+  --home-shadow-lg: 0 28px 64px -28px rgb(22 32 44 / 28%);
+  --home-radius: 18px;
+}
+
+:root.dark .home.home-recomposition {
+  --home-bg: #0c141d;
+  --home-canvas-veil: color-mix(in srgb, var(--home-bg) 62%, transparent);
+  --home-text: #eef3f8;
+  --home-muted: #a8b6c4;
+  --home-line: color-mix(in srgb, #cfe0f0 16%, transparent);
+  --home-accent: #e3b667;
+  --home-gold: #e3b667;
+  --brass-soft: #e3b667;
+  --signal-ink: #e3b667;
+  --home-card: color-mix(in srgb, #121d28 94%, transparent);
+  --home-card-strong: #141f2a;
+  --home-shadow: 0 18px 44px -22px rgb(0 0 0 / 55%);
+  --home-shadow-lg: 0 32px 70px -26px rgb(0 0 0 / 65%);
+  --home-radius: 18px;
+}
+
+/* Base canvas + readable type floor (fixes the "fonte minúscula" complaint) */
+.home.home-recomposition {
+  background: var(--home-bg);
+  color: var(--home-text);
+  font-size: 16px;
+}
+.home.home-recomposition,
+.home.home-recomposition .mobile-homepage {
+  -webkit-font-smoothing: antialiased;
+}
+.home.home-recomposition p,
+.home.home-recomposition li,
+.home.home-recomposition dd,
+.home.home-recomposition dt,
+.home.home-recomposition summary {
+  font-size: max(13px, 1em);
+}
+.home.home-recomposition :is(.home-eyebrow, .home-signal, .home-preparation__eyebrow, .mobile-homepage__eyebrow) {
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 750;
+}
+.home.home-recomposition :is(.home-tag, .home-status) {
+  font-size: 11px !important;
+}
+.home.home-recomposition small,
+.home.home-recomposition .contest-reference,
+.home.home-recomposition .contest-details {
+  font-size: 12px !important;
+}
+.home.home-recomposition .home-faq__intro > .home-eyebrow {
+  font-size: 12px !important;
+  padding: 6px 9px !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 2. Backdrop + compact section rhythm */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .home-backdrop {
+  background: var(--home-bg);
+}
+
+.home.home-recomposition main#conteudo {
+  scroll-snap-type: y proximity;
+}
+.home.home-recomposition .home-section,
+.home.home-recomposition #inicio.home-hero,
+.home.home-recomposition #ranking-destaque.home-ranking,
+.home.home-recomposition .home-plans {
+  scroll-snap-align: start;
+  scroll-margin-top: 78px;
+}
+
+.home.home-recomposition .home-section {
+  padding-block: clamp(26px, 3.4vw, 40px) !important;
+}
+.home.home-recomposition .home-preparation__band {
+  padding: clamp(20px, 2.6vw, 30px) !important;
+}
+.home.home-recomposition .home-operations,
+.home.home-recomposition .home-plans {
+  padding-block: clamp(26px, 3.4vw, 40px) !important;
+}
+.home.home-recomposition #inicio.home-hero {
+  min-height: 0 !important;
+  padding-block: clamp(96px, 13vw, 132px) clamp(28px, 4vw, 48px) !important;
+}
+
+.home.home-recomposition .home-container {
+  width: min(100% - 2 * clamp(20px, 4vw, 48px), 1760px);
+}
+
+/* ---------------------------------------------------------------------- */
+/* 3. Header + nav */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .home-header {
+  background: color-mix(in srgb, var(--home-bg) 78%, transparent);
+  border-bottom: 1px solid var(--home-line);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+.home.home-recomposition .home-nav a {
+  color: var(--home-muted);
+  font-size: 13px;
+  font-weight: 650;
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: color 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+.home.home-recomposition .home-nav a:hover,
+.home.home-recomposition .home-nav a[aria-current="location"] {
+  color: var(--home-text);
+  background: color-mix(in srgb, var(--home-gold) 16%, transparent);
+}
+.home.home-recomposition .home-header__tagline {
+  color: var(--home-muted);
+  font-size: 12px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 4. Hero */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .hx__copy h1 {
+  font-size: clamp(2.5rem, 4.6vw, 4.1rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.03em;
+  color: var(--home-text);
+}
+.home.home-recomposition .hx__copy h1 em {
+  color: var(--home-gold);
+  font-style: normal;
+}
+.home.home-recomposition .hx__copy > p {
+  font-size: clamp(15px, 1.4vw, 17px) !important;
+  color: var(--home-muted);
+  max-width: 48ch;
+  line-height: 1.55;
+}
+.home.home-recomposition .hx__trust {
+  font-size: 12.5px;
+}
+.home.home-recomposition .hx__trust li {
+  color: var(--home-muted);
+}
+.home.home-recomposition .hx__trust svg {
+  color: var(--home-gold);
+}
+
+.home.home-recomposition .home-button {
+  border-radius: 12px !important;
+  font-weight: 750;
+  box-shadow: var(--home-shadow);
+}
+.home.home-recomposition .home-button--gold,
+.home.home-recomposition .home-button--primary {
+  background: var(--home-gold) !important;
+  color: #1a1308 !important;
+  border-color: var(--home-gold) !important;
+}
+.home.home-recomposition .home-button--gold:hover,
+.home.home-recomposition .home-button--primary:hover {
+  filter: brightness(1.08);
+}
+.home.home-recomposition .home-button--secondary {
+  background: color-mix(in srgb, var(--home-text) 6%, transparent) !important;
+  border: 1px solid var(--home-line) !important;
+  color: var(--home-text) !important;
+}
+.home.home-recomposition .home-hero__explore {
+  color: var(--home-text);
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--home-text) 5%, transparent);
+}
+.home.home-recomposition .home-ranking-hero-entry {
+  color: var(--home-gold);
+  border: 1px solid color-mix(in srgb, var(--home-gold) 45%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--home-gold) 10%, transparent);
+}
+
+.home.home-recomposition .desktop-homepage__quick-access {
+  margin-top: clamp(14px, 2vw, 22px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.home.home-recomposition .desktop-homepage__quick-access a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--home-radius);
+  border: 1px solid var(--home-line);
+  background: var(--home-card);
+  color: var(--home-text);
+  box-shadow: var(--home-shadow);
+  transition: transform 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+.home.home-recomposition .desktop-homepage__quick-access a:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--home-gold) 45%, transparent);
+}
+.home.home-recomposition .desktop-homepage__quick-access svg:first-child {
+  color: var(--home-gold);
+  flex: none;
+}
+.home.home-recomposition .desktop-homepage__quick-access small {
+  color: var(--home-muted);
+  display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 5. Headings shared by every section */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .home-heading h2,
+.home.home-recomposition .home-preparation__intro h2 {
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em;
+  color: var(--home-text);
+}
+.home.home-recomposition .home-heading h2 em,
+.home.home-recomposition .home-preparation__intro h2 em {
+  color: var(--home-gold);
+  font-style: normal;
+}
+.home.home-recomposition .home-heading p {
+  color: var(--home-muted);
+  font-size: 14px !important;
+  max-width: 56ch;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 6. Platform tabs ("Uma plataforma. A sua carreira.") */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .home-preparation__tabs {
+  gap: 6px;
+}
+.home.home-recomposition .home-preparation__tab {
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--home-muted);
+  padding: 9px 14px;
+}
+.home.home-recomposition .home-preparation__tab[data-state="active"] {
+  background: var(--home-gold);
+  color: #1a1308;
+}
+.home.home-recomposition .home-preparation__tool,
+.home.home-recomposition .home-preparation__items > article {
+  border-radius: var(--home-radius) !important;
+  border: 1px solid var(--home-line) !important;
+  background: var(--home-card) !important;
+  box-shadow: var(--home-shadow);
+  transition: transform 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+.home.home-recomposition .home-preparation__tool:hover,
+.home.home-recomposition .home-preparation__items > article:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--home-gold) 40%, transparent);
+}
+.home.home-recomposition .home-preparation__tool--featured {
+  border-color: color-mix(in srgb, var(--home-gold) 55%, transparent) !important;
+  background: linear-gradient(155deg, color-mix(in srgb, var(--home-gold) 10%, transparent), var(--home-card)) !important;
+}
+.home.home-recomposition .home-preparation__tool summary span:first-of-type,
+.home.home-recomposition .home-preparation__items h3 {
+  font-size: 14.5px !important;
+  color: var(--home-text);
+  font-weight: 700;
+}
+.home.home-recomposition .home-preparation__tool p,
+.home.home-recomposition .home-preparation__items p {
+  color: var(--home-muted);
+  font-size: 13px !important;
+}
+.home.home-recomposition .home-preparation__tool-tag {
+  background: var(--home-gold);
+  color: #1a1308;
+  font-size: 10px !important;
+}
+.home.home-recomposition .home-preparation__number {
+  color: var(--home-gold);
+}
+
+/* ---------------------------------------------------------------------- */
+/* 7. Plans + FAQ */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .home-plan {
+  border-radius: 20px !important;
+  border: 1px solid var(--home-line) !important;
+  background: var(--home-card) !important;
+  box-shadow: var(--home-shadow);
+}
+.home.home-recomposition .home-plan--featured {
+  border-color: color-mix(in srgb, var(--home-gold) 55%, transparent) !important;
+  box-shadow: var(--home-shadow-lg);
+}
+.home.home-recomposition .home-plan h3 {
+  font-size: 18px !important;
+  color: var(--home-text);
+}
+.home.home-recomposition .home-plan__description,
+.home.home-recomposition .home-plan__availability,
+.home.home-recomposition .home-plan__annual {
+  color: var(--home-muted);
+  font-size: 12.5px !important;
+}
+.home.home-recomposition .home-plan__price {
+  color: var(--home-text);
+  font-size: clamp(26px, 3vw, 34px) !important;
+}
+.home.home-recomposition .home-plans__signal {
+  border-radius: var(--home-radius) !important;
+  border: 1px solid var(--home-line) !important;
+  background: var(--home-card) !important;
+}
+.home.home-recomposition .home-tag {
+  background: var(--home-gold) !important;
+  color: #1a1308 !important;
+  border-radius: 999px !important;
+}
+
+.home.home-recomposition .home-faq {
+  border-top: 1px solid var(--home-line);
+  margin-top: clamp(24px, 3vw, 36px);
+  padding-top: clamp(24px, 3vw, 36px);
+}
+.home.home-recomposition .home-faq__intro h3 {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem) !important;
+  color: var(--home-text);
+}
+.home.home-recomposition .home-faq__list details {
+  border-radius: 14px !important;
+  border: 1px solid var(--home-line) !important;
+  background: var(--home-card) !important;
+}
+.home.home-recomposition .home-faq__list summary {
+  font-size: 14px !important;
+  color: var(--home-text);
+  font-weight: 650;
+}
+.home.home-recomposition .home-faq__list p {
+  color: var(--home-muted);
+  font-size: 13px !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 8. Footer (adds the dev signature to the desktop footer too) */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .nc-footer {
+  background: var(--home-card-strong);
+  border-top: 1px solid var(--home-line);
+}
+.home.home-recomposition .nc-footer__links a {
+  color: var(--home-muted);
+  font-size: 13px;
+}
+.home.home-recomposition .nc-footer__links a:hover {
+  color: var(--home-gold);
+}
+.home.home-recomposition .nc-footer__bar {
+  color: var(--home-muted);
+  font-size: 12px;
+}
+.home.home-recomposition .nc-footer__dev-sign {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--home-muted);
+  font-size: 12px;
+}
+.home.home-recomposition .nc-footer__dev-sign strong {
+  color: var(--home-text);
+}
+
+/* ---------------------------------------------------------------------- */
+/* 9. Mobile layout — same tokens, same card language */
+/* ---------------------------------------------------------------------- */
+
+.home.home-recomposition .mobile-homepage {
+  background: var(--home-bg);
+  color: var(--home-text);
+}
+.home.home-recomposition .mobile-homepage h1,
+.home.home-recomposition .mobile-homepage h2 {
+  color: var(--home-text);
+  letter-spacing: -0.02em;
+}
+.home.home-recomposition .mobile-homepage h1 em {
+  color: var(--home-gold);
+  font-style: normal;
+}
+.home.home-recomposition .mobile-homepage p {
+  color: var(--home-muted);
+  font-size: 14px !important;
+}
+.home.home-recomposition .mobile-homepage__cards article,
+.home.home-recomposition .mobile-plans__list li,
+.home.home-recomposition .mobile-homepage__daily {
+  border-radius: var(--home-radius) !important;
+  border: 1px solid var(--home-line) !important;
+  background: var(--home-card) !important;
+  box-shadow: var(--home-shadow);
+}
+.home.home-recomposition .mobile-plans__list li[data-featured] {
+  border-color: color-mix(in srgb, var(--home-gold) 55%, transparent) !important;
+}
+.home.home-recomposition .mobile-homepage__primary,
+.home.home-recomposition .mobile-homepage__wide-link {
+  background: var(--home-gold) !important;
+  color: #1a1308 !important;
+  border-radius: 12px !important;
+}
+.home.home-recomposition .mobile-homepage__secondary {
+  color: var(--home-text);
+}
+.home.home-recomposition .mobile-homepage__footer {
+  background: var(--home-card-strong);
+  border-top: 1px solid var(--home-line);
+}
+.home.home-recomposition .mobile-homepage__footer-copy {
+  color: var(--home-muted);
+  font-size: 12px !important;
+}
+
+.home.home-recomposition .mobile-nav-shelf__sign {
+  color: var(--home-muted);
+  font-size: 11px !important;
+}
+
+@media (max-width: 640px) {
+  .home.home-recomposition #inicio.home-hero {
+    padding-block: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home.home-recomposition main#conteudo {
+    scroll-snap-type: none;
+  }
+}
