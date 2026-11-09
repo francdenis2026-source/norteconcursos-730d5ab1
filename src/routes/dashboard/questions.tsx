@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { useQuery } from "@tanstack/react-query";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
 import { fetchEditalEditions } from "@/lib/editalEditions";
@@ -101,7 +102,7 @@ function QuestionsCatalog() {
       ? value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
       : "A confirmar";
   return (
-    <section className="space-y-6">
+    <section className="nc-student-workspace question-catalog-page space-y-6">
       <header className="catalog-command-hero tactical-feature-hero workspace-banner">
         <span className="internal-hero-kicker">Seu próximo objetivo</span>
         <h1>Concursos e editais</h1>
