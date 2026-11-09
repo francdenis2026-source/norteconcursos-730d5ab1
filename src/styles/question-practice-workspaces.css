@@ -1,7 +1,7 @@
 /* Norte Concursos — focused practice, question catalog and spaced-repetition surfaces.
    Operate mode: familiar controls, restrained brand accents, calm reading surfaces.
    Presentation only. All filtering, scoring, persistence and review behavior stay intact. */
-.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) {
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) {
   --practice-ink: #24333b;
   --practice-muted: #62737b;
   --practice-line: #dce4e6;
@@ -17,7 +17,7 @@
   font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
-.dark .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) {
+.dark .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) {
   --practice-ink: #eaf1f2;
   --practice-muted: #afc0c5;
   --practice-line: #344a52;
@@ -30,21 +30,21 @@
   --question-accent: var(--practice-accent);
   --trainer-accent: var(--practice-accent);
 }
-.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(h1,h2,h3,h4) {
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) :is(h1,h2,h3,h4) {
   color: var(--practice-ink);
   letter-spacing: -.025em;
 }
-.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) .text-muted-foreground {
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) .text-muted-foreground {
   color: var(--practice-muted);
 }
-.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(input,select,textarea,[role="combobox"]) {
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) :is(input,select,textarea,[role="combobox"]) {
   min-width: 0;
   border-color: var(--practice-line);
   border-radius: 9px;
   background: var(--practice-paper);
   color: var(--practice-ink);
 }
-.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) :is(button,a,input,select,textarea,[role="tab"],summary):focus-visible {
+.app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) :is(button,a,input,select,textarea,[role="tab"],summary):focus-visible {
   outline: 2px solid var(--practice-accent);
   outline-offset: 3px;
 }
@@ -495,6 +495,73 @@
 .app-shell[data-area="student"] .question-flashcards :is(.question-workspace__metric,.question-catalog__result-row) {
   overflow-wrap: anywhere;
 }
+/* Error notebook: make the recovery path easy to scan without weakening semantic status colors. */
+.app-shell[data-area="student"] .question-errors {
+  --question-accent: var(--practice-accent);
+  --trainer-accent: var(--practice-accent);
+  display: grid;
+  gap: 13px;
+  color: var(--practice-ink);
+}
+.app-shell[data-area="student"] .question-errors .question-workspace__toolbar {
+  align-items: center;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid var(--practice-line);
+  border-radius: 11px;
+  background: var(--practice-paper);
+}
+.app-shell[data-area="student"] .question-errors .question-workspace__toolbar [data-slot="select-trigger"] {
+  min-height: 44px;
+  border-color: var(--practice-line);
+  border-radius: 9px;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+}
+.app-shell[data-area="student"] .question-errors .question-workspace__toolbar .question-workspace__primary {
+  min-height: 44px;
+  border-radius: 9px;
+  background: var(--practice-accent-strong);
+  color: #fff;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .question-errors > .grid > [data-slot="card"],
+.app-shell[data-area="student"] .question-errors--review > [data-slot="card"] {
+  overflow: hidden;
+  border: 1px solid var(--practice-line);
+  border-radius: 13px;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .question-errors > .grid > [data-slot="card"] [data-slot="card-content"] {
+  padding: 17px 18px;
+}
+.app-shell[data-area="student"] .question-errors > .grid > [data-slot="card"] .border-t {
+  border-color: var(--practice-line);
+}
+.app-shell[data-area="student"] .question-errors--review > [data-slot="card"] [data-slot="card-content"] {
+  padding: clamp(16px,2.5vw,26px);
+}
+.app-shell[data-area="student"] .question-errors :is(.rounded-xl.border-2.border-emerald-500,.rounded-xl.border.border-amber-300) {
+  border-width: 1px;
+  border-radius: 11px;
+}
+.app-shell[data-area="student"] .question-errors .text-primary {
+  color: var(--practice-accent-strong);
+}
+.app-shell[data-area="student"] .question-errors .text-muted-foreground {
+  color: var(--practice-muted);
+}
+.app-shell[data-area="student"] .question-errors .question-workspace__toolbar > button:not(.question-workspace__primary) {
+  min-height: 44px;
+  border-radius: 9px;
+}
+.app-shell[data-area="student"] .question-errors :is(button,a):focus-visible {
+  outline: 2px solid var(--practice-accent);
+  outline-offset: 3px;
+}
+
 @media (max-width: 760px) {
   .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
     align-items: flex-start;
@@ -560,7 +627,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards) * {
+  .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) * {
     transition: none !important;
   }
 }
