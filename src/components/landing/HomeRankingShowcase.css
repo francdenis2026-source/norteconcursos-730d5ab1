@@ -477,3 +477,134 @@ body.light .home-ranking .home-ranking__cta:hover,
   .home-ranking__points { border: 1px solid CanvasText; }
   .home-ranking__cta { border: 1px solid ButtonText; }
 }
+
+
+/* Norte homepage palette: ranking adapts to the active theme instead of
+   forcing a dark panel on the light homepage. */
+:root:not(.dark) .home.home-recomposition .home-ranking__shell {
+  color: #172b35;
+  border-color: #dce6e9;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(36 110 118 / 7%), transparent 64%),
+    linear-gradient(145deg, #ffffff, #f3f7f8);
+  box-shadow: 0 18px 44px -34px rgb(11 24 32 / 28%);
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__eyebrow {
+  color: #246e76;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__heading h2,
+:root:not(.dark) .home.home-recomposition .home-ranking__bottom strong {
+  color: #172b35;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__heading h2 em {
+  color: #246e76;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__heading p:not(.home-ranking__eyebrow),
+:root:not(.dark) .home.home-recomposition .home-ranking__bottom > div,
+:root:not(.dark) .home.home-recomposition .home-ranking__details {
+  color: #5b6f79;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__status {
+  color: #246e76;
+  border-color: #c8e0e1;
+  background: #eaf4f4;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__card,
+:root:not(.dark) .home.home-recomposition .home-ranking__card[data-medal="1"] {
+  border-color: #dce6e9;
+  background: #ffffff;
+  box-shadow: 0 6px 18px -16px rgb(11 24 32 / 32%);
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__card[data-medal="1"] {
+  border-color: #d2a35b;
+  background: linear-gradient(160deg, #fffaf0, #ffffff 72%);
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__position,
+:root:not(.dark) .home.home-recomposition .home-ranking__card[data-medal="1"] .home-ranking__position {
+  color: #87602b;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__name,
+:root:not(.dark) .home.home-recomposition .home-ranking__stats dd {
+  color: #172b35;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__avatar {
+  color: #246e76;
+  border-color: #c8e0e1;
+  background: #eaf4f4;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__points {
+  border-color: #dce6e9;
+  background: #f3f7f8;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__points strong {
+  color: #174653;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__points span,
+:root:not(.dark) .home.home-recomposition .home-ranking__stats dt {
+  color: #5b6f79;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__stars {
+  color: #a47732;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__bottom {
+  border-top-color: #dce6e9;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__bottom > div svg {
+  color: #246e76;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__details summary {
+  color: #246e76;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__cta {
+  color: #ffffff;
+  background: #246e76;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__cta:hover {
+  color: #ffffff;
+  background: #1d5c63;
+}
+:root:not(.dark) .home.home-recomposition .home-ranking__empty {
+  color: #5b6f79;
+  border-color: #c8d8dc;
+  background: #ffffff;
+}
+.dark .home.home-recomposition .home-ranking__shell {
+  border-color: #29404a;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(100 183 186 / 10%), transparent 64%),
+    linear-gradient(145deg, #122630, #0b1820);
+}
+.dark .home.home-recomposition .home-ranking__eyebrow,
+.dark .home.home-recomposition .home-ranking__heading h2 em,
+.dark .home.home-recomposition .home-ranking__details summary {
+  color: #64b7ba;
+}
+.dark .home.home-recomposition .home-ranking__card {
+  border-color: #29404a;
+  background: #172f39;
+}
+.dark .home.home-recomposition .home-ranking__card[data-medal="1"] {
+  border-color: #876b3f;
+  background: linear-gradient(155deg, #263b3d, #142832);
+}
+.dark .home.home-recomposition .home-ranking__avatar {
+  border-color: #42616a;
+  background: #1b3b46;
+  color: #a8dadd;
+}
+.dark .home.home-recomposition .home-ranking__points {
+  border-color: #29404a;
+  background: #10232c;
+}
+.dark .home.home-recomposition .home-ranking__points strong { color: #eaf2f4; }
+.dark .home.home-recomposition .home-ranking__cta {
+  color: #0b1820;
+  background: #64b7ba;
+}
+.dark .home.home-recomposition .home-ranking__cta:hover {
+  color: #0b1820;
+  background: #80c9cb;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home-recomposition .home-ranking__card { transition: none; }
+}
