@@ -16,6 +16,21 @@ export const emailAuthCallback = typeof window !== "undefined"
 const authStorageKey = `sb-${new URL(supabaseUrl).hostname.split(".")[0]}-auth-token`;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, { auth: { storageKey: authStorageKey } });
 
+/**
+ * Isolated anonymous identity for the public daily challenge.
+ * Supabase Auth applies its anonymous-signup IP rate limit, while the
+ * dedicated storage key keeps this temporary visitor identity separate
+ * from any signed-in student account.
+ */
+export const guestChallengeSupabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: false,
+    storageKey: "norte-guest-challenge-auth",
+  },
+});
+
 /** Fallback for idle expiry when the auth request/lock is stalled. A hard navigation follows. */
 export function clearPersistedAuthSession() {
   for (const key of [authStorageKey, `${authStorageKey}-user`, `${authStorageKey}-code-verifier`]) {
