@@ -67,7 +67,7 @@ const destinations = [
     to: "/dashboard/cronograma",
     title: "Cronograma",
     text: "Organize seu dia de estudo",
-    tone: "blue",
+    tone: "gold",
     icon: CalendarClock,
   },
   {
@@ -80,28 +80,28 @@ const destinations = [
   {
     to: "/dashboard/library",
     title: "Conteúdo",
-    tone: "violet",
+    tone: "gold",
     text: "Leis, teoria e disciplinas",
     icon: BookOpen,
   },
   {
     to: "/dashboard/edital",
     title: "Meu edital",
-    tone: "blue",
+    tone: "gold",
     text: "Estude o que será cobrado",
     icon: FileText,
   },
   {
     to: "/dashboard/mock-exams",
     title: "Simulados",
-    tone: "rose",
+    tone: "gold",
     text: "Prepare seu ritmo de prova",
     icon: Trophy,
   },
   {
     to: "/dashboard/ranking",
     title: "Ranking",
-    tone: "amber",
+    tone: "gold",
     text: "Veja sua posição entre os alunos",
     icon: Medal,
   },
@@ -286,7 +286,7 @@ function StudentHome({ user }: { user: UserProfile }) {
       {!schedule && (
         <section
           className="student-desk__next"
-          data-accent="amber"
+          data-accent="gold"
           aria-labelledby="dashboard-next-step"
         >
           <div className="student-hub__resume-copy">
@@ -419,7 +419,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <div className="student-hub__main">
           <section
             className="student-home__card student-home__schedule"
-            data-accent="blue"
+            data-accent="gold"
             aria-labelledby="dashboard-schedule-title"
           >
             <SectionTitle
@@ -567,7 +567,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
           <section
             className="student-home__card"
-            data-accent="teal"
+            data-accent="gold"
             aria-labelledby="dashboard-rhythm-title"
           >
             <SectionTitle
@@ -645,7 +645,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
           <section
             className="student-home__card"
-            data-accent="amber"
+            data-accent="gold"
             aria-labelledby="dashboard-objective-title"
           >
             <SectionTitle icon={Target} title="Concurso em foco" id="dashboard-objective-title" />
@@ -692,7 +692,7 @@ function StudentHome({ user }: { user: UserProfile }) {
 
           <section
             className="student-home__card"
-            data-accent="violet"
+            data-accent="gold"
             aria-labelledby="dashboard-reading-title"
           >
             <SectionTitle
