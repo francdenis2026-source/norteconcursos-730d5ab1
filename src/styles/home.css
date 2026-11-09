@@ -4292,102 +4292,99 @@
   position: absolute;
   z-index: 2;
   top: clamp(24px, 2.5vw, 40px);
-  left: auto;
   right: clamp(24px, 4vw, 80px);
   width: var(--badge-w);
   aspect-ratio: var(--police-insignia-aspect, 768 / 811);
-  perspective: 700px;
+  perspective: 900px;
   padding: 0;
   border: 0;
-  background: none;
+  background: transparent;
   cursor: pointer;
   touch-action: pan-y;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
-.hero-badge__float {
+.hero-badge__float,
+.hero-badge__tilt,
+.hero-badge__spin {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
 }
-.hero-badge__tilt,
-.hero-badge__spin,
-.hero-badge__enter {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
+.hero-badge__tilt {
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 260ms cubic-bezier(.2,.7,.25,1);
 }
-.hero-badge__tilt { transform: rotateY(-6deg); transition: transform 180ms var(--ease-out); }
-.hero-badge__float { animation: badge-rest 6.5s cubic-bezier(0.32,0.72,0,1) infinite; }
-.hero-badge__glare { overflow: hidden; }
-.hero-badge__shine { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 244 214 / 40%) 50%, transparent 70%); animation: badge-shine 8s cubic-bezier(0.32,0.72,0,1) infinite; }
-.hero-badge[data-visible="false"] * { animation-play-state: paused; }
-@keyframes badge-rest { 50% { transform: translateY(-3px); } }
-@keyframes badge-shine { 0%, 65% { transform: translateX(-130%); opacity: 0; } 72% { opacity: 1; } 90%, 100% { transform: translateX(130%); opacity: 0; } }
-.hero-badge[data-reveal="pending"] { visibility: hidden; }
-.hero-badge[data-reveal="in"] .hero-badge__enter {
-  animation: hero-badge-enter 200ms var(--ease-out) both;
+.hero-badge__spin {
+  transform: translateZ(0);
+  transition: filter 220ms ease;
 }
 .hero-badge__face,
 .hero-badge__edge {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
+  backface-visibility: hidden;
+  -webkit-user-drag: none;
 }
-.hero-badge__edge { filter: brightness(0.32) saturate(0.8); }
-.hero-badge__glare {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 35%, rgb(255 244 214 / 25%), transparent 52%);
-  -webkit-mask: var(--police-insignia-art) center / contain no-repeat;
-  mask: var(--police-insignia-art) center / contain no-repeat;
-  mix-blend-mode: soft-light;
-  transform: translateZ(1px);
+.hero-badge__edge {
+  filter: brightness(.42) saturate(.92);
 }
-.hero-badge__shadow {
+.hero-badge__face {
+  transform: translateZ(3px);
+  filter: drop-shadow(0 7px 12px rgb(0 0 0 / 34%));
+}
+.hero-badge__ambient {
   position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: -14%;
-  height: 12%;
+  z-index: -1;
+  inset: -28%;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgb(0 0 0 / 55%), transparent);
-  filter: blur(4px);
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(.86);
+  background: radial-gradient(ellipse at center, rgb(224 184 103 / 22%) 0%, rgb(224 184 103 / 8%) 38%, transparent 72%);
+  transition: opacity 220ms ease, transform 320ms cubic-bezier(.2,.7,.25,1);
 }
-@keyframes hero-badge-enter {
-  from { opacity: 0; transform: translateY(4px) scale(0.96); }
-  to { opacity: 1; transform: none; }
+.hero-badge[data-hover="true"] .hero-badge__ambient,
+.hero-badge:focus-visible .hero-badge__ambient {
+  opacity: .72;
+  transform: scale(1);
 }
+.hero-badge[data-hover="true"] .hero-badge__spin,
+.hero-badge:focus-visible .hero-badge__spin {
+  filter: brightness(1.035);
+}
+.hero-badge:focus-visible {
+  filter: drop-shadow(0 0 3px rgb(224 184 103 / 45%));
+}
+.hero-badge[data-reveal="pending"] { visibility: hidden; }
 @media (max-width: 1099px) {
-  /* Anchor to the hero artwork, leaving the agent's face and copy unobstructed. */
   .hero-badge {
     --badge-w: clamp(88px, 10vw, 104px);
-    left: auto;
     right: 24px;
     top: 24px;
   }
 }
 @media (max-width: 759px) {
-  /* Celular: o distintivo ocupa o topo à direita, com ar em volta; o rótulo ao lado quebra em linhas. */
-  .home-hero__content {
-    padding-top: 64px;
-  }
+  .home-hero__content { padding-top: 64px; }
   .hero-badge {
     --badge-w: 70px;
     right: 16px;
     top: 16px;
   }
-  .home-hero__copy > .home-eyebrow {
-    max-width: calc(100% - 92px);
-  }
+  .home-hero__copy > .home-eyebrow { max-width: calc(100% - 92px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-badge[data-reveal="in"] .hero-badge__enter, .hero-badge__float, .hero-badge__shine { animation: none; }
-  .hero-badge__tilt { transition: none; }
+  .hero-badge__tilt,
+  .hero-badge__spin,
+  .hero-badge__ambient { transition: none; }
 }
-
 /* Celular/tablet: "Ver introdução" (aparece quando o navegador bloqueia o autoplay) fica no canto
    esquerdo, longe do distintivo (à direita), e a hero ganha uma faixa para ele não cobrir o texto. */
 @media (max-width: 900px) {
