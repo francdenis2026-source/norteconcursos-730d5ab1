@@ -723,3 +723,71 @@
     margin-top: 12px !important;
   }
 }
+
+
+/* Premium glass refinement: softer surfaces, no harsh outlined boxes around every line. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  align-items: flex-start !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  padding: 6px 12px !important;
+  border: 1px solid rgb(229 205 159 / 10%) !important;
+  border-left: 2px solid rgb(224 181 92 / 78%) !important;
+  border-radius: 3px !important;
+  background: linear-gradient(100deg, rgb(12 18 25 / 42%), rgb(12 18 25 / 17%)) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(115%) !important;
+  backdrop-filter: blur(7px) saturate(115%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1.hx__headline {
+  gap: 3px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+  padding: 1px 11px 4px !important;
+  margin-left: -11px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: linear-gradient(100deg, rgb(11 18 25 / 48%) 0%, rgb(11 18 25 / 26%) 72%, rgb(11 18 25 / 5%) 100%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(118%) !important;
+  backdrop-filter: blur(8px) saturate(118%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%), 0 2px 10px rgb(0 0 0 / 8%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description {
+  margin-top: 14px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description > .hx__glass-strip {
+  padding: 1px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: 0 1px 10px rgb(0 0 0 / 62%) !important;
+}
+@media (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__inner {
+    width: calc(100% - clamp(44px, 6vw, 112px)) !important;
+    max-width: 1600px !important;
+    margin-inline: auto !important;
+    justify-content: flex-start !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    margin-left: 0 !important;
+    transform: translateX(clamp(-18px, -1.2vw, -8px));
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+    padding: 1px 8px 3px !important;
+    margin-left: -8px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__kicker {
+    padding: 5px 9px !important;
+    margin-bottom: 10px !important;
+  }
+}
