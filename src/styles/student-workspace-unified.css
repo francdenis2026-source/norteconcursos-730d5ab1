@@ -1,0 +1,187 @@
+/* Shared visual foundation for student internal workspaces.
+   Scope is opt-in: only pages carrying .nc-student-workspace are affected. */
+.nc-student-workspace {
+  --ncw-ink: #26313b;
+  --ncw-muted: #667583;
+  --ncw-line: #dce3e8;
+  --ncw-surface: #ffffff;
+  --ncw-soft: #f4f6f8;
+  --ncw-accent: #ad8748;
+  --ncw-accent-soft: #f6f0e5;
+  width: 100%;
+  min-width: 0;
+  color: var(--ncw-ink);
+  gap: 14px !important;
+}
+.dark .nc-student-workspace {
+  --ncw-ink: #edf1f4;
+  --ncw-muted: #b8c2cb;
+  --ncw-line: #3b4854;
+  --ncw-surface: #1d2832;
+  --ncw-soft: #26323d;
+  --ncw-accent: #d3b477;
+  --ncw-accent-soft: #393225;
+}
+.nc-student-workspace > * { min-width: 0; }
+.nc-student-workspace .text-muted-foreground { color: var(--ncw-muted); }
+.nc-student-workspace :is([data-slot="card"],.surface-card) {
+  min-width: 0;
+  border: 1px solid var(--ncw-line);
+  border-radius: 13px;
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+  box-shadow: 0 4px 15px rgb(28 39 50 / 5%);
+}
+.nc-student-workspace [data-slot="card-header"] {
+  gap: 5px;
+  padding: 14px 16px 9px;
+}
+.nc-student-workspace [data-slot="card-content"] { padding: 11px 16px 15px; }
+.nc-student-workspace [data-slot="card-title"] {
+  color: var(--ncw-ink);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.nc-student-workspace [data-slot="card-description"] {
+  color: var(--ncw-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.nc-student-workspace :is(input,select,textarea) {
+  min-width: 0;
+  border-color: var(--ncw-line);
+  border-radius: 8px;
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+}
+.nc-student-workspace :is(a,button,input,select,textarea,[role="tab"]):focus-visible {
+  outline: 2px solid var(--ncw-accent);
+  outline-offset: 2px;
+}
+.nc-student-workspace .workspace-banner,
+.nc-student-workspace .page-hero {
+  min-height: 112px;
+  overflow: hidden;
+  border: 1px solid #3b4651 !important;
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 92% 4%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2a343e 62%, #35404a 100%) !important;
+  box-shadow: 0 8px 22px rgb(20 28 36 / 10%) !important;
+}
+.nc-student-workspace .workspace-banner :is(h1,h2),
+.nc-student-workspace .page-hero :is(h1,h2) { color: #fff !important; }
+.nc-student-workspace .workspace-banner :is(p,.page-hero__desc),
+.nc-student-workspace .page-hero .page-hero__desc { color: #d0d8df !important; }
+.nc-student-workspace .hero-chip,
+.nc-student-workspace .study-assistant-hero__eyebrow { color: #dfc797; }
+.nc-student-workspace .study-assistant-hero__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  margin-top: 5px;
+  padding: 7px 12px;
+  border: 1px solid rgb(223 199 151 / 48%);
+  border-radius: 8px;
+  color: #f7f1e7;
+  background: rgb(255 255 255 / 7%);
+  font-size: 12px;
+  font-weight: 700;
+}
+.nc-student-workspace .study-assistant-hero__action:hover { background: rgb(255 255 255 / 13%); }
+.nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--ncw-line);
+  border-radius: 10px;
+  background: var(--ncw-soft);
+}
+.nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tab"] {
+  min-height: 34px;
+  border-radius: 7px;
+  color: var(--ncw-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+.nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tab"][data-state="active"] {
+  color: var(--ncw-ink);
+  background: var(--ncw-surface);
+  box-shadow: 0 1px 4px rgb(20 30 40 / 12%);
+}
+.nc-student-workspace .rounded-xl.border,
+.nc-student-workspace .rounded-2xl.border { border-color: var(--ncw-line); }
+.nc-student-workspace .edital-modern-hero {
+  min-height: 112px;
+  padding: 18px 20px;
+  border: 1px solid #3b4651;
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 92% 4%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2a343e 62%, #35404a 100%);
+  color: #fff;
+  box-shadow: 0 8px 22px rgb(20 28 36 / 10%);
+}
+.nc-student-workspace .edital-modern-hero :is(h1,h2,p,.edital-eyebrow) { color: #fff; }
+.nc-student-workspace .edital-modern-hero .edital-eyebrow { color: #dfc797; }
+.nc-student-workspace .edital-selected,
+.nc-student-workspace .edital-progress-panel {
+  border-color: var(--ncw-line);
+  border-radius: 12px;
+  background: var(--ncw-soft);
+}
+.nc-student-workspace .edital-workspace :is(.edital-topic-link,.edital-filter-tabs button) {
+  border-color: var(--ncw-line);
+}
+.nc-student-workspace .edital-workspace .edital-topic-link {
+  border-radius: 9px;
+  background: var(--ncw-surface);
+}
+.nc-student-workspace .edital-workspace .edital-topic-link:hover {
+  border-color: var(--ncw-accent);
+  background: var(--ncw-accent-soft);
+}
+.nc-student-workspace .edital-workspace .edital-check {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+}
+.nc-student-workspace .performance-overview > section,
+.nc-student-workspace .performance-overview > div { min-width: 0; }
+.nc-student-workspace .performance-metric-card {
+  min-width: 0;
+  border: 1px solid var(--ncw-line);
+  border-radius: 12px;
+  background: var(--ncw-surface);
+}
+@media (max-width: 700px) {
+  .nc-student-workspace { gap: 11px !important; }
+  .nc-student-workspace .workspace-banner,
+  .nc-student-workspace .page-hero,
+  .nc-student-workspace .edital-modern-hero {
+    min-height: 0;
+    padding: 14px 15px;
+    border-radius: 12px;
+  }
+  .nc-student-workspace [data-slot="card-header"] { padding: 12px 13px 8px; }
+  .nc-student-workspace [data-slot="card-content"] { padding: 10px 13px 13px; }
+  .nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tablist"] {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .nc-student-workspace :is(.coach-view-switch,.performance-detail-tabs) [role="tab"] {
+    flex: 0 0 auto;
+    min-height: 40px;
+    white-space: nowrap;
+  }
+  .nc-student-workspace .edital-workspace { gap: 11px !important; }
+  .nc-student-workspace .edital-workspace .edital-topic-link { align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nc-student-workspace * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
