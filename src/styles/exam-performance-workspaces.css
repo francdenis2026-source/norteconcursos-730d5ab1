@@ -1,0 +1,457 @@
+/* Norte Concursos — exam simulation, performance and ranking.
+   Visual-only refinement: preserve existing data, scoring, subscriptions and navigation. */
+.app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) {
+  --exam-ink: #24343b;
+  --exam-muted: #63757c;
+  --exam-line: #dce5e6;
+  --exam-paper: #fff;
+  --exam-soft: #f4f7f7;
+  --exam-accent: #286a70;
+  --exam-accent-strong: #20565d;
+  --exam-accent-soft: #eaf2f2;
+  color: var(--exam-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.dark .app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) {
+  --exam-ink: #eaf1f2;
+  --exam-muted: #afc0c5;
+  --exam-line: #344a52;
+  --exam-paper: #172b33;
+  --exam-soft: #1d353d;
+  --exam-accent: #8ac9c8;
+  --exam-accent-strong: #a3d9d7;
+  --exam-accent-soft: #203e43;
+}
+.app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) :is(h1,h2,h3,h4) {
+  color: var(--exam-ink);
+  letter-spacing: -.025em;
+}
+.app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) .text-muted-foreground {
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) :is(input,select,textarea,[role="combobox"]) {
+  min-width: 0;
+  border-color: var(--exam-line);
+  border-radius: 9px;
+  background: var(--exam-paper);
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) :is(button,a,input,select,textarea,[role="tab"],summary):focus-visible {
+  outline: 2px solid var(--exam-accent);
+  outline-offset: 3px;
+}
+
+/* Timed mock exams: preparation, active paper and results share one visual rhythm. */
+.app-shell[data-area="student"] .simulator-workspace {
+  gap: 16px;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero {
+  min-height: 0;
+  padding: clamp(20px,3vw,32px);
+  border: 1px solid color-mix(in srgb,var(--exam-accent) 25%,transparent);
+  border-radius: 16px;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero__content {
+  max-width: 760px;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero__eyebrow {
+  color: color-mix(in srgb,var(--exam-accent) 85%,white);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero h1 {
+  margin-top: 7px;
+  color: #fff;
+  font-size: clamp(25px,3vw,34px);
+  font-weight: 850;
+  letter-spacing: -.04em;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero__content > p {
+  max-width: 60ch;
+  margin-top: 8px;
+  color: rgb(245 250 250 / 82%);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-simulator-hero__catalog {
+  display: inline-flex;
+  margin-top: 13px;
+  padding: 6px 9px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 8%);
+  color: #f1f7f7;
+  font-size: 11px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .simulator-workspace .page-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 15px;
+}
+.app-shell[data-area="student"] .simulator-workspace .page-hero__stats > * {
+  min-width: 140px;
+  padding: 9px 11px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 7%);
+}
+.app-shell[data-area="student"] .simulator-workspace > p.rounded-xl.border.bg-card {
+  border-color: var(--exam-line);
+  border-radius: 10px;
+  background: var(--exam-soft);
+  color: var(--exam-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.app-shell[data-area="student"] .simulator-workspace > .grid.gap-6.xl\:grid-cols-\[1\.7fr_1fr\] {
+  align-items: start;
+  gap: 14px;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel {
+  overflow: hidden;
+  border: 1px solid var(--exam-line);
+  border-radius: 14px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-header"] {
+  padding: 17px 18px 13px;
+  border-bottom: 1px solid var(--exam-line);
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-content"] {
+  padding: 17px 18px;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-title"] {
+  color: var(--exam-ink);
+  font-size: 16px;
+  font-weight: 780;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-description"] {
+  color: var(--exam-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel :is(input,[data-slot="select-trigger"]) {
+  min-height: 44px;
+  border-color: var(--exam-line);
+  border-radius: 9px;
+  background: var(--exam-paper);
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel label.flex.items-start {
+  border-color: var(--exam-line);
+  border-radius: 10px;
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel .hero-primary-action {
+  min-height: 46px;
+  border-radius: 9px;
+  background: var(--exam-accent-strong);
+  color: #fff;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel .hero-primary-action:disabled {
+  opacity: .48;
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel .rounded-2xl.border-dashed {
+  border-color: var(--exam-line);
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel ul[aria-label="Últimas tentativas"] > li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--exam-line);
+}
+.app-shell[data-area="student"] .simulator-workspace .command-panel ul[aria-label="Últimas tentativas"] > li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.app-shell[data-area="student"] .simulator-workspace .exam-question-window,
+.app-shell[data-area="student"] .simulator-workspace .mock-result-hero {
+  border-radius: 14px;
+}
+.app-shell[data-area="student"] .simulator-workspace .mock-result-hero h1 {
+  color: #fff;
+}
+.app-shell[data-area="student"] .simulator-workspace [aria-label="Regra de correção e ranking"] {
+  border-color: var(--exam-line);
+  border-radius: 12px;
+  background: var(--exam-paper);
+}
+.app-shell[data-area="student"] .simulator-workspace [aria-label="Regra de correção e ranking"] [data-slot="card-content"] {
+  padding: 16px;
+}
+.app-shell[data-area="student"] .simulator-workspace .grid.grid-cols-5 > button {
+  min-width: 40px;
+  min-height: 44px;
+  border-radius: 8px;
+}
+.app-shell[data-area="student"] .simulator-workspace :is(.exam-question-window,[data-slot="card"]) {
+  border-color: var(--exam-line);
+}
+
+/* Performance: strong hierarchy for headline metrics, calm chart and diagnostic surfaces. */
+.app-shell[data-area="student"] .performance-page {
+  gap: 16px;
+}
+.app-shell[data-area="student"] .performance-page .page-hero--lg {
+  min-height: 132px;
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .performance-page > .flex.flex-wrap.items-center.justify-between {
+  border-color: var(--exam-line);
+  border-radius: 12px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview > section.grid {
+  gap: 10px;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview > section.grid > * {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--exam-line);
+  border-radius: 12px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview > section.grid > * :is(p,span,strong) {
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview > section.grid > * [data-slot="card-content"] {
+  padding: 14px;
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid var(--exam-line);
+  border-radius: 11px;
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tab"] {
+  min-height: 42px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--exam-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tab"][data-state="active"] {
+  background: var(--exam-paper);
+  color: var(--exam-accent-strong);
+  box-shadow: 0 1px 3px rgb(15 35 42 / 10%);
+}
+.app-shell[data-area="student"] .performance-page .performance-overview [data-slot="card"] {
+  border-color: var(--exam-line);
+  border-radius: 12px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview [data-slot="card-header"] {
+  padding: 16px 17px 10px;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview [data-slot="card-content"] {
+  padding: 13px 17px 17px;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview [data-slot="card-title"] {
+  color: var(--exam-ink);
+  font-size: 15px;
+  font-weight: 780;
+}
+.app-shell[data-area="student"] .performance-page .performance-overview .rounded-xl.border.p-3 {
+  border-color: var(--exam-line);
+  background: var(--exam-soft);
+}
+
+/* Ranking: search, position summary and leaderboard are a single coherent workspace. */
+.app-shell[data-area="student"] .ranking-workspace {
+  display: grid;
+  gap: 14px;
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-glass-header {
+  min-height: 0;
+  padding: 24px clamp(18px,3vw,30px);
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-glass-header h1 {
+  color: #fff;
+  font-size: clamp(26px,3vw,34px);
+  letter-spacing: -.04em;
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-glass-header__description,
+.app-shell[data-area="student"] .ranking-workspace .ranking-glass-header__privacy {
+  color: rgb(245 250 250 / 82%);
+}
+.app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] {
+  overflow: hidden;
+  border: 1px solid var(--exam-line);
+  border-radius: 14px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] [data-slot="card-header"] {
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--exam-line);
+}
+.app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] [data-slot="card-content"] {
+  padding: 17px 18px;
+}
+.app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] [data-slot="card-title"] {
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] {
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid var(--exam-line);
+  border-radius: 10px;
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] button {
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] button[aria-pressed="true"] {
+  background: var(--exam-accent-strong);
+  color: #fff;
+}
+.app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] button[aria-pressed="false"] {
+  background: transparent;
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] .ranking-workspace [role="status"] {
+  border-color: color-mix(in srgb,var(--exam-accent) 35%,var(--exam-line));
+  border-radius: 11px;
+  background: var(--exam-accent-soft);
+}
+.app-shell[data-area="student"] .ranking-workspace #ranking-search,
+.app-shell[data-area="student"] .ranking-workspace #ranking-size {
+  min-height: 44px;
+  border-color: var(--exam-line);
+  border-radius: 9px;
+  background: var(--exam-paper);
+}
+.app-shell[data-area="student"] .ranking-workspace ol[aria-label="Classificação dos candidatos"] {
+  display: grid;
+  gap: 7px;
+}
+.app-shell[data-area="student"] .ranking-workspace ol[aria-label="Classificação dos candidatos"] li > button {
+  min-height: 68px;
+  padding: 11px 13px;
+  border-color: var(--exam-line);
+  border-radius: 11px;
+  background: var(--exam-paper);
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] .ranking-workspace ol[aria-label="Classificação dos candidatos"] li > button:hover {
+  border-color: var(--exam-accent);
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-profile {
+  border-color: var(--exam-line);
+  background: var(--exam-paper);
+}
+
+/* Exam panorama: filter controls and incidence analysis become easier to scan. */
+.app-shell[data-area="student"] .exam-panorama-workspace {
+  display: grid;
+  gap: 15px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace .page-hero {
+  min-height: 0;
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace > [data-slot="card"] {
+  border-color: var(--exam-line);
+  border-radius: 12px;
+  background: var(--exam-paper);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace > [data-slot="card"] [data-slot="card-header"] {
+  padding: 16px 18px 10px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace > [data-slot="card"] [data-slot="card-content"] {
+  padding: 15px 18px 17px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace [id="panorama-filtros"] {
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .exam-panorama-workspace [id="panorama-filtros"] button {
+  min-height: 40px;
+  border-radius: 8px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace [id="panorama-filtros"] select {
+  min-height: 44px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace > .grid.grid-cols-2.md\:grid-cols-4 > div {
+  min-width: 0;
+  padding: 13px 14px;
+  border-color: var(--exam-line);
+  border-radius: 11px;
+  background: var(--exam-paper);
+}
+.app-shell[data-area="student"] .exam-panorama-workspace > .grid.grid-cols-2.md\:grid-cols-4 > div p:last-child {
+  color: var(--exam-ink);
+  font-size: 21px;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.app-shell[data-area="student"] .exam-panorama-workspace tbody tr {
+  border-color: var(--exam-line);
+}
+.app-shell[data-area="student"] .exam-panorama-workspace tbody tr:hover {
+  background: var(--exam-soft);
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .simulator-workspace,
+  .app-shell[data-area="student"] .performance-page,
+  .app-shell[data-area="student"] .ranking-workspace,
+  .app-shell[data-area="student"] .exam-panorama-workspace {
+    gap: 12px;
+  }
+  .app-shell[data-area="student"] .simulator-workspace > .grid.gap-6.xl\:grid-cols-\[1\.7fr_1fr\] {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .app-shell[data-area="student"] .simulator-workspace .page-hero__stats > * {
+    flex: 1 1 130px;
+  }
+  .app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-header"],
+  .app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-content"] {
+    padding: 13px;
+  }
+  .app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] [data-slot="card-header"],
+  .app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] [data-slot="card-content"] {
+    padding-inline: 13px;
+  }
+  .app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  .app-shell[data-area="student"] .ranking-workspace [role="group"][aria-label="Seção do ranking"] button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .app-shell[data-area="student"] .ranking-workspace ol[aria-label="Classificação dos candidatos"] li > button {
+    grid-template-columns: 36px minmax(0,1fr) auto;
+    gap: 8px;
+    padding: 10px;
+  }
+  .app-shell[data-area="student"] .exam-panorama-workspace > .grid.grid-cols-2.md\:grid-cols-4 {
+    gap: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) * {
+    transition: none !important;
+  }
+}
