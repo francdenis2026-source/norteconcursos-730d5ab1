@@ -474,3 +474,29 @@
     min-height: 330px !important;
   }
 }
+
+
+/* Header stability: keep the public navigation anchored to the viewport.
+   Scrolling may change only its surface tone; never its position or dimensions. */
+.home.hr-canvas .home-header.hr-header {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
+  top: 0 !important;
+  z-index: 1200 !important;
+  margin: 0 !important;
+  transform: none !important;
+  translate: none !important;
+  animation: none !important;
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+  will-change: auto !important;
+}
+.home.hr-canvas .home-header.hr-header,
+.home.hr-canvas .home-header.hr-header[data-scrolled] {
+  width: 100% !important;
+}
+.home.hr-canvas .home-header.hr-header .home-header__inner,
+.home.hr-canvas .home-header.hr-header[data-scrolled] .home-header__inner {
+  min-height: var(--nc-fixed-header-height, 66px) !important;
+  height: var(--nc-fixed-header-height, 66px) !important;
+  box-sizing: border-box !important;
+}
