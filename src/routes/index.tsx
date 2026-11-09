@@ -93,6 +93,7 @@ import "@/styles/home-desktop-pro.css";
 import "@/styles/home-viewport-fit.css";
 import "@/styles/home-showcase-redesign.css";
 import "@/styles/home-contests-compact.css";
+import "@/styles/home-hero-strategy.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
