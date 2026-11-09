@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
 import { examCoverage } from "@/lib/examCoverage";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
