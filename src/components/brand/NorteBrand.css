@@ -28,3 +28,31 @@
 :root:not(.dark) :is(.app-shell, .app-sheet) .norte-brand__subtitle {
   fill: #947335;
 }
+
+/* Homepage brand entrance: a short, lightweight CSS-only reveal.
+   It animates the existing logo in place and never delays page rendering. */
+.home-header .norte-brand .norte-brand__mark {
+  transform-origin: 50% 50%;
+  animation: norte-home-mark-arrive 680ms cubic-bezier(.2,.72,.22,1) both;
+}
+.home-header .norte-brand .norte-brand__wordmark {
+  transform-origin: left center;
+  animation: norte-home-wordmark-arrive 620ms cubic-bezier(.2,.72,.22,1) 110ms both;
+}
+@keyframes norte-home-mark-arrive {
+  0% { opacity: 0; transform: translateY(7px) scale(.88) rotate(-9deg); }
+  72% { opacity: 1; transform: translateY(-1px) scale(1.025) rotate(1deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes norte-home-wordmark-arrive {
+  0% { opacity: 0; transform: translateX(-9px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-header .norte-brand .norte-brand__mark,
+  .home-header .norte-brand .norte-brand__wordmark {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
