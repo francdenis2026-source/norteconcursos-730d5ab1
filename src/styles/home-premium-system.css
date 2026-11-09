@@ -1312,7 +1312,7 @@
   --home-muted: var(--nc-v2-muted);
   --home-line: var(--nc-v2-line);
   --home-gold: var(--nc-v2-gold-500);
-  --home-accent: var(--nc-v2-teal-600);
+  --home-accent: #246e76;
   --home-accent-bg: #e5f2f2;
   color: var(--nc-v2-ink);
 }
@@ -1350,8 +1350,8 @@
 }
 .dark .home.home-recomposition .home-header__register,
 .dark .home.home-recomposition .home-preparation__tab[data-state="active"] {
-  background: #2f8790;
-  border-color: #2f8790;
+  background: #246e76;
+  border-color: #246e76;
   color: #fff;
 }
 .home.home-recomposition #inicio .home-button--gold {
@@ -1360,8 +1360,8 @@
   color: #fff;
 }
 .home.home-recomposition #inicio .home-button--gold:hover {
-  background: #246e76;
-  border-color: #246e76;
+  background: #1d5c63;
+  border-color: #1d5c63;
 }
 .dark .home.home-recomposition #inicio .home-button--gold {
   background: #64b7ba;
@@ -1389,13 +1389,13 @@
   border-color: var(--home-line);
 }
 .home.home-recomposition :is(.home-heading h2, .home-preparation__intro h2) em {
-  color: var(--nc-v2-teal-600);
+  color: #246e76;
 }
 .dark .home.home-recomposition :is(.home-heading h2, .home-preparation__intro h2) em {
   color: var(--nc-v2-teal-400);
 }
 .home.home-recomposition :is(a,button,summary):focus-visible {
-  outline-color: var(--nc-v2-teal-600);
+  outline-color: #246e76;
 }
 .home.home-recomposition ::selection {
   background: #cce8e8;
@@ -1434,4 +1434,80 @@
   .home.home-recomposition .home-operations { padding-block: 24px; }
   .home.home-recomposition .home-preparation { padding-block: 16px 22px; }
   .home.home-recomposition .home-plans { padding-block: 22px; }
+}
+
+
+/* Accessibility and typography refinement for the selected palette. */
+.home.home-recomposition {
+  --home-accent: #246e76;
+  --home-gold: #d2a35b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.home.home-recomposition :is(.home-heading h2, .home-preparation__intro h2) em {
+  color: #246e76;
+}
+.home.home-recomposition .home-button--gold,
+.home.home-recomposition #inicio .home-button--gold {
+  background: #246e76;
+  border-color: #246e76;
+  color: #ffffff;
+}
+.home.home-recomposition .home-button--gold:hover,
+.home.home-recomposition #inicio .home-button--gold:hover {
+  background: #1d5c63;
+  border-color: #1d5c63;
+}
+.home.home-recomposition .home-testing,
+.home.home-recomposition .home-testing strong {
+  color: #87602b;
+}
+.home.home-recomposition .home-trust :is(span, svg) {
+  color: var(--home-muted);
+}
+.home.home-recomposition .home-trust svg {
+  color: #246e76;
+}
+.home.home-recomposition .home-preparation__number,
+.home.home-recomposition .home-preparation__challenge,
+.home.home-recomposition .home-faq__list summary,
+.home.home-recomposition .home-plan__features summary {
+  color: #246e76;
+}
+.dark .home.home-recomposition {
+  --home-accent: #64b7ba;
+}
+.dark .home.home-recomposition :is(.home-heading h2, .home-preparation__intro h2) em,
+.dark .home.home-recomposition .home-preparation__number,
+.dark .home.home-recomposition .home-preparation__challenge,
+.dark .home.home-recomposition .home-faq__list summary,
+.dark .home.home-recomposition .home-plan__features summary {
+  color: #64b7ba;
+}
+.dark .home.home-recomposition .home-button--gold,
+.dark .home.home-recomposition #inicio .home-button--gold {
+  background: #64b7ba;
+  border-color: #64b7ba;
+  color: #0b1820;
+}
+.dark .home.home-recomposition .home-button--gold:hover,
+.dark .home.home-recomposition #inicio .home-button--gold:hover {
+  background: #80c9cb;
+  border-color: #80c9cb;
+}
+.home.home-recomposition :is(a,button,summary):focus-visible {
+  outline: 2px solid #246e76;
+  outline-offset: 3px;
+}
+.dark .home.home-recomposition :is(a,button,summary):focus-visible {
+  outline-color: #64b7ba;
+}
+.home.home-recomposition .home-plan__price,
+.home.home-recomposition .contest-card__meta,
+.home.home-recomposition .home-preparation__number {
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 760px) {
+  .home.home-recomposition { font-size: 15px; }
+  .home.home-recomposition :is(p, li) { line-height: 1.55; }
 }
