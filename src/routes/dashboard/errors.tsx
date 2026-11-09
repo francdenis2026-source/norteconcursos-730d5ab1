@@ -68,6 +68,7 @@ import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import "@/styles/errors-refinement.css";
+import "@/styles/question-practice-workspaces.css";
 
 export const Route = createFileRoute("/dashboard/errors")({
   component: ErrorsPage,
