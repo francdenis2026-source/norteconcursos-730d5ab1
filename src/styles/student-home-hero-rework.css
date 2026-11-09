@@ -426,3 +426,132 @@
     transition: none;
   }
 }
+
+
+/* Final anti-clipping pass: legacy dashboard rules must not constrain copy
+   inside the redesigned student masthead, especially on narrow viewports. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+> .student-hub__masthead--revamped.workspace-banner {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  contain: none !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__hero-layout,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__hero-copy,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__exam-spotlight {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  contain: none !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__hero-copy :is(h1, p, span, a),
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__exam-spotlight :is(p, span, label) {
+  display: block;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__masthead--revamped h1 {
+  display: block !important;
+  width: 100%;
+  padding-block: 3px 5px;
+  line-height: 1.18 !important;
+  overflow: visible !important;
+  text-wrap: pretty;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__exam-date {
+  width: 100%;
+  padding-block: 3px 5px;
+  line-height: 1.2 !important;
+  overflow: visible !important;
+  text-wrap: pretty;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__exam-countdown {
+  width: 100%;
+  padding-block: 2px;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 900px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__hero-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: stretch;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__hero-copy,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__exam-spotlight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  > .student-hub__masthead--revamped.workspace-banner {
+    padding: 16px !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__hero-copy :is(h1, p),
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__exam-spotlight :is(p, span) {
+    overflow-wrap: anywhere !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__masthead-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content
+  .student-home.student-desk.student-overview
+  .student-hub__exam-spotlight-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
