@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { platformNow } from "@/lib/platformClock";
+import { backdropClockAngles } from "@/lib/backdropClock";
 
 // Dial geometry measured on the 656×856 art (bullets cropped out): pivot and hand reach in art pixels.
 const CX = 309;
@@ -22,13 +24,10 @@ export function HeroEmblemClock() {
     let timeout = 0;
     let interval = 0;
     const tick = () => {
-      const now = new Date();
-      const hours = now.getHours() % 12;
-      const minutes = now.getMinutes();
-      const seconds = now.getSeconds();
-      const hourDeg = (hours + minutes / 60) * 30;
-      const minuteDeg = (minutes + seconds / 60) * 6;
-      const secondDeg = seconds * 6;
+      const angles = backdropClockAngles(platformNow());
+      const hourDeg = angles.hour;
+      const minuteDeg = angles.minute;
+      const secondDeg = angles.second;
       hourHand.current?.setAttribute("transform", `rotate(${hourDeg} ${CX} ${CY})`);
       minuteHand.current?.setAttribute("transform", `rotate(${minuteDeg} ${CX} ${CY})`);
       secondHand.current?.setAttribute("transform", `rotate(${secondDeg} ${CX} ${CY})`);
