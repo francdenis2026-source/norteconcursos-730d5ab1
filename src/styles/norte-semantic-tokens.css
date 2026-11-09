@@ -120,6 +120,15 @@
   --nc-color-disabled: var(--muted-foreground);
 }
 
+/* Application surfaces use the same gold primary action in both themes. */
+.dark .app-shell {
+  --primary: var(--nc-color-action);
+  --primary-foreground: var(--nc-color-action-foreground);
+  --ring: var(--nc-color-focus);
+  --sidebar-primary: var(--nc-color-action);
+  --sidebar-primary-foreground: var(--nc-color-action-foreground);
+}
+
 /* Keep disabled controls distinct without making them look interactive. */
 :where(button, input, select, textarea, [role="button"]):disabled,
 :where(button, input, select, textarea, [aria-disabled="true"]) {
