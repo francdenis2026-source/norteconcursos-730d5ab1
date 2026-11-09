@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { useQuery } from "@tanstack/react-query";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
 import { fetchEditalEditions } from "@/lib/editalEditions";
@@ -14,6 +13,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/questions")({
   component: QuestionsCatalog,
