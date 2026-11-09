@@ -124,7 +124,7 @@
 .dark .app-shell {
   --primary: var(--nc-color-action);
   --primary-foreground: var(--nc-color-action-foreground);
-  --ring: var(--nc-color-focus);
+  --ring: var(--brass);
   --sidebar-primary: var(--nc-color-action);
   --sidebar-primary-foreground: var(--nc-color-action-foreground);
 }
