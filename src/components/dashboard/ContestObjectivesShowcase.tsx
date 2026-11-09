@@ -137,4 +137,5 @@ export function ContestObjectivesShowcase({
         )}
       </div>
     </section>
+  );
 }
