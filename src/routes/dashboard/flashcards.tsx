@@ -369,6 +369,7 @@ function FlashcardsPage() {
   }
 
   async function remove(c: Card_) {
+    if (!user) return;
     if (
       !(await confirmDialog({
         title: "Excluir cartão?",
