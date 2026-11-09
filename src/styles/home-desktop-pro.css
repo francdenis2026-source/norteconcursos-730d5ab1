@@ -1,7 +1,8 @@
 /* Desktop homepage: compact professional pass. Loaded last; desktop-only (>=761px). */
 @media (min-width: 761px) {
   /* Quiet canvas: remove the busy emblem/clock behind every section. */
-  html body .home .home-backdrop { opacity: 0.06 !important; filter: grayscale(1) blur(2px); }
+  /* Keep the original homepage clock and background texture visible. */
+  html body .home .home-backdrop { opacity: 1 !important; filter: none !important; }
   html body .home .home-operations__art { opacity: 0.12 !important; }
 
   /* Consistent rhythm between sections. */
@@ -277,4 +278,38 @@
   opacity: 1 !important;
   -webkit-mask-image: none !important;
   mask-image: none !important;
+}
+
+
+/* Restore the full homepage artwork: portrait photo + live clock backdrop.
+   Only a subtle text-side gradient remains for headline contrast. */
+.home.home .home-hero {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.home.home .home-hero::after {
+  content: "" !important;
+  display: block !important;
+  z-index: 1 !important;
+  background: linear-gradient(
+    90deg,
+    rgb(7 14 23 / 66%) 0%,
+    rgb(7 14 23 / 44%) 27%,
+    rgb(7 14 23 / 16%) 46%,
+    transparent 62%
+  ) !important;
+}
+.home.home .home-hero > .home-hero__image {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  filter: saturate(1.06) contrast(1.04) !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 100%) !important;
+  background: transparent !important;
+}
+.home.home .home-hero .home-hero__emblem-clock {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
