@@ -631,3 +631,507 @@ details.subtopics-panel > summary > .subtopics-count {
     .forEach(count=>count.remove());
 })();
 </script>
+
+<style id="universal-topic-structure-v4-css">
+/* One consistent layout for every topic and its nested checklist. */
+label.topic.semantic-has-subtopics {
+  display: grid !important;
+  grid-template-columns: 22px minmax(0,1fr) auto auto !important;
+  align-items: start !important;
+  column-gap: 8px !important;
+}
+label.topic.semantic-has-subtopics > .topic-copy {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  display: block !important;
+  min-width: 0 !important;
+  width: auto !important;
+  overflow-wrap: anywhere !important;
+}
+label.topic.semantic-has-subtopics > .topic-priority {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  white-space: nowrap !important;
+}
+label.topic.semantic-has-subtopics > .marker-tools {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+}
+.subtopics-panel > summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 7px !important;
+}
+.subtopics-panel > summary::before { flex: 0 0 18px !important; margin: 0 !important; }
+.subtopics-panel > summary > span:first-child {
+  display: inline-flex !important;
+  flex: 0 1 auto !important;
+  width: auto !important;
+  max-width: max-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: #1e3a8a !important;
+}
+.subtopics-panel > summary > .subtopics-count { display: none !important; }
+.semantic-subtopics {
+  display: grid !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+.semantic-subtopic {
+  display: grid !important;
+  grid-template-columns: 18px minmax(0,1fr) !important;
+  align-items: start !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  padding: 5px 7px !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.semantic-subtopic > input {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 16px !important;
+  min-width: 16px !important;
+  height: 16px !important;
+  margin: 2px 0 0 !important;
+  position: static !important;
+}
+.semantic-subtopic > span {
+  grid-column: 2 !important;
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+}
+</style>
+<script id="universal-topic-structure-v4">
+(()=> {
+  const storageKey='norte-concursos-pcac-subtopics-v4';
+  const markerKey='norte-concursos-pcac-marcadores';
+  const collapseKey='norte-concursos-pcac-topic-collapse';
+  const clean=value=>(value||'').replace(/\s+/g,' ').trim();
+  const normalize=value=>clean(value).toLocaleLowerCase('pt-BR');
+  const readStore=key=>{
+    try {
+      const value=JSON.parse(localStorage.getItem(key)||'{}');
+      return value && typeof value==='object' ? value : {};
+    } catch { return {}; }
+  };
+  const saved=readStore(storageKey);
+  const marks=readStore(markerKey);
+  const collapsed=readStore(collapseKey);
+
+  function sentenceParts(value) {
+    return value.split(/(?<!\d)[.!?]\s+(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ])/u)
+      .map(part=>clean(part)).filter(Boolean);
+  }
+  function splitBody(value) {
+    return value.split(/\s+[–—]\s+/u)
+      .flatMap(part=>part.split(/\s*;\s*/u))
+      .flatMap(sentenceParts)
+      .map(part=>clean(part.replace(/^[–—-]\s*/u,'')))
+      .filter(Boolean);
+  }
+  function parseTopic(raw,row) {
+    const text=clean(raw);
+    if(!text) return {title:'',subtopics:[]};
+
+    const numbered=[...text.matchAll(/\b(\d{1,2})\.(\d{1,2})(?:\.(\d{1,2}))?\.?\s+/gu)]
+      .filter(match=>{
+        const before=text.slice(0,match.index).trimEnd();
+        return match.index===0 || /[.!?;:]\s*$/u.test(before);
+      });
+
+    if(numbered.length) {
+      const prefix=text.slice(0,numbered[0].index).trim();
+      const majors=new Set(numbered.map(match=>match[1]));
+      const prefixMajor=prefix.match(/^\s*(\d{1,2})(?:\.|\s)/u)?.[1];
+      const sameMajor=majors.size===1 && (!prefixMajor || prefixMajor===numbered[0][1]);
+      const valid=sameMajor && (numbered.length>=2 || prefixMajor===numbered[0][1]);
+      if(valid) {
+        const chunks=numbered.map((match,index)=>
+          clean(text.slice(match.index,numbered[index+1]?.index ?? text.length))
+        ).filter(Boolean);
+        if(prefix) {
+          const colon=prefix.indexOf(':');
+          const title=colon>0 && colon<180 ? clean(prefix.slice(0,colon)) : prefix;
+          const leading=colon>0 && colon<180 ? clean(prefix.slice(colon+1)) : '';
+          return {title,subtopics:[...splitBody(leading),...chunks]};
+        }
+        const previous=row?.previousElementSibling;
+        if(previous && previous.tagName==='H3') {
+          return {title:clean(previous.textContent),subtopics:chunks};
+        }
+        if(chunks.length>1) return {title:chunks[0],subtopics:chunks.slice(1)};
+      }
+    }
+
+    const colon=text.indexOf(':');
+    if(colon>0 && colon<180) {
+      return {title:clean(text.slice(0,colon)),subtopics:splitBody(text.slice(colon+1))};
+    }
+
+    const dash=text.match(/\.\s+[–—]\s+/u);
+    if(dash) {
+      const index=text.indexOf(dash[0]);
+      return {
+        title:clean(text.slice(0,index+1)),
+        subtopics:splitBody(text.slice(index+dash[0].length))
+      };
+    }
+
+    const sentences=sentenceParts(text);
+    if(sentences.length>=2) {
+      return {title:sentences[0],subtopics:sentences.slice(1).flatMap(splitBody)};
+    }
+
+    const semicolonParts=text.split(/\s*;\s*/u).map(clean).filter(Boolean);
+    if(semicolonParts.length>=2) {
+      return {title:semicolonParts[0],subtopics:semicolonParts.slice(1).flatMap(splitBody)};
+    }
+
+    return {title:text,subtopics:[]};
+  }
+
+  function childText(child) {
+    const textNode=[...child.children].find(element=>
+      element.tagName==='SPAN' && !element.classList.contains('topic-priority')
+    );
+    if(textNode) return clean(textNode.textContent);
+    return clean([...child.childNodes]
+      .filter(node=>!(node.nodeType===1 && node.classList.contains('topic-priority')))
+      .map(node=>node.textContent||'').join(' '));
+  }
+
+  function rawTopicText(row,copy) {
+    const oldChildren=[...row.querySelectorAll('.semantic-subtopic,.subtopic')];
+    const oldSubtexts=oldChildren.map(childText).filter(Boolean);
+    const heading=copy.querySelector(':scope > .semantic-parent') ||
+      [...copy.children].find(element=>
+        element.tagName==='SPAN' &&
+        !element.classList.contains('topic-actions') &&
+        !element.classList.contains('topic-subtopic-status')
+      );
+    let base='';
+    if(heading) base=clean(heading.textContent);
+    else {
+      base=clean([...copy.childNodes]
+        .filter(node=>!(node.nodeType===1 && (
+          node.classList.contains('topic-actions') ||
+          node.classList.contains('topic-subtopic-status') ||
+          node.classList.contains('subtopics-panel') ||
+          node.classList.contains('semantic-subtopics') ||
+          node.classList.contains('subtopics')
+        )))
+        .map(node=>node.textContent||'').join(' '));
+    }
+    return {
+      raw:oldSubtexts.length ? [base,...oldSubtexts].filter(Boolean).join('; ') : base,
+      oldChildren:oldChildren.map((element,index)=>({
+        text:oldSubtexts[index]||childText(element),
+        checked:!!element.querySelector('input.subtopic-study')?.checked,
+        key:element.querySelector('input.subtopic-study')?.dataset.key||''
+      })),
+      oldOpen:!!copy.querySelector('details.subtopics-panel')?.open
+    };
+  }
+
+  function addPriority(row) {
+    if(row.querySelector(':scope > .topic-priority')) return;
+    const rules=[
+      {level:'very-high',label:'Muito alta',re:/\b(teoria geral do crime|inquérito policial|provas?|cadeia de custódia|prisões?|crimes contra a pessoa|crimes contra o patrimônio|crimes contra a administração pública|interpretação|coesão|sintaxe|concordância|regência|probabilidade|segurança da informação|autenticação|redes de computadores|patrimônio|demonstrações contábeis|gestão documental)\b/i},
+      {level:'high',label:'Alta',re:/\b(articulação textual|reescrita|pontuação|conjuntos|porcentagem|estatística|média|mediana|dispersão|bancos de dados|criptografia|metadados|análise de dados|classificação|temporalidade|balística|documentoscopia|identificação criminal)\b/i},
+      {level:'medium',label:'Média',re:/\b(morfologia|formação de palavras|figuras de linguagem|administração|planejamento|organização|atendimento|ética|arquivo|preservação|história|geografia)\b/i}
+    ];
+    const text=clean(row.querySelector('.topic-copy')?.textContent||row.textContent);
+    const hit=rules.find(rule=>rule.re.test(text));
+    const badge=document.createElement('span');
+    badge.className='topic-priority '+(hit?'priority-'+hit.level:'priority-base');
+    badge.textContent=hit?hit.label:'Base do edital';
+    badge.dataset.help=hit
+      ? (hit.level==='very-high'?'Prioridade máxima: peso do edital e recorrência IDECAN.':hit.level==='high'?'Alta prioridade: recorrência IDECAN e relevância para o cargo.':'Prioridade intermediária: revisar após o núcleo principal.')
+      : 'Conteúdo oficial: manter no ciclo de estudos.';
+    row.append(badge);
+  }
+
+  function addActions(row,copy) {
+    if(copy.querySelector('.topic-actions')) return;
+    const summary=row.closest('.subject-collapse')?.querySelector(':scope > summary');
+    const subject=clean(summary?.textContent).toUpperCase();
+    const subjects={
+      'LÍNGUA PORTUGUESA':'Língua Portuguesa','RACIOCÍNIO LÓGICO':'Raciocínio Lógico',
+      'NOÇÕES DE INFORMÁTICA':'Informática','DIREITO PENAL':'Direito Penal',
+      'DIREITO PROCESSUAL PENAL':'Direito Processual Penal','DIREITO CONSTITUCIONAL':'Direito Constitucional',
+      'DIREITO ADMINISTRATIVO':'Direito Administrativo','CONTABILIDADE GERAL':'Contabilidade Geral',
+      'ESTATÍSTICA':'Estatística','CRIMINALÍSTICA':'Criminalística','MEDICINA LEGAL':'Medicina Legal',
+      'CRIMINOLOGIA':'Criminologia'
+    };
+    const canonical=Object.entries(subjects).find(([key])=>subject.includes(key))?.[1];
+    if(!canonical) return;
+    const videoSubjects=['Língua Portuguesa','Raciocínio Lógico','Direito Constitucional','Direito Administrativo','Direito Penal','Direito Processual Penal','Medicina Legal'];
+    const query=encodeURIComponent(canonical);
+    const icons={
+      book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4Z"/><path d="M7 20V7a3 3 0 0 1 3-3"/></svg>',
+      brain:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3v1a3 3 0 0 0 3 3v1a3 3 0 0 0 3 3"/><path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3v1a3 3 0 0 1-3 3"/><path d="M9 3v18M15 3v18"/></svg>',
+      play:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg>'
+    };
+    const actions=document.createElement('div');
+    actions.className='topic-actions';
+    actions.innerHTML='<a class="topic-action" target="_top" href="/dashboard/library?collection=subjects&discipline='+query+'">'+icons.book+' Estudar</a>'+
+      '<a class="topic-action" target="_top" href="/dashboard/question-trainer?subject='+query+'">'+icons.brain+' Questões</a>'+
+      (videoSubjects.includes(canonical)
+        ? '<a class="topic-action" target="_top" href="/dashboard/media?subject='+query+'">'+icons.play+' Vídeos</a>'
+        : '<span class="topic-action disabled" title="Não há matéria correspondente cadastrada na Central de Mídia">'+icons.play+' Vídeo indisponível</span>');
+    copy.append(actions);
+  }
+
+  function addMarkerTools(row,index) {
+    let tools=row.querySelector(':scope > .marker-tools');
+    if(!row.dataset.markerKey) row.dataset.markerKey=location.pathname+'::marker::universal::'+index;
+    if(!tools) {
+      tools=document.createElement('span');
+      tools.className='marker-tools';
+      const pen=document.createElement('button');
+      pen.className='marker-pen';
+      pen.type='button';
+      pen.title='Marcar este assunto';
+      pen.textContent='🖊';
+      tools.append(pen);
+      pen.addEventListener('click',event=>{
+        event.preventDefault();event.stopPropagation();
+        tools.classList.toggle('open');
+        if(tools.classList.contains('open')) window.setTimeout(()=>tools.classList.remove('open'),5000);
+      });
+      ['yellow','blue','green','pink','clear'].forEach(color=>{
+        const button=document.createElement('button');
+        button.type='button';
+        button.className='marker-dot '+color;
+        button.title=color==='clear'?'Remover marca':'Marcador '+color;
+        button.addEventListener('click',event=>{
+          event.preventDefault();event.stopPropagation();
+          if(color==='clear') delete marks[row.dataset.markerKey];
+          else marks[row.dataset.markerKey]=color;
+          row.dataset.marker=color==='clear'?'':color;
+          try { localStorage.setItem(markerKey,JSON.stringify(marks)); } catch {}
+          window.setTimeout(()=>tools.classList.remove('open'),5000);
+        });
+        tools.append(button);
+      });
+      row.append(tools);
+    }
+    const savedMark=marks[row.dataset.markerKey];
+    if(savedMark) row.dataset.marker=savedMark;
+    return tools;
+  }
+
+  function addCollapse(row,copy,tools,index) {
+    let button=row.querySelector('.topic-collapse-toggle');
+    const key=row.dataset.markerKey || (location.pathname+'::topic-collapse::universal::'+index);
+    if(!button) {
+      button=document.createElement('button');
+      button.type='button';
+      button.className='topic-collapse-toggle';
+      button.dataset.collapseKey=key;
+      button.setAttribute('aria-controls',copy.id||('topic-content-universal-'+index));
+      button.addEventListener('click',event=>{
+        event.preventDefault();event.stopPropagation();
+        const isCollapsed=row.classList.toggle('topic-collapsed');
+        collapsed[key]=isCollapsed;
+        try { localStorage.setItem(collapseKey,JSON.stringify(collapsed)); } catch {}
+        update();
+      });
+      tools.insertBefore(button,tools.firstChild);
+    } else if(button.parentElement!==tools) {
+      tools.insertBefore(button,tools.firstChild);
+    }
+    if(!copy.id) copy.id='topic-content-universal-'+index;
+    row.classList.add('has-topic-collapse');
+    if(collapsed[key]) row.classList.add('topic-collapsed');
+    function update() {
+      const isCollapsed=row.classList.contains('topic-collapsed');
+      button.textContent=isCollapsed?'+':'−';
+      button.title=isCollapsed?'Expandir conteúdo':'Minimizar conteúdo';
+      button.setAttribute('aria-label',isCollapsed?'Expandir conteúdo do tópico':'Minimizar conteúdo do tópico');
+      button.setAttribute('aria-expanded',String(!isCollapsed));
+    }
+    update();
+  }
+
+  const rows=[...document.querySelectorAll('label.topic')];
+  rows.forEach((row,index)=>{
+    const parentInput=row.querySelector(':scope > input.topic-study') || row.querySelector('input.topic-study');
+    let copy=row.querySelector(':scope > .topic-copy') || row.querySelector(':scope > span:not(.topic-priority)');
+    if(!copy) {
+      copy=document.createElement('div');
+      copy.className='topic-copy';
+      row.append(copy);
+    }
+    const captured=rawTopicText(row,copy);
+    const parsed=parseTopic(captured.raw,row);
+    const oldActions=copy.querySelector('.topic-actions');
+    const oldChildren=captured.oldChildren;
+    const oldParentChecked=!!parentInput?.checked;
+    const oldBadge=copy.querySelector('.topic-subtopic-status');
+    const oldCountBadge=copy.querySelector('.subtopics-count');
+    const hasSubtopics=parsed.subtopics.length>0 || oldChildren.length>0;
+    const subtopics=parsed.subtopics.length ? parsed.subtopics : oldChildren.map(child=>child.text).filter(Boolean);
+
+    if(copy.tagName!=='DIV') {
+      const replacement=document.createElement('div');
+      replacement.className='topic-copy';
+      copy.replaceWith(replacement);
+      copy=replacement;
+    } else copy.className='topic-copy';
+
+    copy.textContent='';
+    const heading=document.createElement('span');
+    heading.className='semantic-parent';
+    heading.textContent=parsed.title || captured.raw;
+    copy.append(heading);
+
+    if(hasSubtopics) {
+      row.classList.add('semantic-has-subtopics');
+      const badge=document.createElement('span');
+      badge.className='topic-subtopic-status';
+      copy.append(badge);
+
+      const disclosure=document.createElement('details');
+      disclosure.className='subtopics-panel';
+      disclosure.open=captured.oldOpen;
+      const summary=document.createElement('summary');
+      summary.className='subtopics-toggle';
+      const summaryLabel=document.createElement('span');
+      summaryLabel.textContent='Ver subitens';
+      summary.append(summaryLabel);
+      summary.addEventListener('click',event=>event.stopPropagation());
+      disclosure.append(summary);
+
+      const list=document.createElement('div');
+      list.className='semantic-subtopics';
+      const parentKey=parentInput?.dataset.key || (location.pathname+'::universal-topic::'+index+'::'+normalize(parsed.title).slice(0,70));
+      const usedOld=new Set();
+      const oldByText=new Map();
+      oldChildren.forEach((child,oldIndex)=>{
+        const key=normalize(child.text);
+        if(!oldByText.has(key)) oldByText.set(key,[]);
+        oldByText.get(key).push({...child,oldIndex});
+      });
+
+      subtopics.forEach((item,itemIndex)=>{
+        const child=document.createElement('div');
+        child.className='semantic-subtopic';
+        const input=document.createElement('input');
+        input.type='checkbox';
+        input.className='subtopic-study';
+        const normalized=normalize(item);
+        const exact=(oldByText.get(normalized)||[]).find(candidate=>!usedOld.has(candidate.oldIndex));
+        const positional=!exact && oldChildren.length===subtopics.length ? oldChildren[itemIndex] : null;
+        const previous=exact || (positional ? {...positional,oldIndex:itemIndex} : null);
+        if(previous) usedOld.add(previous.oldIndex);
+        const key=previous?.key || (parentKey+'::subtopic-v4::'+itemIndex);
+        input.dataset.key=key;
+        if(Object.prototype.hasOwnProperty.call(saved,key)) input.checked=!!saved[key];
+        else if(previous) input.checked=!!previous.checked;
+        else input.checked=oldParentChecked;
+        input.addEventListener('click',event=>event.stopPropagation());
+        input.addEventListener('change',()=>{
+          saved[key]=input.checked;
+          try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
+          syncParent();
+        });
+
+        const label=document.createElement('span');
+        label.textContent=item;
+        label.addEventListener('click',event=>{
+          event.preventDefault();event.stopPropagation();
+          input.checked=!input.checked;
+          input.dispatchEvent(new Event('change',{bubbles:true}));
+        });
+        child.append(input,label);
+        list.append(child);
+      });
+      disclosure.append(list);
+      copy.append(disclosure);
+      if(oldActions) copy.append(oldActions);
+
+      function syncParent() {
+        const checks=[...list.querySelectorAll('input.subtopic-study')];
+        const done=checks.filter(input=>input.checked).length;
+        const complete=done===checks.length;
+        if(parentInput) {
+          parentInput.indeterminate=done>0 && !complete;
+          parentInput.checked=complete;
+          parentInput.setAttribute('aria-label',done ? ('Tópico: '+done+' de '+checks.length+' subitens marcados') : 'Tópico sem subitens marcados');
+        }
+        row.classList.toggle('partial',done>0&&!complete);
+        row.classList.toggle('complete',complete);
+        badge.hidden=done===0;
+        badge.classList.toggle('complete',complete);
+        badge.textContent=complete ? (done+'/'+checks.length+' concluídos') : (done+'/'+checks.length+' marcados');
+      }
+      if(parentInput) parentInput.addEventListener('change',()=>{
+        const checked=parentInput.checked;
+        parentInput.indeterminate=false;
+        list.querySelectorAll('input.subtopic-study').forEach(input=>{
+          input.checked=checked;
+          saved[input.dataset.key]=checked;
+        });
+        try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
+        syncParent();
+      });
+      syncParent();
+    } else {
+      row.classList.remove('semantic-has-subtopics','partial','complete');
+      if(oldActions) copy.append(oldActions);
+    }
+
+    if(parentInput && parentInput.parentElement!==row) row.insertBefore(parentInput,row.firstChild);
+    if(!parentInput) {
+      const input=document.createElement('input');
+      input.type='checkbox';
+      input.className='topic-study';
+      input.dataset.key=location.pathname+'::universal-parent::'+index;
+      row.insertBefore(input,row.firstChild);
+    }
+    row.dataset.universalTopicStructure='v4';
+    addPriority(row);
+    addActions(row,copy);
+    const tools=addMarkerTools(row,index);
+    addCollapse(row,copy,tools,index);
+
+    row.addEventListener('click',event=>{
+      const target=event.target;
+      if(!(target instanceof Element)) return;
+      if(target instanceof HTMLInputElement) return;
+      if(target.closest('.marker-tools,.subtopics-panel,.topic-actions,.topic-collapse-toggle')) {
+        if(target.closest('.subtopics-panel')) event.stopPropagation();
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+    });
+  });
+
+  document.querySelectorAll('details.subtopics-panel > summary > .subtopics-count').forEach(count=>count.remove());
+  const progress=document.querySelector('#progress');
+  const updateOverall=()=>{
+    if(!progress) return;
+    const parents=[...document.querySelectorAll('input.topic-study')].filter(input=>{
+      const row=input.closest('label.topic');
+      return !row || !row.querySelector('.subtopic-study');
+    });
+    const children=[...document.querySelectorAll('input.subtopic-study')];
+    const checks=[...parents,...children];
+    const done=checks.filter(input=>input.checked).length;
+    progress.textContent='Progresso: '+done+'/'+checks.length+' tópicos marcados ('+(checks.length?Math.round(done/checks.length*100):0)+'%)';
+  };
+  document.addEventListener('change',event=>{
+    if(event.target instanceof HTMLInputElement && event.target.matches('.topic-study,.subtopic-study')) updateOverall();
+  });
+  updateOverall();
+})();
+</script>
