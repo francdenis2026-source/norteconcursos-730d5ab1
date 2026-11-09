@@ -200,3 +200,77 @@ label.topic.semantic-has-subtopics > .topic-copy {
   });
 })();
 </script>
+<style id="subtopic-parent-progress">
+.topic-subtopic-status {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  margin-left: 7px;
+  padding: 2px 7px;
+  border: 1px solid #e8c66b;
+  border-radius: 999px;
+  background: #fff8df;
+  color: #8a5a00;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+.topic-subtopic-status.complete {
+  border-color: #86d7a8;
+  background: #ecfdf3;
+  color: #166534;
+}
+label.topic.semantic-has-subtopics.partial:after,
+label.topic.semantic-has-subtopics.complete:after { content: none !important; }
+</style>
+<script id="subtopic-parent-progress-script">
+(()=>{
+  const storageKey='norte-concursos-pcac-subtopics-v2';
+  let saved={};
+  try { saved=JSON.parse(localStorage.getItem(storageKey)||'{}'); } catch {}
+  const rows=[...document.querySelectorAll('label.topic')].filter(row=>
+    row.querySelector(':scope > input.topic-study') && row.querySelector('.subtopic-study')
+  );
+  rows.forEach((row,rowIndex)=>{
+    const parent=row.querySelector(':scope > input.topic-study');
+    const subs=[...row.querySelectorAll('.subtopic-study')];
+    if(!parent || !subs.length) return;
+    const title=row.querySelector('.semantic-parent') || row.querySelector(':scope > .topic-copy') || row.querySelector(':scope > span');
+    let badge=row.querySelector(':scope > .topic-subtopic-status');
+    if(!badge){
+      badge=document.createElement('span');
+      badge.className='topic-subtopic-status';
+      if(title) title.append(badge);
+    }
+    const sync=()=>{
+      const done=subs.filter(input=>input.checked).length;
+      const complete=done===subs.length;
+      parent.indeterminate=done>0 && !complete;
+      parent.checked=complete;
+      parent.setAttribute('aria-label', done ? `Tópico: ${done} de ${subs.length} subitens marcados` : 'Tópico sem subitens marcados');
+      row.classList.toggle('partial',done>0&&!complete);
+      row.classList.toggle('complete',complete);
+      badge.hidden=done===0;
+      badge.classList.toggle('complete',complete);
+      badge.textContent=complete ? `${done}/${subs.length} concluídos` : `${done}/${subs.length} marcados`;
+    };
+    subs.forEach(input=>input.addEventListener('change',()=>{
+      saved[input.dataset.key]=input.checked;
+      try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
+      sync();
+    }));
+    parent.addEventListener('change',()=>{
+      const checked=parent.checked;
+      parent.indeterminate=false;
+      subs.forEach(input=>{
+        input.checked=checked;
+        saved[input.dataset.key]=checked;
+      });
+      try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
+      sync();
+    });
+    sync();
+  });
+})();
+</script>
