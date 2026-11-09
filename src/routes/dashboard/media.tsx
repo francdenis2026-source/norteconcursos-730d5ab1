@@ -3,7 +3,6 @@ import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileAudio, GraduationCap, Headphones, ListVideo, PlayCircle, Upload } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -55,7 +54,6 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
           <div className="flex flex-wrap items-center gap-2">
             <Headphones className="h-5 w-5 text-primary" />
             <CardTitle>Podcasts de estudo</CardTitle>
-            <Badge variant="secondary">Em breve</Badge>
           </div>
           <CardDescription>
             Resumos em áudio das matérias, gerados no NotebookLM a partir do conteúdo da plataforma,
@@ -142,16 +140,18 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
 
 function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
+  const { catalog } = useMediaCatalog();
   const { tab } = Route.useSearch();
+  const hasPodcasts = catalog.podcasts.length > 0;
   return (
     <div className="nc-learning-workspace video-study-page">
       <header className="video-study-page__header workspace-banner">
         <PlayCircle size={28} aria-hidden="true" />
         <div>
-          <h1>Videoaulas e podcasts</h1>
+          <h1>{hasPodcasts ? "Videoaulas e podcasts" : "Videoaulas"}</h1>
         </div>
       </header>
-      <Tabs defaultValue={tab === "podcasts" ? "podcasts" : tab === "assuntos" ? "assuntos" : "videos"}>
+      <Tabs defaultValue={hasPodcasts && tab === "podcasts" ? "podcasts" : tab === "assuntos" ? "assuntos" : tab === "enem" ? "enem" : "videos"}>
         <TabsList className="video-study-page__tabs" aria-label="Tipo de material">
           <TabsTrigger value="videos">
             <PlayCircle size={16} /> Playlists
@@ -162,9 +162,11 @@ function MediaCenterPage() {
           <TabsTrigger value="enem">
             <GraduationCap size={16} /> ENEM
           </TabsTrigger>
-          <TabsTrigger value="podcasts">
-            <Headphones size={16} /> Podcasts
-          </TabsTrigger>
+          {hasPodcasts && (
+            <TabsTrigger value="podcasts">
+              <Headphones size={16} /> Podcasts
+            </TabsTrigger>
+          )}
         </TabsList>
         <TabsContent value="videos">
           <VideoWorkspace mode="playlists" />

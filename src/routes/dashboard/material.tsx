@@ -34,6 +34,7 @@ import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import "@/styles/study-area-compact.css";
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -63,8 +64,8 @@ const OTHER_RESOURCES: {
   {
     to: "/dashboard/media",
     icon: PlayCircle,
-    title: "Videoaulas e podcasts",
-    text: "Aprenda vendo ou ouvindo, no seu ritmo.",
+    title: "Videoaulas",
+    text: "Playlists e aulas organizadas por assunto.",
   },
   {
     to: "/dashboard/dicionario",
@@ -234,8 +235,9 @@ function MaterialHub() {
   const items = data ?? [];
   const laws = hubLaws(items);
   const subjects = disciplineCards(items, TRACKS, PLAYLISTS);
+  const availableSubjects = subjects.filter((entry) => entry.hasContent);
   const lawTotal = laws.reduce((sum, entry) => sum + entry.count, 0);
-  const subjectTotal = subjects.filter((entry) => entry.hasContent).length;
+  const subjectTotal = availableSubjects.length;
 
   if (!isLoading && !signedIn)
     return (
@@ -432,7 +434,7 @@ function MaterialHub() {
           </div>
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {subjects.map((entry) => {
+            {availableSubjects.map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
               const content = (
                 <>

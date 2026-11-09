@@ -1,0 +1,311 @@
+/* Mobile homepage refinements. The desktop homepage keeps its existing layout. */
+.home-ranking__identity {
+  display: contents;
+}
+
+@media (max-width: 760px) {
+  .home.hr-canvas .mobile-homepage .sx-section {
+    padding: 24px 16px 26px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-contests {
+    width: 100%;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-head--plain {
+    margin: 0 0 14px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-head--plain h2 {
+    font-size: clamp(24px, 7.2vw, 30px);
+    line-height: 1.06;
+    text-wrap: balance;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exams {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam {
+    display: block;
+    border-radius: 14px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam__body {
+    min-width: 0;
+    gap: 5px;
+    padding: 12px 14px 14px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam strong {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam strong span {
+    display: inline;
+    font-size: 12px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam small,
+  .home.hr-canvas .mobile-homepage .sx-exam p {
+    font-size: 11px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-exam__link {
+    min-height: 38px;
+    margin-top: 2px !important;
+    font-size: 12px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-note {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  #ranking-destaque-mobile.home-ranking {
+    padding: 20px 16px 24px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__shell {
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__heading {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__eyebrow {
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 9px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__eyebrow svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__heading h2 {
+    font-size: clamp(22px, 6.8vw, 28px);
+    line-height: 1.08;
+  }
+
+  #ranking-destaque-mobile .home-ranking__heading p:not(.home-ranking__eyebrow) {
+    max-width: 34ch;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  #ranking-destaque-mobile .home-ranking__status {
+    margin-top: 9px;
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__card {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "position identity points"
+      "position identity stats";
+    align-items: center;
+    gap: 5px 9px;
+    padding: 9px 10px;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  #ranking-destaque-mobile .home-ranking__position {
+    grid-area: position;
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  #ranking-destaque-mobile .home-ranking__position svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__identity {
+    grid-area: identity;
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    grid-template-areas:
+      "avatar name"
+      "avatar stars";
+    align-items: center;
+    min-width: 0;
+    gap: 2px 8px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__avatar {
+    grid-area: avatar;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__card[data-medal="1"] .home-ranking__avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__name {
+    grid-area: name;
+    display: block;
+    min-height: 0;
+    overflow: hidden;
+    color: #f2f5f8;
+    font-size: 12px;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stars {
+    grid-area: stars;
+    justify-self: start;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+
+  #ranking-destaque-mobile .home-ranking__points {
+    grid-area: points;
+    display: grid;
+    width: auto;
+    min-width: 58px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: right;
+  }
+
+  #ranking-destaque-mobile .home-ranking__points strong {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  #ranking-destaque-mobile .home-ranking__points span {
+    font-size: 9px;
+    line-height: 1.1;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, auto));
+    justify-content: start;
+    gap: 8px;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding-top: 4px;
+    border-top: 1px solid rgb(213 224 233 / 13%);
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats dt {
+    color: #94a5b5;
+    font-size: 8px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats dd {
+    color: #f0f4f8;
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  #ranking-destaque-mobile .home-ranking__bottom {
+    display: grid;
+    gap: 9px;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__bottom > div {
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  #ranking-destaque-mobile .home-ranking__bottom > div svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__cta {
+    width: 100%;
+    min-height: 38px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__details {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 360px) {
+  #ranking-destaque-mobile .home-ranking__card {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    column-gap: 7px;
+    padding-inline: 8px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__identity {
+    grid-template-columns: 29px minmax(0, 1fr);
+    column-gap: 6px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__avatar,
+  #ranking-destaque-mobile .home-ranking__card[data-medal="1"] .home-ranking__avatar {
+    width: 29px;
+    height: 29px;
+    font-size: 13px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats {
+    gap: 5px;
+  }
+
+  #ranking-destaque-mobile .home-ranking__stats dt {
+    display: none;
+  }
+}

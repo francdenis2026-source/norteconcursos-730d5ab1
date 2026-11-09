@@ -1,7 +1,6 @@
 import { plannedPractice } from "@/lib/plannedStudy";
 import "@/styles/learning-workspace-refinement.css";
 import "@/styles/study-tool-launcher.css";
-import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { ENEM_AREAS } from "@/data/enem";
 import { platformDate } from "@/lib/platformClock";
 import { libraryCollection } from "@/lib/libraryOrganization";
@@ -13,13 +12,9 @@ import {
   BookOpenCheck,
   LibraryBig,
   BrainCircuit,
-  CalendarClock,
-  CheckCircle2,
   ChevronDown,
   Coffee,
-  Flame,
   Layers,
-  ListChecks,
   Maximize2,
   Minimize2,
   Pause,
@@ -31,11 +26,8 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import {
   CAREERS,
@@ -47,12 +39,12 @@ import {
 } from "@/lib/studyEngine";
 import { topicsFor } from "@/data/studyTopics";
 import { TRACKS } from "@/data/tracks";
-import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
 import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { userStorageKey } from "@/lib/userStorage";
 import "@/styles/study-tools-refinement.css";
+import "@/styles/study-area-compact.css";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
@@ -184,15 +176,6 @@ function useStudyContext() {
 // ───────────────────────── Página ─────────────────────────
 
 const DAY_KEY = "norte_focus_day";
-const HISTORY_KEY = "norte_focus_history_v1";
-type FocusRecord = {
-  id: string;
-  completedAt: string;
-  minutes: number;
-  subject: string;
-  topic: string;
-};
-
 function readDay(): { day: string; cycles: number; minutes: number } {
   const fresh = { day: acreDateKey(), cycles: 0, minutes: 0 };
   try {
@@ -200,15 +183,6 @@ function readDay(): { day: string; cycles: number; minutes: number } {
     return v && v.day === fresh.day ? v : fresh;
   } catch {
     return fresh;
-  }
-}
-
-function readFocusHistory(): FocusRecord[] {
-  try {
-    const value = JSON.parse(localStorage.getItem(userStorageKey(HISTORY_KEY)) ?? "[]") as FocusRecord[];
-    return Array.isArray(value) ? value.slice(0, 30) : [];
-  } catch {
-    return [];
   }
 }
 
@@ -620,105 +594,6 @@ function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool;
   );
 }
 
-function StudyCentralCard({ subject, topic, initialTool }: { subject: string; topic: string; initialTool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" }) {
-  const [tab, setTab] = React.useState<"notes" | "guide" | "simplify" | "compare" | "quiz">("notes");
-  React.useEffect(() => { setTab(initialTool === "handwritten" ? "notes" : initialTool ?? "notes"); }, [initialTool]);
-  const title = topic || subject || "Direitos fundamentais";
-  const tabs = [
-    ["notes", "Notas didáticas"],
-    ["guide", "Study Guide"],
-    ["simplify", "Simplify"],
-    ["compare", "Compare"],
-    ["quiz", "Quiz Me"],
-  ] as const;
-  return (
-    <Card className="study-central-card overflow-hidden">
-      <CardHeader className="border-b pb-4">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <CardDescription className="uppercase tracking-[0.12em]">Central de estudo</CardDescription>
-            <CardTitle className="mt-1 text-xl">Aprenda {title}</CardTitle>
-            <p className="mt-1 text-sm text-muted-foreground">Conceito, exemplo, pegadinha e revisão em um só lugar.</p>
-          </div>
-          <Badge variant="secondary">Piloto didático</Badge>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Ferramentas da Central de estudo">
-          {tabs.map(([key, label]) => (
-            <Button key={key} type="button" size="sm" variant={tab === key ? "default" : "outline"} onClick={() => setTab(key)} role="tab" aria-selected={tab === key}>
-              {label}
-            </Button>
-          ))}
-        </div>
-      </CardHeader>
-      <CardContent className="pt-5">
-        {tab === "notes" && (
-          <div className="grid gap-3 md:grid-cols-2">
-            <StudyNote tone="blue" label="Conceito" title="O que você precisa saber" text="Leia a definição principal do assunto em poucas linhas, com linguagem direta e foco no que costuma ser cobrado." />
-            <StudyNote tone="yellow" label="Atenção" title="Pegadinha de prova" text="Nenhum direito fundamental é absoluto: os limites dependem da Constituição e do caso concreto." />
-            <StudyNote tone="green" label="Exemplo" title="Como aparece na prática" text="A liberdade de expressão protege ideias, mas não autoriza ameaça, calúnia ou discriminação." />
-            <StudyNote tone="purple" label="Memorização" title="Frase para revisar" text="Conceito → exemplo → limite. Use essa sequência antes de resolver questões." />
-          </div>
-        )}
-        {tab === "guide" && <StudyToolPanel title="Study Guide" text="1. Leia a nota de conceito. 2. Revise a pegadinha. 3. Resolva cinco questões. 4. Refaça amanhã as questões erradas." />}
-        {tab === "simplify" && <StudyToolPanel title="Simplify" text={`Reescreva ${title} em linguagem simples: identifique a ideia central, explique cada termo técnico e confira a explicação no material de estudo antes de memorizar.`} />}
-        {tab === "compare" && <StudyToolPanel title="Compare" text="Coloque dois conceitos lado a lado e veja a diferença em definição, exemplo e erro mais comum." />}
-        {tab === "quiz" && <StudyToolPanel title="Quiz Me" text="A Constituição trata os direitos fundamentais como ilimitados? Não. Eles podem sofrer limitações proporcionais e justificadas." action="Responder outra questão" />}
-      </CardContent>
-    </Card>
-  );
-}
-
-function StudyNote({ tone, label, title, text }: { tone: "blue" | "yellow" | "green" | "purple"; label: string; title: string; text: string }) {
-  return <div className={`study-note study-note--${tone}`}><span className="study-note__label">{label}</span><h3>{title}</h3><p>{text}</p></div>;
-}
-
-function StudyToolPanel({ title, text, action }: { title: string; text: string; action?: string }) {
-  return <div className="rounded-xl border border-border bg-muted/20 p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">{text}</p>{action && <Button className="mt-4" size="sm">{action}</Button>}</div>;
-}
-
-// ───────────────────────── Material da plataforma (integra Biblioteca, trilhas e questões) ─────────────────────────
-
-function PlatformMaterialCard({ subject, topic }: { subject: string; topic: string }) {
-  const { user } = useAuthStatus();
-  const track = TRACKS.find((t) => norm(subject).includes(norm(t.discipline)));
-  const q = topic || subject;
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <LibraryBig className="h-5 w-5" /> Material para estudar agora
-        </CardTitle>
-        <CardDescription>
-          {subject}
-          {topic ? ` · ${topic}` : ""}: onde este assunto aparece na Biblioteca, nas trilhas e nas questões.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="flex flex-wrap gap-2">
-          <Button asChild className="gap-2">
-            <Link to="/dashboard/library" search={{ q, back: undefined, collection: libraryCollection({ slug: "", discipline: subject }) === "subjects" ? "subjects" : "laws" }}>
-              <LibraryBig className="h-4 w-4" /> Biblioteca
-            </Link>
-          </Button>
-          {track && (
-            <Button asChild variant="outline" className="gap-2">
-              <Link to="/dashboard/trilhas" search={{ t: track.slug, l: undefined }}>
-                <BookOpenCheck className="h-4 w-4" /> Trilha de {track.discipline}
-              </Link>
-            </Button>
-          )}
-          <Button asChild variant="outline" className="gap-2">
-            <Link to="/dashboard/question-bank">
-              <ListChecks className="h-4 w-4" /> Questões
-            </Link>
-          </Button>
-        </div>
-        {user && user.id !== "demo-user" && <ContentSearchResults query={q} userId={user.id} />}
-      </CardContent>
-    </Card>
-  );
-}
-
 // ───────────────────────── Foco (Pomodoro persistente) ─────────────────────────
 
 type Mode = 25 | 50 | 5;
@@ -783,48 +658,6 @@ function usePomodoro(onDone: (mode: Mode) => void) {
 
 const selectCls =
   "h-10 w-full rounded-lg border border-input bg-background px-3 text-sm font-medium";
-
-function FocusHistoryCard({ history }: { history: FocusRecord[] }) {
-  return (
-    <Card className="focus-history-card">
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-base">
-          <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Histórico de sessões
-        </CardTitle>
-        <CardDescription>
-          Cada ciclo concluído fica associado à disciplina e ao assunto estudado.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        {history.length ? (
-          <div className="focus-history-list" aria-label="Sessões concluídas">
-            {history.slice(0, 6).map((item) => (
-              <div className="focus-history-row" key={item.id}>
-                <div className="min-w-0">
-                  <strong>{item.subject}</strong>
-                  <span>{item.topic || "Revisão geral"}</span>
-                </div>
-                <div className="focus-history-meta">
-                  <b>{item.minutes} min</b>
-                  <time dateTime={item.completedAt}>
-                    {new Date(item.completedAt).toLocaleDateString("pt-BR", {
-                      day: "2-digit",
-                      month: "2-digit",
-                    })}
-                  </time>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-muted-foreground">
-            Seus ciclos concluídos aparecerão aqui depois da primeira sessão.
-          </p>
-        )}
-      </CardContent>
-    </Card>
-  );
-}
 
 function FocusCard({
   enem = false,
@@ -1070,382 +903,6 @@ function FocusCard({
           </p>
         </div>
       </div>
-    </Card>
-  );
-}
-
-// ───────────────────────── Revisão rápida ─────────────────────────
-
-const TRAPS: { f: string; b: string; tags: string[] }[] = [
-  {
-    f: "CEBRASPE: item ANULADO vale quanto ponto?",
-    b: "+1 ponto para TODOS os candidatos (crédito automático), independente da resposta marcada.",
-    tags: ["banca"],
-  },
-  {
-    f: "Item em BRANCO (sem marcação) vale quanto?",
-    b: "0 pontos — não soma nem subtrai. Só “certa” (+1) e “errada” (−1) alteram a nota.",
-    tags: ["banca"],
-  },
-  {
-    f: "Lei 13.869/2019 revogou qual lei antiga?",
-    b: "A Lei nº 4.898/1965 (antiga lei de abuso de autoridade).",
-    tags: ["penal", "humanos"],
-  },
-  {
-    f: "CF art. 144: quantos são os órgãos de segurança pública hoje?",
-    b: "6 órgãos desde a EC 104/2019 (inclui as polícias penais). Material antigo ainda fala em 5 — desatualizado.",
-    tags: ["constitucional"],
-  },
-  {
-    f: "Regime de competência x regime de caixa: qual a diferença?",
-    b: "Competência: registra quando o fato gerador ocorre. Caixa: registra só quando o dinheiro entra ou sai de fato.",
-    tags: ["contabilidade"],
-  },
-  {
-    f: "Em uma tabela-verdade, quando um “OU” (∨) é falso?",
-    b: "Só quando AMBAS as proposições são falsas.",
-    tags: ["raciocinio"],
-  },
-  {
-    f: "Modelo OSI: quais as 7 camadas, de baixo para cima?",
-    b: "Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação.",
-    tags: ["informatica"],
-  },
-  {
-    f: "Lei de Migração: o que NÃO pode motivar deportação sozinho?",
-    b: "A mera situação migratória irregular — a deportação é medida administrativa, não penal.",
-    tags: ["humanos"],
-  },
-  {
-    f: "Lei 12.850/2013 revogou qual lei antiga?",
-    b: "A Lei nº 9.034/1995 (antiga lei de organização criminosa).",
-    tags: ["penal", "humanos"],
-  },
-];
-const TAG_OF: [RegExp, string][] = [
-  [/constitucional/, "constitucional"],
-  [/penal|criminal|legisla/, "penal"],
-  [/humanos|legisla|etica/, "humanos"],
-  [/contab/, "contabilidade"],
-  [/racioc|estat/, "raciocinio"],
-  [/inform/, "informatica"],
-];
-const plain = (s: string) =>
-  s
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLowerCase();
-
-function ReviewCard({
-  due,
-  subject,
-  real,
-}: {
-  due: DueCard[];
-  subject: string;
-  careerId: CareerId;
-  real: boolean;
-}) {
-  const mine = React.useMemo(() => {
-    const key = plain(subject).split(" ")[0] ?? "";
-    const same = due.filter((c) => plain(c.subject).includes(key));
-    return same.length ? same : due;
-  }, [due, subject]);
-  const tag = TAG_OF.find(([re]) => re.test(plain(subject)))?.[1];
-  const traps = React.useMemo(() => {
-    const rel = TRAPS.filter((t) => t.tags.includes("banca") || (tag && t.tags.includes(tag)));
-    return rel.length > 2 ? rel : TRAPS;
-  }, [tag]);
-
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Layers className="h-5 w-5" /> Revisão rápida
-        </CardTitle>
-        <CardDescription>
-          Seus cartões vencidos e as pegadinhas mais comuns de {tag ? "esta disciplina" : "prova"}.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Tabs defaultValue={mine.length ? "mine" : "traps"}>
-          <TabsList>
-            <TabsTrigger value="mine" className="gap-1.5">
-              Meus cartões <Badge variant="secondary">{due.length}</Badge>
-            </TabsTrigger>
-            <TabsTrigger value="traps">Pegadinhas</TabsTrigger>
-          </TabsList>
-          <TabsContent value="mine" className="mt-4">
-            {mine.length ? (
-              <Flip
-                cards={mine.map((c) => ({
-                  f: c.front,
-                  b: c.back,
-                  meta: c.topic ? `${c.subject} · ${c.topic}` : c.subject,
-                }))}
-              />
-            ) : (
-              <div className="grid place-items-center gap-3 rounded-xl border border-dashed p-8 text-center">
-                <CheckCircle2 className="h-8 w-8 text-emerald-500" />
-                <p className="text-sm font-semibold">
-                  {real
-                    ? "Nenhum cartão vencido agora."
-                    : "Entre na sua conta para revisar seus cartões."}
-                </p>
-                <Button asChild variant="outline" size="sm" className="gap-2">
-                  <Link to="/dashboard/flashcards" search={{ subject, topic: undefined }}>
-                    Abrir meu baralho <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            )}
-          </TabsContent>
-          <TabsContent value="traps" className="mt-4">
-            <Flip cards={traps.map((t) => ({ f: t.f, b: t.b, meta: "Pegadinha recorrente" }))} />
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  );
-}
-
-function Flip({ cards }: { cards: { f: string; b: string; meta: string }[] }) {
-  const [i, setI] = React.useState(0);
-  const [flipped, setFlipped] = React.useState(false);
-  const idx = Math.min(i, cards.length - 1);
-  const c = cards[idx]!;
-  const go = (d: number) => {
-    setFlipped(false);
-    setI((idx + d + cards.length) % cards.length);
-  };
-  return (
-    <div className="space-y-3">
-      <button
-        type="button"
-        onClick={() => setFlipped((f) => !f)}
-        aria-label="Virar cartão"
-        className={cn(
-          "flex min-h-[150px] w-full flex-col items-center justify-center gap-2 rounded-xl border p-5 text-center transition-colors",
-          flipped ? "border-amber-400/50 bg-amber-400/10" : "bg-muted/50 hover:bg-muted",
-        )}
-      >
-        <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-          {flipped ? "Resposta" : c.meta}
-        </span>
-        <p className="text-sm font-semibold leading-relaxed">{flipped ? c.b : c.f}</p>
-      </button>
-      <div className="flex items-center justify-between text-xs text-muted-foreground">
-        <span>
-          {idx + 1} / {cards.length} · toque no cartão para virar
-        </span>
-        <span className="flex gap-2">
-          <Button variant="outline" size="sm" onClick={() => go(-1)}>
-            ‹ Anterior
-          </Button>
-          <Button variant="outline" size="sm" onClick={() => go(1)}>
-            Próximo ›
-          </Button>
-        </span>
-      </div>
-    </div>
-  );
-}
-
-// ───────────────────────── Plano do aluno ─────────────────────────
-
-function PlanLinkCard({
-  profile,
-  career,
-  real,
-  loading,
-}: {
-  profile: Profile | null;
-  career: string;
-  real: boolean;
-  loading: boolean;
-}) {
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Sparkles className="h-5 w-5" /> Seu plano de estudos
-        </CardTitle>
-        <CardDescription>
-          {profile
-            ? `${profile.name ?? career} · ${profile.hours_per_week} h por semana`
-            : "Ainda sem plano configurado."}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-3">
-        {loading ? null : profile ? (
-          <>
-            <p className="text-sm text-muted-foreground">
-              O cronograma da semana, as horas por matéria e o ajuste conforme seu desempenho ficam
-              na Estratégia de estudos. Aqui você executa: foca, revisa e confere o conteúdo.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Button asChild className="gap-2">
-                <Link to="/dashboard/study-coach">
-                  Ver cronograma da semana <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="gap-2">
-                <Link to="/dashboard/mock-exams">
-                  <Timer className="h-4 w-4" /> Fazer simulado
-                </Link>
-              </Button>
-            </div>
-          </>
-        ) : (
-          <>
-            <p className="text-sm text-muted-foreground">
-              {real
-                ? "Informe sua carreira, a data da prova e as horas disponíveis. A Central passa a sugerir a disciplina mais urgente e a montar o checklist do seu concurso."
-                : "Entre na sua conta para personalizar a Central com o seu concurso."}
-            </p>
-            <Button asChild className="gap-2">
-              <Link
-                to={real ? "/dashboard/study-coach" : "/auth"}
-                {...(real ? {} : { search: { mode: undefined } })}
-              >
-                {real ? "Configuração do estudo" : "Entrar"} <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </>
-        )}
-      </CardContent>
-    </Card>
-  );
-}
-
-// ───────────────────────── Checklist do edital ─────────────────────────
-
-function ChecklistCard({
-  careerId,
-  subjects,
-  essay,
-}: {
-  careerId: CareerId;
-  subjects: string[];
-  essay: boolean;
-}) {
-  const key = `norte_review_v2:${careerId}`;
-  const [state, setState] = React.useState<Record<string, true>>({});
-  React.useEffect(() => {
-    try {
-      setState(JSON.parse(localStorage.getItem(key) ?? "{}") as Record<string, true>);
-    } catch {
-      setState({});
-    }
-  }, [key]);
-  const toggle = (k: string) => {
-    setState((prev) => {
-      const next = { ...prev };
-      if (next[k]) delete next[k];
-      else next[k] = true;
-      try {
-        localStorage.setItem(key, JSON.stringify(next));
-      } catch {
-        /* sem armazenamento */
-      }
-      return next;
-    });
-  };
-  const groups = React.useMemo(
-    () => [
-      ...subjects.map((s) => ({
-        name: s,
-        items: topicsFor(s).map((t) => ({ k: `${s}|${t}`, label: t })),
-      })),
-      {
-        name: "Treino geral",
-        items: [
-          { k: "geral|simulado", label: "Fiz pelo menos 1 simulado completo cronometrado" },
-          ...(essay
-            ? [{ k: "geral|redacao", label: "Pratiquei 1 redação discursiva completa" }]
-            : []),
-          { k: "geral|erros", label: "Revisei meu caderno de erros" },
-        ],
-      },
-    ],
-    [subjects, essay],
-  );
-  const all = groups.flatMap((g) => g.items);
-  const done = all.filter((i) => state[i.k]).length;
-  const pct = all.length ? Math.round((100 * done) / all.length) : 0;
-
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-lg">
-          <span className="flex items-center gap-2">
-            <ListChecks className="h-5 w-5" /> Checklist do edital
-          </span>
-          <Badge variant="outline">
-            {done} de {all.length} · {pct}%
-          </Badge>
-        </CardTitle>
-        <CardDescription>
-          Assuntos de cada disciplina da sua carreira. Marque o que já revisou.
-        </CardDescription>
-        <div className="h-2 overflow-hidden rounded-full bg-muted">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-amber-400 to-emerald-500 transition-[width]"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-      </CardHeader>
-      <CardContent className="grid gap-3 md:grid-cols-2">
-        {groups.map((g) => {
-          const n = g.items.filter((i) => state[i.k]).length;
-          return (
-            <details
-              key={g.name}
-              className="group rounded-xl border bg-card open:shadow-sm"
-              open={g.name === groups[0]?.name}
-            >
-              <summary className="flex cursor-pointer list-none items-center gap-2.5 px-3.5 py-3 [&::-webkit-details-marker]:hidden">
-                {g.name === "Treino geral" ? (
-                  <CheckCircle2 className="h-5 w-5 text-emerald-500" />
-                ) : (
-                  <SubjectIcon subject={g.name} className="h-7 w-7" />
-                )}
-                <span className="flex-1 text-sm font-semibold">{g.name}</span>
-                <span
-                  className={cn(
-                    "rounded-full px-2 py-0.5 text-[11px] font-bold tabular-nums",
-                    n === g.items.length
-                      ? "bg-emerald-500/15 text-emerald-600"
-                      : "bg-muted text-muted-foreground",
-                  )}
-                >
-                  {n}/{g.items.length}
-                </span>
-                <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180" />
-              </summary>
-              <div className="space-y-1.5 border-t px-3.5 py-3">
-                {g.items.map((i) => (
-                  <label key={i.k} className="flex cursor-pointer items-start gap-2.5 text-sm">
-                    <input
-                      type="checkbox"
-                      checked={!!state[i.k]}
-                      onChange={() => toggle(i.k)}
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-amber-500"
-                    />
-                    <span className={cn(state[i.k] && "text-muted-foreground line-through")}>
-                      {i.label}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </details>
-          );
-        })}
-      </CardContent>
-      <p className="px-6 pb-5 text-[11px] text-muted-foreground">
-        Fica salvo neste navegador, separado por carreira.
-      </p>
     </Card>
   );
 }

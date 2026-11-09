@@ -2145,7 +2145,7 @@ const MODELOS_BRUTOS: ModeloCronograma[] = [
     ]
    }
   ]
- }
+ },
 
   // Edital oficial PC-AC 2026: reutiliza os seis cargos e o conteúdo do Anexo III
   // já mantidos no edital verticalizado, evitando divergência entre as duas áreas.

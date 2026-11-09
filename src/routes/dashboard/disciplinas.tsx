@@ -40,6 +40,7 @@ import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
+import "@/styles/study-area-compact.css";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
   component: DisciplinesPage,
@@ -113,11 +114,12 @@ function DisciplineIndex({
 }) {
   const [query, setQuery] = React.useState("");
   const normalized = normalizeLibrarySearch(query);
+  const available = cards.filter((card) => card.hasContent);
   const shown = normalized
-    ? cards.filter((c) => normalizeLibrarySearch(c.name).includes(normalized))
-    : cards;
+    ? available.filter((c) => normalizeLibrarySearch(c.name).includes(normalized))
+    : available;
   return (
-    <div className="space-y-6 pb-10">
+    <div className="discipline-workspace space-y-6 pb-10">
       <PageHero
         image="study-desk"
         size="lg"
@@ -238,7 +240,7 @@ function DisciplineDetail({
   const [read, setRead] = React.useState<Set<string>>(new Set());
   React.useEffect(() => setRead(readSlugs()), []);
   return (
-    <div className="space-y-6 pb-10">
+    <div className="discipline-workspace discipline-workspace--detail space-y-6 pb-10">
       <Link to="/dashboard/disciplinas" className="discipline-back">
         <ArrowLeft aria-hidden="true" size={16} /> Todas as disciplinas
       </Link>
