@@ -1,0 +1,298 @@
+/* Norte Concursos — personal planning workspaces.
+   Graphite / porcelain / muted gold identity. Layout-only refinements; preserve study data and behavior. */
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) {
+  --plan-ink: #292d31;
+  --plan-muted: #70777d;
+  --plan-line: #e2e0dc;
+  --plan-paper: #fffefa;
+  --plan-soft: #f5f3ef;
+  --plan-accent: #9b7944;
+  --plan-accent-strong: #76582d;
+  --plan-accent-soft: #f3ecdf;
+  min-width: 0;
+  color: var(--plan-ink);
+  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.dark .app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) {
+  --plan-ink: #f0eee9;
+  --plan-muted: #b9b5ad;
+  --plan-line: #45423c;
+  --plan-paper: #222320;
+  --plan-soft: #2c2b27;
+  --plan-accent: #d0b27d;
+  --plan-accent-strong: #e1c99e;
+  --plan-accent-soft: #3b3428;
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) :is(h1,h2,h3,h4) {
+  color: var(--plan-ink);
+  letter-spacing: -.028em;
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) .text-muted-foreground {
+  color: var(--plan-muted);
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) :is(button,a,input,select,textarea,[role="tab"]):focus-visible {
+  outline: 2px solid var(--plan-accent);
+  outline-offset: 3px;
+}
+
+/* Shared compact surfaces and consistent card hierarchy. */
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) [data-slot="card"] {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--plan-line);
+  border-radius: 13px;
+  background: var(--plan-paper);
+  color: var(--plan-ink);
+  box-shadow: 0 3px 14px rgb(34 31 25 / 4%);
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) [data-slot="card-header"] {
+  gap: 6px;
+  padding: 15px 17px 10px;
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) [data-slot="card-content"] {
+  padding: 12px 17px 16px;
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) :is(input,select,textarea) {
+  min-width: 0;
+  border-color: var(--plan-line);
+  border-radius: 9px;
+  background: var(--plan-paper);
+  color: var(--plan-ink);
+}
+.app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) :is(button,a) {
+  overflow-wrap: anywhere;
+}
+
+/* My Plan hero and selector. */
+.app-shell[data-area="student"] .study-assistant .study-assistant-hero {
+  min-height: 0;
+  padding: clamp(18px,2.4vw,26px);
+  border: 1px solid var(--plan-line);
+  border-radius: 15px;
+  background: linear-gradient(112deg,var(--plan-paper),var(--plan-soft));
+  color: var(--plan-ink);
+  box-shadow: none;
+}
+.dark .app-shell[data-area="student"] .study-assistant .study-assistant-hero {
+  background: linear-gradient(112deg,#292824,#222320);
+}
+.app-shell[data-area="student"] .study-assistant .study-assistant-hero h1 {
+  margin: 3px 0 6px;
+  color: var(--plan-ink);
+  font-size: clamp(25px,3vw,34px);
+  font-weight: 800;
+  letter-spacing: -.045em;
+}
+.app-shell[data-area="student"] .study-assistant .study-assistant-hero p {
+  max-width: 68ch;
+  color: var(--plan-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.app-shell[data-area="student"] .study-assistant .study-assistant-hero__eyebrow {
+  color: var(--plan-accent-strong);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.app-shell[data-area="student"] .study-assistant .study-assistant-hero__action {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 0 13px;
+  border: 1px solid var(--plan-accent);
+  border-radius: 9px;
+  background: var(--plan-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+}
+.dark .app-shell[data-area="student"] .study-assistant .study-assistant-hero__action {
+  color: #24211b;
+}
+.app-shell[data-area="student"] .study-assistant section[aria-label="Concurso e edital do seu plano"],
+.app-shell[data-area="student"] .study-assistant section[aria-label="Selecionar plano"] {
+  gap: 12px;
+  padding: 13px 16px;
+  border-color: var(--plan-line);
+  border-radius: 12px;
+  background: var(--plan-paper);
+}
+.app-shell[data-area="student"] .study-assistant section[aria-label="Selecionar plano"] select {
+  min-height: 42px;
+}
+
+/* Compact plan metrics; six indicators read as a single dashboard strip. */
+.app-shell[data-area="student"] .study-assistant [data-slot="card-content"] > .grid.grid-cols-2 {
+  gap: 8px;
+}
+.app-shell[data-area="student"] .study-assistant [data-slot="card-content"] > .grid.grid-cols-2 > div {
+  min-width: 0;
+  border: 1px solid var(--plan-line);
+  border-radius: 9px;
+  background: var(--plan-soft);
+}
+.app-shell[data-area="student"] .study-assistant .coach-view-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--plan-line);
+  border-radius: 11px;
+  background: var(--plan-soft);
+}
+.app-shell[data-area="student"] .study-assistant .coach-view-switch button {
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--plan-muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .study-assistant .coach-view-switch button[aria-pressed="true"] {
+  border-color: var(--plan-line);
+  background: var(--plan-paper);
+  color: var(--plan-accent-strong);
+  box-shadow: 0 1px 3px rgb(20 20 20 / 7%);
+}
+.app-shell[data-area="student"] .study-assistant :is(.rounded-2xl.border,.rounded-xl.border) {
+  border-color: var(--plan-line);
+}
+
+/* Agenda list, plan summary, weekly schedule and topic cards. */
+.app-shell[data-area="student"] .agenda-workspace-window {
+  display: grid;
+  gap: 14px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .page-hero {
+  min-height: 0;
+  border-radius: 15px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .page-hero__desc {
+  max-width: 68ch;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view {
+  display: grid;
+  gap: 13px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-2xl.border {
+  padding: 16px;
+  border-color: var(--plan-line);
+  border-radius: 13px;
+  background: var(--plan-paper);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-2xl.border .text-lg {
+  color: var(--plan-ink);
+  font-size: 18px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-2xl.border .rounded-xl.bg-muted\/50 {
+  border: 1px solid var(--plan-line);
+  background: var(--plan-soft);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-xl.border {
+  border-radius: 12px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [role="tablist"] {
+  height: auto;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--plan-line);
+  border-radius: 10px;
+  background: var(--plan-soft);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [role="tab"] {
+  min-height: 39px;
+  border-radius: 7px;
+  color: var(--plan-muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [role="tab"][data-state="active"] {
+  background: var(--plan-paper);
+  color: var(--plan-accent-strong);
+  box-shadow: 0 1px 3px rgb(20 20 20 / 7%);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [data-slot="card"] {
+  border-radius: 11px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [data-slot="card-header"] {
+  padding: 12px 15px 8px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [data-slot="card-content"] {
+  padding: 10px 15px 14px;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view .rounded-lg.border {
+  border-color: var(--plan-line);
+  background: var(--plan-paper);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view .rounded-lg.border:hover {
+  border-color: var(--plan-accent);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view .bg-primary {
+  background-color: var(--plan-accent) !important;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view .text-primary {
+  color: var(--plan-accent-strong) !important;
+}
+.app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view :is(button,a,input,select):focus-visible {
+  outline-color: var(--plan-accent);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .grid.sm\:grid-cols-2 > button,
+.app-shell[data-area="student"] .agenda-workspace-window .grid.sm\:grid-cols-2 > div > button {
+  min-width: 0;
+  border-color: var(--plan-line);
+  border-radius: 10px;
+  background: var(--plan-paper);
+}
+.app-shell[data-area="student"] .agenda-workspace-window .grid.sm\:grid-cols-2 > button:hover {
+  border-color: var(--plan-accent);
+  background: var(--plan-soft);
+}
+
+/* Avoid fixed-width overflow and preserve touch targets on narrow screens. */
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] .study-assistant,
+  .app-shell[data-area="student"] .agenda-workspace-window {
+    gap: 11px;
+  }
+  .app-shell[data-area="student"] .study-assistant .study-assistant-hero {
+    padding: 16px 14px;
+  }
+  .app-shell[data-area="student"] .study-assistant section[aria-label="Concurso e edital do seu plano"],
+  .app-shell[data-area="student"] .study-assistant section[aria-label="Selecionar plano"] {
+    align-items: stretch;
+    padding: 12px;
+  }
+  .app-shell[data-area="student"] .study-assistant .coach-view-switch {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+  .app-shell[data-area="student"] .study-assistant .coach-view-switch button {
+    padding-inline: 7px;
+    font-size: 11px;
+  }
+  .app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-2xl.border {
+    padding: 12px;
+  }
+  .app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view > .rounded-2xl.border .grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .app-shell[data-area="student"] .agenda-workspace-window .agenda-plan-view [role="tablist"] {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) * {
+    transition: none !important;
+  }
+}
