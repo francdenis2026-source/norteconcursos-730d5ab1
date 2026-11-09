@@ -51,7 +51,6 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
-import "@/styles/home-saas-premium.css";
 import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
@@ -77,7 +76,6 @@ import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
-import "@/styles/home-final-polish.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
