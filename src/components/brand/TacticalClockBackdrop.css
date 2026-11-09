@@ -111,3 +111,69 @@ svg.tactical-clock-backdrop {
     opacity: 0.22;
   }
 }
+
+/* Premium clock-hand restoration: keep the dial subtle, but make all three hands
+   crisp, layered and readable over the photographic background. */
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__mechanism,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__mechanism {
+  opacity: 1 !important;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 72%))
+          drop-shadow(0 0 7px rgb(225 184 103 / 13%)) !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__scale,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__scale {
+  opacity: .48 !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__hand,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__hand {
+  opacity: 1 !important;
+  stroke-linejoin: round !important;
+  paint-order: stroke fill !important;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 85%))
+          drop-shadow(0 0 2px rgb(245 220 165 / 20%)) !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__hour,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__hour {
+  fill: #e8c77f !important;
+  stroke: #25221c !important;
+  stroke-width: 2.8px !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__minute,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__minute {
+  fill: #f5e8c9 !important;
+  stroke: #29251e !important;
+  stroke-width: 2.35px !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__second,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__second {
+  fill: none !important;
+  stroke: none !important;
+  filter: drop-shadow(0 0 3px rgb(255 104 75 / 48%))
+          drop-shadow(0 1px 2px rgb(0 0 0 / 90%)) !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__edge,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__edge {
+  stroke: #fff0c9 !important;
+  stroke-width: 1.15px !important;
+  opacity: .95 !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__needle,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__needle {
+  stroke: #ff7058 !important;
+  stroke-width: 4.8px !important;
+  stroke-linecap: round !important;
+  paint-order: stroke !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__hub,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__hub {
+  fill: #e7c477 !important;
+  stroke: #181a1c !important;
+  stroke-width: 2.4px !important;
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 90%)) !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__collar,
+.home-recomposition .mobile-homepage__hero-media .tactical-clock-backdrop__collar {
+  fill: #303039 !important;
+  stroke: #f1d59b !important;
+  stroke-width: 1.15px !important;
+}
