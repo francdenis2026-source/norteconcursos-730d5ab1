@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { plannedPractice } from "@/lib/plannedStudy";
 import { platformDate } from "@/lib/platformClock";
 import { libraryCollection } from "@/lib/libraryOrganization";
@@ -34,6 +33,8 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { buildTheoryIndex, findTheory, theoryTarget, type TheorySyllabus, type TheoryTarget } from "@/lib/cronogramaTeoria";
 import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/cronograma")({
   component: CronogramaPage,
