@@ -328,3 +328,123 @@
     --badge-w: 76px !important;
   }
 }
+
+
+/* Premium motion system for the homepage insignia and hero copy.
+   Replaces spins, glitch, bursts, draggable positioning and aggressive shine. */
+.home.home #inicio .hero-badge--premium {
+  --badge-w: clamp(82px, 7.2vw, 96px);
+  position: relative !important;
+  display: block;
+  width: var(--badge-w) !important;
+  height: auto;
+  aspect-ratio: 768 / 811;
+  margin: 0 0 16px;
+  padding: 0;
+  perspective: 900px;
+  cursor: default;
+  touch-action: pan-y;
+  user-select: none;
+  isolation: isolate;
+  overflow: visible;
+  transform: translateZ(0);
+  transition: filter 500ms ease, opacity 500ms ease;
+}
+.home.home #inicio .hero-badge--premium[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(12px) scale(.96);
+}
+.home.home #inicio .hero-badge--premium[data-reveal="in"] {
+  animation: nc-crest-arrive 900ms cubic-bezier(.2,.75,.25,1) both;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__float {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: nc-crest-float 7s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__tilt,
+.home.home #inicio .hero-badge--premium .hero-badge__spin {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.75,.25,1);
+}
+.home.home #inicio .hero-badge--premium .hero-badge__edge {
+  filter: brightness(.48) saturate(.78);
+}
+.home.home #inicio .hero-badge--premium .hero-badge__face {
+  filter: drop-shadow(0 8px 16px rgb(0 0 0 / 28%));
+}
+.home.home #inicio .hero-badge--premium .hero-badge__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 22%;
+  background: linear-gradient(118deg, transparent 28%, rgb(255 244 214 / 0%) 42%, rgb(255 244 214 / 38%) 50%, rgb(255 244 214 / 0%) 58%, transparent 72%);
+  background-size: 240% 100%;
+  background-position: 130% 0;
+  -webkit-mask: var(--police-insignia-art) center / contain no-repeat;
+  mask: var(--police-insignia-art) center / contain no-repeat;
+  mix-blend-mode: screen;
+  animation: nc-crest-sheen 8s ease-in-out 1.2s infinite;
+  pointer-events: none;
+}
+.home.home #inicio .hero-badge--premium .hero-badge__ambient {
+  position: absolute;
+  z-index: -1;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(220 177 91 / 24%), rgb(220 177 91 / 7%) 42%, transparent 72%);
+  filter: blur(13px);
+  opacity: .7;
+  animation: nc-crest-breathe 5.5s ease-in-out infinite;
+}
+.home.home #inicio .hero-badge--premium[data-visible="false"] *,
+.home.home #inicio .hero-badge--premium[data-visible="false"] {
+  animation-play-state: paused !important;
+}
+@keyframes nc-crest-arrive {
+  from { opacity: 0; transform: translateY(16px) scale(.94); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes nc-crest-float {
+  0%, 100% { transform: translateY(0) rotateZ(-1deg); }
+  50% { transform: translateY(-5px) rotateZ(1deg); }
+}
+@keyframes nc-crest-sheen {
+  0%, 18% { background-position: 130% 0; }
+  42%, 100% { background-position: -130% 0; }
+}
+@keyframes nc-crest-breathe {
+  0%, 100% { opacity: .42; transform: scale(.92); }
+  50% { opacity: .82; transform: scale(1.08); }
+}
+/* Subtle entrance rhythm: eyebrow, headline, supporting copy and actions. */
+@media (prefers-reduced-motion: no-preference) {
+  .home.home #inicio .hx__kicker { animation: nc-copy-rise 650ms 100ms both; }
+  .home.home #inicio .hx__headline { animation: nc-copy-rise 760ms 220ms both; }
+  .home.home #inicio .hx__description { animation: nc-copy-rise 760ms 360ms both; }
+  .home.home #inicio .hx__copy .home-actions { animation: nc-copy-rise 760ms 480ms both; }
+}
+@keyframes nc-copy-rise {
+  from { opacity: 0; transform: translateY(13px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 760px) {
+  .home.home #inicio .hero-badge--premium { --badge-w: 76px; margin-bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home #inicio .hero-badge--premium,
+  .home.home #inicio .hero-badge--premium *,
+  .home.home #inicio .hx__kicker,
+  .home.home #inicio .hx__headline,
+  .home.home #inicio .hx__description,
+  .home.home #inicio .hx__copy .home-actions {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
