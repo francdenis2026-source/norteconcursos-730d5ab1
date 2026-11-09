@@ -77,6 +77,7 @@ import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
 import "@/styles/home-v2.css";
+import "@/styles/home-redesign.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -290,28 +291,26 @@ function PreparationInfo() {
         ))}
       </PreparationTabs.List>
       <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
-        <div className="home-preparation__items">
+        <div className="home-preparation__items hr-tools-grid">
           {TOOLS.map(({ icon: Icon, title, text, featured }) => (
-            <details
+            <article
               key={title}
-              name="preparation-tools"
-              className={`home-preparation__tool${featured ? " home-preparation__tool--featured" : ""}`}
+              className={`home-preparation__tool hr-tool-card${featured ? " home-preparation__tool--featured hr-tool-card--featured" : ""}`}
             >
-              <summary>
-                <Icon aria-hidden="true" />
-                <span>{title}</span>
-                {featured && <span className="home-preparation__tool-tag">Destaque</span>}
-                <Plus aria-hidden="true" />
-              </summary>
+              {featured && <span className="home-preparation__tool-tag hr-tool-ribbon">Destaque</span>}
+              <span className="hr-tool-icon" aria-hidden="true">
+                <Icon />
+              </span>
+              <h3>{title}</h3>
               <p>{text}</p>
-            </details>
+            </article>
           ))}
         </div>
       </PreparationTabs.Content>
       <PreparationTabs.Content value="como" className="home-preparation__panel">
         <ol className="home-preparation__items home-preparation__steps">
           {STEPS.map(([Icon, title, text], index) => (
-            <li key={title}>
+            <li className="hr-step-card" key={title}>
               <span className="home-preparation__number">0{index + 1}</span>
               <div>
                 <h3>
@@ -327,7 +326,7 @@ function PreparationInfo() {
       <PreparationTabs.Content value="carreiras" className="home-preparation__panel">
         <div className="home-preparation__items home-preparation__careers">
           {CAREERS.map(([name, roles]) => (
-            <article key={name}>
+            <article className="hr-career-card" key={name}>
               <ShieldCheck aria-hidden="true" />
               <div>
                 <h3>{name}</h3>
@@ -340,7 +339,7 @@ function PreparationInfo() {
       <PreparationTabs.Content value="fontes" className="home-preparation__panel">
         <div className="home-preparation__items">
           {PILLARS.map(({ icon: Icon, title, text }) => (
-            <article key={title}>
+            <article className="hr-source-card" key={title}>
               <Icon aria-hidden="true" />
               <div>
                 <h3>{title}</h3>
@@ -376,7 +375,7 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <div className="home home-recomposition">
+    <div className="home home-recomposition hr-canvas">
       <PublicAchievementSignal />
       <div className="home-backdrop" aria-hidden="true">
         <TacticalClockBackdrop />
@@ -387,7 +386,7 @@ function Index() {
       <a href="#conteudo-mobile" className="home-skip home-skip--mobile">
         Pular para o conteúdo
       </a>
-      <header className="home-header" data-scrolled={headerScrolled || undefined}>
+      <header className="home-header hr-header" data-scrolled={headerScrolled || undefined}>
         <div className="home-container home-header__inner">
           <div className="home-brand-lockup">
             <Link to="/" aria-label="Norte Concurso — início">
@@ -395,7 +394,7 @@ function Index() {
             </Link>
             <StudyPresence />
           </div>
-          <nav className="home-nav" aria-label="Navegação principal">
+          <nav className="home-nav hr-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
               <a
                 key={href}
@@ -581,10 +580,10 @@ function Index() {
       <NewsBanner />
 
       <MobileHomepage />
-      <main id="conteudo" className="desktop-homepage" tabIndex={-1}>
+      <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <section
           id="inicio"
-          className="home-hero"
+          className="home-hero hr-hero"
           aria-labelledby="home-title"
           data-intro={introPlaying}
         >
@@ -594,7 +593,7 @@ function Index() {
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
               <div className="hx__copy">
-                <span className="home-eyebrow home-signal">
+                <span className="home-eyebrow home-signal hr-hero-eyebrow">
                   <span /> Carreiras policiais e segurança pública
                 </span>
                 <h1 id="home-title">
@@ -606,21 +605,21 @@ function Index() {
                   Questões, legislação e simulados para carreiras policiais. Organize seu estudo,
                   fortaleça suas dificuldades e acompanhe cada avanço em um só lugar.
                 </p>
-                <div className="home-actions">
+                <div className="home-actions hr-cta-row">
                   <Link
                     to="/auth"
                     search={{ mode: "register" }}
-                    className="home-button home-button--gold"
+                    className="home-button home-button--gold hr-btn hr-btn--gold"
                     data-aim
                   >
                     Começar grátis
                     <ArrowUpRight aria-hidden="true" />
                   </Link>
-                  <a href="#plataforma" className="home-hero__explore" data-aim>
+                  <a href="#plataforma" className="home-hero__explore hr-btn hr-btn--ghost" data-aim>
                     Conhecer a plataforma
                     <ArrowRight aria-hidden="true" />
                   </a>
-                  <a href="#ranking-destaque" className="home-ranking-hero-entry" data-aim aria-label="Ver os quatro melhores candidatos no ranking real da plataforma">
+                  <a href="#ranking-destaque" className="home-ranking-hero-entry hr-btn hr-btn--outline" data-aim aria-label="Ver os quatro melhores candidatos no ranking real da plataforma">
                     <Trophy aria-hidden="true" /> Ranking dos melhores <ArrowRight aria-hidden="true" />
                   </a>
                 </div>
@@ -641,16 +640,16 @@ function Index() {
           </div>
         </section>
 
-        <nav className="desktop-homepage__quick-access home-container" aria-label="Acesso rápido à plataforma">
-          <a href="#plataforma"><BrainCircuit aria-hidden="true" /><span><strong>Plataforma</strong><small>Organize sua preparação</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a href="#concursos"><Landmark aria-hidden="true" /><span><strong>Concursos</strong><small>Explore provas e editais</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a href="#ranking-destaque"><LineChart aria-hidden="true" /><span><strong>Desempenho</strong><small>Acompanhe sua evolução</small></span><ArrowUpRight aria-hidden="true" /></a>
-          <a href="#planos"><ShieldCheck aria-hidden="true" /><span><strong>Planos</strong><small>Escolha seu caminho</small></span><ArrowUpRight aria-hidden="true" /></a>
+        <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Acesso rápido à plataforma">
+          <a className="hr-quick-item" href="#plataforma"><BrainCircuit aria-hidden="true" /><span><strong>Plataforma</strong><small>Organize sua preparação</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a className="hr-quick-item" href="#concursos"><Landmark aria-hidden="true" /><span><strong>Concursos</strong><small>Explore provas e editais</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a className="hr-quick-item" href="#ranking-destaque"><LineChart aria-hidden="true" /><span><strong>Desempenho</strong><small>Acompanhe sua evolução</small></span><ArrowUpRight aria-hidden="true" /></a>
+          <a className="hr-quick-item" href="#planos"><ShieldCheck aria-hidden="true" /><span><strong>Planos</strong><small>Escolha seu caminho</small></span><ArrowUpRight aria-hidden="true" /></a>
         </nav>
 
         <section
           id="plataforma"
-          className="home-section home-preparation"
+          className="home-section home-preparation hr-section"
           aria-labelledby="preparation-title"
         >
           <div className="home-preparation__fullwidth">
@@ -685,7 +684,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="concursos" className="home-section home-operations">
+        <section id="concursos" className="home-section home-operations hr-section hr-section--alt">
           <img
             className="home-operations__art"
             src="/media/hero/carreiras-background.webp"
@@ -712,6 +711,15 @@ function Index() {
         <PlansSection />
       </main>
 
+      <div className="hr-footer-cta">
+        <div>
+          <h2>Pronto para dar o próximo passo?</h2>
+          <p>Crie sua conta grátis e comece a treinar com questões, simulados e fontes oficiais ainda hoje.</p>
+        </div>
+        <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
+          Criar conta grátis <ArrowUpRight aria-hidden="true" />
+        </Link>
+      </div>
       <footer className="nc-footer">
         <div className="home-container">
           <div className="nc-footer__main">
