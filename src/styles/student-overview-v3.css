@@ -16,11 +16,11 @@
   --home-line: rgb(164 190 216 / 18%);
   --home-surface: #142235;
   --home-surface-2: #192b40;
-  --home-blue: #7db8ff;
-  --home-cyan: #66d6df;
+  --home-blue: var(--nc-color-action);
+  --home-cyan: var(--nc-color-action);
   --home-green: #69d5a6;
-  --home-gold: #f0c36d;
-  --home-violet: #b79aff;
+  --home-gold: var(--nc-color-action);
+  --home-violet: var(--nc-color-action);
   --home-rose: #f09ab5;
   width: 100% !important;
   max-width: none !important;
@@ -37,11 +37,11 @@
   --home-line: rgb(43 76 107 / 16%);
   --home-surface: #ffffff;
   --home-surface-2: #f2f7fb;
-  --home-blue: #246dc0;
-  --home-cyan: #087f91;
+  --home-blue: var(--nc-color-action-text);
+  --home-cyan: var(--nc-color-action);
   --home-green: #16865d;
-  --home-gold: #a66a0a;
-  --home-violet: #7551b5;
+  --home-gold: var(--nc-color-action-text);
+  --home-violet: var(--nc-color-action-text);
   --home-rose: #b94f76;
 }
 .app-shell[data-area="student"] .student-overview > * { min-width: 0; margin-block: 0; }
