@@ -16,7 +16,7 @@ The existing `PRODUCT.md` is the source of truth:
 - Preserve existing routes, data, permissions, paid-plan rules, study features and administrative workflows.
 - Keep the platform responsive on desktop, tablet and mobile.
 
-**Important correction to the initial proposal:** a petrol/teal-led palette would contradict the committed product brief. The redesign will use a restrained gold + graphite + porcelain/neutral system instead. Green, red and blue-gray may remain only as semantic status colors where meaning requires them; they must not become competing brand accents.
+**Palette decision reopened:** no prior design note may veto a palette before comparison. Evaluate at least (a) navy + petrol/teal + cool porcelain with restrained gold and (b) graphite + porcelain + gold. Choose the stronger system through actual homepage composition, accessible contrast, light/dark behavior and responsive screenshots. Semantic success/warning/error colors remain distinct from brand accents.
 
 ## 2. Audit findings
 
@@ -65,22 +65,25 @@ Dashboard summaries and focused workspaces should use the available viewport eff
 
 **Rule:** no hidden content, forced clipping or fixed heights that cut off controls. Use compact headers, responsive grids and internal scrolling only when it improves a specific workspace.
 
-## 3. Approved visual direction
+## 3. Visual direction under evaluation
 
-### Brand palette
+### Brand palette — exploratory, not restrictive
 
-| Role | Direction |
+The following combination is the current candidate to validate, not a permanent constraint:
+
+| Role | Candidate |
 |---|---|
-| Primary action / highlight | Restrained Norte gold |
-| Main dark surface | Graphite / deep neutral |
-| Light canvas | Porcelain / cool neutral |
-| Reading surface | White or softly tinted neutral |
-| Primary text | Deep graphite in light mode; warm off-white in dark mode |
-| Secondary text | Accessible neutral gray |
-| Success / warning / error | Semantic green / amber / red, used consistently |
-| Blue / teal / violet | Not brand accents; use only where an existing data meaning requires them |
+| Primary brand surface | Deep navy / petrol `#102A36` and `#174653` |
+| Primary interactive accent | Teal `#2F8790` (light) / `#64B7BA` (dark) |
+| Secondary highlight | Restrained warm gold `#D2A35B` / `#E0B86F` |
+| Light canvas | Cool porcelain `#F3F7F8` |
+| Reading surface | White `#FFFFFF` |
+| Dark canvas / surface | `#0B1820` / `#122630` |
+| Text | `#172B35` in light mode; `#EAF2F4` in dark mode |
+| Secondary text | `#5B6F79` in light mode; `#A8BBC2` in dark mode |
+| Semantic states | Consistent green / amber / red, separate from brand accents |
 
-Keep the existing Archivo family and JetBrains Mono for numeric/data contexts unless browser comparison demonstrates a clear readability problem. Do not introduce font churn for decoration.
+Compare this against graphite + porcelain + gold in rendered light and dark pages before expanding the system to internal areas. The palette must not be treated as approved solely because it is written here. Keep Archivo and JetBrains Mono for data unless real browser comparison demonstrates a readability problem.
 
 ### Component language
 
@@ -104,7 +107,7 @@ Keep the existing Archivo family and JetBrains Mono for numeric/data contexts un
 ### Phase 1 — Design tokens and theme foundation
 - Define one set of semantic tokens for light and dark themes.
 - Map existing component variables to semantic tokens rather than replacing every component at once.
-- Remove violet/teal as brand accents while preserving semantic status colors.
+- Remove accidental competing accents; validate navy/petrol/teal and gold as deliberate brand roles while preserving semantic status colors.
 - Validate typography, focus, contrast, borders, radii and spacing in shared components.
 
 ### Phase 2 — Student application shell
