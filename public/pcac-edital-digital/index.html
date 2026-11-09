@@ -1064,11 +1064,7 @@ label.topic.semantic-has-subtopics > .marker-tools {
         if(Object.prototype.hasOwnProperty.call(saved,key)) input.checked=!!saved[key];
         else if(previous) input.checked=!!previous.checked;
         else input.checked=oldParentChecked;
-        input.addEventListener('click',event=>{
-          event.preventDefault();event.stopPropagation();
-          input.checked=!input.checked;
-          input.dispatchEvent(new Event('change',{bubbles:true}));
-        });
+        // Use the browser's native checkbox click and change behavior.
         input.addEventListener('change',()=>{
           saved[key]=input.checked;
           try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch {}
@@ -1077,11 +1073,7 @@ label.topic.semantic-has-subtopics > .marker-tools {
 
         const label=document.createElement('span');
         label.textContent=item;
-        label.addEventListener('click',event=>{
-          event.preventDefault();event.stopPropagation();
-          input.checked=!input.checked;
-          input.dispatchEvent(new Event('change',{bubbles:true}));
-        });
+        // Text is informational: only the checkbox itself changes this item.
         child.append(input,label);
         list.append(child);
       });
@@ -1177,24 +1169,4 @@ label.subtopic > input[type="checkbox"],
   cursor: pointer !important;
 }
 </style>
-<script id="checkbox-direct-toggle-v2">
-(()=> {
-  // Capture the physical checkbox click and perform one explicit toggle.
-  // This bypasses conflicting legacy <label> activation/click handlers.
-  document.addEventListener('click',event=>{
-    const input=event.target;
-    if(!(input instanceof HTMLInputElement) || input.type!=='checkbox') return;
-    const row=input.closest('label.topic,label.subtopic,.semantic-subtopic');
-    if(!row) return;
-    event.preventDefault();
-    event.stopPropagation();
-    event.stopImmediatePropagation();
 
-    // Native checkbox behavior: an indeterminate parent becomes checked.
-    const nextChecked=input.indeterminate ? true : !input.checked;
-    input.indeterminate=false;
-    input.checked=nextChecked;
-    input.dispatchEvent(new Event('change',{bubbles:true}));
-  },true);
-})();
-</script>
