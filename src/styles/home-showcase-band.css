@@ -201,3 +201,36 @@
     object-fit: contain !important;
   }
 }
+
+/* Restore the website's original full-page background.
+   The previous clock veil and dark canvas wash were masking the source texture. */
+.home.hr-canvas {
+  --home-canvas-veil: transparent !important;
+  background: transparent !important;
+}
+.home.hr-canvas > .home-backdrop {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop {
+  opacity: 1 !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__veil {
+  fill: transparent !important;
+  opacity: 0 !important;
+}
+.home.hr-canvas > .home-backdrop .tactical-clock-backdrop__mechanism {
+  opacity: .22 !important;
+}
+@media (min-width: 761px) {
+  .home.hr-canvas > .home-backdrop:has(svg.tactical-clock-backdrop) {
+    opacity: 1 !important;
+    background: transparent !important;
+  }
+  .home.hr-canvas > .home-backdrop svg.tactical-clock-backdrop {
+    opacity: 1 !important;
+  }
+}
