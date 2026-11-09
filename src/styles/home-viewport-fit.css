@@ -347,3 +347,16 @@
   .home.hr-canvas { scroll-behavior: auto; }
   .home.hr-canvas .desktop-homepage { scroll-snap-type: none; }
 }
+
+@media (min-width: 1101px) {
+  .home.hr-canvas #plataforma .home-preparation__info,
+  .home.hr-canvas #plataforma .home-preparation__panel {
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .home.hr-canvas #plataforma .home-preparation__panel {
+    padding: 6px 10px 8px !important;
+  }
+}
