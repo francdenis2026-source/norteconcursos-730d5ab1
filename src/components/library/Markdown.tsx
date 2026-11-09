@@ -183,7 +183,17 @@ function parse(markdown: string): Block[] {
         paragraph.push((lines[i] ?? "").trim());
         i++;
       }
-      blocks.push({ type: "p", text: paragraph.join(" ") });
+      const paragraphText = paragraph.join(" ");
+      // Conteúdo legado pode conter o script inteiro em uma única linha/parágrafo.
+      // Nesse caso, remover apenas uma parte ainda deixaria código visível na página.
+      if (
+        /document\.querySelectorAll|querySelector\(['"]\.subject-|trimDanglingNumber|sciencesSummary|medicinePanel|heading\.remove\(\)/i.test(
+          paragraphText,
+        )
+      ) {
+        continue;
+      }
+      blocks.push({ type: "p", text: paragraphText });
     }
   }
   return highlightExampleSections(blocks);
