@@ -39,6 +39,7 @@ import {
   pcAcVerticalCounts,
   pcAcVerticalDisciplineCounts,
   pcAcVerticalItemId,
+  pcAcVerticalTopicStatus,
   readPcAcVerticalProgress,
   writePcAcVerticalProgress,
   type PcAcVerticalStatus,
@@ -318,9 +319,13 @@ function DisciplineAccordionItem({
               {groups.map((group, i) => {
                 const units = group.subtopics.length ? group.subtopics : [group.title];
                 const statuses = units.map((_, j) =>
-                  group.subtopics.length
-                    ? progress[pcAcVerticalItemId(block, discipline.id, i, j)]
-                    : progress[pcAcVerticalItemId(block, discipline.id, i)],
+                  pcAcVerticalTopicStatus(
+                    progress,
+                    block,
+                    discipline.id,
+                    i,
+                    group.subtopics.length ? j : undefined,
+                  ),
                 );
                 const groupStatus: PcAcVerticalStatus | undefined = statuses.every((status) => status === "estudado")
                   ? "estudado"
@@ -548,6 +553,10 @@ function PcAcreEditalVerticalizadoPage() {
       const nextValue = forcedStatus === undefined ? nextStatus(prev[itemId]) : forcedStatus;
       if (nextValue) next[itemId] = nextValue;
       else delete next[itemId];
+      // Ao marcar um subtópico novo, remove o status legado do tópico-pai.
+      if (topicIndex !== undefined && subtopicIndex !== undefined) {
+        delete next[pcAcVerticalItemId(block, disciplineId, topicIndex)];
+      }
       if (typeof window !== "undefined")
         writePcAcVerticalProgress(window.localStorage, userId, cargo.id, next);
       return next;
