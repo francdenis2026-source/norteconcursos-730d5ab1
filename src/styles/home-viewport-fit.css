@@ -791,3 +791,30 @@
     margin-bottom: 10px !important;
   }
 }
+
+
+/* Professional portrait framing: show the complete upper-body composition without oversized cropping. */
+@media (min-width: 1101px) {
+  .home.hr-canvas #inicio.home-hero > img.home-hero__image {
+    left: auto !important;
+    right: 0 !important;
+    width: min(56%, 820px) !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    transform: none !important;
+    transform-origin: right bottom !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas #inicio.home-hero > img.home-hero__image {
+    left: auto !important;
+    right: 0 !important;
+    width: 54% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+    transform: none !important;
+    transform-origin: right bottom !important;
+  }
+}
