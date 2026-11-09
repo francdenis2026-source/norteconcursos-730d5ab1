@@ -1194,14 +1194,14 @@
     --stage-card: #f8fbfd;
     --stage-line: #b9cedc;
     --stage-muted: #364e63;
-    --home-canvas-veil: rgb(207 224 235 / .74);
+    --home-canvas-veil: transparent;
     background: #d9e5ed;
     color: #172f44;
   }
   /* Allow the clock artwork to read as a purposeful faint engraving. */
   :root:not(.dark) .home.home .home-backdrop {
     background-color: #d5e3ec;
-    --backdrop-clock-veil: rgb(208 225 237 / .75);
+    --backdrop-clock-veil: transparent;
   }
   :root:not(.dark) .home.home .home-backdrop .tactical-clock-backdrop__mechanism {
     opacity: .43;
