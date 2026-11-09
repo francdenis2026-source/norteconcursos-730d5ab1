@@ -201,6 +201,8 @@ function FlashcardsPage() {
   const [queue, setQueue] = React.useState<Card_[]>([]);
   const [flipped, setFlipped] = React.useState(false);
   const [reviewed, setReviewed] = React.useState(0);
+  const [ratingBusy, setRatingBusy] = React.useState(false);
+  const ratingLock = React.useRef(false);
   const [studySubject, setStudySubject] = React.useState(
     search.subject ? canonicalSubject(search.subject) : "all",
   );
@@ -218,12 +220,17 @@ function FlashcardsPage() {
 
   const load = React.useCallback(async () => {
     if (!user) return;
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("flashcards")
       .select("*")
       .eq("user_id", user.id)
       .order("due_at", { ascending: true })
       .limit(3000);
+    if (error) {
+      toast.error("Não foi possível carregar seus flashcards.");
+      setLoading(false);
+      return;
+    }
     setCards(
       ((data as Card_[] | null) ?? []).map((card) => ({
         ...card,
@@ -274,11 +281,10 @@ function FlashcardsPage() {
   const rate = React.useCallback(
     async (rating: Rating) => {
       const card = queue[0];
-      if (!card || !user) return;
+      if (!card || !user || ratingLock.current) return;
+      ratingLock.current = true;
+      setRatingBusy(true);
       const next = nextState(card, rating);
-      setQueue((q) => (rating === "again" ? [...q.slice(1), { ...card, ...next }] : q.slice(1)));
-      setFlipped(false);
-      setReviewed((n) => n + 1);
       const patch = {
         ease: next.ease,
         interval_days: next.interval_days,
@@ -287,14 +293,35 @@ function FlashcardsPage() {
         due_at: next.due_at,
         last_reviewed_at: platformDate().toISOString(),
       };
-      setCards((cs) => cs.map((c) => (c.id === card.id ? { ...c, ...patch } : c)));
-      const [a, b] = await Promise.all([
-        supabase.from("flashcards").update(patch).eq("id", card.id),
-        supabase.from("flashcard_reviews").insert({ user_id: user.id, card_id: card.id, rating }),
-      ]);
-      if (a.error || b.error) toast.error("Não foi possível salvar essa revisão.");
+      try {
+        const [a, b] = await Promise.all([
+          supabase.from("flashcards").update(patch).eq("id", card.id).eq("user_id", user.id),
+          supabase.from("flashcard_reviews").insert({ user_id: user.id, card_id: card.id, rating }),
+        ]);
+        if (a.error || b.error) {
+          await load();
+          setQueue([]);
+          setReviewed(0);
+          setFlipped(false);
+          toast.error("A revisão não foi confirmada. Seus cartões foram atualizados; inicie a sessão novamente.");
+          return;
+        }
+        setQueue((q) => (rating === "again" ? [...q.slice(1), { ...card, ...next }] : q.slice(1)));
+        setCards((cs) => cs.map((c) => (c.id === card.id ? { ...c, ...patch } : c)));
+        setReviewed((n) => n + 1);
+        setFlipped(false);
+      } catch {
+        await load();
+        setQueue([]);
+        setReviewed(0);
+        setFlipped(false);
+        toast.error("Falha de conexão ao salvar a revisão. Confira seus cartões e tente novamente.");
+      } finally {
+        ratingLock.current = false;
+        setRatingBusy(false);
+      }
     },
-    [queue, user],
+    [load, queue, user],
   );
 
   // Atalhos: espaço vira o cartão; 1 a 4 avaliam.
@@ -328,7 +355,7 @@ function FlashcardsPage() {
       back: v.back.trim(),
     };
     const { error } = v.id
-      ? await supabase.from("flashcards").update(row).eq("id", v.id)
+      ? await supabase.from("flashcards").update(row).eq("id", v.id).eq("user_id", user.id)
       : await supabase.from("flashcards").insert({ ...row, user_id: user.id });
     if (error) {
       toast.error("Não foi possível salvar o cartão.");
@@ -350,7 +377,7 @@ function FlashcardsPage() {
       }))
     )
       return;
-    const { error } = await supabase.from("flashcards").delete().eq("id", c.id);
+    const { error } = await supabase.from("flashcards").delete().eq("id", c.id).eq("user_id", user.id);
     if (error) {
       toast.error("Não foi possível excluir.");
       return;
@@ -532,6 +559,8 @@ function FlashcardsPage() {
                         key={r}
                         type="button"
                         onClick={() => void rate(r)}
+                        disabled={ratingBusy}
+                        aria-busy={ratingBusy}
                         className={cn(
                           "rounded-xl border p-3 text-center transition-colors",
                           RATING_STYLE[r],
