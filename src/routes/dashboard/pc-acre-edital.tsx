@@ -536,12 +536,16 @@ function PcAcreEditalVerticalizadoPage() {
   const cargo = pcAcVerticalCargo(cargoParam);
   const [clockNow, setClockNow] = React.useState(() => new Date());
   React.useEffect(() => {
-    if (!digitalView) return;
-    const timer = window.setInterval(() => setClockNow(new Date()), 60_000);
+    const timer = window.setInterval(() => setClockNow(new Date()), 1_000);
     return () => window.clearInterval(timer);
-  }, [digitalView]);
-  const examDate = new Date("2027-01-24T00:00:00");
-  const daysToExam = Math.max(0, Math.ceil((examDate.getTime() - clockNow.getTime()) / 86_400_000));
+  }, []);
+  const examDate = new Date("2027-01-24T00:00:00-03:00");
+  const remainingMs = Math.max(0, examDate.getTime() - clockNow.getTime());
+  const daysToExam = Math.floor(remainingMs / 86_400_000);
+  const hoursToExam = Math.floor((remainingMs % 86_400_000) / 3_600_000);
+  const minutesToExam = Math.floor((remainingMs % 3_600_000) / 60_000);
+  const secondsToExam = Math.floor((remainingMs % 60_000) / 1_000);
+  const pad = (value: number) => String(value).padStart(2, "0");
 
   const [progress, setProgress] = React.useState<Record<string, PcAcVerticalStatus>>({});
 
@@ -616,7 +620,14 @@ function PcAcreEditalVerticalizadoPage() {
         title="Edital verticalizado — PC-AC 001/2026"
         description="Marque o que já estudou, acompanhe o progresso por cargo e exporte seu edital verticalizado em PDF. Conteúdo organizado a partir do Edital nº 001 SEAD/PCAC, banca IDECAN."
         actions={
-          <div className="flex flex-wrap gap-2">
+          <div className="flex max-w-[760px] flex-wrap items-center justify-end gap-2">
+            <div className="flex items-center gap-2 rounded-lg border border-white/15 bg-slate-950/20 px-2.5 py-1.5 text-[10px] leading-tight text-slate-200">
+              <span><strong className="block text-[9px] uppercase tracking-wide text-slate-400">Edital lançado</strong>06/11/2026</span>
+              <span className="h-6 w-px bg-white/15" />
+              <span><strong className="block text-[9px] uppercase tracking-wide text-slate-400">Prova</strong>24/01/2027</span>
+              <span className="h-6 w-px bg-white/15" />
+              <span className="text-center"><strong className="block text-[9px] uppercase tracking-wide text-amber-300">Faltam</strong><span className="font-black tabular-nums text-amber-200">{daysToExam}d {pad(hoursToExam)}:{pad(minutesToExam)}:{pad(secondsToExam)}</span></span>
+            </div>
             <Button variant="outline" asChild>
               <Link to="/dashboard/inteligencia-idecan">
                 <ScanSearch className="mr-2 h-4 w-4" />
