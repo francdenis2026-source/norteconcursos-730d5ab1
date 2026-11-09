@@ -65,3 +65,17 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   .mobile-homepage__cards > article p { overflow-wrap: anywhere; }
   .mobile-homepage__wide-link { min-height: 48px; }
 }
+
+/* Brand-colored standalone assistant / AI sparkle icons.
+   These icons indicate an available action and should not inherit muted text colors. */
+.app-shell :is(svg.lucide-sparkles, svg.lucide-sparkle) {
+  color: var(--nc-primitive-gold, #d8b56d) !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+.app-shell :is(button, [role="button"], a):has(> svg.lucide-sparkles, > svg.lucide-sparkle) {
+  color: var(--nc-primitive-gold, #d8b56d);
+}
+.app-shell :is(button, [role="button"], a):has(> svg.lucide-sparkles, > svg.lucide-sparkle):hover {
+  background-color: color-mix(in srgb, var(--nc-primitive-gold, #d8b56d) 12%, transparent);
+}
