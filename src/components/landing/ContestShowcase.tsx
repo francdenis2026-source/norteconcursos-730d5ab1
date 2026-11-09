@@ -128,17 +128,15 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
           />
         </div>
         <div className="contest-spotlight__content">
-          <div className="contest-acre-banner" aria-label="Destaque da Polícia Civil do Acre">
-            <div className="contest-acre-banner__identity">
-              <span className="contest-acre-banner__seal" aria-hidden="true"><ShieldCheck size={27} /></span>
-              <div>
-                <strong>PC Civil do Acre</strong>
-                <span>Preparação direcionada · IDECAN</span>
-              </div>
-            </div>
-            <div className="contest-acre-banner__flag" aria-label="Bandeira do Acre" role="img">
-              <span className="contest-acre-banner__star" aria-hidden="true">★</span>
-            </div>
+          <div className="contest-acre-mark">
+            <span className="contest-acre-mark__seal" aria-hidden="true"><ShieldCheck size={17} /></span>
+            <span className="contest-acre-mark__copy">
+              <strong>DESTAQUE REGIONAL</strong>
+              <small>Polícia Civil do Acre · IDECAN</small>
+            </span>
+            <span className="contest-acre-mark__flag" role="img" aria-label="Bandeira do Acre">
+              <i aria-hidden="true">★</i>
+            </span>
           </div>
           <div className="contest-kickers">
             <span>
