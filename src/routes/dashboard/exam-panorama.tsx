@@ -1,3 +1,4 @@
+import "@/styles/exam-performance-workspaces.css";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
