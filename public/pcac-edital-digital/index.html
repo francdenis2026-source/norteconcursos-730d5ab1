@@ -1658,9 +1658,8 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
     savedOpen=null;
   };
   const showAll=()=>{
-    document.querySelectorAll('.tabpane > details, .subject-collapse, label.topic, .semantic-subtopic, label.subtopic')
+    document.querySelectorAll('details, label.topic, .semantic-subtopic, label.subtopic')
       .forEach(node=>{node.style.display='';});
-    document.querySelectorAll('.subtopics-panel').forEach(node=>{node.style.display='';});
     restoreOpen();
     status.hidden=true;
     status.textContent='';
@@ -1741,12 +1740,13 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
       : 'Nenhum assunto encontrado neste cargo. Experimente outro termo ou selecione outro cargo.';
   }
 
+  input.oninput=null;
   input.addEventListener('input',applySearch);
-  if(clear) clear.addEventListener('click',()=>{
+  if(clear) clear.onclick=()=>{
     input.value='';
     showAll();
     input.focus();
-  });
+  };
   tabs.forEach(tab=>tab.addEventListener('click',()=>{
     input.value='';
     showAll();
