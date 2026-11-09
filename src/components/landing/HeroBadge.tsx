@@ -63,7 +63,8 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
     };
   }, []);
   const startDrag = (event: PointerEvent<HTMLButtonElement>) => {
-    if (event.button !== 0) return;
+    // Repositioning is an explicit gesture: hold Ctrl, then press and drag the crest.
+    if (event.button !== 0 || !event.ctrlKey) return;
     drag.current = {
       pointerId: event.pointerId,
       startX: event.clientX,
@@ -340,9 +341,9 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
       ref={root}
       type="button"
       className="hero-badge hero-badge--movable"
-      aria-label="Arraste para reposicionar o brasão; clique para animar"
-      title="Arraste o brasão para posicioná-lo. A posição fica salva neste navegador."
-      style={{ position: "relative", left: 0, top: 0, cursor: "grab", touchAction: "none", zIndex: 5 }}
+      aria-label="Segure Ctrl e clique para arrastar e reposicionar o brasão; clique normalmente para animar"
+      title="Para mover: mantenha Ctrl pressionado, clique e arraste. A posição fica salva neste navegador. Clique normalmente para animar."
+      style={{ position: "relative", left: 0, top: 0, cursor: "pointer", touchAction: "none", zIndex: 5 }}
       data-visible="false"
       data-reveal={show ? "in" : "pending"}
       onPointerDown={startDrag}
