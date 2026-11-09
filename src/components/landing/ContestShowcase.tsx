@@ -2,40 +2,8 @@ import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness, Bell } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { usePcscAvailability } from "@/hooks/usePcscAvailability";
-import { PCSC_EXAM, PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
-import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
-import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
 
-const format = (value: number) => value.toLocaleString("pt-BR");
-const pcacVacancies = pcAcVerticalCargos.reduce((total, cargo) => total + cargo.vagas, 0);
-const formatDate = (value: string) => new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value + "T00:00:00Z"));
-
-function Availability({
-  count,
-  label,
-  loading,
-}: {
-  count: number | undefined;
-  label: string;
-  loading: boolean;
-}) {
-  return (
-    <div className="contest-availability">
-      <strong>{count === undefined ? "—" : format(count)}</strong>
-      <span>
-        {count === undefined
-          ? loading
-            ? "Conferindo questões…"
-            : "Quantidade não confirmada"
-          : count === 1
-            ? "questão para treinar"
-            : "questões para treinar"}
-        <small>{label}</small>
-      </span>
-    </div>
-  );
-}
 function Ficha({ items }: { items: [string, string][] }) {
   return (
     <dl className="contest-ficha">
@@ -48,43 +16,10 @@ function Ficha({ items }: { items: [string, string][] }) {
     </dl>
   );
 }
-function CountReference({ date }: { date: string | null }) {
-  return (
-    <p className="contest-reference">
-      {date
-        ? `Conferido em ${date}. Confira a disponibilidade ao iniciar.`
-        : "Disponibilidade desta sessão. Os limites do seu plano continuam valendo."}
-    </p>
-  );
-}
-
 /** Public references are dated; signed-in counts continue to use the eligible catalogue. */
 export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
   const suffix = mobile ? '-mobile' : '';
   const { isAuthenticated } = useAuthStatus();
-  const sc = usePcscAvailability();
-  const scCount = sc.counts?.[0];
-  const trainingLink = (search: Record<string, string>, label: string, primary = false) =>
-    isAuthenticated ? (
-      <Link
-        to="/dashboard/question-trainer"
-        search={search}
-        className={`contest-action${primary ? " contest-action--gold" : ""}`}
-      >
-        {label}
-        <ArrowRight aria-hidden="true" />
-      </Link>
-    ) : (
-      <Link
-        to="/auth"
-        search={{ mode: "register" }}
-        className={`contest-action${primary ? " contest-action--gold" : ""}`}
-      >
-        {label}
-        <ArrowRight aria-hidden="true" />
-      </Link>
-    );
-
   return (
     <div className="contest-showcase">
       <article className="contest-spotlight hr-contest-card contest-spotlight--artwork" aria-label="Destaque do concurso da Polícia Civil do Estado do Acre">
