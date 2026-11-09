@@ -922,3 +922,18 @@
     max-width: 100% !important;
   }
 }
+
+
+/* Lift the entire hero copy group while keeping it safely clear of the fixed navigation. */
+@media (min-width: 761px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    position: relative !important;
+    top: -18px !important;
+  }
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    position: relative !important;
+    top: -10px !important;
+  }
+}
