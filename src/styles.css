@@ -17108,3 +17108,47 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     .student-home__metric p, .student-home__metric h2, .student-desk__section-heading > span) {
   color: #52677b !important;
 }
+
+
+/* Global native cursor semantics — keep text-entry fields consistent in every area. */
+:where(
+  input:not([type="button]):not([type="submit]):not([type="reset]):not([type="checkbox]):not([type="radio]):not([type="range]):not([type="file]):not([type="color"]),
+  textarea,
+  [contenteditable="true"],
+  [contenteditable=""],
+  [role="textbox"],
+  [data-slate-editor="true"],
+  .ProseMirror
+):not(:disabled):not([aria-disabled="true"]) {
+  cursor: text !important;
+  caret-color: currentColor;
+}
+:where(
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="range"],
+  input[type="file"],
+  input[type="color"],
+  select,
+  button:not(:disabled),
+  a[href],
+  [role="button"],
+  [role="tab"],
+  [role="switch"],
+  [role="checkbox"],
+  [role="radio"],
+  [role="option"],
+  [role="menuitem"],
+  [aria-haspopup],
+  summary,
+  label[for]
+):not([aria-disabled="true"]) {
+  cursor: pointer !important;
+}
+:where(input, textarea, select, [contenteditable="true"], [role="textbox"]):disabled,
+:where(input, textarea, select, [contenteditable="true"], [role="textbox"])[aria-disabled="true"] {
+  cursor: not-allowed !important;
+}
