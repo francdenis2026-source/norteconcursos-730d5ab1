@@ -71,7 +71,7 @@ test("creates seven Acre parent topics with independent subtopics", () => {
   ]);
   assert.deepEqual(groups.map((group) => group.subtopics.length), [8, 3, 9, 4, 3, 6, 2]);
   assert.equal(groups.reduce((total, group) => total + group.subtopics.length, 0), 35);
-  assert.deepEqual(groups[0]!.subtopics, [
+  assert.deepEqual(groups[0].subtopics, [
     "Ocupação",
     "Ciclos da borracha",
     "Antecedentes diplomáticos (Tratado de Ayacucho)",
