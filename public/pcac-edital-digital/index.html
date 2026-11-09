@@ -593,3 +593,41 @@ label.topic.has-topic-collapse > .topic-collapse-toggle {
   align-self: start !important;
 }
 </style>
+<style id="subtopics-count-layout-fix">
+/* Keep the expand control compact: no stretched count badge in the middle of a row. */
+details.subtopics-panel > summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 7px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+details.subtopics-panel > summary::before {
+  flex: 0 0 18px !important;
+  margin: 0 !important;
+}
+details.subtopics-panel > summary > span:first-child {
+  display: inline-flex !important;
+  flex: 0 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #1e3a8a !important;
+  text-align: left !important;
+}
+details.subtopics-panel > summary > .subtopics-count {
+  display: none !important;
+}
+</style>
+<script id="remove-subtopics-count-badges">
+(()=> {
+  document.querySelectorAll('details.subtopics-panel > summary > .subtopics-count')
+    .forEach(count=>count.remove());
+})();
+</script>
