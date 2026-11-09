@@ -1,0 +1,213 @@
+/* Norte Concursos — shared student workspaces and PC-AC edital refinement.
+   Applied to existing page roots only; no route, data, authorization or study rule changes. */
+.app-shell[data-area="student"] .nc-student-workspace,
+.app-shell[data-area="student"] .agenda-workspace-window {
+  --ncw-ink: var(--nc-student-ink, #172d36);
+  --ncw-muted: var(--nc-student-muted, #627780);
+  --ncw-line: var(--nc-student-line, #dce7e9);
+  --ncw-surface: var(--nc-student-surface, #fff);
+  --ncw-soft: var(--nc-student-surface-soft, #f7fafb);
+  --ncw-accent: var(--nc-student-petrol-700, #1d5d69);
+  --ncw-accent-soft: var(--nc-student-cyan-soft, #e5f5f6);
+  width: 100%;
+  min-width: 0;
+  color: var(--ncw-ink);
+  gap: 14px;
+}
+.app-shell[data-area="student"] .nc-student-workspace > *,
+.app-shell[data-area="student"] .agenda-workspace-window > * { min-width: 0; }
+.app-shell[data-area="student"] .nc-student-workspace :is(h1,h2,h3,h4),
+.app-shell[data-area="student"] .agenda-workspace-window :is(h1,h2,h3,h4) {
+  color: var(--ncw-ink);
+  letter-spacing: -.02em;
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(p,small,.text-muted-foreground),
+.app-shell[data-area="student"] .agenda-workspace-window :is(p,small,.text-muted-foreground) { color: var(--ncw-muted); }
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="card"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="card"] {
+  min-width: 0;
+  border: 1px solid var(--ncw-line);
+  border-radius: 15px;
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+  box-shadow: 0 8px 24px -23px rgb(10 40 50 / 36%);
+}
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="card-header"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="card-header"] { gap: 6px; padding: 16px 18px 10px; }
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="card-content"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="card-content"] { padding: 12px 18px 17px; }
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="card-title"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="card-title"] {
+  color: var(--ncw-ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(input,select,textarea),
+.app-shell[data-area="student"] .agenda-workspace-window :is(input,select,textarea) {
+  min-width: 0;
+  border-color: var(--ncw-line);
+  border-radius: 9px;
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(a,button,input,select,textarea,[role="button"]):focus-visible,
+.app-shell[data-area="student"] .agenda-workspace-window :is(a,button,input,select,textarea,[role="button"]):focus-visible {
+  outline: 2px solid var(--nc-student-cyan, #48b8c3);
+  outline-offset: 2px;
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(.page-hero,.edital-modern-hero,.study-assistant-hero) {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #244c57;
+  border-radius: 17px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgb(72 184 195 / 20%), transparent 42%),
+    linear-gradient(112deg, #0b2029 0%, #123944 58%, #1b5260 100%) !important;
+  box-shadow: 0 14px 32px -27px rgb(4 28 37 / 55%);
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(.page-hero,.edital-modern-hero,.study-assistant-hero) :is(h1,h2,h3,p,.page-hero__desc,.edital-eyebrow,.hero-chip) {
+  color: #f0f8f9 !important;
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(.page-hero__stats,.hero-stat) {
+  border-color: rgb(190 231 232 / 22%);
+}
+.app-shell[data-area="student"] .nc-student-workspace :is(.page-hero__stats,.hero-stat) :is(strong,span,svg) { color: #e6f6f7; }
+.app-shell[data-area="student"] .nc-student-workspace :is(.edital-eyebrow,.study-assistant-hero__eyebrow) {
+  color: #9ddfe0 !important;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="button"][data-variant="default"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="button"][data-variant="default"] {
+  border-color: var(--nc-student-petrol-800, #174653);
+  background: var(--nc-student-petrol-800, #174653);
+  color: #fff;
+}
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="button"][data-variant="outline"],
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="button"][data-variant="outline"] {
+  border-color: var(--ncw-line);
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+}
+.app-shell[data-area="student"] .nc-student-workspace [data-slot="button"]:hover,
+.app-shell[data-area="student"] .agenda-workspace-window [data-slot="button"]:hover { filter: brightness(.97); }
+.app-shell[data-area="student"] .nc-student-workspace .edital-progress-panel {
+  border: 1px solid var(--ncw-line);
+  border-radius: 13px;
+  background: var(--ncw-soft);
+  padding: 16px;
+}
+.app-shell[data-area="student"] .nc-student-workspace .edital-progress-track {
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--ncw-line);
+}
+.app-shell[data-area="student"] .nc-student-workspace .edital-progress-track > * { background: var(--nc-student-jade, #39866e); }
+.app-shell[data-area="student"] .nc-student-workspace .edital-filter-tabs {
+  border: 1px solid var(--ncw-line);
+  border-radius: 12px;
+  background: var(--ncw-soft);
+  padding: 5px;
+}
+.app-shell[data-area="student"] .nc-student-workspace .edital-filter-tabs [data-state="active"] {
+  border-radius: 8px;
+  background: var(--nc-student-petrol-800, #174653);
+  color: white;
+}
+.app-shell[data-area="student"] .nc-student-workspace .edital-note,
+.app-shell[data-area="student"] .nc-student-workspace .edital-empty {
+  border-color: var(--ncw-line);
+  border-radius: 12px;
+  background: var(--ncw-soft);
+  color: var(--ncw-ink);
+}
+
+/* PC-AC verticalized edital: dense, scannable discipline cards and accessible controls. */
+.app-shell[data-area="student"] .pcac-edital-page {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  color: var(--nc-student-ink);
+}
+.app-shell[data-area="student"] .pcac-edital-page > .page-hero {
+  margin: 0;
+}
+.app-shell[data-area="student"] .pcac-edital-page .page-hero__stats { gap: 9px; }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card,
+.app-shell[data-area="student"] .pcac-edital-page [data-slot="card"] {
+  min-width: 0;
+  border: 1px solid var(--nc-student-line);
+  border-radius: 15px;
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+  box-shadow: 0 8px 24px -23px rgb(10 40 50 / 36%);
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card :is(h2,h3,h4,strong) { color: var(--nc-student-ink); }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card :is(p,small,.text-muted-foreground) { color: var(--nc-student-muted); }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-cargos button {
+  min-height: 86px;
+  border-color: var(--nc-student-line);
+  border-radius: 11px;
+  background: var(--nc-student-surface-soft);
+  color: var(--nc-student-ink);
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-cargos button[aria-pressed="true"] {
+  border-color: var(--nc-student-cyan);
+  background: var(--nc-student-cyan-soft);
+  box-shadow: inset 0 0 0 1px var(--nc-student-cyan);
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-cargos button:hover { transform: translateY(-1px); border-color: var(--nc-student-cyan); }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-status-control {
+  border-color: var(--nc-student-line);
+  border-radius: 7px;
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card .pcac-video-link {
+  border-color: color-mix(in srgb, var(--nc-student-cyan) 38%, var(--nc-student-line));
+  background: var(--nc-student-cyan-soft);
+  color: var(--nc-student-petrol-800);
+}
+:root.dark .app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card .pcac-video-link { color: #b9edef; }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-cronograma {
+  scroll-margin-top: calc(var(--app-topbar-h, 64px) + 18px);
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card [class*="bg-gradient-to"] {
+  background-image: none;
+}
+.app-shell[data-area="student"] .pcac-digital-fullscreen > :first-child {
+  border: 1px solid #315965;
+  border-radius: 14px;
+  background: linear-gradient(112deg, #0b2029, #174653) !important;
+}
+.app-shell[data-area="student"] .pcac-digital-fullscreen iframe {
+  display: block;
+  width: 100%;
+  height: max(440px, calc(100svh - var(--app-topbar-h, 64px) - 118px));
+  min-height: 0 !important;
+  border: 0;
+}
+:root.dark .app-shell[data-area="student"] .pcac-edital-page .pcac-edital-card {
+  background: var(--nc-student-surface);
+  color: var(--nc-student-ink);
+}
+@media (max-width: 1100px) {
+  .app-shell[data-area="student"] .pcac-edital-page .page-hero__stats { flex-wrap: wrap; }
+}
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .nc-student-workspace,
+  .app-shell[data-area="student"] .agenda-workspace-window { gap: 11px; }
+  .app-shell[data-area="student"] .nc-student-workspace [data-slot="card-header"],
+  .app-shell[data-area="student"] .agenda-workspace-window [data-slot="card-header"] { padding: 13px 14px 8px; }
+  .app-shell[data-area="student"] .nc-student-workspace [data-slot="card-content"],
+  .app-shell[data-area="student"] .agenda-workspace-window [data-slot="card-content"] { padding: 10px 14px 14px; }
+  .app-shell[data-area="student"] .pcac-edital-page { gap: 11px; }
+  .app-shell[data-area="student"] .pcac-edital-page .pcac-edital-cargos button { min-height: 76px; padding: 10px; }
+  .app-shell[data-area="student"] .pcac-digital-fullscreen iframe {
+    height: calc(100svh - var(--app-topbar-h, 58px) - 150px);
+    min-height: 380px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .pcac-edital-page *,
+  .app-shell[data-area="student"] .nc-student-workspace * { transition-duration: 1ms !important; }
+}
