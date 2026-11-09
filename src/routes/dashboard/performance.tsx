@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
@@ -31,6 +30,8 @@ import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import "@/styles/performance-refinement.css";
 import "@/styles/student-workspace-unified.css";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
