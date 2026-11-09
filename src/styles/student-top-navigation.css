@@ -906,3 +906,139 @@
   }
 }
 
+
+
+/* --------------------------------------------------------------------------
+   Norte student shell — graphite, porcelain & brass
+   A single restrained navigation language for desktop and mobile.
+   Keeps existing routes, dropdowns, focus behavior and responsive breakpoints.
+   -------------------------------------------------------------------------- */
+.app-shell.navigation-v2[data-area="student"] {
+  --student-shell-ink: #252b33;
+  --student-shell-muted: #68727d;
+  --student-shell-line: #d7dce1;
+  --student-shell-brass: var(--brass, #c69b4b);
+  --student-shell-brass-deep: var(--brass-deep, #8d6727);
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar {
+  min-height: var(--app-topbar-h, 64px);
+  border-bottom: 1px solid var(--student-shell-line);
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 2px 12px rgb(37 43 51 / 5%);
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+  min-height: 56px;
+  gap: clamp(12px, 1.8vw, 26px);
+  padding-block: 7px;
+  border-bottom-color: var(--student-shell-line);
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 3px 14px rgb(37 43 51 / 4%);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+  color: var(--student-shell-ink);
+  letter-spacing: .105em;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-mark {
+  border-color: color-mix(in srgb, var(--student-shell-brass) 60%, white);
+  background: color-mix(in srgb, var(--student-shell-brass) 12%, white);
+  color: var(--student-shell-brass-deep);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+  min-height: 38px;
+  border-color: transparent;
+  border-radius: 9px;
+  color: #59636e;
+  background: transparent;
+  font-weight: 650;
+  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover,
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"],
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[aria-current="page"] {
+  color: #3a301e;
+  border-color: color-mix(in srgb, var(--student-shell-brass-deep) 24%, white);
+  background: color-mix(in srgb, var(--student-shell-brass) 17%, white);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+  color: var(--student-shell-brass-deep);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu {
+  border: 1px solid var(--student-shell-line);
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgb(37 43 51 / 16%);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"] {
+  color: #3d4650;
+  border-radius: 8px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"]:hover,
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"][data-current="true"] {
+  color: #3a301e;
+  background: color-mix(in srgb, var(--student-shell-brass) 17%, white);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"][data-current="true"] svg {
+  color: var(--student-shell-brass-deep);
+}
+
+/* Dark theme: preserve the same hierarchy without a bright glass strip. */
+:root.dark .app-shell.navigation-v2[data-area="student"] .app-topbar,
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+  border-color: #34404c;
+  background: rgb(25 31 39 / 94%);
+  box-shadow: 0 3px 16px rgb(0 0 0 / 22%);
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+  color: #f1f3f5;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-mark {
+  border-color: color-mix(in srgb, var(--student-shell-brass) 58%, #414955);
+  background: color-mix(in srgb, var(--student-shell-brass) 13%, #202832);
+  color: #e4c17d;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+  color: #c0c7d0;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover,
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"],
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[aria-current="page"] {
+  color: #f4dfb5;
+  border-color: #69552f;
+  background: #342d21;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+  color: #e4c17d;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu {
+  border-color: #3a4653;
+  background: #202832;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"] {
+  color: #e2e7ed;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"]:hover,
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"][data-current="true"] {
+  color: #f4dfb5;
+  background: #342d21;
+}
+:root.dark .app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu [role="menuitem"][data-current="true"] svg {
+  color: #e4c17d;
+}
+
+/* Compact tablet navigation: never squeeze the brand and action controls. */
+@media (min-width: 768px) and (max-width: 1050px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+    gap: 8px;
+    padding-inline: 14px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    gap: 3px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    transition: none;
+  }
+}
