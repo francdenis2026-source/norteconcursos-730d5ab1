@@ -313,3 +313,18 @@
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+
+/* Slightly enlarge the animated Norte insignia in the hero without competing
+   with the headline or the photographic background. Keep its current anchor. */
+.home.home #inicio.home-hero .hero-badge {
+  --badge-w: clamp(82px, 7.2vw, 96px) !important;
+  width: var(--badge-w) !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+@media (max-width: 760px) {
+  .home.home #inicio.home-hero .hero-badge {
+    --badge-w: 76px !important;
+  }
+}
