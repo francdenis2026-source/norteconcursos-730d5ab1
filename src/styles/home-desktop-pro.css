@@ -207,22 +207,26 @@
 }
 
 
-/* Restore the original live emblem clock in the homepage hero, above the photo and
-   below the readable left column. Keep it in the right-hand visual area. */
+/* Homepage clock: restore its intended large background-art scale, not a small badge.
+   Keep the complete dial visible on the right half of the hero, behind the copy. */
 @media (min-width: 761px) {
   html body .home.home #inicio.home-hero .home-hero__emblem-clock {
     display: block;
     position: absolute;
-    z-index: 2;
+    z-index: 0;
     top: 50%;
     left: auto;
-    right: clamp(22px, 9vw, 170px);
-    width: clamp(145px, 16vw, 235px);
+    right: 1.5%;
+    width: clamp(340px, 42vw, 590px);
+    aspect-ratio: 656 / 856;
     transform: translateY(-50%);
     pointer-events: none;
   }
   html body .home.home #inicio.home-hero .home-hero__emblem-clock-art {
-    opacity: .88;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .72;
   }
   html body .home.home #inicio.home-hero .home-hero__emblem-clock-hands {
     opacity: 1;
@@ -230,21 +234,7 @@
 }
 @media (min-width: 761px) and (max-width: 1100px) {
   html body .home.home #inicio.home-hero .home-hero__emblem-clock {
-    right: 2%;
-    width: clamp(125px, 15vw, 180px);
-  }
-}
-
-
-/* Keep the hero portrait clear of the fixed top navigation: the source artwork
-   includes the man's head near its top edge, so do not place that edge underneath
-   the opaque header. Anchor the crop to the top and let any excess crop fall below. */
-@media (min-width: 901px) {
-  html body .home.home #inicio.home-hero > .home-hero__image {
-    top: var(--nc-fixed-header-height, 66px) !important;
-    bottom: auto !important;
-    height: calc(100% - var(--nc-fixed-header-height, 66px)) !important;
-    object-fit: cover !important;
-    object-position: right top !important;
+    right: -2%;
+    width: clamp(300px, 39vw, 430px);
   }
 }
