@@ -1,3 +1,4 @@
+import "@/styles/student-internal-workspace-system.css";
 import { plannedPractice } from "@/lib/plannedStudy";
 import { platformDate } from "@/lib/platformClock";
 import { libraryCollection } from "@/lib/libraryOrganization";
