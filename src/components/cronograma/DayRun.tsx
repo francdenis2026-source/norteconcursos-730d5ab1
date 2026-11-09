@@ -235,7 +235,7 @@ export function DayRun({
   };
 
   return (
-    <div className="fixed inset-0 z-[60] overflow-y-auto bg-background">
+    <div className="day-run-workspace fixed inset-0 z-[60] overflow-y-auto bg-background">
       <div
         className={cn(
           "bg-gradient-to-br text-white shadow-lg transition-colors duration-500",
