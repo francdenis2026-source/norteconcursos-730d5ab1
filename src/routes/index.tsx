@@ -65,13 +65,10 @@ import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { NewsBanner } from "@/components/landing/NewsBanner";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
-import { HeroBadge } from "@/components/landing/HeroBadge";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
@@ -367,19 +364,9 @@ function PreparationInfo() {
 
 function Index() {
   const activeSection = useHomeSection(HOME_SECTION_IDS);
-  const [introPlaying, setIntroPlaying] = useState(false);
-  const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [compactHero, setCompactHero] = useState(false);
   const [headerScrolled, setHeaderScrolled] = useState(false);
-  useEffect(() => {
-    const media = matchMedia("(max-width: 1100px)");
-    const update = () => setCompactHero(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
   useEffect(() => {
     const onScroll = () => setHeaderScrolled(window.scrollY > 8);
     onScroll();
@@ -622,74 +609,7 @@ function Index() {
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
-        <section
-          id="inicio"
-          className="home-hero hr-hero"
-          aria-labelledby="home-title"
-          data-intro={introPlaying}
-        >
-          <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <TacticalCrosshair />
-          <div className="hx" inert={introPlaying}>
-            <div className="home-container hx__inner">
-              <div className="hx__copy">
-                <HeroBadge />
-                <div className="hx__kicker" aria-label="Preparação estratégica para concursos públicos">
-                  <span className="hx__kicker-mark" aria-hidden="true" />
-                  <span className="hx__kicker-primary">SUA JORNADA COMEÇA AQUI</span>
-                  <span className="hx__kicker-divider" aria-hidden="true" />
-                  <span className="hx__kicker-secondary">FOCO · MÉTODO · CONSTÂNCIA</span>
-                </div>
-                <h1 id="home-title" className="hx__headline hr-hero__headline">
-                  <span>Vista o seu futuro.</span>
-                  <span><em>Prepare sua conquista.</em></span>
-                </h1>
-                <p className="hx__description hr-hero__description">
-                  Transforme seu objetivo em um plano possível: estude pelo edital, pratique com questões
-                  e acompanhe sua evolução em uma plataforma feita para quem leva a aprovação a sério.
-                </p>
-                <div className="home-actions hr-cta-row">
-                  <Link
-                    to="/auth"
-                    search={{ mode: "register" }}
-                    className="home-button home-button--gold hr-btn hr-btn--gold"
-                    data-aim
-                  >
-                    Começar minha preparação
-                    <ArrowUpRight aria-hidden="true" />
-                  </Link>
-                  <a href="#plataforma" className="home-hero__explore hr-btn hr-btn--ghost" data-aim>
-                    Explorar a plataforma
-                    <ArrowRight aria-hidden="true" />
-                  </a>
-                </div>
-              </div>
-              <aside className="hr-hero-route" aria-label="Método de preparação Norte">
-                <div className="hr-hero-route__top">
-                  <span className="hr-hero-route__eyebrow">MÉTODO NORTE</span>
-                  <span className="hr-hero-route__status"><i /> SUA ROTA DE APROVAÇÃO</span>
-                </div>
-                <div className="hr-hero-route__steps">
-                  <div className="hr-hero-route__step">
-                    <span className="hr-hero-route__number">01</span>
-                    <div><strong>Defina seu alvo</strong><small>Encontre o edital e entenda o que priorizar.</small></div>
-                  </div>
-                  <div className="hr-hero-route__step">
-                    <span className="hr-hero-route__number">02</span>
-                    <div><strong>Estude com direção</strong><small>Organize matérias, revisões e metas.</small></div>
-                  </div>
-                  <div className="hr-hero-route__step">
-                    <span className="hr-hero-route__number">03</span>
-                    <div><strong>Treine sua evolução</strong><small>Resolva questões e acompanhe seu desempenho.</small></div>
-                  </div>
-                </div>
-                <div className="hr-hero-route__footer"><ShieldCheck aria-hidden="true" /><span>Uma preparação completa. Um passo de cada vez.</span></div>
-              </aside>
-              </div>
-          </div>
-        </section>
-
-        <div className="home-daily-challenge-wrap">
+        <div id="inicio" className="home-daily-challenge-wrap">
           <DailyChallengeBadge />
         </div>
 
