@@ -635,14 +635,15 @@ function Index() {
                   <span className="hx__kicker-divider" aria-hidden="true" />
                   <span className="hx__kicker-secondary">CARREIRAS POLICIAIS E SEGURANÇA PÚBLICA</span>
                 </div>
-                <h1 id="home-title">
-                  Sua aprovação começa
-                  <br />
-                  <em>com estratégia.</em>
+                <h1 id="home-title" className="hx__headline">
+                  <span className="hx__glass-strip">Sua aprovação começa</span>
+                  <span className="hx__glass-strip"><em>com estratégia.</em></span>
                 </h1>
-                <p>
-                  Da escolha do edital à revisão final: organize seu plano de estudos, aprofunde
-                  os conteúdos e pratique com questões e simulados em um só lugar.
+                <p className="hx__description">
+                  <span className="hx__glass-strip">
+                    Da escolha do edital à revisão final: organize seu plano de estudos, aprofunde
+                    os conteúdos e pratique com questões e simulados em um só lugar.
+                  </span>
                 </p>
                 <div className="home-actions hr-cta-row">
                   <Link
