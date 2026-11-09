@@ -75,6 +75,7 @@ function MyContestPage() {
     : null;
   return (
     <div className="edital-workspace space-y-5">
+      <StudyPlanningNav active="objective" />
       <div className="contest-objectives-page">
         <ContestObjectivesShowcase
           focusedContest={activeContest}
@@ -83,7 +84,6 @@ function MyContestPage() {
           savingId={savingContestId}
         />
       </div>
-      <StudyPlanningNav active="objective" />
       {days !== null && Number.isFinite(days) && days < 0 && (
         <p className="flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
           <Calendar className="h-4 w-4 shrink-0" />A data da prova cadastrada já passou. Atualize o
