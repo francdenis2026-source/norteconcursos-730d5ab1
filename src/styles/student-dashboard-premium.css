@@ -177,10 +177,20 @@
   background: rgb(255 255 255 / 6%);
 }
 .app-shell[data-area="student"] .student-overview .student-hub__masthead-stats :is(strong,span,svg) { color: #eaf8f8; }
-.app-shell[data-area="student"] .student-overview .student-hub__masthead-actions {
+.app-shell[data-area="student"] .student-overview .student-hub__masthead:not(.student-hub__masthead--careers) .student-hub__masthead-actions {
   position: absolute;
   right: clamp(18px, 2.2vw, 30px);
   bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* O banner "careers" (foto + texto sobreposto) empilha tudo em fluxo normal — ver
+   student-canvas.css — então as ações não podem ficar posicionadas em absoluto por
+   cima do texto; isso causava sobreposição do chip "Meu desempenho" com a data/texto. */
+.app-shell[data-area="student"] .student-overview .student-hub__masthead--careers .student-hub__masthead-actions {
+  position: static;
+  margin-top: 6px;
   display: flex;
   align-items: center;
   gap: 10px;
