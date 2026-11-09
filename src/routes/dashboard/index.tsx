@@ -43,6 +43,7 @@ import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
@@ -65,6 +66,11 @@ export const Route = createFileRoute("/dashboard/")({
 const liveMinutes = () => Math.floor(getStudyToday() / 60) * 60;
 const number = (n: number) => n.toLocaleString("pt-BR");
 const duration = (seconds: number) => (seconds > 0 ? fmtHuman(seconds) : "0 min");
+const formatExamDate = (value?: string | null) => {
+  if (!value) return "";
+  const [year, month, day] = value.split("-");
+  return year && month && day ? `${day}/${month}/${year}` : value;
+};
 const destinations = [
   {
     to: "/dashboard/cronograma",
@@ -124,6 +130,10 @@ function DashboardIndex() {
 }
 function StudentHome({ user }: { user: UserProfile }) {
   const [now, setNow] = React.useState(platformDate);
+  const [personalExamDate, setPersonalExamDate] = React.useState(user.personal_exam_date ?? "");
+  const [examDateDraft, setExamDateDraft] = React.useState("");
+  const [isEditingExamDate, setIsEditingExamDate] = React.useState(false);
+  const [isSavingExamDate, setIsSavingExamDate] = React.useState(false);
   const [metric, setMetric] = React.useState<StudentMetric | null>(null);
   const metricTrigger = React.useRef<HTMLElement | null>(null);
   const [metricDate, setMetricDate] = React.useState<string | null>(null);
@@ -161,6 +171,9 @@ function StudentHome({ user }: { user: UserProfile }) {
     : null;
   const plan = q.plans.data?.find((p) => p.id === selectedId) ?? q.plans.data?.[0];
   React.useEffect(() => {
+    setPersonalExamDate(user.personal_exam_date ?? "");
+  }, [user.id, user.personal_exam_date]);
+  React.useEffect(() => {
     if (q.plans.isSuccess && plan?.id !== selectedId) setSelectedId(plan?.id ?? "");
   }, [q.plans.isSuccess, plan?.id, selectedId]);
   React.useEffect(() => {
@@ -190,7 +203,8 @@ function StudentHome({ user }: { user: UserProfile }) {
       ? dashboardSchedule(plan.config, q.progress.data, day)
       : null;
   const objective = q.objective.data;
-  const days = daysToExam(objective?.examDate, today);
+  const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
+  const days = daysToExam(effectiveExamDate, today);
   const firstName = user.full_name?.trim().split(/\s+/)[0] || "Estudante";
   const hour = acreHour(now),
     hello = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
@@ -254,6 +268,58 @@ function StudentHome({ user }: { user: UserProfile }) {
       /* Optional navigation preference. */
     }
   };
+  const openExamDateEditor = () => {
+    setExamDateDraft(personalExamDate || objective?.examDate || "");
+    setIsEditingExamDate(true);
+  };
+  const savePersonalExamDate = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!examDateDraft || daysToExam(examDateDraft, today) === null) {
+      toast.error("Escolha uma data válida para a prova.");
+      return;
+    }
+    setIsSavingExamDate(true);
+    try {
+      const { data, error } = await supabase
+        .from("profiles")
+        .update({ personal_exam_date: examDateDraft })
+        .eq("id", user.id)
+        .select("personal_exam_date")
+        .single();
+      if (error) throw error;
+      setPersonalExamDate(data.personal_exam_date ?? examDateDraft);
+      setIsEditingExamDate(false);
+      window.dispatchEvent(new Event("norte:profile-updated"));
+      toast.success("Data da prova salva com sucesso.");
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível salvar a data da prova.");
+    } finally {
+      setIsSavingExamDate(false);
+    }
+  };
+  const clearPersonalExamDate = async () => {
+    if (!personalExamDate) {
+      setIsEditingExamDate(false);
+      return;
+    }
+    setIsSavingExamDate(true);
+    try {
+      const { error } = await supabase
+        .from("profiles")
+        .update({ personal_exam_date: null })
+        .eq("id", user.id);
+      if (error) throw error;
+      setPersonalExamDate("");
+      setExamDateDraft(objective?.examDate ?? "");
+      setIsEditingExamDate(false);
+      window.dispatchEvent(new Event("norte:profile-updated"));
+      toast.success(objective?.examDate ? "Data oficial do concurso restaurada." : "Data da prova removida.");
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível remover a data da prova.");
+    } finally {
+      setIsSavingExamDate(false);
+    }
+  };
   return (
     <div className="student-home student-hub student-desk student-overview">
       <header className="student-hub__masthead student-hub__masthead--careers workspace-banner">
@@ -269,6 +335,73 @@ function StudentHome({ user }: { user: UserProfile }) {
               label={days !== null && days < 0 ? "Dias desde a prova" : "Dias p/ a prova"}
               value={days !== null ? Math.abs(days) : "—"}
             />
+          </div>
+          <div className="student-hub__exam-date-control">
+            <p className="student-hub__exam-date-current">
+              {effectiveExamDate
+                ? `Data da prova: ${formatExamDate(effectiveExamDate)}`
+                : "Nenhuma data de prova definida."}
+              {personalExamDate && <span> · data personalizada</span>}
+            </p>
+            {!isEditingExamDate ? (
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                onClick={openExamDateEditor}
+                className="mt-1 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white"
+              >
+                <CalendarClock className="mr-1.5 h-4 w-4" />
+                {personalExamDate ? "Alterar data da prova" : effectiveExamDate ? "Ajustar data da prova" : "Escolher data da prova"}
+              </Button>
+            ) : (
+              <form
+                onSubmit={savePersonalExamDate}
+                className="mt-2 flex flex-wrap items-end gap-2 rounded-xl border border-white/20 bg-slate-950/30 p-3"
+              >
+                <div className="min-w-[180px] flex-1">
+                  <label htmlFor="student-personal-exam-date" className="mb-1 block text-xs font-semibold text-white">
+                    Escolha a data no calendário
+                  </label>
+                  <input
+                    id="student-personal-exam-date"
+                    type="date"
+                    required
+                    value={examDateDraft}
+                    onChange={(event) => setExamDateDraft(event.target.value)}
+                    className="h-9 w-full rounded-md border border-slate-300 bg-white px-3 text-sm font-medium text-slate-900"
+                  />
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button type="submit" size="sm" disabled={isSavingExamDate || !examDateDraft}>
+                    {isSavingExamDate ? "Salvando..." : "Salvar data"}
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="ghost"
+                    disabled={isSavingExamDate}
+                    onClick={() => setIsEditingExamDate(false)}
+                    className="text-white hover:bg-white/10 hover:text-white"
+                  >
+                    Cancelar
+                  </Button>
+                  {personalExamDate && (
+                    <button
+                      type="button"
+                      disabled={isSavingExamDate}
+                      onClick={() => void clearPersonalExamDate()}
+                      className="px-2 py-2 text-xs font-semibold text-amber-200 underline underline-offset-2 disabled:opacity-50"
+                    >
+                      {objective?.examDate ? "Usar data oficial" : "Remover data"}
+                    </button>
+                  )}
+                </div>
+                <p className="w-full text-[11px] text-white/75">
+                  A contagem de dias será atualizada automaticamente no painel.
+                </p>
+              </form>
+            )}
           </div>
           <div className="student-hub__masthead-actions">
             <span className="student-hub__date">
@@ -664,15 +797,17 @@ function StudentHome({ user }: { user: UserProfile }) {
                 <h3 className="student-home__objective-name">{objective.agency}</h3>
                 <p className="student-home__quiet">{objective.role}</p>
                 <p className="student-home__quiet">{objective.examBoard}</p>
-                {objective.examDate && (
+                {effectiveExamDate && (
                   <p className="student-home__exam-date">
+                    Prova em {formatExamDate(effectiveExamDate)}
                     {days !== null
                       ? days > 0
-                        ? `${days} dias para a data registrada`
+                        ? ` · ${days} dias restantes`
                         : days === 0
-                          ? "Data da prova registrada para hoje"
-                          : "A data registrada da prova já passou"
-                      : "Confira a data da prova no concurso"}
+                          ? " · é hoje"
+                          : ` · ${Math.abs(days)} dias atrás`
+                      : ""}
+                    {personalExamDate ? " · data personalizada" : ""}
                   </p>
                 )}
                 <Link to="/dashboard/my-contest" className="student-home__text-link">
