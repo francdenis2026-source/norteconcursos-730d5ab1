@@ -10,6 +10,7 @@ import {
   Trophy,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { HeroBackdropClock } from "@/components/landing/HeroBackdropClock";
 import { PcacBanner } from "@/components/landing/PcacBanner";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
@@ -66,6 +67,7 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
   return (
     <>
       <section id={ids.hero} className="sx-band" aria-labelledby={ids.title}>
+        <HeroBackdropClock />
         <div className="sx sx-hero">
           <div className="sx-hero__copy">
             <span className="sx-eyebrow">

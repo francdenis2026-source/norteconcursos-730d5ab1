@@ -907,3 +907,73 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
     animation: none;
   }
 }
+
+/* ---------- Hero: ponteiros no relógio do próprio emblema de fundo ---------- */
+.home.hr-canvas .sx-band__clock {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .home.hr-canvas .sx-band {
+    background: #0d1015;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .home.hr-canvas .sx-band__clock {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+  }
+  .home.hr-canvas .sx-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      90deg,
+      #0d1015 0%,
+      rgb(13 16 21 / 0.9) 30%,
+      rgb(13 16 21 / 0.35) 52%,
+      rgb(13 16 21 / 0.3) 64%,
+      rgb(13 16 21 / 0.7) 100%
+    );
+    pointer-events: none;
+  }
+  .home.hr-canvas .sx-band .sx-hero {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 300px;
+  }
+}
+.home.hr-canvas .sx-band__hands {
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.65));
+}
+.home.hr-canvas .sx-band__hand {
+  stroke-linecap: round;
+}
+.home.hr-canvas .sx-band__hand--hour {
+  stroke: #e3b14b;
+  stroke-width: 11;
+}
+.home.hr-canvas .sx-band__hand--minute {
+  stroke: #f1d79a;
+  stroke-width: 8;
+}
+.home.hr-canvas .sx-band__hand--second {
+  stroke: #e2543e;
+  stroke-width: 3;
+}
+.home.hr-canvas .sx-band__pivot {
+  fill: #1a1d22;
+  stroke: #e3b14b;
+  stroke-width: 4;
+}
+.home.hr-canvas .sx-band__pivot-core {
+  fill: #e2543e;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas .sx-band__second {
+    display: none;
+  }
+}
