@@ -77,6 +77,7 @@ import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
+import "@/styles/home-final-polish.css";
 
 export const Route = createFileRoute("/")({
   component: Index,

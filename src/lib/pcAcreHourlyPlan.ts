@@ -48,7 +48,7 @@ const addDays = (d: Date, n: number) => new Date(d.getTime() + n * 86_400_000);
 const isoAt = (base: string) => new Date(`${base}T00:00:00`);
 
 function b(start: string, end: string, type: PcAcActivityType, label: string, subject?: string): PcAcHourBlock {
-  return { start, end, type, label, subject };
+  return { start, end, type, label, ...(subject ? { subject } : {}) };
 }
 
 /** Segunda a sexta: 2 disciplinas por dia, revezando teoria/questões/revisão conforme a fase, e
