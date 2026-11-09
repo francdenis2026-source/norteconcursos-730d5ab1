@@ -50,7 +50,6 @@
   background: var(--trainer-paper);
   color: var(--trainer-ink);
   box-shadow: 0 18px 44px -36px rgb(12 39 48 / 48%);
-  ring: none;
 }
 .app-shell[data-area="student"] .question-workspace .question-window > .flex.flex-wrap.items-center.justify-between {
   min-height: 42px;
