@@ -212,3 +212,59 @@
 @media (prefers-reduced-motion: reduce) {
   .nc-student-workspace * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+
+/* The student shell has a global dark theme with intentionally strong selectors.
+   These page-scoped overrides keep the three workspaces on the same neutral palette. */
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace {
+  --ncw-ink: #26313b;
+  --ncw-muted: #667583;
+  --ncw-line: #dce3e8;
+  --ncw-surface: #ffffff;
+  --ncw-soft: #f4f6f8;
+  --ncw-accent: #ad8748;
+  --ncw-accent-soft: #f6f0e5;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content .nc-student-workspace {
+  --ncw-ink: #edf1f4;
+  --ncw-muted: #b8c2cb;
+  --ncw-line: #3b4854;
+  --ncw-surface: #1d2832;
+  --ncw-soft: #26323d;
+  --ncw-accent: #d3b477;
+  --ncw-accent-soft: #393225;
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace [data-slot="card"] {
+  border: 1px solid var(--ncw-line);
+  border-radius: 13px;
+  background: var(--ncw-surface);
+  color: var(--ncw-ink);
+  box-shadow: 0 4px 15px rgb(28 39 50 / 5%);
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content .nc-student-workspace [data-slot="card"] {
+  background: var(--ncw-surface);
+  border-color: var(--ncw-line);
+  box-shadow: 0 4px 15px rgb(0 0 0 / 16%);
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+  border: 1px solid #3b4651 !important;
+  border-left: 1px solid #3b4651 !important;
+  border-radius: 14px !important;
+  background:
+    radial-gradient(ellipse at 92% 4%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2a343e 62%, #35404a 100%) !important;
+  box-shadow: 0 8px 22px rgb(20 28 36 / 10%) !important;
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) :is(h1,h2,p,.page-hero__desc,.edital-eyebrow) {
+  color: #f2f4f5 !important;
+}
+.app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.hero-chip,.study-assistant-hero__eyebrow,.edital-eyebrow) {
+  color: #dfc797 !important;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content .nc-student-workspace :is(.workspace-banner,.page-hero,.study-assistant-hero,.edital-modern-hero) {
+  border: 1px solid #3b4651 !important;
+  border-left: 1px solid #3b4651 !important;
+  background:
+    radial-gradient(ellipse at 92% 4%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2a343e 62%, #35404a 100%) !important;
+}
