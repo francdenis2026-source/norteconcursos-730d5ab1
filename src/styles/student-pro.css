@@ -279,3 +279,172 @@
   width: 100%;
   flex: 1 1 auto;
 }
+
+/* ================= Barra de menus: botões maiores, mesma altura da barra ================= */
+@media (min-width: 768px) {
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation {
+    gap: clamp(12px, 1.4vw, 24px) !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__links {
+    gap: 4px !important;
+    justify-content: flex-start !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__trigger {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 44px !important;
+    padding: 0 9px !important;
+    gap: 7px !important;
+    border: 1px solid transparent !important;
+    border-radius: 10px !important;
+    font-size: clamp(13px, 0.98vw, 15px) !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__label {
+    overflow: visible !important;
+    max-width: none !important;
+    text-overflow: clip !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__icon-wrap {
+    width: 30px !important;
+    height: 30px !important;
+    flex: none !important;
+    border-radius: 9px !important;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__icon-wrap svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+/* Interação: passar o mouse, pressionar, item atual e foco de teclado. */
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__trigger:hover {
+  border-color: var(--sp-line) !important;
+  background: var(--sp-soft) !important;
+  color: var(--sp-ink) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__trigger:hover
+  .student-top-navigation__icon-wrap {
+  background: var(--sp-gold-bg) !important;
+  color: #1a1405 !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__trigger:hover
+  .student-top-navigation__icon-wrap
+  svg {
+  color: #1a1405 !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__trigger:active {
+  background: var(--sp-gold-soft) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__trigger:is(
+    [data-active="true"],
+    [aria-current="page"],
+    [aria-expanded="true"],
+    [data-state="open"]
+  ) {
+  border-color: color-mix(in srgb, var(--sp-gold-bg) 55%, transparent) !important;
+  background: var(--sp-gold-soft) !important;
+  color: var(--sp-gold) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  :is(
+    .student-top-navigation__trigger,
+    .app-top-btn,
+    .student-top-navigation__brand
+  ):focus-visible {
+  outline: 2px solid var(--sp-gold-bg) !important;
+  outline-offset: 2px !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .app-top-btn {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .app-top-btn:hover {
+  border-color: var(--sp-gold-bg) !important;
+  background: var(--sp-gold-soft) !important;
+  color: var(--sp-gold) !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__menu
+  [role="menuitem"]:is(:hover, [data-highlighted]) {
+  background: var(--sp-gold-soft) !important;
+  color: var(--sp-ink) !important;
+}
+
+/* Marca: emblema oficial no lugar do "N"; sem turquesa. */
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__brand {
+  gap: 10px !important;
+  color: var(--sp-ink) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.14em !important;
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__brand-emblem {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.35));
+  transition: transform 180ms ease;
+}
+.app-shell[data-area="student"]:not(#_):not(#_)
+  .student-top-navigation__brand:hover
+  .student-top-navigation__brand-emblem {
+  transform: scale(1.06);
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__brand strong {
+  color: var(--sp-gold) !important;
+}
+
+/* Turquesa fora da área do aluno: os antigos tons ciano viram dourado. */
+.app-shell[data-area="student"]:not(#_):not(#_),
+.app-shell[data-area="student"]:not(#_):not(#_) * {
+  --nc-student-cyan: var(--sp-gold) !important;
+  --nc-shell-cyan: var(--sp-gold) !important;
+  --nc-shell-cyan-soft: var(--sp-gold-soft) !important;
+  --saas-cyan: var(--sp-gold) !important;
+  --home-cyan: var(--sp-gold) !important;
+  --student-teal: var(--sp-gold) !important;
+  --d-teal: var(--sp-gold) !important;
+  --rhythm-accent-soft: var(--sp-gold) !important;
+  --chart-2: var(--sp-gold) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"]:not(#_):not(#_)
+    :is(
+      .student-top-navigation__trigger,
+      .student-top-navigation__icon-wrap,
+      .app-top-btn,
+      .student-top-navigation__brand-emblem
+    ) {
+    transition: none !important;
+  }
+}
+
+/* Entre 768 e 1500px o nome ao lado do emblema dá lugar aos itens do menu. */
+@media (min-width: 768px) and (max-width: 1500px) {
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__brand-word {
+    display: none !important;
+  }
+  .app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__trigger {
+    padding: 0 8px !important;
+  }
+}
+.app-shell[data-area="student"]:not(#_):not(#_) .student-top-navigation__links {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: none;
+}

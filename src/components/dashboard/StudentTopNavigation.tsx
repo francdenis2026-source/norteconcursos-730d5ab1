@@ -100,8 +100,16 @@ export function StudentTopNavigation({
         className="student-top-navigation__brand"
         aria-label="Voltar à área principal do aluno"
       >
-        <span className="student-top-navigation__brand-mark">N</span>
-        <span>
+        <img
+          className="student-top-navigation__brand-emblem"
+          src="/media/brand/norte-identity/emblema.svg"
+          width={64}
+          height={64}
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+        />
+        <span className="student-top-navigation__brand-word">
           NORTE <strong>CONCURSOS</strong>
         </span>
       </Link>
