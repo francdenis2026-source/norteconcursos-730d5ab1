@@ -17,9 +17,10 @@ export const Route = createFileRoute("/dashboard/media")({
   component: MediaCenterPage,
   validateSearch: (
     s: Record<string, unknown>,
-  ): { subject?: string | undefined; topic?: string | undefined } => ({
+  ): { subject?: string | undefined; topic?: string | undefined; tab?: string | undefined } => ({
     subject: typeof s["subject"] === "string" ? s["subject"] : undefined,
     topic: typeof s["topic"] === "string" ? s["topic"] : undefined,
+    tab: typeof s["tab"] === "string" ? s["tab"] : undefined,
   }),
 });
 
@@ -148,7 +149,7 @@ function MediaCenterPage() {
           <h1>Videoaulas e podcasts</h1>
         </div>
       </header>
-      <Tabs defaultValue={Route.useSearch().subject ? "podcasts" : "videos"}>
+      <Tabs defaultValue={Route.useSearch().tab === "podcasts" ? "podcasts" : Route.useSearch().tab === "assuntos" ? "assuntos" : "videos"}>
         <TabsList className="video-study-page__tabs" aria-label="Tipo de material">
           <TabsTrigger value="videos">
             <PlayCircle size={16} /> Playlists

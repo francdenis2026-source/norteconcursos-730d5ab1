@@ -216,7 +216,7 @@ function DisciplineStudyLinks({
           {videos.length === 0 && (
             <Link
               to="/dashboard/media"
-              search={{ subject }}
+              search={{ subject, tab: "videos" }}
               className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10"
             >
               <PlayCircle className="h-3 w-3" aria-hidden="true" />
