@@ -1,0 +1,136 @@
+/* Norte Concursos — semantic design tokens.
+   Three layers: brand primitives → purpose-based semantic roles → component roles.
+   Keep this file declarative: existing screens migrate to these aliases in controlled phases. */
+
+:root {
+  /* 1. Brand and neutral primitives */
+  --nc-primitive-gold: oklch(0.7797 0.1292 79.39);
+  --nc-primitive-gold-soft: oklch(0.88 0.1 84);
+  --nc-primitive-graphite: oklch(0.2718 0.0102 260.7);
+  --nc-primitive-graphite-deep: oklch(0.165 0.012 250);
+  --nc-primitive-porcelain: oklch(0.9697 0.0017 247.84);
+  --nc-primitive-white: oklch(1 0 0);
+  --nc-primitive-muted: oklch(0.4696 0.0144 259.82);
+  --nc-primitive-line: oklch(0.9121 0.0046 258.33);
+
+  /* 1. Spacing primitives — 4px base */
+  --nc-space-1: 0.25rem;
+  --nc-space-2: 0.5rem;
+  --nc-space-3: 0.75rem;
+  --nc-space-4: 1rem;
+  --nc-space-5: 1.25rem;
+  --nc-space-6: 1.5rem;
+  --nc-space-8: 2rem;
+  --nc-space-10: 2.5rem;
+  --nc-space-12: 3rem;
+  --nc-space-16: 4rem;
+
+  /* 1. Typography primitives — product UI uses a compact, stable scale */
+  --nc-font-xs: 0.75rem;
+  --nc-font-sm: 0.875rem;
+  --nc-font-base: 1rem;
+  --nc-font-lg: 1.125rem;
+  --nc-font-xl: 1.25rem;
+  --nc-font-2xl: 1.5rem;
+  --nc-font-3xl: 1.875rem;
+  --nc-font-4xl: 2.25rem;
+  --nc-line-tight: 1.25;
+  --nc-line-normal: 1.5;
+  --nc-line-relaxed: 1.65;
+
+  /* 1. Shape and elevation primitives */
+  --nc-radius-sm: 0.5rem;
+  --nc-radius-control: 0.625rem;
+  --nc-radius-card: 0.875rem;
+  --nc-radius-panel: 1rem;
+  --nc-radius-pill: 999px;
+  --nc-shadow-card: 0 1px 2px oklch(0.2 0.03 262 / 0.04), 0 8px 24px -16px oklch(0.2 0.03 262 / 0.16);
+  --nc-shadow-overlay: 0 18px 48px -20px oklch(0.12 0.02 260 / 0.3);
+
+  /* 2. Semantic colors — purpose, not page identity */
+  --nc-color-canvas: var(--background);
+  --nc-color-surface: var(--card);
+  --nc-color-surface-raised: var(--popover);
+  --nc-color-surface-muted: var(--muted);
+  --nc-color-text: var(--foreground);
+  --nc-color-text-muted: var(--muted-foreground);
+  --nc-color-border: var(--border);
+  --nc-color-action: var(--brass);
+  --nc-color-action-hover: var(--brass-hover);
+  --nc-color-action-foreground: oklch(0.18 0.012 260);
+  --nc-color-focus: var(--ring);
+  --nc-color-success: var(--color-emerald-600);
+  --nc-color-warning: var(--color-amber-700);
+  --nc-color-danger: var(--destructive);
+  --nc-color-info: var(--color-sky-700);
+  --nc-color-disabled: var(--muted-foreground);
+
+  /* 2. Semantic layout roles */
+  --nc-space-control: var(--nc-space-3);
+  --nc-space-card: var(--nc-space-4);
+  --nc-space-section: var(--nc-space-8);
+  --nc-space-page-x: clamp(1rem, 2.4vw, 2rem);
+  --nc-space-page-y: var(--nc-space-6);
+
+  /* 3. Component roles */
+  --nc-button-bg: var(--nc-color-action);
+  --nc-button-fg: var(--nc-color-action-foreground);
+  --nc-button-bg-hover: var(--nc-color-action-hover);
+  --nc-button-radius: var(--nc-radius-control);
+  --nc-button-min-height: 2.75rem;
+  --nc-input-bg: var(--nc-color-surface);
+  --nc-input-fg: var(--nc-color-text);
+  --nc-input-border: var(--nc-color-border);
+  --nc-input-focus: var(--nc-color-focus);
+  --nc-input-radius: var(--nc-radius-control);
+  --nc-card-bg: var(--nc-color-surface);
+  --nc-card-fg: var(--nc-color-text);
+  --nc-card-border: var(--nc-color-border);
+  --nc-card-radius: var(--nc-radius-card);
+  --nc-card-shadow: var(--nc-shadow-card);
+  --nc-panel-bg: var(--nc-color-surface-muted);
+  --nc-panel-radius: var(--nc-radius-panel);
+  --nc-focus-width: 2px;
+  --nc-focus-offset: 2px;
+  --nc-motion-fast: 160ms;
+  --nc-motion-standard: 220ms;
+}
+
+.dark {
+  /* Semantic aliases resolve against the active dark theme; gold remains the action color. */
+  --nc-color-canvas: var(--background);
+  --nc-color-surface: var(--card);
+  --nc-color-surface-raised: var(--popover);
+  --nc-color-surface-muted: var(--muted);
+  --nc-color-text: var(--foreground);
+  --nc-color-text-muted: var(--muted-foreground);
+  --nc-color-border: var(--border);
+  --nc-color-action: var(--brass);
+  --nc-color-action-hover: var(--brass-hover);
+  --nc-color-action-foreground: oklch(0.18 0.012 260);
+  --nc-color-focus: var(--ring);
+  --nc-color-success: var(--color-emerald-400);
+  --nc-color-warning: var(--color-amber-400);
+  --nc-color-danger: var(--destructive);
+  --nc-color-info: var(--color-sky-400);
+  --nc-color-disabled: var(--muted-foreground);
+}
+
+/* Keep disabled controls distinct without making them look interactive. */
+:where(button, input, select, textarea, [role="button"]):disabled,
+:where(button, input, select, textarea, [aria-disabled="true"]) {
+  cursor: not-allowed;
+}
+
+/* Focus uses one shared, high-visibility treatment without changing layout. */
+:where(a, button, input, select, textarea, [role="button"], [tabindex]):focus-visible {
+  outline: var(--nc-focus-width) solid var(--nc-color-focus);
+  outline-offset: var(--nc-focus-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --nc-motion-fast: 1ms;
+    --nc-motion-standard: 1ms;
+  }
+}
