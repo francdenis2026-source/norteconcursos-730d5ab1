@@ -6,6 +6,9 @@ const THICKNESS = [1, 2, 3, 4, 5];
 /** Intentional brand interaction, with restrained depth and an accessible replay. */
 export function HeroBadge({ show = true }: { show?: boolean }) {
   const root = useRef<HTMLButtonElement>(null);
+  const drag = useRef<{ pointerId: number; startX: number; startY: number; originX: number; originY: number; moved: boolean } | null>(null);
+  const offset = useRef({ x: 0, y: 0 });
+  const suppressClick = useRef(false);
   const tilt = useRef<HTMLDivElement>(null);
   const spin = useRef<HTMLDivElement>(null);
   const frame = useRef(0);
@@ -19,6 +22,20 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
   useEffect(() => {
     const node = root.current;
     if (!node) return;
+    try {
+      const saved = localStorage.getItem("norte-home-hero-badge-position");
+      if (saved) {
+        const parsed = JSON.parse(saved) as { x?: number; y?: number };
+        offset.current = {
+          x: Number.isFinite(parsed.x) ? Number(parsed.x) : 0,
+          y: Number.isFinite(parsed.y) ? Number(parsed.y) : 0,
+        };
+        node.style.left = `${offset.current.x}px`;
+        node.style.top = `${offset.current.y}px`;
+      }
+    } catch {
+      // Positioning remains available for this session if browser storage is unavailable.
+    }
     let inView = false;
     const update = () => {
       node.dataset["visible"] = String(inView && !document.hidden);
@@ -45,6 +62,45 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
       rotation.current?.cancel();
     };
   }, []);
+  const startDrag = (event: PointerEvent<HTMLButtonElement>) => {
+    if (event.button !== 0) return;
+    drag.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      originX: offset.current.x,
+      originY: offset.current.y,
+      moved: false,
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+  const dragMove = (event: PointerEvent<HTMLButtonElement>) => {
+    const active = drag.current;
+    if (!active || active.pointerId !== event.pointerId) return;
+    const dx = event.clientX - active.startX;
+    const dy = event.clientY - active.startY;
+    if (!active.moved && Math.hypot(dx, dy) < 4) return;
+    active.moved = true;
+    suppressClick.current = true;
+    const x = active.originX + dx;
+    const y = active.originY + dy;
+    offset.current = { x, y };
+    event.currentTarget.style.left = `${x}px`;
+    event.currentTarget.style.top = `${y}px`;
+  };
+  const endDrag = (event: PointerEvent<HTMLButtonElement>) => {
+    const active = drag.current;
+    if (!active || active.pointerId !== event.pointerId) return;
+    if (active.moved) {
+      try {
+        localStorage.setItem("norte-home-hero-badge-position", JSON.stringify(offset.current));
+      } catch {
+        // The current placement remains active even if storage is unavailable.
+      }
+      window.setTimeout(() => { suppressClick.current = false; }, 0);
+    }
+    drag.current = null;
+  };
   const move = (event: PointerEvent<HTMLButtonElement>) => {
     if (
       event.pointerType !== "mouse" ||
@@ -283,14 +339,19 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
     <button
       ref={root}
       type="button"
-      className="hero-badge"
-      aria-label="Animar brasão Norte Concursos"
+      className="hero-badge hero-badge--movable"
+      aria-label="Arraste para reposicionar o brasão; clique para animar"
+      title="Arraste o brasão para posicioná-lo. A posição fica salva neste navegador."
+      style={{ position: "relative", left: 0, top: 0, cursor: "grab", touchAction: "none", zIndex: 5 }}
       data-visible="false"
       data-reveal={show ? "in" : "pending"}
-      onPointerMove={move}
+      onPointerDown={startDrag}
+      onPointerMove={(event) => { dragMove(event); if (!drag.current?.moved) move(event); }}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
       onPointerLeave={rest}
       onBlur={rest}
-      onClick={replay}
+      onClick={() => { if (!suppressClick.current) replay(); }}
     >
       <span
         ref={fx}
