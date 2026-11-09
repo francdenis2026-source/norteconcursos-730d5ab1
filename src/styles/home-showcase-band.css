@@ -105,3 +105,47 @@
   max-height: none !important;
   object-fit: contain !important;
 }
+
+/* Homepage desktop: eliminate the oversized decorative void and bring real content
+   into the first fold. The clock remains only as a quiet texture behind the hero. */
+@media (min-width: 761px) {
+  .home.hr-canvas > .home-backdrop:has(svg.tactical-clock-backdrop) {
+    opacity: .12 !important;
+    background: #0b0d10 !important;
+  }
+  .home.hr-canvas > .home-backdrop svg.tactical-clock-backdrop {
+    opacity: .16 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero {
+    height: clamp(460px, calc(100svh - 170px), 590px) !important;
+    min-height: 460px !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__inner {
+    height: 100% !important;
+    min-height: 0 !important;
+    padding-top: clamp(24px, 4vh, 42px) !important;
+    padding-bottom: clamp(20px, 3vh, 32px) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(18px, 2vw, 32px) !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__copy {
+    align-self: center !important;
+    margin-block: 0 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero .hr-hero-route {
+    align-self: center !important;
+    margin-block: 0 !important;
+  }
+  .home.hr-canvas #inicio.home-hero.hr-hero > img.home-hero__image {
+    z-index: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .home.hr-canvas .home-daily-challenge-wrap {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+  }
+}
