@@ -1140,3 +1140,41 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
     transition: none;
   }
 }
+
+/* Brand correction — the recommended next-step CTA must always use Norte gold,
+   never inherit the generic brass/rose action token. */
+:root:not(.dark) .app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary {
+  color: #211b11 !important;
+  background: #b58a43 !important;
+  border: 1px solid #a77d38 !important;
+  box-shadow: 0 2px 5px rgb(65 45 16 / 16%) !important;
+}
+:root:not(.dark) .app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary:hover {
+  color: #211b11 !important;
+  background: #c49a53 !important;
+  border-color: #b58a43 !important;
+}
+:root.dark .app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary {
+  color: #211b11 !important;
+  background: #d7b36e !important;
+  border: 1px solid #c5a05c !important;
+  box-shadow: 0 2px 7px rgb(0 0 0 / 22%) !important;
+}
+:root.dark .app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary:hover {
+  color: #211b11 !important;
+  background: #e2c58d !important;
+  border-color: #d7b36e !important;
+}
+.app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary {
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+.app-shell[data-area="student"] .student-overview
+  .student-desk__next[data-accent="gold"] .student-home__primary:focus-visible {
+  outline: 2px solid #d7b36e !important;
+  outline-offset: 3px;
+}
