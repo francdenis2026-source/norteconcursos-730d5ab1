@@ -277,3 +277,126 @@
   .hr-preparation__category,
   .hr-preparation__category-toggle { transition: none; }
 }
+
+
+/* Interactive details now float above the page instead of changing section height. */
+.home.home #plataforma.hr-showcase .hr-preparation__explorer { position: relative; }
+.home.home #plataforma.hr-showcase .hr-preparation__details {
+  position: fixed !important;
+  z-index: 240 !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(980px, calc(100vw - 56px)) !important;
+  max-height: min(76svh, 650px) !important;
+  margin: 0 !important;
+  padding: clamp(16px, 2vw, 24px) !important;
+  overflow: auto !important;
+  overscroll-behavior: contain;
+  transform: translate(-50%, -50%);
+  isolation: isolate;
+  border: 1px solid rgb(225 185 104 / 42%) !important;
+  border-radius: 18px !important;
+  background:
+    linear-gradient(115deg, rgb(7 15 23 / 96%) 0%, rgb(9 18 27 / 91%) 56%, rgb(8 17 25 / 82%) 100%),
+    url("/media/hero/norte-atmosphere.webp") right center / cover no-repeat !important;
+  box-shadow: 0 32px 100px rgb(0 0 0 / 62%), inset 0 1px 0 rgb(255 255 255 / 7%) !important;
+  animation: hr-preparation-overlay-in .2s ease both !important;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-backdrop {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  border-radius: 0;
+  background: rgb(3 8 13 / 72%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: default;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgb(222 180 95 / 24%);
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-head > div {
+  display: grid;
+  gap: 5px;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-head > div > span {
+  color: #dcb361;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-head > div > strong {
+  color: #f5f2eb;
+  font-size: clamp(18px, 2vw, 25px);
+  line-height: 1.15;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: none;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgb(220 179 97 / 36%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 5%);
+  color: #e9dfc9;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-close:hover {
+  border-color: #e4bb6b;
+  background: rgb(220 179 97 / 12%);
+  color: #fff;
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details-close svg { width: 15px; height: 15px; }
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__feature,
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__step,
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__career,
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__source {
+  background: linear-gradient(145deg, rgb(26 43 57 / 90%), rgb(13 25 36 / 88%));
+  border-color: rgb(193 210 222 / 16%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__feature p,
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__step p,
+.home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__source p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #bdc7cf;
+}
+@keyframes hr-preparation-overlay-in {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(.985); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@media (max-width: 760px) {
+  .home.home #plataforma.hr-showcase .hr-preparation__details {
+    width: calc(100vw - 24px) !important;
+    max-height: min(78svh, 720px) !important;
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+  .home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__detail-grid--tools,
+  .home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__detail-grid--steps,
+  .home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__detail-grid--sources,
+  .home.home #plataforma.hr-showcase .hr-preparation__details .hr-preparation__detail-grid--careers {
+    grid-template-columns: 1fr;
+  }
+  .home.home #plataforma.hr-showcase .hr-preparation__details-head { margin-bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home #plataforma.hr-showcase .hr-preparation__details { animation: none !important; }
+}
