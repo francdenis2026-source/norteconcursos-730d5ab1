@@ -285,44 +285,37 @@
   .home.hr-canvas .home-header__actions * { transition: none !important; }
 }
 
-/* Fix: Preparation is a disclosure control, not an anchor. Give it the same
-   gold hover/focus/open feedback as the neighboring navigation links. */
-.home.hr-canvas .home-nav.hr-nav details.home-nav__group {
-  position: relative;
-  align-self: stretch;
-}
+/* Consistent gold hover/focus/open treatment for every navigation item. */
+.home.hr-canvas .home-nav.hr-nav details.home-nav__group { position: relative; align-self: center; }
 .home.hr-canvas .home-nav.hr-nav details.home-nav__group > summary {
   min-height: 52px;
   height: 52px;
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
-  -webkit-user-select: none;
 }
+.home.hr-canvas .home-nav.hr-nav > a,
+.home.hr-canvas .home-nav.hr-nav details.home-nav__group > summary {
+  transform: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  transition: color 180ms ease !important;
+}
+.home.hr-canvas .home-nav.hr-nav > a:is(:hover, :focus-visible, [aria-current="location"]),
 .home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary {
-  color: #15130e !important;
-  background: linear-gradient(145deg, #eac46e 0%, #bd862c 100%) !important;
-  transform: translateY(-1px);
-  outline: none;
-}
-.home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary svg {
-  color: #15130e !important;
-  stroke: #15130e !important;
-}
-.home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary::before {
-  opacity: 0 !important;
+  color: #f0c66f !important;
+  background: transparent !important;
   transform: none !important;
 }
-.home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary::after {
-  transform: scaleX(1) !important;
+.home.hr-canvas .home-nav.hr-nav > a:is(:hover, :focus-visible, [aria-current="location"]) svg,
+.home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary svg {
+  color: #f0c66f !important;
+  stroke: #f0c66f !important;
 }
-.home.hr-canvas .home-nav.hr-nav details.home-nav__group > summary:focus-visible {
-  outline: 2px solid #f0c765 !important;
-  outline-offset: -3px;
+.home.hr-canvas .home-nav.hr-nav details.home-nav__group:is(:hover, :focus-within, [open]) > summary::before {
+  display: none !important;
+  content: none !important;
 }
 @media (max-width: 1280px) and (min-width: 901px) {
-  .home.hr-canvas .home-nav.hr-nav details.home-nav__group > summary {
-    min-height: 48px;
-    height: 48px;
-  }
+  .home.hr-canvas .home-nav.hr-nav details.home-nav__group > summary { min-height: 48px; height: 48px; }
 }
