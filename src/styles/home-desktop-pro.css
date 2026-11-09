@@ -205,3 +205,32 @@
     pointer-events: auto !important;
   }
 }
+
+
+/* Restore the original live emblem clock in the homepage hero, above the photo and
+   below the readable left column. Keep it in the right-hand visual area. */
+@media (min-width: 761px) {
+  html body .home.home #inicio.home-hero .home-hero__emblem-clock {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: auto;
+    right: clamp(22px, 9vw, 170px);
+    width: clamp(145px, 16vw, 235px);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  html body .home.home #inicio.home-hero .home-hero__emblem-clock-art {
+    opacity: .88;
+  }
+  html body .home.home #inicio.home-hero .home-hero__emblem-clock-hands {
+    opacity: 1;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  html body .home.home #inicio.home-hero .home-hero__emblem-clock {
+    right: 2%;
+    width: clamp(125px, 15vw, 180px);
+  }
+}
