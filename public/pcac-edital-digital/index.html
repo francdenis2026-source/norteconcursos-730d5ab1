@@ -1670,7 +1670,13 @@ label.topic.semantic-has-subtopics.complete:after { content: none !important; }
 
   let savedOpen=null;
   const clean=value=>(value||'').replace(/\s+/g,' ').trim();
-  const textOf=element=>clean(element?.textContent||'');
+  const textOf=element=>{
+    if(!element) return '';
+    const clone=element.cloneNode(true);
+    clone.querySelectorAll('.topic-priority,.topic-actions,.topic-subtopic-status,.marker-tools')
+      .forEach(node=>node.remove());
+    return clean(clone.textContent||'');
+  };
   const rememberOpen=()=>{
     savedOpen=new Map([...document.querySelectorAll('details')].map(node=>[node,node.open]));
   };
