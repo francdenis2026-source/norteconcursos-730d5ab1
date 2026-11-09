@@ -100,10 +100,10 @@
   .tactical-intro__brand > span { display: block; margin: 8px 0 0; font-size: 8px; }
   .tactical-intro__edition { max-width: 110px; font-size: 8px; line-height: 1.6; }
   .tactical-intro__body { grid-template-columns: 1fr; grid-template-rows: auto auto; align-content: center; gap: 24px; }
-  .tactical-intro__identity { flex-direction: row; gap: 16px; padding: 0 12px; }
-  .tactical-intro__identity > img { width: 96px; max-height: 15svh; }
+  .tactical-intro__identity { flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 0; }
+  .tactical-intro__identity > img { width: clamp(132px, 42vw, 176px); max-width: 84vw; max-height: 22svh; }
   .tactical-intro__screen { aspect-ratio: 1280 / 660; height: auto; }
-  .tactical-intro__identity > span { max-width: 160px; text-align: left; font-size: 9px; }
+  .tactical-intro__identity > span { max-width: 100%; text-align: center; font-size: 10px; }
   .tactical-intro__footer { gap: 10px; }
   .tactical-intro__caption { max-width: 130px; font-size: 10px; line-height: 1.6; }
   :is(.home.home, #norte-initial-loading) .tactical-intro .tactical-intro__footer button { padding-inline: 10px; font-size: 10px; }
