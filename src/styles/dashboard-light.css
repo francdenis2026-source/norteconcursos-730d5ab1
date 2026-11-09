@@ -234,7 +234,11 @@
   outline: 3px solid var(--nc-color-focus);
   outline-offset: 2px;
 }
-:root:not(.dark) .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"]:disabled {
+/* Scoped to the "Vamos montar o seu plano" wizard card (study-coach) only: this used to
+   target every disabled default button in #dashboard-content, which silently repainted
+   unrelated disabled primary buttons app-wide (e.g. "Iniciar simulado" em /dashboard/mock-exams)
+   with a flat pale-blue look that didn't match their own section's palette. */
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content [data-slot="card"]:has([aria-label="Sua experiência com concursos"]) [data-slot="button"][data-variant="default"]:disabled {
   background: #d6e2f0 !important;
   color: #415873 !important;
   border-color: #b6c9e0 !important;
