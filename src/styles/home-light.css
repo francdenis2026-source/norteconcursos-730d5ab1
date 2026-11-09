@@ -12,7 +12,7 @@
   --stage-ink: oklch(0.24 0.035 262);
   --stage-muted: oklch(0.43 0.03 260);
   --stage-line: oklch(0.88 0.018 255);
-  --stage-accent: oklch(0.45 0.16 262);
+  --stage-accent: oklch(0.48 0.11 75);
   --stage-amber: oklch(0.5 0.11 62);
   --stage-card: oklch(1 0 0);
   --stage-shadow: 0 1px 2px oklch(0.25 0.04 262 / 0.06), 0 14px 32px -18px oklch(0.25 0.04 262 / 0.22);
@@ -76,8 +76,8 @@
 :root:not(.dark) .home.home .home-plans--insignia .home-compare { background: var(--stage-card); box-shadow: var(--stage-shadow); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan].home-plan--featured { background: linear-gradient(160deg, oklch(0.97 0.03 80), var(--stage-card) 55%); border-color: var(--stage-amber); box-shadow: 0 0 0 1px oklch(0.5 0.11 62 / 0.25), var(--stage-shadow); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] :is(h3, .home-plan__annual) { color: var(--stage-accent); }
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] .home-tag { background: oklch(0.95 0.03 262); color: var(--stage-accent); border-color: oklch(0.88 0.04 262); }
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button { color: var(--stage-accent); background: transparent; border-color: oklch(0.8 0.06 262); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] .home-tag { background: oklch(0.96 0.025 78); color: var(--stage-accent); border-color: oklch(0.88 0.03 78); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button { color: var(--stage-accent); background: transparent; border-color: oklch(0.8 0.05 78); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button { background: var(--stage-accent); color: oklch(0.99 0 0); border-color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:disabled { color: oklch(0.5 0.02 260); background: oklch(0.94 0.008 255); border-color: var(--stage-line); }
 :root:not(.dark) .home.home .home-plans--insignia .home-compare .is-trial { background: oklch(0.96 0.03 262); }
@@ -117,7 +117,7 @@
 :root:not(.dark) .home.home .home-preparation__info { background: var(--stage-card); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
 :root:not(.dark) .home.home .home-preparation__tabs { border-bottom-color: var(--stage-line); background: oklch(0.97 0.008 255); }
 @media (hover: hover) and (pointer: fine) {
-  :root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]):hover { color: var(--stage-accent); background: oklch(0.94 0.03 262); }
+  :root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]):hover { color: var(--stage-accent); background: oklch(0.94 0.025 78); }
 }
 :root:not(.dark) .home.home .home-preparation__tab[data-state="active"] { background: var(--stage-accent); color: oklch(0.99 0 0); }
 :root:not(.dark) .home.home .home-preparation__items > :is(article, li) { border-bottom-color: var(--stage-line); }
@@ -163,4 +163,25 @@
   :root:not(.dark) .home.home .home-hero__image { opacity: .16; mask-image: none; -webkit-mask-image: none; filter: grayscale(.4); border-radius: 0; }
   :root:not(.dark) .home.home .home-hero::after { background: linear-gradient(180deg, oklch(0.985 0.006 255 / 0.75), oklch(0.96 0.014 255 / 0.9)); }
   :root:not(.dark) .home.home .home-hero__explore { background: oklch(1 0 0); }
+}
+
+
+/* Homepage light mode: gold is the brand accent, blue-violet is not. */
+:root:not(.dark) .home.home-recomposition {
+  --stage-ink: #242629;
+  --stage-muted: #62615d;
+  --stage-line: #e4dfd4;
+  --stage-accent: #80602f;
+  --stage-amber: #80602f;
+  --stage-card: #ffffff;
+  --stage-shadow: 0 8px 24px -20px rgb(36 38 41 / 24%);
+}
+:root:not(.dark) .home.home-recomposition .home-preparation__tab[data-state="active"] {
+  background: #343a3e;
+  color: #ffffff;
+}
+:root:not(.dark) .home.home-recomposition .home-plan[data-plan].home-plan--featured {
+  background: linear-gradient(160deg, #f6f0e5, #ffffff 62%);
+  border-color: #c9a56a;
+  box-shadow: none;
 }
