@@ -10,10 +10,92 @@ export interface PcAcTopicSource {
 
 const clean = (value: string) => value.replace(/\s+/g, " ").trim();
 
+function capitalizeFirst(value: string) {
+  return value ? value[0]!.toLocaleUpperCase("pt-BR") + value.slice(1) : value;
+}
+
+function splitFirstConjunction(value: string) {
+  const match = value.match(/^(.+?)\s+e\s+(.+)$/u);
+  return match ? [match[1]!, match[2]!] : [value];
+}
+
+function commaItems(value: string) {
+  return value
+    .replace(/[.;]\s*$/u, "")
+    .split(/,\s*/u)
+    .map(clean)
+    .filter(Boolean);
+}
+
+function splitAcreRealitySection(raw: string): PcAcTopicGroup | null {
+  const section = clean(raw).replace(/[.]$/u, "");
+
+  if (section.startsWith("Movimento dos seringueiros,")) {
+    const remainder = clean(section.slice("Movimento dos seringueiros,".length));
+    return {
+      title: section,
+      subtopics: [
+        "Movimento dos seringueiros",
+        ...splitFirstConjunction(remainder).map(capitalizeFirst),
+      ],
+    };
+  }
+
+  const match = section.match(
+    /^(Formação histórica do Acre|Geografia|Aspectos étnicos e culturais|Aspectos políticos|Aspectos sociais e econômicos|Segurança pública no Acre):\s*(.*)$/u,
+  );
+  if (!match) return null;
+
+  const title = match[1]!;
+  const body = match[2]!;
+  let items = commaItems(body);
+
+  if (
+    title === "Formação histórica do Acre" ||
+    title === "Geografia" ||
+    title === "Aspectos políticos" ||
+    title === "Aspectos sociais e econômicos"
+  ) {
+    items = [...items.slice(0, -1), ...splitFirstConjunction(items.at(-1) ?? "")];
+  } else if (title === "Aspectos étnicos e culturais") {
+    const indigenous = [items[0], items[1]].filter(Boolean).join(", ");
+    const remaining = items.slice(2);
+    const last = remaining.pop() ?? "";
+    items = [indigenous, ...remaining, ...splitFirstConjunction(last)].filter(Boolean);
+  } else if (title === "Segurança pública no Acre") {
+    items = splitFirstConjunction(body.replace(/[.]\s*$/u, "").trim());
+  }
+
+  return { title, subtopics: items.map(capitalizeFirst) };
+}
+
 /**
- * Turns the long strings used by the official edital into a navigable parent
- * topic plus independent subtopics. The wording is preserved; only the
- * editorial separators already present in the edital are used.
+ * O edital publica Realidade do Acre em um bloco textual. Esta divisão editorial
+ * organiza os mesmos itens em grupos e subtópicos, sem acrescentar conteúdo ao programa.
+ * Aceita tanto o texto integral quanto os sete trechos já separados na fonte local.
+ */
+function splitAcreRealityTopics(topics: string[]): PcAcTopicGroup[] {
+  const text = clean(topics.join(" "));
+  if (!text) return [];
+
+  const sections = text
+    .split(
+      /(?<=\.)\s+(?=(?:Movimento dos seringueiros|Geografia:|Aspectos étnicos e culturais:|Aspectos políticos:|Aspectos sociais e econômicos:|Segurança pública no Acre:))/u,
+    )
+    .map(clean)
+    .filter(Boolean);
+
+  const groups = sections
+    .map(splitAcreRealitySection)
+    .filter((group): group is PcAcTopicGroup => group !== null);
+
+  return groups.length === 7 ? groups : [];
+}
+
+/**
+ * Turns long strings used by the official edital into a navigable parent topic plus
+ * independent subtopics. The wording is preserved; only editorial separators already
+ * present in the edital are used.
  */
 export function splitPcAcTopic(raw: string): PcAcTopicGroup {
   const text = clean(raw);
@@ -60,21 +142,9 @@ export function splitPcAcTopic(raw: string): PcAcTopicGroup {
 }
 
 export function pcAcVerticalTopicGroups(discipline: PcAcTopicSource): PcAcTopicGroup[] {
-  if (discipline.id === "realidade-acre" && (discipline.topics?.length ?? 0) === 1) {
-    const text = clean(discipline.topics?.[0] ?? "");
-    const sections = text
-      .split(/(?<=\.)\s+(?=(?:Movimento|Geografia|Aspectos étnicos|Aspectos políticos|Aspectos sociais|Segurança pública))/u)
-      .map(clean)
-      .filter(Boolean);
-    if (sections.length > 1) {
-      return sections.map((section) => {
-        const colon = section.indexOf(":");
-        if (colon > 0) {
-          return { title: clean(section.slice(0, colon)), subtopics: [clean(section.slice(colon + 1))] };
-        }
-        return splitPcAcTopic(section);
-      });
-    }
+  if (discipline.id === "realidade-acre" && (discipline.topics?.length ?? 0) > 0) {
+    const acreGroups = splitAcreRealityTopics(discipline.topics ?? []);
+    if (acreGroups.length) return acreGroups;
   }
   return (discipline.topics ?? []).map(splitPcAcTopic);
 }
