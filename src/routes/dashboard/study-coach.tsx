@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -54,6 +53,8 @@ import { confirmDialog } from "@/lib/confirm";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import "@/styles/study-coach-refinement.css";
 import "@/styles/student-workspace-unified.css";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 
