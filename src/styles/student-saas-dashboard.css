@@ -7,11 +7,11 @@
   --saas-ink: #172b43;
   --saas-muted: #62758a;
   --saas-line: #dce5ee;
-  --saas-blue: #2868b2;
-  --saas-cyan: #087f91;
+  --saas-blue: var(--nc-color-action-text);
+  --saas-cyan: var(--nc-color-action);
   --saas-green: #16845d;
-  --saas-violet: #7555b5;
-  --saas-amber: #a56b12;
+  --saas-violet: var(--nc-color-action-text);
+  --saas-amber: var(--nc-color-action-text);
   --saas-rose: #b94f76;
   color: var(--saas-ink);
 }
@@ -22,11 +22,11 @@
   --saas-ink: #edf3f8;
   --saas-muted: #a9bac8;
   --saas-line: #344757;
-  --saas-blue: #82baff;
-  --saas-cyan: #69d2d0;
+  --saas-blue: var(--nc-color-action);
+  --saas-cyan: var(--nc-color-action);
   --saas-green: #75d2a7;
-  --saas-violet: #b9a2f0;
-  --saas-amber: #edc17b;
+  --saas-violet: var(--nc-color-action);
+  --saas-amber: var(--nc-color-action);
   --saas-rose: #efa1ba;
 }
 .app-shell[data-area="student"] .app-main,
@@ -48,14 +48,14 @@
   border-color: var(--saas-line); border-radius: 10px;
 }
 .app-shell[data-area="student"] #dashboard-content :is(button,a,[role="button"]):focus-visible {
-  outline: 2px solid var(--saas-cyan); outline-offset: 3px;
+  outline: 2px solid var(--nc-color-focus); outline-offset: 3px;
 }
 .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
-  background: linear-gradient(110deg,#2868b2,#168b91); color: white;
-  border: 1px solid #3a91b3; box-shadow: 0 5px 14px -10px #087f91;
+  background: var(--nc-color-action); color: var(--nc-color-action-foreground);
+  border: 1px solid var(--nc-color-action); box-shadow: var(--nc-shadow-card);
 }
 :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
-  background: linear-gradient(110deg,#287e91,#258e83); border-color: #4ca9a0;
+  background: var(--nc-color-action); color: var(--nc-color-action-foreground); border-color: var(--nc-color-action);
 }
 .app-shell[data-area="student"] .student-home.student-desk.student-overview {
   gap: 16px; max-width: 1760px; margin-inline: auto;
