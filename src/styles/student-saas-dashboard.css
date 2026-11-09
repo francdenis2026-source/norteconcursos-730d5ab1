@@ -133,7 +133,7 @@
   border-color: color-mix(in srgb,var(--saas-cyan) 35%,var(--saas-line));
 }
 .app-shell[data-area="student"] .student-overview .student-home__text-link { color: var(--saas-blue); font-weight: 650; }
-:root.dark .app-shell[data-area="student"] .student-overview .student-home__text-link { color: #91c9ff; }
+:root.dark .app-shell[data-area="student"] .student-overview .student-home__text-link { color: var(--nc-color-action); }
 .app-shell[data-area="student"] .student-overview .student-desk__next {
   border: 1px solid color-mix(in srgb,var(--saas-amber) 42%,var(--saas-line));
   border-left: 4px solid var(--saas-amber); border-radius: 15px;
