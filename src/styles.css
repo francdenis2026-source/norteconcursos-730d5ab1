@@ -16118,3 +16118,173 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 .library-sources > ul li { min-width:0; }
 .library-sources > ul a, .library-sources > ul span { display:inline-flex; align-items:center; gap:5px; max-width:100%; color:var(--foreground); font-size:.72rem; line-height:1.35; text-decoration:underline; text-underline-offset:2px; }
 .library-sources > ul a svg { width:12px; height:12px; flex:none; }
+
+
+/* ==========================================================================
+   STUDY PLAN / MY EVOLUTION — porcelain, graphite and brass
+   Scoped to /dashboard/study-plan. No data or interaction changes.
+   ========================================================================== */
+.study-plan-page {
+  --sp-ink: #252b33;
+  --sp-muted: #687482;
+  --sp-line: #dce2e7;
+  --sp-surface: #fff;
+  --sp-soft: #f4f6f8;
+  --sp-brass: #b58a43;
+  --sp-brass-soft: #f8f2e7;
+  width: 100%;
+  min-width: 0;
+  gap: 14px !important;
+  color: var(--sp-ink);
+}
+.dark .study-plan-page {
+  --sp-ink: #edf1f4;
+  --sp-muted: #b4bec8;
+  --sp-line: #3a4652;
+  --sp-surface: #202832;
+  --sp-soft: #28323d;
+  --sp-brass: #d6b36f;
+  --sp-brass-soft: #332d22;
+}
+.study-plan-page > * { min-width: 0; }
+.study-plan-page > .page-hero,
+.study-plan-page .page-hero {
+  min-height: 118px !important;
+  padding: 18px 22px !important;
+  border: 1px solid #39434e !important;
+  border-radius: 14px !important;
+  background:
+    radial-gradient(ellipse at 92% 8%, rgb(181 138 67 / 17%), transparent 34%),
+    linear-gradient(112deg, #202832 0%, #2b333d 60%, #343b43 100%) !important;
+  box-shadow: 0 8px 22px rgb(20 28 36 / 12%) !important;
+}
+.study-plan-page .page-hero :is(h1,h2) { color: #fff !important; letter-spacing: -.035em; }
+.study-plan-page .page-hero__desc { color: #d0d8df !important; max-width: 68ch; font-size: 12px !important; line-height: 1.5; }
+.study-plan-page .page-hero__stats { gap: 8px; }
+.study-plan-page .page-hero__stats > * {
+  min-width: 105px;
+  border: 1px solid rgb(214 179 111 / 34%);
+  border-radius: 10px;
+  background: rgb(255 255 255 / 7%);
+  box-shadow: none;
+}
+.study-plan-page .page-hero__stats :is(span,strong,p) { color: #f4f0e8 !important; }
+.study-plan-page [data-slot="card"] {
+  min-width: 0;
+  border: 1px solid var(--sp-line) !important;
+  border-radius: 13px !important;
+  background: var(--sp-surface) !important;
+  color: var(--sp-ink);
+  box-shadow: 0 3px 14px rgb(31 42 54 / 4%) !important;
+}
+.study-plan-page [data-slot="card-header"] { padding: 15px 17px 10px; gap: 4px; }
+.study-plan-page [data-slot="card-content"] { padding: 12px 17px 16px; }
+.study-plan-page [data-slot="card-title"] {
+  color: var(--sp-ink);
+  font-size: 14px !important;
+  font-weight: 800;
+  letter-spacing: -.015em;
+}
+.study-plan-page [data-slot="card-description"] { color: var(--sp-muted); font-size: 11px; line-height: 1.45; }
+.study-plan-page [data-slot="card-header"] .rounded-full.bg-primary {
+  background: var(--sp-brass) !important;
+  color: #211b11 !important;
+}
+.study-plan-page .text-muted-foreground { color: var(--sp-muted) !important; }
+.study-plan-page .bg-muted\/30,
+.study-plan-page .bg-muted\/25 { background: var(--sp-soft) !important; }
+.study-plan-page .border { border-color: var(--sp-line); }
+.study-plan-page button[data-control-tone] {
+  border-radius: 9px;
+  font-weight: 750;
+}
+.study-plan-page button[data-control-tone="violet"] { --sp-control: #8c7958; }
+.study-plan-page button[data-control-tone="sky"] { --sp-control: #718994; }
+.study-plan-page button[data-control-tone="gold"] { --sp-control: var(--sp-brass); }
+.study-plan-page button[data-control-tone][aria-pressed="true"] {
+  background: var(--sp-brass) !important;
+  color: #211b11 !important;
+  box-shadow: 0 2px 7px rgb(181 138 67 / 22%) !important;
+}
+.study-plan-page button[data-control-tone][aria-pressed="false"] {
+  border: 1px solid var(--sp-line);
+  background: var(--sp-soft);
+  color: var(--sp-ink);
+}
+.study-plan-page input[type="date"] {
+  border-color: var(--sp-line);
+  border-radius: 9px;
+  background: var(--sp-soft);
+  color: var(--sp-ink);
+}
+.study-plan-page [data-slot="progress"] { background: var(--sp-soft); }
+.study-plan-page [data-slot="progress"] > div { background: var(--sp-brass) !important; }
+.study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 > * {
+  min-width: 0;
+  border: 1px solid var(--sp-line);
+  border-radius: 11px;
+  background: var(--sp-soft);
+  padding: 12px;
+}
+.study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 > * > div:first-child {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--sp-brass-soft);
+  color: var(--sp-brass);
+}
+.study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 :is(p,strong) { overflow-wrap: anywhere; }
+.study-plan-page section.grid.xl\:grid-cols-\[1\.35fr_\.65fr\] { gap: 12px; align-items: start; }
+.study-plan-page section.grid.xl\:grid-cols-\[1\.35fr_\.65fr\] > * { min-width: 0; }
+.study-plan-page .divide-y > div { border-color: var(--sp-line); }
+.study-plan-page .divide-y > div:hover { background: color-mix(in srgb, var(--sp-brass) 5%, var(--sp-surface)); }
+.study-plan-page .divide-y > div > div:first-child {
+  background: var(--sp-soft);
+  color: var(--sp-muted);
+}
+.study-plan-page .divide-y > div p.font-bold { color: var(--sp-ink); font-size: 13px; }
+.study-plan-page .divide-y > div .text-lg { color: var(--sp-ink); }
+.study-plan-page .rounded-2xl.border,
+.study-plan-page .rounded-xl.border { border-color: var(--sp-line) !important; background: var(--sp-soft); }
+.study-plan-page .bg-muted\/60 { background: var(--sp-soft) !important; }
+.study-plan-page .rounded-2xl.border > .font-black,
+.study-plan-page .rounded-xl.border > .font-black { color: var(--sp-ink); }
+.study-plan-page .text-primary { color: var(--sp-brass) !important; }
+.study-plan-page .bg-primary\/10 { background: var(--sp-brass-soft) !important; }
+.study-plan-page .bg-primary\/\[0\.03\] { background: var(--sp-soft) !important; }
+.study-plan-page .border-amber-300 { border-color: #d6b36f !important; }
+.study-plan-page .text-amber-900 { color: #73551f !important; }
+.dark .study-plan-page .text-amber-900 { color: #e5c98e !important; }
+.study-plan-page button,
+.study-plan-page a { transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease; }
+.study-plan-page button:focus-visible,
+.study-plan-page a:focus-visible,
+.study-plan-page input:focus-visible { outline: 2px solid var(--sp-brass); outline-offset: 2px; }
+@media (min-width: 1280px) {
+  .study-plan-page { gap: 12px !important; }
+  .study-plan-page > [data-slot="card"] > [data-slot="card-header"] { padding: 13px 16px 8px; }
+  .study-plan-page > [data-slot="card"] > [data-slot="card-content"] { padding: 10px 16px 14px; }
+}
+@media (max-width: 900px) {
+  .study-plan-page .page-hero__stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .study-plan-page .page-hero__stats > * { min-width: 0; }
+}
+@media (max-width: 640px) {
+  .study-plan-page { gap: 11px !important; padding-bottom: 24px !important; }
+  .study-plan-page > .page-hero,
+  .study-plan-page .page-hero { min-height: 0 !important; padding: 15px !important; border-radius: 12px !important; }
+  .study-plan-page .page-hero__stats { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; }
+  .study-plan-page .page-hero__stats > * { padding: 8px 6px; }
+  .study-plan-page .page-hero__stats :is(span,strong,p) { font-size: 11px !important; }
+  .study-plan-page [data-slot="card-header"] { padding: 12px 13px 8px; }
+  .study-plan-page [data-slot="card-content"] { padding: 10px 13px 13px; }
+  .study-plan-page section.grid.xl\:grid-cols-\[1\.35fr_\.65fr\] { grid-template-columns: minmax(0,1fr); }
+  .study-plan-page .divide-y > div { padding: 12px !important; }
+  .study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+  .study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 > * { padding: 9px; gap: 8px; }
+  .study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 > * > div:first-child { width: 30px; height: 30px; }
+  .study-plan-page .grid.gap-4.md\:grid-cols-2.xl\:grid-cols-4 > * :is(.font-black,.font-bold) { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .study-plan-page button, .study-plan-page a { transition: none; }
+}
