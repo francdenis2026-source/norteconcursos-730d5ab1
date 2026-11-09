@@ -658,3 +658,68 @@
     box-shadow: none !important;
   }
 }
+
+
+/* Text-by-text glass treatment: no enclosing card, each key message gets its own subtle strip. */
+.home.hr-canvas .home-hero.hr-hero .hx__copy {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__kicker {
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 7px 11px !important;
+  margin: 0 0 14px !important;
+  border: 1px solid rgb(225 190 116 / 19%) !important;
+  border-left: 2px solid rgb(225 190 116 / 72%) !important;
+  border-radius: 4px !important;
+  background: rgb(16 22 29 / 25%) !important;
+  -webkit-backdrop-filter: blur(4px) saturate(108%) !important;
+  backdrop-filter: blur(4px) saturate(108%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__copy h1.hx__headline {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 5px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 2px 10px 5px !important;
+  margin-left: -10px !important;
+  border: 1px solid rgb(238 232 219 / 10%) !important;
+  border-radius: 5px !important;
+  background: linear-gradient(100deg, rgb(15 21 28 / 32%), rgb(15 21 28 / 17%)) !important;
+  -webkit-backdrop-filter: blur(5px) saturate(108%) !important;
+  backdrop-filter: blur(5px) saturate(108%) !important;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 7%), inset 0 1px 0 rgb(255 255 255 / 4%) !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description {
+  max-width: 600px !important;
+  margin-top: 16px !important;
+}
+.home.hr-canvas .home-hero.hr-hero .hx__description > .hx__glass-strip {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 3px 8px 4px !important;
+  border: 1px solid rgb(238 232 219 / 8%) !important;
+  border-radius: 4px !important;
+  background: rgb(15 21 28 / 23%) !important;
+  -webkit-backdrop-filter: blur(4px) saturate(106%) !important;
+  backdrop-filter: blur(4px) saturate(106%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%) !important;
+}
+@media (max-width: 760px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__headline > .hx__glass-strip {
+    padding: 2px 7px 4px !important;
+    margin-left: -7px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__description {
+    margin-top: 12px !important;
+  }
+}
