@@ -296,3 +296,11 @@
 @media (prefers-reduced-motion: reduce) {
   .app-shell[data-area="student"] .student-overview :is(.student-home__metric,.student-hub__shortcuts > a) { transition: none; }
 }
+
+/* The next-step CTA uses a warm gold surface: keep its arrow in the same
+   foreground color as the label instead of inheriting the global accent hue. */
+.app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary > svg {
+  color: inherit !important;
+  stroke: currentColor !important;
+  fill: none !important;
+}
