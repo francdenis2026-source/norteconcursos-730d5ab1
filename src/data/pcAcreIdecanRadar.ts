@@ -53,3 +53,24 @@ export const PCAC_PRIORITY_WEIGHT: Record<string, number> = {
   "Média-alta": 2,
   Média: 1,
 };
+
+/** Peso (1 ou 2, no mesmo sentido do cronograma de estudos: peso 2 = disciplina de maior
+ * incidência na banca IDECAN e maior dificuldade, peso 1 = demais) por disciplina do Anexo III do
+ * Investigador, usado na grade semanal do cronograma. Chaveado pelo `id` de
+ * `pcAcVerticalCargos` (cargo "investigador") para não depender de bater nomes de disciplina. */
+export const INVESTIGATOR_DISCIPLINE_PESO: Record<string, 1 | 2> = {
+  portugues: 2,
+  "raciocinio-logico": 2,
+  informatica: 1,
+  "realidade-acre": 1,
+  "nocoes-constitucional": 1,
+  "nocoes-penal-processual": 2,
+  "nocoes-administrativo": 1,
+  "legislacao-institucional-nocoes": 2,
+  "contabilidade-analise-financeira": 2,
+  estatistica: 2,
+  arquivologia: 1,
+  "tecnologia-informacao-seguranca": 2,
+  "analise-dados": 2,
+  "nocoes-administracao": 1,
+};

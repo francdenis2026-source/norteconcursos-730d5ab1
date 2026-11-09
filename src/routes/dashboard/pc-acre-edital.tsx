@@ -6,9 +6,7 @@ import {
   BrainCircuit,
   CalendarClock,
   CheckCircle2,
-  Clock,
   Download,
-  GraduationCap,
   PlayCircle,
   ScanSearch,
   Scale,
@@ -52,6 +50,7 @@ import {
   DEFAULT_PCAC_STUDY_CONFIG,
   PCAC_EXAM_DATE,
   buildPcAcStudyWeek,
+  buildPcAcWeeklyGrid,
   pcAcDaysUntilExam,
   readPcAcStudyConfig,
   writePcAcStudyConfig,
@@ -60,6 +59,7 @@ import {
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import {
+  INVESTIGATOR_DISCIPLINE_PESO,
   INVESTIGATOR_FOCUS,
   INVESTIGATOR_RADAR,
   PCAC_IDECAN_PRIORITY,
@@ -71,13 +71,10 @@ import {
   buildPcAcMasterPlan,
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
-import { buildPcAcHourlyPlan } from "@/lib/pcAcreHourlyPlan";
 import "@/styles/pcac-edital.css";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
-const PLANO_ESTUDOS_ANCHOR = "pcac-plano-estudos";
-const CRONOGRAMA_HORARIO_ANCHOR = "pcac-cronograma-horario";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
@@ -362,10 +359,19 @@ function DisciplineAccordionItem({
   );
 }
 
-/** Cronograma de estudos adaptado à data da prova e à disponibilidade do aluno: calcula a semana
- * a partir do peso de cada disciplina do Anexo III (específicas pesam mais que básicas) e deixa
- * exportar em PDF estilizado. Configuração salva neste navegador, por cargo. */
-function PcAcStudyPlanCard({
+const WEEKDAY_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+const GRID_DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
+const GRID_DAY_LETTER = ["D", "S", "T", "Q", "Q", "S", "S"]; // índice = weekday (0 domingo)
+
+/** Cronograma de estudos único da área do aluno: une a grade semanal por disciplina (peso,
+ * horário e dias da semana — mesmo formato do cronograma em papel que serviu de modelo) com a
+ * programação semana a semana já existente (teoria, questões, redação, revisão e simulados, até
+ * 3 dias antes da prova). Antes eram 3 cartões separados (cronograma, plano de estudos e
+ * cronograma horário) — unificados aqui a pedido do Franc, porque estavam fragmentados demais
+ * para ficar "bem organizado". A grade semanal vale para qualquer cargo; a programação
+ * semana a semana é específica do Investigador (única com ordem de prioridade IDECAN montada).
+ * Configuração salva neste navegador, por cargo. */
+function PcAcCronogramaCard({
   cargo,
   userId,
 }: {
@@ -374,6 +380,7 @@ function PcAcStudyPlanCard({
 }) {
   const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
   const [exporting, setExporting] = React.useState(false);
+  const showDetailedPlan = cargo.id === "investigador";
 
   React.useEffect(() => {
     if (typeof window === "undefined") return;
@@ -389,21 +396,27 @@ function PcAcStudyPlanCard({
   };
 
   const week = React.useMemo(() => buildPcAcStudyWeek(cargo, cfg), [cargo, cfg]);
-  const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
-  const totalMinutes = Object.values(week).reduce(
-    (s, blocks) => s + blocks.reduce((a, b) => a + b.minutes, 0),
-    0,
+  const grid = React.useMemo(
+    () => buildPcAcWeeklyGrid(cargo, week, showDetailedPlan ? INVESTIGATOR_DISCIPLINE_PESO : {}),
+    [cargo, week, showDetailedPlan],
   );
+  const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
+
+  const weeks = React.useMemo(() => (showDetailedPlan ? buildPcAcMasterPlan(cfg.days) : []), [showDetailedPlan, cfg.days]);
+  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
+  const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
   const exportPdf = async () => {
     setExporting(true);
     try {
       const { generatePcAcCronogramaPdf } = await import("@/lib/pcAcreCronogramaPdf");
-      await generatePcAcCronogramaPdf(cargo, cfg, week);
+      await generatePcAcCronogramaPdf({ cargo, cfg, grid, weeks, finalDays });
     } finally {
       setExporting(false);
     }
   };
+
+  const phaseWeeks = (phase: PcAcPlanWeek["phase"]) => weeks.filter((w) => w.phase === phase);
 
   return (
     <Card id={CRONOGRAMA_ANCHOR} className="pcac-edital-card pcac-edital-cronograma scroll-mt-20">
@@ -412,19 +425,25 @@ function PcAcStudyPlanCard({
           <div>
             <CardTitle className="flex items-center gap-2 text-base">
               <CalendarClock className="h-5 w-5 text-primary" />
-              Cronograma de estudos para a prova
+              Cronograma de estudos
             </CardTitle>
             <CardDescription>
-              Ajustado à data da prova e ao tempo que você tem disponível. Exporte em PDF quando
-              quiser.
+              Grade semanal por disciplina{showDetailedPlan ? " e programação semana a semana (teoria, questões, redação e simulados)" : ""},
+              ajustada à data da prova e ao seu tempo disponível. Exporte em PDF quando quiser.
             </CardDescription>
           </div>
-          <Badge variant="outline" className="text-sm">
-            {daysLeft} dias até a prova ({PCAC_EXAM_DATE.split("-").reverse().join("/")})
-          </Badge>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="outline" className="text-sm">
+              {daysLeft} dias até a prova ({PCAC_EXAM_DATE.split("-").reverse().join("/")})
+            </Badge>
+            <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting}>
+              <Download className="mr-2 h-4 w-4" />
+              {exporting ? "Gerando…" : "Exportar em PDF"}
+            </Button>
+          </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-5">
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label>Horas de estudo por semana</Label>
@@ -471,164 +490,118 @@ function PcAcStudyPlanCard({
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t pt-3">
-          <p className="text-xs text-muted-foreground">
-            {cfg.days.length} dia{cfg.days.length === 1 ? "" : "s"} por semana ·{" "}
-            {Math.round(totalMinutes / 60)}h{totalMinutes % 60 ? String(totalMinutes % 60).padStart(2, "0") : ""}{" "}
-            distribuídas entre as disciplinas do Anexo III.
+        <div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+            Grade semanal por disciplina
           </p>
-          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting}>
-            <Download className="mr-2 h-4 w-4" />
-            {exporting ? "Gerando…" : "Exportar cronograma em PDF"}
-          </Button>
-        </div>
-
-        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {DAY_ORDER.filter((d) => cfg.days.includes(d)).map((d) => (
-            <div key={d} className="rounded-lg border bg-background/60 p-3">
-              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                {["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"][d]}
-              </p>
-              <ul className="mt-2 space-y-1.5">
-                {(week[d] ?? []).map((block, i) => (
-                  <li key={i} className="flex items-start justify-between gap-2 text-xs">
-                    <span className="text-foreground/90">{block.discipline}</span>
-                    <span className="shrink-0 font-semibold text-muted-foreground">
-                      {block.start}–{block.end}
-                    </span>
-                  </li>
+          <div className="overflow-x-auto rounded-lg border">
+            <table className="w-full min-w-[640px] border-collapse text-xs">
+              <thead>
+                <tr className="bg-primary text-primary-foreground">
+                  <th className="px-2.5 py-2 text-left font-semibold">Disciplina</th>
+                  <th className="px-2 py-2 text-center font-semibold">Peso</th>
+                  <th className="px-2 py-2 text-center font-semibold">Horário</th>
+                  {GRID_DAY_ORDER.map((weekday) => (
+                    <th key={weekday} className="px-1.5 py-2 text-center font-semibold" title={WEEKDAY_FULL[weekday]}>
+                      {GRID_DAY_LETTER[weekday]}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {grid.map((row, i) => (
+                  <tr key={row.id} className={i % 2 === 1 ? "bg-muted/30" : undefined}>
+                    <td className="px-2.5 py-1.5">{row.name}</td>
+                    <td className="px-2 py-1.5 text-center font-semibold text-primary">{row.peso}</td>
+                    <td className="px-2 py-1.5 text-center text-muted-foreground">{row.horario}</td>
+                    {GRID_DAY_ORDER.map((weekday) => (
+                      <td key={weekday} className="px-1.5 py-1.5 text-center font-bold text-primary">
+                        {row.days.includes(weekday) ? "×" : ""}
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-                {!(week[d] ?? []).length && (
-                  <li className="text-xs text-muted-foreground">Sem blocos neste dia.</li>
+                {!grid.length && (
+                  <tr>
+                    <td colSpan={10} className="px-2.5 py-3 text-center text-muted-foreground">
+                      Escolha ao menos um dia de estudo para gerar a grade.
+                    </td>
+                  </tr>
                 )}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-const WEEKDAY_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-
-/** Plano de estudos completo: semana a semana e dia a dia, organizado pela ordem de relevância
- * já marcada para o Investigador (ver "Foco recomendado" e "Onde concentrar seu tempo" acima),
- * cobrindo teoria, questões, redação e simulados até 3 dias antes da prova. Reaproveita os
- * mesmos dias de estudo configurados no cronograma de horários, para os dois ficarem
- * consistentes. */
-function PcAcMasterPlanCard({
-  cargoLabel,
-  cargoId,
-  userId,
-}: {
-  cargoLabel: string;
-  cargoId: PcAcVerticalCargoId;
-  userId: string;
-}) {
-  const [exporting, setExporting] = React.useState(false);
-  const [days, setDays] = React.useState<number[]>(DEFAULT_PCAC_STUDY_CONFIG.days);
-  React.useEffect(() => {
-    if (typeof window === "undefined") return;
-    setDays(readPcAcStudyConfig(window.localStorage, userId, cargoId).days);
-  }, [userId, cargoId]);
-  const weeks = React.useMemo(() => buildPcAcMasterPlan(days), [days]);
-  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
-  const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
-
-  const exportPdf = async () => {
-    setExporting(true);
-    try {
-      const { generatePcAcMasterPlanPdf } = await import("@/lib/pcAcreMasterPlanPdf");
-      await generatePcAcMasterPlanPdf(cargoLabel, weeks, finalDays);
-    } finally {
-      setExporting(false);
-    }
-  };
-
-  const phaseWeeks = (phase: PcAcPlanWeek["phase"]) => weeks.filter((w) => w.phase === phase);
-
-  return (
-    <Card id={PLANO_ESTUDOS_ANCHOR} className="pcac-edital-card pcac-edital-master-plan scroll-mt-20">
-      <CardHeader>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <CardTitle className="flex items-center gap-2 text-base">
-              <GraduationCap className="h-5 w-5 text-primary" />
-              Plano de estudos completo
-            </CardTitle>
-            <CardDescription>
-              Semana a semana e dia a dia até 3 dias antes da prova, por ordem de relevância da
-              banca IDECAN — com teoria, questões, redação e simulados. Usa os mesmos dias de
-              estudo do cronograma acima.
-            </CardDescription>
+              </tbody>
+            </table>
           </div>
-          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !weeks.length}>
-            <Download className="mr-2 h-4 w-4" />
-            {exporting ? "Gerando…" : "Exportar plano em PDF"}
-          </Button>
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {!weeks.length ? (
-          <p className="text-sm text-muted-foreground">
-            Faltam poucos dias para a prova — use o período para revisão leve (ver "Últimos dias"
-            abaixo) em vez de um plano de semanas completas.
+          <p className="mt-1.5 text-[11px] text-muted-foreground">
+            Peso 2 = disciplina de maior incidência na banca IDECAN e maior dificuldade. Peso 1 = demais disciplinas.
           </p>
-        ) : (
-          <>
-            <p className="text-xs text-muted-foreground">
-              {weeks.length} semana{weeks.length === 1 ? "" : "s"} de estudo · {totalActivities}{" "}
-              atividades planejadas · encerra conteúdo novo 3 dias antes da prova.
+        </div>
+
+        {showDetailedPlan && (
+          <div>
+            <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+              Programação semana a semana
             </p>
-            <Accordion type="multiple" defaultValue={[`fase-fundamentos`]}>
-              {(["fundamentos", "pratica", "revisao"] as const).map((phase) => {
-                const items = phaseWeeks(phase);
-                if (!items.length) return null;
-                return (
-                  <AccordionItem key={phase} value={`fase-${phase}`}>
-                    <AccordionTrigger className="text-left">
-                      <span className="flex items-center gap-2">
-                        {PCAC_PHASE_LABEL[phase]}
-                        <Badge variant="outline" className="text-[10px]">
-                          {items.length} semana{items.length === 1 ? "" : "s"}
-                        </Badge>
-                      </span>
-                    </AccordionTrigger>
-                    <AccordionContent className="space-y-3">
-                      {items.map((week) => (
-                        <div key={week.weekNumber} className="rounded-lg border bg-background/60 p-3">
-                          <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                            Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
-                            {week.endDate.split("-").reverse().join("/")}
-                          </p>
-                          <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                            {week.days.map((day) => (
-                              <div key={day.date} className="rounded-md border border-dashed bg-muted/20 p-2">
-                                <p className="text-[11px] font-semibold text-foreground/90">
-                                  {WEEKDAY_FULL[day.weekday]} · {day.date.split("-").reverse().join("/")}
-                                </p>
-                                <ul className="mt-1 space-y-1">
-                                  {day.activities.map((activity, i) => (
-                                    <li key={i} className="text-[11px] leading-relaxed text-muted-foreground">
-                                      <span className="font-semibold text-primary">
-                                        {PCAC_ACTIVITY_LABEL[activity.type]}:
-                                      </span>{" "}
-                                      {activity.detail}
-                                    </li>
-                                  ))}
-                                </ul>
+            {!weeks.length ? (
+              <p className="text-sm text-muted-foreground">
+                Faltam poucos dias para a prova — use o período para revisão leve (ver "Últimos dias"
+                abaixo) em vez de um plano de semanas completas.
+              </p>
+            ) : (
+              <>
+                <p className="mb-2 text-xs text-muted-foreground">
+                  {weeks.length} semana{weeks.length === 1 ? "" : "s"} de estudo · {totalActivities}{" "}
+                  atividades planejadas · encerra conteúdo novo 3 dias antes da prova.
+                </p>
+                <Accordion type="multiple" defaultValue={[`fase-fundamentos`]}>
+                  {(["fundamentos", "pratica", "revisao"] as const).map((phase) => {
+                    const items = phaseWeeks(phase);
+                    if (!items.length) return null;
+                    return (
+                      <AccordionItem key={phase} value={`fase-${phase}`}>
+                        <AccordionTrigger className="text-left">
+                          <span className="flex items-center gap-2">
+                            {PCAC_PHASE_LABEL[phase]}
+                            <Badge variant="outline" className="text-[10px]">
+                              {items.length} semana{items.length === 1 ? "" : "s"}
+                            </Badge>
+                          </span>
+                        </AccordionTrigger>
+                        <AccordionContent className="space-y-3">
+                          {items.map((week) => (
+                            <div key={week.weekNumber} className="rounded-lg border bg-background/60 p-3">
+                              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                                Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
+                                {week.endDate.split("-").reverse().join("/")}
+                              </p>
+                              <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                                {week.days.map((day) => (
+                                  <div key={day.date} className="rounded-md border border-dashed bg-muted/20 p-2">
+                                    <p className="text-[11px] font-semibold text-foreground/90">
+                                      {WEEKDAY_FULL[day.weekday]} · {day.date.split("-").reverse().join("/")}
+                                    </p>
+                                    <ul className="mt-1 space-y-1">
+                                      {day.activities.map((activity, i) => (
+                                        <li key={i} className="text-[11px] leading-relaxed text-muted-foreground">
+                                          <span className="font-semibold text-primary">
+                                            {PCAC_ACTIVITY_LABEL[activity.type]}:
+                                          </span>{" "}
+                                          {activity.detail}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </AccordionContent>
-                  </AccordionItem>
-                );
-              })}
-            </Accordion>
-          </>
+                            </div>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    );
+                  })}
+                </Accordion>
+              </>
+            )}
+          </div>
         )}
 
         <div className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3">
@@ -646,106 +619,6 @@ function PcAcMasterPlanCard({
             ))}
           </ul>
         </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-/** Cronograma horário detalhado: 05:00–22:00, todos os dias, a partir de segunda-feira
- * 09/11/2026, com treino físico (05:00–06:00 e 17:30–19:00) e intervalos de descanso marcados.
- * Complementa o plano de estudos completo acima (aquele diz o que estudar e em que ordem; este
- * diz a que hora exata). */
-function PcAcHourlyPlanCard({ cargoLabel }: { cargoLabel: string }) {
-  const [exporting, setExporting] = React.useState(false);
-  const weeks = React.useMemo(() => buildPcAcHourlyPlan(), []);
-  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
-
-  const exportPdf = async () => {
-    setExporting(true);
-    try {
-      const { generatePcAcHourlyPlanPdf } = await import("@/lib/pcAcreHourlyPlanPdf");
-      await generatePcAcHourlyPlanPdf(cargoLabel, weeks, finalDays);
-    } finally {
-      setExporting(false);
-    }
-  };
-
-  return (
-    <Card id={CRONOGRAMA_HORARIO_ANCHOR} className="pcac-edital-card pcac-edital-hourly-plan scroll-mt-20">
-      <CardHeader>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <CardTitle className="flex items-center gap-2 text-base">
-              <Clock className="h-5 w-5 text-primary" />
-              Cronograma horário detalhado
-            </CardTitle>
-            <CardDescription>
-              Das 05:00 às 22:00, todos os dias, a partir de segunda-feira (09/11), com treino
-              físico (05:00–06:00 e 17:30–19:00), refeições e intervalos marcados. Sábado é dia
-              de simulado completo; domingo é descanso ativo, reduzido de propósito.
-            </CardDescription>
-          </div>
-          <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !weeks.length}>
-            <Download className="mr-2 h-4 w-4" />
-            {exporting ? "Gerando…" : "Exportar cronograma horário em PDF"}
-          </Button>
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-3">
-        <p className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-muted-foreground">
-          Cada semana tem 1 ou 2 disciplinas fixas — a semana inteira gira em torno delas, do
-          jeito que muda é só a atividade (teoria → questões → revisão → redação). Treino físico
-          entra todos os dias, às 05:00–06:00 e 17:30–19:00, e o estudo efetivo fica em torno de
-          8h30 por dia — um cronograma exaustivo rende menos do que um sustentável, por isso
-          domingo foi reservado para descanso ativo.
-        </p>
-        <Accordion type="multiple" defaultValue={weeks[0] ? [`semana-${weeks[0].weekNumber}`] : []}>
-          {weeks.map((week) => (
-            <AccordionItem key={week.weekNumber} value={`semana-${week.weekNumber}`}>
-              <AccordionTrigger className="text-left text-sm">
-                <span className="flex flex-wrap items-center gap-2">
-                  <span className="font-semibold">
-                    Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
-                    {week.endDate.split("-").reverse().join("/")}
-                  </span>
-                  <Badge variant="outline" className="text-[10px]">
-                    {week.focusSubjects.join(" + ")}
-                  </Badge>
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <Accordion type="multiple">
-                  {week.days.map((day) => (
-                    <AccordionItem key={day.date} value={day.date}>
-                      <AccordionTrigger className="text-left text-xs">
-                        {["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][day.weekday]}{" "}
-                        · {day.date.split("-").reverse().join("/")}
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <ul className="space-y-1">
-                          {day.blocks.map((block, i) => (
-                            <li key={i} className="flex items-start gap-2 text-xs">
-                              <span className="shrink-0 font-mono text-[10px] font-semibold text-amber-700 dark:text-amber-300">
-                                {block.start}–{block.end}
-                              </span>
-                              <span className="text-muted-foreground">
-                                <span className="font-semibold text-foreground/90">{PCAC_ACTIVITY_LABEL[block.type]}:</span> {block.label}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-        <p className="text-xs text-muted-foreground">
-          {weeks.length} semana{weeks.length === 1 ? "" : "s"}, hora a hora, até 3 dias antes da
-          prova.
-        </p>
       </CardContent>
     </Card>
   );
@@ -1091,14 +964,7 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
-      <PcAcStudyPlanCard cargo={cargo} userId={userId} />
-
-      {cargo.id === "investigador" && (
-        <>
-          <PcAcMasterPlanCard cargoLabel={cargo.label} cargoId={cargo.id} userId={userId} />
-          <PcAcHourlyPlanCard cargoLabel={cargo.label} />
-        </>
-      )}
+      <PcAcCronogramaCard cargo={cargo} userId={userId} />
 
       <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
         <CardHeader>

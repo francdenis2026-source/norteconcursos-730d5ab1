@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Clock, Download, GraduationCap, ScanSearch } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ScanSearch } from "lucide-react";
 
 /** Destaque do edital verticalizado da PC-AC logo no topo da área do aluno, para acesso
  * imediato — reaproveita o padrão visual do spotlight de prova (ver PcprExamSpotlight). Os
@@ -38,7 +38,7 @@ export function PcAcreEditalSpotlight() {
             className="pcpr-spot__cta pcpr-spot__cta--ghost"
           >
             <CalendarClock aria-hidden="true" />
-            Cronograma
+            Cronograma de estudos
           </Link>
           <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta">
             <CheckSquare aria-hidden="true" />
@@ -51,22 +51,6 @@ export function PcAcreEditalSpotlight() {
           <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} className="pcpr-spot__cta pcpr-spot__cta--ghost">
             <BookOpenCheck aria-hidden="true" />
             Edital digital
-          </Link>
-          <Link
-            to="/dashboard/pc-acre-edital"
-            hash="pcac-plano-estudos"
-            className="pcpr-spot__cta pcpr-spot__cta--ghost"
-          >
-            <GraduationCap aria-hidden="true" />
-            Plano de estudos
-          </Link>
-          <Link
-            to="/dashboard/pc-acre-edital"
-            hash="pcac-cronograma-horario"
-            className="pcpr-spot__cta pcpr-spot__cta--ghost"
-          >
-            <Clock aria-hidden="true" />
-            Cronograma horário
           </Link>
         </div>
       </div>
