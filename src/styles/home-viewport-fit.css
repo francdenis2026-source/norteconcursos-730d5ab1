@@ -500,3 +500,68 @@
   height: var(--nc-fixed-header-height, 66px) !important;
   box-sizing: border-box !important;
 }
+
+
+/* Animated brand insignia returned to the left rail, directly above the hero headline.
+   Glass treatment is intentionally subtle so the portrait and clock remain visible. */
+@media (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: min(690px, 59%) !important;
+    max-width: 690px !important;
+    padding: clamp(14px, 1.6vw, 22px) clamp(16px, 1.9vw, 26px) !important;
+    border: 1px solid rgb(235 220 190 / 17%) !important;
+    border-radius: 16px !important;
+    background: linear-gradient(
+      135deg,
+      rgb(13 20 27 / 38%) 0%,
+      rgb(13 20 27 / 24%) 58%,
+      rgb(13 20 27 / 13%) 100%
+    ) !important;
+    -webkit-backdrop-filter: blur(9px) saturate(112%) !important;
+    backdrop-filter: blur(9px) saturate(112%) !important;
+    box-shadow:
+      0 14px 38px rgb(0 0 0 / 12%),
+      inset 0 1px 0 rgb(255 255 255 / 5%) !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: clamp(62px, 5.8vw, 78px);
+    position: relative !important;
+    inset: auto !important;
+    align-self: flex-start !important;
+    flex: 0 0 auto !important;
+    width: var(--badge-w) !important;
+    margin: 0 0 10px !important;
+    z-index: 3 !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy h1,
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > p,
+  .home.hr-canvas .home-hero.hr-hero .hx__kicker {
+    text-shadow: 0 1px 12px rgb(0 0 0 / 22%);
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy .home-actions {
+    margin-top: 18px !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    width: min(620px, 72%) !important;
+    padding: 13px 16px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: 62px;
+    margin-bottom: 7px !important;
+  }
+}
+@media (max-height: 760px) and (min-width: 761px) {
+  .home.hr-canvas .home-hero.hr-hero .hx__copy {
+    padding-block: 11px !important;
+  }
+  .home.hr-canvas .home-hero.hr-hero .hx__copy > .hero-badge {
+    --badge-w: 56px;
+    margin-bottom: 6px !important;
+  }
+}
