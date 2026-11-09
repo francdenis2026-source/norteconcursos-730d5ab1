@@ -822,3 +822,20 @@
     font-size: clamp(32px, 8.5vw, 42px) !important;
   }
 }
+
+
+/* Match both hero actions: the secondary CTA now shares the gold treatment,
+   while retaining a slightly quieter border and a clear hover state. */
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn--ghost {
+  border: 1px solid #f0cb78 !important;
+  background: linear-gradient(120deg, #f0cb78 0%, #e6b95f 52%, #d7a84f 100%) !important;
+  color: #17140e !important;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 25%), inset 0 1px 0 rgb(255 255 255 / 28%) !important;
+  text-shadow: none !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn--ghost:hover {
+  border-color: #ffdf98 !important;
+  background: linear-gradient(120deg, #f6d58d 0%, #edc574 52%, #e1b45c 100%) !important;
+  color: #17140e !important;
+  box-shadow: 0 10px 26px rgb(0 0 0 / 30%), inset 0 1px 0 rgb(255 255 255 / 35%) !important;
+}
