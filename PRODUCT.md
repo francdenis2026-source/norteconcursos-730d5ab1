@@ -32,8 +32,9 @@ O usuário alterna entre leitura de leis, resolução de questões, simulados, r
 ## Brand Commitments
 
 - Nome e marca Norte Concurso.
-- Dourado permanece como cor de destaque e ação primária.
-- A nova identidade deve evitar marrom e azul-petróleo, usando uma linguagem profissional associada à segurança pública.
+- A identidade visual não fica presa a uma paleta histórica ou a uma única cor dominante.
+- Azul-marinho, azul-petróleo, teal, dourado e neutros podem ser avaliados e combinados conforme contraste, legibilidade, reconhecimento e adequação ao público.
+- A cor primária, os destaques e os estados semânticos devem ter funções distintas; nenhuma cor é obrigatória por preferência estética isolada.
 - Ícones SVG consistentes, alto contraste e tipografia legível.
 
 ## Evidence on Hand
