@@ -335,14 +335,23 @@ function DisciplineAccordionItem({
                 const nextGroupStatus = groupStatus === "estudado" ? undefined : groupStatus === "a-estudar" ? "estudado" : "a-estudar";
                 return (
                   <li key={i} className="rounded-md border border-border/60 bg-muted/20 p-2">
-                    <div className="flex items-start gap-2">
-                      <StatusButton
-                        size="sm"
-                        status={groupStatus}
-                        onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
-                      />
+                    <details open={group.subtopics.length === 0} className="group/topic">
+                      <summary className="flex cursor-pointer list-none items-start gap-2 [&::-webkit-details-marker]:hidden">
+                      <span onClick={(event) => event.stopPropagation()} className="shrink-0">
+                        <StatusButton
+                          size="sm"
+                          status={groupStatus}
+                          onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
+                        />
+                      </span>
                       <span className="min-w-0 flex-1 break-words text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
-                    </div>
+                      {group.subtopics.length > 0 && (
+                        <span className="shrink-0 rounded-md border border-primary/20 px-2 py-1 text-[10px] font-bold text-primary group-open/topic:bg-primary/10">
+                          <span className="group-open/topic:hidden">Ver subitens</span>
+                          <span className="hidden group-open/topic:inline">Ocultar subitens</span>
+                        </span>
+                      )}
+                      </summary>
                     {group.subtopics.length > 0 && (
                       <ul className="mt-1.5 space-y-1 border-l-2 border-primary/20 pl-2.5">
                         {group.subtopics.map((subtopic, j) => (
@@ -357,6 +366,7 @@ function DisciplineAccordionItem({
                         ))}
                       </ul>
                     )}
+                    </details>
                   </li>
                 );
               })}
