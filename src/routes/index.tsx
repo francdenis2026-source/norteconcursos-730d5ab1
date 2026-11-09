@@ -192,7 +192,9 @@ function PreparationInfo() {
       <div className="hr-preparation__content">
         <div className="hr-preparation__content-head">
           <div><span>RECURSOS ESSENCIAIS</span><strong>Da organização à aprovação</strong></div>
-          <small>Uma jornada de estudo integrada</small>
+          <div className="hr-preparation__visual" aria-hidden="true">
+            <img src="/images/norte-recursos-glass.webp" alt="" loading="lazy" />
+          </div>
         </div>
         <div className="hr-preparation__feature-grid">
           {highlights.map(({ icon: Icon, title, text, tag }, index) => (
