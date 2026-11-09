@@ -1,4 +1,3 @@
-import "@/styles/student-internal-workspace-system.css";
 import { TRACKS } from "@/data/tracks";
 import { editalLessonLinks } from "@/lib/editalStudy";
 import { useLegalCourses } from "@/lib/legalCourses";
@@ -31,6 +30,8 @@ import {
   isEligibleQuestion,
   type LegalBasis,
 } from "@/lib/questionFormat";
+
+import "@/styles/student-internal-workspace-system.css";
 
 export const Route = createFileRoute("/dashboard/edital/$topicId")({
   component: TopicPage,
