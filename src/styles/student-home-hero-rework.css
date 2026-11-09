@@ -555,3 +555,398 @@
     flex-wrap: wrap;
   }
 }
+
+
+/* Weekly rhythm analytics — replace the old seven boxed bars with a readable
+   area chart, compact KPIs and actionable, data-backed weekly insights. */
+.app-shell.navigation-v2[data-area="student"] .student-home.student-desk.student-overview {
+  --rhythm-accent: var(--home-gold);
+  --rhythm-accent-soft: var(--home-cyan);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(225px, .72fr);
+  align-items: stretch;
+  gap: 14px;
+  min-width: 0;
+  margin-top: 12px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-main {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding: 11px 13px;
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: var(--home-surface-2);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric--primary {
+  border-color: color-mix(in srgb, var(--rhythm-accent) 38%, var(--home-line));
+  background: color-mix(in srgb, var(--rhythm-accent) 8%, var(--home-surface-2));
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--home-muted);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric > span svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  color: var(--rhythm-accent);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric > strong {
+  color: var(--home-ink);
+  font-size: clamp(19px, 1.8vw, 25px);
+  font-weight: 850;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric > strong small {
+  color: var(--home-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric > small {
+  color: var(--home-muted);
+  font-size: 9px;
+  line-height: 1.35;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart {
+  min-width: 0;
+  padding: 13px 14px 11px;
+  border: 1px solid var(--home-line);
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--rhythm-accent) 7%, transparent), transparent 68%),
+    var(--home-surface);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head > div {
+  display: grid;
+  gap: 2px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head strong {
+  color: var(--home-ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head span {
+  color: var(--home-muted);
+  font-size: 10px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head .student-home__rhythm-period {
+  padding: 5px 8px;
+  border: 1px solid var(--home-line);
+  border-radius: 99px;
+  color: var(--home-muted);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-plot {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: stretch;
+  min-width: 0;
+  height: 178px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 17px 5px 10px 0;
+  color: var(--home-muted);
+  font-size: 9px;
+  line-height: 1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-plot svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-gridline {
+  stroke: var(--home-line);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  vector-effect: non-scaling-stroke;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-average {
+  stroke: var(--rhythm-accent);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 5;
+  opacity: .7;
+  vector-effect: non-scaling-stroke;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-average-label {
+  fill: var(--rhythm-accent);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-point-halo {
+  fill: var(--rhythm-accent);
+  opacity: .13;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-point {
+  fill: var(--home-surface);
+  stroke: var(--rhythm-accent);
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  margin: 2px 0 0 42px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day {
+  display: grid;
+  min-width: 0;
+  min-height: 54px;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+  padding: 5px 2px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: var(--home-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day:hover,
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day:focus-visible {
+  border-color: color-mix(in srgb, var(--rhythm-accent) 42%, var(--home-line));
+  background: color-mix(in srgb, var(--rhythm-accent) 8%, var(--home-surface-2));
+  outline: none;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day[data-active="true"] {
+  color: var(--home-ink);
+  background: color-mix(in srgb, var(--rhythm-accent) 7%, var(--home-surface-2));
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day > span {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day > strong {
+  color: var(--home-ink);
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day > small {
+  max-width: 100%;
+  color: var(--home-muted);
+  font-size: 8px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 14px;
+  padding: 15px;
+  border: 1px solid color-mix(in srgb, var(--rhythm-accent) 28%, var(--home-line));
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--rhythm-accent) 13%, transparent), transparent 62%),
+    var(--home-surface-2);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading > span {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--rhythm-accent) 32%, var(--home-line));
+  border-radius: 9px;
+  color: var(--rhythm-accent);
+  background: color-mix(in srgb, var(--rhythm-accent) 9%, var(--home-surface));
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading svg {
+  width: 15px;
+  height: 15px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading > div {
+  display: grid;
+  gap: 2px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading strong {
+  color: var(--home-ink);
+  font-size: 12px;
+  font-weight: 850;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading small {
+  color: var(--home-muted);
+  font-size: 9px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-peak {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid var(--home-line);
+  border-radius: 11px;
+  background: var(--home-surface);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-peak > span,
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-consistency span {
+  color: var(--home-muted);
+  font-size: 10px;
+  font-weight: 650;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-peak > strong {
+  color: var(--home-ink);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: capitalize;
+  overflow-wrap: anywhere;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-peak > b {
+  color: var(--rhythm-accent);
+  font-size: 23px;
+  font-weight: 850;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-consistency {
+  display: grid;
+  gap: 8px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-consistency > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-consistency > div:first-child strong {
+  color: var(--home-ink);
+  font-size: 11px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-progress {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--home-line);
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--rhythm-accent-soft), var(--rhythm-accent));
+  transition: width .25s ease;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-consistency > small {
+  color: var(--home-muted);
+  font-size: 9px;
+  line-height: 1.45;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-history {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding: 8px 0 0;
+  border-top: 1px solid var(--home-line);
+  color: var(--rhythm-accent);
+  font-size: 11px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-history svg {
+  width: 15px;
+  height: 15px;
+  transition: transform .18s ease;
+}
+.app-shell.navigation-v2[data-area="student"] .student-home__rhythm-history:hover svg { transform: translateX(3px); }
+@media (max-width: 980px) {
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading,
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-history {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 600px) {
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-metric--primary {
+    grid-column: 1 / -1;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart {
+    padding: 11px 8px 9px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-chart-head {
+    padding-inline: 4px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-plot {
+    grid-template-columns: 34px minmax(0, 1fr);
+    height: 150px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-days {
+    gap: 2px;
+    margin-left: 34px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day {
+    min-height: 48px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-day > small {
+    font-size: 7px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-insights-heading,
+  .app-shell.navigation-v2[data-area="student"] .student-home__rhythm-history {
+    grid-column: auto;
+  }
+}
