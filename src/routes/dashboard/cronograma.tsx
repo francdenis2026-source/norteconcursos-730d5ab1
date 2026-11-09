@@ -1,5 +1,6 @@
 import { plannedPractice } from "@/lib/plannedStudy";
 import { platformDate } from "@/lib/platformClock";
+import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -221,6 +222,7 @@ function NewPlan({ userId, onBack, onCreated }: { userId: string; onBack: () => 
   const choose = (m: ModeloCronograma | "custom") => {
     setModel(m);
     setName(m === "custom" ? "Meu cronograma" : `${m.orgao} — ${m.cargo}`);
+    setExamDate(m !== "custom" && m.id.startsWith("pcac-2026-") ? PCAC_EXAM_DATE : "");
   };
 
   const create = async () => {
