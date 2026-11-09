@@ -782,8 +782,9 @@ function StudentHome({ user }: { user: UserProfile }) {
                   size="sm"
                   variant="outline"
                   onClick={openExamDateEditor}
-                  className="w-full justify-center border-slate-300 text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800"
+                  className="relative z-10 w-full cursor-pointer pointer-events-auto justify-center border-[#b58a43] text-[#805c22] hover:bg-[#b58a43]/10 dark:border-[#d3ad68] dark:text-[#e0c58d] dark:hover:bg-[#d3ad68]/10"
                 >
+                  <CalendarClock className="mr-1.5 h-4 w-4" aria-hidden="true" />
                   {personalExamDate ? "Alterar data da prova" : effectiveExamDate ? "Ajustar data da prova" : "Escolher data da prova"}
                 </Button>
               ) : (
@@ -801,7 +802,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                       required
                       value={examDateDraft}
                       onChange={(event) => setExamDateDraft(event.target.value)}
-                      className="h-10 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-900 shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
+                      className="h-10 w-full cursor-pointer pointer-events-auto rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-900 shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                     />
                   </div>
                   <div className="flex flex-wrap gap-2">
