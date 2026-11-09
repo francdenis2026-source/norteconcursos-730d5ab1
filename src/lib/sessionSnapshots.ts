@@ -164,17 +164,19 @@ export function createSnapshotUploader(
   const wait = options.wait ?? 2000;
   const setTimer = options.setTimer ?? ((fn, ms) => setTimeout(fn, ms));
   const clearTimer = options.clearTimer ?? ((handle) => clearTimeout(handle as never));
-  const pending = new Map<string, { row: SnapshotRow; handle: unknown }>();
+  const pending = new Map<string, { row: SnapshotRow; signature: string; handle: unknown }>();
   const sent = new Map<string, string>();
   let available = true;
   const id = (kind: SnapshotKind, scope: SnapshotScope) => `${kind}:${scope}`;
-  const send = async (row: SnapshotRow) => {
-    if (!available) return;
+  const send = async (row: SnapshotRow): Promise<boolean> => {
+    if (!available) return false;
     try {
       await port.upsertRow(row);
+      return true;
     } catch (error) {
       if (isMissingSnapshotTable(error)) available = false;
       else options.onError?.(error);
+      return false;
     }
   };
   return {
@@ -186,10 +188,13 @@ export function createSnapshotUploader(
       if (current) clearTimer(current.handle);
       const handle = setTimer(() => {
         pending.delete(key);
-        sent.set(key, signature);
-        void send(row);
+        void send(row).then((ok) => {
+          // A transient failure must not mark this content as synchronized; the next
+          // identical save should be allowed to retry instead of being silently skipped.
+          if (ok) sent.set(key, signature);
+        });
       }, wait);
-      pending.set(key, { row, handle });
+      pending.set(key, { row, signature, handle });
     },
     async close(kind: SnapshotKind, scope: SnapshotScope, at: number) {
       const key = id(kind, scope);
@@ -203,7 +208,9 @@ export function createSnapshotUploader(
       const rows = [...pending.values()];
       for (const { handle } of rows) clearTimer(handle);
       pending.clear();
-      for (const { row } of rows) await send(row);
+      for (const { row, signature } of rows) {
+        if (await send(row)) sent.set(id(row.kind, row.scope), signature);
+      }
     },
     get available() {
       return available;
