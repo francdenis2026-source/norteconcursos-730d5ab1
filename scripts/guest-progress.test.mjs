@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readGuestProgress, recordGuestAnswer } from "../src/lib/guestProgress.ts";
 import {
   dailyGuestQuestions,
+  dailyGuestQuestionPreviews,
   pendingGuestQuestions,
   guestContentKey,
   isGuestSecurityCareer,
@@ -27,6 +28,22 @@ const row = (id, changes = {}) => ({
     "A afirmação é analisada pela operação matemática descrita no enunciado, considerando os valores e as regras aplicáveis à situação. Exemplo: somar duas unidades a outras duas resulta em quatro unidades.",
   ...changes,
 });
+
+test("public daily challenge previews never contain a usable answer or explanation before server grading", () => {
+  const preview = dailyGuestQuestionPreviews([
+    row("public-1", {
+      official_answer: "E",
+      review_note: "A detailed explanation that must not be exposed before submission.",
+      legal_basis: [{ title: "Hidden legal source", url: "https://example.invalid" }],
+    }),
+  ]);
+  assert.equal(preview.length, 1);
+  assert.equal(preview[0].answer, "C"); // UI placeholder; server is the only grader.
+  assert.equal(preview[0].explanation, "");
+  assert.deepEqual(preview[0].legalBasis, []);
+  assert.equal(preview[0].id, "public-1");
+});
+
 test("guest refresh skips answered items and preserves the ten-answer cap across visits", () => {
   const store = memory(),
     questions = dailyGuestQuestions(Array.from({ length: 10 }, (_, i) => row(String(i))));
