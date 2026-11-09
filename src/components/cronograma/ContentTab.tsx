@@ -81,7 +81,7 @@ export function ContentTab({ cfg, progress, setTopic, theoryOf }: {
     });
 
   return (
-    <div className="space-y-4">
+    <div className="agenda-content-tab space-y-4">
       {focus.length > 0 && (
         <div className="rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-white to-sky-50 p-4 dark:from-amber-950/30 dark:via-transparent dark:to-sky-950/30">
           <p className="font-black">🎯 Estude agora, nesta ordem</p>
