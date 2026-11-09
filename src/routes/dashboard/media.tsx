@@ -1,3 +1,4 @@
+import "@/styles/student-library-media-workspaces.css";
 import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -143,7 +144,7 @@ function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
   const { tab } = Route.useSearch();
   return (
-    <div className="video-study-page">
+    <div className="nc-learning-workspace video-study-page">
       <header className="video-study-page__header workspace-banner">
         <PlayCircle size={28} aria-hidden="true" />
         <div>
