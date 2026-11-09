@@ -267,8 +267,9 @@ function ErrorsPage() {
 
   const [reviewStatus, setReviewStatus] = useState<Record<string, ReviewStatus>>({});
   const [statusLoading, setStatusLoading] = useState(true);
+  const routeSearch = Route.useSearch();
   const [filterSubject, setFilterSubject] = useState(
-    Route.useSearch().subject ? canonicalSubject(Route.useSearch().subject) : "all",
+    routeSearch.subject ? canonicalSubject(routeSearch.subject) : "all",
   );
   const [filterStatus, setFilterStatus] = useState<"all" | ReviewStatus>("all");
   const [filterBoard, setFilterBoard] = useState("all");
