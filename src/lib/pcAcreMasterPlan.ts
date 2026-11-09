@@ -9,7 +9,15 @@ import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 
 export const PCAC_LAST_STUDY_OFFSET_DAYS = 3;
 
-export type PcAcActivityType = "teoria" | "questoes" | "redacao" | "revisao" | "simulado" | "descanso";
+export type PcAcActivityType =
+  | "teoria"
+  | "questoes"
+  | "redacao"
+  | "revisao"
+  | "simulado"
+  | "descanso"
+  | "pausa"
+  | "rotina";
 
 export interface PcAcPlanActivity {
   type: PcAcActivityType;
@@ -185,4 +193,6 @@ export const PCAC_ACTIVITY_LABEL: Record<PcAcActivityType, string> = {
   revisao: "Revisão",
   simulado: "Simulado",
   descanso: "Descanso",
+  pausa: "Pausa",
+  rotina: "Rotina",
 };
