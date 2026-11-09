@@ -1,6 +1,6 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, CalendarDays, Users, BriefcaseBusiness } from "lucide-react";
 import { useRef, useState } from "react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
@@ -9,8 +9,12 @@ import { usePcpiAvailability } from "@/hooks/usePcpiAvailability";
 import { PCSC_EXAM, PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
 import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
 import { PCPI_EXAM, pcpiTrainerSearch } from "@/lib/pcpiExam";
+import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 
 const format = (value: number) => value.toLocaleString("pt-BR");
+const pcacVacancies = pcAcVerticalCargos.reduce((total, cargo) => total + cargo.vagas, 0);
+const formatDate = (value: string) => new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value + "T00:00:00Z"));
 
 function Availability({
   count,
@@ -140,31 +144,41 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
           </div>
           <div className="contest-kickers">
             <span>
-              <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
+              <ShieldCheck size={14} aria-hidden="true" /> PC-AC · EDITAL 001/2026
             </span>
-            <span>Banca definida · IDECAN</span>
+            <span>Publicado em 05/11/2026 · IDECAN</span>
           </div>
           <h3 id={"pcac-title" + suffix}>
             Polícia Civil <em>do Acre.</em>
           </h3>
           <p className="contest-spotlight__copy">
-            Comece pela banca: pratique com uma prova real da IDECAN enquanto acompanha o próximo
-            edital da PC-AC.
+            Edital publicado: são {pcacVacancies} vagas em {pcAcVerticalCargos.length} cargos.
+            Organize sua preparação pelo conteúdo oficial e use a prova da PC-SC como treino complementar
+            da mesma banca, IDECAN.
           </p>
+          <div className="contest-spotlight__facts" aria-label="Informações principais do edital PC-AC">
+            <div><Users aria-hidden="true" /><span><strong>{format(pcacVacancies)}</strong><small>vagas no edital</small></span></div>
+            <div><BriefcaseBusiness aria-hidden="true" /><span><strong>{pcAcVerticalCargos.length}</strong><small>cargos disponíveis</small></span></div>
+            <div><CalendarDays aria-hidden="true" /><span><strong>{formatDate(PCAC_EXAM_DATE)}</strong><small>prova objetiva</small></span></div>
+          </div>
           <div className="contest-spotlight__training">
+            <div className="contest-spotlight__training-context">
+              <strong>Treino complementar · prova real PC-SC</strong>
+              <span>Agente de Polícia Civil · IDECAN · questões da prova aplicada em Santa Catarina</span>
+            </div>
             <Availability
               count={scCount}
-              label="da prova real PC-SC · Agente · IDECAN"
+              label="questões disponíveis da PC-SC — não são questões da prova PC-AC"
               loading={sc.loading}
             />
           </div>
           <div className="contest-spotlight__actions">
             {isAuthenticated ? (
               <Link
-                to="/dashboard/inteligencia-idecan"
+                to="/dashboard/pc-acre-edital"
                 className="contest-action contest-action--gold"
               >
-                Preparar para a PC-AC
+                Abrir edital PC-AC
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             ) : (
@@ -173,20 +187,21 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean }) {
                 search={{ mode: "register" }}
                 className="contest-action contest-action--gold"
               >
-                Começar preparação
+                Abrir edital PC-AC
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             )}
-            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar com a IDECAN")}
+            {trainingLink(PCSC_TRAINER_SEARCH, "Treinar prova PC-SC")}
           </div>
           <details className="contest-details">
-            <summary>Sobre o concurso e a preparação</summary>
+            <summary>Dados oficiais do edital e treino complementar</summary>
             <CountReference date={sc.checkedAt} />
             <p>
-              A definição da IDECAN consta da dispensa de licitação e ratificação publicadas no
-              Diário Oficial do Acre de 22/10/2026. O edital ainda não foi publicado. Este treino
-              usa a prova de Agente da PC-SC de {PCSC_EXAM.year}; não garante questões idênticas na
-              PC-AC.
+              O card resume o Edital nº 001 SEAD/PCAC, de 05/11/2026, publicado no Diário Oficial
+              do Acre nº 14.388 de 06/11/2026. A prova objetiva está prevista para {formatDate(PCAC_EXAM_DATE)}.
+              O treino complementar usa a prova de Agente da PC-SC de {PCSC_EXAM.year}, aplicada
+              pela IDECAN. As questões da PC-SC não pertencem ao caderno da PC-AC e servem apenas
+              para praticar o estilo da banca.
             </p>
             <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           </details>
