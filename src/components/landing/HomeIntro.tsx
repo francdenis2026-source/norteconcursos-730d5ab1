@@ -11,12 +11,10 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { PcacBanner } from "@/components/landing/PcacBanner";
-import { HeroEmblemClock } from "@/components/landing/HeroEmblemClock";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import "@/styles/home-saas.css";
-import "@/styles/home-hero-emblem.css";
 
 const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
   {
@@ -68,7 +66,6 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
   return (
     <>
       <section id={ids.hero} className="sx-band" aria-labelledby={ids.title}>
-        {!mobile && <HeroEmblemClock />}
         <div className="sx sx-hero">
           <div className="sx-hero__copy">
             <span className="sx-eyebrow">
