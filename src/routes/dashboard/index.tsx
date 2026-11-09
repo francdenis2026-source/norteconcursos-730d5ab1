@@ -1,4 +1,5 @@
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
+import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
 import "@/styles/student-desk.css";
 import "@/styles/student-overview.css";
 import "@/styles/student-overview-v3.css";
@@ -729,57 +730,12 @@ function StudentHome({ user }: { user: UserProfile }) {
               <PanelLoading />
             ) : (
               <>
-                <div className="student-home__week" role="list" aria-label="Tempo ativo por dia">
-                  {time.days.map((d) => (
-                    <div role="listitem" key={d.date} data-today={d.date === today}>
-                      <button
-                        type="button"
-                        className="student-home__week-day"
-                        data-empty={!d.seconds || undefined}
-                        aria-haspopup="dialog"
-                        aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}. Ver detalhes do dia`}
-                        onClick={(event) => openMetric("today", event.currentTarget, d.date)}
-                      >
-                        <span>
-                          {d.date.slice(8)}/{d.date.slice(5, 7)}
-                        </span>
-                        <div className="student-home__bar-track">
-                          <i
-                            style={{
-                              height: d.seconds
-                                ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
-                                : "3%",
-                            }}
-                          />
-                        </div>
-                        <strong>
-                          {d.seconds
-                            ? d.seconds < 60
-                              ? "<1 min"
-                              : d.seconds < 3600
-                                ? `${Math.floor(d.seconds / 60)} min`
-                                : `${Math.round(d.seconds / 360) / 10} h`
-                            : "—"}
-                        </strong>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                {!time.week && (
-                  <p className="student-home__quiet">
-                    Nenhum tempo ativo registrado nesta semana. Seus próximos períodos de uso
-                    aparecerão aqui.
-                  </p>
-                )}
-                <button
-                  type="button"
-                  className="student-home__text-link"
-                  aria-haspopup="dialog"
-                  onClick={(event) => openMetric("week", event.currentTarget)}
-                >
-                  Ver histórico de tempo
-                  <ArrowRight aria-hidden="true" />
-                </button>
+                <WeeklyRhythmChart
+                  days={time.days}
+                  formatDuration={duration}
+                  onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+                  onOpenHistory={(trigger) => openMetric("week", trigger)}
+                />
               </>
             )}
           </section>
