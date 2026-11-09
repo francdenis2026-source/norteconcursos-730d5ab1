@@ -66,6 +66,7 @@ import { NewsBanner } from "@/components/landing/NewsBanner";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
+import { HeroBadge } from "@/components/landing/HeroBadge";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
@@ -627,6 +628,7 @@ function Index() {
           <div className="hx" inert={introPlaying}>
             <div className="home-container hx__inner">
               <div className="hx__copy">
+                <HeroBadge />
                 <div className="hx__kicker" aria-label="Concursos públicos para carreiras policiais e segurança pública">
                   <span className="hx__kicker-mark" aria-hidden="true" />
                   <span className="hx__kicker-primary">CONCURSOS PÚBLICOS</span>
