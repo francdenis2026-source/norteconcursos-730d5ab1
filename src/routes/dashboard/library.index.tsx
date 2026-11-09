@@ -1,3 +1,4 @@
+import "@/styles/student-library-media-workspaces.css";
 import { TRACKS } from "@/data/tracks";
 import "@/styles/learning-workspace-refinement.css";
 import { tracksOf } from "@/lib/disciplineHub";
