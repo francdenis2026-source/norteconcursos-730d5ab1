@@ -35,6 +35,7 @@ import {
   MessageCircle,
   Menu,
   Plus,
+  X,
   LogIn,
   ScrollText,
   ShieldCheck,
@@ -285,6 +286,14 @@ function PreparationInfo() {
       document.removeEventListener("click", onAnchorClick);
     };
   }, []);
+  useEffect(() => {
+    if (!active) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setActive(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
   const groups = [
     { id: "ferramentas", label: "Ferramentas", icon: BrainCircuit, note: "Treine, revise e acompanhe sua evolução." },
     { id: "como", label: "Método", icon: Target, note: "Um caminho claro do diagnóstico à prova." },
@@ -321,7 +330,20 @@ function PreparationInfo() {
           ))}
         </div>
         {active && (
-          <div id="preparation-detail-panel" className="hr-preparation__details">
+          <div id="preparation-detail-panel" className="hr-preparation__details" role="region"
+            aria-label={`Detalhes: ${groups.find((group) => group.id === active)?.label ?? "Preparação"}`}>
+            <button type="button" className="hr-preparation__details-backdrop"
+              aria-label="Fechar detalhes" onClick={() => setActive(null)} />
+            <div className="hr-preparation__details-head">
+              <div>
+                <span>VISÃO GERAL DA PLATAFORMA</span>
+                <strong>{groups.find((group) => group.id === active)?.label}</strong>
+              </div>
+              <button type="button" className="hr-preparation__details-close"
+                onClick={() => setActive(null)} aria-label="Fechar painel">
+                <X aria-hidden="true" /><span>Fechar</span>
+              </button>
+            </div>
             {active === "ferramentas" && (
               <div className="hr-preparation__detail-grid hr-preparation__detail-grid--tools">
                 {TOOLS.map(({ icon: Icon, title, text, featured }) => (
