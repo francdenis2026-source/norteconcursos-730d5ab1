@@ -83,6 +83,7 @@ import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import "@/styles/trainer-success-feedback.css";
+import "@/styles/learning-workspace-refinement.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
@@ -895,7 +896,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+    <div className="nc-learning-workspace trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       <BackToEdital back={routeFilters.back} />
       {lawNotice}
       {successFeedback && (
