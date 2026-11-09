@@ -9,6 +9,7 @@ import {
   Download,
   PlayCircle,
   ScanSearch,
+  Share2,
   Scale,
   ShieldCheck,
   Users,
@@ -659,6 +660,26 @@ function PcAcreEditalVerticalizadoPage() {
   const search = useSearch({ strict: false }) as { cargo?: string; view?: string };
   const cargoParam = search.cargo;
   const digitalView = search.view === "digital";
+  const [shareFeedback, setShareFeedback] = React.useState("");
+  const shareDigitalEdital = async () => {
+    const url = new URL("/dashboard/pc-acre-edital?view=digital", window.location.origin).href;
+    const data = { title: "Edital digital PC-AC 2026", text: "Consulte o edital digital PC-AC 2026", url };
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+        return;
+      }
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+        setShareFeedback("Link copiado!");
+      } else {
+        window.prompt("Copie o link do edital digital:", url);
+      }
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      window.prompt("Copie o link do edital digital:", url);
+    }
+  };
   const navigate = useNavigate();
   const cargo = pcAcVerticalCargo(cargoParam);
   const [clockNow, setClockNow] = React.useState(() => new Date());
@@ -727,7 +748,12 @@ function PcAcreEditalVerticalizadoPage() {
             <div className="text-right text-[10px] leading-tight text-slate-300"><strong className="block text-slate-100">Prova objetiva</strong>24/01/2027</div>
             <div className="rounded-lg border border-amber-300/40 bg-amber-400/10 px-3 py-1 text-center"><strong className="block text-lg leading-none text-amber-200">{daysToExam}</strong><span className="text-[9px] font-bold uppercase tracking-wide text-amber-100">dias restantes</span></div>
           </div>
-          <Button size="sm" variant="outline" className="shrink-0 border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>
+          <div className="flex shrink-0 flex-wrap items-center justify-end gap-2">
+            <Button size="sm" variant="outline" className="border-cyan-300/50 bg-cyan-400/15 text-white hover:bg-cyan-400/25" onClick={() => void shareDigitalEdital()} aria-label="Compartilhar edital digital">
+              <Share2 className="mr-2 h-4 w-4" />{shareFeedback || "Compartilhar"}
+            </Button>
+            <Button size="sm" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>
+          </div>
         </div>
         <Card className="overflow-hidden border-primary/20">
           <CardContent className="p-0">
