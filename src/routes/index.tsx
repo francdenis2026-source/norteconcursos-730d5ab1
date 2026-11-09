@@ -604,9 +604,6 @@ function Index() {
 
       <GeneralAccessBanner />
       <NewsBanner />
-      <div className="home-daily-challenge-wrap">
-        <DailyChallengeBadge />
-      </div>
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
@@ -656,6 +653,10 @@ function Index() {
               </div>
           </div>
         </section>
+
+        <div className="home-daily-challenge-wrap">
+          <DailyChallengeBadge />
+        </div>
 
         <nav className="desktop-homepage__quick-access home-container hr-quick" aria-label="Explore os principais recursos">
           <a className="hr-quick-item hr-quick-item--study" href="#plataforma">
