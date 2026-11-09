@@ -234,3 +234,17 @@
     width: clamp(125px, 15vw, 180px);
   }
 }
+
+
+/* Keep the hero portrait clear of the fixed top navigation: the source artwork
+   includes the man's head near its top edge, so do not place that edge underneath
+   the opaque header. Anchor the crop to the top and let any excess crop fall below. */
+@media (min-width: 901px) {
+  html body .home.home #inicio.home-hero > .home-hero__image {
+    top: var(--nc-fixed-header-height, 66px) !important;
+    bottom: auto !important;
+    height: calc(100% - var(--nc-fixed-header-height, 66px)) !important;
+    object-fit: cover !important;
+    object-position: right top !important;
+  }
+}
