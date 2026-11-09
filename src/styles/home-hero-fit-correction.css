@@ -649,3 +649,43 @@
 @media (prefers-reduced-motion: reduce) {
   .home.hr-canvas #inicio.home-hero.hr-hero .home-actions .hr-btn { transition: none !important; }
 }
+
+/* Premium glass treatment for the hero headline only.
+   A restrained smoked-glass surface separates the title from the clock artwork
+   without turning the entire copy column into a heavy card. */
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+  position: relative !important;
+  isolation: isolate !important;
+  box-sizing: border-box !important;
+  width: fit-content !important;
+  max-width: min(100%, 610px) !important;
+  padding: 10px 16px 13px 14px !important;
+  margin: 0 0 0 -14px !important;
+  border: 1px solid rgb(235 218 180 / 17%) !important;
+  border-left: 2px solid rgb(225 181 91 / 68%) !important;
+  border-radius: 13px !important;
+  background: linear-gradient(118deg,
+    rgb(13 22 30 / 58%) 0%,
+    rgb(16 25 33 / 42%) 62%,
+    rgb(18 27 35 / 28%) 100%) !important;
+  box-shadow:
+    0 12px 32px rgb(0 0 0 / 18%),
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    inset 0 -1px 0 rgb(255 255 255 / 3%) !important;
+  -webkit-backdrop-filter: blur(9px) saturate(118%) !important;
+  backdrop-filter: blur(9px) saturate(118%) !important;
+  text-shadow: 0 2px 10px rgb(0 0 0 / 55%) !important;
+}
+.home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline > span {
+  position: relative !important;
+  z-index: 1 !important;
+}
+@media (max-width: 760px) {
+  .home.hr-canvas #inicio.home-hero.hr-hero .hx__headline.hr-hero__headline {
+    padding: 9px 12px 11px 11px !important;
+    margin-left: -10px !important;
+    border-radius: 11px !important;
+    -webkit-backdrop-filter: blur(7px) saturate(112%) !important;
+    backdrop-filter: blur(7px) saturate(112%) !important;
+  }
+}
