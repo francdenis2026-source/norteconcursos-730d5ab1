@@ -1,6 +1,6 @@
-/** Stable identities shared by the sidebar, search and each page's controls. */
+/** Stable brand accent across student sections; status colors remain semantic. */
 export const STUDENT_GROUP_TONES: Record<string, string> = {
-  Planejamento: "gold", "Meu concurso": "sky", "Material didático": "violet",
-  Ferramentas: "teal", Questões: "emerald", Provas: "rose", ENEM: "indigo",
-  Desempenho: "orange", Conta: "slate", Administração: "gold",
+  Planejamento: "gold", "Meu concurso": "gold", "Material didático": "gold",
+  Ferramentas: "gold", Questões: "gold", Provas: "gold", ENEM: "gold",
+  Desempenho: "gold", Conta: "gold", Administração: "gold",
 };
