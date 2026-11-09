@@ -23,6 +23,7 @@ import {
   BadgeCheck,
   BookOpen,
   BrainCircuit,
+  CalendarCheck,
   ChevronDown,
   Compass,
   FileSearch,
@@ -427,6 +428,14 @@ function Index() {
                 <Link to="/desafio-diario">Desafio diário</Link>
               </div>
             </details>
+            <a href="#ranking-destaque">
+              <Trophy aria-hidden="true" className="home-nav__icon" />
+              <span>Ranking</span>
+            </a>
+            <Link to="/desafio-diario" className="home-nav__route-link">
+              <CalendarCheck aria-hidden="true" className="home-nav__icon" />
+              <span>Desafio diário</span>
+            </Link>
             <a href="#planos" aria-current={activeSection === "planos" ? "location" : undefined}>
               <Layers3 aria-hidden="true" className="home-nav__icon" />
               <span>Planos</span>
