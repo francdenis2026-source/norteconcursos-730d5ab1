@@ -1,11 +1,11 @@
 /* Norte Concursos public homepage — SaaS premium finishing layer.
    Scoped to the public page; preserves all existing content, anchors and interactions. */
 .home.home-recomposition {
-  --home-petrol-950: #0b2029;
-  --home-petrol-900: #102f3a;
+  --home-petrol-950: #0b1820;
+  --home-petrol-900: #102a36;
   --home-petrol-800: #174653;
-  --home-cyan: #55bdc5;
-  --home-cyan-soft: #e3f3f4;
+  --home-cyan: #64b7ba;
+  --home-cyan-soft: #e5f2f2;
   --home-editorial-line: color-mix(in srgb, var(--home-line) 88%, transparent);
 }
 .home.home-recomposition .home-header {
