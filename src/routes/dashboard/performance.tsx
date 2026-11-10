@@ -33,6 +33,7 @@ import "@/styles/student-workspace-unified.css";
 
 import "@/styles/student-internal-workspace-system.css";
 import "@/styles/exam-performance-workspaces.css";
+import "@/styles/performance-redesign.css";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -57,10 +58,10 @@ function PerformancePage() {
     );
   return (
     <div className="nc-student-workspace performance-page space-y-6">
-      <section className="page-hero page-hero--lg workspace-banner" data-hero="dashboard">
+      <section className="page-hero page-hero--lg workspace-banner performance-hero" data-hero="dashboard">
         <div className="page-hero__text">
           <span className="hero-chip">
-            <Activity /> Estudos na plataforma
+            <Activity /> Painel analítico
           </span>
           <h1>
             Meu <em>desempenho</em>
@@ -86,7 +87,12 @@ function PerformancePage() {
         </Link>
       </div>
       <StudyTimeCard key={user.id} userId={user.id} />
-      <LearningJourney key={user.id} userId={user.id} overview={data} />
+      <details className="performance-fold" open>
+        <summary>Leitura guiada da sua evolução <span>abrir ou recolher</span></summary>
+        <div className="performance-fold__content">
+          <LearningJourney key={user.id} userId={user.id} overview={data} />
+        </div>
+      </details>
       {error ? (
         <div role="alert" className="rounded-2xl border p-5">
           <p>
@@ -110,11 +116,12 @@ function PerformancePage() {
         />
       )}
       {data && !error && (
-        <PlatformActivityHistory
-          userId={user.id}
-          responses={data.responses}
-          attempts={data.attempts}
-        />
+        <details className="performance-fold">
+          <summary>Histórico detalhado de atividades <span>abrir ou recolher</span></summary>
+          <div className="performance-fold__content">
+            <PlatformActivityHistory userId={user.id} responses={data.responses} attempts={data.attempts} />
+          </div>
+        </details>
       )}
     </div>
   );
