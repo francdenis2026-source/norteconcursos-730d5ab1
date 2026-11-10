@@ -57,6 +57,22 @@
 :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"] {
   background: var(--nc-color-action); color: var(--nc-color-action-foreground); border-color: var(--nc-color-action);
 }
+/* Tailwind's disabled:opacity-50 fades this gold button toward the page
+   background, dropping contrast under 3:1 (e.g. "Continuar" before a wizard
+   step is answered). Use solid muted gold tones instead of relying on opacity
+   so a disabled primary button stays readable in both themes. */
+.app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"]:disabled {
+  opacity: 1 !important;
+  background: #ede1c8 !important;
+  color: #6b5530 !important;
+  border-color: #d8c498 !important;
+  box-shadow: none !important;
+}
+:root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="button"][data-variant="default"]:disabled {
+  background: #5a4a2e !important;
+  color: #d9c9a6 !important;
+  border-color: #786038 !important;
+}
 .app-shell[data-area="student"] .student-home.student-desk.student-overview {
   gap: 16px; max-width: 1760px; margin-inline: auto;
 }
