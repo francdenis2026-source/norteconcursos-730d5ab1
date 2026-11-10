@@ -292,7 +292,7 @@ function MaterialHub() {
         </div>
       </PageHero>
 
-      <UpdatedStudyCollections />
+      <UpdatedStudyCollections storageScope={user?.id ?? "anonymous"} />
 
       <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">
         <div className="pcac-material-focus__glow" aria-hidden="true" />
