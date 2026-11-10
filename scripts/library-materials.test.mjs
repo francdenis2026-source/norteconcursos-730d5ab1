@@ -60,7 +60,7 @@ test('Importer dry run does not need credentials and rejects duplicate slugs', (
 });
 
 
-test('PC-AC revised study collection has 27 original lessons, links into the library and synced user progress', () => {
+test('PC-AC revised study collection has 37 original lessons, links into the library and synced user progress', () => {
   const base = readFileSync('src/components/dashboard/UpdatedStudyCollections.tsx', 'utf8');
   const supplement = readFileSync('src/data/pcAcSupplementalStudyLessons.ts', 'utf8');
   const gaps = readFileSync('src/data/pcAcProgramGapLessons.ts', 'utf8');
