@@ -141,6 +141,17 @@ function DisciplineIndex({
           />
         </div>
       </PageHero>
+      <section className="rounded-xl border border-emerald-600/30 bg-emerald-600/5 p-4" aria-labelledby="study-guides-title">
+        <h2 id="study-guides-title" className="text-sm font-extrabold text-foreground">Guias revisados para a PC-AC e outras carreiras</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Aulas originais com fontes institucionais, exercícios de revisão e marcação de progresso. A aplicabilidade depende do edital de cada cargo.</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {[
+            {id:"arquivologia",label:"Arquivologia · Investigador e Papiloscopista"},
+            {id:"administracao-geral",label:"Noções de Administração · Investigador"},
+            {id:"administracao-publica",label:"Evolução da Administração Pública · Complementar"},
+          ].map(item=><Link key={item.id} to="/dashboard/library" search={{collection:"subjects",guia:item.id}} hash="materiais-atualizados-pcac" className="rounded-lg border border-emerald-600/35 bg-card px-3 py-2 text-xs font-semibold text-foreground transition hover:border-emerald-500 hover:bg-emerald-600/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{item.label} →</Link>)}
+        </div>
+      </section>
       {unknown && (
         <p role="status" className="rounded-xl border p-3 text-sm">
           Não encontramos a disciplina “{unknown}”. Escolha uma abaixo.
