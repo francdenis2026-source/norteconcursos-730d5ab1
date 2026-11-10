@@ -735,3 +735,18 @@
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-workspace.pcac-edital-card { height: auto; min-height: 0; max-height: none; overflow: visible; }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-identity { display: none; }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-header { padding: 10px 14px; }
+
+/* Let the shell own vertical scrolling: nested viewport clamps cut off panels. */
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace {
+  height: auto; min-height: 0; overflow: visible;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs {
+  flex: initial; min-height: 0; overflow: visible;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs > [role="tabpanel"] {
+  flex: initial; height: auto; max-height: none; overflow: visible; overscroll-behavior: auto;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list {
+  position: sticky !important; top: 88px !important; z-index: 20;
+}
+.app-shell[data-focus-mode="true"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list { top: 0 !important; }

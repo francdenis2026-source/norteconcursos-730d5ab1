@@ -47,3 +47,11 @@
  .pcac-schedule .astryx-tab { min-width: 0; width: 100%; font-size: var(--font-size-sm); }
  .pcac-schedule .astryx-tab-scroll-button { display: none; }
 }
+/* A single scroll owner keeps every study week reachable in the real shell. */
+.pcac-schedule, .pcac-schedule__body, .pcac-schedule__panel {
+  height: auto; max-height: none; overflow: visible; flex: initial; overscroll-behavior: auto;
+}
+.pcac-schedule__body > .astryx-tab-list {
+  position: sticky; top: 146px; z-index: 10; background: var(--color-background-surface);
+}
+.app-shell[data-focus-mode="true"] .pcac-schedule__body > .astryx-tab-list { top: 58px; }
