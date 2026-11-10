@@ -16,6 +16,7 @@ import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
 import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
 import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
 import { platformDate } from "@/lib/platformClock";
+import { findPcAcStudyResource, pcAcStudyResources, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import "@/styles/pcac-schedule.css";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
@@ -264,6 +265,16 @@ export function PcAcCronogramaCard({
       </header>
       {exportError && <p role="alert">{exportError}</p>}
       <section className="pcac-schedule__body">
+        <aside className="pcac-schedule__resources rounded-xl border border-emerald-700/30 bg-emerald-500/5 px-3 py-2" aria-label="Materiais vinculados ao cronograma">
+          <div className="flex flex-wrap items-center gap-2">
+            <strong className="mr-1 text-xs text-foreground">Materiais de apoio</strong>
+            {pcAcStudyResources.filter(resource=>resource.courseId !== "administracao-publica" && (cargo.id === "investigador" || resource.courseId === "arquivologia" && cargo.id === "papiloscopista")).map(resource=>(
+              <a href={pcAcStudyResourceUrl(resource.courseId)} key={resource.courseId} className="rounded-md border border-emerald-600/30 bg-card px-2.5 py-1.5 text-[11px] font-semibold text-foreground hover:border-emerald-500 hover:bg-emerald-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{resource.label}</a>
+            ))}
+            <a href="/dashboard/question-trainer" className="rounded-md border border-border bg-card px-2.5 py-1.5 text-[11px] font-semibold text-primary hover:border-primary hover:bg-primary/10">Treinar questões</a>
+          </div>
+          <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground">Aulas autorais em revisão editorial; consulte o programa do cargo para confirmar a abrangência.</p>
+        </aside>
         <TabList value={tab === "semanas" && !showDetailedPlan ? "grade" : tab} onChange={setTab} role="tablist" layout="fill" hasDivider aria-label="Seções do cronograma">
           <Tab id="schedule-tab-visao" value="visao" label="Personalizar" icon={<SlidersHorizontal />} panelId="schedule-panel-visao" />
           <Tab id="schedule-tab-grade" value="grade" label="Minha semana" icon={<CalendarDays />} panelId="schedule-panel-grade" />
@@ -361,7 +372,10 @@ export function PcAcCronogramaCard({
               <tbody>
                 {grid.map((row, i) => (
                   <tr key={row.id} className={i % 2 === 1 ? "bg-muted/30" : undefined}>
-                    <td className="px-2.5 py-1.5">{row.name}</td>
+                    <td className="px-2.5 py-1.5">
+                       <span className="font-semibold">{row.name}</span>
+                       {findPcAcStudyResource(row.name) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(row.name)!.courseId)} className="ml-2 inline-block whitespace-nowrap text-[11px] font-semibold text-emerald-600 underline-offset-2 hover:underline dark:text-emerald-300">Estudar teoria</a>}
+                     </td>
                     <td className="px-2 py-1.5 text-center font-semibold text-primary">{row.peso}</td>
                     <td className="px-2 py-1.5 text-center text-muted-foreground">{row.horario}</td>
                     {GRID_DAY_ORDER.map((weekday) => (
@@ -457,6 +471,7 @@ export function PcAcCronogramaCard({
                                           </td>
                                           <td className="border-t px-2.5 py-1.5 text-foreground/90">
                                             {activity.subject ?? "—"}
+                                             {findPcAcStudyResource(activity.subject) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(activity.subject)!.courseId)} className="ml-1 block text-[11px] font-bold text-emerald-600 hover:underline dark:text-emerald-300">Abrir aulas</a>}
                                           </td>
                                           <td className="border-t px-2.5 py-1.5 text-muted-foreground">
                                             {activity.topic ? (
