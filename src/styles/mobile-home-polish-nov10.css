@@ -5,8 +5,11 @@
 /* ------------------------------------------------------------------------ */
 /* Whole-page backdrop: the flat solid color behind the homepage is swapped */
 /* for a faint watermark of the brand emblem (skull + pistol shield), kept  */
-/* at ~10% visibility behind a tint of the same background color so text    */
+/* at ~18% visibility behind a tint of the same background color so text    */
 /* contrast is untouched. Applies at every breakpoint, light and dark.      */
+/* `background-attachment: fixed` is unreliable on real mobile browsers    */
+/* (iOS Safari in particular can silently drop it) — `scroll` works        */
+/* everywhere and still only renders once, anchored to the page itself.    */
 /* ------------------------------------------------------------------------ */
 .home.hr-canvas {
   background-image:
@@ -18,7 +21,7 @@
   background-repeat: no-repeat, no-repeat !important;
   background-position: center, top center !important;
   background-size: cover, min(900px, 140vw) auto !important;
-  background-attachment: scroll, fixed !important;
+  background-attachment: scroll, scroll !important;
   background-color: var(--home-bg) !important;
 }
 
