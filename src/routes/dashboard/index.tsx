@@ -231,6 +231,12 @@ function StudentHome({ user }: { user: UserProfile }) {
   const objective = q.objective.data;
   const cronogramaLocked = hasActiveEdital(objective);
   const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
+  const isPcAcre = Boolean(
+    objective &&
+      /acre|pc[-\s]?ac/i.test(
+        `${objective.agency} ${objective.role} ${objective.examBoard}`,
+      ),
+  );
   const days = daysToExam(effectiveExamDate, today);
   const examCountdown =
     days === null
@@ -392,9 +398,19 @@ function StudentHome({ user }: { user: UserProfile }) {
             </p>
             <p className="student-hub__exam-countdown">{examCountdown}</p>
             {objective && (
-              <div className="student-hub__active-objective" aria-label="Concurso ativo">
-                <strong>{objective.agency}</strong>
-                <span>{objective.role} · {objective.examBoard}</span>
+              <div
+                className="student-hub__active-objective"
+                aria-label="Concurso ativo"
+                data-contest="active"
+                data-pc-acre={isPcAcre ? "true" : "false"}
+              >
+                {isPcAcre && (
+                  <span className="student-hub__acre-flag" aria-label="Acre" role="img" />
+                )}
+                <div className="student-hub__active-objective-copy">
+                  <strong>{objective.agency}</strong>
+                  <span>{objective.role} · {objective.examBoard}</span>
+                </div>
               </div>
             )}
             <Link to="/dashboard/my-contest" className="student-hub__contest-action">
