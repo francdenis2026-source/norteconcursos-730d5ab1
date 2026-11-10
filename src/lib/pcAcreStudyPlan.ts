@@ -20,6 +20,17 @@ export interface PcAcStudyPlanConfig {
   startTime: string; // HH:MM
   /** Primeiro dia em que o aluno pretende executar o cronograma (yyyy-mm-dd). */
   startDate: string;
+  breakEveryMinutes: number;
+  breakDurationMinutes: number;
+  breakfastTime: string;
+  morningSnackTime: string;
+  lunchTime: string;
+  afternoonSnackTime: string;
+  dinnerTime: string;
+  includeTaf: boolean;
+  tafDays: number[];
+  tafTime: string;
+  tafDurationMinutes: number;
 }
 
 export const DEFAULT_PCAC_STUDY_CONFIG: PcAcStudyPlanConfig = {
@@ -27,6 +38,17 @@ export const DEFAULT_PCAC_STUDY_CONFIG: PcAcStudyPlanConfig = {
   days: [1, 2, 3, 4, 5, 6],
   startTime: "19:00",
   startDate: "",
+  breakEveryMinutes: 50,
+  breakDurationMinutes: 10,
+  breakfastTime: "07:00",
+  morningSnackTime: "10:00",
+  lunchTime: "12:30",
+  afternoonSnackTime: "16:00",
+  dinnerTime: "19:30",
+  includeTaf: false,
+  tafDays: [2, 4, 6],
+  tafTime: "17:00",
+  tafDurationMinutes: 60,
 };
 
 const MIN_BLOCK = 30;
@@ -195,6 +217,17 @@ export function readPcAcStudyConfig(
         typeof parsed.startDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(parsed.startDate)
           ? parsed.startDate
           : DEFAULT_PCAC_STUDY_CONFIG.startDate,
+      breakEveryMinutes: [30, 40, 50, 60].includes(Number(parsed.breakEveryMinutes)) ? Number(parsed.breakEveryMinutes) : DEFAULT_PCAC_STUDY_CONFIG.breakEveryMinutes,
+      breakDurationMinutes: [5, 10, 15].includes(Number(parsed.breakDurationMinutes)) ? Number(parsed.breakDurationMinutes) : DEFAULT_PCAC_STUDY_CONFIG.breakDurationMinutes,
+      breakfastTime: typeof parsed.breakfastTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.breakfastTime) ? parsed.breakfastTime : DEFAULT_PCAC_STUDY_CONFIG.breakfastTime,
+      morningSnackTime: typeof parsed.morningSnackTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.morningSnackTime) ? parsed.morningSnackTime : DEFAULT_PCAC_STUDY_CONFIG.morningSnackTime,
+      lunchTime: typeof parsed.lunchTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.lunchTime) ? parsed.lunchTime : DEFAULT_PCAC_STUDY_CONFIG.lunchTime,
+      afternoonSnackTime: typeof parsed.afternoonSnackTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.afternoonSnackTime) ? parsed.afternoonSnackTime : DEFAULT_PCAC_STUDY_CONFIG.afternoonSnackTime,
+      dinnerTime: typeof parsed.dinnerTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.dinnerTime) ? parsed.dinnerTime : DEFAULT_PCAC_STUDY_CONFIG.dinnerTime,
+      includeTaf: typeof parsed.includeTaf === "boolean" ? parsed.includeTaf : DEFAULT_PCAC_STUDY_CONFIG.includeTaf,
+      tafDays: Array.isArray(parsed.tafDays) ? parsed.tafDays.filter((d) => Number.isInteger(d) && d >= 0 && d <= 6) : DEFAULT_PCAC_STUDY_CONFIG.tafDays,
+      tafTime: typeof parsed.tafTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.tafTime) ? parsed.tafTime : DEFAULT_PCAC_STUDY_CONFIG.tafTime,
+      tafDurationMinutes: [30, 45, 60, 75, 90].includes(Number(parsed.tafDurationMinutes)) ? Number(parsed.tafDurationMinutes) : DEFAULT_PCAC_STUDY_CONFIG.tafDurationMinutes,
     };
   } catch {
     return DEFAULT_PCAC_STUDY_CONFIG;
