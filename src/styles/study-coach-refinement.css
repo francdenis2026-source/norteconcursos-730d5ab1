@@ -111,3 +111,46 @@
   outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
+
+/* Explicit wizard contrast: avoid transparent primary/muted utilities becoming
+   unreadable when the shell switches between light and dark themes. */
+.app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li {
+  border: 1px solid transparent;
+  color: var(--muted-foreground);
+}
+.app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary {
+  border-color: color-mix(in oklab, var(--primary) 68%, transparent);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary\/15 {
+  border-color: color-mix(in oklab, var(--primary) 34%, var(--border));
+  background: color-mix(in oklab, var(--primary) 14%, var(--card));
+  color: var(--primary);
+}
+.app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-muted {
+  border-color: var(--border);
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+.app-shell[data-area="student"] .plan-workspace-window [role="radio"] {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+.app-shell[data-area="student"] .plan-workspace-window [role="radio"]:hover {
+  border-color: color-mix(in oklab, var(--primary) 55%, var(--border));
+  background: color-mix(in oklab, var(--primary) 5%, var(--card));
+}
+.app-shell[data-area="student"] .plan-workspace-window [role="radio"][aria-checked="true"] {
+  border-color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 12%, var(--card));
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--primary) 18%, transparent);
+}
+.app-shell[data-area="student"] .plan-workspace-window [role="radio"] p:first-child {
+  color: var(--foreground);
+}
+.app-shell[data-area="student"] .plan-workspace-window [role="radio"] p:last-child {
+  color: var(--muted-foreground);
+}
