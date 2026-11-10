@@ -97,3 +97,58 @@
 @media (max-width: 700px) {
   .idecan-intelligence-page .idecan-card { border-top-width: 3px; }
 }
+
+/* Subtopics: compact, readable chips instead of long undifferentiated pills. */
+.idecan-intelligence-page .idecan-subtopic-chip {
+  display: inline-flex;
+  min-width: 0;
+  max-width: min(100%, 32rem);
+  align-items: center;
+  gap: 8px;
+  padding: 6px 9px;
+  border: 1px solid color-mix(in srgb, var(--idecan-card-accent, var(--brass)) 42%, var(--border));
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--idecan-card-accent, var(--brass)) 8%, var(--card));
+  color: var(--foreground);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color .16s ease, border-color .16s ease, transform .16s ease;
+}
+.idecan-intelligence-page .idecan-subtopic-chip::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 999px;
+  background: var(--idecan-card-accent, var(--brass));
+}
+.idecan-intelligence-page .idecan-subtopic-chip__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.idecan-intelligence-page .idecan-subtopic-chip__count {
+  flex: 0 0 auto;
+  padding-left: 7px;
+  border-left: 1px solid color-mix(in srgb, var(--idecan-card-accent, var(--brass)) 34%, var(--border));
+  color: color-mix(in srgb, var(--idecan-card-accent, var(--brass)) 76%, var(--foreground));
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.idecan-intelligence-page .idecan-subtopic-chip:hover {
+  border-color: var(--idecan-card-accent, var(--brass));
+  background: color-mix(in srgb, var(--idecan-card-accent, var(--brass)) 16%, var(--card));
+  transform: translateY(-1px);
+}
+.idecan-intelligence-page .idecan-subtopic-chip:focus-visible {
+  outline: 2px solid var(--idecan-card-accent, var(--brass));
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .idecan-intelligence-page .idecan-subtopic-chip { max-width: 100%; }
+  .idecan-intelligence-page .idecan-subtopic-chip__label { white-space: normal; }
+}

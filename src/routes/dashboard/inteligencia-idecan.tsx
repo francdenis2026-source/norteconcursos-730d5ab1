@@ -182,7 +182,7 @@ function SubjectBars({
           </div>
           {(() => {
             const themes = recurringThemes(rows, s.subject, 1).slice(0, 6);
-            return themes.length ? <div className="mt-2 flex flex-wrap items-center gap-1.5" aria-label={`Subtópicos recorrentes de ${s.subject}`}><span className="mr-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Subtópicos:</span>{themes.map((theme) => <Link key={theme.label} to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject, topic: theme.label }} className="rounded-full border border-primary/20 bg-primary/5 px-2 py-0.5 text-[10px] font-semibold text-primary hover:bg-primary/10">{theme.label} · {theme.exams} provas</Link>)}</div> : null;
+            return themes.length ? <div className="mt-2 flex flex-wrap items-center gap-1.5" aria-label={`Subtópicos recorrentes de ${s.subject}`}><span className="mr-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Subtópicos:</span>{themes.map((theme) => <Link key={theme.label} to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject, topic: theme.label }} className="idecan-subtopic-chip" title={`${theme.label} · ${theme.exams} provas`}><span className="idecan-subtopic-chip__label">{theme.label}</span><span className="idecan-subtopic-chip__count">{theme.exams} {theme.exams === 1 ? "prova" : "provas"}</span></Link>)}</div> : null;
           })()}
         </div>
       ))}
