@@ -140,9 +140,11 @@ function VerdictBox({ title, verdict }: { title: string; verdict: Verdict }) {
 function SubjectBars({
   subjects,
   maxShare,
+  rows,
 }: {
   subjects: ReturnType<typeof subjectProfile>["subjects"];
   maxShare: number;
+  rows: BancaQuestion[];
 }) {
   return (
     <div className="space-y-2">
@@ -175,6 +177,10 @@ function SubjectBars({
             <Link to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject }} className="rounded-md border px-2 py-1 font-semibold text-primary hover:bg-primary/10">Treinar questões</Link>
             <Link to="/dashboard/library" search={{ collection: "subjects", discipline: s.subject }} className="rounded-md border px-2 py-1 font-semibold text-muted-foreground hover:bg-muted">Ver teoria</Link>
           </div>
+          {(() => {
+            const themes = recurringThemes(rows, s.subject, 1).slice(0, 6);
+            return themes.length ? <div className="mt-2 flex flex-wrap items-center gap-1.5" aria-label={`Subtópicos recorrentes de ${s.subject}`}><span className="mr-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Subtópicos:</span>{themes.map((theme) => <Link key={theme.label} to="/dashboard/question-trainer" search={{ board: "IDECAN", subject: s.subject, topic: theme.label }} className="rounded-full border border-primary/20 bg-primary/5 px-2 py-0.5 text-[10px] font-semibold text-primary hover:bg-primary/10">{theme.label} · {theme.exams} provas</Link>)}</div> : null;
+          })()}
         </div>
       ))}
     </div>
@@ -379,7 +385,7 @@ function InteligenciaIdecan() {
         </CardHeader>
         <CardContent>
           {allProfile.subjects.length ? (
-            <SubjectBars subjects={allProfile.subjects} maxShare={Math.max(0.0001, ...allProfile.subjects.map((s) => s.share))} />
+            <SubjectBars subjects={allProfile.subjects} maxShare={Math.max(0.0001, ...allProfile.subjects.map((s) => s.share))} rows={all} />
           ) : <p className="text-sm text-muted-foreground">Ainda não há disciplinas classificadas.</p>}
         </CardContent>
       </Card>
@@ -459,7 +465,7 @@ function InteligenciaIdecan() {
         </CardHeader>
         <CardContent>
           {profile.subjects.length ? (
-            <SubjectBars subjects={profile.subjects} maxShare={maxShare} />
+            <SubjectBars subjects={profile.subjects} maxShare={maxShare} rows={pcRows} />
           ) : (
             <p className="text-sm text-muted-foreground">
               Ainda sem dados suficientes para calcular o peso por disciplina.
