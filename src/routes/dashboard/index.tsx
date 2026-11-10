@@ -391,6 +391,15 @@ function StudentHome({ user }: { user: UserProfile }) {
               {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Escolha uma data"}
             </p>
             <p className="student-hub__exam-countdown">{examCountdown}</p>
+            {objective && (
+              <div className="student-hub__active-objective" aria-label="Concurso ativo">
+                <strong>{objective.agency}</strong>
+                <span>{objective.role} · {objective.examBoard}</span>
+              </div>
+            )}
+            <Link to="/dashboard/my-contest" className="student-hub__contest-action">
+              {objective ? "Trocar concurso" : "Escolher concurso"} <ArrowRight aria-hidden="true" />
+            </Link>
 
             {!isEditingExamDate ? (
               <Button
