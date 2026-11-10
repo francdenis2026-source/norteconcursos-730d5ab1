@@ -189,6 +189,13 @@
   }
 
   /* ---------------------------------------------------------------- */
+  /* Kill the dead gap left below the mobile footer before the CTA.    */
+  /* ---------------------------------------------------------------- */
+  .home.hr-canvas .mobile-homepage {
+    padding-bottom: 0 !important;
+  }
+
+  /* ---------------------------------------------------------------- */
   /* Footer: plain link row instead of boxed pills, tighter rhythm,    */
   /* colored contact chips, gold top accent.                           */
   /* ---------------------------------------------------------------- */
