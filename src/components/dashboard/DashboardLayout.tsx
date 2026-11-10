@@ -39,6 +39,7 @@ import "@/styles/student-edital-premium.css";
 import "@/styles/student-shell-premium.css";
 import "@/styles/student-viewport-efficiency.css";
 import "@/styles/student-pro.css";
+import "@/styles/student-astryx-interactions.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
