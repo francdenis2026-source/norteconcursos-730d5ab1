@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ESSAY_CHECKLIST, ESSAY_MODELS, ESSAY_SKELETON } from "@/lib/essayModels";
+import { cn } from "@/lib/utils";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 
 const MAX_LINES = 30;
