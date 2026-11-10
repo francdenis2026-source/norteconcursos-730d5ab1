@@ -173,14 +173,8 @@ const MENU: MenuItem[] = [
     href: "/dashboard/study-plan",
   },
   {
-    group: "Central de Estudos",
-    label: "Meus assuntos",
-    icon: BookOpen,
-    href: "/dashboard/disciplinas",
-  },
-  {
     group: "Material didático",
-    label: "Catálogo de materiais",
+    label: "Materiais e disciplinas",
     icon: Library,
     href: "/dashboard/material",
   },

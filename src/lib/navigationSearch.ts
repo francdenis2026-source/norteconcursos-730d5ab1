@@ -12,7 +12,7 @@ const DETAILS: Record<string, { description: string; terms: string }> = {
   '/dashboard/pc-acre-edital': { description: 'Estude o edital verticalizado da Polícia Civil do Acre por cargo e tópico.', terms: 'PCAC policia civil acre edital verticalizado tópicos cargo disciplinas marcar estudado' },
   '/dashboard/library': { description: 'Consulte legislação, súmulas e material de apoio.', terms: 'lei leis seca sumula sumulas legislacao biblioteca direito' },
   '/dashboard/leis': { description: 'Estude a legislação complementar do seu concurso.', terms: 'lei leis seca extravagante extravagantes especiais legislacao direito' },
-  '/dashboard/disciplinas': { description: 'Encontre conteúdos por disciplina.', terms: 'materias assuntos disciplinas trilhas' },
+  '/dashboard/disciplinas': { description: 'Encontre materiais e disciplinas.', terms: 'materias assuntos disciplinas trilhas' },
   '/dashboard/media': { description: 'Aprenda com aulas em vídeo e áudio.', terms: 'video videos aula aulas podcast podcasts audio' },
   '/dashboard/question-trainer': { description: 'Pratique questões e aprenda com as respostas.', terms: 'treinar treino praticar exercicio exercicios questao questoes' },
   '/dashboard/errors': { description: 'Revise questões que precisam de mais atenção.', terms: 'revisar revisao erros erradas corrigir caderno automatico' },
