@@ -124,6 +124,96 @@
   .app-shell.navigation-v2[data-area="student"] .app-topbar::after { display: none; }
 }
 
+/* ASTRYX corrective pass: keep menu labels readable and let only the navigation
+   rail scroll when the utility controls need their reserved space. */
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-emblem {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  object-fit: contain;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  flex-wrap: nowrap !important;
+  mask-image: none !important;
+  overscroll-behavior-x: contain;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__links > * {
+  flex: 0 0 auto !important;
+  min-width: max-content !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  padding-inline: 10px !important;
+  gap: 7px;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover {
+  transform: translateY(-1px);
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:active {
+  transform: translateY(0) scale(.985);
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:disabled,
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:disabled:hover {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+  width: 28px !important;
+  height: 28px !important;
+  flex-basis: 28px !important;
+  border-radius: 8px;
+  background: rgb(229 184 94 / 7%) !important;
+  border-color: rgb(229 184 94 / 38%) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 6%) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 1.9;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover .student-top-navigation__icon-wrap,
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] .student-top-navigation__icon-wrap {
+  transform: none;
+  background: rgb(229 184 94 / 14%) !important;
+  border-color: rgb(229 184 94 / 64%) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__menu {
+  z-index: 1100;
+  min-width: 248px;
+  max-width: min(320px, calc(100vw - 24px));
+  overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand-word { display: none !important; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand { padding-right: 8px; }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover,
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:active { transform: none; }
+}
+
 
 /* --------------------------------------------------------------------------
    ASTRYX corrective pass — true viewport-pinned command bar.
