@@ -81,7 +81,7 @@ function CheckoutPage() {
               <ul className="space-y-3">
                 {Object.entries(plan.features).map(([key, f]) => (
                   <li key={key} className="flex items-start gap-3 text-sm">
-                    <Check className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-emerald-500 dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span className="flex flex-wrap items-center gap-2">
                       {f.name}
                       {key === "aiSolver" && !AI_ENABLED ? (
@@ -96,9 +96,9 @@ function CheckoutPage() {
             </div>
 
             {PAYMENTS_ENABLED && (
-              <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl flex gap-3">
-                <ShieldCheck className="h-6 w-6 text-emerald-600 shrink-0" />
-                <div className="text-xs text-emerald-800">
+              <div className="p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40 rounded-xl flex gap-3">
+                <ShieldCheck className="h-6 w-6 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <div className="text-xs text-emerald-800 dark:text-emerald-300">
                   <p className="font-bold">Pagamento 100% Seguro</p>
                   <p>
                     Processado via Stripe com criptografia de ponta a ponta. Você pode cancelar a
@@ -121,7 +121,7 @@ function CheckoutPage() {
                   R$ {plan.price.toFixed(2).replace(".", ",")}
                 </span>
               </div>
-              <div className="flex justify-between items-center py-2 border-b text-emerald-600 font-bold">
+              <div className="flex justify-between items-center py-2 border-b text-emerald-600 dark:text-emerald-400 font-bold">
                 <span>Taxa de Ativação</span>
                 <span>Grátis</span>
               </div>
