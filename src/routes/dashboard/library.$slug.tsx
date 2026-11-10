@@ -23,8 +23,6 @@ import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
-import { HighlightToggle } from "@/components/library/StudyText";
-import { ReadingAnnotations } from "@/components/library/ReadingAnnotations";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
@@ -247,10 +245,6 @@ function MaterialPage() {
         key={material.slug}
         text={
           <>
-            <HighlightToggle
-              legend={!!materialLawSlug(material) || /direito|legisla/i.test(material.discipline)}
-            />
-            <ReadingAnnotations userId={user!.id} slug={material.slug} title={material.title} body={material.body_md} />
             {materialLawSlug(material) && (
               <Link
                 to="/dashboard/legal-course/$slug"

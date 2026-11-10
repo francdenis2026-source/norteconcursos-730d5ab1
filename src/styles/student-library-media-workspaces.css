@@ -15,11 +15,11 @@
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.material-hub,.library-reading-workspace,.nc-learning-workspace.material-library,.nc-learning-workspace.question-flashcards,.nc-learning-workspace.video-study-page) {
-  --study-ink: #f0eee9;
-  --study-muted: #b9b5ad;
-  --study-line: #45423c;
-  --study-paper: #222320;
-  --study-soft: #2c2b27;
+  --study-ink: #e8edf4;
+  --study-muted: #aab6c5;
+  --study-line: #354252;
+  --study-paper: #171d26;
+  --study-soft: #202936;
   --study-accent: #d0b27d;
   --study-accent-strong: #e1c99e;
   --study-accent-soft: #3b3428;
