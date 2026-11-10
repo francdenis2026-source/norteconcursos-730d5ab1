@@ -34,6 +34,8 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { buildTheoryIndex, findTheory, theoryTarget, type TheorySyllabus, type TheoryTarget } from "@/lib/cronogramaTeoria";
 import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
+import { hasActiveEdital, activeEditalLabel } from "@/lib/cronogramaGuard";
+import { MockService } from "@/services/mockService";
 
 import "@/styles/student-internal-workspace-system.css";
 import "@/styles/student-planning-workspaces.css";
@@ -80,6 +82,7 @@ function CronogramaPage() {
   const real = !!user && user.id !== "demo-user";
   // Criar cronograma é do Essencial para cima; no Gratuito os cronogramas já criados continuam abertos para leitura.
   const canCreate = isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "cronograma").included;
+  const [activeContest, setActiveContest] = React.useState<Awaited<ReturnType<typeof MockService.getFocusedContest>>>();
   const [plans, setPlans] = React.useState<Plan[] | null>(null);
   const [openId, setOpenId] = React.useState<string | "new" | null>(null);
   const { plano, painel } = Route.useSearch();
@@ -92,6 +95,10 @@ function CronogramaPage() {
   React.useEffect(() => {
     if (!isLoading && real) void load();
   }, [isLoading, real, load]);
+  React.useEffect(() => {
+    if (!real) return;
+    void MockService.getFocusedContest().then(setActiveContest).catch(() => setActiveContest(undefined));
+  }, [real]);
 
   // voltando da Biblioteca/Edital (?plano=…&painel=1): reabre o plano e o painel do dia uma única vez
   React.useEffect(() => {
@@ -126,7 +133,9 @@ function CronogramaPage() {
           />
         </div>
       </PageHero>
-      {openId === "new" && !canCreate ? (
+      {openId === "new" && hasActiveEdital(activeContest) ? (
+        <ActiveEditalLocked contest={activeContest!} onBack={() => setOpenId(null)} />
+      ) : openId === "new" && !canCreate ? (
         <CreateLocked onBack={() => setOpenId(null)} />
       ) : openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
@@ -135,7 +144,7 @@ function CronogramaPage() {
           onChange={(p) => setPlans((all) => all!.map((x) => (x.id === p.id ? p : x)))}
           onDeleted={async () => { setOpenId(null); await load(); }} />
       ) : (
-        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} />
+        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} creationLocked={hasActiveEdital(activeContest)} />
       )}
     </div>
   );
@@ -154,7 +163,27 @@ function CreateLocked({ onBack }: { onBack: () => void }) {
   );
 }
 
-function PlanList({ plans, onOpen, canCreate }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean }) {
+function ActiveEditalLocked({ contest, onBack }: { contest: NonNullable<Awaited<ReturnType<typeof MockService.getFocusedContest>>>; onBack: () => void }) {
+  return (
+    <div className="space-y-4 rounded-xl border border-amber-500/30 bg-card p-6">
+      <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Voltar</Button>
+      <div className="flex items-start gap-4">
+        <svg viewBox="0 0 48 48" aria-hidden="true" className="mt-1 h-10 w-10 shrink-0 text-amber-400">
+          <path d="M14 21v-5a10 10 0 0 1 20 0v5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+          <rect x="10" y="20" width="28" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5" />
+          <circle cx="24" cy="29" r="2" fill="currentColor" /><path d="M24 31v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+        <div>
+          <p className="font-bold">Seu edital ativo está protegido</p>
+          <p className="mt-1 text-sm text-muted-foreground">O cronograma de <strong>{activeEditalLabel(contest)}</strong> está em foco. Para evitar misturar disciplinas e assuntos de cargos diferentes, não é possível criar ou trocar o planejamento enquanto este edital estiver ativo.</p>
+          <Link className="mt-3 inline-flex text-sm font-semibold text-primary underline-offset-4 hover:underline" to="/dashboard/my-contest">Gerenciar meu concurso</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PlanList({ plans, onOpen, canCreate, creationLocked }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean; creationLocked: boolean }) {
   return (
     <div className="space-y-3">
       {plans.length === 0 && (
@@ -173,8 +202,8 @@ function PlanList({ plans, onOpen, canCreate }: { plans: Plan[]; onOpen: (id: st
           </p>
         </button>
       ))}
-      <button type="button" onClick={() => onOpen("new")} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary">
-        {canCreate ? <Plus className="h-4 w-4" /> : <Lock className="h-4 w-4" />} Novo cronograma
+      <button type="button" onClick={() => onOpen("new")} disabled={creationLocked} aria-disabled={creationLocked} title={creationLocked ? "O edital ativo bloqueia a criação de outro cronograma." : undefined} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:border-dashed disabled:hover:text-muted-foreground">
+        {creationLocked || !canCreate ? <Lock className="h-4 w-4" /> : <Plus className="h-4 w-4" />} {creationLocked ? "Cronograma bloqueado pelo edital ativo" : "Novo cronograma"}
       </button>
     </div>
     </div>

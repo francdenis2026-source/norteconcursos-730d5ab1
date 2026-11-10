@@ -46,6 +46,7 @@ import {
 import { canonicalDiscipline } from "@/lib/cronograma";
 import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
+import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -227,6 +228,7 @@ function StudentHome({ user }: { user: UserProfile }) {
       : null;
   }, [schedule, stats]);
   const objective = q.objective.data;
+  const cronogramaLocked = hasActiveEdital(objective);
   const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
   const days = daysToExam(effectiveExamDate, today);
   const examCountdown =
@@ -612,15 +614,28 @@ function StudentHome({ user }: { user: UserProfile }) {
               />
             ) : !plan ? (
               <EmptyPanel
-                title="Seu dia de estudo começa com um plano"
-                text="Distribua disciplinas e assuntos nos dias em que você pode estudar."
+                title={cronogramaLocked ? "Cronograma vinculado ao edital ativo" : "Seu dia de estudo começa com um plano"}
+                text={cronogramaLocked
+                  ? `O edital ${objective?.agency} · ${objective?.role} está ativo. Para manter disciplinas e assuntos organizados, a criação de novos cronogramas fica bloqueada enquanto ele estiver em foco.`
+                  : "Distribua disciplinas e assuntos nos dias em que você pode estudar."}
               >
-                <Button variant="outline" asChild>
-                  <Link to="/dashboard/cronograma">
-                    Montar meu cronograma
-                    <ArrowRight aria-hidden="true" />
-                  </Link>
-                </Button>
+                {cronogramaLocked ? (
+                  <div className="flex items-center gap-3 rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-sm text-muted-foreground" role="status">
+                    <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" className="h-8 w-8 shrink-0 text-amber-400">
+                      <path d="M14 21v-5a10 10 0 0 1 20 0v5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                      <rect x="10" y="20" width="28" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5" />
+                      <circle cx="24" cy="29" r="2" fill="currentColor" /><path d="M24 31v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                    </svg>
+                    <span>Edite ou troque o edital ativo em <Link to="/dashboard/my-contest">Meu concurso</Link> para liberar um novo planejamento.</span>
+                  </div>
+                ) : (
+                  <Button variant="outline" asChild>
+                    <Link to="/dashboard/cronograma">
+                      Montar meu cronograma
+                      <ArrowRight aria-hidden="true" />
+                    </Link>
+                  </Button>
+                )}
               </EmptyPanel>
             ) : (
               <>
