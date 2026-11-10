@@ -198,7 +198,7 @@ export function buildPcAcMasterPlan(
     opts.weeklyHours > 80 ||
     !isValidIsoDate(opts.startDate) ||
     !isValidIsoDate(examDateIso) ||
-    !/^([01]\\d|2[0-3]):[0-5]\\d$/.test(opts.startTime)
+    !/^([01]\d|2[0-3]):[0-5]\d$/.test(opts.startTime)
   ) return [];
   const lastStudyDate = parseIso(pcAcLastStudyDate(examDateIso));
   const start = parseIso(opts.startDate);
