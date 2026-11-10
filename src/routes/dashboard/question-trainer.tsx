@@ -1643,7 +1643,7 @@ function TrainerSetup({
                 <SelectTrigger className="h-9 bg-background sm:h-10">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="trainer-select-content">
                   <SelectItem value="random">Aleatório inteligente</SelectItem>
                   <SelectItem value="exam">Ordem do acervo</SelectItem>
                 </SelectContent>
@@ -1799,7 +1799,7 @@ function TrainerFilter({
         <SelectTrigger className="h-9 bg-background sm:h-10">
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="trainer-select-content">
           {!hideAll && (
             <SelectItem value="all">
               {allLabel}
