@@ -358,7 +358,7 @@ function AdminStudentsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6">
+    <div className="admin-students-page space-y-6">
       <PageHero
         image="command-room"
         size="sm"
