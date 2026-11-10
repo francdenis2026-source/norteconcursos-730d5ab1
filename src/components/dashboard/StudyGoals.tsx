@@ -55,7 +55,7 @@ function GoalBar({
         <span className="text-muted-foreground">{label}</span>
         <span className="font-semibold tabular-nums">
           {used}/{total} {unit}
-          {done && <span className="ml-1 text-emerald-500">✓</span>}
+          {done && <span className="ml-1 text-emerald-500 dark:text-emerald-400">✓</span>}
         </span>
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-muted">
@@ -128,7 +128,7 @@ export function StudyGoals({ planTier }: { planTier?: string | undefined }) {
             {editing ? (
               <div className="flex gap-1">
                 <Button variant="ghost" size="icon" onClick={save} aria-label="Salvar metas">
-                  <Check className="h-4 w-4 text-emerald-500" />
+                  <Check className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
                 </Button>
                 <Button
                   variant="ghost"
@@ -208,7 +208,7 @@ export function StudyGoals({ planTier }: { planTier?: string | undefined }) {
           <div className="section-title">
             <div>
               <h2 className="flex items-center gap-2">
-                <Crown className="h-4 w-4 text-amber-500" /> Seu plano
+                <Crown className="h-4 w-4 text-amber-500 dark:text-amber-400" /> Seu plano
               </h2>
               <p>Plano atual e acesso direto às provas</p>
             </div>

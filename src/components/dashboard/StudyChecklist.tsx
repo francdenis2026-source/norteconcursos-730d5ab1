@@ -236,7 +236,7 @@ export function WeekChecklist({
                 <h3 className="flex items-center gap-2 text-sm font-bold">
                   {DAY_NAMES[d.day]}
                   {dayDone && (
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-label="Dia concluído" />
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-label="Dia concluído" />
                   )}
                 </h3>
                 <span className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground">
@@ -269,7 +269,7 @@ export function WeekChecklist({
                           className="mt-0.5 shrink-0"
                         >
                           {isDone ? (
-                            <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+                            <CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
                           ) : (
                             <Circle className="h-5 w-5 text-muted-foreground" />
                           )}
@@ -522,7 +522,7 @@ export function ReviewQueue({
     <Card className={due.length ? "border-amber-500/50" : ""}>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Repeat2 className="h-5 w-5 text-amber-600" /> Revisão do dia
+          <Repeat2 className="h-5 w-5 text-amber-600 dark:text-amber-400" /> Revisão do dia
         </CardTitle>
         <CardDescription>
           O que você estudou volta para revisão depois de{" "}

@@ -63,7 +63,7 @@ function UsageMeter({
         <span
           className={cn(
             "tabular-nums",
-            full ? "font-semibold text-amber-600" : "text-muted-foreground",
+            full ? "font-semibold text-amber-600 dark:text-amber-400" : "text-muted-foreground",
           )}
         >
           {unlimited ? `${used} hoje · ilimitado` : `${used} de ${limit} ${unit}`}

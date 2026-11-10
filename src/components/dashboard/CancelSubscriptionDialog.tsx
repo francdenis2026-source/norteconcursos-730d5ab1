@@ -72,7 +72,7 @@ export function CancelSubscriptionDialog({
     <Dialog open={open} onOpenChange={(v) => !busy && onOpenChange(v)}>
       <DialogContent className="sm:max-w-md">
         <DialogTitle className="flex items-center gap-2">
-          <AlertTriangle className="h-5 w-5 text-amber-600" /> Cancelar o plano {planName}?
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" /> Cancelar o plano {planName}?
         </DialogTitle>
         <DialogDescription asChild>
           <div className="space-y-2 text-sm">

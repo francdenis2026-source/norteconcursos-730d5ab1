@@ -113,7 +113,7 @@ function EssayGuide() {
                 className="flex w-full items-start gap-2 text-left text-sm"
               >
                 {on ? (
-                  <CheckSquare className="h-4 w-4 mt-0.5 text-emerald-500" />
+                  <CheckSquare className="h-4 w-4 mt-0.5 text-emerald-500 dark:text-emerald-400" />
                 ) : (
                   <Square className="h-4 w-4 mt-0.5 text-muted-foreground" />
                 )}
@@ -226,7 +226,7 @@ function EssayNotebook({ userId }: { userId: string }) {
             placeholder="Tema ou título da redação"
           />
           <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <span className={lines > MAX_LINES ? "font-bold text-rose-600" : ""}>
+            <span className={lines > MAX_LINES ? "font-bold text-rose-600 dark:text-rose-400" : ""}>
               {lines} / {MAX_LINES} linhas (estimativa) · {words} palavras
             </span>
             <span className="flex items-center gap-2">{fullscreen && <QuestionTimer seconds={elapsed} compact />}{id ? "Editando redação salva" : "Nova redação"}</span>
@@ -296,7 +296,7 @@ function EssayNotebook({ userId }: { userId: string }) {
                 aria-label={`Excluir ${e.title}`}
                 onClick={() => remove(e)}
               >
-                <Trash2 className="h-4 w-4 text-rose-500" />
+                <Trash2 className="h-4 w-4 text-rose-500 dark:text-rose-400" />
               </Button>
             </div>
           ))}

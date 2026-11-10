@@ -63,7 +63,7 @@ export function PcAcContentReviewAdmin() {
    </div>
    <p className="flex gap-2 rounded-lg bg-amber-500/10 p-3 text-xs leading-5"><ShieldAlert className="h-4 w-4 shrink-0 text-amber-600"/>Revise o texto completo e abra as fontes antes de assinar a aprovação. A data gravada será a da revisão humana; não é uma certificação automática de legislação.</p>
    {error&&<p role="alert" className="text-sm text-destructive">{error}</p>}
-   {loading?<p className="text-sm text-muted-foreground">Carregando materiais…</p>:pending.length===0?<p className="text-sm text-emerald-600">Não há aulas pendentes neste lote.</p>:(
+   {loading?<p className="text-sm text-muted-foreground">Carregando materiais…</p>:pending.length===0?<p className="text-sm text-emerald-600 dark:text-emerald-400">Não há aulas pendentes neste lote.</p>:(
     <div className="grid max-h-[700px] gap-2 overflow-y-auto pr-1">
      {pending.map(row=><details key={row.id} className="rounded-lg border border-border bg-background open:border-amber-500/50">
       <summary className="cursor-pointer px-3 py-3 text-sm font-semibold">{row.discipline} · {row.title}</summary>

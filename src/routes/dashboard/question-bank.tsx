@@ -477,7 +477,7 @@ function Loading() {
         <p>Consulte e organize suas questões para estudar.</p>
       </section>
       <div role="status" className="flex items-center gap-3 rounded-2xl border bg-card p-5">
-        <Loader2 className="h-5 w-5 animate-spin text-emerald-600" />
+        <Loader2 className="h-5 w-5 animate-spin text-emerald-600 dark:text-emerald-400" />
         <p className="text-sm text-muted-foreground">Organizando o acervo…</p>
       </div>
     </div>
@@ -500,7 +500,7 @@ function ErrorState({ message, retry }: { message: string; retry: () => void }) 
   return (
     <Card className="mx-auto mt-10 max-w-xl">
       <CardContent className="flex flex-col items-center p-8 text-center">
-        <AlertTriangle className="h-10 w-10 text-red-500" />
+        <AlertTriangle className="h-10 w-10 text-red-500 dark:text-red-400" />
         <h2 className="mt-4 text-xl font-black">Falha ao carregar o acervo</h2>
         <p className="mt-2 text-sm text-muted-foreground">{message}</p>
         <Button className="mt-5 gap-2" onClick={retry}>

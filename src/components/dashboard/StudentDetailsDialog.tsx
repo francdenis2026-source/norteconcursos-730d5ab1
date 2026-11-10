@@ -157,13 +157,13 @@ export function StudentDetailsDialog({
           <div className="space-y-3">
             <Section title="Pendências">
               {pending.length === 0 ? (
-                <p className="flex items-center gap-2 text-sm text-emerald-600">
+                <p className="flex items-center gap-2 text-sm text-emerald-600 dark:text-emerald-400">
                   <CheckCircle2 className="h-4 w-4" /> Nenhuma pendência.
                 </p>
               ) : (
                 <ul className="space-y-1">
                   {pending.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-amber-600">
+                    <li key={p} className="flex items-center gap-2 text-sm text-amber-600 dark:text-amber-400">
                       <AlertTriangle className="h-4 w-4" /> {p}
                     </li>
                   ))}

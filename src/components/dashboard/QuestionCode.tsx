@@ -63,7 +63,7 @@ export function QuestionCode({
         >
           <span className="min-w-0 break-all font-mono">{code}</span>
           {copied ? (
-            <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+            <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
           ) : (
             <Copy className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           )}

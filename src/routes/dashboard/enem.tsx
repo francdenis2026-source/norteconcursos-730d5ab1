@@ -161,13 +161,13 @@ function EnemPage() {
             <BookOpenCheck className="h-4 w-4 !text-sky-500" /> Materiais de estudo
           </TabsTrigger>
           <TabsTrigger value="videos" className="gap-1.5">
-            <PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas
+            <PlayCircle className="h-4 w-4 !text-rose-500 dark:!text-rose-400" /> Videoaulas
           </TabsTrigger>
           <TabsTrigger value="redacao" className="gap-1.5">
-            <PenLine className="h-4 w-4 !text-orange-500" /> Redação
+            <PenLine className="h-4 w-4 !text-orange-500 dark:!text-orange-400" /> Redação
           </TabsTrigger>
           <TabsTrigger value="questoes" className="gap-1.5">
-            <BrainCircuit className="h-4 w-4 !text-emerald-500" /> Questões
+            <BrainCircuit className="h-4 w-4 !text-emerald-500 dark:!text-emerald-400" /> Questões
           </TabsTrigger>
         </TabsList>
 
@@ -225,7 +225,7 @@ function EnemPage() {
                   <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
                     {c.tips.map((t) => (
                       <li key={t} className="flex gap-2">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" /> {t}
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500 dark:text-emerald-400" /> {t}
                       </li>
                     ))}
                   </ul>
@@ -289,7 +289,7 @@ function EnemPage() {
                 </>
               ) : (
                 <div className="rounded-xl border border-dashed p-6 text-center">
-                  <Sparkles className="mx-auto h-8 w-8 text-amber-500" />
+                  <Sparkles className="mx-auto h-8 w-8 text-amber-500 dark:text-amber-400" />
                   <p className="mt-2 font-semibold">Banco de questões do ENEM em preparação</p>
                   <p className="mx-auto mt-1 max-w-xl text-sm text-muted-foreground">
                     As provas anteriores do INEP estão sendo cadastradas com gabarito e área. Quando

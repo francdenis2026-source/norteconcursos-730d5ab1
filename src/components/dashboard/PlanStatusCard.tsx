@@ -95,7 +95,7 @@ export function PlanStatusCard() {
                   <li key={row.label} className="flex items-center justify-between gap-3">
                     <span className="flex items-center gap-2">
                       {shown ? (
-                        <Check className="h-4 w-4 text-emerald-600" aria-hidden />
+                        <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden />
                       ) : (
                         <Minus className="h-4 w-4 text-muted-foreground" aria-hidden />
                       )}

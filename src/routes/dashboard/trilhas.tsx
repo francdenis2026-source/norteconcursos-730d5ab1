@@ -451,7 +451,7 @@ function TracksPage() {
                               className={cn(
                                 "mt-0.5 h-4 w-4 shrink-0",
                                 done.includes(x.id)
-                                  ? "text-emerald-600"
+                                  ? "text-emerald-600 dark:text-emerald-400"
                                   : "text-muted-foreground/40",
                               )}
                               aria-hidden

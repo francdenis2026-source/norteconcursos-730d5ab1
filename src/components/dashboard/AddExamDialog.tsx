@@ -256,7 +256,7 @@ export function AddExamDialog({
                   />
                 </div>
               </div>
-              {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
+              {error && <p className="text-sm font-bold text-rose-600 dark:text-rose-400">{error}</p>}
               <div className="flex justify-end gap-2">
                 <Button type="button" variant="outline" onClick={() => close(false)}>
                   Cancelar

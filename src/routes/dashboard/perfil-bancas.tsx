@@ -434,9 +434,9 @@ function PerfilBancasPage() {
               </span>
               <span className="w-5" aria-label={s.trend ?? "sem tendência"}>
                 {s.trend === "sobe" ? (
-                  <ArrowUpRight className="h-4 w-4 text-emerald-600" />
+                  <ArrowUpRight className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 ) : s.trend === "cai" ? (
-                  <ArrowDownRight className="h-4 w-4 text-rose-600" />
+                  <ArrowDownRight className="h-4 w-4 text-rose-600 dark:text-rose-400" />
                 ) : s.trend === "estavel" ? (
                   <Minus className="h-4 w-4 text-muted-foreground" />
                 ) : null}

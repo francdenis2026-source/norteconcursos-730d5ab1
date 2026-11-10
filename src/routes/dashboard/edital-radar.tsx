@@ -81,7 +81,7 @@ function EditalRadarPage() {
     [data, selected],
   );
 
-  if (error) return <p className="p-8 text-sm text-rose-600">{error}</p>;
+  if (error) return <p className="p-8 text-sm text-rose-600 dark:text-rose-400">{error}</p>;
   if (!data || !result)
     return (
       <div className="flex items-center gap-2 p-8 text-sm text-muted-foreground">
@@ -233,12 +233,12 @@ function EditalRadarPage() {
                       {change.contest} — {change.role}: {change.from} → {change.to}
                     </p>
                     {change.addedDisciplines.length > 0 && (
-                      <p className="text-xs text-emerald-700">
+                      <p className="text-xs text-emerald-700 dark:text-emerald-400">
                         Disciplinas novas: {change.addedDisciplines.join(", ")}
                       </p>
                     )}
                     {change.removedDisciplines.length > 0 && (
-                      <p className="text-xs text-rose-700">
+                      <p className="text-xs text-rose-700 dark:text-rose-400">
                         Disciplinas retiradas: {change.removedDisciplines.join(", ")}
                       </p>
                     )}
@@ -342,11 +342,11 @@ function DisciplineRow({
   const percent = Math.round(stat.weightedShare * 100);
   const trend =
     stat.trend === "sobe" ? (
-      <span className="inline-flex items-center gap-0.5 font-bold text-emerald-700">
+      <span className="inline-flex items-center gap-0.5 font-bold text-emerald-700 dark:text-emerald-400">
         <ArrowUp className="h-3 w-3" /> sobe +{stat.trendDelta} p.p.
       </span>
     ) : stat.trend === "cai" ? (
-      <span className="inline-flex items-center gap-0.5 font-bold text-rose-700">
+      <span className="inline-flex items-center gap-0.5 font-bold text-rose-700 dark:text-rose-400">
         <ArrowDown className="h-3 w-3" /> cai {stat.trendDelta} p.p.
       </span>
     ) : stat.trend === "estavel" ? (
@@ -483,7 +483,7 @@ function ChangeList({
       <summary
         className={cn(
           "cursor-pointer text-xs font-bold",
-          tone === "emerald" ? "text-emerald-700" : "text-rose-700",
+          tone === "emerald" ? "text-emerald-700 dark:text-emerald-400" : "text-rose-700 dark:text-rose-400",
         )}
       >
         {title} ({items.length})

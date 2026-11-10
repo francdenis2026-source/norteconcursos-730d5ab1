@@ -364,7 +364,7 @@ function LegalCoursePage() {
         {tab === "learn" && !fm.focus && topArticles(course.slug, cargo, 8).length > 0 && (
           <section className="rounded-xl border bg-card p-3" aria-label="Artigos mais cobrados">
             <p className="mb-2 flex flex-wrap items-center gap-2 text-sm font-semibold">
-              <Flame className="h-4 w-4 text-rose-600" aria-hidden /> Mais cobrados em provas
+              <Flame className="h-4 w-4 text-rose-600 dark:text-rose-400" aria-hidden /> Mais cobrados em provas
               {cargo !== "all" && (
                 <span className="font-normal text-muted-foreground">para {CARGO_LABEL[cargo]}</span>
               )}

@@ -34,7 +34,7 @@ export function AttemptHistoryItem({ item }: { item: AttemptWithDetails }) {
             <p
               className={cn(
                 "text-lg font-black leading-none",
-                details.score < 0 ? "text-red-600" : "text-foreground",
+                details.score < 0 ? "text-red-600 dark:text-red-400" : "text-foreground",
               )}
             >
               {formatScore(details.score)}
@@ -61,7 +61,7 @@ export function AttemptHistoryItem({ item }: { item: AttemptWithDetails }) {
       </p>
       {details.ranking ? (
         <p className="mt-1 flex flex-wrap items-center gap-1 text-[11px]">
-          <Medal className="h-3 w-3 text-amber-600" aria-hidden="true" />
+          <Medal className="h-3 w-3 text-amber-600 dark:text-amber-400" aria-hidden="true" />
           <span className="font-semibold">Ranking: +{details.ranking.points} pts</span>
           <span className="text-muted-foreground">
             ·{" "}
