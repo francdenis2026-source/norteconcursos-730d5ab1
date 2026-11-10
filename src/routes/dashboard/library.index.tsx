@@ -36,6 +36,7 @@ import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
+import { UpdatedStudyCollections } from "@/components/dashboard/UpdatedStudyCollections";
 import { StartHere } from "@/components/library/StartHere";
 import {
   libraryArea,
@@ -63,9 +64,11 @@ export const Route = createFileRoute("/dashboard/library/")({
     q?: string | undefined;
     back?: string | undefined;
     collection?: "laws" | "subjects";
+    guia?: string | undefined;
     discipline?: string | undefined;
   } => ({
     collection: s["collection"] === "subjects" ? "subjects" : "laws",
+    guia: typeof s["guia"] === "string" ? s["guia"] : undefined,
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
     discipline: typeof s["discipline"] === "string" ? s["discipline"] : undefined,
@@ -81,6 +84,7 @@ function LibraryIndex() {
     q: initialQuery,
     back,
     collection = "laws",
+    guia,
     discipline: initialDiscipline,
   } = Route.useSearch();
   const lawsOnly = collection === "laws";
@@ -391,6 +395,8 @@ function LibraryIndex() {
           </Link>
         </nav>
       )}
+
+      {!lawsOnly && signedIn && <UpdatedStudyCollections initialCourseId={guia} storageScope={user?.id ?? "anonymous"} />}
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
