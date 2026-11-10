@@ -1,4 +1,4 @@
-import quiz from "./fundamentos-gerais-quiz.json";
+import quiz from "./fundamentos-gerais-quiz.json" with { type: "json" };
 import type { TrackLesson, TrackQuiz } from "./types";
 
 const practice = (slug: keyof typeof quiz) => ({
