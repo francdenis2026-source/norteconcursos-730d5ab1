@@ -133,6 +133,28 @@
   background: var(--muted);
   color: var(--muted-foreground);
 }
+/* Step pills use one semantic scale: active action, completed hint, and
+   neutral future state. The same relationships hold in both themes. */
+:root:not(.dark) .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-muted {
+  border-color: #c7d1dc;
+  background: #eef2f6;
+  color: #43546a;
+}
+:root:not(.dark) .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary\/15 {
+  border-color: #a9c8c9;
+  background: #e4f0ef;
+  color: #286066;
+}
+:root.dark .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-muted {
+  border-color: #405064;
+  background: #283343;
+  color: #d4deea;
+}
+:root.dark .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary\/15 {
+  border-color: #3f7478;
+  background: #203f45;
+  color: #a9e0dc;
+}
 .app-shell[data-area="student"] .plan-workspace-window [role="radio"] {
   border-color: var(--border);
   background: var(--card);
