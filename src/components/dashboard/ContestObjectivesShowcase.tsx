@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarClock, CalendarDays, GraduationCap, Target, Users, Wallet } from "lucide-react";
+import { ArrowRight, CalendarClock, CalendarDays, Fingerprint, FlaskConical, GraduationCap, HeartPulse, Lock, Scale, Search, Target, Users, Wallet } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
 import { contestDisplay } from "@/lib/contestDisplay";
@@ -10,6 +10,22 @@ function contestArt(contest: Contest) {
   if (value.includes("parana") || value.includes("pc-pr") || value.includes("pcpr")) return "/media/hero/pcpr-capa.webp";
   if (value.includes("federal") || value.includes("pf")) return "/media/hero/careers-team.webp";
   return "/media/hero/meu-concurso-seguranca-publica.webp";
+}
+
+function RoleMarker({ role }: { role: string }) {
+  const normalized = role.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const [Icon, tone] = normalized.includes("delegado")
+    ? [Scale, "gold"]
+    : /medic|legista/.test(normalized)
+      ? [HeartPulse, "rose"]
+      : /papiloscop|identifica/.test(normalized)
+        ? [Fingerprint, "blue"]
+        : /perit/.test(normalized)
+          ? [FlaskConical, "violet"]
+          : /investig|agente/.test(normalized)
+            ? [Search, "teal"]
+            : [Target, "neutral"];
+  return <span className="contest-showcase__role-marker" data-tone={tone}><Icon aria-hidden="true" /></span>;
 }
 
 function money(value: number) {
@@ -54,18 +70,17 @@ export function ContestObjectivesShowcase({
   onClear?: () => void;
 }) {
   const featured = focusedContest ?? contests[0];
-  const others = contests.filter((contest) => contest.id !== featured?.id).slice(0, 3);
+  const others = contests
+    .filter((contest) => contest.id !== featured?.id)
+    .sort((a, b) => Number(b.agency === featured?.agency) - Number(a.agency === featured?.agency));
   const display = featured ? contestDisplay(featured) : null;
   const isLocked = !!focusedContest;
 
   return (
-    <section className="contest-showcase" aria-labelledby="contest-showcase-title">
+    <section className="contest-showcase" data-has-options={others.length > 0} aria-labelledby="contest-showcase-title">
       <header className="contest-showcase__heading">
         <div>
           <h1 id="contest-showcase-title">{isLocked ? "Seu objetivo em foco" : "Escolha seu objetivo"}</h1>
-          <p>{isLocked
-            ? "Seu plano de estudos está organizado em torno deste cargo."
-            : "Selecione um cargo para vincular seu edital, cronograma e preparação."}</p>
         </div>
         {isLocked && <span className="contest-showcase__active-state"><Target aria-hidden="true" /> Objetivo ativo</span>}
       </header>
@@ -77,12 +92,12 @@ export function ContestObjectivesShowcase({
           </div>
           <div className="contest-showcase__featured-body">
             <div className="contest-showcase__featured-topline">
-              <span>{featured.name}</span>
+              <span>{featured.agency || featured.name} · {featured.examBoard || "Banca a confirmar"}</span>
               <span className="contest-showcase__status">{featured.status}</span>
             </div>
             <div className="contest-showcase__title-group">
+              <RoleMarker role={display?.role ?? ""} />
               <h2>{display?.role}</h2>
-              <p>{display?.career} <span aria-hidden="true">·</span> {featured.examBoard || "Banca a confirmar"}</p>
             </div>
             <div className="contest-showcase__summary">
               <span className="contest-showcase__exam-date"><CalendarDays aria-hidden="true" /> Prova: <strong>{dateLabel(featured.examDate)}</strong></span>
@@ -94,7 +109,7 @@ export function ContestObjectivesShowcase({
                   type="button"
                   className="contest-showcase__primary-action"
                   onClick={() => onSelect(featured)}
-                  disabled={savingId === featured.id}
+                  disabled={!!savingId}
                 >
                   {savingId === featured.id ? "Salvando…" : "Definir como objetivo"}
                   <ArrowRight aria-hidden="true" />
@@ -131,21 +146,22 @@ export function ContestObjectivesShowcase({
         <section className="contest-showcase__others" aria-labelledby="contest-showcase-others">
           <div className="contest-showcase__section-heading">
             <h2 id="contest-showcase-others">{isLocked ? "Outros cargos" : "Outras opções"}</h2>
-            <span>{isLocked ? "Indisponíveis enquanto o objetivo estiver ativo" : `${others.length} opções`}</span>
+            <span>{isLocked ? "Desmarque o objetivo para trocar" : `${others.length} opções`}</span>
           </div>
-          <ul className={`contest-showcase__list ${isLocked ? "is-locked" : ""}`}>
+          <ul className={`contest-showcase__list ${isLocked ? "is-locked" : ""}`} tabIndex={0} aria-labelledby="contest-showcase-others">
             {others.map((contest) => {
               const item = contestDisplay(contest);
               return (
                 <li key={contest.id}>
+                  <RoleMarker role={item.role} />
                   <div className="contest-showcase__list-copy">
                     <strong>{item.role}</strong>
-                    <span>{contest.name} · {contest.examBoard || "Banca a confirmar"}</span>
+                    <span>{contest.agency || contest.name} · {contest.examBoard || "Banca a confirmar"}</span>
                   </div>
                   {isLocked ? (
-                    <span className="contest-showcase__lock-label">Bloqueado pelo objetivo ativo</span>
+                    <span className="contest-showcase__lock-label"><Lock size={12} aria-hidden="true" /> Bloqueado</span>
                   ) : (
-                    <button type="button" onClick={() => onSelect(contest)} disabled={savingId === contest.id}>
+                    <button type="button" onClick={() => onSelect(contest)} disabled={!!savingId}>
                       {savingId === contest.id ? "Salvando…" : "Selecionar"} <ArrowRight aria-hidden="true" />
                     </button>
                   )}

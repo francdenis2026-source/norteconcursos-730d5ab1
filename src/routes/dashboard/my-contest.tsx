@@ -13,7 +13,6 @@ import {
 } from "@/lib/editalCatalog";
 import { platformDate } from "@/lib/platformClock";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { ContestObjectivesShowcase } from "@/components/dashboard/ContestObjectivesShowcase";
 import { MockService } from "@/services/mockService";
 import { toast } from "sonner";
@@ -31,6 +30,7 @@ function MyContestPage() {
   React.useEffect(() => setActiveContest(focusedContest), [focusedContest]);
 
   const selectContest = async (contest: Contest) => {
+    if (activeContest || savingContestId) return;
     setSavingContestId(contest.id);
     try {
       await MockService.setFocusedContest(contest.id);
@@ -44,7 +44,8 @@ function MyContestPage() {
   };
 
   const clearContest = async () => {
-    setSavingContestId(activeContest?.id ?? "clear");
+    if (!activeContest || savingContestId) return;
+    setSavingContestId(activeContest.id);
     try {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) throw new Error("Entre na sua conta para alterar seu objetivo.");
@@ -96,15 +97,13 @@ function MyContestPage() {
   return (
     <div className="edital-workspace my-contest-one-window">
       <StudyPlanningNav active="objective" />
-      <div className="contest-objectives-page">
-        <ContestObjectivesShowcase
-          focusedContest={activeContest}
-          contests={contests}
-          onSelect={(contest) => void selectContest(contest)}
-          savingId={savingContestId}
-          onClear={() => void clearContest()}
-        />
-      </div>
+      <ContestObjectivesShowcase
+        focusedContest={activeContest}
+        contests={contests}
+        onSelect={(contest) => void selectContest(contest)}
+        savingId={savingContestId}
+        onClear={() => void clearContest()}
+      />
 
       {days !== null && Number.isFinite(days) && days < 0 && (
         <p className="my-contest-expired" role="status">
@@ -117,9 +116,7 @@ function MyContestPage() {
         <div className="edital-catalog__heading">
           <div>
             <h2 id="my-contest-edital-title">Edital e programa de estudo</h2>
-            <p>{activeContest ? "Edições vinculadas ao cargo selecionado." : "Defina um cargo para visualizar o programa correspondente."}</p>
           </div>
-          {activeContest && <Badge variant="outline">Cargo ativo</Badge>}
         </div>
 
         {editions.isLoading && <p className="edital-catalog__message" role="status">Consultando edições vinculadas…</p>}
@@ -151,12 +148,12 @@ function MyContestPage() {
 
         {!editions.isLoading && !editions.isError && activeContest && matches.length === 0 && (
           <p className="edital-catalog__message">
-            Ainda não há uma edição vinculada exatamente a este cargo. O objetivo continua ativo; o catálogo de outros concursos permanece bloqueado.
+            Ainda não há um programa vinculado a este cargo.
           </p>
         )}
 
         {!activeContest && (
-          <p className="edital-catalog__message">Quando você definir um cargo, o edital e os assuntos correspondentes aparecerão aqui.</p>
+          <p className="edital-catalog__message">Selecione um cargo para ver o programa de estudo.</p>
         )}
       </section>
     </div>
