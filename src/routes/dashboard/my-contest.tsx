@@ -25,6 +25,7 @@ import { toast } from "sonner";
 import type { Contest } from "@/types";
 import "@/styles/contest-objectives-showcase.css";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
+import { userStorageKey } from "@/lib/userStorage";
 
 export const Route = createFileRoute("/dashboard/my-contest")({ component: MyContestPage });
 function MyContestPage() {
@@ -40,6 +41,25 @@ function MyContestPage() {
       toast.success("Seu objetivo principal foi atualizado.");
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Não foi possível salvar seu objetivo.");
+    } finally {
+      setSavingContestId(null);
+    }
+  };
+  const clearContest = async () => {
+    setSavingContestId(activeContest?.id ?? "clear");
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) throw new Error("Entre na sua conta para alterar seu objetivo.");
+      const { error } = await supabase
+        .from("profiles")
+        .update({ focused_contest_id: null })
+        .eq("id", session.user.id);
+      if (error) throw error;
+      try { localStorage.removeItem(userStorageKey("norte_focused_contest")); } catch { /* cache opcional */ }
+      setActiveContest(undefined);
+      toast.success("Objetivo desmarcado. Os demais concursos foram desbloqueados.");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível desmarcar o objetivo.");
     } finally {
       setSavingContestId(null);
     }
@@ -74,7 +94,7 @@ function MyContestPage() {
     ? Math.ceil((new Date(activeContest.examDate).getTime() - platformDate().getTime()) / 86400000)
     : null;
   return (
-    <div className="edital-workspace space-y-5">
+    <div className="edital-workspace my-contest-one-window">
       <StudyPlanningNav active="objective" />
       <div className="contest-objectives-page">
         <ContestObjectivesShowcase
@@ -82,6 +102,7 @@ function MyContestPage() {
           contests={contests}
           onSelect={(contest) => void selectContest(contest)}
           savingId={savingContestId}
+          onClear={() => void clearContest()}
         />
       </div>
       {days !== null && Number.isFinite(days) && days < 0 && (
