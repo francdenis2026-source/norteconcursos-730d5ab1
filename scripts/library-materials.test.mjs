@@ -78,6 +78,6 @@ test('PC-AC revised study collection has 27 original lessons, links into the lib
 
 test('PC-AC authored true-false items use answerable option syntax for the question trainer', () => {
   const parsed = format.parseQuestion('Julgue a afirmação (questão autoral): Documentos digitais podem ser arquivísticos.\n\n(A) Certo\n(B) Errado');
-  assert.deepEqual(parsed.options.map(option => option.letter), ['A', 'B']);
+  assert.equal(parsed.options.map(option => option.letter).join(','), 'A,B');
   assert.equal(parsed.stem.includes('Documentos digitais'), true);
 });
