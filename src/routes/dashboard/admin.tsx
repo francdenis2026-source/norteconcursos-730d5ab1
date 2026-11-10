@@ -847,7 +847,7 @@ function AdminPanel() {
                                 {row.exam_board ? `· ${row.exam_board}` : ""}
                               </span>
                               {row.ai_extracted?.["contest_name"] ? (
-                                <span className="mt-0.5 text-[10px] text-emerald-700">
+                                <span className="mt-0.5 text-[10px] text-emerald-700 dark:text-emerald-300">
                                   IA sugeriu: {String(row.ai_extracted?.["contest_name"])}
                                   {row.ai_extracted?.["contest_year"]
                                     ? ` (${String(row.ai_extracted?.["contest_year"])})`
@@ -955,7 +955,7 @@ function AdminPanel() {
                           <TableCell className="text-xs">
                             {log.entity_type}: {log.entity_id}
                           </TableCell>
-                          <TableCell className="text-[10px] text-rose-600 italic max-w-[150px] truncate">
+                          <TableCell className="text-[10px] text-rose-600 dark:text-rose-400 italic max-w-[150px] truncate">
                             {log.new_values?.reason || "-"}
                           </TableCell>
                           <TableCell>
