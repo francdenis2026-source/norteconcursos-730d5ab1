@@ -33,7 +33,8 @@ export function useStudyGuideProgress(userId: string) {
       if (cancelled) return;
       if (error) { setSyncState("offline"); setSyncError("Sem conexão com o progresso na nuvem. As alterações serão mantidas apenas neste navegador."); return; }
       let remote = Object.fromEntries((data || []).map(row => [`${row.guide_id}:${row.lesson_key}`,true])) as Record<string,boolean>;
-      const alreadyMigrated = localStorage.getItem(migratedKey) === "yes";
+      let alreadyMigrated = false;
+      try { alreadyMigrated = localStorage.getItem(migratedKey) === "yes"; } catch {}
       if (!alreadyMigrated) {
         const onlyLocal = Object.keys(cached).filter(key => cached[key] && !remote[key] && key.includes(":"));
         if (onlyLocal.length) {
