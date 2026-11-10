@@ -5,6 +5,7 @@ import {
   BookOpenCheck,
   BrainCircuit,
   CalendarClock,
+  ChevronDown,
   CheckCircle2,
   Download,
   PlayCircle,
@@ -1149,21 +1150,21 @@ function PcAcreEditalVerticalizadoPage() {
       </>
       )}
 
-      <Tabs value={editalTab} onValueChange={setEditalTab} className="pcac-edital-tabs">
-        <TabsList className="pcac-edital-tabs__list" aria-label="Seções do edital verticalizado">
-          <TabsTrigger value="resumo">Resumo do concurso</TabsTrigger>
-          <TabsTrigger value="conteudo">Conteúdo e progresso</TabsTrigger>
-          <TabsTrigger value="cronograma">Cronograma</TabsTrigger>
-          <TabsTrigger value="leis">Legislação</TabsTrigger>
+      <Tabs value={editalTab} onValueChange={setEditalTab} className="pcac-edital-tabs pcac-astrix-section-tabs">
+        <TabsList className="pcac-edital-tabs__list" aria-label="Navegação pelas seções do edital">
+          <TabsTrigger value="resumo"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Resumo</TabsTrigger>
+          <TabsTrigger value="conteudo"><CheckCircle2 aria-hidden="true" className="h-4 w-4" /> Conteúdo e progresso</TabsTrigger>
+          <TabsTrigger value="cronograma"><CalendarClock aria-hidden="true" className="h-4 w-4" /> Cronograma</TabsTrigger>
+          <TabsTrigger value="leis"><Scale aria-hidden="true" className="h-4 w-4" /> Legislação</TabsTrigger>
         </TabsList>
-        <TabsContent value="resumo" className="space-y-5">
+        <TabsContent value="resumo" className="pcac-astrix-summary space-y-3">
       {cargo.id === "investigador" && (
-        <Card className="pcac-edital-card border-amber-400/60 bg-gradient-to-br from-amber-400/10 via-card to-card">
+        <Card className="pcac-edital-card pcac-astrix-focus-card border-amber-400/60">
           <CardHeader className="pb-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <CardTitle className="text-base">Foco recomendado: Oficial Investigador</CardTitle>
-                <CardDescription>O cargo concentra 74 vagas e seis disciplinas específicas. Organize sua semana pelo núcleo abaixo.</CardDescription>
+                <CardTitle className="text-base">Trilha de preparação · Oficial Investigador</CardTitle>
+                <CardDescription>Quatro frentes prioritárias para organizar seus estudos.</CardDescription>
               </div>
               <Badge className="bg-amber-500 text-slate-950">74 vagas</Badge>
             </div>
@@ -1176,7 +1177,7 @@ function PcAcreEditalVerticalizadoPage() {
               </div>
             ))}
           </CardContent>
-          <CardContent className="border-t border-amber-400/20 pt-4">
+          <details className="pcac-astrix-focus-disclosure"><summary><span><strong>Prioridades para começar</strong><small>Disciplinas, assuntos e acesso rápido às questões</small></span><ChevronDown aria-hidden="true" className="h-4 w-4" /></summary><CardContent className="border-t border-amber-400/20 pt-4">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="text-sm font-bold">Assuntos para ganhar tempo</p>
@@ -1199,8 +1200,8 @@ function PcAcreEditalVerticalizadoPage() {
                 </div>
               ))}
             </div>
-          </CardContent>
-          <CardContent className="border-t border-amber-400/20 pt-4">
+          </CardContent></details>
+<details className="pcac-astrix-focus-disclosure"><summary><span><strong>Análise de incidência da banca</strong><small>Critérios de priorização e evidências do radar IDECAN</small></span><ChevronDown aria-hidden="true" className="h-4 w-4" /></summary><CardContent className="border-t border-amber-400/20 pt-4">
             <div className="mb-3">
               <p className="text-sm font-bold">Radar de incidência para começar</p>
               <p className="text-xs text-muted-foreground">Mapeamento orientativo: edital PC-AC cruzado com o padrão de provas policiais da IDECAN disponível na plataforma, incluindo PC-SC 2026. Use para priorizar revisões; não substitui o conteúdo oficial.</p>
@@ -1214,7 +1215,7 @@ function PcAcreEditalVerticalizadoPage() {
                 </div>
               ))}
             </div>
-          </CardContent>
+          </CardContent></details>
         </Card>
       )}
 
