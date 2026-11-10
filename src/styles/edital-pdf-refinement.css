@@ -1,0 +1,83 @@
+/* Edital/PDF workspace: document states, progress and study actions. */
+.app-shell[data-area="student"] .edital-workspace {
+  --edital-blue: #6fa5f4;
+  --edital-cyan: #55d4df;
+  --edital-amber: #ddb15e;
+  --edital-green: #4bc89c;
+  --edital-violet: #b292ed;
+  --edital-rose: #de91b5;
+  --edital-line: color-mix(in srgb, var(--border) 88%, transparent);
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+}
+.dark .app-shell[data-area="student"] .edital-workspace {
+  --edital-blue: #86b6ff;
+  --edital-cyan: #70e0e9;
+  --edital-amber: #ebc477;
+  --edital-green: #5cdbac;
+  --edital-violet: #c7a7f5;
+  --edital-rose: #efa4c7;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-modern-hero {
+  border-top: 2px solid var(--edital-cyan);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--edital-cyan) 10%, var(--card)), var(--card) 66%);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-modern-hero .hero-stat:nth-child(1) { border-color: color-mix(in srgb, var(--edital-blue) 55%, var(--border)); }
+.app-shell[data-area="student"] .edital-workspace .edital-modern-hero .hero-stat:nth-child(2) { border-color: color-mix(in srgb, var(--edital-violet) 55%, var(--border)); }
+.app-shell[data-area="student"] .edital-workspace .edital-catalog {
+  border-top: 2px solid var(--edital-blue);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--edital-blue) 6%, var(--card)), var(--card) 68%);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog-filters {
+  border-color: color-mix(in srgb, var(--edital-cyan) 38%, var(--border));
+  background: color-mix(in srgb, var(--edital-cyan) 5%, var(--card));
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog-filters :is(input, select):focus {
+  border-color: var(--edital-cyan);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--edital-cyan) 16%, transparent);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-editions {
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.app-shell[data-area="student"] .edital-workspace .edital-edition {
+  min-height: 168px;
+  border-color: var(--edital-line);
+  border-top: 2px solid color-mix(in srgb, var(--edital-blue) 65%, var(--border));
+  background: color-mix(in srgb, var(--card) 94%, var(--edital-blue));
+  transition: border-color .16s ease, transform .16s ease, background-color .16s ease;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-edition:nth-child(4n + 2) { border-top-color: var(--edital-amber); }
+.app-shell[data-area="student"] .edital-workspace .edital-edition:nth-child(4n + 3) { border-top-color: var(--edital-violet); }
+.app-shell[data-area="student"] .edital-workspace .edital-edition:nth-child(4n + 4) { border-top-color: var(--edital-green); }
+.app-shell[data-area="student"] .edital-workspace .edital-edition:hover { transform: translateY(-2px); border-color: currentColor; background: color-mix(in srgb, var(--edital-blue) 10%, var(--card)); }
+.app-shell[data-area="student"] .edital-workspace .edital-edition-meta strong { color: var(--edital-amber); }
+.app-shell[data-area="student"] .edital-workspace .edital-edition-foot > span:last-child { color: var(--edital-cyan); }
+.app-shell[data-area="student"] .edital-workspace .edital-selected {
+  border-top: 2px solid var(--edital-amber);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--edital-amber) 6%, var(--card)), var(--card) 68%);
+}
+.app-shell[data-area="student"] .edital-workspace .edital-summary-card { border-color: var(--edital-line); }
+.app-shell[data-area="student"] .edital-workspace .edital-summary-card--progress { border-color: color-mix(in srgb, var(--edital-green) 65%, var(--border)); background: color-mix(in srgb, var(--edital-green) 10%, var(--card)); }
+.app-shell[data-area="student"] .edital-workspace .edital-summary-card:nth-child(2) { border-top: 2px solid var(--edital-blue); }
+.app-shell[data-area="student"] .edital-workspace .edital-summary-card:nth-child(3) { border-top: 2px solid var(--edital-violet); }
+.app-shell[data-area="student"] .edital-workspace .edital-summary-card:nth-child(4) { border-top: 2px solid var(--edital-amber); }
+.app-shell[data-area="student"] .edital-workspace .edital-progress-track span { background: var(--edital-green); }
+.app-shell[data-area="student"] .edital-workspace .edital-selected [role="region"] { border-color: color-mix(in srgb, var(--edital-violet) 42%, var(--border)); background: color-mix(in srgb, var(--edital-violet) 6%, var(--card)); }
+.app-shell[data-area="student"] .edital-workspace .edital-selected > div:has(> a[href*="http"]),
+.app-shell[data-area="student"] .edital-workspace .edital-selected [aria-label="Ações do documento do edital"] { padding: 10px; border: 1px solid color-mix(in srgb, var(--edital-amber) 38%, var(--border)); border-radius: 12px; background: color-mix(in srgb, var(--edital-amber) 5%, var(--card)); }
+.app-shell[data-area="student"] .edital-workspace .edital-selected [aria-label="Ações do documento do edital"] a,
+.app-shell[data-area="student"] .edital-workspace .edital-selected [aria-label="Ações do documento do edital"] button { min-height: 42px; }
+@media (max-width: 1200px) {
+  .app-shell[data-area="student"] .edital-workspace .edital-editions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 800px) {
+  .app-shell[data-area="student"] .edital-workspace .edital-editions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .app-shell[data-area="student"] .edital-workspace .edital-editions { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] .edital-workspace .edital-edition { min-height: 132px; }
+  .app-shell[data-area="student"] .edital-workspace .edital-selected [aria-label="Ações do documento do edital"] { display: grid; grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] .edital-workspace .edital-selected [aria-label="Ações do documento do edital"] > * { width: 100%; justify-content: center; }
+}

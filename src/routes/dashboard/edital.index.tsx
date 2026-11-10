@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/accordion";
 
 import "@/styles/student-internal-workspace-system.css";
+import "@/styles/edital-pdf-refinement.css";
 
 export const Route = createFileRoute("/dashboard/edital/")({
   component: EditalPage,
