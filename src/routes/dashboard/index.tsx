@@ -80,28 +80,28 @@ const formatExamDate = (value?: string | null) => {
 const destinations = [
   {
     to: "/dashboard/cronograma",
-    title: "Cronograma",
+    title: "Agenda de estudos",
     text: "Organize seu dia de estudo",
     tone: "gold",
     icon: CalendarClock,
   },
   {
     to: "/dashboard/question-trainer",
-    title: "Questões",
+    title: "Treinar questões",
     tone: "teal",
     text: "Pratique e revise seus erros",
     icon: BrainCircuit,
   },
   {
     to: "/dashboard/library",
-    title: "Conteúdo",
+    title: "Material de estudo",
     tone: "gold",
     text: "Leis, teoria e disciplinas",
     icon: BookOpen,
   },
   {
     to: "/dashboard/edital",
-    title: "Meu edital",
+    title: "Edital e disciplinas",
     tone: "gold",
     text: "Estude o que será cobrado",
     icon: FileText,
@@ -348,9 +348,20 @@ function StudentHome({ user }: { user: UserProfile }) {
                   )}
                 </div>
               </div>
-              <Link to="/dashboard/my-contest" className="student-hub__contest-link">
-                {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight size={14} aria-hidden="true" />
-              </Link>
+              {q.objective.isError ? (
+                <button
+                  type="button"
+                  className="student-hub__contest-link"
+                  onClick={() => void q.objective.refetch()}
+                  disabled={q.objective.isFetching}
+                >
+                  Tentar novamente
+                </button>
+              ) : (
+                <Link to="/dashboard/my-contest" className="student-hub__contest-link">
+                  {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight size={14} aria-hidden="true" />
+                </Link>
+              )}
             </div>
             {objective && (
               <div className="student-hub__exam-summary-date">
@@ -390,61 +401,9 @@ function StudentHome({ user }: { user: UserProfile }) {
           </Link>
         </section>
       )}
-      <PcAcreEditalSpotlight />
-      <PlatformQuestionCounts compact />
-      <section className="student-desk__panel" aria-labelledby="student-metrics-title">
-        <div className="student-desk__section-heading">
-          <h2 id="student-metrics-title">Seu painel de estudo</h2>
-          <span>Progresso atualizado e seus atalhos, em um só lugar</span>
-        </div>
-        <section className="student-home__metrics" aria-label="Seu progresso">
-          <Metric
-            icon={BrainCircuit}
-            label="Questões resolvidas"
-            tone="blue"
-            onOpen={(event) => openMetric("questions", event.currentTarget)}
-            value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
-            detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
-          />
-          <Metric
-            icon={CheckCircle2}
-            label="Taxa de acerto"
-            tone="teal"
-            onOpen={(event) => openMetric("accuracy", event.currentTarget)}
-            value={
-              q.training.isError
-                ? "Indisponível"
-                : stats
-                  ? stats.accuracy === null
-                    ? "Sem respostas"
-                    : `${stats.accuracy}%`
-                  : "…"
-            }
-            detail={
-              stats?.total
-                ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
-                : "Comece pelas questões"
-            }
-          />
-          <Metric
-            icon={Clock}
-            label="Tempo ativo hoje"
-            tone="amber"
-            onOpen={(event) => openMetric("today", event.currentTarget)}
-            value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
-            detail="Somando suas sessões"
-          />
-          <Metric
-            icon={TrendingUp}
-            label="Estudo nesta semana"
-            tone="violet"
-            onOpen={(event) => openMetric("week", event.currentTarget)}
-            value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
-            detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
-          />
-        </section>
-        <div className="student-desk__panel-divider" role="separator" aria-hidden="true" />
-        <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
+      <section className="student-hub__quick-panel" aria-labelledby="dashboard-quick-title">
+        <h2 id="dashboard-quick-title">Atalhos de estudo</h2>
+        <nav className="student-hub__shortcuts" aria-label="Atalhos de estudo">
           {destinations.map(({ to, title, text, tone, icon: Icon }) => (
             <Link
               key={to}
@@ -728,45 +687,59 @@ function StudentHome({ user }: { user: UserProfile }) {
             )}
           </section>
         </div>
-        <aside className="student-hub__rail" aria-label="Seu objetivo e suas prioridades">
+        <aside className="student-hub__rail" aria-label="Progresso e prioridades">
           <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
-          <section
-            className="student-home__card"
-            data-accent="gold"
-            aria-labelledby="dashboard-objective-title"
-          >
-            <SectionTitle icon={Target} title="Concurso em foco" id="dashboard-objective-title" />
-            {q.objective.isPending ? (
-              <PanelLoading />
-            ) : q.objective.isError ? (
-              <QueryError
-                text="Não foi possível consultar seu concurso."
-                retry={() => q.objective.refetch()}
+          <section className="student-desk__panel student-hub__progress-panel" aria-labelledby="student-metrics-title">
+            <div className="student-desk__section-heading">
+              <h2 id="student-metrics-title">Seu progresso</h2>
+            </div>
+            <section className="student-home__metrics" aria-label="Seu progresso">
+              <Metric
+                icon={BrainCircuit}
+                label="Questões resolvidas"
+                tone="blue"
+                onOpen={(event) => openMetric("questions", event.currentTarget)}
+                value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
+                detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
               />
-            ) : objective ? (
-              <>
-                <h3 className="student-home__objective-name">{objective.agency}</h3>
-                <p className="student-home__quiet">{objective.role}</p>
-                <p className="student-home__quiet">{objective.examBoard}</p>
-                <Link to="/dashboard/my-contest" className="student-home__text-link">
-                  Consultar meu concurso
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </>
-            ) : (
-              <EmptyPanel
-                title="Qual é o seu concurso?"
-                text="Defina seu objetivo para orientar sua preparação."
-              >
-                <Link to="/dashboard/questions" className="student-home__text-link">
-                  Consultar concursos e editais
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </EmptyPanel>
-            )}
-
+              <Metric
+                icon={CheckCircle2}
+                label="Taxa de acerto"
+                tone="teal"
+                onOpen={(event) => openMetric("accuracy", event.currentTarget)}
+                value={
+                  q.training.isError
+                    ? "Indisponível"
+                    : stats
+                      ? stats.accuracy === null
+                        ? "Sem respostas"
+                        : `${stats.accuracy}%`
+                      : "…"
+                }
+                detail={
+                  stats?.total
+                    ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
+                    : "Comece pelas questões"
+                }
+              />
+              <Metric
+                icon={Clock}
+                label="Tempo ativo hoje"
+                tone="amber"
+                onOpen={(event) => openMetric("today", event.currentTarget)}
+                value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
+                detail="Somando suas sessões"
+              />
+              <Metric
+                icon={TrendingUp}
+                label="Estudo nesta semana"
+                tone="violet"
+                onOpen={(event) => openMetric("week", event.currentTarget)}
+                value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
+                detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
+              />
+            </section>
           </section>
-
           <section
             className="student-home__card"
             data-accent="gold"
@@ -917,7 +890,12 @@ function StudentHome({ user }: { user: UserProfile }) {
           </nav>
         </aside>
       </div>
-      <PcprExamSpotlight compact />
+      <section className="student-hub__resources" aria-labelledby="dashboard-resources-title">
+        <h2 id="dashboard-resources-title">Editais e acervo</h2>
+        <PcAcreEditalSpotlight />
+        <PcprExamSpotlight compact />
+        <PlatformQuestionCounts compact />
+      </section>
       <details className="student-home__data-note">
         <summary>Como este painel calcula seus indicadores</summary>
         <p>

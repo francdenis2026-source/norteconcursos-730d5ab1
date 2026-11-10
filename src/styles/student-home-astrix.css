@@ -77,25 +77,25 @@
 }
 
 .app-shell[data-area="student"] .student-home.student-overview .student-desk__next {
-  min-height: 68px;
-  padding: 14px 16px !important;
+  min-height: 0;
+  padding: 8px 12px !important;
   border-radius: 14px !important;
   background: var(--card) !important;
 }
 
 .app-shell[data-area="student"] .student-home.student-overview .pcpr-spot--dashboard {
   display: grid;
-  grid-template-columns: 84px minmax(0, 1fr);
+  grid-template-columns: 56px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
-  min-height: 118px;
-  padding: 12px 16px !important;
+  min-height: 0;
+  padding: 8px 12px !important;
   border-radius: 14px !important;
 }
 
 .app-shell[data-area="student"] .student-home.student-overview .pcpr-spot--dashboard .pcpr-spot__art-frame {
-  width: 84px;
-  height: 94px;
+  width: 56px;
+  height: 68px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -174,7 +174,7 @@
   .app-shell[data-area="student"] .student-home.student-overview .student-hub__hero-layout { grid-template-columns: 1fr !important; }
   .app-shell[data-area="student"] .student-home.student-overview .student-hub__hero-copy { max-width: none !important; }
   .app-shell[data-area="student"] .student-home.student-overview .pcpr-spot--dashboard { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
-  .app-shell[data-area="student"] .student-home.student-overview .pcpr-spot--dashboard .pcpr-spot__art-frame { width: 64px; height: 78px; }
+  .app-shell[data-area="student"] .student-home.student-overview .pcpr-spot--dashboard .pcpr-spot__art-frame { width: 56px; height: 68px; }
 }
 
 @media (max-width: 480px) {
@@ -280,14 +280,16 @@
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
 > .student-hub__masthead--compact.workspace-banner {
-  width: min(100%, 1120px) !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
   margin-inline: auto;
-  padding: clamp(10px, 1.3vw, 16px) !important;
+  padding: 8px 12px !important;
 }
 
 .student-hub__masthead--compact .student-hub__welcome-layout {
   display: grid;
-  grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr);
   align-items: center;
   gap: clamp(12px, 2vw, 24px);
 }
@@ -305,13 +307,13 @@
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
 .student-hub__masthead--compact h1 {
-  font-size: clamp(24px, 3vw, 34px) !important;
+  font-size: clamp(21px, 2.2vw, 28px) !important;
 }
 
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
 .student-hub__masthead--compact .student-hub__masthead-actions {
-  margin-top: 5px !important;
+  margin-top: 2px !important;
 }
 
 .student-hub__exam-summary {
@@ -320,7 +322,7 @@
   gap: 8px 16px;
   min-width: 0;
   align-items: center;
-  padding: 10px 12px;
+  padding: 6px 9px;
   border: 1px solid color-mix(in srgb, var(--brass) 30%, var(--border));
   border-radius: 11px;
   background: var(--card);
@@ -328,12 +330,18 @@
 }
 
 .student-hub__contest-summary {
-  flex: 1 1 13rem;
+  display: flex;
+  flex: 1 1 16rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
   min-width: 0;
 }
 
 .student-hub__contest-heading {
   display: flex;
+  flex: 1 1 10rem;
+  min-width: 0;
   align-items: center;
   gap: 8px;
 }
@@ -397,7 +405,6 @@
   align-items: center;
   gap: 6px;
   min-height: 32px;
-  margin-top: 4px;
   padding-inline: 8px;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -438,7 +445,7 @@
 @media (max-width: 760px) {
   .student-hub__masthead--compact .student-hub__welcome-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
+    gap: 6px;
   }
 }
 
@@ -452,5 +459,82 @@
 
   .student-hub__contest-link {
     min-height: 44px;
+  }
+}
+
+
+/* Student home: keep navigation shallow and put the agenda beside progress. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview {
+  max-width: 1180px;
+  gap: 9px !important;
+}
+
+.student-home.student-desk.student-overview :is(.student-hub__quick-panel, .student-hub__resources) {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.student-home.student-desk.student-overview :is(.student-hub__quick-panel, .student-hub__resources) > h2 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: .875rem;
+  font-weight: 750;
+}
+
+.student-home.student-desk.student-overview .student-hub__quick-panel .student-hub__shortcuts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.student-home.student-desk.student-overview .student-hub__quick-panel .student-hub__shortcuts > a {
+  min-height: 44px;
+  padding: 6px 8px;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 6px;
+}
+
+.student-hub__quick-panel .student-hub__shortcuts > a > svg:last-child {
+  display: none;
+}
+
+.student-home.student-desk.student-overview .student-hub__quick-panel .student-home__tool-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.student-home.student-desk.student-overview .student-hub__progress-panel {
+  min-height: 0;
+  padding: 9px;
+}
+
+.student-home.student-desk.student-overview .student-hub__progress-panel .student-home__metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.student-home.student-desk.student-overview .student-hub__progress-panel .student-home__metric {
+  min-height: 0;
+  padding: 7px 8px;
+  gap: 6px;
+}
+
+.student-hub__progress-panel .student-home__metric-arrow {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .student-home.student-desk.student-overview .student-hub__quick-panel .student-hub__shortcuts {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .student-home.student-desk.student-overview .student-hub__quick-panel .student-hub__shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .student-home.student-desk.student-overview .student-hub__quick-panel .student-hub__shortcuts > a:last-child {
+    grid-column: auto;
   }
 }
