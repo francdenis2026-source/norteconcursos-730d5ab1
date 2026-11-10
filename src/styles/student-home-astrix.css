@@ -3,6 +3,28 @@
   gap: 14px;
 }
 
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger--locked {
+  cursor: not-allowed;
+  opacity: 0.48;
+  filter: saturate(0.55);
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger--locked:hover {
+  transform: none;
+  border-color: transparent;
+  background: transparent;
+}
+
+.app-shell[data-area="student"] .student-hub__planning-link--locked {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  color: var(--muted-foreground);
+  font-size: 0.86em;
+  font-weight: 700;
+}
+
 .app-shell[data-area="student"] .student-home.student-overview .student-hub__masthead {
   min-height: 248px !important;
   padding: 16px !important;

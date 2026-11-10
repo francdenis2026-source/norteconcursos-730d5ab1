@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import * as React from "react";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import {
   House,
@@ -10,6 +11,7 @@ import {
   SlidersHorizontal,
   Sparkles,
   CalendarClock,
+  Lock,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -21,6 +23,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
+import { MockService } from "@/services/mockService";
+import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import "@/styles/student-home-navigation-refinement.css";
 
 const sections: {
@@ -83,6 +87,14 @@ export function StudentTopNavigation({
   const isCoachActive = isPlanningPage && pathname === "/dashboard/study-coach";
   const isScheduleActive = isPlanningPage && pathname === "/dashboard/cronograma";
   const section = sections.find((candidate) => current && candidate.groups.includes(current.group));
+  const [activeEdital, setActiveEdital] = React.useState(false);
+  React.useEffect(() => {
+    let mounted = true;
+    void MockService.getFocusedContest()
+      .then((contest) => { if (mounted) setActiveEdital(hasActiveEdital(contest)); })
+      .catch(() => { if (mounted) setActiveEdital(false); });
+    return () => { mounted = false; };
+  }, []);
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
   const entries =
@@ -129,18 +141,30 @@ export function StudentTopNavigation({
         )}
         {isHome && (
           <>
-            <Link
-              to="/dashboard/study-coach"
-              className="student-top-navigation__trigger"
-              data-tone="gold"
-              data-active={isCoachActive}
-              aria-current={isCoachActive ? "page" : undefined}
-            >
-              <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-                <Sparkles size={18} />
-              </span>
-              <span className="student-top-navigation__label">Meu plano</span>
-            </Link>
+            {activeEdital ? (
+              <button
+                type="button"
+                className="student-top-navigation__trigger student-top-navigation__trigger--locked"
+                data-tone="gold"
+                disabled
+                aria-label="Meu plano bloqueado enquanto há um edital ativo"
+                title="O Meu plano fica bloqueado enquanto um edital ativo estiver em foco."
+              >
+                <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Lock size={16} /></span>
+                <span className="student-top-navigation__label">Meu plano</span>
+              </button>
+            ) : (
+              <Link
+                to="/dashboard/study-coach"
+                className="student-top-navigation__trigger"
+                data-tone="gold"
+                data-active={isCoachActive}
+                aria-current={isCoachActive ? "page" : undefined}
+              >
+                <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
+                <span className="student-top-navigation__label">Meu plano</span>
+              </Link>
+            )}
             <Link
               to="/dashboard/cronograma"
               className="student-top-navigation__trigger"

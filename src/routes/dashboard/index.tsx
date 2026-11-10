@@ -777,10 +777,16 @@ function StudentHome({ user }: { user: UserProfile }) {
             <Sparkles aria-hidden="true" />
             <p>
               Precisa ajustar sua rotina?
-              <Link to="/dashboard/study-coach">
-                {q.strategy.data ? "Rever minha estratégia" : "Organizar com o assistente"}
-                <ArrowRight aria-hidden="true" />
-              </Link>
+              {cronogramaLocked ? (
+                <span className="student-hub__planning-link--locked" role="status">
+                  Planejamento bloqueado pelo edital ativo
+                </span>
+              ) : (
+                <Link to="/dashboard/study-coach">
+                  {q.strategy.data ? "Rever minha estratégia" : "Organizar com o assistente"}
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              )}
             </p>
           </div>
           <section
