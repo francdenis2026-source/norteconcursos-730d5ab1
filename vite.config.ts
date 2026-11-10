@@ -45,6 +45,14 @@ function writeBuildVersionPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [writeBuildVersionPlugin()],
+  vite: {
+    resolve: {
+      // jspdf's package exports only "node"/"browser" conditions, so the Worker SSR build
+      // (workerd/worker conditions) cannot resolve a bare `import "jspdf"`. Pin the bare
+      // specifier to the ES build so any import — including code arriving via GitHub sync — builds.
+      alias: [{ find: /^jspdf$/, replacement: "jspdf/dist/jspdf.es.min.js" }],
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
