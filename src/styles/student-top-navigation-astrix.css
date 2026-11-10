@@ -1,0 +1,125 @@
+/* ASTRYX navigation pass: persistent, quiet and readable while the workspace moves beneath it. */
+.app-shell.navigation-v2[data-area="student"] .app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  isolation: isolate;
+  border-bottom-color: rgb(229 184 94 / 22%);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 4%), 0 10px 26px -24px rgb(0 0 0 / 80%);
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.app-shell.navigation-v2[data-area="student"] .app-topbar::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: -18px;
+  left: 0;
+  height: 18px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(5 10 16 / 18%), transparent);
+  opacity: 0.45;
+  transition: opacity 220ms ease;
+}
+
+.app-shell.navigation-v2[data-area="student"] .app-topbar[data-scrolled="true"] {
+  border-bottom-color: rgb(229 184 94 / 42%);
+  background:
+    linear-gradient(180deg, rgb(17 30 45 / 98%), rgb(10 20 32 / 96%));
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 7%),
+    0 14px 32px -20px rgb(0 0 0 / 88%),
+    0 3px 0 rgb(229 184 94 / 4%);
+}
+
+.app-shell.navigation-v2[data-area="student"] .app-topbar[data-scrolled="true"]::after {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar {
+    min-height: 72px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand {
+    position: relative;
+    padding-right: 16px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__brand::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(180deg, transparent, rgb(229 184 94 / 55%), transparent);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__links {
+    scrollbar-width: none;
+    mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 12px), transparent);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    min-height: 40px;
+    border-color: transparent;
+    background: transparent;
+    transition:
+      background 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease,
+      transform 160ms ease;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover {
+    transform: translateY(-1px);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+    transform: none;
+    box-shadow: inset 0 -2px 0 var(--nc-color-action), 0 5px 16px rgb(0 0 0 / 12%);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions {
+    padding-left: 8px;
+    border-left: 1px solid rgb(255 255 255 / 10%);
+  }
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content {
+  scroll-padding-top: calc(var(--app-topbar-h) + 16px);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content :where([id]) {
+  scroll-margin-top: calc(var(--app-topbar-h) + 20px);
+}
+
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 8px 22px -20px rgb(0 0 0 / 80%);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] .app-topbar::after {
+    bottom: -12px;
+    height: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar,
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar::after { display: none; }
+}
