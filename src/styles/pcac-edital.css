@@ -110,3 +110,60 @@
     white-space: normal;
   }
 }
+
+/* PC-AC digital workspace: detach the full document from the verticalized grid. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page.pcac-digital-fullscreen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 0;
+  gap: 12px;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen > * {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen > [data-slot="card"] {
+  overflow: visible;
+  border-radius: 14px;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen iframe {
+  display: block;
+  width: 100%;
+  height: max(720px, calc(100dvh - 176px));
+  min-height: 720px;
+  border: 0;
+  background: #f8fafc;
+}
+/* The verticalized view keeps useful paired columns, but never lets the syllabus
+   become a narrow reading strip on wide workspaces. */
+@media (min-width: 1280px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page:not(.pcac-digital-fullscreen) > .pcac-edital-content {
+    grid-column: span 8;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page:not(.pcac-digital-fullscreen) > .pcac-priority-card {
+    grid-column: span 4;
+  }
+}
+@media (max-width: 900px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen {
+    gap: 10px;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen iframe {
+    height: max(680px, calc(100dvh - 208px));
+    min-height: 680px;
+  }
+}
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page.pcac-digital-fullscreen {
+    margin-inline: -8px;
+    width: calc(100% + 16px);
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-digital-fullscreen iframe {
+    height: max(640px, calc(100dvh - 190px));
+    min-height: 640px;
+  }
+}
