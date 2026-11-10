@@ -1,7 +1,7 @@
 import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { toast } from "sonner";
-import { Bot, FilePlus2, Save, Trash2, CheckSquare, Square } from "lucide-react";
+import { Bot, FilePlus2, Save, Trash2, CheckSquare, Square, Maximize2, Minimize2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ESSAY_CHECKLIST, ESSAY_MODELS, ESSAY_SKELETON } from "@/lib/essayModels";
+import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 
 const MAX_LINES = 30;
 const LINE_PX = 32;
@@ -132,6 +133,9 @@ function EssayNotebook({ userId }: { userId: string }) {
   const [body, setBody] = React.useState("");
   const [lines, setLines] = React.useState(0);
   const [saving, setSaving] = React.useState(false);
+  const [fullscreen, setFullscreen] = React.useState(false);
+  const [startedAt, setStartedAt] = React.useState<number | null>(null);
+  const [elapsed, setElapsed] = React.useState(0);
   const taRef = React.useRef<HTMLTextAreaElement>(null);
 
   const load = React.useCallback(async () => {
@@ -148,6 +152,14 @@ function EssayNotebook({ userId }: { userId: string }) {
   }, [load]);
 
   // O textarea cresce com o texto; linhas = altura / altura da pauta.
+  React.useEffect(() => {
+    if (!fullscreen || !startedAt) return;
+    const tick = () => setElapsed(Math.floor((Date.now() - startedAt) / 1000));
+    tick();
+    const timer = window.setInterval(tick, 1000);
+    return () => window.clearInterval(timer);
+  }, [fullscreen, startedAt]);
+
   React.useEffect(() => {
     const el = taRef.current;
     if (!el) return;
@@ -203,8 +215,9 @@ function EssayNotebook({ userId }: { userId: string }) {
   };
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
-      <Card>
+    <div className={fullscreen ? "essay-fullscreen" : "grid gap-4 lg:grid-cols-[1fr_280px]"}>
+      {fullscreen && <div className="essay-fullscreen__toolbar"><QuestionTimer seconds={elapsed} compact /><Button type="button" variant="outline" size="sm" onClick={() => setFullscreen(false)}><Minimize2 className="mr-2 h-4 w-4" />Fechar tela cheia</Button></div>}
+      <Card className={fullscreen ? "essay-fullscreen__paper" : undefined}>
         <CardHeader className="space-y-3">
           <Input
             value={title}
@@ -215,7 +228,7 @@ function EssayNotebook({ userId }: { userId: string }) {
             <span className={lines > MAX_LINES ? "font-bold text-rose-600" : ""}>
               {lines} / {MAX_LINES} linhas (estimativa) · {words} palavras
             </span>
-            <span>{id ? "Editando redação salva" : "Nova redação"}</span>
+            <span className="flex items-center gap-2">{fullscreen && <QuestionTimer seconds={elapsed} compact />}{id ? "Editando redação salva" : "Nova redação"}</span>
           </div>
         </CardHeader>
         <CardContent className="space-y-3">
@@ -238,6 +251,7 @@ function EssayNotebook({ userId }: { userId: string }) {
             />
           </div>
           <div className="flex flex-wrap gap-2">
+            {!fullscreen && <Button type="button" variant="outline" onClick={() => { setFullscreen(true); setStartedAt((value) => value ?? Date.now()); }}><Maximize2 className="h-4 w-4" /> Escrever em tela cheia</Button>}
             <Button onClick={save} disabled={saving}>
               <Save className="h-4 w-4" /> {id ? "Salvar alterações" : "Salvar redação"}
             </Button>
