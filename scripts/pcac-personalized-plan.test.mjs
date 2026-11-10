@@ -7,11 +7,11 @@ import { buildPcAcMasterPlan } from "../src/lib/pcAcreMasterPlan.ts";
 const config = {
   ...DEFAULT_PCAC_STUDY_CONFIG,
   weeklyHours: 8,
-  days: [1, 2, 3],
+  days: [1, 3, 5],
   startDate: "2026-11-16",
   startTime: "05:00",
   includeTaf: true,
-  tafDays: [2],
+  tafDays: [2, 4, 6],
   tafTime: "17:00",
   tafDurationMinutes: 60,
 };
