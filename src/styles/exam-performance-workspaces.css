@@ -360,6 +360,113 @@
   background: var(--exam-paper);
 }
 
+/* Compact "my position" strip replacing the two tall summary cards. */
+.app-shell[data-area="student"] .ranking-mepos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 11px 14px;
+  border: 1px solid color-mix(in srgb,var(--exam-accent) 35%,var(--exam-line));
+  border-radius: 12px;
+  background: var(--exam-accent-soft);
+}
+.app-shell[data-area="student"] .ranking-mepos__me {
+  min-width: 0;
+  flex: 1 1 160px;
+}
+.app-shell[data-area="student"] .ranking-mepos__label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] .ranking-mepos__value {
+  margin-top: 1px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] .ranking-mepos__pts {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] .ranking-mepos__meta {
+  margin-top: 1px;
+  font-size: 11px;
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] .ranking-mepos__meta--empty {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] .ranking-mepos__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.app-shell[data-area="student"] .ranking-mepos__total {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--exam-muted);
+  white-space: nowrap;
+}
+
+/* Rules disclosure: tighter line length for scanning on a phone. */
+.app-shell[data-area="student"] .ranking-workspace details.ranking-rules {
+  border-color: var(--exam-line);
+  background: var(--exam-soft);
+}
+.app-shell[data-area="student"] .ranking-workspace details.ranking-rules ul {
+  line-height: 1.5;
+}
+
+/* Leaderboard rows: avatar chip + tightened two-line layout. */
+.app-shell[data-area="student"] .ranking-row__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.app-shell[data-area="student"] .ranking-row__avatar {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: color-mix(in srgb,var(--exam-accent) 22%,var(--exam-soft));
+  color: var(--exam-accent-strong);
+  font-size: 10px;
+  font-weight: 800;
+}
+.app-shell[data-area="student"] .ranking-row__points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.05;
+  color: var(--exam-ink);
+}
+.app-shell[data-area="student"] .ranking-row__points small {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--exam-muted);
+}
+.app-shell[data-area="student"] .ranking-row--podium {
+  border-color: color-mix(in srgb,var(--exam-accent) 45%,var(--exam-line));
+  background: linear-gradient(90deg, color-mix(in srgb,var(--exam-accent) 10%,var(--exam-paper)), var(--exam-paper) 65%);
+}
+
 /* Exam panorama: filter controls and incidence analysis become easier to scan. */
 .app-shell[data-area="student"] .exam-panorama-workspace {
   display: grid;
@@ -448,6 +555,28 @@
   }
   .app-shell[data-area="student"] .exam-panorama-workspace > .grid.grid-cols-2.md\:grid-cols-4 {
     gap: 8px;
+  }
+  .app-shell[data-area="student"] .ranking-mepos {
+    padding: 10px 12px;
+  }
+  .app-shell[data-area="student"] .ranking-mepos__total {
+    margin-left: 0;
+    flex: 1 1 100%;
+    order: 3;
+  }
+  .app-shell[data-area="student"] .ranking-row__meta {
+    column-gap: 6px;
+  }
+  .app-shell[data-area="student"] .ranking-row__level {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .app-shell[data-area="student"] .ranking-row__stats {
+    font-size: 10.5px;
+  }
+  .app-shell[data-area="student"] .ranking-mepos__value {
+    font-size: 18px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
