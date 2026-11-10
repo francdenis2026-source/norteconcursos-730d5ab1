@@ -3,7 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import {
   BookOpenText,
-  ClipboardList,
   Calendar,
   ChevronRight,
 } from "lucide-react";
@@ -159,11 +158,11 @@ function MyContestPage() {
               Estudar pelo edital
             </Link>
           </Button>
-          <Button asChild variant={activeContest ? "outline" : "default"}>
-            <Link to="/dashboard/questions">
-              {activeContest ? "Trocar meu concurso" : "Escolher meu concurso"}
-            </Link>
-          </Button>
+          {!activeContest && (
+            <Button asChild variant="default">
+              <Link to="/dashboard/questions">Escolher meu concurso</Link>
+            </Button>
+          )}
         </div>
       </section>
 
