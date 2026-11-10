@@ -90,6 +90,7 @@ import "@/styles/question-trainer-experience.css";
 import "@/styles/question-filter-contrast.css";
 import "@/styles/question-practice-workspaces.css";
 import "@/styles/student-assessment-workspaces.css";
+import "@/styles/question-trainer-professional-refinement.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({

@@ -1,0 +1,190 @@
+/* Question trainer: fluid command center with a calm reading surface. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content {
+  --trainer-brand: #1d7c86;
+  --trainer-brand-strong: #145b66;
+  --trainer-brand-soft: #e6f4f3;
+  --trainer-surface: #ffffff;
+  --trainer-surface-muted: #f2f7f7;
+  --trainer-border: #d4e3e4;
+  --trainer-text: #18353b;
+  --trainer-muted: #60757b;
+}
+
+.dark .app-shell.navigation-v2[data-area="student"] #dashboard-content {
+  --trainer-brand: #73d4d3;
+  --trainer-brand-strong: #a2e6df;
+  --trainer-brand-soft: #183f45;
+  --trainer-surface: #12252c;
+  --trainer-surface-muted: #18343b;
+  --trainer-border: #2e5057;
+  --trainer-text: #e8f4f3;
+  --trainer-muted: #a9c1c4;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  gap: 16px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified {
+  border: 1px solid var(--trainer-border);
+  border-radius: 20px;
+  background: var(--trainer-surface);
+  box-shadow: 0 20px 50px -42px rgb(12 47 52 / 65%);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified > [data-slot="card-content"] {
+  padding: clamp(16px, 2vw, 30px);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head {
+  min-height: 84px;
+  margin: -4px -4px 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--trainer-border);
+  border-radius: 15px;
+  background: linear-gradient(115deg, var(--trainer-brand-soft), var(--trainer-surface) 72%);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head h1,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head span {
+  color: var(--trainer-text);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head > div:first-child > span.grid {
+  border-color: color-mix(in srgb, var(--trainer-brand) 35%, var(--trainer-border));
+  background: var(--trainer-brand);
+  color: #fff;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__metric {
+  border-color: var(--trainer-border);
+  background: var(--trainer-surface);
+  color: var(--trainer-muted);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__metric strong {
+  color: var(--trainer-text);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__metric--selected {
+  border-color: color-mix(in srgb, var(--trainer-brand) 58%, var(--trainer-border));
+  background: var(--trainer-brand-soft);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__metric--selected strong {
+  color: var(--trainer-brand-strong);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .grid.grid-cols-2.gap-2 {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup label.space-y-1 > span:first-child {
+  color: var(--trainer-muted);
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup :is([data-slot="select-trigger"], button[data-slot="select-trigger"]) {
+  min-height: 48px;
+  border-color: var(--trainer-border);
+  border-radius: 11px;
+  background: var(--trainer-surface);
+  color: var(--trainer-text);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup :is([data-slot="select-trigger"], button[data-slot="select-trigger"]):hover,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup :is([data-slot="select-trigger"], button[data-slot="select-trigger"]):focus-visible {
+  border-color: var(--trainer-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--trainer-brand) 16%, transparent);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-more {
+  border-color: var(--trainer-border);
+  background: var(--trainer-surface-muted);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+  border-color: var(--trainer-border);
+  background: var(--trainer-surface-muted);
+  padding: 14px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl p {
+  color: var(--trainer-text);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .hero-primary-action {
+  min-height: 46px;
+  border: 1px solid var(--trainer-brand);
+  border-radius: 11px;
+  background: var(--trainer-brand-strong);
+  color: #fff;
+  box-shadow: 0 10px 22px -16px var(--trainer-brand);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .hero-primary-action:hover:not(:disabled) {
+  background: var(--trainer-brand);
+  transform: translateY(-1px);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: start;
+  gap: 18px;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell > .trainer-topbar,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell > .question-window,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell > .back-to-edital,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell > .reinforce-banner {
+  grid-column: 1 / -1;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell .question-window {
+  border-color: var(--trainer-border);
+  border-radius: 20px;
+  background: var(--trainer-surface);
+  box-shadow: 0 24px 64px -48px rgb(9 46 51 / 72%);
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell .trainer-reading-stem {
+  border-color: var(--trainer-border);
+  background: var(--trainer-surface-muted);
+}
+
+@media (max-width: 1050px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head {
+    align-items: flex-start;
+    padding: 13px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head,
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified-head > div {
+    gap: 10px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .grid.grid-cols-2.gap-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+}
+
+@media (max-width: 430px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .grid.grid-cols-2.gap-2 {
+    grid-template-columns: 1fr;
+  }
+}
