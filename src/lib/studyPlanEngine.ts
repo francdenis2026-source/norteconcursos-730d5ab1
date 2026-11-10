@@ -55,7 +55,7 @@ export type StudyPlanWeek = { week: number; startDate: string; endDate: string; 
 
 const DAY_MS = 86_400_000;
 const isoDate = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-const parseDate = (value: string) => { const [y, m, d] = value.split("-").map(Number); return new Date(y, (m || 1) - 1, d || 1); };
+const parseDate = (value: string) => { const [y, m, d] = value.split("-").map(Number); return new Date(y || 1970, (m || 1) - 1, d || 1); };
 const addDays = (date: Date, days: number) => new Date(date.getTime() + days * DAY_MS);
 const minutes = (time: string) => { const [h, m] = time.split(":").map(Number); return (h || 0) * 60 + (m || 0); };
 const hhmm = (value: number) => `${String(Math.floor(value / 60) % 24).padStart(2, "0")}:${String(value % 60).padStart(2, "0")}`;
