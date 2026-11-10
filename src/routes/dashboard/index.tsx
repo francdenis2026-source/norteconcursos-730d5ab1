@@ -50,7 +50,6 @@ import { platformDate } from "@/lib/platformClock";
 import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
@@ -137,10 +136,6 @@ function DashboardIndex() {
 }
 function StudentHome({ user }: { user: UserProfile }) {
   const [now, setNow] = React.useState(platformDate);
-  const [personalExamDate, setPersonalExamDate] = React.useState(user.personal_exam_date ?? "");
-  const [examDateDraft, setExamDateDraft] = React.useState("");
-  const [isEditingExamDate, setIsEditingExamDate] = React.useState(false);
-  const [isSavingExamDate, setIsSavingExamDate] = React.useState(false);
   const [metric, setMetric] = React.useState<StudentMetric | null>(null);
   const metricTrigger = React.useRef<HTMLElement | null>(null);
   const [metricDate, setMetricDate] = React.useState<string | null>(null);
@@ -177,9 +172,6 @@ function StudentHome({ user }: { user: UserProfile }) {
     ? `${rank.data.rank_position}º lugar · ${rank.data.total_points} pts`
     : null;
   const plan = q.plans.data?.find((p) => p.id === selectedId) ?? q.plans.data?.[0];
-  React.useEffect(() => {
-    setPersonalExamDate(user.personal_exam_date ?? "");
-  }, [user.id, user.personal_exam_date]);
   React.useEffect(() => {
     if (q.plans.isSuccess && plan?.id !== selectedId) setSelectedId(plan?.id ?? "");
   }, [q.plans.isSuccess, plan?.id, selectedId]);
@@ -230,17 +222,17 @@ function StudentHome({ user }: { user: UserProfile }) {
   }, [schedule, stats]);
   const objective = q.objective.data;
   const cronogramaLocked = hasActiveEdital(objective);
-  const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
+  const examDate = objective?.examDate || undefined;
   const isPcAcre = Boolean(
     objective &&
       /acre|pc[-\s]?ac/i.test(
         `${objective.agency} ${objective.role} ${objective.examBoard}`,
       ),
   );
-  const days = daysToExam(effectiveExamDate, today);
+  const days = daysToExam(examDate, today);
   const examCountdown =
     days === null
-      ? "Defina o dia para ativar a contagem regressiva."
+      ? null
       : days > 0
         ? "Faltam " + days + " " + (days === 1 ? "dia" : "dias") + " para a prova"
         : days === 0
@@ -309,70 +301,15 @@ function StudentHome({ user }: { user: UserProfile }) {
       /* Optional navigation preference. */
     }
   };
-  const openExamDateEditor = () => {
-    setExamDateDraft(personalExamDate || objective?.examDate || "");
-    setIsEditingExamDate(true);
-  };
-  const savePersonalExamDate = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (!examDateDraft || daysToExam(examDateDraft, today) === null) {
-      toast.error("Escolha uma data válida para a prova.");
-      return;
-    }
-    setIsSavingExamDate(true);
-    try {
-      const { data, error } = await supabase
-        .from("profiles")
-        .update({ personal_exam_date: examDateDraft })
-        .eq("id", user.id)
-        .select("personal_exam_date")
-        .single();
-      if (error) throw error;
-      setPersonalExamDate(data.personal_exam_date ?? examDateDraft);
-      setIsEditingExamDate(false);
-      window.dispatchEvent(new Event("norte:profile-updated"));
-      toast.success("Data da prova salva com sucesso.");
-    } catch (error: unknown) {
-      toast.error(error instanceof Error ? error.message : "Não foi possível salvar a data da prova.");
-    } finally {
-      setIsSavingExamDate(false);
-    }
-  };
-  const clearPersonalExamDate = async () => {
-    if (!personalExamDate) {
-      setIsEditingExamDate(false);
-      return;
-    }
-    setIsSavingExamDate(true);
-    try {
-      const { error } = await supabase
-        .from("profiles")
-        .update({ personal_exam_date: null })
-        .eq("id", user.id);
-      if (error) throw error;
-      setPersonalExamDate("");
-      setExamDateDraft(objective?.examDate ?? "");
-      setIsEditingExamDate(false);
-      window.dispatchEvent(new Event("norte:profile-updated"));
-      toast.success(objective?.examDate ? "Data oficial do concurso restaurada." : "Data da prova removida.");
-    } catch (error: unknown) {
-      toast.error(error instanceof Error ? error.message : "Não foi possível remover a data da prova.");
-    } finally {
-      setIsSavingExamDate(false);
-    }
-  };
   return (
     <div className="student-home student-hub student-desk student-overview">
-      <header className="student-hub__masthead student-hub__masthead--careers student-hub__masthead--revamped workspace-banner">
-        <div className="student-hub__hero-layout">
+      <header className="student-hub__masthead student-hub__masthead--careers student-hub__masthead--revamped student-hub__masthead--compact workspace-banner">
+        <div className="student-hub__welcome-layout">
           <div className="student-hub__hero-copy">
             <p className="student-hub__welcome">
               {hello}, {firstName}.
             </p>
             <h1 id="student-home-title">Área do aluno</h1>
-            <p className="student-hub__hero-subtitle">
-              Seu estudo, suas prioridades e sua evolução — tudo em um só lugar.
-            </p>
             <div className="student-hub__masthead-actions">
               <span className="student-hub__date">
                 <CalendarClock aria-hidden="true" />
@@ -386,108 +323,47 @@ function StudentHome({ user }: { user: UserProfile }) {
             </div>
           </div>
 
-          <aside className="student-hub__exam-spotlight" aria-label="Data da prova">
-            <div className="student-hub__exam-spotlight-heading">
-              <span>Data da prova</span>
-              <span className="student-hub__exam-status" data-defined={Boolean(effectiveExamDate)}>
-                {personalExamDate ? "Personalizada" : effectiveExamDate ? "Data oficial" : "A definir"}
-              </span>
-            </div>
-            <p className="student-hub__exam-date">
-              {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Escolha uma data"}
-            </p>
-            <p className="student-hub__exam-countdown">{examCountdown}</p>
-            <section
-              className="student-hub__active-contest"
-              aria-label="Concurso ativo"
-              data-has-objective={Boolean(objective)}
-              data-pc-acre={isPcAcre ? "true" : "false"}
-            >
-              <div className="student-hub__active-contest-heading">
-                <span className="student-hub__active-contest-icon" aria-hidden="true">
-                  <Trophy />
-                </span>
-                <div className="student-hub__active-contest-copy">
-                  <span className="student-hub__active-contest-label">Concurso ativo</span>
-                  <strong>
-                    {objective?.agency ?? "Nenhum concurso selecionado"}
-                  </strong>
-                  <span className="student-hub__active-contest-meta">
-                    {objective
-                      ? `${objective.role} · ${objective.examBoard}`
-                      : "Escolha um concurso para começar sua preparação."}
-                  </span>
-                </div>
-                {isPcAcre && (
-                  <span className="student-hub__acre-flag" aria-label="Acre" role="img" />
+          <section className="student-hub__exam-summary" aria-label="Concurso e prova">
+            <div className="student-hub__contest-summary">
+              <div className="student-hub__contest-heading">
+                {isPcAcre ? (
+                  <span className="student-hub__acre-flag" aria-label="Bandeira do Acre" role="img" />
+                ) : (
+                  <Trophy className="student-hub__contest-icon" size={18} aria-hidden="true" />
                 )}
-              </div>
-              {objective && (
-                <p className="student-hub__active-contest-description">
-                  Gerencie ou altere o concurso em preparação.
-                </p>
-              )}
-              <Link to="/dashboard/my-contest" className="student-hub__contest-action">
-                <span>{objective ? "Trocar concurso" : "Escolher concurso"}</span>
-                <ArrowRight aria-hidden="true" />
-              </Link>
-            </section>
-
-            {!isEditingExamDate ? (
-              <Button
-                type="button"
-                size="default"
-                variant="default"
-                onClick={openExamDateEditor}
-                className="student-hub__exam-action"
-              >
-                <CalendarClock aria-hidden="true" />
-                {personalExamDate
-                  ? "Alterar data da prova"
-                  : effectiveExamDate
-                    ? "Ajustar data da prova"
-                    : "Escolher data da prova"}
-              </Button>
-            ) : (
-              <form onSubmit={savePersonalExamDate} className="student-hub__exam-form">
-                <label htmlFor="student-personal-exam-date">Selecione o dia no calendário</label>
-                <input
-                  id="student-personal-exam-date"
-                  type="date"
-                  required
-                  value={examDateDraft}
-                  onChange={(event) => setExamDateDraft(event.target.value)}
-                />
-                <div className="student-hub__exam-form-actions">
-                  <Button type="submit" size="sm" disabled={isSavingExamDate || !examDateDraft}>
-                    {isSavingExamDate ? "Salvando..." : "Salvar data"}
-                  </Button>
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="outline"
-                    disabled={isSavingExamDate}
-                    onClick={() => setIsEditingExamDate(false)}
-                  >
-                    Cancelar
-                  </Button>
-                  {personalExamDate && (
-                    <Button
-                      type="button"
-                      size="sm"
-                      variant="ghost"
-                      disabled={isSavingExamDate}
-                      onClick={() => void clearPersonalExamDate()}
-                      className="student-hub__exam-clear"
-                    >
-                      {objective?.examDate ? "Usar data oficial" : "Remover data"}
-                    </Button>
+                <div>
+                  <p className="student-hub__summary-label">Concurso ativo</p>
+                  <h2>
+                    {objective?.agency ??
+                      (q.objective.isPending
+                        ? "Carregando…"
+                        : q.objective.isError
+                          ? "Concurso indisponível"
+                          : "Nenhum concurso selecionado")}
+                  </h2>
+                  {objective && (
+                    <p className="student-hub__summary-meta">
+                      {[objective.role, objective.examBoard].filter(Boolean).join(" · ")}
+                    </p>
                   )}
                 </div>
-                <p>A contagem regressiva será atualizada automaticamente após salvar.</p>
-              </form>
+              </div>
+              <Link to="/dashboard/my-contest" className="student-hub__contest-link">
+                {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </div>
+            {objective && (
+              <div className="student-hub__exam-summary-date">
+                <p className="student-hub__summary-label">Data da prova</p>
+                {examDate && days !== null ? (
+                  <time dateTime={examDate}>{formatExamDate(examDate)}</time>
+                ) : (
+                  <strong>A definir</strong>
+                )}
+                {examCountdown && <p className="student-hub__summary-meta">{examCountdown}</p>}
+              </div>
             )}
-          </aside>
+          </section>
         </div>
       </header>
       {!schedule && (

@@ -60,17 +60,8 @@ export function useStudentDashboard(userId: string, planId?: string) {
   const objective = useQuery({
     queryKey: ["student-home", "objective", userId],
     ...settings,
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from("profiles")
-        .select("focused_contest_id")
-        .eq("id", userId)
-        .maybeSingle();
-      if (error) throw error;
-      return data?.focused_contest_id
-        ? ((await MockService.getContestById(data.focused_contest_id)) ?? null)
-        : null;
-    },
+    refetchOnMount: "always",
+    queryFn: async () => (await MockService.getFocusedContest()) ?? null,
   });
   const plans = useQuery({
     queryKey: ["student-home", "plans", userId],

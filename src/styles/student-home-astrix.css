@@ -187,131 +187,6 @@
 }
 
 
-/* Final compact PC-AC pass
-   Keeps the exam card readable without stretching it to the full hero height. */
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__hero-layout {
-  align-items: start !important;
-  grid-template-columns: minmax(0, 1fr) minmax(286px, 326px) !important;
-  gap: 14px !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-> .student-hub__masthead--revamped.workspace-banner {
-  min-height: 0 !important;
-  padding: 12px 16px !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.navigation-v2.student-desk.student-overview
-.student-hub__exam-spotlight,
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__exam-spotlight {
-  align-self: start !important;
-  gap: 7px !important;
-  padding: 12px 14px !important;
-  min-height: 0 !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__exam-date {
-  font-size: clamp(25px, 2vw, 31px) !important;
-  line-height: 1.1 !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__exam-countdown {
-  font-size: 12px !important;
-  line-height: 1.35 !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-objective {
-  margin-top: 5px !important;
-  padding: 8px 9px !important;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-objective[data-pc-acre="true"] {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-objective-copy {
-  min-width: 0;
-  display: grid;
-  gap: 2px;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__acre-flag {
-  position: relative;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 22px;
-  overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 28%);
-  border-radius: 4px;
-  background: #177245;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 22%);
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__acre-flag::before {
-  content: "";
-  position: absolute;
-  inset: 3px 5px;
-  background: #f5cf32;
-  transform: rotate(45deg);
-  border-radius: 1px;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__acre-flag::after {
-  content: "★";
-  position: absolute;
-  top: 1px;
-  left: 3px;
-  color: #c9343f;
-  font-size: 10px;
-  line-height: 1;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__exam-action {
-  min-height: 38px !important;
-  padding: 8px 11px !important;
-  font-size: 11px !important;
-}
-
-@media (max-width: 900px) {
-  .app-shell.navigation-v2[data-area="student"] #dashboard-content
-  .student-home.student-desk.student-overview
-  .student-hub__hero-layout {
-    grid-template-columns: 1fr !important;
-  }
-  .app-shell.navigation-v2[data-area="student"] #dashboard-content
-  .student-home.student-desk.student-overview
-  .student-hub__exam-spotlight {
-    width: 100%;
-  }
-}
-
-
 /* ASTRYX brand pass — stronger Norte Concursos presence in the client shell. */
 .app-shell.navigation-v2[data-area="student"] .student-navigation .app-sidebar__head,
 .app-sheet.student-navigation .app-sidebar__head {
@@ -401,196 +276,181 @@
 }
 
 
-/* ASTRYX active-contest command card. */
+/* ASTRYX student masthead: one row for identity, contest and exam. */
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
-.student-hub__active-contest {
+> .student-hub__masthead--compact.workspace-banner {
+  width: min(100%, 1120px) !important;
+  margin-inline: auto;
+  padding: clamp(10px, 1.3vw, 16px) !important;
+}
+
+.student-hub__masthead--compact .student-hub__welcome-layout {
   display: grid;
-  gap: 8px;
-  margin-top: 2px;
-  padding: 10px 11px;
-  border: 1px solid rgb(91 215 204 / 24%);
-  border-radius: 12px;
-  background:
-    linear-gradient(145deg, rgb(35 65 75 / 76%), rgb(14 25 32 / 92%));
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 8%),
-    0 8px 18px -15px rgb(0 0 0 / 75%);
+  grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
 }
 
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
-.student-hub__active-contest[data-has-objective="false"] {
-  border-style: dashed;
-  border-color: rgb(226 184 102 / 34%);
+.student-hub__masthead--compact .student-hub__hero-copy {
+  max-width: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  backdrop-filter: none;
 }
 
 .app-shell.navigation-v2[data-area="student"] #dashboard-content
 .student-home.student-desk.student-overview
-.student-hub__active-contest-heading {
+.student-hub__masthead--compact h1 {
+  font-size: clamp(24px, 3vw, 34px) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] #dashboard-content
+.student-home.student-desk.student-overview
+.student-hub__masthead--compact .student-hub__masthead-actions {
+  margin-top: 5px !important;
+}
+
+.student-hub__exam-summary {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   min-width: 0;
   align-items: center;
-  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--brass) 30%, var(--border));
+  border-radius: 11px;
+  background: var(--card);
+  color: var(--foreground);
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-icon {
-  display: inline-flex;
-  flex: 0 0 auto;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(226 184 102 / 48%);
-  border-radius: 9px;
-  background: linear-gradient(145deg, rgb(226 184 102 / 22%), rgb(226 184 102 / 7%));
-  color: #f0cb7a;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-icon svg {
-  width: 16px;
-  height: 16px;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-copy {
-  display: grid;
+.student-hub__contest-summary {
+  flex: 1 1 13rem;
   min-width: 0;
-  gap: 2px;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-label {
-  color: #6ee2d8;
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: .12em;
-  line-height: 1.2;
+.student-hub__contest-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.student-hub__contest-heading > div {
+  min-width: 0;
+}
+
+.student-hub__contest-icon {
+  flex: none;
+  color: var(--brass-deep);
+}
+
+.student-hub__exam-summary-date {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding-inline-start: 12px;
+  border-inline-start: 1px solid var(--border);
+}
+
+.student-hub__exam-summary :is(p, h2) {
+  margin: 0;
+}
+
+.student-hub__exam-summary .student-hub__summary-label {
+  color: var(--brass-deep);
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
   text-transform: uppercase;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-copy strong {
-  overflow: hidden;
-  color: #f7f8f5;
-  font-size: 12px;
+.dark .student-hub__exam-summary :is(.student-hub__summary-label, .student-hub__contest-icon) {
+  color: var(--brass);
+}
+
+.student-hub__contest-heading h2 {
+  font-size: .92rem;
   font-weight: 800;
   line-height: 1.25;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-meta {
-  overflow: hidden;
-  color: rgb(228 236 237 / 70%);
-  font-size: 10px;
-  line-height: 1.3;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest-description {
-  margin: 0;
-  color: rgb(235 241 241 / 68%);
-  font-size: 10px;
+.student-hub__exam-summary .student-hub__summary-meta {
+  color: var(--muted-foreground);
+  font-size: .75rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__contest-action {
-  display: flex;
-  width: 100%;
-  min-height: 32px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 1px;
-  padding: 6px 9px;
-  border: 1px solid rgb(91 215 204 / 34%);
-  border-radius: 8px;
-  background: rgb(91 215 204 / 8%);
-  color: #8ae8e0;
-  font-size: 10px;
+.student-hub__exam-summary-date :is(time, strong) {
+  display: block;
+  font-size: 1.18rem;
   font-weight: 800;
-  line-height: 1.2;
-  text-decoration: none;
-  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__contest-action:hover {
-  border-color: rgb(91 215 204 / 70%);
-  background: rgb(91 215 204 / 15%);
-  transform: translateY(-1px);
+.student-hub__contest-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  margin-top: 4px;
+  padding-inline: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--foreground);
+  font-size: .75rem;
+  font-weight: 700;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__contest-action svg {
-  width: 14px;
-  height: 14px;
-  color: #f0cb7a;
+.student-hub__contest-link:hover {
+  border-color: var(--brass);
+  text-decoration: underline;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__acre-flag {
+.student-hub__contest-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.student-hub__exam-summary .student-hub__acre-flag {
   position: relative;
-  flex: 0 0 auto;
-  width: 30px;
+  flex: 0 0 28px;
   height: 20px;
-  overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 28%);
-  border-radius: 4px;
-  background: #177245;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: linear-gradient(to bottom right, #ffdf00 50%, #00843d 50%);
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__acre-flag::before {
-  content: "";
-  position: absolute;
-  inset: 3px 4px;
-  background: #f5cf32;
-  border-radius: 1px;
-  transform: rotate(45deg);
-}
-
-.app-shell.navigation-v2[data-area="student"] #dashboard-content
-.student-home.student-desk.student-overview
-.student-hub__active-contest .student-hub__acre-flag::after {
+.student-hub__exam-summary .student-hub__acre-flag::after {
   content: "★";
   position: absolute;
   top: 1px;
-  left: 2px;
-  color: #c9343f;
+  left: 3px;
+  color: #bf2435;
   font-size: 9px;
   line-height: 1;
 }
 
-@media (max-width: 600px) {
-  .app-shell.navigation-v2[data-area="student"] #dashboard-content
-  .student-home.student-desk.student-overview
-  .student-hub__active-contest {
-    padding: 9px 10px;
+@media (max-width: 760px) {
+  .student-hub__masthead--compact .student-hub__welcome-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
-  .app-shell.navigation-v2[data-area="student"] #dashboard-content
-  .student-home.student-desk.student-overview
-  .student-hub__active-contest-copy strong {
-    font-size: 11px;
+}
+
+@media (max-width: 460px) {
+  .student-hub__exam-summary-date {
+    flex-basis: 100%;
+    padding: 7px 0 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .student-hub__contest-link {
+    min-height: 44px;
   }
 }
