@@ -492,3 +492,41 @@
   outline: 2px solid var(--pcac-brass) !important;
   outline-offset: 2px;
 }
+
+/* Personalized planner preferences and timeline — neutral surfaces, semantic accents. */
+.pcac-schedule__preferences {
+  border-color: var(--pcac-line) !important;
+  background: var(--pcac-panel) !important;
+  color: var(--pcac-ink) !important;
+}
+.pcac-schedule__preferences > summary {
+  color: var(--pcac-ink);
+  list-style-position: inside;
+}
+.pcac-schedule__preferences > p {
+  color: var(--pcac-muted) !important;
+}
+.pcac-schedule__preferences :is(label, p, summary) {
+  overflow-wrap: anywhere;
+}
+.pcac-schedule__preferences input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  accent-color: var(--pcac-green);
+}
+.pcac-schedule__preferences > div {
+  border-color: var(--pcac-line);
+}
+.pcac-schedule .pcac-week-card table {
+  min-width: 720px;
+}
+.pcac-schedule .pcac-week-card table th:first-child { width: 17%; }
+.pcac-schedule .pcac-week-card table th:nth-child(2) { width: 14%; }
+.pcac-schedule .pcac-week-card table th:nth-child(3) { width: 15%; }
+.pcac-schedule .pcac-week-card table th:nth-child(4) { width: 20%; }
+.pcac-schedule .pcac-week-card table th:nth-child(5) { width: 34%; }
+.pcac-schedule .pcac-week-card table td:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
