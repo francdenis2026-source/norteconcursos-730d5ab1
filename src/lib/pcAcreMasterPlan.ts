@@ -335,8 +335,8 @@ export function buildPcAcMasterPlan(
   }
 
   const totalWeeks = ranges.length;
-  const foundationsWeeks = Math.max(1, Math.ceil(totalWeeks * 0.45));
-  const practiceWeeks = totalWeeks <= 2 ? 0 : Math.max(1, Math.ceil(totalWeeks * 0.35));
+  const foundationsWeeks = totalWeeks <= 2 ? 1 : Math.max(1, Math.round(totalWeeks * 0.4));
+  const practiceWeeks = totalWeeks <= 2 ? 0 : Math.max(1, Math.round(totalWeeks * 0.35));
   const nextTopic = createTopicCursor(cargo);
   const weeks: PcAcPlanWeek[] = [];
 
