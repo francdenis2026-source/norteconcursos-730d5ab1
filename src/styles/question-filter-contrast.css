@@ -1,0 +1,80 @@
+/* Question filter contrast: option text must remain readable over the dark command surface. */
+.app-shell[data-area="student"] .trainer-workbench,
+.app-shell[data-area="student"] .trainer-resolution-workspace {
+  --filter-accent: #159f92;
+  --filter-accent-strong: #087d79;
+  --filter-option-text: #17242d;
+  --filter-option-muted: #53636d;
+  --filter-selected-bg: #d8f2ee;
+  --filter-selected-text: #123b3a;
+}
+.dark .app-shell[data-area="student"] .trainer-workbench,
+.dark .app-shell[data-area="student"] .trainer-resolution-workspace {
+  --filter-accent: #61d7c5;
+  --filter-accent-strong: #7ce8d7;
+  --filter-option-text: #edf7f7;
+  --filter-option-muted: #b9cbd0;
+  --filter-selected-bg: #257f84;
+  --filter-selected-text: #ffffff;
+}
+.app-shell[data-area="student"] .trainer-picker-trigger {
+  border-color: color-mix(in srgb, var(--filter-accent) 34%, var(--trainer-line));
+}
+.app-shell[data-area="student"] .trainer-picker-trigger > svg {
+  color: var(--filter-accent-strong);
+}
+.app-shell[data-area="student"] .trainer-picker-trigger:hover,
+.app-shell[data-area="student"] .trainer-picker-trigger[data-state="open"] {
+  border-color: var(--filter-accent-strong);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--filter-accent) 16%, transparent);
+}
+.app-shell[data-area="student"] .trainer-picker-window {
+  background: var(--card);
+  border-color: color-mix(in srgb, var(--filter-accent) 36%, var(--border));
+  box-shadow: 0 24px 70px rgb(0 0 0 / 42%);
+}
+.app-shell[data-area="student"] .trainer-picker-window [cmdk-root] {
+  background: var(--card);
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option {
+  color: var(--filter-option-text);
+  background: transparent;
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option > span {
+  color: inherit;
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option > small {
+  color: var(--filter-option-muted);
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option > svg {
+  color: var(--filter-accent-strong);
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-selected="true"],
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-chosen="true"] {
+  color: var(--filter-selected-text);
+  background: var(--filter-selected-bg);
+  border: 1px solid color-mix(in srgb, var(--filter-accent-strong) 58%, transparent);
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-selected="true"] > small,
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-chosen="true"] > small {
+  color: color-mix(in srgb, var(--filter-selected-text) 78%, transparent);
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-selected="true"] > svg,
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option[data-chosen="true"] > svg {
+  color: currentColor;
+}
+.app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option:focus-visible {
+  outline: 3px solid var(--filter-accent-strong);
+  outline-offset: -3px;
+}
+.app-shell[data-area="student"] .trainer-picker-window [cmdk-input] {
+  color: var(--foreground);
+  caret-color: var(--filter-accent-strong);
+}
+.app-shell[data-area="student"] .trainer-picker-window [cmdk-input]::placeholder {
+  color: var(--filter-option-muted);
+  opacity: 1;
+}
+@media (prefers-contrast: more) {
+  .app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option { border: 1px solid var(--border); }
+}
