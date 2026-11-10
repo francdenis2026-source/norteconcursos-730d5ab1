@@ -9,6 +9,8 @@ export function MaterialStudyTabs({
   textLabel = "Texto-base",
   explanationLabel = "Explicação didática",
   practiceLabel = "Praticar · até 20",
+  showExplanation = true,
+  showPractice = true,
 }: {
   text: ReactNode;
   explanation: ReactNode;
@@ -16,6 +18,8 @@ export function MaterialStudyTabs({
   textLabel?: string;
   explanationLabel?: string;
   practiceLabel?: string;
+  showExplanation?: boolean;
+  showPractice?: boolean;
 }) {
   const [tab, setTab] = useState("text");
   const [visited, setVisited] = useState(() => new Set(["text"]));
@@ -38,25 +42,15 @@ export function MaterialStudyTabs({
         >
           {textLabel}
         </TabsTrigger>
-        <TabsTrigger
-          value="explanation"
-          className="text-xs sm:text-sm data-[state=active]:bg-sky-500/10 data-[state=active]:text-sky-800 dark:data-[state=active]:text-sky-300"
-        >
-          {explanationLabel}
-        </TabsTrigger>
-        <TabsTrigger
-          value="practice"
-          className="text-xs sm:text-sm data-[state=active]:bg-amber-500/10 data-[state=active]:text-amber-900 dark:data-[state=active]:text-amber-200"
-        >
-          {practiceLabel}
-        </TabsTrigger>
+        {showExplanation && <TabsTrigger value="explanation" className="text-xs sm:text-sm data-[state=active]:bg-sky-500/10 data-[state=active]:text-sky-800 dark:data-[state=active]:text-sky-300">{explanationLabel}</TabsTrigger>}
+        {showPractice && <TabsTrigger value="practice" className="text-xs sm:text-sm data-[state=active]:bg-amber-500/10 data-[state=active]:text-amber-900 dark:data-[state=active]:text-amber-200">{practiceLabel}</TabsTrigger>}
       </TabsList>
       {visited.has("text") && (
         <TabsContent forceMount value="text" className="space-y-4 data-[state=inactive]:hidden">
           {text}
         </TabsContent>
       )}
-      {visited.has("explanation") && (
+      {showExplanation && visited.has("explanation") && (
         <TabsContent
           forceMount
           value="explanation"
@@ -65,7 +59,7 @@ export function MaterialStudyTabs({
           {explanation}
         </TabsContent>
       )}
-      {visited.has("practice") && (
+      {showPractice && visited.has("practice") && (
         <TabsContent forceMount value="practice" className="space-y-4 data-[state=inactive]:hidden">
           {practice}
         </TabsContent>

@@ -243,6 +243,8 @@ function MaterialPage() {
       <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
       <MaterialStudyTabs
         key={material.slug}
+        showExplanation={Boolean(material.summary || videos.length > 0 || materialLawSlug(material))}
+        showPractice
         text={
           <>
             {materialLawSlug(material) && (
