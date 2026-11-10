@@ -465,3 +465,14 @@
 .reading-annotations__note textarea { grid-column: 1 / -1; min-height: 4.2rem; width: 100%; resize: vertical; border: 1px solid hsl(var(--border)); border-radius: .65rem; background: hsl(var(--background) / .7); padding: .65rem .75rem; color: hsl(var(--foreground)); font-size: .85rem; }
 .reading-annotations__list { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; color: hsl(var(--muted-foreground)); font-size: .7rem; }
 .reading-annotations__list span { border-radius: .3rem; padding: .18rem .35rem; color: #17202a; font-weight: 700; }
+
+.pcac-material-focus { min-height: 0; align-items: center; padding: 1.05rem 1.2rem; background: linear-gradient(120deg, hsl(54 92% 50% / .12) 0 22%, hsl(var(--card)) 42%, hsl(158 64% 26% / .22)); }
+.pcac-material-focus::after { content: ""; position: absolute; top: -5rem; right: -3rem; width: 15rem; height: 12rem; background: linear-gradient(145deg, hsl(54 92% 50% / .42) 0 48%, hsl(158 64% 26% / .52) 48% 100%); clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%); opacity: .45; pointer-events: none; }
+.pcac-material-focus__body { max-width: 36rem; }
+.pcac-material-focus h2 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+.pcac-material-focus__description { margin-top: .3rem; font-size: .82rem; line-height: 1.4; }
+.pcac-material-focus__meta { margin-top: .55rem; font-size: .68rem; }
+.pcac-material-focus__actions { min-width: 14rem; max-width: 17rem; }
+.pcac-material-focus__disciplines { flex: 1 1 100%; margin-top: .65rem; padding-top: .55rem; gap: .3rem; }
+.pcac-material-focus__discipline { padding: .2rem .45rem; font-size: .64rem; }
+@media (min-width: 900px) { .pcac-material-focus { display: grid; grid-template-columns: minmax(0, 1fr) auto; } .pcac-material-focus__disciplines { grid-column: 1 / -1; } }
