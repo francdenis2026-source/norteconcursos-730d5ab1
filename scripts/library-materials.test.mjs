@@ -83,3 +83,19 @@ test('PC-AC authored true-false items use answerable option syntax for the quest
   assert.equal(parsed.options.map(option => option.letter).join(','), 'A,B');
   assert.equal(parsed.stem.includes('Documentos digitais'), true);
 });
+
+test('PC-AC curriculum links avoid unrelated legal subjects and resolve both target guides', () => {
+  const { findPcAcStudyResource, pcAcStudyResourceUrl } = compile('src/lib/pcAcStudyResources.ts', () => {throw new Error('Unexpected dependency');});
+  assert.equal(findPcAcStudyResource('Arquivologia')?.courseId,'arquivologia');
+  assert.equal(findPcAcStudyResource('Noções de Administração')?.courseId,'administracao-geral');
+  assert.equal(findPcAcStudyResource('Direito Administrativo'),undefined);
+  assert.match(pcAcStudyResourceUrl('arquivologia'),/guia=arquivologia/);
+});
+test('PC-AC editorial source validation rejects credentials, impersonators and unlisted documents', () => {
+  const { isPcAcOfficialStudySource, PCAC_OFFICIAL_EDITAL, DASP_1938_CAMARA } = compile('src/lib/pcAcStudySources.ts', () => {throw new Error('Unexpected dependency');});
+  assert.equal(isPcAcOfficialStudySource(PCAC_OFFICIAL_EDITAL),true);
+  assert.equal(isPcAcOfficialStudySource(DASP_1938_CAMARA),true);
+  assert.equal(isPcAcOfficialStudySource('https://www.gov.br.attacker.example/conarq/pt-br/legislacao-arquivistica/'),false);
+  assert.equal(isPcAcOfficialStudySource('https://user:secret@www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/'),false);
+  assert.equal(isPcAcOfficialStudySource('https://agencia.ac.gov.br/wp-content/uploads/2025/11/unknown.pdf'),false);
+});
