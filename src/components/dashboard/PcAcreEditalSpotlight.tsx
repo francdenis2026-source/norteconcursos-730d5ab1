@@ -8,7 +8,7 @@ import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ScanSe
 export function PcAcreEditalSpotlight() {
   return (
     <section
-      className="pcpr-spot pcpr-spot--notice pcpr-spot--book pcpr-spot--pcac no-print"
+      className="pcpr-spot pcpr-spot--notice pcpr-spot--book pcpr-spot--pcac pcpr-spot--dashboard no-print"
       aria-label="Edital verticalizado da Polícia Civil do Acre"
     >
       <div className="pcpr-spot__art-frame">
@@ -28,9 +28,9 @@ export function PcAcreEditalSpotlight() {
           <p>139 vagas, 6 cargos · Marque o que já estudou e exporte em PDF.</p>
         </div>
         <div className="pcpr-spot__actions">
-          <Link to="/dashboard/inteligencia-idecan" className="pcpr-spot__cta pcpr-spot__cta--ghost">
-            <ScanSearch aria-hidden="true" />
-            Radar IDECAN
+          <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta">
+            <CheckSquare aria-hidden="true" />
+            Abrir edital <ArrowRight aria-hidden="true" />
           </Link>
           <Link
             to="/dashboard/pc-acre-edital"
@@ -40,18 +40,23 @@ export function PcAcreEditalSpotlight() {
             <CalendarClock aria-hidden="true" />
             Cronograma de estudos
           </Link>
-          <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta">
-            <CheckSquare aria-hidden="true" />
-            Abrir agora <ArrowRight aria-hidden="true" />
-          </Link>
           <a href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf" target="_blank" rel="noreferrer" className="pcpr-spot__cta pcpr-spot__cta--ghost">
             <Download aria-hidden="true" />
             PDF do edital
           </a>
-          <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} className="pcpr-spot__cta pcpr-spot__cta--ghost">
-            <BookOpenCheck aria-hidden="true" />
-            Edital digital
-          </Link>
+          <details className="pcpr-spot__more">
+            <summary>Mais opções</summary>
+            <div className="pcpr-spot__more-menu">
+              <Link to="/dashboard/inteligencia-idecan" className="pcpr-spot__cta pcpr-spot__cta--ghost">
+                <ScanSearch aria-hidden="true" />
+                Radar IDECAN
+              </Link>
+              <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} className="pcpr-spot__cta pcpr-spot__cta--ghost">
+                <BookOpenCheck aria-hidden="true" />
+                Edital digital
+              </Link>
+            </div>
+          </details>
         </div>
       </div>
     </section>

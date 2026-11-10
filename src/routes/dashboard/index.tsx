@@ -11,6 +11,7 @@ import "@/styles/student-adaptive-agenda.css";
 import "@/styles/student-overview-card-refinement.css";
 import "@/styles/student-home-hero-rework.css";
 import "@/styles/student-dashboard-professional-refinement.css";
+import "@/styles/student-home-astrix.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -376,9 +377,6 @@ function StudentHome({ user }: { user: UserProfile }) {
                 }).format(now)}
                 <small>Acre</small>
               </span>
-              <Link to="/dashboard/performance">
-                Meu desempenho <ArrowRight aria-hidden="true" />
-              </Link>
             </div>
           </div>
 
