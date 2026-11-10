@@ -258,8 +258,8 @@ export function PcAcCronogramaCard({
         <h2><CalendarClock aria-hidden="true" /> Seu cronograma</h2>
         <p>{daysLeft} dias até a prova · {cfg.weeklyHours}h por semana · {cfg.days.length} dias de estudo</p>
         <nav aria-label="Exportar cronograma">
-          <AstryxButton label="Exportar PDF" size="sm" variant="primary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !!startError || exporting} />
-          <AstryxButton label="PDF Norte + QR" size="sm" icon={<Download />} clickAction={exportBrandedPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
+          <AstryxButton label="Exportar PDF" size="sm" variant="secondary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !!startError || exporting} />
+          <AstryxButton label="PDF Norte + QR" size="sm" variant="primary" icon={<Download />} clickAction={exportBrandedPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
         </nav>
       </header>
       {exportError && <p role="alert">{exportError}</p>}
