@@ -66,18 +66,18 @@ test('PC-AC revised study collection has 27 original lessons, links into the lib
   const library = readFileSync('src/routes/dashboard/library.index.tsx', 'utf8');
   const disciplines = readFileSync('src/routes/dashboard/disciplinas.tsx', 'utf8');
   const progress = readFileSync('src/lib/useStudyGuideProgress.ts', 'utf8');
-  const numberOfLessons = (base.match(/\\{title:"\\d{2} ·/g) || []).length
-    + (supplement.match(/\\{title:"\\d{2} ·/g) || []).length;
+  const numberOfLessons = (base.match(/\{title:"\d{2} ·/g) || []).length
+    + (supplement.match(/\{title:"\d{2} ·/g) || []).length;
   assert.equal(numberOfLessons, 27);
-  assert.match(base, /useStudyGuideProgress\\(storageScope\\)/);
-  assert.match(library, /UpdatedStudyCollections initialCourseId=\\{guia\\}/);
-  assert.match(disciplines, /guia:item\\.id/);
+  assert.match(base, /useStudyGuideProgress\(storageScope\)/);
+  assert.match(library, /UpdatedStudyCollections initialCourseId=\{guia\}/);
+  assert.match(disciplines, /guia:item\.id/);
   assert.match(progress, /study_guide_progress/);
   assert.match(progress, /onConflict:"user_id,guide_id,lesson_key"/);
 });
 
 test('PC-AC authored true-false items use answerable option syntax for the question trainer', () => {
-  const parsed = format.parseQuestion('Julgue a afirmação (questão autoral): Documentos digitais podem ser arquivísticos.\\n\\n(A) Certo\\n(B) Errado');
+  const parsed = format.parseQuestion('Julgue a afirmação (questão autoral): Documentos digitais podem ser arquivísticos.\n\n(A) Certo\n(B) Errado');
   assert.deepEqual(parsed.options.map(option => option.letter), ['A', 'B']);
   assert.equal(parsed.stem.includes('Documentos digitais'), true);
 });
