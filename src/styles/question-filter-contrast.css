@@ -78,3 +78,38 @@
 @media (prefers-contrast: more) {
   .app-shell[data-area="student"] .trainer-picker-window .trainer-picker-option { border: 1px solid var(--border); }
 }
+
+/* Expanded filter containment: keep the setup inside the usable viewport while
+   allowing the complete filter list to remain reachable by keyboard and touch. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified,
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-more {
+  min-width: 0;
+  max-width: 100%;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup__unified {
+  overflow: visible;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-more[open] {
+  max-height: min(520px, calc(100dvh - 230px));
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scroll-margin-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-more[open] > div {
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-more[open] {
+    max-height: min(460px, calc(100dvh - 205px));
+    margin-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-more[open] {
+    scroll-behavior: auto;
+  }
+}
