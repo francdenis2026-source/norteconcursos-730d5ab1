@@ -891,8 +891,87 @@ body.light #ranking-destaque-mobile .home-ranking__card[data-medal="1"],
 }
 
 :root:not(.dark) #ranking-destaque-mobile .home-ranking__avatar,
-html.light #ranking-destaude-mobile .home-ranking__avatar {
+html.light #ranking-destaque-mobile .home-ranking__avatar {
   color: #936b28;
   background: #f8f0df;
   border-color: #e6d2a8;
+}
+
+
+/* PC-AC edital banner: compact and fully visible in the mobile homepage. */
+@media (max-width: 760px) {
+  .home.hr-canvas .mobile-homepage .sx-banner-wrap {
+    width: min(100% - 32px, 560px);
+    max-width: 560px;
+    margin-inline: auto;
+    padding-top: 14px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 15px 14px;
+    border-radius: 16px;
+    background: #111a24;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__art {
+    object-position: 72% center;
+    opacity: .34;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__crest {
+    display: block;
+    width: 52px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__copy {
+    width: 100%;
+    max-width: none;
+    gap: 8px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner h2 {
+    font-size: clamp(19px, 5.8vw, 23px);
+    line-height: 1.12;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px 0 2px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__facts dd {
+    font-size: 16px;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner__facts dt {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner .sx-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 2px !important;
+  }
+
+  .home.hr-canvas .mobile-homepage .sx-banner .sx-btn {
+    width: 100%;
+    min-height: 40px;
+    flex: none;
+    font-size: 12px;
+  }
 }
