@@ -346,18 +346,26 @@ export function buildPcAcMasterPlan(
       : weekIndex < foundationsWeeks + practiceWeeks ? "pratica" : "revisao";
     const tafDays = opts.includeTaf ? (opts.tafDays ?? [2, 4, 6]) : [];
     const dates: Date[] = [];
-    for (let date = from; date.getTime() <= to.getTime(); date = addDays(date, 1)) {
-      const weekday = weekdayOf(date);
-      if (days.includes(weekday) || tafDays.includes(weekday)) dates.push(date);
-    }
+    for (let date = from; date.getTime() <= to.getTime(); date = addDays(date, 1)) dates.push(date);
     const studyDates = dates.filter((date) => days.includes(weekdayOf(date)));
     const lastStudyTimestamp = studyDates.at(-1)?.getTime();
 
     const weekDays = dates.map((date) => {
       const weekday = weekdayOf(date);
       const isStudyDay = days.includes(weekday);
+      const isTafDay = opts.includeTaf && tafDays.includes(weekday);
       const totalForDay = minutesFor(weekday);
       const isLastStudyDay = isStudyDay && date.getTime() === lastStudyTimestamp;
+      if (!isStudyDay && !isTafDay) {
+        return {
+          date: toIso(date),
+          weekday,
+          activities: [{
+            type: "descanso" as const,
+            detail: "Dia reservado para recuperação, sono, lazer e organização da próxima semana. Não é necessário compensar horas de estudo.",
+          }],
+        };
+      }
       const special = isStudyDay ? specialTasks(cargo, weekIndex, isLastStudyDay, totalForDay) : [];
       const coreMinutes = Math.max(0, totalForDay - special.reduce((sum, task) => sum + task.minutes, 0));
       const tasks = [...learningTasks(coreMinutes, phase, nextTopic), ...special];
