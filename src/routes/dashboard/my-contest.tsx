@@ -1,5 +1,6 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
 import { Calendar, ChevronRight, FileText } from "lucide-react";
 import { useAuthStatus, useDashboardData } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
