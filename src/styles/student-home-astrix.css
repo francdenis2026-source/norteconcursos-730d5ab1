@@ -538,3 +538,135 @@
     grid-column: auto;
   }
 }
+
+
+/* PC-AC spotlight: independent of the exam banners and their floating menus. */
+.student-pcac-spotlight {
+  --pcac-gold: #805500;
+  --pcac-green: #176740;
+  --pcac-blue: #285c96;
+  --pcac-rose: #963a4c;
+  display: grid;
+  grid-template: "cover copy flag" auto "cover actions actions" auto / 44px minmax(0, 1fr) auto;
+  align-items: center;
+  min-width: 0;
+  gap: 7px 10px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--pcac-gold) 35%, var(--border));
+  border-inline-start: 3px solid var(--pcac-green);
+  border-radius: 12px;
+  background: linear-gradient(110deg, color-mix(in srgb, var(--pcac-gold) 6%, var(--card)), var(--card) 70%);
+  color: var(--foreground);
+}
+
+.dark .student-pcac-spotlight {
+  --pcac-gold: #f1cb75;
+  --pcac-green: #82dfad;
+  --pcac-blue: #9cc8fa;
+  --pcac-rose: #f3a4b0;
+}
+
+.student-pcac-spotlight__cover {
+  grid-area: cover;
+  align-self: start;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.student-pcac-spotlight__copy {
+  grid-area: copy;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.student-pcac-spotlight__copy h3 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: .95rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.student-pcac-spotlight__copy p {
+  margin: 3px 0 0;
+  color: var(--muted-foreground);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.student-pcac-spotlight__flag {
+  grid-area: flag;
+  display: block;
+  width: clamp(36px, 5vw, 64px);
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.student-pcac-spotlight__actions {
+  grid-area: actions;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 6px;
+}
+
+.student-pcac-spotlight__actions a {
+  --pcac-action: var(--pcac-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  max-width: 100%;
+  padding: 5px 8px;
+  border: 1px solid color-mix(in srgb, var(--pcac-action) 30%, var(--border));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--pcac-action) 6%, var(--card));
+  color: var(--foreground);
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.student-pcac-spotlight__actions a[data-tone="gold"] {
+  background: color-mix(in srgb, var(--pcac-gold) 14%, var(--card));
+}
+
+.student-pcac-spotlight__actions a[data-tone="green"] { --pcac-action: var(--pcac-green); }
+.student-pcac-spotlight__actions a[data-tone="blue"] { --pcac-action: var(--pcac-blue); }
+.student-pcac-spotlight__actions a[data-tone="rose"] { --pcac-action: var(--pcac-rose); }
+
+.student-pcac-spotlight__actions a:hover {
+  border-color: var(--pcac-action);
+  text-decoration: underline;
+}
+
+.student-pcac-spotlight__actions a:focus-visible {
+  outline: 2px solid var(--pcac-action);
+  outline-offset: 2px;
+}
+
+.student-pcac-spotlight__actions svg {
+  flex: 0 0 15px;
+  width: 15px;
+  height: 15px;
+  color: var(--pcac-action);
+}
+
+.student-pcac-spotlight__actions span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .student-pcac-spotlight {
+    grid-template: "cover copy flag" auto "actions actions actions" auto / 30px minmax(0, 1fr) auto;
+    padding: 8px;
+  }
+
+  .student-pcac-spotlight__actions a {
+    min-height: 44px;
+  }
+}

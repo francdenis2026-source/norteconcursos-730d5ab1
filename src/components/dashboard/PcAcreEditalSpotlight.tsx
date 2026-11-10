@@ -1,64 +1,63 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenCheck, CalendarClock, CheckSquare, Download, ScanSearch } from "lucide-react";
+import { ArrowRight, BookOpenText, CalendarDays, Download, ListChecks, ScanSearch } from "lucide-react";
 
-/** Destaque do edital verticalizado da PC-AC logo no topo da área do aluno, para acesso
- * imediato — reaproveita o padrão visual do spotlight de prova (ver PcprExamSpotlight). Os
- * botões extras levam direto ao raio-X da banca (IDECAN) e ao cronograma de estudos, ambos
- * dentro da própria área do edital verticalizado. */
 export function PcAcreEditalSpotlight() {
   return (
-    <section
-      className="pcpr-spot pcpr-spot--notice pcpr-spot--book pcpr-spot--pcac pcpr-spot--dashboard no-print"
-      aria-label="Edital verticalizado da Polícia Civil do Acre"
-    >
-      <div className="pcpr-spot__art-frame">
-        <img
-          className="pcpr-spot__art"
-          src="/media/editais/edital-pcac-001-2026-capa.jpg"
-          alt="Capa do Edital PC-AC 001/2026"
-          width={180}
-          height={254}
-          loading="lazy"
-          decoding="async"
-        />
+    <article className="student-pcac-spotlight no-print" aria-labelledby="student-pcac-spotlight-title">
+      <img
+        className="student-pcac-spotlight__cover"
+        src="/media/editais/edital-pcac-001-2026-capa.jpg"
+        alt=""
+        width={180}
+        height={254}
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="student-pcac-spotlight__copy">
+        <h3 id="student-pcac-spotlight-title">PC-AC 2026 · Edital verticalizado</h3>
+        <p>139 vagas em 6 cargos. Acompanhe o que já estudou e exporte seu progresso em PDF.</p>
       </div>
-      <div className="pcpr-spot__summary">
-        <div>
-          <h2 className="flex items-center gap-2"><span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-amber-300/60 bg-amber-400/15 text-amber-300" aria-hidden="true"><BookOpenCheck className="h-4 w-4" /></span><span>PC-AC 2026 · Edital verticalizado</span></h2>
-          <p>139 vagas, 6 cargos · Marque o que já estudou e exporte em PDF.</p>
-        </div>
-        <div className="pcpr-spot__actions">
-          <Link to="/dashboard/pc-acre-edital" className="pcpr-spot__cta">
-            <CheckSquare aria-hidden="true" />
-            Abrir edital <ArrowRight aria-hidden="true" />
-          </Link>
-          <Link
-            to="/dashboard/pc-acre-edital"
-            hash="pcac-cronograma"
-            className="pcpr-spot__cta pcpr-spot__cta--ghost"
-          >
-            <CalendarClock aria-hidden="true" />
-            Cronograma de estudos
-          </Link>
-          <a href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf" target="_blank" rel="noreferrer" className="pcpr-spot__cta pcpr-spot__cta--ghost">
-            <Download aria-hidden="true" />
-            PDF do edital
-          </a>
-          <details className="pcpr-spot__more">
-            <summary>Mais opções</summary>
-            <div className="pcpr-spot__more-menu">
-              <Link to="/dashboard/inteligencia-idecan" className="pcpr-spot__cta pcpr-spot__cta--ghost">
-                <ScanSearch aria-hidden="true" />
-                Radar IDECAN
-              </Link>
-              <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} className="pcpr-spot__cta pcpr-spot__cta--ghost">
-                <BookOpenCheck aria-hidden="true" />
-                Edital digital
-              </Link>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
+      {/* Bandeira do Acre, conforme a referência visual do Wikimedia Commons. */}
+      <svg
+        className="student-pcac-spotlight__flag"
+        viewBox="0 0 500 350"
+        width={500}
+        height={350}
+        role="img"
+        aria-label="Bandeira do Acre"
+      >
+        <path fill="#ffdf00" d="M0 0h500L0 350z" />
+        <path fill="#009b3a" d="M500 0v350H0z" />
+        <path fill="#ce1126" d="m83 40 9 26h27L97 82l8 26-22-16-22 16 8-26-22-16h27z" />
+      </svg>
+      <nav className="student-pcac-spotlight__actions" aria-label="Ações do edital PC-AC 2026">
+        <Link to="/dashboard/pc-acre-edital" data-tone="gold">
+          <ListChecks aria-hidden="true" />
+          <span>Abrir edital</span>
+          <ArrowRight aria-hidden="true" />
+        </Link>
+        <Link to="/dashboard/pc-acre-edital" hash="pcac-cronograma" data-tone="green">
+          <CalendarDays aria-hidden="true" />
+          <span>Cronograma de estudos</span>
+        </Link>
+        <Link to="/dashboard/inteligencia-idecan" data-tone="blue">
+          <ScanSearch aria-hidden="true" />
+          <span>Radar IDECAN</span>
+        </Link>
+        <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} data-tone="green">
+          <BookOpenText aria-hidden="true" />
+          <span>Edital digital</span>
+        </Link>
+        <a
+          href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf"
+          target="_blank"
+          rel="noreferrer"
+          data-tone="rose"
+        >
+          <Download aria-hidden="true" />
+          <span>PDF do edital</span>
+        </a>
+      </nav>
+    </article>
   );
 }
