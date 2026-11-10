@@ -71,6 +71,7 @@ import {
   PCAC_PHASE_LABEL,
   buildPcAcFinalDays,
   buildPcAcMasterPlan,
+  pcAcDaysBetween,
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
 import "@/styles/pcac-edital.css";
@@ -444,20 +445,24 @@ function PcAcCronogramaCard({
     return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
   }, []);
   const effectiveStartDate = cfg.startDate || todayKey;
-  const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
+  const daysLeft = pcAcDaysBetween(todayKey, PCAC_EXAM_DATE);
+  const effectiveCfg = React.useMemo(() => ({ ...cfg, startDate: effectiveStartDate }), [cfg, effectiveStartDate]);
+  const startError = effectiveStartDate >= PCAC_EXAM_DATE ? "A data inicial precisa ser anterior à prova." : "";
 
   const weeks = React.useMemo(
-    () => (showDetailedPlan ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, new Date(`${effectiveStartDate}T12:00:00`)) : []),
-    [showDetailedPlan, cfg.days, effectiveStartDate],
+    () => (showDetailedPlan && !startError
+      ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, { startDate: effectiveStartDate, startTime: cfg.startTime, weeklyHours: cfg.weeklyHours })
+      : []),
+    [showDetailedPlan, startError, cfg.days, cfg.startTime, cfg.weeklyHours, effectiveStartDate],
   );
-  const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
+  const finalDays = React.useMemo(() => buildPcAcFinalDays(PCAC_EXAM_DATE, effectiveStartDate), [effectiveStartDate]);
   const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
   const exportPdf = async () => {
     setExporting(true);
     try {
       const { generatePcAcCronogramaPdf } = await import("@/lib/pcAcreCronogramaPdf");
-      await generatePcAcCronogramaPdf({ cargo, cfg, grid, weeks, finalDays });
+      await generatePcAcCronogramaPdf({ cargo, cfg: effectiveCfg, grid, weeks, finalDays });
     } finally {
       setExporting(false);
     }
@@ -479,8 +484,8 @@ function PcAcCronogramaCard({
         events: week.days.flatMap((day) => day.activities.map((activity, index) => ({
           id: `${day.date}-${index}`,
           date: day.date,
-          start: cfg.startTime,
-          end: cfg.startTime,
+          start: activity.start ?? cfg.startTime,
+          end: activity.end ?? cfg.startTime,
           kind: activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : "descanso",
           ...(activity.subject ? { discipline: activity.subject } : {}),
           ...(activity.topic ? { topic: activity.topic } : {}),
@@ -551,6 +556,7 @@ function PcAcCronogramaCard({
               max={PCAC_EXAM_DATE}
               onChange={(e) => e.target.value && update({ startDate: e.target.value })}
             />
+            {startError && <p role="alert" className="text-xs text-destructive">{startError}</p>}
           </div>
           <div className="space-y-1.5">
             <Label>Começo do estudo</Label>
@@ -704,6 +710,7 @@ function PcAcCronogramaCard({
                                           )}
                                           <td className="border-t px-2.5 py-1.5 font-semibold text-primary">
                                             {PCAC_ACTIVITY_LABEL[activity.type]}
+                                            {activity.start && <span className="block font-normal text-muted-foreground">{activity.start}–{activity.end}</span>}
                                           </td>
                                           <td className="border-t px-2.5 py-1.5 text-foreground/90">
                                             {activity.subject ?? "—"}
@@ -792,7 +799,7 @@ function PcAcreEditalVerticalizadoPage() {
     const timer = window.setInterval(() => setClockNow(new Date()), 1_000);
     return () => window.clearInterval(timer);
   }, []);
-  const examDate = new Date("2027-01-24T00:00:00-03:00");
+  const examDate = new Date(`${PCAC_EXAM_DATE}T00:00:00-05:00`);
   const remainingMs = Math.max(0, examDate.getTime() - clockNow.getTime());
   const daysToExam = Math.floor(remainingMs / 86_400_000);
   const hoursToExam = Math.floor((remainingMs % 86_400_000) / 3_600_000);

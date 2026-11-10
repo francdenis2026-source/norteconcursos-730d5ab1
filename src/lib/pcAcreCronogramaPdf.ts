@@ -342,7 +342,7 @@ function drawActivityRow(doc: jsPDF, day: PcAcPlanDay, activity: PcAcPlanDay["ac
   const topicLines = doc.splitTextToSize(topicText, TOPIC_COL_W - 10);
   const subjectLines = doc.splitTextToSize(activity.subject ?? "—", SUBJECT_COL_W - 10);
   const lineCount = Math.max(topicLines.length, subjectLines.length, 1);
-  const rowH = Math.max(15, lineCount * 9.5 + 6);
+  const rowH = Math.max(activity.start ? 24 : 15, lineCount * 9.5 + 6);
 
   if (zebra) {
     doc.setFillColor(...ROW_ALT);
@@ -354,6 +354,7 @@ function drawActivityRow(doc: jsPDF, day: PcAcPlanDay, activity: PcAcPlanDay["ac
   doc.text(`${WEEKDAY_NAMES[day.weekday]!.slice(0, 3)} ${fmtDate(day.date)}`, DAY_COL_X + 6, y + 10.5);
   doc.setTextColor(...GOLD_DEEP);
   doc.text(PCAC_ACTIVITY_LABEL[activity.type], TYPE_COL_X + 6, y + 10.5);
+  if (activity.start) { doc.setFont("helvetica", "normal"); doc.setFontSize(6.5); doc.text(`${activity.start}–${activity.end}`, TYPE_COL_X + 6, y + 19); doc.setFontSize(7.5); }
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...INK);
   doc.text(subjectLines, SUBJECT_COL_X + 6, y + 10.5);
