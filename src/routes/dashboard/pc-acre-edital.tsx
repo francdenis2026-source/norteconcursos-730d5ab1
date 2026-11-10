@@ -1021,7 +1021,30 @@ function PcAcreEditalVerticalizadoPage() {
   }
 
   return (
-    <div className="pcac-edital-page space-y-5 pb-10">
+    <div className={`pcac-edital-page space-y-5 pb-10${editalTab === "cronograma" ? " pcac-schedule-focus" : ""}`}>
+      {editalTab === "cronograma" ? (
+        <div className="pcac-schedule-toolbar" aria-label="Concurso e cargo selecionados">
+          <div className="pcac-schedule-toolbar__identity">
+            <svg viewBox="0 0 50 35" role="img" aria-label="Bandeira do Acre">
+              <rect width="50" height="35" fill="#f5da25" />
+              <path d="M0 35L50 0V35Z" fill="#078348" />
+              <path d="M11 3.8l1.9 5.8h6.1l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8-4.9-3.6h6.1Z" fill="#ce2935" />
+            </svg>
+            <span><strong>PC-AC 2026</strong><small>Planejamento de estudos</small></span>
+          </div>
+          <label className="pcac-schedule-toolbar__selector">
+            <span>Cargo selecionado</span>
+            <select
+              value={cargo.id}
+              aria-label="Selecionar cargo para o cronograma"
+              onChange={(event) => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: event.target.value as PcAcVerticalCargoId } })}
+            >
+              {pcAcVerticalCargos.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+            </select>
+          </label>
+        </div>
+      ) : (
+      <>
       <PageHero
         className="pcac-astrix-edital-hero"
         image="careers-team"
@@ -1123,6 +1146,8 @@ function PcAcreEditalVerticalizadoPage() {
           })}
         </CardContent>
       </Card>
+      </>
+      )}
 
       <Tabs value={editalTab} onValueChange={setEditalTab} className="pcac-edital-tabs">
         <TabsList className="pcac-edital-tabs__list" aria-label="Seções do edital verticalizado">
