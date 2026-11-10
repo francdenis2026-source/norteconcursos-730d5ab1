@@ -7,6 +7,7 @@ import "@/styles/student-hub-refresh.css";
 import "@/styles/student-home-premium.css";
 import "@/styles/student-home-navigation-refinement.css";
 import "@/styles/student-dashboard-premium.css";
+import "@/styles/student-adaptive-agenda.css";
 import "@/styles/student-overview-card-refinement.css";
 import "@/styles/student-home-hero-rework.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
@@ -41,6 +42,7 @@ import {
   dashboardSchedule,
   daysToExam,
 } from "@/lib/studentDashboard";
+import { canonicalDiscipline } from "@/lib/cronograma";
 import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
@@ -204,6 +206,25 @@ function StudentHome({ user }: { user: UserProfile }) {
     plan && plan.id === selectedId && validDashboardConfig(plan.config) && q.progress.isSuccess
       ? dashboardSchedule(plan.config, q.progress.data, day)
       : null;
+  const adaptiveAgenda = React.useMemo(() => {
+    if (!schedule || !stats) return null;
+    const subjectStats = new Map(stats.subjects.map((s) => [canonicalDiscipline(s.subject), s]));
+    const ranked = schedule.blocks
+      .map((block) => ({ block, stat: subjectStats.get(canonicalDiscipline(block.nome)) }))
+      .sort((a, b) => (a.stat?.accuracy ?? 101) - (b.stat?.accuracy ?? 101));
+    const focus = ranked.find((item) => item.stat && item.stat.total >= 3 && item.stat.accuracy < 70);
+    if (focus?.stat) {
+      return {
+        tone: "focus" as const,
+        title: `Prioridade de hoje: ${focus.block.nome}`,
+        text: `${focus.stat.accuracy}% de acerto em ${focus.stat.total} questões. Comece por este bloco e revise os erros ao final.`,
+      };
+    }
+    const first = ranked[0];
+    return first
+      ? { tone: "next" as const, title: `Próximo foco: ${first.block.nome}`, text: "Siga o bloco previsto e registre teoria e questões no painel do dia." }
+      : null;
+  }, [schedule, stats]);
   const objective = q.objective.data;
   const effectiveExamDate = personalExamDate || objective?.examDate || undefined;
   const days = daysToExam(effectiveExamDate, today);
@@ -647,6 +668,15 @@ function StudentHome({ user }: { user: UserProfile }) {
                       </h3>
                       <span>Horários previstos · Acre</span>
                     </div>
+                    {adaptiveAgenda && (
+                      <div className={`student-home__adaptive-agenda student-home__adaptive-agenda--${adaptiveAgenda.tone}`}>
+                        <Target aria-hidden="true" />
+                        <div>
+                          <strong>{adaptiveAgenda.title}</strong>
+                          <small>{adaptiveAgenda.text}</small>
+                        </div>
+                      </div>
+                    )}
                     {schedule.blocks.length ? (
                       <ol className="student-home__blocks">
                         {schedule.blocks.slice(0, 4).map((block, i) => (

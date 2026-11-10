@@ -1,0 +1,11 @@
+.student-home__adaptive-agenda { display:flex; align-items:flex-start; gap:10px; margin:12px 0; padding:11px 12px; border:1px solid; border-radius:12px; }
+.student-home__adaptive-agenda svg { width:17px; height:17px; flex:none; margin-top:2px; }
+.student-home__adaptive-agenda strong, .student-home__adaptive-agenda small { display:block; }
+.student-home__adaptive-agenda strong { font-size:12px; line-height:1.35; }
+.student-home__adaptive-agenda small { margin-top:3px; font-size:11px; line-height:1.45; color:var(--muted-foreground); }
+.student-home__adaptive-agenda--focus { border-color:rgb(244 63 94 / .35); background:linear-gradient(135deg,rgb(244 63 94 / .1),rgb(245 158 11 / .07)); color:rgb(159 18 57); }
+.student-home__adaptive-agenda--focus svg { color:rgb(225 29 72); }
+.student-home__adaptive-agenda--next { border-color:rgb(14 165 233 / .28); background:linear-gradient(135deg,rgb(14 165 233 / .08),rgb(20 184 166 / .06)); color:rgb(3 105 161); }
+.student-home__adaptive-agenda--next svg { color:rgb(2 132 199); }
+.dark .student-home__adaptive-agenda--focus { color:#fecdd3; background:rgb(159 18 57 / .2); }
+.dark .student-home__adaptive-agenda--next { color:#bae6fd; background:rgb(3 105 161 / .2); }
