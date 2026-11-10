@@ -257,36 +257,47 @@
   padding: 5px;
   scrollbar-width: none;
 }
+/* Section navigation belongs to page flow, never a floating sticky strip. */
 .pcac-edital-tabs__list {
-  position: sticky;
-  top: calc(var(--app-topbar-h, 72px) + 10px);
-  z-index: 10;
+  position: static;
+  top: auto;
+  z-index: auto;
   display: flex;
-  gap: 5px;
-  width: 100%;
+  align-items: center;
   justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  gap: 7px;
   overflow-x: auto;
-  border: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
-  border-radius: 13px;
-  background: color-mix(in srgb, var(--card) 92%, transparent);
-  padding: 5px;
-  box-shadow: 0 10px 22px -18px rgb(0 0 0 / 50%);
-  backdrop-filter: blur(14px);
+  border: 1px solid #3c4752;
+  border-radius: 12px;
+  padding: 6px;
+  background: #232d37;
+  box-shadow: none;
+  backdrop-filter: none;
   scrollbar-width: none;
 }
 .pcac-edital-tabs__list::-webkit-scrollbar { display: none; }
 .pcac-edital-tabs__list [role="tab"] {
+  display: inline-flex;
   flex: 0 0 auto;
-  min-height: 38px;
-  border-radius: 9px;
-  color: var(--muted-foreground);
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 13px;
+  color: #d2d9e2;
   font-size: 12px;
-  font-weight: 750;
+  font-weight: 760;
 }
 .pcac-edital-tabs__list [role="tab"][data-state="active"] {
-  color: var(--foreground);
-  background: var(--card);
-  box-shadow: 0 3px 10px rgb(0 0 0 / 12%);
+  color: #1b2026;
+  background: #e8bb6b;
+  border-color: #e8bb6b;
+  box-shadow: none;
 }
 .pcac-cronograma-tabs__list::-webkit-scrollbar { display: none; }
 .pcac-cronograma-tabs__list [role="tab"] {
@@ -498,4 +509,182 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .pcac-schedule-focus *, .pcac-schedule-focus *::before, .pcac-schedule-focus *::after { transition-duration: 0ms !important; }
+}
+
+
+/* Astryx editorial v2: compact PC-AC navigation and collapsible study brief.
+   Explicitly scoped to this page to protect the remaining student platform. */
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page {
+  --ax-pcac-panel: #1b222b;
+  --ax-pcac-card: #202831;
+  --ax-pcac-line: #35414d;
+  --ax-pcac-text: #e9eef3;
+  --ax-pcac-muted: #bac6d1;
+  --ax-pcac-resumo: #edbf6b;
+  --ax-pcac-conteudo: #8bc4e9;
+  --ax-pcac-cronograma: #7acfae;
+  --ax-pcac-leis: #c1a4ee;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list {
+  position: static !important;
+  top: auto !important;
+  transform: none !important;
+  inset: auto !important;
+  flex: 0 0 auto;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  margin: 0;
+  padding: 6px;
+  gap: 7px;
+  border: 1px solid #4a5661;
+  border-radius: 12px;
+  background: #27313d;
+  box-shadow: inset 0 1px 0 #ffffff0a;
+  backdrop-filter: none;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"] {
+  --ax-tab: var(--ax-pcac-resumo);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  min-height: 37px;
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #ffffff08;
+  color: #cdd7e1;
+  font-size: 12px;
+  font-weight: 770;
+  letter-spacing: .005em;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: color 170ms ease, background-color 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(1) { --ax-tab: var(--ax-pcac-resumo); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(2) { --ax-tab: var(--ax-pcac-conteudo); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(3) { --ax-tab: var(--ax-pcac-cronograma); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(4) { --ax-tab: var(--ax-pcac-leis); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"] svg { width: 15px; height: 15px; color: var(--ax-tab); flex-shrink: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:not([data-state="active"]):hover {
+    color: var(--ax-tab);
+    background: color-mix(in srgb, var(--ax-tab) 14%, #26303a);
+    border-color: color-mix(in srgb, var(--ax-tab) 55%, #26303a);
+  }
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"][data-state="active"] {
+  background: var(--ax-tab);
+  border-color: var(--ax-tab);
+  color: #19232b;
+  font-weight: 830;
+  box-shadow: 0 3px 10px #0004;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"][data-state="active"] svg { color: #19232b; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:focus-visible { outline: 2px solid var(--ax-tab); outline-offset: 2px; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-summary {
+  min-width: 0;
+  margin-top: 0;
+  gap: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card {
+  overflow: hidden;
+  border-radius: 13px;
+  border-color: #465569;
+  background: var(--ax-pcac-panel);
+  color: var(--ax-pcac-text);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-header"] {
+  padding: 12px 16px 10px;
+  background: linear-gradient(90deg,#222e39,#202832);
+  border-bottom: 1px solid #3b4b57;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card [data-slot="card-title"] { color: #f7f9fc; font-size: 15px; font-weight: 800; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card [data-slot="card-description"] { color: #b8c8d4; font-size: 11px; line-height: 1.45; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"] {
+  padding: 10px 14px;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"] > .grid,
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid {
+  gap: 7px;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid > div {
+  min-width: 0;
+  min-height: 65px;
+  padding: 10px 11px;
+  border: 1px solid #45525c;
+  border-left: 3px solid #bd9955;
+  border-radius: 9px;
+  background: #181f27;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid > div > span { display: block; color: #e6bd71; font-size: 10px; letter-spacing: .06em; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid > div > p { color: #e2e9f0; font-size: 12px; font-weight: 680; line-height: 1.4; overflow-wrap: normal; word-spacing: normal; text-align: left; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure {
+  border-top: 1px solid #3e4b58;
+  background: #1b222b;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #e8eef5;
+  list-style: none;
+  transition: background-color 160ms ease;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary::-webkit-details-marker { display: none; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary span { display: flex; flex-direction: column; gap: 2px; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary strong { color: #f3f5f8; font-size: 12px; font-weight: 800; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary small { color: #abbccc; font-size: 11px; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary svg { color: #ebbf76; transition: transform 160ms ease; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure[open] > summary svg { transform: rotate(180deg); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary:hover { background: #273543; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary:focus-visible { outline: 2px solid #edbf6b; outline-offset: -3px; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > [data-slot="card-content"] {
+  padding: 12px 14px 16px;
+  border-top: 1px solid #384550;
+  background: #1d2630;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > [data-slot="card-content"] .grid { gap: 8px; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure .grid > div {
+  min-width: 0; padding: 12px; border: 1px solid #3a4854; border-radius: 9px; background: #171e27;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure .grid > div :is(p,span) { text-align: left; word-spacing: normal; line-height: 1.5; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure .grid > div a {
+  display: inline-flex; min-height: 31px; align-items: center; padding: 5px 10px; border-color: #52616f; border-radius: 7px; color: #f0c577;
+}
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure .grid > div a:hover { background: #374353; color: #fff; border-color: #dfbb77; }
+/* Fullscreen and normal mode use the same in-flow tab position. */
+.app-shell.navigation-v2[data-focus-mode="true"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list {
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list { gap: 4px; padding: 5px; }
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"] { min-height: 36px; padding: 7px 10px; font-size: 11px; }
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 430px) {
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-card > [data-slot="card-content"].grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs [role="tab"],
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary,
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary svg { transition: none; }
 }
