@@ -242,7 +242,7 @@ function EditalPage() {
       {!edition ? (
         <EditalEditionCatalog editions={editions} failed={!!error} />
       ) : (
-        <section className="edital-selected">
+        <section className={`edital-selected ${edition.contest_name.toLowerCase().includes("acre") ? "edital-selected--pcac" : ""}`}>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Badge variant="outline">
               {edition.status === "archived" ? "Edição arquivada" : editalSourceLabel(edition)}
@@ -261,6 +261,17 @@ function EditalPage() {
                 ? `${examQuestions[0].board} · identificada nas questões desta prova`
                 : "Banca não informada")}
           </p>
+          <div className="edital-summary-grid" aria-label="Resumo da edição selecionada">
+            <div className="edital-summary-card edital-summary-card--progress">
+              <span>Progresso do edital</span>
+              <strong>{completionPercent}%</strong>
+              <small>{completedCount} de {topics.length} tópicos concluídos</small>
+              <div className="edital-progress-track" role="progressbar" aria-valuenow={completionPercent} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${completionPercent}%` }} /></div>
+            </div>
+            <div className="edital-summary-card"><span>Disciplinas</span><strong>{disciplines.length}</strong><small>áreas no conteúdo carregado</small></div>
+            <div className="edital-summary-card"><span>Tópicos</span><strong>{topics.length}</strong><small>itens atuais da edição</small></div>
+            <div className="edital-summary-card"><span>Questões elegíveis</span><strong>{catalogLoading ? "—" : examQuestions.length}</strong><small>{examQuestions.length ? "disponíveis para treinar" : "nenhuma identificada nesta prova"}</small></div>
+          </div>
           {editalSourceUrl(edition.source) && (
             <div className="flex flex-wrap items-center gap-2" aria-label="Ações do documento do edital">
               <Button asChild variant="outline" size="sm">
