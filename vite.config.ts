@@ -43,16 +43,22 @@ function writeBuildVersionPlugin(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [writeBuildVersionPlugin()],
-  vite: {
-    resolve: {
-      // jspdf's package exports only "node"/"browser" conditions, so the Worker SSR build
-      // (workerd/worker conditions) cannot resolve a bare `import "jspdf"`. Pin the bare
-      // specifier to the ES build so any import — including code arriving via GitHub sync — builds.
-      alias: [{ find: /^jspdf$/, replacement: "jspdf/dist/jspdf.es.min.js" }],
+// jspdf's package exports only "node"/"browser" conditions, so the Worker SSR build
+// (workerd/worker conditions) cannot resolve a bare `import "jspdf"`. Redirect the bare
+// specifier to the ES build before any other resolver runs, so code arriving via GitHub sync builds too.
+function jspdfWorkerResolvePlugin(): Plugin {
+  return {
+    name: "jspdf-worker-resolve",
+    enforce: "pre",
+    async resolveId(source, importer, options) {
+      if (source !== "jspdf") return null;
+      return this.resolve("jspdf/dist/jspdf.es.min.js", importer, { ...options, skipSelf: true });
     },
-  },
+  };
+}
+
+export default defineConfig({
+  plugins: [jspdfWorkerResolvePlugin(), writeBuildVersionPlugin()],
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
