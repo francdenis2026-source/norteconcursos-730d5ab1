@@ -161,7 +161,7 @@ function drawCoverPage(
   doc.setFontSize(10.5);
   doc.setTextColor(...MUTED);
   doc.text(
-    `Prova objetiva em ${fmtDate(PCAC_EXAM_DATE)} · encerra conteúdo novo 3 dias antes`,
+    `Início em ${cfg.startDate ? fmtDate(cfg.startDate) : "hoje"} · prova objetiva em ${fmtDate(PCAC_EXAM_DATE)} · encerra conteúdo novo 3 dias antes`,
     PAGE_W / 2,
     y,
     { align: "center" },

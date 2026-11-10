@@ -74,6 +74,7 @@ import {
 } from "@/lib/pcAcreMasterPlan";
 import "@/styles/pcac-edital.css";
 import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
+import { platformDate } from "@/lib/platformClock";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
@@ -437,9 +438,17 @@ function PcAcCronogramaCard({
     () => buildPcAcWeeklyGrid(cargo, week, showDetailedPlan ? INVESTIGATOR_DISCIPLINE_PESO : {}),
     [cargo, week, showDetailedPlan],
   );
+  const todayKey = React.useMemo(() => {
+    const today = platformDate();
+    return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  }, []);
+  const effectiveStartDate = cfg.startDate || todayKey;
   const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
 
-  const weeks = React.useMemo(() => (showDetailedPlan ? buildPcAcMasterPlan(cfg.days) : []), [showDetailedPlan, cfg.days]);
+  const weeks = React.useMemo(
+    () => (showDetailedPlan ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, new Date(`${effectiveStartDate}T12:00:00`)) : []),
+    [showDetailedPlan, cfg.days, effectiveStartDate],
+  );
   const finalDays = React.useMemo(() => buildPcAcFinalDays(), []);
   const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
@@ -454,11 +463,9 @@ function PcAcCronogramaCard({
   };
 
   const exportBrandedPdf = async () => {
-    const now = new Date();
-    const startDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     await generateStudyPlanPdf(
       {
-        startDate,
+        startDate: effectiveStartDate,
         examDate: PCAC_EXAM_DATE,
         studyDays: cfg.days,
         weeklyHours: cfg.weeklyHours,
@@ -524,6 +531,16 @@ function PcAcCronogramaCard({
               max={80}
               value={cfg.weeklyHours}
               onChange={(e) => update({ weeklyHours: Math.min(80, Math.max(1, Number(e.target.value) || 1)) })}
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Data de início</Label>
+            <Input
+              type="date"
+              value={effectiveStartDate}
+              min={todayKey}
+              max={PCAC_EXAM_DATE}
+              onChange={(e) => e.target.value && update({ startDate: e.target.value })}
             />
           </div>
           <div className="space-y-1.5">

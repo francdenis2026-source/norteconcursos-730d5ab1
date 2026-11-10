@@ -18,12 +18,15 @@ export interface PcAcStudyPlanConfig {
   weeklyHours: number;
   days: number[]; // 0 = domingo … 6 = sábado
   startTime: string; // HH:MM
+  /** Primeiro dia em que o aluno pretende executar o cronograma (yyyy-mm-dd). */
+  startDate: string;
 }
 
 export const DEFAULT_PCAC_STUDY_CONFIG: PcAcStudyPlanConfig = {
   weeklyHours: 12,
   days: [1, 2, 3, 4, 5, 6],
   startTime: "19:00",
+  startDate: "",
 };
 
 const MIN_BLOCK = 30;
@@ -188,6 +191,10 @@ export function readPcAcStudyConfig(
         typeof parsed.startTime === "string" && /^\d{2}:\d{2}$/.test(parsed.startTime)
           ? parsed.startTime
           : DEFAULT_PCAC_STUDY_CONFIG.startTime,
+      startDate:
+        typeof parsed.startDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(parsed.startDate)
+          ? parsed.startDate
+          : DEFAULT_PCAC_STUDY_CONFIG.startDate,
     };
   } catch {
     return DEFAULT_PCAC_STUDY_CONFIG;
