@@ -44,7 +44,11 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean } = {}) {
       {mobile && (
         <p className="sx-carousel-hint">Deslize para ver outros concursos <ArrowUpRight aria-hidden="true" /></p>
       )}
-      <ul className={mobile ? "sx-exams sx-exams--mobile-carousel" : "sx-exams"}>
+      <ul
+        className={mobile ? "sx-exams sx-exams--mobile-carousel" : "sx-exams"}
+        aria-label={mobile ? "Provas recentes. Deslize horizontalmente para ver outros concursos." : "Provas recentes"}
+        tabIndex={mobile ? 0 : undefined}
+      >
         {EXAMS.map((exam) => (
           <li key={exam.sigla} className="sx-exam">
             <img
