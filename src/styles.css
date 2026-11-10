@@ -16456,6 +16456,8 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 }
 .agenda-workspace-window > .page-hero :is(h1,h2) { color: #fff !important; letter-spacing: -.035em; }
 .agenda-workspace-window > .page-hero .page-hero__desc { color: #d0d8df !important; font-size: 12px !important; line-height: 1.5; }
+.agenda-workspace-window > .page-hero h1 { font-size: clamp(1.35rem, 2.2vw, 2rem) !important; }
+.agenda-workspace-window > .page-hero .page-hero__desc { max-width: 66ch; font-size: 13px !important; }
 .agenda-workspace-window .page-hero__stats { gap: 8px; }
 .agenda-workspace-window .page-hero__stats > * {
   min-width: 104px;
@@ -16476,8 +16478,8 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 }
 .agenda-workspace-window [data-slot="card-header"] { padding: 14px 16px 9px; gap: 4px; }
 .agenda-workspace-window [data-slot="card-content"] { padding: 11px 16px 15px; }
-.agenda-workspace-window [data-slot="card-title"] { color: var(--agenda-ink); font-size: 14px !important; font-weight: 800; }
-.agenda-workspace-window [data-slot="card-description"] { color: var(--agenda-muted); font-size: 11px; line-height: 1.45; }
+.agenda-workspace-window [data-slot="card-title"] { color: var(--agenda-ink); font-size: 15px !important; font-weight: 800; }
+.agenda-workspace-window [data-slot="card-description"] { color: var(--agenda-muted); font-size: 12px; line-height: 1.5; }
 .agenda-workspace-window .border { border-color: var(--agenda-line); }
 .agenda-workspace-window .bg-card { background: var(--agenda-surface) !important; }
 .agenda-workspace-window .bg-muted\/30,
@@ -16528,10 +16530,15 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   box-shadow: 0 3px 12px rgb(31 42 54 / 4%);
   transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
+.agenda-workspace-window > .space-y-3 > .grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; }
 .agenda-workspace-window > .space-y-3 > .grid > button:hover {
   border-color: var(--agenda-brass);
   box-shadow: 0 7px 18px rgb(31 42 54 / 8%);
   transform: translateY(-1px);
+}
+.agenda-workspace-window > .space-y-3 > .grid > button:focus-visible {
+  outline: 2px solid var(--agenda-brass);
+  outline-offset: 3px;
 }
 .agenda-workspace-window > .space-y-3 > .grid > button > p:first-child {
   color: var(--agenda-ink);
@@ -16548,6 +16555,10 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   background: var(--agenda-soft);
   box-shadow: none;
 }
+.agenda-workspace-window :is([data-slot="button"], button, a) {
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 120ms ease;
+}
+.agenda-workspace-window :is([data-slot="button"], button, a):active { transform: translateY(1px); }
 
 /* Visão interna: resumo, execução de hoje e próximo assunto */
 .agenda-plan-view > .rounded-2xl.border.bg-card {
