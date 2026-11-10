@@ -4,6 +4,15 @@
 
 @media (max-width: 760px) {
   /* ---------------------------------------------------------------- */
+  /* Recent-exams carousel: cards were stretched to match the tallest */
+  /* sibling, leaving a big blank gap above the "Treinar questões"    */
+  /* link on any shorter card. Let each card hug its own content.     */
+  /* ---------------------------------------------------------------- */
+  .home.hr-canvas .mobile-homepage .sx-exams--mobile-carousel {
+    align-items: flex-start !important;
+  }
+
+  /* ---------------------------------------------------------------- */
   /* Tools grid: compact 2-column layout with a colored chip per item. */
   /* ---------------------------------------------------------------- */
   .home.hr-canvas .mobile-homepage .sx-grid {
