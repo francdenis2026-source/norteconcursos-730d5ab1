@@ -1784,6 +1784,35 @@
   }
 }
 
+/* Expanded filter state: release the one-viewport clamp so every field and
+   the action bar remain reachable. The collapsed setup keeps its compact fit. */
+@media (min-width: 768px) {
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup .trainer-more[open]) .app-main {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup .trainer-more[open]) .app-content {
+    height: auto;
+    max-height: none;
+    min-height: calc(100dvh - var(--app-topbar-h, 72px));
+    overflow-y: auto;
+  }
+  html:not(:fullscreen) .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup .trainer-more[open]) .app-content__inner {
+    overflow: visible;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup .trainer-more[open]) .trainer-setup {
+    height: auto !important;
+    max-height: none !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup .trainer-more[open]) .trainer-setup > .trainer-setup__unified {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
 /* Setup-only fullscreen: center a single configuration card within usable viewport. */
 @media (min-width: 768px) {
   html:fullscreen .app-shell[data-area="student"] .trainer-setup {
