@@ -11,7 +11,7 @@ const read = (key:string):Progress => {
       : {};
   }catch{return {};}
 };
-const persist=(key:string,items:Progress)=>{try{localStorage.setItem(key,JSON.stringify(items));}catch{}};
+const persist=(key:string,items:Progress)=>{try{localStorage.setItem(key,JSON.stringify(items));}catch { /* Storage is optional: the session remains usable when blocked. */ }};
 const splitKey=(key:string)=>{const i=key.indexOf(":");return i>=0 ? [key.slice(0,i),key.slice(i+1)] as const : null;};
 
 /** Offline-aware per-user progress; RLS on study_guide_progress enforces ownership. */
@@ -44,7 +44,7 @@ export function useStudyGuideProgress(userId:string){
       if(response.error){setSyncState("offline");setSyncError("Não foi possível carregar o progresso remoto. As marcações continuam neste navegador.");return;}
       const remote:Progress=Object.fromEntries((response.data||[]).map(row=>[`${row.guide_id}:${row.lesson_key}`,true]));
       let alreadyMigrated=false;
-      try{alreadyMigrated=localStorage.getItem(migratedKey)==="yes";}catch{}
+      try{alreadyMigrated=localStorage.getItem(migratedKey)==="yes";}catch { /* Storage is optional: the session remains usable when blocked. */ }
       const replay={...pending};
       if(!alreadyMigrated){
         for(const [key,value] of Object.entries(cached))if(value && replay[key]===undefined && !remote[key] && splitKey(key))replay[key]=true;
@@ -67,7 +67,7 @@ export function useStudyGuideProgress(userId:string){
           const next={...pendingRef.current};delete next[key];pendingRef.current=next;persist(pendingKey,next);
         }
       }
-      try{localStorage.setItem(migratedKey,"yes");}catch{}
+      try{localStorage.setItem(migratedKey,"yes");}catch { /* Storage is optional: the session remains usable when blocked. */ }
       if(cancelled)return;
       setSyncState("synced");setSyncError(null);
     };
