@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { filterEditalEditions, editalSourceLabel, type EditalEdition } from "@/lib/editalCatalog";
+import { contestOptions, editionOptions, roleOptions } from "@/lib/editalSelection";
 
 /** One study catalog for the goal page and the syllabus reader. */
 export function EditalEditionCatalog({
@@ -19,9 +20,28 @@ export function EditalEditionCatalog({
   const [year, setYear] = useState("all");
   const [kind, setKind] = useState("all");
   const [page, setPage] = useState(0);
+  const [selectedContest, setSelectedContest] = useState("");
+  const [selectedRole, setSelectedRole] = useState("");
+  const [selectedEdition, setSelectedEdition] = useState("");
+  const activeEditions = editions.filter((edition) => edition.status === "active");
+  const contests = contestOptions(activeEditions);
+  const roles = roleOptions(activeEditions, selectedContest);
+  const availableEditions = editionOptions(activeEditions, selectedContest, selectedRole);
   const visibleEditions = filterEditalEditions(editions, editionQuery, year, kind);
   const years = [...new Set(editions.map((e) => e.contest_year))].sort((a, b) => b - a);
   useEffect(() => setPage(0), [editionQuery, year, kind, editions]);
+  useEffect(() => {
+    if (!roles.includes(selectedRole)) setSelectedRole(roles.length === 1 ? roles[0]! : "");
+  }, [roles, selectedRole]);
+  useEffect(() => {
+    if (!availableEditions.some((edition) => edition.id === selectedEdition)) {
+      const onlyEdition = availableEditions.length === 1 ? availableEditions[0] : undefined;
+      setSelectedEdition(onlyEdition?.id ?? "");
+      if (onlyEdition) {
+        window.location.href = `/dashboard/edital?edition=${encodeURIComponent(onlyEdition.id)}`;
+      }
+    }
+  }, [availableEditions, selectedEdition]);
   if (failed) return null;
   if (!editions.length)
     return (
@@ -45,6 +65,64 @@ export function EditalEditionCatalog({
         </Badge>
       </div>
       <div className="edital-catalog-filters">
+        <div>
+          <Label htmlFor="edition-contest">1. Concurso ativo</Label>
+          <select
+            id="edition-contest"
+            value={selectedContest}
+            onChange={(e) => {
+              setSelectedContest(e.target.value);
+              setSelectedRole("");
+              setSelectedEdition("");
+            }}
+          >
+            <option value="">Selecione um concurso</option>
+            {contests.map((contest) => (
+              <option key={contest} value={contest}>
+                {contest}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <Label htmlFor="edition-role">2. Cargo</Label>
+          <select
+            id="edition-role"
+            value={selectedRole}
+            disabled={!selectedContest}
+            onChange={(e) => {
+              setSelectedRole(e.target.value);
+              setSelectedEdition("");
+            }}
+          >
+            <option value="">Selecione um cargo</option>
+            {roles.map((role) => (
+              <option key={role} value={role}>
+                {role}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <Label htmlFor="edition-selection">3. Edição</Label>
+          <select
+            id="edition-selection"
+            value={selectedEdition}
+            disabled={!selectedRole}
+            onChange={(e) => {
+              const id = e.target.value;
+              setSelectedEdition(id);
+              if (id) window.location.href = `/dashboard/edital?edition=${encodeURIComponent(id)}`;
+            }}
+          >
+            <option value="">Selecione o ano do edital</option>
+            {availableEditions.map((edition) => (
+              <option key={edition.id} value={edition.id}>
+                {edition.contest_year} {edition.exam_board ? `· ${edition.exam_board}` : ""}
+              </option>
+            ))}
+          </select>
+        </div>
         <div>
           <Label htmlFor="edition-search">Concurso, cargo ou banca</Label>
           <Input
