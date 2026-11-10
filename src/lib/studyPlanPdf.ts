@@ -13,7 +13,36 @@ const muted: [number, number, number] = [100, 112, 126];
 const gold: [number, number, number] = [196, 153, 68];
 const line: [number, number, number] = [220, 225, 231];
 const fmt = (iso: string) => iso.split("-").reverse().join("/");
-const loadData = async (url: string) => { const r = await fetch(url); if (!r.ok) return null; const b = await r.blob(); return await new Promise<string | null>((resolve) => { const f = new FileReader(); f.onload = () => resolve(String(f.result)); f.onerror = () => resolve(null); f.readAsDataURL(b); }); };
+const loadData = async (url: string) => {
+  const response = await fetch(url);
+  if (!response.ok) return null;
+  const blob = await response.blob();
+  const data = await new Promise<string | null>((resolve) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => resolve(null);
+    reader.readAsDataURL(blob);
+  });
+  if (!data || !blob.type.includes("svg")) return data;
+  // jsPDF addImage accepts raster formats; render the bundled SVG QR as PNG.
+  return new Promise<string>((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => {
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = canvas.height = 256;
+        const context = canvas.getContext("2d");
+        if (!context) throw new Error("Canvas unavailable for PDF QR");
+        context.fillStyle = "white";
+        context.fillRect(0, 0, 256, 256);
+        context.drawImage(image, 0, 0, 256, 256);
+        resolve(canvas.toDataURL("image/png"));
+      } catch (error) { reject(error); }
+    };
+    image.onerror = () => reject(new Error("Unable to render PDF QR"));
+    image.src = data;
+  });
+};
 
 function watermark(doc: jsPDF, logo: string | null) {
   doc.saveGraphicsState();
@@ -28,7 +57,7 @@ function footer(doc: jsPDF, page: number, pages: number, qr: string | null) {
   doc.setFont("helvetica", "normal"); doc.setFontSize(8); doc.setTextColor(...muted);
   doc.text("Norte Concursos · norteconcursos.xyz · Desenvolvido por Franc Denis", M, H - 20);
   doc.text(`página ${page}/${pages}`, W - M, H - 20, { align: "right" });
-  if (qr) doc.addImage(qr, "SVG", W - M - 28, H - 31, 24, 24);
+  if (qr) doc.addImage(qr, "PNG", W - M - 28, H - 31, 24, 24);
 }
 
 export async function generateStudyPlanPdf(config: StudyPlanConfig, weeks: StudyPlanWeek[], title = "Plano geral de estudos") {

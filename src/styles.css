@@ -1,6 +1,9 @@
+@layer reset, theme, base, astryx-base, astryx-theme, components, utilities;
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@astryxdesign/core/reset.css";
+@import "@astryxdesign/core/astryx.css";
 @import "./styles/platform-signature.css";
 @import "./styles/ux-foundation-2026.css";
 @import "./styles/dev-strip.css";

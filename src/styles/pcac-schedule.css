@@ -1,0 +1,49 @@
+/* Scoped integration with the existing app shell. Component colors come from Astryx. */
+.pcac-schedule { width: 100%; display: flex; flex-direction: column; min-width: 0; min-height: 0; color: var(--color-text-primary); background: var(--color-background-surface); border: 1px solid var(--color-border); border-radius: var(--radius-container); }
+.pcac-schedule__header { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .75rem 1rem; border-bottom: 1px solid var(--color-border); }
+.pcac-schedule__header h2 { display: flex; align-items: center; gap: .5rem; font-size: 1rem; font-weight: 750; font-family: var(--font-family-heading); }
+.pcac-schedule__header h2 svg { width: 1.25rem; height: 1.25rem; }
+.pcac-schedule__header p { font-size: .75rem; color: var(--color-text-secondary); }
+.pcac-schedule__header nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-left: auto; }
+.pcac-schedule__body { display: flex; flex-direction: column; min-height: 0; min-width: 0; padding: .5rem 1rem; gap: .75rem; }
+.pcac-schedule__panel { min-height: 0; min-width: 0; padding-bottom: .75rem; }
+.pcac-schedule [hidden] { display: none !important; }
+.pcac-schedule label, .pcac-schedule #schedule-days-label { color: var(--color-text-primary); font-size: .75rem; font-weight: 650; }
+.pcac-schedule input { background: var(--color-background-muted); color: var(--color-text-primary); border-color: var(--color-border); }
+.pcac-schedule__table { border: 1px solid var(--color-border); border-radius: var(--radius-element); overflow: clip; }
+.pcac-schedule table { width: 100%; font-variant-numeric: tabular-nums; }
+.pcac-schedule table th { background: var(--color-background-muted); color: var(--color-text-primary); }
+.pcac-schedule table td { border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); }
+.pcac-schedule table tbody tr:nth-child(even) { background: var(--color-background-muted); }
+.pcac-schedule table tbody tr:hover { background: var(--color-background-muted); }
+.pcac-schedule .pcac-week-card { background: var(--color-background-surface); border-color: var(--color-border); }
+.pcac-schedule .text-muted-foreground { color: var(--color-text-secondary); }
+.pcac-schedule button:focus-visible, .pcac-schedule input:focus-visible, .pcac-schedule__panel:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@media (max-width: 600px) {
+ .pcac-schedule__header, .pcac-schedule__body { padding: .5rem; }
+ .pcac-schedule__header nav { margin-left: 0; }
+ .pcac-schedule table { font-size: .65rem; table-layout: fixed; }
+ .pcac-schedule th:first-child, .pcac-schedule td:first-child { width: 30%; overflow-wrap: anywhere; }
+ .pcac-schedule :is(th,td) { padding-inline: .15rem; }
+ .pcac-schedule .pcac-week-card table, .pcac-schedule .pcac-week-card tbody, .pcac-schedule .pcac-week-card tr, .pcac-schedule .pcac-week-card td { display: block; width: 100%; }
+ .pcac-schedule .pcac-week-card thead { display: none; }
+ .pcac-schedule .pcac-week-card td { border: 0; padding: .25rem; }
+ .pcac-schedule .pcac-week-card tr { padding: .5rem; border-bottom: 1px solid var(--color-border); }
+}
+.pcac-schedule { height: 100%; overflow: hidden; }
+.pcac-schedule__header { flex: 0 0 auto; }
+.pcac-schedule__body { flex: 1; overflow: hidden; }
+.pcac-schedule__body > .astryx-tab-list { flex: 0 0 auto; }
+.pcac-schedule__panel { flex: 1; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+@media print { .pcac-schedule, .pcac-schedule__body, .pcac-schedule__panel { height: auto; overflow: visible; } }
+.pcac-schedule__header { background: var(--color-background-green); border-color: var(--color-border-green); }
+.pcac-schedule__header h2, .pcac-schedule__header p { color: var(--color-text-green); }
+.pcac-schedule .astryx-tab[data-selected="true"] { background: var(--color-background-green); color: var(--color-text-green); }
+.pcac-schedule .astryx-tab { border-radius: var(--radius-element); }
+.pcac-schedule .pcac-week-card { border-inline-start: .2rem solid var(--color-border-yellow); }
+.pcac-schedule [role="alert"] { padding: .5rem 1rem; color: var(--color-text-error); background: var(--color-background-red); }
+@media (max-width: 600px) {
+ .pcac-schedule .astryx-tab-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; mask-image: none; gap: var(--spacing-1); }
+ .pcac-schedule .astryx-tab { min-width: 0; width: 100%; font-size: var(--font-size-sm); }
+ .pcac-schedule .astryx-tab-scroll-button { display: none; }
+}
