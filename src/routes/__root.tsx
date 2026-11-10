@@ -159,7 +159,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:alt", content: "Norte Concursos — Polícia, Carreiras e Segurança" },
       { name: "twitter:image", content: "https://norteconcursos.xyz/media/brand/norte-identity/compartilhamento.png" },
       { name: "twitter:image:alt", content: "Nova identidade Norte Concursos" },
-      { name: "theme-color", content: "#f4f5f6" },
+      { name: "theme-color", content: "#102b38" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
       { name: "mobile-web-app-capable", content: "yes" },
