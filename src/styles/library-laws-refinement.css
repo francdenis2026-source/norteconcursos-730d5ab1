@@ -1,0 +1,65 @@
+/* Laws library: semantic color layers for navigation, progress and reading paths. */
+.app-shell[data-area="student"] .material-library {
+  --library-cyan: #4fc3e8;
+  --library-blue: #6f9ff3;
+  --library-amber: #d9a64d;
+  --library-green: #42c59b;
+  --library-violet: #b28bea;
+  --library-rose: #dc91b3;
+  --library-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.dark .app-shell[data-area="student"] .material-library {
+  --library-cyan: #64d9ef;
+  --library-blue: #83b2ff;
+  --library-amber: #e4b967;
+  --library-green: #57d3a6;
+  --library-violet: #c29df3;
+  --library-rose: #eca1c1;
+}
+.app-shell[data-area="student"] .material-library > .page-hero {
+  border-top: 2px solid var(--library-cyan);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--library-cyan) 10%, var(--card)), var(--card) 62%);
+}
+.app-shell[data-area="student"] .material-library > .page-hero .hero-stat:nth-child(1) { border-color: color-mix(in srgb, var(--library-blue) 50%, var(--border)); }
+.app-shell[data-area="student"] .material-library > .page-hero .hero-stat:nth-child(2) { border-color: color-mix(in srgb, var(--library-amber) 50%, var(--border)); }
+.app-shell[data-area="student"] .material-library > .page-hero .hero-stat:nth-child(3) { border-color: color-mix(in srgb, var(--library-green) 50%, var(--border)); }
+.app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a {
+  min-height: 92px;
+  border-color: var(--library-line);
+  background: color-mix(in srgb, var(--card) 92%, var(--library-blue));
+  transition: border-color .16s ease, transform .16s ease, background-color .16s ease;
+}
+.app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a:nth-child(1) { border-top: 2px solid var(--library-amber); }
+.app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a:nth-child(2) { border-top: 2px solid var(--library-blue); }
+.app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a:nth-child(3) { border-top: 2px solid var(--library-violet); }
+.app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a:hover { transform: translateY(-1px); border-color: currentColor; }
+.app-shell[data-area="student"] .material-library .library-navigator {
+  border-top: 2px solid var(--library-cyan);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--library-cyan) 5%, var(--card)), var(--card) 68%);
+}
+.app-shell[data-area="student"] .material-library .library-area[data-tone="law"],
+.app-shell[data-area="student"] .material-library .library-area.library-tone-amber { border-color: color-mix(in srgb, var(--library-amber) 58%, var(--border)); }
+.app-shell[data-area="student"] .material-library .library-area.library-tone-blue { border-color: color-mix(in srgb, var(--library-blue) 58%, var(--border)); }
+.app-shell[data-area="student"] .material-library .library-area.library-tone-emerald { border-color: color-mix(in srgb, var(--library-green) 58%, var(--border)); }
+.app-shell[data-area="student"] .material-library .library-area__count { color: var(--library-amber); }
+.app-shell[data-area="student"] .material-library .library-searchbar { border-color: color-mix(in srgb, var(--library-cyan) 42%, var(--border)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--library-cyan) 8%, transparent); }
+.app-shell[data-area="student"] .material-library .library-subject {
+  border-color: var(--library-line);
+  background: color-mix(in srgb, var(--card) 94%, var(--library-blue));
+}
+.app-shell[data-area="student"] .material-library .library-subject__heading { border-bottom-color: var(--library-line); }
+.app-shell[data-area="student"] .material-library .library-law-card {
+  border-color: color-mix(in srgb, var(--library-amber) 42%, var(--border));
+  background: color-mix(in srgb, var(--card) 94%, var(--library-amber));
+}
+.app-shell[data-area="student"] .material-library .library-law-card:hover { border-color: var(--library-amber); }
+.app-shell[data-area="student"] .material-library .library-study-button { background: color-mix(in srgb, var(--library-amber) 82%, #9b5b12); color: #1b160d; }
+.app-shell[data-area="student"] .material-library .library-source-link { color: var(--library-cyan); }
+.app-shell[data-area="student"] .material-library .library-deep-links { border-color: color-mix(in srgb, var(--library-violet) 40%, var(--border)); }
+.app-shell[data-area="student"] .material-library .library-material-row[data-read="true"],
+.app-shell[data-area="student"] .material-library .library-material-row.is-read { border-color: color-mix(in srgb, var(--library-green) 58%, var(--border)); background: color-mix(in srgb, var(--library-green) 8%, var(--card)); }
+.app-shell[data-area="student"] .material-library .library-reading-link { color: var(--library-blue); }
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a { min-height: 76px; }
+  .app-shell[data-area="student"] .material-library .library-law-card { border-left-width: 3px; }
+}

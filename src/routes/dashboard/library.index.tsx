@@ -1,6 +1,7 @@
 import "@/styles/student-library-media-workspaces.css";
 import { TRACKS } from "@/data/tracks";
 import "@/styles/learning-workspace-refinement.css";
+import "@/styles/library-laws-refinement.css";
 import { tracksOf } from "@/lib/disciplineHub";
 import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
