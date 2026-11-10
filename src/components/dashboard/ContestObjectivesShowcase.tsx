@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarClock, CalendarDays, GraduationCap, MapPin, Target, Users, Wallet } from "lucide-react";
+import { ArrowRight, CalendarClock, CalendarDays, GraduationCap, Target, Users, Wallet } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
 import { contestDisplay } from "@/lib/contestDisplay";
