@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ShieldAlert } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { PCPI_EXAM } from "@/lib/pcpiExam";
 import { PCPR_EXAM } from "@/lib/pcprExam";
@@ -78,9 +78,13 @@ export function ContestShowcase({ mobile = false }: { mobile?: boolean } = {}) {
           </li>
         ))}
       </ul>
-      <p className="sx-note">
-        Iniciativa educacional independente, sem vínculo ou endosso das Polícias Civis, governos ou
-        bancas. Artes ilustrativas. Consulte os documentos oficiais de cada concurso.
+      <p className="sx-note sx-note--highlight">
+        <ShieldAlert className="sx-note__icon" aria-hidden="true" />
+        <span>
+          <strong>Iniciativa educacional independente</strong>, sem vínculo ou endosso das Polícias
+          Civis, governos ou bancas. Artes ilustrativas. Consulte os documentos oficiais de cada
+          concurso.
+        </span>
       </p>
     </div>
   );
