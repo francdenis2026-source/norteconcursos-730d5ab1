@@ -358,7 +358,6 @@
   .pcac-schedule .astryx-tab { width: 100%; min-height: 40px; }
   .pcac-schedule__table table { min-width: 660px; }
   .pcac-schedule .pcac-week-card { padding: 9px; }
-  .pcac-schedule .pcac-week-card .overflow-x-auto table { min-width: 680px; table-layout: fixed; }
 }
 @media (max-width: 420px) {
   .pcac-schedule__header,
@@ -485,9 +484,6 @@
   overflow-wrap: anywhere;
   hyphens: auto;
 }
-.pcac-schedule .pcac-week-card td:first-child {
-  width: 94px;
-}
 .pcac-schedule :is(button, a, input, select, textarea):focus-visible {
   outline: 2px solid var(--pcac-brass) !important;
   outline-offset: 2px;
@@ -518,15 +514,12 @@
 .pcac-schedule__preferences > div {
   border-color: var(--pcac-line);
 }
-.pcac-schedule .pcac-week-card table {
-  min-width: 720px;
+.pcac-schedule .pcac-schedule__day {
+  margin-block-end: 8px;
 }
-.pcac-schedule .pcac-week-card table th:first-child { width: 17%; }
-.pcac-schedule .pcac-week-card table th:nth-child(2) { width: 14%; }
-.pcac-schedule .pcac-week-card table th:nth-child(3) { width: 15%; }
-.pcac-schedule .pcac-week-card table th:nth-child(4) { width: 20%; }
-.pcac-schedule .pcac-week-card table th:nth-child(5) { width: 34%; }
-.pcac-schedule .pcac-week-card table td:nth-child(2) {
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
+.pcac-schedule .pcac-schedule__day:last-child {
+  margin-block-end: 0;
+}
+.pcac-schedule .pcac-schedule__today {
+  margin-block-end: 14px;
 }
