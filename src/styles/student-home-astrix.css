@@ -316,132 +316,58 @@
   margin-top: 2px !important;
 }
 
+/* Acre flag inset: design language shared with the PC-AC announcement banner. */
 .student-hub__exam-summary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  min-width: 0;
-  align-items: center;
-  padding: 6px 9px;
-  border: 1px solid color-mix(in srgb, var(--brass) 30%, var(--border));
-  border-radius: 11px;
-  background: var(--card);
-  color: var(--foreground);
-}
-
-.student-hub__contest-summary {
-  display: flex;
-  flex: 1 1 16rem;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 4px 8px;
-  min-width: 0;
-}
-
-.student-hub__contest-heading {
-  display: flex;
-  flex: 1 1 10rem;
-  min-width: 0;
-  align-items: center;
-  gap: 8px;
-}
-
-.student-hub__contest-heading > div {
-  min-width: 0;
-}
-
-.student-hub__contest-icon {
-  flex: none;
-  color: var(--brass-deep);
-}
-
-.student-hub__exam-summary-date {
-  flex: 0 1 auto;
-  min-width: 0;
-  padding-inline-start: 12px;
-  border-inline-start: 1px solid var(--border);
-}
-
-.student-hub__exam-summary :is(p, h2) {
-  margin: 0;
-}
-
-.student-hub__exam-summary .student-hub__summary-label {
-  color: var(--brass-deep);
-  font-size: .65rem;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.dark .student-hub__exam-summary :is(.student-hub__summary-label, .student-hub__contest-icon) {
-  color: var(--brass);
-}
-
-.student-hub__contest-heading h2 {
-  font-size: .92rem;
-  font-weight: 800;
-  line-height: 1.25;
-  overflow-wrap: anywhere;
-}
-
-.student-hub__exam-summary .student-hub__summary-meta {
-  color: var(--muted-foreground);
-  font-size: .75rem;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
-}
-
-.student-hub__exam-summary-date :is(time, strong) {
-  display: block;
-  font-size: 1.18rem;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.25;
-}
-
-.student-hub__contest-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 32px;
-  padding-inline: 8px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--foreground);
-  font-size: .75rem;
-  font-weight: 700;
-}
-
-.student-hub__contest-link:hover {
-  border-color: var(--brass);
-  text-decoration: underline;
-}
-
-.student-hub__contest-link:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-}
-
-.student-hub__exam-summary .student-hub__acre-flag {
   position: relative;
-  flex: 0 0 28px;
-  height: 20px;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  background: linear-gradient(to bottom right, #ffdf00 50%, #00843d 50%);
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  min-height: 74px;
+  padding: 9px 15px 9px 104px;
+  overflow: hidden;
+  border: 1px solid #7c693e;
+  border-radius: 12px;
+  background: linear-gradient(100deg,#19242a 0%,#171e25 65%,#18251f 100%);
+  color: #f3f5f0;
+  box-shadow: inset 0 1px #ffffff0b;
 }
-
-.student-hub__exam-summary .student-hub__acre-flag::after {
+.student-hub__exam-summary::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0 auto 0 0;
+  width: 91px;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(139deg,#f5d928 0 50%,#008547 50.5% 100%);
+}
+.student-hub__exam-summary::after {
   content: "★";
   position: absolute;
-  top: 1px;
-  left: 3px;
-  color: #bf2435;
-  font-size: 9px;
+  pointer-events: none;
+  top: 20px;
+  left: 18px;
+  color: #d21b35;
+  font-size: 32px;
   line-height: 1;
+  text-shadow: 0 1px #7c271a30;
 }
-
+.student-hub__contest-summary { display: flex; flex: 1 1 16rem; align-items: center; flex-wrap: wrap; gap: 5px 12px; min-width: 0; }
+.student-hub__contest-heading { display: flex; flex: 1 1 10rem; min-width: 0; align-items: center; gap: 8px; }
+.student-hub__contest-heading > div { min-width: 0; }
+.student-hub__contest-icon { flex: none; color: #ebcb72; }
+.student-hub__exam-summary .student-hub__acre-flag { display: none; }
+.student-hub__exam-summary-date { flex: 0 1 auto; min-width: 0; padding-inline-start: 12px; border-inline-start: 1px solid #58614e; }
+.student-hub__exam-summary :is(p,h2) { margin: 0; }
+.student-hub__exam-summary .student-hub__summary-label { color: #f5d274; font-size: .63rem; font-weight: 830; letter-spacing: .08em; text-transform: uppercase; }
+.student-hub__contest-heading h2 { color: #fff; font-size: .94rem; font-weight: 820; line-height: 1.22; overflow-wrap: anywhere; }
+.student-hub__exam-summary .student-hub__summary-meta { color: #c9d3d2; font-size: .73rem; line-height: 1.35; overflow-wrap: anywhere; }
+.student-hub__exam-summary-date :is(time,strong) { display: block; color: #fff4c7; font-size: 1.14rem; font-weight: 840; font-variant-numeric: tabular-nums; line-height: 1.22; }
+.student-hub__contest-link { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 6px 10px; border: 1px solid #6a765b; border-radius: 8px; background: #ffffff0b; color: #f2f5f0; font-size: .74rem; font-weight: 750; text-decoration: none; }
+.student-hub__contest-link:hover { border-color: #f5d274; background: #f5d274; color: #1c3125; text-decoration: none; }
+.student-hub__contest-link:focus-visible { outline: 2px solid #f5d274; outline-offset: 3px; }
 @media (max-width: 760px) {
   .student-hub__masthead--compact .student-hub__welcome-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -540,133 +466,105 @@
 }
 
 
-/* PC-AC spotlight: independent of the exam banners and their floating menus. */
+/* Acre identity in the card: integrated flag, never floating outside its frame. */
 .student-pcac-spotlight {
-  --pcac-gold: #805500;
-  --pcac-green: #176740;
-  --pcac-blue: #285c96;
-  --pcac-rose: #963a4c;
+  --pcac-gold: #e8be72;
+  --pcac-green: #7ed6a0;
+  --pcac-blue: #9dc5ee;
+  --pcac-rose: #ec9db2;
+  position: relative;
+  isolation: isolate;
   display: grid;
-  grid-template: "cover copy flag" auto "cover actions actions" auto / 44px minmax(0, 1fr) auto;
+  grid-template: "cover copy flag" auto "cover actions actions" auto / 44px minmax(0,1fr) 92px;
   align-items: center;
   min-width: 0;
-  gap: 7px 10px;
-  padding: 10px 12px;
-  border: 1px solid color-mix(in srgb, var(--pcac-gold) 35%, var(--border));
-  border-inline-start: 3px solid var(--pcac-green);
-  border-radius: 12px;
-  background: linear-gradient(110deg, color-mix(in srgb, var(--pcac-gold) 6%, var(--card)), var(--card) 70%);
-  color: var(--foreground);
+  gap: 7px 12px;
+  padding: 12px 14px;
+  overflow: hidden;
+  border: 1px solid #756c4f;
+  border-left: 3px solid #49bf82;
+  border-radius: 13px;
+  background: linear-gradient(105deg,#1c262c,#171f26 67%,#1a2920);
+  color: #eff5ef;
+  box-shadow: inset 0 1px #ffffff0b;
 }
-
-.dark .student-pcac-spotlight {
-  --pcac-gold: #f1cb75;
-  --pcac-green: #82dfad;
-  --pcac-blue: #9cc8fa;
-  --pcac-rose: #f3a4b0;
+.student-pcac-spotlight::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto 0 0;
+  height: 2px;
+  background: linear-gradient(90deg,#f5d829 0 38%,#078547 38% 90%,#d22639 90%);
 }
-
 .student-pcac-spotlight__cover {
   grid-area: cover;
-  align-self: start;
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+  align-self: center;
+  width: 44px;
+  max-width: 100%;
+  height: 64px;
+  border: 1px solid #677168;
+  border-radius: 5px;
+  object-fit: cover;
 }
-
-.student-pcac-spotlight__copy {
-  grid-area: copy;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.student-pcac-spotlight__copy h3 {
-  margin: 0;
-  color: var(--foreground);
-  font-size: .95rem;
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-.student-pcac-spotlight__copy p {
-  margin: 3px 0 0;
-  color: var(--muted-foreground);
-  font-size: .78rem;
-  line-height: 1.4;
-}
-
+.student-pcac-spotlight__copy { grid-area: copy; min-width: 0; overflow-wrap: anywhere; }
+.student-pcac-spotlight__copy h3 { margin: 0; color: #fff; font-size: .97rem; font-weight: 830; line-height: 1.22; }
+.student-pcac-spotlight__copy p { margin: 4px 0 0; color: #c7d1cc; font-size: .77rem; line-height: 1.38; }
 .student-pcac-spotlight__flag {
   grid-area: flag;
   display: block;
-  width: clamp(36px, 5vw, 64px);
-  height: auto;
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  place-self: start end;
+  width: 92px;
+  height: 64px;
+  margin: -12px -14px 0 0;
+  border: 0;
+  border-left: 1px solid #ffffff2d;
+  border-bottom: 1px solid #ffffff2d;
+  border-radius: 0 12px 0 8px;
+  object-fit: cover;
 }
-
-.student-pcac-spotlight__actions {
-  grid-area: actions;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 0;
-  gap: 6px;
-}
-
+.student-pcac-spotlight__actions { grid-area: actions; display: flex; align-items: center; flex-wrap: wrap; min-width: 0; gap: 6px; }
 .student-pcac-spotlight__actions a {
   --pcac-action: var(--pcac-gold);
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 34px;
+  min-height: 35px;
   max-width: 100%;
-  padding: 5px 8px;
-  border: 1px solid color-mix(in srgb, var(--pcac-action) 30%, var(--border));
-  border-radius: 7px;
-  background: color-mix(in srgb, var(--pcac-action) 6%, var(--card));
-  color: var(--foreground);
-  font-size: .75rem;
-  font-weight: 700;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb,var(--pcac-action) 42%,#36434a);
+  border-radius: 8px;
+  background: color-mix(in srgb,var(--pcac-action) 9%,#182129);
+  color: #eef4f1;
+  font-size: .74rem;
+  font-weight: 750;
   line-height: 1.3;
   text-decoration: none;
+  transition: border-color 160ms ease,background-color 160ms ease,color 160ms ease;
 }
-
-.student-pcac-spotlight__actions a[data-tone="gold"] {
-  background: color-mix(in srgb, var(--pcac-gold) 14%, var(--card));
-}
-
 .student-pcac-spotlight__actions a[data-tone="green"] { --pcac-action: var(--pcac-green); }
 .student-pcac-spotlight__actions a[data-tone="blue"] { --pcac-action: var(--pcac-blue); }
 .student-pcac-spotlight__actions a[data-tone="rose"] { --pcac-action: var(--pcac-rose); }
-
-.student-pcac-spotlight__actions a:hover {
-  border-color: var(--pcac-action);
-  text-decoration: underline;
+.student-pcac-spotlight__actions a:hover { border-color: var(--pcac-action); background: color-mix(in srgb,var(--pcac-action) 22%,#182129); text-decoration: none; }
+.student-pcac-spotlight__actions a:focus-visible { outline: 2px solid var(--pcac-action); outline-offset: 2px; }
+.student-pcac-spotlight__actions svg { flex: 0 0 15px; width: 15px; height: 15px; color: var(--pcac-action); }
+.student-pcac-spotlight__actions span { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .student-hub__exam-summary { padding-left: 85px; }
+  .student-hub__exam-summary::before { width: 73px; }
+  .student-hub__exam-summary::after { left: 14px; top: 21px; font-size: 25px; }
 }
-
-.student-pcac-spotlight__actions a:focus-visible {
-  outline: 2px solid var(--pcac-action);
-  outline-offset: 2px;
-}
-
-.student-pcac-spotlight__actions svg {
-  flex: 0 0 15px;
-  width: 15px;
-  height: 15px;
-  color: var(--pcac-action);
-}
-
-.student-pcac-spotlight__actions span {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
 @media (max-width: 600px) {
-  .student-pcac-spotlight {
-    grid-template: "cover copy flag" auto "actions actions actions" auto / 30px minmax(0, 1fr) auto;
-    padding: 8px;
-  }
-
-  .student-pcac-spotlight__actions a {
-    min-height: 44px;
-  }
+  .student-pcac-spotlight { grid-template: "cover copy flag" auto "actions actions actions" auto / 38px minmax(0,1fr) 62px; padding: 10px; }
+  .student-pcac-spotlight__cover { width: 38px; height: 56px; }
+  .student-pcac-spotlight__flag { width: 62px; height: 44px; margin: -10px -10px 0 0; }
+  .student-pcac-spotlight__actions a { min-height: 42px; }
 }
+@media (max-width: 440px) {
+  .student-hub__exam-summary { padding-left: 66px; }
+  .student-hub__exam-summary::before { width: 57px; }
+  .student-hub__exam-summary::after { left: 10px; top: 20px; font-size: 20px; }
+  .student-pcac-spotlight { grid-template-columns: 34px minmax(0,1fr) 45px; }
+  .student-pcac-spotlight__cover { width: 34px; height: 50px; }
+  .student-pcac-spotlight__flag { width: 45px; height: 35px; }
+}
+@media (prefers-reduced-motion: reduce) { .student-pcac-spotlight__actions a { transition: none; } }
