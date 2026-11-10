@@ -3,7 +3,7 @@ import { CheckCircle2, ExternalLink, RefreshCw, ShieldAlert } from "lucide-react
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { isOfficialUrl } from "@/lib/questionFormat";
+import { isPcAcOfficialStudySource } from "@/lib/pcAcStudySources";
 
 type ReviewRow = {
  id:string;slug:string;title:string;discipline:string;body_md:string;source_note:string;
@@ -31,7 +31,7 @@ export function PcAcContentReviewAdmin() {
  const approve=async(row:ReviewRow)=>{
   if(!isAdmin||!user?.id||!checked[row.id]||busy)return;
   const sources=Array.isArray(row.legal_basis)?row.legal_basis:[];
-  if(!sources.length||sources.some(source=>!source.url||!isOfficialUrl(source.url))){
+  if(!sources.length||sources.some(source=>!source.url||!isPcAcOfficialStudySource(source.url))){
    toast.error("Material sem referência oficial verificável. Corrija antes de publicar.");return;
   }
   if(!row.body_md.trim()||!row.source_note.trim()){
