@@ -1023,10 +1023,20 @@ function PcAcreEditalVerticalizadoPage() {
   return (
     <div className="pcac-edital-page space-y-5 pb-10">
       <PageHero
+        className="pcac-astrix-edital-hero"
         image="careers-team"
-        kicker="ÁREA PROFISSIONAL · PC DO ACRE"
+        kicker="ÁREA PROFISSIONAL · POLÍCIA CIVIL DO ACRE"
         icon={ShieldCheck}
-        title="Edital verticalizado — PC-AC 001/2026"
+        title={
+          <span className="pcac-astrix-edital-hero__title">
+            <svg className="pcac-astrix-edital-hero__flag" viewBox="0 0 50 35" role="img" aria-label="Bandeira do Estado do Acre">
+              <rect width="50" height="35" fill="#f5da25" />
+              <path d="M0 35L50 0V35Z" fill="#078348" />
+              <path d="M11 3.8l1.9 5.8h6.1l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8-4.9-3.6h6.1Z" fill="#ce2935" />
+            </svg>
+            <span>Edital verticalizado <span className="pcac-astrix-edital-hero__em">PC-AC 001/2026</span></span>
+          </span>
+        }
         description="Marque o que já estudou, acompanhe o progresso por cargo e exporte seu edital verticalizado em PDF. Conteúdo organizado a partir do Edital nº 001 SEAD/PCAC, banca IDECAN."
         actions={
           <div className="flex max-w-[760px] flex-wrap items-center justify-end gap-2">
@@ -1063,10 +1073,10 @@ function PcAcreEditalVerticalizadoPage() {
         </div>
       </PageHero>
 
-      <Card className="pcac-edital-card pcac-edital-cargos">
+      <Card className="pcac-edital-card pcac-edital-cargos pcac-astrix-cargos">
         <CardHeader className="pb-0">
           <CardTitle className="text-sm font-semibold text-muted-foreground">
-            Escolha o cargo
+            <span className="pcac-astrix-cargos__title"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Selecione seu cargo <span className="pcac-astrix-cargos__hint">PC-AC 2026</span></span>
           </CardTitle>
         </CardHeader>
         <CardContent
@@ -1088,7 +1098,7 @@ function PcAcreEditalVerticalizadoPage() {
                   })
                 }
                 className={
-                  "flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
+                  "pcac-astrix-cargo-option flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
                   (active
                     ? "border-primary bg-primary/10 text-foreground"
                     : item.id === "investigador"
