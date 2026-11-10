@@ -10,7 +10,7 @@ export function NewsBanner() {
   const [dismissKey, setDismissKey] = useState(DISMISS_KEY);
 
   useEffect(() => {
-    const key = window.matchMedia("(max-width: 760px)").matches
+    const key = window.matchMedia("(max-width: 767px)").matches
       ? MOBILE_DISMISS_KEY
       : DISMISS_KEY;
     setDismissKey(key);
