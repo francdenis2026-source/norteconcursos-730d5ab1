@@ -104,7 +104,7 @@ const toIso = (d: Date) => d.toISOString().slice(0, 10);
 const parseIso = (iso: string) => new Date(`${iso}T00:00:00Z`);
 const addDays = (d: Date, n: number) => new Date(d.getTime() + n * 86_400_000);
 const weekdayOf = (d: Date) => d.getUTCDay();
-const isValidIsoDate = (iso: string) => /^\\d{4}-\\d{2}-\\d{2}$/.test(iso) && toIso(parseIso(iso)) === iso;
+const isValidIsoDate = (iso: string) => /^\d{4}-\d{2}-\d{2}$/.test(iso) && toIso(parseIso(iso)) === iso;
 
 /** Último dia permitido para conteúdo novo, calculado a partir da data oficial da prova. */
 export function pcAcLastStudyDate(examDateIso: string = PCAC_EXAM_DATE): string {
@@ -191,8 +191,16 @@ export function buildPcAcMasterPlan(
   opts: PcAcMasterPlanOptions,
 ): PcAcPlanWeek[] {
   const days = [...new Set(studyDays)].filter((d) => d >= 0 && d <= 6).sort((a, b) => a - b);
-  if (!days.length || !(opts.weeklyHours > 0) || !/^\d{4}-\d{2}-\d{2}$/.test(opts.startDate)) return [];
-  const lastStudyDate = addDays(parseIso(examDateIso), -PCAC_LAST_STUDY_OFFSET_DAYS);
+  if (
+    !days.length ||
+    !Number.isFinite(opts.weeklyHours) ||
+    opts.weeklyHours <= 0 ||
+    opts.weeklyHours > 80 ||
+    !isValidIsoDate(opts.startDate) ||
+    !isValidIsoDate(examDateIso) ||
+    !/^([01]\\d|2[0-3]):[0-5]\\d$/.test(opts.startTime)
+  ) return [];
+  const lastStudyDate = parseIso(pcAcLastStudyDate(examDateIso));
   const start = parseIso(opts.startDate);
   if (start.getTime() > lastStudyDate.getTime()) return [];
 
