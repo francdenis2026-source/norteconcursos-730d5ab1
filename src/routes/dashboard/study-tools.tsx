@@ -48,7 +48,7 @@ import "@/styles/study-area-compact.css";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
   head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
-  validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined; tool?: "handwritten" | "guide" | "simplify" | "compare" | "quiz" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined, tool: ["handwritten", "guide", "simplify", "compare", "quiz"].includes(String(search["tool"])) ? search["tool"] as "handwritten" | "guide" | "simplify" | "compare" | "quiz" : undefined }),
+  validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined }),
   component: StudyToolsPage,
 });
 
@@ -189,7 +189,7 @@ function readDay(): { day: string; cycles: number; minutes: number } {
 function StudyToolsPage() {
   const ctx = useStudyContext();
   const fullscreen = useWorkspaceFullscreen(true);
-  const { context, tool } = Route.useSearch();
+  const { context } = Route.useSearch();
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
   const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;
@@ -290,37 +290,6 @@ function StudyToolsPage() {
         </div>
       </section>
 
-      {!enem && (
-        <nav aria-label="Ferramentas da Central de Estudos" className="study-tool-launcher grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-          {([
-            { key: "handwritten", label: "Anotações", detail: "Organize suas ideias", icon: BookOpenCheck },
-            { key: "guide", label: "Guia de estudos", detail: "Estruture a revisão", icon: BookOpenCheck },
-            { key: "simplify", label: "Simplificar", detail: "Entenda com clareza", icon: Sparkles },
-            { key: "compare", label: "Comparar", detail: "Relacione conceitos", icon: Layers },
-            { key: "quiz", label: "Quiz", detail: "Teste seu domínio", icon: BrainCircuit },
-          ] as const).map(({ key, label, detail, icon: Icon }) => (
-            <Link
-              key={key}
-              to="/dashboard/study-tools"
-              search={{ tool: key, context: undefined }}
-              aria-current={tool === key ? "page" : undefined}
-              className={cn(
-                "study-tool-launcher__card group flex min-h-28 items-center gap-3 rounded-2xl border bg-card p-4 text-sm font-semibold transition-all hover:border-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
-                tool === key && "border-primary bg-primary/10",
-              )}
-            >
-              <Icon aria-hidden="true" className="h-5 w-5 shrink-0 text-primary" />
-              <span className="flex min-w-0 flex-1 flex-col gap-1"><strong className="text-sm">{label}</strong><small className="text-xs font-normal text-muted-foreground">{detail}</small></span>
-              <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0 opacity-60 transition-transform group-hover:translate-x-1" />
-            </Link>
-          ))}
-        </nav>
-      )}
-
-      {!enem && tool && (
-        <StudyMaterialsWorkspace tool={tool} subject={subject} topic={topic} />
-      )}
-
       <section aria-labelledby="study-actions-title" className="space-y-3">
         <div>
           <h2 id="study-actions-title" className="text-base font-semibold">2. Continue seu estudo</h2>
@@ -393,206 +362,6 @@ function StudyToolsPage() {
   );
 }
 
-
-type MaterialTool = "handwritten" | "guide" | "simplify" | "compare" | "quiz";
-const MATERIAL_TOOL_LABEL: Record<MaterialTool, string> = {
-  handwritten: "Anotações",
-  guide: "Guia de estudos",
-  simplify: "Simplificar",
-  compare: "Comparar conteúdos",
-  quiz: "Testar conhecimentos",
-};
-function StudyMaterialsWorkspace({ tool, subject, topic }: { tool: MaterialTool; subject: string; topic: string }) {
-  const [notes, setNotes] = React.useState("");
-  const [other, setOther] = React.useState("");
-  const [comparison, setComparison] = React.useState(["", ""]);
-  const [quizAnswers, setQuizAnswers] = React.useState<string[]>(["", "", "", ""]);
-  const [quizReviewed, setQuizReviewed] = React.useState<boolean[]>([false, false, false, false]);
-  const [hydratedActivityKey, setHydratedActivityKey] = React.useState("");
-  const [history, setHistory] = React.useState<{ date: string; reviewed: number; answered: number; compared: boolean }[]>([]);
-  const [historyReady, setHistoryReady] = React.useState(false);
-  const [showAnswer, setShowAnswer] = React.useState(false);
-  const [checked, setChecked] = React.useState<boolean[]>([false, false, false, false]);
-  const label = topic || subject;
-  const notesKey = userStorageKey("study_material_notes:" + subject + ":" + topic);
-  const activityKey = userStorageKey("study_material_activity:" + subject + ":" + topic);
-  const historyKey = userStorageKey("study_material_history:" + subject + ":" + topic);
-  React.useEffect(() => {
-    try { setNotes(localStorage.getItem(notesKey) || ""); } catch { setNotes(""); }
-  }, [notesKey]);
-  React.useEffect(() => {
-    setShowAnswer(false);
-    setChecked([false, false, false, false]);
-    setHydratedActivityKey("");
-    try {
-      const saved = JSON.parse(localStorage.getItem(activityKey) ?? "{}") as {
-        other?: string; comparison?: string[]; quizAnswers?: string[]; quizReviewed?: boolean[];
-      };
-      setOther(typeof saved.other === "string" ? saved.other : "");
-      setComparison([0, 1].map(i => typeof saved.comparison?.[i] === "string" ? saved.comparison[i]! : ""));
-      setQuizAnswers([0, 1, 2, 3].map(i => typeof saved.quizAnswers?.[i] === "string" ? saved.quizAnswers[i]! : ""));
-      setQuizReviewed([0, 1, 2, 3].map(i => saved.quizReviewed?.[i] === true));
-    } catch {
-      setOther(""); setComparison(["", ""]); setQuizAnswers(["", "", "", ""]); setQuizReviewed([false, false, false, false]);
-    }
-    setHydratedActivityKey(activityKey);
-  }, [activityKey, tool]);
-  React.useEffect(() => {
-    if (hydratedActivityKey !== activityKey) return;
-    try { localStorage.setItem(activityKey, JSON.stringify({ other, comparison, quizAnswers, quizReviewed })); }
-    catch { /* armazenamento indisponível */ }
-  }, [activityKey, hydratedActivityKey, other, comparison, quizAnswers, quizReviewed]);
-  React.useEffect(() => {
-    setHistoryReady(false);
-    try {
-      const saved: unknown = JSON.parse(localStorage.getItem(historyKey) ?? "[]");
-      setHistory(Array.isArray(saved) ? saved.filter(item => item && typeof item.date === "string" && typeof item.reviewed === "number").slice(0, 20) : []);
-    } catch { setHistory([]); }
-    setHistoryReady(true);
-  }, [historyKey]);
-  const answeredCount = quizAnswers.filter(value => value.trim().length > 0).length;
-  const reviewedCount = quizReviewed.filter(Boolean).length;
-  const recordSession = () => {
-    if (!historyReady || hydratedActivityKey !== activityKey) return;
-    const entry = {
-      date: new Date().toISOString(),
-      reviewed: reviewedCount,
-      answered: answeredCount,
-      compared: comparison.some(value => value.trim().length > 0),
-    };
-    const next = [entry, ...history].slice(0, 20);
-    try {
-      localStorage.setItem(historyKey, JSON.stringify(next));
-      setHistory(next);
-      toast.success("Sessão registrada neste dispositivo.");
-    } catch { toast.error("Não foi possível registrar a sessão neste dispositivo."); }
-  };
-  const save = (value: string) => {
-    setNotes(value);
-    try { localStorage.setItem(notesKey, value); } catch { /* sem armazenamento */ }
-  };
-  const prompts = [
-    "Qual é a definição de " + label + "?",
-    "Quais são os requisitos, elementos ou características centrais?",
-    "Que exceções ou pegadinhas costumam aparecer em prova?",
-    "Como aplicar esse conteúdo em uma situação prática?",
-  ];
-  return (
-    <section aria-labelledby="study-materials-heading" className="study-materials-workspace rounded-2xl border bg-card p-4 sm:p-6 space-y-4">
-      <header className="space-y-1">
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary">Material de aprendizagem</p>
-        <h2 id="study-materials-heading" className="text-xl font-bold">{MATERIAL_TOOL_LABEL[tool]}</h2>
-        <p className="text-sm text-muted-foreground">Disciplina: {subject} · Assunto: {topic || "Visão geral"}</p>
-      </header>
-      {tool === "handwritten" && (
-        <div className="space-y-3">
-          <p className="text-sm">Registre definições, exemplos, dúvidas e pegadinhas do assunto. As anotações ficam associadas a esta disciplina e a este tópico neste navegador.</p>
-          <label htmlFor="study-material-notes" className="block text-sm font-semibold">Meu caderno de anotações</label>
-          <textarea id="study-material-notes" className="study-materials-workspace__editor min-h-44 w-full rounded-xl border bg-background p-3 text-sm" placeholder="Definição, fundamento legal, exemplo prático, dúvidas e revisão…" value={notes} onChange={e => save(e.target.value)} />
-          <p className="text-xs text-muted-foreground" role="status">Salvamento automático neste dispositivo. Não sincronizado com a conta.</p>
-        </div>
-      )}
-      {tool === "guide" && (
-        <div className="study-materials-workspace__checklist grid gap-3 sm:grid-cols-2">
-          {["Entender o conceito e localizar a fonte", "Identificar elementos e exceções", "Resolver questões da disciplina", "Registrar erros e revisar em 24 horas"].map((item, i) => (
-            <label key={item} className="flex cursor-pointer items-start gap-3 rounded-xl border bg-background p-4 text-sm">
-              <input type="checkbox" checked={checked[i]} onChange={e => setChecked(old => old.map((v, n) => i === n ? e.target.checked : v))} className="mt-0.5" />
-              <span><strong>Etapa {i + 1}</strong><span className="block mt-1 text-muted-foreground">{item}</span></span>
-            </label>
-          ))}
-          <p className="sm:col-span-2 text-xs text-muted-foreground">Checklist da sessão atual: {checked.filter(Boolean).length} de 4 etapas concluídas.</p>
-        </div>
-      )}
-      {tool === "simplify" && (
-        <div className="space-y-3 text-sm">
-          <p>Use a estrutura abaixo para explicar <strong>{label}</strong> com suas próprias palavras, sem perder as condições previstas na fonte.</p>
-          <ol className="list-decimal space-y-2 pl-5 text-muted-foreground">
-            <li>Escreva em uma frase o que o conceito significa.</li>
-            <li>Defina cada termo técnico essencial.</li>
-            <li>Dê um exemplo cotidiano e um contraexemplo.</li>
-            <li>Confira a explicação com o material original antes de memorizar.</li>
-          </ol>
-          <textarea className="study-materials-workspace__editor min-h-32 w-full rounded-xl border bg-background p-3" aria-label="Explicação simplificada" placeholder="Minha explicação simples…" value={notes} onChange={e => save(e.target.value)} />
-        </div>
-      )}
-      {tool === "compare" && (
-        <div className="space-y-3">
-          <label className="block text-sm font-semibold" htmlFor="study-compare-other">Segundo conceito para comparar</label>
-          <input id="study-compare-other" className="w-full rounded-lg border bg-background p-3 text-sm" placeholder="Ex.: outro instituto, regra ou princípio" value={other} onChange={e => setOther(e.target.value)} />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[label, other.trim() || "Segundo conceito"].map((name, i) => (
-              <div key={i} className="rounded-xl border bg-background p-4">
-                <h3 className="font-semibold">{name}</h3>
-                <label className="mt-3 block text-xs text-muted-foreground" htmlFor={`study-compare-side-${i}`}>Definição, fundamento, requisitos, exemplos e diferenças</label>
-                <textarea id={`study-compare-side-${i}`} className="mt-2 min-h-36 w-full resize-y rounded-lg border bg-card p-3 text-sm" placeholder="Escreva sua análise com base nas fontes consultadas…" value={comparison[i] ?? ""} onChange={e => setComparison(prev => prev.map((v, n) => n === i ? e.target.value : v))} />
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-muted-foreground">Quadro de comparação orientada: não substitui a consulta às fontes oficiais.</p>
-        </div>
-      )}
-      {tool === "quiz" && (
-        <div className="space-y-3">
-          <h3 className="font-semibold">Autoavaliação de {label}</h3>
-          {prompts.map((question, i) => (
-            <div key={i} className="space-y-2 rounded-xl border bg-background p-4">
-              <label htmlFor={`study-quiz-answer-${i}`} className="block text-sm font-semibold">{i + 1}. {question}</label>
-              <textarea id={`study-quiz-answer-${i}`} className="min-h-24 w-full resize-y rounded-lg border bg-card p-3 text-sm" placeholder="Escreva sua resposta…" value={quizAnswers[i] ?? ""} onChange={e => {
-                setQuizAnswers(prev => prev.map((v, n) => n === i ? e.target.value : v));
-                setQuizReviewed(prev => prev.map((v, n) => n === i ? false : v));
-              }} />
-              <label className="flex items-center gap-2 text-xs text-muted-foreground">
-                <input type="checkbox" checked={quizReviewed[i] ?? false} disabled={!quizAnswers[i]?.trim()} onChange={e => setQuizReviewed(prev => prev.map((v, n) => n === i ? e.target.checked : v))} />
-                Conferi esta resposta na fonte de estudo
-              </label>
-            </div>
-          ))}
-          <p className="text-xs text-muted-foreground" role="status">{quizReviewed.filter(Boolean).length} de 4 respostas conferidas. Respostas salvas neste dispositivo; sem correção automática.</p>
-          <button type="button" onClick={() => setShowAnswer(v => !v)} className="rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-muted">{showAnswer ? "Ocultar orientação" : "Como conferir minhas respostas"}</button>
-          {showAnswer && <p className="rounded-lg bg-muted p-3 text-sm">Confira cada resposta na fonte do assunto, identifique o fundamento legal quando aplicável e registre os pontos de dúvida no caderno de erros. Estas são perguntas de revisão, não questões oficiais com gabarito.</p>}
-        </div>
-      )}
-      {(tool === "quiz" || tool === "compare") && (
-        <div className="rounded-xl border bg-muted/30 p-4 space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 className="text-sm font-semibold">Progresso e histórico</h3>
-              <p className="text-xs text-muted-foreground">
-                {tool === "quiz" ? `${answeredCount}/4 respostas preenchidas · ${reviewedCount}/4 conferidas` : comparison.some(value => value.trim()) ? "Comparação em andamento" : "Inicie sua comparação"}
-              </p>
-            </div>
-            <Button type="button" size="sm" variant="secondary" disabled={!historyReady || hydratedActivityKey !== activityKey || (tool === "quiz" ? answeredCount === 0 : !comparison.some(value => value.trim()))} onClick={recordSession}>
-              Registrar sessão
-            </Button>
-          </div>
-          {tool === "quiz" && (
-            <div role="progressbar" aria-label="Respostas conferidas" aria-valuenow={reviewedCount} aria-valuemin={0} aria-valuemax={4} className="h-2 overflow-hidden rounded-full bg-muted">
-              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${reviewedCount * 25}%` }} />
-            </div>
-          )}
-          <details>
-            <summary className="cursor-pointer text-xs font-semibold">Histórico neste dispositivo ({history.length})</summary>
-            {history.length ? (
-              <ol className="mt-3 max-h-48 space-y-2 overflow-y-auto text-xs text-muted-foreground">
-                {history.map((item, i) => (
-                  <li key={item.date + i} className="flex flex-wrap justify-between gap-2 border-b pb-2">
-                    <time dateTime={item.date}>{new Date(item.date).toLocaleString("pt-BR")}</time>
-                    <span>{item.answered} respostas · {item.reviewed} conferidas{item.compared ? " · comparação registrada" : ""}</span>
-                  </li>
-                ))}
-              </ol>
-            ) : <p className="mt-2 text-xs text-muted-foreground">Nenhuma sessão registrada ainda.</p>}
-          </details>
-          <p className="text-xs text-muted-foreground">Registro manual e local, sem sincronização com sua conta.</p>
-        </div>
-      )}
-      <div className="study-materials-workspace__footer flex flex-wrap gap-2 border-t pt-4">
-        <Button asChild size="sm" variant="outline"><Link to="/dashboard/study-room" search={{ subject, topic }}>Estudar material completo <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-        <Button asChild size="sm" variant="outline"><Link to="/dashboard/question-trainer" search={plannedPractice(subject, topic)}>Praticar questões <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-      </div>
-    </section>
-  );
-}
 
 // ───────────────────────── Foco (Pomodoro persistente) ─────────────────────────
 
