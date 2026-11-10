@@ -423,3 +423,14 @@
 @media (prefers-reduced-motion: reduce) {
   .pcac-astrix-workspace *, .pcac-astrix-workspace *::before, .pcac-astrix-workspace *::after { scroll-behavior: auto !important; transition-duration: 0ms !important; }
 }
+
+/* Override older dashboard-theme rules so Acre branding remains consistent in both themes. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-workspace { background: #f5f9f5; border-color: #a4c8ad; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-workspace > [data-slot="card-header"].pcac-astrix-header { background: linear-gradient(110deg,#063d2a 0%,#08623e 68%,#0a7650 100%); border-bottom: 3px solid #f1c840; }
+.dark .pcac-edital-page .pcac-astrix-workspace > [data-slot="card-content"].pcac-astrix-body,
+.pcac-edital-page .pcac-astrix-workspace > [data-slot="card-content"].pcac-astrix-body { background: linear-gradient(155deg,#edf6ef 0%,#f8faf6 52%,#fff9e5 100%); color: #19362e; }
+.dark .pcac-astrix-body .text-muted-foreground { color: #50685a; }
+.dark .pcac-astrix-body .text-foreground\/90 { color: #223b31; }
+.dark .pcac-astrix-body .bg-muted\/30, .dark .pcac-astrix-body .bg-muted\/20 { background: #f1f7f2; }
+.dark .pcac-astrix-body .bg-background\/60 { background: #fff; }
+.dark .pcac-astrix-body [data-slot="tabs-content"] { color: #19362e; }
