@@ -85,6 +85,7 @@ import "@/styles/home-hero-fit-correction.css";
 import "@/styles/home-agent-fixed-background.css";
 import "@/styles/home-preparation-premium.css";
 import "@/styles/home-mobile-compact.css";
+import "@/styles/mobile-home-polish-nov10.css";
 
 export const Route = createFileRoute("/")({
   component: Index,

@@ -1,0 +1,273 @@
+/* Norte Concursos — mobile homepage polish (10/11/2026): footer, plans, tools
+   grid, disclaimer note and the PC-AC banner photo. Imported last so it wins
+   over the layered redesign history without hunting through every prior file. */
+
+@media (max-width: 760px) {
+  /* ---------------------------------------------------------------- */
+  /* Tools grid: compact 2-column layout with a colored chip per item. */
+  /* ---------------------------------------------------------------- */
+  .home.hr-canvas .mobile-homepage .sx-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 12px 11px;
+    border-radius: 13px;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card strong {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card p {
+    margin-top: 2px;
+    font-size: 11.5px;
+    line-height: 1.35;
+    text-align: left;
+    hyphens: none;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(1) .sx-card__icon {
+    background: color-mix(in srgb, #3b82f6 22%, transparent);
+    color: #7cb0ff;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(2) .sx-card__icon {
+    background: color-mix(in srgb, #a855f7 22%, transparent);
+    color: #cc9bff;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(3) .sx-card__icon {
+    background: color-mix(in srgb, #e3b14b 24%, transparent);
+    color: #f2c66a;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(4) .sx-card__icon {
+    background: color-mix(in srgb, #22c55e 22%, transparent);
+    color: #7adf9e;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(5) .sx-card__icon {
+    background: color-mix(in srgb, #f97316 22%, transparent);
+    color: #ffab66;
+  }
+  .home.hr-canvas .mobile-homepage .sx-card:nth-of-type(6) .sx-card__icon {
+    background: color-mix(in srgb, #06b6d4 22%, transparent);
+    color: #6fe0f2;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Disclaimer note: a small colored notice instead of plain gray text. */
+  /* ---------------------------------------------------------------- */
+  .home.hr-canvas .mobile-homepage .sx-note.sx-note--highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 10px 12px;
+    border: 1px solid color-mix(in srgb, #e3b14b 30%, transparent);
+    border-radius: 11px;
+    background: color-mix(in srgb, #e3b14b 10%, transparent);
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .home.hr-canvas .mobile-homepage .sx-note__icon {
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    color: #e3b14b;
+  }
+  .home.hr-canvas .mobile-homepage .sx-note--highlight strong {
+    color: #f2c66a;
+    font-weight: 700;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* PC-AC banner: show the officer photo at a readable opacity.       */
+  /* ---------------------------------------------------------------- */
+  .home.hr-canvas .mobile-homepage .sx-banner__art {
+    opacity: 0.8;
+    object-position: 0% 15%;
+    transform: scale(1.55);
+    transform-origin: 2% 28%;
+  }
+  .home.hr-canvas .mobile-homepage .sx-banner::after {
+    background: linear-gradient(
+      180deg,
+      rgb(8 11 16 / 0.9) 0%,
+      rgb(8 11 16 / 0.72) 30%,
+      rgb(8 11 16 / 0.66) 100%
+    );
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Plans: shorter, denser cards.                                     */
+  /* ---------------------------------------------------------------- */
+  .home.home-recomposition .mobile-plans,
+  .home.hr-canvas .mobile-homepage .mobile-plans {
+    padding: 14px;
+  }
+  .home.home-recomposition .mobile-plans__list,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list {
+    gap: 7px;
+  }
+  .home.home-recomposition .mobile-plans__list > li,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 9px 11px !important;
+    border-radius: 12px !important;
+  }
+  .home.home-recomposition .mobile-plans__list > li > div,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li > div {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    gap: 8px !important;
+    text-align: left !important;
+  }
+  .home.home-recomposition .mobile-plans__icon,
+  .home.hr-canvas .mobile-homepage .mobile-plans__icon {
+    width: 20px !important;
+    height: 20px !important;
+    flex: 0 0 auto !important;
+  }
+  .home.home-recomposition .mobile-plans__list > li strong,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li strong {
+    flex: 0 0 auto !important;
+    overflow: hidden !important;
+    font-size: 12.5px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+  .home.home-recomposition .mobile-plans__list > li small,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li small {
+    display: block !important;
+    overflow: hidden !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    font-size: 10.5px !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+  }
+  .home.home-recomposition .mobile-plans__list > li > span,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li > span {
+    flex: 0 0 auto !important;
+    margin-left: 8px !important;
+    padding: 5px 9px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+  .home.home-recomposition .mobile-plans__list > li > span em,
+  .home.hr-canvas .mobile-homepage .mobile-plans__list > li > span em {
+    font-size: 9px;
+  }
+  .home.home-recomposition .mobile-plans__trial,
+  .home.hr-canvas .mobile-homepage .mobile-plans__trial {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+  .home.home-recomposition .mobile-plans .mobile-homepage__section-head,
+  .home.hr-canvas .mobile-homepage .mobile-plans .mobile-homepage__section-head {
+    margin-bottom: 10px;
+  }
+  .home.home-recomposition .mobile-plans__note,
+  .home.hr-canvas .mobile-homepage .mobile-plans__note {
+    margin-top: 8px;
+    font-size: 10.5px;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Footer: plain link row instead of boxed pills, tighter rhythm,    */
+  /* colored contact chips, gold top accent.                           */
+  /* ---------------------------------------------------------------- */
+  .home .mobile-homepage__footer {
+    position: relative;
+    padding: 20px 18px 16px;
+    overflow: hidden;
+  }
+  .home .mobile-homepage__footer::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #e3b14b, transparent);
+  }
+  .home .mobile-homepage__footer-brand {
+    margin-bottom: 2px;
+  }
+  .home .mobile-homepage__footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .home .mobile-homepage__footer-nav a {
+    padding: 2px 0;
+    border: 0 !important;
+    background: transparent !important;
+    color: #c7cedb !important;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .home .mobile-homepage__footer-nav a:not(:last-child)::after {
+    content: "·";
+    margin-left: 10px;
+    color: #4a5566;
+  }
+  :root:not(.dark) .home .mobile-homepage__footer-nav a {
+    color: #3c4a5c !important;
+  }
+  :root:not(.dark) .home .mobile-homepage__footer-nav a:not(:last-child)::after {
+    color: #aab4c1;
+  }
+  .home .mobile-homepage__footer-contact {
+    display: grid;
+    gap: 9px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgb(255 255 255 / 0.08);
+  }
+  .home .mobile-homepage__footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12.5px;
+  }
+  .home .mobile-homepage__footer-contact a svg {
+    flex: 0 0 auto;
+    width: 26px;
+    height: 26px;
+    padding: 6px;
+    border-radius: 8px;
+    background: color-mix(in srgb, #e3b14b 16%, transparent);
+    color: #e3b14b;
+  }
+  .home .mobile-homepage__footer-copy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px 14px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgb(255 255 255 / 0.08);
+    font-size: 11px;
+  }
+}
