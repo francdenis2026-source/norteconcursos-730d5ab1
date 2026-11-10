@@ -45,11 +45,13 @@ export function ContestObjectivesShowcase({
   contests,
   onSelect,
   savingId,
+  onClear,
 }: {
   focusedContest: Contest | undefined;
   contests: Contest[];
   onSelect: (contest: Contest) => void;
   savingId?: string | null;
+  onClear?: () => void;
 }) {
   const featured = focusedContest ?? contests[0];
   const others = contests.filter((contest) => contest.id !== featured?.id).slice(0, 3);
@@ -93,6 +95,7 @@ export function ContestObjectivesShowcase({
                   <Link to="/dashboard/cronograma" className="contest-showcase__secondary-action">
                     <CalendarClock aria-hidden="true" /> Cronograma de estudos
                   </Link>
+                  {onClear && <button type="button" className="contest-showcase__clear-action" onClick={onClear}>Desmarcar objetivo</button>}
                   {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
                 </div>
               </div>
@@ -109,12 +112,13 @@ export function ContestObjectivesShowcase({
         {others.length > 0 && (
           <div className="contest-showcase__others">
             <div className="contest-showcase__section-heading">
-              <h2>Outras oportunidades</h2>
-              <span className="contest-showcase__count">{others.length} {others.length === 1 ? "opção" : "opções"}</span>
+              <h2>{focusedContest ? "Outros cargos bloqueados" : "Escolha um cargo para focar"}</h2>
+              <span className="contest-showcase__count">{focusedContest ? "1 objetivo ativo" : `${others.length} opções disponíveis`}</span>
             </div>
+            {focusedContest && <p className="contest-showcase__lock-note">Seu objetivo está ativo. Para escolher outro cargo, desmarque primeiro o objetivo principal nesta tela.</p>}
             <div className="contest-showcase__grid">
               {others.map((contest) => (
-                <article className="contest-showcase__card" key={contest.id}>
+                <article className={`contest-showcase__card ${focusedContest ? "contest-showcase__card--locked" : ""}`} key={contest.id} aria-disabled={!!focusedContest}>
                   <div className="contest-showcase__card-art">
                     <img src={contestArt(contest)} alt="" loading="lazy" decoding="async" />
                     <span>{contest.name}</span>
@@ -129,8 +133,8 @@ export function ContestObjectivesShowcase({
                       <span><MapPin aria-hidden="true" /> {contest.location || "Local a confirmar"}</span>
                     </div>
                     <ContestFacts contest={contest} compact />
-                    <button type="button" className="contest-showcase__choose" onClick={() => onSelect(contest)} disabled={savingId === contest.id}>
-                      {savingId === contest.id ? "Salvando…" : "Definir como objetivo"} <ArrowRight aria-hidden="true" />
+                    <button type="button" className="contest-showcase__choose" onClick={() => onSelect(contest)} disabled={!!focusedContest || savingId === contest.id}>
+                      {focusedContest ? "Bloqueado pelo objetivo ativo" : savingId === contest.id ? "Salvando…" : "Definir como objetivo"} {!focusedContest && <ArrowRight aria-hidden="true" />}
                     </button>
                   </div>
                 </article>
