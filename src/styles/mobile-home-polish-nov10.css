@@ -27,12 +27,12 @@
 
 @media (max-width: 760px) {
   /* ---------------------------------------------------------------- */
-  /* The mobile wrapper painted its own solid "porcelain" background   */
-  /* over the whole viewport, hiding the watermark above completely.  */
-  /* Let it through; each card/section inside keeps its own surface.  */
+  /* Franc asked for the emblem watermark to stay on desktop only —   */
+  /* drop it on mobile and go back to the flat solid background.      */
   /* ---------------------------------------------------------------- */
-  .home.home-recomposition .mobile-homepage {
-    background: transparent !important;
+  .home.hr-canvas {
+    background-image: none !important;
+    background-color: var(--home-bg) !important;
   }
 
   /* ---------------------------------------------------------------- */
