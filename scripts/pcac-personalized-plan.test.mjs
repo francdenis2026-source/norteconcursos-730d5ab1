@@ -26,6 +26,7 @@ test("PC-AC: cada especialidade recebe plano detalhado com tópicos do próprio 
     assert.ok(day.activities.some((item) => item.topic && item.subject), `sem tópico específico para ${cargo.id}`);
     assert.ok(day.activities.some((item) => item.type === "rotina" && item.subject === "Café da manhã"));
     assert.ok(day.activities.some((item) => item.type === "pausa"), `sem pausa calculada para ${cargo.id}`);
+    assert.ok(weeks[0]!.days.some((plannedDay) => plannedDay.activities.some((item) => item.type === "descanso")), "a semana precisa reservar recuperação");
     const allTopics = cargo.blocks.flatMap((block) => block.disciplines.flatMap((discipline) => discipline.topics ?? []));
     assert.ok(allTopics.length > 0, `cargo sem tópicos oficiais: ${cargo.id}`);
   }
