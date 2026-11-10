@@ -1,0 +1,174 @@
+/* Astryx interactions v1 — student dashboard and shared student shell.
+   One restrained graphite/brass interaction language, no layout shifts.
+   Intentional only for interactive controls, never informational cards. */
+.app-shell[data-area="student"] {
+  --ax-hover-fill: #f2e4c6;
+  --ax-hover-edge: #ad812d;
+  --ax-hover-ink: #30230f;
+  --ax-hover-icon: #815713;
+  --ax-hover-ring: #af7e27;
+  --ax-hover-shadow: 0 4px 14px -10px rgb(80 49 9 / 36%);
+  --ax-active-fill: #e7cf9e;
+  --ax-active-ink: #2f220e;
+  --ax-active-edge: #96702d;
+}
+:root.dark .app-shell[data-area="student"] {
+  --ax-hover-fill: #3d3324;
+  --ax-hover-edge: #d8b66e;
+  --ax-hover-ink: #fff0cc;
+  --ax-hover-icon: #f3d48c;
+  --ax-hover-ring: #f0ca79;
+  --ax-hover-shadow: 0 6px 18px -11px rgb(0 0 0 / 75%);
+  --ax-active-fill: #4b3b25;
+  --ax-active-ink: #ffedc1;
+  --ax-active-edge: #f0c76f;
+}
+.app-shell[data-area="student"] :is(
+  .student-top-navigation__trigger,
+  .student-direct-navigation .app-nav__link,
+  .student-direct-navigation button.app-nav__link,
+  .app-topbar__actions a,
+  .app-topbar__actions button,
+  .student-hub__shortcuts > a,
+  .student-home__section-button,
+  .student-home__primary,
+  .student-home__text-link,
+  .student-hub__contest-link,
+  .student-hub__planning-link:not(.student-hub__planning-link--locked)
+) {
+  transition: background-color 175ms ease, color 175ms ease,
+    border-color 175ms ease, box-shadow 175ms ease, transform 175ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  /* Menus: gold tint and matching icon, distinct from selected state. */
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation
+  .app-nav__link:not([data-active="true"]):not([aria-disabled="true"]):hover,
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation
+  button.app-nav__link:not([aria-expanded="true"]):not(:disabled):hover {
+    background: var(--ax-hover-fill);
+    border-color: var(--ax-hover-edge);
+    color: var(--ax-hover-ink);
+    box-shadow: inset 3px 0 var(--ax-hover-edge), var(--ax-hover-shadow);
+  }
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation
+  .app-nav__link:not([data-active="true"]):hover :is(.app-ico, .app-ico svg, .app-nav__label, .app-nav__label strong, .nav-section-link__arrow) {
+    color: var(--ax-hover-icon);
+  }
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation
+  .app-nav__link:not([data-active="true"]):hover .app-ico {
+    background: color-mix(in srgb, var(--ax-hover-edge) 15%, transparent);
+    border-color: color-mix(in srgb, var(--ax-hover-edge) 42%, transparent);
+  }
+  /* Current route stays selected even when cursor moves over it. */
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation
+  .app-nav__link[data-active="true"] {
+    border-color: var(--ax-active-edge);
+    background: var(--ax-active-fill);
+    color: var(--ax-active-ink);
+    box-shadow: inset 3px 0 var(--ax-active-edge);
+  }
+  /* Main top navigation. */
+  :root .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:not([data-active="true"]):not([aria-disabled="true"]):not(:disabled):hover {
+    color: var(--ax-hover-ink) !important;
+    background: var(--ax-hover-fill) !important;
+    border-color: var(--ax-hover-edge) !important;
+    box-shadow: inset 0 -2px var(--ax-hover-edge), var(--ax-hover-shadow);
+  }
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:not([data-active="true"]):hover :is(.student-top-navigation__label, svg) {
+    color: inherit;
+  }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a):not(:disabled):not([aria-disabled="true"]):hover {
+    color: var(--ax-hover-ink);
+    border-color: var(--ax-hover-edge);
+    background: var(--ax-hover-fill);
+    box-shadow: var(--ax-hover-shadow);
+  }
+  /* Dashboard: shortcuts and concrete actions only, not passive KPIs. */
+  .app-shell[data-area="student"] .student-home.student-overview
+  .student-hub__shortcuts > a:hover,
+  .app-shell[data-area="student"] .student-home.student-overview
+  :is(.student-home__section-button, .student-hub__contest-link, .student-home__text-link):not([aria-disabled="true"]):hover {
+    border-color: var(--ax-hover-edge);
+    background: var(--ax-hover-fill);
+    color: var(--ax-hover-ink);
+    box-shadow: var(--ax-hover-shadow);
+  }
+  .app-shell[data-area="student"] .student-home.student-overview
+  .student-hub__shortcuts > a:hover :is(strong,small,svg,.student-home__tool-icon) {
+    color: var(--ax-hover-ink);
+  }
+  .app-shell[data-area="student"] .student-home.student-overview
+  .student-hub__shortcuts > a:hover .student-home__tool-icon {
+    border-color: var(--ax-hover-edge);
+    background: color-mix(in srgb, var(--ax-hover-edge) 18%, transparent);
+  }
+  .app-shell[data-area="student"] .student-home.student-overview
+  .student-home__primary:not(:disabled):hover {
+    border-color: var(--ax-hover-edge);
+    background: var(--ax-hover-fill);
+    color: var(--ax-hover-ink);
+    box-shadow: 0 0 0 1px var(--ax-hover-edge), var(--ax-hover-shadow);
+  }
+  /* Accessible shared controls across the student platform. Avoid destructive/disabled states. */
+  .app-shell[data-area="student"] #dashboard-content
+  [data-slot="button"][data-variant="outline"]:not(:disabled):not([aria-disabled="true"]):hover,
+  .app-shell[data-area="student"] #dashboard-content
+  [data-slot="button"][data-variant="secondary"]:not(:disabled):not([aria-disabled="true"]):hover,
+  .app-shell[data-area="student"] #dashboard-content
+  [data-slot="tabs-trigger"]:not([data-state="active"]):not(:disabled):hover {
+    color: var(--ax-hover-ink);
+    background: var(--ax-hover-fill);
+    border-color: var(--ax-hover-edge);
+    box-shadow: var(--ax-hover-shadow);
+  }
+  .app-shell[data-area="student"] #dashboard-content
+  [data-slot="tabs-trigger"]:not([data-state="active"]):hover svg,
+  .app-shell[data-area="student"] #dashboard-content
+  [data-slot="button"][data-variant="outline"]:hover svg { color: currentColor; }
+}
+/* Focus does not rely on mouse hover; visible from keyboard and high contrast. */
+.app-shell[data-area="student"] :is(
+  .student-direct-navigation .app-nav__link,
+  .student-top-navigation__trigger,
+  .student-hub__shortcuts > a,
+  .student-home__primary,
+  .student-home__text-link,
+  .student-home__section-button
+):focus-visible,
+.app-shell[data-area="student"] #dashboard-content :is([data-slot="button"],[data-slot="tabs-trigger"]):focus-visible {
+  outline: 3px solid var(--ax-hover-ring);
+  outline-offset: 3px;
+}
+.app-shell[data-area="student"] :is(
+ .student-top-navigation__trigger,
+ .student-direct-navigation .app-nav__link,
+ .student-hub__shortcuts > a
+):is(:disabled,[aria-disabled="true"]) {
+  opacity: .52;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] :is(
+    .student-top-navigation__trigger,
+    .student-direct-navigation .app-nav__link,
+    .app-topbar__actions a,
+    .app-topbar__actions button,
+    .student-hub__shortcuts > a,
+    .student-home__section-button,
+    .student-home__primary,
+    .student-home__text-link
+  ) { transition: none !important; }
+}
+@media (forced-colors: active) {
+  .app-shell[data-area="student"] :is(
+    .student-direct-navigation .app-nav__link,
+    .student-top-navigation__trigger,
+    .student-hub__shortcuts > a
+  ):hover { outline: 1px solid Highlight; }
+  .app-shell[data-area="student"] :is(
+    .student-direct-navigation .app-nav__link,
+    .student-top-navigation__trigger,
+    .student-hub__shortcuts > a
+  ):focus-visible { outline-color: Highlight; }
+}
