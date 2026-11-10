@@ -1,0 +1,25 @@
+/* Media center: compact learning library with clear media modes. */
+.app-shell[data-area="student"] .video-study-page {
+  width: 100%; max-width: 1480px; margin-inline: auto; gap: 14px;
+  --media-cyan: #5edbe5; --media-blue: #82aaff; --media-amber: #e4b461; --media-violet: #b99aef; --media-green: #54d1a5;
+  --media-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.dark .app-shell[data-area="student"] .video-study-page { --media-cyan: #79e9ef; --media-blue: #98beff; --media-amber: #f0c978; --media-violet: #c8aaf6; --media-green: #66dfb2; }
+.app-shell[data-area="student"] .video-study-page__header { min-height: 0; border-top: 2px solid var(--media-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--media-cyan) 9%, var(--card)), var(--card) 68%); }
+.app-shell[data-area="student"] .video-study-page__tabs { width: 100%; border-color: color-mix(in srgb, var(--media-cyan) 34%, var(--border)); background: color-mix(in srgb, var(--media-cyan) 5%, var(--card)); }
+.app-shell[data-area="student"] .video-study-page__tabs [role="tab"][data-state="active"] { background: var(--media-cyan); color: #10252b; box-shadow: 0 6px 14px -12px var(--media-cyan); }
+.app-shell[data-area="student"] .video-study-page [data-state="active"] { border-color: var(--media-cyan); }
+.app-shell[data-area="student"] .video-study-page .video-workspace,
+.app-shell[data-area="student"] .video-study-page .video-study-page__content,
+.app-shell[data-area="student"] .video-study-page [data-slot="card"] { border-color: var(--media-line); border-radius: 15px; }
+.app-shell[data-area="student"] .video-study-page .video-card:nth-child(3n + 1) { border-top: 2px solid var(--media-blue); }
+.app-shell[data-area="student"] .video-study-page .video-card:nth-child(3n + 2) { border-top: 2px solid var(--media-amber); }
+.app-shell[data-area="student"] .video-study-page .video-card:nth-child(3n) { border-top: 2px solid var(--media-violet); }
+.app-shell[data-area="student"] .video-study-page .rounded-xl.border:hover { border-color: var(--media-cyan); }
+.app-shell[data-area="student"] .video-study-page .text-primary { color: var(--media-cyan); }
+.app-shell[data-area="student"] .video-study-page .bg-primary\/10 { background: color-mix(in srgb, var(--media-cyan) 12%, var(--card)); }
+.app-shell[data-area="student"] .video-study-page .border-t { border-color: var(--media-line); }
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .video-study-page__tabs { overflow-x: auto; }
+  .app-shell[data-area="student"] .video-study-page__tabs [role="tab"] { min-width: max-content; min-height: 44px; }
+}
