@@ -249,14 +249,13 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 <h3 className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   De onde vêm os pontos
                 </h3>
-                <dl className="grid grid-cols-2 divide-x rounded-xl border text-center sm:grid-cols-5">
+                <dl className="grid grid-cols-2 divide-x rounded-xl border text-center sm:grid-cols-4">
                   {(
                     [
                       ["Questões", p.question_points],
                       ["Simulados", p.simulator_points],
                       ["Flashcards", p.flashcard_points],
                       ["Redação", p.essay_points],
-                      ["Constância", p.consistency_points],
                     ] as const
                   ).map(([label, points]) => (
                     <div key={label} className="min-w-0 px-1 py-2">
@@ -267,7 +266,9 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 </dl>
                 <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
                   Pontos não são a quantidade de questões: contam só a primeira resposta de cada uma
-                  (acerto soma, erro desconta) e dependem do aproveitamento do dia.
+                  (acerto soma, erro desconta) e dependem do aproveitamento do dia. Constância
+                  ({p.consistency_points} pts) e horas de estudo são métricas de dedicação e não entram
+                  nesse total.
                 </p>
               </section>
               <section aria-label="Medalhas">
