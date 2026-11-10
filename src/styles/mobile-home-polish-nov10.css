@@ -2,7 +2,36 @@
    grid, disclaimer note and the PC-AC banner photo. Imported last so it wins
    over the layered redesign history without hunting through every prior file. */
 
+/* ------------------------------------------------------------------------ */
+/* Whole-page backdrop: the flat solid color behind the homepage is swapped */
+/* for a faint watermark of the brand emblem (skull + pistol shield), kept  */
+/* at ~10% visibility behind a tint of the same background color so text    */
+/* contrast is untouched. Applies at every breakpoint, light and dark.      */
+/* ------------------------------------------------------------------------ */
+.home.hr-canvas {
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--home-bg) 82%, transparent),
+      color-mix(in srgb, var(--home-bg) 82%, transparent)
+    ),
+    url("/media/brand/norte-identity/emblema-premium.webp") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center, top center !important;
+  background-size: cover, min(900px, 140vw) auto !important;
+  background-attachment: scroll, fixed !important;
+  background-color: var(--home-bg) !important;
+}
+
 @media (max-width: 760px) {
+  /* ---------------------------------------------------------------- */
+  /* The mobile wrapper painted its own solid "porcelain" background   */
+  /* over the whole viewport, hiding the watermark above completely.  */
+  /* Let it through; each card/section inside keeps its own surface.  */
+  /* ---------------------------------------------------------------- */
+  .home.home-recomposition .mobile-homepage {
+    background: transparent !important;
+  }
+
   /* ---------------------------------------------------------------- */
   /* Recent-exams carousel: cards were stretched to match the tallest */
   /* sibling, leaving a big blank gap above the "Treinar questões"    */
