@@ -1,57 +1,377 @@
-/* Scoped integration with the existing app shell. Component colors come from Astryx. */
-.pcac-schedule { width: 100%; display: flex; flex-direction: column; min-width: 0; min-height: 0; color: var(--color-text-primary); background: var(--color-background-surface); border: 1px solid var(--color-border); border-radius: var(--radius-container); }
-.pcac-schedule__header { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .75rem 1rem; border-bottom: 1px solid var(--color-border); }
-.pcac-schedule__header h2 { display: flex; align-items: center; gap: .5rem; font-size: 1rem; font-weight: 750; font-family: var(--font-family-heading); }
-.pcac-schedule__header h2 svg { width: 1.25rem; height: 1.25rem; }
-.pcac-schedule__header p { font-size: .75rem; color: var(--color-text-secondary); }
-.pcac-schedule__header nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-left: auto; }
-.pcac-schedule__body { display: flex; flex-direction: column; min-height: 0; min-width: 0; padding: .5rem 1rem; gap: .75rem; }
-.pcac-schedule__panel { min-height: 0; min-width: 0; padding-bottom: .75rem; }
-.pcac-schedule [hidden] { display: none !important; }
-.pcac-schedule label, .pcac-schedule #schedule-days-label { color: var(--color-text-primary); font-size: .75rem; font-weight: 650; }
-.pcac-schedule input { background: var(--color-background-muted); color: var(--color-text-primary); border-color: var(--color-border); }
-.pcac-schedule__table { border: 1px solid var(--color-border); border-radius: var(--radius-element); overflow: clip; }
-.pcac-schedule table { width: 100%; font-variant-numeric: tabular-nums; }
-.pcac-schedule table th { background: var(--color-background-muted); color: var(--color-text-primary); }
-.pcac-schedule table td { border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); }
-.pcac-schedule table tbody tr:nth-child(even) { background: var(--color-background-muted); }
-.pcac-schedule table tbody tr:hover { background: var(--color-background-muted); }
-.pcac-schedule .pcac-week-card { background: var(--color-background-surface); border-color: var(--color-border); }
-.pcac-schedule .text-muted-foreground { color: var(--color-text-secondary); }
-.pcac-schedule button:focus-visible, .pcac-schedule input:focus-visible, .pcac-schedule__panel:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-@media (max-width: 600px) {
- .pcac-schedule__header, .pcac-schedule__body { padding: .5rem; }
- .pcac-schedule__header nav { margin-left: 0; }
- .pcac-schedule table { font-size: .65rem; table-layout: fixed; }
- .pcac-schedule th:first-child, .pcac-schedule td:first-child { width: 30%; overflow-wrap: anywhere; }
- .pcac-schedule :is(th,td) { padding-inline: .15rem; }
- .pcac-schedule .pcac-week-card table, .pcac-schedule .pcac-week-card tbody, .pcac-schedule .pcac-week-card tr, .pcac-schedule .pcac-week-card td { display: block; width: 100%; }
- .pcac-schedule .pcac-week-card thead { display: none; }
- .pcac-schedule .pcac-week-card td { border: 0; padding: .25rem; }
- .pcac-schedule .pcac-week-card tr { padding: .5rem; border-bottom: 1px solid var(--color-border); }
+/* PC-AC schedule — Astryx-aligned, responsive and high-contrast.
+   Neutral slate surfaces carry the content; Acre green is reserved for selected
+   study days and the branded PDF action, while brass marks active navigation. */
+.pcac-schedule {
+  --pcac-surface: #f4f6f8;
+  --pcac-panel: #ffffff;
+  --pcac-panel-soft: #edf1f4;
+  --pcac-ink: #243342;
+  --pcac-muted: #5d6c79;
+  --pcac-line: #d3dce3;
+  --pcac-line-strong: #aebbc6;
+  --pcac-green: #24694d;
+  --pcac-green-hover: #1c573f;
+  --pcac-green-soft: #e5f1e9;
+  --pcac-brass: #a77a32;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  overflow: visible;
+  color: var(--pcac-ink);
+  background: var(--pcac-surface);
+  border: 1px solid var(--pcac-line);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgb(20 37 52 / 6%);
 }
-.pcac-schedule { height: 100%; overflow: hidden; }
-.pcac-schedule__header { flex: 0 0 auto; }
-.pcac-schedule__body { flex: 1; overflow: hidden; }
-.pcac-schedule__body > .astryx-tab-list { flex: 0 0 auto; }
-.pcac-schedule__panel { flex: 1; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
-@media print { .pcac-schedule, .pcac-schedule__body, .pcac-schedule__panel { height: auto; overflow: visible; } }
-.pcac-schedule__header { background: var(--color-background-green); border-color: var(--color-border-green); }
-.pcac-schedule__header h2, .pcac-schedule__header p { color: var(--color-text-green); }
-.pcac-schedule .astryx-tab[data-selected="true"] { background: var(--color-background-green); color: var(--color-text-green); }
-.pcac-schedule .astryx-tab { border-radius: var(--radius-element); }
-.pcac-schedule .pcac-week-card { border-inline-start: .2rem solid var(--color-border-yellow); }
-.pcac-schedule [role="alert"] { padding: .5rem 1rem; color: var(--color-text-error); background: var(--color-background-red); }
-@media (max-width: 600px) {
- .pcac-schedule .astryx-tab-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; mask-image: none; gap: var(--spacing-1); }
- .pcac-schedule .astryx-tab { min-width: 0; width: 100%; font-size: var(--font-size-sm); }
- .pcac-schedule .astryx-tab-scroll-button { display: none; }
+:root.dark .pcac-schedule {
+  --pcac-surface: #202b36;
+  --pcac-panel: #263542;
+  --pcac-panel-soft: #2d3c49;
+  --pcac-ink: #edf3f7;
+  --pcac-muted: #bdc9d2;
+  --pcac-line: #40515f;
+  --pcac-line-strong: #657887;
+  --pcac-green: #398363;
+  --pcac-green-hover: #469574;
+  --pcac-green-soft: #294638;
+  --pcac-brass: #e0bd78;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 18%);
 }
-/* A single scroll owner keeps every study week reachable in the real shell. */
-.pcac-schedule, .pcac-schedule__body, .pcac-schedule__panel {
-  height: auto; max-height: none; overflow: visible; flex: initial; overscroll-behavior: auto;
+.pcac-schedule *,
+.pcac-schedule *::before,
+.pcac-schedule *::after { box-sizing: border-box; min-width: 0; }
+.pcac-schedule__header {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  min-width: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--pcac-line);
+  border-radius: 13px 13px 0 0;
+  background: var(--pcac-panel);
+}
+.pcac-schedule__header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--pcac-ink);
+  font-size: 16px;
+  font-weight: 780;
+  line-height: 1.3;
+  font-family: var(--font-family-heading, inherit);
+}
+.pcac-schedule__header h2 svg { width: 19px; height: 19px; flex: 0 0 auto; color: var(--pcac-green); }
+.pcac-schedule__header p {
+  min-width: 0;
+  color: var(--pcac-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.pcac-schedule__header nav {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  margin-left: auto;
+}
+.pcac-schedule__header nav > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid var(--pcac-line-strong);
+  border-radius: 9px;
+  color: var(--pcac-ink);
+  background: var(--pcac-panel-soft);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.2;
+  white-space: normal;
+  transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.pcac-schedule__header nav > *:first-child {
+  color: var(--pcac-ink);
+  background: var(--pcac-panel-soft);
+  border-color: var(--pcac-line-strong);
+}
+.pcac-schedule__header nav > *:last-child {
+  color: #ffffff !important;
+  background: #24694d !important;
+  border-color: #24694d !important;
+  box-shadow: 0 2px 7px rgb(24 83 58 / 20%);
+}
+:root.dark .pcac-schedule__header nav > *:last-child {
+  color: #ffffff !important;
+  background: #287653 !important;
+  border-color: #4b9a75 !important;
+}
+.pcac-schedule__header nav > *:last-child:hover:not(:disabled) {
+  background: #1c573f !important;
+  border-color: #1c573f !important;
+}
+:root.dark .pcac-schedule__header nav > *:last-child:hover:not(:disabled) {
+  background: #398363 !important;
+  border-color: #55a27e !important;
+}
+.pcac-schedule__header nav > *:hover:not(:disabled) { transform: translateY(-1px); }
+.pcac-schedule__header nav > *:disabled { opacity: .55; cursor: not-allowed; }
+.pcac-schedule__header nav svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.pcac-schedule__body {
+  display: flex;
+  flex: initial;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+  gap: 12px;
+  padding: 12px 16px 16px;
 }
 .pcac-schedule__body > .astryx-tab-list {
-  position: sticky; top: 146px; z-index: 10; background: var(--color-background-surface);
+  position: static;
+  z-index: auto;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid var(--pcac-line);
+  border-radius: 11px;
+  background: var(--pcac-panel-soft);
+  box-shadow: none;
 }
-.app-shell[data-focus-mode="true"] .pcac-schedule__body > .astryx-tab-list { top: 58px; }
+.pcac-schedule .astryx-tab-strip {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 5px;
+}
+.pcac-schedule .astryx-tab {
+  flex: 1 1 130px;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--pcac-muted);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 720;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.pcac-schedule .astryx-tab[data-selected="true"],
+.pcac-schedule .astryx-tab[aria-selected="true"] {
+  color: #302718;
+  background: #e7c77f;
+  border-color: #c9a65c;
+  box-shadow: inset 0 -2px 0 #a77a32;
+}
+:root.dark .pcac-schedule .astryx-tab[data-selected="true"],
+:root.dark .pcac-schedule .astryx-tab[aria-selected="true"] {
+  color: #241f16;
+  background: #e0bd78;
+  border-color: #e0bd78;
+}
+.pcac-schedule__panel {
+  flex: initial;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  padding: 4px 0 10px;
+  overflow: visible;
+  color: var(--pcac-ink);
+  overflow-wrap: anywhere;
+}
+.pcac-schedule__panel :is(p, li, label, h3, strong, span) { overflow-wrap: anywhere; }
+.pcac-schedule label,
+.pcac-schedule #schedule-days-label {
+  display: block;
+  color: var(--pcac-ink);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.pcac-schedule input {
+  width: 100%;
+  max-width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--pcac-line-strong);
+  border-radius: 9px;
+  background: var(--pcac-panel);
+  color: var(--pcac-ink);
+  box-shadow: none;
+}
+.pcac-schedule input:focus-visible,
+.pcac-schedule button:focus-visible,
+.pcac-schedule__panel:focus-visible {
+  outline: 2px solid var(--pcac-brass);
+  outline-offset: 2px;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-width: 0;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 58px;
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid var(--pcac-line-strong);
+  border-radius: 9px;
+  color: var(--pcac-ink);
+  background: var(--pcac-panel-soft);
+  font-size: 12px;
+  font-weight: 720;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] button[aria-pressed="true"] {
+  color: #ffffff !important;
+  background: var(--pcac-green) !important;
+  border-color: var(--pcac-green) !important;
+  box-shadow: inset 0 -2px 0 rgb(0 0 0 / 12%);
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] button[aria-pressed="false"] {
+  color: var(--pcac-ink) !important;
+  background: var(--pcac-panel-soft) !important;
+  border-color: var(--pcac-line) !important;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] button:disabled { opacity: .58; }
+.pcac-schedule__table,
+.pcac-schedule .overflow-x-auto {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pcac-line-strong) transparent;
+  border: 1px solid var(--pcac-line);
+  border-radius: 10px;
+  background: var(--pcac-panel);
+}
+.pcac-schedule table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  color: var(--pcac-ink);
+}
+.pcac-schedule__table table { min-width: 690px; table-layout: fixed; }
+.pcac-schedule__table th:first-child { width: 24%; }
+.pcac-schedule__table th:nth-child(2) { width: 7%; }
+.pcac-schedule__table th:nth-child(3) { width: 17%; }
+.pcac-schedule__table th:nth-child(n+4) { width: 7.42%; }
+.pcac-schedule table th {
+  padding: 9px 7px;
+  color: var(--pcac-ink);
+  background: var(--pcac-panel-soft);
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1.35;
+}
+.pcac-schedule table td {
+  padding: 8px 7px;
+  border-bottom: 1px solid var(--pcac-line);
+  color: var(--pcac-ink);
+  font-size: 11px;
+  line-height: 1.5;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.pcac-schedule table tbody tr:nth-child(even) { background: var(--pcac-panel-soft); }
+.pcac-schedule table tbody tr:hover { background: var(--pcac-green-soft); }
+.pcac-schedule .text-muted-foreground { color: var(--pcac-muted) !important; }
+.pcac-schedule .text-primary { color: var(--pcac-green) !important; }
+:root.dark .pcac-schedule .text-primary { color: #9bd3b4 !important; }
+.pcac-schedule .pcac-week-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-block: 8px;
+  padding: 12px;
+  border: 1px solid var(--pcac-line);
+  border-inline-start: 3px solid var(--pcac-brass);
+  border-radius: 10px;
+  background: var(--pcac-panel);
+  color: var(--pcac-ink);
+  box-shadow: 0 2px 8px rgb(20 37 52 / 5%);
+}
+.pcac-schedule .pcac-week-card > p { color: var(--pcac-brass); }
+.pcac-schedule [data-slot="accordion-item"],
+.pcac-schedule [data-radix-accordion-item] { min-width: 0; border-color: var(--pcac-line); }
+.pcac-schedule [data-slot="accordion-trigger"],
+.pcac-schedule [data-radix-accordion-trigger] {
+  min-width: 0;
+  color: var(--pcac-ink);
+  white-space: normal;
+  text-align: left;
+}
+.pcac-schedule [data-slot="accordion-content"],
+.pcac-schedule [data-radix-accordion-content] {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--pcac-ink);
+  overflow-wrap: anywhere;
+}
+.pcac-schedule [role="alert"] {
+  margin: 8px 16px;
+  padding: 9px 12px;
+  border: 1px solid #d79a9a;
+  border-radius: 8px;
+  color: #8f3030;
+  background: #fff0f0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+:root.dark .pcac-schedule [role="alert"] {
+  color: #ffd8d8;
+  background: #482c31;
+  border-color: #8e5159;
+}
+@media (max-width: 760px) {
+  .pcac-schedule__header,
+  .pcac-schedule__body { padding-inline: 12px; }
+  .pcac-schedule__header { align-items: flex-start; }
+  .pcac-schedule__header nav { width: 100%; margin-left: 0; }
+  .pcac-schedule__header nav > * { flex: 1 1 145px; }
+  .pcac-schedule .astryx-tab-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+  .pcac-schedule .astryx-tab { width: 100%; min-height: 40px; }
+  .pcac-schedule__table table { min-width: 660px; }
+  .pcac-schedule .pcac-week-card { padding: 9px; }
+  .pcac-schedule .pcac-week-card .overflow-x-auto table { min-width: 680px; table-layout: fixed; }
+}
+@media (max-width: 420px) {
+  .pcac-schedule__header,
+  .pcac-schedule__body { padding-inline: 9px; }
+  .pcac-schedule__header nav > * { flex-basis: 100%; }
+  .pcac-schedule .astryx-tab { font-size: 11px; padding-inline: 6px; }
+  .pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] button { flex: 1 1 58px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pcac-schedule * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+@media print {
+  .pcac-schedule,
+  .pcac-schedule__body,
+  .pcac-schedule__panel { height: auto; max-height: none; overflow: visible; }
+}
