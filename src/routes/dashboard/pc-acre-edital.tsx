@@ -621,20 +621,23 @@ function PcAcCronogramaCard({
   const phaseWeeks = (phase: PcAcPlanWeek["phase"]) => weeks.filter((w) => w.phase === phase);
 
   return (
-    <Card id={CRONOGRAMA_ANCHOR} className="pcac-edital-card pcac-edital-cronograma scroll-mt-20">
-      <CardHeader>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <CardTitle className="flex items-center gap-2 text-base">
-              <CalendarClock className="h-5 w-5 text-primary" />
-              Cronograma de estudos
-            </CardTitle>
-            <CardDescription>
-              Grade semanal por disciplina{showDetailedPlan ? " e programação semana a semana (teoria, questões, redação e simulados)" : ""},
-              ajustada à data da prova e ao seu tempo disponível. Exporte em PDF quando quiser.
-            </CardDescription>
+    <Card id={CRONOGRAMA_ANCHOR} className="pcac-edital-card pcac-edital-cronograma pcac-astrix-workspace scroll-mt-20">
+      <CardHeader className="pcac-astrix-header">
+        <div className="pcac-astrix-header__layout">
+          <div className="pcac-astrix-identity">
+            <img className="pcac-astrix-identity__photo" src="/media/hero/pcac-capa.webp" alt="Identidade visual da Polícia Civil do Acre" />
+            <svg className="pcac-astrix-identity__flag" viewBox="0 0 50 35" role="img" aria-label="Bandeira do Acre">
+              <rect width="50" height="35" fill="#f7dd16" />
+              <path d="M0 35L50 0V35Z" fill="#078448" />
+              <path d="M11 4.2L12.8 9.3L18.2 9.3L13.8 12.5L15.5 17.7L11 14.5L6.5 17.7L8.2 12.5L3.8 9.3L9.2 9.3Z" fill="#db1f2b" />
+            </svg>
           </div>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="pcac-astrix-heading">
+            <span className="pcac-astrix-eyebrow">PC–AC 2026 <span aria-hidden="true">·</span> PLANEJAMENTO PERSONALIZADO</span>
+            <CardTitle className="pcac-astrix-title"><CalendarClock className="h-5 w-5" /> Seu cronograma de estudos</CardTitle>
+            <CardDescription className="pcac-astrix-subtitle">Organize a rotina, acompanhe a grade e prepare sua revisão final em um só painel.</CardDescription>
+          </div>
+          <div className="pcac-astrix-actions">
             <Badge variant="outline" className="text-sm">
               {daysLeft} dias até a prova ({PCAC_EXAM_DATE.split("-").reverse().join("/")})
             </Badge>
@@ -648,12 +651,12 @@ function PcAcCronogramaCard({
           </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-5">
-        <Tabs defaultValue="visao" className="pcac-cronograma-tabs">
+      <CardContent className="pcac-astrix-body">
+        <Tabs defaultValue="grade" className="pcac-cronograma-tabs">
           <TabsList className="pcac-cronograma-tabs__list" aria-label="Seções do cronograma">
-            <TabsTrigger value="visao">Visão geral</TabsTrigger>
-            <TabsTrigger value="grade">Grade semanal</TabsTrigger>
-            {showDetailedPlan && <TabsTrigger value="semanas">Plano por semanas</TabsTrigger>}
+            <TabsTrigger value="visao">Personalizar</TabsTrigger>
+            <TabsTrigger value="grade">Meu cronograma</TabsTrigger>
+            {showDetailedPlan && <TabsTrigger value="semanas">Planejamento detalhado</TabsTrigger>}
             <TabsTrigger value="final">Revisão final</TabsTrigger>
           </TabsList>
           <TabsContent value="visao" className="space-y-5">
@@ -902,6 +905,17 @@ function PcAcreEditalVerticalizadoPage() {
   const search = useSearch({ strict: false }) as { cargo?: string; view?: string };
   const cargoParam = search.cargo;
   const digitalView = search.view === "digital";
+  const [editalTab, setEditalTab] = React.useState(() =>
+    typeof window !== "undefined" && window.location.hash === "#pcac-cronograma" ? "cronograma" : "resumo",
+  );
+  React.useEffect(() => {
+    const syncHash = () => {
+      if (window.location.hash === "#pcac-cronograma") setEditalTab("cronograma");
+    };
+    window.addEventListener("hashchange", syncHash);
+    syncHash();
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, []);
   const [shareFeedback, setShareFeedback] = React.useState("");
   const shareDigitalEdital = async () => {
     const url = new URL("/dashboard/pc-acre-edital?view=digital", window.location.origin).href;
@@ -1100,7 +1114,7 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
-      <Tabs defaultValue="resumo" className="pcac-edital-tabs">
+      <Tabs value={editalTab} onValueChange={setEditalTab} className="pcac-edital-tabs">
         <TabsList className="pcac-edital-tabs__list" aria-label="Seções do edital verticalizado">
           <TabsTrigger value="resumo">Resumo do concurso</TabsTrigger>
           <TabsTrigger value="conteudo">Conteúdo e progresso</TabsTrigger>
@@ -1273,7 +1287,7 @@ function PcAcreEditalVerticalizadoPage() {
       </Card>
 
         </TabsContent>
-        <TabsContent value="cronograma" className="space-y-5">
+        <TabsContent value="cronograma" className="pcac-astrix-outer-tab">
       <PcAcCronogramaCard cargo={cargo} userId={userId} />
 
         </TabsContent>
