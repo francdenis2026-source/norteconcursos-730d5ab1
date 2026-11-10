@@ -47,6 +47,7 @@ import { normalizeUppercase } from "@/lib/utils";
 import { confirmDialog } from "@/lib/confirm";
 import { StudentDetailsDialog } from "@/components/dashboard/StudentDetailsDialog";
 import { fmtDateTime } from "@/lib/displayFormat";
+import "@/styles/admin-students-professional.css";
 
 export const Route = createFileRoute("/dashboard/admin-students")({
   head: () => ({

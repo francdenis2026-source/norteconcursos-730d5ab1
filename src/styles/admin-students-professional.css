@@ -1,0 +1,33 @@
+/* Admin students: compact operations cockpit with clear operational colors. */
+.app-shell[data-area="admin"] .admin-students-page,
+.app-shell[data-area="student"] .admin-students-page {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  --admin-cyan: #62dce5;
+  --admin-blue: #82aaff;
+  --admin-green: #52d1a3;
+  --admin-amber: #e4b461;
+  --admin-rose: #df8fac;
+  --admin-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.app-shell[data-area="admin"] .admin-students-page > .page-hero { min-height: 0; border-top: 2px solid var(--admin-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--admin-cyan) 10%, var(--card)), var(--card) 66%); }
+.app-shell[data-area="admin"] .admin-students-page > [data-slot="card"] { border-color: var(--admin-line); border-radius: 15px; }
+.app-shell[data-area="admin"] .admin-students-page > [data-slot="card"]:nth-of-type(2) { border-top: 2px solid var(--admin-amber); }
+.app-shell[data-area="admin"] .admin-students-page > [data-slot="card"]:nth-of-type(3) { border-top: 2px solid var(--admin-blue); }
+.app-shell[data-area="admin"] .admin-students-page > [data-slot="card"]:nth-of-type(4) { border-top: 2px solid var(--admin-green); }
+.app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 > button { border-color: var(--admin-line); background: color-mix(in srgb, var(--admin-blue) 6%, var(--card)); transition: transform .16s ease, border-color .16s ease; }
+.app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 > button:nth-child(1) { border-top: 2px solid var(--admin-amber); }
+.app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 > button:nth-child(2) { border-top: 2px solid var(--admin-cyan); }
+.app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 > button:nth-child(3) { border-top: 2px solid var(--admin-green); }
+.app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 > button:hover { transform: translateY(-2px); border-color: var(--admin-cyan); }
+.app-shell[data-area="admin"] .admin-students-page .rounded-lg.border.border-border.bg-card { border-color: var(--admin-line); background: color-mix(in srgb, var(--admin-blue) 4%, var(--card)); }
+.app-shell[data-area="admin"] .admin-students-page .rounded-lg.border.border-border.bg-card:hover { border-color: var(--admin-cyan); }
+.app-shell[data-area="admin"] .admin-students-page .bg-emerald-600 { background: var(--admin-green); color: #10271e; }
+.app-shell[data-area="admin"] .admin-students-page select:focus,
+.app-shell[data-area="admin"] .admin-students-page input:focus { border-color: var(--admin-cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--admin-cyan) 15%, transparent); }
+.app-shell[data-area="admin"] .admin-students-page [class*="text-destructive"] { color: var(--admin-rose); }
+@media (max-width: 700px) {
+  .app-shell[data-area="admin"] .admin-students-page { gap: 14px; }
+  .app-shell[data-area="admin"] .admin-students-page .grid.sm\:grid-cols-3 { grid-template-columns: 1fr; }
+}
