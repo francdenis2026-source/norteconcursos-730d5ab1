@@ -6,6 +6,7 @@ export type StudyActivityKind =
   | "simulado"
   | "pausa"
   | "refeicao"
+  | "exercicio"
   | "descanso";
 
 export type StudyContentItem = {
