@@ -59,12 +59,8 @@ export function ContestObjectivesShowcase({
       <div className="contest-showcase__inner">
         <div className="contest-showcase__lead">
           <div className="contest-showcase__intro">
-            <span className="contest-showcase__eyebrow"><Target aria-hidden="true" /> PREPARAÇÃO COM DIREÇÃO</span>
             <h1 id="contest-showcase-title">{focusedContest ? "Seu próximo objetivo." : "Escolha seu próximo objetivo."}</h1>
             <p>Defina o concurso que orienta sua preparação e acompanhe as informações mais importantes em um só lugar.</p>
-            <Link to="/dashboard/questions" className="contest-showcase__catalog-link">
-              Explorar concursos <ArrowRight aria-hidden="true" />
-            </Link>
           </div>
           {featured ? (
             <article className="contest-showcase__featured">
@@ -107,7 +103,7 @@ export function ContestObjectivesShowcase({
         {others.length > 0 && (
           <div className="contest-showcase__others">
             <div className="contest-showcase__section-heading">
-              <div><span>OUTRAS OPORTUNIDADES</span><h2>Outros concursos para acompanhar</h2></div>
+              <h2>Outras oportunidades</h2>
               <span className="contest-showcase__count">{others.length} {others.length === 1 ? "opção" : "opções"}</span>
             </div>
             <div className="contest-showcase__grid">
