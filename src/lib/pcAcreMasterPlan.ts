@@ -320,7 +320,10 @@ export function buildPcAcMasterPlan(
   const weeklyMinutes = Math.round(opts.weeklyHours * 60);
   const baseMinutes = Math.floor(weeklyMinutes / days.length);
   const extraMinutes = weeklyMinutes - baseMinutes * days.length;
-  const minutesFor = (weekday: number) => baseMinutes + (days.indexOf(weekday) < extraMinutes ? 1 : 0);
+  const minutesFor = (weekday: number) => {
+    const dayIndex = days.indexOf(weekday);
+    return dayIndex < 0 ? 0 : baseMinutes + (dayIndex < extraMinutes ? 1 : 0);
+  };
 
   const ranges: { from: Date; to: Date }[] = [];
   let current = start;
@@ -341,16 +344,21 @@ export function buildPcAcMasterPlan(
     const phase: PcAcPlanPhase = weekIndex < foundationsWeeks
       ? "fundamentos"
       : weekIndex < foundationsWeeks + practiceWeeks ? "pratica" : "revisao";
+    const tafDays = opts.includeTaf ? (opts.tafDays ?? [2, 4, 6]) : [];
     const dates: Date[] = [];
     for (let date = from; date.getTime() <= to.getTime(); date = addDays(date, 1)) {
-      if (days.includes(weekdayOf(date))) dates.push(date);
-    }
-
-    const weekDays = dates.map((date, dayIndex) => {
       const weekday = weekdayOf(date);
+      if (days.includes(weekday) || tafDays.includes(weekday)) dates.push(date);
+    }
+    const studyDates = dates.filter((date) => days.includes(weekdayOf(date)));
+    const lastStudyTimestamp = studyDates.at(-1)?.getTime();
+
+    const weekDays = dates.map((date) => {
+      const weekday = weekdayOf(date);
+      const isStudyDay = days.includes(weekday);
       const totalForDay = minutesFor(weekday);
-      const isLastStudyDay = dayIndex === dates.length - 1;
-      const special = specialTasks(cargo, weekIndex, isLastStudyDay, totalForDay);
+      const isLastStudyDay = isStudyDay && date.getTime() === lastStudyTimestamp;
+      const special = isStudyDay ? specialTasks(cargo, weekIndex, isLastStudyDay, totalForDay) : [];
       const coreMinutes = Math.max(0, totalForDay - special.reduce((sum, task) => sum + task.minutes, 0));
       const tasks = [...learningTasks(coreMinutes, phase, nextTopic), ...special];
       const fixed = routineEvents(opts, weekday);
