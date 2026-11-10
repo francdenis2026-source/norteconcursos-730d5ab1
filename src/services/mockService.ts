@@ -106,7 +106,11 @@ export const MockService = {
       .eq("id", session.user.id)
       .select("id,focused_contest_id")
       .single();
-    if (error) throw error;
+    if (error) {
+      if (!id.startsWith("pcac-")) throw error;
+      try { localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id); } catch { /* optional cache */ }
+      return;
+    }
     if (data?.id !== session.user.id || data?.focused_contest_id !== id)
       throw new Error("Não foi possível confirmar o concurso salvo na sua conta.");
     try {
@@ -126,9 +130,13 @@ export const MockService = {
       .eq("id", session.user.id)
       .single();
     if (error) throw error;
-    return data?.focused_contest_id
-      ? MockService.getContestById(data.focused_contest_id)
-      : undefined;
+    if (data?.focused_contest_id) return MockService.getContestById(data.focused_contest_id);
+    try {
+      const cached = localStorage.getItem(STORAGE_KEYS.FOCUSED_CONTEST);
+      return cached ? MockService.getContestById(cached) : undefined;
+    } catch {
+      return undefined;
+    }
   },
 
   // Questions
