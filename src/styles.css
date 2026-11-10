@@ -14335,6 +14335,60 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 @media (max-width: 520px) { .student-metric-panel__chips { flex-basis: 100%; max-width: none; } }
 @media (prefers-reduced-motion: reduce) { .student-metric-panel__chips > button, .student-metric-panel__chip-go { transition: none; } }
 
+/* Metric drill-down refinement: calm hierarchy and consistent controls. */
+.student-metric-panel {
+  border: 1px solid color-mix(in oklab, var(--smp-accent) 18%, var(--border));
+  box-shadow: 0 24px 70px rgb(8 15 40 / 22%);
+}
+.student-metric-panel__header {
+  background: color-mix(in oklab, var(--smp-accent-soft) 34%, var(--card));
+}
+.student-metric-panel__header h2 { letter-spacing: -0.02em; }
+.student-metric-panel__icon {
+  border: 1px solid color-mix(in oklab, var(--smp-accent) 24%, transparent);
+}
+.study-period-controls__options button {
+  background: var(--muted);
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 120ms ease;
+}
+.study-period-controls__options button:hover:not([aria-pressed="true"]),
+.study-period-controls__options button:focus-visible:not([aria-pressed="true"]) {
+  border-color: color-mix(in oklab, var(--smp-accent) 48%, var(--border));
+  background: var(--card);
+}
+.study-period-controls__options button:active { transform: translateY(1px); }
+.student-metric-panel__chips > button {
+  background: color-mix(in oklab, var(--muted) 72%, var(--card));
+}
+.student-metric-panel__chips > button:not(:disabled):hover {
+  background: var(--card);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px -16px var(--chip-accent);
+}
+.student-metric-panel__chips > button:active:not(:disabled) { transform: translateY(0); }
+.student-metric-panel__chips > button:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--chip-accent) 70%, var(--ring));
+  outline-offset: 3px;
+}
+.student-metric-panel__summary {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 12%);
+}
+.student-metric-panel__subjects progress { height: 8px; }
+.student-metric-panel__activities summary:hover { color: var(--smp-accent); }
+.student-metric-panel > button:last-child {
+  top: 16px;
+  right: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  color: var(--muted-foreground);
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.student-metric-panel > button:last-child:hover {
+  border-color: var(--smp-accent);
+  background: var(--muted);
+  color: var(--foreground);
+}
+
 /* Ranking: translucent typography panel, independent of image-backed page heroes. */
 .ranking-glass-header {
   position: relative;
