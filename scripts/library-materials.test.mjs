@@ -63,12 +63,14 @@ test('Importer dry run does not need credentials and rejects duplicate slugs', (
 test('PC-AC revised study collection has 27 original lessons, links into the library and synced user progress', () => {
   const base = readFileSync('src/components/dashboard/UpdatedStudyCollections.tsx', 'utf8');
   const supplement = readFileSync('src/data/pcAcSupplementalStudyLessons.ts', 'utf8');
+  const gaps = readFileSync('src/data/pcAcProgramGapLessons.ts', 'utf8');
   const library = readFileSync('src/routes/dashboard/library.index.tsx', 'utf8');
   const disciplines = readFileSync('src/routes/dashboard/disciplinas.tsx', 'utf8');
   const progress = readFileSync('src/lib/useStudyGuideProgress.ts', 'utf8');
   const numberOfLessons = (base.match(/\{title:"\d{2} ·/g) || []).length
-    + (supplement.match(/\{title:"\d{2} ·/g) || []).length;
-  assert.equal(numberOfLessons, 27);
+    + (supplement.match(/\{title:"\d{2} ·/g) || []).length
+    + (gaps.match(/\{title:"\d{2} ·/g) || []).length;
+  assert.equal(numberOfLessons, 37);
   assert.match(base, /useStudyGuideProgress\(storageScope\)/);
   assert.match(library, /UpdatedStudyCollections initialCourseId=\{guia\}/);
   assert.match(disciplines, /guia:item\.id/);
