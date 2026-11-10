@@ -123,12 +123,16 @@ function AuthPage() {
       if (event === "SIGNED_IN" && session) {
         // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
         if (!manualAuth.current) {
-          toast.success("E-mail confirmado! Seu acesso Plus está liberado.", {
+          const resumed = routeSearch.reason === "inactive";
+          toast.success(resumed ? "Sessão revalidada" : "E-mail confirmado", {
             id: "auth-welcome",
-            description: TESTING_PHASE
-              ? `Revogamos as licenças pagas: você tem ${TESTING_LABEL} do plano Plus, de graça e sem cartão. Bem-vindo à sua área de estudos da Norte Concursos — vamos começar?`
-              : "Bem-vindo à sua área de estudos da Norte Concursos.",
-            duration: 8000,
+            icon: <ShieldCheck aria-hidden="true" size={17} />,
+            description: resumed
+              ? "Sua preparação continua de onde parou."
+              : TESTING_PHASE
+                ? `Acesso Plus liberado. Você tem ${TESTING_LABEL} de preparação sem cartão.`
+                : "Seu acesso à área de estudos foi liberado.",
+            duration: 5000,
           });
         }
         navigate({ to: "/dashboard" });
@@ -136,11 +140,6 @@ function AuthPage() {
     });
     return () => { active = false; sub.subscription.unsubscribe(); };
   }, [navigate, routeSearch.recovery, routeSearch.callbackError]);
-  useEffect(() => {
-    if (routeSearch.reason === "inactive") toast.message("Sessão encerrada por inatividade", { id: "auth-reason", description: "Passaram-se mais de 5 minutos sem interação. Entre novamente para continuar de onde parou." });
-    if (routeSearch.reason === "another-device") toast.message("Sessão encerrada", { id: "auth-reason", description: "Sua conta foi aberta em outro aparelho." });
-  }, [routeSearch.reason]);
-
   useEffect(() => {
     if (cooldown <= 0) return;
     const t = setTimeout(() => setCooldown((c) => c - 1), 1000);
@@ -233,9 +232,11 @@ function AuthPage() {
           if (/invalid login credentials/i.test(error.message)) setOfferRegister(true);
           throw error;
         }
-        toast.success("Bem-vindo de volta", {
+        toast.success(routeSearch.reason ? "Sessão revalidada" : "Bem-vindo de volta", {
           id: "auth-welcome",
+          icon: <ShieldCheck aria-hidden="true" size={17} />,
           description: "Sua preparação continua de onde parou.",
+          duration: 5000,
         });
         navigate({ to: "/dashboard" });
       }
