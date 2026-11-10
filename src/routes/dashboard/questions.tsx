@@ -109,6 +109,19 @@ function QuestionsCatalog() {
         <h1>Concursos e editais</h1>
         <p>Encontre oportunidades, defina seu objetivo e abra o edital correspondente para começar a estudar.</p>
       </header>
+      {focus ? (
+        <section className="rounded-xl border border-amber-500/35 bg-amber-500/10 p-5" role="status">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="min-w-0">
+              <p className="text-xs font-bold uppercase tracking-wider text-amber-300">Seleção exclusiva ativa</p>
+              <h2 className="mt-1 text-lg font-bold">Você já escolheu um cargo para sua preparação.</h2>
+              <p className="mt-1 max-w-2xl text-sm text-muted-foreground">O catálogo geral e os editais de outros concursos ficam bloqueados para evitar misturar programas, disciplinas e questões. Para trocar de cargo, desmarque primeiro o objetivo na área Meu Concurso.</p>
+            </div>
+            <Button asChild><Link to="/dashboard/my-contest">Gerenciar meu objetivo</Link></Button>
+          </div>
+        </section>
+      ) : (
+        <>
       {!loading && !error && contests.length > 0 && (
         <section aria-label="Filtrar oportunidades" className="space-y-3">
           <h2 className="text-lg font-bold">Oportunidades em acompanhamento</h2>
@@ -240,6 +253,8 @@ function QuestionsCatalog() {
           <EditalEditionCatalog editions={studyEditions} />
         )}
       </section>
+        </>
+      )}
       <Dialog
         open={!!detail}
         onOpenChange={(open) => {
