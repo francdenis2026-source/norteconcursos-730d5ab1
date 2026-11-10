@@ -3,13 +3,19 @@ import { ArrowUpRight, X } from "lucide-react";
 import "@/styles/news-banner.css";
 
 const DISMISS_KEY = "nc-news-banner-dismissed:pcac-edital-001-2026-11";
+const MOBILE_DISMISS_KEY = `${DISMISS_KEY}:mobile`;
 
 export function NewsBanner() {
   const [dismissed, setDismissed] = useState(true);
+  const [dismissKey, setDismissKey] = useState(DISMISS_KEY);
 
   useEffect(() => {
+    const key = window.matchMedia("(max-width: 760px)").matches
+      ? MOBILE_DISMISS_KEY
+      : DISMISS_KEY;
+    setDismissKey(key);
     try {
-      setDismissed(window.localStorage.getItem(DISMISS_KEY) === "true");
+      setDismissed(window.localStorage.getItem(key) === "true");
     } catch {
       setDismissed(false);
     }
@@ -20,7 +26,7 @@ export function NewsBanner() {
   const close = () => {
     setDismissed(true);
     try {
-      window.localStorage.setItem(DISMISS_KEY, "true");
+      window.localStorage.setItem(dismissKey, "true");
     } catch {
       /* Browser storage unavailable: dismiss only for this visit. */
     }
