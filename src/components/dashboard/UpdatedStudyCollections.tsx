@@ -68,7 +68,7 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public"}:
       </div>
       {course.lessons.map((l)=><details key={l.title} className="group rounded-xl border border-border bg-background open:border-emerald-500/60">
         <summary className="cursor-pointer select-none px-4 py-3 text-sm font-bold text-foreground hover:bg-emerald-600/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{l.title}</summary>
-        <div className="space-y-3 border-t border-border px-4 py-4 text-sm leading-6 text-foreground"><label className="flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs font-bold text-foreground"><input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={()=>void toggleCompleted(course.id,l.title)} className="h-4 w-4 accent-emerald-600" /> Marcar aula como concluída</label>
+        <div className="space-y-3 border-t border-border px-4 py-4 text-sm leading-6 text-foreground"><label className="flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs font-bold text-foreground"><input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={()=>void toggleCompleted(course.id,l.title)} disabled={syncState==="loading"} className="h-4 w-4 accent-emerald-600 disabled:opacity-50" /> Marcar aula como concluída</label>
           {l.body.map((p,j)=><p key={j}>{p}</p>)}
           <p className="rounded-lg border-l-4 border-amber-500 bg-amber-500/10 px-3 py-2"><strong>Aplicação prática:</strong> {l.example}</p>
           <div className="rounded-lg border border-border bg-muted/20 p-3">
