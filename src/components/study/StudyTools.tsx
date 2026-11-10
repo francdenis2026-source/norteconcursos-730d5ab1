@@ -109,10 +109,10 @@ function CalculatorTool() {
   return (
     <div className="space-y-2">
       <input className={cn(inputCls, "font-mono")} value={expr} onChange={(e) => { setExpr(e.target.value); setError(""); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); press("="); } }} placeholder="2+3×4, (5+1)^2, sqrt(81), 20%…" aria-label="Expressão" />
-      <div className="min-h-9 rounded-lg bg-muted/50 px-3 py-1 text-right font-mono text-xl font-bold" aria-live="polite">{error ? <span className="text-sm text-rose-600">{error}</span> : result || "0"}</div>
+      <div className="min-h-9 rounded-lg bg-muted/50 px-3 py-1 text-right font-mono text-xl font-bold" aria-live="polite">{error ? <span className="text-sm text-rose-600 dark:text-rose-400">{error}</span> : result || "0"}</div>
       <div className="grid grid-cols-4 gap-1.5">
         {KEYS.map((k) => (
-          <button key={k} type="button" onClick={() => press(k)} className={cn("rounded-md border py-1.5 text-sm font-semibold transition hover:bg-muted active:scale-95", k === "=" && "border-0 bg-primary text-primary-foreground hover:bg-primary/90", "÷×−+^".includes(k) && "bg-muted/60", k === "C" && "text-rose-600")}>{k}</button>
+          <button key={k} type="button" onClick={() => press(k)} className={cn("rounded-md border py-1.5 text-sm font-semibold transition hover:bg-muted active:scale-95", k === "=" && "border-0 bg-primary text-primary-foreground hover:bg-primary/90", "÷×−+^".includes(k) && "bg-muted/60", k === "C" && "text-rose-600 dark:text-rose-400")}>{k}</button>
         ))}
       </div>
       {history.length > 0 && <ul className="space-y-0.5 text-xs">{history.map((h, i) => <li key={`${h.e}-${i}`}><button type="button" className="flex w-full justify-between gap-2 rounded px-2 py-0.5 text-left hover:bg-muted" onClick={() => setExpr(h.e)}><span className="truncate font-mono text-muted-foreground">{h.e}</span><span className="font-mono font-semibold">= {h.r}</span></button></li>)}</ul>}
@@ -150,7 +150,7 @@ function NormalTool() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-3 gap-2"><Field label="Média (μ)"><input className={inputCls} value={mu} onChange={(e) => setMu(e.target.value)} /></Field><Field label="Desvio (σ)"><input className={inputCls} value={sd} onChange={(e) => setSd(e.target.value)} /></Field><Field label="Valor (x)"><input className={inputCls} value={x} onChange={(e) => setX(e.target.value)} /></Field></div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Escore padrão z" v={fmt(out.z, 6)} /><Row k="P(X ≤ x)" v={`${fmt(out.abaixo * 100, 5)}%`} /><Row k="P(X > x)" v={`${fmt(out.acima * 100, 5)}%`} /></dl>}
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Escore padrão z" v={fmt(out.z, 6)} /><Row k="P(X ≤ x)" v={`${fmt(out.abaixo * 100, 5)}%`} /><Row k="P(X > x)" v={`${fmt(out.acima * 100, 5)}%`} /></dl>}
       <div className={cn(cardCls, "text-xs leading-5")}><p className="font-semibold">Regra empírica (68-95-99,7)</p><p>μ ± 1σ: cerca de 68% · μ ± 2σ: cerca de 95% · μ ± 3σ: cerca de 99,7%.</p>{!err && Number.isFinite(num(sd)) && <p className="mt-1 font-mono">{fmt(num(mu) - num(sd))} a {fmt(num(mu) + num(sd))} · {fmt(num(mu) - 2 * num(sd))} a {fmt(num(mu) + 2 * num(sd))} · {fmt(num(mu) - 3 * num(sd))} a {fmt(num(mu) + 3 * num(sd))}</p>}</div>
     </div>
   );
@@ -166,7 +166,7 @@ function CombTool() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-2"><Field label="n (total)"><input className={inputCls} type="number" min={0} value={n} onChange={(e) => setN(e.target.value)} /></Field><Field label="k (escolhidos)"><input className={inputCls} type="number" min={0} value={k} onChange={(e) => setK(e.target.value)} /></Field></div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : <dl className={cn(cardCls, "divide-y")}>{out.map(([a, b]) => <Row key={a} k={a} v={b} />)}</dl>}
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : <dl className={cn(cardCls, "divide-y")}>{out.map(([a, b]) => <Row key={a} k={a} v={b} />)}</dl>}
       <p className="text-xs text-muted-foreground">A ordem importa? Arranjo. Não importa? Combinação. Probabilidade = casos favoráveis ÷ casos possíveis.</p>
     </div>
   );
@@ -206,11 +206,11 @@ function TruthTool() {
       <input className={cn(inputCls, "font-mono text-base")} value={src} onChange={(e) => setSrc(e.target.value)} aria-label="Proposição composta" />
       <div className="flex flex-wrap gap-1.5">
         {["¬", "∧", "∨", "→", "↔", "⊻", "(", ")", "p", "q", "r"].map((s) => <button key={s} type="button" className="min-w-8 rounded-md border px-2 py-0.5 font-mono text-sm hover:bg-muted" onClick={() => setSrc((v) => v + s)}>{s}</button>)}
-        <button type="button" className="rounded-md border px-2 py-0.5 text-sm text-rose-600 hover:bg-muted" onClick={() => setSrc("")}>limpar</button>
+        <button type="button" className="rounded-md border px-2 py-0.5 text-sm text-rose-600 dark:text-rose-400 hover:bg-muted" onClick={() => setSrc("")}>limpar</button>
       </div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : table && (
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : table && (
         <>
-          <div className="overflow-x-auto rounded-xl border"><table className="w-full text-center text-sm"><thead className="bg-muted/60"><tr>{table.vars.map((v) => <th key={v} className="px-3 py-1 font-mono">{v}</th>)}<th className="px-3 py-1">Resultado</th></tr></thead><tbody>{table.rows.map((r, i) => <tr key={i} className="border-t">{r.values.map((v, j) => <td key={j} className="px-3 py-0.5 font-mono">{v ? "V" : "F"}</td>)}<td className={cn("px-3 py-0.5 font-mono font-bold", r.result ? "text-emerald-600" : "text-rose-600")}>{r.result ? "V" : "F"}</td></tr>)}</tbody></table></div>
+          <div className="overflow-x-auto rounded-xl border"><table className="w-full text-center text-sm"><thead className="bg-muted/60"><tr>{table.vars.map((v) => <th key={v} className="px-3 py-1 font-mono">{v}</th>)}<th className="px-3 py-1">Resultado</th></tr></thead><tbody>{table.rows.map((r, i) => <tr key={i} className="border-t">{r.values.map((v, j) => <td key={j} className="px-3 py-0.5 font-mono">{v ? "V" : "F"}</td>)}<td className={cn("px-3 py-0.5 font-mono font-bold", r.result ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400")}>{r.result ? "V" : "F"}</td></tr>)}</tbody></table></div>
           <p className="text-sm">Classificação: <strong className="capitalize">{table.kind}</strong></p>
         </>
       )}
@@ -227,7 +227,7 @@ function VennTool() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-2"><Field label="n(A)"><input className={inputCls} value={a} onChange={(e) => setA(e.target.value)} /></Field><Field label="n(B)"><input className={inputCls} value={b} onChange={(e) => setB(e.target.value)} /></Field><Field label="n(A ∩ B)"><input className={inputCls} value={i} onChange={(e) => setI(e.target.value)} /></Field><Field label="Total do universo (opcional)"><input className={inputCls} value={u} onChange={(e) => setU(e.target.value)} /></Field></div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : out && (
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : out && (
         <>
           <svg viewBox="0 0 260 140" className="w-full rounded-xl border bg-card" role="img" aria-label="Diagrama de Venn">
             <circle cx="100" cy="70" r="52" className="fill-sky-400/30 stroke-sky-600" /><circle cx="160" cy="70" r="52" className="fill-amber-400/30 stroke-amber-600" />
@@ -253,7 +253,7 @@ function AccountingTool() {
   const dep = safe(() => depreciacaoLinear(num(custo), num(res), num(vida)));
   const pe = safe(() => pontoEquilibrio(num(cf), num(preco), num(cv)));
   const jc = jurosCompostos(num(cap), num(taxa), num(per));
-  const err = (v: unknown) => typeof v === "string" ? <p className="mt-2 text-sm text-rose-600">{v}</p> : null;
+  const err = (v: unknown) => typeof v === "string" ? <p className="mt-2 text-sm text-rose-600 dark:text-rose-400">{v}</p> : null;
   const inp = (l: string, v: string, set: (s: string) => void) => <Field label={l}><input className={inputCls} value={v} onChange={(e) => set(e.target.value)} /></Field>;
   return (
     <div className="space-y-3">
@@ -286,7 +286,7 @@ function BasesTool() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-[1fr_8rem] gap-2"><Field label="Número"><input className={cn(inputCls, "font-mono")} value={text} onChange={(e) => setText(e.target.value)} /></Field><Field label="Base de entrada"><select className={inputCls} value={base} onChange={(e) => setBase(Number(e.target.value) as 2 | 8 | 10 | 16)}><option value={2}>Binário (2)</option><option value={8}>Octal (8)</option><option value={10}>Decimal (10)</option><option value={16}>Hexadecimal (16)</option></select></Field></div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Binário" v={out.bin} /><Row k="Octal" v={out.oct} /><Row k="Decimal" v={out.dec} /><Row k="Hexadecimal" v={out.hex} /></dl>}
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Binário" v={out.bin} /><Row k="Octal" v={out.oct} /><Row k="Decimal" v={out.dec} /><Row k="Hexadecimal" v={out.hex} /></dl>}
     </div>
   );
 }
@@ -299,7 +299,7 @@ function BytesTool() {
     <div className="space-y-3">
       <div className="grid grid-cols-[1fr_6rem] gap-2"><Field label="Valor"><input className={inputCls} value={v} onChange={(e) => setV(e.target.value)} /></Field><Field label="Unidade"><select className={inputCls} value={u} onChange={(e) => setU(e.target.value as (typeof BYTE_UNITS)[number])}>{BYTE_UNITS.map((x) => <option key={x}>{x}</option>)}</select></Field></div>
       <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={bin} onChange={(e) => setBin(e.target.checked)} /> Base 1024 (1 KB = 1024 B). Desmarcado: base 1000.</label>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}>{BYTE_UNITS.map((x) => <Row key={x} k={x} v={fmt(out[x], 8)} />)}</dl>}
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}>{BYTE_UNITS.map((x) => <Row key={x} k={x} v={fmt(out[x], 8)} />)}</dl>}
     </div>
   );
 }
@@ -311,7 +311,7 @@ function CidrTool() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-[1fr_5rem] gap-2"><Field label="Endereço IPv4"><input className={cn(inputCls, "font-mono")} value={ip} onChange={(e) => setIp(e.target.value)} /></Field><Field label="Prefixo /"><input className={inputCls} value={p} onChange={(e) => setP(e.target.value)} /></Field></div>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Máscara" v={out.mask} /><Row k="Rede" v={out.network} /><Row k="Broadcast" v={out.broadcast} /><Row k="Primeiro host" v={out.first} /><Row k="Último host" v={out.last} /><Row k="Hosts utilizáveis" v={out.hosts.toLocaleString("pt-BR")} /></dl>}
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : out && <dl className={cn(cardCls, "divide-y")}><Row k="Máscara" v={out.mask} /><Row k="Rede" v={out.network} /><Row k="Broadcast" v={out.broadcast} /><Row k="Primeiro host" v={out.first} /><Row k="Último host" v={out.last} /><Row k="Hosts utilizáveis" v={out.hosts.toLocaleString("pt-BR")} /></dl>}
       <p className="text-[11px] text-muted-foreground">Hosts utilizáveis = 2^(32 − prefixo) − 2 (a rede e o broadcast não recebem host).</p>
     </div>
   );
@@ -409,7 +409,7 @@ function DeadlineTool() {
       <div className="grid grid-cols-2 gap-2"><Field label="Data de início (ciência ou intimação)"><input className={inputCls} type="date" value={inicio} onChange={(e) => setInicio(e.target.value)} /></Field><Field label="Prazo (dias)"><input className={inputCls} type="number" min={0} value={dias} onChange={(e) => setDias(e.target.value)} /></Field></div>
       <label className="flex items-start gap-2 text-sm"><input className="mt-1" type="checkbox" checked={excluir} onChange={(e) => setExcluir(e.target.checked)} /> Excluir o dia do começo e incluir o do vencimento (regra usual de prazos processuais; ex.: CPP, art. 798, § 1º)</label>
       <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={uteis} onChange={(e) => setUteis(e.target.checked)} /> Contar só dias úteis (sem sábados e domingos)</label>
-      {err ? <p className="text-sm text-rose-600">{err}</p> : fim !== null && prorrogado !== null && (
+      {err ? <p className="text-sm text-rose-600 dark:text-rose-400">{err}</p> : fim !== null && prorrogado !== null && (
         <dl className={cn(cardCls, "divide-y")}><Row k="Último dia do prazo" v={`${formatBr(fim)} (${acreDate(fim).toLocaleDateString("pt-BR", { weekday: "long", timeZone: "UTC" })})`} />{prorrogado !== fim && <Row k="Se cair em fim de semana, prorroga para" v={formatBr(prorrogado)} />}</dl>
       )}
       <p className="text-[11px] text-muted-foreground">Feriados e suspensões de prazo não são considerados. Para a contagem de pena, o dia do começo conta (CP, art. 10); desmarque a primeira opção.</p>
