@@ -1,0 +1,57 @@
+/* Legal course: document reading workspace with clear study stages. */
+.app-shell[data-area="student"] .legal-course-page {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  --legal-cyan: #5edbe6;
+  --legal-blue: #7daaff;
+  --legal-amber: #e2b461;
+  --legal-green: #54d1a5;
+  --legal-violet: #b99bef;
+  --legal-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.dark .app-shell[data-area="student"] .legal-course-page {
+  --legal-cyan: #79e8ef;
+  --legal-blue: #97bdff;
+  --legal-amber: #f0c978;
+  --legal-green: #66dfb2;
+  --legal-violet: #c8aaf6;
+}
+.app-shell[data-area="student"] .legal-course-page > * { min-width: 0; }
+.app-shell[data-area="student"] .legal-course-page .library-header,
+.app-shell[data-area="student"] .legal-course-page .legal-course-toolbar,
+.app-shell[data-area="student"] .legal-course-page .legal-course-filters {
+  border-color: var(--legal-line);
+}
+.app-shell[data-area="student"] .legal-course-page .legal-course-toolbar { border-top: 2px solid var(--legal-cyan); background: color-mix(in srgb, var(--legal-cyan) 6%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-course-filters { border-left: 3px solid var(--legal-violet); background: color-mix(in srgb, var(--legal-violet) 6%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-course-filters :is(input, select):focus { border-color: var(--legal-cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--legal-cyan) 15%, transparent); }
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row { border-color: var(--legal-line); background: color-mix(in srgb, var(--legal-blue) 5%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row[aria-current="true"],
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row.is-selected { border-color: var(--legal-amber); background: color-mix(in srgb, var(--legal-amber) 12%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row[data-due="true"] { border-left: 3px solid var(--legal-violet); }
+.app-shell[data-area="student"] .legal-course-page .legal-study-stage,
+.app-shell[data-area="student"] .legal-course-page [role="tablist"] { border-color: var(--legal-line); background: color-mix(in srgb, var(--legal-blue) 5%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page [role="tab"][data-state="active"] { background: var(--legal-amber); color: #201a0d; box-shadow: 0 5px 16px -12px var(--legal-amber); }
+.app-shell[data-area="student"] .legal-course-page .legal-coverage,
+.app-shell[data-area="student"] .legal-course-page .legal-update-notice { border-color: color-mix(in srgb, var(--legal-amber) 52%, var(--border)); background: color-mix(in srgb, var(--legal-amber) 8%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-course-practice,
+.app-shell[data-area="student"] .legal-course-page .library-videos { border-color: color-mix(in srgb, var(--legal-green) 52%, var(--border)); background: color-mix(in srgb, var(--legal-green) 7%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-course-practice a,
+.app-shell[data-area="student"] .legal-course-page .library-videos a { min-height: 42px; }
+.app-shell[data-area="student"] .legal-course-page .legal-reading-panel,
+.app-shell[data-area="student"] .legal-course-page .legal-article { border-color: var(--legal-line); }
+.app-shell[data-area="student"] .legal-course-page .legal-article h1 { color: var(--legal-cyan); }
+.app-shell[data-area="student"] .legal-course-page .legal-article mark,
+.app-shell[data-area="student"] .legal-course-page .legal-reading-highlight { background: color-mix(in srgb, var(--legal-amber) 34%, transparent); color: inherit; border-radius: 3px; }
+.app-shell[data-area="student"] .legal-course-page .legal-article a { color: var(--legal-blue); text-underline-offset: 3px; }
+.app-shell[data-area="student"] .legal-course-page .legal-article :is(.cobranca-badge,.hot-badge) { border-color: var(--legal-amber); color: var(--legal-amber); }
+@media (max-width: 900px) {
+  .app-shell[data-area="student"] .legal-course-page { gap: 14px; }
+  .app-shell[data-area="student"] .legal-course-page .legal-course-layout { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] .legal-course-page .legal-course-sidebar { position: static; max-height: none; }
+}
+@media (max-width: 600px) {
+  .app-shell[data-area="student"] .legal-course-page [role="tablist"] { overflow-x: auto; }
+  .app-shell[data-area="student"] .legal-course-page [role="tab"] { min-width: max-content; min-height: 44px; }
+}

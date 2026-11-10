@@ -56,6 +56,7 @@ import {
 } from "@/lib/legalCourseSearch";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
+import "@/styles/legal-course-professional-refinement.css";
 
 export const Route = createFileRoute("/dashboard/legal-course/$slug")({
   component: LegalCoursePageGated,
