@@ -72,7 +72,8 @@ test('PC-AC revised study collection has 37 original lessons, links into the lib
     + (gaps.match(/\{title:"\d{2} ·/g) || []).length;
   assert.equal(numberOfLessons, 37);
   assert.match(base, /useStudyGuideProgress\(storageScope\)/);
-  assert.match(library, /UpdatedStudyCollections initialCourseId=\{guia\}/);
+  assert.match(library, /UpdatedStudyCollections/);
+  assert.match(library, /initialCourseId:\s*guia/);
   assert.match(disciplines, /guia:item\.id/);
   assert.match(progress, /study_guide_progress/);
   assert.match(progress, /onConflict:"user_id,guide_id,lesson_key"/);
