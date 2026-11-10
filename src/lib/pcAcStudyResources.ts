@@ -1,8 +1,8 @@
 /** Only link subjects with genuine curricular overlap; never equate Direito Administrativo with Administração Geral. */
 export type PcAcStudyResource = {courseId:"arquivologia"|"administracao-geral"|"administracao-publica";label:string;subject:string;contestNote:string};
 const RESOURCES: PcAcStudyResource[] = [
- {courseId:"arquivologia",label:"Arquivologia · 11 aulas",subject:"Arquivologia",contestNote:"Oficial Investigador; Noções de Arquivologia para Papiloscopista"},
- {courseId:"administracao-geral",label:"Noções de Administração · 10 aulas",subject:"Noções de Administração",contestNote:"Oficial Investigador"},
+ {courseId:"arquivologia",label:"Arquivologia · 16 aulas",subject:"Arquivologia",contestNote:"Oficial Investigador; Noções de Arquivologia para Papiloscopista"},
+ {courseId:"administracao-geral",label:"Noções de Administração · 15 aulas",subject:"Noções de Administração",contestNote:"Oficial Investigador"},
  {courseId:"administracao-publica",label:"Administração Pública · 6 aulas",subject:"Administração Pública",contestNote:"Aprofundamento; verificar pertinência no edital"},
 ];
 export const pcAcStudyResources = RESOURCES;
