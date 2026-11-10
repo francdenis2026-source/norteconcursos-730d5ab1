@@ -90,22 +90,37 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
               {candidates.map((candidate) => {
                 const displayName = candidate.display_name.trim() || "Candidato";
                 return (
-                <li className="home-ranking__card hr-ranking-card" data-medal={candidate.rank_position <= 4 ? candidate.rank_position : "other"} key={`${candidate.rank_position}-${displayName}`}>
-                  <span className="home-ranking__position">{icon(candidate.rank_position)} {candidate.rank_position}º</span>
-                  <div className="home-ranking__identity">
-                    <span className="home-ranking__avatar" aria-hidden="true">{displayName.charAt(0).toLocaleUpperCase("pt-BR")}</span>
-                    <strong className="home-ranking__name">{displayName}</strong>
-                    <span className="home-ranking__stars" aria-label={`Nível: ${candidate.stars} estrelas`}>
-                      {Array.from({length: 5}, (_, i) => <span key={i} aria-hidden="true">{i < candidate.stars ? "★" : "☆"}</span>)}
+                  <li
+                    className="home-ranking__card hr-ranking-card"
+                    data-medal={candidate.rank_position <= 4 ? candidate.rank_position : "other"}
+                    key={`${candidate.rank_position}-${displayName}`}
+                  >
+                    <span className="home-ranking__position">
+                      {icon(candidate.rank_position)} {candidate.rank_position}º
                     </span>
-                  </div>
-                  <div className="home-ranking__points"><strong>{number.format(candidate.points)}</strong><span>pontos</span></div>
-                  <dl className="home-ranking__stats">
-                    <div><dt>Acertos</dt><dd>{candidate.accuracy}%</dd></div>
-                    <div><dt>Questões</dt><dd>{number.format(candidate.questions)}</dd></div>
-                    <div><dt>Simulados</dt><dd>{candidate.simulators}</dd></div>
-                  </dl>
-                </li>
+                    <div className="home-ranking__identity">
+                      <span className="home-ranking__avatar" aria-hidden="true">
+                        {displayName.charAt(0).toLocaleUpperCase("pt-BR")}
+                      </span>
+                      <strong className="home-ranking__name">{displayName}</strong>
+                      <span className="home-ranking__stars" aria-label={`Nível: ${candidate.stars} estrelas`}>
+                        {Array.from({ length: 5 }, (_, i) => (
+                          <span key={i} aria-hidden="true">
+                            {i < candidate.stars ? "★" : "☆"}
+                          </span>
+                        ))}
+                      </span>
+                    </div>
+                    <div className="home-ranking__points">
+                      <strong>{number.format(candidate.points)}</strong>
+                      <span>pontos</span>
+                    </div>
+                    <dl className="home-ranking__stats">
+                      <div><dt>Acertos</dt><dd>{candidate.accuracy}%</dd></div>
+                      <div><dt>Questões</dt><dd>{number.format(candidate.questions)}</dd></div>
+                      <div><dt>Simulados</dt><dd>{candidate.simulators}</dd></div>
+                    </dl>
+                  </li>
                 );
               })}
             </ol>
