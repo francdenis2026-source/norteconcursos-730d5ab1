@@ -9,3 +9,13 @@
 .student-home__adaptive-agenda--next svg { color:rgb(2 132 199); }
 .dark .student-home__adaptive-agenda--focus { color:#fecdd3; background:rgb(159 18 57 / .2); }
 .dark .student-home__adaptive-agenda--next { color:#bae6fd; background:rgb(3 105 161 / .2); }
+.student-home__agenda-status { display:flex; align-items:center; gap:9px; margin:12px 0; padding:10px 11px; border:1px solid var(--border); border-radius:11px; background:color-mix(in srgb,var(--muted) 34%,transparent); }
+.student-home__agenda-status > span { width:8px; height:8px; flex:none; border-radius:50%; background:#94a3b8; }
+.student-home__agenda-status > span.is-active { background:#10b981; box-shadow:0 0 0 4px rgb(16 185 129 / .14); }
+.student-home__agenda-status > span.is-new { background:#f59e0b; box-shadow:0 0 0 4px rgb(245 158 11 / .14); }
+.student-home__agenda-status div { min-width:0; flex:1; }
+.student-home__agenda-status strong, .student-home__agenda-status small { display:block; }
+.student-home__agenda-status strong { font-size:12px; }
+.student-home__agenda-status small { margin-top:2px; color:var(--muted-foreground); font-size:10px; }
+.student-home__agenda-status a { display:inline-flex; align-items:center; gap:4px; flex:none; color:var(--primary); font-size:11px; font-weight:700; }
+.student-home__agenda-status a svg { width:13px; height:13px; }

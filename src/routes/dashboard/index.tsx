@@ -648,6 +648,19 @@ function StudentHome({ user }: { user: UserProfile }) {
                   <PanelLoading />
                 ) : (
                   <>
+                    <div className="student-home__agenda-status" role="status">
+                      <span className={schedule.completed > 0 ? "is-active" : "is-new"} aria-hidden="true" />
+                      <div>
+                        <strong>{schedule.completed > 0 ? "Plano em andamento" : "Plano pronto para começar"}</strong>
+                        <small>
+                          {schedule.completed} de {schedule.total} conteúdos concluídos
+                          {schedule.blocks.length ? ` · ${schedule.blocks.length} blocos previstos hoje` : " · sem blocos previstos hoje"}
+                        </small>
+                      </div>
+                      <Link to="/dashboard/cronograma" search={{ plano: plan.id, painel: "1" }}>
+                        Abrir painel <ArrowRight aria-hidden="true" />
+                      </Link>
+                    </div>
                     <div className="student-home__coverage">
                       <span>Progresso do conteúdo</span>
                       <strong>
