@@ -262,7 +262,7 @@ function EssayNotebook({ userId }: { userId: string }) {
         </CardContent>
       </Card>
 
-      <Card className="h-fit">
+      <Card className={cn("h-fit", fullscreen && "hidden")}>
         <CardHeader>
           <CardTitle className="text-base">Minhas redações</CardTitle>
         </CardHeader>
