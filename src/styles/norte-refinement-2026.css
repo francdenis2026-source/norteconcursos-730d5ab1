@@ -1,0 +1,19 @@
+/* Shared refinement layer: keeps the Porcelain & Gold identity coherent across surfaces. */
+:root {
+  --norte-surface-0: var(--background);
+  --norte-surface-1: color-mix(in srgb, var(--card) 94%, var(--background));
+  --norte-surface-2: color-mix(in srgb, var(--card) 88%, var(--muted));
+  --norte-line-soft: color-mix(in srgb, var(--border) 72%, transparent);
+  --norte-text-soft: color-mix(in srgb, var(--foreground) 66%, var(--muted-foreground));
+  --norte-focus: color-mix(in srgb, var(--brass) 82%, white);
+  --norte-shadow-soft: 0 18px 48px -30px rgb(15 23 42 / .34);
+}
+
+:where(button, a, input, textarea, select):focus-visible {
+  outline: 2px solid var(--norte-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

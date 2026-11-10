@@ -1,0 +1,14 @@
+/* Authentication surface polish; behavior remains owned by auth.tsx. */
+.auth .auth-card { box-shadow: 0 30px 90px -34px rgb(0 0 0 / .72), 0 1px 0 rgb(255 255 255 / .08) inset; }
+.auth .auth-tabs { border: 1px solid color-mix(in srgb, var(--border) 80%, transparent); }
+.auth .auth-tabs button { font-weight: 650; }
+.auth .auth-field input { border-color: color-mix(in srgb, var(--border) 84%, transparent); transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.auth .auth-field input:focus { border-color: var(--brass); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brass) 20%, transparent); }
+.auth .auth-submit { min-height: 48px; font-weight: 750; letter-spacing: .01em; }
+.auth .auth-error { border: 1px solid color-mix(in srgb, var(--destructive) 42%, transparent); border-radius: 10px; padding: 10px 12px; }
+.auth .auth-link { text-underline-offset: 3px; }
+@media (max-width: 480px) {
+  .auth.auth .auth-card { --access-padding: 18px; }
+  .auth .auth-heading h2 { font-size: 1.3rem; }
+  .auth .auth-submit { min-height: 46px; }
+}

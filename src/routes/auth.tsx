@@ -1,4 +1,5 @@
 import "@/styles/auth-art.css";
+import "@/styles/auth-professional-refinement.css";
 import authComposition from "@/assets/auth/carreiras-composicao.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PasswordRecovery } from "@/components/PasswordRecovery";

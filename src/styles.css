@@ -17291,3 +17291,5 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 :where(input, textarea, select, [contenteditable="true"], [role="textbox"])[aria-disabled="true"] {
   cursor: not-allowed !important;
 }
+
+@import "./styles/norte-refinement-2026.css";

@@ -1,0 +1,21 @@
+/* Final, low-specificity polish for the public experience. */
+.home-header__inner { min-height: 72px; }
+.home-nav a { border-radius: 10px; transition: color 160ms ease, background-color 160ms ease, transform 160ms ease; }
+.home-nav a:hover { background: color-mix(in srgb, var(--brass) 10%, transparent); }
+.home-nav a[aria-current="location"] { color: var(--brass); background: color-mix(in srgb, var(--brass) 12%, transparent); }
+.home-header__register { box-shadow: 0 10px 26px -16px color-mix(in srgb, var(--brass) 80%, transparent); }
+.home-menu-trigger { border-radius: 11px; transition: background-color 160ms ease, color 160ms ease, transform 160ms ease; }
+.home-menu-trigger:hover { background: color-mix(in srgb, var(--brass) 12%, transparent); color: var(--brass); }
+.hm2-grid { gap: 10px; }
+.hm2-grid > * { border: 1px solid color-mix(in srgb, var(--brass) 18%, var(--border)); box-shadow: var(--norte-shadow-soft); }
+.hr-footer-cta { border-top: 1px solid var(--norte-line-soft); border-bottom: 1px solid var(--norte-line-soft); }
+.nc-footer__links a { transition: color 160ms ease, transform 160ms ease; }
+.nc-footer__links a:hover { color: var(--brass); transform: translateX(2px); }
+@media (max-width: 760px) {
+  .home-header__inner { min-height: 64px; }
+  .home-header__register { min-height: 42px; padding-inline: 12px; }
+  .home-header__register svg { width: 16px; height: 16px; }
+  .home-nav { display: none; }
+  .hm2 { width: min(92vw, 390px); }
+  .nc-footer__main { gap: 24px; }
+}
