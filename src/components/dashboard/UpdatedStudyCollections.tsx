@@ -9,7 +9,7 @@ const OFFICIAL = {
   conarq: "https://www.gov.br/conarq/pt-br/legislacao-arquivistica/resolucoes-do-conarq/resolucoes-do-conarq/",
   digital: "https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/publicacoes-conarq",
   retention: "https://www.gov.br/arquivonacional/pt-br/servicos/gestao-de-documentos/orientacao-tecnica-1/codigo-de-classificacao-e-tabela-de-temporalidade-e-destinacao-de-documentos-de-arquivo/codigo-de-classificacao-e-tabela-de-temporalidade-e-destinacao-de-documentos-relativos-as-atividades-meio-do-poder-executivo-federal",
-  dasp: "https://legislacao.presidencia.gov.br/atos/?ano=1938&ato=3670zaU5EerpXTa36&data=30%2F07%2F1938&numero=579&tipo=DEL",
+  dasp: "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del0579.htm",
   edital: "https://pc.ac.gov.br/governo-do-acre-lanca-edital-de-concurso-da-policia-civil-com-139-vagas/",
   digitization: "https://www.gov.br/conarq/pt-br/legislacao-arquivistica/decretos-federais/decreto-no-10-278-de-18-de-marco-de-2020",
 };
