@@ -1,5 +1,7 @@
 export const rankingKinds = ["general", "questions", "simulators"] as const;
 export type RankingKind = (typeof rankingKinds)[number];
+export const rankingPeriods = ["all", "month"] as const;
+export type RankingPeriod = (typeof rankingPeriods)[number];
 export interface RankingEntry {
   rank_position: number;
   user_id: string;
@@ -85,6 +87,9 @@ export function rankingSearch(search: Record<string, unknown>) {
     section: rankingKinds.includes(search["section"] as RankingKind)
       ? (search["section"] as RankingKind)
       : ("general" as RankingKind),
+    period: rankingPeriods.includes(search["period"] as RankingPeriod)
+      ? (search["period"] as RankingPeriod)
+      : ("all" as RankingPeriod),
     page: Number.isSafeInteger(page) && page > 0 ? Math.min(page, 1_000_000) : 1,
     size: [20, 50, 100].includes(size) ? size : 20,
     q: typeof search["q"] === "string" ? search["q"].trim().slice(0, 100) : "",

@@ -200,7 +200,7 @@ function HistoryPage() {
             <Button asChild size="sm">
               <Link
                 to="/dashboard/ranking"
-                search={{ section: "general", page: 1, size: 20, q: "" }}
+                search={{ section: "general", period: "all", page: 1, size: 20, q: "" }}
               >
                 Abrir o ranking
               </Link>

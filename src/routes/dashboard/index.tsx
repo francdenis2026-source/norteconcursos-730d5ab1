@@ -411,7 +411,7 @@ function StudentHome({ user }: { user: UserProfile }) {
               data-accent={tone}
               {...(to === "/dashboard/ranking"
                 ? {
-                    search: { section: "general", page: 1, size: 20, q: "" } as never,
+                    search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
                     "data-rank": "",
                   }
                 : {})}

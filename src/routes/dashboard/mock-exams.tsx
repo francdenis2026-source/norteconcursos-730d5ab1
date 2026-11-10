@@ -1729,7 +1729,7 @@ function ProfessionalSimulator() {
         <Link
           className="underline"
           to="/dashboard/ranking"
-          search={{ section: "simulators", page: 1, size: 20, q: "" }}
+          search={{ section: "simulators", period: "all", page: 1, size: 20, q: "" }}
         >
           Ranking
         </Link>
