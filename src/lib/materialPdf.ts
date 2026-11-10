@@ -1,5 +1,7 @@
 export async function exportMaterialPdf({ title, body, note, marks }: { title: string; body: string; note: string; marks: { text: string; color: string }[] }) {
-  const { jsPDF } = await import("jspdf");
+  // The package root has no Worker export; load the ES build on download.
+  // @ts-expect-error -- jsPDF has no declarations for this supported dist subpath.
+  const { jsPDF } = await import("jspdf/dist/jspdf.es.min.js") as typeof import("jspdf");
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const width = doc.internal.pageSize.getWidth(); const height = doc.internal.pageSize.getHeight();
   const margin = 48; let y = 54;
