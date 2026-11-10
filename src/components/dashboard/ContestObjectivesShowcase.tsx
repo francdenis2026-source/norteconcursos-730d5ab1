@@ -95,7 +95,7 @@ export function ContestObjectivesShowcase({
                   <Link to="/dashboard/cronograma" className="contest-showcase__secondary-action">
                     <CalendarClock aria-hidden="true" /> Cronograma de estudos
                   </Link>
-                  {onClear && <button type="button" className="contest-showcase__clear-action" onClick={onClear}>Desmarcar objetivo</button>}
+                  {focusedContest && onClear && <button type="button" className="contest-showcase__clear-action" onClick={onClear}>Desmarcar cargo e liberar catálogo</button>}
                   {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
                 </div>
               </div>
