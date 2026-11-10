@@ -159,6 +159,16 @@ export function StudentMetricPanel({
               <p className="student-metric-panel__owner">{userName} · Minha preparação</p>
               <DialogTitle>{definition.title}</DialogTitle>
               <DialogDescription>{definition.description}</DialogDescription>
+              {metric === "questions" && (
+                <Link
+                  to="/dashboard/performance"
+                  className="mt-3 inline-flex min-h-9 items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3 text-xs font-bold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
+                  Abrir análise detalhada
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              )}
             </div>
           </header>
           {error ? (

@@ -24,6 +24,7 @@ import {
   Sparkles,
   Strikethrough,
   Target,
+  TrendingUp,
   X,
   Timer,
   XCircle,
@@ -986,6 +987,13 @@ function QuestionTrainer() {
           <Badge variant="secondary">
             <Flame className="mr-1 h-3.5 w-3.5" /> Treinador
           </Badge>
+          <Link
+            to="/dashboard/performance"
+            className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-primary/30 bg-primary/5 px-2.5 text-xs font-semibold text-primary hover:bg-primary/10"
+          >
+            <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
+            Análise
+          </Link>
           <Badge variant="outline">Ranking de questões</Badge>
         </div>
       </header>
