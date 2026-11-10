@@ -33,6 +33,7 @@ import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { UpdatedStudyCollections } from "@/components/dashboard/UpdatedStudyCollections";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
@@ -290,6 +291,8 @@ function MaterialHub() {
           </Link>
         </div>
       </PageHero>
+
+      <UpdatedStudyCollections storageScope={user?.id ?? "anonymous"} />
 
       <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">
         <div className="pcac-material-focus__glow" aria-hidden="true" />
