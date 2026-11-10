@@ -434,3 +434,113 @@
 .dark .pcac-astrix-body .bg-muted\/30, .dark .pcac-astrix-body .bg-muted\/20 { background: #f1f7f2; }
 .dark .pcac-astrix-body .bg-background\/60 { background: #fff; }
 .dark .pcac-astrix-body [data-slot="tabs-content"] { color: #19362e; }
+
+
+/* Astryx · Acre flag visual identity for the edital hero + cargo selector. */
+.app-shell[data-area="student"] .pcac-edital-page > .pcac-astrix-edital-hero.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #287954 !important;
+  border-radius: 19px;
+  background:
+    radial-gradient(ellipse at 88% 4%, rgba(246,215,58,.18), transparent 42%),
+    linear-gradient(122deg,#083c2b 0%,#095438 49%,#116b46 100%) !important;
+  box-shadow: 0 16px 32px -20px rgba(6,65,40,.55);
+}
+.app-shell[data-area="student"] .pcac-edital-page > .pcac-astrix-edital-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0 0 auto auto;
+  width: min(42%, 460px);
+  height: 100%;
+  background: linear-gradient(139deg,transparent 45%,rgba(250,221,62,.18) 45.2%,rgba(250,221,62,.18) 65%,transparent 65.2%);
+  opacity: .75;
+}
+.app-shell[data-area="student"] .pcac-edital-page > .pcac-astrix-edital-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: auto 0 0;
+  height: 4px;
+  background: linear-gradient(90deg,#f3d129 0 39%,#078349 39% 82%,#d3353d 82% 100%);
+}
+.pcac-astrix-edital-hero .page-hero__row { align-items: center; gap: 14px 20px; }
+.pcac-astrix-edital-hero .page-hero__text { min-width: 0; flex: 1 1 370px; }
+.pcac-astrix-edital-hero .hero-chip { color: #e9f9ee !important; background: #ffffff12; border: 1px solid #ffffff30; border-radius: 999px; padding: 5px 9px; font-weight: 800; letter-spacing: .055em; }
+.pcac-astrix-edital-hero .hero-chip svg { color: #f1ce37; }
+.pcac-astrix-edital-hero .page-hero__text h1 { font-size: clamp(22px,2.2vw,31px); line-height: 1.12; letter-spacing: -.04em; font-weight: 850; max-width: 700px; margin-top: 9px; }
+.pcac-astrix-edital-hero__title { display: flex; align-items: center; gap: 16px; }
+.pcac-astrix-edital-hero__title > span { flex: 1 1 auto; min-width: 0; }
+.pcac-astrix-edital-hero__flag { display: block; width: clamp(66px,7vw,96px); height: auto; aspect-ratio: 10/7; flex: 0 0 auto; border: 3px solid #fffdf0; border-radius: 6px; box-shadow: 0 7px 24px #00190a85,0 0 0 1px #e4c947; transform: rotate(-2deg); }
+.pcac-astrix-edital-hero__em { display: block; color: #ffe171; font-weight: 900; }
+.pcac-astrix-edital-hero .page-hero__desc { max-width: 690px; color: #d9efe1 !important; font-size: 12px; line-height: 1.48; }
+.pcac-astrix-edital-hero .page-hero__actions { flex: 0 1 auto; min-width: 0; }
+.pcac-astrix-edital-hero .page-hero__actions .flex { gap: 7px; }
+.pcac-astrix-edital-hero .page-hero__actions button,
+.pcac-astrix-edital-hero .page-hero__actions a { border-color: #ffffff50; background: #033b2c80; color: #f8fff7; font-size: 11px; font-weight: 750; border-radius: 9px; }
+.pcac-astrix-edital-hero .page-hero__actions :is(a,button):hover { background: #f3d129; border-color: #f3d129; color: #123623; }
+.pcac-astrix-edital-hero .page-hero__actions .rounded-lg { border-color: #d7cb6270; background: #153e2cb0; }
+.pcac-astrix-edital-hero .page-hero__actions .text-amber-200,
+.pcac-astrix-edital-hero .page-hero__actions .text-amber-300 { color: #ffe373; }
+.pcac-astrix-edital-hero .page-hero__stats { gap: 9px; margin-top: 13px; }
+.pcac-astrix-edital-hero .hero-stat { background: #04271d90; border: 1px solid #a7cda15c; border-radius: 10px; }
+.pcac-astrix-edital-hero .hero-stat span { color: #cbe8d4; }
+.pcac-astrix-edital-hero .hero-stat strong { color: #f5e483; font-size: 20px; font-weight: 850; }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos.pcac-edital-card {
+  overflow: hidden;
+  border: 1px solid #b9d8bd;
+  border-radius: 16px;
+  background: linear-gradient(180deg,#ecf6ee,#f9fbf5);
+  box-shadow: 0 10px 24px -20px rgba(13,79,43,.40);
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos > [data-slot="card-header"] {
+  padding: 11px 16px !important;
+  border-bottom: 1px solid #cce0cd;
+  background: linear-gradient(95deg,#0d5c3d,#14744d);
+}
+.pcac-astrix-cargos [data-slot="card-title"] { color: #fff !important; }
+.pcac-astrix-cargos__title { display: flex; gap: 8px; align-items: center; color: #fff; font-size: 14px; font-weight: 850; }
+.pcac-astrix-cargos__title svg { color: #f4d74c; }
+.pcac-astrix-cargos__hint { display: inline-flex; align-items: center; padding: 3px 7px; border-radius: 6px; background: #ffde5433; color: #ffed99; font-size: 9px; font-weight: 800; letter-spacing: .07em; }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos > [data-slot="card-content"] { padding: 12px 14px 15px; gap: 9px; }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos .pcac-astrix-cargo-option {
+  position: relative;
+  min-height: 91px;
+  padding: 11px 10px;
+  border: 1px solid #c3d8c8;
+  border-radius: 11px;
+  background: #fff;
+  color: #214436;
+  box-shadow: 0 3px 8px rgba(12,53,30,.055);
+  transition: background 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 160ms ease;
+}
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos .pcac-astrix-cargo-option:hover { background: #f6fbee; border-color: #48a072; transform: translateY(-2px); }
+.app-shell[data-area="student"] .pcac-edital-page .pcac-astrix-cargos .pcac-astrix-cargo-option[aria-pressed="true"] {
+  border: 2px solid #087845;
+  background: linear-gradient(155deg,#f1faec 0%,#fffbe5 100%);
+  color: #11472d;
+  box-shadow: inset 0 3px 0 #edcb3b,0 6px 17px -13px #0c6b3b;
+}
+.pcac-astrix-cargos .pcac-astrix-cargo-option > span:first-child { line-height: 1.22; font-size: 12px; font-weight: 820; }
+.pcac-astrix-cargos .pcac-astrix-cargo-option .text-muted-foreground { color: #4a6858; font-size: 10px; }
+.pcac-astrix-cargos .pcac-astrix-cargo-option .bg-amber-400\/20 { background: #f9e292; color: #634700; }
+.pcac-astrix-cargos .pcac-astrix-cargo-option:focus-visible { outline: 3px solid #d9b632; outline-offset: 2px; }
+@media (max-width: 900px) {
+  .pcac-astrix-edital-hero__flag { width: 68px; }
+  .pcac-astrix-edital-hero .page-hero__actions { width: 100%; }
+}
+@media (max-width: 540px) {
+  .pcac-astrix-edital-hero__title { align-items: flex-start; gap: 10px; }
+  .pcac-astrix-edital-hero__flag { width: 53px; }
+  .pcac-astrix-edital-hero .page-hero__text h1 { font-size: 20px; }
+  .pcac-astrix-edital-hero .page-hero__stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .pcac-astrix-edital-hero .hero-stat { min-width: 0; }
+  .pcac-astrix-edital-hero .hero-stat strong { font-size: 17px; }
+  .pcac-astrix-cargos__title { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pcac-astrix-cargos .pcac-astrix-cargo-option { transition: none; }
+}
