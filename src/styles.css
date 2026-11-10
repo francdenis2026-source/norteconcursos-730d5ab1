@@ -5363,6 +5363,15 @@ html {
   background: var(--ink);
   box-shadow: inset 0 0 0 1px oklch(0.8 0.13 78 / 0.28);
 }
+/* Destination tones remain legible in both light and dark themes. */
+.quick-action[data-tone="signal"] .quick-action__icon { color: var(--color-sky-300); background: color-mix(in oklch, var(--color-sky-900) 75%, var(--ink)); }
+.quick-action[data-tone="brass"] .quick-action__icon { color: var(--brass-soft); background: color-mix(in oklch, var(--brass-deep) 55%, var(--ink)); }
+.quick-action[data-tone="violet"] .quick-action__icon { color: var(--color-blue-300); background: color-mix(in oklch, var(--color-blue-900) 70%, var(--ink)); }
+.quick-action[data-tone="jade"] .quick-action__icon { color: var(--color-emerald-300); background: color-mix(in oklch, var(--color-emerald-900) 70%, var(--ink)); }
+.dark .quick-action[data-tone="signal"] .quick-action__icon { color: var(--color-sky-300); }
+.dark .quick-action[data-tone="brass"] .quick-action__icon { color: var(--brass-soft); }
+.dark .quick-action[data-tone="violet"] .quick-action__icon { color: var(--color-blue-300); }
+.dark .quick-action[data-tone="jade"] .quick-action__icon { color: var(--color-emerald-300); }
 .quick-action__icon svg {
   width: 19px;
   height: 19px;
