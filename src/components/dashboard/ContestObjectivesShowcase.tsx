@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
+import { ArrowRight, CalendarClock, CalendarDays, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
 import { contestDisplay } from "@/lib/contestDisplay";
@@ -90,6 +90,9 @@ export function ContestObjectivesShowcase({
                       {savingId === featured.id ? "Salvando objetivo…" : "Definir como objetivo"} <ArrowRight aria-hidden="true" />
                     </button>
                   )}
+                  <Link to="/dashboard/cronograma" className="contest-showcase__secondary-action">
+                    <CalendarClock aria-hidden="true" /> Cronograma de estudos
+                  </Link>
                   {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
                 </div>
               </div>

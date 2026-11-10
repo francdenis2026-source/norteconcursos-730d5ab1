@@ -268,7 +268,8 @@
   text-decoration: none;
   cursor: pointer;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__primary-action svg { width: 14px; height: 14px; }
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__primary-action svg,
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__secondary-action svg { width: 14px; height: 14px; }
 .app-shell[data-area="student"] #dashboard-content .contest-showcase__primary-action:disabled { opacity: .65; cursor: wait; }
 .app-shell[data-area="student"] #dashboard-content .contest-showcase__secondary-action {
   border-color: var(--co-line);
