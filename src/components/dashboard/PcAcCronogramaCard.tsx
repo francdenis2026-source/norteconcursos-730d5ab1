@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { supabase } from "@/integrations/supabase/client";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
-import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_EXAM_DATE, buildPcAcStudyWeek, buildPcAcWeeklyGrid, readPcAcStudyConfig, writePcAcStudyConfig, type PcAcStudyPlanConfig, type PcAcWeeklyGridRow } from "@/lib/pcAcreStudyPlan";
+import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_EXAM_DATE, readPcAcStudyConfig, writePcAcStudyConfig, type PcAcStudyPlanConfig, type PcAcWeeklyGridRow } from "@/lib/pcAcreStudyPlan";
 import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
 import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
 import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
@@ -29,10 +29,9 @@ const GRID_DAY_LETTER = ["D", "S", "T", "Q", "Q", "S", "S"]; // índice = weekda
  * horário e dias da semana — mesmo formato do cronograma em papel que serviu de modelo) com a
  * programação semana a semana já existente (teoria, questões, redação, revisão e simulados, até
  * 3 dias antes da prova). Antes eram 3 cartões separados (cronograma, plano de estudos e
- * cronograma horário) — unificados aqui a pedido do Franc, porque estavam fragmentados demais
- * para ficar "bem organizado". A grade semanal vale para qualquer cargo; a programação
- * semana a semana é específica do Investigador (única com ordem de prioridade IDECAN montada).
- * Configuração salva neste navegador, por cargo. */
+ * cronograma horário) — unificados aqui. O plano detalhado agora é gerado para todos os cargos,
+ * usando apenas os tópicos oficiais correspondentes a cada especialidade. Configuração salva
+ * por usuário e cargo, com sincronização de conta e cache local. */
 export function PcAcCronogramaCard({
   cargo,
   userId,
@@ -51,7 +50,7 @@ export function PcAcCronogramaCard({
     return () => observer.disconnect();
   }, []);
   const [exporting, setExporting] = React.useState(false);
-  const showDetailedPlan = cargo.id === "investigador";
+  const showDetailedPlan = true;
   const configKey = `${userId}:${cargo.id}`;
   const configLoaded = loadedConfigKey === configKey;
 
@@ -140,7 +139,7 @@ export function PcAcCronogramaCard({
 
   const weeks = React.useMemo(
     () => (showDetailedPlan && configLoaded && !startError
-      ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, { startDate: effectiveStartDate, startTime: cfg.startTime, weeklyHours: cfg.weeklyHours })
+      ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, { ...effectiveCfg }, cargo)
       : []),
     [showDetailedPlan, configLoaded, startError, cfg.days, cfg.startTime, cfg.weeklyHours, effectiveStartDate],
   );
@@ -148,17 +147,12 @@ export function PcAcCronogramaCard({
   // A grade semanal do Investigador é extraída de uma semana de referência do próprio plano,
   // nunca de um segundo algoritmo. Prefere uma semana completa; em períodos curtos, usa a mais longa.
   const referenceWeek = React.useMemo(() => {
-    if (!showDetailedPlan || !weeks.length) return null;
+    if (!weeks.length) return null;
     return weeks.reduce((best, current) => current.days.length > best.days.length ? current : best, weeks[0]!);
   }, [showDetailedPlan, weeks]);
 
   const grid: PcAcWeeklyGridRow[] = React.useMemo(() => {
-    if (!configLoaded) return [];
-    if (!showDetailedPlan) {
-      const simpleWeek = buildPcAcStudyWeek(cargo, cfg);
-      return buildPcAcWeeklyGrid(cargo, simpleWeek, {});
-    }
-    if (!referenceWeek) return [];
+    if (!configLoaded || !referenceWeek) return [];
 
     const byName = new Map<string, { minutes: number; days: Set<number>; ranges: Set<string> }>();
     const toMinutes = (value?: string) => {
@@ -169,6 +163,7 @@ export function PcAcCronogramaCard({
 
     for (const day of referenceWeek.days) {
       for (const activity of day.activities) {
+        if (activity.type === "rotina" || activity.type === "pausa" || activity.type === "exercicio" || activity.type === "descanso") continue;
         const name = activity.subject ??
           (activity.type === "redacao" ? "Redação" :
             activity.type === "simulado" ? "Simulado" :
@@ -343,6 +338,31 @@ export function PcAcCronogramaCard({
           </div>
         </div>
 
+        <details className="pcac-schedule__preferences rounded-xl border p-3">
+          <summary className="cursor-pointer text-sm font-bold">Rotina diária, pausas e preparação física</summary>
+          <p className="mt-1 text-xs text-muted-foreground">Os horários de refeições e treino são compromissos sugeridos. O sistema evita sobrepor essas atividades aos blocos de estudo.</p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-1"><Label htmlFor="schedule-breakfast">Café da manhã</Label><Input id="schedule-breakfast" type="time" value={cfg.breakfastTime} disabled={!configLoaded} onChange={(e) => update({ breakfastTime: e.target.value })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-morning-snack">Lanche da manhã</Label><Input id="schedule-morning-snack" type="time" value={cfg.morningSnackTime} disabled={!configLoaded} onChange={(e) => update({ morningSnackTime: e.target.value })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-lunch">Almoço</Label><Input id="schedule-lunch" type="time" value={cfg.lunchTime} disabled={!configLoaded} onChange={(e) => update({ lunchTime: e.target.value })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-afternoon-snack">Lanche da tarde</Label><Input id="schedule-afternoon-snack" type="time" value={cfg.afternoonSnackTime} disabled={!configLoaded} onChange={(e) => update({ afternoonSnackTime: e.target.value })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-dinner">Jantar</Label><Input id="schedule-dinner" type="time" value={cfg.dinnerTime} disabled={!configLoaded} onChange={(e) => update({ dinnerTime: e.target.value })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-break-every">Pausa a cada (minutos)</Label><Input id="schedule-break-every" type="number" min={30} max={60} step={10} value={cfg.breakEveryMinutes} disabled={!configLoaded} onChange={(e) => update({ breakEveryMinutes: Math.min(60, Math.max(30, Number(e.target.value) || 50)) })} /></div>
+            <div className="space-y-1"><Label htmlFor="schedule-break-duration">Duração da pausa (minutos)</Label><Input id="schedule-break-duration" type="number" min={5} max={15} step={5} value={cfg.breakDurationMinutes} disabled={!configLoaded} onChange={(e) => update({ breakDurationMinutes: Math.min(15, Math.max(5, Number(e.target.value) || 10)) })} /></div>
+          </div>
+          <div className="mt-4 rounded-lg border p-3">
+            <label className="flex items-center gap-2 text-sm font-semibold">
+              <input type="checkbox" checked={cfg.includeTaf} disabled={!configLoaded} onChange={(e) => update({ includeTaf: e.target.checked })} />
+              Incluir preparação física para TAF
+            </label>
+            {cfg.includeTaf && <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              <div className="space-y-1"><Label htmlFor="schedule-taf-time">Horário do treino</Label><Input id="schedule-taf-time" type="time" value={cfg.tafTime} disabled={!configLoaded} onChange={(e) => update({ tafTime: e.target.value })} /></div>
+              <div className="space-y-1"><Label htmlFor="schedule-taf-duration">Duração (minutos)</Label><Input id="schedule-taf-duration" type="number" min={30} max={90} step={15} value={cfg.tafDurationMinutes} disabled={!configLoaded} onChange={(e) => update({ tafDurationMinutes: Math.min(90, Math.max(30, Number(e.target.value) || 60)) })} /></div>
+              <div className="sm:col-span-2"><p className="mb-2 text-xs font-semibold">Dias de treino</p><div className="flex flex-wrap gap-2">{DAY_ORDER.map((day) => <label key={day} className="inline-flex items-center gap-1.5 rounded-lg border px-2 py-1.5 text-xs"><input type="checkbox" checked={cfg.tafDays.includes(day)} onChange={(e) => update({ tafDays: e.target.checked ? [...cfg.tafDays, day] : cfg.tafDays.filter((value) => value !== day) })} />{DAY_SHORT[day]}</label>)}</div></div>
+            </div>}
+          </div>
+        </details>
+
           </section>
           <section role="tabpanel" tabIndex={0} id="schedule-panel-grade" aria-labelledby="schedule-tab-grade" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "grade"} className="pcac-schedule__panel space-y-5">
 
@@ -444,9 +464,10 @@ export function PcAcCronogramaCard({
                                   <thead>
                                     <tr className="bg-muted/60">
                                       <th className="px-2.5 py-1.5 text-left font-semibold">Dia</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Atividade</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Disciplina</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Tópico / instrução</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Horário</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Etapa</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Disciplina / rotina</th>
+                                      <th className="px-2.5 py-1.5 text-left font-semibold">Tópico / orientação</th>
                                     </tr>
                                   </thead>
                                   <tbody>
