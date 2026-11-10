@@ -45,6 +45,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
+import { PcAcContentReviewAdmin } from "@/components/library/PcAcContentReviewAdmin";
 import { EnrichmentAdmin } from "@/components/library/EnrichmentAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -689,10 +690,14 @@ function AdminPanel() {
           <Tabs defaultValue="materials">
             <TabsList>
               <TabsTrigger value="materials">Materiais</TabsTrigger>
+              <TabsTrigger value="pcac-review">Homologar aulas PC-AC</TabsTrigger>
               <TabsTrigger value="enrichments">Exemplos e ilustrações</TabsTrigger>
             </TabsList>
             <TabsContent value="materials" className="mt-4">
               <LibraryAdmin />
+            </TabsContent>
+            <TabsContent value="pcac-review" className="mt-4">
+              <PcAcContentReviewAdmin />
             </TabsContent>
             <TabsContent value="enrichments" className="mt-4">
               <EnrichmentAdmin />
