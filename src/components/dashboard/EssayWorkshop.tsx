@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Bot, FilePlus2, Save, Trash2, CheckSquare, Square, Maximize2, Minimize2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
