@@ -64,3 +64,36 @@
   .idecan-intelligence-page .page-hero__stats .hero-stat p { font-size: .82rem; }
   .idecan-intelligence-page .page-hero__stats .hero-stat span { font-size: .62rem; }
 }
+
+/* Editorial color system: each analytical layer gets a restrained semantic tint. */
+.idecan-intelligence-page .idecan-card {
+  --idecan-card-accent: var(--primary);
+  --idecan-card-tint: color-mix(in srgb, var(--idecan-card-accent) 6%, var(--card));
+  border-top: 2px solid color-mix(in srgb, var(--idecan-card-accent) 62%, var(--border));
+  background: linear-gradient(145deg, var(--idecan-card-tint), var(--card) 65%);
+}
+.idecan-intelligence-page .idecan-card > [data-slot="card-header"] {
+  background: color-mix(in srgb, var(--idecan-card-accent) 5%, transparent);
+}
+.idecan-intelligence-page .idecan-card--base { --idecan-card-accent: #2eb6a3; }
+.idecan-intelligence-page .idecan-card--matrix { --idecan-card-accent: #6ea8ff; }
+.idecan-intelligence-page .idecan-card--map { --idecan-card-accent: #d6a84d; }
+.idecan-intelligence-page .idecan-card--recent { --idecan-card-accent: #aa8be8; }
+.idecan-intelligence-page .idecan-card--police { --idecan-card-accent: #70b9e8; }
+.idecan-intelligence-page .idecan-card--weights { --idecan-card-accent: #d6a84d; }
+.idecan-intelligence-page .idecan-card--themes { --idecan-card-accent: #d78aaf; }
+.idecan-intelligence-page .idecan-card--answers { --idecan-card-accent: #56c99a; }
+.idecan-intelligence-page .idecan-card--recommendations { --idecan-card-accent: #e0a95b; }
+.idecan-intelligence-page .idecan-card--continue { --idecan-card-accent: #78a9ee; }
+.dark .idecan-intelligence-page .idecan-card {
+  --idecan-card-tint: color-mix(in srgb, var(--idecan-card-accent) 9%, var(--card));
+}
+.idecan-intelligence-page .idecan-card .h-3.flex-1 > div,
+.idecan-intelligence-page .idecan-card .h-3.flex-1 { accent-color: var(--idecan-card-accent); }
+.idecan-intelligence-page .idecan-card .h-3.flex-1 > div { background: var(--idecan-card-accent); }
+.idecan-intelligence-page .idecan-card a.text-primary,
+.idecan-intelligence-page .idecan-card .text-primary { color: color-mix(in srgb, var(--idecan-card-accent) 78%, var(--foreground)); }
+.idecan-intelligence-page .idecan-card .rounded-full.border-primary\/20 { border-color: color-mix(in srgb, var(--idecan-card-accent) 34%, var(--border)); background: color-mix(in srgb, var(--idecan-card-accent) 9%, transparent); }
+@media (max-width: 700px) {
+  .idecan-intelligence-page .idecan-card { border-top-width: 3px; }
+}

@@ -353,7 +353,7 @@ function InteligenciaIdecan() {
         </div>
       </PageHero>
 
-      <Card>
+      <Card className="idecan-card idecan-card--base">
         <CardHeader>
           <CardTitle className="flex flex-wrap items-center gap-2 text-base">
             <ScanSearch className="h-4 w-4" aria-hidden /> Base da análise
@@ -379,7 +379,7 @@ function InteligenciaIdecan() {
         )}
       </Card>
 
-      <Card className="border-primary/25 bg-primary/[0.03]">
+      <Card className="idecan-card idecan-card--matrix border-primary/25 bg-primary/[0.03]">
         <CardHeader>
           <CardTitle className="text-base">Matriz completa do edital PC-AC 2026 · Oficial Investigador</CardTitle>
           <CardDescription>
@@ -398,7 +398,7 @@ function InteligenciaIdecan() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="idecan-card idecan-card--map">
         <CardHeader>
           <CardTitle className="text-base">Mapa completo da IDECAN por disciplina</CardTitle>
           <CardDescription>
@@ -413,7 +413,7 @@ function InteligenciaIdecan() {
       </Card>
 
       {currentYearExams.length > 0 && (
-        <Card>
+        <Card className="idecan-card idecan-card--recent">
           <CardHeader>
             <CardTitle className="text-base">
               Provas da IDECAN em {CURRENT_YEAR} (ano corrente)
@@ -435,7 +435,7 @@ function InteligenciaIdecan() {
         </Card>
       )}
 
-      <Card>
+      <Card className="idecan-card idecan-card--police">
         <CardHeader>
           <CardTitle className="text-base">Provas de Polícia Civil aplicadas pela IDECAN</CardTitle>
           <CardDescription>
@@ -476,7 +476,7 @@ function InteligenciaIdecan() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="idecan-card idecan-card--weights">
         <CardHeader>
           <CardTitle className="text-base">O que a IDECAN mais cobra na Polícia Civil</CardTitle>
           <CardDescription>
@@ -497,7 +497,7 @@ function InteligenciaIdecan() {
       </Card>
 
       {themes.length > 0 && (
-        <Card>
+        <Card className="idecan-card idecan-card--themes">
           <CardHeader>
             <CardTitle className="text-base">
               Assuntos que a IDECAN repete em Polícia Civil
@@ -577,7 +577,7 @@ function InteligenciaIdecan() {
         </Card>
       )}
 
-      <Card>
+      <Card className="idecan-card idecan-card--recommendations">
         <CardHeader>
           <CardTitle className="text-base">O que fazer com isso</CardTitle>
         </CardHeader>
@@ -591,7 +591,7 @@ function InteligenciaIdecan() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="idecan-card idecan-card--continue">
         <CardHeader>
           <CardTitle className="text-base">Continue a preparação</CardTitle>
           <CardDescription>
