@@ -619,7 +619,7 @@ function AdminFinancePage() {
                             {e.description ?? "—"}
                           </TableCell>
                           <TableCell
-                            className={`text-right font-medium ${e.kind === "receita" ? "text-emerald-600" : "text-red-600"}`}
+                            className={`text-right font-medium ${e.kind === "receita" ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}
                           >
                             {e.kind === "receita" ? "+" : "−"} {formatBRL(e.amount_cents)}
                           </TableCell>
