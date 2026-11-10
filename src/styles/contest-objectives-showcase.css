@@ -1,217 +1,470 @@
-/* Meu Concurso — compact Operate workspace. */
-.app-shell[data-area="student"] #dashboard-content .contest-objectives-page {
-  --co-bg: #101b22;
-  --co-panel: #172a34;
-  --co-panel-raised: #1d3540;
-  --co-line: rgba(164, 190, 198, .24);
-  --co-gold: #d8b36b;
-  --co-gold-bright: #f0d69e;
-  --co-text: #f2f6f6;
-  --co-muted: #aebfc5;
-  color: var(--co-text);
-}
-.app-shell[data-area="student"] #dashboard-content .contest-showcase {
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  margin: 0;
-  padding: clamp(14px, 1.5vw, 22px);
-  overflow: hidden;
-  border: 1px solid var(--co-line);
-  border-radius: 16px;
-  background: linear-gradient(135deg, #12232c 0%, #172b34 56%, #102029 100%);
-  box-shadow: 0 12px 30px -26px #000;
-}
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__backdrop {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: radial-gradient(ellipse at 92% 4%, rgba(216,179,107,.12), transparent 34%);
-  pointer-events: none;
-}
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__inner { position: relative; z-index: 1; width: 100%; margin: 0 auto; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__lead {
+/* ASTRYX · Meu Concurso
+   Operate surface: restrained graphite/navy, cool porcelain and teal;
+   warm gold is reserved for the active objective and the primary action. */
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window {
+  --mc-ink: #eaf1f3;
+  --mc-muted: #aabac1;
+  --mc-subtle: #7f939d;
+  --mc-surface: #172630;
+  --mc-surface-raised: #1d303a;
+  --mc-line: #344852;
+  --mc-teal: #72c2bd;
+  --mc-teal-ink: #173b3d;
+  --mc-gold: #d9b66f;
+  --mc-gold-ink: #292318;
   display: grid;
-  grid-template-columns: minmax(150px, .55fr) minmax(0, 2fr);
-  gap: 14px;
-  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  color: var(--mc-ink);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__intro { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__intro h1 {
-  margin: 0; color: #fff; font-size: clamp(22px, 2vw, 30px); font-weight: 850;
-  line-height: 1.08; letter-spacing: -.035em; text-wrap: balance;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__intro p {
-  max-width: 31ch; margin: 9px 0 0; color: var(--co-muted); font-size: 11px; line-height: 1.5;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured {
-  display: grid; grid-template-columns: minmax(145px, .72fr) minmax(0, 1.55fr);
-  min-width: 0; min-height: 178px; overflow: hidden;
-  border: 1px solid rgba(216,179,107,.48); border-radius: 12px; background: #142832;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__heading h1 {
+  margin: 0;
+  color: var(--mc-ink);
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -.025em;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-art,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-art {
-  position: relative; min-width: 0; overflow: hidden; background: #1b3038;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__heading p {
+  margin: 4px 0 0;
+  color: var(--mc-muted);
+  font-size: 12px;
+  line-height: 1.4;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-art img,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-art img {
-  display: block; width: 100%; height: 100%; min-height: 100%; object-fit: cover; object-position: center;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__active-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: var(--mc-teal);
+  font-size: 11px;
+  font-weight: 700;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-art::after,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-art::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(0deg, rgba(4,10,13,.66), transparent 58%); pointer-events: none;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__active-state svg {
+  width: 14px;
+  height: 14px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__art-caption,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-art span {
-  position: absolute; z-index: 1; left: 8px; bottom: 8px; max-width: calc(100% - 16px);
-  padding: 4px 7px; border: 1px solid rgba(255,255,255,.2); border-radius: 6px;
-  color: #fff; background: rgba(7,14,18,.78); font-size: 9px; font-weight: 800;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured {
+  display: grid;
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--mc-line);
+  border-radius: 12px;
+  background: var(--mc-surface);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-body {
-  display: flex; flex-direction: column; justify-content: space-between; gap: 8px;
-  min-width: 0; padding: 12px 14px;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-art {
+  position: relative;
+  min-height: 190px;
+  overflow: hidden;
+  background: #22333b;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-head {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  object-position: center;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__tag,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__status,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-status {
-  display: inline-flex; align-items: center; gap: 5px; width: fit-content; max-width: 100%;
-  padding: 4px 7px; border: 1px solid rgba(216,179,107,.38); border-radius: 6px;
-  color: var(--co-gold-bright); background: rgba(216,179,107,.09);
-  font-size: 8px; font-weight: 800; line-height: 1.25;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-body {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px 18px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__tag svg { width: 11px; height: 11px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__status {
-  border-color: var(--co-line); color: #d1dde0; background: rgba(255,255,255,.04);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--mc-teal);
+  font-size: 11px;
+  font-weight: 700;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__context,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-context {
-  display: block; margin-bottom: 4px; color: var(--co-gold-bright); font-size: 9px;
-  font-weight: 800; letter-spacing: .035em; line-height: 1.25; text-transform: uppercase;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__status {
+  padding: 3px 8px;
+  border: 1px solid var(--mc-line);
+  border-radius: 5px;
+  color: var(--mc-muted);
+  background: transparent;
+  font-size: 10px;
+  font-weight: 600;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-body h2 {
-  margin: 0; color: #fff; font-size: clamp(17px, 1.45vw, 22px); font-weight: 850;
-  line-height: 1.16; letter-spacing: -.025em; overflow-wrap: anywhere;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__title-group h2 {
+  margin: 0;
+  color: var(--mc-ink);
+  font-size: 22px;
+  font-weight: 760;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__role {
-  margin: 4px 0 0; color: var(--co-muted); font-size: 10px; line-height: 1.35;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__title-group p {
+  margin: 5px 0 0;
+  color: var(--mc-muted);
+  font-size: 12px;
+  line-height: 1.4;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__role span { color: var(--co-gold); padding-inline: 2px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__date {
-  display: inline-flex; align-items: center; gap: 7px; width: fit-content; padding: 5px 8px;
-  border: 1px solid var(--co-line); border-radius: 7px; background: rgba(255,255,255,.035);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__summary {
+  display: grid;
+  gap: 9px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__date > svg { width: 15px; height: 15px; color: var(--co-gold); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__date span,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__fact span { display: grid; gap: 1px; min-width: 0; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__date small,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__fact small { color: var(--co-muted); font-size: 8px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__date strong { color: #f5e6c8; font-size: 10px; font-weight: 800; font-variant-numeric: tabular-nums; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__facts {
-  display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px;
-  min-width: 0; padding-block: 6px; border-block: 1px solid var(--co-line);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__exam-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mc-muted);
+  font-size: 11px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__fact { display: flex; align-items: center; gap: 5px; min-width: 0; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__fact > svg { width: 13px; height: 13px; flex: 0 0 auto; color: var(--co-gold); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__fact strong {
-  overflow: hidden; color: #edf3f3; font-size: 9px; font-weight: 800; line-height: 1.25;
-  text-overflow: ellipsis; white-space: nowrap;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__exam-date svg {
+  width: 14px;
+  height: 14px;
+  color: var(--mc-teal);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__primary-action,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__secondary-action,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__clear-action {
-  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px;
-  padding: 0 10px; border: 1px solid var(--co-gold); border-radius: 7px;
-  color: #211e18; background: var(--co-gold); font-size: 10px; font-weight: 800; text-decoration: none; cursor: pointer;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__exam-date strong {
+  color: var(--mc-ink);
+  font-variant-numeric: tabular-nums;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__primary-action svg,
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__secondary-action svg { width: 13px; height: 13px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__secondary-action {
-  border-color: var(--co-line); color: #e5eeee; background: rgba(255,255,255,.045);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 9px 0;
+  border-block: 1px solid var(--mc-line);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__clear-action {
-  border-color: rgba(239,177,122,.38); color: #ffd2ad; background: rgba(161,76,39,.13);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__fact {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__others { margin-top: 12px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__section-heading {
-  display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 7px;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__fact dt {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--mc-muted);
+  font-size: 10px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__section-heading h2 {
-  margin: 0; color: #f4f7f7; font-size: 13px; font-weight: 800; letter-spacing: -.015em;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__fact dt svg {
+  width: 13px;
+  height: 13px;
+  color: var(--mc-teal);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__count { color: var(--co-muted); font-size: 9px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__lock-note {
-  margin: 0 0 7px; color: #d7c49c; font-size: 10px; line-height: 1.4;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__fact dd {
+  margin: 0;
+  color: var(--mc-ink);
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__grid {
-  display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card {
-  display: grid; grid-template-columns: 76px minmax(0,1fr); min-width: 0; min-height: 112px;
-  overflow: hidden; border: 1px solid var(--co-line); border-radius: 9px; background: rgba(9,22,29,.64);
-  transition: border-color 160ms ease, opacity 160ms ease;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__primary-action,
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__secondary-action,
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__clear-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card:hover { border-color: rgba(216,179,107,.55); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card--locked { opacity: .48; filter: saturate(.55); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-art span { font-size: 7px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-body {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; padding: 7px;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__primary-action {
+  color: var(--mc-gold-ink);
+  background: var(--mc-gold);
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-status { font-size: 7px; padding: 3px 5px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-body h3 {
-  margin: 0; color: #f4f7f7; font-size: 11px; font-weight: 800; line-height: 1.2; overflow-wrap: anywhere;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__secondary-action {
+  color: var(--mc-ink);
+  border-color: var(--mc-line);
+  background: transparent;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-context { margin: 0; font-size: 7px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-body > p { margin: 0; color: var(--co-muted); font-size: 8px; line-height: 1.3; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-meta { display: flex; flex-wrap: wrap; gap: 3px 7px; width: 100%; color: var(--co-muted); font-size: 7px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-meta span { display: flex; align-items: center; gap: 3px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-meta svg { width: 9px; height: 9px; color: var(--co-gold); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__facts--compact { display: none; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__choose {
-  display: inline-flex; align-items: center; justify-content: center; gap: 4px; width: 100%; min-height: 26px;
-  margin-top: auto; border: 1px solid rgba(216,179,107,.42); border-radius: 5px;
-  color: var(--co-gold-bright); background: rgba(216,179,107,.08); font-size: 8px; font-weight: 800; cursor: pointer;
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__clear-action {
+  color: #e5b6a0;
+  border-color: #765448;
+  background: transparent;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__choose:disabled { cursor: not-allowed; opacity: .8; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__empty {
-  display: flex; align-items: center; gap: 12px; padding: 18px; border: 1px dashed var(--co-line);
-  border-radius: 12px; background: rgba(8,16,20,.55);
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__official-link {
+  color: var(--mc-teal);
+  font-size: 11px;
+  text-underline-offset: 3px;
 }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__empty > svg { width: 24px; height: 24px; color: var(--co-gold); }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__empty strong { color: #fff; font-size: 13px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__empty p { margin: 4px 0 0; color: var(--co-muted); font-size: 10px; }
-.app-shell[data-area="student"] #dashboard-content .contest-showcase__empty a { margin-left: auto; color: var(--co-gold-bright); font-size: 10px; font-weight: 800; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window { display: grid; gap: 10px; }
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__actions :is(a, button):hover {
+  transform: translateY(-1px);
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__actions :is(a, button):focus-visible,
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list button:focus-visible,
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog a:focus-visible {
+  outline: 2px solid var(--mc-teal);
+  outline-offset: 3px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__others {
+  display: grid;
+  gap: 6px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__section-heading h2 {
+  margin: 0;
+  color: var(--mc-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__section-heading > span {
+  color: var(--mc-subtle);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--mc-line);
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list-copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list-copy strong {
+  color: var(--mc-ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list-copy span {
+  color: var(--mc-muted);
+  font-size: 10px;
+  line-height: 1.3;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list.is-locked li {
+  opacity: .68;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__lock-label {
+  flex: 0 0 auto;
+  color: var(--mc-subtle);
+  font-size: 9px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 0 9px;
+  border: 1px solid var(--mc-line);
+  border-radius: 6px;
+  color: var(--mc-teal);
+  background: transparent;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list button svg { width: 12px; height: 12px; }
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__empty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--mc-line);
+  border-radius: 10px;
+  color: var(--mc-muted);
+  background: var(--mc-surface);
+  font-size: 12px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__empty > svg { flex: 0 0 auto; color: var(--mc-teal); }
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__empty p { margin: 0; }
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__empty a { color: var(--mc-teal); font-weight: 700; white-space: nowrap; }
+
 .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog {
-  display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 10px 14px;
-  margin: 0; padding: 12px 14px; border: 1px solid var(--co-line); border-radius: 12px;
-  background: #1a303a;
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--mc-line);
+  border-radius: 10px;
+  color: var(--mc-ink);
+  background: var(--mc-surface);
 }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog h2 { margin: 0; color: #f4f7f7; font-size: 13px; font-weight: 800; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog > div:first-child p { margin: 3px 0 0; color: var(--co-muted); font-size: 9px; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-editions { display: flex; flex-wrap: wrap; gap: 6px; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-edition { min-width: 155px; padding: 7px 9px; border: 1px solid var(--co-line); border-radius: 7px; background: rgba(255,255,255,.035); }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-edition h3 { margin: 3px 0; color: #f3f6f6; font-size: 10px; font-weight: 750; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-edition span { color: var(--co-muted); font-size: 8px; }
-.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog > .flex { grid-column: 2; grid-row: 1; align-self: center; }
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__heading h2 {
+  margin: 0;
+  color: var(--mc-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__heading p {
+  margin: 3px 0 0;
+  color: var(--mc-muted);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 6px 0;
+  border-top: 1px solid var(--mc-line);
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__edition-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__edition-info > svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: var(--mc-teal);
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__edition-info div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__edition-info strong {
+  color: var(--mc-ink);
+  font-size: 11px;
+  line-height: 1.25;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__edition-info span {
+  color: var(--mc-muted);
+  font-size: 10px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__open {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  color: var(--mc-teal);
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .my-contest-expired {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid #8a7145;
+  border-radius: 8px;
+  color: #e8cb8e;
+  background: #332b1c;
+  font-size: 11px;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__message {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  color: var(--mc-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__message button { min-height: 32px; }
+
+/* Light mode uses the same hierarchy, with porcelain canvas and ink text. */
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .my-contest-one-window {
+  --mc-ink: #1c2c35;
+  --mc-muted: #526671;
+  --mc-subtle: #637782;
+  --mc-surface: #ffffff;
+  --mc-surface-raised: #f5f8f9;
+  --mc-line: #d7e0e4;
+  --mc-teal: #246f70;
+  --mc-teal-ink: #ffffff;
+  --mc-gold: #d4aa60;
+  --mc-gold-ink: #2b2418;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-art { background: #e4ebee; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__clear-action { color: #92563e; border-color: #d8b6a7; }
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .my-contest-expired { color: #79551a; border-color: #e2c98f; background: #fff8e8; }
+
 @media (max-width: 900px) {
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__lead { grid-template-columns: minmax(0,1fr); }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__intro { padding-bottom: 2px; }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__intro p { max-width: 60ch; margin-top: 5px; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured { grid-template-columns: 140px minmax(0, 1fr); }
 }
 @media (max-width: 680px) {
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase { padding: 12px; }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__featured { grid-template-columns: minmax(0,1fr); }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__featured-art { height: 130px; }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__grid { grid-template-columns: minmax(0,1fr); }
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase__card { grid-template-columns: 84px minmax(0,1fr); }
-  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog { grid-template-columns: minmax(0,1fr); }
-  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog > .flex { grid-column: 1; grid-row: auto; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window { gap: 10px; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__heading { align-items: flex-start; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-art,
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-art img { min-height: 116px; height: 116px; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__featured-body { padding: 13px; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__facts { gap: 7px; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list,
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .edital-catalog__list { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__list li { align-items: flex-start; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__lock-label { text-align: right; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__empty { align-items: flex-start; flex-wrap: wrap; }
+}
+@media (max-width: 420px) {
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__facts { grid-template-columns: 1fr; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window .contest-showcase__actions > * { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .app-shell[data-area="student"] #dashboard-content .contest-showcase * { transition: none !important; }
+  .app-shell[data-area="student"] #dashboard-content .my-contest-one-window * { transition: none !important; }
 }
