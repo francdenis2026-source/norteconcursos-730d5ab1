@@ -39,6 +39,7 @@ import {
   readRankingPage,
   type RankingEntry as Row,
   type RankingPageData,
+  type RankingPeriod,
 } from "@/lib/rankingPage";
 
 export const Route = createFileRoute("/dashboard/ranking")({
@@ -54,6 +55,11 @@ const TABS = [
     "Geral",
     "Pontos de questões, simulados, flashcards e redação. Horas de estudo são uma métrica de dedicação.",
   ],
+] as const;
+
+const PERIODS = [
+  ["all", "Geral"],
+  ["month", "Este mês"],
 ] as const;
 
 interface Profile {
@@ -316,6 +322,7 @@ function RankingPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
   const kind = search.section;
+  const period = search.period;
   const [query, setQuery] = React.useState(search.q);
   const [pageData, setPageData] = React.useState<RankingPageData | null>(null);
   const [loadError, setLoadError] = React.useState(false);
@@ -351,6 +358,7 @@ function RankingPage() {
         _page: search.page,
         _page_size: search.size,
         _search: search.q,
+        _period: period,
       });
       if (!alive) return;
       if (error && ["PGRST202", "42883"].includes(error.code)) {
@@ -372,7 +380,7 @@ function RankingPage() {
     return () => {
       alive = false;
     };
-  }, [kind, real, isLoading, user?.id, search.page, search.size, search.q, reload]);
+  }, [kind, period, real, isLoading, user?.id, search.page, search.size, search.q, reload]);
 
   React.useEffect(() => {
     if (!locating || !pageData || !user) return;
@@ -396,29 +404,56 @@ function RankingPage() {
       <RankingHeader />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
-          <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">
-            {TABS.map(([id, label]) => (
-              <button
-                key={id}
-                type="button"
-                aria-pressed={kind === id}
-                onClick={() => {
-                  setQuery("");
-                  void navigate({ search: { ...search, section: id, page: 1, q: "" } });
-                }}
-                className={cn(
-                  "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
-                  kind === id
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:text-foreground",
-                )}
-              >
-                {label}
-              </button>
-            ))}
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">
+              {TABS.map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  aria-pressed={kind === id}
+                  onClick={() => {
+                    setQuery("");
+                    void navigate({ search: { ...search, section: id, page: 1, q: "" } });
+                  }}
+                  className={cn(
+                    "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
+                    kind === id
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <div className="flex gap-1.5" role="group" aria-label="Período do ranking">
+              {PERIODS.map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  aria-pressed={period === id}
+                  onClick={() => {
+                    setQuery("");
+                    void navigate({
+                      search: { ...search, period: id as RankingPeriod, page: 1, q: "" },
+                    });
+                  }}
+                  className={cn(
+                    "rounded-full border px-3 py-1 text-xs font-semibold transition-colors",
+                    period === id
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-transparent bg-muted text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
           <CardTitle className="text-xl">{tab[1]}</CardTitle>
-          <CardDescription>{tab[2]}</CardDescription>
+          <CardDescription>
+            {tab[2]} {period === "month" && "Mostrando só os pontos deste mês."}
+          </CardDescription>
           <details className="ranking-rules rounded-lg border bg-muted/30 p-3 text-xs text-muted-foreground">
             <summary className="cursor-pointer font-semibold text-foreground">
               Como a pontuação e o desempate funcionam

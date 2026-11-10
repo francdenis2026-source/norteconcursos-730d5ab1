@@ -131,7 +131,7 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
           )}
           <div className="home-ranking__bottom">
             <div><ShieldCheck aria-hidden="true"/><span><strong>Classificação transparente</strong> Pontos, acertos e desempenho real. Empates legítimos compartilham a posição.</span></div>
-            <Link to="/dashboard/ranking" search={{ section: "general", page: 1, size: 20, q: "" }} className="home-ranking__cta">
+            <Link to="/dashboard/ranking" search={{ section: "general", period: "all", page: 1, size: 20, q: "" }} className="home-ranking__cta">
               Ver ranking completo <ArrowRight aria-hidden="true" />
             </Link>
           </div>
