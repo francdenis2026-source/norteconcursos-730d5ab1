@@ -245,3 +245,90 @@
   .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) { overflow-x: auto; }
   .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) > div { min-width: 330px; }
 }
+.pcac-cronograma-tabs__list {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 5px;
+  overflow-x: auto;
+  border: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--muted) 35%, transparent);
+  padding: 5px;
+  scrollbar-width: none;
+}
+.pcac-edital-tabs__list {
+  position: sticky;
+  top: calc(var(--app-topbar-h, 72px) + 10px);
+  z-index: 10;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  justify-content: flex-start;
+  overflow-x: auto;
+  border: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  padding: 5px;
+  box-shadow: 0 10px 22px -18px rgb(0 0 0 / 50%);
+  backdrop-filter: blur(14px);
+  scrollbar-width: none;
+}
+.pcac-edital-tabs__list::-webkit-scrollbar { display: none; }
+.pcac-edital-tabs__list [role="tab"] {
+  flex: 0 0 auto;
+  min-height: 38px;
+  border-radius: 9px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  font-weight: 750;
+}
+.pcac-edital-tabs__list [role="tab"][data-state="active"] {
+  color: var(--foreground);
+  background: var(--card);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 12%);
+}
+.pcac-cronograma-tabs__list::-webkit-scrollbar { display: none; }
+.pcac-cronograma-tabs__list [role="tab"] {
+  flex: 0 0 auto;
+  min-height: 36px;
+  border-radius: 8px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  font-weight: 750;
+}
+.pcac-cronograma-tabs__list [role="tab"][data-state="active"] {
+  color: var(--foreground);
+  background: var(--card);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
+}
+.pcac-edital-cronograma .pcac-week-card {
+  border-left-width: 4px;
+  box-shadow: 0 7px 18px -16px rgb(0 0 0 / 55%);
+}
+.pcac-edital-cronograma .pcac-week-card > p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pcac-edital-cronograma .pcac-week-card > p::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: currentColor;
+}
+.pcac-edital-cronograma .pcac-week-card--1 { border-left-color: #4c86c6; }
+.pcac-edital-cronograma .pcac-week-card--1 > p { color: #4c86c6; }
+.pcac-edital-cronograma .pcac-week-card--2 { border-left-color: #4b9b7d; }
+.pcac-edital-cronograma .pcac-week-card--2 > p { color: #4b9b7d; }
+.pcac-edital-cronograma .pcac-week-card--3 { border-left-color: #b88a3c; }
+.pcac-edital-cronograma .pcac-week-card--3 > p { color: #b88a3c; }
+.pcac-edital-cronograma .pcac-week-card--4 { border-left-color: #9b6bb3; }
+.pcac-edital-cronograma .pcac-week-card--4 > p { color: #9b6bb3; }
+.pcac-edital-cronograma .pcac-week-card--5 { border-left-color: #c36a63; }
+.pcac-edital-cronograma .pcac-week-card--5 > p { color: #c36a63; }
+@media (prefers-reduced-motion: reduce) {
+  .pcac-cronograma-tabs__list [role="tab"] { transition: none; }
+}

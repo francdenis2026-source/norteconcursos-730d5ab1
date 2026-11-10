@@ -28,6 +28,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import {
   pcAcVerticalCargos,
@@ -522,6 +523,14 @@ function PcAcCronogramaCard({
         </div>
       </CardHeader>
       <CardContent className="space-y-5">
+        <Tabs defaultValue="visao" className="pcac-cronograma-tabs">
+          <TabsList className="pcac-cronograma-tabs__list" aria-label="Seções do cronograma">
+            <TabsTrigger value="visao">Visão geral</TabsTrigger>
+            <TabsTrigger value="grade">Grade semanal</TabsTrigger>
+            {showDetailedPlan && <TabsTrigger value="semanas">Plano por semanas</TabsTrigger>}
+            <TabsTrigger value="final">Revisão final</TabsTrigger>
+          </TabsList>
+          <TabsContent value="visao" className="space-y-5">
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label>Horas de estudo por semana</Label>
@@ -566,10 +575,11 @@ function PcAcCronogramaCard({
                       if (days.length) update({ days });
                     }}
                     className={
-                      "rounded-full px-3 py-1 text-xs font-semibold transition-colors " +
+                      "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors " +
                       (on ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground")
                     }
                   >
+                    {on ? <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" /> : <span className="h-2 w-2 rounded-full border border-current opacity-60" aria-hidden="true" />}
                     {DAY_SHORT[d]}
                   </button>
                 );
@@ -577,6 +587,9 @@ function PcAcCronogramaCard({
             </div>
           </div>
         </div>
+
+          </TabsContent>
+          <TabsContent value="grade" className="space-y-5">
 
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
@@ -624,7 +637,9 @@ function PcAcCronogramaCard({
           </p>
         </div>
 
-        {showDetailedPlan && (
+          </TabsContent>
+
+        {showDetailedPlan && <TabsContent value="semanas" className="space-y-4">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
               Programação semana a semana
@@ -656,7 +671,7 @@ function PcAcCronogramaCard({
                         </AccordionTrigger>
                         <AccordionContent className="space-y-3">
                           {items.map((week) => (
-                            <div key={week.weekNumber} className="rounded-lg border bg-background/60 p-3">
+                            <div key={week.weekNumber} className={`pcac-week-card pcac-week-card--${((week.weekNumber - 1) % 5) + 1} rounded-lg border bg-background/60 p-3`}>
                               <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
                                 Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
                                 {week.endDate.split("-").reverse().join("/")}
@@ -719,8 +734,9 @@ function PcAcCronogramaCard({
               </>
             )}
           </div>
-        )}
+          </TabsContent>}
 
+          <TabsContent value="final" className="space-y-4">
         <div className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3">
           <p className="text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">
             Últimos dias antes da prova
@@ -736,6 +752,8 @@ function PcAcCronogramaCard({
             ))}
           </ul>
         </div>
+          </TabsContent>
+        </Tabs>
       </CardContent>
     </Card>
   );
@@ -945,6 +963,14 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
+      <Tabs defaultValue="resumo" className="pcac-edital-tabs">
+        <TabsList className="pcac-edital-tabs__list" aria-label="Seções do edital verticalizado">
+          <TabsTrigger value="resumo">Resumo do concurso</TabsTrigger>
+          <TabsTrigger value="conteudo">Conteúdo e progresso</TabsTrigger>
+          <TabsTrigger value="cronograma">Cronograma</TabsTrigger>
+          <TabsTrigger value="leis">Legislação</TabsTrigger>
+        </TabsList>
+        <TabsContent value="resumo" className="space-y-5">
       {cargo.id === "investigador" && (
         <Card className="pcac-edital-card border-amber-400/60 bg-gradient-to-br from-amber-400/10 via-card to-card">
           <CardHeader className="pb-3">
@@ -1061,6 +1087,9 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
+        </TabsContent>
+        <TabsContent value="conteudo" className="space-y-5">
+
       <Card className="pcac-edital-card pcac-edital-content">
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -1106,7 +1135,12 @@ function PcAcreEditalVerticalizadoPage() {
         </CardContent>
       </Card>
 
+        </TabsContent>
+        <TabsContent value="cronograma" className="space-y-5">
       <PcAcCronogramaCard cargo={cargo} userId={userId} />
+
+        </TabsContent>
+        <TabsContent value="leis" className="space-y-5">
 
       <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
         <CardHeader>
@@ -1170,6 +1204,8 @@ function PcAcreEditalVerticalizadoPage() {
           </Accordion>
         </CardContent>
       </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
