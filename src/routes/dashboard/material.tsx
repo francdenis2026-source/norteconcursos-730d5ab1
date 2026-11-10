@@ -308,6 +308,15 @@ function MaterialHub() {
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} className="pcac-material-focus__primary">Abrir edital verticalizado →</Link>
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador", view: "plan" }} className="pcac-material-focus__secondary">Ver plano de estudos</Link>
         </div>
+        <div className="pcac-material-focus__disciplines" aria-label="Disciplinas do cargo de Oficial Investigador">
+          <span className="pcac-material-focus__disciplines-label">No edital:</span>
+          {(pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.blocks ?? []).flatMap((block) => block.disciplines).slice(0, 7).map((discipline) => {
+            const match = subjects.find((subject) => subject.name === discipline.name);
+            return match ? (
+              <Link key={discipline.id} to="/dashboard/disciplinas" search={{ d: match.name }} className="pcac-material-focus__discipline">{discipline.name}</Link>
+            ) : <span key={discipline.id} className="pcac-material-focus__discipline pcac-material-focus__discipline--muted">{discipline.name}</span>;
+          })}
+        </div>
       </section>
 
       <HubSearch subjects={subjects} />

@@ -447,3 +447,8 @@
 .pcac-material-focus__secondary { color: hsl(var(--foreground)); background: hsl(var(--background) / .5); border: 1px solid hsl(var(--border)); }
 .pcac-material-focus__primary:hover, .pcac-material-focus__secondary:hover { transform: translateY(-1px); }
 @media (max-width: 720px) { .pcac-material-focus { align-items: stretch; flex-direction: column; padding: 1.1rem; } .pcac-material-focus__actions { justify-content: flex-start; min-width: 0; } }
+.pcac-material-focus__disciplines { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin-top: 1rem; padding-top: .8rem; border-top: 1px solid hsl(var(--border) / .7); }
+.pcac-material-focus__disciplines-label { margin-right: .15rem; color: hsl(var(--muted-foreground)); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.pcac-material-focus__discipline { border: 1px solid hsl(var(--primary) / .28); border-radius: 999px; padding: .28rem .55rem; color: hsl(var(--foreground)); background: hsl(var(--background) / .42); font-size: .7rem; font-weight: 700; text-decoration: none; }
+.pcac-material-focus__discipline:hover { border-color: hsl(var(--primary)); background: hsl(var(--primary) / .12); }
+.pcac-material-focus__discipline--muted { opacity: .65; }
