@@ -1,6 +1,7 @@
 import "@/styles/student-library-media-workspaces.css";
 import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
+import "@/styles/student-study-areas-refinement.css";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileAudio, GraduationCap, Headphones, ListVideo, PlayCircle, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";

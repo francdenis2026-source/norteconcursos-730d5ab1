@@ -1,0 +1,48 @@
+/* Shared Astryx-inspired refinement for study tools. */
+.app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area) {
+  width: 100%; max-width: 1480px; margin-inline: auto;
+  --area-cyan: #5edbe5; --area-blue: #82aaff; --area-green: #54d1a5;
+  --area-amber: #e4b461; --area-violet: #b99aef; --area-rose: #df91b1;
+  --area-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.dark .app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area) {
+  --area-cyan: #79e9ef; --area-blue: #98beff; --area-green: #66dfb2;
+  --area-amber: #f0c978; --area-violet: #c8aaf6; --area-rose: #efa5c1;
+}
+.app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area) > :is(.page-hero,.workspace-banner) { min-height: 0; border-top: 2px solid var(--area-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--area-cyan) 9%, var(--card)), var(--card) 68%); }
+.app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area) :is([data-slot="card"],.surface-card,.law-finder__panel,.law-finder__group) { border-color: var(--area-line); border-radius: 15px; }
+.app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area) :is(input,select,textarea):focus { border-color: var(--area-cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--area-cyan) 15%, transparent); }
+.app-shell[data-area="student"] .question-catalog,
+.app-shell[data-area="student"] .question-collections,
+.app-shell[data-area="student"] .question-flashcards,
+.app-shell[data-area="student"] .question-errors { width: 100%; max-width: 1480px; margin-inline: auto; }
+.app-shell[data-area="student"] .question-catalog__filters,
+.app-shell[data-area="student"] .question-workspace__metrics { border-color: color-mix(in srgb, var(--area-cyan, #5edbe5) 36%, var(--border)); background: color-mix(in srgb, var(--area-cyan, #5edbe5) 5%, var(--card)); }
+.app-shell[data-area="student"] .question-catalog__browser { border-top: 2px solid var(--area-blue, #82aaff); }
+.app-shell[data-area="student"] .question-catalog__view-tabs [role="tab"][data-state="active"],
+.app-shell[data-area="student"] .question-flashcards [role="tab"][data-state="active"] { background: var(--area-cyan, #5edbe5); color: #10252b; }
+.app-shell[data-area="student"] .question-collections .page-hero__stats > *,
+.app-shell[data-area="student"] .question-flashcards .question-workspace__metric { border-color: var(--area-line); }
+.app-shell[data-area="student"] .question-collections .group\/card:hover,
+.app-shell[data-area="student"] .question-collections [data-slot="card"]:hover { border-color: var(--area-amber, #e4b461); }
+.app-shell[data-area="student"] .law-finder { width: 100%; max-width: 1480px; margin-inline: auto; }
+.app-shell[data-area="student"] .law-finder__search { border-color: color-mix(in srgb, var(--area-cyan, #5edbe5) 48%, var(--border)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--area-cyan, #5edbe5) 8%, transparent); }
+.app-shell[data-area="student"] .law-finder__themes-panel { border-top: 2px solid var(--area-violet, #b99aef); background: color-mix(in srgb, var(--area-violet, #b99aef) 5%, var(--card)); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 1) { border-left: 3px solid var(--area-blue, #82aaff); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 2) { border-left: 3px solid var(--area-amber, #e4b461); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n) { border-left: 3px solid var(--area-green, #54d1a5); }
+.app-shell[data-area="student"] .dictionary-workspace > .page-hero { border-top-color: var(--area-violet); }
+.app-shell[data-area="student"] .dictionary-workspace .rounded-md.border:hover,
+.app-shell[data-area="student"] .dictionary-workspace [data-slot="card"]:hover { border-color: var(--area-cyan); }
+.app-shell[data-area="student"] .ctb-workspace > .page-hero { border-top-color: var(--area-green); }
+.app-shell[data-area="student"] .ctb-workspace [role="tab"][data-state="active"] { background: var(--area-cyan); color: #10252b; }
+.app-shell[data-area="student"] .ctb-workspace [data-slot="card"]:nth-child(3n + 1) { border-top: 2px solid var(--area-rose); }
+.app-shell[data-area="student"] .ctb-workspace [data-slot="card"]:nth-child(3n + 2) { border-top: 2px solid var(--area-amber); }
+.app-shell[data-area="student"] .ctb-workspace [data-slot="card"]:nth-child(3n) { border-top: 2px solid var(--area-blue); }
+.app-shell[data-area="student"] .video-study-page,
+.app-shell[data-area="student"] .nc-learning-workspace.video-study-page { width: 100%; max-width: 1480px; margin-inline: auto; }
+.app-shell[data-area="student"] .video-study-page__header { border-top: 2px solid var(--area-rose, #df91b1); }
+.app-shell[data-area="student"] .video-study-page__tabs [role="tab"][data-state="active"] { background: var(--area-cyan, #5edbe5); color: #10252b; }
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] :is(.history-workspace,.dictionary-workspace,.ctb-workspace,.student-study-area,.question-catalog,.question-collections,.question-flashcards,.question-errors,.law-finder,.video-study-page) { gap: 14px; }
+}

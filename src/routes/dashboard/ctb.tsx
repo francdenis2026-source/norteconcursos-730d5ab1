@@ -1,4 +1,5 @@
 import React from "react";
+import "@/styles/student-study-areas-refinement.css";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Gavel, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -59,7 +60,7 @@ function CtbPanelPage() {
   );
 
   return (
-    <div className="space-y-6">
+    <div className="ctb-workspace space-y-6">
       <PageHero
         image="toolkit"
         kicker="Materiais · Legislação"

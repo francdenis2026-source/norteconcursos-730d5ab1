@@ -1,4 +1,5 @@
 import React from "react";
+import "@/styles/student-study-areas-refinement.css";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { BookA, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +23,7 @@ function DictionaryPage() {
   const items = React.useMemo(() => searchGlossary(q, area || undefined), [q, area]);
   const letters = React.useMemo(() => [...new Set(items.map((e) => normalize(e.term)[0]!.toUpperCase()))], [items]);
   return (
-    <div className="space-y-6">
+    <div className="dictionary-workspace space-y-6">
       <PageHero image="study-desk" kicker="Material didático" icon={BookA} title="Dicionário de estudo" description="Significado, sinônimos e exemplo dos termos que aparecem nas leis e nas matérias. Nos textos de estudo, passe o mouse (ou toque) nos termos sublinhados.">
         <div className="page-hero__stats">
           <HeroStat icon={BookA} label="Termos encontrados" value={items.length} />

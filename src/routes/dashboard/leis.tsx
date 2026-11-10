@@ -1,4 +1,5 @@
 import * as React from "react";
+import "@/styles/student-study-areas-refinement.css";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ExternalLink, Library, Scale, Search, SearchX, X } from "lucide-react";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";

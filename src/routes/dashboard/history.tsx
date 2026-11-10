@@ -1,5 +1,6 @@
 import { acreDate, acreDateKey, acreDayRangeISO } from "@/lib/acreTime";
 import * as React from "react";
+import "@/styles/student-study-areas-refinement.css";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Clock, History, Loader2, Trophy, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -115,7 +116,7 @@ function HistoryPage() {
     );
 
   return (
-    <div className="space-y-6">
+    <div className="history-workspace space-y-6">
       <PageHero
         image="dashboard"
         kicker="Desempenho"
