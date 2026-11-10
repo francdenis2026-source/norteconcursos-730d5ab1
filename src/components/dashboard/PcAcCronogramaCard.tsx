@@ -416,7 +416,7 @@ export function PcAcCronogramaCard({
             </table>
           </div>
           <p className="mt-1.5 text-[11px] text-muted-foreground">
-            Peso 2 = disciplina de maior incidência na banca IDECAN e maior dificuldade. Peso 1 = demais disciplinas.
+            A distribuição considera os tópicos do cargo e prioriza conhecimentos específicos. O peso IDECAN é exibido quando há classificação específica disponível.
           </p>
         </div>
 
