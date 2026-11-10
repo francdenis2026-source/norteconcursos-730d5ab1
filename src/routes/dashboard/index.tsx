@@ -397,25 +397,41 @@ function StudentHome({ user }: { user: UserProfile }) {
               {effectiveExamDate ? formatExamDate(effectiveExamDate) : "Escolha uma data"}
             </p>
             <p className="student-hub__exam-countdown">{examCountdown}</p>
-            {objective && (
-              <div
-                className="student-hub__active-objective"
-                aria-label="Concurso ativo"
-                data-contest="active"
-                data-pc-acre={isPcAcre ? "true" : "false"}
-              >
+            <section
+              className="student-hub__active-contest"
+              aria-label="Concurso ativo"
+              data-has-objective={Boolean(objective)}
+              data-pc-acre={isPcAcre ? "true" : "false"}
+            >
+              <div className="student-hub__active-contest-heading">
+                <span className="student-hub__active-contest-icon" aria-hidden="true">
+                  <Trophy />
+                </span>
+                <div className="student-hub__active-contest-copy">
+                  <span className="student-hub__active-contest-label">Concurso ativo</span>
+                  <strong>
+                    {objective?.agency ?? "Nenhum concurso selecionado"}
+                  </strong>
+                  <span className="student-hub__active-contest-meta">
+                    {objective
+                      ? `${objective.role} · ${objective.examBoard}`
+                      : "Escolha um concurso para começar sua preparação."}
+                  </span>
+                </div>
                 {isPcAcre && (
                   <span className="student-hub__acre-flag" aria-label="Acre" role="img" />
                 )}
-                <div className="student-hub__active-objective-copy">
-                  <strong>{objective.agency}</strong>
-                  <span>{objective.role} · {objective.examBoard}</span>
-                </div>
               </div>
-            )}
-            <Link to="/dashboard/my-contest" className="student-hub__contest-action">
-              {objective ? "Trocar concurso" : "Escolher concurso"} <ArrowRight aria-hidden="true" />
-            </Link>
+              {objective && (
+                <p className="student-hub__active-contest-description">
+                  Gerencie ou altere o concurso em preparação.
+                </p>
+              )}
+              <Link to="/dashboard/my-contest" className="student-hub__contest-action">
+                <span>{objective ? "Trocar concurso" : "Escolher concurso"}</span>
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            </section>
 
             {!isEditingExamDate ? (
               <Button
