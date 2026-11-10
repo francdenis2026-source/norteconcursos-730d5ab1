@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
+import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
 import { CheckCircle2, ExternalLink, ShieldAlert } from "lucide-react";
 
 type Lesson = { title: string; body: string[]; example: string; question: string; answer: string; source: string };
@@ -38,7 +39,7 @@ const BASE_COURSES: Course[] = [
     {title:"04 · Administração direta, indireta e descentralização",body:["Administração direta abrange órgãos integrantes das pessoas políticas; administração indireta reúne entidades dotadas de personalidade jurídica própria, como autarquias, fundações públicas, empresas públicas e sociedades de economia mista, segundo a legislação aplicável.","Desconcentração distribui competências internamente em uma mesma pessoa jurídica, enquanto descentralização transfere a execução ou titularidade de atividades conforme os modelos legalmente admitidos. Delegar tarefas a unidades internas não cria automaticamente nova pessoa jurídica."],example:"Criar unidades regionais dentro do mesmo órgão exemplifica desconcentração; instituir autarquia por lei integra a administração indireta.",question:"Criar uma unidade interna sem personalidade jurídica é descentralização?",answer:"Em regra, é desconcentração administrativa.",source:OFFICIAL.edital}
   ]}
 ];
-const COURSES: Course[] = BASE_COURSES.map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? [])]}));
+const COURSES: Course[] = BASE_COURSES.map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
 export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
@@ -48,7 +49,7 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public"}:
   const countCompleted=course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length;
   return <section id="materiais-atualizados-pcac" className="space-y-4 rounded-2xl border border-emerald-700/40 bg-card p-4 shadow-sm md:p-6" aria-labelledby="pcac-new-study-title">
     <header className="space-y-2">
-      <p className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 dark:text-emerald-300">Biblioteca temática · Revisão 10/11/2026</p>
+      <p className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 dark:text-emerald-300">Biblioteca temática · Alinhamento ao edital PC-AC 2026</p>
       <h2 id="pcac-new-study-title" className="text-xl font-extrabold text-foreground">Aulas atualizadas: Administração e Arquivologia</h2>
       <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">Conteúdo didático original organizado a partir de três apostilas de referência, revisado com fontes oficiais. A indicação de cargo é temática: confirme sempre o tópico exato do edital e suas retificações.</p>
     </header>
