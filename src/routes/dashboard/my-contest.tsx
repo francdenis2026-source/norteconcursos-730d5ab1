@@ -1,11 +1,6 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
-import {
-  BookOpenText,
-  Calendar,
-  ChevronRight,
-} from "lucide-react";
+import { Calendar, ChevronRight, FileText } from "lucide-react";
 import { useAuthStatus, useDashboardData } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
@@ -27,11 +22,13 @@ import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { userStorageKey } from "@/lib/userStorage";
 
 export const Route = createFileRoute("/dashboard/my-contest")({ component: MyContestPage });
+
 function MyContestPage() {
   const { focusedContest, contests, isLoading } = useDashboardData();
   const [activeContest, setActiveContest] = React.useState<Contest | undefined>(focusedContest);
   const [savingContestId, setSavingContestId] = React.useState<string | null>(null);
   React.useEffect(() => setActiveContest(focusedContest), [focusedContest]);
+
   const selectContest = async (contest: Contest) => {
     setSavingContestId(contest.id);
     try {
@@ -44,6 +41,7 @@ function MyContestPage() {
       setSavingContestId(null);
     }
   };
+
   const clearContest = async () => {
     setSavingContestId(activeContest?.id ?? "clear");
     try {
@@ -63,6 +61,7 @@ function MyContestPage() {
       setSavingContestId(null);
     }
   };
+
   const { user } = useAuthStatus();
   const editions = useQuery({
     queryKey: ["my-contest-editions", user?.id],
@@ -71,9 +70,7 @@ function MyContestPage() {
       fetchAllRows<EditalEdition>((from, to) =>
         supabase
           .from("syllabus_editions")
-          .select(
-            "id,contest_name,role_name,contest_year,exam_board,status,source:content_sources(title,url,source_type,status)",
-          )
+          .select("id,contest_name,role_name,contest_year,exam_board,status,source:content_sources(title,url,source_type,status)")
           .in("status", ["active", "archived"])
           .order("id")
           .range(from, to)
@@ -81,17 +78,20 @@ function MyContestPage() {
       ),
     staleTime: 300_000,
   });
+
   if (isLoading) return <p role="status">Carregando seu concurso…</p>;
+
   const matches = activeContest
-    ? filterEditalEditions(editions.data ?? [], "").filter(
-        (e) =>
-          editalFold(e.contest_name) === editalFold(activeContest.agency) &&
-          editalFold(e.role_name) === editalFold(activeContest.role),
+    ? filterEditalEditions(editions.data ?? [], "").filter((edition) =>
+        editalFold(edition.contest_name) === editalFold(activeContest.agency) &&
+        editalFold(edition.role_name) === editalFold(activeContest.role),
       )
     : [];
+
   const days = activeContest?.examDate
     ? Math.ceil((new Date(activeContest.examDate).getTime() - platformDate().getTime()) / 86400000)
     : null;
+
   return (
     <div className="edital-workspace my-contest-one-window">
       <StudyPlanningNav active="objective" />
@@ -104,68 +104,60 @@ function MyContestPage() {
           onClear={() => void clearContest()}
         />
       </div>
+
       {days !== null && Number.isFinite(days) && days < 0 && (
-        <p className="flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
-          <Calendar className="h-4 w-4 shrink-0" />A data da prova cadastrada já passou. Atualize o
-          seu objetivo se a data mudou.
+        <p className="my-contest-expired" role="status">
+          <Calendar aria-hidden="true" />
+          A data da prova cadastrada já passou. Atualize seu objetivo se a data mudou.
         </p>
       )}
-      <section className="edital-catalog">
-        <div>
-          <h2>Programa e documentos do concurso</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Consulte a edição e o cargo antes de escolher seus assuntos de estudo.
-          </p>
-        </div>
-        {editions.isLoading && <p role="status">Consultando edições…</p>}
-        {editions.isError && (
-          <p role="status">
-            Não foi possível consultar as edições.{" "}
-            <Button variant="outline" onClick={() => void editions.refetch()}>
-              Tentar novamente
-            </Button>
-          </p>
-        )}
-        <div className="edital-editions">
-          {matches.map((e) => (
-            <Link
-              to="/dashboard/edital"
-              search={{ edition: e.id }}
-              key={e.id}
-              className="edital-edition"
-            >
-              <Badge variant="outline">
-                {e.contest_year} · {e.status === "archived" ? "Arquivado" : editalSourceLabel(e)}
-              </Badge>
-              <h3>{e.role_name}</h3>
-              <span className="flex items-center gap-2 text-sm">
-                Abrir programa <ChevronRight className="h-4 w-4" />
-              </span>
-            </Link>
-          ))}
-        </div>
-        {!matches.length && !editions.isLoading && (
-          <p className="text-sm text-muted-foreground">
-            {activeContest
-              ? "Não encontramos uma edição vinculada exatamente a este concurso e cargo. Consulte o catálogo para localizar as opções disponíveis."
-              : "Escolha uma edição no catálogo de editais para consultar o programa de estudo."}
-          </p>
-        )}
-        <div className="flex flex-wrap gap-2">
-          <Button asChild variant={activeContest ? "default" : "outline"}>
-            <Link to="/dashboard/edital">
-              <BookOpenText className="mr-2 h-4 w-4" />
-              Estudar pelo edital
-            </Link>
-          </Button>
-          {!activeContest && (
-            <Button asChild variant="default">
-              <Link to="/dashboard/questions">Escolher meu concurso</Link>
-            </Button>
-          )}
-        </div>
-      </section>
 
+      <section className="edital-catalog" aria-labelledby="my-contest-edital-title">
+        <div className="edital-catalog__heading">
+          <div>
+            <h2 id="my-contest-edital-title">Edital e programa de estudo</h2>
+            <p>{activeContest ? "Edições vinculadas ao cargo selecionado." : "Defina um cargo para visualizar o programa correspondente."}</p>
+          </div>
+          {activeContest && <Badge variant="outline">Cargo ativo</Badge>}
+        </div>
+
+        {editions.isLoading && <p className="edital-catalog__message" role="status">Consultando edições vinculadas…</p>}
+        {editions.isError && (
+          <div className="edital-catalog__message" role="status">
+            <span>Não foi possível consultar as edições.</span>
+            <Button size="sm" variant="outline" onClick={() => void editions.refetch()}>Tentar novamente</Button>
+          </div>
+        )}
+
+        {!editions.isLoading && !editions.isError && activeContest && matches.length > 0 && (
+          <ul className="edital-catalog__list">
+            {matches.slice(0, 3).map((edition) => (
+              <li key={edition.id}>
+                <div className="edital-catalog__edition-info">
+                  <FileText aria-hidden="true" />
+                  <div>
+                    <strong>{edition.contest_year} · {edition.role_name}</strong>
+                    <span>{editalSourceLabel(edition)}{edition.exam_board ? ` · ${edition.exam_board}` : ""}</span>
+                  </div>
+                </div>
+                <Link to="/dashboard/edital" search={{ edition: edition.id }} className="edital-catalog__open">
+                  Abrir programa <ChevronRight aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {!editions.isLoading && !editions.isError && activeContest && matches.length === 0 && (
+          <p className="edital-catalog__message">
+            Ainda não há uma edição vinculada exatamente a este cargo. O objetivo continua ativo; o catálogo de outros concursos permanece bloqueado.
+          </p>
+        )}
+
+        {!activeContest && (
+          <p className="edital-catalog__message">Quando você definir um cargo, o edital e os assuntos correspondentes aparecerão aqui.</p>
+        )}
+      </section>
     </div>
   );
 }
