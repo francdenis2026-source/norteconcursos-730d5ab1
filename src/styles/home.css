@@ -3759,25 +3759,6 @@
   .dark .home-careers::before { opacity: .14; }
 }
 
-/* Native cursor assets keep their hotspot accurate and retain system fallbacks. */
-@media (hover: hover) and (pointer: fine) {
-  .home, .home * {
-    cursor: url("/media/cursor-cartridge-photo.png") 5 2, auto;
-  }
-  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]),
-  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]) * {
-    cursor: url("/media/cursor-optic-reticle.svg?v=red2") 18 18, pointer;
-  }
-  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active,
-  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active * {
-    cursor: url("/media/cursor-optic-reticle-active.svg?v=red2") 18 18, pointer;
-  }
-  .home :is(input, textarea, [contenteditable="true"]),
-  .home [contenteditable="true"] * { cursor: text; }
-  .home :is(:disabled, [aria-disabled="true"]),
-  .home :is(:disabled, [aria-disabled="true"]) * { cursor: not-allowed !important; }
-}
-
 /* Selos do início: com a coluna estreita o total de questões ficava espremido; empilha e mostra o texto inteiro. */
 .home-start { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 700px) {
