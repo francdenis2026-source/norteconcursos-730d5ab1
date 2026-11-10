@@ -31,7 +31,7 @@ const EXAMS = [
 ];
 
 /** Provas recentes já disponíveis para treinar. */
-export function ContestShowcase(_props: { mobile?: boolean } = {}) {
+export function ContestShowcase({ mobile = false }: { mobile?: boolean } = {}) {
   const { isAuthenticated } = useAuthStatus();
   return (
     <div className="sx sx-contests">
@@ -41,7 +41,10 @@ export function ContestShowcase(_props: { mobile?: boolean } = {}) {
           <h2>Treine com provas de 2026.</h2>
         </div>
       </header>
-      <ul className="sx-exams">
+      {mobile && (
+        <p className="sx-carousel-hint">Deslize para ver outros concursos <ArrowUpRight aria-hidden="true" /></p>
+      )}
+      <ul className={mobile ? "sx-exams sx-exams--mobile-carousel" : "sx-exams"}>
         {EXAMS.map((exam) => (
           <li key={exam.sigla} className="sx-exam">
             <img
