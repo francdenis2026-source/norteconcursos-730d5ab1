@@ -40,6 +40,8 @@ import {
   type Verdict,
 } from "@/lib/bancaProfile";
 import { cn } from "@/lib/utils";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { INVESTIGATOR_FOCUS } from "@/data/pcAcreIdecanRadar";
 
 export const Route = createFileRoute("/dashboard/inteligencia-idecan")({
   component: InteligenciaIdecan,
@@ -374,6 +376,25 @@ function InteligenciaIdecan() {
             </p>
           </CardContent>
         )}
+      </Card>
+
+      <Card className="border-primary/25 bg-primary/[0.03]">
+        <CardHeader>
+          <CardTitle className="text-base">Matriz completa do edital PC-AC 2026 · Oficial Investigador</CardTitle>
+          <CardDescription>
+            Disciplinas específicas do Anexo III, com prioridade de estudo e subtemas. Quando não há amostra IDECAN suficiente, esta matriz continua sendo a referência principal.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-3 md:grid-cols-2">
+          {(pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.blocks ?? []).flatMap((block) => block.disciplines).map((discipline) => {
+            const focus = INVESTIGATOR_FOCUS.find((item) => item.subject === discipline.name || item.filter === discipline.name || discipline.name.includes(item.subject));
+            return <div key={discipline.id} className="rounded-xl border bg-card p-3">
+              <div className="flex flex-wrap items-center justify-between gap-2"><strong className="text-sm">{discipline.name}</strong>{focus && <Badge variant={focus.priority.startsWith("Muito") ? "default" : "outline"}>{focus.priority}</Badge>}</div>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{focus?.topics ?? discipline.topics?.slice(0, 3).join(" · ") ?? "Tópicos do Anexo III cadastrados no edital verticalizado."}</p>
+              <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} className="mt-2 inline-flex text-xs font-semibold text-primary hover:underline">Abrir tópico no edital →</Link>
+            </div>;
+          })}
+        </CardContent>
       </Card>
 
       <Card>
