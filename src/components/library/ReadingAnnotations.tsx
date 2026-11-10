@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { exportMaterialPdf } from "@/lib/materialPdf";
 
 type Mark = { text: string; color: string };
-const COLORS = ["#fef08a", "#bbf7d0", "#bae6fd", "#fecdd3"];
+const COLORS = ["#fef08a", "#bbf7d0", "#bae6fd", "#fecdd3"] as const;
 
 export function ReadingAnnotations({ userId, slug, title, body }: { userId: string; slug: string; title: string; body: string }) {
   const key = `norte-reading:${userId}:${slug}`;
   const [marks, setMarks] = React.useState<Mark[]>([]);
   const [note, setNote] = React.useState("");
-  const [color, setColor] = React.useState(COLORS[0]);
+  const [color, setColor] = React.useState<string>(COLORS[0]);
   const selection = React.useCallback(() => window.getSelection()?.toString().trim() ?? "", []);
   React.useEffect(() => { try { const saved = JSON.parse(localStorage.getItem(key) ?? "{}"); setMarks(Array.isArray(saved.marks) ? saved.marks : []); setNote(typeof saved.note === "string" ? saved.note : ""); } catch { /* storage unavailable */ } }, [key]);
   React.useEffect(() => { try { localStorage.setItem(key, JSON.stringify({ marks, note })); } catch { /* storage unavailable */ } }, [key, marks, note]);
