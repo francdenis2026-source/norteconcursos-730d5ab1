@@ -184,7 +184,15 @@ function routineEvents(options: PcAcMasterPlanOptions, weekday: number): FixedEv
     add("exercicio", "Preparação física / TAF", options.tafTime ?? "17:00", options.tafDurationMinutes ?? 60,
       "Treino físico planejado pelo candidato. Ajuste intensidade e exercícios ao edital, à avaliação profissional e à sua condição física.");
   }
-  return events.sort((a, b) => a.start.localeCompare(b.start));
+  events.sort((a, b) => a.start.localeCompare(b.start));
+  // Se o aluno configurar dois compromissos no mesmo horário, preserve ambos em sequência.
+  let previousEnd = 0;
+  return events.map((event) => {
+    const start = Math.max(toMin(event.start), previousEnd);
+    const end = start + event.minutes;
+    previousEnd = end;
+    return { ...event, start: fmtMin(start), end: fmtMin(end) };
+  });
 }
 
 function overlaps(start: number, end: number, event: FixedEvent): boolean {
