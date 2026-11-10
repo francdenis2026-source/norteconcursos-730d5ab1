@@ -32,6 +32,8 @@ import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
 import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
+import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import "@/styles/study-area-compact.css";
@@ -288,6 +290,25 @@ function MaterialHub() {
           </Link>
         </div>
       </PageHero>
+
+      <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">
+        <div className="pcac-material-focus__glow" aria-hidden="true" />
+        <div className="pcac-material-focus__body">
+          <p className="pcac-material-focus__eyebrow">Rota recomendada · Edital nº 001/2026 SEAD/PCAC</p>
+          <h2 id="pcac-material-focus-title">Prepare-se para a PC-AC 2026</h2>
+          <p className="pcac-material-focus__description">
+            Acesse o edital verticalizado, organize sua semana e estude cada disciplina com os materiais já disponíveis na plataforma.
+          </p>
+          <div className="pcac-material-focus__meta">
+            <span>{pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.name ?? "Oficial Investigador"}</span>
+            <span>Prova objetiva: {new Date(`${PCAC_EXAM_DATE}T12:00:00`).toLocaleDateString("pt-BR")}</span>
+          </div>
+        </div>
+        <div className="pcac-material-focus__actions">
+          <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} className="pcac-material-focus__primary">Abrir edital verticalizado →</Link>
+          <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador", view: "plan" }} className="pcac-material-focus__secondary">Ver plano de estudos</Link>
+        </div>
+      </section>
 
       <HubSearch subjects={subjects} />
 

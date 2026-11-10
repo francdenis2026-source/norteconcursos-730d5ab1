@@ -420,3 +420,30 @@
     transition: none !important;
   }
 }
+
+.pcac-material-focus {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--primary) / .28);
+  border-radius: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  background: linear-gradient(115deg, hsl(var(--primary) / .16), hsl(var(--card)) 58%, hsl(217 55% 18% / .92));
+  box-shadow: 0 16px 40px hsl(217 70% 12% / .18);
+}
+.pcac-material-focus__glow { position: absolute; inset: auto -4rem -5rem auto; width: 16rem; height: 12rem; border-radius: 999px; background: hsl(var(--primary) / .22); filter: blur(40px); pointer-events: none; }
+.pcac-material-focus__body, .pcac-material-focus__actions { position: relative; z-index: 1; }
+.pcac-material-focus__body { max-width: 48rem; }
+.pcac-material-focus__eyebrow { margin: 0 0 .35rem; color: hsl(var(--primary)); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.pcac-material-focus h2 { margin: 0; color: hsl(var(--foreground)); font-size: clamp(1.25rem, 2.5vw, 1.8rem); font-weight: 850; letter-spacing: -.025em; }
+.pcac-material-focus__description { margin: .45rem 0 0; max-width: 42rem; color: hsl(var(--muted-foreground)); font-size: .9rem; line-height: 1.55; }
+.pcac-material-focus__meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin-top: .8rem; color: hsl(var(--muted-foreground)); font-size: .72rem; font-weight: 700; }
+.pcac-material-focus__actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .55rem; min-width: 12rem; }
+.pcac-material-focus__primary, .pcac-material-focus__secondary { display: inline-flex; align-items: center; justify-content: center; border-radius: .7rem; padding: .65rem .85rem; font-size: .78rem; font-weight: 800; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+.pcac-material-focus__primary { color: hsl(var(--primary-foreground)); background: hsl(var(--primary)); }
+.pcac-material-focus__secondary { color: hsl(var(--foreground)); background: hsl(var(--background) / .5); border: 1px solid hsl(var(--border)); }
+.pcac-material-focus__primary:hover, .pcac-material-focus__secondary:hover { transform: translateY(-1px); }
+@media (max-width: 720px) { .pcac-material-focus { align-items: stretch; flex-direction: column; padding: 1.1rem; } .pcac-material-focus__actions { justify-content: flex-start; min-width: 0; } }
